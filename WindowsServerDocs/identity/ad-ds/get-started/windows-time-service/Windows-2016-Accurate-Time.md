@@ -113,7 +113,7 @@ The following describes the changes in default configuration between Windows 201
 |**Standalone/Nano Server**||||
 | |*Time Server*|time.windows.com|NA|time.windows.com|
 | |*Polling Frequency*|64 - 1024 seconds|NA|Once a week|
-| |*Clock Update Frequency*|Once a day|NA|Once a week|
+| |*Clock Update Frequency*|Once a second|NA|Once a hour|
 |**Standalone Client**||||
 | |*Time Server*|NA|time.windows.com|time.windows.com|
 | |*Polling Frequency*|NA|Once a day|Once a week|
