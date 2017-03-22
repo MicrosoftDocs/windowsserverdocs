@@ -21,7 +21,7 @@ ms.date: 03/22/2017
 You can connect to PCs that are running the following Windows operating systems:
 - Windows 10
 - Windows 8 Enterprise
-- Windows 8 Properties
+- Windows 8 Professional
 - Windows 7 Professional
 - Windows 7 Enterprise
 - Windows 7 Ultimate
