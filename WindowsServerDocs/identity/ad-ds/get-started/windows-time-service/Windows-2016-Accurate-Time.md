@@ -122,17 +122,17 @@ The following describes the changes in default configuration between Windows 201
 | |Polling Frequency|64 -1024 seconds|NA|1024 - 32768 seconds|
 | |Clock Update Frequency|Once a day|NA|Once a week|
 |**Domain Member Server**||||
-||Time Server|DC|DC|
-||Polling Frequency|64 -1024 seconds|NA|1024 - 32768 seconds|
-||Clock Update Frequency|Once a second|NA|Once every 5 minutes|
+| |Time Server|DC|DC|
+| |Polling Frequency|64 -1024 seconds|NA|1024 - 32768 seconds|
+| |Clock Update Frequency|Once a second|NA|Once every 5 minutes|
 |**Domain Member Client**||||
-||Time Server|NA|DC|DC|
-||Polling Frequency|NA|1204 - 32768 seconds|1024 - 32768 seconds|
-||Clock Update Frequency|NA|Once every 5 minutes|Once every 5 minutes|
+| |Time Server|NA|DC|DC|
+| |Polling Frequency|NA|1204 - 32768 seconds|1024 - 32768 seconds|
+| |Clock Update Frequency|NA|Once every 5 minutes|Once every 5 minutes|
 |**Hyper-V Guest**||||
-||Time Server|Chooses best option based on stratum of Host and Time server|Chooses best option based on stratum of Host and Time server|Defaults to Host|
-||Polling Frequency|Based on Role above|Based on Role above|Based on Role above|
-||Clock Update Frequency|Based on Role above|Based on Role above|Based on Role above|
+| |Time Server|Chooses best option based on stratum of Host and Time server|Chooses best option based on stratum of Host and Time server|Defaults to Host|
+| |Polling Frequency|Based on Role above|Based on Role above|Based on Role above|
+| |Clock Update Frequency|Based on Role above|Based on Role above|Based on Role above|
 
 #### Standalone Client
 |Setting|Windows 10 Anniversary|Windows 2012 R2</br>Windows 2008R2</br>Windows 10|
