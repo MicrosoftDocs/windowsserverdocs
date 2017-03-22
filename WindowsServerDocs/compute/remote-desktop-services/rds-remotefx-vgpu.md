@@ -7,7 +7,7 @@ ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
 ms.author: elizapo
-ms.date: 03/17/2017  
+ms.date: 03/23/2017  
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0263fa6b-2185-4cc3-99ef-3588e2f4ada5
@@ -77,7 +77,9 @@ You can use either the Hyper-V Manager UI or PowerShell cmdlets to configure the
 5. Set the maximum number of monitors, maximum monitor resolution, and dedicated video memory, or leave the default values.
 
    > [!NOTE]
-   > Setting higher values for any of these options will have impact to scale, so you should only set what is absolutely necessary. 
+   > - Setting higher values for any of these options will have impact to scale, so you should only set what is absolutely necessary.
+   >
+   > - When you need to use 1GB of dedicated VRAM, use a 64-bit guest VM instead of 32-bit (x86) for best results.
 6. Click **OK** to finish the configuration.
 
 #### With PowerShell cmdlets:
