@@ -20,11 +20,11 @@ You can use the topics in this section to learn about security in Software Defin
 >[!Note]
 >For additional Software Defined Networking documentation, you can use the following library sections.
 >
-> - [Software Defined Networking Technologies](technologies/Software-Defined-Networking-Technologies.md)  
-> - [Plan Software Defined Networking](plan/Plan-Software-Defined-Networking.md) 
-> - [Deploy Software Defined Networking](deploy/Deploy-Software-Defined-Networking.md)  
-> - [Manage Software Defined Networking](manage/manage-sdn.md)  
-> - [Troubleshoot Software Defined Networking](troubleshoot/Troubleshoot-Software-Defined-Networking.md)
+> - [Software Defined Networking Technologies](../technologies/Software-Defined-Networking-Technologies.md)  
+> - [Plan Software Defined Networking](../plan/Plan-Software-Defined-Networking.md) 
+> - [Deploy Software Defined Networking](../deploy/Deploy-Software-Defined-Networking.md)  
+> - [Manage Software Defined Networking](../manage/manage-sdn.md)  
+> - [Troubleshoot Software Defined Networking](../troubleshoot/Troubleshoot-Software-Defined-Networking.md)
 
 This section contains the following topics.
 
