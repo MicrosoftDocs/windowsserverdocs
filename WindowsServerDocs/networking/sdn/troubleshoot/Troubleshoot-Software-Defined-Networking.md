@@ -7,7 +7,7 @@ ms.technology: networking-sdn
 ms.topic: article
 ms.assetid: 427048db-bab6-49b1-9611-099bb547ec0e
 ms.author: jamesmci
-author: vhorne
+author: jamesmci
 ---
 # Troubleshoot Software Defined Networking
 
