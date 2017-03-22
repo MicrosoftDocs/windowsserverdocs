@@ -1053,6 +1053,8 @@
 ###### [Configure the Software Load Balancer for Load Balancing and Network address Translation (Nat)](networking/sdn/manage/Configure-SLB-and-Nat.md)
 ###### [Use Network Virtual Appliances on a Virtual Network](networking/sdn/manage/Use-Network-Virtual-Appliances-on-a-VN.md)
 ######[Guest Clustering in a Virtual Network](networking/sdn/manage/guest-clustering.md)
+#### [Security for Software Defined Networking](networking/sdn/security/sdn-security-top.md)
+##### [Network Controller Security](networking/sdn/security/nc-security.md)
 #### [Troubleshoot Software Defined Networking](networking/sdn/troubleshoot/Troubleshoot-Software-Defined-Networking.md)
 ##### [Troubleshoot the Windows Server 2016 Software Defined Networking Stack](networking/sdn/troubleshoot/troubleshoot-windows-server-2016-software-defined-networking-stack.md)
 #### [System Center Technologies for Software Defined Networking](networking/sdn/Sc-Tech-for-Sdn.md)
