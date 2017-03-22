@@ -248,10 +248,6 @@ Specifically, you will need to:
 > The new HGS cluster does not need to use the same certificates, service name, or domain as the HGS instance from which your backup file was exported.
 
 #### Import settings from a backup
-> [!WARNING]
-> `Import-HgsServerState` may not succeed in certain configurations until an update is made available.
-> Please ensure certificates and attestation artifacts are backed up separately until then.
-> This notice will be updated when the update is published.
 
 To restore attestation policies, PFX-based certificates, and the public keys of non-PFX certificates to your HGS node from a backup file, run the following command on an initialized HGS server node.
 You will be prompted to enter the password you specified when creating the backup.
@@ -261,6 +257,9 @@ Import-HgsServerState -Path C:\Temp\HGSBackup.xml
 ```
 
 If you only want to import admin-trusted attestation policies or TPM-trusted attestation policies, you can do so by specifying the `-ImportActiveDirectoryModeState` or `-ImportTpmModeState` flags to [Import-HgsServerState](https://technet.microsoft.com/en-us/library/mt652168.aspx).
+
+Ensure the latest cumulative update for Windows Server 2016 is installed before running `Import-HgsServerState`.
+Failure to do so may result in an import error.
 
 > [!NOTE]
 > If you restore policies on an existing HGS node that already has one or more of those policies installed, the import command will show an error for each duplicate policy.
