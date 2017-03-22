@@ -211,7 +211,6 @@ When specifying a bandwidth limit to Storage Replica, the limit is ignored and f
 
 This issue occurs because of an interoperability issue between Storage Replica and SMB. This issue should be fixed in a later update to Windows Server 2016. There is no workaround using Windows Server, but you can use external QoS network policies to attain the desired effect.
 
-
 ## Event 1241 warning repeated during initial sync
 When specifying a replication partnership is asynchronous, the source computer repeatedly logs warning event 1241 in the Storage Replica Admin channel. For example:
 
@@ -242,6 +241,38 @@ When specifying a replication partnership is asynchronous, the source computer r
     The asynchronous destination is unable to keep pace with the source such that the most recent destination log record is no longer present in the source log. The destination will start block copying. The RPO should become available after block copying completes.
 
 This is expected behavior during initial sync and can safely be ignored. This behavior may change in a later release. If you see this behavior during ongoing asynchronous replication, investigate the partnership to determine why replication is delayed beyond your configured RPO (30 seconds, by default).
+
+## Event 4004 warning repeated after rebooting a replicated node
+Under rare and usually unreproducable circumstances, rebooting a server that is in a partnership leads to replication failing and the rebooted node logging warning event 4004 with an access denied error.
+
+    Log Name:      Microsoft-Windows-StorageReplica/Admin
+    Source:        Microsoft-Windows-StorageReplica
+    Date:          3/21/2017 11:43:25 AM
+    Event ID:      4004
+    Task Category: (7)
+    Level:         Warning
+    Keywords:      (256)
+    User:          SYSTEM
+    Computer:      server.contoso.com
+    Description:
+    Failed to establish a connection to a remote computer.
+
+    RemoteComputerName: server
+    LocalReplicationGroupName: rg01
+    LocalReplicationGroupId: {a386f747-bcae-40ac-9f4b-1942eb4498a0}
+    RemoteReplicationGroupName: rg02
+    RemoteReplicationGroupId: {a386f747-bcae-40ac-9f4b-1942eb4498a0}
+    ReplicaSetId: {00000000-0000-0000-0000-000000000000}
+    RemoteShareName:{a386f747-bcae-40ac-9f4b-1942eb4498a0}.{00000000-0000-0000-0000-000000000000}
+    Status: {Access Denied}
+    A process has requested access to an object, but has not been granted those access rights.
+
+    Guidance: Possible causes include network failures, share creation failures for the remote replication group, or firewall settings. Make sure SMB traffic is allowed and there are no connectivity issues between the local computer and the remote computer. You should expect this event when suspending replication or removing a replication partnership.
+
+Note the `Status: "{Access Denied}"` and the message `A process has requested access to an object, but has not been granted those access rights.` This is a known issue within Storage Replica. As a workaround, simply restart the Storage Replica service. 
+
+We are working on providing an update that permanently resolves this issue. If you are interested in assisting us and you have a Microsoft Premier Support agreement, please email SRFEED@microsoft.com so that we can work with you  on filing a backport request.
+
 
 ## See also  
 - [Storage Replica](storage-replica-overview.md)  
