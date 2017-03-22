@@ -22,7 +22,7 @@ The topics in this section provide deployment planning and prerequisite informat
 > - [Deploy Software Defined Networking](../deploy/Deploy-Software-Defined-Networking.md)
 > - [Manage Software Defined Networking](../manage/manage-sdn.md)
 > - [Security for Software Defined Networking](../security/sdn-security-top.md)
-> - [Troubleshoot Software Defined Networking](../sdn/troubleshoot/Troubleshoot-Software-Defined-Networking.md)
+> - [Troubleshoot Software Defined Networking](../troubleshoot/Troubleshoot-Software-Defined-Networking.md)
 
 This section includes the following topics:
 
