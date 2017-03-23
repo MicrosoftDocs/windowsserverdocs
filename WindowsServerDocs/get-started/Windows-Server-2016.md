@@ -28,7 +28,7 @@ manager: dongill
   <tr style="text-align:center;">
     <td style="width:25%; border:0;">
       <a href="https://technet.microsoft.com/windows-server-docs/get-started/server-basics">
-        <img height=145 src="media/1-getstarted.png" alt="Get started icon" title="Get started" />
+        <img height=145 src="media/1-getstarted.png" alt="Get started icon" title="Get started" /></br>
       Get Started</br></br></a>
     </td>
     <td style="width:25%; border:0;">
