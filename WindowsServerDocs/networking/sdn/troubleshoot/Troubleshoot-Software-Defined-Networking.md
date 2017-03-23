@@ -27,5 +27,6 @@ The topics in this section provide information about troubleshooting the Softwar
 This section contains the following topics.
 
 - [Troubleshoot the Windows Server 2016 Software Defined Networking Stack](troubleshoot-windows-server-2016-software-defined-networking-stack.md)  
+- Blog post [Troubleshoot Configuring SDN RAS Gateway VPN Bandwidth Settings in Virtual Machine Manager](https://blogs.technet.microsoft.com/wsnetdoc/2017/03/02/troubleshoot-changing-sdn-ras-gateway-vpn-bandwidth-settings-in-virtual-machine-manager/)
 
 
