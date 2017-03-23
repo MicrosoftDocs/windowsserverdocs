@@ -677,7 +677,7 @@
 ##### [Container Performance Tuning](management/performance-tuning/Section_13.2-containers.md)
 #### [PowerShell Scripting Performance](management/performance-tuning/Section_14-Powershell.md)
 ##### [Authoring PowerShell Modules](management/performance-tuning/Section_14.2-PowerShell-module-authoring.md)
-##### [PowerShell Examples](management/performance-tuning/Section_14.3-Examples.ps1)
+
 #### [Storage Spaces Direct Performance Tuning](management/performance-tuning/Section_15-StorageSpacesDirect.md)
 ### [Remote Server Administration Tools](management/remote-server-administration-tools.md)
 ### [Server Manager](management/server-manager/server-manager.md)
