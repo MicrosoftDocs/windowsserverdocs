@@ -17,7 +17,7 @@ manager: dongill
 
 # Windows Server 2016
 
-<img src="media/2whats-new.png" alt="alt text" title="What's new in Windows Server 2016?" />
+<img src="media/2whats-new.png" alt="Newspaper icon intended to reflect what's new in Windows Server 2016" title="What's new in Windows Server 2016?" />
     <font size="5">
     &nbsp;[Read what's new in Windows Server 2016](what-s-new-in-windows-server-2016.md)</font>
 <br/><br/>
@@ -28,45 +28,44 @@ manager: dongill
   <tr style="text-align:center;">
     <td style="width:25%; border:0;">
       <a href="https://technet.microsoft.com/windows-server-docs/get-started/server-basics">
-        <img height=145 src="media/1-getstarted.png" alt="alt text" title="Get started" />
-      </a>
+        <img height=145 src="media/1-getstarted.png" alt="Get started icon" title="Get started" /></br>
+      Get Started</br></a>
     </td>
     <td style="width:25%; border:0;">
       <a href="https://technet.microsoft.com/windows-server-docs/compute/compute">
-        <img height=145 src="media/2-compute.png" alt="alt text" title="Windows Server Compute" />
-      </a>
+        <img height=145 src="media/2-compute.png" alt="Compute icon" title="Windows Server Compute" />
+      Compute</br></br></a>
     </td>
     <td style="width:25%; border:0;">
       <a href="https://technet.microsoft.com/windows-server-docs/failover-clustering/failover-clustering-overview">
-        <img height=145 src="media/3-failover.png" alt="Failover clustering" title="Failover clustering" />
-      </a>
+        <img height=145 src="media/3-failover.png" alt="Failover clustering icon" title="Failover clustering" />
+      Failover Clustering<br/></br></a>
     </td>
     <td style="width:25%; border:0;">
       <a href="https://technet.microsoft.com/windows-server-docs/identity/identity-and-access">
-        <img height=145 src="media/4-identity.png" alt="alt text" title="Windows Server Identity and Access" />
-      </a>
+        <img height=145 src="media/4-identity.png" alt="Identity and access icon" title="Windows Server Identity and Access" />
+      Identity and Access</br></br></a>
     </td>
   </tr>
   <tr style="text-align:center;">
     <td style="width:25%; border:0;">
       <a href="https://technet.microsoft.com/windows-server-docs/security/security-and-assurance">
-        <img height=145 src="media/5-security.png" alt="alt text" title="Windows Server Security and Assurance" />
-      </a>
+        <img height=145 src="media/5-security.png" alt="Security icon" title="Windows Server Security and Assurance" />
+      Security and Assurance</br></br></a>
     </td>
     <td style="width:25%; border:0;">
       <a href="https://technet.microsoft.com/windows-server-docs/networking/networking">
-        <img height=145 src="media/6-networking.png" alt="alt text" title="Windows Server Networking" />
-      </a>
+        <img height=145 src="media/6-networking.png" alt="Networking icon" title="Windows Server Networking" />
+      Networking</br></br></a>
     </td>
     <td style="width:25%; border:0;">
       <a href="https://technet.microsoft.com/en-us/windows-server-docs/storage/storage">
-        <img height=145 src="media/7-storage.png" alt="alt text" title="Windows Server Storage" />
-      </a>
+        <img height=145 src="media/7-storage.png" alt="Storage icon" title="Windows Server Storage" />
+      Storage</br></br></a>
     </td>
-    <td style="width:25%; border:0;">
+    <td style="width:25%; border:0;"></br>
       <a href="https://technet.microsoft.com/windows-server-docs/management/management-and-automation">
-        <img height=145 src="media/8-management.png" alt="alt text" title="Windows Server Management and Automation" />
-      </a>
+        <img height=145 src="media/8-management.png" alt="Management and automation icon" title="Windows Server Management and Automation" />Management and Automation</br></a>
     </td>
   </tr>
 </table>
@@ -110,8 +109,8 @@ Now that you know which edition and installation option is right for you, click 
 
 <table border=0 width="100%">
   <tr style='text-align:center;'>
-    <td style='width:34%'><a href="https://technet.microsoft.com/en-us/windows-server-docs/get-started/getting-started-with-nano-server"> <img height=145 src="media/nano.png" alt="alt text" title="Nano Server - Lightest Weight" /></a></td>
-    <td style='width:33%'><a href="https://technet.microsoft.com/en-us/windows-server-docs/get-started/getting-started-with-server-core"> <img height=145 src="media/servercore.png" alt="alt text" title="Server Core - Recommended" /></a></td>
-    <td style='width:33%'><a href="https://technet.microsoft.com/en-us/windows-server-docs/get-started/getting-started-with-server-with-desktop-experience"><img height=145 src="media/desktop.png" alt="alt text" title="Desktop Experience - Full Experience" /></a></td>
+    <td style='width:34%'><a href="https://technet.microsoft.com/en-us/windows-server-docs/get-started/getting-started-with-nano-server"> <img height=145 src="media/nano.png" alt="Icon representing Nano server" title="Nano Server - Lightest Weight" /></br>Nano Server - </br>Lightest weight</a></td>
+    <td style='width:33%'><a href="https://technet.microsoft.com/en-us/windows-server-docs/get-started/getting-started-with-server-core"> <img height=145 src="media/servercore.png" alt="Icon representing the Server Core installation" title="Server Core - Recommended" /></br>Server Core - </br>Recommended</a></td>
+    <td style='width:33%'><a href="https://technet.microsoft.com/en-us/windows-server-docs/get-started/getting-started-with-server-with-desktop-experience"><img height=145 src="media/desktop.png" alt="Icon representing the full desktop experience installation option for Windows Server" title="Desktop Experience - Full Experience" /></br>Desktop Experience - </br>Full interface</a></td>
   </tr>
 </table>
