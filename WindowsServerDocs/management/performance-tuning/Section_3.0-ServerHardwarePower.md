@@ -32,7 +32,6 @@ Memory accounts for an increasing fraction of the total system power. Many facto
 ## Disks Recommendations
 Higher RPM means increased energy consumption. SSD drives are more power efficient than rotational drives. Also, 2.5-inch drives generally require less power than 3.5-inch drives. 
 
-
 ## Network and Storage Adapter Recommendations
 Some adapters decrease energy consumption during idle periods. This is an important consideration for 10 Gb networking adapters and high-bandwidth (4-8 Gb) storage links. Such devices can consume significant amounts of energy.
 
