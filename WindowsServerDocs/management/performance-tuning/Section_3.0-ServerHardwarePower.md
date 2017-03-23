@@ -30,7 +30,7 @@ Memory accounts for an increasing fraction of the total system power. Many facto
 
 
 ## Disks Recommendations
-Higher RPM means increased energy consumption. SSD drives are more power efficient than rotational drives. Also, 2.5-inch drives generally require less power than 3.5-inch drives. For more info about the energy costs for different RAID configurations, see [Performance Tuning for Storage Subsystems](./Section_5.0-performance-tuning-for-storage-subsystems.md).
+Higher RPM means increased energy consumption. SSD drives are more power efficient than rotational drives. Also, 2.5-inch drives generally require less power than 3.5-inch drives. 
 
 
 ## Network and Storage Adapter Recommendations
