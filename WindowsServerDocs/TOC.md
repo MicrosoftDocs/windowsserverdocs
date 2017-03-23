@@ -659,7 +659,7 @@
 ##### [Processor Power Management Tuning](management/performance-tuning/Section_3.1-PPMTuning.md)
 ##### [Recommended Balanced Power Plan Parameters](management/performance-tuning/Section_3.2-RecommendedPPMParameters.md)
 #### [Cache and Memory Subsystem Tuning](management/performance-tuning/Section_6.0-performance-tuning-for-cache-and-memory-manager-subsystems.md)
-##### ( Troubleshooting Cache and Memory Manager Performance](management/performance-tuning/Section_6.1-cache-and-memory-manager-potential-performance-issues.md)
+##### [Troubleshooting Cache and Memory Manager Performance](management/performance-tuning/Section_6.1-cache-and-memory-manager-potential-performance-issues.md)
 ##### [Cache and Memory Manager Improvements](management/performance-tuning/Section_6.2-cache-and-memory-manager-improvements-in-windows-server-2016.md)
 #### [Web Server Performance Tuning](management/performance-tuning/Section_8.0-performance-tuning-for-web-servers.md)
 ##### [HTTP 1.2/2 Performance Tuning](management/performance-tuning/Section_8.1-httpPerf.md)
