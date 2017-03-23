@@ -1,10 +1,10 @@
 ---
-ms.assetid: e5945bae-4a33-487c-a019-92a69db8cf6c
+ms.assetid: 13210461-1e92-48a1-91a2-c251957ba256
 title: Troubleshooting Drive Firmware Update Issues in Windows (1703)	
 ms.prod: windows-server-threshold
 ms.author: toklima
 ms.manager: masriniv
-ms.technology: storage-spaces
+ms.technology: storage
 ms.topic: article
 author: toklima
 ms.date: 03/23/2017
