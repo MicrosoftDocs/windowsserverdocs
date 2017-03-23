@@ -29,7 +29,7 @@ manager: dongill
     <td style="width:25%; border:0;">
       <a href="https://technet.microsoft.com/windows-server-docs/get-started/server-basics">
         <img height=145 src="media/1-getstarted.png" alt="Get started icon" title="Get started" /></br>
-      Get Started</br></br></a>
+      Get Started</br></a>
     </td>
     <td style="width:25%; border:0;">
       <a href="https://technet.microsoft.com/windows-server-docs/compute/compute">
@@ -65,7 +65,7 @@ manager: dongill
     </td>
     <td style="width:25%; border:0;">
       <a href="https://technet.microsoft.com/windows-server-docs/management/management-and-automation">
-        <img height=145 src="media/8-management.png" alt="Management and automation icon" title="Windows Server Management and Automation" />Management and Automation</br></br></a>
+        <img height=145 src="media/8-management.png" alt="Management and automation icon" title="Windows Server Management and Automation" />Management and Automation</br></a>
     </td>
   </tr>
 </table>
