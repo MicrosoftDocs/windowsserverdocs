@@ -653,7 +653,7 @@
 #### [Server Performance Advisor User's Guide](management/server-performance-advisor/server-performance-advisor-users-guide.md)
 #### [Server Performance Advisor Pack Development Guide](management/server-performance-advisor/server-performance-advisor-pack-development-guide.md)
 #### [Server Performance Advisor Pack for Tiered Storage Spaces](management/server-performance-advisor/server-performance-advisor-pack-for-tiered-storage-spaces.md)
-### [Performance Tuning Guidelines](management/performance-tuning/section_1.0-preface_whatsnew.md)
+### [Performance Tuning Guidelines](management/performance-tuning/section_1.0-preface_whatsnew.md)
 #### [Server Hardware Performance Considerations](management/performance-tuning/Section_2.0-ServerHardwarePerf.md)
 #### [Server Harware Power Considerations](management/performance-tuning/Section_3.0-ServerHardwarePower.md)
 ##### [Processor Power Management Tuning](management/performance-tuning/Section_3.1-PPMTuning.md)
