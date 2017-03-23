@@ -23,6 +23,7 @@ When managing Storage Spaces Direct, you can use Windows PowerShell, System Cent
 ## Resources for managing Storage Spaces Direct
 
 - [Adding servers or drives to Storage Spaces Direct](add-nodes.md)
+- [Taking a Storage Spaces Direct server offline for maintenance](maintain-servers.md)
 - [Removing servers](remove-servers.md)
 - [Updating drive firmware in Windows Server 2016](..\update-firmware.md)
 - [Extending volumes](resize-volumes.md)

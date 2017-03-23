@@ -10,7 +10,7 @@ ms.topic: article
 ms.assetid: 1a65a98e-54b6-4c41-9732-1e3d32fe3a5f
 author: KBDAzure
 ms.author: kathydav
-ms.date: 10/10/2016
+ms.date: 03/16/2017
 ---
 # What's new in Hyper-V on Windows Server 2016
 
@@ -128,6 +128,12 @@ For details and instructions, see the [Cluster Operating System Rolling Upgrade]
 
 ## <a name="BKMK_shared"></a>Shared virtual hard disks \(updated\)
 You can now resize shared virtual hard disks (.vhdx files) used for guest clustering, without downtime. Shared virtual hard disks can be grown or shrunk while the virtual machine is online. Guest clusters can now also protect shared virtual hard disks by using Hyper-V Replica for disaster recovery.
+
+Enable replication on the collection. Enabling replication on a collection is **only exposed through the WMI interface**. See the documentation for [Msvm_CollectionReplicationService class](https://msdn.microsoft.com/library/mt167787%28v=vs.85%29.aspx) for more details. **You cannot manage replication of a collection through PowerShell cmdlet or UI.** The VMs should be on hosts that are part of a Hyper-V cluster to access features that are specific to a collection. This includes Shared VHD - shared VHDs on stand-alone hosts are not supported by Hyper-V Replica.
+
+Follow the guidelines for shared VHDs in [Virtual Hard Disk Sharing Overview](https://technet.microsoft.com/en-us/library/dn281956.aspx), and be sure that your shared VHDs are part of a guest cluster. 
+
+A collection with a shared VHD but no associated guest cluster cannot create reference points for the collection (regardless of whether the shared VHD is included in the reference point creation or not). 
 
 ## <a name="BKMK_shielded"></a>Shielded virtual machines \(new\)
 Shielded virtual machines use several features to make it harder for Hyper-V administrators and malware on the host to inspect, tamper with, or steal data from the state of a shielded virtual machine.  Data and state is encrypted, Hyper-V administrators can't see the video output and disks,  and the virtual machines can be restricted to run only on known, healthy hosts, as determined by a Host Guardian Server. For details, see [Guarded Fabric and Shielded VMs](http://go.microsoft.com/fwlink/?LinkId=746381).

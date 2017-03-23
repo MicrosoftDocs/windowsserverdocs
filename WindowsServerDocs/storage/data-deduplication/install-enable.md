@@ -8,6 +8,7 @@ author: wmgries
 manager: klaasl
 ms.author: wgries
 ms.date: 09/15/2016
+description: How to install Data Deduplication on Windows Server, determine whether a workload is a good candidate for deduplication, and enable deduplication on volumes.
 ---
 
 # Install and enable Data Deduplication
@@ -15,9 +16,12 @@ ms.date: 09/15/2016
 
 This topic explains how to install [Data Deduplication](overview.md), evaluate workloads for deduplication, and enable Data Deduplication on specific volumes.
 
+> [!Note]  
+> If you're planning to run Data Deduplication in a Failover Cluster, every node in the cluster must have the Data Deduplication server role installed.
+
 ## <a id="install-dedup"></a>Install Data Deduplication
 > [!Important]  
-> [KB3216755](https://support.microsoft.com/kb/3216755) contains a critical reliability fix for Data Deduplication, and we strongly recommend installing it when using Data Deduplication with Windows Server 2016.
+> [KB4013429](https://support.microsoft.com/kb/4013429) contains a roll up of fixes for Data Deduplication, including important reliability fixes, and we strongly recommend installing it when using Data Deduplication with Windows Server 2016.
 
 ### <a id="install-dedup-via-server-manager"></a>Install Data Deduplication by using Server Manager
 1. In the Add Roles and Feature wizard, select **Server Roles**, and then select **Data Deduplication**.  

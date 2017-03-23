@@ -44,6 +44,7 @@ This document contains a list of all of the documentation operations for AD FS f
 - [Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications](../ad-fs/operations/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md)
 - [Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](../ad-fs/operations/Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
 - [Manage Risk with Conditional Access Control](../ad-fs/operations/Manage-Risk-with-Conditional-Access-Control.md)
+- [Managing SSL Certificates in AD FS and WAP 2016](../ad-fs/operations/Manage-SSL-Certificates-AD-FS-WAP-2016.md)
 - [Plan Device-based Conditional Access on-Premises](../ad-fs/operations/Plan-Device-based-Conditional-Access-on-Premises.md)
 - [Set up an AD FS lab environment](../ad-fs/operations/Set-up-an-AD-FS-lab-environment.md)
 - [Set up Geographic Redundancy with SQL Server Replication](../ad-fs/operations/Set-up-Geographic-Redundancy-with-SQL-Server-Replication.md)

@@ -7,7 +7,7 @@ ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
 ms.author: elizapo
-ms.date: 11/07/2016  
+ms.date: 02/22/2017  
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c925c7eb-6880-411f-8e59-bd0f57cc5fc3
@@ -48,9 +48,9 @@ The following table shows which versions of RDS components work with the 2016 an
 | Windows Server 2012 R2 Connection Broker | N/A       | N/A       | Not supported | Not supported |
 
 ## Support for GPU Acceleration with Hyper-V
-The following table details the support for GPU acceleration on virtual machines.
+The following table details the support for GPU acceleration on virtual machines. See [Which graphics virtualization technology is right for you?](rds-graphics-virtualization.md) for help figuring out what you need. For specific information about DDA, check out [Plan for deploying Discrete Device Assignment](../hyper-v/plan/plan-for-deploying-devices-using-discrete-device-assignment.md).
 
-|VM guest OS  |Windows Server 2012 R2  Hyper-V RemoteFX vGPU  (Gen 1 VM) |  Windows Server 2016  Hyper-V RemoteFX vGPU (Gen 2 VM) |  Windows Server 2016  Hyper-V Discrete Device Assignment (Gen 2 VM) |
+|VM guest OS  |Windows Server 2012 R2 or Windows Server 2016<br> Hyper-V RemoteFX vGPU  (Gen 1 VM) |  Windows Server 2016  Hyper-V RemoteFX vGPU (Gen 2 VM) |  Windows Server 2016  Hyper-V Discrete Device Assignment (Gen 2 VM) |
 |-----------------------------|------------------------------------------------------------|--------------------------------------------------------|---------------------------------------------------------------------|
 | Windows 7 SP1               | Yes                                                        | No                                                     | No                                                                  |
 | Windows 8.1                 | Yes                                                        | No                                                     | No                                                                  |

@@ -5,14 +5,14 @@ description: "This document provides best practices for the secure planning and 
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 02/09/2017
+ms.date: 03/15/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 
 ms.technology: identity-adfs
 ---
 
-## Introduction
+## Best practices for securing Active Directory Federation Services
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 

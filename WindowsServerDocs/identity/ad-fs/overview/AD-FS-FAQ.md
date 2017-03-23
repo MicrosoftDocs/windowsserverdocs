@@ -37,6 +37,8 @@ ms.technology: identity-adfs
 
 -   [Why does AD FS installation require a reboot of the server?](AD-FS-FAQ.md#BKMK_10)  
 
+-   [How can I ensure my AD FS and WAP servers support Apple's ATP requirements?](AD-FS-FAQ.md#BKMK_11)  
+
 ## <a name="BKMK_1"></a>How can I upgrade/migrate from previous versions of AD FS?  
 You can upgrade an AD FS 2012 R2 farm using the “mixed farm” process described [here](https://technet.microsoft.com/windows-server-docs/identity/ad-fs/deployment/upgrading-to-ad-fs-in-windows-server-2016).  It works for WID or SQL farms, though the document shows only the WID scenario.
 
@@ -68,39 +70,10 @@ The AD FS 2016 version of the spreadsheet can be downloaded [here](http://adfsdo
 This can also be used for AD FS in Windows Server 2012 R2.
 
 ## <a name="BKMK_5"></a>How do I replace the SSL certificate for AD FS?
-The AD FS SSL certificate is not the same as the AD FS Service communications certificate found in the AD FS Management snap-in.  To change the AD FS SSL certificate, you’ll need to use PowerShell.  
+The AD FS SSL certificate is not the same as the AD FS Service communications certificate found in the AD FS Management snap-in.  To change the AD FS SSL certificate, you’ll need to use PowerShell. Follow the guidance in the article below:
 
-Follow the steps below:
-
-1) First, you’ll need to obtain the new certificate.  This is usually done by submitting a certificate signing request (CSR) to a third party, public certificate provider.  There are a variety of ways to generate the CSR, including from a Windows 7 or higher PC.  Your vendor should have documentation for this.
-
-- Make sure the certificate meets the [AD FS and Web Application Proxy SSL certificate requirements](https://technet.microsoft.com/en-us/windows-server-docs/identity/ad-fs/overview/AD-FS-2016-Requirements)
-
-2) Once you get the response from your certificate provider, you’ll need to import it to the Local Machine store on each AD FS and Web Application Proxy server.
-
-3) On each AD FS server, use the following cmdlet to install the new SSL certificate
-
-    ```
-    PS C:\> Set-AdfsSslCertificate <thumbprint of new cert>
-    ```
-
-The certificate thumbprint can be found using the cmdlet
-
-	PS C:\>dir Cert:\LocalMachine\My\
-
-4) On each Web Application Proxy server use the following cmdlet to install the new SSL certificate:
-
-    ```
-    PS C:\> Set-WebApplicationProxySslCertificate <thumbprint of new cert>
-    ```
-
-If the above cmdlet fails because the old certificate has already expired, reconfigure the proxy using the following cmdlets:
-
-	PS C:\>$cred = Get-Credential
-
-Enter the credentials of a domain user who is local administrator on the AD FS server
-
-	PS C:\>Install-WebApplicationProxy -FederationServiceTrustCredential $cred -CertificateThumbprint '<thumbprint of SSL cert in proxy LM store>' -FederationServiceName 'fs.contoso.com'
+[Managing SSL Certificates in AD FS and WAP 2016](https://technet.microsoft.com/en-us/windows-server-docs/identity/ad-fs/operations/Manage-SSL-Certificates-AD-FS-WAP-2016)
+ 
 
 ## <a name="BKMK_6"></a>Does the proxy SSL certificate have to be the same as the AD FS SSL certificate?  
 - If the proxy is used to proxy AD FS requests that use Windows Integrated Authentication, the proxy SSL certificate must be the same (use the same key) as the federation server SSL certificate
@@ -202,3 +175,12 @@ The default lifetimes of the various cookies and tokens are listed below (as wel
 ## <a name="BKMK_10"></a>Why does AD FS installation require a reboot of the server?
 
 HTTP/2 support was added in Windows Server 2016, but HTTP/2 can't be used for client certificate authentication.  Because many AD FS scenarios make use of client certificate authentication, and a significant number of clients do not support retrying requests using HTTP/1.1, AD FS farm configuration re-configures the local server's HTTP settings to HTTP/1.1.  This requires a reboot of the server.  
+
+## <a name="BKMK_11"></a>How can I ensure my AD FS and WAP servers support Apple's ATP requirements?
+
+Apple has released a set of requirements called App Transport Security (ATS) that may impact calls from iOS apps that authenticate to AD FS.  You can ensure your AD FS and WAP servers comply by making sure they support the [requirements for connecting using ATS](https://developer.apple.com/library/prerelease/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW57).  
+In particular, you should verify that your AD FS and WAP servers support TLS 1.2 and that the TLS connection's negotiated cipher suite will support perfect forward secrecy.
+
+You can enable and disable SSL 2.0 and 3.0 and TLS versions 1.0, 1.1, and 1.2 using the guidance [here](https://technet.microsoft.com/en-us/library/dn786418(v=ws.11).aspx).
+
+To ensure your AD FS and WAP servers negotiate only TLS cipher suites that support ATP, you can disable all cipher suites that are not in the [list of ATP compliant cipher suites](https://developer.apple.com/library/prerelease/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW57).  To do this, use the [Windows TLS PowerShell cmdlets](https://technet.microsoft.com/itpro/powershell/windows/tls/index).  
