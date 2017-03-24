@@ -12,13 +12,13 @@ ms.assetid: 64f038e1-40ec-4c67-938b-72edea49e5d8
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.date: 02/01/2017
+ms.date: 03/23/2017
 ---
 # Get started with Remote Desktop on Android
 
 >Applies To: Windows 10, Windows 8.1, Windows Server 2012 R2, Windows Server 2016
 
-You can use the Remote Desktop client for Android to work with Windows apps, resources, and desktops directly from your Android device.
+You can use the Remote Desktop client for Android to work with Windows apps and desktops directly from your Android device.
 
 Use the following information to get started. Be sure to check out the [FAQ](remote-desktop-client-faq.md) if you have any questions.
 
@@ -29,8 +29,8 @@ Use the following information to get started. Be sure to check out the [FAQ](rem
 
 Follow these steps to get started with Remote Desktop on your Android device:
 
-1. Download the Remote Desktop client from [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.rdc.android). Next you need to [configure the remote PC that you want to accept remote connections](https://social.technet.microsoft.com/forums/en-us/169da213-5173-4552-9005-c7a355c0d12a/connect-to-your-pc-using-microsoft-rdp-apps?forum=winrdc). 
-2. Set up your PC to accept remote connections.
+1. Download the Remote Desktop client from [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.rdc.android). 
+2. [Set up your PC to accept remote connections](remote-desktop-allow-access.md).
 3. Add a Remote Desktop connection or a remote resource. You use a connection to connect directly to a Windows PC and a remote resource to use a RemoteApp program, session-based desktop, or virtual desktop published on-premises. 
 4. Create a widget so you can get to Remote Desktop quickly.
 
@@ -52,7 +52,7 @@ To create a Remote Desktop connection:
   - **Sound** – Select the device to use for audio during your remote session. You can choose to play sound on the local devices, the remote device, or not at all.
   - **Customize display resolution** - Set a custom resolution for a connection by enabling this setting. When off the resolution is applied which you have defined in the global settings of the app.
   - **Swap mouse buttons** – Use this option to swap the left mouse button functions for the right mouse button. (This is especially useful if the remote PC is configured for a left-handed user but you use a right-handed mouse.)
-  - **Connect to admin session** - Use this option to connect to an administration session on a server running Windows Server 2003 or later.
+  - **Connect to admin session** - Use this option to connect to a console session to administrate a Windows server.
   - **Redirect to local storage** – Mounts your local storage as a remote file system on the remote PC.
 4. Tap **Save**.
 
@@ -87,7 +87,7 @@ The Remote Desktop applications support pinning connections to your home screen 
 
 1. Tap **apps** to launch the apps menu.
 2. Tap **widgets**.
-3. Swipe through the widgets and look for the remote desktop icon with the description, “Pin Remote Desktop.”
+3. Swipe through the widgets and look for the Remote Desktop icon with the description, “Pin Remote Desktop.”
 4. Tap and hold that Remote Desktop widget and move it to the home screen.
 5. When you release the icon, you’ll see the saved remote desktops. Choose the connection that you want to save to your home screen.
 
@@ -129,10 +129,26 @@ To delete a user account:
 ## Navigate the Remote Desktop session
 When you start a remote desktop connection, there are tools available that you can use to navigate the session.
 
-### Start a Remote Desktop Connection
+### Start a Remote Desktop connection
 
-1. Tap the remote desktop connection to start the remote desktop session. 
+1. Tap the Remote Desktop connection to start the session. 
 2. If you are asked to verify the certificate for the remote desktop, tap **Connect**. You can also select **Don’t ask me again for connections to this computer** to always accept the certificate.
+
+### Manage global app settings
+
+You can set the following global settings in your Android client:
+
+- **Show Desktop Previews** - Lets you see a preview of a desktop in the Connection Center before you connect to it. By default, this is set to **on**.
+- **Pinch to Zoom** - Lets you use pinch-to-zoom gestures. If the app you're using through Remote Desktop supports multi-touch (introduced in Windows 8), turn this setting **off**.
+- **Help to improve Remote Desktop** - Sends anonymous data to Microsoft. We use this data to improve the client. You can learn more about how we treat this anonymous, private data, see the [Remote Desktop Client Privacy Statement](https://www.microsoft.com/privacystatement/RemoteApp/Default.aspx). By default, this setting is **on**.
+- **Display** - There are two global settings for your display:
+   - **Orientation** - Sets the preferred orientation (landscape or portrait) for your session. 
+   >[!NOTE]
+   > If you connect to a PC running Windows 8 or an older version of Windows, the session won't scale correctly. Your best bet is to disconnect from the PC, and then reconnect in the orientation you want to use. An even better option is to upgrade the PC to at least Windows 8.1.
+
+   - **Resolution** - Sets the resolution you want to use for desktop connections globally. If you have already set a custom resolution for an individual app or connection, this setting won't change that.
+   >[!NOTE]
+   >When you change one of the display settings, they only apply to new connections from that point on. To see the change in a session you're already connected to disconnect and then connect again.
 
 ### Connection Bar
 
@@ -146,28 +162,10 @@ The connection bar gives you access to additional navigation controls. By defaul
 - **Keyboard**: Tap the keyboard icon to display or hide the keyboard. The pan control is displayed automatically when the keyboard is displayed.
 - **Move the connection bar**: Tap and hold the connection bar, and then drag and drop to a new location at the top of the screen.
 
-### Session selection
-
-Tap the additional options icon in the connection  bar to display the session selection bar on the left-hand side of the screen. The session selection bar enables you to view your open connections and switch between them. 
-
-You can also launch new session or apps from your connection center.
-
-- Switch between apps in an open remote resource session.
-
-    When you are connected to remote resources, you can switch between open applications within that session by tapping the expander menu and choosing from the list of available items.
-- Start a new session
-
-  You can start new applications or desktop sessions from within your current connection: tap Start New, and then choose from the list of available items.
-
-- Disconnection a session
-
-  To disconnect a session tap X in the left-hand side of the session tile.
 
 ### Command bar
 
 Tap the connection bar to display the command bar on the right-hand side of the screen. You can switch between the mouse modes (Direct Touch and Mouse Pointer). Use the home button to return to the connection center from the command bar. Alternatively you can use the back button for the same action. Your active session will not be disconnected. 
-
-You can get to the command bar by a tap on the session bar.
 
 
 ### Use direct touch gestures and mouse modes in a remote session

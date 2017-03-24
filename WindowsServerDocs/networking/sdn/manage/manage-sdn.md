@@ -21,10 +21,11 @@ You can use the topics in this section to manage Software Defined Networking, in
   
 >[!NOTE]  
 >For additional Software Defined Networking documentation, you can use the following library sections.  
->- [Software Defined Networking Technologies](../../sdn/technologies/Software-Defined-Networking-Technologies.md)  
->- [Plan Software Defined Networking](../../sdn/plan/Plan-Software-Defined-Networking.md)  
->- [Deploy Software Defined Networking](../../sdn/deploy/Deploy-Software-Defined-Networking.md)  
->- [Troubleshoot Software Defined Networking](../../sdn/troubleshoot/Troubleshoot-Software-Defined-Networking.md)  
+>- [Software Defined Networking Technologies](../technologies/Software-Defined-Networking-Technologies.md)  
+>- [Plan Software Defined Networking](../plan/Plan-Software-Defined-Networking.md)  
+>- [Deploy Software Defined Networking](../deploy/Deploy-Software-Defined-Networking.md)
+>- [Security for Software Defined Networking](../security/sdn-security-top.md)
+>- [Troubleshoot Software Defined Networking](../troubleshoot/Troubleshoot-Software-Defined-Networking.md)  
   
 This section contains the following topics.  
   

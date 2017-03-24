@@ -2,13 +2,9 @@
 title: Software Defined Networking Technologies
 description: The topics in this section provide overview and technical information about the Software Defined Networking technologies that are included in Windows Server 2016.
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server-threshold
-ms.reviewer: na
 ms.service: virtual-network
-ms.suite: na
 ms.technology: networking-sdn
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b491089c-5bcb-49d4-95b1-915b7ce69f88
 ms.author: jamesmci
@@ -23,10 +19,11 @@ The topics in this section provide overview and technical information about the 
 > [!NOTE]  
 > For additional Software Defined Networking documentation, you can use the following library sections.  
 >   
-> - [Plan Software Defined Networking](../../sdn/plan/Plan-Software-Defined-Networking.md)
-> - [Deploy Software Defined Networking](../../sdn/deploy/Deploy-Software-Defined-Networking.md)
-> - [Manage Software Defined Networking](../../sdn/manage/manage-sdn.md)
-> - [Troubleshoot Software Defined Networking](../../sdn/troubleshoot/Troubleshoot-Software-Defined-Networking.md)
+> - [Plan Software Defined Networking](../plan/Plan-Software-Defined-Networking.md)
+> - [Deploy Software Defined Networking](../deploy/Deploy-Software-Defined-Networking.md)
+> - [Manage Software Defined Networking](../manage/manage-sdn.md)
+> - [Security for Software Defined Networking](../security/sdn-security-top.md)
+> - [Troubleshoot Software Defined Networking](../troubleshoot/Troubleshoot-Software-Defined-Networking.md)
 
 There are many technologies that work together to create Microsoft's Software Defined Networking (SDN) solutions, including the following:  
   

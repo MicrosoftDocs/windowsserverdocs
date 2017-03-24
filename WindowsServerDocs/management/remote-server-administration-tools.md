@@ -11,8 +11,8 @@ ms.topic: get-started-article
 ms.assetid: d54a1f5e-af68-497e-99be-97775769a7a7
 author: coreyp-at-msft
 ms.author: coreyp
-manager: dongill
-ms.date: 10/12/2016
+manager: lizapo
+ms.date: 03/17/2017
 ---
 # Remote Server Administration Tools
 
@@ -120,5 +120,5 @@ Although they are not listed in the Server Manager console **Tools** menu, Windo
 > You can also start a Windows PowerShell session that is targeted at a specific server by right-clicking a managed server in a role or group page in Server Manager, and then clicking **Windows PowerShell**.
 
 ## See Also
-[Remote Server Administration Tools for Windows 10](http://go.microsoft.com/fwlink/?LinkID=404281)
-[Remote Server Administration Tools (RSAT) for Windows Vista, Windows 7, Windows 8, Windows Server 2008, Windows Server 2008 R2, Windows Server 2012, and Windows Server 2012 R2](http://go.microsoft.com/fwlink/p/?LinkID=221055)
+>- [Remote Server Administration Tools for Windows 10](http://go.microsoft.com/fwlink/?LinkID=404281)
+>- [Remote Server Administration Tools (RSAT) for Windows Vista, Windows 7, Windows 8, Windows Server 2008, Windows Server 2008 R2, Windows Server 2012, and Windows Server 2012 R2](http://go.microsoft.com/fwlink/p/?LinkID=221055)

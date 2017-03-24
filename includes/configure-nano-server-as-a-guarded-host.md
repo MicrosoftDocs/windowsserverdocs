@@ -2,11 +2,8 @@
 
 There are a few different ways to deploy Nano Servers. This section follows the [Nano Server Quick Start](https://technet.microsoft.com/windows-server-docs/get-started/nano-server-quick-start#to-quickly-deploy-nano-server-on-a-physical-computer). In a nutshell, you will create a VHDX file using the New-NanoServerImage cmdlet, and on a physical computer, modify the boot entry to set the default boot option to the VHDX file. All the management of the Nano server is done through Windows PowerShell remoting.
 
-Caveats:
-
-- Nano Server can only run shielded VMs in a guarded fabric; it cannot be used to run shielded VMs without the use of HGS to unlock the virtual TPM devices. This means that you cannot use Nano Server to create a new shielded VM on-premises and move it to a guarded fabric, because Nano Server does not support the use of local key material to start up shielded VMs.
-
-- If you are using VMM to manage a guarded host running Nano Server, you can't use the "Apply latest CI Policy" feature to deploy updated code integrity (CI) policies to Nano Server. Instead, you will have to manually copy your CI policy (SIPolicy.p7b) to C:\Windows\System32\CodeIntegrity\SIPolicy.p7b and restart the host to apply it. Enforcement of the CI policy remains the same as with the Server Core and Desktop Experience.
+> [!NOTE]
+> Nano Server can only run shielded VMs in a guarded fabric; it cannot be used to run shielded VMs without the use of HGS to unlock the virtual TPM devices. This means that you cannot use Nano Server to create a new shielded VM on-premises and move it to a guarded fabric, because Nano Server does not support the use of local key material to start up shielded VMs.
 
 ## Creating a Nano Server image
 
