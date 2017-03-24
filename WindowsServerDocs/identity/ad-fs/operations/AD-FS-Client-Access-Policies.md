@@ -28,7 +28,7 @@ Since the introduction of Active Directory Federation Services, client access po
 Client access policies work by identifying which authentication requests should be permitted based upon attributes of the request itself. To provide this additional request context information, client access policies introduce a set of new claim types that AD FS populates from header information sent by the requesting client. 
 
 ### Claim types
-Client access policies work by identifying which authentication requests should be permitted based upon attributes of the request itself. To provide this additional request context information, client access policies use a set of claim types that AD FS populates from header information sent by the requesting client. For a detailed description of the new claim types and values, see New Claim Types.
+Client access policies work by identifying which authentication requests should be permitted based upon attributes of the request itself. To provide this additional request context information, client access policies use a set of claim types that AD FS populates from header information sent by the requesting client. For a detailed description of the new claim types and values, see [New Claim Types](AD-FS-Claims-Types.md).
 ## Common AD FS client access scenarios
 The following table describes the scenarios supported by the client access policy feature.
 
