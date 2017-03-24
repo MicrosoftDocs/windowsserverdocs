@@ -15,7 +15,7 @@ ms.technology: identity-adfs
 
 #Client access policy claim Types in AD FS
 
-To provide additional request context information, Client Access Policies use the following claim types, which AD FS generates from request header information for processing.  For more information see [The role of the claims engine](the-role-of-the-claims-engine.md).
+To provide additional request context information, Client Access Policies use the following claim types, which AD FS generates from request header information for processing.  For more information see [The role of the claims engine](../technical-reference/the-role-of-the-claims-engine.md).
 
 ##X-MS-Forwarded-Client-IP
 
