@@ -23,7 +23,7 @@ You have a range of options when it comes to enabling graphics rendering in Remo
 In Windows Server 2016, you have two graphics virtualization technologies available with Hyper-V that let you leverage the GPU hardware:
 
 - [Discrete Device Assignment (DDA)](#discrete-device-assignment) - For the highest performance using one or more GPUs dedicated to a VM providing native GPU driver support inside the VM. The density is low because it is limited by the number of physical GPUs available in the server. 
-- [Remote FX vGPU](#remotefx-vgpu-improvements-in-windows-server-2016) - For knowledge worker and high-burst GPU scenarios where multiple VMs leverage one or more GPUs through para-virtualization. This solution provides higher user density per server.
+- [Remote FX vGPU](#remotefx-vgpu) - For knowledge worker and high-burst GPU scenarios where multiple VMs leverage one or more GPUs through para-virtualization. This solution provides higher user density per server.
 
 The following illustration shows the graphics virtualization options in Windows Server 2016.
 
@@ -44,7 +44,7 @@ RemoteFX vGPU is a graphics virtualization technology that allows the processing
 -	Improved application compatibility and stability.
 -	VM Connect Enhanced Session Mode, allowing USB and clipboard redirection through VM Connect to a VM that is enabled for RemoteFX vGPU.
 
-
+For more information, check out [Set up and configure RemoteFX vGPU for Remote Desktop Services](rds-remotefx-vgpu.md).
 
 ## Which should you use?
 
