@@ -1,6 +1,6 @@
 ---
-title: Performance Tuning Guidelines for Windows Server 2016
-description: Performance Tuning Guidelines for Windows Server 2016
+title: Windows Server 2016 Performance Tuning Guidelines
+description: Performance tuning guidelines for Windows Server 2016
 ms.prod: windows-server-threshold
 ms.service: na
 manager: dongill
@@ -23,14 +23,14 @@ To have the most impact, your tuning changes should consider the hardware, the w
 **Note**  
 Registry settings and tuning parameters changed significantly between versions of Windows Server. Be sure to use the latest tuning guidelines to avoid unexpected results.
 
-# What's New in the Latest Tuning Guide
+## What's new?
 
 This section describes what changes are in the Windows Server 2016 edition of the Performance Tuning Guide:
 
-**Configuration considerations added for new Nano installation-type**
-    - Details about Nano can be found [here](https://technet.microsoft.com/en-us/windows-server-docs/compute/nano-server/getting-started-with-nano-server)
+## Configuration considerations added for new Nano installation-type
+Details about Nano can be found [here](https://technet.microsoft.com/en-us/windows-server-docs/compute/nano-server/getting-started-with-nano-server)
 
-**Sections added:**
+### Sections added
 
     - Software Defined Networking, including RAS and SLB configuration guidance
 
@@ -47,7 +47,7 @@ This section describes what changes are in the Windows Server 2016 edition of th
     - Powershell
 
 
-**Sections changes:**
+### Sections changed
 
     - Performance Tuning for Workloads removed, pointers to relevant resources added to Resources section
 
