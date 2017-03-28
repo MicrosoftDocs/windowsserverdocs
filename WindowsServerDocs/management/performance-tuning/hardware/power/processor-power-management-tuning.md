@@ -16,7 +16,7 @@ ms.date: 10/31/2016
 # Processor Power Management (PPM) Tuning for the Windows Server Balanced Power Plan
 
 
-Starting with Windows Server 2008, Windows Server provides three power plans: **Balanced**, **High Performance**, and **Power Saver**. The **Balanced** power plan is the default choice that aims to give the best energy efficiency for a set of typical server workloads. This topic describes the workloads that have been used to determine the default settings for the **Balanced** scheme for the past several releases of Windows. If you run a server system that has dramatically different workload characteristics or performance and power requirements than these workloads, you might want to consider tuning the default power settings (i.e., create a custom power plan). One source of useful tuning information is the [Server Hardware Power Considerations](./Section_3.0-ServerHardwarePower.md). Alternately, you may decide that the **High Performance** power plan is the right choice for your environment, recognizing that you will likely take a significant energy hit in exchange for some level of increased responsiveness.
+Starting with Windows Server 2008, Windows Server provides three power plans: **Balanced**, **High Performance**, and **Power Saver**. The **Balanced** power plan is the default choice that aims to give the best energy efficiency for a set of typical server workloads. This topic describes the workloads that have been used to determine the default settings for the **Balanced** scheme for the past several releases of Windows. If you run a server system that has dramatically different workload characteristics or performance and power requirements than these workloads, you might want to consider tuning the default power settings (i.e., create a custom power plan). One source of useful tuning information is the [Server Hardware Power Considerations](../power.md). Alternately, you may decide that the **High Performance** power plan is the right choice for your environment, recognizing that you will likely take a significant energy hit in exchange for some level of increased responsiveness.
 
 **Note**  
 You should leverage the power policies that are included with Windows Server unless you have a specific need to create a custom one and have a very good understanding that your results will vary depending on the characteristics of your workload.
@@ -67,18 +67,18 @@ Even though the system can run at its peak load, we typically optimize for lower
 
 All of the tested benchmarks use throughput as the performance metric. Response Time is considered as an SLA requirement for these workloads (except for SAP, where it is a primary metric). For example, a benchmark run is considered “valid” if the mean or maximum response time is less than certain value. Therefore, the PPM tuning analysis also uses throughput as its performance metric.  At the highest load level (100% CPU utilization), our goal is that the throughput should not decrease more than a few percent due to power management optimizations. But the primary consideration is to maximize the power efficiency (as defined below) at medium and low load levels.
 
-![power efficiency formula](../media/performance-tuning/serverperf-ppm-formula.jpg)
+![power efficiency formula](../../media/serverperf-ppm-formula.jpg)
 
 Running the CPU cores at lower frequencies reduces energy consumption. However, lower frequencies typically decrease throughput and increase response time. For the **Balanced** power plan, there is an intentional tradeoff of responsiveness and power efficiency. The SAP workload tests, as well as the response time SLAs on the other workloads, make sure that the response time increase doesn’t exceed certain threshold (5% as an example) for these specific workloads.
 
 **Note**
-If the workload uses response time as the performance metric, the system should either switch to the **High Performance** power plan or change **Balanced** power plan as suggested in [Recommended Balanced Power Plan Parameters for Quick Response Time](./Section_3.2-RecommendedPPMParameters.md).
+If the workload uses response time as the performance metric, the system should either switch to the **High Performance** power plan or change **Balanced** power plan as suggested in [Recommended Balanced Power Plan Parameters for Quick Response Time](recommended-balanced-plan-parameters.md).
 
 ### Tuning results
 
 Starting with Windows Server 2008, Microsoft worked with Intel and AMD to optimize the PPM parameters for the most up-to-date server processors for each Windows release. A tremendous number of PPM parameter combinations were tested on each of the previously-discussed workloads to find the best power efficiency at different load levels. As software algorithms were refined and as hardware power architectures evolved, each new Windows Server always had better or equal power efficiency than its previous versions across the range of tested workloads. The following figure gives an example of the power efficiency under different TPC-E load levels on a 4-socket production server running Windows Server 2008 R2. It shows an 8% improvement at medium load levels compared to Windows Server 2008.
 
-![power efficiency comparison](../media/performance-tuning/serverperf-ppm-figure1.jpg)
+![power efficiency comparison](../../media/serverperf-ppm-figure1.jpg)
 
 ## Customized Tuning Suggestions
 

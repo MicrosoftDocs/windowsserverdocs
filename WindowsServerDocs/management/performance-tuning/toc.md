@@ -3,8 +3,8 @@
 ### [Server Hardware Performance Considerations](hardware/index.md)
 ### [Server Hardware Power Considerations](hardware/power.md)
 #### [Processor Power Management Tuning](hardware/power/processor-power-management-tuning.md)
-#### [Recommended Balanced Power Plan Parameters](power/recommended-balanced-plan-parameters.md)
-## Server Role Considerations 
+#### [Recommended Balanced Power Plan Parameters](hardware/power/recommended-balanced-plan-parameters.md)
+## Server Role Considerations
 ### [Active Directory Server Performance Tuning](role/active-directory-server/index.md)
 ### [File Server Performance Tuning](role/file-server/index.md)
 #### [SMB File Server Performance Tuning](role/file-server/smb-file-server.md)
@@ -26,4 +26,3 @@
 #### [SLB gateway performance](subsystem/software-defined-networking/slb-gateway-performance.md)
 ### [Storage Spaces Direct Performance Tuning](subsystem/storage-spaces-direct/index.md)
 ## [Additional Tuning Resources](additional-resources.md)
-

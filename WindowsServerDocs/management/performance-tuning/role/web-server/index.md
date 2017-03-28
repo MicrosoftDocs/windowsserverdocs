@@ -25,7 +25,7 @@ This topic describes performance tuning methods and recommendations for Windows 
 
 It is important to select the proper hardware to satisfy the expected web load, considering average load, peak load, capacity, growth plans, and response times. Hardware bottlenecks limit the effectiveness of software tuning.
 
-[Performance Tuning for Server Hardware](./Section_2.0-ServerHardwarePerf.md) provides recommendations for hardware to avoid the following performance constraints:
+[Performance Tuning for Server Hardware](../../hardware/index.md) provides recommendations for hardware to avoid the following performance constraints:
 
 -   Slow CPUs offer limited processing power for CPU intensive workloads such as ASP, ASP.NET, and TLS scenarios.
 

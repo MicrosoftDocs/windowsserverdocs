@@ -17,7 +17,7 @@ ms.date: 10/31/2016
 
 Software load balancing is provided by a combination of a load balancer manager in the Network Controller VMs, the Hyper-V Virtual Switch and a set of Load Balancer Multixplexor (Mux) VMs.
 
-No additional performance tuning is required to configure the Network Controller or the Hyper-V host for load balancing beyond what is described in the [Software Defined Networking](./Section_11.0-SoftwareDefinedNetworking.md) section, unless you will be using SR-IOV for the Muxes as described below.
+No additional performance tuning is required to configure the Network Controller or the Hyper-V host for load balancing beyond what is described in the [Software Defined Networking](index.md) section, unless you will be using SR-IOV for the Muxes as described below.
 
 ## SLB Mux VM Configuration
 
@@ -27,7 +27,7 @@ An individual connection to a Virtual IP (VIP) will always be sent to the same M
 
 In some cases when the source of the request originates from an SDN host that is added to the same Network Controller that manages the VIP, further optimization of the inbound path for the request is also performed which enables most packets to travel directly from the client to the server, bypassing the Mux VM entirely.  No additional configuration is required for this optimization to take place.
 
-Each SLB Mux VM must be sized according to the guidelines provided in the SDN infrastructure virtual machine role requirements section of the [Plan Software Defined Networking](../../networking/sdn/plan/Plan-Software-Defined-Networking.md) topic.
+Each SLB Mux VM must be sized according to the guidelines provided in the SDN infrastructure virtual machine role requirements section of the [Plan Software Defined Networking](../../../networking/sdn/plan/Plan-Software-Defined-Networking.md) topic.
 
 ## Single Root IO virtualization (SR-IOV)
 

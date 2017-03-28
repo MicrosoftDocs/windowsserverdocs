@@ -15,7 +15,7 @@ ms.date: 10/31/2016
 
 # Performance Tuning for Cache and Memory Manager Subsystems
 
-By default, Windows caches file data that is read from disks and written to disks. This implies that read operations read file data from an area in system memory, known as the system file cache, rather than from the physical disk. Correspondingly, write operations write file data to the system file cache rather than to the disk, and this type of cache is referred to as a write-back cache. Caching is managed per file object.Caching occurs under the direction of the Cache Manager, which operates continuously while Windows is running.
+By default, Windows caches file data that is read from disks and written to disks. This implies that read operations read file data from an area in system memory, known as the system file cache, rather than from the physical disk. Correspondingly, write operations write file data to the system file cache rather than to the disk, and this type of cache is referred to as a write-back cache. Caching is managed per file object. Caching occurs under the direction of the Cache Manager, which operates continuously while Windows is running.
 
 File data in the system file cache is written to the disk at intervals determined by the operating system. Flushed pages stay either in system cache working set (when FILE\_FLAG\_RANDOM\_ACCESS is set and file handle wasn’t closed) or on the standby list where these become part of available memory.
 
@@ -29,6 +29,6 @@ As depicted by the solid arrows in the preceding figure, a 256 KB region of data
 
 **In this section:**
 
--   [Cache and Memory Manager Potential Performance Issues](./Section_6.1-cache-and-memory-manager-potential-performance-issues.md)
+-   [Cache and Memory Manager Potential Performance Issues](troubleshoot.md)
 
--   [Cache and Memory Manager Improvements in Windows Server 2016](./Section_6.2-cache-and-memory-manager-improvements-in-windows-server-2016.md)
+-   [Cache and Memory Manager Improvements in Windows Server 2016](improvements-in-2016.md)

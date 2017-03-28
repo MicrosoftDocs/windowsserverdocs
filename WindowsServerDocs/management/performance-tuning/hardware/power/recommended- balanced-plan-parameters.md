@@ -35,7 +35,7 @@ Powercfg -setacvalueindex scheme_balanced sub_processor PERFINCPOL 0
 Powercfg -setactive scheme_balanced
 ```
 
-This change is based on the performance and power tradeoff analysis using the following workloads. For the users who want to further fine tune the power efficiency with certain SLA requirements, please refer to [Server Hardware Performance Considerations](./Section_3.0-ServerHardwarePower.md).
+This change is based on the performance and power tradeoff analysis using the following workloads. For the users who want to further fine tune the power efficiency with certain SLA requirements, please refer to [Server Hardware Performance Considerations](../power.md).
 
 -   **SPECpower – JAVA workload**
 

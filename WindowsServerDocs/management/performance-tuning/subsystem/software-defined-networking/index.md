@@ -21,15 +21,15 @@ Software Defined Networking (SDN) in Windows Server 2016 is made up of a combina
 
 The network controller is a Windows Server role which must be enabled on Virtual Machines running on hosts that are configured to use SDN and are controlled by the network controller.
 
-Three Network Controller enabled VMs are sufficient for high availability and maximum performance.  Each VM must be sized according to the guidelines provided in the SDN infrastructure virtual machine role requirements section of the [Plan Software Defined Networking](../../networking/sdn/plan/Plan-Software-Defined-Networking.md) topic.
+Three Network Controller enabled VMs are sufficient for high availability and maximum performance.  Each VM must be sized according to the guidelines provided in the SDN infrastructure virtual machine role requirements section of the [Plan Software Defined Networking](../../../networking/sdn/plan/Plan-Software-Defined-Networking.md) topic.
 
 ### SDN Quality of Service (QoS)
 
-To ensure virtual machine traffic is prioritized effectively and fairly, it is recommended that you configure SDN QoS on the workload virtual machines.  For more information on configuring SDN QoS, refer to the [Configure QoS for a Tenant VM Network Adapter](../../networking/sdn/manage/Configure-QoS-for-Tenant-VM-Network-Adapter.md) topic.
+To ensure virtual machine traffic is prioritized effectively and fairly, it is recommended that you configure SDN QoS on the workload virtual machines.  For more information on configuring SDN QoS, refer to the [Configure QoS for a Tenant VM Network Adapter](../../../networking/sdn/manage/Configure-QoS-for-Tenant-VM-Network-Adapter.md) topic.
 
 ## Hyper-V Host Networking
 
-The guidance provided in the [Hyper-V network I/O performance](#netio) section of the    [Performance Tuning for Hyper-V Servers](./Section_13.0-performance-tuning-for-hyper-v-servers.md) guide is applicable when SDN is used, however this section covers additional guidelines that must be followed to ensure the best performance when using SDN.
+The guidance provided in the [Hyper-V network I/O performance](#netio) section of the    [Performance Tuning for Hyper-V Servers](../../role/remote-desktop/session-hosts.md) guide is applicable when SDN is used, however this section covers additional guidelines that must be followed to ensure the best performance when using SDN.
 
 ### Physical Network Adapter (NIC) Teaming
 
@@ -64,12 +64,12 @@ SDN is implemented on the Hyper-V host using a forwarding switch extension in th
 
 SR-IOV can still be enabled on the virtual switch if desired and can be used by VM network adapters that are not controlled by the network controller.  These SR-IOV VMs can coexist on the same virtual switch as network controller controlled VMs which do not use SR-IOV.
 
-If you are using 40Gbit network adapters it is recommended that you enable SR-IOV on the virtual switch for the Software Load Balancing (SLB) Gateways to achieve maximum throughput.  This is covered in more detail in the [Software Load Balancer Gateways](./Section_11.2-SoftwareDefinedNetworking-SLB.md) section.
+If you are using 40Gbit network adapters it is recommended that you enable SR-IOV on the virtual switch for the Software Load Balancing (SLB) Gateways to achieve maximum throughput.  This is covered in more detail in the [Software Load Balancer Gateways](../../subsystem/software-defined-networking/slb-gateway.md) section.
 
 ## HNV Gateways
 
-You can find information on tuning HNV Gateways for use with SDN in the [RAS Gateways](./Section_11.1-SoftwareDefinedNetworking-RAS.md) section.
+You can find information on tuning HNV Gateways for use with SDN in the [HVN Gateways](hnv-gateway-performance.md) section.
 
 ## Software Load Balancer (SLB)
 
-SLB Gateways can only be used with the Network Controller and SDN.  You can find more information on tuning SDN for use iwth SLB Gateways in the [Software Load Balancer Gateways](./Section_11.2-SoftwareDefinedNetworking-SLB.md) section.
+SLB Gateways can only be used with the Network Controller and SDN.  You can find more information on tuning SDN for use iwth SLB Gateways in the [Software Load Balancer Gateways](slb-gateway-performance.md) section.

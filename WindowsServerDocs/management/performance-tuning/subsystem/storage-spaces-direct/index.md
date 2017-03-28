@@ -13,7 +13,7 @@ ms.date: 1/27/2017
 
 # Performance tuning for Storage Spaces Direct
 
-Storage Spaces Direct, a Windows Server-based software-defined storage solution, automatically tunes its performance, obviating the need to manually specify column counts, the cache configuration of the hardware you use, and other factors that must be set manually with shared SAS storage solutions. For background info, see [Storage Spaces Direct in Windows Server 2016](../../storage/storage-spaces/storage-spaces-direct-overview.md).
+Storage Spaces Direct, a Windows Server-based software-defined storage solution, automatically tunes its performance, obviating the need to manually specify column counts, the cache configuration of the hardware you use, and other factors that must be set manually with shared SAS storage solutions. For background info, see [Storage Spaces Direct in Windows Server 2016](../../../storage/storage-spaces/storage-spaces-direct-overview.md).
 
 The Storage Spaces Direct Software Storage Bus Cache is automatically configured based on the types of storage present in the system. Three types recognized: **HDD**, **SSD** and **NVMe**. The cache claims the fastest storage for read and/or write caching, as appropriate, and uses the slower storage for persistent storage of data.
 
@@ -34,7 +34,7 @@ To view and alter the cache configuration, use the [Get-ClusterStorageSpacesDire
 
 ## See also
 
-- [Understanding Storage Spaces Direct](../../storage/storage-spaces/understand-storage-spaces-direct.md)
-- [Planning Storage Spaces Direct](../../storage/storage-spaces/plan-storage-spaces-direct.md)
-- [Performance tuning for file servers](./Section_9.0-performance-tuning-for-file-servers.md)
+- [Understanding Storage Spaces Direct](../../../storage/storage-spaces/understand-storage-spaces-direct.md)
+- [Planning Storage Spaces Direct](../../../storage/storage-spaces/plan-storage-spaces-direct.md)
+- [Performance tuning for file servers](../../file-server/index.md)
 - [Software-Defined Storage Design Considerations Guide](https://technet.microsoft.com/library/mt243829.aspx) (for Windows Server 2012 R2 and shared SAS storage)
