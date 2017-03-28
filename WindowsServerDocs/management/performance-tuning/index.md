@@ -24,37 +24,21 @@ To have the most impact, your tuning changes should consider the hardware, the w
 > Registry settings and tuning parameters changed significantly between versions of Windows Server. Be sure to use the latest tuning guidelines to avoid unexpected results.
 
 ## In this guide
-This guide organizes performance and tuning guidance for Windwows Server 2016 across three tuning categories:
-### Server hardware performance tuning guidance
-  - [Hardware performance considerations](hardware/index.md)
+This guide organizes performance and tuning guidance for Windows Server 2016 across three tuning categories:
 
-  - [Hardware power considerations](hardware/power.md)
-
-
-### Server role performance tuning guidance
-  - [Active Directory Servers](role/active-directory-server/index.md)
-
-  - [Containers](role/container/index.md)
-
-  - [File Servers](role/file-server/index.md)
-
-  - [Hyper-V Servers](role/hyper-v-server/index.md)
-
-  - [Remote Desktop Servers](role/remote-desktop-server/session-hosts.md)
-
-  - [Web Servers](role/web-server/index.md)
-
-### Server subsystem tuning guidance  
-- [Cache and Memory Management](subsystem/cache-memory-management/index.md)
-
-- [Software Defined Networking](subsystem/software-defined-networking/index.md)
-
-- [Storage Spaces Direct](subsystem/storage-spaces-direct/index.md)
+|Server Hardware | Server Role | Server Subsystem |
+|:---:|:---:|:---:|
+|[Hardware performance considerations](hardware/index.md) |[Active Directory Servers](role/active-directory-server/index.md) |[Cache and Memory Management](subsystem/cache-memory-management/index.md)|
+|[Hardware power considerations](hardware/power.md)|[Containers](role/container/index.md)|[Software Defined Networking](subsystem/software-defined-networking/index.md)|
+||[File Servers](role/file-server/index.md)|[Storage Spaces Direct](subsystem/storage-spaces-direct/index.md)|
+||[Hyper-V Servers](role/hyper-v-server/index.md)||
+||[Remote Desktop Servers](role/remote-desktop/session-hosts.md)||
+||[Web Servers](role/web-server/index.md)|||
 
 ## Changes in this version
-> Changes to this are now available in GitHub.
+> TBD: Changes to this are now available in GitHub.
 
-> Downloadable PDF version
+> TBD: Downloadable PDF version
 
 ### Sections added
 - [Nano Server installation-type configuration considerations](https://technet.microsoft.com/en-us/windows-server-docs/compute/nano-server/getting-started-with-nano-server)
@@ -71,7 +55,7 @@ This guide organizes performance and tuning guidance for Windwows Server 2016 ac
 
 - Updates to [Active Directory guidance](role/active-directory-server/index.md) section
 
-- Updates to [File Server guidance](role/filer-server/index.md) section
+- Updates to [File Server guidance](role/file-server/index.md) section
 
 - Updates to [Web Server guidance](role/web-server/index.md) section
 
