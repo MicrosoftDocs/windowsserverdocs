@@ -55,7 +55,7 @@ Internet Information Services (IIS) 10.0 is included with Windows Server 2016.
 
 HTTP.sys is responsible for connection management and request handling. The request can be served from the HTTP.sys cache or passed to a worker process for further handling. Multiple worker processes can be configured, which provides isolation at a reduced cost. For more info on how request handling works, see the following figure:
 
-![request handling in iis 10.0](../media/performance-tuning/perftune-guide-iis-request-handling.png)
+![request handling in iis 10.0](../../media/perftune-guide-iis-request-handling.png)
 
 HTTP.sys includes a response cache. When a request matches an entry in the response cache, HTTP.sys sends the cache response directly from kernel mode. Some web application platforms, such as ASP.NET, provide mechanisms to enable any dynamic content to be cached in the kernel-mode cache. The static file handler in IIS 10.0 automatically caches frequently requested files in http.sys.
 

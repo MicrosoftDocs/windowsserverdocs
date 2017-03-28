@@ -23,7 +23,7 @@ The policy of delaying the writing of the data to the file and holding it in the
 
 This file data caching process is illustrated in the following figure:
 
-![file data caching](../media/performance-tuning/perftune-guide-file-data-caching.png)
+![file data caching](../../media/perftune-guide-file-data-caching.png)
 
 As depicted by the solid arrows in the preceding figure, a 256 KB region of data is read into a 256 KB cache slot in system address space when it is first requested by the Cache Manager during a file read operation. A user-mode process then copies the data in this slot to its own address space. When the process has completed its data access, it writes the altered data back to the same slot in the system cache, as shown by the dotted arrow between the process address space and the system cache. When the Cache Manager has determined that the data will no longer be needed for a certain amount of time, it writes the altered data back to the file on the disk, as shown by the dotted arrow between the system cache and the disk.
 

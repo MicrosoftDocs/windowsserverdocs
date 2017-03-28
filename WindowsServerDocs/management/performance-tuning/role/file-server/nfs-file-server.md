@@ -29,7 +29,7 @@ Microsoft Services for NFS provides a file-sharing solution for enterprises that
 
 The following figure shows the communication model for NFS.
 
-![nfs communication model](../media/performance-tuning/perftune-guide-nfs-model.png)
+![nfs communication model](../../media/perftune-guide-nfs-model.png)
 
 ### Tuning parameters for NFS file servers
 

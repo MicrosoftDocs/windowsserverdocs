@@ -102,7 +102,7 @@ For memory consumption, you should consider the following:
 
     -   Here we can see that y.dll was relocated because x.dll already occupied its default base address and ASLR was not enabled
 
-        ![relocated dlls](../media/performance-tuning/perftune-guide-relocated-dlls.png)
+        ![relocated dlls](../../media/perftune-guide-relocated-dlls.png)
 
         If DLLs are relocated, it is impossible to share their code across sessions, which significantly increases the footprint of a session. This is one of the most common memory-related performance issues on an RD Session Host server.
 
