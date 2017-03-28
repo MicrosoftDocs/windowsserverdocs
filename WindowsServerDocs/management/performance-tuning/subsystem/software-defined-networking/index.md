@@ -21,7 +21,7 @@ Software Defined Networking (SDN) in Windows Server 2016 is made up of a combina
 
 The network controller is a Windows Server role which must be enabled on Virtual Machines running on hosts that are configured to use SDN and are controlled by the network controller.
 
-Three Network Controller enabled VMs are sufficient for high availability and maximum performance.  Each VM must be sized according to the guidelines provided in the SDN infrastructure virtual machine role requirements section of the [Plan Software Defined Networking](../../../networking/sdn/plan/Plan-Software-Defined-Networking.md) topic.
+Three Network Controller enabled VMs are sufficient for high availability and maximum performance.  Each VM must be sized according to the guidelines provided in the SDN infrastructure virtual machine role requirements section of the [Plan Software Defined Networking](../../../../networking/sdn/plan/Plan-Software-Defined-Networking.md) topic.
 
 ### SDN Quality of Service (QoS)
 
@@ -29,7 +29,7 @@ To ensure virtual machine traffic is prioritized effectively and fairly, it is r
 
 ## Hyper-V Host Networking
 
-The guidance provided in the [Hyper-V network I/O performance](#netio) section of the    [Performance Tuning for Hyper-V Servers](../../../role/remote-desktop/session-hosts.md) guide is applicable when SDN is used, however this section covers additional guidelines that must be followed to ensure the best performance when using SDN.
+The guidance provided in the [Hyper-V network I/O performance](#netio) section of the    [Performance Tuning for Hyper-V Servers](../../role/remote-desktop/session-hosts.md) guide is applicable when SDN is used, however this section covers additional guidelines that must be followed to ensure the best performance when using SDN.
 
 ### Physical Network Adapter (NIC) Teaming
 
