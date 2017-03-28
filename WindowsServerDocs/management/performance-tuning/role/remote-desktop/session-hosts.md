@@ -1,5 +1,5 @@
 ---
-title: Performance Tuning for Remote Desktop Session Hosts
+title: Performance Tuning Remote Desktop Session Hosts
 description: Performance Tuning for Remote Desktop Session Hosts
 ms.prod: windows-server-threshold
 ms.service: na
@@ -13,7 +13,7 @@ ms.author: HammadBu
 ms.date: 10/31/2016
 ---
 
-# Performance Tuning for Remote Desktop Session Hosts
+# Performance Tuning Remote Desktop Session Hosts
 
 
 This topic discusses how to select Remote Desktop Session Host (RD Session Host) hardware, tune the host, and tune applications.

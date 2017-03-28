@@ -1,5 +1,5 @@
 ---
-title: Software Defined Networking SLB Gateway Performance  
+title: SLB Gateway Performance Tuning in Software Defined Networks  
 description: Software Defined Networking SLB Gateway Performance
 ms.prod: windows-server-threshold
 ms.service: na
@@ -13,7 +13,7 @@ ms.author: grcusanz
 ms.date: 10/31/2016
 ---
 
-# Software Defined Networking SLB Gateway Performance
+# SLB Gateway Performance Tuning in Software Defined Networks
 
 Software load balancing is provided by a combination of a load balancer manager in the Network Controller VMs, the Hyper-V Virtual Switch and a set of Load Balancer Multixplexor (Mux) VMs.
 

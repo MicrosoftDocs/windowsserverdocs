@@ -13,7 +13,7 @@ ms.author: Pavel; ATales
 ms.date: 10/31/2016
 ---
 
-# Performance Tuning for Cache and Memory Manager Subsystems
+# Performance Tuning Cache and Memory Manager
 
 By default, Windows caches file data that is read from disks and written to disks. This implies that read operations read file data from an area in system memory, known as the system file cache, rather than from the physical disk. Correspondingly, write operations write file data to the system file cache rather than to the disk, and this type of cache is referred to as a write-back cache. Caching is managed per file object. Caching occurs under the direction of the Cache Manager, which operates continuously while Windows is running.
 

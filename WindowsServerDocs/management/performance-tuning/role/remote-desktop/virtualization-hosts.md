@@ -1,5 +1,5 @@
 ---
-title: Performance Tuning for Remote Desktop Virtualization Hosts
+title: Performance Tuning Remote Desktop Virtualization Hosts
 description: Performance Tuning for Remote Desktop Virtualization Hosts
 ms.prod: windows-server-threshold
 ms.service: na
@@ -13,7 +13,7 @@ ms.author: HammadBu
 ms.date: 10/31/2016
 ---
 
-# Performance Tuning for Remote Desktop Virtualization Hosts
+# Performance Tuning Remote Desktop Virtualization Hosts
 
 
 Remote Desktop Virtualization Host (RD Virtualization Host) is a role service that supports Virtual Desktop Infrastructure (VDI) scenarios and lets multiple concurrent users run Windows-based applications in virtual machines that are hosted on a server running Windows Server 2016 and Hyper-V.

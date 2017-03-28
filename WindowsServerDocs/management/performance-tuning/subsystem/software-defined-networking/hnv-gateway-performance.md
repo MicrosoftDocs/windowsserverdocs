@@ -1,6 +1,6 @@
 ---
-title: Software Defined Networking RAS Gateway Performance  
-description: Software Defined Networking RAS Gateway Performance
+title: HNV Gateway Performance Tuning in Software Defined Networks  
+description: HNV Gateway Performance Tuning in Software Defined Networks
 ms.prod: windows-server-threshold
 ms.service: na
 manager: dongill
@@ -13,8 +13,7 @@ ms.author: grcusanz; AnPaul
 ms.date: 10/31/2016
 ---
 
-# Software Defined Networking - HNV Gateway Performance
-
+# HNV Gateway Performance Tuning in Software Defined Networks
 
 This topic provides hardware specifications and configuration recommendations for servers that are running Hyper-V and hosting Windows Server Gateway virtual machines, in addition to configuration parameters for Windows Server Gateway virtual machines (VMs). To extract best performance from Windows Server gateway VMs, it is expected that these guidelines will be followed.
 The following sections contain hardware and configuration requirements when you deploy Windows Server Gateway.

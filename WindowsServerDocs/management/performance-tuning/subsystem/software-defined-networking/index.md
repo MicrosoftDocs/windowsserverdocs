@@ -1,6 +1,6 @@
 ---
-title: Software Defined Networking Performance  
-description: Software Defined Networking Performance
+title: Performance Tuning Software Defined Networks  
+description: Software Defined Network Performance
 ms.prod: windows-server-threshold
 ms.service: na
 manager: dongill
@@ -13,7 +13,7 @@ ms.author: grcusanz
 ms.date: 10/31/2016
 ---
 
-# Software Defined Networking Performance
+# Performance Tuning Software Defined Networks
 
 Software Defined Networking (SDN) in Windows Server 2016 is made up of a combination of a Network Controller, Hyper-V Hosts, Software Load Balancer Gateways and HNV Gateways.  For tuning of each of these components refer to the following sections:
 

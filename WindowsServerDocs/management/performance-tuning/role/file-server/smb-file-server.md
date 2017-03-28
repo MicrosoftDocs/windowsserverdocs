@@ -13,18 +13,16 @@ ms.author: NedPyle; Danlo; DKruse
 ms.date: 10/31/2016
 ---
 
-# Performance Tuning For SMB File Servers
+# Performance Tuning SMB File Servers
 
-## <a href="" id="smb"></a>SMB configuration considerations
-
-
+## SMB configuration considerations
 Do not enable any services or features that your file server and clients do not require. These might include SMB signing, client-side caching, file system mini-filters, search service, scheduled tasks, NTFS encryption, NTFS compression, IPSEC, firewall filters, Teredo, and SMB encryption.
 
 Ensure that the BIOS and operating system power management modes are set as needed, which might include High Performance mode or altered C-State. Ensure that the latest, most resilient, and fastest storage and networking device drivers are installed.
 
 Copying files is a common operation performed on a file server. Windows Server has several built-in file copy utilities that you can run by using a command prompt. Robocopy is recommended. Introduced in Windows Server 2008 R2, the **/mt** option of Robocopy can significantly improve speed on remote file transfers by using multiple threads when copying multiple small files. We also recommend the /log option to reduce console output by redirecting to NUL device or to a file. When you use Xcopy, we recommend adding the **/q** and **/k** options to your existing parameters. The former option reduces CPU overhead by reducing console output and the latter reduces network traffic.
 
-## <a href="" id="smbperftuning"></a>SMB performance tuning
+## SMB performance tuning
 
 
 File server performance and available tunings depend on the SMB protocol that is negotiated between each client and the server, and on the deployed file server features. The highest protocol version currently available is SMB 3.1.1 in Windows Server 2016 and Windows 10. You can check which version of SMB is in use on your network by using Windows PowerShell **Get-SMBConnection** on clients and **Get-SMBSession | FL** on servers.
@@ -63,7 +61,7 @@ SMB Scale-out allows SMB 3.0 in a cluster configuration to show a share in all n
 
 For more info about SMB Scale-Out, see [Scale-Out File Server for Application Data Overview](http://technet.microsoft.com/library/hh831349.aspx) and the blog post [To scale out or not to scale out, that is the question](http://blogs.technet.com/b/filecab/archive/2013/12/05/to-scale-out-or-not-to-scale-out-that-is-the-question.aspx).
 
-### <a href="" id="smbcounters"></a>Performance counters for SMB 3.0
+### Performance counters for SMB 3.0
 
 The following SMB performance counters were introduced in Windows Server 2012, and they are considered a base set of counters when you monitor the resource usage of SMB 2 and higher versions. Log the performance counters to a local, raw (.blg) performance counter log. It is less expensive to collect all instances by using the wildcard character (\*), and then extract particular instances during post-processing by using Relog.exe.
 
@@ -95,7 +93,7 @@ The following SMB performance counters were introduced in Windows Server 2012, 
 
     For more info on how physical disk, SMB, and CSV file system counters are related, see the following blog post: [Cluster Shared Volume Performance Counters](http://blogs.msdn.com/b/clustering/archive/2014/06/05/10531462.aspx).
 
-## <a href="" id="smbtuningpars"></a>Tuning parameters for SMB file servers
+## Tuning parameters for SMB file servers
 
 
 The following REG\_DWORD registry settings can affect the performance of SMB file servers:
@@ -159,10 +157,6 @@ The following settings can optimize a computer for file server performance in ma
 |---------------------------------|-------|---------|
 | AdditionalCriticalWorkerThreads | 64    | 0       |
 | MaxThreadsPerQueue              | 64    | 20      |
-
-
- 
-
 
 
 ### SMB client performance monitor counters

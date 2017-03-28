@@ -51,24 +51,18 @@ Windows Server 2016 enables selective suspend for USB devices by default. Howev
 ## Remotely-managed Power Strip Recommendations
 Power strips are not an integral part of server hardware, but they can make a large difference in the data center. Measurements show that volume servers that are plugged in, but have been ostensibly powered off, may still require up to 30 watts of power. To avoid wasting electricity, you can deploy a remotely managed power strip for each rack of servers to programmatically disconnect power from specific servers.
 
- 
 
-# Processor terminology
-
-
+## Processor terminology
 The processor terminology used throughout this topic reflects the hierarchy of components available in the following figure. Terms used from largest to smallest granularity of components are the following:
 
 -   Processor socket
-
 -   NUMA node
-
 -   Core
-
 -   Logical processor
 
 ![processor terminology](../media/perftune-guide-figure-1.png)
 
-# Power and performance tuning
+## Power and performance tuning
 
 
 Energy efficiency is increasingly important in enterprise and data center environments, and it adds another set of tradeoffs to the mix of configuration options.
