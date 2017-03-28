@@ -1,5 +1,5 @@
 ---
-title: Performance Tuning for Hyper-V Servers
+title: Performance Tuning Hyper-V Servers
 description: Performance Tuning for Hyper-V Servers
 ms.prod: windows-server-threshold
 ms.service: na
@@ -13,7 +13,7 @@ ms.author: Asmahi; SandySp; JoPoulso;
 ms.date: 10/31/2016
 ---
 
-# Performance Tuning for Hyper-V Servers
+# Performance Tuning Hyper-V Servers
 
 
 Hyper-V is the virtualization server role in Windows Server 2016. Virtualization servers can host multiple virtual machines that are isolated from each other but share the underlying hardware resources by virtualizing the processors, memory, and I/O devices. By consolidating servers onto a single machine, virtualization can improve resource usage and energy efficiency and reduce the operational and maintenance costs of servers. In addition, virtual machines and the management APIs offer more flexibility for managing resources, balancing load, and provisioning systems.

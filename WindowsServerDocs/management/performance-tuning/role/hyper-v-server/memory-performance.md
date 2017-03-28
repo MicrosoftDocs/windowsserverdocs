@@ -12,7 +12,7 @@ ms.author: Asmahi; SandySp; JoPoulso;
 ms.date: 10/31/2016
 ---
 
-# Hyper-V memory performance
+# Hyper-V Memory Performance
 
 
 The hypervisor virtualizes the guest physical memory to isolate virtual machines from each other and to provide a contiguous, zero-based memory space for each guest operating system, just as on non-virtualized systems.

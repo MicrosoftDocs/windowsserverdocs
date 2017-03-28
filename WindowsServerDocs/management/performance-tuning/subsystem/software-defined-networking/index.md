@@ -1,6 +1,6 @@
 ---
-title: Software Defined Networking Performance  
-description: Software Defined Networking Performance
+title: Performance Tuning Software Defined Networks  
+description: Software Defined Network Performance
 ms.prod: windows-server-threshold
 ms.service: na
 manager: dongill

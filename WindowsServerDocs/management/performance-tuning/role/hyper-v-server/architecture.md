@@ -1,5 +1,5 @@
 ---
-title: Hyper-V Server Architecture
+title: Hyper-V Architecture
 description:
 ms.prod: windows-server-threshold
 ms.service: na
@@ -12,7 +12,7 @@ ms.author: Asmahi; SandySp; JoPoulso;
 ms.date: 10/31/2016
 ---
 
-# Hyper-V Server architecture
+# Hyper-V Architecture
 
 Hyper-V features a Type 1 hypervisor-based architecture. The hypervisor virtualizes processors and memory and provides mechanisms for the virtualization stack in the root partition to manage child partitions (virtual machines) and expose services such as I/O devices to the virtual machines.
 

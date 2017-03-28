@@ -1,5 +1,5 @@
 ---
-title: Hyper-V Server Configuration
+title: Hyper-V Configuration
 description:
 ms.prod: windows-server-threshold
 ms.service: na
@@ -12,8 +12,7 @@ ms.author: Asmahi; SandySp; JoPoulso;
 ms.date: 10/31/2016
 ---
 
-# Hyper-V Server configuration
-
+# Hyper-V Configuration
 
 ## Hardware selection
 

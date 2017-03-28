@@ -21,9 +21,9 @@
 #### [Linux virtual machine considerations](role/hyper-v-server/linux-virtual-machine-considerations.md)
 ### [Containers](role/container/index.md)
 ### Remote Desktop Services
-#### [Session Host](role/remote-desktop/session-hosts.md)
-#### [Virtualization Host](role/remote-desktop/virtualization-hosts.md)
-#### [Gateaway](role/remote-desktop/gateways.md)
+#### [Session Hosts](role/remote-desktop/session-hosts.md)
+#### [Virtualization Hosts](role/remote-desktop/virtualization-hosts.md)
+#### [Gateways](role/remote-desktop/gateways.md)
 ### [Web Server](role/web-server/index.md)
 #### [HTTP 1.2/2](role/web-server/http-performance.md)
 ## Server Subsystem Tuning

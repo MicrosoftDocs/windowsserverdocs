@@ -13,11 +13,11 @@ ms.author: NedPyle; Danlo; DKruse
 ms.date: 1/27/2017
 ---
 
-# Performance tuning for file servers
+# Performance Tuning for File Servers
 
 You should select the proper hardware to satisfy the expected file server load, considering average load, peak load, capacity, growth plans, and response times. Hardware bottlenecks limit the effectiveness of software tuning.
 
-## <a href="" id="clients"></a>General tuning parameters for clients
+## General tuning parameters for clients
 
 
 The following REG\_DWORD registry settings can affect the performance of client computers that interact with SMB file servers:

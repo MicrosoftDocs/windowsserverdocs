@@ -1,5 +1,5 @@
 ---
-title: Hyper-V Server Storage I/O Performance
+title: Hyper-V Storage I/O Performance
 description:
 ms.prod: windows-server-threshold
 ms.service: na
@@ -12,9 +12,7 @@ ms.author: Asmahi; SandySp; JoPoulso;
 ms.date: 10/31/2016
 ---
 
-# Hyper-V storage i/o performance
-
-
+# Hyper-V Storage I/O Performance
 
 This section describes the different options and considerations for tuning storage I/O performance in a virtual machine. The storage I/O path extends from the guest storage stack, through the host virtualization layer, to the host storage stack, and then to the physical disk. Following are explanations about how optimizations are possible at each of these stages.
 

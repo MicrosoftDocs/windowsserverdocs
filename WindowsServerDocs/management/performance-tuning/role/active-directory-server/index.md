@@ -1,5 +1,5 @@
 ---
-title: Performance Tuning for Active Directory Servers
+title: Performance Tuning Active Directory Servers
 description: Performance Tuning for Active Directory Servers
 ms.prod: windows-server-threshold
 ms.service: na
@@ -13,7 +13,7 @@ ms.author: TimWi; ChrisRob; HerbertM; KenBrumf;  MLeary; ShawnRab
 ms.date: 10/31/2016
 ---
 
-# Performance Tuning for Active Directory Servers
+# Performance Tuning Active Directory Servers
 
 
 Performance tuning Active Directory is focused on two goals:

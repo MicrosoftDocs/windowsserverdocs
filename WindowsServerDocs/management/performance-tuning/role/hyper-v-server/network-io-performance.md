@@ -12,7 +12,7 @@ ms.author: Asmahi; SandySp; JoPoulso;
 ms.date: 10/31/2016
 ---
 
-# Hyper-V network i/o performance
+# Hyper-V Network I/O Performance
 
 Server 2016 contains several improvements and new functionality to optimize network performance under Hyper-V.  Documentation on how to optimize network performance will be included in a future version of this article.
 

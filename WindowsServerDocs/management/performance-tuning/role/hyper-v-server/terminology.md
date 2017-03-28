@@ -1,5 +1,5 @@
 ---
-title: Hyper-V Server terminology
+title: Hyper-V terminology
 description:
 ms.prod: windows-server-threshold
 ms.service: na
@@ -12,7 +12,7 @@ ms.author: Asmahi; SandySp; JoPoulso;
 ms.date: 10/31/2016
 ---
 
-# Hyper-V Server terminology
+# Hyper-V Terminology
 This section summarizes key terminology specific to virtual machine technology that is used throughout this performance tuning topic:
 
 | Term        | Definition           |

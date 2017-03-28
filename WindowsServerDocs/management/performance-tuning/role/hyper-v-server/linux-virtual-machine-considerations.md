@@ -12,7 +12,7 @@ ms.author: Asmahi; SandySp; JoPoulso;
 ms.date: 10/31/2016
 ---
 
-# Linux virtual machine considerations
+# Linux Virtual Machine Considerations
 
 Linux and BSD virtual machines have additional considerations compared to Windows virtual machines in Hyper-V.
 

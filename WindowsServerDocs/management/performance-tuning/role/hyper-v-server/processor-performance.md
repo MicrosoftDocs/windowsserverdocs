@@ -1,5 +1,5 @@
 ---
-title: Hyper-V Server Processor Performance
+title: Hyper-V Processor Performance
 description:
 ms.prod: windows-server-threshold
 ms.service: na
@@ -12,7 +12,7 @@ ms.author: Asmahi; SandySp; JoPoulso;
 ms.date: 10/31/2016
 ---
 
-# Hyper-V Server processor performance
+# Hyper-V Processor Performance
 
 
 ## Virtual machine integration services

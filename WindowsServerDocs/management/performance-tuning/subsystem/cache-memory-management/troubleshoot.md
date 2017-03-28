@@ -1,6 +1,6 @@
 ---
-title: Cache and Memory Manager Potential Performance Issues
-description: Cache and Memory Manager Potential Performance Issues
+title: Troubleshoot Cache and Memory Manager Performance Issues
+description: Troubleshoot Cache and Memory Manager Performance Issues
 ms.prod: windows-server-threshold
 ms.service: na
 manager: dongill
@@ -13,7 +13,7 @@ ms.author: Pavel; ATales
 ms.date: 10/31/2016
 ---
 
-# Cache and Memory Manager Potential Performance Issues
+# Troubleshoot Cache and Memory Manager Performance Issues
 
 Before Windows Server 2012, two primary potential issues caused system file cache to grow until available memory was almost depleted under certain workloads. When this situation results in the system being sluggish, you can determine whether the server is facing one of these issues.
 
