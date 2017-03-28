@@ -33,7 +33,7 @@ If Memory\\Available Mbytes is low and at the same time Memory\\System Cache Res
 
 This problem is indicated by a very high number of active Metafile pages in RAMMAP output, as shown in the following figure. This problem might have been observed on busy servers with millions of files being accessed, thereby resulting in caching NTFS metafile data not being released from the cache.
 
-![rammap view](../media/performance-tuning/perftune-guide-rammap.png)
+![rammap view](../../media/perftune-guide-rammap.png)
 
 The problem used to be mitigated by *DynCache* tool. In Windows Server 2012+, the architecture has been redesigned and this problem should no longer exist.
 

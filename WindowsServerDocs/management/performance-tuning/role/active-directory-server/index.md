@@ -109,7 +109,7 @@ Active Directory caches as much of the database as memory allows. Fetching pages
 
 Processors that don’t have enough free cycles can cause long wait times on getting threads on to the processor for execution. Across many environments, the philosophy is to ensure that there is enough head room to accommodate surges or spikes in load to minimize impact on client responsiveness in these scenarios. In short, exceeding the below thresholds is not bad in the short term (5 to 15 minutes a few times a day), however a system running sustained with these sorts of statistics doesn’t provide any head room to accommodate abnormal loads and can easily be put into an over taxed scenario. Systems spending sustained periods above the thresholds should be investigated to how to reduce processor loads.
 
--   For more info on how to select a processor, see [Performance Tuning for Server Hardware](./Section_2.0-ServerHardwarePerf.md).
+-   For more info on how to select a processor, see [Performance Tuning for Server Hardware](../../hardware/index.md).
 
 -   Add hardware, optimize load, direct clients elsewhere, or remove load from the environment to reduce CPU load.
 
@@ -119,7 +119,7 @@ Processors that don’t have enough free cycles can cause long wait times on get
 
 Just like with processors, excessive network adapter utilization will cause long wait times for the outbound traffic to get on to the network. Active Directory tends to have small inbound requests and relatively to significantly larger amounts of data returned to the client systems. Sent data far exceeds received data. Across many environments, the philosophy is to ensure that there is enough head room to accommodate surges or spikes in load. This threshold is a warning threshold where the head room to accommodate surges or spikes in load becomes constrained and client responsiveness degrades. In short, exceeding these thresholds is not bad in the short term (5 to 15 minutes a few times a day), however a system running sustained with these sorts of statistics is over taxed and should be investigated.
 
--   For more info on how to tune the network subsystem, see [Performance Tuning for Network Subsystems](../../networking/technologies/network-subsystem/net-sub-performance-top.md).
+-   For more info on how to tune the network subsystem, see [Performance Tuning for Network Subsystems](../../../../networking/technologies/network-subsystem/net-sub-performance-top.md).
 
 -   Use the Compare NetworkInterface(\*)\\Bytes Sent/Sec with NetworkInterface(\*)\\Current Bandwidth performance counter. The ratio should be less than 60% utilized.
 
@@ -237,7 +237,7 @@ These scenarios can be detected using one or more of the following approaches:
 
 -   Active Directory Diagnostics Data Collector Set in Performance Monitor ([Son of SPA: AD Data Collector Sets in Win2008 and beyond](http://blogs.technet.com/b/askds/archive/2010/06/08/son-of-spa-ad-data-collector-sets-in-win2008-and-beyond.aspx))
 
--   [Microsoft Server Performance Advisor](../server-performance-advisor/microsoft-server-performance-advisor.md) Active Directory Advisor Pack
+-   [Microsoft Server Performance Advisor](../../../server-performance-advisor/microsoft-server-performance-advisor.md) Active Directory Advisor Pack
 
 -   Searches using any filter besides “(objectClass=\*)” that use the Ancestors Index.
 

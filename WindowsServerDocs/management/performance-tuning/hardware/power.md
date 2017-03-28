@@ -30,7 +30,7 @@ Memory accounts for an increasing fraction of the total system power. Many facto
 
 
 ## Disks Recommendations
-Higher RPM means increased energy consumption. SSD drives are more power efficient than rotational drives. Also, 2.5-inch drives generally require less power than 3.5-inch drives. 
+Higher RPM means increased energy consumption. SSD drives are more power efficient than rotational drives. Also, 2.5-inch drives generally require less power than 3.5-inch drives.
 
 ## Network and Storage Adapter Recommendations
 Some adapters decrease energy consumption during idle periods. This is an important consideration for 10 Gb networking adapters and high-bandwidth (4-8 Gb) storage links. Such devices can consume significant amounts of energy.
@@ -66,14 +66,14 @@ The processor terminology used throughout this topic reflects the hierarchy of c
 
 -   Logical processor
 
-![processor terminology](../media/performance-tuning/perftune-guide-figure-1.png)
+![processor terminology](../media/perftune-guide-figure-1.png)
 
 # Power and performance tuning
 
 
 Energy efficiency is increasingly important in enterprise and data center environments, and it adds another set of tradeoffs to the mix of configuration options.
 
-Windows Server 2016 is optimized for excellent energy efficiency with minimum performance impact across a wide range of customer workloads. [Processor Power Management (PPM) Tuning for the Windows Server Balanced Power Plan](./Section_3.1-PPMTuning.md) describes the workloads used for tuning the default parameters in Windows Server 2016, and provides suggestions for customized tunings. This section expands on energy-efficiency tradeoffs to help you make informed decisions if you need to adjust the default power settings on your server. However, the majority of server hardware and workloads should not require administrator power tuning when running Windows Server 2016.
+Windows Server 2016 is optimized for excellent energy efficiency with minimum performance impact across a wide range of customer workloads. [Processor Power Management (PPM) Tuning for the Windows Server Balanced Power Plan](power/processor-power-management-tuning.md) describes the workloads used for tuning the default parameters in Windows Server 2016, and provides suggestions for customized tunings. This section expands on energy-efficiency tradeoffs to help you make informed decisions if you need to adjust the default power settings on your server. However, the majority of server hardware and workloads should not require administrator power tuning when running Windows Server 2016.
 
 ### Calculating server energy efficiency
 
@@ -81,7 +81,7 @@ When you tune your server for energy savings, you must also consider performance
 
 You can calculate your server's energy efficiency ratio for a useful metric that incorporates power and performance information. Energy efficiency is the ratio of work that is done to the average power that is required during a specified amount of time.
 
-![energy efficiency formula](../media/performance-tuning/perftune-guide-power-formula.png)
+![energy efficiency formula](../media/perftune-guide-power-formula.png)
 
 You can use this metric to set practical goals that respect the tradeoff between power and performance. In contrast, a goal of 10 percent energy savings across the data center fails to capture the corresponding effects on performance and vice versa. Similarly, if you tune your server to increase performance by 5 percent, and that results in 10 percent higher energy consumption, the total result might or might not be acceptable for your business goals. The energy efficiency metric allows for more informed decision making than power or performance metrics alone.
 
@@ -97,7 +97,7 @@ If your server platform does not support metering, you can use a physical meteri
 
 To establish a baseline, you should measure the average power required at various system load points, from idle to 100 percent (maximum throughput) to generate a load line. The following figure shows load lines for three sample configurations:
 
-![sample load lines](../media/performance-tuning/perftune-guide-sample-loadlines.png)
+![sample load lines](../media/perftune-guide-sample-loadlines.png)
 
 You can use load lines to evaluate and compare the performance and energy consumption of configurations at all load points. In this particular example, it is easy to see what the best configuration is. However, there can easily be scenarios where one configuration works best for heavy workloads and one works best for light workloads. You need to thoroughly understand your workload requirements to choose an optimal configuration. Don’t assume that when you find a good configuration, it will always remain optimal. You should measure system utilization and energy consumption on a regular basis and after changes in workloads, workload levels, or server hardware.
 

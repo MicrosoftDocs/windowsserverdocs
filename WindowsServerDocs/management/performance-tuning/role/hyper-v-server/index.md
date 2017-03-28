@@ -118,7 +118,7 @@ Hyper-V features a Type 1 hypervisor-based architecture. The hypervisor virtuali
 
 The root partition owns and has direct access to the physical I/O devices. The virtualization stack in the root partition provides a memory manager for virtual machines, management APIs, and virtualized I/O devices. It also implements emulated devices such as the integrated device electronics (IDE) disk controller and PS/2 input device port, and it supports Hyper-V-specific synthetic devices for increased performance and reduced overhead.
 
-![hyper-v hypervisor-based architecture](../media/performance-tuning/perftune-guide-hyperv-arch.png)
+![hyper-v hypervisor-based architecture](../../media/perftune-guide-hyperv-arch.png)
 
 The Hyper-V-specific I/O architecture consists of virtualization service providers (VSPs) in the root partition and virtualization service clients (VSCs) in the child partition. Each service is exposed as a device over VMBus, which acts as an I/O bus and enables high-performance communication between virtual machines that use mechanisms such as shared memory. The guest operating system’s Plug and Play manager enumerates these devices, including VMBus, and loads the appropriate device drivers (virtual service clients). Services other than I/O are also exposed through this architecture.
 
@@ -434,7 +434,7 @@ This process is called read-modify-write (RMW). The overall performance impact o
 
 -   Applications commonly issue reads and writes in multiples of 4 KB sizes (the default cluster size of NTFS). Because there is a 512-byte sector bitmap in front of the data payload block of dynamic and differencing virtual hard disks, the 4 KB blocks are not aligned to the physical 4 KB boundary. The following figure shows a VHD 4 KB block (highlighted) that is not aligned with physical 4 KB boundary.
 
-![vhd 4 kb block](../media/performance-tuning/perftune-guide-vhd-4kb-block.png)
+![vhd 4 kb block](../../media/perftune-guide-vhd-4kb-block.png)
 
 Each 4 KB write command that is issued by the current parser to update the payload data results in two reads for two blocks on the disk, which are then updated and subsequently written back to the two disk blocks. Hyper-V in Windows Server 2016 mitigates some of the performance effects on 512e disks on the VHD stack by preparing the previously mentioned structures for alignment to 4 KB boundaries in the VHD format. This avoids the RMW effect when accessing the data within the virtual hard disk file and when updating the virtual hard disk metadata structures.
 
@@ -538,7 +538,7 @@ The process of moving a running virtual machine can be divided into two major ph
 
 Providing a dedicated network for live migration traffic helps minimize the time that is required to complete a live migration, and it ensures consistent migration times.
 
-![example hyper-v live migration configuration](../media/performance-tuning/perftune-guide-live-migration.png)
+![example hyper-v live migration configuration](../../media/perftune-guide-live-migration.png)
 
 Additionally, increasing the number of send and receive buffers on each network adapter that is involved in the migration can improve migration performance.
 
