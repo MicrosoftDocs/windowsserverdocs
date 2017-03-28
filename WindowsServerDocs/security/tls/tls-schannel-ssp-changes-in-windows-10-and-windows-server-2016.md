@@ -25,6 +25,13 @@ Added support for the following cipher suites:
 - TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (RFC 5289) in Windows 10, version 1507 and Windows Server 2016
 - TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (RFC 5289) in Windows 10, version 1507 and Windows Server 2016
 
+DisabledByDefault change for the following cipher suites:
+ - TLS_DHE_DSS_WITH_AES_256_CBC_SHA256 (RFC 5246) in Windows 10, version 1703
+ - TLS_DHE_DSS_WITH_AES_128_CBC_SHA256 (RFC 5246) in Windows 10, version 1703
+ - TLS_DHE_DSS_WITH_AES_256_CBC_SHA (RFC 5246) in Windows 10, version 1703
+ - TLS_DHE_DSS_WITH_AES_128_CBC_SHA (RFC 5246) in Windows 10, version 1703
+ - TLS_DHE_DSS_WITH_3DES_EDE_CBC_SHA (RFC 5246) in Windows 10, version 1703
+
 Starting with Windows 10, version 1507 and Windows Server 2016, SHA 512 certificates are supported by default.
 
 ### RSA key changes
@@ -104,6 +111,10 @@ To specify a maximum thread pool size per CPU core, create a **MaxAsyncWorkerThr
 This entry does not exist in the registry by default. 
 After you have created the entry, change the DWORD value to the desired size. 
 If not configured, then the maximum is 2 threads per CPU core.
+
+## Next Protocol Negotiation (NPN) support
+
+Beginning with Windows 10 version 1703, Next Protocol Negotiation (NPN) has been removed and is no longer supported.
 
 ## Pre-Shared Key (PSK)
 

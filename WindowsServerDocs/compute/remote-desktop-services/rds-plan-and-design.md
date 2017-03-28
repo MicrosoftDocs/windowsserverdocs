@@ -27,6 +27,7 @@ Use the following information to plan and design your deployment:
 - [High availability](rds-plan-high-availability.md)
 - [MultiFactor Authentication](rds-plan-mfa.md)
 - [Secure data storage](rds-plan-secure-data-storage.md)
+- [Enable high-end graphics rendering](rds-graphics-virtualization.md)
 - [Connect from any device](rds-plan-connect-from-any-device.md)
 - [Choose how you pay](rds-plan-choose-how-you-pay.md)
 
