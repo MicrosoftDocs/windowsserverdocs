@@ -17,7 +17,7 @@ ms.date: 10/31/2016
 
 Use the links in this topic to learn more about the concepts that were discussed in this tuning guide.
 
-## Websites
+## Microsoft Windows Server Websites
 -   [Windows Server Catalog](http://www.windowsservercatalog.com/)
 
 -   [Windows Sysinternals](http://technet.microsoft.com/sysinternals/default.aspx)
@@ -26,7 +26,7 @@ Use the links in this topic to learn more about the concepts that were discussed
 
 -   [Windows Assessment and Deployment Kit](https://developer.microsoft.com/en-us/windows/hardware/windows-assessment-deployment-kit)
 
-## Power Management
+## Power Management Tuning Resources
 
 -   [Power Policy Configuration and Deployment in Windows](https://msdn.microsoft.com/en-us/library/windows/hardware/mt422910.aspx)
 
@@ -34,7 +34,7 @@ Use the links in this topic to learn more about the concepts that were discussed
 
 -   [Interrupt-Affinity Policy Tool](https://support.microsoft.com/en-us/kb/252867)
 
-## Networking
+## Networking Subsystem Tuning Resources
 
 -   [Scalable Networking: Eliminating the Receive Processing Bottleneck—Introducing RSS](http://download.microsoft.com/download/5/D/6/5D6EAF2B-7DDF-476B-93DC-7CF0072878E6/NDIS_RSS.doc)
 
@@ -42,11 +42,11 @@ Use the links in this topic to learn more about the concepts that were discussed
 
 -   [Networking Deployment Guide: Deploying High-Speed Networking Features](https://technet.microsoft.com/en-us/library/gg162681.aspx)
 
-## Storage Subsystem
+## Storage Subsystem Tuning Resources
 
 -   [Disk Subsystem Performance Analysis for Windows](http://download.microsoft.com/download/e/b/a/eba1050f-a31d-436b-9281-92cdfeae4b45/subsys_perf.doc) (Parts of this document are out of date, but many of the general observations and guidelines captured are still accurate and relevant.)
 
-## File Servers
+## File Server Tuning Resources
 
 -   [Performance Tuning Guidelines for Microsoft Services for Network File System](http://technet.microsoft.com/library/bb463205.aspx)
 
@@ -54,11 +54,11 @@ Use the links in this topic to learn more about the concepts that were discussed
 
 -   [How to disable the TCP autotuning diagnostic tool](http://support.microsoft.com/kb/967475)
 
-## Active Directory Servers
+## Active Directory Server Tuning Resources
 -   [Active Directory Performance](https://msdn.microsoft.com/en-us/library/windows/hardware/dn567654(v=vs.85).aspx)
 -   [How to configure Active Directory diagnostic event logging in Windows Server 2003 and in Windows 2000 Server](http://support.microsoft.com/kb/314980)
 
-## Virtualization Servers
+## Virtualization Server Tuning Resources
 
 -   [What’s New in Hyper-V in Windows Server 2016](https://technet.microsoft.com/en-us/windows-server-docs/compute/hyper-v/what-s-new-in-hyper-v-on-windows)
 
@@ -76,15 +76,11 @@ Use the links in this topic to learn more about the concepts that were discussed
 
 -   [Optimizing and Troubleshooting Hyper-V Networking](http://blogs.msdn.com/b/microsoft_press/archive/2013/07/12/rtm-d-today-optimizing-and-troubleshooting-hyper-v-networking.aspx)
 
-## Print Servers
+## Print Server Tuning Resources
 
 -   [Print Server Scalability and Capacity Planning](http://technet.microsoft.com/library/dn554243.aspx)
 
-## Server Tuning Tools
-
--   [Microsoft Server Performance Advisor](https://msdn.microsoft.com/en-us/library/windows/hardware/dn481522(v=vs.85).aspx)
-
-## Workloads
+## Server Workload Tuning Resources
 
 -   [Performance Tuning for NTttcp](https://msdn.microsoft.com/en-us/library/windows/hardware/dn567663(v=vs.85).aspx)
 
@@ -107,7 +103,9 @@ Use the links in this topic to learn more about the concepts that were discussed
 -   [ALTER SERVER CONFIGURATION (Transact-SQL)](http://msdn.microsoft.com/library/ee210585.aspx)
 
 
+## Server Tuning Tools
 
+-   [Microsoft Server Performance Advisor](https://msdn.microsoft.com/en-us/library/windows/hardware/dn481522(v=vs.85).aspx)
 
 ## Performance Tuning Guidelines for previous versions of Windows Server
 

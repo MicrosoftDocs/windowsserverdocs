@@ -20,49 +20,67 @@ When you run a server system in your organization, you might have business needs
 
 To have the most impact, your tuning changes should consider the hardware, the workload, the power budgets, and the performance goals of your server. This topic describes important tuning considerations and settings that can result in improved performance or energy efficiency. It also describes each setting and its potential effect to help you make an informed decision about its relevance to your system, workload, performance, and energy usage goals.
 
-**Note**
-Registry settings and tuning parameters changed significantly between versions of Windows Server. Be sure to use the latest tuning guidelines to avoid unexpected results.
+> [!Note]
+> Registry settings and tuning parameters changed significantly between versions of Windows Server. Be sure to use the latest tuning guidelines to avoid unexpected results.
 
-## What's new?
+## In this guide
+This guide organizes performance and tuning guidance for Windwows Server 2016 across three tuning categories:
+### Server hardware performance tuning guidance
+  - [Hardware performance considerations](hardware/index.md)
 
-This section describes what changes are in the Windows Server 2016 edition of the Performance Tuning Guide:
+  - [Hardware power considerations](hardware/power.md)
 
-### Configuration considerations added for new Nano installation-type
-Details about Nano can be found [here](https://technet.microsoft.com/en-us/windows-server-docs/compute/nano-server/getting-started-with-nano-server)
+
+### Server role performance tuning guidance
+  - [Active Directory Servers](role/active-directory-server/index.md)
+
+  - [Containers](role/container/index.md)
+
+  - [File Servers](role/file-server/index.md)
+
+  - [Hyper-V Servers](role/hyper-v-server/index.md)
+
+  - [Remote Desktop Servers](role/remote-desktop-server/session-hosts.md)
+
+  - [Web Servers](role/web-server/index.md)
+
+### Server subsystem tuning guidance  
+- [Cache and Memory Management](subsystem/cache-memory-management/index.md)
+
+- [Software Defined Networking](subsystem/software-defined-networking/index.md)
+
+- [Storage Spaces Direct](subsystem/storage-spaces-direct/index.md)
+
+## Changes in this version
+> Changes to this are now available in GitHub.
+
+> Downloadable PDF version
 
 ### Sections added
+- [Nano Server installation-type configuration considerations](https://technet.microsoft.com/en-us/windows-server-docs/compute/nano-server/getting-started-with-nano-server)
 
-    - Software Defined Networking, including RAS and SLB configuration guidance
+- [Software Defined Networking](subsystem/software-defined-networking/index.md), including [HNV](subsystem/software-defined-networking/hnv-gateway-performance.md) and [SLB gateway configuration guidance](subsystem/software-defined-networking/slb-gateway-performance.md)
 
-    - Storage Spaces Direct
+- [Storage Spaces Direct](subsystem/storage-spaces-direct/index.md)
 
-    - Powershell, including module authoring and scripting for performance
+- [HTTP1.1 and HTTP2](role/web-server/http-performance.md)
 
-    - Storage Replication  
-
-    - HTTP1.1 and HTTP2
-
-    - Containers
-
-    - Powershell
-
+- [Containers](role/container/index.md)
 
 ### Sections changed
 
-    - Performance Tuning for Workloads removed, pointers to relevant resources added to Resources section
+- Updates to [Active Directory guidance](role/active-directory-server/index.md) section
 
-    - Significant changes to the Hyper-V section
+- Updates to [File Server guidance](role/filer-server/index.md) section
 
-    - Removal of dedicated storage sections, in favor of Storage Spaces Direct section and canonical Technet content
+- Updates to [Web Server guidance](role/web-server/index.md) section
 
-    - Removal of dedicated networking section, in favor of canonical Technet content  
+- Updates to [Hardware Power guidance](hardware/power.md) section
 
-    - Resource links updated, dead links removed
+- Significant updates to the [Hyper-V guidance](role/hyper-v-server/index.md) section
 
-    - Several changes to Active Directory sections
+- *Performance Tuning for Workloads removed*, pointers to relevant resources added to [Additional Tuning Resources article](additional-resources.md)
 
-    - Updates to file server sections
+- *Removal of dedicated storage sections*, in favor of new [Storage Spaces Direct](subsystem/storage-spaces-direct/index.md) section and canonical Technet content
 
-    - Updates to Web Server guidance
-
-    - Updates for power tuning
+- *Removal of dedicated networking section*, in favor of canonical Technet content  
