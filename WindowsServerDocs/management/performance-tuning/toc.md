@@ -5,16 +5,16 @@
 #### [Processor Power Management Tuning](hardware/power/processor-power-management-tuning.md)
 #### [Recommended Balanced Power Plan Parameters](power/recommended-balanced-plan-parameters.md)
 ## Server Role Considerations 
+### [Active Directory Server Performance Tuning](role/active-directory-server/index.md)
 ### [File Server Performance Tuning](role/file-server/index.md)
 #### [SMB File Server Performance Tuning](role/file-server/smb-file-server.md)
 #### [NFS File Server Performance Tuning](role/file-server/nfs-file-server.md)
-### [Active Directory Server Performance Tuning](role/active-directory-server/index.md)
+### [Hyper-V Server Performance Tuning](role/hyper-v-server/index.md)
+#### [Container Performance Tuning](role/container/index.md)
 ### Remote Desktop Services Performance Tuning
 #### [Remote Desktop Session Host Performance Tuning](role/remote-desktop/session-hosts.md)
 #### [Remote Desktop Virtualization Host Performance Tuning](role/remote-desktop/virtualization-hosts.md)
 #### [Remote Desktop Gateaway Performance Tuning](role/remote-desktop/gateways.md)
-### [Hyper-V Server Performance Tuning](role/hyper-v-server/index.md)
-#### [Container Performance Tuning](role/container/index.md)
 ### [Web Server Performance Tuning](role/web-server/index.md)
 #### [HTTP 1.2/2 Performance Tuning](role/web-server/http-performance.md)
 ## Server Subsystem Considerations
@@ -25,5 +25,5 @@
 #### [HNV gateway performance](subsystem/software-defined-networking/hnv-gateway-performance.md)
 #### [SLB gateway performance](subsystem/software-defined-networking/slb-gateway-performance.md)
 ### [Storage Spaces Direct Performance Tuning](subsystem/storage-spaces-direct/index.md)
-## [Additional Resources](additional-resources.md)
+## [Additional Tuning Resources](additional-resources.md)
 
