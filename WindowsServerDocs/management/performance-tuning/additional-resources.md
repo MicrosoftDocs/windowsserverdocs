@@ -1,6 +1,6 @@
 ---
-title: Additional Resources for Performance Tuning Guidelines
-description: Additional Resources for Performance Tuning Guidelines
+title: Additional server performance tuning resources
+description: Additional server performance tuning resources
 ms.prod: windows-server-threshold
 ms.service: na
 manager: dongill
@@ -13,7 +13,7 @@ ms.author: phstee
 ms.date: 10/31/2016
 ---
 
-# Additional Resources for Performance Tuning Guidelines
+# Additional performance tuning resources
 
 
 Use the links in this topic to learn more about the concepts that were discussed in this tuning guide.
@@ -119,7 +119,7 @@ Use the links in this topic to learn more about the concepts that were discussed
 
 
 
-# Performance Tuning Guidelines for previous versions of Windows Server
+## Performance Tuning Guidelines for previous versions of Windows Server
 
 
 Use the performance tuning guidelines to improve performance for older versions of Windows Server.
