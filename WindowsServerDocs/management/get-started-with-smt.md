@@ -1,4 +1,4 @@
----
+ ---
 title: Get started with Server Management Tools
 description: "Manage on premises Windows Server 2016 machines from Azure"
 ms.prod: windows-server-threshold
@@ -24,7 +24,7 @@ The following video (3:46) highlights SMT features:
 
 <a href="https://channel9.msdn.com/Series/Nano-Server-Team/Remote-Server-Management-Tools-on-Nano-Server"><img src="./media/get-started-with-smt/video.png"></a>
 
-##What is SMT?
+## What is SMT?
 
 [SMT](https://portal.azure.com/#create/Microsoft.RSMTNodes/preview), hosted in Azure, enables management of headless Windows Servers, such as Nano Server and Server Core, providing rapid access to your Azure and on premises Windows Server 2016 Servers.
 
@@ -58,7 +58,7 @@ If the machine hosting the gateway is running Windows Server 2016, no additional
 
 You will also need an Azure subscription to use Server Management Tools.
 
-###How to setup the gateway
+### How to setup the gateway
 
 **Step 1: Create a new Server Management Tools connection**
 
