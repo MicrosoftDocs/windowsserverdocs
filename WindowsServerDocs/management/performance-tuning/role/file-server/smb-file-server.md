@@ -13,7 +13,7 @@ ms.author: NedPyle; Danlo; DKruse
 ms.date: 10/31/2016
 ---
 
-# Performance Tuning For SMB File Servers
+# Performance Tuning SMB File Servers
 
 ## SMB configuration considerations
 Do not enable any services or features that your file server and clients do not require. These might include SMB signing, client-side caching, file system mini-filters, search service, scheduled tasks, NTFS encryption, NTFS compression, IPSEC, firewall filters, Teredo, and SMB encryption.

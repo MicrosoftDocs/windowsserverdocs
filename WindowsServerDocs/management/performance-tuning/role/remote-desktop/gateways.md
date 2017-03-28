@@ -15,11 +15,8 @@ ms.date: 10/31/2016
 
 # Performance Tuning Remote Desktop Gateways
 
-
 **Note**  
 In Windows 8+ and Windows Server 2012 R2+, Remote Desktop Gateway (RD Gateway) supports TCP, UDP, and the legacy RPC transports. Most of the following data is regarding the legacy RPC transport. If the legacy RPC transport is not being used, this section is not applicable.
-
- 
 
 This topic describes the performance-related parameters that help improve the performance of a customer deployment and the tunings that rely on the customer’s network usage patterns.
 
@@ -27,8 +24,6 @@ At its core, RD Gateway performs many packet forwarding operations between Remot
 
 **Note**  
 The following parameters apply to RPC transport only.
-
- 
 
 Internet Information Services (IIS) and RD Gateway export the following registry parameters to help improve system performance in the RD Gateway.
 

@@ -13,7 +13,7 @@ ms.author: NedPyle; Danlo; DKruse
 ms.date: 1/27/2017
 ---
 
-# Performance Tuning for File Servers
+# Performance Tuning File Servers
 
 You should select the proper hardware to satisfy the expected file server load, considering average load, peak load, capacity, growth plans, and response times. Hardware bottlenecks limit the effectiveness of software tuning.
 

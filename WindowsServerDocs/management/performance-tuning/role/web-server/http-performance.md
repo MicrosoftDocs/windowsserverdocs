@@ -13,7 +13,7 @@ ms.author: IvanPash; GMonte
 ms.date: 10/31/2016
 ---
 
-# Performance Tuning for HTTP 1.1/2
+# Performance Tuning HTTP 1.1/2
 
 HTTP/2 is meant to improve performance on the client side (e.g., page load time on a browser). On the server, it may represent a slight increase in CPU cost. Whereas the server no longer requires a single TCP connection for every request, some of that state will now be kept in the HTTP layer. Furthermore, HTTP/2 has header compression, which represents additional CPU load.
 

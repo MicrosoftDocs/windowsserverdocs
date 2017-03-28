@@ -13,7 +13,7 @@ ms.author: RoopeshB, NedPyle
 ms.date: 10/31/2016
 ---
 
-# Performance Tuning for NFS File Servers
+# Performance Tuning NFS File Servers
 
 
 ## <a href="" id="servicesnfs"></a>Services for NFS model
