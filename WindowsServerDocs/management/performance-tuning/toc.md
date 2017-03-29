@@ -2,6 +2,7 @@
 ## Server Hardware Tuning
 ### [Performance Considerations](hardware/index.md)
 ### [Power Considerations](hardware/power.md)
+#### [Power and Performance Tuning](hardware/power/power-performance-tuning.md)
 #### [Processor Power Management Tuning](hardware/power/processor-power-management-tuning.md)
 #### [Recommended Balanced Power Plan Parameters](hardware/power/recommended-balanced-plan-parameters.md)
 ## Server Role Tuning
