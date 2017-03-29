@@ -1,5 +1,5 @@
 # [Performance Tuning Guidelines](index.md)
-## Server Hardware Tuning
+## [Server Hardware Tuning](hardware/index.md)
 ### [Performance Considerations](hardware/index.md)
 ### [Power Considerations](hardware/power.md)
 #### [Power and Performance Tuning](hardware/power/power-performance-tuning.md)
@@ -21,7 +21,7 @@
 #### [Detecting bottlenecks in a virtualized environment](role/hyper-v-server/detecting-virtualized-environment-bottlenecks.md)
 #### [Linux virtual machine considerations](role/hyper-v-server/linux-virtual-machine-considerations.md)
 ### [Containers](role/container/index.md)
-### Remote Desktop Services
+### [Remote Desktop Services](role/remote-desktop/session-hosts.md)
 #### [Session Hosts](role/remote-desktop/session-hosts.md)
 #### [Virtualization Hosts](role/remote-desktop/virtualization-hosts.md)
 #### [Gateways](role/remote-desktop/gateways.md)

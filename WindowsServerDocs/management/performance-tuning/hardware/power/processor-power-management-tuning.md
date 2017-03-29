@@ -111,3 +111,9 @@ You should know your workloads and design the experiment parameter sets for tuni
 ### Understand periodic behaviors
 
 There may be different performance requirements for daytime and nighttime or over the weekends, or there may be different workloads that run at different times. In this case, one set of PPM parameters might not be optimal for all time periods. Since multiple custom power plans can be devised, it is possible to even tune for different time periods and switch between power plans through scripts or other means of dynamic system configuration. Again, this adds to the complexity of the optimization process, so it is a question of how much value will be gained from this type of tuning, which will likely need to be repeated when there are significant hardware upgrades or workload changes. This is why Windows provides a **Balanced** power plan in the first place, because in many cases it is probably not worth the effort of hand-tuning for a specific workload on a specific server.
+
+## See Also
+- [Server Hardware Performance Considerations](../index.md)
+- [Server Hardware Power Considerations](../power.md)
+- [Power and Performance Tuning](power-performance-tuning.md)
+- [Recommended Balanced Plan Parameters](recommended-balanced-plan-parameters.md)
