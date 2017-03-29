@@ -98,7 +98,7 @@ There are several registry keys at this registry location. The Windows Time sett
 * Parameters
 * Configuration
 * NtpClient
-* NtpServer
+* [NtpServer](#NtpServer)
   
 > [!NOTE]  
 > Many of the values in the W32Time section of the registry are used internally by W32Time to store information. These values should not be manually changed at any time. Do not modify any of the settings in this section unless you are familiar with the setting and are certain that the new value will work as expected. The following registry entries are located under:
@@ -177,7 +177,7 @@ The following registry entries must be added in order to enable W32Time logging:
 |SpecialPollInterval|All|This entry specifies the special poll interval in seconds for manual peers. When the SpecialInterval 0x1 flag is enabled, W32Time uses this poll interval instead of a poll interval determine by the operating system. The default value on domain members is 3,600. The default value on stand-alone clients and servers is 604,800.[TODO] |
 |SpecialPollTimeRemaining|All|This entry is maintained by W32Time. It contains reserved data that is used by the Windows operating system. It specifies the time in seconds before W32Time will resynchronize after the computer has restarted. Any changes to this setting can cause unpredictable results. The default value on both domain members and on stand-alone clients and servers is left blank.  |
 
-#### HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpServer
+#### <a name="NtpServer"></a> HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpServer
 
 |Registry Entry|Version|Description|
 |------------------------------------|---------------|----------------------------|
@@ -265,67 +265,6 @@ YES/TRUE
 ```  
 In this case the clock will be set back slowly.  
 
-#### AllowNonstandardModeCombinations  X
-  
-###### Registry path  
-**HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpServer**  
-  
-###### Version  
-Windows XP, Windows Vista,  Windows 7 , Windows Server 2003, Windows Server 2003 R2,  Windows Server 2008 , and  Windows Server 2008 R2   
-  
-This entry indicates that non-standard mode combinations are allowed in synchronization between peers. The default value for domain members is 1. The default value for stand-alone clients and servers is 1.  
-  
-#### AllowNonstandardModeCombinations  X
-  
-###### Registry path  
-**HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpClient**  
-  
-###### Version  
-Windows XP, Windows Vista,  Windows 7 , Windows Server 2003, Windows Server 2003 R2,  Windows Server 2008 , and  Windows Server 2008 R2   
-  
-This entry indicates that non-standard mode combinations are allowed in synchronization between clients and servers. The default value for domain members is 1. The default value for stand-alone clients and servers is 1.  
-  
-#### AnnounceFlags  X
-  
-###### Registry path  
-**HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Config**  
-  
-###### Version  
-Windows XP, Windows Vista,  Windows 7 , Windows Server 2003, Windows Server 2003 R2,  Windows Server 2008 , and  Windows Server 2008 R2   
-  
-This entry controls whether this computer is marked as a reliable time server. A computer is not marked as reliable unless it is also marked as a time server.  
-  
--   0x00 Not a time server  
-  
--   0x01 Always time server  
-  
--   0x02 Automatic time server  
-  
--   0x04 Always reliable time server  
-  
--   0x08 Automatic reliable time server  
-  
-The default value for domain members is 10. The default value for stand-alone clients and servers is 10.  
-  
-#### CompatibilityFlags  X
-  
-###### Registry path  
-**HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpClient**  
-  
-###### Version  
-Windows XP, Windows Vista,  Windows 7 , Windows Server 2003, Windows Server 2003 R2,  Windows Server 2008 , and  Windows Server 2008 R2   
-  
-This entry specifies the following compatibility flags and values:  
-  
--   DispersionInvalid: 0x00000001  
-  
--   IgnoreFutureRefTimeStamp: 0x00000002  
-  
--   AutodetectWin2K: 0x80000000  
-  
--   AutodetectWin2KStage2: 0x40000000  
-  
-The default value for domain members is 0x80000000. The default value for stand-alone clients and servers is 0x80000000.  
   
 #### CrossSiteSyncFlags  X
   
