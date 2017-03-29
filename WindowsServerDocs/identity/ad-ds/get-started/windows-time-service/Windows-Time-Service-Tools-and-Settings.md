@@ -117,6 +117,7 @@ For example, 5 minutes would become 5*60\*1000\*10000 = 3000000000 clock ticks.
 
 All versions include Windows 7, Windows 8, Windows 10, Windows Server 2008 , and  Windows Server 2008 R2, Windows Server 2012, Windows Server 2012R2, Windows Server 2016.  Some entries are only availalbe on newer Windows versions.
 
+
 #### <a name="Parameters"></a>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters
 
 |Registry Entry|Version|Description|
