@@ -96,7 +96,7 @@ Many registry entries for the Windows Time service are the same as the Group Pol
   
 There are several registry keys at this registry location. The Windows Time settings are stored in values across all of these keys:
 * [Parameters](#Parameters)
-* [Configuration](#Configuration)
+* [Config](#Configuration)
 * [NtpClient](#NtpClient)
 * [NtpServer](#NtpServer)
   
@@ -133,6 +133,7 @@ All versions include Windows 7, Windows 8, Windows 10, Windows Server 2008 , and
 |Registry Entry|Version|Description|
 |------------------------------------|---------------|----------------------------|
 |AnnounceFlags|All|This entry controls whether this computer is marked as a reliable time server. A computer is not marked as reliable unless it is also marked as a time server.<br /> -   0x00 Not a time server  <br /> - 0x01 Always time server  <br /> -   0x02 Automatic time server  <br /> -   0x04 Always reliable time server  <br /> -   0x08 Automatic reliable time server  <br />The default value for domain members is 10. The default value for stand-alone clients and servers is 10.|
+|ClockHoldOver|Windows 10 build 1607 or newer|Defines the ???|
 |EventLogFlags|All|This entry controls the events that the time service logs.  <br />-   Time Jump: 0x1  <br />-   Source Change: 0x2  <br />The default value on domain members is 2. The default value on stand-alone clients and servers is 2.  |
 |FrequencyCorrectRate|All|This entry controls the rate at which the clock is corrected. If this value is too small, the clock is unstable and overcorrects. If the value is too large, the clock takes a long time to synchronize. The default value on domain members is 4. The default value on stand-alone clients and servers is 4.  <br /><br />Note that 0 is an invalid value for the FrequencyCorrectRate registry entry. On Windows Server 2003, Windows Server 2003 R2,  Windows Server 2008 , and  Windows Server 2008 R2 computers, if the value is set to 0 the Windows Time service will automatically change it to 1.  |
 |HoldPeriod|All|This entry controls the period of time for which spike detection is disabled in order to bring the local clock into synchronization quickly. A spike is a time sample indicating that time is off a number of seconds, and is usually received after good time samples have been returned consistently. The default value on domain members is 5. The default value on stand-alone clients and servers is 5.  |
