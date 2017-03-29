@@ -15,7 +15,6 @@ ms.date: 10/31/2016
 
 # Performance Tuning Active Directory Servers
 
-
 Performance tuning Active Directory is focused on two goals:
 
 -   Active Directory is optimally configured to service the load in the most efficient manner possible
@@ -30,46 +29,15 @@ This requires proper attention to three separate areas:
 
 -   Active Directory client/application tuning – ensuring that clients and applications are using Active Directory in an optimal fashion
 
-**In this topic:**
+## Capacity planning
 
--   [Capacity planning](#cap)
+Properly deploying a sufficient number of domain controllers, in the right domain, in the right locales, while accommodating redundancy is critical to ensuring servicing client requests in a timely fashion. The discussion of Active Directory capacity planning is beyond the scope of this document, but it a recommended critical first step when designing and implementing a performance Active Directory architecture.
 
--   [Updates and evolving recommendations](#updates)
+To ensure proper configuration and sizing of Active Directory, see [Capacity Planning for Active Directory Domain Services](http://go.microsoft.com/fwlink/?LinkId=324566).
 
--   [Hardware basics](#hw)
+## Hardware Considerations
 
--   [Proper placement of domain controllers and site considerations](#dcsite)
-
--   [LDAP considerations](#ldap)
-
--   [Troubleshooting](#ts)
-
-## <a href="" id="cap"></a>Capacity planning
-
-
-Properly deploying a sufficient number of domain controllers, in the right domain, in the right locales, and to accommodate redundancy is critical to ensuring servicing client requests in a timely fashion. This is an in-depth topic and outside of the scope of this guide. To ensure proper configuration and sizing of Active Directory, see [Capacity Planning for Active Directory Domain Services](http://go.microsoft.com/fwlink/?LinkId=324566).
-
-## <a href="" id="updates"></a>Updates and evolving recommendations
-
-
-Massive improvements in both Active Directory and client performance optimizations have occurred over the last several generations of the operating system and these efforts continue. We recommend that the most current versions of the platform be deployed to get the benefits, including:
-
--   New capabilities
-
--   Increased reliability
-
--   Better performance
-
--   Better logging and tools to troubleshoot
-
-However, we realize that this takes time and many environments are running in a scenario where 100% adoption of the most current platform is impossible. Some improvements have been added to older versions of the platform and we’ll continue to add more. We recommend keeping current with these updates.
-
-## <a href="" id="hw"></a>Hardware basics
-
-
-This is a summary of key points covered in much greater depth in the [Capacity Planning for Active Directory Domain Services](http://go.microsoft.com/fwlink/?LinkId=324566) and is not a replacement for that content.
-
-Read the following sections to optimize hardware for responsiveness of domain controllers to client requests.
+The following is a summary of the key recommendations and considerations to optimize server hardware covered in greater depth in the [Capacity Planning for Active Directory Domain Services](http://go.microsoft.com/fwlink/?LinkId=324566) topic and is not intended a replacement for that content.
 
 ### Avoid going to disk
 
