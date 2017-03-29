@@ -5,7 +5,7 @@ description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 02/09/2017
+ms.date: 03/27/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 
@@ -46,7 +46,7 @@ If you select the add a federation server option, WID is configured to replicate
 This section describes important concepts that describe how the WID federation server farm replicates data between a primary federation server and secondary federation servers. .  
   
 #### Primary federation server  
-A primary federation server is a computer running Windows Server 2008, Windows Server 2008 R2 or Windows Server® 2012 that has been configured in the federation server role with the AD FS Federation Server Configuration Wizard and that has a read\/write copy of the AD FS configuration database. The primary federation server is always created when you use the AD FS Federation Server Configuration Wizard and select the option to create a new Federation Service and make that computer the first federation server in the farm. All other federation servers in this farm, also known as secondary federation servers, must synchronize changes that are made on the primary federation server to a copy of the AD FS configuration database that is stored locally.  
+A primary federation server is a computer running Windows Server 2008, Windows Server 2008 R2 or Windows Server® 2012 that has been configured in the federation server role with the AD FS Federation Server Configuration Wizard and that has a read/write copy of the AD FS configuration database. The primary federation server is always created when you use the AD FS Federation Server Configuration Wizard and select the option to create a new Federation Service and make that computer the first federation server in the farm. All other federation servers in this farm, also known as secondary federation servers, must synchronize changes that are made on the primary federation server to a copy of the AD FS configuration database that is stored locally.  
   
 #### Secondary federation servers  
 Secondary federation servers store a copy of the AD FS configuration database from the primary federation server, but these copies are read\-only. Secondary federation servers connect to and synchronize the data with the primary federation server in the farm by polling it at regular intervals to check whether data has changed. The secondary federation servers exist to provide fault tolerance for the primary federation server while acting to load\-balance access requests that are made in different sites throughout your network environment.  
@@ -75,7 +75,7 @@ You can create the AD FS configuration database using a single SQL Server data
   
 -   It provides additional performance increases for high traffic.  
   
--   It provides feature support of SAML artifact resolution and SAML\/WS\-Federation token replay detection \(described below\).  
+-   It provides feature support of SAML artifact resolution and SAML/WS\-Federation token replay detection \(described below\).  
   
 The term “primary federation server” does not apply when the AD FS configuration database is stored in a SQL database instance because all federation servers can equally read and write to the AD FS configuration database that is using the same clustered SQL Server instance, as shown in the following illustration.  
   
@@ -83,7 +83,7 @@ The term “primary federation server” does not apply when the AD FS configur
   
 You can use SQL Server to configure two or more servers to work together as a server cluster to ensure that AD FS is made highly available to service incoming client requests. High availability provides a scale\-out architecture in which you can increase server capacity by adding additional servers. Single points of failure are mitigated by automatic cluster failover.  
   
-You can achieve high availability by using the network load\-balancing and failover services that SQL clustering technologies provide. For more information about how to configure SQL Server for high availability, see [High Availability Solutions Overview](http://go.microsoft.com/fwlink/?LinkId=179853) \(http:\/\/go.microsoft.com\/fwlink\/?LinkId\=179853\).  
+You can achieve high availability by using the network load\-balancing and failover services that SQL clustering technologies provide. For more information about how to configure SQL Server for high availability, see [High Availability Solutions Overview](http://go.microsoft.com/fwlink/?LinkId=179853).  
   
 ### SAML artifact resolution  
 Security Assertion Markup Language \(SAML\) artifact resolution is an endpoint based on the part of the SAML 2.0 protocol that describes how a relying party can retrieve a token directly from a claims provider. In the first stage of the resolution process, a browser client contacts a resource federation server and provides it with an artifact. In the second stage, resource federation servers send the artifact to a SAML artifact endpoint URL that is hosted somewhere in an account partner organization in order to resolve the artifact message. In the final stage, the account federation server issues the token to the federation server on behalf of the browser client.  
@@ -91,7 +91,7 @@ Security Assertion Markup Language \(SAML\) artifact resolution is an endpoint b
 > [!NOTE]  
 > If you are an administrator in an account partner organization, make sure to assign or bind an SSL certificate, which chains to a root certificate of a member of the Windows Root Certificate Program, to the federation passive Web site in IIS \(<ComputerName>\\Sites\\Default Web Site\\adfs\\ls\) on all the account federation servers in the farm. This is important to prevent resource federation servers from having to manually add the SSL certificate to the Local Computers Trusted People certificate store or from being unable to resolve the artifact that is published in your organization.  
   
-### SAML\/WS\-Federation token replay detection  
+### SAML/WS - Federation token replay detection  
 The term *token replay* refers to the act by which a browser client in an account partner organization attempts to send the same token it received from an account federation server multiple times to authenticate to a resource federation server.  This act occurs when a user clicks the **Back** button of their browser in an effort to resubmit the authentication page.  
   
 AD FS provides a feature referred to as *token replay detection* by which multiple token requests using the same token can be detected and then discarded. When this feature is enabled, token replay detection protects the integrity of authentication requests in both the WS\-Federation passive profile and the SAML WebSSO profile by making sure that the same token is never used more than once. This feature should be enabled in situations where security is a very high concern such as when using kiosks.  
