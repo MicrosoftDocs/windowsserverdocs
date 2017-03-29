@@ -95,9 +95,9 @@ Many registry entries for the Windows Time service are the same as the Group Pol
 
   
 There are several registry keys at this registry location. The Windows Time settings are stored in values across all of these keys:
-* Parameters
-* Configuration
-* NtpClient
+* [Parameters](#Parameters)
+* [Configuration](#Configuration)
+* [NtpClient](#NtpClient)
 * [NtpServer](#NtpServer)
   
 > [!NOTE]  
@@ -117,7 +117,7 @@ For example, 5 minutes would become 5*60\*1000\*10000 = 3000000000 clock ticks.
 
 All versions include Windows 7, Windows 8, Windows 10, Windows Server 2008 , and  Windows Server 2008 R2, Windows Server 2012, Windows Server 2012R2, Windows Server 2016.  Some entries are only availalbe on newer Windows versions.
 
-#### HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters
+#### <a name="Parameters"></a>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters
 
 |Registry Entry|Version|Description|
 |------------------------------------|---------------|----------------------------|
@@ -127,7 +127,7 @@ All versions include Windows 7, Windows 8, Windows 10, Windows Server 2008 , and
 |ServiceMain|All|This entry is maintained by W32Time. It contains reserved data that is used by the Windows operating system, and any changes to this setting can cause unpredictable results. The default value on domain members is SvchostEntry_W32Time. The default value on stand-alone clients and servers is SvchostEntry_W32Time.  "|
 |Type|All|This entry Indicates which peers to accept synchronization from:  <ul><li>**NoSync**. The time service does not synchronize with other sources.</li><li>**NTP.** The time service synchronizes from the servers specified in the **NtpServer**. registry entry.</li><li>**NT5DS**. The time service synchronizes from the domain hierarchy.  </li><li>**AllSync**. The time service uses all the available synchronization mechanisms.  </li></ul>The default value on domain members is **NT5DS**. The default value on stand-alone clients and servers is **NTP**.   |
 
-#### HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Config
+#### <a name="Config"></a>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Config
 
 |Registry Entry|Version|Description|
 |------------------------------------|---------------|----------------------------|
@@ -160,7 +160,7 @@ The following registry entries must be added in order to enable W32Time logging:
 
 
 
-#### HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpClient
+#### <a name="NtpClient"></a>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpClient
 
 |Registry Entry|Version|Description|
 |------------------------------------|---------------|----------------------------|
