@@ -16,7 +16,7 @@ description: How to plan a Work Folders deployment including system requirements
 
 This topic explains the design process for a Work Folders implementation, and assumes that you have the following background:  
   
--   Have a basic understanding of Work Folders (as described in [Work Folders](../Topic/Work%20Folders%20Overview.md))  
+-   Have a basic understanding of Work Folders (as described in [Work Folders](work-folders-overview.md))  
   
 -   Have a basic understanding of Active Directory Domain Services (AD DS) concepts  
   
@@ -26,12 +26,12 @@ This topic explains the design process for a Work Folders implementation, and as
   
 -   Have a basic understanding of enabling web access to internal resources via a web reverse proxy  
   
- The following sections will help you design your Work Folders implementation. Deploying Work Folders is discussed in the next topic, [Deploying Work Folders](../Topic/Deploying%20Work%20Folders.md).  
+ The following sections will help you design your Work Folders implementation. Deploying Work Folders is discussed in the next topic, [Deploying Work Folders](deploy-work-folders.md).  
   
 ##  <a name="BKMK_SOFT"></a> Software requirements  
  Work Folders has the following software requirements for file servers and your network infrastructure:  
   
--   A server running [!INCLUDE[winblue_server_2](../Token/winblue_server_2_md.md)] for hosting sync shares with user files  
+-   A server running Windows Server 2012 R2 or Windows Server 2016 for hosting sync shares with user files  
   
 -   A volume formatted with the NTFS file system for storing user files  
   
@@ -45,7 +45,7 @@ This topic explains the design process for a Work Folders implementation, and as
   
 -   A publicly registered domain name and the ability to create additional public DNS records for the domain  
   
--   (Optional) An Active Directory Domain Services forest with schema extensions in [!INCLUDE[winblue_server_2](../Token/winblue_server_2_md.md)] to support automatically referring PCs and devices to the correct file server when using multiple file servers  
+-   (Optional) An Active Directory Domain Services forest with schema extensions in Windows Server 2012 R2 to support automatically referring PCs and devices to the correct file server when using multiple file servers  
   
 -   (Optional) Active Directory Federation Services (AD FS) infrastructure when using AD FS authentication  
   
@@ -55,15 +55,15 @@ This topic explains the design process for a Work Folders implementation, and as
   
     -   Windows 10  
   
-    -   [!INCLUDE[winblue_client_2](../Token/winblue_client_2_md.md)]  
+    -   Windows 8.1  
   
-    -   [!INCLUDE[winblue_winrt_2](../Token/winblue_winrt_2_md.md)]  
+    -   Windows RT 8.1  
   
     -   Windows 7  
   
     -   Android 4.4 KitKat and later  
   
-    -   iOS 8 and later  
+    -   iOS 10.2 and later  
   
 -   Windows 7 PCs must be running one of the following editions of Windows:  
   
@@ -84,7 +84,7 @@ This topic explains the design process for a Work Folders implementation, and as
 -   Work Folders doesn’t support rolling back the virtual machine state of client virtual machines. Instead perform backup and restore operations from inside the client virtual machine by using System Image Backup or another backup app.  
   
 > [!NOTE]
->  Make sure to install the Windows 8.1 and Windows Server 2012 R2 General Availability update rollup on all Work Folders servers and any client computers running [!INCLUDE[winblue_client_2](../Token/winblue_client_2_md.md)]. For more information, see article [2883200](http://support.microsoft.com/kb/2883200) in the Microsoft Knowledge Base.  
+>  Make sure to install the Windows 8.1 and Windows Server 2012 R2 General Availability update rollup on all Work Folders servers and any client computers running Windows 8.1 or Windows Server 2012 R2. For more information, see article [2883200](http://support.microsoft.com/kb/2883200) in the Microsoft Knowledge Base.  
   
 ## Deployment scenarios  
  Work Folders can be implemented on any number of file servers within a customer environment. This allows Work Folders implementations to scale based on customer needs and can result in highly individualized deployments. However, most deployments will fall into one of the following three basic scenarios.  
@@ -104,10 +104,10 @@ This topic explains the design process for a Work Folders implementation, and as
 ### Active Directory Domain Services  
  AD DS provides two important services in a Work Folders deployment. First, as the back-end for Windows authentication, AD DS provides the security and authentication services that are used to grant access to user data. If a domain controller cannot be reached, a file server will be unable to authenticate an incoming request and the device will not be able to access any data stored in that file server’s sync share.  
   
- Second, AD DS (with the [!INCLUDE[winblue_server_2](../Token/winblue_server_2_md.md)] schema update) maintains the msDS-SyncServerURL attribute on each user, which is used to automatically direct users to the appropriate sync server.  
+ Second, AD DS (with the Windows Server 2012 R2 schema update) maintains the msDS-SyncServerURL attribute on each user, which is used to automatically direct users to the appropriate sync server.  
   
 ### File Servers  
- File servers running [!INCLUDE[winblue_server_2](../Token/winblue_server_2_md.md)] host the Work Folders role service, and host the sync shares that store users’ Work Folders data. File servers can also host data stored by other technologies operating on the internal network (such as file shares), and can be clustered to provide fault tolerance for user data.  
+ File servers running Windows Server 2012 R2 or Windows Server 2016 host the Work Folders role service, and host the sync shares that store users’ Work Folders data. File servers can also host data stored by other technologies operating on the internal network (such as file shares), and can be clustered to provide fault tolerance for user data.  
   
 ###  <a name="GroupPolicy"></a> Group Policy  
  If you have Windows 7 PCs in your environment, we recommend the following:  
@@ -130,13 +130,13 @@ This topic explains the design process for a Work Folders implementation, and as
 ### Web Application Proxy/Device Registration Service  
  Work Folders is built around the concept of allowing Internet-connected devices to retrieve business data securely from the internal network, which allows users to “take their data with them” on their tablets and devices that would not normally be able to access work files. To do this, a reverse proxy must be used to publish sync server URLs and make them available to Internet clients.  
   
- While customers can leverage any of several different technologies to provide this functionality, Active Directory Federation Services (AD FS) in [!INCLUDE[winblue_server_2](../Token/winblue_server_2_md.md)] offers the following functionality that can be useful with Work Folders deployments:  
+ While customers can leverage any of several different technologies to provide this functionality, Active Directory Federation Services (AD FS) in Windows Server 2012 R2 offers the following functionality that can be useful with Work Folders deployments:  
   
--   Web Application Proxy – a reverse proxy implementation that pre-authenticates access to web applications using AD FS. For more information, see [Web Application Proxy Walkthrough Guide](../Topic/Web%20Application%20Proxy%20Walkthrough%20Guide.md).  
+-   Web Application Proxy – a reverse proxy implementation that pre-authenticates access to web applications using AD FS. For more information, see [Web Application Proxy in Windows Server 2016](https://technet.microsoft.com/windows-server-docs/identity/web-application-proxy/web-application-proxy-windows-server).  
   
--   Workplace Join and Device Registration Service– optionally allows users to join devices to the workplace that would not normally be domain-joined; for example, personal laptops, tablets, and smartphones. When these technologies are enabled, the AD FS administrator can configure applications and policies for corporate resources that require devices to be registered before they can gain access to published applications and resources. For more information, see [Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications](../Topic/Join%20to%20Workplace%20from%20Any%20Device%20for%20SSO%20and%20Seamless%20Second%20Factor%20Authentication%20Across%20Company%20Applications.md).  
+-   Workplace Join and Device Registration Service– optionally allows users to join devices to the workplace that would not normally be domain-joined; for example, personal laptops, tablets, and smartphones. When these technologies are enabled, the AD FS administrator can configure applications and policies for corporate resources that require devices to be registered before they can gain access to published applications and resources. For more information, see [Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications](https://technet.microsoft.com/windows-server-docs/identity/ad-fs/operations/join-to-workplace-from-any-device-for-sso-and-seamless-second-factor-authentication-across-company-applications).  
   
--   Multifactor authentication (MFA) – optionally allows administrators to set up a policy based on user, device, or location data that requires users to authenticate with more than one authentication method; for example, a one-time password or a smart card. See [Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](../Topic/Manage%20Risk%20with%20Additional%20Multi-Factor%20Authentication%20for%20Sensitive%20Applications.md).  
+-   Multifactor authentication (MFA) – optionally allows administrators to set up a policy based on user, device, or location data that requires users to authenticate with more than one authentication method; for example, a one-time password or a smart card. See [Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](https://technet.microsoft.com/windows-server-docs/identity/ad-fs/operations/manage-risk-with-additional-multi-factor-authentication-for-sensitive-applications).  
   
 -   Multi-domain authentication – with AD FS you can support users from multiple domains syncing with a single sync server across the Internet. Without this capability, users from domains other than the one the sync server is joined to wouldn't be able to sync across the Internet.  
   
@@ -155,7 +155,7 @@ This topic explains the design process for a Work Folders implementation, and as
  For information on Work Folders server scaling and performance, see [Performance Considerations for Work Folders Deployments](http://blogs.technet.com/b/filecab/archive/2013/11/01/performance-considerations-for-large-scale-work-folders-deployments.aspx).  
   
 > [!NOTE]
->  When using multiple sync servers, we recommend setting up automatic server discovery for users. This process relies upon the configuration of an attribute on each user account in AD DS. The attribute is named **msDS-SyncServerURL** and becomes available on user accounts after a [!INCLUDE[winblue_server_2](../Token/winblue_server_2_md.md)] domain controller is added to the domain or the Active Directory schema updates are applied. This attribute should be set for each user to ensure that users connect to the appropriate sync server. By using automatic server discovery, organizations can publish Work Folders behind a “friendly” URL such as *https://workfolders.contoso.com*, regardless of the number of sync servers in operation.  
+>  When using multiple sync servers, we recommend setting up automatic server discovery for users. This process relies upon the configuration of an attribute on each user account in AD DS. The attribute is named **msDS-SyncServerURL** and becomes available on user accounts after a Windows Server 2012 R2 domain controller is added to the domain or the Active Directory schema updates are applied. This attribute should be set for each user to ensure that users connect to the appropriate sync server. By using automatic server discovery, organizations can publish Work Folders behind a “friendly” URL such as *https://workfolders.contoso.com*, regardless of the number of sync servers in operation.  
   
 ### Number of Sync Shares  
  Individual sync servers can maintain multiple sync shares. This can be useful for the following reasons:  
@@ -243,12 +243,12 @@ This topic explains the design process for a Work Folders implementation, and as
     -   Will Device Registration be required for devices to connect?  
   
 ## Next steps  
- After designing your Work Folders implementation, it’s time to deploy Work Folders. For more information, see [Deploying Work Folders](../Topic/Deploying%20Work%20Folders.md).  
+ After designing your Work Folders implementation, it’s time to deploy Work Folders. For more information, see [Deploying Work Folders](deploy-work-folders.md).  
   
-##  <a name="BKMK_LINKS"></a> See also  
+## See also  
  For additional related information, see the following resources.  
   
 |Content type|References|  
 |------------------|----------------|  
-|**Product evaluation**|-   [Work Folders](../Topic/Work%20Folders%20Overview.md)<br />-   [Work Folders for Windows 7](http://blogs.technet.com/b/filecab/archive/2014/04/24/work-folders-for-windows-7.aspx) (blog post)|  
-|**Deployment**|-   [Designing a Work Folders Implementation](../Topic/Designing%20a%20Work%20Folders%20Implementation.md)<br />-   [Deploying Work Folders](../Topic/Deploying%20Work%20Folders.md)<br />-   [Performance Considerations for Work Folders Deployments](http://blogs.technet.com/b/filecab/archive/2013/11/01/performance-considerations-for-large-scale-work-folders-deployments.aspx)<br />-   [Work Folders for Windows 7 (64 bit download)](http://www.microsoft.com/download/details.aspx?id=42558)<br />-   [Work Folders for Windows 7 (32 bit download)](http://www.microsoft.com/download/details.aspx?id=42559)<br />-   [Work Folders Test Lab Deployment](http://blogs.technet.com/b/filecab/archive/2013/07/10/work-folders-test-lab-deployment.aspx) (blog post)|
+|**Product evaluation**|-   [Work Folders](work-folders-overview.md)<br />-   [Work Folders for Windows 7](http://blogs.technet.com/b/filecab/archive/2014/04/24/work-folders-for-windows-7.aspx) (blog post)|  
+|**Deployment**|-   [Designing a Work Folders Implementation](plan-work-folders.md)<br />-   [Deploying Work Folders](deploy-work-folders.md)<br />-   [Deploying Work Folders with AD FS and Web Application Proxy (WAP)](deploy-work-folders-adfs-overview.md)<br />-   [Performance Considerations for Work Folders Deployments](http://blogs.technet.com/b/filecab/archive/2013/11/01/performance-considerations-for-large-scale-work-folders-deployments.aspx)<br />-   [Work Folders for Windows 7 (64 bit download)](http://www.microsoft.com/download/details.aspx?id=42558)<br />-   [Work Folders for Windows 7 (32 bit download)](http://www.microsoft.com/download/details.aspx?id=42559)<br />-   [Work Folders Test Lab Deployment](http://blogs.technet.com/b/filecab/archive/2013/07/10/work-folders-test-lab-deployment.aspx) (blog post)|
