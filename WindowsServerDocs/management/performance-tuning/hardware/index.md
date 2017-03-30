@@ -21,7 +21,9 @@ The following section lists important items that you should consider when you ch
 
 Choose 64-bit processors for servers. 64-bit processors have significantly more address space, and are required for Windows Server 2016. No 32-bit editions of the operating system will be provided, but 32-bit applications will run on the 64-bit Windows Server 2016 operating system.
 
-To increase the computing resources in a server, you can use a processor with higher-frequency cores, or you can increase the number of processor cores. If CPU is the limiting resource in the system, a core with 2x frequency typically provides a greater performance improvement than two cores with 1x frequency. Multiple cores are not expected to provide a perfect linear scaling, and the scaling factor can be even less if hyper-threading is enabled because hyper-threading relies on sharing resources of the same physical core.
+To increase the computing resources in a server, you can use a processor with higher-frequency cores, or you can increase the number of processor cores. If CPU is the limiting resource in the system, a core with 2x frequency typically provides a greater performance improvement than two cores with 1x frequency.
+
+Multiple cores are not expected to provide a perfect linear scaling, and the scaling factor can be even less if hyper-threading is enabled because hyper-threading relies on sharing resources of the same physical core.
 
 
 >[!Important] Match and scale the memory and I/O subsystem with the CPU performance, and vice versa.
