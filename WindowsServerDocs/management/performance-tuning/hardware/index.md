@@ -26,7 +26,8 @@ To increase the computing resources in a server, you can use a processor with hi
 Multiple cores are not expected to provide a perfect linear scaling, and the scaling factor can be even less if hyper-threading is enabled because hyper-threading relies on sharing resources of the same physical core.
 
 
->[!Important] Match and scale the memory and I/O subsystem with the CPU performance, and vice versa.
+>[!Important]
+Match and scale the memory and I/O subsystem with the CPU performance, and vice versa.
  
 Do not compare CPU frequencies across manufacturers and generations of processors because the comparison can be a misleading indicator of speed.
 For Hyper-V, make sure that the processor supports SLAT (Second Level Address Translation). It is implemented as Extended Page Tables (EPT) by Intel and Nested Page Tables (NPT) by AMD. You can verify this feature is present by using SystemInfo.exe on your server.
@@ -101,5 +102,5 @@ In Windows Server 2016, Numa I/O enables PCIe storage adapters to dynamically r
 ## See Also
 - [Server Hardware Power Considerations](power.md)
 - [Power and Performance Tuning](power/power-performance-tuning.md)
-- [Processor Power Management Tuning](power/processor-power-management-tuning)
+- [Processor Power Management Tuning](power/processor-power-management-tuning.md)
 - [Recommended Balanced Plan Parameters](power/recommended-balanced-plan-parameters.md)

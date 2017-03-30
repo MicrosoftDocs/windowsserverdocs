@@ -59,7 +59,8 @@ You need to thoroughly understand your workload requirements to choose an optima
 
 **PowerCfg.exe** supports a command-line option that you can use to analyze the idle energy efficiency of your server. When you run PowerCfg.exe with the **/energy** option, the tool performs a 60-second test to detect potential energy efficiency issues. The tool generates a simple HTML report in the current directory.
 
->[!Important] To ensure an accurate analysis, make sure that all local apps are closed before you run **PowerCfg.exe**. 
+>[!Important]
+> To ensure an accurate analysis, make sure that all local apps are closed before you run **PowerCfg.exe**. 
 
 Shortened timer tick rates, drivers that lack power management support, and excessive CPU utilization are a few of the behavioral issues that are detected by the **powercfg /energy** command. This tool provides a simple way to identify and fix power management issues, potentially resulting in significant cost savings in a large datacenter.
 
@@ -80,7 +81,8 @@ These power plans exist in Windows for alternating current (AC) and direct curre
 
 For more info on power plans and power policy configurations, see [Power Policy Configuration and Deployment in Windows](http://msdn.microsoft.com/windows/hardware/gg463243.aspx).
 
->[!Note] Some server manufactures have their own power management options available through the BIOS settings. If the operating system does not have control over the power management, changing the power plans in Windows will not affect system power and performance.
+>[!Note]
+> Some server manufactures have their own power management options available through the BIOS settings. If the operating system does not have control over the power management, changing the power plans in Windows will not affect system power and performance.
 
 ## Tuning processor power management parameters
 
@@ -94,7 +96,8 @@ Intel Turbo Boost and AMD Turbo CORE technologies are features that allow proces
 
 Turbo is enabled for High Performance power plans on all Intel and AMD processors and it is disabled for Power Saver power plans. For Balanced power plans on systems that rely on traditional P-state-based frequency management, Turbo is enabled by default only if the platform supports the EPB register.
 
->[!Note] The EPB register is only supported in Intel Westmere and later processors.
+>[!Note]
+> The EPB register is only supported in Intel Westmere and later processors.
 
 For Intel Nehalem and AMD processors, Turbo is disabled by default on P-state-based platforms. However, if a system supports Collaborative Processor Performance Control (CPPC), which is a new alternative mode of performance communication between the operating system and the hardware (defined in ACPI 5.0), Turbo may be engaged if the Windows operating system dynamically requests the hardware to deliver the highest possible performance levels.
 
@@ -122,7 +125,8 @@ Powercfg -setacvalueindex scheme_current sub_processor PERFBOOSTMODE 1
 Powercfg -setactive scheme_current
 ```
 
->[!Note] You must run the **powercfg -setactive** command to enable the new settings. You do not need to reboot the server.
+>[!Note] 
+> You must run the **powercfg -setactive** command to enable the new settings. You do not need to reboot the server.
 
 To set this value for power plans other than the currently selected plan, you can use aliases such as SCHEME\_MAX (Power Saver), SCHEME\_MIN (High Performance), and SCHEME\_BALANCED (Balanced) in place of SCHEME\_CURRENT. Replace “scheme current” in the powercfg -setactive commands previously shown with the desired alias to enable that power plan.
 
@@ -153,7 +157,8 @@ Powercfg -setacvalueindex scheme_current sub_processor PROCTHROTTLEMAX 75
 Powercfg -setactive scheme_current
 ```
 
->[!Note]Capping processor performance at a percentage of maximum requires processor support. Check the processor documentation to determine whether such support exists, or view the Performance Monitor counter **% of maximum frequency** in the **Processor** group to see if any frequency caps were applied.
+>[!Note]
+> Capping processor performance at a percentage of maximum requires processor support. Check the processor documentation to determine whether such support exists, or view the Performance Monitor counter **% of maximum frequency** in the **Processor** group to see if any frequency caps were applied.
 
 ## Processor performance increase and decrease of thresholds and policies
 

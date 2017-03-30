@@ -69,5 +69,5 @@ The processor terminology used throughout this topic reflects the hierarchy of c
 ## See Also
 - [Server Hardware Performance Considerations](index.md)
 - [Power and Performance Tuning](power/power-performance-tuning.md)
-- [Processor Power Management Tuning](power/processor-power-management-tuning)
+- [Processor Power Management Tuning](power/processor-power-management-tuning.md)
 - [Recommended Balanced Plan Parameters](power/recommended-balanced-plan-parameters.md)
