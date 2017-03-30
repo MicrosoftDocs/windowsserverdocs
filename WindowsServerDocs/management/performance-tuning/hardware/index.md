@@ -1,6 +1,6 @@
 ---
 title: Server Hardware Performance Considerations
-description: Server Hardware Performance Considerations
+description: Server hardware performance considerations for Windows Server 2016
 ms.prod: windows-server-threshold
 ms.service: na
 manager: dongill
@@ -21,11 +21,13 @@ The following section lists important items that you should consider when you ch
 
 Choose 64-bit processors for servers. 64-bit processors have significantly more address space, and are required for Windows Server 2016. No 32-bit editions of the operating system will be provided, but 32-bit applications will run on the 64-bit Windows Server 2016 operating system.
 
-To increase the computing resources in a server, you can use a processor with higher-frequency cores, or you can increase the number of processor cores. If CPU is the limiting resource in the system, a core with 2x frequency typically provides a greater performance improvement than two cores with 1x frequency. Multiple cores are not expected to provide a perfect linear scaling, and the scaling factor can be even less if hyper-threading is enabled because hyper-threading relies on sharing resources of the same physical core.
+To increase the computing resources in a server, you can use a processor with higher-frequency cores, or you can increase the number of processor cores. If CPU is the limiting resource in the system, a core with 2x frequency typically provides a greater performance improvement than two cores with 1x frequency.
+
+Multiple cores are not expected to provide a perfect linear scaling, and the scaling factor can be even less if hyper-threading is enabled because hyper-threading relies on sharing resources of the same physical core.
 
 
-**Important**
-Make sure to match and scale the memory and I/O subsystem with the CPU performance, and vice versa.
+>[!Important]
+Match and scale the memory and I/O subsystem with the CPU performance, and vice versa.
  
 Do not compare CPU frequencies across manufacturers and generations of processors because the comparison can be a misleading indicator of speed.
 For Hyper-V, make sure that the processor supports SLAT (Second Level Address Translation). It is implemented as Extended Page Tables (EPT) by Intel and Nested Page Tables (NPT) by AMD. You can verify this feature is present by using SystemInfo.exe on your server.
@@ -38,9 +40,11 @@ Choose large L2 or L3 processor caches. On newer architectures, such as Haswell 
 Increase the RAM to match your memory needs.
 When your computer runs low on memory and it needs more immediately, Windows uses hard disk space to supplement system RAM through a procedure called paging. Too much paging degrades the overall system performance.
 You can optimize paging by using the following guidelines for page file placement:
-* Isolate the page file on its own storage device, or at least make sure it doesn’t share the same storage devices as other frequently accessed files. For example, place the page file and operating system files on separate physical disk drives.
-* Place the page file on a drive that is not fault-tolerant. If the disk fails, a system crash is likely to occur. If you place the page file on a fault-tolerant drive, remember that fault-tolerant systems are often slower to write data because they write data to multiple locations.
-* Use multiple disks or a disk array if you need additional disk bandwidth for paging. Do not place multiple page files on different partitions of the same physical disk drive.
+- Isolate the page file on its own storage device, or at least make sure it doesn’t share the same storage devices as other frequently accessed files. For example, place the page file and operating system files on separate physical disk drives.
+
+- Place the page file on a drive that is not fault-tolerant. If the disk fails, a system crash is likely to occur. If you place the page file on a fault-tolerant drive, remember that fault-tolerant systems are often slower to write data because they write data to multiple locations.
+
+- Use multiple disks or a disk array if you need additional disk bandwidth for paging. Do not place multiple page files on different partitions of the same physical disk drive.
 
 ## Peripheral Bus Recommendations
 In Windows Server 2016, the primary storage and network interfaces should be PCI Express (PCIe) so servers with PCIe buses are recommended. To avoid bus speed limitations, use PCIe x8 and higher slots for 10+ GB Ethernet adapters.
@@ -51,6 +55,7 @@ Choose disks with higher rotational speeds to reduce random request service time
 2.5-inch enterprise-class disks can service a significantly larger number of random requests per second compared to equivalent 3.5-inch drives.
 
 Store frequently accessed data, especially sequentially accessed data, near the beginning of a disk because this roughly corresponds to the outermost (fastest) tracks.
+
 Consolidating small drives into fewer high-capacity drives can reduce overall storage performance. Fewer spindles mean reduced request service concurrency; and therefore, potentially lower throughput and longer response times (depending on the workload intensity).
 
 The use of SSD and high speed flash disks is useful for read mostly disks with high I/O rates or latency sensitive I/O. Boot disks are good candidates for the use of SSD or high speed flash disks as they can improve boot times significantly.
@@ -73,9 +78,13 @@ Copper adapters generally have the same performance as their fiber counterparts,
 
 ### Dual- or quad-port adapters
 Multiport adapters are useful for servers that have a limited number of PCI slots.
+
 To address SCSI limitations on the number of disks that can be connected to a SCSI bus, some adapters provide two or four SCSI buses on a single adapter card. Fibre Channel adapters generally have no limits to the number of disks that are connected to an adapter unless they are hidden behind a SCSI interface.
+
 Serial Attached SCSI (SAS) and Serial ATA (SATA) adapters also have a limited number of connections because of the serial nature of the protocols, but you can attach more disks by using switches.
+
 Network adapters have this feature for load-balancing or failover scenarios. Using two single-port network adapters usually yields better performance than using a single dual-port network adapter for the same workload.
+
 PCI bus limitation can be a major factor in limiting performance for multiport adapters. Therefore, it is important to consider placing them in a high-performing PCIe slot that provides enough bandwidth.
 
 ### Interrupt moderation
@@ -89,3 +98,9 @@ Offload-capable adapters offer CPU savings that yield improved performance.
 
 ### Dynamic interrupt and deferred procedure call (DPC) redirection
 In Windows Server 2016, Numa I/O enables PCIe storage adapters to dynamically redirect interrupts and DPCs and can help any multiprocessor system by improving workload partitioning, cache hit rates, and on-board hardware interconnect usage for I/O-intensive workloads.
+
+## See Also
+- [Server Hardware Power Considerations](power.md)
+- [Power and Performance Tuning](power/power-performance-tuning.md)
+- [Processor Power Management Tuning](power/processor-power-management-tuning.md)
+- [Recommended Balanced Plan Parameters](power/recommended-balanced-plan-parameters.md)
