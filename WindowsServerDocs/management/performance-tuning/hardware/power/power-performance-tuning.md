@@ -222,5 +222,5 @@ Powercfg -setactive scheme_current
 ## See Also
 - [Server Hardware Performance Considerations](../index.md)
 - [Server Hardware Power Considerations](../power.md)
-- [Processor Power Management Tuning](processor-power-management-tuning)
+- [Processor Power Management Tuning](processor-power-management-tuning.md)
 - [Recommended Balanced Plan Parameters](recommended-balanced-plan-parameters.md)
