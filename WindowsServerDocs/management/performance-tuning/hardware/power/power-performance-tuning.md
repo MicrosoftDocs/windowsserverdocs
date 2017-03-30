@@ -125,7 +125,7 @@ Powercfg -setacvalueindex scheme_current sub_processor PERFBOOSTMODE 1
 Powercfg -setactive scheme_current
 ```
 
->[!Note] 
+>[!Important] 
 > You must run the **powercfg -setactive** command to enable the new settings. You do not need to reboot the server.
 
 To set this value for power plans other than the currently selected plan, you can use aliases such as SCHEME\_MAX (Power Saver), SCHEME\_MIN (High Performance), and SCHEME\_BALANCED (Balanced) in place of SCHEME\_CURRENT. Replace “scheme current” in the powercfg -setactive commands previously shown with the desired alias to enable that power plan.

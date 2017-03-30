@@ -58,9 +58,7 @@ The proposed parameter change consumes slightly higher power at the light (i.e.,
 We set up a [Failover Cluster], and used Diskspd to generate random and sequential, and read and write IOs to the local and remote storage systems with different IO sizes. Our tests show that the IO response time is very sensitive to processor frequency under different power plans. The **Balanced** power plan could double the response time of that from the **High Performance** power plan under certain workloads. The proposed change removes most of the regressions.
 
 >[!Important]
->Starting from Intel [Broadwell] processors running Windows Server 2016, most of the processor power management decisions are made in the processor instead of OS level to achieve quicker adaption to the workload changes.
-
->The legacy PPM parameters used by OS have minimal impact on the actual frequency decisions, except telling the processor if it should favor power or performance, or capping the minimal and maximum frequencies. Hence, the proposed PPM parameter change is only targeting to the pre-Broadwell systems.
+>Starting from Intel [Broadwell] processors running Windows Server 2016, most of the processor power management decisions are made in the processor instead of OS level to achieve quicker adaption to the workload changes. The legacy PPM parameters used by OS have minimal impact on the actual frequency decisions, except telling the processor if it should favor power or performance, or capping the minimal and maximum frequencies. Hence, the proposed PPM parameter change is only targeting to the pre-Broadwell systems.
 
 ## See Also
 - [Server Hardware Performance Considerations](../index.md)

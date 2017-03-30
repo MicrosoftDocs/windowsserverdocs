@@ -101,8 +101,8 @@ Due to the number and complexity of parameters, this may be a challenging task, 
 
 -   **Processor Performance Decrease Policy** – the “Single” policy more gradually decreases perf over longer idle periods; the “Rocket” policy drops power very quickly when entering an idle period
 
-**Warning**  
-Before starting any experiments, you should first understand your workloads, which will help you make the right PPM parameter choices and reduce the tuning effort.
+>[!Important]
+> Before starting any experiments, you should first understand your workloads, which will help you make the right PPM parameter choices and reduce the tuning effort.
 
 ### Understand high-level performance and power requirements
 
