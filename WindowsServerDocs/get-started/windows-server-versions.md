@@ -1,5 +1,5 @@
 ---
-title: Other Windows Server versions
+title: Windows Server content
 description: Provides links to content for previous releases of Windows Server
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,11 +14,15 @@ author: lizap
 ms.author: elizapo
 manager: dongill
 ---
-# Other Windows Server versions
+# Windows Server technical content
 
 Windows Server is the platform for building an infrastructure of connected applications, networks, and web services, from the workgroup to the data center.
 
-Use the links below to view content for other versions of Windows Server.
+Use the links below to view content for the different versions of Windows Server.
+
+## Windows Server 2016
+
+[Windows Server 2016 technical content](windows-server-2016.md)
 
 ## Windows Server 2012 R2 and Windows Server 2012
 
