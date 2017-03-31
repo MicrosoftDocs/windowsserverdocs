@@ -50,3 +50,21 @@ A useful tool for network microbenchmarks is ntttcp, which is available on both 
 Some best practices, like the following, are listed on [Best Practices for Running Linux on Hyper-V](https://technet.microsoft.com/en-us/windows-server-docs/compute/hyper-v/best-practices-for-running-linux-on-hyper-v). The Linux kernel has different I/O schedulers to reorder requests with different algorithms. NOOP is a first-in first-out queue that passes the schedule decision to be made by the hypervisor. It is recommended to use NOOP as the scheduler when running Linux virtual machine on Hyper-V. To change the scheduler for a specific device, in the boot loader's configuration (/etc/grub.conf, for example), add <pre>elevator=noop</pre> to the kernel parameters, and then restart.
 
 Similar to networking, Linux guest performance with storage benefits the most from multiple queues with enough depth to keep the host busy. Microbenchmarking storage performance is probably best with the fio benchmark tool with the libaio engine.
+
+## See also
+
+-   [Hyper-V terminology](terminology.md)
+
+-   [Hyper-V architecture](architecture.md)
+
+-   [Hyper-V server configuration](configuration.md)
+
+-   [Hyper-V processor performance](processor-performance.md)
+
+-   [Hyper-V memory performance](memory-performance.md)
+
+-   [Hyper-V storage I/O performance](storage-io-performance.md)
+
+-   [Hyper-V network I/O performance](network-io-performance.md)
+
+-   [Detecting bottlenecks in a virtualized environment](detecting-virtualized-environment-bottlenecks.md)

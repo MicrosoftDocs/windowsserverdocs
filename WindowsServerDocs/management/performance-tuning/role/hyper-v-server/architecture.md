@@ -25,3 +25,21 @@ The Hyper-V-specific I/O architecture consists of virtualization service provide
 Starting with Windows Server 2008, the operating system features enlightenments to optimize its behavior when it is running in virtual machines. The benefits include reducing the cost of memory virtualization, improving multicore scalability, and decreasing the background CPU usage of the guest operating system.
 
 The following sections suggest best practices that yield increased performance on servers running Hyper-V role.
+
+## See also
+
+-   [Hyper-V terminology](terminology.md)
+
+-   [Hyper-V server configuration](configuration.md)
+
+-   [Hyper-V processor performance](processor-performance.md)
+
+-   [Hyper-V memory performance](memory-performance.md)
+
+-   [Hyper-V storage I/O performance](storage-io-performance.md)
+
+-   [Hyper-V network I/O performance](network-io-performance.md)
+
+-   [Detecting bottlenecks in a virtualized environment](detecting-virtualized-environment-bottlenecks.md)
+
+-   [Linux Virtual Machines](linux-virtual-machine-considerations.md)
