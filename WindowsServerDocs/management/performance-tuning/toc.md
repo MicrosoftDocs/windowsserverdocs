@@ -23,7 +23,7 @@
 #### [Network I/O performance](role/hyper-v-server/network-io-performance.md)
 #### [Detecting bottlenecks in a virtualized environment](role/hyper-v-server/detecting-virtualized-environment-bottlenecks.md)
 #### [Linux virtual machine considerations](role/hyper-v-server/linux-virtual-machine-considerations.md)
-### [Containers](role/windows-server-container/index.md)
+### [Windows Server Containers](role/windows-server-container/index.md)
 ### [Remote Desktop Services](role/remote-desktop/session-hosts.md)
 #### [Session hosts](role/remote-desktop/session-hosts.md)
 #### [Virtualization hosts](role/remote-desktop/virtualization-hosts.md)
