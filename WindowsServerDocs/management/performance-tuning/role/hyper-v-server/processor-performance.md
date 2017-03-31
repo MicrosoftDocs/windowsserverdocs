@@ -66,3 +66,21 @@ Microsoft SQL Server is an example of NUMA aware application. For more info, see
 Virtual NUMA and Dynamic Memory features cannot be used at the same time. A virtual machine that has Dynamic Memory enabled effectively has only one virtual NUMA node, and no NUMA topology is presented to the virtual machine regardless of the virtual NUMA settings.
 
 For more info on Virtual NUMA, see [Hyper-V Virtual NUMA Overview](http://technet.microsoft.com/library/dn282282.aspx).
+
+##See also
+
+-   [Hyper-V terminology](terminology.md)
+
+-   [Hyper-V architecture](architecture.md)
+
+-   [Hyper-V server configuration](configuration.md)
+
+-   [Hyper-V memory performance](memory-performance.md)
+
+-   [Hyper-V storage I/O performance](storage-io-performance.md)
+
+-   [Hyper-V network I/O performance](network-io-performance.md)
+
+-   [Detecting bottlenecks in a virtualized environment](detecting-virtualized-environment-bottlenecks.md)
+
+-   [Linux Virtual Machines](linux-virtual-machine-considerations.md)

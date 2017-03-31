@@ -38,3 +38,21 @@ When running Windows in the child partition, you can use the following performan
 The root partition must have sufficient memory to provide services such as I/O virtualization, virtual machine snapshot, and management to support the child partitions.
 
 Hyper-V in Windows Server 2016 monitors the runtime health of the root partition’s management operating system to determine how much memory can safely be allocated to child partitions, while still ensuring high performance and reliability of the root partition.
+
+## See also
+
+-   [Hyper-V terminology](terminology.md)
+
+-   [Hyper-V architecture](architecture.md)
+
+-   [Hyper-V server configuration](configuration.md)
+
+-   [Hyper-V processor performance](processor-performance.md)
+
+-   [Hyper-V storage I/O performance](storage-io-performance.md)
+
+-   [Hyper-V network I/O performance](network-io-performance.md)
+
+-   [Detecting bottlenecks in a virtualized environment](detecting-virtualized-environment-bottlenecks.md)
+
+-   [Linux Virtual Machines](linux-virtual-machine-considerations.md)
