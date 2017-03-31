@@ -29,7 +29,7 @@ This guide organizes performance and tuning guidance for Windows Server 2016 acr
 |Server hardware tuning | By server role | For server subsystem |
 |:---:|:---:|:---:|
 |[Hardware performance considerations](hardware/index.md) |[Active Directory Servers](role/active-directory-server/index.md) |[Cache and Memory Management](subsystem/cache-memory-management/index.md)|
-|[Hardware power considerations](hardware/power.md)|[Containers](role/container/index.md)|[Software Defined Networking](subsystem/software-defined-networking/index.md)|
+|[Hardware power considerations](hardware/power.md)|[Containers](role/windows-server-container/index.md)|[Software Defined Networking](subsystem/software-defined-networking/index.md)|
 ||[File Servers](role/file-server/index.md)|[Storage Spaces Direct](subsystem/storage-spaces-direct/index.md)|
 ||[Hyper-V Servers](role/hyper-v-server/index.md)||
 ||[Remote Desktop Servers](role/remote-desktop/session-hosts.md)||
@@ -49,7 +49,7 @@ This guide organizes performance and tuning guidance for Windows Server 2016 acr
 
 - [HTTP1.1 and HTTP2](role/web-server/http-performance.md)
 
-- [Containers](role/container/index.md)
+- [Windows Server Containers](role/windows-server-container/index.md)
 
 ### Sections changed
 

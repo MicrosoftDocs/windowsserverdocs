@@ -12,9 +12,11 @@ author: phstee
 ms.author: TimWi; ChrisRob; HerbertM; KenBrumf;  MLeary; ShawnRab
 ms.date: 10/31/2016
 ---
+
 # LDAP considerations in ADS performance tuning
+
 >[!Important]
-> The following is a summary of the key recommendations and considerations to optimize server hardware covered in greater depth in the [Capacity Planning for Active Directory Domain Services](http://go.microsoft.com/fwlink/?LinkId=324566) article and is not intended a replacement for that content.
+> The following is a summary of the key recommendations and considerations to optimize server hardware for Active Directory workloads covered in greater depth in the [Capacity Planning for Active Directory Domain Services](http://go.microsoft.com/fwlink/?LinkId=324566) article. Readers are highly encouraged to read [Capacity Planning for Active Directory Domain Services](http://go.microsoft.com/fwlink/?LinkId=324566) for a greater technical understanding and implications of these recommendations.
 
 ## Verify LDAP queries
 
