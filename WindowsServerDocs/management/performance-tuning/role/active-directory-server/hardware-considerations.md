@@ -15,7 +15,8 @@ ms.date: 10/31/2016
 
 # Hardware considerations in ADS tuning 
 
-The following is a summary of the key recommendations and considerations to optimize server hardware covered in greater depth in the [Capacity Planning for Active Directory Domain Services](http://go.microsoft.com/fwlink/?LinkId=324566) topic and is not intended a replacement for that content.
+>[!Important]
+> The following is a summary of the key recommendations and considerations to optimize server hardware covered in greater depth in the [Capacity Planning for Active Directory Domain Services](http://go.microsoft.com/fwlink/?LinkId=324566) article and is not intended a replacement for that content.
 
 ## Avoid going to disk
 
