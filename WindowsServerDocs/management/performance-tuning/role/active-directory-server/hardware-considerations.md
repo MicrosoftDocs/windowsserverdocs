@@ -71,6 +71,6 @@ Just like with processors, excessive network adapter utilization will cause long
 
 ## See also
 - [Performance Tuning Active Directory Servers](index.md)
-- [Site definition considerations](sit-definition-considerations.md)
+- [Site definition considerations](site-definition-considerations.md)
 - [LDAP considerations](ldap-considerations.md)
 - [Capacity Planning for Active Directory Domain Services](http://go.microsoft.com/fwlink/?LinkId=324566)

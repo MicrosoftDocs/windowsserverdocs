@@ -103,5 +103,5 @@ For info on ADS performance troubleshooting, see [Monitoring Your Branch Office 
 ## See also
 - [Performance Tuning Active Directory Servers](index.md)
 - [Hardware considerations](hardware-considerations.md)
-- [Site definition considerations](sit-definition-considerations.md)
+- [Site definition considerations](site-definition-considerations.md)
 - [Capacity Planning for Active Directory Domain Services](http://go.microsoft.com/fwlink/?LinkId=324566)

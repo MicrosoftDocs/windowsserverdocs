@@ -103,6 +103,6 @@ For info on troubleshooting, see [Monitoring Your Branch Office Environment](htt
 
 ## See also
 - [Hardware considerations](hardware-considerations.md)
-- [Site definition considerations](sit-definition-considerations.md)
+- [Site definition considerations](site-definition-considerations.md)
 - [LDAP considerations](ldap-considerations.md)
 - [Capacity Planning for Active Directory Domain Services](http://go.microsoft.com/fwlink/?LinkId=324566)
