@@ -7,6 +7,10 @@
 #### [Recommended Balanced Power Plan Parameters](hardware/power/recommended-balanced-plan-parameters.md)
 ## Server Role Tuning
 ### [Active Directory Server](role/active-directory-server/index.md)
+#### [Site Definition Considerations](role/active-directory-server/site-definition-considerations.md)
+#### [Hardware Considerations](role/active-directory-server/hardware-considerations.md)
+#### [LDAP Considerations](role/active-directory-server/ldap-considerations.md)
+#### [](role/active-directory-server/)
 ### [File Server](role/file-server/index.md)
 #### [SMB File Server](role/file-server/smb-file-server.md)
 #### [NFS File Server](role/file-server/nfs-file-server.md)
