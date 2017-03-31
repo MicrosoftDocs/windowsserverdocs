@@ -1,5 +1,5 @@
 ---
-title: Performance Tuning Containers
+title: Performance Tuning Windows Server Containers
 description: Performance Tuning for Containers
 ms.prod: windows-server-threshold
 ms.service: na
@@ -13,10 +13,12 @@ ms.author: akino
 ms.date: 10/31/2016
 ---
 
-# Performance tuning Containers
+# Performance tuning Windows Server containers
 
 ## Introduction
-Windows Server 2016 is the first version of Windows to ship support for container technology built in to the OS. In Server 2016, two types of containers are available: Windows Server Containers and Hyper-V Containers. Each container type supports either the Server Core or Nano Server SKU of Windows Server 2016. These configurations have different performance implications which we detail below to help you understand which is right for your scenarios. In addition, we detail performance impacting configurations, and describe the tradeoffs with each of those options.
+Windows Server 2016 is the first version of Windows to ship support for container technology built in to the OS. In Server 2016, two types of containers are available: Windows Server Containers and Hyper-V Containers. Each container type supports either the Server Core or Nano Server SKU of Windows Server 2016. 
+
+These configurations have different performance implications which we detail below to help you understand which is right for your scenarios. In addition, we detail performance impacting configurations, and describe the tradeoffs with each of those options.
 
 ### Windows Server Container and Hyper-V Containers
 
@@ -27,12 +29,16 @@ Windows Server Container and Hyper-V containers offer many of the same portabili
 **Hyper-V Containers** expand on the isolation provided by Windows Server Containers by running each container in a highly optimized virtual machine. In this configuration the kernel of the container host is not shared with the Hyper-V Containers.
 
 The additional isolation provided by Hyper-V containers is achieved in large part by a hypervisor layer of isolation between the container and the container host. This affects container density as, unlike Windows Server Containers, less sharing of system files and binaries can occur, resulting in an overall larger storage and memory footprint. In addition there is the expected additional overhead in some network, storage io, and CPU paths.
+
 ### Nano Server and Server Core
 
-Windows Server Containers and Hyper-V containers offers support for Server Core and for a new installation option available in Windows Server 2016 : Nano Server. Nano Server is a remotely administered server operating system optimized for private clouds and datacenters. It is similar to Windows Server in Server Core mode, but significantly smaller, has no local logon capability, and only supports 64-bit applications, tools, and agents. It takes up far less disk space and starts faster.
+Windows Server Containers and Hyper-V containers offers support for Server Core and for a new installation option available in Windows Server 2016 : [Nano Server](https://technet.microsoft.com/en-us/windows-server-docs/compute/nano-server/getting-started-with-nano-server). 
+
+Nano Server is a remotely administered server operating system optimized for private clouds and datacenters. It is similar to Windows Server in Server Core mode, but significantly smaller, has no local logon capability, and only supports 64-bit applications, tools, and agents. It takes up far less disk space and starts faster.
 
 ## Container Start Up Time
 Container start up time is a key metric in many of the scenarios that containers offer the greatest benefit. As such, understanding how to best optimize for container start up time is critical. Below are some tuning trade-offs to understand to achieve improved start up time.
+
 ### First Logon
 
 Microsoft ships a base image for both Nano Server and Server Core. The base image which ships for Server Core has been optimized by removing the start-up time overhead associated with first logon (OOBE). This is not the case with Nano Server base image. However, this cost can be removed from Nano Server based images by committing at least one layer to the container image. Subsequent container starts from the image will not incur the first logon cost.
@@ -44,6 +50,7 @@ Containers, by default, use a temporary scratch space on the container host’s 
 Hyper-V for Windows Server 2016 introduces nested hypervisor support. That is, it is now possible to run a virtual machine from within a virtual machine. This opens up many useful scenarios but also exaggerates some performance impact that the hypervisor incurs, as there are two level of hypervisors running above the physical host.
 
 For containers, this has an impact when running a Hyper-V container inside of a virtual machine. Since a Hyper-V Container offers isolation through a hypervisor layer between itself and the container host, when the container host is a Hyper-V base virtual machine, there is performance overhead associated in terms of container start-up time, storage io, network io and throughput, and CPU.
+
 ## Storage
 ### Mounted Data Volumes
 
@@ -57,17 +64,27 @@ Both Windows Server Containers and Hyper-V containers provide a 20gb dynamic VHD
 (can we configure scratch size)
 
 ## Networking
-
 Windows Server Containers and Hyper-V containers offer a variety of networking modes to best suit the needs of differing networking configurations. Each of these options present their own performance characteristics.
 
-**Windows Network Address Translation (WinNAT):** Each container will receive an IP address from an internal, private IP prefix (e.g. 172.16.0.0/12). Port forwarding / mapping from the container host to container endpoints is supported. Docker creates a NAT network by default when the dockerd first runs.
+### Windows Network Address Translation (WinNAT)
 
-**Transparent:**  Each container endpoint is directly connected to the physical network. IPs from the physical network can be assigned statically or dynamically using an external DHCP server
+Each container will receive an IP address from an internal, private IP prefix (e.g. 172.16.0.0/12). Port forwarding / mapping from the container host to container endpoints is supported. Docker creates a NAT network by default when the dockerd first runs.
 
-**L2 Bridge:** Each container endpoint will be in the same IP subnet as the container host. The IP addresses must be assigned statically from the same prefix as the container host. All container endpoints on the host will have the same MAC address due to Layer-2 address translation.
+Of these three modes, the NAT configuration is the most expensive network IO path, but has the least amount of configuration needed. 
 
-Of these three modes, the NAT configuration is the most expensive network IO path, but has the least amount of configuration needed. Windows Server containers use a Host vNIC to attach to the virtual switch. Hyper-V Containers use a Synthetic VM NIC (not exposed to the Utility VM) to attach to the virtual switch. When containers are communicating with the external network, packets are routed through WinNAT with address translations applied, which incurs some overhead.
+Windows Server containers use a Host vNIC to attach to the virtual switch. Hyper-V Containers use a Synthetic VM NIC (not exposed to the Utility VM) to attach to the virtual switch. When containers are communicating with the external network, packets are routed through WinNAT with address translations applied, which incurs some overhead.
+
+### Transparent
+
+Each container endpoint is directly connected to the physical network. IPs from the physical network can be assigned statically or dynamically using an external DHCP server.
 
 Transparent mode is the least expensive in terms of the network IO path, and external packets are directly passed through to the container virtual NIC giving direct access to the external network.
 
+### L2 Bridge
+Each container endpoint will be in the same IP subnet as the container host. The IP addresses must be assigned statically from the same prefix as the container host. All container endpoints on the host will have the same MAC address due to Layer-2 address translation.
+
 L2 Bridge Mode is more performant than WinNAT mode as it provides direct access to the external network, but less performant than Transparent mode as it also introduces MAC address translation.
+
+
+
+
