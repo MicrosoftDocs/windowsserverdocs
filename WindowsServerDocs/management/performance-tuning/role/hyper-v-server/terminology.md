@@ -34,3 +34,21 @@ This section summarizes key terminology specific to virtual machine technology t
 | *virtualization service provider (VSP)*|  A provider exposed by the virtualization stack in the root partition that provides resources or services such as I/O to a child partition.|
 | *virtualization stack*|A collection of software components in the root partition that work together to support virtual machines. The virtualization stack works with and sits above the hypervisor. It also provides management capabilities.|
 |*VMBus*|Channel-based communication mechanism used for inter-partition communication and device enumeration on systems with multiple active virtualized partitions. The VMBus is installed with Hyper-V Integration Services.|
+
+## See also
+
+-   [Hyper-V architecture](architecture.md)
+
+-   [Hyper-V server configuration](configuration.md)
+
+-   [Hyper-V processor performance](processor-performance.md)
+
+-   [Hyper-V memory performance](memory-performance.md)
+
+-   [Hyper-V storage I/O performance](storage-io-performance.md)
+
+-   [Hyper-V network I/O performance](network-io-performance.md)
+
+-   [Detecting bottlenecks in a virtualized environment](detecting-virtualized-environment-bottlenecks.md)
+
+-   [Linux Virtual Machines](linux-virtual-machine-considerations.md)

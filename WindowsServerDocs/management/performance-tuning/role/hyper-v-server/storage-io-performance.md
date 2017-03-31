@@ -267,3 +267,21 @@ Starting from Windows Server 2012, Hyper-V supports unmap notifications, which 
 Only Hyper-V-specific SCSI, enlightened IDE, and Virtual Fibre Channel controllers allow the unmap command from the guest to reach the host virtual storage stack. On the virtual hard disks, only virtual disks formatted as VHDX support unmap commands from the guest.
 
 For these reasons, we recommend that you use VHDX files attached to a SCSI controller when not using Virtual Fibre Channel disks.
+
+## See also
+
+-   [Hyper-V terminology](terminology.md)
+
+-   [Hyper-V architecture](architecture.md)
+
+-   [Hyper-V server configuration](configuration.md)
+
+-   [Hyper-V processor performance](processor-performance.md)
+
+-   [Hyper-V memory performance](memory-performance.md)
+
+-   [Hyper-V network I/O performance](network-io-performance.md)
+
+-   [Detecting bottlenecks in a virtualized environment](detecting-virtualized-environment-bottlenecks.md)
+
+-   [Linux Virtual Machines](linux-virtual-machine-considerations.md)
