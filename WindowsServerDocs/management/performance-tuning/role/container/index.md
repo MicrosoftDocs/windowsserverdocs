@@ -13,7 +13,7 @@ ms.author: akino
 ms.date: 10/31/2016
 ---
 
-# Performance Tuning Containers
+# Performance tuning Containers
 
 ## Introduction
 Windows Server 2016 is the first version of Windows to ship support for container technology built in to the OS. In Server 2016, two types of containers are available: Windows Server Containers and Hyper-V Containers. Each container type supports either the Server Core or Nano Server SKU of Windows Server 2016. These configurations have different performance implications which we detail below to help you understand which is right for your scenarios. In addition, we detail performance impacting configurations, and describe the tradeoffs with each of those options.

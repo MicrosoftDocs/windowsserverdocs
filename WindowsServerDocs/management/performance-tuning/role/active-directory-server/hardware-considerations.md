@@ -1,6 +1,6 @@
 ---
-title: Performance Tuning Active Directory Servers
-description: Performance Tuning for Active Directory Servers
+title: Hardware considerations in AD performance tuning
+description: Hardware considerations in AD performance tuning
 ms.prod: windows-server-threshold
 ms.service: na
 manager: dongill
@@ -13,7 +13,7 @@ ms.author: TimWi; ChrisRob; HerbertM; KenBrumf;  MLeary; ShawnRab
 ms.date: 10/31/2016
 ---
 
-# Hardware Considerations
+# Hardware considerations in ADS tuning 
 
 The following is a summary of the key recommendations and considerations to optimize server hardware covered in greater depth in the [Capacity Planning for Active Directory Domain Services](http://go.microsoft.com/fwlink/?LinkId=324566) topic and is not intended a replacement for that content.
 

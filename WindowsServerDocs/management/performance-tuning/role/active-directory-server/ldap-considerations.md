@@ -1,5 +1,5 @@
 ---
-title: LDAP considerations in ADS performance tuning
+title: LDAP considerations in AD performance tuning
 description: 
 ms.prod: windows-server-threshold
 ms.service: na

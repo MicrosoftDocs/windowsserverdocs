@@ -1,5 +1,5 @@
 ---
-title: Domain controller placement and site considerations
+title: Site definition and domain controller placement in AD performance tuning
 description: 
 ms.prod: windows-server-threshold
 ms.service: na
@@ -13,7 +13,7 @@ ms.author: TimWi; ChrisRob; HerbertM; KenBrumf;  MLeary; ShawnRab
 ms.date: 10/31/2016
 ---
 
-# Site defintion and domain controller placement
+# Site defintion considerations in ADS performance tuning
 
 Proper site definition is critical to performance. Clients falling out of site can experience poor performance for authentications and queries. Furthermore, with the introduction of IPv6 on clients, the request can come from either the IPv4 or the IPv6 address and Active Directory needs to have sites properly defined for IPv6. The operating system prefers IPv6 to IPv4 when both are configured.
 
