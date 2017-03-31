@@ -28,8 +28,9 @@ Multiple cores are not expected to provide a perfect linear scaling, and the sca
 
 >[!Important]
 Match and scale the memory and I/O subsystem with the CPU performance, and vice versa.
- 
+
 Do not compare CPU frequencies across manufacturers and generations of processors because the comparison can be a misleading indicator of speed.
+
 For Hyper-V, make sure that the processor supports SLAT (Second Level Address Translation). It is implemented as Extended Page Tables (EPT) by Intel and Nested Page Tables (NPT) by AMD. You can verify this feature is present by using SystemInfo.exe on your server.
 
 ## Cache Recommendations
