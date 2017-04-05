@@ -272,7 +272,31 @@ Under rare and usually unreproducable circumstances, rebooting a server that is 
 
 Note the `Status: "{Access Denied}"` and the message `A process has requested access to an object, but has not been granted those access rights.` This is a known issue within Storage Replica. As a workaround, simply restart the Storage Replica service. 
 
-We are working on providing an update that permanently resolves this issue. If you are interested in assisting us and you have a Microsoft Premier Support agreement, please email SRFEED@microsoft.com so that we can work with you  on filing a backport request.
+We are working on providing an update that permanently resolves this issue. If you are interested in assisting us and you have a Microsoft Premier Support agreement, please email SRFEED@microsoft.com so that we can work with you on filing a backport request.
+
+
+## Error "Failed to bring the resource 'Cluster Disk x' online." with a stretch cluster
+When attempting to bring a cluster disk online after a successful failover, where you are attempting to make the original source site primary again, you receive an error in Failover Cluster Manager. For example:
+
+    Error
+    The operation has failed.
+    Failed to bring the resource 'Cluster Disk 2' online.
+    
+    Error Code: 0x80071397
+    The operation failed because either the specified cluster node is not the owner of the resource, or the node is not a possible owner of the resource.
+    
+If you attempt to move the disk or CSV manually, you receive an additional error. For example:
+
+    Error
+    The operation has failed.
+    The action 'Move' did not complete.
+    
+    Error Code: 0x8007138d
+    A cluster node is not available for this operation
+
+This issue is caused by one or more uninitialzed disks being attached to one or more cluster nodes. To resolve the issue, initialize all attached storage using DiskMgmt.msc, DISKPART.EXE, or the Initialize-Disk PowerShell cmdlet.
+
+We are working on providing an update that permanently resolves this issue. If you are interested in assisting us and you have a Microsoft Premier Support agreement, please email SRFEED@microsoft.com so that we can work with you on filing a backport request.
 
 ## GPT error when attempting to create a new SR partnership
 
@@ -313,6 +337,7 @@ If ClusterFunctionalLevel is not 9, the ClusterFunctionalLevel will need to be u
 
 To resolve the issue, raise the cluster functional level by running the PowerShell cmdlet: Update-ClusterFunctionalLevel
 https://technet.microsoft.com/itpro/powershell/windows/failoverclusters/update-clusterfunctionallevel
+
 
 ## See also  
 - [Storage Replica](storage-replica-overview.md)  
