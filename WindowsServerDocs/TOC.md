@@ -629,6 +629,7 @@
 ##### [Manage Risk with Conditional Access Control](identity/ad-fs/operations/Manage-Risk-with-Conditional-Access-Control.md)
 ##### [Managing SSL Certificates in AD FS and WAP 2016](identity/ad-fs/operations/Manage-SSL-Certificates-AD-FS-WAP-2016.md)
 ##### [Plan Device-based Conditional Access on-Premises](identity/ad-fs/operations/Plan-Device-based-Conditional-Access-on-Premises.md)
+##### [Required updates for AD FS and WAP](identity/ad-fs/operations/Updates-for-Active-Directory-Federation-Services-AD-FS.md)
 ##### [Set up an AD FS lab environment](identity/ad-fs/operations/Set-up-an-AD-FS-lab-environment.md)
 ##### [Set up Geographic Redundancy with SQL Server Replication](identity/ad-fs/operations/Set-up-Geographic-Redundancy-with-SQL-Server-Replication.md)
 ##### [Set up the lab environment for AD FS in Windows Server 2012 R2](identity/ad-fs/operations/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md)
