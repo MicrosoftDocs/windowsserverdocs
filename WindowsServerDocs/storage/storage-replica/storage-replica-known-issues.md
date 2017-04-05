@@ -236,7 +236,8 @@ When specifying a replication partnership is asynchronous, the source computer r
     TargetRPO: 30
 
     Guidance: This is typically due to one of the following reasons: 
-    The asynchronous destination is currently disconnected. The RPO may become available after the connection is restored.
+
+The asynchronous destination is currently disconnected. The RPO may become available after the connection is restored.
 
     The asynchronous destination is unable to keep pace with the source such that the most recent destination log record is no longer present in the source log. The destination will start block copying. The RPO should become available after block copying completes.
 
@@ -273,6 +274,7 @@ Note the `Status: "{Access Denied}"` and the message `A process has requested ac
 
 We are working on providing an update that permanently resolves this issue. If you are interested in assisting us and you have a Microsoft Premier Support agreement, please email SRFEED@microsoft.com so that we can work with you on filing a backport request.
 
+
 ## Error "Failed to bring the resource 'Cluster Disk x' online." with a stretch cluster
 When attempting to bring a cluster disk online after a successful failover, where you are attempting to make the original source site primary again, you receive an error in Failover Cluster Manager. For example:
 
@@ -295,6 +297,47 @@ If you attempt to move the disk or CSV manually, you receive an additional error
 This issue is caused by one or more uninitialzed disks being attached to one or more cluster nodes. To resolve the issue, initialize all attached storage using DiskMgmt.msc, DISKPART.EXE, or the Initialize-Disk PowerShell cmdlet.
 
 We are working on providing an update that permanently resolves this issue. If you are interested in assisting us and you have a Microsoft Premier Support agreement, please email SRFEED@microsoft.com so that we can work with you on filing a backport request.
+
+## GPT error when attempting to create a new SR partnership
+
+When running New-SRPartnership, it fails with error: 
+
+    Disk layout type for volume \\?\Volume{GUID}\ is not a valid GPT style layout.
+    New-SRPartnership : Unable to create replication group SRG01, detailed reason: Disk layout type for volume
+    \\?\Volume{GUID}\ is not a valid GPT style layout.
+    At line:1 char:1
+    + New-SRPartnership -SourceComputerName nodesrc01 -SourceRGName SRG01 ...
+    + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo : NotSpecified: (MSFT_WvrAdminTasks:root/Microsoft/...T_WvrAdminTasks) [New-SRPartnership]
+    , CimException
+    + FullyQualifiedErrorId : Windows System Error 5078,New-SRPartnership
+
+In the Failover Cluster Manager GUI, there is no option to setup Replication for the disk.
+
+When running Test-SRTopology, it fails with: 
+
+    WARNING: Object reference not set to an instance of an object.
+    WARNING: System.NullReferenceException
+    WARNING:    at Microsoft.FileServices.SR.Powershell.MSFTPartition.GetPartitionInStorageNodeByAccessPath(String AccessPath, String ComputerName, MIObject StorageNode)
+       at Microsoft.FileServices.SR.Powershell.Volume.GetVolume(String Path, String ComputerName)
+       at Microsoft.FileServices.SR.Powershell.TestSRTopologyCommand.BeginProcessing()
+    Test-SRTopology : Object reference not set to an instance of an object.
+    At line:1 char:1
+    + Test-SRTopology -SourceComputerName nodesrc01 -SourceVolumeName U: - ...
+    + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo : InvalidArgument: (:) [Test-SRTopology], NullReferenceException
+    + FullyQualifiedErrorId : TestSRTopologyFailure,Microsoft.FileServices.SR.Powershell.TestSRTopologyCommand 
+
+This is caused by the cluster functional level still being set to Windows Server 2012 R2 (i.e. FL 8). Storage Replica is supposed to return a specific error here but instead returns an incorrect error mapping.
+
+Run Get-Cluster | fl * on each node.
+
+If ClusterFunctionalLevel = 9, that is the Windows 2016 ClusterFunctionalLevel version needed to implement Storage Replica on this node.
+If ClusterFunctionalLevel is not 9, the ClusterFunctionalLevel will need to be updated in order to implement Storage Replica on this node.
+
+To resolve the issue, raise the cluster functional level by running the PowerShell cmdlet: Update-ClusterFunctionalLevel
+https://technet.microsoft.com/itpro/powershell/windows/failoverclusters/update-clusterfunctionallevel
+
 
 ## See also  
 - [Storage Replica](storage-replica-overview.md)  

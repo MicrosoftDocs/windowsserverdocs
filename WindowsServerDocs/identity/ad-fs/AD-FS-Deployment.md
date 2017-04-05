@@ -30,6 +30,6 @@ This document contains a list of all of the documentation for deploying AD FS fo
 
 * [Deploy Azure AD Connect Health to Monitor your on-premises identity infrastructure in the cloud](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect-health)
 
-* [Required Updates for AD FS and WAP](https://technet.microsoft.com/en-us/windows-server-docs/identity/ad-fs/operations/updates-for-active-directory-federation-services--ad-fs-)
+* [Required Updates for AD FS and WAP](https://technet.microsoft.com/en-us/windows-server-docs/identity/ad-fs/operations/updates-for-active-directory-federation-services-ad-fs)
 
 
