@@ -7,7 +7,7 @@ ms.topic: article
 author: JasonGerend
 manager: dongill
 ms.author: jgerend
-ms.date: 4/1/2017
+ms.date: 4/5/2017
 description: How to deploy Work Folders, including installing the server role, creating sync shares, and creating DNS records.
 ---
 # Deploying Work Folders

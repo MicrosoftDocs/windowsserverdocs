@@ -3,12 +3,11 @@ title: Deploy Work Folders with AD FS and Web Application Proxy Overview
 ms.prod: windows-server-threshold
 ms.technology: storage-work-folders
 ms.topic: article
-author: jeffpatt
-manager: dongill
-ms.author: jgerend
-ms.date: 4/1/2017
 ms.assetid: ea19f0f0-6cc0-4322-b387-c0873f7795ad
+manager: klaasl
+ms.author: jeffpatt
 author: JeffPatt24
+ms.date: 4/5/2017
 ---
 # Deploy Work Folders with AD FS and Web Application Proxy: Overview
 The topics in this section provide instructions for deploying Work Folders with Active Directory Federation Services (AD FS) and Web Application Proxy. The instructions are designed to help you create a complete functioning Work Folders setup with client machines that are ready to start using Work Folders either on-premises or over the Internet.  

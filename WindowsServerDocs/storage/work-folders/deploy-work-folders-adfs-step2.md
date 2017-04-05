@@ -3,12 +3,11 @@ title: Deploy Work Folders with AD FS and Web Application Proxy - Step 2, AD FS 
 ms.prod: windows-server-threshold
 ms.technology: storage-work-folders
 ms.topic: article
-author: JasonGerend
-manager: dongill
-ms.author: jgerend
-ms.date: 4/1/2017
+manager: klaasl
+ms.author: jeffpatt
+author: JeffPatt24
+ms.date: 4/5/2017
 ms.assetid: 0a48852e-48cc-4047-ae58-99f11c273942
-author: JasonGerend
 ---
 # Deploy Work Folders with AD FS and Web Application Proxy: Step 2, AD FS Post-Configuration Work
 This topic describes the second step in deploying Work Folders with Active Directory Federation Services (AD FS) and Web Application Proxy. You can find the other steps in this process in these topics:  
@@ -23,7 +22,8 @@ This topic describes the second step in deploying Work Folders with Active Direc
   
 -   [Deploy Work Folders with AD FS and Web Application Proxy: Step 5, Set Up Clients](deploy-work-folders-adfs-step5.md)  
   
-**Note:** The instructions covered in this section are for a Server 2016 environment. If you're using Windows Server 2012 R2, follow the [Windows Server 2012 R2 instructions](https://technet.microsoft.com/library/dn747208(v=ws.11).aspx).
+> [!NOTE]
+>   The instructions covered in this section are for a Server 2016 environment. If you're using Windows Server 2012 R2, follow the [Windows Server 2012 R2 instructions](https://technet.microsoft.com/library/dn747208(v=ws.11).aspx).
 
 In step 1, you installed and configured AD FS. Now, you need to perform the following post-configuration steps for AD FS.  
   
