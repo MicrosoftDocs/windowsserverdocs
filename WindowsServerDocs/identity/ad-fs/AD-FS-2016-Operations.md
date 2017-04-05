@@ -29,6 +29,7 @@ This document contains a list of all of the documentation operations for AD FS f
 - [Best Practices for Securing AD FS](../ad-fs/operations/Best-Practices-Securing-AD-FS.md)
 - [Configure AD FS 2016 and Azure MFA](../ad-fs/operations/Configure-AD-FS-2016-and-Azure-MFA.md)
 - [Configure AD FS Extranet Lockout](../ad-fs/operations/Configure-AD-FS-Extranet-Lockout.md)
+- [Configure AD FS for User Certificate Authentication](../ad-fs/operations/Configure-User-Certificate-Authentication.md)
 - [Configure AD FS to authenticate users stored in LDAP directories](../ad-fs/operations/Configure-AD-FS-to-authenticate-users-stored-in-LDAP-directories.md)
 - [Configure AD FS to Send Password Expiry Claims](../ad-fs/operations/Configure-AD-FS-to-Send-Password-Expiry-Claims.md)
 - [Configure Additional Authentication Methods for AD FS](../ad-fs/operations/Configure-Additional-Authentication-Methods-for-AD-FS.md)
