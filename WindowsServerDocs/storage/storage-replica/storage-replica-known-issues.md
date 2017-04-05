@@ -274,7 +274,7 @@ Note the `Status: "{Access Denied}"` and the message `A process has requested ac
 We are working on providing an update that permanently resolves this issue. If you are interested in assisting us and you have a Microsoft Premier Support agreement, please email SRFEED@microsoft.com so that we can work with you on filing a backport request.
 
 ## Error "Failed to bring the resource 'Cluster Disk x' online." with a stretch cluster
-When attempting to bring a cluster disk online after a successful failover, where you are attempting to make the original source site primary again, you receive an error in Failover Cluster Manager . For example:
+When attempting to bring a cluster disk online after a successful failover, where you are attempting to make the original source site primary again, you receive an error in Failover Cluster Manager. For example:
 
     Error
     The operation has failed.
