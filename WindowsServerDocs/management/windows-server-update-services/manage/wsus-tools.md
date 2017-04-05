@@ -8,7 +8,7 @@ ms.suite: na
 ms.technology: manage-wsus
 ms.tgt_pltfrm: na
 ms.topic:
-ms.assetid: d54a1f5e-af68-497e-99be-97775769a7a7
+ms.assetid: d54a1f5e-af68-497e-99be-94445769b7a6
 author: coreyp-at-msft
 ms.author: coreyp
 manager: lizapo
