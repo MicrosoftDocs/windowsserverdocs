@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 67576533-206b-428a-956c-ed8c53218d9b
 ms.author: jamesmci
-author: vhorne
+author: jamesmci
 ---
 # Datacenter Firewall Overview
 

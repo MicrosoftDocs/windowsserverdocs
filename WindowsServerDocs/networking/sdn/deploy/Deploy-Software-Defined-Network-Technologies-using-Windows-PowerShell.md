@@ -21,7 +21,7 @@ You can use the topics in this section to deploy individual SDN technologies usi
   
 This section contains the following topics.  
   
--   [Deploy Network Controller using Windows PowerShell](../../sdn/deploy/Deploy-Network-Controller-using-Windows-PowerShell.md)  
+-   [Deploy Network Controller using Windows PowerShell](Deploy-Network-Controller-using-Windows-PowerShell.md)  
   
  
   
