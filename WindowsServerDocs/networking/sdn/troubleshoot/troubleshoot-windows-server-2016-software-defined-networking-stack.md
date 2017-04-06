@@ -6,8 +6,9 @@ ms.prod: windows-server-threshold
 ms.technology: networking-sdn
 ms.topic: article
 ms.assetid: 9be83ed2-9e62-49e8-88e7-f52d3449aac5
-author: JMesser81
 ms.author: jamesmci
+author: JMesser81
+
 ---
 # Troubleshoot the Windows Server 2016 Software Defined Networking Stack
 

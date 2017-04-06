@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 79df3bbe-48fd-4eff-8df6-35f6317566f3
 ms.author: jamesmci
-author: vhorne
+author: jamesmci
 ---
 # Network Function Virtualization
 

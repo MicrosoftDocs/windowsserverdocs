@@ -9,7 +9,7 @@ ms.topic: article
 author: kumudd
 ms.date: 09/15/2016
 --- 
-# What's new in storage in Windows Server 2016
+# What's new in Storage in Windows Server 2016
 
 >Applies To: Windows Server 2016
 
@@ -101,7 +101,7 @@ For Windows Server 2012 R2, when file changes are synced to the Work Folders ser
 **What works differently?**<br>
 This capability is new in Windows Server 2016. This requires a Windows Server 2016 Work Folders server and the client must be Windows 10.
 
-If you’re using an older client or the Work Folders server is Windows Server 2012 R2, the client will continue to poll every 10 minutes for changes.
+If you're using an older client or the Work Folders server is Windows Server 2012 R2, the client will continue to poll every 10 minutes for changes.
 
 ## ReFS 
 The next iteration of ReFS provides support for large-scale storage deployments with diverse workloads, delivering reliability, resiliency, and scalability for your data.     

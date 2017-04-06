@@ -12,7 +12,7 @@ ms.date: 09/16/2016
 # Fault domain awareness in Windows Server 2016
 > Applies To: Windows Server 2016
 
-Failover Clustering enables multiple servers to work together to provide high availability – or put another way, to provide node fault tolerance. But today’s businesses demand ever-greater availability from their infrastructure. To achieve cloud-like uptime, even highly unlikely occurrences such as chassis failures, rack outages, or natural disasters must be protected against. That’s why Failover Clustering in Windows Server 2016 introduces chassis, rack, and site fault tolerance as well.
+Failover Clustering enables multiple servers to work together to provide high availability – or put another way, to provide node fault tolerance. But today's businesses demand ever-greater availability from their infrastructure. To achieve cloud-like uptime, even highly unlikely occurrences such as chassis failures, rack outages, or natural disasters must be protected against. That's why Failover Clustering in Windows Server 2016 introduces chassis, rack, and site fault tolerance as well.
 
 Fault domains and fault tolerance are closely related concepts. A fault domain is a set of hardware components that share a single point of failure. To be fault tolerant to a certain level, you need multiple fault domains at that level. For example, to be rack fault tolerant, your servers and your data must be distributed across multiple racks.
 
@@ -66,7 +66,7 @@ New-ClusterFaultDomain -Type Site -Name "Shanghai"
 ```
 
 > [!IMPORTANT]  
-> Windows Server cannot and does not verify that any fault domains you create correspond to anything in the real, physical world. (This may sound obvious, but it’s important to understand.) If, in the physical world, your nodes are all in one rack, then creating two `-Type Rack` fault domains in software does not magically provide rack fault tolerance. You are responsible for ensuring the topology you create using these cmdlets matches the actual arrangement of your hardware.
+> Windows Server cannot and does not verify that any fault domains you create correspond to anything in the real, physical world. (This may sound obvious, but it's important to understand.) If, in the physical world, your nodes are all in one rack, then creating two `-Type Rack` fault domains in software does not magically provide rack fault tolerance. You are responsible for ensuring the topology you create using these cmdlets matches the actual arrangement of your hardware.
 
 Use `Set-ClusterFaultDomain` to move one fault domain into another. The terms "parent" and "child" are commonly used to describe this nesting relationship. The `-Name` and `-Parent` parameters are required. In `-Name`, provide the name of the fault domain that is moving; in `-Parent`, provide the name of the destination. To move multiple fault domains at once, list their names.
 

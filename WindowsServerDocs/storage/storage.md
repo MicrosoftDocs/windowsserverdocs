@@ -38,7 +38,7 @@ Data Deduplication is a feature of Windows Server 2016 that can help reduce the 
 
 ## General-purpose file servers
 
-### [Work Folders](https://technet.microsoft.com/library/dn265974(v=ws.11).aspx)
+### [Work Folders](work-folders/work-folders-overview.md)
 
 With Work Folders users can store and access work files on personal computers and devices, often referred to as bring-your-own device (BYOD), in addition to corporate PCs. Users gain a convenient location to store work files, and they can access them from anywhere. Organizations maintain control over corporate data by storing the files on centrally managed file servers, and optionally specifying user device policies such as encryption and lock-screen passwords.
 

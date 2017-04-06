@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 67576533-206b-428a-956c-ed8c53218d9b
 ms.author: jamesmci
-author: vhorne
+author: jamesmci
 ---
 # Datacenter Firewall Overview
 
@@ -43,7 +43,7 @@ The Datacenter Firewall offers the following advantages for tenants:
   
 -   Ability to define firewall rules to help protect traffic between virtual machines on the same L2 virtual subnet as well as between virtual machines on different L2 virtual subnets  
   
--   Ability to define firewall rules to help protect and isolate network traffic between tenant on premise networks and their virtual networks at the service provider  
+-   Ability to define firewall rules to help protect and isolate network traffic between tenant on-premises networks and their virtual networks at the service provider  
   
 
 
