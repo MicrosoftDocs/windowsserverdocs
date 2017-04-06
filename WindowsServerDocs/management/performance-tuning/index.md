@@ -43,6 +43,8 @@ This guide organizes performance and tuning guidance for Windows Server 2016 acr
 
 > TBD: Downloadable PDF version
 
+
+
 ### Sections added
 - [Nano Server installation-type configuration considerations](https://technet.microsoft.com/en-us/windows-server-docs/compute/nano-server/getting-started-with-nano-server)
 
@@ -63,6 +65,8 @@ This guide organizes performance and tuning guidance for Windows Server 2016 acr
 - Updates to [Web Server guidance](role/web-server/index.md) section
 
 - Updates to [Hardware Power guidance](hardware/power.md) section
+
+- Updates to [PowerShell tuning guidance](powershell/index.md) section
 
 - Significant updates to the [Hyper-V guidance](role/hyper-v-server/index.md) section
 

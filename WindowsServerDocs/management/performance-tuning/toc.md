@@ -56,4 +56,7 @@
 #### [Storage Spaces Direct (SSD) tuning](subsystem/storage-spaces-direct/index.md)
 #### [Storage Replication FAQ](../../storage/storage-replica/storage-replica-frequently-asked-questions.md)
 #### [Data Deduplication advanced settings](../../storage/data-deduplication/advanced-settings.md)
+## [PowerShell tuning](powershell/index.md)
+### [Script authoring considerations](powershell/script-authoring-considerations.md)
+### [Module authoring considerations](powershell/module-authoring-considerations.md)
 ## [Additional tuning resources](additional-resources.md)
