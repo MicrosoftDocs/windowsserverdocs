@@ -28,6 +28,6 @@ Regardless of where you are, the underlying [architecture](desktop-hosting-logic
 
 This flexibility allows you to get the best of both worlds:
 - The simplicity and pay-as-you-go methods associated with the cloud and the online world.
-- The familiarity and hassle-free way of leveraging heavy resources that already exist on-premise.
+- The familiarity and hassle-free way of leveraging heavy resources that already exist on-premises.
 
 For additional information, look at how to [build and deploy your Remote Desktop Services deployment](rds-build-and-deploy.md).

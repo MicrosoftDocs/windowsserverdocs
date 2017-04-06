@@ -68,7 +68,7 @@ Windows Server Backup can back up an optimized volume as-is (that is, without re
 Windows Server 2016 does not support Data Deduplication on ReFS-formatted volumes.
 
 ### <a id="unsupported-windows-search"></a>Windows Search
-Windows Search doesn’t support Data Deduplication. Data Deduplication uses reparse points, which Windows Search can’t index, so Windows Search skips all deduplicated files, excluding them from the index. As a result, search results might be incomplete for deduplicated volumes.
+Windows Search doesn't support Data Deduplication. Data Deduplication uses reparse points, which Windows Search can't index, so Windows Search skips all deduplicated files, excluding them from the index. As a result, search results might be incomplete for deduplicated volumes.
 
 ### <a id="unsupported-robocopy"></a>Robocopy
 Running Robocopy with Data Deduplication is not recommended because certain Robocopy commands can corrupt the Chunk Store. The Chunk Store is stored in the System Volume Information folder for a volume. If the folder is deleted, the optimized files (reparse points) that are copied from the source volume become corrupted because the data chunks are not copied to the destination volume.  

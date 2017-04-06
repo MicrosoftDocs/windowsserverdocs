@@ -29,9 +29,9 @@ If you're looking to download or use Work Folders on Windows Server 2012 R2, Win
  Work Folders can be deployed with existing deployments of Folder Redirection, Offline Files, and home folders. Work Folders stores user files in a folder on the server called a *sync share*. You can specify a folder that already contains user data, which enables you to adopt Work Folders without migrating servers and data or immediately phasing out your existing solution.  
   
 ##  <a name="BKMK_APP"></a> Practical applications  
- Administrators can use Work Folders to provide users with access to their work files while keeping centralized storage and control over the organization’s data. Some specific applications for Work Folders include:  
+ Administrators can use Work Folders to provide users with access to their work files while keeping centralized storage and control over the organization's data. Some specific applications for Work Folders include:  
   
--   Provide a single point of access to work files from a user’s work and personal computers and devices  
+-   Provide a single point of access to work files from a user's work and personal computers and devices  
   
 -   Access work files while offline, and then sync with the central file server when the PC or device next has Internet or intranet connectivity  
   
@@ -39,7 +39,7 @@ If you're looking to download or use Work Folders on Windows Server 2012 R2, Win
   
 -   Use existing file server management technologies, such as file classification and folder quotas, to manage user data  
   
--   Specify security policies to instruct user’s PCs and devices to encrypt Work Folders and use a lock screen password  
+-   Specify security policies to instruct user's PCs and devices to encrypt Work Folders and use a lock screen password  
   
 -   Use Failover Clustering with Work Folders to provide a high-availability solution  
   
@@ -48,7 +48,7 @@ If you're looking to download or use Work Folders on Windows Server 2012 R2, Win
   
 |Functionality|Availability|Description|  
 |-------------------|------------------|-----------------|  
-|Work Folders role service in Server Manager|Windows Server 2012 R2 or Windows Server 2016|File and Storage Services provides a way to set up sync shares (folders that store user’s work files), monitors Work Folders, and manages sync shares and user access|  
+|Work Folders role service in Server Manager|Windows Server 2012 R2 or Windows Server 2016|File and Storage Services provides a way to set up sync shares (folders that store user's work files), monitors Work Folders, and manages sync shares and user access|  
 |Work Folders cmdlets|Windows Server 2012 R2 or Windows Server 2016|A Windows PowerShell module that contains comprehensive cmdlets for managing Work Folders servers|  
 |Work Folders integration with Windows|Windows 10<br /><br /> Windows 8.1<br /><br /> Windows RT 8.1<br /><br /> Windows 7 (download required)|Work Folders provides the following functionality in Windows computers:<br /><br /> -   A Control Panel item that sets up and monitors Work Folders<br />-   File Explorer integration that enables easy access to files in Work Folders<br />-   A sync engine that transfers files to and from a central file server while maximizing battery life and system performance|  
 |Work Folders app for devices|Android<br /><br /> Apple iPhone and iPad®|An app that allows popular devices to access files in Work Folders|  
@@ -58,7 +58,7 @@ If you're looking to download or use Work Folders on Windows Server 2012 R2, Win
   
 |Feature/functionality|New or updated?|Description|  
 |----------------------------|---------------------|-----------------|  
-|Faster change replication|Updated in Windows 10 and Windows Server 2016|For Windows Server 2012 R2, when file changes are synced to the Work Folders server, clients are not notified of the change and wait up to 10 minutes to get the update. When using Windows Sever 2016, the Work Folders server immediately notifies Windows 10 clients and the file changes are synced immediately. This capability is new in Windows Server 2016 and requires a Windows 10 client. If you’re using an older client or the Work Folders server is Windows Server 2012 R2, the client will continue to poll every 10 minutes for changes.|  
+|Faster change replication|Updated in Windows 10 and Windows Server 2016|For Windows Server 2012 R2, when file changes are synced to the Work Folders server, clients are not notified of the change and wait up to 10 minutes to get the update. When using Windows Sever 2016, the Work Folders server immediately notifies Windows 10 clients and the file changes are synced immediately. This capability is new in Windows Server 2016 and requires a Windows 10 client. If you're using an older client or the Work Folders server is Windows Server 2012 R2, the client will continue to poll every 10 minutes for changes.|  
 |Integrated with Enterprise data protection (EDP) policy|Added to Windows 10 in  November 2015 update|If an administrator deploys EDP, Work Folders can enforce data protection by encrypting the data on the PC. The encryption is using a key associated with the Enterprise ID, which can be remotely wiped by using a supported mobile device management package such as Microsoft Intune.|  
 |Microsoft Office integration|Added to Windows 10 in  November 2015 update|In Windows 8.1 you can navigate to Work Folders inside Office apps by clicking or tapping This PC and then navigating to the Work Folders location on your PC. In Windows 10 you can make it even easier to get to Work Folders by adding it to the list of locations that Office shows when saving or opening files. For more info, see [Work Folders in Windows 10](http://windows.microsoft.com/windows-10/work-folders-in-windows-10) and  [Troubleshooting using Work Folders as a Place in Microsoft Office](http://social.technet.microsoft.com/wiki/contents/articles/32881.troubleshooting-using-work-folders-as-a-place-in-microsoft-office.aspx).|  
   
@@ -75,7 +75,7 @@ If you're looking to download or use Work Folders on Windows Server 2012 R2, Win
   
 -   A server certificate for each file server that will host Work Folders (plus a server certificate for your reverse proxy server). These certificates should be from a certification authority (CA) that is trusted by your users—ideally a public CA  
   
--   The ability to make a server accessible from the Internet by creating publishing rules in your organization’s reverse proxy or network gateway  
+-   The ability to make a server accessible from the Internet by creating publishing rules in your organization's reverse proxy or network gateway  
   
 -   A publicly registered domain name and the ability to create additional public DNS records for the domain  
   
@@ -107,15 +107,15 @@ If you're looking to download or use Work Folders on Windows Server 2012 R2, Win
   
     -   Windows 7 Enterprise  
   
--   Windows 7 PCs must be joined to your organization’s domain (they can’t be joined to a workgroup).  
+-   Windows 7 PCs must be joined to your organization's domain (they can't be joined to a workgroup).  
   
--   Enough free space on a local, NTFS-formatted drive to store all the user’s files in Work Folders, plus an additional 6 GB of free space if Work Folders is located on the system drive, as it is by default. Work Folders uses the following location by default: **%USERPROFILE%\Work Folders**  
+-   Enough free space on a local, NTFS-formatted drive to store all the user's files in Work Folders, plus an additional 6 GB of free space if Work Folders is located on the system drive, as it is by default. Work Folders uses the following location by default: **%USERPROFILE%\Work Folders**  
   
      However, users can change the location during setup (microSD cards and USB drives formatted with the NTFS file system are supported locations, though sync will stop if the drives are removed).  
   
      The maximum size for individual files is 10 GB by default. There is no per-user storage limit, although administrators can use the quotas functionality of File Server Resource Manager to implement quotas.  
   
--   Work Folders doesn’t support rolling back the virtual machine state of client virtual machines. Instead perform backup and restore operations from inside the client virtual machine by using System Image Backup or another backup app.  
+-   Work Folders doesn't support rolling back the virtual machine state of client virtual machines. Instead perform backup and restore operations from inside the client virtual machine by using System Image Backup or another backup app.  
   
 ##  <a name="BKMK_Comparison"></a> Work Folders compared to other sync technologies  
  The following table discusses how various Microsoft sync technologies are positioned and when to use each.  

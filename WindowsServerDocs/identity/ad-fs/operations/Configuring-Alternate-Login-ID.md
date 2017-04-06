@@ -21,7 +21,7 @@ In some environments, due to corporate policy or on-premises line-of-business ap
 
 Since non-routable domains' (ex. Contoso.local) ownership cannot be verified, Office 365 requires all user login IDs to be fully internet routable. If the on-premises UPN uses a non-routable domain (ex. Contoso.local), or the existing UPN cannot be changed due to local application dependencies, we recommend setting up alternate login ID. Alternate login ID allows you to configure a sign in experience where users can sign in with an attribute other than their UPN, such as mail.
 
-One of the benefits of this feature is that it enables you to adopt SaaS providers, such as Office 365 without modifying your on-premise UPNs. It also enables you to support line-of-business service applications with consumer-provisioned identities.
+One of the benefits of this feature is that it enables you to adopt SaaS providers, such as Office 365 without modifying your on-premises UPNs. It also enables you to support line-of-business service applications with consumer-provisioned identities.
 
 > [!IMPORTANT]
 > We have recently changed our support statement on using Alternate ID with Exchange Hybrid.   For the best user experience in an Exchange Hybrid environment, we recommend using the same set of credentials for on-premises and Exchange Online.  It is also recommended that customers that use Office 2013 clients enable [Modern Authentication](https://blogs.office.com/2015/03/23/office-2013-modern-authentication-public-preview-announced/).  Please refer to the table below for the expected user experience using various clients.

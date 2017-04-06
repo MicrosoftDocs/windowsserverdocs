@@ -10,7 +10,7 @@ ms.date: 4/1/2017
 ms.assetid: 4a11ede0-b000-4188-8190-790971504e17
 author: JasonGerend
 ---
-# Deploy Work Folders with AD FS and Web Application Proxy: Step 4, Set Up Web Application Proxy
+# Deploy Work Folders with AD FS and Web Application Proxy: Step 4, Set-up Web Application Proxy
 This topic describes the fourth step in deploying Work Folders with Active Directory Federation Services (AD FS) and Web Application Proxy. You can find the other steps in this process in these topics:  
   
 -   [Deploy Work Folders with AD FS and Web Application Proxy: Overview](deploy-work-folders-adfs-overview.md)  
@@ -30,7 +30,7 @@ To set up Web Application Proxy for use with Work Folders, use the following pro
 ## Install the AD FS and Work Folder certificates  
 You must install the AD FS and Work Folders certificates that you created earlier (in step 1, Set up AD FS, and step 3, Set up Work Folders) into the local computer certificate store on the machine where the Web Application Proxy role will be installed.  
   
-Because you’re installing self-signed certificates that can't be traced back to a publisher in the Trusted Root Certification Authorities certificate store, you must also copy the certificates to that store.  
+Because you're installing self-signed certificates that can't be traced back to a publisher in the Trusted Root Certification Authorities certificate store, you must also copy the certificates to that store.  
   
 To install the certificates, follow these steps:  
   
