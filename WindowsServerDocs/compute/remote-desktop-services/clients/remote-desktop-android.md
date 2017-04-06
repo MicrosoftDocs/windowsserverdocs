@@ -12,7 +12,7 @@ ms.assetid: 64f038e1-40ec-4c67-938b-72edea49e5d8
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.date: 03/08/2017
+ms.date: 03/23/2017
 ---
 # Get started with Remote Desktop on Android
 
@@ -29,8 +29,8 @@ Use the following information to get started. Be sure to check out the [FAQ](rem
 
 Follow these steps to get started with Remote Desktop on your Android device:
 
-1. Download the Remote Desktop client from [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.rdc.android). Next you need to [configure the remote PC that you want to accept remote connections](https://social.technet.microsoft.com/forums/en-us/169da213-5173-4552-9005-c7a355c0d12a/connect-to-your-pc-using-microsoft-rdp-apps?forum=winrdc). 
-2. Set up your PC to accept remote connections.
+1. Download the Remote Desktop client from [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.rdc.android). 
+2. [Set up your PC to accept remote connections](remote-desktop-allow-access.md).
 3. Add a Remote Desktop connection or a remote resource. You use a connection to connect directly to a Windows PC and a remote resource to use a RemoteApp program, session-based desktop, or virtual desktop published on-premises. 
 4. Create a widget so you can get to Remote Desktop quickly.
 

@@ -86,7 +86,7 @@ Workloads that have strict latency requirements or that need lots of mixed rando
 
 #### When capacity matters most
 
-Workloads that write infrequently, such as data warehouses or "cold" storage, should run on volumes that use dual parity to maximize storage efficiency. Certain other workloads, such as traditional file servers, virtual desktop infrastructure (VDI), or others that don’t create lots of fast-drifting random IO traffic and/or don’t require the best performance may also use dual parity, at your discretion. Parity inevitably increases CPU utilization and IO latency, particularly on writes, compared to mirroring.
+Workloads that write infrequently, such as data warehouses or "cold" storage, should run on volumes that use dual parity to maximize storage efficiency. Certain other workloads, such as traditional file servers, virtual desktop infrastructure (VDI), or others that don't create lots of fast-drifting random IO traffic and/or don't require the best performance may also use dual parity, at your discretion. Parity inevitably increases CPU utilization and IO latency, particularly on writes, compared to mirroring.
 
 #### When data is written in bulk
 

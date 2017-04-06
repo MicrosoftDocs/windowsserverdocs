@@ -12,7 +12,7 @@ ms.date: 10/04/2016
 # Updating drive firmware in Windows Server 2016
 >Applies To: Windows Server 2016
 
-Updating the firmware for drives has historically been a cumbersome task with a potential for downtime, which is why we're making improvements to Storage Spaces and Windows Server 2016. If you have drives that support the new firmware update mechanism included in Windows Server, you can update drive firmware of in-production drives without downtime. However, if you’re going to update the firmware of a production drive, make sure to read our tips on how to minimize the risk while using this powerful new functionality.
+Updating the firmware for drives has historically been a cumbersome task with a potential for downtime, which is why we're making improvements to Storage Spaces and Windows Server 2016. If you have drives that support the new firmware update mechanism included in Windows Server, you can update drive firmware of in-production drives without downtime. However, if you're going to update the firmware of a production drive, make sure to read our tips on how to minimize the risk while using this powerful new functionality.
 
   > [!Warning]
   > Firmware updates are a potentially risky maintenance operation and you should only apply them after thorough testing of the new firmware image. It is possible that new firmware on unsupported hardware could negatively affect reliability and stability, or even cause data loss. Administrators should read the release notes a given update comes with to determine its impact and applicability.
@@ -37,7 +37,7 @@ The two cmdlets added to Windows Server 2016 are:
 -   Get-StorageFirmwareInformation
 -   Update-StorageFirmware
 
-The first cmdlet provides you with detailed information about the device’s capabilities, firmware images, and revisions. In this case, the machine only contains a single SATA SSD with 1 firmware slot. Here’s an example:
+The first cmdlet provides you with detailed information about the device's capabilities, firmware images, and revisions. In this case, the machine only contains a single SATA SSD with 1 firmware slot. Here's an example:
 
    ```powershell
    Get-PhysicalDisk | Get-StorageFirmwareInformation
@@ -50,14 +50,14 @@ The first cmdlet provides you with detailed information about the device’s cap
    FirmwareVersionInSlot : {J3E16101}
    ```
 
-Note that SAS devices always report “SupportsUpdate” as “True”, since there is no way of explicitly querying the device for support of these commands.
+Note that SAS devices always report "SupportsUpdate" as "True", since there is no way of explicitly querying the device for support of these commands.
 
 The second cmdlet, Update-StorageFirmware, enables administrators to update the drive firmware with an image file, if the drive supports the new firmware update mechanism. You should obtain this image file from the OEM or drive vendor directly.
 
   > [!Note]
   > Before updating any production hardware, test the particular firmware image on identical hardware in a lab setting.
 
-The drive will first load the new firmware image to an internal staging area. While this happens, I/O typically continues. The image activates after downloading. During this time the drive will not be able to respond to I/O commands as an internal reset occurs. This means that this drive serves no data during the activation. An application accessing data on this drive would have to wait for a response until the firmware activation completes. Here’s an example of the cmdlet in action:
+The drive will first load the new firmware image to an internal staging area. While this happens, I/O typically continues. The image activates after downloading. During this time the drive will not be able to respond to I/O commands as an internal reset occurs. This means that this drive serves no data during the activation. An application accessing data on this drive would have to wait for a response until the firmware activation completes. Here's an example of the cmdlet in action:
 
    ```powershell 
    $pd | Update-StorageFirmware -ImagePath C:\Firmware\J3E160@3.enc -SlotNumber 0
@@ -95,15 +95,15 @@ Measure-Command {$pd | Update-StorageFirmware -ImagePath C:\\Firmware\\J3E16101.
 
 Before placing a server into production, we highly recommend updating the firmware of your drives to the firmware recommended by the hardware vendor or OEM that sold and supports your solution (storage enclosures, drives, and servers).
 
-Once a server is in production, it’s a good idea to make as few changes to the server as is practical. However, there may be times when your solution vendor advises you that there is a critically important firmware update for your drives. If this occurs, here are a few good practices to follow before applying any drive firmware updates:
+Once a server is in production, it's a good idea to make as few changes to the server as is practical. However, there may be times when your solution vendor advises you that there is a critically important firmware update for your drives. If this occurs, here are a few good practices to follow before applying any drive firmware updates:
 
-1. Review the firmware release notes and confirm that the update addresses issues that could affect your environment, and that the firmware doesn’t contain any known issues that could adversely affect you.
+1. Review the firmware release notes and confirm that the update addresses issues that could affect your environment, and that the firmware doesn't contain any known issues that could adversely affect you.
 
 2. Install the firmware on a server in your lab that has identical drives (including the revision of the drive if there are multiple revisions of the same drive), and test the drive under load with the new firmware. For info about doing synthetic load testing, see [Test Storage Spaces Performance Using Synthetic Workloads](https://technet.microsoft.com/en-us/library/dn894707.aspx).
 
 ## Automated firmware updates with Storage Spaces Direct
 
-Windows Server 2016 includes a Health Service for Storage Spaces Direct deployments (including Microsoft Azure Stack solutions). The main purpose of the Health Service is to make monitoring and management of your hardware deployment easier. As part of its management functions, it has the capability to roll-out drive firmware across an entire cluster without taking any workloads offline or incurring downtime. This capability is policy-driven, with the control in the admin’s hands.
+Windows Server 2016 includes a Health Service for Storage Spaces Direct deployments (including Microsoft Azure Stack solutions). The main purpose of the Health Service is to make monitoring and management of your hardware deployment easier. As part of its management functions, it has the capability to roll-out drive firmware across an entire cluster without taking any workloads offline or incurring downtime. This capability is policy-driven, with the control in the admin's hands.
 
 Using the Health Service to roll-out firmware across a cluster is very simple and involves the following steps:
 
@@ -164,11 +164,11 @@ If you would like to see the Health Service in action and learn more about its r
 
 ### Will this work on any storage device
 
-This will work on storage devices that implement the correct commands in their firmware. The Get-StorageFirmwareInformation cmdlet will show if a drive’s firmware indeed does support the correct commands (for SATA/NVMe) and the HLK test allows vendors and OEMs to test this behavior.
+This will work on storage devices that implement the correct commands in their firmware. The Get-StorageFirmwareInformation cmdlet will show if a drive's firmware indeed does support the correct commands (for SATA/NVMe) and the HLK test allows vendors and OEMs to test this behavior.
 
 ### After I update a SATA drive, it reports to no longer support the update mechanism. Is something wrong with the drive
 
-No, the drive is fine, unless the new firmware doesn’t allow updates anymore. You are hitting a known issue whereby a cached version of the drive’s capabilities is incorrect. Running “Update-StorageProviderCache -DiscoveryLevel Full” will re-enumerate the drive capabilities and update the cached copy. As a work-around, we recommend running the above command once before initiating a firmware update or complete roll-out on a Spaces Direct cluster.
+No, the drive is fine, unless the new firmware doesn't allow updates anymore. You are hitting a known issue whereby a cached version of the drive's capabilities is incorrect. Running "Update-StorageProviderCache -DiscoveryLevel Full" will re-enumerate the drive capabilities and update the cached copy. As a work-around, we recommend running the above command once before initiating a firmware update or complete roll-out on a Spaces Direct cluster.
 
 ### Can I update firmware on my SAN through this mechanism
 No - SANs usually have their own utilities and interfaces for such maintenance operations. This new mechanism is for directly attached storage, such as SATA, SAS, or NVMe devices.
@@ -187,7 +187,7 @@ On Windows Server 2016 with the Health Service deployed on Storage Spaces Direct
 
 ### What happens if the update fails
 
-The update could fail for various reasons, some of them are: 1) The drive doesn’t support the correct commands for Windows to update its firmware. In this case the new firmware image never activates and the drive continues functioning with the old image. 2) The image cannot download to or be applied to this drive (version mismatch, corrupt image, …). In this case the drive fails the activate command. Again, the old firmware image will continue function.
+The update could fail for various reasons, some of them are: 1) The drive doesn't support the correct commands for Windows to update its firmware. In this case the new firmware image never activates and the drive continues functioning with the old image. 2) The image cannot download to or be applied to this drive (version mismatch, corrupt image, …). In this case the drive fails the activate command. Again, the old firmware image will continue function.
 
 If the drive does not respond at all after a firmware update, you are likely hitting a bug in the drive firmware itself. Test all firmware updates in a lab environment before putting them in production. The only remediation may be to replace the drive.
 

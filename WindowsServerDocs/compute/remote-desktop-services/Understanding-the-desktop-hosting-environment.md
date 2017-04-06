@@ -38,7 +38,7 @@ For a full description of each of these roles and how they interact with each ot
 There are multiple ways to connect to and manage Active Directory Domain Services (AD DS) for a desktop hosting environment in Azure:
 
 1. Create a virtual machine in the tenant's environment running the AD DS role
-2. Create a site-to-site VPN connection with the tenant's on-premise environment to use an existing AD DS
+2. Create a site-to-site VPN connection with the tenant's on-premises environment to use an existing AD DS
 3. Use the Azure AD Domain Services PaaS role, which creates a domain on the tenant's virtual network based on the tenant's Azure Active Directory
 
 With Remote Desktop Services, the tenant must have an Active Directory to manage access into the environment, user profile storage, and monitoring within the deployment. When using the standard (non-Azure) AD DS, the tenant's forest does not require any trust relationship with the provider's management forest. A domain administrator account may be set up in the tenant's domain to allow the provider's technical personnel to perform administrative tasks in the tenant's environment (such as monitoring system status and applying software updates) and to assist with troubleshooting and configuration.  

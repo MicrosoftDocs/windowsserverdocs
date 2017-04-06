@@ -12,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0254275a-0a77-40a9-b68a-1029284c03fe
 ms.author: jamesmci
-author: vhorne
+author: jamesmci
 ---
 # What's New in Hyper-V Network Virtualization in Windows Server 2016
 

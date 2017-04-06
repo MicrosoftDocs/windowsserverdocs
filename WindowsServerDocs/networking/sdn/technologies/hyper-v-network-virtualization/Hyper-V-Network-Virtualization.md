@@ -12,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 150976f0-ccd5-487a-a458-92261444a846
 ms.author: jamesmci
-author: vhorne
+author: jamesmci
 ---
 # Hyper-V Network Virtualization
 

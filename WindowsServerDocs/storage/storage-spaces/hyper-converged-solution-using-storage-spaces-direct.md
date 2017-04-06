@@ -225,7 +225,7 @@ Network QoS is used to in this hyper-converged configuration to ensure that the 
 6.  Create a Traffic class and give SMB Direct 30% of the bandwidth minimum. The name of the class will be "SMB".
 
     ```PowerShell
-    New-NetQosTrafficClass “SMB” –Priority 3 –BandwidthPercentage 30 –Algorithm ETS
+    New-NetQosTrafficClass "SMB" –Priority 3 –BandwidthPercentage 30 –Algorithm ETS
     ```
 
 ### Step 2.3: Create a Hyper-V virtual switch
@@ -310,7 +310,7 @@ The following steps are done on a management system that is the same version as 
 
 ### Step 3.1: Run cluster validation
 
-In this step, you will run the cluster validation tool to ensure that the server nodes are configured correctly to create a cluster using Storage Spaces Direct. When cluster validation (Test-Cluster) is run before the cluster is created, it runs the tests that verify that the configuration appears suitable to successfully function as a failover cluster. The example directly below uses the “-Include” parameter, and then the specific categories of tests are specified. This ensures that the Storage Spaces Direct specific tests are included in the validation.
+In this step, you will run the cluster validation tool to ensure that the server nodes are configured correctly to create a cluster using Storage Spaces Direct. When cluster validation (Test-Cluster) is run before the cluster is created, it runs the tests that verify that the configuration appears suitable to successfully function as a failover cluster. The example directly below uses the "-Include" parameter, and then the specific categories of tests are specified. This ensures that the Storage Spaces Direct specific tests are included in the validation.
 
 Use the following PowerShell command to validate a set of servers for use as a Storage Spaces Direct cluster.
 
@@ -322,7 +322,7 @@ Test-Cluster –Node <MachineName1, MachineName2, MachineName3, MachineName4> �
 
 In this step, you will create a cluster with the nodes that you have validated for cluster creation in the preceding step using the following PowerShell cmdlet. The **–NoStorage parameter is important** to be added to the cmdlet, otherwise disks may be automatically added to the cluster and you will need to remove them before enabling Storage Spaces Direct otherwise they will not be included in the Storage Spaces Direct storage pool.
 
-When creating the cluster, you will get a warning that states - “There were issues while creating the clustered role that may prevent it from starting. For more information, view the report file below.” You can safely ignore this warning. It’s due to no disks being available for the cluster quorum. Its recommended that a file share witness or cloud witness is configured after creating the cluster.
+When creating the cluster, you will get a warning that states - "There were issues while creating the clustered role that may prevent it from starting. For more information, view the report file below." You can safely ignore this warning. It's due to no disks being available for the cluster quorum. Its recommended that a file share witness or cloud witness is configured after creating the cluster.
 
 > [!Note]
 > If the servers are using static IP addresses, modify the following command to reflect the static IP address by adding the following parameter and specifying the IP address:–StaticAddress &lt;X.X.X.X&gt;.
@@ -331,7 +331,7 @@ When creating the cluster, you will get a warning that states - “There were is
 > New-Cluster –Name <ClusterName> –Node <MachineName1,MachineName2,MachineName3,MachineName4> –NoStorage
 > ```
 
-After the cluster is created, it can take time for DNS entry for the cluster name to be replicated. The time is dependent on the environment and DNS replication configuration. If resolving the cluster isn’t successful, in most cases you can be successful with using the machine name of a node that is an active member of the cluster may be used instead of the cluster name.
+After the cluster is created, it can take time for DNS entry for the cluster name to be replicated. The time is dependent on the environment and DNS replication configuration. If resolving the cluster isn't successful, in most cases you can be successful with using the machine name of a node that is an active member of the cluster may be used instead of the cluster name.
 
 ### Step 3.3: Configure a cluster witness
 
@@ -401,11 +401,11 @@ Count Name                          PSComputerName
 
 After creating the cluster, use the Enable-ClusterStorageSpacesDirect PowerShell cmdlet, which will put the storage system into the Storage Spaces Direct mode and do the following automatically:
 
--   **Create a pool:** Creates a single large pool that has a name like “S2D on Cluster1”.
+-   **Create a pool:** Creates a single large pool that has a name like "S2D on Cluster1".
 
 -   **Configures the Storage Spaces Direct caches:** If there is more than one media (drive) type available for Storage Spaces Direct use, it enables the fastest as cache devices (read and write in most cases)
 
--   **Tiers:** Creates 2 tiers as default tiers. One is called “Capacity” and the other called “Performance”. The cmdlet analyzes the devices and configures each tier with the mix of device types and resiliency.
+-   **Tiers:** Creates 2 tiers as default tiers. One is called "Capacity" and the other called "Performance". The cmdlet analyzes the devices and configures each tier with the mix of device types and resiliency.
 
 From the management system, in a PowerShell command windows opened with Administrator privileges, initiate the following command. The cluster name is the name of the cluster that you created in the previous steps. If this command is run locally on one of the nodes, the -CimSession parameter is not necessary.
 
@@ -427,7 +427,7 @@ For more information, check out [Creating volumes in Storage Spaces Direct](crea
 
 At this point you can provision virtual machines on to the nodes of the hyper-converged Storage Spaces Direct cluster.
 
-The virtual machine’s files should be stored on the systems CSV namespace (example: c:\\ClusterStorage\\Volume1) just like clustered VMs on failover clusters.
+The virtual machine's files should be stored on the systems CSV namespace (example: c:\\ClusterStorage\\Volume1) just like clustered VMs on failover clusters.
 
 You may use in-box tools or other tools to manage the storage and virtual machines, including System Center Virtual Machine Manager.
 
