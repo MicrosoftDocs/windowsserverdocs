@@ -74,7 +74,7 @@ Add-DnsServerResourceRecord  -ZoneName "contoso.com" -Name enterpriseregistratio
 ```  
   
 ## Set up the AD FS relying party trust for Work Folders  
-You can set up and configure the relying party trust for Work Folders, even though Work Folders hasn't been set up yet. The relying party trust must be set up to enable Work Folders to use AD FS. Because you’re in the process of setting up AD FS, now is a good time to do this step.  
+You can set up and configure the relying party trust for Work Folders, even though Work Folders hasn't been set up yet. The relying party trust must be set up to enable Work Folders to use AD FS. Because you're in the process of setting up AD FS, now is a good time to do this step.  
   
 To set up the relying party trust:  
   

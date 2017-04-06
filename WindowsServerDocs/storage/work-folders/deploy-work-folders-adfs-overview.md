@@ -46,7 +46,7 @@ For the test environment that we're covering in this guide, you should have the 
 ![Diagram showing Internet, DMZ, and Contoso network segments. In the Internet segment: Client2; in the DMZ: a WAP server; in the Contoso segment: Work Folders Server, a domain controller, an AD FS server, and Client1](media/deploy-work-folders-adfs/WF_ADFS_WAP_Diagram.png)
 
 ## Deployment overview  
-In this group of topics, you’ll walk through a step-by-step example of setting up AD FS, Web Application Proxy, and Work Folders in a test environment. The components will be set up in this order:  
+In this group of topics, you'll walk through a step-by-step example of setting up AD FS, Web Application Proxy, and Work Folders in a test environment. The components will be set up in this order:  
   
 1.  AD FS  
   

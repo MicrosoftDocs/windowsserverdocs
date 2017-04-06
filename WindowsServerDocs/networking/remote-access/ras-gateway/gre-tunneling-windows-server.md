@@ -62,7 +62,7 @@ This scenario enables a scalable way to provide access from tenant virtual netwo
 ![GRE tunnel connecting hoster physical network and tenant virtual network](../../media/gre-tunneling-in-windows-server/GRE_.png)  
   
 ### <a name="BKMK_Speed"></a>High speed connectivity  
-This scenario enables a scalable way to provide high speed connectivity from the tenant on premise network to their virtual network located in the hosting service provider network. A tenant connects to the service provider network via multiprotocol label switching (MPLS), where a GRE tunnel is established between the hosting service provider's edge router and the multitenant gateway to the tenant's virtual network.  
+This scenario enables a scalable way to provide high speed connectivity from the tenant on-premises network to their virtual network located in the hosting service provider network. A tenant connects to the service provider network via multiprotocol label switching (MPLS), where a GRE tunnel is established between the hosting service provider's edge router and the multitenant gateway to the tenant's virtual network.  
   
 ![GRE tunnel connecting tenant enterprise MPLS network and tenant virtual network](../../media/gre-tunneling-in-windows-server/GRE-.png)  
   
