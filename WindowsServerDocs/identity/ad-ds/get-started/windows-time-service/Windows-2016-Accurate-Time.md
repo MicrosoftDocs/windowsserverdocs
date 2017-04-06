@@ -353,7 +353,7 @@ The MaxAllowedPhaseOffset setting is located under System\Windows Time Service u
 #### Azure and Windows IaaS considerations
 
 ##### Azure Virtual Machine: Active Directory Domain Services
-If the Azure VM running Active Directory Domain Services is part of an existing on-premise Active Directory Forest, then TimeSync(VMIC), should be disabled. This is to allow all DCs in the Forest, both physical and virtual, to use a single time sync hierarchy. Refer to the best practice whitepaper [“Running Domain Controllers in Hyper-V”](https://technet.microsoft.com/en-us/library/virtual_active_directory_domain_controller_virtualization_hyperv.aspx)
+If the Azure VM running Active Directory Domain Services is part of an existing on-premises Active Directory Forest, then TimeSync(VMIC), should be disabled. This is to allow all DCs in the Forest, both physical and virtual, to use a single time sync hierarchy. Refer to the best practice whitepaper [“Running Domain Controllers in Hyper-V”](https://technet.microsoft.com/en-us/library/virtual_active_directory_domain_controller_virtualization_hyperv.aspx)
 
 ##### Azure Virtual Machine: Domain-joined machine
 If you are hosting a machine which is domain joined to an existing Active Directory Forest, virtual or physical, the best practice is to disable TimeSync for the guest and ensure W32Time is configured to synchronize with its Domain Controller via configuring time for Type=NTP5
