@@ -1,5 +1,5 @@
 # [Performance tuning guidelines for Windows Server 2016](index.md)
-## [Server hardware tuning](hardware/index.md)
+## [Server Hardware Tuning](hardware/index.md)
 ### [Performance considerations](hardware/index.md)
 ### [Power considerations](hardware/power.md)
 #### [Power and performance tuning](hardware/power/power-performance-tuning.md)
@@ -38,7 +38,7 @@
 ### [Network subsystem tuning](../../networking/technologies/network-subsystem/net-sub-performance-top.md)
 #### [Choose a network adapter](../../networking/technologies/network-subsystem/net-sub-choose-nic.md)
 #### [Configure the order of network interfaces](../../networking/technologies/network-subsystem/net-sub-interface-metric.md)
-#### [Network adapter tuning](../../networking/technologies/network-subsystem/net-sub-performance-tuning-nics.md)\
+#### [Network adapter tuning](../../networking/technologies/network-subsystem/net-sub-performance-tuning-nics.md)
 #### [Network-related performance counters](../../networking/technologies/network-subsystem/net-sub-performance-counters.md)
 #### [Performance Tools for Network Workloads](../../networking/technologies/network-subsystem/net-sub-performance-tools.md)
 #### [NIC teaming for Network Performance](../../networking/technologies/nic-teaming/NIC-Teaming.md)
