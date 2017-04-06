@@ -206,7 +206,7 @@ Exit
 You can also bind the certificate to the port by using IIS management cmdlets, which are available if you installed the IIS management tools and scripts.  
   
 > [!NOTE]  
-> Installation of the IIS management tools doesn't enable the full version of Internet Information Services (IIS) on the Work Folders machine; it only enables the management cmdlets. There are some possible benefits to this setup. For example, if you’re looking for cmdlets to provide the functionality that you get from netsh. When the certificate is bound to the port via the New-WebBinding cmdlet, the binding is not dependent on IIS in any way. After you do the binding, you can even remove the Web-Mgmt-Console feature, and the certificate will still be bound to the port. You can verify the binding via netsh by typing **netsh http show sslcert**.  
+> Installation of the IIS management tools doesn't enable the full version of Internet Information Services (IIS) on the Work Folders machine; it only enables the management cmdlets. There are some possible benefits to this setup. For example, if you're looking for cmdlets to provide the functionality that you get from netsh. When the certificate is bound to the port via the New-WebBinding cmdlet, the binding is not dependent on IIS in any way. After you do the binding, you can even remove the Web-Mgmt-Console feature, and the certificate will still be bound to the port. You can verify the binding via netsh by typing **netsh http show sslcert**.  
   
 The following example uses the New-WebBinding cmdlet to find the certificate with the subject **workfolders.contoso.com** and bind it to port 443:  
   

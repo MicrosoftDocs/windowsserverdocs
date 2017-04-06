@@ -14,7 +14,7 @@ description: How to deploy Work Folders, including installing the server role, c
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10, Windows 8.1, Windows 7
 
-This topic discusses the steps needed to deploy Work Folders. It assumes that you’ve already read [Planning a Work Folders deployment](plan-work-folders.md).  
+This topic discusses the steps needed to deploy Work Folders. It assumes that you've already read [Planning a Work Folders deployment](plan-work-folders.md).  
   
  To deploy Work Folders, a process that can involve multiple servers and technologies, use the following steps.  
   
@@ -74,7 +74,7 @@ Add-WindowsFeature FS-SyncShareService
 ## Step 4: Binding the SSL certificate on the sync servers  
  Work Folders installs the IIS Hostable Web Core, which is an IIS component designed to enable web services without requiring a full installation of IIS. After installing the IIS Hostable Web Core, you should bind the SSL certificate for the server to the Default Web Site on the file server. However, the IIS Hostable Web Core does not install the IIS Management console.  
   
- There are two options for binding the certificate to the Default Web Interface. To use either option you must have installed the private key for the certificate into the computer’s personal store.  
+ There are two options for binding the certificate to the Default Web Interface. To use either option you must have installed the private key for the certificate into the computer's personal store.  
   
 -   Utilize the IIS management console on a server that has it installed. From within the console, connect to the file server you want to manage, and then select the Default Web Site for that server. The Default Web Site will appear disabled, but you can still edit the bindings for the site and select the certificate to bind it to that web site.  
   
@@ -89,7 +89,7 @@ Add-WindowsFeature FS-SyncShareService
   
 -   One group per sync share to specify which users are allowed to sync with the sync share  
   
--   One group for all Work Folders administrators so that they can edit an attribute on each user object that links the user to the correct sync server (if you’re going to use multiple sync servers)  
+-   One group for all Work Folders administrators so that they can edit an attribute on each user object that links the user to the correct sync server (if you're going to use multiple sync servers)  
   
  Groups should follow a standard naming convention and should be used only for Work Folders to avoid potential conflicts with other security requirements.  
   
@@ -111,7 +111,7 @@ Add-WindowsFeature FS-SyncShareService
   
 5.  In the **Members** section, click **Add**. The Select Users, Contacts, Computers, Service Accounts or Groups dialog box appears.  
   
-6.  Type the names of the users or groups to which you grant access to a particular sync share (if you’re creating a group to control access to a sync share), or type the names of the Work Folders administrators (if you’re going to configure user accounts to automatically discover the appropriate sync server), click **OK**, and then click **OK** again.  
+6.  Type the names of the users or groups to which you grant access to a particular sync share (if you're creating a group to control access to a sync share), or type the names of the Work Folders administrators (if you're going to configure user accounts to automatically discover the appropriate sync server), click **OK**, and then click **OK** again.  
   
  To create a security group by using Windows PowerShell, use the following cmdlets:  
   
@@ -127,7 +127,7 @@ Set-ADGroup -Add:@{'Member'=$Members} -Identity:$GroupName -Server:$DC
 ```  
   
 ## Step 6: Optionally delegate user attribute control to Work Folders administrators  
- If you are deploying multiple sync servers and want to automatically direct users to the correct sync server, you’ll need to update an attribute on each user account in AD DS. However, this normally requires getting a member of the Domain Admins or Enterprise Admins groups to update the attributes, which can quickly become tiresome if you need to frequently add users or move them between sync servers.  
+ If you are deploying multiple sync servers and want to automatically direct users to the correct sync server, you'll need to update an attribute on each user account in AD DS. However, this normally requires getting a member of the Domain Admins or Enterprise Admins groups to update the attributes, which can quickly become tiresome if you need to frequently add users or move them between sync servers.  
   
  For this reason, a member of the Domain Admins or Enterprise Admins groups might want to delegate the ability to modify the msDS-SyncServerURL property of user objects to the Work Folders Administrators group you created in Step 5, as described in the following procedure.  
   
@@ -160,9 +160,9 @@ DsAcls $ADGroupPath /I:S /G ""$GroupName":RPWP;msDS-SyncServerUrl;user"
 >  The delegation operation might take a while to run in domains with a large number of users.  
   
 ## Step 7: Create sync shares for user data  
- At this point, you’re ready to designate a folder on the sync server to store your user’s files. This folder is called a sync share, and you can use the following procedure to create one.  
+ At this point, you're ready to designate a folder on the sync server to store your user's files. This folder is called a sync share, and you can use the following procedure to create one.  
   
-1.  If you don’t already have an NTFS volume with free space for the sync share and the user files it will contain, create a new volume and format it with the NTFS file system.  
+1.  If you don't already have an NTFS volume with free space for the sync share and the user files it will contain, create a new volume and format it with the NTFS file system.  
   
 2.  In Server Manager, click **File and Storage Services**, and then click **Work Folders**.  
   
@@ -171,13 +171,13 @@ DsAcls $ADGroupPath /I:S /G ""$GroupName":RPWP;msDS-SyncServerUrl;user"
 4.  On the **Select the server and path** page, specify where to store the sync share. If you already have a file share created for this user data, you can choose that share. Alternatively you can create a new folder.  
   
     > [!NOTE]
-    >  By default, sync shares aren’t directly accessible via a file share (unless you pick an existing file share). If you want to make a sync share accessible via a file share, use the **Shares** tile of Server Manager or the [New-SmbShare](http://technet.microsoft.com/library/jj635722.aspx) cmdlet to create a file share, preferably with access-based enumeration enabled.  
+    >  By default, sync shares aren't directly accessible via a file share (unless you pick an existing file share). If you want to make a sync share accessible via a file share, use the **Shares** tile of Server Manager or the [New-SmbShare](http://technet.microsoft.com/library/jj635722.aspx) cmdlet to create a file share, preferably with access-based enumeration enabled.  
   
 5.  On the **Specify the structure for user folders** page, choose a naming convention for user folders within the sync share. There are two options available:  
   
-    -   **User alias** creates user folders that don’t include a domain name. If you are using a file share that is already in use with Folder Redirection or another user data solution, select this naming convention. You can optionally select the **Sync only the following subfolder** checkbox to sync only a specific subfolder, such as the Documents folder.  
+    -   **User alias** creates user folders that don't include a domain name. If you are using a file share that is already in use with Folder Redirection or another user data solution, select this naming convention. You can optionally select the **Sync only the following subfolder** checkbox to sync only a specific subfolder, such as the Documents folder.  
   
-    -   **User alias@domain** creates user folders that include a domain name. If you aren’t using a file share already in use with Folder Redirection or another user data solution, select this naming convention to eliminate folder naming conflicts when multiple users of the share have identical aliases (which can happen if the users belong to different domains).  
+    -   **User alias@domain** creates user folders that include a domain name. If you aren't using a file share already in use with Folder Redirection or another user data solution, select this naming convention to eliminate folder naming conflicts when multiple users of the share have identical aliases (which can happen if the users belong to different domains).  
   
 6.  On the **Enter the sync share name** page, specify a name and a description for the sync share. This is not advertised on the network but is visible in Server Manager and Windows Powershell to help distinguish sync shares from each other.  
   
@@ -220,9 +220,9 @@ New-SyncShare "HR Sync Share" K:\Share-1 –User "HR Sync Share Users"
 3.  On the **Authentication** page, optionally choose **Active Directory Federation Services** and specify a Federation Service URL. For more information about AD FS, see [Active Directory Federation Services](https://technet.microsoft.com/windows-server-docs/identity/active-directory-federation-services), and [Deploying Work Folders with AD FS and Web Application Proxy (WAP)](deploy-work-folders-adfs-overview.md).
   
     > [!NOTE]
-    >  If the sync server isn’t in the same Active Directory site as the AD FS server and the network traffic must go through a proxy server, you need to configure the sync server to use the correct proxy configuration. For more information, see the following topic: [How to configure a proxy server for the Work Folders service](http://social.technet.microsoft.com/wiki/contents/articles/20697.how-to-configure-a-proxy-server-for-the-work-folders-service.aspx).  
+    >  If the sync server isn't in the same Active Directory site as the AD FS server and the network traffic must go through a proxy server, you need to configure the sync server to use the correct proxy configuration. For more information, see the following topic: [How to configure a proxy server for the Work Folders service](http://social.technet.microsoft.com/wiki/contents/articles/20697.how-to-configure-a-proxy-server-for-the-work-folders-service.aspx).  
   
-4.  In the navigation pane, click **Support Email** and then type the email address or addresses that users should use when emailing for help with Work Folders. Click **OK** when you’re finished.  
+4.  In the navigation pane, click **Support Email** and then type the email address or addresses that users should use when emailing for help with Work Folders. Click **OK** when you're finished.  
   
      Work Folders users can click a link in the Work Folders Control Panel item that sends an email containing diagnostic information about the client PC to the address(es) you specify here.  
   
@@ -277,7 +277,7 @@ Set-ADUser –Add @{"msDS-SyncServerURL"=$SyncServerURL}
   
 -   "Specify Work Folders settings" policy setting in User Configuration\Policies\Administrative Templates\Windows Components\WorkFolders  
   
--   “Force automatic setup for all users” policy setting in Computer Configuration\Policies\Administrative Templates\Windows Components\WorkFolders  
+-   "Force automatic setup for all users" policy setting in Computer Configuration\Policies\Administrative Templates\Windows Components\WorkFolders  
   
 > [!NOTE]
 >  These policy settings are available only when editing Group Policy from a computer running Group Policy Management on Windows 8.1, Windows Server 2012 R2 or later. Versions of Group Policy Management from earlier operating systems do not have this setting available. These policy settings do apply to Windows 7 PCs on which the [Work Folders for Windows 7](http://blogs.technet.com/b/filecab/archive/2014/04/24/work-folders-for-windows-7.aspx) app has been installed.  
