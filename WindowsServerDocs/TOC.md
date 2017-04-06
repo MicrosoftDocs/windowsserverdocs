@@ -1106,7 +1106,7 @@
 #### [Planning a Work Folders Deployment](storage/work-folders/plan-work-folders.md)
 #### [Deploying Work Folders](storage/work-folders/deploy-work-folders.md)
 #### [Deploy Work Folders with AD FS and Web Application Proxy](storage/work-folders/deploy-work-folders-adfs-overview.md)
-##### [Step 1: Set up ADFS](storage/work-folders/deploy-work-folders-adfs-step1.md)
+##### [Step 1: Set-up ADFS](storage/work-folders/deploy-work-folders-adfs-step1.md)
 ##### [Step 2: AD FS Post-Configuration Work](storage/work-folders/deploy-work-folders-adfs-step2.md)
 ##### [Step 3: Set-up Work Folders](storage/work-folders/deploy-work-folders-adfs-step3.md)
 ##### [Step 4: Set-up Web Application Proxy](storage/work-folders/deploy-work-folders-adfs-step4.md)
