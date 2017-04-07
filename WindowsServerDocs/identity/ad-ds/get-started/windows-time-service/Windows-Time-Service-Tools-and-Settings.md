@@ -133,7 +133,6 @@ All versions include Windows 7, Windows 8, Windows 10, Windows Server 2008 , and
 |Registry Entry|Version|Description|
 |------------------------------------|---------------|----------------------------|
 |AnnounceFlags|All|This entry controls whether this computer is marked as a reliable time server. A computer is not marked as reliable unless it is also marked as a time server.<br /> -   0x00 Not a time server  <br /> - 0x01 Always time server  <br /> -   0x02 Automatic time server  <br /> -   0x04 Always reliable time server  <br /> -   0x08 Automatic reliable time server  <br />The default value for domain members is 10. The default value for stand-alone clients and servers is 10.|
-|ClockHoldOver|Windows 10 build 1607 or newer|Defines the ???|
 |EventLogFlags|All|This entry controls the events that the time service logs.  <br />-   Time Jump: 0x1  <br />-   Source Change: 0x2  <br />The default value on domain members is 2. The default value on stand-alone clients and servers is 2.  |
 |FrequencyCorrectRate|All|This entry controls the rate at which the clock is corrected. If this value is too small, the clock is unstable and overcorrects. If the value is too large, the clock takes a long time to synchronize. The default value on domain members is 4. The default value on stand-alone clients and servers is 4.  <br /><br />Note that 0 is an invalid value for the FrequencyCorrectRate registry entry. On Windows Server 2003, Windows Server 2003 R2,  Windows Server 2008 , and  Windows Server 2008 R2 computers, if the value is set to 0 the Windows Time service will automatically change it to 1.  |
 |HoldPeriod|All|This entry controls the period of time for which spike detection is disabled in order to bring the local clock into synchronization quickly. A spike is a time sample indicating that time is off a number of seconds, and is usually received after good time samples have been returned consistently. The default value on domain members is 5. The default value on stand-alone clients and servers is 5.  |
@@ -178,7 +177,7 @@ The following registry entries must be added in order to enable W32Time logging:
 |LargeSampleSkew|All|This entry specifies the large sample skew for logging in seconds. To comply with Security and Exchange Commission (SEC) specifications, this should be set to three seconds. Events will be logged for this setting only when EventLogFlags is explicitly configured for 0x2 large sample skew. The default value on domain members is 3. The default value on stand-alone clients and servers is 3.  |
 |ResolvePeerBackOffMaxTimes|All|This entry specifies the maximum number of times to double the wait interval when repeated attempts to locate a peer to synchronize with fail. A value of zero means that the wait interval is always the minimum. The default value on domain members is 7. The default value on stand-alone clients and servers is 7. |
 |ResolvePeerBackoffMinutes|All|This entry specifies the initial interval to wait, in minutes, before attempting to locate a peer to synchronize with. The default value on domain members is 15. The default value on stand-alone clients and servers is 15.  |
-|SpecialPollInterval|All|This entry specifies the special poll interval in seconds for manual peers. When the SpecialInterval 0x1 flag is enabled, W32Time uses this poll interval instead of a poll interval determine by the operating system. The default value on domain members is 3,600. The default value on stand-alone clients and servers is 604,800.<br/><br/>New for build 1607, SpecialPollInterval is contained by the MinPollInterval and MaxPollInterval Config registry values. |
+|SpecialPollInterval|All|This entry specifies the special poll interval in seconds for manual peers. When the SpecialInterval 0x1 flag is enabled, W32Time uses this poll interval instead of a poll interval determine by the operating system. The default value on domain members is 3,600. The default value on stand-alone clients and servers is 604,800.|
 |SpecialPollTimeRemaining|All|This entry is maintained by W32Time. It contains reserved data that is used by the Windows operating system. It specifies the time in seconds before W32Time will resynchronize after the computer has restarted. Any changes to this setting can cause unpredictable results. The default value on both domain members and on stand-alone clients and servers is left blank.  |
 
 #### <a name="NtpServer"></a> HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpServer
@@ -268,109 +267,6 @@ Is 60,000 < 78,000
 YES/TRUE  
 ```  
 In this case the clock will be set back slowly.  
-
-  
-#### SpecialPollInterval  X
-  
-###### Registry path  
-**HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpClient**  
-  
-###### Version  
-Windows XP, Windows Vista,  Windows 7 , Windows Server 2003, Windows Server 2003 R2,  Windows Server 2008 , and  Windows Server 2008 R2   
-  
-This entry specifies the special poll interval in seconds for manual peers. When the SpecialInterval 0x1 flag is enabled, W32Time uses this poll interval instead of a poll interval determine by the operating system. The default value on domain members is 3,600. The default value on stand-alone clients and servers is 604,800.  
-
-
-
-#### SpecialPollTimeRemaining  X
-  
-###### Registry path  
-**HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpClient**  
-  
-###### Version  
-Windows Server 2003 and  Windows Server 2008   
-  
-This entry is maintained by W32Time. It contains reserved data that is used by the Windows operating system. It specifies the time in seconds before W32Time will resynchronize after the computer has restarted. Any changes to this setting can cause unpredictable results. The default value on both domain members and on stand-alone clients and servers is left blank.  
-  
-#### SpikeWatchPeriod  X
-  
-###### Registry path  
-**HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Config**  
-  
-###### Version  
-Windows XP, Windows Vista,  Windows 7 , Windows Server 2003, Windows Server 2003 R2,  Windows Server 2008 , and  Windows Server 2008 R2   
-  
-This entry specifies the amount of time that a suspicious offset must persist before it is accepted as correct (in seconds). The default value on domain members is 900. The default value on stand-alone clients and workstations is 900.  
-  
-#### Type  X
-  
-###### Registry path  
-**HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters**  
-  
-###### Version  
-Windows XP, Windows Vista,  Windows 7 , Windows Server 2003, Windows Server 2003 R2,  Windows Server 2008 , and  Windows Server 2008 R2   
-  
-This entry Indicates which peers to accept synchronization from:  
-  
--   **NoSync.** The time service does not synchronize with other sources.  
-  
--   **NTP.** The time service synchronizes from the servers specified in the **NtpServer.** registry entry.  
-  
--   **NT5DS.** The time service synchronizes from the domain hierarchy.  
-  
--   **AllSync.** The time service uses all the available synchronization mechanisms.  
-  
-The default value on domain members is **NT5DS.** The default value on stand-alone clients and servers is **NTP.**  
-  
-#### UpdateInterval  
-  
-###### Registry path  
-**HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Config**  
-  
-###### Version  
-Windows XP, Windows Vista,  Windows 7 , Windows Server 2003, Windows Server 2003 R2,  Windows Server 2008 , and  Windows Server 2008 R2 .  
-  
-This entry specifies the number of clock ticks between phase correction adjustments. The default value for domain controllers is 100. The default value for domain members is 30,000. The default value for stand-alone clients and servers is 360,000.  
-  
-> [!NOTE]  
-> 0 is an invalid value for the UpdateInterval registry entry. On computers running Windows Server 2003, Windows Server 2003 R2,  Windows Server 2008 , and  Windows Server 2008 R2 , if the value is set to 0 the Windows Time service automatically changes it to 1.  
-  
-The following three registry entries are not a part of the W32Time default configuration but can be added to the registry to obtain increased logging capabilities. The information logged to the System Event log can be modified by changing value for the EventLogFlags setting in the Group Policy Object Editor. By default, the time service creates a log in Event Viewer every time that it switches to a new time source.  
-  
-> [!WARNING]  
-> Some of the preset values that are configured in the System Administrative template file (System.adm) for the Group Policy object (GPO) settings are different from the corresponding default registry entries. If you plan to use a GPO to configure any Windows Time setting, be sure that you review [Preset values for the Windows Time service Group Policy settings are different from the corresponding Windows Time service registry entries in Windows Server 2003](http://go.microsoft.com/fwlink/?LinkId=186066) (http://go.microsoft.com/fwlink/?LinkId=186066). This issue applies to  Windows Server 2008 R2 ,  Windows Server 2008 , Windows Server 2003 R2, and Windows Server 2003.  
-  
-The following registry entries must be added in order to enable W32Time logging:  
-  
-#### FileLogEntries  X
-  
-###### Registry path  
-**HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Config**  
-  
-###### Version  
-Windows Server 2003, Windows Server 2003 R2,  Windows Server 2008 , and  Windows Server 2008 R2   
-  
-This entry controls the amount of entries created in the Windows Time log file. The default value is none, which does not log any Windows Time activity. Valid values are 0 to 300. This value does not affect the event log entries normally created by Windows Time.  
-  
-#### FileLogName  X
-  
-###### Registry path  
-**HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Config**  
-  
-###### Version  
-Windows Server 2003, Windows Server 2003 R2,  Windows Server 2008 , and  Windows Server 2008 R2   
-  
-This entry controls the location and file name of the Windows Time log. The default value is blank, and should not be changed unless **FileLogEntries** is changed. A valid value is a full path and file name that Windows Time will use to create the log file. This value does not affect the event log entries normally created by Windows Time.  
-  
-#### FileLogSize  
-  
-###### Registry path  
-**HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Config**  
-  
-###### Version  
-Windows Server 2003, Windows Server 2003 R2,  Windows Server 2008 , and  Windows Server 2008 R2   
-  
-This entry controls the circular logging behavior of Windows Time log files. When **FileLogEntries** and **FileLogName** are defined, this entry defines the size, in bytes, to allow the log file to reach before overwriting the oldest log entries with new entries. Any positive number is valid, and 3000000 is recommended. This value does not affect the event log entries normally created by Windows Time.  
   
 ## <a name="w2k3tr_times_tools_vwtt"></a>Windows Time Service Group Policy Settings  
 You can configure most W32Time parameters by using the Group Policy Object Editor. This includes configuring a computer to be an NTPServer or NTPClient, configuring the time synchronization mechanism, and configuring a computer to be a reliable time source.  

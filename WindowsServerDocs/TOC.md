@@ -611,7 +611,7 @@
 ##### [Auditing Enhancements to AD FS in Windows Server 2016](identity/ad-fs/operations/Auditing-Enhancements-to-AD-FS-in-Windows-Server-2016.md)
 ##### [Best Practices for Securing AD FS](identity/ad-fs/operations/Best-Practices-Securing-AD-FS.md)
 ##### [Configure AD FS 2016 and Azure MFA](identity/ad-fs/operations/Configure-AD-FS-2016-and-Azure-MFA.md)
-##### [Configure AD FS Extranet Lockout](identity/ad-fs/operations/Configure-AD-FS-Extranet-Lockout.md)
+##### [Configure AD FS Extranet Lockout Protection](identity/ad-fs/operations/Configure-AD-FS-Extranet-Lockout-Protection.md)
 ##### [Configure AD FS to authenticate users stored in LDAP directories](identity/ad-fs/operations/Configure-AD-FS-to-authenticate-users-stored-in-LDAP-directories.md)
 ##### [Configure AD FS to Send Password Expiry Claims](identity/ad-fs/operations/Configure-AD-FS-to-Send-Password-Expiry-Claims.md)
 ##### [Configure additional Authentication Methods for AD FS](identity/ad-fs/operations/Configure-additional-Authentication-Methods-for-AD-FS.md)
