@@ -31,7 +31,7 @@ The Compute area includes virtualization products and features for the IT profes
 Physical and virtual machines benefit from greater time accuracy due to improvements in the Win32 Time and Hyper-V Time Synchronization Services. Windows Server can now host services that are compliant with upcoming regulations which require a 1ms accuracy with regards to UTC.  
 
 ### Hyper-V  
--   [What's new in Hyper-V on Windows Server 2016](../compute/hyper-v/What-s-new-in-Hyper-V-on-Windows.md). This topic explains the new and changed functionality of the Hyper-V role in Windows Server 2016, Client Hyper-V running on Windows 10, and Microsoft Hyper-V Server 2016.  
+-   [What's new in Hyper-V on Windows Server 2016](../virtualization/hyper-v/What-s-new-in-Hyper-V-on-Windows.md). This topic explains the new and changed functionality of the Hyper-V role in Windows Server 2016, Client Hyper-V running on Windows 10, and Microsoft Hyper-V Server 2016.  
 
 -   [Windows Containers](https://msdn.microsoft.com/virtualization/windowscontainers/containers_welcome):  Windows Server 2016 container support adds performance improvements, simplified network management, and support for Windows containers on Windows 10. For some additional information on containers, see [Containers: Docker, Windows and Trends](http://azure.microsoft.com/blog/2015/08/17/containers-docker-windows-and-trends/).  
 
@@ -41,7 +41,7 @@ What's New in [Nano Server](https://technet.microsoft.com/library/mt126167.aspx)
 There are also improvements to the Recovery Console, including separation of inbound and outbound firewall rules as well as the ability to repair the configuration of WinRM.  
 
 ### Remote Desktop Services  
-[Use Azure SQL DB for your Remote Desktop Connection Broker high availability environment](../compute/remote-desktop-services/Use-an-Azure-SQL-database-to-enable-high-availability-for-your-Connection-Broker.md). Deploying a highly available RDS deployment lets you leverage Azure SQL Database for your RD Connection Brokers in high availability mode.  
+[Use Azure SQL DB for your Remote Desktop Connection Broker high availability environment](../remote/remote-desktop-services/Use-an-Azure-SQL-database-to-enable-high-availability-for-your-Connection-Broker.md). Deploying a highly available RDS deployment lets you leverage Azure SQL Database for your RD Connection Brokers in high availability mode.  
 
 ## [Identity and Access](../identity/Identity-and-Access.md)  
 New features in Identity improve the ability for organizations to secure Active Directory environments and help them migrate to cloud-only deployments and hybrid deployments, where some applications and services are hosted in the cloud and others are hosted on premises.  
