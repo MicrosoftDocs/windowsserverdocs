@@ -32,7 +32,7 @@ Within these virtualization environments, you have additional flexibility in wha
 - **Desktops**: Give your users a full desktop experience with a variety of applications that you install and manage. Ideal for users that rely on these computers as their primary workstations or that are coming from thin clients, such as with MultiPoint Services.
 - **RemoteApps**: Specify individual applications that are hosted/run on the virtualized machine but appear as if they’re running on the user’s desktop like local applications. The apps have their own taskbar entry and can be resized and moved across monitors. Ideal for deploying and managing key applications in the secure, remote environment while allowing users to work from and customize their own desktops.
 
-For environments where cost-effectiveness is crucial and you want to extend the benefits of deploying full desktops in a session-based virtualization environment, you can use [MultiPoint Services](./multipoint-services/multipoint-services.md) to deliver the best value. 
+For environments where cost-effectiveness is crucial and you want to extend the benefits of deploying full desktops in a session-based virtualization environment, you can use [MultiPoint Services](../multipoint-services/multipoint-services.md) to deliver the best value. 
 
 With these options and configurations, you have the flexibility to deploy the desktops and applications your users need in a remote, secure, and cost-effective fashion.
 

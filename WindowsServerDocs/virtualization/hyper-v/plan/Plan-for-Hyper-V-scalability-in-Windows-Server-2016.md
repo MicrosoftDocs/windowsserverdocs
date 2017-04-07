@@ -62,7 +62,7 @@ These maximums apply to each Hyper-V host.
 ## Failover Clusters and Hyper-V  
 This table lists the maximums that apply when using Hyper-V and Failover Clustering. It's important to do capacity planning to ensure that there will be enough hardware resources to run all the virtual machines in a clustered environment.  
 
-To learn about updates to Failover Clustering, including new features for virtual machines, see [What's New in Failover Clustering in Windows Server 2016](../../../failover-clustering/whats-new-in-failover-clustering.md).
+To learn about updates to Failover Clustering, including new features for virtual machines, see [What's New in Failover Clustering in Windows Server 2016](../../failover-clustering/whats-new-in-failover-clustering.md).
 
 |Component|Maximum|Notes|  
 |-------------|-----------|---------|  

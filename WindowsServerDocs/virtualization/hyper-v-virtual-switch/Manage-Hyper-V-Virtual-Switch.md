@@ -22,6 +22,6 @@ You can use this topic to access Hyper-V Virtual Switch management content.
 This section contains the following topics.
 
 - [Configure VLANs on Hyper-V Virtual Switch Ports](Configure-and-View-VLAN-Settings-on-Hyper-V-Virtual-Switch-Ports.md)
-- [Create Security Policies with Extended Port Access Control Lists](../../technologies/hyper-v-virtual-switch/Create-Security-Policies-with-Extended-Port-Access-Control-Lists.md)
+- [Create Security Policies with Extended Port Access Control Lists](Create-Security-Policies-with-Extended-Port-Access-Control-Lists.md)
 
 

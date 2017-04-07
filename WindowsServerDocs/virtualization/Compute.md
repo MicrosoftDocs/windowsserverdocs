@@ -44,11 +44,11 @@ Hyper-V is available in certain versions of Windows 10, Windows 8.1, and Windows
 ### [Microsoft Hyper-V Server 2016](https://technet.microsoft.com/hyper-v-server-docs/)
 The Hyper-V technology is also available separately from Windows and Windows Server, as a free, standalone product. Hyper-V Server is commonly used as the host in a virtualized desktop infrastructure (VDI) environment.
 
-## [Remote Desktop Services](./remote-desktop-services/welcome-to-rds.md)
+## [Remote Desktop Services](../remote/remote-desktop-services/welcome-to-rds.md)
 
 Remote Desktop Services in Windows Server 2016 lets users access computers, apps, and resources remotely. You can use Remote Desktop Services plus Azure services to create hosting solutions. 
 
-## [Setup and Boot Event Collection](Get-started-with-Setup-and-Boot-Event-Collection.md)
+## [Setup and Boot Event Collection](../administration/Get-started-with-Setup-and-Boot-Event-Collection.md)
 
 Setup and Boot Event Collection is a new feature that allows you to designate a "collector" computer that can gather a variety of important events that occur on other computers when they boot or go through the setup process. You can then later analyze the collected events with Event Viewer, Message Analyzer, Wevtutil, or Windows PowerShell cmdlets. Previously, these events have been impossible to monitor because the infrastructure needed to collect them doesn't exist until a computer is already set up.
 

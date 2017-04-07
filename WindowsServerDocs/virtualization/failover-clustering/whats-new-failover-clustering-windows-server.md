@@ -1,3 +1,3 @@
 ---
-redirect_url: ../../failover-clustering/whats-new-in-failover-clustering
+redirect_url: whats-new-in-failover-clustering
 ---

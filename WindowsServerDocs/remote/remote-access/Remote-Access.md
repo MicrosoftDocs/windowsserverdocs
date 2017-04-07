@@ -27,7 +27,7 @@ This topic provides an overview of the Remote Access server role in Windows Serv
 > -   [DirectAccess](directaccess/DirectAccess.md)  
 > -   [RAS Gateway](ras-gateway/RAS-Gateway.md)  
 > -   [Remote Access Server Role Documentation](ras/Remote-Access-Server-Role-Documentation.md) 
-> -   [RAS Gateway for SDN](../sdn/technologies/network-function-virtualization/RAS-Gateway-for-SDN.md)  
+> -   [RAS Gateway for SDN](../../networking/sdn/technologies/network-function-virtualization/RAS-Gateway-for-SDN.md)  
   
 The Remote Access server role is a logical grouping of the following related network access technologies.  
   

@@ -265,6 +265,6 @@ Although we are targeting Private Cloud scenarios, specifically Hyper-V and Scal
     Yes, you can automate the Cluster OS Rolling Upgrade process using VMM in System Center 2016.  
 
 ## See also  
--   [Release Notes: Important Issues in Windows Server 2016](../get-started/Release-Notes--Important-Issues-in-Windows-Server-2016-Technical-Preview.md)  
--   [What's New in Windows Server 2016](../get-started/What-s-New-in-Windows-Server-2016-Technical-Preview-5.md)  
+-   [Release Notes: Important Issues in Windows Server 2016](../../get-started/Release-Notes--Important-Issues-in-Windows-Server-2016-Technical-Preview.md)  
+-   [What's New in Windows Server 2016](../../get-started/What-s-New-in-Windows-Server-2016-Technical-Preview-5.md)  
 -   [What's New in Failover Clustering in Windows Server](whats-new-in-failover-clustering.md)  

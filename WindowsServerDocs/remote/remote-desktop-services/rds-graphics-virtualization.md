@@ -32,7 +32,7 @@ The following illustration shows the graphics virtualization options in Windows 
 ## Discrete Device Assignment
 Discrete Device Assignment (DDA) is a hardware pass-through solution that provides the best performance, given that the VM has full access to the GPU using the native driver. Your VM user can access the full capabilities of their device as well the device’s native driver. This means the features and capabilities of running the device in a VM mirror running the same device on bare metal.
 
-For more information about DDA, check out [Plan for deploying Discrete Device Assignment](../hyper-v/plan/plan-for-deploying-devices-using-discrete-device-assignment.md).
+For more information about DDA, check out [Plan for deploying Discrete Device Assignment](../../virtualization/hyper-v/plan/plan-for-deploying-devices-using-discrete-device-assignment.md).
 
 ## RemoteFX vGPU 
 RemoteFX vGPU is a graphics virtualization technology that allows the processing power of a GPU to be split across various guest operating systems to enable knowledge worker scenarios (see first graphic above). Advancements in Windows Server 2016 allow further enhancements for GPU burst scenarios, for example for designer applications and data visualization. Other feature improvements include:
