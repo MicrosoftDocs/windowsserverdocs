@@ -1,18 +1,18 @@
 ---
 ms.assetid: 777aab65-c9c7-4dc9-a807-9ab73fac87b8
-title: Configure AD FS Extranet Lockout
+title: Configure AD FS Extranet Lockout Protection
 description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 02/09/2017
+ms.date: 04/07/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 
 ms.technology: identity-adfs
 ---
 
-# Configure AD FS Extranet Lockout
+# Configure AD FS Extranet Lockout Protection
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2
 
