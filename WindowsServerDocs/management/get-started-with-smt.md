@@ -1,4 +1,4 @@
- ---
+---
 title: Get started with Server Management Tools
 description: "Manage on premises Windows Server 2016 machines from Azure"
 ms.prod: windows-server-threshold
