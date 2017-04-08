@@ -62,4 +62,4 @@ For more secure environments:
 
 For more secure environments:
 
-- **Deploy virtual machines with shielding enabled and deploy them to a guarded fabric.** For more information, see [Generation 2 security settings](../learn-more/Generation-2-virtual-machine-security-settings-for-Hyper-V.md) and [Guarded fabric](../../../Guarded-Fabric-and-Shielded-VMs.md).
+- **Deploy virtual machines with shielding enabled and deploy them to a guarded fabric.** For more information, see [Generation 2 security settings](../learn-more/Generation-2-virtual-machine-security-settings-for-Hyper-V.md) and [Guarded fabric](../../Guarded-Fabric-and-Shielded-VMs.md).
