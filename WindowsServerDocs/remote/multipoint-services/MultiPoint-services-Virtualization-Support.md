@@ -33,4 +33,4 @@ Running MultiPoint Services on a virtual machine provides the use of the Hyper-V
 > [!NOTE]  
 > When running MultiPoint Services on a virtual machine, USB-over-Ethernet and RDP client stations are supported. Direct video and USB zero client connected stations are not supported.  
   
-For more information about the Hyper-V role, see [Hyper-V](../hyper-v/hyper-v-on-windows-server.md).  
+For more information about the Hyper-V role, see [Hyper-V](../../virtualization/hyper-v/hyper-v-on-windows-server.md).  

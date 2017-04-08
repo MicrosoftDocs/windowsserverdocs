@@ -38,7 +38,7 @@ When you deploy multiple instances of RAS Gateway VMs that provide high availabi
   
 This issue is resolved in  Windows Server 2016, which provides multiple Gateway Pools - which can be of different types for logical separation. The new mode of M+N redundancy allows for a more efficient failover configuration.  
   
-For more overview information about RAS Gateway, see [RAS Gateway](../../../remote-access/ras-gateway/RAS-Gateway.md).  
+For more overview information about RAS Gateway, see [RAS Gateway](../../../../remote/remote-access/ras-gateway/RAS-Gateway.md).  
   
 ## <a name="bkmk_pools"></a>Gateway Pools Overview  
 In  Windows Server 2016, you can deploy gateways in one or more pools.  

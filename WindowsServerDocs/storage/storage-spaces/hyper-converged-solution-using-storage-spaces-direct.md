@@ -335,7 +335,7 @@ After the cluster is created, it can take time for DNS entry for the cluster nam
 
 ### Step 3.3: Configure a cluster witness
 
-It is recommended that you configure a witness for the cluster, so that a 3 or more node system can withstand two nodes failing or being offline. A 2 node deployment requires a cluster witness, otherwise either node going offline will cause the other to become unavailable as well. With these systems, you can use a file share as a witness, or use cloud witness. For more info, see [Deploy a Cloud Witness for a Failover Cluster](../../failover-clustering/deploy-cloud-witness.md).
+It is recommended that you configure a witness for the cluster, so that a 3 or more node system can withstand two nodes failing or being offline. A 2 node deployment requires a cluster witness, otherwise either node going offline will cause the other to become unavailable as well. With these systems, you can use a file share as a witness, or use cloud witness. For more info, see [Deploy a Cloud Witness for a Failover Cluster](../../virtualization/failover-clustering/deploy-cloud-witness.md).
 
 For more information about configuring a file share witness, see [*Configuring a File Share Witness on a Scale-Out File Server*](https://blogs.msdn.microsoft.com/clustering/2014/03/31/configuring-a-file-share-witness-on-a-scale-out-file-server/).
 

@@ -14,7 +14,7 @@ ms.date: 10/4/2016
 
 <img src="../get-started/media/7-storage.png" style='float:left; padding:.5em;' alt="Icon representing a drive"> Storage in Windows Server 2016 provides new and improved features for software-defined datacenter (SDDC) customers focusing on virtualized workloads. Windows Server also provides extensive support for enterprise customers using file servers with existing workloads. 
 
-To find out about what's new in storage, see [What's new in storage](whats-new-in-storage.md) and [What's new in Failover Clustering](../failover-clustering/whats-new-in-failover-clustering.md).
+To find out about what's new in storage, see [What's new in storage](whats-new-in-storage.md) and [What's new in Failover Clustering](../virtualization/failover-clustering/whats-new-in-failover-clustering.md).
 
 For an overview of storage technologies included in Windows Server, see the following list (categorized by workload).
 
@@ -110,6 +110,6 @@ Network File System (NFS) provides a file sharing solution for enterprises that 
 ## See also
 * [PowerShell cmdlets in Windows Server 2016 and Windows 10](https://technet.microsoft.com/library/mt156917.aspx)
 * [What's new in storage](whats-new-in-storage.md)
-* [What's new in Failover Clustering](../failover-clustering/whats-new-in-failover-clustering.md)
+* [What's new in Failover Clustering](../virtualization/failover-clustering/whats-new-in-failover-clustering.md)
 * [Azure Storage](https://azure.microsoft.com/en-us/documentation/services/storage/)
 * [Azure StorSimple](https://www.microsoft.com/en-us/cloud-platform/azure-storsimple)
