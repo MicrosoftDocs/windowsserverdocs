@@ -32,7 +32,7 @@ Secure the Hyper-V host operating system, the virtual machines, configuration fi
     - Use a private or secure network to access VM configurations and virtual hard disk files.
     - Use a private/dedicated network for your live migration traffic. Consider enabling IPSec on this network to use encryption and secure your VM's data going over the network during migration. For more information, see [Set up hosts for live migration without Failover Clustering](../deploy/set-up-hosts-for-live-migration-without-failover-clustering.md).
 - **Secure storage migration traffic.** Use SMB 3.0 for end-to-end encryption of SMB data and data protection tampering or eavesdropping on untrusted networks. Use a private network to access the SMB share contents to prevent man-in-the-middle attacks. For more information, see [SMB Security Enhancements](https://technet.microsoft.com/library/dn551363.aspx). 
-- **Configure hosts to be part of a guarded fabric.** For more information, see [Guarded fabric](../../guarded-fabric-shielded-vm/Guarded-Fabric-and-Shielded-VMs.md).
+- **Configure hosts to be part of a guarded fabric.** For more information, see [Guarded fabric](../../Guarded-Fabric-and-Shielded-VMs.md).
 - **Secure devices.** Secure the storage devices where you keep virtual machine resource files.
 - **Secure the hard drive.** Use BitLocker Drive Encryption to protect resources.
 - **Harden the Hyper-V host operating system.** Use the baseline security setting recommendations described in the [Windows Server Security Baseline](https://technet.microsoft.com/itpro/windows/keep-secure/windows-security-baselines).

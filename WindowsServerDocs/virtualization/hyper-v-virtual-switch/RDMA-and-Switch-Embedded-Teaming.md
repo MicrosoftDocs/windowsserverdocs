@@ -160,7 +160,7 @@ In addition, you can connect your teamed NICs to the same physical switch or to 
 
 The following illustration depicts SET architecture.
 
-![SET architecture](../edia/Remote-Direct-Memory-Access--RDMA--and-Switch-Embedded-Teaming--SET-/set_architecture.jpg)
+![SET architecture](../media/Remote-Direct-Memory-Access--RDMA--and-Switch-Embedded-Teaming--SET-/set_architecture.jpg)
 
 Because SET is integrated into the Hyper-V Virtual Switch, you cannot use SET inside of a virtual machine (VM). You can, however use NIC Teaming within VMs. For more information, see [NIC Teaming in Virtual Machines (VMs)](https://technet.microsoft.com/library/mt179272.aspx).  
 In addition, SET architecture does not expose team interfaces. Instead, you must configure Hyper-V Virtual Switch ports.
