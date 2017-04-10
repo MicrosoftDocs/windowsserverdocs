@@ -523,9 +523,19 @@
 #######[Appendix A: Reviewing AD FS Requirements](identity/ad-fs/design/appendix-A--Reviewing-AD-FS-Requirements.md)
 
 ####[AD FS Deployment](identity/ad-fs/AD-FS-Deployment.md)
+
 ##### [AD FS Deployment Guide](identity/ad-fs/deployment/AD-FS-Deployment-Guide.md)
+
+##### [Best Practices for Securing AD FS](identity/ad-fs/deployment/Best-Practices-Securing-AD-FS.md)
+##### [Plan Device-based Conditional Access on-Premises](identity/ad-fs/deployment/Plan-Device-based-Conditional-Access-on-Premises.md)
+##### [Required updates for AD FS and WAP](identity/ad-fs/deployment/Updates-for-Active-Directory-Federation-Services-AD-FS.md)
+##### [Set up Geographic Redundancy with SQL Server Replication](identity/ad-fs/deployment/Set-up-Geographic-Redundancy-with-SQL-Server-Replication.md)
+##### [Set up the lab environment for AD FS in Windows Server 2012 R2](identity/ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md)
 #####[Upgrading to AD FS in Windows Server 2016 using a WID database](identity/ad-fs/deployment/Upgrading-to-AD-FS-in-Windows-Server-2016.md)
 #####[Upgrading to AD FS in Windows Server 2016 using a SQL database](identity/ad-fs/deployment/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL.md)
+#####[Deploy Azure AD Connect Health to Monitor your on-premises identity infrastructure in the cloud](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect-health)
+
+
 #####[Windows Server 2016 and 2012 R2 AD FS Deployment Guide](identity/ad-fs/deployment/Windows-Server-2012-R2-AD-FS-Deployment-Guide.md)
 ######[Deploying a Federation Server Farm](identity/ad-fs/deployment/Deploying-a-Federation-Server-Farm.md)
 #######[Join a computer to a Domain](identity/ad-fs/deployment/Join-a-computer-to-a-Domain.md)
@@ -610,8 +620,8 @@
 ##### [AD FS support for alternate hostname binding for certificate authentication](identity/ad-fs/operations/AD-FS-support-for-alternate-hostname-binding-for-certificate-authentication.md)
 ##### [AD FS user sign-in customization](identity/ad-fs/operations/AD-FS-user-sign-in-customization.md)
 ##### [Add an attribute Store](identity/ad-fs/operations/add-an-attribute-Store.md)
-##### [Auditing Enhancements to AD FS in Windows Server 2016](identity/ad-fs/operations/Auditing-Enhancements-to-AD-FS-in-Windows-Server-2016.md)
-##### [Best Practices for Securing AD FS](identity/ad-fs/operations/Best-Practices-Securing-AD-FS.md)
+
+
 ##### [Configure AD FS 2016 and Azure MFA](identity/ad-fs/operations/Configure-AD-FS-2016-and-Azure-MFA.md)
 ##### [Configure AD FS Extranet Lockout Protection](identity/ad-fs/operations/Configure-AD-FS-Extranet-Lockout-Protection.md)
 ##### [Configure AD FS to authenticate users stored in LDAP directories](identity/ad-fs/operations/Configure-AD-FS-to-authenticate-users-stored-in-LDAP-directories.md)
@@ -630,11 +640,10 @@
 ##### [Manage Risk with additional Multi-Factor Authentication for Sensitive Applications](identity/ad-fs/operations/Manage-Risk-with-additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
 ##### [Manage Risk with Conditional Access Control](identity/ad-fs/operations/Manage-Risk-with-Conditional-Access-Control.md)
 ##### [Managing SSL Certificates in AD FS and WAP 2016](identity/ad-fs/operations/Manage-SSL-Certificates-AD-FS-WAP-2016.md)
-##### [Plan Device-based Conditional Access on-Premises](identity/ad-fs/operations/Plan-Device-based-Conditional-Access-on-Premises.md)
-##### [Required updates for AD FS and WAP](identity/ad-fs/operations/Updates-for-Active-Directory-Federation-Services-AD-FS.md)
+
+
 ##### [Set up an AD FS lab environment](identity/ad-fs/operations/Set-up-an-AD-FS-lab-environment.md)
-##### [Set up Geographic Redundancy with SQL Server Replication](identity/ad-fs/operations/Set-up-Geographic-Redundancy-with-SQL-Server-Replication.md)
-##### [Set up the lab environment for AD FS in Windows Server 2012 R2](identity/ad-fs/operations/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md)
+
 ##### [Walkthrough Guide: Manage Risk with additional Multi-Factor Authentication for Sensitive Applications](identity/ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
 ##### [Walkthrough Guide: Manage Risk with Conditional Access Control](identity/ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md)
 ##### [Walkthrough: Workplace Join with a Windows Device](identity/ad-fs/operations/Walkthrough--Workplace-Join-with-a-Windows-Device.md)
@@ -642,6 +651,7 @@
 
 #### [AD FS Technical Reference](identity/ad-fs/AD-FS-Technical-Reference.md)
 ##### [AD FS and certificate KeySpec property information](identity/ad-fs/technical-reference/AD-FS-and-KeySpec-Property.md)
+##### [Auditing Enhancements to AD FS in Windows Server 2016](identity/ad-fs/technical-reference/Auditing-Enhancements-to-AD-FS-in-Windows-Server-2016.md)
 ##### [Understanding Key AD FS Concepts](identity/ad-fs/technical-reference/Understanding-Key-AD-FS-Concepts.md)
 ######[The Role of attribute Stores](identity/ad-fs/technical-reference/The-Role-of-attribute-Stores.md)
 ######[The Role of the AD FS Configuration Database](identity/ad-fs/technical-reference/The-Role-of-the-AD-FS-Configuration-Database.md)
