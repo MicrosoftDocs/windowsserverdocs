@@ -56,7 +56,7 @@ AD FS provides the on premises component of conditional access policies in a hyb
  *  [Azure Active Directory Conditional Access](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access/)
 
 For more information about using device based conditional access with AD FS
-*  [Planning for Device Based Conditional Access with AD FS](../../ad-fs/operations/Plan-Device-based-Conditional-Access-on-Premises.md)  
+*  [Planning for Device Based Conditional Access with AD FS](../../ad-fs/deployment/Plan-Device-based-Conditional-Access-on-Premises.md)  
 * [Access Control Policies in AD FS](../../ad-fs/operations/Access-Control-Policies-in-AD-FS.md)  
 
 ### Sign in with Microsoft Passport   
@@ -108,7 +108,7 @@ The following section describes the improved operational scenarios that are intr
 In AD FS for Windows Server 2012 R2 there were numerous audit events generated for a single request and the relevant information about a log-in or token issuance activity is either absent (in some versions of AD FS) or spread across multiple audit events. By default the AD FS audit events are turned off due to their verbose nature.  
 With the release of AD FS 2016, auditing has become more streamlined and less verbose.  
 
-For more information see [Auditing enhancements to AD FS in Windows Server 2016.](../../ad-fs/operations/Auditing-Enhancements-to-AD-FS-in-Windows-Server-2016.md)  
+For more information see [Auditing enhancements to AD FS in Windows Server 2016.](../../ad-fs/technical-reference/Auditing-Enhancements-to-AD-FS-in-Windows-Server-2016.md)  
 
 ### Improved interoperability with SAML 2.0 for participation in confederations  
 AD FS 2016 contains additional SAML protocol support, including support for importing trusts based on metadata that contains multiple entities. This enables you to configure AD FS to participate in confederations such as InCommon Federation and other implementations conforming to the eGov 2.0 standard.  

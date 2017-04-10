@@ -651,7 +651,7 @@
 
 #### [AD FS Technical Reference](identity/ad-fs/AD-FS-Technical-Reference.md)
 ##### [AD FS and certificate KeySpec property information](identity/ad-fs/technical-reference/AD-FS-and-KeySpec-Property.md)
-##### [Auditing Enhancements to AD FS in Windows Server 2016](identity/ad-fs/operations/Auditing-Enhancements-to-AD-FS-in-Windows-Server-2016.md)
+##### [Auditing Enhancements to AD FS in Windows Server 2016](identity/ad-fs/technical-reference/Auditing-Enhancements-to-AD-FS-in-Windows-Server-2016.md)
 ##### [Understanding Key AD FS Concepts](identity/ad-fs/technical-reference/Understanding-Key-AD-FS-Concepts.md)
 ######[The Role of attribute Stores](identity/ad-fs/technical-reference/The-Role-of-attribute-Stores.md)
 ######[The Role of the AD FS Configuration Database](identity/ad-fs/technical-reference/The-Role-of-the-AD-FS-Configuration-Database.md)
