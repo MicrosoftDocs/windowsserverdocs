@@ -18,14 +18,14 @@ ms.technology: identity-adfs
 
 This topic outlines the steps to configure a test environment that can be used to complete the walkthroughs in the following walkthrough guides:
 
--   [Walkthrough: Workplace Join with an iOS Device](../../ad-fs/deployment/Walkthrough--Workplace-Join-with-an-iOS-Device.md)
+-   [Walkthrough: Workplace Join with an iOS Device](../../ad-fs/operations/Walkthrough--Workplace-Join-with-an-iOS-Device.md)
 
--   [Walkthrough: Workplace Join with a Windows Device](../../ad-fs/deployment/Walkthrough--Workplace-Join-with-a-Windows-Device.md)
+-   [Walkthrough: Workplace Join with a Windows Device](../../ad-fs/operations/Walkthrough--Workplace-Join-with-a-Windows-Device.md)
 
 
--   [Walkthrough Guide: Manage Risk with Conditional Access Control](../../ad-fs/deployment/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md)
+-   [Walkthrough Guide: Manage Risk with Conditional Access Control](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md)
 
--   [Walkthrough Guide: Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](../../ad-fs/deployment/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
+-   [Walkthrough Guide: Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
 
 > [!NOTE]
 > We do not recommend that you install the web server and the federation server on the same computer.
