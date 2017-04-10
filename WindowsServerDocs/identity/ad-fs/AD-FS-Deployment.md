@@ -23,7 +23,7 @@ This document contains a list of all of the documentation for deploying AD FS fo
 
 * [Plan Device-based Conditional Access on-Premises](deployment/Plan-Device-based-Conditional-Access-on-Premises.md)
 
-* [Required Updates for AD FS and WAP](https://technet.microsoft.com/en-us/windows-server-docs/identity/ad-fs/operations/updates-for-active-directory-federation-services-ad-fs)
+* [Required Updates for AD FS and WAP](deployment/updates-for-active-directory-federation-services-ad-fs.md)
 
 * [Set up Geographic Redundancy with SQL Server Replication](deployment/Set-up-Geographic-Redundancy-with-SQL-Server-Replication.md)
 

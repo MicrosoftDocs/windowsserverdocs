@@ -526,11 +526,11 @@
 
 ##### [AD FS Deployment Guide](identity/ad-fs/deployment/AD-FS-Deployment-Guide.md)
 
-##### [Best Practices for Securing AD FS](identity/ad-fs/operations/Best-Practices-Securing-AD-FS.md)
-##### [Plan Device-based Conditional Access on-Premises](identity/ad-fs/operations/Plan-Device-based-Conditional-Access-on-Premises.md)
-##### [Required updates for AD FS and WAP](identity/ad-fs/operations/Updates-for-Active-Directory-Federation-Services-AD-FS.md)
-##### [Set up Geographic Redundancy with SQL Server Replication](identity/ad-fs/operations/Set-up-Geographic-Redundancy-with-SQL-Server-Replication.md)
-##### [Set up the lab environment for AD FS in Windows Server 2012 R2](identity/ad-fs/operations/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md)
+##### [Best Practices for Securing AD FS](identity/ad-fs/deployment/Best-Practices-Securing-AD-FS.md)
+##### [Plan Device-based Conditional Access on-Premises](identity/ad-fs/deployment/Plan-Device-based-Conditional-Access-on-Premises.md)
+##### [Required updates for AD FS and WAP](identity/ad-fs/deployment/Updates-for-Active-Directory-Federation-Services-AD-FS.md)
+##### [Set up Geographic Redundancy with SQL Server Replication](identity/ad-fs/deployment/Set-up-Geographic-Redundancy-with-SQL-Server-Replication.md)
+##### [Set up the lab environment for AD FS in Windows Server 2012 R2](identity/ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md)
 #####[Upgrading to AD FS in Windows Server 2016 using a WID database](identity/ad-fs/deployment/Upgrading-to-AD-FS-in-Windows-Server-2016.md)
 #####[Upgrading to AD FS in Windows Server 2016 using a SQL database](identity/ad-fs/deployment/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL.md)
 #####[Deploy Azure AD Connect Health to Monitor your on-premises identity infrastructure in the cloud](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect-health)
