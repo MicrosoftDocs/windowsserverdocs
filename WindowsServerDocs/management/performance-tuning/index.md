@@ -43,8 +43,6 @@ This guide organizes performance and tuning guidance for Windows Server 2016 acr
 
 > TBD: Downloadable PDF version
 
-
-
 ### Sections added
 - [Nano Server installation-type configuration considerations](https://technet.microsoft.com/en-us/windows-server-docs/compute/nano-server/getting-started-with-nano-server)
 

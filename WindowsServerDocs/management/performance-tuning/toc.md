@@ -30,7 +30,7 @@
 #### [Gateways](role/remote-desktop/gateways.md)
 ### [Web Server](role/web-server/index.md)
 #### [Tuning IIS 10.0](role/web-server/tuning-iis-10.md)
-#### [HTTP 1.2/2](role/web-server/http-performance.md)
+#### [HTTP 1.1/2](role/web-server/http-performance.md)
 ## Server Subsystem Tuning
 ### [Cache and memory tuning](subsystem/cache-memory-management/index.md)
 #### [Troubleshoot cache and memory manager performance](subsystem/cache-memory-management/troubleshoot.md)

@@ -53,11 +53,11 @@ The system-global switch **NtfsDisableLastAccessUpdate** (REG\_DWORD) 1 is locat
 
 Disabling the updates is effective when you are using large data sets (or many hosts) that contain thousands of directories. We recommend that you use IIS logging instead if you maintain this information only for Web administration.
 
->[!Caution]
+>[!Warning]
 > Some applications, such as incremental backup utilities, rely on this update information, and they do not function correctly without it.
 
 ## See also
-- [IIS 10.0 performance tuning]()
+- [IIS 10.0 performance tuning](tuning-iis-10.md)
 - [HTTP 1.1/2 tuning](http-performance.md)
 
 
