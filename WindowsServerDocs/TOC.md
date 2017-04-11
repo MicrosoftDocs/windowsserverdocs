@@ -29,6 +29,7 @@
 ## [What's New in Windows Server 2016](get-started/What-s-New-in-Windows-Server-2016.md)
 ### [What's New in the Windows Console in Windows Server 2016](get-started/What-s-New-in-Console.md)
 ## [Administer Windows Server](administration/management-and-automation.md)
+### [Get started with Setup and Boot Event Collection](administration/Get-started-with-Setup-and-Boot-Event-Collection.md)
 ### [Microsoft Server Performance Advisor](administration/server-performance-advisor/microsoft-server-performance-advisor.md)
 #### [Server Performance Advisor User's Guide](administration/server-performance-advisor/server-performance-advisor-users-guide.md)
 #### [Server Performance Advisor Pack Development Guide](administration/server-performance-advisor/server-performance-advisor-pack-development-guide.md)
@@ -1190,7 +1191,6 @@
 ##### [Troubleshoot the Host Guardian Service](virtualization/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-hgs.md)
 ##### [Troubleshoot Guarded Hosts](virtualization/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-hosts.md)
 
-### [Get started with Setup and Boot Event Collection](administration/Get-started-with-Setup-and-Boot-Event-Collection.md)
 
 
 ## [Other Windows Server versions](get-started/windows-server-versions.md)
