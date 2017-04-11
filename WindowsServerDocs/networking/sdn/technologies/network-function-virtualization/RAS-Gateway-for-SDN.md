@@ -25,8 +25,8 @@ You can use this topic to learn about RAS Gateway, which is a software-based, mu
 > -   [What's New in RAS Gateway](../../../sdn/technologies/network-function-virtualization/What-s-New-in-RAS-Gateway.md)  
 > -   [RAS Gateway Deployment Architecture](../../../sdn/technologies/network-function-virtualization/RAS-Gateway-Deployment-Architecture.md)  
 > -   [RAS Gateway High Availability](../../../sdn/technologies/network-function-virtualization/RAS-Gateway-High-Availability.md)  
-> -   [Border Gateway Protocol &#40;BGP&#41;](../../../remote-access/bgp/Border-Gateway-Protocol-BGP.md)  
-> -   [BGP Windows PowerShell Command Reference](../../../remote-access/bgp/BGP-Windows-PowerShell-Command-Reference.md)  
+> -   [Border Gateway Protocol &#40;BGP&#41;](../../../../remote/remote-access/bgp/Border-Gateway-Protocol-BGP.md)  
+> -   [BGP Windows PowerShell Command Reference](../../../../remote/remote-access/bgp/BGP-Windows-PowerShell-Command-Reference.md)  
   
 In  Windows Server 2016, RAS Gateway routes network traffic between the physical network and VM network resources, regardless of where the resources are located. You can use RAS Gateway to route network traffic between physical and virtual networks at the same physical location or at many different physical locations over the Internet.  
   

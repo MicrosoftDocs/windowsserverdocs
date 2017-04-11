@@ -31,7 +31,7 @@ In Windows Server 2016, Storage Spaces offers two flavors of mirroring – 'two-
 
 ### Two-way mirror
 
-Two-way mirroring writes two copies of everything. Its storage efficiency is 50% – to write 1 TB of data, you need at least 2 TB of physical storage capacity. Likewise, you need at least two [hardware 'fault domains'](../../failover-clustering/fault-domains.md) – with Storage Spaces Direct, that means two servers.
+Two-way mirroring writes two copies of everything. Its storage efficiency is 50% – to write 1 TB of data, you need at least 2 TB of physical storage capacity. Likewise, you need at least two [hardware 'fault domains'](../../virtualization/failover-clustering/fault-domains.md) – with Storage Spaces Direct, that means two servers.
 
 ![two-way-mirror](media/Storage-Spaces-Fault-Tolerance/two-way-mirror-180px.png)
 
@@ -111,7 +111,7 @@ This section summarizes the resiliency types available in Storage Spaces Direct,
 |    Mixed               |    4                                |
 
    >[!TIP]
-   > Unless you are using [chassis or rack fault tolerance](../../failover-clustering/fault-domains.md), the number of fault domains refers to the number of servers. The number of drives in each server does not affect which resiliency types you can use, as long as you meet the minimum requirements for Storage Spaces Direct. 
+   > Unless you are using [chassis or rack fault tolerance](../../virtualization/failover-clustering/fault-domains.md), the number of fault domains refers to the number of servers. The number of drives in each server does not affect which resiliency types you can use, as long as you meet the minimum requirements for Storage Spaces Direct. 
 
 ### Dual parity efficiency for hybrid deployments
 
@@ -200,7 +200,7 @@ Check out [Creating volumes in Storage Spaces Direct](create-volumes.md).
 Every link below is inline somewhere in the body of this topic.
 
 - [Storage Spaces Direct in Windows Server 2016](storage-spaces-direct-overview.md)
-- [Fault Domain Awareness in Windows Server 2016](../../failover-clustering/fault-domains.md)
+- [Fault Domain Awareness in Windows Server 2016](../../virtualization/failover-clustering/fault-domains.md)
 - [Erasure Coding in Azure by Microsoft Research](https://www.microsoft.com/en-us/research/publication/erasure-coding-in-windows-azure-storage/)
 - [Local Reconstruction Codes and Accelerating Parity Volumes](https://blogs.technet.microsoft.com/filecab/2016/09/06/volume-resiliency-and-efficiency-in-storage-spaces-direct/)
 - [Volumes in the Storage Management API](https://blogs.technet.microsoft.com/filecab/2016/08/29/deep-dive-volumes-in-spaces-direct/)

@@ -147,12 +147,12 @@ The following list of SDN technologies provides links to documentation for each 
 
 - [Network Controller](technologies/network-controller/Network-Controller.md)
 - [Hyper-V Network Virtualization](technologies/hyper-v-network-virtualization/hyper-v-network-virtualization.md)
-- [Hyper-V Virtual Switch](../technologies/hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md)
+- [Hyper-V Virtual Switch](../../virtualization/hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md)
 - [Internal DNS Service (iDNS) for SDN](technologies/Idns-for-Sdn.md)
 - [Software Load Balancing (SLB) for SDN](technologies/network-function-virtualization/software-load-balancing-for-sdn.md) with Network Address Translation \(NAT\)
 - [Datacenter Firewall Overview](technologies/network-function-virtualization/Datacenter-Firewall-Overview.md)
 - [RAS Gateway for SDN](technologies/network-function-virtualization/RAS-Gateway-for-Sdn.md)
-- [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](../technologies/hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md)
+- [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](../../virtualization/hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md)
 - [Container Networking Overview](technologies/containers/Container-networking-overview.md)
 
 
