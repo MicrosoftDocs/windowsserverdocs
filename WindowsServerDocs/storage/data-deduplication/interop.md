@@ -14,11 +14,11 @@ ms.date: 09/16/2016
 
 ## <a id="supported"></a>Supported
 ### <a id="supported-clusters"></a>Failover Clustering
-[Failover Clustering](../../virtualization/failover-clustering/failover-clustering-overview.md) is fully supported, if every node in the cluster has the [Data Deduplication feature installed](install-enable.md#install-dedup). Other important notes:
+[Failover Clustering](../..//failover-clustering/failover-clustering-overview.md) is fully supported, if every node in the cluster has the [Data Deduplication feature installed](install-enable.md#install-dedup). Other important notes:
 
 * [Manually started Data Deduplication jobs](run.md#running-dedup-jobs-manually) must be run on the Owner node for the Cluster Shared Volume.
 * Scheduled Data Deduplication jobs are stored in the cluster task scheduled so that if a deduplicated volume is taken over by another node, the scheduled job will be applied on the next scheduled interval.
-* Data Deduplication fully interoperates with the [Cluster OS Rolling Upgrade](../../virtualization/failover-clustering/cluster-operating-system-rolling-upgrade.md) feature.
+* Data Deduplication fully interoperates with the [Cluster OS Rolling Upgrade](../..//failover-clustering/cluster-operating-system-rolling-upgrade.md) feature.
 * Data Deduplication is fully supported on [Storage Spaces Direct](../storage-spaces/storage-spaces-direct-overview.md) NTFS-formatted volumes (mirror or parity). Deduplication is not supported on volumes with multiple tiers. See [Data Deduplication on ReFS](interop.md#unsupported-refs) for more information.
 
 ### <a id="supported-storage-replica"></a>Storage Replica
