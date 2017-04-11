@@ -266,5 +266,5 @@ Although we are targeting Private Cloud scenarios, specifically Hyper-V and Scal
 
 ## See also  
 -   [Release Notes: Important Issues in Windows Server 2016](../get-started/Release-Notes--Important-Issues-in-Windows-Server-2016-Technical-Preview.md)  
--   [What's New in Windows Server 2016](../get-started/What-s-New-in-Windows-Server-2016-Technical-Preview-5.md)  
+-   [What's New in Windows Server 2016](../get-started/What-s-New-in-windows-server-2016.md)  
 -   [What's New in Failover Clustering in Windows Server](whats-new-in-failover-clustering.md)  
