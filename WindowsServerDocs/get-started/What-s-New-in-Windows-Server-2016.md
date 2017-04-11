@@ -24,14 +24,14 @@ manager: dongill
 <br>
 <br>
 <br>
-## [Compute](../compute/Compute.md)  
+## [Compute](../virtualization/Compute.md)  
 The Compute area includes virtualization products and features for the IT professional to design, deploy, and maintain Windows Server.  
 
 ### General  
 Physical and virtual machines benefit from greater time accuracy due to improvements in the Win32 Time and Hyper-V Time Synchronization Services. Windows Server can now host services that are compliant with upcoming regulations which require a 1ms accuracy with regards to UTC.  
 
 ### Hyper-V  
--   [What's new in Hyper-V on Windows Server 2016](../compute/hyper-v/What-s-new-in-Hyper-V-on-Windows.md). This topic explains the new and changed functionality of the Hyper-V role in Windows Server 2016, Client Hyper-V running on Windows 10, and Microsoft Hyper-V Server 2016.  
+-   [What's new in Hyper-V on Windows Server 2016](../virtualization/hyper-v/What-s-new-in-Hyper-V-on-Windows.md). This topic explains the new and changed functionality of the Hyper-V role in Windows Server 2016, Client Hyper-V running on Windows 10, and Microsoft Hyper-V Server 2016.  
 
 -   [Windows Containers](https://msdn.microsoft.com/virtualization/windowscontainers/containers_welcome):  Windows Server 2016 container support adds performance improvements, simplified network management, and support for Windows containers on Windows 10. For some additional information on containers, see [Containers: Docker, Windows and Trends](http://azure.microsoft.com/blog/2015/08/17/containers-docker-windows-and-trends/).  
 
@@ -41,7 +41,7 @@ What's New in [Nano Server](https://technet.microsoft.com/library/mt126167.aspx)
 There are also improvements to the Recovery Console, including separation of inbound and outbound firewall rules as well as the ability to repair the configuration of WinRM.  
 
 ### Remote Desktop Services  
-[Use Azure SQL DB for your Remote Desktop Connection Broker high availability environment](../compute/remote-desktop-services/Use-an-Azure-SQL-database-to-enable-high-availability-for-your-Connection-Broker.md). Deploying a highly available RDS deployment lets you leverage Azure SQL Database for your RD Connection Brokers in high availability mode.  
+[Use Azure SQL DB for your Remote Desktop Connection Broker high availability environment](../remote/remote-desktop-services/Use-an-Azure-SQL-database-to-enable-high-availability-for-your-Connection-Broker.md). Deploying a highly available RDS deployment lets you leverage Azure SQL Database for your RD Connection Brokers in high availability mode.  
 
 ## [Identity and Access](../identity/Identity-and-Access.md)  
 New features in Identity improve the ability for organizations to secure Active Directory environments and help them migrate to cloud-only deployments and hybrid deployments, where some applications and services are hosted in the cloud and others are hosted on premises.  
@@ -58,7 +58,7 @@ What's New in Active Directory Federation Services. Active Directory Federation 
 ### Web Application Proxy  
 The latest version of Web Application Proxy focuses on new features that enable publishing and preauthentication for more applications and improved user experience. Check out the full list of new features that includes preauthentication for rich client apps such as Exchange ActiveSync and wildcard domains for easier publishing of SharePoint apps. For more information, see [What's New in Web Application Proxy in Windows Server 2016](https://technet.microsoft.com/library/dn765473.aspx).  
 
-##  [Management and Automation](../management/Management-and-Automation.md)  
+##  [Management and Automation](../administration/Management-and-Automation.md)  
 The Management and Automation area focuses on tool and reference information for IT pros who want to run and manage Windows Server 2016, including Windows PowerShell.  
 
 Windows PowerShell 5.0 includes significant new features, including support for developing with classes and new security features that extend its use, improve its usability, and allow you to control and manage Windows-based environments more easily and comprehensively. See [Windows Management Framework (WMF) 5.0 RTM Release Notes Overview](https://msdn.microsoft.com/powershell/wmf/5.0/releasenotes) for details.
@@ -139,27 +139,27 @@ You can now use storage quality of service (QoS) to centrally monitor end-to-end
 
 For more info, see [Storage Quality of Service](../storage/storage-qos/storage-qos-overview.md).
 
-## [Failover Clustering](../failover-clustering/whats-new-in-failover-clustering.md)
+## [Failover Clustering](../virtualization/failover-clustering/whats-new-in-failover-clustering.md)
 
-Windows Server 2016 includes a number of new features and enhancements for multiple servers that are grouped together into a single fault-tolerant cluster using the Failover Clustering feature. Some of the additions are listed below; for a more complete listing, see [What's New in Failover Clustering in Windows Server 2016](../failover-clustering/whats-new-in-failover-clustering.md).
+Windows Server 2016 includes a number of new features and enhancements for multiple servers that are grouped together into a single fault-tolerant cluster using the Failover Clustering feature. Some of the additions are listed below; for a more complete listing, see [What's New in Failover Clustering in Windows Server 2016](../virtualization/failover-clustering/whats-new-in-failover-clustering.md).
 
 ### Cluster Operating System Rolling Upgrade
 
 Cluster Operating System Rolling Upgrade enables an administrator to upgrade the operating system of the cluster nodes from  Windows Server 2012 R2  to Windows Server 2016 without stopping the Hyper-V or the Scale-Out File Server workloads. Using this feature, the downtime penalties against Service Level Agreements (SLA) can be avoided.
 
-For more info, see [Cluster Operating System Rolling Upgrade](../failover-clustering/Cluster-Operating-System-Rolling-Upgrade.md).
+For more info, see [Cluster Operating System Rolling Upgrade](../virtualization/failover-clustering/Cluster-Operating-System-Rolling-Upgrade.md).
 
 ### Cloud Witness
 
 Cloud Witness is a new type of Failover Cluster quorum witness in Windows Server 2016 that leverages Microsoft Azure as the arbitration point. The Cloud Witness, like any other quorum witness, gets a vote and can participate in the  quorum calculations. You can configure cloud witness as a quorum witness using the Configure a Cluster Quorum Wizard.
 
-For more info, see [Deploy Cloud Witness](../failover-clustering/deploy-cloud-witness.md).
+For more info, see [Deploy Cloud Witness](../virtualization/failover-clustering/deploy-cloud-witness.md).
 
 ### Health Service
 
 The Health Service improves the day-to-day monitoring, operations, and maintenance experience of cluster resources on a Storage Spaces Direct cluster.
 
-For more info, see [Health Service](../failover-clustering/health-service-overview.md).
+For more info, see [Health Service](../virtualization/failover-clustering/health-service-overview.md).
 
 ## Application development
 

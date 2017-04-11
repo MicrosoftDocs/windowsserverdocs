@@ -21,4 +21,4 @@ SET is an alternative NIC Teaming solution that you can use in environments that
 
 SET allows you to group between one and eight physical Ethernet network adapters into one or more software-based virtual network adapters. These virtual network adapters provide fast performance and fault tolerance in the event of a network adapter failure.
 
-For more information, see [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](../../technologies/hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md).
+For more information, see [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](../../../virtualization//hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md).

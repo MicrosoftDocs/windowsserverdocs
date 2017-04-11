@@ -45,7 +45,7 @@ Following is a list that summarizes the functionality that is provided by DCB.
 7. Supports the coexistence of Windows Server 2016 Quality of Service \(QoS\) solutions.
 
 >[!NOTE]
->Before using any RDMA over Converged Ethernet \(RoCE\) version of RDMA, you must enable DCB. While not required for Internet Wide Area RDMA Protocol \(iWARP\) networks, testing has determined that all Ethernet\-based RDMA technologies work better with DCB. Because of this, you should consider using DCB for iWARP RDMA deployments. For more information, see [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](../hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md).
+>Before using any RDMA over Converged Ethernet \(RoCE\) version of RDMA, you must enable DCB. While not required for Internet Wide Area RDMA Protocol \(iWARP\) networks, testing has determined that all Ethernet\-based RDMA technologies work better with DCB. Because of this, you should consider using DCB for iWARP RDMA deployments. For more information, see [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](../../../virtualization/hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md).
 
 ##  Practical applications of DCB
 

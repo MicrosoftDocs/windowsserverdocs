@@ -154,7 +154,7 @@ If your deployment uses chassis or rack fault tolerance, you must specify the ch
    Set-ClusterFaultDomain -Name <NewNode> -Parent <ParentName> 
    ```
 
-   For more information, see [Fault domain awareness in Windows Server 2016](../../failover-clustering/fault-domains.md).
+   For more information, see [Fault domain awareness in Windows Server 2016](../../virtualization/failover-clustering/fault-domains.md).
 
 3. Add the server to the cluster as described in [Adding servers](#adding-servers). When the new server joins the cluster, it's automatically associated (using its name) with the placeholder fault domain.
 
