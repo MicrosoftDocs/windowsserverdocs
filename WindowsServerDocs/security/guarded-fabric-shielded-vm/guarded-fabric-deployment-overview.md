@@ -119,7 +119,10 @@ Install-WindowsFeature RSAT-Shielded-VM-Tools -Restart
 ```
 
 A trustworthy administrator, such as the fabric administrator or the VM owner, will need a certificate (often provided by a Hosting Service Provider) to sign the VHDX template disk. 
-The disk signature is computed over the OS partition of the virtual disk.  
+
+![Shielded template disk wizard](../media/Guarded-Fabric-Shielded-VM/guarded-fabric-shielded-template-wizard.png)
+
+The disk signature is computed over the OS partition of the virtual disk.
 If anything changes on the OS partition, the signature will also change.
 This allows users to strongly identify which disks they trust by specifying the appropriate signature.
 
@@ -141,5 +144,15 @@ The shielding data file also includes the security policy setting for the shield
 
     A lesser level of protection that still provides the compliance benefits of being able to encrypt a VM, but allows Hyper-V admins to do things like use VM console connection and PowerShell Direct. 
 
-Now you can add optional management pieces like VMM or Windows Azure Pack. But if you’d like to create a VM without installing those pieces, see [Step by step – Creating Shielded VMs without VMM](https://blogs.technet.microsoft.com/datacentersecurity/2016/06/06/step-by-step-creating-shielded-vms-without-vmm/).
+    ![New encryption supported VM](../media/Guarded-Fabric-Shielded-VM/guarded-fabric-new-shielded-vm.png)
+
+You can add optional management pieces like VMM or Windows Azure Pack. If you’d like to create a VM without installing those pieces, see [Step by step – Creating Shielded VMs without VMM](https://blogs.technet.microsoft.com/datacentersecurity/2016/06/06/step-by-step-creating-shielded-vms-without-vmm/).
+
+### Step 6: Create a shielded VM
+
+Creating shielded virtual machines differs very little from regular virtual machines. 
+In Windows Azure Pack, the experience is even easier than creating a regular VM because you only need to supply a name, shielding data file (containing the rest of the specialization information), and the VM network. 
+
+![New shielded VM in Windows Azure Pack](../media/Guarded-Fabric-Shielded-VM/guarded-fabric-new-vm-config.png)
+
 

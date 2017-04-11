@@ -21,50 +21,50 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter.
 <table style="width: 100%; table-layout: fixed;">
 	<tr style="border: 0;">
 		<td style="padding: 10px; border: 0; width=25%; text-align: center;">
-			<img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/understand.png">
-			<strong>Understand</strong>
+			<img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/understand.png" alt="Books icon">
+			<br><strong><a href="understand-storage-spaces-direct.md">Understand</a></strong>
 		</td>
 		<td style="padding: 10px; border: 0; width=25%; text-align: center;">
 			<img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/plan.png">
-			<strong>Plan</strong>
+			<br><strong><a href="plan-storage-spaces-direct.md">Plan</a></strong>
 		</td>
 		<td style="padding: 10px; border: 0; width=25%; text-align: center;">
 			<img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/deploy.png">
-			<strong>Deploy</strong>
+			<br><strong><a href="deploy-storage-spaces-direct.md">Deploy</a></strong>
 		</td>
 		<td style="padding: 10px; border: 0; width=25%; text-align: center;">
 			<img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/manage.png">
-			<strong>Manage</strong>
+			<br><strong><a href="manage-storage-spaces-direct.md">Manage</a></strong>
 		</td>
 	</tr>
 	<tr style="border: 0;">
 		<td style="padding: 10px; border: 0; width=25%">
 			<ul>
 			  <li>Overview (you are here)</li>
-			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/understand-the-cache">Understand the cache</a></li>
-			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-fault-tolerance">Fault tolerance and storage efficiency</a></li>
+			  <li><a href="understand-the-cache.md">Understand the cache</a></li>
+			  <li><a href="storage-spaces-fault-tolerance.md">Fault tolerance and storage efficiency</a></li>
 		  	</ul>
 		</td>
 		<td style="padding: 10px; border: 0; width=25%">
 			<ul>
-			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-direct-hardware-requirements">Hardware requirements</a></li>
-			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/choosing-drives">Choose drives</a></li>
-			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/plan-volumes">Plan volumes</a></li>
+			  <li><a href="storage-spaces-direct-hardware-requirements.md">Hardware requirements</a></li>
+			  <li><a href="choosing-drives.md">Choose drives</a></li>
+			  <li><a href="plan-volumes.md">Plan volumes</a></li>
 		</ul>
 		</td>
 		<td style="padding: 10px; border: 0; width=25%">
 			<ul>
-			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/hyper-converged-solution-using-storage-spaces-direct">Hyper-converged solution</a></li>
-			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/create-volumes">Create volumes</a></li>
+			  <li><a href="hyper-converged-solution-using-storage-spaces-direct.md">Hyper-converged solution</a></li>
+			  <li><a href="create-volumes.md">Create volumes</a></li>
 			</ul>
 		</td>
 		<td style="padding: 10px; border: 0; width=25%">
 			<ul>
-			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/add-nodes">Add servers or drives</a></li>
-			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/maintain-servers">Taking a server offline for maintenance</li>
-			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/remove-servers">Remove servers</a></li>
-			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/resize-volumes">Extend volumes</a></li>
-			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/update-firmware">Update drive firmware</a></li>
+			  <li><a href="add-nodes.md">Add servers or drives</a></li>
+			  <li><a href="maintain-servers.md">Taking a server offline for maintenance</li>
+			  <li><a href="remove-servers.md">Remove servers</a></li>
+			  <li><a href="resize-volumes.md">Extend volumes</a></li>
+			  <li><a href="../update-firmware.md">Update drive firmware</a></li>
 			</ul>
 		</td>
 	</tr>

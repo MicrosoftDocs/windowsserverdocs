@@ -204,7 +204,7 @@ In addition, if client user certificate authentication \(clientTLS authenticatio
 
 For additional information on hybrid port requirements see [Hybrid Identity Ports and Protocols](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-ports). 
 
-For additional information see [Best practices for securing Active Directory Federation Services](..\operations\Best-Practices-Securing-AD-FS.md)
+For additional information see [Best practices for securing Active Directory Federation Services](..\deployment\Best-Practices-Securing-AD-FS.md)
   
 **DNS Requirements**  
   
