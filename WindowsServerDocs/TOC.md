@@ -79,7 +79,7 @@
 ##### [Remote Desktop Services (Terminal Services) Command Reference](administration/windows-commands/remote-desktop-services-terminal-services-command-reference.md)
 ##### [Windows Server Backup Command Reference](administration/windows-commands/windows-server-backup-command-reference.md)
 ## [Failover Clustering](failover-clustering/failover-clustering-overview.md)
-### [What's New in Failover Clustering]((failover-clustering/whats-new-in-failover-clustering.md)
+### [What's New in Failover Clustering](failover-clustering/whats-new-in-failover-clustering.md)
 ### [Health Service](failover-clustering/health-service-overview.md)
 ### [Fault domain awareness](failover-clustering/fault-domains.md)
 ### [VM Load Balancing](failover-clustering/vm-load-balancing-overview.md)

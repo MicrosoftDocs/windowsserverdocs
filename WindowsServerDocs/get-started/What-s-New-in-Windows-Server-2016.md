@@ -139,27 +139,27 @@ You can now use storage quality of service (QoS) to centrally monitor end-to-end
 
 For more info, see [Storage Quality of Service](../storage/storage-qos/storage-qos-overview.md).
 
-## [Failover Clustering](../virtualization/failover-clustering/whats-new-in-failover-clustering.md)
+## [Failover Clustering](../failover-clustering/whats-new-in-failover-clustering.md)
 
-Windows Server 2016 includes a number of new features and enhancements for multiple servers that are grouped together into a single fault-tolerant cluster using the Failover Clustering feature. Some of the additions are listed below; for a more complete listing, see [What's New in Failover Clustering in Windows Server 2016](../virtualization/failover-clustering/whats-new-in-failover-clustering.md).
+Windows Server 2016 includes a number of new features and enhancements for multiple servers that are grouped together into a single fault-tolerant cluster using the Failover Clustering feature. Some of the additions are listed below; for a more complete listing, see [What's New in Failover Clustering in Windows Server 2016](../failover-clustering/whats-new-in-failover-clustering.md).
 
 ### Cluster Operating System Rolling Upgrade
 
 Cluster Operating System Rolling Upgrade enables an administrator to upgrade the operating system of the cluster nodes from  Windows Server 2012 R2  to Windows Server 2016 without stopping the Hyper-V or the Scale-Out File Server workloads. Using this feature, the downtime penalties against Service Level Agreements (SLA) can be avoided.
 
-For more info, see [Cluster Operating System Rolling Upgrade](../virtualization/failover-clustering/Cluster-Operating-System-Rolling-Upgrade.md).
+For more info, see [Cluster Operating System Rolling Upgrade](../failover-clustering/Cluster-Operating-System-Rolling-Upgrade.md).
 
 ### Cloud Witness
 
 Cloud Witness is a new type of Failover Cluster quorum witness in Windows Server 2016 that leverages Microsoft Azure as the arbitration point. The Cloud Witness, like any other quorum witness, gets a vote and can participate in the  quorum calculations. You can configure cloud witness as a quorum witness using the Configure a Cluster Quorum Wizard.
 
-For more info, see [Deploy Cloud Witness](../virtualization/failover-clustering/deploy-cloud-witness.md).
+For more info, see [Deploy Cloud Witness](../failover-clustering/deploy-cloud-witness.md).
 
 ### Health Service
 
 The Health Service improves the day-to-day monitoring, operations, and maintenance experience of cluster resources on a Storage Spaces Direct cluster.
 
-For more info, see [Health Service](../virtualization/failover-clustering/health-service-overview.md).
+For more info, see [Health Service](../failover-clustering/health-service-overview.md).
 
 ## Application development
 
