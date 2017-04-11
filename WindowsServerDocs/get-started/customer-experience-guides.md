@@ -16,7 +16,7 @@ manager: dongill
 
 Customer Experience Guides are a series of blog posts that highlight some of the new features in Windows Server 2016 that we haven't yet discussed in our formal TechNet content.
 
-If there's a new feature that's not discussed here, it's probably discussed in our formal documentation - see [Windows Server 2016](Windows-Server-2016.md) and [What's new in Windows Server 2016](What-s-New-in-Windows-Server-2016-Technical-Preview-5.md) for more info.
+If there's a new feature that's not discussed here, it's probably discussed in our formal documentation - see [Windows Server 2016](Windows-Server-2016.md) and [What's new in Windows Server 2016](What-s-New-in-windows-server-2016.md) for more info.
 
 The following experience guides have been created by the Windows Server 2016 Engineering and Content Development Teams to help get you started with technologies and features being released in Windows Server 2016:
 

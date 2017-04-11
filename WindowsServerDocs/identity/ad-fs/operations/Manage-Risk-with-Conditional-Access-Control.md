@@ -119,7 +119,7 @@ The following table includes all the claim types available in AD FS in Windows S
 Using the available settings, there are many ways in which you can manage risk by implementing conditional access control.
 
 ### Common Scenarios
-For example, imagine a simple scenario of implementing conditional access control based on the user's group membership data for a particular application (relying party trust). In other words, you can set up an issuance authorization rule on your federation server to permit users that belong to a certain group in your AD domain access to a particular application that is secured by AD FS.  The detailed step by step instructions (using the UI and Windows PowerShell) for implementing this scenario are covered in [Walkthrough Guide: Manage Risk with Conditional Access Control](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md). In order to complete the steps in this walkthrough, you must set up a lab environment and follow the steps in [Set up the lab environment for AD FS in Windows Server 2012 R2](Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md).
+For example, imagine a simple scenario of implementing conditional access control based on the user's group membership data for a particular application (relying party trust). In other words, you can set up an issuance authorization rule on your federation server to permit users that belong to a certain group in your AD domain access to a particular application that is secured by AD FS.  The detailed step by step instructions (using the UI and Windows PowerShell) for implementing this scenario are covered in [Walkthrough Guide: Manage Risk with Conditional Access Control](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md). In order to complete the steps in this walkthrough, you must set up a lab environment and follow the steps in [Set up the lab environment for AD FS in Windows Server 2012 R2](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md).
 
 ### Advanced Scenarios
 Other examples of implementing conditional access control in AD FS in Windows Server 2012 R2 include the following:
@@ -172,7 +172,7 @@ Other examples of implementing conditional access control in AD FS in Windows Se
 
 ## See Also
 [Walkthrough Guide: Manage Risk with Conditional Access Control](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md)
-[Set up the lab environment for AD FS in Windows Server 2012 R2](Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md)
+[Set up the lab environment for AD FS in Windows Server 2012 R2](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md)
 
 
 

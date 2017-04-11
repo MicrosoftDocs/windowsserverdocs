@@ -54,26 +54,31 @@ If size of the update to the client device is a concern, we recommend using Delt
 
 ![Download size comparison](../../media/express-update-delivery-isv-support/delta-2.png)
 
-### What happens if both monthly updates get installed
+### Prevent deployment of Delta and Cumulative updates in the same month
 
 Since Delta update and Cumulative update are available at the same time, it’s important to understand what happens if you deploy both updates in the same month.
 
-If you approve and deploy the same version of the Delta and Cumulative update, you will generate additional network traffic, since both will be downloaded to the PC. But how are the updates applied? It depends on the installation sequence:
+If you approve and deploy the same version of the Delta and Cumulative update, you will not only generate additional network traffic since both will be downloaded to the PC, but you may not be able to reboot your computer to Windows after restart.
 
-**If the device is up-to-date (last month’s update)**
+If both Delta and Cumulative updates are inadvertently installed and your computer is no longer booting, you can recover with the following steps:
 
-- If Cumulative installs first, the Delta update subset is not applicable since the Cumulative update included the Delta files and they are already installed. In this case, it would have been best to apply the Delta update instead, since it is considerably smaller.
+1. Boot into WinRE command prompt
+2. List the packages in a pending state:
 
-- If Delta installs first, Cumulative is no longer applicable since the device is already up-to-date.  
-
-**If the device is not up-to-date (falling behind)**
-
-- If Cumulative installs first, the Delta update subset is not applicable since the Cumulative update included the Delta files and they are already installed.
-
-- If Delta installs first, it won't be applied since it requires the previous month’s update as a prerequisite.
-
-Either way, as long as you install Delta or Cumulative update, the devices will get the security fixes released that month.
-
+    `x:\windows\system32\dism.exe /image:<drive letter for windows directory> /Get-Packages >> <path to text file>`
+ 
+    > **Example**:
+   ` x:\windows\system32\dism.exe /image:c:\ /Get-Packages >> c:\temp\packages.txt`
+ 
+3. Open the text file where you piped **get-packages**. If you see any install pending patches, run **remove-package** for each package name:
+ 
+   `dism.exe /image:<drive letter for windows directory> /remove-package /packagename:<package name>`
+ 
+    > **Example**:
+    `x:\windows\system32\dism.exe /image:c:\ /remove-package /packagename:Package_for_KB4014329~31bf3856ad364e35~amd64~~10.0.1.0`
+ 
+    >[!NOTE]
+    >Do not remove uninstall pending patches.
 
 >[!IMPORTANT]
 >**Delta update will only be available for servicing of Windows 10 Anniversary (1607) and Creator (1704) releases**. For releases after 1704, you will need to implement a deployment infrastructure that supports [Express update delivery](express-update-delivery-ISV-support.md) to continue taking advantage of incremental updates.

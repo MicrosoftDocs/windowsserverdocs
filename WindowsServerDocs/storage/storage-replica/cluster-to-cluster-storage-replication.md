@@ -372,5 +372,5 @@ Now you will manage and operate your cluster-to-cluster replication. You can per
 -   [Storage Replica: Frequently Asked Questions](storage-replica-frequently-asked-questions.md)  
 
 ## See Also  
--   [Windows Server 2016](../../get-started/Windows-Server-2016-Technical-Preview-5.md)  
+-   [Windows Server 2016](../../get-started/windows-server-2016.md)  
 -   [Storage Spaces Direct in Windows Server 2016](../storage-spaces/storage-spaces-direct-overview.md)  

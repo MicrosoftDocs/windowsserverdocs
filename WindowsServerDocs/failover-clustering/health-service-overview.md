@@ -16,7 +16,7 @@ The Health Service is a new feature in Windows Server 2016 that improves the day
 
 ## Prerequisites  
 
-The Health Service is enabled by default with Storage Spaces Direct. No additional action is required to set it up or start it. To learn more about Storage Spaces Direct, see [Storage Spaces Direct in Windows Server 2016](../../storage/storage-spaces/storage-spaces-direct-overview.md).  
+The Health Service is enabled by default with Storage Spaces Direct. No additional action is required to set it up or start it. To learn more about Storage Spaces Direct, see [Storage Spaces Direct in Windows Server 2016](../storage/storage-spaces/storage-spaces-direct-overview.md).  
 
 ## Metrics  
 
@@ -410,5 +410,5 @@ See the previous section.
 
 ## See also
 
-- [Storage Spaces Direct in Windows Server 2016](../../storage/storage-spaces/storage-spaces-direct-overview.md)  
+- [Storage Spaces Direct in Windows Server 2016](../storage/storage-spaces/storage-spaces-direct-overview.md)  
 - [Developer documentation, sample code, and API reference on MSDN](https://msdn.microsoft.com/windowshealthservice)
