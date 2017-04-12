@@ -23,7 +23,7 @@ Now that you've set up the Remote Desktop client on your device (Android, Mac, i
 - [Setting up](#Setting-up)
 - [Connections, gateway, and networks](#connection-gateway-and-networks)
 - [Monitors, audio, and mouse](#monitors-audio-and-mouse)
-- [Mac hardware](#Mac-client-hardware-questions)
+- [Mac hardware](#mac-client---hardware-questions)
 - [Specific error messages](#specific-errors)
 
 The majority of these questions apply to all of the clients, but there are a few specific to the Mac client.

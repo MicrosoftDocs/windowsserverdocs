@@ -23,14 +23,14 @@ Migration for a Remote Desktop Services deployment is supported from source serv
 For more information on the upgrade process and requirements, see [upgrading your Remote Desktop Services deployments to Windows Server 2016](upgrade-to-rds-2016.md).
 
 Use the following steps to migrate your Remote Desktop Services deployment: 
-- [Migrate RD Connection Broker servers](#Migrate-RD-Connection-Broker-servers) 
-- [Migrate session collections](#Migrate-session-collection)
-- [Migrate virtual desktop collections](#Migrate-virtual-desktop-collections)
-- [Migrate RD Web Access servers](#Migrate-RD-Web-Access-servers)
-- [Migrate RD Gateway servers](#Migrate-RD-Gateway-servers)
-- [Migrate RD Licensing servers](#Migrate-RD-Licensing-servers)
-- [Migrate standalone Remote Desktop Services servers](#Migrate-standalone-Remote-Desktop-Services-servers)
-- [Migrate certificates](#Migrate-certificates)
+- [Migrate RD Connection Broker servers](#migrate-rd-connection-broker-servers) 
+- [Migrate session collections](#migrate-session-collection)
+- [Migrate virtual desktop collections](#migrate-virtual-desktop-collections)
+- [Migrate RD Web Access servers](#migrate-rd-web-access-servers)
+- [Migrate RD Gateway servers](#migrate-rd-gateway-servers)
+- [Migrate RD Licensing servers](#migrate-rd-licensing-servers)
+- [Migrate standalone Remote Desktop Services servers](#migrate-standalone-remote-desktop-services-servers)
+- [Migrate certificates](#migrate-certificates)
 
 ## Migrate RD Connection Broker servers
 

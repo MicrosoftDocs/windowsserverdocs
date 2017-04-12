@@ -27,15 +27,15 @@ In addition to the [System Requirements for Windows Server](../../../get-started
 
 These capabilities usually aren't exposed directly in the BIOS of the server and are often hidden behind other settings.  For example, the same capabilities are required for SR-IOV support and in the BIOS you may need to set "Enable SR-IOV."  Please reach out to your system vendor if you are unable to identify the correct setting in your BIOS.
 
-To help ensure hardware the hardware is capable of Discrete Device Assignment, our engineers have put together a [Machine Profile Script](#machine_profile_script) that you can run on an Hyper-V enabled host to test if your server is correctly setup and what devices are capable of Discrete Device Assignment.
+To help ensure hardware the hardware is capable of Discrete Device Assignment, our engineers have put together a [Machine Profile Script](#machine-profile-script) that you can run on an Hyper-V enabled host to test if your server is correctly setup and what devices are capable of Discrete Device Assignment.
 
 ## Device Requirements
-Not every PCIe device can be used with Discrete Device Assignment.  For example, older devices that leverage legacy (INTx) PCI Interrupts are not supported. Jake Oshin's [blog posts](https://blogs.technet.microsoft.com/virtualization/2015/11/20/discrete-device-assignment-machines-and-devices/) go into more detail however, for the consumer, running the [Machine Profile Script](#machine_profile_script) will tell you which devices are capable of being used for Discrete Device Assignment.
+Not every PCIe device can be used with Discrete Device Assignment.  For example, older devices that leverage legacy (INTx) PCI Interrupts are not supported. Jake Oshin's [blog posts](https://blogs.technet.microsoft.com/virtualization/2015/11/20/discrete-device-assignment-machines-and-devices/) go into more detail however, for the consumer, running the [Machine Profile Script](#machine-profile-script) will tell you which devices are capable of being used for Discrete Device Assignment.
 
 Device manufactures can reach out to their Microsoft representative for more details.
 
 ## Device Driver
-As Discrete Device Assignment passes the entire PCIe device into the Guest VM, a host driver is not required to be installed prior to the device being mounted within the VM.  The only requirement on the host is that the device's [PCIe Location Path](#pcie_location_path) can be determined.  The device's driver can optionally be installed if this helps in identifying the device.  An example of this is, a GPU that doesn't has it's device driver installed shows up as a Microsoft Basic Render Device.  If the device driver is installed, it's manufacture and model will likely be displayed.
+As Discrete Device Assignment passes the entire PCIe device into the Guest VM, a host driver is not required to be installed prior to the device being mounted within the VM.  The only requirement on the host is that the device's [PCIe Location Path](#pcie-location-path) can be determined.  The device's driver can optionally be installed if this helps in identifying the device.  An example of this is, a GPU that doesn't has it's device driver installed shows up as a Microsoft Basic Render Device.  If the device driver is installed, it's manufacture and model will likely be displayed.
 
 Once the device is mounted inside the guest, the Manufacturer's device driver can now be installed like normal inside the guest virtual machine.  
 
@@ -53,7 +53,7 @@ If the admin desires to use a device with an untrusted tenant, we have provided 
 If you would like to bypass the security checks for a device that does not have a Device Mitigation Driver you will have to pass in `--force` to the `Dismount-VMHostAssignableDevice` call.  Understand that by doing so, you have changed the security profile of that system and this is only recommended during prototyping or trusted environments.
 
 ## PCIe Location Path
-The PCIe Location path is required to dismount and mount the device from the Host.  An example location path looks like the following: `"PCIROOT(20)#PCI(0300)#PCI(0000)#PCI(0800)#PCI(0000)"`.   The [Machine Profile Script](#machine_profile_script) will also return the Location Path of the PCIe device.
+The PCIe Location path is required to dismount and mount the device from the Host.  An example location path looks like the following: `"PCIROOT(20)#PCI(0300)#PCI(0000)#PCI(0800)#PCI(0000)"`.   The [Machine Profile Script](#machine-profile-script) will also return the Location Path of the PCIe device.
 
 ### Getting the Location Path by Using Device Manager
 ![Device Manager](../deploy/media/dda-devicemanager.png)
@@ -69,7 +69,7 @@ Some devices, especially GPUs, require additional MMIO space to be allocated to 
 Set-VM -LowMemoryMappedIoSpace 3Gb -VMName $vm
 Set-VM -HighMemoryMappedIoSpace 33280Mb -VMName $vm
 ```
-The easiest way to determine how much MMIO space to allocate is to use the [Machine Profile Script](#machine_profile_script).  Alternatively, you can calculate it based using device manager and the blog post, [Discrete Device Assignment - GPUs](https://blogs.technet.microsoft.com/virtualization/2015/11/23/discrete-device-assignment-gpus/), has more details.
+The easiest way to determine how much MMIO space to allocate is to use the [Machine Profile Script](#machine-profile-script).  Alternatively, you can calculate it based using device manager and the blog post, [Discrete Device Assignment - GPUs](https://blogs.technet.microsoft.com/virtualization/2015/11/23/discrete-device-assignment-gpus/), has more details.
 
 ## Machine Profile Script
 In order to simply identifying if the server is configured correctly and what devices are available to be passed through using Discrete Device Assignment, one of our engineers put together the following PowerShell script: [SurveyDDA.ps1.](https://github.com/Microsoft/Virtualization-Documentation/blob/live/hyperv-tools/DiscreteDeviceAssignment/SurveyDDA.ps1)
@@ -78,7 +78,7 @@ Before using the script, please ensure you have the Hyper-V role installed and y
 
 If the system is incorrectly configured to support Discrete Device Assignment, the tool will display an error message as to what is wrong. If the tool finds the system configured correctly, it will enumerate all the devices it can find on the PCIe Bus.
 
-For each device it finds, it'll display if it is able to be used with Discrete Device Assignment or not and if not it will give you a reason.  When a device is successfully identified as being able to be used for Discrete Device Assignment, the device's Location Path will be displayed.  Additionally, if that device requires [MMIO space](#mmio_space), that will also be listed.
+For each device it finds, it'll display if it is able to be used with Discrete Device Assignment or not and if not it will give you a reason.  When a device is successfully identified as being able to be used for Discrete Device Assignment, the device's Location Path will be displayed.  Additionally, if that device requires [MMIO space](#mmio-space), that will also be listed.
 
 ![SurveyDDA.ps1](./images/hyper-v-surveydda-ps1.png)
 
@@ -90,7 +90,7 @@ They are completely separate technologies. RemoteFX vGPU does not need to be ins
 ### I've passed a GPU into a VM but Remote Desktop or an application isn't recognizing the GPU
 There are a number of reasons this could happen but here are a few things to try.
 - Ensure the latest GPU vendor's driver is installed and is not reporting an error by checking the device state in device manager.
-- Ensure that device has enough [MMIO space](#mmio_space) allocated for it within the VM.
+- Ensure that device has enough [MMIO space](#mmio-space) allocated for it within the VM.
 - Ensure you're using a GPU that the vendor supports being used in this configuration, for example, some vendors disallow their consumer cards from working when passed through to a VM.
 - Ensure the application that's being run supports being run in a VM or that the drivers and GPU are supported by the application. Some applications have whitelists of GPUs and environments.
 - If you're using the Remote Desktop Session Host role or Windows Multipoint Service, you will need to ensure that a specific group policy is set.
