@@ -30,7 +30,7 @@ To prepare to create a shielding data file, take the following steps:
 
 Then you can create the shielding data file:
 
-- [Create a shielding data file and add guardians](#create a shielding data file and add guardians)
+- [Create a shielding data file and add guardians](#create-a-shielding-data-file-and-add-guardians)
 
 
 ## Obtain a certificate for Remote Desktop Connection
