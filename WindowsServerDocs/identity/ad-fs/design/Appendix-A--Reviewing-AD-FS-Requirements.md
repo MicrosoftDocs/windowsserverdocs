@@ -14,7 +14,7 @@ ms.technology: identity-adfs
 
 # Appendix A: Reviewing AD FS Requirements
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server 2012
 
 So that the organizational partners in your Active Directory Federation Services (AD FS) deployment can collaborate successfully, you must first make sure that your corporate network infrastructure is configured to support AD FS requirements for accounts, name resolution, and certificates. AD FS has the following types of requirements:  
   
