@@ -1,3 +1,3 @@
 ---
-redirect_url: /windows-server-docs/management/windows-commands/logman-import-export.md
+redirect_url: /windows-server/administration/windows-commands/logman-import-export.md
 ---

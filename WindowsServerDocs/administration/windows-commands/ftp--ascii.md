@@ -1,3 +1,3 @@
 ---
-redirect_url: /windows-server-docs/management/windows-commands/ftp-ascii.md
+redirect_url: /windows-server/administration/windows-commands/ftp-ascii.md
 ---

@@ -1,3 +1,3 @@
 ---
-redirect_url: /windows-server-docs/management/windows-commands/logman-start-stop.md
+redirect_url: /windows-server/administration/windows-commands/logman-start-stop.md
 ---

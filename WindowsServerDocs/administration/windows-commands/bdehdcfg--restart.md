@@ -1,4 +1,4 @@
 
 ---
-redirect_url: /windows-server-docs/management/windows-commands/bdehdcfg-restart.md
+redirect_url: /windows-server/administration/windows-commands/bdehdcfg-restart.md
 ---
