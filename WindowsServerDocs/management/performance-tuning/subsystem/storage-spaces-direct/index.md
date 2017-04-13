@@ -2,13 +2,11 @@
 title: Performance Tuning Storage Spaces Direct
 description: Storage Spaces Direct automatically tunes its performance based on the cache configuration of the hardware you use, as described in this topic.
 ms.prod: windows-server-threshold
-manager: dongill
 ms.technology: performance-tuning-guide
 ms.topic: article
-ms.assetid: 15a519fa-37cc-4d84-a9fe-097d33bb71ea
-author: phstee
 ms.author: Vshankar; DanLo; clausjor; StevenEk
-ms.date: 1/27/2017
+author: phstee
+ms.date: 04/24/2017
 ---
 
 # Performance Tuning Storage Spaces Direct

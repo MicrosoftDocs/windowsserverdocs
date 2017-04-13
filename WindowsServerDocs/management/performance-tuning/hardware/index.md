@@ -2,15 +2,11 @@
 title: Server Hardware Performance Considerations
 description: Server hardware performance considerations for Windows Server 2016
 ms.prod: windows-server-threshold
-ms.service: na
-manager: dongill
 ms.technology: performance-tuning-guide
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 822dd17a-f9f3-41c3-8004-a13dd3fdd642
-author: phstee
+ms.topic: landing-page
 ms.author: phstee
-ms.date: 10/31/2016
+author: phstee
+ms.date: 04/24/2017
 ---
 
 # Server Hardware Performance Considerations

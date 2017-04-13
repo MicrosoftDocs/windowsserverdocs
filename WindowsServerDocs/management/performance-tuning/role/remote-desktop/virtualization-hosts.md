@@ -2,15 +2,11 @@
 title: Performance Tuning Remote Desktop Virtualization Hosts
 description: Performance Tuning for Remote Desktop Virtualization Hosts
 ms.prod: windows-server-threshold
-ms.service: na
-manager: dongill
 ms.technology: performance-tuning-guide
-ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 2c90816d-c29d-4416-8116-0407c23ea73c
+ms.author: HammadBu; VladmiS
 author: phstee
-ms.author: HammadBu
-ms.date: 10/31/2016
+ms.date: 04/24/2017
 ---
 
 # Performance Tuning Remote Desktop Virtualization Hosts
