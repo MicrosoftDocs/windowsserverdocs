@@ -29,11 +29,13 @@
 ## [What's New in Windows Server 2016](get-started/What-s-New-in-Windows-Server-2016.md)
 ### [What's New in the Windows Console in Windows Server 2016](get-started/What-s-New-in-Console.md)
 ## [Administer Windows Server](administration/management-and-automation.md)
+
 ### [Get started with Setup and Boot Event Collection](administration/Get-started-with-Setup-and-Boot-Event-Collection.md)
 ### [Microsoft Server Performance Advisor](administration/server-performance-advisor/microsoft-server-performance-advisor.md)
 #### [Server Performance Advisor User's Guide](administration/server-performance-advisor/server-performance-advisor-users-guide.md)
 #### [Server Performance Advisor Pack Development Guide](administration/server-performance-advisor/server-performance-advisor-pack-development-guide.md)
 #### [Server Performance Advisor Pack for Tiered Storage Spaces](administration/server-performance-advisor/server-performance-advisor-pack-for-tiered-storage-spaces.md)
+### [Performance Tuning Guidelines](administration/performance-tuning/index.md) 
 ### [Remote Server Administration Tools](remote/remote-server-administration-tools.md)
 ### [Server Manager](administration/server-manager/server-manager.md)
 #### [Manage the Local Server and the Server Manager Console](administration/server-manager/manage-the-local-server-and-the-server-manager-console.md)

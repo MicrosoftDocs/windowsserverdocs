@@ -1,5 +1,5 @@
 ---
-redirect_url: /windows-server-docs/administrationment/windows-commands/ftp-literal_1.md
+redirect_url: /windows-server/administrationment/windows-commands/ftp-literal_1.md
 ---
 
 

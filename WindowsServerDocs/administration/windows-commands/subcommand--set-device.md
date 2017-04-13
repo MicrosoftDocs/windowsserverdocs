@@ -1,3 +1,3 @@
 ---
-redirect_url: /windows-server-docs/management/windows-commands/subcommand-set-device.md
+redirect_url: /windows-server/administration/windows-commands/subcommand-set-device.md
 ---

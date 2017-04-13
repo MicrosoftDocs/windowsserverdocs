@@ -1,3 +1,3 @@
 ---
-redirect_url: /windows-server-docs/management/windows-commands/ftp-recv.md
+redirect_url: /windows-server/administration/windows-commands/ftp-recv.md
 ---

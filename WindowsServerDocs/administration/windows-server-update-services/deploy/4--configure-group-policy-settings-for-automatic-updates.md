@@ -1,3 +1,3 @@
 ---
-redirect_url: /windows-server-docs/management/windows-server-update-services/deploy/4-configure-group-policy-settings-for-automatic-updates.md
+redirect_url: /windows-server/administration/windows-server-update-services/deploy/4-configure-group-policy-settings-for-automatic-updates.md
 ---
