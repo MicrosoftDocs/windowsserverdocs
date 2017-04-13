@@ -1,15 +1,12 @@
 ---
 title: Hyper-V Configuration
-description:
+description: Hyper-V configuration considerations for performance tuning
 ms.prod: windows-server-threshold
-ms.service: na
-manager: dongill
 ms.technology: performance-tuning-guide
-ms.tgt_pltfrm: na
 ms.topic: article
+ms.author: Asmahi; SandySp; JoPoulso
 author: phstee
-ms.author: Asmahi; SandySp; JoPoulso;
-ms.date: 10/31/2016
+ms.date: 04/24/2017
 ---
 
 # Hyper-V Configuration

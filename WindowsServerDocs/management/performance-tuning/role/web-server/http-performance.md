@@ -1,16 +1,12 @@
 ---
 title: Performance Tuning for HTTP 1.1/2
-description: Performance Tuning HTTP 1.1/2
+description: Performance tuning recommendations for HTTP 1.1/2
 ms.prod: windows-server-threshold
-ms.service: na
-manager: dongill
 ms.technology: performance-tuning-guide
-ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: e4658f31-043d-4497-9373-ab99549a83c7
-author: phstee
 ms.author: IvanPash; GMonte
-ms.date: 10/31/2016
+author: phstee
+ms.date: 04/24/2017
 ---
 
 # Performance Tuning HTTP 1.1/2

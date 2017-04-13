@@ -1,16 +1,12 @@
 ---
 title: Performance Tuning for SMB File Servers
-description: Performance Tuning for SMB File Servers
+description: Performance tuning guidelines for SMB File Servers on Windows Server 2016
 ms.prod: windows-server-threshold
-ms.service: na
-manager: dongill
 ms.technology: performance-tuning-guide
-ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 151a836e-d2c6-46b0-9943-b3793bd511de
-author: phstee
 ms.author: NedPyle; Danlo; DKruse
-ms.date: 10/31/2016
+author: phstee
+ms.date: 04/24/2017
 ---
 
 # Performance Tuning SMB File Servers

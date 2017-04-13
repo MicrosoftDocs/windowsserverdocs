@@ -1,16 +1,12 @@
 ---
-title: Performance tuning for file servers
-description: Performance tuning for file servers running Windows Server
+title: Performance tuning guidelines for file servers
+description: Performance tuning recommendations for file servers running Windows Server 16
 ms.prod: windows-server-threshold
-ms.service: na
-manager: dongill
 ms.technology: performance-tuning-guide
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 08b171dc-bc24-4068-a1e7-1ff099328146
-author: phstee
+ms.topic: landing-page
 ms.author: NedPyle; Danlo; DKruse
-ms.date: 1/27/2017
+author: phstee
+ms.date: 04/24/2017
 ---
 
 # Performance Tuning File Servers

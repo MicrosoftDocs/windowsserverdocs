@@ -1,23 +1,18 @@
 ---
 title: Performance Tuning for NFS File Servers
-description: Performance Tuning for NFS File Servers
+description: Performance tuning guidelines for Network File System (NFS) File Servers on Windows Server 2016
 ms.prod: windows-server-threshold
-ms.service: na
-manager: dongill
 ms.technology: performance-tuning-guide
-ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 5a855e5a-c27c-4833-a7ab-2fc256eb1b58
-author: phstee
 ms.author: RoopeshB, NedPyle
-ms.date: 10/31/2016
+author: phstee
+ms.date: 04/24/2017
 ---
 
 # Performance Tuning NFS File Servers
 
 
 ## <a href="" id="servicesnfs"></a>Services for NFS model
-
 
 The following sections provide information about the Microsoft Services for Network File System (NFS) model for client-server communication. Since NFS v2 and NFS v3 are still the most widely deployed versions of the protocol, all of the registry keys except for MaxConcurrentConnectionsPerIp apply to NFS v2 and NFS v3 only.
 

@@ -2,15 +2,11 @@
 title: Cache and Memory Manager Improvements
 description: Cache and Memory Manager Improvements in Windows Server 2016
 ms.prod: windows-server-threshold
-ms.service: na
-manager: dongill
 ms.technology: performance-tuning-guide
-ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 613d2c80-dc82-4b0b-b011-90866cb58940
-author: phstee
 ms.author: Pavel; ATales
-ms.date: 10/31/2016
+author: phstee
+ms.date: 04/24/2017
 ---
 
 # Cache and Memory Manager Improvements
