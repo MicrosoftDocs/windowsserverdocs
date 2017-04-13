@@ -1,3 +1,3 @@
 ---
-redirect_url: /windows-server-docs/get-started/System-Requirements
+redirect_url: /windows-server/get-started/System-Requirements
 ---

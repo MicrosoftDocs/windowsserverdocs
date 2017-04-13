@@ -1,3 +1,3 @@
 ---
-redirect_url: /windows-server-docs/get-started/customer-experience-guides
+redirect_url: /windows-server/get-started/customer-experience-guides
 ---

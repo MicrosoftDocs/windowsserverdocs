@@ -1,3 +1,3 @@
 ---
-redirect_url: /windows-server-docs/networking/dns/deploy/dns-tod-intelligent
+redirect_url: /windows-server/networking/dns/deploy/dns-tod-intelligent
 ---
