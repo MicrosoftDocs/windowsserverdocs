@@ -42,7 +42,7 @@ Write-Host ("Total Number of Cores: ", $cores)
 Write-Host ("Total Number of Logical Processors: ", $lps)
 ```
 
->![Important]
+>[!Important]
 > Allocating virtual processors across NUMA nodes might have a negative performance impact on Windows Server Gateway. Running multiple VMs, each of which has virtual processors from one NUMA node, likely provides better aggregate performance than a single VM to which all virtual processors are assigned.
 
 One gateway VM with eight virtual processors and at least 8GB RAM is recommended when selecting the number of gateway VMs to install on each Hyper-V host when each NUMA node has eight cores. In this case, one NUMA node is dedicated to the host machine.
@@ -51,7 +51,7 @@ One gateway VM with eight virtual processors and at least 8GB RAM is recommended
 
 Following is the recommended configuration for each server that is running Windows Server 2016 and Hyper-V and whose workload is to run Windows Server Gateway VMs. These configuration instructions include the use of Windows PowerShell command examples. These examples contain placeholders for actual values that you need to provide when you run the commands in your environment. For example, network adapter name placeholders are “NIC1” and “NIC2.” When you run commands that use these placeholders, utilize the actual names of the network adapters on your servers rather than using the placeholders, or the commands will fail.
 
->![Note]
+>[!Note]
 > To run the following Windows PowerShell commands, you must be a member of the Administrators group.
 
 | Configuration Item                          | Windows Powershell Configuration                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
@@ -63,7 +63,7 @@ Following is the recommended configuration for each server that is running Windo
 | Receive Side Scaling (RSS) on physical NICs | You can verify whether your physical NICs have RSS enabled by running the Windows PowerShell command Get-NetAdapterRss. You can use the following Windows PowerShell commands to enable and configure RSS on your network adapters: <br> ```Enable-NetAdapterRss “NIC1”,”NIC2”```<br> ```Set-NetAdapterRss “NIC1”,”NIC2” –NumberOfReceiveQueues 16 -MaxProcessors``` <br> NOTE: If VMMQ or VMQ is enabled, RSS does not have to be enabled on the physical network adapters. You can enable it on the host virtual network adapters |
 | VMMQ                                        | To enable VMMQ for a VM, run the following command: <br> ```Set-VmNetworkAdapter -VMName <gateway vm name>,-VrssEnabled $true -VmmqEnabled $true``` <br> NOTE: Not all network adapters support VMMQ. Currently, it is supported on Chelsio T5 and T6, Mellanox CX-3 and CX-4, and QLogic 45xxx series                                                                                                                                                                                                                                      |
 | Virtual Machine Queue (VMQ) on the NIC Team | You can enable VMQ on your SET team by using the following Windows PowerShell command: <br>```Enable-NetAdapterVmq``` <br> NOTE: This should be enabled only if the HW does not support VMMQ. If supported, VMMQ should be enabled for better performance.                                                                                                                                                                                                                                                               |
->![Note]
+>[!Note]
 > VMQ and vRSS come into picture only when the load on the VM is high and the CPU is being utilized to the maximum. Only then will at least one processor core max out. VMQ and vRSS will then be beneficial to help spread the processing load across multiple cores. This is not applicable for IPsec traffic as IPsec traffic is confined to a single core.
 
 ## Windows Server Gateway VM configuration
