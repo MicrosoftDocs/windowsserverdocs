@@ -8,7 +8,6 @@ ms.suite: na
 ms.technology: remote-desktop-services
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: df3f3d58-2ae6-4816-9c59-1821262b508b
 author: lizap
 ms.author: elizapo
 ms.date: 09/20/2016

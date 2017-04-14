@@ -7,7 +7,6 @@ manager: dongill
 ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
-ms.assetid: 9f5ddb52-bfb2-4d57-90e5-3e1bf595941c
 author: KBDAzure
 ms.date: 8/16/2016
 ---
