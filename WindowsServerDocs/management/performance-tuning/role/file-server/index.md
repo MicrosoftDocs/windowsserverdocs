@@ -1,15 +1,14 @@
 ---
-title: Performance tuning guidelines for file servers
-description: Performance tuning recommendations for file servers running Windows Server 16
+title: Performance tuning for file servers
+description: Performance tuning for file servers running Windows Server
 ms.prod: windows-server-threshold
 ms.technology: performance-tuning-guide
-ms.topic: landing-page
-ms.author: NedPyle; Danlo; DKruse
+ms.topic: article
 author: phstee
-ms.date: 04/24/2017
+ms.author: NedPyle; Danlo; DKruse
+ms.date: 4/14/2017
 ---
-
-# Performance Tuning File Servers
+# Performance tuning for file servers
 
 You should select the proper hardware to satisfy the expected file server load, considering average load, peak load, capacity, growth plans, and response times. Hardware bottlenecks limit the effectiveness of software tuning.
 
@@ -20,37 +19,38 @@ The following REG\_DWORD registry settings can affect the performance of client 
 
 -   **ConnectionCountPerNetworkInterface**
 
-    ``` syntax
+    ```
     HKLM\System\CurrentControlSet\Services\LanmanWorkstation\Parameters\ConnectionCountPerNetworkInterface
     ```
 
     Applies to Windows 10, Windows 8.1, Windows 8, Windows Server 2016, Windows Server 2012 R2, and Windows Server 2012
 
-    The default is 1, with a valid range from 1-16. The maximum number of connections per interface to be established with a server running Windows Server 2012 for non-RSS interfaces.
+    The default is 1, and we strongly recommend using the default. The valid range is 1-16. The maximum number of connections per interface to be established with a server for non-RSS interfaces.
+
 
 -   **ConnectionCountPerRssNetworkInterface**
 
-    ``` syntax
+    ```
     HKLM\System\CurrentControlSet\Services\LanmanWorkstation\Parameters\ConnectionCountPerRssNetworkInterface
     ```
 
     Applies to Windows 10, Windows 8.1, Windows 8, Windows Server 2016, Windows Server 2012 R2, and Windows Server 2012
 
-    The default is 4, with a valid range from 1-16. The maximum number of connections per interface to be established with a server running Windows Server 2012 for RSS interfaces.
+    The default is 4, and we strongly recommend using the default. The valid range is 1-16. The maximum number of connections per interface to be established with a server for RSS interfaces.
 
 -   **ConnectionCountPerRdmaNetworkInterface**
 
-    ``` syntax
+    ```
     HKLM\System\CurrentControlSet\Services\LanmanWorkstation\Parameters\ConnectionCountPerRdmaNetworkInterface
     ```
 
     Applies to Windows 10, Windows 8.1, Windows 8, Windows Server 2016, Windows Server 2012 R2, and Windows Server 2012
 
-    The default is 2, with a valid range from 1-16. The maximum number of connections per interface to be established with server running Windows Server 2012 for RDMA interfaces.
+    The default is 2, and we strongly recommend using the default. The valid range is 1-16. The maximum number of connections per interface to be established with a server for RDMA interfaces.
 
 -   **MaximumConnectionCountPerServer**
 
-    ``` syntax
+    ```
     HKLM\System\CurrentControlSet\Services\LanmanWorkstation\Parameters\MaximumConnectionCountPerServer
     ```
 
@@ -60,7 +60,7 @@ The following REG\_DWORD registry settings can affect the performance of client 
 
 -   **DormantDirectoryTimeout**
 
-    ``` syntax
+    ```
     HKLM\System\CurrentControlSet\Services\LanmanWorkstation\Parameters\DormantDirectoryTimeout
     ```
 
@@ -70,7 +70,7 @@ The following REG\_DWORD registry settings can affect the performance of client 
 
 -   **FileInfoCacheLifetime**
 
-    ``` syntax
+    ```
     HKLM\System\CurrentControlSet\Services\LanmanWorkstation\Parameters\FileInfoCacheLifetime
     ```
 
@@ -80,7 +80,7 @@ The following REG\_DWORD registry settings can affect the performance of client 
 
 -   **DirectoryCacheLifetime**
 
-    ``` syntax
+    ```
     HKLM\System\CurrentControlSet\Services\LanmanWorkstation\Parameters\DirectoryCacheLifetime
     ```
 
@@ -95,7 +95,7 @@ The following REG\_DWORD registry settings can affect the performance of client 
 
 -   **DirectoryCacheEntrySizeMax**
 
-    ``` syntax
+    ```
     HKLM\System\CurrentControlSet\Services\LanmanWorkstation\Parameters\DirectoryCacheEntrySizeMax
     ```
 
@@ -105,7 +105,7 @@ The following REG\_DWORD registry settings can affect the performance of client 
 
 -   **FileNotFoundCacheLifetime**
 
-    ``` syntax
+    ```
     HKLM\System\CurrentControlSet\Services\LanmanWorkstation\Parameters\FileNotFoundCacheLifetime
     ```
 
@@ -115,7 +115,7 @@ The following REG\_DWORD registry settings can affect the performance of client 
 
 -   **CacheFileTimeout**
 
-    ``` syntax
+    ```
     HKLM\System\CurrentControlSet\Services\LanmanWorkstation\Parameters\CacheFileTimeout
     ```
 
@@ -125,7 +125,7 @@ The following REG\_DWORD registry settings can affect the performance of client 
 
 -   **DisableBandwidthThrottling**
 
-    ``` syntax
+    ```
     HKLM\System\CurrentControlSet\Services\LanmanWorkstation\Parameters\DisableBandwidthThrottling
     ```
 
@@ -135,7 +135,7 @@ The following REG\_DWORD registry settings can affect the performance of client 
 
 -   **DisableLargeMtu**
 
-    ``` syntax
+    ```
     HKLM\System\CurrentControlSet\Services\LanmanWorkstation\Parameters\DisableLargeMtu
     ```
 
@@ -145,17 +145,19 @@ The following REG\_DWORD registry settings can affect the performance of client 
 
 -   **RequireSecuritySignature**
 
-    ``` syntax
+    ```
     HKLM\System\CurrentControlSet\Services\LanmanWorkstation\Parameters\RequireSecuritySignature
     ```
 
     Applies to Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Vista, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, and Windows Server 2008
 
-    The default is 0. Changing this value to 1 prevents SMB communication with computers where SMB signing is disabled. In addition, a value of 1 causes SMB signing to be used for all SMB communication. SMB signing can increase CPU cost and network round trips. If SMB signing is not required, ensure that this registry value is 0 on all clients and servers.
+    The default is 0, disabling SMB Signing. Changing this value to 1 enables SMB signing for all SMB communication, preventing SMB communication with computers where SMB signing is disabled. SMB signing can increase CPU cost and network round trips, but helps block man-in-the-middle attacks. If SMB signing is not required, ensure that this registry value is 0 on all clients and servers. 
+    
+    For more info, see [The Basics of SMB Signing](https://blogs.technet.microsoft.com/josebda/2010/12/01/the-basics-of-smb-signing-covering-both-smb1-and-smb2/).
 
 -   **FileInfoCacheEntriesMax**
 
-    ``` syntax
+    ```
     HKLM\System\CurrentControlSet\Services\LanmanWorkstation\Parameters\FileInfoCacheEntriesMax
     ```
 
@@ -165,7 +167,7 @@ The following REG\_DWORD registry settings can affect the performance of client 
 
 -   **DirectoryCacheEntriesMax**
 
-    ``` syntax
+    ```
     HKLM\System\CurrentControlSet\Services\LanmanWorkstation\Parameters\DirectoryCacheEntriesMax
     ```
 
@@ -175,7 +177,7 @@ The following REG\_DWORD registry settings can affect the performance of client 
 
 -   **FileNotFoundCacheEntriesMax**
 
-    ``` syntax
+    ```
     HKLM\System\CurrentControlSet\Services\LanmanWorkstation\Parameters\FileNotFoundCacheEntriesMax
     ```
 
@@ -185,7 +187,7 @@ The following REG\_DWORD registry settings can affect the performance of client 
 
 -   **MaxCmds**
 
-    ``` syntax
+    ```
     HKLM\System\CurrentControlSet\Services\LanmanWorkstation\Parameters\MaxCmds
     ```
 
@@ -195,7 +197,7 @@ The following REG\_DWORD registry settings can affect the performance of client 
 
 -   **DormantFileLimit**
 
-    ``` syntax
+    ```
     HKLM\System\CurrentControlSet\Services\LanmanWorkstation\Parameters\DormantFileLimit
     ```
 
@@ -219,6 +221,6 @@ The general tuning parameters for client computers can optimize a computer for a
 
 Starting in Windows 8, you can configure many of these SMB settings by using the **Set-SmbClientConfiguration** and **Set-SmbServerConfiguration** Windows PowerShell cmdlets. Registry-only settings can be configured by using Windows PowerShell as well.
 
-``` syntax
+```
 Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters" RequireSecuritySignature -Value 0 -Force
 ```

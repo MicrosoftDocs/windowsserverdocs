@@ -1,18 +1,17 @@
 ---
 title: Performance Tuning for NFS File Servers
-description: Performance tuning guidelines for Network File System (NFS) File Servers on Windows Server 2016
+description: Performance Tuning for NFS File Servers
 ms.prod: windows-server-threshold
 ms.technology: performance-tuning-guide
 ms.topic: article
-ms.author: RoopeshB, NedPyle
 author: phstee
-ms.date: 04/24/2017
+ms.author: RoopeshB, NedPyle
+ms.date: 10/31/2016
 ---
-
 # Performance Tuning NFS File Servers
 
-
 ## <a href="" id="servicesnfs"></a>Services for NFS model
+
 
 The following sections provide information about the Microsoft Services for Network File System (NFS) model for client-server communication. Since NFS v2 and NFS v3 are still the most widely deployed versions of the protocol, all of the registry keys except for MaxConcurrentConnectionsPerIp apply to NFS v2 and NFS v3 only.
 
@@ -32,20 +31,19 @@ The following REG\_DWORD registry settings can affect the performance of NFS fil
 
 -   **OptimalReads**
 
-    ``` syntax
+    ```
     HKLM\System\CurrentControlSet\Services\NfsServer\Parameters\OptimalReads
     ```
 
     The default is 0. This parameter determines whether files are opened for FILE\_RANDOM\_ACCESS or for FILE\_SEQUENTIAL\_ONLY, depending on the workload I/O characteristics. Set this value to 1 to force files to be opened for FILE\_RANDOM\_ACCESS. FILE\_RANDOM\_ACCESS prevents the file system and cache manager from prefetching.
 
-    **Note**  
-    This setting must be carefully evaluated because it may have potential impact on system file cache grow.
+    >[!NOTE]
+    > This setting must be carefully evaluated because it may have potential impact on system file cache grow.
 
-     
 
 -   **RdWrHandleLifeTime**
 
-    ``` syntax
+    ```
     HKLM\System\CurrentControlSet\Services\NfsServer\Parameters\RdWrHandleLifeTime
     ```
 
@@ -53,7 +51,7 @@ The following REG\_DWORD registry settings can affect the performance of NFS fil
 
 -   **RdWrNfsHandleLifeTime**
 
-    ``` syntax
+    ```
     HKLM\System\CurrentControlSet\Services\NfsServer\Parameters\RdWrNfsHandleLifeTime
     ```
 
@@ -61,7 +59,7 @@ The following REG\_DWORD registry settings can affect the performance of NFS fil
 
 -   **RdWrNfsReadHandlesLifeTime**
 
-    ``` syntax
+    ```
     HKLM\System\CurrentControlSet\Services\NfsServer\Parameters\RdWrNfsReadHandlesLifeTime
     ```
 
@@ -69,7 +67,7 @@ The following REG\_DWORD registry settings can affect the performance of NFS fil
 
 -   **RdWrThreadSleepTime**
 
-    ``` syntax
+    ```
     HKLM\System\CurrentControlSet\Services\NfsServer\Parameters\RdWrThreadSleepTime
     ```
 
@@ -77,7 +75,7 @@ The following REG\_DWORD registry settings can affect the performance of NFS fil
 
 -   **FileHandleCacheSizeinMB**
 
-    ``` syntax
+    ```
     HKLM\System\CurrentControlSet\Services\NfsServer\Parameters\FileHandleCacheSizeinMB
     ```
 
@@ -85,7 +83,7 @@ The following REG\_DWORD registry settings can affect the performance of NFS fil
 
 -   **LockFileHandleCacheInMemory**
 
-    ``` syntax
+    ```
     HKLM\System\CurrentControlSet\Services\NfsServer\Parameters\LockFileHandleCacheInMemory
     ```
 
@@ -93,7 +91,7 @@ The following REG\_DWORD registry settings can affect the performance of NFS fil
 
 -   **MaxIcbNfsReadHandlesCacheSize**
 
-    ``` syntax
+    ```
     HKLM\System\CurrentControlSet\Services\NfsServer\Parameters\MaxIcbNfsReadHandlesCacheSize
     ```
 
@@ -101,7 +99,7 @@ The following REG\_DWORD registry settings can affect the performance of NFS fil
 
 -   **HandleSigningEnabled**
 
-    ``` syntax
+    ```
     HKLM\System\CurrentControlSet\Services\NfsServer\Parameters\HandleSigningEnabled
     ```
 
@@ -109,7 +107,7 @@ The following REG\_DWORD registry settings can affect the performance of NFS fil
 
 -   **RdWrNfsDeferredWritesFlushDelay**
 
-    ``` syntax
+    ```
     HKLM\System\CurrentControlSet\Services\NfsServer\Parameters\RdWrNfsDeferredWritesFlushDelay
     ```
 
@@ -117,7 +115,7 @@ The following REG\_DWORD registry settings can affect the performance of NFS fil
 
 -   **CacheAddFromCreateAndMkDir**
 
-    ``` syntax
+    ```
     HKLM\System\CurrentControlSet\Services\NfsServer\Parameters\CacheAddFromCreateAndMkDir
     ```
 
@@ -125,7 +123,7 @@ The following REG\_DWORD registry settings can affect the performance of NFS fil
 
 -   **AdditionalDelayedWorkerThreads**
 
-    ``` syntax
+    ```
     HKLM\SYSTEM\CurrentControlSet\Control\SessionManager\Executive\AdditionalDelayedWorkerThreads
     ```
 
@@ -133,20 +131,19 @@ The following REG\_DWORD registry settings can affect the performance of NFS fil
 
 -   **NtfsDisable8dot3NameCreation**
 
-    ``` syntax
+    ```
     HKLM\System\CurrentControlSet\Control\FileSystem\NtfsDisable8dot3NameCreation
     ```
 
     The default in Windows Server 2012 and Windows Server 2012 R2 is 2. In releases prior to Windows Server 2012, the default is 0. This parameter determines whether NTFS generates a short name in the 8dot3 (MSDOS) naming convention for long file names and for file names that contain characters from the extended character set. If the value of this entry is 0, files can have two names: the name that the user specifies and the short name that NTFS generates. If the user-specified name follows the 8dot3 naming convention, NTFS does not generate a short name. A value of 2 means that this parameter can be configured per volume.
 
-    **Note**  
-    The system volume has 8dot3 enabled by default. All other volumes in Windows Server 2012 and Windows Server 2012 R2 have 8dot3 disabled by default. Changing this value does not change the contents of a file, but it avoids the short-name attribute creation for the file, which also changes how NTFS displays and manages the file. For most file servers, the recommended setting is 1 (disabled).
+    >[!NOTE]
+    > The system volume has 8dot3 enabled by default. All other volumes in Windows Server 2012 and Windows Server 2012 R2 have 8dot3 disabled by default. Changing this value does not change the contents of a file, but it avoids the short-name attribute creation for the file, which also changes how NTFS displays and manages the file. For most file servers, the recommended setting is 1 (disabled).
 
-     
 
 -   **NtfsDisableLastAccessUpdate**
 
-    ``` syntax
+    ```
     HKLM\System\CurrentControlSet\Control\FileSystem\NtfsDisableLastAccessUpdate
     ```
 
@@ -154,7 +151,7 @@ The following REG\_DWORD registry settings can affect the performance of NFS fil
 
 -   **MaxConcurrentConnectionsPerIp**
 
-    ``` syntax
+    ```
     HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Rpcxdr\Parameters\MaxConcurrentConnectionsPerIp
     ```
 
