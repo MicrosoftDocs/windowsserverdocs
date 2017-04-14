@@ -1,6 +1,6 @@
 ---
 title: Windows Commands
-description: "Windows Commands topic for **** - "
+description: Windows Commands 
 ms.custom: na
 ms.reviewer: na
 ms.suite: na
@@ -12,6 +12,7 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
+ms.prod: windows-server-threshold
 ---
 # Windows Commands
 

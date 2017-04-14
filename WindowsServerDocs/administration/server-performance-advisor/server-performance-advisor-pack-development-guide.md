@@ -6,6 +6,9 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
+ms.topic: article
+ms.prod: windows-server-threshold
+ms.technology: manage
 ---
 # Server Performance Advisor Pack Development Guide
 
