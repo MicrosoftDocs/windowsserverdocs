@@ -64,7 +64,7 @@ manager: dongill
       </br>Storage</br></br></a>
     </td>
     <td style="width:25%; border:0;"></br>
-      <a href="windows-server/administration/management-and-automation">
+      <a href="/windows-server/administration/management-and-automation">
         <img height=145 src="media/8-management.png" alt="Management and automation icon" title="Windows Server Management and Automation" /></br>Administration</br></a>
     </td>
   </tr>
