@@ -1,5 +1,5 @@
 ---
-title: LDAP considerations in AD performance tuning
+title: LDAP considerations in ADDS performance tuning
 description: LDAP considerations in Active Directory workloads
 ms.prod: windows-server-threshold
 ms.technology: performance-tuning-guide
@@ -9,7 +9,7 @@ author: phstee
 ms.date: 04/24/2017
 ---
 
-# LDAP considerations in ADS performance tuning
+# LDAP considerations in ADDS performance tuning
 
 >[!Important]
 > The following is a summary of the key recommendations and considerations to optimize server hardware for Active Directory workloads covered in greater depth in the [Capacity Planning for Active Directory Domain Services](http://go.microsoft.com/fwlink/?LinkId=324566) article. Readers are highly encouraged to read [Capacity Planning for Active Directory Domain Services](http://go.microsoft.com/fwlink/?LinkId=324566) for a greater technical understanding and implications of these recommendations.
@@ -94,13 +94,10 @@ For more info, see the following:
 
 -   [Indexed Attributes](http://msdn.microsoft.com/library/windows/desktop/ms677112.aspx)
 
-## Troubleshooting
-
-
-For info on ADS performance troubleshooting, see [Monitoring Your Branch Office Environment](http://technet.microsoft.com/library/dd736504.aspx).
 
 ## See also
-- [Performance Tuning Active Directory Servers](index.md)
+- [Performance tuning Active Directory Servers](index.md)
 - [Hardware considerations](hardware-considerations.md)
-- [Site definition considerations](site-definition-considerations.md)
+- [Proper placement of domain controllers and site considerations](site-definition-considerations.md)
+- [Troubleshooting ADDS performance](troubleshoot.md) 
 - [Capacity Planning for Active Directory Domain Services](http://go.microsoft.com/fwlink/?LinkId=324566)
