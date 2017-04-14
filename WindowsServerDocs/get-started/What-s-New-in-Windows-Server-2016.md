@@ -58,8 +58,8 @@ What's New in Active Directory Federation Services. Active Directory Federation 
 ### Web Application Proxy  
 The latest version of Web Application Proxy focuses on new features that enable publishing and preauthentication for more applications and improved user experience. Check out the full list of new features that includes preauthentication for rich client apps such as Exchange ActiveSync and wildcard domains for easier publishing of SharePoint apps. For more information, see [What's New in Web Application Proxy in Windows Server 2016](https://technet.microsoft.com/library/dn765473.aspx).  
 
-##  [Management and Automation](../administration/Management-and-Automation.md)  
-The Management and Automation area focuses on tool and reference information for IT pros who want to run and manage Windows Server 2016, including Windows PowerShell.  
+##  [Management and Automation](../administration/index.md)  
+The Management and Automation area focuses on tool and reference information for IT pros who want to run and manage Windows Server 2016, including Windows PowerShell.
 
 Windows PowerShell 5.0 includes significant new features, including support for developing with classes and new security features that extend its use, improve its usability, and allow you to control and manage Windows-based environments more easily and comprehensively. See [Windows Management Framework (WMF) 5.0 RTM Release Notes Overview](https://msdn.microsoft.com/powershell/wmf/5.0/releasenotes) for details.
 

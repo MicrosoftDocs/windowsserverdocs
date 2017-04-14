@@ -1,5 +1,5 @@
 ---
-title: Compute in Windows Server 2016
+title: Virtualization in Windows Server 2016
 description: Provides an overview of computing technologies, such as Containers, Hyper-V, and Remote Desktop Services.
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -12,7 +12,7 @@ author: KBDAzure
 ms.author: kathydav
 ms.date: 10/12/2016
 ---
-# Compute in Windows Server 2016
+# Virtualization in Windows Server 2016
 
 >Applies To: Windows Server 2016 
 
