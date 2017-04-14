@@ -10,6 +10,7 @@
 #### [Site definition considerations](role/active-directory-server/site-definition-considerations.md)
 #### [Hardware considerations](role/active-directory-server/hardware-considerations.md)
 #### [LDAP considerations](role/active-directory-server/ldap-considerations.md)
+#### [Troubleshoot ADDS performance](role/active-directory-server/troubleshoot.md)
 ### [File Server](role/file-server/index.md)
 #### [SMB File Server](role/file-server/smb-file-server.md)
 #### [NFS File Server](role/file-server/nfs-file-server.md)

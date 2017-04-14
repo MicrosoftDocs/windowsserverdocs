@@ -25,8 +25,21 @@ Properly deploying a sufficient number of domain controllers, in the right domai
 >[!Important]
 > Proper configuration and sizing of Active Directory has a significant potential impact on overall system and workload performance. Readers are highly encouraged to start by reading [Capacity Planning for Active Directory Domain Services](http://go.microsoft.com/fwlink/?LinkId=324566).
 
+## Updates and evolving recommendations
+
+Massive improvements in both Active Directory and client performance optimizations have occurred over the last several generations of the operating system and these efforts continue. We recommend that the most current versions of the platform be deployed to get the benefits, including:
+
+- Increased reliability
+- Better performance
+- Better logging and tools to troubleshoot
+
+However, we realize that this takes time and many environments are running in a scenario where 100% adoption of the most current platform is impossible. Some improvements have been added to older versions of the platform and we’ll continue to add more.
+
+We encourage you to stay up to date on the lastest news, guidance and best practices for managing ADDS by following our team blog, ["Ask the Directory Services Team"](https://blogs.technet.microsoft.com/askds).
+
 ## See also
 - [Hardware considerations](hardware-considerations.md)
-- [Site definition considerations](site-definition-considerations.md)
 - [LDAP considerations](ldap-considerations.md)
+- [Proper placement of domain controllers and site considerations](site-definition-considerations.md)
+- [Troubleshooting ADDS performance](troubleshoot.md) 
 - [Capacity Planning for Active Directory Domain Services](http://go.microsoft.com/fwlink/?LinkId=324566)
