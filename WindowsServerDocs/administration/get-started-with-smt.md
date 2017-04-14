@@ -7,7 +7,6 @@ ms.suite: na
 ms.technology: manage-smt
 ms.tgt_pltfrm: na
 ms.topic: get-started article
-ms.assetid: 90e3464c-49d8-4861-96db-ee6f8a09b5ce
 author: coreyp-at-msft
 ms.author: coreyp
 manager: lizapo
@@ -44,7 +43,7 @@ With SMT, you can do the following:
 
 ## How is SMT Different from Remote Server Administrative Tools (RSAT)? 
 
-RSAT is a set of remote server management tools that you can download and install on Windows 10. They include support for remote management of computers that are running the Server Core installation option or the Minimal Server Interface configuration of Windows Server 2016, Windows Server 2012 R2, and in limited cases, the Server Core installation options of Windows Server 2012. For more information about RSAT, see [Remote Server Administration Tools](https://technet.microsoft.com/windows-server-docs/administrationment/remote-server-administration-tools).
+RSAT is a set of remote server management tools that you can download and install on Windows 10. They include support for remote management of computers that are running the Server Core installation option or the Minimal Server Interface configuration of Windows Server 2016, Windows Server 2012 R2, and in limited cases, the Server Core installation options of Windows Server 2012. For more information about RSAT, see [Remote Server Administration Tools](https://technet.microsoft.com/windows-server-docs/management/remote-server-administration-tools).
 
 ## SMT gateway
 

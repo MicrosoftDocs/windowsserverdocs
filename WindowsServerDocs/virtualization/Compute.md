@@ -7,7 +7,6 @@ ms.service: na
 manager: dongill
 ms.technology: compute
 ms.topic: article
-ms.assetid: 8a7b18d8-b1ab-42a5-85d9-366715aa851b
 author: KBDAzure
 ms.author: kathydav
 ms.date: 10/12/2016
