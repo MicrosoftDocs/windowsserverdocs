@@ -42,19 +42,17 @@ Write-Host ("Total Number of Cores: ", $cores)
 Write-Host ("Total Number of Logical Processors: ", $lps)
 ```
 
-### Important
-Allocating virtual processors across NUMA nodes might have a negative performance impact on Windows Server Gateway. Running multiple VMs, each of which has virtual processors from one NUMA node, likely provides better aggregate performance than a single VM to which all virtual processors are assigned.
-Following is the recommendation when you select the number of gateway VMs to install on each Hyper-V host when each NUMA node has eight cores:
-1. One gateway VM with eight virtual processors and at least 8GB RAM
+>![Important]
+> Allocating virtual processors across NUMA nodes might have a negative performance impact on Windows Server Gateway. Running multiple VMs, each of which has virtual processors from one NUMA node, likely provides better aggregate performance than a single VM to which all virtual processors are assigned.
 
-Note that in the above case, 1 NUMA node is dedicated to the host machine.
+One gateway VM with eight virtual processors and at least 8GB RAM is recommended when selecting the number of gateway VMs to install on each Hyper-V host when each NUMA node has eight cores. In this case, one NUMA node is dedicated to the host machine.
 
 ## Hyper-V Host configuration
 
 Following is the recommended configuration for each server that is running Windows Server 2016 and Hyper-V and whose workload is to run Windows Server Gateway VMs. These configuration instructions include the use of Windows PowerShell command examples. These examples contain placeholders for actual values that you need to provide when you run the commands in your environment. For example, network adapter name placeholders are “NIC1” and “NIC2.” When you run commands that use these placeholders, utilize the actual names of the network adapters on your servers rather than using the placeholders, or the commands will fail.
 
-### Note
-To run the following Windows PowerShell commands, you must be a member of the Administrators group.
+>![Note]
+> To run the following Windows PowerShell commands, you must be a member of the Administrators group.
 
 | Configuration Item                          | Windows Powershell Configuration                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 |---------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -63,9 +61,10 @@ To run the following Windows PowerShell commands, you must be a member of the Ad
 | Receive Buffers size on physical NICs       | You can verify whether the physical NICs support the configuration of this parameter by running the command  ```Get-NetAdapterAdvancedProperty```. If they do not support this parameter, the output from the command does not include the property “Receive Buffers.” If NICs do support this parameter, you can use the following Windows PowerShell command to set the Receive Buffers size: <br>```Set-NetAdapterAdvancedProperty “NIC1” –DisplayName “Receive Buffers” –DisplayValue 3000``` <br>                          |
 | Send Buffers size on physical NICs          | You can verify whether the physical NICs support the configuration of this parameter by running the command ```Get-NetAdapterAdvancedProperty```. If the NICs do not support this parameter, the output from the command does not include the property “Send Buffers.” If NICs do support this parameter, you can use the following Windows PowerShell command to set the Send Buffers size: <br> ```Set-NetAdapterAdvancedProperty “NIC1” –DisplayName “Transmit Buffers” –DisplayValue 3000``` <br>                           |
 | Receive Side Scaling (RSS) on physical NICs | You can verify whether your physical NICs have RSS enabled by running the Windows PowerShell command Get-NetAdapterRss. You can use the following Windows PowerShell commands to enable and configure RSS on your network adapters: <br> ```Enable-NetAdapterRss “NIC1”,”NIC2”```<br> ```Set-NetAdapterRss “NIC1”,”NIC2” –NumberOfReceiveQueues 16 -MaxProcessors``` <br> NOTE: If VMMQ or VMQ is enabled, RSS does not have to be enabled on the physical network adapters. You can enable it on the host virtual network adapters |
-| VMMQ                                        | To enable VMMQ for a VM, run the following command: <br> ```Set-VmNetworkAdapter -VMName,-VrssEnabled $true -VmmqEnabled $true``` <br> NOTE: Not all network adapters support VMMQ. Currently, it is supported on Chelsio T5 and T6, Mellanox CX-3 and CX-4, and QLogic 45xxx series                                                                                                                                                                                                                                      |
+| VMMQ                                        | To enable VMMQ for a VM, run the following command: <br> ```Set-VmNetworkAdapter -VMName <gateway vm name>,-VrssEnabled $true -VmmqEnabled $true``` <br> NOTE: Not all network adapters support VMMQ. Currently, it is supported on Chelsio T5 and T6, Mellanox CX-3 and CX-4, and QLogic 45xxx series                                                                                                                                                                                                                                      |
 | Virtual Machine Queue (VMQ) on the NIC Team | You can enable VMQ on your SET team by using the following Windows PowerShell command: <br>```Enable-NetAdapterVmq``` <br> NOTE: This should be enabled only if the HW does not support VMMQ. If supported, VMMQ should be enabled for better performance.                                                                                                                                                                                                                                                               |
-NOTE: VMQ and vRSS comes into picture only when the load on the VM is high and the CPU is getting utilized to the maximum. Only then will at least one processor core max out. VMQ and vRSS will then be beneficial to help spread the processing load across multiple cores. Note that this is not applicable for IPsec traffic as IPsec traffic is confined to a single core.
+>![Note]
+> VMQ and vRSS come into picture only when the load on the VM is high and the CPU is being utilized to the maximum. Only then will at least one processor core max out. VMQ and vRSS will then be beneficial to help spread the processing load across multiple cores. This is not applicable for IPsec traffic as IPsec traffic is confined to a single core.
 
 ## Windows Server Gateway VM configuration
 
