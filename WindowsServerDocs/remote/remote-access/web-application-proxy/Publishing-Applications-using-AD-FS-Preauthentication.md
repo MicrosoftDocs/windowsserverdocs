@@ -124,7 +124,7 @@ This procedure describes how to publish a claims-based application, such as a Sh
   
 8.  On the **Results** page, make sure that the application published successfully, and then click **Close**.  
   
-![](../media/Publishing-Applications-using-AD-FS-Preauthentication/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+![](../../media/Publishing-Applications-using-AD-FS-Preauthentication/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
@@ -206,7 +206,7 @@ This procedure describes how to publish an application that uses Integrated Wind
   
 8.  On the **Results** page, make sure that the application published successfully, and then click **Close**.  
   
-![](../media/Publishing-Applications-using-AD-FS-Preauthentication/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+![](../../media/Publishing-Applications-using-AD-FS-Preauthentication/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
@@ -258,7 +258,7 @@ HTTP Basic is the authorization protocol used by many protocols, including Activ
   
 The authentication flow for clients that use HTTP Basic is described below and in this diagram:  
   
-![](../media/Publishing-Applications-using-AD-FS-Preauthentication/WebApplicationProxy_httpBasicflow.png)  
+![](../../media/Publishing-Applications-using-AD-FS-Preauthentication/WebApplicationProxy_httpBasicflow.png)  
   
 1.  The user attempts to access a published web application a telephone client.  
   
@@ -306,7 +306,7 @@ The following procedure explains how to publish HTTP basic applications.
   
 8.  On the **Results** page, make sure that the application published successfully, and then click **Close**.  
   
-![](../media/Publishing-Applications-using-AD-FS-Preauthentication/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+![](../../media/Publishing-Applications-using-AD-FS-Preauthentication/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
