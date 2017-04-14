@@ -24,12 +24,11 @@ For more information on the upgrade process and requirements, see [upgrading you
 
 Use the following steps to migrate your Remote Desktop Services deployment: 
 - [Migrate RD Connection Broker servers](#migrate-rd-connection-broker-servers) 
-- [Migrate session collections](#migrate-session-collection)
+- [Migrate session collections](#migrate-session-collections)
 - [Migrate virtual desktop collections](#migrate-virtual-desktop-collections)
 - [Migrate RD Web Access servers](#migrate-rd-web-access-servers)
 - [Migrate RD Gateway servers](#migrate-rd-gateway-servers)
 - [Migrate RD Licensing servers](#migrate-rd-licensing-servers)
-- [Migrate standalone Remote Desktop Services servers](#migrate-standalone-remote-desktop-services-servers)
 - [Migrate certificates](#migrate-certificates)
 
 ## Migrate RD Connection Broker servers
