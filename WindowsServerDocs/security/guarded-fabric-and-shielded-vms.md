@@ -4,7 +4,6 @@ redirect_url: https://technet.microsoft.com/en-us/windows-server-docs/security/g
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.topic: article
-ms.assetid: cf257b3a-9365-42e2-a37c-327cac6028d4
 manager: dongill
 author: coreyp-at-msft
 ms.technology: security-guarded-fabric

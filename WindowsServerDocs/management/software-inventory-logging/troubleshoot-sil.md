@@ -8,7 +8,6 @@ ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: ed51c13c-7cbf-4144-a675-011fd29379d4
 author: brentfor
 ms.author: coreyp
 manager: lizapo
