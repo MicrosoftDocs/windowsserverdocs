@@ -36,7 +36,7 @@ In this test lab guide you will build a Network Load Balancing (NLB) enabled Rem
   
 -   [STEP 7: Test connectivity when returning to the Corpnet](STEP-7-Test-Connectivity-When-Returning-to-the-Corpnet.md). Make sure that the client computer can still access corporate resources when returning to Corpnet.  
   
--   [STEP 8: Snapshot the configuration](STEP-8-Snapshot-the-Configuration.md). After completing the test lab, take a snapshot of the working Remote Access NLB cluster so that you can return to it later to test additional scenarios.  
+-   [STEP 8: Snapshot the configuration](da-cluster-nlb-s8-snapshot.md). After completing the test lab, take a snapshot of the working Remote Access NLB cluster so that you can return to it later to test additional scenarios.  
   
 
 

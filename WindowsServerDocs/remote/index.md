@@ -19,8 +19,11 @@ Remote Desktop Services enables users to access Windows-based programs that are 
 
 The Remote Access server role includes DirectAccess and virtual private network \(VPN\), local area network \(LAN\) Routing, and Web Application Proxy. RAS allows you to provide network connectivity to remote employees, site-to-site VPN to connect remote office locations over the Internet, and the RAS Gateway, which has multitenant and Border Gateway Protocol \(BGP\) capabilities for Enterprises and Cloud Service Providers \(CSPs\).
 
-## Web Application Proxy
+## [Web Application Proxy](remote-access/web-application-proxy/web-application-proxy-windows-server.md)
+
 Web Application Proxy provides reverse proxy functionality for web applications inside your corporate network to allow users on any device to access them from outside the corporate network safely and securely.
+
+
 
 ## [Multipoint Services](multipoint-services/multipoint-services.md)
 

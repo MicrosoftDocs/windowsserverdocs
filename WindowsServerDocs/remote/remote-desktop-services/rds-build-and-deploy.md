@@ -18,7 +18,7 @@ manager: dongill
 
 Remote Desktop deployments are easily scaled. You can increase and decrease Remote Desktop Web Access, Gateway, Connection Broker and Session Host servers at will. You can use Remote Desktop Connection Broker to distribute workloads. Active Directory based authentication provides a highly secure environment. 
 
-[Remote Desktop clients](/clients/remote-desktop-clients.md) enable access from any Windows, Apple, or Android computer, tablet, or phone.
+[Remote Desktop clients](.\clients\remote-desktop-clients.md) enable access from any Windows, Apple, or Android computer, tablet, or phone.
 
 Use the following information to build and deploy your Remote Desktop Services deployment:
 
