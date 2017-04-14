@@ -1,3 +1,3 @@
 ---
-redirect_url: /windows-server-docs/security/tls/tls-ssl-schannel-ssp-overview.md
+redirect_url: /windows-server/security/tls/tls-ssl-schannel-ssp-overview.md
 ---

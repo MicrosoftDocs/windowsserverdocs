@@ -1,5 +1,5 @@
 ---
-redirect_url: /windows-server-docs/networking/technologies/ipam/ipam-top
+redirect_url: /windows-server/networking/technologies/ipam/ipam-top
 ---
 
   
