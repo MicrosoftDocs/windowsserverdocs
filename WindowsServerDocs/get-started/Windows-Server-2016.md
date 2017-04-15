@@ -24,7 +24,7 @@ This library provides the core content that IT pros need to evaluate, plan, depl
 <table border="0" width="100%">
   <tr style="text-align:center">
     <td style="width:25%; border:0;">
-      <a href="get-started/What-s-New-in-Windows-Server-2016">
+      <a href="What-s-New-in-Windows-Server-2016.md">
         <img height=145 src="media/whats-new-highlight.png" alt="What's new icon" title="Whats new in Windows Server 16?"/>
         <br/>What's New?</a>
     </td>
@@ -36,7 +36,7 @@ This library provides the core content that IT pros need to evaluate, plan, depl
     <td style="width:25%; border:0;">
       <a href="../administration/index">
         <img height=145 src="media/8-management.png" alt="administer icon" title="Administer Windows Server" />
-      <br/>Administer Windows Server</a>
+      <br/>Administer</a>
     </td>
     <td style="width:25%; border:0;">
       <a href="/windows-server/failover-clustering/failover-clustering-overview">
