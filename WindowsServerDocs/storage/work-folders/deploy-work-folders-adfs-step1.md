@@ -42,14 +42,14 @@ There are many commercial certificate authorities (CAs) from which you can purch
 For the test environment, you will use a self-signed certificate that is created by one of the provided scripts.  
   
 > [!NOTE]  
-> AD FS does not support Cryptography Next Generation (CNG) certificates, which means that you cannot create the self-signed certificate by using the Windows PowerShell cmdlet  New-SelfSignedCertificate. You can, however, use the makecert.ps1 script included in the [Deploying Work Folders with AD FS and Web Application Proxy](http://blogs.technet.com/cfs-file.ashx/__key/communityserver-blogs-components-weblogfiles/00-00-00-47-85-metablogapi/wf_5F00_adfs_5F00_wap_5F00_3.zip) blog post. This script creates a self\-signed certificated that works with AD FS and prompts for the SAN names that will be needed to create the certificate.  
+> AD FS does not support Cryptography Next Generation (CNG) certificates, which means that you cannot create the self-signed certificate by using the Windows PowerShell cmdlet  New-SelfSignedCertificate. You can, however, use the makecert.ps1 script included in the [Deploying Work Folders with AD FS and Web Application Proxy](https://blogs.technet.microsoft.com/filecab/2014/03/03/deploying-work-folders-with-ad-fs-and-web-application-proxy-wap) blog post. This script creates a self\-signed certificated that works with AD FS and prompts for the SAN names that will be needed to create the certificate.  
   
 Next, do the additional pre-installment work described in the following sections.  
   
 ### Create an AD FS self\-signed certificate  
 To create an AD FS self-signed certificate, follow these steps:  
   
-1.  Download the scripts provided in the [Deploying Work Folders with AD FS and Web Application Proxy](https://msdnshared.blob.core.windows.net/media/TNBlogsFS/prod.evol.blogs.technet.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/47/85/metablogapi/wf_adfs_wap_3.zip) blog post and then copy the file makecert.ps1 to the AD FS machine.  
+1.  Download the scripts provided in the [Deploying Work Folders with AD FS and Web Application Proxy](https://blogs.technet.microsoft.com/filecab/2014/03/03/deploying-work-folders-with-ad-fs-and-web-application-proxy-wap) blog post and then copy the file makecert.ps1 to the AD FS machine.  
   
 2.  Open a Windows PowerShell window with admin privileges.  
   
