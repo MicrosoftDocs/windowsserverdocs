@@ -8,7 +8,6 @@ ms.technology: storage-spaces
 ms.topic: article
 author: eldenchristensen
 ms.date: 02/15/2017
-ms.assetid: 8bd0d09a-0421-40a4-b752-40ecb5350ffd
 ---
 # Storage Spaces Direct hardware requirements
 >Applies To: Windows Server 2016

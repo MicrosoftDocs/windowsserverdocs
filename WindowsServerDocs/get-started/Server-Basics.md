@@ -7,7 +7,6 @@ manager: dongill
 ms.technology: get-started
 ms.date: 02/14/2017
 ms.topic: article
-ms.assetid: 8a7b18d8-b1ab-42a5-85d9-366715aa851b
 author: jaimeo
 ms.author: jaimeo
 ---
