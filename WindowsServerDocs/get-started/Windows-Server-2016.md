@@ -57,8 +57,8 @@ This library provides the core content that IT pros need to evaluate, plan, depl
     </td>
     <td style="width:25%; border:0;"><br/>
       <a href="../remote/index.md">
-        <img height=145 src="media/remote.png" alt="remote icon" title="Windows Server Storage" />
-      <br/>Remote</a>
+        <img height=145 src="media/remote.png" alt="remote icon" title="Remote access and server management" />
+      <br/>Remote Access</a>
     </td>
     <td style="width:25%; border:0;"><br/>
       <a href="../security/security-and-assurance.md">
