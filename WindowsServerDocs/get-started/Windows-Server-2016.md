@@ -29,52 +29,52 @@ This library provides the core content that IT pros need to evaluate, plan, depl
         <br/>What's New?</a>
     </td>
     <td style="width:25%; border:0;">
-      <a href="server-basics">
+      <a href="server-basics.md">
         <img height=145 src="media/1-getstarted.png" alt="get started icon" title="Get Started with Windows Server 16" />
       <br/>Get Started</a>
     </td>
     <td style="width:25%; border:0;">
-      <a href="../administration/index">
+      <a href="../administration/index.md">
         <img height=145 src="media/8-management.png" alt="administer icon" title="Administer Windows Server" />
       <br/>Administer</a>
     </td>
     <td style="width:25%; border:0;">
-      <a href="/windows-server/failover-clustering/failover-clustering-overview">
+      <a href="../failover-clustering/failover-clustering-overview.md">
         <img height=145 src="media/3-failover.png" alt="Failover clustering icon" title="Windows Server Failover clustering" />
       <br/>Failover Clustering</a>
     </td>
   </tr>
   <tr style="text-align:center;">
-    <td style="width:25%; border:0;">
-      <a href="../identity/identity-and-access">
+    <td style="width:25%; border:0;"><br/>
+      <a href="../identity/identity-and-access.md">
         <img height=145 src="media/4-identity.png" alt="Identity and access icon" title="Windows Server Identity and Access" />
-      <br>Identity and Access</a><br/>
+      <br>Identity and Access</a>
     </td>
     <td style="width:25%; border:0;"><br/>
-      <a href="../networking/networking">
+      <a href="../networking/networking.md">
         <img height=145 src="media/6-networking.png" alt="Networking icon" title="Windows Server Networking" />
       <br/>Networking</a>
     </td>
     <td style="width:25%; border:0;"><br/>
-      <a href="../remote/index">
+      <a href="../remote/index.md">
         <img height=145 src="media/remote.png" alt="remote icon" title="Windows Server Storage" />
-      <br/>Remote</a><br/>
+      <br/>Remote</a>
     </td>
     <td style="width:25%; border:0;"><br/>
-      <a href="../networking/networking">
+      <a href="../security/security-and-assurance.md">
         <img height=145 src="media/5-security.png" alt="Security icon" title="Windows Server Security and Assurance" />
-      <br/>Security and Assurance</a><br/>
+      <br/>Security and Assurance</a>
     </td>
   </tr>
   <tr style="text-align:center;">
     <td style="width:25%; border:0;">&nbsp; </td>
      <td style="width:25%; border:0;"><br>
-      <a href="../storage/storage">
+      <a href="../storage/storage.md">
         <img height=145 src="media/7-storage.png" alt="Storage icon" title="Windows Server Storage" />
-      <br/>Storage</a><br/>
+      <br/>Storage</a>
     </td>
    <td style="width:25%; border:0;"><br/>
-      <a href="../virtualization/index">
+      <a href="../virtualization/index.md">
         <img height=145 src="media/virtualization.png" alt="virtualization icon" title="Windows Server Virtualization" />
       <br/>Virtualization</a>
     </td>
