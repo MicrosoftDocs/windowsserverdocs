@@ -21,6 +21,29 @@ The policies described in this article make use of two kinds of claims
   
 2.  Claims AD FS creates based on information forwarded to AD FS by the client as HTTP headers  
   
+>**Important**:
+>The policies as documented below will block Windows 10 domain join and sign on scenarios that require access to the following additional endpoints
+
+AD FS endpoints required for Windows 10 Domain Join and sign on
+- [federation service name]/adfs/services/trust/2005/windowstransport
+- [federation service name]/adfs/services/trust/13/windowstransport
+- [federation service name]/adfs/services/trust/2005/usernamemixed
+- [federation service name]/adfs/services/trust/13/usernamemixed 
+- [federation service name]/adfs/services/trust/2005/certificatemixed
+- [federation service name]/adfs/services/trust/13/certificatemixed
+
+To resolve, update any policies that deny based on the endpoint claim to allow exception for the endpoints above.
+
+For example, the rule below:
+
+`c1:[Type == "http://custom/ipoutsiderange", Value == "true"] && c2:[Type == "http://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-endpoint-absolute-path", Value != "/adfs/ls/"] => issue(Type = "http://schemas.microsoft.com/authorization/claims/deny", Value = " DenyUsersWithClaim");`  
+
+would be updated to:
+
+`c1:[Type == "http://custom/ipoutsiderange", Value == "true"] && c2:[Type == "http://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-endpoint-absolute-path", Value != "(/adfs/ls/)|(/adfs/services/trust/2005/windowstransport)|(/adfs/services/trust/13/windowstransport)|(/adfs/services/trust/2005/usernamemixed)|(/adfs/services/trust/13/usernamemixed)|(/adfs/services/trust/2005/certificatemixed)|(/adfs/services/trust/13/certificatemixed)"] => issue(Type = "http://schemas.microsoft.com/authorization/claims/deny", Value = " DenyUsersWithClaim");`
+
+
+
 > [!NOTE]
 >  Claims from this category should only be used to implement business policies and not as security policies to protect access to your network.  It is possible for unauthorized clients to send headers with false information as a way to gain access.  
   

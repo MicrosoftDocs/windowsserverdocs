@@ -12,37 +12,46 @@ ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ---
 
-# Access control policies in Active Directory Federation Services
+# Controlling Access to Organizational Data with Active Directory Federation Services
 
-This document provides an overview of client access policies in AD FS.  For detailed information on specific client access polices by version see:
+This document provides an overview of access control with AD FS across on premises, hybrid and cloud scenarios.  
 
-- [Client access policies in AD FS 2.0](Access-Control-Policies-in-AD-FS-2.md)
+## AD FS and Conditional Access to On Premises Resources 
+Since the introduction of Active Directory Federation Services, authorization policies have been available to restrict or allow users access to resources based on attributes of the request and the resource.  As AD FS has moved from version to version, how these policies are implemented has changed.  For detailed information on access control features by version see:
+- [Access Control Policies in AD FS in Windows Server 2016](Access-Control-Policies-in-AD-FS.md)
+- [Access control in AD FS in Windows Server 2012 R2](Manage-Risk-with-Conditional-Access-Control.md)
+
+
+## AD FS and Conditional Access in a Hybrid Organization  
+
+AD FS provides the on premises component of conditional access policy in a hybrid scenario. AD FS based authorization rules should be used for non Azure AD resources, such as on premises applications federated directly to AD FS.  The cloud component is provided by [Azure AD Conditional Access](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-conditional-access).  Azure AD Connect provides the control plane connecting the two.
+
+For example, when you register devices with Azure AD for conditional access to cloud resources, the Azure AD Connect device write back capability makes device registration information available on premises for AD FS policies to consume and enforce.  This way, you have a consistent approach to access control policies for both on premises and cloud resources.  
+
+![conditional access](../deployment/media/Plan-Device-based-Conditional-Access-on-Premises/ADFS_ITPRO4.png)  
+
+
+### The evolution of Client Access Policies for Office 365
+Many of you are using client access policies with AD FS to limit access to Office 365 and other Microsoft Online services based on factors such as the location of the client and the type of client application being used.  
 - [Client access policies in Windows Server 2012 R2 AD FS](Access-Control-Policies-W2K12.md)
-- [Client access policies in Windows Server 2016 AD FS](Access-Control-Policies-in-AD-FS.md)
+- [Client access policies in AD FS 2.0](Access-Control-Policies-in-AD-FS-2.md)
 
-Since the introduction of Active Directory Federation Services, client access policies have been available to restrict or allow users access to resources.  As AD FS has moved from version to version, how these policies are implemented has changed.  This document brings all of the different versions of AD FS client access policies together.  This page will act as a central location for the most update information on AD FS client Access policies.
+Some examples of these policies include:
+- Block all extranet client access to Office 365
+- Block all extranet client access to Office 365, except for devices accessing Exchange Online for Exchange Active Sync
 
-## What are client access policies?
+Often the underlying need behind these policies is to mitigate risk of data leakage by ensuring only authorized clients, applications that do not cache data, or devices that can be disabled remotely can get access to resources.
 
+While the above documented policies for AD FS work in the specific scenarios documented, they have limitations because they depend on client data that is not consistently available.  For example, the identity of the client application has only been available for Exchange Online based services and not for resources such as SharePoint Online, where the same data might be accessed via the browser or a “thick client” such as Word or Excel.  Also AD FS is unaware of the resource within Office 365 being accessed, such as SharePoint Online or Exchange Online.
 
-Client access policies work by identifying which authentication requests should be permitted based upon attributes of the request itself. To provide this additional request context information, client access policies introduce a set of new claim types that AD FS populates from header information sent by the requesting client. 
+To address these limitations and provide a more robust way to use polices to manage access to business data in Office 365 or other Azure AD based resources, Microsoft has introduced Azure AD Conditional Access.  Azure AD Conditional Access policies can be configured for a specific resource, or for any or all resources within Office 365, SaaS or custom applications in Azure AD.  These policies pivot on device trust, location, and other factors.
 
-### Claim types
-Client access policies work by identifying which authentication requests should be permitted based upon attributes of the request itself. To provide this additional request context information, client access policies use a set of claim types that AD FS populates from header information sent by the requesting client. For a detailed description of the new claim types and values, see [New Claim Types](AD-FS-Claims-Types.md).
-## Common AD FS client access scenarios
-The following table describes the scenarios supported by the client access policy feature.
+To find out more about Azure AD Conditional Access, see [Conditional Access in Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-conditional-access)
 
-|Scenario|Description|
-|-----|-----| 
-|Block all external access to Office 365|Office 365 access is allowed from all clients on the internal corporate network, but requests from external clients are denied based on the IP address of the external client.|
-|Block all external access to Office 365, except Exchange ActiveSync|Office 365 access is allowed from all clients on the internal corporate network, as well as from any external client devices, such as smart phones, that make use of Exchange ActiveSync. All other external clients, such as those using Outlook, are blocked.|
-|Block all external access to Office 365, except for browser-based applications such as Outlook Web Access or SharePoint Online|Blocks external access to Office 365, except for passive (browser-based) applications such as Outlook Web Access or SharePoint Online.|
-|Block all external access to Office 365 for members of designated Active Directory groups|This scenario is used for testing and validating client access policy deployment. It blocks external access to Office 365 only for members of one or more Active Directory group. It can also be used to provide external access only to members of a group.|
-
+A key change enabling these scenarios is [modern authentication](https://blogs.office.com/2015/11/19/updated-office-365-modern-authentication-public-preview/), a new way of authenticating users and devices that works the same way across Office clients, Skype, Outlook, and browsers.
 
 ## Next Steps
-For more information on specific version of client access policies see"
+For more information on controlling access across the cloud and on premises see:
 
-- [Client access policies in AD FS 2.0](Access-Control-Policies-in-AD-FS-2.md)
-- [Client access policies in Windows Server 2012 R2 AD FS](Access-Control-Policies-W2K12.md)
-- [Client access policies in Windows Server 2016 AD FS](Access-Control-Policies-in-AD-FS.md)
+- [Conditional Access in Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-conditional-access)
+- [Access Control Policies in AD FS 2016](Access-Control-Policies-in-AD-FS.md)
