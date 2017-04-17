@@ -69,12 +69,12 @@ This library provides the core content that IT pros need to evaluate, plan, depl
   <tr style="text-align:center;">
     <td style="width:25%; border:0;">&nbsp; </td>
      <td style="width:25%; border:0;"><br>
-      <a href="../storage/storage.md">
+      <a href="/storage/storage.md">
         <img height=145 src="media/7-storage.png" alt="Storage icon" title="Windows Server Storage" />
       <br/>Storage</a>
     </td>
    <td style="width:25%; border:0;"><br/>
-      <a href="../virtualization/index.md">
+      <a href="/virtualization/index.md">
         <img height=145 src="media/virtualization.png" alt="virtualization icon" title="Windows Server Virtualization" />
       <br/>Virtualization</a>
     </td>
