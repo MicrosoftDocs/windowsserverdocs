@@ -185,7 +185,7 @@ To export the certificate, follow these steps:
   
 8.  Expand the folder **Console Root\Certificates\(Local Computer)\Personal\Certificates**.  
   
-9. Right-click the **AD FS certificate**, click **All Tasks**, and then click **Export...**.  
+9.  Right-click the **AD FS certificate**, click **All Tasks**, and then click **Export...**.  
   
 10. The Certificate Export Wizard opens. Select **Yes, export the private key**.  
   
@@ -216,7 +216,7 @@ You must give the AD FS service account permission to access the private key of 
   
 8.  Expand the folder **Console Root\Certificates\(Local Computer)\Personal\Certificates**.  
   
-9. Right-click **Certificates**, click **All Tasks**, and then click **Manage Private Keys**.  
+9.  Right-click the **AD FS certificate**, click **All Tasks**, and then click **Manage Private Keys**.  
   
 10. In the **Permissions** window, click **Add**.  
   
