@@ -1,23 +1,24 @@
 ---
 ms.assetid: 13210461-1e92-48a1-91a2-c251957ba256
-title: Troubleshooting Drive Firmware Update Issues in Windows (1703)	
+title: Troubleshooting drive firmware updates	
 ms.prod: windows-server-threshold
 ms.author: toklima
 ms.manager: masriniv
 ms.technology: storage
 ms.topic: article
 author: toklima
-ms.date: 03/23/2017
+ms.date: 04/17/2017
 ---
-# Troubleshooting Drive Firmware Update Issues in Windows (1703)
->Applies To: Windows 10 (1703) and later
+# Troubleshooting drive firmware updates
 
-With Windows Server 2016 ships the capability to update firmware of HDDs and SSDs that have been certified with the Firmware Upgradeable AQ (Additional Qualifier) via PowerShell.
+>Applies To: Windows 10, version 1703
 
-You can find more information about this feature on TechNet, as well as Channel9:
+Windows 10, version 1703 includes the capability to update firmware of HDDs and SSDs that have been certified with the Firmware Upgradeable AQ (Additional Qualifier) via PowerShell.
 
-- TechNet: https://technet.microsoft.com/en-us/windows-server-docs/storage%2fupdate-firmware
-- Channel9: https://channel9.msdn.com/Blogs/windowsserver/Update-Drive-Firmware-Without-Downtime-in-Storage-Spaces-Direct
+You can find more information about this feature here:
+
+- [Updating drive firmware in Windows Server 2016](update-firmware.md)
+- [Update Drive Firmware Without Downtime in Storage Spaces Direct](https://channel9.msdn.com/Blogs/windowsserver/Update-Drive-Firmware-Without-Downtime-in-Storage-Spaces-Direct)
 
 Firmware updates may fail for various reasons. The purpose of this article is to help with advanced troubleshooting.
 
@@ -25,7 +26,7 @@ Firmware updates may fail for various reasons. The purpose of this article is to
   > Information in this article, depending on the issue, may not be sufficient to fully debug all possible failure cases.
 
 ## Common issues
-Architecturally, this new capability relies on APIs implemented in the Windows Storage stack, which PowerShell calls into. The storage stack relies on drivers and hardware to properly implement industry defined commands. This yields several points at which failures can occur. The most commonly observed issues are:
+Architecturally, this new capability relies on APIs implemented in the Windows storage stack, which PowerShell calls into. The storage stack relies on drivers and hardware to properly implement industry defined commands. This yields several points at which failures can occur. The most commonly observed issues are:
 
 1.	A given drive does not properly implement the industry-standard commands (does not have the AQ)
 2.	The APIs needed to perform the update are not implemented or faulty (if 3rd party drivers are used)
@@ -33,8 +34,8 @@ Architecturally, this new capability relies on APIs implemented in the Windows S
 
 The following sections outline troubleshooting information, depending on whether Microsoft or 3rd party drivers are used.
 
-## Identifying Inappropriate Hardware
-The quickest way to identify if a device supports the correct command set is to simply launch PowerShell and pass a disk’s representing PhysicalDisk object into the Get-StorageFirmwareInfo cmdlet. Here is an example:
+## Identifying inappropriate hardware
+The quickest way to identify if a device supports the correct command set is to simply launch PowerShell and pass a disk's representing PhysicalDisk object into the Get-StorageFirmwareInfo cmdlet. Here is an example:
 
 	```powershell
 	PS C:\Windows\system32> Get-PhysicalDisk -SerialNumber 15140F55976D | Get-StorageFirmwareInformation
@@ -55,10 +56,10 @@ To validate if a SAS device supports the required command set, two options exist
 1.	Try it out via the Update-StorageFirmware cmdlet with an appropriate firmware image, or
 2.	Consult the Windows Server Catalogue to identify which SAS devices have successfully gained the FW Update AQ (https://www.windowsservercatalog.com/)
 
-### Remediation Options
+### Remediation options
 If a given device you are testing does not support the appropriate command set, either query your vendor to see if an updated firmware is available that provides the needed command set, or consult the Windows Server Catalogue to identify devices for sourcing that implement the appropriate command set.
 
-## Troubleshooting with 3rd-Party Drivers (SAS)
+## Troubleshooting with 3rd-Party drivers (SAS)
 The software components that most closely interact with hardware are mini-port drivers in the Windows storage stack. For some storage protocols, such as SATA and NVMe, Microsoft provides native Windows drivers. These drivers allow for additional debug information. 3rd party hardware and software vendors however are free to write their own miniport drivers for their devices and their support level for debug information may vary.
 
 To identify what happened to the firmware download and activate APIs sent down the storage stack, regardless of miniport driver, consult the following event log channel:
@@ -115,10 +116,10 @@ It is possible that different error condition exhibit the same error codes, if t
 
 In cases where protocols are mixed and translations occur, i.e. SATA behind SAS, it is best to test the SATA device directly connected to a SATA controller to rule it out as a potential problem.
 
-### Remediation Options
+### Remediation options
 If the 3rd party driver is identified as not implementing the needed APIs or translations, it is possible to either swap to the Microsoft provided alternatives for SATA (StorAHCI.sys) and NVMe (StorNVMe.sys), or reach out to the OEM or HBA vendor that provided the SAS driver and query if a newer version with the proper support exists.
 
-## Additional Troubleshooting with Microsoft-built Drivers (SATA/NVMe)
+## Additional troubleshooting with Microsoft drivers (SATA/NVMe)
 When Windows-native drivers, such as StorAHCI.sys or StorNVMe.sys are used to power storage devices, it is possible to get additional information about possible failure cases during firmware update operations.
 
 Beyond the ClassPnP Operational channel, StorAHCI and StorNVMe will log the device’s protocol specific return codes in the following ETW channel:
