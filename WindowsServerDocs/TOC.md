@@ -1,5 +1,7 @@
 # [Windows Server 2016](get-started/Windows-Server-2016.md)
 ## [Get Started](get-started/Server-Basics.md)
+### [What's New in Windows Server 2016](get-started/What-s-New-in-Windows-Server-2016.md)
+#### [What's New in the Windows Console in Windows Server 2016](get-started/What-s-New-in-Console.md)
 ### [Installation and Upgrade of Windows Server Releases](get-started/Installation-and-Upgrade.md)
 ### [Migration of Windows Server Roles and Features](get-started/Migrate-Roles-and-Features.md)
 ### [Windows Server 2016 System Requirements](get-started/System-Requirements.md)
@@ -25,9 +27,6 @@
 ### [Install Server Core](get-started/Getting-started-with-Server-Core.md)
 #### [Configure Server Core with Sconfig.cmd](get-started/Sconfig-on-WS2016.md)
 ### [Install Server with Desktop Experience](get-started/Getting-started-with-Server-with-Desktop-Experience.md)
-## [Customer Experience Guides for Windows Server 2016](get-started/customer-experience-guides.md)
-## [What's New in Windows Server 2016](get-started/What-s-New-in-Windows-Server-2016.md)
-### [What's New in the Windows Console in Windows Server 2016](get-started/What-s-New-in-Console.md)
 ## [Administer Windows Server](administration/index.md)
 ### [Get started with Setup and Boot Event Collection](administration/Get-started-with-Setup-and-Boot-Event-Collection.md)
 ### [Microsoft Server Performance Advisor](administration/server-performance-advisor/microsoft-server-performance-advisor.md)
@@ -720,7 +719,7 @@
 #### [System Center Technologies for Software Defined Networking](networking/sdn/Sc-Tech-for-Sdn.md)
 #### [Microsoft Azure and Software Defined Networking](networking/sdn/Azure_and_Sdn.md)
 #### [Contact the Datacenter and Cloud Networking Team](networking/sdn/contact-sdn-team.md)
-## Remote
+## [Remote](remote/remote.md)
 ### [Remote Desktop Services](remote/remote-desktop-services/welcome-to-rds.md)
 #### [Get started](remote/remote-desktop-services/rds-get-started.md)
 ##### [What's new in RDS?](remote/remote-desktop-services/rds-whats-new.md)
@@ -1195,6 +1194,6 @@
 
 
 
-## [Other Windows Server versions](get-started/windows-server-versions.md)
+## [Other Windows Server versions](windows-server-versions.md)
 
 
