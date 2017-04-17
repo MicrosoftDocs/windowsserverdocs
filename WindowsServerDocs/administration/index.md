@@ -13,7 +13,7 @@ ms.date: 4/24/2016
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-<img src="../get-started/media/8-management.png" style='float:left; padding:.5em;' alt="Icon showing a gear"> Management and automation features and tools help IT pros run and manage Windows Server.  
+<img src="../get-started/media/8-management.png" style='float:left; padding:.5em;' alt="Icon showing a gear"> Administration features and tools help IT pros run and manage Windows Server.  
 <br><br><br><br><br><br>
 
 ## [Microsoft Server Performance Advisor](server-performance-advisor/microsoft-server-performance-advisor.md)
