@@ -118,4 +118,5 @@ Install-WebApplicationProxy -FederationServiceTrustCredential $cred -Certificate
 ```
 
 ## Additional references  
-[AD FS support for alternate hostname binding for certificate authentication](../operations/AD-FS-support-for-alternate-hostname-binding-for-certificate-authentication.md)
+* [AD FS support for alternate hostname binding for certificate authentication](../operations/AD-FS-support-for-alternate-hostname-binding-for-certificate-authentication.md)
+* [AD FS and certificate KeySpec property Information](../technical-reference/AD-FS-and-KeySpec-Property.md)
