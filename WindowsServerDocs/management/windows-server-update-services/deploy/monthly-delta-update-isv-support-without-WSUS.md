@@ -7,7 +7,6 @@ ms.suite: na
 ms.technology: manage-wsus
 ms.tgt_pltfrm: na
 ms.topic: get-started article
-ms.assetid: 90e3464c-49d8-4861-96db-ee6f8a09b5ce
 author: sakitong
 ms.author: coreyp
 manager: lizapo
