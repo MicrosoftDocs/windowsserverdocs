@@ -151,7 +151,8 @@ Enabling Workplace Join is optional, but can be useful when you want users to be
 To enable device registration for Workplace Join, you must run the following Windows PowerShell commands, which will configure device registration and set the global authentication policy:  
   
 ```powershell  
-Initialize-ADDeviceRegistration -ServiceAccountName <your AD FS service account>  
+Initialize-ADDeviceRegistration -ServiceAccountName <your AD FS service account>
+    Example: Initialize-ADDeviceRegistration -ServiceAccountName contoso\adfsservice$
 Set-ADFSGlobalAuthenticationPolicy -DeviceAuthenticationEnabled $true   
 ```  
   
@@ -184,7 +185,7 @@ To export the certificate, follow these steps:
   
 8.  Expand the folder **Console Root\Certificates\(Local Computer)\Personal\Certificates**.  
   
-9. Right-click **Certificates**, click **All Tasks**, and then click **Export...**.  
+9. Right-click the **AD FS certificate**, click **All Tasks**, and then click **Export...**.  
   
 10. The Certificate Export Wizard opens. Select **Yes, export the private key**.  
   
