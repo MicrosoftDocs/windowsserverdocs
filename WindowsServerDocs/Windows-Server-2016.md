@@ -24,44 +24,44 @@ This library provides the core content that IT pros need to evaluate, plan, depl
 <table border="0" width="100%">
   <tr style="text-align:center">
     <td style="width:25%; border:0;">
-      <a href="What-s-New-in-Windows-Server-2016.md">
+      <a href="/get-started/What-s-New-in-Windows-Server-2016.md">
         <img height=145 src="media/whats-new-highlight.png" alt="What's new icon" title="Whats new in Windows Server 16?"/>
         <br/>What's New?</a>
     </td>
     <td style="width:25%; border:0;">
-      <a href="server-basics.md">
+      <a href="/get-started/server-basics.md">
         <img height=145 src="media/1-getstarted.png" alt="get started icon" title="Get Started with Windows Server 16" />
       <br/>Get Started</a>
     </td>
     <td style="width:25%; border:0;">
-      <a href="../administration/index.md">
+      <a href="/administration/index.md">
         <img height=145 src="media/8-management.png" alt="administer icon" title="Administer Windows Server" />
       <br/>Administer</a>
     </td>
     <td style="width:25%; border:0;">
-      <a href="../failover-clustering/failover-clustering-overview.md">
+      <a href="/failover-clustering/failover-clustering-overview.md">
         <img height=145 src="media/3-failover.png" alt="Failover clustering icon" title="Windows Server Failover clustering" />
       <br/>Failover Clustering</a>
     </td>
   </tr>
   <tr style="text-align:center;">
     <td style="width:25%; border:0;"><br/>
-      <a href="../identity/identity-and-access.md">
+      <a href="/identity/identity-and-access.md">
         <img height=145 src="media/4-identity.png" alt="Identity and access icon" title="Windows Server Identity and Access" />
       <br>Identity and Access</a>
     </td>
     <td style="width:25%; border:0;"><br/>
-      <a href="../networking/networking.md">
+      <a href="/networking/networking.md">
         <img height=145 src="media/6-networking.png" alt="Networking icon" title="Windows Server Networking" />
       <br/>Networking</a>
     </td>
     <td style="width:25%; border:0;"><br/>
-      <a href="../remote/index.md">
+      <a href="/remote/index.md">
         <img height=145 src="media/remote.png" alt="remote icon" title="Remote access and server management" />
       <br/>Remote Access</a>
     </td>
     <td style="width:25%; border:0;"><br/>
-      <a href="../security/security-and-assurance.md">
+      <a href="/security/security-and-assurance.md">
         <img height=145 src="media/5-security.png" alt="Security icon" title="Windows Server Security and Assurance" />
       <br/>Security and Assurance</a>
     </td>
