@@ -25,10 +25,10 @@ Each application that requires the administrator access token must prompt the ad
 
 In order to better understand how this process happens it is important to review the details of the Windows Server 2012 logon process.
 
-### Windows Server?? 2012 Logon Process
+### Windows Server 2012 Logon Process
 The following illustration demonstrates how the logon process for an administrator differs from the logon process for a standard user.
 
-![Illustration demonstrating how the logon process for an administrator differs from the logon process for a standard user](../../media/how-user-account-control-works/UACWindowsLogonProcess.gif)
+![Illustration demonstrating how the logon process for an administrator differs from the logon process for a standard user](../media/How-User-Account-Control-Works/UACWindowsLogonProcess.gif)
 
 By default, standard users and administrators access resources and run applications in the security context of standard users. When a user logs on to a computer, the system creates an access token for that user. The access token contains information about the level of access that the user is granted, including specific security identifiers (SIDs) and Windows privileges.
 
@@ -52,7 +52,7 @@ With UAC enabled, Windows Server 2012 prompts for consent or prompts for credent
 
 The consent prompt is presented when a user attempts to perform a task that requires a user's administrative access token. The following is a screen shot of the UAC consent prompt.
 
-![Screen shot of the UAC consent prompt](../../media/how-user-account-control-works/UACConsentPrompt.gif)
+![Screen shot of the UAC consent prompt](../media/How-User-Account-Control-Works/UACConsentPrompt.gif)
 
 **The credential prompt**
 
@@ -60,7 +60,7 @@ The credential prompt is presented when a standard user attempts to perform a ta
 
 The following screen shot is an example of the UAC credential prompt.
 
-![Screen shot showing an example of the UAC credential prompt](../../media/how-user-account-control-works/UACCredentialPrompt.gif)
+![Screen shot showing an example of the UAC credential prompt](../media/How-User-Account-Control-Works/UACCredentialPrompt.gif)
 
 **UAC elevation prompts**
 
@@ -80,7 +80,7 @@ The elevation prompt color-coding is as follows:
 
 Some Control Panel items, such as **Date and Time Properties**, contain a combination of administrator and standard user operations. Standard users can view the clock and change the time zone, but a full administrator access token is required to change the local system time. The following is a screen shot of the **Date and Time Properties** Control Panel item.
 
-![Screen shot showing the **Date and Time Properties** Control Panel item](../../media/how-user-account-control-works/UACShieldIcon.gif)
+![Screen shot showing the **Date and Time Properties** Control Panel item](../media/How-User-Account-Control-Works/UACShieldIcon.gif)
 
 The shield icon on the **Change date and time** button indicates that the process requires a full administrator access token and will display a UAC elevation prompt.
 
@@ -97,7 +97,7 @@ While malware could present an imitation of the secure desktop, this issue canno
 ## UAC Architecture
 The following diagram details the UAC architecture.
 
-![Diagram detailing the UAC architecture](../../media/how-user-account-control-works/UACArchitecture.gif)
+![Diagram detailing the UAC architecture](../media/How-User-Account-Control-Works/UACArchitecture.gif)
 
 To better understand each component, review the table below:
 
