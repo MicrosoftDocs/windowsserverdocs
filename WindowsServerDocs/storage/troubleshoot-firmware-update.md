@@ -109,8 +109,8 @@ PowerShell will throw an error and has received the information that the functio
 
 The ETW event 507 from the channel shows that a SCSI SRB request failed and provides the additional information that SenseKey was ‘5’ (Illegal Request), and that AdditionalSense information was ‘36’ (Illegal Field in CDB).
 
-	> [!Note]
-	> This information is provided directly by the miniport in question and the accuracy of this information will depend on the implementation and sophistication of the miniport driver.
+   > [!Note]
+   > This information is provided directly by the miniport in question and the accuracy of this information will depend on the implementation and sophistication of the miniport driver.
 
 It is possible that different error condition exhibit the same error codes, if the miniport driver does not disambiguate between them. For example, trying to download an invalid firmware image through a SAS HBA to a SATA device (which the device is expected to fail) may be translated to the same failure codes.
 
