@@ -40,4 +40,4 @@ When prompted, click Yes to confirm.  And that should  be it.
 
 ## Additional references
 
-[Managing SSL Certificates in AD FS and WAP in Windows Server 2016](../operations/Manage-SSL-Certificates-AD-FS-WAP-2016.md)
+* [Managing SSL Certificates in AD FS and WAP in Windows Server 2016](../operations/Manage-SSL-Certificates-AD-FS-WAP-2016.md)
