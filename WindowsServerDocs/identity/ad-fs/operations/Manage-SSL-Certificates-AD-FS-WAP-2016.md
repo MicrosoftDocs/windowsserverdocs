@@ -50,7 +50,7 @@ Follow the steps below:
 1. On the **primary** AD FS server, use the following cmdlet to install the new SSL certificate
 
 ```powershell
-Set-AdfsSslCertificate -Thumbprint <thumbprint of new cert>
+Set-AdfsSslCertificate -Thumbprint '<thumbprint of new cert>'
 ```
 
 The certificate thumbprint can be found by executing this command:
@@ -81,7 +81,7 @@ Follow the steps below:
 1. On the **primary** AD FS server, use the following cmdlet to install the new SSL certificate
 
 ```powershell
-Set-AdfsAlternateTlsClientBinding -Thumbprint <thumbprint of new cert>
+Set-AdfsAlternateTlsClientBinding -Thumbprint '<thumbprint of new cert>'
 ```
 
 The certificate thumbprint can be found by executing this command:
@@ -102,7 +102,7 @@ For configuring both the default certificate authentication binding or alternate
 To replace the Web Application Proxy SSL certificate, on **each** Web Application Proxy server use the following cmdlet to install the new SSL certificate:
 
 ```powershell
-Set-WebApplicationProxySslCertificate <thumbprint of new cert>
+Set-WebApplicationProxySslCertificate '<thumbprint of new cert>'
 ```
 
 If the above cmdlet fails because the old certificate has already expired, reconfigure the proxy using the following cmdlets:
@@ -116,3 +116,7 @@ Enter the credentials of a domain user who is local administrator on the AD FS s
 ```powershell
 Install-WebApplicationProxy -FederationServiceTrustCredential $cred -CertificateThumbprint '<thumbprint of new cert>' -FederationServiceName 'fs.contoso.com'
 ```
+
+## Additional references  
+* [AD FS support for alternate hostname binding for certificate authentication](../operations/AD-FS-support-for-alternate-hostname-binding-for-certificate-authentication.md)
+* [AD FS and certificate KeySpec property Information](../technical-reference/AD-FS-and-KeySpec-Property.md)

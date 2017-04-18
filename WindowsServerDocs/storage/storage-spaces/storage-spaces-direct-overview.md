@@ -136,7 +136,7 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter.
 			<img src="media/storage-spaces-direct-in-windows-server-2016/scalability-icon.png">
 		</td>
 		<td style="padding: 10px; border: 0;">
-			<b>Scalability.</b> Go up to 16 servers and over 400 drives, for multiple petabytes of storage per cluster. To scale out, simply add drives or add more servers; Storage Spaces Direct will automatically onboard new drives and begin using them. Storage efficiency and performance improve predictably at scale.
+			<b>Scalability.</b> Go up to 16 servers and over 400 drives, for up to 1 petabyte (1,000 terabytes) of storage per cluster. To scale out, simply add drives or add more servers; Storage Spaces Direct will automatically onboard new drives and begin using them. Storage efficiency and performance improve predictably at scale.
 		</td>
 	</tr>
 </table>

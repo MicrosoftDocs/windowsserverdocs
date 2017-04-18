@@ -1174,7 +1174,7 @@
 ##### [Work with Software Restriction Policies Rules](security/software-restriction-policies/work-with-software-restriction-policies-rules.md)
 ####[Use software restriction policies to help protect your computer against an email virus](security/software-restriction-policies/use-software-restriction-policies-to-help-protect-your-computer-against-an-email-virus.md)
 #### [Troubleshoot Software Restriction Policies](security/software-restriction-policies/troubleshoot-software-restriction-policies.md)
-### [How User Account Control Works](security/user-account-control/how-user-account-control-works.md)
+### [User Account Control](security/user-account-control/how-user-account-control-works.md)
 ### [Windows Authentication](security/windows-authentication/windows-authentication-overview.md)
 #### [Windows Authentication Technical Overview](security/windows-authentication/windows-authentication-technical-overview.md)
 ##### [Windows Authentication Concepts](security/windows-authentication/windows-authentication-concepts.md)
