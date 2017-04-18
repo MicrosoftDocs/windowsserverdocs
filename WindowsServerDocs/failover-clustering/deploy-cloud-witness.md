@@ -10,8 +10,8 @@ author: AmitabhTamhane
 ms.date: 9/15/2016
 description: How to use Microsoft Azure to host the witness for a Windows Server Failover Cluster in the cloud - aka how to deploy a Cloud Witness.
 ---
-
 # Deploy a Cloud Witness for a Failover Cluster
+
 > Applies to Windows Server 2016
 
 Cloud Witness is a new type of Failover Cluster quorum witness being introduced in Windows Server 2016. This topic provides an overview of the Cloud Witness feature, the scenarios that it supports, and instructions about how to configure a cloud witness for a Failover Cluster that is running Windows Server 2016.
@@ -61,24 +61,22 @@ To set up a Cloud Witness as a quorum witness for your cluster, complete the fol
 ## Create an Azure Storage Account to use as a Cloud Witness
  This section describes how to create a storage account and view and copy endpoint URLs and access keys for that account.
 
-To configure Cloud Witness, you must have a valid Azure Storage Account which can be used to store the blob file (used for arbitration). Cloud Witness creates a well-known Container **msft-cloud-witness** under the Microsoft Storage Account. Cloud Witness writes a single blob file with corresponding cluster's unique ID used as the file name of the blob file under this **msft-cloud-witness** container. This means that you can use the same Microsoft Azure Storage Account to configure a Cloud Witness for multiple different clusters.  
+To configure Cloud Witness, you must have a valid Azure Storage Account which can be used to store the blob file (used for arbitration). Cloud Witness creates a well-known Container **msft-cloud-witness** under the Microsoft Storage Account. Cloud Witness writes a single blob file with corresponding cluster's unique ID used as the file name of the blob file under this **msft-cloud-witness** container. This means that you can use the same Microsoft Azure Storage Account to configure a Cloud Witness for multiple different clusters.
 
-When you use the same Azure Storage Account for configuring Cloud Witness for multiple different clusters,  a single **msft-cloud-witness** container gets created automatically. This container will contain one-blob file per cluster.  
+When you use the same Azure Storage Account for configuring Cloud Witness for multiple different clusters, a single **msft-cloud-witness** container gets created automatically. This container will contain one-blob file per cluster.
 
 ### To create a Azure Account
 1. Sign in to the [Azure Portal](http://portal.azure.com).
 2. On the Hub menu, select New -> Data + Storage -> Storage account.
 3. In the Create a storage account page, do the following:
-    1. Enter a name for your storage account.
+    1. Enter a name for your storage account, as shown in Figure 3.
+    <br>Storage account names must be between 3 and 24 characters in length and may contain numbers and lowercase letters only. The storage account name must also be unique within Azure.
         
-        >[!Note]  
-        > Storage account names must be between 3 and 24 characters in length and may contain numbers and  lowercase letters only.
-
-        Your storage account name must be unique within Azure. The Azure Portal will indicate if the storage account name you select is already in use.
-        
-    2. For **Replication**, select **Locally-redundant storage (LRS)** (see figure 3).
-        >[!NOTE]  
-        > Failover Cluster uses the blob file as the arbitration point, which requires some consistency guarantees when reading the data. Hence, it is very important to select **Locally-redundant storage** for **Replication** type.   
+    2. For **Account kind**, select **Blob storage**.
+    3. For **Performance**, select **Standard**.
+    <br>You can't use Azure Premium Storage for a Cloud Witness.
+    2. For **Replication**, select **Locally-redundant storage (LRS)** .
+    <br>Failover Clustering uses the blob file as the arbitration point, which requires some consistency guarantees when reading the data. Therefor you must select **Locally-redundant storage** for **Replication** type.
 
         ![Creating an Azure Storage account with locally-redundant storage replication type](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_3.png)
         
