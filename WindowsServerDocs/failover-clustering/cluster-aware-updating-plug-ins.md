@@ -146,7 +146,7 @@ To specify that hotfixes apply to all cluster nodes, copy them to a folder named
 > [!NOTE]  
 > In this and the following examples, the hotfix configuration file with its default name DefaultHotfixConfig.xml is shown in its required location in the hotfix root folder.  
   
-```  
+```
 \\MyFileServer\Hotfixes\Root\   
    DefaultHotfixConfig.xml  
    CAUHotfix_All\   
@@ -160,7 +160,7 @@ To specify that hotfixes apply to all cluster nodes, copy them to a folder named
   
 To specify hotfixes that apply only to a specific node, use a subfolder under the hotfix root folder with the name of the node. Use the NetBIOS name of the cluster node, for example, *ContosoNode1*. Then, move the updates that apply only to this node to this subfolder. In the following example, the **HotfixRootFolderPath** plug\-in argument is set to *\\\\MyFileServer\\Hotfixes\\Root\\*. Updates in the **CAUHotfix\_All** folder will be applied to all cluster nodes, and *Node1\_Specific\_Update.msu* will be applied only to *ContosoNode1*.  
   
-```  
+```
 \\MyFileServer\Hotfixes\Root\   
    DefaultHotfixConfig.xml  
    CAUHotfix_All\   
@@ -179,7 +179,7 @@ By default, **Microsoft.HotfixPlugin** only applies updates with the .msu, .msi,
   
 In the following example, the **HotfixRootFolderPath** plug\-in argument is set to *\\\\MyFileServer\\Hotfixes\\Root\\*. Several updates will be applied to all cluster nodes, and a firmware update *SpecialHotfix1.exe* will be applied to *ContosoNode1* by using *FolderRule1*. For information about configuring *FolderRule1* in the hotfix configuration file, see [Customize the hotfix configuration file](#BKMK_CONFIG_FILE) later in this topic.  
   
-```  
+```
 \\MyFileServer\Hotfixes\Root\   
    DefaultHotfixConfig.xml  
    CAUHotfix_All\   
@@ -192,8 +192,8 @@ In the following example, the **HotfixRootFolderPath** plug\-in argument is set 
       FolderRule1\  
           SpecialHotfix1.exe  
       ...  
-```  
-  
+```
+
 ### <a name="BKMK_CONFIG_FILE"></a>Customize the hotfix configuration file  
 The hotfix configuration file controls how **Microsoft.HotfixPlugin** installs specific hotfix file types in a failover cluster. The XML schema for the configuration file is defined in HotfixConfigSchema.xsd, which is located in the following folder on a computer where the CAU tools are installed:  
   
