@@ -62,4 +62,3 @@ We set up a [Failover Cluster], and used Diskspd to generate random and sequenti
 - [Power and Performance Tuning](power-performance-tuning.md)
 - [Processor Power Management Tuning](processor-power-management-tuning.md)
 - [Failover Cluster](https://technet.microsoft.com/en-us/library/cc725923.aspx)
-- [Broadwell architecture](https://en.wikipedia.org/wiki/Broadwell_(microarchitecture)
