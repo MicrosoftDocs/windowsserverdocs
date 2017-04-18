@@ -33,17 +33,17 @@ The hardware considerations for servers running Hyper-V generally resemble those
 
 ## Power plan considerations
 
-As a core technology, virtualization is a powerful tool useful in increasing server workload density, reducing the number of required physical servers in your datacenter and increasing operational efficiency and reducing power consumption costs. Power management is critical for cost management. 
+As a core technology, virtualization is a powerful tool useful in increasing server workload density, reducing the number of required physical servers in your datacenter, increasing operational efficiency and reducing power consumption costs. Power management is critical for cost management. 
 
 In an ideal datacenter environment, power consumption is managed by consolidating work onto machines until they’re mostly busy and then turning off idle machines. If this approach is not practical, administrators can leverage power plans on the physical hosts to ensure they do not consume more power than necessary. 
 
 Server power management techniques come with a cost, particularly as tenant workloads are not trusted to dictate policy about the hoster’s physical infrastructure. The host layer software is left to infer how to maximize throughput while minimizing power consumption. In mostly-idle machines, this can cause the physical infrastructure to conclude that moderate power draw is appropriate, resulting in individual tenant workloads running more slowly than they might otherwise.
 
-Windows Server uses virtualization in a wide variety of scenarios. From a lightly loaded IIS Server to a moderately busy SQL Server, to a cloud host with Hyper-V running hundreds of virtual machines per server. Each of these scenarios may have unique hardware, software, and performance requirements. By default, Windows Server uses and recommends the Balanced power plan which enables power conservation by scaling the processor performance based on CPU utilization.
+Windows Server uses virtualization in a wide variety of scenarios. From a lightly loaded IIS Server to a moderately busy SQL Server, to a cloud host with Hyper-V running hundreds of virtual machines per server. Each of these scenarios may have unique hardware, software, and performance requirements. By default, Windows Server uses and recommends the **Balanced** power plan which enables power conservation by scaling the processor performance based on CPU utilization.
 
-With the Balanced power plan, the highest power states (and lowest response latencies in tenant workloads) are applied only when the physical host is relatively busy. If you value deterministic, low-latency response for all tenant workloads, you should consider switching from the default Balanced power plan to the High Performance power plan. The High Performance power plan will run the processors at full speed all the time, effectively disabling Demand-Based Switching along with other power management techniques, and optimize for performance over power savings.
+With the **Balanced** power plan, the highest power states (and lowest response latencies in tenant workloads) are applied only when the physical host is relatively busy. If you value deterministic, low-latency response for all tenant workloads, you should consider switching from the default **Balanced** power plan to the **High Performance** power plan. The **High Performance** power plan will run the processors at full speed all the time, effectively disabling Demand-Based Switching along with other power management techniques, and optimize for performance over power savings.
 
-For customers, who are satisfied with the cost savings from reducing the number of physical servers and want to ensure they achieve maximum performance for their virtualized workloads, you should consider using the High Performance power plan.
+For customers, who are satisfied with the cost savings from reducing the number of physical servers and want to ensure they achieve maximum performance for their virtualized workloads, you should consider using the **High Performance** power plan.
 
 
 ## Server Core installation option
