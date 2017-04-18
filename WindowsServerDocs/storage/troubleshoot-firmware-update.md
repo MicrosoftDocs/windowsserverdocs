@@ -7,7 +7,7 @@ ms.manager: masriniv
 ms.technology: storage
 ms.topic: article
 author: toklima
-ms.date: 04/17/2017
+ms.date: 04/18/2017
 ---
 # Troubleshooting drive firmware updates
 
@@ -37,17 +37,21 @@ The following sections outline troubleshooting information, depending on whether
 ## Identifying inappropriate hardware
 The quickest way to identify if a device supports the correct command set is to simply launch PowerShell and pass a disk's representing PhysicalDisk object into the Get-StorageFirmwareInfo cmdlet. Here is an example:
 
-	```powershell
-	PS C:\Windows\system32> Get-PhysicalDisk -SerialNumber 15140F55976D | Get-StorageFirmwareInformation
+```powershell
+Get-PhysicalDisk -SerialNumber 15140F55976D | Get-StorageFirmwareInformation
+```
+And here's example output:
 
-	PhysicalDisk          : MSFT_PhysicalDisk (ObjectId = "{1}\\TOKLIMA-DL380\root/Microsoft/Windo...)
-	SupportsUpdate        : True
-	NumberOfSlots         : 1
-	ActiveSlotNumber      : 0
-	SlotNumber            : {0}
-	IsSlotWritable        : {True}
-	FirmwareVersionInSlot : {0013}
-	```
+```
+PhysicalDisk          : MSFT_PhysicalDisk (ObjectId = "{1}\\TOKLIMA-DL380\root/Microsoft/Windo...)
+SupportsUpdate        : True
+NumberOfSlots         : 1
+ActiveSlotNumber      : 0
+SlotNumber            : {0}
+IsSlotWritable        : {True}
+FirmwareVersionInSlot : {0013}
+```
+
 The SupportsUpdate field, at least for SATA and NVMe devices, will indicate if the built-in PowerShell functionality can be used to update firmware.
 
 The SupportsUpdate field will always report “True” for SAS-attached devices, as querying for the appropriate command support is not possible with industry-standard commands.
@@ -68,44 +72,46 @@ Event Viewer - Application and Services Logs - Microsoft - Windows - StorDiag - 
 
 This channel records information about the Windows APIs sent down to the miniport drivers and what their responses are. For example, the error condition shown directly below is exhibited when attempting to download a firmware image to a SATA device, which is connected through a SAS HBA that does not properly implement the needed translation from SAS to SATA:
 
-	```powershell
-	PS C:\> Get-PhysicalDisk -SerialNumber 44GS103UT5EW | Update-StorageFirmware -ImagePath C:\Firmware\J3E160@3.enc -SlotNumber 0
-	Update-StorageFirmware : Failed
+```powershell
+Get-PhysicalDisk -SerialNumber 44GS103UT5EW | Update-StorageFirmware -ImagePath C:\Firmware\J3E160@3.enc -SlotNumber 0
+```
+Here's an example of the output:
 
-	Extended information:
-	A warning or error has been encountered during storage firmware update.
-	Incorrect function.
+```
+Update-StorageFirmware : Failed
 
-	Activity ID: {1224482b-2315-4a38-81eb-27bb7de19c00}
-	At line:1 char:47
-	+ ... S103UT5EW | Update-StorageFirmware -ImagePath C:\Firmware\J3E160@3.en ...
-	+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    + CategoryInfo          : NotSpecified: (:) [Update-StorageFirmware], CimException
-    + FullyQualifiedErrorId : StorageWMI 4,Microsoft.Management.Infrastructure.CimCmdlets.InvokeCimMethodCommand,Update-StorageFirmware
+Extended information:
+A warning or error has been encountered during storage firmware update.
+Incorrect function.
 
-	PS C:\>
-	```
+Activity ID: {1224482b-2315-4a38-81eb-27bb7de19c00}
+At line:1 char:47
++ ... S103UT5EW | Update-StorageFirmware -ImagePath C:\Firmware\J3E160@3.en ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
++ CategoryInfo          : NotSpecified: (:) [Update-StorageFirmware], CimException
++ FullyQualifiedErrorId : StorageWMI 4,Microsoft.Management.Infrastructure.CimCmdlets.InvokeCimMethodCommand,Update-StorageFirmware
+```
 	
 PowerShell will throw an error and has received the information that the function called (i.e. Kernel API) was incorrect. This could mean that either the API was not implemented by the 3rd party SAS mini-port driver (true in this case), or that the API was failed for another reason, such as a misalignment of download segments.
 
-	```
-	EventData
-	DeviceGUID	{132EDB55-6BAC-A3A0-C2D5-203C7551D700}
-	DeviceNumber	1
-	Vendor	ATA 
-	Model	TOSHIBA THNSNJ12
-	FirmwareVersion	6101
-	SerialNumber	44GS103UT5EW
-	DownLevelIrpStatus	0xc0000185
-	SrbStatus	132
-	ScsiStatus	2
-	SenseKey	5
-	AdditionalSenseCode	36
-	AdditionalSenseCodeQualifier	0
-	CdbByteCount	10
-	CdbBytes	3B0E0000000001000000
-	NumberOfRetriesDone	0
-	```
+```
+EventData
+DeviceGUID	{132EDB55-6BAC-A3A0-C2D5-203C7551D700}
+DeviceNumber	1
+Vendor	ATA 
+Model	TOSHIBA THNSNJ12
+FirmwareVersion	6101
+SerialNumber	44GS103UT5EW
+DownLevelIrpStatus	0xc0000185
+SrbStatus	132
+ScsiStatus	2
+SenseKey	5
+AdditionalSenseCode	36
+AdditionalSenseCodeQualifier	0
+CdbByteCount	10
+CdbBytes	3B0E0000000001000000
+NumberOfRetriesDone	0
+```
 
 The ETW event 507 from the channel shows that a SCSI SRB request failed and provides the additional information that SenseKey was ‘5’ (Illegal Request), and that AdditionalSense information was ‘36’ (Illegal Field in CDB).
 
@@ -132,34 +138,34 @@ To gather these advanced log entries, enable the log, reproduce the firmware upd
 
 Here is an example of a firmware update on a SATA device failing, because the image to be downloaded was invalid (Event ID: 258):
 
-	```
-	EventData
-	MiniportName	storahci
-	MiniportEventId	19
-	MiniportEventDescription	Firmware Activate Completion
-	PortNumber	0
-	Bus	2
-	Target	0
-	LUN	0
-	Irp	0xffff8c84cd45aca0
-	Srb	0xffffab0024030bc0
-	Parameter1Name	SrbStatus
-	Parameter1Value	130
-	Parameter2Name	ReturnCode
-	Parameter2Value	0
-	Parameter3Name	FeaturesReg
-	Parameter3Value	15
-	Parameter4Name	SectorCountReg
-	Parameter4Value	0
-	Parameter5Name	DriveHeadReg
-	Parameter5Value	160
-	Parameter6Name	CommandReg
-	Parameter6Value	146
-	Parameter7Name	NULL
-	Parameter7Value	0
-	Parameter8Name	NULL
-	Parameter8Value	0
-	```
+```	
+EventData
+MiniportName	storahci
+MiniportEventId	19
+MiniportEventDescription	Firmware Activate Completion
+PortNumber	0
+Bus	2
+Target	0
+LUN	0
+Irp	0xffff8c84cd45aca0
+Srb	0xffffab0024030bc0
+Parameter1Name	SrbStatus
+Parameter1Value	130
+Parameter2Name	ReturnCode
+Parameter2Value	0
+Parameter3Name	FeaturesReg
+Parameter3Value	15
+Parameter4Name	SectorCountReg
+Parameter4Value	0
+Parameter5Name	DriveHeadReg
+Parameter5Value	160
+Parameter6Name	CommandReg
+Parameter6Value	146
+Parameter7Name	NULL
+Parameter7Value	0
+Parameter8Name	NULL
+Parameter8Value	0
+```
 
 The above event contains detailed device information in parameter values 2 through 6. Here we are looking at various ATA register values. The ATA ACS specification can be used to decode the below values for failure of a Download Microcode command:
 - Return Code: 0 (0000 0000) (N/A - meaningless since no payload was transferred)
