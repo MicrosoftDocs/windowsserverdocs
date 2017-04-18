@@ -23,10 +23,10 @@ This topic lists new and updated topics in the [Storage](storage.md) documentati
 |New or changed topic|Description|
 |---|---|
 |[Troubleshooting drive firmware updates](troubleshoot-firmware-update.md)|New topic.|
-|[Work Folders](work-folders-overview.md)|New topic.|
-|[Planning a Work Folders deployment](plan-work-folders.md)|New topic.|
-|[Deploying Work Folders](deploy-work-folders.md)|New topic.|
-|[Deploying Work Folders with AD FS and Web Application Proxy (WAP)](deploy-work-folders-adfs-overview.md)|New topic.|
+|[Work Folders](work-folders/work-folders-overview.md)|New topic.|
+|[Planning a Work Folders deployment](work-folders/plan-work-folders.md)|New topic.|
+|[Deploying Work Folders](work-folders/deploy-work-folders.md)|New topic.|
+|[Deploying Work Folders with AD FS and Web Application Proxy (WAP)](work-folders/deploy-work-folders-adfs-overview.md)|New topic.|
 
 ## March 2017
 
