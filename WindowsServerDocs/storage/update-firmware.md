@@ -10,16 +10,16 @@ author: toklima
 ms.date: 10/04/2016
 ---
 # Updating drive firmware in Windows Server 2016
->Applies To: Windows Server 2016
+>Applies To: Windows 10, version 1703; Windows Server 2016
 
-Updating the firmware for drives has historically been a cumbersome task with a potential for downtime, which is why we're making improvements to Storage Spaces and Windows Server 2016. If you have drives that support the new firmware update mechanism included in Windows Server, you can update drive firmware of in-production drives without downtime. However, if you're going to update the firmware of a production drive, make sure to read our tips on how to minimize the risk while using this powerful new functionality.
+Updating the firmware for drives has historically been a cumbersome task with a potential for downtime, which is why we're making improvements to Storage Spaces, Windows Server 2016, and Windows 10. If you have drives that support the new firmware update mechanism included in Windows, you can update drive firmware of in-production drives without downtime. However, if you're going to update the firmware of a production drive, make sure to read our tips on how to minimize the risk while using this powerful new functionality.
 
   > [!Warning]
   > Firmware updates are a potentially risky maintenance operation and you should only apply them after thorough testing of the new firmware image. It is possible that new firmware on unsupported hardware could negatively affect reliability and stability, or even cause data loss. Administrators should read the release notes a given update comes with to determine its impact and applicability.
 
 ## Drive compatibility
 
-To use Windows Server to update drive firmware, you must have supported drives. To ensure common device behavior, we began by defining new and - for Windows Server 2016 - optional Hardware Lab Kit (HLK) requirements for SAS, SATA, and NVMe devices. These requirements outline which commands a SATA, SAS, or NVMe device must support to be firmware-updatable using these new, Windows-native PowerShell cmdlets. To support these requirements, there is a new HLK test to verify if vendor products support the right commands and get them implemented in future revisions. 
+To use Windows Server to update drive firmware, you must have supported drives. To ensure common device behavior, we began by defining new and - for Windows 10 and Windows Server 2016 - optional Hardware Lab Kit (HLK) requirements for SAS, SATA, and NVMe devices. These requirements outline which commands a SATA, SAS, or NVMe device must support to be firmware-updatable using these new, Windows-native PowerShell cmdlets. To support these requirements, there is a new HLK test to verify if vendor products support the right commands and get them implemented in future revisions. 
 
 Contact your solution vendor for info about whether your hardware supports Windows updating the drive firmware.
 Here are links to the various requirements:
@@ -32,7 +32,7 @@ Here are links to the various requirements:
 
 ## PowerShell cmdlets
 
-The two cmdlets added to Windows Server 2016 are:
+The two cmdlets added to Windows are:
 
 -   Get-StorageFirmwareInformation
 -   Update-StorageFirmware
@@ -162,6 +162,8 @@ If you would like to see the Health Service in action and learn more about its r
 
 ## Frequently asked questions
 
+Also see [Troubleshooting drive firmware updates](troubleshoot-firmware-update.md).
+
 ### Will this work on any storage device
 
 This will work on storage devices that implement the correct commands in their firmware. The Get-StorageFirmwareInformation cmdlet will show if a drive's firmware indeed does support the correct commands (for SATA/NVMe) and the HLK test allows vendors and OEMs to test this behavior.
@@ -190,6 +192,8 @@ On Windows Server 2016 with the Health Service deployed on Storage Spaces Direct
 The update could fail for various reasons, some of them are: 1) The drive doesn't support the correct commands for Windows to update its firmware. In this case the new firmware image never activates and the drive continues functioning with the old image. 2) The image cannot download to or be applied to this drive (version mismatch, corrupt image, …). In this case the drive fails the activate command. Again, the old firmware image will continue function.
 
 If the drive does not respond at all after a firmware update, you are likely hitting a bug in the drive firmware itself. Test all firmware updates in a lab environment before putting them in production. The only remediation may be to replace the drive.
+
+For more info, see [Troubleshooting drive firmware updates](troubleshoot-firmware-update.md).
 
 ### How do I stop an in-progress firmware roll-out
 
