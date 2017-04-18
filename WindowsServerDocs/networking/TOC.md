@@ -63,7 +63,7 @@
 ###### [Use Windows PowerShell to Configure Non-Domain Member Client computers](branchcache/deploy/Use-Windows-powershell-to-Configure-Non-Domain-Member-Client-computers.md)
 ####### [Configure Firewall Rules for Non-Domain Members to Allow BranchCache Traffic](branchcache/deploy/Configure-Firewall-Rules-for-Non-Domain-Members-to-Allow-BranchCache-Traffic.md)
 ###### [Verify Client computer Settings](branchcache/deploy/verify-Client-computer-Settings.md)
-## [DirectAccess](remote/remote-access/da-stub.md)
+## [DirectAccess](../remote/remote-access/da-stub.md)
 ## [Domain Name System (DNS)](dns/dns-top.md)
 ### [What's New in DNS Client in Windows Server 2016](dns/What-s-New-in-DNS-Client.md)
 ### [What's New in DNS Server in Windows Server 2016](dns/What-s-New-in-DNS-Server.md)
