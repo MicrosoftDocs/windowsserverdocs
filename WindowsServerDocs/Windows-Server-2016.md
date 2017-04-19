@@ -21,8 +21,8 @@ This library provides the core content that IT pros need to evaluate, plan, depl
 
 [![Storage Spaces Direct Overview Video](media/front-page-video.png)](https://www.youtube.com/embed/V8oF0JpDzaM)
 
-<table border="0" width="100%">
-  <tr style="text-align:center">
+<table border="0" width="100%" align='center'>
+  <tr style="text-align:center;">
     <td style="width:25%; border:0;">
       <a href="/get-started/What-s-New-in-Windows-Server-2016.md">
         <img height=145 src="media/whats-new-highlight.png" alt="What's new icon" title="Whats new in Windows Server 16?"/>
@@ -67,7 +67,7 @@ This library provides the core content that IT pros need to evaluate, plan, depl
     </td>
   </tr>
   <tr style="text-align:center;">
-    <td style="width:25%; border:0;">&nbsp; </td>
+    <td style="width:25%; border:0;">&nbsp;</td>
      <td style="width:25%; border:0;"><br>
       <a href="/storage/storage.md">
         <img height=145 src="media/7-storage.png" alt="Storage icon" title="Windows Server Storage" />
@@ -82,7 +82,7 @@ This library provides the core content that IT pros need to evaluate, plan, depl
     <td style="width:25%; border:0;">&nbsp; </td>
   </tr>
 </table>
-
+<br/>
 > [!Note]  
 > To experience first-hand new features and functionality available in Windows Server 2016, you can download an evaluation version by visiting [Windows Server Evaluations](https://www.microsoft.com/evalcenter/evaluate-windows-server-2016).  
 >   
@@ -120,10 +120,12 @@ Both Standard and Datacenter editions offer three installation options:
 Now that you know which edition and installation option is right for you, click below to get started with Windows Server 2016.
 
 
-<table border=0 width="100%">
-  <tr style='text-align:center;'>
-    <td style='width:34%'><a href="/windows-server/get-started/getting-started-with-nano-server"> <img height=145 src="media/nano.png" alt="Icon representing Nano server" title="Nano Server - Lightest Weight" /><br/>Nano Server - <br/>Lightest weight</a></td>
-    <td style='width:33%'><a href="/windows-server/get-started/getting-started-with-server-core"> <img height=145 src="media/servercore.png" alt="Icon representing the Server Core installation" title="Server Core - Recommended" /><br/>Server Core - <br/>Recommended</a></td>
-    <td style='width:33%'><a href="/windows-server/get-started/getting-started-with-server-with-desktop-experience"><img height=145 src="media/desktop.png" alt="Icon representing the full desktop experience installation option for Windows Server" title="Desktop Experience - Full Experience" /><br/>Desktop Experience - <br/>Full interface</a></td>
+<table border="0" width="100%" align='center'>
+  <tr style="text-align:center;">
+    <td style="width:25%; border:0;">
+      <a  href="/windows-server/get-started/getting-started-with-nano-server"> <img width="175" height="175" src="media/nano.png" alt="Icon representing Nano server" title="Nano Server - Lightest Weight" /><br/>Nano Server - <br/>Lightest weight</a>
+    </td>
+    <td style='width:33%'><a href="/windows-server/get-started/getting-started-with-server-core"> <img width="175" height="175" src="media/servercore.png" alt="Icon representing the Server Core installation" title="Server Core - Recommended" /><br/>Server Core - <br/>Recommended</a></td>
+    <td style='width:33%'><a href="/windows-server/get-started/getting-started-with-server-with-desktop-experience"><img width="175" height="175" src="media/desktop.png" alt="Icon representing the full desktop experience installation option for Windows Server" title="Desktop Experience - Full Experience" /><br/>Desktop Experience - <br/>Full interface</a></td>
   </tr>
 </table>
