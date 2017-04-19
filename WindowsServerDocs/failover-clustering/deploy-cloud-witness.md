@@ -16,7 +16,8 @@ description: How to use Microsoft Azure to host the witness for a Windows Server
 
 Cloud Witness is a new type of Failover Cluster quorum witness being introduced in Windows Server 2016. This topic provides an overview of the Cloud Witness feature, the scenarios that it supports, and instructions about how to configure a cloud witness for a Failover Cluster that is running Windows Server 2016.
 
-## <a name="CloudWitnessOverview"></a>Cloud Witness Overview
+## <a name="CloudWitnessOverview"></a>Cloud Witness overview
+
 Figure 1 illustrates a multi-site stretched Failover Cluster quorum configuration with Windows Server 2016. In this example configuration (figure 1), there are 2 nodes in 2 datacenters (referred to as Sites). Note, it is possible for a cluster to span more than 2 datacenters. Also, each datacenter can have  more than 2 nodes. A typical cluster quorum configuration in this setup (automatic failover SLA) gives each node a vote. One extra vote is given to the quorum witness to allow cluster to keep running even if either one of the datacenter experiences a power outage. The math is simple - there are 5 total votes and you need 3 votes for the cluster to keep it running.  
 
 ![File Share Witness in a third separate site with 2 nodes in 2 other sites](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_1.png "File Share Witness")  
@@ -40,7 +41,7 @@ There are significant benefits which this approach:
 
 As shown in figure 2, there is no third separate site that is required. Cloud Witness, like any other quorum witness, gets a vote and can participate in quorum calculations.  
 
-## <a name="CloudWitnessSupportedScenarios"></a>Cloud Witness: Supported Scenarios for Single Witness Type
+## <a name="CloudWitnessSupportedScenarios"></a>Cloud Witness: Supported scenarios for single witness type
 If you have a Failover Cluster deployment, where all nodes can reach the internet (by extension of Azure), it is recommended that you configure a Cloud Witness as your quorum witness resource.  
 
 Some of the scenarios that are supported use of Cloud Witness as a quorum witness are as follows:  
@@ -59,13 +60,15 @@ To set up a Cloud Witness as a quorum witness for your cluster, complete the fol
 2. Configure the Cloud Witness as a quorum witness for your cluster.
 
 ## Create an Azure Storage Account to use as a Cloud Witness
- This section describes how to create a storage account and view and copy endpoint URLs and access keys for that account.
+
+This section describes how to create a storage account and view and copy endpoint URLs and access keys for that account.
 
 To configure Cloud Witness, you must have a valid Azure Storage Account which can be used to store the blob file (used for arbitration). Cloud Witness creates a well-known Container **msft-cloud-witness** under the Microsoft Storage Account. Cloud Witness writes a single blob file with corresponding cluster's unique ID used as the file name of the blob file under this **msft-cloud-witness** container. This means that you can use the same Microsoft Azure Storage Account to configure a Cloud Witness for multiple different clusters.
 
 When you use the same Azure Storage Account for configuring Cloud Witness for multiple different clusters, a single **msft-cloud-witness** container gets created automatically. This container will contain one-blob file per cluster.
 
-### To create a Azure Account
+### To create an Azure storage account
+
 1. Sign in to the [Azure Portal](http://portal.azure.com).
 2. On the Hub menu, select New -> Data + Storage -> Storage account.
 3. In the Create a storage account page, do the following:
@@ -82,7 +85,8 @@ When you use the same Azure Storage Account for configuring Cloud Witness for mu
         
         **Figure 3: Creating an Azure Storage account with locally-redundant storage replication type**
 
-### View and copy storage access keys for your Azure Storage Account  
+### View and copy storage access keys for your Azure Storage Account
+
 When you create a Microsoft Azure Storage Account, it is associated with two Access Keys that are automatically generated - Primary Access key and Secondary Access key. For a first-time creation of Cloud Witness, use the **Primary Access Key**. There is no restriction regarding which key to use for Cloud Witness.  
 
 #### To view and copy storage access keys
