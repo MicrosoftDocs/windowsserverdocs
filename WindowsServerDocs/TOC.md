@@ -648,6 +648,7 @@
 ##### [Walkthrough Guide: Manage Risk with Conditional Access Control](identity/ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md)
 ##### [Walkthrough: Workplace Join with a Windows Device](identity/ad-fs/operations/Walkthrough--Workplace-Join-with-a-Windows-Device.md)
 ##### [Walkthrough: Workplace Join with an iOS Device](identity/ad-fs/operations/Walkthrough--Workplace-Join-with-an-iOS-Device.md)
+##### [Walkthrough: Workplace Join with an Android Device](identity/ad-fs/operations/Walkthrough--Workplace-Join-to-an-Android-device.md)
 
 #### [AD FS Technical Reference](identity/ad-fs/AD-FS-Technical-Reference.md)
 ##### [AD FS and certificate KeySpec property information](identity/ad-fs/technical-reference/AD-FS-and-KeySpec-Property.md)
