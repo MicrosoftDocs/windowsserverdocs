@@ -45,6 +45,8 @@ With the **Balanced** power plan, the highest power states (and lowest response 
 
 For customers, who are satisfied with the cost savings from reducing the number of physical servers and want to ensure they achieve maximum performance for their virtualized workloads, you should consider using the **High Performance** power plan.
 
+For additional recommendations and insight on leveraging power plans to optimize your infrastructure, read [Recommended Balanced Power Plan Parameters for Quick Response Times](../../hardware/power/reccommended-balanced-plan-parameters.md)
+
 
 ## Server Core installation option
 
