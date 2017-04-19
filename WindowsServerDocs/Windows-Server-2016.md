@@ -82,12 +82,12 @@ This library provides the core content that IT pros need to evaluate, plan, depl
     <td style="width:25%; border:0;">&nbsp; </td>
   </tr>
 </table>
+
 <br/>
 
+> [!Note] 
+> To experience first-hand new features and functionality available in Windows Server 2016, you can download an evaluation version by visiting [Windows Server Evaluations](https://www.microsoft.com/evalcenter/evaluate-windows-server-2016). 
 
-> [!Note]  
-> To experience first-hand new features and functionality available in Windows Server 2016, you can download an evaluation version by visiting [Windows Server Evaluations](https://www.microsoft.com/evalcenter/evaluate-windows-server-2016).  
->   
 
 ## Windows Server 2016 editions
 
@@ -114,12 +114,12 @@ Both Standard and Datacenter editions offer three installation options:
 - **Server with Desktop Experience:** installs the standard user interface and all tools, including client experience features that required a separate installation in Windows Server 2012 R2. Server roles and features are installed with Server Manager or by other methods.
 - **Nano Server:** is a remotely administered server operating system optimized for private clouds and datacenters. It is similar to Windows Server in Server Core mode, but significantly smaller, has no local logon capability, and only supports 64-bit applications, tools, and agents. It takes up far less disk space, sets up significantly faster, and requires far fewer updates and restarts than the other options.
 
->[!NOTE]
->
->Unlike some previous releases of Windows Server, you cannot convert between Server Core and Server with Desktop Experience after installation. For example, if you install Server Core and later decide to user Server with Desktop Experience, you should do a fresh installation (and vice versa).
+>[!Note]
+> Unlike some previous releases of Windows Server, you cannot convert between Server Core and Server with Desktop Experience after installation. For example, if you install Server Core and later decide to user Server with Desktop Experience, you should do a fresh installation (and vice versa).
 
 
 Now that you know which edition and installation option is right for you, click below to get started with Windows Server 2016.
+<br/>
 
 
 <table border="0" width="100%" align='center'>
