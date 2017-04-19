@@ -1,19 +1,15 @@
 ---
-title: Site definition and domain controller placement in AD performance tuning
-description: 
+title: Site definition and domain controller placement in ADDS performance tuning
+description: Site definition and domain controller placement considerations in Active Directory performance tuning.
 ms.prod: windows-server-threshold
-ms.service: na
-manager: dongill
 ms.technology: performance-tuning-guide
-ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 83b88700-365b-42df-a9d6-fb011b20ed6f
-author: phstee
 ms.author: TimWi; ChrisRob; HerbertM; KenBrumf;  MLeary; ShawnRab
-ms.date: 10/31/2016
+author: phstee
+ms.date: 04/24/2017
 ---
 
-# Site defintion considerations in ADS performance tuning
+# Proper placement of domain controllers and site considerations
 
 Proper site definition is critical to performance. Clients falling out of site can experience poor performance for authentications and queries. Furthermore, with the introduction of IPv6 on clients, the request can come from either the IPv4 or the IPv6 address and Active Directory needs to have sites properly defined for IPv6. The operating system prefers IPv6 to IPv4 when both are configured.
 
@@ -77,7 +73,8 @@ For all trust scenarios, credentials are routed according to the domain specifie
 -   Disable passing authentication requests with NULL domain specified across all available trusts. [The Lsass.exe process may stop responding if you have many external trusts on an Active Directory domain controller](http://support.microsoft.com/kb/923241/EN-US)
 
 ## See also
-- [Performance Tuning Active Directory Servers](index.md)
+- [Performance tuning Active Directory Servers](index.md)
 - [Hardware considerations](hardware-considerations.md)
 - [LDAP considerations](ldap-considerations.md)
+- [Troubleshooting ADDS performance](troubleshoot.md) 
 - [Capacity Planning for Active Directory Domain Services](http://go.microsoft.com/fwlink/?LinkId=324566)

@@ -2,15 +2,11 @@
 title: Server Hardware Power Considerations
 description: Server Hardware Power Considerations
 ms.prod: windows-server-threshold
-ms.service: na
-manager: dongill
 ms.technology: performance-tuning-guide
-ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 67e5ed32-f303-452e-b943-74ddec078ca5
-author: phstee
 ms.author: Qizha;TristanB
-ms.date: 10/31/2016
+author: phstee
+ms.date: 04/24/2017
 ---
 
 # Server Hardware Power Considerations

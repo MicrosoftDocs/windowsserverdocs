@@ -2,21 +2,17 @@
 title: Hardware considerations in AD performance tuning
 description: Hardware considerations in AD performance tuning
 ms.prod: windows-server-threshold
-ms.service: na
-manager: dongill
 ms.technology: performance-tuning-guide
-ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 83b88700-365b-42df-a9d6-fb011b20ed6f
-author: phstee
 ms.author: TimWi; ChrisRob; HerbertM; KenBrumf;  MLeary; ShawnRab
-ms.date: 10/31/2016
+author: phstee
+ms.date: 04/24/2017
 ---
 
-# Hardware considerations in ADS performance tuning 
+# Hardware considerations in ADDS performance tuning 
 
 >[!Important]
-> The following is a summary of the key recommendations and considerations to optimize server hardware for Active Directory workloads covered in greater depth in the [Capacity Planning for Active Directory Domain Services](http://go.microsoft.com/fwlink/?LinkId=324566) article. Readers are highly encouraged to read [Capacity Planning for Active Directory Domain Services](http://go.microsoft.com/fwlink/?LinkId=324566) for a greater technical understanding and implications of these recommendations.
+> The following is a summary of the key recommendations and considerations to optimize server hardware for Active Directory workloads covered in greater depth in the [Capacity Planning for Active Directory Domain Services](http://go.microsoft.com/fwlink/?LinkId=324566) article. Readers are highly encouraged to review [Capacity Planning for Active Directory Domain Services](http://go.microsoft.com/fwlink/?LinkId=324566) for a greater technical understanding and implications of these recommendations.
 
 ## Avoid going to disk
 
@@ -71,7 +67,8 @@ Just like with processors, excessive network adapter utilization will cause long
 -   Use the Compare NetworkInterface(\*)\\Bytes Sent/Sec with NetworkInterface(\*)\\Current Bandwidth performance counter. The ratio should be less than 60% utilized.
 
 ## See also
-- [Performance Tuning Active Directory Servers](index.md)
-- [Site definition considerations](site-definition-considerations.md)
+- [Performance tuning Active Directory Servers](index.md)
 - [LDAP considerations](ldap-considerations.md)
+- [Proper placement of domain controllers and site considerations](site-definition-considerations.md)
+- [Troubleshooting ADDS performance](troubleshoot.md) 
 - [Capacity Planning for Active Directory Domain Services](http://go.microsoft.com/fwlink/?LinkId=324566)

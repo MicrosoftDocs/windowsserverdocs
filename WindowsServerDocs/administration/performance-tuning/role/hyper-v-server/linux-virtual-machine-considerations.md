@@ -1,15 +1,12 @@
 ---
 title: Linux Virtual Machine Considerations
-description:
+description: Linux and BSD virtual machine 
 ms.prod: windows-server-threshold
-ms.service: na
-manager: dongill
 ms.technology: performance-tuning-guide
-ms.tgt_pltfrm: na
 ms.topic: article
+ms.author: Asmahi; SandySp; JoPoulso
 author: phstee
-ms.author: Asmahi; SandySp; JoPoulso;
-ms.date: 10/31/2016
+ms.date: 04/24/2017
 ---
 
 # Linux Virtual Machine Considerations
@@ -22,15 +19,19 @@ Even when the guest is running Integration Services, it can be configured with l
 
 ## Linux Network Performance
 
-Linux by default enables hardware acceleration and offloads by default. If vRSS is enabled in the properties of a NIC on the host and the Linux guest has the capability to use vRSS the capability will be enabled. In Powershell this same parameter can be changed with the <pre>EnableNetAdapterRSS</pre> command.
+Linux by default enables hardware acceleration and offloads by default. If vRSS is enabled in the properties of a NIC on the host and the Linux guest has the capability to use vRSS the capability will be enabled. In Powershell this same parameter can be changed with the `EnableNetAdapterRSS` command.
 
-Similarly, the VMMQ (Virtual Switch RSS) feature can be enabled on the physical NIC used by the guest "Properties" > "Configure..." > "Advanced" Tab > set "Virtual Switch RSS" to "Enabled" or enable VMMQ in Powershell: <pre>Set-VMNetworkAdapter -VMName **$VMName** -VmmqEnabled $True</pre>
+Similarly, the VMMQ (Virtual Switch RSS) feature can be enabled on the physical NIC used by the guest **Properties** > **Configure...** > **Advanced** tab > set **Virtual Switch RSS** to **Enabled** or enable VMMQ in Powershell using the following:
+
+```PowerShell
+ Set-VMNetworkAdapter -VMName **$VMName** -VmmqEnabled $True
+ ```
 
 In the guest additional TCP tuning can be performed by increasing limits. For the best performance spreading workload over multiple CPUs and having deep workloads produces the best throughput, as virtualized workloads will have higher latency than "bare metal" ones.
 
 Some example tuning paramters that have been useful in network benchmarks include:
 
-```
+```PowerShell
 net.core.netdev_max_backlog = 30000
 net.core.rmem_max = 67108864
 net.core.wmem_max = 67108864
@@ -43,11 +44,11 @@ net.ipv4.ip_local_port_range = 10240 65535
 net.ipv4.tcp_abort_on_overflow = 1
 ```
 
-A useful tool for network microbenchmarks is ntttcp, which is available on both Linux and Windows. The Linux version is open source and available from [ntttcp-for-linux on github.com](https://github.com/Microsoft/ntttcp-for-linux). The Windows version can be found in the [download center](https://gallery.technet.microsoft.com/NTttcp-Version-528-Now-f8b12769). When tuning workloads it is best to use as many streams as necessary to get the best throughput. Using ntttcp to model traffic, the <pre>-P</pre> parameter sets the number of parallel connections used.
+A useful tool for network microbenchmarks is ntttcp, which is available on both Linux and Windows. The Linux version is open source and available from [ntttcp-for-linux on github.com](https://github.com/Microsoft/ntttcp-for-linux). The Windows version can be found in the [download center](https://gallery.technet.microsoft.com/NTttcp-Version-528-Now-f8b12769). When tuning workloads it is best to use as many streams as necessary to get the best throughput. Using ntttcp to model traffic, the `-P` parameter sets the number of parallel connections used.
 
 ## Linux Storage Performance
 
-Some best practices, like the following, are listed on [Best Practices for Running Linux on Hyper-V](https://technet.microsoft.com/en-us/windows-server-docs/compute/hyper-v/best-practices-for-running-linux-on-hyper-v). The Linux kernel has different I/O schedulers to reorder requests with different algorithms. NOOP is a first-in first-out queue that passes the schedule decision to be made by the hypervisor. It is recommended to use NOOP as the scheduler when running Linux virtual machine on Hyper-V. To change the scheduler for a specific device, in the boot loader's configuration (/etc/grub.conf, for example), add <pre>elevator=noop</pre> to the kernel parameters, and then restart.
+Some best practices, like the following, are listed on [Best Practices for Running Linux on Hyper-V](https://technet.microsoft.com/en-us/windows-server-docs/compute/hyper-v/best-practices-for-running-linux-on-hyper-v). The Linux kernel has different I/O schedulers to reorder requests with different algorithms. NOOP is a first-in first-out queue that passes the schedule decision to be made by the hypervisor. It is recommended to use NOOP as the scheduler when running Linux virtual machine on Hyper-V. To change the scheduler for a specific device, in the boot loader's configuration (/etc/grub.conf, for example), add `elevator=noop` to the kernel parameters, and then restart.
 
 Similar to networking, Linux guest performance with storage benefits the most from multiple queues with enough depth to keep the host busy. Microbenchmarking storage performance is probably best with the fio benchmark tool with the libaio engine.
 

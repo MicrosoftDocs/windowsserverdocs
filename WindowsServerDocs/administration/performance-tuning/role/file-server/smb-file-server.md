@@ -2,18 +2,13 @@
 title: Performance Tuning for SMB File Servers
 description: Performance Tuning for SMB File Servers
 ms.prod: windows-server-threshold
-ms.service: na
-manager: dongill
 ms.technology: performance-tuning-guide
-ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 151a836e-d2c6-46b0-9943-b3793bd511de
 author: phstee
 ms.author: NedPyle; Danlo; DKruse
-ms.date: 10/31/2016
+ms.date: 4/14/2017
 ---
-
-# Performance Tuning SMB File Servers
+# Performance tuning for SMB file servers
 
 ## SMB configuration considerations
 Do not enable any services or features that your file server and clients do not require. These might include SMB signing, client-side caching, file system mini-filters, search service, scheduled tasks, NTFS encryption, NTFS compression, IPSEC, firewall filters, Teredo, and SMB encryption.
@@ -39,7 +34,7 @@ SMB Direct introduced the ability to use RDMA network interfaces for high throug
 
 Whenever SMB detects an RDMA-capable network, it automatically tries to use the RDMA capability. However, if for any reason the SMB client fails to connect using the RDMA path, it will simply continue to use TCP/IP connections instead. All RDMA interfaces that are compatible with SMB Direct are required to also implement a TCP/IP stack, and SMB Multichannel is aware of that.
 
-SMB Direct is not required in any SMB configuration, but it’s always recommended for those who want lower latency and lower CPU utilization.
+SMB Direct is not required in any SMB configuration, but it' s always recommended for those who want lower latency and lower CPU utilization.
 
 For more info about SMB Direct, see [Improve Performance of a File Server with SMB Direct](https://aka.ms/smbdirect).
 
@@ -48,12 +43,6 @@ For more info about SMB Direct, see [Improve Performance of a File Server with S
 SMB Multichannel allows file servers to use multiple network connections simultaneously and provides increased throughput.
 
 For more info about SMB Multichannel, see [Deploy SMB Multichannel](https://aka.ms/smbmulti).
-
-### SMB Transparent Failover
-
-SMB Transparent Failover is a feature that allows an SMB client to continue to work uninterrupted when there’s a failure in the SMB Scale-out file server cluster node that the client is using. This includes preserving information on the server side plus allowing the client to automatically reconnect to the same share and files on a surviving file server cluster node.
-
-For more info about SMB Transparent Failover, see [SMB Transparent Failover – making file shares continuously available](https://aka.ms/smbtfo).
 
 ### SMB Scale-Out
 
@@ -65,33 +54,33 @@ For more info about SMB Scale-Out, see [Scale-Out File Server for Application Da
 
 The following SMB performance counters were introduced in Windows Server 2012, and they are considered a base set of counters when you monitor the resource usage of SMB 2 and higher versions. Log the performance counters to a local, raw (.blg) performance counter log. It is less expensive to collect all instances by using the wildcard character (\*), and then extract particular instances during post-processing by using Relog.exe.
 
--   **SMB client shares**
+-   **SMB Client Shares**
 
     These counters display information about file shares on the server that are being accessed by a client that is using SMB 2.0 or higher versions.
 
-    If you’re familiar with the regular disk counters in Windows, you might notice a certain resemblance. That’s not by accident. The SMB client shares performance counters were designed to exactly match the disk counters. This way you can easily reuse any guidance on application disk performance tuning you currently have. For more info about counter mapping, see [Per share client performance counters blog](http://blogs.technet.com/b/josebda/archive/2012/11/19/windows-server-2012-file-server-tip-new-per-share-smb-client-performance-counters-provide-great-insight.aspx).
+    If you' re familiar with the regular disk counters in Windows, you might notice a certain resemblance. That' s not by accident. The SMB client shares performance counters were designed to exactly match the disk counters. This way you can easily reuse any guidance on application disk performance tuning you currently have. For more info about counter mapping, see [Per share client performance counters blog](http://blogs.technet.com/b/josebda/archive/2012/11/19/windows-server-2012-file-server-tip-new-per-share-smb-client-performance-counters-provide-great-insight.aspx).
 
--   **SMB server shares**
+-   **SMB Server Shares**
 
     These counters display information about the SMB 2.0 or higher file shares on the server.
 
--   **SMB server sessions**
+-   **SMB Server Sessions**
 
     These counters display information about SMB server sessions that are using SMB 2.0 or higher.
 
     Turning on counters on server side (server shares or server sessions) may have significant performance impact for high IO workloads.
 
--   **Resume key filter**
+-   **Resume Key Filter**
 
     These counters display information about the Resume Key Filter.
 
--   **SMB direct connection**
+-   **SMB Direct Connection**
 
     These counters measure different aspects of connection activity. A computer can have multiple SMB Direct connections. The SMB Direct Connection counters represent each connection as a pair of IP addresses and ports, where the first IP address and port represent the connection's local endpoint, and the second IP address and port represent the connection's remote endpoint.
 
--   **Physical disk, SMB, CSV File system performance counters relationship**
+-   **Physical Disk, SMB, CSV FS performance counters relationships**
 
-    For more info on how physical disk, SMB, and CSV file system counters are related, see the following blog post: [Cluster Shared Volume Performance Counters](http://blogs.msdn.com/b/clustering/archive/2014/06/05/10531462.aspx).
+    For more info on how Physical Disk, SMB, and CSV FS (file system) counters are related, see the following blog post: [Cluster Shared Volume Performance Counters](http://blogs.msdn.com/b/clustering/archive/2014/06/05/10531462.aspx).
 
 ## Tuning parameters for SMB file servers
 
@@ -100,50 +89,46 @@ The following REG\_DWORD registry settings can affect the performance of SMB fil
 
 -   **Smb2CreditsMin** and **Smb2CreditsMax**
 
-    ``` syntax
+    ```
     HKLM\System\CurrentControlSet\Services\LanmanServer\Parameters\Smb2CreditsMin
     ```
 
-    ``` syntax
+    ```
     HKLM\System\CurrentControlSet\Services\LanmanServer\Parameters\Smb2CreditsMax
     ```
 
     The defaults are 512 and 8192, respectively. These parameters allow the server to throttle client operation concurrency dynamically within the specified boundaries. Some clients might achieve increased throughput with higher concurrency limits, for example, copying files over high-bandwidth, high-latency links.
 
-    **Tip**  
-    You can monitor SMB Client Shares\\Credit Stalls /Sec to see if there are any issues with credits.
+    >[!TIP]
+    > You can monitor SMB Client Shares\\Credit Stalls /Sec to see if there are any issues with credits.
 
-     
+- **AdditionalCriticalWorkerThreads**
 
--   **AdditionalCriticalWorkerThreads**
-
-    ``` syntax
+    ```
     HKLM\System\CurrentControlSet\Control\Session Manager\Executive\AdditionalCriticalWorkerThreads
     ```
 
     The default is 0, which means that no additional critical kernel worker threads are added. This value affects the number of threads that the file system cache uses for read-ahead and write-behind requests. Raising this value can allow for more queued I/O in the storage subsystem, and it can improve I/O performance, particularly on systems with many logical processors and powerful storage hardware.
 
-    **Tip**  
-    The value may need to be increased if the amount of cache manager dirty data (performance counter Cache\\Dirty Pages) is growing to consume a large portion (over ~25%) of memory or if the system is doing lots of synchronous read I/Os.
-
-     
+    >[!TIP]
+    > The value may need to be increased if the amount of cache manager dirty data (performance counter Cache\\Dirty Pages) is growing to consume a large portion (over ~25%) of memory or if the system is doing lots of synchronous read I/Os.
 
 -   **MaxThreadsPerQueue**
 
-    ``` syntax
+    ```
     HKLM\System\CurrentControlSet\Services\LanmanServer\Parameters\MaxThreadsPerQueue
     ```
 
     The default is 20. Increasing this value raises the number of threads that the file server can use to service concurrent requests. When a large number of active connections need to be serviced, and hardware resources, such as storage bandwidth, are sufficient, increasing the value can improve server scalability, performance, and response times.
 
-    **Tip**  
-    An indication that the value may need to be increased is if the SMB2 work queues are growing very large (performance counter ‘Server Work Queues\\Queue Length\\SMB2 NonBlocking \*’ is consistently above ~100).
+    >[!TIP]
+    > An indication that the value may need to be increased is if the SMB2 work queues are growing very large (performance counter ‘Server Work Queues\\Queue Length\\SMB2 NonBlocking \*'  is consistently above ~100).
 
      
 
 -   **AsynchronousCredits**
 
-    ``` syntax
+    ``` 
     HKLM\System\CurrentControlSet\Services\LanmanServer\Parameters\MaxThreadsPerQueue
     ```
 

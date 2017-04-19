@@ -2,15 +2,11 @@
 title: Recommended Balanced Power Plan Parameters for Quick Response Times
 description: Recommended Balanced Power Plan Parameters for Quick Response Time
 ms.prod: windows-server-threshold
-ms.service: na
-manager: dongill
 ms.technology: performance-tuning-guide
-ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: a16f56b7-16e2-4a43-abc6-d0b5c3661a7d
+ms.author:  Qizha;TristanB
 author: phstee
-ms.author: Qizha;TristanB
-ms.date: 10/31/2016
+ms.date: 04/24/2017
 ---
 
 # Recommended Balanced Power Plan Parameters for Workloads Requiring Quick Response Times
@@ -39,6 +35,9 @@ Powercfg -setactive scheme_balanced
 
 This change is based on the performance and power tradeoff analysis using the following workloads. For the users who want to further fine tune the power efficiency with certain SLA requirements, please refer to [Server Hardware Performance Considerations](../power.md).
 
+>[!Note]
+> For additional recommendations and insight on leveraging power plans to tune virtualized workloads, read [Hyper-v Configuration](../../role/hyper-v-server/configuration.md)
+
 ## SPECpower – JAVA workload
 
 [SPECpower\_ssj2008](http://spec.org/power_ssj2008/), the most popular industry-standard SPEC benchmark for server power and performance characteristics, is used to check the power impact. Since it only uses **throughput** as performance metric, the default **Balanced** power plan provides the best power efficiency.
@@ -66,4 +65,3 @@ We set up a [Failover Cluster], and used Diskspd to generate random and sequenti
 - [Power and Performance Tuning](power-performance-tuning.md)
 - [Processor Power Management Tuning](processor-power-management-tuning.md)
 - [Failover Cluster](https://technet.microsoft.com/en-us/library/cc725923.aspx)
-- [Broadwell architecture](https://en.wikipedia.org/wiki/Broadwell_(microarchitecture)
