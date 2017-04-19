@@ -75,7 +75,8 @@ When you use the same Azure Storage Account for configuring Cloud Witness for mu
     1. Enter a name for your storage account, as shown in Figure 3.
     <br>Storage account names must be between 3 and 24 characters in length and may contain numbers and lowercase letters only. The storage account name must also be unique within Azure.
         
-    2. For **Account kind**, select **Blob storage**.
+    2. For **Account kind**, select **General purpose**.
+    <br>You can't use a Blob storage account for a Cloud Witness.
     3. For **Performance**, select **Standard**.
     <br>You can't use Azure Premium Storage for a Cloud Witness.
     2. For **Replication**, select **Locally-redundant storage (LRS)** .
