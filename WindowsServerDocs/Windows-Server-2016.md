@@ -20,46 +20,46 @@ This library provides the core content that IT pros need to evaluate, plan, depl
 <table border="0" width="100%" align='center'>
   <tr style="text-align:center;">
     <td align='center' style="width:25%; border:0;">
-      <a href="/get-started/What-s-New-in-Windows-Server-2016.md">
+      <a href="/get-started/What-s-New-in-Windows-Server-2016">
         <img height=145 src="media/whats-new-highlight.png" alt="What's new icon" title="Whats new in Windows Server 16?"/></a>
         <br/>What's New?
     </td>
     <td align='center' style="width:25%; border:0;">
-      <a href="/get-started/server-basics.md">
+      <a href="/windows-server/get-started/server-basics">
         <img height=145 src="media/1-getstarted.png" alt="get started icon" title="Get Started with Windows Server 16" /></a>
       <br/>Get Started
     </td>
     <td align='center' style="width:25%; border:0;">
-      <a href="/administration/index.md">
+      <a href="/windows-server/administration/index">
         <img height=145 src="media/8-management.png" alt="administer icon" title="Administer Windows Server" /></a>
       <br/>Administer
     </td>
     <td align='center' style="width:25%; border:0;">
-      <a href="/failover-clustering/failover-clustering-overview.md">
+      <a href="/windows-server/failover-clustering/failover-clustering-overview">
         <img height=145 src="media/3-failover.png" alt="Failover clustering icon" title="Windows Server Failover clustering" /></a>
       <br/>Failover Clustering
     </td>
   </tr>
   <tr style="text-align:center;">
     <td align='center' style="width:25%; border:0;"><br/>
-      <a href="/identity/identity-and-access.md">
+      <a href="/windows-server/identity/identity-and-access">
         <img height=145 src="media/4-identity.png" alt="Identity and access icon" title="Windows Server Identity and Access" /></a>
       <br>Identity and Access
     </td>
     <td align='center' style="width:25%; border:0;"><br/>
-      <a href="/networking/networking.md">
+      <a href="/windows-server/networking/networking">
         <img height=145 src="media/6-networking.png" alt="Networking icon" title="Windows Server Networking" />
         </a>
       <br/>Networking
     </td>
     <td align='center' style="width:25%; border:0;"><br/>
-      <a href="/remote/index.md">
+      <a href="/windows-server/remote/index">
         <img height=145 src="media/remote.png" alt="remote icon" title="Remote access and server management" />
         </a>
       <br/>Remote Access
     </td>
     <td align='center' style="width:25%; border:0;"><br/>
-      <a href="/security/security-and-assurance.md">
+      <a href="/windows-server/security/security-and-assurance">
         <img height=145 src="media/5-security.png" alt="Security icon" title="Windows Server Security and Assurance" />
       </a>
       <br/>Security and Assurance
@@ -68,13 +68,13 @@ This library provides the core content that IT pros need to evaluate, plan, depl
   <tr style="text-align:center;">
     <td align='center' style="width:25%; border:0;">&nbsp;</td>
     <td align='center' style="width:25%; border:0;"><br>
-      <a href="/storage/storage.md">
+      <a href="/windows-server/storage/storage">
         <img height=145 src="media/7-storage.png" alt="Storage icon" title="Windows Server Storage" />
       </a>
       <br/>Storage
     </td>
    <td align='center' style="width:25%; border:0;"><br/>
-      <a href="/virtualization/index.md">
+      <a href="/windows-server/virtualization/index">
         <img height=145 src="media/virtualization.png" alt="virtualization icon" title="Windows Server Virtualization" /></a>
       <br/>Virtualization
     </td>
