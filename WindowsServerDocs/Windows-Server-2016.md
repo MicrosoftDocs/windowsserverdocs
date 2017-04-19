@@ -123,9 +123,9 @@ Now that you know which edition and installation option is right for you, click 
 <table border="0" width="100%" align='center'>
   <tr style="text-align:center;">
     <td style="width:25%; border:0;">
-      <a  href="/windows-server/get-started/getting-started-with-nano-server"> <img width="175" height="175" src="media/nano.png" alt="Icon representing Nano server" title="Nano Server - Lightest Weight" /><br/>Nano Server - <br/>Lightest weight</a>
+      <a  href="/windows-server/get-started/getting-started-with-nano-server"> <img width="175" src="media/nano.png" alt="Icon representing Nano server" title="Nano Server - Lightest Weight" /><br/>Nano Server - <br/>Lightest weight</a>
     </td>
-    <td style='width:33%'><a href="/windows-server/get-started/getting-started-with-server-core"> <img width="175" height="175" src="media/servercore.png" alt="Icon representing the Server Core installation" title="Server Core - Recommended" /><br/>Server Core - <br/>Recommended</a></td>
-    <td style='width:33%'><a href="/windows-server/get-started/getting-started-with-server-with-desktop-experience"><img width="175" height="175" src="media/desktop.png" alt="Icon representing the full desktop experience installation option for Windows Server" title="Desktop Experience - Full Experience" /><br/>Desktop Experience - <br/>Full interface</a></td>
+    <td style='width:33%'><a href="/windows-server/get-started/getting-started-with-server-core"> <img width="175" src="media/servercore.png" alt="Icon representing the Server Core installation" title="Server Core - Recommended" /><br/>Server Core - <br/>Recommended</a></td>
+    <td style='width:33%'><a href="/windows-server/get-started/getting-started-with-server-with-desktop-experience"><img width="175" src="media/desktop.png" alt="Icon representing the full desktop experience installation option for Windows Server" title="Desktop Experience - Full Experience" /><br/>Desktop Experience - <br/>Full interface</a></td>
   </tr>
 </table>
