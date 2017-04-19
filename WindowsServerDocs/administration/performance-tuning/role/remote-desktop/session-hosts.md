@@ -1,16 +1,12 @@
 ---
 title: Performance Tuning Remote Desktop Session Hosts
-description: Performance Tuning for Remote Desktop Session Hosts
+description: Performance tuning guidelines for Remote Desktop Session Hosts
 ms.prod: windows-server-threshold
-ms.service: na
-manager: dongill
 ms.technology: performance-tuning-guide
-ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: fb031df5-d7f0-40af-af44-bc86264bebaa
+ms.author: HammadBu; VladmiS
 author: phstee
-ms.author: HammadBu
-ms.date: 10/31/2016
+ms.date: 04/24/2017
 ---
 
 # Performance Tuning Remote Desktop Session Hosts

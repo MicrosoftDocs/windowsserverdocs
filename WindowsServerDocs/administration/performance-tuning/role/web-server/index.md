@@ -1,16 +1,12 @@
 ---
 title: Performance Tuning Web Servers
-description: Performance Tuning for Web Servers
+description: Performance tuning recommendations for Web Servers on Windows Server 16
 ms.prod: windows-server-threshold
-ms.service: na
-manager: dongill
 ms.technology: performance-tuning-guide
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 5b66ad76-102f-4103-bc09-b48c4556d486
-author: phstee
+ms.topic: landing-page
 ms.author: DavSo; Ericam; YaShi
-ms.date: 10/31/2016
+author: phstee
+ms.date: 04/24/2017
 ---
 
 # Performance Tuning Web Servers
@@ -53,11 +49,11 @@ The system-global switch **NtfsDisableLastAccessUpdate** (REG\_DWORD) 1 is locat
 
 Disabling the updates is effective when you are using large data sets (or many hosts) that contain thousands of directories. We recommend that you use IIS logging instead if you maintain this information only for Web administration.
 
->[!Caution]
+>[!Warning]
 > Some applications, such as incremental backup utilities, rely on this update information, and they do not function correctly without it.
 
 ## See also
-- [IIS 10.0 performance tuning]()
+- [IIS 10.0 performance tuning](tuning-iis-10.md)
 - [HTTP 1.1/2 tuning](http-performance.md)
 
 

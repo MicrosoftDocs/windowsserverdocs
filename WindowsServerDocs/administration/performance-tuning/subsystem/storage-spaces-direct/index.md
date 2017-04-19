@@ -1,17 +1,15 @@
 ---
-title: Performance Tuning Storage Spaces Direct
+title: Performance Tuning for Storage Spaces Direct
 description: Storage Spaces Direct automatically tunes its performance based on the cache configuration of the hardware you use, as described in this topic.
 ms.prod: windows-server-threshold
-manager: dongill
 ms.technology: performance-tuning-guide
 ms.topic: article
 ms.assetid: 15a519fa-37cc-4d84-a9fe-097d33bb71ea
 author: phstee
 ms.author: Vshankar; DanLo; clausjor; StevenEk
-ms.date: 1/27/2017
+ms.date: 4/14/2017
 ---
-
-# Performance Tuning Storage Spaces Direct
+# Performance tuning for Storage Spaces Direct
 
 Storage Spaces Direct, a Windows Server-based software-defined storage solution, automatically tunes its performance, obviating the need to manually specify column counts, the cache configuration of the hardware you use, and other factors that must be set manually with shared SAS storage solutions. For background info, see [Storage Spaces Direct in Windows Server 2016](../../../../storage/storage-spaces/storage-spaces-direct-overview.md).
 
