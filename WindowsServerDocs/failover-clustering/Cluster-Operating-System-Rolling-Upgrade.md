@@ -4,11 +4,12 @@ ms.prod: windows-server-threshold
 ms.technology: storage-failover-clustering
 ms.topic: get-started-article
 ms.assetid: 6e102c1f-df26-4eaa-bc7a-d0d55d3b82d5
-author: kumudd
-ms.author: kumud
+author: jasongerend
+ms.author: jgerend
 ms.date: 09/15/2016
 ---
 # Cluster operating system rolling upgrade
+
 > Applies to Windows Server 2016
 
 Cluster OS Rolling Upgrade is a new feature in Windows Server 2016 that enables an administrator to upgrade the operating system of the cluster nodes from Windows Server 2012 R2 to Windows Server 2016 without stopping the Hyper-V or the Scale-Out File Server workloads. Using this feature, the downtime penalties against Service Level Agreements (SLA) can be avoided.  

@@ -18,6 +18,16 @@ This topic lists new and updated topics in the [Storage](storage.md) documentati
 
 > If you're looking for update history for Windows Server 2016, see [Windows 10 and Windows Server 2016 update history](https://support.microsoft.com/help/4000825/windows-10-and-windows-server-2016-update-history).
 
+## April 2017
+
+|New or changed topic|Description|
+|---|---|
+|[Troubleshooting drive firmware updates](troubleshoot-firmware-update.md)|New topic.|
+|[Work Folders](work-folders/work-folders-overview.md)|New topic.|
+|[Planning a Work Folders deployment](work-folders/plan-work-folders.md)|New topic.|
+|[Deploying Work Folders](work-folders/deploy-work-folders.md)|New topic.|
+|[Deploying Work Folders with AD FS and Web Application Proxy (WAP)](work-folders/deploy-work-folders-adfs-overview.md)|New topic.|
+
 ## March 2017
 
 |New or changed topic|Description|
