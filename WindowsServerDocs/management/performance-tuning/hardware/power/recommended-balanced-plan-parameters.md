@@ -35,6 +35,9 @@ Powercfg -setactive scheme_balanced
 
 This change is based on the performance and power tradeoff analysis using the following workloads. For the users who want to further fine tune the power efficiency with certain SLA requirements, please refer to [Server Hardware Performance Considerations](../power.md).
 
+>[!Note]
+> For additional recommendations and insight on leveraging power plans to tune virtualized workloads, read [Hyper-v Configuration](../../role/hyper-v-server/configuration.md)
+
 ## SPECpower – JAVA workload
 
 [SPECpower\_ssj2008](http://spec.org/power_ssj2008/), the most popular industry-standard SPEC benchmark for server power and performance characteristics, is used to check the power impact. Since it only uses **throughput** as performance metric, the default **Balanced** power plan provides the best power efficiency.
@@ -62,4 +65,3 @@ We set up a [Failover Cluster], and used Diskspd to generate random and sequenti
 - [Power and Performance Tuning](power-performance-tuning.md)
 - [Processor Power Management Tuning](processor-power-management-tuning.md)
 - [Failover Cluster](https://technet.microsoft.com/en-us/library/cc725923.aspx)
-- [Broadwell architecture](https://en.wikipedia.org/wiki/Broadwell_(microarchitecture)

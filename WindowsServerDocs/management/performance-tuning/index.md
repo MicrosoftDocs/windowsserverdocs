@@ -29,8 +29,6 @@ This guide organizes performance and tuning guidance for Windows Server 2016 acr
 ||[Remote Desktop Servers](role/remote-desktop/session-hosts.md)|[Software Defined Networking (SDN)](subsystem/software-defined-networking/index.md)|
 ||[Web Servers](role/web-server/index.md)||
 ||[Windows Server Containers](role/windows-server-container/index.md)||
-|||
-
 
 
 ## Changes in this version
