@@ -72,7 +72,7 @@ When you use the same Azure Storage Account for configuring Cloud Witness for mu
 1. Sign in to the [Azure Portal](http://portal.azure.com).
 2. On the Hub menu, select New -> Data + Storage -> Storage account.
 3. In the Create a storage account page, do the following:
-    1. Enter a name for your storage account, as shown in Figure 3.
+    1. Enter a name for your storage account.
     <br>Storage account names must be between 3 and 24 characters in length and may contain numbers and lowercase letters only. The storage account name must also be unique within Azure.
         
     2. For **Account kind**, select **General purpose**.
@@ -81,10 +81,6 @@ When you use the same Azure Storage Account for configuring Cloud Witness for mu
     <br>You can't use Azure Premium Storage for a Cloud Witness.
     2. For **Replication**, select **Locally-redundant storage (LRS)** .
     <br>Failover Clustering uses the blob file as the arbitration point, which requires some consistency guarantees when reading the data. Therefor you must select **Locally-redundant storage** for **Replication** type.
-
-        ![Creating an Azure Storage account with locally-redundant storage replication type](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_3.png)
-        
-        **Figure 3: Creating an Azure Storage account with locally-redundant storage replication type**
 
 ### View and copy storage access keys for your Azure Storage Account
 
