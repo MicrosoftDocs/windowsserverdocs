@@ -86,7 +86,7 @@ The administrator who initiates an Updating Run can specify the acceptable thres
 ## Can I use CAU to update only a single node?  
 No. CAU is a cluster\-scoped updating tool, so it only allows you to select clusters to update. If you want to update a single node, you can use existing server updating tools independently of CAU.  
   
-## Can CAU report cluster node updates that are initiated from outside CAU?  
+## Can CAU report updates that are initiated from outside CAU?  
 No. CAU can only report Updating Runs that are initiated from within CAU. However, when a subsequent CAU Updating Run is launched, updates that were installed through non\-CAU methods are appropriately considered to determine the additional updates that might be applicable to each cluster node.  
   
 ## Can CAU support my unique IT process needs?  
@@ -129,7 +129,7 @@ A CAU installation is seamlessly integrated into the Failover Clustering feature
   
 -   When the Failover Clustering Tools feature is installed on a server or client computer, the Cluster-Aware Updating UI and PowerShell cmdlets are automatically installed.
   
-## Does CAU need any service or component running on the cluster nodes that are being updated?  
+## Does CAU need components running on the cluster nodes that are being updated?  
 CAU doesn't need a service running on the cluster nodes. However, CAU needs a software component \(the WMI provider\) installed on the cluster nodes. This component is installed with the Failover Clustering feature.  
   
 To enable self\-updating mode, the CAU clustered role must also be added to the cluster.  
@@ -150,7 +150,7 @@ Yes. A failover cluster in a self\-updating configuration can be updated through
 ## Can I reuse my cluster update settings across clusters?  
 Yes. CAU supports a number of Updating Run options that determine how the Updating Run behaves when it updates the cluster. These options can be saved as an Updating Run Profile, and they can be reused across any cluster. We recommend that you save and reuse your settings across failover clusters that have similar updating needs. For example, you might create a "Business\-Critical SQL Server Cluster Updating Run Profile" for all Microsoft SQL Server clusters that support business\-critical services.  
   
-## Where can I get more information about the CAU plug\-in specification?  
+## Where is the CAU plug\-in specification?  
   
 -   [Cluster\-Aware Updating Plug\-in Reference](http://msdn.microsoft.com/library/hh418084(VS.85).aspx)  
   
