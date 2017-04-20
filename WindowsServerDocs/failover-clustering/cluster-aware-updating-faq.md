@@ -13,12 +13,12 @@ ms.prod: storage-failover-clustering
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Cluster\-Aware Updating \(CAU\) is a feature that coordinates software updates on all servers in a failover cluster in a way that does not impact the service availability any more than a planned failover of a cluster node. For some applications with continuous availability features \(such as Hyper\-V with live migration, or an SMB 3.0 file server with SMB Transparent Failover\), CAU can coordinate automated cluster updating with no impact on service availability.  
+Cluster\-Aware Updating \(CAU\) is a feature that coordinates software updates on all servers in a failover cluster in a way that doesn't impact the service availability any more than a planned failover of a cluster node. For some applications with continuous availability features \(such as Hyper\-V with live migration, or an SMB 3.0 file server with SMB Transparent Failover\), CAU can coordinate automated cluster updating with no impact on service availability.  
   
 ## Does CAU work with Windows Server 2008 R2 or Windows 7?  
 No. CAU coordinates the cluster updating operation only from computers running Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10, Windows 8.1, or Windows 8.  
   
-## Is CAU functionality limited to only specific clustered applications?  
+## Is CAU limited to specific clustered applications?  
 No. CAU is agnostic to the type of the clustered application. CAU is an external cluster\-updating solution that is layered on top of clustering APIs and PowerShell cmdlets. As such, CAU can coordinate updating for any clustered application that is configured in a Windows Server failover cluster.  
   
 > [!NOTE]  
@@ -38,20 +38,20 @@ However, CAU includes a second plug\-in that you can select to apply hotfix upda
 ## Can I use CAU to apply cumulative updates?  
 Yes. If the cumulative updates are general distribution release updates or LDR updates, CAU can apply them.  
   
-## Can I schedule CAU to apply updates?  
+## Can I schedule updates?  
 Yes. CAU supports the following updating modes, both of which allow updates to be scheduled:  
   
 **Self\-updating** Enables the cluster to update itself according to a defined profile and a regular schedule, such as during a monthly maintenance window. You can also start a Self\-Updating Run on demand at any time. To enable self\-updating mode, you must add the CAU clustered role to the cluster. The CAU self\-updating feature performs like any other clustered workload, and it can work seamlessly with the planned and unplanned failovers of an update coordinator computer.  
   
 **Remote\-updating** Enables you to start an Updating Run at any time from a computer running Windows or Windows Server. You can start an Updating run through the Cluster-Aware Updating window or by using the **Invoke\-CauRun** PowerShell cmdlet. Remote\-updating is the default updating mode for CAU. You can use Task Scheduler to run the [Invoke-CauRun](https://technet.microsoft.com/itpro/powershell/windows/cluster-aware-updating/invoke-caurun) cmdlet on a desired schedule from a remote computer that is not one of the cluster nodes.  
   
-## Can CAU updates be scheduled when a backup is in progress?  
-Yes. CAU does not impose any constraints in this regard. However, performing software updates on a server \(with the associated potential restarts\) while a server backup is in progress is not an IT best practice. Be aware that CAU relies only on clustering APIs to determine resource failovers and failbacks; thus, CAU is unaware of the server backup status.  
+## Can I schedule updates to apply during a backup?  
+Yes. CAU doesn't impose any constraints in this regard. However, performing software updates on a server \(with the associated potential restarts\) while a server backup is in progress is not an IT best practice. Be aware that CAU relies only on clustering APIs to determine resource failovers and failbacks; thus, CAU is unaware of the server backup status.  
   
-## Can CAU work well with System Center Configuration Manager?  
+## Can CAU work with System Center Configuration Manager?  
 Yes. A server administrator should consider the following levels of interoperability between System Center Configuration Manager and CAU:  
   
-**Coexistence** CAU is a tool that coordinates software updates on a cluster node, and Configuration Manager also performs server software updates. It is important to configure these tools so that they do not have overlapping coverage of the same servers in any data\-center deployment. This ensures that the objective behind using CAU is not inadvertently defeated, because Configuration Manager\-driven updating does not incorporate cluster awareness.  
+**Coexistence** CAU is a tool that coordinates software updates on a cluster node, and Configuration Manager also performs server software updates. It is important to configure these tools so that they do not have overlapping coverage of the same servers in any data\-center deployment. This ensures that the objective behind using CAU is not inadvertently defeated, because Configuration Manager\-driven updating doesn't incorporate cluster awareness.  
   
 **Leverage** CAU and Configuration Manager can work together to deliver synergistic value. By using the public plug\-in interface architecture in CAU, Configuration Manager can leverage the cluster awareness of CAU. This allows a customer who already has Configuration Manager deployed to use the cluster awareness capabilities of CAU while taking advantage of the Configuration Manager infrastructure, such as distribution points, approvals, and the Configuration console. For more information, see [Cluster\-Aware Updating Plug\-in Reference](http://msdn.microsoft.com/library/hh418084(VS.85).aspx).  
   
@@ -59,33 +59,37 @@ Yes. A server administrator should consider the following levels of interoperabi
 > A Configuration Manager plug\-in for CAU is not available in Windows Server 2012.  
   
 ## Do I need administrative credentials to run CAU?  
-Yes. For running the CAU tools, CAU needs administrative credentials on the local server, or it needs the **Impersonate a Client after Authentication** user right on the local server or the client computer on which it is running. However, to coordinate software updates on the cluster nodes, CAU requires cluster administrative credentials on every node. Although the CAU UI will start without the credentials, it prompts for the cluster administrative credentials when it connects to a cluster instance to preview or apply updates.  
+Yes. For running the CAU tools, CAU needs administrative credentials on the local server, or it needs the **Impersonate a Client after Authentication** user right on the local server or the client computer on which it is running. However, to coordinate software updates on the cluster nodes, CAU requires cluster administrative credentials on every node. Although the CAU UI can start without the credentials, it prompts for the cluster administrative credentials when it connects to a cluster instance to preview or apply updates.  
   
-## Can I script CAU functionality to automate it further?  
+## Can I script CAU?  
 Yes. CAU comes with PowerShell cmdlets that offer a rich set of scripting options. These are the same cmdlets that the CAU UI calls to perform CAU actions.  
-  
-## When CAU coordinates updates, what happens to the clustered roles that are active on each cluster node?  
+
+## What happens to active clustered roles?
+
 Clustered roles \(formerly called applications and services\) that are active on a node, fail over to other nodes before software updating can commence. CAU orchestrates these failovers by using the maintenance mode, which pauses and drains the node of all active clustered roles. When the software updates are complete, CAU resumes the node and the clustered roles fail back to the updated node. This ensures that the distribution of clustered roles relative to nodes stays the same across the CAU Updating Runs of a cluster.  
   
-## How does CAU select the target nodes that each clustered role should fail over to?  
+## How does CAU select target nodes for clustered roles?
+
 CAU relies on clustering APIs to coordinate the failovers. The clustering API implementation selects the target nodes by relying on internal metrics and intelligent placement heuristics \(such as workload levels\) across the target nodes.  
   
-## Does CAU load balance the clustered roles at the end of the updating process?  
-CAU does not load balance the clustered nodes, but it attempts to preserve the distribution of clustered roles. When CAU finishes updating a cluster node, it attempts to fail back previously hosted clustered roles to that node. CAU relies on clustering APIs to fail back the resources to the beginning of the pause process. Thus in the absence of unplanned failovers and preferred owner settings, the distribution of clustered roles should remain unchanged.  
+## Does CAU load balance the clustered roles?
+
+CAU doesn't load balance the clustered nodes, but it attempts to preserve the distribution of clustered roles. When CAU finishes updating a cluster node, it attempts to fail back previously hosted clustered roles to that node. CAU relies on clustering APIs to fail back the resources to the beginning of the pause process. Thus in the absence of unplanned failovers and preferred owner settings, the distribution of clustered roles should remain unchanged.  
   
 ## How does CAU select the order of nodes to update?  
 By default, CAU selects the order of nodes to update based on the level of activity. The nodes that are hosting the fewest clustered roles are updated first. However, an administrator can specify a particular order for updating the nodes by specifying a parameter for the Updating Run in the CAU UI or by using the PowerShell cmdlets.  
   
-## When a CAU Updating Run is initiated on the cluster, what happens if all the cluster nodes are not online?  
+## What happens if a cluster node is offline?
+
 The administrator who initiates an Updating Run can specify the acceptable threshold for the number of nodes that can be offline. Therefore, an Updating Run can proceed on a cluster even if all the cluster nodes are not online.  
   
-## Can I use CAU to select and update only a single node?  
+## Can I use CAU to update only a single node?  
 No. CAU is a cluster\-scoped updating tool, so it only allows you to select clusters to update. If you want to update a single node, you can use existing server updating tools independently of CAU.  
   
 ## Can CAU report cluster node updates that are initiated from outside CAU?  
 No. CAU can only report Updating Runs that are initiated from within CAU. However, when a subsequent CAU Updating Run is launched, updates that were installed through non\-CAU methods are appropriately considered to determine the additional updates that might be applicable to each cluster node.  
   
-## Is CAU flexible enough to support my unique IT process needs?  
+## Can CAU support my unique IT process needs?  
 Yes. CAU offers the following dimensions of flexibility to suit enterprise customers' unique IT process needs:  
   
 **Scripts** An Updating Run can specify a pre\-update PowerShell script and a post\-update PowerShell script. The pre\-update script runs on each cluster node before the node is paused. The post\-update script runs on each cluster node after the node updates are installed.  
@@ -93,7 +97,7 @@ Yes. CAU offers the following dimensions of flexibility to suit enterprise custo
 > [!NOTE]  
 > .NET Framework 4.6 or 4.5 and PowerShell must be installed on each cluster node on which you want to run the pre\-update and post\-update scripts. You must also enable PowerShell remoting on the cluster nodes. For detailed system requirements, see [Requirements and Best Practices for Cluster-Aware Updating](cluster-aware-updating-requirements.md).  
   
-**Advanced Updating Run options** The administrator can additionally specify from a large set of advanced Updating Run options such as the maximum number of times that the update process will be retried on each node. These options can be specified using either the CAU UI or the CAU PowerShell cmdlets. These custom settings can be saved in an Updating Run Profile and reused for later Updating Runs.  
+**Advanced Updating Run options** The administrator can additionally specify from a large set of advanced Updating Run options such as the maximum number of times that the update process is retried on each node. These options can be specified using either the CAU UI or the CAU PowerShell cmdlets. These custom settings can be saved in an Updating Run Profile and reused for later Updating Runs.  
   
 **Public plug\-in architecture** CAU includes features to Register, Unregister, and Select plug\-ins. CAU ships with two default plug\-ins: one coordinates the Windows Update Agent \(WUA\) APIs on each cluster node; the second applies hotfixes that are manually copied to a file share that is accessible to the cluster nodes. If an enterprise has unique needs that cannot be met with these two plug\-ins, the enterprise can build a new CAU plug\-in according to the public API specification. For more information, see [Cluster\-Aware Updating Plug\-in Reference](http://msdn.microsoft.com/library/hh418084(VS.85).aspx).  
   
@@ -126,11 +130,11 @@ A CAU installation is seamlessly integrated into the Failover Clustering feature
 -   When the Failover Clustering Tools feature is installed on a server or client computer, the Cluster-Aware Updating UI and PowerShell cmdlets are automatically installed.
   
 ## Does CAU need any service or component running on the cluster nodes that are being updated?  
-CAU does not need a service running on the cluster nodes. However, CAU needs a software component \(the WMI provider\) installed on the cluster nodes. This component is installed with the Failover Clustering feature.  
+CAU doesn't need a service running on the cluster nodes. However, CAU needs a software component \(the WMI provider\) installed on the cluster nodes. This component is installed with the Failover Clustering feature.  
   
 To enable self\-updating mode, the CAU clustered role must also be added to the cluster.  
   
-## What is the difference between using CAU and using System Center Virtual Machine Manager to update Hyper\-V clusters?  
+## What is the difference between using CAU and VMM?  
   
 -   System Center Virtual Machine Manager \(VMM\) is focused on updating only Hyper\-V clusters, whereas CAU can update any type of supported failover cluster, including Hyper\-V clusters.  
   
@@ -144,9 +148,9 @@ To enable self\-updating mode, the CAU clustered role must also be added to the 
 Yes. A failover cluster in a self\-updating configuration can be updated through remote\-updating on\-demand, just as you can force a Windows Update scan at any time on your computer, even if Windows Update is configured to install updates automatically. However, you need to make sure that an Updating Run is not already in progress.  
   
 ## Can I reuse my cluster update settings across clusters?  
-Yes. CAU supports a number of Updating Run options that determine how the Updating Run behaves when it updates the cluster. These options can be saved as an Updating Run Profile, and they can be reused across any cluster. We recommend that you save and reuse your settings across failover clusters that have similar updating needs. For example, you might create a “Business\-Critical SQL Server Cluster Updating Run Profile” for all Microsoft SQL Server clusters that support business\-critical services.  
+Yes. CAU supports a number of Updating Run options that determine how the Updating Run behaves when it updates the cluster. These options can be saved as an Updating Run Profile, and they can be reused across any cluster. We recommend that you save and reuse your settings across failover clusters that have similar updating needs. For example, you might create a "Business\-Critical SQL Server Cluster Updating Run Profile" for all Microsoft SQL Server clusters that support business\-critical services.  
   
-## Where can I get more information about the public CAU plug\-in specification?  
+## Where can I get more information about the CAU plug\-in specification?  
   
 -   [Cluster\-Aware Updating Plug\-in Reference](http://msdn.microsoft.com/library/hh418084(VS.85).aspx)  
   

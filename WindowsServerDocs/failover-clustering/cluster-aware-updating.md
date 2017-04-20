@@ -22,21 +22,15 @@ This topic provides an overview of Cluster\-Aware Updating \(CAU\), a feature th
   
 ## <a name="BKMK_OVER"></a>Feature description  
 Cluster-Aware Updating is an automated feature that enables you to update clustered servers with little or no loss in availability during the update process. During an Updating Run, Cluster-Aware Updating transparently performs the following tasks:  
-  
--   Puts each node of the cluster into node maintenance mode  
-  
--   Moves the clustered roles off the node  
-  
--   Installs the updates and any dependent updates  
-  
--   Performs a restart if necessary  
-  
--   Brings the node out of maintenance mode  
-  
--   Restores the clustered roles on the node  
-  
--   Moves to update the next node  
-  
+
+1. Puts each node of the cluster into node maintenance mode.
+2. Moves the clustered roles off the node.
+3. Installs the updates and any dependent updates.
+4. Performs a restart if necessary.
+5. Brings the node out of maintenance mode.
+6. Restores the clustered roles on the node.
+7. Moves to update the next node.
+
 For many clustered roles in the cluster, the automatic update process triggers a planned failover. This can cause a transient service interruption for connected clients. However, in the case of continuously available workloads, such as Hyper\-V with live migration or file server with SMB Transparent Failover, Cluster-Aware Updating can coordinate cluster updates with no impact to the service availability.    
   
 ## Practical applications  
@@ -54,7 +48,7 @@ For many clustered roles in the cluster, the automatic update process triggers a
 ## Important functionality  
 The following is a description of important Cluster-Aware Updating functionality:  
   
--   A user interface \(UI\) and a set of cmdlets that you can use to preview, apply, monitor, and report on the updates  
+-   A user interface \(UI\) - the Cluster Aware Updating window - and a set of cmdlets that you can use to preview, apply, monitor, and report on the updates  
   
 -   An end\-to\-end automation of the cluster\-updating operation \(an Updating Run\), orchestrated by one or more Update Coordinator computers  
   
