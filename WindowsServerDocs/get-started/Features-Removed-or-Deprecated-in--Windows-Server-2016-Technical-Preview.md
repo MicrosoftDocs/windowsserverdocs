@@ -1,3 +1,3 @@
 ---
-redirect_url: /windows-server-docs/get-started/Deprecated-Features
+redirect_url: /windows-server/get-started/Deprecated-Features
 ---

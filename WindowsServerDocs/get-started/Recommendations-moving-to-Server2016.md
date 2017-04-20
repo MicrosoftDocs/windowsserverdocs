@@ -46,7 +46,7 @@ There are more options than ever before to help you and your customers take adva
 
 ## Additional resources
 
-- [Features removed or deprecated in Windows Server 2016](Features-Removed-or-Deprecated-in--Windows-Server-2016-Technical-Preview.md)
+- [Features removed or deprecated in Windows Server 2016](deprecated-features.md)
 - For general server upgrade and migration options, visit [Upgrade and conversion options for Windows Server 2016](Supported-Upgrade-Paths.md).
 - For more information on product lifecycle and support levels, see the [Support Lifecycle Policy FAQ](https://support.microsoft.com/help/17140/support-lifecycle-policy-faq).
 

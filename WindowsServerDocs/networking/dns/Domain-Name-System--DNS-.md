@@ -1,3 +1,3 @@
 ---
-redirect_url: /windows-server-docs/networking/dns/dns-top
+redirect_url: /windows-server/networking/dns/dns-top
 ---

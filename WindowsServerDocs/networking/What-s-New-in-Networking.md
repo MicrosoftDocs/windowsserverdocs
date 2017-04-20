@@ -35,7 +35,7 @@ Following are the new or improved SDN infrastructure technologies.
   
 -   **Network Controller**. New in Windows Server 2016, Network Controller provides a centralized, programmable point of automation to manage, configure, monitor, and troubleshoot virtual and physical network infrastructure in your datacenter. Using Network Controller, you can automate the configuration of network infrastructure instead of performing manual configuration of network devices and services. For more information, see [Network Controller](sdn/technologies/network-controller/Network-Controller.md) and [Deploy Software Defined Networks using scripts](https://technet.microsoft.com/library/mt427380.aspx).  
   
--   **Hyper-V Virtual Switch**. The Hyper-V Virtual Switch runs on Hyper-V hosts, and allows you to create distributed switching and routing, and a policy enforcement layer that is aligned and compatible with Microsoft Azure. For more information, see [Hyper-V Virtual Switch](technologies/hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md).  
+-   **Hyper-V Virtual Switch**. The Hyper-V Virtual Switch runs on Hyper-V hosts, and allows you to create distributed switching and routing, and a policy enforcement layer that is aligned and compatible with Microsoft Azure. For more information, see [Hyper-V Virtual Switch](../virtualization/hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md).  
   
 -   **Network Function Virtualization (NFV)**. In today's software defined datacenters, network functions that are being performed by hardware appliances (such as load balancers, firewalls, routers, switches, and so on) are increasingly being deployed as virtual appliances. This "network function virtualization" is a natural progression of server virtualization and network virtualization. Virtual appliances are quickly emerging and creating a brand new market. They continue to generate interest and gain momentum in both virtualization platforms and cloud services. The following NFV technologies are available in Windows Server 2016.  
   
@@ -54,7 +54,7 @@ Following are the new or improved SDN infrastructure technologies.
   
 -   **Standardized Protocols**. Network Controller uses Representational State Transfer (REST) on its northbound interface with JavaScript Object Notation (JSON) payloads. The Network Controller southbound interface uses Open vSwitch Database Management Protocol (OVSDB).  
   
--   **Flexible encapsulation technologies**. These technologies operate at the data plane, and support both Virtual Extensible LAN (VxLAN) and Network Virtualization Generic Routing Encapsulation (NVGRE). For more information, see [GRE Tunneling in  Windows Server 2016](remote-access/ras-gateway/gre-tunneling-windows-server.md).  
+-   **Flexible encapsulation technologies**. These technologies operate at the data plane, and support both Virtual Extensible LAN (VxLAN) and Network Virtualization Generic Routing Encapsulation (NVGRE). For more information, see [GRE Tunneling in  Windows Server 2016](../remote/remote-access/ras-gateway/gre-tunneling-windows-server.md).  
   
 For more information about SDN, see [Software Defined Networking &#40;SDN&#41;](sdn/software-defined-networking.md).  
   
@@ -66,7 +66,7 @@ The following cloud scale fundamentals are now available.
   
 -   **Packet Direct**.  Packet Direct provides a high network traffic throughput and low-latency packet processing infrastructure.  
   
--   **Switch Embedded Teaming (SET)**.        SET is a NIC Teaming solution that is integrated in the Hyper-V Virtual Switch. SET allows the teaming of up to eight physical NICS into a single SET team, which improves availability and provides failover. In Windows Server 2016, you can create SET teams that are restricted to the use of Server Message Block (SMB) and RDMA. In addition, you can use SET teams to distribute network traffic for Hyper-V Network Virtualization. For more information, see [Remote Direct Memory Access &#40;RDMA&#41; and Switch Embedded Teaming &#40;SET&#41;](technologies/hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md).  
+-   **Switch Embedded Teaming (SET)**.        SET is a NIC Teaming solution that is integrated in the Hyper-V Virtual Switch. SET allows the teaming of up to eight physical NICS into a single SET team, which improves availability and provides failover. In Windows Server 2016, you can create SET teams that are restricted to the use of Server Message Block (SMB) and RDMA. In addition, you can use SET teams to distribute network traffic for Hyper-V Network Virtualization. For more information, see [Remote Direct Memory Access &#40;RDMA&#41; and Switch Embedded Teaming &#40;SET&#41;](../virtualization/hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md).  
   
 ## <a name="bkmk_existing"></a>New Features for Additional Networking Technologies
 
@@ -117,7 +117,7 @@ For more information, see [What's New in DNS Server in Windows Server 2016](dns/
 ## <a name="bkmk_GRE"></a>GRE Tunneling  
 RAS Gateway now supports high availability Generic Routing Encapsulation (GRE) tunnels for site to site connections and M+N redundancy of gateways. GRE is a lightweight tunneling protocol that can encapsulate a wide variety of network layer protocols inside virtual point-to-point links over an Internet Protocol internetwork.  
   
-For more information, see [GRE Tunneling in Windows Server 2016](remote-access/ras-gateway/gre-tunneling-windows-server.md).  
+For more information, see [GRE Tunneling in Windows Server 2016](../remote/remote-access/ras-gateway/gre-tunneling-windows-server.md).  
   
 ## <a name="HNV"></a>Hyper-V Network Virtualization  
 Introduced in Windows Server 2012, Hyper-V Network Virtualization (HNV) enables virtualization of customer networks on top of a shared physical network infrastructure. With minimal changes necessary on the physical network fabric, HNV gives service providers the agility to deploy and migrate tenant workloads anywhere across the three clouds: the service provider cloud, the private cloud, or the Microsoft Azure public cloud.  

@@ -1,0 +1,46 @@
+---
+title: The Update-ServerFiles Command
+description: "Windows Commands topic for **** - "
+ms.custom: na
+ms.prod: windows-server-threshold
+ms.reviewer: na
+ms.suite: na
+ms.technology: manage-windows-commands
+ms.tgt_pltfrm: na
+ms.topic: article
+ms.assetid: 23aa79df-38c6-401e-91bd-cd23811b30b4
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
+---
+# The Update-ServerFiles Command
+
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
+Updates files in the remINST shared folder by using the latest files that are stored in the server's %Windir%\System32\remInst folder. To ensure the validity of your Windows Deployment Services installation, you should run this command once after each server upgrade, service pack installation, or update to Windows Deployment Services files.  
+  
+## Syntax  
+  
+```  
+wdsutil [Options] /Update-ServerFiles [/Server:<Server name>]  
+```  
+  
+## Parameters  
+  
+|Parameter|Description|  
+|-------|--------|  
+|[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server will be used.|  
+  
+## <a name="BKMK_examples"></a>Examples  
+To update the files, type one of the following:  
+  
+```  
+wdsutil /Update-ServerFiles  
+wdsutil /verbose /Progress /Update-ServerFiles /Server:MyWDSServer  
+```  
+  
+#### additional references  
+[Command-Line Syntax Key](command-line-syntax-key.md)  
+  
+
