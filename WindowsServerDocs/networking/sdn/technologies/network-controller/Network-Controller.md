@@ -116,7 +116,7 @@ This Network Controller feature allows you to deploy, configure, and manage virt
 
 Network Controller can place different connections of a tenant on separate gateways. You can use a single public IP for all gateway connections or have different public IPs for a subset of the connections. Network Controller logs all gateway configuration and state changes, which can be used for auditing and troubleshooting purposes.
 
-For more information on BGP, see [Border Gateway Protocol &#40;BGP&#41;](../../../remote-access/bgp/Border-Gateway-Protocol-BGP.md).
+For more information on BGP, see [Border Gateway Protocol &#40;BGP&#41;](../../../../remote/remote-access/bgp/Border-Gateway-Protocol-BGP.md).
 
 For more information on the RAS Gateway, see [RAS Gateway for SDN](../../../sdn/technologies/network-function-virtualization/RAS-Gateway-for-SDN.md).
 

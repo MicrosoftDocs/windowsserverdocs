@@ -47,7 +47,7 @@ Active Directory Federation Services (AD FS) in Windows Server 2012 R2 provides 
     -   Enable device authentication for seamless second-factor authentication. This ties the user's identity to the registered device that is used to access the resource, thus offering more secure compound identity verification before protected resources are accessed.
 
         > [!NOTE]
-        > For more information about device object, Device Registration Service, Workplace Join, and the device as seamless second-factor authentication and SSO, see [Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications](../../ad-fs/operations/../../ad-fs/operations/../../ad-fs/operations/../../ad-fs/operations/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md).
+        > For more information about device object, Device Registration Service, Workplace Join, and the device as seamless second-factor authentication and SSO, see [Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications](Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md).
 
     -   Set MFA requirement for all extranet access or conditionally based on the user's identity, network location or a device that is used to access protected resources.
 

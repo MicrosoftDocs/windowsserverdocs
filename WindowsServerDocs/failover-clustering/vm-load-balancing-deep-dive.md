@@ -62,4 +62,4 @@ The node fairness feature, provides in-box functionality, which is targeted towa
 ## See Also
 * [Virtual Machine Load Balancing Overview](vm-load-balancing-overview.md)
 * [Failover Clustering](failover-clustering-overview.md)
-* [Hyper-V Overview](../compute/hyper-v/Hyper-V-on-Windows-Server.md)
+* [Hyper-V Overview](../virtualization/hyper-v/Hyper-V-on-Windows-Server.md)

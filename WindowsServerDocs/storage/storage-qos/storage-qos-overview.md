@@ -877,6 +877,6 @@ IOPSNormalizationSize
 ```    
 
 ## See Also  
-- [Windows Server 2016](../../get-started/Windows-Server-2016-Technical-Preview-5.md)  
+- [Windows Server 2016](../../get-started/windows-server-2016.md)  
 - [Storage Replica in Windows Server 2016](../storage-replica/storage-replica-overview.md)  
 - [Storage Spaces Direct in Windows Server 2016](../storage-spaces/storage-spaces-direct-overview.md)  

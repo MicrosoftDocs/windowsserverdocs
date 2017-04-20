@@ -1,4 +1,4 @@
 ---
-redirect_url: /windows-server-docs/networking/sdn/manage/manage-sdn
+redirect_url: /windows-server/networking/sdn/manage/manage-sdn
 ---
 

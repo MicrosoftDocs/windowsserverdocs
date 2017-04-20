@@ -1,3 +1,3 @@
 ---
-redirect_url: /windows-server-docs/networking/branchcache/deploy/deploy-hosted-cache-servers
+redirect_url: /windows-server/networking/branchcache/deploy/deploy-hosted-cache-servers
 ---

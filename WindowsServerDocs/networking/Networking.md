@@ -89,10 +89,6 @@ Dynamic Host Configuration Protocol \(DHCP\) is a client/server protocol that au
 
 Hyper-V Network Virtualization \(HNV\) enables virtualization of customer networks on top of a shared physical network infrastructure.
 
-### [Hyper-V Virtual Switch](technologies/hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md)
-
-The Hyper\-V Virtual Switch is a software-based layer 2 Ethernet network switch that is available in Hyper\-V Manager when you install the Hyper\-V server role. The switch includes programmatically managed and extensible capabilities to connect virtual machines to both virtual networks and the physical network. In addition, Hyper\-V Virtual Switch provides policy enforcement for security, isolation, and service levels.
-
 ### [IP Address Management &#40;IPAM&#41;](technologies/ipam/ipam-top.md)
 
 IP Address Management \(IPAM\) is an integrated suite of tools to enable end-to-end planning, deploying, managing and monitoring of your IP address infrastructure, with a rich user experience. IPAM automatically discovers IP address infrastructure servers and Domain Name System \(DNS\) servers on your network and enables you to manage them from a central interface.
@@ -120,14 +116,6 @@ This topic provides information about choosing the right network adapter for you
 ### [NIC Teaming](technologies/nic-teaming/NIC-Teaming.md)
 
 NIC Teaming allows you to group physical Ethernet network adapters into one or more software-based virtual network adapters. These virtual network adapters provide fast performance and fault tolerance in the event of a network adapter failure.
-
-### [Remote Access](remote-access/Remote-Access.md)
-
-The Remote Access server role includes DirectAccess and virtual private network \(VPN\), local area network \(LAN\) Routing, and Web Application Proxy. RAS allows you to provide network connectivity to remote employees, site-to-site VPN to connect remote office locations over the Internet, and the RAS Gateway, which has multitenant and Border Gateway Protocol \(BGP\) capabilities for Enterprises and Cloud Service Providers \(CSPs\).
-
-### [Remote Direct Memory Access &#40;RDMA&#41; and Switch Embedded Teaming &#40;SET&#41;](technologies/hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md)
-
-This topic provides instructions on how to use Windows PowerShell commands to enable Data Center Bridging \(DCB\), create a Hyper-V Virtual Switch with an RDMA virtual NIC \(vNIC\), and create a Hyper-V Virtual Switch with SET and RDMA vNICs.
 
 ## Additional Resources  
 

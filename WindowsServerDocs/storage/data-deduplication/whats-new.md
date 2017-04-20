@@ -22,7 +22,7 @@ Data Deduplication has the following enhancements in Windows Server 2016:
 | [Support for large files](whats-new.md#large-file-support) | Updated | Prior to Windows Server 2016, files approaching 1 TB in size were not good candidates for deduplication. In Windows Server 2016, files up to 1 TB are fully supported. |
 | [Support for Nano Server](whats-new.md#nano-server-support) | New | Data Deduplication is available and fully supported in the new Nano Server deployment option for Windows Server 2016. |
 | [Simplified backup support](whats-new.md#simple-backup-support) | New | Windows Server 2012 R2 supported Virtualized  Backup Applications, such as Microsoft's [Data Protection Manager](https://technet.microsoft.com/library/hh758173.aspx), through a series of manual configuration steps. Windows Server 2016 has added a new default Usage Type (Backup) for seamless deployment of Data Deduplication for Virtualized Backup Applications.|
-| [Support for Cluster OS Rolling Upgrade](whats-new.md#cluster-upgrade-support) | New | Data Deduplication fully supports the new [Cluster OS Rolling Upgrade](../../failover-clustering/cluster-operating-system-rolling-upgrade.md) feature of Windows Server 2016. |
+| [Support for Cluster OS Rolling Upgrade](whats-new.md#cluster-upgrade-support) | New | Data Deduplication fully supports the new [Cluster OS Rolling Upgrade](../..//failover-clustering/cluster-operating-system-rolling-upgrade.md) feature of Windows Server 2016. |
 
 ## <a name="large-volume-support"></a>Support for large volumes
 **What value does this change add?**  
