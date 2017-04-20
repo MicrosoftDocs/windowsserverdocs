@@ -29,7 +29,7 @@
 ### [Schannel Security Support Provider Technical Reference](tls/schannel-security-support-provider-technical-reference.md)
 ### [Transport Layer Security protocol](tls/transport-layer-security-protocol.md)
 ### [Datagram Transport Layer Security protocol](tls/datagram-transport-layer-security-protocol.md)
-## [How User Account Control Works](trusted-platform-module/user-account-control/how-user-account-control-works.md)
+## [How User Account Control Works](user-account-control/how-user-account-control-works.md)
 ## [Token Binding](token-binding/introducing-token-binding.md)
 ## [Windows Defender](windows-defender/windows-defender-overview-windows-server.md)
 ### [Windows Defender Events](windows-defender/windows-defender-events.md)

@@ -69,4 +69,4 @@ For more info, see [RemoteFX vGPU Updates in Windows Server Next](https://blogs.
 ### Using Azure SQL DB for your Remote Desktop Connection Broker high availability environment
 With the release of Windows Server 2016, deploying a highly available Remote Desktop Services deployment enables you to leverage an Azure SQL database for your Remote Desktop Connection Brokers in high availability mode.
 
-For more info, see [Use Azure SQL DB for your Remote Desktop Connection Broker high availability environment](../../remote/remote-desktop-services/Use-an-Azure-SQL-database-to-enable-high-availability-for-your-Connection-Broker.md).
+For more info, see [Use Azure SQL DB for your Remote Desktop Connection Broker high availability environment](../remote/remote-desktop-services/Use-an-Azure-SQL-database-to-enable-high-availability-for-your-Connection-Broker.md).
