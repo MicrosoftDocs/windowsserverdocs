@@ -1,3 +1,3 @@
 ---
-redirect_url: /windows-server-docs/networking/sdn/software-defined-networking
+redirect_url: /windows-server/networking/sdn/software-defined-networking
 ---

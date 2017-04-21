@@ -1,3 +1,3 @@
 ---
-redirect_url: /windows-server-docs/networking/technologies/dhcp/dhcp-top
+redirect_url: /windows-server/networking/technologies/dhcp/dhcp-top
 ---

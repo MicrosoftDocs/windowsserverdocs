@@ -85,7 +85,7 @@ The Hyper-V Virtual Switch is a software-based layer-2 Ethernet network switch t
   
 In Hyper-V Virtual Switch in  Windows Server 2016, you can also deploy Switch Embedded Teaming (SET) and Remote Direct Memory Access (RDMA). For more information, see the section [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](#bkmk_rdma) in this topic.  
   
-For more information about Hyper-V Virtual Switch, see [Hyper-V Virtual Switch](../technologies/hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md).
+For more information about Hyper-V Virtual Switch, see [Hyper-V Virtual Switch](../../virtualization/hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md).
 
 ### <a name="bkmk_idns"></a>Internal DNS Service &#40;iDNS&#41;
 

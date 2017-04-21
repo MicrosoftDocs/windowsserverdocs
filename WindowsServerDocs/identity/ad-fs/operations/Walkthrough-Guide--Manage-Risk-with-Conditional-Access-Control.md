@@ -122,7 +122,7 @@ In this step you will verify the conditional access control policy that you set 
 
 ## See Also
 [Manage Risk with Conditional Access Control](../../ad-fs/operations/Manage-Risk-with-Conditional-Access-Control.md)
-[Set up the lab environment for AD FS in Windows Server 2012 R2](../../ad-fs/operations/../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md)
+[Set up the lab environment for AD FS in Windows Server 2012 R2](../deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md)
 
 
 

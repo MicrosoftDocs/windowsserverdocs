@@ -24,7 +24,7 @@ ms.author: jaimeo
 > To download Windows Server 2016, see [Windows Server Evaluations](https://www.microsoft.com/evalcenter/evaluate-windows-server-2016).
 
 
-## [System Requirements](System-Requirements--and-Installation.md)
+## [System Requirements](system-requirements.md)
 Find out the minimum hardware requirements to install and run Windows Server 2016.
 
 ## [Release Notes: Important Issues in Windows Server](Windows-Server-2016-GA-Release-Notes.md)
@@ -33,7 +33,7 @@ Issues that could cause serious problems if you don't avoid or work around them.
 ## [Recommendations for moving to Windows Server 2016](Recommendations-moving-to-Server2016.md)
 Comprehensive table of available approaches for getting to Windows Server 2016 in various scenarios.
 
-## [Features Removed or Deprecated in  Windows Server 2016](Features-Removed-or-Deprecated-in--Windows-Server-2016-Technical-Preview.md)
+## [Features Removed or Deprecated in  Windows Server 2016](deprecated-features.md)
 Features that have already been removed from Windows Server 2016 or designated for potential future removal.
 
 ## [Upgrade and Conversion Options](Supported-Upgrade-Paths.md)

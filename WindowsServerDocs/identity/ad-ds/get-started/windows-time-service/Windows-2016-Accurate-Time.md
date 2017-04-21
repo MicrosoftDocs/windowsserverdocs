@@ -241,7 +241,7 @@ In this configuration, the Time Server parameter is this host.  Its Polling Freq
 To synchronize exclusively over NTP, it is recommended to disable the TimeSync integration service in the guest.
 
 > [!NOTE]
-> Note:  Support for accurate time with Linux guests requires a feature that is only supported in the latest upstream Linux kernels and it isn’t something that’s widely available across all Linux distros yet. Please reference [Supported Linux and FreeBSD virtual machines for Hyper-V on Windows](https://technet.microsoft.com/en-us/windows-server-docs/compute/hyper-v/supported-linux-and-freebsd-virtual-machines-for-hyper-v-on-windows) for more details about support distributions.
+> Note:  Support for accurate time with Linux guests requires a feature that is only supported in the latest upstream Linux kernels and it isn’t something that’s widely available across all Linux distros yet. Please reference [Supported Linux and FreeBSD virtual machines for Hyper-V on Windows](https://technet.microsoft.com/en-us/windows-server-docs/virtualization/hyper-v/supported-linux-and-freebsd-virtual-machines-for-hyper-v-on-windows) for more details about support distributions.
 
 #### <a name="GTIMESERV"></a>Specify a Local Reliable Time Service Using GTIMESERV
 You can specify one or more domain controllers as accurate source clocks by using the GTIMESERV, Good Time Server, flags.  For instance, specific domain controllers equipped with GPS hardware can be flagged as a GTIMESERV.  This will insure your domain references a clock based on the GPS hardware.
