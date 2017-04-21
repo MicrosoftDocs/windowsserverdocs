@@ -17,7 +17,7 @@ description: Cluster-Aware Updating (CAU) automates software update installation
 This section describes the requirements and dependencies that are needed to use [Cluster-Aware Updating](cluster-aware-updating.md) (CAU) to apply updates to a failover cluster running Windows Server.
   
 > [!NOTE]  
-> You may need to independently validate that your cluster environment is ready to apply updates if you use a plug\-in other than **Microsoft.WindowsUpdatePlugin**. If you are using a non\-Microsoft plug\-in, contact the publisher for more information. For more information about plug\-ins, see [How Plug\-ins Work]().   
+> You may need to independently validate that your cluster environment is ready to apply updates if you use a plug\-in other than **Microsoft.WindowsUpdatePlugin**. If you are using a non\-Microsoft plug\-in, contact the publisher for more information. For more information about plug\-ins, see [How Plug\-ins Work](cluster-aware-updating-plug-ins.md).   
   
 ## <a name="BKMK_REQ_CLUS"></a>Install the Failover Clustering feature and the Failover Clustering Tools  
 CAU requires an installation of the Failover Clustering feature and the Failover Clustering Tools. The Failover Clustering Tools include the CAU tools \(clusterawareupdating.dll\), the Failover Clustering  cmdlets, and other components needed for CAU operations. For steps to install the Failover Clustering feature, see [Installing the Failover Clustering Feature and Tools](http://go.microsoft.com/fwlink/p/?LinkId=253342).  
@@ -186,7 +186,7 @@ netsh winhttp set proxy MyProxy.CONTOSO.com:443 "<local>"
   
 -   To help ensure data integrity for the server message block \(SMB\) connections that are used to access the hotfix root folder, you should configure SMB Encryption in the SMB shared folder, if it is possible to configure it. The **Microsoft.HotfixPlugin** requires that SMB signing or SMB Encryption is configured to help ensure data integrity for the SMB connections. 
   
-    For more information, see [Restrict access to the hotfix root folder and hotfix configuration file]() in [How plug\-ins work]().  
+    For more information, see [Restrict access to the hotfix root folder and hotfix configuration file](cluster-aware-updating-plug-ins.md#BKMK_ACL).
   
 ### Additional recommendations  
   
