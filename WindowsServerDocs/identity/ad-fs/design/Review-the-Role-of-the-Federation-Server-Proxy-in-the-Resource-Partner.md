@@ -3,9 +3,9 @@ ms.assetid: 14aa112d-ae31-4181-97e4-92623b5c9270
 title: Review the Role of the Federation Server Proxy in the Resource Partner
 description:
 author: billmath
-ms.author:  billmath
+ms.author: billmath
 manager: femila
-ms.date: 09/28/2016
+ms.date: 02/21/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 

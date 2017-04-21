@@ -3,9 +3,9 @@ ms.assetid: 663a2482-33d1-4c19-8607-2e24eef89fcb
 title: Federation Server Farm Using WID
 description:
 author: billmath
-ms.author:  billmath
+ms.author: billmath
 manager: femila
-ms.date: 09/28/2016
+ms.date: 02/21/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 

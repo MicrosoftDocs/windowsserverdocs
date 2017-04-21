@@ -14,7 +14,7 @@ ms.date: 10/4/2016
 
 <img src="../get-started/media/7-storage.png" style='float:left; padding:.5em;' alt="Icon representing a drive"> Storage in Windows Server 2016 provides new and improved features for software-defined datacenter (SDDC) customers focusing on virtualized workloads. Windows Server also provides extensive support for enterprise customers using file servers with existing workloads. 
 
-To find out about what's new in storage, see [What's new in storage](whats-new-in-storage.md) and [What's new in Failover Clustering](../failover-clustering/whats-new-in-failover-clustering.md).
+To find out about what's new in storage, see [What's new in storage](whats-new-in-storage.md) and [What's new in Failover Clustering](..//failover-clustering/whats-new-in-failover-clustering.md).
 
 For an overview of storage technologies included in Windows Server, see the following list (categorized by workload).
 
@@ -38,7 +38,7 @@ Data Deduplication is a feature of Windows Server 2016 that can help reduce the 
 
 ## General-purpose file servers
 
-### [Work Folders](https://technet.microsoft.com/library/dn265974(v=ws.11).aspx)
+### [Work Folders](work-folders/work-folders-overview.md)
 
 With Work Folders users can store and access work files on personal computers and devices, often referred to as bring-your-own device (BYOD), in addition to corporate PCs. Users gain a convenient location to store work files, and they can access them from anywhere. Organizations maintain control over corporate data by storing the files on centrally managed file servers, and optionally specifying user device policies such as encryption and lock-screen passwords.
 
@@ -110,6 +110,6 @@ Network File System (NFS) provides a file sharing solution for enterprises that 
 ## See also
 * [PowerShell cmdlets in Windows Server 2016 and Windows 10](https://technet.microsoft.com/library/mt156917.aspx)
 * [What's new in storage](whats-new-in-storage.md)
-* [What's new in Failover Clustering](../failover-clustering/whats-new-in-failover-clustering.md)
+* [What's new in Failover Clustering](..//failover-clustering/whats-new-in-failover-clustering.md)
 * [Azure Storage](https://azure.microsoft.com/en-us/documentation/services/storage/)
 * [Azure StorSimple](https://www.microsoft.com/en-us/cloud-platform/azure-storsimple)

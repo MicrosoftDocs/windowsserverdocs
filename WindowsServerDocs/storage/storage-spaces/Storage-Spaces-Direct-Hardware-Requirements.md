@@ -7,8 +7,7 @@ ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: eldenchristensen
-ms.date: 01/11/2017
-ms.assetid: 8bd0d09a-0421-40a4-b752-40ecb5350ffd
+ms.date: 02/15/2017
 ---
 # Storage Spaces Direct hardware requirements
 >Applies To: Windows Server 2016
@@ -30,34 +29,38 @@ In addition, the following requirements apply.
 ### Servers
 
 - Minimum of 2 servers, maximum of 16 servers
-- All servers must be identical in hardware components, drivers, firmware, and configuration
- 
+- All servers should be the same make and model
+
 ### CPU
 
 - Minimum of Intel Nehalem or later compatible processor
 
 ### Memory
 
-- 5 gigabytes (GB) of memory per terabyte (TB) of cache drive on each server, to store metadata structures. For example, if each server has 2 x 1 TB cache drives, you should have 2 x 5 GB = 10 GB of memory for Storage Spaces Direct internal use.
-- Any memory needed for your applications or workloads (such as virtual machines)
+- 4 GB of RAM per terabyte (TB) of cache drive capacity on each server, to store Storage Spaces Direct metadata.   
+Note that RAM sizes use base-2 numbering (where 1 GB = 1,024 MB), while drives are advertised using base-10 numbering (where 1 TB = 1,000 GB). For example, if each server has 2 x 1.6 TB (advertised capacity) cache drives, you should keep 2 x 1.6 x 4096 MB = 13,107 MB (12.8 GB) of memory available for Storage Spaces Direct internal use.
+- Any memory used by Windows Server, VMs, and other apps or workloads.
 
 ### Networking
 
 - Minimum of 10 Gbps network interface for intra-cluster communication
 - Recommended: Two NICs for redundancy and performance
-- Recommended: Interfaces which are remote-direct memory access (RDMA) capable, iWARP or RoCE
+- Recommended: NICS that are remote-direct memory access (RDMA) capable, iWARP or RoCE
 
 ### Drives
 
-For more help choosing drives, see the [Choosing drives](choosing-drives-and-resiliency-types.md) topic.
+For more help choosing drives, see the [Choosing drives](choosing-drives.md) topic.
 
-- Local-attached SATA, SAS, or NVMe drives
-- Every drive must be physically connected to only one server
-- Ensure SSDs are "enterprise-grade", meaning they have [power-loss protection](https://blogs.technet.microsoft.com/filecab/2016/11/18/dont-do-it-consumer-ssd/)
-- Ensure SSDs used for cache have high write endurance. We recommend 5+ drive-writes-per-day (DWPD).
-- Drives can be 512n, 512e, or 4K native, they all work equally well
-- Separate dedicated drive for boot
-- **Not supported:** multi-path IO (MPIO) or physically connecting drives via multiple paths
+- Use local-attached SATA, SAS, or NVMe drives.
+- Every drive must be physically connected to only one server.
+- All servers must have the same drive types (if one server has NVMe, they all require NVMe.  If one has HDD, they all require HDD)
+- Recommended: All servers have the same drive configuration (type, size, firmware)
+- SSDs must have [power-loss protection](https://blogs.technet.microsoft.com/filecab/2016/11/18/dont-do-it-consumer-ssd/), i.e. they are "enterprise-grade"
+- Recommended:  SSDs used for cache have high endurance, providing minimum of 5 drive-writes-per-day (DWPD)
+- Add capacity drives in multiples of the number of NVMe or SSD cache devices.
+- Drives can be 512n, 512e, or 4K native - they all work equally well.
+- Use a separate, dedicated drive or RAID 1 mirror for Windows Server (200 GB is a recommended minimum size).
+- **Not supported:** Multi-path IO (MPIO) or physically connecting drives via multiple paths.
 
 #### Minimum number of drives
 

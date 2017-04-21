@@ -26,9 +26,9 @@ Following is an example of how you can use DNS policy to balance application tra
 
 This example uses one fictional company, Contoso Gift Services, which provides online gifting solutions across the globe through their Web site, contosogiftservices.com. 
 
-The contosogiftservices.com web site is hosted only at a single on-premise datacenter in Seattle (with public IP 192.68.30.2). 
+The contosogiftservices.com web site is hosted only at a single on-premises datacenter in Seattle (with public IP 192.68.30.2). 
 
-The DNS server is also located in the on premise datacenter. 
+The DNS server is also located in the on-premises datacenter. 
 
 With a recent surge in business, contosogiftservices.com has a higher number of visitors every day, and some of the customers have reported service availability issues. 
 
@@ -53,9 +53,9 @@ This article demonstrates how to configure the DNS server to answer DNS queries 
 
 After the configuration of a new DNS policy that is based on the peak hours of 6 PM to 9 PM in Seattle, the DNS server sends seventy per cent of the DNS responses to clients containing the IP address of the Seattle Web server, and thirty per cent of the DNS responses to clients containing the IP address of the Azure Web server, thereby directing client traffic to the new Azure Web server, and preventing the Seattle Web server from becoming overloaded. 
 
-At all other times of day, the normal query processing takes place and responses are sent from default zone scope which contains a record for the web server in the on-premise datacenter. 
+At all other times of day, the normal query processing takes place and responses are sent from default zone scope which contains a record for the web server in the on-premises datacenter. 
 
-The TTL of 10 minutes on the Azure record ensures that the record is expired from the LDNS cache before the VM is removed from Azure. One of the benefits of such scaling is that you can keep your DNS data on-premise, and keep scaling out to Azure as demand requires.
+The TTL of 10 minutes on the Azure record ensures that the record is expired from the LDNS cache before the VM is removed from Azure. One of the benefits of such scaling is that you can keep your DNS data on-premises, and keep scaling out to Azure as demand requires.
 
 ## <a name="bkmk_azureconfigure"></a>How to Configure DNS Policy for Intelligent DNS Responses Based on Time of Day with Azure App Server
 To configure DNS policy for time of day application load balancing based query responses, you must perform the following steps.
@@ -94,7 +94,7 @@ The next step is to add the records representing the Web server host into the zo
 
 In AzureZoneScope, the record www.contosogiftservices.com is added with IP address 192.68.31.44, which is located in the Azure public cloud. 
 
-Similarly, in the default zone scope \(contosogiftservices.com\), a record \(www.contosogiftservices.com\) is added with IP address 192.68.30.2 of the Web server running in the Seattle on-premise datacenter.
+Similarly, in the default zone scope \(contosogiftservices.com\), a record \(www.contosogiftservices.com\) is added with IP address 192.68.30.2 of the Web server running in the Seattle on-premises datacenter.
 
 In the second cmdlet below, the –ZoneScope parameter is not included. Because of this,  the records are added in the default ZoneScope. 
 
@@ -111,8 +111,8 @@ For more information, see [Add-DnsServerResourceRecord](https://technet.microsof
 ### <a name="bkmk_policies"></a>Create the DNS Policies 
 After the zone scopes are created, you can create DNS policies that distribute the incoming queries across these scopes so that the following occurs.
 
-1. From 6 PM to 9 PM daily, 30% of clients receive the IP address of the Web server in the Azure datacenter in the DNS response, while 70% of clients receive the IP address of the Seattle on-premise Web server.
-2. At all other times, all the clients receive the IP address of the Seattle on-premise Web server.
+1. From 6 PM to 9 PM daily, 30% of clients receive the IP address of the Web server in the Azure datacenter in the DNS response, while 70% of clients receive the IP address of the Seattle on-premises Web server.
+2. At all other times, all the clients receive the IP address of the Seattle on-premises Web server.
 
 The time of the day has to be expressed in local time of the DNS server.
 

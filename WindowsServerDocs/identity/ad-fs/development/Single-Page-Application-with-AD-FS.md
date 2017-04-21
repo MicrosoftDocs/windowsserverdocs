@@ -106,7 +106,11 @@ Open the **app.js** file and change the **adalProvider.init** definition to:
 |clientID|This is the client ID you specified while configuring the public client for your single page application
 
 ## Configure WebAPI to use AD FS
-Open the **Startup.Auth.cs** file in the sample and remove
+Open the **Startup.Auth.cs** file in the sample and add the following at the beginning: 
+
+	using System.IdentityModel.Tokens;
+
+remove:
 
                 app.UseWindowsAzureActiveDirectoryBearerAuthentication(
     new WindowsAzureActiveDirectoryBearerAuthenticationOptions

@@ -5,7 +5,7 @@ description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 09/29/2016
+ms.date: 03/07/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 
@@ -14,7 +14,7 @@ ms.technology: identity-adds
 
 # Command line process auditing
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2
 
 **Author**: Justin Turner, Senior Support Escalation Engineer with the Windows group  
   

@@ -5,7 +5,7 @@ description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 09/29/2016
+ms.date: 02/09/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 
@@ -63,7 +63,7 @@ However, few infrastructures include only Windows computers and Microsoft applic
 The consumerization of IT has introduced additional challenges in that employee owned devices are being used to access corporate owned data, and the organization may have little to no control over the patching and configuration of employees' personal devices. Enterprise-class hardware typically ships with enterprise-ready configuration options and management capabilities, at the cost of less choice in individual customization and device selection. Employee-focused hardware offers a broader range of manufacturers, vendors, hardware security features, software security features, management capabilities and configuration options, and many enterprise features may be absent altogether.  
   
 #### Patch and Vulnerability Management Software  
-If an effective patch management system is in place for the Windows systems and Microsoft applications, part of the attack surface that unpatched vulnerabilities create has been addressed. However, unless the non-Windows systems, non-Microsoft applications, network infrastructure, and employee devices are also kept up-to-date on patches and other fixes, the infrastructure remains vulnerable. In some cases, an application's vendor may offer automatic update capabilities; in others, there may be a need to devise an approach to regularly retrieve and apply patches and other fixes. Although specific product recommendations cannot be made here, [Appendix A: Patch and Vulnerability Management Software](../../../ad-ds/plan/security-best-practices/Appendix-A--Patch-and-Vulnerability-Management-Software.md) includes information about commercially available patch and vulnerability management software provided by Microsoft Partners.  
+If an effective patch management system is in place for the Windows systems and Microsoft applications, part of the attack surface that unpatched vulnerabilities create has been addressed. However, unless the non-Windows systems, non-Microsoft applications, network infrastructure, and employee devices are also kept up-to-date on patches and other fixes, the infrastructure remains vulnerable. In some cases, an application's vendor may offer automatic update capabilities; in others, there may be a need to devise an approach to regularly retrieve and apply patches and other fixes.
   
 ### Outdated Applications and Operating Systems  
 *"You can't expect a six-year-old operating system to protect you against a six-month-old attack."* - Information Security Professional with 10 years of experience securing enterprise installations  

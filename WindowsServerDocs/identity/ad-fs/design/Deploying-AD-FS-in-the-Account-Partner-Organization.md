@@ -3,9 +3,9 @@ ms.assetid: 8c3536b7-d091-4ee6-ad04-24713f070862
 title: Deploying AD FS in the Account Partner Organization
 description:
 author: billmath
-ms.author:  billmath
+ms.author: billmath
 manager: femila
-ms.date: 09/28/2016
+ms.date: 02/21/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 

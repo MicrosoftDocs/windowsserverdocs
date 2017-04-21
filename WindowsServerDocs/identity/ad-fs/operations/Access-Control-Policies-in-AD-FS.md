@@ -5,13 +5,13 @@ description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 08/31/2016
+ms.date: 03/29/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 
 ms.technology: identity-adfs
 ---
-# Access Control Policies in AD FS
+# Access Control Policies in Windows Server 2016 AD FS
 
 >Applies To: Windows Server 2016
 
@@ -37,10 +37,9 @@ To provide increased flexibility to address your business needs, administrators 
   
 To create a policy template, an administrator needs to first specify under which conditions a request will be authorized for token issuance and/or delegation. Condition and action options are shown in the table below.   Conditions in bold can be further configured by the administrator with different or new values. Admin can also specify exceptions if there is any. When a condition is met, a permit action will not be triggered if there is an exception specified and the incoming request matches the condition specified in the exception.  
   
-|||  
-|-|-|  
-|Permit Users|Except|  
-|From **specific** network|From **specific** network<br /><br />From **specific** groups<br /><br />From devices with **specific** trust levels<br /><br />With **specific** claims in the request|  
+|Permit Users|Except| 
+| --- | --- | 
+ |From **specific** network|From **specific** network<br /><br />From **specific** groups<br /><br />From devices with **specific** trust levels<br /><br />With **specific** claims in the request|  
 |From **specific** groups|From **specific** network<br /><br />From **specific** groups<br /><br />From devices with **specific** trust levels<br /><br />With **specific** claims in the request|  
 |From devices with **specific** trust levels|From **specific** network<br /><br />From **specific** groups<br /><br />From devices with **specific** trust levels<br /><br />With **specific** claims in the request|  
 |With **specific** claims in the request|From **specific** network<br /><br />From **specific** groups<br /><br />From devices with **specific** trust levels<br /><br />With **specific** claims in the request|  
@@ -48,9 +47,8 @@ To create a policy template, an administrator needs to first specify under which
   
 If an administrator selects multiple conditions, they are of **AND** relationship. Actions are mutually exclusive and for one policy rule you can only choose one action. If admin selects multiple exceptions, they are of an **OR** relationship. A couple of policy rule examples are shown below:  
   
-|||  
-|-|-|  
-|**Policy**|**Policy rules**|  
+|**Policy**|**Policy rules**|
+| --- | --- |  
 |Extranet access requires MFA<br /><br />All users are permitted|**Rule #1**<br /><br />from **extranet**<br /><br />and with MFA<br /><br />Permit<br /><br />**Rule#2**<br /><br />from **intranet**<br /><br />Permit|  
 |External access are not permitted except non-FTE<br /><br />Intranet access for FTE on workplace joined device are permitted|**Rule #1**<br /><br />From **extranet**<br /><br />and from **non-FTE** group<br /><br />Permit<br /><br />**Rule #2**<br /><br />from **intranet**<br /><br />and from **workplace joined** device<br /><br />and from **FTE** group<br /><br />Permit|  
 |Extranet access requires MFA except "service admin"<br /><br />All users are permitted to access|**Rule #1**<br /><br />from **extranet**<br /><br />and with MFA<br /><br />Permit<br /><br />Except **service admin group**<br /><br />**Rule #2**<br /><br />always<br /><br />Permit|  

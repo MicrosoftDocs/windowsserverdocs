@@ -6,7 +6,7 @@ ms.manager: dongill
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 1/23/2017
+ms.date: 3/20/2017
 ms.assetid: 8bd0d09a-0421-40a4-b752-40ecb5350ffd
 description: An overview of Storage Spaces Direct, a feature of Windows Server Enterprise Edition that enables you to cluster servers with internal storage into a software-defined storage solution.
 ---
@@ -21,49 +21,50 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter.
 <table style="width: 100%; table-layout: fixed;">
 	<tr style="border: 0;">
 		<td style="padding: 10px; border: 0; width=25%; text-align: center;">
-			<img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/understand.png">
-			<strong>Understand</strong>
+			<img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/understand.png" alt="Books icon">
+			<br><strong><a href="understand-storage-spaces-direct.md">Understand</a></strong>
 		</td>
 		<td style="padding: 10px; border: 0; width=25%; text-align: center;">
 			<img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/plan.png">
-			<strong>Plan</strong>
+			<br><strong><a href="plan-storage-spaces-direct.md">Plan</a></strong>
 		</td>
 		<td style="padding: 10px; border: 0; width=25%; text-align: center;">
 			<img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/deploy.png">
-			<strong>Deploy</strong>
+			<br><strong><a href="deploy-storage-spaces-direct.md">Deploy</a></strong>
 		</td>
 		<td style="padding: 10px; border: 0; width=25%; text-align: center;">
 			<img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/manage.png">
-			<strong>Manage</strong>
+			<br><strong><a href="manage-storage-spaces-direct.md">Manage</a></strong>
 		</td>
 	</tr>
 	<tr style="border: 0;">
 		<td style="padding: 10px; border: 0; width=25%">
 			<ul>
 			  <li>Overview (you are here)</li>
-			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/understand-the-cache">Understand the cache</a></li>
-			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-fault-tolerance">Fault tolerance and storage efficiency</a></li>
+			  <li><a href="understand-the-cache.md">Understand the cache</a></li>
+			  <li><a href="storage-spaces-fault-tolerance.md">Fault tolerance and storage efficiency</a></li>
 		  	</ul>
 		</td>
 		<td style="padding: 10px; border: 0; width=25%">
 			<ul>
-			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-direct-hardware-requirements">Hardware requirements</a></li>
-			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/choosing-drives-and-resiliency-types">Choose drives</a></li>
-			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/plan-volumes">Plan volumes</a></li>
+			  <li><a href="storage-spaces-direct-hardware-requirements.md">Hardware requirements</a></li>
+			  <li><a href="choosing-drives.md">Choose drives</a></li>
+			  <li><a href="plan-volumes.md">Plan volumes</a></li>
 		</ul>
 		</td>
 		<td style="padding: 10px; border: 0; width=25%">
 			<ul>
-			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/hyper-converged-solution-using-storage-spaces-direct">Deploy hyper-converged</a></li>
-			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/create-volumes">Create volumes</a></li>
+			  <li><a href="hyper-converged-solution-using-storage-spaces-direct.md">Hyper-converged solution</a></li>
+			  <li><a href="create-volumes.md">Create volumes</a></li>
 			</ul>
 		</td>
 		<td style="padding: 10px; border: 0; width=25%">
 			<ul>
-			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/add-nodes">Add servers or drives</a></li>
-			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/remove-servers">Remove servers</a></li>
-			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/resize-volumes">Resize volumes</a></li>
-			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/update-firmware">Update drive firmware</a></li>
+			  <li><a href="add-nodes.md">Add servers or drives</a></li>
+			  <li><a href="maintain-servers.md">Taking a server offline for maintenance</li>
+			  <li><a href="remove-servers.md">Remove servers</a></li>
+			  <li><a href="resize-volumes.md">Extend volumes</a></li>
+			  <li><a href="../update-firmware.md">Update drive firmware</a></li>
 			</ul>
 		</td>
 	</tr>
@@ -135,7 +136,7 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter.
 			<img src="media/storage-spaces-direct-in-windows-server-2016/scalability-icon.png">
 		</td>
 		<td style="padding: 10px; border: 0;">
-			<b>Scalability.</b> Go up to 16 servers and over 400 drives, for multiple petabytes of storage per cluster. To scale out, simply add drives or add more servers; Storage Spaces Direct will automatically onboard new drives and begin using them. Storage efficiency and performance improve predictably at scale.
+			<b>Scalability.</b> Go up to 16 servers and over 400 drives, for up to 1 petabyte (1,000 terabytes) of storage per cluster. To scale out, simply add drives or add more servers; Storage Spaces Direct will automatically onboard new drives and begin using them. Storage efficiency and performance improve predictably at scale.
 		</td>
 	</tr>
 </table>
@@ -170,7 +171,7 @@ Here's an overview of the Storage Spaces Direct stack:
 
 **Failover Clustering.** The built-in clustering feature of Windows Server is used to connect the servers.
 
-**Software Storage Bus.** The Software Storage Bus is new in Storage Spaces Direct. It spans the cluster and establishes a software-defined storage fabric whereby all the servers can see all of each other’s local drives. You can think of it as replacing costly and restrictive Fibre Channel or Shared SAS cabling.
+**Software Storage Bus.** The Software Storage Bus is new in Storage Spaces Direct. It spans the cluster and establishes a software-defined storage fabric whereby all the servers can see all of each other's local drives. You can think of it as replacing costly and restrictive Fibre Channel or Shared SAS cabling.
 
 **Storage Bus Layer Cache.** The [Software Storage Bus](software-storage-bus-overview.md) dynamically binds the fastest drives present (e.g. SSD) to slower drives (e.g. HDDs) to provide server-side read/write caching that accelerates IO and boosts throughput.
 
@@ -178,15 +179,15 @@ Here's an overview of the Storage Spaces Direct stack:
 
 **Storage Spaces.** Storage Spaces provides fault tolerance to virtual "disks" using [mirroring, erasure coding, or both](storage-spaces-fault-tolerance.md). You can think of it as distributed, software-defined RAID using the drives in the pool. In Storage Spaces Direct, these virtual disks typically have resiliency to two simultaneous drive or server failures (e.g. 3-way mirroring, with each data copy in a different server) though chassis and rack fault tolerance is also available.
 
-**Resilient File System (ReFS).** ReFS is the premier filesystem purpose-built for virtualization. It includes dramatic accelerations for .vhdx file operations such as creation, expansion, and checkpoint merging, and built-in checksums to detect and correct bit errors. It also introduces real-time tiers that rotate data between so-called “hot” and “cold” storage tiers in real-time based on usage.
+**Resilient File System (ReFS).** ReFS is the premier filesystem purpose-built for virtualization. It includes dramatic accelerations for .vhdx file operations such as creation, expansion, and checkpoint merging, and built-in checksums to detect and correct bit errors. It also introduces real-time tiers that rotate data between so-called "hot" and "cold" storage tiers in real-time based on usage.
 
-**Cluster Shared Volumes.** The CSV file system unifies all the ReFS volumes into a single namespace accessible through any server, so that to each server, every volume looks and acts like it’s mounted locally.
+**Cluster Shared Volumes.** The CSV file system unifies all the ReFS volumes into a single namespace accessible through any server, so that to each server, every volume looks and acts like it's mounted locally.
 
 **Scale-Out File Server.** This final layer is necessary in converged deployments only. It provides remote file access using the SMB3 access protocol to clients, such as another cluster running Hyper-V, over the network, effectively turning Storage Spaces Direct into network-attached storage (NAS).
 
 ## Get started
 
-Try Storage Spaces Direct [in Microsoft Azure](https://blogs.technet.microsoft.com/filecab/2016/05/05/s2dazuretp5/), or download a 180-day-licensed evaluation copy of Windows Server from [Windows Server Evaluations](https://www.microsoft.com/evalcenter/evaluate-windows-server-2016).
+Try Storage Spaces Direct [in Microsoft Azure](https://blogs.technet.microsoft.com/filecab/2016/05/05/s2dazuretp5/), or download a 180-day-licensed evaluation copy of Windows Server from [Windows Server Evaluations](https://go.microsoft.com/fwlink/?linkid=842602).
 
 ## See also  
 -   [(VIDEO) Discover Storage Spaces Direct at Microsoft Ignite 2016](https://www.youtube.com/watch?v=-LK2ViRGbWs)

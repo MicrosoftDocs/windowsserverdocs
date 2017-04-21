@@ -5,7 +5,7 @@ ms.prod: windows-server-threshold
 ms.service: na
 manager: DonGill
 ms.technology: server-nano
-ms.date: 02/03/2017
+ms.date: 02/072017
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 9f109c91-7c2e-4065-856c-ce9e2e9ce558
@@ -102,7 +102,6 @@ This table shows the roles and features that are available in this release of Na
 - Storage Replica
 - Storage Management Service with SMI-S support
 - SMB Witness Service
-- Volume Shadow Copy Service (VSS)
 - Dynamic Volumes
 - Basic Windows storage providers (for Windows Storage Management)
  
@@ -207,7 +206,9 @@ Edit a file residing on the remote Nano Server by starting a remote session with
 `psEdit C:\Windows\Logs\DISM\dism.log`  
   
 ## <a name="BKMK_online"></a>Installing roles and features online  
-  
+> [!NOTE]
+> If you install an optional Nano Server package from media or online repository, it won't have recent security fixes included. To avoid a version mismatch between the optional packages and base operating system, you should install the [latest cumulative update](https://technet.microsoft.com/windows-server-docs/get-started/update-nano-server) immediately after installing any optional packages and **before** restarting the server.
+
 ### Installing roles and features from a package repository  
 You can find and install Nano Server packages from the online package repository by using the NanoServerPackage provider of the PackageManagement PowerShell module. To install this provider, use these cmdlets:
 
@@ -217,7 +218,7 @@ Import-PackageProvider NanoServerPackage
 ```
 
 >[!NOTE]
->If you experience errors when running Install-PackageProvider, check that you have installed the latest [cumulative update](https://technet.microsoft.com/windows-server-docs/get-started/update-nano-server) ([KB3206632](https://support.microsoft.com/kb/3206632) or later), or use Save-Module as follows: 
+>If you experience errors when running Install-PackageProvider, check that you have installed the [latest cumulative update](https://technet.microsoft.com/windows-server-docs/get-started/update-nano-server) ([KB3206632](https://support.microsoft.com/kb/3206632) or later), or use Save-Module as follows: 
 
 ```powershell
 Save-Module -Path "$Env:ProgramFiles\WindowsPowerShell\Modules\" -Name NanoServerPackage -MinimumVersion 1.0.1.0

@@ -52,7 +52,7 @@ Use the following list to thoroughly test that LSA protection is enabled before 
 -   Use the audit logs to identify LSA plug-ins and drivers that fail to run as a protected process.
 
 ## How to identify LSA plug-ins and drivers that fail to run as a protected process
-The events described in this section are located in the Operational log under Applications and Services Logs\Microsoft\Windows\CodeIntegrity. They can help you identify LSA plug-ins and drivers that are failing to load due to signing reasons. To manage these events, you can use the **wevtutil** command-line tool. For information about this tool, see [Wevtutil](../../management/windows-commands/Wevtutil.md).
+The events described in this section are located in the Operational log under Applications and Services Logs\Microsoft\Windows\CodeIntegrity. They can help you identify LSA plug-ins and drivers that are failing to load due to signing reasons. To manage these events, you can use the **wevtutil** command-line tool. For information about this tool, see [Wevtutil](../../administration/windows-commands/Wevtutil.md).
 
 ### Before opting in: How to identify plug-ins and drivers loaded by the lsass.exe
 You can use the audit mode to identify LSA plug-ins and drivers that will fail to load in LSA Protection mode. While in the audit mode, the system will generate event logs, identifying all of the plug-ins and drivers that will fail to load under LSA if LSA Protection is enabled. The messages are logged without blocking the plug-ins or drivers.

@@ -337,7 +337,7 @@ To prevent another trace session from being auto-created at next boot, remove th
 PS C:\> Remove-AutologgerConfig -Name BootPnpLog
 ```
 
-To collect boot and setup traces across a number of systems or on a diskless system, consider using [Setup and Boot Event Collection](../compute/get-started-with-setup-and-boot-event-collection.md).
+To collect boot and setup traces across a number of systems or on a diskless system, consider using [Setup and Boot Event Collection](../administration/get-started-with-setup-and-boot-event-collection.md).
 
 ### Capture performance counter data
 Usually, you monitor performance counter data with Perfmon.exe GUI. On Nano Server, use the ```Typeperf.exe```  command-line equivalent. For example:

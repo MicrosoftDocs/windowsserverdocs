@@ -4,7 +4,7 @@ title: Deploying Federation Server Proxies
 description:
 author: billmath
 manager: femila
-ms.date: 09/21/2016
+ms.date: 02/09/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 

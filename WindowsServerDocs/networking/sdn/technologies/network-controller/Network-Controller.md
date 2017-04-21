@@ -32,6 +32,9 @@ Network Controller is a highly available and scalable server role, and provides 
 
 You can deploy Network Controller in both domain and non-domain environments. In domain environments, Network Controller authenticates users and network devices by using Kerberos; in non-domain environments, you must deploy certificates for authentication.
 
+>[!IMPORTANT]
+>Do not deploy the Network Controller server role on physical hosts. To deploy Network Controller, you must install the Network Controller server role on a Hyper-V virtual machine \(VM\) that is installed on a Hyper-V host. After you have installed Network Controller on VMs on three different Hyper\-V hosts, you must enable the Hyper\-V hosts for Software Defined Networking \(SDN\) by adding the hosts to Network Controller using the Windows PowerShell command **New-NetworkControllerServer**. By doing so, you are enabling the SDN Software Load Balancer to function. For more information, see [New-NetworkControllerServer](https://technet.microsoft.com/itpro/powershell/windows/network-controller/new-networkcontrollerserver).
+
 Network Controller communicates with network devices, services, and components by using the Southbound API. With the Southbound API, Network Controller can discover network devices, detect service configurations, and gather all of the information you need about the network. In addition, the Southbound API gives Network Controller a pathway to send information to the network infrastructure, such as configuration changes that you have made.
 
 The Network Controller Northbound API provides you with the ability to gather network information from Network Controller and use it to monitor and configure the network.
@@ -57,9 +60,9 @@ In the following illustration, an Administrator uses a Management Tool that inte
 
 ![Network Controller overview](../../../media/Network-Controller/NetController_overview.png)  
 
-If you are deploying Network Controller in a test lab environment, you can run the Network Controller server role on a single physical server (without using Hyper-V) or on a Hyper-V virtual machine \(VM\) that is installed on a Hyper-V host.
+If you are deploying Network Controller in a test lab environment, you can run the Network Controller server role on a Hyper-V virtual machine \(VM\) that is installed on a Hyper-V host.
 
-For high availability in larger datacenters, you can deploy a cluster by using either three physical servers \(without Hyper-V\) or by using three VMs that are installed on three or more Hyper-V hosts. For more information, see [Network Controller High Availability](network-controller-high-availability.md).
+For high availability in larger datacenters, you can deploy a cluster by using three VMs that are installed on three or more Hyper-V hosts. For more information, see [Network Controller High Availability](network-controller-high-availability.md).
 
 ## <a name="bkmk_features"></a>Network Controller Features
 
@@ -113,7 +116,7 @@ This Network Controller feature allows you to deploy, configure, and manage virt
 
 Network Controller can place different connections of a tenant on separate gateways. You can use a single public IP for all gateway connections or have different public IPs for a subset of the connections. Network Controller logs all gateway configuration and state changes, which can be used for auditing and troubleshooting purposes.
 
-For more information on BGP, see [Border Gateway Protocol &#40;BGP&#41;](../../../remote-access/bgp/Border-Gateway-Protocol-BGP.md).
+For more information on BGP, see [Border Gateway Protocol &#40;BGP&#41;](../../../../remote/remote-access/bgp/Border-Gateway-Protocol-BGP.md).
 
 For more information on the RAS Gateway, see [RAS Gateway for SDN](../../../sdn/technologies/network-function-virtualization/RAS-Gateway-for-SDN.md).
 

@@ -8,7 +8,6 @@ ms.technology: server-nano
 ms.date: 11/02/2016
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
-ms.assetid: c2be4bbf-5022-4bd7-aabb-dbe58fb1f7bb
 author: jaimeo
 ms.author: jaimeo
 ---
@@ -18,9 +17,9 @@ Nano Server offers a variety of methods for staying up to date. Compared to othe
 **Between these CBB releases**, Nano Server stays current with a series of *cumulative updates*. For example, the first cumulative update for Nano Server was released on September 26, 2016 with [KB3192366](https://support.microsoft.com/en-us/kb/3192366). With this and subsequent cumulative updates, we provide various options for installing these updates on Nano Server. In this article, we'll use the KB3192366 update as an example to illustrate how to obtain and apply cumulative updates to Nano Server. For more information on the cumulative update model, see the [Microsoft Update blog](https://blogs.technet.microsoft.com/mu/2016/10/25/patching-with-windows-server-2016/).
 
 > [!NOTE]
-> If you install an optional Nano Server package from media or online repository, it won't have recent security fixes included. So you should install the latest cumulative update after installing any optional packages.
+> If you install an optional Nano Server package from media or online repository, it won't have recent security fixes included. To avoid a version mismatch between the optional packages and base operating system, you should install the latest cumulative update immediately after installing any optional packages and **before** restarting the server.
 
-In the case of the Cumulative Update for Windows Server 2016: September 26, 2016 ([KB3192366](https://support.microsoft.com/en-us/kb/3192366)), you should first install the latest Servicing Stack Update for Windows 10 Version 1607: August 23, 2016 as a prerequisite ([KB3176939](https://support.microsoft.com/en-us/kb/3176936)). For most of the options below, you need the .msu files containing the .cab update packages. Visit the Microsoft Update Catalog to download each of these update packages:
+In the case of the Cumulative Update for Windows Server 2016: September 26, 2016 ([KB3192366](https://support.microsoft.com/en-us/kb/3192366)), you should first install the latest Servicing Stack Update for Windows 10 Version 1607: August 23, 2016 as a prerequisite ([KB3176936](https://support.microsoft.com/en-us/kb/3176936)). For most of the options below, you need the .msu files containing the .cab update packages. Visit the Microsoft Update Catalog to download each of these update packages:
 - [http://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB3192366](http://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB3192366)
 - [http://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB3176936](http://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB3176936)
 
@@ -146,6 +145,10 @@ Enter-PSSession -ComputerName (Read-Host "Enter Nano Server IP address") -Creden
    
 ## Additional Options
 Other methods for updating Nano Server might overlap or complement the options above. Such options include using Windows Server Update Services (WSUS), System Center Virtual Machine Manager (VMM), Task Scheduler, or a non-Microsoft solution.
-- [Configuring Windows Update for WSUS](https://msdn.microsoft.com/en-us/library/dd939844(v=ws.10).aspx)
+- [Configuring Windows Update for WSUS](https://msdn.microsoft.com/en-us/library/dd939844(v=ws.10).aspx) by setting the following registry keys:
+  - WUServer
+  - WUStatusServer (generally uses the same value as WUServer)
+  - UseWUServer
+  - AUOptions
 - [Managing Fabric Updates in VMM](https://technet.microsoft.com/en-us/library/gg675084(v=sc.12).aspx)
 - [Registering a Scheduled Task](https://technet.microsoft.com/en-us/library/jj649811.aspx)

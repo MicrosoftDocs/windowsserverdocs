@@ -8,7 +8,7 @@ ms.technology: networking-sdn
 ms.topic: get-started-article
 ms.assetid: 5ba5bb37-ece0-45cb-971b-f7149f658d19
 ms.author: jamesmci
-author: vhorne
+author: jamesmci
 ---
 # Deploy a Software Defined Network Infrastructure Using Scripts
 

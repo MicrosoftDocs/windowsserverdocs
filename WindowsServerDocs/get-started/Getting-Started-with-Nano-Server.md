@@ -3,9 +3,9 @@ title: Install Nano Server
 description: "Clean installation, upgrade, migration, and evaluation of Nano Server"
 ms.prod: windows-server-threshold
 ms.service: na
-manager: DonGill
+manager: elizapo
 ms.technology: server-nano
-ms.date: 01/31/2017
+ms.date: 02/28/2017
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 2c2fa45b-6f3b-4663-b421-2da6ecc463bf
@@ -42,6 +42,7 @@ Because Nano Server is optimized as a lightweight operating system for running â
 - NIC Teaming (specifically, load balancing and failover, or LBFO) is not supported. Switch-embedded teaming (SET) is supported instead.
 - System Center Configuration Manager and System Center Data Protection Manager are not supported.
 - Best Practices Analyzer (BPA) cmdlets and BPA integration with Server Manager are not supported.
+- Nano Server does not support virtual host bus adapters (HBAs).
 - Nano Server does not need to be activated with a product key. When functioning as a Hyper-V host, Nano Server does not support [Automatic Virtual Machine Activation](https://technet.microsoft.com/library/dn303421%28v=ws.11%29.aspx) (AVMA). Virtual machines running on a Nano Server host can be activated using [Key Management Service](https://technet.microsoft.com/library/jj612867(v=ws.11).aspx) (KMS) with a generic volume license key or using [Active Directory-based activation](https://technet.microsoft.com/library/dn502534(v=ws.11).aspx).
 - The version of Windows PowerShell provided with Nano Server has important differences. For details, see [PowerShell on Nano Server](PowerShell-on-Nano-Server.md).
 - Nano Server is supported only on the Current Branch for Business (CBB) model--there is no Long-Term Servicing Branch (LTSB) release for Nano Server at this time. See the following subsection for more information.
@@ -72,7 +73,7 @@ Since Nano Server is new for Windows Server 2016, there isn't an upgrade path fr
 Since Nano Server is new for Windows Server 2016, there isn't migration path from older operating system versions to Nano Server.
   
 -------------------------------------
-If you need a different installation option, you can head [back to the main Windows Server 2016 page](Windows-Server-2016-Technical-Preview-5.md) 
+If you need a different installation option, you can head [back to the main Windows Server 2016 page](windows-server-2016.md) 
   
 
   

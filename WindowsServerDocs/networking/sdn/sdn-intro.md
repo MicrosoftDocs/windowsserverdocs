@@ -52,6 +52,17 @@ For a deeper overview of Microsoft SDN infrastructure, skip this topic and start
 	</tr>
 </table>
 
+## Microsoft SDN Mechanics Video
+
+In this Microsoft Mechanics Video, Windows Server SDN engineer Greg Cusanza joins Matt McSpirit to demonstrate the new Software Defined Networking capabilities in Windows Server 2016. Watch as Cusanza explains the SDN technology underpinnings and shows you how you can use SDN to do the following.
+
+- Dynamically create, secure, and connect your network to meet the evolving needs of your apps
+- Speed up the deployment of your workloads
+- Contain security vulnerabilities from spreading across your network
+
+SDN allows you to accomplish all of this while also reducing your overall infrastructure costs.
+
+To watch the video on YouTube, click the image below.
 
 [![SDN Overview Video](./../media/Sdn-intro/sdn_video_thumbnail.png)](https://youtu.be/f501zUUcXD0)
 
@@ -136,16 +147,16 @@ The following list of SDN technologies provides links to documentation for each 
 
 - [Network Controller](technologies/network-controller/Network-Controller.md)
 - [Hyper-V Network Virtualization](technologies/hyper-v-network-virtualization/hyper-v-network-virtualization.md)
-- [Hyper-V Virtual Switch](../technologies/hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md)
+- [Hyper-V Virtual Switch](../../virtualization/hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md)
 - [Internal DNS Service (iDNS) for SDN](technologies/Idns-for-Sdn.md)
 - [Software Load Balancing (SLB) for SDN](technologies/network-function-virtualization/software-load-balancing-for-sdn.md) with Network Address Translation \(NAT\)
 - [Datacenter Firewall Overview](technologies/network-function-virtualization/Datacenter-Firewall-Overview.md)
 - [RAS Gateway for SDN](technologies/network-function-virtualization/RAS-Gateway-for-Sdn.md)
-- [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](../technologies/hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md)
+- [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](../../virtualization/hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md)
 - [Container Networking Overview](technologies/containers/Container-networking-overview.md)
 
 
-## Contact the SDN Team
+## Contact the Datacenter and Cloud Networking Team
 
 Have questions about how Microsoft SDN can meet your needs?
 
@@ -153,4 +164,4 @@ Need troubleshooting help, or to report a bug?
 
 Looking to make a doc request?
 
-Please [Contact the SDN Team](contact-sdn-team.md) with questions, to get assistance with our products, or simply to provide us with feedback of any kind. We love to hear from you as a member of our community--it's in hearing from you that we are able to make our products truly meet and exceed your needs as a customer.
+Please [Contact the Datacenter and Cloud Networking Team](contact-sdn-team.md) with questions, to get assistance with our products, or simply to provide us with feedback of any kind. We love to hear from you as a member of our community--it's in hearing from you that we are able to make our products truly meet and exceed your needs as a customer.

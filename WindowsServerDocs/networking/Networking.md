@@ -13,9 +13,9 @@ author: jamesmci
 
 >Applies To: Windows Server 2016
 
-<img src="../get-started/media/6-networking.png" style='float:left; padding:.5em;' alt="Icon depicting two networked computers"> Networking is a foundational part of the Software Defined Datacenter (SDDC) platform, and Windows Server 2016 provides new and improved Software Defined Networking (SDN) technologies to help you move to a fully realized SDDC solution for your organization.
+<img src="../get-started/media/6-networking.png" style='float:left; padding:.5em;' alt="Icon depicting two networked computers"> Networking is a foundational part of the Software Defined Datacenter \(SDDC\) platform, and Windows Server 2016 provides new and improved Software Defined Networking \(SDN\) technologies to help you move to a fully realized SDDC solution for your organization.
 
-When you manage networks as a software defined resource, you can describe an application’s infrastructure requirements one time, and then choose where the application runs - on premises or in the cloud. This consistency means that your applications are now easier to scale and you can seamlessly run applications , anywhere, with equal confidence around security, performance, quality of service, and availability.
+When you manage networks as a software defined resource, you can describe an application’s infrastructure requirements one time, and then choose where the application runs - on premises or in the cloud. This consistency means that your applications are now easier to scale and you can seamlessly run applications, anywhere, with equal confidence around security, performance, quality of service, and availability.
 
 >[!Note]
 > To download Windows Server 2016, see [Windows Server Evaluations](https://www.microsoft.com/evalcenter/evaluate-windows-server-technical-preview).
@@ -89,10 +89,6 @@ Dynamic Host Configuration Protocol \(DHCP\) is a client/server protocol that au
 
 Hyper-V Network Virtualization \(HNV\) enables virtualization of customer networks on top of a shared physical network infrastructure.
 
-### [Hyper-V Virtual Switch](technologies/hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md)
-
-The Hyper\-V Virtual Switch is a software-based layer 2 Ethernet network switch that is available in Hyper\-V Manager when you install the Hyper\-V server role. The switch includes programmatically managed and extensible capabilities to connect virtual machines to both virtual networks and the physical network. In addition, Hyper\-V Virtual Switch provides policy enforcement for security, isolation, and service levels.
-
 ### [IP Address Management &#40;IPAM&#41;](technologies/ipam/ipam-top.md)
 
 IP Address Management \(IPAM\) is an integrated suite of tools to enable end-to-end planning, deploying, managing and monitoring of your IP address infrastructure, with a rich user experience. IPAM automatically discovers IP address infrastructure servers and Domain Name System \(DNS\) servers on your network and enables you to manage them from a central interface.
@@ -109,6 +105,10 @@ Network offload and optimization technologies in Windows Server 2016 include Sof
 
 Network Policy Server (NPS) allows you to create and enforce organization-wide network access policies for connection request authentication and authorization.
 
+### [Network Shell (Netsh)](technologies/netsh/netsh.md)
+
+You can use the Network Shell \(netsh\) networking utility to manage networking technologies in Windows Server 2016 and Windows 10.
+
 ### [Network Subsystem Performance Tuning](technologies/network-subsystem/net-sub-performance-top.md)
 
 This topic provides information about choosing the right network adapter for your server workload, ordering network interfaces, network related performance counters, and performance tuning network adapters and related networking technologies, such as Receive Side Scaling \(RSS\), Receive Side Coalescing \(RSC\), and others.
@@ -116,14 +116,6 @@ This topic provides information about choosing the right network adapter for you
 ### [NIC Teaming](technologies/nic-teaming/NIC-Teaming.md)
 
 NIC Teaming allows you to group physical Ethernet network adapters into one or more software-based virtual network adapters. These virtual network adapters provide fast performance and fault tolerance in the event of a network adapter failure.
-
-### [Remote Access](remote-access/Remote-Access.md)
-
-The Remote Access server role includes DirectAccess and virtual private network \(VPN\), local area network \(LAN\) Routing, and Web Application Proxy. RAS allows you to provide network connectivity to remote employees, site-to-site VPN to connect remote office locations over the Internet, and the RAS Gateway, which has multitenant and Border Gateway Protocol \(BGP\) capabilities for Enterprises and Cloud Service Providers \(CSPs\).
-
-### [Remote Direct Memory Access &#40;RDMA&#41; and Switch Embedded Teaming &#40;SET&#41;](technologies/hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md)
-
-This topic provides instructions on how to use Windows PowerShell commands to enable Data Center Bridging \(DCB\), create a Hyper-V Virtual Switch with an RDMA virtual NIC \(vNIC\), and create a Hyper-V Virtual Switch with SET and RDMA vNICs.
 
 ## Additional Resources  
 

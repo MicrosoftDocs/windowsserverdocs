@@ -3,9 +3,9 @@ ms.assetid: f775cbda-a75d-439d-9aa7-82f3bc8dc932
 title: Federation Server Farm Using WID
 description:
 author: billmath
-ms.author:  billmath
+ms.author: billmath
 manager: femila
-ms.date: 09/22/2016
+ms.date: 02/21/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 
@@ -55,11 +55,10 @@ This section describes various considerations about the intended audience, benef
   
 The following table provides a summary for using a WID farm.  Use it to plan your implementation.  
   
- 
-|-|-|-|  
-||1 \- 100 RP Trusts|More than 100 RP Trusts 
-|1 \- 30 AD FS Nodes|WID Supported|Not supported using WID \- SQL Required 
-|More than 30 AD FS Nodes|Not supported using WID \- SQL Required|Not supported using WID \- SQL Required  
+|| 1 \- 100 RP Trusts | More than 100 RP Trusts |
+| --- | --- | --- |
+|1 \- 30 AD FS Nodes|WID Supported|Not supported using WID - SQL Required 
+|More than 30 AD FS Nodes|Not supported using WID - SQL Required|Not supported using WID - SQL Required  
   
 ## Server placement and network layout recommendations  
 When you are ready to start deploying this topology in your network, you should plan on placing all of the federation servers in your corporate network behind a Network Load Balancing \(NLB\) host that can be configured for an NLB cluster with a dedicated cluster Domain Name System \(DNS\) name and cluster IP address.  

@@ -204,6 +204,141 @@ To add the storage, you can run the following command on the node in the second 
 
 `Get-ClusterAvailableDisk -All | Add-ClusterDisk`
 
+## The SMB Bandwidth limiter fails to throttle Storage Replica bandwidth
+When specifying a bandwidth limit to Storage Replica, the limit is ignored and full bandwidth used. For example:
+
+`Set-SmbBandwidthLimit  -Category StorageReplication -BytesPerSecond 32MB`
+
+This issue occurs because of an interoperability issue between Storage Replica and SMB. This issue should be fixed in a later update to Windows Server 2016. There is no workaround using Windows Server, but you can use external QoS network policies to attain the desired effect.
+
+## Event 1241 warning repeated during initial sync
+When specifying a replication partnership is asynchronous, the source computer repeatedly logs warning event 1241 in the Storage Replica Admin channel. For example:
+
+    Log Name:      Microsoft-Windows-StorageReplica/Admin
+    Source:        Microsoft-Windows-StorageReplica
+    Date:          3/21/2017 3:10:41 PM
+    Event ID:      1241
+    Task Category: (1)
+    Level:         Warning
+    Keywords:      (1)
+    User:          SYSTEM
+    Computer:      sr-srv05.corp.contoso.com
+    Description:
+    The Recovery Point Objective (RPO) of the asynchronous destination is unavailable.
+
+    LocalReplicationGroupName: rg01
+    LocalReplicationGroupId: {e20b6c68-1758-4ce4-bd3b-84a5b5ef2a87}
+    LocalReplicaName: f:\
+    LocalPartitionId: {27484a49-0f62-4515-8588-3755a292657f}
+    ReplicaSetId: {1f6446b5-d5fd-4776-b29b-f235d97d8c63}
+    RemoteReplicationGroupName: rg02
+    RemoteReplicationGroupId: {7f18e5ea-53ca-4b50-989c-9ac6afb3cc81}
+    TargetRPO: 30
+
+    Guidance: This is typically due to one of the following reasons: 
+
+The asynchronous destination is currently disconnected. The RPO may become available after the connection is restored.
+
+    The asynchronous destination is unable to keep pace with the source such that the most recent destination log record is no longer present in the source log. The destination will start block copying. The RPO should become available after block copying completes.
+
+This is expected behavior during initial sync and can safely be ignored. This behavior may change in a later release. If you see this behavior during ongoing asynchronous replication, investigate the partnership to determine why replication is delayed beyond your configured RPO (30 seconds, by default).
+
+## Event 4004 warning repeated after rebooting a replicated node
+Under rare and usually unreproducable circumstances, rebooting a server that is in a partnership leads to replication failing and the rebooted node logging warning event 4004 with an access denied error.
+
+    Log Name:      Microsoft-Windows-StorageReplica/Admin
+    Source:        Microsoft-Windows-StorageReplica
+    Date:          3/21/2017 11:43:25 AM
+    Event ID:      4004
+    Task Category: (7)
+    Level:         Warning
+    Keywords:      (256)
+    User:          SYSTEM
+    Computer:      server.contoso.com
+    Description:
+    Failed to establish a connection to a remote computer.
+
+    RemoteComputerName: server
+    LocalReplicationGroupName: rg01
+    LocalReplicationGroupId: {a386f747-bcae-40ac-9f4b-1942eb4498a0}
+    RemoteReplicationGroupName: rg02
+    RemoteReplicationGroupId: {a386f747-bcae-40ac-9f4b-1942eb4498a0}
+    ReplicaSetId: {00000000-0000-0000-0000-000000000000}
+    RemoteShareName:{a386f747-bcae-40ac-9f4b-1942eb4498a0}.{00000000-0000-0000-0000-000000000000}
+    Status: {Access Denied}
+    A process has requested access to an object, but has not been granted those access rights.
+
+    Guidance: Possible causes include network failures, share creation failures for the remote replication group, or firewall settings. Make sure SMB traffic is allowed and there are no connectivity issues between the local computer and the remote computer. You should expect this event when suspending replication or removing a replication partnership.
+
+Note the `Status: "{Access Denied}"` and the message `A process has requested access to an object, but has not been granted those access rights.` This is a known issue within Storage Replica. As a workaround, simply restart the Storage Replica service. 
+
+We are working on providing an update that permanently resolves this issue. If you are interested in assisting us and you have a Microsoft Premier Support agreement, please email SRFEED@microsoft.com so that we can work with you on filing a backport request.
+
+
+## Error "Failed to bring the resource 'Cluster Disk x' online." with a stretch cluster
+When attempting to bring a cluster disk online after a successful failover, where you are attempting to make the original source site primary again, you receive an error in Failover Cluster Manager. For example:
+
+    Error
+    The operation has failed.
+    Failed to bring the resource 'Cluster Disk 2' online.
+    
+    Error Code: 0x80071397
+    The operation failed because either the specified cluster node is not the owner of the resource, or the node is not a possible owner of the resource.
+    
+If you attempt to move the disk or CSV manually, you receive an additional error. For example:
+
+    Error
+    The operation has failed.
+    The action 'Move' did not complete.
+    
+    Error Code: 0x8007138d
+    A cluster node is not available for this operation
+
+This issue is caused by one or more uninitialzed disks being attached to one or more cluster nodes. To resolve the issue, initialize all attached storage using DiskMgmt.msc, DISKPART.EXE, or the Initialize-Disk PowerShell cmdlet.
+
+We are working on providing an update that permanently resolves this issue. If you are interested in assisting us and you have a Microsoft Premier Support agreement, please email SRFEED@microsoft.com so that we can work with you on filing a backport request.
+
+## GPT error when attempting to create a new SR partnership
+
+When running New-SRPartnership, it fails with error: 
+
+    Disk layout type for volume \\?\Volume{GUID}\ is not a valid GPT style layout.
+    New-SRPartnership : Unable to create replication group SRG01, detailed reason: Disk layout type for volume
+    \\?\Volume{GUID}\ is not a valid GPT style layout.
+    At line:1 char:1
+    + New-SRPartnership -SourceComputerName nodesrc01 -SourceRGName SRG01 ...
+    + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo : NotSpecified: (MSFT_WvrAdminTasks:root/Microsoft/...T_WvrAdminTasks) [New-SRPartnership]
+    , CimException
+    + FullyQualifiedErrorId : Windows System Error 5078,New-SRPartnership
+
+In the Failover Cluster Manager GUI, there is no option to setup Replication for the disk.
+
+When running Test-SRTopology, it fails with: 
+
+    WARNING: Object reference not set to an instance of an object.
+    WARNING: System.NullReferenceException
+    WARNING:    at Microsoft.FileServices.SR.Powershell.MSFTPartition.GetPartitionInStorageNodeByAccessPath(String AccessPath, String ComputerName, MIObject StorageNode)
+       at Microsoft.FileServices.SR.Powershell.Volume.GetVolume(String Path, String ComputerName)
+       at Microsoft.FileServices.SR.Powershell.TestSRTopologyCommand.BeginProcessing()
+    Test-SRTopology : Object reference not set to an instance of an object.
+    At line:1 char:1
+    + Test-SRTopology -SourceComputerName nodesrc01 -SourceVolumeName U: - ...
+    + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo : InvalidArgument: (:) [Test-SRTopology], NullReferenceException
+    + FullyQualifiedErrorId : TestSRTopologyFailure,Microsoft.FileServices.SR.Powershell.TestSRTopologyCommand 
+
+This is caused by the cluster functional level still being set to Windows Server 2012 R2 (i.e. FL 8). Storage Replica is supposed to return a specific error here but instead returns an incorrect error mapping.
+
+Run Get-Cluster | fl * on each node.
+
+If ClusterFunctionalLevel = 9, that is the Windows 2016 ClusterFunctionalLevel version needed to implement Storage Replica on this node.
+If ClusterFunctionalLevel is not 9, the ClusterFunctionalLevel will need to be updated in order to implement Storage Replica on this node.
+
+To resolve the issue, raise the cluster functional level by running the PowerShell cmdlet: Update-ClusterFunctionalLevel
+https://technet.microsoft.com/itpro/powershell/windows/failoverclusters/update-clusterfunctionallevel
+
+
 ## See also  
 - [Storage Replica](storage-replica-overview.md)  
 - [Stretch Cluster Replication Using Shared Storage](stretch-cluster-replication-using-shared-storage.md)  

@@ -1,3 +1,3 @@
 ---
-redirect_url: /windows-server-docs/networking/technologies/nic-teaming/nict-and-vlans
+redirect_url: /windows-server/networking/technologies/nic-teaming/nict-and-vlans
 ---

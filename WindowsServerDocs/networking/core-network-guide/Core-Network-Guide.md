@@ -99,7 +99,7 @@ DHCP allows you to use a DHCP server to dynamically assign an IP address to a co
 For TCP/IP-based networks, DHCP reduces the complexity and amount of administrative work involved in reconfiguring computers.
 
 ### TCP/IP
-TCP/IP in  Windows Server 2016 is the following:
+TCP/IP in Windows Server 2016 is the following:
 
 -   Networking software based on industry-standard networking protocols.
 
@@ -529,19 +529,74 @@ All members of the Domain Users group can log on to any client computer after it
 
 You can configure user accounts to designate the days and times that the user is allowed to log on to the computer. You can also designate which computers each user is allowed to use. To configure these settings, open Active Directory Users and Computers, locate the user account that you want to configure, and double-click the account. In the user account **Properties**, click the **Account** tab, and then click either **Logon Hours** or **Log On To**.
 
-##### <a name="BKMK_installAD-DNS"></a>Install AD DS and DNS for a New Forest
-You can use this procedure to install Active Directory Domain Services (AD DS) and DNS and to create a new domain in a new forest.
+#### <a name="BKMK_installAD-DNS"></a>Install AD DS and DNS for a New Forest
+
+You can use one of the following procedures to install Active Directory Domain Services (AD DS) and DNS and to create a new domain in a new forest. 
+
+The first procedure provides instructions on performing these actions by using Windows PowerShell, while the second procedure shows you how to install AD DS and DNS by using Server Manager.
+
+>[!IMPORTANT]
+>After you finish performing the steps in this procedure, the computer is automatically restarted.
+
+**Install AD DS and DNS Using Windows PowerShell**
+
+You can use the following commands to install and configure AD DS and DNS. You must replace the domain name in this example with the value that you want to use for your domain.
+
+>[!NOTE]
+>For more information about these Windows PowerShell commands, see the following reference topics.
+>- [Install-WindowsFeature](https://technet.microsoft.com/itpro/powershell/windows/server-manager/install-windowsfeature)
+>- [Install-ADDSForest](https://technet.microsoft.com/itpro/powershell/windows/adds/deployment/install-addsforest)
 
 Membership in **Administrators** is the minimum required to perform this procedure.
 
-> [!NOTE]
-> To perform this procedure by using Windows PowerShell, open PowerShell and type the following cmdlets on separate lines, and then press ENTER. You must also replace the domain name in this example with the value that you want to use.
->
-> `Install-WindowsFeature AD-Domain-Services -IncludeManagementTools`
->
-> `Install-ADDSForest -DomainName corp.contoso.com`
+- Run Windows PowerShell as an Administrator, type the following command, and then press ENTER:  
 
-###### To install Active Directory Domain Services and DNS
+`Install-WindowsFeature AD-Domain-Services -IncludeManagementTools`
+
+When installation has successfully completed, the following message is displayed in Windows PowerShell.
+
+    
+    Success Restart Needed 	Exit Code  	Feature Result
+    ------- -------------- 	---------  	--------------
+    True	No 				Success		{Active Directory Domain Services, Group P...
+    
+
+- In Windows PowerShell, type the following command, replacing the text **corp.contoso.com** with your domain name, and then press ENTER:
+
+````
+Install-ADDSForest -DomainName "corp.contoso.com"
+````
+
+- During the installation and configuration process, which is visible at the top of the Windows PowerShell window, the following prompt appears. After it appears, type a password and then press ENTER.
+
+	**SafeModeAdministratorPassword:**
+
+- After you type a password and press ENTER, the following confirmation prompt appears. Type the same password and then press ENTER.
+
+	**Confirm SafeModeAdministratorPassword:**
+
+- When the following prompt appears, type the letter **Y** and then press ENTER.
+
+    
+    The target server will be configured as a domain controller and restarted when this operation is complete.
+    Do you want to continue with this operation?
+    [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"):
+    
+- If you want to, you can read the warning messages that are displayed during normal, successful installation of AD DS and DNS. These messages are normal and are not an indication of install failure.
+
+- After installation succeeds, a message appears stating that you are about to be logged off of the computer so that the computer can restart. If you click **Close**, you are immediately logged off the computer, and the computer restarts. If you do not click **Close**, the computer restarts after a default period of time.
+
+- After the server is restarted, you can verify successful installation of Active Directory Domain Services and DNS. Open Windows PowerShell, type the following command, and press ENTER.
+
+````
+Get-WindowsFeature
+````
+
+The results of this command are displayed in Windows PowerShell, and should be similar to the results in the image below. For installed technologies, the brackets to the left of the technology name contain the character **X**, and the value of **Install State** is **Installed**.
+
+![Results of the Get-WindowsFeature command](../media/Core-Network-Guide/server-roles-installed.jpg)
+
+**Install AD DS and DNS Using Server Manager**
 
 1.  On DC1, in **Server Manager**, click **Manage**, and then click **Add Roles and Features**. The Add Roles and Features Wizard opens.
 
@@ -578,7 +633,11 @@ Membership in **Administrators** is the minimum required to perform this procedu
 
 14. In **Review Options**, review your selections.
 
-15. If you want to export settings to a Windows PowerShell script, click **View script**. The script opens in Notepad, and you can save it to the folder location that you want. Click **Next**. In **Prerequisites Check**, your selections are validated. When the check completes, click **Install**. When prompted by Windows, click **Close**.
+15. If you want to export settings to a Windows PowerShell script, click **View script**. The script opens in Notepad, and you can save it to the folder location that you want. Click **Next**. In **Prerequisites Check**, your selections are validated. When the check completes, click **Install**. When prompted by Windows, click **Close**. The server restarts to complete installation of AD DS and DNS.
+
+16. To verify successful installation, view the Server Manager console after the server restarts. Both AD DS and DNS should appear in the left pane, like the highlighted items in the image below.
+
+![AD DS and DNS in Server Manager](../media/Core-Network-Guide/server-roles-installed-sm.jpg)
 
 ##### <a name="BKMK_createUA"></a>Create a User Account in Active Directory Users and Computers
 You can use this procedure to create a new domain user account in Active Directory Users and Computers Microsoft Management Console (MMC).
@@ -942,11 +1001,11 @@ The following sections provide information on adding NPS and Web servers to your
 #### <a name="BKMK_deployNPS1"></a>Deploying NPS1
 The Network Policy Server (NPS) server is installed as a preparatory step for deploying other network access technologies, such as virtual private network (VPN) servers, wireless access points, and 802.1X authenticating switches.
 
-Network Policy Server (NPS) allows you to centrally configure and manage network policies with the following three features: Remote Authentication Dial-In User Service (RADIUS) server, RADIUS proxy, and Network Access Protection (NAP) policy server.
+Network Policy Server (NPS) allows you to centrally configure and manage network policies with the following features: Remote Authentication Dial-In User Service (RADIUS) server and RADIUS proxy.
 
 NPS is an optional component of a core network, but you should install NPS if any of the following are true:
 
--   You are planning to expand your network to include remote access servers that are compatible with the RADIUS protocol, such as a computer running  Windows Server 2016,  Windows Server 2012 R2 , Windows Server 2012,  Windows Server 2008 R2  or  Windows Server 2008  and Routing and Remote Access service, Terminal Services Gateway, or Remote Desktop Gateway.
+-   You are planning to expand your network to include remote access servers that are compatible with the RADIUS protocol, such as a computer running Windows Server 2016, Windows Server 2012 R2, Windows Server 2012,  Windows Server 2008 R2 or Windows Server 2008 and Routing and Remote Access service, Terminal Services Gateway, or Remote Desktop Gateway.
 
 
 -   You plan to deploy 802.1X authentication for wired or wireless  access.
@@ -975,15 +1034,15 @@ When you use NPS as a Remote Authentication Dial-In User Service (RADIUS) server
 
 Following are key planning steps before installing NPS.
 
--   Plan the user accounts database. By default, if you join the server running NPS to an Active Directory domain, NPS performs authentication and authorization using the AD DS user accounts database. In some cases, such as with large networks that use NPS as a RADIUS proxy to forward connection requests to other RADIUS servers, you might want to install NPS on a non-domain member computer.
+- Plan the user accounts database. By default, if you join the server running NPS to an Active Directory domain, NPS performs authentication and authorization using the AD DS user accounts database. In some cases, such as with large networks that use NPS as a RADIUS proxy to forward connection requests to other RADIUS servers, you might want to install NPS on a non-domain member computer.
 
--   Plan RADIUS accounting. NPS allows you to log accounting data to a SQL Server database or to a text file on the local computer. If you want to use SQL Server logging, plan the installation and configuration of your server running SQL Server.
+- Plan RADIUS accounting. NPS allows you to log accounting data to a SQL Server database or to a text file on the local computer. If you want to use SQL Server logging, plan the installation and configuration of your server running SQL Server.
 
 ##### <a name="BKMK_installNPS"></a>Install Network Policy Server (NPS)
 You can use this procedure to install Network Policy Server (NPS) by using the Add Roles and Features Wizard. NPS is a role service of the Network Policy and Access Services server role.
 
 > [!NOTE]
-> By default, NPS listens for RADIUS traffic on ports 1812, 1813, 1645, and 1646 on all installed network adapters. If Windows Firewall with Advanced Security is enabled when you install NPS, firewall exceptions for these ports are automatically created during the installation process for both Internet Protocol version 6 (IPv6) and IPv4 traffic. If your network access servers are configured to send RADIUS traffic over ports other than these defaults, remove the exceptions created in Windows Firewall with Advanced Security during NPS installation, and create exceptions for the ports that you do use for RADIUS traffic.
+> By default, NPS listens for RADIUS traffic on ports 1812, 1813, 1645, and 1646 on all installed network adapters. If Windows Firewall with Advanced Security is enabled when you install NPS, firewall exceptions for these ports are automatically created during the installation process for both Internet Protocol version 6 \(IPv6\) and IPv4 traffic. If your network access servers are configured to send RADIUS traffic over ports other than these defaults, remove the exceptions created in Windows Firewall with Advanced Security during NPS installation, and create exceptions for the ports that you do use for RADIUS traffic.
 
 **Administrative Credentials**
 
@@ -1007,7 +1066,7 @@ To complete this procedure, you must be a member of the **Domain Admins** group.
 
 4.  In **Select destination server**, ensure that **Select a server from the server pool** is selected. In **Server Pool**, ensure that the local computer is selected. Click **Next**.
 
-5.  In **Select Server Roles**, in **Roles**, select **Network Policy and Access Services**, and then click **Next**
+5.  In **Select Server Roles**, in **Roles**, select **Network Policy and Access Services**. A dialog box opens asking if it should add features that are required for Network Policy and Access Services. Click **Add Features**, and then click **Next**.
 
 6.  In **Select features**, click **Next**, and in **Network Policy and Access Services**, review the information that is provided, and then click **Next**.
 
@@ -1036,6 +1095,8 @@ To complete this procedure, you must be a member of the **Domain Admins** group.
 2.  Right-click **NPS (Local)**, and then click **Register server in Active Directory**. The **Network Policy Server** dialog box opens.
 
 3.  In **Network Policy Server**, click **OK**, and then click **OK** again.
+
+For more information about Network Policy Server, see [Network Policy Server (NPS)](../technologies/nps/nps-top.md).
 
 #### <a name="BKMK_IIS"></a>Deploying WEB1
 The Web Server (IIS) role in  Windows Server 2016 provides a secure, easy-to-manage, modular and extensible platform for reliably hosting web sites, services, and applications. With Internet Information Services (IIS), you can share information with users on the Internet, an intranet, or an extranet. IIS  is a unified web platform that integrates IIS, ASP.NET, FTP services, PHP, and Windows Communication Foundation (WCF).

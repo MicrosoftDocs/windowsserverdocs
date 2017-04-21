@@ -24,6 +24,7 @@ You can use the topics in this section to manage Network Policy Server.
   
 This section contains the following topics.  
   
+- [Network Policy Server Management with Administration Tools](nps-admintools.md)
 - [Configure Connection Request Policies](nps-crp-configure.md)
 - [Configure Firewalls for RADIUS Traffic](nps-firewalls-configure.md)
 - [Configure Network Policies](nps-np-configure.md)

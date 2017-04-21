@@ -1,3 +1,3 @@
 ---
-redirect_url: /windows-server-docs/networking/branchcache/deploy/prehashing-and-preloading
+redirect_url: /windows-server/networking/branchcache/deploy/prehashing-and-preloading
 ---

@@ -5,7 +5,7 @@ description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 01/18/2017
+ms.date: 02/09/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 
@@ -25,10 +25,10 @@ This document contains a list of all of the documentation operations for AD FS f
 - [AD FS support for alternate hostname binding for certificate authentication](../ad-fs/operations/AD-FS-support-for-alternate-hostname-binding-for-certificate-authentication.md)
 - [AD FS user sign-in customization](../ad-fs/operations/AD-FS-user-sign-in-customization.md)
 - [Add an Attribute Store](../ad-fs/operations/Add-an-Attribute-Store.md)
-- [Auditing Enhancements to AD FS in Windows Server 2016](../ad-fs/operations/Auditing-Enhancements-to-AD-FS-in-Windows-Server-2016.md)
-- [Best Practices for Securing AD FS](../ad-fs/operations/Best-Practices-Securing-AD-FS.md)
+
 - [Configure AD FS 2016 and Azure MFA](../ad-fs/operations/Configure-AD-FS-2016-and-Azure-MFA.md)
-- [Configure AD FS Extranet Lockout](../ad-fs/operations/Configure-AD-FS-Extranet-Lockout.md)
+- [Configure AD FS Extranet Lockout Protection](../ad-fs/operations/Configure-AD-FS-Extranet-Lockout-Protection.md)
+- [Configure AD FS for User Certificate Authentication](../ad-fs/operations/Configure-User-Certificate-Authentication.md)
 - [Configure AD FS to authenticate users stored in LDAP directories](../ad-fs/operations/Configure-AD-FS-to-authenticate-users-stored-in-LDAP-directories.md)
 - [Configure AD FS to Send Password Expiry Claims](../ad-fs/operations/Configure-AD-FS-to-Send-Password-Expiry-Claims.md)
 - [Configure Additional Authentication Methods for AD FS](../ad-fs/operations/Configure-Additional-Authentication-Methods-for-AD-FS.md)
@@ -44,10 +44,8 @@ This document contains a list of all of the documentation operations for AD FS f
 - [Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications](../ad-fs/operations/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md)
 - [Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](../ad-fs/operations/Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
 - [Manage Risk with Conditional Access Control](../ad-fs/operations/Manage-Risk-with-Conditional-Access-Control.md)
-- [Plan Device-based Conditional Access on-Premises](../ad-fs/operations/Plan-Device-based-Conditional-Access-on-Premises.md)
+- [Managing SSL Certificates in AD FS and WAP 2016](../ad-fs/operations/Manage-SSL-Certificates-AD-FS-WAP-2016.md)
 - [Set up an AD FS lab environment](../ad-fs/operations/Set-up-an-AD-FS-lab-environment.md)
-- [Set up Geographic Redundancy with SQL Server Replication](../ad-fs/operations/Set-up-Geographic-Redundancy-with-SQL-Server-Replication.md)
-- [Set up the lab environment for AD FS in Windows Server 2012 R2](../ad-fs/operations/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md)
 - [Walkthrough Guide: Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
 - [Walkthrough Guide: Manage Risk with Conditional Access Control](../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md)
 - [Walkthrough: Workplace Join with a Windows Device](../ad-fs/operations/Walkthrough--Workplace-Join-with-a-Windows-Device.md)

@@ -4,11 +4,12 @@ ms.prod: windows-server-threshold
 ms.technology: storage-failover-clustering
 ms.topic: get-started-article
 ms.assetid: 6e102c1f-df26-4eaa-bc7a-d0d55d3b82d5
-author: kumudd
-ms.author: kumud
+author: jasongerend
+ms.author: jgerend
 ms.date: 09/15/2016
 ---
 # Cluster operating system rolling upgrade
+
 > Applies to Windows Server 2016
 
 Cluster OS Rolling Upgrade is a new feature in Windows Server 2016 that enables an administrator to upgrade the operating system of the cluster nodes from Windows Server 2012 R2 to Windows Server 2016 without stopping the Hyper-V or the Scale-Out File Server workloads. Using this feature, the downtime penalties against Service Level Agreements (SLA) can be avoided.  
@@ -217,11 +218,8 @@ Cluster OS Rolling upgrade includes the following steps:
 
         ![Screencap showing the Update-VMVersion cmdlet in action](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_StopVM.png)  
         **Figure 22: Upgrading a VM version using the Update-VMVersion PowerShell cmdlet**  
-        
-        > [!CAUTION]  
-        > Leave Production VMs at Configuration Version 5.0 - only VMs with Configuration Version 5.0 are guaranteed to be able to Live Migrate to Windows Server 2016 RTM version. Upgrade the VM Configuration Version only for Test VMs..  
 
-    4.  Storage pools can be upgraded using the Update-StoragePool PowerShell cmdlet - this is an online operation.  
+4.  Storage pools can be upgraded using the [Update-StoragePool](https://technet.microsoft.com/itpro/powershell/windows/storage/update-storagepool) PowerShell cmdlet - this is an online operation.  
 
 Although we are targeting Private Cloud scenarios, specifically Hyper-V and Scale-out File Server clusters, which can be upgraded without downtime, the Cluster OS Rolling Upgrade process can be used for any cluster role.  
 
@@ -269,5 +267,5 @@ Although we are targeting Private Cloud scenarios, specifically Hyper-V and Scal
 
 ## See also  
 -   [Release Notes: Important Issues in Windows Server 2016](../get-started/Release-Notes--Important-Issues-in-Windows-Server-2016-Technical-Preview.md)  
--   [What's New in Windows Server 2016](../get-started/What-s-New-in-Windows-Server-2016-Technical-Preview-5.md)  
+-   [What's New in Windows Server 2016](../get-started/What-s-New-in-windows-server-2016.md)  
 -   [What's New in Failover Clustering in Windows Server](whats-new-in-failover-clustering.md)  

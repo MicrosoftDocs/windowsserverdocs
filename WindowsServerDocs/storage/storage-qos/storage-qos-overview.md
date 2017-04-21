@@ -164,7 +164,7 @@ WinOltp1         plang-c1.plan... plang-fs2.pla... C:\ClusterSt... Ok
 The following sample command is formatted to show virtual machine name, Hyper-V host name, IOPs, and VHD file name, sorted by IOPS.  
 
 ```PowerShell  
-PS C:\> Get-StorageQosFlow | Sort-Object StorageNodeIOP -Descending | ft InitiatorName, @{Expression={$_.InitiatorNodeName.Substring(0,$_.InitiatorNodeName.IndexOf('.'))};Label="InitiatorNodeName"}, StorageNodeIOPs, Status, @{Expression={$_.FilePath.Substring($_.FilePath.LastIndexOf('\')+1)};Label="File"} -AutoSize  
+PS C:\> Get-StorageQosFlow | Sort-Object StorageNodeIOPs -Descending | ft InitiatorName, @{Expression={$_.InitiatorNodeName.Substring(0,$_.InitiatorNodeName.IndexOf('.'))};Label="InitiatorNodeName"}, StorageNodeIOPs, Status, @{Expression={$_.FilePath.Substring($_.FilePath.LastIndexOf('\')+1)};Label="File"} -AutoSize  
 
 InitiatorName InitiatorNodeName StorageNodeIOPs Status File  
 ------------- ----------------- --------------- ------ ----  
@@ -877,6 +877,6 @@ IOPSNormalizationSize
 ```    
 
 ## See Also  
-- [Windows Server 2016](../../get-started/Windows-Server-2016-Technical-Preview-5.md)  
+- [Windows Server 2016](../../get-started/windows-server-2016.md)  
 - [Storage Replica in Windows Server 2016](../storage-replica/storage-replica-overview.md)  
 - [Storage Spaces Direct in Windows Server 2016](../storage-spaces/storage-spaces-direct-overview.md)  

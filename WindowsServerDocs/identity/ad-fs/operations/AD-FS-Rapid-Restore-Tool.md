@@ -5,7 +5,7 @@ description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 08/25/2016
+ms.date: 02/09/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 
@@ -13,7 +13,7 @@ ms.technology: identity-adfs
 ---
 # AD FS Rapid Restore Tool
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2
 
 ## Overview
 Today AD FS is made highly available by setting up an AD FS farm. Some organizations would like a way to have a single server AD FS deployment, eliminating the need for multiple AD FS servers and network load balancing infrastructure, while still having some assurance that service can be restored quickly if there is a problem.
@@ -40,8 +40,9 @@ The tool backs up the following AD FS configuration
 ## How to use the tool
 First, [download](http://go.microsoft.com/fwlink/?LinkId=825646) and install the MSI to your AD FS server.  
 
-From a PowerShell prompt, import-module ADFSRapidRecreationTool.dll
+Run the following command from a PowerShell prompt:
 
+`import-module 'C:\Program Files (x86)\ADFS Rapid Recreation Tool\ADFSRapidRecreationTool.dll'`
 
 >[!NOTE] 
 >If you are using the Windows Integrated Database (WID), then this tool needs to be run on the primary AD FS server.  You can use the `Get-ADFSSyncProperties` PowerShell cmdlet to determine whether or not the server you are on is the primary server.

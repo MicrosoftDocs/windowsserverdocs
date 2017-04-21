@@ -13,35 +13,34 @@ author: jamesmci
 
 >Applies To: Windows Server 2016
 
-You can create DNS policies to control how a DNS Server handles queries based on different parameters. For instance, you may create a DNS policy to respond to a query asking for the IP address of a web server to respond with a different IP address based on the closest datacenter to the client.  
-  
-DNS Policies can be used in different scenarios, including:  
-  
--   **Application high availability.** DNS clients are redirected to the healthiest endpoint for a given application.  
-  
--   **Traffic Management.** DNS clients are redirected to the closest datacenter.  
-  
--   **Split Brain DNS.** DNS records are split into different Zone Scopes, and DNS clients receive a response based on whether they are internal or external clients.  
-  
--   **Filtering.** DNS queries from a list of malicious IP addresses or FQDNs are blocked.  
-  
--   **Forensics.** Malicious DNS clients are redirected to a sink hole instead of the computer they are trying to reach.  
-  
--   **Time of day based redirection.** DNS clients can be redirected to datacenters based on the time of the day.  
-  
+You can use this topic to learn about DNS Policy, which is new in Windows Server 2016. You can use DNS Policy for Geo-Location based traffic management, intelligent DNS responses based on the time of day, to manage a single DNS server configured for split\-brain deployment, applying filters on DNS queries, and more. The following items provide more detail about these capabilities.
+
+-   **Application Load Balancing.** When you have deployed multiple instances of an application at different locations, you can use DNS policy to balance the traffic load between the different application instances, dynamically allocating the traffic load for the application.
+
+-   **Geo\-Location Based Traffic Management.** You can use DNS Policy to allow primary and secondary DNS servers to respond to DNS client queries based on the geographical location of both the client and the resource to which the client is attempting to connect, providing the client with the IP address of the closest resource. 
+
+-   **Split Brain DNS.** With split\-brain DNS, DNS records are split into different Zone Scopes on the same DNS server, and DNS clients receive a response based on whether the clients are internal or external clients. You can configure split\-brain DNS for Active Directory integrated zones or for zones on standalone DNS servers.
+
+-   **Filtering.** You can configure DNS policy to create query filters that are based on criteria that you supply. Query filters in DNS policy allow you to configure the DNS server to respond in a custom manner based on the DNS query and DNS client that sends the DNS query. 
+-   **Forensics.** You can use DNS policy to redirect malicious DNS clients to a non\-existent IP address instead of directing them to the computer they are trying to reach.
+
+-   **Time of day based redirection.** You can use DNS policy to distribute application traffic across different geographically distributed instances of an application by using DNS policies that are based on the time of day.
+
 ## New Concepts  
 In order to create policies to support the scenarios listed above, it is necessary to be able to identify groups of records in a zone, groups of clients on a network, among other elements. These elements are represented by the following new DNS objects:  
+
+- **Client subnet:** a client subnet object represents an IPv4 or IPv6 subnet from which queries are submitted to a DNS server. You can create subnets to later define policies to be applied based on what subnet the requests come from. For instance, in a split brain DNS scenario, the request for resolution for a name such as *www.microsoft.com* can be answered with an internal IP address to clients from internal subnets, and a different IP address to clients in external subnets.
+
+- **Recursion scope:** recursion scopes are unique instances of a group of settings that control recursion on a DNS server. A recursion scope contains a list of forwarders and specifies whether recursion is enabled. A DNS server can have many recursion scopes. DNS server recursion policies allow you to choose a recursion scope for a set of queries. If the DNS server is not authoritative for certain queries, DNS server recursion policies allow you to control how to resolve those queries. You can specify which forwarders to use and whether to use recursion.
+
+- **Zone scopes:** a DNS zone can have multiple zone scopes, with each zone scope containing their own set of DNS records. The same record can be present in multiple scopes, with different IP addresses. Also, zone transfers are done at the zone scope level. That means that records from a zone scope in a primary zone will be transferred to the same zone scope in a secondary zone.
+
+## Types of Policy
+
+DNS Policies are divided by level and type. You can use Query Resolution Policies to define how queries are processed, and Zone Transfer Policies to define how zone transfers occur. You can apply Each policy type at the server level or the zone level.
   
--   **Client subnet:** a client subnet object represents an IPv4 or IPv6 subnet from which queries are submitted to a DNS server. You can create subnets to later define policies to be applied based on what subnet the requests come from. For instance, in a split brain DNS scenario, the request for resolution for a name such as *www.microsoft.com* can be answered with an internal IP address to clients from internal subnets, and a different IP address to clients in external subnets.  
-  
--   **Recursion scope:** recursion scopes are unique instances of a group of settings that control recursion on a DNS server. A recursion scope contains a list of forwarders and specifies whether recursion is enabled. A DNS server can have many recursion scopes. DNS server recursion policies allow you to choose a recursion scope for a set of queries. If the DNS server is not authoritative for certain queries, DNS server recursion policies allow you to control how to resolve those queries. You can specify which forwarders to use and whether to use recursion.  
-  
--   **Zone scopes:** a DNS zone can have multiple zone scopes, with each zone scope containing their own set of DNS records. The same record can be present in multiple scopes, with different IP addresses. Also, zone transfers are done at the zone scope level. That means that records from a zone scope in a primary zone will be transferred to the same zone scope in a secondary zone.  
-  
-## Types of Policy  
-DNS Policies are divided by level and type. You can use Query Resolution Policies to define how queries are handled, and Zone Transfer Policies to define how zone transfers take place. Each policy type can be applied at the server level, or the zone level.  
-  
-### Query Resolution Policies  
+### Query Resolution Policies
+
 You can use DNS Query Resolution Policies to specify how incoming resolution queries are handled by a DNS server. Every DNS Query Resolution Policy contains the following elements:  
   
 |Field|Description|Possible values|  
@@ -53,14 +52,14 @@ You can use DNS Query Resolution Policies to specify how incoming resolution que
 |**Action**|Action to be performed by DNS server|-   Allow (default for zone level)<br />-   Deny (default on server level)<br />-   Ignore|  
 |**Criteria**|Policy condition (AND/OR) and list of criterion to be met for policy to be applied|-   Condition operator (AND/OR)<br />-   List of criteria (see the criterion table below)|  
 |**Scope**|List of zone scopes and weighted values per scope. Weighted values are used for load balancing distribution. For instance, if this list includes datacenter1 with a weight of 3 and datacenter2 with a weight of 5 the server will respond with a record from datacentre1 three times out of eight requests|-   List of zone scopes (by name) and weights|  
-  
-> [!NOTE]  
-> Server level policies can only have the values **Deny** or **Ignore** as an action.  
-  
-The DNS policy criteria field is composed of two elements:  
-  
-|Name|Description|Sample values|  
-|--------|---------------|-----------------|  
+
+> [!NOTE]
+> Server level policies can only have the values **Deny** or **Ignore** as an action.
+
+The DNS policy criteria field is composed of two elements:
+
+|Name|Description|Sample values|
+|--------|---------------|-----------------|
 |**Client Subnet**|Transport protocol used in the query. Possible entries are **UDP** and **TCP**|-   **EQ,Spain,France** - resolves to true if the subnet is identified as either Spain or France<br />-   **NE,Canada,Mexico** - resolves to true if the client subnet is any subnet other than Canada and Mexico|  
 |**Transport Protocol**|Transport protocol used in the query. Possible entries are **UDP** and **TCP**|-   **EQ,TCP**<br />-   **EQ,UDP**|  
 |**Internet Protocol**|Network protocol used in the query. Possible entries are **IPv4** and **IPv6**|-   **EQ,IPv4**<br />-   **EQ,IPv6**|  
@@ -177,5 +176,18 @@ You can also create zone level zone transfer policies. The example below ignores
 Add-DnsServerZoneTransferPolicy -Name "InternalTransfers" -Action IGNORE -ServerInterfaceIP "ne,10.0.0.33" -PassThru -ZoneName "contoso.com"  
 ```  
   
+## DNS Policy Scenarios
+
+For information on how to use DNS policy for specific scenarios, see the following topics in this guide.
+
+- [Use DNS Policy for Geo-Location Based Traffic Management with Primary Servers](primary-geo-location.md)  
+- [Use DNS Policy for Geo-Location Based Traffic Management with Primary-Secondary Deployments](primary-secondary-geo-location.md)  
+- [Use DNS Policy for Intelligent DNS Responses Based on the Time of Day](dns-tod-intelligent.md)
+- [DNS Responses Based on Time of Day with an Azure Cloud App Server](dns-tod-azure-cloud-app-server.md)
+- [Use DNS Policy for Split-Brain DNS Deployment](split-brain-DNS-deployment.md)
+- [Use DNS Policy for Split-Brain DNS in Active Directory](dns-sb-with-ad.md)
+- [Use DNS Policy for Applying Filters on DNS Queries](apply-filters-on-dns-queries.md)
+- [Use DNS Policy for Application Load Balancing](app-lb.md)
+- [Use DNS Policy for Application Load Balancing With Geo-Location Awareness](app-lb-geo.md)
 
 

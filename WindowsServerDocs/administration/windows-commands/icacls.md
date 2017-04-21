@@ -1,0 +1,106 @@
+---
+title: icacls
+description: "Windows Commands topic for **** - "
+ms.custom: na
+ms.prod: windows-server-threshold
+ms.reviewer: na
+ms.suite: na
+ms.technology: manage-windows-commands
+ms.tgt_pltfrm: na
+ms.topic: article
+ms.assetid: 403edfcc-328a-479d-b641-80c290ccf73e
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
+---
+# icacls
+
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
+Displays or modifies discretionary access control lists (DAcls) on specified files, and applies stored DAcls to files in specified directories.  
+for examples of how to use this command, see [Examples](#BKMK_examples).  
+## Syntax  
+```  
+icacls <FileName> [/grant[:r] <Sid>:<Perm>[...]] [/deny <Sid>:<Perm>[...]] [/remove[:g|:d]] <Sid>[...]] [/t] [/c] [/l] [/q] [/setintegritylevel <Level>:<Policy>[...]]  
+icacls <directory> [/substitute <SidOld> <SidNew> [...]] [/restore <ACLfile> [/c] [/l] [/q]]  
+```  
+## Parameters  
+|Parameter|Description|  
+|-------|--------|  
+|<FileName>|Specifies the file for which to display DAcls.|  
+|<directory>|Specifies the directory for which to display DAcls.|  
+|/t|Performs the operation on all specified files in the current directory and its subdirectories.|  
+|/c|Continues the operation despite any file errors. Error messages will still be displayed.|  
+|/l|Performs the operation on a symbolic link versus its destination.|  
+|/q|Suppresses success messages.|  
+|[/save <ACLfile> [/t] [/c] [/l] [/q]]|Stores DAcls for all matching files into *ACLfile* for later use with **/restore**.|  
+|[/setowner <Username> [/t] [/c] [/l] [/q]]|changes the owner of all matching files to the specified user.|  
+|[/findSID <Sid> [/t] [/c] [/l] [/q]]|finds all matching files that contain a DACL explicitly mentioning the specified security identifier (SID).|  
+|[/verify [/t] [/c] [/l] [/q]]|finds all files with Acls that are not canonical or have lengths inconsistent with ACE (access control entry) counts.|  
+|[/reset [/t] [/c] [/l] [/q]]|replaces Acls with default inherited Acls for all matching files.|  
+|[/grant[:r] <Sid>:<Perm>[...]]|Grants specified user access rights. Permissions replace previously granted explicit permissions.<br /><br />Without **:r**, permissions are added to any previously granted explicit permissions.|  
+|[/deny <Sid>:<Perm>[...]]|Explicitly denies specified user access rights. An explicit deny ACE is added for the stated permissions and the same permissions in any explicit grant are removed.|  
+|[/remove[:g&#124;:d]] <Sid>[...]] [/t] [/c] [/l] [/q]|removes all occurrences of the specified SID from the DACL.<br /><br />**:g** removes all occurrences of granted rights to the specified SID.<br /><br />**:d** removes all occurrences of denied rights to the specified SID.|  
+|[/setintegritylevel[(CI)(OI)]<Level>:<Policy>[...]]|Explicitly adds an integrity ACE to all matching files. *Level* is specified as:<br /><br />-   **L**[ow]<br />-   **M**[edium]<br />-   **H**[igh]<br /><br />Inheritance options for the integrity ACE may precede the level and are applied only to directories.|  
+|[/substitute <SidOld> <SidNew> [...]]|replaces an existing SID (*SidOld*) with a new SID (*SidNew*). Requires the *directory* parameter.|  
+|/restore <ACLfile> [/c] [/l] [/q]|Applies stored DAcls from *ACLfile* to files in the specified directory. Requires the *directory* parameter.|  
+## remarks  
+-   SIDs may be in either numerical or friendly name form. If you use a numerical form, affix the wildcard character **\*** to the beginning of the SID.  
+-   **icacls** preserves the canonical order of ACE entries as:  
+    -   Explicit denials  
+    -   Explicit grants  
+    -   Inherited denials  
+    -   Inherited grants  
+-   *Perm* is a permission mask that can be specified in one of the following forms:  
+    -   A sequence of simple rights:  
+        **F** (full access)  
+        **M** (modify access)  
+        **RX** (read and execute access)  
+        **R** (read-only access)  
+        **W** (write-only access)  
+    -   A comma-separated list in parenthesis of specific rights:  
+        **D** (delete)  
+        **RC** (read control)  
+        **WDAC** (write DAC)  
+        **WO** (write owner)  
+        **S** (synchronize)  
+        **AS** (access system security)  
+        **MA** (maximum allowed)  
+        **GR** (generic read)  
+        **GW** (generic write)  
+        **GE** (generic execute)  
+        **GA** (generic all)  
+        **rd** (read data/list directory)  
+        **WD** (write data/add file)  
+        **AD** (append data/add subdirectory)  
+        **REA** (read extended attributes)  
+        **WEA** (write extended attributes)  
+        **X** (execute/traverse)  
+        **DC** (delete child)  
+        **RA** (read attributes)  
+        **WA** (write attributes)  
+-   Inheritance rights may precede either *Perm* form, and they are applied only to directories:  
+    **(OI)**: object inherit  
+    **(CI)**: container inherit  
+    **(IO)**: inherit only  
+    **(NP)**: do not propagate inherit  
+## <a name="BKMK_examples"></a>Examples  
+To save the DAcls for all files in the C:\Windows directory and its subdirectories to the ACLFile file, type:  
+```  
+icacls c:\windows\* /save aclfile /t  
+```  
+To restore the DAcls for every file within ACLFile that exists in the C:\Windows directory and its subdirectories, type:  
+```  
+icacls c:\windows\ /restore aclfile  
+```  
+To grant the user User1 delete and Write DAC permissions to a file named "Test1", type:  
+```  
+icacls test1 /grant User1:(d,wdac)  
+```  
+To grant the user defined by SID S-1-1-0 delete and Write DAC permissions to a file, named "Test2", type:  
+```  
+icacls test2 /grant *S-1-1-0:(d,wdac)  
+```  
+#### additional references  
+[Command-Line Syntax Key](command-line-syntax-key.md)  

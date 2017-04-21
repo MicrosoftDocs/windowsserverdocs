@@ -5,7 +5,7 @@ description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 09/29/2016
+ms.date: 02/09/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 
@@ -267,7 +267,7 @@ In other cases, you may need to create security groups and delegate rights and p
   
 In many environments, manually creating role-based access controls for administration of an Active Directory environment can be challenging to implement and maintain. If you have clearly defined roles and responsibilities for administration of your IT infrastructure, you may want to leverage additional tooling to assist you in creating a manageable native RBAC deployment. For example, if Forefront Identity Manager (FIM) is in use in your environment, you can use FIM to automate the creation and population of administrative roles, which can ease ongoing administration. If you use System Center Configuration Manager (SCCM) and System Center Operations Manager (SCOM), you can use application-specific roles to delegate management and monitoring functions, and also enforce consistent configuration and auditing across systems in the domain. If you have implemented a public key infrastructure (PKI), you can issue and require smart cards for IT staff responsible for administering the environment. With FIM Credential Management (FIM CM), you can even combine management of roles and credentials for your administrative staff.  
   
-In other cases, it may be preferable for an organization to consider deploying third-party RBAC software that provides "out-of-box" functionality. Commercial, off-the-shelf (COTS) solutions for RBAC for Active Directory, Windows, and non-Windows directories and operating systems are offered by a number of vendors. A list of third-party RBAC solutions is provided in [Appendix J: Third-Party RBAC Vendors](../../../ad-ds/plan/security-best-practices/Appendix-J--Third-Party-RBAC-Vendors.md). When choosing between native solutions and third-party products, you should consider the following factors:  
+In other cases, it may be preferable for an organization to consider deploying third-party RBAC software that provides "out-of-box" functionality. Commercial, off-the-shelf (COTS) solutions for RBAC for Active Directory, Windows, and non-Windows directories and operating systems are offered by a number of vendors. When choosing between native solutions and third-party products, you should consider the following factors:  
   
 1.  Budget: By investing in development of RBAC using software and tools you may already own, you can reduce the software costs involved in deploying a solution. However, unless you have staff who are experienced in creating and deploying native RBAC solutions, you may need to engage consulting resources to develop your solution. You should carefully weigh the anticipated costs for a custom-developed solution with the costs to deploy an "out-of-box" solution, particularly if your budget is limited.  
   
@@ -277,7 +277,7 @@ In other cases, it may be preferable for an organization to consider deploying t
 
   
 ### Privileged Identity Management  
-Privileged identity management (PIM), sometimes referred to as privileged account management (PAM) or privileged credential management (PCM) is the design, construction, and implementation of approaches to managing privileged accounts in your infrastructure. Generally speaking, PIM provides mechanisms by which accounts are granted temporary rights and permissions required to perform build-or-break fix functions, rather than leaving privileges permanently attached to accounts. Whether PIM functionality is manually created or is implemented via the deployment of third-party software (see [Appendix K: Third-Party PIM Vendors](../../../ad-ds/plan/security-best-practices/Appendix-K--Third-Party-PIM-Vendors.md), one or more of the following features may be available:  
+Privileged identity management (PIM), sometimes referred to as privileged account management (PAM) or privileged credential management (PCM) is the design, construction, and implementation of approaches to managing privileged accounts in your infrastructure. Generally speaking, PIM provides mechanisms by which accounts are granted temporary rights and permissions required to perform build-or-break fix functions, rather than leaving privileges permanently attached to accounts. Whether PIM functionality is manually created or is implemented via the deployment of third-party software one or more of the following features may be available:  
   
 
 -   Credential "vaults," where passwords for privileged accounts are "checked out" and assigned an initial password, then "checked in" when activities have been completed, at which time passwords are again reset on the accounts.  

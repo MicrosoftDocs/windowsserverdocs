@@ -42,6 +42,18 @@ NPS allows you to centrally configure and manage network access authentication, 
 
 You can configure NPS with any combination of these features. For example, you can configure one NPS server as a RADIUS server for VPN connections and also as a RADIUS proxy to forward some connection requests to members of a remote RADIUS server group for authentication and authorization in another domain.
 
+## Windows Server Editions and NPS
+
+NPS provides different functionality depending on the edition of Windows Server that you install.
+
+### Windows Server 2016 Datacenter Edition
+
+With NPS in Windows Server 2016 Datacenter, you can configure an unlimited number of RADIUS clients and remote RADIUS server groups. In addition, you can configure RADIUS clients by specifying an IP address range.
+
+### Windows Server 2016 Standard Edition
+
+With NPS in Windows Server 2016 Standard, you can configure a maximum of 50 RADIUS clients and a maximum of 2 remote RADIUS server groups. You can define a RADIUS client by using a fully qualified domain name or an IP address, but you cannot define groups of RADIUS clients by specifying an IP address range. If the fully qualified domain name of a RADIUS client resolves to multiple IP addresses, the NPS server uses the first IP address returned in the Domain Name System (DNS) query.
+
 The following sections provide more detailed information about NPS as a RADIUS server and proxy.
 
 ## RADIUS server and proxy

@@ -4,7 +4,7 @@ title: Checklist - Implementing a Web SSO Design
 description:
 author: billmath
 manager: femila
-ms.date: 09/12/2016
+ms.date: 02/09/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 

@@ -237,6 +237,6 @@ There is no universal rule, but if too many reads are missing the cache, it may 
 
 ## See also
 
-- [Choosing drives and resiliency types](choosing-drives-and-resiliency-types.md)
+- [Choosing drives and resiliency types](choosing-drives.md)
 - [Fault tolerance and storage efficiency](storage-spaces-fault-tolerance.md)
 - [Storage Spaces Direct hardware requirements](storage-spaces-direct-hardware-requirements.md)

@@ -5,7 +5,7 @@ description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 11/30/2016
+ms.date: 02/09/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 
@@ -16,13 +16,30 @@ ms.technology: identity-adfs
 
 >Applies To: Windows Server 2016
 
+If your organization is federated with Azure AD, you can use Azure Multi-Factor Authentication to secure AD FS resources, both on-premises and in the cloud. Azure MFA enables you to eliminate passwords and provide a more secure way to authenticate.  Starting with Windows Server 2016, you can now configure Azure MFA for primary authentication. 
   
-The following topic describes how to get started and configure AD FS for enabling multi-factor authentication with Azure.  
-  
-If your organization is federated with Azure AD you can use Azure Multi-Factor Authentication to secure on-premises and cloud resources.  This can be done by configuring AD FS to trigger Azure MFA for high value end points.  By leveraging Azure MFA you can eliminate the need for passwords and provide a more secure way to authenticate.  Starting with Windows Server 2016, you can now configure Azure MFA for primary authentication.  The Azure MFA adapter comes with Windows Server 2016 so there is no need for additional installation.    
-  
-In Windows Server 2016, the Azure MFA adapter integrates with Azure Active Directory for all the MFA configuration. This is a change from Windows Server 2012 R2, which required installing an on-premises component, the MFA Server. In Windows Server 2016, the MFA Server is not required because all of the configuration information is stored in Azure Active Directory.   
-  
+Unlike with AD FS in Windows Server 2012 R2, the AD FS 2016 Azure MFA adapter integrates directly with Azure AD and does not require an on premises Azure MFA server.   The Azure MFA adapter is built in to Windows Server 2016, and there is no need for additional installation.
+
+## Note on Registering users for Azure MFA with AD FS 2016
+AD FS does not currently support inline proof up (registration) of Azure MFA security verification information.  As a result, when a user who has not yet registered (configured verification information) in Azure AD tries to authenticate with Azure MFA at AD FS, they will get an error.  While we are working to add inline proofing functionality, the following are the recommended configurations for enabling Azure MFA with AD FS.
+
+### Recommended deployment topologies
+
+#### Azure MFA as Primary Authentication
+If you wish to use Azure MFA as a primary authentication method in AD FS, for example to avoid passwords for Office 365 signin, you can do this *without* configuring Azure AD to do MFA on premises.  This means your domain's federation setting SupportsMfa (Get-MsolDomainFederationSettings -DomainName [your domain name]) remains set to $false.  
+
+Azure AD as primary authentication does not depend on the SupportsMfa domain setting.  In addition, with this configuration you'll be able to use Azure AD's inline registration capability to enable your users to proof up.  Each user will have to do this once by using username and password to access the "Additional Security Verification" page in the Azure portal and register.
+
+#### Azure MFA as Additional authentication to Office 365
+Today, if you wish to have Azure MFA as an additional authentication method in AD FS for Office 365, you can achieve this with compound MFA, in which primary authentication is performed on premises in AD FS and MFA is triggered by Azure AD.  This will be the default behavior when Azure AD requires MFA, but the domain SupportsMFA setting is set to $False.  This means Azure AD MFA will be done by Azure AD and not AD FS, but it avoids the hard AD FS error for non provisioned users.
+
+As an alternative to the above, you can use an Active Directory group containing only proofed up Azure AD users to control who is prompted for Azure MFA at the AD FS level.  This requires you to maintain group membership, and it will break Azure AD Conditional Access scenarios that require MFA for users outside the group.
+
+#### Azure MFA as Additional authentication for other (non Azure AD) AD FS relying parties
+Today if you wish to have Azure MFA as an additional authentication method in AD FS for other relying parties, this can be achieved with the Azure AD domain SupportsMFA setting set to $False.  
+In this configuration you'll be able to use Azure AD's inline registration capability to enable your users to proof up.  Each user will have to do this once by using username and password to access the "Additional Security Verification" page in the Azure portal and register. Once users are registered, they will be able sign on via AD FS to non AAD applications that require MFA.
+
+
 ## Pre-Requisites  
 The following pre-requisites are required when using Azure MFA for authentication with AD FS:  
   

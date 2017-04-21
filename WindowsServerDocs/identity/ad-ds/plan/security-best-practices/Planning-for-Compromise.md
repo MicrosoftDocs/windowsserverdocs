@@ -5,7 +5,7 @@ description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 09/29/2016
+ms.date: 02/09/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 
@@ -110,8 +110,7 @@ Rather than migrating users from a legacy environment (particularly one in which
   
 To provide the new user accounts access to resources in the legacy forest, you can use the metadirectory tooling to identify resource groups into which the users' legacy accounts were granted access, and then add the users' new accounts to those groups. Depending on your group strategy in the legacy forest, you may need to create domain local groups for resource access or convert existing groups to domain local groups to allow the new accounts to be added to resource groups. By focusing first on the most critical applications and data and migrating them to the new environment (with or without SID history), you can limit the amount of effort expended in the legacy environment.  
   
-> [!NOTE]  
-> Some of the applications listed in [Appendix J: Third-Party RBAC Vendors](../../../ad-ds/plan/security-best-practices/Appendix-J--Third-Party-RBAC-Vendors.md) and [Appendix K: Third-Party PIM Vendors](Appendix-K--Third-Party-PIM-Vendors.md) provide mechanisms to perform "nonmigratory" migrations, as does Microsoft Forefront Identity Manager.  
+
   
 ### Servers and Workstations  
 In a traditional migration from one Active Directory forest to another, migrating computers is often relatively simple compared to migrating users, groups, and applications. Depending on the computer role, migrating to a new forest can be as simple as disjoining an old domain and joining a new one. However, migrating computer accounts intact into a pristine forest defeats the purpose of creating a fresh environment. Rather than migrating (potentially compromised, misconfigured, or outdated) computer accounts to a new forest, you should freshly install servers and workstations in the new environment. You can migrate data from systems in the legacy forest to systems in the pristine forest, but not the systems that house the data.  

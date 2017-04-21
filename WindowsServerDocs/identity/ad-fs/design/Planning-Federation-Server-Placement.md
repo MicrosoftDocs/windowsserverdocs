@@ -3,9 +3,9 @@ ms.assetid: 2e751308-1c86-4d4f-88e4-6a78d3ca4696
 title: Planning Federation Server Placement
 description:
 author: billmath
-ms.author:  billmath
+ms.author: billmath
 manager: femila
-ms.date: 09/28/2016
+ms.date: 02/21/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 

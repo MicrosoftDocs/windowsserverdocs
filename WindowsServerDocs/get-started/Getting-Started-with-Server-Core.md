@@ -5,14 +5,14 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.date: 01/18/2017
+ms.date: 02/22/2017
 ms.technology: server-general
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2d22818c-fbb7-487a-bb82-81ef0a3f7ede
 author: jaimeo
 ms.author: jaimeo
-manager: dongill
+manager: elizapo
 ---
 # Install Server Core
 > Applies To: Windows Server 2016
@@ -72,6 +72,8 @@ With the Server Core option, the standard user interface (the "Server Graphical 
 - Licensing
 
 - Virtualization
+
+- Volume Activation Services
 
 ## Installation scenarios
 
@@ -146,5 +148,5 @@ The ability to migrate varies among different server roles. The follwogin grid e
 > Once Setup has completed and immediately after you have installed all of the server roles and features you need, check for and install updates available for Windows Server 2016 by using Windows Update or other update methods.
 
 ------------------------------------------
-If you need a different installation option, or if you've completed installation and are ready to deploy specific workloads, you can head [back to the main Windows Server 2016 page](Windows-Server-2016-Technical-Preview-5.md).
+If you need a different installation option, or if you've completed installation and are ready to deploy specific workloads, you can head [back to the main Windows Server 2016 page](windows-server-2016.md).
 

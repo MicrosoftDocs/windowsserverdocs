@@ -5,7 +5,7 @@ description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 09/29/2016
+ms.date: 03/07/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 
@@ -46,12 +46,8 @@ This document provides a practitioner's perspective and contains a set of practi
   
 -   [Maintaining a More Secure Environment](../../../ad-ds/plan/security-best-practices/Maintaining-a-More-Secure-Environment.md)  
   
--   [Summary of Best Practices](../../../ad-ds/plan/security-best-practices/Summary-of-Best-Practices.md)  
-  
 -   [Appendices](../../../ad-ds/plan/security-best-practices/Appendices.md)  
-  
--   [Appendix A: Patch and Vulnerability Management Software](../../../ad-ds/plan/security-best-practices/Appendix-A--Patch-and-Vulnerability-Management-Software.md)  
-  
+   
 -   [Appendix B: Privileged Accounts and Groups in Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-B--Privileged-Accounts-and-Groups-in-Active-Directory.md)  
   
 -   [Appendix C: Protected Accounts and Groups in Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory.md)  
@@ -66,11 +62,7 @@ This document provides a practitioner's perspective and contains a set of practi
   
 -   [Appendix H: Securing Local Administrator Accounts and Groups](../../../ad-ds/plan/security-best-practices/Appendix-H--Securing-Local-Administrator-Accounts-and-Groups.md)  
   
--   [Appendix I: Creating Management Accounts for Protected Accounts and Groups in Active Directory](../../../ad-ds/manage/component-updates/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory.md)  
-  
--   [Appendix J: Third-Party RBAC Vendors](../../../ad-ds/plan/security-best-practices/Appendix-J--Third-Party-RBAC-Vendors.md)  
-  
--   [Appendix K: Third-Party PIM Vendors](../../../ad-ds/plan/security-best-practices/Appendix-K--Third-Party-PIM-Vendors.md)  
+-   [Appendix I: Creating Management Accounts for Protected Accounts and Groups in Active Directory](../../../ad-ds/manage/component-updates/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory.md)   
   
 -   [Appendix L: Events to Monitor](../../../ad-ds/plan/Appendix-L--Events-to-Monitor.md)  
   

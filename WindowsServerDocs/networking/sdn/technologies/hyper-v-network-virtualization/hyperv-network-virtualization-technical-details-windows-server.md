@@ -13,7 +13,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9efe0231-94c1-4de7-be8e-becc2af84e69
 ms.author: jamesmci
-author: vhorne
+author: jamesmci
 ---
 # Hyper-V Network Virtualization Technical Details in Windows Server 2016
 
@@ -109,7 +109,7 @@ Most customer deployments will require communication from the HNV environment to
   
 Gateways can come in different physical form factors. They can be built on  Windows Server 2016, incorporated into a Top of Rack (TOR) switch acting as a VXLAN Gateway, accessed through a Virtual IP (VIP) advertised by a load balancer, put into other existing network appliances, or can be a new stand-alone network appliance.  
   
-For more information about Windows RAS Gateway options, see [RAS Gateway](../../../remote-access/ras-gateway/RAS-Gateway.md).  
+For more information about Windows RAS Gateway options, see [RAS Gateway](../../../../remote/remote-access/ras-gateway/RAS-Gateway.md).  
   
 ## Packet Encapsulation  
 Each virtual network adapter in HNV is associated with two IP addresses:  

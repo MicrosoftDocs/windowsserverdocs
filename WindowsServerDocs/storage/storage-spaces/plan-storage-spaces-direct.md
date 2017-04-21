@@ -21,7 +21,7 @@ This topic provides resources that help you plan a [Storage Spaces Direct](stora
 ## Planning resources
 
 - [Storage Spaces Direct hardware requirements](storage-spaces-direct-hardware-requirements.md)
-- [Choosing drives for Storage Spaces Direct](choosing-drives-and-resiliency-types.md)
+- [Choosing drives for Storage Spaces Direct](choosing-drives.md)
 - [Planning volumes in Storage Spaces Direct](plan-volumes.md)
 
 ## See also

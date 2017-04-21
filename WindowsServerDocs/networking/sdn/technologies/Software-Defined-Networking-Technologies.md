@@ -2,13 +2,9 @@
 title: Software Defined Networking Technologies
 description: The topics in this section provide overview and technical information about the Software Defined Networking technologies that are included in Windows Server 2016.
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server-threshold
-ms.reviewer: na
 ms.service: virtual-network
-ms.suite: na
 ms.technology: networking-sdn
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b491089c-5bcb-49d4-95b1-915b7ce69f88
 ms.author: jamesmci
@@ -23,14 +19,15 @@ The topics in this section provide overview and technical information about the 
 > [!NOTE]  
 > For additional Software Defined Networking documentation, you can use the following library sections.  
 >   
-> - [Plan Software Defined Networking](../../sdn/plan/Plan-Software-Defined-Networking.md)
-> - [Deploy Software Defined Networking](../../sdn/deploy/Deploy-Software-Defined-Networking.md)
-> - [Manage Software Defined Networking](../../sdn/manage/manage-sdn.md)
-> - [Troubleshoot Software Defined Networking](../../sdn/troubleshoot/Troubleshoot-Software-Defined-Networking.md)
+> - [Plan Software Defined Networking](../plan/Plan-Software-Defined-Networking.md)
+> - [Deploy Software Defined Networking](../deploy/Deploy-Software-Defined-Networking.md)
+> - [Manage Software Defined Networking](../manage/manage-sdn.md)
+> - [Security for Software Defined Networking](../security/sdn-security-top.md)
+> - [Troubleshoot Software Defined Networking](../troubleshoot/Troubleshoot-Software-Defined-Networking.md)
 
 There are many technologies that work together to create Microsoft's Software Defined Networking (SDN) solutions, including the following:  
   
--   **[Border Gateway Protocol &#40;BGP&#41;](../../remote-access/bgp/Border-Gateway-Protocol-BGP.md)**  
+-   **[Border Gateway Protocol &#40;BGP&#41;](../../../remote/remote-access/bgp/Border-Gateway-Protocol-BGP.md)**  
   
     When configured on a  Windows Server 2016 Remote Access Service (RAS) Gateway, Border Gateway Protocol (BGP) provides you with the ability to manage the routing of network traffic between your tenants' VM networks and their remote sites. BGP reduces the need for manual route configuration on routers because it is a dynamic routing protocol, and automatically learns routes between sites that are connected by using site-to-site VPN connections.  
   
@@ -61,7 +58,7 @@ There are many technologies that work together to create Microsoft's Software De
   
     RAS Gateway  is a software-based, multitenant, Border Gateway Protocol (BGP) capable router in  Windows Server 2016 that is designed for Cloud Service Providers (CSPs) and Enterprises that host multiple tenant virtual networks using Hyper-V Network Virtualization.  
       
-- **[Remote Direct Memory Access &#40;RDMA&#41; and Switch Embedded Teaming &#40;SET&#41;](../../technologies/hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md)**  
+- **[Remote Direct Memory Access &#40;RDMA&#41; and Switch Embedded Teaming &#40;SET&#41;](../../../virtualization/hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md)**  
   
     You can use a converged NIC to combine both RDMA and Ethernet traffic using a single network adapter. The converged NIC allows you to use a single network adapter for management, Remote Direct Memory Access (RDMA)-enabled storage, and tenant traffic. This reduces the capital expenditures that are associated with each server in your datacenter, because you need fewer network adapters to manage different types of traffic per server.  
   

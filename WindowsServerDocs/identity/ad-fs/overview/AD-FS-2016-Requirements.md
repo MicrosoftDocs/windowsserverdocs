@@ -47,7 +47,7 @@ Use the same SSL certificate for all AD FS federation servers and Web Applicatio
 
 SSL certificates on federation servers must meet the following requirements
 - Certificate is publicly trusted (for production deployments)
-- Certificate contains Server Authentication and Client Authentication Enhanced Key Usage (EKU) values 
+- Certificate contains the Server Authentication Enhanced Key Usage (EKU) value
 - Certificate contains the federation service name, such as "fs.contoso.com" in the Subject or Subject Alternative Name (SAN)
 - For user certificate authentication on port 443, certificate contains "certauth.\<federation service name\>", such as "certauth.fs.contoso.com" in the SAN
 - For device registration or for modern authentication to on premises resources using pre-Windows 10 clients, the SAN must contain "enterpriseregistration.\<upn suffix\>" for each UPN suffix in use in your organization.
@@ -200,7 +200,11 @@ When AD FS authentication is performed via a browser or browser control, your br
   
 Both the firewall located between the Web Application Proxy and the federation server farm and the firewall between the clients and the Web Application Proxy must have TCP port 443 enabled inbound.  
   
-In addition, if client user certificate authentication \(clientTLS authentication using X509 user certificates\) is required and the certauth endpoint on port 443 is not enabled, AD FS 2016 requires that TCP port 49443 be enabled inbound on the firewall between the clients and the Web Application Proxy. This is not required on the firewall between the Web Application Proxy and the federation servers\).  
+In addition, if client user certificate authentication \(clientTLS authentication using X509 user certificates\) is required and the certauth endpoint on port 443 is not enabled, AD FS 2016 requires that TCP port 49443 be enabled inbound on the firewall between the clients and the Web Application Proxy. This is not required on the firewall between the Web Application Proxy and the federation servers\). 
+
+For additional information on hybrid port requirements see [Hybrid Identity Ports and Protocols](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-ports). 
+
+For additional information see [Best practices for securing Active Directory Federation Services](..\deployment\Best-Practices-Securing-AD-FS.md)
   
 **DNS Requirements**  
   
