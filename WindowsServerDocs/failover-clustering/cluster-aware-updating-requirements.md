@@ -133,7 +133,8 @@ Install-WindowsFeature -Name NET-Framework-45-Core
 
 ## <a name="BKMK_BEST_PRAC"></a>Best practices recommendations for using Cluster-Aware Updating 
   
-### <a name="BKMK_BP_WUA"></a>Recommendations for applying Microsoft updates  
+### <a name="BKMK_BP_WUA"></a>Recommendations for applying Microsoft updates
+
 We recommend that when you begin to use CAU to apply updates with the default **Microsoft.WindowsUpdatePlugin** plug\-in on a cluster, you stop using other methods to install software updates from Microsoft on the cluster nodes.  
   
 > [!CAUTION]  
