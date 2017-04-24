@@ -1,8 +1,13 @@
 {
   "build_entry_point": "op",
-  "need_generate_pdf": false,
+  "need_generate_pdf_url_template": true,
   "need_generate_intellisense": false,
-  "docsets_to_publish": [
+  "branch_target_mapping": {
+    "live": ["Publish","Pdf"],
+    "master": ["Publish", "PDF"]
+  },  
+
+"docsets_to_publish": [
     {
       "docset_name": "EssentialsDocs",
       "build_source_folder": "EssentialsDocs",
@@ -51,6 +56,11 @@
       "version": 0
     }
   ],
+	"Targets": {
+		"Pdf": {
+			"template_folder": "_themes.pdf"
+		}
+	},
   "notification_subscribers": [],
   "branches_to_filter": [
     ""
@@ -59,26 +69,19 @@
   "git_repository_branch_open_to_public_contributors": "master",
   "skip_source_output_uploading": false,
   "need_preview_pull_request": true,
-  "dependent_repositories": [
-    {
+  "dependent_repositories": [{
       "path_to_root": "_themes",
       "url": "https://github.com/Microsoft/templates.docs.msft",
       "branch": "master",
       "branch_mapping": {}
     },
 	{
-      "path_to_root": "_themes.pdf",
-      "url": "https://github.com/Microsoft/templates.docs.msft.pdf",
-      "branch": "master"
 
-    }
-  ],
-  "branch_target_mapping": {
-    "live": [
-      "Publish",
-      "Pdf"
-    ]
-  },
+		"path_to_root": "_themes.pdf",
+		"url": "https://github.com/Microsoft/templates.docs.msft.pdf",
+		"branch": "master"
 
-  "need_generate_pdf_url_template": true
+	}
+  ]
+  
 }
