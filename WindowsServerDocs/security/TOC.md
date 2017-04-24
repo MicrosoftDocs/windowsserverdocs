@@ -25,7 +25,7 @@
 ## [NTLM](kerberos/ntlm-overview.md)
 ## [Passwords](kerberos/passwords-overview.md)
 ## [TLS - SSL (Schannel SSP)](tls/tls-ssl-schannel-ssp-overview.md)
-## [TLS changes in Windows 10 and Windows Server 2016](tls/tls-schannel-ssp-changes-in-windows-10-and-windows-server-2016.md)
+### [TLS changes in Windows 10 and Windows Server 2016](tls/tls-schannel-ssp-changes-in-windows-10-and-windows-server-2016.md)
 ### [Schannel Security Support Provider Technical Reference](tls/schannel-security-support-provider-technical-reference.md)
 ### [Transport Layer Security protocol](tls/transport-layer-security-protocol.md)
 ### [Datagram Transport Layer Security protocol](tls/datagram-transport-layer-security-protocol.md)
