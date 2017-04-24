@@ -20,7 +20,7 @@ This library provides the core content that IT pros need to evaluate, plan, depl
 <table border="0" width="100%" align='center'>
   <tr style="text-align:center;">
     <td align='center' style="width:25%; border:0;">
-      <a href="/get-started/What-s-New-in-Windows-Server-2016">
+      <a href="/windows-server/get-started/what-s-new-in-windows-werver-2016">
         <img height=145 src="media/whats-new-highlight.png" alt="What's new icon" title="Whats new in Windows Server 16?"/></a>
         <br/>What's New?
     </td>
@@ -74,7 +74,7 @@ This library provides the core content that IT pros need to evaluate, plan, depl
       <br/>Storage
     </td>
    <td align='center' style="width:25%; border:0;"><br/>
-      <a href="/windows-server/virtualization/index">
+      <a href="/windows-server/virtualization/virtualization">
         <img height=145 src="media/virtualization.png" alt="virtualization icon" title="Windows Server Virtualization" /></a>
       <br/>Virtualization
     </td>
