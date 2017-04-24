@@ -3,7 +3,8 @@
     "content": [
       {
         "files": [
-          "**/*.md"
+          "**/*.md",
+          "**/*.yml"
         ],
         "exclude": [
           "**/obj/**",
@@ -16,9 +17,7 @@
         "files": [
           "**/*.png",
           "**/*.jpg",
-          "**/*.gif",
-          "**/*.yml"
-
+          "**/*.gif"
         ],
         "exclude": [
           "**/obj/**",
