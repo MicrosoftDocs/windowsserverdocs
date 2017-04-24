@@ -6,7 +6,7 @@
     {
       "docset_name": "EssentialsDocs",
       "build_source_folder": "EssentialsDocs",
-      "build_output_subfolder": "window-server-docs/essentials",
+      "build_output_subfolder": "EssentialsDocs",
       "locale": "en-us",
       "monikers": [],
       "open_to_public_contributors": false,
@@ -37,7 +37,7 @@
     {
       "docset_name": "WindowsServerDocs",
       "build_source_folder": "WindowsServerDocs",
-      "build_output_subfolder": "windows-server",
+      "build_output_subfolder": "WindowsServerDocs",
       "locale": "en-us",
       "monikers": [],
       "open_to_public_contributors": false,
