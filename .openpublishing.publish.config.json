@@ -8,42 +8,46 @@
       "build_source_folder": "EssentialsDocs",
       "build_output_subfolder": "window-server-docs/essentials",
       "locale": "en-us",
-      "version": 0,
+      "monikers": [],
       "open_to_public_contributors": false,
       "type_mapping": {
         "Conceptual": "Content",
         "ManagedReference": "Content",
         "RestApi": "Content"
       },
-      "build_entry_point": "op"
+      "build_entry_point": "docs",
+      "template_folder": "_themes",
+      "version": 0
     },
     {
       "docset_name": "HyperVServerDocs",
       "build_source_folder": "HyperVServerDocs",
       "build_output_subfolder": "hyper-v-server-docs",
       "locale": "en-us",
-      "version": 0,
+      "monikers": [],
       "open_to_public_contributors": false,
       "type_mapping": {
         "Conceptual": "Content",
         "ManagedReference": "Content",
         "RestApi": "Content"
       },
-      "build_entry_point": "op"
+      "build_entry_point": "op",
+      "version": 0
     },
     {
       "docset_name": "WindowsServerDocs",
       "build_source_folder": "WindowsServerDocs",
       "build_output_subfolder": "windows-server",
       "locale": "en-us",
-      "version": 0,
+      "monikers": [],
       "open_to_public_contributors": false,
       "type_mapping": {
         "Conceptual": "Content",
         "ManagedReference": "Content",
         "RestApi": "Content"
       },
-      "build_entry_point": "op"
+      "build_entry_point": "op",
+      "version": 0
     }
   ],
   "notification_subscribers": [],
@@ -52,5 +56,13 @@
   ],
   "skip_source_output_uploading": false,
   "need_preview_pull_request": true,
-  "dependent_repositories": []
+  "dependent_repositories": [
+    {
+      "path_to_root": "_themes",
+      "url": "https://github.com/Microsoft/templates.docs.msft",
+      "branch": "master",
+      "branch_mapping": {}
+    }
+  ],
+  "need_generate_pdf_url_template": false
 }
