@@ -1,6 +1,6 @@
 # [Security and Assurance](security-and-assurance.md)
 ## [Device Health attestation](device-health-attestation.md)
-## [Guarded Fabric and Shielded VMs](../virtualization/guarded-fabric-shielded-vm/guarded-fabric-shielded-vms.md)
+## [Guarded Fabric and Shielded VMs](https://technet.microsoft.com/windows-server-docs/security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node)
 ## [Windows Authentication](windows-authentication/windows-authentication-overview.md)
 ### [Windows Authentication Technical Overview](windows-authentication/windows-authentication-technical-overview.md)
 #### [Windows Authentication Concepts](windows-authentication/windows-authentication-concepts.md)
