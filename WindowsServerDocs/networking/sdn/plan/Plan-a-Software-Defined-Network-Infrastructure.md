@@ -134,7 +134,7 @@ BGP peering is typically configured in a managed switch or router as part of the
   
 You or your network administrator must configure the BGP router peer to accept connections from the ASN and IP address or subnet address of the Transit logical network that your RAS gateway and SLB/MUXes are using.
   
-For more information, see [Border Gateway Protocol &#40;BGP&#41;](../../remote-access/bgp/Border-Gateway-Protocol-BGP.md).
+For more information, see [Border Gateway Protocol &#40;BGP&#41;](../../../remote/remote-access/bgp/Border-Gateway-Protocol-BGP.md).
   
 ## Default gateways
 
@@ -161,7 +161,7 @@ Remote Direct Memory Access (RDMA) is a kernel bypass technique that makes it po
 
 Switch Embedded Teaming (SET) is an alternative NIC Teaming solution that you can use in environments that include Hyper-V and the Software Defined Networking (SDN) stack in Windows Server 2016. SET integrates some NIC Teaming functionality into the Hyper-V Virtual Switch.
 
-For more information, see [Remote Direct Memory Access &#40;RDMA&#41; and Switch Embedded Teaming &#40;SET&#41;](../../technologies/hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md).  
+For more information, see [Remote Direct Memory Access &#40;RDMA&#41; and Switch Embedded Teaming &#40;SET&#41;](../../../virtualization//hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md).  
 
 To account for the overhead in tenant virtual network traffic caused by VXLAN or NVGRE encapsulation headers, the MTU of the Layer-2 fabric network (switches and hosts) must be set to greater than or equal to 1674 Bytes \(including Layer-2 Ethernet headers\). NICs  that support the new *EncapOverhead* advanced adapter keyword will set the MTU  automatically through the network controller Host Agent. NICs  that do not support the new *EncapOverhead* keyword need to set the MTU size manually on each physical host using the *JumboPacket* \(or equivalent\) keyword.
 

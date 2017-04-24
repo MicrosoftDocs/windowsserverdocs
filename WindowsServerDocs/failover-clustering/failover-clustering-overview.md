@@ -83,7 +83,3 @@ Enables easier configuration of multiple network adapters in a cluster.
 * [High Availability (Clustering) Forum](http://go.microsoft.com/fwlink/p/?LinkId=230641)
 * [Failover Clustering and Network Load Balancing Team Blog](http://blogs.msdn.com/b/clustering/)
 
-## See also
-
-* [Compute in Windows Server 2016](../compute/Compute.md)
-* [Storage in Windows Server 2016](../storage/storage.md)

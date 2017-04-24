@@ -1,3 +1,3 @@
 ---
-redirect_url: /windows-server-docs/get-started/What-s-New-in-Console
+redirect_url: /windows-server/get-started/What-s-New-in-Console
 ---
