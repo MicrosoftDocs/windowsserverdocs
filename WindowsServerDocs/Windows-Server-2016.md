@@ -74,7 +74,7 @@ This library provides the core content that IT pros need to evaluate, plan, depl
       <br/>Storage
     </td>
    <td align='center' style="width:25%; border:0;"><br/>
-      <a href="/windows-server/virtualization/index">
+      <a href="/windows-server/virtualization/virtualization">
         <img height=145 src="media/virtualization.png" alt="virtualization icon" title="Windows Server Virtualization" /></a>
       <br/>Virtualization
     </td>
