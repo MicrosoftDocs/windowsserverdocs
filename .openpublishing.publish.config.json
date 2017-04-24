@@ -1,10 +1,11 @@
 {
   "build_entry_point": "op",
   "need_generate_pdf_url_template": true,
+  "need_generate_pdf": true,
   "need_generate_intellisense": false,
   "branch_target_mapping": {
     "live": ["Publish","Pdf"],
-    "master": ["Publish", "PDF"]
+    "master": ["Publish", "Pdf"]
   },  
 
 "docsets_to_publish": [
@@ -69,7 +70,14 @@
   "git_repository_branch_open_to_public_contributors": "master",
   "skip_source_output_uploading": false,
   "need_preview_pull_request": true,
-  "dependent_repositories": [{
+  "dependent_repositories": [
+	   {
+      "path_to_root": "_themes.pdf",
+      "url": "https://github.com/Microsoft/templates.docs.msft.pdf",
+      "branch": "master",
+      "branch_mapping": {}
+    },
+	  {
       "path_to_root": "_themes",
       "url": "https://github.com/Microsoft/templates.docs.msft",
       "branch": "master",
