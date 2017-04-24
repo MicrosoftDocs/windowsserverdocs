@@ -7,5 +7,5 @@
 ## [Remote](remote/index.md)
 ## [Security and Assurance](security/security-and-assurance.md)
 ## [Storage](storage/storage.md)
-## [Virtualization](virtualization/compute.md)
+## [Virtualization](virtualization/virtualization.md)
 ## [Other Windows Server versions](windows-server-versions.md)
