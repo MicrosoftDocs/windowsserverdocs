@@ -1,10 +1,11 @@
 {
   "build_entry_point": "op",
   "need_generate_pdf_url_template": true,
+  "need_generate_pdf": true,
   "need_generate_intellisense": false,
   "branch_target_mapping": {
     "live": ["Publish","Pdf"],
-    "master": ["Publish", "PDF"]
+    "master": ["Publish", "Pdf"]
   },  
 
 "docsets_to_publish": [
