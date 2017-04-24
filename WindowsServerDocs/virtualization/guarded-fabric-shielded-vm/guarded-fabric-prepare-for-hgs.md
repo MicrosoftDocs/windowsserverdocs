@@ -7,7 +7,7 @@ ms.assetid: f4b4d1a8-bf6d-4881-9150-ddeca8b48038
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 03/02/2017
+ms.date: 04/24/2017
 ---
 
 # Prepare for the Host Guardian Service deployment
@@ -28,7 +28,7 @@ This topic covers HGS prerequisites and initial steps to prepare for the HGS dep
 
 -   **Configuration permissions/privileges for the fabric (host) domain**: You will need to configure DNS forwarding between the fabric (host) domain and the HGS domain. If you are using Admin-trusted attestation (AD mode), you will need to configure an Active Directory trust between the fabric domain and the HGS domain. 
     
-### Supported upgrade scenarios
+## Supported upgrade scenarios
 
 Before you deploy a guarded fabric, make sure the servers have installed the [latest Cumulative Update](https://support.microsoft.com/help/4000825/windows-10-and-windows-server-2016-update-history). 
 If you deployed a guarded fabric before the release of the [October 27, 2016 Cumulative Update](http://support.microsoft.com/kb/3197954), the servers need to be upgraded:
@@ -37,112 +37,76 @@ If you deployed a guarded fabric before the release of the [October 27, 2016 Cum
 
 Shielded VMs that ran on a guarded host with an earlier operating system version, such as TP5, can still run after the host is upgraded to Windows Server 2016. New shielded VMs cannot be created from template disks that were prepared using the template disk wizard from a Technical Preview build.
 
-## Prepare for HGS 
+## Obtain certificates for HGS
 
-These preliminary steps require permissions that the HGS and Hyper-V fabric admins might not have. 
-Doing these at the start can make the deployment easier. 
+When you deploy HGS, you will be asked to provide signing and encryption certificates that are used to protect the sensitive information needed to start up a shielded VM.
+These certificates never leave HGS, and are only used to decrypt shielded VM keys when the host on which they're running has proven it is healthy.
+Tenants (VM owners) use the public half of the certificates to authorize your datacenter to run their shielded VMs.
+This section covers the steps required to obtain compatible signing and encryption certificates for HGS.
 
-### Specify the signing and encryption certificates that HGS will use
+### Request certificates from your certificate authority
 
-You need to configure the Host Guardian Service with two certificates for encryption and signing purposes. There are three mutually exclusive options:
+While not required, it is strongly recommended that you obtain your certificates from a trusted certificate authority.
+Doing so helps VM owners verify that they are authorizing the correct HGS server (i.e. service provider or datacenter) to run their shielded VMs.
+In an enterprise scenario, you may choose to use your own enterprise CA to issue these certs.
+Hosters and service providers should consider using a well-known, public CA instead.
 
-| Option | Procedure |
-|----|------|
-| You have your own PKI certificate and a PFX file. | [Use my own PKI certificates that are not backed by an HSM](#use-my-own-pki-certificates-that-are-not-backed-by-an-hsm) |
-| You have a certificate backed by a Hardware Security Module (HSM). | [Use my own certificates with an HSM](#use-your-own-certificates-with-an-hsm) |
-| You are using a self-signed certificate (only recommended for test or POC environments). | [Create and use self-signed certificates](#create-and-use-self-signed-certificates) |
+Both the signing and encryption certificates must be issued with the following certificiate properties:
 
->**Note**&nbsp;&nbsp;Regardless of how you create the certificates, they must support RSA 2048 bit keys and their key-usage policy (EKU) must permit digital signing and encryption.
+Certificate Template Property | Required value 
+------------------------------|----------------
+Crypto provider               | Any Key Storage Provider (KSP). Legacy Cryptographic Service Providers (CSPs) are **not** supported.
+Key algorithm                 | RSA
+Minimum key size              | 2048 bits
+Key usage                     | Digital signature *and* data encipherment
+Enhanced key usage            | Server authentication
+Key renewal policy            | Renew with the same key. Renewing HGS certificates with different keys will prevent shielded VMs from starting up.
+Subject name                  | Suggested: your company's name or web address. This information will be shown to VM owners in the shielding data file wizard.
 
-HTTPS is not needed to secure communication between HGS and a Hyper-V host, but if you choose to enable HTTPS, you will need an additional certificate. The HTTPS certificate can be one that you already have, or you can create a new certificate that you will specify when initializing the HGS server. 
+These requirements apply whether you are using hardare- or software-backed certificates.
+For security reasons, it is recommended that you create your HGS keys in a Hardware Security Module (HSM) to prevent the private keys from being copied off the system.
+Follow the guidance from your HSM vendor to request certificates with the above attributes and be sure to install and authorize the HSM KSP on every HGS node.
 
-| Option | Additional procedure |
-|----|-----------|
-| You want to enable HTTPS  | [Configure a certificate for enabling HTTPS](#configure-a-certificate-for-enabling-https) |
+Every HGS node will require access to the same signing and encryption certificates.
+If you are using software-backed certificates, you can export your certificates to a PFX file with a password and allow HGS to manage the certificates for you.
+You can also choose to install the certs into the local machine's certificate store on each HGS node and provide the thumbprint to HGS.
+Both options are explained in the [Initialize the HGS Cluster](guarded-fabric-configure-the-first-node.md#initialize-the-hgs-cluster) topic.
 
-##### Use my own PKI certificates that are not backed by an HSM
+### Create self signed certificates for test scenarios
 
-If you have obtained certificates from a trusted Public Key Infrastructure (PKI) environment and both the certificate and your organization permit the private keys to be exported to a PFX (personal information exchange) file, you are now able to conveniently add the PFX to any one node of the HGS cluster and have it automatically configured and replicated to all other nodes in the HGS cluster.
+If you are creating an HGS lab environment and do not have or want to use a certificate authority, you can create self-signed certificates.
+You will receive a warning when importing the certificate information in the shielding data file wizard, but all functionality will remain the same.
 
-If you are unable to obtain a PFX or are unable to obtain one with the private key intact, you will need to install the certificates (including the private key) manually on each HGS node in your cluster according to your organization's certificate enrollment processes. Certificates that are added to HGS by thumbprint reference instead of a PFX file and password require additional action, as described in the following procedure.
-
-<!-- I think Ryan said this part can be moved to just before they initialize HGS, when the HGS svc name will be known
--->
-
-###### To grant the HGS service access to the private keys of certificates added by thumbprint reference
-
-1. Unlike other certificate-related tasks, you MUST repeat this process on each HGS node. Run CERTLM.MSC (which opens the Certificate Management Console for the local store).
-
-2. Navigate to the signing certificate, right-click it, and then click **All Tasks** &gt; **Manage Private Keys**.
-
-3. In the Security dialog box, add the group managed service account (gMSA) for HGS to the list of accounts. To do this, click **Add** and in the resulting dialog box, click **Object Types**, select **Service Accounts**, and click **OK**. Under **Enter the object names to select**, type the account name - by default, **HGSSVC** - and click **Check Names**. If you originally set up HGS in an existing domain, you'll type the name of the gMSA that you provided to the Initialize-HgsServer command.
-
-    ![Select the account that can access the certificate](../media/Guarded-Fabric-Shielded-VM/guarded-host-account-for-certificate.png)
-
-4. Give the account **Read** access to the private keys for the certificate.
-
-5. Repeat the process for the encryption certificate.
-    
-##### Use your own certificates with an HSM
-
-If you plan to use certificates that reside in a Hardware Security Module (HSM), use the following high-level steps, which will vary according to your HSM vendor:
-
-1.  Install the HSM vendor's software to ensure that the HSM is visible to Windows.
-
-2.  Create two certificates within the HSM with RSA 2048 bit keys and key usage policies for signing and encryption purposes.
-
-    1.  Create one encryption certificate within your HSM
-
-    2.  Create one signing certificate within your HSM
-
-3.  Verify that the certificates are installed in the local machine's certificate store. If they have not been automatically installed, they must be added per the HSM vendor's guidance (note that the private key remains in the HSM as expected). As before, you can add the certificate to the local machine's certificate store on any one node of the HGS cluster and it will automatically be configured and replicated to all other nodes in the HGS cluster.
-
-4.  Finally, you must ensure that the group managed service account (gMSA) for HGS has been granted read access to the private keys for your certificate. By default, the gMSA account name is **HGSSVC**. If you originally set up HGS in an existing domain, the gMSA is the one that you provided to the Initialize-HgsServer command. The process for granting access varies between vendors, so please consult the user guide for your specific HSM for information on how to configure access for your HSM-backed certificate.
-
-<span id="create-and-use-self-signed-certificates"/>
-##### Create and use self-signed certificates (used primarily with test or proof-of-concept environments)
-
->**Warning**&nbsp;&nbsp;Creating self-signed certificates is not recommended outside of test/POC deployments. Use certificates that are issued by a trusted certificate authority if you are deploying in a production environment.
-
-1.  Open an elevated Windows PowerShell console and run the following command to specify the password to use when exporting the self-signed certificate. For &lt;password&gt;, substitute a password.
-
-    ```powershell
-    $certificatePassword = ConvertTo-SecureString -AsPlainText '<password>' -Force
-    ```
-        
-2.  Create and export the signing certificate by running the following commands. For signing (after `-DnsName`) and for `C:\signingCert`, you can leave the names as shown or substitute your preferred names.
-
-    ```powershell
-    $signingCert = New-SelfSignedCertificate -DnsName "signing.relecloud.com"
-
-    Export-PfxCertificate -Cert $signingCert -Password $certificatePassword -FilePath 'C:\signingCert.pfx'
-    ```
-
-3.  Create and export the encryption certificate by running the following commands. For encryption (after `-DnsName`) and for `C:\encryptionCert`, you can leave the names as shown or substitute your preferred names.
-
-    ```powershell
-    $encryptionCert = New-SelfSignedCertificate -DnsName "encryption.relecloud.com"
-
-    Export-PfxCertificate -Cert $encryptionCert -Password $certificatePassword -FilePath 'C:\encryptionCert.pfx'
-    ```
-
-##### Configure a certificate for enabling HTTPS
-
-If you choose to enable HTTPS on your HGS server, you must have or create an additional certificate. To create a new certificate, run the following command. For `<HgsServiceName>`, choose a name that you will use as the distributed network name of your HGS server or HGS cluster.
+To create self-signed certificates and export them to a PFX file, run the following commands in PowerShell:
 
 ```powershell
-$HttpsCertificate = New-SelfSignedCertificate -DnsName "<HgsServiceName>.$env:userdnsdomain" -CertStoreLocation Cert:\LocalMachine\My
+$certificatePassword = Read-Host -AsSecureString -Prompt "Enter a password for the PFX file"
+
+$signCert = New-SelfSignedCertificate -Subject "CN=HGS Signing Certificate"
+Export-PfxCertificate -Path .\signCert.pfx -Password $certificatePassword -Cert $signCert
+Remove-Item $signCert.PSPath
+
+$encCert = New-SelfSignedCertificate -Subject "CN=HGS Encryption Certificate"
+Export-PfxCertificate -Path .\encCert.pfx -Password $certificatePassword -Cert $encCert
+Remove-Item $encCert.PSPath
 ```
 
-After you have chosen or created a certificate to use for HTTPS, use a command like the following to export it.
+### Request an SSL certificate
 
-```powershell
-Export-PfxCertificate -Cert $HttpsCertificate -Password $certificatePassword -FilePath 'c:\HttpsCertificate.pfx'
-```
+All keys and sensitive information transmitted between Hyper-V hosts and HGS are encrypted at the message level -- that is, the information is encrypted with keys known either to HGS or Hyper-V, preventing someone from sniffing your network traffic and stealing keys to your VMs.
+However, if you have compliance reqiurements or simply prefer to encrypt all communications between Hyper-V and HGS, you can configure HGS with an SSL certificate which will encrypt all data at the transport level.
+
+Both the Hyper-V hosts and HGS nodes will need to trust the SSL certificate you provide, so it is recommended that you request the SSL certificate from your enterprise certificate authority. When requesting the certificate, be sure to specify the folloiwng:
+
+SSL Certificate Property | Required value
+-------------------------|---------------
+Subject name             | Name of your HGS cluster (distributed network name). This will be the concatenation of your HGS service name provided to `Initialize-HgsServer` and your HGS domain name.
+Subject alternative name | If you will be using a different DNS name to reach your HGS cluster (e.g. if it is behind a load balancer), be sure to include those DNS names in the SAN field of your certificate request.
 
 The options for specifying this certificate when initializing the HGS server are covered in [Configure the first HGS node](guarded-fabric-configure-the-first-hgs-node.md).
+You can also add or change the SSL certificate at a later time using the [Set-HgsServer](https://technet.microsoft.com/en-us/itpro/powershell/windows/hgsserver/set-hgsserver) cmdlet.
 
-### Choose whether to install HGS in its own new forest or in an existing bastion forest
+## Choose whether to install HGS in its own new forest or in an existing bastion forest
 
 The Active Directory forest for HGS is sensitive because its administrators have access to the keys that control shielded VMs. 
 The default installation will set up a new forest for HGS and configure other dependencies. 
@@ -160,7 +124,7 @@ Such forests usually exhibit the following characteristics:
 General purpose forests such as production forests are not suitable for use by HGS. 
 Fabric forests are also unsuitable because HGS needs to be isolated from fabric administrators.
 
-#### Requirements for adding HGS to an existing forest
+### Requirements for adding HGS to an existing forest
 
 To add HGS to an existing bastion forest, it must be added to the root domain. 
 Before you initialize HGS, you will need to join each target server of the HGS cluster to the root domain, and then add these objects:
@@ -173,12 +137,12 @@ Before you initialize HGS, you will need to join each target server of the HGS c
 
 For the PowerShell syntax to add HGS to a forest, see [initialize HGS in an existing bastion forest](guarded-fabric-configure-the-first-hgs-node.md#install-hgs-in-an-existing-bastion-forest).
 
-### Configure name resolution
+## Configure name resolution
 
 The fabric DNS needs to be configured so that guarded hosts can resolve the name of the HGS cluster. 
 For an example, see [Configure the fabric DNS](guarded-fabric-configuring-fabric-dns.md).
 
-If you're using AD-mode attestation, the HGS domain needs DNS forwarding set up and a one-way forest trust so HGS can validate the the group membership of guarded hosts.
+If you're using Active Directory-based attestation, the HGS domain needs DNS forwarding set up and a one-way forest trust so HGS can validate the the group membership of guarded hosts.
 For an example, see [configuring DNS forwarding and domain trust](#configure-dns-forwarding-and-domain-trust).  
 
 ## See also
