@@ -1,3 +1,3 @@
 ---
-redirect_url: virtualization.md
+redirect_url: /windows-server/virtualization/virtualization
 ---
