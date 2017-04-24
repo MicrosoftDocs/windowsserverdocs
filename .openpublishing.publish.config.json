@@ -48,8 +48,7 @@
         "RestApi": "Content"
       },
       "build_entry_point": "docs",
-      "template_folder": "_themes",
-      "version": 0
+      "template_folder": "_themes"
     }
   ],
   "notification_subscribers": [],
@@ -69,8 +68,4 @@
     }
   ],
   "need_generate_pdf_url_template": false
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 2de4c1b539f16c27493a5a9290ec038b177d6671
