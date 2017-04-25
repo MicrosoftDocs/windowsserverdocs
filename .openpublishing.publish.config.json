@@ -1,56 +1,88 @@
 {
   "build_entry_point": "op",
-  "need_generate_pdf": false,
+  "need_generate_pdf_url_template": true,
+  "need_generate_pdf": true,
   "need_generate_intellisense": false,
-  "docsets_to_publish": [
+  "branch_target_mapping": {
+    "live": ["Publish","Pdf"],
+    "master": ["Publish", "Pdf"]
+  },  
+
+"docsets_to_publish": [
     {
       "docset_name": "EssentialsDocs",
       "build_source_folder": "EssentialsDocs",
-      "build_output_subfolder": "window-server-docs/essentials",
+      "build_output_subfolder": "EssentialsDocs",
       "locale": "en-us",
-      "version": 0,
+      "monikers": [],
       "open_to_public_contributors": false,
       "type_mapping": {
         "Conceptual": "Content",
         "ManagedReference": "Content",
         "RestApi": "Content"
       },
-      "build_entry_point": "op"
+      "build_entry_point": "docs",
+      "template_folder": "_themes",
+      "version": 0
     },
     {
       "docset_name": "HyperVServerDocs",
       "build_source_folder": "HyperVServerDocs",
       "build_output_subfolder": "hyper-v-server-docs",
       "locale": "en-us",
-      "version": 0,
+      "monikers": [],
       "open_to_public_contributors": false,
       "type_mapping": {
         "Conceptual": "Content",
         "ManagedReference": "Content",
         "RestApi": "Content"
       },
-      "build_entry_point": "op"
+      "build_entry_point": "op",
+      "version": 0
     },
     {
       "docset_name": "WindowsServerDocs",
       "build_source_folder": "WindowsServerDocs",
-      "build_output_subfolder": "windows-server",
+      "build_output_subfolder": "WindowsServerDocs",
       "locale": "en-us",
-      "version": 0,
-      "open_to_public_contributors": false,
+      "monikers": [],
+      "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content",
         "ManagedReference": "Content",
         "RestApi": "Content"
       },
-      "build_entry_point": "op"
+      "build_entry_point": "docs",
+      "template_folder": "_themes",
+      "version": 0
     }
   ],
+	"Targets": {
+		"Pdf": {
+			"template_folder": "_themes.pdf"
+		}
+	},
   "notification_subscribers": [],
   "branches_to_filter": [
     ""
   ],
+  "git_repository_url_open_to_public_contributors": "https://github.com/MicrosoftDocs/windowsserverdocs",
+  "git_repository_branch_open_to_public_contributors": "master",
   "skip_source_output_uploading": false,
   "need_preview_pull_request": true,
-  "dependent_repositories": []
+  "dependent_repositories": [
+	   {
+      "path_to_root": "_themes.pdf",
+      "url": "https://github.com/Microsoft/templates.docs.msft.pdf",
+      "branch": "master",
+      "branch_mapping": {}
+    },
+	  {
+      "path_to_root": "_themes",
+      "url": "https://github.com/Microsoft/templates.docs.msft",
+      "branch": "master",
+      "branch_mapping": {}
+    }
+  ]
+  
 }
