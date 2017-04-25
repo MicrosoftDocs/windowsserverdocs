@@ -1,6 +1,11 @@
 { 
 "redirections": [
 {
+"source_path": "WindowsServerDocs/get-started/windows-server-versions.md",
+"redirect_url": "/windows-server/windows-server-versions",
+"redirect_document_id": true
+},
+{
 "source_path": "WindowsServerDocs/compute/Compute.md",
 "redirect_url": "/windows-server/virtualization/Compute",
 "redirect_document_id": true
