@@ -14,7 +14,7 @@ ms.technology: identity-adfs
 
 # AD FS Design Guide in Windows Server 2012
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server 2012
   
 > [!NOTE]  
 > For information about how to deploy AD FS in  Windows Server 2012 R2 , see [Windows Server 2012 R2 AD FS Deployment Guide](../../ad-fs/deployment/Windows-Server-2012-R2-AD-FS-Deployment-Guide.md).  
