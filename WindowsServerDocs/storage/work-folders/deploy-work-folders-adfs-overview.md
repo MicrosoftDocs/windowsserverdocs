@@ -10,6 +10,9 @@ author: JeffPatt24
 ms.date: 4/5/2017
 ---
 # Deploy Work Folders with AD FS and Web Application Proxy: Overview
+
+>Applies To: Windows Server 2016
+
 The topics in this section provide instructions for deploying Work Folders with Active Directory Federation Services (AD FS) and Web Application Proxy. The instructions are designed to help you create a complete functioning Work Folders setup with client machines that are ready to start using Work Folders either on-premises or over the Internet.  
   
 Work Folders is a component introduced in Windows Server 2012 R2 that allows information workers to sync work files between their devices. For more information about Work Folders, see [Work Folders Overview](Work-Folders-Overview.md).  
