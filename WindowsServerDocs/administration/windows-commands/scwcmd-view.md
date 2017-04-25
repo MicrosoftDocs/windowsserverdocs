@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Scwcmd: view
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server 2012 R2, Windows Server 2012
 
 renders an .xml file by using a specified .xsl transform. This command can be useful for displaying Security Configuration Wizard (SCW) .xml files by using different views.
 ## Syntax

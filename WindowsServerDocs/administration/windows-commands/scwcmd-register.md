@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Scwcmd: register
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server 2012 R2, Windows Server 2012
 
 extends or customizes the Security Configuration Wizard (SCW) Security Configuration Database by registering a Security Configuration Database file that contains role, task, service, or port definitions.
 ## Syntax
