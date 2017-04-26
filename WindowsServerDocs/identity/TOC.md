@@ -171,7 +171,7 @@
 #### [How LDAP Server Cookies Are Handled](ad-ds/manage/How-LDAP-Server-Cookies-Are-Handled.md)
 ### [AD DS Troubleshooting](ad-ds/manage/AD-DS-Troubleshooting.md)
 #### [Configuring a computer for Troubleshooting](ad-ds/manage/troubleshoot/Configuring-a-computer-for-Troubleshooting.md)
-#### [Troubleshooting Active Directory Replication Problems](ad-ds/manage/powershell/Troubleshooting-active-directory-Replication-Problems.md)
+#### [Troubleshooting Active Directory Replication Problems](ad-ds/manage/troubleshoot/Troubleshooting-active-directory-Replication-Problems.md)
 ##### [Fixing Replication Lingering Object Problems (Event IDs 1388, 1988, 2042)](https://technet.microsoft.com/library/cc949124.aspx)
 ###### [Event ID 1388 or 1988: A lingering object is detected](ad-ds/manage/troubleshoot/Event-ID-1388-or-1988--A-lingering-object-is-detected.md)
 ###### [A deleted account remains in the address Book, e-mail is not received, or a duplicate account exists](https://technet.microsoft.com/library/cc949128.aspx)
