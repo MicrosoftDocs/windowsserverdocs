@@ -31,12 +31,13 @@ AD FS uses a database to store configuration and—in some cases—transactional
 For most purposes, the two database types are relatively equivalent. However, there are some differences to be aware of before you begin reading more about the various deployment topologies that you can use with AD FS. The following table describes the differences in supported features between a WID database and a SQL Server database.  
   
 ||Feature|Supported by WID?|Supported by SQL Server?
-|-----------|---------------------|----------------------------|   
+| --- | --- | --- |--- |
 |AD FS features|Federation server farm deployment|Yes. A WID farm has a limit of 30 federation servers if you have 100 or fewer relying party trusts.</br></br>A WID farm does not support token replay detection or artifact resolution (part of the Security Assertion Markup Language (SAML) protocol). |Yes. There is no enforced limit for the number of federation servers that you can deploy in a single farm  
 |AD FS features|SAML artifact resolution </br></br>**Note:** This feature is not required for Microsoft Online Services, Microsoft Office 365, Microsoft Exchange, or Microsoft Office SharePoint scenarios.|No|Yes  
 |AD FS features|SAML\/WS\-Federation token replay detection|No|Yes  
 |Database features|Basic database redundancy using pull replication, where one or more servers hosting a read\-only copy of the database request changes that are made on a source server that hosts a read\/write copy of the database|Yes|No 
 |Database features|Database redundancy using high\-availability solutions, such as failover clustering or mirroring \(at the database layer only\) **Note:** All AD FS deployment topologies support clustering at the AD FS service layer.|No|Yes  
+
   
 ## SQL Server considerations  
 You should consider the following deployment facts if you select SQL Server as the configuration database for your AD FS deployment.  
