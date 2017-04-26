@@ -5,7 +5,7 @@ description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 02/09/2017
+ms.date: 04/26/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 
@@ -24,7 +24,7 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
   
 1.  In Server Manager, click **Tools**, and then select **AD FS Management**.  
   
-2.  Under **Actions**, click **Add Relying Party Trust**.  
+2.  Under **Actions**, click **Add Claims Provider Trust**.  
 ![claims provider trust](media/Create-a-Claims-Provider-Trust/addclaim1.PNG)   
   
 3.  On the **Welcome** page, click **Start**. 
