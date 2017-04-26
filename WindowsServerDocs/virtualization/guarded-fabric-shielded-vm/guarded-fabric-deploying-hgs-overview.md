@@ -37,6 +37,9 @@ The following topics tell how to set up a guarded fabric.
 ## Video: Deploy a guarded fabric using Admin-trusted attestation (AD Mode)
 
 > [!VIDEO https://channel9.msdn.com/Shows/Guarded-fabric-deployment-AD-mode/Guarded-fabric-deployment-AD-mode/player]
+## Video: Deploy a guarded fabric using Admin-trusted attestation (AD Mode)
+
+> [!VIDEO <iframe src="https://channel9.msdn.com/Shows/Guarded-fabric-deployment-AD-mode/Guarded-fabric-deployment-AD-mode/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe>]
 
 ## Video: Deploy a guarded fabric using TPM-trusted attestation (TPM Mode)
 
