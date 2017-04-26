@@ -40,7 +40,7 @@ The following topics tell how to set up a guarded fabric.
 
 ## Video: Deploy a guarded fabric using TPM-trusted attestation (TPM Mode)
 
-> [!VIDEO <iframe src="https://channel9.msdn.com/Shows/Guarded-fabric-deployment-AD-mode/Guarded-fabric-deployment-TPM-mode/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe>]
+> [!VIDEO https://channel9.msdn.com/Shows/Guarded-fabric-deployment-AD-mode/Guarded-fabric-deployment-TPM-mode/player]
 
 ## Deployment tasks for guarded fabrics and shielded VMs
 
