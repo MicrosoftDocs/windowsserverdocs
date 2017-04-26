@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Scwcmd: configure
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server 2012 R2, Windows Server 2012
 
 Applies a Security Configuration Wizard (SCW)-generated security policy to a computer. This command-line tool also accepts a list of computer names as input.
 ## Syntax
