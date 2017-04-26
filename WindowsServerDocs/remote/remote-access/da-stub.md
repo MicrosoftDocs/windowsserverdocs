@@ -19,4 +19,4 @@ In Windows Server 2016, **DirectAccess and VPN** is a role service of the **Remo
 
 DirectAccess allows connectivity for remote users to organization network resources without the need for traditional Virtual Private Network (VPN) connections. 
 
-DirectAccess documentation is now located in the [Remote access and server management](https://docs.microsoft.com/windows-server/remote/) section of the Windows Server 2016 table of contents, under [Remote Access](https://docs.microsoft.com/windows-server/remote/remote-access/remote-access). For more information, see [DirectAccess](../remote/remote-access/directaccess/DirectAccess.md).
+DirectAccess documentation is now located in the [Remote access and server management](https://docs.microsoft.com/windows-server/remote/) section of the Windows Server 2016 table of contents, under [Remote Access](https://docs.microsoft.com/windows-server/remote/remote-access/remote-access). For more information, see [DirectAccess](directaccess/DirectAccess.md).
