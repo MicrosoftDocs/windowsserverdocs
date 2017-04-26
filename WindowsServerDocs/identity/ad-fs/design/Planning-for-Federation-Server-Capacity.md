@@ -69,7 +69,7 @@ Next, you will need to specify the total number of users that will require singl
 #### How to use this spreadsheet  
 You can use the following steps for each federation server farm instance you plan to deploy to determine the recommended number of federation servers.  
   
-1.  Download and then open the [HYPERLINK "http:\/\/go.microsoft.com\/fwlink\/?LinkID\=213229" AD FS Capacity Planning Sizing Spreadsheet](http://go.microsoft.com/fwlink/?LinkID=213229)  
+1.  Download and then open the [AD FS Capacity Planning Sizing Spreadsheet For Windows Server 2012 R2](https://adfsdocs.blob.core.windows.net/adfs/ADFSCapacityPlanning.xlsx) or the [AD FS Capacity Planning Sizing Spreadsheet For Windows Server 2016](https://adfsdocs.blob.core.windows.net/adfs/ADFSCapacity2016.xlsx).
   
 2.  In the cell to the right of the **During the peak system usage period, I expect this percentage of my users to authenticate** cell, click the cell and then use the drop\-down arrows to select your estimated system utilization level, either **40%**, **60%** or **80%** for the deployment.  
   
