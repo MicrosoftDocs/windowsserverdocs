@@ -106,9 +106,9 @@ The first 3 counters target scenarios for troubleshooting accuracy issues.  The 
 The last 3 counters cover NTP server scenarios and are helpful when determine the load and baselining your current performance.
 
 ### Configuration Updates per Environment
-The following describes the changes in default configuration between Windows 2016 and previous versions for each Role.  The settings for Windows Server 2016 and Windows 10 Anniversary (build 1604), are now unique which is why there are shown as separate columns. 
+The following describes the changes in default configuration between Windows 2016 and previous versions for each Role.  The settings for Windows Server 2016 and Windows 10 Anniversary (build 1607), are now unique which is why there are shown as separate columns. 
 
-|Role|Setting|Windows 2016|Windows 10 (1604)|Windows 2012 R2</br>Windows 2008R2</br>Windows 10|
+|Role|Setting|Windows 2016|Windows 10 (1607)|Windows 2012 R2</br>Windows 2008R2</br>Windows 10|
 |---|---|---|---|---|
 |**Standalone/Nano Server**||||
 | |*Time Server*|time.windows.com|NA|time.windows.com|
