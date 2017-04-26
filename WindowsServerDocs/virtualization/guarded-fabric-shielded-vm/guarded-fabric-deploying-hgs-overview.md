@@ -36,10 +36,6 @@ The following topics tell how to set up a guarded fabric.
 
 ## Video: Deploy a guarded fabric using Admin-trusted attestation (AD Mode)
 
-<iframe src="https://channel9.msdn.com/Shows/Guarded-fabric-deployment-AD-mode/Guarded-fabric-deployment-AD-mode/player" width="720" height="480" allowFullScreen frameBorder="0"></iframe>
-
-## Video: Deploy a guarded fabric using Admin-trusted attestation (AD Mode)
-
 > [!VIDEO https://channel9.msdn.com/Shows/Guarded-fabric-deployment-AD-mode/Guarded-fabric-deployment-AD-mode/player]
 
 
