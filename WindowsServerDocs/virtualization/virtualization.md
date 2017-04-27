@@ -1,15 +1,13 @@
 ---
-title: Virtualization in Windows Server 2016
-description: Provides an overview of virtualization technologies, such as Containers and Hyper-V.
-ms.custom: na
+title: Virtualization
+description: Provides an overview of virtualization technologies, such as Containers, Hyper-V, and links to additional content for Windows Server 2016.
 ms.prod: windows-server-threshold
-ms.service: na
-manager: dongill
+manager: brianlic
 ms.technology: compute
 ms.topic: article
-author: KBDAzure
-ms.author: kathydav
-ms.date: 04/17/2017
+author: jamesmci
+ms.author: jamesmci
+
 ---
 # Virtualization in Windows Server 2016
 
@@ -23,10 +21,6 @@ New to compute is Windows Containers, which offers another way to deploy flexibl
 
 >[!Note]
 > To download Windows Server 2016, see [Windows Server Evaluations](https://www.microsoft.com/evalcenter/evaluate-windows-server).
-
-## [Containers](https://msdn.microsoft.com/virtualization/windowscontainers)
-
-Use Windows Server and Hyper-V containers to provide standardized runtime environments for development, test, and production teams.
 
 ## [Hyper-V](./hyper-v/Hyper-V-on-Windows-Server.md)
 
@@ -43,3 +37,14 @@ Hyper-V is available in certain versions of Windows 10, Windows 8.1, and Windows
 ### [Microsoft Hyper-V Server 2016](https://technet.microsoft.com/hyper-v-server-docs/)
 The Hyper-V technology is also available separately from Windows and Windows Server, as a free, standalone product. Hyper-V Server is commonly used as the host in a virtualized desktop infrastructure (VDI) environment.
 
+## [Hyper-V Virtual Switch](hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md)
+
+The Hyper-V Virtual Switch is a software-based layer-2 Ethernet network switch that is available in Hyper-V Manager when you install the Hyper-V server role. The switch includes programmatically managed and extensible capabilities to connect virtual machines to both virtual networks and the physical network. In addition, Hyper-V Virtual Switch provides policy enforcement for security, isolation, and service levels.
+
+## [Guarded fabric and shielded VMs](guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node.md)
+
+As a cloud service provider or enterprise private cloud administrator, you can use a guarded fabric to provide a more secure environment for VMs. A guarded fabric consists of one Host Guardian Service (HGS) - typically, a cluster of three nodes - plus one or more guarded hosts, and a set of shielded virtual machines (VMs).
+
+## [Containers](https://msdn.microsoft.com/virtualization/windowscontainers)
+
+Use Windows Server and Hyper-V containers to provide standardized runtime environments for development, test, and production teams.
