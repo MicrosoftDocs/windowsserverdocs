@@ -10,6 +10,9 @@ ms.date: 4/5/2017
 ms.assetid: 0a48852e-48cc-4047-ae58-99f11c273942
 ---
 # Deploy Work Folders with AD FS and Web Application Proxy: Step 2, AD FS Post-Configuration Work
+
+>Applies To: Windows Server 2016
+
 This topic describes the second step in deploying Work Folders with Active Directory Federation Services (AD FS) and Web Application Proxy. You can find the other steps in this process in these topics:  
   
 -   [Deploy Work Folders with AD FS and Web Application Proxy: Overview](deploy-work-folders-adfs-overview.md)  

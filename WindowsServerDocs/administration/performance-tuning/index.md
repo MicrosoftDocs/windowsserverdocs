@@ -34,7 +34,8 @@ This guide organizes performance and tuning guidance for Windows Server 2016 acr
 ## Changes in this version
 
 ### Sections added
-- [Nano Server installation-type configuration considerations](https://technet.microsoft.com/en-us/windows-server-docs/compute/nano-server/getting-started-with-nano-server)
+- [Nano Server installation-type configuration considerations](../../get-started/getting-started-with-nano-server.md)
+
 
 - [Software Defined Networking](subsystem/software-defined-networking/index.md), including [HNV](subsystem/software-defined-networking/hnv-gateway-performance.md) and [SLB gateway configuration guidance](subsystem/software-defined-networking/slb-gateway-performance.md)
 

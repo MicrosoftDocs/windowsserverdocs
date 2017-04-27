@@ -15,7 +15,9 @@ author: jamesmci
 
 <img src="../get-started/media/6-networking.png" style='float:left; padding:.5em;' alt="Icon depicting two networked computers"> Networking is a foundational part of the Software Defined Datacenter \(SDDC\) platform, and Windows Server 2016 provides new and improved Software Defined Networking \(SDN\) technologies to help you move to a fully realized SDDC solution for your organization.
 
-When you manage networks as a software defined resource, you can describe an application’s infrastructure requirements one time, and then choose where the application runs - on premises or in the cloud. This consistency means that your applications are now easier to scale and you can seamlessly run applications, anywhere, with equal confidence around security, performance, quality of service, and availability.
+When you manage networks as a software defined resource, you can describe an application’s infrastructure requirements one time, and then choose where the application runs - on premises or in the cloud. 
+
+This consistency means that your applications are now easier to scale, and you can seamlessly run applications - anywhere - with equal confidence about security, performance, quality of service, and availability.
 
 >[!Note]
 > To download Windows Server 2016, see [Windows Server Evaluations](https://www.microsoft.com/evalcenter/evaluate-windows-server-technical-preview).
@@ -28,7 +30,7 @@ Windows Server 2016 adds the following new networking technologies:
 
 For more information, see [Windows Server 2016 Supported Networking Scenarios](windows-server-2016-supported-networking-scenarios.md).
 
-Read on for more information about using networking in Windows Server 2016.
+The following sections provide information about SDN technologies and Network Platform technologies.
 
 ## Software Defined Networking technologies
 
@@ -48,7 +50,8 @@ Network Controller provides a centralized, programmable point of automation to m
 
 ### [Software Load Balancing &#40;SLB&#41; for SDN](sdn/technologies/network-function-virtualization/software-load-balancing-for-sdn.md)
 
-Cloud Service Providers \(CSPs\) and Enterprises that are deploying Software Defined Networking (SDN) in Windows Server 2016 can use Software Load Balancing \(SLB\) to evenly distribute tenant and tenant customer network traffic among virtual network resources. The Windows Server SLB enables multiple servers to host the same workload, providing high availability and scalability.  
+Cloud Service Providers \(CSPs\) and Enterprises that are deploying Software Defined Networking (SDN) in Windows Server 2016 can use Software Load Balancing \(SLB\) to evenly distribute tenant and tenant customer network traffic among virtual network resources. The Windows Server SLB enables multiple servers to host the same workload, providing high availability and scalability.
+
 ### [RAS Gateway for SDN](sdn/technologies/network-function-virtualization/RAS-Gateway-for-SDN.md)
 
 RAS Gateway, which is a software-based, multitenant, Border Gateway Protocol \(BGP\) capable router in Windows Server 2016, is designed for Cloud Service Providers \(CSPs\) and Enterprises that host multiple tenant virtual networks using Hyper-V Network Virtualization. 
@@ -77,6 +80,12 @@ BranchCache is a wide area network \(WAN\) bandwidth optimization technology. To
 
 Learn how to deploy a Windows Server network with the Core Network Guide, as well as add features to your network deployment with Core Network Companion Guides.
 
+### [DirectAccess](../remote/remote-access/directaccess/DirectAccess.md)
+
+DirectAccess allows connectivity for remote users to organization network resources without the need for traditional Virtual Private Network (VPN) connections. 
+
+DirectAccess documentation is now located in the [Remote access and server management](https://docs.microsoft.com/windows-server/remote/) section of the Windows Server 2016 table of contents, under [Remote Access](https://docs.microsoft.com/windows-server/remote/remote-access/remote-access). For more information, see [DirectAccess](../remote/remote-access/directaccess/DirectAccess.md).
+
 ### [Domain Name System &#40;DNS&#41;](dns/dns-top.md)
 
 Domain Name System \(DNS\) is one of the industry-standard suite of protocols that comprise TCP/IP, and together the DNS Client and DNS Server provide computer name-to-IP address mapping name resolution services to computers and users.
@@ -88,6 +97,12 @@ Dynamic Host Configuration Protocol \(DHCP\) is a client/server protocol that au
 ### [Hyper-V Network Virtualization](sdn/technologies/hyper-v-network-virtualization/Hyper-V-Network-Virtualization.md)
 
 Hyper-V Network Virtualization \(HNV\) enables virtualization of customer networks on top of a shared physical network infrastructure.
+
+### [Hyper-V Virtual Switch](../virtualization/hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md)
+
+The Hyper-V Virtual Switch is a software-based layer-2 Ethernet network switch that is available in Hyper-V Manager when you install the Hyper-V server role. The switch includes programmatically managed and extensible capabilities to connect virtual machines to both virtual networks and the physical network. In addition, Hyper-V Virtual Switch provides policy enforcement for security, isolation, and service levels. 
+
+Hyper-V Virtual Switch documentation is now located in the **Virtualization** section of the Windows Server 2016 table of contents. For more information, see [Hyper-V Virtual Switch](../virtualization/hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md).
 
 ### [IP Address Management &#40;IPAM&#41;](technologies/ipam/ipam-top.md)
 
@@ -116,6 +131,14 @@ This topic provides information about choosing the right network adapter for you
 ### [NIC Teaming](technologies/nic-teaming/NIC-Teaming.md)
 
 NIC Teaming allows you to group physical Ethernet network adapters into one or more software-based virtual network adapters. These virtual network adapters provide fast performance and fault tolerance in the event of a network adapter failure.
+
+### [Remote Access](../remote/remote-access/remote-access.md)
+
+You can use Remote Access technologies, such as DirectAccess and Virtual Private Networking \(VPN\) to provide remote workers with connectivity to internal network resources. In addition, you can use Remote Access for local area network \(LAN\) routing, and for Web Application Proxy. which provides reverse proxy functionality for web applications inside your corporate network to allow users on any device to access them from outside the corporate network.
+
+Remote Access documentation is now located in the [Remote access and server management](https://docs.microsoft.com/windows-server/remote/) section of the Windows Server 2016 table of contents. For more information, see [Remote Access](../remote/remote-access/remote-access.md).
+
+For more information about Web Application Proxy, which is a role service of the Remote Access server role, see [Web Application Proxy in Windows Server 2016](https://docs.microsoft.com/windows-server/remote/remote-access/web-application-proxy/web-application-proxy-windows-server).
 
 ## Additional Resources  
 
