@@ -22,6 +22,8 @@ New to compute is Windows Containers, which offers another way to deploy flexibl
 >[!Note]
 > To download Windows Server 2016, see [Windows Server Evaluations](https://www.microsoft.com/evalcenter/evaluate-windows-server).
 
+The following sections contain brief technology overviews and links to Windows Server Virtualization technology documentation.
+
 ## [Hyper-V](./hyper-v/Hyper-V-on-Windows-Server.md)
 
 The Hyper-V technology provides computing resources through hardware virtualization. Hyper-V creates a software version of computer, called a virtual machine, which you use to run an operating system and applications. You can run multiple virtual machines at the same time, and can create and delete them as needed. 
@@ -45,6 +47,18 @@ The Hyper-V Virtual Switch is a software-based layer-2 Ethernet network switch t
 
 As a cloud service provider or enterprise private cloud administrator, you can use a guarded fabric to provide a more secure environment for VMs. A guarded fabric consists of one Host Guardian Service (HGS) - typically, a cluster of three nodes - plus one or more guarded hosts, and a set of shielded virtual machines (VMs).
 
-## [Containers](https://msdn.microsoft.com/virtualization/windowscontainers)
+## Additional Virtualization Technologies for Windows Server 2016 and Windows 10
+
+Following are links to additional virtualization technology documentation.
+
+### [Windows Containers](https://msdn.microsoft.com/virtualization/windowscontainers)
 
 Use Windows Server and Hyper-V containers to provide standardized runtime environments for development, test, and production teams.
+
+Windows Containers provide operating system level virtualization that allows multiple isolated applications to be run on a single system. Two different types of container runtimes are included with the feature, each with a different degree of application isolation.
+
+Windows Server Containers achieve isolation through namespace and process isolation. 
+
+Hyper-V Containers encapsulate each container in a light\-weight virtual machine.
+
+For more information, see [Windows Containers Documentation](https://msdn.microsoft.com/virtualization/windowscontainers) on the Microsoft Developer Network \(MSDN\).
