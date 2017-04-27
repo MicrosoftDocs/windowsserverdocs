@@ -14,13 +14,13 @@ ms.prod: storage-failover-clustering
 Cluster\-Aware Updating \(CAU\) is a feature that coordinates software updates on all servers in a failover cluster in a way that doesn't impact the service availability any more than a planned failover of a cluster node. For some applications with continuous availability features \(such as Hyper\-V with live migration, or an SMB 3.x file server with SMB Transparent Failover\), CAU can coordinate automated cluster updating with no impact on service availability.  
   
 >Applies To: Windows Server 2016
-## Does CAU support updating Storage Spaces Direct (S2D) clusters?  
-Yes. CAU supports updating [S2D](https://docs.microsoft.com/en-us/windows-server/storage/storage-spaces/storage-spaces-direct-overview) clusters regardless of the deployment type: hyper-converged and converged. Specifically, CAU orchestration ensures that suspending each cluster node waits for the underlying clustered storage space to be healthy.
+## Does CAU support updating Storage Spaces Direct clusters?  
+Yes. CAU supports updating [Storage Spaces Direct](../storage/storage-spaces/storage-spaces-direct-overview.md) clusters regardless of the deployment type: hyper-converged or converged. Specifically, CAU orchestration ensures that suspending each cluster node waits for the underlying clustered storage space to be healthy.
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 ## Does CAU work with Windows Server 2008 R2 or Windows 7?  
-No. CAU coordinates the cluster updating operation only from computers running Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10, Windows 8.1, or Windows 8. The failover cluster being updated must run one of Windows Server 2016, Windows Server 2012 R2, or Windows Server 2012.
+No. CAU coordinates the cluster updating operation only from computers running Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10, Windows 8.1, or Windows 8. The failover cluster being updated must run Windows Server 2016, Windows Server 2012 R2, or Windows Server 2012.
   
 ## Is CAU limited to specific clustered applications?  
 No. CAU is agnostic to the type of the clustered application. CAU is an external cluster\-updating solution that is layered on top of clustering APIs and PowerShell cmdlets. As such, CAU can coordinate updating for any clustered application that is configured in a Windows Server failover cluster.  
