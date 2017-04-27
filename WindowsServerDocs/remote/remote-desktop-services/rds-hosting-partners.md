@@ -35,5 +35,5 @@ If you are a customer looking for a partner to help you host Windows desktops an
 
 ## Partners who have passed the learning path assessment 
 
-You can find a hosting partner who has passed the assessment by searching on the Partner Center as mentioned above. We also have a [list of those partners](https://github.com/microsoftdocs/windowsserverdocs/remote/remote-desktop-services/rds-hosting-partners.pdf), as of 03/28/2017, that you can download.
+You can find a hosting partner who has passed the assessment by searching on the Partner Center as mentioned above. We also have a [list of those partners](https://github.com/MicrosoftDocs/windowsserverdocs/blob/master/WindowsServerDocs/remote/remote-desktop-services/RDS-Hosting-Partners.pdf), as of 03/28/2017, that you can download.
 
