@@ -11,7 +11,7 @@ ms.date: 04/24/2017
 
 # PowerShell scripting performance considerations
 
-PowerShell scripts that leverage .Net directly and avoid the pipeline tend to be faster than idiomatic PowerShell. Idiomatic PowerShell typically uses cmdlets and PowerShell functions heavily, often leveraging the pipeline, and dropping down into .Net only when necessary.
+PowerShell scripts that leverage .NET directly and avoid the pipeline tend to be faster than idiomatic PowerShell. Idiomatic PowerShell typically uses cmdlets and PowerShell functions heavily, often leveraging the pipeline, and dropping down into .NET only when necessary.
 
 >[!Note] 
 > Many of the techniques described here are not idiomatic PowerShell and may reduce the readability of a PowerShell script. Script authors are advised to use idiomatic PowerShell unless performance dictates otherwise.
@@ -49,7 +49,7 @@ $null = . {
 ```
 
 Introducing a script block and calling it (using dot sourcing or otherwise) then assigning the result to `$null` is a convenient technique for suppressing the output of a large block of script.
-This techinque performs roughly as well as piping to `Out-Null` and should be avoided in performance sensitive script.
+This technique performs roughly as well as piping to `Out-Null` and should be avoided in performance sensitive script.
 The extra overhead in this example comes from the creation of and invoking a script block that was previously inline script.
 
 
@@ -65,7 +65,7 @@ $results
 ```
 
 This can be very inefficent because arrays are immutable.
-Each addition to the array actually creates a new array big enough to hold all elements of both the left and right opreands, then copies the elements of both operands into the new array.
+Each addition to the array actually creates a new array big enough to hold all elements of both the left and right operands, then copies the elements of both operands into the new array.
 For small collections, this overhead may not matter.
 For large collections, this can definitely be an issue.
 
@@ -100,7 +100,7 @@ The idiomatic way to process a file in PowerShell might look something like:
 Get-Content $path | Where-Object { $_.Length -gt 10 }
 ```
 
-This can be nearly an order of magnitude slower than using .Net apis directly:
+This can be nearly an order of magnitude slower than using .NET APIs directly:
 
 ```PowerShell
 try
