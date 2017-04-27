@@ -11,7 +11,7 @@ ms.date: 4/24/2016
 ---
 # Administer Windows Server 2016
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 <img src="../get-started/media/8-management.png" style='float:left; padding:.5em;' alt="Icon showing a gear"> Administration features and tools help IT pros run and manage Windows Server.  
 <br><br><br><br><br><br>
@@ -24,7 +24,7 @@ With Microsoft Server Performance Advisor (SPA), you can collect metrics to diag
 
 The content in this section describes how to use Server Manager in Windows Server to manage both local and remote Windows-based servers from desktop computers.  
 
-## [Software Inventoy Logging (SIL)](software-inventory-logging/get-started-with-software-inventory-logging.md)
+## [Software Inventory Logging (SIL)](software-inventory-logging/get-started-with-software-inventory-logging.md)
 
 Software Inventory Logging in Windows Server is a feature with a simple set of PowerShell cmdlets that help server administrators retrieve a list of the Microsoft software that is installed on their servers. It also provides the capability to collect and forward this data periodically over the network to a target web server, using the HTTPS protocol, for aggregation. Managing the feature, primarily for hourly collection and forwarding, is also done with PowerShell commands.
 
