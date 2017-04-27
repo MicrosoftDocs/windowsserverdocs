@@ -90,7 +90,7 @@ You must install the Failover Clustering Tools as follows to support the differe
   
 > [!NOTE]  
 > -   You can't use the Failover Clustering Tools on Windows Server 2012 to manage Cluster-Aware Updating on a newer version of Windows Server. 
-> -   To use CAU only in remote\-updating mode, installation of the Failover Clustering Tools on the cluster nodes is not required. However, certain CAU features will not be available. For more information, see [Requirements and Best Practices for Cluster\-Aware Updating](http://go.microsoft.com/fwlink/p/?LinkId=234906).  
+> -   To use CAU only in remote\-updating mode, installation of the Failover Clustering Tools on the cluster nodes is not required. However, certain CAU features will not be available. For more information, see [Requirements and Best Practices for Cluster\-Aware Updating](cluster-aware-updating-requirements.md).  
 > -   Unless you are using CAU only in self\-updating mode, the computer on which the CAU tools are installed and that coordinates the updates cannot be a member of the failover cluster.  
   
 ### Enabling self-updating mode
@@ -104,7 +104,7 @@ To uninstall CAU, uninstall the Failover Clustering feature or Failover Clusteri
 
 To ensure that CAU can update the cluster nodes successfully, and for additional guidance for configuring your failover cluster environment to use CAU, you can run the CAU Best Practices Analyzer.  
   
-For detailed requirements and best practices for using CAU, and information about running the CAU Best Practices Analyzer, see [Requirements and Best Practices for Cluster\-Aware Updating](http://go.microsoft.com/fwlink/p/?LinkId=234906).  
+For detailed requirements and best practices for using CAU, and information about running the CAU Best Practices Analyzer, see [Requirements and Best Practices for Cluster\-Aware Updating](cluster-aware-updating-requirements.md).  
   
 ### Starting Cluster-Aware Updating  
   
@@ -121,16 +121,16 @@ For detailed requirements and best practices for using CAU, and information abou
 ## See also  
 The following links provide more information about using Cluster-Aware Updating.  
   
--   [Requirements and Best Practices for Cluster\-Aware Updating](http://go.microsoft.com/fwlink/p/?LinkId=234906)  
+-   [Requirements and Best Practices for Cluster\-Aware Updating](cluster-aware-updating.md)  
   
--   [Cluster\-Aware Updating: Frequently Asked Questions](http://technet.microsoft.com/library/hh831367.aspx)  
+-   [Cluster\-Aware Updating: Frequently Asked Questions](cluster-aware-updating-faq.md)  
   
--   [Advanced Options and Updating Run Profiles for CAU](http://go.microsoft.com/fwlink/p/?LinkId=234907)  
+-   [Advanced Options and Updating Run Profiles for CAU](cluster-aware-updating-options.md)  
   
--   [How CAU Plug\-ins Work](http://go.microsoft.com/fwlink/p/?LinkId=235333)  
+-   [How CAU Plug\-ins Work](cluster-aware-updating-plug-ins.md)  
   
--   [Cluster\-Aware Updating Cmdlets in Windows PowerShell](http://go.microsoft.com/fwlink/p/?LinkId=237675)  
+-   [Cluster\-Aware Updating Cmdlets in Windows PowerShell](https://go.microsoft.com/fwlink/p/?LinkId=237675)  
   
--   [Cluster\-Aware Updating Plug\-in Reference](http://msdn.microsoft.com/library/hh418084.aspx)  
+-   [Cluster\-Aware Updating Plug\-in Reference](https://msdn.microsoft.com/library/hh418084.aspx)  
   
 
