@@ -8,8 +8,10 @@ ms.topic: get-started-article
 ms.assetid: 20fee213-8ba5-4cd3-87a6-e77359e82bc0
 author: stevenek
 ms.date: 10/11/2016
+description: Deploy Storage Spaces Direct in a hyper-converged cluster in a test lab.
 ---
 # Hyper-converged solution using Storage Spaces Direct in Windows Server 2016
+
 >Applies to: Windows Server 2016
 
 This topic provides instructions for how to deploy [Storage Spaces Direct](storage-spaces-direct-overview.md) to provide software-defined storage for virtual machines hosted in the same hyper-converged cluster.
@@ -56,7 +58,6 @@ The following information will be needed as inputs to configure provision and ma
         There are 2 types of RDMA protocols, note which type your RDMA adapter is (RoCE v2 or iWarp).
 
     -   VLAN ID to be used for the 2 network interfaces used by the management OS on the hyper-converged hosts. You should be able to obtain this from your network administrator.  
--   **[Service Package KB3157663](https://support.microsoft.com/kb/3157663)**  This package has updates that are important to have the hyper-converged nodes, as well as any server managing a Windows Server 2016 hyper-converged deployment.
 
 ## Installation options
 
@@ -389,12 +390,12 @@ Count Name                          PSComputerName
 ----- ----                          --------------
 4     ATA SSDSC2BA800G4n            StorageClusterNode1
 10    ATA ST4000NM0033              StorageClusterNode1
-4     ATA SSDSC2BA800G4n            StorageClusterNode1
-10    ATA ST4000NM0033              StorageClusterNode1
-4     ATA SSDSC2BA800G4n            StorageClusterNode1
-10    ATA ST4000NM0033              StorageClusterNode1
-4     ATA SSDSC2BA800G4n            StorageClusterNode1
-10    ATA ST4000NM0033              StorageClusterNode1
+4     ATA SSDSC2BA800G4n            StorageClusterNode2
+10    ATA ST4000NM0033              StorageClusterNode2
+4     ATA SSDSC2BA800G4n            StorageClusterNode3
+10    ATA ST4000NM0033              StorageClusterNode3
+4     ATA SSDSC2BA800G4n            StorageClusterNode4
+10    ATA ST4000NM0033              StorageClusterNode4
 ```
 
 ### Step 3.5: Enable Storage Spaces Direct
