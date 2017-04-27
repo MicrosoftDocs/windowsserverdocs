@@ -292,7 +292,7 @@ If you attempt to move the disk or CSV manually, you receive an additional error
     The action 'Move' did not complete.
     
     Error Code: 0x8007138d
- It wi    A cluster node is not available for this operation
+    A cluster node is not available for this operation
 
 This issue is caused by one or more uninitialzed disks being attached to one or more cluster nodes. To resolve the issue, initialize all attached storage using DiskMgmt.msc, DISKPART.EXE, or the Initialize-Disk PowerShell cmdlet.
 
