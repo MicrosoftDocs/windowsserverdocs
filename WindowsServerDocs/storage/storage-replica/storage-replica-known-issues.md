@@ -292,7 +292,7 @@ If you attempt to move the disk or CSV manually, you receive an additional error
     The action 'Move' did not complete.
     
     Error Code: 0x8007138d
-    A cluster node is not available for this operation
+ It wi    A cluster node is not available for this operation
 
 This issue is caused by one or more uninitialzed disks being attached to one or more cluster nodes. To resolve the issue, initialize all attached storage using DiskMgmt.msc, DISKPART.EXE, or the Initialize-Disk PowerShell cmdlet.
 
@@ -338,6 +338,15 @@ If ClusterFunctionalLevel is not 9, the ClusterFunctionalLevel will need to be u
 To resolve the issue, raise the cluster functional level by running the PowerShell cmdlet: Update-ClusterFunctionalLevel
 https://technet.microsoft.com/itpro/powershell/windows/failoverclusters/update-clusterfunctionallevel
 
+## Small unknown partition listed in DISKMGMT for each replicated volume
+
+When running the Disk Management snap-in (DISKMGMT.MSC), you notice one or more volumes listed with no label or drive letter and 1MB in size. You may be able to delete the unknown volume or you may receive:
+
+    "An Unexpected Error has Occurred"  
+
+This behavior is by design. This not a volume, but a partition. Storage Replica creates a 512KB partition as a database slot for replication operations (the legacy DiskMgmt.msc tool rounds to the nearest MB). Having a partition like this for each replicated volume is normal and desirable. When no longer in use, you are free to delete this 512KB partition; in-use ones cannot be deleted. The partition will never grow or shrink. If you are recreating replication we recommend leaving the partition as Storage Replica will claim unused ones.
+
+To view details, use the DISKPART tool or Get-Partition cmdlet. These partitions will have a GPT Type of `558d43c5-a1ac-43c0-aac8-d1472b2923d1`. 
 
 ## See also  
 - [Storage Replica](storage-replica-overview.md)  
