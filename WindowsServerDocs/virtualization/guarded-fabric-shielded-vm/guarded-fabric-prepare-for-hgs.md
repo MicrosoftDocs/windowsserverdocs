@@ -51,17 +51,18 @@ Doing so helps VM owners verify that they are authorizing the correct HGS server
 In an enterprise scenario, you may choose to use your own enterprise CA to issue these certs.
 Hosters and service providers should consider using a well-known, public CA instead.
 
-Both the signing and encryption certificates must be issued with the following certificiate properties:
+Both the signing and encryption certificates must be issued with the following certificiate properties (unless marked "recommended"):
 
 Certificate Template Property | Required value 
 ------------------------------|----------------
 Crypto provider               | Any Key Storage Provider (KSP). Legacy Cryptographic Service Providers (CSPs) are **not** supported.
 Key algorithm                 | RSA
 Minimum key size              | 2048 bits
+Signature algorithm           | Recommended: SHA256
 Key usage                     | Digital signature *and* data encipherment
 Enhanced key usage            | Server authentication
 Key renewal policy            | Renew with the same key. Renewing HGS certificates with different keys will prevent shielded VMs from starting up.
-Subject name                  | Suggested: your company's name or web address. This information will be shown to VM owners in the shielding data file wizard.
+Subject name                  | Recommended: your company's name or web address. This information will be shown to VM owners in the shielding data file wizard.
 
 These requirements apply whether you are using hardare- or software-backed certificates.
 For security reasons, it is recommended that you create your HGS keys in a Hardware Security Module (HSM) to prevent the private keys from being copied off the system.
