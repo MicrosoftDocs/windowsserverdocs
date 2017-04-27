@@ -7,7 +7,7 @@ ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
 ms.author: elizapo
-ms.date: 11/16/2016  
+ms.date: 04/27/2017  
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9a3cb426-fb39-40c5-ae07-26dbe9e3aed9
@@ -33,68 +33,7 @@ If you are a customer looking for a partner to help you host Windows desktops an
 2. Clear the **Location** field.
 3. Enter the name of the partner in the **I'm looking for help with** field.
 
-## Partners who have passed the learning path assessment (as of 10/27/2016)
+## Partners who have passed the learning path assessment 
 
-### Hosting partners:
-Hosting partners typically offer a fully managed hosted Windows desktop and application service, which may include managing the Azure resources, operating systems, applications, and helpdesk using the partner’s licensing agreements with Microsoft and other software providers.
+You can find a hosting partner who has passed the assessment by searching on the Partner Center as mentioned above. We also have a [list of those partners](rds-hosting-partners.pdf), as of 03/28/2017, that you can download.
 
-- ACUUTECH LTD
-- ANK Business Services GmbH
-- Aspex
-- Atea AS
-- Camarate B.V.
-- CGI Group Inc.
-- Conexlink
-- Connectria Hosting
-- Copaco Nederland B.V.
-- Ericom Software
-- EVRY ASA
-- Fujitsu Services United Kingdom
-- GCITS
-- GIVHAN TECHNOLOGIES LLC, DBA PARTNER I.T.
-- Gotham City Technologies
-- INSIGHT ENTERPRISES AUSTRALIA PTY LTD
-- MICROCITY COMPUTADORES E SISTEMAS LTDA
-- SaaSplaza
-- SaasPlaza Pte Ltd
-- Sierra Systems
-- Sogeti
-- Tech Data LTD
-- Telecomputing Sweden AB
-- TIETO CORPORATION
-- Trustmarque Solutions Ltd
-
-
-### Technology consulting partners
-
-Technology consulting partners typically provide a flexible set of services to help customers deploy and manage hosted Windows desktops and applications in Azure using the customer’s licensing agreements with Microsoft and other software providers.
-
-- AVALERIS INC
-- COMPUREP-COMPUTER SPECIALIST CC
-- Computacenter AG & Co. oHG
-- Convergence Northwest, Inc.
-- Dionar
-- EUCafrica
-- FyrSoft LLC
-- Gill IT-Service
-- Good Data Systems, S.A. de C.V.
-- Inside Technologies
-- INTEGRIT S.A.
-- Interchange UC B.V.
-- ITCG AG
-- Peters&Associates
-- Powel ASA
-- Quadrasystems.net (India) P Ltd
-- Salcon Technology Solutions
-- Savvia Inc.
-- SCCT
-- Sirius Computer Solutions, Inc.
-- Spusht Technologies L.L.C
-- Strateco GmbH & Co.KG
-- Surevelox, Inc
-- Synergics c.v.b.a
-- TEKPOOL LTD
-- Terawe
-- Windward Software Inc
-- Wortell
-- Zirous, Inc.
