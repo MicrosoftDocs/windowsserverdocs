@@ -81,16 +81,32 @@ The plug\-ins that CAU installs \(**Microsoft.WindowsUpdatePlugin** and **Micros
 |[Register-CauPlugin]((https://technet.microsoft.com/itpro/powershell/windows/cluster-aware-updating/register-cauplugin))|Registers a CAU software updating plug\-in on the local computer.|  
 |[Unregister-CauPlugin](https://technet.microsoft.com/itpro/powershell/windows/cluster-aware-updating/unregister-cauplugin)|Removes a software updating plug\-in from the list of plug\-ins that can be used by CAU. **Note:** The plug\-ins that are installed with CAU \(**Microsoft.WindowsUpdatePlugin** and the **Microsoft.HotfixPlugin**\) cannot be unregistered.|  
   
-## <a name="BKMK_WUP"></a>Use the Microsoft.WindowsUpdatePlugin  
-The following table summarizes information about the default plug\-in for CAU: **Microsoft.WindowsUpdatePlugin**.  
-  
-|Item|Details|  
-|--------|-----------|  
-|Description|-   Communicates with the Windows Update Agent on each failover cluster node to apply updates that are needed for the Microsoft products that are running on each node.<br />-   Installs cluster updates directly from Windows Update or Microsoft Update, or from an on\-premises Windows Server Update Services \(WSUS\) server.<br />-   Installs only selected, general distribution release \(GDR\) updates. By default, the plug\-in applies only important software updates. <br><br>**Note:**     To apply updates other than the important software updates that are selected by default \(for example, driver updates\), you can configure an optional plug\-in parameter. For more information, see [Configure the Windows Update Agent query string](#BKMK_QUERY).|  
-|Requirements|-   The failover cluster and remote Update Coordinator computer \(if used\) must meet the requirements for CAU and the configuration that is required for remote management listed in [Requirements and Best Practices for CAU](cluster-aware-updating-requirements.md).<br />-   Review [Recommendations for applying Microsoft updates](cluster-aware-updating-requirements.md#BKMK_BP_WUA), and then make any necessary changes to your Microsoft Update configuration for the failover cluster nodes.<br />-   For best results, we recommend that you run the CAU Best Practices Analyzer \(BPA\) to ensure that the cluster and update environment are configured properly to apply updates by using CAU. For more information, see [Test CAU updating readiness](cluster-aware-updating-requirements.md#BKMK_BPA).|  
-|Configuration|No configuration is required. The default configuration downloads and installs important GDR updates on each node. <br><br>**Note:** Updates that require the acceptance of Microsoft license terms or require user interaction are excluded, and they must be installed manually.|  
-|Additional options|Optionally, you can specify either of the following plug\-in arguments to augment or restrict the set of updates that are applied by the plug\-in:<br />-   To configure the plug\-in to apply recommended updates in addition to important updates on each node, in the CAU UI, on the **Additional Options** page, select the **Give me recommended updates the same way that I receive important updates** check box.<br />    Alternatively, configure the **'IncludeRecommendedUpdates'\='True'** plug\-in argument.<br />-   To configure the plug\-in to filter the types of GDR updates that are applied to each cluster node, specify a Windows Update Agent query string using a **QueryString** plug\-in argument. For more information, see [Configure the Windows Update Agent query string](#BKMK_QUERY).|  
-  
+## <a name="BKMK_WUP"></a>Using the Microsoft.WindowsUpdatePlugin  
+
+The default plug\-in for CAU, **Microsoft.WindowsUpdatePlugin**, performs the following actions:
+- Communicates with the Windows Update Agent on each failover cluster node to apply updates that are needed for the Microsoft products that are running on each node.
+- Installs cluster updates directly from Windows Update or Microsoft Update, or from an on\-premises Windows Server Update Services \(WSUS\) server.
+- Installs only selected, general distribution release \(GDR\) updates. By default, the plug\-in applies only important software updates. No configuration is required. The default configuration downloads and installs important GDR updates on each node. 
+
+> [!NOTE]
+> To apply updates other than the important software updates that are selected by default \(for example, driver updates\), you can configure an optional plug\-in parameter. For more information, see [Configure the Windows Update Agent query string](#BKMK_QUERY).
+
+### Requirements
+
+- The failover cluster and remote Update Coordinator computer \(if used\) must meet the requirements for CAU and the configuration that is required for remote management listed in [Requirements and Best Practices for CAU](cluster-aware-updating-requirements.md).
+- Review [Recommendations for applying Microsoft updates](cluster-aware-updating-requirements.md#BKMK_BP_WUA), and then make any necessary changes to your Microsoft Update configuration for the failover cluster nodes.
+- For best results, we recommend that you run the CAU Best Practices Analyzer \(BPA\) to ensure that the cluster and update environment are configured properly to apply updates by using CAU. For more information, see [Test CAU updating readiness](cluster-aware-updating-requirements.md#BKMK_BPA).
+
+> [!NOTE]
+> Updates that require the acceptance of Microsoft license terms or require user interaction are excluded, and they must be installed manually.
+
+### Additional options
+
+Optionally, you can specify the following plug\-in arguments to augment or restrict the set of updates that are applied by the plug\-in:
+- To configure the plug\-in to apply recommended updates in addition to important updates on each node, in the CAU UI, on the **Additional Options** page, select the **Give me recommended updates the same way that I receive important updates** check box.
+<br>Alternatively, configure the **'IncludeRecommendedUpdates'\='True'** plug\-in argument.
+- To configure the plug\-in to filter the types of GDR updates that are applied to each cluster node, specify a Windows Update Agent query string using a **QueryString** plug\-in argument. For more information, see [Configure the Windows Update Agent query string](#BKMK_QUERY).
+
 ### <a name="BKMK_QUERY"></a>Configure the Windows Update Agent query string  
 You can configure a plug\-in argument for the default plug\-in, **Microsoft.WindowsUpdatePlugin**, that consists of a Windows Update Agent \(WUA\) query string. This instruction uses the WUA API to identify one or more groups of Microsoft updates to apply to each node, based on specific selection criteria. You can combine multiple criteria by using a logical AND or a logical OR. The WUA query string is specified in a plug\-in argument as follows:  
   
@@ -122,16 +138,46 @@ To configure a **QueryString** argument that installs only drivers:
 For more information about query strings for the default plug\-in, **Microsoft.WindowsUpdatePlugin**, the search criteria \(such as **IsInstalled**\), and the syntax that you can include in the query strings, see the section about search criteria in the [Windows Update Agent (WUA) API Reference](http://go.microsoft.com/fwlink/p/?LinkId=223304).  
   
 ## <a name="BKMK_HFP"></a>Use the Microsoft.HotfixPlugin  
-The plug\-in **Microsoft.HotfixPlugin** can be used to apply Microsoft limited distribution release \(LDR\) updates \(also called hotfixes, and formerly called QFEs\) that you download independently to address specific Microsoft software issues.  
+The plug\-in **Microsoft.HotfixPlugin** can be used to apply Microsoft limited distribution release \(LDR\) updates \(also called hotfixes, and formerly called QFEs\) that you download independently to address specific Microsoft software issues. The plug-in installs updates from a root folder on an SMB file share and can also be customized to apply non\-Microsoft driver, firmware, and BIOS updates.
+
+> [!NOTE]
+> Hotfixes are sometimes available for download from Microsoft in Knowledge Base articles, but they are also provided to customers on an as\-needed basis.
+
+### Requirements
+
+- The failover cluster and remote Update Coordinator computer \(if used\) must meet the requirements for CAU and the configuration that is required for remote management listed in [Requirements and Best Practices for CAU](cluster-aware-updating-requirements.md).
+- Review [Recommendations for using the Microsoft.HotfixPlugin](cluster-aware-updating-requirements.md#BKMK_BP_HF).
+- For best results, we recommend that you run the CAU Best Practices Analyzer \(BPA\) model to ensure that the cluster and update environment are configured properly to apply updates by using CAU. For more information, see [Test CAU updating readiness](cluster-aware-updating-requirements.md#BKMK_BPA).
+- Obtain the updates from the publisher, and copy them or extract them to a Server Message Block \(SMB\) file share \(hotfix root folder\) that supports at least SMB 2.0 and that is accessible by all of the cluster nodes and the remote Update Coordinator computer \(if CAU is used in remote\-updating mode\). For more information, see [Configure a hotfix root folder structure](#BKMK_HF_ROOT) later in this topic. 
+
+    > [!NOTE]
+    > By default, this plug\-in only installs hotfixes with the following file name extensions: .msu, .msi, and .msp.
+
+- Copy the DefaultHotfixConfig.xml file \(which is provided in the **%systemroot%\\System32\\WindowsPowerShell\\v1.0\\Modules\\ClusterAwareUpdating** folder on a computer where the CAU tools are installed\) to the hotfix root folder that you created and under which you extracted the hotfixes. For example, copy the configuration file to *\\\\MyFileServer\\Hotfixes\\Root\\*. 
+
+    > [!NOTE]
+    > To install most hotfixes provided by Microsoft and other updates, the default hotfix configuration file can be used without modification. If your scenario requires it, you can customize the configuration file as an advanced task. The configuration file can include custom rules, for example, to handle hotfix files that have specific extensions, or to define behaviors for specific exit conditions. For more information, see [Customize the hotfix configuration file](#BKMK_CONFIG_FILE) later in this topic.
+
+### Configuration
+
+Configure the following settings. For more information, see the links to sections later in this topic.
+- The path to the shared hotfix root folder that contains the updates to apply and that contains the hotfix configuration file. You can type this path in the CAU UI or configure the **HotfixRootFolderPath\=\<Path>** PowerShell plug\-in argument. 
+
+   > [!NOTE]
+   > You can specify the hotfix root folder as a local folder path or as a UNC path of the form *\\\\ServerName\\Share\\RootFolderName*. A domain\-based or standalone DFS Namespace path can be used. However, the plug\-in features that check access permissions in the hotfix configuration file are incompatible with a DFS Namespace path, so if you configure one, you must disable the check for access permissions by using the CAU UI or by configuring the **DisableAclChecks\='True'** plug\-in argument.
+- Settings on the server that hosts the hotfix root folder to check for appropriate permissions to access the folder and ensure the integrity of the data accessed from the SMB shared folder \(SMB signing or SMB Encryption\). For more information, see [Restrict access to the hotfix root folder](#BKMK_ACL).
+
+### Additional options
+
+- Optionally, configure the plug\-in so that SMB Encryption is enforced when accessing data from the hotfix file share. In the CAU UI, on the **Additional Options** page, select the **Require SMB Encryption in accessing the hotfix root folder** option, or configure the **RequireSMBEncryption\='True'** PowerShell plug\-in argument. 
+  > [!IMPORTANT]
+  > You must perform additional configuration steps on the SMB server to enable SMB data integrity with SMB signing or SMB Encryption. For more information, see Step 4 in [Restrict access to the hotfix root folder](#BKMK_ACL). If you select the option to enforce the use of SMB Encryption, and the hotfix root folder is not configured for access by using SMB Encryption, the Updating Run will fail.
+- Optionally, disable the default checks for sufficient permissions for the hotfix root folder and the hotfix configuration file. In the CAU UI, select **Disable check for administrator access to the hotfix root folder and configuration file**, or configure the **DisableAclChecks\='True'** plug\-in argument.
+- Optionally, configure the **HotfixInstallerTimeoutMinutes\=<Integer>** argument to specify how long the hotfix plug\-in waits for the hotfix installer process to return. \(The default is 30 minutes.\) For example, to specify a timeout period of two hours, set **HotfixInstallerTimeoutMinutes\=120**.
+- Optionally, configure the **HotfixConfigFileName \= <name>** plug\-in argument to specify a name for the hotfix configuration file that is located in the hotfix root folder. If not specified, the default name DefaultHotfixConfig.xml is used.
   
-|Item|Details|  
-|--------|-----------|  
-|Description|-   Installs LDR Microsoft updates \(hotfixes\) from a root folder on an SMB file share. <br>**Note:**     Hotfixes are sometimes available for download from Microsoft in Knowledge Base articles, but they are also provided to customers on an as\-needed basis.<br />-   Can also be customized to apply non\-Microsoft driver, firmware, and BIOS updates.|  
-|Requirements|-   The failover cluster and remote Update Coordinator computer \(if used\) must meet the requirements for CAU and the configuration that is required for remote management listed in [Requirements and Best Practices for CAU](cluster-aware-updating-requirements.md).<br />-   Review [Recommendations for using the Microsoft.HotfixPlugin](cluster-aware-updating-requirements.md#BKMK_BP_HF).<br />-   For best results, we recommend that you run the CAU Best Practices Analyzer \(BPA\) model to ensure that the cluster and update environment are configured properly to apply updates by using CAU. For more information, see [Test CAU updating readiness](cluster-aware-updating-requirements.md#BKMK_BPA).<br />-   Obtain the updates from the publisher, and copy them or extract them to a Server Message Block \(SMB\) file share \(hotfix root folder\) that supports at least SMB 2.0 and that is accessible by all of the cluster nodes and the remote Update Coordinator computer \(if CAU is used in remote\-updating mode\). For more information, see [Configure a hotfix root folder structure](#BKMK_HF_ROOT) later in this topic. <br>**Note:**     By default, this plug\-in only Installs hotfixes with the following file name extensions: .msu, .msi, and .msp.<br />-   Copy the DefaultHotfixConfig.xml file \(which is provided in the **%systemroot%\\System32\\WindowsPowerShell\\v1.0\\Modules\\ClusterAwareUpdating** folder on a computer where the CAU tools are installed\) to the hotfix root folder that you created and under which you extracted the hotfixes. For example, copy the configuration file to *\\\\MyFileServer\\Hotfixes\\Root\\*. <br>**Note:**     To install most hotfixes provided by Microsoft and other updates, the default hotfix configuration file can be used without modification. If your scenario requires it, you can customize the configuration file as an advanced task. The configuration file can include custom rules, for example, to handle hotfix files that have specific extensions, or to define behaviors for specific exit conditions. For more information, see [Customize the hotfix configuration file](#BKMK_CONFIG_FILE) later in this topic.|  
-|Configuration|Configure the following settings. For more information, see the links to sections later in this topic.<br />-   The path to the shared hotfix root folder that contains the updates to apply and that contains the hotfix configuration file. You can type this path in the CAU UI or configure the **HotfixRootFolderPath\=<Path>**PowerShell plug\-in argument. <br>**Note:**     You can specify the hotfix root folder as a local folder path or as a UNC path of the form *\\\\ServerName\\Share\\RootFolderName*. A domain\-based or standalone DFS Namespace path can be used. However, the plug\-in features that check access permissions in the hotfix configuration file are incompatible with a DFS Namespace path, so if you configure one, you must disable the check for access permissions by using the CAU UI or by configuring the **DisableAclChecks\='True'** plug\-in argument.<br />-   Settings on the server that hosts the hotfix root folder to check for appropriate permissions to access the folder and ensure the integrity of the data accessed from the SMB shared folder \(SMB signing or SMB Encryption\). For more information, see [Restrict access to the hotfix root folder](#BKMK_ACL).|  
-|Additional options|<ul><li>Optionally, configure the plug\-in so that SMB Encryption is enforced when accessing data from the hotfix file share. In the CAU UI, on the **Additional Options** page, select the **Require SMB Encryption in accessing the hotfix root folder** option, or configure the **RequireSMBEncryption\='True'**PowerShell plug\-in argument. **Important:** <ul><li>You must perform additional configuration steps on the SMB server to enable SMB data integrity with SMB signing or SMB Encryption. For more information, see Step 4 in [Restrict access to the hotfix root folder](#BKMK_ACL).</li><li>If you select the option to enforce the use of SMB Encryption, and the hotfix root folder is not configured for access by using SMB Encryption, the Updating Run will fail.</li></ul></li><li>Optionally, disable the default checks for sufficient permissions for the hotfix root folder and the hotfix configuration file. In the CAU UI, select **Disable check for administrator access to the hotfix root folder and configuration file**, or configure the **DisableAclChecks\='True'** plug\-in argument.</li><li>Optionally, configure the **HotfixInstallerTimeoutMinutes\=<Integer>** argument to specify how long the hotfix plug\-in waits for the hotfix installer process to return. \(The default is 30 minutes.\) For example, to specify a timeout period of two hours, set **HotfixInstallerTimeoutMinutes\=120**.</li><li>Optionally, configure the **HotfixConfigFileName \= <name>** plug\-in argument to specify a name for the hotfix configuration file that is located in the hotfix root folder. If not specified, the default name DefaultHotfixConfig.xml is used.</li></ul>|  
-  
-### <a name="BKMK_HF_ROOT"></a>Configure a hotfix root folder structure  
+### <a name="BKMK_HF_ROOT"></a>Configure a hotfix root folder structure
+
 For the hotfix plug\-in to work, hotfixes must be stored in a well\-defined structure in an SMB file share \(hotfix root folder\), and you must configure the hotfix plug\-in with the path to the hotfix root folder by using the CAU UI or the CAU PowerShell cmdlets. This path is passed to the plug\-in as the **HotfixRootFolderPath** argument. You can choose one of several structures for the hotfix root folder, according to your updating needs, as shown in the following examples. Files or folders that do not adhere to the structure are ignored.  
   
 #### Example 1 - Folder structure used to apply hotfixes to all cluster nodes
