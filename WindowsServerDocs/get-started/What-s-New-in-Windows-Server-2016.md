@@ -15,6 +15,7 @@ ms.author: jaimeo
 manager: dongill
 ---
 # What's New in Windows Server 2016
+
 >Applies To: Windows Server 2016
 
 <img src="media/whats-new.png" style='float:left; padding:.5em;' alt="Icon showing a newspaper">The content in this section describes what's new and changed in Windows Server&reg; 2016. The new features and changes listed here are the ones most likely to have the greatest impact as you work with this release.  
@@ -79,7 +80,24 @@ The Management and Automation area focuses on tool and reference information for
 
 Windows PowerShell 5.0 includes significant new features, including support for developing with classes and new security features that extend its use, improve its usability, and allow you to control and manage Windows-based environments more easily and comprehensively. See [Windows Management Framework (WMF) 5.0 RTM Release Notes Overview](https://msdn.microsoft.com/powershell/wmf/5.0/releasenotes) for details.
 
-New additions for Windows Server 2016 include: the ability to run PowerShell.exe locally on Nano Server (no longer remote only), new Local Users & Groups cmdlets to replace the GUI, added PowerShell debugging support, and added support in Nano Server for security logging & transcription and JEA.   
+New additions for Windows Server 2016 include: the ability to run PowerShell.exe locally on Nano Server (no longer remote only), new Local Users & Groups cmdlets to replace the GUI, added PowerShell debugging support, and added support in Nano Server for security logging & transcription and JEA.
+
+Here are some other new administration features:
+
+### PowerShell Desired State Configuration (DSC) in Windows Management Framework (WMF) 5
+Windows Management Framework 5 includes updates to Windows PowerShell Desired State Configuration (DSC), Windows Remote Management (WinRM), and Windows Management Instrumentation (WMI).
+
+For more info about testing the DSC features of Windows Management Framework 5, see the series of blog posts discussed in [Validate features of PowerShell Desired State Configuration (DSC)](http://blogs.msdn.com/b/powershell/archive/2015/07/06/validate-features-of-powershell-dsc.aspx). To download, see [Windows Management Framework 5.0 ](https://www.microsoft.com/download/details.aspx?id=50395).
+
+### PackageManagement unified package management for software discovery, installation, and inventory
+Windows Server 2016 and Windows 10 includes a new PackageManagement feature (formerly called OneGet) that enables IT Professionals or DevOps to automate software discovery, installation, and inventory (SDII), locally or remotely, no matter what the installer technology is and where the software is located. 
+
+For more info, see [https://github.com/OneGet/oneget/wiki](https://github.com/OneGet/oneget/wiki).
+
+### PowerShell enhancements to assist digital forensics and help reduce security breaches
+To help the team responsible for investigating comprimised systems - sometimes known as the "blue team" - we've added additional PowerShell logging and other digital forensics functionality, and we've added functionality to help reduce vulnerabilities in scripts, such as constrained PowerShell, and secure CodeGeneration APIs.
+
+For more info, see [PowerShell hearts the Blue Team](http://blogs.msdn.com/b/powershell/archive/2015/06/09/powershell-the-blue-team.aspx).
 
 ## [Networking](../networking/Networking.md)  
 This area addresses networking products and features for the IT professional to design, deploy, and maintain Windows Server 2016.  
