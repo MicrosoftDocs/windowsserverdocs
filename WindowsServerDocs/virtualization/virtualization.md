@@ -13,16 +13,16 @@ ms.author: jamesmci
 
 >Applies To: Windows Server 2016 
 
-<img src="../get-started/media/virtualization.png" style='float:left; padding:.5em;' alt="Icon showing a box with spokes"> Virtualization in Windows Server 2016 is one of the foundational technologies required to create your software defined infrastructure. Along with networking and storage, virtualization features deliver the flexibility you need to power the workloads for your customers.
-
-Virtualization in Windows Server 2016 includes updates to Hyper-V that improve security, scalability, and reliability. Updates to failover clustering, networking, and storage make it even easier to deploy and manage these technologies when used with Hyper-V. For details, see [What's new in Hyper-V on Windows Server 2016](./hyper-v/what-s-new-in-hyper-v-on-windows.md).
-
-New to compute is Windows Containers, which offers another way to deploy flexible, software-based computing power. To try this out, see [Windows Containers Quick Start](https://msdn.microsoft.com/virtualization/windowscontainers/quick_start/quick_start).
+<img src="../get-started/media/virtualization.png" style='float:left; padding:.5em;' alt="Icon showing a box with spokes"> Virtualization in Windows Server 2016 is one of the foundational technologies required to create your software defined infrastructure. Along with networking and storage, virtualization features deliver the flexibility you need to power workloads for your customers.
 
 >[!Note]
 > To download Windows Server 2016, see [Windows Server Evaluations](https://www.microsoft.com/evalcenter/evaluate-windows-server).
 
-The following sections contain brief technology overviews and links to Windows Server Virtualization technology documentation.
+Windows Server 2016 Virtualization technologies include updates to Hyper-V, Hyper-V Virtual Switch, and Guarded Fabric and Shielded Virtual Machines \(VMs\), that improve security, scalability, and reliability. Updates to failover clustering, networking, and storage make it even easier to deploy and manage these technologies when used with Hyper-V. 
+
+Windows Containers is a new technology that offers you another way to deploy flexible, software-based computing power. 
+
+The following sections contain brief technology overviews and links to Virtualization documentation.
 
 ## [Guarded Fabric and Shielded VMs](guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node.md)
 
@@ -45,7 +45,13 @@ The Hyper-V technology is also available separately from Windows and Windows Ser
 
 ## [Hyper-V Virtual Switch](hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md)
 
-The Hyper-V Virtual Switch is a software-based layer-2 Ethernet network switch that is available in Hyper-V Manager when you install the Hyper-V server role. The switch includes programmatically managed and extensible capabilities to connect virtual machines to both virtual networks and the physical network. In addition, Hyper-V Virtual Switch provides policy enforcement for security, isolation, and service levels.
+The Hyper\-V Virtual Switch is a software\-based layer\-2 Ethernet network switch that is included in Hyper\-V.
+
+Hyper\-V Virtual Switch is available in Hyper\-V Manager after you install the Hyper\-V server role. 
+
+Included in Hyper\-V Virtual Switch are programmatically managed and extensible capabilities that allow you to connect virtual machines to both virtual networks and the physical network. 
+
+In addition, Hyper-V Virtual Switch provides policy enforcement for security, isolation, and service levels.
 
 ## Additional Virtualization Technologies for Windows Server 2016 and Windows 10
 
