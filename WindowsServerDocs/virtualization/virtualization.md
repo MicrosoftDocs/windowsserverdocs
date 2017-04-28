@@ -45,7 +45,7 @@ The Hyper-V technology is also available separately from Windows and Windows Ser
 
 ## [Hyper-V Virtual Switch](hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md)
 
-The Hyper\-V Virtual Switch is a software\-based layer\-2 Ethernet network switch that is included in Hyper\V.
+The Hyper\-V Virtual Switch is a software\-based layer\-2 Ethernet network switch that is included in Hyper\-V.
 
 Hyper\-V Virtual Switch is available in Hyper\-V Manager after you install the Hyper\-V server role. 
 
