@@ -19,13 +19,13 @@ ms.technology: web-app-proxy
   
 The content in this section describes what's new and changed in the Web Application Proxy for Windows Server 2016. The new features and changes listed here are the ones most likely to have the greatest impact as you work with the Preview.  
   
-## Web Application Proxy New Features  
+## Web Application Proxy new features in Windows Server 2016
   
 -   Preauthentication for HTTP Basic application publishing  
   
     HTTP Basic is the authorization protocol used by many protocols, including ActiveSync, to connect rich clients, including smartphones, with your Exchange mailbox. Web Application Proxy traditionally interacts with AD FS using redirections which is not supported on ActiveSync clients. This new version of Web Application Proxy provides support to publish an app using HTTP basic by enabling the HTTP app to receive a non-claims relying party trust for the application to the Federation Service.  
   
-    For more information on HTTP basic publishing, see [Publishing Applications using AD FS Preauthentication](../web-application-proxy/../web-application-proxy/Publishing-Applications-using-AD-FS-Preauthentication.md)  
+    For more information on HTTP basic publishing, see [Publishing Applications using AD FS Preauthentication](Publishing-Applications-using-AD-FS-Preauthentication.md#Publish-an-Application-that-uses-HTTP-Basic)  
   
 -   Wildcard domain publishing of applications  
   
