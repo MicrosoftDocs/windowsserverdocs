@@ -19,7 +19,6 @@ A module manifest that does not use the following guidelines can have a noticeab
 
 Command auto-discovery analyzes each module to determine which commands the module exports and this analysis can be expensive.
 The results of module analysis are cached per user, but the cache isn't available on first run, which is a typical scenario with containers.
-
 During module analysis, if the exported commands can be fully determined from the manifest, more expensive analysis of the module can be avoided.
 
 ### Guidelines
@@ -57,13 +56,13 @@ When deciding how to implement your module, there are three primary choices:
 
 * Binary (usually C#)
 * Script (PowerShell)
-* CDXML (an xml file wrapping CIM)
+* CDXML (an XML file wrapping CIM)
 
 If the speed of loading your module is important, CDXML is roughly an order of magnitude slower than a binary module.
 
-A binary module loads the fastest because it is compiled ahead of time and can use ngen to jit compile once per machine.
+A binary module loads the fastest because it is compiled ahead of time and can use NGen to JIT compile once per machine.
 
 A script module typically loads a bit more slowly than a binary module because PowerShell must parse the script before compiling and executing it.
 
-A CDXML module is typically much slower than a script module because it must first parse an xml file which then generates quite a bit of PowerShell script that is then parsed and compiled.
+A CDXML module is typically much slower than a script module because it must first parse an XML file which then generates quite a bit of PowerShell script that is then parsed and compiled.
 
