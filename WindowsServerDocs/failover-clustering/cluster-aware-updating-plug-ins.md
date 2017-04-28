@@ -6,8 +6,9 @@ ms.prod: windows-server-threshold
 manager: dongill
 ms.author: jgerend
 author: JasonGerend
-ms.date: 4/24/2017
+ms.date: 4/28/2017
 ms.technology: storage-failover-clustering
+description: How to use plug-ins to coordinate updates when using Cluster-Aware Updating in Windows Server to install updates on a cluster.
 ---
 # How Cluster-Aware Updating plug-ins work
 

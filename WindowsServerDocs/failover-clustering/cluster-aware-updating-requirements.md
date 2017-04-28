@@ -7,8 +7,8 @@ ms.manager: dongill
 author: JasonGerend
 ms.author: jgerend
 ms.technology: storage-failover-clustering
-ms.date: 3/23/2017
-description: Cluster-Aware Updating (CAU) automates software update installation on clusters running Windows Server.
+ms.date: 4/28/2017
+description: Requirements for using Cluster-Aware Updating to install updates on clusters running Windows Server.
 ---
 # Cluster-Aware Updating requirements and best practices
 
