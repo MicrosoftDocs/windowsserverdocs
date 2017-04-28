@@ -13,11 +13,11 @@ manager: lizapo
 ms.date: 02/28/2017
 ---
 
->Applies To: Windows Server 2016, Windows Server 2012 R2
+>Applies to: Windows Server 2016, Windows Server 2012 R2
 
 # Get started with Server Management Tools (SMT)
 
-Server management tools is a set of web-based GUI and command line tools to manage on-premises Windows Servers from Azure. 
+Server management tools is a set of web-based GUI and command-line tools to manage on-premises Windows Servers from Azure. 
 
 The following video (3:46) highlights SMT features:
 
@@ -25,7 +25,7 @@ The following video (3:46) highlights SMT features:
 
 ## What is SMT?
 
-[SMT](https://portal.azure.com/#create/Microsoft.RSMTNodes/preview), hosted in Azure, enables management of headless Windows Servers, such as Nano Server and Server Core, providing rapid access to your Azure and on premises Windows Server 2016 Servers.
+[SMT](https://portal.azure.com/#create/Microsoft.RSMTNodes/preview), hosted in Azure, enables management of headless Windows Servers, such as Nano Server and Server Core, providing rapid access to your Azure and on-premises Windows Server 2016 servers.
 
 With SMT, you can do the following:
 
@@ -41,13 +41,13 @@ With SMT, you can do the following:
 
 -   Use a PowerShell console to manage and automate
 
-## How is SMT Different from Remote Server Administrative Tools (RSAT)? 
+## How is SMT different from Remote Server Administrative Tools (RSAT)? 
 
 RSAT is a set of remote server management tools that you can download and install on Windows 10. They include support for remote management of computers that are running the Server Core installation option or the Minimal Server Interface configuration of Windows Server 2016, Windows Server 2012 R2, and in limited cases, the Server Core installation options of Windows Server 2012. For more information about RSAT, see [Remote Server Administration Tools](https://technet.microsoft.com/windows-server-docs/management/remote-server-administration-tools).
 
 ## SMT gateway
 
-An SMT gateway is required to enable communication between the Microsoft Azure portal and your Windows Server 2016 machines. A gateway is typically deployed and configured on the same local network as the Windows Server machine(s) you want to manage. The on premises machine must have an internet connection to communicate with the Azure portal as shown in the following illustration:
+An SMT gateway is required to enable communication between the Microsoft Azure portal and your Windows Server 2016 machines. A gateway is typically deployed and configured on the same local network as the Windows Server machine(s) you want to manage. The on-premises machine must have an internet connection to communicate with the Azure portal as shown in the following illustration:
 
 ![](./media/get-started-with-smt/image1.png)
 
@@ -69,7 +69,7 @@ This will open a form prompting you to fill out the information for the connecti
 
 ![](./media/get-started-with-smt/image2.png)
 
-Provide the NAME / IP / FQDN of the machine you want to connect to. If you have an existing resource group and gateway, you may opt to select them here rather than create a new group or gateway.
+Provide the NAME/IP/FQDN of the machine you want to connect to. If you have an existing resource group and gateway, you may opt to select them here rather than create a new group or gateway.
 
 If this is the first SMT connection you are creating, you will also need to create a new SMT gateway and give it a name. You will be prompted to complete the gateway configuration after the SMT connection is created.
 
@@ -103,17 +103,17 @@ To connect to workgroup machines (e.g. non-domain-joined Nano servers), run the 
 
 
 
-**TargetMachineNameOrAddress** should be the NetBIOS name, FQDN or IP address (IPv4 or IPv6) that you specified when creating the SMT connection in Azure (which is also the name displayed at the top of the blade). You can also add multiple machines by separating them with commas.
+**TargetMachineNameOrAddress** should be the NetBIOS name, FQDN, or IP address (IPv4 or IPv6) that you specified when creating the SMT connection in Azure (which is also the name displayed at the top of the blade). You can also add multiple machines by separating them with commas.
 
 > [!NOTE]
-> The commands above will replace any previous list of registered trusted hosts with the host(s) you specify in the command. You can use the following command in PowerShell with the **Concatenate** parameter to add a computer name to an existing list of trusted hosts: **Set-Item wsman:\\localhost\\Client\\TrustedHosts TargetMachineNameOrAddress –Concatenate**
+> The commands above will replace any previous list of registered trusted hosts with the host(s) you specify in the command. You can use the following command in PowerShell with the **Concatenate** parameter to add a computer name to an existing list of trusted hosts: `Set-Item wsman:\localhost\Client\TrustedHosts TargetMachineNameOrAddress –Concatenate`
 
 ### Additional connectivity requirements
 
 If you want to connect using the local Administrator account, you will need to enable this policy on the target machine by running the following command in an administrator session on the target machine:
 
-**REG ADD HKLMSOFTWAREMicrosoftWindowsCurrentVersionPoliciesSystem /v LocalAccountTokenFilterPolicy /t REG\_DWORD /d 1**
+`REG ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v LocalAccountTokenFilterPolicy /t REG\_DWORD /d 1`
 
 If you will connect to a workgroup machine that is not on the same subnet as the gateway, run the following command in an administrator session on the target machine:
 
-**NETSH advfirewall firewall add rule name=”WinRM 5985” protocol=TCP dir=in localport=5985 action=allow**
+`NETSH advfirewall firewall add rule name=”WinRM 5985” protocol=TCP dir=in localport=5985 action=allow`
