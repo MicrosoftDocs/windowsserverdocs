@@ -1,3 +1,3 @@
 ---
-redirect_url: What-s-New-in-windows-server-2016.md
+redirect_url: What-s-New-in-windows-server-2016
 ---
