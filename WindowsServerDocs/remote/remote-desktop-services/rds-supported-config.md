@@ -38,11 +38,9 @@ So with that in mind, here are basic guidelines for supported configurations of 
 
 ## RD Connection Brokers
 
-Windows Server 2016 removes the restriction for the number of Connection Brokers you can have in a deployment when using Remote Desktop Session Hosts (RDSH) and Remote Desktop Virtualization Hosts (RDVH) that also run Windows Server 2016.
+Windows Server 2016 removes the restriction for the number of Connection Brokers you can have in a deployment when using Remote Desktop Session Hosts (RDSH) and Remote Desktop Virtualization Hosts (RDVH) that also run Windows Server 2016. The following table shows which versions of RDS components work with the 2016 and 2012 R2 versions of the Connection Broker in a highly available deployment with three or more Connection Brokers.
 
-The following table shows which versions of RDS components work with the 2016 and 2012 R2 versions of the Connection Broker in a highly available deployment with more than two Connection Brokers.
-
-| 2+ Connection Brokers in HA              | RDSH 2016 | RDVH 2016 | RDSH 2012 R2  | RDVH 2012 R2  |
+| 3+ Connection Brokers in HA              | RDSH 2016 | RDVH 2016 | RDSH 2012 R2  | RDVH 2012 R2  |
 |------------------------------------------|-----------|-----------|---------------|---------------|
 | Windows Server 2016 Connection Broker    | Supported | Supported | Not supported | Not supported |
 | Windows Server 2012 R2 Connection Broker | N/A       | N/A       | Not supported | Not supported |
@@ -79,5 +77,22 @@ The table below shows the supported RD Virtualization Hosts operating systems an
 > - Windows Server 2016 Remote Desktop Services does not support heterogeneous collections. All VMs in a collection must be same OS version. 
 > - You can have separate homogeneous collections with different guest OS versions on the same host. 
 > - VM templates must be created on a Windows Server 2016 Hyper-V host to used as guest OS on a Windows Server 2016 Hyper-V host.
+
+## Single Sign-On (SSO)
+Windows Server 2016 RDS supports two main SSO experiences:
+
+ - In-app (Remote Desktop application on Windows, iOS, Android, and Mac)
+ - Web SSO
+ 
+Using the Remote Desktop application, you can store credentials either as part of the connection info ([Mac](clients\remote-desktop-mac.md)) or as part of managed accounts ([iOS](\clients\remote-desktop-ios.md#Manage_your_user_accounts), [Android](\clients\remote-desktop-android.md#Manage_your_user_accounts), Windows) securely through the mechanisms unique to each OS.
+
+To connect to desktops and RemoteApps with SSO through the inbox Remote Desktop Connection client on Windows, you must connect to the RD Web page through Internet Explorer. The following configuration options are required on the server side. No other configurations are supported for Web SSO:
+
+ - RD Web set to Forms-Based Authentication (Default)
+ - RD Gateway set to Password Authentication (Default)
+ - RDS Deployment set to "Use RD Gateway credentials for remote computers" (Default) in the RD Gateway properties
+
+> [!NOTE]
+> Due to the required configuration options, Web SSO is not supported with smartcards. Users who login via smartcards might face multiple prompts to login.
 
 For more information about creating VDI deployment of Remote Desktop Services, check out [Supported Windows 10 security configurations for Remote Desktop Services VDI](rds-vdi-supported-config.md).
