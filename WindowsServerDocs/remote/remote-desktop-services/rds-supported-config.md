@@ -38,8 +38,7 @@ So with that in mind, here are basic guidelines for supported configurations of 
 
 ## RD Connection Brokers
 
-Windows Server 2016 removes the restriction for the number of Connection Brokers you can have in a deployment when using Remote Desktop Session Hosts (RDSH) and Remote Desktop Virtualization Hosts (RDVH) that also run Windows Server 2016.
-The following table shows which versions of RDS components work with the 2016 and 2012 R2 versions of the Connection Broker in a highly available deployment with more than two Connection Brokers.
+Windows Server 2016 removes the restriction for the number of Connection Brokers you can have in a deployment when using Remote Desktop Session Hosts (RDSH) and Remote Desktop Virtualization Hosts (RDVH) that also run Windows Server 2016. The following table shows which versions of RDS components work with the 2016 and 2012 R2 versions of the Connection Broker in a highly available deployment with more than two Connection Brokers.
 
 | 3+ Connection Brokers in HA              | RDSH 2016 | RDVH 2016 | RDSH 2012 R2  | RDVH 2012 R2  |
 |------------------------------------------|-----------|-----------|---------------|---------------|
