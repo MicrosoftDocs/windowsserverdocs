@@ -9,10 +9,11 @@
     ms.technology: networking-sdn
     ms.tgt_pltfrm: na
     ms.topic: article
-    ms.assetid: 
+    ms.assetid: e9a8f2fd-48fe-4a90-9250-f6b32488b7a4
     ms.author: grcusanz
     author: grcusanz
     ---
+    
 # Update, Backup, and Restore Software Defined Networking Infrastructure
 
 >Applies To: Windows Server 2016
