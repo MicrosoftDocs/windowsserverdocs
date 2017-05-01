@@ -14,7 +14,7 @@ description: How to use plug-ins to coordinate updates when using Cluster-Aware 
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Cluster-Aware Updating (CAU) uses plug-ins to coordinate the installation of updates across nodes in a failover cluster. This topic provides information about using the built\-in CAU plug\-ins or other plug\-ins that you install for CAU.
+[Cluster-Aware Updating](cluster-aware-updating.md) (CAU) uses plug-ins to coordinate the installation of updates across nodes in a failover cluster. This topic provides information about using the built\-in CAU plug\-ins or other plug\-ins that you install for CAU.
 
 ## <a name="BKMK_INSTALL"></a>Install a plug\-in  
 A plug\-in other than the default plug\-ins that are installed with CAU \(**Microsoft.WindowsUpdatePlugin** and **Microsoft.HotfixPlugin**\) must be installed separately. If CAU is used in self\-updating mode, the plug\-in must be installed on all cluster nodes. If CAU is used in remote\-updating mode, the plug\-in must be installed on the remote Update Coordinator computer. A plug\-in that you install may have additional installation requirements on each node.  
