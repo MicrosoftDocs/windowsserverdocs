@@ -438,4 +438,5 @@ You may use in-box tools or other tools to manage the storage and virtual machin
 -   [Understand the cache in Storage Spaces Direct](understand-the-cache.md)
 -   [Planning volumes in Storage Spaces Direct](plan-volumes.md)
 -   [Storage Spaces Fault Tolerance](storage-spaces-fault-tolerance.md)
--   [Storage Spaces Direct Hardware Requirements](Storage-Spaces-Direct-Hardware-Requirements.md)  
+-   [Storage Spaces Direct Hardware Requirements](Storage-Spaces-Direct-Hardware-Requirements.md)
+-   [To RDMA, or not to RDMA – that is the question](https://blogs.technet.microsoft.com/filecab/2017/03/27/to-rdma-or-not-to-rdma-that-is-the-question/) (TechNet blog)

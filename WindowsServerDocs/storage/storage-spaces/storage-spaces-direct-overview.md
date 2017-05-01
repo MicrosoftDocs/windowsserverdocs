@@ -190,8 +190,7 @@ Here's an overview of the Storage Spaces Direct stack:
 Try Storage Spaces Direct [in Microsoft Azure](https://blogs.technet.microsoft.com/filecab/2016/05/05/s2dazuretp5/), or download a 180-day-licensed evaluation copy of Windows Server from [Windows Server Evaluations](https://go.microsoft.com/fwlink/?linkid=842602).
 
 ## See also  
--   [(VIDEO) Discover Storage Spaces Direct at Microsoft Ignite 2016](https://www.youtube.com/watch?v=-LK2ViRGbWs)
--   [Hyper-converged solution using Storage Spaces Direct](hyper-converged-solution-using-storage-spaces-direct.md)
+-   [Storage Spaces Direct throughput with iWARP](https://blogs.technet.microsoft.com/filecab/2017/03/13/storage-spaces-direct-throughput-with-iwarp) (TechNet blog)
 -   [Fault tolerance and storage efficiency](storage-spaces-fault-tolerance.md)
 -   [What's New in Failover Clustering in Windows Server](../../failover-clustering/whats-new-in-failover-clustering.md)  
 -   [Storage Replica in Windows Server 2016](../storage-replica/storage-replica-overview.md)  

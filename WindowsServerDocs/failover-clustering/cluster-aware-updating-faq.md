@@ -14,7 +14,7 @@ description: Answers to frequently asked questions about Cluster-Aware Updating 
 
 > Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Cluster\-Aware Updating \(CAU\) is a feature that coordinates software updates on all servers in a failover cluster in a way that doesn't impact the service availability any more than a planned failover of a cluster node. For some applications with continuous availability features \(such as Hyper\-V with live migration, or an SMB 3.x file server with SMB Transparent Failover\), CAU can coordinate automated cluster updating with no impact on service availability.
+[Cluster-Aware Updating](cluster-aware-updating.md) \(CAU\) is a feature that coordinates software updates on all servers in a failover cluster in a way that doesn't impact the service availability any more than a planned failover of a cluster node. For some applications with continuous availability features \(such as Hyper\-V with live migration, or an SMB 3.x file server with SMB Transparent Failover\), CAU can coordinate automated cluster updating with no impact on service availability.
 
 ## Does CAU support updating Storage Spaces Direct clusters?  
 Yes. CAU supports updating [Storage Spaces Direct](../storage/storage-spaces/storage-spaces-direct-overview.md) clusters regardless of the deployment type: hyper-converged or converged. Specifically, CAU orchestration ensures that suspending each cluster node waits for the underlying clustered storage space to be healthy.
