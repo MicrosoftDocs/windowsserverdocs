@@ -1,19 +1,15 @@
-    ---
-    title: Update, Backup, and Restore Software Defined Networking Infrastructure
-    description: This topic is part of the Software Defined Networking guide on how to Update, Backup and Restore SDN infrastructure in Windows Server 2016.
-    manager: brianlic
-    ms.custom: na
-    ms.prod: windows-server-threshold
-    ms.reviewer: na
-    ms.suite: na
-    ms.technology: networking-sdn
-    ms.tgt_pltfrm: na
-    ms.topic: article
-    ms.assetid: e9a8f2fd-48fe-4a90-9250-f6b32488b7a4
-    ms.author: grcusanz
-    author: grcusanz
-    ---
-    
+---
+title: Update, Backup, and Restore Software Defined Networking Infrastructure
+description: This topic is part of the Software Defined Networking guide on how to Update, Backup and Restore SDN infrastructure in Windows Server 2016.
+manager: brianlic
+ms.prod: windows-server-threshold
+ms.technology: networking-sdn
+ms.topic: article
+ms.assetid: e9a8f2fd-48fe-4a90-9250-f6b32488b7a4
+ms.author: grcusanz
+author: grcusanz
+---
+
 # Update, Backup, and Restore Software Defined Networking Infrastructure
 
 >Applies To: Windows Server 2016
