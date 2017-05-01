@@ -31,4 +31,5 @@ This section contains the following topics.
   
 - [Manage Tenant Virtual Networks](Manage-Tenant-Virtual-Networks.md)
 - [Manage Tenant Workloads](Manage-Tenant-Workloads.md)
+- [Update, Backup, and Restore Software Defined Networking Infrastructure](Update-Backup-Restore.md)
 
