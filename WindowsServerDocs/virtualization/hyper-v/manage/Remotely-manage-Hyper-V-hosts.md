@@ -108,11 +108,15 @@ To do this:
 
 1. Create the necessary firewall rules for private network zones: 	
    
-   ```Enable-PSRemoting```
+   ```
+   Enable-PSRemoting
+   ```
 
 2. To allow remote access on public zones, enable firewall rules for CredSSP and WinRM:
   
-   ```Enable-WSManCredSSP -Role server```
+   ```
+   Enable-WSManCredSSP -Role server
+   ```
 
     For details, see [Enable-PSRemoting](https://technet.microsoft.com/library/hh849694.aspx) and [Enable-WSManCredSSP](https://technet.microsoft.com/library/hh849872.aspx).
 
@@ -121,8 +125,12 @@ Next, configure the computer you'll use to manage the Hyper-V host.
 1. Open a Windows PowerShell session as Administrator.
 1. Run these commands:
 
-     ```Set-Item WSMan:\localhost\Client\TrustedHosts -Value "fqdn-of-hyper-v-host"```<br>
-     ```Enable-WSManCredSSP -Role client -DelegateComputer "fqdn-of-hyper-v-host"```
+     ```
+     Set-Item WSMan:\localhost\Client\TrustedHosts -Value "fqdn-of-hyper-v-host"
+     ```
+     ```
+     Enable-WSManCredSSP -Role client -DelegateComputer "fqdn-of-hyper-v-host"
+     ```
 1. You might also need to configure the following group policy: 
     * **Computer Configuration** \> **Administrative Templates** \> **System** \> **Credentials Delegation** \> **Allow delegating fresh credentials with NTLM-only server authentication**
     * Click **Enable** and add *wsman/fqdn-of-hyper-v-host*.
@@ -151,7 +159,9 @@ On Windows, Hyper-V Manager is available on [any Windows operating system that i
 
 To use Windows PowerShell, run the following command as Administrator:
 
-```add-windowsfeature rsat-hyper-v-tools```
+```
+add-windowsfeature rsat-hyper-v-tools
+```
 
 ## See also  
  
