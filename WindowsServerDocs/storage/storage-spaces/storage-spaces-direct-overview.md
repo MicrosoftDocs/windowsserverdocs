@@ -191,7 +191,6 @@ Try Storage Spaces Direct [in Microsoft Azure](https://blogs.technet.microsoft.c
 
 ## See also  
 -   [Storage Spaces Direct throughput with iWARP](https://blogs.technet.microsoft.com/filecab/2017/03/13/storage-spaces-direct-throughput-with-iwarp) (TechNet blog)
-
 -   [Fault tolerance and storage efficiency](storage-spaces-fault-tolerance.md)
 -   [What's New in Failover Clustering in Windows Server](../../failover-clustering/whats-new-in-failover-clustering.md)  
 -   [Storage Replica in Windows Server 2016](../storage-replica/storage-replica-overview.md)  
