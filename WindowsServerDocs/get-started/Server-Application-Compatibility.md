@@ -5,14 +5,14 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.date: 12/15/2016
+ms.date: 04/28/2017
 ms.technology: server-general
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2afe7c32-1fda-4441-989b-1415dabddc72
 author: jaimeo
 ms.author: jaimeo
-manager: dongill
+manager: elizapo
 ---
 # Windows Server 2016 and Microsoft Server Application Compatibility
 
@@ -38,5 +38,6 @@ For customers and software vendor partners looking for more information on Windo
 |Host Integration Server 2016|	Yes|	[What's New in HIS 2016](https://msdn.microsoft.com/library/mt670807.aspx)|
 |Visual Studio Team Foundation Server 2017|	Yes|	[Team Foundation Server 2017](https://www.visualstudio.com/news/releasenotes/tfs2017-relnotes)| 
 |Skype for Business Server 2015|	No|	[Server requirements for Skype for Business Server 2015](https://technet.microsoft.com/library/dn951388.aspx)|
+|Office Online Server|   Yes|  [Plan Office Online Server](https://technet.microsoft.com/en-us/library/jj219435(v=office.16).aspx)|
 
 
