@@ -18,6 +18,16 @@ This topic lists new and updated topics in the [Failover Clustering](failover-cl
 
 > If you're looking for update history for Windows Server 2016, see [Windows 10 and Windows Server 2016 update history](https://support.microsoft.com/help/4000825/windows-10-and-windows-server-2016-update-history).
 
+## April 2017
+
+|New or changed topic|Description|
+|---|---|
+|[Cluster-Aware Updating overview](cluster-aware-updating.md)|New topic.|
+|[Cluster-Aware Updating requirements and best practices](cluster-aware-updating-requirements.md)|New topic.|
+|[Cluster-Aware Updating advanced options](cluster-aware-updating-options.md)|New topic.|
+|[Cluster-Aware Updating FAQ](cluster-aware-updating-faq.md)|New topic.|
+|[Cluster-Aware Updating plug-ins](cluster-aware-updating-plug-ins.md)|New topic.|
+
 ## March 2017
 
 |New or changed topic|Description|
