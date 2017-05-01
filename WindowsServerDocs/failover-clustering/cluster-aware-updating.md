@@ -15,13 +15,13 @@ ms.assetid: 3c2993b4-aa81-452b-a5c3-3724ad95d892
 
 > Applies to: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-This topic provides an overview of Cluster\-Aware Updating \(CAU\), a feature that automates the software updating process on clustered servers while maintaining availability. 
+This topic provides an overview of Cluster\-Aware Updating \(CAU\), a feature that automates the software updating process on clustered servers while maintaining availability.
 
 > [!NOTE]
-> When updating Storage Spaces Direct clusters, we recommend using Cluster-Aware Updating.
+> When updating [Storage Spaces Direct](../storage/storage-spaces/storage-spaces-direct-overview.md) clusters, we recommend using Cluster-Aware Updating.
   
 ## <a name="BKMK_OVER"></a>Feature description  
-Cluster-Aware Updating is an automated feature that enables you to update clustered servers with little or no loss in availability during the update process. During an Updating Run, Cluster-Aware Updating transparently performs the following tasks:  
+Cluster-Aware Updating is an automated feature that enables you to update servers in a [failover cluster](failover-clustering-overview.md) with little or no loss in availability during the update process. During an Updating Run, Cluster-Aware Updating transparently performs the following tasks:  
 
 1. Puts each node of the cluster into node maintenance mode.
 2. Moves the clustered roles off the node.

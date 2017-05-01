@@ -14,7 +14,7 @@ description: How to configure advanced options and updating run profiles for Clu
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-This topic describes Updating Run options that can be configured for a Cluster-Aware Updating (CAU) Updating Run. These advanced options can be configured when you use either the CAU UI or the CAU Windows PowerShell cmdlets to apply updates or to configure self-updating options.
+This topic describes Updating Run options that can be configured for a [Cluster-Aware Updating](cluster-aware-updating.md) (CAU) Updating Run. These advanced options can be configured when you use either the CAU UI or the CAU Windows PowerShell cmdlets to apply updates or to configure self-updating options.
 
 Most configuration settings can be saved as an XML file called an Updating Run Profile and reused for later Updating Runs. The default values for the Updating Run options that are provided by CAU can also be used in many cluster environments.
 
