@@ -105,9 +105,11 @@ Requirements:
 
 Follow these steps to perform a backup:
 
-1. Backup the Network Controller VMs using the VM backup method of your choice, or use Hyper-V to export a copy of each Network Controller VM.  This will ensure that if a full rebuild including restoration of the infrastructure VMs is performed, the necessary certificates for decrypting the database are present.
-2. If you are using System Center Virtual Machine Manager (SCVMM), stop the SCVMM service and back it up via SQL Server to ensure that no updates are made to SCVMM during this time which could create an inconsistency between the Network Controller backup and SCVMM.  Do not re-start the SCVMM service until the Network Controller backup is complete.
-3. Backup the Network Controller database using new-networkcontrollerbackup.
+### Step 1: Backup the Network Controller VMs using the VM backup method of your choice, or use Hyper-V to export a copy of each Network Controller VM.  This will ensure that if a full rebuild including restoration of the infrastructure VMs is performed, the necessary certificates for decrypting the database are present.
+
+### Step 2: If you are using System Center Virtual Machine Manager (SCVMM), stop the SCVMM service and back it up via SQL Server to ensure that no updates are made to SCVMM during this time which could create an inconsistency between the Network Controller backup and SCVMM.  Do not re-start the SCVMM service until the Network Controller backup is complete.
+
+### Step 3: Backup the Network Controller database using new-networkcontrollerbackup.
 
 #### Example: Backing up the Network Controller database
 ```Powershell
@@ -139,7 +141,7 @@ $BackupProperties.Credential = $ShareCredential
 $Backup = New-NetworkControllerBackup -ConnectionURI $URI -Credential $Credential -Properties $BackupProperties -ResourceId $BackupTime -Force
 ```
 
-4. Use get-networkcontrollerbackup to check for completion and success of the backup.
+### Step 4: Use get-networkcontrollerbackup to check for completion and success of the backup.
 
 #### Example: Checking the status of a Network Controller backup operation
 
@@ -226,76 +228,76 @@ PS C:\ > Get-NetworkControllerBackup -ConnectionUri $URI -Credential $Credential
 }
 ```
 
-5.	If using SCVMM you can now start SCVMM service.
+### Step 5:	If using SCVMM you can now start SCVMM service.
 
 ## <a name="bkmk_restore"></a>Restore the SDN infrastructure from a backup
 
 Restore is the process of restoring all necessary components from backup to return an SDN environment to an operational state.  The steps will vary slightly depending on the amount of components that are being restored.
 
-1. If necessary, redeploy Hyper-V hosts and the necessary storage.
+### Step 1: If necessary, redeploy Hyper-V hosts and the necessary storage.
 
-2. If necessary, restore the Network Controller VMs, RAS Gateway VMs and Mux VMs from backup. 
+### Step 2: If necessary, restore the Network Controller VMs, RAS Gateway VMs and Mux VMs from backup. 
 
-3. Stop NC Host Agent and SLB Host Agent on all Hyper-V hosts
+### Step 3: Stop NC Host Agent and SLB Host Agent on all Hyper-V hosts
 
-    ```
-    stop-service slbhostagent
+```
+stop-service slbhostagent
 
-    stop-service nchostagent
-    ```
+stop-service nchostagent
+```
 
-4. Stop RAS Gateway VMs
+### Step 4: Stop RAS Gateway VMs
 
-5. Stop SLB Mux VMs
+### Step 5: Stop SLB Mux VMs
 
-6. Restore the Network Controller using the new-networkcontrollerrestore cmdlet.
+### Step 6: Restore the Network Controller using the new-networkcontrollerrestore cmdlet.
 
- #### Example: Restoring a Network Controller database
+#### Example: Restoring a Network Controller database
  
-    ```Powershell
-    $URI = "https://NC.contoso.com"
-    $Credential = Get-Credential
+```Powershell
+$URI = "https://NC.contoso.com"
+$Credential = Get-Credential
 
-    $ShareUserResourceId = "BackupUser"
-    $ShareCredential = Get-NetworkControllerCredential -ConnectionURI $URI -Credential $Credential | Where {$_.ResourceId -eq $ShareUserResourceId }
+$ShareUserResourceId = "BackupUser"
+$ShareCredential = Get-NetworkControllerCredential -ConnectionURI $URI -Credential $Credential | Where {$_.ResourceId -eq $ShareUserResourceId }
 
-    $RestoreProperties = New-Object Microsoft.Windows.NetworkController.NetworkControllerRestoreProperties
-    $RestoreProperties.RestorePath = "\\fileshare\backups\NetworkController\2017-04-25T16_53_13"
-    $RestoreProperties.Credential = $ShareCredential
+$RestoreProperties = New-Object Microsoft.Windows.NetworkController.NetworkControllerRestoreProperties
+$RestoreProperties.RestorePath = "\\fileshare\backups\NetworkController\2017-04-25T16_53_13"
+$RestoreProperties.Credential = $ShareCredential
 
-    $RestoreTime = (Get-Date).ToString("s").Replace(":", "_")
-    New-NetworkControllerRestore -ConnectionURI $URI -Credential $Credential -Properties $RestoreProperties -ResourceId $RestoreTime -Force
-    ```
+$RestoreTime = (Get-Date).ToString("s").Replace(":", "_")
+New-NetworkControllerRestore -ConnectionURI $URI -Credential $Credential -Properties $RestoreProperties -ResourceId $RestoreTime -Force
+```
 
-7. Check the restore ProvisioningState to know when the restore had completed successfully.
+### Step 7: Check the restore ProvisioningState to know when the restore had completed successfully.
 
- #### Example: Checking the status of a Network Controller database restore
+#### Example: Checking the status of a Network Controller database restore
 
-    ```
-    PS C:\ > get-networkcontrollerrestore -connectionuri $uri -credential $cred -ResourceId $restoreTime | convertto-json -depth 10
-    {
-        "Tags":  null,
-        "ResourceRef":  "/networkControllerRestore/2017-04-26T15_04_44",
-        "InstanceId":  "22edecc8-a613-48ce-a74f-0418789f04f6",
-        "Etag":  "W/\"f14f6b84-80a7-4b73-93b5-59a9c4b5d98e\"",
-        "ResourceMetadata":  null,
-        "ResourceId":  "2017-04-26T15_04_44",
-        "Properties":  {
-                        "RestorePath":  "\\\\sa18fs\\sa18n22\\NetworkController\\2017-04-25T16_53_13",
-                        "ErrorMessage":  null,
-                        "FailedResourcesList":  null,
-                        "SuccessfulResourcesList":  null,
-                        "ProvisioningState":  "Succeeded",
-                        "Credential":  null
-                    }
-    }
-    ```
+```
+PS C:\ > get-networkcontrollerrestore -connectionuri $uri -credential $cred -ResourceId $restoreTime | convertto-json -depth 10
+{
+    "Tags":  null,
+    "ResourceRef":  "/networkControllerRestore/2017-04-26T15_04_44",
+    "InstanceId":  "22edecc8-a613-48ce-a74f-0418789f04f6",
+    "Etag":  "W/\"f14f6b84-80a7-4b73-93b5-59a9c4b5d98e\"",
+    "ResourceMetadata":  null,
+    "ResourceId":  "2017-04-26T15_04_44",
+    "Properties":  {
+                    "RestorePath":  "\\\\sa18fs\\sa18n22\\NetworkController\\2017-04-25T16_53_13",
+                    "ErrorMessage":  null,
+                    "FailedResourcesList":  null,
+                    "SuccessfulResourcesList":  null,
+                    "ProvisioningState":  "Succeeded",
+                    "Credential":  null
+                }
+}
+```
 
-8. If using SCVMM, restore the SCVMM database using the backup that was created at the same time as the Network Controller backup.
+### Step 8: If using SCVMM, restore the SCVMM database using the backup that was created at the same time as the Network Controller backup.
 
-9. If workload VMs are being restored from backup, you can do that now.
+### Step 9: If workload VMs are being restored from backup, you can do that now.
 
-10. Use the debug-networkcontrollerconfigurationstate cmdlet to check the health of your system.
+### Step 10: Use the debug-networkcontrollerconfigurationstate cmdlet to check the health of your system.
 
 ```Powershell
 $cred = Get-Credential
