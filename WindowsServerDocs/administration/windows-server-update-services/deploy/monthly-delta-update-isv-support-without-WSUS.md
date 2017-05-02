@@ -32,7 +32,7 @@ There are two variants of the monthly security update: Delta and Cumulative.
 Monthly Delta update is new, and an interim solution for ISVs who do not have WSUS available to help reduce update package sizes.
 
 >[!IMPORTANT]
->**Delta update will only be available for servicing of Windows 10 Anniversary (1607) and Creator (1704) releases**. For releases after 1704, you will need to implement a deployment infrastructure that supports [Express update delivery](express-update-delivery-ISV-support.md) to continue taking advantage of incremental updates.
+>**Delta update will only be available for servicing of Windows 10 1607 (Anniversary Update) and 1703 (Creators Update) releases**. For releases after 1703, you will need to implement a deployment infrastructure that supports [Express update delivery](express-update-delivery-ISV-support.md) to continue taking advantage of incremental updates.
 
 By using Monthly Delta update, packages will only contain one month’s updates. Monthly Cumulative contains all the updates up to that update release, resulting in a large file that grows each month. Both Delta and Monthly updates are released on the second Tuesday of each month, also known as "Update Tuesday." The following table compares Delta and Cumulative updates:
 
@@ -80,5 +80,5 @@ If both Delta and Cumulative updates are inadvertently installed and your comput
     >Do not remove uninstall pending patches.
 
 >[!IMPORTANT]
->**Delta update will only be available for servicing of Windows 10 Anniversary (1607) and Creator (1704) releases**. For releases after 1704, you will need to implement a deployment infrastructure that supports [Express update delivery](express-update-delivery-ISV-support.md) to continue taking advantage of incremental updates.
+>**Delta update will only be available for servicing of Windows 10 1607 (Anniversary Update) and 1703 (Creators Update) releases**. For releases after 1704, you will need to implement a deployment infrastructure that supports [Express update delivery](express-update-delivery-ISV-support.md) to continue taking advantage of incremental updates.
 
