@@ -35,7 +35,7 @@
 ##### [Activate the license server](remote-desktop-services/rds-activate-license-server.md)
 ##### [Install RDS CALs on the license server](remote-desktop-services/rds-install-cals.md)
 ##### [Track the CALs used in your deployment](remote-desktop-services/rds-track-cals.md)
-#### Extend your RDS environment for high availaility
+#### Extend your RDS environment for high availability
 ##### [Scale out an existing RDS collection with an RD Session Host farm](remote-desktop-services/rds-scale-rdsh-farm.md)
 ##### [Add high availability to the RD Connection Broker infrastructure](remote-desktop-services/rds-connection-broker-cluster.md)
 ##### [Add high availability to the RD Web and RD Gateway web front](remote-desktop-services/rds-rdweb-gateway-ha.md)
