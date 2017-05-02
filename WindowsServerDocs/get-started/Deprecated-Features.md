@@ -80,4 +80,4 @@ WinRM.vbs is deprecated. Instead, use functionality in the WinRM provider of Win
 ### SMB  
 SMB 2+ over NetBT is deprecated. Instead, implement SMB over TCP or RDMA.  
 
-1.0  
+2.0  
