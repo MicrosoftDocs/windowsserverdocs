@@ -1,4 +1,4 @@
-# [Virtualization](compute.md)
+# [Virtualization](virtualization.md)
 
 ## [Guarded fabric and shielded VMs](guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node.md)
 ### [Overview](guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms.md)
