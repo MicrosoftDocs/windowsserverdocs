@@ -30,7 +30,7 @@
 ##### [Upgrade Remote Desktop Session Host servers](remote-desktop-services/upgrade-to-rdsh-2016.md)
 ##### [Upgrade Remote Desktop Virtualization Host servers](remote-desktop-services/upgrade-to-rdvh-2016.md)
 #### [Deploy a Remote Desktop Services infrastructure](remote-desktop-services/rds-deploy-infrastructure.md)
-#### [Create and deply a Remote Desktop Services collection](remote-desktop-services/rds-create-collection.md)
+#### [Create and deploy a Remote Desktop Services collection](remote-desktop-services/rds-create-collection.md)
 #### [License your Remote Desktop deployment](remote-desktop-services/rds-client-access-license.md)
 ##### [Activate the license server](remote-desktop-services/rds-activate-license-server.md)
 ##### [Install RDS CALs on the license server](remote-desktop-services/rds-install-cals.md)
