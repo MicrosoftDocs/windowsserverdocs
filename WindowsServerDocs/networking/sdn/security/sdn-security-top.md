@@ -29,3 +29,4 @@ You can use the topics in this section to learn about security in Software Defin
 This section contains the following topics.
 
 - [Network Controller Security](nc-security.md)
+- [Manage Certificates for Software Defined Networking](sdn-manage-certs.md)
