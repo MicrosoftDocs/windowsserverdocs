@@ -207,6 +207,7 @@
 #### [Update, Backup, and Restore Software Defined Networking Infrastructure](sdn/manage/Update-Backup-Restore.md)
 ### [Security for Software Defined Networking](sdn/security/sdn-security-top.md)
 #### [Network Controller Security](sdn/security/nc-security.md)
+#### [Manage Certificates for Software Defined Networking](sdn/security/sdn-manage-certs.md)
 ### [Troubleshoot Software Defined Networking](sdn/troubleshoot/Troubleshoot-Software-Defined-Networking.md)
 #### [Troubleshoot the Windows Server 2016 Software Defined Networking Stack](sdn/troubleshoot/troubleshoot-windows-server-2016-software-defined-networking-stack.md)
 ### [System Center Technologies for Software Defined Networking](sdn/Sc-Tech-for-Sdn.md)
