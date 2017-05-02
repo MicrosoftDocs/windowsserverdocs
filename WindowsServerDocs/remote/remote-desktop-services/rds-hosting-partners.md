@@ -14,7 +14,7 @@ ms.assetid: 9a3cb426-fb39-40c5-ae07-26dbe9e3aed9
 author: lizap
 manager: dongill
 ---
-# Hosting Windows Desktop and applications using Remote Desktop Services in Azure -  new learning path within the Microsoft Partner Network
+# Remote Desktop Services hosting partners and assessment
 
 Recently, Microsoft delivered a new learning path within the Microsoft Partner Network: "Hosting Windows Desktop and Applications using Remote Desktop Services in Azure."
 
