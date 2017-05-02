@@ -40,6 +40,4 @@ Want to create a new Remote Desktop deployment? Use the following information to
    - [Deploy a two-node Storage Spaces Direct file system for UPD storage](rds-storage-spaces-direct-deployment.md)
 
 
-If you're a hosting partner interested in using Remote Desktop to provide apps and resources to customers, check out [Remote Desktop Services hosting partners](rds-hosting-partners.md) for information about an assessment you can take about using RDS in Azure as a hosting environment.
-
-If you're looking for a hosting partner to host YOUR apps, check out [Remote Desktop Services hosting partners](rds-hosting-partners.md) for a list of partners who've passed that Microsoft assessment.
+If you're a hosting partner interested in using Remote Desktop to provide apps and resources to customers or a customer looking for someone to host your apps, check out [Remote Desktop Services hosting partners](rds-hosting-partners.md) for information about an assessment you can take about using RDS in Azure as a hosting environment, as well as a list of partners who've passed it.
