@@ -19,12 +19,15 @@ manager: dongill
 
 You can deploy a Remote Desktop Connection Broker (RD Connection Broker) cluster to improve the availability and scale of your Remote Desktop Services infrastructure. 
 
-Use the following steps to set up your RD Connection Broker cluster: 
+## Pre-requisites
 
+Set up a server to act as a second RD Connection Broker - this can be either a physical server or a VM.
 
-1. Prepare a server to act as a second RD Connection Broker. You can use either a physical server or a virtual machine.
-2. Set up a database for the Connection Broker to use. You can use an [Azure SQL Database](https://azure.microsoft.com/en-us/documentation/articles/sql-database-get-started/#create-a-new-aure-sql-database) instance or on-premises Microsoft SQL.    
-2. Copy the connection string for the database you created. You'll need this in the next step. Here's how you find the connection string for Azure SQL:  
+Set up a database for the Connection Broker. You can use [Azure SQL Database](https://azure.microsoft.com/en-us/documentation/articles/sql-database-get-started/#create-a-new-aure-sql-database) instance or SQL Server in your local environment. We talk about using Azure SQL below, but the steps still apply to SQL Server. You'll need to find the connection string for the database and make sure you have the correct ODBC driver.
+
+## Step 1: Configure the database for the Connection Broker
+
+1. Find the connection string for the database you created - you need it both to identify the version of ODBC driver you need and later, when you're configuring the Connection Broker itself (step 3), so save the string somewhere you can reference it easily. Here's how you find the connection string for Azure SQL:  
     1. In the Azure portal, click **Browse > Resource groups** and click the resource group for the deployment.   
     2. Select the SQL database you just created (for example, CB-DB1).   
     3. Click **Settings > Properties > Show database connection strings**.   
@@ -33,7 +36,7 @@ Use the following steps to set up your RD Connection Broker cluster:
         Driver={SQL Server Native Client 13.0};Server=tcp:cb-sqls1.database.windows.net,1433;Database=CB-DB1;Uid=sqladmin@contoso;Pwd={your_password_here};Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;   
   
     5. Replace "your_password_here" with the actual password. You'll use this entire string, with your included password, when connecting to the database. 
-3. Install the ODBC driver on the new Connection Broker: 
+2. Install the ODBC driver on the new Connection Broker: 
    1. If you are using a VM for the Connection Broker, create a public IP address for the first RD Connection Broker. (You only have to do this if the RDMS virtual machine does not already have a public IP address to allow RDP connections.)
        1. In the Azure portal, click **Browse > Resource groups**, click the resource group for the deployment, and then click the first RD Connection Broker virtual machine (for example, Contoso-Cb1).
        2. Click **Settings > Network interfaces**, and then click the corresponding network interface.
@@ -45,30 +48,17 @@ Use the following steps to set up your RD Connection Broker cluster:
        2. Click **Connect > Open** to open the Remote Desktop client.
        3. In the client, click **Connect**, and then click **Use another user account**. Enter the user name and password for a domain administrator account.
        4. Click **Yes** when warned about the certificate.
-   3. Download the [ODBC driver for SQL Server](https://www.microsoft.com/download/confirmation.aspx?id=50420) that matches the version in the ODBC connection string.
+   3. Download the [ODBC driver for SQL Server](https://www.microsoft.com/download/confirmation.aspx?id=50420) that matches the version in the ODBC connection string. For the example string above, we need to install the version 13 ODBC driver.
    4. Copy the sqlincli.msi file to the first RD Connection Broker server.   
    5. Open the sqlincli.msi file and install the native client.  
    6. Repeat steps 1-5 for each additional RD Connection Brokers (for example, Contoso-Cb2).
    7. Install the ODBC driver on each server that will run the connection broker.
-4. Configure load balancing on the RD Connection Brokers. If you are using Azure infrastructure, you can create an [Azure load balancer](#create-a-load-balancer); if not, you can set up [DNS round-robin](#configure-dns-round--robin). See below for instructionson both load balancing options.
-5. Add the new RD Connection Broker server to Server Manager:
-    8. In Server Manager, click **Manage > Add Servers**.
-    9. Click **Find Now**.
-    10. Click the newly created RD Connection Broker server (for example, Contoso-Cb2) and click **OK**.
-6. Configure high availability for the RD Connection Broker:
-    11. In Server Manager, click **Remote Desktop Services > Overview**.
-    12. Right-click **RD Connection Broker**, and then click **Configure High Availability**.
-    13. Page through the wizard until you get to the Configuration type section. Select **Shared database server**, and then click **Next**.
-    14. Enter the DNS name for the RD Connection Broker cluster.
-    15. Enter the connection string for the SQL DB, and then page through the wizard to establish high availability.
-7. Add the new RD Connection Broker to the deployment
-    16. In Server Manager, click **Remote Desktop Services > Overview**.
-    17. Right-click the RD Connection Broker, and then click **Add RD Connection Broker Server**.
-    18. Page through wizard until you get to Server Selection, then select the newly created RD Connection Broker server (for example, Contoso-CB2).
-    19. Complete the wizard, accepting the default values.
-8. Configure trusted certificates on RD Connection Broker servers and clients.
 
-## Create a load balancer  
+## Step 2: Configure load balancing on the RD Connection Brokers 
+
+If you are using Azure infrastructure, you can create an [Azure load balancer](#create-a-load-balancer); if not, you can set up [DNS round-robin](#configure-dns-round--robin). 
+
+### Create a load balancer  
 1. Create an Azure Load Balancer   
       1. In the Azure portal click **Browse > Load balancers > Add**.   
       2. Enter a name for the new load balancer (for example, hacb).   
@@ -95,7 +85,7 @@ Use the following steps to set up your RD Connection Broker cluster:
       4. Click **Action > New Host (A or AAAA)**.   
       9. Enter the name (for example, hacb) and the IP address specified earlier (for example, 10.0.0.32).   
   
-## Configure DNS round-robin  
+### Configure DNS round-robin  
   
 The following steps are an alternative to creating an Azure Internal Load Balancer.   
   
@@ -111,3 +101,23 @@ The following steps are an alternative to creating an Azure Internal Load Balanc
 For example, if the IP addresses for the two RD Connection Broker virtual machines are 10.0.0.8 and 10.0.0.9, you would create two DNS host records:
  - Host name: hacb.contoso.com , IP address: 10.0.0.8
  - Host name: hacb.contoso.com , IP address: 10.0.0.9
+
+## Step 3: Configure the Connection Brokers for high availability
+
+1. Add the new RD Connection Broker server to Server Manager:
+   1. In Server Manager, click **Manage > Add Servers**.
+   2. Click **Find Now**.
+   3. Click the newly created RD Connection Broker server (for example, Contoso-Cb2) and click **OK**.
+2. Configure high availability for the RD Connection Broker:
+   1. In Server Manager, click **Remote Desktop Services > Overview**.
+   2. Right-click **RD Connection Broker**, and then click **Configure High Availability**.
+   3. Page through the wizard until you get to the Configuration type section. Select **Shared database server**, and then click **Next**.
+   4. Enter the DNS name for the RD Connection Broker cluster.
+   5. Enter the connection string for the SQL DB, and then page through the wizard to establish high availability.
+3. Add the new RD Connection Broker to the deployment
+   1. In Server Manager, click **Remote Desktop Services > Overview**.
+   2. Right-click the RD Connection Broker, and then click **Add RD Connection Broker Server**.
+   3. Page through wizard until you get to Server Selection, then select the newly created RD Connection Broker server (for example, Contoso-CB2).
+   4. Complete the wizard, accepting the default values.
+4. Configure trusted certificates on RD Connection Broker servers and clients.
+

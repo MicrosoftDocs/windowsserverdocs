@@ -20,10 +20,15 @@ A Remote Desktop Services deployment is the infrastructure used to share apps an
 
 [Remote Desktop clients](clients\remote-desktop-clients.md) enable access from any Windows, Apple, or Android computer, tablet, or phone.
 
-Use the following information to build and deploy your Remote Desktop Services deployment:
+See [Remote Desktop Services architecture](desktop-hosting-logical-architecture.md) for a detailed discussion of the different pieces that work together to make up your Remote Desktop Services deployment.
+
+Have an existing Remote Desktop deployment built on a previous version of Windows Server? Check out your options for moving to WIndows Server 2016, where you can take advantage of new and better functionality around performance and scale:
 
 - [Migrate your RDS deployment to Windows Server 2016](migrate-rds-role-services.md)
 - [Upgrade your RDS deployment to Windows Server 2016](upgrade-to-rds-2016.md)
+
+Want to create a new Remote Desktop deployment? Use the following information to deploy Remote Desktop in Windows Server 2016:
+
 - [Deploy the Remote Desktop Services infrastructure](rds-deploy-infrastructure.md)
 - [Create a session collection to hold the apps and resources you want to share](rds-create-collection.md)
 - [License your RDS deployment](rds-client-access-license.md)
@@ -35,12 +40,6 @@ Use the following information to build and deploy your Remote Desktop Services d
    - [Deploy a two-node Storage Spaces Direct file system for UPD storage](rds-storage-spaces-direct-deployment.md)
 
 
-If you want to create a cloud-based hosting environment based on the [Desktop Hosting Reference Architecture](desktop-hosting-reference-architecture.md), use the following information. 
+If you're a hosting partner interested in using Remote Desktop to provide apps and resources to customers, check out [Remote Desktop Services hosting partners](rds-hosting-partners.md) for information about an assessment you can take about using RDS in Azure as a hosting environment.
 
-- [Deploy a desktop hosting environment.](deploy-a-basic-desktop-hosting-environment-using-azure-iaas.md)
-- [Configure your desktop hosting environment.](configure-your-desktop-hosting-environment.md)
-- [Deploy a Remote Desktop Session Host farm to improve availability.](deploy-a-remote-desktop-session-host-farm-to-improve-availability.md)
-- [Deploy a Remote Desktop Connection Broker cluster.](deploy-a-remote-desktop-connection-broker-cluster.md)
-- [Deploy a RD Web Access and Gateway farm.](deploy-a-rd-web-access-and-gateway-farm.md)
-- [Deploy RemoteApp programs.](deploy-remoteapp-programs.md)
-
+If you're looking for a hosting partner to host YOUR apps, check out [Remote Desktop Services hosting partners](rds-hosting-partners.md) for a list of partners who've passed that Microsoft assessment.
