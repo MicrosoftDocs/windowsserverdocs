@@ -50,11 +50,9 @@ The *wuauclt.exe /detectnow* command has been removed and is no longer supported
 
 - Run these PowerShell commands:
 
-`$Session = New-Object -ComObject "Microsoft.Update.Session"`
+`$AutoUpdates = New-Object -ComObject "Microsoft.Update.AutoUpdate"`
 
-`$Searcher = $Session.CreateUpdateSearcher()`
-
-`$Searcher.Search("")`
+`$AutoUpdates.DetectNow()` 
 
 - Alternately, use this VBScript:
 
