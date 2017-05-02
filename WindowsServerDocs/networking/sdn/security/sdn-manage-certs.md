@@ -27,7 +27,7 @@ SDN in Windows Server 2016 Datacenter supports both self\-signed and Certificati
 When you are using certificate\-based authentication, you must enroll one certificate on Network Controller nodes that is used in the following ways.
 
 1. Encrypting Northbound Communication with Secure Sockets Layer \(SSL\) between Network Controller nodes and management clients, such as System Center Virtual Machine Manager.
-2. Authentication between Network Controller nodes and Southbound devices and services, such as Hyper-V hosts, SLBs, and RAS Gateways.
+2. Authentication between Network Controller nodes and Southbound devices and services, such as Hyper-V hosts and Software Load Balancers \(SLBs\).
 
 ## Creating and Enrolling an X.509 Certificate
 
@@ -187,13 +187,15 @@ You can enroll the certificate from a Certification Authority \(CA\). If a CA ba
 
 Network Controller and the Hyper-V host certificates must be trusted by each other. The Hyper-V host certificate’s root certificate must be present in the Network Controller Trusted Root Certification Authorities store for the Local Computer, and vice versa. 
 
-SCVMM ensures that the required certificates are present in the Trusted Root Certification Authorities store for the Local Computer. If you are using CA based certificates for the Hyper-V hosts, you need to ensure that the CA root certificate is present on the Network Controller's Trusted Root Certification Authorities store for the Local Computer.
+When you're using self\-signed certificates, SCVMM ensures that the required certificates are present in the Trusted Root Certification Authorities store for the Local Computer. 
+
+If you are using CA based certificates for the Hyper-V hosts, you need to ensure that the CA root certificate is present on the Network Controller's Trusted Root Certification Authorities store for the Local Computer.
 
 ### Software Load Balancer MUX Communication with Network Controller
 
 The Software Load Balancer Multiplexor \(MUX\) and Network Controller communicate over the WCF protocol, using certificates for authentication.
 
-By default, SCVMM picks up the SSL certificate configured on the Network Controller and uses it for southbound communication with the Mux devices. This certificate is configured on the “NetworkControllerLoadBalancerMux” REST resource and can be viewed by executing the Powershell cmdlet Get-NetworkControllerLoadBalancerMux.
+By default, SCVMM picks up the SSL certificate configured on the Network Controller and uses it for southbound communication with the Mux devices. This certificate is configured on the “NetworkControllerLoadBalancerMux” REST resource and can be viewed by executing the Powershell cmdlet **Get-NetworkControllerLoadBalancerMux**.
 
 Example of MUX REST resource \(partial\):
 
@@ -213,7 +215,10 @@ Example of MUX REST resource \(partial\):
 
 For mutual authentication, you must also have a certificate on the SLB MUX devices. This certificate is automatically configured by SCVMM when you deploy software load balancer using SCVMM.
 
-Network Controller and the SLB MUX certificates must be trusted by each other \(the SLB MUX certificate’s root certificate must be present in the Network Controller machine Trusted Root Certification Authorities store and vice versa\). SCVMM ensures that the required certificates are present in the machine root store.
+>[!IMPORTANT]
+>On the host and SLB nodes, it is critical that the Trusted Root Certification Authorities certificate store does not include any certificate where “Issued to” is not the same as “Issued by”. If this occurs, communication between Network Controller and the southbound device fails.
+
+Network Controller and the SLB MUX certificates must be trusted by each other \(the SLB MUX certificate’s root certificate must be present in the Network Controller machine Trusted Root Certification Authorities store and vice versa\). When you're using self\-signed certificates, SCVMM ensures that the required certificates are present in the in the Trusted Root Certification Authorities store for the Local Computer.
 
 
 
