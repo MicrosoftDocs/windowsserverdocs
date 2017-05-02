@@ -233,14 +233,21 @@ PS C:\ > Get-NetworkControllerBackup -ConnectionUri $URI -Credential $Credential
 Restore is the process of restoring all necessary components from backup to return an SDN environment to an operational state.  The steps will vary slightly depending on the amount of components that are being restored.
 
 1. If necessary, redeploy Hyper-V hosts and the necessary storage.
+
 2. If necessary, restore the Network Controller VMs, RAS Gateway VMs and Mux VMs from backup. 
+
 3. Stop NC Host Agent and SLB Host Agent on all Hyper-V hosts
+
 ```
 stop-service slbhostagent
+
 stop-service nchostagent
 ```
+
 4. Stop RAS Gateway VMs
+
 5. Stop SLB Mux VMs
+
 6. Restore the Network Controller using the new-networkcontrollerrestore cmdlet.
 
 #### Example: Restoring a Network Controller database
@@ -259,8 +266,11 @@ $RestoreProperties.Credential = $ShareCredential
 $RestoreTime = (Get-Date).ToString("s").Replace(":", "_")
 New-NetworkControllerRestore -ConnectionURI $URI -Credential $Credential -Properties $RestoreProperties -ResourceId $RestoreTime -Force
 ```
+
 7. Check the restore ProvisioningState to know when the restore had completed successfully.
+
 #### Example: Checking the status of a Network Controller database restore
+
 ```
 PS C:\ > get-networkcontrollerrestore -connectionuri $uri -credential $cred -ResourceId $restoreTime | convertto-json -depth 10
 {
@@ -282,8 +292,11 @@ PS C:\ > get-networkcontrollerrestore -connectionuri $uri -credential $cred -Res
 ```
 
 8. If using SCVMM, restore the SCVMM database using the backup that was created at the same time as the Network Controller backup.
+
 9. If workload VMs are being restored from backup, you can do that now.
+
 10. Use the debug-networkcontrollerconfigurationstate cmdlet to check the health of your system.
+
 ```Powershell
 $cred = Get-Credential
 Debug-NetworkControllerConfigurationState -NetworkController "https://NC.contoso.com" -Credential $cred
@@ -296,4 +309,5 @@ Fetching ResourceType:     virtualGateways
 Fetching ResourceType:     loadbalancerMuxes
 Fetching ResourceType:     Gateways
 ```
+
 For information on configuration state messages that may appear, see [Troubleshoot the Windows Server 2016 Software Defined Networking Stack](../troubleshoot/troubleshoot-windows-server-2016-software-defined-networking-stack.md).
