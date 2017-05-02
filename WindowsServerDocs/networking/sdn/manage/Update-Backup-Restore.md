@@ -109,7 +109,7 @@ Follow these steps to perform a backup:
 2. If you are using System Center Virtual Machine Manager (SCVMM), stop the SCVMM service and back it up via SQL Server to ensure that no updates are made to SCVMM during this time which could create an inconsistency between the Network Controller backup and SCVMM.  Do not re-start the SCVMM service until the Network Controller backup is complete.
 3. Backup the Network Controller database using new-networkcontrollerbackup.
 
-#### Example: Backing up the Network Controller database
+ #### Example: Backing up the Network Controller database
     ```Powershell
     $URI = "https://NC.contoso.com"
     $Credential = Get-Credential
@@ -141,7 +141,7 @@ Follow these steps to perform a backup:
 
 4. Use get-networkcontrollerbackup to check for completion and success of the backup.
 
-#### Example: Checking the status of a Network Controller backup operation
+ #### Example: Checking the status of a Network Controller backup operation
 
     ```Powershell
     PS C:\ > Get-NetworkControllerBackup -ConnectionUri $URI -Credential $Credential -ResourceId $Backup.ResourceId
