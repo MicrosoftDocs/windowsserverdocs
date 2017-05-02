@@ -128,7 +128,7 @@ If ($ShareCredential -eq $null) {
     $ShareCredential = New-NetworkControllerCredential -ConnectionURI $URI -Credential $Credential -Properties $CredentialProperties -ResourceId $ShareUserResourceId -Force
 }
 
-# Create backup 
+# Create backup
 
 $BackupTime = (get-date).ToString("s").Replace(":", "_")
 
@@ -238,11 +238,11 @@ Restore is the process of restoring all necessary components from backup to retu
 
 3. Stop NC Host Agent and SLB Host Agent on all Hyper-V hosts
 
-```
-stop-service slbhostagent
+    ```
+    stop-service slbhostagent
 
-stop-service nchostagent
-```
+    stop-service nchostagent
+    ```
 
 4. Stop RAS Gateway VMs
 
@@ -250,46 +250,46 @@ stop-service nchostagent
 
 6. Restore the Network Controller using the new-networkcontrollerrestore cmdlet.
 
-#### Example: Restoring a Network Controller database
+ #### Example: Restoring a Network Controller database
+ 
+    ```Powershell
+    $URI = "https://NC.contoso.com"
+    $Credential = Get-Credential
 
-```Powershell
-$URI = "https://NC.contoso.com"
-$Credential = Get-Credential
+    $ShareUserResourceId = "BackupUser"
+    $ShareCredential = Get-NetworkControllerCredential -ConnectionURI $URI -Credential $Credential | Where {$_.ResourceId -eq $ShareUserResourceId }
 
-$ShareUserResourceId = "BackupUser"
-$ShareCredential = Get-NetworkControllerCredential -ConnectionURI $URI -Credential $Credential | Where {$_.ResourceId -eq $ShareUserResourceId }
+    $RestoreProperties = New-Object Microsoft.Windows.NetworkController.NetworkControllerRestoreProperties
+    $RestoreProperties.RestorePath = "\\fileshare\backups\NetworkController\2017-04-25T16_53_13"
+    $RestoreProperties.Credential = $ShareCredential
 
-$RestoreProperties = New-Object Microsoft.Windows.NetworkController.NetworkControllerRestoreProperties
-$RestoreProperties.RestorePath = "\\fileshare\backups\NetworkController\2017-04-25T16_53_13"
-$RestoreProperties.Credential = $ShareCredential
-
-$RestoreTime = (Get-Date).ToString("s").Replace(":", "_")
-New-NetworkControllerRestore -ConnectionURI $URI -Credential $Credential -Properties $RestoreProperties -ResourceId $RestoreTime -Force
-```
+    $RestoreTime = (Get-Date).ToString("s").Replace(":", "_")
+    New-NetworkControllerRestore -ConnectionURI $URI -Credential $Credential -Properties $RestoreProperties -ResourceId $RestoreTime -Force
+    ```
 
 7. Check the restore ProvisioningState to know when the restore had completed successfully.
 
-#### Example: Checking the status of a Network Controller database restore
+ #### Example: Checking the status of a Network Controller database restore
 
-```
-PS C:\ > get-networkcontrollerrestore -connectionuri $uri -credential $cred -ResourceId $restoreTime | convertto-json -depth 10
-{
-    "Tags":  null,
-    "ResourceRef":  "/networkControllerRestore/2017-04-26T15_04_44",
-    "InstanceId":  "22edecc8-a613-48ce-a74f-0418789f04f6",
-    "Etag":  "W/\"f14f6b84-80a7-4b73-93b5-59a9c4b5d98e\"",
-    "ResourceMetadata":  null,
-    "ResourceId":  "2017-04-26T15_04_44",
-    "Properties":  {
-                    "RestorePath":  "\\\\sa18fs\\sa18n22\\NetworkController\\2017-04-25T16_53_13",
-                    "ErrorMessage":  null,
-                    "FailedResourcesList":  null,
-                    "SuccessfulResourcesList":  null,
-                    "ProvisioningState":  "Succeeded",
-                    "Credential":  null
-                }
-}
-```
+    ```
+    PS C:\ > get-networkcontrollerrestore -connectionuri $uri -credential $cred -ResourceId $restoreTime | convertto-json -depth 10
+    {
+        "Tags":  null,
+        "ResourceRef":  "/networkControllerRestore/2017-04-26T15_04_44",
+        "InstanceId":  "22edecc8-a613-48ce-a74f-0418789f04f6",
+        "Etag":  "W/\"f14f6b84-80a7-4b73-93b5-59a9c4b5d98e\"",
+        "ResourceMetadata":  null,
+        "ResourceId":  "2017-04-26T15_04_44",
+        "Properties":  {
+                        "RestorePath":  "\\\\sa18fs\\sa18n22\\NetworkController\\2017-04-25T16_53_13",
+                        "ErrorMessage":  null,
+                        "FailedResourcesList":  null,
+                        "SuccessfulResourcesList":  null,
+                        "ProvisioningState":  "Succeeded",
+                        "Credential":  null
+                    }
+    }
+    ```
 
 8. If using SCVMM, restore the SCVMM database using the backup that was created at the same time as the Network Controller backup.
 
