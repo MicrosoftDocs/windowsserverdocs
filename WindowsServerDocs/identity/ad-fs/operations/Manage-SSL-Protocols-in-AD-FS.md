@@ -249,6 +249,9 @@ To enable a cipher suite, at it's string value to the Functions multi-string val
 
 For a full list of supported Cipher suites see [Cipher Suites in TLS/SSL (Schannel SSP)](https://msdn.microsoft.com/en-us/library/windows/desktop/aa374757.aspx).  This document provides a table of suites that are enabled by default and those that are supported but not enabled by default.  To prioritize the cipher suites see [Prioritizing Schannel Cipher Suites](https://msdn.microsoft.com/en-us/library/windows/desktop/bb87093.aspx).
 
+## Enabling Strong Authentication for .NET applications
+
+
 
 ## Additional Information
 
