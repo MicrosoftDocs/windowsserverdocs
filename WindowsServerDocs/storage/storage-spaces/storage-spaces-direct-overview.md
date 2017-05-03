@@ -92,7 +92,7 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter.<br><br>
 
 <table>
 	<tr style="border: 0;">
-		<td style="padding: 10px; border: 0;">
+		<td style="padding: 10px; border: 0; width:100px">
 			<img src="media/storage-spaces-direct-in-windows-server-2016/simplicity-icon.png" width=100px alt="">
 		</td>
 		<td style="padding: 10px; border: 0;">
@@ -100,7 +100,7 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter.<br><br>
 		</td>
 	</tr>
 	<tr style="border: 0;">
-		<td style="padding: 10px; border: 0;">
+		<td style="padding: 10px; border: 0; width:100px">
 			<img src="media/storage-spaces-direct-in-windows-server-2016/performance-icon.png" width=100px alt="">
 		</td>
 		<td style="padding: 10px; border: 0;">
@@ -108,7 +108,7 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter.<br><br>
 		</td>
 	</tr>
 	<tr style="border: 0;">
-		<td style="padding: 10px; border: 0;">
+		<td style="padding: 10px; border: 0; width:100px">
 			<img src="media/storage-spaces-direct-in-windows-server-2016/fault-tolerance-icon.png" width=100px alt="">
 		</td>
 		<td style="padding: 10px; border: 0;">
@@ -116,7 +116,7 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter.<br><br>
 		</td>
 	</tr>
 	<tr style="border: 0;">
-		<td style="padding: 10px; border: 0;">
+		<td style="padding: 10px; border: 0; width:100px">
 			<img src="media/storage-spaces-direct-in-windows-server-2016/efficiency-icon.png" width=100px alt="">
 		</td>
 		<td style="padding: 10px; border: 0;">
@@ -124,7 +124,7 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter.<br><br>
 		</td>
 	</tr>
 	<tr style="border: 0;">
-		<td style="padding: 10px; border: 0;">
+		<td style="padding: 10px; border: 0; width:100px">
 			<img src="media/storage-spaces-direct-in-windows-server-2016/manageability-icon.png" width=100px alt="">
 		</td>
 		<td style="padding: 10px; border: 0;">
@@ -132,7 +132,7 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter.<br><br>
 		</td>
 	</tr>
 	<tr style="border: 0;">
-		<td style="padding: 10px; border: 0;">
+		<td style="padding: 10px; border: 0; width:100px">
 			<img src="media/storage-spaces-direct-in-windows-server-2016/scalability-icon.png" width=100px alt="">
 		</td>
 		<td style="padding: 10px; border: 0;">
