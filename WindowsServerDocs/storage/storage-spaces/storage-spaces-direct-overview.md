@@ -16,11 +16,11 @@ description: An overview of Storage Spaces Direct, a feature of Windows Server E
 
 Storage Spaces Direct uses industry-standard servers with local-attached drives to create highly available, highly scalable software-defined storage at a fraction of the cost of traditional SAN or NAS arrays. Its converged or hyper-converged architecture radically simplifies procurement and deployment, while features like caching, storage tiers, and erasure coding, together with the latest hardware innovation like RDMA networking and NVMe drives, deliver unrivaled efficiency and performance.
 
-Storage Spaces Direct is included in Windows Server 2016 Datacenter.
+Storage Spaces Direct is included in Windows Server 2016 Datacenter.<br><br>
 
 <table>
     <tr style="border: 0;">
-        <td style="padding: 10px; border: 0; width=150px; text-align: left;">
+        <td style="padding: 10px; border: 0;">
             <img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/understand.png" width=125px alt="">
         </td>
         <td style="padding: 10px; border: 0; text-align: left;">
@@ -33,7 +33,7 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter.
         </td>
     </tr>
     <tr>
-        <td style="padding: 10px; border: 0; width=150px; text-align: left;">
+        <td style="padding: 10px; border: 0;">
             <img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/plan.png" width=125px alt="">
         </td>
         <td style="padding: 10px; border: 0; text-align: left;">
@@ -46,7 +46,7 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter.
         </td>
     </tr>
     <tr>
-        <td style="padding: 10px; border: 0; width=150px; text-align: left;">
+        <td style="padding: 10px; border: 0;">
             <img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/deploy.png" width=125px alt="">
         </td>
         <td style="padding: 10px; border: 0; text-align: left;">
@@ -58,7 +58,7 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter.
         </td>
     </tr>
     <tr>
-        <td style="padding: 10px; border: 0; width=150px; text-align: left;">
+        <td style="padding: 10px; border: 0;">
             <img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/manage.png" width=125px alt="">
         </td>
         <td style="padding: 10px; border: 0; text-align: left;">
