@@ -138,7 +138,7 @@ $hgsNodes = New-ADGroup -Name 'HgsServers' -GroupScope DomainLocal -PassThru
 Add-ADGroupMember -Identity $hgsNodes -Members "HGS01"
 
 # Create the gMSA
-New-ADServiceAccount -Name 'HGSgMSA' -DnsName 'HGSgMSA.yourdomain.com' -PrincipalsAllowedToRetrieveManagedPassword $hgsNodes
+New-ADServiceAccount -Name 'HGSgMSA' -DnsHostName 'HGSgMSA.yourdomain.com' -PrincipalsAllowedToRetrieveManagedPassword $hgsNodes
 ```
 
 > [!NOTE]
