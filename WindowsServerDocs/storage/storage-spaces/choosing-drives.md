@@ -21,26 +21,26 @@ Storage Spaces Direct currently works with three types of drives:
 
 <table>
 	<tr style="border: 0;">
-		<td style="padding: 10px; border: 0;">
-			<img src="media/choosing-drives-and-resiliency-types/NVMe.png">
+		<td style="padding: 10px; border: 0; width:70px">
+			<img src="media/understand-the-cache/NVMe-100px.png">
 		</td>
-		<td style="padding: 10px; border: 0;">
+		<td style="padding: 10px; border: 0;" valign="middle">
 			<b>NVMe</b> (Non-Volatile Memory Express) refers to solid-state drives that sit directly on the PCIe bus. Common form factors are 2.5" U.2, PCIe Add-In-Card (AIC), and M.2. NVMe offers higher IOPS and IO throughput with lower latency than any other type of drive we support today.
 		</td>
 	</tr>
 	<tr style="border: 0;">
-		<td style="padding: 10px; border: 0;">
-			<img src="media/choosing-drives-and-resiliency-types/SSD.png">
+		<td style="padding: 10px; border: 0; width:70px" >
+			<img src="media/understand-the-cache/SSD-100px.png">
 		</td>
-		<td style="padding: 10px; border: 0;">
+		<td style="padding: 10px; border: 0;" valign="middle">
 			<b>SSD</b> refers to solid-state drives which connect via conventional SATA or SAS.
 		</td>
 	</tr>
 	<tr style="border: 0;">
-		<td style="padding: 10px; border: 0;">
-			<img src="media/choosing-drives-and-resiliency-types/HDD.png">
+		<td style="padding: 10px; border: 0; width:70px">
+			<img src="media/understand-the-cache/HDD-100px.png">
 		</td>
-		<td style="padding: 10px; border: 0;">
+		<td style="padding: 10px; border: 0;" valign="middle">
 			<b>HDD</b> refers to rotational, magnetic hard disk drives which offer vast storage capacity.
 		</td>
 	</tr>
