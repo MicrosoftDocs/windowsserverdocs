@@ -20,10 +20,10 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter.
 
 <table style="table-layout: fixed;">
     <tr style="border: 0;">
-        <td style="padding: 10px; border: 0; width=10%; text-align: left;">
+        <td style="padding: 10px; border: 0; width=150px; text-align: left;">
             <img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/understand.png" width=125px alt="">
         </td>
-        <td style="padding: 10px; border: 0; width=90%; text-align: left;">
+        <td style="padding: 10px; border: 0; text-align: left;">
             <strong><a href="understand-storage-spaces-direct.md">Understand</a></strong>
             <ul>
 			  <li>Overview (you are here)</li>
@@ -33,10 +33,10 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter.
         </td>
     </tr>
     <tr>
-        <td style="padding: 10px; border: 0; width=10%; text-align: left;">
+        <td style="padding: 10px; border: 0; width=150px; text-align: left;">
             <img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/plan.png" width=125px alt="">
         </td>
-        <td style="padding: 10px; border: 0; width=90%; text-align: left;">
+        <td style="padding: 10px; border: 0; text-align: left;">
             <strong><a href="plan-storage-spaces-direct.md">Plan</a></strong>
             <ul>
 			  <li><a href="storage-spaces-direct-hardware-requirements.md">Hardware requirements</a></li>
@@ -46,10 +46,10 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter.
         </td>
     </tr>
     <tr>
-        <td style="padding: 10px; border: 0; width=10%; text-align: left;">
+        <td style="padding: 10px; border: 0; width=150px; text-align: left;">
             <img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/deploy.png" width=125px alt="">
         </td>
-        <td style="padding: 10px; border: 0; width=90%; text-align: left;">
+        <td style="padding: 10px; border: 0; text-align: left;">
             <strong><a href="deploy-storage-spaces-direct.md">Deploy</a></strong>
             <ul>
 			  <li><a href="hyper-converged-solution-using-storage-spaces-direct.md">Hyper-converged solution</a></li>
@@ -58,10 +58,10 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter.
         </td>
     </tr>
     <tr>
-        <td style="padding: 10px; border: 0; width=10%; text-align: left;">
+        <td style="padding: 10px; border: 0; width=150px; text-align: left;">
             <img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/manage.png" width=125px alt="">
         </td>
-        <td style="padding: 10px; border: 0; width=90%; text-align: left;">
+        <td style="padding: 10px; border: 0; text-align: left;">
             <strong><a href="manage-storage-spaces-direct.md">Manage</a></strong>
             <ul>
 			  <li><a href="add-nodes.md">Add servers or drives</a></li>
@@ -79,12 +79,12 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter.
 <table style="width: 100%; table-layout: fixed;">
 	<tr style="border: 0;">
 		<td style="padding: 10px; border: 0; width=50%">
-			<strong>Quick Video Overview (5m)</strong>
-			<iframe src="https://www.youtube.com/embed/raeUiNtMk0E" allowfullscreen></iframe>
+			<strong>Quick Video Overview (5 minutes)</strong><br>
+			<iframe src="https://www.youtube.com/embed/raeUiNtMk0E" width="340" allowfullscreen></iframe>
 		</td>
 		<td style="padding: 10px; border: 0; width=50%">
-			<strong>Launch Event at Microsoft Ignite 2016 (1h04m)</strong>
-			<iframe src="https://www.youtube.com/embed/-LK2ViRGbWs" allowfullscreen></iframe>
+			<strong>Launch Event at Microsoft Ignite 2016 (1 hour 4 minutes)</strong><br>
+			<iframe src="https://www.youtube.com/embed/-LK2ViRGbWs" width="340" allowfullscreen></iframe>
 		</td>
 </table>
 
