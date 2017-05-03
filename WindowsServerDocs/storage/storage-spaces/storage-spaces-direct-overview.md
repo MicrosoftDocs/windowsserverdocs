@@ -23,7 +23,7 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter.<br><br>
         <td style="padding: 10px; border: 0;">
             <img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/understand.png" width=125px alt="">
         </td>
-        <td style="padding: 10px; border: 0; text-align: left;">
+        <td style="padding: 10px; border: 0;">
             <strong><a href="understand-storage-spaces-direct.md">Understand</a></strong>
             <ul>
 			  <li>Overview (you are here)</li>
@@ -32,11 +32,11 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter.<br><br>
 		  	</ul>
         </td>
     </tr>
-    <tr>
+    <tr style="border: 0;">
         <td style="padding: 10px; border: 0;">
             <img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/plan.png" width=125px alt="">
         </td>
-        <td style="padding: 10px; border: 0; text-align: left;">
+        <td style="padding: 10px; border: 0;">
             <strong><a href="plan-storage-spaces-direct.md">Plan</a></strong>
             <ul>
 			  <li><a href="storage-spaces-direct-hardware-requirements.md">Hardware requirements</a></li>
@@ -45,11 +45,11 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter.<br><br>
 		    </ul>
         </td>
     </tr>
-    <tr>
+    <tr style="border: 0;">
         <td style="padding: 10px; border: 0;">
             <img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/deploy.png" width=125px alt="">
         </td>
-        <td style="padding: 10px; border: 0; text-align: left;">
+        <td style="padding: 10px; border: 0;">
             <strong><a href="deploy-storage-spaces-direct.md">Deploy</a></strong>
             <ul>
 			  <li><a href="hyper-converged-solution-using-storage-spaces-direct.md">Hyper-converged solution</a></li>
@@ -57,11 +57,11 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter.<br><br>
 		    </ul>
         </td>
     </tr>
-    <tr>
+    <tr style="border: 0;">
         <td style="padding: 10px; border: 0;">
             <img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/manage.png" width=125px alt="">
         </td>
-        <td style="padding: 10px; border: 0; text-align: left;">
+        <td style="padding: 10px; border: 0;">
             <strong><a href="manage-storage-spaces-direct.md">Manage</a></strong>
             <ul>
 			  <li><a href="add-nodes.md">Add servers or drives</a></li>
