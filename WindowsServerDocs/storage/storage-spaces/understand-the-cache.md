@@ -22,26 +22,26 @@ Storage Spaces Direct currently works with three types of storage devices:
 
 <table>
 	<tr style="border: 0;">
-		<td style="padding: 10px; border: 0;">
+		<td style="padding: 10px; border: 0; width:70px">
 			<img src="media/understand-the-cache/NVMe-100px.png">
 		</td>
-		<td style="padding: 10px; border: 0;">
+		<td style="padding: 10px; border: 0;" valign="middle">
 			NVMe (Non-Volatile Memory Express)
 		</td>
 	</tr>
 	<tr style="border: 0;">
-		<td style="padding: 10px; border: 0;">
+		<td style="padding: 10px; border: 0; width:70px">
 			<img src="media/understand-the-cache/SSD-100px.png">
 		</td>
-		<td style="padding: 10px; border: 0;">
+		<td style="padding: 10px; border: 0;" valign="middle">
 			SATA/SAS SSD (Solid-State Drive)
 		</td>
 	</tr>
 	<tr style="border: 0;">
-		<td style="padding: 10px; border: 0;">
+		<td style="padding: 10px; border: 0; width:70px">
 			<img src="media/understand-the-cache/HDD-100px.png">
 		</td>
-		<td style="padding: 10px; border: 0;">
+		<td style="padding: 10px; border: 0;" valign="middle">
 			HDD (Hard Disk Drive)
 		</td>
 	</tr>
