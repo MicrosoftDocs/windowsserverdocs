@@ -24,7 +24,7 @@ Since non-routable domains' (ex. Contoso.local) ownership cannot be verified, Of
 One of the benefits of this feature is that it enables you to adopt SaaS providers, such as Office 365 without modifying your on-premises UPNs. It also enables you to support line-of-business service applications with consumer-provisioned identities.
 
 > [!IMPORTANT]
-> We have recently changed our support statement on using Alternate ID with Exchange Hybrid.   For the best user experience in an Exchange Hybrid environment, we recommend using the same set of credentials for on-premises and Exchange Online.  It is also recommended that customers that use Office 2013 clients enable [Modern Authentication](https://blogs.office.com/2015/03/23/office-2013-modern-authentication-public-preview-announced/).  Please refer to the table below for the expected user experience using various clients.
+> Using Alternate ID in hybrid environments with Exchange and/or Skype for Business is supported but not recommended. Using the same set of credentials (e.g. the UPN) for on-premises and online provides the best user experience in a hybrid environment.  Microsoft recommends customers change their UPNs if possible to avoid the need for Alternate ID. Using alternate ID with Lync or Skype for business requires Lync Server 2013 or later. Customers who use Alternate ID should consider enabling [Modern Authentication](https://support.office.com/article/using-office-365-modern-authentication-with-office-clients-776c0036-66fd-41cb-8928-5495c0f9168a) for Exchange in Office 365 for an improved user experience. In addition, customers using Skype for Business with mobile clients must ensure that the SIP address is identical to the user’s mail address (and alternate ID). 
 
 Please refer to the table below for the user experience with Alternate ID using various Office 365 clients with Regular Authentication, Modern Authentication and Certificate Based Authentication (requires enabling Modern Authentication).
 
@@ -35,8 +35,7 @@ Please refer to the table below for the user experience with Alternate ID using 
 |Cross premises Delegation|Not supported|Currently cross premises permissions are not supported in a hybrid configuration, but they also will not work if you use AltID.||
 |Archive mailbox access (Mailbox on-premises - archive in the cloud)|Supported|Users will get an extra prompt for credentials when accessing the archive, they will have to provide there alternate ID when prompted.<br /><br />See the first image below the table for user experience demo.||
 |Office 365 Pro Plus activation page|Supported - client side registry key recommended|With Alternate ID configured you will see the on-premises UPN is pre-populated In the verification field. This needs to be changed to the alternate Identity that is being used. We recommend to use the client side reg key  noted in the link column<br />.<br /><br />See the second image below the table for user experience demo.|[Office 2013 and Lync 2013 periodically prompt for credentials to SharePoint Online, OneDrive, and Lync Online](https://support.microsoft.com/en-us/kb/2913639)|
-|Lync / Skype for Business integration with Outlook (free busy, OOF, Calendar, etc)|Supported but there is a potential for user confusion (See Description)|If Skype for Business or Lync says "Exchange needs your credentials", you need to provide the credentials that are valid for were the mailbox is located. If the mailbox is in the cloud you need to provide the Alternate ID if the Mailbox is on-premises you need to provide the on-premises UPN.||
-|ActiveSync for all mobile devices|Requires MDM solution or manual device configuration|For the autodiscover portion of ActiveSync to work you need to use an MDM solution, otherwise you will have to show your users how to manually configure ActiveSync profiles and be OK with the fact that if there is a reconfiguration needed it will be manual.|Use step 4 in the following:  [A mobile device can't connect to Exchange Online by using Exchange ActiveSync](https://support.microsoft.com/en-us/kb/2427193)|
+|Skype for Business/ Lync|Supported (except as noted) but there is a potential for user confusion.  On mobile clients, Alternate Id is supported only if SIP address= email address = Alternate ID.|Users may need to sign-in twice to the Skype for Business desktop client, first using the on-premises UPN and then using the Alternate ID. (Note that the “Sign-in address” is actually the SIP address which may not be the same as the “User name”, though often is).  When first prompted for a User name, the user should enter the UPN, even if it is incorrectly pre-populated with the Alternate ID or SIP address. After the user clicks sign-in with the UPN, the User name prompt will reappear, this time prepopulated with the UPN. This time the user must replace this with the Alternate ID and click Sign in to complete the sign in process. On mobile clients, users should enter the on-premises user ID in the advanced page, using SAM-style format (domain\username), not UPN format.</br></br>***After successful sign-in, if Skype for Business or Lync says "Exchange needs your credentials", you need to provide the credentials that are valid for where the mailbox is located. If the mailbox is in the cloud you need to provide the Alternate ID. If the Mailbox is on-premises you need to provide the on-premises UPN.	Modern Authentication in Office 2013|[Modern Authentication in Office 2013](https://blogs.office.com/2015/03/23/office-2013-modern-authentication-public-preview-announced/)|
 |Outlook Web Access|Supported|||
 |Outlook Mobile Apps for Android, IOS, and Windows Phone|Supported|||
 |OneDrive for Business|Supported - client side registry key recommended|With Alternate ID configured you will see the on-premises UPN is pre-populated In the verification field. This needs to be changed to the alternate Identity that is being used. We recommend to use the client side reg key  noted in the link column.<br /><br />See the second image below the table for user experience demo.|[Office 2013 and Lync 2013 periodically prompt for credentials to SharePoint Online, OneDrive, and Lync Online](https://support.microsoft.com/en-us/kb/2913639)|
@@ -47,6 +46,36 @@ Please refer to the table below for the user experience with Alternate ID using 
 ![alternate login](media/Configure-Alternate-Login-ID/ADFS_Alt_ID2.png)
 
 ![alternate login](media/Configure-Alternate-Login-ID/ADFS_Alt_ID3.png)
+
+The following screenshots are an additional example using Skype.In example below the following information is used
+
+
+- SIP: userA@contoso.com 
+- UPN:  userA@contoso.local
+- Email: userA@contoso.com
+- AltId: userA@contoso.com 
+
+Enter SIP address in Sign-in field.
+
+![Skype sign-in](media/Configure-Alternate-Login-ID/Skype1.png)
+
+If prompted for password without username, enter a password for either account.
+
+![Skype sign-in](media/Configure-Alternate-Login-ID/Skype2.png)
+
+If SIP address is not the same as email address, the user may see this dialog. Click OK.
+
+![Skype sign-in](media/Configure-Alternate-Login-ID/Skype3.png)
+ 
+The user will now see the sign-in dialog with a user name field. However, it is incorrectly populated with the SIP address. Replace this with the UPN, enter appropriate password, and click sign-in.
+Username is pre-populated with SIP address, but the user must replace this with the UPN, e.g. userA@contoso.local. 
+
+![Skype sign-in](media/Configure-Alternate-Login-ID/Skype4.png)
+
+The user will again see the sign-in dialog, this time with the UPN pre-populated for the username. Replace this with the Alternate ID, enter appropriate password, and click sign-in.
+Username is pre-populated with UPN address, but the user must replace this with the Alternate ID, e.g. userA@contoso.com. 
+
+![Skype sign-in](media/Configure-Alternate-Login-ID/Skype5.png)
 
 ## To configure alternate login ID
 In order to configure alternate login ID, you must perform the following tasks:
