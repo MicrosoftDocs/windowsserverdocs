@@ -7,7 +7,7 @@ ms.assetid: a6c7d7c2-dd70-4a75-aa19-4c7c74277fcd
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 04/05/2017
+ms.date: 05/03/2017
 ---
 
 # Configure the first HGS node
@@ -134,7 +134,8 @@ if (-not (Get-KdsRootKey)) {
 $hgsNodes = New-ADGroup -Name 'HgsServers' -GroupScope DomainLocal -PassThru
 
 # Add your HGS nodes to this group
-Add-ADGroupMember -Group $hgsNodes -Member "HGS01"
+# If your HGS server object is under an organizational unit, provide the full distinguished name instead of "HGS01"
+Add-ADGroupMember -Identity $hgsNodes -Members "HGS01"
 
 # Create the gMSA
 New-ADServiceAccount -Name 'HGSgMSA' -DnsName 'HGSgMSA.yourdomain.com' -PrincipalsAllowedToRetrieveManagedPassword $hgsNodes
