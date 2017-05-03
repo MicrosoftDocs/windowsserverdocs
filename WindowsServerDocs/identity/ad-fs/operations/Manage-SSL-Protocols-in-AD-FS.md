@@ -28,7 +28,7 @@ A cipher suite is a set of cryptographic algorithms. The schannel SSP implementa
 AD FS uses Schannel.dll to perform its secure communications interactions.  Currently AD FS supports all of the protocols and cipher suites that are supported by Schannel.dll.
 
 ## Managing the TLS/SSL Protocols and Cipher Suites
-> ![IMPORTANT]
+> [!IMPORTANT]
 > This section contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. 
 > 
 > Be aware that changing the default security settings for SCHANNEL could break or prevent communications between certain clients and servers.  This will occur if secure communication is required and they do not have a protocol to negotiate communications with.
@@ -58,18 +58,20 @@ Use the following registry keys and their values to enable and disable SSL 2.0.
 
 ### Using PowerShell to disable SSL 2.0
 
+	```powershell
 	New-Item 'HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0\Server' -Force | Out-Null
-	
+		
 	New-ItemProperty -path 'HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0\Server' -name 'Enabled' -value '0' -PropertyType 'DWord' -Force | Out-Null
-	
+		
 	New-ItemProperty -path 'HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0\Server' -name 'DisabledByDefault' -value 1 -PropertyType 'DWord' -Force | Out-Null
-	
+		
 	New-Item 'HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0\Client' -Force | Out-Null
-	
+		
 	New-ItemProperty -path 'HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0\Client' -name 'Enabled' -value '0' -PropertyType 'DWord' -Force | Out-Null
-	
+		
 	New-ItemProperty -path 'HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0\Client' -name 'DisabledByDefault' -value 1 -PropertyType 'DWord' -Force | Out-Null
 	Write-Host 'SSL 2.0 has been disabled.'
+	```
 
 ## Enable and Disable SSL 3.0
 Use the following registry keys and their values to enable and disable SSL 3.0.
@@ -88,6 +90,7 @@ Use the following registry keys and their values to enable and disable SSL 3.0.
 
 ### Using PowerShell to disable SSL 3.0
 
+```powershell
 	New-Item 'HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0\Server' -Force | Out-Null
 	
 	New-ItemProperty -path 'HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0\Server' -name 'Enabled' -value '0' -PropertyType 'DWord' -Force | Out-Null
@@ -100,6 +103,7 @@ Use the following registry keys and their values to enable and disable SSL 3.0.
 	
 	New-ItemProperty -path 'HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0\Client' -name 'DisabledByDefault' -value 1 -PropertyType 'DWord' -Force | Out-Null
 	Write-Host 'SSL 3.0 has been disabled.'
+```
 
 ## Enable and Disable TLS 1.0
 Use the following registry keys and their values to enable and disable TLS 1.0.
@@ -118,6 +122,7 @@ Use the following registry keys and their values to enable and disable TLS 1.0.
 
 ### Using PowerShell to disable TLS 1.0
 
+```powershell
 	New-Item 'HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0\Server' -Force | Out-Null
 	
 	New-ItemProperty -path 'HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0\Server' -name 'Enabled' -value '0' -PropertyType 'DWord' -Force | Out-Null
@@ -130,7 +135,7 @@ Use the following registry keys and their values to enable and disable TLS 1.0.
 	
 	New-ItemProperty -path 'HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0\Client' -name 'DisabledByDefault' -value 1 -PropertyType 'DWord' -Force | Out-Null
 	Write-Host 'TLS 1.0 has been disabled.'
-
+```
 
 
 ## Enable and Disable TLS 1.1
@@ -150,6 +155,7 @@ Use the following registry keys and their values to enable and disable TLS 1.1.
 
 ### Using PowerShell to disable TLS 1.1
 
+``` powershell
 	New-Item 'HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1\Server' -Force | Out-Null
 	
 	New-ItemProperty -path 'HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1\Server' -name 'Enabled' -value '0' -PropertyType 'DWord' -Force | Out-Null
@@ -162,6 +168,7 @@ Use the following registry keys and their values to enable and disable TLS 1.1.
 	
 	New-ItemProperty -path 'HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1\Client' -name 'DisabledByDefault' -value 1 -PropertyType 'DWord' -Force | Out-Null
 	Write-Host 'TLS 1.1 has been disabled.'
+```
 
 ## Enable and Disable TLS 1.2
 
@@ -181,6 +188,7 @@ Use the following registry keys and their values to enable and disable TLS 1.2.
 
 ### Using PowerShell to disable TLS 1.2
 
+```powershell
 	New-Item 'HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Server' -Force | Out-Null
 	
 	New-ItemProperty -path 'HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Server' -name 'Enabled' -value '0' -PropertyType 'DWord' -Force | Out-Null
@@ -193,7 +201,7 @@ Use the following registry keys and their values to enable and disable TLS 1.2.
 	
 	New-ItemProperty -path 'HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Client' -name 'DisabledByDefault' -value 1 -PropertyType 'DWord' -Force | Out-Null
 	Write-Host 'TLS 1.2 has been disabled.'
-
+```
 
 ## Enable and Disable RC4 
 
@@ -219,6 +227,7 @@ Use the following registry keys and their values to enable and disable RC4.  Thi
 
 ### Using PowerShell
 
+```powershell
 	([Microsoft.Win32.RegistryKey]::OpenRemoteBaseKey([Microsoft.Win32.RegistryHive]::LocalMachine,$env:COMPUTERNAME)).CreateSubKey('SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\RC4 128/128') 
 	
 	New-ItemProperty -path 'HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\RC4 128/128' -name 'Enabled' -value '0' -PropertyType 'DWord' -Force | Out-Null
@@ -228,6 +237,7 @@ Use the following registry keys and their values to enable and disable RC4.  Thi
 	([Microsoft.Win32.RegistryKey]::OpenRemoteBaseKey([Microsoft.Win32.RegistryHive]::LocalMachine,$env:COMPUTERNAME)).CreateSubKey('SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\RC4 56/128') 
 	
 	New-ItemProperty -path 'HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\RC4 56/128' -name 'Enabled' -value '0' -PropertyType 'DWord' -Force | Out-Null
+```
 
 ## Enabling or Disabling additional cipher suites
 
