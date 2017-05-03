@@ -20,7 +20,7 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter.<br><br>
 
 <table>
     <tr style="border: 0;">
-        <td style="padding: 10px; border: 0;">
+        <td style="padding: 10px; border: 0; width:125px">
             <img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/understand.png" width=125px alt="">
         </td>
         <td style="padding: 10px; border: 0;">
@@ -33,7 +33,7 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter.<br><br>
         </td>
     </tr>
     <tr style="border: 0;">
-        <td style="padding: 10px; border: 0;">
+        <td style="padding: 10px; border: 0; width:125px">
             <img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/plan.png" width=125px alt="">
         </td>
         <td style="padding: 10px; border: 0;">
@@ -46,7 +46,7 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter.<br><br>
         </td>
     </tr>
     <tr style="border: 0;">
-        <td style="padding: 10px; border: 0;">
+        <td style="padding: 10px; border: 0;width:125px">
             <img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/deploy.png" width=125px alt="">
         </td>
         <td style="padding: 10px; border: 0;">
@@ -58,7 +58,7 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter.<br><br>
         </td>
     </tr>
     <tr style="border: 0;">
-        <td style="padding: 10px; border: 0;">
+        <td style="padding: 10px; border: 0; width:125px">
             <img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/manage.png" width=125px alt="">
         </td>
         <td style="padding: 10px; border: 0;">
@@ -79,11 +79,11 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter.<br><br>
 <table style="width: 100%; table-layout: fixed;">
 	<tr style="border: 0;">
 		<td style="padding: 10px; border: 0; width=50%">
-			<strong>Quick Video Overview (5 minutes)</strong><br>
+			<strong>Quick Video Overview</strong><br>(5 minutes)<br>
 			<iframe src="https://www.youtube.com/embed/raeUiNtMk0E" width="280" height="157" allowfullscreen></iframe>
 		</td>
 		<td style="padding: 10px; border: 0; width=50%">
-			<strong>Launch Event at Microsoft Ignite 2016 (1 hour)</strong><br>
+			<strong>Launch Event at Microsoft Ignite 2016</strong><br>(1 hour)<br>
 			<iframe src="https://www.youtube.com/embed/-LK2ViRGbWs" width="280" height="157" allowfullscreen></iframe>
 		</td>
 </table>
