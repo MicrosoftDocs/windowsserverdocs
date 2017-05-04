@@ -44,7 +44,7 @@ This example uses two fictional companies - Contoso Cloud Services, which provid
   
 Contoso Cloud Services has two datacenters, one in the U.S. and another in Europe. The European datacenter hosts a food ordering portal for woodgrove.com.   
   
-To ensure that woodgrove.com customers get a responsive experience from their website, Woodgrove wants European clients directed to the European datacenter and American clients directed to the U. S. datacenter. Customers located elsewhere in the world can be directed to either of the datacenters.   
+To ensure that woodgrove.com customers get a responsive experience from their website, Woodgrove wants European clients directed to the European datacenter and American clients directed to the U.S. datacenter. Customers located elsewhere in the world can be directed to either of the datacenters.   
   
 The following illustration depicts this scenario.  
   
@@ -145,7 +145,7 @@ After you have created the subnets, the partitions (zone scopes), and you have a
 You can use the following Windows PowerShell commands to create a DNS policy that links the DNS Client Subnets and the zone scopes.   
   
       
-    Add-DnsServerQueryResolutionPolicy -Name "AmericaPolicy" -Action ALLOW -ClientSubnet "eq,AmericaSubnet" -ZoneScope "AmericaZoneScope,1" -ZoneName "woodgrove.com"  
+    Add-DnsServerQueryResolutionPolicy -Name "USPolicy" -Action ALLOW -ClientSubnet "eq,USSubnet" -ZoneScope "USZoneScope,1" -ZoneName "woodgrove.com"  
       
     Add-DnsServerQueryResolutionPolicy -Name "EuropePolicy" -Action ALLOW -ClientSubnet "eq,EuropeSubnet" -ZoneScope "EuropeZoneScope,1" -ZoneName "woodgrove.com"  
      
