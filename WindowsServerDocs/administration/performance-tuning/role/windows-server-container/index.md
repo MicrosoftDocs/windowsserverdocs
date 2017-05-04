@@ -18,7 +18,7 @@ These configurations have different performance implications which we detail bel
 
 ### Windows Server Container and Hyper-V Containers
 
-Windows Server Container and Hyper-V containers offer many of the same portability and consistency benefits but differ in terms of their isolation guaranttess and performance characteristsics.
+Windows Server Container and Hyper-V containers offer many of the same portability and consistency benefits but differ in terms of their isolation guarantees and performance characteristsics.
 
 **Windows Server Containers** provide application isolation through process and namespace isolation technology. A Windows Server container shares a kernel with the container host and all containers running on the host.
 
@@ -28,7 +28,7 @@ The additional isolation provided by Hyper-V containers is achieved in large par
 
 ### Nano Server and Server Core
 
-Windows Server Containers and Hyper-V containers offers support for Server Core and for a new installation option available in Windows Server 2016 : [Nano Server](https://technet.microsoft.com/en-us/windows-server-docs/compute/nano-server/getting-started-with-nano-server). 
+Windows Server Containers and Hyper-V containers offer support for Server Core and for a new installation option available in Windows Server 2016 : [Nano Server](https://technet.microsoft.com/en-us/windows-server-docs/compute/nano-server/getting-started-with-nano-server). 
 
 Nano Server is a remotely administered server operating system optimized for private clouds and datacenters. It is similar to Windows Server in Server Core mode, but significantly smaller, has no local logon capability, and only supports 64-bit applications, tools, and agents. It takes up far less disk space and starts faster.
 
@@ -45,18 +45,18 @@ Containers, by default, use a temporary scratch space on the container host’s 
 ### Nested Hyper-V Containers
 Hyper-V for Windows Server 2016 introduces nested hypervisor support. That is, it is now possible to run a virtual machine from within a virtual machine. This opens up many useful scenarios but also exaggerates some performance impact that the hypervisor incurs, as there are two level of hypervisors running above the physical host.
 
-For containers, this has an impact when running a Hyper-V container inside of a virtual machine. Since a Hyper-V Container offers isolation through a hypervisor layer between itself and the container host, when the container host is a Hyper-V base virtual machine, there is performance overhead associated in terms of container start-up time, storage io, network io and throughput, and CPU.
+For containers, this has an impact when running a Hyper-V container inside a virtual machine. Since a Hyper-V Container offers isolation through a hypervisor layer between itself and the container host, when the container host is a Hyper-V based virtual machine, there is performance overhead associated in terms of container start-up time, storage io, network io and throughput, and CPU.
 
 ## Storage
 ### Mounted Data Volumes
 
-Containers offer the ability to use the container host system drive for the container scratch space. However, the container scratch space has life span equal to that of the container. That is, when the container is stopped, the scratch space and all associated date goes away.
+Containers offer the ability to use the container host system drive for the container scratch space. However, the container scratch space has a life span equal to that of the container. That is, when the container is stopped, the scratch space and all associated data goes away.
 
 However, there are many scenarios in which having data persist independent of container lifetime is desired. In these cases, we support mounting data volumes from the container host into the container. For Windows Server Containers, there is neglible IO path overhead associated with mounted data volumes (near native performance). However, when mounting data volumes into Hyper-V containers, there is some IO performance degradation in that path. In addition, this impact is exaggerated when running Hyper-V containers inside of virtual machines.
 
 ### Scratch Space
 
-Both Windows Server Containers and Hyper-V containers provide a 20gb dynamic VHD for the container scratch space by default. For both container types, the container OS takes up a portion of that space, and this is true for every container started. Thus it is important to remember that every container started has some storage impact, and depending on the workload can write up to 20gb of the backing storage media. Server storage configurations should be designed with this in mind.
+Both Windows Server Containers and Hyper-V containers provide a 20GB dynamic VHD for the container scratch space by default. For both container types, the container OS takes up a portion of that space, and this is true for every container started. Thus it is important to remember that every container started has some storage impact, and depending on the workload can write up to 20GB of the backing storage media. Server storage configurations should be designed with this in mind.
 (can we configure scratch size)
 
 ## Networking
@@ -72,7 +72,7 @@ Windows Server containers use a Host vNIC to attach to the virtual switch. Hyper
 
 ### Transparent
 
-Each container endpoint is directly connected to the physical network. IPs from the physical network can be assigned statically or dynamically using an external DHCP server.
+Each container endpoint is directly connected to the physical network. IP addresses from the physical network can be assigned statically or dynamically using an external DHCP server.
 
 Transparent mode is the least expensive in terms of the network IO path, and external packets are directly passed through to the container virtual NIC giving direct access to the external network.
 
