@@ -35,14 +35,9 @@
 
 ## Authoring articles: markdown
 
-- [Markdown basics](https://help.github.com/articles/markdown-basics/)
-
-- [Printable markdown cheatsheet](./media/documents/markdown-cheatsheet.pdf?raw=true)
-
-- [GitHub-flavored markdown](https://help.github.com/articles/github-flavored-markdown/)
-
-- [Create tables in markdown](https://github.com/Azure/azure-content/blob/master/contributor-guide/create-tables-markdown.md)
-
-- [Create images in markdown](create-images-markdown.md)
+- [Markdown syntax, OPS-supported Markdown extensions and HTML](https://opsdocs.azurewebsites.net/en-us/opsdocs/partnerdocs/gfm)
+   - [Printable markdown cheatsheet](./media/documents/markdown-cheatsheet.pdf?raw=true)
+   - [Create tables in markdown](https://github.com/Azure/azure-content/blob/master/contributor-guide/create-tables-markdown.md)
+   - [Create images in markdown](create-images-markdown.md)
 
 - [Metadata for Windows Server technical articles](https://ppe.msdn.microsoft.com/en-us/ce-csi-docs/ops/ops-onboarding/managing-content/content-meta-data?branch=master)
