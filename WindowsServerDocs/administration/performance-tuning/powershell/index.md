@@ -5,7 +5,7 @@ ms.prod: windows-server-threshold
 ms.technology: performance-tuning-guide
 ms.topic: landing-page
 ms.author: JasonSh
-author: phstee
+author: lzybkr
 ms.date: 04/24/2017
 ---
 
