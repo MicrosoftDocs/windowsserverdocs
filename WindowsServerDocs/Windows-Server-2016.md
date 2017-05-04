@@ -13,9 +13,9 @@ manager: dongill
 
 # Windows Server 2016
 
-This library provides the core content that IT pros need to evaluate, plan, deploy, secure and manage Windows Server 16 in the enterprise.
+This library provides info for IT pros to evaluate, plan, deploy, secure, and manage Windows Server 2016.
 
-[![Storage Spaces Direct Overview Video](media/front-page-video.png)](https://www.youtube.com/embed/V8oF0JpDzaM)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/V8oF0JpDzaM" frameborder="0" allowfullscreen></iframe>
 
 <table border="0" width="100%" align='center'>
   <tr style="text-align:center;">
