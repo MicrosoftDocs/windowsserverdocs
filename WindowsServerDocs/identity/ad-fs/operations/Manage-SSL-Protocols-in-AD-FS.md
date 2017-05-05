@@ -4,7 +4,7 @@ description: Frequently asked questions for AD FS 2016
 author: billmath
 ms.author:  billmath
 manager: femila
-ms.date: 04/28/2017
+ms.date: 05/05/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
@@ -250,7 +250,22 @@ To enable a cipher suite, at it's string value to the Functions multi-string val
 For a full list of supported Cipher suites see [Cipher Suites in TLS/SSL (Schannel SSP)](https://msdn.microsoft.com/en-us/library/windows/desktop/aa374757.aspx).  This document provides a table of suites that are enabled by default and those that are supported but not enabled by default.  To prioritize the cipher suites see [Prioritizing Schannel Cipher Suites](https://msdn.microsoft.com/en-us/library/windows/desktop/bb87093.aspx).
 
 ## Enabling Strong Authentication for .NET applications
+The .NET Framework 3.5/4.0/4.5.x applications can switch the default protocol to TLS 1.2 by enabling the SchUseStrongCrypto registry key.  This registry key will force .NET applications to use TLS 1.2.
 
+For the .NET Framework 3.5 use the following registry key:
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v2.0.50727]
+"SchUseStrongCrypto"=dword:00000001
+
+For the .NET Framework 4.0/4.5.x use the following registry key:
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319
+"SchUseStrongCrypto"=dword:00000001
+
+![Strong Authentication](media/Managing-SSL-Protocols-in-AD-FS/strongauth.png)
+
+```powershell
+	
+	New-ItemProperty -path 'HKLM:\SOFTWARE\Microsoft\.NetFramework\v4.0.30319' -name 'SchUseStongCrypto' -value '1' -PropertyType 'DWord' -Force | Out-Null
 
 
 ## Additional Information
