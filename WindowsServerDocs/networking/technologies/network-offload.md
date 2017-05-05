@@ -16,6 +16,11 @@ author: jamesmci
 
 You can use this topic for a brief overview of Network Offload and Optimization technologies that are available in Windows Server 2016.
 
+>[!NOTE]
+>In addition to this topic, the following Network Offload and Optimization Technologies documentation is available.
+> - [Converged Network Interface Card (NIC) Configuration Guide](conv-nic/cnic-top.md)
+> - [Data Center Bridging (DCB)](dcb/dcb-top.md)
+
 The guide [Network Offload and Optimization Technologies in Windows Server 2016](https://aka.ms/j2e2b6) is now available for download in Word format from TechNet Gallery and provides additional detail on each technology and feature mentioned in this topic, and discusses how these features help make networking more efficient.
 
 These technologies include Software Only (SO) features and technologies, Software and Hardware (SH) integrated features and technologies, and Hardware Only (HO) features and technologies.
