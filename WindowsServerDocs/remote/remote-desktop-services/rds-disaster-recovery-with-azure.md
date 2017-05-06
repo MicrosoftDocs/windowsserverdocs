@@ -57,6 +57,6 @@ We'll cover the various steps to enable Azure Site Recovery Services for your RD
 | [Create the recovery plan](rds-disaster-recovery-plan.md). |
 | [Test the recovery plan by creating a test failover](rds-asr-run-disaster-plan.md#perform-a-test-failover). Ensure all VMs can access required resources, like Active Directory. Ensure network redirections are configured and working for RDS.                                                   |
 | **Step 4 - Run a disaster recovery drill.**                                                                                                                                                                                                       |
-| Perform a [disaster recovery drill using planned and unplanned failovers](rsd-asr-run-disaster-plan.md). Ensure that all VMs have access to required resources, such as Active Directory. Ensure that all VMs have access to required resources, such as Active Directory. |
+| Perform a [disaster recovery drill using planned and unplanned failovers](rds-asr-run-disaster-plan.md). Ensure that all VMs have access to required resources, such as Active Directory. Ensure that all VMs have access to required resources, such as Active Directory. |
 
 
