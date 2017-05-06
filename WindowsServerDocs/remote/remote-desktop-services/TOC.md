@@ -40,7 +40,7 @@
 #### [Deploy a two-node Storage Spaces Direct file system for UPD storage](rds-storage-spaces-direct-deployment.md)
 #### [Deploy and manage a personal session desktops environment](rds-personal-session-desktops.md)
 #### [Set up disaster recovery for your RDS environment with Azure Site Recovery](rds-disaster-recovery-with-azure.md)
-##### [Enable disaster recovery for RDS components](rds-enabled-dr-with-asr.md)
+##### [Enable disaster recovery for RDS components](rds-enable-dr-with-asr.md)
 ##### [Create your disaster recovery plan](rds-disaster-recovery-plan.md)
 ##### [Run your disaster recovery plan](rds-asr-run-disaster-plan.md)
 #### [Create VMs for RDS](rds-prepare-vms.md)
