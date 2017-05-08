@@ -9,7 +9,7 @@ author: jamesmci
 ms.author: jamesmci
 
 ---
-# Virtualization in Windows Server 2016
+# Virtualization
 
 >Applies To: Windows Server 2016 
 
