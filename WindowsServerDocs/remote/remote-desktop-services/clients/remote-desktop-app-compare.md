@@ -31,16 +31,16 @@ Please note that we are working on a new Remote Desktop application for macOS th
 
 ### Input redirection
 
-| Redirection | Remote Desktop<br> Connection | Universal | Android | iOS | Mac |
+| Redirection | Remote Desktop<br> Connection | Universal | Android | iOS | macOS |
 |------------------|---------------------------|-----------|---------|-----|-----|
 | Keyboard         | X                         | X         | X       | X   | X   |
 | Mouse            | X                         | X         | X       |     | X   |
-| Touch            | X                         | X         | X       | X   | X   |
+| Touch            | X                         | X         | X       | X   |     |
 | Other            | Pen                       |           |         |     |     |
 
 ### Port redirection   
 
-| Redirection | Remote Desktop <br>Connection | Universal | Android | iOS | Mac |
+| Redirection | Remote Desktop <br>Connection | Universal | Android | iOS | macOS |
 |-------------|---------------------------|-----------|---------|-----|-----|
 | Serial port | X                         |           |         |     |     |
 | USB         | X                         |           |         |     |     |
@@ -51,11 +51,11 @@ When you enable USB port redirection, any USB devices attached to the USB port a
 
 
 
-| Redirection         | Remote Desktop Connection | Universal   | Android | iOS         | Mac                                      |
+| Redirection         | Remote Desktop Connection | Universal   | Android | iOS         | macOS                                     |
 |---------------------|---------------------------|-------------|---------|-------------|------------------------------------------|
-| Clipboard           | X                         | text, image | text    | text, image | text, image (in preview client)                             |
+| Clipboard           | X                         | text, image | text    | text, image | text, image (full support in preview client)                             |
 | Microphone          | X                         |             |         |             | X (in preview client)                       |
-| Local drive/storage | X                         |             | X       |             |                                          |
+| Local drive/storage | X                         |             | X       |             | x                                          |
 | Printers            | X                         |             |         |             | X (CUPS only)                              |
 | Smart Card          | X                         |             |         |             | X (preview client, Windows authentication not supported) |
 | Speakers            | X                         | X           | X       | X           | X                                        |

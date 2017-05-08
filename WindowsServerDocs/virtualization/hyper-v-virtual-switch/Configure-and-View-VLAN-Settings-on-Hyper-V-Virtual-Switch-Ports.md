@@ -2,12 +2,8 @@
 title: Configure and View VLAN Settings on Hyper-V Virtual Switch Ports
 description: You can use this topic to learn best practices for configuring and viewing virtual Local Area Network (VLAN) settings on a Hyper-V Virtual Switch port in Windows Server 2016.
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-hv-switch
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 69e0e28a-98ae-4ade-bd27-ce2ad7eb310f
 ms.author: jamesmci
@@ -40,7 +36,7 @@ To ensure that you do not encounter these issues, you must use the same method t
 To configure and view VLAN switch port settings, you must do the following:
 
 - If you are using VMM or Network Controller to set up and manage your network, and you have deployed Software Defined Networking (SDN), you must use the **VMNetworkAdapterIsolation** cmdlets. 
-- If you are using [!INCLUDE[winthreshold_server_2_mdincludes/winthreshold_server_2_md.md)] Hyper-V Manager or Windows PowerShell cmdlets, and you have not deployed Software Defined Networking (SDN), you must use the **VMNetworkAdapterVlan** cmdlets.
+- If you are using Windows Server 2016 Hyper-V Manager or Windows PowerShell cmdlets, and you have not deployed Software Defined Networking (SDN), you must use the **VMNetworkAdapterVlan** cmdlets.
 
 ### Possible issues
 

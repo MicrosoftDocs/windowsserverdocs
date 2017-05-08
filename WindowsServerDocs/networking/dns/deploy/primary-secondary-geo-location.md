@@ -122,7 +122,7 @@ You can use the following Windows PowerShell commands to configure the zone tran
 >In the following example command, the parameter **-Notify** specifies that the primary server will send notifications about updates to the select list of secondaries.  
   
     
-    Set-DnsServerPrimaryZone -Name "woodgrove.com -Notify Notify -SecondaryServers "10.0.0.2,10.0.0.3" -SecureSecondaries TransferToSecureServers -ComputerName PrimaryServer  
+    Set-DnsServerPrimaryZone -Name "woodgrove.com" -Notify Notify -SecondaryServers "10.0.0.2,10.0.0.3" -SecureSecondaries TransferToSecureServers -ComputerName PrimaryServer  
      
   
 For more information, see [Set-DnsServerPrimaryZone](https://technet.microsoft.com/library/jj649865.aspx).  
