@@ -15,7 +15,7 @@ manager: dongill
 
 This library provides info for IT pros to evaluate, plan, deploy, secure, and manage Windows Server 2016.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/V8oF0JpDzaM" frameborder="0" allowfullscreen></iframe>
+[![Windows Server 2016 Overview Video](media/front-page-video.png)](https://www.youtube.com/embed/V8oF0JpDzaM)
 
 <table border="0" width="100%" align='center'>
   <tr style="text-align:center;">
