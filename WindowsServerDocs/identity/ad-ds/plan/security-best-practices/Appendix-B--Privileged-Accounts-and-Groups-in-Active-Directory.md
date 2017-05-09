@@ -99,9 +99,8 @@ It is for this reason that this document encourages you to avoid using powerful 
 
 ### Built-in Privileged Accounts and Groups  
 Active Directory is intended to facilitate delegation of administration and the principle of least privilege in assigning rights and permissions. "Regular" users who have accounts in an Active Directory domain are, by default, able to read much of what is stored in the directory, but are able to change only a very limited set of data in the directory. Users who require additional privilege can be granted membership in various privileged groups that are built into the directory so that they may perform specific tasks related to their roles, but cannot perform tasks that are not relevant to their duties.  
-=======
+
 Active Directory is intended to facilitate delegation of administration and the principle of least privilege in assigning rights and permissions. ?Regular? users who have accounts in an Active Directory domain are, by default, able to read much of what is stored in the directory, but are able to change only a very limited set of data in the directory. Users who require additional privilege can be granted membership in various privileged groups that are built into the directory so that they may perform specific tasks related to their roles, but cannot perform tasks that are not relevant to their duties.  
->>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
 
 Within Active Directory, there are three built-in groups that comprise the highest privilege groups in the directory: the Enterprise Admins (EA) group, the Domain Admins (DA) group, and the built-in Administrators (BA) group.  
 
