@@ -46,11 +46,12 @@ Set up a server to act as an additional RD Web and RD Gateway - this can be eith
     4.  Click **Choose a different certificate** and then browse to the certificate location. For example, \Contoso-CB1\Certificates). Select the certificate file for the RD Web and Gateway server created during the prerequisites (e.g. ContosoRdGwCert), and then click **Open**.  
     5.  Enter the password for the certificate, select **Allow the certificate to be added to the Trusted Root Certificate Authorities certificate store on the destination computers**, and then click **OK**.  
     6.  Click **Apply**.
-    > [!Note] You may need to manually restart the TSGateway service running on each RD Gateway server, either through Server Manager or Task Manager.
+    > [!Note] 
+    > You may need to manually restart the TSGateway service running on each RD Gateway server, either through Server Manager or Task Manager.
     7.  Repeat steps 1-6 for the RD Web Access Role Service.
 
 ## Step 2: Configure RD Web and RD Gateway properties on the new server
-5. Configure the server to be part of an RD Gateway farm:
+1. Configure the server to be part of an RD Gateway farm:
     1.  In Server Manager on the RDMS server, click **All Servers**. Right-click one of the RD Gateway servers, and then click **Remote Desktop Connection**.
     2.  Sign into to the RD Gateway server using a domain admin account.  
     3.  In Server Manager on the RD Gateway server, click **Tools > Remote Desktop Services > RD Gateway Manager**.  
@@ -58,7 +59,7 @@ Set up a server to act as an additional RD Web and RD Gateway - this can be eith
     5.  Click **Add RD Gateway Server Farm members**.  
     6.  On the **Server Farm** tab, enter the name of each RD Gateway server, then click **Add** and **Apply**.  
     7.  Repeat steps 1-6 on each RD Gateway server so that they recognize each other as RD Gateway servers in a farm. Do not be alarmed if there are warnings, as it might take time for DNS settings to propagate.
-6. Configure the server to be part of an RD Web Access farm. The steps below configure the Validation and Decryption Machine Keys to be the same on both RDWeb sites.
+2. Configure the server to be part of an RD Web Access farm. The steps below configure the Validation and Decryption Machine Keys to be the same on both RDWeb sites.
     1.  In Server Manager on the RDMS server, click **All Servers**. Right-click the first RD Web Access server (e.g. Contoso-WebGw1) and then click **Remote Desktop Connection**.  
     2.  Sign into the RD Web Access server using a domain admin account.  
     3.  In Server Manager on the RD Web Access server, click **Tools > Internet Information Services (IIS) Manager**.  
@@ -71,14 +72,15 @@ Set up a server to act as an additional RD Web and RD Gateway - this can be eith
     10. For the Validation Key, clear **Automatically generate at runtime**, and then paste the key you copied in step g.   
     11. Click **Apply**.  
     12. Minimize the RD Connection window to the second RD Web Access server, and then maximize the RD Connection window to the first RD Web Access server.  
-    14. Repeat steps 7-11 to copy over the Decryption Key.
-    15. When validation keys and decryption keys are identical on both RD Web Access servers, sign out of all RD Connection windows.  
+    13. Repeat steps 7-11 to copy over the Decryption Key.
+    14. When validation keys and decryption keys are identical on both RD Web Access servers, sign out of all RD Connection windows.  
 
 ## Step 3: Configure load balancing for the RD Web and RD Gateway servers
 
 If you are using Azure infrastructure, you can create an external Azure load balancer; if not, you can set up a separate hardware or software load balancer. Load balancing is key so that traffic will be evenly distributed the long-lived connections from Remote Desktop clients, through the RD Gateway, to the servers that users will be running their workloads.
 
-> [!Note] If your previous server running RD Web and RD Gateway was already set up behind an external load balancer, skip ahead to step 4, select the existing backend pool, and add the new server to the pool.
+> [!Note] 
+> If your previous server running RD Web and RD Gateway was already set up behind an external load balancer, skip ahead to step 4, select the existing backend pool, and add the new server to the pool.
 
 1.  Create an Azure Load Balancer:  
     1.  In the Azure portal click **Browse > Load balancers > Add**.  
