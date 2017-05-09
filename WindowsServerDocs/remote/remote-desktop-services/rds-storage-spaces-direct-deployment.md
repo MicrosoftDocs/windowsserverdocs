@@ -36,7 +36,7 @@ These instructions are for a 2-node deployment. The following table shows the VM
 | 50    | 250        | DS1 | 2       | P10       | 128            | 2x(DS1 + 2 P10)  |
 | 100   | 500        | DS1 | 2       | P20       | 512            | 2x(DS1 + 2 P20)  |
 | 250   | 1250       | DS1 | 2       | P30       | 1024           | 2x(DS1 + 2 P30)  |
-| 500   | 2500       | DS2 | 3       | P30       | 1024           | 2x(DS2 + 2 P30)  |
+| 500   | 2500       | DS2 | 3       | P30       | 1024           | 2x(DS2 + 3 P30)  |
 | 1000  | 5000       | DS3 | 5       | P30       | 1024           | 2x(DS3 + 5 P30)  |
 | 2500  | 12500      | DS4 | 13      | P30       | 1024           | 2x(DS4 + 13 P30) |
 | 5000  | 25000      | DS5 | 25      | P30       | 1024           | 2x(DS5 + 25 P30) | 
