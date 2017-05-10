@@ -1926,6 +1926,11 @@
 "redirect_document_id": true
 },
 {
+"source_path": "WindowsServerDocs/management/server-performance-advisor/server-performance-advisor.md",
+"redirect_url": "/windows-server/administration/server-performance-advisor/server-performance-advisor",
+"redirect_document_id": true
+},
+{
 "source_path": "WindowsServerDocs/management/software-inventory-logging/manage-software-inventory-logging.md",
 "redirect_url": "/windows-server/administration/software-inventory-logging/manage-software-inventory-logging",
 "redirect_document_id": true
@@ -1938,6 +1943,11 @@
 {
 "source_path": "WindowsServerDocs/management/software-inventory-logging/troubleshoot-sil.md",
 "redirect_url": "/windows-server/administration/software-inventory-logging/troubleshoot-sil",
+"redirect_document_id": true
+},
+{
+"source_path": "WindowsServerDocs/management/software-inventory-logging/get-started-with-software-inventory-logging.md",
+"redirect_url": "/windows-server/administration/software-inventory-logging/get-started-with-software-inventory-logging",
 "redirect_document_id": true
 },
 {
@@ -6561,6 +6571,11 @@
 "redirect_document_id": true
 },
 {
+"source_path": "WindowsServerDocs/management/management-and-automation.md",
+"redirect_url": "/windows-server/administration",
+"redirect_document_id": true
+},
+{
 "source_path": "WindowsServerDocs/management/windows-server-update-services/manage/viewing-and-managing-updates.md",
 "redirect_url": "/windows-server/administration/windows-server-update-services/manage/viewing-and-managing-updates",
 "redirect_document_id": true
@@ -7391,6 +7406,11 @@
 "redirect_document_id": true
 },
 {
+"source_path": "WindowsServerDocs/security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms.md",
+"redirect_url": "/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms",
+"redirect_document_id": true
+},
+{
 "source_path": "WindowsServerDocs/security/guarded-fabric-shielded-vm/guarded-fabric-add-host-information-for-admin-trusted-attestation.md",
 "redirect_url": "/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-add-host-information-for-admin-trusted-attestation",
 "redirect_document_id": true
@@ -7632,27 +7652,57 @@
 },
 {
 "source_path": "WindowsServerDocs/identity/web-application-proxy/Publishing-Applications-using-AD-FS-Preauthentication.md",
-"redirect_url": "/windows-server/remote/remote-access/Publishing-Applications-using-AD-FS-Preauthentication",
+"redirect_url": "/windows-server/remote/remote-access/web-application-proxy/Publishing-Applications-using-AD-FS-Preauthentication",
 "redirect_document_id": true
 },
 {
 "source_path": "WindowsServerDocs/identity/web-application-proxy/Publishing-Applications-with-SharePoint,-Exchange-and-RDG.md",
-"redirect_url": "/windows-server/remote/remote-access/Publishing-Applications-with-SharePoint,-Exchange-and-RDG",
+"redirect_url": "/windows-server/remote/remote-access/web-application-proxy/Publishing-Applications-with-SharePoint,-Exchange-and-RDG",
 "redirect_document_id": true
 },
 {
 "source_path": "WindowsServerDocs/identity/web-application-proxy/Troubleshooting-Web-Application-Proxy.md",
-"redirect_url": "/windows-server/remote/remote-access/Troubleshooting-Web-Application-Proxy",
+"redirect_url": "/windows-server/remote/remote-access/web-application-proxy/Troubleshooting-Web-Application-Proxy",
 "redirect_document_id": true
 },
 {
 "source_path": "WindowsServerDocs/identity/web-application-proxy/Web-Application-Proxy-in-Windows-Server.md",
-"redirect_url": "/windows-server/remote/remote-access/Web-Application-Proxy-in-Windows-Server",
+"redirect_url": "/windows-server/remote/remote-access/web-application-proxy/Web-Application-Proxy-in-Windows-Server",
 "redirect_document_id": true
 },
 {
 "source_path": "WindowsServerDocs/identity/web-application-proxy/web-application-proxy-windows-server.md",
-"redirect_url": "/windows-server/remote/remote-access/web-application-proxy-windows-server",
+"redirect_url": "/windows-server/remote/remote-access/web-application-proxy/web-application-proxy-windows-server",
+"redirect_document_id": true
+},
+{
+"source_path": "WindowsServerDocs/identity/ad-fs/operations/configure-ad-fs-extranet-lockout.md",
+"redirect_url": "/windows-server/identity/ad-fs/operations/configure-ad-fs-extranet-lockout-protection",
+"redirect_document_id": true
+},
+{
+"source_path": "WindowsServerDocs/security/trusted-platform-module/user-account-control/how-user-account-control-works.md",
+"redirect_url": "/windows-server/security/user-account-control/how-user-account-control-works",
+"redirect_document_id": true
+},
+{
+"source_path": "WindowsServerDocs/identity/ad-fs/operations/auditing-enhancements-to-ad-fs-in-windows-server-2016.md",
+"redirect_url": "/windows-server/identity/ad-fs/technical-reference/auditing-enhancements-to-ad-fs-in-windows-server-2016",
+"redirect_document_id": true
+},
+{
+"source_path": "WindowsServerDocs/identity/ad-fs/operations/set-up-the-lab-environment-for-ad-fs-in-windows-server-2012-r2.md",
+"redirect_url": "/windows-server/identity/ad-fs/deployment/set-up-the-lab-environment-for-ad-fs-in-windows-server-2012-r2",
+"redirect_document_id": true
+},
+{
+"source_path": "WindowsServerDocs/identity/ad-fs/operations/plan-device-based-conditional-access-on-premises.md",
+"redirect_url": "/windows-server/identity/ad-fs/deployment/plan-device-based-conditional-access-on-premises",
+"redirect_document_id": true
+},
+{
+"source_path": "WindowsServerDocs/identity/ad-fs/operations/set-up-geographic-redundancy-with-sql-server-replication.md",
+"redirect_url": "/windows-server/identity/ad-fs/deployment/set-up-geographic-redundancy-with-sql-server-replication",
 "redirect_document_id": true
 }
 ]
