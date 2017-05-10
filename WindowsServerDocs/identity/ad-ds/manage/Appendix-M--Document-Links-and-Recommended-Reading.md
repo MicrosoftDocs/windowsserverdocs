@@ -170,7 +170,7 @@ The following table contains a list of links to external documents and their URL
 The following table contains a list of recommended reading that will assist you in enhancing the security of your Active Directory systems.  
   
 ||  
-|-|  
+|---|  
 |**Recommended Reading**|  
 |[Georgia Tech's Emerging Cyber Threats for 2014 Report](http://www.gtsecuritysummit.com/2014Report.pdf)|  
 |[Microsoft Security Intelligence Report](http://www.microsoft.com/security/sir/default.aspx)|  

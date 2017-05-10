@@ -36,7 +36,7 @@ These instructions are for a 2-node deployment. The following table shows the VM
 | 50    | 250        | DS1 | 2       | P10       | 128            | 2x(DS1 + 2 P10)  |
 | 100   | 500        | DS1 | 2       | P20       | 512            | 2x(DS1 + 2 P20)  |
 | 250   | 1250       | DS1 | 2       | P30       | 1024           | 2x(DS1 + 2 P30)  |
-| 500   | 2500       | DS2 | 3       | P30       | 1024           | 2x(DS2 + 2 P30)  |
+| 500   | 2500       | DS2 | 3       | P30       | 1024           | 2x(DS2 + 3 P30)  |
 | 1000  | 5000       | DS3 | 5       | P30       | 1024           | 2x(DS3 + 5 P30)  |
 | 2500  | 12500      | DS4 | 13      | P30       | 1024           | 2x(DS4 + 13 P30) |
 | 5000  | 25000      | DS5 | 25      | P30       | 1024           | 2x(DS5 + 25 P30) | 
@@ -76,8 +76,8 @@ Use the following steps to create a domain controller (we called ours "my-dc" be
    2. Create the second node. Repeat the step above with the following changes:
       - Name: my-fsn2
       - High Availability - select the availability set you created above.  
-6. [Attach data disks](https://azure.microsoft.com/documentation/articles/virtual-machines-windows-attach-disk-portal/) to the cluster node VMs according to your user needs (as seen in the table above). Set **host caching** to **None**.
-7. Set IP addresses for all VMS to **static**. 
+6. [Attach data disks](https://azure.microsoft.com/documentation/articles/virtual-machines-windows-attach-disk-portal/) to the cluster node VMs according to your user needs (as seen in the table above). After the data disks are created and attached to the VM, set **host caching** to **None**.
+7. Set IP addresses for all VMs to **static**. 
    1. In the resource group, select a VM, and then click **Network interfaces** (under **settings**). Select the listed network interface, and then click **IP Configurations**. Select the listed IP configuration, select **static**, and then click **Save**.
    2. Note the domain controller (my-dc for our example) private IP address (10.x.x.x).
 8. Set primary DNS server address on NICs of the cluster node VMs to the my-dc server. Select the VM, and then click **Network Interfaces > DNS servers > Custom DNS**. Enter the the private IP address you noted above, and then click **Save**.
