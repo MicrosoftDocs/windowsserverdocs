@@ -85,9 +85,9 @@ It is unsupported to make HGS a domain controller when you are joining an existi
 With HGS joined to the domain, sign in with a domain account that has local administrator privileges.
 Open an elevated PowerShell prompt and run the following command to join the existing HGS cluster.
 
-    ```powershell
-    Initialize-HgsServer -HgsServerIPAddress <IP address of first HGS Server>
-    ```
+```powershell
+Initialize-HgsServer -HgsServerIPAddress <IP address of first HGS Server>
+```
 
 It will take up to 10 minutes for the encryption and signing certificates from the first HGS server to replicate to this node.
 If you did not provide a PFX file for either the encryption or signing certificates on the first HGS server, only the public key will be replicated to this server.
