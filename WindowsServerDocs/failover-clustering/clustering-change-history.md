@@ -7,7 +7,7 @@ ms.topic: article
 author: JasonGerend
 manager: dongill
 ms.author: jgerend
-ms.date: 3/7/2017
+ms.date: 5/11/2017
 description: New and updated topics in the Failover Clustering documentation for Windows Server 2016
 ---
 # Change history for Failover Clustering topics in Windows Server 2016
@@ -27,6 +27,7 @@ This topic lists new and updated topics in the [Failover Clustering](failover-cl
 |[Cluster-Aware Updating advanced options](cluster-aware-updating-options.md)|New topic.|
 |[Cluster-Aware Updating FAQ](cluster-aware-updating-faq.md)|New topic.|
 |[Cluster-Aware Updating plug-ins](cluster-aware-updating-plug-ins.md)|New topic.|
+|[Deploy a cloud witness for a Failover Cluster](deploy-cloud-witness.md)|Clarified the type of storage account that's required (you can't use Azure Premium Storage or Blob storage accounts).|
 
 ## March 2017
 
