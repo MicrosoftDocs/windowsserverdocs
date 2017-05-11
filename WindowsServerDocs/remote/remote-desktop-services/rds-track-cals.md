@@ -1,6 +1,4 @@
-
-> [!NOTE]
->  If you are using Azure AD Domain Services in your environment, the Remote Desktop Licensing Manager tool won't work to obtain Per User CALs. Instead, you need to track licensing manually, either through logon events, polling active Remote Desktop connections through the Connection Broker, or another mechanism that works for you. ---
+---
 title: Track your Remote Desktop Services client access licenses (RDS CALs)
 description: Learn how to track CALs across your RDS deployment.
 ms.custom: na
@@ -13,14 +11,14 @@ ms.topic: article
 ms.assetid: 80d82d30-3ad0-4a8c-9a9b-2773c47eee19
 author: lizap
 ms.author: elizapo
-ms.date: 02/21/2017
+ms.date: 05/11/2017
 manager: dongill
 ---
 # Track your Remote Desktop Services client access licenses (RDS CALs)
 
 >Applies To: Windows Server 2016
 
-You can use the Remote Desktop Licensing Manager tool to create (generate) reports to track the RDS Per User CALs that have been issued by a Remote Desktop license server.
+You can use the Remote Desktop Licensing Manager tool to create reports to track the RDS Per User CALs that have been issued by a Remote Desktop license server.
 
 > [!NOTE]
 >  If you are using Azure AD Domain Services in your environment, the Remote Desktop Licensing Manager tool won't work to obtain Per User CALs. Instead, you need to track licensing manually, either through logon events, polling active Remote Desktop connections through the Connection Broker, or another mechanism that works for you. 
@@ -45,4 +43,4 @@ The report that you created appears in the Reports section under the node for th
 
 You can also save the report as a CSV file to a folder location on the computer. To save the report, right-click the report that you want to save, click Save As, and then specify the file name and location to save the report.
 
-Reports that you create are listed in the Reports node under the node for the license server in Remote Desktop Licensing Manager. If you no longer need a report, you can delete the report.
+Reports that you create are listed in the Reports node under the node for the license server in Remote Desktop Licensing Manager. If you no longer need a report, you can delete it.

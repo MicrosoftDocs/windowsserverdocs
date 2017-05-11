@@ -11,16 +11,16 @@ ms.topic: article
 ms.assetid: 5be6546b-df16-4475-bcba-aa75aabef3e3
 author: lizap
 ms.author: elizapo
-ms.date: 11/15/2016
+ms.date: 05/11/2017
 manager: dongill
 ---
 # License your RDS deployment with client access licenses (CALs)
 
 >Applies To: Windows Server 2016
 
-Each user and device that connects to a Remote Desktop session host needs a client access licenses (CAL). You use RD Licensing to install, issue, and track RDS CALs.  
+Each user and device that connects to a Remote Desktop Session host needs a client access licenses (CAL). You use RD Licensing to install, issue, and track RDS CALs.  
 
-When a user or a device connects to an RD Session Host server, the RD Session Host server determines if an RDS CAL is needed. The RD Session Host server then requests an RDS CAL from a Remote Desktop license server. If an appropriate RDS CAL is available from a license server, the RDS CAL is issued to the client, and the client is able to connect to the RD Session Host server. 
+When a user or a device connects to an RD Session Host server, the RD Session Host server determines if an RDS CAL is needed. The RD Session Host server then requests an RDS CAL from the Remote Desktop license server. If an appropriate RDS CAL is available from a license server, the RDS CAL is issued to the client, and the client is able to connect to the RD Session Host server and from there to the desktop or apps they're trying to use. 
 
 Although there is a licensing grace period during which no license server is required, after the grace period ends, clients must have a valid RDS CAL issued by a license server before they can log on to an RD Session Host server.
 
@@ -51,9 +51,9 @@ The following table outlines the differences between the two types of CALs:
 
 When you use the Per Device model, a temporary license is issued the first time a device connects to the RD Session Host. The second time that device connects, as long as the license server is activated and there are available CALs, the license server issues a permanent RDS Per Device CAL.
 
-When you use the Per User model, licensing is not enforced and each user is granted a license to connect to an RD Session Host from any number of devices. User is issued licenses from the available CAL pool or OverUsed CAL pool and  it’s the responsibility of administrator to ensure that all of your users have a valid license and zero Over-Used CAL’s which is otherwise a discrepancy in Remote Destkop Services license terms. 
+When you use the Per User model, licensing is not enforced and each user is granted a license to connect to an RD Session Host from any number of devices. The license server issues licenses from the available CAL pool or the Over-Used CAL pool - it’s your responsibility to ensure that all of your users have a valid license and zero Over-Used CALs - otherwise, you're in violiation of the Remote Destkop Services license terms. 
 
-To ensure you are in compliance with the Remote Destkop Services license terms, track the number of RDS Per User CALs used in your organization and be sure to have a sufficient number of Per User CALs installed on the license server.
+To ensure you are in compliance with the Remote Destkop Services license terms, track the number of RDS Per User CALs used in your organization and be sure to have a enough Per User CALs installed on the license server for all of your users.
 
 You can use the Remote Desktop Licensing Manager to track and generate reports on RDS Per User CALs.   
 
