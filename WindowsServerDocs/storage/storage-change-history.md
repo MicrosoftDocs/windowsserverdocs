@@ -7,7 +7,7 @@ ms.topic: article
 author: JasonGerend
 manager: dongill
 ms.author: jgerend
-ms.date: 3/20/2017
+ms.date: 5/11/2017
 description: New and updated topics in the Storage documentation for Windows Server 2016
 ---
 # Change history for storage topics in Windows Server 2016
@@ -18,6 +18,13 @@ This topic lists new and updated topics in the [Storage](storage.md) documentati
 
 > If you're looking for update history for Windows Server 2016, see [Windows 10 and Windows Server 2016 update history](https://support.microsoft.com/help/4000825/windows-10-and-windows-server-2016-update-history).
 
+## May 2017
+|New or changed topic|Description|
+|---|---|
+|[Storage Replica overview](storage-replica/storage-replica-overview.md) (and other Storage Replica topics)|Added recommendation to use fast, exclusive storage for Storage Replica logs.|
+|[Data Deduplication overview](data-deduplication/overview.md) and <br>[Install Data Deduplication](data-deduplication/install-enable.md)|Updated the system requirements to include a newer software update. |
+|[Storage Spaces Direct hardware requirements](storage-spaces/storage-spaces-direct-hardware-requirements.md)|Changed drive endurance requirements for cache devices.|
+
 ## April 2017
 
 |New or changed topic|Description|
@@ -27,6 +34,9 @@ This topic lists new and updated topics in the [Storage](storage.md) documentati
 |[Planning a Work Folders deployment](work-folders/plan-work-folders.md)|New topic.|
 |[Deploying Work Folders](work-folders/deploy-work-folders.md)|New topic.|
 |[Deploying Work Folders with AD FS and Web Application Proxy (WAP)](work-folders/deploy-work-folders-adfs-overview.md)|New topic.|
+|[Storage Replica known issues](storage-replica/storage-replica-known-issues.md)|Added new information.|
+|[Hyper-converged solution using Storage Spaces Direct](storage-spaces/hyper-converged-solution-using-storage-spaces-direct.md)|Removed a reference to an obsolete software update and fixed a typo in the sample output.|
+
 
 ## March 2017
 
