@@ -20,7 +20,7 @@ manager: elizapo
 
 These instructions and recommended settings are relevant to Windows 10 1607 (version 10.0.1393).
 
-When you create an image to base the VDI deployment, be sure to use the **Current Branch**. For more information about Current Branch, see [Windows 10 release information](Windows 10 release information).
+When you create an image to base the VDI deployment, be sure to use the **Current Branch**. For more information about Current Branch, see [Windows 10 release information](https://technet.microsoft.com/en-us/windows/release-info.aspx).
 
 ## Creating the Windows 10 image
 The first step is to install a reference image of Windows 10 1607 (version 10.0.1393) on either a physical  or virtual machine. Installing to a virtual machine is easy and allows you to save versions of the virtual hard-disk (VHD) file, in case you want to roll back to an earlier version.
