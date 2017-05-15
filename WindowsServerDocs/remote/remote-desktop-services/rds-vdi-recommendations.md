@@ -1,13 +1,13 @@
 ---
 title: Recommended configuration for VDI desktops
-description: 
+description: Recommended settings and configuration for Windows 10 1607 (10.0.1393) desktops used as VDI images
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
 ms.author: elizapo
-ms.date: 05/04/2017
+ms.date: 05/15/2017
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2a44dc9f-c221-4bf7-89c3-fb4c86a90f8c
@@ -18,11 +18,19 @@ manager: elizapo
 
 >Applies To: Windows Server 2016, Windows10
 
-INTRO/EXPLANATORY MATERIAL
-
 These instructions and recommended settings are relevant to Windows 10 1607 (version 10.0.1393).
 
-  ## In "Customize settings" **ARE THESE ACCESSIBLE ONCE PAST THE SETUP WIZARD?**
+When you create an image to base the VDI deployment, be sure to use the **Current Branch**. For more information about Current Branch, see [Windows 10 release information](Windows 10 release information).
+
+## Creating the Windows 10 image
+The first step is to install a reference image of Windows 10 1607 (version 10.0.1393) on either a physical  or virtual machine. Installing to a virtual machine is easy and allows you to save versions of the virtual hard-disk (VHD) file, in case you want to roll back to an earlier version.
+
+During installation, you can choose either **Express Settings** or **Customize**. The settings offered during the **Customize** option are adjustable by using Group Policy, so the method of installing the base OS is not that important.
+
+
+If you chose **Customize**, you can adjust these settings during installation:
+
+## In "Customize settings" **ARE THESE ACCESSIBLE ONCE PAST THE SETUP WIZARD?**
 
 |Setting|Default value|Recommended value for VDI use|  
 |-------------------|----------|--------------|
@@ -42,8 +50,10 @@ These instructions and recommended settings are relevant to Windows 10 1607 (ver
 |Use page prediction to improve reading, speed up browsing, and make your overall experience better in Windows browsers. Your browsing data will be sent to Microsoft.|	On|	Off|
 |Get updates from and send updates to other PCs on the Internet to speed up app and Windows Update downloads|	On|	Off|
 
+Once installation is complete, you can continue adjusting settings starting with **Windows Settings**.
+
 ## In Windows Settings
-To access Windows Settings, click Start (the Windows icon on the taskbar), and then click the Settings icon (shaped like a gear).
+To access Windows Settings, click **Start** (the Windows icon on the taskbar), and then click the **Settings** icon (shaped like a gear).
 
 ### In the "System" area of Windows Settings
 In Windows Settings area, clicking the **System** icon gives you access to a number of system-related settings. Not all of them need adjustment for optimum VDI use--these settings are the most important:
