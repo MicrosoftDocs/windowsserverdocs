@@ -192,11 +192,13 @@ Active Directory Domain Services will be installed on the machine, but should re
 
 Once you have prepared your bastion forest with the AD objects above and the certificates from the prerequisite section, you are ready to initalize the HGS server using the [Initialize-HgsServer](https://technet.microsoft.com/library/mt652185.aspx) cmdlet.
 
-If you are using PFX-based certificates, run the following command:
+If you are using PFX-based certificates, run the following commands on the HGS server:
 
 ```powershell
 $signingCertPass = Read-Host -AsSecureString -Prompt "Signing certificate password"
 $encryptionCertPass = Read-Host -AsSecureString -Prompt "Encryption certificate password"
+
+Install-ADServiceAccount -Identity 'HGSgMSA'
 
 Initialize-HgsServer -UseExistingDomain -ServiceAccount 'HGSgMSA' -JeaReviewersGroup 'HgsJeaReviewers' -JeaAdministratorsGroup 'HgsJeaAdmins' -HgsServiceName 'HgsService' -SigningCertificatePath 'C:\temp\SigningCert.pfx' -SigningCertificatePassword $signPass -EncryptionCertificatePath 'C:\temp\EncryptionCert.pfx' -EncryptionCertificatePassword $encryptionCertPass -TrustTpm
 ```
