@@ -20,6 +20,9 @@ manager: elizapo
 
 These instructions and recommended settings are relevant to Windows 10 1607 (version 10.0.1393).
 
+> [!NOTE]  
+> Any settings not specifically mentioned in this topic can be left at their default values (or set per your requirements and policies) without appreciable impact on VDI functionality.
+
 When you create an image to base the VDI deployment, be sure to use the **Current Branch**. For more information about Current Branch, see [Windows 10 release information](https://technet.microsoft.com/en-us/windows/release-info.aspx).
 
 ## Creating the Windows 10 image
@@ -83,10 +86,8 @@ These recommended values will reduce notifications and background network activi
 |Get notifications from apps and other senders|	On|	Off|
 |Show notifications on the lock screen.|	On|	Off|
 |Show alarms, reminders, and incoming VoIP calls on the lock screen.|	On|	Off|
-|HIDE NOTIFICATIONS?|?|?|
 |Show tips, tricks, and suggestions as you use Windows.|	On|	Off|
 
-GET NOTIFICATIONS FROM THESE SENDERS??
 
 #### Offline maps
 
@@ -99,7 +100,6 @@ This setting is only applicable if the Maps app is installed. Its default value 
 |When I sign in|	Use the appropriate mode for my hardware|	Use desktop mode|
 |When this device automatically switches mode on or off|	Always ask me before switching|	Don’t ask me and don’t switch|
 |Hide app icons on the taskbar in tablet mode|	On|	Off|
-|AUTOMATICALLY HIDE TASKBAR IN TABLET MODE??|?|?|
 
 
 #### WHAT ABOUT THE OTHER SETTINGS UNDER 'SYSTEM'?
@@ -211,6 +211,10 @@ On the **Advanced options** page, click **Choose how updates are delivered** to 
 
 The settings in this section are adjustable either by navigating through Control Panel or opening the utility directly.
 
+> [!NOTE]  
+> Any settings not specifically mentioned in this topic can be left at their default values (or set per your requirements and policies) without appreciable impact on VDI functionality.
+
+
 ### Task Scheduler
 The fastest way to open Task Scheduler is to push the Windows button and type *task scheduler* or *taskschd.msc*. In the results that return, click **Task Scheduler** to open the utility. In Task Scheduler, expand **Task Scheduler Library**, expand **Microsoft**, and then expand **Windows**. You now have access to the list of task collections. To change the state of each scheduled task, right-click it, and then click the desired state (typically, **Disabled** for VDI use).
 
@@ -284,9 +288,11 @@ Push the Windows button and type *control panel*. In the results that return, cl
 Push the Windows button and type *control panel*. In the results that return, click **Control Panel**. In Control Panel, click **System** to open the System control panel. In the left pane, click **Advanced system settings**. In the dialog that opens, click the **Advanced** tab. In the **Performance** area, click the **Settings** button, then on **Visual Effects** tab in the dialog that opens, select the **Adjust for best performance** radio button. Click **OK** to save and exit.
 
 ## Group Policy settings
-[YOUR PAPER SAYS LOCAL SECURITY POLICY, BUT NONE OF THE LISTINGS MATCH THAT DIALOG]
 
 To edit Group Policy settings, press the Windows button and type *group policy* or *gpedit.msc*. In the results that return, click **Edit group policy** to open Local Group Policy Editor.
+
+> [!NOTE]  
+> Any settings not specifically mentioned in this topic can be left at their default values (or set per your requirements and policies) without appreciable impact on VDI functionality.
 
 Under **Computer Configuration**, expand **Windows Settings**, and then expand **Security Settings**. Click **Network List Manager Policies**, and then double-click **All Networks**. In the dialog that opens, in the **Network location** area, select the radio button for **User cannot change location**. Click the **OK** button to save.
 
@@ -418,7 +424,7 @@ Go back up to the level of **Internet Explorer**, then double-click **Internet S
 - Turn off URL Suggestions
 - Turn off Windows Search AutoComplete
 
-Go back up 4 levels to **Windows Components**, double-click **Location and Sensors**, and then set these three settings to **Enabled** (for each, click **OK** to save and exit):
+Go back up four levels to **Windows Components**, double-click **Location and Sensors**, and then set these three settings to **Enabled** (for each, click **OK** to save and exit):
 
 - Turn off location
 - Turn off location scripting
