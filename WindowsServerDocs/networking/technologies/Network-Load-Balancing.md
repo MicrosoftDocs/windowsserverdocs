@@ -2,12 +2,8 @@
 title: Network Load Balancing
 description: This topic provides an overview of the Network Load Balancing (NLB) feature in Windows Server 2016, and includes links to additional guidance about creating, configuring, and managing NLB clusters.
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-nlb
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 244a4b48-06e5-4796-8750-a50e4f88ac72
 ms.author: jamesmci 
