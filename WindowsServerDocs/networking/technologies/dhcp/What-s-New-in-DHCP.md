@@ -27,6 +27,8 @@ If you are using a DHCP proxy client that is configured with DHCP option 118, su
 
 If you are using a DHCP relay agent that is configured with DHCP option 82, sub\-option 5, the relay agent can request an IP address lease for DHCP clients from a specific IP address range.
 
+For more information, see [DHCP Subnet Selection Options](dhcp-subnet-options.md).
+
 ## New Logging Events for DNS Registration Failures by the DHCP Server
 
 DHCP now includes logging events for circumstances in which DHCP server DNS record registrations fail on the DNS server.
