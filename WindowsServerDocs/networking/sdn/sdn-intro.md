@@ -155,6 +155,19 @@ The following list of SDN technologies provides links to documentation for each 
 - [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](../../virtualization/hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md)
 - [Container Networking Overview](technologies/containers/Container-networking-overview.md)
 
+## SDN Learning Resources
+The links [above](https://docs.microsoft.com/en-us/windows-server/networking/sdn/sdn-intro#key-components-of-sdn-architecture) lead to the official documentation on SDN and the key components of SDN architecture. In addition to this core documentation, we have also published several videos, blog posts and other items on SDN. Refer to the links below as additional resources for understanding SDN, and how you might use it to boost your organization's network infrastructure:
+- [Microsoft Software Defined Networking Datasheet](http://download.microsoft.com/download/1/5/A/15AC87E7-E99C-4E98-B6AF-9346790AD2DF/Software_Defined_Networking_is_built_in_with_Windows_Server_2016_solution_brief_EN_US.pdf)
+- TechNet Virtual Lab: [Implementing a Software Defined Network with Windows Server 2016](http://msft.social/LryGa6)
+- Blog post: [How to find the SDN gateway local address for BGP peering in Windows Server 2016](https://blogs.technet.microsoft.com/networking/2017/03/23/how-to-find-the-sdn-gateway-local-address-for-bgp-peering-in-windows-server-2016/)
+- Blog post: [Troubleshoot Configuring SDN RAS Gateway VPN Bandwidth Settings in Virtual Machine Manager](https://blogs.technet.microsoft.com/networking/2017/03/06/troubleshoot-configuring-sdn-ras-gateway-vpn-bandwidth-settings-in-virtual-machine-manager/)
+- Blog post: [4 datacenter challenges and how Windows Server 2016 software defined networking can help](https://blogs.technet.microsoft.com/hybridcloud/2015/11/04/4-datacenter-challenges-and-how-windows-server-2016-software-defined-networking-can-help/)
+- Blog post: [Network Virtualization in the Windows Server 2016 Software Defined Networking (SDN) Stack](https://blogs.technet.microsoft.com/networking/2016/10/26/network-virtualization-with-ws2016-sdn/)
+- Video: [An Introduction to Software Defined Networking with Windows Server 2016](https://www.youtube.com/watch?v=f501zUUcXD0)
+- Video: [Ten reasons you’ll love Windows Server 2016: Software-Defined Networking](https://channel9.msdn.com/Blogs/windowsserver/Software-Defined-Networking)
+- Video: [Software-defined Networking Load Balancer in Windows Server 2016](https://www.youtube.com/watch?v=5q3sEQN4GSM)
+- Video: [Explore Windows Server 2016 Software Defined Datacenter (Ignite 2016)](https://www.youtube.com/watch?v=m5oOOsy539w)
+- Video: [Software-Defined Networking in Windows Server 2016 - by Matt McSpirit (Ignite Australia 2015)](https://channel9.msdn.com/Events/Ignite/Australia-2015/INF324)
 
 ## Contact the Datacenter and Cloud Networking Team
 
