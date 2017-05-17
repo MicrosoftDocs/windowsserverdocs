@@ -310,6 +310,8 @@ Following are lists that describe SET teaming MAC address replacement behavior, 
 ## <a name="bkmk_manage"></a>Managing a SET team
 
 It is recommended that you use System Center Virtual Machine Manager \(VMM\) to manage SET teams, however you can also use Windows PowerShell to manage SET. The following sections provide the Windows PowerShell commands that you can use to manage SET.
+
+For information on how to create a SET team using VMM, see the section "Set up a logical switch" in the System Center VMM library topic [Create logical switches](https://docs.microsoft.com/system-center/vmm/network-switch).
   
 ### Create a SET team
 
