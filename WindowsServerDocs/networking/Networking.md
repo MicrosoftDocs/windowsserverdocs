@@ -9,7 +9,7 @@ manager: brianlic
 ms.author: jamesmci
 author: jamesmci
 ---
-# Networking in Windows Server 2016 
+# Networking
 
 >Applies To: Windows Server 2016
 
@@ -139,6 +139,10 @@ You can use Remote Access technologies, such as DirectAccess and Virtual Private
 Remote Access documentation is now located in the [Remote access and server management](https://docs.microsoft.com/windows-server/remote/) section of the Windows Server 2016 table of contents. For more information, see [Remote Access](../remote/remote-access/remote-access.md).
 
 For more information about Web Application Proxy, which is a role service of the Remote Access server role, see [Web Application Proxy in Windows Server 2016](https://docs.microsoft.com/windows-server/remote/remote-access/web-application-proxy/web-application-proxy-windows-server).
+
+### [Windows Internet Name Service (WINS)](technologies/wins/wins-top.md)
+
+Windows Internet Name Service (WINS) is a legacy computer name registration and resolution service that maps computer NetBIOS names to IP addresses. Using DNS is recommended over using WINS.
 
 ## Additional Resources  
 
