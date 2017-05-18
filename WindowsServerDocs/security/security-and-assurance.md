@@ -24,7 +24,7 @@ ms.author: coreyp
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-<img src="../get-started/media/5-security.png" style='float:left; padding:.5em;' alt="Icon representing a lock"> Rely on new layers of protection built into the operating system to further safeguard against security breaches. Help block malicious attacks and enhance the security of your virtual machines, applications, and data.
+<img src="../get-started/media/5-security.png" style='float:left; padding:.5em;' alt="Icon representing a lock"> You can rely on new layers of protection built into the operating system to further safeguard against security breaches. Help block malicious attacks and enhance the security of your virtual machines, applications, and data.
 <br><br><br><br><br><br>
 
 ### [Windows Server 2016 Security Blog Post](https://blogs.technet.microsoft.com/windowsserver/2016/04/25/ten-reasons-youll-love-windows-server-2016-8-security/)
