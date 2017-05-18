@@ -7,7 +7,7 @@ ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
 ms.author: elizapo
-ms.date: 05/05/2017
+ms.date: 05/17/2017
 ms.tgt_pltfrm: na
 ms.topic: article
 author: lizap
@@ -17,19 +17,21 @@ manager: dongill
 
 >Applies To: Windows Server 2016
 
-Azure Site Recovery is an Azure-based service that provides disaster recovery capabilities by orchestrating replication, failover and recovery of virtual machines. Azure Site Recovery supports a number of replication technologies to consistently replicate, protect, and seamlessly failover virtual machines and applications to private/public or hoster’s clouds. 
+You can use Azure Site Recovery to create a disaster recovery solution for your Remote Desktop Services deployment. 
 
-You can use Azure Site Recovery to create a disaster recovery solution for your Remote Desktop Services deployment. Use the following information to create and validate the disaster recovery solution.
+[Azure Site Recovery](/azure/site-recovery/site-recovery-overview) is an Azure-based service that provides disaster recovery capabilities by orchestrating replication, failover ,and recovery of virtual machines. Azure Site Recovery supports a number of replication technologies to consistently replicate, protect, and seamlessly failover virtual machines and applications to private/public or hoster’s clouds. 
+
+Use the following information to create and validate the disaster recovery solution.
 
 ## Disaster recovery deployment options
 
 You can deploy RDS on either physical servers or virtual machines running Hyper-V or VMWare. Azure Site Recovery can protect both on-premises and virtual deployments to either a secondary site or to Azure. The following table shows the different supported RDS deployments in site-to-site or and site-to-Azure disaster recvoery scenarios.
 
-| Deployment type                          | Hyper-V site-to-site | Hyper-V site-to-Azure | VMWare site-to-site | VMWare site-to-Azure | Physical site-to-site | Physical site-to-Azure |
+| Deployment type                          | Hyper-V site-to-site | Hyper-V site-to-Azure | VMWare site-to-Azure | Physical site-to-Azure |
 |------------------------------------------|----------------------|-----------------------|---------------------|----------------------|-----------------------|------------------------|
-| Pooled virtual desktop (unmanaged)       | Yes                  | No                    | Yes                 | No                   | Yes                   | No                     |
-| Pooled virtual desktop (managed, no UPD) | Yes                  | No                    | Yes                 | No                   | Yes                   | No                     |
-| RemoteApps and desktop sessions (no UPD) | Yes                  | Yes                   | Yes                 | Yes                  | Yes                   | Yes                    |
+| Pooled virtual desktop (unmanaged)       |Yes|No|No|No |
+| Pooled virtual desktop (managed, no UPD) | Yes|No|No|No|
+| RemoteApps and desktop sessions (no UPD) | Yes|Yes|Yes|Yes  |
 
 ## Prerequisites
 
@@ -55,8 +57,8 @@ We'll cover the various steps to enable Azure Site Recovery Services for your RD
 | **Step 3 - Design your recovery plan.**                                                                                                                                                                                                        |
 | Map your resources - map on-premises networks to Azure VNETs.                                                                                                                                                                              |
 | [Create the recovery plan](rds-disaster-recovery-plan.md). |
-| [Test the recovery plan by creating a test failover](rds-asr-run-disaster-plan.md#perform-a-test-failover). Ensure all VMs can access required resources, like Active Directory. Ensure network redirections are configured and working for RDS.                                                   |
-| **Step 4 - Run a disaster recovery drill.**                                                                                                                                                                                                       |
-| Perform a [disaster recovery drill using planned and unplanned failovers](rds-asr-run-disaster-plan.md). Ensure that all VMs have access to required resources, such as Active Directory. Ensure that all VMs have access to required resources, such as Active Directory. |
+| Test the recovery plan by creating a test failover. Ensure all VMs can access required resources, like Active Directory. Ensure network redirections are configured and working for RDS. For detailed steps on testing your recovery plan, see [Run a test failover](/azure/site-recovery/site-recovery-test-failover-to-azure)|
+| **Step 4 - Run a disaster recovery drill.**                                                                                                                                                                                                     |
+| Run a disaster recovery drill using planned and unplanned failovers. Ensure that all VMs have access to required resources, such as Active Directory. Ensure that all VMs have access to required resources, such as Active Directory. For detailed steps on failovers and how to run drills, see [Failover in Site Recovery](/azure/site-recovery/site-recovery-failover).|
 
 
