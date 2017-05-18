@@ -13,6 +13,11 @@ ms.date: 4/24/2016
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
+> ![Security icon](../media/security-update.png) 
+A wide-spread ransomware attack, known as “WannaCrypt”, targets Windows systems that do not yet have the latest updates. Given the severity of this threat, immediately update your Windows systems. [Learn more](https://blogs.technet.microsoft.com/msrc/2017/05/12/customer-guidance-for-wannacrypt-attacks/). 
+ 
+
+
 <img src="../get-started/media/8-management.png" style='float:left; padding:.5em;' alt="Icon showing a gear"> Administration features and tools help IT pros run and manage Windows Server.  
 <br><br><br><br><br><br>
 
