@@ -11,11 +11,20 @@ ms.assetid: 90e3464c-49d8-4861-96db-ee6f8a09ec5b
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 5/17/2017
 ---
 # Windows Server Update Services (WSUS)
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
+<font size=1>
+<table border="0">
+  <tr>
+    <td><img src="../../../media/security-update.png" alt="Icon showing a security alert"> </td>
+    <td>A wide-spread ransomware attack, known as "WannaCrypt," targets Windows systems that do not yet have the latest updates. Given the severity of this threat, immediately update your Windows systems. [Learn more](https://blogs.technet.microsoft.com/msrc/2017/05/12/customer-guidance-for-wannacrypt-attacks/).</td>
+  </tr>
+</table>
+</font>
 
 Windows Server Update Services (WSUS) enables information technology administrators to deploy the latest Microsoft product updates. You can use WSUS to fully manage the distribution of updates that are released through Microsoft Update to computers on your network. This topic provides an overview of this server role and more information about how to deploy and maintain WSUS.
 
