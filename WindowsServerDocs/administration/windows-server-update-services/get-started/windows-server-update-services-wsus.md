@@ -20,7 +20,7 @@ ms.date: 5/17/2017
 <font size=1>
 <table>
   <tr>
-    <td><img src="../../media/security-update.png" style='float:left; padding:.5em;' alt="Icon showing a security alert"> </td>
+    <td><img src="../../../media/security-update.png" style='float:left; padding:.5em;' alt="Icon showing a security alert"> </td>
     <td>A wide-spread ransomware attack, known as "WannaCrypt," targets Windows systems that do not yet have the latest updates. Given the severity of this threat, immediately update your Windows systems. [Learn more](https://blogs.technet.microsoft.com/msrc/2017/05/12/customer-guidance-for-wannacrypt-attacks/).</td>
   </tr>
 </table>
