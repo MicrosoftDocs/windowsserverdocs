@@ -41,3 +41,7 @@
    - [Create images in markdown](create-images-markdown.md)
 
 - [Metadata for Windows Server technical articles](https://ppe.msdn.microsoft.com/en-us/ce-csi-docs/ops/ops-onboarding/managing-content/content-meta-data?branch=master)
+
+## Community management
+
+All topics in Docs.microsoft.com include a LiveFyre comment control at the bottom of the page, as well as inline. To respond to comments, you must first [Sign up for LiveFyre](https://github.com/Microsoft/azure-docs/blob/79cc9a099211fddb43ab739136df95bfeaf4c5cd/contributor-guide/tools-and-setup.md#sign-up-for-livefyre).
