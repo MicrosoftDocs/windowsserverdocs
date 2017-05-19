@@ -6,16 +6,25 @@ ms.prod: windows-server-threshold
 ms.technology: techgroup-security
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.date: 10/12/2016
+ms.date: 5/17/2017
 ms.assetid: b886b2fd-3567-4f0a-8aa3-4ba7923d2d21
 author: coreyp-at-msft
 ms.author: coreyp
 ---
 # Security and Assurance in Windows Server 2016
 
+<font size=1>
+<table border="0">
+  <tr>
+    <td><img src="../media/security-update.png" alt="Icon showing a security alert"> </td>
+    <td>A wide-spread ransomware attack, known as "WannaCrypt," targets Windows systems that do not yet have the latest updates. Given the severity of this threat, immediately update your Windows systems. [Learn more](https://blogs.technet.microsoft.com/msrc/2017/05/12/customer-guidance-for-wannacrypt-attacks/).</td>
+  </tr>
+</table>
+</font>
+
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-<img src="../get-started/media/5-security.png" style='float:left; padding:.5em;' alt="Icon representing a lock"> Rely on new layers of protection built into the operating system to further safeguard against security breaches. Help block malicious attacks and enhance the security of your virtual machines, applications, and data.
+<img src="../get-started/media/5-security.png" style='float:left; padding:.5em;' alt="Icon representing a lock"> You can rely on new layers of protection built into the operating system to further safeguard against security breaches. Help block malicious attacks and enhance the security of your virtual machines, applications, and data.
 <br><br><br><br><br><br>
 
 ### [Windows Server 2016 Security Blog Post](https://blogs.technet.microsoft.com/windowsserver/2016/04/25/ten-reasons-youll-love-windows-server-2016-8-security/)

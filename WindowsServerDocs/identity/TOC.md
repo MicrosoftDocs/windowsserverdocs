@@ -377,6 +377,7 @@
 #### [Manage Risk with additional Multi-Factor Authentication for Sensitive Applications](ad-fs/operations/Manage-Risk-with-additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
 #### [Manage Risk with Conditional Access Control](ad-fs/operations/Manage-Risk-with-Conditional-Access-Control.md)
 #### [Managing SSL Certificates in AD FS and WAP 2016](ad-fs/operations/Manage-SSL-Certificates-AD-FS-WAP-2016.md)
+#### [Managing SSL Protocols in AD FS](ad-fs/operations/Manage-SSL-Protocols-in-AD-FS.md)
 #### [Plan Device-based Conditional Access on-Premises](ad-fs/deployment/Plan-Device-based-Conditional-Access-on-Premises.md)
 #### [Set up an AD FS lab environment](ad-fs/operations/Set-up-an-AD-FS-lab-environment.md)
 #### [Walkthrough Guide: Manage Risk with additional Multi-Factor Authentication for Sensitive Applications](ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
