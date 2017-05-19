@@ -80,6 +80,7 @@
 #### [Use DNS Policy for Application Load Balancing With Geo-Location Awareness](dns/deploy/app-lb-geo.md)
 ## [Dynamic Host Configuration Protocol (DHCP)](technologies/dhcp/dhcp-top.md)
 ### [What's New in DHCP](technologies/dhcp/What-s-New-in-DHCP.md)
+#### [DHCP Subnet Selection Options](technologies/dhcp/dhcp-subnet-options.md)
 #### [DHCP Logging Events for DNS Record Registrations](technologies/dhcp/dhcp-dns-events.md)
 ### [Deploy DHCP Using Windows PowerShell](technologies/dhcp/dhcp-deploy-wps.md)
 ## [IP Address Management (IPAM)](technologies/ipam/ipam-top.md)
@@ -219,3 +220,4 @@
 ### [System Center Technologies for Software Defined Networking](sdn/Sc-Tech-for-Sdn.md)
 ### [Microsoft Azure and Software Defined Networking](sdn/Azure_and_Sdn.md)
 ### [Contact the Datacenter and Cloud Networking Team](sdn/contact-sdn-team.md)
+## [Windows Internet Name Service (WINS)](technologies/wins/wins-top.md)
