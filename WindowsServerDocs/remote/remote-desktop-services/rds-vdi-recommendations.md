@@ -18,10 +18,11 @@ manager: elizapo
 
 >Applies To: Windows Server 2016, Windows10
 
-Microsoft Desktop Virtualization automatically detects device configurations and network conditions to deliver the most appropriate services to each user. gets users up and running sooner by enabling the instant setup of corporate applications and desktops, and it equips IT to provide access to legacy applications during migration to Windows 10.
+Microsoft Desktop Virtualization automatically detects device configurations and network conditions to get users up and running sooner by enabling the instant setup of corporate applications and desktops, and it equips IT to provide access to legacy applications during migration to Windows 10.
+
 Although the Windows 10 operating system is very well tuned out of the box, there are opportunities for you to refine it further specifically for the corporate Microsoft Virtual Desktop Infrastructure (VDI) environment. In the VDI environment, many background services and tasks are disabled from the beginning.
 
-This topic is not blueprint. Instead, but rather a guide or starting point. Some recommendations might disable functionality that you would prefer to use, so you should consider the cost versus the benefit to your scenario of adjusting any particular setting.
+This topic is not a blueprint, but rather a guide or starting point. Some recommendations might disable functionality that you would prefer to use, so you should consider the cost versus the benefit of adjusting any particular setting in your scenario.
 
 These instructions and recommended settings are relevant to Windows 10 1607 (version 10.0.1393).
 
