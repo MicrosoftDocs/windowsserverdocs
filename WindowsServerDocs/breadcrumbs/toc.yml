@@ -34,5 +34,7 @@
         topicHref: /windows-server/storage/storage
       - name: Virtualization
         tocHref: /windows-server/virtualization
-        topicHref: /windows-server/virtualization/compute
-
+        topicHref: /windows-server/virtualization/virtualization
+      - name: Remote
+        tocHref: /windows-server/remote
+        topicHref: /windows-server/remote/index
