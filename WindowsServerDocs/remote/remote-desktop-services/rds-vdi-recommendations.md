@@ -7,7 +7,7 @@ ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
 ms.author: elizapo
-ms.date: 05/15/2017
+ms.date: 05/19/2017
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2a44dc9f-c221-4bf7-89c3-fb4c86a90f8c
@@ -17,6 +17,11 @@ manager: elizapo
 # Recommended settings for VDI desktops
 
 >Applies To: Windows Server 2016, Windows10
+
+Microsoft Desktop Virtualization automatically detects device configurations and network conditions to deliver the most appropriate services to each user. gets users up and running sooner by enabling the instant setup of corporate applications and desktops, and it equips IT to provide access to legacy applications during migration to Windows 10.
+Although the Windows 10 operating system is very well tuned out of the box, there are opportunities for you to refine it further specifically for the corporate Microsoft Virtual Desktop Infrastructure (VDI) environment. In the VDI environment, many background services and tasks are disabled from the beginning.
+
+This topic is not blueprint. Instead, but rather a guide or starting point. Some recommendations might disable functionality that you would prefer to use, so you should consider the cost versus the benefit to your scenario of adjusting any particular setting.
 
 These instructions and recommended settings are relevant to Windows 10 1607 (version 10.0.1393).
 
@@ -33,7 +38,9 @@ During installation, you can choose either **Express Settings** or **Customize**
 
 If you chose **Customize**, you can adjust these settings during installation:
 
-## In "Customize settings" **ARE THESE ACCESSIBLE ONCE PAST THE SETUP WIZARD?**
+## In "Customize settings"
+
+You can also adjust these after installation with Group Policy Editor; see the "Group Policy settings" section of this topic.
 
 |Setting|Default value|Recommended value for VDI use|  
 |-------------------|----------|--------------|
@@ -101,8 +108,6 @@ This setting is only applicable if the Maps app is installed. Its default value 
 |When this device automatically switches mode on or off|	Always ask me before switching|	Don’t ask me and don’t switch|
 |Hide app icons on the taskbar in tablet mode|	On|	Off|
 
-
-#### WHAT ABOUT THE OTHER SETTINGS UNDER 'SYSTEM'?
 
 ### In the "Devices" area of Windows Settings
 In Windows Settings area, clicking the **Devices** icon gives you access to a number of system-related settings. Not all of them need adjustment for optimum VDI use--these settings are the most important:
@@ -224,6 +229,8 @@ The fastest way to open Task Scheduler is to push the Windows button and type *t
 ||Consolidator|Enabled|Disabled|
 ||KernelCeipTask|Enabled|Disabled|
 ||UsbCeip|Enabled|Disabled|
+|Defrag||||
+||ScheduledDefrag|Enabled|Disabled|
 |Location||||
 ||Notifications|Enabled|Disabled|
 ||WindowsActionDialog|Enabled|Disabled|
@@ -544,16 +551,22 @@ To remove the OneDrive app:
 2. Right-click the **OneDrive** icon, and then click **Uninstall**. Programs and Features opens.
 3. In Programs and Features, right-click **Microsoft OneDrive** and click **Uninstall**.
 
-### Programs and Features (from legacy Control Panel) DOC ONLY HAS A BULLETED LIST, NO INSTRUCTIONS
+### Programs and Features (from previous versions of Control Panel)
+1. Push the **Start** button, type *Control*, and then press ENTER.
+2. Tap or double-click **Programs and Features**.
+3. On the far left, under **Control Panel Home**, tap or click **Turn Windows features on or off**. A new user interface will open.
+4. Clear the check boxes for any items that you do not want or need in the base image, for example: **SMB 1.0/CIFS File Sharing Support**.
 
-### Turn system icons off DOC ONLY HAS A BULLETED LIST, NO INSTRUCTIONS
+### Turn system icons off
+1. Push or click **Start**, and then click **Settings** (the gear icon).
+2. In the **Find a Setting** text area, type *Taskbar*, and then click **Taskbar Settings**.
+3. Under the **Taskbar** section, scroll or swipe down to the **Notification area** section.
+4. Click or tap **Turn system icons on or off**, and then turn each system icon on or off as you prefer for the image.
 
 ### Delete downloaded updates
 1. Using File Explorer, navigate to **C:\Windows\Software Distribution\Download**.
 2. Delete all files and folders in that directory.
 
-## Automatic Maintenance
-HOW DO YOU TURN IT OFF?
 
 
 
