@@ -14,7 +14,7 @@ author: jamesmci
 
 >Applies To: Windows Server 2016
 
-You can use Virtual Receive Side Scaling \(vRSS\) to configure a virtual network adapter to load balance incoming network traffic across multiple processor cores. 
+You can use Virtual Receive Side Scaling \(vRSS) to configure a virtual network adapter to load balance incoming network traffic across multiple logical processor cores in a VM or multiple physical cores for a host virtual Network Interface Card \(vNIC\).
 
 This configuration allows the load from a virtual network adapter to be distributed across multiple virtual processors in a virtual machine \(VM\), allowing the VM to process more network traffic more rapidly that it could with a single logical processor.
 
@@ -30,19 +30,9 @@ This configuration allows the load from a virtual network adapter to be distribu
 
 You can use vRSS in VMs on Hyper\-V hosts that have multiple processors, a single multiple core processor, or more than one multiple core processors installed and configured for VM use.
 
-vRSS is compatible with the following networking technologies.  
-  
-- IPv4 and IPv6
+vRSS is compatible with all other Hyper\-V networking technologies. vRSS is dependent on Virtual Machine Queue \(VMQ\) in the Hyper\-V host and RSS in the VM or on the host vNIC.
 
-- TCP and UDP
-
-- NIC Teaming
-
-- Live Migration
-
-- NVGRE
-  
-vRSS is not enabled by default, however you can enable vRSS in a VM by using Windows PowerShell commands. For more information, see [Windows PowerShell Commands for RSS and vRSS](vrss-wps.md).
+vRSS is enabled by default, however you can disable vRSS in a VM by using Windows PowerShell commands. For more information, see [Windows PowerShell Commands for RSS and vRSS](vrss-wps.md).
 
 ## Operating System Compatibility
 
@@ -79,15 +69,15 @@ Initially, Anthony assigns 4 virtual processors by using Windows PowerShell to b
 
 After a week, the use of the file server is extremely popular, and Anthony checks the VM performance. He discovers that all four virtual processors are fully utilized. 
 
-Because of this, Anthony decides to add processors for use by vRSS. Anthony changes the vRSS processor count, and assigns two more virtual processors to be available to vRSS to help handle the large network load. His efforts result in better performance for the VM file server, with the six processors easily handling the network traffic load.
+Because of this, Anthony decides to add processors to the VM for use by vRSS. Anthony changes the VM's processor count, and assigns two more virtual processors to the VM, knowing they will automatically be available to vRSS to help handle the large network load. His efforts result in better performance for the VM file server, with the six processors easily handling the network traffic load.
 
 ### Software load balancing
 
-Sandra, a network administrator, is setting up a single high performance VM on one of her systems for the sole purpose of acting as a software load balancer. 
+Sandra, a network administrator, is setting up a single high performance VM on one of her systems for the sole purpose of acting as a software load balancer. She has assigned all available logical processors to this single VM.
 
-Sandra has just installed Windows Server 2016 so that she can expand VMQ to use multiple processors per virtual network adapter in the VM. 
+Sandra has just installed Windows Server 2016 so that she can use vRSS to get parallel network traffic processing on multiple logical processors in the VM.
 
-Because Sandra only has one virtual network adapter in this VM, she decides she will turn on vRSS in the VM to achieve load balancing for processing through the virtual switch that she created with Hyper\-V Virtual Switch manager. Since vRSS is disabled by default, Sandra enables vRSS using Windows PowerShell commands, and achieves the performance she wanted for the VM.
+Because vRSS is enabled by default in Windows Server 2016, Sandra doesn’t have to make any configuration changes to get great performance.
 
 ## Other topics in this guide
 
