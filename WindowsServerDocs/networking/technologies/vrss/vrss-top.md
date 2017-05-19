@@ -16,7 +16,7 @@ author: jamesmci
 
 You can use Virtual Receive Side Scaling \(vRSS) to configure a virtual network adapter to load balance incoming network traffic across multiple logical processor cores in a VM or multiple physical cores for a host virtual Network Interface Card \(vNIC\).
 
-This configuration allows the load from a virtual network adapter to be distributed across multiple virtual processors in a virtual machine \(VM\), allowing the VM to process more network traffic more rapidly that it could with a single logical processor.
+This configuration allows the load from a virtual network adapter to be distributed across multiple virtual processors in a virtual machine \(VM\), allowing the VM to process more network traffic more rapidly than it can with a single logical processor.
 
 >[!NOTE]
 >In addition to this topic, the following vRSS documentation is available.
@@ -32,7 +32,7 @@ You can use vRSS in VMs on Hyper\-V hosts that have multiple processors, a singl
 
 vRSS is compatible with all other Hyper\-V networking technologies. vRSS is dependent on Virtual Machine Queue \(VMQ\) in the Hyper\-V host and RSS in the VM or on the host vNIC.
 
-vRSS is enabled by default, however you can disable vRSS in a VM by using Windows PowerShell commands. For more information, see [Windows PowerShell Commands for RSS and vRSS](vrss-wps.md).
+vRSS is enabled by default, however you can disable vRSS in a VM by using Windows PowerShell commands. For more information, see the topics [Manage vRSS](vrss-manage.md) and [Windows PowerShell Commands for RSS and vRSS](vrss-wps.md).
 
 ## Operating System Compatibility
 
@@ -40,18 +40,23 @@ You can use RSS on any multiprocessor or multicore computer - or vRSS on any mul
 
 Multiprocessor or multicore VMs that are running the following Microsoft operating systems also support vRSS.
 
-1. Windows Server 2016
-2. Windows 10 Pro or Enterprise
-3. Windows Server 2012 R2
-4. Windows 8.1 Pro or Enterprise
-5. Windows Server 2012 with the Windows Server 2012 R2 integration components installed.
-6. Windows 8 with the Windows Server 2012 R2 integration components installed.
+- Windows Server 2016
+- Windows 10 Pro or Enterprise
+- Windows Server 2012 R2
+- Windows 8.1 Pro or Enterprise
+- Windows Server 2012 with the Windows Server 2012 R2 integration components installed.
+- Windows 8 with the Windows Server 2012 R2 integration components installed.
 
 For information about vRSS support for VMs running FreeBSD or Linux as a guest operating system on Hyper-V, see [Supported Linux and FreeBSD virtual machines for Hyper-V on Windows](https://docs.microsoft.com/windows-server/virtualization/hyper-v/Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows).
   
 ## Hardware requirements
+
+Following are the hardware requirements for vRSS.
  
-vRSS requires Virtual Machine Queue \(VMQ\) support from the physical adapter. If VMQ is disabled or is not supported, then vRSS is disabled for the host and any VMs that are configured on the host.
+- Physical network adapters must support Virtual Machine Queue \(VMQ\). If VMQ is disabled or is not supported, then vRSS is disabled for the Hyper\-V host and for any VMs that are configured on the host.
+- Network adapters must have a link speed of 10 Gbps or more.
+- Hyper\-V hosts must be configured with multiple processors or at least one multi\-core processor to use vRSS.
+- Virtual machines \(VMs\) must be configured to use two or more logical processors.
 
 ## Use Case Scenarios
 
