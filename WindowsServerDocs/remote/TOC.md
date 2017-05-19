@@ -1,6 +1,6 @@
 # [Remote](index.md)
 ## [Remote Server Administration Tools](remote-server-administration-tools.md)
-## [Remote Desktop Services](/windows-server/remote/remote-desktop-services/welcome-to-rds)
+## [Remote Desktop Services](remote-desktop-services/welcome-to-rds.md)
 ## [Remote Access](remote-access/remote-Access.md)
 ### [Border Gateway Protocol (BGP)](remote-access/bgp/Border-Gateway-Protocol-BGP.md)
 #### [BGP Windows PowerShell Command Reference](remote-access/bgp/BGP-Windows-powershell-Command-Reference.md)
