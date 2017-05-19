@@ -38,3 +38,7 @@
       - name: Remote
         tocHref: /windows-server/remote
         topicHref: /windows-server/remote/index
+      - name: Remote Desktop Services
+        tocHref: /windows-server/remote/remote-desktop-services
+        topicHref: /windows-server/remote/remote-desktop-services/welcome-to-rds
+
