@@ -7,7 +7,7 @@ ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
 ms.author: elizapo
-ms.date: 05/17/2017
+ms.date: 05/19/2017
 ms.tgt_pltfrm: na
 ms.topic: article
 author: lizap
@@ -25,7 +25,7 @@ Use the following information to create and validate the disaster recovery solut
 
 ## Disaster recovery deployment options
 
-You can deploy RDS on either physical servers or virtual machines running Hyper-V or VMWare. Azure Site Recovery can protect both on-premises and virtual deployments to either a secondary site or to Azure. The following table shows the different supported RDS deployments in site-to-site or and site-to-Azure disaster recvoery scenarios.
+You can deploy RDS on either physical servers or virtual machines running Hyper-V or VMWare. Azure Site Recovery can protect both on-premises and virtual deployments to either a secondary site or to Azure. The following table shows the different supported RDS deployments in site-to-site and site-to-Azure disaster recvoery scenarios.
 
 | Deployment type                          | Hyper-V site-to-site | Hyper-V site-to-Azure | VMWare site-to-Azure | Physical site-to-Azure |
 |------------------------------------------|----------------------|-----------------------|---------------------|----------------------|-----------------------|------------------------|
@@ -45,12 +45,12 @@ Before you can configure Azure Site Recovery for your deployment, make sure you 
 
 We'll cover the various steps to enable Azure Site Recovery Services for your RDS deployment in more detail, but here are the high-level implementation steps.
 
-| Step 1 - Configure VMs for disaster recovery                                                                                                                                                                                               |
+| **Step 1 - Configure VMs for disaster recovery**                                                                                                                                                                                               |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Hyper-V - Download the Microsoft Azure Site Recovery Provider. Install it on your VMM server or Hyper-V host.                                                                                                                              |
+| Hyper-V - Download the Microsoft Azure Site Recovery Provider. Install it on your VMM server or Hyper-V host. See [Prerequisites for replication to Azure by using Azure Site Recovery](/azure/site-recovery/site-recovery-prereq) for information.                                                                                                                             |
 | VMWare - Configure protection server, configuration server, and master target servers                                                                                                                                                      |
 | **Step 2 - Prepare your resources**                                                                                                                                                                                                           |
-| Add an Azure Storage account.                                                                                                                                                                                                              |
+| Add an [Azure Storage account](/azure/storage/storage-create-storage-account).                                                                                                                                                                                                              |
 | Hyper-V - Download the Microsoft Azure Recovery Services agent and install it on Hyper-V host servers.                                                                                                                                     |
 | VMWare - Make sure the mobility service is installed on all VMs.                                                                                                                                                                           |
 | [Enable protection for VMs in VMM cloud, Hyper-V sites, or VMWare sites](rds-enable-dr-with-asr.md).                                                                                                                                                                    |
