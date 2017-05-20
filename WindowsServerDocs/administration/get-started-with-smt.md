@@ -1,6 +1,6 @@
 ---
 title: Get started with Server Management Tools
-description: "Manage on premises Windows Server 2016 machines from Azure"
+description: "Manage on-premises Windows Server 2016 machines from Azure"
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
@@ -9,13 +9,12 @@ ms.tgt_pltfrm: na
 ms.topic: get-started article
 author: coreyp-at-msft
 ms.author: coreyp
-manager: lizapo
+manager: elizapo
 ms.date: 02/28/2017
 ---
+# Get started with Server Management Tools (SMT)
 
 >Applies to: Windows Server 2016, Windows Server 2012 R2
-
-# Get started with Server Management Tools (SMT)
 
 Server management tools is a set of web-based GUI and command-line tools to manage on-premises Windows Servers from Azure. 
 
