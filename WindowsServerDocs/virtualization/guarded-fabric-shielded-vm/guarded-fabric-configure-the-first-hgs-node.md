@@ -99,7 +99,9 @@ The following commands will complete the configuration of the first HGS node.
 
     If you are using HSM-backed certificates, or certificates stored in a third party key storage provider, these steps may not apply to you. Consult your key storage provider's documentation to learn how to manage permissions on your private key. In some cases, there is no authorization, or authorization is provided to the entire computer when the certificate is installed.
 
-6. That's it! In a production environment, you should continue to [add additional HGS nodes to your cluster](guarded-fabric-configure-additional-hgs-nodes.md). In a test environment, you can skip to [validating your HGS configuration](guarded-fabric-verify-hgs-configuration.md).
+6.  If you initialized HGS in TPM mode, or intend to migrate to TPM mode in the future, follow the steps at the end of this article to [install trusted TPM root certificates](#install-trusted-tpm-root-certificates) on this and all additional HGS servers.
+
+7. That's it! In a production environment, you should continue to [add additional HGS nodes to your cluster](guarded-fabric-configure-additional-hgs-nodes.md). In a test environment, you can skip to [validating your HGS configuration](guarded-fabric-verify-hgs-configuration.md).
 
 ## Install HGS in an existing bastion forest
 
@@ -208,6 +210,41 @@ Initialize-HgsServer -UseExistingDomain -ServiceAccount 'HGSgMSA' -JeaReviewersG
 > Additionally, if you prestaged cluster objects, ensure that the virtual computer object name matches the value provided to `-HgsServiceName`.
 
 If you are using certificates installed on the local machine (such as HSM-backed certificates and non-exportable certificates), use the `-SigningCertificateThumbprint` and `-EncryptionCertificateThumbprint` parameters instead, as documented in the cmdlet help.
+
+## Install trusted TPM root certificates
+
+If you initialized your HGS server in TPM mode, or expect to migrate to TPM mode in the future, you will need to install root certificates used to issue the endorsement key in hosts' TPM modules.
+These root certificates are different from those installed by default in Windows and represent the specific root and intermediate certificates used by TPM vendors.
+The steps below will help you install certificates for TPMs produced by Microsoft's partners.
+Some TPMs do not use endorsement key certificates or use certificates not included in this package.
+Consult your TPM vendor or server OEM for further assistance in these cases.
+
+1.  Download the latest package from [http://tpmsec.microsoft.com/OnPremisesDHA/TrustedTPM.cab](http://tpmsec.microsoft.com/OnPremisesDHA/TrustedTPM.cab)
+2.  Validate that the package is digitally signed by Microsoft. Do not expand the CAB file if it does not have a valid signature.
+
+    ```powershell
+    Get-AuthenticodeSignature -Path <Path-To-TrustedTpm.cab>
+    ```
+
+3.  Expand the cab file
+
+    ```powershell
+    mkdir .\TrustedTPM
+    expand.exe -F:* .\TrustedTPM.cab .\TrustedTPM
+    ```
+
+4.  By default, the configuration script will install certificates for every TPM vendor. If you only want to import certificates for your specific TPM vendor, delete the folders for TPM vendors not trusted by your organization.
+
+5.  Install the trusted certificate package by running the setup script in the expanded folder.
+
+    ```powershell
+    cd .\TrustedTPM
+    .\setup.cmd
+    ```
+
+The TrustedTpm.cab file is updated regularly with new vendor certificates as they become available.
+To add new certificates or ones intentionally skipped during an earlier installation, simply repeat the above steps on every node in your HGS cluster.
+Existing certificates will remain trusted but new certificates found in the expanded cab file will be added to the trusted TPM stores.
 
 ## Configuring HGS for HTTPS communications
 

@@ -93,6 +93,41 @@ It will take up to 10 minutes for the encryption and signing certificates from t
 If you did not provide a PFX file for either the encryption or signing certificates on the first HGS server, only the public key will be replicated to this server.
 You will need to install the private key by importing a PFX file containing the private key into the local certificate store or, in the case of HSM-backed keys, configuring the Key Storage Provider and associating it with your certificates per your HSM manufacturer's instructions.
 
+## Install trusted TPM root certificates
+
+If you initialized your first HGS server in TPM mode, or expect to migrate to TPM mode in the future, you will need to install root certificates used to issue the endorsement key in hosts' TPM modules.
+These root certificates are different from those installed by default in Windows and represent the specific root and intermediate certificates used by TPM vendors.
+The steps below will help you install certificates for TPMs produced by Microsoft's partners.
+Some TPMs do not use endorsement key certificates or use certificates not included in this package.
+Consult your TPM vendor or server OEM for further assistance in these cases.
+
+1.  Download the latest package from [http://tpmsec.microsoft.com/OnPremisesDHA/TrustedTPM.cab](http://tpmsec.microsoft.com/OnPremisesDHA/TrustedTPM.cab)
+2.  Validate that the package is digitally signed by Microsoft. Do not expand the CAB file if it does not have a valid signature.
+
+    ```powershell
+    Get-AuthenticodeSignature -Path <Path-To-TrustedTpm.cab>
+    ```
+
+3.  Expand the cab file
+
+    ```powershell
+    mkdir .\TrustedTPM
+    expand.exe -F:* .\TrustedTPM.cab .\TrustedTPM
+    ```
+
+4.  By default, the configuration script will install certificates for every TPM vendor. If you only want to import certificates for your specific TPM vendor, delete the folders for TPM vendors not trusted by your organization.
+
+5.  Install the trusted certificate package by running the setup script in the expanded folder.
+
+    ```powershell
+    cd .\TrustedTPM
+    .\setup.cmd
+    ```
+
+The TrustedTpm.cab file is updated regularly with new vendor certificates as they become available.
+To add new certificates or ones intentionally skipped during an earlier installation, simply repeat the above steps on every node in your HGS cluster.
+Existing certificates will remain trusted but new certificates found in the expanded cab file will be added to the trusted TPM stores.
+
 ## Configure HGS for HTTPS communications
 
 If you want to secure HGS endpoints with an SSL certificate, you must configure the SSL certificate on this node, as well as every other node in the HGS cluster.
