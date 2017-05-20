@@ -27,10 +27,14 @@ After the fabric administrator captures the information, add it to the HGS confi
 1.  Obtain the XML files that contain the EKpub information and copy them to an HGS server. There will be one XML file per host. Then, in an elevated Windows PowerShell console on an HGS server, run the command below. Repeat the command for each of the XML files.
 
     ```powershell
-    Add-HgsAttestationTpmHost -Path <Path><Filename>.xml -Name <HostName> -Force
+    Add-HgsAttestationTpmHost -Path <Path><Filename>.xml -Name <HostName>
     ```
-    
-    >**Note**&nbsp;&nbsp;The **-Force** flag is used here to bypass a validation of the EKcert of the host's TPM. Hosts using TPMs without an EKcert or with an EKcert issued by an authority your HGS server does not trust will throw an error without the use of -Force. For the highest level of security, do not use the -Force flag, so that you will be alerted to potentially untrustworthy TPMs.
+
+    > [!NOTE]
+    > If you encounter an error when adding a TPM identifier regarding an untrusted Endorsement Key Certificate (EKCert), ensure that the [trusted TPM root certificates have been added](guarded-fabric-configure-the-first-hgs-node.md#install-trusted-tpm-root-certificates) to the HGS node.
+    > Additionally, some TPM vendors do not use EKCerts.
+    > You can check if an EKCert is missing by opening the XML file in an editor such as Notepad and checking for an error message indicating no EKCert was found.
+    > If this is the case, and you trust that the TPM in your machine is authentic, you can use the `-Force` flag to override this safety check and add the host identifier to HGS.
 
 2. Obtain the code integrity policy that the fabric administrator created for the hosts, in binary format (*.p7b). Copy it to an HGS server. Then run the following command.
 
