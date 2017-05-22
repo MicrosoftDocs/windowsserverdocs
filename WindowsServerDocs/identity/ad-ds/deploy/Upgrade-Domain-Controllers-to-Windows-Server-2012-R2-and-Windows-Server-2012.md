@@ -49,7 +49,7 @@ This topic provides background information about Active Directory Domain Service
 -   [Known issues](../../ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2012-R2-and-Windows-Server-2012.md#BKMK_KnownIssues)  
   
 ## <a name="BKMK_UpgradeWorkflow"></a>Domain controller upgrade steps  
-The recommended way to upgrade a domain is to promote domain controllers that run newer versions of Windows Server and demote older domain controllers as needed. That method is preferable to upgrading the operating system of an existing domain controller. This list covers general steps to follow before you promote a domain controller that runs a nnewer version of Windows Server:  
+The recommended way to upgrade a domain is to promote domain controllers that run newer versions of Windows Server and demote older domain controllers as needed. That method is preferable to upgrading the operating system of an existing domain controller. This list covers general steps to follow before you promote a domain controller that runs a newer version of Windows Server:  
   
 1.  Verify the target server meets [system requirements](http://technet.microsoft.com/library/dn303418.aspx).  
   
