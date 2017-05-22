@@ -37,6 +37,7 @@ For an RDS sessions-based deployment, group the VMs so they come up in sequence:
 3. Failover group 3 - Web Access VM
 
 Your plan will look something like this: 
+
 ![A disaster recovery plan for a session-based RDS deployment](media/rds-asr-session-drplan.png)
 
 ## Pooled desktops RDS deployment
@@ -102,6 +103,7 @@ For an RDS deployment with pooled desktops, group the VMs so they come up in seq
 9. Failover group 3 - Web Access and Gateway server VM
 
 The recovery plan will look like this:
+
 ![A disaster recovery plan for an RDS deployment with pooled desktops](media/rds-asr-pooled-drplan.png)
 
 ## Personal desktops RDS deployment
