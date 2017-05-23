@@ -7,18 +7,9 @@ ms.topic: article
 ms.assetid: d33d4506-2dad-404e-a93e-0e0780dc1f85
 author: coreyp-at-msft
 ms.author: coreyp
-ms.date: 5/17/2017
+ms.date: 5/22/2017
 ---
 # Administer Windows Server 2016
-
-<font size=1>
-<table border="0">
-  <tr>
-    <td><img src="../media/security-update.png" alt="Icon showing a security alert"> </td>
-    <td>A wide-spread ransomware attack, known as "WannaCrypt," targets Windows systems that do not yet have the latest updates. Given the severity of this threat, immediately update your Windows systems. [Learn more](https://blogs.technet.microsoft.com/msrc/2017/05/12/customer-guidance-for-wannacrypt-attacks/).</td>
-  </tr>
-</table>
-</font>
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
