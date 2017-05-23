@@ -7,7 +7,7 @@ ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: eldenchristensen
-ms.date: 05/05/2017
+ms.date: 05/23/2017
 ---
 # Storage Spaces Direct hardware requirements
 >Applies To: Windows Server 2016
@@ -56,7 +56,7 @@ For more help choosing drives, see the [Choosing drives](choosing-drives.md) top
 - All servers must have the same drive types (if one server has NVMe, they all require NVMe.  If one has HDD, they all require HDD)
 - Recommended: All servers have the same drive configuration (type, size, firmware)
 - SSDs must have [power-loss protection](https://blogs.technet.microsoft.com/filecab/2016/11/18/dont-do-it-consumer-ssd/), i.e. they are "enterprise-grade"
-- SSDs used for cache have sufficiently high endurance: we recommend at least 3 drive-writes-per-day (DWPD)
+- SSDs used for cache have sufficiently high endurance: we recommend at least 3 drive-writes-per-day (DWPD) or at least 4 TBW (terabytes written) per day.
 - Add capacity drives in multiples of the number of NVMe or SSD cache devices.
 - Drives can be 512n, 512e, or 4K native - they all work equally well.
 - Use a separate, dedicated drive or RAID 1 mirror for Windows Server (200 GB is a recommended minimum size).
