@@ -60,6 +60,8 @@ This AD FS claim represents the protocol used by the end client, which correspon
 	- Microsoft.Exchange.Powershell
 	- Microsoft.Exchange.SMTP
 	- Microsoft.Exchange.PopImap
+	- Microsoft.Exchange.Pop
+	- Microsoft.Exchange.Imap
 
 ## X-MS-Client-User-Agent
 
