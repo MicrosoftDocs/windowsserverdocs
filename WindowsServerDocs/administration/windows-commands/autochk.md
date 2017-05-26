@@ -14,22 +14,31 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # autochk
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Runs when the computer is started and prior to  Windows Server  2008 R2  starting to verify the logical integrity of a file system.
-**autochk.exe** is a version of **chkdsk** that runs only on NTFS disks and only before  Windows Server 2008 R2  starts. **autochk** cannot be run directly from the command-line. Instead, **autochk** runs in the following situations:
--   if you try to run **chkdsk** on the boot volume
--   if **chkdsk** cannot gain exclusive use of the volume
--   if the volume is flagged as dirty
-## remarks
--   > [!WARNING]
-    > The **autochk** command-line tool cannot be directly run from the command-line. Instead, use the **chkntfs** command-line tool to configure the way you want **autochk** to run at startup.
--   You can use **chkntfs** with the **/x** parameter to prevent **autochk** from running on a specific volume or multiple volumes.
--   Use the **chkntfs.exe** command-line tool with the **/t** parameter to change the autochk delay from 0 seconds to up to 3 days (259,200 seconds). However, a long delay means that the computer does not start until the time elapses or until you press a key to cancel **autochk**.
-## additional references
+Runs when the computer is started and prior to Windows Server® 2008 R2 starting to verify the logical integrity of a file system.
+
+**Autochk.exe** is a version of **Chkdsk** that runs only on NTFS disks and only before Windows Server 2008 R2 starts. **Autochk** cannot be run directly from the command-line. Instead, **Autochk** runs in the following situations:
+-   If you try to run **Chkdsk** on the boot volume
+-   If **Chkdsk** cannot gain exclusive use of the volume
+-   If the volume is flagged as dirty
+
+## Remarks
+
+> -   [!WARNING]
+>     The **Autochk** command-line tool cannot be directly run from the command-line. Instead, use the **Chkntfs** command-line tool to configure the way you want **Autochk** to run at startup.
+-   You can use **Chkntfs** with the **/x** parameter to prevent **Autochk** from running on a specific volume or multiple volumes.
+-   Use the **Chkntfs.exe** command-line tool with the **/t** parameter to change the Autochk delay from 0 seconds to up to 3 days (259,200 seconds). However, a long delay means that the computer does not start until the time elapses or until you press a key to cancel **Autochk**.
+
+#### Additional references
+
 [Command-Line Syntax Key](command-line-syntax-key.md)
-[chkdsk](chkdsk.md)
-[chkntfs](chkntfs.md)
+
+[Chkdsk](chkdsk.md)
+
+[Chkntfs](chkntfs.md)
+
 [Troubleshooting Disks and File Systems](http://go.microsoft.com/fwlink/?LinkId=4527)

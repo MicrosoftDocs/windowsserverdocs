@@ -14,23 +14,31 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # bitsadmin resume
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Activates a new or suspended job in the transfer queue.
+
 ## Syntax
+
 ```
 bitsadmin /Resume <Job>
 ```
+
 ## Parameters
+
 |Parameter|Description|
-|-------|--------|
+|---------|-----------|
 |Job|The job's display name or GUID|
+
 ## <a name="BKMK_examples"></a>Examples
+
 The following example resumes the job named *myDownloadJob*.
 ```
 C:\>bitsadmin /Resume myDownloadJob
 ```
-additional references
+Additional references
+
 [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -14,36 +14,53 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # subst
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-associates a path with a drive letter. If used without parameters, **subst** displays the names of the virtual drives in effect.
-for examples of how to use this command, see [Examples](#BKMK_examples).
+Associates a path with a drive letter. If used without parameters, **subst** displays the names of the virtual drives in effect.
+
+For examples of how to use this command, see [Examples](#BKMK_examples).
+
 ## Syntax
+
 ```
-subst [<Drive1>: [<Drive2>:]<path>] 
+subst [<Drive1>: [<Drive2>:]<Path>] 
 subst <Drive1>: /d
 ```
+
 ## Parameters
+
 |Parameter|Description|
-|-------|--------|
-|<Drive1>:|Specifies the virtual drive to which you want to assign a path.|
-|[<Drive2>:]<path>|Specifies the physical drive and path that you want to assign to a virtual drive.|
-|/d|deletes a substituted (virtual) drive.|
+|---------|-----------|
+|\<Drive1>:|Specifies the virtual drive to which you want to assign a path.|
+|[\<Drive2>:]<Path>|Specifies the physical drive and path that you want to assign to a virtual drive.|
+|/d|Deletes a substituted (virtual) drive.|
 |/?|Displays help at the command prompt.|
-## remarks
+
+## Remarks
+
 -   The following commands do not work and should not be used on drives that are specified in the **subst** command:
+
     **chkdsk**
+
     **diskcomp**
+
     **diskcopy**
+
     **format**
+
     **label**
+
     **recover**
 -   The *Drive1* parameter must be within the range that is specified by the **lastdrive** command. If not, **subst** displays the following error message:
+
     `Invalid parameter - drive1:`
+
 ## <a name="BKMK_examples"></a>Examples
-To create a virtual drive Z for the path B:\User\Betty\forms, type:
+
+To create a virtual drive Z for the path B:\User\Betty\Forms, type:
 ```
 subst z: b:\user\betty\forms 
 ```
@@ -51,5 +68,7 @@ Instead of typing the full path, you can reach this directory by typing the lett
 ```
 z: 
 ```
-#### additional references
+
+#### Additional references
+
 [Command-Line Syntax Key](command-line-syntax-key.md)

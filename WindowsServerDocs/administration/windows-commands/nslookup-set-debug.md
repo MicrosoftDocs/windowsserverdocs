@@ -14,22 +14,31 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # nslookup set debug
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Turns Debugging mode on or off.
+Turns Debugging Mode on or off.
+
 ## Syntax
+
 ```
 set [no]debug
 ```
+
 ## Parameters
+
 |Parameter|Description|
-|-------|--------|
-|**nodebug**|Turns off Debugging mode. The default syntax is **nodebug**.|
-|**debug**|Turns on Debugging mode.|
-|**{help &#124; ?}**|Displays a short summary of **nslookup** subcommands.|
-## remarks
--   With Debugging mode turned on, more information is printed about the packet sent to the server and the resulting answer.
-## additional references
+|---------|-----------|
+|**nodebug**|Turns off Debugging Mode. The default syntax is **nodebug**.|
+|**debug**|Turns on Debugging Mode.|
+|**{help | ?}**|Displays a short summary of **nslookup** subcommands.|
+
+## Remarks
+
+-   With Debugging Mode turned on, more information is printed about the packet sent to the server and the resulting answer.
+
+#### Additional references
+
 [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -14,32 +14,32 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # bitsadmin removeclientcertificate
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-removes the client certificate from the job.
+Removes the client certificate from the job.
 
 ## Syntax
 
 ```
-bitsadmin /removeClientCertificate <Job> 
+bitsadmin /RemoveClientCertificate <Job> 
 ```
 
 ## Parameters
 
 |Parameter|Description|
-|-------|--------|
+|---------|-----------|
 |Job|The job's display name or GUID|
 
 ## <a name="BKMK_examples"></a>Examples
+
 The following example removes the client certificate from the job named *myJob*.
-
 ```
-C:\>bitsadmin /removeClientCertificate myJob 
+C:\>Bitsadmin /RemoveClientCertificate myJob 
 ```
 
-## additional references
+#### Additional references
+
 [Command-Line Syntax Key](command-line-syntax-key.md)
-
-

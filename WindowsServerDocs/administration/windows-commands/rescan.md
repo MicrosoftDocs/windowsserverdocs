@@ -14,21 +14,20 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # rescan
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Locates new disks that may have been added to the computer.  
-  
-## Syntax  
-  
-```  
-rescan  
-```  
-  
-#### additional references  
-[Command-Line Syntax Key](command-line-syntax-key.md)  
-  
+Locates new disks that may have been added to the computer.
 
-  
+## Syntax
+
+```
+rescan
+```
+
+#### Additional references
+
+[Command-Line Syntax Key](command-line-syntax-key.md)
 

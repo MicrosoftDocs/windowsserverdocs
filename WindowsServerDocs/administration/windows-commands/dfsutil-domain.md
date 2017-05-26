@@ -13,37 +13,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # dfsutil Domain
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-The **dfsdiag domain** command displays all namespaces in the domain.
+## This topic is no longer available
 
-
-
-## Syntax
-
-```
-dfsutil domain <domain>
-```
-
-### Parameters
-
-|Parameter|Description|
-|-------|--------|
-|domain|The domain name in which the DFS is associated.|
-
-## <a name="BKMK_Examples"></a>Examples
-To view the name spaces in the contoso domain, type:
-
-```
-dfsutil domain contoso.com
-```
-
-## additional references
-
--   [Command-Line Syntax Key](command-line-syntax-key.md)
-
--   [dfsutil](dfsutil.md)
-
-
+We are sorry—the topic that you requested is no longer available.

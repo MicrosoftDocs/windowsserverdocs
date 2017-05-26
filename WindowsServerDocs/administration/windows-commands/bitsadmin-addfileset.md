@@ -14,23 +14,32 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # bitsadmin addfileset
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-adds one or more files to the specified job.
+Adds one or more files to the specified job.
+
 ## Syntax
+
 ```
 bitsadmin /addfileset <Job> <TextFile>
 ```
+
 ## Parameters
+
 |Parameter|Description|
-|-------|--------|
+|---------|-----------|
 |Job|The job's display name or GUID|
-|TextFile|A text file containing remote and local file names. **Note:** The names are space-delimited. Lines that begin with a # character are treated as a comment.|
+|TextFile|A text file containing remote and local file names.</br>Note: The names are space-delimited. Lines that begin with a # character are treated as a comment.|
+
 ## <a name="BKMK_examples"></a>Examples
+
 ```
 C:\>bitsadmin /addfileset files.txt
 ```
-## additional references
+
+#### Additional references
+
 [Command-Line Syntax Key](command-line-syntax-key.md)
