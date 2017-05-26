@@ -189,17 +189,17 @@ Storage Replica relies on the log for all write performance. Log performance cri
 Microsoft recommends that the log storage be as fast or faster than the data storage. Log volumes must never be used for other workloads.
 
 ## <a name="FAQ16"></a> Why would you choose a stretch cluster versus cluster-to-cluster versus server-to-server topology?  
-Storage replica comes in three main configurations: strech cluster, cluster-to-cluster, and server-to-server. There are different advantages to each.
+Storage Replica comes in three main configurations: strech cluster, cluster-to-cluster, and server-to-server. There are different advantages to each.
 
 The stretch cluster topology is ideal for workloads requiring automatic failover with orchestration, such as Hyper-V private cloud clusters and SQL Server FCI. It also has a built-in graphical interface using Failover Cluster Manager. It utilizes the classic asymmetric cluster shared storage architecture of Storage Spaces, SAN, iSCSI, and RAID via presistent reservation. You can run this with as few as 2 nodes.
 
 The cluster-to-cluster topology uses two separate clusters and is ideal for administrators who want manual failover, especially when the second site is provisioned for disaster recovery and not everyday usage. Orchestration is manual. Unlike stretch cluster, Storage Spaces Direct can be used in this configuration. You can run this with as few as four nodes. 
 
-The server-to-server topology is ideal for customers running hardware that cannot be clustered. It requires manual failover and orchestration. It is ideal for inexpensive deployments between branch offices and central datacenters, especially when using asynchronous replication. This configuration can often replace instances of DFSR-protected File Servers used for single-master DR scenarios.
+The server-to-server topology is ideal for customers running hardware that cannot be clustered. It requires manual failover and orchestration. It is ideal for inexpensive deployments between branch offices and central datacenters, especially when using asynchronous replication. This configuration can often replace instances of DFSR-protected File Servers used for single-master disaster recovery scenarios.
 
-In all cases, the topologies support both running on physical hardware as well as virtual machines. When in virtual machines, the underlying hypervisor does not require Hyper-V; it can be VMware, KVM, Xen, etc.
+In all cases, the topologies support both running on physical hardware as well as virtual machines. When in virtual machines, the underlying hypervisor doesn't require Hyper-V; it can be VMware, KVM, Xen, etc.
 
-SR also has a server-to-self mode, where you simply point replication to two different volumes on the same computer.
+Storage Replica also has a server-to-self mode, where you point replication to two different volumes on the same computer.
 
 ## <a name="FAQ17"></a> How do I report an issue with Storage Replica or this guide?  
 For technical assistance with Storage Replica, you can post at [the Microsoft TechNet forums](https://social.technet.microsoft.com/Forums/windowsserver/en-US/home?forum=WinServerPreview). You can also email srfeed@microsoft.com for questions on Storage Replica or issues with this documentation. The https://windowsserver.uservoice.com site is preferred for design change requests, as it allows your fellow customers to provide support and feedback for your ideas.
