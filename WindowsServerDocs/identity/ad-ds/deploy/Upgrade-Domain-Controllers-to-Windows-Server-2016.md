@@ -4,7 +4,7 @@ description: This document describes how to upgrade from Windows Server 2012 R2 
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 05/16/2017
+ms.date: 05/30/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adds
@@ -66,6 +66,13 @@ Domain controllers that run 64-bit versions of Windows Server 2012 or Windows Se
 
 For more information about supported upgrade paths, see [Supported Upgrade Paths](../../../get-started/supported-upgrade-paths.md)
 
+## Adprep and Domainprep
+If you are doing an in-place upgrade of an existing domain controller to the Windows Server 2016 operating system, you will need to run adprep /forestprep and adprep /domainprep manually.  Adprep /forestprep needs to be run only once in the forest.  Adprep /domainprep needs to be run once in each domain in which you have domain controllers that you are upgrading to Windows Server 2016.
+
+If you are promoting a new Windows Server 2016 server you do not need to run these manually.  These are integrated into the PowerShell and Server Manager experiences.
+
+For more information on running adprep see [Running Adprep](https://technet.microsoft.com/library/dd464018.aspx) 
+
 
 ## Functional level features and requirements
 Windows Server 2016 requires a Windows Server 2003 forest functional level. That is, before you can add a domain controller that runs Windows Server 2016 to an existing Active Directory forest, the forest functional level must be Windows Server 2003 or higher. If the forest contains domain controllers running Windows Server 2003 or later but the forest functional level is still Windows 2000, the installation is also blocked. 
@@ -78,19 +85,18 @@ Windows 2000 domain controllers must be removed prior to adding Windows Server 2
 3.	Raise the forest functional level to Windows Server 2003 or higher. 
 4.	Install domain controllers that run Windows Server 2016. 
 5.	Remove domain controllers that run earlier versions of Windows Server. 
-The new Windows Server 2016 domain functional level enables the following new features: 
-	
-	**- Add features here **
+
 ### Rolling back functional levels
 
-After you set the forest functional level to a certain value, you cannot roll back or lower the forest functional level, with the following exceptions: 
+After you set the forest functional level (FFL) to a certain value, you cannot roll back or lower the forest functional level, with the following exceptions: 
 
-- After you raise the forest functional level to Windows Server 2016 , you can lower it to Windows Server 2012 R2. 
+- If you are upgrading from Windows Server 2012 R2 FFL, you can lower it back to Windows Server 2012 R2. 
+- If you are upgrading from Windows Server 2008 R2 FFL, you can lower it back to Windows Server 2008 R2.
 
 After you set the domain functional level to a certain value, you cannot roll back or lower the domain functional level, with the following exceptions: 
 
-- .
-when you raise the domain functional level to Windows Server 2016 and if the forest functional level is Windows Server 2012 or lower, you have the option of rolling the domain functional level back to Windows Server 2012 or Windows Server 2012 R2 
+- when you raise the domain functional level to Windows Server 2016 and if the forest functional level is Windows Server 2012 or lower, you have the option of rolling the domain functional level back to Windows Server 2012 or Windows Server 2012 R2 
+
 For more information about features that are available at lower functional levels, see [Understanding Active Directory Domain Services (AD DS) Functional Levels](https://technet.microsoft.com/library/understanding-active-directory-functional-levels.aspx). 
  
 ## AD DS interoperability with other server roles and Windows operating systems
@@ -98,11 +104,11 @@ AD DS is not supported on the following Windows operating systems:
 
 
 - Windows MultiPoint Server 
-- Windows Server 2012 Essentials 
+- Windows Server 2016 Essentials 
 
 AD DS cannot be installed on a server that also runs the following server roles or role services: 
 
-- Hyper-V Server 
+- Microsoft Hyper-V Server 2016
 - Remote Desktop Connection Broker 
 
 ## Administration of Windows Server 2016 servers
@@ -132,7 +138,8 @@ The following is a simple example of upgrading the Contoso forest from Windows S
 ``` powershell
 Move-ADDirectoryServerOperationMasterRole -Identity "DC-W2K16" -OperationMasterRole 0,1,2,3,4
 ```
-![Upgrade](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade7.png)
+
+![Upgrade](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade7.png)</br>
 11. Verify the roles have been moved by going to the Windows Server 2016 server, in **Server Manager**, under **tools**, select **Active Directory Module for Windows PowerShell**. Use the `Get-ADDomain` and `Get-ADForest` cmdlets to view the FSMO role holders.
 ![Upgrade](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade8.png)
 ![Upgrade](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade9.png)
