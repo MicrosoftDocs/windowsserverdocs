@@ -139,7 +139,9 @@ From the management system, perform the following steps:
     ```
     Net localgroup Administrators <Domain\Account> /add
     ```
+
 ### Step 1.3: Install server roles and features
+
 The next step is to install the following server roles and features on all of the nodes:
 * Failover Clustering
 * Hyper-V
