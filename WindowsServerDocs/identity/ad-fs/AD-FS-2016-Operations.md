@@ -5,7 +5,7 @@ description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 02/09/2017
+ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 
@@ -25,7 +25,6 @@ This document contains a list of all of the documentation operations for AD FS f
 - [AD FS support for alternate hostname binding for certificate authentication](../ad-fs/operations/AD-FS-support-for-alternate-hostname-binding-for-certificate-authentication.md)
 - [AD FS user sign-in customization](../ad-fs/operations/AD-FS-user-sign-in-customization.md)
 - [Add an Attribute Store](../ad-fs/operations/Add-an-Attribute-Store.md)
-
 - [Configure AD FS 2016 and Azure MFA](../ad-fs/operations/Configure-AD-FS-2016-and-Azure-MFA.md)
 - [Configure AD FS Extranet Lockout Protection](../ad-fs/operations/Configure-AD-FS-Extranet-Lockout-Protection.md)
 - [Configure AD FS for User Certificate Authentication](../ad-fs/operations/Configure-User-Certificate-Authentication.md)
