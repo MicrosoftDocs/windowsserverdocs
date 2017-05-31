@@ -2,9 +2,9 @@
 title: Configure browsers to use Windows Integrated Authentication (WIA) with AD FS
 description: This document describes how to configure browsers to use WIA with AD FS
 author: billmath
-ms.author:  billmath
+ms.author: billmath
 manager: femila
-ms.date: 05/23/2017
+ms.date: 05/31/2017
 ms.topic: article
 ms.custom: it-pro
 ms.prod: windows-server-threshold

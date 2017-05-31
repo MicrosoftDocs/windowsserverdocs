@@ -3,9 +3,9 @@ ms.assetid: acc9101b-841c-4540-8b3c-62a53869ef7a
 title: AD FS 2016 FAQ
 description: Frequently asked questions for AD FS 2016
 author: jenfieldmsft
-ms.author:  jenfieldmsft
+ms.author: billmath
 manager: samueld
-ms.date: 10/12/2016
+ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 

@@ -9,7 +9,7 @@ ms.suite: na
 ms.technology: identity-adds
 ms.tgt_pltfrm: na
 author: Femila
-ms.date: "06/24/2016"
+ms.date: 05/31/2017
 appliesto:  Windows Server Technical Preview
 description:
 manager: femila

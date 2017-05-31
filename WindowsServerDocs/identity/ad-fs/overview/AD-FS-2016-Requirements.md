@@ -3,9 +3,9 @@ ms.assetid: 28f4a518-1341-4a10-8a4e-5f84625b314b
 title: AD FS 2016 Requirements
 description:
 author: billmath
-ms.author:  billmath
+ms.author: billmath
 manager: femila
-ms.date: 09/22/2016
+ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 
