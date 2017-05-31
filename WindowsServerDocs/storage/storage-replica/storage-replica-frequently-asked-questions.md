@@ -186,7 +186,7 @@ Note: The Test-SRTopology cmdlet requires ICMPv4/ICMPv6, but not for replication
 ## <a name="FAQ15"></a>What are the log volume best practices?
 Storage Replica relies on the log for all write performance. Log performance critical to replication performance. You can use DISKSPD.EXE to measure your log performance along with Performance Counters to analyze existing data volume performance and ensure that the log volume performs as well or better than the data volume. You should always use flash media like SSD on log volumes. You must never allow any other workloads to run on the log volume, the same way you would never allow other workloads to run on SQL database log volumes. The size of the log or log volume has no real effect on performance, only on recovery time.
 
-Microsoft recommends that the log storage be as fast or faster than the data storage. Log volumes must never be used for other workloads.
+Microsoft recommends that the log storage be faster than the data storage. Log volumes must never be used for other workloads.
 
 ## <a name="FAQ16"></a> Why would you choose a stretch cluster versus cluster-to-cluster versus server-to-server topology?  
 Storage Replica comes in three main configurations: strech cluster, cluster-to-cluster, and server-to-server. There are different advantages to each.
