@@ -2,9 +2,9 @@
 title: AD FS prompt=login
 description: Frequently asked questions for AD FS 2016
 author: billmath
-ms.author:  billmath
+ms.author: billmath
 manager: femila
-ms.date: 05/23/2017
+ms.date: 05/31/2017
 ms.topic: article
 ms.custom: it-pro
 ms.prod: windows-server-threshold

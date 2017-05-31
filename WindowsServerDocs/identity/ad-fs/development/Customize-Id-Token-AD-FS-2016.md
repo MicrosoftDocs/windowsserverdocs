@@ -3,9 +3,9 @@ ms.assetid: 08cf3afe-e2d9-44b7-9e89-19fc82bb46df
 title: Customizing Id_Token Claims with OpenId Connect in AD FS 2016
 description: A walk through of how to add additional claims to the OpenID Connect id_token in AD FS 2016
 author: jenfieldmsft
-ms.author: jenfieldmsft
+ms.author: billmath
 manager: samueld
-ms.date: 10/14/2016
+ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 
