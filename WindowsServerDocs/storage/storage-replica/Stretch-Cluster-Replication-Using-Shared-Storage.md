@@ -98,7 +98,7 @@ Many of these requirements can be determined by using the `Test-SRTopology` cmdl
     > -   The two log volumes should be of identical size.  
     > -   All replicated data disks must have the same sector sizes.  
     > -   All log  disks must have the same sector sizes.  
-    > -   The log volumes should use flash-based storage and high performance resiliency settings. Microsoft recommends that the log storage be as fast or faster than the data storage. Log volumes must never be used for other workloads. 
+    > -   The log volumes should use flash-based storage and high performance resiliency settings. Microsoft recommends that the log storage be as faster than the data storage. Log volumes must never be used for other workloads. 
     > -   The data disks can use HDD, SSD, or a tiered combination and can use either mirrored or parity spaces or RAID 1 or 10, or RAID 5 or RAID 50.  
     > -  The log volume must be at least 9GB by default and can to be larger or smaller based on log requirements.  
     > - The volumes must be formatted with NTFS or ReFS.
