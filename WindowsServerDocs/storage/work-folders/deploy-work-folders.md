@@ -19,14 +19,13 @@ This topic discusses the steps needed to deploy Work Folders. It assumes that yo
  To deploy Work Folders, a process that can involve multiple servers and technologies, use the following steps.  
   
 > [!TIP]
->  The simplest Work Folders deployment is a single file server (often called a sync server) without support for syncing over the Internet, which can be a useful deployment for a test lab or as a sync solution for domain-joined client computers. To create a simple deployment, these are minimum steps to follow:  
-
-  -   Step 1: Obtain SSL certificates  
-  -   Step 2: Create DNS records 
-  -   Step 3: Install Work Folders on file servers  
-  -   Step 4: Binding the SSL certificate on the sync servers
-  -   Step 5: Create security groups for Work Folders  
-  -   Step 7: Create sync shares for user data  
+>  The simplest Work Folders deployment is a single file server (often called a sync server) without support for syncing over the Internet, which can be a useful deployment for a test lab or as a sync solution for domain-joined client computers. To create a simple deployment, these are minimum steps to follow: 
+>  -   Step 1: Obtain SSL certificates  
+>  -   Step 2: Create DNS records 
+>  -   Step 3: Install Work Folders on file servers  
+>  -   Step 4: Binding the SSL certificate on the sync servers
+>  -   Step 5: Create security groups for Work Folders  
+>  -   Step 7: Create sync shares for user data  
   
 ## Step 1: Obtain SSL certificates  
  Work Folders uses HTTPS to securely synchronize files between the Work Folders clients and the Work Folders server. The requirements for SSL certificates used by Work Folders are as follows:  
