@@ -7,12 +7,12 @@ ms.topic: article
 author: JasonGerend
 manager: dongill
 ms.author: jgerend
-ms.date: 4/5/2017
+ms.date: 5/31/2017
 description: How to deploy Work Folders, including installing the server role, creating sync shares, and creating DNS records.
 ---
 # Deploying Work Folders
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10, Windows 8.1, Windows 7
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows 10, Windows 8.1, Windows 7
 
 This topic discusses the steps needed to deploy Work Folders. It assumes that you've already read [Planning a Work Folders deployment](plan-work-folders.md).  
   
