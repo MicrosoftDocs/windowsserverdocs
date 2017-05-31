@@ -3,9 +3,9 @@ ms.assetid: 0ac8584c-d0a1-4b87-a9e2-cee909dcaff9
 title: Azure Active Directory Connect
 description:
 author: billmath
-ms.author:  billmath
+ms.author: billmath
 manager: femila
-ms.date: 09/22/2016
+ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 

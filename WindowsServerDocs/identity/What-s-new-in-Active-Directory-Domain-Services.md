@@ -10,6 +10,8 @@ ms.technology: active-directory-domain-services
 ms.tgt_pltfrm: na
 ms.topic: article
 author: Femila
+ms.author: billmath
+ms.date: 05/31/2017
 ---
 # What&#39;s new in Active Directory Domain Services 
 
