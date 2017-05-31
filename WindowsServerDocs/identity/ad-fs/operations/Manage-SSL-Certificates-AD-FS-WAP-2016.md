@@ -3,9 +3,9 @@ ms.assetid: a3f50046-5d48-43d3-b0f8-ac2346b15285
 title: Managing SSL Certificates in AD FS and WAP in Windows Server 2016
 description: Managing SSL Certificates in AD FS and WAP in Windows Server 2016
 author: jenfieldmsft
-ms.author: jenfieldmsft
+ms.author: billmath
 manager: samueld
-ms.date: 10/12/2016
+ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 

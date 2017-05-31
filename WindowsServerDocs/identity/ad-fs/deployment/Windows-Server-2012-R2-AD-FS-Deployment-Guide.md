@@ -3,9 +3,9 @@ ms.assetid: 38816b32-84bd-4b19-9ab8-a05ec838a156
 title: Windows Server 2016 and 2012 R2 AD FS Deployment Guide
 description:
 author: billmath
-ms.author:  billmath
+ms.author: billmath
 manager: femila
-ms.date: 09/22/2016
+ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 
