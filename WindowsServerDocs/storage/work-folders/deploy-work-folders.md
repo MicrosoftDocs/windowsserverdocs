@@ -29,7 +29,7 @@ This topic discusses the steps needed to deploy Work Folders. It assumes that yo
   -   Step 7: Create sync shares for user data  
   
 ## Step 1: Obtain SSL certificates  
- To allow users to sync across the Internet, the URL published by Work Folders must be protected by an SSL certificate. The requirements for SSL certificates used by Work Folders are as follows:  
+ Work Folders uses HTTPS to securely synchronize files between the Work Folders clients and the Work Folders server. The requirements for SSL certificates used by Work Folders are as follows:  
   
 -   The certificate must be issued by a trusted certification authority. For most Work Folders implementations, a publicly trusted CA is recommended, since certificates will be used by non-domain-joined, Internet-based devices.  
   
@@ -208,8 +208,8 @@ New-SyncShare "HR Sync Share" K:\Share-1 –User "HR Sync Share Users"
 > [!TIP]
 >  After you create sync shares you can use File Server Resource Manager functionality to manage the data in the shares. For example, you can use the **Quota** tile inside the Work Folders page in Server Manager to set quotas on the user folders. You can also use [File Screening Management](http://technet.microsoft.com/library/cc732074.aspx) to control the types of files that Work Folders will sync, or you can use the scenarios described in [Dynamic Access Control](https://technet.microsoft.com/windows-server-docs/identity/solution-guides/dynamic-access-control--scenario-overview) for more sophisticated file classification tasks.  
   
-## Step 8: Optionally specify a tech support email address and Active Directory Federation Services authentication  
- After installing Work Folders on a file server, you probably want to specify an administrative contact email address for the server, and you might want to enable Active Directory Federation Services (AD FS) authentication. To do either of these tasks, use the following procedure:  
+## Step 8: Optionally specify a tech support email address   
+ After installing Work Folders on a file server, you probably want to specify an administrative contact email address for the server. To add an email address, use the following procedure:  
   
 #### Specifying an administrative contact email or AD FS authentication  
   
@@ -217,12 +217,7 @@ New-SyncShare "HR Sync Share" K:\Share-1 –User "HR Sync Share Users"
   
 2.  Right-click the sync server, and then click **Work Folders Settings**. The Work Folders Settings window appears.  
   
-3.  On the **Authentication** page, optionally choose **Active Directory Federation Services** and specify a Federation Service URL. For more information about AD FS, see [Active Directory Federation Services](https://technet.microsoft.com/windows-server-docs/identity/active-directory-federation-services), and [Deploying Work Folders with AD FS and Web Application Proxy (WAP)](deploy-work-folders-adfs-overview.md).
-  
-    > [!NOTE]
-    >  If the sync server isn't in the same Active Directory site as the AD FS server and the network traffic must go through a proxy server, you need to configure the sync server to use the correct proxy configuration. For more information, see the following topic: [How to configure a proxy server for the Work Folders service](http://social.technet.microsoft.com/wiki/contents/articles/20697.how-to-configure-a-proxy-server-for-the-work-folders-service.aspx).  
-  
-4.  In the navigation pane, click **Support Email** and then type the email address or addresses that users should use when emailing for help with Work Folders. Click **OK** when you're finished.  
+3.  In the navigation pane, click **Support Email** and then type the email address or addresses that users should use when emailing for help with Work Folders. Click **OK** when you're finished.  
   
      Work Folders users can click a link in the Work Folders Control Panel item that sends an email containing diagnostic information about the client PC to the address(es) you specify here.  
   
@@ -261,10 +256,12 @@ Set-ADUser –Add @{"msDS-SyncServerURL"=$SyncServerURL}
   
 ```  
   
-## Step 10: Configure Web Application Proxy or another reverse proxy  
- To enable users to sync their Work Folders across the Internet, you need to publish Work Folders through a reverse proxy, making Work Folders available externally on the Internet. You can use Web Application Proxy, which is included in Active Directory Federation Services (AD FS), to publish Work Folders on the Internet, or you can use another reverse proxy solution.  
+## Step 10: Configure Web Application Proxy, Azure AD Application Proxy or another reverse proxy  
+ To enable remote users to access their files, you need to publish the Work Folders server through a reverse proxy, making Work Folders available externally on the Internet. You can use Web Application Proxy, Azure Active Directory Application Proxy, or another reverse proxy solution.  
   
- For a walkthrough of setting up Work Folders with AD FS and Web Application Proxy, see [Deploying Work Folders with AD FS and Web Application Proxy (WAP)](deploy-work-folders-adfs-overview.md). For background information about Web Application Proxy, see [Web Application Proxy in Windows Server 2016](https://technet.microsoft.com/windows-server-docs/identity/web-application-proxy/web-application-proxy-windows-server). For details on publishing applications such as Work Folders on the Internet using Web Application Proxy, see [Publishing Applications using AD FS Preauthentication](https://technet.microsoft.com/windows-server-docs/identity/web-application-proxy/publishing-applications-using-ad-fs-preauthentication).  
+To configure Work Folders access using AD FS and Web Application Proxy, see [Deploying Work Folders with AD FS and Web Application Proxy (WAP)](deploy-work-folders-adfs-overview.md). For background information about Web Application Proxy, see [Web Application Proxy in Windows Server 2016](https://technet.microsoft.com/windows-server-docs/identity/web-application-proxy/web-application-proxy-windows-server). For details on publishing applications such as Work Folders on the Internet using Web Application Proxy, see [Publishing Applications using AD FS Preauthentication](https://technet.microsoft.com/windows-server-docs/identity/web-application-proxy/publishing-applications-using-ad-fs-preauthentication).
+ 
+To configure Work Folders access using Azure Active Directory Application Proxy, see [Enable remote access to Work Folders using Azure Active Directory Application Proxy](https://blogs.technet.microsoft.com/filecab/?p=7945) 
   
 ## Step 11: Optionally use Group Policy to configure domain-joined PCs  
  If you have a large number of domain-joined PCs to which you want to deploy Work Folders, you can use Group Policy to do the following client PC configuration tasks:  
