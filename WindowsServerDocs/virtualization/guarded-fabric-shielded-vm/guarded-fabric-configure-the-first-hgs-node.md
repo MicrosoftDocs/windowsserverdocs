@@ -10,7 +10,7 @@ ms.technology: security-guarded-fabric
 ms.date: 05/03/2017
 ---
 
-# Configure the first HGS node
+# Configure the first Host Guardian Service (HGS) node
 
 >Applies To: Windows Server 2016
 
@@ -26,8 +26,8 @@ Install-WindowsFeature -Name HostGuardianServiceRole -IncludeManagementTools -Re
     
 ## Install HGS in a new forest
 
-The Host Guardian Service should be installed in a separate Active Directory forest than the forest to which the Hyper-V hosts, fabric managers, and other untrusted entities are joined.
-If you do not already have a secure bastion forest available in your environment, follow the steps in this section to have HGS set up one for you.
+The Host Guardian Service should be installed in a separate Active Directory forest than the Hyper-V hosts and fabric managers.
+If a secure bastion forest is not already available in your environment, follow the steps in this section to have HGS set up one for you.
 To install HGS in an existing bastion forest, skip to [Install HGS in an existing bastion forest](#install-hgs-in-an-existing-bastion-forest).
 
 ### Create a new forest for HGS
@@ -105,18 +105,17 @@ The following commands will complete the configuration of the first HGS node.
 
 ## Install HGS in an existing bastion forest
 
-If you already have a secure bastion forest in your datacenter and wish to join HGS nodes to it, follow the steps in this section.
+If your datacenter has a secure bastion forest where you want to join HGS nodes, follow the steps in this section.
 These steps also apply if you want to configure 2 or more independent HGS clusters that are joined to the same domain.
 
 ### Join the HGS server to the existing domain
 
-Before completing the following steps, ensure your HGS server is joined to the desired domain.
-You can use Server Manager or the [Add-Computer](http://go.microsoft.com/fwlink/?LinkId=821564) cmdlet to do this.
+First, use Server Manager or [Add-Computer](http://go.microsoft.com/fwlink/?LinkId=821564) to join your HGS server to the desired domain.
 
 ### Prepare Active Directory objects
 
-To initialize HGS in an existing domain, you will need to create a group managed service account and 2 security groups in the Active Directory domain.
-You can also pre-stage the cluster objects if the account you are initializing HGS with does not have permissions to create computer objects in the domain.
+To initialize HGS in an existing domain, you need to create a group managed service account and 2 security groups.
+You can also pre-stage the cluster objects if the account you are initializing HGS with does not have permission to create computer objects in the domain.
 
 #### Group managed service account
 
