@@ -10,6 +10,7 @@ ms.technology: identity-adfs
 ms.tgt_pltfrm: na
 ms.topic: article
 author: billmath
+ms.date: 05/31/2017
 ms.author: billmath
 ---
 # Using Device-based Conditional Access on-Premises

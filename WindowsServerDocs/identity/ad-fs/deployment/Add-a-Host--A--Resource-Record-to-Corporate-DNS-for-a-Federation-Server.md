@@ -4,7 +4,7 @@ title: Add a Host (A) Resource Record to Corporate DNS for a Federation Server
 description:
 author: billmath
 manager: femila
-ms.date: 02/09/2017
+ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 

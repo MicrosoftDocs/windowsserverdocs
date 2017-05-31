@@ -3,9 +3,9 @@ ms.assetid: 434fd617-373a-405e-bae4-da324ea83efc
 title: Windows Server 2012 R2 AD FS Deployment Guide
 description:
 author: billmath
-ms.author:  billmath
+ms.author: billmath
 manager: femila
-ms.date: 09/22/2016
+ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 
