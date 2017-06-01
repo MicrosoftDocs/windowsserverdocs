@@ -21,7 +21,8 @@ DCB is a suite of Institute of Electrical and Electronics Engineers \(IEEE\) sta
 >[!NOTE]
 >In addition to this topic, the following DCB documentation is available
 >
->- [Install Data Center Bridging (DCB) in Windows Server 2016 or Windows 10](dcb-install.md)
+>- [Install DCB in Windows Server 2016 or Windows 10](dcb-install.md)
+>- [Manage Data Center Bridging (DCB)](dcb-manage.md)
 
 DCB provides hardware\-based bandwidth allocation to a specific type of network traffic, and enhances Ethernet transport reliability with the use of priority\-based flow control.
 
