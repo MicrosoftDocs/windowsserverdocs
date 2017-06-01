@@ -7,29 +7,28 @@ ms.topic: article
 author: JasonGerend
 manager: dongill
 ms.author: jgerend
-ms.date: 4/5/2017
+ms.date: 5/31/2017
 description: How to deploy Work Folders, including installing the server role, creating sync shares, and creating DNS records.
 ---
 # Deploying Work Folders
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10, Windows 8.1, Windows 7
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows 10, Windows 8.1, Windows 7
 
 This topic discusses the steps needed to deploy Work Folders. It assumes that you've already read [Planning a Work Folders deployment](plan-work-folders.md).  
   
  To deploy Work Folders, a process that can involve multiple servers and technologies, use the following steps.  
   
 > [!TIP]
->  The simplest Work Folders deployment is a single file server (often called a sync server) without support for syncing over the Internet, which can be a useful deployment for a test lab or as a sync solution for domain-joined client computers. To create a simple deployment, these are minimum steps to follow:  
-
-  -   Step 1: Obtain SSL certificates  
-  -   Step 2: Create DNS records 
-  -   Step 3: Install Work Folders on file servers  
-  -   Step 4: Binding the SSL certificate on the sync servers
-  -   Step 5: Create security groups for Work Folders  
-  -   Step 7: Create sync shares for user data  
+>  The simplest Work Folders deployment is a single file server (often called a sync server) without support for syncing over the Internet, which can be a useful deployment for a test lab or as a sync solution for domain-joined client computers. To create a simple deployment, these are minimum steps to follow: 
+>  -   Step 1: Obtain SSL certificates  
+>  -   Step 2: Create DNS records 
+>  -   Step 3: Install Work Folders on file servers  
+>  -   Step 4: Binding the SSL certificate on the sync servers
+>  -   Step 5: Create security groups for Work Folders  
+>  -   Step 7: Create sync shares for user data  
   
 ## Step 1: Obtain SSL certificates  
- To allow users to sync across the Internet, the URL published by Work Folders must be protected by an SSL certificate. The requirements for SSL certificates used by Work Folders are as follows:  
+ Work Folders uses HTTPS to securely synchronize files between the Work Folders clients and the Work Folders server. The requirements for SSL certificates used by Work Folders are as follows:  
   
 -   The certificate must be issued by a trusted certification authority. For most Work Folders implementations, a publicly trusted CA is recommended, since certificates will be used by non-domain-joined, Internet-based devices.  
   
@@ -51,7 +50,7 @@ This topic discusses the steps needed to deploy Work Folders. It assumes that yo
 ## Step 3: Install Work Folders on file servers  
  You can install Work Folders on a domain-joined server by using Server Manager or by using Windows PowerShell, locally or remotely across a network. This is useful if you are configuring multiple sync servers across your network.  
   
- To deploy the role in Server Manager, do the following:  
+To deploy the role in Server Manager, do the following:  
   
 1.  Start the **Add Roles and Features Wizard**.  
   
@@ -63,58 +62,58 @@ This topic discusses the steps needed to deploy Work Folders. It assumes that yo
   
 5.  When asked if you want to install **IIS Hostable Web Core**, click **Ok** to install the minimal version of Internet Information Services (IIS) required by Work Folders.  
   
-6.  Click **Next** until you have completed the wizard.  
-  
- To deploy the role by using Windows PowerShell, use the following cmdlet:  
+6.  Click **Next** until you have completed the wizard.
+
+To deploy the role by using Windows PowerShell, use the following cmdlet:
   
 ```powershell  
 Add-WindowsFeature FS-SyncShareService  
-```  
-  
-## Step 4: Binding the SSL certificate on the sync servers  
- Work Folders installs the IIS Hostable Web Core, which is an IIS component designed to enable web services without requiring a full installation of IIS. After installing the IIS Hostable Web Core, you should bind the SSL certificate for the server to the Default Web Site on the file server. However, the IIS Hostable Web Core does not install the IIS Management console.  
-  
- There are two options for binding the certificate to the Default Web Interface. To use either option you must have installed the private key for the certificate into the computer's personal store.  
-  
--   Utilize the IIS management console on a server that has it installed. From within the console, connect to the file server you want to manage, and then select the Default Web Site for that server. The Default Web Site will appear disabled, but you can still edit the bindings for the site and select the certificate to bind it to that web site.  
-  
--   Use the netsh command to bind the certificate to the Default Web Site https interface. The command is as follows:  
-  
-    ```  
-    netsh http add sslcert ipport=<IP address>:443 certhash=<Cert thumbprint> appid={CE66697B-3AA0-49D1-BDBD-A25C8359FD5D} certstorename=MY  
-    ```  
-  
-## Step 5: Create security groups for Work Folders  
- Before creating sync shares, a member of the Domain Admins or Enterprise Admins groups needs to create some security groups in Active Directory Domain Services (AD DS) for Work Folders (they might also want to delegate some control as described in Step 6). Here are the groups you need:  
-  
--   One group per sync share to specify which users are allowed to sync with the sync share  
-  
--   One group for all Work Folders administrators so that they can edit an attribute on each user object that links the user to the correct sync server (if you're going to use multiple sync servers)  
-  
- Groups should follow a standard naming convention and should be used only for Work Folders to avoid potential conflicts with other security requirements.  
-  
- To create the appropriate security groups, use the following procedure multiple times – once for each sync share, and once to optionally create a group for file server administrators.  
-  
-#### To create security groups for Work Folders  
-  
-1.  Open Server Manager on a Windows Server 2012 R2 or Windows Server 2016 computer with Active Directory Administration Center installed.  
-  
-2.  On the **Tools** menu, click **Active Directory Administration Center**. Active Directory Administration Center appears.  
-  
-3.  Right-click the container where you want to create the new group (for example, the Users container of the appropriate domain or OU), click **New**, and then click **Group**.  
-  
-4.  In the **Create Group** window, in the **Group** section, specify the following settings:  
-  
+```
+
+## Step 4: Binding the SSL certificate on the sync servers
+ Work Folders installs the IIS Hostable Web Core, which is an IIS component designed to enable web services without requiring a full installation of IIS. After installing the IIS Hostable Web Core, you should bind the SSL certificate for the server to the Default Web Site on the file server. However, the IIS Hostable Web Core does not install the IIS Management console.
+
+ There are two options for binding the certificate to the Default Web Interface. To use either option you must have installed the private key for the certificate into the computer's personal store.
+
+- Utilize the IIS management console on a server that has it installed. From within the console, connect to the file server you want to manage, and then select the Default Web Site for that server. The Default Web Site will appear disabled, but you can still edit the bindings for the site and select the certificate to bind it to that web site.
+
+- Use the netsh command to bind the certificate to the Default Web Site https interface. The command is as follows:
+
+    ```
+    netsh http add sslcert ipport=<IP address>:443 certhash=<Cert thumbprint> appid={CE66697B-3AA0-49D1-BDBD-A25C8359FD5D} certstorename=MY
+    ```
+
+## Step 5: Create security groups for Work Folders
+ Before creating sync shares, a member of the Domain Admins or Enterprise Admins groups needs to create some security groups in Active Directory Domain Services (AD DS) for Work Folders (they might also want to delegate some control as described in Step 6). Here are the groups you need:
+
+- One group per sync share to specify which users are allowed to sync with the sync share
+
+- One group for all Work Folders administrators so that they can edit an attribute on each user object that links the user to the correct sync server (if you're going to use multiple sync servers)
+
+ Groups should follow a standard naming convention and should be used only for Work Folders to avoid potential conflicts with other security requirements.
+
+ To create the appropriate security groups, use the following procedure multiple times – once for each sync share, and once to optionally create a group for file server administrators.
+
+#### To create security groups for Work Folders
+
+1. Open Server Manager on a Windows Server 2012 R2 or Windows Server 2016 computer with Active Directory Administration Center installed.
+
+2.  On the **Tools** menu, click **Active Directory Administration Center**. Active Directory Administration Center appears.
+
+3.  Right-click the container where you want to create the new group (for example, the Users container of the appropriate domain or OU), click **New**, and then click **Group**.
+
+4.  In the **Create Group** window, in the **Group** section, specify the following settings:
+
     -   In **Group name**, type the name of the security group, for example: **HR Sync Share Users**, or **Work Folders Administrators**.  
   
     -   In **Group scope**, click **Security**, and then click **Global**.  
   
 5.  In the **Members** section, click **Add**. The Select Users, Contacts, Computers, Service Accounts or Groups dialog box appears.  
   
-6.  Type the names of the users or groups to which you grant access to a particular sync share (if you're creating a group to control access to a sync share), or type the names of the Work Folders administrators (if you're going to configure user accounts to automatically discover the appropriate sync server), click **OK**, and then click **OK** again.  
-  
- To create a security group by using Windows PowerShell, use the following cmdlets:  
-  
+6.  Type the names of the users or groups to which you grant access to a particular sync share (if you're creating a group to control access to a sync share), or type the names of the Work Folders administrators (if you're going to configure user accounts to automatically discover the appropriate sync server), click **OK**, and then click **OK** again.
+
+To create a security group by using Windows PowerShell, use the following cmdlets:
+
 ```powershell  
 $GroupName = "Work Folders Administrators"  
 $DC = "DC1.contoso.com"  
@@ -122,10 +121,9 @@ $ADGroupPath = "CN=Users,DC=contoso,DC=com"
 $Members = "CN=Maya Bender,CN=Users,DC=contoso,DC=com","CN=Irwin Hume,CN=Users,DC=contoso,DC=com"  
   
 New-ADGroup -GroupCategory:"Security" -GroupScope:"Global" -Name:$GroupName -Path:$ADGroupPath -SamAccountName:$GroupName -Server:$DC  
-Set-ADGroup -Add:@{'Member'=$Members} -Identity:$GroupName -Server:$DC  
-  
-```  
-  
+Set-ADGroup -Add:@{'Member'=$Members} -Identity:$GroupName -Server:$DC
+```
+
 ## Step 6: Optionally delegate user attribute control to Work Folders administrators  
  If you are deploying multiple sync servers and want to automatically direct users to the correct sync server, you'll need to update an attribute on each user account in AD DS. However, this normally requires getting a member of the Domain Admins or Enterprise Admins groups to update the attributes, which can quickly become tiresome if you need to frequently add users or move them between sync servers.  
   
@@ -145,9 +143,9 @@ Set-ADGroup -Add:@{'Member'=$Members} -Identity:$GroupName -Server:$DC
   
 6.  On the **Active Directory Object Type** page, click **Only the following objects in the folder**, and then select the **User objects** checkbox.  
   
-7.  On the **Permissions** page, clear the **General** checkbox, select the **Property-specific** checkbox, and then select the **Read msDS-SyncServerUrl**, and **Write msDS-SyncServerUrl** checkboxes.  
-  
- To delegate the ability to edit the msDS-SyncServerURL property on user objects by using Windows PowerShell, use the following example script that makes use of the DsAcls command.  
+7.  On the **Permissions** page, clear the **General** checkbox, select the **Property-specific** checkbox, and then select the **Read msDS-SyncServerUrl**, and **Write msDS-SyncServerUrl** checkboxes.
+
+To delegate the ability to edit the msDS-SyncServerURL property on user objects by using Windows PowerShell, use the following example script that makes use of the DsAcls command.
   
 ```powershell  
 $GroupName = "Contoso\Work Folders Administrators"  
@@ -195,34 +193,29 @@ DsAcls $ADGroupPath /I:S /G ""$GroupName":RPWP;msDS-SyncServerUrl;user"
         > [!IMPORTANT]
         >  To enforce password policies for Windows 7 PCs and for non-administrators on domain-joined PCs, use Group Policy password policies for the computer domains and exclude these domains from the Work Folders password policies. You can exclude domains by using the [Set-Syncshare -PasswordAutoExcludeDomain](http://technet.microsoft.com/library/dn296649\(v=wps.630\).aspx) cmdlet after creating the sync share. For information about setting Group Policy password policies, see [Password Policy](https://technet.microsoft.com/library/hh994572(v=ws.11).aspx).  
   
-9. Review your selections and complete the wizard to create the sync share.  
-  
- You can create sync shares using Windows PowerShell by using the [New-SyncShare](http://technet.microsoft.com/library/dn296635.aspx) cmdlet. Below is an example of this method:  
+9. Review your selections and complete the wizard to create the sync share.
+
+You can create sync shares using Windows PowerShell by using the [New-SyncShare](http://technet.microsoft.com/library/dn296635.aspx) cmdlet. Below is an example of this method:  
   
 ```powershell  
 New-SyncShare "HR Sync Share" K:\Share-1 –User "HR Sync Share Users"  
 ```  
   
- The example above creates a new sync share named *Share01* with the path *K:\Share-1*, and access granted to the group named *HR Sync Share Users*  
+The example above creates a new sync share named *Share01* with the path *K:\Share-1*, and access granted to the group named *HR Sync Share Users*  
   
 > [!TIP]
 >  After you create sync shares you can use File Server Resource Manager functionality to manage the data in the shares. For example, you can use the **Quota** tile inside the Work Folders page in Server Manager to set quotas on the user folders. You can also use [File Screening Management](http://technet.microsoft.com/library/cc732074.aspx) to control the types of files that Work Folders will sync, or you can use the scenarios described in [Dynamic Access Control](https://technet.microsoft.com/windows-server-docs/identity/solution-guides/dynamic-access-control--scenario-overview) for more sophisticated file classification tasks.  
   
-## Step 8: Optionally specify a tech support email address and Active Directory Federation Services authentication  
- After installing Work Folders on a file server, you probably want to specify an administrative contact email address for the server, and you might want to enable Active Directory Federation Services (AD FS) authentication. To do either of these tasks, use the following procedure:  
+## Step 8: Optionally specify a tech support email address   
+ After installing Work Folders on a file server, you probably want to specify an administrative contact email address for the server. To add an email address, use the following procedure:  
   
-#### Specifying an administrative contact email or AD FS authentication  
+#### Specifying an administrative contact email 
   
 1.  In Server Manager, click **File and Storage Services**, and then click **Servers**.  
   
 2.  Right-click the sync server, and then click **Work Folders Settings**. The Work Folders Settings window appears.  
   
-3.  On the **Authentication** page, optionally choose **Active Directory Federation Services** and specify a Federation Service URL. For more information about AD FS, see [Active Directory Federation Services](https://technet.microsoft.com/windows-server-docs/identity/active-directory-federation-services), and [Deploying Work Folders with AD FS and Web Application Proxy (WAP)](deploy-work-folders-adfs-overview.md).
-  
-    > [!NOTE]
-    >  If the sync server isn't in the same Active Directory site as the AD FS server and the network traffic must go through a proxy server, you need to configure the sync server to use the correct proxy configuration. For more information, see the following topic: [How to configure a proxy server for the Work Folders service](http://social.technet.microsoft.com/wiki/contents/articles/20697.how-to-configure-a-proxy-server-for-the-work-folders-service.aspx).  
-  
-4.  In the navigation pane, click **Support Email** and then type the email address or addresses that users should use when emailing for help with Work Folders. Click **OK** when you're finished.  
+3.  In the navigation pane, click **Support Email** and then type the email address or addresses that users should use when emailing for help with Work Folders. Click **OK** when you're finished.  
   
      Work Folders users can click a link in the Work Folders Control Panel item that sends an email containing diagnostic information about the client PC to the address(es) you specify here.  
   
@@ -248,9 +241,9 @@ New-SyncShare "HR Sync Share" K:\Share-1 –User "HR Sync Share Users"
 6.  In the **Value to add** box, type the URL of the sync server with which you want this user to sync, click **Add**, click **OK**, and then click **OK** again.  
   
     > [!NOTE]
-    >  The sync server URL is simply `https://` or `http://` (depending on whether you want to require a secure connection) followed by the fully qualified domain name of the sync server. For example, **https://sync1.contoso.com**.  
-  
- To populate the attribute for multiple users, use Active Directory PowerShell. Below is an example that populates the attribute for all members of the *HR Sync Share Users* group, discussed in Step 5.  
+    >  The sync server URL is simply `https://` or `http://` (depending on whether you want to require a secure connection) followed by the fully qualified domain name of the sync server. For example, **https://sync1.contoso.com**.
+
+To populate the attribute for multiple users, use Active Directory PowerShell. Below is an example that populates the attribute for all members of the *HR Sync Share Users* group, discussed in Step 5.
   
 ```powershell  
 $SyncServerURL = "https://sync1.contoso.com"  
@@ -261,13 +254,17 @@ Set-ADUser –Add @{"msDS-SyncServerURL"=$SyncServerURL}
   
 ```  
   
-## Step 10: Configure Web Application Proxy or another reverse proxy  
- To enable users to sync their Work Folders across the Internet, you need to publish Work Folders through a reverse proxy, making Work Folders available externally on the Internet. You can use Web Application Proxy, which is included in Active Directory Federation Services (AD FS), to publish Work Folders on the Internet, or you can use another reverse proxy solution.  
+## Step 10: Optionally configure Web Application Proxy, Azure AD Application Proxy, or another reverse proxy  
+
+To enable remote users to access their files, you need to publish the Work Folders server through a reverse proxy, making Work Folders available externally on the Internet. You can use Web Application Proxy, Azure Active Directory Application Proxy, or another reverse proxy solution.  
   
- For a walkthrough of setting up Work Folders with AD FS and Web Application Proxy, see [Deploying Work Folders with AD FS and Web Application Proxy (WAP)](deploy-work-folders-adfs-overview.md). For background information about Web Application Proxy, see [Web Application Proxy in Windows Server 2016](https://technet.microsoft.com/windows-server-docs/identity/web-application-proxy/web-application-proxy-windows-server). For details on publishing applications such as Work Folders on the Internet using Web Application Proxy, see [Publishing Applications using AD FS Preauthentication](https://technet.microsoft.com/windows-server-docs/identity/web-application-proxy/publishing-applications-using-ad-fs-preauthentication).  
+To configure Work Folders access using AD FS and Web Application Proxy, see [Deploying Work Folders with AD FS and Web Application Proxy (WAP)](deploy-work-folders-adfs-overview.md). For background information about Web Application Proxy, see [Web Application Proxy in Windows Server 2016](https://technet.microsoft.com/windows-server-docs/identity/web-application-proxy/web-application-proxy-windows-server). For details on publishing applications such as Work Folders on the Internet using Web Application Proxy, see [Publishing Applications using AD FS Preauthentication](https://technet.microsoft.com/windows-server-docs/identity/web-application-proxy/publishing-applications-using-ad-fs-preauthentication).
+ 
+To configure Work Folders access using Azure Active Directory Application Proxy, see [Enable remote access to Work Folders using Azure Active Directory Application Proxy](https://blogs.technet.microsoft.com/filecab/?p=7945) 
   
 ## Step 11: Optionally use Group Policy to configure domain-joined PCs  
- If you have a large number of domain-joined PCs to which you want to deploy Work Folders, you can use Group Policy to do the following client PC configuration tasks:  
+
+If you have a large number of domain-joined PCs to which you want to deploy Work Folders, you can use Group Policy to do the following client PC configuration tasks:  
   
 -   Specify which sync server users should sync with  
   

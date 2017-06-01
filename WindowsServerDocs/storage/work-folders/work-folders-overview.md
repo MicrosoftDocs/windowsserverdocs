@@ -12,7 +12,7 @@ description: An overview of Work Folders - a server role in Windows Server that 
 ---
 # Work Folders overview
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10, Windows 8.1, Windows 7
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows 10, Windows 8.1, Windows 7
 
 This topic discusses Work Folders, a role service for file servers running Windows Server that provides a consistent way for users to access their work files from their PCs and devices.  
   
@@ -58,9 +58,10 @@ If you're looking to download or use Work Folders on Windows Server 2012 R2, Win
   
 |Feature/functionality|New or updated?|Description|  
 |----------------------------|---------------------|-----------------|  
+|Azure AD Application Proxy support|Added to Windows 10 version 1703, Android, iOS|Remote users can securely access their files on the Work Folders server using Azure AD Application Proxy.|
 |Faster change replication|Updated in Windows 10 and Windows Server 2016|For Windows Server 2012 R2, when file changes are synced to the Work Folders server, clients are not notified of the change and wait up to 10 minutes to get the update. When using Windows Sever 2016, the Work Folders server immediately notifies Windows 10 clients and the file changes are synced immediately. This capability is new in Windows Server 2016 and requires a Windows 10 client. If you're using an older client or the Work Folders server is Windows Server 2012 R2, the client will continue to poll every 10 minutes for changes.|  
-|Integrated with Enterprise data protection (EDP) policy|Added to Windows 10 in  November 2015 update|If an administrator deploys EDP, Work Folders can enforce data protection by encrypting the data on the PC. The encryption is using a key associated with the Enterprise ID, which can be remotely wiped by using a supported mobile device management package such as Microsoft Intune.|  
-|Microsoft Office integration|Added to Windows 10 in  November 2015 update|In Windows 8.1 you can navigate to Work Folders inside Office apps by clicking or tapping This PC and then navigating to the Work Folders location on your PC. In Windows 10 you can make it even easier to get to Work Folders by adding it to the list of locations that Office shows when saving or opening files. For more info, see [Work Folders in Windows 10](http://windows.microsoft.com/windows-10/work-folders-in-windows-10) and  [Troubleshooting using Work Folders as a Place in Microsoft Office](http://social.technet.microsoft.com/wiki/contents/articles/32881.troubleshooting-using-work-folders-as-a-place-in-microsoft-office.aspx).|  
+|Integrated with Windows Information Protection (WIP)|Added to Windows 10 version 1607|If an administrator deploys WIP, Work Folders can enforce data protection by encrypting the data on the PC. The encryption is using a key associated with the Enterprise ID, which can be remotely wiped by using a supported mobile device management package such as Microsoft Intune.|  
+|Microsoft Office integration|Added to Windows 10 version 1511|In Windows 8.1 you can navigate to Work Folders inside Office apps by clicking or tapping This PC and then navigating to the Work Folders location on your PC. In Windows 10 you can make it even easier to get to Work Folders by adding it to the list of locations that Office shows when saving or opening files. For more info, see [Work Folders in Windows 10](http://windows.microsoft.com/windows-10/work-folders-in-windows-10) and  [Troubleshooting using Work Folders as a Place in Microsoft Office](http://social.technet.microsoft.com/wiki/contents/articles/32881.troubleshooting-using-work-folders-as-a-place-in-microsoft-office.aspx).|  
   
 ##  <a name="BKMK_SOFT"></a> Software requirements  
  Work Folders has the following software requirements for file servers and your network infrastructure:  
@@ -69,17 +70,17 @@ If you're looking to download or use Work Folders on Windows Server 2012 R2, Win
   
 -   A volume formatted with the NTFS file system for storing user files  
   
--   To enforce password policies on Windows 7 PCs, you must use Group Policy password policies. You also have to exclude the Windows 7 PCs from Work Folders password policies (if you use them).  
+-   To enforce password policies on Windows 7 PCs, you must use Group Policy password policies. You also have to exclude the Windows 7 PCs from Work Folders password policies (if you use them).
+
+-   A server certificate for each file server that will host Work Folders. These certificates should be from a certification authority (CA) that is trusted by your users—ideally a public CA.
+
+-   (Optional) An Active Directory Domain Services forest with schema extensions in Windows Server 2012 R2 to support automatically referring PCs and devices to the correct file server when using multiple file servers.  
   
  To enable users to sync across the Internet, there are additional requirements:  
   
--   A server certificate for each file server that will host Work Folders (plus a server certificate for your reverse proxy server). These certificates should be from a certification authority (CA) that is trusted by your users—ideally a public CA  
-  
 -   The ability to make a server accessible from the Internet by creating publishing rules in your organization's reverse proxy or network gateway  
   
--   A publicly registered domain name and the ability to create additional public DNS records for the domain  
-  
--   (Optional) An Active Directory Domain Services forest with schema extensions in Windows Server 2012 R2 to support automatically referring PCs and devices to the correct file server when using multiple file servers  
+-   (Optional) A publicly registered domain name and the ability to create additional public DNS records for the domain  
   
 -   (Optional) Active Directory Federation Services (AD FS) infrastructure when using AD FS authentication  
   
@@ -151,7 +152,7 @@ If you're looking to download or use Work Folders on Windows Server 2012 R2, Win
 |Content type|References|  
 |------------------|----------------|  
 |**Product evaluation**|-   [Work Folders for Android – Released](http://blogs.technet.com/b/filecab/archive/2015/01/16/work-folders-for-ios-ipad-app-release.aspx) (blog post)<br />-   [Work Folders for iOS – iPad App Release](http://blogs.technet.microsoft.com/filecab/2016/03/16/work-folders-for-android-released) (blog post)<br />-   [Introducing Work Folders on Windows Server 2012 R2](http://blogs.technet.com/b/filecab/archive/2013/07/09/introducing-work-folders-on-windows-server-2012-r2.aspx) (blog post)<br />-   [Introduction to Work Folders](http://channel9.msdn.com/posts/Introduction-to-Work-Folders) (Channel 9 Video)<br />-   [Work Folders Test Lab Deployment](http://blogs.technet.com/b/filecab/archive/2013/07/10/work-folders-test-lab-deployment.aspx) (blog post)<br />-   [Work Folders for Windows 7](http://blogs.technet.com/b/filecab/archive/2014/04/24/work-folders-for-windows-7.aspx) (blog post)|  
-|**Deployment**|-   [Designing a Work Folders Implementation](plan-work-folders.md)<br />-   [Deploying Work Folders](deploy-work-folders.md)<br />-   [Deploying Work Folders with AD FS and Web Application Proxy (WAP)](deploy-work-folders-adfs-overview.md)<br />-   [Offline Files (CSC) to Work Folders Migration Guide](http://blogs.technet.microsoft.com/filecab/2016/08/12/offline-files-csc-to-work-folders-migration-guide/)<br />-   [Performance Considerations for Work Folders Deployments](http://blogs.technet.com/b/filecab/archive/2013/11/01/performance-considerations-for-large-scale-work-folders-deployments.aspx)<br />-   [Work Folders for Windows 7 (64 bit download)](http://www.microsoft.com/download/details.aspx?id=42558)<br />-   [Work Folders for Windows 7 (32 bit download)](http://www.microsoft.com/download/details.aspx?id=42559)|  
+|**Deployment**|-   [Designing a Work Folders Implementation](plan-work-folders.md)<br />-   [Deploying Work Folders](deploy-work-folders.md)<br />-   [Deploying Work Folders with AD FS and Web Application Proxy (WAP)](deploy-work-folders-adfs-overview.md)<br />-   [Deploying Work Folders with Azure AD Application Proxy](https://blogs.technet.microsoft.com/filecab/2017/05/31/enable-remote-access-to-work-folders-using-azure-active-directory-application-proxy/)<br />- [Offline Files (CSC) to Work Folders Migration Guide](http://blogs.technet.microsoft.com/filecab/2016/08/12/offline-files-csc-to-work-folders-migration-guide/)<br />-   [Performance Considerations for Work Folders Deployments](http://blogs.technet.com/b/filecab/archive/2013/11/01/performance-considerations-for-large-scale-work-folders-deployments.aspx)<br />-   [Work Folders for Windows 7 (64 bit download)](http://www.microsoft.com/download/details.aspx?id=42558)<br />-   [Work Folders for Windows 7 (32 bit download)](http://www.microsoft.com/download/details.aspx?id=42559)|  
 |**Operations**|-   [Work Folders iPad app: FAQ](http://windows.microsoft.com/windows/work-folders-ipad-faq) (for users)<br />-   [Work Folders Certificate Management](http://blogs.technet.com/b/filecab/archive/2013/08/09/work-folders-certificate-management.aspx) (blog post)<br />-   [Monitoring Windows Server 2012 R2 Work Folders Deployments](http://blogs.technet.com/b/filecab/archive/2013/10/15/monitoring-windows-server-2012-r2-work-folders-deployments.aspx) (blog post)<br />-   [SyncShare (Work Folders) Cmdlets in Windows PowerShell](http://technet.microsoft.com/library/dn296644.aspx)<br />-   [Storage and File Services PowerShell Cmdlets Quick Reference Card For Windows Server 2012 R2 Preview Edition](http://blogs.technet.com/b/filecab/archive/2013/07/30/storage-and-file-services-powershell-cmdlets-quick-reference-card-for-windows-server-2012-r2-preview-edition.aspx)|  
 |**Troubleshooting**|-   [Windows Server 2012 R2 – Resolving Port Conflict with IIS Websites and Work Folders](http://blogs.technet.com/b/filecab/archive/2013/10/15/windows-server-2012-r2-resolving-port-conflict-with-iis-websites-and-work-folders.aspx) (blog post)<br />-   [Common Errors in Work Folders](http://social.technet.microsoft.com/wiki/contents/articles/30578.common-errors-in-work-folders.aspx)|  
 |**Community resources**|-   [File Services and Storage Forum](http://social.technet.microsoft.com/Forums/windowsserver/home?forum=winserverfiles)<br />-   [The Storage Team at Microsoft - File Cabinet Blog](http://blogs.technet.com/b/filecab/)<br />-   [Ask the Directory Services Team Blog](http://blogs.technet.com/b/askds/)|  
