@@ -7,7 +7,7 @@ ms.topic: article
 author: JasonGerend
 manager: dongill
 ms.author: jgerend
-ms.date: 5/11/2017
+ms.date: 6/1/2017
 description: New and updated topics in the Storage documentation for Windows Server 2016
 ---
 # Change history for storage topics in Windows Server 2016
@@ -18,12 +18,23 @@ This topic lists new and updated topics in the [Storage](storage.md) documentati
 
 > If you're looking for update history for Windows Server 2016, see [Windows 10 and Windows Server 2016 update history](https://support.microsoft.com/help/4000825/windows-10-and-windows-server-2016-update-history).
 
-## May 2017
+## June 2017
+
 |New or changed topic|Description|
 |---|---|
-|[Storage Replica overview](storage-replica/storage-replica-overview.md) (and other Storage Replica topics)|Added recommendation to use fast, exclusive storage for Storage Replica logs.|
+|[Planning a Work Folders deployment](work-folders/plan-work-folders.md)|Added info about Azure AD Application Proxy support & updated requirements.|
+|[Work Folders](work-folders/work-folders-overview.md)|Added info about Azure AD Application Proxy support & updated requirements.|
+
+## May 2017
+
+|New or changed topic|Description|
+|---|---|
 |[Data Deduplication overview](data-deduplication/overview.md) and <br>[Install Data Deduplication](data-deduplication/install-enable.md)|Updated the system requirements to include a newer software update. |
+|[Deploying Work Folders](work-folders/deploy-work-folders.md)|Added info about Azure AD Application Proxy support & updated required steps.|
+|[Hyper-converged solution using Storage Spaces Direct](storage-spaces/hyper-converged-solution-using-storage-spaces-direct.md)|Added step 1.3 with required features and fixed an obsolete parameter in Enable-NetAdapterQos.||[Storage Replica overview](storage-replica/storage-replica-overview.md) (and other Storage Replica topics)|Added recommendation to use fast, exclusive storage for Storage Replica logs.|
+|[Storage Replica frequently asked questions](storage-replica/storage-replica-frequently-asked-questions.md)|Added info on how to choose between different replication topologies.|
 |[Storage Spaces Direct hardware requirements](storage-spaces/storage-spaces-direct-hardware-requirements.md)|Changed drive endurance requirements for cache devices.|
+
 
 ## April 2017
 
@@ -34,9 +45,8 @@ This topic lists new and updated topics in the [Storage](storage.md) documentati
 |[Planning a Work Folders deployment](work-folders/plan-work-folders.md)|New topic.|
 |[Deploying Work Folders](work-folders/deploy-work-folders.md)|New topic.|
 |[Deploying Work Folders with AD FS and Web Application Proxy (WAP)](work-folders/deploy-work-folders-adfs-overview.md)|New topic.|
-|[Storage Replica known issues](storage-replica/storage-replica-known-issues.md)|Added new information.|
 |[Hyper-converged solution using Storage Spaces Direct](storage-spaces/hyper-converged-solution-using-storage-spaces-direct.md)|Removed a reference to an obsolete software update and fixed a typo in the sample output.|
-
+|[Storage Replica known issues](storage-replica/storage-replica-known-issues.md)|Added new information.|
 
 ## March 2017
 
@@ -52,7 +62,6 @@ This topic lists new and updated topics in the [Storage](storage.md) documentati
 |[Adding server or drives to Storage Spaces Direct](storage-spaces/add-nodes.md)|Revamped with new images and updated content.|
 |[Storage Spaces Direct hardware requirements](storage-spaces/storage-spaces-direct-hardware-requirements.md)|Updated with latest requirements.|
 
-
 ## January 2017
 
 |New or changed topic|Description|
@@ -67,5 +76,5 @@ This topic lists new and updated topics in the [Storage](storage.md) documentati
 |[Managing Storage Spaces Direct](storage-spaces/manage-storage-spaces-direct.md)|New topic.|
 |[Storage Replica frequently asked questions](storage-replica/storage-replica-frequently-asked-questions.md)|Updated port requirements and clarified how extending replicated volumes works.|
 |[Storage Replica known issues](storage-replica/storage-replica-known-issues.md)|Added info about a fix in the December 9, 2016 Cumulative Update and added info about how to resolve an error when extending a replicated volume.|
-|[Hyper-converged solution using Storage Spaces Direct](storage-spaces/hyper-converged-solution-using-storage-spaces-direct.md)|Removed some obsolete content and added new links.|
 |[Storage Spaces Direct overview](storage-spaces/storage-spaces-direct-overview.md)|Added visually-oriented Understand/Plan/Deploy/Manage section to serve as a learning map for our topics.|
+|[Hyper-converged solution using Storage Spaces Direct](storage-spaces/hyper-converged-solution-using-storage-spaces-direct.md)|Removed some obsolete content and added new links.|

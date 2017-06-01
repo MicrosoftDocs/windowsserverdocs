@@ -115,6 +115,7 @@
 #### [Troubleshooting Converged NIC Configurations](technologies/conv-nic/cnic-app-troubleshoot.md)
 ### [Data Center Bridging (DCB)](technologies/dcb/dcb-top.md)
 #### [Install Data Center Bridging (DCB) in Windows Server 2016 or Windows 10](technologies/dcb/dcb-install.md)
+#### [Manage Data Center Bridging (DCB)](technologies/dcb/dcb-manage.md)
 ### [Virtual Receive Side Scaling (vRSS)](technologies/vrss/vrss-top.md)
 #### [Plan the Use of vRSS](technologies/vrss/vrss-plan.md)
 #### [Enable vRSS on a Virtual Network Adapter](technologies/vrss/vrss-enable.md)
