@@ -7704,6 +7704,112 @@
 "source_path": "WindowsServerDocs/identity/ad-fs/operations/set-up-geographic-redundancy-with-sql-server-replication.md",
 "redirect_url": "/windows-server/identity/ad-fs/deployment/set-up-geographic-redundancy-with-sql-server-replication",
 "redirect_document_id": true
+},
+,
+{
+"source_path": "WindowsServerDocs/remote/remote-desktop-services/deploy-your-remote-desktop-environment.md",
+"redirect_url": "/windows-server/remote/remote-desktop-services/rds-deploy-infrastructure",
+"redirect_document_id": true
+},
+{
+"source_path": "WindowsServerDocs/remote/remote-desktop-services/Create-an-Azure-internal-load-balancer-for-Remote-Desktop-deployment.md",
+"redirect_url": "/windows-server/remote/remote-desktop-services/rds-connection-broker-cluster#step-2-configure-load-balancing-on-the-rd-connection-brokers",
+"redirect_document_id": true
+},
+{
+"source_path": "WindowsServerDocs/remote/remote-desktop-services/Create-an-Azure-SQL-database-for-the-RD-Connection-Broker.md",
+"redirect_url": "/windows-server/remote/remote-desktop-services/rds-connection-broker-cluster#step-1-configure-the-database-for-the-connection-broker",
+"redirect_document_id": false
+},
+{
+"source_path": "WindowsServerDocs/remote/remote-desktop-services/Deploy-a-RD-Web-Access-and-Gateway-farm.md",
+"redirect_url": "/windows-server/remote/remote-desktop-services/rds-rdweb-gateway-ha",
+"redirect_document_id": true
+},
+{
+"source_path": "WindowsServerDocs/remote/remote-desktop-services/Deploy-a-Remote-Desktop-Connection-Broker-cluster.md",
+"redirect_url": "/windows-server/remote/remote-desktop-services/rds-connection-broker-cluster",
+"redirect_document_id": true
+},
+{
+"source_path": "WindowsServerDocs/remote/remote-desktop-services/Deploy-a-Remote-Desktop-Session-Host-farm-to-improve-availability.md",
+"redirect_url": "/windows-server/remote/remote-desktop-services/rds-scale-rdsh-farm",
+"redirect_document_id": true
+},
+{
+"source_path": "WindowsServerDocs/remote/remote-desktop-services/install-odbc-on-connection-broker.md",
+"redirect_url": "/windows-server/remote/remote-desktop-services/rds-connection-broker-cluster#step-1-configure-the-database-for-the-connection-broker",
+"redirect_document_id": false
+},
+{
+"source_path": "WindowsServerDocs/remote/remote-desktop-services/Install-SQL-native-client-on-each-RD-Connection-Broker-server.md",
+"redirect_url": "/windows-server/remote/remote-desktop-services/rds-connection-broker-cluster#step-1-configure-the-database-for-the-connection-broker",
+"redirect_document_id": false
+},
+{
+"source_path": "WindowsServerDocs/remote/remote-desktop-services/Prepare-the-RD-Connection-Broker-VM-for-Remote-Desktop.md",
+"redirect_url": "/windows-server/remote/remote-desktop-services/rds-prepare-vms",
+"redirect_document_id": false
+},
+{
+"source_path": "WindowsServerDocs/remote/remote-desktop-services/Prepare-the-RDSH-virtual-machine.md",
+"redirect_url": "/windows-server/remote/remote-desktop-services/rds-prepare-vms",
+"redirect_document_id": false
+},
+{
+"source_path": "WindowsServerDocs/remote/remote-desktop-services/Prepare-the-RD-Web-and-Gateway-VM-for-Remote-Desktop.md",
+"redirect_url": "/windows-server/remote/remote-desktop-services/rds-prepare-vms",
+"redirect_document_id": false
+},
+{
+"source_path": "WindowsServerDocs/remote/remote-desktop-services/Use-an-Azure-SQL-database-to-enable-high-availability-for-your-Connection-Broker.md",
+"redirect_url": "/windows-server/remote/remote-desktop-services/rds-connection-broker-cluster",
+"redirect_document_id": false
+},
+{
+"source_path": "WindowsServerDocs/remote/remote-desktop-services/Validate-and-secure-your-Remote-Desktop-deployment.md",
+"redirect_url": "/windows-server/remote/remote-desktop-services/rds-build-and-deploy",
+"redirect_document_id": false
+},
+{
+"source_path": "WindowsServerDocs/remote/remote-desktop-services/Add-the-RD-Connection-Broker-server-to-the-deployment-and-configure-high-availability.md",
+"redirect_url": "/windows-server/remote/remote-desktop-services/rds-connection-broker-cluster",
+"redirect_document_id": false
+},
+{
+"source_path": "WindowsServerDocs/remote/remote-desktop-services/Add-the-RDSH-Server-create-a-collection-and-publish-the-RemoteApp-programs.md",
+"redirect_url": "/windows-server/remote/remote-desktop-services/rds-deploy-infrastructure",
+"redirect_document_id": false
+},
+{
+"source_path": "WindowsServerDocs/remote/remote-desktop-services/Add-the-RDSH-server-to-the-collection-farm.md",
+"redirect_url": "/windows-server/remote/remote-desktop-services/rds-scale-rdsh-farm",
+"redirect_document_id": false
+},
+{
+"source_path": "WindowsServerDocs/remote/remote-desktop-services/Configure-the-current-RD-Web-and-Gateway-virtual-machine-for-load-balancing.md",
+"redirect_url": "/windows-server/remote/remote-desktop-services/rds-rdweb-gateway-ha",
+"redirect_document_id": false
+},
+{
+"source_path": "WindowsServerDocs/remote/remote-desktop-services/Configure-your-desktop-hosting-environment.md",
+"redirect_url": "/windows-server/remote/remote-desktop-services/rds-deploy-infrastructure",
+"redirect_document_id": false
+},
+{
+"source_path": "WindowsServerDocs/remote/remote-desktop-services/Create-a-second-RD-Connection-Broker-virtual-machine.md",
+"redirect_url": "/windows-server/remote/remote-desktop-services/rds-prepare-vm",
+"redirect_document_id": false
+},
+{
+"source_path": "WindowsServerDocs/remote/remote-desktop-services/Create-a-virtual-machine-for-the-Remote-Desktop-Session-Host-server.md",
+"redirect_url": "/windows-server/remote/remote-desktop-services/rds-prepare-vm",
+"redirect_document_id": false
+},
+{
+"source_path": "WindowsServerDocs/remote/remote-desktop-services/Configure-trusted-certificates-on-RD-Connection-Broker-servers-and-clients.md",
+"redirect_url": "/windows-server/remote/remote-desktop-services/rds-deploy-infrastructure",
+"redirect_document_id": false
 }
 ]
 }
