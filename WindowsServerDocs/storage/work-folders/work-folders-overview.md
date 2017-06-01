@@ -12,7 +12,7 @@ description: An overview of Work Folders - a server role in Windows Server that 
 ---
 # Work Folders overview
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10, Windows 8.1, Windows 7
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows 10, Windows 8.1, Windows 7
 
 This topic discusses Work Folders, a role service for file servers running Windows Server that provides a consistent way for users to access their work files from their PCs and devices.  
   
