@@ -2,8 +2,9 @@
 title: Single Page Application with AD FS
 description:
 author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 10/14/2016
+ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 

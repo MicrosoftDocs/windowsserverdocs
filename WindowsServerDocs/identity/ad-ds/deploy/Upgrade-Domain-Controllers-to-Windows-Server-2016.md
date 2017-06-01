@@ -4,7 +4,7 @@ description: This document describes how to upgrade from Windows Server 2012 R2 
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 05/30/2017
+ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adds
