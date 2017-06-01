@@ -16,6 +16,9 @@ ms.date: 02/28/2017
 
 >Applies to: Windows Server 2016, Windows Server 2012 R2
 
+> [!IMPORTANT]
+> SMT preview service is being retired on June 30, 2017. For more infomation see this [blog post](https://blogs.technet.microsoft.com/servermanagement/2017/05/17/smt-preview-service-is-being-retired-on-june-30-2017/).
+
 Server management tools is a set of web-based GUI and command-line tools to manage on-premises Windows Servers from Azure. 
 
 The following video (3:46) highlights SMT features:
