@@ -212,7 +212,7 @@ If you are using certificates installed on the local machine (such as HSM-backed
 
 ## Install trusted TPM root certificates
 
-If you chose TPM mode, or expect to migrate to TPM mode in the future, you need to install root certificates to issue the endorsement key in hosts' TPM modules.
+If you chose TPM mode, or expect to migrate to TPM mode in the future, you need to install root certificates to issue the endorsement key in each host's TPM module.
 These root certificates are different from those installed by default in Windows and represent the specific root and intermediate certificates used by TPM vendors.
 The following steps help you install certificates for TPMs produced by Microsoft's partners.
 Some TPMs do not use endorsement key certificates or use certificates not included in this package.
