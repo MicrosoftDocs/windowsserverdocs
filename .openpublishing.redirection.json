@@ -7705,7 +7705,6 @@
 "redirect_url": "/windows-server/identity/ad-fs/deployment/set-up-geographic-redundancy-with-sql-server-replication",
 "redirect_document_id": true
 },
-,
 {
 "source_path": "WindowsServerDocs/remote/remote-desktop-services/deploy-your-remote-desktop-environment.md",
 "redirect_url": "/windows-server/remote/remote-desktop-services/rds-deploy-infrastructure",
