@@ -7809,6 +7809,11 @@
 "source_path": "WindowsServerDocs/remote/remote-desktop-services/Configure-trusted-certificates-on-RD-Connection-Broker-servers-and-clients.md",
 "redirect_url": "/windows-server/remote/remote-desktop-services/rds-deploy-infrastructure",
 "redirect_document_id": false
+},
+{
+"source_path": "WindowsServerDocs/remote/remote-desktop-services/rds-configure-your-environment.md",
+"redirect_url": "/windows-server/remote/remote-desktop-services/rds-deploy-infrastructure",
+"redirect_document_id": false
 }
 ]
 }
