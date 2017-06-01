@@ -35,17 +35,17 @@ This topic explains the design process for a Work Folders implementation, and as
   
 -   A volume formatted with the NTFS file system for storing user files  
   
--   To enforce password policies on Windows 7 PCs, you must use Group Policy password policies. You also have to exclude the Windows 7 PCs from Work Folders password policies (if you use them).  
+-   To enforce password policies on Windows 7 PCs, you must use Group Policy password policies. You also have to exclude the Windows 7 PCs from Work Folders password policies (if you use them).
+
+-   A server certificate for each file server that will host Work Folders. These certificates should be from a certification authority (CA) that is trusted by your users—ideally a public CA.
+
+-   (Optional) An Active Directory Domain Services forest with schema extensions in Windows Server 2012 R2 to support automatically referring PCs and devices to the correct file server when using multiple file servers. 
   
  To enable users to sync across the Internet, there are additional requirements:  
   
--   A server certificate for each file server that will host Work Folders (plus a server certificate for your reverse proxy server). These certificates should be from a certification authority (CA) that is trusted by your users—ideally a public CA  
-  
 -   The ability to make a server accessible from the Internet by creating publishing rules in your organization's reverse proxy or network gateway  
   
--   A publicly registered domain name and the ability to create additional public DNS records for the domain  
-  
--   (Optional) An Active Directory Domain Services forest with schema extensions in Windows Server 2012 R2 to support automatically referring PCs and devices to the correct file server when using multiple file servers  
+-   (Optional) A publicly registered domain name and the ability to create additional public DNS records for the domain  
   
 -   (Optional) Active Directory Federation Services (AD FS) infrastructure when using AD FS authentication  
   
@@ -127,19 +127,15 @@ This topic explains the design process for a Work Folders implementation, and as
   
  You can also use Windows Intune to selectively wipe the data from Work Folders on a user's device without affecting the rest of their data – handy for if a user leaves your organization or has their device stolen.  
   
-### Web Application Proxy/Device Registration Service  
- Work Folders is built around the concept of allowing Internet-connected devices to retrieve business data securely from the internal network, which allows users to "take their data with them" on their tablets and devices that would not normally be able to access work files. To do this, a reverse proxy must be used to publish sync server URLs and make them available to Internet clients.  
+### Web Application Proxy/Azure AD Application Proxy  
+ Work Folders is built around the concept of allowing Internet-connected devices to retrieve business data securely from the internal network, which allows users to "take their data with them" on their tablets and devices that would not normally be able to access work files. To do this, a reverse proxy must be used to publish sync server URLs and make them available to Internet clients. 
+ 
+Work Folders supports using Web Application Proxy, Azure AD Application Proxy or 3rd party reverse proxy solutions: 
+
+-  Web Application Proxy is an on-premises reverse proxy solution. To learn more, see [Web Application Proxy in Windows Server 2016](https://technet.microsoft.com/windows-server-docs/identity/web-application-proxy/web-application-proxy-windows-server).  
   
- While customers can leverage any of several different technologies to provide this functionality, Active Directory Federation Services (AD FS) in Windows Server 2012 R2 offers the following functionality that can be useful with Work Folders deployments:  
-  
--   Web Application Proxy – a reverse proxy implementation that pre-authenticates access to web applications using AD FS. For more information, see [Web Application Proxy in Windows Server 2016](https://technet.microsoft.com/windows-server-docs/identity/web-application-proxy/web-application-proxy-windows-server).  
-  
--   Workplace Join and Device Registration Service– optionally allows users to join devices to the workplace that would not normally be domain-joined; for example, personal laptops, tablets, and smartphones. When these technologies are enabled, the AD FS administrator can configure applications and policies for corporate resources that require devices to be registered before they can gain access to published applications and resources. For more information, see [Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications](https://technet.microsoft.com/windows-server-docs/identity/ad-fs/operations/join-to-workplace-from-any-device-for-sso-and-seamless-second-factor-authentication-across-company-applications).  
-  
--   Multifactor authentication (MFA) – optionally allows administrators to set up a policy based on user, device, or location data that requires users to authenticate with more than one authentication method; for example, a one-time password or a smart card. See [Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](https://technet.microsoft.com/windows-server-docs/identity/ad-fs/operations/manage-risk-with-additional-multi-factor-authentication-for-sensitive-applications).  
-  
--   Multi-domain authentication – with AD FS you can support users from multiple domains syncing with a single sync server across the Internet. Without this capability, users from domains other than the one the sync server is joined to wouldn't be able to sync across the Internet.  
-  
+-  Azure AD Application Proxy is a cloud reverse proxy solution. To learn more, see [How to provide secure remote access to on-premises applications](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-application-proxy-get-started)
+
 ## Additional design considerations  
  In addition to understanding each of the components noted above, customers need to spend time in their design thinking about the number of sync servers and shares to operate, and whether or not to leverage failover clustering to provide fault tolerance on those sync servers  
   
@@ -251,4 +247,4 @@ This topic explains the design process for a Work Folders implementation, and as
 |Content type|References|  
 |------------------|----------------|  
 |**Product evaluation**|-   [Work Folders](work-folders-overview.md)<br />-   [Work Folders for Windows 7](http://blogs.technet.com/b/filecab/archive/2014/04/24/work-folders-for-windows-7.aspx) (blog post)|  
-|**Deployment**|-   [Designing a Work Folders Implementation](plan-work-folders.md)<br />-   [Deploying Work Folders](deploy-work-folders.md)<br />-   [Deploying Work Folders with AD FS and Web Application Proxy (WAP)](deploy-work-folders-adfs-overview.md)<br />-   [Performance Considerations for Work Folders Deployments](http://blogs.technet.com/b/filecab/archive/2013/11/01/performance-considerations-for-large-scale-work-folders-deployments.aspx)<br />-   [Work Folders for Windows 7 (64 bit download)](http://www.microsoft.com/download/details.aspx?id=42558)<br />-   [Work Folders for Windows 7 (32 bit download)](http://www.microsoft.com/download/details.aspx?id=42559)<br />-   [Work Folders Test Lab Deployment](http://blogs.technet.com/b/filecab/archive/2013/07/10/work-folders-test-lab-deployment.aspx) (blog post)|
+|**Deployment**|-   [Designing a Work Folders Implementation](plan-work-folders.md)<br />-   [Deploying Work Folders](deploy-work-folders.md)<br />-   [Deploying Work Folders with AD FS and Web Application Proxy (WAP)](deploy-work-folders-adfs-overview.md)<br />- [Deploying Work Folders with Azure AD Application Proxy](https://blogs.technet.microsoft.com/filecab/2017/05/31/enable-remote-access-to-work-folders-using-azure-active-directory-application-proxy/)<br />-   [Performance Considerations for Work Folders Deployments](http://blogs.technet.com/b/filecab/archive/2013/11/01/performance-considerations-for-large-scale-work-folders-deployments.aspx)<br />-   [Work Folders for Windows 7 (64 bit download)](http://www.microsoft.com/download/details.aspx?id=42558)<br />-   [Work Folders for Windows 7 (32 bit download)](http://www.microsoft.com/download/details.aspx?id=42559)<br />-   [Work Folders Test Lab Deployment](http://blogs.technet.com/b/filecab/archive/2013/07/10/work-folders-test-lab-deployment.aspx) (blog post)|
