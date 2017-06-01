@@ -18,11 +18,35 @@ You can use this topic for introductory information about Data Center Bridging \
 
 DCB is a suite of Institute of Electrical and Electronics Engineers \(IEEE\) standards that enable Converged Fabrics in the data center, where storage, data networking, cluster Inter\-Process Communication \(IPC\), and management traffic all share the same Ethernet network infrastructure.
 
+>[!NOTE]
+>In addition to this topic, the following DCB documentation is available
+>
+>- [Install Data Center Bridging (DCB) in Windows Server 2016 or Windows 10](dcb-install.md)
+
 DCB provides hardware\-based bandwidth allocation to a specific type of network traffic, and enhances Ethernet transport reliability with the use of priority\-based flow control.
 
 Hardware\-based bandwidth allocation is essential if traffic bypasses the operating system and is offloaded to a converged network adapter, which might support Internet Small Computer System Interface \(iSCSI\), Remote Direct Memory Access \(RDMA\) over Ethernet, or Fiber Channel over Ethernet \(FCoE\).
 
 Priority\-based flow control is essential if the upper layer protocol, such as Fiber Channel, assumes a lossless underlying transport.
+
+## DCB Protocols and Management Options
+
+DCB consists of the following set of protocols. 
+
+- Enhanced Transmission Service \(ETS\) – IEEE 802.1Qaz, which builds on the 802.1P and 802.1Q
+standards
+- Priority Flow Control \(PFS\), IEEE 802.1Qbb 
+- DCB Exchange Protocol \(DCBX\), IEEE 802.1AB, as extended in the 802.1Qaz standard.
+
+The DCBX protocol allows you to configure DCB on a switch, which can then automatically configure an end device, such as a computer running Windows Server 2016.
+
+If you prefer to manage DCB from a switch, you don’t need to install DCB as a feature in Windows Server 2016, however this approach includes some limitations.
+
+Because DCBX can only inform the host network adapter of ETS class sizes and PFC enablement, however, Windows Server hosts usually require that DCB is installed so that traffic is mapped to ETS classes.
+
+Windows applications are usually not designed to participate in DCBX exchanges. Because of this, the host must be configured separately from the network switches, but with identical settings.
+
+If you do choose to manage DCB from a switch, you can still view the configurations in Windows Server 2016 by using Windows PowerShell commands.
 
 ##  Important DCB functionality
 
@@ -66,57 +90,6 @@ A Windows Server 2016\-based implementation of DCB alleviates many of the issues
 Implementations of proprietary solutions provided by multiple OEMs might not interoperate with one another, might be difficult to manage, and will typically have different software maintenance schedules. 
 
 By contrast, Windows Server 2016 DCB is standards\-based, and you can deploy and manage DCB in a heterogeneous network.
-
-##  Hardware requirements
-
-Following is a list of hardware requirements for DCB.
-
-1. DCB\-capable Ethernet network adapter\(s\) must be installed in computers that are providing Windows Server 2016 DCB.
-
-2. DCB\-capable hardware switches must be deployed on your network.
-
-## Install DCB in Windows Server 2016
-
-You can use the following sections to install DCB on a computer running Windows Server 2016.
-
-**Administrative Credentials**
-
-To perform these procedures, you must be a member of Administrators.
-
-### Install DCB Using Windows PowerShell
-
-You can use the following procedure to install DCB by using Windows PowerShell.
-
-1. On a computer running Windows Server 2016, click **Start**, then right-click the Windows PowerShell icon. A menu appears. In the menu, click **More**, and then click **Run as administrator**. If prompted, type the credentials for an account that has Administrator privileges on the computer. Windows PowerShell opens with Administrator privileges.
-2. Type the following command, and then press ENTER.
-
-````
-	Install-WindowsFeature -Name Data-Center-Bridging -IncludeManagementTools
-````
-
-### Install DCB Using Server Manager
-
-You can use the following procedure to install DCB by using Server Manager.
-
->[!NOTE]
->After you perform the first step in this procedure, the **Before You Begin** page of the Add Roles and Features Wizard is not displayed if you have previously selected **Skip this page by default** when the Add Roles and Features Wizard was run. If the **Before You Begin** page is not displayed, skip from step 1 to step 3.
-
-1. On DC1, in Server Manager, click **Manage**, and then click **Add Roles and Features**. The Add Roles and Features Wizard opens.
-2. In **Before You Begin**, click **Next**.
-3. In **Select Installation Type**, ensure that **Role-Based or feature-based installation** is selected, and then click **Next**.
-4. In **Select destination server**, ensure that **Select a server from the server pool** is selected. In **Server Pool**, ensure that the local computer is selected. Click **Next**.
-5. In **Select server roles**, click **Next**.
-6. In **Select features**, in **Features**, click **Data Center Bridging**. A dialog box opens to ask if you want to add DCB required features. Click **Add Features**.
-7. In **Select features**, click **Next**. 
-8. 7.In **Confirm installation selections**, click **Install**. The **Installation progress** page displays status during the installation process. After the message appears stating that installation succeeded, click **Close**.
-
-### Configure the kernel debugger to allow QoS \(Optional\)
-
- By default, kernel debuggers block NetQos. Regardless of the method that you used to install DCB, if you have a kernel debugger installed in the computer, you must configure the debugger to allow QoS to be enabled and configured by running the following command.
-
-````
-Set-ItemProperty HKLM:"\SYSTEM\CurrentControlSet\Services\NDIS\Parameters" AllowFlowControlUnderDebugger -type DWORD -Value 1 -Force
-````
 
 ## <a name="bkmk_wps"></a>Windows PowerShell Commands for DCB
 
