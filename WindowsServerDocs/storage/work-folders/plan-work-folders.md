@@ -29,7 +29,8 @@ This topic explains the design process for a Work Folders implementation, and as
  The following sections will help you design your Work Folders implementation. Deploying Work Folders is discussed in the next topic, [Deploying Work Folders](deploy-work-folders.md).  
   
 ##  <a name="BKMK_SOFT"></a> Software requirements  
- Work Folders has the following software requirements for file servers and your network infrastructure:  
+
+Work Folders has the following software requirements for file servers and your network infrastructure:  
   
 -   A server running Windows Server 2012 R2 or Windows Server 2016 for hosting sync shares with user files  
   
@@ -41,7 +42,7 @@ This topic explains the design process for a Work Folders implementation, and as
 
 -   (Optional) An Active Directory Domain Services forest with schema extensions in Windows Server 2012 R2 to support automatically referring PCs and devices to the correct file server when using multiple file servers. 
   
- To enable users to sync across the Internet, there are additional requirements:  
+To enable users to sync across the Internet, there are additional requirements:  
   
 -   The ability to make a server accessible from the Internet by creating publishing rules in your organization's reverse proxy or network gateway  
   
@@ -49,7 +50,7 @@ This topic explains the design process for a Work Folders implementation, and as
   
 -   (Optional) Active Directory Federation Services (AD FS) infrastructure when using AD FS authentication  
   
- Work Folders has the following software requirements for client computers:  
+Work Folders has the following software requirements for client computers:  
   
 -   Computers must be running one of the following operating systems:  
   
@@ -167,14 +168,16 @@ Work Folders supports using Web Application Proxy, Azure AD Application Proxy or
 -   Storage capacity –If a file server has multiple volumes, additional shares can be used to take advantage of these additional volumes. An individual share has access to only the volume that it is hosted on, and is unable to take advantage of additional volumes on a file server.  
   
 #### Access to Sync Shares  
- While the sync server that a user accesses is determined by the URL entered at their client (or the URL published for that user in AD DS when using server automatic discovery), access to individual sync shares is determined by the permissions present on the share.  
+
+While the sync server that a user accesses is determined by the URL entered at their client (or the URL published for that user in AD DS when using server automatic discovery), access to individual sync shares is determined by the permissions present on the share.  
   
- As a result, if a customer is hosting multiple sync shares on the same server, care must be taken to ensure that individual users have permissions to access only one of those shares. Otherwise, when users connect to the server, their client may connect to the wrong share. This can be accomplished by creating a separate security group for each sync share.  
+As a result, if a customer is hosting multiple sync shares on the same server, care must be taken to ensure that individual users have permissions to access only one of those shares. Otherwise, when users connect to the server, their client may connect to the wrong share. This can be accomplished by creating a separate security group for each sync share.  
   
- Further, access to an individual user's folder inside a sync share is determined by ownership rights on the folder. When creating a sync share, Work Folders by default grants users exclusive access to their files (disabling inheritance and making them the owner of their individual folders).  
+Further, access to an individual user's folder inside a sync share is determined by ownership rights on the folder. When creating a sync share, Work Folders by default grants users exclusive access to their files (disabling inheritance and making them the owner of their individual folders).  
   
 ## Design checklist  
- The following set of design questions is intended to aid customers in designing a Work Folders implementation that best serves their environment. Customers should work through this checklist prior to attempting to deploy servers.  
+
+The following set of design questions is intended to aid customers in designing a Work Folders implementation that best serves their environment. Customers should work through this checklist prior to attempting to deploy servers.  
   
 -   Intended Users  
   
