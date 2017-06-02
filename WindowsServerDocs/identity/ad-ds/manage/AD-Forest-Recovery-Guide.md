@@ -13,7 +13,7 @@ ms.technology: identity-adfs
 
 >Applies To: Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2, Windows Server 2003
 
-# Planning for Active Directory Forest Recovery
+# Active Directory Forest Recovery Guide
 
 This guide contains best-practice recommendations for recovering an Active Directory® forest if forest-wide failure renders all domain controllers (DCs) in the forest incapable of functioning normally. The steps it contains serve as a template for your forest recovery plan, which you can customize for your particular environment. These steps apply to DCs that run Microsoft® Windows Server 2016, 2012 R2, 2012, 2008 R2, 2008, and 2003 operating systems.  
   
@@ -26,7 +26,7 @@ This guide contains best-practice recommendations for recovering an Active Direc
   
 -   [AD Forest Recovery - Devising a custom forest recovery plan](AD-Forest-Recovery-Devising-a-Plan.md)  
 
--   [Steps for AD Forest Recovery](AD-Forest-Recovery-Steps-For-Restoring.md)
+-   [AD Forest Recovery - Steps for Recovery](AD-Forest-Recovery-Steps-For-Restoring.md)
 
 - [AD Forest Recovery - Identify the problem](AD-Forest-Recovery-Identify-the-Problem.md)
   
