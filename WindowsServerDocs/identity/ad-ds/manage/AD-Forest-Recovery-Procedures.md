@@ -17,12 +17,12 @@ ms.technology: identity-adfs
 
 This section contains procedures related to the forest recovery process. The procedures are applicable for Windows Server 2016, 2012 R2, 2012 and are also applicable to Windows Server 2008 R2 and 2008 with some minor exceptions. 
 
-Procedures that include steps that vary for Windows Server 2003 are found in [Forest Recovery with Windows Server 2003 Domain Controllers](AD-Forest-Recovery-Forest-Recovery-with-Windows-Server-2003-Domain-Controllers.md).  
+Procedures that include steps that vary for Windows Server 2003 are found in [Forest Recovery with Windows Server 2003 Domain Controllers](AD-Forest-Recovery-Windows-Server-2003.md).  
 
 The following is a list of procedures that are used in backing up and restoring domain controllers and Active Directory.
   
 -   [Backing up a full server](AD-Forest-Recovery-Backing-up-a-Full-Server.md)  
--   [Backing up the System State data](AD-Forest-Recovery-Backup-up-System-State.md)  
+-   [Backing up the System State data](AD-Forest-Recovery-Backing-up-System-State.md)  
 -   [Performing a full server recovery](AD-Forest-Recovery-Perform-a-Full-Recovery.md)  
 -   [Performing an authoritative synchronization of DFSR-replicated SYSVOL](AD-Forest-Recovery-Authoritative-Recovery-SYSVOL.md)  
 -   [Performing a nonauthoritative restore of Active Directory Domain Services](AD-Forest-Recovery-Nonauthoritative-Restore.md)  

@@ -26,6 +26,8 @@ This guide contains best-practice recommendations for recovering an Active Direc
   
 -   [AD Forest Recovery - Devising a custom forest recovery plan](AD-Forest-Recovery-Devising-a-Plan.md)  
 
+-   [Steps for AD Forest Recovery](AD-Forest-Recovery-Steps-For-Restoring.md)
+
 - [AD Forest Recovery - Identify the problem](AD-Forest-Recovery-Identify-the-Problem.md)
   
 -   [AD Forest Recovery - Determine how to recover](AD-Forest-Recovery-Determine-how-to-Recover.md)
@@ -37,6 +39,8 @@ This guide contains best-practice recommendations for recovering an Active Direc
 -   [AD Forest Recovery - Frequently Asked Questions](AD-Forest-Recovery-FAQ.md)  
   
 -   [AD Forest Recovery - Recovering a Single Domain within a Multidomain Forest](AD-Forest-Recovery-Single-Domain-in-Multidomain-Recovery.md)  
+
+-   [AD Forest Recovery - Virtualization](AD-Forest-Recovery-Virtualization.md)
   
 -   [AD Forest Recovery - Forest Recovery with Windows Server 2003 Domain Controllers](AD-Forest-Recovery-Windows-Server-2003.md)  
 

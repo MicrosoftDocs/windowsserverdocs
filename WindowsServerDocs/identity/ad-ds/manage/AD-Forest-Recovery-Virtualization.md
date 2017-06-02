@@ -11,6 +11,7 @@ ms.assetid: c49b40b2-598d-49aa-85b4-766bce960e0d
 ms.technology: identity-adfs
 ---
 
+>Applies To: Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2, Windows Server 2003
 
 # Active Directory Forest Recovery Virtualization
 This topic describes the virtualized domain controller cloning feature in Windows Server 2016, 2012 R2, and 2012.  
@@ -26,5 +27,16 @@ This topic describes the virtualized domain controller cloning feature in Window
   
 -   The PDC emulator must run Windows Server 2016 or 2012. You can clone PDC emulator if it is virtualized.  
   
- For step-by-step instructions about how to perform virtualized DC cloning, see [Introduction to Active Directory Domain Services (AD DS) Virtualization (Level 100)](../ad-ds/Introduction-to-Active-Directory-Domain-Services-AD-DS-Virtualization-Level-100.md). For details about how virtualized DC cloning works, see [Virtualized Domain Controller Technical Reference (Level 300)](../adds/deploy/virtual-dc/virtualized-domain-controller-technical-reference--level-300-.md).  
+ For step-by-step instructions about how to perform virtualized DC cloning, see [Introduction to Active Directory Domain Services (AD DS) Virtualization (Level 100)](../Introduction-to-Active-Directory-Domain-Services-AD-DS-Virtualization-Level-100.md). For details about how virtualized DC cloning works, see [Virtualized Domain Controller Technical Reference (Level 300)](../deploy/virtual-dc/virtualized-domain-controller-technical-reference--level-300-.md).  
+
+-   [AD Forest Recovery - Prerequisites](AD-Forest-Recovery-Prerequisties.md)  
+-   [AD Forest Recovery - Devising a custom forest recovery plan](AD-Forest-Recovery-Devising-a-Plan.md)  
+- [AD Forest Recovery - Identify the problem](AD-Forest-Recovery-Identify-the-Problem.md)
+-   [AD Forest Recovery - Determine how to recover](AD-Forest-Recovery-Determine-how-to-Recover.md)
+-   [AD Forest Recovery - Perform initial recovery](AD-Forest-Recovery-Perform-initial-recovery.md)  
+-   [AD Forest Recovery - Procedures](AD-Forest-Recovery-Procedures.md)  
+-   [AD Forest Recovery - Frequently Asked Questions](AD-Forest-Recovery-FAQ.md)  
+-   [AD Forest Recovery - Recovering a Single Domain within a Multidomain Forest](AD-Forest-Recovery-Single-Domain-in-Multidomain-Recovery.md)  
+-   [AD Forest Recovery - Forest Recovery with Windows Server 2003 Domain Controllers](AD-Forest-Recovery-Windows-Server-2003.md) 
+
   

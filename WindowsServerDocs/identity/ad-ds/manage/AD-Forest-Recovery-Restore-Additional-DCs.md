@@ -1,3 +1,4 @@
+---
 title: AD Forest Recovery - Redeploy remaining DCs  
 description:
 author: billmath
@@ -9,6 +10,8 @@ ms.prod: windows-server-threshold
 ms.assetid: 5a291f65-794e-4fc3-996e-094c5845a383
 ms.technology: identity-adfs
 ---
+
+>Applies To: Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2, Windows Server 2003
 
 # AD Forest Recovery - Redeploy remaining DCs
  The steps up to this point apply to all forests: find a valid backup for each domain, recover the domains in isolation, reconnect them, reset the global catalog, and clean up. In this next step you will redeploy the forest. The way to do this will greatly depend on your forest design, your service level agreements, site structure, available bandwidth, and numerous other factors. You will need to design your own redeployment plan based on the principles and suggestions in this section, in a way that is best suited to your business requirements.  
@@ -35,9 +38,9 @@ ms.technology: identity-adfs
   
 -   If you clone additional virtualized DCs from the first virtualized DC to be restored, the source DC will need to be shut down while its VHDX file is copied. Then it will need to be running and available online when the clone virtual DCs are first started. If the downtime required by the shutdown is not acceptable for the first recovered DC, deploy an additional virtualized DC by installing AD DS to act as the source for cloning.  
   
--   There is no restriction on the host name of the cloned virtualized DC or the server on which you want to install AD DS. You can use a new host name or the host name that was in use previously. For more information about DNS host name syntax, see [Creating DNS Computer Names](http://technet.microsoft.com/library/cc785282\(WS.10\).aspx) ([http://go.microsoft.com/fwlink/?LinkId=74564](http://go.microsoft.com/fwlink/?LinkId=74564)).  
+-   There is no restriction on the host name of the cloned virtualized DC or the server on which you want to install AD DS. You can use a new host name or the host name that was in use previously. For more information about DNS host name syntax, see [Creating DNS Computer Names](http://technet.microsoft.com/library/cc785282.aspx) ([http://go.microsoft.com/fwlink/?LinkId=74564](http://go.microsoft.com/fwlink/?LinkId=74564)).  
   
--   Configure each server with the first DNS server in the forest (the first DC that was restored in the root domain) as the preferred DNS server in the TCP/IP properties of its network adapter. For more information, see [Configure TCP/IP to use DNS](http://technet.microsoft.com/library/cc779282\(WS.10\).aspx).  
+-   Configure each server with the first DNS server in the forest (the first DC that was restored in the root domain) as the preferred DNS server in the TCP/IP properties of its network adapter. For more information, see [Configure TCP/IP to use DNS](http://technet.microsoft.com/library/cc779282.aspx).  
   
 -   Redeploy all RODCs in the domain, either by virtualized DC cloning if several RODCs are deployed in a central location, or by the traditional method of rebuilding them by removing and reinstalling AD DS if they are deployed individually in isolated located locations such as branch offices.  
   
@@ -51,4 +54,13 @@ ms.technology: identity-adfs
   
 -   If you require additional global catalogs to share authentication or query load for users or applications, you can either add the global catalog to the source virtualized DC before cloning or you can make a DC a global catalog server during the installation of AD DS.  
   
-<a name="BKMK_Cleanup"></a>   
+## Next Steps
+-   [AD Forest Recovery - Prerequisites](AD-Forest-Recovery-Prerequisties.md)  
+-   [AD Forest Recovery - Devising a custom forest recovery plan](AD-Forest-Recovery-Devising-a-Plan.md)  
+- [AD Forest Recovery - Identify the problem](AD-Forest-Recovery-Identify-the-Problem.md)
+-   [AD Forest Recovery - Determine how to recover](AD-Forest-Recovery-Determine-how-to-Recover.md)
+-   [AD Forest Recovery - Perform initial recovery](AD-Forest-Recovery-Perform-initial-recovery.md)  
+-   [AD Forest Recovery - Procedures](AD-Forest-Recovery-Procedures.md)  
+-   [AD Forest Recovery - Frequently Asked Questions](AD-Forest-Recovery-FAQ.md)  
+-   [AD Forest Recovery - Recovering a Single Domain within a Multidomain Forest](AD-Forest-Recovery-Single-Domain-in-Multidomain-Recovery.md)  
+-   [AD Forest Recovery - Forest Recovery with Windows Server 2003 Domain Controllers](AD-Forest-Recovery-Windows-Server-2003.md)  
