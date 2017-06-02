@@ -84,11 +84,11 @@ To create self-signed certificates and export them to a PFX file, run the follow
 $certificatePassword = Read-Host -AsSecureString -Prompt "Enter a password for the PFX file"
 
 $signCert = New-SelfSignedCertificate -Subject "CN=HGS Signing Certificate"
-Export-PfxCertificate -Path .\signCert.pfx -Password $certificatePassword -Cert $signCert
+Export-PfxCertificate -FilePath .\signCert.pfx -Password $certificatePassword -Cert $signCert
 Remove-Item $signCert.PSPath
 
 $encCert = New-SelfSignedCertificate -Subject "CN=HGS Encryption Certificate"
-Export-PfxCertificate -Path .\encCert.pfx -Password $certificatePassword -Cert $encCert
+Export-PfxCertificate -FilePath .\encCert.pfx -Password $certificatePassword -Cert $encCert
 Remove-Item $encCert.PSPath
 ```
 
