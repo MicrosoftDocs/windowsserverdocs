@@ -96,7 +96,7 @@ ms.technology: identity-adfs
     > [!NOTE]
     >  The first time that you attempt to create an object with a SID after you invalidate the RID pool you will receive an error. The attempt to create an object triggers a request for a new RID pool. Retry of the operation succeeds because the new RID pool will be allocated.  
   
-10. Reset the computer account password of this DC twice. For more information, see [Resetting the computer account password of the domain controller](AD Forest Recovery-Reset-Computer-Account-DC.md).  
+10. Reset the computer account password of this DC twice. For more information, see [Resetting the computer account password of the domain controller](AD-Forest-Recovery-Reset-Computer-Account-DC.md).  
   
 11. Reset the krbtgt password twice. For more information, see [Resetting the krbtgt password](AD-Forest-Recovery-Resetting-the-krbtgt-password.md).  
   
