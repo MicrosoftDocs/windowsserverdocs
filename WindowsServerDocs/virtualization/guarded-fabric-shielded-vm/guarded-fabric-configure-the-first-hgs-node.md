@@ -223,14 +223,14 @@ Consult your TPM vendor or server OEM for further assistance in these cases.
 2.  Validate that the package is digitally signed by Microsoft. Do not expand the CAB file if it does not have a valid signature.
 
     ```powershell
-    Get-AuthenticodeSignature -Path <Path-To-TrustedTpm.cab>
+    Get-AuthenticodeSignature -FilePath <Path-To-TrustedTpm.cab>
     ```
 
 3.  Expand the cab file
 
     ```powershell
     mkdir .\TrustedTPM
-    expand.exe -F:* .\TrustedTPM.cab .\TrustedTPM
+    expand.exe -F:* <Path-To-TrustedTpm.cab> .\TrustedTPM
     ```
 
 4.  By default, the configuration script will install certificates for every TPM vendor. If you only want to import certificates for your specific TPM vendor, delete the folders for TPM vendors not trusted by your organization.
