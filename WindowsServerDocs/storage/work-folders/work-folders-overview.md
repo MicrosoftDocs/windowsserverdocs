@@ -64,7 +64,8 @@ If you're looking to download or use Work Folders on Windows Server 2012 R2, Win
 |Microsoft Office integration|Added to Windows 10 version 1511|In Windows 8.1 you can navigate to Work Folders inside Office apps by clicking or tapping This PC and then navigating to the Work Folders location on your PC. In Windows 10 you can make it even easier to get to Work Folders by adding it to the list of locations that Office shows when saving or opening files. For more info, see [Work Folders in Windows 10](http://windows.microsoft.com/windows-10/work-folders-in-windows-10) and  [Troubleshooting using Work Folders as a Place in Microsoft Office](http://social.technet.microsoft.com/wiki/contents/articles/32881.troubleshooting-using-work-folders-as-a-place-in-microsoft-office.aspx).|  
   
 ##  <a name="BKMK_SOFT"></a> Software requirements  
- Work Folders has the following software requirements for file servers and your network infrastructure:  
+
+Work Folders has the following software requirements for file servers and your network infrastructure:  
   
 -   A server running Windows Server 2012 R2 or Windows Server 2016 for hosting sync shares with user files  
   
@@ -76,7 +77,7 @@ If you're looking to download or use Work Folders on Windows Server 2012 R2, Win
 
 -   (Optional) An Active Directory Domain Services forest with schema extensions in Windows Server 2012 R2 to support automatically referring PCs and devices to the correct file server when using multiple file servers.  
   
- To enable users to sync across the Internet, there are additional requirements:  
+To enable users to sync across the Internet, there are additional requirements:  
   
 -   The ability to make a server accessible from the Internet by creating publishing rules in your organization's reverse proxy or network gateway  
   
@@ -84,7 +85,7 @@ If you're looking to download or use Work Folders on Windows Server 2012 R2, Win
   
 -   (Optional) Active Directory Federation Services (AD FS) infrastructure when using AD FS authentication  
   
- Work Folders has the following software requirements for client computers:  
+Work Folders has the following software requirements for client computers:  
   
 -   PCs and devices must be running one of the following operating systems:  
   
@@ -119,7 +120,8 @@ If you're looking to download or use Work Folders on Windows Server 2012 R2, Win
 -   Work Folders doesn't support rolling back the virtual machine state of client virtual machines. Instead perform backup and restore operations from inside the client virtual machine by using System Image Backup or another backup app.  
   
 ##  <a name="BKMK_Comparison"></a> Work Folders compared to other sync technologies  
- The following table discusses how various Microsoft sync technologies are positioned and when to use each.  
+
+The following table discusses how various Microsoft sync technologies are positioned and when to use each.  
   
 ||Work Folders|Offline Files|OneDrive for Business|OneDrive|  
 |-|------------------|-------------------|---------------------------|--------------|  
@@ -133,7 +135,8 @@ If you're looking to download or use Work Folders on Windows Server 2012 R2, Win
 >  In addition to the sync technologies listed in the previous table, Microsoft offers other replication technologies, including DFS Replication, which is designed for server-to-server replication, and BranchCache, which is designed as a branch office WAN acceleration technology. For more information, see [DFS Namespaces and DFS Replication](https://technet.microsoft.com/library/jj127250(v=ws.11).aspx) and [BranchCache Overview](https://technet.microsoft.com/library/hh831696(v=ws.11).aspx)  
   
 ##  <a name="BKMK_INSTALL"></a> Server Manager information  
- Work Folders is part of the File and Storage Services role. You can install Work Folders by using the Add Roles and Features Wizard or the `Install-WindowsFeature` cmdlet. Both methods accomplish the following:  
+
+Work Folders is part of the File and Storage Services role. You can install Work Folders by using the Add Roles and Features Wizard or the `Install-WindowsFeature` cmdlet. Both methods accomplish the following:  
   
 -   Adds the **Work Folders** page to **File and Storage Services** in Server Manager  
   
@@ -144,7 +147,7 @@ If you're looking to download or use Work Folders on Windows Server 2012 R2, Win
 ##  <a name="BKMK_Azure"></a> Interoperability with Windows Azure virtual machines  
  You can run this Windows Server role service on a virtual machine in Windows Azure. This scenario has been tested with Windows Server 2012 R2 and Windows Server 2016.  
   
- To learn about how to get started with Windows Azure virtual machines, visit the [Windows Azure web site](http://www.windowsazure.com/documentation/services/virtual-machines).  
+To learn about how to get started with Windows Azure virtual machines, visit the [Windows Azure web site](http://www.windowsazure.com/documentation/services/virtual-machines).  
   
 ##  <a name="BKMK_LINKS"></a> See also  
  For additional related information, see the following resources.  
