@@ -130,6 +130,7 @@
 ##### [Forest-Wide Updates](ad-ds/deploy/RODC/forest-Wide-Updates.md)
 #### [Troubleshooting Domain Controller Deployment](ad-ds/deploy/Troubleshooting-Domain-Controller-Deployment.md)
 ### [AD DS Operations](ad-ds/manage/component-updates/AD-DS-Operations.md)
+#### [AD Forest Recovery Guide](ad-ds/manage/Active-Directory-Forest-Guide.md)
 #### [Best Practices for Securing Active Directory](ad-ds/plan/security-best-practices/Best-Practices-for-Securing-active-directory.md)
 ##### [Foreword](https://technet.microsoft.com/library/dn487451.aspx)
 ##### [Acknowledgements](https://technet.microsoft.com/library/dn487445.aspx)

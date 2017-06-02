@@ -1,0 +1,30 @@
+---
+title: AD Forest Recovery Virtualization
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 06/02/2017
+ms.topic: article
+ms.prod: windows-server-threshold
+ms.assetid: c49b40b2-598d-49aa-85b4-766bce960e0d
+ms.technology: identity-adfs
+---
+
+
+# Active Directory Forest Recovery Virtualization
+This topic describes the virtualized domain controller cloning feature in Windows Server 2016, 2012 R2, and 2012.  
+ 
+## Using virtualized domain controller cloning to expedite forest recovery  
+ Virtualized domain controller (DC) cloning simplifies and expedites the process for installing additional virtualized DCs in a domain, especially in centralized locations such as datacenters where several DCs run on hypervisors. After you restore one virtual DC in each domain from backup, additional DCs in each domain can be rapidly brought online by using the virtualized DC cloning process. You can prepare the first virtualized DC that you recover, shut it down, and then copy that virtual hard disk as many times as is necessary in order to create cloned virtualized DCs to build out the domain.  
+  
+ The requirements for virtualized DC cloning are:  
+  
+-   The hypervisor must support VM-GenerationID. Hyper-V in Windows Server 2016, 2012 and Windows 8 is an example of a hypervisor that supports VM-GenerationID. Check with your hypervisor vendor if VM-GenerationID is supported.  
+  
+-   The virtualized DC that is used as a source for cloning must run Windows Server 2016 or 2012 and be a member of the Cloneable Domain Controllers group.  
+  
+-   The PDC emulator must run Windows Server 2016 or 2012. You can clone PDC emulator if it is virtualized.  
+  
+ For step-by-step instructions about how to perform virtualized DC cloning, see [Introduction to Active Directory Domain Services (AD DS) Virtualization (Level 100)](../ad-ds/Introduction-to-Active-Directory-Domain-Services-AD-DS-Virtualization-Level-100.md). For details about how virtualized DC cloning works, see [Virtualized Domain Controller Technical Reference (Level 300)](../adds/deploy/virtual-dc/virtualized-domain-controller-technical-reference--level-300-.md).  
+  
