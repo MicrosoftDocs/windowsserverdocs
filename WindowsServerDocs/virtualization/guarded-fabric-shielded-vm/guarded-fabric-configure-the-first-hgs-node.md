@@ -64,7 +64,7 @@ The following commands will complete the configuration of the first HGS node.
         $signingCertPass = Read-Host -AsSecureString -Prompt "Signing certificate password"
         $encryptionCertPass = Read-Host -AsSecureString -Prompt "Encryption certificate password"
 
-        Initialize-HgsServer -HgsServiceName 'MyHgsDNN' -SigningCertificatePath 'C:\temp\SigningCert.pfx' -SigningCertificatePassword $signPass -EncryptionCertificatePath 'C:\temp\EncryptionCert.pfx' -EncryptionCertificatePassword $encryptionCertPass -TrustTpm
+        Initialize-HgsServer -HgsServiceName 'MyHgsDNN' -SigningCertificatePath 'C:\temp\SigningCert.pfx' -SigningCertificatePassword $signingCertPass -EncryptionCertificatePath 'C:\temp\EncryptionCert.pfx' -EncryptionCertificatePassword $encryptionCertPass -TrustTpm
         ```
 
     -   If you are using non-exportable certificates that are installed in the local certificate store, run the following command. If you do not know the thumbprints of your certificates, you can list available certificates by running `Get-ChildItem Cert:\LocalMachine\My`.
@@ -229,7 +229,7 @@ Consult your TPM vendor or server OEM for further assistance in these cases.
 
     ```powershell
     mkdir .\TrustedTPM
-    expand.exe -F:* .\TrustedTPM.cab .\TrustedTPM
+    expand.exe -F:* <Path-To-TrustedTpm.cab> .\TrustedTPM
     ```
 
 4.  By default, the configuration script will install certificates for every TPM vendor. If you only want to import certificates for your specific TPM vendor, delete the folders for TPM vendors not trusted by your organization.
