@@ -3,12 +3,12 @@ title: Active Directory Federation Services and certificate Key Specification pr
 description:
 author: billmath
 manager: femila
-ms.date: 03/16/2017
+ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.assetid: a5307da5-02ff-4c31-80f0-47cb17a87272
 ms.technology: identity-adfs
-ms.author:  billmath
+ms.author: billmath
 ---
 
 # AD FS and certificate KeySpec property Information

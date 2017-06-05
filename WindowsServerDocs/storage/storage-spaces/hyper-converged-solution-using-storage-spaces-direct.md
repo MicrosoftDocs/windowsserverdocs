@@ -7,7 +7,7 @@ ms.technology: storage-spaces
 ms.topic: get-started-article
 ms.assetid: 20fee213-8ba5-4cd3-87a6-e77359e82bc0
 author: stevenek
-ms.date: 10/11/2016
+ms.date: 5/30/2017
 description: Deploy Storage Spaces Direct in a hyper-converged cluster in a test lab.
 ---
 # Hyper-converged solution using Storage Spaces Direct in Windows Server 2016
@@ -140,6 +140,20 @@ From the management system, perform the following steps:
     Net localgroup Administrators <Domain\Account> /add
     ```
 
+### Step 1.3: Install server roles and features
+
+The next step is to install the following server roles and features on all of the nodes:
+* Failover Clustering
+* Hyper-V
+* Data-Center-Bridging (if you're using RoCEv2 instead of iWARP network adapters)
+* RSAT-Clustering-PowerShell
+* Hyper-V-PowerShell
+
+To do so, use the following PowerShell command:
+
+```PowerShell
+Install-WindowsFeature -Name "Data-Center-Bridging","Failover-Clustering","Hyper-V","RSAT-Clustering-PowerShell","Hyper-V-PowerShell"
+```
 
 ## Step 2: Configure the network
 
@@ -179,10 +193,9 @@ Network QoS is used to in this hyper-converged configuration to ensure that the 
     PriorityValue :
     ```
 
-2.  If you are using RoCEv2 turn on Flow Control for SMB as follows (not required for iWarp):
+2.  If you are using RoCEv2, install Data-Center-Bridging if you haven't already (see Step 1.3), then turn on Flow Control for SMB as follows (not required for iWarp):
 
     ```PowerShell
-    Install-WindowsFeature "data-center-bridging"
     Enable-NetQosFlowControl –Priority 3
     ```
 
@@ -211,16 +224,16 @@ Network QoS is used to in this hyper-converged configuration to ensure that the 
     NIC2       QLogic BCM57800 10 Gigabit Ethernet (NDIS VBD Client) #45 Disconnected 0 bps
     ```
 
-5. Apply network QoS policy to the target adapters. The target adapters are the RDMA adapters. Use the "Name" of the target adapters for the –InterfaceAlias in the following example
+5. Apply network QoS policy to the target adapters. The target adapters are the RDMA adapters. Use the "Name" of the target adapters for the –Name in the following example
 
     ```PowerShell
-    Enable-NetAdapterQos –InterfaceAlias "<adapter1>", "<adapter2>"
+    Enable-NetAdapterQos –Name "<adapter1>", "<adapter2>"
     ```
 
    Using the example above, the command would look like this:
 
     ```PowerShell
-    Enable-NetAdapterQoS –InterfaceAlias "Ethernet 2", "SLOT #"
+    Enable-NetAdapterQoS –Name "Ethernet 2", "SLOT #"
     ```
 
 6.  Create a Traffic class and give SMB Direct 30% of the bandwidth minimum. The name of the class will be "SMB".
@@ -307,7 +320,7 @@ Do the following steps from a management system using [*Enter-PSSession*](https:
 
 ## Step 3: Configure Storage Spaces Direct
 
-The following steps are done on a management system that is the same version as the servers being configured. The following steps should NOT be run remotely using a PSSession, but instead run in a local PowerShell session on the management system, with adminsitrative permissions.
+The following steps are done on a management system that is the same version as the servers being configured. The following steps should NOT be run remotely using a PSSession, but instead run in a local PowerShell session on the management system, with administrative permissions.
 
 ### Step 3.1: Run cluster validation
 
