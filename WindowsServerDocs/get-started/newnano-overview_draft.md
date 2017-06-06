@@ -14,7 +14,7 @@ ms.assetid: a270334d-42a7-46ff-8eed-d8656a276544
 
 >Applies To: Windows Server [RS3]
 
-# Changes to the Windows Server release model
+# Nano Server in the new Windows Server release model
 
 
 Starting with the new feature release of Windows Server (1709), we are changing the release model to support Windows Server as a service and align with similar release and servicing models for Windows 10 [LINK] and [Office 365 ProPlus](https://support.office.com/en-us/article/Overview-of-the-upcoming-changes-to-Office-365-ProPlus-update-management-78b33779-9356-4cdf-9d2c-08350ef05cca). If you've been working with Windows 10, these improvements might already be familiar to you, since the new release model for Windows Server is similar, though not identical. Microsoft has reimagined each part of the process to simplify the lives of IT pros and maintain a consistent Windows Server experience for its customers. If you've been working with Windows 10, these improvements might already be familiar to you. 
