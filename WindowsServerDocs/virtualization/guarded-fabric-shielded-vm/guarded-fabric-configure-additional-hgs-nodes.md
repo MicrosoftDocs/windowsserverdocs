@@ -102,13 +102,13 @@ Some TPMs do not use endorsement key certificates or use certificates not includ
 Consult your TPM vendor or server OEM for further assistance in these cases.
 
 1.  Download the latest package from [http://tpmsec.microsoft.com/OnPremisesDHA/TrustedTPM.cab](http://tpmsec.microsoft.com/OnPremisesDHA/TrustedTPM.cab).
-2.  Validate that the package is digitally signed by Microsoft. Do not expand the CAB file if it does not have a valid signature.
+2.  Change directory to the Downloads folder (or saved location), and validate that the package is digitally signed by Microsoft. Do not expand the CAB file if it does not have a valid signature.
 
     ```powershell
     Get-AuthenticodeSignature -FilePath <Path-To-TrustedTpm.cab>
     ```
 
-3.  Expand the cab file.
+3.  Expand the cab file in the same folder.
 
     ```powershell
     mkdir .\TrustedTPM
