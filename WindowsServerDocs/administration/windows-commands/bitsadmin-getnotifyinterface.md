@@ -14,27 +14,39 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # bitsadmin getnotifyinterface
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Determines if another program has registered a COM callback interface for the specified job.
+
 ## Syntax
+
 ```
 bitsadmin /GetNotifyInterface <Job>
 ```
+
 ## Parameters
+
 |Parameter|Description|
-|-------|--------|
+|---------|-----------|
 |Job|The job's display name or GUID|
-## remarks
-Displays regISTERED or UNregISTERED.
+
+## Remarks
+
+Displays REGISTERED or UNREGISTERED.
+
 > [!NOTE]
 > It is not possible to determine the program that registered the callback interface.
+
 ## <a name="BKMK_examples"></a>Examples
+
 The following example retrieves the notify interface for the job named *myDownloadJob*.
 ```
 C:\>bitsadmin /GetNotifyInterface myDownloadJob
 ```
-## additional references
+
+#### Additional references
+
 [Command-Line Syntax Key](command-line-syntax-key.md)

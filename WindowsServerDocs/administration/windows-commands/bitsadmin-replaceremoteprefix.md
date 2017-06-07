@@ -14,25 +14,34 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # bitsadmin replaceremoteprefix
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 All files in the job whose remote URL begins with *OldPrefix* are changed to use *NewPrefix*.
+
 ## Syntax
+
 ```
-bitsadmin /replaceremotePrefix <Job> <OldPrefix> <NewPrefix
+bitsadmin /ReplaceRemotePrefix <Job> <OldPrefix> <NewPrefix
 ```
+
 ## Parameters
+
 |Parameter|Description|
-|-------|--------|
+|---------|-----------|
 |Job|The job's display name or GUID|
 |OldPrefix|Existing URL prefix|
 |NewPrefix|New URL prefix|
+
 ## <a name="BKMK_examples"></a>Examples
+
 The following example changes all files in job named *myDownloadJob* whose remote URL begins with *http://stageserver* to *http://prodserver*.
 ```
-C:\>bitsadmin /replaceremotePrefix myDownloadJob http://stageserver http://prodserver
+C:\>bitsadmin /ReplaceRemotePrefix myDownloadJob http://stageserver http://prodserver
 ```
-## additional information
+
+## Additional information
+
 [Command-Line Syntax Key](command-line-syntax-key.md)

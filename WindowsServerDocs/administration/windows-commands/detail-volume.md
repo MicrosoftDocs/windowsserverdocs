@@ -14,34 +14,32 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # detail volume
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Displays the disks on which the current volume resides.  
-  
-## Syntax  
-  
-```  
-detail volume  
-```  
-  
-## remarks  
-  
--   A volume must be selected for this operation to succeed. Use the **select volume** command to select a volume and shift the focus to it.  
-  
--   The volume details are not applicable to read\-only volumes, such as a DVD\-ROM or cd\-ROM drive.  
-  
-## <a name="BKMK_examples"></a>Examples  
-To see all the disks in which the current volume resides, type:  
-  
-```  
-detail volume  
-```  
-  
-#### additional references  
-[Command-Line Syntax Key](command-line-syntax-key.md)  
-  
+Displays the disks on which the current volume resides.
 
-  
+## Syntax
+
+```
+detail volume
+```
+
+## Remarks
+
+-   A volume must be selected for this operation to succeed. Use the **select volume** command to select a volume and shift the focus to it.
+-   The volume details are not applicable to read-only volumes, such as a DVD-ROM or CD-ROM drive.
+
+## <a name="BKMK_examples"></a>Examples
+
+To see all the disks in which the current volume resides, type:
+```
+detail volume
+```
+
+#### Additional references
+
+[Command-Line Syntax Key](command-line-syntax-key.md)
 

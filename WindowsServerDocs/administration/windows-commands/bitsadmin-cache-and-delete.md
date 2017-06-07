@@ -14,23 +14,32 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # bitsadmin cache and delete
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-deletes a specific cache entry.
+Deletes a specific cache entry.
+
 ## Syntax
+
 ```
-bitsadmin /Cache /delete RecordID 
+bitsadmin /Cache /Delete RecordID 
 ```
+
 ## Parameters
+
 |Parameter|Description|
-|-------|--------|
+|---------|-----------|
 |RecordID|The GUID associated with the cache entry.|
+
 ## <a name="BKMK_examples"></a>Examples
+
 The following example deletes the cache entry with the RecordID of {6511FB02-E195-40A2-B595-E8E2F8F47702}.
 ```
-C:\>bitsadmin /Cache /delete {6511FB02-E195-40A2-B595-E8E2F8F47702} 
+C:\>bitsadmin /Cache /Delete {6511FB02-E195-40A2-B595-E8E2F8F47702} 
 ```
-## additional references
+
+#### Additional references
+
 [Command-Line Syntax Key](command-line-syntax-key.md)

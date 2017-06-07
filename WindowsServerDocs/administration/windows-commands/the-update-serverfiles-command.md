@@ -14,33 +14,33 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # The Update-ServerFiles Command
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Updates files in the remINST shared folder by using the latest files that are stored in the server's %Windir%\System32\remInst folder. To ensure the validity of your Windows Deployment Services installation, you should run this command once after each server upgrade, service pack installation, or update to Windows Deployment Services files.  
-  
-## Syntax  
-  
-```  
-wdsutil [Options] /Update-ServerFiles [/Server:<Server name>]  
-```  
-  
-## Parameters  
-  
-|Parameter|Description|  
-|-------|--------|  
-|[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server will be used.|  
-  
-## <a name="BKMK_examples"></a>Examples  
-To update the files, type one of the following:  
-  
-```  
-wdsutil /Update-ServerFiles  
-wdsutil /verbose /Progress /Update-ServerFiles /Server:MyWDSServer  
-```  
-  
-#### additional references  
-[Command-Line Syntax Key](command-line-syntax-key.md)  
-  
+Updates files in the REMINST shared folder by using the latest files that are stored in the server's %Windir%\System32\RemInst folder. To ensure the validity of your Windows Deployment Services installation, you should run this command once after each server upgrade, service pack installation, or update to Windows Deployment Services files.
 
+## Syntax
+
+```
+WDSUTIL [Options] /Update-ServerFiles [/Server:<Server name>]
+```
+
+## Parameters
+
+|Parameter|Description|
+|---------|-----------|
+|[/Server:\<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server will be used.|
+
+## <a name="BKMK_examples"></a>Examples
+
+To update the files, type one of the following:
+```
+WDSUTIL /Update-ServerFiles
+WDSUTIL /Verbose /Progress /Update-ServerFiles /Server:MyWDSServer
+```
+
+#### Additional references
+
+[Command-Line Syntax Key](command-line-syntax-key.md)

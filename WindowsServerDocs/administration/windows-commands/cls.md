@@ -14,24 +14,34 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # cls
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Clears the Command prompt window.
-for examples of how to use this command, see [Examples](#BKMK_examples).
+Clears the Command Prompt window.
+
+For examples of how to use this command, see [Examples](#BKMK_examples).
+
 ## Syntax
+
 ```
 cls
 ```
+
 ## Parameters
+
 |Parameter|Description|
-|-------|--------|
+|---------|-----------|
 |/?|Displays help at the command prompt.|
+
 ## <a name="BKMK_examples"></a>Examples
-To clear all information that appears in the Command prompt window and return to a blank window, type:
+
+To clear all information that appears in the Command Prompt window and return to a blank window, type:
 ```
 cls 
 ```
-#### additional references
+
+#### Additional references
+
 [Command-Line Syntax Key](command-line-syntax-key.md)

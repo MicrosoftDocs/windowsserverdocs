@@ -14,22 +14,32 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # bitsadmin rawreturn
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Returns data suitable for parsing.
+
 ## Syntax
+
 ```
 bitsadmin /RawReturn
 ```
-## remarks
+
+## Remarks
+
 Strips new line characters and formatting from the output.
-Typically, you use this command in conjunction with the **create** and **Get\*** commands to receive only the value. You must specify this command before other commands.
+
+Typically, you use this command in conjunction with the **Create** and **Get\*** commands to receive only the value. You must specify this command before other commands.
+
 ## <a name="BKMK_examples"></a>Examples
+
 The following example retrieves the raw data for the state of the job named *myDownloadJob*.
 ```
 C:\>bitsadmin /RawReturn /GetState myDownloadJob
 ```
-## additional references
+
+#### Additional references
+
 [Command-Line Syntax Key](command-line-syntax-key.md)

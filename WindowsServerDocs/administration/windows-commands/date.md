@@ -14,30 +14,40 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # date
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Displays or sets the system date. If used without parameters, **date** displays the current system date setting and prompts you to enter a new date.
-for examples of how to use this command, see [Examples](#BKMK_examples).
+
+For examples of how to use this command, see [Examples](#BKMK_examples).
+
 ## Syntax
+
 ```
 date [/t | <Month-Day-Year>]
 ```
+
 ## Parameters
+
 |Parameter|Description|
-|-------|--------|
-|<Month-Day-Year>|Sets the date specified, where *Month* is the month (one or two digits), *Day* is the day (one or two digits), and *Year* is the year (two or four digits).|
+|---------|-----------|
+|\<Month-Day-Year>|Sets the date specified, where *Month* is the month (one or two digits), *Day* is the day (one or two digits), and *Year* is the year (two or four digits).|
 |/t|Displays the current date without prompting you for a new date.|
 |/?|Displays help at the command prompt.|
-## remarks
+
+## Remarks
+
 -   To change the current date, you must have administrative credentials.
 -   You must separate values for *Month*, *Day*, and *Year* with periods (.), hyphens (-), or slash marks (/).
 -   Valid *Month* values are 1 through 12.
 -   Valid *Day* values are 1 through 31.
 -   Valid *Year* values are either 00 through 99, or 1980 through 2099. If you use two digits, the values 80 through 99 correspond to the years 1980 through 1999.
+
 ## <a name="BKMK_examples"></a>Examples
-if command extensions are enabled, to display the current system date, type:
+
+If command extensions are enabled, to display the current system date, type:
 ```
 date /t
 ```
@@ -53,5 +63,7 @@ The current date is: Mon 04/02/2007
 Enter the new date: (mm-dd-yy)
 ```
 To keep the current date and return to the command prompt, press ENTER. To change the current date, type the new date and then press ENTER.
-#### additional references
+
+#### Additional references
+
 [Command-Line Syntax Key](command-line-syntax-key.md)

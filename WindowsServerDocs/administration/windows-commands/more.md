@@ -15,84 +15,99 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # more
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Displays one screen of output at a time.  
-for examples of how to use this command, see [Examples](#BKMK_examples).  
-## Syntax  
-```  
-<Command> | more [/c] [/p] [/s] [/t<N>] [+<N>]  
-more [[/c] [/p] [/s] [/t<N>] [+<N>]] < [<Drive>:][<path>]<FileName>  
-more [/c] [/p] [/s] [/t<N>] [+<N>] [<Files>]  
-```  
-## Parameters  
-|Parameter|Description|  
-|-------|--------|  
-|<Command>|Specifies a command for which you want to display the output.|  
-|/c|Clears the screen before displaying a page.|  
-|/p|expands form-feed characters.|  
-|/s|Displays multiple blank lines as a single blank line.|  
-|/t<N>|Displays tabs as the number of spaces specified by *N*.|  
-|+<N>|Displays the first file beginning at the line specified by *N*.|  
-|[<Drive>:] [<path>]<FileName>|Specifies the location and name of a file to display.|  
-|<Files>|Specifies a list of files to display. Separate file names with a space.|  
-|/?|Displays help at the command prompt.|  
-## remarks  
--   The following subcommands are accepted at the **more** prompt (`- more -`).  
-    |Key|Action|  
-    |----|-----|  
-    |SPACEBAR|Displays the next page.|  
-    |ENTER|Displays the next line.|  
-    |f|Displays the next file.|  
-    |q|Quits the **more** command.|  
-    |=|Shows the line number.|  
-    |p <N>|Displays the next *N* lines.|  
-    |s <N>|Skips the next *N* lines.|  
-    |?|Shows the commands that are available at the **more** prompt.|  
--   When using the redirection character (**<**), you must specify a file name as the source. When using the pipe (**|**), you can use such commands as **dir**, **sort**, and **type**.  
--   The **more** command, with different parameters, is available from the recovery Console.  
-## <a name="BKMK_examples"></a>Examples  
-To view the first screen of information of a file named Clients.new, type one of the following commands:  
-```  
-more < clients.new  
-type clients.new | more  
-```  
-The **more** command displays the first screen of information from Clients.new, and then displays the following prompt:  
-```  
-- more -  
-```  
-You can then press the SPACEBAR to see the next screen of information.  
-To clear the screen and remove all extra blank lines before displaying the file Clients.new, type one of the following commands:  
-```  
-more /c /s < clients.new  
-type clients.new | more /c /s  
-```  
-The **more** command displays the first screen of information from Clients.new, and then displays the following prompt:  
-```  
-- more -  
-```  
-#### Using more subcommands  
-The following examples can be used at the **more** prompt (`- more -`).  
--   To display the file one line at a time, press ENTER at the **more** prompt.  
--   To display the next screen, press the SPACEBAR at the **more** prompt.  
--   To display the next file listed on the command line, type **f** at the **more** prompt.  
--   To show the available commands, type **?** at the **more** prompt.  
--   To quit **more**, type **q** at the **more** prompt.  
+Displays one screen of output at a time.
+
+For examples of how to use this command, see [Examples](#BKMK_examples).
+
+## Syntax
+
+```
+<Command> | more [/c] [/p] [/s] [/t<N>] [+<N>]
+more [[/c] [/p] [/s] [/t<N>] [+<N>]] < [<Drive>:][<Path>]<FileName>
+more [/c] [/p] [/s] [/t<N>] [+<N>] [<Files>]
+```
+
+## Parameters
+
+|Parameter|Description|
+|---------|-----------|
+|\<Command>|Specifies a command for which you want to display the output.|
+|/c|Clears the screen before displaying a page.|
+|/p|Expands form-feed characters.|
+|/s|Displays multiple blank lines as a single blank line.|
+|/t\<N>|Displays tabs as the number of spaces specified by *N*.|
+|+\<N>|Displays the first file beginning at the line specified by *N*.|
+|[\<Drive>:] [<Path>]<FileName>|Specifies the location and name of a file to display.|
+|\<Files>|Specifies a list of files to display. Separate file names with a space.|
+|/?|Displays help at the command prompt.|
+
+## Remarks
+
+-   The following subcommands are accepted at the **more** prompt (`-- More --`).  
+    |Key|Action|
+    |---|------|
+    |SPACEBAR|Displays the next page.|
+    |ENTER|Displays the next line.|
+    |f|Displays the next file.|
+    |q|Quits the **more** command.|
+    |=|Shows the line number.|
+    |p \<N>|Displays the next *N* lines.|
+    |s \<N>|Skips the next *N* lines.|
+    |?|Shows the commands that are available at the **more** prompt.|
+-   When using the redirection character (**<**), you must specify a file name as the source. When using the pipe (**|**), you can use such commands as **dir**, **sort**, and **type**.
+-   The **more** command, with different parameters, is available from the Recovery Console.
+
+## <a name="BKMK_examples"></a>Examples
+
+To view the first screen of information of a file named Clients.new, type one of the following commands:
+```
+more < clients.new
+type clients.new | more
+```
+The **more** command displays the first screen of information from Clients.new, and then displays the following prompt:
+```
+-- More --
+```
+You can then press the SPACEBAR to see the next screen of information.
+
+To clear the screen and remove all extra blank lines before displaying the file Clients.new, type one of the following commands:
+```
+more /c /s < clients.new
+type clients.new | more /c /s
+```
+The **more** command displays the first screen of information from Clients.new, and then displays the following prompt:
+```
+-- More --
+```
+
+### Using more subcommands
+
+The following examples can be used at the **more** prompt (`-- More --`).
+-   To display the file one line at a time, press ENTER at the **more** prompt.
+-   To display the next screen, press the SPACEBAR at the **more** prompt.
+-   To display the next file listed on the command line, type **f** at the **more** prompt.
+-   To show the available commands, type **?** at the **more** prompt.
+-   To quit **more**, type **q** at the **more** prompt.
 -   To display the current line number, type **=** at the **more** prompt. The current line number is added to the **more** prompt as follows:  
+    ```
+    -- More [Line: 24] --
     ```  
-    - more [Line: 24] -  
+-   To display a specific number of lines, type **p** at the **more** prompt. **More** prompts you for the number of lines to display as follows:  
+    ```
+    -- More -- Lines:
     ```  
--   To display a specific number of lines, type **p** at the **more** prompt. **more** prompts you for the number of lines to display as follows:  
+    Type the number of lines to display, and then press ENTER. **More** displays the specified number of lines.
+-   To skip a specific number of lines, type **s** at the **more** prompt. **More** prompts you for the number of lines to skip as follows:  
+    ```
+    -- More -- Lines:
     ```  
-    - more - Lines:  
-    ```  
-    type the number of lines to display, and then press ENTER. **more** displays the specified number of lines.  
--   To skip a specific number of lines, type **s** at the **more** prompt. **more** prompts you for the number of lines to skip as follows:  
-    ```  
-    - more - Lines:  
-    ```  
-    type the number of lines to skip, and then press ENTER. **more** skips the specified number of lines and displays the next screen of information.  
-#### additional references  
-[Command-Line Syntax Key](command-line-syntax-key.md)  
+    Type the number of lines to skip, and then press ENTER. **More** skips the specified number of lines and displays the next screen of information.
+
+#### Additional references
+
+[Command-Line Syntax Key](command-line-syntax-key.md)

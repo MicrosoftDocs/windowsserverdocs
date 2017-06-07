@@ -14,18 +14,25 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # nslookup exit Command
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-exits **nslookup**.
+Exits **nslookup**.
+
 ## Syntax
+
 ```
-nslookup /exit
+Nslookup /exit
 ```
+
 ## Parameters
+
 |Parameter|Description|
-|-------|--------|
-|{help &#124; ?}|Displays a short summary of **nslookup** subcommands.|
-## additional references
+|---------|-----------|
+|{help | ?}|Displays a short summary of **nslookup** subcommands.|
+
+#### Additional references
+
 [Command-Line Syntax Key](command-line-syntax-key.md)

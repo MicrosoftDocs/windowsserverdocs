@@ -14,26 +14,37 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # bitsadmin setreplyfilename
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Specify the path of the file that contains the server reply.
+
 ## Syntax
+
 ```
-bitsadmin /SetReplyFileName <Job> <path>
+bitsadmin /SetReplyFileName <Job> <Path>
 ```
+
 ## Parameters
+
 |Parameter|Description|
-|-------|--------|
+|---------|-----------|
 |Job|The job's display name or GUID|
-|path|Location to place the server reply|
-## remarks
+|Path|Location to place the server reply|
+
+## Remarks
+
 Valid only for upload-reply jobs.
+
 ## <a name="BKMK_examples"></a>Examples
+
 The following example sets the reply filename pathfor the job named *myDownloadJob*.
 ```
 C:\>bitsadmin /SetReplyFileName myDownloadJob c:\reply
 ```
-## additional references
+
+#### Additional references
+
 [Command-Line Syntax Key](command-line-syntax-key.md)

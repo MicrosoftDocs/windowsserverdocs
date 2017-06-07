@@ -14,26 +14,26 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Set metadata
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Sets the name and location of the shadow creation metadata file used to transfer shadow copies from one computer to another. If used without parameters, **set metadata** displays help at the command prompt.  
-  
-## Syntax  
-  
-```  
-set metadata [<Drive>:][<path>]<MetaData.cab>  
-```  
-  
-## Parameters  
-  
-|Parameter|Description|  
-|-------|--------|  
-|\[<Drive>:\]\[<path>\]|Specifies the location to create the metadata file.|  
-|<MetaData.cab>|Specifies the name of the cab file to store shadow creation metadata.|  
-  
-#### additional references  
-[Command-Line Syntax Key](command-line-syntax-key.md)  
-  
+Sets the name and location of the shadow creation metadata file used to transfer shadow copies from one computer to another. If used without parameters, **set metadata** displays help at the command prompt.
 
+## Syntax
+
+```
+set metadata [<Drive>:][<Path>]<MetaData.cab>
+```
+
+## Parameters
+
+|Parameter|Description|
+|---------|-----------|
+|[\<Drive>:][<Path>]|Specifies the location to create the metadata file.|
+|\<MetaData.cab>|Specifies the name of the cab file to store shadow creation metadata.|
+
+#### Additional references
+
+[Command-Line Syntax Key](command-line-syntax-key.md)
