@@ -14,32 +14,43 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # pnputil
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-pnputil.exe is a command line utility that you can use to manage the driver store. You can use pnputil to add driver packages, remove driver packages, and list driver packages that are in the store.
+Pnputil.exe is a command line utility that you can use to manage the driver store. You can use Pnputil to add driver packages, remove driver packages, and list driver packages that are in the store.
+
 ## Syntax
+
 ```
 pnputil.exe [-f | -i] [ -? | -a | -d | -e ] <INF name>
 ```
+
 ## Parameters
+
 |Parameter|Description|
-|-------|--------|
+|---------|-----------|
 |-a|Specifies to add the identified INF file.|
 |-d|Specifies to delete the identified INF file.|
 |-e|Specifies to enumerate all third-party INF files.|
-|-f|Specifies to force the deletion of the identified INF file. Cannot be used in conjunction with the ** i** parameter.|
-|-i|Specifies to install the identified INF file. Cannot be used in conjunction with  the  **-f** parameter.|
+|-f|Specifies to force the deletion of the identified INF file. Cannot be used in conjunction with the **–i** parameter.|
+|-i|Specifies to install the identified INF file. Cannot be used in conjunction with  the **-f** parameter.|
 |/?|Displays help at the command prompt.|
-## remarks
+
+## Remarks
+
 ## Examples
--   pnputil.exe -a a:\usbcam\USBCAM.INF  adds the INF file that is specified by USBCAM.INF
--   pnputil.exe -a c:\drivers\\*.inf  adds all INF files in c:\drivers\
--   pnputil.exe -i -a a:\usbcam\USBCAM.INF  adds and installs the specified driver.
--   pnputil.exe  e  Enumerates all third-party drivers.
--   pnputil.exe -d oem0.inf  deletes the specified.
--   pnputil.exe -f -d oem0.inf  forces the deletion of the specified INF file.
-## additional references
+
+-   pnputil.exe -a a:\usbcam\USBCAM.INF  Adds the INF file that is specified by USBCAM.INF
+-   pnputil.exe -a c:\drivers\*.inf  Adds all INF files in c:\drivers\
+-   pnputil.exe -i -a a:\usbcam\USBCAM.INF  Adds and installs the specified driver.
+-   pnputil.exe –e  Enumerates all third-party drivers.
+-   pnputil.exe -d oem0.inf  Deletes the specified.
+-   pnputil.exe -f -d oem0.inf  Forces the deletion of the specified INF file.
+
+#### Additional references
+
 [Command-Line Syntax Key](command-line-syntax-key.md)
-[popd](popd.md)
+
+[Popd](popd.md)

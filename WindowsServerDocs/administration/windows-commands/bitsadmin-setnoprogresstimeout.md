@@ -14,28 +14,39 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # bitsadmin setnoprogresstimeout
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Sets the length of time, in seconds, that the service tries to transfer the file after a transient error occurs.
+
 ## Syntax
+
 ```
-bitsadmin /SetNoProgresstimeout <Job> <timeOutvalue>
+bitsadmin /SetNoProgressTimeout <Job> <TimeOutvalue>
 ```
+
 ## Parameters
+
 |Parameter|Description|
-|-------|--------|
+|---------|-----------|
 |Job|The job's display name or GUID|
-|timeOutvalue|A number represented in seconds.|
-## remarks
+|TimeOutvalue|A number represented in seconds.|
+
+## Remarks
+
 -   The no progress timeout interval begins when the job encounters a transient error.
 -   The timeout interval stops or resets when a byte of data is successfully transferred.
--   if no progress timeout interval exceeds the *timeOutvalue*, then the job is placed in a fatal error state.
+-   If no progress timeout interval exceeds the *TimeOutvalue*, then the job is placed in a fatal error state.
+
 ## <a name="BKMK_examples"></a>Examples
+
 The following example sets the no progress time out value for the job named *myDownloadJob* to 20 seconds
 ```
-C:\>bitsadmin /SetNoProgresstimeout myDownloadJob 20
+C:\>bitsadmin /SetNoProgressTimeout myDownloadJob 20
 ```
-## additional references
+
+#### Additional references
+
 [Command-Line Syntax Key](command-line-syntax-key.md)

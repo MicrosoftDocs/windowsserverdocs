@@ -14,31 +14,30 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # exec
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-executes a file on the local computer. The file can be a **cmd** script.  
-  
-## Syntax  
-  
-```  
-exec <ScriptFile.cmd>  
-```  
-  
-## Parameters  
-  
-|Parameter|Description|  
-|-------|--------|  
-|<ScriptFile.cmd>|Specifies the script file to execute.|  
-  
-## remarks  
-  
--   This command is used to duplicate or restore data as part of a backup or restore sequence.  
-  
--   if the script fails, an error is returned and diskshadow quits.  
-  
-#### additional references  
-[Command-Line Syntax Key](command-line-syntax-key.md)  
-  
+Executes a file on the local computer. The file can be a **cmd** script.
 
+## Syntax
+
+```
+exec <ScriptFile.cmd>
+```
+
+## Parameters
+
+|Parameter|Description|
+|---------|-----------|
+|\<ScriptFile.cmd>|Specifies the script file to execute.|
+
+## Remarks
+
+-   This command is used to duplicate or restore data as part of a backup or restore sequence.
+-   If the script fails, an error is returned and DiskShadow quits.
+
+#### Additional references
+
+[Command-Line Syntax Key](command-line-syntax-key.md)

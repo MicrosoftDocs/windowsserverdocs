@@ -14,20 +14,29 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # nslookup set all
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-prints the current values of the configuration settings.
+Prints the current values of the configuration settings.
+
 ## Syntax
+
 ```
 set all 
 ```
+
 ## Parameters
+
 |Parameter|Description|
-|-------|--------|
-|{help &#124; ?}|Displays a short summary of **nslookup** subcommands.|
-## remarks
+|---------|-----------|
+|{help | ?}|Displays a short summary of **nslookup** subcommands.|
+
+## Remarks
+
 -   **Set all** also prints information about the default server and computer (that is, the host).
-## additional references
+
+#### Additional references
+
 [Command-Line Syntax Key](command-line-syntax-key.md)

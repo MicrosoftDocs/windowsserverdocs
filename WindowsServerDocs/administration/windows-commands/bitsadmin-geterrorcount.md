@@ -14,23 +14,32 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # bitsadmin geterrorcount
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Retrieves a count of the number of times the specified job generated a transient error.
+
 ## Syntax
+
 ```
 bitsadmin /GetErrorCount <Job>
 ```
+
 ## Parameters
+
 |Parameter|Description|
-|-------|--------|
+|---------|-----------|
 |Job|The job's display name or GUID|
+
 ## <a name="BKMK_examples"></a>Examples
+
 The following example retrieves error count information for the job named *myDownloadJob*.
 ```
 C:\>bitsadmin /GetErrorCount myDownloadJob
 ```
-## additional references
+
+#### Additional references
+
 [Command-Line Syntax Key](command-line-syntax-key.md)

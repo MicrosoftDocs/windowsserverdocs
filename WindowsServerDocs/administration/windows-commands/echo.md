@@ -14,30 +14,40 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # echo
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Displays messages or turns on or off the command echoing feature. If used without parameters, **echo** displays the current echo setting.
-for examples of how to use this command, see [Examples](#BKMK_examples).
+
+For examples of how to use this command, see [Examples](#BKMK_examples).
+
 ## Syntax
+
 ```
 echo [<Message>]
 echo [on | off]
 ```
+
 ## Parameters
+
 |Parameter|Description|
-|-------|--------|
-|[on &#124; off]|Turns on or off the command echoing feature. Command echoing is on by default.|
-|<Message>|Specifies the text to display on the screen.|
+|---------|-----------|
+|[on | off]|Turns on or off the command echoing feature. Command echoing is on by default.|
+|\<Message>|Specifies the text to display on the screen.|
 |/?|Displays help at the command prompt.|
-## remarks
--   The **echo***Message* command is particularly useful when **echo** is turned off. To display a message that is several lines long without displaying any commands, you can include several **echo***Message* commands after the **echo off** command in your batch program.
--   When **echo** is turned off, the command prompt does not appear in the Command prompt window. To display the command prompt, type **echo on.**
--   if used in a batch file, **echo on** and **echo off** do not affect the setting at the command prompt.
+
+## Remarks
+
+-   The **echo** *Message* command is particularly useful when **echo** is turned off. To display a message that is several lines long without displaying any commands, you can include several **echo** *Message* commands after the **echo off** command in your batch program.
+-   When **echo** is turned off, the command prompt does not appear in the Command Prompt window. To display the command prompt, type **echo on.**
+-   If used in a batch file, **echo on** and **echo off** do not affect the setting at the command prompt.
 -   To prevent echoing a particular command in a batch file, insert an at sign (@) in front of the command. To prevent echoing all commands in a batch file, include the **echo off** command at the beginning of the file.
 -   To display a pipe (**|**) or redirection character (**<** or **>**) when you are using **echo**, use a caret (^) immediately before the pipe or redirection character (for example, **^|**, **^>**, or **^<**). To display a caret, type two carets in succession (**^^**).
+
 ## <a name="BKMK_examples"></a>Examples
+
 To display the current **echo** setting, type:
 ```
 echo
@@ -46,14 +56,18 @@ To echo a blank line on the screen, type:
 ```
 echo.
 ```
+
 > [!NOTE]
 > Do not include a space before the period. Otherwise, the period will be displayed instead of a blank line.
+
 To prevent echoing commands at the command prompt, type:
 ```
 echo off 
 ```
+
 > [!NOTE]
-> When **echo** is turned off, the command prompt does not appear in the Command prompt window. To display the command prompt again, type **echo on**.
+> When **echo** is turned off, the command prompt does not appear in the Command Prompt window. To display the command prompt again, type **echo on**.
+
 To prevent all commands in a batch file (including the **echo off** command) from displaying on the screen, on the first line of the batch file type:
 ```
 @echo off
@@ -73,16 +87,18 @@ echo This directory contains no text files.
    dir /b *.txt
    )
 ```
-if no .txt files are found when the batch file is run, the following message displays:
+If no .txt files are found when the batch file is run, the following message displays:
 ```
 This directory contains no text files.
 ```
-if .txt files are found when the batch file is run the following output displays (for this example, assume the files File1.txt, File2.txt, and File3.txt exist):
+If .txt files are found when the batch file is run the following output displays (for this example, assume the files File1.txt, File2.txt, and File3.txt exist):
 ```
 This directory contains the following text files:
 File1.txt
 File2.txt
 File3.txt
 ```
-#### additional references
+
+#### Additional references
+
 [Command-Line Syntax Key](command-line-syntax-key.md)

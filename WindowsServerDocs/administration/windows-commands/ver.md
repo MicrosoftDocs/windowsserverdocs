@@ -15,22 +15,33 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # ver
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Displays the operating system version number.  
-for examples of how to use this command, see [Examples](#BKMK_examples).  
-## Syntax  
-```  
-ver  
-```  
-## Parameters  
-|Parameter|Description|  
-|-------|--------|  
-|/?|Displays help at the command prompt.|  
-## <a name="BKMK_examples"></a>Examples  
-To obtain the version number of the operating system, type:  
-`ver`  
-#### additional references  
-[Command-Line Syntax Key](command-line-syntax-key.md)  
+Displays the operating system version number.
+
+For examples of how to use this command, see [Examples](#BKMK_examples).
+
+## Syntax
+
+```
+ver
+```
+
+## Parameters
+
+|Parameter|Description|
+|---------|-----------|
+|/?|Displays help at the command prompt.|
+
+## <a name="BKMK_examples"></a>Examples
+
+To obtain the version number of the operating system, type:
+
+`ver`
+
+#### Additional references
+
+[Command-Line Syntax Key](command-line-syntax-key.md)

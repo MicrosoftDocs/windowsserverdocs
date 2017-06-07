@@ -14,23 +14,32 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # bitsadmin peercaching and getconfigurationflags
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Gets the configuration flags that determine if the computer serves content to peers and can download content from peers.
+
 ## Syntax
+
 ```
 bitsadmin /PeerCaching /GetConfigurationFlags <Job> 
 ```
+
 ## Parameters
+
 |Parameter|Description|
-|-------|--------|
+|---------|-----------|
 |Job|The job's display name or GUID|
+
 ## <a name="BKMK_examples"></a>Examples
+
 The following example gets the configuration flags for the job named *myJob*.
 ```
-C:\> bitsadmin /PeerCaching /GetConfigurationFlags myJob
+C:\> Bitsadmin /PeerCaching /GetConfigurationFlags myJob
 ```
-## additional references
+
+#### Additional references
+
 [Command-Line Syntax Key](command-line-syntax-key.md)
