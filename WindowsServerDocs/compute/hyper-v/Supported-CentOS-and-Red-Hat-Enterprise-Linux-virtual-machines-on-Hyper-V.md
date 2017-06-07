@@ -60,7 +60,7 @@ This series only has 64-bit kernels.
 |**[Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Storage)**|||
 |VHDX resize|2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |Virtual Fibre Channel|2016, 2012 R2|&#10004; Note 3|&#10004; Note 3|&#10004; Note 3|&#10004; Note 3|&#10004; Note 3|&#10004; Note 3|
-|Live virtual machine backup|2016, 2012 R2|&#10004; Note 4, 5|&#10004; Note 4, 5|&#10004; Note 4, 5|&#10004; Note 4, 5|&#10004; Note 4, 5|&#10004; Note 4, 5|
+|Live virtual machine backup|2016, 2012 R2|&#10004; Note 5|&#10004; Note 5|&#10004; Note 4, 5|&#10004; Note 4, 5|&#10004; Note 4, 5|&#10004; Note 4, 5|
 |TRIM support|2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|||
 |SCSI WWN|2016, 2012 R2|&#10004;|&#10004;|||||
 |**[Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Memory)**|||
@@ -102,7 +102,7 @@ The 32-bit kernel for this series is PAE enabled. There is no built-in LIS suppo
 |**[Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Storage)**|
 |VHDX resize|2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;||
 |Virtual Fibre Channel|2016, 2012 R2|&#10004; Note 3|&#10004; Note 3|&#10004; Note 3|&#10004; Note 3|&#10004; Note 3||
-|Live virtual machine backup|2016, 2012 R2|&#10004; Note 4, 5|&#10004; Note 4, 5|&#10004; Note 4, 5|&#10004; Note 4, 5|&#10004; Note 4, 5, 6|&#10004; Note 4, 5, 6|
+|Live virtual machine backup|2016, 2012 R2|&#10004; Note 5|&#10004; Note 5|&#10004; Note 4, 5|&#10004; Note 4, 5|&#10004; Note 4, 5, 6|&#10004; Note 4, 5, 6|
 |TRIM support|2016, 2012 R2|&#10004;|&#10004;|&#10004;||||
 |SCSI WWN|2016, 2012 R2|&#10004;|&#10004;|||||
 |**[Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Memory)**|
@@ -128,7 +128,7 @@ The 32-bit kernel for this series is PAE enabled. There is no built-in LIS suppo
 
 This series has a supported 32-bit PAE kernel available. There is no built-in LIS support for RHEL/CentOS before 5.9.
 
-|**Feature**|**Windows Server version**|5.2 -5.11|**5.5-5.11**|**5.9 - 5.11**|
+|**Feature**|**Windows Server version**|5.2 -5.11|**5.2-5.11**|**5.9 - 5.11**|
 |-|-|-|-|-|
 |**Availability**||[LIS 4.2](http://www.microsoft.com/download/details.aspx?id=55106)|[LIS 4.1](http://www.microsoft.com/download/details.aspx?id=51612)|Built in|
 |**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_core)**|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|
@@ -144,7 +144,7 @@ This series has a supported 32-bit PAE kernel available. There is no built-in LI
 |**[Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Storage)**|
 |VHDX resize|2016, 2012 R2|&#10004;|&#10004;||
 |Virtual Fibre Channel|2016, 2012 R2|&#10004; Note 3|&#10004; Note 3||
-|Live virtual machine backup|2016, 2012 R2|&#10004; Note 4, 5, 15|&#10004; Note 4, 5|&#10004; Note 4, 5, 6|
+|Live virtual machine backup|2016, 2012 R2|&#10004; Note 5, 15|&#10004; Note 5|&#10004; Note 4, 5, 6|
 |TRIM support|2016, 2012 R2||||
 |SCSI WWN|2016, 2012 R2||||
 |**[Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Memory)**|
@@ -174,9 +174,9 @@ This series has a supported 32-bit PAE kernel available. There is no built-in LI
 
 3. On Windows Server 2012 R2 while using virtual fibre channel devices, make sure that logical unit number 0 (LUN 0) has been populated. If LUN 0 has not been populated, a Linux virtual machine might not be able to mount fibre channel devices natively.
 
-4. If there are open file handles during a live virtual machine backup operation, then in some corner cases, the backed-up VHDs might have to undergo a file system consistency check (fsck) on restore.
+4. For built-in LIS, the "hyperv-daemons" package must be installed for this functionality.
 
-5. Live backup operations can fail silently if the virtual machine has an attached iSCSI device or direct-attached storage (also known as a pass-through disk).
+5. If there are open file handles during a live virtual machine backup operation, then in some corner cases, the backed-up VHDs might have to undergo a file system consistency check (fsck) on restore. Live backup operations can fail silently if the virtual machine has an attached iSCSI device or direct-attached storage (also known as a pass-through disk).
 
 6. While the Linux Integration Services download is preferred, live backup support for RHEL/CentOS 5.9 - 5.11/6.4/6.5 is also available through [Hyper-V Backup Essentials for Linux](https://github.com/LIS/backupessentials/tree/1.0).
 
