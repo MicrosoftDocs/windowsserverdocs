@@ -14,36 +14,47 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # wbadmin get items
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-lists the items included in a specific backup.
-To use this subcommand, you must be a member of the **Backup Operators** group or the **Administrators** group, or you must have been delegated the appropriate permissions. In addition, you must run **wbadmin** from an elevated command prompt. (To open an elevated command prompt right-click **Command prompt** and then click **Run as administrator**.)
-for examples of how to use this subcommand, see [Examples](#BKMK_examples).
+Lists the items included in a specific backup.
+
+To use this subcommand, you must be a member of the **Backup Operators** group or the **Administrators** group, or you must have been delegated the appropriate permissions. In addition, you must run **wbadmin** from an elevated command prompt. (To open an elevated command prompt right-click **Command Prompt** and then click **Run as administrator**.)
+
+For examples of how to use this subcommand, see [Examples](#BKMK_examples).
+
 ## Syntax
+
 ```
 wbadmin get items
--version:<versionIdentifier>
-[-backupTarget:{<BackupDestinationvolume> | <NetworkSharepath>}]
+-version:<VersionIdentifier>
+[-backupTarget:{<BackupDestinationVolume> | <NetworkSharePath>}]
 [-machine:<BackupMachineName>]
 ```
+
 ## Parameters
+
 |Parameter|Description|
-|-------|--------|
+|---------|-----------|
 |-version|Specifies the version of the backup in MM/DD/YYYY-HH:MM format. If you do not know the version information, type **wbadmin get versions**.|
 |-backupTarget|Specifies the storage location that contains the backups for which you want the details. Use for listing backups stored at that target location. Backup target locations can be a locally attached disk drive or a remote shared folder. If **wbadmin get items**is run on the same computer where the backup was created, this parameter is not needed. However, this parameter is required to get information about a backup created from another computer.|
 |-machine|Specifies the name of the computer that you want the backup details for. Useful when multiple computers have been backed up to the same location. Should be used when **-backupTarget** is specified.|
+
 ## <a name="BKMK_examples"></a>Examples
+
 To list items from the backup that was run on March 31, 2013 at 9:00 A.M., type:
 ```
 wbadmin get items -version:03/31/2013-09:00
 ```
-To list items from the backup of server01 that was run on April 30, 2013 at 9:00 A.M. and stored on \\\servername\share, type:
+To list items from the backup of server01 that was run on April 30, 2013 at 9:00 A.M. and stored on \\\\servername\share, type:
 ```
 wbadmin get items -version:04/30/2013-09:00 -backupTarget:\\servername\share -machine:server01
 ```
-#### additional references
+
+#### Additional references
+
 -   [Command-Line Syntax Key](command-line-syntax-key.md)
--   [wbadmin](wbadmin.md)
+-   [Wbadmin](wbadmin.md)
 -   [Get-WBBackupSet](http://technet.microsoft.com/library/jj902473.aspx) cmdlet

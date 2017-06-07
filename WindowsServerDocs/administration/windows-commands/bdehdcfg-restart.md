@@ -14,24 +14,35 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # bdehdcfg: restart
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Informs the bdehdcfg command-line tool that the computer should be restarted after the drive preparation has concluded. For an example of how this command can be used, see [Examples](#BKMK_Examples).
+Informs the Bdehdcfg command-line tool that the computer should be restarted after the drive preparation has concluded. For an example of how this command can be used, see [Examples](#BKMK_Examples).
+
 ## Syntax
+
 ```
 bdehdcfg -target {default|unallocated|<DriveLetter> shrink|<DriveLetter> merge} -restart
 ```
+
 ### Parameters
+
 This command takes no additional parameters.
-## remarks
-if other users are logged on to the computer and the **quiet** command is not specified, a prompt will be displayed to confirm that the computer should be restarted.
+
+## Remarks
+
+If other users are logged on to the computer and the **quiet** command is not specified, a prompt will be displayed to confirm that the computer should be restarted.
+
 ## <a name="BKMK_Examples"></a>Examples
+
 The following example illustrates using the **restart** command.
 ```
 bdehdcfg -target default -restart
 ```
-## additional references
+
+#### Additional references
+
 -   [Command-Line Syntax Key](command-line-syntax-key.md)
--   [bdehdcfg](bdehdcfg.md)
+-   [Bdehdcfg](bdehdcfg.md)

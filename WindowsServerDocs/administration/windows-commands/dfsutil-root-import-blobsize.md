@@ -13,47 +13,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # dfsutil Root import BlobSize
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-The **dfsutil root import blobsize** command displays the approximate size of active directory Domain Services \(AD DS\) Blob for the specified namespace import file.
+## This topic is no longer available
 
-
-
-## Syntax
-
-```
-dfsutil root import blobsize <filename> | /?
-```
-
-### Parameters
-
-|Parameter|Description|
-|-------|--------|
-|<filename>|Name of the XML file that stores the configuration of the namespace you want to analyze.|
-|\/?|<Another concise description, starts with verb.>|
-
-## <a name="BKMK_Examples"></a>Examples
-To TBD, type:
-
-```
-dfsutil root import blobsize docroot.xml
-```
-
-To view help for this command, type:
-
-```
-dfsutil root import blobsize /?
-```
-
-## additional references
-
--   [Command-Line Syntax Key](command-line-syntax-key.md)
-
-
--   [dfsutil Root](dfsutil-root.md)
-
--   [dfsutil](dfsutil.md)
-
-
+We are sorry—the topic that you requested is no longer available.

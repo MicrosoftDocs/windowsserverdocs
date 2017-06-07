@@ -14,19 +14,19 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Begin restore
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-starts a restore session and issues a **PreRestore** event to involved writers.  
-  
-## Syntax  
-  
-```  
-begin restore  
-```  
-  
-#### additional references  
-[Command-Line Syntax Key](command-line-syntax-key.md)  
-  
+Starts a restore session and issues a **PreRestore** event to involved writers.
 
+## Syntax
+
+```
+begin restore
+```
+
+#### Additional references
+
+[Command-Line Syntax Key](command-line-syntax-key.md)

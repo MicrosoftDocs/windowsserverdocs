@@ -14,17 +14,22 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # The progress Command
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Displays progress while a command is being executed. You can use **/progress** with any other wdsutil commands that you run. Note that you must specify **/verbose** and **/progress** directly after **wdsutil**.
+Displays progress while a command is being executed. You can use **/progress** with any other WDSUTIL commands that you run. Note that you must specify **/verbose** and **/progress** directly after **WDSUTIL**.
+
 ## Syntax
+
 ```
-wdsutil /progress <commands>
+WDSUTIL /progress <commands>
 ```
+
 ## Examples
+
 To initialize the server and display progress, type:
 ```
-wdsutil /verbose /Progress /Initialize-Server /Server:MyWDSServer /remInst:"C:\remoteInstall"
+WDSUTIL /Verbose /Progress /Initialize-Server /Server:MyWDSServer /RemInst:"C:\RemoteInstall"
 ```

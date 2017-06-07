@@ -14,19 +14,26 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # bitsadmin cache and help
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Displays the command-line usage for the **Cache** commands.
+
 ## Syntax
+
 ```
-bitsadmin /Cache /help 
+Bitsadmin /Cache /Help 
 ```
+
 ## <a name="BKMK_examples"></a>Examples
+
 The following command displays the command-line help for the **Cache** commands.
 ```
-bitsadmin /Cache /help
+Bitsadmin /Cache /Help
 ```
-## additional references
+
+#### Additional references
+
 [Command-Line Syntax Key](command-line-syntax-key.md)

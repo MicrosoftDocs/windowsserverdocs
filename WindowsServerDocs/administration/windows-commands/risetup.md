@@ -14,8 +14,9 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # risetup
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-The **risetup** command is deprecated in Windows Server  2008 and Windows Server 2008 R2.
+The **risetup** command is deprecated in Windows Server® 2008 and Windows Server 2008 R2.

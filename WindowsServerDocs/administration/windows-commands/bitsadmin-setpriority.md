@@ -15,24 +15,33 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # bitsadmin setpriority
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Sets the priority of the specified job.
+
 ## Syntax
+
 ```
 bitsadmin /SetPriority <Job> <Priority>
 ```
+
 ## Parameters
+
 |Parameter|Description|
-|-------|--------|
+|---------|-----------|
 |Job|The job's display name or GUID|
-|Priority|One of the following values:<br /><br />-   foregROUND<br />-   HIGH<br />-   NORMAL<br />-   LOW|
+|Priority|One of the following values:</br>-   FOREGROUND</br>-   HIGH</br>-   NORMAL</br>-   LOW|
+
 ## <a name="BKMK_examples"></a>Examples
+
 The following example sets the priority for the job named *myDownloadJob* to normal.
 ```
 C:\>bitsadmin /SetPriority myDownloadJob NORMAL
 ```
-## additional references
+
+#### Additional references
+
 [Command-Line Syntax Key](command-line-syntax-key.md)

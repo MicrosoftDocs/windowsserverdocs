@@ -14,20 +14,28 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # attributes
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Displays, sets, or clears the attributes of a disk or volume.
+
 ## Syntax
+
 ```
-attributes disk
-attributes volume
+Attributes disk
+Attributes volume
 ```
+
 ## Parameters
+
 |Parameter|Description|
-|-------|--------|
-|[attributes disk](attributes-disk.md)|Displays, sets, or clears the attributes of a disk.|
-|[attributes volume](attributes-volume.md)|Displays, sets, or clears the attributes of a volume.|
-#### additional references
+|---------|-----------|
+|[Attributes disk](attributes-disk.md)|Displays, sets, or clears the attributes of a disk.|
+|[Attributes volume](attributes-volume.md)|Displays, sets, or clears the attributes of a volume.|
+
+#### Additional references
+
 [Command-Line Syntax Key](command-line-syntax-key.md)
+
