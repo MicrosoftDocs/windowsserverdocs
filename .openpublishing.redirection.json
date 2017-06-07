@@ -7706,11 +7706,6 @@
 "redirect_document_id": true
 },
 {
-"source_path": "WindowsServerDocs/remote/remote-desktop-services/deploy-your-remote-desktop-environment.md",
-"redirect_url": "/windows-server/remote/remote-desktop-services/rds-deploy-infrastructure",
-"redirect_document_id": true
-},
-{
 "source_path": "WindowsServerDocs/remote/remote-desktop-services/Create-an-Azure-internal-load-balancer-for-Remote-Desktop-deployment.md",
 "redirect_url": "/windows-server/remote/remote-desktop-services/rds-connection-broker-cluster#step-2-configure-load-balancing-on-the-rd-connection-brokers",
 "redirect_document_id": true
