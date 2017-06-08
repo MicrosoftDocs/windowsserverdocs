@@ -14,28 +14,37 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # select
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-shifts the focus to a disk, partition, volume, or virtual hard disk (VHD).
+Shifts the focus to a disk, partition, volume, or virtual hard disk (VHD).
+
 ## Syntax
+
 ```
 select disk
 select partition
 select volume
 select vdisk
 ```
+
 ## Parameters
+
 |Parameter|Description|
-|-------|--------|
-|[select disk](select-disk.md)|shifts the focus to a disk.|
-|[select partition](select-partition.md)|shifts the focus to a partition.|
-|[select volume](select-volume.md)|shifts the focus to a volume.|
-|[select vdisk](select-vdisk.md)|shifts the focus to a VHD.|
-## remarks
--   if a volume is selected with a corresponding partition, the partition will be automatically selected.
--   if a partition is selected with a corresponding volume, the volume will be automatically selected.
-### additional references
+|---------|-----------|
+|[Select disk](select-disk.md)|Shifts the focus to a disk.|
+|[Select partition](select-partition.md)|Shifts the focus to a partition.|
+|[Select volume](select-volume.md)|Shifts the focus to a volume.|
+|[Select vdisk](select-vdisk.md)|Shifts the focus to a VHD.|
+
+## Remarks
+
+-   If a volume is selected with a corresponding partition, the partition will be automatically selected.
+-   If a partition is selected with a corresponding volume, the volume will be automatically selected.
+
+#### Additional references
+
 [Command-Line Syntax Key](command-line-syntax-key.md)
 

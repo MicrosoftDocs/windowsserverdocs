@@ -14,23 +14,32 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # bitsadmin getclientcertificate
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Retrieves the client certificate from the job.
+
 ## Syntax
+
 ```
 bitsadmin /GetClientCertificate <Job>
 ```
+
 ## Parameters
+
 |Parameter|Description|
-|-------|--------|
+|---------|-----------|
 |Job|The job's display name or GUID|
+
 ## <a name="BKMK_examples"></a>Examples
+
 The following example retrieves the client certificate for the job named *myDownloadJob*.
 ```
 C:\>bitsadmin / GetClientCertificate myDownloadJob
 ```
-## additional references
+
+#### Additional references
+
 [Command-Line Syntax Key](command-line-syntax-key.md)

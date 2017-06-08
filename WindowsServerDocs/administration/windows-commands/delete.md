@@ -14,21 +14,28 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # delete
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-deletes a partition or a volume. It also deletes a dynamic disk from the list of disks.
+Deletes a partition or a volume. It also deletes a dynamic disk from the list of disks.
+
 ## Syntax
+
 ```
 delete disk
 delete partition
 delete volume
 ```
+
 ## Parameters
+
 |Parameter|Description|
-|-------|--------|
-|[delete disk](delete-disk.md)|deletes a missing dynamic disk from the list of disks.|
-|[delete partition](delete-partition.md)|deletes a partition.|
-|[delete volume](delete-volume.md)|deletes a volume.|
+|---------|-----------|
+|[Delete disk](delete-disk.md)|Deletes a missing dynamic disk from the list of disks.|
+|[Delete partition](delete-partition.md)|Deletes a partition.|
+|[Delete volume](delete-volume.md)|Deletes a volume.|
+
+#### Additional references
 

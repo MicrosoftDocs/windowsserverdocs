@@ -14,27 +14,36 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Using the remove-DriverGroupPackage Command
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-removes a driver package from a driver group on a server.
+Removes a driver package from a driver group on a server.
+
 ## Syntax
+
 ```
-wdsutil /remove-DriverGroupPackage /DriverGroup:<Group Name> [/Server:<Server Name>] {/DriverPackage:<Name> | /PackageId:<ID>}
+WDSUTIL /Remove-DriverGroupPackage /DriverGroup:<Group Name> [/Server:<Server Name>] {/DriverPackage:<Name> | /PackageId:<ID>}
 ```
+
 ## Parameters
+
 |Parameter|Description|
-|-------|--------|
-|[/Server:<Server name>]|Specifies the name of the server. This can be the NetBIOS name or the FQDN. If a server name is not specified, the local server is used.|
-|[/DriverPackage:<Name>]|Specifies the name of the driver package to remove.|
-|[/PackageId:<ID>]|Specifies the Windows Deployment Services ID of the driver package to remove. You must specify this option if the driver package cannot be uniquely identified by name.|
+|---------|-----------|
+|[/Server:\<Server name>]|Specifies the name of the server. This can be the NetBIOS name or the FQDN. If a server name is not specified, the local server is used.|
+|[/DriverPackage:\<Name>]|Specifies the name of the driver package to remove.|
+|[/PackageId:\<ID>]|Specifies the Windows Deployment Services ID of the driver package to remove. You must specify this option if the driver package cannot be uniquely identified by name.|
+
 ## <a name="BKMK_examples"></a>Examples
+
 ```
-wdsutil /remove-DriverGroupPackage /DriverGroup:printerdrivers /PackageId:{4D36E972-E325-11CE-Bfc1-08002BE10318}
+WDSUTIL /Remove-DriverGroupPackage /DriverGroup:PrinterDrivers /PackageId:{4D36E972-E325-11CE-BFC1-08002BE10318}
 ```
 ```
-wdsutil /remove-DriverGroupPackage /DriverGroup:printerdrivers /DriverPackage:XYZ
+WDSUTIL /Remove-DriverGroupPackage /DriverGroup:PrinterDrivers /DriverPackage:XYZ
 ```
-#### additional references
+
+#### Additional references
+
 [Command-Line Syntax Key](command-line-syntax-key.md)

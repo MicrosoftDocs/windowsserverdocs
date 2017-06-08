@@ -14,19 +14,26 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # vol
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Displays the disk volume label and serial number, if they exist.  if used without parameters, **vol** displays information for the current drive.
+Displays the disk volume label and serial number, if they exist.  If used without parameters, **vol** displays information for the current drive.
+
 ## Syntax
+
 ```
 vol [<Drive>:]
 ```
+
 ## Parameters
+
 |Parameter|Description|
-|-------|--------|
-|<Drive>:|Specifies the drive that contains the disk for which you want to display the volume label and serial number.|
+|---------|-----------|
+|\<Drive>:|Specifies the drive that contains the disk for which you want to display the volume label and serial number.|
 |/?|Displays help at the command prompt.|
-#### additional references
+
+#### Additional references
+
 [Command-Line Syntax Key](command-line-syntax-key.md)

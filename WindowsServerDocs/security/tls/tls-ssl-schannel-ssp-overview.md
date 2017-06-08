@@ -33,10 +33,10 @@ Schannel is a Security Support Provider \(SSP\) that implements the Secure Socke
 
 The Security Support Provider Interface \(SSPI\) is an API used by Windows systems to perform security\-related functions including authentication. The SSPI functions as a common interface to several Security Support Providers \(SSPs\), including the Schannel SSP.
 
-The Transport Layer Security \(TLS\) protocol versions 1.0, 1.1, and 1.2, Secure Sockets Layer \(SSL\) protocol, versions??2.0 and??3.0, Datagram Transport Layer Security \(DTLS\) version 1.0, and the Private Communications Transport \(PCT\) protocol are based on public key cryptography. The Security Channel \(Schannel\) authentication protocol suite provides these protocols. All Schannel protocols use a client\/server model.
+The Transport Layer Security \(TLS\) protocol versions 1.0, 1.1, and 1.2, Secure Sockets Layer \(SSL\) protocol, versions 2.0 and 3.0, Datagram Transport Layer Security \(DTLS\) version 1.0, and the Private Communications Transport \(PCT\) protocol are based on public key cryptography. The Security Channel \(Schannel\) authentication protocol suite provides these protocols. All Schannel protocols use a client\/server model.
 
 ## <a name="BKMK_APP"></a>Practical applications
-One problem when you administer a network is securing data that is being sent between applications across an untrusted network. You can use TLS\/SSL to authenticate servers and client computers and then use the protocol to encrypt messages between the authenticated parties.
+One problem when you administer a network is securing data that is being sent between applications across an untrusted network. You can use TLS\SSL to authenticate servers and client computers and then use the protocol to encrypt messages between the authenticated parties.
 
 For example, you can use TLS\SSL for:
 
@@ -51,11 +51,8 @@ For example, you can use TLS\SSL for:
 -   E\-mail
 
 ## <a name="BKMK_SOFT"></a>Software requirements
-The TLS\/SSL protocol use a client\/server model and are based on certificate authentication, which requires a Public Key Infrastructure.
+The TLS\SSL protocol use a client\server model and are based on certificate authentication, which requires a Public Key Infrastructure.
 
 ## <a name="BKMK_INSTALL"></a>Server Manager information
-There are no configuration steps necessary to implement TLS, SSL or Schannel using Server Manager or the Add Features feature.
-
-## <a name="BKMK_LINKS"></a>See also
-The following table provides links to additional resources related to TLS, SSL and the Schannel SSP.
+There are no configuration steps necessary to implement TLS, SSL or Schannel.
 

@@ -14,19 +14,26 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # offline
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Takes an online disk or volume to the offline state.
+
 ## Syntax
+
 ```
-offline disk
-offline volume
+Offline disk
+Offline volume
 ```
+
 ## Parameters
+
 |Parameter|Description|
-|-------|--------|
-|[offline disk](offline-disk.md)|Takes the online disk with focus to the offline state.|
-|[offline volume](offline-volume.md)|Takes the online volume with focus to the offline state.|
+|---------|-----------|
+|[Offline disk](offline-disk.md)|Takes the online disk with focus to the offline state.|
+|[Offline volume](offline-volume.md)|Takes the online volume with focus to the offline state.|
+
+#### Additional references
 

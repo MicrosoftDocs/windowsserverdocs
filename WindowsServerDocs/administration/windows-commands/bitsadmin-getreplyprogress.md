@@ -14,25 +14,36 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # bitsadmin getreplyprogress
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Retrieves the size and progress of the server reply.
+
 ## Syntax
+
 ```
 bitsadmin /GetReplyProgress <Job>
 ```
+
 ## Parameters
+
 |Parameter|Description|
-|-------|--------|
+|---------|-----------|
 |Job|The job's display name or GUID|
-## remarks
+
+## Remarks
+
 Valid only for upload-reply jobs.
+
 ## <a name="BKMK_examples"></a>Examples
+
 The following example retrieves the reply progress for the job named *myDownloadJob*.
 ```
 C:\>bitsadmin /GetReplyProgress myDownloadJob
 ```
-## additional references
+
+#### Additional references
+
 [Command-Line Syntax Key](command-line-syntax-key.md)

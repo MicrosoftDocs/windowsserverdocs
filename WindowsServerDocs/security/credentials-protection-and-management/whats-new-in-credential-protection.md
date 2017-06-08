@@ -33,6 +33,8 @@ Beginning with Windows 10, version 1607, Isolated User Mode is included with Hyp
 
 Beginning with Windows 10, version 1607, Remote Credential Guard protects signed-in user credentials when using Remote Desktop by protecting the Kerberos and NTLM secrets on the client device. For the remote host to assess network resources as the user, authentication requests require the client device to use the secrets.
 
+Beginning with Windows 10, version 1703, Remote Credential Guard protects supplied user credentials when using Remote Desktop.
+
 [Learn more about Remote credential guard](https://technet.microsoft.com/en-us/itpro/windows/keep-secure/remote-credential-guard).
 
 ## Domain protections

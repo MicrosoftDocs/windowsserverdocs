@@ -10,7 +10,7 @@ ms.technology: security-guarded-fabric
 ms.date: 05/03/2017
 ---
 
-# Configure the first HGS node
+# Configure the first Host Guardian Service (HGS) node
 
 >Applies To: Windows Server 2016
 
@@ -26,8 +26,8 @@ Install-WindowsFeature -Name HostGuardianServiceRole -IncludeManagementTools -Re
     
 ## Install HGS in a new forest
 
-The Host Guardian Service should be installed in a separate Active Directory forest than the forest to which the Hyper-V hosts, fabric managers, and other untrusted entities are joined.
-If you do not already have a secure bastion forest available in your environment, follow the steps in this section to have HGS set up one for you.
+The Host Guardian Service should be installed in a separate Active Directory forest than the Hyper-V hosts and fabric managers.
+If a secure bastion forest is not already available in your environment, follow the steps in this section to have HGS set up one for you.
 To install HGS in an existing bastion forest, skip to [Install HGS in an existing bastion forest](#install-hgs-in-an-existing-bastion-forest).
 
 ### Create a new forest for HGS
@@ -105,23 +105,23 @@ The following commands will complete the configuration of the first HGS node.
 
 ## Install HGS in an existing bastion forest
 
-If you already have a secure bastion forest in your datacenter and wish to join HGS nodes to it, follow the steps in this section.
+If your datacenter has a secure bastion forest where you want to join HGS nodes, follow the steps in this section.
 These steps also apply if you want to configure 2 or more independent HGS clusters that are joined to the same domain.
 
 ### Join the HGS server to the existing domain
 
-Before completing the following steps, ensure your HGS server is joined to the desired domain.
-You can use Server Manager or the [Add-Computer](http://go.microsoft.com/fwlink/?LinkId=821564) cmdlet to do this.
+First, use Server Manager or [Add-Computer](http://go.microsoft.com/fwlink/?LinkId=821564) to join your HGS servers to the desired domain.
 
 ### Prepare Active Directory objects
 
-To initialize HGS in an existing domain, you will need to create a group managed service account and 2 security groups in the Active Directory domain.
-You can also pre-stage the cluster objects if the account you are initializing HGS with does not have permissions to create computer objects in the domain.
+To initialize HGS in an existing domain, you need to create a group managed service account and 2 security groups.
+You can also pre-stage the cluster objects if the account you are initializing HGS with does not have permission to create computer objects in the domain.
 
 #### Group managed service account
 
-To create the **group managed service account**, the identity used by HGS to retrieve and use its certificates, use the [New-ADServiceAccount](https://technet.microsoft.com/en-us/library/ee617211.aspx) cmdlet in the domain.
-If you have not previously set up a gMSA in the existing domain, you will also need to add a Key Distribution Service root key.
+To create the group managed service account, the identity used by HGS to retrieve and use its certificates, use [New-ADServiceAccount](https://technet.microsoft.com/itpro/powershell/windows/addsadministration/new-adserviceaccount).
+If this is the first gMSA in the domain, you will need to add a Key Distribution Service root key.
+
 Each HGS node will need to be permitted to access the group managed service account password.
 The easiest way to configure this is to create a security group that contains all of your HGS nodes and grant that security group access to retrieve the gMSA password.
 
@@ -144,9 +144,8 @@ New-ADServiceAccount -Name 'HGSgMSA' -DnsHostName 'HGSgMSA.yourdomain.com' -Prin
 ```
 
 > [!NOTE]
-> Group managed service accounts are only available in domains that have been upgraded to the Windows Server 2012 Active Directory schema.
-> Directories running older schemas do not support gMSAs.
-> Consult the Active Directory documentation for information on [group managed service account requirements](https://technet.microsoft.com/en-us/library/jj128431(v=ws.11).aspx).
+> Group managed service accounts are available beginning with the Windows Server 2012 Active Directory schema.
+> Consult the Active Directory documentation for information on [group managed service account requirements](https://technet.microsoft.com/library/jj128431.aspx).
 
 #### JEA security groups
 
@@ -155,7 +154,7 @@ You are not required to use JEA to manage HGS, but it still must be configured w
 The configuration of the JEA endpoint consists of designating 2 security groups that contain your HGS admins and HGS reviewers.
 Users who belong to the admin group can add, change, or remove policies on HGS; reviewers can only view the current configuration.
 
-Create 2 security groups in the domain to which HGS is joined for these JEA groups using Active Directory Administration Center, Active Directory Users and Computers, or the [New-ADGroup](https://technet.microsoft.com/en-us/library/ee617258.aspx) cmdlet.
+Create 2 security groups for these JEA groups using Active Directory admin tools or [New-ADGroup](https://technet.microsoft.com/itpro/powershell/windows/addsadministration/new-adgroup).
 
 ```powershell
 New-ADGroup -Name 'HgsJeaReviewers' -GroupScope DomainLocal
@@ -192,7 +191,7 @@ Set-Acl -Path $vcoPath -AclObject $acl
 When setting up HGS in an existing forest, you should not run `Install-HgsServer` or promote the HGS server to a domain controller for that domain.
 Active Directory Domain Services will be installed on the machine, but should remain unconfigured.
 
-Once you have prepared your bastion forest with the AD objects above and the certificates from the prerequisite section, you are ready to initalize the HGS server using the [Initialize-HgsServer](https://technet.microsoft.com/library/mt652185.aspx) cmdlet.
+Now you are ready to [initalize the HGS server](https://technet.microsoft.com/itpro/powershell/windows/hgsserver/initialize-hgsserver).
 
 If you are using PFX-based certificates, run the following commands on the HGS server:
 
@@ -213,24 +212,24 @@ If you are using certificates installed on the local machine (such as HSM-backed
 
 ## Install trusted TPM root certificates
 
-If you initialized your HGS server in TPM mode, or expect to migrate to TPM mode in the future, you will need to install root certificates used to issue the endorsement key in hosts' TPM modules.
+If you chose TPM mode, or expect to migrate to TPM mode in the future, you need to install root certificates to issue the endorsement key in each host's TPM module.
 These root certificates are different from those installed by default in Windows and represent the specific root and intermediate certificates used by TPM vendors.
-The steps below will help you install certificates for TPMs produced by Microsoft's partners.
+The following steps help you install certificates for TPMs produced by Microsoft's partners.
 Some TPMs do not use endorsement key certificates or use certificates not included in this package.
 Consult your TPM vendor or server OEM for further assistance in these cases.
 
-1.  Download the latest package from [http://tpmsec.microsoft.com/OnPremisesDHA/TrustedTPM.cab](http://tpmsec.microsoft.com/OnPremisesDHA/TrustedTPM.cab)
+1.  Download the latest package from [http://tpmsec.microsoft.com/OnPremisesDHA/TrustedTPM.cab](http://tpmsec.microsoft.com/OnPremisesDHA/TrustedTPM.cab).
 2.  Validate that the package is digitally signed by Microsoft. Do not expand the CAB file if it does not have a valid signature.
 
     ```powershell
-    Get-AuthenticodeSignature -Path <Path-To-TrustedTpm.cab>
+    Get-AuthenticodeSignature -FilePath <Path-To-TrustedTpm.cab>
     ```
 
-3.  Expand the cab file
+3.  Expand the cab file.
 
     ```powershell
     mkdir .\TrustedTPM
-    expand.exe -F:* .\TrustedTPM.cab .\TrustedTPM
+    expand.exe -F:* <Path-To-TrustedTpm.cab> .\TrustedTPM
     ```
 
 4.  By default, the configuration script will install certificates for every TPM vendor. If you only want to import certificates for your specific TPM vendor, delete the folders for TPM vendors not trusted by your organization.

@@ -15,23 +15,32 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # bitsadmin cancel
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-removes the job from the transfer queue and deletes all temporary files associated with the job.
+Removes the job from the transfer queue and deletes all temporary files associated with the job.
+
 ## Syntax
+
 ```
 bitsadmin /cancel <Job>
 ```
+
 ## Parameters
+
 |Parameter|Description|
-|-------|--------|
+|---------|-----------|
 |Job|The job's display name or GUID|
+
 ## <a name="BKMK_examples"></a>Examples
+
 The following example removes the *myDownloadJob* job from the transfer queue.
 ```
 C:\>bitsadmin /cancel myDownloadJob
 ```
-## additional references
+
+#### Additional references
+
 [Command-Line Syntax Key](command-line-syntax-key.md)

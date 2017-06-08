@@ -14,24 +14,24 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # End backup
 
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Ends a full backup session and issues a **Backupcomplete** event with the appropriate writer state, if needed.  
-  
-## Syntax  
-  
-```  
-end backup  
-```  
-  
-## remarks  
-  
--   This command should be used for all full backups.  
-  
-#### additional references  
-[Command-Line Syntax Key](command-line-syntax-key.md)  
-  
+Ends a full backup session and issues a **BackupComplete** event with the appropriate writer state, if needed.
 
+## Syntax
+
+```
+end backup
+```
+
+## Remarks
+
+-   This command should be used for all full backups.
+
+#### Additional references
+
+[Command-Line Syntax Key](command-line-syntax-key.md)
