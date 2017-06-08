@@ -5,7 +5,7 @@ description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 03/24/2017
+ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 
@@ -60,6 +60,8 @@ This AD FS claim represents the protocol used by the end client, which correspon
 	- Microsoft.Exchange.Powershell
 	- Microsoft.Exchange.SMTP
 	- Microsoft.Exchange.PopImap
+	- Microsoft.Exchange.Pop
+	- Microsoft.Exchange.Imap
 
 ## X-MS-Client-User-Agent
 

@@ -6,7 +6,7 @@ ms.prod: windows-server-threshold
 manager: dongill
 ms.author: jgerend
 author: JasonGerend
-ms.date: 4/28/2017
+ms.date: 6/7/2017
 ms.prod: storage-failover-clustering
 description: How to configure advanced options and updating run profiles for Cluster-Aware Updating (CAU)
 ---
@@ -37,7 +37,7 @@ The following table lists options that you can set in a CAU Updating Run Profile
 |**MaxRetriesPerNode**|3|Maximum number of times that the update process (including a pre-update script and a post-update script, if they are configured) will be retried per node. The maximum is 64.|  
 |**MaxFailedNodes**|For most clusters, an integer that is approximately one-third of the number of cluster nodes|Maximum number of nodes on which updating can fail, either because the nodes fail or the Cluster service stops running. If one more node fails, the Updating Run is stopped.<br /><br /> The valid range of values is 0 to 1 less than the number of cluster nodes.|  
 |**RequireAllNodesOnline**|None|Specifies that all nodes must be online and reachable before updating begins.|  
-|**RebootTimeoutMinutes**|15|Time in minutes that CAU will allow for restarting a node (if a restart is necessary) and starting all auto-start services. If the restart process does not complete within this time, the Updating Run on that node is marked as failed.|  
+|**RebootTimeoutMinutes**|15|Time in minutes that CAU will allow for restarting a node (if a restart is necessary) and starting all auto-start services. If the restart process doesn't complete within this time, the Updating Run on that node is marked as failed.|  
 |**PreUpdateScript**|None|The path and file name for a PowerShell script to run on each node before updating begins, and before the node is put into maintenance mode. The file name extension must be **.ps1**, and the total length of the path plus file name must not exceed 260 characters. As a best practice, the script should be located on a disk in cluster storage, or at a highly available network file share, to ensure that it is always accessible to all of the cluster nodes. If the script is located on a network file share, ensure that you configure the file share for Read permission for the Everyone group, and restrict write access to prevent tampering with the files by unauthorized users.<br /><br /> If you specify a pre-update script, be sure that settings such as the time limits (for example, **StopAfter**) are configured to allow the script to run successfully. These limits span the entire process of running scripts and installing updates, not just the process of installing updates.|  
 |**PostUpdateScript**|None|The path and file name for a PowerShell script to run after updating completes (after the node leaves maintenance mode). The file name extension must be **.ps1** and the total length of the path plus file name must not exceed 260 characters. As a best practice, the script should be located on a disk in cluster storage, or at a highly available network file share, to ensure that it is always accessible to all of the cluster nodes. If the script is located on a network file share, ensure that you configure the file share for Read permission for the Everyone group, and restrict write access to prevent tampering with the files by unauthorized users.<br /><br /> If you specify a post-update script, be sure that settings such as the time limits (for example, **StopAfter**) are configured to allow the script to run successfully. These limits span the entire process of running scripts and installing updates, not just the process of installing updates.|  
 |**ConfigurationName**|This setting only has an effect if you run scripts.<br /><br /> If you specify a pre-update script or a post-update script, but you do not specify a **ConfigurationName**, the default session configuration for PowerShell (Microsoft.PowerShell) is used.|Specifies the PowerShell session configuration that defines the session in which scripts (specified by **PreUpdateScript** and **PostUpdateScript**) are run, and can limit the commands that can be run.|  
@@ -50,15 +50,21 @@ The following table lists options that you can set in a CAU Updating Run Profile
 |Option|Default value|Details|  
 |------------|-------------------|-------------|  
 |**ClusterName**|None <br>**Note:**  This option must be set only when the CAU UI is not run on a failover cluster node, or you want to reference a failover cluster different from where the CAU UI is run.|NetBIOS name of the cluster on which to perform the Updating Run.|  
-|**Credential**|Current account credentials|Administrative credentials for the target cluster on which the Updating Run will be performed. You may already have the necessary credentials if you start the CAU UI (or open a PowerShell session, if you are using the CAU PowerShell cmdlets) from an account that has administrator rights and permissions on the cluster.|  
+|**Credential**|Current account credentials|Administrative credentials for the target cluster on which the Updating Run will be performed. You may already have the necessary credentials if you start the CAU UI (or open a PowerShell session, if you're using the CAU PowerShell cmdlets) from an account that has administrator rights and permissions on the cluster.|  
 |**NodeOrder**|By default, CAU starts with the node that owns the smallest number of clustered roles, then progresses to the node that has the second smallest number, and so on.|Names of the cluster nodes in the order that they should be updated (if possible).|  
   
 ##  <a name="BKMK_profile"></a> Use Updating Run Profiles  
- Each Updating Run can be associated with a specific Updating Run Profile. The default Updating Run Profile is stored in the %windir%\cluster folder. If you are using the CAU UI in remote-updating mode, you can specify an Updating Run Profile at the time that you apply updates, or you can use the default Updating Run profile. If you are using CAU in self-updating mode, you can import the settings from a specified Updating Run Profile when you configure the self-updating options. In both cases, you can override the displayed values for the Updating Run options according to your needs. If you want, you can save the Updating Run options as an Updating Run Profile with the same file name or a different file name. The next time that you apply updates or configure self-updating options, CAU automatically selects the Updating Run Profile that was previously selected.  
+ Each Updating Run can be associated with a specific Updating Run Profile. The default Updating Run Profile is stored in the *%windir%\cluster* folder. If you're using the CAU UI in remote-updating mode, you can specify an Updating Run Profile at the time that you apply updates, or you can use the default Updating Run profile. If you're using CAU in self-updating mode, you can import the settings from a specified Updating Run Profile when you configure the self-updating options. In both cases, you can override the displayed values for the Updating Run options according to your needs. If you want, you can save the Updating Run options as an Updating Run Profile with the same file name or a different file name. The next time that you apply updates or configure self-updating options, CAU automatically selects the Updating Run Profile that was previously selected.  
   
- An existing Updating Run Profile can also be modified, or a new Updating Run Profile can be created, by selecting **Create or modify Updating Run Profile** in the CAU UI.  
-  
- ### Windows PowerShell equivalent commands
+ You can modify an existing Updating Run Profile or create a new one by selecting **Create or modify Updating Run Profile** in the CAU UI.
+
+Here are some important notes about using Updating Run Profiles:
+
+* An Updating Run Profile doesn't store cluster-specific information such as administrative credentials. If you're using CAU in self-updating mode, the Updating Run Profile also doesn't store the self-updating schedule information. This makes it possible to share an Updating Run Profile across all failover clusters in a specified class.
+* If you configure self-updating options using an Updating Run Profile and later modify the profile with different values for the Updating Run options, the self-updating configuration doesn't change automatically. To apply the new Updating Run settings, you must configure the self-updating options again.
+* The Run Profile Editor unfortunately doesn't support file paths that include spaces, such as *C:\Program Files*. As a workaround, store your pre and post update scripts in a path that doesn't include spaces, or use PowerShell exclusively to manage Run Profiles, putting quotes around the path when running **Invoke-CauRun**.
+
+### Windows PowerShell equivalent commands
   
  You can import the settings from an Updating Run Profile when you run the **Invoke-CauRun**, **Add-CauClusterRole**, or **Set-CauClusterRole** cmdlet.  
   
@@ -71,9 +77,7 @@ Invoke-CauRun –ClusterName CONTOSO-FC1 @MyRunProfile
   
  By using an Updating Run Profile, you can update a failover cluster in a repeatable fashion with consistent settings for exception management, time bounds, and other operational parameters. Because these settings are typically specific to a class of failover clusters—such as “All Microsoft SQL Server clusters”, or “My business-critical clusters”—you might want to name each Updating Run Profile according to the class of Failover Clusters it will be used with. In addition, you might want to manage the Updating Run Profile on a file share that is accessible to all of the failover clusters of a specific class in your IT organization.  
   
-> [!NOTE]
->  -   An Updating Run Profile does not store cluster-specific information such as administrative credentials. If you are using CAU in self-updating mode, the Updating Run Profile also does not store the self-updating schedule information. This makes it possible to share an Updating Run Profile across all failover clusters in a specified class.  
-> -   If you configure self-updating options using an Updating Run Profile and later modify the profile with different values for the Updating Run options, the self-updating configuration does not change automatically. To apply the new Updating Run settings, you must configure the self-updating options again.  
+  
   
 ## See also
 

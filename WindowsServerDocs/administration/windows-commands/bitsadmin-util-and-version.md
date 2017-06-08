@@ -14,24 +14,33 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # bitsadmin util and version
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Displays the version of BITS service.
+
 ## Syntax
+
 ```
-bitsadmin /Util /version [/verbose]
+bitsadmin /Util /Version [/Verbose]
 ```
-## remarks
-The **verbose** command performs the following:
+
+## Remarks
+
+The **Verbose** command performs the following:
 -   Displays the file version for each BITS related DLL
--   verifies the BITS Service can be started
+-   Verifies the BITS Service can be started
 -   Displays BITS Group Policy values (Windows Vista only)
+
 ## <a name="BKMK_examples"></a>Examples
+
 The following example the version of the BITS Service.
 ```
-C:\>bitsadmin /Util /version
+C:\>bitsadmin /Util /Version
 ```
-## additional references
+
+#### Additional references
+
 [Command-Line Syntax Key](command-line-syntax-key.md)

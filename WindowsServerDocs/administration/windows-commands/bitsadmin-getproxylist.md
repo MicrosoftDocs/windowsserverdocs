@@ -14,25 +14,36 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # bitsadmin getproxylist
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Retrieves the proxy list for the specified job.
+
 ## Syntax
+
 ```
-bitsadmin /GetProxylist <Job>
+bitsadmin /GetProxyList <Job>
 ```
+
 ## Parameters
+
 |Parameter|Description|
-|-------|--------|
+|---------|-----------|
 |Job|The job's display name or GUID|
-## remarks
+
+## Remarks
+
 -   The proxy list is the list of proxy servers to use. The list is comma-delimited.
+
 ## <a name="BKMK_examples"></a>Examples
+
 The following example retrieves the proxy list for the job named *myDownloadJob*.
 ```
-C:\>bitsadmin /GetProxylist myDownloadJob
+C:\>bitsadmin /GetProxyList myDownloadJob
 ```
-## additional references
+
+#### Additional references
+
 [Command-Line Syntax Key](command-line-syntax-key.md)

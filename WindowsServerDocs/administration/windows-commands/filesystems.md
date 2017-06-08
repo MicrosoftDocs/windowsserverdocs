@@ -14,15 +14,22 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # filesystems
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Displays information about the current file system of the volume with focus and lists the file systems that are supported for formatting the volume.
+
 ## Syntax
+
 ```
 filesystems
 ```
-## remarks
+
+## Remarks
+
 -   A volume must be selected for this operation to succeed. Use the **select volume** command to select a volume and shift the focus to it.
+
+#### Additional references
 

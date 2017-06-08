@@ -14,23 +14,23 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # reset
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-resets diskshadow.exe to the default state. **reset** is especially useful in separating compound diskshadow operations such as **create**, **import**, **backup**, or **restore**.  
-  
-## Syntax  
-  
-```  
-reset  
-```  
-  
-## remarks  
-  
--   When you use the **reset** command, you lose state from commands such as **add**, **set**, **load**, or **writer**. **reset** also releases IVssBackupcomponent interfaces and loses non\-persistent shadow copies.  
-  
-#### additional references  
-[Command-Line Syntax Key](command-line-syntax-key.md)  
-  
+Resets DiskShadow.exe to the default state. **Reset** is especially useful in separating compound DiskShadow operations such as **create**, **import**, **backup**, or **restore**.
 
+## Syntax
+
+```
+reset
+```
+
+## Remarks
+
+-   When you use the **reset** command, you lose state from commands such as **add**, **set**, **load**, or **writer**. **Reset** also releases IVssBackupComponent interfaces and loses non-persistent shadow copies.
+
+#### Additional references
+
+[Command-Line Syntax Key](command-line-syntax-key.md)

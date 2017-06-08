@@ -7,8 +7,8 @@ ms.reviewer: na
 ms.service: 
 ms.suite: na
 ms.technology: identity-adds
-ms.author: markvi
-  
+ms.author: billmath
+ms.date: 05/31/2017
 ms.tgt_pltfrm: na
 ms.assetid: 2f7cb5ed-4730-49b7-ad76-c1bd240e8650
 author: Femila

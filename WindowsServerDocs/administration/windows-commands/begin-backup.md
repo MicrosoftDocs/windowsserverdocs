@@ -14,23 +14,23 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Begin backup
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-starts a full backup session.  
-  
-## Syntax  
-  
-```  
-begin backup  
-```  
-  
-## remarks  
-  
--   This command overrides the default copy backup setting.  
-  
-#### additional references  
-[Command-Line Syntax Key](command-line-syntax-key.md)  
-  
+Starts a full backup session.
 
+## Syntax
+
+```
+begin backup
+```
+
+## Remarks
+
+-   This command overrides the default copy backup setting.
+
+#### Additional references
+
+[Command-Line Syntax Key](command-line-syntax-key.md)

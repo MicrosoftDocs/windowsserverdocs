@@ -34,5 +34,11 @@
         topicHref: /windows-server/storage/storage
       - name: Virtualization
         tocHref: /windows-server/virtualization
-        topicHref: /windows-server/virtualization/compute
+        topicHref: /windows-server/virtualization/virtualization
+      - name: Remote
+        tocHref: /windows-server/remote
+        topicHref: /windows-server/remote/index
+      - name: Remote Desktop Services
+        tocHref: /windows-server/remote/remote-desktop-services
+        topicHref: /windows-server/remote/remote-desktop-services/welcome-to-rds
 

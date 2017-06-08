@@ -7,7 +7,7 @@ ms.topic: article
 author: JasonGerend
 manager: dongill
 ms.author: jgerend
-ms.date: 5/11/2017
+ms.date: 6/7/2017
 description: New and updated topics in the Failover Clustering documentation for Windows Server 2016
 ---
 # Change history for Failover Clustering topics in Windows Server 2016
@@ -17,6 +17,12 @@ description: New and updated topics in the Failover Clustering documentation for
 This topic lists new and updated topics in the [Failover Clustering](failover-clustering-overview.md) documentation for Windows Server 2016.
 
 > If you're looking for update history for Windows Server 2016, see [Windows 10 and Windows Server 2016 update history](https://support.microsoft.com/help/4000825/windows-10-and-windows-server-2016-update-history).
+
+## June 2017
+
+|New or changed topic|Description|
+|---|---|
+|[Cluster-Aware Updating advanced options](cluster-aware-updating-options.md)|Added info about using run profile paths that include spaces.|
 
 ## April 2017
 

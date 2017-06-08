@@ -1,14 +1,13 @@
- ---
-ms.assetid: 08724d45-9be4-4c56-a5f1-2cf40864e136
+---
 title: Multi-factor authentication and external authentication providers customization 
 description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 02/09/2017
+ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
-
+ms.assetid: 08724d45-9be4-4c56-a5f1-2cf40864e136
 ms.technology: identity-adfs
 ---
 

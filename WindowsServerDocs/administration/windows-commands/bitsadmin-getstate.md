@@ -14,23 +14,30 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # bitsadmin getstate
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Retrieves the state of the specified job.
+
 ## Syntax
+
 ```
 bitsadmin /GetState <Job>
 ```
+
 ## Parameters
+
 |Parameter|Description|
-|-------|--------|
+|---------|-----------|
 |Job|The job's display name or GUID|
-## remarks
+
+## Remarks
+
 The possible states are:
-|||
-|-|-|
+
+|-----|-----|
 |QUEUED|The job is waiting to run.|
 |CONNECTING|BITS is contacting the server.|
 |TRANSFERRING|BITS is transferring data.|
@@ -39,10 +46,14 @@ The possible states are:
 |TRANSIENT_ERROR|A recoverable error occurred; the transfer retries when the minimum retry delay expires.|
 |ACKNOWLEDGED|The job was completed.|
 |CANCELED|The job was canceled.|
+
 ## <a name="BKMK_examples"></a>Examples
+
 The following example retrieves the state for the job named *myDownloadJob*.
 ```
 C:\>bitsadmin /GetState myDownloadJob
 ```
-## additional references
+
+#### Additional references
+
 [Command-Line Syntax Key](command-line-syntax-key.md)
