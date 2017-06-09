@@ -3,12 +3,12 @@ ms.assetid: acc9101b-841c-4540-8b3c-62a53869ef7a
 title: AD FS 2016 FAQ
 description: Frequently asked questions for AD FS 2016
 author: jenfieldmsft
-ms.author: billmath
-manager: samueld
-ms.date: 05/31/2017
+ms.author:  billmath
+manager: femila
+ms.date: 05/23/2017
 ms.topic: article
+ms.custom: it-pro
 ms.prod: windows-server-threshold
-
 ms.technology: identity-adfs
 ---
 
@@ -16,50 +16,52 @@ ms.technology: identity-adfs
 
 >Applies To: Windows Server 2016
 
+The following documentation is a home to frequently asked questions with regard to Active Directory Federation Services.  The document has been split into groups based on the type of question.
 
--   [How can I upgrade/migrate from previous versions of AD FS?](AD-FS-FAQ.md#BKMK_1)  
+## Deployment 
 
--   [What third party multi-factor authentication providers are available for AD FS?](AD-FS-FAQ.md#BKMK_2)  
+### How can I upgrade/migrate from previous versions of AD FS
+You can upgrade AD FS 2012 R2 using one of the following:
 
--   [Are third party proxies supported with AD FS?](AD-FS-FAQ.md#BKMK_3)  
 
--   [Where is the capacity planning sizing spreadsheet for AD FS 2016?](AD-FS-FAQ.md#BKMK_4)  
-
--   [How do I replace the SSL certificate for AD FS?](AD-FS-FAQ.md#BKMK_5)  
-
--   [Does the proxy SSL certificate have to be the same as the AD FS SSL certificate?](AD-FS-FAQ.md#BKMK_6)  
-
--   [How can I configure prompt=login behavior for AD FS?](AD-FS-FAQ.md#BKMK_7)  
-
--   [How can I configure browsers to use Windows Integrated Authentication (WIA) with AD FS?](AD-FS-FAQ.md#BKMK_8)  
-
--   [How long are AD FS tokens valid?](AD-FS-FAQ.md#BKMK_9)  
-
--   [Why does AD FS installation require a reboot of the server?](AD-FS-FAQ.md#BKMK_10)  
-
--   [How can I ensure my AD FS and WAP servers support Apple's ATP requirements?](AD-FS-FAQ.md#BKMK_11)  
-
-## <a name="BKMK_1"></a>How can I upgrade/migrate from previous versions of AD FS?  
+- [Upgrading to AD FS in Windows Server 2016 using a WID database](../operations/Upgrading-to-AD-FS-in-Windows-Server-2016.md)
+- [Upgrading to AD FS in Windows Server 2016 using a SQL database](../deployment/Upgrading-to-AD-FS
 You can upgrade an AD FS 2012 R2 farm using the “mixed farm” process described [here](https://technet.microsoft.com/windows-server-docs/identity/ad-fs/deployment/upgrading-to-ad-fs-in-windows-server-2016).  It works for WID or SQL farms, though the document shows only the WID scenario.
 
 If you need to upgrade from AD FS 2.0 or 2.1 (Windows Server 2008 R2 or Windows Server 2012), you must use the in-box scripts (located in C:\Windows\ADFS).
 
-## <a name="BKMK_2"></a>What third party multi-factor authentication providers are available for AD FS?  
+
+## Design
+
+### What third party multi-factor authentication providers are available for AD FS? 
 Below is a list of third party providers we are aware of.  There may always be providers available that we do not know about and we will update the list as we learn about them.
 
-[Gemalto Identity & Security Services](http://www.gemalto.com/identity)
+- [Gemalto Identity & Security Services](http://www.gemalto.com/identity)
+- [inWebo Enterprise Authentication service](http://www.inwebo.com/)
+- [Login People MFA API connector](https://www.loginpeople.com)
+- [RSA SecurID Authentication Agent for Microsoft Active Directory Federation Services](http://www.emc.com/security/rsa-securid/rsa-authentication-agents/microsoft-ad-fs.htm)
+- [SafeNet Authentication Service (SAS) Agent for AD FS](http://www.safenet-inc.com/resources/integration-guide/data-protection/Safenet_Authentication_Service/SafeNet_Authentication_Service__AD_FS_Agent_Configuration_Guide/?langtype=1033)
+- [Swisscom Mobile ID Authentication Service](http://swisscom.ch/mid)
+- [Symantec Validation and ID Protection Service (VIP)](http://www.symantec.com/vip-authentication-service) 
 
-[inWebo Enterprise Authentication service](http://www.inwebo.com/)
+## Operations
 
-[Login People MFA API connector](https://www.loginpeople.com)
 
-[RSA SecurID Authentication Agent for Microsoft Active Directory Federation Services](http://www.emc.com/security/rsa-securid/rsa-authentication-agents/microsoft-ad-fs.htm)
 
-[SafeNet Authentication Service (SAS) Agent for AD FS](http://www.safenet-inc.com/resources/integration-guide/data-protection/Safenet_Authentication_Service/SafeNet_Authentication_Service__AD_FS_Agent_Configuration_Guide/?langtype=1033)
 
-Swisscom [Mobile ID Authentication Service](http://swisscom.ch/mid)
+-   [Are third party proxies supported with AD FS?](AD-FS-FAQ.md#BKMK_3)  
+-   [Where is the capacity planning sizing spreadsheet for AD FS 2016?](AD-FS-FAQ.md#BKMK_4)  
+-   [How do I replace the SSL certificate for AD FS?](AD-FS-FAQ.md#BKMK_5)  
+-   [Does the proxy SSL certificate have to be the same as the AD FS SSL certificate?](AD-FS-FAQ.md#BKMK_6)  
+-   [How can I configure prompt=login behavior for AD FS?](AD-FS-FAQ.md#BKMK_7)  
+-   [How can I configure browsers to use Windows Integrated Authentication (WIA) with AD FS?](AD-FS-FAQ.md#BKMK_8)  
+-   [How long are AD FS tokens valid?](AD-FS-FAQ.md#BKMK_9)  
+-   [Why does AD FS installation require a reboot of the server?](AD-FS-FAQ.md#BKMK_10)  
+-   [How can I ensure my AD FS and WAP servers support Apple's ATP requirements?](AD-FS-FAQ.md#BKMK_11)  
+-   [Does AD FS support HTTP Strict Transport Security (HSTS)?](AD-FS-FAQ.md#BKMK_12)
 
-[Symantec Validation and ID Protection Service (VIP)](http://www.symantec.com/vip-authentication-service)
+
+
 
 
 ## <a name="BKMK_3"></a>Are third party proxies supported with AD FS?  
@@ -184,3 +186,11 @@ In particular, you should verify that your AD FS and WAP servers support TLS 1.2
 You can enable and disable SSL 2.0 and 3.0 and TLS versions 1.0, 1.1, and 1.2 using the guidance [here](https://technet.microsoft.com/en-us/library/dn786418(v=ws.11).aspx).
 
 To ensure your AD FS and WAP servers negotiate only TLS cipher suites that support ATP, you can disable all cipher suites that are not in the [list of ATP compliant cipher suites](https://developer.apple.com/library/prerelease/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW57).  To do this, use the [Windows TLS PowerShell cmdlets](https://technet.microsoft.com/itpro/powershell/windows/tls/index).  
+
+## <a name="BKMK_12"></a>Does AD FS support HTTP Strict Transport Security (HSTS)?  
+
+HTTP Strict Transport Security (HSTS) is a web security policy mechanism which helps mitigate protocol downgrade attacks and cookie hijacking for services that have both HTTP and HTTPS endpoints. It allows web servers to declare that web browsers (or other complying user agents) should only interact with it using HTTPS and never via the HTTP protocol.
+
+All AD FS endpoints for web authentication traffic are opened exclusively over HTTPS.  As a result, AD FS effectively mitigates the threats that HTTP String Transport Security policy mechanism provides (by design there is no downgrade to HTTP since there are no listeners in HTTP). In addition, AD FS prevents the cookies from being sent to another server with HTTP protocol endpoints by marking all cookies with the secure flag.
+
+Therefore, implementing HSTS on an AD FS server is not required because it can never be downgraded.  For compliance purposes, AD FS servers meet these requirements because they can never use HTTP and all cookies are marked secure.
