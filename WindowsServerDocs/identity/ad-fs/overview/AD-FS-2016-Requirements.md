@@ -145,7 +145,7 @@ If you are using SQL Server for your AD FS configuration database, size the SQL 
 
 -   Group Managed service accounts require at least one domain controller running Windows Server 2012 or higher.  
 
--   For Kerberos authentication, the service principal name ‘HOST\/<adfs\_service\_name>’ must be registered on the AD FS service account. By default, AD FS will configure this when creating a new AD FS farm.  If this fails, such as in the case of a collision or insufficient permissions, you'll see a warning and you should add it manually.  
+-   For Kerberos authentication, the service principal name ‘`HOST/<adfs\_service\_name>`’ must be registered on the AD FS service account. By default, AD FS will configure this when creating a new AD FS farm.  If this fails, such as in the case of a collision or insufficient permissions, you'll see a warning and you should add it manually.  
    
 **Domain Requirements**  
   
