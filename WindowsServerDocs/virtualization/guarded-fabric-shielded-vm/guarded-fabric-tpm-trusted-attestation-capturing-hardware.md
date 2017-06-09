@@ -16,7 +16,7 @@ ms.date: 10/14/2016
 
 This topic describes the intermediate steps that a fabric administrator takes to prepare Hyper-V hosts to become guarded hosts using TPM-trusted attestation (TPM mode). Before taking these steps, complete the steps in [Configuring the fabric DNS for hosts that will become guarded hosts](guarded-fabric-configuring-fabric-dns.md). 
 
-For a video that illustrates the deployment process, see [Guarded fabric deployment in TPM mode](https://channel9.msdn.com/Shows/Guarded-fabric-deployment-AD-mode/Guarded-fabric-deployment-TPM-mode/).
+For a video that illustrates the deployment process, see [Guarded fabric deployment using TPM mode](https://channel9.msdn.com/Shows/Guarded-fabric-deployment-AD-mode/Guarded-fabric-deployment-TPM-mode/).
 
 ## Prerequisites 
 
