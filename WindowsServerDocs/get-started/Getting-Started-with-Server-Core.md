@@ -42,37 +42,21 @@ With the Server Core option, the standard user interface (the "Server Graphical 
 **Server roles available:**
 
 - Active Directory Certificate Services
-
 - Active Directory Domain Services
-
 - DHCP Server
-
 - DNS Server
-
 - File Services (including File Server Resource Manager)
-
 - Active Directory Lightweight Directory Services (AD LDS)
-
 - Hyper-V
-
 - Print and Document Services
-
 - Streaming Media Services
-
 - Web Server (including a subset of ASP.NET)
-
 - Windows Server Update Server
-
 - Active Directory Rights Management Server
-
 - Routing and Remote Access Server and the following sub-roles:
-
 - Remote Desktop Services Connection Broker
-
 - Licensing
-
 - Virtualization
-
 - Volume Activation Services
 
 ## Installation scenarios
