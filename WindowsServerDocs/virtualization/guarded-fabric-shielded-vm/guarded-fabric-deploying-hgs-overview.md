@@ -34,14 +34,6 @@ The following topics tell how to set up a guarded fabric.
     - [Confirm attestation](guarded-fabric-confirm-hosts-can-attest-successfully.md)
     - [Using System Center VMM to deploy guarded hosts](https://technet.microsoft.com/system-center-docs/vmm/scenario/guarded-hosts)<br><br>
 
-## Video: Deploy a guarded fabric using Admin-trusted attestation (AD Mode)
-
-> [!VIDEO https://channel9.msdn.com/Shows/Guarded-fabric-deployment-AD-mode/Guarded-fabric-deployment-AD-mode/player]
-
-
-## Video: Deploy a guarded fabric using TPM-trusted attestation (TPM Mode)
-
-> [!VIDEO https://channel9.msdn.com/Shows/Guarded-fabric-deployment-AD-mode/Guarded-fabric-deployment-TPM-mode/player]
 
 ## Deployment tasks for guarded fabrics and shielded VMs
 
