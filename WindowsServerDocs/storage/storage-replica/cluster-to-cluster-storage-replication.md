@@ -196,19 +196,19 @@ Now you will set up cluster-to-cluster replication using Windows PowerShell. You
 
 1.  Grant the first cluster full access to the other cluster by running the **Grant-ClusterAccess** cmdlet on any node in the first cluster, or remotely.  
 
-    ```  
+    ```PowerShell
     Grant-SRAccess -ComputerName SR-SRV01 -Cluster SR-SRVCLUSB  
     ```  
 
 2.  Grant the second cluster full access to the other cluster by running the **Grant-ClusterAccess** cmdlet on any node in the second cluster, or remotely.  
 
-    ```  
+    ```PowerShell
     Grant-SRAccess -ComputerName SR-SRV03 -Cluster SR-SRVCLUSA  
     ```  
 
 3.  Configure the cluster-to-cluster replication, specifying the source and destination disks, the source and destination logs, the source and destination cluster names, and the log size. You can perform this command locally on the server or using a remote management computer.  
 
-    ```PowerShell  
+    ```powershell  
     New-SRPartnership -SourceComputerName SR-SRVCLUSA -SourceRGName rg01 -SourceVolumeName c:\ClusterStorage\Volume2 -SourceLogVolumeName f: -DestinationComputerName SR-SRVCLUSB -DestinationRGName rg02 -DestinationVolumeName c:\ClusterStorage\Volume2 -DestinationLogVolumeName f:  
     ```  
 
@@ -217,7 +217,7 @@ Now you will set up cluster-to-cluster replication using Windows PowerShell. You
 
 4.  To get replication source and destination state, use **Get-SRGroup** and **Get-SRPartnership** as follows:  
 
-    ```PowerShell
+    ```powershell
     Get-SRGroup  
     Get-SRPartnership  
     (Get-SRGroup).replicas  
@@ -226,14 +226,17 @@ Now you will set up cluster-to-cluster replication using Windows PowerShell. You
 5.  Determine the replication progress as follows:  
 
     1.  On the source server, run the following command and examine events 5015, 5002, 5004, 1237, 5001, and 2200:
+        
         ```PowerShell
         Get-WinEvent -ProviderName Microsoft-Windows-StorageReplica -max 20
         ```
     2.  On the destination server, run the following command to see the Storage Replica events that show creation of the partnership. This event states the number of copied bytes and the time taken. Example:  
+        
         ```powershell
         Get-WinEvent -ProviderName Microsoft-Windows-StorageReplica | Where-Object {$_.ID -eq "1215"} | Format-List
         ```
         Here's an example of the output:
+        
         ```
         TimeCreated  : 4/8/2016 4:12:37 PM  
         ProviderName : Microsoft-Windows-StorageReplica  
