@@ -17,11 +17,11 @@ ms.date: 06/12/2017
 
 When you deploy Remote Desktop Services into your environment, it becomes a critical part of your infrastructure, particularly the apps and resources that you share with users. If any part of the RDS deployment goes down, from a network failure to a natural disaster, users can't access those apps and resources, and your business is negatively impacted. To avoid this, you can configure a disaster recovery solution that builds redundancy into your deployment - if any one RDS component is unavailable, for whatever reason, there is a backup available to automatically take over.
 
-You have a number of options available to set up disaster recovery - you can set up an [RDSH farm](rds-scale-rdsh-farm.md), ensure your [Connection Brokers are clustered for high-availability](rds-connection-broker-cluster.md), or more specifically, configure specific disaster recovery technologies and solutions. 
+You have a number of options available to set up disaster recovery - you can set up an [RDSH farm](rds-scale-rdsh-farm.md), ensure your [Connection Brokers are clustered for high availability](rds-connection-broker-cluster.md), or more specifically, configure specific disaster recovery technologies and solutions. 
 
 Use the following information to deploy disaster recovery solutions in RDS:
 
-- [Configure geo-redundant Azure data centers to ensure users can always access their data](rds-multidatacenter-deployment.md)
-- [Deploy Azure Site Recovery to provide failover for RDS components in site-to-site or site-to-Azure failovers](rds-disaster-recover-with-azure.md)
+- [Leverage multiple Azure data centers to ensure users can access your RDS deployment, even if one Azure data center goes down (geo-redundancy)](rds-multi-datacenter-deployment.md)
+- [Deploy Azure Site Recovery to provide failover for RDS components in site-to-site or site-to-Azure failovers](rds-disaster-recovery-with-azure.md)
 
 
