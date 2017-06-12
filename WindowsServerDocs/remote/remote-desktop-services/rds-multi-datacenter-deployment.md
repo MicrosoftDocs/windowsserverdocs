@@ -1,6 +1,6 @@
 ---
-title: Remote Desktop Services - Access from anywhere
-description: Learn how to create an RDS deployment that uses multiple datacenters to provide high availability across geographic locations.
+title: Geo-redundant RDS data centers in Azure
+description: Learn how to create an RDS deployment that uses multiple data centers to provide high availability across geographic locations.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -9,16 +9,16 @@ ms.technology: remote-desktop-services
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 61c36528-cf47-4af0-83c1-a883f79a73a5
-author: harowl
+author: haley-rowland
 ms.author: elizapo
-ms.date: 06/05/2017
+ms.date: 06/12/2017
 manager: dongill
 ---
-# Create a geo-redundant, multi-datacenter RDS deployment for disaster recovery
+# Create a geo-redundant, multi-data center RDS deployment for disaster recovery
 
 >Applies To: Windows Server 2016
 
-You can enable disaster recovery for your Remote Desktop Services deployment by leveraging multiple datacenters in Azure. Unlike a standard highly available RDS deployment (as outlined in the [Remote Desktop Services architecture](desktop-hosting-logical-architecture.md)), which uses datacenters in a single Azure region (for example, Western Europe), a multi-datacenter deployment uses datacenters in mulitipled geographic locations, increasing the availabilty of your deployment - one Azure datacenter might be unavailable, but it is unlikely that multiple regions would go down at the same time. By deploying a geo-redundant RDS architecture, you can enable failover in the case of catastrophic failure of an entire region.
+You can enable disaster recovery for your Remote Desktop Services deployment by leveraging multiple data centers in Azure. Unlike a standard highly available RDS deployment (as outlined in the [Remote Desktop Services architecture](desktop-hosting-logical-architecture.md)), which uses data centers in a single Azure region (for example, Western Europe), a multi-data center deployment uses data centers in mulitiple geographic locations, increasing the availabilty of your deployment - one Azure data center might be unavailable, but it is unlikely that multiple regions would go down at the same time. By deploying a geo-redundant RDS architecture, you can enable failover in the case of catastrophic failure of an entire region.
 
 You can use the instructions below to leverage Microsoft Azure infrastructure services and RDS to deliver geo-redundant desktop hosting services and Subscriber Access Licenses (SALs) to multiple tenants through the [Microsoft Service Provider License Agreement (SPLA) program](http://www.microsoft.com/hosting/licensing/splabenefits.aspx). You can also use the steps below to create a geo-redundant hosting service for your own employees using [RDS User CALs extended rights through Software Assurance](http://download.microsoft.com/download/6/B/A/6BA3215A-C8B5-4AD1-AA8E-6C93606A4CFB/Windows_Server_2012_R2_Remote_Desktop_Services_Licensing_Datasheet.pdf).
 
@@ -34,7 +34,7 @@ The deployment consists of three layers:
 - Azure Fabric - Windows Server operating systems running the Hyper-V role, usded to virtualize physical servers, storage units, network switches, and routers. Using Azure Fabric lets you create VMs, networks, storage, and applications independent from underlying hardware.
 
 
-In comparison, here is the architecture for a deployment that uses multiple Azure datacenters:
+In comparison, here is the architecture for a deployment that uses multiple Azure data centers:
 
 ![An RDS deployment that uses multiple Azure regions](media/rds-ha-multi-region.png)
 
@@ -44,7 +44,7 @@ The entire RDS deployment is replicated in a second Azure region to create a geo
 You *could* create a non-highly available RDS deployment in each region, but if even a single VM is restarted in one region, a failover would occur, increasing the likelihood of failovers occuring with associated performance impacts.
 
 ## Deployment steps
-Create the following resources in Azure to create a geo-redundant multi-datacenter RDS deployment:
+Create the following resources in Azure to create a geo-redundant multi-data center RDS deployment:
 
 1. Two resource groups in two separate Azure regions. For example RG A (the active deployment, RG stands for "resource group") and RG B (the passive deployment).
 2. A highly-available Active Directory deployment in RG A. You can use the [New AD Domain with 2 Domain Controllers template](https://azure.microsoft.com/resources/templates/active-directory-new-domain-ha-2-dc/) to create the deployment.
@@ -74,7 +74,7 @@ Create the following resources in Azure to create a geo-redundant multi-datacent
 ### Enable UPDs
 Storage Replica replicates data from a source volume (associated with the primary/active deployment) to a destination volume (associated with the secondary/passive deployment). By design, the destination cluster appears as **Online (No Access)** - Storage Replica dismounts the destination volumes and their drive letters or mount points. This means that enabling UPDs for the secondary deployment by providing the file share path will fail, because the volume is not mounted. 
 
-Want to learn more about managing replication? Check out [Cluster to cluster Storage Replication](../../storage/storage-replica/cluster-to-cluster-storage-replication.md#manage-replication.md).
+Want to learn more about managing replication? Check out [Cluster to cluster Storage Replication](../../storage/storage-replica/cluster-to-cluster-storage-replication.md).
 
 To enable UPDs on both deployments, do the following:
 
@@ -94,7 +94,7 @@ To enable UPDs on both deployments, do the following:
 
 ### Azure Traffic Manager 
 
-Create an [Azure Traffic Manager](azure/traffic-manager/traffic-manager-overview) profile, and make sure to select the **Priority** routing method. Set the two endpoints to the public IP addresses of each deployment. Under **Configuration**, change the protocol to HTTPS (instead of HTTP) and the port to 443 (instead of 80). Take note of the **DNS time to live**, and set it appropriately for your failover needs. 
+Create an [Azure Traffic Manager](/azure/traffic-manager/traffic-manager-overview) profile, and make sure to select the **Priority** routing method. Set the two endpoints to the public IP addresses of each deployment. Under **Configuration**, change the protocol to HTTPS (instead of HTTP) and the port to 443 (instead of 80). Take note of the **DNS time to live**, and set it appropriately for your failover needs. 
 
 Note that Traffic Manager requires endpoints to return 200 OK in response to a GET request in order to be marked as "healthy." The publicIP object created from the RDS templates will function, but do not add a path addendum. Instead, you can give end users the Traffic Manager URL with “/RDWeb” appended, for example: ```http://deployment.trafficmanager.net/RDWeb```
 
@@ -122,7 +122,7 @@ In the case of the Active-Passive deployment, failover requires you to start the
    Set-SRPartnership -NewSourceComputerName "cluster-b-s2d-c" -SourceRGName "cluster-b-s2d-c" -DestinationComputerName "cluster-a-s2d-c" -DestinationRGName "cluster-a-s2d-c"
    ```
 
-You can learn more in [Cluster to cluster Storage Replication](../../storage/storage-replica/cluster-to-cluster-storage-replication.md#manage-replication).
+You can learn more in [Cluster to cluster Storage Replication](../../storage/storage-replica/cluster-to-cluster-storage-replication.md).
 
 Azure Traffic Manager automatically recognizes that the primary deployment failed and that the secondary deployment is healthy (in the RD Gateway VMs have been started in RG B) and directs user traffic to the secondary deployment. Users can use the same Traffic Manager URL to continue working on their remote resources, enjoying a consistent experience. Note that the client DNS cache will not update the record for the duration of the TTL set in Azure Traffic Manager configuration.
 
@@ -132,7 +132,7 @@ In a Storage Replica partnership, only one volume (the source) can be active at 
 To test the failover while allowing users to continue logging in:
 1. Start the infrastructure VMs and RDSH VMs in RG B.
 2. Switch the SR Partnership direction (cluster-b-s2d-c becomes the source volume).
-3. [Disable the endpoint](azure/traffic-manager/traffic-manager-manage-endpoints#to-disable-an-endpoint) of RG A in the Azure Traffic Manager profile to force the ATM to direct traffic to RG B. Alternatively, use a PowerShell script:
+3. [Disable the endpoint](/azure/traffic-manager/traffic-manager-manage-endpoints#to-disable-an-endpoint) of RG A in the Azure Traffic Manager profile to force the ATM to direct traffic to RG B. Alternatively, use a PowerShell script:
 
    ```powershell
    Disable-AzureRmTrafficManagerEndpoint -Name publicIpA -Type AzureEndpoints -ProfileName MyTrafficManagerProfile -ResourceGroupName RGA -Force
