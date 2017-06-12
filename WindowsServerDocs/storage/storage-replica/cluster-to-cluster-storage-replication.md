@@ -8,8 +8,10 @@ ms.topic: get-started-article
 ms.assetid: 834e8542-a67a-4ba0-9841-8a57727ef876
 author: nedpyle
 ms.date: 10/11/2016
+description: How to use Storage Replica to replicate volumes in one cluster to another cluster running Windows Server 2016 Datacenter Edition.
 ---
 # Cluster to cluster Storage Replication
+
 > Applies To: Windows Server 2016
 
 Cluster-to-cluster replication is now available in Windows Server 2016 Datacenter Edition, including the replication of clusters using Storage Spaces Direct (i.e. shared nothing, direct-attached storage). The management and configuration is similar to server-to-server replication.  
@@ -23,7 +25,6 @@ There are no graphical tools in Windows Server 2016 Datacenter Edition that can 
 >   
 > This guide does not cover configuring Storage Spaces Direct. For information about configuring Storage Spaces Direct, see [Storage Spaces Direct in Windows Server 2016](../storage-spaces/storage-spaces-direct-overview.md).  
 
-### Terms  
 This walkthrough uses the following environment as an example:  
 
 -   Two member servers, named **SR-SRV01** and **SR-SRV02** that are later formed into a cluster named **SR-SRVCLUSA**.  
@@ -36,7 +37,7 @@ This walkthrough uses the following environment as an example:
 
 **FIGURE 1: Cluster to cluster Replication**  
 
-### Prerequisites  
+## Prerequisites  
 
 * Active Directory Domain Services forest (does not need to run Windows Server 2016).  
 * At least four servers (two servers in two clusters) with Windows Server 2016 Datacenter Edition installed. Supports up to two 64 node clusters.  
@@ -49,7 +50,8 @@ This walkthrough uses the following environment as an example:
 
 Many of these requirements can be determined by using the `Test-SRTopology` cmdlet. You get access to this tool if you install Storage Replica or the Storage Replica Management Tools features on at least one server. There is no need to configure Storage Replica to use this tool, only to install the cmdlet. More information is included in the steps below.  
 
-### Provision operating system, features, roles, storage, and network  
+## Step 1: Provision operating system, features, roles, storage, and network
+
 1.  Install Windows Server 2016 on all four server nodes with an installation type of Windows Server 2016 Datacenter **(Desktop Experience)**. Do not choose Standard Edition if it is available, as it does not contain Storage Replica.  
 
 2.  Add network information and join them to the domain, then restart them.  
@@ -136,10 +138,10 @@ For example,
 
     ![Screen showing replication topology report results](./media/Cluster-to-Cluster-Storage-Replication/SRTestSRTopologyReport.png)      
 
-### Configure two Scale-Out File Server Failover Clusters  
+## Step 2: Configure two Scale-Out File Server Failover Clusters  
 You will now create two normal failover clusters. After configuration, validation, and testing, you will replicate them using Storage Replica. You can perform all of the steps below on the cluster nodes directly or from a remote management computer that contains the Windows Server 2016 RSAT management tools.  
 
-#### Graphical method  
+### Graphical method  
 
 1.  Run **cluadmin.msc** against a node in each site.  
 
@@ -159,7 +161,7 @@ You will now create two normal failover clusters. After configuration, validatio
 
 6.  Create the clustered Scale-Out File Servers on both clusters using the instructions in [Configure Scale-Out File Server](http://technet.microsoft.com/library/hh831718.aspx)  
 
-#### Windows PowerShell method  
+### Windows PowerShell method  
 
 1.  Test the proposed cluster and analyze the results to ensure you can continue:  
 
@@ -189,8 +191,8 @@ You will now create two normal failover clusters. After configuration, validatio
 
 4.  Create the clustered Scale-Out File Servers on both clusters using the instructions in [Configure Scale-Out File Server](https://technet.microsoft.com/library/hh831718.aspx)  
 
-### Configure Cluster to Cluster Replication using Windows PowerShell  
-Now you will configure cluster-to-cluster replication using Windows PowerShell. You can perform all of the steps below on the nodes directly or from a remote management computer that contains the Windows Server 2016 RSAT management tools  
+## Step 3: Set up Cluster to Cluster Replication using Windows PowerShell  
+Now you will set up cluster-to-cluster replication using Windows PowerShell. You can perform all of the steps below on the nodes directly or from a remote management computer that contains the Windows Server 2016 RSAT management tools  
 
 1.  Grant the first cluster full access to the other cluster by running the **Grant-ClusterAccess** cmdlet on any node in the first cluster, or remotely.  
 
@@ -223,16 +225,16 @@ Now you will configure cluster-to-cluster replication using Windows PowerShell. 
 
 5.  Determine the replication progress as follows:  
 
-    1.  On the source server, run the following command and examine events 5015, 5002, 5004, 1237, 5001, and 2200:  
-
-        ```  
-        Get-WinEvent -ProviderName Microsoft-Windows-StorageReplica -max 20  
-        ```  
-
+    1.  On the source server, run the following command and examine events 5015, 5002, 5004, 1237, 5001, and 2200:
+        ```PowerShell
+        Get-WinEvent -ProviderName Microsoft-Windows-StorageReplica -max 20
+        ```
     2.  On the destination server, run the following command to see the Storage Replica events that show creation of the partnership. This event states the number of copied bytes and the time taken. Example:  
-        ```  
-        Get-WinEvent -ProviderName Microsoft-Windows-StorageReplica | Where-Object {$_.ID -eq "1215"} | fl  
-
+        ```powershell
+        Get-WinEvent -ProviderName Microsoft-Windows-StorageReplica | Where-Object {$_.ID -eq "1215"} | Format-List
+        ```
+        Here's an example of the output:
+        ```
         TimeCreated  : 4/8/2016 4:12:37 PM  
         ProviderName : Microsoft-Windows-StorageReplica  
         Id           : 1215  
@@ -249,8 +251,7 @@ Now you will configure cluster-to-cluster replication using Windows PowerShell. 
             Number of Bytes Recovered: 68583161856  
             Elapsed Time (seconds): 117  
         ```
-
-    1. Alternately, the destination server group for the replica states the number of byte remaining to copy at all times, and can be queried through PowerShell. For example:
+    3. Alternately, the destination server group for the replica states the number of byte remaining to copy at all times, and can be queried through PowerShell. For example:
 
        ```PowerShell
        (Get-SRGroup).Replicas | Select-Object numofbytesremaining
@@ -266,7 +267,7 @@ Now you will configure cluster-to-cluster replication using Windows PowerShell. 
         }
         ```
 
-1. On the destination server in the destination cluster, run the following command and examine events 5009, 1237, 5001, 5015, 5005, and 2200 to understand the processing progress. There should be no warnings of errors in this sequence. There will be many 1237 events; these indicate progress.  
+6. On the destination server in the destination cluster, run the following command and examine events 5009, 1237, 5001, 5015, 5005, and 2200 to understand the processing progress. There should be no warnings of errors in this sequence. There will be many 1237 events; these indicate progress.  
     
    ```PowerShell
    Get-WinEvent -ProviderName Microsoft-Windows-StorageReplica | FL  
@@ -274,7 +275,8 @@ Now you will configure cluster-to-cluster replication using Windows PowerShell. 
    > [!NOTE]  
         > The destination cluster disk will always show as **Online (No Access)** when replicated.  
 
-### Manage replication  
+## Step 4: Manage replication
+
 Now you will manage and operate your cluster-to-cluster replication. You can perform all of the steps below on the cluster nodes directly or from a remote management computer that contains the Windows Server 2016 RSAT management tools.  
 
 1.  Use **Get-ClusterGroup** or **Failover Cluster Manager** to determine the current source and destination of replication and their status.  
@@ -333,11 +335,11 @@ Now you will manage and operate your cluster-to-cluster replication. You can per
 
     -   \Storage Replica Statistics(*)\Number of Messages Sent  
 
-    For more information on performance counters in Windows PowerShell, see [Get-Counter](http://technet.microsoft.com/library/hh849685.aspx).  
+    For more information on performance counters in Windows PowerShell, see [Get-Counter](https://technet.microsoft.com/library/hh849685.aspx).  
 
 3.  To move the replication direction from one site, use the **Set-SRPartnership** cmdlet.  
 
-    ```  
+    ```PowerShell
     Set-SRPartnership -NewSourceComputerName SR-SRVCLUSB -SourceRGName rg02 -DestinationComputerName SR-SRVCLUSA -DestinationRGName rg01  
     ```  
 
@@ -356,21 +358,19 @@ Now you will manage and operate your cluster-to-cluster replication. You can per
 
 5.  To remove replication, use **Get-SRGroup**, **Get-SRPartnership**, **Remove-SRGroup**, and **Remove-SRPartnership** on each cluster.  
 
-    ```  
+    ```powershell
     Get-SRPartnership | Remove-SRPartnership  
     Get-SRGroup | Remove-SRGroup  
     ```  
 
     > [!NOTE]  
-    > Storage Replica dismounts the destination volumes and their drive letters or mount points. This is by design.  
+    > Storage Replica dismounts the destination volumes and their drive letters or mount points. This is by design.
 
-### Related Topics  
--   [Storage Replica Overview](storage-replica-overview.md)  
+## See also
+
+-   [Storage Replica Overview](storage-replica-overview.md) 
 -   [Stretch Cluster Replication Using Shared Storage](stretch-cluster-replication-using-shared-storage.md)  
 -   [Server to Server Storage Replication](server-to-server-storage-replication.md)  
 -   [Storage Replica: Known Issues](storage-replica-known-issues.md)  
 -   [Storage Replica: Frequently Asked Questions](storage-replica-frequently-asked-questions.md)  
-
-## See Also  
--   [Windows Server 2016](../../get-started/windows-server-2016.md)  
 -   [Storage Spaces Direct in Windows Server 2016](../storage-spaces/storage-spaces-direct-overview.md)  
