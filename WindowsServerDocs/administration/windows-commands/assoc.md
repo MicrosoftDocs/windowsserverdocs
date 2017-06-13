@@ -14,27 +14,37 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # assoc
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Displays or modifies file name extension associations. If used without parameters, **assoc** displays a list of all the current file name extension associations.
-for examples of how to use this command, see [Examples](#BKMK_examples).
+
+For examples of how to use this command, see [Examples](#BKMK_examples).
+
 ## Syntax
+
 ```
-assoc [<.ext>[=[<Filetype>]]]
+assoc [<.ext>[=[<FileType>]]]
 ```
+
 ## Parameters
+
 |Parameter|Description|
-|-------|--------|
+|---------|-----------|
 |<.ext>|Specifies the file name extension.|
-|<Filetype>|Specifies the file type to associate with the specified file name extension.|
+|\<FileType>|Specifies the file type to associate with the specified file name extension.|
 |/?|Displays help at the command prompt.|
-## remarks
+
+## Remarks
+
 -   To remove the file type association for a file name extension, add a white space after the equal sign by pressing the SPACEBAR.
 -   To view current file types that have open command strings defined, use the **ftype** command.
 -   To redirect the output of **assoc** to a text file, use the **>** redirection operator.
+
 ## <a name="BKMK_examples"></a>Examples
+
 To view the current file type association for the file name extension .txt, type:
 ```
 assoc .txt
@@ -43,8 +53,10 @@ To remove the file type association for the file name extension .bak, type:
 ```
 assoc .bak= 
 ```
+
 > [!NOTE]
 > Be sure to add a space after the equal sign.
+
 To view the output of **assoc** one screen at a time, type:
 ```
 assoc | more
@@ -53,5 +65,7 @@ To send the output of **assoc** to the file assoc.txt, type:
 ```
 assoc>assoc.txt
 ```
-#### additional references
+
+#### Additional references
+
 [Command-Line Syntax Key](command-line-syntax-key.md)

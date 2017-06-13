@@ -14,20 +14,27 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # nslookup set search
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-appends the Domain Name System (DNS) domain names in the DNS domain search list to the request until an answer is received. This applies when the set and the lookup request contain at least one period, but do not end with a trailing period.
+Appends the Domain Name System (DNS) domain names in the DNS domain search list to the request until an answer is received. This applies when the set and the lookup request contain at least one period, but do not end with a trailing period.
+
 ## Syntax
+
 ```
 set [no]search
 ```
+
 ## Parameters
+
 |Parameter|Description|
-|-------|--------|
+|---------|-----------|
 |**nosearch**|Stops appending the Domain Name System (DNS) domain names in the DNS domain search list to the request.|
-|**search**|appends the Domain Name System (DNS) domain names in the DNS domain search list to the request until an answer is received. The default syntax is **search**.|
-|{help &#124; ?}|Displays a short summary of **nslookup** subcommands.|
-## additional references
+|**search**|Appends the Domain Name System (DNS) domain names in the DNS domain search list to the request until an answer is received. The default syntax is **search**.|
+|{help | ?}|Displays a short summary of **nslookup** subcommands.|
+
+#### Additional references
+
 [Command-Line Syntax Key](command-line-syntax-key.md)

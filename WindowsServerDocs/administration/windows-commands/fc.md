@@ -14,37 +14,46 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # fc
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-compares two files or sets of files and displays the differences between them.
-for examples of how to use this command, see [Examples](#BKMK_examples).
+Compares two files or sets of files and displays the differences between them.
+
+For examples of how to use this command, see [Examples](#BKMK_examples).
+
 ## Syntax
+
 ```
-fc /a [/c] [/l] [/lb<N>] [/n] [/off[line]] [/t] [/u] [/w] [/<NNNN>] [<Drive1>:][<path1>]<FileName1> [<Drive2>:][<path2>]<FileName2>
-fc /b [<Drive1:>][<path1>]<FileName1> [<Drive2:>][<path2>]<FileName2>
+fc /a [/c] [/l] [/lb<N>] [/n] [/off[line]] [/t] [/u] [/w] [/<NNNN>] [<Drive1>:][<Path1>]<FileName1> [<Drive2>:][<Path2>]<FileName2>
+fc /b [<Drive1:>][<Path1>]<FileName1> [<Drive2:>][<Path2>]<FileName2>
 ```
+
 ## Parameters
+
 |Parameter|Description|
-|-------|--------|
+|---------|-----------|
 |/a|Abbreviates the output of an ASCII comparison. Instead of displaying all of the lines that are different, **fc** displays only the first and last line for each set of differences.|
-|/b|compares the two files in binary mode, byte by byte, and does not attempt to resynchronize the files after finding a mismatch. This is the default mode for comparing files that have the following file extensions: .exe, .com, .sys, .obj, .lib, or .bin.|
+|/b|Compares the two files in binary mode, byte by byte, and does not attempt to resynchronize the files after finding a mismatch. This is the default mode for comparing files that have the following file extensions: .exe, .com, .sys, .obj, .lib, or .bin.|
 |/c|Ignores the letter case.|
-|/l|compares the files in ASCII mode, line-by-line, and attempts to resynchronize the files after finding a mismatch. This is the default mode for comparing files, except files with the following file extensions: .exe, .com, .sys, .obj, .lib, or .bin.|
-|/lb<N>|Sets the number of lines for the internal line buffer to *N*. The default length of the line buffer is 100 lines. If the files that you are comparing have more than 100 consecutive differing lines, **fc** cancels the comparison.|
+|/l|Compares the files in ASCII mode, line-by-line, and attempts to resynchronize the files after finding a mismatch. This is the default mode for comparing files, except files with the following file extensions: .exe, .com, .sys, .obj, .lib, or .bin.|
+|/lb\<N>|Sets the number of lines for the internal line buffer to *N*. The default length of the line buffer is 100 lines. If the files that you are comparing have more than 100 consecutive differing lines, **fc** cancels the comparison.|
 |/n|Displays the line numbers during an ASCII comparison.|
 |/off[line]|Does not skip files that have the offline attribute set.|
 |/t|Prevents **fc** from converting tabs to spaces. The default behavior is to treat tabs as spaces, with stops at each eighth character position.|
-|/u|compares files as Unicode text files.|
-|/w|compresses white space (that is, tabs and spaces) during the comparison. If a line contains many consecutive spaces or tabs, **/w** treats these characters as a single space. When used with **/w**, **fc** ignores white space at the beginning and end of a line.|
-|/<NNNN>|Specifies the number of consecutive lines that must match following a mismatch, before **fc** considers the files to be resynchronized. If the number of matching lines in the files is less than *NNNN*, **fc** displays the matching lines as differences. The default value is 2.|
-|[<Drive1>:][<path1>]<FileName1>|Specifies the location and name of the first file or set of files to compare. *FileName1* is required.|
-|[<Drive2>:][<path2>]<FileName2>|Specifies the location and name of the second file or set of files to compare. *FileName2* is required.|
+|/u|Compares files as Unicode text files.|
+|/w|Compresses white space (that is, tabs and spaces) during the comparison. If a line contains many consecutive spaces or tabs, **/w** treats these characters as a single space. When used with **/w**, **fc** ignores white space at the beginning and end of a line.|
+|/\<NNNN>|Specifies the number of consecutive lines that must match following a mismatch, before **fc** considers the files to be resynchronized. If the number of matching lines in the files is less than *NNNN*, **fc** displays the matching lines as differences. The default value is 2.|
+|[\<Drive1>:][<Path1>]<FileName1>|Specifies the location and name of the first file or set of files to compare. *FileName1* is required.|
+|[\<Drive2>:][<Path2>]<FileName2>|Specifies the location and name of the second file or set of files to compare. *FileName2* is required.|
 |/?|Displays help at the command prompt.|
-## remarks
+
+## Remarks
+
 -   Reporting differences between files for an ASCII comparison
-    When you use **fc** for an ASCII comparison, **fc** displays the differences between two files in the following order:
+
+    When you use **fc** for an ASCII comparison, **fc** displays the differences between two files in the following order:  
     -   Name of the first file
     -   Lines from *FileName1* that differ between the files
     -   First line to match in both files
@@ -52,16 +61,25 @@ fc /b [<Drive1:>][<path1>]<FileName1> [<Drive2:>][<path2>]<FileName2>
     -   Lines from *FileName2* that differ
     -   First line to match
 -   Using **/b** for binary comparisons
+
     **/b** displays mismatches that are found during a binary comparison in the following syntax:
-    `<XXXXXXXX: YY ZZ>`
-    The value of *XXXXXXXX* specifies the relative hexadecimal address for the pair of bytes, measured from the beginning of the file. addresses start at 00000000. The hexadecimal values for *YY* and *ZZ* represent the mismatched bytes from *FileName1* and *FileName2*, respectively.
+
+    `\<XXXXXXXX: YY ZZ>`
+
+    The value of *XXXXXXXX* specifies the relative hexadecimal address for the pair of bytes, measured from the beginning of the file. Addresses start at 00000000. The hexadecimal values for *YY* and *ZZ* represent the mismatched bytes from *FileName1* and *FileName2*, respectively.
 -   Using wildcard characters
-    You can use wildcard characters (**\*** and **?**) in *FileName1* and *FileName2*. If you use a wildcard in *FileName1*, **fc** compares all the specified files to the file or set of files specified by *FileName2*. If you use a wildcard in *FileName2*, **fc** uses the corresponding value from *FileName1*.
+
+    You can use wildcard characters (**&#42;** and **?**) in *FileName1* and *FileName2*. If you use a wildcard in *FileName1*, **fc** compares all the specified files to the file or set of files specified by *FileName2*. If you use a wildcard in *FileName2*, **fc** uses the corresponding value from *FileName1*.
 -   Working with memory
+
     When comparing ASCII files, **fc** uses an internal buffer (large enough to hold 100 lines) as storage. If the files are larger than the buffer, **fc** compares what it can load into the buffer. If **fc** does not find a match in the loaded portions of the files, it stops and displays the following message:
+
     `Resynch failed. Files are too different.`
+
     When comparing binary files that are larger than the available memory, **fc** compares both files completely, overlaying the portions in memory with the next portions from the disk. The output is the same as that for files that fit completely in memory.
+
 ## <a name="BKMK_examples"></a>Examples
+
 To make an ASCII comparison of two text files, Monthly.rpt and Sales.rpt, and display the results in abbreviated format, type:
 ```
 fc /a monthly.rpt sales.rpt 
@@ -79,12 +97,12 @@ Results similar to the following appear:
 ...
 ...
 000005E8: 00 6E
-fc: Earnings.bat longer than Profits.bat
+FC: Earnings.bat longer than Profits.bat
 ```
-if the Profits.bat and Earnings.bat files are identical, **fc** displays the following message:
+If the Profits.bat and Earnings.bat files are identical, **fc** displays the following message:
 ```
-comparing files Profits.bat and Earnings.bat
-fc: no differences encountered
+Comparing files Profits.bat and Earnings.bat
+FC: no differences encountered
 ```
 To compare every .bat file in the current directory with the file New.bat, type:
 ```
@@ -98,5 +116,7 @@ To compare each batch file in the root directory on drive C to the file with the
 ```
 fc c:*.bat d:*.bat
 ```
-#### additional references
+
+#### Additional references
+
 [Command-Line Syntax Key](command-line-syntax-key.md)

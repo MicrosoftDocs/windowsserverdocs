@@ -43,6 +43,7 @@
 ## [Run and tune](rds-run-and-tune.md)
 ### [Set up and configure RemoteFX vGPU for Remote Desktop Services](rds-remotefx-vgpu.md)
 ### [Manage personal desktop session collections](rds-manage-personal-collection.md)
+### [Recommended configuration for VDI desktops](rds-vdi-recommendations.md)
 ### [Manage users in your RDS collection](rds-user-management.md)
 ### [Set up disaster recovery for your RDS environment with Azure Site Recovery](rds-disaster-recovery-with-azure.md)
 #### [Enable disaster recovery for RDS components](rds-enable-dr-with-asr.md)

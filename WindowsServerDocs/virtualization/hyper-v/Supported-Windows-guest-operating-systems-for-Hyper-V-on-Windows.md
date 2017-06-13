@@ -1,6 +1,6 @@
 ---
 title: Supported Windows guest operating systems for Hyper-V on Windows Server 2016
-description: "Lists the Windows operating systems supported for use as a guest in a virtual machine. Also gives links to similar articles for previous versions of Hyper-V."
+description: Lists the Windows operating systems supported for use as a guest in a virtual machine. Also gives links to similar articles for previous versions of Hyper-V.
 ms.prod: windows-server-threshold
 ms.service: na
 manager: dongill
@@ -8,9 +8,9 @@ ms.technology: compute-hyper-v
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 06b35897-2192-48b7-8c2d-125c520b0786
-author: KBDAzure
-ms.author: kathydav
-ms.date: 05/17/2017
+author: lizap
+ms.author: elizapo
+ms.date: 06/12/2017
 ---
 # Supported Windows guest operating systems for Hyper-V on Windows Server 2016
 
@@ -29,7 +29,8 @@ Following are the versions of Windows Server that are supported as guest operati
 |Windows Server 2016 |240 for generation 2;<br>64 for generation 1|Built-in|| 
 |Windows Server 2012 R2 |64|Built-in||  
 |Windows Server 2012 |64|Built-in||  
-|Windows Server 2008 R2 with Service Pack 1 (SP 1)|64|Install all critical Windows updates after you set up the guest operating system.|Datacenter, Enterprise, Standard and Web editions.|  
+|Windows Server 2008 R2 with Service Pack 1 (SP 1)|64|Install all critical Windows updates after you set up the guest operating system.|Datacenter, Enterprise, Standard and Web editions.|
+|Windows Server 2008 with Service Pack 2 (SP2)|8|Install all critical Windows updates after you set up the guest operating system.|Datacenter, Enterprise, Standard and Web editions (32-bit and 64-bit).|  
   
 ## Supported Windows client guest operating systems  
 

@@ -14,19 +14,26 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # bitsadmin cache and getexpirationtime
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Retrieves the cache expiration time.
+
 ## Syntax
+
 ```
-bitsadmin /Cache /GetExpirationtime 
+bitsadmin /Cache /GetExpirationTime 
 ```
+
 ## <a name="BKMK_examples"></a>Examples
+
 The following retrieves the cache expiration time.
 ```
-C:\>bitsadmin /Cache /GetExpirationtime
+C:\>bitsadmin /Cache /GetExpirationTime
 ```
-## additional references
+
+#### Additional references
+
 [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -14,36 +14,46 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # auditpol
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Displays information about and performs functions to manipulate audit policies.  
-for examples of how this command can be used, see the Examples section in each topic.  
-## Syntax  
-```  
-auditpol command [<sub-command><options>]  
-```  
-## Parameters  
-|Sub-command|Description|  
-|--------|--------|  
-|/get|Displays the current audit policy.<br /><br />See [auditpol get](auditpol-get.md) for syntax and options.|  
-|/set|Sets the audit policy.<br /><br />See [auditpol set](auditpol-set.md) for syntax and options.|  
-|/list|Displays selectable policy elements.<br /><br />See [auditpol list](auditpol-list.md) for syntax and options.|  
-|/backup|Saves the audit policy to a file.<br /><br />See [auditpol backup](auditpol-backup.md) for syntax and options.|  
-|/restore|Restores the audit policy from a file that was previously created by using auditpol /backup.<br /><br />See [auditpol restore](auditpol-restore.md) for syntax and options.|  
-|/clear|Clears the audit policy.<br /><br />See [auditpol clear](auditpol-clear.md) for syntax and options.|  
-|/remove|removes all per-user audit policy settings and disables all system audit policy settings.<br /><br />See [auditpol remove](auditpol-remove.md) for syntax and options.|  
-|/resourceSACL|Configures global resource system access control lists (SAcls). **Note:** Applies only to  Windows 7  and  Windows Server 2008 R2 .<br /><br />See [auditpol resourceSACL](auditpol-resourcesacl.md).|  
-|/?|Displays help at the command prompt.|  
-## remarks  
-The audit policy command-line tool can be used to:  
--   Set and query a system audit policy.  
--   Set and query a per-user audit policy.  
--   Set and query auditing options.  
--   Set and query the security descriptor used to delegate access to an audit policy.  
--   Report or back up an audit policy to a comma-separated value (CSV) text file.  
--   Load an audit policy from a CSV text file.  
--   Configure global resource SAcls.  
-#### additional references  
-[Command-Line Syntax Key](command-line-syntax-key.md)  
+Displays information about and performs functions to manipulate audit policies.
+
+For examples of how this command can be used, see the Examples section in each topic.
+
+## Syntax
+
+```
+Auditpol command [<sub-command><options>]
+```
+
+## Parameters
+
+|Sub-command|Description|
+|-----------|-----------|
+|/get|Displays the current audit policy.</br>See [Auditpol get](auditpol-get.md) for syntax and options.|
+|/set|Sets the audit policy.</br>See [Auditpol set](auditpol-set.md) for syntax and options.|
+|/list|Displays selectable policy elements.</br>See [Auditpol list](auditpol-list.md) for syntax and options.|
+|/backup|Saves the audit policy to a file.</br>See [Auditpol backup](auditpol-backup.md) for syntax and options.|
+|/restore|Restores the audit policy from a file that was previously created by using auditpol /backup.</br>See [Auditpol restore](auditpol-restore.md) for syntax and options.|
+|/clear|Clears the audit policy.</br>See [Auditpol clear](auditpol-clear.md) for syntax and options.|
+|/remove|Removes all per-user audit policy settings and disables all system audit policy settings.</br>See [Auditpol remove](auditpol-remove.md) for syntax and options.|
+|/resourceSACL|Configures global resource system access control lists (SACLs).</br>Note: Applies only to Windows 7 and Windows Server 2008 R2.</br>See [Auditpol resourceSACL](auditpol-resourcesacl.md).|
+|/?|Displays help at the command prompt.|
+
+## Remarks
+
+The audit policy command-line tool can be used to:
+-   Set and query a system audit policy.
+-   Set and query a per-user audit policy.
+-   Set and query auditing options.
+-   Set and query the security descriptor used to delegate access to an audit policy.
+-   Report or back up an audit policy to a comma-separated value (CSV) text file.
+-   Load an audit policy from a CSV text file.
+-   Configure global resource SACLs.
+
+#### Additional references
+
+[Command-Line Syntax Key](command-line-syntax-key.md)

@@ -14,30 +14,45 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # secedit:validate
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Validates the security settings stored in a security template (.inf file). For examples of how this command can be used, see [Examples](secedit-validate.md#BKMK_Examples).
+Validates the security settings stored in a security template (.inf file). For examples of how this command can be used, see [Examples](#BKMK_Examples).
+
 ## Syntax
+
 ```
-secedit /validate <configuration file name>
+Secedit /validate <configuration file name>  
+
 ```
+
 ### Parameters
+
 |Parameter|Description|
-|-------|--------|
-|Configuration file name|Required.<br /><br />Specifies the path and file name for the security template that will be validated.|
-## remarks
+|---------|-----------|
+|Configuration file name|Required.</br>Specifies the path and file name for the security template that will be validated.|
+
+## Remarks
+
 Validating security templates can help you if one is corrupted or inappropriately set.
+
 An invalid security template will not be applied.
+
 The log file will not be updated.
-In Windows Server 2008, `secedit /refreshpolicy` has been replaced with `gpupdate`. For information on how to refresh security settings, see [gpupdate](gpupdate.md).
+
+In Windows Server 2008, `Secedit /refreshpolicy` has been replaced with `gpupdate`. For information on how to refresh security settings, see [Gpupdate](gpupdate.md).
+
 ## <a name="BKMK_Examples"></a>Examples
+
 After a rollback is performed on a security template, you want to verify that the rollback inf file, secRBKcontoso.inf, is valid.
 ```
-secedit /validate secRBKcontoso.inf
+Secedit /validate secRBKcontoso.inf
 ```
-## additional references
--   [secedit:generaterollback](secedit-generaterollback.md)
--   [secedit](secedit.md)
+
+#### Additional references
+
+-   [Secedit:generaterollback](secedit-generaterollback.md)
+-   [Secedit](secedit.md)
 -   [Command-Line Syntax Key](command-line-syntax-key.md)

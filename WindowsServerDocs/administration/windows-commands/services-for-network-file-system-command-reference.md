@@ -14,22 +14,21 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Services for Network File System Command Reference
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Services for Network File System \(NFS\) provides a file sharing solution that enables you to transfer files between computers running Windows Server 2008 and UNIX operating systems using the NFS protocol.  
-  
-The following is a list of NFS command\-line tools.  
-  
-|Command|Description|  
-|------|--------|  
-|[mapadmin](mapadmin.md)|Manage User Name Mapping for Microsoft Services for Network File System.|  
-|[mount](mount.md)|mount Network File System \(NFS\) network shares.|  
-|[nfsadmin](nfsadmin.md)|Manage Server for NFS and Client for NFS.|  
-|[nfsshare](nfsshare.md)|Control Network File System \(NFS\) shares.|  
-|[nfsstat](nfsstat.md)|Display or reset counts of calls made to Server for NFS.|  
-|[rpcinfo](rpcinfo.md)|list programs on remote computers.|  
-|[showmount](showmount.md)|Display mounted directories.|
-  
+Services for Network File System (NFS) provides a file sharing solution that enables you to transfer files between computers running Windows Server 2008 and UNIX operating systems using the NFS protocol.
 
+The following is a list of NFS command-line tools.
+
+|Command|Description|
+|-------|-----------|
+|[mapadmin](mapadmin.md)|Manage User Name Mapping for Microsoft Services for Network File System.|
+|[Mount](mount.md)|Mount Network File System (NFS) network shares.|
+|[Nfsadmin](nfsadmin.md)|Manage Server for NFS and Client for NFS.|
+|[Nfsshare](nfsshare.md)|Control Network File System (NFS) shares.|
+|[Nfsstat](nfsstat.md)|Display or reset counts of calls made to Server for NFS.|
+|[Rpcinfo](rpcinfo.md)|List programs on remote computers.|
+|[Showmount](showmount.md)|Display mounted directories.|

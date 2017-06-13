@@ -14,33 +14,32 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # convert_1
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-converts a disk from one disk type to another.  
-  
-## Syntax  
-  
-```  
-convert basic  
-convert dynamic  
-convert gpt  
-convert mbr  
-```  
-  
-## Parameters  
-  
-|Parameter|Description|  
-|-------|--------|  
-|[convert basic](convert-basic.md)|converts an empty dynamic disk into a basic disk.|  
-|[convert dynamic](convert-dynamic.md)|converts a basic disk into a dynamic disk.|  
-|[convert gpt](convert-gpt.md)|converts an empty basic disk with the master boot record \(MBR\) partition style into a basic disk with the GUID partition table \(gpt\) partition style.|  
-|[convert mbr](convert-mbr.md)|converts an empty basic disk with the GUID Partition Table \(gpt\) partition style into a basic disk with the master boot record \(MBR\) partition style.|  
-  
-#### additional references  
-[Command-Line Syntax Key](command-line-syntax-key.md)  
-  
+Converts a disk from one disk type to another.
 
-  
+## Syntax
+
+```
+convert basic
+convert dynamic
+convert gpt
+convert mbr
+```
+
+## Parameters
+
+|Parameter|Description|
+|---------|-----------|
+|[Convert basic](convert-basic.md)|Converts an empty dynamic disk into a basic disk.|
+|[Convert dynamic](convert-dynamic.md)|Converts a basic disk into a dynamic disk.|
+|[Convert gpt](convert-gpt.md)|Converts an empty basic disk with the master boot record (MBR) partition style into a basic disk with the GUID partition table (GPT) partition style.|
+|[Convert mbr](convert-mbr.md)|Converts an empty basic disk with the GUID Partition Table (GPT) partition style into a basic disk with the master boot record (MBR) partition style.|
+
+#### Additional references
+
+[Command-Line Syntax Key](command-line-syntax-key.md)
 

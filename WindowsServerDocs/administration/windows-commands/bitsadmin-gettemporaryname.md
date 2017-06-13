@@ -14,9 +14,10 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # bitsadmin gettemporaryname
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Reports the temporary filename of the given file within the job.
 
@@ -29,18 +30,17 @@ bitsadmin /GetTemporaryName <Job> <file index>
 ## Parameters
 
 |Parameter|Description|
-|-------|--------|
+|---------|-----------|
 |Job|The job's display name or GUID|
-|File index|starts from 0|
+|File index|Starts from 0|
 
 ## <a name="BKMK_examples"></a>Examples
-The following example reports the temporary filename of file 2 for the job named *myJob*.
 
+The following example reports the temporary filename of file 2 for the job named *myJob*.
 ```
 C:\>bitsadmin /GetTemporaryName myJob 1 
 ```
 
-## additional references
+#### Additional references
+
 [Command-Line Syntax Key](command-line-syntax-key.md)
-
-
