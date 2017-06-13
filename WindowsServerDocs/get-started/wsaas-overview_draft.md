@@ -15,12 +15,12 @@ ms.assetid: 9cf87597-b15d-4f43-8aa1-91e60367f011
 >Applies To: Windows Server Semi-annual Channel
 
 # Windows Server in the Semi-annual Channel (working title)
-The Windows Server release model is offering a new option in order to align with similar release and servicing models for Windows 10 [LINK] and Office 365 ProPlus [LINK]. If you've been working with Windows 10 or Office 365 ProPlus, these improvements might already be familiar to you.
+The Windows Server release model is offering a new option in order to align with similar release and servicing models for Windows 10 [LINK] and Office 365 ProPlus [LINK]. If you've been working with [Windows 10](https://docs.microsoft.com/en-us/windows/deployment/update/waas-overview) or [Office 365 ProPlus](https://support.office.com/en-us/article/Overview-of-the-upcoming-changes-to-Office-365-ProPlus-update-management-78b33779-9356-4cdf-9d2c-08350ef05cca?ui=en-US&rs=en-US&ad=US), these improvements might already be familiar to you.
 
 **There will be two primary release channels available to Windows Server customers, the Long-term Servicing Channel, and the new Semi-annual Channel.**
 
 ## Long-term Servicing Channel
-This is the release model you’re already familiar with (currently called the “Long-term Servicing *Branch*”) where a new major version of Windows Server is released every 2-3 years and entitled to 5 years of mainstream support and 6 years of support with Premium Assurance [Link]. This channel is appropriate for systems that require a longer servicing option and functional stability. Deployments of Windows Server 2016 and earlier versions of Windows Server will not be affected by the new Semi-annual Channel releases. The Long-term Servicing Channel will continue to receive security and non-security updates, but it will not receive the new features and functionality.
+This is the release model you’re already familiar with (currently called the “Long-term Servicing *Branch*”) where a new major version of Windows Server is released every 2-3 years and entitled to 5 years of mainstream support and 6 years of support with [Premium Assurance](https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-default.aspx). This channel is appropriate for systems that require a longer servicing option and functional stability. Deployments of Windows Server 2016 and earlier versions of Windows Server will not be affected by the new Semi-annual Channel releases. The Long-term Servicing Channel will continue to receive security and non-security updates, but it will not receive the new features and functionality.
 
 # Semi-annual Channel
 The Semi-annual Channel releases will deliver new functionality for customers who are moving at a “cloud cadence," such as those on rapid development cycles or hosters keeping up with the latest Hyper-V investments. Windows Server products in the Semi-annual Channel will have new releases available twice a year, in March and September. Each release in this channel will be supported for 18 months from the initial release.
@@ -68,9 +68,17 @@ With all these options, which an organization chooses depends on the resources, 
 |System Center Configuration Manager|	Yes|	Yes|	BranchCache, Client Peer Cache|	Distribution points, multiple deployment options|
 
 ## Windows Insider Program
-For many IT pros and application developers, gaining visibility into new functionality early—before they’re released - can be both intriguing and valuable. Testing the early builds of Windows Server helps both Microsoft and its customers because of the opportunity to discover possible issues before release. It also gives customers a unique opportunity to directly influence the functionality in the product. Microsoft depends on receiving feedback throughout the development process so that adjustments may be made as quickly as possible. Early testing and feedback is essential to the rapid release model.
+For many IT pros and application developers, gaining visibility into new functionality early--before they’re released--can be both intriguing and valuable. Testing the early builds of Windows Server helps both Microsoft and its customers because of the opportunity to discover possible issues before release. It also gives customers a unique opportunity to directly influence the functionality in the product. Microsoft depends on receiving feedback throughout the development process so that adjustments may be made as quickly as possible. Early testing and feedback is essential to the rapid release model.
 
-Pre-release builds of Windows Server will be available for download via the Windows Insider Program and the Windows Insider Program for Business. The server editions available on the Windows Insider Program may vary depending on the current stage of the development cycle. 
+Pre-release builds of Windows Server will be available for download via the Windows Insider Program and the Windows Insider Program for Business. The server editions available on the Windows Insider Program may vary depending on the current stage of the development cycle. To join the Windows Insider Program, follow these steps:
+
+1. Register at [Windows Insider Program for Business](https://insider.windows.com/ForBusiness). 
+2. Register a Windows 10 device for Insider flights. 
+3. Choose one or more servers for preview testing. 
+4. Download builds from the [Windows Server Insider Preview](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewserver) page.
+5. Bookmark the Docker Hub or other external sites where some code and docs will be published.
+6. Send us your feedback via the Windows 10 Feedback Hub application.
+7. Join the [Windows Server Tech Community](https://techcommunity.microsoft.com/t5/Windows-Server/ct-p/Windows-Server) to collaborate, share and learn from experts. 
 
 
  
