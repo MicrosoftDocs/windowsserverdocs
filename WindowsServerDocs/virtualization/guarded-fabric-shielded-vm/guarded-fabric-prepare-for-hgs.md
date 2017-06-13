@@ -64,7 +64,7 @@ Enhanced key usage            | Server authentication
 Key renewal policy            | Renew with the same key. Renewing HGS certificates with different keys will prevent shielded VMs from starting up.
 Subject name                  | Recommended: your company's name or web address. This information will be shown to VM owners in the shielding data file wizard.
 
-These requirements apply whether you are using hardare- or software-backed certificates.
+These requirements apply whether you are using certificates backed by hardware or software.
 For security reasons, it is recommended that you create your HGS keys in a Hardware Security Module (HSM) to prevent the private keys from being copied off the system.
 Follow the guidance from your HSM vendor to request certificates with the above attributes and be sure to install and authorize the HSM KSP on every HGS node.
 
