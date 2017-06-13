@@ -5,7 +5,7 @@ description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 05/31/2017
+ms.date: 06/13/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 
@@ -25,15 +25,7 @@ In some cases, AD FS administrators may want to provide additional sign\-in expe
   
 ## Things to know before you start  
   
--   Onload.js was added for the customization of the look and feel and the text of the existing UI elements only.  The following is not supported:  
-  
-    -   Adding new UI widgets \(buttons, input type\=text, etc.\)  
-  
-    -   Adding custom code for events  
-  
-    -   Overriding the user input validation  
-  
-    -   Inject ajax, jquery, etc.  
+-   Any change that impacts the redirect flows or modifies protocol parameters that AD FS works with is not supported.
   
 -   The original onload.js, the one that comes with the default web theme, contains code that handles page rendering for different form factors. It is recommended not to modify the original onload.js content but only append your code to the existing onload.js that handles custom logic.  
   

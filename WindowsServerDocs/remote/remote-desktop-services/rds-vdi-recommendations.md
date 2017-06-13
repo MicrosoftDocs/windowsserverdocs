@@ -7,7 +7,7 @@ ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
 ms.author: elizapo
-ms.date: 06/08/2017
+ms.date: 06/12/2017
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2a44dc9f-c221-4bf7-89c3-fb4c86a90f8c
@@ -209,7 +209,7 @@ In the **Update settings** area, click **Advanced options** to adjust these sett
 |-------------------|----------|--------------|
 |Give me updates for other Microsoft products when I update Windows|	cleared|	selected|
 |Defer feature updates|cleared|selected|
-|Use my sign in info to automatically finish setting up my device after an update I DO NOT SEE THIS SETTING|cleared|Depends on specific VDI configuration [should we explain this?]|
+|Use my sign in info to automatically finish setting up my device after an update |cleared|Depends on specific VDI configuration|
 
 On the **Advanced options** page, click **Choose how updates are delivered** to access the setting for "Updates from more than one place." The default value is **On**; for VDI use the recommended value is **Off**.
 
@@ -509,8 +509,8 @@ In the left pane of Local Group Policy Editor, click **User Configuration**. Usi
 ||Turn off display of recent search entries in the File Explorer search box|		Enabled|
 ||Turn off the caching of thumbnails in hidden thumbs.db file|		Enabled|
 
-## Windows Store apps
-There are a number of Windows Store apps that you might want to remove from the VDI image; removing them will decrease CPU usage and conserve disk space. Good candidates for removal include:
+## Microsoft Store apps
+There are a number of Microsoft Store apps that you might want to remove from the VDI image; removing them will decrease CPU usage and conserve disk space. Good candidates for removal include:
 
 - Get Office
 - Skype (preview)
@@ -522,7 +522,7 @@ There are a number of Windows Store apps that you might want to remove from the 
 To customize the default user profile used for creating VDI images, use the built-in Administrator account. If it is not already enabled, do so by using Local Users and Groups in Computer Management. Then log in to the Administrator account to complete the following steps.
 
 > [!NOTE]  
-> Don't remove system apps such as the Store app. They are difficult to reinstall. HOW CAN ONE TELL WHICH ARE "SYSTEM" APPS? Other apps are easily reinstallable from the Store.
+> Don't remove system apps such as the Store app. They are difficult to reinstall. Other apps are easily reinstallable from the Store.
 
 ### Delete unwanted apps from the Administrator user profile
 1. In Windows PowerShell, run `Get-AppxPackage | ft PackageFamilyName` to see the list of installed apps.
