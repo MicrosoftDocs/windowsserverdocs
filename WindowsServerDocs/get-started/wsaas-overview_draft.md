@@ -17,23 +17,23 @@ ms.assetid: 9cf87597-b15d-4f43-8aa1-91e60367f011
 # Windows Server in the Semi-annual Channel (working title)
 The Windows Server release model is offering a new option in order to align with similar release and servicing models for [Windows 10](https://docs.microsoft.com/windows/deployment/update/waas-overview) and [Office 365 ProPlus](https://support.office.com/article/Overview-of-the-upcoming-changes-to-Office-365-ProPlus-update-management-78b33779-9356-4cdf-9d2c-08350ef05cca?ui=en-US&rs=en-US&ad=US). If you've been working with Windows 10 or Office 365 ProPlus, these improvements might already be familiar to you.
 
-**There will be two primary release channels available to Windows Server customers, the Long-term Servicing Channel, and the new semi-annual channel.**
+**There will be two primary release channels available to Windows Server customers, the long-term servicing channel, and the new semi-annual channel.**
 
 ## Long-term servicing channel
-This is the release model you’re already familiar with (currently called the “Long-term Servicing *Branch*”) where a new major version of Windows Server is released every 2-3 years and entitled to 5 years of mainstream support with [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default.aspx), 5 years of extended support, and optionally 6 more years with [Premium Assurance](https://www.microsoft.com/cloud-platform/premium-assurance). This channel is appropriate for systems that require a longer servicing option and functional stability. Deployments of Windows Server 2016 and earlier versions of Windows Server will not be affected by the new semi-annual channel releases. The long-term servicing channel will continue to receive security and non-security updates, but it will not receive the new features and functionality.
+This is the release model you’re already familiar with (currently called the “Long-term Servicing *Branch*”) where a new major version of Windows Server is released every 2-3 years and is entitled to 5 years of mainstream support with [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default.aspx), 5 years of extended support, and optionally 6 more years with [Premium Assurance](https://www.microsoft.com/cloud-platform/premium-assurance). This channel is appropriate for systems that require a longer servicing option and functional stability. Deployments of Windows Server 2016 and earlier versions of Windows Server will not be affected by the new semi-annual channel releases. The long-term servicing channel will continue to receive security and non-security updates, but it will not receive the new features and functionality.
 
 
 
 ## Semi-annual channel
 The semi-annual channel releases will deliver new functionality for customers who are moving at a “cloud cadence," such as those on rapid development cycles or hosters keeping up with the latest Hyper-V investments. Windows Server products in the semi-annual channel will have new releases available twice a year, in March and September. Each release in this channel will be supported for 18 months from the initial release.
 
-The features introduced in the semi-annual channel might be rolled up into the next Long-Term Servicing Channel release of Windows Server. The editions, functionality, and supporting content might vary from release to release depending on customer feedback.
+The features introduced in the semi-annual channel might be rolled up into the next long-term servicing channel release of Windows Server. The editions, functionality, and supporting content might vary from release to release depending on customer feedback.
 
-The semi-annual channel will be available to volume-licensed customers with Software Assurance, as well as the Azure Marketplace or other cloud/hosting service providers and loyalty programs such as MSDN.
+The semi-annual channel will be available to volume-licensed customers with Software Assurance, as well as via the Azure Marketplace or other cloud/hosting service providers and loyalty programs such as MSDN.
 
 There will be two phases to each semi-annual channel release:
 
-- **Semi-annual channel (pilot)**: the first release, intended for application validation, developers and end-user acceptance testing before broad deployment. 
+- **Semi-annual channel (pilot)**: the first release, intended for application validation, developers, and end-user acceptance testing before broad deployment. 
 - **Semi-annual channel (broad)**: several months later, the pilot release will be declared ready for broad deployment. Media sources will be refreshed with new media that contains the original pilot build plus any applicable security and non-security updates. The build is now appropriate for broad deployment in production. Customers who installed the original pilot build and have kept up with cumulative updates do not need to re-install the build when it is declared ready for broad deployment. 
 
 
