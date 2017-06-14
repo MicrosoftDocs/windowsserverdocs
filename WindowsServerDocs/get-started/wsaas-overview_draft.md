@@ -37,7 +37,7 @@ There will be two phases to each semi-annual channel release:
 - **Semi-annual channel (broad)**: several months later, the pilot release will be declared ready for broad deployment. Media sources will be refreshed with new media that contains the original pilot build plus any applicable security and non-security updates. The build is now appropriate for broad deployment in production. Customers who installed the original pilot build and have kept up with cumulative updates do not need to re-install the build when it is declared ready for broad deployment. 
 
 
-![Semi-annual channel release timing](get-started/media/SAC-release-timing.png)
+![Semi-annual channel release timing](./media/SAC-release-timing.png)
 
 In this new model, Windows Server releases are planned for a year/month such as 1709: in 2017, on the 9th month (September). Windows and Office, and now Windows Server as well, will release semi-annually in March and September. So we expect another release in March 2018 (1803), and every 6 months after that. The support lifecycle for each release is 18 months starting with day 1 of the pilot phase.
 
