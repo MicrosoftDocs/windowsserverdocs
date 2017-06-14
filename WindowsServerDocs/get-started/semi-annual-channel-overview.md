@@ -73,7 +73,7 @@ Pre-release builds of Windows Server will be available for download via the Wind
 
  
 # Related topics
-[Changes to Nano Server in the next release of Windows Server](https://go.microsoft.com/fwlink/?linkid=851418)
+[Changes to Nano Server in the next release of Windows Server](nano-in-semi-annual-channel.md)
 
 [Windows Server support lifecycle](https://support.microsoft.com/en-us/lifecycle)
 
