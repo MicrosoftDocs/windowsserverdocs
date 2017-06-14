@@ -73,9 +73,11 @@ Pre-release builds of Windows Server will be available for download via the Wind
 
  
 # Related topics
-[NANO](https://go.microsoft.com/fwlink/?linkid=851418)
-[SUPPORT program INFO]
-[WS2015 SYSREQS] 
+[Changes to Nano Server in the next release of Windows Server](https://go.microsoft.com/fwlink/?linkid=851418)
+
+[Windows Server support lifecycle](https://support.microsoft.com/en-us/lifecycle)
+
+[Windows Server 2016 System Requirements](https://docs.microsoft.com/windows-server/get-started/system-requirements) 
 
 
 
