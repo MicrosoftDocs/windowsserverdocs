@@ -11,14 +11,14 @@ ms.topic: article
 ms.assetid: 61c36528-cf47-4af0-83c1-a883f79a73a5
 author: haley-rowland
 ms.author: elizapo
-ms.date: 06/12/2017
+ms.date: 06/14/2017
 manager: dongill
 ---
 # Create a geo-redundant, multi-data center RDS deployment for disaster recovery
 
 >Applies To: Windows Server 2016
 
-You can enable disaster recovery for your Remote Desktop Services deployment by leveraging multiple data centers in Azure. Unlike a standard highly available RDS deployment (as outlined in the [Remote Desktop Services architecture](desktop-hosting-logical-architecture.md)), which uses data centers in a single Azure region (for example, Western Europe), a multi-data center deployment uses data centers in mulitiple geographic locations, increasing the availabilty of your deployment - one Azure data center might be unavailable, but it is unlikely that multiple regions would go down at the same time. By deploying a geo-redundant RDS architecture, you can enable failover in the case of catastrophic failure of an entire region.
+You can enable disaster recovery for your Remote Desktop Services deployment by leveraging multiple data centers in Azure. Unlike a standard highly available RDS deployment (as outlined in the [Remote Desktop Services architecture](desktop-hosting-logical-architecture.md)), which uses data centers in a single Azure region (for example, Western Europe), a multi-data center deployment uses data centers in multiple geographic locations, increasing the availabilty of your deployment - one Azure data center might be unavailable, but it is unlikely that multiple regions would go down at the same time. By deploying a geo-redundant RDS architecture, you can enable failover in the case of catastrophic failure of an entire region.
 
 You can use the instructions below to leverage Microsoft Azure infrastructure services and RDS to deliver geo-redundant desktop hosting services and Subscriber Access Licenses (SALs) to multiple tenants through the [Microsoft Service Provider License Agreement (SPLA) program](http://www.microsoft.com/hosting/licensing/splabenefits.aspx). You can also use the steps below to create a geo-redundant hosting service for your own employees using [RDS User CALs extended rights through Software Assurance](http://download.microsoft.com/download/6/B/A/6BA3215A-C8B5-4AD1-AA8E-6C93606A4CFB/Windows_Server_2012_R2_Remote_Desktop_Services_Licensing_Datasheet.pdf).
 
@@ -56,20 +56,21 @@ Create the following resources in Azure to create a geo-redundant multi-data cen
    1. Use the [RDS farm deployment using existing active directory](https://azure.microsoft.com/resources/templates/rds-deployment-existing-ad/) template again, but this time make the following changes. (To customize the template, select it in the gallery, click **Deploy to Azure** and then **Edit template**.)
       1. Adjust the address space of the DNS server private IP to correspond to the VNet in RG B. 
       
-      Search fo "dnsServerPrivateIp" in variables. Edit the default IP (10.0.0.4) to correspond to the address space you defined in the VNet in RG B.
+         Search for "dnsServerPrivateIp" in variables. Edit the default IP (10.0.0.4) to correspond to the address space you defined in the VNet in RG B.
+   
       2. Edit the computer names so that they don't collide with those in the deployment in RG A.
       
-      Locate the VMs in the **Resources** section of the template. Change the **computerName** field under **osProfile**. For example, "gateway" can become"gateway**-b**"; "[concat('rdsh-', copyIndex())]" can become "[concat('rdsh-b-', copyIndex())]", and “broker” can become “broker**-b**”.
+         Locate the VMs in the **Resources** section of the template. Change the **computerName** field under **osProfile**. For example, "gateway" can become"gateway**-b**"; "[concat('rdsh-', copyIndex())]" can become "[concat('rdsh-b-', copyIndex())]", and “broker” can become “broker**-b**”.
       
-      (You can also change the names of the VMs manually after you run the template.)
+         (You can also change the names of the VMs manually after you run the template.)
    2. As in step 3 above, use the information in [Remote Desktop Services - High availability](rds-plan-high-availability.md) to configure the other RDS components for high availability.
 8. A Storage Spaces Direct scale-out file server with Storage Replica across the two deployments. Use the [PowerShell script](https://github.com/robotechredmond/301-s2d-sr-dr-md/tree/master/scripts) to deploy the [template](https://github.com/robotechredmond/301-s2d-sr-dr-md) across the resource groups.
 
    > [!NOTE]
    > You can provision storage manually (instead of using the PowerShell script and template): 
-   > - Deploy a [2-node S2D SOFS](rds-storage-spaces-direct-deployment.md) in RG A to store your user profile disks (UPDs)
-   >- Deploy a second, identical S2D SOFS in RG B - make sure to use the same amount of storage in each cluster.
-   >- Set up [Storage Replica with asynchronous replication](../../storage/storage-replica/cluster-to-cluster-storage-replication.md) between the two.
+   >1. Deploy a [2-node S2D SOFS](rds-storage-spaces-direct-deployment.md) in RG A to store your user profile disks (UPDs).
+   >2. Deploy a second, identical S2D SOFS in RG B - make sure to use the same amount of storage in each cluster.
+   >3. Set up [Storage Replica with asynchronous replication](../../storage/storage-replica/cluster-to-cluster-storage-replication.md) between the two.
 
 ### Enable UPDs
 Storage Replica replicates data from a source volume (associated with the primary/active deployment) to a destination volume (associated with the secondary/passive deployment). By design, the destination cluster appears as **Online (No Access)** - Storage Replica dismounts the destination volumes and their drive letters or mount points. This means that enabling UPDs for the secondary deployment by providing the file share path will fail, because the volume is not mounted. 
