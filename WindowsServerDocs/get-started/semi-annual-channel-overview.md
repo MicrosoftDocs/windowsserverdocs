@@ -31,15 +31,12 @@ Most of the features introduced in the Semi-annual Channel will be rolled up int
 
 The Semi-annual Channel will be available to volume-licensed customers with [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default.aspx), as well as via the Azure Marketplace or other cloud/hosting service providers and loyalty programs such as MSDN.
 
-There will be two phases to each Semi-annual Channel release:
 
-- **Semi-annual Channel (pilot)**: Pilot releases are supported in production. They are intended for application validation, developers, and end-user acceptance testing before broad deployment. 
-- **Semi-annual Channel (broad)**: Several months later, the pilot release will be declared ready for broad deployment. Media sources will be refreshed with new media that contains the original pilot build plus any applicable security and non-security updates. The build is now appropriate for broad deployment in production. Customers who installed the original pilot build and have kept up with cumulative updates do not need to re-install the build when it is declared ready for broad deployment. 
 
 
 ![Semi-annual Channel release timing](./media/SAC-release-timing.png)
 
-In this new model, Windows Server releases are identified by the year and month of release: for example, in 2017, a release in the 9th month (September) would be identified as **version 1709**. Windows Server will release semi-annually in fall and spring. Another release in March 2018 would be version 1803. The support lifecycle for each release is 18 months starting with day 1 of the pilot phase.
+In this new model, Windows Server releases are identified by the year and month of release: for example, in 2017, a release in the 9th month (September) would be identified as **version 1709**. Windows Server will release semi-annually in fall and spring. Another release in March 2018 would be version 1803. The support lifecycle for each release is 18 months 
 
 
 ## Device compatibility
