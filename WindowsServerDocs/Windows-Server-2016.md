@@ -2,7 +2,7 @@
 title: Windows Server 2016
 description: Get started with Windows Server 2016.
 ms.prod: windows-server-threshold
-ms.date: 06/14/2017
+ms.date: 06/15/2017
 ms.technology: server-general
 ms.topic: article
 ms.assetid: d8972680-d5ee-430e-a97a-991ac872b0d6
@@ -16,7 +16,7 @@ manager: dongill
 This library provides info for IT pros to evaluate, plan, deploy, secure, and manage Windows Server 2016.
 
 > [!Note] 
-> The next version of Windows Server is changing! You can find details about what's on the horizon by visiting [Windows Server Semi-annual Channel Overview](./get-started/wsaas-overview_draft.md). 
+> The next version of Windows Server is changing! You can find details about what's on the horizon by visiting [Windows Server Semi-annual Channel Overview](./get-started/semi-annual-channel-overview.md). 
 
 [![Windows Server 2016 Overview Video](media/front-page-video.png)](https://www.youtube.com/embed/V8oF0JpDzaM)
 
