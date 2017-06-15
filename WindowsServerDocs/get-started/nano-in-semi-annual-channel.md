@@ -11,10 +11,10 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: a270334d-42a7-46ff-8eed-d8656a276544
 ---
+# Changes to Nano Server in the next release of Windows Server
 
 >Applies To: Windows Server, Semi-annual Channel
 
-# Changes to Nano Server in the next release of Windows Server
 
 As described in [Window Server Semi-annual Channel Overview](semi-annual-channel-overview.md), the next release of Windows Server is offering a new option: the Semi-annual Channel.
 
