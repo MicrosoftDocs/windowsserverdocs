@@ -485,7 +485,7 @@ Phase 1 includes the following steps:
             |-----|---------|
             |PAW Configuration|Admin\Tier 0\Devices|
 
-6.  **Create "PAW Configuration - User" group policy object (GPO) and link to the Tier 0 Users OU ("Users" under Tier 0\Admin)**.  In this section, you will create a new "PAW Configuration - User" GPO which provide specific protections for these PAWs.
+6.  **Create "PAW Configuration - User" group policy object (GPO) and link to the Tier 0 Accounts OU ("Accounts" under Tier 0\Admin)**.  In this section, you will create a new "PAW Configuration - User" GPO which provide specific protections for these PAWs.
 
     > [!NOTE]
     > Do not add these settings to the Default Domain Policy
@@ -531,7 +531,7 @@ Phase 1 includes the following steps:
 
         2.  Go to User Configuration\Preferences\Windows Settings\Registry, click New **Registry Item** and configure the following settings:
 
-            -   Action:  Create
+            -   Action:  Replace
 
             -   Hive: HKEY_CURRENT_USER
 
@@ -566,7 +566,7 @@ Phase 1 includes the following steps:
 
         3.  Click **OK** to complete the ProxyServer group policy setting,
 
-    2.  Go to Configuration\Administrative Templates\Windows Components\Internet Explorer\ and enable the options below. These settings will prevent the administrators from manually overriding the proxy settings.
+    2.  Go to User Configuration\Administrative Templates\Windows Components\Internet Explorer\ and enable the options below. These settings will prevent the administrators from manually overriding the proxy settings.
 
         1.  Enable the **Disable changing Automatic Configuration** settings.
 
