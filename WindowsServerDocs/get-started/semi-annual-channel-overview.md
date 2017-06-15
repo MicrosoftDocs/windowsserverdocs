@@ -36,7 +36,7 @@ The Semi-annual Channel will be available to volume-licensed customers with [Sof
 
 ![Semi-annual Channel release timing](./media/SAC-release-timing.png)
 
-In this new model, Windows Server releases are identified by the year and month of release: for example, in 2017, a release in the 9th month (September) would be identified as **version 1709**. Windows Server will release semi-annually in fall and spring. Another release in March 2018 would be version 1803. The support lifecycle for each release is 18 months 
+In this new model, Windows Server releases are identified by the year and month of release: for example, in 2017, a release in the 9th month (September) would be identified as **version 1709**. Windows Server will release semi-annually in fall and spring. Another release in March 2018 would be version 1803. The support lifecycle for each release is 18 months.
 
 
 ## Device compatibility
@@ -52,7 +52,7 @@ There are many tools with which IT pros can service Windows Server. Each option 
 - **Windows Server Update Services (WSUS)** provides extensive control over Windows 10 updates and is natively available in the Windows Server operating system. In addition to the ability to defer updates, organizations can add an approval layer for updates and choose to deploy them to specific computers or groups of computers whenever ready.
 - **System Center Configuration Manager** provides the greatest control over servicing. IT pros can defer updates, approve them, and have multiple options for targeting deployments and managing bandwidth usage and deployment times.
 
-You’ve likely already chosen to use at least one of these options based on your resources, staff, and expertise. You can continue using the same process for Semi-annual Channel Releases: for example, if you already use System Center Configuration Manager to manage updates, you can continue to use it. Similarly, if you are using WSUS, you can continue to use that.” 
+You’ve likely already chosen to use at least one of these options based on your resources, staff, and expertise. You can continue using the same process for Semi-annual Channel Releases: for example, if you already use System Center Configuration Manager to manage updates, you can continue to use it. Similarly, if you are using WSUS, you can continue to use that.
 
 ## Windows Insider Program
 For many IT pros and application developers, gaining visibility into new functionality early--before they’re released--can be both intriguing and valuable. Testing the early builds of Windows Server helps both Microsoft and its customers because of the opportunity to discover possible issues before release. It also gives customers a unique opportunity to directly influence the functionality in the product. Microsoft depends on receiving feedback throughout the development process so that adjustments may be made as quickly as possible. Early testing and feedback is essential to the rapid release model.
