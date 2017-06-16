@@ -61,7 +61,7 @@ If the SPN is registered in Active Directory, then authentication will succeed w
 
 ## KDC support for both UPN and Subject Alternate Names (SAN)
 
-Beginning with Windows Server 2016, domian controllers have support for Key Trust account mapping as well as fallback to AltSecID when there is a User Principal Name (UPN) in the SAN. When UseSubjectAltName is set to:
+Beginning with Windows Server 2016, domian controllers have support for Key Trust account mapping as well as fallback to existing AltSecID and User Principal Name (UPN) in the SAN behavior. When UseSubjectAltName is set to:
 
 - 0: Explicit mapping is required. Then there must be either:
     - Key Trust (new with Windows Server 2016)
