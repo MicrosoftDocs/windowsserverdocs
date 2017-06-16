@@ -84,7 +84,7 @@ In AD FS, in Windows Server 2012 R2, you can specify an authentication policy at
     -   To enable MFA for any of these settings, you must select at least one additional authentication method. **Certificate Authentication** is the default available option. You can also configure other custom additional authentication methods, for example, Windows Azure Active Authentication. For more information, see [Walkthrough Guide: Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md).  
   
 > [!WARNING]  
-> You can only configure additional authentication methods at a globally.  
+> You can only configure additional authentication methods globally.  
 ![auth policies](media/Configure-Authentication-Policies/authpolicy9.png)  
 
 ## To configure multi\-factor authentication per relying party trust  
