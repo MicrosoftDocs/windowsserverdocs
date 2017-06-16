@@ -24,7 +24,7 @@ However, **starting with the new feature release of Windows Server, version 1709
 
 - Nano Server has been optimized for .NET Core applications.
 - Nano Server is even smaller than the Windows Server 2016 version.
-- Windows PowerShell, .NET Core, and WMI are no longer included by default, but you can run them in a separate container.
+- Windows PowerShell, .NET Core, and WMI are no longer included by default, but you can include PowerShell and .NET Core container packages when building your container.
 - There is no longer a servicing stack included in Nano Server. Microsoft publishes an updated Nano container to Docker Hub that you redeploy.
 - You troubleshoot the new Nano Container by using Docker.
 - You can now run Nano containers on IoT Core.
