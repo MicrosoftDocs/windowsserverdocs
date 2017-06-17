@@ -79,7 +79,7 @@ $vsubnet.Properties.AddressPrefix = "24.30.1.0/24"
   
 #Create the Virtual Network  
   
-$vnetproperties = new-object Microsoft.Windows.NetworkController.NbVirtualNetworkProperties  
+$vnetproperties = new-object Microsoft.Windows.NetworkController.VirtualNetworkProperties  
 $vnetproperties.AddressSpace = new-object Microsoft.Windows.NetworkController.AddressSpace  
 $vnetproperties.AddressSpace.AddressPrefixes = @("24.30.1.0/24")  
 $vnetproperties.LogicalNetwork = $HNVProviderLogicalNetwork  
