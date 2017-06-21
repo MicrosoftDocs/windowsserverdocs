@@ -29,8 +29,13 @@
     "externalReference": [],
     "globalMetadata": {
         "uhfHeaderId": "MSDocsHeader-WindowsIT", 
-"breadcrumb_path": "/windows-server/breadcrumbs/toc.json"
-},
+		"breadcrumb_path": "/windows-server/breadcrumbs/toc.json",
+		"_op_documentIdPathDepotMapping": {
+			"./": {
+			  "depotName": "WS.WindowsServerDocs"
+			}
+		}
+	},
     "fileMetadata": {},
     "template": [
       null
