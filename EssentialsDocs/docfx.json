@@ -30,7 +30,7 @@
     "globalMetadata": {
 		"_op_documentIdPathDepotMapping": {
 			"./": {
-			  "depotName": "WS.EssentialsDocs"
+			  "depot_name": "WS.EssentialsDocs"
 			}
 		}
 	},

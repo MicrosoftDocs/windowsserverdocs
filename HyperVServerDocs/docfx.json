@@ -30,7 +30,7 @@
     "globalMetadata": {
         "_op_documentIdPathDepotMapping": {
             "./": {
-              "depotName": "WS.HyperVServerDocs"
+              "depot_name": "WS.HyperVServerDocs"
             }
         }
     },
