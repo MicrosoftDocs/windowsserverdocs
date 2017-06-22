@@ -356,11 +356,13 @@ The client MUST trust the SSL certificate that is used for the federation server
 You also must set up and use a Microsoft account to log on to Client1.
 
 ## See Also
-[Active Directory Federation Services How-To Video Series: Installing an AD FS Server Farm](http://technet.microsoft.com/video/dn469436)
-[Active Directory Federation Services How-To Video Series: Updating Certificates](http://technet.microsoft.com/video/adfs-updating-certificates)
-[Active Directory Federation Services How-To Video Series: Add a Relying Party Trust](http://technet.microsoft.com/video/adfs-how-to-add-a-relying-party-trust)
-[Active Directory Federation Services How-To Video Series: Enabling the Device Registration Service](http://technet.microsoft.com/video/adfs-how-to-enabling-the-device-registration-service)
-[Active Directory Federation Services How-To Video Series: Installing the Web Application Proxy](http://technet.microsoft.com/video/dn469438)
+
+
+- [Active Directory Federation Services How-To Video Series: Installing an AD FS Server Farm](http://technet.microsoft.com/video/dn469436)
+- [Active Directory Federation Services How-To Video Series: Updating Certificates](http://technet.microsoft.com/video/adfs-updating-certificates)
+- [Active Directory Federation Services How-To Video Series: Add a Relying Party Trust](http://technet.microsoft.com/video/adfs-how-to-add-a-relying-party-trust)
+- [Active Directory Federation Services How-To Video Series: Enabling the Device Registration Service](http://technet.microsoft.com/video/adfs-how-to-enabling-the-device-registration-service)
+- [Active Directory Federation Services How-To Video Series: Installing the Web Application Proxy](http://technet.microsoft.com/video/dn469438)
 
 
 
