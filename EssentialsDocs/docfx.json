@@ -27,7 +27,13 @@
     ],
     "overwrite": [],
     "externalReference": [],
-    "globalMetadata": {},
+    "globalMetadata": {
+		"_op_documentIdPathDepotMapping": {
+			"./": {
+			  "depot_name": "WS.EssentialsDocs"
+			}
+		}
+	},
     "fileMetadata": {},
     "template": [],
     "dest": "window-server-docs/essentials"
