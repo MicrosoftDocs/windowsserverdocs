@@ -77,6 +77,7 @@
 #### [Manage Windows VMs with PowerShell Direct](hyper-v/manage/Manage-Windows-virtual-machines-with-powershell-direct.md)
 #### [Set up Hyper-V Replica](hyper-v/manage/Set-up-Hyper-V-Replica.md)
 #### [Use live migration without Failover Clustering](hyper-v/manage/Use-live-migration-without-Failover-Clustering-to-move-a-virtual-machine.md)
+### [Hyper-V Performance Tuning](../administration/performance-tuning/role/hyper-v-server/index.md)
 ## [Hyper-V Virtual Switch](hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md)
 ### [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](hyper-v-virtual-switch/rdMA-and-Switch-Embedded-Teaming.md)
 ### [Manage Hyper-V Virtual Switch](hyper-v-virtual-switch/Manage-Hyper-V-Virtual-Switch.md)
