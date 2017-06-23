@@ -19,7 +19,7 @@ When you deploy Remote Desktop Services into your environment, it becomes a crit
 
 To keep your RDS deployment running in the case of a single component or machine going down, we recommend configuring your RDS deployment for high availability. You can do this by setting up an [RDSH farm](rds-scale-rdsh-farm.md) and ensuring your [Connection Brokers are clustered for high availability](rds-connection-broker-cluster.md). 
 
-The disaster recovery solutions we recommend here are to protect your deployment from catastrophic disaster - something that takes down your entire RDS deployment (including redundant roles configured for high availability). If such a disaster hits, having a disaster recovery solution built into your deployment will allow you to failover the entire deployment and quickly get apps and rescources up and running for your users.
+The disaster recovery solutions we recommend here are to protect your deployment from catastrophic disaster - something that takes down your entire RDS deployment (including redundant roles configured for high availability). If such a disaster hits, having a disaster recovery solution built into your deployment will allow you to failover the entire deployment and quickly get apps and resources up and running for your users.
 
 Use the following information to deploy disaster recovery solutions in RDS:
 
