@@ -38,6 +38,10 @@ The Semi-annual Channel will be available to volume-licensed customers with [Sof
 
 In this new model, Windows Server releases are identified by the year and month of release: for example, in 2017, a release in the 9th month (September) would be identified as **version 1709**. Windows Server will release semi-annually in fall and spring. Another release in March 2018 would be version 1803. The support lifecycle for each release is 18 months.
 
+			                   Semi-annual Channel (Windows Server) | Long-term Servicing Channel (Windows Server 2016)
+Nano Server	          	Yes					                              No
+Server Core		          Yes					                              Yes
+Server with Desktop   	No					                               Yes 
 
 ## Device compatibility
 Unless otherwise communicated, the minimum hardware requirements to run the Semi-annual Channel releases will be the same as the most recent Long-term Servicing Channel release of Windows Server. For example, the current Long-term Servicing Channel release is Windows Server 2016. Most hardware drivers will continue to function in these releases.
