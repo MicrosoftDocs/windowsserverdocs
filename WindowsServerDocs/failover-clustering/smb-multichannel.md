@@ -12,7 +12,7 @@ ms.date: 09/15/2016
 
 > Applies To: Windows Server 2016
 
-Simplified SMB Multichannel and Multi-<abbr title="Network Interface Card">NIC</abbr> Cluster Networks is a new feature in Windows Server 2016 that enables the use of multiple NICs on the same cluster network subnet, and automatically enables SMB Mutichannel.  
+Simplified SMB Multichannel and Multi-<abbr title="Network Interface Card">NIC</abbr> Cluster Networks is a new feature in Windows Server 2016 that enables the use of multiple NICs on the same cluster network subnet, and automatically enables SMB Multichannel.  
 
 Simplified SMB Multichannel and Multi-NIC Cluster Networks provides the following benefits:  
 - Failover Clustering automatically recognizes all NICs on nodes that are using the same switch / same subnet - no additional configuration needed.  
