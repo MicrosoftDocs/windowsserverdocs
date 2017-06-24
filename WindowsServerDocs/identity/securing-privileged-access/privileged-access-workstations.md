@@ -321,7 +321,7 @@ The scripts will create the following OUs and Security Groups:
 
     -   Six new security-enabled global groups:  Tier 0 Replication Maintenance; Tier 1 Server Maintenance; Service Desk Operators; Workstation Maintenance; PAW Users; PAW Maintenance.
 
-You will also create a number of group policy objects: PAW Maintenance; PAW Requires MSTSC RestrictedAdmin; PAW Outbound Restrictions; PAW Logon Restrictions; Restrict Workstation Logon.
+You will also create a number of group policy objects: PAW Configuration - Computer; PAW Configuration - User; RestrictedAdmin Required - Computer; PAW Outbound Restrictions; Restrict Workstation Logon; Restrict Server Logon.
 
 Phase 1 includes the following steps:
 
@@ -442,13 +442,13 @@ Phase 1 includes the following steps:
 
             -   Remote Desktop Users
 
-            -   Replicator
+            -   Replicators
 
         3.  PAW Logon Restrictions - this setting will limit the accounts which can log onto the PAW. Follow the steps below to configure this setting:
 
             1.  Go to Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies\User Rights Assignment\Allow log on locally.
 
-            2.  Select Define these policy settings and add "PAW Users"
+            2.  Select Define these policy settings and add "PAW Users" and Administrators (again, do not use the Browse button to select Administrators).
 
         4.  **Block Inbound Network Traffic** - This setting will ensure that no unsolicited inbound network traffic is allowed to the PAW. Follow the steps below to configure this setting:
 
@@ -477,13 +477,13 @@ Phase 1 includes the following steps:
 
                 3.  Change the option **Scheduled install day** to **0 - Every Day** and the option **Scheduled install time** to your organizational preference.
 
-                4.  Enable option **Specifiy intranet Microsoft update service location** policy, and specify in both options the URL of the ESAE WSUS server.
+                4.  Enable option **Specify intranet Microsoft update service location** policy, and specify in both options the URL of the ESAE WSUS server.
 
-        6.  Link the PAW Configuration - Computer GPO as follows:
+        6.  Link the "PAW Configuration - Computer" GPO as follows:
 
             |Policy|Link Location|
             |-----|---------|
-            |PAW Configuration|Admin\Tier 0\Devices|
+            |PAW Configuration - Computer |Admin\Tier 0\Devices|
 
 6.  **Create "PAW Configuration - User" group policy object (GPO) and link to the Tier 0 Accounts OU ("Accounts" under Tier 0\Admin)**.  In this section, you will create a new "PAW Configuration - User" GPO which provide specific protections for these PAWs.
 
@@ -492,7 +492,7 @@ Phase 1 includes the following steps:
 
     1.  **Block internet browsing** - To deter inadvertent internet browsing, this will set a proxy address of a loopback address (127.0.0.1).
 
-        1.  Go to user Configuration\Preferences\Windows Settings\Registry:  Click New\Registry Item and configure the following settings:
+        1.  Go to User Configuration\Preferences\Windows Settings\Registry. Right-click Registry, select **New** \> **Registry Item** and configure the following settings:
 
             1.  Action:  Replace
 
@@ -529,7 +529,7 @@ Phase 1 includes the following steps:
 
             7.  Click **OK** to complete the ProxyServer group policy setting
 
-        2.  Go to User Configuration\Preferences\Windows Settings\Registry, click New **Registry Item** and configure the following settings:
+        2.  Go to User Configuration\Preferences\Windows Settings\Registry. Right-click Registry, select **New** \> **Registry Item** and configure the following settings:
 
             -   Action:  Replace
 
@@ -566,7 +566,7 @@ Phase 1 includes the following steps:
 
         3.  Click **OK** to complete the ProxyServer group policy setting,
 
-    2.  Go to User Configuration\Administrative Templates\Windows Components\Internet Explorer\ and enable the options below. These settings will prevent the administrators from manually overriding the proxy settings.
+    2.  Go to User Configuration\Administrative Templates\Windows Components\Internet Explorer, and enable the options below. These settings will prevent the administrators from manually overriding the proxy settings.
 
         1.  Enable the **Disable changing Automatic Configuration** settings.
 
@@ -574,50 +574,9 @@ Phase 1 includes the following steps:
 
 7.  **Restrict Administrators from logging onto lower tier hosts**.  In this section, we will configure group policies to prevent privileged administrative accounts from logging onto lower tier hosts.
 
-    1.  Create the new **Restrict Workstation Logon** GPO - this setting will restrict Tier 0 and Tier 1 administrator accounts from logging onto standard workstations.  This GPO should have the following settings:
+    1.  Create the new **Restrict Workstation Logon** GPO - this setting will restrict Tier 0 and Tier 1 administrator accounts from logging onto standard workstations.  This GPO should be applied to the "Workstations" top-level OU and have the following settings:
 
         - (i) In Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies\User Rights Assignment\Deny log on as a batch job,  select **Define these policy settings** and add the Tier 0 and Tier 1 groups:
-
-            **Groups to add to policy settings:**
-
-            Enterprise Admins
-
-            Domain Admins
-
-            Schema Admins
-
-            DOMAIN\Administrators
-
-            Account Operators
-
-            Backup Operators
-
-            Print Operators
-
-            Server Operators
-
-            Domain Controllers
-
-            Read-Only Domain Controllers
-
-            Group Policy Creators Owners
-
-            Cryptographic Operators
-
-        > [!NOTE]
-        > Note: Built-in Tier 0 Groups, see Tier 0 equivalency for more details.
-
-        Other Delegated Groups
-
-        > [!NOTE]
-        > Note: Any custom created groups with effective Tier 0 access, see Tier 0 equivalency for more details.
-
-        Teir 1 Admins
-
-        > [!NOTE]
-        > Note: This Group was created earlier in Phase 1
-
-       - (ii) In Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies\User Rights Assignment\Deny log on as a service,  select **Define these policy settings** and add the Tier 0 and Tier 1 groups:
 
             **Groups to add to policy settings:**
 
@@ -658,7 +617,48 @@ Phase 1 includes the following steps:
             > [!NOTE]
             > Note: This Group was created earlier in Phase 1
 
-    2.  Create the new **Restrict Server Logon** GPO- this setting will restrict Tier 0 administrator accounts from logging onto standard workstations.  This GPO should have the following settings:
+        - (ii) In Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies\User Rights Assignment\Deny log on as a service,  select **Define these policy settings** and add the Tier 0 and Tier 1 groups:
+
+            **Groups to add to policy settings:**
+
+            Enterprise Admins
+
+            Domain Admins
+
+            Schema Admins
+
+            DOMAIN\Administrators
+
+            Account Operators
+
+            Backup Operators
+
+            Print Operators
+
+            Server Operators
+
+            Domain Controllers
+
+            Read-Only Domain Controllers
+
+            Group Policy Creators Owners
+
+            Cryptographic Operators
+
+            > [!NOTE]
+            > Note: Built-in Tier 0 Groups, see Tier 0 equivalency for more details.
+
+            Other Delegated Groups
+
+            > [!NOTE]
+            > Note: Any custom created groups with effective Tier 0 access, see Tier 0 equivalency for more details.
+
+            Teir 1 Admins
+
+            > [!NOTE]
+            > Note: This Group was created earlier in Phase 1
+
+    2.  Create the new **Restrict Server Logon** GPO - this setting will restrict Tier 0 administrator accounts from logging onto Tier 1 servers.  This GPO should be applied to the "Tier 1 Servers" top-level OU and have the following settings:
 
         -   (i) In Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies\User Rights Assignment\Deny log on as a batch job, select **Define these policy settings** and add the Tier 0 groups:
 
@@ -742,8 +742,6 @@ Phase 1 includes the following steps:
 
             Schema Admins
 
-            DOMAIN\Administrators
-
             Account Operators
 
             Backup Operators
@@ -799,7 +797,7 @@ Phase 1 includes the following steps:
 
     6.  Using an account that is a member of the PAW Maintenance group, run the following PowerShell command from the newly-created PAW to join it to the domain in the appropriate OU:
 
-        `Add-Computer -DomainOrWorkgroupName Fabrikam -OUPath "OU=Devices,OU=Tier 0,OU=Admin,DC=fabrikam,DC=com"`
+        `Add-Computer -DomainName Fabrikam -OUPath "OU=Devices,OU=Tier 0,OU=Admin,DC=fabrikam,DC=com"`
 
         Replace the references to *Fabrikam* with your domain name, as appropriate.  If your domain name extends to multiple levels (e.g. child.fabrikam.com), add the additional names with the "DC=" identifier in the order in which they appear in the domain's fully-qualified domain name.
 
@@ -857,7 +855,7 @@ Phase 1 includes the following steps:
 
                 -   Remote Desktop Users
 
-                -   Replicator
+                -   Replicators
 
     12. **(Optional)** If your organization uses a security information and event management (SIEM) solution, ensure that the PAW is [configured to forward events to the system using Windows Event Forwarding (WEF)](http://blogs.technet.com/b/jepayne/archive/2015/11/24/monitoring-what-matters-windows-event-forwarding-for-everyone-even-if-you-already-have-a-siem.aspx) or is otherwise registered with the solution so that the SIEM is actively receiving events and information from the PAW.  The details of this operation will vary based on your SIEM solution.
 
@@ -958,7 +956,7 @@ Once you confirm that all steps were done, perform the steps below to complete P
 
         3.  Once you have configured the *proxy.pac* file, update the PAW Configuration - User GPO.
 
-            1.  Go to User Configuration\Preferences\Windows Settings\Registry:  Click New\Registry Item and configure the following settings:
+            1.  Go to User Configuration\Preferences\Windows Settings\Registry. Right-click Registry, select **New** \> **Registry Item** and configure the following settings:
 
                 1.  Action:  Replace
 
