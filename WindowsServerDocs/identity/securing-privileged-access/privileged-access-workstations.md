@@ -574,7 +574,7 @@ Phase 1 includes the following steps:
 
 7.  **Restrict Administrators from logging onto lower tier hosts**.  In this section, we will configure group policies to prevent privileged administrative accounts from logging onto lower tier hosts.
 
-    1.  Create the new **Restrict Workstation Logon** GPO - this setting will restrict Tier 0 and Tier 1 administrator accounts from logging onto standard workstations.  This GPO should be applied to the "Workstations" top-level OU and have the following settings:
+    1.  Create the new **Restrict Workstation Logon** GPO - this setting will restrict Tier 0 and Tier 1 administrator accounts from logging onto standard workstations.  This GPO should be linked to the "Workstations" top-level OU and have the following settings:
 
         - (i) In Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies\User Rights Assignment\Deny log on as a batch job,  select **Define these policy settings** and add the Tier 0 and Tier 1 groups:
 
@@ -658,7 +658,7 @@ Phase 1 includes the following steps:
             > [!NOTE]
             > Note: This Group was created earlier in Phase 1
 
-    2.  Create the new **Restrict Server Logon** GPO - this setting will restrict Tier 0 administrator accounts from logging onto Tier 1 servers.  This GPO should be applied to the "Tier 1 Servers" top-level OU and have the following settings:
+    2.  Create the new **Restrict Server Logon** GPO - this setting will restrict Tier 0 administrator accounts from logging onto Tier 1 servers.  This GPO should be linked to the "Tier 1 Servers" top-level OU and have the following settings:
 
         -   (i) In Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies\User Rights Assignment\Deny log on as a batch job, select **Define these policy settings** and add the Tier 0 groups:
 
