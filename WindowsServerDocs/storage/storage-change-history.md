@@ -7,7 +7,7 @@ ms.topic: article
 author: JasonGerend
 manager: dongill
 ms.author: jgerend
-ms.date: 6/1/2017
+ms.date: 6/23/2017
 description: New and updated topics in the Storage documentation for Windows Server 2016
 ---
 # Change history for storage topics in Windows Server 2016
@@ -24,6 +24,7 @@ This topic lists new and updated topics in the [Storage](storage.md) documentati
 |---|---|
 |[Planning a Work Folders deployment](work-folders/plan-work-folders.md)|Added info about Azure AD Application Proxy support & updated requirements.|
 |[Work Folders](work-folders/work-folders-overview.md)|Added info about Azure AD Application Proxy support & updated requirements.|
+|[Hyper-converged solution using Storage Spaces Direct](storage-spaces/hyper-converged-solution-using-storage-spaces-direct.md)|Removed Nano Server from supported installation options.|
 
 ## May 2017
 
