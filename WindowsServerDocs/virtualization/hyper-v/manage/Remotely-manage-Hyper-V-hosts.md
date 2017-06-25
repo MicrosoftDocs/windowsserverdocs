@@ -145,7 +145,7 @@ For cmdlet details, see [Set-Item](https://msdn.microsoft.com/powershell/referen
 
 ## Install Hyper-V Manager
 
-To use a UI tool, choose the one appropriate for the oeprating system on the computer where you'll run Hyper-V Manager:
+To use a UI tool, choose the one appropriate for the operating system on the computer where you'll run Hyper-V Manager:
 
 On Windows Server, open Server Manager \> **Manage** \> **Add roles and features**. Move to the **Features** page and expand **Remote server administration tools** \> **Role administration tools** \> **Hyper-V management tools**. 
 
