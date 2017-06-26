@@ -353,11 +353,11 @@ Remove-VMSwitch "SETvSwitch"
 
 ### Changing the load distribution algorithm for a SET team
 
-The **Set-VMSwitchTeam** cmdlet has a **VMSwitchLoadBalancingAlgorithm** option. This option takes one of two possible values: **HyperVPort** or **Dynamic**. To set or change the load distribution algorithm for a switch-embedded team, use this option. 
+The **Set-VMSwitchTeam** cmdlet has a **LoadBalancingAlgorithm** option. This option takes one of two possible values: **HyperVPort** or **Dynamic**. To set or change the load distribution algorithm for a switch-embedded team, use this option. 
 
 In the following example, the VMSwitchTeam named **TeamedvSwitch** uses the **Dynamic** load balancing algorithm.  
   
 ```  
-Set-VMSwitchTeam -Name TeamedvSwitch -VMSwitchLoadBalancingAlgorithm Dynamic  
+Set-VMSwitchTeam -Name TeamedvSwitch -LoadBalancingAlgorithm Dynamic  
 ```  
 
