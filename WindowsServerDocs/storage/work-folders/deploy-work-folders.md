@@ -7,7 +7,7 @@ ms.topic: article
 author: JasonGerend
 manager: dongill
 ms.author: jgerend
-ms.date: 5/31/2017
+ms.date: 6/24/2017
 description: How to deploy Work Folders, including installing the server role, creating sync shares, and creating DNS records.
 ---
 # Deploying Work Folders
@@ -222,6 +222,10 @@ The example above creates a new sync share named *Share01* with the path *K:\Sha
 ## Step 9: Optionally set up server automatic discovery  
  If you are hosting multiple sync servers in your environment, you should configure server automatic discovery by populating the **msDS-SyncServerURL** property on user accounts in AD DS.  
   
+>[!NOTE]
+>The msDS-SyncServerURL property in Active Directory should not be defined for remote users that are accessing Work Folders through a reverse proxy solution such as Web Application Proxy or Azure AD Application Proxy. If the msDS-SyncServerURL property is defined, the Work Folders client will try to access an internal URL that’s not accessible through the reverse proxy solution. When using Web Application Proxy or Azure AD Application Proxy, you need to create unique proxy applications for each Work Folders server. For more details, see [Deploying Work Folders with AD FS and Web Application Proxy: Overview](deploy-work-folders-adfs-overview.md) or [Deploying Work Folders with Azure AD Application Proxy](https://blogs.technet.microsoft.com/filecab/2017/05/31/enable-remote-access-to-work-folders-using-azure-active-directory-application-proxy/).
+
+
  Before you can do so, you must install a Windows Server 2012 R2 domain controller or update the forest and domain schemas by using the `Adprep /forestprep` and `Adprep /domainprep` commands. For information on how to safely run these commands, see [Running Adprep](http://technet.microsoft.com/library/dd464018.aspx).  
   
  You probably also want to create a security group for file server administrators and give them delegated permissions to modify this particular user attribute, as described in Step 5 and Step 6. Without these steps you would need to get a member of the Domain Admins or Enterprise Admins group to configure automatic discovery for each user.  

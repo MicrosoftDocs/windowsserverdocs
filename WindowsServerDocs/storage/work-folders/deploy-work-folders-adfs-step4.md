@@ -6,7 +6,7 @@ ms.topic: article
 manager: klaasl
 ms.author: jeffpatt
 author: JeffPatt24
-ms.date: 4/5/2017
+ms.date: 6/242017
 ms.assetid: 4a11ede0-b000-4188-8190-790971504e17
 ---
 # Deploy Work Folders with AD FS and Web Application Proxy: Step 4, Set-up Web Application Proxy
@@ -140,7 +140,9 @@ The next step is to publish a web application that will make Work Folders availa
   
 9.  The confirmation page shows the Windows PowerShell command that will execute to publish the application. Click **Publish**.  
   
-10. On the **Results** page, you should see the application was published successfully.  
+10. On the **Results** page, you should see the application was published successfully.
+   >[!NOTE]
+   > If you have multiple Work Folders servers, you need to publish a Work Folders web application for each Work Folders server (repeat steps 1-10).  
   
 Next step: [Deploy Work Folders with AD FS and Web Application Proxy: Step 5, Set Up Clients](deploy-work-folders-adfs-step5.md)  
   

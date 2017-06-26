@@ -48,7 +48,7 @@ Processor performance depends not only on the clock frequency of the processor, 
 - Supports CMPXCHG16b, LAHF/SAHF, and PrefetchW  
 - Supports Second Level Address Translation (EPT or NPT)  
 
-[Coreinfo] (https://technet.microsoft.com/sysinternals/cc835722.aspx) is a tool you can use to confirm which of these capabilities you CPU has.
+[Coreinfo] (https://technet.microsoft.com/sysinternals/cc835722.aspx) is a tool you can use to confirm which of these capabilities your CPU has.
 
 ## RAM  
 The following are the estimated RAM requirements for this product:  
