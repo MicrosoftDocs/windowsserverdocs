@@ -48,6 +48,7 @@ The available release channels are different for each Windows Server installatio
 | Server Core         | Yes                                  | Yes                                               |
 | Server with Desktop | No                                   | Yes                                               |
 
+
 ## Device compatibility
 Unless otherwise communicated, the minimum hardware requirements to run the Semi-annual Channel releases will be the same as the most recent Long-term Servicing Channel release of Windows Server. For example, the current Long-term Servicing Channel release is Windows Server 2016. Most hardware drivers will continue to function in these releases.
 
