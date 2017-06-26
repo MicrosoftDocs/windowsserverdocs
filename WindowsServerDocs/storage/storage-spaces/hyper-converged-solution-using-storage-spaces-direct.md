@@ -7,7 +7,7 @@ ms.technology: storage-spaces
 ms.topic: get-started-article
 ms.assetid: 20fee213-8ba5-4cd3-87a6-e77359e82bc0
 author: stevenek
-ms.date: 5/30/2017
+ms.date: 6/23/2017
 description: Deploy Storage Spaces Direct in a hyper-converged cluster in a test lab.
 ---
 # Hyper-converged solution using Storage Spaces Direct in Windows Server 2016
@@ -61,11 +61,11 @@ The following information will be needed as inputs to configure provision and ma
 
 ## Installation options
 
-Hyper-converged deployments can be done using a Nano Server, Server Core, or Server with Desktop Experience installation of Windows Server 2016. Nano Server is a new installation option for Windows Server 2016, see [Getting Started with Nano Server](../../get-started/Getting-Started-with-Nano-Server.md) for more information on the advantages of using Nano Server and deploying and managing Nano server.
+Hyper-converged deployments can be done using a Server Core, or Server with Desktop Experience installation of Windows Server 2016.
 
 This guide focuses on deploying hyper-converged systems using the Server Core installation option.
 
-However, the steps in the "Configure the Network" and "Configure Storage Spaces Direct" sections are identical whether you are using Server with Desktop Experience, Server Core, or Nano Server installations.
+However, the steps in the "Configure the Network" and "Configure Storage Spaces Direct" sections are identical whether you are using Server with Desktop Experience or Server Core installations.
 
 ## Management system
 For the purposes of this document, the machine that has the management tools to locally or remotely manage the cluster is referred to as the management system. The management system machine has the following requirements:  
