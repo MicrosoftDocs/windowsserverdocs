@@ -1,5 +1,5 @@
 ---
-title: Deploy a two-node S2D SOFS for UPD storage in Azure
+title: Deploy a two-node Storage Spaces Direct SOFS for UPD storage in Azure
 description: Learn how to use Storage Spaces Direct with RDS.
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -11,14 +11,14 @@ ms.topic: article
 ms.assetid: 1099f21d-5f07-475a-92dd-ad08bc155da1
 author: haley-rowland
 ms.author: harowl
-ms.date: 01/05/2017
+ms.date: 06/24/2017
 manager: scottman
 ---
-# Deploy a two-node S2D SOFS for UPD storage in Azure
+# Deploy a two-node Storage Spaces Direct scale-out file server for UPD storage in Azure
 
 >Applies To: Windows Server 2016
 
-Remote Desktop Services (RDS) requires a domain-joined file server for user profile disks (UPDs). To deploy a high availability domain-joined scale-out file server (SOFS) in Azure, use Storage Spaces Direct (S2D) with Windows Server 2016. If you’re not familiar with UPDs or Remote Desktop Services, check out [Welcome to Remote Desktop Services](welcome-to-rds.md).
+Remote Desktop Services (RDS) requires a domain-joined file server for user profile disks (UPDs). To deploy a high availability domain-joined scale-out file server (SOFS) in Azure, use Storage Spaces Direct with Windows Server 2016. If you’re not familiar with UPDs or Remote Desktop Services, check out [Welcome to Remote Desktop Services](welcome-to-rds.md).
 
 > [!NOTE] 
 > Microsoft just published an [Azure template to deploy a Storage Spaces Direct scale-out file server](https://azure.microsoft.com/documentation/templates/301-storage-spaces-direct/)! You can use the template to create your deployment, or use the steps in this article. 
@@ -41,7 +41,7 @@ These instructions are for a 2-node deployment. The following table shows the VM
 | 2500  | 12500      | DS4 | 13      | P30       | 1024           | 2x(DS4 + 13 P30) |
 | 5000  | 25000      | DS5 | 25      | P30       | 1024           | 2x(DS5 + 25 P30) | 
 
-Use the following steps to create a domain controller (we called ours "my-dc" below) and two node VMs ("my-fsn1" and "my-fsn2") and configure the VMs to be a 2-node S2D SOFS.
+Use the following steps to create a domain controller (we called ours "my-dc" below) and two node VMs ("my-fsn1" and "my-fsn2") and configure the VMs to be a 2-node Storage Spaces Direct SOFS.
 
 1. Create a [Microsoft Azure subscription](https://azure.microsoft.com).
 2. Sign into the [Azure portal](https://ms.portal.azure.com).
@@ -61,7 +61,7 @@ Use the following steps to create a domain controller (we called ours "my-dc" be
       - Follow the steps to install AD DS.
    3. Enable [Azure AD Domain Services](https://azure.microsoft.com/en-us/documentation/articles/active-directory-ds-getting-started/):
       Note that this only works on a V1 VNet, while the rest of the deployment described below requires a V2 VNet. In order to allow communication between the cluster nodes and the domain controller, you will need to deploy [VNet peering](https://azure.microsoft.com/documentation/articles/virtual-network-peering-overview/) (you can also use a [quickstart template to deploy VNet peering](https://azure.microsoft.com/documentation/templates/201-vnet-to-vnet-peering/)).
-5. Set up the file server cluster nodes. You can do this by deploying the [Windows Server 2016 Storage Spaces Direct (S2D) SOFS cluster Azure template](https://azure.microsoft.com/resources/templates/301-storage-spaces-direct/) or by following steps 6-11 to deploy manually.
+5. Set up the file server cluster nodes. You can do this by deploying the [Windows Server 2016 Storage Spaces Direct SOFS cluster Azure template](https://azure.microsoft.com/resources/templates/301-storage-spaces-direct/) or by following steps 6-11 to deploy manually.
 5. To manually set up the file server cluster nodes:
    1. Create the first node: 
       1. Create a new virtual machine using the Windows Server 2016 image. (Click **New > Virtual Machines > Windows Server 2016.** Select **Resource Manager**, and then click **Create**.)
@@ -82,7 +82,7 @@ Use the following steps to create a domain controller (we called ours "my-dc" be
    2. Note the domain controller (my-dc for our example) private IP address (10.x.x.x).
 8. Set primary DNS server address on NICs of the cluster node VMs to the my-dc server. Select the VM, and then click **Network Interfaces > DNS servers > Custom DNS**. Enter the the private IP address you noted above, and then click **Save**.
 9. Create an [Azure storage account to be your cloud witness](https://blogs.msdn.microsoft.com/clustering/2014/11/13/introducing-cloud-witness/). (If you use the linked instructions, stop when you get to "Configuring Cloud Witness with Failover Cluster Manager GUI" - we'll do that step below.)
-10. Set up the S2D file server. Connect to a node VM, and then run the following Windows PowerShell cmdlets.
+10. Set up the Storage Spaces Direct file server. Connect to a node VM, and then run the following Windows PowerShell cmdlets.
    1. Install Failover Clustering Feature and File Server Feature on the two file server cluster node VMs:
 
       ```powershell
