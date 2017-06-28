@@ -469,7 +469,7 @@ Phase 1 includes the following steps:
 
         5.  **Configure Windows Update for WSUS** - follow the steps below to change the settings to configure Windows Update for the PAWs:
 
-            1.  Go to Computer Configuration\Administrative Templates\Windows Components\Windows Updates and follow the steps below:
+            1.  Go to Computer Configuration\Policies\Administrative Templates\Windows Components\Windows Updates and follow the steps below:
 
                 1.  Enable the **Configure Automatic Updates policy**.
 
@@ -566,7 +566,7 @@ Phase 1 includes the following steps:
 
         3.  Click **OK** to complete the ProxyServer group policy setting,
 
-    2.  Go to User Configuration\Administrative Templates\Windows Components\Internet Explorer, and enable the options below. These settings will prevent the administrators from manually overriding the proxy settings.
+    2.  Go to User Configuration\Policies\Administrative Templates\Windows Components\Internet Explorer, and enable the options below. These settings will prevent the administrators from manually overriding the proxy settings.
 
         1.  Enable the **Disable changing Automatic Configuration** settings.
 
