@@ -32,11 +32,13 @@ The following provides instructions on migrating the following role services to 
 ## Supported operating systems  
  **Destination server operating system:**  
   
- Windows Server 2012 or Windows Server 2008 R2 (Server Core and full installation options)  
+
+-  Windows Server 2012 or Windows Server 2008 R2 (Server Core and full installation options)  
   
  **Destination server processor:**  
   
- x64-based  
+
+-  x64-based  
   
 |Source server processor|Source server operating system|  
 |-----------------------------|------------------------------------|  
