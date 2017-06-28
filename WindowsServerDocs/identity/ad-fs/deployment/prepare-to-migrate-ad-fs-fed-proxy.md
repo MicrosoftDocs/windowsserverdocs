@@ -1,4 +1,4 @@
-To prepare to migrate an AD FS 2.0 federation server proxy to [!INCLUDE[win8_server_2](../Token/win8_server_2_md.md)], you must export and back up the AD FS configuration data from this server proxy.  The steps in this topic apply to a scenario with one proxy federation server or multiple proxy federation servers.  
+﻿To prepare to migrate an AD FS 2.0 federation server proxy to Windows Server 2012, you must export and back up the AD FS configuration data from this server proxy.  The steps in this topic apply to a scenario with one proxy federation server or multiple proxy federation servers.  
   
  To export the AD FS configuration data, perform the following tasks:  
   

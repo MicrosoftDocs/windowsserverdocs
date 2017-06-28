@@ -1,4 +1,4 @@
----
+﻿---
 title: Prepare to migrate an AD FS WID farm
 description:Provides information on getting ready to migrate an AD FS server WID farm to Windows Server 2012.
 author: billmath
@@ -11,7 +11,7 @@ ms.technology: identity-adfs
 ---
 
 # Prepare to migrate a WID farm  
- To prepare to migrate AD FS 2.0 federation servers that belong to a Windows Internal Database (WID) farm to [!INCLUDE[win8_server_2](../Token/win8_server_2_md.md)], you must export and back up the AD FS configuration data from these servers.  
+ To prepare to migrate AD FS 2.0 federation servers that belong to a Windows Internal Database (WID) farm to Windows Server 2012, you must export and back up the AD FS configuration data from these servers.  
   
  To export the AD FS configuration data, perform the following tasks:  
   
