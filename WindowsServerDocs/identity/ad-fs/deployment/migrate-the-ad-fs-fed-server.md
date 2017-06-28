@@ -1,3 +1,17 @@
+﻿---
+title: Migrate the AD FS 2.0 federation server
+description:Provides information on getting ready to migrate a stand-alone AD FS server to Windows Server 2012.
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 06/28/2017
+ms.topic: article
+ms.prod: windows-server-threshold
+ms.technology: identity-adfs
+---
+
+# Migrate the AD FS 2.0 federation server
+
 This topic provides instructions for the following migration scenarios:  
   
 -   [Migrate a stand-alone AD FS federation server or a single-node AD FS farm](../Topic/Migrate%20the%20AD%20FS%202.0%20Federation%20Server.md#BKMK_1)  
@@ -7,14 +21,14 @@ This topic provides instructions for the following migration scenarios:
 -   [Migrate a SQL Server farm](../Topic/Migrate%20the%20AD%20FS%202.0%20Federation%20Server.md#BKMK_3)  
   
 ##  <a name="BKMK_1"></a> Migrate a stand-alone AD FS federation server or a single-node AD FS farm  
- To migrate a stand-alone AD FS federation server or a single-node AD FS farm to [!INCLUDE[win8_server_2](../Token/win8_server_2_md.md)], perform the following procedure:  
+ To migrate a stand-alone AD FS federation server or a single-node AD FS farm to Windows Server 2012, perform the following procedure:  
   
 1.  Review and perform the procedures in the “Prepare to migrate a stand-alone AD FS federation server or a single-node AD FS farm” section of [Prepare to Migrate the AD FS 2.0 Federation Server](../Topic/Prepare%20to%20Migrate%20the%20AD%20FS%202.0%20Federation%20Server.md).  
   
-2.  Perform an in-place upgrade of the operating system on your server from Windows Server 2008 R2 or Windows Server 2008 to [!INCLUDE[win8_server_2](../Token/win8_server_2_md.md)]. For more information, see [Installing Windows Server 2012](../Topic/Installing%20Windows%20Server%202012.md).  
+2.  Perform an in-place upgrade of the operating system on your server from Windows Server 2008 R2 or Windows Server 2008 to Windows Server 2012. For more information, see [Installing Windows Server 2012](../Topic/Installing%20Windows%20Server%202012.md).  
   
     > [!IMPORTANT]
-    >  As the result of the operating system upgrade, the AD FS configuration on this server is lost and the AD FS 2.0 server role is removed. The [!INCLUDE[win8_server_2](../Token/win8_server_2_md.md)] AD FS server role is installed instead, but it is not configured. You must manually create the original AD FS configuration and restore the remaining AD FS settings to complete the federation server migration.  
+    >  As the result of the operating system upgrade, the AD FS configuration on this server is lost and the AD FS 2.0 server role is removed. The Windows Server 2012 AD FS server role is installed instead, but it is not configured. You must manually create the original AD FS configuration and restore the remaining AD FS settings to complete the federation server migration.  
   
 3.  Create the original AD FS configuration. You can create the original AD FS configuration by using either of the following methods:  
   
@@ -45,21 +59,21 @@ This topic provides instructions for the following migration scenarios:
     > [!NOTE]
     >  This step is only required if you are migrating a stand-alone federation server or a single node WID farm.  If the federation server uses a SQL Server database as the configuration store, the service settings and trust relationships are preserved in the database.  
   
-5.  Update your AD FS webpages. This is a manual step. If you backed up your customized AD FS webpages while preparing for the migration, use your backup data to overwrite the default AD FS webpages that were created by default in the **%systemdrive%\inetpub\adfs\ls** directory as a result of the AD FS configuration on [!INCLUDE[win8_server_2](../Token/win8_server_2_md.md)].  
+5.  Update your AD FS webpages. This is a manual step. If you backed up your customized AD FS webpages while preparing for the migration, use your backup data to overwrite the default AD FS webpages that were created by default in the **%systemdrive%\inetpub\adfs\ls** directory as a result of the AD FS configuration on Windows Server 2012.  
   
 6.  Restore any remaining AD FS customizations, such as custom attribute stores.  
   
 ##  <a name="BKMK_2"></a> Migrate a WID farm  
- To migrate a Windows Internal Database (WID) farm to [!INCLUDE[win8_server_2](../Token/win8_server_2_md.md)], perform the following procedure:  
+ To migrate a Windows Internal Database (WID) farm to Windows Server 2012, perform the following procedure:  
   
 1.  For every node (server) in the WID farm, review and perform the procedures in the “Prepare to migrate a WID farm” section of [Prepare to Migrate the AD FS 2.0 Federation Server](../Topic/Prepare%20to%20Migrate%20the%20AD%20FS%202.0%20Federation%20Server.md).  
   
 2.  Remove any non-primary nodes from the load balancer.  
   
-3.  Upgrade of the operating system on this server from Windows Server 2008 R2 or Windows Server 2008 to [!INCLUDE[win8_server_2](../Token/win8_server_2_md.md)]. For more information, see [Installing Windows Server 2012](../Topic/Installing%20Windows%20Server%202012.md).  
+3.  Upgrade of the operating system on this server from Windows Server 2008 R2 or Windows Server 2008 to Windows Server 2012. For more information, see [Installing Windows Server 2012](../Topic/Installing%20Windows%20Server%202012.md).  
   
     > [!IMPORTANT]
-    >  As the result of the operating system upgrade, the AD FS configuration on this server is lost and the AD FS 2.0 server role is removed. The [!INCLUDE[win8_server_2](../Token/win8_server_2_md.md)] AD FS server role is installed instead, but it is not configured. You must create the original AD FS configuration and restore the remaining AD FS settings to complete the federation server migration.  
+    >  As the result of the operating system upgrade, the AD FS configuration on this server is lost and the AD FS 2.0 server role is removed. The Windows Server 2012 AD FS server role is installed instead, but it is not configured. You must create the original AD FS configuration and restore the remaining AD FS settings to complete the federation server migration.  
   
 4.  Create the original AD FS configuration on this server.  
   
@@ -69,9 +83,9 @@ This topic provides instructions for the following migration scenarios:
     >  -   When you reach the **Specify the Primary Federation Server and a Service Account** page in the **AD FS Federation Server Configuration Wizard**, enter the name of the primary federation server of the WID farm and be sure to enter the service account information that you recorded while preparing for the AD FS migration. For more information, see the “Prepare to migrate a WID farm” section in [Prepare to Migrate the AD FS 2.0 Federation Server](../Topic/Prepare%20to%20Migrate%20the%20AD%20FS%202.0%20Federation%20Server.md).  
     > -   When you reach the **Specify the Federation Service Name** page, be sure to select the same SSL certificate you recorded in the “Prepare to migrate a WID farm” section in [Prepare to Migrate the AD FS 2.0 Federation Server](../Topic/Prepare%20to%20Migrate%20the%20AD%20FS%202.0%20Federation%20Server.md).  
   
-5.  Update your AD FS webpages on this server. If you backed up your customized AD FS webpages while preparing for the migration, you need to use your backup data to overwrite the default AD FS webpages that were created by default in the **%systemdrive%\inetpub\adfs\ls** directory as a result of the AD FS configuration on [!INCLUDE[win8_server_2](../Token/win8_server_2_md.md)].  
+5.  Update your AD FS webpages on this server. If you backed up your customized AD FS webpages while preparing for the migration, you need to use your backup data to overwrite the default AD FS webpages that were created by default in the **%systemdrive%\inetpub\adfs\ls** directory as a result of the AD FS configuration on Windows Server 2012.  
   
-6.  Add the server that you just upgraded to [!INCLUDE[win8_server_2](../Token/win8_server_2_md.md)] to the load balancer.  
+6.  Add the server that you just upgraded to Windows Server 2012 to the load balancer.  
   
 7.  Repeat steps 1 through 6 for the remaining secondary servers in your WID farm.  
   
@@ -81,10 +95,10 @@ This topic provides instructions for the following migration scenarios:
   
 10. Demote the original primary server in your WID farm to be a secondary server by using Windows PowerShell. Open Windows PowerShell and run the following command to add the AD FS cmdlets to your Windows PowerShell session: `PSH:>add-pssnapin “Microsoft.adfs.powershell”`. Then run the following command to demote the original primary server to be a secondary server: `PSH:> Set-AdfsSyncProperties – Role SecondaryComputer –PrimaryComputerName <FQDN of the Primary Federation Server>`.  
   
-11. Upgrade of the operating system on this last node (server) in your WID farm from Windows Server 2008 R2 or Windows Server 2008 to [!INCLUDE[win8_server_2](../Token/win8_server_2_md.md)]. For more information, see [Installing Windows Server 2012](../Topic/Installing%20Windows%20Server%202012.md).  
+11. Upgrade of the operating system on this last node (server) in your WID farm from Windows Server 2008 R2 or Windows Server 2008 to Windows Server 2012. For more information, see [Installing Windows Server 2012](../Topic/Installing%20Windows%20Server%202012.md).  
   
     > [!IMPORTANT]
-    >  As the result of upgrading the operating system, the AD FS configuration on this server is lost and the AD FS 2.0 server role is removed. The [!INCLUDE[win8_server_2](../Token/win8_server_2_md.md)] AD FS server role is installed instead, but it is not configured. You must manually create the original AD FS configuration and restore the remaining AD FS settings to complete the federation server migration.  
+    >  As the result of upgrading the operating system, the AD FS configuration on this server is lost and the AD FS 2.0 server role is removed. The Windows Server 2012 AD FS server role is installed instead, but it is not configured. You must manually create the original AD FS configuration and restore the remaining AD FS settings to complete the federation server migration.  
   
 12. Create the original AD FS configuration on this last node (server) in your WID farm.  
   
@@ -94,23 +108,23 @@ This topic provides instructions for the following migration scenarios:
     >  -   When you reach the **Specify the Primary Federation server and a Service Account** page in the **AD FS Federation Server Configuration Wizard**, enter the service account information that you recorded while preparing for the AD FS migration. For more information, see the “Prepare to migrate a WID farm” section in [Prepare to Migrate the AD FS 2.0 Federation Server](../Topic/Prepare%20to%20Migrate%20the%20AD%20FS%202.0%20Federation%20Server.md).  
     > -   When you reach the **Specify the Federation Service Name** page, be sure to select the same SSL certificate you recorded in the “Prepare to migrate a WID farm” section in [Prepare to Migrate the AD FS 2.0 Federation Server](../Topic/Prepare%20to%20Migrate%20the%20AD%20FS%202.0%20Federation%20Server.md).  
   
-13. Update your AD FS webpages on this last server in your WID farm. If you backed up your customized AD FS webpages while preparing for the migration, use your backup data to overwrite the default AD FS webpages that were created by default in the **%systemdrive%\inetpub\adfs\ls** directory as a result of the AD FS configuration on [!INCLUDE[win8_server_2](../Token/win8_server_2_md.md)].  
+13. Update your AD FS webpages on this last server in your WID farm. If you backed up your customized AD FS webpages while preparing for the migration, use your backup data to overwrite the default AD FS webpages that were created by default in the **%systemdrive%\inetpub\adfs\ls** directory as a result of the AD FS configuration on Windows Server 2012.  
   
-14. Add this last server of your WID farm that you just upgraded to [!INCLUDE[win8_server_2](../Token/win8_server_2_md.md)] to the load balancer.  
+14. Add this last server of your WID farm that you just upgraded to Windows Server 2012 to the load balancer.  
   
 15. Restore any remaining AD FS customizations, such as custom attribute stores.  
   
 ##  <a name="BKMK_3"></a> Migrate a SQL Server farm  
- To migrate a SQL Server farm to [!INCLUDE[win8_server_2](../Token/win8_server_2_md.md)], perform the following procedure:  
+ To migrate a SQL Server farm to Windows Server 2012, perform the following procedure:  
   
 1.  For each server in your SQL Server farm, review and perform the procedures in the “Prepare to migrate a SQL Server farm” section of [Prepare to Migrate the AD FS 2.0 Federation Server](../Topic/Prepare%20to%20Migrate%20the%20AD%20FS%202.0%20Federation%20Server.md).  
   
 2.  Remove any server in your SQL Server farm from the load balancer.  
   
-3.  Upgrade the operating system on this server in your SQL Server farm from Windows Server 2008 R2 or Windows Server 2008 to [!INCLUDE[win8_server_2](../Token/win8_server_2_md.md)]. For more information, see [Installing Windows Server 2012](../Topic/Installing%20Windows%20Server%202012.md).  
+3.  Upgrade the operating system on this server in your SQL Server farm from Windows Server 2008 R2 or Windows Server 2008 to Windows Server 2012. For more information, see [Installing Windows Server 2012](../Topic/Installing%20Windows%20Server%202012.md).  
   
     > [!IMPORTANT]
-    >  As the result of the operating system upgrade, the AD FS configuration on this server is lost and the AD FS 2.0 server role is removed. The [!INCLUDE[win8_server_2](../Token/win8_server_2_md.md)] AD FS server role is installed instead, but it is not configured. You must manually create the original AD FS configuration and restore the remaining AD FS settings to complete the federation server migration.  
+    >  As the result of the operating system upgrade, the AD FS configuration on this server is lost and the AD FS 2.0 server role is removed. The Windows Server 2012 AD FS server role is installed instead, but it is not configured. You must manually create the original AD FS configuration and restore the remaining AD FS settings to complete the federation server migration.  
   
 4.  Create the original AD FS configuration on this server in your SQL Server farm by using AD FS Windows PowerShell cmdlets to add a server to an existing farm.  
   
@@ -123,11 +137,11 @@ This topic provides instructions for the following migration scenarios:
   
     3.  Run the following command: `Add-AdfsFarmNode -ServiceAccountCredential $fscredential -SQLConnectionString "Data Source=<Data Source>;Integrated Security=True"`, where `Data Source` is the data source value in the policy store connection string value in the following file: `%programfiles%\Active Directory Federation Services 2.0\Microsoft.IdentityServer.Servicehost.exe.config`.  
   
-5.  Add the server that you just upgraded to [!INCLUDE[win8_server_2](../Token/win8_server_2_md.md)] to the load balancer.  
+5.  Add the server that you just upgraded to Windows Server 2012 to the load balancer.  
   
 6.  Repeat steps 2 through 6 for the remaining nodes in your SQL Server farm.  
   
-7.  When all of the servers in your SQL Server farm are upgraded to [!INCLUDE[win8_server_2](../Token/win8_server_2_md.md)], restore any remaining AD FS customizations, such as custom attribute stores.  
+7.  When all of the servers in your SQL Server farm are upgraded to Windows Server 2012, restore any remaining AD FS customizations, such as custom attribute stores.  
   
 ##  <a name="BKMK_5"></a> Restoring the Remaining AD FS Farm Configuration  
   
