@@ -1,6 +1,6 @@
 ---
 title: Migrate Active Directory Federation Services Role Services to Windows Server 2012
-description:Provides instructions for migrating the AD FS service to Windows Server 2012.
+description: Provides instructions for migrating the AD FS service to Windows Server 2012.
 author: billmath
 ms.author: billmath
 manager: femila
@@ -41,7 +41,7 @@ The following provides instructions on migrating the following role services to 
 -  x64-based  
   
 |Source server processor|Source server operating system|  
-|-----------------------------|------------------------------------|  
+|-----|-----|  
 |x86- or x64-based|Windows Server 2003 with Service Pack 2|  
 |x86- or x64-based|Windows Server 2003 R2|  
 |x86- or x64-based|Windows Server 2008, both full and Server Core installation options|  
@@ -58,7 +58,7 @@ The following provides instructions on migrating the following role services to 
  The following table describes the migration scenarios of the AD FS role services and their respective settings that are described in this guide.  
   
 |From|To AD FS installed with Windows Server 2012|  
-|----------|-------------------------------------------------------------------------------------------|  
+|----------|-----|  
 |AD FS 1.0 federation server installed with Windows Server 2003 R2|Migration is not supported|  
 |AD FS 1.0 federation server proxy installed with Windows Server 2003 R2|Migration is not supported|  
 |AD FS 1.0 Windows token-based agent installed with Windows Server 2003 R2|Migration is not supported|  

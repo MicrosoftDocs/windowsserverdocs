@@ -16,15 +16,15 @@ To prepare to migrate (same server migration) a stand-alone AD FS 2.0 federation
   
 To export the AD FS configuration data, perform the following tasks:  
   
--   [Step 1: Export service settings](#step-1:-export-service-settings)  
+-   [Step 1:  Export service settings](#step-1-export-service-settings)  
   
--   [Step 2: - Export claims provider trusts](../Topic/Prepare%20to%20Migrate%20the%20AD%20FS%202.0%20Federation%20Server.md#SA_2)  
+-   [Step 2:  Export claims provider trusts](#step-2-export-claims-provider-trusts)  
   
--   [Step 3: - Export relying party trusts](../Topic/Prepare%20to%20Migrate%20the%20AD%20FS%202.0%20Federation%20Server.md#SA_3)  
+-   [Step 3:  Export relying party trusts](#step-3-export-relying-party-trusts)  
   
--   [Step 4: - Back up custom attribute stores](../Topic/Prepare%20to%20Migrate%20the%20AD%20FS%202.0%20Federation%20Server.md#SA_4)  
+-   [Step 4:  Back up custom attribute stores](#step-4-back-up-custom-attribute-stores)  
   
--   [Step 5: Back up webpage customizations](../Topic/Prepare%20to%20Migrate%20the%20AD%20FS%202.0%20Federation%20Server.md#SA_5)  
+-   [Step 5:  Back up webpage customizations](#step-5-back-up-webpage-customizations)  
   
 ## Step 1: Export service settings  
  To export service settings, perform the following procedure:  
