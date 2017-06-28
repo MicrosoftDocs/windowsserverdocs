@@ -23,11 +23,14 @@ Manages File Server for Macintosh servers, volumes, directories, and files. You 
 -   [To join a Macintosh file's data and resource forks](#BKMK_Joinforks)
 -   [To change the logon message and limit sessions](#BKMK_LogonLimit)
 -   [To add, change, or remove Macintosh-accessible volumes](#BKMK_addvol)
+
 ## <a name="BKMK_Moddirs"></a>To modify directories in Macintosh-accessible volumes
+
 ### Syntax
 ```
 macfile directory[/server:\\<computerName>] /path:<directory> [/owner:<OwnerName>] [/group:<GroupName>] [/permissions:<Permissions>]
 ```
+
 ### Parameters
 -   /server:\\\\<computerName>
     Specifies the server on which to change a directory. If omitted, the operation is performed on the local computer.
@@ -40,6 +43,7 @@ macfile directory[/server:\\<computerName>] /path:<directory> [/owner:<OwnerName
 -   /permissions:<Permissions>
     Sets permissions on the directory for the owner, primary group, and world (everyone). An 11-digit number is used to set permissions. The number 1 grants permission and 0 revokes permission (for example, 11111011000). If omitted, permissions remain unchanged.
     The position of the digit determines which permission is set, as described in the following table.
+    
     |Position|Sets Permission for|
     |------|------------|
     |First|OwnerSeeFiles|
@@ -53,8 +57,10 @@ macfile directory[/server:\\<computerName>] /path:<directory> [/owner:<OwnerName
     |Ninth|WorldMakechanges|
     |Tenth|The directory cannot be renamed, moved, or deleted.|
     |Eleventh|The changes apply to the current directory and all subdirectories.|
+    
 -   /?
     Displays help at the command prompt.
+    
 ### remarks
 -   if the information that you supply contains spaces or special characters, use quotation marks around the text (for example, **"***computer Name***"**).
 -   Use **macfiledirectory** to make an existing directory in a Macintosh-accessible volume available to Macintosh users. The **macfiledirectory** command does not create directories. Use File Manager, the command prompt, or the **macintosh new folder** command to create a directory in a Macintosh-accessible volume before you use the **macfile directory** command.
@@ -63,11 +69,14 @@ The following example changes the permissions of the subdirectory May sales, in 
 ```
 macfile directory /path:"e:\statistics\may sales" /permissions:11111011000
 ```
+
 ## <a name="BKMK_Joinforks"></a>To join a Macintosh file's data and resource forks
+
 ### Syntax
 ```
 macfile forkize[/server:\\<computerName>] [/creator:<CreatorName>] [/type:<typeName>]  [/datafork:<Filepath>] [/resourcefork:<Filepath>] /targetfile:<Filepath>
 ```
+
 ### Parameters
 |Parameter|Description|
 |-------|--------|
@@ -78,8 +87,10 @@ macfile forkize[/server:\\<computerName>] [/creator:<CreatorName>] [/type:<typeN
 |/resourcefork:<Filepath>|Specifies the location of the resource fork that is to be joined. You can specify a remote path.|
 |/targetfile:<Filepath>|Required. Specifies the location of the file that is created by joining a data fork and a resource fork, or specifies the location of the file whose type or creator you are changing. The file must be on the specified server.|
 |/?|Displays help at the command prompt.|
+
 ### remarks
 -   if the information that you supply contains spaces or special characters, use quotation marks around the text (for example, **"***computer Name***"**).
+
 ### Examples
 To create the file treeapp on the Macintosh-accessible volume D:\Release, using the resource fork C:\Cross\Mac\Appcode, and to make this new file appear to Macintosh clients as an application (Macintosh applications use the type APPL) with the creator (signature) set to MAGNOLIA, type:
 ```
@@ -89,11 +100,13 @@ To change the file creator to Microsoft Word 5.1, for the file WOrd.txt in the d
 ```
 macfile forkize /server:\\servera /creator:MSWD /type:TEXT /targetfile:"d:\Word documents\Group files\Word.txt"
 ```
+
 ## <a name="BKMK_LogonLimit"></a>To change the logon message and limit sessions
 ### Syntax
 ```
 macfile server [/server:\\<computerName>] [/maxsessions:{Number | unlimited}] [/loginmessage:<Message>]
 ```
+
 ### Parameters
 |Parameter|Description|
 |-------|--------|
@@ -101,19 +114,23 @@ macfile server [/server:\\<computerName>] [/maxsessions:{Number | unlimited}] [/
 |/maxsessions:{Number &#124; unlimited}|Specifies the maximum number of users who can simultaneously use File and print Servers for Macintosh. If omitted, the **maxsessions** setting for the server remains unchanged.|
 |/loginmessage:<Message>|changes the message Macintosh users see when logging on to the File Server for Macintosh server. The maximum number of characters for the logon message is 199. If omitted, the **loginmessage** message for the server remains unchanged. To remove an existing logon message, include the **/loginmessage** parameter, but leave the *Message* variable blank.|
 |/?|Displays help at the command prompt.|
+
 ### remarks
 -   if the information that you supply contains spaces or special characters, use quotation marks around the text (for example, **"***computer Name***"**).
+
 ### Examples
 To change the number of File and print Server for Macintosh sessions that are permitted on the local server from the current setting to five sessions, and to add the logon message "Log off from Server for Macintosh when you are finished.", type:
 ```
 macfile server /maxsessions:5 /loginmessage:"Log off from Server for Macintosh when you are finished."
 ```
+
 ## <a name="BKMK_addvol"></a>To add, change, or remove Macintosh-accessible volumes
 ### Syntax
 ```
 macfile volume {/add|/set} [/server:\\<computerName>] /name:<volumeName>/path:<directory>[/readonly:{true | false}] [/guestsallowed:{true | false}] [/password:<Password>] [/maxusers:{<Number>>|unlimited}]
 macfile volume /remove[/server:\\<computerName>] /name:<volumeName>
 ```
+
 ### Parameters
 |Parameter|Description|
 |-------|--------|
@@ -127,8 +144,10 @@ macfile volume /remove[/server:\\<computerName>] /name:<volumeName>
 |/maxusers:{<Number>>&#124;unlimited}|Specifies the maximum number of users who can simultaneously use the files on the volume. If omitted when adding a volume, an unlimited number of users can use the volume. If omitted when changing a volume, the **maxusers** value remains unchanged.|
 |/remove|Required when you are removing a Macintosh-accesible volume. removes the specified volume.|
 |/?|Displays help at the command prompt.|
+
 ### remarks
 -   if the information that you supply contains spaces or special characters, use quotation marks around the text (for example, **"***computer Name***"**).
+
 ### Examples
 To create a volume called US Marketing Statistics on the local server, using the Stats directory in the E drive, and to specify that the volume cannot be accessed by guests, type:
 ```
@@ -146,5 +165,6 @@ To remove the volume called Sales Reports on the local server, type:
 ```
 macfile volume /remove /name:"Sales Reports"
 ```
+
 ## additional references
 -   [Command-Line Syntax Key](command-line-syntax-key.md)
