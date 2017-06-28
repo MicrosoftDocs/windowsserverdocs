@@ -20,7 +20,7 @@
 #### [Appendix A: Dynamic Access Control Glossary](solution-guides/appendix-A--Dynamic-Access-Control-Glossary.md)
 #### [Appendix B: Setting Up the Test Environment](solution-guides/appendix-B--Setting-Up-the-Test-Environment.md)
 ## [Active Directory Domain Services](ad-ds/active-directory-Domain-Services.md)
-### [What's new in Active Directory Domain Services Technical Preview](whats-new-active-directory-domain-services.md)
+### [What's new in Active Directory Domain Services](whats-new-active-directory-domain-services.md)
 ### [AD DS Getting started](ad-ds/AD-DS-Getting-started.md)
 #### [Active Directory Domain Services Overview](ad-ds/get-started/virtual-dc/active-directory-domain-services-overview.md)
 #### [Active Directory Administrative Center](ad-ds/get-started/adac/active-directory-Administrative-Center.md)
