@@ -57,5 +57,5 @@ logoff [<SessionName> | <SessionID>] [/server:<ServerName>] [/v]
     ```
     
 #### additional references
-[Command-Line Syntax Key](command-line-syntax-key.md)
-[remote Desktop Services &#40;Terminal Services&#41; Command Reference](remote-desktop-services-terminal-services-command-reference.md)
+-   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   [remote Desktop Services &#40;Terminal Services&#41; Command Reference](remote-desktop-services-terminal-services-command-reference.md)
