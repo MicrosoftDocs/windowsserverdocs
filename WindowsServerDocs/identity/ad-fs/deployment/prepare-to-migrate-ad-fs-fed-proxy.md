@@ -1,6 +1,6 @@
 ---
 title: Prepare to Migrate the AD FS 2.0 Federation Server Proxy
-description:Provides information on getting ready to migrate the AD FS server proxy to Windows Server 2012.
+description: Provides information on getting ready to migrate the AD FS server proxy to Windows Server 2012.
 author: billmath
 ms.author: billmath
 manager: femila
@@ -27,12 +27,12 @@ To prepare to migrate an AD FS 2.0 federation server proxy to Windows Server 201
   
 1.  Export the Secure Sockets Layer (SSL) certificate and its private key to a .pfx file. For more information, see [Export the Private Key Portion of a Server Authentication Certificate](export-the-private-key-portion-of-a-server-authentication-certificate.md).  
   
-    > [!NOTE]
-    >  This step is optional because this certificate is preserved during the operating system upgrade.  
+> [!NOTE]
+>  This step is optional because this certificate is preserved during the operating system upgrade.  
   
 2.  Export AD FS 2.0 federation proxy properties to a file. You can do that by using Windows PowerShell.  
   
-     Open Windows PowerShell and run the following command to add the AD FS cmdlets to your Windows PowerShell session: `PSH:>add-pssnapin “Microsoft.adfs.powershell”`. Then run the following command to export federation proxy properties to a file: `PSH:> Get-ADFSProxyProperties | out-file “.\proxyproperties.txt”`.  
+Open Windows PowerShell and run the following command to add the AD FS cmdlets to your Windows PowerShell session: `PSH:>add-pssnapin “Microsoft.adfs.powershell”`. Then run the following command to export federation proxy properties to a file: `PSH:> Get-ADFSProxyProperties | out-file “.\proxyproperties.txt”`.  
   
 3.  Ensure you know the credentials of an account that is either an administrator of the AD FS federation server or the service account under which the AD FS federation service runs.  This information is required for the proxy trust setup.  
   

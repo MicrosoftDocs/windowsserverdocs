@@ -1,6 +1,6 @@
 ---
 title: Migrate the AD FS 2.0 federation server
-description:Provides information on getting ready to migrate a stand-alone AD FS server to Windows Server 2012.
+description: Provides information on getting ready to migrate a stand-alone AD FS server to Windows Server 2012.
 author: billmath
 ms.author: billmath
 manager: femila
