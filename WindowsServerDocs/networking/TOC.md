@@ -154,6 +154,7 @@
 ##### [Export an NPS Server Configuration for Import on Another Server](technologies/nps/nps-manage-export.md)
 ##### [Increase Concurrent Authentications Processed by NPS](technologies/nps/nps-concurrent-auth.md)
 ##### [Install Network Policy Server](technologies/nps/nps-manage-install.md)
+##### [NPS Proxy Server Load Balancing](nps-manage-proxy-lb.md)
 ##### [Register an NPS Server in an Active Directory Domain](technologies/nps/nps-manage-register.md)
 ##### [Unregister an NPS Server from an Active Directory Domain](technologies/nps/nps-manage-unregister.md)
 ##### [Use Regular Expressions in NPS](technologies/nps/nps-crp-reg-expressions.md)
