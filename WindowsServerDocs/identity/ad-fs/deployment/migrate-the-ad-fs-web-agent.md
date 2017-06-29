@@ -23,7 +23,7 @@ To migrate the AD FS 1.1 Windows token-based agent or the AD FS 1.1 claims-aware
 > -   AD FS 2.0 federation service installed on Windows Server 2008 R2 or Windows Server 2008  
 > -   AD FS federation service installed with Windows Server 2012  
 >   
->  For more information, see [Interoperating with AD FS 1.x](../Topic/Interoperating%20with%20AD%20FS%201.x.md).  
+>  For more information, see [Interoperating with AD FS 1.x](Interoperating-with-AD-FS-1.x.md).  
   
   
 ## Next Steps
