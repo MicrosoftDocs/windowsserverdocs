@@ -27,6 +27,7 @@ gpresult [/s <compUTER> [/u <USERNAME> [/p [<PASSWOrd>]]]] [/user [<TARGETDOMAIN
 ## Parameters
 > [!NOTE]
 > Except when you use **/?**, you must include an output option, either **/r**, **/v**, **/z**, **/x**, or **/h**.
+
 |Parameter|Description|
 |-------|--------|
 |/s <compUTER>|Specifies the name or IP address of a remote computer. Do not use backslashes. The default is the local computer.|
