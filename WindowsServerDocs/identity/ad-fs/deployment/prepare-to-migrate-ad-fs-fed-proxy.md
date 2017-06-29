@@ -1,17 +1,31 @@
-﻿To prepare to migrate an AD FS 2.0 federation server proxy to Windows Server 2012, you must export and back up the AD FS configuration data from this server proxy.  The steps in this topic apply to a scenario with one proxy federation server or multiple proxy federation servers.  
+---
+title: Prepare to Migrate the AD FS 2.0 Federation Server Proxy
+description:Provides information on getting ready to migrate the AD FS server proxy to Windows Server 2012.
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 06/28/2017
+ms.topic: article
+ms.prod: windows-server-threshold
+ms.technology: identity-adfs
+---
+
+# Prepare to Migrate the AD FS 2.0 Federation Server Proxy
+
+To prepare to migrate an AD FS 2.0 federation server proxy to Windows Server 2012, you must export and back up the AD FS configuration data from this server proxy.  The steps in this topic apply to a scenario with one proxy federation server or multiple proxy federation servers.  
   
  To export the AD FS configuration data, perform the following tasks:  
   
--   [Step 1: Export proxy service settings](../Topic/Prepare%20to%20Migrate%20the%20AD%20FS%202.0%20Federation%20Server%20Proxy.md#BKMK_1)  
+-   [Step 1: Export proxy service settings](#step-1-export-proxy-service-settings)  
   
--   [Step 2: Back up webpage customizations](../Topic/Prepare%20to%20Migrate%20the%20AD%20FS%202.0%20Federation%20Server%20Proxy.md#BKMK_2)  
+-   [Step 2: Back up webpage customizations](#step-2-back-up-webpage-customizations)  
   
-##  <a name="BKMK_1"></a> Step 1: Export proxy service settings  
+##  Step 1: Export proxy service settings  
  To export federation server proxy service settings, perform the following procedure:  
   
-#### To export proxy service settings  
+### To export proxy service settings  
   
-1.  Export the Secure Sockets Layer (SSL) certificate and its private key to a .pfx file. For more information, see [Export the Private Key Portion of a Server Authentication Certificate](../Topic/Export%20the%20Private%20Key%20Portion%20of%20a%20Server%20Authentication%20Certificate.md).  
+1.  Export the Secure Sockets Layer (SSL) certificate and its private key to a .pfx file. For more information, see [Export the Private Key Portion of a Server Authentication Certificate](export-the-private-key-portion-of-a-server-authentication-certificate.md).  
   
     > [!NOTE]
     >  This step is optional because this certificate is preserved during the operating system upgrade.  
@@ -30,8 +44,12 @@
   
 -   The address and the port of the HTTP proxy (if there is an HTTP proxy between the AD FS federation server proxy and the AD FS federation servers)  
   
-##  <a name="BKMK_2"></a> Step 2: Back up webpage customizations  
+##  Step 2: Back up webpage customizations  
  To back up webpage customizations, copy the AD FS proxy webpages and the **web.config** file from the directory that is mapped to the virtual path **“/adfs/ls”** in IIS.  By default, it is in the **%systemdrive%\inetpub\adfs\ls** directory.  
   
-## See Also  
- [Migrate AD FS Role Services to Windows Server 2012](../Topic/Migrate%20Active%20Directory%20Federation%20Services%20Role%20Services%20to%20Windows%20Server%202012.md)
+## Next Steps
+ [Prepare to Migrate the AD FS 2.0 Federation Server](prepare-to-migrate-ad-fs-fed-server.md)   
+ [Prepare to Migrate the AD FS 2.0 Federation Server Proxy](prepare-to-migrate-ad-fs-fed-proxy.md)   
+ [Migrate the AD FS 2.0 Federation Server](migrate-the-ad-fs-fed-server.md)   
+ [Migrate the AD FS 2.0 Federation Server Proxy](migrate-the-ad-fs-2-fed-server-proxy.md)   
+ [Migrate the AD FS 1.1 Web Agents](migrate-the-ad-fs-web-agent.md)
