@@ -13,8 +13,7 @@ ms.technology: identity-adfs
 
 
 # Migrate a stand-alone AD FS federation server or a single-node AD FS farm  
-
-To migrate a stand-alone AD FS federation server or a single-node AD FS farm to Windows Server 2012, perform the following procedure:  
+This document provides detailed information on migrating an AD FS 2.0 stand alone server to Windows Server 2012.
 
 ## Migrate a stand-alone AD FS 2.0 server
 
