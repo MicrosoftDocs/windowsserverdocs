@@ -147,7 +147,7 @@ git clone https://github.com/Azure-Samples/active-directory-dotnet-webapp-openid
   
         By changing the above we are doing the following:  
   
-        -   nstead of using the Authority for communicating data about the trusted issuer, we specify the discovery doc location directly via MetadataAddress  
+        -   Instead of using the Authority for communicating data about the trusted issuer, we specify the discovery doc location directly via MetadataAddress  
   
         -   Azure AD does not enforce the presence of a redirect_uri in the request, but ADFS does. So, we need to add it here  
   
