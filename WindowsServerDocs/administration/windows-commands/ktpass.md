@@ -75,8 +75,11 @@ To generate a .keytab file for a host computer that is not running the Windows o
     ```  
     ktpass /princ host/Sample1.contoso.com@CONTOSO.COM /mapuser Sample1 /pass MyPas$w0rd /out Sample1.keytab /crypto all /ptype KRB5_NT_PRINCIPAL /mapop set   
     ```  
+    
     > [!NOTE]  
     > You cannot map multiple service instances to the same user account.  
-3.  Merge the .keytab file with the /Etc/Krb5.keytab file on a host computer that is not running the Windows operating system.  
+    
+3.  Merge the .keytab file with the /Etc/Krb5.keytab file on a host computer that is not running the Windows operating system. 
+
 #### additional references  
 [Command-Line Syntax Key](command-line-syntax-key.md)  
