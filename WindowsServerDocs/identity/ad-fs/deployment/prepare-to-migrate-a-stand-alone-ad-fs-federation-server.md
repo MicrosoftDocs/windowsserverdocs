@@ -51,12 +51,12 @@ To export the AD FS configuration data, perform the following tasks:
   
      The output file will contain the following important configuration values:  
   
-    |||  
-    |-|-|  
-    |**Federation Service Property name as reported by Get-ADFSProperties**|**Federation Service Property name in AD FS management console**|  
-    |HostName|Federation Service name|  
-    |Identifier|Federation Service identifier|  
-    |DisplayName|Federation Service display name|  
+    
+|**Federation Service Property name as reported by Get-ADFSProperties**|**Federation Service Property name in AD FS management console**|
+|------|------|
+|HostName|Federation Service name|  
+|Identifier|Federation Service identifier|  
+|DisplayName|Federation Service display name|  
   
 4.  Back up the application configuration file. Among other settings, this file contains the policy database connection string.  
   

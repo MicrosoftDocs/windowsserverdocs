@@ -1,4 +1,4 @@
-﻿---
+---
 title: Prepare to migrate an AD FS SQL farm
 description:Provides information on getting ready to migrate an AD FS server SQL farm to Windows Server 2012.
 author: billmath
@@ -15,16 +15,16 @@ ms.technology: identity-adfs
   
  To export the AD FS configuration data, perform the following tasks:  
   
--   [Step 1: Export service settings](../Topic/Prepare%20to%20Migrate%20the%20AD%20FS%202.0%20Federation%20Server.md#SQL_1)  
+-   [Step 1: Export service settings](#step-1-export-service-settings)  
   
--   [Step 2: Back up custom attribute stores](../Topic/Prepare%20to%20Migrate%20the%20AD%20FS%202.0%20Federation%20Server.md#SQL_2)  
+-   [Step 2: Back up custom attribute stores](#step-2-back-up-custom-attribute-stores)  
   
--   [Step 3: Back up webpage customizations](../Topic/Prepare%20to%20Migrate%20the%20AD%20FS%202.0%20Federation%20Server.md#SQL_3)  
+-   [Step 3: Back up webpage customizations](#step-3-back-up-webpage-customizations)  
   
-###  <a name="SQL_1"></a> Step 1: Export service settings  
+## Step 1: Export service settings  
  To export service settings, perform the following procedure:  
   
-##### To export service settings  
+### To export service settings  
   
 1.  Record the certificate subject name and thumbprint value of the SSL certificate used by the federation service. To find the SSL certificate, open the Internet Information Services (IIS) management console, select **Default Web Site** in the left pane, click **Bindings…** in the **Action** pane, find and select the https binding, click **Edit**, and then click **View**.  
   
@@ -51,11 +51,15 @@ ms.technology: identity-adfs
   
      To find the identity value, examine the **Log On As** column of **AD FS 2.0 Windows Service** in the **Services** console and manually record the value.  
   
-###  <a name="SQL_2"></a> Step 2: Back up custom attribute stores  
+## Step 2: Back up custom attribute stores  
  You can find information about custom attribute stores in use by AD FS by using Windows PowerShell. Open Windows PowerShell and run the following command to add the AD FS cmdlets to your Windows PowerShell session: `PSH:>add-pssnapin “Microsoft.adfs.powershell”`. Then run the following command to find information about the custom attribute stores: `PSH:>Get-ADFSAttributeStore`. The steps to upgrade or migrate custom attribute stores vary.  
   
-###  <a name="SQL_3"></a> Step 3: Back up webpage customizations  
+## Step 3: Back up webpage customizations  
  To back up any webpage customizations, copy the AD FS webpages and the **web.config** file from the directory that is mapped to the virtual path **“/adfs/ls”** in IIS. By default, it is in the **%systemdrive%\inetpub\adfs\ls** directory.  
   
-## See Also  
- [Migrate AD FS Role Services to Windows Server 2012](../Topic/Migrate%20Active%20Directory%20Federation%20Services%20Role%20Services%20to%20Windows%20Server%202012.md)
+## Next Steps
+ [Prepare to Migrate the AD FS 2.0 Federation Server](prepare-to-migrate-ad-fs-fed-server.md)   
+ [Prepare to Migrate the AD FS 2.0 Federation Server Proxy](prepare-to-migrate-ad-fs-fed-proxy.md)   
+ [Migrate the AD FS 2.0 Federation Server](migrate-the-ad-fs-fed-server.md)   
+ [Migrate the AD FS 2.0 Federation Server Proxy](migrate-the-ad-fs-2-fed-server-proxy.md)   
+ [Migrate the AD FS 1.1 Web Agents](migrate-the-ad-fs-web-agent.md)
