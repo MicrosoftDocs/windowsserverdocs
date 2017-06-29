@@ -48,6 +48,7 @@ This example shows how to print the "PostScript_file.ps" Adobe PostScript file t
 ```  
 lpr -S 10.0.0.45 -P Laserprinter1 "-o l" PostScript_file.ps  
 ```  
+
 #### additional references  
-[Command-Line Syntax Key](command-line-syntax-key.md)  
-[print Command Reference](print-command-reference.md)  
+-   [Command-Line Syntax Key](command-line-syntax-key.md)  
+-   [print Command Reference](print-command-reference.md)  
