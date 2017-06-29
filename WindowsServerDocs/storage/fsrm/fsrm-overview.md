@@ -28,7 +28,7 @@ File Server Resource Manager (FSRM) is a role service in Windows Server that ena
  The features included with File Server Resource Manager can be configured and managed by using the File Server Resource Manager Microsoft Management Console (MMC) or by using Windows PowerShell.  
   
 > [!IMPORTANT]
->  File Server Resource Manager supports volumes formatted with the NTFS file system only. The Resilient File System is not supported.  
+>  File Server Resource Manager supports volumes formatted with the NTFS file system only. The Resilient File System isn't supported.  
   
 ##  <a name="BKMK_APP"></a> Practical applications  
  Some practical applications for File Server Resource Manager include:  
@@ -47,5 +47,5 @@ File Server Resource Manager (FSRM) is a role service in Windows Server that ena
 
 ## See also
 
-- [What's New in File Server Resource Manager](../Topic/What's%20New%20in%20File%20Server%20Resource%20Manager%20in%20Windows%20Server.md)
+- [What's New in File Server Resource Manager](https://technet.microsoft.com/library/dn383587.aspx)
 - [Dynamic Access Control](../Topic/Dynamic%20Access%20Control:%20Scenario%20Overview.md) 
