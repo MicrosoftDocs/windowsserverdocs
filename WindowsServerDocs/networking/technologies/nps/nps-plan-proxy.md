@@ -152,3 +152,5 @@ During the planning for NPS accounting, you can use the following steps.
 
 - Determine the logging format that you want to use: IAS format log files, database-compatible format log files, or NPS SQL Server logging.
 
+To configure load balancing for NPS as a RADIUS proxy, see [NPS Proxy Server Load Balancing](nps-manage-proxy-lb.md).
+
