@@ -36,6 +36,9 @@ The Remote Access server role is a logical grouping of the following related net
   
 These technologies are the *role services* of the Remote Access server role. When you install the Remote Access server role with the **Add Roles and Features Wizard** or Windows PowerShell, you can install one or more of these three role services.
 
+>[!IMPORTANT]
+>Do not attempt to deploy Remote Access on a virtual machine \(VM\) in Microsoft Azure. Using Remote Access in Microsoft Azure is not supported. You cannot use Remote Access in an Azure VM to deploy VPN, DirectAccess, or any other Remote Access feature in Windows Server 2016 or earlier versions of Windows Server. For more information, see [Microsoft server software support for Microsoft Azure virtual machines](https://support.microsoft.com/en-us/help/2721672/microsoft-server-software-support-for-microsoft-azure-virtual-machines).
+
 ## <a name="bkmk_da"></a>Remote Access Service \(RAS\) - RAS Gateway
 
 When you install the **DirectAccess and VPN \(RAS\)** role service, you are deploying the Remote Access Service Gateway \(**RAS Gateway**\). You can deploy the RAS Gateway a single tenant RAS Gateway virtual private network \(VPN\) server, a multitenant RAS Gateway VPN server, and as a DirectAccess server.
