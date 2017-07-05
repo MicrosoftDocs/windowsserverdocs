@@ -142,7 +142,7 @@ The following claim properties are available for access:
   
 -   Claim.ValueType  
   
--   Claim.Properties[property _name]  (This property returns an empty string if the property _name cannot be found in the claim’s properties collection. )  
+-   Claim.Properties\[property\_name\]  (This property returns an empty string if the property _name cannot be found in the claim’s properties collection. )  
   
 You can use the RegexReplace function to call inside an expression. This function takes an input expression and matches it with the given pattern. If the pattern matches, the output of the match is replaced with the replacement value.  
   
