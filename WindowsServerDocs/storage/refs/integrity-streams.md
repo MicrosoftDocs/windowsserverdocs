@@ -14,8 +14,7 @@ ms.assetid: 1f1215cd-404f-42f2-b55f-3888294d8a1f
 # ReFS integrity streams
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10
 
-Integrity streams is an optional feature in ReFS that validates and maintains data integrity using checksums. While ReFS always uses checksums for metadata, by default, ReFS does not generate or validate checksums for file data. Integrity streams is a feature that enables checksum usage for file data. Using checksums is an important feature, for it enables ReFS to clearly determine if a block is valid or corrupt. Additionally, ReFS and Storage Spaces can jointly correct corrupt metadata and data automatically. 
-
+Integrity streams is an optional feature in ReFS that validates and maintains data integrity using checksums. While ReFS always uses checksums for metadata, ReFS doesn't, by default, generate or validate checksums for file data. Integrity streams is an optional feature that allows users to utilize checksums for file data. When integrity streams are enabled, ReFS can clearly determine if data is valid or corrupt. Additionally, ReFS and Storage Spaces can jointly correct corrupt metadata and data automatically.
 
 ## How it works 
 
@@ -25,7 +24,7 @@ Once integrity streams is enabled, ReFS will create and maintain a checksum for 
 
 <img src=media/compute-checksum.gif alt="Compute checksum for file data"/>
 
-Then, this checksum is compared to the checksum contained in the file metadata. If the checksums match, then the data is marked as valid and returned to the user. If the checksums don't match, then the data has been corrupted. The resiliency of the volume determines how ReFS responds to corruptions:
+Then, this checksum is compared to the checksum contained in the file metadata. If the checksums match, then the data is marked as valid and returned to the user. If the checksums don't match, then the data is corrupt. The resiliency of the volume determines how ReFS responds to corruptions:
 
 - If ReFS is mounted on a non-resilient simple space or a bare drive, ReFS will return an error to the user without returning the corrupted data. 
 - If ReFS is mounted on a resilient mirror or parity space, ReFS will attempt to correct the corruption. 
@@ -39,10 +38,19 @@ ReFS will record all corruptions in the System Event Log, and the log will refle
 ## Performance 
 
 Though integrity streams provides greater data integrity for the system, it also incurs a performance cost. There are a couple different reasons for this:
-- If integrity streams are enabled, all write operations become allocate-on-write operations. Though this avoids the read-modify-write bottleneck, data frequently becomes fragmented, which delays reads. 
+- If integrity streams are enabled, all write operations become allocate-on-write operations. Though this avoids any read-modify-write bottlenecks since ReFS doesn't need to read or modify any existing data, file data frequently becomes fragmented, which delays reads. 
 - Depending on the workload and underlying storage of the system, the computational cost of computing and validating the checksum can cause IO latency to increase. 
 
-Because integrity streams carries a performance cost, we recommend leaving integrity streams disabled on highly performant systems. 
+Because integrity streams carries a performance cost, we recommend leaving integrity streams disabled on performance sensitive systems. 
+
+## Integrity scrubber
+
+As described above, ReFS will automatically validate data integrity before accessing any data. ReFS also uses a background scrubber, which enables ReFS to validate infrequently accessed data. This scrubber periodically scans the volume, identifies latent corruptions, and proactively triggers a repair of any corrupt data.
+
+  >[!NOTE]
+  >The data integrity scrubber can only validate file data for files where integrity streams is enabled.
+
+By default, the scrubber runs every four weeks, though this interval can be configured within Task Scheduler under Microsoft\Windows\Data Integrity Scan. 
 
 ## Examples
 To monitor and change the file data integrity settings, ReFS uses the **Get-FileIntegrity** and **Set-FileIntegrity** cmdlets.
