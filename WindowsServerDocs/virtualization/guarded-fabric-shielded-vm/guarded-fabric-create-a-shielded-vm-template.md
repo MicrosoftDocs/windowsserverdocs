@@ -32,13 +32,6 @@ First prepare an OS disk that you will then run through the Shielded Template Di
 > [!NOTE]
 > If you use VMM, do not copy the template disk into the VMM library at this stage. 
 
-### Required packages to create a Nano Server template disk
-
-If you are planning to run Nano Server as your guest OS in shielded VMs, you must ensure your Nano Server image includes the following packages:
-
-- Microsoft-NanoServer-Guest-Package
-- Microsoft-NanoServer-SecureStartup-Package
-
 ## Run Windows Update on the template operating system
 
 On the template disk, verify that the operating system has all of the latest Windows updates installed. Recently released updates improve the reliability of the end-to-end shielding process - a process that may fail to complete if the template operating system is not up-to-date.
