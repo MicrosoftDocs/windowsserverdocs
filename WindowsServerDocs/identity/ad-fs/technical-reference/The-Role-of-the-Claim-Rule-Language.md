@@ -63,8 +63,8 @@ Single -expression conditions are described in the following table. They are con
   
 |Condition description|Condition syntax example|  
 |-------------------------|----------------------------|  
-|This rule has a condition to check for an input claim with a specified claim type  ("http://test/name" ). If a matching claim is in the input claims, the rule copies the matching claim or claims to the output claims set.|``` c: [type  == "http://test/name"] => issue(claim = c );```|  
-|This rule has a condition to check for an input claim with a specified claim type  ("http://test/name" ) and claim value  (“Terry” ). If a matching claim is in the input claims, the rule copies the matching claim or claims to the output claims set.|``` c: [type  == "http://test/name", value  == "Terry"] => issue(claim  = c );```|  
+|This rule has a condition to check for an input claim with a specified claim type  ("http://test/name" ). If a matching claim is in the input claims, the rule copies the matching claim or claims to the output claims set.|``` c: [type == "http://test/name"] => issue(claim = c );```|  
+|This rule has a condition to check for an input claim with a specified claim type  ("http://test/name" ) and claim value  (“Terry” ). If a matching claim is in the input claims, the rule copies the matching claim or claims to the output claims set.|``` c: [type == "http://test/name", value == "Terry"] => issue(claim = c);```|  
   
 More -complex conditions are shown in the next section, including conditions to check for multiple claims, conditions to check the issuer of a claim, and conditions to check for values that match a regular expression pattern.  
   
@@ -73,14 +73,14 @@ The following table provides an example of multiple -expression conditions.
   
 |Condition description|Condition syntax example|  
 |-------------------------|----------------------------|  
-|This rule has a condition to check for two input claims, each with a specified claim type  ("http://test/name" and "http://test/email" ). If the two matching claims are in the input claims, the rule copies the name claim to the output claims set.|``` c1: [type  = = "http://test/name" ] && <br />c2: [type == "http://test/email" ]<br />    => issue (claim  = c1 );```|  
+|This rule has a condition to check for two input claims, each with a specified claim type  ("http://test/name" and "http://test/email" ). If the two matching claims are in the input claims, the rule copies the name claim to the output claims set.|``` c1: [type  == "http://test/name"] && c2: [type == "http://test/email"] => issue (claim  = c1 );```|  
   
 #### Regular -condition examples  
 The following table provides an example of a regular, expression -based condition.  
   
 |Condition description|Condition syntax example|  
 |-------------------------|----------------------------|  
-|This rule has a condition that uses a regular expression to check for an e -mail claim ending in “@fabrikam.com”. If a matching claim is found in the input claims, the rule copies the matching claim to the output claims set.|Code  - c: [type  = = "http://test/email", value  =~ "^. +@fabrikam.com$" ] <br />    => issue (claim  = c );|  
+|This rule has a condition that uses a regular expression to check for an e -mail claim ending in “@fabrikam.com”. If a matching claim is found in the input claims, the rule copies the matching claim to the output claims set.|```c: [type  == "http://test/email", value  =~ "^. +@fabrikam.com$" ] => issue (claim  = c );```|  
   
 ### Issuance statements  
 Custom rules are processed based on the issuance statements  (*issue* or *add* ) that you program into the claim rule. Depending on the desired outcome, either the issue statement or add statement can be written into the rule to populate the input claim set or the output claim set. A custom rule that uses the add statement explicitly populates claim values only to the input claim set while a custom claim rule that uses the issue statement populates claim values in both the input claim set and in the output claim set. This can be useful when a claim value is intended to be used only by future rules in the set of claim rules.  
@@ -94,11 +94,11 @@ The rule body represents a claim issuance action. There are two claim issuance a
   
 -   **Issue statement:** The issue statement creates a claim that goes to both input and output claim sets. For example, the following statement issues a new claim based on its input claim set:  
   
-    `c:[type == "Name"]         => issue(type = "Greeting", value = "Hello " + c.value);`  
+    ```c:[type == "Name"] => issue(type = "Greeting", value = "Hello " + c.value);```  
   
 -   **Add statement:** The add statement creates a new claim that is added only to the input claim set collection. For example, the following statement adds a new claim to the input claim set:  
   
-    `[type == "Name", value == "domain user"]         => add(type = "Role", value = "Editor");`  
+    ```c:[type == "Name", value == "domain user"] => add(type = "Role", value = "Editor");``` 
   
 The issuance statement of a rule defines what claims will be issued by the rule when the conditions are matched. There are two forms of issuance statements regarding arguments and the statement behavior:  
   
@@ -114,10 +114,10 @@ The following table describes some common syntax constructions for both types of
   
 |Issuance statement type|Issuance statement description|Issuance statement syntax example|  
 |---------------------------|----------------------------------|-------------------------------------|  
-|Normal|The following rule always emits the same claim whenever a user has the specified claim type and value:|Code  - c: [type  = = "http://test/employee", value  = = "true" ] <br />  => issue (type  = "http://test/role", value  = "employee" );|  
-|Normal|The following rule converts one claim type into another. Notice that the value of the claim that matches the condition "c" is used in the issuance statement.|Code  - c: [type  = = "http://test/group" ] <br />  => issue (type  = "http://test/role", value  = c.Value );|  
-|Attribute store|The following rule uses the value of an incoming claim to query the Active Directory attribute store:|Code  - c: [Type  = = "http://test/name" ]<br />  => issue (store  = "Enterprise AD Attribute Store",<br /> types  =  ("http://test/email" ),<br /> query  = ";mail;{0}",<br /> param  = c.Value )|  
-|Attribute store|The following rule uses the value of an incoming claim to query a previously configured Structured Query Language  (SQL ) attribute store:|Code  - c: [type  = = "http://test/name" ]<br />  => issue (store  = "Custom SQL store", <br /> types  =  ("http://test/email","http://test/displayname" ), <br /> query  = "SELECT mail, displayname FROM users WHERE name ={0}",<br /> param  = c.value );|  
+|Normal|The following rule always emits the same claim whenever a user has the specified claim type and value:|```c: [type  == "http://test/employee", value  == "true"] => issue (type = "http://test/role", value = "employee");```|  
+|Normal|The following rule converts one claim type into another. Notice that the value of the claim that matches the condition "c" is used in the issuance statement.|```c: [type  == "http://test/group" ] => issue (type  = "http://test/role", value  = c.Value );```|  
+|Attribute store|The following rule uses the value of an incoming claim to query the Active Directory attribute store:|```c: [Type  == "http://test/name" ] => issue (store  = "Enterprise AD Attribute Store", types  =  ("http://test/email" ), query  = ";mail;{0}", param  = c.Value )```|  
+|Attribute store|The following rule uses the value of an incoming claim to query a previously configured Structured Query Language  (SQL ) attribute store:|```c: [type  == "http://test/name"] => issue (store  = "Custom SQL store", types  =  ("http://test/email","http://test/displayname" ), query  = "SELECT mail, displayname FROM users WHERE name ={0}", param  = c.value );```|  
   
 #### Expressions  
 Expressions are used on the right side for both claims selector constraints and issuance statement parameters. There are various kinds of expressions that the language supports. All expressions in the language are string based, which means that they take strings as input and produce strings. Numbers or other data types, such as date/time, in expressions are not supported. The following are the types of expressions that the language supports:  
@@ -142,7 +142,7 @@ The following claim properties are available for access:
   
 -   Claim.ValueType  
   
--   Claim.Properties [property _name ]  (This property returns an empty string if the property _name cannot be found in the claim’s properties collection. )  
+-   Claim.Properties [property _name]  (This property returns an empty string if the property _name cannot be found in the claim’s properties collection. )  
   
 You can use the RegexReplace function to call inside an expression. This function takes an input expression and matches it with the given pattern. If the pattern matches, the output of the match is replaced with the replacement value.  
   
