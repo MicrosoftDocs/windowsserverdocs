@@ -246,7 +246,7 @@ To help configure your physical switch or router, a set of sample configuration 
   
   
 ## Compute  
-All Hyper-V hosts must have Windows [!INCLUDE[winthreshold_server_2_mdincludes/winthreshold_server_2_md.md)] 5 installed, Hyper-V enabled, and an external Hyper-V virtual switch created with at least one physical adapter connected to the Management logical network. The host must be reachable via a Management IP address assigned to the Management Host vNIC.  
+All Hyper-V hosts must have Windows Server 2016 installed, Hyper-V enabled, and an external Hyper-V virtual switch created with at least one physical adapter connected to the Management logical network. The host must be reachable via a Management IP address assigned to the Management Host vNIC.  
   
 Any storage type that is compatible with Hyper-V, shared or local may be used.   
   
