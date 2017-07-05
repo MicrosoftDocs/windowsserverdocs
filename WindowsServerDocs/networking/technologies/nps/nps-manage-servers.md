@@ -29,6 +29,7 @@ This section contains the following topics.
 - [Export an NPS Server Configuration for Import on Another Server](nps-manage-export.md)
 - [Increase Concurrent Authentications Processed by NPS](nps-concurrent-auth.md)
 - [Install Network Policy Server](nps-manage-install.md)
+- [NPS Proxy Server Load Balancing](nps-manage-proxy-lb.md)
 - [Register an NPS Server in an Active Directory Domain](nps-manage-register.md)
 - [Unregister an NPS Server from an Active Directory Domain](nps-manage-unregister.md)
 - [Use Regular Expressions in NPS](nps-crp-reg-expressions.md)

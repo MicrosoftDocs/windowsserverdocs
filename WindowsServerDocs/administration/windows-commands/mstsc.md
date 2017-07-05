@@ -22,12 +22,14 @@ creates connections to remote Desktop Session Host (rd Session Host) servers or 
 for examples of how to use this command, see [Examples](#BKMK_examples).
 > [!NOTE]
 > In Windows Server 2008 R2, Terminal Services was renamed remote Desktop Services. To find out what's new in the latest version, see [What s New in remote Desktop Services in Windows Server 2012](http://technet.microsoft.com/library/hh831527) in the Windows Server TechNet Library.
+
 ## Syntax
 ```
 mstsc.exe [<Connection File>] [/v:<Server>[:<Port>]] [/admin] [/f] [/w:<Width> /h:<Height>] [/public] [/span]
 mstsc.exe /edit <Connection File>
 mstsc.exe /migrate
 ```
+
 ## Parameters
 |Parameter|Description|
 |-------|--------|
@@ -42,9 +44,11 @@ mstsc.exe /migrate
 |/edit <Connection File>|Opens the specified .rdp file for editing.|
 |/migrate|Migrates legacy connection files that were created with Client Connection Manager to new .rdp connection files.|
 |/?|Displays help at the command prompt.|
+
 ## remarks
 -   Default.rdp is stored for each user as a hidden file in the user's Documents folder. User created .rdp files are saved by default in the user's Documents folder but can be saved anywhere.
 -   To span across monitors, the monitors must use the same resolution and must be aligned horizontally (that is, side by side). There is currently no support for spanning multiple monitors vertically on the client system.
+
 ## <a name="BKMK_examples"></a>Examples
 -   To connect to a session in full-screen mode, type:
     ```
@@ -54,6 +58,7 @@ mstsc.exe /migrate
     ```
     mstsc /edit filename.rdp
     ```
+    
 #### additional references
-[Command-Line Syntax Key](command-line-syntax-key.md)
-[remote Desktop Services &#40;Terminal Services&#41; Command Reference](remote-desktop-services-terminal-services-command-reference.md)
+-   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   [remote Desktop Services &#40;Terminal Services&#41; Command Reference](remote-desktop-services-terminal-services-command-reference.md)
