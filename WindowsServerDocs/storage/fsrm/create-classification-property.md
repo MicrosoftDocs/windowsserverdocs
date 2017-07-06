@@ -12,7 +12,7 @@ ms.author: jgerend
 
 # Create a Classification Property
 
-Applies To: Windows Server 2016, Windows Server 2012 R2, and Windows Server 2008 R2
+> Applies To: Windows Server 2016, Windows Server 2012 R2, and Windows Server 2008 R2
 
 Classification properties are used to assign values to files within a specified folder or volume. There are many property types that you can choose from, depending on your needs. The following table defines the available property types.
 

@@ -12,7 +12,7 @@ ms.author: jgerend
 
 # Checklist - Apply a file screen to a volume or folder
 
-Applies To: Windows Server 2016, Windows Server 2012 R2, and Windows Server 2008 R2
+> Applies To: Windows Server 2016, Windows Server 2012 R2, and Windows Server 2008 R2
 
 To apply a file screen to a volume or folder, use the following list:
 1. Configure e-mail settings if you plan to send file screening notifications or storage reports by e-mail by following the instructions in [Configure E-Mail Notifications](configure-email-notifications.md).

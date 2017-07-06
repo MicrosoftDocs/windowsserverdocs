@@ -12,7 +12,7 @@ ms.author: jgerend
 
 # Checklist: Apply a Quota to a volume or folder
 
-Applies To: Windows Server 2016, Windows Server 2012 R2, and Windows Server 2008 R2
+> Applies To: Windows Server 2016, Windows Server 2012 R2, and Windows Server 2008 R2
 
 1. Configure e-mail settings if you plan to send threshold notifications or storage reports by e-mail. [Configure E-Mail Notifications](configure-email-notifications.md)
 
