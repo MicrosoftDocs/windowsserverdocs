@@ -14,6 +14,8 @@
 ###### [New forest (default)](guarded-fabric-shielded-vm/guarded-fabric-install-hgs-default.md)
 ###### [Bastion forest](guarded-fabric-shielded-vm/guarded-fabric-install-hgs-in-a-bastion-forest.md)
 ##### [Initialize HGS](guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs.md)
+###### [TPM mode](guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs-tpm-mode.md)
+###### [AD mode](guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs-ad-mode.md)
 ##### [Configure first HGS node](guarded-fabric-shielded-vm/guarded-fabric-configure-the-first-hgs-node.md)
 ##### [Add nodes](guarded-fabric-shielded-vm/guarded-fabric-configure-additional-hgs-nodes.md)
 ##### [Verify the configuration](guarded-fabric-shielded-vm/guarded-fabric-verify-hgs-configuration.md)
