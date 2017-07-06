@@ -33,7 +33,7 @@ This topic covers HGS prerequisites and initial steps to prepare for the HGS dep
 Before you deploy a guarded fabric, make sure the servers have installed the [latest Cumulative Update](https://support.microsoft.com/help/4000825/windows-10-and-windows-server-2016-update-history). 
 If you deployed a guarded fabric before the release of the [October 27, 2016 Cumulative Update](http://support.microsoft.com/kb/3197954), the servers need to be upgraded:
 - Guarded hosts can be upgraded in-place by installing the latest Cumulative Update.
-- HGS servers need to be rebuilt, including configuring certificates and information about the hosts, as explained in this topic. 
+- HGS servers need to be rebuilt, including configuring certificates and information about the hosts. 
 
 Shielded VMs that ran on a guarded host with an earlier operating system version, such as TP5, can still run after the host is upgraded to Windows Server 2016. New shielded VMs cannot be created from template disks that were prepared using the template disk wizard from a Technical Preview build.
 
@@ -106,45 +106,6 @@ Subject alternative name | If you will be using a different DNS name to reach yo
 
 The options for specifying this certificate when initializing the HGS server are covered in [Configure the first HGS node](guarded-fabric-configure-the-first-hgs-node.md).
 You can also add or change the SSL certificate at a later time using the [Set-HgsServer](https://technet.microsoft.com/en-us/itpro/powershell/windows/hgsserver/set-hgsserver) cmdlet.
-
-## Choose whether to install HGS in its own new forest or in an existing bastion forest
-
-The Active Directory forest for HGS is sensitive because its administrators have access to the keys that control shielded VMs. 
-The default installation will set up a new forest for HGS and configure other dependencies. 
-This option is recommended because the environment is self-contained and known to be secure when it is created. 
-For the PowerShell syntax and an example, see [install HGS in its own new forest](guarded-fabric-configure-the-first-hgs-node.md#install-hgs-in-a-new-forest).
-
-The only technical requirement for installing HGS in an existing forest is that it be added to the root domain; non-root domains are not supported. But there are also operational requirements and security-related best practices for using an existing forest. 
-Suitable forests are purposely built to serve one sensitive function, such as the forest used by [Privileged Access Management for AD DS](https://docs.microsoft.com/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services) or an [Enhanced Security Administrative Environment (ESAE) forest](https://technet.microsoft.com/windows-server-docs/security/securing-privileged-access/securing-privileged-access-reference-material#ESAE_BM). 
-Such forests usually exhibit the following characteristics:
-
-- They have few admins (separate from fabric admins)
-- They have a low number of logons
-- They are not general-purpose in nature 
-
-General purpose forests such as production forests are not suitable for use by HGS. 
-Fabric forests are also unsuitable because HGS needs to be isolated from fabric administrators.
-
-### Requirements for adding HGS to an existing forest
-
-To add HGS to an existing bastion forest, it must be added to the root domain. 
-Before you initialize HGS, you will need to join each target server of the HGS cluster to the root domain, and then add these objects:
-
--   A Group Managed Service Account (gMSA) that is configured for use on the machine(s) that host HGS.
-
--   Two Active Directory groups that you will use for Just Enough Administration (JEA). One group is for users who can perform HGS administration through JEA, and the other is for users who can only view HGS through JEA.
-
--   For setting up the cluster, either [prestaged cluster objects](http://go.microsoft.com/fwlink/?LinkId=746122) or, for the user who runs **Initialize-HgsServer**, permissions to prestage the cluster objects.
-
-For the PowerShell syntax to add HGS to a forest, see [initialize HGS in an existing bastion forest](guarded-fabric-configure-the-first-hgs-node.md#install-hgs-in-an-existing-bastion-forest).
-
-## Configure name resolution
-
-The fabric DNS needs to be configured so that guarded hosts can resolve the name of the HGS cluster. 
-For an example, see [Configure the fabric DNS](guarded-fabric-configuring-fabric-dns.md).
-
-If you're using Active Directory-based attestation, the HGS domain needs DNS forwarding set up and a one-way forest trust so HGS can validate the the group membership of guarded hosts.
-For an example, see [configuring DNS forwarding and domain trust](#configure-dns-forwarding-and-domain-trust).  
 
 ## See also
 
