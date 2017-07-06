@@ -22,7 +22,7 @@ ms.date: 07/05/2017
 ## Install HGS 
 
 The Host Guardian Service should be installed in a separate Active Directory forest than the Hyper-V hosts and fabric managers.
-If a secure bastion forest is not already available in your environment, follow these steps ito have HGS set up one for you.
+If a secure bastion forest is not already available in your environment, follow these steps to have HGS set up one for you.
 
 Ensure that the HGS machine is **not** joined to a domain before you start.
 

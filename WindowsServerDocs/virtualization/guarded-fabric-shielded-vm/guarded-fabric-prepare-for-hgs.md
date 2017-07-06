@@ -10,6 +10,9 @@ ms.technology: security-guarded-fabric
 ms.date: 04/24/2017
 ---
 
+>[!div class="step-by-step"]
+[Install HGS »](guarded-fabric-choose-where-to-install-hgs.md)
+
 # Prepare for the Host Guardian Service deployment
 
 >Applies To: Windows Server 2016

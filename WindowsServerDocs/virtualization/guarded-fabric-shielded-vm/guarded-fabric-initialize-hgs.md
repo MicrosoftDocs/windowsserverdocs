@@ -9,9 +9,15 @@ ms.technology: security-guarded-fabric
 ms.date: 07/05/2017
 ---
 
+>[!div class="step-by-step"]
+[« Install HGS](guarded-fabric-choose-where-to-install-hgs.md)
+[Add HGS nodes »](guarded-fabric-configure-additional-hgs-nodes.md)
+
 # Initialize the Host Guardian Service (HGS)
 
-When you initialize HGS, you specify the mode that HGS will use to measure the health of guarded hosts. There are two mutually exclusive options. The following topics cover detailed steps for each mode:
+When you initialize HGS, you specify the mode that HGS will use to measure the health of guarded hosts. There are two mutually exclusive options. For background information about which mode to choose, see [Guarded Fabric and Shielded VM Planning Guide for Hosters](guarded-fabric-planning-for-hosters.md).
+
+The following topics cover deployment steps for each mode:
 
 - [TPM-trusted attestation (TPM mode)](guarded-fabric-initialize-hgs-tpm-mode.md)
 - [Admin-trusted attestation (AD mode)](guarded-fabric-initialize-hgs-ad-mode.md)
