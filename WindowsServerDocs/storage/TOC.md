@@ -45,4 +45,4 @@
 ## [Storage-class memory health management](storage-spaces/Storage-class-memory-health.md)
 ## [iSCSI boot](iscsi/iscsi-boot-overview.md)
 ## [File Server Resource Manager](fsrm/fsrm-overview.md)
-## [Change history for Storage topics](storage-change-history.md)
+# [Change history for Storage topics](storage-change-history.md)
