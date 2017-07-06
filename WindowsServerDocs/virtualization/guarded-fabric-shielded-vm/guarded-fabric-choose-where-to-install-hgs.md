@@ -14,7 +14,6 @@ ms.date: 04/24/2017
 The Active Directory forest for HGS is sensitive because its administrators have access to the keys that control shielded VMs. 
 The default installation will set up a new forest for HGS and configure other dependencies. 
 This option is recommended because the environment is self-contained and known to be secure when it is created. 
-For the PowerShell syntax and an example, see [install HGS in its own new forest](guarded-fabric-configure-the-first-hgs-node.md#install-hgs-in-a-new-forest).
 
 The only technical requirement for installing HGS in an existing forest is that it be added to the root domain; non-root domains are not supported. But there are also operational requirements and security-related best practices for using an existing forest. 
 Suitable forests are purposely built to serve one sensitive function, such as the forest used by [Privileged Access Management for AD DS](https://docs.microsoft.com/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services) or an [Enhanced Security Administrative Environment (ESAE) forest](https://technet.microsoft.com/windows-server-docs/security/securing-privileged-access/securing-privileged-access-reference-material#ESAE_BM). 
@@ -38,6 +37,6 @@ Before you initialize HGS, you will need to join each target server of the HGS c
 
 -   For setting up the cluster, either [prestaged cluster objects](http://go.microsoft.com/fwlink/?LinkId=746122) or, for the user who runs **Initialize-HgsServer**, permissions to prestage the cluster objects.
 
-For the PowerShell syntax to add HGS to a forest, see [initialize HGS in an existing bastion forest](guarded-fabric-configure-the-first-hgs-node.md#install-hgs-in-an-existing-bastion-forest).
+
 
 
