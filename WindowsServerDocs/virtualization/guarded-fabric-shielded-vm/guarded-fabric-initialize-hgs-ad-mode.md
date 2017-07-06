@@ -17,7 +17,7 @@ These steps vary depending on whether you are initializing HGS in a new forest o
 
    -Or-
 
-   [Initialize the HGS cluster in an existing bastion forest](guarded-fabric-initialize-hgs-ad-mode-bastion)
+   [Initialize the HGS cluster in an existing bastion forest](guarded-fabric-initialize-hgs-ad-mode-bastion.md)
 
 2. [Configure DNS forwarding in the fabric domain](guarded-fabric-configuring-fabric-dns.md)
 
