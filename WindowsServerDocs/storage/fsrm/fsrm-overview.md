@@ -30,7 +30,7 @@ File Server Resource Manager (FSRM) is a role service in Windows Server that ena
 > [!IMPORTANT]
 >  File Server Resource Manager supports volumes formatted with the NTFS file system only. The Resilient File System isn't supported.  
   
-##  <a name="BKMK_APP"></a> Practical applications  
+## Practical applications  
  Some practical applications for File Server Resource Manager include:  
   
 -   Use File Classification Infrastructure with the Dynamic Access Control scenario to create a policy that grants access to files and folders based on the way files are classified on the file server.  
