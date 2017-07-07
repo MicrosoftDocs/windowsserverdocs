@@ -131,6 +131,19 @@
 #### [Troubleshooting Domain Controller Deployment](ad-ds/deploy/Troubleshooting-Domain-Controller-Deployment.md)
 ### [AD DS Operations](ad-ds/manage/component-updates/AD-DS-Operations.md)
 #### [AD Forest Recovery Guide](ad-ds/manage/AD-Forest-Recovery-Guide.md)
+##### [AD Forest Recovery - Prerequisites](ad-ds/manage/AD-Forest-Recovery-Prerequisties.md)
+##### [AD Forest Recovery - Steps for Recovery](ad-ds/manage/AD-Forest-Recovery-Steps-For-Restoring.md)
+##### [AD Forest Recovery - Identify the Problem](ad-ds/manage/AD-Forest-Recovery-Identify-the-Problem.md)
+##### [AD Forest Recovery - Perform Initial Recovery](ad-ds/manage/AD-Forest-Recovery-Perform-initial-recovery.md)
+##### [AD Forest Recovery - Procedures](ad-ds/manage/AD-Forest-Recovery-Procedures.md)
+##### [AD Forest Recovery - FAQ](ad-ds/manage/AD-Forest-Recovery-FAQ.md)
+##### [AD Forest Recovery - Recovering a single domain with multidomain forest](ad-ds/manage/AD-Forest-Recovery-Single-Domain-in-Multidomain-Recovery.md)
+##### [AD Forest Recovery - Virtualization](ad-ds/manage/AD-Forest-Recovery-Virtualization.md)
+##### [AD Forest Recovery - Windows Server 2003](ad-ds/manage/AD-Forest-Recovery-Windows-Server-2003.md)
+
+
+
+
 #### [Best Practices for Securing Active Directory](ad-ds/plan/security-best-practices/Best-Practices-for-Securing-active-directory.md)
 ##### [Foreword](https://technet.microsoft.com/library/dn487451.aspx)
 ##### [Acknowledgements](https://technet.microsoft.com/library/dn487445.aspx)
