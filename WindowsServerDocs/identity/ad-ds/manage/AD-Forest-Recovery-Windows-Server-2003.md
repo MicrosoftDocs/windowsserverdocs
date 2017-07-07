@@ -4,16 +4,19 @@ description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 06/02/2017
+ms.date: 07/07/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.assetid: 5a291f65-794e-4fc3-996e-094c5845a383
 ms.technology: identity-adfs
 ---
 
->Applies To: Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2, Windows Server 2003
+
 
 # AD Forest Recovery - Windows Server 2003 Recovery
+
+>Applies To: Windows Server 2003
+
 This topic includes forest recovery procedures for domain controllers (DCs) that run Windows Server 2003. The general process for forest recovery is no different with Windows Server 2003 DCs, but specific procedures can differ because of different tools. For example, Ntdsutil.exe can be used to backup and restore DCs that run Windows Server 2003 DCs, whereas Windows Server Backup or Wbadmin.exe is used for DCs that run Windows Server 2008 or later.  
   
 -   [Backing up the System State data](#Backing-up-the-System-State-data)  

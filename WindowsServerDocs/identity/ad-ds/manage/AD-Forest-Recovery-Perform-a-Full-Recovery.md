@@ -4,16 +4,19 @@ description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 06/02/2017
+ms.date: 07/07/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.assetid: 1a1182a6-4462-4a13-806e-0e642a0d5db2
 ms.technology: identity-adfs
 ---
 
->Applies To: Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2, Windows Server 2003
 
-# AD Forest Recovery - Performing a full server recovery  
+
+# AD Forest Recovery - Performing a full server recovery 
+
+>Applies To: Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
+ 
 Use the following procedure to perform a full server recovery for Windows Server 2016, 2012 R2, or 2012. 
 
 ## Active Directory Full Server Recovery
