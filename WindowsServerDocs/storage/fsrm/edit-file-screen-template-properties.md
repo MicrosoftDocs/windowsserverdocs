@@ -12,15 +12,14 @@ ms.author: jgerend
 
 # Edit File Screen Template Properties
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, and Windows Server 2008 R2
+Applies To: Windows Server 2016, Windows Server 2012 R2, and Windows Server 2008 R2
 
 When you make changes to a file screen template, you have the option of extending those changes to file screens that were created with the original file screen template. You can choose to modify only those file screens that match the original template or all file screens that derive from the original template, regardless of any modifications that you made to the file screens since they were created. This feature simplifies the process of updating the properties of file screens by providing one central point where you make all the changes.
 
 > [!Note]
 > If you apply the changes to all file screens that derive from the original template, you will overwrite any custom file screen properties that you created.
 
-# To edit File Screen Template Properties
-
+## To edit File Screen Template Properties
 1.  In **File Screen Templates**, select the template that you want to modify.
 
 2.  Right-click the file screen template and click **Edit Template Properties** (or in the **Actions** pane, under **Selected File Screen Templates**, select **Edit Template Properties**.) This opens the **File Screen Template Properties** dialog box.
@@ -39,7 +38,7 @@ When you make changes to a file screen template, you have the option of extendin
 
 7.  Click **OK**.
 
-## See also
+#### Additional references
 
 -   [File Screening Management](file-screening-management.md)
 -   [Create a File Screen Template](create-file-screen-template.md)
