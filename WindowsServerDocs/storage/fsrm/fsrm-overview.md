@@ -48,4 +48,4 @@ File Server Resource Manager (FSRM) is a role service in Windows Server that ena
 ## See also
 
 - [What's New in File Server Resource Manager](https://technet.microsoft.com/library/dn383587.aspx)
-- [Dynamic Access Control](../Topic/Dynamic%20Access%20Control:%20Scenario%20Overview.md) 
+- [Dynamic Access Control](<https://technet.microsoft.com/library/dn408191(v=ws.11).aspx(d=robot)>) 
