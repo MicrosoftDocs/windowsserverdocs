@@ -17,7 +17,7 @@ ms.date: 10/14/2016
 These subtopics cover HGS prerequisites, setting up the HGS nodes, and verifying the HGS configuration.
 
 - [Prepare for the Host Guardian Service deployment](guarded-fabric-prepare-for-hgs.md)
-- [Configure the first HGS node](guarded-fabric-configure-the-first-hgs-node.md)
+- [Configure the first HGS node](guarded-fabric-choose-where-to-install-hgs.md)
 - [Configure additional HGS nodes](guarded-fabric-configure-additional-hgs-nodes.md)
 - [Verify the HGS configuration](guarded-fabric-verify-hgs-configuration.md)
 

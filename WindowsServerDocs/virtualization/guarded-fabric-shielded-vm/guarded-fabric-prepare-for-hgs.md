@@ -74,7 +74,7 @@ Follow the guidance from your HSM vendor to request certificates with the above 
 Every HGS node will require access to the same signing and encryption certificates.
 If you are using software-backed certificates, you can export your certificates to a PFX file with a password and allow HGS to manage the certificates for you.
 You can also choose to install the certs into the local machine's certificate store on each HGS node and provide the thumbprint to HGS.
-Both options are explained in the [Initialize the HGS Cluster](guarded-fabric-configure-the-first-hgs-node.md#initialize-the-hgs-cluster) topic.
+Both options are explained in the [Initialize the HGS Cluster](guarded-fabric-initialize-hgs.md) topic.
 
 ### Create self signed certificates for test scenarios
 
@@ -107,8 +107,8 @@ SSL Certificate Property | Required value
 Subject name             | Name of your HGS cluster (distributed network name). This will be the concatenation of your HGS service name provided to `Initialize-HgsServer` and your HGS domain name.
 Subject alternative name | If you will be using a different DNS name to reach your HGS cluster (e.g. if it is behind a load balancer), be sure to include those DNS names in the SAN field of your certificate request.
 
-The options for specifying this certificate when initializing the HGS server are covered in [Configure the first HGS node](guarded-fabric-configure-the-first-hgs-node.md).
-You can also add or change the SSL certificate at a later time using the [Set-HgsServer](https://technet.microsoft.com/en-us/itpro/powershell/windows/hgsserver/set-hgsserver) cmdlet.
+The options for specifying this certificate when initializing the HGS server are covered in [Configure the first HGS node](guarded-fabric-initialize-hgs.md).
+You can also add or change the SSL certificate at a later time using the [Set-HgsServer](https://technet.microsoft.com/itpro/powershell/windows/hgsserver/set-hgsserver) cmdlet.
 
 ## See also
 

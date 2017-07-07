@@ -31,7 +31,7 @@ After the fabric administrator captures the information, add it to the HGS confi
     ```
 
     > [!NOTE]
-    > If you encounter an error when adding a TPM identifier regarding an untrusted Endorsement Key Certificate (EKCert), ensure that the [trusted TPM root certificates have been added](guarded-fabric-configure-the-first-hgs-node.md#install-trusted-tpm-root-certificates) to the HGS node.
+    > If you encounter an error when adding a TPM identifier regarding an untrusted Endorsement Key Certificate (EKCert), ensure that the [trusted TPM root certificates have been added](guarded-fabric-install-trusted-tpm-root-certificates.md) to the HGS node.
     > Additionally, some TPM vendors do not use EKCerts.
     > You can check if an EKCert is missing by opening the XML file in an editor such as Notepad and checking for an error message indicating no EKCert was found.
     > If this is the case, and you trust that the TPM in your machine is authentic, you can use the `-Force` flag to override this safety check and add the host identifier to HGS.
