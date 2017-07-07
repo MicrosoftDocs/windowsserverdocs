@@ -150,21 +150,6 @@ A TPM baseline is required for each unique class of hardware in your datacenter 
 
 3.  Provide the TPM baseline (TCGlog file) to the HGS administrator so they can [register it as a trusted baseline](guarded-fabric-add-host-information-for-tpm-trusted-attestation.md).
 
-[!INCLUDE [Configure Nano Server as a guarded host](../../../includes/configure-nano-server-as-a-guarded-host.md)] 
-
-## Creating a code integrity policy 
-
-If you are using TPM mode, you can only create the code integrity policy against an offline Nano Server image.
-Mount the Nano Server VHDX and run [New-CIPolicy](https://technet.microsoft.com/library/mt634473.aspx) in a command like the following from the management server. This example uses G: as the mounted drive.
-
-```powershell
-New-CIPolicy -FilePath .\NanoCI.xml -Level FilePublisher -Fallback Hash -ScanPath G:\ -PathToCatroot G:\Windows\System32\CatRoot\ -UserPEs
-```
-
->**Note**&nbsp;&nbsp;The CI policy will need to be [added to the HGS Server](guarded-fabric-add-host-information-for-tpm-trusted-attestation.md).
-
-[!INCLUDE [Configure the boot menu](../../../includes/configure-the-boot-menu-for-a-nano-server.md)] 
-
 ## Next step
 
 [Confirm hosts can attest successfully](guarded-fabric-confirm-hosts-can-attest-successfully.md)
