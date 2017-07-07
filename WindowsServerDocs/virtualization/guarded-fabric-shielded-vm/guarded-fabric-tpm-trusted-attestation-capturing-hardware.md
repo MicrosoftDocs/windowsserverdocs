@@ -18,33 +18,6 @@ This topic describes the intermediate steps that a fabric administrator takes to
 
 For a video that illustrates the deployment process, see [Guarded fabric deployment using TPM mode](https://channel9.msdn.com/Shows/Guarded-fabric-deployment-AD-mode/Guarded-fabric-deployment-TPM-mode/).
 
-## Prerequisites 
-
-Guarded hosts using TPM mode must meet the following prerequisites:
-
--   **Hardware**: One host is required for initial deployment. To test Hyper-V live migration for shielded VMs, you must have at least two hosts.
-
-    Hosts must have:
-    
-    - IOMMU and Second Level Address Translation (SLAT)
-    - TPM 2.0
-    - UEFI 2.3.1 or later
-    - Configured to boot using UEFI (not BIOS or "legacy" mode)
-    - Secure boot enabled
-        
--   **Operating system**: Windows Server 2016 Datacenter edition
-
-    > [!IMPORTANT]
-    > Make sure you install the [latest cumulative update](https://support.microsoft.com/help/4000825/windows-10-and-windows-server-2016-update-history).  
-
--   **Role and features**: Hyper-V role and the Host Guardian Hyper-V Support feature. The Host Guardian Hyper-V Support feature is only available on Datacenter editions of Windows Server 2016. Special instructions for Nano Server are near the end of this topic.
-
-> [!WARNING]
-> The Host Guardian Hyper-V Support feature enables Virtualization-based protection of code integrity that may be incompatible with some devices. 
-> We strongly recommend testing this configuration in your lab before enabling this feature. 
-> Failure to do so may result in unexpected failures up to and including data loss or a blue screen error (also called a stop error). 
-> For more information, see [Compatible hardware with Windows Server 2016 Virtualization-based protection of Code Integrity](guarded-fabric-compatible-hardware-with-virtualization-based-protection-of-code-integrity.md).
-
 ## Capture hardware and software information 
 
 TPM mode uses a TPM identifier (also called a platform identifier or endorsement key \[EKpub\]) to begin determining whether a particular host is authorized as "guarded." This mode of attestation uses secure boot and code integrity measurements to ensure that a given Hyper-V host is in a healthy state and is running only trusted code. In order for attestation to understand what is and is not healthy, you must capture the following information:
