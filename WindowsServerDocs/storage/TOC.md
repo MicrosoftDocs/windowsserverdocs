@@ -77,4 +77,4 @@
 #### [Step 5, Set up clients](work-folders/deploy-work-folders-adfs-step5.md)
 ## [Storage-class memory health management](storage-spaces/Storage-class-memory-health.md)
 ## [iSCSI boot](iscsi/iscsi-boot-overview.md)
-# [Change history for Storage topics](storage-change-history.md)
+## [Change history for Storage topics](storage-change-history.md)
