@@ -46,27 +46,28 @@ With Work Folders users can store and access work files on personal computers an
 
 Folder Redirection and Offline Files are used together to redirect the path of local folders (such as the Documents folder) to a network location, while caching the contents locally for increased speed and availability. Roaming User Profiles is used to redirect a user profile to a network location.  
 
+### [DFS Namespaces](dfs-namespaces/dfs-overview.md)
+
+Enables you to group shared folders that are located on different servers into one or more logically structured namespaces. Each namespace appears to users as a single shared folder with a series of subfolders. However, the underlying structure of the namespace can consist of numerous file shares that are located on different servers and in multiple sites.
+
 ### [DFS Replication](https://technet.microsoft.com/library/jj127250(v=ws.11).aspx)
 
 Enables you to efficiently replicate folders (including those referred to by a DFS namespace path) across multiple servers and sites. DFS Replication uses a compression algorithm known as remote differential compression (RDC). RDC detects changes to the data in a file, and it enables DFS Replication to replicate only the changed file blocks instead of the entire file.
-
-### [DFS Namespaces](https://technet.microsoft.com/library/jj127250(v=ws.11).aspx)
-
-Enables you to group shared folders that are located on different servers into one or more logically structured namespaces. Each namespace appears to users as a single shared folder with a series of subfolders. However, the underlying structure of the namespace can consist of numerous file shares that are located on different servers and in multiple sites.
 
 ### [File Classification](https://technet.microsoft.com/library/dd758765(v=ws.10).aspx)
 
 File Classification, also known as File Classification Infrastructure (FCI) provides insight into your data by automating classification processes so that you can manage your data more effectively. You can classify files and apply policies based on this classification. Example policies include dynamic access control for restricting access to files, file encryption, and file expiration. Files can be classified automatically by using file classification rules or manually by modifying the properties of a selected file or folder.
 
-### [File Screens](https://technet.microsoft.com/library/dd758760(v=ws.10).aspx) 
+### [File Screens](https://technet.microsoft.com/library/dd758760(v=ws.10).aspx)
 
-File screens help you control the types of files that user can store on a file server. You can limit the extension that can be stored on your shared files. For example, you can create a file screen that does not allow files with an MP3 extension to be stored in personal shared folders on a file server. 
+File screens help you control the types of files that user can store on a file server. You can limit the extension that can be stored on your shared files. For example, you can create a file screen that does not allow files with an MP3 extension to be stored in personal shared folders on a file server.
 
 ### [File Management Tasks](https://technet.microsoft.com/en-us/library/dd758756(v=ws.10).aspx)
 
 File Management Tasks enables you to apply a conditional policy or action to files based on their classification. The conditions of a file management task include the file location, the classification properties, the date the file was created, the last modified date of the file, or the last time the file was accessed. The actions that a file management task can take include the ability to expire files, encrypt files, or run a custom command.
 
-### [Quotas](https://technet.microsoft.com/en-us/library/dd758768(v=ws.10).aspx) 
+### [Quotas](https://technet.microsoft.com/en-us/library/dd758768(v=ws.10).aspx)
+
 Quotas allow you to limit the space that is allowed for a volume or folder, and they can be automatically applied to new folders that are created on a volume. You can also define quota templates that can be applied to new volumes or folders.
 
 ### [Storage Reports](https://technet.microsoft.com/library/dd758755(v=ws.10).aspx)

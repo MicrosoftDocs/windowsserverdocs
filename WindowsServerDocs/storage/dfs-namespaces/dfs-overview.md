@@ -127,7 +127,7 @@ Using DFS Namespaces on a virtual machine in Microsoft Azure has been tested; ho
 
 - You can host domain-based namespaces in Azure virtual machines, including environments with Azure Active Directory, though a single namespace can’t encompass both on premise namespace servers and namespace servers hosted in Azure VMs, even when using Active Directory Federation Services.
 
- To learn about how to get started with Azure virtual machines, see [Azure virtual machines documentation](https://docs.microsoft.com/azure/virtual-machines/).
+To learn about how to get started with Azure virtual machines, see [Azure virtual machines documentation](https://docs.microsoft.com/azure/virtual-machines/).
 
 ## New and changed functionality
 
@@ -136,8 +136,8 @@ The following table describes the changes in DFS Namespaces functionality. For m
 |Feature/functionality|New or updated?|Description|
 |----------------------------|---------------------|-----------------|
 |Windows PowerShell module for DFS Namespaces|New in Windows Server 2012|Provides Windows PowerShell cmdlets for performing the majority of administration tasks for DFS Namespaces.|
-|DFS Namespaces: Site awareness for DirectAccess clients|New in Windows Server 2012|Provides remote client computers with optimal referrals to corporate resources when the computers connect by using DirectAccess to the corporate network.|
 |DFS Namespaces: Windows Management Infrastructure provider|New in Windows Server 2012|Provides the latest Windows Management Infrastructure-based management methods to manage DFS Namespaces.|
+|DFS Namespaces: Site awareness for DirectAccess clients|New in Windows Server 2012|Provides remote client computers with optimal referrals to corporate resources when the computers connect by using DirectAccess to the corporate network.|
 
 ## Removed or deprecated functionality
 
