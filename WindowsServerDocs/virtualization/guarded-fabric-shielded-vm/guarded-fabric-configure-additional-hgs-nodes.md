@@ -16,12 +16,12 @@ ms.date: 05/10/2017
 
 In production environments, HGS should be set up in a high availability cluster to ensure that shielded VMs can be powered on even if an HGS node goes down. For test environments, secondary HGS nodes are not required.
 
-Depending on your environment, choose one of the following methods to add HGS nodes:
+Depending on your environment, choose one of the following methods to add HGS nodes.
 
-- [Dedicated HGS forest with PFX certificates](#dedicated-hgs-forest-with-pfx-certificates)
-- [Dedicated HGS forest with thumbprint certificates](#dedicated-hgs-forest-with-thumbprint-certificates)
-- [Existing forest with PFX certificates](#existing-forest-with-pfx-certificates)
-- [Existing forest with thumbprint certificates](#existing-forest-with-thumbprint-certificates)
+| New HGS forest | Existing bastion forest |
+|----------------|-------------------------|
+| [Using PFX files](#dedicated-hgs-forest-with-pfx-certificates) | [Using PFX files](#existing-forest-with-pfx-certificates)         |
+| [Using certificate thumbprints](#dedicated-hgs-forest-with-certificate-thumbprints) | [Using certificate thumbprints](#existing-forest-with-certificate-thumbprints) |
 
 ## Prerequisites
 
@@ -43,7 +43,7 @@ Make sure that each additional node:
 
 [!INCLUDE [Initialize the HGS server](../../../includes/guarded-fabric-initialize-hgs-on-the-node.md)] 
 
-## Dedicated HGS forest with thumbprint certificates
+## Dedicated HGS forest with certificate thumbprints
  
 1. Promote the HGS node to a domain controller
 2. Initialize the HGS server
@@ -64,7 +64,7 @@ You will need to install the private key by importing a PFX file containing the 
 
 ## Existing forest with PFX certificates
 
-## Existing forest with thumbprint certificates
+## Existing forest with certificate thumbprints
 
 ## Install the HGS server role
 
