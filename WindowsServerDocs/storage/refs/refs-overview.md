@@ -55,7 +55,7 @@ ReFS is designed to support extremely large data sets--millions of terabytes--wi
 
 ### Storage Spaces Direct ###
 
-Deploying ReFS on Storage Spaces Direct is the recommended setup for virtualized workloads: 
+Deploying ReFS on Storage Spaces Direct is recommended for virtualized workloads or network-attached storage: 
 - Real-time tier optimization and [the cache in Storage Spaces Direct](../storage-spaces/understand-the-cache.md) deliver high performance and capacity-efficient storage. 
 - The introduction of block clone and sparse VDL dramatically accelerates .vhdx file operations, such as creation, merge, and expansion.
 - Built-in checksums, online repair, and alternate data copies enable ReFS and Storage Spaces Direct to jointly to detect and correct corruptions within both metadata and data. 
@@ -69,10 +69,8 @@ Deploying ReFS on Storage Spaces with shared SAS enclosures is suitable for host
 
 
 ### Basic disks ###
-Deploying ReFS on basic disks is suitable for applications that provide their own resiliency and availibility solutions. 
-- For example, Exchange and [SQL Server AlwaysOn](https://msdn.microsoft.com/library/hh510230.aspx) both introduce their own concepts of resiliency and availability suited for their specific workloads, and they can leverage the scalability offered in ReFS. 
-    - (Other SQL Server 2016 deployments that use ReFS, however, are only [supported on Storage Spaces Direct](https://blogs.technet.microsoft.com/dataplatforminsider/2016/09/27/sql-server-2016-now-supports-windows-server-2016-storage-spaces-direct/).)
-    
+Deploying ReFS on basic disks is best suited for applications that provide their own resiliency and availibility solutions. 
+- Applications that introduce their own concepts of resiliency and availability, which are suited for their own workloads, can leverage the scalability offered in ReFS. 
 
 
 ## Feature comparison
