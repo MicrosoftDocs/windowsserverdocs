@@ -29,7 +29,7 @@ You can use these tools to manage storage resources on a local computer or a rem
 
 
 > [!Note]
->To see command syntax and the available parameters for a command, run the command with the <strong>/?</strong> parameter.
+> To see command syntax and the available parameters for a command, run the command with the <strong>/?</strong> parameter.
 
 
 ## Remote management using the command-line tools

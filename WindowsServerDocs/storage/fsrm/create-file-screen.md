@@ -16,7 +16,8 @@ ms.author: jgerend
 
 When creating a new file screen, you can choose to save a file screen template that is based on the custom file screen properties that you define. The advantage of this is that a link is maintained between file screens and the template that is used to create them, so that in the future, changes to the template can be applied to all file screens that derive from it. This is a feature that simplifies the implementation of storage policy changes by providing one central point where you can make all updates.
 
-## To create a file screen with custom properties
+## To create a File Screen with custom properties
+
 1.  In **File Screening Management**, click the **File Screens** node.
 
 2.  Right-click **File Screens,** and click **Create File Screen** (or select **Create File Screen** from the **Actions** pane). This opens the **Create File Screen** dialog box.

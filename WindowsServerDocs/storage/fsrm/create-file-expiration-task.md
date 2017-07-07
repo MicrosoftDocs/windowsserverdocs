@@ -21,6 +21,7 @@ When a file expiration task is run, a new directory is created within the expira
 The new directory name is based on the name of the file management task and the time it was run. When an expired file is found it is moved into the new directory, while preserving its original directory structure.
 
 ## To create a file expiration task
+
 1.  Click the **File Management Tasks** node.
 
 2.  Right-click **File Management Tasks**, and then click **Create File Management Task** (or click **Create File Management Task** in the **Actions** pane). This opens the **Create File Management Task** dialog box.

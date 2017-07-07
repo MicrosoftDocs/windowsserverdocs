@@ -23,7 +23,8 @@ By creating file screens exclusively from templates, you can centrally manage yo
 > [!Important]
 > To send e-mail notifications and to configure the storage reports with parameters that are appropriate for your server environment, you must first set the general File Server Resource Manager options. For more information, see [Setting File Server Resource Manager Options](setting-file-server-resource-manager-options.md).
 
-## To create a file screen template
+## To create a File Screen Template
+
 1.  In **File Screening Management**, click the **File Screen Templates** node.
 
 2.  Right-click **File Screen Templates**, and then click **Create File Screen Template** (or select **Create File Screen Template** from the **Actions** pane). This opens the **Create File Screen Template** dialog box.
@@ -68,7 +69,6 @@ By creating file screens exclusively from templates, you can centrally manage yo
     The report is saved in the default location for incident reports, which you can modify in the **File Server Resource Manager Options** dialog box.
 
 11. After you have selected all the file template properties that you want to use, click **OK** to save the template.
-
 
 ## See also
 

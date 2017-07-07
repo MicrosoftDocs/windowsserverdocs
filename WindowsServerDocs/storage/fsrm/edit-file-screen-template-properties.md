@@ -19,7 +19,7 @@ When you make changes to a file screen template, you have the option of extendin
 > [!Note]
 > If you apply the changes to all file screens that derive from the original template, you will overwrite any custom file screen properties that you created.
 
-# To edit File Screen Template Properties
+## To edit File Screen Template Properties
 
 1.  In **File Screen Templates**, select the template that you want to modify.
 

@@ -21,7 +21,7 @@ Scheduled reports are saved in a default location, which you can specify in the 
 > [!Note]
 > To minimize the impact of report processing on performance, generate multiple reports on the same schedule so that the data is only gathered once. To quickly add reports to existing report tasks, you can use the **Add or Remove Reports for a Report Task** action. This allows you to add or remove reports from multiple report tasks and to edit the report parameters. To change schedules or delivery addresses, you must edit individual report tasks.
 
-## To schedule a Report task
+## To schedule a Report Task
 
 1.  Click the **Storage Reports Management** node.
 

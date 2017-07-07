@@ -21,7 +21,8 @@ When you generate reports on demand, the reports are saved in a default location
 > [!Note]
 > If you choose to open the reports immediately, you must wait while the reports are generated. Processing time varies, depending on the types of reports and the scope of the data.
 
-## To generate reports immediately
+## To generate Reports immediately
+
 1.  Click the **Storage Reports Management** node.
 
 2.  Right-click **Storage Reports Management**, and then click **Generate Reports Now** (or select **Generate Reports Now** from the **Actions** pane). This opens the **Storage Reports Task Properties** dialog box.

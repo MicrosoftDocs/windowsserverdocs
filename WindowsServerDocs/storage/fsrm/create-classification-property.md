@@ -30,7 +30,7 @@ Classification properties are used to assign values to files within a specified 
 
 The following procedure guides you through the process of creating a classification property.
 
-## To create a classification property
+## To create a Classification Property
 
 1.  In **Classification Management**, click the **Classification Properties** node.
 

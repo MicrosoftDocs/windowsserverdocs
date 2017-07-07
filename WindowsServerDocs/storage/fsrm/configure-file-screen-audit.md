@@ -20,6 +20,7 @@ By using File Server Resource Manager, you can record file screening activity in
 > If the **Record file screening activity in the auditing database** check box is cleared, the File Screening Audit Reports will not contain any information.
 
 ## To configure file screen audit
+
 1.  In the console tree, right-click **File Server Resource Manager**, and then click **Configure Options**. The **File Server Resource Manager Options** dialog box opens.
 
 2.  On the **File Screen Audit** tab, select the **Record file screening activity in the auditing database** check box.

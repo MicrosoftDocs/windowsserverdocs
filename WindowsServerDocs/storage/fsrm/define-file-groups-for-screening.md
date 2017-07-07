@@ -22,7 +22,7 @@ A *file group* is used to define a namespace for a file screen, file screen exce
 > [!Note]
 > For convenience, you can create and edit file groups while you edit the properties of file screens, file screen exceptions, file screen templates, and **Files by File Group** reports. Any file group changes that you make from these property sheets are not limited to the current item that you are working on.
 
-## To create a file group
+## To create a File Group
 
 1.  In **File Screening Management**, click the **File Groups** node.
 

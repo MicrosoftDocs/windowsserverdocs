@@ -24,7 +24,8 @@ A file screen exception is a special type of file screen that over-rides any fil
 <br />
 You assign file groups to determine which file types will be allowed in the file screen exception.
 
-## To create a file screen exception
+## To create a File Screen Exception
+
 1.  In **File Screening Management**, click the **File Screens** node.
 
 2.  Right-click **File Screens**, and click **Create File Screen Exception** (or select **Create File Screen Exception** from the **Actions** pane). This opens the **Create File Screen Exception** dialog box.

@@ -32,7 +32,6 @@ For example, you can define an auto apply quota for subfolders that are created 
 
 6.  Click **Create**.
 
-
 > [!Note]
 > You can verify all automatically generated quotas by selecting the **Quotas** node and then selecting **Refresh**. An individual quota for each subfolder and the auto apply quota profile in the parent volume or folder are listed.
 

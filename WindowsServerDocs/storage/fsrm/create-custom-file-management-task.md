@@ -20,6 +20,7 @@ Expiration is not always a desired action to be performed on files. File managem
 > This procedure assumes that you are familiar with file management tasks, and therefore only covers the **Action** tab where custom settings are configured.
 
 ## To create a custom task
+
 1.  Click the **File Management Tasks** node.
 
 2.  Right-click **File Management Tasks**, and then click **Create File Management Task** (or click **Create File Management Task** in the **Actions** pane). This opens the **Create File Management Task** dialog box.

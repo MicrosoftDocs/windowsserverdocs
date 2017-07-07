@@ -19,7 +19,7 @@ You can configure the default parameters for storage reports. These default para
 > [!Important]
 > When you change the default parameters for a type of report, changes affect all incident reports and any existing scheduled report tasks that use the defaults.
 
-## To configure the default parameters for storage reports
+## To configure the default parameters for Storage Reports
 
 1. In the console tree, right-click **File Server Resource Manager**, and then click **Configure Options**. The **File Server Resource Manager Options** dialog box opens.
 
