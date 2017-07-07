@@ -26,8 +26,6 @@
 ####### [Configure HGS DNS and a one-way trust](guarded-fabric-shielded-vm/guarded-fabric-configure-dns-forwarding-and-trust.md)
 ##### [Configure HTTPS](guarded-fabric-shielded-vm/guarded-fabric-configure-hgs-https.md)
 ##### [Add nodes](guarded-fabric-shielded-vm/guarded-fabric-configure-additional-hgs-nodes.md)
-##### [Configure first HGS node](guarded-fabric-shielded-vm/guarded-fabric-configure-the-first-hgs-node.md)
-
 ##### [Verify the configuration](guarded-fabric-shielded-vm/guarded-fabric-verify-hgs-configuration.md)
 #### [Deploy guarded hosts](guarded-fabric-shielded-vm/guarded-fabric-configure-hgs-with-authorized-hyper-v-hosts.md)
 ##### [Add a host in AD mode](guarded-fabric-shielded-vm/guarded-fabric-admin-trusted-attestation-creating-a-security-group.md)

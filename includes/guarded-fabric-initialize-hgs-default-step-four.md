@@ -1,5 +1,5 @@
 If you provided any certificates to HGS using thumbprints, you will be instructed to grant HGS read access to the private key of those certificates. 
-On a server installed with Desktop Experience, complete the following steps:
+On a server with Desktop Experience installed, complete the following steps:
 
 1.  Open the local computer certificate manager (**certlm.msc**)
 2.  Find the certificate(s) > right-click > all tasks > manage private keys
