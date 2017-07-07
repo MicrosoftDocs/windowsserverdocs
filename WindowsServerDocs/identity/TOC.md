@@ -221,7 +221,7 @@
 #### [What's new in Active Directory Federation Services for Windows Server 2016](ad-fs/overview/whats-new-active-directory-federation-services-windows-server-2016.md)
 #### [AD FS Scenarios for Developers](ad-fs/overview/AD-FS-Scenarios-for-Developers.md)
 #### [AD FS 2016 Requirements](ad-fs/overview/AD-FS-2016-Requirements.md)
-#### [AD FS 2016 FAQ](ad-fs/overview/AD-FS-FAQ.md)
+
 ### [AD FS Design](ad-fs/AD-FS-Design.md)
 #### [AD FS Design Guide](ad-fs/design/AD-FS-Design-Guide.md)
 ##### [AD FS Design Guide in Windows Server 2012 R2](ad-fs/design/AD-FS-Design-Guide-in-Windows-Server-2012-R2.md)
@@ -413,6 +413,7 @@
 #### [Walkthrough: Workplace Join with an iOS Device](ad-fs/operations/Walkthrough--Workplace-Join-with-an-iOS-Device.md)
 #### [Walkthrough: Workplace Join with an Android Device](ad-fs/operations/Walkthrough--Workplace-Join-to-an-Android-device.md)
 ### [AD FS Technical Reference](ad-fs/AD-FS-Technical-Reference.md)
+### [AD FS 2016 FAQ](ad-fs/overview/AD-FS-FAQ.md)
 #### [AD FS and certificate KeySpec property information](ad-fs/technical-reference/AD-FS-and-KeySpec-Property.md)
 #### [Auditing Enhancements to AD FS in Windows Server 2016](ad-fs/technical-reference/Auditing-Enhancements-to-AD-FS-in-Windows-Server-2016.md)
 #### [Understanding Key AD FS Concepts](ad-fs/technical-reference/Understanding-Key-AD-FS-Concepts.md)
