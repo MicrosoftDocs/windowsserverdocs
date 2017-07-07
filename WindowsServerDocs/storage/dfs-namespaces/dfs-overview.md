@@ -158,4 +158,4 @@ For additional related information, see the following resources.
 |**Operations**|[DFS Namespaces: Frequently Asked Questions](http://technet.microsoft.com/library/ee404780.aspx)|
 |**Community resources**|[The File Services and Storage TechNet Forum](http://social.technet.microsoft.com/forums/winserverfiles/threads/)|
 |**Protocols**|[File Services Windows Server Protocols](http://msdn.microsoft.com/library/cc239875.aspx)|
-|**Related technologies**| [Failover Clustering](../failover-clustering/failover-clustering.md)|
+|**Related technologies**| [Failover Clustering](../../failover-clustering/failover-clustering-overview.md)|
