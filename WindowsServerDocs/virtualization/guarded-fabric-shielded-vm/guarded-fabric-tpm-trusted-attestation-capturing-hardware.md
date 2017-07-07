@@ -37,7 +37,7 @@ Guarded hosts using TPM mode must meet the following prerequisites:
     > [!IMPORTANT]
     > Make sure you install the [latest cumulative update](https://support.microsoft.com/help/4000825/windows-10-and-windows-server-2016-update-history).  
 
--   **Role and features**: Hyper-V role and the Host Guardian Hyper-V Support feature. The Host Guardian Hyper-V Support feature is only available on Datacenter editions of Windows Server 2016. 
+-   **Role and features**: Hyper-V role and the Host Guardian Hyper-V Support feature. The Host Guardian Hyper-V Support feature is only available on Datacenter editions of Windows Server 2016. Special instructions for Nano Server are near the end of this topic.
 
 > [!WARNING]
 > The Host Guardian Hyper-V Support feature enables Virtualization-based protection of code integrity that may be incompatible with some devices. 
@@ -149,6 +149,21 @@ A TPM baseline is required for each unique class of hardware in your datacenter 
     >**Note**&nbsp;&nbsp;You will need to use the **-SkipValidation** flag if the reference host does not have Secure Boot enabled, an IOMMU present, Virtualization Based Security enabled and running, or a code integrity policy applied. These validations are designed to make you aware of the minimum requirements of running a shielded VM on the host. Using the -SkipValidation flag does not change the output of the cmdlet; it merely silences the errors.
 
 3.  Provide the TPM baseline (TCGlog file) to the HGS administrator so they can [register it as a trusted baseline](guarded-fabric-add-host-information-for-tpm-trusted-attestation.md).
+
+[!INCLUDE [Configure Nano Server as a guarded host](../../../includes/configure-nano-server-as-a-guarded-host.md)] 
+
+## Creating a code integrity policy 
+
+If you are using TPM mode, you can only create the code integrity policy against an offline Nano Server image.
+Mount the Nano Server VHDX and run [New-CIPolicy](https://technet.microsoft.com/library/mt634473.aspx) in a command like the following from the management server. This example uses G: as the mounted drive.
+
+```powershell
+New-CIPolicy -FilePath .\NanoCI.xml -Level FilePublisher -Fallback Hash -ScanPath G:\ -PathToCatroot G:\Windows\System32\CatRoot\ -UserPEs
+```
+
+>**Note**&nbsp;&nbsp;The CI policy will need to be [added to the HGS Server](guarded-fabric-add-host-information-for-tpm-trusted-attestation.md).
+
+[!INCLUDE [Configure the boot menu](../../../includes/configure-the-boot-menu-for-a-nano-server.md)] 
 
 ## Next step
 
