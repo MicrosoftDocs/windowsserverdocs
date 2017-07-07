@@ -11,7 +11,7 @@ ms.date: 07/05/2017
 
 # Initialize the HGS cluster using AD mode in an existing bastion forest
 
-[!INCLUDE [Guarded fabric diagnostics tool](../../../includes/guarded-fabric-initialize-hgs-bastion-prep-steps.md)] 
+[!INCLUDE [Prepare for HGS](../../../includes/guarded-fabric-initialize-hgs-bastion-prep-steps.md)] 
 
 ## Initialize HGS using AD mode 
 

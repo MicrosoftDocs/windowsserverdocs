@@ -80,4 +80,5 @@ $acl.AddAccessRule($ace)
 Set-Acl -Path $vcoPath -AclObject $acl
 ```
 
-<!-- Appears in guarded-fabric-initialize-hgs-tpm-mode-bastion.md and guarded-fabric-initialize-hgs-ad-mode-bastion.md>
+<!-- Appears in guarded-fabric-initialize-hgs-tpm-mode-bastion.md and guarded-fabric-initialize-hgs-ad-mode-bastion.md
+-->
