@@ -10,6 +10,10 @@ ms.technology: security-guarded-fabric
 ms.date: 03/02/2017
 ---
 
+>[!div class="step-by-step"]
+[« Add HGS nodes](guarded-fabric-configure-additional-hgs-nodes.md)
+[Deploy guarded hosts »](guarded-fabric-configure-hgs-with-authorized-hyper-v-hosts.md)
+
 # Verify the HGS configuration
 
 >Applies To: Windows Server 2016
