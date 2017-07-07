@@ -47,9 +47,6 @@ Hyper-V hosts must meet the following prerequisites for AD mode:
 
     ![Get-AdGroup command with output](../media/Guarded-Fabric-Shielded-VM/guarded-host-get-adgroup.png)
 
-[!INCLUDE [Configure Nano Server as a guarded host](../../../includes/configure-nano-server-as-a-guarded-host.md)] 
-[!INCLUDE [Configure the boot menu](../../../includes/configure-the-boot-menu-for-a-nano-server.md)] 
-
 ## Next step
 
 [Confirm hosts can attest successfully](guarded-fabric-confirm-hosts-can-attest-successfully.md)
