@@ -11,7 +11,7 @@ ms.date: 10/14/2016
 ---
 
 >[!div class="step-by-step"]
-[« Install trusted TPM root certificates](guarded-fabric-install-trusted-tpm-root-certificates.md)
+[« Install TPM root certs](guarded-fabric-install-trusted-tpm-root-certificates.md)
 [Configure Https  »](guarded-fabric-configure-hgs-https.md)
 
 # Configure the fabric DNS for guarded hosts

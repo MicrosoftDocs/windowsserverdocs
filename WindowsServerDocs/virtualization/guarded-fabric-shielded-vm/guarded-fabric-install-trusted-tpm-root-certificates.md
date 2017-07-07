@@ -10,8 +10,8 @@ ms.date: 07/05/2017
 ---
 
 >[!div class="step-by-step"]
-[« Initialize HGS using TPM-trusted attestation](guarded-fabric-initialize-hgs-tpm-mode.md)
-[Configure the fabric DNS  »](guarded-fabric-configuring-fabric-dns.md)
+[« Initialize HGS](guarded-fabric-initialize-hgs-tpm-mode.md)
+[Configure fabric DNS  »](guarded-fabric-configuring-fabric-dns.md)
 
 # Install trusted TPM root certificates
 

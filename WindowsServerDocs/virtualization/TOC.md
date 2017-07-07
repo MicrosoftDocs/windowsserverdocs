@@ -17,7 +17,7 @@
 ###### [TPM mode](guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs-tpm-mode.md)
 ####### [Dedicated forest (default)](guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs-tpm-mode-default.md)
 ####### [Bastion forest](guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs-tpm-mode-bastion.md)
-####### [Install trusted TPM root certificates](guarded-fabric-shielded-vm/guarded-fabric-install-trusted-tpm-root-certificates.md)
+####### [Install TPM root certs](guarded-fabric-shielded-vm/guarded-fabric-install-trusted-tpm-root-certificates.md)
 ####### [Configure fabric DNS](guarded-fabric-shielded-vm/guarded-fabric-configuring-fabric-dns.md)
 ###### [AD mode](guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs-ad-mode.md)
 ####### [Dedicated forest (default)](guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs-ad-mode-default.md)
