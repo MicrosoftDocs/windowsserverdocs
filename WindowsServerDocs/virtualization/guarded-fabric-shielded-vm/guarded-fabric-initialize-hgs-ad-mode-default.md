@@ -11,7 +11,7 @@ ms.date: 07/05/2017
 
 >[!div class="step-by-step"]
 [« Install HGS in a new forest](guarded-fabric-install-hgs-default.md)
-[Configure fabric DNS »](guarded-fabric-configuring-fabric-dns.md)
+[Configure fabric DNS »](guarded-fabric-configuring-fabric-dns-ad.md)
 
 # Initialize the HGS cluster using AD mode in a new dedicated forest (default)
 

@@ -9,6 +9,10 @@ ms.technology: security-guarded-fabric
 ms.date: 07/05/2017
 ---
 
+>[!div class="step-by-step"]
+[« Install HGS in a new forest](guarded-fabric-install-hgs-in-a-bastion-forest.md)
+[Configure fabric DNS »](guarded-fabric-configuring-fabric-dns-ad.md)
+
 # Initialize the HGS cluster using AD mode in an existing bastion forest
 
 [!INCLUDE [Prepare for HGS](../../../includes/guarded-fabric-initialize-hgs-bastion-prep-steps.md)] 
