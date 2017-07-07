@@ -42,6 +42,7 @@
 #### [Step 3, Set up Work Folders](work-folders/deploy-work-folders-adfs-step3.md)
 #### [Step 4, Set up WAP](work-folders/deploy-work-folders-adfs-step4.md)
 #### [Step 5, Set up clients](work-folders/deploy-work-folders-adfs-step5.md)
+## [DFS Namespaces](dfs-namespaces/dfs-overview.md)
 ## [Storage-class memory health management](storage-spaces/Storage-class-memory-health.md)
 ## [iSCSI boot](iscsi/iscsi-boot-overview.md)
 ## [File Server Resource Manager](fsrm/fsrm-overview.md)
