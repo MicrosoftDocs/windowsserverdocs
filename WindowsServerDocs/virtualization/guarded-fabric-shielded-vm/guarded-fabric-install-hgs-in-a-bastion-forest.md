@@ -23,3 +23,8 @@ In an existing bastion forest, HGS must be added to the root domain. Use Server 
 
 [!INCLUDE [Install the HGS server role](../../../includes/guarded-fabric-install-hgs-server-role.md)] 
 
+## Next steps
+
+- For the next steps to set up TPM-based attestation, see [Initialize the HGS cluster using TPM mode in an existing bastion forest](guarded-fabric-initialize-hgs-tpm-mode-bastion.md).
+- For the next steps to set up Admin-based attestation, see [Initialize the HGS cluster using AD mode in an existing bastion forest](guarded-fabric-initialize-hgs-ad-mode-bastion.md).
+

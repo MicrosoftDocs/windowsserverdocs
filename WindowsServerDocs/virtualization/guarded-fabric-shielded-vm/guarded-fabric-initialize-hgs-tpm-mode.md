@@ -20,4 +20,5 @@ These steps vary depending on whether you are initializing HGS in a new forest o
    [Initialize the HGS cluster in an existing bastion forest](guarded-fabric-initialize-hgs-tpm-mode-bastion.md)
 
 2. [Install trusted TPM root certificates](guarded-fabric-install-trusted-tpm-root-certificates.md)   
+3. [Configure the fabric DNS](guarded-fabric-configuring-fabric-dns.md)
 

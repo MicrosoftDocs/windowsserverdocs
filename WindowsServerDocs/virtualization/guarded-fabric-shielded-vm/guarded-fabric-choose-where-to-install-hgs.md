@@ -9,6 +9,10 @@ ms.technology: security-guarded-fabric
 ms.date: 04/24/2017
 ---
 
+>[!div class="step-by-step"]
+[« Prepare for HGS](guarded-fabric-prepare-for-hgs.md)
+[Initialize HGS »](guarded-fabric-initialize-hgs.md)
+
 # Choose whether to install HGS in its own dedicated forest or in an existing bastion forest
 
 The Active Directory forest for HGS is sensitive because its administrators have access to the keys that control shielded VMs. 

@@ -11,7 +11,7 @@ ms.date: 07/05/2017
 
 >[!div class="step-by-step"]
 [« Install HGS](guarded-fabric-choose-where-to-install-hgs.md)
-[Add HGS nodes »](guarded-fabric-configure-additional-hgs-nodes.md)
+[Configure Https »](guarded-fabric-configure-hgs-https.md)
 
 # Initialize the Host Guardian Service (HGS)
 

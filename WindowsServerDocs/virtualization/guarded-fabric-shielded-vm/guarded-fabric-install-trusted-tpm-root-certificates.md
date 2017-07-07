@@ -9,6 +9,10 @@ ms.technology: security-guarded-fabric
 ms.date: 07/05/2017
 ---
 
+>[!div class="step-by-step"]
+[« Initialize HGS using TPM-trusted attestation](guarded-fabric-initialize-hgs-tpm-mode.md)
+[Configure the fabric DNS  »](guarded-fabric-configuring-fabric-dns.md)
+
 # Install trusted TPM root certificates
 
 If you chose TPM mode, or expect to migrate to TPM mode in the future, you need to install root certificates to issue the endorsement key in each host's TPM module.

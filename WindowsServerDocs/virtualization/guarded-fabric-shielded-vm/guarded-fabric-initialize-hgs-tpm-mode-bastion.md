@@ -9,6 +9,10 @@ ms.technology: security-guarded-fabric
 ms.date: 07/05/2017
 ---
 
+>[!div class="step-by-step"]
+[« Install HGS in an existing bastion forest](guarded-fabric-install-hgs-in-a-bastion-forest.md)
+[Install trusted TPM root certificates »](guarded-fabric-install-trusted-tpm-root-certificates.md)
+
 # Initialize the HGS cluster using TPM mode in an existing bastion forest
 
 [!INCLUDE [Prepare for HGS](../../../includes/guarded-fabric-initialize-hgs-bastion-prep-steps.md)] 

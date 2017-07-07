@@ -10,6 +10,10 @@ ms.technology: security-guarded-fabric
 ms.date: 05/10/2017
 ---
 
+>[!div class="step-by-step"]
+[« Configure Https](guarded-fabric-configure-hgs-https.md)
+[Verify the configuration »](guarded-fabric-verify-hgs-configuration.md)
+
 # Configure additional HGS nodes
 
 >Applies To: Windows Server 2016
@@ -20,8 +24,8 @@ Depending on your environment, choose one of the following methods to add HGS no
 
 | New HGS forest | Existing bastion forest |
 |----------------|-------------------------|
-| [Using PFX files](#dedicated-hgs-forest-with-pfx-certificates) | [Using PFX files](#existing-forest-with-pfx-certificates)         |
-| [Using certificate thumbprints](#dedicated-hgs-forest-with-certificate-thumbprints) | [Using certificate thumbprints](#existing-forest-with-certificate-thumbprints) |
+| [Using PFX files](#dedicated-hgs-forest-with-pfx-certificates) | [Using PFX files](#existing-bastion-forest-with-pfx-certificates)         |
+| [Using certificate thumbprints](#dedicated-hgs-forest-with-certificate-thumbprints) | [Using certificate thumbprints](#existing-bastion-forest-with-certificate-thumbprints) |
 
 ## Prerequisites
 
@@ -61,7 +65,7 @@ Make sure that each additional node:
 
 [!INCLUDE [Install private keys](../../../includes/guarded-fabric-install-private-keys.md)]
 
-## Existing forest with PFX certificates
+## Existing bastion forest with PFX certificates
 
 1. Join the node to the existing domain
 2. Grant the machine rights to retrieve gMSA password and run Install-ADServiceAccount
@@ -80,7 +84,7 @@ Make sure that each additional node:
 
 [!INCLUDE [Initialize the HGS server](../../../includes/guarded-fabric-initialize-hgs-on-the-node.md)] 
 
-## Existing forest with certificate thumbprints
+## Existing bastion forest with certificate thumbprints
 
 1. Join the node to the existing domain
 2. Grant the machine rights to retrieve gMSA password and run Install-ADServiceAccount
