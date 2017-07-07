@@ -27,6 +27,7 @@ Depending on your environment, choose one of the following methods to add HGS no
 |[Using PFX files](#dedicated-hgs-forest-with-pfx-certificates) | [Using PFX files](#existing-bastion-forest-with-pfx-certificates)         |
 |[Using certificate thumbprints](#dedicated-hgs-forest-with-certificate-thumbprints)  | [Using certificate thumbprints](#existing-bastion-forest-with-certificate-thumbprints) |
 
+|                |                         |                              | 
 |----------------|-------------------------|------------------------------|
 |New HGS forest  | [Using PFX files](#dedicated-hgs-forest-with-pfx-certificates) | [Using certificate thumbprints](#dedicated-hgs-forest-with-certificate-thumbprints) |
 |Existing bastion forest |  [Using PFX files](#existing-bastion-forest-with-pfx-certificates) | [Using certificate thumbprints](#existing-bastion-forest-with-certificate-thumbprints) |
