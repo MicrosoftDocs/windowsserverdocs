@@ -1,7 +1,7 @@
 ---
 title: Managing Remote Storage Resources
 description: This article describes how to manage storage resources on a remote computer
-ms.date: 6/5/2017
+ms.date: 7/7/2017
 ms.prod: windows-server-threshold
 ms.technology: storage
 ms.topic: article
@@ -12,7 +12,7 @@ ms.author: jgerend
 
 # Managing Remote Storage Resources
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, and Windows Server 2008 R2
+> Applies To: Windows Server 2016, Windows Server 2012, Windows Server 2012 R2, and Windows Server 2008 R2
 
 To manage storage resources on a remote computer, you have two options:
 

@@ -1,7 +1,7 @@
 ---
 title: Create a File Screen Template
 description: This article describes how to create a file screen template
-ms.date: 6/5/2017
+ms.date: 7/7/2017
 ms.prod: windows-server-threshold
 ms.technology: storage
 ms.topic: article
@@ -12,7 +12,7 @@ ms.author: jgerend
 
 # Create a File Screen Template
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, and Windows Server 2008 R2
+> Applies To: Windows Server 2016, Windows Server 2012, Windows Server 2012 R2, and Windows Server 2008 R2
 
 A *file screen template* defines a set of file groups to screen, the type of screening to perform (active or passive), and optionally, a set of notifications that will be generated automatically when a user saves, or attempts to save, an unauthorized file.
 

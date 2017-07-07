@@ -1,7 +1,7 @@
 ---
 title: Configure Notification Limits
 description: This article describes how to add time limits to various notification types 
-ms.date: 6/5/2017
+ms.date: 7/7/2017
 ms.prod: windows-server-threshold
 ms.technology: storage
 ms.topic: article
@@ -12,7 +12,7 @@ ms.author: jgerend
 
 # Configure Notification Limits
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, and Windows Server 2008 R2
+> Applies To: Windows Server 2016, Windows Server 2012, Windows Server 2012 R2, and Windows Server 2008 R2
 
 To reduce the number of notifications that accumulate for repeatedly exceeding a quota threshold or attempting to save an unauthorized file, File Server Resource Manager applies time limits to the following notification types:
 

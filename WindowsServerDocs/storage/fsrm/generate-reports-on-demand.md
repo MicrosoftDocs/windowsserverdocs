@@ -1,7 +1,7 @@
 ---
 title: Generate Reports on Demand
 description: This article describes how to generate reports on demand to analyze disk usage on the server
-ms.date: 6/5/2017
+ms.date: 7/7/2017
 ms.prod: windows-server-threshold
 ms.technology: storage
 ms.topic: article
@@ -12,7 +12,7 @@ ms.author: jgerend
 
 # Generate Reports on Demand
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, and Windows Server 2008 R2
+> Applies To: Windows Server 2016, Windows Server 2012, Windows Server 2012 R2, and Windows Server 2008 R2
 
 During daily operations, you can use the **Generate Reports Now** option to generate one or more reports on demand. With these reports, you can analyze the different aspects of current disk usage on the server. Current data is gathered before the reports are generated.
 

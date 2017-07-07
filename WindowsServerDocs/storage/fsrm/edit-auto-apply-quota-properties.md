@@ -1,7 +1,7 @@
 ---
 title: Edit Auto Apply Quota Properties 
 description: This article describes how to edit auto apply quota properties
-ms.date: 6/5/2017
+ms.date: 7/7/2017
 ms.prod: windows-server-threshold
 ms.technology: storage
 ms.topic: article
@@ -12,7 +12,7 @@ ms.author: jgerend
 
 # Edit Auto Apply Quota Properties
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, and Windows Server 2008 R2
+> Applies To: Windows Server 2016, Windows Server 2012, Windows Server 2012 R2, and Windows Server 2008 R2
 
 When you make changes to an auto apply quota, you have the option of extending those changes to existing quotas in the auto apply quota path. You can choose to modify only those quotas that still match the original auto apply quota or all quotas in the auto apply quota path, regardless of any modifications that were made to the quotas since they were created. This feature simplifies the process of updating the properties of quotas that were derived from an auto apply quota by providing one central point where you can make all the changes.
 

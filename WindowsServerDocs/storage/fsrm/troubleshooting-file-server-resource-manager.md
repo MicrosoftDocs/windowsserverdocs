@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting File Server Resource Manager
 description: This article describes how to troubleshoot common issues when using file server resource manager
-ms.date: 6/5/2017
+ms.date: 7/7/2017
 ms.prod: windows-server-threshold
 ms.technology: storage
 ms.topic: article
@@ -12,7 +12,7 @@ ms.author: jgerend
 
 # Troubleshooting File Server Resource Manager
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, and Windows Server 2008 R2
+> Applies To: Windows Server 2016, Windows Server 2012, Windows Server 2012 R2, and Windows Server 2008 R2
 
 This section lists common issues that you might encounter when using File Server Resource Manager.
 
