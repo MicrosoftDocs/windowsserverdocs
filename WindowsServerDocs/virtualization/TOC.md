@@ -35,7 +35,7 @@
 ###### [AD mode](guarded-fabric-shielded-vm/guarded-fabric-add-host-information-for-admin-trusted-attestation.md)
 ###### [TPM mode](guarded-fabric-shielded-vm/guarded-fabric-add-host-information-for-tpm-trusted-attestation.md)
 ##### [Confirm attestation](guarded-fabric-shielded-vm/guarded-fabric-confirm-hosts-can-attest-successfully.md)
-##### [Using VMM](https://technet.microsoft.com/system-center-docs/vmm/scenario/guarded-hosts)
+##### [Using VMM](https://docs.microsoft.com/en-us/system-center/vmm/guarded-deploy-host)
 #### [Deploy shielded VMs](guarded-fabric-shielded-vm/guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
 ##### [Create a template disk](guarded-fabric-shielded-vm/guarded-fabric-create-a-shielded-vm-template.md)
 ##### [Prepare a helper VHD](guarded-fabric-shielded-vm/guarded-fabric-vm-shielding-helper-vhd.md)
