@@ -16,35 +16,67 @@ ms.date: 05/10/2017
 
 In production environments, HGS should be set up in a high availability cluster to ensure that shielded VMs can be powered on even if an HGS node goes down. For test environments, secondary HGS nodes are not required.
 
-The following steps will add a node to the HGS cluster.
+Depending on your environment, choose one of the following methods to add HGS nodes:
+
+- [Dedicated HGS forest with PFX certificates](#dedicated-hgs-forest-with-pfx-certificates)
+- [Dedicated HGS forest with thumbprint certificates](#dedicated-hgs-forest-with-thumbprint-certificates)
+- [Existing forest with PFX certificates](#existing-forest-with-pfx-certificates)
+- [Existing forest with thumbprint certificates](#existing-forest-with-thumbprint-certificates)
 
 ## Prerequisites
 
-Before you can add an additional node to your HGS cluster, ensure the following prerequisites are met:
+Make sure that each additional node: 
+- Has the same hardware and software configuration as the primary node 
+- Is connected to the same network as the other HGS servers
+- Can resolve the other HGS servers by their DNS names
 
-1. The additional node has the same hardware and software configuration as the primary node. This is a failover clustering best practice.
+## Dedicated HGS forest with PFX certificates
 
-2. The additional node is connected to the same network as the other HGS servers, and can resolve the other HGS servers by their DNS names.
+1. Promote the HGS node to a domain controller
+2. Initialize the HGS server
 
-3. The Host Guardian Service role is installed on the machine. To install the role, run the following command in an elevated PowerShell console:
+### Promote the HGS node to a domain controller
 
-    ```powershell
-    Install-WindowsFeature -Name HostGuardianServiceRole -IncludeManagementTools -Restart
-    ```
+[!INCLUDE [Promote to a domain controller](../../../includes/guarded-fabric-promote-domain-controller.md)] 
 
-## Join the node to the HGS domain
+### Initialize the HGS server
 
-Your new HGS node must be joined to the same domain as your first HGS node.
-If you used the `Install-HgsServer` command to set up a new domain for your first HGS node, follow the steps under [Promote to a domain controller in the HGS forest](#promote-to-a-domain-controller-in-the-hgs-forest).
-If you joined the first HGS node to an existing bastion forest, skip to [Join an existing bastion forest](#join-an-existing-bastion-forest).
+[!INCLUDE [Initialize the HGS server](../../../includes/guarded-fabric-initialize-hgs-on-the-node.md)] 
 
-### Promote to a domain controller in the HGS forest
+## Dedicated HGS forest with thumbprint certificates
+ 
+1. Promote the HGS node to a domain controller
+2. Initialize the HGS server
+3. Install the private keys for the certificates
 
-If you set up a new forest for your Host Guardian Service using `Install-HgsServer` on the primary node, you must promote your additional HGS servers to domain controllers using the same command.
+### Promote the HGS node to a domain controller
 
-1.  Ensure at least one NIC on the node is configured to use the DNS server on your first HGS server for name resolution. This is necessary for the machine to resolve and join the domain.
+[!INCLUDE [Promote to a domain controller](../../../includes/guarded-fabric-promote-domain-controller.md)] 
 
-2.  Run [Install-HgsServer](https://technet.microsoft.com/en-us/itpro/powershell/windows/hgsserver/install-hgsserver) to join the domain and promote the node to a domain controller.
+### Initialize the HGS server
+
+[!INCLUDE [Initialize the HGS server](../../../includes/guarded-fabric-initialize-hgs-on-the-node.md)] 
+
+### Install the private keys for the certificates
+
+If you did not provide a PFX file for either the encryption or signing certificates on the first HGS server, only the public key will be replicated to this server.
+You will need to install the private key by importing a PFX file containing the private key into the local certificate store or, in the case of HSM-backed keys, configuring the Key Storage Provider and associating it with your certificates per your HSM manufacturer's instructions.
+
+## Existing forest with PFX certificates
+
+## Existing forest with thumbprint certificates
+
+## Install the HGS server role
+
+[!INCLUDE [Install HGS server role](../../../includes/guarded-fabric-install-hgs-server-role.md)] 
+
+## Join the node to the HGS domain and promote it to a domain controller
+
+1.  Ensure at least one NIC on the node is configured to use the DNS server on your first HGS server.
+
+2.  Join the new HGS node to the same domain as your first HGS node. 
+
+3.  Run [Install-HgsServer](https://technet.microsoft.com/en-us/itpro/powershell/windows/hgsserver/install-hgsserver) to join the domain and promote the node to a domain controller.
 
     ```powershell
     $adSafeModePassword = ConvertTo-SecureString -AsPlainText '<password>' -Force
@@ -54,7 +86,7 @@ If you set up a new forest for your Host Guardian Service using `Install-HgsServ
     Install-HgsServer -HgsDomainName 'relecloud.com' -HgsDomainCredential $cred -SafeModeAdministratorPassword $adSafeModePassword -Restart
     ```
 
-3.  When the server reboots, log in with a domain administrator account and follow the steps to [Initialize HGS on the node](#initialize-hgs-on-the-node).
+4.  When the server reboots, log in with a domain administrator account.
 
 ### Join an existing bastion forest
 
@@ -134,7 +166,7 @@ If you want to secure HGS endpoints with an SSL certificate, you must configure 
 SSL certificates *are not* replicated by HGS and do not need to use the same keys for every node (i.e. you can have different SSL certs for each node).
 
 When requesting an SSL cert, ensure the cluster fully qualified domain name (as shown in the output of `Get-HgsServer`) is either the subject common name of the cert, or included as a subject alternative DNS name.
-When you've obtained a certificate from your certificate authority, you can configure HGS to use it with [Set-HgsServer](https://technet.microsoft.com/en-us/itpro/powershell/windows/hgsserver/set-hgsserver).
+When you've obtained a certificate from your certificate authority, you can configure HGS to use it with [Set-HgsServer](https://technet.microsoft.com/itpro/powershell/windows/hgsserver/set-hgsserver).
 
 ```powershell
 $sslPassword = Read-Host -AsSecureString -Prompt "SSL Certificate Password"

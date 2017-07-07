@@ -1,5 +1,5 @@
 ---
-title: Initialize the HGS cluster using AD mode in a new forest (default)
+title: Initialize the HGS cluster using AD mode in a new dedicated forest (default)
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.topic: article
@@ -9,9 +9,9 @@ ms.technology: security-guarded-fabric
 ms.date: 07/05/2017
 ---
 
-# Initialize the HGS cluster using AD mode in a new forest (default)
+# Initialize the HGS cluster using AD mode in a new dedicated forest (default)
 
-[!INCLUDE [Guarded fabric diagnostics tool](../../../includes/guarded-fabric-initialize-hgs-default-steps-one-and-two.md)] 
+[!INCLUDE [Initialize HGS](../../../includes/guarded-fabric-initialize-hgs-default-steps-one-and-two.md)] 
 
 3.  Run [Initialize-HgsServer](https://technet.microsoft.com/library/mt652185.aspx) in an elevated PowerShell window on the first HGS node. The syntax of this cmdlet supports many different inputs, but the 2 most common invocations are below:
 
@@ -30,4 +30,5 @@ ms.date: 07/05/2017
         Initialize-HgsServer -HgsServiceName 'MyHgsDNN' -SigningCertificateThumbprint '1A2B3C4D5E6F...' -EncryptionCertificateThumbprint '0F9E8D7C6B5A...' --TrustActiveDirectory
         ```
 
-[!INCLUDE [Guarded fabric diagnostics tool](../../../includes/guarded-fabric-initialize-hgs-default-step-four.md)]  
+[!INCLUDE [Initialize HGS](../../../includes/guarded-fabric-initialize-hgs-default-step-four.md)]  
+

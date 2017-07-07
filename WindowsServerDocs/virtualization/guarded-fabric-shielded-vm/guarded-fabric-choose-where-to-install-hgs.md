@@ -9,10 +9,10 @@ ms.technology: security-guarded-fabric
 ms.date: 04/24/2017
 ---
 
-# Choose whether to install HGS in its own new forest or in an existing bastion forest
+# Choose whether to install HGS in its own dedicated forest or in an existing bastion forest
 
 The Active Directory forest for HGS is sensitive because its administrators have access to the keys that control shielded VMs. 
-The default installation will set up a new forest for HGS and configure other dependencies. 
+The default installation will set up a new forest dedicated for HGS and configure other dependencies. 
 This option is recommended because the environment is self-contained and known to be secure when it is created. 
 
 The only technical requirement for installing HGS in an existing forest is that it be added to the root domain; non-root domains are not supported. But there are also operational requirements and security-related best practices for using an existing forest. 
@@ -26,17 +26,7 @@ Such forests usually exhibit the following characteristics:
 General purpose forests such as production forests are not suitable for use by HGS. 
 Fabric forests are also unsuitable because HGS needs to be isolated from fabric administrators.
 
-### Requirements for adding HGS to an existing forest
+Choose the installation option that best suits your environment:
 
-To add HGS to an existing bastion forest, it must be added to the root domain. 
-Before you initialize HGS, you will need to join each target server of the HGS cluster to the root domain, and then add these objects:
-
--   A Group Managed Service Account (gMSA) that is configured for use on the machine(s) that host HGS.
-
--   Two Active Directory groups that you will use for Just Enough Administration (JEA). One group is for users who can perform HGS administration through JEA, and the other is for users who can only view HGS through JEA.
-
--   For setting up the cluster, either [prestaged cluster objects](http://go.microsoft.com/fwlink/?LinkId=746122) or, for the user who runs **Initialize-HgsServer**, permissions to prestage the cluster objects.
-
-
-
-
+- [Install HGS in its own dedicated forest](guarded-fabric-install-hgs-default.md)
+- [Install HGS in an existing bastion forest](guarded-fabric-install-hgs-bastion.md)

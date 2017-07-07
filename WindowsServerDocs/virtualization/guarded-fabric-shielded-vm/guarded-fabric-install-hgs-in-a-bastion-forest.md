@@ -15,9 +15,11 @@ ms.date: 07/05/2017
 [« Prepare for HGS](guarded-fabric-prepare-for-hgs.md)
 [Initialize HGS »](guarded-fabric-initialize-hgs.md)
 
+## Join the HGS server to the existing domain
+
+In an existing bastion forest, HGS must be added to the root domain. Use Server Manager or [Add-Computer](http://go.microsoft.com/fwlink/?LinkId=821564) to join your HGS server to the root domain.
+
 ## Add the HGS server role
 
 [!INCLUDE [Install the HGS server role](../../../includes/guarded-fabric-install-hgs-server-role.md)] 
-
-
 
