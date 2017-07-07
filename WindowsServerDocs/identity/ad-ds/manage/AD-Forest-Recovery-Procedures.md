@@ -26,7 +26,7 @@ The following is a list of procedures that are used in backing up and restoring 
 -   [Backing up a full server](AD-Forest-Recovery-Backing-up-a-Full-Server.md)  
 -   [Backing up the System State data](AD-Forest-Recovery-Backing-up-System-State.md)  
 -   [Performing a full server recovery](AD-Forest-Recovery-Perform-a-Full-Recovery.md)  
--   [Performing an authoritative synchronization of DFSR-replicated SYSVOL](AD-Forest-Recovery-Authoritative-Recovery-SYSVOL.md)  
+-   [Performing an authoritative synch of DFSR-replicated SYSVOL](AD-Forest-Recovery-Authoritative-Recovery-SYSVOL.md)  
 -   [Performing a nonauthoritative restore of Active Directory Domain Services](AD-Forest-Recovery-Nonauthoritative-Restore.md)  
   
      These steps explain how to perform an authoritative restore of SYSVOL at the same time.  
