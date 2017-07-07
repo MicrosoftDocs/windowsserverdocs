@@ -21,6 +21,6 @@
 
     If you are using HSM-backed certificates, or certificates stored in a third party key storage provider, these steps may not apply to you. Consult your key storage provider's documentation to learn how to manage permissions on your private key. In some cases, there is no authorization, or authorization is provided to the entire computer when the certificate is installed.
 
-5.  That's it! In a production environment, you should continue to [add additional HGS nodes to your cluster](guarded-fabric-configure-additional-hgs-nodes.md). In a test environment, you can skip to [validating your HGS configuration](guarded-fabric-verify-hgs-configuration.md).
+5.  That's it! In a production environment, you should continue to [add additional HGS nodes to your cluster](../WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-configure-additional-hgs-nodes.md). In a test environment, you can skip to [validating your HGS configuration](../WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-verify-hgs-configuration.md).
     
     <!-- Appears in guarded-fabric-initialize-hgs-ad-mode-default.md and guarded-fabric-initialize-hgs-tpm-mode-default.md>

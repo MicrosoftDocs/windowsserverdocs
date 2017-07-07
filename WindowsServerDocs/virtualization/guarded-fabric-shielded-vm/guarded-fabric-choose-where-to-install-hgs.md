@@ -29,4 +29,4 @@ Fabric forests are also unsuitable because HGS needs to be isolated from fabric 
 Choose the installation option that best suits your environment:
 
 - [Install HGS in its own dedicated forest](guarded-fabric-install-hgs-default.md)
-- [Install HGS in an existing bastion forest](guarded-fabric-install-hgs-bastion.md)
+- [Install HGS in an existing bastion forest](guarded-fabric-install-hgs-in-a-bastion-forest.md)
