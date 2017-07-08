@@ -7,14 +7,15 @@ ms.topic: article
 author: JasonGerend
 manager: dongill
 ms.author: jgerend
-ms.date: 10/4/2016
+ms.date: 07/10/2017
 ---
 # Storage in Windows Server 2016
+
 >Applies To: Windows Server 2016
 
 <img src="../get-started/media/7-storage.png" style='float:left; padding:.5em;' alt="Icon representing a drive"> Storage in Windows Server 2016 provides new and improved features for software-defined datacenter (SDDC) customers focusing on virtualized workloads. Windows Server also provides extensive support for enterprise customers using file servers with existing workloads. 
 
-To find out about what's new in storage, see [What's new in storage](whats-new-in-storage.md) and [What's new in Failover Clustering](..//failover-clustering/whats-new-in-failover-clustering.md).
+To find out about what's new in storage, see [What's new in storage](whats-new-in-storage.md) and [What's new in Failover Clustering](../failover-clustering/whats-new-in-failover-clustering.md).
 
 For an overview of storage technologies included in Windows Server, see the following list (categorized by workload).
 
@@ -54,23 +55,23 @@ Enables you to group shared folders that are located on different servers into o
 
 Enables you to efficiently replicate folders (including those referred to by a DFS namespace path) across multiple servers and sites. DFS Replication uses a compression algorithm known as remote differential compression (RDC). RDC detects changes to the data in a file, and it enables DFS Replication to replicate only the changed file blocks instead of the entire file.
 
-### [File Classification](https://technet.microsoft.com/library/dd758765(v=ws.10).aspx)
+### [File Classification](fsrm/classification-management.md)
 
 File Classification, also known as File Classification Infrastructure (FCI) provides insight into your data by automating classification processes so that you can manage your data more effectively. You can classify files and apply policies based on this classification. Example policies include dynamic access control for restricting access to files, file encryption, and file expiration. Files can be classified automatically by using file classification rules or manually by modifying the properties of a selected file or folder.
 
-### [File Screens](https://technet.microsoft.com/library/dd758760(v=ws.10).aspx)
+### [File Screens](fsrm/file-screening-management.md)
 
 File screens help you control the types of files that user can store on a file server. You can limit the extension that can be stored on your shared files. For example, you can create a file screen that does not allow files with an MP3 extension to be stored in personal shared folders on a file server.
 
-### [File Management Tasks](https://technet.microsoft.com/en-us/library/dd758756(v=ws.10).aspx)
+### [File Management Tasks](fsrm/file-management-tasks.md)
 
 File Management Tasks enables you to apply a conditional policy or action to files based on their classification. The conditions of a file management task include the file location, the classification properties, the date the file was created, the last modified date of the file, or the last time the file was accessed. The actions that a file management task can take include the ability to expire files, encrypt files, or run a custom command.
 
-### [Quotas](https://technet.microsoft.com/en-us/library/dd758768(v=ws.10).aspx)
+### [Quotas](fsrm/quota-management.md)
 
 Quotas allow you to limit the space that is allowed for a volume or folder, and they can be automatically applied to new folders that are created on a volume. You can also define quota templates that can be applied to new volumes or folders.
 
-### [Storage Reports](https://technet.microsoft.com/library/dd758755(v=ws.10).aspx)
+### [Storage Reports](fsrm/storage-reports-management.md)
 
 Storage reports are used to help you identify trends in disk usage and how your data is classified. You can also monitor a selected group of users for attempts to save unauthorized files.
 
@@ -84,7 +85,7 @@ iSCSI Target Server in Windows Server can boot hundreds of computers from a sing
 
 ## File systems, protocols, etc.
 
-### [ReFS](https://technet.microsoft.com/library/hh831724(v=ws.11).aspx)
+### [ReFS](refs/refs-overview.md)
 
 ReFS is a resilient file system that maximizes data availability, scales efficiently to very large data sets across diverse workloads, and provides data integrity by means of resiliency to corruption (regardless of software or hardware failures).
 
@@ -109,8 +110,9 @@ NTFS—the primary file system for recent versions of Windows and Windows Server
 Network File System (NFS) provides a file sharing solution for enterprises that have heterogeneous environments that consist of both Windows and non-Windows computers.
 
 ## See also
+
 * [PowerShell cmdlets in Windows Server 2016 and Windows 10](https://technet.microsoft.com/library/mt156917.aspx)
 * [What's new in storage](whats-new-in-storage.md)
-* [What's new in Failover Clustering](..//failover-clustering/whats-new-in-failover-clustering.md)
-* [Azure Storage](https://azure.microsoft.com/en-us/documentation/services/storage/)
+* [What's new in Failover Clustering](../failover-clustering/whats-new-in-failover-clustering.md)
+* [Azure Storage](https://azure.microsoft.com/documentation/services/storage/)
 * [Azure StorSimple](https://www.microsoft.com/en-us/cloud-platform/azure-storsimple)
