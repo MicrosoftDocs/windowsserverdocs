@@ -9,6 +9,10 @@ ms.technology: security-guarded-fabric
 ms.date: 07/05/2017
 ---
 
+>[!div class="step-by-step"]
+[« Configure fabrc DNS](guarded-fabric-configuring-fabric-dns-ad.md)
+[Configure HTTPS »](guarded-fabric-configure-hgs-https.md)
+
 # Configure DNS forwarding in the HGS domain and a one-way trust with the fabric domain
 
 Use the following steps to set up necessary DNS forwarding from the HGS domain to the fabric domain, and to establish a one-way forest trust to the fabric domain. These steps allow the HGS to locate the fabric domain's domain controllers and validate group membership of the Hyper-V hosts.
