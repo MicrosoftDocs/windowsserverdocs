@@ -55,23 +55,27 @@ Enables you to group shared folders that are located on different servers into o
 
 Enables you to efficiently replicate folders (including those referred to by a DFS namespace path) across multiple servers and sites. DFS Replication uses a compression algorithm known as remote differential compression (RDC). RDC detects changes to the data in a file, and it enables DFS Replication to replicate only the changed file blocks instead of the entire file.
 
-### [File Classification](fsrm/classification-management.md)
+### [File Server Resource Manager](fsrm/fsrm-overview.md)
 
-File Classification, also known as File Classification Infrastructure (FCI) provides insight into your data by automating classification processes so that you can manage your data more effectively. You can classify files and apply policies based on this classification. Example policies include dynamic access control for restricting access to files, file encryption, and file expiration. Files can be classified automatically by using file classification rules or manually by modifying the properties of a selected file or folder.
+File Server Resource Manager enables you to manage and classify data stored on file servers. File Server Resource Manager includes the following functionality:
 
-### [File Screens](fsrm/file-screening-management.md)
+#### [File Classification](fsrm/classification-management.md)
+
+File Classification, also known as File Classification Infrastructure, provides insight into your data by automating classification processes so that you can manage your data more effectively. You can classify files and apply policies based on this classification. Example policies include dynamic access control for restricting access to files, file encryption, and file expiration. Files can be classified automatically by using file classification rules or manually by modifying the properties of a selected file or folder.
+
+#### [File Screens](fsrm/file-screening-management.md)
 
 File screens help you control the types of files that user can store on a file server. You can limit the extension that can be stored on your shared files. For example, you can create a file screen that does not allow files with an MP3 extension to be stored in personal shared folders on a file server.
 
-### [File Management Tasks](fsrm/file-management-tasks.md)
+#### [File Management Tasks](fsrm/file-management-tasks.md)
 
 File Management Tasks enables you to apply a conditional policy or action to files based on their classification. The conditions of a file management task include the file location, the classification properties, the date the file was created, the last modified date of the file, or the last time the file was accessed. The actions that a file management task can take include the ability to expire files, encrypt files, or run a custom command.
 
-### [Quotas](fsrm/quota-management.md)
+#### [Quotas](fsrm/quota-management.md)
 
 Quotas allow you to limit the space that is allowed for a volume or folder, and they can be automatically applied to new folders that are created on a volume. You can also define quota templates that can be applied to new volumes or folders.
 
-### [Storage Reports](fsrm/storage-reports-management.md)
+#### [Storage Reports](fsrm/storage-reports-management.md)
 
 Storage reports are used to help you identify trends in disk usage and how your data is classified. You can also monitor a selected group of users for attempts to save unauthorized files.
 
