@@ -20,12 +20,7 @@ ms.date: 05/10/2017
 
 In production environments, HGS should be set up in a high availability cluster to ensure that shielded VMs can be powered on even if an HGS node goes down. For test environments, secondary HGS nodes are not required.
 
-Depending on your environment, choose one of the following methods to add HGS nodes.
-
-| New HGS forest | Existing bastion forest |
-|----------------|-------------------------|
-|[Using PFX files](#dedicated-hgs-forest-with-pfx-certificates) | [Using PFX files](#existing-bastion-forest-with-pfx-certificates)         |
-|[Using certificate thumbprints](#dedicated-hgs-forest-with-certificate-thumbprints)  | [Using certificate thumbprints](#existing-bastion-forest-with-certificate-thumbprints) |
+Use one of these methods to add HGS nodes, as best suited for your environment.
 
 |                |                         |                              | 
 |----------------|-------------------------|------------------------------|
