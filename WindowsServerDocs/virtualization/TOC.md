@@ -28,7 +28,7 @@
 ##### [Add nodes](guarded-fabric-shielded-vm/guarded-fabric-configure-additional-hgs-nodes.md)
 ##### [Verify the configuration](guarded-fabric-shielded-vm/guarded-fabric-verify-hgs-configuration.md)
 #### [Deploy guarded hosts](guarded-fabric-shielded-vm/guarded-fabric-configure-hgs-with-authorized-hyper-v-hosts.md)
-##### [Prerequistes](guarded-fabric-shielded-vm/guarded-fabric-guarded-host-prerequisites.md)
+##### [Prerequisites](guarded-fabric-shielded-vm/guarded-fabric-guarded-host-prerequisites.md)
 ##### [TPM mode](guarded-fabric-shielded-vm/guarded-fabric-tpm-trusted-attestation-capturing-hardware.md)
 ##### [AD mode](guarded-fabric-shielded-vm/guarded-fabric-admin-trusted-attestation-creating-a-security-group.md)
 ##### [Add host info to HGS](guarded-fabric-shielded-vm/guarded-fabric-add-host-information-to-hgs.md)
