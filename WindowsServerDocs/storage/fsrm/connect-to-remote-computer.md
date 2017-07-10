@@ -42,6 +42,6 @@ To manage remote resources with File Server Resource Manager:
 
 ## See also
 
--   [Managing Remote Storage Resources](connect-to-remote-computer.md)
+-   [Managing Remote Storage Resources](managing-remote-storage-resources.md)
 
 

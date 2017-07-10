@@ -221,7 +221,7 @@
 #### [What's new in Active Directory Federation Services for Windows Server 2016](ad-fs/overview/whats-new-active-directory-federation-services-windows-server-2016.md)
 #### [AD FS Scenarios for Developers](ad-fs/overview/AD-FS-Scenarios-for-Developers.md)
 #### [AD FS 2016 Requirements](ad-fs/overview/AD-FS-2016-Requirements.md)
-#### [AD FS 2016 FAQ](ad-fs/overview/AD-FS-FAQ.md)
+
 ### [AD FS Design](ad-fs/AD-FS-Design.md)
 #### [AD FS Design Guide](ad-fs/design/AD-FS-Design-Guide.md)
 ##### [AD FS Design Guide in Windows Server 2012 R2](ad-fs/design/AD-FS-Design-Guide-in-Windows-Server-2012-R2.md)
@@ -426,6 +426,7 @@
 ##### [Determine the type of Claim Rule Template to Use](ad-fs/technical-reference/Determine-the-type-of-Claim-Rule-Template-to-Use.md)
 ##### [How URIs Are Used in AD FS](ad-fs/technical-reference/How-URIs-Are-Used-in-AD-FS.md)
 #### [Device registration Technical Reference](ad-fs/technical-reference/device-registration-technical-reference.md)
+### [AD FS 2016 FAQ](ad-fs/overview/AD-FS-FAQ.md)
 ## [Securing Privileged Access](securing-privileged-access/securing-privileged-access.md)
 ### [Privileged Access Workstations](securing-privileged-access/privileged-access-workstations.md)
 ### [Securing Privileged Access Reference Material](securing-privileged-access/securing-privileged-access-reference-material.md)
