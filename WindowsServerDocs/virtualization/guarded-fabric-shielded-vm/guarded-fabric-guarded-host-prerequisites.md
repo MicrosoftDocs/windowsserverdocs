@@ -9,10 +9,6 @@ ms.technology: security-guarded-fabric
 ms.date: 07/05/2017
 ---
 
->[!div class="step-by-step"]
-[« Deploy guarded hosts](guarded-fabric-install-hgs-default.md)
-[ »](guarded-fabric-configuring-fabric-dns.md)
-
 # Prerequisites for guarded hosts
 
 Review the host prerequisites for the mode of attestation you've chosen, then click on the next step to add guarded hosts.
