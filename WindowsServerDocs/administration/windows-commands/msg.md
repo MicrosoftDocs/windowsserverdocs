@@ -22,10 +22,12 @@ Sends a message to a user on a remote Desktop Session Host (rd Session Host) ser
 for examples of how to use this command, see [Examples](#BKMK_examples).
 > [!NOTE]
 > In Windows Server 2008 R2, Terminal Services was renamed remote Desktop Services. To find out what's new in the latest version, see [What s New in remote Desktop Services in Windows Server 2012](http://technet.microsoft.com/library/hh831527) in the Windows Server TechNet Library.
+
 ## Syntax
 ```
 msg {<UserName> | <SessionName> | <SessionID>| @<FileName> | *} [/server:<ServerName>] [/time:<Seconds>] [/v] [/w] [<Message>]
 ```
+
 ## Parameters
 |Parameter|Description|
 |-------|--------|
@@ -40,9 +42,11 @@ msg {<UserName> | <SessionName> | <SessionID>| @<FileName> | *} [/server:<Server
 |/w|Waits for an acknowledgment from the user that the message has been received. Use this parameter with **/time:**<*Seconds*> to avoid a possible long delay if the user does not immediately respond. Using this parameter with **/v** is also helpful.|
 |<Message>|Specifies the text of the message that you want to send. If no message is specified, you will be prompted to enter a message. To send a message that is contained in a file, type the less than (<) symbol followed by the file name.|
 |/?|Displays help at the command prompt.|
+
 ## remarks
 -   if you do not specify a user or a session, **msg** displays an error message. When specifying a session, it must be an active one.
 -   The user must have Message special access permission to send a message.
+
 ## <a name="BKMK_examples"></a>Examples
 -   To send the message entitled "Let's meet at 1PM today" to all sessions for User1, type:
     ```
@@ -68,6 +72,7 @@ msg {<UserName> | <SessionName> | <SessionID>| @<FileName> | *} [/server:<Server
     ```
     msg * /time:10 Let's meet at 1PM today
     ```
+    
 #### additional references
-[Command-Line Syntax Key](command-line-syntax-key.md)
-[remote Desktop Services &#40;Terminal Services&#41; Command Reference](remote-desktop-services-terminal-services-command-reference.md)
+-  [Command-Line Syntax Key](command-line-syntax-key.md)
+-  [remote Desktop Services &#40;Terminal Services&#41; Command Reference](remote-desktop-services-terminal-services-command-reference.md)

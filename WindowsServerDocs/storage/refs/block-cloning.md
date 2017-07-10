@@ -47,7 +47,7 @@ After the modifying write, region B is still shared by both files. Note that if 
 ## Functionality restrictions and remarks
 - The source and destination region must begin and end at a cluster boundary. 
 - The cloned region must be less than 4GB in length. 
-- The maximum number of file regions that can map to the same physical region is 64K.
+- The maximum number of file regions that can map to the same physical region is 8175.
 - The destination region must not extend past the end of the file. If the application wishes to extend the destination with cloned data, it must first call [SetEndOfFile](https://msdn.microsoft.com/library/windows/desktop/aa365531(v=vs.85).aspx). 
 - If the source and destination regions are in the same file, they must not overlap. (The application may be able to proceed by splitting up the block clone operation into multiple block clones that no longer overlap).
 - The source and destination files must be on the same ReFS volume. 

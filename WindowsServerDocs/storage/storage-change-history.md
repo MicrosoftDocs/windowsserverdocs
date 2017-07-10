@@ -7,7 +7,7 @@ ms.topic: article
 author: JasonGerend
 manager: dongill
 ms.author: jgerend
-ms.date: 6/1/2017
+ms.date: 6/28/2017
 description: New and updated topics in the Storage documentation for Windows Server 2016
 ---
 # Change history for storage topics in Windows Server 2016
@@ -18,12 +18,20 @@ This topic lists new and updated topics in the [Storage](storage.md) documentati
 
 > If you're looking for update history for Windows Server 2016, see [Windows 10 and Windows Server 2016 update history](https://support.microsoft.com/help/4000825/windows-10-and-windows-server-2016-update-history).
 
+## July 2017
+|New or changed topic|Description|
+|---|---|
+|[DFS Namespaces](dfs-namespaces/dfs-overview.md)|New topic for Windows Server 2016.|
+|[File Server Resource Manager](fsrm/fsrm-overview.md)|Published 33 new topics for Windows Server 2016.|
+
 ## June 2017
 
 |New or changed topic|Description|
 |---|---|
 |[Planning a Work Folders deployment](work-folders/plan-work-folders.md)|Added info about Azure AD Application Proxy support & updated requirements.|
 |[Work Folders](work-folders/work-folders-overview.md)|Added info about Azure AD Application Proxy support & updated requirements.|
+|[Hyper-converged solution using Storage Spaces Direct](storage-spaces/hyper-converged-solution-using-storage-spaces-direct.md)|Removed Nano Server from supported installation options.|
+|[File Server Resource Manager](fsrm/fsrm-overview.md)|New topic for Windows Server 2016.|
 
 ## May 2017
 

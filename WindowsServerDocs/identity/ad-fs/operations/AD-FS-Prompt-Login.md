@@ -4,7 +4,7 @@ description: Frequently asked questions for AD FS 2016
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 05/31/2017
+ms.date: 06/27/2017
 ms.topic: article
 ms.custom: it-pro
 ms.prod: windows-server-threshold
@@ -38,41 +38,38 @@ The following is a list of AD FS versions that support the prompt=login paramete
 Use the Azure AD PowerShell module to configure the setting.
 
 > [!NOTE]
-> The prompt=login capability (enabled by the PromptLoginBehavior parameter) is currently available only in the [‘version 1.0’ Azure AD Powershell module](http://connect.microsoft.com/site1164/Downloads/DownloadDetails.aspx?DownloadID=59185), in which the cmdlets have names that include “Msol”, such as Set-MsolDomainFederationSettings.  It is not currently available via ‘version 2.0’ Azure AD PowerShell module, whose cmdlets have names like “Set-AzureAD\*”.
+> The prompt=login capability (enabled by the PromptLoginBehavior property) is currently available only in the [‘version 1.0’ Azure AD Powershell module](http://connect.microsoft.com/site1164/Downloads/DownloadDetails.aspx?DownloadID=59185), in which the cmdlets have names that include “Msol”, such as Set-MsolDomainFederationSettings.  It is not currently available via ‘version 2.0’ Azure AD PowerShell module, whose cmdlets have names like “Set-AzureAD\*”.
 
+To configure prompt=login behavior, the cmdlet syntax below:
 
->[!IMPORTANT]
->Every time you set the PreferredAuthenticationProtocol, SupportsMfa, or PromptLoginBehavior settings on your Azure AD tenant, you must be sure to configure all three to your desired setting, even if you are not changing the values of all three settings.  If you do not set all three, there is a risk that one or more of the settings for which you don’t provide a value will be reset to their default settings, potentially causing a system outage.</b>
-
-To configure prompt=login behavior, use the cmdlet syntax below:
-
+Example 1:
 ```powershell
-    Set-MsolDomainFederationSettings –DomainName <your domain name> -PreferredAuthenticationProtocol <your current protocol setting> -SupportsMfa <$True|$False> -PromptLoginBehavior <TranslateToFreshPasswordAuth|NativeSupport|Disabled>
+    Set-MsolDomainFederationSettings –DomainName <your domain name> -PreferredAuthenticationProtocol <your current protocol setting> 
 ```
-where:
 
-- the required 
+Example 2:
+```powershell
+    Set-MsolDomainFederationSettings –DomainName <your domain name> -SupportsMfa <$True|$False>
+```
 
- ```
-<b>PreferredAuthenticationProtocol</b>
- ```
+Example 3:
+```powershell
+    Set-MsolDomainFederationSettings –DomainName <your domain name> -PromptLoginBehavior <TranslateToFreshPasswordAuth|NativeSupport|Disabled>
+```
 
-and
-
- ```
-<b>SupportsMfa</b>
- ```
  
- parameter values can be found by viewing the PreferredAuthenticationProtocol and SupportsMfa settings, respectively, in the output from the cmdlet:
-
+ The PreferredAuthenticationProtocol, SupportsMfa, and PromptLoginBehavior property values can be found by viewing the output from the cmdlet:
+![Get-MsolDomainFederationSettings](media/AD-FS-Prompt-Login/GetMsol.png)
 ```powershell
     Get-MsolDomainFederationSettings -DomainName <your_domain_name> | fl *
  ```
+> [!NOTE]
+> By default, when running Get-MsolDomainFederationSettings, certain properties are not displayed in the console.  To view these parameters it is recommended that you use the | fl * to force the output of all of the properties of the object.
 
 
-- <b>TranslateToFreshPasswordAuth</b> means the default Azure AD behavior of sending <b>wauth</b> and <b>wfresh</b> to AD FS instead of prompt=login
-
-- <b>NativeSupport</b> means that the prompt=login parameter will be sent as is to AD FS
-
-- <b>Disabled</b> means nothing will be sent to AD FS
+The following is more information about the PromptLoginBehavior paramter and its settings.
+   
+   - <b>TranslateToFreshPasswordAuth</b> means the default Azure AD behavior of sending <b>wauth</b> and <b>wfresh</b> to AD FS instead of prompt=login
+   - <b>NativeSupport</b> means that the prompt=login parameter will be sent as is to AD FS
+   - <b>Disabled</b> means nothing will be sent to AD FS
 

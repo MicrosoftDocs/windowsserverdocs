@@ -66,13 +66,13 @@ Let's imagine this scenario—you have an existing Hyper-V fabric, like Contoso.
 
 ![Existing Hyper-V fabric](../media/Guarded-Fabric-Shielded-VM/guarded-fabric-existing-hyper-v.png)
 
-### Step 1: Deploy the Hyper-V hosts running Windows Server 2016 
+## Step 1: Deploy the Hyper-V hosts running Windows Server 2016 
 
 The Hyper-V hosts need to run Windows Server 2016 Datacenter edition. If you are upgrading hosts, you can [upgrade](https://technet.microsoft.com/windowsserver/dn527667.aspx) from Standard edition to Datacenter edition.
 
 ![Upgrade Hyper-V hosts](../media/Guarded-Fabric-Shielded-VM/guarded-fabric-deployment-step-one-upgrade-hyper-v.png)
 
-### Step 2: Deploy the Host Guardian Service (HGS)
+## Step 2: Deploy the Host Guardian Service (HGS)
 
 Then install the HGS server role and deploy it as a three-node cluster, like the Relecloud.com example in the following picture. 
 This requires three PowerShell cmdlets:
@@ -87,7 +87,7 @@ In our example, let’s say Contoso initially deploys in AD mode in order to imm
 
 ![Install HGS](../media/Guarded-Fabric-Shielded-VM/guarded-fabric-deployment-step-two-deploy-hgs.png)
 
-### Step 3: Extract identities, hardware baselines, and code integrity policies
+## Step 3: Extract identities, hardware baselines, and code integrity policies
 
 The process to extract identities from Hyper-V hosts depends on the attestation mode being used.
 
@@ -105,7 +105,7 @@ For TPM mode, three things are required:
 That’s all—the guarded fabric is built, in terms of the infrastructure to run it.  
 Now you can create a shielded VM template disk and a shielding data file so shielded VMs can be provisioned simply and securely. 
 
-### Step 4: Create a template for shielded VMs
+## Step 4: Create a template for shielded VMs
 
 A shielded VM template protects template disks by creating a signature of the disk at a known trustworthy point in time. 
 If the template disk is later infected by malware, its signature will differ original template which will be detected by the secure shielded VM provisioning process. 
@@ -128,7 +128,7 @@ This allows users to strongly identify which disks they trust by specifying the 
 
 Review the [template disk requirements](guarded-fabric-create-a-shielded-vm-template.md#prepare-an-operating-system-vhdx) before you get started. 
 
-### Step 5: Create a shielding data file 
+## Step 5: Create a shielding data file 
 
 A shielding data file, also known as a .pdk file, captures sensitive information about the virtual machine, such as the Administrator password. 
 
@@ -148,7 +148,7 @@ The shielding data file also includes the security policy setting for the shield
 
 You can add optional management pieces like VMM or Windows Azure Pack. If you’d like to create a VM without installing those pieces, see [Step by step – Creating Shielded VMs without VMM](https://blogs.technet.microsoft.com/datacentersecurity/2016/06/06/step-by-step-creating-shielded-vms-without-vmm/).
 
-### Step 6: Create a shielded VM
+## Step 6: Create a shielded VM
 
 Creating shielded virtual machines differs very little from regular virtual machines. 
 In Windows Azure Pack, the experience is even easier than creating a regular VM because you only need to supply a name, shielding data file (containing the rest of the specialization information), and the VM network. 

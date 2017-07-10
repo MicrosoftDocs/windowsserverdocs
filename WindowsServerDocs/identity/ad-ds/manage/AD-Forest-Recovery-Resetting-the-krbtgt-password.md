@@ -4,16 +4,19 @@ description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 06/02/2017
+ms.date: 07/07/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.assetid: 3bd6c1d0-d316-4b03-b7b4-557d4537635c
 ms.technology: identity-adfs
 ---
 
->Applies To: Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2, Windows Server 2003
+
 
 # AD Forest Recovery - Resetting the krbtgt password 
+
+>Applies To: Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
+
  Use the following procedure to reset the krbtgt password for the domain. The following procedure applies writeable DCs, but not read-only domain controllers (RODCs).  
   
 > [!IMPORTANT]

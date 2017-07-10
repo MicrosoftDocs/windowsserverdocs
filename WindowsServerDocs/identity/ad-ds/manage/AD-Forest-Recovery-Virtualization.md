@@ -4,16 +4,19 @@ description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 06/02/2017
+ms.date: 07/07/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.assetid: c49b40b2-598d-49aa-85b4-766bce960e0d
 ms.technology: identity-adfs
 ---
 
->Applies To: Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2, Windows Server 2003
+
 
 # Active Directory Forest Recovery Virtualization
+
+>Applies To: Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
+
 This topic describes the virtualized domain controller cloning feature in Windows Server 2016, 2012 R2, and 2012.  
  
 ## Using virtualized domain controller cloning to expedite forest recovery  

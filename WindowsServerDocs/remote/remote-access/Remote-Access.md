@@ -23,6 +23,7 @@ This topic provides an overview of the Remote Access server role in Windows Serv
 > - [RAS Gateway](ras-gateway/RAS-Gateway.md) 
 > - [Remote Access Server Role Documentation](ras/Remote-Access-Server-Role-Documentation.md)
 > - [RAS Gateway for SDN](../../networking/sdn/technologies/network-function-virtualization/RAS-Gateway-for-SDN.md)
+> - [Virtual Private Networking (VPN)](vpn/vpn-top.md)
 > 
 > For more information about other networking technologies, see [Networking in Windows Server 2016](https://docs.microsoft.com/windows-server/networking/networking).
 
@@ -35,6 +36,9 @@ The Remote Access server role is a logical grouping of the following related net
 - [Web Application Proxy](#bkmk_proxy)
   
 These technologies are the *role services* of the Remote Access server role. When you install the Remote Access server role with the **Add Roles and Features Wizard** or Windows PowerShell, you can install one or more of these three role services.
+
+>[!IMPORTANT]
+>Do not attempt to deploy Remote Access on a virtual machine \(VM\) in Microsoft Azure. Using Remote Access in Microsoft Azure is not supported. You cannot use Remote Access in an Azure VM to deploy VPN, DirectAccess, or any other Remote Access feature in Windows Server 2016 or earlier versions of Windows Server. For more information, see [Microsoft server software support for Microsoft Azure virtual machines](https://support.microsoft.com/en-us/help/2721672/microsoft-server-software-support-for-microsoft-azure-virtual-machines).
 
 ## <a name="bkmk_da"></a>Remote Access Service \(RAS\) - RAS Gateway
 
