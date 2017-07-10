@@ -4,16 +4,18 @@ description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 06/02/2017
+ms.date: 07/07/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.assetid: 47a471fb-3b0b-4aa8-8525-1c92d0d51e93
 ms.technology: identity-adfs
 ---
 
->Applies To: Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2, Windows Server 2003
 
 # AD Forest Recovery - Procedures
+
+
+>Applies To: Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
 
 This section contains procedures related to the forest recovery process. The procedures are applicable for Windows Server 2016, 2012 R2, 2012 and are also applicable to Windows Server 2008 R2 and 2008 with some minor exceptions. 
 
@@ -24,7 +26,7 @@ The following is a list of procedures that are used in backing up and restoring 
 -   [Backing up a full server](AD-Forest-Recovery-Backing-up-a-Full-Server.md)  
 -   [Backing up the System State data](AD-Forest-Recovery-Backing-up-System-State.md)  
 -   [Performing a full server recovery](AD-Forest-Recovery-Perform-a-Full-Recovery.md)  
--   [Performing an authoritative synchronization of DFSR-replicated SYSVOL](AD-Forest-Recovery-Authoritative-Recovery-SYSVOL.md)  
+-   [Performing an authoritative synch of DFSR-replicated SYSVOL](AD-Forest-Recovery-Authoritative-Recovery-SYSVOL.md)
 -   [Performing a nonauthoritative restore of Active Directory Domain Services](AD-Forest-Recovery-Nonauthoritative-Restore.md)  
   
      These steps explain how to perform an authoritative restore of SYSVOL at the same time.  

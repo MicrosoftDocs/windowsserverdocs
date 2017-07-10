@@ -4,16 +4,19 @@ description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 06/02/2017
+ms.date: 07/07/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.assetid: e7543381-4081-407f-adad-a9de792c6616
 ms.technology: identity-adfs
 ---
 
->Applies To: Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2, Windows Server 2003
 
-# AD Forest Recovery - Cleaning metadata of removed writable domain controllers  
+
+# AD Forest Recovery - Cleaning metadata of removed writable domain controllers 
+
+>Applies To: Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
+ 
  Metadata cleanup removes Active Directory data that identifies a DC to the replication system.  
   
  Use the following procedure to delete the DC objects for DCs that you plan to add back to the network by reinstalling AD DS.  

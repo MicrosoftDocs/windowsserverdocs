@@ -18,6 +18,12 @@ This topic lists new and updated topics in the [Storage](storage.md) documentati
 
 > If you're looking for update history for Windows Server 2016, see [Windows 10 and Windows Server 2016 update history](https://support.microsoft.com/help/4000825/windows-10-and-windows-server-2016-update-history).
 
+## July 2017
+|New or changed topic|Description|
+|---|---|
+|[DFS Namespaces](dfs-namespaces/dfs-overview.md)|New topic for Windows Server 2016.|
+|[File Server Resource Manager](fsrm/fsrm-overview.md)|Published 33 new topics for Windows Server 2016.|
+
 ## June 2017
 
 |New or changed topic|Description|

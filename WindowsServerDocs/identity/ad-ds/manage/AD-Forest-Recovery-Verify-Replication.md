@@ -4,17 +4,20 @@ description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 06/02/2017
+ms.date: 07/07/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.assetid: 302e522a-fb40-43bc-bc63-83dcc87ebde5
 ms.technology: identity-adfs
 ---
 
->Applies To: Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2, Windows Server 2003
 
 
-# Resources to verify replication is working  
+
+# Resources to verify replication is working 
+
+>Applies To: Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
+ 
  After you have restored or re-installed all DCs, you can verify that AD DS and SYSVOL are recovered and replicating correctly by using **repadmin /replsum**, which runs on any version of Windows Server.  
   
 > [!TIP]
