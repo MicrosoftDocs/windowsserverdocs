@@ -31,7 +31,7 @@ NotConfigured             | The host is not configured to use a HGS for attestat
 Passed                    | The host passed attestation.
 TransientError            | The last attestation attempt failed due to a networking, service, or other temporary error. Retry your last operation.
 TpmError                  | The host could not complete its last attestation attempt due to an error with your TPM. Consult your TPM logs for more information.
-UnauthorizedHost           | The host did not pass attestation becuase it was not authorized to run shielded VMs. Ensure the host belongs to a security group trusted by HGS to run shielded VMs.
+UnauthorizedHost          | The host did not pass attestation becuase it was not authorized to run shielded VMs. Ensure the host belongs to a security group trusted by HGS to run shielded VMs.
 Unknown                   | The host has not attempted to attest with HGS yet.
 
 

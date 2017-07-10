@@ -100,7 +100,10 @@ The following table summarizes the differences between encryption-supported and 
 |Integration components | Configurable by fabric admin      | Certain integration components blocked (e.g. data exchange, PowerShell Direct) |
 |Virtual Machine Connection (Console), HID devices (e.g. keyboard, mouse) | On, cannot be disabled | Disabled (cannot be enabled) |
 |COM/Serial ports   | Supported                             | Disabled (cannot be enabled) |
-|Attach a debugger (to the VM process) | Supported          | Disabled (cannot be enabled) |
+|Attach a debugger (to the VM process)<sup>1</sup>| Supported          | Disabled (cannot be enabled) |
+
+<sup>1</sup> Traditional debuggers that attach themselves directly to a process, such as WinDbg.exe, are blocked because a shielded VM's worker process runs as a protected process light (PPL). 
+However, debuggers that use alternative approaches, such as LiveKd.exe, are not blocked by PPLs and can only be blocked by authoring Hypervisor-enforced Code Integrity (HVCI) policies that preclude their installation and usage. 
 
 Both shielded VMs and encryption-supported VMs continue to support commonplace fabric management capabilities, such as Live Migration, Hyper-V replica, VM checkpoints, and so on.
 
