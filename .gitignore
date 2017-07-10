@@ -5,3 +5,8 @@ _site/
 _themes/
 
 .openpublishing.buildcore.ps1
+/.vs
+/.vs/config
+/.vs/config/applicationhost.config
+/.vs/ProjectSettings.json
+/.vs/slnx.sqlite
