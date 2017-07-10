@@ -4,16 +4,19 @@ description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 06/02/2017
+ms.date: 07/07/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.assetid: 60087a62-11e6-4750-a70e-510f35315688
 ms.technology: identity-adfs
 ---
 
->Applies To: Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2, Windows Server 2003
+
 
 # AD Forest Recovery - Removing the global catalog  
+
+>Applies To: Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
+
  Use the following procedure to remove the global catalog from a DC.  
   
  Restoring a global catalog server from backup could result in the global catalog holding newer data for one of its partial replicas than the corresponding domain that is authoritative for that partial replica. In such a case, the newer data will not be removed from the global catalog and might even replicate to other global catalog servers. As a result, even if you did restore a DC that was a global catalog server, either inadvertently or because that was the solitary backup you trusted, you should remove the global catalog soon after the restore operation is complete. When the global catalog is removed, the computer removes all its partial replicas.  

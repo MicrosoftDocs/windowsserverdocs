@@ -1,9 +1,10 @@
+---
 title: AD Forest Recovery - Steps for Restoring the forest 
 description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 06/02/2017
+ms.date: 07/07/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.assetid: 5a291f65-794e-4fc3-996e-094c5845a383
@@ -11,6 +12,9 @@ ms.technology: identity-adfs
 ---
 
 #AD Forest Recovery - Steps for Restoring the forest 
+
+>Applies To: Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
+
 This section provides an overview of the recommended path for recovering a forest. The forest recovery steps are described in detail later.  
   
  The following list summarizes the recovery steps at a high level:  

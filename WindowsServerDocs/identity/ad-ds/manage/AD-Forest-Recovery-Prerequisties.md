@@ -1,18 +1,22 @@
+---
 title: Prerequisites for planning for Active Directory Forest Recovery
 description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 06/02/2017
+ms.date: 07/07/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.assetid: c49b40b2-598d-49aa-85b4-766bce960e0d
 ms.technology: identity-adfs
 ---
 
->Applies To: Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2, Windows Server 2003
+
 
 #Active Directory Forest Recovery Prerequisites
+
+>Applies To: Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
+
 The following document discuss prerequisites that you should be familiar with before devising a forest recovery plan or attempting a recovery.
 
 ## Assumptions for Using This Guide 
