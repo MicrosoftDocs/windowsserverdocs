@@ -10,6 +10,10 @@ ms.technology: security-guarded-fabric
 ms.date: 10/14/2016
 ---
 
+>[!div class="step-by-step"]
+[« Create a shielded VM template](guarded-fabric-create-a-shielded-vm-template.md)
+[Deploy a shielded using VMM »](guarded-fabric-tenant-deploys-shielded-vm-using-vmm.md)
+
 # Shielded VMs for tenants - Creating shielding data to define a shielded VM
 
 >Applies To: Windows Server 2016

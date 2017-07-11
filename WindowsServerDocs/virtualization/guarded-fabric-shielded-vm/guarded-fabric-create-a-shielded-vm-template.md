@@ -10,6 +10,10 @@ ms.technology: security-guarded-fabric
 ms.date: 10/14/2016
 ---
 
+>[!div class="step-by-step"]
+[« Deploy shielded VMs](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
+[Create a shielding data file »](guarded-fabric-tenant-creates-shielding-data.md)
+
 # Shielded VMs - Hosting service provider creates a shielded VM template
 
 As with regular VMs, you can create a VM template (for example, a [VM template in Virtual Machine Manager (VMM)](https://technet.microsoft.com/system-center-docs/vmm/manage/manage-library-add-vm-templates)) to make it easy for tenants and administrators to deploy new VMs on the fabric using a template disk. Because shielded VMs are security-sensitive assets, there are additional steps to create a VM template that supports shielding. This topic covers the steps to create a shielded template disk and a VM template in VMM.

@@ -10,6 +10,10 @@ ms.technology: security-guarded-fabric
 ms.date: 10/14/2016
 ---
 
+>[!div class="step-by-step"]
+[« Deploy a shielded using Windows Azure Pack](guarded-fabric-shielded-vm-windows-azure-pack.md)
+[Shield an existing VM »](guarded-fabric-vm-shielding-helper-vhd.md)
+
 # Shielded VMs - Hosting service provider prepares a VM Shielding Helper VHD
 
 >Applies To: Windows Server 2016

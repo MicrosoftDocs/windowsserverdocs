@@ -39,7 +39,7 @@
 ##### [Create shielding data file](guarded-fabric-shielded-vm/guarded-fabric-tenant-creates-shielding-data.md)
 ##### [Deploy using VMM](guarded-fabric-shielded-vm/guarded-fabric-tenant-deploys-shielded-vm-using-vmm.md)
 ##### [Deploy using Windows Azure Pack](guarded-fabric-shielded-vm/guarded-fabric-shielded-vm-windows-azure-pack.md)
-##### [Shield existing VMS with a helper VHD](guarded-fabric-shielded-vm/guarded-fabric-vm-shielding-helper-vhd.md)
+##### [Shield an existing VM](guarded-fabric-shielded-vm/guarded-fabric-vm-shielding-helper-vhd.md)
 ### [Manage](guarded-fabric-shielded-vm/guarded-fabric-manage-overview.md)
 #### [Manage the Host Guardian Service](guarded-fabric-shielded-vm/guarded-fabric-manage-hgs.md)
 ### [Troubleshoot](guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-overview.md)
