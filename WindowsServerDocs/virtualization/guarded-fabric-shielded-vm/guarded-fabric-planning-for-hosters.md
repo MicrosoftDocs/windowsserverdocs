@@ -28,7 +28,9 @@ How you implement the Host Guardian Service and guarded Hyper-V hosts will depen
 
     If your requirements are primarily driven by compliance that requires virtual machines be encrypted both at rest as well as in-flight, then you will use admin-trusted attestation. This option works well for general purpose datacenters where you are comfortable with Hyper-V host and fabric administrators having access to the guest operating systems of virtual machines for day-to-day maintenance and operations. 
     In this mode, the fabric admin is solely responsible for ensuring the health of the Hyper-V hosts. 
-    Since HGS plays no part in deciding what is or is not allowed to run, malware and debuggers will function as designed. Note that debuggers that attempt to attach directly to a process (such as WinDbg.exe) are blocked but alternative debugging techniques (such as those used by LiveKd.exe) are not blocked.
+    Since HGS plays no part in deciding what is or is not allowed to run, malware and debuggers will function as designed. However, debuggers that attempt to attach directly to a process (such as WinDbg.exe) are blocked for shielded VMs because the VM’s worker process (VMWP.exe) is a protected process light (PPL). 
+    Alternative debugging techniques, such as those used by LiveKd.exe, are not blocked. 
+    Unlike shielded VMs, the worker process for encryption supported VMs do not run as PPLs so traditional debuggers like WinDbg.exe will continue to function normally.
 
 2. TPM-trusted attestation
 
