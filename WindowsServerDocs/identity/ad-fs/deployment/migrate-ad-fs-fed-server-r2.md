@@ -42,14 +42,18 @@ You must export the SSL certificate used by the federation service and its priva
   
 To view the token signing, token decryption and service communication certificates that are used, run the following Windows PowerShell command to create a list of all certificates in use in a file:  
   
-    ```  
-    Get-ADFSCertificate | Out-File “.\certificates.txt”  
-    ```  
+``` powershell
+Get-ADFSCertificate | Out-File “.\certificates.txt”  
+ ```  
   
 2.  Export AD FS federation service properties, such as the federation service name, federation service display name, and federation server identifier to a file.  
   
-To export federation service properties, open Windows PowerShell and run the following command: `PSH:> Get-ADFSProperties | Out-File “.\properties.txt”`.  
-  
+To export federation service properties, open Windows PowerShell and run the following command: 
+
+``` powershell
+Get-ADFSProperties | Out-File “.\properties.txt”`.  
+``` 
+
 The output file will contain the following important configuration values:  
  
 |**Federation Service Property name as reported by Get-ADFSProperties**|**Federation Service Property name in AD FS management console**|
@@ -76,12 +80,20 @@ To find the identity value, examine the **Log On As** column of **AD FS 2.0 Wind
   
 5.  Export the list of enabled AD FS endpoints to a file.  
   
-To do this, open Windows PowerShell and run the following command: `PSH:> Get-ADFSEndpoint | Out-File “.\endpoints.txt”`.  
-  
+To do this, open Windows PowerShell and run the following command: 
+
+``` powershell
+Get-ADFSEndpoint | Out-File “.\endpoints.txt”`.  
+``` 
+
 6.  Export any custom claim descriptions to a file.  
   
-To do this, open Windows PowerShell and run the following command: `Get-ADFSClaimDescription | Out-File “.\claimtypes.txt”`.  
-  
+To do this, open Windows PowerShell and run the following command: 
+
+``` powershell
+Get-ADFSClaimDescription | Out-File “.\claimtypes.txt”`.  
+ ```
+
 7.  If you have custom settings such as useRelayStateForIdpInitiatedSignOn configured in the web.config file, ensure you back up the web.config file for reference. You can copy the file from the directory that is mapped to the virtual path **“/adfs/ls”** in IIS. By default, it is in the **%systemdrive%\inetpub\adfs\ls** directory.  
   
 ###  To export claims provider trusts and relying party trusts  
@@ -124,7 +136,13 @@ To do this, open Windows PowerShell and run the following command: `Get-ADFSClai
 > [!NOTE]
 >  In Windows Server 2012 R2, AD FS requires custom attribute stores that are based on .NET Framework 4.0 or above. Follow the instructions in [Microsoft .NET Framework 4.5](http://www.microsoft.com/download/details.aspx?id=30653) to install and setup .Net Framework 4.5.  
   
-You can find information about custom attribute stores in use by AD FS by running the following Windows PowerShell command: `PSH:>Get-ADFSAttributeStore`. The steps to upgrade or migrate custom attribute stores vary.  
+You can find information about custom attribute stores in use by AD FS by running the following Windows PowerShell command: 
+
+``` powershell
+Get-ADFSAttributeStore
+```  
+
+The steps to upgrade or migrate custom attribute stores vary.  
   
 2.  You must also manually export all .dll files of the custom attribute stores that you want to keep in your new AD FS farm in Windows Server 2012 R2. The steps to upgrade or migrate .dll files of custom attribute stores vary.  
   
@@ -155,22 +173,22 @@ In the AD FS management console, select **Certificates**. Verify the service com
   
 To change the token-decrypting or token-signing certificates from the default self-signed certificates to external certificates, you must first disable the automatic certificate rollover feature that is enabled by default. To do this, you can use the following Windows PowerShell command:  
   
-    ```  
-    Set-ADFSProperties –AutoCertificateRollover $false  
-    ```  
+``` powershell 
+Set-ADFSProperties –AutoCertificateRollover $false  
+```  
   
 2.  Configure any custom AD FS service settings such as AutoCertificateRollover or SSO lifetime using the Set-AdfsProperties cmdlet.  
   
 3.  To import AD FS relying party trusts and claims provider trusts, you must be logged in as Administrator (however, not as the Domain Administrator) onto your federation server and run the following Windows PowerShell script that is located in the \support\adfs folder of the Windows Server 2012 R2 installation CD:  
   
-    ```  
-    import-federationconfiguration.ps1  
-    ```  
+``` powershell 
+import-federationconfiguration.ps1  
+```  
   
 > [!IMPORTANT]
 >  The import script takes the following parameters:  
 >   
->  -   Import-FederationConfiguration.ps1 -Path <string\> [-ComputerName <string\>] [-Credential <pscredential\>] [-Force] [-LogPath <string\>] [-CertificatePassword <securestring\>]  
+>  -  Import-FederationConfiguration.ps1 -Path <string\> [-ComputerName <string\>] [-Credential <pscredential\>] [-Force] [-LogPath <string\>] [-CertificatePassword <securestring\>]  
 > -   Import-FederationConfiguration.ps1 -Path <string\> [-ComputerName <string\>] [-Credential <pscredential\>] [-Force] [-LogPath <string\>] [-CertificatePassword <securestring\>] [-RelyingPartyTrustIdentifier <string[]>] [-ClaimsProviderTrustIdentifier <string[]>  
 > -   Import-FederationConfiguration.ps1 -Path <string\> [-ComputerName <string\>] [-Credential <pscredential\>] [-Force] [-LogPath <string\>] [-CertificatePassword <securestring\>] [-RelyingPartyTrustName <string[]>] [-ClaimsProviderTrustName <string[]>]  
 >   
