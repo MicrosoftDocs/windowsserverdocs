@@ -244,7 +244,7 @@ Any trailing spaces in the WSFedEndpoint property of a relying party trust may c
   
         -   Integrated, Forms, TlsClient, Basic Transform list into equivalent AD FS in Windows Server 2012 R2 has global authentication policy settings to support both federation service and proxy authentication types. These settings can be configured in the AD FS in Management snap-in under the **Authentication Policies**.  
   
- After you import the original configuration data, you can customize the AD FS sign in pages as needed. For more information, see [Customizing the AD FS Sign-in Pages](../Topic/Customizing%20the%20AD%20FS%20Sign-in%20Pages.md).  
+ After you import the original configuration data, you can customize the AD FS sign in pages as needed. For more information, see [Customizing the AD FS Sign-in Pages](../operations/AD-FS-Customization-in-Windows-Server-2016.md).  
   
 ## Next Steps
  [Migrate Active Directory Federation Services Role Services to Windows Server 2012 R2](migrate-ad-fs-service-role-to-windows-server-r2.md)   
