@@ -21,7 +21,7 @@ ms.date: 10/14/2016
 To deploy the HGS, complete the following tasks:
 
 - [Prepare for the Host Guardian Service deployment](guarded-fabric-prepare-for-hgs.md)
-- [Install HGS](guarded-fabric-choose-where-to-install-hgs)
+- [Install HGS](guarded-fabric-choose-where-to-install-hgs.md)
 - [Initialize HGS](guarded-fabric-initialize-hgs.md)
 - [Configure Https (optional)](guarded-fabric-configure-hgs-https.md)
 - [Add nodes](guarded-fabric-configure-additional-hgs-nodes.md)
