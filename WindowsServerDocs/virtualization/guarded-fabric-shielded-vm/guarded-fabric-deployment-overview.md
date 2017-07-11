@@ -11,6 +11,10 @@ ms.technology: security-guarded-fabric
 ms.date: 02/02/2017
 ---
 
+>[!div class="step-by-step"]
+[« Deploy a guarded fabric](guarded-fabric-deploying-hgs-overview.md)
+[Deploy HGS »](guarded-fabric-setting-up-the-host-guardian-service-hgs.md)
+
 # Quick start for guarded fabric deployment
 
 This topic explains what a guarded fabric is, its requirements, and a summary of the deployment process. 

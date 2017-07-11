@@ -9,6 +9,8 @@ author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.date: 10/14/2016
 ---
+>[!div class="step-by-step"]
+[Quick Start »](guarded-fabric-deployment-overview.md)
 
 # Deploying the Host Guardian Service for guarded hosts and shielded VMs
 

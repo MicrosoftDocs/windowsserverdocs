@@ -11,6 +11,7 @@ ms.date: 04/24/2017
 ---
 
 >[!div class="step-by-step"]
+[« Deploy HGS](guarded-fabric-setting-up-the-host-guardian-service-hgs.md)
 [Install HGS »](guarded-fabric-choose-where-to-install-hgs.md)
 
 # Prepare for the Host Guardian Service deployment

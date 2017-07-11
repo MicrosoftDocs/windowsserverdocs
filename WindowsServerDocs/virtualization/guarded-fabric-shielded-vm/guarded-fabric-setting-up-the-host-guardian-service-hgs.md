@@ -10,15 +10,21 @@ ms.technology: security-guarded-fabric
 ms.date: 10/14/2016
 ---
 
+>[!div class="step-by-step"]
+[« Quick Start](guarded-fabric-deployment-overview.md)
+[Prepare for HGS »](guarded-fabric-prepare-for-hgs.md)
+
 # Deploy the Host Guardian Service (HGS)
 
 >Applies To: Windows Server 2016
 
-These subtopics cover HGS prerequisites, setting up the HGS nodes, and verifying the HGS configuration.
+To deploy the HGS, complete the following tasks:
 
 - [Prepare for the Host Guardian Service deployment](guarded-fabric-prepare-for-hgs.md)
-- [Configure the first HGS node](guarded-fabric-choose-where-to-install-hgs.md)
-- [Configure additional HGS nodes](guarded-fabric-configure-additional-hgs-nodes.md)
+- [Install HGS](guarded-fabric-choose-where-to-install-hgs)
+- [Initialize HGS](guarded-fabric-initialize-hgs.md)
+- [Configure Https (optional)](guarded-fabric-configure-hgs-https.md)
+- [Add nodes](guarded-fabric-configure-additional-hgs-nodes.md)
 - [Verify the HGS configuration](guarded-fabric-verify-hgs-configuration.md)
 
 ## See also
