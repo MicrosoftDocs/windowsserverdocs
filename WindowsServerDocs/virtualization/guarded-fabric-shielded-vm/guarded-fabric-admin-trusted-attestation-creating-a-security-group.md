@@ -10,6 +10,10 @@ ms.technology: security-guarded-fabric
 ms.date: 10/14/2016
 ---
 
+>[!div class="step-by-step"]
+[« Review prerequisites](guarded-fabric-guarded-host-prerequisites.md)
+[Confirm attestation »](guarded-fabric-confirm-hosts-can-attest-successfully.md)
+
 # Create a security group for guarded hosts
 
 This topic describes the intermediate steps that a fabric administrator takes to prepare Hyper-V hosts to become guarded hosts using Admin-trusted attestation (AD mode). Before taking these steps, complete the steps in [Configuring the fabric DNS for hosts that will become guarded hosts](guarded-fabric-configuring-fabric-dns.md).

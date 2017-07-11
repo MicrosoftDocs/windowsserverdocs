@@ -10,6 +10,10 @@ ms.technology: security-guarded-fabric
 ms.date: 10/14/2016
 ---
 
+>[!div class="step-by-step"]
+[« Review prerequisites](guarded-fabric-guarded-host-prerequisites.md)
+[Deploy shielded VMs »](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
+
 # Confirm guarded hosts can attest 
 
 >Applies To: Windows Server 2016
@@ -40,12 +44,6 @@ A fabric administrator needs to confirm that Hyper-V hosts can run as guarded ho
     The output of the command indicates whether the host passed attestation and is now guarded. If `IsHostGuarded` does not return **True**, you can run the HGS diagnostics tool, [Get-HgsTrace](https://technet.microsoft.com/library/mt718831.aspx), to investigate. To run diagnostics, enter the following command in an elevated Windows PowerShell prompt on the host:
 
         Get-HgsTrace -RunDiagnostics -Detailed
-
-## Next steps
-
-For hosting service providers, see [Hosting service provider configuration steps for guarded hosts and shielded VMs](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md).
-
-For a list of all tasks for configuring a guarded fabric, see [Deployment tasks for guarded fabrics and shielded VMs](guarded-fabric-deploying-hgs-overview.md#deployment-tasks-for-guarded-fabrics-and-shielded-vms).
 
 ## See also
 
