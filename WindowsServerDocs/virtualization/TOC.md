@@ -37,6 +37,7 @@
 ##### [Create a template disk](guarded-fabric-shielded-vm/guarded-fabric-create-a-shielded-vm-template.md)
 ##### [Set up Windows Azure Pack](guarded-fabric-shielded-vm/guarded-fabric-hoster-sets-up-windows-azure-pack.md)
 ##### [Create shielding data file](guarded-fabric-shielded-vm/guarded-fabric-tenant-creates-shielding-data.md)
+##### [Deploy a shielded VM using PowerShell](guarded-fabric-shielded-vm/guarded-fabric-create-a-shielded-vm-using-powershell.md)
 ##### [Deploy using VMM](guarded-fabric-shielded-vm/guarded-fabric-tenant-deploys-shielded-vm-using-vmm.md)
 ##### [Deploy using Windows Azure Pack](guarded-fabric-shielded-vm/guarded-fabric-shielded-vm-windows-azure-pack.md)
 ##### [Shield an existing VM](guarded-fabric-shielded-vm/guarded-fabric-vm-shielding-helper-vhd.md)

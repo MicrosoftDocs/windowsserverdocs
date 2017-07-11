@@ -20,8 +20,6 @@ For TPM mode, the fabric administrator captures three kinds of host information,
 - Code Integrity policies, a white list of allowed binaries for the Hyper-V hosts
 - A TPM baseline (boot measurements) that represents a set of Hyper-V hosts that run on the same class of hardware
 
-The process that the fabric administrator uses is described in [TPM-trusted attestation for a guarded fabric - capturing information required by HGS](guarded-fabric-tpm-trusted-attestation-capturing-hardware.md#capture-hardware-and-software-information). 
-
 After the fabric administrator captures the information, add it to the HGS configuration as described in the following procedure.
 
 1.  Obtain the XML files that contain the EKpub information and copy them to an HGS server. There will be one XML file per host. Then, in an elevated Windows PowerShell console on an HGS server, run the command below. Repeat the command for each of the XML files.
