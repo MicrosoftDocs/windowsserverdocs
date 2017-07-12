@@ -10,7 +10,7 @@ ms.date: 04/24/2017
 ---
 
 >[!div class="step-by-step"]
-[« Prepare for HGS](guarded-fabric-prepare-for-hgs.md)
+[« Obtain certificates for HGS](guarded-fabric-obtain-certs.md)
 [Initialize HGS »](guarded-fabric-initialize-hgs.md)
 
 # Choose whether to install HGS in its own dedicated forest or in an existing bastion forest
