@@ -48,12 +48,12 @@ Requirements to provide domain controller protection for members of the Protecte
 
 Domain controllers that run an operating system earlier than Windows Server 2012 R2 can support adding members to the new Protected User security group. This allows the users to benefit from device protections before the domain is upgraded. 
 
-> [Note]
+> [!Note]
 > The domain controllers will not support domain protections. 
 
 Protected Users group can be created by [transferring the primary domain controller (PDC) emulator role](http://technet.microsoft.com/library/cc816944(v=ws.10).aspx) to a domain controller that runs Windows Server 2012 R2. After that group object is replicated to other domain controllers, the PDC emulator role can be hosted on a domain controller that runs an earlier version of Windows Server.
 
-#### <a name="BKMK_ADgroup"></a>Protected Users group AD properties
+### <a name="BKMK_ADgroup"></a>Protected Users group AD properties
 
 The following table specifies the properties of the Protected Users group.
 
@@ -83,7 +83,7 @@ When the signed in user is a member of the Protected Users group the following p
 
 -   Beginning with Windows 8.1 and Windows Server 2012 R2, Windows Digest will not cache the user's plain text credentials even when Windows Digest is enabled.
 
-> [Note]
+> [!Note]
 > After installing [Microsoft Security Advisory 2871997](https://technet.microsoft.com/library/security/2871997) Windows Digest will continue to cache credentials until the registry key is configured. See [Microsoft Security Advisory: Update to improve credentials protection and management: May 13, 2014](https://support.microsoft.com/en-us/help/2871997/microsoft-security-advisory-update-to-improve-credentials-protection-a) for instructions.
 
 -   NTLM will not cache the user's plain text credentials or NT one-way function (NTOWF).
