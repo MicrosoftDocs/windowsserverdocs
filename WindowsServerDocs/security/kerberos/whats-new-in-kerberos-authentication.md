@@ -22,9 +22,9 @@ Since there is no certificate validation, self-signed certificates are supported
 
 Key Trust is preferred when configured for an account regardless of the UseSubjectAltName setting.
 
-## Kerberos client and KDC support for PKInit Freshness Extension
+## Kerberos client and KDC support for RFC 8070 PKInit Freshness Extension
 
-Beginning with Windows 10, version 1507 and Windows Server 2016, Kerberos clients will attempt the [PKInit freshness extension](https://datatracker.ietf.org/doc/draft-ietf-kitten-pkinit-freshness/) for public key based sign-ons. 
+Beginning with Windows 10, version 1507 and Windows Server 2016, Kerberos clients will attempt the [RFC 8070 PKInit freshness extension](https://datatracker.ietf.org/doc/draft-ietf-kitten-pkinit-freshness/) for public key based sign-ons. 
 
 Beginning with Windows Server 2016, KDCs can support the PKInit freshness extension. 
 By default, KDCs will not offer the PKInit freshness extension. To enable it, use the new KDC support for PKInit Freshness Extension KDC administravie template policy setting on all the DCs in the domain. 
@@ -59,7 +59,7 @@ If not configured, IP address hostnames are not attempted.
 
 If the SPN is registered in Active Directory, then authentication will succeed with Kerberos. 
 
-## KDC support for both UPN and Subject Alternate Names (SAN)
+## KDC support for Key Trust account mapping
 
 Beginning with Windows Server 2016, domian controllers have support for Key Trust account mapping as well as fallback to existing AltSecID and User Principal Name (UPN) in the SAN behavior. When UseSubjectAltName is set to:
 
