@@ -54,7 +54,7 @@ When you enable USB port redirection, any USB devices attached to the USB port a
 | Redirection         | Remote Desktop Connection | Universal   | Android | iOS         | macOS                                     |
 |---------------------|---------------------------|-------------|---------|-------------|------------------------------------------|
 | Clipboard           | X                         | text, image | text    | text, image | text, image (full support in preview client)                             |
-| Microphone          | X                         |             |         |             | X (in preview client)                       |
+| Microphone          | X                         |X            |         |             | X (in preview client)                       |
 | Local drive/storage | X                         |             | X       |             | x                                          |
 | Printers            | X                         |             |         |             | X (CUPS only)                              |
 | Smart Card          | X                         |             |         |             | X (preview client, Windows authentication not supported) |
