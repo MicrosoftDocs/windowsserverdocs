@@ -15,10 +15,6 @@ ms.date: 07/05/2017
 
 # Initialize the HGS cluster using AD mode in an existing bastion forest
 
-[!INCLUDE [Prepare for HGS](../../../includes/guarded-fabric-initialize-hgs-bastion-prep-steps.md)] 
-
-## Initialize HGS using AD mode 
-
 Active Directory Domain Services will be installed on the machine, but should remain unconfigured.
 
 If you are using PFX-based certificates, run the following commands on the HGS server:
