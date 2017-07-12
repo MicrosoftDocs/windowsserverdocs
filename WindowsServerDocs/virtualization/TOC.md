@@ -33,7 +33,7 @@
 ##### [TPM mode](guarded-fabric-shielded-vm/guarded-fabric-tpm-trusted-attestation-capturing-hardware.md)
 ##### [AD mode](guarded-fabric-shielded-vm/guarded-fabric-admin-trusted-attestation-creating-a-security-group.md)
 ##### [Confirm attestation](guarded-fabric-shielded-vm/guarded-fabric-confirm-hosts-can-attest-successfully.md)
-##### [Using VMM](https://docs.microsoft.com/en-us/system-center/vmm/guarded-deploy-host?toc=/virtualization/toc.json)
+##### [Using VMM](https://docs.microsoft.com/en-us/system-center/vmm/guarded-deploy-host?toc=/windows-server/virtualization/toc.json)
 #### [Deploy shielded VMs](guarded-fabric-shielded-vm/guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
 ##### [Create a template disk](guarded-fabric-shielded-vm/guarded-fabric-create-a-shielded-vm-template.md)
 ##### [Set up Windows Azure Pack](guarded-fabric-shielded-vm/guarded-fabric-hoster-sets-up-windows-azure-pack.md)
