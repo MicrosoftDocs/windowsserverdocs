@@ -17,6 +17,8 @@ ms.date: 07/05/2017
 
 Active Directory Domain Services will be installed on the machine, but should remain unconfigured.
 
+[!INCLUDE [Obtain certificates for HGS](../../../includes/guarded-fabric-initialize-hgs-default-step-two.md)] 
+
 If you are using PFX-based certificates, run the following commands on the HGS server:
 
 ```powershell

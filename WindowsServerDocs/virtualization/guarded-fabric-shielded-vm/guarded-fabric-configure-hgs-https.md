@@ -13,7 +13,7 @@ ms.date: 07/05/2017
 [« Initialize HGS](guarded-fabric-initialize-hgs.md)
 [Add HGS nodes »](guarded-fabric-configure-additional-hgs-nodes.md)
 
-# Configure HGS for Https communications
+# Configure HGS for HTTPS communications
 
 By default, when you initialize the HGS server it will configure the IIS web sites for HTTP-only communications.
 All sensitive material being transmitted to and from HGS (including the encryption keys for the VM) are always encrypted using message-level encryption, however if you desire a higher level of security you can also enable HTTPS by configuring HGS with an SSL certificate.
