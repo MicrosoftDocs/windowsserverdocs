@@ -13,7 +13,7 @@ ms.date: 02/02/2017
 
 >[!div class="step-by-step"]
 [« Deploy a guarded fabric](guarded-fabric-deploying-hgs-overview.md)
-[Deploy HGS »](guarded-fabric-setting-up-the-host-guardian-service-hgs.md)
+[HGS Prerequisites »](guarded-fabric-prepare-for-hgs.md)
 
 # Quick start for guarded fabric deployment
 
