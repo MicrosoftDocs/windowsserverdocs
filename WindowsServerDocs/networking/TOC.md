@@ -229,4 +229,5 @@
 ### [System Center Technologies for Software Defined Networking](sdn/Sc-Tech-for-Sdn.md)
 ### [Microsoft Azure and Software Defined Networking](sdn/Azure_and_Sdn.md)
 ### [Contact the Datacenter and Cloud Networking Team](sdn/contact-sdn-team.md)
+## [Virtual Private Networking (VPN)](technologies/vpn-stub.md)
 ## [Windows Internet Name Service (WINS)](technologies/wins/wins-top.md)

@@ -23,6 +23,7 @@ This topic provides an overview of the Remote Access server role in Windows Serv
 > - [RAS Gateway](ras-gateway/RAS-Gateway.md) 
 > - [Remote Access Server Role Documentation](ras/Remote-Access-Server-Role-Documentation.md)
 > - [RAS Gateway for SDN](../../networking/sdn/technologies/network-function-virtualization/RAS-Gateway-for-SDN.md)
+> - [Virtual Private Networking (VPN)](vpn/vpn-top.md)
 > 
 > For more information about other networking technologies, see [Networking in Windows Server 2016](https://docs.microsoft.com/windows-server/networking/networking).
 

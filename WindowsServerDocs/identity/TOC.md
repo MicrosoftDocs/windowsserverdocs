@@ -358,6 +358,12 @@
 ###### [Create a Claims Provider Trust Manually](ad-fs/operations/create-a-Claims-Provider-Trust.md)
 ###### [Create a Rule to Send an AD FS 1.x compatible Claim](ad-fs/operations/create-a-Rule-to-Send-an-AD-FS-1x-compatible-Claim.md)
 #### [Deploy Azure AD Connect Health](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect-health/)
+#### [Migrate Active Directory Federation Services Role Services to Windows Server 2012 R2](ad-fs/deployment/migrate-ad-fs-service-role-to-windows-server-r2.md)
+##### [Prepare to Migrate the AD FS Federation Server](ad-fs/deployment/prepare-migrate-ad-fs-server-r2.md)
+#####[Migrate the AD FS Federation Server](ad-fs/deployment/migrate-ad-fs-fed-server-r2.md)
+#####[Migrate the AD FS Federation Server Proxy](ad-fs/deployment/migrate-fed-server-proxy-r2.md)
+#####[Verfiy the AD FS Migration to Windows Server 2012 R2](ad-fs/deployment/verify-ad-fs-migration.md)
+
 #### [Migrate Active Directory Federation Services Role Services to Windows Server 2012](ad-fs/deployment/migrate-ad-fs-role-services-to-windows-server-2012.md)
 ##### [Prepare to Migrate the AD FS 2.0 Federation Server](ad-fs/deployment/prepare-to-migrate-ad-fs-fed-server.md)
 ######[Prepare to Migrate the AD FS 2.0 Stand Alone or Single Node Farm Server](ad-fs/deployment/prepare-to-migrate-a-stand-alone-ad-fs-federation-server.md)
@@ -370,6 +376,9 @@
 ######[Migrate the AD FS 2.0 SQL Farm](ad-fs/deployment/migrate-ad-fs-sql-farm.md)
 #####[Migrate the AD FS 2.0 Federation Server Proxy](ad-fs/deployment/migrate-the-ad-fs-2-fed-server-proxy.md)
 #####[Migrate the AD FS 1.1 Web Agents](ad-fs/deployment/migrate-the-ad-fs-web-agent.md)
+
+
+
 ### [AD FS Development](ad-fs/AD-FS-Development.md)
 #### [AD FS On-behalf-of Authentication in Windows Server 2016](ad-fs/development/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016.md)
 #### [Enabling OpenId Connect with AD FS 2016](ad-fs/development/Enabling-OpenId-Connect-with-AD-FS-2016.md)
