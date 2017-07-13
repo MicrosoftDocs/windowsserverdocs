@@ -33,6 +33,8 @@ When a tenant creates shielded VMs that run on a guarded fabric, the Hyper-V hos
 
 [!VIDEO https://channel9.msdn.com/Shows/Mechanics/Introduction-to-Shielded-Virtual-Machines-in-Windows-Server-2016/player]
 
+[!VIDEO https://channel9.msdn.com/Series/Youve-Got-Key-Values-A-Redis-Jump-Start/03/player]
+
 ## Attestation modes in the Guarded Fabric solution
 
 The HGS supports two different attestation modes for a guarded fabric:
