@@ -12,13 +12,13 @@ ms.assetid: 785a18cf-a5d0-4bc2-95e4-9ef53ee8f65a
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.date: 12/15/2016
+ms.date: 07/12/2017
 ---
 # Frequently asked questions about the Remote Desktop clients
 
 >Applies To: Windows 10, Windows 8.1, Windows Server 2012 R2, Windows Server 2016
 
-Now that you've set up the Remote Desktop client on your device (Android, Mac, iOS, Windows Phone, or Windows), you may have questions. Here are answers to the most commonly asked questions about the Remote Desktop clients. 
+Now that you've set up the Remote Desktop client on your device (Android, Mac, iOS, or Windows), you may have questions. Here are answers to the most commonly asked questions about the Remote Desktop clients. 
 
 - [Setting up](#Setting-up)
 - [Connections, gateway, and networks](#connection-gateway-and-networks)
