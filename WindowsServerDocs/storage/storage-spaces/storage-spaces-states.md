@@ -1,14 +1,13 @@
 ---
 title: Health states for virtual disks and other Storage Spaces objects 
-description: 115-145 characters including spaces. Edit the intro para describing article intent to fit here. This abstract displays in the search result.
-keywords: Don’t add or edit keywords without consulting your SEO champ.
+description: How to understand the different health and operational states of Storage Spaces, and what to do about them.
+keywords: Storage Spaces, detached, virtual disk, physical disk, storage pool, degraded
 author: jasongerend
 ms.author: jgerend
-ms.date: 06/09/2017
-ms.topic: article-type-from-white-list
+ms.date: 07/20/2017
+ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: storage-spaces
-ms.assetid: 72db1242-a416-48d0-a270-60b63004fe92
 manager: brianlic
 ---
 # Health and operational states for virtual disks and other Storage Spaces objects
