@@ -21,7 +21,7 @@ The two scenarios in this topic are:
 1. Prioritize Network Traffic for a Line-of-Business Application
 2. Prioritize Network Traffic for an HTTP Server Application
 
-Some sections of this topic contain general steps you can take to perform the described actions. For more detailed instructions on managing QoS Policy, see [Manage QoS Policy](qos-policy-manage.md) and [Configure Quality of Service (QoS) Policy](qos-policy-config.md).
+Some sections of this topic contain general steps you can take to perform the described actions. For more detailed instructions on managing QoS Policy, see [Manage QoS Policy](qos-policy-manage.md).
 
 ## Scenario 1: Prioritize Network Traffic for a Line-of-Business Application
 
@@ -34,7 +34,7 @@ In this scenario, an IT department has several goals that they can accomplish by
 The IT department decides to configure QoS Policy to prioritize specific applications by using Differentiation Service Code Point \(DSCP\) values to classify network traffic, and to configure its routers to provide preferential treatment for higher priority traffic. 
 
 >[!NOTE]
->For more information on DSCP, see the section **Define QoS Priority Through a Differentiated Services Code Point** in the topic [Quality of Service (QoS) Policy](qos-policy.md); and the section **Classification and Tagging** in the topic [Quality of Service (QoS)](qos-top.md).
+>For more information on DSCP, see the section **Define QoS Priority Through a Differentiated Services Code Point** in the topic [Quality of Service (QoS) Policy](qos-policy-top.md).
 
 In addition to DSCP values, QoS policies can specify a throttle rate. Throttling has the effect of limiting all outbound traffic that matches the QoS Policy to a specific send rate.
 
