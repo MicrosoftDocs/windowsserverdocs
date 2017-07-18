@@ -16,7 +16,7 @@ manager: brianlic
 
 This topic discusses the health and operational states of various objects in Storage Spaces and [Storage Spaces Direct](storage-spaces-direct-overview.md), including volumes, virtual disks, storage pools, and physical disks.
 
-## Storage pool health and operational states
+## Storage pool states
 
 A storage pool can be in one or more operational states. These states map to a health state - either **OK**, **Warning**, **Unhealthy**, or **Information**.
 
@@ -51,7 +51,7 @@ The following sections list the operational states that map to each health state
 |---------            |---------          |
 |Unknown|Storage Spaces couldn't determine the state.|
 
-## Virtual disk health and operational states
+## Virtual disk states
 
 A virtual disk can be in one or more operational states. These states map to a health state - either **OK**, **Warning**, **Unhealthy**, or **Information**.
 
@@ -90,7 +90,7 @@ The following sections list the operational states that map to each health state
 |---------            |--------   |
 |Unknown|Storage Spaces couldn't determine the state.<br><br>**Action**: **BLOCKED: Need more info here**   |
 
-## Physical disk health and operational states
+## Physical disk states
 
 ### Disk health state: OK
 
