@@ -139,7 +139,7 @@ This topic provides information about choosing the right network adapter for you
 
 NIC Teaming allows you to group physical Ethernet network adapters into one or more software-based virtual network adapters. These virtual network adapters provide fast performance and fault tolerance in the event of a network adapter failure.
 
-### [Quality of Service (QoS) Policy](technologies/qos/qos-policy-top)
+### [Quality of Service (QoS) Policy](technologies/qos/qos-policy-top.md)
 
 You can use QoS Policy as a central point of network bandwidth management across your entire Active Directory infrastructure by creating QoS profiles, whose settings are distributed with Group Policy.
 
