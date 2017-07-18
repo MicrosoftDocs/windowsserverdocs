@@ -107,7 +107,7 @@ Get-StoragePool S2D* | Get-ResiliencySetting -Name Parity | Set-ResiliencySettin
 New-Volume -FriendlyName <Name> -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -Size <Size> -ResiliencySettingName Parity
 ```
 
-With four servers, you can also begin using mixed resiliency, where an individual volume is part mirror and part parity.
+With four servers, you can also begin using mirror-accelerated parity, where an individual volume is part mirror and part parity.
 
 For this, you will need to update your **StorageTier** templates to have both *Performance* and *Capacity* tiers, as they would be created if you had first run **Enable-ClusterS2D** at four servers. Specifically, both tiers should have the **MediaType** of your capacity devices (such as SSD or HDD) and **PhysicalDiskRedundancy = 2**. The *Performance* tier should be **ResiliencySettingName = Mirror**, and the *Capacity* tier should be **ResiliencySettingName = Parity**.
 
@@ -122,7 +122,7 @@ New-StorageTier -StoragePoolFriendlyName S2D* -MediaType HDD -PhysicalDiskRedund
 New-StorageTier -StoragePoolFriendlyName S2D* -MediaType HDD -PhysicalDiskRedundancy 2 -ResiliencySettingName Parity -FriendlyName Capacity
 ```
 
-That's it! You are now ready to create mixed resiliency volumes by referencing these tier templates.
+That's it! You are now ready to create mirror-accelerated parity volumes by referencing these tier templates.
 
 #### Example
 

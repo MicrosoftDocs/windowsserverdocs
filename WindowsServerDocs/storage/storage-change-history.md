@@ -5,9 +5,9 @@ ms.prod: windows-server-threshold
 ms.technology: storage
 ms.topic: article
 author: JasonGerend
-manager: dongill
+manager: brianlic
 ms.author: jgerend
-ms.date: 6/28/2017
+ms.date: 7/18/2017
 description: New and updated topics in the Storage documentation for Windows Server 2016
 ---
 # Change history for storage topics in Windows Server 2016
@@ -23,6 +23,7 @@ This topic lists new and updated topics in the [Storage](storage.md) documentati
 |---|---|
 |[DFS Namespaces](dfs-namespaces/dfs-overview.md)|New topic for Windows Server 2016.|
 |[File Server Resource Manager](fsrm/fsrm-overview.md)|Published 33 new topics for Windows Server 2016.|
+|[Understanding the cache in Storage Spaces Direct](storage-spaces/understand-the-cache.md)|Added a Storage Spaces Direct design considerations video.|
 
 ## June 2017
 
