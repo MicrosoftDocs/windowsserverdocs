@@ -339,7 +339,6 @@ Following is a list of QoS Policy error messages.
 |**SymbolicName**|EVENT_EQOS_ERROR_SETTING_APP_MARKING|  
 |**Language**|English|  
 |**Message**|QoS failed to read or set the DSCP marking override setting, error code: "%2".|  
-  
 
 For the next topic in this guide, see [QoS Policy Frequently Asked Questions](qos-policy-faq.md).
 
