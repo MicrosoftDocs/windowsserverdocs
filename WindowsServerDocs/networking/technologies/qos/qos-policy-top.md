@@ -120,5 +120,5 @@ With QoS Policy, you can configure and enforce QoS policies that cannot be confi
 
     **b**. QoS Policy facilitates user/computer configuration by providing a mechanism to specify policies by Uniform Resource Locator \(URL\) instead of specifying policies based on the IP addresses of each of the servers where QoS policies need to be applied. For example, assume your network has a cluster of servers that share a common URL. By using QoS Policy, you can create one policy based on the common URL, instead of creating one policy for each server in the cluster, with each policy based on the IP address of each server.
 
-
+For the next topic in this guide, see [Getting Started with QoS Policy](qos-policy-get-started.md).
 

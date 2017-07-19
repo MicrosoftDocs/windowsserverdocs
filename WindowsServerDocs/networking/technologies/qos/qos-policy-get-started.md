@@ -19,3 +19,6 @@ You can use the following topics to get started with Quality of Service \(QoS\) 
 - [How QoS Policy Works](qos-policy-works.md)
 - [QoS Policy Architecture](qos-policy-architecture.md)
 - [QoS Policy Scenarios](qos-policy-scenarios.md)
+
+
+For the first topic in this guide, see [Quality of Service (QoS) Policy](qos-policy-top.md).

@@ -21,7 +21,8 @@ The two scenarios in this topic are:
 1. Prioritize Network Traffic for a Line-of-Business Application
 2. Prioritize Network Traffic for an HTTP Server Application
 
-Some sections of this topic contain general steps you can take to perform the described actions. For more detailed instructions on managing QoS Policy, see [Manage QoS Policy](qos-policy-manage.md).
+>[!NOTE]
+>Some sections of this topic contain general steps you can take to perform the described actions. For more detailed instructions on managing QoS Policy, see [Manage QoS Policy](qos-policy-manage.md).
 
 ## Scenario 1: Prioritize Network Traffic for a Line-of-Business Application
 
@@ -205,6 +206,12 @@ If a user chooses to include all subdirectories and files following a URL path, 
 
 A user may also choose to specify a destination IP address in a URL-based policy. The destination IP address has a lower priority than any of the four URL fields described previously.
   
-### URL-based policy vs. Quintuple policy
+### Quintuple policy
 
-A Quintuple policy is specified by protocol ID, source IP address, source port, destination IP address, and destination port. A Quintuple policy always has a higher precedence than any URL-based policy. If a Quintuple policy is already applied for a user, a new URL-based policy will not cause conflicts on any of that user’s client computers.  
+A Quintuple policy is specified by protocol ID, source IP address, source port, destination IP address, and destination port. A Quintuple policy always has a higher precedence than any URL-based policy. 
+
+If a Quintuple policy is already applied for a user, a new URL-based policy will not cause conflicts on any of that user’s client computers.
+
+For the next topic in this guide, see [Manage QoS Policy](qos-policy-manage.md).
+
+For the first topic in this guide, see [Quality of Service (QoS) Policy](qos-policy-top.md).

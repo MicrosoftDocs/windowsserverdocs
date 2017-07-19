@@ -37,3 +37,7 @@ The architecture of Policy-based QoS consists of the following components:
 - **QoS Network Provider Interface \(NPI\)**. An interface for kernel-mode drivers to interact with Pacer.sys.
 
 - **Pacer.sys**. An NDIS 6.x lightweight filter driver that controls packet scheduling for Policy-based QoS and for the traffic of applications that use the Generic QoS \(GQoS\) and Traffic Control \(TC\) APIs. Pacer.sys replaced Psched.sys in Windows Server 2003 and Windows XP. Pacer.sys is installed with the QoS Packet Scheduler component from the properties of a network connection or adapter.
+
+For the next topic in this guide, see [QoS Policy Scenarios](qos-policy-scenarios.md).
+
+For the first topic in this guide, see [Quality of Service (QoS) Policy](qos-policy-top.md).
