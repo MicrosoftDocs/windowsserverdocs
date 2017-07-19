@@ -330,3 +330,7 @@ However, QoS policies might have an equal number of conditions. For example, sev
 Within a specific condition, such as IP address, a more specific IP address is treated with higher precedence; for example, an IP address 192.168.4.1 is more specific than 192.168.4.0/24.
 
 Design your QoS policies as specifically as possible to simplify your organization's ability to understand which policies are in effect.
+
+For the next topic in this guide, see [QoS Policy Events and Errors](qos-policy-errors.md).
+
+For the first topic in this guide, see [Quality of Service (QoS) Policy](qos-policy-top.md).
