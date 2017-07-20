@@ -14,7 +14,7 @@ manager: brianlic
 
 > Applies to: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10, Windows 8.1
 
-This topic discusses the health and operational states of various objects in Storage Spaces and [Storage Spaces Direct](storage-spaces-direct-overview.md), including volumes, virtual disks, storage pools, and physical disks.
+This topic discusses the health and operational states of various objects in Storage Spaces and [Storage Spaces Direct](storage-spaces-direct-overview.md), including volumes, virtual disks, storage pools, and physical disks. It also discusses why a physical disk can't be added to a pool (the CannotPoolReason).
 
 ## Storage pool states
 
@@ -65,7 +65,7 @@ When the virtual disk is in a **Warning** health state, it means that one or mor
 
 |Operational state    |Description|
 |---------            |---------          |
-|In service            |Windows is repairing the virtual disk. When the repair is complete, the virtual disk should return to the OK health state.|
+|In service            |Windows is repairing the virtual disk, such as after adding or removing a physical disk. When the repair is complete, the virtual disk should return to the OK health state.|
 |Incomplete           |The resilience of the virtual disk is reduced because one or more physical disks failed or are missing. However, the missing physical disks contain up-to-date copies of your data.<br><br> **Action**: Reconnect any missing disks, replace any failed disks, and then repair the virtual disk using the [Repair-VirtualDisk](https://technet.microsoft.com/itpro/powershell/windows/storage/repair-virtualdisk) cmdlet after reconnecting disks. If you're using Windows Server 2016 you don't need to use Repair-VirtualDisk - reconnecting or replacing the disk automatically starts a repair.|
 |Degraded             |The resilience of the virtual disk is reduced because one or more physical disks failed or are missing, and there are outdated copies of your data on these physical disks. <br><br>**Action**: Reconnect any missing disks, replace any failed disks, and then repair the virtual disk using the [Repair-VirtualDisk](https://technet.microsoft.com/itpro/powershell/windows/storage/repair-virtualdisk) cmdlet after reconnecting disks. If you're using Windows Server 2016 you don't need to use Repair-VirtualDisk - reconnecting or replacing the disk automatically starts a repair.|
 
@@ -90,6 +90,8 @@ The virtual disk can also be in the **Information** health state (as shown in th
 |Detached             |By Policy            |An administrator took the virtual disk offline, or set the virtual disk to require manual attachment, in which case you'll have to manually attach the virtual disk every time Windows restarts.**Action**: Bring the virtual disk back online. To do so when the virtual disk is in a clustered storage pool, in Failover Cluster Manager select **Storage** > **Pools** > **Virtual Disks**, select the virtual disk that shows the **Offline** status and then select **Bring Online**. <br><br>To bring a virtual disk back online when not in a cluster, you can try opening a PowerShell session as an Administrator and then using the following command:<br> `Get-VirtualDisk | Where-Object -Filter { $_.OperationalStatus -eq "Detached" } | Connect-VirtualDisk`<br><br>To automatically attach all current virtual disks after Windows restarts, which is only relevant to non-clustered virtual disks, open a PowerShell session as an Administrator and then use the following command:<br> `Get-VirtualDisk | Set-VirtualDisk -ismanualattach $true`|
 
 ## Physical disk states
+
+The following sections describe the health states a physical disk can be in, as well as the reasons a physical disk can't be added to a storage pool
 
 ### Disk health state: OK
 
@@ -122,4 +124,12 @@ The virtual disk can also be in the **Information** health state (as shown in th
 |Unrecognized metadata|Storage Spaces found unrecognized metadata on the disk, which can be a sign of a failing disk.<br><br>**Action**: You can reset the disk and see if this happens again, or you can proactively replace the disk.|
 |Maintenance mode|An administrator placed the disk in maintenance mode, halting reads and writes from the disk. This is usually done before replacing a disk, or when testing failures.<br><br>**Action**: Remove and replace the disk, or take the disk out of maintenance mode, if you were just testing the pool.|
 
-**Future TO DO: Include a graphic showing the interaction of the different states.**
+## Reasons a physical disk can't be pooled (CannotPoolReason)
+
+|Reason|Description|
+|---|---|
+|In a pool|The physical disk already belongs to a storage pool. <br><br>Physical disks can belong to only a single storage pool at a time. To use this disk in another storage pool, first remove the physical disk from its existing pool, which tells Storage Spaces to move the data on the disk to other disks on the pool. Or reset the disk if the disk has been disconnected from its pool without notifying Storage Spaces. <br><br>To safely remove a physical disk from a storage pool, use [Remove-PhysicalDisk](https://technet.microsoft.com/itpro/powershell/windows/storage/remove-physicaldisk), or go to Server Manager > **File and Storage Services** > **Storage Pools**, > **Physical Disks**, right-click the disk and then select **Remove Disk**.<br><br>To reset a physical disk, use [Reset-PhysicalDisk](https://technet.microsoft.com/itpro/powershell/windows/storage/reset-physicaldisk).|
+|
+
+
+<!---Future TO DO: Include a graphic showing the interaction of the different states.--->
