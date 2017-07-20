@@ -151,7 +151,7 @@ To create periodic application consistent snapshots, you can use VSSADMIN.EXE on
 Then, after you switch replication direction, remove replication, or are simply still on the same source volume, you can restore any snapshot to its point in time. For example, still using F:
 
     vssadmin list shadows
-    vssadmin revert shadow /shadow={shadown copy ID GUID listed previously}
+     vssadmin revert shadow /shadow={shadown copy ID GUID listed previously}
 You can also schedule this tool to run periodically using a scheduled task. For more information on using VSS, review [Vssadmin](https://technet.microsoft.com/library/cc754968.aspx). There is no need or value in backing up the log volumes. Attempting to do so will be ignored by VSS.
 Use of Windows Server Backup, Microsoft Azure Backup, Microsoft DPM, or other snapshot, VSS, virtual machine, or file-based technologies are supported by Storage Replica as long as they operate within the volume layer. Storage Replica does not support block-based backup and restore.
 
@@ -195,7 +195,7 @@ There are SR performance counters that will tell you the rate the log is churnin
 
 Storage Replica relies on the log for all write performance. Log performance critical to replication performance. You must ensure that the log volume performs better than the data volume, as the log will serialize and sequentialize all write IO. You should always use flash media like SSD on log volumes. You must never allow any other workloads to run on the log volume, the same way you would never allow other workloads to run on SQL database log volumes. 
 
-Again: Microsoft strongly recommends that the log storage be faster than the data storage and thatl og volumes must never be used for other workloads.
+Again: Microsoft strongly recommends that the log storage be faster than the data storage and that log volumes must never be used for other workloads.
 
 ## <a name="FAQ16"></a> Why would you choose a stretch cluster versus cluster-to-cluster versus server-to-server topology?  
 Storage Replica comes in three main configurations: strech cluster, cluster-to-cluster, and server-to-server. There are different advantages to each.
