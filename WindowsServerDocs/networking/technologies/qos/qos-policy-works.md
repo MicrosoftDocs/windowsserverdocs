@@ -65,3 +65,7 @@ These processes of Policy-based QoS provide the following advantages.
 - Applications do not need to be modified to take advantage of DSCP-based differentiated service or traffic throttling.
 
 - QoS policies can apply to traffic protected with IPsec.
+
+For the next topic in this guide, see [QoS Policy Architecture](qos-policy-architecture.md).
+
+For the first topic in this guide, see [Quality of Service (QoS) Policy](qos-policy-top.md).

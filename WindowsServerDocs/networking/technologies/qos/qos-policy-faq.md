@@ -35,3 +35,5 @@ Following are frequently asked questions – and answers to those questions – 
 5.  **Is QoS Policy enabled by default?**
 
      No, QoS Policy is not enabled by default. You must create QoS policies manually to enable QoS.  For more information, see [Manage QoS Policy](qos-policy-manage.md).
+
+For the first topic in this guide, see [Quality of Service (QoS) Policy](qos-policy-top.md).
