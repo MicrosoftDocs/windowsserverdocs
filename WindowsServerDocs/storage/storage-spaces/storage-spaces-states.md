@@ -126,10 +126,22 @@ The following sections describe the health states a physical disk can be in, as 
 
 ## Reasons a physical disk can't be pooled (CannotPoolReason)
 
+Some physical disks just aren't ready to be in a storage pool. If you try to add one of these disks to a storage pool, Storage Spaces reports an error with the *CannotPoolReason*, which briefly describes why the disk can't be pooled. The following table gives a little more detail on each of the reasons.
+
 |Reason|Description|
 |---|---|
 |In a pool|The physical disk already belongs to a storage pool. <br><br>Physical disks can belong to only a single storage pool at a time. To use this disk in another storage pool, first remove the physical disk from its existing pool, which tells Storage Spaces to move the data on the disk to other disks on the pool. Or reset the disk if the disk has been disconnected from its pool without notifying Storage Spaces. <br><br>To safely remove a physical disk from a storage pool, use [Remove-PhysicalDisk](https://technet.microsoft.com/itpro/powershell/windows/storage/remove-physicaldisk), or go to Server Manager > **File and Storage Services** > **Storage Pools**, > **Physical Disks**, right-click the disk and then select **Remove Disk**.<br><br>To reset a physical disk, use [Reset-PhysicalDisk](https://technet.microsoft.com/itpro/powershell/windows/storage/reset-physicaldisk).|
-|
+|Not healthy|The physical disk isn't in a healthy state and might need to be replaced.|
+|Removable media|The physical disk is classified as a removable disk. <br><br>Storage Spaces doesn't support media that are recognized by Windows as removable, such as Blu-Ray drives. Although many fixed disks are in removable slots, in general, media that are *classified* by Windows as removable aren't suitable for use with Storage Spaces.|
+|In use by cluster|The physical disk is currently used by a Failover Cluster.|
+|Offline|The physical disk is offline. <br><br>To bring all offline disks online and set to read/write, open a PowerShell session as an administrator and use the following scripts:<br><br>`Get-Disk | Where-Object -Property OperationalStatus -EQ "Offline" | Set-Disk -IsOffline $false`<br><br>`Get-Disk |    Where-Object -Property IsReadOnly -EQ $true | Set-Disk -IsReadOnly $false`|
+|Insufficient capacity|The physical disk is too small to be pooled.|
+|Verification in progress|The [Health Service](https://docs.microsoft.com/windows-server/failover-clustering/health-service-overview#supported-components-document) is checking to see if the disk or firmware on the disk is approved for use by the server administrator.|
+|Verification failed|The [Health Service](https://docs.microsoft.com/windows-server/failover-clustering/health-service-overview#supported-components-document) couldn't check to see if the disk or firmware on the disk is approved for use by the server administrator.|
+|Firmware not compliant|The firmware on the physical disk isn't in the list of approved firmware revisions specified by the server administrator by using the [Health Service](https://docs.microsoft.com/windows-server/failover-clustering/health-service-overview#supported-components-document). |
+|Hardware not compliant|The physical disk isn't in the list of approved storage models specified by the server administrator by using the [Health Service](https://docs.microsoft.com/windows-server/failover-clustering/health-service-overview#supported-components-document).|
 
+## See also
 
-<!---Future TO DO: Include a graphic showing the interaction of the different states.--->
+- [Storage Spaces Direct](storage-spaces-direct-overview.md)
+- [Storage Spaces Direct hardware requirements](storage-spaces-direct-hardware-requirements.md)
