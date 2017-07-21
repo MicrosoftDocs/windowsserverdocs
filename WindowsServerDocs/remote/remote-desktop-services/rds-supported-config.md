@@ -84,7 +84,7 @@ Windows Server 2016 RDS supports two main SSO experiences:
  - In-app (Remote Desktop application on Windows, iOS, Android, and Mac)
  - Web SSO
  
-Using the Remote Desktop application, you can store credentials either as part of the connection info ([Mac](clients\remote-desktop-mac.md)) or as part of managed accounts ([iOS](\clients\remote-desktop-ios.md#Manage_your_user_accounts), [Android](\clients\remote-desktop-android.md#Manage_your_user_accounts), Windows) securely through the mechanisms unique to each OS.
+Using the Remote Desktop application, you can store credentials either as part of the connection info ([Mac](clients\remote-desktop-mac.md)) or as part of managed accounts ([iOS](clients\remote-desktop-ios.md#manage-your-user-accounts), [Android](clients\remote-desktop-android.md#manage-your-user-accounts), Windows) securely through the mechanisms unique to each OS.
 
 To connect to desktops and RemoteApps with SSO through the inbox Remote Desktop Connection client on Windows, you must connect to the RD Web page through Internet Explorer. The following configuration options are required on the server side. No other configurations are supported for Web SSO:
 
