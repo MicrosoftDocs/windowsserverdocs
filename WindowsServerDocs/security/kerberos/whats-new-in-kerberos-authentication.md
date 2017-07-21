@@ -24,11 +24,11 @@ Key Trust is preferred when configured for an account regardless of the UseSubje
 
 ## Kerberos client and KDC support for RFC 8070 PKInit Freshness Extension
 
-Beginning with Windows 10, version 1507 and Windows Server 2016, Kerberos clients will attempt the [RFC 8070 PKInit freshness extension](https://datatracker.ietf.org/doc/draft-ietf-kitten-pkinit-freshness/) for public key based sign-ons. 
+Beginning with Windows 10, version 1607 and Windows Server 2016, Kerberos clients will attempt the [RFC 8070 PKInit freshness extension](https://datatracker.ietf.org/doc/draft-ietf-kitten-pkinit-freshness/) for public key based sign-ons. 
 
 Beginning with Windows Server 2016, KDCs can support the PKInit freshness extension. 
 By default, KDCs will not offer the PKInit freshness extension. To enable it, use the new KDC support for PKInit Freshness Extension KDC administravie template policy setting on all the DCs in the domain. 
-When enabled, the following options are supported:
+When enabled, the following options are supported when the domain is Windows Server 2016 domain functional level (DFL):
 
 - **Disabled**: The KDC will never offer the PKInit Freshness Extension and accept valid authentication requests without checking for freshness. Users will never receive the fresh public key identity SID.
 - **Supported**: PKInit Freshness Extension is supported on request. Kerberos clients successfully authenticating with the PKInit Freshness Extension will get the fresh public key identity SID.
