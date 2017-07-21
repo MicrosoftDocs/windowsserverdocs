@@ -66,6 +66,7 @@
 #### [Remove servers](storage-spaces/remove-servers.md)
 #### [Update drive firmware](update-firmware.md)
 #### [Extend volumes](storage-spaces/resize-volumes.md)
+#### [Health states for Storage Spaces](storage-spaces/storage-spaces-states.md)
 ## [Work Folders](work-folders/work-folders-overview.md)
 ### [Designing a Work Folders Implementation](work-folders/plan-work-folders.md)
 ### [Deploying Work Folders](work-folders/deploy-work-folders.md)

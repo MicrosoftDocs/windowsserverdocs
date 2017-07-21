@@ -7,7 +7,7 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.date: 7/18/2017
+ms.date: 7/24/2017
 description: New and updated topics in the Storage documentation for Windows Server 2016
 ---
 # Change history for storage topics in Windows Server 2016
@@ -19,8 +19,10 @@ This topic lists new and updated topics in the [Storage](storage.md) documentati
 > If you're looking for update history for Windows Server 2016, see [Windows 10 and Windows Server 2016 update history](https://support.microsoft.com/help/4000825/windows-10-and-windows-server-2016-update-history).
 
 ## July 2017
+
 |New or changed topic|Description|
 |---|---|
+|[Health states for Storage Spaces](storage-spaces/storage-spaces-states.md)|New topic.|
 |[DFS Namespaces](dfs-namespaces/dfs-overview.md)|New topic for Windows Server 2016.|
 |[File Server Resource Manager](fsrm/fsrm-overview.md)|Published 33 new topics for Windows Server 2016.|
 |[Understanding the cache in Storage Spaces Direct](storage-spaces/understand-the-cache.md)|Added a Storage Spaces Direct design considerations video.|
@@ -43,7 +45,6 @@ This topic lists new and updated topics in the [Storage](storage.md) documentati
 |[Hyper-converged solution using Storage Spaces Direct](storage-spaces/hyper-converged-solution-using-storage-spaces-direct.md)|Added step 1.3 with required features and fixed an obsolete parameter in Enable-NetAdapterQos.||[Storage Replica overview](storage-replica/storage-replica-overview.md) (and other Storage Replica topics)|Added recommendation to use fast, exclusive storage for Storage Replica logs.|
 |[Storage Replica frequently asked questions](storage-replica/storage-replica-frequently-asked-questions.md)|Added info on how to choose between different replication topologies.|
 |[Storage Spaces Direct hardware requirements](storage-spaces/storage-spaces-direct-hardware-requirements.md)|Changed drive endurance requirements for cache devices.|
-
 
 ## April 2017
 

@@ -124,7 +124,7 @@ The following sections describe the health states a physical disk can be in, as 
 |Unrecognized metadata|Storage Spaces found unrecognized metadata on the disk, which can be a sign of a failing disk.<br><br>**Action**: You can reset the disk and see if this happens again, or you can proactively replace the disk.|
 |Maintenance mode|An administrator placed the disk in maintenance mode, halting reads and writes from the disk. This is usually done before replacing a disk, or when testing failures.<br><br>**Action**: Remove and replace the disk, or take the disk out of maintenance mode, if you were just testing the pool.|
 
-## Reasons a physical disk can't be pooled (CannotPoolReason)
+## Reasons a physical disk can't be pooled
 
 Some physical disks just aren't ready to be in a storage pool. If you try to add one of these disks to a storage pool, Storage Spaces reports an error with the *CannotPoolReason*, which briefly describes why the disk can't be pooled. The following table gives a little more detail on each of the reasons.
 
