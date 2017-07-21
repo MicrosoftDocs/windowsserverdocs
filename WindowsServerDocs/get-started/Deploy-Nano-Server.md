@@ -190,7 +190,7 @@ Exit**
    
 Apply the Nano Server image (adjust the path of the .wim file):  
   
-**Dism.exe /apply-imagmediafile:.\NanoServer.wim /index:1 /applydir:n:\   
+**Dism.exe /apply-image /imagefile:.\NanoServer.wim /index:1 /applydir:n:\   
 Bcdboot.exe n:\Windows /s s:**  
    
 Remove the DVD media or USB drive and reboot your system with **Wpeutil.exe reboot**  
