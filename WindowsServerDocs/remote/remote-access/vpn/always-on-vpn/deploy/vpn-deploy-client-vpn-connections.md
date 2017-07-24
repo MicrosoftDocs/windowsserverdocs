@@ -302,7 +302,7 @@ The following example commands get EAP settings from the template profile.
     <DomainName>' + $DomainName + '</DomainName>
     <DnsServers>' + $DNSServers + '</DnsServers>
     </DomainNameInformation>
-    </VPNProfile>
+    </VPNProfile>'
 
 
 ### Output VPN_Profile.xml for Intune
@@ -475,7 +475,7 @@ The following example script includes all of the code examples from previous sec
     <DomainName>' + $DomainName + '</DomainName>
     <DnsServers>' + $DNSServers + '</DnsServers>
     </DomainNameInformation>
-    </VPNProfile>
+    </VPNProfile>'
 
     $ProfileXML \| Out-File -FilePath (\$env:USERPROFILE +'\\desktop\\VPN_Profile.xml')
 
