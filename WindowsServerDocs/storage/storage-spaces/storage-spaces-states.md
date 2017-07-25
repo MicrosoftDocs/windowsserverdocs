@@ -78,7 +78,6 @@ When a virtual disk is in an **Unhealthy** health state, some or all of the data
 |Detached            |Majority Disks Unhealthy |Too many physical disks used by this virtual disk failed, are missing, or have stale data.   <br><br>**Action**: Reconnect any missing physical disks and replace any failed disks. If you're using Windows Server 2012 R2 or Windows Server 2012, repair the virtual disk using the [Repair-VirtualDisk](https://technet.microsoft.com/itpro/powershell/windows/storage/repair-virtualdisk) after reconnecting disks (Windows Server 2016 and newer do this automatically). <br>If more disks failed than you have copies of your data and the virtual disk wasn't repaired in-between failures, all data on the virtual disk is permanently lost - delete the virtual disk, create a new virtual disk, and then restore from a backup.|
 |                     |Incomplete |Not enough physical disks are present to read the virtual disk.    <br><br>**Action**: Reconnect any missing physical disks. If you're using Windows Server 2012 R2 or Windows Server 2012, repair the virtual disk using the [Repair-VirtualDisk](https://technet.microsoft.com/itpro/powershell/windows/storage/repair-virtualdisk) after reconnecting disks (Windows Server 2016 and newer do this automatically). <br>If more disks failed than you have copies of your data and the virtual disk wasn't repaired in-between failures, all data on the virtual disk is permanently lost - delete the virtual disk, create a new virtual disk, and then restore from a backup.|
 | |Timeout|Contacting the virtual disk timed out. <br><br> **Action:** **TO DO: Need more info here**   |
-|                     |None |**BLOCKED: Need more info here**       <br>**Action**: |
 |No redundancy||The virtual disk has lost data because too many physical disks failed.<br><br>**Action**: Replace failed physical disks and then restore your data from backup.|
 
 ### Virtual disk health state: Information/Unknown
@@ -103,26 +102,28 @@ The following sections describe the health states a physical disk can be in, as 
 
 |Operational state    |Description|
 |---------            |---------          |
-|Error|**BLOCKED: I'm guessing - is this accurate?** There was a temporary error with the disk.<br><br>**Action**: Consider replacing the disk.|
 |In service|**BLOCKED:What is this?**|
 |Predictive failure|The disk reported that it's close to failing.<br><br>**Action**: Replace the disk.|
 |IO error|There was a temporary error accessing the disk.<br><br>**Action**: If this keeps happening, replace the disk.|
-|Degraded|**BLOCKED:What is this?**|
-|Stressed|**BLOCKED:What is this?**|
-|Dormant|**BLOCKED:Is this retired?**|
-|PowerMode|**BLOCKED:What is this?**|
+|Transient error|There was a temporary error with the disk, but it should resolve and transition to another state.<br><br>**Action**: If this keeps happening, replace the disk.|
 
 ### Disk health state: Unhealthy
 
 |Operational state    |Description|
 |---------            |---------          |
-|Starting|The disk is getting ready for operation. This should be a temporary state - once complete, the disk should transition to a different operational state.|
+|Not usable|This physical disk can't be used by Storage Spaces. For more info see [Storage Spaces Direct hardware requirements](storage-spaces-direct-hardware-requirements.md); if you're not using Storage Spaces Direct, see [Storage Spaces overview](https://technet.microsoft.com/library/hh831739(v=ws.11).aspx#Requirements).|
 |Lost communication|The disk is missing.<br><br>**Action**: Reconnect the disk, or replace it.|
-|Stale metadata|Storage Spaces found old metadata on the disk, which can be a sign of a failing disk.<br><br>**Action**: You can reset the disk and see if this happens again, or you can proactively replace the disk.|
 |Split|The disk has become separated from the pool.<br><br>**Action**: Reset the physical disk, erasing all data from the disk and adding it back to the pool as an empty disk. To do so, open a PowerShell session as an administrator, then run the [Reset-PhysicalDisk](https://technet.microsoft.com/itpro/powershell/windows/storage/reset-physicaldisk) cmdlet. Then run [Repair-VirtualDisk](https://technet.microsoft.com/itpro/powershell/windows/storage/repair-virtualdisk).|
-|Failed media|The disk failed.<br><br>**Action**: Replace the disk.|
+|Stale metadata|Storage Spaces found old metadata on the disk, which can be a sign of a failing disk.<br><br>**Action**: You can reset the disk and see if this happens again, or you can proactively replace the disk.|
 |Unrecognized metadata|Storage Spaces found unrecognized metadata on the disk, which can be a sign of a failing disk.<br><br>**Action**: You can reset the disk and see if this happens again, or you can proactively replace the disk.|
-|Maintenance mode|An administrator placed the disk in maintenance mode, halting reads and writes from the disk. This is usually done before replacing a disk, or when testing failures.<br><br>**Action**: Remove and replace the disk, or take the disk out of maintenance mode, if you were just testing the pool.|
+|Failed media|The disk failed.<br><br>**Action**: Replace the disk.|
+|Device hardware failure|There was a hardware failure on this disk. <br><br>**Action**: Replace the disk.|
+|Starting maintenance mode|An administrator put the disk in maintenance mode, and Storage Spaces is in the process of putting the disk in maintenance mode. This is a temporary state - the disk should soon be in the *In maintenance mode* state.|
+|In maintenance mode|An administrator placed the disk in maintenance mode, halting reads and writes from the disk. This is usually done before replacing a disk, or when testing failures.<br><br>**Action**: Remove and replace the disk, or take the disk out of maintenance mode, if you were just testing the pool.|
+|Stopping maintenance mode|An administrator took the disk out of maintenance mode, and Storage Spaces is in the process of bringing the disk back online. This is a temporary state - the disk should soon be in another state - ideally *OK*.|
+|Updating firmware|Windows is updating the firmware on the physical disk. This is a temporary state that usually lasts less than a minute and during which time other disks in the pool handle all reads and writes. For more info, see [Update drive firmware](update-firmware.md).|
+|Removing from pool|Storage Spaces is in the process of removing the physical disk from its storage pool. <br><br> This is a temporary state. After the removal is complete, if the disk is still attached to the system, the disk transitions to another operational state (usually OK) in a primordial pool.|
+|Starting|The disk is getting ready for operation. This should be a temporary state - once complete, the disk should transition to a different operational state.|
 
 ## Reasons a physical disk can't be pooled
 
