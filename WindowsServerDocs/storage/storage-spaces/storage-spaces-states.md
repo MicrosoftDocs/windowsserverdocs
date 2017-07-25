@@ -1,10 +1,10 @@
 ---
 title: Health states for Storage Spaces
 description: How to understand the different health and operational states of Storage Spaces, and what to do about them.
-keywords: Storage Spaces, detached, virtual disk, physical disk, storage pool, degraded
+keywords: Storage Spaces,detached,virtual disk,physical disk,degraded
 author: jasongerend
 ms.author: jgerend
-ms.date: 07/20/2017
+ms.date: 7/27/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: storage-spaces
@@ -26,7 +26,7 @@ The following sections list the operational states that map to each health state
 
 |Operational state    |Description|
 |---------            |---------          |
-|OK|The storage pool is OK.|
+|OK|The storage pool is healthy.|
 
 ### Pool health state: Warning
 
@@ -34,7 +34,7 @@ When the storage pool is in the **Warning** health state, it means that the pool
 
 |Operational state    |Description|
 |---------            |---------          |
-|Degraded|There are failed or missing physical disks in the storage pool. <br><br>**Action**: Check the state of your physical disks and replace any failed disks.|
+|Degraded|There are failed or missing physical disks in the storage pool. <br><br>**Action**: Check the state of your physical disks and replace any failed disks before there are additional failures.|
 
 ### Pool health state: Error
 
@@ -56,7 +56,7 @@ The following sections list the operational states that map to each health state
 
 |Operational state    |Description|
 |---------            |---------          |
-|OK    |The virtual disk is OK.|
+|OK    |The virtual disk is healthy.|
 |Suboptimal    |Data isn't written evenly across physical disks. <br><br>**Action**: Optimize drive usage in the storage pool by running the [Optimize-StoragePool](https://technet.microsoft.com/itpro/powershell/windows/storage/optimize-storagepool) cmdlet.|
 
 ### Virtual disk health state: Warning
@@ -66,8 +66,8 @@ When the virtual disk is in a **Warning** health state, it means that one or mor
 |Operational state    |Description|
 |---------            |---------          |
 |In service            |Windows is repairing the virtual disk, such as after adding or removing a physical disk. When the repair is complete, the virtual disk should return to the OK health state.|
-|Incomplete           |The resilience of the virtual disk is reduced because one or more physical disks failed or are missing. However, the missing physical disks contain up-to-date copies of your data.<br><br> **Action**: Reconnect any missing disks, replace any failed disks, and then repair the virtual disk using the [Repair-VirtualDisk](https://technet.microsoft.com/itpro/powershell/windows/storage/repair-virtualdisk) cmdlet after reconnecting disks. If you're using Windows Server 2016 you don't need to use Repair-VirtualDisk - reconnecting or replacing the disk automatically starts a repair.|
-|Degraded             |The resilience of the virtual disk is reduced because one or more physical disks failed or are missing, and there are outdated copies of your data on these physical disks. <br><br>**Action**: Reconnect any missing disks, replace any failed disks, and then repair the virtual disk using the [Repair-VirtualDisk](https://technet.microsoft.com/itpro/powershell/windows/storage/repair-virtualdisk) cmdlet after reconnecting disks. If you're using Windows Server 2016 you don't need to use Repair-VirtualDisk - reconnecting or replacing the disk automatically starts a repair.|
+|Incomplete           |The resilience of the virtual disk is reduced because one or more physical disks failed or are missing. However, the missing physical disks contain up-to-date copies of your data.<br><br> **Action**: Reconnect any missing disks, replace any failed disks, and then repair the virtual disk using the [Repair-VirtualDisk](https://technet.microsoft.com/itpro/powershell/windows/storage/repair-virtualdisk) cmdlet. If you're using Windows Server 2016 you don't need to use Repair-VirtualDisk - reconnecting or replacing the disk automatically starts a repair if needed.|
+|Degraded             |The resilience of the virtual disk is reduced because one or more physical disks failed or are missing, and there are outdated copies of your data on these physical disks. <br><br>**Action**: Reconnect any missing disks, replace any failed disks, and then repair the virtual disk using the [Repair-VirtualDisk](https://technet.microsoft.com/itpro/powershell/windows/storage/repair-virtualdisk) cmdlet. If you're using Windows Server 2016 you don't need to use Repair-VirtualDisk - reconnecting or replacing the disk automatically starts a repair if needed.|
 
 ### Virtual disk health state: Unhealthy
 
@@ -75,8 +75,8 @@ When a virtual disk is in an **Unhealthy** health state, some or all of the data
 
 |Operational state    |Detached reason |Description|
 |---------            |---------       |--------   |
-|Detached            |Majority Disks Unhealthy |Too many physical disks used by this virtual disk failed, are missing, or have stale data.   <br><br>**Action**: Reconnect any missing physical disks and replace any failed disks. If you're using Windows Server 2012 R2 or Windows Server 2012, repair the virtual disk using the [Repair-VirtualDisk](https://technet.microsoft.com/itpro/powershell/windows/storage/repair-virtualdisk) after reconnecting disks (Windows Server 2016 and newer do this automatically). <br>If more disks failed than you have copies of your data and the virtual disk wasn't repaired in-between failures, all data on the virtual disk is permanently lost - delete the virtual disk, create a new virtual disk, and then restore from a backup.|
-|                     |Incomplete |Not enough physical disks are present to read the virtual disk.    <br><br>**Action**: Reconnect any missing physical disks. If you're using Windows Server 2012 R2 or Windows Server 2012, repair the virtual disk using the [Repair-VirtualDisk](https://technet.microsoft.com/itpro/powershell/windows/storage/repair-virtualdisk) after reconnecting disks (Windows Server 2016 and newer do this automatically). <br>If more disks failed than you have copies of your data and the virtual disk wasn't repaired in-between failures, all data on the virtual disk is permanently lost - delete the virtual disk, create a new virtual disk, and then restore from a backup.|
+|Detached            |Majority Disks Unhealthy |Too many physical disks used by this virtual disk failed, are missing, or have stale data.   <br><br>**Action**: Reconnect any missing disks, replace any failed disks, and then repair the virtual disk using the [Repair-VirtualDisk](https://technet.microsoft.com/itpro/powershell/windows/storage/repair-virtualdisk) cmdlet. If you're using Windows Server 2016 you don't need to use Repair-VirtualDisk - reconnecting or replacing the disk automatically starts a repair if needed. <br>If more disks failed than you have copies of your data and the virtual disk wasn't repaired in-between failures, all data on the virtual disk is permanently lost - delete the virtual disk, create a new virtual disk, and then restore from a backup.|
+|                     |Incomplete |Not enough physical disks are present to read the virtual disk.    <br><br>**Action**: Reconnect any missing physical disks and then repair the virtual disk using the [Repair-VirtualDisk](https://technet.microsoft.com/itpro/powershell/windows/storage/repair-virtualdisk) cmdlet. If you're using Windows Server 2016 you don't need to use Repair-VirtualDisk - reconnecting the disk automatically starts a repair if needed. <br>If more disks failed than you have copies of your data and the virtual disk wasn't repaired in-between failures, all data on the virtual disk is permanently lost - delete the virtual disk, create a new virtual disk, and then restore from a backup.|
 | |Timeout|Contacting the virtual disk timed out. <br><br> **Action:** **TO DO: Need more info here**   |
 |No redundancy||The virtual disk has lost data because too many physical disks failed.<br><br>**Action**: Replace failed physical disks and then restore your data from backup.|
 
@@ -86,42 +86,46 @@ The virtual disk can also be in the **Information** health state (as shown in th
 
 |Operational state    |Detached reason |Description|
 |---------            |---------       |--------   |
-|Detached             |By Policy            |An administrator took the virtual disk offline, or set the virtual disk to require manual attachment, in which case you'll have to manually attach the virtual disk every time Windows restarts.**Action**: Bring the virtual disk back online. To do so when the virtual disk is in a clustered storage pool, in Failover Cluster Manager select **Storage** > **Pools** > **Virtual Disks**, select the virtual disk that shows the **Offline** status and then select **Bring Online**. <br><br>To bring a virtual disk back online when not in a cluster, you can try opening a PowerShell session as an Administrator and then using the following command:<br> `Get-VirtualDisk | Where-Object -Filter { $_.OperationalStatus -eq "Detached" } | Connect-VirtualDisk`<br><br>To automatically attach all current virtual disks after Windows restarts, which is only relevant to non-clustered virtual disks, open a PowerShell session as an Administrator and then use the following command:<br> `Get-VirtualDisk | Set-VirtualDisk -ismanualattach $true`|
+|Detached             |By Policy            |An administrator took the virtual disk offline, or set the virtual disk to require manual attachment, in which case you'll have to manually attach the virtual disk every time Windows restarts.,<br><br>**Action**: Bring the virtual disk back online. To do so when the virtual disk is in a clustered storage pool, in Failover Cluster Manager select **Storage** > **Pools** > **Virtual Disks**, select the virtual disk that shows the **Offline** status and then select **Bring Online**. <br><br>To bring a virtual disk back online when not in a cluster, you can try opening a PowerShell session as an Administrator and then using the following command:<br> `Get-VirtualDisk | Where-Object -Filter { $_.OperationalStatus -eq "Detached" } | Connect-VirtualDisk`<br><br>To automatically attach all non-clustered virtual disks after Windows restarts, open a PowerShell session as an Administrator and then use the following command:<br> `Get-VirtualDisk | Set-VirtualDisk -ismanualattach $true`|
 
 ## Physical disk states
 
-The following sections describe the health states a physical disk can be in, as well as the reasons a physical disk can't be added to a storage pool
+The following sections describe the health states a physical disk can be in.
 
 ### Disk health state: OK
 
 |Operational state    |Description|
 |---------            |---------          |
-|OK|The disk is OK.|
+|OK|The disk is healthy.|
 
 ### Disk health state: Warning
 
+A physical disk in the Warning state can read and write data successfully, but has an issue.
+
 |Operational state    |Description|
 |---------            |---------          |
-|In service|**BLOCKED:What is this?**|
+|In service|Windows is performing a repair operation on a virtual disk that uses this physical disk, which can happen after adding or removing a physical disk. When the repair is complete, the physical disk should return to the *OK* health state.|
+|Starting maintenance mode|Storage Spaces is in the process of putting the disk in maintenance mode after an administrator put the disk in maintenance mode. This is a temporary state - the disk should soon be in the *In maintenance mode* state.|
+|In maintenance mode|An administrator placed the disk in maintenance mode, halting reads and writes from the disk. This is usually done before replacing a disk, or when testing failures.<br><br>**Action**: Remove and replace the disk, or take the disk out of maintenance mode by using the [Disable-StorageMaintenanceMode](https://technet.microsoft.com/itpro/powershell/windows/storage/disable-storagemaintenancemode) cmdlet.|
+|Stopping maintenance mode|An administrator took the disk out of maintenance mode, and Storage Spaces is in the process of bringing the disk back online. This is a temporary state - the disk should soon be in another state - ideally *OK*.|
 |Predictive failure|The disk reported that it's close to failing.<br><br>**Action**: Replace the disk.|
 |IO error|There was a temporary error accessing the disk.<br><br>**Action**: If this keeps happening, replace the disk.|
 |Transient error|There was a temporary error with the disk, but it should resolve and transition to another state.<br><br>**Action**: If this keeps happening, replace the disk.|
 
 ### Disk health state: Unhealthy
 
+A physical disk in the Unhealthy state can't currently be written to or accessed.
+
 |Operational state    |Description|
 |---------            |---------          |
 |Not usable|This physical disk can't be used by Storage Spaces. For more info see [Storage Spaces Direct hardware requirements](storage-spaces-direct-hardware-requirements.md); if you're not using Storage Spaces Direct, see [Storage Spaces overview](https://technet.microsoft.com/library/hh831739(v=ws.11).aspx#Requirements).|
 |Lost communication|The disk is missing.<br><br>**Action**: Reconnect the disk, or replace it.|
-|Split|The disk has become separated from the pool.<br><br>**Action**: Reset the physical disk, erasing all data from the disk and adding it back to the pool as an empty disk. To do so, open a PowerShell session as an administrator, then run the [Reset-PhysicalDisk](https://technet.microsoft.com/itpro/powershell/windows/storage/reset-physicaldisk) cmdlet. Then run [Repair-VirtualDisk](https://technet.microsoft.com/itpro/powershell/windows/storage/repair-virtualdisk).|
-|Stale metadata|Storage Spaces found old metadata on the disk, which can be a sign of a failing disk.<br><br>**Action**: You can reset the disk and see if this happens again, or you can proactively replace the disk.|
-|Unrecognized metadata|Storage Spaces found unrecognized metadata on the disk, which can be a sign of a failing disk.<br><br>**Action**: You can reset the disk and see if this happens again, or you can proactively replace the disk.|
+|Split|The disk has become separated from the pool.<br><br>**Action**: Reset the physical disk, erasing all data from the disk and adding it back to the pool as an empty disk. To do so, open a PowerShell session as an administrator, run the [Reset-PhysicalDisk](https://technet.microsoft.com/itpro/powershell/windows/storage/reset-physicaldisk) cmdlet, and then run [Repair-VirtualDisk](https://technet.microsoft.com/itpro/powershell/windows/storage/repair-virtualdisk).|
+|Stale metadata|Storage Spaces found old metadata on the disk, which can be a sign of a failing disk.<br><br>**Action**: You can reset the disk and see if this happens again, or you can proactively replace the disk. To reset the disk, open a PowerShell session as an administrator, run the [Reset-PhysicalDisk](https://technet.microsoft.com/itpro/powershell/windows/storage/reset-physicaldisk) cmdlet, and then run [Repair-VirtualDisk](https://technet.microsoft.com/itpro/powershell/windows/storage/repair-virtualdisk).|
+|Unrecognized metadata|Storage Spaces found unrecognized metadata on the disk, which can be a sign of a failing disk.<br><br>**Action**: You can reset the disk and see if this happens again, or you can proactively replace the disk. To reset the disk, open a PowerShell session as an administrator, run the [Reset-PhysicalDisk](https://technet.microsoft.com/itpro/powershell/windows/storage/reset-physicaldisk) cmdlet, and then run [Repair-VirtualDisk](https://technet.microsoft.com/itpro/powershell/windows/storage/repair-virtualdisk).|
 |Failed media|The disk failed.<br><br>**Action**: Replace the disk.|
 |Device hardware failure|There was a hardware failure on this disk. <br><br>**Action**: Replace the disk.|
-|Starting maintenance mode|An administrator put the disk in maintenance mode, and Storage Spaces is in the process of putting the disk in maintenance mode. This is a temporary state - the disk should soon be in the *In maintenance mode* state.|
-|In maintenance mode|An administrator placed the disk in maintenance mode, halting reads and writes from the disk. This is usually done before replacing a disk, or when testing failures.<br><br>**Action**: Remove and replace the disk, or take the disk out of maintenance mode, if you were just testing the pool.|
-|Stopping maintenance mode|An administrator took the disk out of maintenance mode, and Storage Spaces is in the process of bringing the disk back online. This is a temporary state - the disk should soon be in another state - ideally *OK*.|
-|Updating firmware|Windows is updating the firmware on the physical disk. This is a temporary state that usually lasts less than a minute and during which time other disks in the pool handle all reads and writes. For more info, see [Update drive firmware](update-firmware.md).|
+|Updating firmware|Windows is updating the firmware on the physical disk. This is a temporary state that usually lasts less than a minute and during which time other disks in the pool handle all reads and writes. For more info, see [Update drive firmware](../update-firmware.md).|
 |Removing from pool|Storage Spaces is in the process of removing the physical disk from its storage pool. <br><br> This is a temporary state. After the removal is complete, if the disk is still attached to the system, the disk transitions to another operational state (usually OK) in a primordial pool.|
 |Starting|The disk is getting ready for operation. This should be a temporary state - once complete, the disk should transition to a different operational state.|
 
