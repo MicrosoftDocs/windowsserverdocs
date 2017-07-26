@@ -8,7 +8,7 @@ ms.suite: na
 ms.technology: server-general
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.date: 03/30/2017
+ms.date: 07/26/2017
 ms.assetid: 0c3dc323-8beb-4d7d-a2e0-12bda848ddcb
 author: lizap
 ms.author: elizapo
@@ -18,7 +18,12 @@ manager: dongill
 
 Windows Server is the platform for building an infrastructure of connected applications, networks, and web services, from the workgroup to the data center.
 
-Use the links below to view content for the different versions of Windows Server.
+Use the links below to view technical content for the different versions of Windows Server.
+
+> [!IMPORTANT]
+> Do you have Windows running on your PC? Windows 10, Windows 8 or 8.1? Windows 7? Do you have a problem? Go to [Microsoft Support](https://support.microsoft.com) - just type your problem into the search bar. They have information about Windows, Office, Skype, you name it. 
+
+> The information below is *only* about Windows **Server**.
 
 ## Windows Server 2016
 
