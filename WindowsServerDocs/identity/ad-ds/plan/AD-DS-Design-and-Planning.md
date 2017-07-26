@@ -15,7 +15,7 @@ ms.technology: identity-adds
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-By deploying  Windows Server 2008  Active Directory Domain Services (AD DS) in your environment, you can take advantage of the centralized, delegated administrative model and single sign-on (SSO) capability that AD DS provides. After you identify the deployment tasks and current environment for your organization, you can create the AD DS deployment strategy that meets your organization's needs.  
+By deploying Windows Server Active Directory Domain Services (AD DS) in your environment, you can take advantage of the centralized, delegated administrative model and single sign-on (SSO) capability that AD DS provides. After you identify the deployment tasks and current environment for your organization, you can create the AD DS deployment strategy that meets your organization's needs.  
   
 ## About this guide  
 This guide provides recommendations to help you develop an AD DS deployment strategy based on the requirements of your organization and the particular design that you want to create. This guide is intended for use by infrastructure specialists or system architects. Before you read this guide, you should have a good understanding of how AD DS works on a functional level. You should also have a good understanding of the organizational requirements that will be reflected in your AD DS deployment strategy.  
