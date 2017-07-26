@@ -2,7 +2,6 @@
 title: Attach additional stations to your MultiPoint server
 description: Add more stations to your MultiPoint Services deployment
 ms.custom: na
-ms.date: 07/22/2016
 ms.prod: windows-server-threshold
 ms.technology: multipoint-services
 ms.reviewer: na
@@ -36,7 +35,7 @@ For instructions that explain how to set up each type of station, see the follow
   
 -   [Set up an RDP-over-LAN connected station](Set-up-an-RDP-over-LAN-connected-station-in-MultiPoint-services.md)  
   
-For a detailed comparison of station types, see [Station type comparison](multipoint-services-stations.md#a-namebkmkstationtypecomparisonastation-type-comparison).  
+For a detailed comparison of station types, see [Station type comparison](multipoint-services-stations.md#BKMK_StationTypeComparison).  
   
 > [!NOTE]  
 > -   The procedures for attaching stations do not describe how to set up intermediate hubs or downstream hubs. For information about where to install these hubs, see [MultiPoint Stations](MultiPoint-services-Stations.md).  
