@@ -128,14 +128,6 @@ Windows 10 VPN allows rules to be defined so that specific domain name queries w
 
 Windows 10 VPN includes this feature to ensure that VPN connectivity is not triggered if a user is connected to a trusted network within the corporate boundary. This feature can be combined with any of the above triggering methods to provide a seamless ‘only connect when needed’ user experience.
 
-### Device Tunnel
-
-Windows 10 VPN in the planned RS3 \(Fall 2017 release\) will provide the ability to create a dedicated VPN profile for device or machine connectivity independent of the typical user-based VPN connection \(termed the user tunnel\). 
-
-This allows the VPN to establish connectivity prior to user logon and provides feature parity with the ‘infrastructure tunnel’ concept used in DirectAccess. 
-
-Traffic filters can be used to control what corporate resources as available via the device tunnel and machine certificate authentication is employed. Both device and user tunnels operate independently with their own VPN profiles; can be connected at the same time, and can use different authentication methods and other VPN configuration settings, as appropriate.
-
 ## Advanced Networking
 
 Following are the Advanced Networking features for Windows 10 VPN.
@@ -151,7 +143,6 @@ In addition to defining global VPN connection routing policies for Internet and 
 ### Exclusion Routes
 
 Windows 10 VPN platform supports the ability to specify exclusion routes that specifically control routing behavior to define which traffic should only ever traverse the VPN and not go over the physical network interface.
-
 
 ## Advanced Interoperability
 
