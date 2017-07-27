@@ -111,13 +111,13 @@ Before creating the template, you first need to note a few NPS server settings. 
 
 2.  In the Network Policy Server snap-in, under **Policies**, click **Network Policies**.
 
-3.  Right-click **Virtual Private Network (VPN) Connections**, and click **Properties**.
+3.  Right-click **Virtual Private Network \(VPN\) Connections**, and click **Properties**.
 
-4.  On the Virtual Private Network (VPN) Connections Properties dialog box, on the **Constraints** tab, click **Authentication Methods**.
+4.  On the Virtual Private Network \(VPN\) Connections Properties dialog box, on the **Constraints** tab, click **Authentication Methods**.
 
 5.  In **EAP Types**, click **Microsoft: Protected EAP (PEAP)**, and then click **Edit**.
 
-6.  Record the values for **Certificate issued to** and **Issuer**. You will use these values in the upcoming VPN template configuration. For example, if the server’s FQDN is nps01.corp.contoso.com and the host name is NPS01, the certificate is likely issued to NPS01.
+6.  Record the values for **Certificate issued to** and **Issuer**. You will use these values in the upcoming VPN template configuration. For example, if the server’s FQDN is nps01.corp.contoso.com and the host name is NPS01, the certificate name is based upon the FQDN or DNS name of the server - for example, nps01.corp.contoso.com.
 
 7.  Cancel the Edit Protected EAP Properties dialog box.
 
