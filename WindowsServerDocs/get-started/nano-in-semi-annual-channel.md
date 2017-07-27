@@ -5,7 +5,7 @@ ms.prod: Windows Server
 ms.mktglfcycl: manage
 ms.sitesec: library
 author: jaimeo
-localizationpriority: high
+ms.localizationpriority: high
 ms.date: 
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
