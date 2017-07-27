@@ -42,8 +42,8 @@ When a storage pool is in the **Error** health state, it means that the storage 
 
 |Operational state    |Read-only reason |Description|
 |---------            |---------       |--------   |
-|Read-only|Incomplete|This can occur if the storage pool pool loses its quorum, which means that the majority of disks in the pool have failed or are offline for some reason. When a pool loses its quorum, Storage Spaces automatically sets the pool configuration to read-only until enough disks become available again.<br><br>**Action:** Reconnect any missing disks and then set the pool back to read-write by opening a PowerShell session with administrative permissions and then typing `Get-StoragePool <PoolName> | Set-StoragePool -IsReadOnly $false`|
-||Policy|An administrator set the storage pool to read-only.<br><br>**Action:** To set a storage pool to read-write access by using Windows PowerShell, open a PowerShell session with administrative permissions and then type `Get-StoragePool <PoolName> | Set-StoragePool -IsReadOnly $false`|
+|Read-only|Incomplete|This can occur if the storage pool pool loses its quorum, which means that the majority of disks in the pool have failed or are offline for some reason. When a pool loses its quorum, Storage Spaces automatically sets the pool configuration to read-only until enough disks become available again.<br><br>**Action:** Reconnect any missing disks and then set the pool back to read-write by opening a PowerShell session with administrative permissions and then typing: `Get-StoragePool <PoolName> | Set-StoragePool -IsReadOnly $false`|
+||Policy|An administrator set the storage pool to read-only.<br><br>**Action:** To set a storage pool to read-write access by using Windows PowerShell, open a PowerShell session with administrative permissions and then type: `Get-StoragePool <PoolName> | Set-StoragePool -IsReadOnly $false`|
 ||Starting|Storage Spaces is starting. This should be a temporary state. Once completely started, the pool should transition to a different operational state.|
 
 ## Virtual disk states
@@ -105,8 +105,9 @@ A physical disk in the Warning state can read and write data successfully, but h
 |Operational state    |Description|
 |---------            |---------          |
 |In service|Windows is performing a repair operation on a virtual disk that uses this physical disk, which can happen after adding or removing a physical disk. When the repair is complete, the physical disk should return to the *OK* health state.|
+|Removing from pool|Storage Spaces is in the process of removing the physical disk from its storage pool. <br><br> This is a temporary state. After the removal is complete, if the disk is still attached to the system, the disk transitions to another operational state (usually OK) in a primordial pool.|
 |Starting maintenance mode|Storage Spaces is in the process of putting the disk in maintenance mode after an administrator put the disk in maintenance mode. This is a temporary state - the disk should soon be in the *In maintenance mode* state.|
-|In maintenance mode|An administrator placed the disk in maintenance mode, halting reads and writes from the disk. This is usually done before replacing a disk, or when testing failures.<br><br>**Action**: Remove and replace the disk, or take the disk out of maintenance mode by using the [Disable-StorageMaintenanceMode](https://technet.microsoft.com/itpro/powershell/windows/storage/disable-storagemaintenancemode) cmdlet.|
+|In maintenance mode|An administrator placed the disk in maintenance mode or is removing the disk from the pool, halting reads and writes from the disk. This is usually done before replacing a disk, or when testing failures.<br><br>**Action**: Remove and replace the disk, or take the disk out of maintenance mode by using the [Disable-StorageMaintenanceMode](https://technet.microsoft.com/itpro/powershell/windows/storage/disable-storagemaintenancemode) cmdlet.|
 |Stopping maintenance mode|An administrator took the disk out of maintenance mode, and Storage Spaces is in the process of bringing the disk back online. This is a temporary state - the disk should soon be in another state - ideally *OK*.|
 |Predictive failure|The disk reported that it's close to failing.<br><br>**Action**: Replace the disk.|
 |IO error|There was a temporary error accessing the disk.<br><br>**Action**: If this keeps happening, replace the disk.|
@@ -126,7 +127,6 @@ A physical disk in the Unhealthy state can't currently be written to or accessed
 |Failed media|The disk failed.<br><br>**Action**: Replace the disk.|
 |Device hardware failure|There was a hardware failure on this disk. <br><br>**Action**: Replace the disk.|
 |Updating firmware|Windows is updating the firmware on the physical disk. This is a temporary state that usually lasts less than a minute and during which time other disks in the pool handle all reads and writes. For more info, see [Update drive firmware](../update-firmware.md).|
-|Removing from pool|Storage Spaces is in the process of removing the physical disk from its storage pool. <br><br> This is a temporary state. After the removal is complete, if the disk is still attached to the system, the disk transitions to another operational state (usually OK) in a primordial pool.|
 |Starting|The disk is getting ready for operation. This should be a temporary state - once complete, the disk should transition to a different operational state.|
 
 ## Reasons a physical disk can't be pooled
@@ -139,7 +139,7 @@ Some physical disks just aren't ready to be in a storage pool. If you try to add
 |Not healthy|The physical disk isn't in a healthy state and might need to be replaced.|
 |Removable media|The physical disk is classified as a removable disk. <br><br>Storage Spaces doesn't support media that are recognized by Windows as removable, such as Blu-Ray drives. Although many fixed disks are in removable slots, in general, media that are *classified* by Windows as removable aren't suitable for use with Storage Spaces.|
 |In use by cluster|The physical disk is currently used by a Failover Cluster.|
-|Offline|The physical disk is offline. <br><br>To bring all offline disks online and set to read/write, open a PowerShell session as an administrator and use the following scripts:<br><br>`Get-Disk | Where-Object -Property OperationalStatus -EQ "Offline" | Set-Disk -IsOffline $false`<br><br>`Get-Disk |    Where-Object -Property IsReadOnly -EQ $true | Set-Disk -IsReadOnly $false`|
+|Offline|The physical disk is offline. <br><br>To bring all offline disks online and set to read/write, open a PowerShell session as an administrator and use the following scripts:<br><br>`Get-Disk | Where-Object -Property OperationalStatus -EQ "Offline" | Set-Disk -IsOffline $false`<br><br>`Get-Disk | Where-Object -Property IsReadOnly -EQ $true | Set-Disk -IsReadOnly $false`|
 |Insufficient capacity|The physical disk is too small to be pooled.|
 |Verification in progress|The [Health Service](https://docs.microsoft.com/windows-server/failover-clustering/health-service-overview#supported-components-document) is checking to see if the disk or firmware on the disk is approved for use by the server administrator.|
 |Verification failed|The [Health Service](https://docs.microsoft.com/windows-server/failover-clustering/health-service-overview#supported-components-document) couldn't check to see if the disk or firmware on the disk is approved for use by the server administrator.|
