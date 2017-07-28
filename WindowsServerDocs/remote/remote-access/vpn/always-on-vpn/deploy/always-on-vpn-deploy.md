@@ -54,14 +54,13 @@ This guide provides instructions on how to deploy Remote Access Always On VPN co
 
 - You must have an Active Directory domain infrastructure, including one or more Domain Name System \(DNS\) servers.
 - You must have a Public Key Infrastructure \(PKI\) and Active Directory Certificate Services \(AD CS\).
-- You must have a perimeter network that includes two firewalls. For more information, see [Remote Access Always On VPN Deployment Overview]()
+- You must have a perimeter network that includes two firewalls. For more information, see [Remote Access Always On VPN Deployment Overview](always-on-vpn-deploy-overview.md)
 - Remote client computers must be joined to the Active Directory domain.
 - Remote client computers must be running the Windows 10 Anniversary Update \(version 1607\) or later operating system.
 - You must be prepared to deploy one new physical server on your network, upon which you will install both Remote Access and Network Policy Server \(NPS\) as a Remote Authentication Dial-In User Service \(RADIUS\) proxy. This server must have two Ethernet network adapters installed.
-- You must be prepared to install NPS as a RADIUS server on an organization domain controller or on a new physical server. Installing NPS as a RADIUS server on a domain controller is a recommended best practice. For more information, see [Network Policy Server Best Practices](https://docs.microsoft.com/windows-server/networking/technologies/nps/nps-best-practices).
-- You must read the planning section of this guide to ensure that you are prepared for this deployment before you perform the deployment. 
-- You must perform the steps in this guide in the order in which they are presented. 
-
+- You must be prepared to install NPS as a RADIUS server on an existing server or virtual machine \(VM\), on a new physical server, or on a new VM. If you already have NPS servers on your network, you can modify an existing NPS server configuration rather than adding a new server.
+- You must read the planning section of this guide to ensure that you are prepared for this deployment before you perform the deployment.
+- You must perform the steps in this guide in the order in which they are presented.
 
 ## <a name="bkmk_not"></a>What this guide does not provide
 
