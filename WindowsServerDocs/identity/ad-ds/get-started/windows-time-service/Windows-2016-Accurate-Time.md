@@ -80,7 +80,7 @@ There are many different reasons you might need accurate time.  The typical case
 Windows Server 2016 has improved the algorithms it uses to correct time and condition the local clock to synchronize with UTC.  NTP uses 4 values to calculate the time offset, based on the timestamps of the client request/response and server request/response.  However, networks are noisy, and there can be spikes in the data from NTP due to network congestion and other factors that affect network latency.  Windows 2016 algorithms average out this noise using a number of different techniques which results in a stable and accurate clock.  Additionally, the source we use for accurate time references an improved API which gives us better resolution.  With these improvements we are able to achieve 1 ms accuracy with regards to UTC across a domain.
 
 ### Hyper-V
-Windows 2016 has improved the Hyper-V TimeSync service. Improvements include more accurate initial time on VM start or VM restore and interrupt latency correction for samples provided to w32time.  This improvement allows us to stay with-in 10µs of the host with an RMS, (Root Mean Squared, which indicates variance), of 50µs, even on a machine with %75 load.
+Windows 2016 has improved the Hyper-V TimeSync service. Improvements include more accurate initial time on VM start or VM restore and interrupt latency correction for samples provided to w32time.  This improvement allows us to stay with-in 10µs of the host with an RMS, (Root Mean Squared, which indicates variance), of 50µs, even on a machine with 75% load.
 
 > [!NOTE]
 > See this article on [Hyper-V architecture](https://msdn.microsoft.com/library/cc768520.aspx) for more information.
@@ -147,7 +147,7 @@ Domain Controllers should be minimally impacted even with the multiplied effect 
 
 As a conservative plan, you should reserve 100 NTP requests per second per core.  For instance, a domain made up of 4 DCs with 4 cores each, you should be able to serve 1600 NTP requests per second.  If you have 10k clients configured to sync time once every 64 seconds, and the requests are received uniformly over time, you would see 10,000/64 or around 160 requests/second, spread across all DCs.  This falls easily within our 1600 NTP requests/sec based on this example.  These are conservative planning recommendations and of course have a large dependency on your network, processor speeds and loads, so as always baseline and test in your environments.
 
-It is also important to note that if your DCs are running with a considerable CPU load, greater than %40, this will almost certainly add noise to NTP responses and affect your time accuracy in your domain.  Again, you need to test in your environment to understand the actual results.
+It is also important to note that if your DCs are running with a considerable CPU load, greater than 40%, this will almost certainly add noise to NTP responses and affect your time accuracy in your domain.  Again, you need to test in your environment to understand the actual results.
 
 ## Time Accuracy Measurements
 ### Methodology
@@ -296,8 +296,8 @@ Source|	Local CMOS Clock|
 Phase Offset|	0.0000000s|
 Server Role|	576 (Reliable Time Service)|
 
-#### Windows Server 2016 on 3rd Party Virtual platforms
-When Windows is virtualized, by default the Hypervisor is responsible for providing time.  But domain joined members need to be sychronized with the Domain Controller in order for Active Directory to work properly.  It is best to disable any time virtualization between the guest and the host of any 3rd Patry Virtual platforms.
+#### Windows Server 2016 on 3rd Party Virtual Platforms
+When Windows is virtualized, by default the Hypervisor is responsible for providing time.  But domain joined members need to be sychronized with the Domain Controller in order for Active Directory to work properly.  It is best to disable any time virtualization between the guest and the host of any 3rd party virtual platforms.
 
 #### Discovering the Hierarchy
 Since the chain of time hierarchy to the master clock source is dynamic in a domain, and negotiated, you will need to query the status of a particular machine to understand it’s time source and chain to the master source clock.  This can help diagnose time synchronization problems.
