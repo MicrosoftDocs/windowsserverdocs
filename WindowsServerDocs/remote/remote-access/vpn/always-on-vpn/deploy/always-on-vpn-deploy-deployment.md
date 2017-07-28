@@ -15,25 +15,34 @@ author: jamesmci
 
 You can use the following sections to deploy Always On VPN connections for remote Windows 10 client computers that are joined to your domain.
 
-- [Configure the Always On VPN Server Infrastructure](vpn-deploy-server-infrastructure.md). You can use this topic to complete the following steps.
+## [Configure the Always On VPN Server Infrastructure](vpn-deploy-server-infrastructure.md)
 
-	- On a server configured with Active Directory Domain Services: Enable certificate autoenrollment in Group Policy for both computers and users, create the VPN Users Group, the VPN Servers Group, and the NPS Servers Group, and add members to each group.
-	- On an Active Directory Certificate Server CA: Create the User Authentication, VPN Server Authentication, and NPS Server Authentication certificate templates.
-	- On domain-joined Windows 10 clients: Enroll and validate user certificates.
+You can use this topic to complete the following steps.
 
-- [Configure the Remote Access Server and NPS Server for Always On VPN](vpn-deploy-ras.md). You can use this topic to complete the following steps.
+- On a server configured with Active Directory Domain Services: Enable certificate autoenrollment in Group Policy for both computers and users, create the VPN Users Group, the VPN Servers Group, and the NPS Servers Group, and add members to each group.
+- On an Active Directory Certificate Server CA: Create the User Authentication, VPN Server Authentication, and NPS Server Authentication certificate templates.
+- On domain-joined Windows 10 clients: Enroll and validate user certificates.
 
-	- Enroll and validate the VPN server certificate
-	- Install and configure Remote Access VPN
-	- Install and configure Network Policy Server \(NPS\) as a RADIUS proxy
+## [Configure the Remote Access Server and NPS Server for Always On VPN](vpn-deploy-ras.md)
 
-- [Configure DNS and Firewall Settings for Always On VPN](vpn-deploy-dns-firewall.md). You can use this topic to complete the following steps.
+You can use this topic to complete the following steps.
 
-	- Configure DNS and Edge Firewall settings.
+- Enroll and validate the VPN server certificate
+- Install and configure Remote Access VPN
+- Install and configure Network Policy Server \(NPS\) as a RADIUS proxy
+- Install and configure your organization NPS server as a RADIUS server
 
-- [Configure Windows 10 Client Always On VPN Connections](vpn-deploy-client-vpn-connections.md). You can use this topic to complete the following steps.
+## [Configure DNS and Firewall Settings for Always On VPN](vpn-deploy-dns-firewall.md)
 
-	- Configure the Remote Access Always On VPN client by using Windows PowerShell, Microsoft System Center Configuration Manager, or Intune.
+You can use this topic to complete the following steps.
+
+- Configure DNS and Edge Firewall settings.
+
+## [Configure Windows 10 Client Always On VPN Connections](vpn-deploy-client-vpn-connections.md)
+
+You can use this topic to complete the following steps.
+
+- Configure the Remote Access Always On VPN client by using Windows PowerShell, Microsoft System Center Configuration Manager, or Intune.
 
 
 For the next section in this guide, see [Configure the Always On VPN Server Infrastructure](vpn-deploy-server-infrastructure.md).

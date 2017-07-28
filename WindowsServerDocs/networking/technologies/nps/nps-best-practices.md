@@ -65,8 +65,6 @@ Following are the best practices for installing NPS.
 
 - Before installing NPS, install and test each of your network access servers using local authentication methods before you configure them as RADIUS clients in NPS.
 
-- For optimum performance, install NPS on a domain controller.
-
 - After you install and configure NPS, save the configuration by using the Windows PowerShell command [Export-NpsConfiguration](https://technet.microsoft.com/en-us/library/jj872749.aspx). Save the NPS configuration with this command each time you reconfigure the NPS server.
 
 >[!CAUTION]

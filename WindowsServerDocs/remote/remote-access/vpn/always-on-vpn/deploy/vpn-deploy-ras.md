@@ -18,7 +18,7 @@ You can use this section to install and configure the following items on two dif
 
 ## VPN/NPS proxy server
 
-1. On the computer that is planned as the VPN server, and that is installed on your perimeter network, you can install both Remote Access and Network Policy Server \(NPS\). 
+1. On the computer or virtual machine \(VM\) that is planned as the VPN server, and that is installed on your perimeter network, you can install both Remote Access and Network Policy Server \(NPS\). 
 
 2. On the Remote Access - NPS proxy server, you can configure Remote Access as a RAS Gateway VPN server.
 
@@ -29,7 +29,7 @@ You can use this section to install and configure the following items on two dif
 
 ## Organization/Corporate NPS server
 
-1. On the computer that is planned as the NPS server, and that is installed on your organization or corporate network, you can install NPS.
+1. On the computer or VM that is planned as the NPS server, and that is installed on your organization or corporate network, you can install NPS.
 
 2. On the organization/corporate NPS server, you can configure NPS to perform as a RADIUS server that processes the connection requests that are received from the VPN/NPS proxy server.
 
