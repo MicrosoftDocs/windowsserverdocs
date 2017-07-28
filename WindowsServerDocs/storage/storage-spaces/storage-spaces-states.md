@@ -43,7 +43,7 @@ When a storage pool is in the **Error** health state, it means that the storage 
 |Operational state    |Read-only reason |Description|
 |---------            |---------       |--------   |
 |Read-only|Incomplete|This can occur if the storage pool pool loses its quorum, which means that the majority of disks in the pool have failed or are offline for some reason. When a pool loses its quorum, Storage Spaces automatically sets the pool configuration to read-only until enough disks become available again.<br><br>**Action:** Reconnect any missing disks and then set the pool back to read-write by opening a PowerShell session with administrative permissions and then typing:<br><br> *Get-StoragePool <PoolName> &#124; Set-StoragePool -IsReadOnly $false*|
-||Policy|An administrator set the storage pool to read-only.<br><br>**Action:** To set a storage pool to read-write access by using Windows PowerShell, open a PowerShell session with administrative permissions and then type:<br><code>`Get-StoragePool <PoolName> \| Set-StoragePool -IsReadOnly $false`</code>|
+||Policy|An administrator set the storage pool to read-only.<br><br>**Action:** To set a storage pool to read-write access by using Windows PowerShell, open a PowerShell session with administrative permissions and then type:<br><br>**Get-StoragePool <PoolName> \| Set-StoragePool -IsReadOnly $false**|
 ||Starting|Storage Spaces is starting. This should be a temporary state. Once completely started, the pool should transition to a different operational state.|
 
 ## Virtual disk states
