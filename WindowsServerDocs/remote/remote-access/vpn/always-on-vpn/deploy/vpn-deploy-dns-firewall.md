@@ -24,7 +24,7 @@ Because of this, you must ensure that the computer name that external clients us
 
 To ensure that remote clients can connect to your VPN server, you can create a DNS A (Host) record in your external DNS zone. The A record should use the certificate subject alternative name for the VPN server.
 
-### To add a host (A or AAAA) resource record to a zone
+### To add a host \(A or AAAA\) resource record to a zone
 
 1. On a DNS server, in Server Manager, click **Tools**, and then click **DNS**. DNS Manager opens.
 2. In the DNS Manager console tree, click the server that you want to manage.

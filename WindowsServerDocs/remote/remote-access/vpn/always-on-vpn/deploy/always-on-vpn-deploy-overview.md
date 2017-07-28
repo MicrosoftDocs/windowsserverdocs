@@ -53,13 +53,13 @@ The VPN Server is a new physical server that you must install to complete the st
 
 ## NPS Server
 
-The NPS Server is installed on your organization/corporate network. Although represented as a standalone server in the illustration, it is an NPS best practice to install NPS on a domain controller.
+The NPS Server is installed on your organization/corporate network. 
 
-You must configure this NPS server as a RADIUS server that receives connection requests from the VPN server. The NPS server processes the connection requests, performing authorization and authentication, and sends either an Access\-Accept or Access-Reject message to the VPN Server.
+You must configure this NPS server as a RADIUS server that receives connection requests from the VPN server. The NPS server processes the connection requests, performing authorization and authentication, and sends either an Access\-Accept or Access\-Reject message to the VPN Server.
 
 ## AD DS Server
 
-The Active Directory Domain Services \(AD DS\) server is an on\-premises Active Directory domain, which hosts on-premises user accounts.
+The Active Directory Domain Services \(AD DS\) server is an on\-premises Active Directory domain, which hosts on\-premises user accounts.
 
 During completion of the steps in this guide, you will configure the following items on the domain controller.
 
