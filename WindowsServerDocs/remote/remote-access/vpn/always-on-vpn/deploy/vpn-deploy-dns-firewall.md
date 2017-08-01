@@ -71,4 +71,6 @@ If you are using the default RADIUS port configuration on the VPN Server and the
 
 If you are not using the default RADIUS ports in your NPS deployment, you must configure the firewall to allow RADIUS traffic on the ports that you are using.
 
+For more information, see [Configure Firewalls for RADIUS Traffic](https://docs.microsoft.com/windows-server/networking/technologies/nps/nps-firewalls-configure).
+
 For the next Always On VPN deployment steps, see [Configure Windows 10 Client Always On VPN Connections](vpn-deploy-client-vpn-connections.md).

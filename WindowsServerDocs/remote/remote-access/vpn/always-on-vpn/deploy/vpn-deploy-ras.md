@@ -83,8 +83,8 @@ In this section, you configure Remote Access VPN to allow IKEv2 VPN connections,
 
 1.  On the VPN server, in Server Manager, click the **Notifications** flag; then, in the **Tasks** menu, click **Open the Getting Started Wizard**. The **Configure Remote Access** wizard opens.
 
->[!NOTE]
->The **Configure Remote Access** wizard might open behind Server Manager. If you think the wizard is taking too long to open, move or minimize Server Manager to find out whether the wizard is behind it. If not, wait for the wizard to initialize.
+	>[!NOTE]
+	>The **Configure Remote Access** wizard might open behind Server Manager. If you think the wizard is taking too long to open, move or minimize Server Manager to find out whether the wizard is behind it. If not, wait for the wizard to initialize.
 
 1.  In **Configure Remote Access**, click **Deploy VPN only**. The Routing and Remote Access Microsoft Management Console \(MMC\) opens.
 
