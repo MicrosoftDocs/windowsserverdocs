@@ -14,22 +14,21 @@ author: jamesmci
 
 You can use this section to install Network Policy Server \(NPS\) and perform configuration for Always On VPN.
 
-## Organization/Corporate NPS Server Deployment Overview
+NPS server processing of connection requests that are sent by the VPN server includes performing authorization - to verify that the user has permission to connect; performing authentication - to verify the user's identity; and performing accounting - to log the aspects of the connection request that you chose when you configured RADIUS accounting in NPS.
 
 The steps in this section allow you to complete the following items.
 
 1. On the computer or VM that is planned as the NPS server, and that is installed on your organization or corporate network, you can install NPS.
 
 >[!TIP]
->If you already have one or more NPS servers on your network, you do not need to perform the steps in this section - unless you want to add an NPS server to your configuration.
+>If you already have one or more NPS servers on your network, you do not need to perform NPS Server installation - instead, you can use this topic to update the configuration of an existing NPS server.
 
 2. On the organization/corporate NPS server, you can configure NPS to perform as a RADIUS server that processes the connection requests that are received from the VPN server.
 
-You can perform this installation with the following instructions by using either Windows PowerShell or the Server Manager Add Roles and Features Wizard.
 
-### Install Network Policy Server \(Optional\)
+## Install Network Policy Server
 
-You can use this section to install Network Policy Server \(NPS\) by using either Windows PowerShell or the Add Roles and Features Wizard.
+You can use this section to install Network Policy Server \(NPS\) by using either Windows PowerShell or the Server Manager Add Roles and Features Wizard.
 
 NPS is a role service of the Network Policy and Access Services server role.
 
@@ -73,9 +72,16 @@ You can use the following procedure to install NPS using Server Manager.
 
 NPS handles all authentication, authorization, and accounting duties for connection requests that it receives from the VPN server.
 
-On the NPS server, you define a policy that allows only users in a specific group to access the VPN, and then only when using a valid user certificate in a PEAP authentication request. This configuration supports a possible future move to Windows Hello for Business with minimal changes. 
+To configure NPS, you must perform the following tasks.
 
-### Register the NPS Server in Active Directory
+- Register the NPS Server in Active Directory
+- Configure RADIUS Accounting for your NPS Server
+- Add the VPN Server as a RADIUS Client in NPS
+- Configure Network Policy in NPS
+
+The following sections provide instructions on completing these tasks.
+
+## Register the NPS Server in Active Directory
 
 After you install NPS, you must register the server in Active Directory so that it has permission to access user account information while processing connection requests.
 
@@ -85,7 +91,19 @@ After you install NPS, you must register the server in Active Directory so that 
 2. In the NPS console, right\-click **NPS \(Local\)**, and then click **Register server in Active Directory**. The **Network Policy Server** dialog box opens.
 3. In the **Network Policy Server** dialog box, click **OK** twice.
 
-### Add the VPN Server as a RADIUS Client
+## Configure Network Policy Server Accounting
+
+There are three types of logging for Network Policy Server \(NPS\):
+
+- **Event logging**. Used primarily for auditing and troubleshooting connection attempts. You can configure NPS event logging by obtaining the NPS server properties in the NPS console.
+
+- **Logging user authentication and accounting requests to a local file**. Used primarily for connection analysis and billing purposes. Also useful as a security investigation tool because it provides you with a method of tracking the activity of a malicious user after an attack. You can configure local file logging using the Accounting Configuration wizard.
+
+- **Logging user authentication and accounting requests to a Microsoft SQL Server XML-compliant database**. Used to allow multiple servers running NPS to have one data source. Also provides the advantages of using a relational database. You can configure SQL Server logging by using the Accounting Configuration wizard.
+
+To learn how to configure NPS Accounting, see [Configure Network Policy Server Accounting](https://docs.microsoft.com/windows-server/networking/technologies/nps/nps-accounting-configure).
+
+## Add the VPN Server as a RADIUS Client
 
 You can use this section to configure the VPN server as a RADIUS Client in NPS.
 
@@ -103,47 +121,36 @@ You can use this section to configure the VPN server as a RADIUS Client in NPS.
 	- Select **Generate**, and then click **Generate** to automatically generate a shared secret. Save the generated shared secret for configuration on the NAS so that it can communicate with the NPS server.
 8. Click **OK**. The VPN Server appears in the list of RADIUS clients that are configured on the NPS server.
 
-### Configure NPS Server Network Policy
+## Configure NPS Server Network Policy
 
 You can use this procedure to configure NPS as a RADIUS server on your organization network.
+
+On the NPS server, you must define a policy that allows only users in a specific group to access the Organization/Corporate network through the VPN Server - and then only when using a valid user certificate in a PEAP authentication request. 
 
 **To configure the NPS Network Policy on the NPS server**
 
 1.  On the NPS server, in Server Manager, click **Tools**, and then click **Network Policy Server**.
 
-2.  Under **Standard Configuration**, click **Configure VPN or Dial-Up** to start the Configure VPN or Dial-Up Wizard.
+2.  In **Standard Configuration**, ensure that **RADIUS server for Dial\-Up or VPN Connections** is selected, and then click **Configure VPN or Dial-Up**. The **Configure VPN or Dial-Up** wizard opens.
 
-3.  On the Select Dial-up or Virtual Private Network Connections Type page, click **Virtual Private Network (VPN) Connections**, and click **Next**.
+3.  In the **Configure VPN or Dial-Up** wizard, in **Select Dial-up or Virtual Private Network Connections Type** page, click **Virtual Private Network (VPN) Connections**, and then click **Next**.
 
-4.  In **Specify Dial-Up or VPN Server**, complete the following steps:
+4.  In **Specify Dial-Up or VPN Server**, in RADIUS clients, click the name of the VPN Server that you added in the previous step. For example, if your VPN server NetBIOS name is RAS1, click **RAS1**. Click **Next**.
 
-    a.  Click **Add**. The **New RADIUS Client** dialog box opens.
+5.  In **Configure Authentication Methods**, complete the following steps:
 
-    b.  In **New RADIUS Client**, in **Friendly name**, type the name of your VPN/NPS proxy server.
-
-    c.  In **Address \(IP or DNS\)**, type the VPN/NPS proxy server’s IP address.
-
-    d.  In **Shared Secret**, click **Generate**, and then click **Generate**.
-
-    e.  Copy the generated string, and paste it into a text file that you save in a secure location. This string will be used to secure communication between the VPN/NPS proxy server and the NPS server. You will use the shared secret during VPN/NPS proxy server configuration in a later step.
-
-5.  Click **OK** to close the **New RADIUS Client** dialog box.
-
-6.  Click **Next**.
-
-7.  In **Configure Authentication Methods**, complete the following steps:
-
-    a.  Clear the **Microsoft Encrypted Authentication version 2 (MS-CHAPv2)** check box.
+    a.  Deselect the **Microsoft Encrypted Authentication version 2 (MS-CHAPv2)** check box.
 
     b.  Select the **Extensible Authentication Protocol** check box.
 
-    c.  In **Type**, click **Microsoft: Protected EAP \(PEAP\)**, and click **Configure**. The **Edit Protected EAP Properties** dialog box opens.
+    c.  Click **Type \(based on method of access and network configuration\)**, and then click **Microsoft: Protected EAP \(PEAP\)**.
+	d.  Click **Configure**. The **Edit Protected EAP Properties** dialog box opens.
 
-    d.  In **Edit Protected EAP Properties**, click **Remove** to remove the **Secured Password \(EAP-MSCHAP v2\)** EAP type.
+    e.  In **Edit Protected EAP Properties**, click **Remove** to remove the **Secured Password \(EAP-MSCHAP v2\)** EAP type.
 
-    e.  Click **Add**.  The **Add EAP** dialog box opens. In **Add EAP**, click **Smart Card or other certificate**, and then click **OK**.
+    f.  Click **Add**.  The **Add EAP** dialog box opens. In **Add EAP**, click **Smart Card or other certificate**, and then click **OK**.
 
-    f.  Click **OK** to close t**Edit Protected EAP Properties**.
+    g.  Click **OK** to close **Edit Protected EAP Properties**.
 
 8.  Click **Next**.
 
@@ -157,77 +164,9 @@ You can use this procedure to configure NPS as a RADIUS server on your organizat
 
 10.  In **Specify IP Filters**, click **Next**.
 
-11.  In **Specify Encryption Settings**, do not make any changes. These settings apply only to Microsoft Point-to-Point Encryption (MPPE) connections, which this scenario doesn’t support. Click **Next**.
+11.  In **Specify Encryption Settings**, do not make any changes. These settings apply only to Microsoft Point-to-Point Encryption \(MPPE\) connections, which this scenario doesn’t support. Click **Next**.
 
 12.  In **Specify a Realm Name**, click **Next**.
 
 13.  Click **Finish** to close the wizard.
-
-
-
-### NPS proxy server configuration
-
-You can use this procedure to configure NPS as a RADIUS proxy on your VPN server.
-
-**To configure the VPN server as an NPS RADIUS proxy server**
-
-1.  On your VPN server, in Server Manager, click **Tools**, and then click **Network Policy Server**.
-
-2.  In **RADIUS Clients and Servers**, right-click **Remote RADIUS Server Groups**, and then click **New**. The **New Remote RADIUS Server Group** dialog box opens. Complete the following steps:
-
-    a.  In **New Remote RADIUS Server Group**, click **Add**. The **Add RADIUS Server** dialog box opens.
-
-    b.  On the **Address** tab, in **Server**, type the IP address of the NPS server that is installed on your organization or corporate network.
-
-    c.  On the **Authentication/Accounting** tab, in both **Shared Secret** and **Confirm Shared Secret**, paste the shared secret that you previously generated on the NPS server. The shared secret that you configure on this NPS proxy server and on the NPS server must match, or RADIUS communication between the proxy and the server will fail.
-
-    d.  Click **OK**.
-
-    e.  In **New Remote RADIUS Server Group**, in **Group name**, type **Internal NPS**, and then click **OK**.
-
-3.  In **Policies**, right-click **Connection Request Policies**, and then click **New**. The **New Connection Request Policy Wizard** opens.
-
-4.  In **Specify Connection Request Policy Name and Connection Type**, complete the following steps:
-
-    a.  In **Policy Name**, type **Forward all requests**.
-
-    b.  In **Type of network access server**, click **Remote Access Server \(VPN-Dial up\)**.
-
-    c.  Click **Next**.
-
-5.  In **Specify Conditions**, complete the following steps:
-
-    a.  Click **Add**. The **Select condition** dialog box opens.
-
-    b.  In **Select condition**, click **Day and time restrictions**, and then click **Add**. The **Day and time restrictions** dialog box opens.
-
-    c.  In **Day and time restrictions**, click **All**, click **Permitted**, and then click **OK**.
-
-    d.  In **Specify Conditions**, confirm that the day and time restrictions are correct, and click **Next**.
-
-6.  In **Specify Connection Request Forwarding**, complete the following steps:
-
-    a.  Click **Forward requests to the following remote RADIUS server group for authentication**.
-
-    b.  Click **Accounting**, and click **Forward accounting requests to this remote RADIUS server group**.
-
-    c.  Click **Next**.
-
-7.  In **Configure Settings**, click **Next**.
-
-8.  Click **Finish**. All configured policies appear under **Connection Request Policies** in the details pane.
-
-9.  Disable all policies except **Forward all requests** by right-clicking each policy, and then clicking **Disable**.
-
-10. Close the NPS console.
-
-For more information about NPS as a RADIUS server and RADIUS proxy server, see [Network Policy Server (NPS)](https://docs.microsoft.com/windows-server/networking/technologies/nps/nps-top).
-
->[!NOTE]
->NPS server processing of connection requests includes performing authorization - to verify that the user has permission to connect; performing authentication - to verify the user's identity; and performing accounting - to log the aspects of the connection request that you chose when you configured RADIUS accounting in NPS.
-
-For more information, see [Manage NPS Servers](https://docs.microsoft.com/windows-server/networking/technologies/nps/nps-manage-top).
-
-
-For the next Always On VPN deployment steps, see [Configure DNS and Firewall Settings for Always On VPN](vpn-deploy-dns-firewall.md).
 
