@@ -23,14 +23,18 @@ You can use this topic to complete the following steps.
 - On an Active Directory Certificate Server CA: Create the User Authentication, VPN Server Authentication, and NPS Server Authentication certificate templates.
 - On domain-joined Windows 10 clients: Enroll and validate user certificates.
 
-## [Configure the Remote Access Server and NPS Server for Always On VPN](vpn-deploy-ras.md)
+## [Configure the Remote Access Server for Always On VPN](vpn-deploy-ras.md)
 
 You can use this topic to complete the following steps.
 
 - Enroll and validate the VPN server certificate
 - Install and configure Remote Access VPN
-- Install and configure Network Policy Server \(NPS\) as a RADIUS proxy
-- Install and configure your organization NPS server as a RADIUS server
+
+## [Install and Configure the NPS Server](vpn-deploy-nps.md)
+
+You can use this topic to complete the following steps.
+
+- Install and configure your organization NPS server as a RADIUS server.
 
 ## [Configure DNS and Firewall Settings for Always On VPN](vpn-deploy-dns-firewall.md)
 

@@ -21,7 +21,7 @@ For this deployment, you must install a new Remote Access server that is running
 
 The following illustration shows the infrastructure that is required to deploy Always On VPN.
 
-![Always On VPN Infrastructure](../../../../media/Always-On-Vpn/Always-On-Vpn-Overview.jpg)
+![Always On VPN Infrastructure](../../../../media/Always-On-Vpn/Ao-Vpn-Overview.jpg)
 
 ## VPN Connection Process Overview
 
@@ -31,7 +31,7 @@ The connection process depicted in this illustration is comprised of the followi
 
 2. Using the IP address returned by DNS, the VPN client sends a connection request to the VPN gateway.
 
-3. The VPN gateway is also configured as a Network Policy Server \(NPS\) Remote Authentication Dial In User Service \(RADIUS\) proxy server; the NPS proxy forwards the connection request to the organization/corporate NPS server for connection request processing.
+3. The VPN gateway is also configured as a Remote Authentication Dial In User Service \(RADIUS\) Client; the VPN RADIUS Client sends the connection request to the organization/corporate NPS server for connection request processing.
 
 4. The NPS server processes the connection request, including performing authorization and authentication, and determines whether to allow or deny the connection request.
 
@@ -43,12 +43,12 @@ For more information on each infrastructure component depicted in the illustrati
 
 ## VPN Server
 
-The VPN Server is a new physical server that you must install to complete the steps in this guide. The server must be running Windows Server 2016. In addition, in the process of completing the steps in this guide, you must perform the following actions with the VPN Server.
+The VPN Server is a new physical server or virtual machine \(VM\) that you must install to complete the steps in this guide. The server must be running Windows Server 2016. In addition, in the process of completing the steps in this guide, you must perform the following actions with the VPN Server.
 
 - Install two Ethernet network adapters in the physical server.
 - Install the server on your perimeter network between your edge and internal firewalls, with one network adapter connected to the External Perimeter Network, and one network adapter connected to the Internal Perimeter Network.
 - Install and configure Remote Access as a single tenant VPN RAS Gateway for point\-to\-site VPN connections from remote computers.
-- Install and configure NPS as a RADIUS proxy server that forwards VPN connection requests to the NPS server that is installed on your organization/corporate network.
+- Configure Remote Access as a RADIUS Client so that it can send connection requests to the organization NPS server for processing.
 - Enroll and validate the VPN server certificate from your certification authority \(CA\).
 
 ## NPS Server

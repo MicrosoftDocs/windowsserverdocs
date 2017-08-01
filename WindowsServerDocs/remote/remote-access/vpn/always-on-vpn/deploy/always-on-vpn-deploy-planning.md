@@ -46,7 +46,7 @@ You can configure the VPN server to assign addresses to VPN clients from a stati
 
 - **Verify that all VPN users have user accounts in Active Directory User \(AD DS\)**. Before users can connect to the network with VPN connections, they must have user accounts in AD DS.
 
-## Routing and Firewall preparations
+## Routing and Firewall Preparations
 
 The following steps provide instructions on how to make minor adjustments to the firewall configuration to support VPN deployment.
 
@@ -56,7 +56,6 @@ In addition, the VPN server is installed inside the perimeter network, which par
 
 - **Configure routing so that the DNS servers and VPN servers can reach the Internet**. This deployment uses IKEv2 and Network Address Translation \(NAT\). Ensure that the VPN server can reach all of the required internal networks and network resources that you want to provide to remote users. Any network or resource that is not reachable from the VPN server will also be unreachable over VPN connections from remote locations.
 
-In most environments, you can simply adjust static routes on the edge firewall and the RRAS server to allow them to reach this new internal perimeter network. In complex environments, you may need to add static routes to internal routers or adjust internal firewall rules for the VPN server and the block of IP addresses associated with VPN clients.
-
+In most environments, you can simply adjust static routes on the edge firewall and the VPN server to allow them to reach this new internal perimeter network. In complex environments, you may need to add static routes to internal routers or adjust internal firewall rules for the VPN server and the block of IP addresses associated with VPN clients.
 
 For the next section in this guide, see [Remote Access Always On VPN Deployment](always-on-vpn-deploy-deployment.md).
