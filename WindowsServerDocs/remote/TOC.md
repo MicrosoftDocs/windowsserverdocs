@@ -149,7 +149,7 @@
 ##### [Remote Access Always On VPN Deployment](remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-deployment.md)
 ###### [Configure the Always On VPN Server Infrastructure](remote-access/vpn/always-on-vpn/deploy/vpn-deploy-server-infrastructure.md)
 ###### [Configure the Remote Access Server for Always On VPN](remote-access/vpn/always-on-vpn/deploy/vpn-deploy-ras.md)
-###### [Install and Configure the NPS Server](vpn-deploy-nps.md)
+###### [Install and Configure the NPS Server](remote-access/vpn/always-on-vpn/deploy/vpn-deploy-nps.md)
 ###### [Configure DNS and Firewall Settings](remote-access/vpn/always-on-vpn/deploy/vpn-deploy-dns-firewall.md)
 ###### [Configure Windows 10 Client Always On VPN Connections](remote-access/vpn/always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md)
 ##### [Remote Access Always On VPN Advanced Features](remote-access/vpn/always-on-vpn/deploy/always-on-vpn-adv-options.md)
