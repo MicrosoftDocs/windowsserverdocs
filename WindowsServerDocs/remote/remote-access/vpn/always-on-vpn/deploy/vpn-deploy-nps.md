@@ -112,16 +112,23 @@ You can use this section to configure the VPN server as a RADIUS Client in NPS.
 
 #### To add the VPN Server as a RADIUS client in NPS
 
-1. On the NPS server, in Server Manager, click **Tools**, and then click **Network Policy Server**. The NPS console opens.
-2. In the NPS console, double-click **RADIUS Clients and Servers**. Right-click **RADIUS Clients**, and then click **New**. The **New RADIUS Client** dialog box opens.
-3. In **New RADIUS Client**, verify that the **Enable this RADIUS client** check box is selected.
-4. In **New RADIUS Client**, in **Friendly name**, type a display name for the NAS. In **Address (IP or DNS)**, type the NAS IP address or fully qualified domain name (FQDN). If you enter the FQDN, click **Verify** if you want to verify that the name is correct and maps to a valid IP address. 
-6. In **New RADIUS Client**, in **Shared secret**, do one of the following:
-	- Ensure that **Manual** is selected, and then in **Shared secret**, type the strong password that is also entered on the VPN Server. Retype the shared secret in **Confirm shared secret**.
-	- Select **Generate**, and then click **Generate** to automatically generate a shared secret. Save the generated shared secret for configuration on the NAS so that it can communicate with the NPS server.
-8. Click **OK**. The VPN Server appears in the list of RADIUS clients that are configured on the NPS server.
+>[!IMPORTANT]
+>In the previous deployment step using the topic [Configure the Remote Access Server for Always On VPN](vpn-deploy-ras.md), you installed and configured your VPN server. During VPN server configuration, you added a RADIUS shared secret on the VPN server. Now you need to use the same shared secret text string to configure the VPN server as a RADIUS client in NPS. You must use the same text string that you used on the VPN server, or communication between the NPS server and VPN server will fail.
 
-## Configure NPS Server Network Policy
+1. On the NPS server, in Server Manager, click **Tools**, and then click **Network Policy Server**. The NPS console opens.
+
+2. In the NPS console, double-click **RADIUS Clients and Servers**. Right-click **RADIUS Clients**, and then click **New**. The **New RADIUS Client** dialog box opens.
+
+3. In **New RADIUS Client**, verify that the **Enable this RADIUS client** check box is selected.
+
+4. In **New RADIUS Client**, in **Friendly name**, type a display name for the VPN server. In **Address \(IP or DNS\)**, type the NAS IP address or fully qualified domain name \(FQDN\). If you enter the FQDN, click **Verify** if you want to verify that the name is correct and maps to a valid IP address.
+
+5. In **New RADIUS Client**, in **Shared secret**, do the following:
+	- Ensure that **Manual** is selected, and then in **Shared secret**, type the strong text string that you also entered on the VPN server. Retype the shared secret in **Confirm shared secret**.
+
+6. Click **OK**. The VPN Server appears in the list of RADIUS clients that are configured on the NPS server.
+
+## Configure Network Policy for VPN Connections
 
 You can use this procedure to configure NPS as a RADIUS server on your organization network.
 
@@ -170,3 +177,4 @@ On the NPS server, you must define a policy that allows only users in a specific
 
 13.  Click **Finish** to close the wizard.
 
+For the next Always On VPN deployment steps, see [Configure DNS and Firewall Settings for Always On VPN](vpn-deploy-dns-firewall.md).
