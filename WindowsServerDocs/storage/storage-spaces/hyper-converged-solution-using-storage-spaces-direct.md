@@ -361,7 +361,7 @@ On the management system, open a PowerShell ISE window with Administrator privil
 
 You can skip this step if the disks have already been cleaned or verified to be without partitions.
 
-> [!Important]
+> [!Warning]
 > Ensure that there is no data on any of the disks of the cluster before running this set of commands. It will remove any data on the disks that are not being use by the operating system.
 
 ```PowerShell
