@@ -10,6 +10,7 @@ manager: brianlic
 ms.author: jamesmci
 author: jamesmci
 ---
+
 # Remote Access Always On VPN Deployment Overview
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows 10
@@ -20,7 +21,7 @@ For this deployment, you must install a new Remote Access server that is running
 
 The following illustration shows the infrastructure that is required to deploy Always On VPN.
 
-![Always On VPN Infrastructure](../../../../media/Always-On-Vpn/Ao-Vpn-Overview-02.jpg)
+![Always On VPN Infrastructure](../../../../media/Always-On-Vpn/Ao-Vpn-Overview.jpg)
 
 ## VPN Connection Process Overview
 
