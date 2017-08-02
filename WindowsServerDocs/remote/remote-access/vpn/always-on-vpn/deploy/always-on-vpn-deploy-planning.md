@@ -24,6 +24,9 @@ Before you install the Remote Access server role on the computer you're planning
 
 - **Identify which network adapter connects to the Internet and which network adapter connects to your private network**. You must configure the Internet facing network adapter with a public IP address, while the adapter facing the Intranet can use an IP address from the local network.
 
+>[!NOTE]
+>If you prefer not to use a public IP address on your perimeter network, you can configure the Edge Firewall with a public IP address, and then configure the firewall to forward VPN connection requests to the VPN server.
+
 - **Connect the VPN server to the network**. Install the VPN server on a perimeter network, between the edge firewall and the perimeter firewall.
 
 ## Plan Authentication Methods
