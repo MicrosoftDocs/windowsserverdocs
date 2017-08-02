@@ -60,7 +60,7 @@ This guide provides instructions on how to deploy Remote Access Always On VPN co
 - You must have a perimeter network that includes two firewalls. For more information, see [Remote Access Always On VPN Deployment Overview](always-on-vpn-deploy-overview.md)
 - Remote client computers must be joined to the Active Directory domain.
 - Remote client computers must be running the Windows 10 Anniversary Update \(version 1607\) or later operating system.
-- You must be prepared to deploy one new physical server or virtual machine \(VM\)on your perimeter network, upon which you will install Remote Access. This server must have two physical Ethernet network adapters.
+- You must be prepared to deploy one new physical server or virtual machine \(VM\) on your perimeter network, upon which you will install Remote Access. This server must have two physical Ethernet network adapters.
 - You must be prepared to install NPS as a RADIUS server on a server or VM. You can install NPS on a new physical server or on a new VM. If you already have NPS servers on your network, you can modify an existing NPS server configuration rather than adding a new server.
 - You must read the planning section of this guide to ensure that you are prepared for this deployment before you perform the deployment.
 - You must perform the steps in this guide in the order in which they are presented.

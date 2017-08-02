@@ -70,7 +70,7 @@ During completion of the steps in this guide, you will configure the following i
 
 ## CA Server
 
-The CA Server is a certification authority that is running Active Directory Certificate Services. The VPN configuration requires an Active Directory\–based public key infrastructure \(PKI\). 
+The Certification Authority \(CA\) Server is a certification authority that is running Active Directory Certificate Services. The VPN configuration requires an Active Directory–based public key infrastructure \(PKI\). 
 
 The CA enrolls certificates that are used for PEAP client–server authentication. The CA creates certificates based on certificate templates. During completion of the steps in this guide, you will configure the following certificate templates on the CA.
 

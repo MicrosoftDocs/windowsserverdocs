@@ -30,7 +30,7 @@ For more information, see [Remote Access](https://docs.microsoft.com/windows-ser
 
 **Administrative Credentials**
 
-To complete this procedure, you must be a member of the **Domain Admins** group.
+Membership in **Administrators**, or equivalent, is the minimum required to perform these procedures.
 
 ### To install Remote Access by using Windows PowerShell
 

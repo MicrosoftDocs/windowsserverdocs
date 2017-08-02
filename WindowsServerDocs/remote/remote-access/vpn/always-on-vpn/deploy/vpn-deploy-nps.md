@@ -39,7 +39,7 @@ NPS is a role service of the Network Policy and Access Services server role.
 
 **Administrative Credentials**
 
-To complete this procedure, you must be a member of the **Domain Admins** group.
+Membership in **Administrators**, or equivalent, is the minimum required to perform these procedures.
 
 ### To install NPS by using Windows PowerShell
 
@@ -92,6 +92,8 @@ After you install NPS, you must register the server in Active Directory so that 
 1. In Server Manager, click **Tools**, and then click **Network Policy Server**. The NPS console opens.
 2. In the NPS console, right\-click **NPS \(Local\)**, and then click **Register server in Active Directory**. The **Network Policy Server** dialog box opens.
 3. In the **Network Policy Server** dialog box, click **OK** twice.
+
+For alternate methods of registering NPS, see [Register an NPS Server in an Active Directory Domain](https://docs.microsoft.com/windows-server/networking/technologies/nps/nps-manage-register).
 
 ## Configure Network Policy Server Accounting
 
