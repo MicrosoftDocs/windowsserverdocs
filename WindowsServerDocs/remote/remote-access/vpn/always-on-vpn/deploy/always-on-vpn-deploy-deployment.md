@@ -13,7 +13,12 @@ author: jamesmci
 
 # Remote Access Always On VPN Deployment
 
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows 10
+
 You can use the following sections to deploy Always On VPN connections for remote Windows 10 client computers that are joined to your domain.
+
+>[!IMPORTANT]
+>For this deployment, it is not a requirement that your infrastructure servers, such as computers running Active Directory Domain Services, Active Directory Certificate Services, and Network Policy Server, are running Windows Server 2016. You can use earlier versions of Windows Server, such as Windows Server 2012 R2, for the infrastructure servers and for the server that is running Remote Access.
 
 ## [Configure the Always On VPN Server Infrastructure](vpn-deploy-server-infrastructure.md)
 
