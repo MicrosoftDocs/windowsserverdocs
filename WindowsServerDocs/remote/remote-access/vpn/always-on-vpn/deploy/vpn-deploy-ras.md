@@ -127,6 +127,8 @@ In this section, you configure Remote Access VPN to allow IKEv2 VPN connections,
 
 11. In **Add RADIUS Server**, review the default settings for **Time-out**, **Initial score**, and **Port**. If necessary, change the values to match the requirements for your environment, and then click **OK**.
 
+12. On the **Security** tab, review the setting for **Accounting provider**. If you want Remote Access activity logged on the Remote Access server, ensure that **Windows Accounting** is selected. If you want your NPS server to perform accounting services for VPN, change **Accounting provider** to **RADIUS Accounting**, and then configure the NPS server as the accounting provider.
+
 12.  Click **OK** to close the **Properties** dialog box.
 
 13.  In the Routing and Remote Access MMC, right-click **Ports,** and then click **Properties**. The **Ports Properties** dialog box opens.
