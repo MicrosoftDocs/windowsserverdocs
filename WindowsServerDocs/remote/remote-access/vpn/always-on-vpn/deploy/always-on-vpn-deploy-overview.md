@@ -21,7 +21,7 @@ For this deployment, you must install a new Remote Access server that is running
 
 The following illustration shows the infrastructure that is required to deploy Always On VPN.
 
-![Always On VPN Infrastructure](../../../../media/Always-On-Vpn/Ao-Vpn-Overview.jpg)
+![Always On VPN Infrastructure](../../../../media/Always-On-Vpn/Ao-Vpn-Overview-02.jpg)
 
 ## VPN Connection Process Overview
 
