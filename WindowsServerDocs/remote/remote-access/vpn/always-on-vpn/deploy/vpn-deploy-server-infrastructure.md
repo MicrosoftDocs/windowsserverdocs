@@ -20,8 +20,7 @@ In this section, you install and configure the server-side components necessary 
 
 You can configure Group Policy on the domain controller so that domain members automatically request user and computer certificates.
 
-This allows VPN users to automatically request and retrieve user certificates that authenticate VPN connections. Likewise, this policy allows NPS servers to automatically request server authentication certificates. (You will manually enroll certificates on
-VPN servers.)
+This allows VPN users to automatically request and retrieve user certificates that authenticate VPN connections. Likewise, this policy allows NPS servers to automatically request server authentication certificates. (You will manually enroll certificates on VPN servers.)
 
 **To enable certificate autoenrollment in Group Policy**
 

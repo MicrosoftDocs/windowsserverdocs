@@ -41,13 +41,6 @@ Even though these configuration methods differ, both require a properly formatte
 
 In the section “Infrastructure requirements,” Table 1 provided an overview of the individual settings for the VPN client. Below is each of those required settings and its corresponding ProfileXML tag. You configure each setting in a specific tag within the ProfileXML schema, and not all of them are found under the native profile. For additional tag placement, see the ProfileXML schema.
 
-**Connection type**: Native IKEv2
-
-ProfileXML element:
-
-`<NativeProtocolType>IKEv2</NativeProtocolType>`
-
-
 **Connection type:** Native IKEv2
 
 ProfileXML element:

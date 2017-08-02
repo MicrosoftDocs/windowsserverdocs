@@ -181,4 +181,20 @@ On the NPS server, you must define a policy that allows only users in a specific
 
 13.  Click **Finish** to close the wizard.
 
+## Autoenroll the NPS Server Certificate
+
+You can use this procedure to manually refresh Group Policy on the local NPS server. When Group Policy is refreshed, if certificate autoenrollment is configured and functioning correctly, the local computer is autoenrolled a certificate by the certification authority \(CA\).  
+  
+> [!NOTE]  
+> Group Policy is automatically refreshed when you restart the domain member computer, or when a user logs on to a domain member computer. In addition, Group Policy is periodically refreshed. By default, this periodic refresh is performed every 90 minutes with a randomized offset of up to 30 minutes.  
+  
+Membership in **Administrators**, or equivalent, is the minimum required to complete this procedure.  
+  
+### To refresh Group Policy on the NPS server
+  
+1.  On the computer where NPS is installed, open Windows PowerShell.
+  
+2.  At the Windows PowerShell prompt, type **gpupdate**, and then press ENTER.
+
+
 For the next Always On VPN deployment steps, see [Configure DNS and Firewall Settings for Always On VPN](vpn-deploy-dns-firewall.md).

@@ -40,6 +40,7 @@ You can use this topic to complete the following steps.
 You can use this topic to complete the following steps.
 
 - Install and configure your organization NPS server as a RADIUS server.
+- Enroll and validate the NPS server certificate
 
 ## [Configure DNS and Firewall Settings for Always On VPN](vpn-deploy-dns-firewall.md)
 
