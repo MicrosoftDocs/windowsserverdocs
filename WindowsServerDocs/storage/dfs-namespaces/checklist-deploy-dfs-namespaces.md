@@ -1,72 +1,41 @@
-Published: October 22, 2009
+---
+title: Checklist Deploy DFS Namespaces
+description: This article describes how to configure and deploy DFS Namespaces.
+ms.date: 6/5/2017
+ms.prod: windows-server-threshold
+ms.technology: storage
+ms.topic: article
+author: JasonGerend
+manager: brianlic
+ms.author: jgerend
+---
 
-Updated: October 16, 2013
+# Checklist: Deploy DFS Namespaces
 
-Applies To: Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2
+> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
-DFSÂ Namespaces and DFSÂ Replication can be used to publish documents, software, and line-of-business data to users throughout an organization. Although DFSÂ Replication alone is sufficient to distribute data, you can use DFSÂ Namespaces to configure the namespace so that a folder is hosted by multiple servers, each of which holds an updated copy of the folder. This increases data availability and distributes the client load across servers.
+Distributed File System (DFS) Namespaces and DFS Replication can be used to publish documents, software, and line-of-business data to users throughout an organization. Although DFS Replication alone is sufficient to distribute data, you can use DFS Namespaces to configure the namespace so that a folder is hosted by multiple servers, each of which holds an updated copy of the folder. This increases data availability and distributes the client load across servers.
 
-When browsing a folder in the namespace, users are not aware that the folder is hosted by multiple servers. When a user opens the folder, the client computer is automatically referred to a server on its site. If no same-site servers are available, you can configure the namespace to refer the client to a server that has the lowest connection cost as defined in ADÂ DS.
+When browsing a folder in the namespace, users are not aware that the folder is hosted by multiple servers. When a user opens the folder, the client computer is automatically referred to a server on its site. If no same-site servers are available, you can configure the namespace to refer the client to a server that has the lowest connection cost as defined in Active Directory Directory Services (AD DS).
 
 To deploy DFS Namespaces, perform the following tasks:
 
-### Â 
+1. Review the basic concepts of DFS Namespaces.
+[Overview of DFS Namespaces](https://technet.microsoft.com/library/cc730736(v=ws.11).aspx)
+2. Review requirements and prepare to deploy DFS Namespaces. [Prepare to Deploy DFS Namespaces](https://technet.microsoft.com/library/cc771575(v=ws.11).aspx)
+3. Install DFS Management. [Installing DFS](https://technet.microsoft.com/library/cc731089(v=ws.11).aspx) 
+4. Create a DFS Namespace. [Create a DFS Namespace](create-a-dfs-namespace.md) 
+5. Migrate existing domain-based namespaces to Windows Server 2008 mode domain-based namespaces. [Migrate a Domain-based Namespace to Windows Server 2008 mode](migrate-a-domain-based-namespace-to-windows-server-2008-mode.md) 
+6. Increase availability by adding namespace servers to a domain-based namespace. [Add Namespace Servers to a Domain-based DFS Namespace](add-namespace-servers-to-a-domain-based-dfs-namespace.md)
+7. Add folders to a namespace. [Create a Folder in a DFS Namespace](create-a-folder-in-a-dfs-namespace.md)
+8. Add folder targets to folders in a namespace. [Add Folder Targets](add-folder-targets.md)
+9. Replicate content between folder targets using DFS Replication (optional). [Replicate Folder Targets Using DFS Replication](replicate-folder-targets-using-dfs-replication.md)
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Task</th>
-<th>Reference</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>Review the basic concepts of DFS Namespaces</p></td>
-<td><p><a href="https://technet.microsoft.com/en-us/library/cc730736(v=ws.11).aspx">Overview of DFS Namespaces</a></p></td>
-</tr>
-<tr class="even">
-<td><p>Review requirements and prepare to deploy DFS Namespaces</p></td>
-<td><p><a href="https://technet.microsoft.com/en-us/library/cc771575(v=ws.11).aspx">Prepare to Deploy DFS Namespaces</a></p></td>
-</tr>
-<tr class="odd">
-<td><p>Install DFS Management</p></td>
-<td><p><a href="https://technet.microsoft.com/en-us/library/cc731089(v=ws.11).aspx">Installing DFS</a></p></td>
-</tr>
-<tr class="even">
-<td><p>Create a DFS namespace</p></td>
-<td><p><a href="https://technet.microsoft.com/en-us/library/cc731531(v=ws.11).aspx">Create a DFS Namespace</a></p></td>
-</tr>
-<tr class="odd">
-<td><p>Migrate existing domain-based namespaces to Windows ServerÂ 2008 mode domain-based namespaces</p></td>
-<td><p><a href="https://technet.microsoft.com/en-us/library/cc753875(v=ws.11).aspx">Migrate a Domain-based Namespace to Windows Server 2008 Mode</a></p></td>
-</tr>
-<tr class="even">
-<td><p>Increase availability by adding namespace servers to a domain-based namespace</p></td>
-<td><p><a href="https://technet.microsoft.com/en-us/library/cc732807(v=ws.11).aspx">Add Namespace Servers to a Domain-based DFS Namespace</a></p></td>
-</tr>
-<tr class="odd">
-<td><p>Add folders to a namespace</p></td>
-<td><p><a href="https://technet.microsoft.com/en-us/library/cc753986(v=ws.11).aspx">Create a Folder in a DFS Namespace</a></p></td>
-</tr>
-<tr class="even">
-<td><p>Add folder targets to folders in a namespace</p></td>
-<td><p><a href="https://technet.microsoft.com/en-us/library/cc732105(v=ws.11).aspx">Add Folder Targets</a></p></td>
-</tr>
-<tr class="odd">
-<td><p>Replicate content between folder targets using DFS Replication (optional)</p></td>
-<td><p><a href="https://technet.microsoft.com/en-us/library/cc771488(v=ws.11).aspx">Replicate Folder Targets Using DFS Replication</a></p></td>
-</tr>
-</tbody>
-</table>
 
-#### Additional references
+## See also
 
--   [Namespaces](https://technet.microsoft.com/en-us/library/cc771914(v=ws.11).aspx)
--   [Checklist: Tune a DFS Namespace](https://technet.microsoft.com/en-us/library/cc731998(v=ws.11).aspx)
--   [Replication](https://technet.microsoft.com/en-us/library/cc770278(v=ws.11).aspx)
+-   [Namespaces](https://technet.microsoft.com/library/cc771914(v=ws.11).aspx)
+-   [Checklist: Tune a DFS Namespace](checklist-tune-a-dfs-namespace.md)
+-   [Replication](https://technet.microsoft.com/library/cc770278(v=ws.11).aspx)
 
 
