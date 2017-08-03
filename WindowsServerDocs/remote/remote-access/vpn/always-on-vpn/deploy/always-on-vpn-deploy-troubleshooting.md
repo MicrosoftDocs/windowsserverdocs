@@ -9,10 +9,9 @@ manager: brianlic
 ms.author: jamesmci
 author: jamesmci
 ---
-
 # Remote Access Always On VPN Troubleshooting
 
->Applies To: Windows Server 2016, Windows 10
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows 10
 
 You can troubleshoot connection issues in several ways. For client-side issues and general troubleshooting, the application logs on client computers are invaluable. For authentication-specific issues, the NPS log on the NPS server can help you determine the source of the problem.
 

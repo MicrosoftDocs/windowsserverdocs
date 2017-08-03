@@ -9,8 +9,9 @@ manager: brianlic
 ms.author: jamesmci
 author: jamesmci
 ---
-
 # Remote Access Always On VPN Advanced Features
+
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows 10
 
 Beyond the deployment scenario provided in this guide, you can add other advanced VPN features to improve the security and availability of your VPN connection. For example, such components can help ensure that the connecting client is healthy before allowing a connection. 
 
