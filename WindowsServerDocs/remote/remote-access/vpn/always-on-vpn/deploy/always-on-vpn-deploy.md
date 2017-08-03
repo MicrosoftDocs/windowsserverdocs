@@ -1,4 +1,3 @@
-
 ---
 title: Remote Access Always On VPN Deployment Guide for Windows Server 2016 and Windows 10
 description: You can use this guide to deploy Always On Virtual Private Network (VPN) connections for remote employees by using Remote Access in Windows Server 2016 and Always On VPN profiles for Windows 10 client computers.
@@ -13,7 +12,7 @@ author: jamesmci
 
 # Remote Access Always On VPN Deployment Guide for Windows Server 2016 and Windows 10
 
->Applies To: Windows Server 2016, Windows 10
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows 10
 
 You can use this guide to deploy Always On Virtual Private Network \(VPN\) connections for remote employees by using Remote Access in Windows Server 2016 and Always On VPN profiles for Windows 10 client computers.
 
@@ -52,13 +51,16 @@ It is recommended that you review the design and deployment guides for each of t
 
 This guide provides instructions on how to deploy Remote Access Always On VPN connections for remote client computers that are running Windows 10. Following are the prerequisites for performing the procedures in this guide.
 
+>[!IMPORTANT]
+>For this deployment, it is not a requirement that your infrastructure servers, such as computers running Active Directory Domain Services, Active Directory Certificate Services, and Network Policy Server, are running Windows Server 2016. You can use earlier versions of Windows Server, such as Windows Server 2012 R2, for the infrastructure servers and for the server that is running Remote Access.
+
 - You must have an Active Directory domain infrastructure, including one or more Domain Name System \(DNS\) servers.
 - You must have a Public Key Infrastructure \(PKI\) and Active Directory Certificate Services \(AD CS\).
 - You must have a perimeter network that includes two firewalls. For more information, see [Remote Access Always On VPN Deployment Overview](always-on-vpn-deploy-overview.md)
 - Remote client computers must be joined to the Active Directory domain.
 - Remote client computers must be running the Windows 10 Anniversary Update \(version 1607\) or later operating system.
-- You must be prepared to deploy one new physical server on your network, upon which you will install both Remote Access and Network Policy Server \(NPS\) as a Remote Authentication Dial-In User Service \(RADIUS\) proxy. This server must have two Ethernet network adapters installed.
-- You must be prepared to install NPS as a RADIUS server on an existing server or virtual machine \(VM\), on a new physical server, or on a new VM. If you already have NPS servers on your network, you can modify an existing NPS server configuration rather than adding a new server.
+- You must be prepared to deploy one new physical server or virtual machine \(VM\) on your perimeter network, upon which you will install Remote Access. This server must have two physical Ethernet network adapters.
+- You must be prepared to install NPS as a RADIUS server on a server or VM. You can install NPS on a new physical server or on a new VM. If you already have NPS servers on your network, you can modify an existing NPS server configuration rather than adding a new server.
 - You must read the planning section of this guide to ensure that you are prepared for this deployment before you perform the deployment.
 - You must perform the steps in this guide in the order in which they are presented.
 
@@ -73,7 +75,7 @@ This guide does not provide instructions for deploying the following items.
 - Additional network resources, such as application and file servers, that remote users can access over an Always On VPN connection.
 - Internet connectivity
 
-## <a name="bkmk_technology"></a>Technology overviews
+## <a name="bkmk_technology"></a>Technology Overviews
 
 When performing the steps in this guide, you must install and configure the following technologies in Windows Server 2016.
 
@@ -154,9 +156,9 @@ For more information, see [AD CS Step by Step Guide: Two Tier PKI Hierarchy Depl
 
 ### Network Policy Server (NPS)
 
-NPS allows you to create and enforce organization-wide network access policies for connection request authentication and authorization. When you use NPS as a Remote Authentication Dial-In User Service \(RADIUS\) server, you configure network access servers, such as VPN servers, as RADIUS clients in NPS. You also configure network policies that NPS uses to authorize connection requests, and you can configure RADIUS accounting so that NPS logs accounting information to log files on the local hard disk or in a Microsoft SQL Server database. 
+NPS allows you to create and enforce organization-wide network access policies for connection request authentication and authorization. When you use NPS as a Remote Authentication Dial-In User Service \(RADIUS\) server, you configure network access servers, such as VPN servers, as RADIUS clients in NPS. 
 
-You can also configure NPS as a RADIUS proxy to forward connection requests to a remote NPS or other RADIUS server so that you can load balance connection requests and forward them to the correct domain for authentication and authorization.
+You also configure network policies that NPS uses to authorize connection requests, and you can configure RADIUS accounting so that NPS logs accounting information to log files on the local hard disk or in a Microsoft SQL Server database. 
 
 For more information, see [Network Policy Server (NPS)](https://docs.microsoft.com/windows-server/networking/technologies/nps/nps-top).
 

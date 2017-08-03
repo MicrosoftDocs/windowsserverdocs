@@ -9,10 +9,9 @@ manager: brianlic
 ms.author: jamesmci
 author: jamesmci
 ---
-
 # Remote Access Always On VPN Deployment Planning
 
->Applies To: Windows Server 2016, Windows 10
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows 10
 
 You can use the following steps to plan for your Always On VPN deployment.
 
@@ -23,6 +22,9 @@ Before you install the Remote Access server role on the computer you're planning
 - **Ensure VPN server software and hardware configuration is correct**. You must install Windows Server 2016 on the computer that you plan to use as a Remote Access VPN server. This server must have two physical network adapters installed, one to connect to the external perimeter network, and one to connect to the internal perimeter network.
 
 - **Identify which network adapter connects to the Internet and which network adapter connects to your private network**. You must configure the Internet facing network adapter with a public IP address, while the adapter facing the Intranet can use an IP address from the local network.
+
+>[!NOTE]
+>If you prefer not to use a public IP address on your perimeter network, you can configure the Edge Firewall with a public IP address, and then configure the firewall to forward VPN connection requests to the VPN server.
 
 - **Connect the VPN server to the network**. Install the VPN server on a perimeter network, between the edge firewall and the perimeter firewall.
 
@@ -46,7 +48,7 @@ You can configure the VPN server to assign addresses to VPN clients from a stati
 
 - **Verify that all VPN users have user accounts in Active Directory User \(AD DS\)**. Before users can connect to the network with VPN connections, they must have user accounts in AD DS.
 
-## Routing and Firewall preparations
+## Routing and Firewall Preparations
 
 The following steps provide instructions on how to make minor adjustments to the firewall configuration to support VPN deployment.
 
@@ -56,7 +58,6 @@ In addition, the VPN server is installed inside the perimeter network, which par
 
 - **Configure routing so that the DNS servers and VPN servers can reach the Internet**. This deployment uses IKEv2 and Network Address Translation \(NAT\). Ensure that the VPN server can reach all of the required internal networks and network resources that you want to provide to remote users. Any network or resource that is not reachable from the VPN server will also be unreachable over VPN connections from remote locations.
 
-In most environments, you can simply adjust static routes on the edge firewall and the RRAS server to allow them to reach this new internal perimeter network. In complex environments, you may need to add static routes to internal routers or adjust internal firewall rules for the VPN server and the block of IP addresses associated with VPN clients.
-
+In most environments, you can simply adjust static routes on the edge firewall and the VPN server to allow them to reach this new internal perimeter network. In complex environments, you may need to add static routes to internal routers or adjust internal firewall rules for the VPN server and the block of IP addresses associated with VPN clients.
 
 For the next section in this guide, see [Remote Access Always On VPN Deployment](always-on-vpn-deploy-deployment.md).

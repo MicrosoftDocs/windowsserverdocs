@@ -9,10 +9,9 @@ manager: brianlic
 ms.author: jamesmci
 author: jamesmci
 ---
-
 # Configure Windows 10 Client Always On VPN Connections
 
->Applies To: Windows Server 2016, Windows 10
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows 10
 
 After setting up the server infrastructure, you must configure the Windows 10 client computers to communicate with that infrastructure with a VPN connection. 
 
@@ -40,13 +39,6 @@ You use ProfileXML in all the delivery methods this guide describes, including W
 Even though these configuration methods differ, both require a properly formatted XML VPN profile. To use the ProfileXML VPNv2 CSP setting, you construct XML by using the ProfileXML schema to configure the tags necessary for the simple deployment scenario. For more details, see [ProfileXML XSD](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/vpnv2-profile-xsd).
 
 In the section “Infrastructure requirements,” Table 1 provided an overview of the individual settings for the VPN client. Below is each of those required settings and its corresponding ProfileXML tag. You configure each setting in a specific tag within the ProfileXML schema, and not all of them are found under the native profile. For additional tag placement, see the ProfileXML schema.
-
-**Connection type**: Native IKEv2
-
-ProfileXML element:
-
-`<NativeProtocolType>IKEv2</NativeProtocolType>`
-
 
 **Connection type:** Native IKEv2
 
