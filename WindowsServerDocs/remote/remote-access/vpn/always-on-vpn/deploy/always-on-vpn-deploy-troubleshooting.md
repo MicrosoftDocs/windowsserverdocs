@@ -9,7 +9,6 @@ manager: brianlic
 ms.author: jamesmci
 author: jamesmci
 ---
-
 # Remote Access Always On VPN Troubleshooting
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows 10

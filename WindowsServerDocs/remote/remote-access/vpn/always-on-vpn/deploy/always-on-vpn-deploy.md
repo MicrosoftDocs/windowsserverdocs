@@ -1,4 +1,3 @@
-
 ---
 title: Remote Access Always On VPN Deployment Guide for Windows Server 2016 and Windows 10
 description: You can use this guide to deploy Always On Virtual Private Network (VPN) connections for remote employees by using Remote Access in Windows Server 2016 and Always On VPN profiles for Windows 10 client computers.

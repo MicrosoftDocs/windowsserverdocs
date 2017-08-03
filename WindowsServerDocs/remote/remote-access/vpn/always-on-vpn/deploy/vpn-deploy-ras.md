@@ -9,7 +9,6 @@ manager: brianlic
 ms.author: jamesmci
 author: jamesmci
 ---
-
 # Configure the Remote Access Server for Always On VPN
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows 10

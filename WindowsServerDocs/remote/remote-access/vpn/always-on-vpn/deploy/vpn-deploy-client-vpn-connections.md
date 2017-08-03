@@ -9,7 +9,6 @@ manager: brianlic
 ms.author: jamesmci
 author: jamesmci
 ---
-
 # Configure Windows 10 Client Always On VPN Connections
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows 10

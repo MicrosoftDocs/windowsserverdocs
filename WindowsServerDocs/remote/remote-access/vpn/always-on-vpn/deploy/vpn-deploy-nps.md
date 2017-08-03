@@ -9,7 +9,6 @@ manager: brianlic
 ms.author: jamesmci
 author: jamesmci
 ---
-
 # Install and Configure the NPS Server
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows 10

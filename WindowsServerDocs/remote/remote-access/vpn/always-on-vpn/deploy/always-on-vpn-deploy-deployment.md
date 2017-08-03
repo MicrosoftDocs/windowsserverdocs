@@ -1,4 +1,3 @@
-
 ---
 title: Remote Access Always On VPN Deployment
 description: This topic provides detailed instructions for deploying Always On VPN in Windows Server 2016.
