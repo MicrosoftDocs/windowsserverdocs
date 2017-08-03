@@ -16,7 +16,7 @@ ms.author: jgerend
 
 You can increase the availability of a domain-based namespace by specifying additional namespace servers to host the namespace. To do so using DFS Management, use the following procedure.
 
-> ![TIP]
+> [!TIP]
 > To add a namespace server by using Windows PowerShell, use the [`New-DfsnRootTarget cmdlet`](https://technet.microsoft.com/library/jj884284.aspx). The DFSN Windows PowerShell module was introduced in Windows Server 2012.
 
 ## To add a namespace server to a domain-based namespace

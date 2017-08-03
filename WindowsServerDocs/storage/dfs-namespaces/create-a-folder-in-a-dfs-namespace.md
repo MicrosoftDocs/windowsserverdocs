@@ -29,7 +29,7 @@ Use the following procedure to create a folder in a namespace using DFS Manageme
 4.  To add one or more folder targets to the folder, click **Add** and specify the Universal Naming Convention (UNC) path of the folder target, and then click **OK** .
 
 
-> ![!TIP]
+> [!TIP]
 > To create a folder in a namespace by using Windows PowerShell, use the [`New-DfsnFolder`](https://technet.microsoft.com/library/jj884271.aspx)
 cmdlet. The DFSN Windows PowerShell module was introduced in Windows Server 2012.
 
