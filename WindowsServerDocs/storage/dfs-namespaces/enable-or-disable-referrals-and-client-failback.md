@@ -25,7 +25,7 @@ By disabling a namespace server's or folder target's referral, you can prevent u
 
 
 > [!TIP]
-> To enable or disable referrals by using Windows PowerShell, use the [`Set-DfsnRootTarget –State`](https://technet.microsoft.com/library/jj884266.aspx) or [`Set-DfsnServerConfiguration`](https://technet.microsoft.com/library/jj884277.aspx), which were introduced in Windows Server 2012. cmdlets, which were introduced in Windows Server 2012.
+> To enable or disable referrals by using Windows PowerShell, use the [`Set-DfsnRootTarget –State`](https://technet.microsoft.com/library/jj884266.aspx) or [`Set-DfsnServerConfiguration`](https://technet.microsoft.com/library/jj884277.aspx) cmdlets, which were introduced in Windows Server 2012.
 
 ## To enable or disable referrals
 
@@ -37,11 +37,12 @@ By disabling a namespace server's or folder target's referral, you can prevent u
 -   To enable or disable referrals to a namespace server, use the following steps:
 
     1.  In the DFS Management console tree, select the appropriate namespace and then click the **Namespace Servers** tab.
-    2.  Right-click the appropriate namespace server and then click either **Disable Namespace Server** or **Enable Namespace Server** .
+    2.  Right-click the appropriate namespace server and then click either **Disable Namespace Server** or **Enable Namespace Server**.
 
 ## Enable client failback
 
 If a target becomes unavailable, you can configure clients to fail back to the target after it is restored. For failback to work, client computers must meet the requirements listed in the following topic: [Review DFS Namespaces Client Requirements](https://technet.microsoft.com/library/cc771913(v=ws.11).aspx).
+
 
 > [!NOTE]
 > To enable client failback on a namespace root by using Windows PowerShell, use the [`Set-DfsnRoot`](https://technet.microsoft.com/library/jj884281.aspx) cmdlet. To enable client failback on a DFS folder, use the [`Set-DfsnFolder`](https://technet.microsoft.com/library/jj884283.aspx) cmdlet.

@@ -32,7 +32,7 @@ cmdlet. These cmdlets were introduced in Windows Server 2012.
 
 1.  Click **Start** , point to **Administrative Tools**, and then click **DFS Management**.
 
-2.  In the console tree, under the **Namespaces** node, right-click a folder that has targets, and then click **Properties** .
+2.  In the console tree, under the **Namespaces** node, right-click a folder that has targets, and then click **Properties**.
 
 3.  On the **Referrals** tab, in the **Cache duration (in seconds)** text box, type the amount of time (in seconds) that clients cache folder referrals. The default setting is 1800 seconds (30 minutes).
 

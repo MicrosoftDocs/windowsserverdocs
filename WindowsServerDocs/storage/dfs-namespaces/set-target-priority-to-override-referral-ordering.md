@@ -26,7 +26,7 @@ To set target priority on a root target for a domain-based namespace, use the fo
 
 2.  In the console tree, under the **Namespaces** node, click the domain-based namespace for the root targets for which you want to set priority.
 
-3.  In the details pane, on the **Namespace Servers** tab, right-click the root target with the priority that you want to change, and then click **Properties**.
+3.  In the **Details** pane, on the **Namespace Servers** tab, right-click the root target with the priority that you want to change, and then click **Properties**.
 
 4.  On the **Advanced** tab, click **Override referral ordering**, and then click the priority  you want.
 
@@ -43,7 +43,7 @@ To set target priority on a folder target, use the following procedure:
 
 2.  In the console tree, under the **Namespaces** node, click the folder of the targets for which you want to set priority.
 
-3.  In the details pane, on the **Folder Targets** tab, right-click the folder target with the priority that you want to change, and then click **Properties** .
+3.  In the **Details** pane, on the **Folder Targets** tab, right-click the folder target with the priority that you want to change, and then click **Properties** .
 
 4.  On the **Advanced** tab, click **Override referral ordering**  and then click the priority that you want.
 

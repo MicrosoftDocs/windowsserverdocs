@@ -23,31 +23,24 @@ In some environments, enabling access-based enumeration can cause high CPU utili
 > [!NOTE]
 > If you upgrade the domain functional level to Windows Server 2008 while there are existing domain-based namespaces, DFS Management will allow you to enable access-based enumeration on these namespaces. However, you will not be able to edit permissions to hide folders from any groups or users unless you migrate the namespaces to the Windows Server 2008 mode. For more information, see [Migrate a Domain-based Namespace to Windows Server 2008 Mode](migrate-a-domain-based-namespace-to-windows-server-2008-mode.md).
 
+
 To use access-based enumeration with DFS Namespaces, you must follow these steps:
 
 -   Enable access-based enumeration on a namespace
 -   Control which users and groups can view individual DFS folders
 
+
 > [!WARNING]
 > Access-based enumeration does not prevent users from getting a referral to a folder target if they already know the DFS path. Only the share permissions or the NTFS file system permissions of the folder target (shared folder) itself can prevent users from accessing a folder target. DFS folder permissions are used only for displaying or hiding DFS folders, not for controlling access, making Read access the only relevant permission at the DFS folder level. For more information, see [Using Inherited Permissions with Access-Based Enumeration](https://technet.microsoft.com/library/dd834874(v=ws.11).aspx)
 
-## Enabling access-based enumeration on a namespace
-
--   [Using the Windows interface](#BKMK_UI)
--   [Using a command line](#BKMK_CMD)
-
-> [!TIP]
-> To manage access-based enumeration on a namespace by using Windows PowerShell, use the [`Set-DfsnRoot`](https://technet.microsoft.com/library/jj884281.aspx), [`Grant-DfsnAccess`](https://technet.microsoft.com/library/jj884272.aspx), and [`Revoke-DfsnAccess`](https://technet.microsoft.com/library/jj884273.aspx) cmdlets. The DFSN Windows PowerShell module was introduced in Windows Server 2012.
-
-<a href="" id="BKMK_UI"></a>
+<br />
+You can enable access-based enumeration on a namespace either by using the Windows interface or by using a command line.
 
 ## To enable access-based enumeration by using the Windows interface
 
 1.  In the console tree, under the **Namespaces** node, right-click the appropriate namespace and then click **Properties** .
 
 2.  Click the **Advanced** tab and then select the **Enable access-based enumeration for this namespace** check box.
-
-<a href="" id="BKMK_CMD"></a>
 
 ## To enable access-based enumeration by using a command line
 
@@ -57,15 +50,15 @@ To use access-based enumeration with DFS Namespaces, you must follow these steps
 
     ```  
     dfsutil property abe enable \\ <namespace_root>
-
     ```
+
+> [!TIP]
+> To manage access-based enumeration on a namespace by using Windows PowerShell, use the [`Set-DfsnRoot`](https://technet.microsoft.com/library/jj884281.aspx), [`Grant-DfsnAccess`](https://technet.microsoft.com/library/jj884272.aspx), and [`Revoke-DfsnAccess`](https://technet.microsoft.com/library/jj884273.aspx) cmdlets. The DFSN Windows PowerShell module was introduced in Windows Server 2012.
+
 
 ## Controlling which users and groups can view individual DFS folders
 
--   [Using the Windows interface\(#BKMK_UI_ACL)
--   [Using a command line](#BKMK_Cmd_ACL)
-
-<a href="" id="BKMK_UI_ACL"></a>
+You can control which users and groups can view individual DFS folders either by using the Windows interface or by using a command line.
 
 ## To control folder visibility by using the Windows interface
 
@@ -81,27 +74,23 @@ To use access-based enumeration with DFS Namespaces, you must follow these steps
 
     To hide the folder from a group or user, select the group or user, and then select the **Deny** check box.
 
-<a href="" id="BKMK_Cmd_ACL"></a>
-
 ## To control folder visibility by using a command line
 
 1.  Open a Command Prompt window on a server that has the **Distributed File System** role service or **Distributed File System Tools** feature installed.
 
-2.  Type the following command, where *&lt;DFSPath&gt;* is the path of the DFS folder (link), *&lt;DOMAIN\\Account&gt;* is the name of the group or user account, and *(...)* is replaced with additional Access Control Entries (ACEs):
+2.  Type the following command, where *&lt;DFSPath&gt;* is the path of the DFS folder (link), *<DOMAIN\\Account>* is the name of the group or user account, and *(...)* is replaced with additional Access Control Entries (ACEs):
 
-        ```
-           dfsutil property sd grant 
-            <DFSPath>
-           DOMAIN\Account:R 
-            (...)
-           Protect Replace
-        ```
+    ```
+    dfsutil property sd grant <DFSPath> DOMAIN\Account:R (...) Protect Replace
+    ```
 
 For example, to replace existing permissions with permissions that allows the Domain Admins and CONTOSO\\Trainers groups Read (R) access to the `\\contoso.office\public\training` folder, type the following command:
 
+
 ```
-dfsutil property sd grant \\contoso.office\public\training  "CONTOSO\Domain Admins":R CONTOSO\Trainers:R Protect Replace 
+dfsutil property sd grant \\contoso.office\public\training "CONTOSO\Domain Admins":R CONTOSO\Trainers:R Protect Replace 
 ```
+
 
 3. To perform additional tasks from the command prompt, use the following commands:
 
@@ -118,5 +107,3 @@ dfsutil property sd grant \\contoso.office\public\training  "CONTOSO\Domain Admi
 -   [Delegate Management Permissions for DFS Namespaces](delegate-management-permissions-for-dfs-namespaces.md)
 -   [Installing DFS](https://technet.microsoft.com/library/cc731089(v=ws.11).aspx)
 -   [Using Inherited Permissions with Access-Based Enumeration](using-inherited-permissions-with-access-based-enumeration.md)
-
-

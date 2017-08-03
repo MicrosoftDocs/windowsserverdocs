@@ -21,35 +21,30 @@ To migrate a domain-based namespace from Windows 2000 Server mode to Windows Ser
 ## To migrate a domain-based namespace to Windows Server 2008 mode
 
 1.  Open a Command Prompt window and type the following command to export the namespace to a file, where \\\\ *domain* \\ *namespace* is the name of the appropriate domain, and namespace and *path\\filename* is the path and file name of the  file for export:
+
 ```
-         Dfsutil root export 
-            \\domain\namespace path\filename
-          .xml 
+         Dfsutil root export \\domain\namespace path\filename.xml 
 ```
 
 2.  Write down the path ( \\\\ *server* \\ *share* ) for each namespace server. You must manually add namespace servers to the re-created namespace because Dfsutil cannot import namespace servers.
 
 3.  In DFS Management, right-click the namespace and then click **Delete**, or type the following command at a command prompt, where \\\\ *domain* \\ *namespace* is the name of the appropriate domain and namespace:
-```
-        Dfsutil root remove 
-            \\domain\namespace
-```
-
-4.  In DFS Management, re-create the namespace with the same name, but use the Windows Server 2008 mode, or type the following command at a command prompt, where \\\\ *server* \\ *namespace* is the name of the appropriate server and share for the namespace root:
 
 ```
-        Dfsutil root adddom 
-            \\server\namespace 
-          v2
+        Dfsutil root remove \\domain\namespace
+```
+
+4.  In DFS Management, re-create the namespace with the same name, but use the Windows Server 2008 mode, or type the following command at a command prompt, where <br />
+\\\\ *server* \\ *namespace* is the name of the appropriate server and share for the namespace root:
+
+```
+        Dfsutil root adddom \\server\namespace v2
 ```
 
 5.  To import the namespace from the export file, type the following command at a command prompt, where \\\\ *domain* \\ *namespace* is the name of the appropriate domain and namespace and *path\\filename* is the path and file name of the file to import:
 
 ```
-        Dfsutil root import merge 
-            path\filename
-          .xml
-             \\domain\namespace
+        Dfsutil root import merge path\filename.xml \\domain\namespace
 ```
 
 > [!NOTE]
@@ -58,9 +53,10 @@ To migrate a domain-based namespace from Windows 2000 Server mode to Windows Ser
 6.  Add any remaining namespace servers to the re-created namespace by right-clicking the namespace in DFS Management and then clicking **Add Namespace Server**, or by typing the following command at a command prompt, where \\\\ *server* \\ *share* is the name of the appropriate server and share for the namespace root:
 
 ```
-        Dfsutil target add 
-            \\server\share 
+        Dfsutil target add \\server\share 
 ```
+
+<br />
 
 > [!NOTE]
 > You can add namespace servers before importing the namespace, but doing so causes the namespace servers to incrementally download the metadata for the namespace instead of immediately downloading the entire namespace after being added as a namespace server.

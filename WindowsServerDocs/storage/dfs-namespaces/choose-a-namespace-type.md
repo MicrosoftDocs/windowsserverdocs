@@ -32,7 +32,7 @@ Choose a domain-based namespace if any of the following conditions apply to your
 -   You want to ensure the availability of the namespace by using multiple namespace servers.
 -   You want to hide the name of the namespace server from users. This makes it easier to replace the namespace server or migrate the namespace to another server.
 
-Choosing a domain-based namespace mode
+## Choosing a domain-based namespace mode
 
 If you choose a domain-based namespace, you must choose whether to use the Windows 2000 Server mode or the Windows Server 2008 mode. The Windows Server 2008 mode includes support for access-based enumeration and increased scalability. The domain-based namespace introduced in Windows 2000 Server is now referred to as "domain-based namespace (Windows 2000 Server mode)."
 
@@ -49,7 +49,6 @@ For information about migrating a namespace to Windows Server 2008 mode, see [M
 If your environment does not support domain-based namespaces in Windows Server 2008 mode, use the existing Windows 2000 Server mode for the namespace.
 
 ## Comparing namespace types and modes
-
 
 The characteristics of each namespace type and mode are described in the following table.
 
