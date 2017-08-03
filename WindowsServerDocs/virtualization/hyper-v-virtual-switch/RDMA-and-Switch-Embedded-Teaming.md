@@ -82,7 +82,7 @@ If SET is not required for your deployment, you can use the following Windows Po
 Add host vNICs and make them RDMA capable:
 
     Add-VMNetworkAdapter -SwitchName RDMAswitch -Name SMB_1
-    Enable-NetAdapterRDMA "vEthernet (SMB_1)"
+    Enable-NetAdapterRDMA "vEthernet (SMB_1)" "SLOT 2"
 
 Verify RDMA capabilities:
 
@@ -99,7 +99,7 @@ Add host vNICs and make them RDMA capable:
 
     Add-VMNetworkAdapter -SwitchName SETswitch -Name SMB_1 -managementOS
     Add-VMNetworkAdapter -SwitchName SETswitch -Name SMB_2 -managementOS
-    Enable-NetAdapterRDMA "vEthernet (SMB_1)","vEthernet (SMB_2)"
+    Enable-NetAdapterRDMA "vEthernet (SMB_1)","vEthernet (SMB_2)" "SLOT 2", "SLOT 3"
 
 Verify RDMA capabilities; ensure that the capabilities are non-zero:
 
