@@ -19,7 +19,7 @@ A folder target is the Universal Naming Convention (UNC) path of a shared folder
 
 To add a folder target by using DFS Management, use the following procedure:
 
-1.  Click **Start** , point to **Administrative Tools** , and then click **DFS Management**.
+1.  Click **Start**, point to **Administrative Tools**, and then click **DFS Management**.
 
 2.  In the console tree, under the **Namespaces** node, right-click a folder, and then click **Add Folder Target**.
 

@@ -31,8 +31,8 @@ Use the following procedure to set the ordering method on the namespace root:
 
 > [!NOTE]
 > To use Windows PowerShell to set the ordering method for targets in namespace root referrals, use the [Set-DfsnRoot](https://technet.microsoft.com/library/jj884281.aspx) cmdlet with one of the following parameters:
-   -   `EnableSiteCosting` specifies the **Lowest cost ordering** method
-   -   `EnableInsiteReferrals` specifies the **Exclude targets outside of the client's site** ordering method
+   -   **EnableSiteCosting** specifies the **Lowest cost ordering** method
+   -   **EnableInsiteReferrals** specifies the **Exclude targets outside of the client's site** ordering method
    -   Omitting either parameter specifies the **Random order** referral ordering method. 
 
 The DFSN Windows PowerShell module was introduced in Windows Server 2012.

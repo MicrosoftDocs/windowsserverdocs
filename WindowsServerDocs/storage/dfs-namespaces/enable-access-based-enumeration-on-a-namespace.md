@@ -84,7 +84,7 @@ You can control which users and groups can view individual DFS folders either by
     dfsutil property sd grant <DFSPath> DOMAIN\Account:R (...) Protect Replace
     ```
 
-For example, to replace existing permissions with permissions that allows the Domain Admins and CONTOSO\\Trainers groups Read (R) access to the `\\contoso.office\public\training` folder, type the following command:
+For example, to replace existing permissions with permissions that allows the Domain Admins and CONTOSO\\Trainers groups Read (R) access to the \\contoso.office\public\training folder, type the following command:
 
 
 ```
