@@ -56,7 +56,7 @@ For more information, see [Hyper-V on Windows 10](https://msdn.microsoft.com/vir
 
 The Hyper-V technology is also available separately from Windows and Windows Server, as a free, standalone product. Hyper-V Server is commonly used as the host in a virtualized desktop infrastructure (VDI) environment.
 
-For more information, see [Microsoft Hyper-V Server 2016](https://technet.microsoft.com/hyper-v-server-docs/).
+For more information, see [Microsoft Hyper-V Server 2016](https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/hyper-v-server-2016).
 
 ## [Hyper-V Virtual Switch](hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md)
 

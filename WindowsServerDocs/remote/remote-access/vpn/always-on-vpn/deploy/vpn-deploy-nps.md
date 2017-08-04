@@ -21,8 +21,8 @@ The steps in this section allow you to complete the following items.
 
 1. On the computer or VM that is planned as the NPS server, and that is installed on your organization or corporate network, you can install NPS.
 
->[!TIP]
->If you already have one or more NPS servers on your network, you do not need to perform NPS Server installation - instead, you can use this topic to update the configuration of an existing NPS server.
+	>[!TIP]
+	>If you already have one or more NPS servers on your network, you do not need to perform NPS Server installation - instead, you can use this topic to update the configuration of an existing NPS server.
 
 2. On the organization/corporate NPS server, you can configure NPS to perform as a RADIUS server that processes the connection requests that are received from the VPN server.
 
@@ -79,6 +79,7 @@ To configure NPS, you must perform the following tasks.
 - Configure RADIUS Accounting for your NPS Server
 - Add the VPN Server as a RADIUS Client in NPS
 - Configure Network Policy in NPS
+- Autoenroll the NPS Server certificate
 
 The following sections provide instructions on completing these tasks.
 
@@ -111,9 +112,11 @@ To learn how to configure NPS Accounting, see [Configure Network Policy Server A
 You can use this section to configure the VPN server as a RADIUS Client in NPS.
 
 >[!NOTE]
->When you add a new network access server \(VPN server, wireless access point, authenticating switch, or dial-up server\) to your network, you must add the server as a RADIUS client in NPS, and then configure the RADIUS client to communicate with the NPS server.
+>When you add a new network access server \(VPN server, wireless access point, authenticating switch, or dial-up server\) to your network, you must add the server as a RADIUS client in NPS so that NPS is aware of and can communicate with the network access server.
 
 #### To add the VPN Server as a RADIUS client in NPS
+
+You can use this procedure to configure a new RADIUS client in NPS.
 
 >[!IMPORTANT]
 >In the previous deployment step using the topic [Configure the Remote Access Server for Always On VPN](vpn-deploy-ras.md), you installed and configured your VPN server. During VPN server configuration, you added a RADIUS shared secret on the VPN server. Now you need to use the same shared secret text string to configure the VPN server as a RADIUS client in NPS. You must use the same text string that you used on the VPN server, or communication between the NPS server and VPN server will fail.
