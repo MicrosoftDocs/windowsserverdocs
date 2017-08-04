@@ -54,7 +54,7 @@ The characteristics of each namespace type and mode are described in the followi
 
 |Characteristic|Stand-Alone Namespace|Domain-based Namespace (Windows 2000 Server Mode) |Domain-based Namespace (Windows Server 2008 Mode) | 
 |---|---|---|---|
-|Path to namespace| \\\ *ServerName\RootName* |\\\ *NetBIOSDomainName\RootName* \\\ *DNSDomainName\RootName*|\\\ *NetBIOSDomainName\RootName* \\\ *DNSDomainName\RootName* |
+|Path to namespace|\\\ *ServerName\RootName* |\\\ *NetBIOSDomainName\RootName* <br />\\\ *DNSDomainName\RootName*|\\\ *NetBIOSDomainName\RootName* <br /> \\\ *DNSDomainName\RootName*|
 |Namespace information storage location|In the registry and in a memory cache on the namespace server|In AD DS and in a memory cache on each namespace server|In AD DS and in a memory cache on each namespace server|
 |Namespace size recommendations|The namespace can contain more than 5,000 folders with targets; the recommended limit is 50,000 folders with targets|The size of the namespace object in AD DS should be less than 5 megabytes (MB) to maintain compatibility with domain controllers that are not running Windows Server 2008. This means no more than approximately 5,000 folders with targets.|The namespace can contain more than 5,000 folders with targets; the recommended limit is 50,000 folders with targets |
 |Minimum AD DS forest functional level|AD DS is not required|Windows 2000|Windows Server 2003|

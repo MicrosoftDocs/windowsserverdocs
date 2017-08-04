@@ -18,14 +18,14 @@ A referral is an ordered list of targets that a client computer receives from a 
 
 ## To change the amount of time that clients cache namespace root referrals
 
-1.  Click **Start**, point to **Administrative Tools**, and then click **DFS Management** .
+1.  Click **Start**, point to **Administrative Tools**, and then click **DFS Management**.
 
-2.  In the console tree, under the **Namespaces** node, right-click a namespace, and then click **Properties** .
+2.  In the console tree, under the **Namespaces** node, right-click a namespace, and then click **Properties**.
 
 3.  On the **Referrals** tab, in the **Cache duration (in seconds)** text box, type the amount of time (in seconds) that clients cache namespace root referrals. The default setting is 300 seconds (five minutes).
 
 > [!TIP]
-> To change the amount of time that clients cache namespace root referrals by using Windows PowerShell, use the [`Set-DfsnRoot TimeToLiveSec`](https://technet.microsoft.com/library/jj884281.aspx)
+> To change the amount of time that clients cache namespace root referrals by using Windows PowerShell, use the [Set-DfsnRoot TimeToLiveSec](https://technet.microsoft.com/library/jj884281.aspx)
 cmdlet. These cmdlets were introduced in Windows Server 2012.
 
 ## To change the amount of time that clients cache folder referrals

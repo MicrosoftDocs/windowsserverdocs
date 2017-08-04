@@ -39,7 +39,7 @@ To set target priority on a root target for a domain-based namespace, use the fo
 
 To set target priority on a folder target, use the following procedure:
 
-1.  Click **Start**, point to **Administrative Tools**,  and then click **DFS Management**.
+1.  Click **Start**, point to **Administrative Tools**, and then click **DFS Management**.
 
 2.  In the console tree, under the **Namespaces** node, click the folder of the targets for which you want to set priority.
 
@@ -48,7 +48,7 @@ To set target priority on a folder target, use the following procedure:
 4.  On the **Advanced** tab, click **Override referral ordering**  and then click the priority that you want.
 
 > [!NOTE]
-> To set target priorities by using Windows PowerShell, use the  [`Set-DfsnRootTarget`](https://technet.microsoft.com/library/jj884266.aspx) and [`Set-DfsnFolderTarget`](https://technet.microsoft.com/library/jj884264.aspx) cmdlets with the `ReferralPriorityClass` and `ReferralPriorityRank` parameters. These cmdlets were introduced in Windows Server 2012.
+> To set target priorities by using Windows PowerShell, use the  [Set-DfsnRootTarget](https://technet.microsoft.com/library/jj884266.aspx) and [Set-DfsnFolderTarget](https://technet.microsoft.com/library/jj884264.aspx) cmdlets with the `ReferralPriorityClass` and `ReferralPriorityRank` parameters. These cmdlets were introduced in Windows Server 2012.
 
 ## See also 
 

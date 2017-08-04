@@ -53,7 +53,7 @@ You can enable access-based enumeration on a namespace either by using the Windo
     ```
 
 > [!TIP]
-> To manage access-based enumeration on a namespace by using Windows PowerShell, use the [`Set-DfsnRoot`](https://technet.microsoft.com/library/jj884281.aspx), [`Grant-DfsnAccess`](https://technet.microsoft.com/library/jj884272.aspx), and [`Revoke-DfsnAccess`](https://technet.microsoft.com/library/jj884273.aspx) cmdlets. The DFSN Windows PowerShell module was introduced in Windows Server 2012.
+> To manage access-based enumeration on a namespace by using Windows PowerShell, use the [Set-DfsnRoot](https://technet.microsoft.com/library/jj884281.aspx), [Grant-DfsnAccess](https://technet.microsoft.com/library/jj884272.aspx), and [Revoke-DfsnAccess](https://technet.microsoft.com/library/jj884273.aspx) cmdlets. The DFSN Windows PowerShell module was introduced in Windows Server 2012.
 
 
 ## Controlling which users and groups can view individual DFS folders
@@ -91,15 +91,14 @@ For example, to replace existing permissions with permissions that allows the Do
 dfsutil property sd grant \\contoso.office\public\training "CONTOSO\Domain Admins":R CONTOSO\Trainers:R Protect Replace 
 ```
 
-
 3. To perform additional tasks from the command prompt, use the following commands:
 
 
 | Command | Description |
 |---|---|
-|[`Dfsutil property sd deny`](https://msdn.microsoft.com/library/dd759150(v=ws.11).aspx)|Denies a group or user the ability to view the folder.|
-|[`Dfsutil property sd reset`](https://msdn.microsoft.com/library/dd759150(v=ws.11).aspx) |Removes all permissions from the folder.|
-|[`Dfsutil property sd revoke`](https://msdn.microsoft.com/library/dd759150(v=ws.11).aspx)| Removes a group or user ACE from the folder. |
+|[Dfsutil property sd deny](https://msdn.microsoft.com/library/dd759150(v=ws.11).aspx)|Denies a group or user the ability to view the folder.|
+|[Dfsutil property sd reset](https://msdn.microsoft.com/library/dd759150(v=ws.11).aspx) |Removes all permissions from the folder.|
+|[Dfsutil property sd revoke](https://msdn.microsoft.com/library/dd759150(v=ws.11).aspx)| Removes a group or user ACE from the folder. |
 
 ## See also
 

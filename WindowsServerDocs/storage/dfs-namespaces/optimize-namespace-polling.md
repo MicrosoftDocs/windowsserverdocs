@@ -30,11 +30,9 @@ Use the following procedure to optimize how namespace polling occurs:
     -   Choose **Optimize for scalability** if there are more than 16 namespace servers. This reduces the load on the Primary Domain Controller (PDC) Emulator, but increases the time required for changes to the namespace to replicate to all namespace servers. Until changes replicate to all servers, users might have an inconsistent view of the namespace.
 
 > [!NOTE]
-> To set the namespace polling mode by using Windows PowerShell, use the [`Set-DfsnRoot EnableRootScalability`](https://technet.microsoft.com/library/jj884281.aspx) cmdlet, which was introduced in Windows Server 2012.
+> To set the namespace polling mode by using Windows PowerShell, use the [Set-DfsnRoot EnableRootScalability](https://technet.microsoft.com/library/jj884281.aspx) cmdlet, which was introduced in Windows Server 2012.
 
 ## See also
 
 -   [Tuning DFS Namespaces](tuning-dfs-namespaces.md)
 -   [Delegate Management Permissions for DFS Namespaces](delegate-management-permissions-for-dfs-namespaces.md)
-
-

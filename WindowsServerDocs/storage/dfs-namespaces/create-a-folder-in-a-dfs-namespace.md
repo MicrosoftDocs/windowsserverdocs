@@ -18,7 +18,7 @@ You can use folders to create additional levels of hierarchy in a namespace. You
 
 Use the following procedure to create a folder in a namespace using DFS Management:
 
-## To create a folder in a namespace
+## To create a folder in a DFS namespace
 
 1.  Click **Start**, point to **Administrative Tools**, and then click **DFS Management**.
 
@@ -30,7 +30,7 @@ Use the following procedure to create a folder in a namespace using DFS Manageme
 
 
 > [!TIP]
-> To create a folder in a namespace by using Windows PowerShell, use the [`New-DfsnFolder`](https://technet.microsoft.com/library/jj884271.aspx)
+> To create a folder in a namespace by using Windows PowerShell, use the [New-DfsnFolder](https://technet.microsoft.com/library/jj884271.aspx)
 cmdlet. The DFSN Windows PowerShell module was introduced in Windows Server 2012.
 
 
