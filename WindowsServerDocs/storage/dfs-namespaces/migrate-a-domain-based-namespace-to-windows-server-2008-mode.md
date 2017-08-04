@@ -47,10 +47,10 @@ To migrate a domain-based namespace from Windows 2000 Server mode to Windows Ser
    Dfsutil root import merge path\filename.xml \\domain\namespace
    ```
 
-<br />
+   <br />
 
-> [!NOTE]
-> To minimize the time required to import a large namespace, run the **Dfsutil** root import command locally on a namespace server.
+   > [!NOTE]
+   > To minimize the time required to import a large namespace, run the **Dfsutil** root import command locally on a namespace server.
  
 6.  Add any remaining namespace servers to the re-created namespace by right-clicking the namespace in DFS Management and then clicking **Add Namespace Server**, or by typing the following command at a command prompt, where <br /> \\\\*server*\\*share* is the name of the appropriate server and share for the namespace root:
 
@@ -58,10 +58,10 @@ To migrate a domain-based namespace from Windows 2000 Server mode to Windows Ser
    Dfsutil target add \\server\share 
    ```
 
-<br />
+   <br />
 
-> [!NOTE]
-> You can add namespace servers before importing the namespace, but doing so causes the namespace servers to incrementally download the metadata for the namespace instead of immediately downloading the entire namespace after being added as a namespace server.
+   > [!NOTE]
+   > You can add namespace servers before importing the namespace, but doing so causes the namespace servers to incrementally download the metadata for the namespace instead of immediately downloading the entire namespace after being added as a namespace server.
 
 ## See also
 -   [Deploying DFS Namespaces](deploying-dfs-namespaces.md)
