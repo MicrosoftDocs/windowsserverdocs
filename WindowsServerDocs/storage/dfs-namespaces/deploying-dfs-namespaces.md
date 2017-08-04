@@ -16,7 +16,7 @@ ms.author: jgerend
 
 To deploy DFS Namespaces, refer to the following topics:
 
--   [Prepare to Deploy DFS Namespaces](https://technet.microsoft.com/library/cc771575(v=ws.11).aspx)
+-   [Prepare to Deploy DFS Namespaces](choose-a-namespace-type.md)
 -   [Create a DFS Namespace](create-a-dfs-namespace.md)
 -   [Migrate a Domain-based Namespace to Windows Server 2008 Mode](migrate-a-domain-based-namespace-to-windows-server-2008-mode.md)
 -   [Add Namespace Servers to a Domain-based DFS Namespace](add-namespace-servers-to-a-domain-based-dfs-namespace.md)
