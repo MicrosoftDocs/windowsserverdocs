@@ -55,9 +55,6 @@ You can enable access-based enumeration on a namespace either by using the Windo
 > [!TIP]
 > To manage access-based enumeration on a namespace by using Windows PowerShell, use the [Set-DfsnRoot](https://technet.microsoft.com/library/jj884281.aspx), [Grant-DfsnAccess](https://technet.microsoft.com/library/jj884272.aspx), and [Revoke-DfsnAccess](https://technet.microsoft.com/library/jj884273.aspx) cmdlets. The DFSN Windows PowerShell module was introduced in Windows Server 2012.
 
-
-## Controlling which users and groups can view individual DFS folders
-
 You can control which users and groups can view individual DFS folders either by using the Windows interface or by using a command line.
 
 ## To control folder visibility by using the Windows interface
