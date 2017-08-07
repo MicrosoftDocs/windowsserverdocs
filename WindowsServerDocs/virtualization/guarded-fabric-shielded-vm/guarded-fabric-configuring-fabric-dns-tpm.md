@@ -1,5 +1,5 @@
 ---
-title: Configure the fabric DNS for guarded hosts
+title: Configure the fabric DNS for guarded hosts (TPM)
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.topic: article
@@ -15,7 +15,6 @@ ms.date: 10/14/2016
 [Configure Https »](guarded-fabric-configure-hgs-https.md)
 
 [!INCLUDE [Configure fabric DNS](../../../includes/guarded-fabric-configure-fabric-dns.md)] 
-
 
 ## See also
 

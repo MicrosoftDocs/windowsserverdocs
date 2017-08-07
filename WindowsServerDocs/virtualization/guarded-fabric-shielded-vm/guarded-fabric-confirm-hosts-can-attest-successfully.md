@@ -10,6 +10,10 @@ ms.technology: security-guarded-fabric
 ms.date: 10/14/2016
 ---
 
+>[!div class="step-by-step"]
+[« Review prerequisites](guarded-fabric-guarded-host-prerequisites.md)
+[Deploy shielded VMs »](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
+
 # Confirm guarded hosts can attest 
 
 >Applies To: Windows Server 2016
@@ -29,7 +33,7 @@ A fabric administrator needs to confirm that Hyper-V hosts can run as guarded ho
     - **Through VMM**: If you are using System Center 2016 - Virtual Machine Manager (VMM), you can configure Attestation and Key Protection URLs in VMM. For details, see [Configure global HGS settings](https://technet.microsoft.com/system-center-docs/vmm/scenario/guarded-hosts#configure-global-hgs-settings) in **Provision guarded hosts in VMM**.
     
     >**Notes**
-    > - If the HGS administrator [enabled HTTPS on the HGS server](guarded-fabric-configure-the-first-hgs-node.md#configuring-hgs-for-https-communications), begin the URLs with `https://`.
+    > - If the HGS administrator [enabled HTTPS on the HGS server](guarded-fabric-configure-hgs-https.md), begin the URLs with `https://`.
     > - If the HGS administrator enabled HTTPS on the HGS server and used a self-signed certificate, you will need to import the certificate into the Trusted Root Certificate Authorities store on every host. To do this, run the following command on each host:<br>
         `Import-Certificate -FilePath "C:\temp\HttpsCertificate.cer" -CertStoreLocation Cert:\LocalMachine\Root`
     
@@ -40,12 +44,6 @@ A fabric administrator needs to confirm that Hyper-V hosts can run as guarded ho
     The output of the command indicates whether the host passed attestation and is now guarded. If `IsHostGuarded` does not return **True**, you can run the HGS diagnostics tool, [Get-HgsTrace](https://technet.microsoft.com/library/mt718831.aspx), to investigate. To run diagnostics, enter the following command in an elevated Windows PowerShell prompt on the host:
 
         Get-HgsTrace -RunDiagnostics -Detailed
-
-## Next steps
-
-For hosting service providers, see [Hosting service provider configuration steps for guarded hosts and shielded VMs](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md).
-
-For a list of all tasks for configuring a guarded fabric, see [Deployment tasks for guarded fabrics and shielded VMs](guarded-fabric-deploying-hgs-overview.md#deployment-tasks-for-guarded-fabrics-and-shielded-vms).
 
 ## See also
 

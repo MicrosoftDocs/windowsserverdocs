@@ -7,5 +7,5 @@
 >
 > Note that the diagnostics will only return this incorrect status when targeting a Hyper-V host. If the diagnostics are targeting the Host Guardian Service, the status returned will be correct.
 
-<!-- Appears in guarded-fabric-verify-hgs-configuration.md and guarded-fabric-troubleshoot-diagnostics.md
+<!-- Appears in guarded-fabric-setting-up-the-host-guardian-service-hgs.md and guarded-fabric-troubleshoot-diagnostics.md
 -->
