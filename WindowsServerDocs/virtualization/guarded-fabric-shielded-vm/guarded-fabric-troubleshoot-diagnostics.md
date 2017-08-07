@@ -30,13 +30,12 @@ This will automatically detect the role of the current host and diagnose any rel
 The remainder of this topic will provide a detailed walkthrough on the advanced usage of `Get-HgsTrace` for doing things like diagnosing multiple hosts at once and detecting complex cross-node misconfiguration.
 
 ## Diagnostics Overview
-Guarded fabric diagnostics are available on any host with shielded virtual machine related tools and features installed, including hosts running Windows Server Core and Nano editions.  Presently, diagnostics are included with the following features/packages:
+Guarded fabric diagnostics are available on any host with shielded virtual machine related tools and features installed, including hosts running Server Core.  Presently, diagnostics are included with the following features/packages:
 
 1. Host Guardian Service Role
 2. Host Guardian Hyper-V Support
 3. VM Shielding Tools for Fabric Management
 4. Remote Server Administration Tools (RSAT)
-5. Nano Server Compute
 
 This means that diagnostic tools will be available on all guarded hosts, HGS nodes, certain fabric management servers, and any Windows 10 workstations with [RSAT](https://www.microsoft.com/download/details.aspx?id=45520) installed.  Diagnostics can be invoked from any of the above machines with the intent of diagnosing any guarded host or HGS node in a guarded fabric; using remote trace targets, diagnostics can locate and connect to hosts other than the machine running diagnostics.
 

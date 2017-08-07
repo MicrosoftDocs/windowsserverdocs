@@ -363,15 +363,13 @@ To check the attestation mode for your guarded fabric, run `Get-HgsServer` on an
 #### Software configuration
 On the new Hyper-V host, ensure that Windows Server 2016 Datacenter edition is installed.
 Windows Server 2016 Standard cannot run shielded VMs in a guarded fabric.
-The host may be installed with any of the installation options (server with desktop experience, Server Core, and Nano Server).
+The host may be installed Desktop Experience or Server Core.
 
 On server with desktop experience and Server Core, you need to install the Hyper-V and Host Guardian Hyper-V Support server roles:
 
 ```powershell
 Install-WindowsFeature Hyper-V, HostGuardian -IncludeManagementTools -Restart
 ```
-
-For Nano Server, you should prepare the image with the **Compute**, **Microsoft-NanoServer-SecureStartup-Package** and **Microsoft-NanoServer-ShieldedVM-Package** packages.
 
 #### Admin-trusted attestation
 To register a new host in HGS when using admin-trusted attestation, you must first add the host to a security group in the domain to which it's joined.
