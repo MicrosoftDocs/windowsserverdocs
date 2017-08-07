@@ -81,7 +81,7 @@ Use the following steps to create a domain controller (we called ours "my-dc" be
    1. In the resource group, select a VM, and then click **Network interfaces** (under **settings**). Select the listed network interface, and then click **IP Configurations**. Select the listed IP configuration, select **static**, and then click **Save**.
    2. Note the domain controller (my-dc for our example) private IP address (10.x.x.x).
 8. Set primary DNS server address on NICs of the cluster node VMs to the my-dc server. Select the VM, and then click **Network Interfaces > DNS servers > Custom DNS**. Enter the the private IP address you noted above, and then click **Save**.
-9. Create an [Azure storage account to be your cloud witness](https://blogs.msdn.microsoft.com/clustering/2014/11/13/introducing-cloud-witness/). (If you use the linked instructions, stop when you get to "Configuring Cloud Witness with Failover Cluster Manager GUI" - we'll do that step below.)
+9. Create an [Azure storage account to be your cloud witness](https://docs.microsoft.com/windows-server/failover-clustering/deploy-cloud-witness). (If you use the linked instructions, stop when you get to "Configuring Cloud Witness with Failover Cluster Manager GUI" - we'll do that step below.)
 10. Set up the Storage Spaces Direct file server. Connect to a node VM, and then run the following Windows PowerShell cmdlets.
    1. Install Failover Clustering Feature and File Server Feature on the two file server cluster node VMs:
 
