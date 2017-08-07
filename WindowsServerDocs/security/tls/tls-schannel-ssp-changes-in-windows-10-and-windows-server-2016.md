@@ -38,13 +38,13 @@ Starting with Windows 10, version 1507 and Windows Server 2016, SHA 512 certific
 
 Windows 10, version 1507 and Windows Server 2016 add registry configuration options for client RSA key sizes.
 
-For more information, see [KeyExchangeAlgorithm - Client RSA key sizes](tls-registry-settings.md)
+For more information, see [KeyExchangeAlgorithm - Client RSA key sizes](tls-registry-settings.md#keyexchangealgorithm---client-rsa-key-sizes).
 
 ### Diffie-Hellman key changes
 
 Windows 10, version 1507 and Windows Server 2016 add registry configuration options for Diffie-Hellman key sizes.
 
-For more information, see [KeyExchangeAlgorithm - Diffie-Hellman key sizes](tls-registry-settings.md)
+For more information, see [KeyExchangeAlgorithm - Diffie-Hellman key sizes](tls-registry-settings.md#keyexchangealgorithm---diffie-hellman-key-sizes).
 
 ### SCH_USE_STRONG_CRYPTO option changes
 
