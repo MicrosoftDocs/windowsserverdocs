@@ -10,6 +10,10 @@ ms.technology: security-guarded-fabric
 ms.date: 10/14/2016
 ---
 
+>[!div class="step-by-step"]
+[« Deploy HGS](guarded-fabric-setting-up-the-host-guardian-service-hgs.md)
+[Deploy shielded virtual machines »](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
+
 # Deploy guarded hosts
 
 >Applies To: Windows Server 2016

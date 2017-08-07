@@ -10,30 +10,15 @@ ms.technology: security-guarded-fabric
 ms.date: 10/14/2016
 ---
 
+>[!div class="step-by-step"]
+[« Plan a guarded fabric](guarded-fabric-plan-overview.md)
+[Quick Start »](guarded-fabric-deployment-overview.md)
+
 # Deploying the Host Guardian Service for guarded hosts and shielded VMs
 
 >Applies To: Windows Server 2016
 
 One of the most important goals of providing a hosted environment is to guarantee the security of the virtual machines running in the environment. As a cloud service provider or enterprise private cloud administrator, you can use a guarded fabric to provide a more secure environment for VMs. A guarded fabric consists of one Host Guardian Service (HGS) - typically, a cluster of three nodes - plus one or more guarded hosts, and a set of shielded virtual machines (VMs).
-
-The following topics tell how to set up a guarded fabric.
-
-- Deploy HGS: [Setting up the Host Guardian Service - HGS](guarded-fabric-setting-up-the-host-guardian-service-hgs.md)
-    - [Prepare for the Host Guardian Service deployment](guarded-fabric-prepare-for-hgs.md)
-    - [Configure the first HGS node](guarded-fabric-configure-the-first-hgs-node.md)
-    - [Configure additional HGS nodes](guarded-fabric-configure-additional-hgs-nodes.md)
-    - [Verify the HGS configuration](guarded-fabric-verify-hgs-configuration.md)
- 
-- Deploy Guarded hosts [Configuration steps for Hyper-V hosts that will become guarded hosts](guarded-fabric-configure-hgs-with-authorized-hyper-v-hosts.md)
-    - [Configure the fabric DNS](guarded-fabric-configuring-fabric-dns.md)
-    - [Add a guarded host in AD mode](guarded-fabric-admin-trusted-attestation-creating-a-security-group.md)
-    - [Add a guarded host in TPM mode](guarded-fabric-tpm-trusted-attestation-capturing-hardware.md)
-    - [Add host info to HGS](guarded-fabric-add-host-information-to-hgs.md)
-        - [Add host info for AD mode](guarded-fabric-add-host-information-for-admin-trusted-attestation.md)
-        - [Add host info for TPM mode](guarded-fabric-add-host-information-for-tpm-trusted-attestation.md)
-    - [Confirm attestation](guarded-fabric-confirm-hosts-can-attest-successfully.md)
-    - [Using System Center VMM to deploy guarded hosts](https://technet.microsoft.com/system-center-docs/vmm/scenario/guarded-hosts)<br><br>
-
 
 ## Deployment tasks for guarded fabrics and shielded VMs
 
@@ -41,12 +26,12 @@ The following table breaks down the tasks to deploy a guarded fabric and create 
 
 |<img src="../media/Guarded-Fabric-Shielded-VM/guarded-host-hgs-administrator-tasks.png" alt="Host Guardian Service administrator tasks" width="238" height="62" align="left" /> | <img src="../media/Guarded-Fabric-Shielded-VM/guarded-host-fabric-administrator-tasks.png" alt="Fabric administrator tasks" width="300" height="62" align="left" /> | <img src="../media/Guarded-Fabric-Shielded-VM/guarded-host-tenant-administrator-tasks.png" alt="Tenant administrator tasks" width="184" height="66" align="left" /> |
 |-------------------------------------|--------------------------------|-----------------------------------------|
-|<img src="../media/Guarded-Fabric-Shielded-VM/1111.png" alt="Step 1" hspace="8" align="left" /> [Verify HGS prerequisites](guarded-fabric-prepare-for-hgs.md#prerequisites-for-the-host-guardian-service) <img src="../media/Guarded-Fabric-Shielded-VM/guarded-host-verify.png" alt="Step 1" hspace="8" align="right" />| | |
-|<img src="../media/Guarded-Fabric-Shielded-VM/2222.png" alt="Step 2" hspace="8" align="left" /> [Configure first HGS&nbsp;node](guarded-fabric-configure-the-first-hgs-node.md)&nbsp;<img src="../media/Guarded-Fabric-Shielded-VM/guarded-host-configure-first-hgs-node.png" alt="Step 2" hspace="8" align="right" />| | |
+|<img src="../media/Guarded-Fabric-Shielded-VM/1111.png" alt="Step 1" hspace="8" align="left" /> [Verify HGS prerequisites](guarded-fabric-prepare-for-hgs.md) <img src="../media/Guarded-Fabric-Shielded-VM/guarded-host-verify.png" alt="Step 1" hspace="8" align="right" />| | |
+|<img src="../media/Guarded-Fabric-Shielded-VM/2222.png" alt="Step 2" hspace="8" align="left" /> [Configure first HGS&nbsp;node](guarded-fabric-choose-where-to-install-hgs.md)&nbsp;<img src="../media/Guarded-Fabric-Shielded-VM/guarded-host-configure-first-hgs-node.png" alt="Step 2" hspace="8" align="right" />| | |
 |<img src="../media/Guarded-Fabric-Shielded-VM/3333.png" alt="Step 3" hspace="8" align="left" /> [Configure additional HGS&nbsp;nodes](guarded-fabric-configure-additional-hgs-nodes.md) <img src="../media/Guarded-Fabric-Shielded-VM/guarded-host-configure-secondary-hgs-nodes.png" alt="Step 3" hspace="8" align="right" />| | |
 |<img src="../media/Guarded-Fabric-Shielded-VM/4444.png" alt="Step 4" hspace="8" align="left" /> [Verify HGS configuration](guarded-fabric-verify-hgs-configuration.md) <img src="../media/Guarded-Fabric-Shielded-VM/guarded-host-verify-hgs-configuration.png" alt="Step 4" hspace="8" align="right" />| | |
 | &nbsp; |<img src="../media/Guarded-Fabric-Shielded-VM/5555.png" alt="Step 5" hspace="8" align="left" /> [Configure fabric DNS](guarded-fabric-configuring-fabric-dns.md) <img src="../media/Guarded-Fabric-Shielded-VM/guarded-host-configure-fabric-dns.png" alt="Step 5" hspace="8" align="right" />| |
-| &nbsp; |<img src="../media/Guarded-Fabric-Shielded-VM/6666.png" alt="Step 6" hspace="8" align="left" /> [Verify host&nbsp;prerequisites (Admin)](guarded-fabric-admin-trusted-attestation-creating-a-security-group.md#prerequisites)<br>[Verify host&nbsp;prerequisites (TPM)](guarded-fabric-tpm-trusted-attestation-capturing-hardware.md#prerequisites)<img src="../media/Guarded-Fabric-Shielded-VM/guarded-host-verify.png" alt="Step 6" hspace="8" align="right" />| |
+| &nbsp; |<img src="../media/Guarded-Fabric-Shielded-VM/6666.png" alt="Step 6" hspace="8" align="left" /> [Verify host&nbsp;prerequisites (Admin)](guarded-fabric-guarded-host-prerequisites.md#admin-trusted-attestation)<br>[Verify host&nbsp;prerequisites (TPM)](guarded-fabric-guarded-host-prerequisites.md#tpm-trusted-attestation)<img src="../media/Guarded-Fabric-Shielded-VM/guarded-host-verify.png" alt="Step 6" hspace="8" align="right" />| |
 |<img src="../media/Guarded-Fabric-Shielded-VM/8888.png" alt="Step 8" hspace="8" align="left" /> [Configure HGS with host information](guarded-fabric-add-host-information-to-hgs.md) <img src="../media/Guarded-Fabric-Shielded-VM/guarded-host-configure-hgs-with-host-info.png" alt="Step 8" hspace="8" align="right" />|<img src="../media/Guarded-Fabric-Shielded-VM/7777.png" alt="Step 7" hspace="8" align="left" /> [Collect host information (Admin)](guarded-fabric-add-host-information-for-admin-trusted-attestation.md)<br>[Collect host information (TPM)](guarded-fabric-add-host-information-for-tpm-trusted-attestation.md) <img src="../media/Guarded-Fabric-Shielded-VM/guarded-host-collect-info-from-hosts.png" alt="Step 7" hspace="8" align="right" />| |
 | &nbsp; |<img src="../media/Guarded-Fabric-Shielded-VM/9999.png" alt="Step 9" hspace="8" align="left" /> [Confirm hosts can attest](guarded-fabric-confirm-hosts-can-attest-successfully.md) <img src="../media/Guarded-Fabric-Shielded-VM/guarded-host-confirm-hosts-attest.png" alt="Step 9" hspace="8" align="right" />| |
 | &nbsp; |<img src="../media/Guarded-Fabric-Shielded-VM/101010.png" alt="Step 10" hspace="8" align="left" /> [Configure VMM (optional)](https://technet.microsoft.com/system-center-docs/vmm/scenario/guarded-overview) <img src="../media/Guarded-Fabric-Shielded-VM/guarded-host-configure-vmm.png" alt="Step 10" hspace="8" align="right" />| |

@@ -20,8 +20,6 @@ For TPM mode, the fabric administrator captures three kinds of host information,
 - Code Integrity policies, a white list of allowed binaries for the Hyper-V hosts
 - A TPM baseline (boot measurements) that represents a set of Hyper-V hosts that run on the same class of hardware
 
-The process that the fabric administrator uses is described in [TPM-trusted attestation for a guarded fabric - capturing information required by HGS](guarded-fabric-tpm-trusted-attestation-capturing-hardware.md#capture-hardware-and-software-information). 
-
 After the fabric administrator captures the information, add it to the HGS configuration as described in the following procedure.
 
 1.  Obtain the XML files that contain the EKpub information and copy them to an HGS server. There will be one XML file per host. Then, in an elevated Windows PowerShell console on an HGS server, run the command below. Repeat the command for each of the XML files.
@@ -31,7 +29,7 @@ After the fabric administrator captures the information, add it to the HGS confi
     ```
 
     > [!NOTE]
-    > If you encounter an error when adding a TPM identifier regarding an untrusted Endorsement Key Certificate (EKCert), ensure that the [trusted TPM root certificates have been added](guarded-fabric-configure-the-first-hgs-node.md#install-trusted-tpm-root-certificates) to the HGS node.
+    > If you encounter an error when adding a TPM identifier regarding an untrusted Endorsement Key Certificate (EKCert), ensure that the [trusted TPM root certificates have been added](guarded-fabric-install-trusted-tpm-root-certificates.md) to the HGS node.
     > Additionally, some TPM vendors do not use EKCerts.
     > You can check if an EKCert is missing by opening the XML file in an editor such as Notepad and checking for an error message indicating no EKCert was found.
     > If this is the case, and you trust that the TPM in your machine is authentic, you can use the `-Force` flag to override this safety check and add the host identifier to HGS.

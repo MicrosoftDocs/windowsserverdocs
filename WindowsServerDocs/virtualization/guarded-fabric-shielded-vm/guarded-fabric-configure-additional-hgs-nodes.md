@@ -10,123 +10,103 @@ ms.technology: security-guarded-fabric
 ms.date: 05/10/2017
 ---
 
+>[!div class="step-by-step"]
+[« Configure Https](guarded-fabric-configure-hgs-https.md)
+[Verify the configuration »](guarded-fabric-verify-hgs-configuration.md)
+
 # Configure additional HGS nodes
 
 >Applies To: Windows Server 2016
 
 In production environments, HGS should be set up in a high availability cluster to ensure that shielded VMs can be powered on even if an HGS node goes down. For test environments, secondary HGS nodes are not required.
 
-The following steps will add a node to the HGS cluster.
+Use one of these methods to add HGS nodes, as best suited for your environment.
+
+|                |                         |                              | 
+|----------------|-------------------------|------------------------------|
+|New HGS forest  | [Using PFX files](#dedicated-hgs-forest-with-pfx-certificates) | [Using certificate thumbprints](#dedicated-hgs-forest-with-certificate-thumbprints) |
+|Existing bastion forest |  [Using PFX files](#existing-bastion-forest-with-pfx-certificates) | [Using certificate thumbprints](#existing-bastion-forest-with-certificate-thumbprints) |
 
 ## Prerequisites
 
-Before you can add an additional node to your HGS cluster, ensure the following prerequisites are met:
+Make sure that each additional node: 
+- Has the same hardware and software configuration as the primary node 
+- Is connected to the same network as the other HGS servers
+- Can resolve the other HGS servers by their DNS names
 
-1. The additional node has the same hardware and software configuration as the primary node. This is a failover clustering best practice.
+## Dedicated HGS forest with PFX certificates
 
-2. The additional node is connected to the same network as the other HGS servers, and can resolve the other HGS servers by their DNS names.
+1. Promote the HGS node to a domain controller
+2. Initialize the HGS server
 
-3. The Host Guardian Service role is installed on the machine. To install the role, run the following command in an elevated PowerShell console:
+### Promote the HGS node to a domain controller
 
-    ```powershell
-    Install-WindowsFeature -Name HostGuardianServiceRole -IncludeManagementTools -Restart
-    ```
+[!INCLUDE [Promote to a domain controller](../../../includes/guarded-fabric-promote-domain-controller.md)] 
 
-## Join the node to the HGS domain
+### Initialize the HGS server
 
-Your new HGS node must be joined to the same domain as your first HGS node.
-If you used the `Install-HgsServer` command to set up a new domain for your first HGS node, follow the steps under [Promote to a domain controller in the HGS forest](#promote-to-a-domain-controller-in-the-hgs-forest).
-If you joined the first HGS node to an existing bastion forest, skip to [Join an existing bastion forest](#join-an-existing-bastion-forest).
+[!INCLUDE [Initialize the HGS server](../../../includes/guarded-fabric-initialize-hgs-on-the-node.md)] 
 
-### Promote to a domain controller in the HGS forest
+## Dedicated HGS forest with certificate thumbprints
+ 
+1. Promote the HGS node to a domain controller
+2. Initialize the HGS server
+3. Install the private keys for the certificates
 
-If you set up a new forest for your Host Guardian Service using `Install-HgsServer` on the primary node, you must promote your additional HGS servers to domain controllers using the same command.
+### Promote the HGS node to a domain controller
 
-1.  Ensure at least one NIC on the node is configured to use the DNS server on your first HGS server for name resolution. This is necessary for the machine to resolve and join the domain.
+[!INCLUDE [Promote to a domain controller](../../../includes/guarded-fabric-promote-domain-controller.md)] 
 
-2.  Run [Install-HgsServer](https://technet.microsoft.com/en-us/itpro/powershell/windows/hgsserver/install-hgsserver) to join the domain and promote the node to a domain controller.
+### Initialize the HGS server
 
-    ```powershell
-    $adSafeModePassword = ConvertTo-SecureString -AsPlainText '<password>' -Force
+[!INCLUDE [Initialize the HGS server](../../../includes/guarded-fabric-initialize-hgs-on-the-node.md)] 
 
-    $cred = Get-Credential 'relecloud\Administrator'
+### Install the private keys for the certificates
 
-    Install-HgsServer -HgsDomainName 'relecloud.com' -HgsDomainCredential $cred -SafeModeAdministratorPassword $adSafeModePassword -Restart
-    ```
+[!INCLUDE [Install private keys](../../../includes/guarded-fabric-install-private-keys.md)]
 
-3.  When the server reboots, log in with a domain administrator account and follow the steps to [Initialize HGS on the node](#initialize-hgs-on-the-node).
+## Existing bastion forest with PFX certificates
 
-### Join an existing bastion forest
+1. Join the node to the existing domain
+2. Grant the machine rights to retrieve gMSA password and run Install-ADServiceAccount
+3. Initialize the HGS server
 
-If you joined your first Host Guardian Service node to an existing bastion forest, **do not run** `Install-HgsServer`.
-It is unsupported to make HGS a domain controller when you are joining an existing bastion forest (note that the Active Directory Domain Services role will be installed, it will just remain unconfigured).
+### Join the node to the existing domain
 
-1.  Ensure at least one NIC on the node is configured to use the DNS server for your existing domain. This is necessary for the machine to resolve and join the domain.
+1. Ensure at least one NIC on the node is configured to use the DNS server on your first HGS server.
+2. Join the new HGS node to the same domain as your first HGS node. 
 
-2.  Join the computer to a domain using Server Manager or [Add-Computer](https://msdn.microsoft.com/en-us/powershell/reference/5.1/microsoft.powershell.management/add-computer).
+### Grant the machine rights to retrieve gMSA password and run Install-ADServiceAccount
 
-3.  Reboot the computer to complete the domain join process.
+[!INCLUDE [Grant the machine rights to retrieve the group MSA](../../../includes/guarded-fabric-grant-machine-rights-to-retrieve-gmsa.md)] 
 
-4.  Have a directory services admin add the computer account for your new node to the security group containing all of your HGS servers that is permissioned to allow those servers to use the HGS gMSA account.
+### Initialize the HGS server
 
-5.  Reboot the new node to obtain a new Kerberos ticket that includes the computer's membership in that security group. After the reboot completes, sign in with a domain identity that belongs to the local administrators group on the computer.
+[!INCLUDE [Initialize the HGS server](../../../includes/guarded-fabric-initialize-hgs-on-the-node.md)] 
 
-6.  Install the HGS group managed service account on the node.
+## Existing bastion forest with certificate thumbprints
 
-    ```powershell
-    Install-ADServiceAccount -Identity <HGSgMSAAccount>
-    ```
+1. Join the node to the existing domain
+2. Grant the machine rights to retrieve gMSA password and run Install-ADServiceAccount
+3. Initialize the HGS server
+4. Install the private keys for the certificates
 
-7.  Continue installation by following the steps to [Initialize HGS on the node](#initialize-hgs-on-the-node).
+### Join the node to the existing domain
 
+1. Ensure at least one NIC on the node is configured to use the DNS server on your first HGS server.
+2. Join the new HGS node to the same domain as your first HGS node. 
 
-## Initialize HGS on the node
+### Grant the machine rights to retrieve gMSA password and run Install-ADServiceAccount
 
-With HGS joined to the domain, sign in with a domain account that has local administrator privileges.
-Open an elevated PowerShell prompt and run the following command to join the existing HGS cluster.
+[!INCLUDE [Grant the machine rights to retrieve the group MSA](../../../includes/guarded-fabric-grant-machine-rights-to-retrieve-gmsa.md)] 
 
-```powershell
-Initialize-HgsServer -HgsServerIPAddress <IP address of first HGS Server>
-```
+### Initialize the HGS server
 
-It will take up to 10 minutes for the encryption and signing certificates from the first HGS server to replicate to this node.
-If you did not provide a PFX file for either the encryption or signing certificates on the first HGS server, only the public key will be replicated to this server.
-You will need to install the private key by importing a PFX file containing the private key into the local certificate store or, in the case of HSM-backed keys, configuring the Key Storage Provider and associating it with your certificates per your HSM manufacturer's instructions.
+[!INCLUDE [Initialize the HGS server](../../../includes/guarded-fabric-initialize-hgs-on-the-node.md)] 
 
-## Install trusted TPM root certificates
+### Install the private keys for the certificates
 
-If you initialized your first HGS server in TPM mode, or expect to migrate to TPM mode in the future, you will need to install root certificates used to issue the endorsement key in hosts' TPM modules.
-These root certificates are different from those installed by default in Windows and represent the specific root and intermediate certificates used by TPM vendors.
-The steps below will help you install certificates for TPMs produced by Microsoft's partners.
-Some TPMs do not use endorsement key certificates or use certificates not included in this package.
-Consult your TPM vendor or server OEM for further assistance in these cases.
-
-1.  Download the latest package from [http://tpmsec.microsoft.com/OnPremisesDHA/TrustedTPM.cab](http://tpmsec.microsoft.com/OnPremisesDHA/TrustedTPM.cab).
-2.  Change directory to the Downloads folder (or saved location), and validate that the package is digitally signed by Microsoft. Do not expand the CAB file if it does not have a valid signature.
-
-    ```powershell
-    Get-AuthenticodeSignature -FilePath <Path-To-TrustedTpm.cab>
-    ```
-
-3.  Expand the cab file in the same folder.
-
-    ```powershell
-    mkdir .\TrustedTPM
-    expand.exe -F:* .\TrustedTPM.cab .\TrustedTPM
-    ```
-
-4.  By default, the configuration script will install certificates for every TPM vendor. If you only want to import certificates for your specific TPM vendor, delete the folders for TPM vendors not trusted by your organization.
-
-5.  Install the trusted certificate package by running the setup script in the expanded folder.
-
-    ```powershell
-    cd .\TrustedTPM
-    .\setup.cmd
-    ```
-
-The TrustedTpm.cab file is updated regularly with new vendor certificates as they become available.
-To add new certificates or ones intentionally skipped during an earlier installation, simply repeat the above steps on every node in your HGS cluster.
-Existing certificates will remain trusted but new certificates found in the expanded cab file will be added to the trusted TPM stores.
+[!INCLUDE [Install private keys](../../../includes/guarded-fabric-install-private-keys.md)]
 
 ## Configure HGS for HTTPS communications
 
@@ -134,7 +114,7 @@ If you want to secure HGS endpoints with an SSL certificate, you must configure 
 SSL certificates *are not* replicated by HGS and do not need to use the same keys for every node (i.e. you can have different SSL certs for each node).
 
 When requesting an SSL cert, ensure the cluster fully qualified domain name (as shown in the output of `Get-HgsServer`) is either the subject common name of the cert, or included as a subject alternative DNS name.
-When you've obtained a certificate from your certificate authority, you can configure HGS to use it with [Set-HgsServer](https://technet.microsoft.com/en-us/itpro/powershell/windows/hgsserver/set-hgsserver).
+When you've obtained a certificate from your certificate authority, you can configure HGS to use it with [Set-HgsServer](https://technet.microsoft.com/itpro/powershell/windows/hgsserver/set-hgsserver).
 
 ```powershell
 $sslPassword = Read-Host -AsSecureString -Prompt "SSL Certificate Password"
