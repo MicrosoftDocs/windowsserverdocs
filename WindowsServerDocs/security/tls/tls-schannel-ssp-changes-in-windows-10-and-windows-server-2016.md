@@ -38,42 +38,13 @@ Starting with Windows 10, version 1507 and Windows Server 2016, SHA 512 certific
 
 Windows 10, version 1507 and Windows Server 2016 add registry configuration options for client RSA key sizes.
 
-Registry path: 
-
-HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\KeyExchangeAlgorithms\PKCS
- 
-To specify a minimum supported range of RSA key bit length for the TLS client, create a **ClientMinKeyBitLength** entry. 
-This entry does not exist in the registry by default. 
-After you have created the entry, change the DWORD value to the desired bit length. 
-If not configured, 1024 bits will be the minimum. 
- 
-To specify a maximum supported range of RSA key bit length for the TLS client, create a **ClientMaxKeyBitLength** entry. 
-This entry does not exist in the registry by default. 
-After you have created the entry, change the DWORD value to the desired bit length. 
-If not configured, then a maximum is not enforced. 
+For more information, see [KeyExchangeAlgorithm - Client RSA key sizes](tls-registry-settings.md)
 
 ### Diffie-Hellman key changes
 
 Windows 10, version 1507 and Windows Server 2016 add registry configuration options for Diffie-Hellman key sizes.
 
-Registry path: 
-
-HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\KeyExchangeAlgorithms\Diffie-Hellman
- 
-To specify a minimum supported range of Diffie-Helman key bit length for the TLS client, create a **ClientMinKeyBitLength** entry. 
-This entry does not exist in the registry by default. 
-After you have created the entry, change the DWORD value to the desired bit length. 
-If not configured, 1024 bits will be the minimum. 
- 
-To specify a maximum supported range of Diffie-Helman key bit length for the TLS client, create a **ClientMaxKeyBitLength** entry. 
-This entry does not exist in the registry by default. 
-After you have created the entry, change the DWORD value to the desired bit length. 
-If not configured, then a maximum is not enforced. 
- 
-To specify the Diffie-Helman key bit length for the TLS server default, create a **ServerMinKeyBitLength** entry. 
-This entry does not exist in the registry by default. 
-After you have created the entry, change the DWORD value to the desired bit length. 
-If not configured, 2048 bits will be the default. 
+For more information, see [KeyExchangeAlgorithm - Diffie-Hellman key sizes](tls-registry-settings.md)
 
 ### SCH_USE_STRONG_CRYPTO option changes
 
