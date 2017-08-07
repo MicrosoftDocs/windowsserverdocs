@@ -20,16 +20,16 @@ When browsing a folder in the namespace, users are not aware that the folder is 
 
 To deploy DFS Namespaces, perform the following tasks:
 
-1. Review the basic concepts of DFS Namespaces.
+-   Review the basic concepts of DFS Namespaces.
 [Overview of DFS Namespaces](https://technet.microsoft.com/library/cc730736(v=ws.11).aspx)
-2. Review requirements and prepare to deploy DFS Namespaces. [Prepare to Deploy DFS Namespaces](https://technet.microsoft.com/library/cc771575(v=ws.11).aspx)
-3. Install DFS Management. [Installing DFS](https://technet.microsoft.com/library/cc731089(v=ws.11).aspx) 
-4. Create a DFS Namespace. [Create a DFS Namespace](create-a-dfs-namespace.md) 
-5. Migrate existing domain-based namespaces to Windows Server 2008 mode domain-based namespaces. [Migrate a Domain-based Namespace to Windows Server 2008 mode](migrate-a-domain-based-namespace-to-windows-server-2008-mode.md) 
-6. Increase availability by adding namespace servers to a domain-based namespace. [Add Namespace Servers to a Domain-based DFS Namespace](add-namespace-servers-to-a-domain-based-dfs-namespace.md)
-7. Add folders to a namespace. [Create a Folder in a DFS Namespace](create-a-folder-in-a-dfs-namespace.md)
-8. Add folder targets to folders in a namespace. [Add Folder Targets](add-folder-targets.md)
-9. Replicate content between folder targets using DFS Replication (optional). [Replicate Folder Targets Using DFS Replication](replicate-folder-targets-using-dfs-replication.md)
+-   Review requirements and prepare to deploy DFS Namespaces. [Prepare to Deploy DFS Namespaces](https://technet.microsoft.com/library/cc771575(v=ws.11).aspx)
+-   Install DFS Management. [Installing DFS](https://technet.microsoft.com/library/cc731089(v=ws.11).aspx) 
+-   Create a DFS Namespace. [Create a DFS Namespace](create-a-dfs-namespace.md) 
+-   Migrate existing domain-based namespaces to Windows Server 2008 mode domain-based namespaces. [Migrate a Domain-based Namespace to Windows Server 2008 mode](migrate-a-domain-based-namespace-to-windows-server-2008-mode.md) 
+-   Increase availability by adding namespace servers to a domain-based namespace. [Add Namespace Servers to a Domain-based DFS Namespace](add-namespace-servers-to-a-domain-based-dfs-namespace.md)
+-   Add folders to a namespace. [Create a Folder in a DFS Namespace](create-a-folder-in-a-dfs-namespace.md)
+-   Add folder targets to folders in a namespace. [Add Folder Targets](add-folder-targets.md)
+-   Replicate content between folder targets using DFS Replication (optional). [Replicate Folder Targets Using DFS Replication](replicate-folder-targets-using-dfs-replication.md)
 
 
 ## See also
