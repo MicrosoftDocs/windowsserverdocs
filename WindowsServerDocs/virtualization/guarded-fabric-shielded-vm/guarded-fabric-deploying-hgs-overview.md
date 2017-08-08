@@ -20,6 +20,10 @@ ms.date: 10/14/2016
 
 One of the most important goals of providing a hosted environment is to guarantee the security of the virtual machines running in the environment. As a cloud service provider or enterprise private cloud administrator, you can use a guarded fabric to provide a more secure environment for VMs. A guarded fabric consists of one Host Guardian Service (HGS) - typically, a cluster of three nodes - plus one or more guarded hosts, and a set of shielded virtual machines (VMs).
 
+## Video: Deploying a guarded fabric 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nPJfI7r_AGg" frameborder="0" allowfullscreen></iframe>
+
 ## Deployment tasks for guarded fabrics and shielded VMs
 
 The following table breaks down the tasks to deploy a guarded fabric and create shielded VMs according to different administrator roles. Note that when the HGS admin configures HGS with authorized Hyper-V hosts, a fabric admin will collect and provide identifying information about the hosts at the same time.    
