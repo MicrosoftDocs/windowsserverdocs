@@ -57,6 +57,7 @@
 ### [Which client works best for you?](clients/remote-desktop-app-compare.md)
 ### [Supported PCs](clients/remote-desktop-supported-config.md)
 ### [Grant Remote Desktop access to your PC](clients/remote-desktop-allow-access.md)
+### [Grant access to your PC from outside your network](clients/remote-desktop-allow-outside-access.md)
 ### [Getting started with Remote Desktop client on Android](clients/remote-desktop-android.md)
 ### [Getting started with Remote Desktop client on iOS](clients/remote-desktop-ios.md)
 ### [Getting started with Remote Desktop client on Mac](clients/remote-desktop-mac.md)
