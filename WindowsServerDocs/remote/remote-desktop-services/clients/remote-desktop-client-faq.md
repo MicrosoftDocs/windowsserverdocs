@@ -12,7 +12,7 @@ ms.assetid: 785a18cf-a5d0-4bc2-95e4-9ef53ee8f65a
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.date: 07/12/2017
+ms.date: 08/09/2017
 ---
 # Frequently asked questions about the Remote Desktop clients
 
@@ -86,6 +86,7 @@ Check the following:
 - Did you enter the right name or IP address?
 > [!IMPORTANT]
 > Using the PC name requires your network to resolve the name correctly through DNS. In many home networks, you have to use the IP address instead of the host name to connect.
+- Is the PC on a different network? Did you configure the PC to let outside connections through?  Check out [Allow access to your PC from outside your network](remote-desktop-allow-outside-access.md) for help.
 - Are you connecting to a supported Windows version? 
    > [!NOTE]
    > Windows XP Home, Windows Media Center Edition, Windows Vista Home and Windows 7 Home or Starter are not supported without 3rd party software.
