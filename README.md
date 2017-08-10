@@ -26,6 +26,6 @@ Corey Plett is the writer and approver for Essentials Server. Kathy Davies is th
 
 To make a small update, simply edit the file and submit a pull request. For substantive changes, new articles, and deletions, consult with the area owner before spending any significant time. It's the writer's responsibility to manage their area as a content set within the larger content portfolio. This helps us avoid duplication, identify content gaps, and consider how the various articles fit together.
 
-Info on how to add or update content, minimum quality standards, formatting help and more is available in the [Contributor's Guide](../Contributor-guide/Contributor-index), in this repo.
+Info on how to add or update content, minimum quality standards, formatting help and more is available in the [Contributor's Guide](./Contributor-guide/Contributor-index.md), in this repo.
 
 
