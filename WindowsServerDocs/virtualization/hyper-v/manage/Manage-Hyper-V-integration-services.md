@@ -18,7 +18,7 @@ ms.assetid: 9cafd6cb-dbbe-4b91-b26c-dee1c18fd8c2
 
 Hyper-V Integration Services allow a virtual machine to communicate with the Hyper-V host. Many of these services are conveniences, such as guest file copy, while others are important to the virtual machine's ability to function correctly, such as time synchronization. This set of services are sometimes referred to as integration components.
 
-For details about each integration service, see [Hyper-V Integration Services](https://msdn.microsoft.com/virtualization/hyperv_on_windows/reference/ic_info).
+For details about each integration service, see [Hyper-V Integration Services](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/reference/integration-services).
 
 >[!IMPORTANT]
 >Each service you want to use must be enabled in both the host and guest so they can communicate. All integration services are on by default on Windows guest operating systems, but you can turned them off individually. The next sections show you how.
