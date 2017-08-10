@@ -43,6 +43,9 @@ This guide contains the following sections.
 
 This guide is designed for network and system administrators who want to manage remote computers that connect automatically to the organization network with VPN whenever the user logs on to the device, changes networks, or simply turns on the display. This type of automatically connecting VPN is called an *Always On VPN* - because the VPN connection appears to be a persistent connection.
 
+>[!NOTE]
+>This guide is available for download in Word format at [TechNet Gallery](https://gallery.technet.microsoft.com/Always-On-VPN-Deployment-e681bc7d).
+
 This guide provides instructions on deploying Remote Access as a single tenant VPN RAS Gateway for point\-to\-site VPN connections that allow your remote employees to connect to your organization network with Always On VPN connections.
 
 It is recommended that you review the design and deployment guides for each of the technologies that are used in this deployment scenario. These guides can help you determine whether this deployment scenario provides the services and configuration that you need for your organization's network. For more information, see [Technology overviews](#bkmk_technology).
