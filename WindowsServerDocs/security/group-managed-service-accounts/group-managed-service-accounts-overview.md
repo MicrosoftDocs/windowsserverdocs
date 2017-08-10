@@ -42,9 +42,9 @@ A 64\-bit architecture is required to run the Windows PowerShell commands which 
 A managed service account is dependent upon Kerberos supported encryption types.When a client computer authenticates to a server using Kerberos the DC creates a Kerberos service ticket protected with encryption both the DC and server supports. The DC uses the account's msDS\-SupportedEncryptionTypes attribute to determine what encryption the server supports and, if there is no attribute, it assumes the client computer does not support stronger encryption types. If the host is configured to not support RC4, then authentication will always fail. For this reason, AES should always be explicitly configured for MSAs.
 
 > [!NOTE]
-> Beginning with Windows??Server??2008??R2, DES is disabled by default. For more information about supported encryption types, see [Changes in Kerberos Authentication](http://technet.microsoft.com/library/dd560670(WS.10).aspx).
+> Beginning with Windows Server 2008 R2, DES is disabled by default. For more information about supported encryption types, see [Changes in Kerberos Authentication](http://technet.microsoft.com/library/dd560670(WS.10).aspx).
 
-Group Managed Service Accounts are not applicable to Windows operating systems prior to Widows Server 2008 R2.
+Group Managed Service Accounts are not applicable to Windows operating systems prior to Windows Server 2008 R2.
 
 ## Server Manager information
 There are no configuration steps necessary to implement MSA and group MSA using Server Manager or the Install\-WindowsFeature cmdlet.

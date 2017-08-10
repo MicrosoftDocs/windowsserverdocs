@@ -10,6 +10,10 @@ ms.technology: security-guarded-fabric
 ms.date: 11/15/2016
 ---
 
+>[!div class="step-by-step"]
+[« Deploy a shielded VM using PowerShell](guarded-fabric-create-a-shielded-vm-using-powershell.md)
+[Deploy a shielded using Windows Azure Pack »](guarded-fabric-shielded-vm-windows-azure-pack.md)
+
 # Shielded VMs for tenants - Deploying a shielded VM by using Virtual Machine Manager
 
 If you have access to System Center 2016 - Virtual Machine Manager (VMM), you can deploy a shielded VM for which a shielded VM template has already been created. 

@@ -89,7 +89,7 @@ The following procedure shows how to prevent conflicts by blocking the applicati
   
 3.  Double-click Computer Configuration, double-click Policies, and then double-click Windows Settings.  
   
-4.  Double-click Security Settings, and then click Security Options.  
+4.  Double-click Security Settings, double-click Local Policies, and then click Security Options.  
   
 5.  Double-click Audit: Force audit policy subcategory settings (Windows Vista or later) to override audit policy category settings, and then click Define this policy setting.  
   

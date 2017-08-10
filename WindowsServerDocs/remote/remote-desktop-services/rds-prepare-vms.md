@@ -7,7 +7,7 @@ ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
 ms.author: elizapo
-ms.date: 04/19/2017  
+ms.date: 07/21/2017  
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2fc39dff-61ca-4eba-81ab-52289081bead
@@ -18,27 +18,14 @@ manager: dongill
 
 >Applies To: Windows Server 2016
 
- 
-Use the following steps to create a virtual machine to host Remote Desktop Services components:  
-  
-1. In the Azure portal, click **Browse > Virtual machines > Add > Windows Server**.   
-2. Click **Windows Server 2016**.  
-3. Choose **Resource Manager** for the deployment model, and then click **Create**.  
-4. Enter a name for the virtual machine (for example, Contoso-SH2).  
-5. Enter a user name and password to add to the local administrators group.  
-6. Select the appropriate Azure subscription and location.  
-7. For **Resource group**, click **Select existing**, and then select the resource group created in the basic deployment (for example, Contoso-RG). Then click **OK**.  
-8. Set the size (A1 Standard), and then click **Select**.   
-9. Select the storage account you created in the prerequisites, and then click **OK**.  
-10. Select **Network security group** and **None**.  
-11. For **Availability set**, select the availability set created in the basic deployment, (for example, SHAvSet).  
-12. Accept the other default options, and then click **OK**.  
-13. Click **OK** to deploy.   
+You can install Remote Desktop Services components on physical servers or on virtual machines. 
 
-After you create the VMs, use the following steps to prepare them for RDS:  
+The first step is to [create Windows Server virtual machines in Azure](/azure/virtual-machines/windows/quick-create-portal). You'll want to create three VMs: one for the RD Session Host, one for the Connection Broker, and one for the RD Web and RD Gateway. To ensure the availability of your RDS deployment, create an availability set (under **High availablility** in the VM creation process) and group multiple VMs in that availability set.
+ 
+After you create your VMs, use the following steps to prepare them for RDS.
 
 1.  Connect to the virtual machine using the Remote Desktop Connection (RDC) client:  
-    1.  In the Azure portal click **Browse > Resource groups** and click the resource group for the deployment.  
+    1.  In the Azure portal open the  Resource groups view, and then click the resource group to use for the deployment.  
     2.  Select the new RDSH virtual machine (for example, Contoso-Sh1).  
     3.  Click **Connect > Open** to open the Remote Desktop client.  
     4.  In the client, click **Connect**, and then click **Use another user account**. Enter the user name and password for the local administrator account.  

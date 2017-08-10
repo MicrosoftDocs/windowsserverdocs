@@ -31,7 +31,7 @@ When a tenant creates shielded VMs that run on a guarded fabric, the Hyper-V hos
 
 ## Video: Introduction to shielded virtual machines in Windows Server 2016
 
-[![Introduction to Shielded Virtual Machines Video](../media/Guarded-Fabric-Shielded-VM/shielded-vms-introduction-video.png)](https://channel9.msdn.com/Shows/Mechanics/Introduction-to-Shielded-Virtual-Machines-in-Windows-Server-2016)
+<iframe src="https://channel9.msdn.com/Shows/Mechanics/Introduction-to-Shielded-Virtual-Machines-in-Windows-Server-2016/player" width="650" height="440" allowFullScreen frameBorder="0"></iframe>
 
 ## Attestation modes in the Guarded Fabric solution
 
@@ -100,7 +100,11 @@ The following table summarizes the differences between encryption-supported and 
 |Integration components | Configurable by fabric admin      | Certain integration components blocked (e.g. data exchange, PowerShell Direct) |
 |Virtual Machine Connection (Console), HID devices (e.g. keyboard, mouse) | On, cannot be disabled | Disabled (cannot be enabled) |
 |COM/Serial ports   | Supported                             | Disabled (cannot be enabled) |
-|Attach a debugger (to the VM process) | Supported          | Disabled (cannot be enabled) |
+|Attach a debugger (to the VM process)<sup>1</sup>| Supported          | Disabled (cannot be enabled) |
+
+<sup>1</sup> Traditional debuggers that attach directly to a process, such as WinDbg.exe, are blocked for shielded VMs because the VM's worker process (VMWP.exe) is a protected process light (PPL). 
+Alternative debugging techniques, such as those used by LiveKd.exe, are not blocked. 
+Unlike shielded VMs, the worker process for encryption supported VMs does not run as a PPL so traditional debuggers like WinDbg.exe will continue to function normally. 
 
 Both shielded VMs and encryption-supported VMs continue to support commonplace fabric management capabilities, such as Live Migration, Hyper-V replica, VM checkpoints, and so on.
 

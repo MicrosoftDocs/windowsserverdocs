@@ -6,7 +6,6 @@
 ### [Server Performance Advisor Pack for Tiered Storage Spaces](server-performance-advisor/server-performance-advisor-pack-for-tiered-storage-spaces.md)
 ## [Performance Tuning Guidelines](performance-tuning/index.md) 
 ## [Remote Server Administration Tools](../remote/remote-server-administration-tools.md)
-## [Server Management Tools (Azure)](get-started-with-smt.md)
 ## [Server Manager](server-manager/server-manager.md)
 ### [Manage the Local Server and the Server Manager Console](server-manager/manage-the-local-server-and-the-server-manager-console.md)
 ### [Configure Remote Management in Server Manager](server-manager/configure-remote-management-in-server-manager.md)

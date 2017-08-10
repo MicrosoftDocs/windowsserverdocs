@@ -96,7 +96,7 @@ While you are configuring a certificate template in the next step, ensure that t
 3. The certificate must have both Server Authentication (EKU: 1.3.6.1.5.5.7.3.1) and Client Authentication (EKU: 1.3.6.1.5.5.7.3.2) Application policies.
 
 >[!NOTE]
-> It is critical that the Personal (My – cert:\localmachine\my) certificate store on the Hyper-V host has exactly one X.509 certificate with Subject Name (CN) as the host FQDN.
+>If the Personal \(My – cert:\localmachine\my\) certificate store on the Hyper\-V host has more than one X.509 certificate with Subject Name (CN) as the host Fully Qualified Domain Name \(FQDN\), ensure that the certificate that will be used by SDN has an additional custom Enhanced Key Usage property with the OID 1.3.6.1.4.1.311.95.1.1.1. Otherwise, the communication between Network Controller and the host might not work.
 
 #### To configure the certificate template
   

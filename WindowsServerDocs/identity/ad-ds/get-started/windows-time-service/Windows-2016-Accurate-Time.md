@@ -17,7 +17,7 @@ ms.technology: identity-adds
 >Applies To: Windows Server 2016
 
 ## Introduction
-Time synchronization accuracy in Windows Server 2016 has been improved substantially, while maintaining full backwards NTP compatibility with older Windows versions.  Under reasonable operating conditions you can maintain a 1 ms accuracy with respect to UTC or better for Windows Server 2016 and Windows 10 Anniversary domain members.  The following whitepaper discusses these topics as they relate to enabling accurate time: 
+Time synchronization accuracy in Windows Server 2016 has been improved substantially, while maintaining full backwards NTP compatibility with older Windows versions.  Under reasonable operating conditions you can maintain a 1 ms accuracy with respect to UTC or better for Windows Server 2016 and Windows 10 Anniversary Update domain members.  The following whitepaper discusses these topics as they relate to enabling accurate time: 
 
 
 - Improvements
@@ -80,7 +80,7 @@ There are many different reasons you might need accurate time.  The typical case
 Windows Server 2016 has improved the algorithms it uses to correct time and condition the local clock to synchronize with UTC.  NTP uses 4 values to calculate the time offset, based on the timestamps of the client request/response and server request/response.  However, networks are noisy, and there can be spikes in the data from NTP due to network congestion and other factors that affect network latency.  Windows 2016 algorithms average out this noise using a number of different techniques which results in a stable and accurate clock.  Additionally, the source we use for accurate time references an improved API which gives us better resolution.  With these improvements we are able to achieve 1 ms accuracy with regards to UTC across a domain.
 
 ### Hyper-V
-Windows 2016 has improved the Hyper-V TimeSync service. Improvements include more accurate initial time on VM start or VM restore and interrupt latency correction for samples provided to w32time.  This improvement allows us to stay with-in 10µs of the host with an RMS, (Root Mean Squared, which indicates variance), of 50µs, even on a machine with %75 load.
+Windows 2016 has improved the Hyper-V TimeSync service. Improvements include more accurate initial time on VM start or VM restore and interrupt latency correction for samples provided to w32time.  This improvement allows us to stay with-in 10µs of the host with an RMS, (Root Mean Squared, which indicates variance), of 50µs, even on a machine with 75% load.
 
 > [!NOTE]
 > See this article on [Hyper-V architecture](https://msdn.microsoft.com/library/cc768520.aspx) for more information.
@@ -106,9 +106,9 @@ The first 3 counters target scenarios for troubleshooting accuracy issues.  The 
 The last 3 counters cover NTP server scenarios and are helpful when determine the load and baselining your current performance.
 
 ### Configuration Updates per Environment
-The following describes the changes in default configuration between Windows 2016 and previous versions for each Role.  The settings for Windows Server 2016 and Windows 10 Anniversary (build 1607), are now unique which is why there are shown as separate columns. 
+The following describes the changes in default configuration between Windows 2016 and previous versions for each Role.  The settings for Windows Server 2016 and Windows 10 Anniversary Update(build 14393), are now unique which is why there are shown as separate columns. 
 
-|Role|Setting|Windows 2016|Windows 10 (1607)|Windows 2012 R2</br>Windows 2008R2</br>Windows 10|
+|Role|Setting|Windows Server 2016|Windows 10 Version 1607|Windows Server 2012 R2</br>Windows Server 2008 R2</br>Windows 10|
 |---|---|---|---|---|
 |**Standalone/Nano Server**||||
 | |*Time Server*|time.windows.com|NA|time.windows.com|
@@ -147,7 +147,7 @@ Domain Controllers should be minimally impacted even with the multiplied effect 
 
 As a conservative plan, you should reserve 100 NTP requests per second per core.  For instance, a domain made up of 4 DCs with 4 cores each, you should be able to serve 1600 NTP requests per second.  If you have 10k clients configured to sync time once every 64 seconds, and the requests are received uniformly over time, you would see 10,000/64 or around 160 requests/second, spread across all DCs.  This falls easily within our 1600 NTP requests/sec based on this example.  These are conservative planning recommendations and of course have a large dependency on your network, processor speeds and loads, so as always baseline and test in your environments.
 
-It is also important to note that if your DCs are running with a considerable CPU load, greater than %40, this will almost certainly add noise to NTP responses and affect your time accuracy in your domain.  Again, you need to test in your environment to understand the actual results.
+It is also important to note that if your DCs are running with a considerable CPU load, greater than 40%, this will almost certainly add noise to NTP responses and affect your time accuracy in your domain.  Again, you need to test in your environment to understand the actual results.
 
 ## Time Accuracy Measurements
 ### Methodology
@@ -296,8 +296,8 @@ Source|	Local CMOS Clock|
 Phase Offset|	0.0000000s|
 Server Role|	576 (Reliable Time Service)|
 
-#### Windows Server 2016 on 3rd Party Virtual platforms
-When Windows is virtualized, by default the Hypervisor is responsible for providing time.  But domain joined members need to be sychronized with the Domain Controller in order for Active Directory to work properly.  It is best to disable any time virtualization between the guest and the host of any 3rd Patry Virtual platforms.
+#### Windows Server 2016 on 3rd Party Virtual Platforms
+When Windows is virtualized, by default the Hypervisor is responsible for providing time.  But domain joined members need to be sychronized with the Domain Controller in order for Active Directory to work properly.  It is best to disable any time virtualization between the guest and the host of any 3rd party virtual platforms.
 
 #### Discovering the Hierarchy
 Since the chain of time hierarchy to the master clock source is dynamic in a domain, and negotiated, you will need to query the status of a particular machine to understand it’s time source and chain to the master source clock.  This can help diagnose time synchronization problems.
@@ -368,7 +368,7 @@ Programs which require the greatest accuracy with regards to UTC, and not the pa
 #### UDP Performance
 If you have an application that uses UDP communication for transactions and it’s important to minimize latency, there are some related registry entries you can use to configure a range of ports to be excluded from port the base filtering engine.  This will improve both the latency and increase your throughput.  However, changes to the registry should be limited to experienced administrators.  Additionally, this work around excludes ports from being secured by the firewall.  See the article reference below for more information.
 
-For Windows 2012 and Windows 2008, you will need to install a Hotfix first.  You can reference this KB article: [Datagram loss when you run a multicast receiver application in Windows 8 and in Windows Server 2012](https://support.microsoft.com/en-gb/kb/2808584)
+For Windows Server 2012 and Windows Server 2008, you will need to install a Hotfix first.  You can reference this KB article: [Datagram loss when you run a multicast receiver application in Windows 8 and in Windows Server 2012](https://support.microsoft.com/en-us/kb/2808584)
 
 #### Update Network Drivers
 Some network vendors have driver updates which improve performance with regards to driver latency and buffering UDP packets.  Please contact your network vendor to see if there are updates to help with UDP throughput.
@@ -453,7 +453,7 @@ Client Clocks are drifting|	Time-Service event 36 in System event log and/or tex
 ### Baselining Time
 Baselining is important so that you can first, understand the performance and accuracy of your network, and compare with the baseline in the future when problems occur.  You’ll want to baseline the root PDC or any machines marked with the GTIMESRV.  We would also recommend you baseline the PDC in every forest.  Finally pick any critical DCs or machines that have interesting characteristics, like distance or high loads and baseline those.
 
-It is also useful to baseline Windows Server 2016 vs 2012R2, however you only have w32tm /stripchart as a tool you can use to compare, since Windows Server 2012R2 doesn’t have performance counters.  You should pick two machines with the same characteristics, or upgrade a machine and compare the results after the update.  The Windows Time Measurements addendum has more information on how to do detailed measurements between 2016 and 2012.
+It is also useful to baseline Windows Server 2016 vs 2012 R2, however you only have w32tm /stripchart as a tool you can use to compare, since Windows Server 2012R2 doesn’t have performance counters.  You should pick two machines with the same characteristics, or upgrade a machine and compare the results after the update.  The Windows Time Measurements addendum has more information on how to do detailed measurements between 2016 and 2012.
 
 Using the all the w32time performance counters, collect data for at least a week.  This will insure you have enough of a reference to account for various in the network over time and enough of a run to provide confidence that your time accuracy is stable.
 

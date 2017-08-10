@@ -55,7 +55,7 @@ Use the following steps to migrate the WSUS database (SUSDB) from a Windows Inte
 
     Run the following SQL command to detach the WSUS database (SUSDB) from the Windows Internal Database instance by using the **sqlcmd** utility. For more information about the **sqlcmd** utility, see [sqlcmd Utility](http://go.microsoft.com/fwlink/?LinkId=81183).
 
-       `cmd -S \\.\pipe\Microsoft\#\#WID\tsql\query use master`
+       `sqlcmd -S \\.\pipe\Microsoft\#\#WID\tsql\query use master`
 
        `alter database SUSDB set single_user with rollback immediate`
 

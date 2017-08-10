@@ -30,7 +30,7 @@ This will automatically detect the role of the current host and diagnose any rel
 The remainder of this topic will provide a detailed walkthrough on the advanced usage of `Get-HgsTrace` for doing things like diagnosing multiple hosts at once and detecting complex cross-node misconfiguration.
 
 ## Diagnostics Overview
-Guarded fabric diagnostics are available on any host with shielded virtual machine related tools and features installed, including hosts running Server Core. Presently, diagnostics are included with the following features/packages:
+Guarded fabric diagnostics are available on any host with shielded virtual machine related tools and features installed, including hosts running Server Core.  Presently, diagnostics are included with the following features/packages:
 
 1. Host Guardian Service Role
 2. Host Guardian Hyper-V Support

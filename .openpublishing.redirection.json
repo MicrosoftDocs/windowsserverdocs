@@ -7827,6 +7827,11 @@
       "source_path": "WindowsServerDocs/remote/remote-desktop-services/Deploy-a-basic-desktop-hosting-environment-using-Azure-IaaS.md",
       "redirect_url": "/windows-server/remote/remote-desktop-services/rds-deploy-infrastructure",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/get-started-with-smt.md",
+      "redirect_url": "https://blogs.technet.microsoft.com/servermanagement/2017/05/17/smt-preview-service-is-being-retired-on-june-30-2017/",
+      "redirect_document_id": true
     }
   ]
 }
