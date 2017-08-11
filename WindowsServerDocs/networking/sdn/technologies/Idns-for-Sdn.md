@@ -118,7 +118,7 @@ The the iDNS Proxy Service runs on each of the Hyper-V hosts, providing the brid
 - ValueName = "Port"
 - ValueData = 53
 - ValueType = "Dword"
-        
+       
 
 **DNS Proxy Port:** Fixed port 53
 
@@ -164,17 +164,9 @@ For more information, see [Restart-Service](https://technet.microsoft.com/librar
 ### Enable firewall rules for the DNS proxy service
 You can use the following Windows PowerShell command to create a firewall rule that allows exceptions for the proxy to communicate with the VM and the iDNS server.
     
-    Enable-NetFirewallRule -DisplayGroup 'DNS Proxy Service'
+    Enable-NetFirewallRule -DisplayGroup 'DNS Proxy Firewall'
 
 For more information, see [Enable-NetFirewallRule](https://technet.microsoft.com/library/jj554869.aspx).
-    
-### Start the DnsProxy service and make it automatic
-You can use the following Windows PowerShell commands to start the DnsProxy service and change the startup type to Automatic.
-    
-    Set-Service -Name "DnsProxy" -StartupType Automatic
-    Restart-Service -Name "DnsProxy" -force
-
-For more information, see [Set-Service](https://technet.microsoft.com/library/hh849849.aspx) and [Restart-Service](https://technet.microsoft.com/library/hh849823.aspx).
     
 ### Validate the iDNS Service
 To validate the iDNS Service, you must deploy a sample tenant workload.
