@@ -61,7 +61,7 @@ When data is moved from mirror to parity, the data is read, parity encodings are
 
 **Reads:** ReFS will read directly from the tier containing the relevant data. If parity is constructed with HDDs, the cache in Storage Spaces Direct will cache this data to accelerate future reads. 
 
-> [!NOTE]: 
+> [!NOTE]
 > Reads never cause ReFS to rotate data back into the mirror tier. 
 
 ### IO performance:
