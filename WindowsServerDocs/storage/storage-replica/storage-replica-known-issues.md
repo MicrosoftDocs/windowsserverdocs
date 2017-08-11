@@ -204,6 +204,8 @@ To add the storage, you can run the following command on the node in the second 
 
 `Get-ClusterAvailableDisk -All | Add-ClusterDisk`
 
+This will not work with node local storage. You can use Storage Replica to replicate a stretch cluster between two total nodes, **each one using its own set of shared storage.** 
+
 ## The SMB Bandwidth limiter fails to throttle Storage Replica bandwidth
 When specifying a bandwidth limit to Storage Replica, the limit is ignored and full bandwidth used. For example:
 

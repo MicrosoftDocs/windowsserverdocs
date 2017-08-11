@@ -56,8 +56,8 @@ For more help choosing drives, see the [Choosing drives](choosing-drives.md) top
 - All servers must have the same drive types (if one server has NVMe, they all require NVMe.  If one has HDD, they all require HDD)
 - Recommended: All servers have the same drive configuration (type, size, firmware)
 - SSDs must have [power-loss protection](https://blogs.technet.microsoft.com/filecab/2016/11/18/dont-do-it-consumer-ssd/), i.e. they are "enterprise-grade"
-- SSDs used for cache have sufficiently high endurance: we recommend at least 3 drive-writes-per-day (DWPD) or at least 4 TBW (terabytes written) per day.
-- Add capacity drives in multiples of the number of NVMe or SSD cache devices.
+- Recommended: Cache drives must have high write endurance: at least 3 drive-writes-per-day (DWPD) or at least 4 terabytes written (TBW) per day. To learn more, see [Understanding drive writes per day (DWPD), terabytes written (TBW), and the minimum recommended for Storage Spaces Direct](https://blogs.technet.microsoft.com/filecab/2017/08/11/understanding-dwpd-tbw/).
+- Recommended: Add capacity drives in multiples of the number of NVMe or SSD cache devices.
 - Drives can be 512n, 512e, or 4K native - they all work equally well.
 - Use a separate, dedicated drive or RAID 1 mirror for Windows Server (200 GB is a recommended minimum size).
 - **Not supported:** Multi-path IO (MPIO) or physically connecting drives via multiple paths.
