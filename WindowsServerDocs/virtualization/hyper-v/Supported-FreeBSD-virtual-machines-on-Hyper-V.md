@@ -30,7 +30,7 @@ The following feature distribution map indicates the features in each version. T
 |-|-|-|-|-|-|-|-|
 |**Availability**||Built in|Built in|Built in|Built in|Built in|[Ports](http://svnweb.freebsd.org/ports/head/emulators/hyperv-is/) |
 |**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_core)**|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004; |
-|Windows Server 2016 Accurate Time|2016|||||||
+|Windows Server 2016 Accurate Time|2016|&#10004;||||||
 |**[Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Networking)**||||||||
 |Jumbo frames|2016, 2012 R2, 2012, 2008 R2|&#10004; Note 3|&#10004; Note 3|&#10004; Note 3|&#10004; Note 3|&#10004; Note 3|&#10004; Note 3|
 |VLAN tagging and trunking|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
@@ -62,7 +62,7 @@ The following feature distribution map indicates the features in each version. T
 |Hyper-V Sockets|2016|||||||
 |PCI Passthrough/DDA|2016|&#10004;||||||
 |**[Generation 2 virtual machines](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_gen2)**||||||||
-|Boot using UEFI|2016, 2012 R2|||||||
+|Boot using UEFI|2016, 2012 R2|&#10004;||||||
 |Secure boot|2016|||||||
 
 ## <a name="BKMK_notes"></a>Notes
@@ -90,7 +90,7 @@ The following feature distribution map indicates the features in each version. T
     ```
 **Additional Notes**: The feature matrix of 10 stable and 11 stable is same with FreeBSD 11.1 release. In addition, FreeBSD 10.2 and previous versions (10.1, 10, 9.x, 8.x) are end of life. Please refer [here](https://security.freebsd.org/) for an up-to-date list of supported releases and the latest security advisories.
 
-See Also
+## See Also
 
 * [Feature Descriptions for Linux and FreeBSD virtual machines on Hyper-V](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md)
 * [Best practices for running FreeBSD on Hyper-V](Best-practices-for-running-FreeBSD-on-Hyper-V.md)
