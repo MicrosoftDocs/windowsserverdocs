@@ -36,7 +36,7 @@ The following feature distribution map indicates the features in each version. T
 |VLAN tagging and trunking|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |Live migration|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |Static IP Injection|2016, 2012 R2, 2012|&#10004; Note 4|&#10004; Note 4|&#10004; Note 4|&#10004; Note 4|&#10004; Note 4|&#10004;|
-|vRSS|2016, 2012 R2|&#10004;|&#10004;|||||||
+|vRSS|2016, 2012 R2|&#10004;|&#10004;|||||
 |TCP Segmentation and Checksum Offloads|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|||
 |Large Receive Offload (LRO)|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;||||
 |SR-IOV|2016|||||||
@@ -63,7 +63,7 @@ The following feature distribution map indicates the features in each version. T
 |PCI Passthrough/DDA|2016|&#10004;||||||
 |**[Generation 2 virtual machines](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_gen2)**||||||||
 |Boot using UEFI|2016, 2012 R2|||||||
-|Secure boot|2016||||||||
+|Secure boot|2016|||||||
 
 ## <a name="BKMK_notes"></a>Notes
 
@@ -88,7 +88,7 @@ The following feature distribution map indicates the features in each version. T
     # set hw.ata.disk_enable=1
     # boot
     ```
-Additional Notes: The feature matrix of 10 stable and 11 stable is same with FreeBSD 11.1 release. In addition, FreeBSD 10.2 and previous versions (10.1, 10, 9.x, 8.x) are end of life. 
+**Additional Notes**: The feature matrix of 10 stable and 11 stable is same with FreeBSD 11.1 release. In addition, FreeBSD 10.2 and previous versions (10.1, 10, 9.x, 8.x) are end of life. Please refer [here](https://security.freebsd.org/) for an up-to-date list of supported releases and the latest security advisories.
 
 See Also
 
