@@ -61,7 +61,9 @@ Get-ADObject "cn=schema,cn=configuration,dc=domain,dc=local" -Property objectVer
     
 ```
 
-![PowerShell](media/Configure-Device-Based-Conditional-Access-on-Premises/pshell1.png)  
+![PowerShell](media/Configure-Device-Based-Conditional-Access-on-Premises/pshell1.png) 
+
+For additional information on upgrading, see [Upgrade Domain Controllers to Windows Server 2016](../../ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2016.md) 
 
 ## Enable Azure AD Device Registration  
 To configure this scenario, you must configure the device registration capability in Azure AD.  
