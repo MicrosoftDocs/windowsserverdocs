@@ -52,7 +52,7 @@ To verify your schema level, do the following:
 2.  Using ADSIEdit, right-click on "CN=Schema,CN=Configuration,DC=<domain>,DC=<com> and select properties.  Relpace domain and the com portions with your forest information.
 3.  Under the Attribute Editor locate the objectVersion attribute and it will tell you, your version.  
 
-![ADSI Edit](media/Using-Device-based-Conditional-Access-on-Premises/adsiedit.png)  
+![ADSI Edit](media/Configure-Device-Based-Conditional-Access-on-Premises/adsiedit.png)  
 
 You can also use the following PowerShell cmdlet (replace the object with your schema naming context information):
 
@@ -61,7 +61,7 @@ Get-ADObject "cn=schema,cn=configuration,dc=domain,dc=local" -Property objectVer
     
 ```
 
-![PowerShell](media/Using-Device-based-Conditional-Access-on-Premises/pshell1.png)  
+![PowerShell](media/Configure-Device-Based-Conditional-Access-on-Premises/pshell1.png)  
 
 ## Enable Azure AD Device Registration  
 To configure this scenario, you must configure the device registration capability in Azure AD.  
