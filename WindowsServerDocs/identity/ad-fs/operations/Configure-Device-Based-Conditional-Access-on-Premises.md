@@ -30,14 +30,41 @@ The following per-requisites are required before you can begin with on-premises 
 |Intune subscription|only required for MDM integration for device compliance scenarios -[a free trial is fine](https://portal.office.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0)
 |Azure AD Connect|November 2015 QFE or later.  Get the latest version [here](https://www.microsoft.com/en-us/download/details.aspx?id=47594).  
 |Windows Server 2016|Build 10586 or newer for AD FS  
-|Windows Server 2016 Active Directory schema|Schema level 85 or higher is required for msDS-IsCompliant attribute for device compliance scenarios
-|Windows Server 2016 domain controller|This is only required for Microsoft Passport for Work  
+|Windows Server 2016 Active Directory schema|Schema level 85 or higher is required.
+|Windows Server 2016 domain controller|This is only required for Hello For Business key-trust deployments.  Additional information can be found at [here](https://aka.ms/whfbdocs).  
 |Windows 10 client|Build 10586 or newer, joined to the above domain is required for Windows 10 Domain Join and Microsoft Passport for Work scenarios only  
 |Azure AD user account with Azure AD Premium license assigned|For registering the device  
 
+
+ 
+## Upgrade your Active Directory Schema
+In order to use on-premises conditional access with registered devices, you must first upgrade your AD schema.  The following conditions must be met:
+    - The schema should be version 85 or later
+    - This is only required for the forest that AD FS is joined to
+
 > [!NOTE]
 > If you installed Azure AD Connect prior to upgrading to the schema version (level 85 or greater) in Windows Server 2016, you will need to re-run the Azure AD Connect installation and refresh the on-premises AD schema to ensure the synchronization rule for msDS-KeyCredentialLink is configured.
- 
+
+### Verify your schema level
+To verify your schema level, do the following:
+
+1.  You can use ADSIEdit or LDP and connect to the Schema Naming Context.  
+2.  Using ADSIEdit, right-click on "CN=Schema,CN=Configuration,DC=<domain>,DC=<com> and select properties.  Relpace domain and the com portions with your forest information.
+3.  Under the Attribute Editor locate the objectVersion attribute and it will tell you, your version.  
+
+![ADSI Edit](media/Configure-Device-Based-Conditional-Access-on-Premises/adsiedit.png)  
+
+You can also use the following PowerShell cmdlet (replace the object with your schema naming context information):
+
+``` powershell
+Get-ADObject "cn=schema,cn=configuration,dc=domain,dc=local" -Property objectVersion
+    
+```
+
+![PowerShell](media/Configure-Device-Based-Conditional-Access-on-Premises/pshell1.png) 
+
+For additional information on upgrading, see [Upgrade Domain Controllers to Windows Server 2016](../../ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2016.md). 
+
 ## Enable Azure AD Device Registration  
 To configure this scenario, you must configure the device registration capability in Azure AD.  
 
