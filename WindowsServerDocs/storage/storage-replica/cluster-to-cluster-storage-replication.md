@@ -367,7 +367,7 @@ Now you will manage and operate your cluster-to-cluster replication. You can per
     ```  
 
     > [!NOTE]  
-    > Storage Replica dismounts the destination volumes and their drive letters or mount points. This is by design.
+    > Storage Replica dismounts the destination volumes. This is by design.
 
 ## See also
 
