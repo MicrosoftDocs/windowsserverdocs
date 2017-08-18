@@ -7,7 +7,8 @@ ms.technology: storage
 ms.topic: article
 author: jasongerend
 ms.date: 07/10/2017
-description: DFS Namespaces enables you to manage and classify data on a Windows Server file server.
+description: This topic describes DFS Namespaces, which is a role service in Windows Server enabling you to group shared folders located on different servers into one or more logically structured namespaces. 
+
 ---
 # DFS Namespaces overview
 
@@ -34,23 +35,18 @@ There are no additional hardware or software requirements for running DFS Manage
 
 A namespace server is a domain controller or member server that hosts a namespace. The number of namespaces you can host on a server is determined by the operating system running on the namespace server.
 
-The following servers can host multiple domain-based and stand-alone namespaces:
+Servers that are running the following operating systems can host multiple domain-based namespaces in addition to a single stand-alone namespace. 
 
-- Windows Server 2016 Datacenter
-- Windows Server 2012 R2 Datacenter
-- Windows Server 2012 Datacenter
-- Windows Server 2008 R2 Enterprise
-- Windows Server 2008 R2 Datacenter
-- Windows Server 2008 Enterprise
-- Windows Server 2008 Datacenter
+- Windows Server 2016 
+- Windows Server 2012 R2
+- Windows Server 2012
+- Windows Server 2008 R2 Datacenter/Enterprise
 
-Servers that are running the following operating systems can host multiple domain-based namespaces in addition to a single stand-alone namespace:
 
-- Windows Server 2016 Standard
-- Windows Server 2012 R2 Standard
-- Windows Server 2012 Standard
+Servers that are running the following operating systems can host a single stand-alone namespace:
+
 - Windows Server 2008 R2 Standard
-- Windows Server 2008 Standard
+
 
 The following table describes additional factors to consider when choosing servers to host a namespace.
 
@@ -59,20 +55,6 @@ The following table describes additional factors to consider when choosing serve
 |Must contain an NTFS volume to host the namespace.|Must contain an NTFS volume to host the namespace.|
 |Can be a member server or domain controller.|Must be a member server or domain controller in the domain in which the namespace is configured. (This requirement applies to every namespace server that hosts a given domain-based namespace.)|
 |Can be hosted by a failover cluster to increase the availability of the namespace.|The namespace cannot be a clustered resource in a failover cluster. However, you can locate the namespace on a server that also functions as a node in a failover cluster if you configure the namespace to use only local resources on that server.|
-
-## Supported clients
-
-The following operating systems include full support for DFS Namespaces, including support for client failback to the preferred folder target:
-
-- Windows 10
-- Windows 8.1
-- Windows 8
-- Windows 7
-- Windows Server 2016
-- Windows Server 2012 R2
-- Windows Server 2012
-- Windows Server 2008 R2
-- Windows Server 2008
 
 ## Installing DFS Namespaces
 
@@ -128,24 +110,6 @@ Using DFS Namespaces on a virtual machine in Microsoft Azure has been tested; ho
 - You can host domain-based namespaces in Azure virtual machines, including environments with Azure Active Directory, though a single namespace can’t encompass both on premise namespace servers and namespace servers hosted in Azure VMs, even when using Active Directory Federation Services.
 
 To learn about how to get started with Azure virtual machines, see [Azure virtual machines documentation](https://docs.microsoft.com/azure/virtual-machines/).
-
-## New and changed functionality
-
-The following table describes the changes in DFS Namespaces functionality. For more details, see [What's New in DFS Namespaces and DFS Replication in Windows Server](https://technet.microsoft.com/library/dn281957(v=ws.11).aspx).
-
-|Feature/functionality|New or updated?|Description|
-|----------------------------|---------------------|-----------------|
-|Windows PowerShell module for DFS Namespaces|New in Windows Server 2012|Provides Windows PowerShell cmdlets for performing the majority of administration tasks for DFS Namespaces.|
-|DFS Namespaces: Windows Management Infrastructure provider|New in Windows Server 2012|Provides the latest Windows Management Infrastructure-based management methods to manage DFS Namespaces.|
-|DFS Namespaces: Site awareness for DirectAccess clients|New in Windows Server 2012|Provides remote client computers with optimal referrals to corporate resources when the computers connect by using DirectAccess to the corporate network.|
-
-## Removed or deprecated functionality
-
-The following features are included in Windows Server, but they are being phased out, and they likely will be removed from future versions of the Windows Server operating system.
-
-|Deprecated feature|Replacement|
-|------------------------|-----------------|
-|DFS Namespaces command-line tool, Dfscmd|DFS Namespaces module for Windows PowerShell|
 
 ## See also
 
