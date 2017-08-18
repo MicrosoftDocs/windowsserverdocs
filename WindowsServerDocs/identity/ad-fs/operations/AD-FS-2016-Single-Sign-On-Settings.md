@@ -15,34 +15,6 @@ ms.technology: identity-adfs
 >Applies To: Windows Server 2016, Windows Server 2012 R2
 
 Single Sign-On (SSO) allows users to authenticate once and access multiple resources without being prompted for additional credentials.  This article describes the default AD FS behavior for SSO, as well as the configuration settings that allow you to customize this behavior.  
-  
-## Single Sign-On and registered devices  
-After providing credentials for the first time, by default users with registered devices get single Sign-On  for a maximum period of 90 days, provided they use the device to access AD FS resources at least once every 14 days.  If they wait 15 days after providing credentials, users will be prompted for credentials again.    
-  
-The device usage window (14 days by default) is governed by the AD FS property **DeviceUsageWindowInDays**.
-
-``` powershell
-Set-AdfsProperties -DeviceUsageWindowInDays
-```   
-The maximum single Sign-On  period (90 days by default) is governed by the AD FS property **PersistentSsoLifetimeMins**.
-
-``` powershell
-Set-AdfsProperties -PersistentSsoLifetimeMins
-```    
-
-## Non-registered devices  
-For non-registered devices, the single sign-on  period is determined by the **Keep Me Signed In (KMSI)** feature settings.  KMSI is disabled by default and can be enabled by setting the AD FS property KmsiEnabled to True.
-
-``` powershell
-Set-AdfsProperties -EnableKmsi $true  
-```    
-
-With KMSI disabled, the default single sign-on period is 8 hours.  This can be configured using the property SsoLifetime.  The property is measured in minutes, so its default value is 480.  
-  
-With KMSI enabled, the default single sign-on period is 24 hours.  This can be configured using the property KmsiLifetimeMins.  The property is measured in minutes, so its default value is 1440.
-  
-## Enforcing multi factor authentication  
-It's important to note that, while providing relatively long periods of single sign on, AD FS will prompt for additional authentication (multi factor authentication) when a previous sign on was based on primary credentials and not MFA, but the current sign on requires MFA.  This is regardless of SSO configuration. AD FS, when it receives an authentication request, first determines whether or not there is an SSO context (such as a cookie) and then, if MFA is required (such as if the request is coming in from outside) it will assess whether or not the SSO context contains MFA.  If not, MFA is prompted.  
 
 ## Supported types of Single Sign-On
 
@@ -78,6 +50,36 @@ AD FS supports several types of Single Sign-On experiences:
 |Enable/disable “keep me signed in”|Set-AdfsProperties –EnableKmsi <Boolean\>|“Keep me signed in” feature is disabled by default. If it is enabled, end user will see a “keep me signed in” choice on AD FS sign-in page.|  
 |Persistent SSO lifetime for registered device|Set-AdfsProperties -PersistentSsoLifetimeMins <Int32\>|This setting controls the lifetime of persistent SSO cookie written for registered device. The lifetime is 7 days by default. Persistent SSO cookie written as a result of “keep me signed in” has a different lifetime setting as shown below.|  
 |Persistent SSO lifetime for KMSI|Set-AdfsProperties –KmsiLifetimeMins <Int32\>|The default value is 1440 mins.|  
+  
+## Single Sign-On and authenticated devices  
+After providing credentials for the first time, by default users with registered devices get single Sign-On  for a maximum period of 90 days, provided they use the device to access AD FS resources at least once every 14 days.  If they wait 15 days after providing credentials, users will be prompted for credentials again.    
+  
+The device usage window (14 days by default) is governed by the AD FS property **DeviceUsageWindowInDays**.
+
+``` powershell
+Set-AdfsProperties -DeviceUsageWindowInDays
+```   
+The maximum single Sign-On  period (90 days by default) is governed by the AD FS property **PersistentSsoLifetimeMins**.
+
+``` powershell
+Set-AdfsProperties -PersistentSsoLifetimeMins
+```    
+
+## Keep Me Signed in for unauthenticated devices 
+For non-registered devices, the single sign-on  period is determined by the **Keep Me Signed In (KMSI)** feature settings.  KMSI is disabled by default and can be enabled by setting the AD FS property KmsiEnabled to True.
+
+``` powershell
+Set-AdfsProperties -EnableKmsi $true  
+```    
+
+With KMSI disabled, the default single sign-on period is 8 hours.  This can be configured using the property SsoLifetime.  The property is measured in minutes, so its default value is 480.  
+  
+With KMSI enabled, the default single sign-on period is 24 hours.  This can be configured using the property KmsiLifetimeMins.  The property is measured in minutes, so its default value is 1440.
+  
+## Multi-factor authentication (MFA) behavior  
+It's important to note that, while providing relatively long periods of single sign on, AD FS will prompt for additional authentication (multi factor authentication) when a previous sign on was based on primary credentials and not MFA, but the current sign on requires MFA.  This is regardless of SSO configuration. AD FS, when it receives an authentication request, first determines whether or not there is an SSO context (such as a cookie) and then, if MFA is required (such as if the request is coming in from outside) it will assess whether or not the SSO context contains MFA.  If not, MFA is prompted.  
+
+
   
 ## PSSO revocation  
  To protect security, AD FS will reject any persistent SSO cookie previously issued when the following conditions are met. This will require the user to provide their credentials in order to authenticate with AD FS again. 
