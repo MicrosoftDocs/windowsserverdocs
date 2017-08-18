@@ -5,7 +5,7 @@ description: Frequently asked questions for AD FS 2016
 author: jenfieldmsft
 ms.author:  billmath
 manager: femila
-ms.date: 06/09/2017
+ms.date: 08/18/2017
 ms.topic: article
 ms.custom: it-pro
 ms.prod: windows-server-threshold
@@ -39,6 +39,9 @@ If you need to upgrade from AD FS 2.0 or 2.1 (Windows Server 2008 R2 or Windows 
 ### Why does AD FS installation require a reboot of the server?
 
 HTTP/2 support was added in Windows Server 2016, but HTTP/2 can't be used for client certificate authentication.  Because many AD FS scenarios make use of client certificate authentication, and a significant number of clients do not support retrying requests using HTTP/1.1, AD FS farm configuration re-configures the local server's HTTP settings to HTTP/1.1.  This requires a reboot of the server.  
+
+### Is using Windows 2016 WAP Servers to publish the AD FS farm to the internet without upgrading the back-end AD FS farm supported?
+Yes, this configuration is supported, however no new AD FS 2016 features would be supported in this configuration.
 
 ## Design
 
