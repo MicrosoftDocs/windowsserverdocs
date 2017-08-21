@@ -106,15 +106,15 @@ If you need to achieve the lowest latency, you should request a BIOS version fro
 
 ###  <a name="bkmk_tcp_params"></a>  TCP Receive Window Auto-Tuning
 
-Prior to Windows Server 2008, the network stack used a fixed-size receive-side window that limited the overall potential throughput for connections. One of the most significant changes to the TCP stack is TCP receive window auto-tuning. 
+Prior to Windows Server 2008, the network stack used a fixed-size receive-side window (65,536 bytes) that limited the overall potential throughput for connections. One of the most significant changes to the TCP stack is TCP receive window auto-tuning. 
 
-You can calculate the total throughput of a single connection when you use this fixed size default as:
+You can calculate the total throughput of a single connection when you use a fixed size TCP receive window as:
 
-**Total achievable throughput in bytes = TCP window \* (1 / connection latency)**
+**Total achievable throughput in bytes = TCP receive window size in bytes \* (1 / connection latency in seconds)**
 
-For example, the total achievable throughput is only 51 Mbps on a 1 GB connection with 10 ms latency \(a reasonable value for a large corporate network infrastructure\). 
+For example, the total achievable throughput is only 51 Mbps on a connection with 10 ms latency \(a reasonable value for a large corporate network infrastructure\). 
 
-With auto-tuning, however, the receive-side window is adjustable, and it can grow to meet the demands of the sender. It is possible for a connection to achieve a full line rate of a 1 GB connection. Network usage scenarios that might have been limited in the past by the total achievable throughput of TCP connections can now fully use the network.
+With auto-tuning, however, the receive-side window is adjustable, and it can grow to meet the demands of the sender. It is possible for a connection to achieve a full line rate of a 1 Gbps connection. Network usage scenarios that might have been limited in the past by the total achievable throughput of TCP connections can now fully use the network.
 
 #### Deprecated TCP parameters
 
