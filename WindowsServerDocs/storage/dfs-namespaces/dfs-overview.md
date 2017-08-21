@@ -37,11 +37,13 @@ A namespace server is a domain controller or member server that hosts a namespac
 
 Servers that are running the following operating systems can host multiple domain-based namespaces in addition to a single stand-alone namespace. 
 
-- Windows Server 2016 
+- Windows Server 2016 Standard
+- Windows Server 2016 Datacenter
+- Windows Server 2012 R2 Datacenter
+- Windows Server 2012 Datacenter
 - Windows Server 2012 R2
-- Windows Server 2012
+- Windows Server 2012 Standard
 - Windows Server 2008 R2 Datacenter/Enterprise
-
 
 Servers that are running the following operating systems can host a single stand-alone namespace:
 
