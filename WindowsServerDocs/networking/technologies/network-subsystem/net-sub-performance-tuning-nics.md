@@ -106,7 +106,7 @@ If you need to achieve the lowest latency, you should request a BIOS version fro
 
 ###  <a name="bkmk_tcp_params"></a>  TCP Receive Window Auto-Tuning
 
-Prior to Windows Server 2008, the network stack used a fixed-size receive-side window (65,536 bytes) that limited the overall potential throughput for connections. One of the most significant changes to the TCP stack is TCP receive window auto-tuning. 
+Prior to Windows Server 2008, the network stack used a fixed-size receive-side window (65,535 bytes) that limited the overall potential throughput for connections. One of the most significant changes to the TCP stack is TCP receive window auto-tuning. 
 
 You can calculate the total throughput of a single connection when you use a fixed size TCP receive window as:
 
