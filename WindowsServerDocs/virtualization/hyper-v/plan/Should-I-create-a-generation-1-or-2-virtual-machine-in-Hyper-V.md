@@ -88,7 +88,7 @@ The following table shows which versions of Debian you can use as a guest operat
 |Operating system versions|Generation 1|Generation 2|  
 |-----------------------------|----------------|----------------|  
 |Debian 7.x series|&#10004;| &#10006;|  
-|Devian 8.x series|&#10004;|&#10004;|  
+|Debian 8.x series|&#10004;|&#10004;|  
 
 For more information, see [Debian virtual machines on Hyper-V](../Supported-Debian-virtual-machines-on-Hyper-V.md).  
 
