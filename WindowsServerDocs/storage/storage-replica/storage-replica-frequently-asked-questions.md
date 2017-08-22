@@ -109,7 +109,7 @@ You can grow (extend) volumes, but not shrink them. By default, Storage Replica 
 3. Use against the source computer: `Set-SRGroup -Name YourRG -AllowVolumeResize $FALSE` 
 
 ## <a name="FAQ6"></a>Can I bring a destination volume online for read-only access?  
-Not in Windows Server 2016. Storage Replica dismounts the destination volume and its drive letter or mount point when replication begins. This may change in a later release.  
+Not in Windows Server 2016. Storage Replica dismounts the destination volume when replication begins. This may change in a later release.  
 
 ## <a name="FAQ7"></a> Can I configure Scale-out File Server (SOFS) in a stretch cluster?  
 While technically possible, this is not a recommended configuration in Windows Server 2016 due to the lack of site awareness in the compute nodes contacting the SOFS. If using campus-distance networking, where latencies are typically sub-millisecond, this configuration typically works works without issues.   
