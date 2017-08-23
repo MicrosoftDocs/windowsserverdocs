@@ -29,7 +29,12 @@ ReFS introduces new features that can precisely detect corruptions and also fix 
 ### Performance
 In addition to providing resiliency improvements, ReFS introduces new features for performance-sensitive and virtualized workloads. Real-time tier optimization, block cloning, and sparse VDL are good examples of the evolving capabilities of ReFS, which are designed to support dynamic and diverse workloads:
 
-- **Real-time tier optimization** - Real-time tier optimization delivers both high performance and also capacity efficient storage for your data. To do so, ReFS divides a volume into two logical storage groups, known as tiers. These tiers can have their own drive and resiliency types, allowing each tier to optimize for either performance or capacity. Some example configurations include: 
+- **[Mirror-accelerated parity](./mirror-accelerated-parity.md)** - Mirror-accelerated parity delivers both high performance and also capacity efficient storage for your data. 
+
+>[!NOTE]
+>For Server deployments, mirror-accelerated parity is only supported on [Storage Spaces Direct](../storage-spaces/storage-spaces-direct-overview.md).
+
+To deliver both high performance and capacity efficient storage, ReFS divides a volume into two logical storage groups, known as tiers. These tiers can have their own drive and resiliency types, allowing each tier to optimize for either performance or capacity. Some example configurations include: 
     | Performance tier | Capacity tier |
     |----------------|-----------------|
      Mirrored SSD | Mirrored HDD |
@@ -56,7 +61,7 @@ ReFS is designed to support extremely large data sets--millions of terabytes--wi
 ### Storage Spaces Direct ###
 
 Deploying ReFS on Storage Spaces Direct is recommended for virtualized workloads or network-attached storage: 
-- Real-time tier optimization and [the cache in Storage Spaces Direct](../storage-spaces/understand-the-cache.md) deliver high performance and capacity-efficient storage. 
+- Mirror-accelerated parity and [the cache in Storage Spaces Direct](../storage-spaces/understand-the-cache.md) deliver high performance and capacity-efficient storage. 
 - The introduction of block clone and sparse VDL dramatically accelerates .vhdx file operations, such as creation, merge, and expansion.
 - Built-in checksums, online repair, and alternate data copies enable ReFS and Storage Spaces Direct to jointly to detect and correct corruptions within both metadata and data. 
 - ReFS provides the functionality to efficiently scale and support massive data sets. 
@@ -65,8 +70,6 @@ Deploying ReFS on Storage Spaces Direct is recommended for virtualized workloads
 Deploying ReFS on Storage Spaces with shared SAS enclosures is suitable for hosting archival data and storing user documents:
 - Built-in checksums, online repair, and alternate data copies enable ReFS and Classic Storage Spaces to jointly to detect and correct corruptions within both metadata and data. 
 - ReFS provides the functionality to efficiently scale and support massive data sets. 
-- Data will be stored on a non-tiered volume. 
-
 
 ### Basic disks ###
 Deploying ReFS on basic disks is best suited for applications that provide their own resiliency and availibility solutions. 
@@ -113,7 +116,7 @@ Deploying ReFS on basic disks is best suited for applications that provide their
 |---------------------------|------------------|-----------------------|
 | Block clone | Yes | No |
 | Sparse VDL | Yes | No |
-| Real-time tier optimization| Yes (on Storage Spaces Direct) | No |
+| Mirror-accelerated parity| Yes (on Storage Spaces Direct) | No |
 
 #### The following features are unavailable on ReFS at this time:
 
