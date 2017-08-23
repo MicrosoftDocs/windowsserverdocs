@@ -110,9 +110,14 @@ ReFS introduces a tunable parameter to adjust this threshold, which is configura
 -	**ValueName (DWORD):** DataDestageSsdFillRatioThreshold
 -	**ValueType:** Percentage
 
-If this registry key is not set, ReFS will use a default value of 85%.  This default value is recommended for most deployments, and values below 50% are not recommended. The PowerShell command below demonstrates how to create this registry key with a value of 75%: 
+If this registry key is not set, ReFS will use a default value of 85%.  This default value is recommended for most deployments, and values below 50% are not recommended. The PowerShell command below demonstrates how to set this registry key with a value of 75%: 
 ```
-New-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Policies" -Name "DataDestageSsdFillRatioThreshold" -Value 75 -PropertyType DWORD
+Set-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Policies -Name DataDestageSsdFillRatioThreshold -Value 75
+ ```
+ To configure this registry key across each node in a Storage Spaces Direct deployment, you can use the PowerShell command below:
+ ```
+ $Nodes = 'S2D-01', 'S2D-02', 'S2D-03', 'S2D-04'
+ Invoke-Command $Nodes {Set-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Policies -Name DataDestageSsdFillRatioThreshold -Value 75}
  ```
 
 ### Increasing the size of the mirrored tier: 
@@ -121,6 +126,8 @@ Increasing the size of the mirrored tier enables ReFS to retain a larger portion
 Resize-StorageTier -FriendlyName “Performance” -Size 20GB
 Resize-StorageTier -InputObject (Get-StorageTier -FriendlyName “Performance”) -Size 20GB
 ```
+>[!TIP]
+>Make sure to resize the **Partition** and **Volume** after you resize the **StorageTier**. For more information and examples, see [Resize-Volumes](../storage-spaces/Resize-volumes.md).
 
 ## Creating a mirror-accelerated parity volume
 The PowerShell cmdlet below creates a mirror-accelerated parity volume with a Mirror:Parity ratio of 20:80, which is the recommended configuration for most workloads. For more information and examples, see [Creating volumes in Storage Spaces Direct](../storage-spaces/Create-volumes.md).
