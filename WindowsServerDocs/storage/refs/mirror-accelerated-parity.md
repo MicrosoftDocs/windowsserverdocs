@@ -127,7 +127,7 @@ Resize-StorageTier -FriendlyName “Performance” -Size 20GB
 Resize-StorageTier -InputObject (Get-StorageTier -FriendlyName “Performance”) -Size 20GB
 ```
 >[!TIP]
->Make sure to resize the **Partition** and **Volume** after you resize the **StorageTier**. For more information and examples, see [Resize-Volumes](../storage-spaces/Resize-volumes.md).
+>Make sure to resize the **Partition** and **Volume** after you resize the **StorageTier**. For more information and examples, see [Resize-Volumes](../storage-spaces/resize-volumes.md).
 
 ## Creating a mirror-accelerated parity volume
 The PowerShell cmdlet below creates a mirror-accelerated parity volume with a Mirror:Parity ratio of 20:80, which is the recommended configuration for most workloads. For more information and examples, see [Creating volumes in Storage Spaces Direct](../storage-spaces/Create-volumes.md).
