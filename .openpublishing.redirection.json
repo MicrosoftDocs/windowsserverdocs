@@ -1,5 +1,106 @@
 {
   "redirections": [
+
+    {
+      "source_path":  "WindowsServerDocs/administration/performance-tuning/subsystem/cache-memory-management/improvements-in-2016.md",
+      "redirect_url": "/windows-server/administration/performance-tuning/subsystem/cache-memory-management/improvements-in-windows-server.md",
+      "redirect_document_id": false
+    },	
+    {	
+      "source_path":  "WindowsServerDocs/networking/windows-server-2016-supported-networking-scenarios.md",
+      "redirect_url": "/windows-server/networking/windows-server-supported-networking-scenarios.md",
+      "redirect_document_id": false
+    },
+    {	
+      "source_path":  "WindowsServerDocs/networking/sdn/troubleshoot/troubleshoot-windows-server-2016-software-defined-networking-stack.md",
+      "redirect_url": "/windows-server/networking/sdn/troubleshoot/troubleshoot-windows-server-software-defined-networking-stack.md",
+      "redirect_document_id": false
+    },	
+    {	
+      "source_path":  "WindowsServerDocs/remote/remote-desktop-services/Upgrade-to-RDS-2016.md",      
+      "redirect_url": "/windows-server/remote/remote-desktop-services/upgrade-to-rds.md",
+      "redirect_document_id": false
+    },
+    {	      
+      "source_path":  "WindowsServerDocs/remote/remote-desktop-services/Upgrade-to-RDSH-2016.md",  
+      "redirect_url": "/windows-server/remote/remote-desktop-services/upgrade-to-rdsh.md", 
+      "redirect_document_id": false
+    },	
+    {
+      "source_path":  "WindowsServerDocs/remote/remote-desktop-services/Upgrade-to-RDVH-2016.md", 
+      "redirect_url": "/windows-server/remote/remote-desktop-services/upgrade-to-rdvh.md", 
+      "redirect_document_id": false
+    },
+    {
+      "source_path":  "WindowsServerDocssecurity/tls/tls-schannel-ssp-changes-in-windows-10-and-windows-server-2016.md",
+      "redirect_url": "/windows-server/tls/tls-schannel-ssp-changes-in-windows-10-and-windows-server.md",
+      "redirect_document_id": false
+    },	
+    {
+      "source_path":  "WindowsServerDocs/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server-2016.md",
+      "redirect_url": "/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server.md",
+      "redirect_document_id": false
+    },	
+    {
+      "source_path":  "WindowsServerDocs/storage/whats-new-file-storage-services-windows-server-2016.md",
+      "redirect_url": "/windows-server/storage/whats-new-file-storage-services-windows-server.md",
+      "redirect_document_id": false
+    },	
+    {
+      "source_path":  "WindowsServerDocs/storage/software-defined-storage/Health-Service-in-Windows-Server-2016.md",
+      "redirect_url": "/windows-server/storage/software-defined-storage/health-service-in-windows-server.md",
+      "redirect_document_id": false
+    },
+    {	
+      "source_path":  "WindowsServerDocs/storage/software-defined-storage/hyper-converged-solution-using-storage-spaces-direct-in-windows-server-2016.md",
+      "redirect_url": "/windows-server/storage/software-defined-storage/hyper-converged-solution-using-storage-spaces-direct-in-windows-server.md",
+      "redirect_document_id": false
+    },	
+    {
+      "source_path":  "WindowsServerDocs/storage/storage-replica/storage-replica-windows-server-2016.md",
+      "redirect_url": "/windows-server/storage/storage-replica/storage-replica-windows-server.md",
+      "redirect_document_id": false
+    },		
+    {
+      "source_path":   "WindowsServerDocs/storage/storage-spaces/fault-domains-windows-server-2016.md",
+      "redirect_url":  "/windows-server/storage/storage-spaces/fault-domains-windows-server.md",
+      "redirect_document_id": false
+    },
+    {
+      "source_path":  "WindowsServerDocs/storage/storage-spaces/hyper-converged-solution-using-storage-spaces-direct-in-windows-server-2016.md",
+      "redirect_url": "/windows-server/storage/storage-spaces/hyper-converged-solution-using-storage-spaces-direct-in-windows-server.md",
+      "redirect_document_id": false
+    },	
+    {
+      "source_path":  "WindowsServerDocs/storage/storage-spaces/storage-spaces-direct-windows-server-2016.md",
+      "redirect_url": "/windows-server/storage/storage-spaces/storage-spaces-direct-windows-server.md",
+      "redirect_document_id": false
+    },
+    {
+      "source_path":  "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/windows-server-2016-should-configured-with-least-minimum-amount-memory.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/windows-server-should-be-configured-with-least-minimum-amount-memory.md",
+      "redirect_document_id": false
+    }, 
+    {
+      "source_path":  "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/windows-server-2016-should-configured-with-recommended-amount-memory.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/windows-server-should-be-configured-with-recommended-amount-memory.md",
+      "redirect_document_id": false
+    },
+    {
+      "source_path":  "WindowsServerDocs/virtualization/hyper-v/plan/Plan-for-Hyper-V-networking-in-Windows-Server-2016.mdv",
+      "redirect_url": "/windows-server/virtualization/hyper-v/plan/plan-hyper-v-networking-in-windows-server.md",
+      "redirect_document_id": false
+    },	
+    {
+      "source_path":  "WindowsServerDocs/virtualization/hyper-v/plan/Plan-for-Hyper-V-scalability-in-Windows-Server-2016.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/plan/plan-hyper-v-scalability-in-windows-server.md",
+      "redirect_document_id": false
+    },	
+    {
+      "source_path":  "WindowsServerDocs/virtualization/hyper-v/plan/plan-for-hyper-v-security-in-Windows-Server-2016.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/plan/plan-hyper-v-security-in-windows-server.md",
+      "redirect_document_id": false
+    },	
     {
       "source_path": "WindowsServerDocs/security/windows-defender/automatic-exclusions-for-windows-defender.md",
       "redirect_url": "windows/threat-protection/windows-defender-antivirus/configure-server-exclusions-windows-defender-antivirus",
@@ -10,9 +111,6 @@
       "redirect_url": "/windows/threat-protection/windows-defender-antivirus/troubleshoot-windows-defender-antivirus",
       "redirect_document_id": true
     },
-
-
-
     {
       "source_path": "WindowsServerDocs/get-started/windows-server-versions.md",
       "redirect_url": "/windows-server/windows-server-versions",

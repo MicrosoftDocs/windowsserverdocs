@@ -34,9 +34,9 @@ The deployment will not be available during RD Connection Broker servers upgrade
    > [!NOTE] 
    > Windows Server 2012 and 2012 R2 RD license servers will work with Windows Server 2016 deployments, but they can only process CALs from Windows Server 2012 R2 and older. They cannot use Windows Server 2016 CALs. See [License your RDS deployment with client access licenses (CALs)](rds-client-access-license.md) for more information about RD license servers.
 
-3. **RD Session Host servers** can be upgraded next. To avoid down time during upgrade the admin can split the servers to be upgraded in 2 steps as detailed below. All will be functional after the upgrade. To upgrade, use the steps described in [Upgrading Remote Desktop Session Host servers to Windows Server 2016](Upgrade-to-RDSH-2016.md).
+3. **RD Session Host servers** can be upgraded next. To avoid down time during upgrade the admin can split the servers to be upgraded in 2 steps as detailed below. All will be functional after the upgrade. To upgrade, use the steps described in [Upgrading Remote Desktop Session Host servers to Windows Server 2016](upgrade-to-rdsh.md).
 
-4. **RD Virtualization Host servers** can be upgraded next. To upgrade, use the steps described in [Upgrading Remote Desktop Virtualization Host servers to Windows Server 2016](Upgrade-to-RDVH-2016.md).
+4. **RD Virtualization Host servers** can be upgraded next. To upgrade, use the steps described in [Upgrading Remote Desktop Virtualization Host servers to Windows Server 2016](upgrade-to-rdvh.md).
 
 5. **RD Web Access servers** can be upgraded anytime.
    > [!NOTE]
