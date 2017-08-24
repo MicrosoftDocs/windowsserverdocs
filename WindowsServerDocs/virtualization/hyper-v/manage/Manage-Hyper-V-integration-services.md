@@ -289,7 +289,7 @@ For more details about Linux guests, see [Supported Linux and FreeBSD virtual ma
 
 ## Install or update integration services
 
-For hosts earlier than Windows Server 2016 and Windows 10, you'll need to manually instructions from the guest operating system. These steps can't be automated or done within a Windows PowerShell session.
+For hosts earlier than Windows Server 2016 and Windows 10, you'll need to manually  install or update the integration services in the guest operating system. These steps can't be automated or done within a Windows PowerShell session.
   
 1.  Open Hyper-V Manager. From the Tools menu of Server Manager, click **Hyper-V Manager**.  
   
