@@ -29,7 +29,7 @@ If Credential Guard is not available and a TPM is, then a public key is created 
 If neither is available, then a key is not generated and the device can only authenticate using password.
 
 ### Provisioning computer account public key
-When Windows starts up, it checks if a public key is provisioned for its computer account. If not, then it generates a bound public key and configure it for its account in AD using a Windows Server 2016 or higher DC. If all the DCs are down-level, then no key is provisioned.
+When Windows starts up, it checks if a public key is provisioned for its computer account. If not, then it generates a bound public key and configures it for its account in AD using a Windows Server 2016 or higher DC. If all the DCs are down-level, then no key is provisioned.
 
 ### Configuring device to only use public key
 If the Group Policy setting **Support for device authentication using certificate** is set to **Force**, then the device needs to find a DC that runs Windows Server 2016 or later to authenticate. The setting is under Administrative Templates > System > Kerberos.
