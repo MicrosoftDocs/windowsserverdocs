@@ -41,7 +41,7 @@ This walkthrough uses the following environment as an example:
 
 * Active Directory Domain Services forest (does not need to run Windows Server 2016).  
 * At least four servers (two servers in two clusters) with Windows Server 2016 Datacenter Edition installed. Supports up to two 64 node clusters.  
-* Two sets of storage, using SAS JBODs, fibre channel SAN, Shared VHDX or iSCSI target. The storage should contain a mix of HDD and SSD media. You will make each storage set available only to each of the clusters, with no shared access between clusters.  
+* Two sets of storage, using SAS JBODs, fibre channel SAN, Shared VHDX, Storage Spaces Direct, or iSCSI target. The storage should contain a mix of HDD and SSD media. You will make each storage set available only to each of the clusters, with no shared access between clusters.  
 * Each set of storage must allow creation of at least two virtual disks, one for replicated data and one for logs. The physical storage must have the same sector sizes on all the data disks. The physical storage must have the same sector sizes on all the log disks.  
 * At least one ethernet/TCP connection on each server for synchronous replication, but preferably RDMA.   
 * Appropriate firewall and router rules to allow ICMP, SMB (port 445, plus 5445 for SMB Direct) and WS-MAN (port 5985) bi-directional traffic between all nodes.  
@@ -120,6 +120,12 @@ Many of these requirements can be determined by using the `Test-SRTopology` cmdl
         1.  Ensure that each cluster can see that site's storage enclosures only and that you have properly zoned the hosts.  
 
         2.  Provision the storage using your vendor documentation.  
+
+    -   **For Storage Spaces Direct:**  
+
+        1.  Ensure that each cluster can see that site's storage enclosures only by deploying Storage Spaces Direct. (https://docs.microsoft.com/en-us/windows-server/storage/storage-spaces/hyper-converged-solution-using-storage-spaces-direct) 
+
+        2.  Ensure that the SR log volumes will always be on the fastest flash storage and the data volumes on slower high capacity storage.
 
 10. Start Windows PowerShell and use the `Test-SRTopology` cmdlet to determine if you meet all the Storage Replica requirements. You can use the cmdlet in a requirements-only mode for a quick test as well as a long running performance evaluation mode.  
 For example,  
@@ -367,7 +373,7 @@ Now you will manage and operate your cluster-to-cluster replication. You can per
     ```  
 
     > [!NOTE]  
-    > Storage Replica dismounts the destination volumes and their drive letters or mount points. This is by design.
+    > Storage Replica dismounts the destination volumes. This is by design.
 
 ## See also
 

@@ -41,9 +41,11 @@ For more information on each infrastructure component depicted in the illustrati
 
 ## VPN Server
 
-The VPN Server is a new physical server or virtual machine \(VM\) that you must install to complete the steps in this guide. The server must be running Windows Server 2016. In addition, in the process of completing the steps in this guide, you must perform the following actions with the VPN Server.
+The VPN Server is a new physical server or virtual machine \(VM\) that you must install to complete the steps in this guide. 
 
-- Install two Ethernet network adapters in the physical server.
+In the process of completing the steps in this guide, you must perform the following actions with the VPN Server.
+
+- Install two Ethernet network adapters in the physical server. If you are installing the VPN server on a VM, you must create two External virtual switches, one for each physical network adapter; and then create two virtual network adapters for the VM, with each network adapter connected to one virtual switch.
 - Install the server on your perimeter network between your edge and internal firewalls, with one network adapter connected to the External Perimeter Network, and one network adapter connected to the Internal Perimeter Network.
 - Install and configure Remote Access as a single tenant VPN RAS Gateway for point\-to\-site VPN connections from remote computers.
 - Configure Remote Access as a RADIUS Client so that it can send connection requests to the organization NPS server for processing.

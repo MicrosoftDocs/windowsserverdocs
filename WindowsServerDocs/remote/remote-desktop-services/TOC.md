@@ -16,6 +16,7 @@
 ### [Connect from any device](rds-plan-connect-from-any-device.md)
 ### [Choose how you pay](rds-plan-choose-how-you-pay.md)
 ### [Office 2016 in RDS and VDI deployments](rds-office-vdi-rdsh.md)
+#### [Dealing with Outlook search in non-persistent environments](rds-outlook-data-fslogix.md)
 ### [Desktop Hosting Reference Architecture](Desktop-Hosting-Reference-Architecture.md)
 #### [Remote Desktop Services architecture](Desktop-hosting-logical-architecture.md)
 #### [Desktop hosting service](Desktop-hosting-service.md)
@@ -33,6 +34,10 @@
 #### [Activate the license server](rds-activate-license-server.md)
 #### [Install RDS CALs on the license server](rds-install-cals.md)
 #### [Track the CALs used in your deployment](rds-track-cals.md)
+### [Integrate Azure services](rds-integrate-with-azure.md)
+#### [Learn how to use Multi-factor Authentication with RDS](/azure/multi-factor-authentication/nps-extension-remote-desktop-gateway)
+#### [Integrate Azure AD Domain Services with your RDS deployment](rds-azure-adds.md)
+#### [Publish Remote Desktop with Azure AD Application Proxy](/azure/active-directory/application-proxy-publish-remote-desktop)
 ### Extend your RDS environment for high availability
 #### [Scale out an existing RDS collection with an RD Session Host farm](rds-scale-rdsh-farm.md)
 #### [Add high availability to the RD Connection Broker infrastructure](rds-connection-broker-cluster.md)
