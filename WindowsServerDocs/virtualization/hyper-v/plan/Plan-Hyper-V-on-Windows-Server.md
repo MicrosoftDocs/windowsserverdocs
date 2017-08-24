@@ -18,9 +18,9 @@ ms.date: 02/13/2017
 
 Use these resources to help you plan your Hyper-V deployment.
    
--  [Hyper-V scalability in Windows Server 2016](Plan-for-Hyper-V-scalability-in-Windows-Server-2016.md)  
--  [Hyper-V security in Windows Server 2016](plan-for-hyper-v-security-in-Windows-Server-2016.md)
--  [Networking in Windows Server 2016](Plan-for-Hyper-V-networking-in-Windows-Server-2016.md) 
+-  [Hyper-V scalability in Windows Server](plan-hyper-v-scalability-in-windows-server.md)  
+-  [Hyper-V security in Windows Server](plan-hyper-v-security-in-windows-server.md)
+-  [Networking in Windows Server](plan-hyper-v-networking-in-windows-server.md) 
 -  [Should I create a generation 1 or 2 virtual machine?](Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md)
 - [Plan for deploying devices using Discrete Device Assignment](plan-for-deploying-devices-using-discrete-device-assignment.md)
   
