@@ -22,6 +22,7 @@
 #### [Create the Key Distribution Services KDS Root Key](group-managed-service-accounts/create-the-key-distribution-services-kds-root-key.md)
 ## [Kerberos Authentication](kerberos/kerberos-authentication-overview.md)
 ### [What's new in Kerberos authentication](kerberos/whats-new-in-kerberos-authentication.md)
+### [Domain-joined Device Public Key Authentication](kerberos/domain-joined-device-public-key-authentication.md)
 ### [Kerberos Constrained delegation](kerberos/kerberos-constrained-delegation-overview.md)
 ### [Preventing Kerberos change password that uses RC4 secret keys](kerberos/preventing-kerberos-change-password-that-uses-rc4-secret-keys.md)
 ## [NTLM](kerberos/ntlm-overview.md)
