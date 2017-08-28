@@ -12,11 +12,11 @@ ms.date: 08/28/2017
 
 # Deploying the Host Guardian Service for guarded hosts and shielded VMs
 
+>Applies To: Windows Server 2016
+
 >[!div class="step-by-step"]
 [« Plan a guarded fabric](guarded-fabric-plan-overview.md)
 [Quick Start »](guarded-fabric-deployment-overview.md)
-
->Applies To: Windows Server 2016
 
 One of the most important goals of providing a hosted environment is to guarantee the security of the virtual machines running in the environment. As a cloud service provider or enterprise private cloud administrator, you can use a guarded fabric to provide a more secure environment for VMs. A guarded fabric consists of one Host Guardian Service (HGS) - typically, a cluster of three nodes - plus one or more guarded hosts, and a set of shielded virtual machines (VMs).
 
