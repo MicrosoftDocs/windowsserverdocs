@@ -10,13 +10,13 @@ ms.technology: security-guarded-fabric
 ms.date: 04/24/2017
 ---
 
->[!div class="step-by-step"]
-[« Deploy HGS](guarded-fabric-setting-up-the-host-guardian-service-hgs.md)
-[Obtain certificates for HGS »](guarded-fabric-obtain-certs.md)
-
 # Review prerequisites for the Host Guardian Service
 
 >Applies To: Windows Server 2016
+
+>[!div class="step-by-step"]
+[« Deploy HGS](guarded-fabric-setting-up-the-host-guardian-service-hgs.md)
+[Obtain certificates for HGS »](guarded-fabric-obtain-certs.md)
 
 This topic covers HGS prerequisites and initial steps to prepare for the HGS deployment.
 
