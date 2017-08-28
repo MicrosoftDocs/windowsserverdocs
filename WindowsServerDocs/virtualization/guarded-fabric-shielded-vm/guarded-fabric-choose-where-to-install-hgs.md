@@ -6,7 +6,7 @@ ms.topic: article
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 04/24/2017
+ms.date: 08/28/2017
 ---
 
 # Choose whether to install HGS in its own dedicated forest or in an existing bastion forest
