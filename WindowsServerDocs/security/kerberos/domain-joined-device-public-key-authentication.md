@@ -12,12 +12,11 @@ ms.date: 8/18/2017
 
 # Domain-joined Device Public Key Authentication
 
->Applies To: Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, Windows 8, Windows 8.1, and Windows 10
+>Applies To: Windows Server 2016, Windows 10
 
-In Windows Server 2012 and Windows 8, Kerberos added support for domain-joined devices to sign-in using a certificate. This change allows 3rd party vendors to create solutions to provision and initialize certificates for domain-joined devices to use for domain authentication. 
+Kerberos added support for domain-joined devices to sign-in using a certificate beginning with Windows Server 2012 and Windows 8. This change allows 3rd party vendors to create solutions to provision and initialize certificates for domain-joined devices to use for domain authentication. 
 
 ## Automatic public key provisioning
->Applies To: Windows Server 2016 and Windows 10
 
 Beginning with Windows 10 version 1507 and Windows Server 2016, domain-joined devices automatically provision a bound public key to a Windows Server 2016 domain controller (DC). Once a key is provisioned, then Windows can use public key authentication to the domain.
 
