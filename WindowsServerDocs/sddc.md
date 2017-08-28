@@ -30,10 +30,10 @@ The technologies built into Windows Server and System Center are the main buildi
 
 ![](media/sddc/video.png)**[Watch a video to learn more about Microsoft's SDDC](https://mva.microsoft.com/en-US/training-courses/whats-new-in-windows-server-2016-16457?l=YcsJR6sXC_1006218965)**
 
-![](media/sddc/poster-ico.png)**[Download a poster size .pdf file of this page](https://docs.microsoft.com/windows-server/media/sddc/sddc_poster_0801417_ANSI-E.pdf)**
+![](media/sddc/poster-ico.png)**[Download a poster size .pdf file of this page](https://github.com/MicrosoftDocs/windowsserverdocs/blob/master/WindowsServerDocs/media/sddc/sddc_poster_0801417_ANSI-E.pdf)**
 
 
-![](media/sddc/spacer1.png)![](media/sddc/spacer1.png)<a href="https://docs.microsoft.com/windows-server/media/sddc/sddc_poster_0801417_ANSI-E.pdf"><img src="media/sddc/poster.png"></a>
+![](media/sddc/spacer1.png)![](media/sddc/spacer1.png)<a href="https://github.com/MicrosoftDocs/windowsserverdocs/blob/master/WindowsServerDocs//media/sddc/sddc_poster_0801417_ANSI-E.pdf"><img src="media/sddc/poster.png"></a>
 
 
 ## Windows Server Software-Defined (WSSD) Solutions ##
