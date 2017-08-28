@@ -7,16 +7,16 @@ ms.assetid: 7485796b-b840-4678-9b33-89e9710fbbc7
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 10/14/2016
+ms.date: 08/28/2017
 ---
-
->[!div class="step-by-step"]
-[« Review prerequisites](guarded-fabric-guarded-host-prerequisites.md)
-[Deploy shielded VMs »](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
 
 # Confirm guarded hosts can attest 
 
 >Applies To: Windows Server 2016
+
+>[!div class="step-by-step"]
+[« Review prerequisites](guarded-fabric-guarded-host-prerequisites.md)
+[Deploy shielded VMs »](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
 
 A fabric administrator needs to confirm that Hyper-V hosts can run as guarded hosts. Complete the following steps on at least one guarded host:
 

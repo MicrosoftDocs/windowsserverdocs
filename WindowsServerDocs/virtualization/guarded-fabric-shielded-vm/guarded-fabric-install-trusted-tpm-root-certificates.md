@@ -6,14 +6,16 @@ ms.topic: article
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 07/05/2017
+ms.date: 08/28/2017
 ---
+
+# Install trusted TPM root certificates
+
+>Applies To: Windows Server 2016
 
 >[!div class="step-by-step"]
 [« Initialize HGS](guarded-fabric-initialize-hgs-tpm-mode.md)
 [Configure fabric DNS »](guarded-fabric-configuring-fabric-dns-tpm.md)
-
-# Install trusted TPM root certificates
 
 If you chose TPM mode, or expect to migrate to TPM mode in the future, you need to install root certificates to issue the endorsement key in each host's TPM module.
 These root certificates are different from those installed by default in Windows and represent the specific root and intermediate certificates used by TPM vendors.

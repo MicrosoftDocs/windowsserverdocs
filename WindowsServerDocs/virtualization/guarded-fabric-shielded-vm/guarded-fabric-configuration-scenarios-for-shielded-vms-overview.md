@@ -10,11 +10,11 @@ ms.technology: security-guarded-fabric
 ms.date: 10/14/2016
 ---
 
+# Deploy shielded VMs
+
 >[!div class="step-by-step"]
 [« Confirm attestation](guarded-fabric-confirm-hosts-can-attest-successfully.md)
 [Create a shielded VM template »](guarded-fabric-create-a-shielded-vm-template.md)
-
-# Deploy shielded VMs
 
 >Applies To: Windows Server 2016
 

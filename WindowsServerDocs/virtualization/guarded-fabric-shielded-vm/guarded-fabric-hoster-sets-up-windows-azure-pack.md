@@ -7,7 +7,7 @@ ms.assetid: d528c689-58b0-425c-9740-25e2553ed689
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 11/15/2016
+ms.date: 08/28/2017
 ---
 
 # Shielded VMs - Hosting service provider sets up Windows Azure Pack

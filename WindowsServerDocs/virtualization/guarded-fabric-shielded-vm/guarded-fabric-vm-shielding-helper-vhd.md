@@ -7,14 +7,14 @@ ms.assetid: 0e3414cf-98ca-4e91-9e8d-0d7bce56033b
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 10/14/2016
+ms.date: 08/28/2017
 ---
+
+# Shielded VMs - Hosting service provider prepares a VM Shielding Helper VHD
 
 >[!div class="step-by-step"]
 [« Deploy a shielded using Windows Azure Pack](guarded-fabric-shielded-vm-windows-azure-pack.md)
 [Shield an existing VM »](guarded-fabric-vm-shielding-helper-vhd.md)
-
-# Shielded VMs - Hosting service provider prepares a VM Shielding Helper VHD
 
 >Applies To: Windows Server 2016
 

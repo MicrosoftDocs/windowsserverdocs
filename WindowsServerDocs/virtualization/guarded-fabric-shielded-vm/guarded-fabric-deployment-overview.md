@@ -8,14 +8,16 @@ manager: dongill
 author: justinha
 ms.author: justinha
 ms.technology: security-guarded-fabric
-ms.date: 02/02/2017
+ms.date: 08/28/2017
 ---
+
+# Quick start for guarded fabric deployment
+
+>Applies To: Windows Server 2016
 
 >[!div class="step-by-step"]
 [« Deploy a guarded fabric](guarded-fabric-deploying-hgs-overview.md)
 [HGS Prerequisites »](guarded-fabric-prepare-for-hgs.md)
-
-# Quick start for guarded fabric deployment
 
 This topic explains what a guarded fabric is, its requirements, and a summary of the deployment process. 
 For detailed deployment steps, see [Deploying the Host Guardian Service for guarded hosts and shielded VMs](https://technet.microsoft.com/windows-server-docs/security/guarded-fabric-shielded-vm/guarded-fabric-deploying-hgs-overview).

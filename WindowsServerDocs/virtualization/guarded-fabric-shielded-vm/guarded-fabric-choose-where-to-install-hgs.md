@@ -9,11 +9,13 @@ ms.technology: security-guarded-fabric
 ms.date: 04/24/2017
 ---
 
+# Choose whether to install HGS in its own dedicated forest or in an existing bastion forest
+
+>Applies To: Windows Server 2016
+
 >[!div class="step-by-step"]
 [« Obtain certificates for HGS](guarded-fabric-obtain-certs.md)
 [Initialize HGS »](guarded-fabric-initialize-hgs.md)
-
-# Choose whether to install HGS in its own dedicated forest or in an existing bastion forest
 
 The Active Directory forest for HGS is sensitive because its administrators have access to the keys that control shielded VMs. 
 The default installation will set up a new forest dedicated for HGS and configure other dependencies. 
