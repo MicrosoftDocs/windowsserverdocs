@@ -385,7 +385,6 @@
 #### [Enabling OpenId Connect with AD FS 2016](ad-fs/development/Enabling-OpenId-Connect-with-AD-FS-2016.md)
 #### [Enabling Oauth Confidential Clients with AD FS 2016](ad-fs/development/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016.md)
 #### [Single Page Application with AD FS](ad-fs/development/Single-Page-Application-with-AD-FS.md)
-#### [Customizing the Id_Token in OpenID Connect Scenarios](ad-fs/development/Customize-Id-Token-AD-FS-2016.md)
 ### [AD FS Operations](ad-fs/AD-FS-2016-Operations.md)
 #### [AD FS Access Control Policies](ad-fs/operations/AD-FS-Client-Access-Policies.md)
 ##### [Access Control Policies in AD FS for Windows Server 2016](ad-fs/operations/Access-Control-Policies-in-AD-FS.md)
