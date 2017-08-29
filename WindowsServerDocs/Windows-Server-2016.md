@@ -133,3 +133,8 @@ Now that you know which edition and installation option is right for you, click 
    <td align='center' style="width:33%; border:0;"><a href="/windows-server/get-started/getting-started-with-server-with-desktop-experience"><img width="175" src="media/desktop.png" alt="Icon representing the full desktop experience installation option for Windows Server" title="Desktop Experience - Full Experience" /><br/>Desktop Experience - <br/>Full interface</a></td>
   </tr>
 </table>
+## Windows Server Software-Defined Datacenter (SDDC)##
+Virtualized Storage, Networking, Security and Management technologies are the building blocks of the Windows Server Software-Defined Datacenter (SDDC).
+
+![](media/sddc/spacer1.png)![](media/sddc/spacer1.png)<a href="sddc.md/"><img src="media/sddc/WS16-heading.png"></a>
+![](media/sddc/spacer3.png)[Learn more about Windows Server SDDC](sddc.md)
