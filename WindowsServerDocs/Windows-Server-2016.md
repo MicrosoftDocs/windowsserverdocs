@@ -136,5 +136,5 @@ Now that you know which edition and installation option is right for you, click 
 ## Windows Server Software-Defined Datacenter (SDDC)##
 Virtualized Storage, Networking, Security and Management technologies are the building blocks of the Windows Server Software-Defined Datacenter (SDDC).
 
-![](media/sddc/spacer1.png)![](media/sddc/spacer1.png)<a href="sddc.md/"><img src="media/sddc/WS16-heading.png"></a>
-![](media/sddc/spacer3.png)[Learn more about Windows Server SDDC](sddc.md)
+![](media/sddc/spacer1.png)![](media/sddc/spacer1.png)<a href="/sddc.md/"><img src="media/sddc/WS16-heading.png"></a>
+![](media/sddc/spacer3.png)[Learn more about Windows Server SDDC](/sddc.md)
