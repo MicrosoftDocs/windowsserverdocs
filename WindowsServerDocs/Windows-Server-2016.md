@@ -143,7 +143,7 @@ Virtualized Storage, Networking, Security and Management technologies are the bu
 <table border="0" width="100%" align='center'>
   <tr style="text-align:center;">
     <td align='center' style="width:25%; border:0;"><a href=""><img width="175" src="media/sddc/spacer1.png"</td>
-    <td align='center' style="width:50%; border:0;"><a href="/sddc.md"><img width="400" src="media/sddc/WS16-heading.png" alt="Icon representing SDDC" title="Windows Server Software-Defined Datacenter (SDDC)" /><br/>Windows Server Software-Defined Datacenter (SDDC)</a></td>
+    <td align='center' style="width:50%; border:0;"><a href="sddc.md"><img width="400" src="media/sddc/WS16-heading.png" alt="Icon representing SDDC" title="Windows Server Software-Defined Datacenter (SDDC)" /><br/>Windows Server Software-Defined Datacenter (SDDC)</a></td>
     <td align='center' style="width:25%; border:0;"><a href=""><img width="175" src="media/sddc/spacer1.png"</td>
   </tr>
 </table>
