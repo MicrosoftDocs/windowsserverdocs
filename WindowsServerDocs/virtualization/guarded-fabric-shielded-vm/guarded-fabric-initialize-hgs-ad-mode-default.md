@@ -6,14 +6,16 @@ ms.topic: article
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 07/05/2017
+ms.date: 08/28/2017
 ---
+
+# Initialize the HGS cluster using AD mode in a new dedicated forest (default)
+
+>Applies To: Windows Server 2016
 
 >[!div class="step-by-step"]
 [« Install HGS in a new forest](guarded-fabric-install-hgs-default.md)
 [Configure fabric DNS »](guarded-fabric-configuring-fabric-dns-ad.md)
-
-# Initialize the HGS cluster using AD mode in a new dedicated forest (default)
 
 1.  [!INCLUDE [Initialize HGS](../../../includes/guarded-fabric-initialize-hgs-default-step-one.md)] 
 2.  [!INCLUDE [Obtain certificates for HGS](../../../includes/guarded-fabric-initialize-hgs-default-step-two.md)]

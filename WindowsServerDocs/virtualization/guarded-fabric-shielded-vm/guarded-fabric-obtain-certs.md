@@ -7,14 +7,16 @@ ms.assetid: f4b4d1a8-bf6d-4881-9150-ddeca8b48038
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 07/12/2017
+ms.date: 08/28/2017
 ---
+
+# Obtain certificates for HGS
+
+>Applies To: Windows Server 2016
 
 >[!div class="step-by-step"]
 [« Prerequisites](guarded-fabric-prepare-for-hgs.md)
 [Install HGS »](guarded-fabric-choose-where-to-install-hgs.md)
-
-# Obtain certificates for HGS
 
 When you deploy HGS, you will be asked to provide signing and encryption certificates that are used to protect the sensitive information needed to start up a shielded VM.
 These certificates never leave HGS, and are only used to decrypt shielded VM keys when the host on which they're running has proven it is healthy.

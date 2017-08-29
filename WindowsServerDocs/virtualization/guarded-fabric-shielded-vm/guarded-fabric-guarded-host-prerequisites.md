@@ -6,10 +6,12 @@ ms.topic: article
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 07/05/2017
+ms.date: 08/28/2017
 ---
 
 # Prerequisites for guarded hosts
+
+>Applies To: Windows Server 2016
 
 Review the host prerequisites for the mode of attestation you've chosen, then click on the next step to add guarded hosts.
 

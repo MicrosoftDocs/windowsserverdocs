@@ -7,16 +7,16 @@ ms.assetid: 227f723b-acb2-42a7-bbe3-44e82f930e35
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 05/10/2017
+ms.date: 08/28/2017
 ---
-
->[!div class="step-by-step"]
-[« Configure Https](guarded-fabric-configure-hgs-https.md)
-[Verify the configuration »](guarded-fabric-verify-hgs-configuration.md)
 
 # Configure additional HGS nodes
 
 >Applies To: Windows Server 2016
+
+>[!div class="step-by-step"]
+[« Configure Https](guarded-fabric-configure-hgs-https.md)
+[Verify the configuration »](guarded-fabric-verify-hgs-configuration.md)
 
 In production environments, HGS should be set up in a high availability cluster to ensure that shielded VMs can be powered on even if an HGS node goes down. For test environments, secondary HGS nodes are not required.
 
