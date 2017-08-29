@@ -134,7 +134,7 @@ Now that you know which edition and installation option is right for you, click 
   </tr>
 </table>
 
-## Windows Server Software-Defined Datacenter (SDDC)##
+## Windows Server Software-Defined Datacenter (SDDC)
 
 Virtualized Storage, Networking, Security and Management technologies are the building blocks of the Windows Server Software-Defined Datacenter (SDDC).
 <br/>
