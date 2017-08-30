@@ -7,7 +7,7 @@ ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
 ms.author: chrimo
-ms.date: 08/18/2017
+ms.date: 08/30/2017
 ms.tgt_pltfrm: na
 ms.topic: article
 author: christianmontoya
@@ -40,18 +40,11 @@ Use the following steps to deploy Azure AD DS and RDS.
 1. Enable [Azure AD DS](/azure/active-directory-domain-services/active-directory-ds-getting-started). Note that the linked article does the following:
    - Walk through creating the appropriate Azure AD groups for domain administration and the classic virtual ntework.
    - Highlight when you might have to force users to change their password so their accounts can work with Azure AD DS.
-2. Create [virtual network peering](/azure/virtual-network/create-peering-different-deployment-models#cli). Follow these guidelines:
-   - Create one virtual network, following steps 1-3 in the article. Skip steps 4-6 - you already created the classic virtual network when you enabled Azure AD DS.
-   - Use the same subscription for both virtual networks.
-   - Use the same Azure location for both virtual networks.
-   - Configure the address space of the new virtual network so that it doesn't overlap with the address space of the existing virtual network.
 
    > [!NOTE]
-   > This step won't be necessary when Azure AD DS is supported on Azure resource manager virtual networks.
-3. On the Azure resource manager virtual network, set the DNS servers to the Azure AD DS instances:
-   1. [Collect the local IP addresses](/azure/active-directory-domain-services/active-directory-ds-getting-started-enableaadds) of the Azure AD DS instances.
-   2. Configure the DNS servers of the Azure resource manager virtual network. In the Azure portal, go to the newly created Azure resource manager virtual network. Click **DNS servers**, select **Custom**, enter the two IP addresses, then click **Save**.
-4. Set up RDS. You can either use an Azure template or deploy RDS manually.
+   > Azure AD DS support for Azure Resource Manager virtual networks is in public preview. 
+   
+2. Set up RDS. You can either use an Azure template or deploy RDS manually.
    - Use the [Existing AD template](https://azure.microsoft.com/resources/templates/rds-deployment-existing-ad/). Make sure to customize the following:
       - **Resource group**: Use the resource group where you want to create the RDS resources.
          > [!NOTE] 

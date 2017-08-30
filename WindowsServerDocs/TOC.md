@@ -1,4 +1,5 @@
 # [Windows Server 2016](Windows-Server-2016.md)
+## [Windows Server Software-Defined Datacenter (SDDC)](sddc.md)
 ## [Get Started](get-started/Server-Basics.md)
 ## [Administer Windows Server](administration/administration.md)
 ## [Failover Clustering](failover-clustering/failover-clustering-overview.md)
