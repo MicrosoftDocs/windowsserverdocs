@@ -117,7 +117,7 @@ For more information about configuring switches, see the **Configuration Example
   
 ## Routing infrastructure  
   
-If you are deploying your SDN infrastructure using scripts, the Management, HNV Provider, Transit, and VIP subnets must be routable to each other on the physical network. This does not apply if you deploy with VMM.    
+If you are deploying your SDN infrastructure using scripts, the Management, HNV Provider, Transit, and VIP subnets must be routable to each other on the physical network.     
   
 Routing information \(e.g. next-hop\) for the VIP subnets is advertised by the SLB/MUX and RAS Gateways into the physical network using internal BGP peering. The VIP logical networks do not have a VLAN assigned and is not pre-configured in the Layer-2 switch (e.g. Top-of-Rack switch).  
   
