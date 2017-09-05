@@ -6,7 +6,7 @@ ms.technology: performance-tuning-guide
 ms.topic: article
 ms.author: JasonSh
 author: lzybkr
-ms.date: 04/24/2017
+ms.date: 08/31/2017
 ---
 
 # PowerShell scripting performance considerations
@@ -124,5 +124,7 @@ finally
 
 It is generally considered poor practice to write output directly to the console, but when it makes sense, many scripts use `Write-Host`.
 
-If you must write many messages to the console, `Write-Host` can be an order of magnitude slower than `[Console]::WriteLine()`.
+If you must write many messages to the console, `Write-Host` can be an order of magnitude slower than `[Console]::WriteLine()`. However, be aware that `[Console]::WriteLine()` is only a suitable alternative for specific hosts like powershell.exe or powershell_ise.exe - it's not guaranteed to work in all hosts.
+
+Instead of using `Write-Host`, consider using [Write-Output](/powershell/module/Microsoft.PowerShell.Utility/Write-Output?view=powershell-5.1).
 
