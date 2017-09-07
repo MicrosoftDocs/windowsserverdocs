@@ -7,7 +7,7 @@ manager: DonGill
 ms.technology: server-nano
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.date: 10/06/2016
+ms.date: 09/06/2017
 ms.assetid: 16984724-2d77-4d7b-9738-3dff375ed68c
 author: jaimeo
 ms.author: jaimeo
@@ -16,8 +16,9 @@ ms.author: jaimeo
 
 >Applies To: Windows Server 2016
 
+> [!IMPORTANT]
+> Starting in Windows Server, version 1709, Nano Server will be available only as a [container base OS image](/virtualization/windowscontainers/quick-start/using-insider-container-images#install-base-container-image). Check out [Changes to Nano Server](nano-in-semi-annual-channel.md) to learn what this means. 
 
-## Overview of IIS on Nano Server  
 You can install the Internet Information Services (IIS) server role on Nano Server by using the -Package parameter with Microsoft-NanoServer-IIS-Package. For information about configuring Nano Server, including installing packages, see [Install Nano Server](Getting-Started-with-Nano-Server.md).  
 
 In this release of Nano Server, the following IIS features are available:  
