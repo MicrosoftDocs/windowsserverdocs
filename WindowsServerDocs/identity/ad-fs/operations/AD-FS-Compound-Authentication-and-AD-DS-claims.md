@@ -68,7 +68,9 @@ You need to ensure that the following updates are installed on your AD FS server
 2. In AD FS Management, under **Authentication Policies**, select **Primary Authentication** and under **Global Settings** click **edit**.
 3. On **Edit Global Authentication Policy** under **Intranet** select **Windows Authentication**.
 4. Click **Apply** and **Ok**.
+
 ![Group Policy Management](media/AD-FS-Compound-Authentication-and-AD-DS-claims/gpmc5.png)
+
 5. Using PowerShell you can use the **Set-AdfsGlobalAuthenticationPolicy** cmdlet.
 
 ``` powershell
@@ -86,7 +88,9 @@ Set-AdfsGlobalAuthenticationPolicy -PrimaryIntranetAuthenticationProvider 'Windo
 	- Claim Description: 'http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsdevicegroup' `
 4. Place a check in both boxes.
 5. Click **OK**.
+
 ![Claim Description](media/AD-FS-Compound-Authentication-and-AD-DS-claims/gpmc6.png)
+
 6. Using PowerShell you can use the **Add-AdfsClaimDescription** cmdlet.
 ``` powershell
 Add-AdfsClaimDescription -Name 'Windows device group' -ClaimType 'http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsdevicegroup' `
@@ -210,3 +214,20 @@ Disabling CompoundIdentitySupported and then reenabling does not need ADFS servi
 5.  Add a display name and select **Windows device group** from the **Incoming claim type** drop-down.
 6.  Click **Finish**.  Click **Apply** and **Ok**.
 
+## Validation
+To validate the release of ‘WindowsDeviceGroup’ claims, create a test Claims Aware Application using .Net 4.6. With WIF SDK 4.0.
+Configure the Application as a Relying Party in ADFS and update it with Claim Rule as specified in steps above.
+When authenticating to the Application using Windows Integrated Authentication provider of ADFS, the following claims are casted.
+![Validation](media/AD-FS-Compound-Authentication-and-AD-DS-claims/gpmc9.png)
+
+The Claims for the computer/device may now be consumed for richer access controls.
+
+For example – The following **AdditionalAuthenticationRules** Tells AD FS to invoke MFA if – The Authenticating User is not member of the security group “-1-5-21-2134745077-1211275016-3050530490-1117” AND the Computer (where is the user is Authenticating from) is not member of the security group "S-1-5-21-2134745077-1211275016-3050530490-1115 (WindowsDeviceGroup)"
+
+However, if any of the above conditions are met, do not invoke MFA.
+
+```
+'NOT EXISTS([Type == "http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsdevicegroup", Value =~ "S-1-5-21-2134745077-1211275016-3050530490-1115"])
+&& NOT EXISTS([Type == "http://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid", Value =~ "S-1-5-21-2134745077-1211275016-3050530490-1117"])
+=> issue(Type = "http://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", Value = "http://schemas.microsoft.com/claims/multipleauthn");'
+```
