@@ -84,10 +84,12 @@ Here are some possible solutions to common problems you might encounter when try
 Check the following:
 - Is the PC on and awake?
 - Did you enter the right name or IP address?
-> [!IMPORTANT]
-> Using the PC name requires your network to resolve the name correctly through DNS. In many home networks, you have to use the IP address instead of the host name to connect.
+
+   > [!IMPORTANT]
+   > Using the PC name requires your network to resolve the name correctly through DNS. In many home networks, you have to use the IP address instead of the host name to connect.
 - Is the PC on a different network? Did you configure the PC to let outside connections through?  Check out [Allow access to your PC from outside your network](remote-desktop-allow-outside-access.md) for help.
 - Are you connecting to a supported Windows version? 
+
    > [!NOTE]
    > Windows XP Home, Windows Media Center Edition, Windows Vista Home and Windows 7 Home or Starter are not supported without 3rd party software.
 
