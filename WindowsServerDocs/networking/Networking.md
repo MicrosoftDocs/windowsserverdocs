@@ -82,7 +82,7 @@ Learn how to deploy a Windows Server network with the Core Network Guide, as wel
 
 ### [DirectAccess](../remote/remote-access/directaccess/DirectAccess.md)
 
-DirectAccess allows connectivity for remote users to organization network resources without the need for traditional Virtual Private Network (VPN) connections. 
+DirectAccess allows connectivity for remote users to organization network resources. 
 
 DirectAccess documentation is now located in the [Remote access and server management](https://docs.microsoft.com/windows-server/remote/) section of the Windows Server 2016 table of contents, under [Remote Access](https://docs.microsoft.com/windows-server/remote/remote-access/remote-access). For more information, see [DirectAccess](../remote/remote-access/directaccess/DirectAccess.md).
 
@@ -139,6 +139,10 @@ This topic provides information about choosing the right network adapter for you
 
 NIC Teaming allows you to group physical Ethernet network adapters into one or more software-based virtual network adapters. These virtual network adapters provide fast performance and fault tolerance in the event of a network adapter failure.
 
+### [Quality of Service (QoS) Policy](technologies/qos/qos-policy-top.md)
+
+You can use QoS Policy as a central point of network bandwidth management across your entire Active Directory infrastructure by creating QoS profiles, whose settings are distributed with Group Policy.
+
 ### [Remote Access](../remote/remote-access/remote-access.md)
 
 You can use Remote Access technologies, such as DirectAccess and Virtual Private Networking \(VPN\) to provide remote workers with connectivity to internal network resources. In addition, you can use Remote Access for local area network \(LAN\) routing, and for Web Application Proxy. which provides reverse proxy functionality for web applications inside your corporate network to allow users on any device to access them from outside the corporate network.
@@ -146,6 +150,21 @@ You can use Remote Access technologies, such as DirectAccess and Virtual Private
 Remote Access documentation is now located in the [Remote access and server management](https://docs.microsoft.com/windows-server/remote/) section of the Windows Server 2016 table of contents. For more information, see [Remote Access](../remote/remote-access/remote-access.md).
 
 For more information about Web Application Proxy, which is a role service of the Remote Access server role, see [Web Application Proxy in Windows Server 2016](https://docs.microsoft.com/windows-server/remote/remote-access/web-application-proxy/web-application-proxy-windows-server).
+
+### [Virtual Private Networking (VPN)](../remote/remote-access/vpn/vpn-top.md)
+
+In Windows Server 2016, **DirectAccess and VPN** is a role service of the **Remote Access** server role.
+
+When you install Remote Access as a VPN server, you can use Virtual Private Networking \(VPN\) to provide your remote employees with connections to your organization network across the Internet - while also maintaining information privacy with encrypted connections.
+
+With Windows Server 2016 Remote Access VPN - and Windows 10 client computers - you can now deploy Always On VPN. Always On VPN gives you the ability to manage remote VPN clients that are always connected, while also providing convenience for remote workers, who no longer need to manually connect to and disconnect from VPN to your organization network.
+
+For more information, see [Remote Access Always On VPN Deployment Guide for Windows Server 2016 and Windows 10](https://docs.microsoft.com/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy).
+
+>[!NOTE]
+>VPN documentation is now located in the [Remote access and server management](https://docs.microsoft.com/windows-server/remote/) section of the Windows Server 2016 table of contents, under [Remote Access](https://docs.microsoft.com/windows-server/remote/remote-access/remote-access).
+
+For more information about VPN, see [Virtual Private Networking (VPN)](https://docs.microsoft.com/windows-server/remote/remote-access/vpn/vpn-top).
 
 ### [Windows Internet Name Service (WINS)](technologies/wins/wins-top.md)
 

@@ -12,40 +12,37 @@ ms.date: 03/02/2017
 
 >Applies To: Windows Server 2016
 
-# Add host information for Admin-trusted attestation
+# Authorize Hyper-V hosts using Admin-trusted attestation
 
-The following two sections describe how to configure DNS forwarding, and add host information to HGS for AD mode:
+To authorize a guarded host in AD mode: 
 
-- [Configuring DNS forwarding and domain trust](#configure-dns-forwarding-and-domain-trust)
-- [Adding security group information to the HGS configuration](#add-security-group-information-to-the-hgs-configuration)
+1. In the fabric domain, add the Hyper-V hosts to a security group.
+2. In the HGS domain, register the SID of the security group with HGS. 
 
-## Configure DNS forwarding and domain trust
+## Add the Hyper-V host to a security group and reboot the host
 
-Use the following steps to set up necessary DNS forwarding from the HGS domain to the fabric domain, and to establish a one-way forest trust to the fabric domain. These steps allow the HGS to locate the fabric domain's domain controllers and validate group membership of the Hyper-V hosts.
+1. Create a **GLOBAL** security group in the fabric domain and add Hyper-V hosts that will run shielded VMs. 
+   Restart the hosts to update their group membership.
 
-1.  To configure a DNS forwarder that allows HGS to resolve resources located in the fabric (host) domain, run the following command in an elevated PowerShell session. 
+2. Use Get-ADGroup to obtain the security identifier (SID) of the security group and provide it to the HGS administrator. 
 
-    Replace fabrikam.com with the name of the fabric domain and type the IP addresses of DNS servers in the fabric domain. For higher availability, point to more than one DNS server.
+   ```powershell
+   Get-ADGroup "Guarded Hosts"
+   ```
 
-    ```powershell
-    Add-DnsServerConditionalForwarderZone -Name "fabrikam.com" -ReplicationScope "Forest" -MasterServers <DNSserverAddress1>, <DNSserverAddress2>
-    ```
+   ![Get-AdGroup command with output](../media/Guarded-Fabric-Shielded-VM/guarded-host-get-adgroup.png)
 
-2.  To create a one-way forest trust from the HGS domain to the fabric domain, run the following command in an elevated Command Prompt:
+## Register the SID of the security group with HGS  
 
-    Replace `relecloud.com` with the name of the HGS domain and `fabrikam.com` with the name of the fabric domain. Provide the password for and admin of the fabric domain.
+1. Obtain the SID of the security group for guarded hosts from the fabric administrator and run the following command to register the security group with HGS. 
+   Re-run the command if necessary for additional groups. 
+   Provide a friendly name for the group. 
+   It does not need to match the Active Directory security group name. 
 
-        netdom trust relecloud.com /domain:fabrikam.com /userD:fabrikam.com\Administrator /passwordD:<password> /add
+   ```powershell
+   Add-HgsAttestationHostGroup -Name "<GuardedHostGroup>" -Identifier "<SID>"
+   ```
 
-## Add security group information to the HGS configuration 
+2. To verify the group was added, run [Get-HgsAttestationHostGroup](https://technet.microsoft.com/library/mt652172.aspx). 
 
-1.  Obtain the SID of the [security group](guarded-fabric-admin-trusted-attestation-creating-a-security-group.md#create-a-security-group-and-add-hosts) for guarded hosts from the fabric administrator and run the following command to register the security group with HGS. Re-run the command if necessary for additional groups. Provide a friendly name for the group. It does not need to match the Active Directory security group name. 
-
-    ```powershell
-    Add-HgsAttestationHostGroup -Name "<GuardedHostGroup>" -Identifier "<SID>"
-    ```
-
-2.  To verify the group was added, run [Get-HgsAttestationHostGroup](https://technet.microsoft.com/library/mt652172.aspx). 
-
-This completes the process of configuring an HGS cluster for AD mode. The fabric administrator might need you to provide two URLs from HGS before the configuration can be completed for the hosts. To obtain these URLs, on an HGS server, run [Get-HgsServer](https://technet.microsoft.com/library/mt652162.aspx).
 

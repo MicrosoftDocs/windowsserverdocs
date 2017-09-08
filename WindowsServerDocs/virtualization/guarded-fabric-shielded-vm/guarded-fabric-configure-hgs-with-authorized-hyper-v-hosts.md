@@ -7,12 +7,16 @@ ms.assetid: 2379ca26-b32d-4055-8b4b-99d1f2df37e1
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 10/14/2016
+ms.date: 08/28/2017
 ---
 
 # Deploy guarded hosts
 
 >Applies To: Windows Server 2016
+
+>[!div class="step-by-step"]
+[« Deploy HGS](guarded-fabric-setting-up-the-host-guardian-service-hgs.md)
+[Deploy shielded virtual machines »](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
 
 The topics in this section describe the steps that a fabric administrator takes to configure Hyper-V hosts to work with the Host Guardian Service (HGS). Before you can start these steps, at least one node in the [HGS cluster must be set up](guarded-fabric-setting-up-the-host-guardian-service-hgs.md).
 

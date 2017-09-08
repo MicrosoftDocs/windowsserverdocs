@@ -7,14 +7,19 @@ ms.manager: dongill
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 12/21/2016
+ms.date: 07/18/2017
 ---
-
 # Understanding the cache in Storage Spaces Direct
+
 >Applies To: Windows Server 2016
 
-[Storage Spaces Direct](storage-spaces-direct-overview.md) features a built-in server-side cache to maximize storage performance. It is a large, persistent, real-time read *and* write cache. The cache is configured automatically when Storage Spaces Direct is enabled. In most cases, no manual management whatsoever is required. 
+[Storage Spaces Direct](storage-spaces-direct-overview.md) features a built-in server-side cache to maximize storage performance. It is a large, persistent, real-time read *and* write cache. The cache is configured automatically when Storage Spaces Direct is enabled. In most cases, no manual management whatsoever is required.
 How the cache works depends on the types of drives present.
+
+The following video goes into details on how caching works for Storage Spaces Direct, as well as other design considerations.
+
+<strong>Storage Spaces Direct design considerations</strong><br>(20 minutes)<br>
+<iframe src="https://channel9.msdn.com/Blogs/windowsserver/Design-Considerations-for-Storage-Spaces-Direct/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe>
 
 ## Drive types and deployment options
 
@@ -155,9 +160,9 @@ You can then replace the cache drive just like any other drive replacement.
 
 ## Relationship to other caches
 
-There are several other unrelated caches in the Windows software-defined storage stack. Examples include the Storage Spaces write-back cache, the ReFS read cache, and the Cluster Shared Volume (CSV) in-memory read cache.
+There are several other unrelated caches in the Windows software-defined storage stack. Examples include the Storage Spaces write-back cache and the Cluster Shared Volume (CSV) in-memory read cache.
 
-With Storage Spaces Direct, the Storage Spaces write-back cache and the ReFS read cache should not be modified from their default behavior. For example, parameters such as **-WriteCacheSize** on the **New-Volume** cmdlet should not be used.
+With Storage Spaces Direct, the Storage Spaces write-back cache should not be modified from its default behavior. For example, parameters such as **-WriteCacheSize** on the **New-Volume** cmdlet should not be used.
 
 You may choose to use the CSV cache, or not – it's up to you. It is off by default in Storage Spaces Direct, but it does not conflict with the new cache described in this topic in any way. In certain scenarios it can provide valuable performance gains. For more information, see [How to Enable CSV Cache](https://blogs.msdn.microsoft.com/clustering/2013/07/19/how-to-enable-csv-cache/).
 

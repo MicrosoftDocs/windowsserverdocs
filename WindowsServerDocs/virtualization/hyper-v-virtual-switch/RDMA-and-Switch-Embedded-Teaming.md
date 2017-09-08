@@ -82,7 +82,7 @@ If SET is not required for your deployment, you can use the following Windows Po
 Add host vNICs and make them RDMA capable:
 
     Add-VMNetworkAdapter -SwitchName RDMAswitch -Name SMB_1
-    Enable-NetAdapterRDMA "vEthernet (SMB_1)"
+    Enable-NetAdapterRDMA "vEthernet (SMB_1)" "SLOT 2"
 
 Verify RDMA capabilities:
 
@@ -92,23 +92,26 @@ Verify RDMA capabilities:
 
 To make use of RDMA capabilies on Hyper-V host virtual network adapters \(vNICs\) on a Hyper-V Virtual Switch that supports RDMA teaming, you can use these example Windows PowerShell commands.
 
-
     New-VMSwitch -Name SETswitch -NetAdapterName "SLOT 2","SLOT 3" -EnableEmbeddedTeaming $true
 
-Add host vNICs and make them RDMA capable:
+Add host vNICs:
 
     Add-VMNetworkAdapter -SwitchName SETswitch -Name SMB_1 -managementOS
     Add-VMNetworkAdapter -SwitchName SETswitch -Name SMB_2 -managementOS
-    Enable-NetAdapterRDMA "vEthernet (SMB_1)","vEthernet (SMB_2)"
+
+Many switches won't pass traffic class information on untagged VLAN traffic, so make sure that the host adapters for RDMA are on VLANs. This example assigns the two SMB_* host virtual adapters to VLAN 42.
+    
+    Set-VMNetworkAdapterIsolation -ManagementOS -VMNetworkAdapterName SMB_1  -IsolationMode VLAN -DefaultIsolationID 42
+    Set-VMNetworkAdapterIsolation -ManagementOS -VMNetworkAdapterName SMB_2  -IsolationMode VLAN -DefaultIsolationID 42
+    
+
+Enable RDMA on Host vNICs:
+
+    Enable-NetAdapterRDMA "vEthernet (SMB_1)","vEthernet (SMB_2)" "SLOT 2", "SLOT 3"
 
 Verify RDMA capabilities; ensure that the capabilities are non-zero:
 
     Get-NetAdapterRdma | fl *
-
-Many switches won't pass traffic class information on untagged VLAN traffic, so make sure host adapters for RDMA are on VLANs. This example assigns the two SMB_* host virtual adapters to VLAN 42.
-
-    Set-VMNetworkAdapterIsolation -ManagementOS -VMNetworkAdapterName SMB_1  -IsolationMode VLAN -DefaultIsolationID 42
-    Set-VMNetworkAdapterIsolation -ManagementOS -VMNetworkAdapterName SMB_2  -IsolationMode VLAN -DefaultIsolationID 42
 
 
 ## <a name="bkmk_sswitchembedded"></a>Switch Embedded Teaming (SET)  

@@ -10,17 +10,20 @@ ms.topic: article
 ms.assetid: 7b4267f0-1c91-4a40-9262-5daf4659f686
 author: jaimeo
 ms.author: jaimeo
+ms.date: 09/06/2017
 ---
 # Developing PowerShell Cmdlets for Nano Server
 
 >Applies To: Windows Server 2016
 
+> [!IMPORTANT]
+> Starting in Windows Server, version 1709, Nano Server will be available only as a [container base OS image](/virtualization/windowscontainers/quick-start/using-insider-container-images#install-base-container-image). Check out [Changes to Nano Server](nano-in-semi-annual-channel.md) to learn what this means. 
   
 ## Overview  
 Nano Server includes PowerShell Core by default in all Nano Server installations. PowerShell Core is a reduced-footprint edition of PowerShell that is built on .NET Core and runs on reduced-footprint editions of Windows, such as Nano Server and Windows IoT Core. PowerShell Core functions in the same way as other editions of PowerShell, such as Windows PowerShell running on Windows Server 2016. However, the reduced footprint of Nano Server means that not all PowerShell features from Windows Server 2016 are available in PowerShell Core on Nano Server.  
   
 If you have existing PowerShell cmdlets that you'd like to run on Nano Server, or are developing new ones for that purpose, this topic includes tips and suggestions that should help make that easier.  
-  
+
 ## PowerShell editions  
   
   

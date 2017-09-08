@@ -8,10 +8,16 @@ manager: dongill
 author: justinha
 ms.author: justinha
 ms.technology: security-guarded-fabric
-ms.date: 02/02/2017
+ms.date: 08/28/2017
 ---
 
 # Quick start for guarded fabric deployment
+
+>Applies To: Windows Server 2016
+
+>[!div class="step-by-step"]
+[« Deploy a guarded fabric](guarded-fabric-deploying-hgs-overview.md)
+[HGS Prerequisites »](guarded-fabric-prepare-for-hgs.md)
 
 This topic explains what a guarded fabric is, its requirements, and a summary of the deployment process. 
 For detailed deployment steps, see [Deploying the Host Guardian Service for guarded hosts and shielded VMs](https://technet.microsoft.com/windows-server-docs/security/guarded-fabric-shielded-vm/guarded-fabric-deploying-hgs-overview).
@@ -92,7 +98,16 @@ In our example, let’s say Contoso initially deploys in AD mode in order to imm
 The process to extract identities from Hyper-V hosts depends on the attestation mode being used.
 
 For AD mode, the ID of the host is its domain-joined computer account, which must be a member of a designated security group in the fabric domain.
-Membership in the designated group is the only determination of whether the host is healthy or not. Stated another way, none of the following rigorous validation steps used for TPM mode are used for AD mode.
+Membership in the designated group is the only determination of whether the host is healthy or not. 
+
+In this mode, the fabric admin is solely responsible for ensuring the health of the Hyper-V hosts. 
+Since HGS plays no part in deciding what is or is not allowed to run, malware and debuggers will function as designed. 
+
+However, debuggers that attempt to attach directly to a process (such as WinDbg.exe) are blocked for shielded VMs because the VM’s worker process (VMWP.exe) is a protected process light (PPL).
+Alternative debugging techniques, such as those used by LiveKd.exe, are not blocked. 
+Unlike shielded VMs, the worker process for encryption supported VMs does not run as a PPL so traditional debuggers like WinDbg.exe will continue to function normally.
+
+Stated another way, the rigorous validation steps used for TPM mode are not used for AD mode in any way.
 
 For TPM mode, three things are required: 
 

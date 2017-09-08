@@ -5,7 +5,7 @@ description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 05/31/2017
+ms.date: 08/10/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 
@@ -156,6 +156,8 @@ If you are using SQL Server for your AD FS configuration database, size the SQL 
 **Multi Forest Requirements**  
   
 -   The domain to which the AD FS servers are joined must trust every domain or forest that contains users authenticating to the AD FS service.  
+
+-   The forest, that the AD FS service account is a member of, must trust all user login forests. 
   
 -   The AD FS service account must have permissions to read user attributes in every domain that contains users authenticating to the AD FS service.  
   

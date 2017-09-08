@@ -240,8 +240,8 @@ If you are simply importing settings that were accidentally deleted to an existi
 If you are recovering from a complete loss of HGS, you will need to install and initialize at least one HGS node following the [guidance in the deployment guide](guarded-fabric-setting-up-the-host-guardian-service-hgs.md).
 
 Specifically, you will need to:
-1. [Set up the HGS domain](guarded-fabric-configure-the-first-hgs-node.md) or join HGS to an existing domain
-2. [Initialize the HGS server](guarded-fabric-configure-the-first-hgs-node.md) using your existing keys *or* a set of temporary keys. You can [remove the temporary keys](#renewing-or-replacing-keys) after importing your actual keys from the HGS backup files.
+1. [Set up the HGS domain](guarded-fabric-choose-where-to-install-hgs.md) or join HGS to an existing domain
+2. [Initialize the HGS server](guarded-fabric-initialize-hgs.md) using your existing keys *or* a set of temporary keys. You can [remove the temporary keys](#renewing-or-replacing-keys) after importing your actual keys from the HGS backup files.
 3. [Import HGS settings](#import-settings-from-a-backup) from your backup to restore the trusted host groups, code integrity policies, TPM baselines, and TPM identifiers
 
 > [!TIP]
@@ -363,7 +363,7 @@ To check the attestation mode for your guarded fabric, run `Get-HgsServer` on an
 #### Software configuration
 On the new Hyper-V host, ensure that Windows Server 2016 Datacenter edition is installed.
 Windows Server 2016 Standard cannot run shielded VMs in a guarded fabric.
-The host may be installed with Desktop experience or Server Core.
+The host may be installed Desktop Experience or Server Core.
 
 On server with desktop experience and Server Core, you need to install the Hyper-V and Host Guardian Hyper-V Support server roles:
 

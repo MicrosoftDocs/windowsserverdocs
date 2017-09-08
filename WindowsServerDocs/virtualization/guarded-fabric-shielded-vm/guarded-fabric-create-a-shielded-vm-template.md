@@ -12,6 +12,12 @@ ms.date: 10/14/2016
 
 # Shielded VMs - Hosting service provider creates a shielded VM template
 
+>Applies To: Windows Server 2016
+
+>[!div class="step-by-step"]
+[« Deploy shielded VMs](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
+[Create a shielding data file »](guarded-fabric-tenant-creates-shielding-data.md)
+
 As with regular VMs, you can create a VM template (for example, a [VM template in Virtual Machine Manager (VMM)](https://technet.microsoft.com/system-center-docs/vmm/manage/manage-library-add-vm-templates)) to make it easy for tenants and administrators to deploy new VMs on the fabric using a template disk. Because shielded VMs are security-sensitive assets, there are additional steps to create a VM template that supports shielding. This topic covers the steps to create a shielded template disk and a VM template in VMM.
 
 To understand how this topic fits in the overall process of deploying shielded VMs, see [Hosting service provider configuration steps for guarded hosts and shielded VMs](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md).
@@ -31,6 +37,13 @@ First prepare an OS disk that you will then run through the Shielded Template Di
 
 > [!NOTE]
 > If you use VMM, do not copy the template disk into the VMM library at this stage. 
+
+### Required packages to create a Nano Server template disk
+
+If you are planning to run Nano Server as your guest OS in shielded VMs, you must ensure your Nano Server image includes the following packages:
+
+- Microsoft-NanoServer-Guest-Package
+- Microsoft-NanoServer-SecureStartup-Package
 
 ## Run Windows Update on the template operating system
 
