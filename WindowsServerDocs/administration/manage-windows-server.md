@@ -61,7 +61,7 @@ User Access Logging aggregates unique client device and user request events that
 ## Tune your Windows Server environment for performance
 Use the following information to help tune your environment for performance.
 
-### [Performance tuning guidelines](/performance-tuning/index.md)
+### [Performance tuning guidelines](performance-tuning/index.md)
 Review a set of guidelines that you can use to tune the server settings in Windows Server 2016 and obtain incremental performance or energy efficiency gains, especially when the nature of the workload varies little over time.
 
 ### [Microsoft Server Performance Advisor](server-performance-advisor/microsoft-server-performance-advisor.md)
