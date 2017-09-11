@@ -12,10 +12,9 @@ ms.author: coreyp
 manager: lizapo
 ms.date: 02/20/2017
 ---
-
->Applies To: Windows 10 1607, Windows Server 2016
-
 #Express update delivery ISV support
+
+>Applies To: Windows 10, Windows Server 2016
 
 Windows 10 Update downloads can be large because every package contains all previously released fixes to ensure consistency and simplicity.  
 

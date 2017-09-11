@@ -9,13 +9,12 @@ ms.tgt_pltfrm: na
 ms.topic: get-started article
 author: sakitong
 ms.author: coreyp
-manager: lizapo
-ms.date: 03/14/2017
+manager: elizapo
+ms.date: 09/11/2017
 ---
-
->Applies To: Windows 10 1607, Windows Server 2016
-
 #Monthly Delta update ISV support without WSUS
+
+>Applies To: Windows Server 2016, Windows 10
 
 Windows 10 Update downloads can be large because every package contains all previously released fixes to ensure consistency and simplicity.  
 
@@ -32,7 +31,7 @@ There are two variants of the monthly security update: Delta and Cumulative.
 Monthly Delta update is new, and an interim solution for ISVs who do not have WSUS available to help reduce update package sizes.
 
 >[!IMPORTANT]
->**Delta update will only be available for servicing of Windows 10 1607 (Anniversary Update) and 1703 (Creators Update) releases**. For releases after 1703, you will need to implement a deployment infrastructure that supports [Express update delivery](express-update-delivery-ISV-support.md) to continue taking advantage of incremental updates.
+>**Delta update will only be available for servicing of Windows 10, version 1607 (Anniversary Update), version 1703 (Creators Update), and version 1709 (Fall Creators Update).** For releases after version 1709, you will need to implement a deployment infrastructure that supports [Express update delivery](express-update-delivery-ISV-support.md) to continue taking advantage of incremental updates.
 
 By using Monthly Delta update, packages will only contain one month’s updates. Monthly Cumulative contains all the updates up to that update release, resulting in a large file that grows each month. Both Delta and Monthly updates are released on the second Tuesday of each month, also known as "Update Tuesday." The following table compares Delta and Cumulative updates:
 
