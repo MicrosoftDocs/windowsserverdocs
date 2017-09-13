@@ -31,7 +31,9 @@ DisabledByDefault change for the following cipher suites:
  - TLS_DHE_DSS_WITH_AES_256_CBC_SHA (RFC 5246) in Windows 10, version 1703
  - TLS_DHE_DSS_WITH_AES_128_CBC_SHA (RFC 5246) in Windows 10, version 1703
  - TLS_DHE_DSS_WITH_3DES_EDE_CBC_SHA (RFC 5246) in Windows 10, version 1703
-
+ - TLS_RSA_WITH_RC4_128_SHA in Windows 10, version 1709
+ - TLS_RSA_WITH_RC4_128_MD5 in Windows 10, version 1709
+ 
 Starting with Windows 10, version 1507 and Windows Server 2016, SHA 512 certificates are supported by default.
 
 ### RSA key changes
