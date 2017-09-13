@@ -385,11 +385,13 @@
 #### [Enabling OpenId Connect with AD FS 2016](ad-fs/development/Enabling-OpenId-Connect-with-AD-FS-2016.md)
 #### [Enabling Oauth Confidential Clients with AD FS 2016](ad-fs/development/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016.md)
 #### [Single Page Application with AD FS](ad-fs/development/Single-Page-Application-with-AD-FS.md)
+
 ### [AD FS Operations](ad-fs/AD-FS-2016-Operations.md)
 #### [AD FS Access Control Policies](ad-fs/operations/AD-FS-Client-Access-Policies.md)
 ##### [Access Control Policies in AD FS for Windows Server 2016](ad-fs/operations/Access-Control-Policies-in-AD-FS.md)
 ##### [Access Control Policies in AD FS for Windows Server 2012 R2](ad-fs/operations/Access-Control-Policies-W2K12.md)
 ##### [Access Control Policies in AD FS 2.0](ad-fs/operations/Access-Control-Policies-in-AD-FS-2.md)
+#### [AD FS Prompt login parameter support](ad-fs/operations/AD-FS-Prompt-Login.md)
 #### [AD FS 2016 Single Sign On Settings](ad-fs/operations/AD-FS-2016-Single-Sign-On-Settings.md)
 #### [AD FS Rapid Restore Tool](ad-fs/operations/AD-FS-Rapid-Restore-Tool.md)
 #### [AD FS support for alternate hostname binding for certificate authentication](ad-fs/operations/AD-FS-support-for-alternate-hostname-binding-for-certificate-authentication.md)
@@ -421,6 +423,7 @@
 #### [Walkthrough: Workplace Join with a Windows Device](ad-fs/operations/Walkthrough--Workplace-Join-with-a-Windows-Device.md)
 #### [Walkthrough: Workplace Join with an iOS Device](ad-fs/operations/Walkthrough--Workplace-Join-with-an-iOS-Device.md)
 #### [Walkthrough: Workplace Join with an Android Device](ad-fs/operations/Walkthrough--Workplace-Join-to-an-Android-device.md)
+
 ### [AD FS Technical Reference](ad-fs/AD-FS-Technical-Reference.md)
 #### [AD FS and certificate KeySpec property information](ad-fs/technical-reference/AD-FS-and-KeySpec-Property.md)
 #### [Auditing Enhancements to AD FS in Windows Server 2016](ad-fs/technical-reference/Auditing-Enhancements-to-AD-FS-in-Windows-Server-2016.md)
