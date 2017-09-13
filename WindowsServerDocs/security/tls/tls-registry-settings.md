@@ -60,6 +60,27 @@ TLS/SSL ciphers should be controlled by configuring the cipher suite order. For 
 
 For information about default cipher suites order that are used by the Schannel SSP, see [Cipher Suites in TLS/SSL (Schannel SSP)](https://msdn.microsoft.com/library/windows/desktop/aa374757.aspx). 
 
+### SCHANNEL\Ciphers subkey
+The Ciphers registry key under the SCHANNEL key is used to control the use of symmetric algorithms such as DES and RC4. The following are valid registry keys under the Ciphers key.
+
+SCHANNEL\Ciphers\RC4 128/128 subkey
+
+RC4 128/128
+
+
+This subkey refers to 128-bit RC4.
+
+
+To allow this cipher algorithm, change the DWORD value data of the Enabled value to 0xffffffff. Or, change the DWORD value data to 0x0. If you do not configure the Enabled value, the default is enabled. This registry key does not apply to an exportable server that does not have an SGC certificate. 
+
+Disabling this algorithm effectively disallows the following: 
+
+-   SSL_RSA_WITH_RC4_128_MD5
+-   SSL_RSA_WITH_RC4_128_SHA
+-   TLS_RSA_WITH_RC4_128_MD5
+-   TLS_RSA_WITH_RC4_128_SHA
+
+
 ## ClientCacheTime
 
 This entry controls the amount of time that the operating system takes in milliseconds to expire client-side cache entries. 
