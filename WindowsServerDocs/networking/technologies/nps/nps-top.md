@@ -184,4 +184,4 @@ NPS logging is also called RADIUS accounting. Configure NPS logging to your requ
 
 To configure NPS logging, you must configure which events you want logged and viewed with Event Viewer, and then determine which other information you want to log. In addition, you must decide whether you want to log user authentication and accounting information to text log files stored on the local computer or to a SQL Server database on either the local computer or a remote computer.
 
-For more information, see [Configure Network Policy Server Accounting](nps-accounting-configure).
+For more information, see [Configure Network Policy Server Accounting](nps-accounting-configure.md).
