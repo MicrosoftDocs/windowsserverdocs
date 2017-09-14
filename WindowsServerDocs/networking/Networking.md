@@ -168,7 +168,9 @@ For more information about VPN, see [Virtual Private Networking (VPN)](https://d
 
 ### [Windows Container Networking](https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/container-networking)
 
-Windows Container Networking discusses how Docker creates and manages networks on Windows and Windows Server. Windows containers networking is similar to virtual networking - like a virtual machine on a Hyper\-V host, each container has a virtual network adapter that is connected to a Hyper-V Virtual Switch.
+Windows Container Networking allows you to create and manage networks for connecting container endpoints on both Windows 10 and Windows Server hosts by using standard industry tools and workflows. Windows container networks support multiple topologies, including private, flat-L2, routed-L3. 
+
+Also supported are overlays that you can create locally on the host by using Docker, Kubernetes, or Windows PowerShell through plugins that communicate with the Windows Host Networking Service \(HNS\). You can create and manage multi\-node cluster networks through higher level orchestration systems by communicating through a local agent to each node’s HNS.
 
 ### [Windows Internet Name Service (WINS)](technologies/wins/wins-top.md)
 
