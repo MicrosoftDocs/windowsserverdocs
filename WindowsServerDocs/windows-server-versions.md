@@ -8,7 +8,7 @@ ms.suite: na
 ms.technology: server-general
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.date: 08/28/2017
+ms.date: 09/14/2017
 ms.assetid: 0c3dc323-8beb-4d7d-a2e0-12bda848ddcb
 author: lizap
 ms.author: elizapo
@@ -57,3 +57,8 @@ Use the links below to view technical content for IT professionals for the diffe
 
 ## Related links
 [Windows Server 2016 product information](https://www.microsoft.com/cloud-platform/windows-server) 
+
+<br>
+
+> [!TIP]
+> Are you having a problem? Start with [Microsoft Support](https://support.microsoft.com) - just type your problem into the search bar. You can get help with Windows, Office, Skype, you name it. 
