@@ -166,6 +166,10 @@ For more information, see [Remote Access Always On VPN Deployment Guide for Wind
 
 For more information about VPN, see [Virtual Private Networking (VPN)](https://docs.microsoft.com/windows-server/remote/remote-access/vpn/vpn-top).
 
+### [Windows Container Networking](https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/container-networking)
+
+Windows Container Networking discusses how Docker creates and manages networks on Windows and Windows Server. Windows containers networking is similar to virtual networking - like a virtual machine on a Hyper\-V host, each container has a virtual network adapter that is connected to a Hyper-V Virtual Switch.
+
 ### [Windows Internet Name Service (WINS)](technologies/wins/wins-top.md)
 
 Windows Internet Name Service (WINS) is a legacy computer name registration and resolution service that maps computer NetBIOS names to IP addresses. Using DNS is recommended over using WINS.

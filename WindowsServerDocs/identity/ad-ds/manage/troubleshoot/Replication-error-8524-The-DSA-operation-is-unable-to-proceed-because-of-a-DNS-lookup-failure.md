@@ -317,7 +317,7 @@ The error message text in DS RPC Client event 2087 documents a user action for r
 On the source DC, verify that DNS Client settings point *exclusively*  to operational DNS Severs that either host, forward or delegate the:
 - _msdcs.<forest root domain> zone (i.e. All DCs in the contoso.com forest register CNAME records in the _msdcs.contoso.com zone), AND
 - The DNS zone for the Active Directory domain (i.e. a computer in the contoso.com domain would register host records in in contoso.com zone), AND
-- The computers primary DNS suffix domain if different from the Active Directory domain name (see [Disjoint Namespace](</linkText><linkUri>)http://technet.microsoft.com/library/cc731125(WS.10).aspx).
+- The computers primary DNS suffix domain if different from the Active Directory domain name (see [Disjoint Namespace](http://technet.microsoft.com/library/cc731125.aspx)).
 
 Options to validate that a DNS Server hosts, forwards or delegates (i.e. "can resolve") such zones include:
       - Start the DNS management tool for your DNS and verify that the DNS Servers that the source DC points to for name resolution host the zones in question.
