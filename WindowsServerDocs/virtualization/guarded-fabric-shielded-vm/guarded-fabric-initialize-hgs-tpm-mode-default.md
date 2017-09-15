@@ -9,11 +9,13 @@ ms.technology: security-guarded-fabric
 ms.date: 07/05/2017
 ---
 
+# Initialize the HGS cluster using TPM mode in a new dedicated forest (default)
+
+>Applies To: Windows Server 2016
+
 >[!div class="step-by-step"]
 [« Install HGS in a new forest](guarded-fabric-install-hgs-default.md)
 [Install trusted TPM root certificates »](guarded-fabric-install-trusted-tpm-root-certificates.md)
-
-# Initialize the HGS cluster using TPM mode in a new dedicated forest (default)
 
 1.  [!INCLUDE [Initialize HGS](../../../includes/guarded-fabric-initialize-hgs-default-step-one.md)]
 

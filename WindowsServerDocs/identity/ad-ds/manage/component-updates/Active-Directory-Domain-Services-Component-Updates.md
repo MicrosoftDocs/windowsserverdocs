@@ -1,11 +1,11 @@
 ---
 ms.assetid: a3a91034-a4da-4ad7-93f8-0cd2ec3e7824
 title: Active Directory Domain Services Component Updates
-description:
+description:This document discusses the AD DS component updates for Windows Server 2012 R2
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 05/31/2017
+ms.date: 09/08/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 
@@ -14,7 +14,7 @@ ms.technology: identity-adds
 
 # Active Directory Domain Services Component Updates
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2
 
 This module introduces the components that received minor updates in the Directory Services and Identity spaces.  
   

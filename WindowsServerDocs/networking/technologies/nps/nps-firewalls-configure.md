@@ -18,14 +18,14 @@ Firewalls can be configured to allow or block types of IP traffic to and from th
 
 You might need to configure two types of firewalls to allow RADIUS traffic:
 
-- Windows Firewall with Advanced Security on the local server running Network Policy Server (NPS).
+- Windows Defender Firewall with Advanced Security on the local server running Network Policy Server (NPS).
 - Firewalls running on other computers or hardware devices.
 
 ## Windows Firewall on the local NPS server
 
-By default, NPS sends and receives RADIUS traffic by using User Datagram Protocol \(UDP\) ports 1812, 1813, 1645, and 1646. Windows Firewall on the NPS server is automatically configured with exceptions, during the installation of NPS, to allow this RADIUS traffic to be sent and received.
+By default, NPS sends and receives RADIUS traffic by using User Datagram Protocol \(UDP\) ports 1812, 1813, 1645, and 1646. Windows Defender Firewall on the NPS server is automatically configured with exceptions, during the installation of NPS, to allow this RADIUS traffic to be sent and received.
 
-Therefore, if you are using the default UDP ports, you do not need to change the Windows Firewall configuration to allow RADIUS traffic to and from NPS servers.
+Therefore, if you are using the default UDP ports, you do not need to change the Windows Defender Firewall configuration to allow RADIUS traffic to and from NPS servers.
 
 In some cases, you might want to change the ports that NPS uses for RADIUS traffic. If you configure NPS and your network access servers to send and receive RADIUS traffic on ports other than the defaults, you must do the following:
 

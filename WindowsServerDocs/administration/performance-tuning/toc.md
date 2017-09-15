@@ -35,7 +35,7 @@
 ## Server Subsystem Tuning
 ### [Cache and memory tuning](subsystem/cache-memory-management/index.md)
 #### [Troubleshoot cache and memory manager performance](subsystem/cache-memory-management/troubleshoot.md)
-#### [Cache and memory manager improvements](subsystem/cache-memory-management/improvements-in-2016.md)
+#### [Cache and memory manager improvements](subsystem/cache-memory-management/improvements-in-windows-server.md)
 ### [Network subsystem tuning](../../networking/technologies/network-subsystem/net-sub-performance-top.md)
 #### [Choose a network adapter](../../networking/technologies/network-subsystem/net-sub-choose-nic.md)
 #### [Configure the order of network interfaces](../../networking/technologies/network-subsystem/net-sub-interface-metric.md)

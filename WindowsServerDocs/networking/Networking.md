@@ -166,6 +166,12 @@ For more information, see [Remote Access Always On VPN Deployment Guide for Wind
 
 For more information about VPN, see [Virtual Private Networking (VPN)](https://docs.microsoft.com/windows-server/remote/remote-access/vpn/vpn-top).
 
+### [Windows Container Networking](https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/container-networking)
+
+Windows Container Networking allows you to create and manage networks for connecting container endpoints on both Windows 10 and Windows Server hosts by using standard industry tools and workflows. Windows container networks support multiple topologies, including private, flat-L2, routed-L3. 
+
+Also supported are overlays that you can create locally on the host by using Docker, Kubernetes, or Windows PowerShell through plugins that communicate with the Windows Host Networking Service \(HNS\). You can create and manage multi\-node cluster networks through higher level orchestration systems by communicating through a local agent to each node’s HNS.
+
 ### [Windows Internet Name Service (WINS)](technologies/wins/wins-top.md)
 
 Windows Internet Name Service (WINS) is a legacy computer name registration and resolution service that maps computer NetBIOS names to IP addresses. Using DNS is recommended over using WINS.

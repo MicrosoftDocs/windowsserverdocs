@@ -43,7 +43,7 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
 6. On the **Configure Certificate** page, if you have an optional token encryption certificate, click **Browse** to locate a certificate file, and then click **Next**.  
 ![relying party](media/Create-a-Relying-Party-Trust/addtrust5.PNG) 
 
-7.  On the **Configure URL** page, do one or both of the following, click **Next**, and then go to step 10:  
+7.  On the **Configure URL** page, do one or both of the following, click **Next**, and then go to step 8:  
   
     -   Select the **Enable support for the WS\-Federation Passive protocol** check box. Under **Relying party WS\-Federation Passive protocol URL**, type the URL for this relying party trust, and then click **Next**.  
   
@@ -56,9 +56,9 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
 9.  On the **Choose Access Control Policy** select a policy and click **Next**.  For more information about Access Control Policies, see [Access Control Policies in AD FS](Access-Control-Policies-in-AD-FS.md). 
 ![relying party](media/Create-a-Relying-Party-Trust/addtrust9.PNG)
 
-14. On the **Ready to Add Trust** page, review the settings, and then click **Next** to save your relying party trust information.  
+10. On the **Ready to Add Trust** page, review the settings, and then click **Next** to save your relying party trust information.  
    ![relying party](media/Create-a-Relying-Party-Trust/addtrust10.PNG) 
-15. On the **Finish** page, click **Close**. This action automatically displays the **Edit Claim Rules** dialog box.  
+11. On the **Finish** page, click **Close**. This action automatically displays the **Edit Claim Rules** dialog box.  
 ![relying party](media/Create-a-Relying-Party-Trust/addtrust11.PNG) 
 
 ## To create a claims aware Relying Party Trust using federation metadata

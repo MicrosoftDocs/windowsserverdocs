@@ -50,7 +50,7 @@ For additional information on new features in Windows Server 2016, see [What's n
 
 
 ## Supported in-place upgrade paths
-Domain controllers that run 64-bit versions of Windows Server 2012 or Windows Server 2012 R2 can be upgraded to Windows Server 2012. Only 64-bit version upgrades are supported because Windows Server 2016 only comes in a 64-bit version.
+Domain controllers that run 64-bit versions of Windows Server 2012 or Windows Server 2012 R2 can be upgraded to Windows Server 2016. Only 64-bit version upgrades are supported because Windows Server 2016 only comes in a 64-bit version.
 
 |If you are running this edition:|You can upgrade to these editions:|
 | ----- | ----- |	
@@ -112,7 +112,7 @@ AD DS cannot be installed on a server that also runs the following server roles 
 - Remote Desktop Connection Broker 
 
 ## Administration of Windows Server 2016 servers
-Use the Remote Server Administration Tools for Windows 10 to manage domain controllers and other servers that run Windows Server 2016. You can run the Windows Server 20126 Remote Server Administration Tools on a computer that runs Windows 10. 
+Use the Remote Server Administration Tools for Windows 10 to manage domain controllers and other servers that run Windows Server 2016. You can run the Windows Server 2016 Remote Server Administration Tools on a computer that runs Windows 10. 
 
 ## Step-by-Step for Upgrading to Windows Server 2016
 The following is a simple example of upgrading the Contoso forest from Windows Server 2012 R2 to Windows Server 2016.

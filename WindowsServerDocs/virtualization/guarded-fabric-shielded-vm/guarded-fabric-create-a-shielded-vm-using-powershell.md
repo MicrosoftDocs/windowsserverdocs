@@ -6,13 +6,16 @@ ms.topic: article
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 07/05/2017
+ms.date: 08/28/2017
 ---
+
+# Create a shielded VM using PowerShell
+
+>Applies To: Windows Server 2016
 
 >[!div class="step-by-step"]
 [« Create a shielding data file](guarded-fabric-tenant-creates-shielding-data.md)
 [Deploy a shielded using VMM »](guarded-fabric-tenant-deploys-shielded-vm-using-vmm.md)
-# Create a shielded VM using PowerShell
 
 In production, you would typically use a fabric manager (e.g. VMM) to deploy shielded VMs. 
 However, the steps illustrated below allow you to deploy and validate the entire scenario without a fabric manager.

@@ -43,16 +43,6 @@ For example, here's how to get from a virtual disk up to its volume:
 Get-VirtualDisk <FriendlyName> | Get-Disk | Get-Partition | Get-Volume 
 ```
 
-## Suspend IO
-
-Before you begin, we recommend temporarily suspending all IO to the volume.
-
-Stop your workloads and then run:
-
-```PowerShell
-Get-ClusterSharedVolume <Name> | Suspend-ClusterResource
-```
-
 ## Step 1 – Resize the virtual disk
 
 The virtual disk may use storage tiers, or not, depending on how it was created.
@@ -127,14 +117,6 @@ That's it!
 
 > [!TIP]
 > You can verify the volume has the new size by running **Get-Volume**.
-
-## Resume IO
-
-Last, don't forget to allow IO to the volume to resume, and then resume your workloads.
-
-```PowerShell
-Get-ClusterSharedVolume <Name> | Resume-ClusterResource
-```
 
 ## See also
 
