@@ -279,7 +279,6 @@
 ### [AD FS Deployment](ad-fs/AD-FS-Deployment.md)
 
 #### [AD FS Deployment Guide](ad-fs/deployment/AD-FS-Deployment-Guide.md)
-
 #### [Best Practices for Securing AD FS](ad-fs/deployment/Best-Practices-Securing-AD-FS.md)
 #### [Plan Device-based Conditional Access on-Premises](ad-fs/deployment/Plan-Device-based-Conditional-Access-on-Premises.md)
 #### [Required updates for AD FS and WAP](ad-fs/deployment/Updates-for-Active-Directory-Federation-Services-AD-FS.md)
@@ -397,6 +396,7 @@
 #### [AD FS support for alternate hostname binding for certificate authentication](ad-fs/operations/AD-FS-support-for-alternate-hostname-binding-for-certificate-authentication.md)
 #### [AD FS user sign-in customization](ad-fs/operations/AD-FS-user-sign-in-customization.md)
 #### [Add an attribute Store](ad-fs/operations/add-an-attribute-Store.md)
+#### [Compound authentication and AD DS claims in AD FS](ad-fs/operations/AD-FS-Compound-Authentication-and-AD-DS-claims.md)
 #### [Configure AD FS 2016 and Azure MFA](ad-fs/operations/Configure-AD-FS-2016-and-Azure-MFA.md)
 #### [Configure AD FS Extranet Lockout Protection](ad-fs/operations/Configure-AD-FS-Extranet-Lockout-Protection.md)
 #### [Configure AD FS to authenticate users stored in LDAP directories](ad-fs/operations/Configure-AD-FS-to-authenticate-users-stored-in-LDAP-directories.md)

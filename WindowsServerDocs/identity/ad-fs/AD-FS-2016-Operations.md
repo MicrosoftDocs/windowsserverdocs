@@ -26,6 +26,7 @@ This document contains a list of all of the documentation operations for AD FS f
 - [AD FS support for alternate hostname binding for certificate authentication](../ad-fs/operations/AD-FS-support-for-alternate-hostname-binding-for-certificate-authentication.md)
 - [AD FS user sign-in customization](../ad-fs/operations/AD-FS-user-sign-in-customization.md)
 - [Add an Attribute Store](../ad-fs/operations/Add-an-Attribute-Store.md)
+- [Compound authentication and AD DS claims in AD FS](../ad-fs/operations/AD-FS-Compound-Authentication-and-AD-DS-claims.md)
 - [Configure AD FS 2016 and Azure MFA](../ad-fs/operations/Configure-AD-FS-2016-and-Azure-MFA.md)
 - [Configure AD FS Extranet Lockout Protection](../ad-fs/operations/Configure-AD-FS-Extranet-Lockout-Protection.md)
 - [Configure AD FS for User Certificate Authentication](../ad-fs/operations/Configure-User-Certificate-Authentication.md)
