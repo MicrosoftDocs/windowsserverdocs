@@ -5,7 +5,7 @@ description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 05/31/2017
+ms.date: 09/15/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 
@@ -99,7 +99,13 @@ Configure your AD FS claims provider trusts to enable alternate login ID
 
 ## Additional Details & Considerations
 
+-   The Alternate login ID feature is only available for federated environments with AD FS deployed.  It is not supported in the following scenarios"
+	-   Non-routable domains (e.g. Contoso.local) that cannot be verified by Azure AD
+	-   Managed environments that do not have AD FS deployed.
+
+
 -   When enabled, the alternate login ID feature is only available for username/password authentication across all the user name/password authentication protocols supported by AD FS (SAML-P, WS-Fed, WS-Trust, and OAuth).
+
 
 -   When Windows Integrated Authentication (WIA) is performed (for example, when users try to access a corporate application on a domain-joined machine from intranet and AD FS administrator has configured the authentication policy to use WIA for intranet), UPN will be used for authentication. If you have configured any claim rules for the relying parties for alternate login ID feature, you should make sure those rules are still valid in the WIA case.
 
