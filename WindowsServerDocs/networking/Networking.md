@@ -168,7 +168,7 @@ For more information about VPN, see [Virtual Private Networking (VPN)](https://d
 
 ### [Windows Container Networking](https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/container-networking)
 
-Windows Container Networking allows you to create and manage networks for connecting container endpoints on both Windows 10 and Windows Server hosts by using standard industry tools and workflows. Windows container networks support multiple topologies, including private, flat-L2, routed-L3. 
+Windows Container Networking allows you to create and manage networks for connecting container endpoints on both Windows 10 and Windows Server hosts by using standard industry tools and workflows. Windows container networks support multiple topologies, including private, flat-L2, and routed-L3.
 
 Also supported are overlays that you can create locally on the host by using Docker, Kubernetes, or Windows PowerShell through plugins that communicate with the Windows Host Networking Service \(HNS\). You can create and manage multi\-node cluster networks through higher level orchestration systems by communicating through a local agent to each node’s HNS.
 
@@ -176,10 +176,10 @@ Also supported are overlays that you can create locally on the host by using Doc
 
 Windows Internet Name Service (WINS) is a legacy computer name registration and resolution service that maps computer NetBIOS names to IP addresses. Using DNS is recommended over using WINS.
 
-## Additional Resources  
+## Additional Resources
 
-Networking resources for operating systems earlier than Windows Server 2016 are available at the following locations.  
+Networking resources for operating systems earlier than Windows Server 2016 are available at the following locations.
 
-- Windows Server 2012 and Windows Server 2012 R2 [Networking Overview](https://technet.microsoft.com/library/hh831357.aspx)  
-- Windows Server 2008 and Windows Server 2008 R2 [Networking](https://technet.microsoft.com/library/cc753940)  
-- Windows Server 2003 [Windows Server 2003/2003 R2 Retired Content ](https://www.microsoft.com/en-US/download/details.aspx?id=53314)  
+- Windows Server 2012 and Windows Server 2012 R2 [Networking Overview](https://technet.microsoft.com/library/hh831357.aspx)
+- Windows Server 2008 and Windows Server 2008 R2 [Networking](https://technet.microsoft.com/library/cc753940)
+- Windows Server 2003 [Windows Server 2003/2003 R2 Retired Content ](https://www.microsoft.com/en-US/download/details.aspx?id=53314)
