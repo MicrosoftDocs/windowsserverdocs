@@ -16,7 +16,7 @@ ms.technology: identity-adfs
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
  - [AD FS and certificate KeySpec property information](../ad-fs/technical-reference/AD-FS-and-KeySpec-Property.md)
-- [Auditing Enhancements to AD FS in Windows Server 2016](../ad-fs/technical-reference/auditing-enhancements-to-ad-fs-in-windows-server.md)
+- [Auditing Enhancements to AD FS in Windows Server](../ad-fs/technical-reference/auditing-enhancements-to-ad-fs-in-windows-server.md)
 -   [Understanding Key AD FS Concepts](../ad-fs/technical-reference/Understanding-Key-AD-FS-Concepts.md)
 -   [Device Registration Technical Reference](../ad-fs/technical-reference/Device-Registration-Technical-Reference.md)
 
