@@ -60,126 +60,12 @@ TLS/SSL ciphers should be controlled by configuring the cipher suite order. For 
 
 For information about default cipher suites order that are used by the Schannel SSP, see [Cipher Suites in TLS/SSL (Schannel SSP)](https://msdn.microsoft.com/library/windows/desktop/aa374757.aspx). 
 
-SCHANNEL\Ciphers subkey
+##CipherSuites
 
-The Ciphers registry key under the SCHANNEL key is used to control the use of symmetric algorithms such as DES and RC4. The following are valid registry keys under the Ciphers key.
+Configuring TLS/SSL cipher suites should be done using group policy, MDM or PowerShell, see [Configuring TLS Cipher Suite Order](manage-tls.md#configuring-tls-cipher-suite-order) for details.
 
-SCHANNEL\Ciphers\RC4 128/128 subkey
+For information about default cipher suites order that are used by the Schannel SSP, see [Cipher Suites in TLS/SSL (Schannel SSP)](https://msdn.microsoft.com/library/windows/desktop/aa374757.aspx). 
 
-RC4 128/128
-
-
-This subkey refers to 128-bit RC4.
-
-
-To allow this cipher algorithm, change the DWORD value data of the Enabled value to 0xffffffff. Or, change the DWORD value data to 0x0. If you do not configure the Enabled value, the default is enabled. This registry key does not apply to an exportable server that does not have an SGC certificate. 
-
-Disabling this algorithm effectively disallows the following: 
-
--   SSL_RSA_WITH_RC4_128_MD5
--   SSL_RSA_WITH_RC4_128_SHA
--   TLS_RSA_WITH_RC4_128_MD5
--   TLS_RSA_WITH_RC4_128_SHA
-
-SCHANNEL\Ciphers\Triple DES 168
-
-Triple DES 168
-
-This registry key refers to 168-bit Triple DES as specified in ANSI X9.52 and Draft FIPS 46-3. This registry key does not apply to the export version.
-
-To allow this cipher algorithm, change the DWORD value data of the Enabled value to 0xffffffff. Or, change the DWORD data to 0x0. If you do not configure the Enabled value, the default is enabled.
-
-Disabling this algorithm effectively disallows the following: 
-
--  SSL_RSA_WITH_3DES_EDE_CBC_SHA
--  SSL_DHE_DSS_WITH_3DES_EDE_CBC_SHA
--  TLS_RSA_WITH_3DES_EDE_CBC_SHA
--  TLS_DHE_DSS_WITH_3DES_EDE_CBC_SHA
-
-**Note** For the versions of Windows that released before Windows Vista, the key should be **Triple DES 168/168**.
-
-SCHANNEL\Ciphers\RC2 128/128 subkey
-
-RC2 128/128
-
-This registry key refers to 128-bit RC2. It does not apply to the export version.
-
-To allow this cipher algorithm, change the DWORD value data of the Enabled value to 0xffffffff. Otherwise, change the DWORD value data to 0x0. If you do not configure the Enabled value, the default is enabled.
-
-SCHANNEL\Ciphers\RC4 64/128 subkey
-
-RC4 64/128
-
-This registry key refers to 64-bit RC4. It does not apply to the export version (but is used in Microsoft Money).
-
-To allow this cipher algorithm, change the DWORD value data of the Enabled value to 0xffffffff. Otherwise, change the DWORD value data to 0x0. If you do not configure the Enabled value, the default is enabled.
-
-SCHANNEL\Ciphers\RC4 56/128 subkey
-
-RC4 56/128
-
-This registry key refers to 56-bit RC4.
-
-To allow this cipher algorithm, change the DWORD value data of the Enabled value to 0xffffffff. Otherwise, change the DWORD value data to 0x0. If you do not configure the Enabled value, the default is enabled.
-
-Disabling this algorithm effectively disallows the following: 
-
--   TLS_RSA_EXPORT1024_WITH_RC4_56_SHA
-
-SCHANNEL\Ciphers\RC2 56/128 subkey
-
-RC2 56/128
-
-This registry key refers to 56-bit RC2.
-
-To allow this cipher algorithm, change the DWORD value data of the Enabled value to 0xffffffff. Otherwise, change the DWORD value data to 0x0. If you do not configure the Enabled value, the default is enabled.
-
-SCHANNEL\Ciphers\RC2 56/56 subkey
-
-DES 56
-
-This registry key refers to 56-bit DES as specified in FIPS 46-2. Its implementation in the Rsabase.dll and Rsaenh.dll files is validated under the FIPS 140-1 Cryptographic Module Validation Program.
-
-To allow this cipher algorithm, change the DWORD value data of the Enabled value to 0xffffffff. Otherwise, change the DWORD value data to 0x0. If you do not configure the Enabled value, the default is enabled.
-
-Disabling this algorithm effectively disallows the following: 
-
--   SSL_RSA_WITH_DES_CBC_SHA
--   TLS_RSA_WITH_DES_CBC_SHA
-
-SCHANNEL\Ciphers\RC4 40/128 subkey
-
-RC4 40/128
-
-This refers to 40-bit RC4.
-
-To allow this cipher algorithm, change the DWORD value data of the Enabled value to 0xffffffff. Otherwise, change the DWORD value data to 0x0. If you do not configure the Enabled value, the default is enabled.
-
-Disabling this algorithm effectively disallows the following: 
-
--   SSL_RSA_EXPORT_WITH_RC4_40_MD5
--   TLS_RSA_EXPORT_WITH_RC4_40_MD5
-
-SCHANNEL\Ciphers\RC2 40/128 subkey
-
-RC2 40/128
-
-This registry key refers to 40-bit RC2.
-
-To allow this cipher algorithm, change the DWORD value data of the Enabled value to 0xffffffff. Otherwise, change the DWORD value data to 0x0. If you do not configure the Enabled value, the default is enabled.
-
-Disabling this algorithm effectively disallows the following: 
-
--   SSL_RSA_EXPORT_WITH_RC2_CBC_40_MD5
--   TLS_RSA_EXPORT_WITH_RC2_CBC_40_MD5
-
-SCHANNEL\Ciphers\NULL subkey
-
-NULL
-
-This registry key means no encryption. By default, it is turned off. 
-
-To turn off encryption (disallow all cipher algorithms), change the DWORD value data of the Enabled value to 0xffffffff. Otherwise, change the DWORD value data to 0x0.
 
 ## ClientCacheTime
 
