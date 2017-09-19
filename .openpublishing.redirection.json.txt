@@ -32,7 +32,7 @@
       "redirect_document_id": false
     },	
     {
-      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/Upgrading-to-AD-FS-in-Windows-Server-2016.md	",
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/Upgrading-to-AD-FS-in-Windows-Server-2016.md",
       "redirect_url": "/windows-server/identity/ad-fs/deployment/upgrading-to-ad-fs-in-windows-server.md",
       "redirect_document_id": false
     },	
@@ -83,11 +83,11 @@
     },
     {
       "source_path": "WindowsServerDocs/identity/ad-fs/overview/whats-new-active-directory-federation-services-windows-server-2016.md",
-      "redirect_url": "/windows-server/identity/ad-fs/whats-new-active-directory-federation-services-windows-server.md",
+      "redirect_url": "/windows-server/identity/ad-fs/overview/whats-new-active-directory-federation-services-windows-server.md",
       "redirect_document_id": false
     },
     {
-      "source_path": "WindowsServerDocs/identity/ad-fs/technical-reference/WinServer2016expiry.md",
+      "source_path": "WindowsServerDocs/identity/ad-fs/technical-reference/Auditing-Enhancements-to-AD-FS-in-Windows-Server-2016.md",
       "redirect_url": "/windows-server/identity/ad-fs/technical-reference/auditing-enhancements-to-ad-fs-in-windows-server.md",
       "redirect_document_id": false
     },
