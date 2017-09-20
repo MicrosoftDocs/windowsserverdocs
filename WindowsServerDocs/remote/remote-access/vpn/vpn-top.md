@@ -19,6 +19,7 @@ You can use this topic to learn about Windows Server 2016 and Windows 10 VPN fea
 >[!NOTE]
 >In addition to this topic, the following VPN documentation is available.
 >
+>- [Always On VPN and DirectAccess Features Comparison](vpn-map-da.md)
 >- [Remote Access Always On VPN Deployment Guide for Windows Server 2016 and Windows 10](always-on-vpn/deploy/always-on-vpn-deploy.md)
 >- Windows 10 [VPN technical guide](https://docs.microsoft.com/windows/access-protection/vpn/vpn-guide)
 
