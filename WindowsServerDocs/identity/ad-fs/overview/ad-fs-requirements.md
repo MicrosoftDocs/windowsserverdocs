@@ -18,21 +18,21 @@ ms.technology: identity-adfs
 
 The following are the requirements for deploying AD FS:  
   
--   [Certificate requirements](AD-FS-2016-Requirements.md#BKMK_1)  
+-   [Certificate requirements](ad-fs-requirements.md#BKMK_1)  
   
--   [Hardware requirements](AD-FS-2016-Requirements.md#BKMK_2)  
+-   [Hardware requirements](ad-fs-requirements.md#BKMK_2)  
   
--   [Proxy requirements](AD-FS-2016-Requirements.md#BKMK_3)  
+-   [Proxy requirements](ad-fs-requirements.md#BKMK_3)  
   
--   [AD DS requirements](AD-FS-2016-Requirements.md#BKMK_4)  
+-   [AD DS requirements](ad-fs-requirements.md#BKMK_4)  
   
--   [Configuration database requirements](AD-FS-2016-Requirements.md#BKMK_5)  
+-   [Configuration database requirements](ad-fs-requirements.md#BKMK_5)  
   
--   [Browser requirements](AD-FS-2016-Requirements.md#BKMK_6)  
+-   [Browser requirements](ad-fs-requirements.md#BKMK_6)  
 
--   [Network requirements](AD-FS-2016-Requirements.md#BKMK_7)  
+-   [Network requirements](ad-fs-requirements.md#BKMK_7)  
   
--   [Permissions requirements](AD-FS-2016-Requirements.md#BKMK_13)  
+-   [Permissions requirements](ad-fs-requirements.md#BKMK_13)  
   
 ## <a name="BKMK_1"></a>Certificate requirements  
   
