@@ -2,102 +2,192 @@
   "redirections": [
 
     {
-      "source_path":  "WindowsServerDocs/administration/performance-tuning/subsystem/cache-memory-management/improvements-in-2016.md",
+      "source_path": "WindowsServerDocs/identity/ad-ds/Windows-Server-2016-Functional-Levels.md",
+      "redirect_url": "/windows-server/identity/ad-ds/windows-server-functional-levels.md",
+      "redirect_document_id": false
+    },	
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2016.md",
+      "redirect_url": "/windows-server/identity/ad-ds/deploy/upgrade-domain-controllers.md",
+      "redirect_document_id": false
+    },	
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/get-started/windows-time-service/Windows-2016-Accurate-Time.md",
+      "redirect_url": "/windows-server/identity/ad-ds/get-started/windows-time-service/accurate-time.md",
+      "redirect_document_id": false
+    },	
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/AD-FS-2016-Operations.md",
+      "redirect_url": "/windows-server/identity/ad-fs/ad-fs-operations.md",
+      "redirect_document_id": false
+    },	
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/AD-FS-2016-Overview.md",
+      "redirect_url": "/windows-server/identity/ad-fs/ad-fs-overview.md",
+      "redirect_document_id": false
+    },	
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL.md",
+      "redirect_url": "/windows-server/identity/ad-fs/deployment/upgrading-to-ad-fs-in-windows-server-sql.md",
+      "redirect_document_id": false
+    },	
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/Upgrading-to-AD-FS-in-Windows-Server-2016.md",
+      "redirect_url": "/windows-server/identity/ad-fs/deployment/upgrading-to-ad-fs-in-windows-server.md",
+      "redirect_document_id": false
+    },	
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/development/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016.md",
+      "redirect_url": "/windows-server/identity/ad-fs/development/ad-fs-on-behalf-of-authentication-in-windows-server.md",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/development/Customize-Id-Token-AD-FS-2016.md",
+      "redirect_url": "/windows-server/identity/ad-fs/development/customize-id-token-ad-fs.md",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/development/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016.md",
+      "redirect_url": "/windows-server/identity/ad-fs/development/enabling-oauth-confidential-clients-with-ad-fs.md",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/development/Enabling-OpenId-Connect-with-AD-FS-2016.md",
+      "redirect_url": "/windows-server/identity/ad-fs/development/enabling-openId-connect-with-ad-fs.md",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/operations/AD-FS-2016-Single-Sign-On-Settings.md",
+      "redirect_url": "/windows-server/identity/ad-fs/operations/ad-fs-single-sign-on-settings.md",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/operations/AD-FS-Customization-in-Windows-Server-2016.md",
+      "redirect_url": "/windows-server/identity/ad-fs/operations/ad-fs-customization-in-windows-server.md",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/operations/Configure-AD-FS-2016-and-Azure-MFA.md",
+      "redirect_url": "/windows-server/identity/ad-fs/operations/configure-ad-fs-and-azure-mfa.md",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/operations/Manage-SSL-Certificates-AD-FS-WAP-2016.md",
+      "redirect_url": "/windows-server/identity/ad-fs/operations/manage-ssl-certificates-ad-fs-wap.md",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/overview/AD-FS-2016-Requirements.md",
+      "redirect_url": "/windows-server/identity/ad-fs/overview/ad-fs-requirements.md",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/overview/whats-new-active-directory-federation-services-windows-server-2016.md",
+      "redirect_url": "/windows-server/identity/ad-fs/whats-new-active-directory-federation-services-windows-server.md",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/technical-reference/WinServer2016expiry.md",
+      "redirect_url": "/windows-server/identity/ad-fs/technical-reference/auditing-enhancements-to-ad-fs-in-windows-server.md",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/performance-tuning/subsystem/cache-memory-management/improvements-in-2016.md",
       "redirect_url": "/windows-server/administration/performance-tuning/subsystem/cache-memory-management/improvements-in-windows-server.md",
       "redirect_document_id": false
     },	
     {	
-      "source_path":  "WindowsServerDocs/networking/windows-server-2016-supported-networking-scenarios.md",
+      "source_path": "WindowsServerDocs/networking/windows-server-2016-supported-networking-scenarios.md",
       "redirect_url": "/windows-server/networking/windows-server-supported-networking-scenarios.md",
       "redirect_document_id": false
     },
     {	
-      "source_path":  "WindowsServerDocs/networking/sdn/troubleshoot/troubleshoot-windows-server-2016-software-defined-networking-stack.md",
+      "source_path": "WindowsServerDocs/networking/sdn/troubleshoot/troubleshoot-windows-server-2016-software-defined-networking-stack.md",
       "redirect_url": "/windows-server/networking/sdn/troubleshoot/troubleshoot-windows-server-software-defined-networking-stack.md",
       "redirect_document_id": false
     },	
     {	
-      "source_path":  "WindowsServerDocs/remote/remote-desktop-services/Upgrade-to-RDS-2016.md",      
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/Upgrade-to-RDS-2016.md",      
       "redirect_url": "/windows-server/remote/remote-desktop-services/upgrade-to-rds.md",
       "redirect_document_id": false
     },
     {	      
-      "source_path":  "WindowsServerDocs/remote/remote-desktop-services/Upgrade-to-RDSH-2016.md",  
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/Upgrade-to-RDSH-2016.md",  
       "redirect_url": "/windows-server/remote/remote-desktop-services/upgrade-to-rdsh.md", 
       "redirect_document_id": false
     },	
     {
-      "source_path":  "WindowsServerDocs/remote/remote-desktop-services/Upgrade-to-RDVH-2016.md", 
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/Upgrade-to-RDVH-2016.md", 
       "redirect_url": "/windows-server/remote/remote-desktop-services/upgrade-to-rdvh.md", 
       "redirect_document_id": false
     },
     {
-      "source_path":  "WindowsServerDocssecurity/tls/tls-schannel-ssp-changes-in-windows-10-and-windows-server-2016.md",
+      "source_path": "WindowsServerDocssecurity/tls/tls-schannel-ssp-changes-in-windows-10-and-windows-server-2016.md",
       "redirect_url": "/windows-server/tls/tls-schannel-ssp-changes-in-windows-10-and-windows-server.md",
       "redirect_document_id": false
     },	
     {
-      "source_path":  "WindowsServerDocs/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server-2016.md",
+      "source_path": "WindowsServerDocs/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server-2016.md",
       "redirect_url": "/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server.md",
       "redirect_document_id": false
     },	
     {
-      "source_path":  "WindowsServerDocs/storage/whats-new-file-storage-services-windows-server-2016.md",
+      "source_path": "WindowsServerDocs/storage/whats-new-file-storage-services-windows-server-2016.md",
       "redirect_url": "/windows-server/storage/whats-new-file-storage-services-windows-server.md",
       "redirect_document_id": false
     },	
     {
-      "source_path":  "WindowsServerDocs/storage/software-defined-storage/Health-Service-in-Windows-Server-2016.md",
+      "source_path": "WindowsServerDocs/storage/software-defined-storage/Health-Service-in-Windows-Server-2016.md",
       "redirect_url": "/windows-server/storage/software-defined-storage/health-service-in-windows-server.md",
       "redirect_document_id": false
     },
     {	
-      "source_path":  "WindowsServerDocs/storage/software-defined-storage/hyper-converged-solution-using-storage-spaces-direct-in-windows-server-2016.md",
+      "source_path": "WindowsServerDocs/storage/software-defined-storage/hyper-converged-solution-using-storage-spaces-direct-in-windows-server-2016.md",
       "redirect_url": "/windows-server/storage/software-defined-storage/hyper-converged-solution-using-storage-spaces-direct-in-windows-server.md",
       "redirect_document_id": false
     },	
     {
-      "source_path":  "WindowsServerDocs/storage/storage-replica/storage-replica-windows-server-2016.md",
+      "source_path": "WindowsServerDocs/storage/storage-replica/storage-replica-windows-server-2016.md",
       "redirect_url": "/windows-server/storage/storage-replica/storage-replica-windows-server.md",
       "redirect_document_id": false
     },		
     {
-      "source_path":   "WindowsServerDocs/storage/storage-spaces/fault-domains-windows-server-2016.md",
+      "source_path":  "WindowsServerDocs/storage/storage-spaces/fault-domains-windows-server-2016.md",
       "redirect_url":  "/windows-server/storage/storage-spaces/fault-domains-windows-server.md",
       "redirect_document_id": false
     },
     {
-      "source_path":  "WindowsServerDocs/storage/storage-spaces/hyper-converged-solution-using-storage-spaces-direct-in-windows-server-2016.md",
+      "source_path": "WindowsServerDocs/storage/storage-spaces/hyper-converged-solution-using-storage-spaces-direct-in-windows-server-2016.md",
       "redirect_url": "/windows-server/storage/storage-spaces/hyper-converged-solution-using-storage-spaces-direct-in-windows-server.md",
       "redirect_document_id": false
     },	
     {
-      "source_path":  "WindowsServerDocs/storage/storage-spaces/storage-spaces-direct-windows-server-2016.md",
+      "source_path": "WindowsServerDocs/storage/storage-spaces/storage-spaces-direct-windows-server-2016.md",
       "redirect_url": "/windows-server/storage/storage-spaces/storage-spaces-direct-windows-server.md",
       "redirect_document_id": false
     },
     {
-      "source_path":  "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/windows-server-2016-should-configured-with-least-minimum-amount-memory.md",
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/windows-server-2016-should-configured-with-least-minimum-amount-memory.md",
       "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/windows-server-should-be-configured-with-least-minimum-amount-memory.md",
       "redirect_document_id": false
     }, 
     {
-      "source_path":  "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/windows-server-2016-should-configured-with-recommended-amount-memory.md",
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/windows-server-2016-should-configured-with-recommended-amount-memory.md",
       "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/windows-server-should-be-configured-with-recommended-amount-memory.md",
       "redirect_document_id": false
     },
     {
-      "source_path":  "WindowsServerDocs/virtualization/hyper-v/plan/Plan-for-Hyper-V-networking-in-Windows-Server-2016.mdv",
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/plan/Plan-for-Hyper-V-networking-in-Windows-Server-2016.mdv",
       "redirect_url": "/windows-server/virtualization/hyper-v/plan/plan-hyper-v-networking-in-windows-server.md",
       "redirect_document_id": false
     },	
     {
-      "source_path":  "WindowsServerDocs/virtualization/hyper-v/plan/Plan-for-Hyper-V-scalability-in-Windows-Server-2016.md",
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/plan/Plan-for-Hyper-V-scalability-in-Windows-Server-2016.md",
       "redirect_url": "/windows-server/virtualization/hyper-v/plan/plan-hyper-v-scalability-in-windows-server.md",
       "redirect_document_id": false
     },	
     {
-      "source_path":  "WindowsServerDocs/virtualization/hyper-v/plan/plan-for-hyper-v-security-in-Windows-Server-2016.md",
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/plan/plan-for-hyper-v-security-in-Windows-Server-2016.md",
       "redirect_url": "/windows-server/virtualization/hyper-v/plan/plan-hyper-v-security-in-windows-server.md",
       "redirect_document_id": false
     },	
