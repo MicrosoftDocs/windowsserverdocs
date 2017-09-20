@@ -145,4 +145,4 @@ It is not recommended to do SSL termination before WAP. In case SSL termination 
  - Userip: For extranet requests this claim will contain the value of x-ms-forwarded-client-ip.  For intranet requests, this claim will contain the same value as x-ms-client-ip.
 
 ### I am trying to get additional claims on the user info endpoint, but its only returning subject. How can I get additional claims?
-The ADFS userinfo endpoint always returns the subject claim as specified in the OpenID standards. AD FS does not provide additional claims requested via the UserInfo endpoint. If you need additional claims in ID token, refer to [Custom ID Tokens in AD FS](../development/custom-id-tokens-in-ad-fs).
+The ADFS userinfo endpoint always returns the subject claim as specified in the OpenID standards. AD FS does not provide additional claims requested via the UserInfo endpoint. If you need additional claims in ID token, refer to [Custom ID Tokens in AD FS](../development/custom-id-tokens-in-ad-fs.md).
