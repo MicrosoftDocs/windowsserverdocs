@@ -27,7 +27,7 @@ The following new features in Active Directory Domain Services (AD DS) improve t
   
 - [Enable Microsoft Passport for Work in your organization](https://azure.microsoft.com/en-us/documentation/articles/active-directory-azureadjoin-passport-deployment/)    
   
--  [Deprecation of File Replication Service (FRS) and Windows Server 2003 functional levels](ad-ds/Windows-Server-2016-Functional-Levels.md)  
+-  [Deprecation of File Replication Service (FRS) and Windows Server 2003 functional levels](ad-ds/active-directory-functional-levels.md)  
   
   
 ## <a name="BKMK_PAM"></a>Privileged access management  
@@ -99,7 +99,7 @@ At the Windows Server 2008 and higher domain functional levels, Distributed File
   
 The Windows Server 2003 domain and forest functional levels continue to be supported, but organizations should raise the functional level to Windows Server 2008 (or higher if possible) to ensure SYSVOL replication compatibility and support in the future. In addition, there are many other benefits and features available at the higher functional levels higher. See the following resources for more information:  
   
--   [Understanding Active Directory Domain Services (AD DS) Functional Levels](https://technet.microsoft.com/library/understanding-active-directory-functional-levels(WS.10).aspx)  
+-   [Understanding Active Directory Domain Services (AD DS) Functional Levels](ad-ds/active-directory-functional-levels.md)  
   
 -   [Raise the Domain Functional Level](https://technet.microsoft.com/library/cc753104.aspx)  
   

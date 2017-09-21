@@ -97,7 +97,7 @@ After you set the domain functional level to a certain value, you cannot roll ba
 
 - when you raise the domain functional level to Windows Server 2016 and if the forest functional level is Windows Server 2012 or lower, you have the option of rolling the domain functional level back to Windows Server 2012 or Windows Server 2012 R2 
 
-For more information about features that are available at lower functional levels, see [Understanding Active Directory Domain Services (AD DS) Functional Levels](https://technet.microsoft.com/library/understanding-active-directory-functional-levels.aspx). 
+For more information about features that are available at lower functional levels, see [Understanding Active Directory Domain Services (AD DS) Functional Levels](../active-directory-functional-levels.md). 
  
 ## AD DS interoperability with other server roles and Windows operating systems
 AD DS is not supported on the following Windows operating systems: 

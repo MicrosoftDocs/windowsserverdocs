@@ -10,7 +10,7 @@ ms.topic: article
 ms.assetid: 1a65a98e-54b6-4c41-9732-1e3d32fe3a5f
 author: KBDAzure
 ms.author: kathydav
-ms.date: 03/16/2017
+ms.date: 09/21/2017
 ---
 # What's new in Hyper-V on Windows Server 2016
 
@@ -24,20 +24,20 @@ Here's what's included in this article and whether the functionality is new or u
 When the Hyper-V role is installed on a computer that uses the Always On/Always Connected (AOAC) power model, the **Connected Standby** power state is now available.  
   
 ## <a name="BKMK_device"></a>Discrete device assignment \(new\) 
-This feature lets you give a virtual machine direct and exclusive access to some PCIe hardware devices. Using a device in this way bypasses the Hyper-V virtualization stack, which results in faster access. For details on supported hardware, see  "Discrete device assignment" in [System requirements for Hyper-V on Windows Server 2016](System-requirements-for-Hyper-V-on-Windows.md). For details, including how to use this feature and considerations, see the post "[Discrete Device Assignment -- Description and background](http://blogs.technet.com/b/virtualization/archive/2015/11/19/discrete-device-assignment.aspx)" in the Virtualization blog.
+This feature lets you give a virtual machine direct and exclusive access to some PCIe hardware devices. Using a device in this way bypasses the Hyper-V virtualization stack, which results in faster access. For details on supported hardware, see  "Discrete device assignment" in [System requirements for Hyper-V on Windows Server 2016](System-requirements-for-Hyper-V-on-Windows.md). For details, including how to use this feature and considerations, see the post "[Discrete Device Assignment — Description and background](https://blogs.technet.microsoft.com/virtualization/2015/11/19/discrete-device-assignment-description-and-background/)" in the Virtualization blog.
 
 ## Encryption support for the operating system disk in generation 1 virtual machines \(new)
 
-You can now protect the operating system disk using BitLocker drive encryption in generation 1 virtual machines. A new feature, key storage, creates a small, dedicated drive to store the system drive’s BitLocker key. This is done instead of using a virtual Trusted Platform Module (TPM), which is available only in generation 2 virtual machines. To decrypt the disk and start the virtual machine, the Hyper-V host must either be part of an authorized guarded fabric or have the private key from one of the virtual machine's guardians. Key storage requires a version 8 virtual machine. For information on virtual machine version, see [Upgrade virtual machine version in Hyper-V on Windows 10 or Windows Server 2016](.\deploy\upgrade-virtual-machine-version-in-hyper-v-on-windows-or-windows-server.md).  
+You can now protect the operating system disk using BitLocker drive encryption in generation 1 virtual machines. A new feature, key storage, creates a small, dedicated drive to store the system drive’s BitLocker key. This is done instead of using a virtual Trusted Platform Module (TPM), which is available only in generation 2 virtual machines. To decrypt the disk and start the virtual machine, the Hyper-V host must either be part of an authorized guarded fabric or have the private key from one of the virtual machine's guardians. Key storage requires a version 8 virtual machine. For information on virtual machine version, see [Upgrade virtual machine version in Hyper-V on Windows 10 or Windows Server 2016](./deploy/upgrade-virtual-machine-version-in-hyper-v-on-windows-or-windows-server.md).  
   
 ## <a name="BKMK_host"></a>Host resource protection \(new\)
 This feature helps prevent a virtual machine from using more than its share of system resources by looking for excessive levels of activity. This can help prevent a virtual machine's excessive activity from degrading the performance of the host or other virtual machines. When monitoring detects a virtual machine with excessive activity, the virtual machine is given fewer resources. This monitoring and enforcement is off by default. Use Windows PowerShell to turn it on or off. To turn it on, run this command:  
   
 ```  
-Set-VMProcessor -EnableHostResourceProtection $true 
+Set-VMProcessor TestVM -EnableHostResourceProtection $true 
 ```       
 
-For details about this cmdlet, see [Set-VMProcessor](https://technet.microsoft.com/library/hh848533.aspx).
+For details about this cmdlet, see [Set-VMProcessor](https://docs.microsoft.com/en-us/powershell/module/hyper-v/set-vmprocessor).
 
 ## <a name="BKMK_hot"></a>Hot add and remove for network adapters and memory \(new\) 
 You can now add or remove a network adapter while the virtual machine is running, without incurring downtime. This works for generation 2 virtual machines that run either Windows or Linux operating systems.  
@@ -62,13 +62,13 @@ Updates to integration services for Windows guests are distributed through Windo
 Linux operating systems running on generation 2 virtual machines can now boot with the Secure Boot option enabled. Ubuntu 14.04 and later, SUSE Linux Enterprise Server 12 and later, Red Hat Enterprise Linux 7.0 and later, and CentOS 7.0 and later are enabled for Secure Boot on hosts that run Windows Server 2016. Before you boot the virtual machine for the first time, you must configure the virtual machine to use the Microsoft UEFI Certificate Authority. You can do this from Hyper-V Manager, Virtual Machine Manager, or an elevated Windows Powershell session. For Windows PowerShell, run this command:  
   
 ```  
-Set-VMFirmware vmname -SecureBootTemplate MicrosoftUEFICertificateAuthority  
+Set-VMFirmware TestVM -SecureBootTemplate MicrosoftUEFICertificateAuthority  
 ```  
   
-For more information about Linux virtual machines on Hyper-V, see [Linux and FreeBSD Virtual Machines on Hyper-V](Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md). For more information about the cmdlet, see [Set-VMFirmware](https://technet.microsoft.com/library/dn464287.aspx).
+For more information about Linux virtual machines on Hyper-V, see [Linux and FreeBSD Virtual Machines on Hyper-V](Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md). For more information about the cmdlet, see [Set-VMFirmware](https://docs.microsoft.com/en-us/powershell/module/hyper-v/set-vmfirmware).
 
 ## More memory and processors for generation 2 virtual machines and Hyper-V hosts \(updated\)
-Starting with version 8, generation 2 virtual machines can use significantly more memory and virtual processors. Hosts also can be configured with significantly more memory and virtual processors than were previously supported. These changes support new scenarios such as running e-commerce large in-memory databases for online transaction processing (OLTP) and data warehousing (DW). The Windows Server blog recently published the performance results of  a virtual machine with 5.5 terabytes of memory and 128 virtual processors running 4 TB in-memory database. Performance was greater than 95% of the performance of a physical server. For details, see [Windows Server 2016 Hyper-V large-scale VM performance for in-memory transaction processing](https://blogs.technet.microsoft.com/windowsserver/2016/09/28/windows-server-2016-hyper-v-large-scale-vm-performance-for-in-memory-transaction-processing/). For details about virtual machine versions, see [Upgrade virtual machine version in Hyper-V on Windows 10 or Windows Server 2016](.\deploy\Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md). For the full list of supported maximum configurations, see [Plan for Hyper-V scalability in Windows Server 2016](./plan/Plan-for-Hyper-V-scalability-in-Windows-Server-2016.md). 
+Starting with version 8, generation 2 virtual machines can use significantly more memory and virtual processors. Hosts also can be configured with significantly more memory and virtual processors than were previously supported. These changes support new scenarios such as running e-commerce large in-memory databases for online transaction processing (OLTP) and data warehousing (DW). The Windows Server blog recently published the performance results of  a virtual machine with 5.5 terabytes of memory and 128 virtual processors running 4 TB in-memory database. Performance was greater than 95% of the performance of a physical server. For details, see [Windows Server 2016 Hyper-V large-scale VM performance for in-memory transaction processing](https://blogs.technet.microsoft.com/windowsserver/2016/09/28/windows-server-2016-hyper-v-large-scale-vm-performance-for-in-memory-transaction-processing/). For details about virtual machine versions, see [Upgrade virtual machine version in Hyper-V on Windows 10 or Windows Server 2016](./deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md). For the full list of supported maximum configurations, see [Plan for Hyper-V scalability in Windows Server 2016](./plan/plan-hyper-v-scalability-in-windows-server.md). 
 
 ## <a name="BKMK_nested"></a>Nested virtualization \(new\) 
 This feature lets you use a virtual machine as a Hyper-V host and create virtual machines within that virtualized host. This can be especially useful for development and test environments. To use nested virtualization, you'll need:  
@@ -77,7 +77,7 @@ This feature lets you use a virtual machine as a Hyper-V host and create virtual
   
 -   A processor with Intel VT-x (nested virtualization is available only for Intel processors at this time).  
   
-For details and instructions, see [Nested Virtualization](https://msdn.microsoft.com/virtualization/hyperv_on_windows/user_guide/nesting).  
+For details and instructions, see [Run Hyper-V in a Virtual Machine with Nested Virtualization](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/user-guide/nested-virtualization).  
   
 ## <a name="BKMK_networking"></a>Networking features \(new\) 
 New networking features include:  
@@ -91,13 +91,13 @@ New networking features include:
 For more about new networking features, see [What's new in Networking](../../networking/What-s-New-in-Networking.md).  
   
 ## <a name="BKMK_check"></a>Production checkpoints \(new\)
-Production checkpoints are "point-in-time" images of a virtual machine. These give you a way to apply a checkpoint that complies with support policies when a virtual machine runs a production workload. Production checkpoints are based on backup technology inside the guest instead of a saved state. For Windows virtual machines, the Volume Snapshot Service (VSS) is used. For Linux virtual machines, the file system buffers are flushed to create a checkpoint that's consistent with the file system. If you'd rather use checkpoints based on saved states, choose standard checkpoints instead. For details, see [Choose between standard or production checkpoints](https://technet.microsoft.com/library/dn872510.aspx).  
+Production checkpoints are "point-in-time" images of a virtual machine. These give you a way to apply a checkpoint that complies with support policies when a virtual machine runs a production workload. Production checkpoints are based on backup technology inside the guest instead of a saved state. For Windows virtual machines, the Volume Snapshot Service (VSS) is used. For Linux virtual machines, the file system buffers are flushed to create a checkpoint that's consistent with the file system. If you'd rather use checkpoints based on saved states, choose standard checkpoints instead. For details, see [Choose between standard or production checkpoints in Hyper-V](manage/Choose-between-standard-or-production-checkpoints-in-Hyper-V.md).  
   
 > [!IMPORTANT]  
 > New virtual machines use production checkpoints as the default.  
   
 ## <a name="BKMK_HyperVRollingUpgrades"></a>Rolling Hyper-V Cluster upgrade \(new\) 
-You can now add a node running Windows Server 2016 to a Hyper-V Cluster with nodes running  Windows Server 2012 R2. This allows you to upgrade the cluster without downtime. The cluster runs at a  Windows Server 2012 R2  feature level until you upgrade all nodes in the cluster and update the cluster functional level with the Windows PowerShell cmdlet, [Update-ClusterFunctionalLevel](https://technet.microsoft.com/library/mt589702.aspx).  
+You can now add a node running Windows Server 2016 to a Hyper-V Cluster with nodes running  Windows Server 2012 R2. This allows you to upgrade the cluster without downtime. The cluster runs at a  Windows Server 2012 R2  feature level until you upgrade all nodes in the cluster and update the cluster functional level with the Windows PowerShell cmdlet, [Update-ClusterFunctionalLevel](https://docs.microsoft.com/en-us/powershell/module/failoverclusters/Update-ClusterFunctionalLevel).  
   
 > [!IMPORTANT]  
 > After you update the cluster functional level, you can't return it to Windows Server 2012 R2.  
@@ -136,13 +136,13 @@ Follow the guidelines for shared VHDs in [Virtual Hard Disk Sharing Overview](ht
 A collection with a shared VHD but no associated guest cluster cannot create reference points for the collection (regardless of whether the shared VHD is included in the reference point creation or not). 
 
 ## <a name="BKMK_shielded"></a>Shielded virtual machines \(new\)
-Shielded virtual machines use several features to make it harder for Hyper-V administrators and malware on the host to inspect, tamper with, or steal data from the state of a shielded virtual machine.  Data and state is encrypted, Hyper-V administrators can't see the video output and disks,  and the virtual machines can be restricted to run only on known, healthy hosts, as determined by a Host Guardian Server. For details, see [Guarded Fabric and Shielded VMs](http://go.microsoft.com/fwlink/?LinkId=746381).
+Shielded virtual machines use several features to make it harder for Hyper-V administrators and malware on the host to inspect, tamper with, or steal data from the state of a shielded virtual machine.  Data and state is encrypted, Hyper-V administrators can't see the video output and disks,  and the virtual machines can be restricted to run only on known, healthy hosts, as determined by a Host Guardian Server. For details, see [Guarded Fabric and Shielded VMs](../guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms.md).
   
 >[!NOTE]  
 > As of Technical Preview 5, shielded virtual machines are compatible with Hyper-V Replica. To replicate a shielded virtual machine, the host you want to replicate to must be authorized to run that shielded virtual machine.  
 
 ## <a name="BKMK_StartOrder"></a>Start order priority for clustered virtual machines \(new\)
-This feature gives you more control over which clustered virtual machines are started or restarted first. This makes it easier to start virtual machines that provide services before virtual machines that use those services. Define sets, place virtual machines in sets, and specify dependencies. Use Windows PowerShell cmdlets to manage the sets, such as New-ClusterGroupSet, Get-ClusterGroupSet, and Add-ClusterGroupSetDependency.
+This feature gives you more control over which clustered virtual machines are started or restarted first. This makes it easier to start virtual machines that provide services before virtual machines that use those services. Define sets, place virtual machines in sets, and specify dependencies. Use Windows PowerShell cmdlets to manage the sets, such as [New-ClusterGroupSet](https://docs.microsoft.com/en-us/powershell/module/failoverclusters/new-clustergroupset), [Get-ClusterGroupSet](https://docs.microsoft.com/en-us/powershell/module/failoverclusters/get-clustergroupset), and [Add-ClusterGroupSetDependency](https://docs.microsoft.com/en-us/powershell/module/failoverclusters/add-clustergroupsetdependency).
 .  
 ## <a name="BKMK_QoS"></a>Storage quality of service (QoS) \(updated\)
 You can now create storage QoS policies on a Scale-Out File Server and assign them to one or more virtual disks on Hyper-V virtual machines. Storage performance is automatically readjusted to meet policies as the storage load fluctuates. For details, see [Storage Quality of Service](../../storage/storage-qos/storage-qos-overview.md).  
@@ -163,10 +163,10 @@ For instructions on checking and upgrading the version, see [Upgrade virtual mac
 > [!IMPORTANT]  
 > -   After you update the  version, you can't move the virtual machine to a server that runs  Windows Server 2012 R2.  
 > -   You can't downgrade the configuration to a previous version.  
-> -   The Update-VMVersion cmdlet  is blocked on a Hyper-V Cluster when the cluster functional level is  Windows Server 2012 R2.  
+> -   The [Update-VMVersion](https://docs.microsoft.com/en-us/powershell/module/hyper-v/update-vmversion) cmdlet  is blocked on a Hyper-V Cluster when the cluster functional level is  Windows Server 2012 R2.  
 
 ## Virtualization-based security for generation 2 virtual machines \(new)
-Virtualization-based security powers features such as Device Guard and Credential Guard, offering increased protection of the operating system against exploits from malware. Virtualization based-security is available in generation 2 guest virtual machines starting with version 8. For information on virtual machine version, see [Upgrade virtual machine version in Hyper-V on Windows 10 or Windows Server 2016](.\deploy\upgrade-virtual-machine-version-in-hyper-v-on-windows-or-windows-server.md).
+Virtualization-based security powers features such as Device Guard and Credential Guard, offering increased protection of the operating system against exploits from malware. Virtualization based-security is available in generation 2 guest virtual machines starting with version 8. For information on virtual machine version, see [Upgrade virtual machine version in Hyper-V on Windows 10 or Windows Server 2016](./deploy/upgrade-virtual-machine-version-in-hyper-v-on-windows-or-windows-server.md).
 
 
 ## <a name="BKMK_Containers"></a>Windows Containers \(new\) 
@@ -182,7 +182,7 @@ Key features include:
   
 -   Ability to restrict container resources  
   
-For details, including quick start guides, see the [Windows Container documentation](https://msdn.microsoft.com/virtualization/windowscontainers/containers_welcome).  
+For details, including quick start guides, see the [Windows Containers Documentation](https://docs.microsoft.com/en-us/virtualization/windowscontainers/index).  
   
 ## <a name="BKMK_PowerShellDirect"></a>Windows PowerShell Direct \(new\)  
 This gives you a way to run Windows PowerShell commands in a virtual machine from the host. Windows PowerShell Direct runs between the host and the virtual machine. This  means it doesn't require networking or firewall requirements, and it works regardless of your remote management configuration.  
@@ -195,7 +195,7 @@ Windows PowerShell Direct is an alternative to the existing tools that Hyper-V a
   
 Those tools work well, but have trade-offs: VMConnect is reliable, but can be hard to automate. Remote PowerShell is powerful, but can be hard to set up and maintain. These trade-offs may become more important as your Hyper-V deployment grows. Windows PowerShell Direct addresses this by providing a powerful scripting and automation experience that's as simple as using VMConnect.   
   
-For requirements and instructions, see [Manage Windows virtual machines with PowerShell Direct](https://technet.microsoft.com/library/mt187808.aspx).  
+For requirements and instructions, see [Manage Windows virtual machines with PowerShell Direct](manage/Manage-Windows-virtual-machines-with-PowerShell-Direct.md).  
   
 ## See also  
 [What's new in Hyper-V on Windows 10](https://msdn.microsoft.com/virtualization/hyperv_on_windows/about/whats_new)  
