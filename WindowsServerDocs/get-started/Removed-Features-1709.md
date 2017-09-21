@@ -13,27 +13,27 @@ author: jaimeo
 ms.author: jaimeo
 manager: elizapo
 ---
-# Features Removed or Planned for Replacement in  Windows Server, version 1709
+# Features removed or planned for replacement starting with Windows Server, version 1709
 
 >Applies To: Windows Server, version 1709
 
-TThe following is a list of features and functionalities in Windows Server, version 1709 that have either been removed from the product in the that release or are being considered for potential replacement in subsequent releases. It is intended for IT professionals who are updating operating systems in a commercial environment. **This list is subject to change in subsequent releases and might not include every affected feature or functionality.** 
+The following is a list of features and functionalities in Windows Server, version 1709 that have either been removed from the product in the that release or are starting to be considered for potential replacement in subsequent releases. It is intended for IT professionals who are updating operating systems in a commercial environment. **This list is subject to change in subsequent releases and might not include every affected feature or functionality.** 
 
-## Features removed from Windows Server 2016 
+## Features removed from Windows Server, version 1709
 No features or functionalities have been removed from this release of Windows Server, version 1709.
 
 > [!NOTE]  
-> Did you know that Nano Server has changed? See [Changes to Nano Server in Windows Server, version 1709](https://docs.microsoft.com/windows-server/get-started/nano-in-semi-annual-channel)
+> Did you know that Nano Server has changed? See [Changes to Nano Server in Windows Server, version 1709](nano-in-semi-annual-channel.md).
 
 
 
-## Features being considered for replacement starting with Windows Server, version 1709
+## Features being considered for replacement starting with subsequent releases
 
-The following features and functionalities are being considered for replacement starting with Windows Server, version 1709. Eventually, they may be completely removed from the installed product image and replaced by other features or functionality (or installable from other sources), but they are still available in this release, sometimes with certain functionality removed. You should begin planning now to employ alternate methods or the future replacement for any applications, code, or usage that depend on these features.
+The following features and functionalities are being considered for replacement starting with releases after Windows Server, version 1709. Eventually, they may be completely removed from the installed product image and replaced by other features or functionality (or installable from other sources), but they are still available in this release, sometimes with certain functionality removed. You should begin planning now to employ alternate methods or the future replacement for any applications, code, or usage that depend on these features.
 
-If you have feedback about the proposed replacement of any of these features, contact us at <FEEDBACK LINK>.
+If you have feedback about the proposed replacement of any of these features, contact us at [FEEDBACK LINK].
 
-### IIS 6 Management Compatibility
+### IIS 6 Management compatibility
 Specific DISM features being considered for replacement are:
 
 - IIS 6 Metabase Compatibility (Web-Metabase)
@@ -47,7 +47,7 @@ Instead, you should start migration to IIS 7.0, which offers superior console an
 This authentication method is planned for replacement because it has security issues. Instead, you should start using other authentication methods such as Client Certificate Mapping (see [Configuring One-to-One Client Certificate Mappings](https://docs.microsoft.com/iis/manage/configuring-security/configuring-one-to-one-client-certificate-mappings)) or Windows Authentication (see [Application Settings](https://docs.microsoft.com/iis-administration/configuration/appsettings.json)).
 
 ### Internet Storage Name Service (iSNS)
-iSNS is being considered for replacement.The Server Message Block (SMB) feature offers essentially the same functionality with additional features. See [Server Message Block Overview](https://technet.microsoft.com/library/hh831795(v=ws.11).aspx) for background information on this feature.
+iSNS is being considered for replacement. The Server Message Block (SMB) feature offers essentially the same functionality with additional features. See [Server Message Block Overview](https://technet.microsoft.com/library/hh831795(v=ws.11).aspx) for background information on this feature.
 
 ### RSA/AES Encryption for IIS 
 This encryption method is being considered for replacement because the superior Cryptography API: Next Generation (CNG) method is already available. To learn more about CNG encryption, see [About CNG](https://msdn.microsoft.com/library/windows/desktop/aa375276(v=vs.85).aspx).
