@@ -12,7 +12,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 09/21/2017
 ---
-
 # Configure Microsoft Hyper-V Server for management by Project Honolulu
 
 >Applies To: Microsoft Hyper-V Server 2016 and Microsoft Hyper-V Server 2012 R2

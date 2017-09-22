@@ -12,7 +12,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 09/21/2017
 ---
-
 # Protect your Honolulu-managed Hyper-V Virtual Machines with Azure Site Recovery 
 
 >Applies To: Windows Server, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 and Windows 10

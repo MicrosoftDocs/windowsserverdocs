@@ -19,7 +19,7 @@ ms.date: 09/21/2017
 
 This article describes the management capabilities of Honolulu, and how to connect to your Windows Server nodes so you can start managing them with Honolulu.
 
-#What Windows Server features can Honolulu manage?
+# What Windows Server features can Honolulu manage?
 
 Honolulu does not yet completely replace the Microsoft Management Console (MMC). Here are its current capabilities:
 
