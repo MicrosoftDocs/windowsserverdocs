@@ -1,6 +1,6 @@
 ---
 title: Protect your Honolulu-managed Hyper-V Virtual Machines with Azure Site Recovery
-description: "Manage ASR with Honolulu"
+description: "Protect VMs from disaster with Honolulu managed ASR"
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
@@ -12,6 +12,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 09/21/2017
 ---
+
 # Protect your Honolulu-managed Hyper-V Virtual Machines with Azure Site Recovery 
 
 >Applies To: Windows Server, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 and Windows 10
@@ -40,7 +41,7 @@ This guide outlines the steps to configure failover settings and create a recove
 
 **To Connect your Gateway to Azure**
 
-1. Run the **New-AadAsrApp.ps1** script included in the .zip file of the 1.0.6 release, with the following considerations:
+1. Run the **New-AadAsrApp.ps1** PowerShell script included in **Honolulu-1709-TechnicalPreview-RC.zip** release, with the following considerations:
     - If the Honolulu gateway host is installed on a Windows 10 machine and running in desktop mode, and is internet connected, run this script **without any parameters** from the Honolulu gateway host machine.
     - If the Honolulu gateway is not internet connected or is installed on a Windows Server 2016 running as a service, run the script on any internet connected client and provide the Honolulu gateway server name in the **-GatewayEndpoint** parameter.
     - This script requires two Azure PowerShell modules: **AzureRM **and **AzureAD**. If you do not have these modules installed, execute the following commands in an elevated PowerShell console:
@@ -157,19 +158,22 @@ When registering ASR with a cluster, if a node fails to install ASR or register 
   1. In the AAD Application you just created, copy the **Application ID** listed in the **app pane**. This will be the parameter for **ClientId**
   2. Click **Azure Active Directory** > **Properties**, and then copy the **Directory ID** listed on the page. This will be the parameter for **Tenant**.
 
-12. Open a PowerShell console and go to folder **C:\Program Files\Project 'Honolulu' (Private Preview)** on the machine where the gateway is installed. Run the PowerShell script [**New-AadAsrApp.ps1**](https://github.com/MicrosoftDocs/windowsserverdocs/blob/master/WindowsServerDocs/administration/honolulu/new-aadasrapp.ps1) with the following parameters:
+12. Open a PowerShell console and go to folder **C:\Program Files\Project 'Honolulu' (Technical Preview)** on the machine where the gateway is installed and run the **New-AadAsrApp.ps1** PowerShell script  with the following parameters:
 
     - **gatewayEndpoint:** this is the gateway endpoint, eg: <http://localhost:4200>.
-    - **Tenant:** (from step 5 above)
-    - **ClientId:** (from step 5 above)
+    - **Tenant:** (from step 11 above)
+    - **ClientId:** (from step 11 above)
 
 for example:  
-        PS C:\Program Files\Project 'Honolulu' (Private Preview)
+    
+    PS C:\Program Files\Project 'Honolulu' (Technical Preview)
     .New-AadAsrApp.ps1 -gatewayEndpoint **http://localhost:4200** -Tenant <tenantID> -ClientId <client ID>
+
+Following is the code that is in the New-AadAsrApp.ps1 file:
     
     <#########################################################################################################
 
-    File: Set-AadApp.ps1
+    File: New-AadAsrApp.ps1
 
     Copyright (c) Microsoft Corp 2017.
 
@@ -415,7 +419,7 @@ for example:
 
     #############################
     # Register AAD App with Honolulu Gateway if script is running on the gateway
-    # Else output Set-AadApp.ps1 parameters.
+    # Else output New-AadAsrApp.ps1 parameters.
     #############################
     $client_id = $web_aad_app.ApplicationId.Guid.ToString()
 

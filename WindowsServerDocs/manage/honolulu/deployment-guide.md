@@ -38,11 +38,9 @@ When installing on Windows 10, Honolulu will use port 6515 by default, but you h
 > [!NOTE]
 > Modifying TrustedHosts is required in a workgroup environment, or when using local administrator credentials in a domain. If you choose to forego this setting, you must [configure TrustedHosts manually](honolulu-troubleshoot.md#configure-trustedhosts).
 
-If you check the box to launch on exit, Honolulu will open automatically in your default browser after it installs. Otherwise, you can find **Project 'Honolulu' (Private Preview)** in your windows start menu:
+If you check the box to launch on exit, Honolulu will open automatically in your default browser after it installs. Otherwise, you can find **Project 'Honolulu' (Technical Preview)** in your Windows Start Menu.
 
-![](../media/honolulu/start-icon.png) 
-
-Launching from the start menu will open your default browser.
+Launching from the Start Menu will open your default browser.
 
 > [!IMPORTANT] 
 > Internet Explorer is not supported in this release, if IE is your default browser, copy the URL from IE and paste it into Edge or Chrome.

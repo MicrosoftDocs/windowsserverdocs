@@ -10,7 +10,7 @@ ms.topic:
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 09/20/2017
+ms.date: 09/21/2017
 ---
 
 # Project Honolulu known issues
@@ -19,7 +19,9 @@ ms.date: 09/20/2017
 
 Project Honolulu is under development and currently in Technical Preview, so there are some known issues that you may have to work around.
 
-## General / Overview
+If you encounter an issue not described on this page, please [let us know](http://aka.ms/honolulufeedback).
+
+## General
 
 - If you are specifying credentials while adding a new server connection, make sure to click **Retry with credentials** before submitting the form. You may have to scroll down to reveal the button. [1709-13706997]
 
