@@ -33,7 +33,7 @@ the system level is not applied on network adapters until you do the following.
 
 1. Turn the DCBX Willing bit to false
 
-2. Enable DCB on the network adapters. See [Enable DCB on network adapters](#BKMK_DCB_EnableDCBOnAdapter).
+2. Enable DCB on the network adapters. See [Enable and Display DCB Settings on  Network Adapters](#bkmk_enabledcb).
 
 >[!NOTE]
 >If you want to configure DCB from a switch through DCBX, see [DCBX settings](#BKMK_DCBX_Settings)
@@ -428,7 +428,7 @@ Regardless of whether DCB is installed in Windows Server 2016, you can always ru
 
 If you configure DCB from a switch and rely on DCBX to propagate the configurations to network adapters, you can examine what configurations are received and enforced on the network adapters from the operating system side after you enable DCB on the network adapters.
 
-###  Enable and Display DCB setting on network adapters
+###  <a name="bkmk_enabledcb"></a>Enable and Display DCB Settings on  Network Adapters
 
 ```
 PS C:\> Enable-NetAdapterQos M1

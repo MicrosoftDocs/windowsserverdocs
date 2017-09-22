@@ -4,6 +4,7 @@ description: This topic provides an overview of the Software Defined Networking 
 ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
+ms.date: 
 ms.assetid: daaf6b61-5953-4c2d-b6b8-7c885b552646
 manager: brianlic
 ms.author: jamesmci
@@ -11,7 +12,7 @@ author: jamesmci
 ---
 # Networking
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server, Windows Server 2016
 
 <img src="../get-started/media/6-networking.png" style='float:left; padding:.5em;' alt="Icon depicting two networked computers"> Networking is a foundational part of the Software Defined Datacenter \(SDDC\) platform, and Windows Server 2016 provides new and improved Software Defined Networking \(SDN\) technologies to help you move to a fully realized SDDC solution for your organization.
 
@@ -20,7 +21,7 @@ When you manage networks as a software defined resource, you can describe an app
 This consistency means that your applications are now easier to scale, and you can seamlessly run applications - anywhere - with equal confidence about security, performance, quality of service, and availability.
 
 >[!Note]
-> To download Windows Server 2016, see [Windows Server Evaluations](https://www.microsoft.com/evalcenter/evaluate-windows-server-technical-preview).
+> To download Windows Server, see [Windows Server Evaluations](https://www.microsoft.com/evalcenter/evaluate-windows-server-technical-preview).
 
 Windows Server 2016 adds the following new networking technologies:
 
@@ -28,7 +29,7 @@ Windows Server 2016 adds the following new networking technologies:
 
 - Network Platform: Using new features for existing Network Platform technologies, you can use DNS Policy to customize your DNS server responses to queries, use a converged NIC that handles combined Remote Direct Memory Access \(RDMA\) and Ethernet traffic, use Switch Embedded Teaming \(SET\) to create Hyper-V Virtual Switches connected to RDMA NICs, and use IP Address Management \(IPAM\) to manage DNS zones and servers as well as DHCP and IP addresses.
 
-For more information, see [Windows Server 2016 Supported Networking Scenarios](windows-server-2016-supported-networking-scenarios.md).
+For more information, see [Windows Server Supported Networking Scenarios](windows-server-supported-networking-scenarios.md).
 
 The following sections provide information about SDN technologies and Network Platform technologies.
 

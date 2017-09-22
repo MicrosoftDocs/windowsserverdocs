@@ -23,9 +23,9 @@ You can use this topic to learn about using the QoS Policy wizard to create, edi
 
 In Windows operating systems, QoS Policy combines the functionality of standards-based QoS with the manageability of Group Policy. Configuration of this combination makes for easy application of QoS policies to Group Policy Objects. Windows includes a QoS Policy Wizard to help you do the following tasks.
 
--   [Create a QoS policy](#bkmk_createpolicy)
+-  [Create a QoS policy](#bkmk_createpolicy)
 
--   [View, edit, or delete a QoS policy](#bkmk_editpolicy)
+-  [View, edit, or delete a QoS policy](#bkmk_editpolicy)
 
 ##  <a name="bkmk_createpolicy"></a>Create a QoS policy
 
@@ -171,7 +171,7 @@ To complete the creation of the new QoS policy, click **Finish** on the **Protoc
   
 To apply the QoS policy settings to users or computers, link the GPO in which the QoS policies are located to an Active Directory Domain Services container, such as a domain, a site, or an organizational unit (OU).  
   
-##  <a name="#bkmk_editpolicy"></a>View, Edit, or Delete a QoS Policy
+##  <a name="bkmk_editpolicy"></a>View, Edit, or Delete a QoS Policy
 
 The pages of the QoS Policy wizard described previously correspond to the properties pages that are displayed when you view or edit the properties of a policy.  
   
