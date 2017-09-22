@@ -22,37 +22,38 @@ Project Honolulu streamlines the process of replicating your virtual machines on
 
 **Azure Site Recovery** is an Azure service that replicates workloads running on VMs so that your business-critical infrastructure is protected in case of a disaster.  [Learn more about Azure Site Recovery](https://docs.microsoft.com/en-us/azure/site-recovery/site-recovery-overview).
 
-Azure Site Recovery consists of two components: **replication** and f**ailover**. The replication portion protects your VMs in case of disaster by replicating the target VM’s VHD to an Azure storage account. You can use the failover option to recover these VMs and run them in Azure in the event of a disaster. You can also perform a test failover without impacting your primary VMs to test the recovery process in Azure.
+Azure Site Recovery consists of two components: **replication** and **failover**. The replication portion protects your VMs in case of disaster by replicating the target VM’s VHD to an Azure storage account. You can then failover these VMs and run them in Azure in the event of a disaster. You can also perform a test failover without impacting your primary VMs to test the recovery process in Azure.
 
 Completing setup for the replication component alone is sufficient to protect your VM in the case of disaster. However, you will not be able to start the VM in Azure until you have configured the failover portion. The failover portion can be setup at the time you wish to failover to an Azure VM, and is not required as part of initial setup. If the host server goes down and you haven’t yet configured the failover component, you can configure it at that time and access the workloads of the protected VM. However, it is a good practice to configure the failover related settings before a disaster.
  
 ## In this guide
 
-This guide outlines the steps to configure failover settings and create a recovery plan from within the Azure portal, enabling Honolulu to start VM replication and protect your VMs.
+This guide outlines the steps to configure replication settings and create a recovery plan from within the Azure portal, enabling Honolulu to start VM replication and protect your VMs.
 
 ## Prerequisites and planning
 
 - The target servers hosting the VMs you wish to protect must have Internet access to replicate to Azure.
-- You must have an Azure account and subscription to set up Azure Site Recovery service.
+- You must have an Azure account and subscription.
 - [Review the capacity planning tool to evaluate the requirements for successful replication and failover](https://docs.microsoft.com/en-us/azure/site-recovery/hyper-v-site-walkthrough-capacity).
 
-## Step 1: Connect your Gateway to Azure (you only need to do this step one time)
+## Step 1: Connect your Gateway to Azure
 
-**To Connect your Gateway to Azure**
+> [!NOTE]
+> You only need to do this step once per Honolulu Gateway install.
 
-1. Run the **New-AadAsrApp.ps1** PowerShell script included in **Honolulu-1709-TechnicalPreview-RC.zip** release, with the following considerations:
+1. Run the [New-AadAsrApp.ps1](#new-aadasrappps1-powershell-script) PowerShell script found on this page, with the following considerations:
     - If the Honolulu gateway host is installed on a Windows 10 machine and running in desktop mode, and is internet connected, run this script **without any parameters** from the Honolulu gateway host machine.
     - If the Honolulu gateway is not internet connected or is installed on a Windows Server 2016 running as a service, run the script on any internet connected client and provide the Honolulu gateway server name in the **-GatewayEndpoint** parameter.
-    - This script requires two Azure PowerShell modules: **AzureRM **and **AzureAD**. If you do not have these modules installed, execute the following commands in an elevated PowerShell console:
+    - This script requires two Azure PowerShell modules: **AzureRM** and **AzureAD**. If you do not have these modules installed, execute the following commands in an elevated PowerShell console:
     
-    PS C:\>Install-Module AzureRM
-    PS C:\>Install-Module AzureAD
+        PS C:\>Install-Module AzureRM  
+        PS C:\>Install-Module AzureAD
 
 2. Grant the AAD Application permissions
     1.  Log into Azure at <https://portal.azure.com>.
     2.  Go to **Azure Active Directory** > **App Registrations**.
     3.  Search for **asr-honolulu**.
-    4.  Select the **ASR-Honolulu-gateway** application that appears in the search results.
+    4.  Select the **ASR-Honolulu-\[gateway\]** application that appears in the search results.
     5.  In the **Settings**, select **Required Permissions** and then select **Grant Permissions**.
     6.  Select **Yes**.
 
@@ -62,15 +63,14 @@ This guide outlines the steps to configure failover settings and create a recove
 
 3. Refresh the Honolulu portal page
    
-    This step automatically creates an Azure Active Directory application for Honolulu to talk to Azure and configure Site Recovery on your behalf.
-  
-    Alternatively, you can manually create the AAD Application in the Azure portal and register it with the Honolulu gateway by following the steps in the Appendix.
+>[!NOTE]
+> This step automatically creates an Azure Active Directory application for Honolulu to talk to Azure and configure Site Recovery on your behalf.
+> Alternatively, you can manually create the AAD Application in the Azure portal and register it with the Honolulu gateway by following the steps in the [Appendix](#appendix-manual-steps-to-create-aad-application).
 
 ## Step 2: Install the ASR agent onto your target host and setup ASR requirements in Azure
 
 > [!NOTE] 
-> You need to do this step once per host server or cluster containing VMs targeted
-for protection.
+> You need to do this step once per host server or cluster containing VMs targeted for protection.
 
 1. Navigate to the server or cluster hosting VMs you wish to protect (either with Server Manager or Hyper-Converged Cluster Manager).
 2. Go to **Virtual Machines** > **Inventory**.
@@ -89,7 +89,8 @@ for protection.
  
 This could take up to 10 minutes. You can watch the progress by going to **Notifications** (the bell icon at the top right).
 
-This step automatically installs the ASR agent onto the target server or nodes (if configuring on a cluster), creates a **Resource Group** with the **Storage Account** and **Vault** specified, in the **Location** specified. This will also register the target host with the ASR service and configure a default replication policy.
+>[!NOTE]
+> This step automatically installs the ASR agent onto the target server or nodes (if configuring on a cluster), creates a **Resource Group** with the **Storage Account** and **Vault** specified, in the **Location** specified. This will also register the target host with the ASR service and configure a default replication policy.
 
 ## Step 3: Select Virtual Machines to protect
 
@@ -118,9 +119,7 @@ This step automatically installs the ASR agent onto the target server or nodes (
 
 ## Monitoring replicated VMs in Azure ##
 
-**To verify there are no failures in server registration**
-
-Go to the **Azure portal** > **All resources** > **Recovery Services Vault ** (the one you specified in Step 2) > **Jobs** > **Site Recovery Jobs**.
+To verify there are no failures in server registration, go to the **Azure portal** > **All resources** > **Recovery Services Vault**  (the one you specified in Step 2) > **Jobs** > **Site Recovery Jobs**.
 
 You can monitor VM replication by going to the **Recovery Services Vault** > **Replicated Items**.
 
@@ -131,45 +130,10 @@ section).
 
 When registering ASR with a cluster, if a node fails to install ASR or register to the ASR service, your VMs may not be protected. Verify that all nodes in the cluster are registered in the Azure portal by going to the **Recovery Services vault** > **Jobs** > **Site Recovery Jobs**.
 
-## Appendix: Manual steps to create AAD application
+## New-AadAsrApp.ps1 PowerShell Script
 
-1. Log into the Azure Portal at **https://portal.azure.com**.
-2. Go to **Azure Active Directory** > **App Registrations**.
-3. Click **New application registration** to create a new app, and then specify:
-     - **Name:** your choice (ex: “ASR-Honolulu-App”)
-     - **Application type:** 'Web app API'
-     - **Sign-on URL:** http://localhost:<port>
-4. Click **Create**.
-5.  Select the new app, and then click **Manifest** from the top toolbar:
+Copy and paste this code into a PowerShell console or into Notepad and save locally as New-AadAsrApp.ps1.
 
-    ![](../media/honolulu/image1.png)
-
-6.  Change the value of **oauth2AllowImplicitFlow** to **true**.
-
-    ![](../media/honolulu/image2.png)
-
-7. Click **Save**.
-8. Click **Settings** > **Reply URLs**. Add the gateway endpoint to the list with the path ending: “*” (eg: <http://localhost:4200*>) and then click **Save**.
-9. Click **Settings** > **Required permissions**. Click **Add** > Select an API > **Windows Azure Service Management API** > **Select**. In the **Enable Access** form, check **Delegated Permissions** and then click **Done**.
-10. Click '**Settings** > **Required permissions**, and then click **Grant Permissions**.
-11. Find the parameters for **Tenant** and **Client ID** for a PowerShell script you will run in the next step:
-  
-  1. In the AAD Application you just created, copy the **Application ID** listed in the **app pane**. This will be the parameter for **ClientId**
-  2. Click **Azure Active Directory** > **Properties**, and then copy the **Directory ID** listed on the page. This will be the parameter for **Tenant**.
-
-12. Open a PowerShell console and go to folder **C:\Program Files\Project 'Honolulu' (Technical Preview)** on the machine where the gateway is installed and run the **New-AadAsrApp.ps1** PowerShell script  with the following parameters:
-
-    - **gatewayEndpoint:** this is the gateway endpoint, eg: <http://localhost:4200>.
-    - **Tenant:** (from step 11 above)
-    - **ClientId:** (from step 11 above)
-
-for example:  
-    
-    PS C:\Program Files\Project 'Honolulu' (Technical Preview)
-    .New-AadAsrApp.ps1 -gatewayEndpoint **http://localhost:4200** -Tenant <tenantID> -ClientId <client ID>
-
-Following is the code that is in the New-AadAsrApp.ps1 file:
-    
     <#########################################################################################################
 
     File: New-AadAsrApp.ps1
@@ -177,7 +141,7 @@ Following is the code that is in the New-AadAsrApp.ps1 file:
     Copyright (c) Microsoft Corp 2017.
 
     .SYNOPSIS
-    Creates a web app in AAD. If the script is run on the Honolulu gateway, the script will also register the web app to the Honolulu gateway.
+    Creates a web app in AAD and registers the web app to the Honolulu gateway.
 
     .DESCRIPTION
     Create a web application in Azure AD with the name "ASR-Honolulu-<gateway>" (if one does not already exist) and add the application settings to Project 'Honolulu' to enable Azure Site Recovery.
@@ -203,8 +167,8 @@ Following is the code that is in the New-AadAsrApp.ps1 file:
     If not running locally on the Honolulu gateway server, provide the gateway endpoint name
 
     .EXAMPLE
-    .\AsrHonoluluSetup.ps1                                                   #running on internet-connected Honolulu gateway
-    .\AsrHonoluluSetup.ps1 -GatewayEndpoint "https://gateway.contoso.com"    #not running on Honolulu gateway
+    .\New-AadAsrApp.ps1                                                   #running on internet-connected Honolulu gateway
+    .\New-AadAsrApp.ps1 -GatewayEndpoint "https://gateway.contoso.com"    #not running on Honolulu gateway
     #>
 
     #Requires -Version 4.0
@@ -441,3 +405,40 @@ Following is the code that is in the New-AadAsrApp.ps1 file:
 
 
     Write-Output "ASR Honolulu Setup Complete `nTenant ID: $tenant_id `nClient ID: $client_id"
+
+## Appendix: Manual steps to create AAD application
+
+1. Log into the Azure Portal at **https://portal.azure.com**.
+2. Go to **Azure Active Directory** > **App Registrations**.
+3. Click **New application registration** to create a new app, and then specify:
+     - **Name:** your choice (ex: “ASR-Honolulu-App”)
+     - **Application type:** 'Web app API'
+     - **Sign-on URL:** http://localhost:[port]
+4. Click **Create**.
+5.  Select the new app, and then click **Manifest** from the top toolbar:
+
+    ![](../media/honolulu/image1.png)
+
+6.  Change the value of **oauth2AllowImplicitFlow** to **true**.
+
+    ![](../media/honolulu/image2.png)
+
+7. Click **Save**.
+8. Click **Settings** > **Reply URLs**. Add the gateway endpoint to the list with the path ending: “*” (eg: <http://localhost:4200*>) and then click **Save**.
+9. Click **Settings** > **Required permissions**. Click **Add** > Select an API > **Windows Azure Service Management API** > **Select**. In the **Enable Access** form, check **Delegated Permissions** and then click **Done**.
+10. Click '**Settings** > **Required permissions**, and then click **Grant Permissions**.
+11. Find the parameters for **Tenant** and **Client ID** for a PowerShell script you will run in the next step:
+  
+  1. In the AAD Application you just created, copy the **Application ID** listed in the **app pane**. This will be the parameter for **ClientId**
+  2. Click **Azure Active Directory** > **Properties**, and then copy the **Directory ID** listed on the page. This will be the parameter for **Tenant**.
+
+12. Open a PowerShell console and go to folder **C:\Program Files\Project 'Honolulu' (Technical Preview)** on the machine where the gateway is installed. **Set-AadApp.ps1** is included in the Program Files as part of the Project Honolulu download (note that this is a different script the New-AadAsrApp.ps1 provided in this documentation page). Run the **Set-AadApp.ps1** PowerShell script  with the following parameters:
+
+    - **gatewayEndpoint:** this is the gateway endpoint, eg: <http://localhost:4200>.
+    - **Tenant:** (from step 11 above)
+    - **ClientId:** (from step 11 above)
+
+for example:  
+    
+    PS C:\Program Files\Project 'Honolulu' (Technical Preview)> .\Set-AadApp.ps1 -gatewayEndpoint **http://localhost:4200** -Tenant <tenantID> -ClientId <client ID>
+
