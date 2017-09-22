@@ -1,5 +1,5 @@
 ---
-title: Manage with Project Honolulu
+title: Manage Windows Server with Project Honolulu
 description: "How to connect to your Windows Server nodes and start managing them with Honolulu"
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -10,16 +10,16 @@ ms.topic:
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 09/20/2017
+ms.date: 09/21/2017
 ---
 
-# Manage with Project Honolulu #
+# Manage Windows Server with Project Honolulu #
 
 >Applies To: Windows Server, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10
 
-This article describes the management capabilities of Honolulu, and how to connect to your Windows Server nodes and start managing them with Honolulu.
+This article describes the management capabilities of Honolulu, and how to connect to your Windows Server nodes so you can start managing them with Honolulu.
 
-#What Windows Server features can Honolulu manage?
+# What Windows Server features can Honolulu manage?
 
 Honolulu does not yet completely replace the Microsoft Management Console (MMC). Here are its current capabilities:
 

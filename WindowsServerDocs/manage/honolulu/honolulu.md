@@ -38,7 +38,8 @@ Publishing the web server to DNS and setting up the corporate firewall can allow
 
 ## Download the Honolulu Ignite poster ##
 
-![](../media/honolulu/spacer1.png)<a href="https://github.com/MicrosoftDocs/windowsserverdocs/blob/master/WindowsServerDocs/administration/media/honolulu/SME_Ignite2017_Poster.pdf"><img src="../media/honolulu/poster2.png"></a>
+![](../media/honolulu/spacer1.png)<a href="https://github.com/MicrosoftDocs/windowsserverdocs/blob/master/WindowsServerDocs//manage/media/honolulu/SME_Ignite2017_Poster.pdf"><img src="../media/honolulu/poster2.png"></a>
+
 
 ## Supported operating systems ##
 
