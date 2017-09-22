@@ -1,6 +1,6 @@
 # [Manage Windows Server](manage-windows-server.md)
 ## Manage Windows Server systems and environments
-### [Manage on-premises systems with Microsoft Project Honolulu](../manage/honolulu/honolulu-overview.md)
+### [Manage on-premises systems with Microsoft Project Honolulu](../manage/honolulu/honolulu.md)
 #### [Deploy Project Honolulu Gateway](../manage/honolulu/deployment-guide.md)
 #### [Manage Windows Server with Project Honolulu](../manage/honolulu/honolulu-manage.md) 
 ##### [Manage Hyper-Converged Infrastructure with Project Honolulu](../manage/honolulu/honolulu-manage-hci.md)
