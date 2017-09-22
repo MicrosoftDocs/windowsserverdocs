@@ -278,15 +278,15 @@ Virtual Machine Manager is part of the System Center suite, used to configure, m
 
 ![](media/sddc/learn.png)**[Learn more about System Center VMM](https://docs.microsoft.com/en-us/system-center/vmm/)**
 
-### Operations Manager ###
+### Microsoft Project Honolulu ###
 
 ![](media/sddc/management-line.png)
 
-The core functionality of OMS is provided by a set of services that run in Azure. Each service provides a specific management function, and you can combine services to achieve different management scenarios.
+Honolulu is a locally deployed, browser-based, management tool set that enables on-premises administration of Windows Servers with no Azure or cloud dependency. Honolulu gives IT Admins full control over all aspects of their Server infrastructure, and is particularly useful for management on private networks that are not connected to the Internet.
 
-![](media/sddc/spacer1.png)![](media/sddc/oms.png)
+![](media/sddc/spacer1.png)![](media/sddc/honolulu.png)
 
-Just because OMS services run in the cloud doesn't mean that they can't effectively manage your on-premises environment. Log Analytics can help you analyze data collected from cloud or on-premises services. Use Azure Backup and Azure Site Recovery to leverage the cloud for backup and high availability for on-premises resources.
+Publishing the web server to DNS and setting up the corporate firewall can allow you to access Honolulu from the public internet, enabling you to connect to, and manage, your servers from anywhere with Microsoft Edge or Google Chrome.
 
-![](media/sddc/learn.png)**[Learn more about Operations Manager](https://docs.microsoft.com/en-us/system-center/scom/)**
+![](media/sddc/learn.png)**[Learn more about Microsoft Project Honolulu](https://docs.microsoft.com/en-us/windows-server/manage/honolulu/honolulu)**
 
