@@ -21,7 +21,7 @@ ms.date: 08/28/2017
 ![](media/sddc/heading.png)
 
 ## What is Windows Server Software-Defined Datacenter? ##
-
+edit
 Software-Defined Datacenter (SDDC) is a common industry term that generally refers to a datacenter where all of the infrastructure is virtualized. Virtualization is the key, and it simply means that the hardware and software in the datacenter expand beyond a traditional one-to-one ratio. With a software hypervisor emulating hardware, operating systems and applications can be abstracted away from physical hardware, and multiplied to form elastic resource pools of processors, memory, I/O and networks.
  
 Microsoft's implementation of the SDDC consists of the Windows Server technologies highlighted in this article. It starts with the Hyper-V hypervisor that provides the virtualization platform upon which networking and storage are built. Security technologies, developed for the unique challenges of virtualized infrastructure, mitigate internal and external threats. With PowerShell built into Windows Server, and the addition of [System Center](https://docs.microsoft.com/en-us/system-center/) and/or [Operations Management Suite](https://docs.microsoft.com/en-us/azure/operations-management-suite/operations-management-suite-overview), you can program and automate provisioning, deployment, configuration and management.
