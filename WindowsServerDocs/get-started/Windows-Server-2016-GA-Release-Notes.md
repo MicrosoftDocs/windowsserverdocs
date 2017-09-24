@@ -67,7 +67,7 @@ If you install any applications which add shortcut items inside a folder on the 
 
 
 
-Go back to the main [Windows Server 2016](Windows-Server-2016.md) hub.
+Go back to the main [Windows Server 2016](../Windows-Server-2016.md) hub.
 
 ## Copyright  
 This document is provided "as-is". Information and views expressed in this document, including URL and other Internet Web site references, may change without notice.  

@@ -76,7 +76,7 @@ Since Nano Server is new for Windows Server 2016, there isn't an upgrade path fr
 Since Nano Server is new for Windows Server 2016, there isn't migration path from older operating system versions to Nano Server.
   
 -------------------------------------
-If you need a different installation option, you can head [back to the main Windows Server 2016 page](windows-server-2016.md) 
+If you need a different installation option, you can head [back to the main Windows Server 2016 page](../windows-server-2016.md) 
   
 
   
