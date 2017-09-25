@@ -1,4 +1,5 @@
 # [Security and Assurance](security-and-assurance.md)
+## [Beginning your General Data Protection Regulation (GDPR) journey for Windows Server 2016](gdpr/gdpr-winserver-whitepaper.md)
 ## [Device Health attestation](device-health-attestation.md)
 ## [Guarded Fabric and Shielded VMs](https://technet.microsoft.com/windows-server-docs/security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node)
 ## [Disabling System Services in Windows Server 2016](windows-services/security-guidelines-for-disabling-system-services-in-windows-server.md)
