@@ -187,6 +187,8 @@
 ### [QoS Policy Frequently Asked Questions](technologies/qos/qos-policy-faq.md)
 ## [Software Defined Networking (SDN)](sdn/software-defined-networking.md)
 ### [What's New in SDN for Windows Server 1709](sdn/1709/sdn-1709-whats-new.md)
+#### [Virtual Network Encryption](sdn/1709/sdn-1709-vsub-encryption.md)
+#### [Configure Encryption for a Virtual Network](sdn/1709/sdn-1709-config-encryption.md)
 ### [Introduction to Software Defined Networking in Windows Server Datacenter](sdn/sdn-intro.md)
 ### [Software Defined Networking Technologies](sdn/technologies/Software-Defined-Networking-Technologies.md)
 #### [Hyper-V Network Virtualization](sdn/technologies/hyper-v-network-virtualization/Hyper-V-Network-Virtualization.md)
