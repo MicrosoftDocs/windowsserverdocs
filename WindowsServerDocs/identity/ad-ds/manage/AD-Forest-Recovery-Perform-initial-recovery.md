@@ -65,7 +65,7 @@ ms.technology: identity-adfs
   
 5.  On the first restored DC in the forest root domain, seize all domain-wide and forest-wide operations master roles. Enterprise Admins and Schema Admins credentials are needed to seize forest-wide operations master roles.  
   
-     In each child domain, seize domain-wide operations master roles. Although you might retain the operations master roles on the restored DC only temporarily, seizing these roles assures you regarding which DC hosts them at this point in the forest recovery process. As part of your post-recovery process, you can redistribute the operations master roles as needed. For more information about seizing operations master roles, see [Seizing an operations master role](../Topic/Appendix%20A:%20Forest%20Recovery%20Procedures.md#BKMK_Seize_Operations). For recommendations about where to place operations master roles, see [What Are Operations Masters?](https://technet.microsoft.com/en-us/library/cc779716.aspx).  
+     In each child domain, seize domain-wide operations master roles. Although you might retain the operations master roles on the restored DC only temporarily, seizing these roles assures you regarding which DC hosts them at this point in the forest recovery process. As part of your post-recovery process, you can redistribute the operations master roles as needed. For more information about seizing operations master roles, see [Seizing an operations master role](AD-forest-recovery-seizing-operations-master-role.md). For recommendations about where to place operations master roles, see [What Are Operations Masters?](https://technet.microsoft.com/en-us/library/cc779716.aspx).  
   
 6.  Clean up metadata of all other writeable DCs in the forest root domain that you are not restoring from backup (all writeable DCs in the domain except for this first DC). If you use the version of Active Directory Users and Computers or Active Directory Sites and Services that is included with Windows Server 2008 or later or RSAT for Windows Vista or later, metadata cleanup is performed automatically when you delete a DC object. In addition, the server object and computer object for the deleted DC are also deleted automatically. For more information, see [Cleaning metadata of removed writable DCs](AD-Forest-Recovery-Cleaning-Metadata.md).  
   
@@ -106,7 +106,7 @@ ms.technology: identity-adfs
      Because the krbtgt password history is two passwords, reset passwords twice to remove the original (prefailure) password from password history.  
   
     > [!NOTE]
-    >  If the forest recovery is in response to a security breach, you may also reset the trust passwords. For more information, see [Resetting a trust password on one side of the trust](../Topic/Appendix%20A:%20Forest%20Recovery%20Procedures.md#BKMK_ResetTrustPassword).  
+    >  If the forest recovery is in response to a security breach, you may also reset the trust passwords. For more information, see [Resetting a trust password on one side of the trust](AD-Forest-Recovery-Reset-Trust.md).  
   
 12. If the forest has multiple domains and the restored DC was a global catalog server before the failure, clear the **Global catalog** check box in the NTDS Settings properties to remove the global catalog from the DC. The exception to this rule is the common case of a forest with just one domain. In this case, it is not required to remove the global catalog. For more information, see [Removing the global catalog](AD-Forest-Recovery-Remove-GC.md).  
   

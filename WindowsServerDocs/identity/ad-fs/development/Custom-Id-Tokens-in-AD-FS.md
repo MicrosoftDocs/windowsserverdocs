@@ -4,14 +4,16 @@ description: A technical overview of the custom id token conecpts in AD FS 2016
 author: anandyadavmsft
 ms.author: billmath
 manager: femila
-ms.date: 08/24/2017
+ms.date: 09/19/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.reviewer: anandy
 ms.technology: identity-adfs
 ---
 
-# Custom ID Tokens Overview
+# Custom ID Tokens in AD FS
+
+## Overview
 The article [here](Customize-Id-Token-AD-FS-2016.md) shows how to build an app that uses AD FS for OpenID Connect sign on. However, by default there are only a fixed set of claims available in the id_token. AD FS 2016 has the capability to customize the id_token in OpenID Connect scenarios.
 
 ## When are custom ID token used?

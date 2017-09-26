@@ -5,7 +5,7 @@ description: Frequently asked questions for AD FS 2016
 author: jenfieldmsft
 ms.author:  billmath
 manager: femila
-ms.date: 08/18/2017
+ms.date: 09/19/2017
 ms.topic: article
 ms.custom: it-pro
 ms.prod: windows-server-threshold
@@ -42,6 +42,9 @@ HTTP/2 support was added in Windows Server 2016, but HTTP/2 can't be used for cl
 
 ### Is using Windows 2016 WAP Servers to publish the AD FS farm to the internet without upgrading the back-end AD FS farm supported?
 Yes, this configuration is supported, however no new AD FS 2016 features would be supported in this configuration.  This configuration is meant to be temporary during the migration phase from AD FS 2012 R2 to AD FS 2016 and should not be deployed for long periods of time.
+
+### Are third party proxies supported with AD FS?
+Yes, third party proxies can be placed in front of the Web Application Proxy, but any third party proxy must support the [MS-ADFSPIP](https://msdn.microsoft.com/library/dn392811.aspx) protocol to be used in place of the Web Application Proxy.
 
 ## Design
 
@@ -134,3 +137,12 @@ HTTP Strict Transport Security (HSTS) is a web security policy mechanism which h
 All AD FS endpoints for web authentication traffic are opened exclusively over HTTPS.  As a result, AD FS effectively mitigates the threats that HTTP String Transport Security policy mechanism provides (by design there is no downgrade to HTTP since there are no listeners in HTTP). In addition, AD FS prevents the cookies from being sent to another server with HTTP protocol endpoints by marking all cookies with the secure flag.
 
 Therefore, implementing HSTS on an AD FS server is not required because it can never be downgraded.  For compliance purposes, AD FS servers meet these requirements because they can never use HTTP and all cookies are marked secure.
+
+### X-ms-forwarded-client-ip does not contain the IP of the client but contains IP of the firewall in front of the proxy. Where can I get the right IP of the client?
+It is not recommended to do SSL termination before WAP. In case SSL termination is done in front of the WAP, the X-ms-forwarded-client-ip will contain the IP of the network device in front of WAP. Below is a brief description of the various IP related claims that are supported by AD FS:
+ - x-ms-client-ip : Network IP of device which connected to the STS.  In the case of an extranet request this always contains the IP of the WAP.
+ - x-ms-forwarded-client-ip : Multi-valued claim which will contain any values forwarded to ADFS by Exchange Online plus the IP address of the device which connected to the WAP.
+ - Userip: For extranet requests this claim will contain the value of x-ms-forwarded-client-ip.  For intranet requests, this claim will contain the same value as x-ms-client-ip.
+
+### I am trying to get additional claims on the user info endpoint, but its only returning subject. How can I get additional claims?
+The ADFS userinfo endpoint always returns the subject claim as specified in the OpenID standards. AD FS does not provide additional claims requested via the UserInfo endpoint. If you need additional claims in ID token, refer to [Custom ID Tokens in AD FS](../development/custom-id-tokens-in-ad-fs.md).
