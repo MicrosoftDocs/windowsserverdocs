@@ -48,7 +48,7 @@ You can use Honolulu on the following Windows operating systems:
 | **Version**| **Install Honolulu** | **Managed node** via Server Manager, and **managed cluster** via Failover Cluster Mgr | **Managed HCI cluster** via HC Cluster Mgr (early preview)|
 |-------------------------|---------------|-----|------------------------|
 | Windows 10              | Yes (local)   | N/A | N/A                    |
-| Windows Server version 1709| Yes (gateway) | Yes | Yes, on Insider builds |
+| Windows Server, version 1709| Yes (gateway) | Yes | Yes, on Insider builds |
 | Windows Server 2016     | Yes (gateway) | Yes | Future                 |
 | Windows Server 2012 R2  | No            | Yes | N/A                    |
 | Windows Server 2012     | No            | Yes | N/A                    |
