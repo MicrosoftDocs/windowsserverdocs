@@ -310,4 +310,4 @@ Fetching ResourceType:     loadbalancerMuxes
 Fetching ResourceType:     Gateways
 ```
 
-For information on configuration state messages that may appear, see [Troubleshoot the Windows Server 2016 Software Defined Networking Stack](../troubleshoot/troubleshoot-windows-server-2016-software-defined-networking-stack.md).
+For information on configuration state messages that may appear, see [Troubleshoot the Windows Server 2016 Software Defined Networking Stack](https://docs.microsoft.com/windows-server/networking/sdn/troubleshoot/troubleshoot-windows-server-software-defined-networking-stack).

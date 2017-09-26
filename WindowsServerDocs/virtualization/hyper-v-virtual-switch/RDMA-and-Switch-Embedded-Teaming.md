@@ -188,21 +188,21 @@ SET is compatible with the following networking technologies in Windows Server 2
 
 - Virtual Receive Side Scaling \(RSS\)
 
-SET is not compatible with the following networking technologies in  Windows Server 2016.  
+SET is not compatible with the following networking technologies in Windows Server 2016.
 
-- 802.1X authentication
+- 802.1X authentication. 802.1X Extensible Authentication Protocol \(EAP\) packets are automatically dropped by Hyper\-V Virtual Switch in SET scenarios.
+ 
+- IPsec Task Offload \(IPsecTO\). This is a legacy technology that is not supported by most network adapters, and where it does exist, it is disabled by default.
 
-- IPsec Task Offload \(IPsecTO\)
+- Using QoS \(pacer.exe\) in host or native operating systems. These QoS scenarios are not Hyper\-V scenarios, so the technologies do not intersect. In addition, QoS is available but not enabled by default - you must intentionally enable QoS.
 
-- QoS in host or native operating systems
+- Receive side coalescing \(RSC\). RSC is automatically disabled by Hyper\-V Virtual Switch.
 
-- Receive side coalescing \(RSC\)
+- Receive side scaling \(RSS\). Because Hyper-V uses the queues for VMQ and VMMQ, RSS is always disabled when you create a virtual switch.
 
-- Receive side scaling \(RSS\)
+- TCP Chimney Offload. This technology is disabled by default.
 
-- TCP Chimney Offload
-
-- Virtual Machine QoS \(VM-QoS\)
+- Virtual Machine QoS \(VM-QoS\). VM QoS is available but disabled by default. If you configure VM QoS in a SET environment, the QoS settings will cause unpredictable results.
 
 ## <a name="bkmk_modes"></a>SET Modes and Settings
 

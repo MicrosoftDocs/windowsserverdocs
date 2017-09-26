@@ -23,7 +23,7 @@ You can also deploy an SDN infrastructure using Virtual Machine Manager (VMM). F
 ## Pre-deployment  
   
 > [!IMPORTANT]  
-> Before you begin deployment, you must plan and configure your hosts and physical network infrastructure. For more information, see [Plan a Software Defined Network Infrastructure](../../sdn/plan/../../sdn/plan/../../sdn/plan/Plan-a-Software-Defined-Network-Infrastructure.md).  
+> Before you begin deployment, you must plan and configure your hosts and physical network infrastructure. For more information, see [Plan a Software Defined Network Infrastructure](../../sdn/plan/Plan-a-Software-Defined-Network-Infrastructure.md).  
   
 All Hyper-V hosts must have Windows Server 2016 installed.  
   
@@ -135,7 +135,7 @@ If you use Nano as your Hyper-V hosts (physical servers) for the deployment, the
 #### Validation  
 Assuming that the SDN Express script ran to completion without reporting any errors, you can perform the following step to ensure the fabric resources have been deployed correctly and are available for tenant deployment.  
 
-- Use [diagnostic tools](../../sdn/troubleshoot/troubleshoot-windows-server-2016-software-defined-networking-stack.md) to ensure there are no errors on any fabric resources in the network controller.  
+- Use [Diagnostic Tools](https://docs.microsoft.com/windows-server/networking/sdn/troubleshoot/troubleshoot-windows-server-software-defined-networking-stack) to ensure there are no errors on any fabric resources in the network controller.  
       
     ``Debug-NetworkControllerConfigurationState -NetworkController <FQDN of Network Controller Rest Name>``  
         
