@@ -21,7 +21,8 @@ This article describes the System requirements, prerequisites, and steps to inst
 
 ## Supported operating systems ##
 
-You can install Honolulu on the following Windows operating systems:
+You can use Honolulu on the following Windows operating systems:
+
 | **Version**| **Install Honolulu** | **Managed node** via Server Manager, and **managed cluster** via Failover Cluster Mgr | **Managed HCI cluster** via HC Cluster Mgr (early preview)|
 |-------------------------|---------------|-----|------------------------|
 | Windows 10              | Yes (local)   | N/A | N/A                    |

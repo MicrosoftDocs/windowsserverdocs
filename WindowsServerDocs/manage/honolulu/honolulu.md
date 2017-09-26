@@ -10,13 +10,13 @@ ms.topic:
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 09/21/2017
+ms.date: 09/25/2017
 ---
-# Microsoft Project Honolulu #
+# Microsoft Project Honolulu
 
 >Applies To: Windows Server, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 and Windows 10
 
-## What is Honolulu? ##
+## What is Honolulu?
 
 Honolulu is a locally deployed, browser-based, management tool set that enables on-premises administration of Windows Servers with no Azure or cloud dependency. Honolulu gives IT Admins full control over all aspects of their Server infrastructure, and is particularly useful for management on private networks that are not connected to the Internet.
 
@@ -24,7 +24,7 @@ Honolulu is the modern evolution of “in-box” management tools, like Server M
 
 ![](../media/honolulu/honolulu-deploy-graphic.png)
 
-## How does Honolulu work? ##
+## How does Honolulu work?
 
 The Honolulu app runs in a web browser. The app manages Windows Server 2016, Windows Server 2012 R2, and Windows Server 2012 nodes through the Honolulu gateway that you can install on Windows Server 2016 or Windows 10. The gateway manages servers via Remote PowerShell and WMI over WinRM. The app and gateway both install from a single lightweight .msi package that you can download from this link: [https://aka.ms/HonoluluDownload](https://aka.ms/HonoluluDownload)
 
@@ -32,18 +32,19 @@ Publishing the web server to DNS and setting up the corporate firewall can allow
 
 ![](../media/honolulu/spacer1.png)![](../media/honolulu/architecture.png)
 
-## What does Honolulu do? ##
+## What does Honolulu do?
 
 ![](../media/honolulu/spacer1.png)![](../media/honolulu/what-does-it-do.png)
 
-## Download the Honolulu Ignite poster ##
+## Download the Honolulu Ignite poster
 
 ![](../media/honolulu/spacer1.png)<a href="https://github.com/MicrosoftDocs/windowsserverdocs/blob/master/WindowsServerDocs//manage/media/honolulu/SME_Ignite2017_Poster.pdf"><img src="../media/honolulu/poster2.png"></a>
 
 
-## Supported operating systems ##
+## Supported operating systems
 
-You can install Honolulu on the following Windows operating systems:
+You can use Honolulu on the following Windows operating systems:
+
 | **Version**| **Install Honolulu** | **Managed node** via Server Manager, and **managed cluster** via Failover Cluster Mgr | **Managed HCI cluster** via HC Cluster Mgr (early preview)|
 |-------------------------|---------------|-----|------------------------|
 | Windows 10              | Yes (local)   | N/A | N/A                    |
@@ -60,11 +61,11 @@ and that the version is 5.0 or higher.
 
 >If it is not installed, you can [download WMF 5.1](https://www.microsoft.com/en-us/download/details.aspx?id=54616).
 
-## Deployment options ##
+## Deployment options
 
 ![](../media/honolulu/spacer1.png)![](../media/honolulu/deployment.png)
 
-## How permissions work ##
+## How permissions work
 
 When you install Honolulu on Windows 10, you'll be able to open the app from the **Start Menu** or the **System Tray**. The user interface will open in a browser and you'll be authenticated with your logged-in user account, and those credentials will pass through to connect to managed Windows Server nodes.
 
