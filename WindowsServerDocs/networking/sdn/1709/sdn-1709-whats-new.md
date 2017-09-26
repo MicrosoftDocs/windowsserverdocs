@@ -13,6 +13,6 @@ author: jamesmci
 
 You can use the following links to content that is new in Software Defined Networking \(SDN\) for Windows Server 1709.
 
-- [Virtual Subnet Encryption](sdn-1709-vsub-encryption.md)
-- [Configure Encryption for a Virtual Subnet](sdn-1709-config-encryption.md)
+- [Virtual Network Encryption](sdn-1709-vsub-encryption.md)
+- [Configure Encryption for a Virtual Network](sdn-1709-config-encryption.md)
 
