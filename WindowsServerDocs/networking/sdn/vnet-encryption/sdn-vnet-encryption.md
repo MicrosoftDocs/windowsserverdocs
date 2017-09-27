@@ -21,7 +21,7 @@ Virtual Network encryption requries an encryption certificate to be installed on
 
 Once encryption is enabled on a subnet, all network traffic within that subnet is encrypted automatically.  This will be in addition to any application level encryption that may also take place.  Traffic that crosses between subnets, even if both of the subnets are marked as encrypted is automatically sent unencrypted.  Any traffic that crosses the virtual network boundary is also sent unencrypted.
 
-For information on configuring Virtual Network Encryption, see [Configure Encryption for a Virtual Network](./sdn-1709-config-encryption.md).
+For information on configuring Virtual Network Encryption, see [Configure Encryption for a Virtual Network](sdn-config-vnet-encryption.md).
 
 If you must restrict applications to only communicate on the encrypted subnet.  You can use Access Control Lists (ACLs) to only allow communication within the current subnet.  
 
