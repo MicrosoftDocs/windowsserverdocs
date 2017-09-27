@@ -1,15 +1,17 @@
 ---
 title: Virtual Network Encryption
-description: This topic provides information on Virtual Network Encryption for Software Defined Networking in Windows Server, version 1709
+description: This topic provides information on Virtual Network Encryption for Software Defined Networking in Windows Server
 manager: brianlic
 ms.prod: windows-server-threshold
 ms.technology: networking-hv-switch
 ms.topic: get-started-article
 ms.assetid: 7da0f509-7b02-4a0f-90fb-d97c83a2bc4e
 ms.author: jamesmci
-author: 
+author: grcusanz
 ---
 # Virtual Network Encryption
+
+>Applies To: Windows Server
 
 Virtual Network Encryption provides the ability for the virtual network traffic to be encrypted between Virtual Machines that communicate with each other within subnets that are marked as "Encryption Enabled".
 
