@@ -5,7 +5,7 @@ ms.prod: windows-server-threshold
 ms.service: na
 manager: DonGill
 ms.technology: server-nano
-ms.date: 11/02/2016
+ms.date: 09/06/2017
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 599d6438-a506-4d57-a0ea-1eb7ec19f46e
@@ -16,8 +16,11 @@ ms.author: jaimeo
 
 >Applies To: Windows Server 2016
 
+> [!IMPORTANT]
+> Starting in Windows Server, version 1709, Nano Server will be available only as a [container base OS image](/virtualization/windowscontainers/quick-start/using-insider-container-images#install-base-container-image). Check out [Changes to Nano Server](nano-in-semi-annual-channel.md) to learn what this means.   
+
 Nano Server is managed remotely. There is no local logon capability at all, nor does it support Terminal Services. However, you have a wide variety of options for managing Nano Server remotely, including Windows PowerShell, Windows Management Instrumentation (WMI), Windows Remote Management, and Emergency Management Services (EMS).  
-  
+
 To use any remote management tool, you will probably need to know the IP address of the Nano Server. Some ways to find out the IP address include:  
   
 -   Use the Nano Recovery Console (see the Using the Nano Server Recovery Console section of this topic for details).  

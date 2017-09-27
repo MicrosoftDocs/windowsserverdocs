@@ -5,7 +5,7 @@ ms.prod: windows-server-threshold
 ms.service: na
 manager: DonGill
 ms.technology: server-nano
-ms.date: 09/27/2016
+ms.date: 09/06/2017
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 57079470-a1c1-4fdc-af15-1950d3381860
@@ -16,11 +16,13 @@ ms.author: jaimeo
 
 >Applies To: Windows Server 2016
 
+> [!IMPORTANT]
+> Starting in Windows Server, version 1709, Nano Server will be available only as a [container base OS image](/virtualization/windowscontainers/quick-start/using-insider-container-images#install-base-container-image). Check out [Changes to Nano Server](nano-in-semi-annual-channel.md) to learn what this means. 
+
 These topics explain important differences in PowerShell on Nano Server and also provide guidance for developing your own PowerShell cmdlets for use on Nano Server.
 
 - [PowerShell on Nano Server](PowerShell-on-Nano-Server.md)
 - [Developing PowerShell Cmdlets for Nano Server](Developing-PowerShell-Cmdlets-for-Nano-Server.md)
-
 
 ## Using Windows PowerShell remoting  
 To manage Nano Server with Windows PowerShell remoting, you need to add the IP address of the Nano Server to your management computer's list of trusted hosts, add the account you are using to the Nano Server's administrators, and enable CredSSP if you plan to use that feature.  

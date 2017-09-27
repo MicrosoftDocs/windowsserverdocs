@@ -9,10 +9,9 @@ manager: brianlic
 ms.author: jamesmci
 author: jamesmci
 ---
-
 # Configure the Server Infrastructure
 
->Applies To: Windows Server 2016, Windows 10
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows 10
 
 In this section, you install and configure the server-side components necessary to support the VPN, including configuring PKI to distribute the certificates used by users, the VPN server, and the NPS server; configuring RRAS to support IKEv2 connections; and configuring the NPS server to perform authorization for the VPN connections.
 
@@ -20,8 +19,7 @@ In this section, you install and configure the server-side components necessary 
 
 You can configure Group Policy on the domain controller so that domain members automatically request user and computer certificates.
 
-This allows VPN users to automatically request and retrieve user certificates that authenticate VPN connections. Likewise, this policy allows NPS servers to automatically request server authentication certificates. (You will manually enroll certificates on
-VPN servers.)
+This allows VPN users to automatically request and retrieve user certificates that authenticate VPN connections. Likewise, this policy allows NPS servers to automatically request server authentication certificates. (You will manually enroll certificates on VPN servers.)
 
 **To enable certificate autoenrollment in Group Policy**
 
@@ -356,4 +354,4 @@ Unlike the user certificate, you must manually enroll the VPN server’s certifi
 
 7.  Close the Certificates snap-in.
 
-For the next Always On VPN deployment steps, see [Configure the Remote Access Server and NPS Server for Always On VPN](vpn-deploy-ras.md).
+For the next Always On VPN deployment steps, see [Configure the Remote Access Server for Always On VPN](vpn-deploy-ras.md).

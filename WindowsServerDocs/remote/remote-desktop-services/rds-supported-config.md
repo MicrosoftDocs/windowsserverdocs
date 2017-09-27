@@ -32,7 +32,7 @@ So with that in mind, here are basic guidelines for supported configurations of 
 
 - If you upgrade your RD Session Host to Windows Server 2016, also upgrade the license server. Remember that a 2016 license server can process CALs from all previous versions of Windows Server, down to Windows Server 2003.
 
-- Follow the upgrade order recommended in [Upgrading your Remote Desktop Services environment](Upgrade-to-RDS-2016.md#flow-for-deployment-upgrades). 
+- Follow the upgrade order recommended in [Upgrading your Remote Desktop Services environment](upgrade-to-rds.md#flow-for-deployment-upgrades). 
 
 - If you are creating a highly available environment, all of your Connection Brokers need to be at the same OS level.
 

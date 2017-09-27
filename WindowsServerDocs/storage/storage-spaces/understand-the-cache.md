@@ -160,9 +160,9 @@ You can then replace the cache drive just like any other drive replacement.
 
 ## Relationship to other caches
 
-There are several other unrelated caches in the Windows software-defined storage stack. Examples include the Storage Spaces write-back cache, the ReFS read cache, and the Cluster Shared Volume (CSV) in-memory read cache.
+There are several other unrelated caches in the Windows software-defined storage stack. Examples include the Storage Spaces write-back cache and the Cluster Shared Volume (CSV) in-memory read cache.
 
-With Storage Spaces Direct, the Storage Spaces write-back cache and the ReFS read cache should not be modified from their default behavior. For example, parameters such as **-WriteCacheSize** on the **New-Volume** cmdlet should not be used.
+With Storage Spaces Direct, the Storage Spaces write-back cache should not be modified from its default behavior. For example, parameters such as **-WriteCacheSize** on the **New-Volume** cmdlet should not be used.
 
 You may choose to use the CSV cache, or not – it's up to you. It is off by default in Storage Spaces Direct, but it does not conflict with the new cache described in this topic in any way. In certain scenarios it can provide valuable performance gains. For more information, see [How to Enable CSV Cache](https://blogs.msdn.microsoft.com/clustering/2013/07/19/how-to-enable-csv-cache/).
 

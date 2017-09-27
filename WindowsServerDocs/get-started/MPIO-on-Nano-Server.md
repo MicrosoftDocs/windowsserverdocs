@@ -4,7 +4,7 @@ description: "Configuring MPIO on Nano"
 ms.prod: windows-server-threshold
 ms.service: na
 manager: DonGill
-ms.date: 09/26/2016
+ms.date: 09/06/2017
 ms.technology: server-nano
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -16,8 +16,11 @@ ms.author: jaimeo
 
 >Applies To: Windows Server 2016
 
+> [!IMPORTANT]
+> Starting in Windows Server, version 1709, Nano Server will be available only as a [container base OS image](/virtualization/windowscontainers/quick-start/using-insider-container-images#install-base-container-image). Check out [Changes to Nano Server](nano-in-semi-annual-channel.md) to learn what this means. 
+
 This topic introduces the use of MPIO in Nano Server installations of Windows Server 2016. For general information about MPIO in Windows Server, see [Multipath I/O Overview](https://technet.microsoft.com/library/cc725907.aspx).  
-  
+
 ## Using MPIO on Nano Server  
 You can use MPIO on Nano Server, but with these differences:  
   

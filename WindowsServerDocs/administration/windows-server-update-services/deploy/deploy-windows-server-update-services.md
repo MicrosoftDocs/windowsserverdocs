@@ -11,7 +11,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Deploy
+# Deploy Windows Server Update Services
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 

@@ -53,7 +53,7 @@ For more information about removing AD DS using Windows PowerShell, see [Remove 
 Start with adding the role using Windows PowerShell. This command installs the AD DS server role and installs the AD DS and AD LDS server administration tools, including GUI-based tools such as Active Directory Users and Computers and command-line tools such as dcdia.exe. Server administration tools are not installed by default when you use Windows PowerShell. You need to specify **"IncludeManagementTools** to manage the local server or install [Remote Server Administration Tools](http://www.microsoft.com/download/details.aspx?id=28972) to manage a remote server.  
   
 ```  
-Install-windowsfeature -name AD-Domain-Services "IncludeManagementTools  
+Install-windowsfeature -name AD-Domain-Services -IncludeManagementTools  
 <<Windows PowerShell cmdlet and arguments>>  
 ```  
   
@@ -62,19 +62,19 @@ There is no reboot required until after the AD DS installation is complete.
 You can then run this command to see the available cmdlets in the ADDSDeployment module.  
   
 ```  
-Get-command "module ADDSDeployment  
+Get-Command -Module ADDSDeployment
 ```  
   
 To see the list of arguments that can be specified for a cmdlets and syntax:  
   
 ```  
-Get-help <cmdlet name>  
+Get-Help <cmdlet name>  
 ```  
   
 For example, to see the arguments for creating an unoccupied read-only domain controller (RODC) account, type  
   
 ```  
-Get-help Add-ADDSReadOnlyDomainControllerAccount  
+Get-Help Add-ADDSReadOnlyDomainControllerAccount
 ```  
   
 Optional arguments appear in square brackets.  
@@ -83,10 +83,10 @@ You can also download the latest Help examples and concepts for Windows PowerShe
   
 You can run Windows PowerShell cmdlets against remote servers:  
   
--   In Windows PowerShell, use invoke-command with the ADDSDeployment cmdlet. For example, to install AD DS on a remote server named ConDC3 in the contoso.com domain, type:  
+-   In Windows PowerShell, use Invoke-Command with the ADDSDeployment cmdlet. For example, to install AD DS on a remote server named ConDC3 in the contoso.com domain, type:  
   
     ```  
-    invoke-command {install-addsdomaincontroller "domainname contoso.com "credential (get-credential) "computername condc3  
+    Invoke-Command { Install-ADDSDomainController -DomainName contoso.com -Credential (Get-Credential) } -ComputerName ConDC3  
     ```  
   
 -or-  
@@ -110,7 +110,7 @@ The next sections explain how to run ADDSDeployment module cmdlets to install AD
 ### <a name="BKMK_Params"></a>ADDSDeployment cmdlet arguments  
 The following table lists arguments for the ADDSDeployment cmdlets in Windows PowerShell. Arguments in bold are required. Equivalent arguments for dcpromo.exe are listed in parentheses if they are named different in Windows PowerShell.  
   
-Windows PowerShell switches accept $TRUE or $FALSE arguments. Arguments that are $True by default do not need to be specified.  
+Windows PowerShell switches accept $TRUE or $FALSE arguments. Arguments that are $TRUE by default do not need to be specified.  
   
 To override default values, you can specify the argument with a $False value. For example, because **-installdns** is automatically run for a new forest installation if it is not specified, the only way to *prevent* DNS installation when you install a new forest is to use:  
   
@@ -177,7 +177,7 @@ The operation for the -SafeModeAdministratorPassword and LocalAdministratorPassw
 For example, you can manually prompt for a password by using the **Read-Host** cmdlet to prompt the user for a secure string  
   
 ```  
--safemodeadministratorpassword (read-host -prompt "DSRM Password:" -assecurestring)  
+-SafeModeAdministratorPassword (Read-Host -Prompt "DSRM Password:" -AsSecureString)
 ```  
   
 > [!WARNING]  
@@ -186,7 +186,7 @@ For example, you can manually prompt for a password by using the **Read-Host** c
 You can also provide a secure string as a converted clear-text variable, although this is highly discouraged:  
   
 ```  
--safemodeadministratorpassword (convertto-securestring "Password1" -asplaintext -force)  
+-SafeModeAdministratorPassword (ConvertTo-SecureString "Password1" -AsPlainText -Force)
 ```  
   
 > [!WARNING]  
@@ -206,7 +206,7 @@ Each ADDSDeployment cmdlet has a corresponding test cmdlet. The test cmdlets run
 The command syntax for installing a new forest is as follows. Optional arguments appear within square brackets.  
   
 ```  
-Install-ADDSForest [-SkipPreChecks] "DomainName <string> -SafeModeAdministratorPassword <SecureString> [-CreateDNSDelegation] [-DatabasePath <string>] [-DNSDelegationCredential <PS Credential>] [-NoDNSOnNetwork] [-DomainMode <DomainMode> {Win2003 | Win2008 | Win2008R2 | Win2012}] [-DomainNetBIOSName <string>] [-ForestMode <ForestMode> {Win2003 | Win2008 | Win2008R2 | Win2012}] [-InstallDNS] [-LogPath <string>] [-NoRebootOnCompletion] [-SkipAutoConfigureDNS] [-SYSVOLPath] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]  
+Install-ADDSForest [-SkipPreChecks] -DomainName <string> -SafeModeAdministratorPassword <SecureString> [-CreateDNSDelegation] [-DatabasePath <string>] [-DNSDelegationCredential <PS Credential>] [-NoDNSOnNetwork] [-DomainMode <DomainMode> {Win2003 | Win2008 | Win2008R2 | Win2012}] [-DomainNetBIOSName <string>] [-ForestMode <ForestMode> {Win2003 | Win2008 | Win2008R2 | Win2012}] [-InstallDNS] [-LogPath <string>] [-NoRebootOnCompletion] [-SkipAutoConfigureDNS] [-SYSVOLPath] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]  
 ```  
   
 > [!NOTE]  
@@ -215,7 +215,7 @@ Install-ADDSForest [-SkipPreChecks] "DomainName <string> -SafeModeAdministratorP
 For example, to install a new forest named corp.contoso.com and be securely prompted to provide the DSRM password, type:  
   
 ```  
-Install-ADDSForest "domainname "corp.contoso.com"   
+Install-ADDSForest -DomainName "corp.contoso.com"   
 ```  
   
 > [!NOTE]  
@@ -224,14 +224,14 @@ Install-ADDSForest "domainname "corp.contoso.com"
 To install a new forest named corp.contoso.com, create a DNS delegation in the contoso.com domain, set domain functional level to Windows Server 2008 R2 and set forest functional level to Windows Server 2008, install the Active Directory database and SYSVOL on the D:\ drive, install the log files on the E:\ drive, and be prompted to provide the Directory Services Restore Mode password and type:  
   
 ```  
-Install-ADDSForest "DomainName corp.contoso.com "CreateDNSDelegation "DomainMode Win2008 "ForestMode Win2008R2 "DatabasePath "d:\NTDS" "SYSVOLPath "d:\SYSVOL" "LogPath "e:\Logs"   
+Install-ADDSForest -DomainName corp.contoso.com -CreateDNSDelegation -DomainMode Win2008 -ForestMode Win2008R2 -DatabasePath "d:\NTDS" -SYSVOLPath "d:\SYSVOL" -LogPath "e:\Logs"   
 ```  
   
 ### <a name="BKMK_PSDomain"></a>Installing a new child or tree domain using Windows PowerShell  
 The command syntax for installing a new domain is as follows. Optional arguments appear within square brackets.  
   
 ```  
-Install-ADDSDomain [-SkipPreChecks] "NewDomainName <string> -ParentDomainName <string> -SafeModeAdministratorPassword <SecureString> [-ADPrepCredential <PS Credential>] [-AllowDomainReinstall] [-CreateDNSDelegation] [-Credential <PS Credential>] [-DatabasePath <string>] [-DNSDelegationCredential <PS Credential>] [-NoDNSOnNetwork] [-DomainMode <DomainMode> {Win2003 | Win2008 | Win2008R2 | Win2012}] [DomainType <DomainType> {Child Domain | TreeDomain} [-InstallDNS] [-LogPath <string>] [-NoGlobalCatalog] [-NewDomainNetBIOSName <string>] [-NoRebootOnCompletion] [-ReplicationSourceDC <string>] [-SiteName <string>] [-SkipAutoConfigureDNS] [-Systemkey <SecureString>] [-SYSVOLPath] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]  
+Install-ADDSDomain [-SkipPreChecks] -NewDomainName <string> -ParentDomainName <string> -SafeModeAdministratorPassword <SecureString> [-ADPrepCredential <PS Credential>] [-AllowDomainReinstall] [-CreateDNSDelegation] [-Credential <PS Credential>] [-DatabasePath <string>] [-DNSDelegationCredential <PS Credential>] [-NoDNSOnNetwork] [-DomainMode <DomainMode> {Win2003 | Win2008 | Win2008R2 | Win2012}] [DomainType <DomainType> {Child Domain | TreeDomain} [-InstallDNS] [-LogPath <string>] [-NoGlobalCatalog] [-NewDomainNetBIOSName <string>] [-NoRebootOnCompletion] [-ReplicationSourceDC <string>] [-SiteName <string>] [-SkipAutoConfigureDNS] [-Systemkey <SecureString>] [-SYSVOLPath] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]  
 ```  
   
 > [!NOTE]  
@@ -242,69 +242,69 @@ Install-ADDSDomain [-SkipPreChecks] "NewDomainName <string> -ParentDomainName <s
 For example, to use credentials of corp\EnterpriseAdmin1 to create a new child domain named child.corp.contoso.com, install DNS server, create a DNS delegation in the corp.contoso.com domain, set domain functional level to Windows Server 2003, make the domain controller a global catalog server in a site named Houston, use DC1.corp.contoso.com as the replication source domain controller, install the Active Directory database and SYSVOL on the D:\ drive, install the log files on the E:\ drive, and be prompted to provide the Directory Services Restore Mode password but not prompted to confirm the command, type:  
   
 ```  
-Install-ADDSDomain "SafeModeAdministratorPassword "credential (get-credential corp\EnterpriseAdmin1) "NewDomainName child "ParentDomainName corp.contoso.com "InstallDNS "CreateDNSDelegation "DomainMode Win2003 "ReplicationSourceDC DC1.corp.contoso.com "SiteName Houston "DatabasePath "d:\NTDS" "SYSVOLPath "d:\SYSVOL" "LogPath "e:\Logs" "Confirm:$False  
+Install-ADDSDomain -SafeModeAdministratorPassword -Credential (get-credential corp\EnterpriseAdmin1) -NewDomainName child -ParentDomainName corp.contoso.com -InstallDNS -CreateDNSDelegation -DomainMode Win2003 -ReplicationSourceDC DC1.corp.contoso.com -SiteName Houston -DatabasePath "d:\NTDS" "SYSVOLPath "d:\SYSVOL" -LogPath "e:\Logs" -Confirm:$False  
 ```  
   
 ### <a name="BKMK_PSReplica"></a>Installing an additional (replica) domain controller using Windows PowerShell  
 The command syntax for installing an additional domain controller is as follows. Optional arguments appear within square brackets.  
   
 ```  
-Install-ADDSDomainController -DomainName <string> [-SkipPreChecks] "SafeModeAdministratorPassword <SecureString> [-ADPrepCredential <PS Credential>] [-AllowDomainControllerReinstall] [-ApplicationPartitionsToReplicate <string[]>] [-CreateDNSDelegation] [-Credential <PS Credential>] [-CriticalReplicationOnly] [-DatabasePath <string>] [-DNSDelegationCredential <PS Credential>] [-NoDNSOnNetwork] [-NoGlobalCatalog] [-InstallationMediaPath <string>] [-InstallDNS] [-LogPath <string>] [-MoveInfrastructureOperationMasterRoleIfNecessary] [-NoRebootOnCompletion] [-ReplicationSourceDC <string>] [-SiteName <string>] [-SkipAutoConfigureDNS] [-SystemKey <SecureString>] [-SYSVOLPath <string>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]  
+Install-ADDSDomainController -DomainName <string> [-SkipPreChecks] -SafeModeAdministratorPassword <SecureString> [-ADPrepCredential <PS Credential>] [-AllowDomainControllerReinstall] [-ApplicationPartitionsToReplicate <string[]>] [-CreateDNSDelegation] [-Credential <PS Credential>] [-CriticalReplicationOnly] [-DatabasePath <string>] [-DNSDelegationCredential <PS Credential>] [-NoDNSOnNetwork] [-NoGlobalCatalog] [-InstallationMediaPath <string>] [-InstallDNS] [-LogPath <string>] [-MoveInfrastructureOperationMasterRoleIfNecessary] [-NoRebootOnCompletion] [-ReplicationSourceDC <string>] [-SiteName <string>] [-SkipAutoConfigureDNS] [-SystemKey <SecureString>] [-SYSVOLPath <string>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]  
 ```  
   
 To install a domain controller and DNS server in the corp.contoso.com domain and be prompted to supply the domain Administrator credentials and the DSRM password, type:  
   
 ```  
-Install-ADDSDomainController -credential (get-credential corp\administrator) -domainname "corp.contoso.com"   
+Install-ADDSDomainController -Credential (Get-Credential CORP\Administrator) -DomainName "corp.contoso.com"
 ```  
   
 If the computer is already domain joined and you are a member of the Domain Admins group, you can use:  
   
 ```  
-Install-ADDSDomainController -domainname "corp.contoso.com"  
+Install-ADDSDomainController -DomainName "corp.contoso.com"  
 ```  
   
 To be prompted for the domain name, type:  
   
 ```  
-Install-ADDSDomainController -credential (get-credential) -domainname (read-host "Domain to promote into")  
+Install-ADDSDomainController -Credential (Get-Credential) -DomainName (Read-Host "Domain to promote into")
 ```  
   
 The following command will use credentials of Contoso\EnterpriseAdmin1 to install a writable domain controller and a global catalog server in a site named Boston, install DNS server, create a DNS delegation in the contoso.com domain, install from media that is stored in the c:\ADDS IFM folder, install the Active Directory database and SYSVOL on the D:\ drive, install the log files on the E:\ drive, have the server automatically restart after AD DS installation is complete, and be prompted to provide the Directory Services Restore Mode password:  
   
 ```  
-Install-ADDSDomainController "Credential (get-credential contoso\EnterpriseAdmin1) "CreateDNSDelegation "DomainName corp.contoso.com "SiteName Boston "InstallationMediaPath "c:\ADDS IFM" "DatabasePath "d:\NTDS" "SYSVOLPath "d:\SYSVOL" "LogPath "e:\Logs"   
+Install-ADDSDomainController -Credential (Get-Credential CONTOSO\EnterpriseAdmin1) -CreateDNSDelegation -DomainName corp.contoso.com -SiteName Boston -InstallationMediaPath "c:\ADDS IFM" -DatabasePath "d:\NTDS" -SYSVOLPath "d:\SYSVOL" -LogPath "e:\Logs"   
 ```  
   
 ### Performing a staged RODC installation using Windows PowerShell  
 The command syntax to create an RODC account is as follows. Optional arguments appear within square brackets.  
   
 ```  
-Add-ADDSReadOnlyDomainControllerAccount [-SkipPreChecks] "DomainControllerAccuntName <string> -DomainName <string> -SiteName <string> [-AllowPasswordReplicationAccountName <string []>] [-NoGlobalCatalog] [-Credential <PS Credential>] [-DelegatedAdministratorAccountName <string>] [-DenyPasswordReplicationAccountName <string []>] [-InstallDNS] [-ReplicationSourceDC <string>] [-Force] [-WhatIf] [-Confirm] [<Common Parameters>]  
+Add-ADDSReadOnlyDomainControllerAccount [-SkipPreChecks] -DomainControllerAccuntName <string> -DomainName <string> -SiteName <string> [-AllowPasswordReplicationAccountName <string []>] [-NoGlobalCatalog] [-Credential <PS Credential>] [-DelegatedAdministratorAccountName <string>] [-DenyPasswordReplicationAccountName <string []>] [-InstallDNS] [-ReplicationSourceDC <string>] [-Force] [-WhatIf] [-Confirm] [<Common Parameters>]  
 ```  
   
 The command syntax to attach a server to an RODC account is as follows. Optional arguments appear within square brackets.  
   
 ```  
-Install-ADDSDomainController -DomainName <string> [-SkipPreChecks] "SafeModeAdministratorPassword <SecureString> [-ADPrepCredential <PS Credential>] [-ApplicationPartitionsToReplicate <string[]>] [-Credential <PS Credential>] [-CriticalReplicationOnly] [-DatabasePath <string>] [-NoDNSOnNetwork] [-InstallationMediaPath <string>] [-InstallDNS] [-LogPath <string>] [-MoveInfrastructureOperationMasterRoleIfNecessary] [-NoRebootOnCompletion] [-ReplicationSourceDC <string>] [-SkipAutoConfigureDNS] [-SystemKey <SecureString>] [-SYSVOLPath <string>] [-UseExistingAccount] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]  
+Install-ADDSDomainController -DomainName <string> [-SkipPreChecks] -SafeModeAdministratorPassword <SecureString> [-ADPrepCredential <PS Credential>] [-ApplicationPartitionsToReplicate <string[]>] [-Credential <PS Credential>] [-CriticalReplicationOnly] [-DatabasePath <string>] [-NoDNSOnNetwork] [-InstallationMediaPath <string>] [-InstallDNS] [-LogPath <string>] [-MoveInfrastructureOperationMasterRoleIfNecessary] [-NoRebootOnCompletion] [-ReplicationSourceDC <string>] [-SkipAutoConfigureDNS] [-SystemKey <SecureString>] [-SYSVOLPath <string>] [-UseExistingAccount] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]  
 ```  
   
 For example, to create an RODC account named RODC1:  
   
 ```  
-Add-ADDSReadOnlyDomainControllerAccount "DomainControllerAccountName RODC1 "DomainName corp.contoso.com "SiteName Boston DelegatedAdministratoraccountName PilarA  
+Add-ADDSReadOnlyDomainControllerAccount -DomainControllerAccountName RODC1 -DomainName corp.contoso.com -SiteName Boston DelegatedAdministratoraccountName PilarA  
 ```  
   
 Then run the following commands on the server that you want to attach to the RODC1 account. The server cannot be joined to the domain. First, install the AD DS server role and management tools:  
   
 ```  
-install-windowsfeature "name AD-Domain-Services -includemanagementtools  
+Install-WindowsFeature -Name AD-Domain-Services -IncludeManagementTools
 ```  
   
 The run the following command to create the RODC:  
   
 ```  
-Install-ADDSDomainController "DomainName corp.contoso.com "SafeModeAdministratorPassword (read-host "prompt "DSRM Password:" "assecurestring) "credential (get-credential Corp\PilarA) -useexistingaccount  
+Install-ADDSDomainController -DomainName corp.contoso.com -SafeModeAdministratorPassword (Read-Host -Prompt "DSRM Password:" -AsSecureString) -Credential (Get-Credential Corp\PilarA) -UseExistingAccount
 ```  
   
 Press **Y** to confirm or include the **"confirm** argument to prevent the confirmation prompt.  
@@ -534,4 +534,6 @@ After an RODC account is created, you can attach a server to account to complete
 [Install a New Windows Server 2012 Active Directory Child or Tree Domain &#40;Level 200&#41;](../../ad-ds/deploy/Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-.md)  
 [Install a Replica Windows Server 2012 Domain Controller in an Existing Domain &#40;Level 200&#41;](../../ad-ds/deploy/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-.md)  
   
+
+
 

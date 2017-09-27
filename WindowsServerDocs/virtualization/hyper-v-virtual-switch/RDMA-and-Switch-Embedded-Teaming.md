@@ -82,7 +82,7 @@ If SET is not required for your deployment, you can use the following Windows Po
 Add host vNICs and make them RDMA capable:
 
     Add-VMNetworkAdapter -SwitchName RDMAswitch -Name SMB_1
-    Enable-NetAdapterRDMA "vEthernet (SMB_1)"
+    Enable-NetAdapterRDMA "vEthernet (SMB_1)" "SLOT 2"
 
 Verify RDMA capabilities:
 
@@ -92,23 +92,26 @@ Verify RDMA capabilities:
 
 To make use of RDMA capabilies on Hyper-V host virtual network adapters \(vNICs\) on a Hyper-V Virtual Switch that supports RDMA teaming, you can use these example Windows PowerShell commands.
 
-
     New-VMSwitch -Name SETswitch -NetAdapterName "SLOT 2","SLOT 3" -EnableEmbeddedTeaming $true
 
-Add host vNICs and make them RDMA capable:
+Add host vNICs:
 
     Add-VMNetworkAdapter -SwitchName SETswitch -Name SMB_1 -managementOS
     Add-VMNetworkAdapter -SwitchName SETswitch -Name SMB_2 -managementOS
-    Enable-NetAdapterRDMA "vEthernet (SMB_1)","vEthernet (SMB_2)"
+
+Many switches won't pass traffic class information on untagged VLAN traffic, so make sure that the host adapters for RDMA are on VLANs. This example assigns the two SMB_* host virtual adapters to VLAN 42.
+    
+    Set-VMNetworkAdapterIsolation -ManagementOS -VMNetworkAdapterName SMB_1  -IsolationMode VLAN -DefaultIsolationID 42
+    Set-VMNetworkAdapterIsolation -ManagementOS -VMNetworkAdapterName SMB_2  -IsolationMode VLAN -DefaultIsolationID 42
+    
+
+Enable RDMA on Host vNICs:
+
+    Enable-NetAdapterRDMA "vEthernet (SMB_1)","vEthernet (SMB_2)" "SLOT 2", "SLOT 3"
 
 Verify RDMA capabilities; ensure that the capabilities are non-zero:
 
     Get-NetAdapterRdma | fl *
-
-Many switches won't pass traffic class information on untagged VLAN traffic, so make sure host adapters for RDMA are on VLANs. This example assigns the two SMB_* host virtual adapters to VLAN 42.
-
-    Set-VMNetworkAdapterIsolation -ManagementOS -VMNetworkAdapterName SMB_1  -IsolationMode VLAN -DefaultIsolationID 42
-    Set-VMNetworkAdapterIsolation -ManagementOS -VMNetworkAdapterName SMB_2  -IsolationMode VLAN -DefaultIsolationID 42
 
 
 ## <a name="bkmk_sswitchembedded"></a>Switch Embedded Teaming (SET)  
@@ -185,21 +188,21 @@ SET is compatible with the following networking technologies in Windows Server 2
 
 - Virtual Receive Side Scaling \(RSS\)
 
-SET is not compatible with the following networking technologies in  Windows Server 2016.  
+SET is not compatible with the following networking technologies in Windows Server 2016.
 
-- 802.1X authentication
+- 802.1X authentication. 802.1X Extensible Authentication Protocol \(EAP\) packets are automatically dropped by Hyper\-V Virtual Switch in SET scenarios.
+ 
+- IPsec Task Offload \(IPsecTO\). This is a legacy technology that is not supported by most network adapters, and where it does exist, it is disabled by default.
 
-- IPsec Task Offload \(IPsecTO\)
+- Using QoS \(pacer.exe\) in host or native operating systems. These QoS scenarios are not Hyper\-V scenarios, so the technologies do not intersect. In addition, QoS is available but not enabled by default - you must intentionally enable QoS.
 
-- QoS in host or native operating systems
+- Receive side coalescing \(RSC\). RSC is automatically disabled by Hyper\-V Virtual Switch.
 
-- Receive side coalescing \(RSC\)
+- Receive side scaling \(RSS\). Because Hyper-V uses the queues for VMQ and VMMQ, RSS is always disabled when you create a virtual switch.
 
-- Receive side scaling \(RSS\)
+- TCP Chimney Offload. This technology is disabled by default.
 
-- TCP Chimney Offload
-
-- Virtual Machine QoS \(VM-QoS\)
+- Virtual Machine QoS \(VM-QoS\). VM QoS is available but disabled by default. If you configure VM QoS in a SET environment, the QoS settings will cause unpredictable results.
 
 ## <a name="bkmk_modes"></a>SET Modes and Settings
 

@@ -644,7 +644,7 @@ Now you will manage and operate your stretch cluster. You can perform all of the
         > In Windows Server 2016, you may need to use Failover Cluster Manager or Move-ClusterGroup to move the destination disks back to the other site manually after the nodes come back online.  
 
         > [!NOTE]
-        > Storage Replica dismounts the destination volumes and their drive letters or mount points. This is by design.  
+        > Storage Replica dismounts the destination volumes. This is by design.  
 
 4.  To change the log size from the default 8GB in Windows Server 2016, right-click both the source and destination log disks, click the **Replication Log** tab, then change the sizes on both the  disks to match.  
 
@@ -748,7 +748,7 @@ Now you will manage and operate your stretch cluster. You can perform all of the
     3.  To perform unplanned failover the replication direction from one site to another: cut power to both nodes in one site.  
 
         > [!NOTE]  
-        > Storage Replica dismounts the destination volumes and their drive letters or mount points. This is by design.  
+        > Storage Replica dismounts the destination volumes. This is by design.  
 
 4.  To change the log size from the default 8GB in Windows Server 2016, use **Set-SRGroup** on both the source and destination Storage Replica Groups.   For example, to set all logs to 2GB:  
 

@@ -9,10 +9,9 @@ manager: brianlic
 ms.author: jamesmci
 author: jamesmci
 ---
-
 # Configure Windows 10 Client Always On VPN Connections
 
->Applies To: Windows Server 2016, Windows 10
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows 10
 
 After setting up the server infrastructure, you must configure the Windows 10 client computers to communicate with that infrastructure with a VPN connection. 
 
@@ -40,13 +39,6 @@ You use ProfileXML in all the delivery methods this guide describes, including W
 Even though these configuration methods differ, both require a properly formatted XML VPN profile. To use the ProfileXML VPNv2 CSP setting, you construct XML by using the ProfileXML schema to configure the tags necessary for the simple deployment scenario. For more details, see [ProfileXML XSD](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/vpnv2-profile-xsd).
 
 In the section “Infrastructure requirements,” Table 1 provided an overview of the individual settings for the VPN client. Below is each of those required settings and its corresponding ProfileXML tag. You configure each setting in a specific tag within the ProfileXML schema, and not all of them are found under the native profile. For additional tag placement, see the ProfileXML schema.
-
-**Connection type**: Native IKEv2
-
-ProfileXML element:
-
-`<NativeProtocolType>IKEv2</NativeProtocolType>`
-
 
 **Connection type:** Native IKEv2
 
@@ -252,6 +244,8 @@ is also used as the primary connection specific DNS suffix for the VPN Interface
 
 **$TrustedNetwork**. Comma separated string to identify the trusted network. VPN will not connect automatically when the user is on their corporate wireless network where protected resources are directly accessible to the device.
 
+**$IpRanges**. List of comma separated IP address ranges (in CIDR notation) on the Internal network. If the DNS Server IP addresses above are not in the DMZ, their subnet(s) need routes to be dynamically created when the VPN is connected.
+
 Following are example values for parameters used in the commands below. Ensure that you change these values for your environment.
 
     $TemplateName = 'Template'
@@ -261,6 +255,7 @@ Following are example values for parameters used in the commands below. Ensure t
     $DomainName = '.corp.contoso.com'
     $DNSServers = '10.10.0.2,10.10.0.3'
     $TrustedNetwork = 'corp.contoso.com'
+    $IpRanges = '10.10.0.0/16'
 
 ### Prepare and create the profile XML
 
@@ -405,6 +400,10 @@ You can use this script on the Windows 10 desktop or in System Center Configurat
     	$newInstance.CimInstanceProperties.Add($property)
     	$session.CreateInstance($namespaceName, $newInstance, $options)
     	$Message = "Created $ProfileName profile."
+	$IpRanges.Split(",") | % 
+	{
+		Add-VpnConnectionRoute -ConnectionName $ProfileNameEscaped -DestinationPrefix $_
+	}
     	Write-Host "$Message"
     }
     catch [Exception]
@@ -442,6 +441,7 @@ The following example script includes all of the code examples from previous sec
     $DomainName = '.corp.contoso.com'
     $DNSServers = '10.10.0.2,10.10.0.3'
     $TrustedNetwork = 'corp.contoso.com'
+    $IpRanges = '10.10.0.0/16'
     
     $Connection = Get-VpnConnection -Name $TemplateName
     if(!$Connection)
@@ -548,6 +548,10 @@ The following example script includes all of the code examples from previous sec
     	$newInstance.CimInstanceProperties.Add($property)
     	$session.CreateInstance($namespaceName, $newInstance, $options)
     	$Message = "Created $ProfileName profile."
+	$IpRanges.Split(",") | % 
+	{
+		Add-VpnConnectionRoute -ConnectionName $ProfileNameEscaped -DestinationPrefix $_
+	}
     	Write-Host "$Message"
     }
     catch [Exception]
@@ -572,7 +576,7 @@ To configure the VPNv2 CSP on a Windows 10 client computer, run the VPN_Profile.
 
 After running VPN_Profile.ps1 to configure the VPN profile, you can verify at any time that it was successful by running the following command in the Windows PowerShell ISE:
 
-    Get-WmiObject -Namespace root\\cimv2\\mdm\\dmmap -Class MDM_VPNv2_01
+    Get-WmiObject -Namespace root\cimv2\mdm\dmmap -Class MDM_VPNv2_01
 
 Successful results look similar to Listing 2.
 
