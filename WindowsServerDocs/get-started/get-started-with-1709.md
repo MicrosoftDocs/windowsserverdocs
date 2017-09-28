@@ -1,0 +1,43 @@
+---
+title: Get started with Windows Server, version 1709
+description: How to obtain, install, and activate
+ms.prod: Windows Server
+ms.mktglfcycl: manage
+ms.sitesec: library
+author: jaimeo
+ms.localizationpriority: high
+ms.date: 
+ms.tgt_pltfrm: na
+ms.topic: get-started-article
+ms.assetid: 9cf87597-b15d-4f43-8aa1-91e60367f011
+---
+# Windows Server Semi-Annual Channel Overview
+
+>Applies To: Windows Server (Semi-Annual Channel)
+
+Windows Server, version 1709 is the first release in the new Semi-Annual Channel. For more about Semi-Annual Channel see [Semi-Annual Channel Overview].
+
+Semi-Annual Channel releases such as this one are ideal for customers who are moving at a “cloud cadence," such as those on rapid development cycles or hosters keeping up with the latest Hyper-V investments. Windows Server products in the Semi-Annual Channel will have new releases available twice a year, in spring and fall. Each release in this channel will be supported for 18 months from the initial release.
+
+**The current LTSC product is Windows Server 2016**. If you want to stay in this channel, you should install (or continue using) Windows Server 2016, which can be installed in either Server Core mode or Server with Desktop Experience Mode. See [Get Started with Windows Server 2016](https://docs.microsoft.com/windows-server/get-started/server-basic) for details.
+
+## What's different about 1709?
+
+Windows Server, version 1709 runs in Server Core mode. That means there is no local console or graphical user interface, so you manage it remotely. However, it offers great advantages such as smaller hardware requirements, much smaller attack surface, and a reduction in the need for updates. If you're new to working with Server Core, [LINK] will help you get used to this environment. [LINK] shows you the various options for managing servers remotely.
+
+[What's new in Windows Server] introduces you to the new features and functionality added in Windows Server, version 1709.
+
+### What about Nano Server?
+Nano Server is available as a container operating system. See [Changes in Nano Server] for details.
+
+## Where to obtain Windows Server, version 1709
+
+This release should be installed as a clean installation.
+
+- VLSC: customers who are members of Software Assurance
+from hosting providers
+through loyalty programs
+
+## Installing?
+
+## Activating Windows Server, version 1709

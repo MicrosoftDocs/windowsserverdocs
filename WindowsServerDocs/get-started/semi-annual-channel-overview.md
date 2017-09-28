@@ -31,7 +31,7 @@ Most of the features introduced in the Semi-annual Channel will be rolled up int
 
 The Semi-annual Channel will be available to volume-licensed customers with [Software Assurance](https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-default.aspx), as well as via the Azure Marketplace or other cloud/hosting service providers and loyalty programs such as MSDN.
 
-
+**The current LTSC product is Windows Server 2016**. If you want to stay in this channel, you should install (or continue using) Windows Server 2016, which can be installed in Server Core mode or Server with Desktop Experience Mode. See [Get Started with Windows Server 2016](https://docs.microsoft.com/windows-server/get-started/server-basic) for details.
 
 
 ![Semi-annual Channel release timing](./media/SAC-release-timing.png)
