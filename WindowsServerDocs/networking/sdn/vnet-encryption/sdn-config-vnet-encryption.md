@@ -1,15 +1,17 @@
 ---
 title: Configure Encryption for a Virtual Network
-description: This topic provides information on Virtual Network Encryption for Software Defined Networking in Windows Server, version 1709
+description: This topic provides information on Virtual Network Encryption for Software Defined Networking in Windows Server
 manager: brianlic
 ms.prod: windows-server-threshold
 ms.technology: networking-hv-switch
 ms.topic: get-started-article
 ms.assetid: 378213f5-2d59-4c9b-9607-1fc83f8072f1
 ms.author: jamesmci
-author: 
+author: grcusanz
 ---
 # Configure Encryption for a Virtual Subnet
+
+>Applies To: Windows Server
 
 This topic contains the following sections which describe the steps required to enable encryption on a Virtual Network.
 
