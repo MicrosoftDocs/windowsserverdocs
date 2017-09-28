@@ -5,6 +5,7 @@ ms.prod: w10
 ms.mktglfcycl: manage
 ms.sitesec: library
 ms.pagetype: store
+ms.technology: server-general
 author: TrudyHa
 ms.author: TrudyHa
 ms.date: 09/27/2017
