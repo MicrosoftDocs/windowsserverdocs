@@ -34,17 +34,20 @@ The following features and functionalities are being considered for replacement 
 If you have feedback about the proposed replacement of any of these features, contact us at [FEEDBACK LINK].
 
 ### IIS 6 Management compatibility
-Specific DISM features being considered for replacement are:
+Specific features being considered for replacement are:
 
 - IIS 6 Metabase Compatibility (Web-Metabase)
 - IIS 6 Management Console (Web-Lgcy-Mgmt-Console)
 - IIS 6 Scripting Tools (Web-Lgcy-Scripting)
 - IIS 6 WMI Compatibility (Web-WMI)
 
-Instead, you should start migration to IIS 7.0, which offers superior console and scripting tools. See [IIS 7 Installation and Deployment](https://technet.microsoft.com/library/ee692294(v=ws.10).aspx) to get started with IIS 7.0.
+Instead of IIS 6 Metabase Compatibility (which acts as an emulation layer between IIS 6-based metabase scripts and the file-based configuration used by  IIS 7 or newer versions) you should start migrating management scripts to target IIS file-based configuration directly, by using tools such as the Microsoft.Web.Administration namespace.
+
+You should also start migration from IIS 6.0 or earlier versions, and move to the latest version of IIS, which is always available in the most recent release of Windows Server.
+
 
 ### IIS Digest Authentication
-This authentication method is planned for replacement because it has security issues. Instead, you should start using other authentication methods such as Client Certificate Mapping (see [Configuring One-to-One Client Certificate Mappings](https://docs.microsoft.com/iis/manage/configuring-security/configuring-one-to-one-client-certificate-mappings)) or Windows Authentication (see [Application Settings](https://docs.microsoft.com/iis-administration/configuration/appsettings.json)).
+This authentication method is planned for replacement. Instead, you should start using other authentication methods such as Client Certificate Mapping (see [Configuring One-to-One Client Certificate Mappings](https://docs.microsoft.com/iis/manage/configuring-security/configuring-one-to-one-client-certificate-mappings)) or Windows Authentication (see [Application Settings](https://docs.microsoft.com/iis-administration/configuration/appsettings.json)).
 
 ### Internet Storage Name Service (iSNS)
 iSNS is being considered for replacement. The Server Message Block (SMB) feature offers essentially the same functionality with additional features. See [Server Message Block Overview](https://technet.microsoft.com/library/hh831795(v=ws.11).aspx) for background information on this feature.
