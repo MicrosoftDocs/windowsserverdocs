@@ -34,9 +34,13 @@ Nano Server is available as a container operating system. See [Changes in Nano S
 
 This release should be installed as a clean installation.
 
-- VLSC: customers who are members of Software Assurance
-from hosting providers
-through loyalty programs
+- VLSC: Volume-licensed customers with [Software Assurance](https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-default.aspx) can obtain this release by going to [LINK] and [doing something].
+
+- If you use a hosting provider such as Microsoft Azure or Amazon Web Services, Windows Server, version 1709 is available through those services.
+
+- Participants in these loyalty programs can obtain this release:
+Visual Studio Subscriptions
+
 
 ## Installing?
 
