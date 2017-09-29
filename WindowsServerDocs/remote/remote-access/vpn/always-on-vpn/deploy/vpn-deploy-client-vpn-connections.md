@@ -4,6 +4,7 @@ description: This topic provides detailed instructions for deploying Always On V
 ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
+ms.date: 
 ms.assetid: d165822d-b65c-40a2-b440-af495ad22f42
 manager: brianlic
 ms.author: jamesmci
@@ -244,8 +245,6 @@ is also used as the primary connection specific DNS suffix for the VPN Interface
 
 **$TrustedNetwork**. Comma separated string to identify the trusted network. VPN will not connect automatically when the user is on their corporate wireless network where protected resources are directly accessible to the device.
 
-**$IpRanges**. List of comma separated IP address ranges (in CIDR notation) on the Internal network. If the DNS Server IP addresses above are not in the DMZ, their subnet(s) need routes to be dynamically created when the VPN is connected.
-
 Following are example values for parameters used in the commands below. Ensure that you change these values for your environment.
 
     $TemplateName = 'Template'
@@ -255,7 +254,7 @@ Following are example values for parameters used in the commands below. Ensure t
     $DomainName = '.corp.contoso.com'
     $DNSServers = '10.10.0.2,10.10.0.3'
     $TrustedNetwork = 'corp.contoso.com'
-    $IpRanges = '10.10.0.0/16'
+
 
 ### Prepare and create the profile XML
 
@@ -400,10 +399,8 @@ You can use this script on the Windows 10 desktop or in System Center Configurat
     	$newInstance.CimInstanceProperties.Add($property)
     	$session.CreateInstance($namespaceName, $newInstance, $options)
     	$Message = "Created $ProfileName profile."
-	$IpRanges.Split(",") | % 
-	{
-		Add-VpnConnectionRoute -ConnectionName $ProfileNameEscaped -DestinationPrefix $_
-	}
+
+
     	Write-Host "$Message"
     }
     catch [Exception]
@@ -441,7 +438,7 @@ The following example script includes all of the code examples from previous sec
     $DomainName = '.corp.contoso.com'
     $DNSServers = '10.10.0.2,10.10.0.3'
     $TrustedNetwork = 'corp.contoso.com'
-    $IpRanges = '10.10.0.0/16'
+
     
     $Connection = Get-VpnConnection -Name $TemplateName
     if(!$Connection)
@@ -548,10 +545,7 @@ The following example script includes all of the code examples from previous sec
     	$newInstance.CimInstanceProperties.Add($property)
     	$session.CreateInstance($namespaceName, $newInstance, $options)
     	$Message = "Created $ProfileName profile."
-	$IpRanges.Split(",") | % 
-	{
-		Add-VpnConnectionRoute -ConnectionName $ProfileNameEscaped -DestinationPrefix $_
-	}
+
     	Write-Host "$Message"
     }
     catch [Exception]
