@@ -164,3 +164,5 @@ manager: dongill
 |Server license logging|Yes|Yes|
 |Inherited activation|As guest if hosted on Datacenter|Can be host or guest|
 |Work folders|Yes|Yes|
+
+Not finding content you need? Windows 10 users, tell us what you want on [Feedback Hub](feedback-hub:?tabid=2&contextid=898). 
