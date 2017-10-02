@@ -24,7 +24,6 @@ You can use the Remote Desktop client for Mac to work with Windows apps, resourc
 > - The Mac client runs on computers running macOS/OS 10.7 and newer.
 > - The information in this article applies primarily to the full version of the Mac client - the version available in the Mac AppStore. The latest Mac client beta does not yet have support for all of the features described below. For more information about the beta and what is available in that client, check out the [beta client release notes](http://go.microsoft.com/fwlink/?LinkID=619698&clcid=0x409).
 
-
 ## Get the Remote Desktop client
 Follow these steps to get started with Remote Desktop on your Mac:
 
@@ -160,3 +159,5 @@ To learn more about this feature, check out [http://aka.ms/paa-sample](http://ak
 
 > [!TIP]
 > Questions and comments are always welcome. However, please do NOT post a request for troubleshooting help by using the comment feature at the end of this article. Instead, go to the [Remote Desktop client forum](http://social.technet.microsoft.com/forums/windowsserver/en-us/home?forum=winrdc) and start a new thread. Have a feature suggestion? Tell us in the [client user voice forum](https://remotedesktop.uservoice.com/forums/272085-remote-desktop-for-android).
+
+Not finding content you need? Windows 10 users, tell us what you want on [Feedback Hub](feedback-hub:?tabid=2&contextid=898). 
