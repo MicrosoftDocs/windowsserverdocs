@@ -97,7 +97,7 @@ For details, see [Import-VM](https://technet.microsoft.com/library/hh848495.aspx
 
 Hyper-V offers three import types:
 
-- **Register in-place** – This type assumes export files are in the location where you'll store and run the virtual machine. The imported virtual machine has the same ID as it did at the time of export. Because of this, if the virtual machine is already registered with Hyper-V, it needs to be deleted before the import will work. When the import has completed, the export files become the running state files and can't be removed.
+- **Register in-place** – This type assumes export files are in the location where you'll store and run the virtual machine. The imported virtual machine has the same ID as it did at the time of export. Because of this, if the virtual machine is already registered with Hyper-V, it needs to be deleted before the import works. When the import has completed, the export files become the running state files and can't be removed.
 
 - **Restore the virtual machine** – Restore the virtual machine to a location you choose, or use the default to Hyper-V. This import type creates a copy of the exported files and moves them to the selected location. When imported, the virtual machine has the same ID as it did at the time of export. Because of this, if the virtual machine is already running in Hyper-V, it needs to be deleted before the import can be completed. When the import has completed, the exported files remain intact and can be removed or imported again.
 
