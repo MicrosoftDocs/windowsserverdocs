@@ -6,7 +6,7 @@ ms.technology: manage
 ms.topic: article
 author: lizap
 ms.author: elizapo
-ms.date: 09/08/2017
+ms.date: 09/29/2017
 ---
 # Manage Windows Server 2016
 
@@ -14,21 +14,25 @@ ms.date: 09/08/2017
 
  <img src="../get-started/media/8-management.png" style='float:left; padding:.5em;' alt="Icon showing a gear"> Once you have deployed Windows Server into your environment, including the specific roles for the features and functions you need, the next step is managing those servers. Windows Server includes a number of tools to help you understand your Windows Server environment, manage specific servers, fine-tune performance, and eventually automate many management tasks. 
 
+<br>
 
 ## Manage Windows Server systems and environments
 The tools you use to manage Windows Server instances depend, in large amount, on the types of systems you have deployed (Windows Server with Desktop Experience vs Server Core), physical versus virtual machines, and where your servers are located. Use the following information to perform basic management tasks on Windows Server.
 
 Use the following table to determine which tools to use when.
 
-| I am                                                                               | Run Server Manager on Windows Server                       | Run Server Manager in RSAT on Windows 10 |
-|------------------------------------------------------------------------------------|------------------------------------------------------------|------------------------------------------|
-| Sitting at a Windows 10 PC |                                                           | X                                        |
-| Sitting at a Windows Server system running the desktop experience                  | X                                                          | X                                        |
-| Sitting at a Windows Server system running Server Core                             |                                                            | X                                        |
-| Sitting far away from my Windows Server system                                     |                                                            | X                                        |
-| Sitting far away from my Windows Server system but it DOES have desktop experience | Use RDS to remote into the server, then use Server Manager | X                                        |
+| I am   | Install & run Project Honolulu | Run Server Manager on Windows Server | Run Server Manager in RSAT on Windows 10 |
+|--------|----------------------|--------------------------------------|------------------------------------------|
+| Sitting at a Windows 10 PC | X  |                                      | X                                        |
+| Sitting at a Windows Server system running the desktop experience | X | X | X |
+| Sitting at a Windows Server system running Server Core |X (install on Windows 10, use to manage Server Core) | | X |
+| Sitting far away from my Windows Server system |X | | X |
+| Sitting far away from my Windows Server system but it DOES have desktop experience |X | Use RDS to remote into the server, then use Server Manager | X |
 
 In addition to the tools mentioned below, you can also use [Remote Desktop Services](../remote/remote-desktop-services/welcome-to-rds.md) to access on-premises, remote, and virtual servers. Then you can use Server Manager to perform management tasks.
+
+### Manage on-premises systems, remote systems, and systems without UI with Microsoft Project Honolulu
+[Microsoft Project Honolulu](../manage/honolulu/honolulu.md) is a browser-based management app that enables on-premises administration of Windows Servers with no Azure or cloud dependency. Project Honolulu gives you full control over all aspects of your server infrastructure and is particularly useful for management on private networks that are not connected to the Internet. You can install Project Honolulu on Windows 10, on a gateway server, or directly on the Windows Server system that you want to manage.
 
 ### Manage on-premises systems with Server Manager
 [Server Manager](server-manager/server-manager.md) is a management console included in the full installation of Windows Server. (It is not available for installs that don't have UI - Server Core doesn't include Server Manager.) Use Server Manager to install and remove server roles, add and remove remote servers, start and stop services, and view data gathered about your environment.
