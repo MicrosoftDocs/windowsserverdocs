@@ -63,7 +63,10 @@ Once the installer is complete, launch with the desktop shortcut, or open a brow
 
 ## Install on Windows Server and Windows Server 2016 - Core configuration
 
-On Windows Server Core and Windows Server 2016 Core, Project Honolulu can installed via a Command Prompt instance (running as Administrator). A port and SSL certificate option must be specified, via the SME_PORT and SSL_CERTIFICATE_OPTION arguments respectively. If configuring Project Honolulu with an existing certificate, the SME_THUMBPRINT argument must used to specify its thumbprint. 
+On Windows Server Core and Windows Server 2016 Core, Project Honolulu can installed via a Command Prompt instance (running as Administrator). A port and SSL certificate option must be specified, via the `SME_PORT` and `SSL_CERTIFICATE_OPTION` arguments respectively. If configuring Project Honolulu with an existing certificate, the `SME_THUMBPRINT` argument must be used to specify its thumbprint. 
+
+> [!WARNING]
+> Automatically generated certificates expire 60 days after installation.
 
    To install Project Honolulu and automatically generate a self-signed certificate:
    
@@ -75,6 +78,6 @@ On Windows Server Core and Windows Server 2016 Core, Project Honolulu can instal
         msiexec /i ServerManagementGateway.msi /qn /l *v log.txt SME_PORT=<port>
         SME_THUMBPRINT=<thumbprint> SSL_CERTIFICATE_OPTION=installed
         
-> [!WARNING]
-> Automatically generated certificates expire 60 days after installation.
-
+> [!WARNING] 
+> Invoking `msiexec` from PowerShell using dot-slash relative path notation (e.g. `.\ServerManagementGateway.msi`) is not supported
+> and will result in installation failure. Remove the `.\` prefix or specify the full path to the MSI.
