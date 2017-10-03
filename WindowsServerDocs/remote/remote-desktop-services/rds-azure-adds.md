@@ -7,10 +7,11 @@ ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
 ms.author: chrimo
-ms.date: 08/31/2017
+ms.date: 10/02/2017
 ms.tgt_pltfrm: na
 ms.topic: article
 author: christianmontoya
+ms.localizationpriority: medium
 ---
 # Integrate Azure AD Domain Services with your RDS deployment
 
@@ -46,14 +47,28 @@ Use the following steps to deploy Azure AD DS and RDS.
    
 2. Set up RDS. You can either use an Azure template or deploy RDS manually.
    - Use the [Existing AD template](https://azure.microsoft.com/resources/templates/rds-deployment-existing-ad/). Make sure to customize the following:
-      - **Resource group**: Use the resource group where you want to create the RDS resources.
+   
+      - **Settings**
+         - **Resource group**: Use the resource group where you want to create the RDS resources.
          > [!NOTE] 
          > Right now this has to be the same resource group where the Azure resource manager virtual network exists.
 
-      - **Dns Label Prefix**: Enter the URL that you want users to use to access RD Web.
-      - **Ad Domain Name**: Enter the full name of your Azure AD instance, for example, "contoso.onmicrosoft.com" or "contoso.com".
-      - **Ad Vnet Name** and **Ad Subnet Name**: Enter the same values that you used when you created the Azure resource manager virtual network. This is the subnet to which the RDS resources will connect.
-      - **Admin Username** and **Admin Password**: Enter the credentials for an admin user that's a member of the **AAD DC Administrators** group in Azure AD.
+         - **Dns Label Prefix**: Enter the URL that you want users to use to access RD Web.
+         - **Ad Domain Name**: Enter the full name of your Azure AD instance, for example, "contoso.onmicrosoft.com" or "contoso.com".
+         - **Ad Vnet Name** and **Ad Subnet Name**: Enter the same values that you used when you created the Azure resource manager virtual network. This is the subnet to which the RDS resources will connect.
+         - **Admin Username** and **Admin Password**: Enter the credentials for an admin user that's a member of the **AAD DC Administrators** group in Azure AD.
+   
+      - **Template**
+         - Remove all properties of **dnsServers**: after selecting **Edit template** from the Azure quickstart template page, search for "dnsServers" and remove the property. 
+
+            For example, here's one example, before removing the **dnsServers** property:
+      
+            ![Azure quickstart template with dnsSettings property](media/rds-remove-dnssettings-before.png)
+
+            And here's the same file after removing the property:
+
+            ![Azure quickstart template with dnsSettings property removed](media/rds-remove-dnssettings-after.png)
+   
    - [Deploy RDS manually](rds-deploy-infrastructure.md). 
 
 ## Known issues
