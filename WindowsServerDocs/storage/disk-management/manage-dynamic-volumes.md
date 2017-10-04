@@ -1,6 +1,22 @@
-Applies To: Windows 7, Windows Server 2008 R2
+---
+title: Manage dynamic volumes
+description: This article describes how to manage dynamic volumes
+ms.prod: windows-server-threshold 
+ms.technology: storage 
+ms.topic: article 
+author: JasonGerend 
+manager: brianlic 
+ms.author: jrgerend 
+---
 
--   [Manage Simple Volumes](https://technet.microsoft.com/en-us/library/cc772383(v=ws.11).aspx)
--   [Manage Spanned Volumes](https://technet.microsoft.com/en-us/library/cc771087(v=ws.11).aspx)
+# Manage dynamic volumes
+
+> **Applies To:** Windows 10, Windows 8.1, Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
+
+## See Also
+
+-   [Manage simple volumes](https://technet.microsoft.com/library/cc772383(v=ws.11).aspx)
+-   [Manage spanned volumes](https://technet.microsoft.com/library/cc771087(v=ws.11).aspx)
 
 
