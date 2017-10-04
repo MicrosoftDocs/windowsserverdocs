@@ -20,7 +20,7 @@ manager: elizapo
 The following is a list of features and functionalities in Windows Server, version 1709 that have either been removed from the product in that release or are starting to be considered for potential replacement in subsequent releases. It is intended for IT professionals who are updating operating systems in a commercial environment. **This list is subject to change in subsequent releases and might not include every affected feature or functionality.** 
 
 ## Features removed from Windows Server, version 1709
-No features or functionalities that are present in Windows Server 2016 have been removed in Windows Server, version 1709.
+No features that are present in Windows Server 2016 have been removed in Windows Server, version 1709.
 
 > [!NOTE]  
 > Did you know that Nano Server has changed? See [Changes to Nano Server in Windows Server, version 1709](nano-in-semi-annual-channel.md). In addition to the changes in Nano Server, Windows Server, version 1709 is available only with the Server Core installation option and with a revised servicing model. For details, see [Windows Server Semi-Annual Channel overview](semi-annual-channel-overview.md).
