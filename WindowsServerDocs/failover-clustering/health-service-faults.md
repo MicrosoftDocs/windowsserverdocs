@@ -169,7 +169,7 @@ public void GetFaults(CimSession Session, CimInstance Target)
 }
 ```
 
-## Optional: MyFault class
+### Optional: MyFault class
 
 It may make sense for you to construct and persist your own representation of faults. For example, this **MyFault** class stores several key properties of faults, including the **FaultId**, which can be used later to associate update or remove notifications, or to deduplicate in the event that the same fault is detected multiple times, for whatever reason.
 
@@ -286,16 +286,23 @@ As of Windows Server 2016, only the severity property can and will actually chan
 
 This table presents several key properties of the fault object. For the full schema, inspect the **MSFT\_StorageDiagnoseResult** class in *storagewmi.mof*.
 
-  --------------------------- ---------------------------------------------------------------
-  **Property**                **Example**
-  FaultId                     {12345-12345-12345-12345-12345}
-  FaultType                   Microsoft.Health.FaultType.Volume.Capacity
-  Reason                      "The volume is running out of available space."
-  PerceivedSeverity           5
-  FaultingObjectDescription   Contoso XYZ9000 S.N. 123456789
-  FaultingObjectLocation      Rack A06, RU 25, Slot 11
-  RecommendedActions          {"Expand the volume.", "Migrate workloads to other volumes."}
-  --------------------------- ---------------------------------------------------------------
+|---------------------------|-----------------------------------------------------------------|
+| **Property**              | **Example**                                                     |
+|---------------------------|-----------------------------------------------------------------|
+| FaultId                   | {12345-12345-12345-12345-12345}                                 |
+|---------------------------|-----------------------------------------------------------------|
+| FaultType                 | Microsoft.Health.FaultType.Volume.Capacity                      |
+|---------------------------|-----------------------------------------------------------------|
+| Reason                    | "The volume is running out of available space."                 |
+|---------------------------|-----------------------------------------------------------------|
+| PerceivedSeverity         | 5                                                               |
+|---------------------------|-----------------------------------------------------------------|
+| FaultingObjectDescription | Contoso XYZ9000 S.N. 123456789                                  |
+|---------------------------|-----------------------------------------------------------------|
+| FaultingObjectLocation    | Rack A06, RU 25, Slot 11                                        |
+|---------------------------|-----------------------------------------------------------------|
+| RecommendedActions        | {"Expand the volume.", "Migrate workloads to other volumes."}   |
+|---------------------------|-----------------------------------------------------------------|
 
 **FaultId**
 Unique within the scope of one cluster.
@@ -318,389 +325,180 @@ This table presents several key properties of the fault event. For the full sche
 
 Note the **ChangeType**, which indicates whether a fault is being created, removed, or updated, and the **FaultId**. An event also contains all the properties of the affected fault.
 
-  --------------------------- ---------------------------------------------------------------
-  **Property**                **Example**
-  ChangeType                  0
-  FaultId                     {12345-12345-12345-12345-12345}
-  FaultType                   Microsoft.Health.FaultType.Volume.Capacity
-  Reason                      The volume is running out of available space.
-  PerceivedSeverity           5
-  FaultingObjectDescription   Contoso XYZ9000 S.N. 123456789
-  FaultingObjectLocation      Rack A06, RU 25, Slot 11
-  RecommendedActions          {"Expand the volume.", "Migrate workloads to other volumes."}
-  --------------------------- ---------------------------------------------------------------
+|---------------------------|-----------------------------------------------------------------|
+| **Property**              | **Example**                                                     |
+|---------------------------|-----------------------------------------------------------------|
+| ChangeType                | 0                                                               |
+|---------------------------|-----------------------------------------------------------------|
+| FaultId                   | {12345-12345-12345-12345-12345}                                 |
+|---------------------------|-----------------------------------------------------------------|
+| FaultType                 | Microsoft.Health.FaultType.Volume.Capacity                      |
+|---------------------------|-----------------------------------------------------------------|
+| Reason                    | "The volume is running out of available space."                 |
+|---------------------------|-----------------------------------------------------------------|
+| PerceivedSeverity         | 5                                                               |
+|---------------------------|-----------------------------------------------------------------|
+| FaultingObjectDescription | Contoso XYZ9000 S.N. 123456789                                  |
+|---------------------------|-----------------------------------------------------------------|
+| FaultingObjectLocation    | Rack A06, RU 25, Slot 11                                        |
+|---------------------------|-----------------------------------------------------------------|
+| RecommendedActions        | {"Expand the volume.", "Migrate workloads to other volumes."}   |
+|---------------------------|-----------------------------------------------------------------|
 
 **ChangeType**
 ChangeType = { 0, 1, 2 } = { "Create", "Remove", "Update" }.
 
 ## Coverage
 
-In Windows Server 2016, the Health Service provides the following Fault coverage:  
+In Windows Server 2016, the Health Service provides the following fault coverage:  
 
 ### **PhysicalDisk (8)**
 
-+-----------------------------------+-----------------------------------+
-|                                   | .FaultType:                       |
-|                                   | **Microsoft.Health.FaultType.Phys |
-|                                   | icalDisk.FailedMedia**            |
-|                                   | .Reason: *"The physical disk has  |
-|                                   | failed."*                         |
-|                                   | .RecommendedAction: *"Replace the |
-|                                   | physical disk."*                  |
-+-----------------------------------+-----------------------------------+
-|                                   | .FaultType:                       |
-|                                   | **Microsoft.Health.FaultType.Phys |
-|                                   | icalDisk.LostCommunication**      |
-|                                   | .Reason: *"Connectivity has been  |
-|                                   | lost to the physical disk."*      |
-|                                   | .RecommendedAction: *"Check that  |
-|                                   | the physical disk is working and  |
-|                                   | properly connected."*             |
-+-----------------------------------+-----------------------------------+
-|                                   | .FaultType:                       |
-|                                   | **Microsoft.Health.FaultType.Phys |
-|                                   | icalDisk.Unresponsive**           |
-|                                   | .Reason: *"The physical disk is   |
-|                                   | exhibiting recurring              |
-|                                   | unresponsiveness."*               |
-|                                   | .RecommendedAction: *"Replace the |
-|                                   | physical disk."*                  |
-+-----------------------------------+-----------------------------------+
-|                                   | .FaultType:                       |
-|                                   | **Microsoft.Health.FaultType.Phys |
-|                                   | icalDisk.PredictiveFailure**      |
-|                                   | .Reason: *"A failure of the       |
-|                                   | physical disk is predicted to     |
-|                                   | occur soon."*                     |
-|                                   | .RecommendedAction: *"Replace the |
-|                                   | physical disk."*                  |
-+-----------------------------------+-----------------------------------+
-|                                   | .FaultType:                       |
-|                                   | **Microsoft.Health.FaultType.Phys |
-|                                   | icalDisk.UnsupportedHardware**    |
-|                                   | .Reason: *"The physical disk is   |
-|                                   | quarantined because it is not     |
-|                                   | supported by your solution        |
-|                                   | vendor."*                         |
-|                                   | .RecommendedAction: *"Replace the |
-|                                   | physical disk with supported      |
-|                                   | hardware."*                       |
-+-----------------------------------+-----------------------------------+
-|                                   | .FaultType:                       |
-|                                   | **Microsoft.Health.FaultType.Phys |
-|                                   | icalDisk.UnsupportedFirmware**    |
-|                                   | .Reason: *"The physical disk is   |
-|                                   | in quarantine because its         |
-|                                   | firmware version is not supported |
-|                                   | by your solution vendor."*        |
-|                                   | .RecommendedAction: *"Update the  |
-|                                   | firmware on the physical disk to  |
-|                                   | the target version."*             |
-+-----------------------------------+-----------------------------------+
-|                                   | .FaultType:                       |
-|                                   | **Microsoft.Health.FaultType.Phys |
-|                                   | icalDisk.UnrecognizedMetadata**   |
-|                                   | .Reason: *"The physical disk has  |
-|                                   | unrecognised meta data."*         |
-|                                   | .RecommendedAction: *"This disk   |
-|                                   | may contain data from an unknown  |
-|                                   | storage pool. First make sure     |
-|                                   | there is no useful data on this   |
-|                                   | disk, then reset the disk."*      |
-+-----------------------------------+-----------------------------------+
-|                                   | .FaultType:                       |
-|                                   | **Microsoft.Health.FaultType.Phys |
-|                                   | icalDisk.FailedFirmwareUpdate**   |
-|                                   | .Reason: *"Failed attempt to      |
-|                                   | update firmware on the physical   |
-|                                   | disk."*                           |
-|                                   | .RecommendedAction: *"Try using a |
-|                                   | different firmware binary."*      |
-+-----------------------------------+-----------------------------------+
+FaultType: Microsoft.Health.FaultType.PhysicalDisk.FailedMedia
+Reason: "The physical disk has failed."
+RecommendedAction: "Replace the physical disk."
+
+FaultType: Microsoft.Health.FaultType.PhysicalDisk.LostCommunication
+Reason: "Connectivity has been lost to the physical disk."
+RecommendedAction: "Check that the physical disk is working and properly connected."
+
+FaultType: Microsoft.Health.FaultType.PhysicalDisk.Unresponsive
+Reason: "The physical disk is exhibiting recurring unresponsiveness."
+RecommendedAction: "Replace the physical disk."
+
+FaultType: Microsoft.Health.FaultType.PhysicalDisk.PredictiveFailure
+Reason: "A failure of the physical disk is predicted to occur soon."
+RecommendedAction: "Replace the physical disk."
+
+FaultType: Microsoft.Health.FaultType.PhysicalDisk.UnsupportedHardware
+Reason: "The physical disk is quarantined because it is not supported by your solution vendor."
+RecommendedAction: "Replace the physical disk with supported hardware."
+
+FaultType: Microsoft.Health.FaultType.PhysicalDisk.UnsupportedFirmware
+Reason: "The physical disk is in quarantine because its firmware version is not supported by your solution vendor."
+RecommendedAction: "Update the firmware on the physical disk to the target version."
+
+FaultType: Microsoft.Health.FaultType.PhysicalDisk.UnrecognizedMetadata
+Reason: "The physical disk has unrecognised meta data."
+RecommendedAction: "This disk may contain data from an unknown storage pool. First make sure there is no useful data on this disk, then reset the disk."
+
+FaultType: Microsoft.Health.FaultType.PhysicalDisk.FailedFirmwareUpdate
+Reason: "Failed attempt to update firmware on the physical disk."
+RecommendedAction: "Try using a different firmware binary."
 
 ### **Virtual Disk (2)**
 
-+-----------------------------------+-----------------------------------+
-|                                   | .FaultType:                       |
-|                                   | **Microsoft.Health.FaultType.Virt |
-|                                   | ualDisks.NeedsRepair**            |
-|                                   | .Reason: *"Some data on this      |
-|                                   | volume is not fully resilient. It |
-|                                   | remains accessible."*             |
-|                                   | .RecommendedAction: *"Restoring   |
-|                                   | resiliency of the data."*         |
-+-----------------------------------+-----------------------------------+
-|                                   | .FaultType:                       |
-|                                   | **Microsoft.Health.FaultType.Virt |
-|                                   | ualDisks.Detached**               |
-|                                   | .Reason: *"The volume is          |
-|                                   | inaccessible. Some data may be    |
-|                                   | lost."*                           |
-|                                   | .RecommendedAction: *"Check the   |
-|                                   | physical and/or network           |
-|                                   | connectivity of all storage       |
-|                                   | devices. You may need to restore  |
-|                                   | from backup."*                    |
-+-----------------------------------+-----------------------------------+
+FaultType: Microsoft.Health.FaultType.VirtualDisks.NeedsRepair
+Reason: "Some data on this volume is not fully resilient. It remains accessible."
+RecommendedAction: "Restoring resiliency of the data."
+
+FaultType: Microsoft.Health.FaultType.VirtualDisks.Detached
+Reason: "The volume is inaccessible. Some data may be lost."
+RecommendedAction: "Check the physical and/or network connectivity of all storage devices. You may need to restore from backup."
 
 ### **Pool Capacity (1)**
 
-+-----------------------------------+-----------------------------------+
-|                                   | .FaultType:                       |
-|                                   | **Microsoft.Health.FaultType.Stor |
-|                                   | agePool.InsufficientReserveCapaci |
-|                                   | tyFault**                         |
-|                                   | .Reason: *"The storage pool does  |
-|                                   | not have the minimum recommended  |
-|                                   | reserve capacity. This may limit  |
-|                                   | your ability to restore data      |
-|                                   | resiliency in the event of drive  |
-|                                   | failure(s)."*                     |
-|                                   | .RecommendedAction: *"Add         |
-|                                   | additional capacity to the        |
-|                                   | storage pool, or free up          |
-|                                   | capacity. The minimum recommended |
-|                                   | reserve varies by deployment, but |
-|                                   | is approximately 2 drives' worth  |
-|                                   | of capacity."*                    |
-+-----------------------------------+-----------------------------------+
+FaultType: Microsoft.Health.FaultType.StoragePool.InsufficientReserveCapacityFault
+Reason: "The storage pool does not have the minimum recommended reserve capacity. This may limit your ability to restore data resiliency in the event of drive failure(s)."
+RecommendedAction: "Add additional capacity to the storage pool, or free up capacity. The minimum recommended reserve varies by deployment, but is approximately 2 drives' worth of capacity."
 
 ### **Volume Capacity (1)**<sup>1</sup>
 
-+-----------------------------------+-----------------------------------+
-|                                   | .FaultType:                       |
-|                                   | **Microsoft.Health.FaultType.Volu |
-|                                   | me.Capacity**                     |
-|                                   | .Reason: *"The volume is running  |
-|                                   | out of available space."*         |
-|                                   | .RecommendedAction: *"Expand the  |
-|                                   | volume or migrate workloads to    |
-|                                   | other volumes."*                  |
-+-----------------------------------+-----------------------------------+
+FaultType: Microsoft.Health.FaultType.Volume.Capacity
+Reason: "The volume is running out of available space."
+RecommendedAction: "Expand the volume or migrate workloads to other volumes."
 
 ### **Server (3)**
 
-+-----------------------------------+-----------------------------------+
-|                                   | .FaultType:                       |
-|                                   | **Microsoft.Health.FaultType.Serv |
-|                                   | er.Down**                         |
-|                                   | .Reason: *"The server cannot be   |
-|                                   | reached."*                        |
-|                                   | .RecommendedAction: *"Start or    |
-|                                   | replace server."*                 |
-+-----------------------------------+-----------------------------------+
-|                                   | .FaultType:                       |
-|                                   | **Microsoft.Health.FaultType.Serv |
-|                                   | er.Isolated**                     |
-|                                   | .Reason: *"The server is isolated |
-|                                   | from the cluster due to           |
-|                                   | connectivity issues."*            |
-|                                   | .RecommendedAction: *"If          |
-|                                   | isolation persists, check the     |
-|                                   | network(s) or migrate workloads   |
-|                                   | to other nodes."*                 |
-+-----------------------------------+-----------------------------------+
-|                                   | .FaultType:                       |
-|                                   | **Microsoft.Health.FaultType.Serv |
-|                                   | er.Quarantined**                  |
-|                                   | .Reason: *"The server is          |
-|                                   | quarantined by the cluster due to |
-|                                   | recurring failures."*             |
-|                                   | .RecommendedAction: *"Replace the |
-|                                   | server or fix the network."*      |
-+-----------------------------------+-----------------------------------+
+FaultType: Microsoft.Health.FaultType.Server.Down
+Reason: "The server cannot be reached."
+RecommendedAction: "Start or replace server."
+
+FaultType: Microsoft.Health.FaultType.Server.Isolated
+Reason: "The server is isolated from the cluster due to connectivity issues."
+RecommendedAction: "If isolation persists, check the network(s) or migrate workloads to other nodes."
+
+FaultType: Microsoft.Health.FaultType.Server.Quarantined
+Reason: "The server is quarantined by the cluster due to recurring failures."
+RecommendedAction: "Replace the server or fix the network."
 
 ### **Cluster (1)**
 
-+-----------------------------------+-----------------------------------+
-|                                   | .FaultType:                       |
-|                                   | **Microsoft.Health.FaultType.Clus |
-|                                   | terQuorumWitness.Error**          |
-|                                   | .Reason: *"The cluster is one     |
-|                                   | server failure away from going    |
-|                                   | down."*                           |
-|                                   | .RecommendedAction: *"Check the   |
-|                                   | witness resource, and restart as  |
-|                                   | needed. Start or replace failed   |
-|                                   | servers."*                        |
-+-----------------------------------+-----------------------------------+
+FaultType: Microsoft.Health.FaultType.ClusterQuorumWitness.Error
+Reason: "The cluster is one server failure away from going down."
+RecommendedAction: "Check the witness resource, and restart as needed. Start or replace failed servers."
 
 ### **Network Adapter/Interface (4)**
 
-+-----------------------------------+-----------------------------------+
-|                                   | .FaultType:                       |
-|                                   | **Microsoft.Health.FaultType.Netw |
-|                                   | orkAdapter.Disconnected**         |
-|                                   | .Reason: *"The network interface  |
-|                                   | has become disconnected."*        |
-|                                   | .RecommendedAction: *"Reconnect   |
-|                                   | the network cable."*              |
-+-----------------------------------+-----------------------------------+
-|                                   | .FaultType:                       |
-|                                   | **Microsoft.Health.FaultType.Netw |
-|                                   | orkInterface.Missing**            |
-|                                   | .Reason: *"The server {server}    |
-|                                   | has missing network adapter(s)    |
-|                                   | connected to cluster network      |
-|                                   | {cluster network}."*              |
-|                                   | .RecommendedAction: *"Connect the |
-|                                   | server to the missing cluster     |
-|                                   | network."*                        |
-+-----------------------------------+-----------------------------------+
-|                                   | .FaultType:                       |
-|                                   | **Microsoft.Health.FaultType.Netw |
-|                                   | orkAdapter.Hardware**             |
-|                                   | .Reason: *"The network interface  |
-|                                   | has had a hardware failure."*     |
-|                                   | .RecommendedAction: *"Replace the |
-|                                   | network interface adapter."*      |
-+-----------------------------------+-----------------------------------+
-|                                   | .FaultType:                       |
-|                                   | **Microsoft.Health.FaultType.Netw |
-|                                   | orkAdapter.Disabled**             |
-|                                   | .Reason: *"The network interface  |
-|                                   | {network interface} is not        |
-|                                   | enabled and is not being used."*  |
-|                                   | .RecommendedAction: *"Enable the  |
-|                                   | the network interface."*          |
-+-----------------------------------+-----------------------------------+
+FaultType: Microsoft.Health.FaultType.NetworkAdapter.Disconnected
+Reason: "The network interface has become disconnected."
+RecommendedAction: "Reconnect the network cable."
+
+FaultType: Microsoft.Health.FaultType.NetworkInterface.Missing
+Reason: "The server {server} has missing network adapter(s) connected to cluster network {cluster network}."
+RecommendedAction: "Connect the server to the missing cluster network."
+
+FaultType: Microsoft.Health.FaultType.NetworkAdapter.Hardware
+Reason: "The network interface has had a hardware failure."
+RecommendedAction: "Replace the network interface adapter."
+
+FaultType: Microsoft.Health.FaultType.NetworkAdapter.Disabled
+Reason: "The network interface {network interface} is not enabled and is not being used."
+RecommendedAction: "Enable the the network interface."
 
 ### **Enclosure (6)**
 
-+-----------------------------------+-----------------------------------+
-|                                   | .FaultType:                       |
-|                                   | **Microsoft.Health.FaultType.Stor |
-|                                   | ageEnclosure.LostCommunication**  |
-|                                   | .Reason: *"Communication has been |
-|                                   | lost to the storage enclosure."*  |
-|                                   | .RecommendedAction: *"Start or    |
-|                                   | replace the storage enclosure."*  |
-+-----------------------------------+-----------------------------------+
-|                                   | .FaultType:                       |
-|                                   | **Microsoft.Health.FaultType.Stor |
-|                                   | ageEnclosure.FanError**           |
-|                                   | .Reason: *"The fan at position    |
-|                                   | {position} of the storage         |
-|                                   | enclosure has failed."*           |
-|                                   | .RecommendedAction: *"Replace the |
-|                                   | fan in the storage enclosure."*   |
-+-----------------------------------+-----------------------------------+
-|                                   | .FaultType:                       |
-|                                   | **Microsoft.Health.FaultType.Stor |
-|                                   | ageEnclosure.CurrentSensorError** |
-|                                   | .Reason: *"The current sensor at  |
-|                                   | position {position} of the        |
-|                                   | storage enclosure has failed."*   |
-|                                   | .RecommendedAction: *"Replace a   |
-|                                   | current sensor in the storage     |
-|                                   | enclosure."*                      |
-+-----------------------------------+-----------------------------------+
-|                                   | .FaultType:                       |
-|                                   | **Microsoft.Health.FaultType.Stor |
-|                                   | ageEnclosure.VoltageSensorError** |
-|                                   | .Reason: *"The voltage sensor at  |
-|                                   | position {position} of the        |
-|                                   | storage enclosure has failed."*   |
-|                                   | .RecommendedAction: *"Replace a   |
-|                                   | voltage sensor in the storage     |
-|                                   | enclosure."*                      |
-+-----------------------------------+-----------------------------------+
-|                                   | .FaultType:                       |
-|                                   | **Microsoft.Health.FaultType.Stor |
-|                                   | ageEnclosure.IoControllerError**  |
-|                                   | .Reason: *"The IO controller at   |
-|                                   | position {position} of the        |
-|                                   | storage enclosure has failed."*   |
-|                                   | .RecommendedAction: *"Replace an  |
-|                                   | IO controller in the storage      |
-|                                   | enclosure."*                      |
-+-----------------------------------+-----------------------------------+
-|                                   | .FaultType:                       |
-|                                   | **Microsoft.Health.FaultType.Stor |
-|                                   | ageEnclosure.TemperatureSensorErr |
-|                                   | or**                              |
-|                                   | .Reason: *"The temperature sensor |
-|                                   | at position {position} of the     |
-|                                   | storage enclosure has failed."*   |
-|                                   | .RecommendedAction: *"Replace a   |
-|                                   | temperature sensor in the storage |
-|                                   | enclosure."*                      |
-+-----------------------------------+-----------------------------------+
+FaultType: Microsoft.Health.FaultType.StorageEnclosure.LostCommunication
+Reason: "Communication has been lost to the storage enclosure."
+RecommendedAction: "Start or replace the storage enclosure."
+
+FaultType: Microsoft.Health.FaultType.StorageEnclosure.FanError
+Reason: "The fan at position {position} of the storage enclosure has failed."
+RecommendedAction: "Replace the fan in the storage enclosure."
+
+FaultType: Microsoft.Health.FaultType.StorageEnclosure.CurrentSensorError
+Reason: "The current sensor at position {position} of the storage enclosure has failed."
+RecommendedAction: "Replace a current sensor in the storage enclosure."
+
+FaultType: Microsoft.Health.FaultType.StorageEnclosure.VoltageSensorError
+Reason: "The voltage sensor at position {position} of the storage enclosure has failed."
+RecommendedAction: "Replace a voltage sensor in the storage enclosure."
+
+FaultType: Microsoft.Health.FaultType.StorageEnclosure.IoControllerError
+Reason: "The IO controller at position {position} of the storage enclosure has failed."
+RecommendedAction: "Replace an IO controller in the storage enclosure."
+
+FaultType: Microsoft.Health.FaultType.StorageEnclosure.TemperatureSensorError
+Reason: "The temperature sensor at position {position} of the storage enclosure has failed."
+RecommendedAction: "Replace a temperature sensor in the storage enclosure."
 
 ### **Firmware Rollout (3)**
 
-+-----------------------------------+-----------------------------------+
-|                                   | .FaultType:                       |
-|                                   | **Microsoft.Health.FaultType.Faul |
-|                                   | tDomain.FailedMaintenanceMode**   |
-|                                   | .Reason: *"Currently unable to    |
-|                                   | make progress while performing    |
-|                                   | firmware roll out."*              |
-|                                   | .RecommendedAction: *"Verify all  |
-|                                   | storage spaces are healthy, and   |
-|                                   | that no fault domain is currently |
-|                                   | in maintenance mode."*            |
-+-----------------------------------+-----------------------------------+
-|                                   | .FaultType:                       |
-|                                   | **Microsoft.Health.FaultType.Faul |
-|                                   | tDomain.FirmwareVerifyVersionFail |
-|                                   | ed**                              |
-|                                   | .Reason: *"Firmware roll out was  |
-|                                   | cancelled due to unreadable or    |
-|                                   | unexpected firmware version       |
-|                                   | information after applying a      |
-|                                   | firmware update."*                |
-|                                   | .RecommendedAction: *"Restart     |
-|                                   | firmware roll out once the        |
-|                                   | firmware issue has been           |
-|                                   | resolved."*                       |
-+-----------------------------------+-----------------------------------+
-|                                   | .FaultType:                       |
-|                                   | **Microsoft.Health.FaultType.Faul |
-|                                   | tDomain.TooManyFailedUpdates**    |
-|                                   | .Reason: *"Firmware roll out was  |
-|                                   | cancelled due to too many         |
-|                                   | physical disks failing a firmware |
-|                                   | update attempt."*                 |
-|                                   | .RecommendedAction: *"Restart     |
-|                                   | firmware roll out once the        |
-|                                   | firmware issue has been           |
-|                                   | resolved."*                       |
-+-----------------------------------+-----------------------------------+
+FaultType: Microsoft.Health.FaultType.FaultDomain.FailedMaintenanceMode
+Reason: "Currently unable to make progress while performing firmware roll out."
+RecommendedAction: "Verify all storage spaces are healthy, and that no fault domain is currently in maintenance mode."
+
+FaultType: Microsoft.Health.FaultType.FaultDomain.FirmwareVerifyVersionFaile
+Reason: "Firmware roll out was cancelled due to unreadable or unexpected firmware version information after applying a firmware update."
+RecommendedAction: "Restart firmware roll out once the firmware issue has been resolved."
+
+FaultType: Microsoft.Health.FaultType.FaultDomain.TooManyFailedUpdates
+Reason: "Firmware roll out was cancelled due to too many physical disks failing a firmware update attempt."
+RecommendedAction: "Restart firmware roll out once the firmware issue has been resolved."
 
 ### **Storage QoS (3)**<sup>2</sup>
 
-+-----------------------------------+-----------------------------------+
-|                                   | .FaultType:                       |
-|                                   | **Microsoft.Health.FaultType.Stor |
-|                                   | Qos.InsufficientThroughput**      |
-|                                   | .Reason: *"Storage throughput is  |
-|                                   | insufficient to satisfy           |
-|                                   | reserves."*                       |
-|                                   | .RecommendedAction: *"Reconfigure |
-|                                   | Storage QoS policies."*           |
-+-----------------------------------+-----------------------------------+
-|                                   | .FaultType:                       |
-|                                   | **Microsoft.Health.FaultType.Stor |
-|                                   | Qos.LostCommunication**           |
-|                                   | .Reason: *"The Storage QoS policy |
-|                                   | manager has lost communication    |
-|                                   | with the volume."*                |
-|                                   | .RecommendedAction: *"Please      |
-|                                   | reboot nodes {nodes}"*            |
-+-----------------------------------+-----------------------------------+
-|                                   | .FaultType:                       |
-|                                   | **Microsoft.Health.FaultType.Stor |
-|                                   | Qos.MisconfiguredFlow**           |
-|                                   | .Reason: *"One or more storage    |
-|                                   | consumers (usually Virtual        |
-|                                   | Machines) are using a             |
-|                                   | non-existent policy with id       |
-|                                   | {id}."*                           |
-|                                   | .RecommendedAction: *"Recreate    |
-|                                   | any missing Storage QoS           |
-|                                   | policies."*                       |
-+-----------------------------------+-----------------------------------+
+FaultType: Microsoft.Health.FaultType.StorQos.InsufficientThroughput
+Reason: "Storage throughput is insufficient to satisfy reserves."
+RecommendedAction: "Reconfigure Storage QoS policies."
+
+FaultType: Microsoft.Health.FaultType.StorQos.LostCommunication
+Reason: "The Storage QoS policy manager has lost communication with the volume."
+RecommendedAction: "Please reboot nodes {nodes}"
+
+FaultType: Microsoft.Health.FaultType.StorQos.MisconfiguredFlow
+Reason: "One or more storage consumers (usually Virtual Machines) are using a non-existent policy with id {id}."
+RecommendedAction: "Recreate any missing Storage QoS policies."
 
 <sup>1</sup>  Indicates the volume has reached 80% full (minor severity) or 90% full (major severity).  
 <sup>2</sup> Indicates some .vhd(s) on the volume have not met their Minimum IOPS for over 10% (minor), 30% (major), or 50% (critical) of rolling 24-hour window.  
