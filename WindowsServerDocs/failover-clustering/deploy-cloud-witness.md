@@ -3,11 +3,11 @@ ms.assetid: 0cd1ac70-532c-416d-9de6-6f920a300a45
 title: Deploy a cloud witness for a Failover Cluster
 ms.prod: windows-server-threshold
 manager: eldenc
-ms.author: amitabht
+ms.author: jgerend
 ms.technology: storage-failover-clustering
 ms.topic: article
-author: AmitabhTamhane
-ms.date: 9/15/2016
+author: JasonGerend
+ms.date: 10/2/2017
 description: How to use Microsoft Azure to host the witness for a Windows Server Failover Cluster in the cloud - aka how to deploy a Cloud Witness.
 ---
 # Deploy a Cloud Witness for a Failover Cluster
@@ -46,7 +46,7 @@ If you have a Failover Cluster deployment, where all nodes can reach the interne
 
 Some of the scenarios that are supported use of Cloud Witness as a quorum witness are as follows:  
 - Disaster recovery stretched multi-site clusters (see figure 2).  
-- Failover Clusters without shared storage (SQL Always On, Exchange DAGs, etc.).  
+- Failover Clusters without shared storage (SQL Always On etc.).  
 - Failover Clusters running inside Guest OS hosted in Microsoft Azure Virtual Machine Role (or any other public cloud).  
 - Failover Clusters running inside Guest OS of Virtual Machines hosted in private clouds.
 - Storage clusters with or without shared storage, such as Scale-out File Server clusters.  

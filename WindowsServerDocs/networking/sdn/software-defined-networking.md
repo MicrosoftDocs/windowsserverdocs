@@ -18,6 +18,7 @@ You can use this topic to learn about the Software Defined Networking (SDN) tech
 > [!NOTE]
 > In addition to this topic, the following SDN content is available.
 > 
+> - [What's New in SDN for Windows Server](sdn-whats-new.md)
 > - [Introduction to Software Defined Networking in Windows Server 2016](sdn-intro.md)
 > - [Software Defined Networking Technologies](technologies/Software-Defined-Networking-Technologies.md)  
 > - [Plan Software Defined Networking](plan/Plan-Software-Defined-Networking.md) 

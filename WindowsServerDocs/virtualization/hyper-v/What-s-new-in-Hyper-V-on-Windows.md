@@ -199,3 +199,5 @@ For requirements and instructions, see [Manage Windows virtual machines with Pow
   
 ## See also  
 [What's new in Hyper-V on Windows 10](https://msdn.microsoft.com/virtualization/hyperv_on_windows/about/whats_new)  
+
+Not finding content you need? Windows 10 users, tell us what you want on [Feedback Hub](feedback-hub:?tabid=2&contextid=898). 
