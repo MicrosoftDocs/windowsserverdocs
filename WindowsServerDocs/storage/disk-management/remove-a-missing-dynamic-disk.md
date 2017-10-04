@@ -1,31 +1,30 @@
-Applies To: Windows 7, Windows Server 2008 R2
+---
+title: Remove a missing dynamic disk
+description: This article describes how to remove a missing dynamic disk
+ms.prod: windows-server-threshold 
+ms.technology: storage 
+ms.topic: article 
+author: JasonGerend 
+manager: brianlic 
+ms.author: jrgerend 
+---
+
+# Remove a missing dynamic disk
+
+> **Applies To:** Windows 10, Windows 8.1, Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 A dynamic disk may become **Missing** when it is corrupted, powered down, or disconnected.
 
-**Backup Operators** or **Administrator** is the minimum membership required.
+> [!IMPORTANT]
+> Do not delete the volumes from a missing dynamic disk unless you are certain that the disk will not be powered up, reconnected, repaired or otherwise returned to the computer. Otherwise, you will not be able to access those volumes when the disk is returned to the computer.
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><img src="https://i-technet.sec.s-msft.com/areas/global/content/clear.gif" title="Important" alt="Important" id="Important" class="cl_IC160177" />Important</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Do not delete the volumes from a missing dynamic disk unless you are certain that the disk will not be powered up, reconnected, repaired or otherwise returned to the computer. Otherwise, you will not be able to access those volumes when the disk is returned to the computer.
-<p></p></td>
-</tr>
-</tbody>
-</table>
-
-Removing a missing dynamic disk
--------------------------------
+## Removing a missing dynamic disk
 
 -   [Using the Windows interface](#BKMK_WINUI)
 -   [Using a command line](#BKMK_CMD)
+
+> [!NOTE]
+> You must be a member of the **Backup Operators** or **Administrators** group, at minimum, to complete these steps.
 
 <a href="" id="BKMK_WINUI"></a>
 **To remove a missing dynamic disk using the Windows interface**
@@ -35,6 +34,7 @@ Removing a missing dynamic disk
 
 <a href="" id="BKMK_CMD"></a>
 **To remove a missing dynamic disk using a command line**
+
 1.  Open a command prompt and type `diskpart`.
 
 2.  At the **DISKPART** prompt, type `list disk`. Make note of the disk number you want to remove from the disk list. Missing disks are numbered M0, M1, M2, and so on.
@@ -43,37 +43,18 @@ Removing a missing dynamic disk
 
 4.  At the **DISKPART** prompt, type `delete disk`.
 
-### Â 
+<br />
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Value</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>**list disk**</p></td>
-<td><p>Displays a list of disks and information about them, such as their size, amount of available free space, whether the disk is a basic or dynamic disk, and whether the disk uses the master boot record (MBR) or GUID partition table (GPT) partition style. The disk marked with an asterisk (*) has focus.</p></td>
-</tr>
-<tr class="even">
-<td><p>**select disk** <em>disknumber</em></p></td>
-<td><p>Selects the specified disk, where <em>disknumber</em> is the disk number, and gives it focus.</p></td>
-</tr>
-<tr class="odd">
-<td><p>**delete disk**</p></td>
-<td><p>Deletes a missing dynamic disk from the disk list.</p></td>
-</tr>
-</tbody>
-</table>
+| Value | Description |
+| --- | --- |
+| <p>**list disk**</p> | <p>Displays a list of disks and information about them, such as their size, the amount of available free space, whether the disk is a basic or dynamic disk, and whether the disk uses the Master Boot Record (MBR) or GUID Partition Table (GPT) partition style. The disk marked with an asterisk (*) has focus.</p> |
+| <p>**select disk** <em>disknumber</em></p> | <p>Selects the specified disk, where <em>disknumber</em> is the disk number, and gives it focus.</p> |
+| <p>**delete disk**</p>| <p>Deletes a missing dynamic disk from the disk list.</p> |
 
-#### Additional references
 
--   [Command-line syntax notation](https://technet.microsoft.com/en-us/library/cc742449(v=ws.11).aspx)
+
+## See Also
+
+-   [Command-line syntax notation](https://technet.microsoft.com/library/cc742449(v=ws.11).aspx)
 
 

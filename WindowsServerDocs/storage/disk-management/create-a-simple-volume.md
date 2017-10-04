@@ -1,24 +1,35 @@
-Applies To: Windows 7, Windows Server 2008 R2
+---
+title: Create a simple volume
+description: Describes how to create a simple volume from disk space from a dynamic disk.
+ms.prod: windows-server-threshold 
+ms.technology: storage 
+ms.topic: article 
+author: JasonGerend 
+manager: brianlic 
+ms.author: jrgerend 
+---
 
-A simple volume is a dynamic volume that is made up of disk space from a single dynamic disk. A simple volume can consist of a single region on a disk or multiple regions of the same disk that are linked together. You can create simple volumes only on dynamic disks.
+# Create a simple volume
 
-Simple volumes are not fault tolerant.
+> **Applies To:** Windows 10, Windows 8.1, Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-**Backup Operator** or **Administrator** is the minimum membership required to complete the actions below.
+A simple volume is a dynamic volume that is made up of disk space from a single dynamic disk. A simple volume can consist of a single region on a disk or multiple regions of the same disk that are linked together. You can create simple volumes only on dynamic disks. Simple volumes are not fault tolerant.
 
-Creating a simple volume
-------------------------
+## Creating a simple volume
 
 -   [Using the Windows interface](#BKMK_WINUI)
 -   [Using a command line](#BKMK_CMD)
 
-<a href="" id="BKMK_WINUI"></a>
+> [!NOTE]
+> You must be a member of the **Backup Operators** or **Administrators** group, at minimum, to complete these steps.
+
+<a id="BKMK_WINUI"></a>
 **To create a simple volume using the Windows interface**
 1.  In Disk Management, right-click the unallocated space on the dynamic disk on which you want to create the simple volume, and then click **New Simple Volume**.
 
-2.  In the New Volume Wizard, click **Next**, click **Simple**, and then follow the instructions on your screen.
+2.  In the New Volume Wizard, click **Next**, click **Simple**, and then follow the on-screen instructions.
 
-<a href="" id="BKMK_CMD"></a>
+<a id="BKMK_CMD"></a>
 **To create a simple volume using a command line**
 1.  Open a command prompt and type `diskpart`.
 
@@ -28,45 +39,18 @@ Creating a simple volume
 
 4.  At the **DISKPART** prompt, type `assign letter=<driveletter>`.
 
-### Â 
+<br />
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Value</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>**list disk**</p></td>
-<td><p>Displays a list of disks and information about them, such as their size, amount of available free space, whether the disk is a basic or dynamic disk, and whether the disk uses the master boot record (MBR) or GUID partition table (GPT) partition style. The disk marked with an asterisk (*) has focus.</p></td>
-</tr>
-<tr class="even">
-<td><p>**create volume simple**</p></td>
-<td><p>Creates a simple volume. After you create the volume, the focus automatically shifts to the new volume.</p></td>
-</tr>
-<tr class="odd">
-<td><p>**size=** <em>size</em></p></td>
-<td><p>The size of the volume in megabytes (MB). If no size is given, the new volume takes up the remaining free space on the disk.</p></td>
-</tr>
-<tr class="even">
-<td><p>**disk=** <em>disknumber</em></p></td>
-<td><p>The dynamic disk on which to create the volume. If no disk is given, the current disk is used.</p></td>
-</tr>
-<tr class="odd">
-<td><p>**assign letter**=<em>driveletter</em></p></td>
-<td><p>Assigns a drive letter, <em>driveletter</em>, to the volume with focus. If no drive letter or mount point is specified, the next available drive letter is assigned. If the drive letter or mount point is already in use, an error is generated.</p></td>
-</tr>
-</tbody>
-</table>
+| Value | Description |
+| --- | --- |
+<p>**list disk**</p> | <p>Displays a list of disks and information about them, such as their size, the amount of available free space, whether the disk is a basic or dynamic disk, and whether the disk uses the Master Boot Record (MBR) or GUID Partition Table (GPT) partition style. The disk marked with an asterisk (*) has focus.</p> |
+| <p>**create volume simple**</p> | <p>Creates a simple volume. After you create the volume, the focus automatically shifts to the new volume.</p>    |
+| <p>**size=** <em>size</em></p> | <p>The size of the volume in megabytes (MB). If no size is given, the new volume takes up the remaining free space on the disk.</p>   |
+| <p>**disk=** <em>disknumber</em></p>  | <p>The dynamic disk on which to create the volume. If no disk is given, the current disk is used.</p> |
+| <p>**assign letter**=<em>driveletter</em></p> | <p>Assigns a drive letter, <em>driveletter</em>, to the volume with focus. If no drive letter or mount point is specified, the next available drive letter is assigned. If the drive letter or mount point is already in use, an error is generated.</p>|
 
-#### Additional references
+## See Also
 
--   [Command-line syntax notation](https://technet.microsoft.com/en-us/library/cc742449(v=ws.11).aspx)
+-   [Command-line syntax notation](https://technet.microsoft.com/library/cc742449(v=ws.11).aspx)
 
 
