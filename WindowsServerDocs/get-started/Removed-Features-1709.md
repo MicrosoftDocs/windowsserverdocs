@@ -8,7 +8,7 @@ ms.suite: na
 ms.technology: server-general
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.date: 10/05/2017
+ms.date: 10/17/2017
 author: jaimeo
 ms.author: jaimeo
 manager: elizapo
@@ -20,18 +20,17 @@ manager: elizapo
 The following is a list of features and functionalities in Windows Server, version 1709 that have either been removed from the product in that release or are starting to be considered for potential replacement in subsequent releases. It is intended for IT professionals who are updating operating systems in a commercial environment. **This list is subject to change in subsequent releases and might not include every affected feature or functionality.** 
 
 ## Features removed from Windows Server, version 1709
-Windows Server, version 1709 contains the same features present in Windows Server 2016. As a Semi-Annual Channel release, Windows Server, version 1709 offers only the Server Core installation option. For details, see [Windows Server Semi-Annual Channel overview](semi-annual-channel-overview.md) [possibly also link into top of revised Server Core material?]
+Windows Server, version 1709 contains the same features present in Windows Server 2016. However, this release does offer different installation options than Windows Server 2016 does:
 
-> [!NOTE]  
-> Did you know that Nano Server has changed? See [Changes to Nano Server in Windows Server, version 1709](nano-in-semi-annual-channel.md). In addition to the changes in Nano Server, Windows Server, version 1709 is available only with the Server Core installation option and with a revised servicing model. For details, see [Windows Server Semi-Annual Channel overview](semi-annual-channel-overview.md).
-
+- As a Semi-Annual Channel release, Windows Server, version 1709 offers only the Server Core installation option. For details, see [Windows Server Semi-Annual Channel overview](semi-annual-channel-overview.md) [possibly also link into top of revised Server Core material?]
+- Starting with this release, Nano Server is not available as an installable host operating system. Instead, Nano Server is available as a container operating system. See [Changes to Nano Server in Windows Server, version 1709](nano-in-semi-annual-channel.md).
 
 
 ## Features being considered for replacement starting with subsequent releases
 
 The following features and functionalities are being considered for replacement starting with releases after Windows Server, version 1709. Eventually, they may be completely removed from the installed product image and replaced by other features or functionality (or installable from other sources), but they are still available in this release, sometimes with certain functionality removed. You should begin planning now to employ alternate methods or the future replacement for any applications, code, or usage that depend on these features.
 
-If you have feedback about the proposed replacement of any of these features, contact us at [FEEDBACK LINK].
+If you have feedback to share about the proposed replacement of any of these features, you can use the [Feedback Hub app](https://support.microsoft.com/help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub-app). Even though this app runs on Windows 10, you can use it to send us feedback about the Windows Server product (and documentation) as well.
 
 ### IIS 6 Management compatibility
 Specific features being considered for replacement are:
