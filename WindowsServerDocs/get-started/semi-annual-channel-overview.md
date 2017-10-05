@@ -71,15 +71,14 @@ You’ve likely already chosen to use at least one of these options based on you
 ## Obtain preview releases through the Windows Insider Program
 For many IT pros and application developers, gaining visibility into new functionality early--before they’re released--can be both intriguing and valuable. Testing the early builds of Windows Server helps both Microsoft and its customers because of the opportunity to discover possible issues before release. It also gives customers a unique opportunity to directly influence the functionality in the product. Microsoft depends on receiving feedback throughout the development process so that adjustments may be made as quickly as possible. Early testing and feedback is essential to the rapid release model.
 
-Pre-release builds of Windows Server will be available for download via the Windows Insider Program and the Windows Insider Program for Business. The server editions available on the Windows Insider Program may vary depending on the current stage of the development cycle. To join the Windows Insider Program, follow these steps:
+Pre-release builds of Windows Server will be available for download via the Windows Insider Program and the [Windows Insider Program for Business](https://insider.windows.com/for-business-getting-started-server/). The server editions available on the Windows Insider Program may vary depending on the current stage of the development cycle. To join the Windows Insider Program, follow these steps:
 
 1. Register at [Windows Insider Program for Business](https://insider.windows.com/ForBusiness). 
-2. Register a Windows 10 device for Insider flights. 
-3. Choose one or more servers for preview testing. 
-4. Download builds from the [Windows Server Insider Preview](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewserver) page. See the [Windows Server blog](https://blogs.technet.microsoft.com/windowsserver/ ) for an announcement when the preview is available.
-5. Bookmark the Docker Hub or other external sites where some code and docs will be published. See [Windows Containers Documentation](http://aka.ms/containers/insiders).
-6. Send us your feedback via the Windows 10 Feedback Hub application.
-7. Join the [Windows Server Tech Community](https://techcommunity.microsoft.com/t5/Windows-Server/ct-p/Windows-Server) to collaborate, share and learn from experts. 
+2. Choose one or more servers for preview testing. 
+3. Download builds from the [Windows Server Insider Preview](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewserver) page. See the [Windows Server blog](https://blogs.technet.microsoft.com/windowsserver/ ) for an announcement when the preview is available.
+4. Bookmark the Docker Hub or other external sites where some code and docs will be published. See [Windows Containers Documentation](http://aka.ms/containers/insiders).
+5. Send us your feedback via the Windows 10 Feedback Hub application.
+6. Join the [Windows Server Tech Community](https://techcommunity.microsoft.com/t5/Windows-Server/ct-p/Windows-Server) to collaborate, share and learn from experts. 
 
 
  
