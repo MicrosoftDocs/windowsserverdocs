@@ -6,7 +6,7 @@ ms.mktglfcycl: manage
 ms.sitesec: library
 author: lizap
 ms.localizationpriority: medium
-ms.date: 09/18/2017
+ms.date: 10/02/2017
 ---
 # What is the Server Core installation option in Windows Server?
 
@@ -29,7 +29,7 @@ When you finish installing Server Core on a system and sign in for the first tim
 - Microsoft-Windows-Server-Gui-RSAT-Package
 - Microsoft-Windows-Cortana-PAL-Desktop-Package
 
-In other words, there is **no desktop** in Server Core, by design. While maintaining the capabilities required to support traditional business applications and role-based workloads, Server Core does not have a traditional desktop interface. Instead, Server Core is designed to be managed remotely through command line, PowerShell, or a GUI tool (like [RSAT](../../remote/remote-server-administration-tools,md) or the Project Honolulu management portal).
+In other words, there is **no desktop** in Server Core, by design. While maintaining the capabilities required to support traditional business applications and role-based workloads, Server Core does not have a traditional desktop interface. Instead, Server Core is designed to be managed remotely through command line, PowerShell, or a GUI tool (like [RSAT](../../remote/remote-server-administration-tools.md) or the Project Honolulu management portal).
 
 In addition to no UI, Server Core also differs from the Server with Desktop Experience in the following ways:
 

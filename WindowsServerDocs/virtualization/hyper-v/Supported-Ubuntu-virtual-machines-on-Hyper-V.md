@@ -226,3 +226,5 @@ The following feature distribution map indicates the features in each version. T
 * [Set-VMFirmware](http://technet.microsoft.com/library/dn464287.aspx)
 
 * [Ubuntu 14.04 in a Generation 2 VM - Ben Armstrong's Virtualization Blog](http://blogs.msdn.com/b/virtual_pc_guy/archive/2014/06/09/ubuntu-14-04-in-a-generation-2-vm.aspx)
+
+Not finding content you need? Windows 10 users, tell us what you want on [Feedback Hub](feedback-hub:?tabid=2&contextid=898). 
