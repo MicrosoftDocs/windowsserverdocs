@@ -38,21 +38,21 @@ Remote Access DirectAccess deployments include the following disadvantages.
 
 Remote Access VPN deployments include the following advantages.
 
-- Much more simplified and time tested deployment
+- Simplified and time tested deployment
 - IPv4 and IPv6 compatible
 - Supported on all Windows operating systems
-- Similar solutions available for third party platforms allowing enterprise administrators to have one solution across the device ecosystem
+- Similar solutions available to third party platforms allowing enterprise administrators to have one solution across the device ecosystem
 - A number of choices for automatic connectivity:
 	- Always connected
 	- Name match based triggering
 	- Application Launch based Triggering
-- Modern Security features
+- Modern security features
 	- Per App VPN
 	- Traffic pattern based Filters
 	- Lockdown VPN
-- Routing Flexibility
-	- Split or Force Tunneled 
-- New Authentication technology integration such as Windows Hello For Business
+- Routing flexibility
+	- Split or force tunnel
+- New authentication technology integration, such as with Windows Hello for Business
 - Integration with the Azure Conditional Access platform
 - Mobile Device Management \(MDM\) and System Center Configuration Manager \(SCCM\) based deployment
 - With Windows Server and Windows 10 version 1709 VPN, Pre\-Logon Infrastructure Tunnels, Management of Remote Computers and Devices, and the ability to specify Pre\-Logon Gateways
