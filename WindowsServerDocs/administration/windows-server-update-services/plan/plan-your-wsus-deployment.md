@@ -99,13 +99,13 @@ WSUS requires one of the following databases:
 
 -   Windows Internal Database (WID)
 
--   Microsoft SQL Server 2012 with SP1
+-   Microsoft SQL Server 2016
+
+-   Microsoft SQL Server 2014
 
 -   Microsoft SQL Server 2012
 
--   Microsoft SQL Server 2008 R2 SP2
-
--   Microsoft SQL Server 2008 R2 SP1
+-   Microsoft SQL Server 2008 R2
 
 The following editions of SQL Server are supported by WSUS:
 
