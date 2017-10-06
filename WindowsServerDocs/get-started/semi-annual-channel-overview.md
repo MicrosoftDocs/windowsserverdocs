@@ -71,7 +71,7 @@ You’ve likely already chosen to use at least one of these options based on you
 ## Obtain preview releases through the Windows Insider Program
 For many IT pros and application developers, gaining visibility into new functionality early--before they’re released--can be both intriguing and valuable. Testing the early builds of Windows Server helps both Microsoft and its customers because of the opportunity to discover possible issues before release. It also gives customers a unique opportunity to directly influence the functionality in the product. Microsoft depends on receiving feedback throughout the development process so that adjustments may be made as quickly as possible. Early testing and feedback is essential to the rapid release model.
 
-Pre-release builds of Windows Server will be available for download via the Windows Insider Program and the [Windows Insider Program for Business](https://insider.windows.com/for-business-getting-started-server/). The server editions available on the Windows Insider Program may vary depending on the current stage of the development cycle. To join the Windows Insider Program, follow these steps:
+Pre-release builds of Windows Server will be available for download via the Windows Insider Program and the [Windows Insider Program for Business](https://insider.windows.com/en-us/for-business-getting-started-server/). The server editions available on the Windows Insider Program may vary depending on the current stage of the development cycle. To join the Windows Insider Program, follow these steps:
 
 1. Register at [Windows Insider Program for Business](https://insider.windows.com/ForBusiness). 
 2. Choose one or more servers for preview testing. 
