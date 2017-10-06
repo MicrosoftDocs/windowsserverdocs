@@ -78,7 +78,6 @@ it is important to take the following precautions before doing so, to avoid data
 
 ## Additional considerations
 
--   For additional information about converting basic disks to dynamic disks, see http://go.microsoft.com/fwlink/?LinkId=64136.
 -   After you convert a basic disk to a dynamic disk, you cannot change the dynamic volumes back to partitions. Instead, you must delete all dynamic volumes on the disk and then use the **Convert To Basic Disk** command. 
 -   If you want to keep your data, you must first back it up or move it to another volume.
 -   Once converted, a dynamic disk will not contain basic volumes (primary partitions or logical drives).
