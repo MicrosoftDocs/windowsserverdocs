@@ -41,14 +41,14 @@ Remote Access VPN deployments include the following advantages.
 - Simplified and time tested deployment
 - IPv4 and IPv6 compatible
 - Supported on all Windows operating systems
-- Similar solutions available to third party platforms allowing enterprise administrators to have one solution across the device ecosystem
-- A number of choices for automatic connectivity:
+- Similar solutions available to third party platforms, allowing enterprise administrators to deploy one solution across the device ecosystem
+- Three automatic connectivity choices:
 	- Always connected
-	- Name match based triggering
-	- Application Launch based Triggering
+	- Name match\-based triggering
+	- Application\-launch based triggering
 - Modern security features
-	- Per App VPN
-	- Traffic pattern based Filters
+	- Per app VPN
+	- Traffic pattern\-based filters
 	- Lockdown VPN
 - Routing flexibility
 	- Split or force tunnel
@@ -63,15 +63,15 @@ The following sections provide specific functionality comparisons between Window
 
 You can use this section to gain an understanding of how Windows Server and Windows 10, version 1709, VPN features map to and improve upon old DirectAccess features.
 
-### Pre\-Logon Infrastructure Tunnels 
+### Pre\-Logon Device Tunnels 
 
 Following are the differences between the ways VPN and DirectAccess handle Pre\-Logon Infrastructure Tunnels.
 
 #### Windows 10 VPN
 
-By default, Windows 10 VPN does not automatically create Infrastructure Tunnels when users are not logged on to their computer or device. 
+By default, Windows 10 VPN does not automatically create Device Tunnels when users are not logged on to their computer or device. 
 
-You can configure Windows 10 VPN to automatically create Pre\-Logon Infrastructure Tunnels by using the Device Tunnel \(prelogon\) feature in the VPN profile.
+You can configure Windows 10 VPN to automatically create Pre\-Logon Device Tunnels by using the Device Tunnel \(prelogon\) feature in the VPN profile.
 
 This is defined using the following VPNv2 CSP parameters:
 
@@ -92,14 +92,15 @@ You can manage Windows 10 VPN clients by configuring the Device Tunnel \(prelogo
 You can define a Device Tunnel by using the following VPNv2 CSP parameters:
 
 - **VPNv2/ProfileName/DeviceTunnel**
+- **VPNv2/ProfileName/RegisterDNS**
 
 #### DirectAccess
 
 DirectAccess manage\-out has a mandatory dependency on native IPv6 connectivity between the management client and the DirectAccess gateway - which is often difficult to achieve, especially when you have load balanced or multi\-site deployments.
 
-### Specify Pre\-Logon Gateways
+### Specify Pre\-Logon Device Tunnel Allowed Destinations
 
-Following are the differences between how VPN and DirectAccess provide the ability to define pre\-logon gateway servers.
+Following are the differences between how VPN and DirectAccess provide the ability to define pre\-logon Allowed Destinations.
 
 #### Windows 10 VPN
 
@@ -109,6 +110,7 @@ This is defined using the following VPNv2 CSP parameters:
 
 - **VPNv2/ProfileName/DeviceTunnel**
 - **VPNv2/ProfileName/TrafficFilterList**
+- **VPNv2/ProfileName/RouteList**
 
 #### DirectAccess
 
