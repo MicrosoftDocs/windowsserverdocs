@@ -15,11 +15,10 @@ ms.author: jrgerend
 
 Disk Management is a system utility for managing hard disks and the volumes or partitions that they contain. With Disk Management, you can initialize disks, create volumes, and format volumes with the FAT, FAT32, or NTFS file systems. Disk Management enables you to perform most disk-related tasks without restarting the system or interrupting users. Most configuration changes take effect immediately.
 
-## See Also
+For details, see the following topics:
 
 -   [Checklist: Add a new disk](checklist--add-a-new-disk.md)
 -   [Manage disks](manage-disks.md)
 -   [Manage basic volumes](manage-basic-volumes.md)
 -   [Manage dynamic volumes](manage-dynamic-volumes.md)
--   [Create a striped volume](create-a-striped-volume.md)
 -   [Troubleshooting Disk Management](troubleshooting-disk-management.md)
