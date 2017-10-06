@@ -28,7 +28,6 @@
 #### [Enable Access-based Enumeration on a Namespace](dfs-namespaces/enable-access-based-enumeration-on-a-namespace.md)
 #### [Using Inherited Permissions with Access-based Enumeration](dfs-namespaces/using-inherited-permissions-with-access-based-enumeration.md)
 ## [Disk Management](disk-management/overview-of-disk-management.md)
-### [Checklist: add a new disk](disk-management/checklist--add-a-new-disk.md)
 ### [Manage disks](disk-management/manage-disks.md)
 #### [Initialize new disks](disk-management/initialize-new-disks.md)
 #### [Move disks to another computer](disk-management/move-disks-to-another-computer.md)
