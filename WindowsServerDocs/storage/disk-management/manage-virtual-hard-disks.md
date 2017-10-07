@@ -41,8 +41,10 @@ To make a VHD available for use (either one you have just created or another exi
 1. On the **Action** menu, select **Attach VHD**. 
 2. Specify the location of the VHD, using a fully-qualified path.
 
-To detach the VHD, making it unavailable: 
--   Right-click the disk, select **Detach VHD**, and then click **OK**. Detaching a VHD does not delete the VHD or any data stored in it.
+To detach the VHD, which will make it unavailable: 
+
+1. On the **Action** menu, select **Detach VHD**, or right-click the VHD in the volume list or graphical view. 
+2. Select **Detach VHD**. Detaching a VHD does not delete the VHD or any data stored in it.
 
 ## Additional considerations
 
@@ -50,3 +52,10 @@ To detach the VHD, making it unavailable:
 -   The minimum size for a VHD is 3 megabytes (MB).
 -   A VHD can only be a basic disk.
 -   Because a VHD is initialized when it is created, creating a large fixed-size VHD might take some time.
+
+## See Also
+
+-   [Virtual Hard Disk Image Format Specification](http://go.microsoft.com/fwlink/?LinkId=139201)
+-   [Virtual Server 2005 Administrator\'s Guide Glossary](http://go.microsoft.com/fwlink/?LinkId=143882)
+
+

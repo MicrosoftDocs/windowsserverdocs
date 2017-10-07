@@ -25,8 +25,9 @@ Basic disks support only primary partitions, extended partitions, and logical dr
 <br />
 
 > [!NOTE]
-> The decision to convert a basic disk to a dynamic disk has implications that should be considered carefully. 
+> The decision to convert a basic disk to a dynamic disk has implications that should be considered carefully. For more information about basic and dynamic disks and how to choose which type to use, see http://go.microsoft.com/fwlink/?LinkId=64133
 Before you convert disks, close any programs that are running on those disks.
+
 
 ## Changing a basic disk into a dynamic disk
 
@@ -52,7 +53,8 @@ Before you convert disks, close any programs that are running on those disks.
 > If you are using a basic disk as a storage area for shadow copies and you intend to convert the disk containing shadow copies into a dynamic disk, 
 it is important to take the following precautions before doing so, to avoid data loss: 
   -    If the disk is a non-boot volume, and is a different volume from where the original files reside, you must first dismount and take offline the volume containing the original files.
-  -    You must bring the volume containing the original files back online within 20 minutes, otherwise, you will lose the data stored in the existing shadow copies. 
+  
+   -    You must bring the volume containing the original files back online within 20 minutes, otherwise, you will lose the data stored in the existing shadow copies. 
   
   If the shadow copies are located on a boot volume, you can convert the disk to dynamic without losing shadow copies. You can use the **mountvol** command with the **/p** option to dismount the volume and take it offline. You can mount the volume and bring it online using either the **mountvol** command or the Disk Management snap-in.
 

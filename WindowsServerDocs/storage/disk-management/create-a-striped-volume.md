@@ -39,7 +39,7 @@ You can create striped volumes only on dynamic disks. Striped volumes cannot be 
 
 2.  At the **DISKPART** prompt, type `list disk`.  Note the number of the disk on which you want to create a striped volume.
 
-3.  At the **DISKPART** prompt, type `create volume stripe [size=<size>] [disk=<disknumber>[,<seconddisknumber>]]`.
+3.  At the **DISKPART** prompt, type `create volume stripe [size=<size>] [disk=<disknumber>[,[<seconddisknumber>,]]`.
 
 <br />
 

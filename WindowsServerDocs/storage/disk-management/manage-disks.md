@@ -52,4 +52,5 @@ If a disk is offline, you must bring it online before you can initialize it or c
 -   [Change a Master Boot Record disk into a GUID Partition Table disk](change-an-mbr-disk-into-a-gpt-disk.md)
 -   [Change a GUID Partition Table disk into a Master Boot Record disk](change-a-gpt-disk-into-an-mbr-disk.md)
 -   [Remove a missing dynamic disk](remove-a-missing-dynamic-disk.md)
+-   [Manage disks remotely](        )
 -   [Manage Virtual Hard Disks](manage-virtual-hard-disks.md)
