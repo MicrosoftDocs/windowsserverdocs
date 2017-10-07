@@ -18,8 +18,7 @@ Basic disks support only primary partitions, extended partitions, and logical dr
 <br />
 
 > [!NOTE]
-> The decision to convert a dynamic disk to a basic disk has implications that should be considered carefully. Before you convert disks, close any programs that are running on those disks. For more information about basic and dynamic disks and how to choose which type to use, see http://go.microsoft.com/fwlink/?LinkId=64133 
-Before you convert disks, close any programs that are running on those disks.
+> The decision to convert a dynamic disk to a basic disk has implications that should be considered carefully. Before you convert disks, close any programs that are running on those disks. 
 
 
 ## Changing a dynamic disk back to a basic disk

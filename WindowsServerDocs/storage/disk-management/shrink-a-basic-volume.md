@@ -69,11 +69,11 @@ When you shrink a partition, any ordinary files are automatically relocated on t
 
 -   When you shrink a partition, certain files (for example, the paging file or the shadow copy storage area) cannot be automatically relocated and you cannot decrease the allocated space beyond the point where the unmovable files are located. 
 If the shrink operation fails, check the Application Log for Event 259, which will identify the unmovable file. If you know the cluster(s) associated with the file that is preventing the shrink operation, you can also use the **fsutil** command at a command prompt (type **fsutil volume querycluster /?** for usage). When you provide the **querycluster** parameter, the command output will identify the unmovable file that is preventing the shrink operation from succeeding.
-
--  In some cases, you can relocate the file temporarily. For example, if you need to shrink the partition further, you can use Control Panel to move the paging file or stored shadow copies to another disk, delete the stored shadow copies, shrink the volume, and then move the paging file back to the disk.
+In some cases, you can relocate the file temporarily. For example, if you need to shrink the partition further, you can use Control Panel to move the paging file or stored shadow copies to another disk, delete the stored shadow copies, shrink the volume, and then move the paging file back to the disk.
 
 -   If the number of bad clusters detected by dynamic bad-cluster remapping is too high, you cannot shrink the partition. If this occurs, you should consider moving the data and replacing the disk.
-Do not use a block-level copy to transfer the data. This will also copy the bad sector table and the new disk will treat the same sectors as bad even though they are normal.
+
+-  Do not use a block-level copy to transfer the data. This will also copy the bad sector table and the new disk will treat the same sectors as bad even though they are normal.
 
 -   You can shrink primary partitions and logical drives on raw partitions (those without a file system) or partitions using the NTFS file system.
 
