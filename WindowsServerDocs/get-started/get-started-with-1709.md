@@ -39,7 +39,9 @@ This release should be installed as a clean installation.
 - If you use a hosting provider such as Microsoft Azure or Amazon Web Services, Windows Server, version 1709 is available through those services.
 
 - Participants in these loyalty programs can obtain this release:
-Visual Studio Subscriptions
+
+**Visual Studio Subscriptions:** If you already participate in Visual Studio Subscriptions, you can obtain Windows Server, version 1709 by going to the [Visual Studio Subscriber download page](https://my.visualstudio.com/downloads?pid=2347) and completing the download available there. If you are not already a subscriber, go to [Visual Studio Subscriptions](https://www.visualstudio.com/subscriptions/) to sign up, and then visit the [Visual Studio Subscriber download page](https://my.visualstudio.com/downloads?pid=2347) as above.
+
 
 
 ## Installing?
