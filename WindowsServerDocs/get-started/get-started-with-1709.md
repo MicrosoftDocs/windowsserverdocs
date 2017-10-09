@@ -15,7 +15,7 @@ ms.assetid: 9cf87597-b15d-4f43-8aa1-91e60367f011
 
 >Applies To: Windows Server (Semi-Annual Channel)
 
-Windows Server, version 1709 is the first release in the new Semi-Annual Channel. For more about Semi-Annual Channel see [Semi-Annual Channel Overview].
+Windows Server, version 1709 is the first release in the new Semi-Annual Channel. For more about Semi-Annual Channel see [Semi-Annual Channel Overview](semi-annual-channel-overview.md).
 
 Semi-Annual Channel releases such as this one are ideal for customers who are moving at a “cloud cadence," such as those on rapid development cycles or hosters keeping up with the latest Hyper-V investments. Windows Server products in the Semi-Annual Channel will have new releases available twice a year, in spring and fall. Each release in this channel will be supported for 18 months from the initial release.
 
@@ -30,20 +30,24 @@ Windows Server, version 1709 runs in Server Core mode. That means there is no lo
 ### What about Nano Server?
 Nano Server is available as a container operating system. See [Changes in Nano Server] for details.
 
+## Find out basic information about 1709
+- What hardware is needed to run it? See [System Requirements]
+- What new features and functionality has been added? See 
+- What has been removed? See
+- What issues need to be worked around? See
+
+
 ## Where to obtain Windows Server, version 1709
 
 This release should be installed as a clean installation.
 
-- VLSC: Volume-licensed customers with [Software Assurance](https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-default.aspx) can obtain this release by going to [LINK] and [doing something].
+- VLSC: Volume-licensed customers with [Software Assurance](https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-default.aspx) can obtain this release by going to [LINK] and [doing something]. **This is the only option that allows you to run Windows Server, version 1709 in production.**
 
-- If you use a hosting provider such as Microsoft Azure or Amazon Web Services, Windows Server, version 1709 is available through those services.
+- If you use a hosting provider such as [Microsoft Azure](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/Microsoft.WindowsServer?tab=Overview) or Amazon Web Services, Windows Server, version 1709 is available through those services. **You can use Windows Server, version 1709 in those services for testing and development.**
 
-- Participants in these loyalty programs can obtain this release:
+- Participants in **Visual Studio Subscriptions:** If you already participate in Visual Studio Subscriptions, you can obtain Windows Server, version 1709 by going to the [Visual Studio Subscriber download page](https://my.visualstudio.com/downloads?pid=2347) and completing the download available there. If you are not already a subscriber, go to [Visual Studio Subscriptions](https://www.visualstudio.com/subscriptions/) to sign up, and then visit the [Visual Studio Subscriber download page](https://my.visualstudio.com/downloads?pid=2347) as above.
 
-**Visual Studio Subscriptions:** If you already participate in Visual Studio Subscriptions, you can obtain Windows Server, version 1709 by going to the [Visual Studio Subscriber download page](https://my.visualstudio.com/downloads?pid=2347) and completing the download available there. If you are not already a subscriber, go to [Visual Studio Subscriptions](https://www.visualstudio.com/subscriptions/) to sign up, and then visit the [Visual Studio Subscriber download page](https://my.visualstudio.com/downloads?pid=2347) as above.
-
-
-
-## Installing?
 
 ## Activating Windows Server, version 1709
+
+- 
