@@ -111,7 +111,7 @@ You can grow (extend) volumes, but not shrink them. By default, Storage Replica 
 ## <a name="FAQ6"></a>Can I bring a destination volume online for read-only access?  
 Not in Windows Server 2016 RTM, aka the so-called "RS1" release. Storage Replica dismounts the destination volume when replication begins. 
 
-However, in Windows Server Version 1709 (aka "RS3") the option to mount the destination storage is now possible - this feature is called "Test Failover". To do this, you must have an unused, NTFS or ReFS formatted volume that is not currently replicating on the destination. Then you can mount a snapshot of the replicated storage temporarily for testing or backup purposes. 
+However, in Windows Server Version, 1709 the option to mount the destination storage is now possible - this feature is called "Test Failover". To do this, you must have an unused, NTFS or ReFS formatted volume that is not currently replicating on the destination. Then you can mount a snapshot of the replicated storage temporarily for testing or backup purposes. 
 
 For example, to create a test failover where you are replicating a volume "D:" in the Replication Group "RG2" on the destination server "SRV2" and have a "T:" drive on SRV2 that is not being replicated:
 
