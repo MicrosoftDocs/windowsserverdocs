@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # STEP 2 Configure EDGE1
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 The following procedure is performed on the DirectAccess server:
 

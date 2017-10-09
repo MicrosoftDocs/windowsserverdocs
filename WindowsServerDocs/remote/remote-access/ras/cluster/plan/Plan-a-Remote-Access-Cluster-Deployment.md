@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # Plan a Remote Access Cluster Deployment
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
  Windows Server 2016 and Windows Server 2012 combine DirectAccess and Remote Access Service (RAS) VPN into a single Remote Access role. This overview provides an introduction to the planning steps required in order to deploy a cluster of  Windows Server 2016 or Windows Server 2012 Remote Access servers.
   

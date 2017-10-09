@@ -12,7 +12,7 @@ author: jamesmci
 
 # Remote Access Always On VPN Deployment
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows 10
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
 You can use the following sections to deploy Always On VPN connections for remote Windows 10 client computers that are joined to your domain.
 

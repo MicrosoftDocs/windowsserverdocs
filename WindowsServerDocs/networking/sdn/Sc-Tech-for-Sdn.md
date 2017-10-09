@@ -15,7 +15,7 @@ author: jamesmci
 ---
 # System Center Technologies for Software Defined Networking
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 System Center includes the following technologies for use with Software Defined Networking (SDN):  
   

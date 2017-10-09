@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # STEP 6 Test DirectAccess Connectivity from the Homenet Subnet
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 The DirectAccess one-time password (OTP) deployment is now complete and you can start to test connectivity from the Homenet subnet.  
   

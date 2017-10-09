@@ -12,7 +12,7 @@ author: jamesmci
 
 # Connection Request Policies
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use this topic to learn how to use NPS connection request policies to configure the NPS server as a RADIUS server, a RADIUS proxy, or both.
 

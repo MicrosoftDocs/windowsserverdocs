@@ -11,7 +11,7 @@ author: jamesmci
 ---
 # Verify Server Enrollment of a Server Certificate
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use this procedure to verify that your Network Policy Server (NPS) servers have enrolled a server certificate from the certification authority (CA).   
   

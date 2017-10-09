@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # Prerequisites for Deploying DirectAccess
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 The following table lists the prerequisites necessary for using the configuration wizards to deploy DirectAccess.  
   

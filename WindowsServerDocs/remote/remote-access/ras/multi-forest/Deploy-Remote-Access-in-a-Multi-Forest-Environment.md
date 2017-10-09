@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # Deploy Remote Access in a Multi-Forest Environment
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 The Remote Access configuration tools (the Remote Access Management console and the Windows PowerShell cmdlets) are designed to work well in a single forest environment containing one or more domains. However, when Remote Access is deployed in a multi-forest environment, the Remote Access administrator must perform some manual configuration for a successful deployment. This guide describes the planning and configuration steps for a multi-forest deployment; including when one-time password (OTP) authentication is used.  
   

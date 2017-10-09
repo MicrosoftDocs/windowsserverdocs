@@ -11,7 +11,7 @@ author: jamesmci
 ---
 # Network Load Balancing
 
->Applies To:  Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This topic provides an overview of the Network Load Balancing \(NLB\) feature in Windows Server 2016, and includes links to additional guidance about creating, configuring, and managing NLB clusters.
 

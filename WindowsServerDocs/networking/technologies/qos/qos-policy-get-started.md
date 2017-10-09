@@ -12,7 +12,7 @@ author: jamesmci
 
 # Getting Started with QoS Policy
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use the following topics to get started with Quality of Service \(QoS\) Policy.
 

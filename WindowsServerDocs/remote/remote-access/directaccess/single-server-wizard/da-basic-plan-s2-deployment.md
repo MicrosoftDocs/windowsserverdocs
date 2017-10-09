@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # Step 2 Plan the Basic DirectAccess Deployment
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 After planning the DirectAccess infrastructure, the next step in deploying DirectAccess on a single server with basic settings is to plan the settings for the Getting Started Wizard.  
   

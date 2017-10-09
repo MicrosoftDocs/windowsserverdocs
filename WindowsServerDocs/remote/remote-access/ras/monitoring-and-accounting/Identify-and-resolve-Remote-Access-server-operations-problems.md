@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # Identify and resolve Remote Access server operations problems
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 **Note:** Windows Server 2012 combines DirectAccess and Routing and Remote Access Service (RRAS) into a single Remote Access role.  
   

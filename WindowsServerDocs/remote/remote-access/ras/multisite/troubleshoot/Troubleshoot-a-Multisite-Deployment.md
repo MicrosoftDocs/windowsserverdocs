@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # Troubleshoot a Multisite Deployment
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This topic describes how to troubleshoot the most common errors that may occur when configuring a multisite Remote Access deployment.   
   

@@ -11,7 +11,7 @@ author: jamesmci
 ---
 # Use DNS Policy for Intelligent DNS Responses Based on the Time of Day
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use this topic to learn how to distribute application traffic across different geographically distributed instances of an application by using DNS policies that are based on the time of day.  
   

@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # Plan a Multi-Forest Deployment
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This topic describes the planning steps required when configuring Remote Access in a multi-forest deployment.  
   

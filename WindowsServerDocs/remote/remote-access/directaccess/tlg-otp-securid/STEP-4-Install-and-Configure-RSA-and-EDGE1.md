@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # STEP 4 Install and Configure RSA and EDGE1
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 RSA is the RADIUS and OTP server, and is installed prior to configuring RADIUS and OTP.  
   

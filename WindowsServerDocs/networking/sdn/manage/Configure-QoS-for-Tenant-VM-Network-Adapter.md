@@ -15,7 +15,7 @@ author: jamesmci
 ---
 # Configure Quality of Service (QoS) for a Tenant VM Network Adapter
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 When you configure QoS for a tenant VM network adapter, you have a choice between Data Center Bridging \(DCB\)or Software Defined Networking \(SDN\) QoS.
 

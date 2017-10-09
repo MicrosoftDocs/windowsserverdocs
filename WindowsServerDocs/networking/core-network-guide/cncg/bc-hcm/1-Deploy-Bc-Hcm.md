@@ -11,7 +11,7 @@ author: jamesmci
 ---
 # Deploy BranchCache Hosted Cache Mode
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 The Windows Server 2016 Core Network Guide provides instructions for planning and deploying the core components required for a fully functioning network and a new Active Directory&reg; domain in a new forest.
 
