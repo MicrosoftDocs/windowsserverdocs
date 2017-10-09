@@ -116,7 +116,7 @@ This is defined using the following VPNv2 CSP parameters:
 
 DirectAccess supports defining pre\-logon management servers.
 
-## Feature Comparison for Windows Server and Windows 10 versions earlier than 1709
+## Comparison of Features included in both 1709 and earlier versions of Windows Server and Windows 10 
 
 The following VPN features are included in Windows Server 2016, Windows 10, and  Windows Server and Windows 10 versions 1709
 
