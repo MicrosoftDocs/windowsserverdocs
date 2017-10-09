@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # What's New in IPAM
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This topic describes the IP Address Management (IPAM) functionality that is new or changed in Windows Server 2016.  
   

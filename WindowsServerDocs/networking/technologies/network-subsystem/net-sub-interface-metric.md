@@ -12,7 +12,7 @@ author: jamesmci
 
 # Configure the Order of Network Interfaces
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 In Windows Server 2016 and Windows 10, you can use the interface metric to configure the order of network interfaces.
 

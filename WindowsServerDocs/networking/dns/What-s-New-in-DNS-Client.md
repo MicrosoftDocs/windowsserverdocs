@@ -11,7 +11,7 @@ author: jamesmci
 ---
 # What's New in DNS Client in Windows Server 2016
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This topic describes the Domain Name System (DNS) client functionality that is new or changed in Windows 10 and Windows Server 2016.
   

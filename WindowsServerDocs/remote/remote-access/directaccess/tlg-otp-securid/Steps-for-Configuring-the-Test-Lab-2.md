@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # Steps for Configuring the Test Lab
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 The following steps describe how to configure the Remote Access infrastructure, configure the Remote Access server and client, and test DirectAccess connectivity from the Homenet and Internet subnets.  
   

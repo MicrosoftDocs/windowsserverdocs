@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # DirectAccess Cluster-NLB Test Lab Configuration Requirements
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 The following components are required for configuring DirectAccess in the test lab:  
   

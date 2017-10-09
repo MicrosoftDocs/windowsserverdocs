@@ -12,7 +12,7 @@ author: jamesmci
 
 # Converged NIC Configuration with a Single Network Adapter
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 The following sections provide instructions for configuring Converged NIC with a single NIC in your Hyper-V host.
 

@@ -37,3 +37,5 @@ The following client apps are available:
 
 ## Remote Desktop client URI scheme
 You can integrate features of Remote Desktop clients across platforms by enabling a Uniform Resource Identifier (URI) scheme. Check out the [supported URI attributes](remote-desktop-uri.md) that you can use with the iOS, Mac, and Android clients.
+
+Not finding content you need? Windows 10 users, tell us what you want on [Feedback Hub](feedback-hub:?tabid=2&contextid=898). 

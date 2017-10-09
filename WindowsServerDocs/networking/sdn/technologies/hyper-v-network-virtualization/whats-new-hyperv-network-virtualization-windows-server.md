@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # What's New in Hyper-V Network Virtualization in Windows Server 2016
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This topic describes the Hyper-V Network Virtualization (HNV) functionality that is new or changed in Windows Server 2016.  
   

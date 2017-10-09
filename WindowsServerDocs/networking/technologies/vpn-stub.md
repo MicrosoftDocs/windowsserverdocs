@@ -11,7 +11,7 @@ author: jamesmci
 ---
 # Virtual Private Networking (VPN)
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 VPN documentation is now located in the **Remote** section of this library, under **Remote Access**. Go to  [Virtual Private Networking (VPN)](https://docs.microsoft.com/windows-server/remote/remote-access/vpn/vpn-top).
 

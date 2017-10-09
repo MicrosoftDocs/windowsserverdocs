@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # Manage Role Based Access Control with Server Manager
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use the following topics to manage role based access control by using Server Manager, which has a graphical user interface.  
   

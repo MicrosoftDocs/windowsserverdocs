@@ -11,7 +11,7 @@ author: jamesmci
 ---
 # Configure DNS and Firewall Settings
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows 10
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
 You can use this section to configure DNS and Firewall settings.
 

@@ -12,7 +12,7 @@ author: JMesser81
 ---
 # Troubleshoot the Windows Server Software Defined Networking Stack
 
->Applies To: Windows Server, Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This guide examines the common Software Defined Networking (SDN) errors and failure scenarios and outlines a troubleshooting workflow that leverages the available diagnostic tools.  
 

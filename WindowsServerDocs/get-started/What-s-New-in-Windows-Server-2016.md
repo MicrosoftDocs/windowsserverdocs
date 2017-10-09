@@ -202,3 +202,5 @@ Three new features are added in Microsoft Windows 10 and Windows Server 2016:
 
 ## See Also  
 -   [Release Notes: Important Issues in Windows Server 2016](Windows-Server-2016-GA-Release-Notes.md)  
+
+Not finding content you need? Windows 10 users, tell us what you want on [Feedback Hub](feedback-hub:?tabid=2&contextid=898). 

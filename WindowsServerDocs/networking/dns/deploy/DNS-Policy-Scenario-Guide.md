@@ -11,7 +11,7 @@ author: jamesmci
 ---
 # DNS Policy Scenario Guide
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This guide is intended for use by DNS, network, and systems administrators.  
   

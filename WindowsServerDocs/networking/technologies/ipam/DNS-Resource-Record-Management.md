@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # DNS Resource Record Management
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This topic provides information about managing DNS resource records by using IPAM.  
   

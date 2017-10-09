@@ -78,7 +78,7 @@ If you have previously installed Honolulu on Windows Server (not Windows 10), yo
 
 To connect to a workgroup machine that is not on the same subnet as the gateway, make sure the firewall port for WinRM (TCP 5985) allows inbound traffic on the target machine. You can run the following command in PowerShell or at a Command Prompt as Administrator on the target machine to create this firewall rule:
   
-    NETSH advfirewall firewall add rule name=”WinRM 5985” protocol=TCP dir=in localport=5985 action=allow
+    Set-NetFirewallRule -Name WINRM-HTTP-In-TCP-PUBLIC –RemoteAddress Any
 
 ## Hyper-V PowerShell not installed
 

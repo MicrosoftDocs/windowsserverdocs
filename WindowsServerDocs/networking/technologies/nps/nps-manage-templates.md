@@ -12,7 +12,7 @@ author: jamesmci
 
 # Manage NPS Templates
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use Network Policy Server \(NPS\) templates to create configuration elements, such as Remote Authentication Dial-In User Service \(RADIUS\) clients or shared secrets, that you can reuse on the local NPS server and export for use on other NPS servers. 
 

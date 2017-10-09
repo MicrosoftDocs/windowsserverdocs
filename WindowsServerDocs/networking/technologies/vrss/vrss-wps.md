@@ -12,7 +12,7 @@ author: jamesmci
 
 # Windows PowerShell Commands for RSS and vRSS
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use this topic to quickly locate technical reference information about Windows PowerShell commands for Receive Side Scaling \(RSS\) and virtual RSS \(vRSS\).
 

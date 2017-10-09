@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # Border Gateway Protocol (BGP)
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use this topic to gain an understanding of Border Gateway Protocol (BGP), including BGP supported deployment topologies and BGP features and capabilities.  
   
