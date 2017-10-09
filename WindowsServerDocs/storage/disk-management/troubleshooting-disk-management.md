@@ -6,27 +6,14 @@ ms.technology: storage
 ms.topic: article 
 author: JasonGerend 
 manager: brianlic 
-ms.author: jrgerend 
+ms.author: jgerend 
 ---
 
 # Troubleshooting Disk Management
 
 > **Applies To:** Windows 10, Windows 8.1, Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-This section lists a few common issues you may encounter when using Disk Management.
-
--   [Partitions on basic disks added to the system do not appear in the Disk Management Volume List view.](#BKMK_1)
--   [A basic disk's status is Not Initialized.](#BKMK_2)
--   [A basic or dynamic disk's status is Unreadable.](#BKMK_3)
--   [A dynamic disk's status is Foreign.](#BKMK_4)
--   [A dynamic disk's status is Online (Errors).](#BKMK_5)
--   [A dynamic disk's status is Offline or Missing.](#BKMK_6)
--   [A basic or dynamic volume's status is Failed.](#BKMK_7)
--   [A basic or dynamic volume's status is Unknown.](#BKMK_8)
--   [A dynamic volume's status is Data Incomplete.](#BKMK_9)
--   [A dynamic volume's status is Healthy (At Risk).](#BKMK_10)
--   [Cannot manage striped volumes using Disk Management or DiskPart.](#BKMK_11)
--   [Disk Management cannot start the Virtual Disk Service](#BKMK_virtdisk)
+This topic lists a few common issues you may encounter when using Disk Management.
 
 <a id="BKMK_1"></a>
 

@@ -6,7 +6,7 @@ ms.technology: storage
 ms.topic: article 
 author: JasonGerend 
 manager: brianlic 
-ms.author: jrgerend 
+ms.author: jgerend 
 ---
 
 # Shrink a basic volume
