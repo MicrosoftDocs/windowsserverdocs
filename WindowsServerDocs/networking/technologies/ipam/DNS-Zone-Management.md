@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # DNS Zone Management
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This topic provides information about managing DNS zones by using the IPAM client console.  
   

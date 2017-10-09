@@ -12,7 +12,7 @@ author: jamesmci
 
 # Use DNS Policy for Split-Brain DNS in Active Directory
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use this topic to leverage the traffic management capabilities of DNS policies for split\-brain deployments with Active Directory integrated DNS zones in Windows Server 2016.
 

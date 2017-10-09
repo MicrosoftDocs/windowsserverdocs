@@ -11,7 +11,7 @@ author: jamesmci
 ---
 # Configure the Remote Access Server for Always On VPN
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows 10
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
 You can use this section to install and configure the Remote Access server role on the computer or virtual machine \(VM\) that you want to use as your VPN server. 
 

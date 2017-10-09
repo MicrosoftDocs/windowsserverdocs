@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # STEP 8 Snapshot the DirectAccess Cluster-NLB Configuration
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This completes the DirectAccess test lab. To save this configuration so that you can quickly return to a working DirectAccess with NLB cluster configuration from which you can test other DirectAccess modular test lab guides, test lab guide extensions, or for your own experimentation and learning, do the following:  
   

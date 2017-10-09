@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # Hyper-V Network Virtualization Overview in Windows Server 2016
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 In Windows Server 2016 and Virtual Machine Manager, Microsoft provides an end-to-end network virtualization solution.  There are five major components that comprise Microsoft's network virtualization solution:  
   

@@ -11,7 +11,7 @@ author: jamesmci
 ---
 # Hyper-V Virtual Switch
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This topic provides an overview of Hyper-V Virtual Switch, which provides you with the ability to connect virtual machines \(VMs\) to networks that are external to the Hyper\-V host, including your organization's intranet and the Internet. 
 

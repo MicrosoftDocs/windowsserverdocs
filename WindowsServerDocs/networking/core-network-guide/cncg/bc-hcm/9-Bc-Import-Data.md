@@ -12,7 +12,7 @@ author: jamesmci
 
 # Import Data Packages on the Hosted Cache Server \(Optional\)
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 You can use this procedure to import data packages and preload content on your hosted cache servers.
 

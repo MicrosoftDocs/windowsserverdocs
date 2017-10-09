@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # Step 3 Configure the Multisite Deployment
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 After configuring the multisite infrastructure follow these steps to set up the  Remote Access multisite deployment.  
   

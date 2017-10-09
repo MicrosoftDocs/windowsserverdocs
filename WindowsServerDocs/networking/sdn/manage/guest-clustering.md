@@ -16,7 +16,7 @@ author: jamesmci
 
 # Guest Clustering in a Virtual Network
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 Virtual machines that are connected to a virtual network are only permitted to use the IP addresses that Network Controller has assigned in order to communicate on the network.  This means clustering technologies that require a floating IP address, such as Microsoft Failover Clustering, require some extra steps in order to function correctly.
 

@@ -12,7 +12,7 @@ author: jamesmci
 
 # Manage QoS Policy
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use this topic to learn about using the QoS Policy wizard to create, edit, or delete a QoS Policy.
 

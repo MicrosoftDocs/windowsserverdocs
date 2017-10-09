@@ -12,7 +12,7 @@ author: jamesmci
 
 #  Configure Client Automatic Hosted Cache Discovery by Service Connection Point
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 With this procedure you can use Group Policy to enable and configure BranchCache hosted cache mode on domain\-joined computers that are running the following BranchCache\-capable Windows operating systems.
 

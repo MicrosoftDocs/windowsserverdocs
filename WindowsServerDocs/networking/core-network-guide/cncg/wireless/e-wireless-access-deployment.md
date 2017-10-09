@@ -11,7 +11,7 @@ author: jamesmci
 ---
 # Wireless Access Deployment
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 Follow these steps to deploy wireless access:
 

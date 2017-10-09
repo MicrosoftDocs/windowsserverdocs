@@ -11,7 +11,7 @@ author: jamesmci
 ---
 # GRE Tunneling in Windows Server 2016
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 Windows Server 2016 provides updates to Generic Routing Encapsulation \(GRE\) tunnel capability for the RAS Gateway.  
   

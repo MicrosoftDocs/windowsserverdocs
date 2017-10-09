@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # Step 3 Configure the Remote Access Server for OTP
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 Once the RADIUS server has been configured with software distribution tokens, communication ports are open, a shared secret has been created, user accounts corresponding to Active Directory have been created on the RADIUS server, and the Remote Access server has been configured as a RADIUS authentication agent, then the Remote Access server needs to be configured to support OTP.  
   

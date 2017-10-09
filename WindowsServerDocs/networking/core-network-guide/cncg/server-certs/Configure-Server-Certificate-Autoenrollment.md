@@ -11,7 +11,7 @@ author: jamesmci
 ---
 # Configure certificate auto-enrollment
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 > [!NOTE]
 > Before you perform this procedure, you must configure a server certificate template by using the Certificate Templates Microsoft Management Console snap-in on a CA that is running AD CS.

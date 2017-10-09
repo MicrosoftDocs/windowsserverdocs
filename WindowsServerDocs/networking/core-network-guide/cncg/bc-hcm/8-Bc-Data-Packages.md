@@ -12,7 +12,7 @@ author: jamesmci
 
 # Create Content Server Data Packages for Web and File Content (Optional)
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 You can use this procedure to prehash content on Web and file servers, and then create data packages to import on your hosted cache server. 
 

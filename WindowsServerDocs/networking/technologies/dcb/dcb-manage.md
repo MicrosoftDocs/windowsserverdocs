@@ -12,7 +12,7 @@ author: jamesmci
 
 # Manage Data Center Bridging (DCB)
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This topic provides you with instructions on how to use Windows PowerShell commands to configure Data Center Bridging \(DCB\) on a DCB\-compatible network adapter that is installed in a computer that is running either Windows Server 2016 or Windows 10.
 

@@ -11,7 +11,7 @@ author: jamesmci
 ---
 # RAS Gateway
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This topic, which is intended for Information Technology (IT) professionals, provides overview information about RAS Gateway, including RAS Gateway deployment modes and features.  
   

@@ -12,7 +12,7 @@ author: jamesmci
 
 # Performance Tuning Network Adapters
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use this topic to performance tune network adapters that are installed in computers that are running Windows Server 2016.
 

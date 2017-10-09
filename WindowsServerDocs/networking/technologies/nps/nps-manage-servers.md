@@ -12,7 +12,7 @@ author: jamesmci
 
 # Manage NPS Servers
 
->Applies To: windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use the topics in this section to manage NPS servers.
 
