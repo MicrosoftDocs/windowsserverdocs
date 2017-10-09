@@ -41,7 +41,7 @@ Nano Server is available as a container operating system. See [Changes in Nano S
 
 This release should be installed as a clean installation.
 
-- VLSC: Volume-licensed customers with [Software Assurance](https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-default.aspx) can obtain this release by going to [LINK] and [doing something]. **This is the only option that allows you to run Windows Server, version 1709 in production.**
+- VLSC: Volume-licensed customers with [Software Assurance](https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-default.aspx) can obtain this release by going to the [Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx) and clicking **Sign In**. Then click **Downloads and Keys** and search for this release.  **This is the only option that allows you to run Windows Server, version 1709 in production.**
 
 - If you use a hosting provider such as [Microsoft Azure](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/Microsoft.WindowsServer?tab=Overview) or Amazon Web Services, Windows Server, version 1709 is available through those services. **You can use Windows Server, version 1709 in those services for testing and development.**
 
@@ -50,4 +50,6 @@ This release should be installed as a clean installation.
 
 ## Activating Windows Server, version 1709
 
-- 
+- If you've obtained this release from the Volume Licensing Service Center, you can activate it by using your Windows Server 2016 activation key.
+- If you are using a hosting provider, this release should automatically be activated.
+- If you obtain this release from Visual Studio Subscriptions, it should automatically be activated.
