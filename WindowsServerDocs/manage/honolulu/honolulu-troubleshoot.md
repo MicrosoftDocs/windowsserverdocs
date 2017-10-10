@@ -20,7 +20,7 @@ This article describes common Honolulu configuration issues and how to fix them.
 
 ## Configure TrustedHosts
 
-When installing Project Honolulu, you are given the option to let Honolulu manage the gateway’s TrustedHosts setting. This is required in a workgroup environment, or when using local administrator credentials in a domain. If you choose to forego this setting, you must configure TrustedHosts manually.
+When installing Project Honolulu, you are given the option to let Honolulu manage the gateway’s TrustedHosts setting. This is required in a workgroup environment, or when using local administrator credentials in a domain. If you choose to forget this setting, you must configure TrustedHosts manually.
 
 
 > [!NOTE] 
