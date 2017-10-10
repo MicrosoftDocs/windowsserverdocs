@@ -41,7 +41,7 @@ When you shrink a partition, any ordinary files are automatically relocated on t
 <br />
 
 > [!NOTE]
-> You can only shrink basic volumes that have no file system or that use the NTFS file 
+> You can only shrink basic volumes that have no file system or that use the NTFS file system.
 
 <a id="BKMK_CMD"></a>
 #### To shrink a basic volume using a command line
@@ -60,7 +60,7 @@ When you shrink a partition, any ordinary files are automatically relocated on t
 |---|---|
 | <p>**list volume**</p> | <p>Displays a list of basic and dynamic volumes on all disks.</p>|
 | <p>**select volume**</p> | <p>Selects the specified volume, where <em>volumenumber</em> is the volume number, and gives it focus. If no volume is specified, the **select** command lists the current volume with focus. You can specify the volume by number, drive letter, or mount point path. On a basic disk, selecting a volume also gives the corresponding partition focus.</p> |
-| <p>**shrink**</p> | <p><ul><li>Shrinks the volume with focus to create unallocated space.</p></li>    <p><li>No data loss occurs. If the partition includes unmovable files (such as the page file or the shadow copy storage area), the volume will shrink to the point where the unmovable files are located.</p></li></ul> |
+| <p>**shrink**</p> | <p>Shrinks the volume with focus to create unallocated space. No data loss occurs. If the partition includes unmovable files (such as the page file or the shadow copy storage area), the volume will shrink to the point where the unmovable files are located. |
 | <p>**desired=** <em>desiredsize</em></p> | <p>The amount of space, in megabytes, to recover to the current partition.</p> |
 | <p>**minimum=** <em>minimumsize</em></p> | <p>The minimum amount of space, in megabytes, to recover to the current partition. If you do not specify a desired or minimum size, the command will reclaim the maximum amount of space possible.</p> 
 

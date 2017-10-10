@@ -57,7 +57,7 @@ Changing a GPT disk into an MBR disk
 > [!IMPORTANT]
 > Running the **clean** command will delete all partitions or volumes on the disk.
 
-6.  At the **DISKPART** prompt, type `convert mbr`.
+7.  At the **DISKPART** prompt, type `convert mbr`.
 
 <br />
 

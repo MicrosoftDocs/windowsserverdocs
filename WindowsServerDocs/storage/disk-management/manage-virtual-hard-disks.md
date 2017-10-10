@@ -14,9 +14,7 @@ ms.author: jgerend
 
 > **Applies To:** Windows 10, Windows 8.1, Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-The Virtual Hard Disk (VHD) format is a publicly available image format specification that specifies a virtual hard disk encapsulated in a single file, capable of hosting native file systems while supporting standard disk and file operations. For example, they are commonly used as part of the Hyper-V feature of Windows Server 2008 R2. For more information about VHDs, refer to the See Also section of this article. 
-
-You can use Disk Management to create, attach, and detach virtual hard disks (VHDs).
+This topic describes how to create, attach, and detach virtual hard disks with Disk Management. Virtual hard disks (VHDs) are virtualized hard disk files that, once mounted, appear and operate pretty much identically to a physical hard drive. They're most commonly used with Hyper-V virtual machines. 
 
 ## Viewing VHDs in Disk Management
 
