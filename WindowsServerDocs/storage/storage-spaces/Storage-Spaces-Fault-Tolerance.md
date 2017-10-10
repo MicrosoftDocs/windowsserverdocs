@@ -41,7 +41,7 @@ Two-way mirroring writes two copies of everything. Its storage efficiency is 50%
 
 ### Three-way mirror
 
-Three-way mirroring writes three copies of everything. Its storage efficiency is 33.3% – to write 1 TB of data, you need at least 3 TB of physical storage capacity. Likewise, you need at least three hardware fault domains – with Storage Spaces Direct, that means three servers. 
+Three-way mirroring writes three copies of everything. Its storage efficiency is 33.3% – to write 1 TB of data, you need at least 3 TB of physical storage capacity. Likewise, you need at least three hardware fault domains – with Storage Spaces Direct, that means three servers.
 
 Three-way mirroring can safely tolerate at least [two hardware problems (drive or server) at a time](#examples). For example, if you're rebooting one server when suddenly another drive or server fails, all data remains safe and continuously accessible.
 
@@ -82,7 +82,7 @@ With hard disk drives (HDD) the group size is four symbols; with solid-state dri
 
 ![local-reconstruction-codes](media/Storage-Spaces-Fault-Tolerance/local-reconstruction-codes-180px.png)
 
-We recommend this in-depth yet eminently readable walkthrough of [how local reconstruction codes handle various failure scenarios, and why they're appealing](https://blogs.technet.microsoft.com/filecab/2016/09/06/volume-resiliency-and-efficiency-in-storage-spaces-direct/), by our very own [Claus Joergensen](https://twitter.com/clausjor).
+We recommend this in-depth yet eminently readable walk-through of [how local reconstruction codes handle various failure scenarios, and why they're appealing](https://blogs.technet.microsoft.com/filecab/2016/09/06/volume-resiliency-and-efficiency-in-storage-spaces-direct/), by our very own [Claus Joergensen](https://twitter.com/clausjor).
 
 ## Mirror-accelerated parity
 
