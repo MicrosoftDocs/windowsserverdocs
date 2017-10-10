@@ -2,12 +2,13 @@
 title: Assign a mount point folder path to a drive.
 description: This article describes how to assign a mount point folder path (rather than a drive letter) to a drive. 
 keywords: virtualization, security, malware
+ms.date: 10/10/2017
 ms.prod: windows-server-threshold 
 ms.technology: storage 
 ms.topic: article 
 author: JasonGerend 
 manager: brianlic 
-ms.author: jrgerend 
+ms.author: jgerend 
 ---
 
 # Assign a mount point folder path to a drive

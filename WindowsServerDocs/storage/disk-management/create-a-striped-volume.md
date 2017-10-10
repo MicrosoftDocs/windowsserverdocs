@@ -1,12 +1,13 @@
 ---
 title: Create a striped volume
 description: Describes how to create a striped volume that stores data in stripes across two or more physical disks. 
+ms.date: 10/10/2017
 ms.prod: windows-server-threshold 
 ms.technology: storage 
 ms.topic: article 
 author: JasonGerend 
 manager: brianlic 
-ms.author: jrgerend 
+ms.author: jgerend 
 ---
 
 # Create a striped volume

@@ -1,12 +1,13 @@
 ---
 title: Extend a basic volume
 description: This article describes how to add space on primary and logical drives extend a basic volume
+ms.date: 10/10/2017
 ms.prod: windows-server-threshold 
 ms.technology: storage 
 ms.topic: article 
 author: JasonGerend 
 manager: brianlic 
-ms.author: jrgerend 
+ms.author: jgerend 
 ---
 
 # Extend a basic volume

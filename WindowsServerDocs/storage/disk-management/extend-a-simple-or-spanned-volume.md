@@ -1,12 +1,13 @@
 ---
 title: Extend a simple or spanned volume
 description: This article describes how to extend a simple or spanned volume
+ms.date: 10/10/2017
 ms.prod: windows-server-threshold 
 ms.technology: storage 
 ms.topic: article 
 author: JasonGerend 
 manager: brianlic 
-ms.author: jrgerend 
+ms.author: jgerend 
 ---
 
 # Extend a simple or spanned volume

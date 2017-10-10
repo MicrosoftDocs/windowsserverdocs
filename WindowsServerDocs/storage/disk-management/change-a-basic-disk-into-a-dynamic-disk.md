@@ -1,12 +1,13 @@
 ---
 title: Change a basic disk into a dynamic disk
 description: This topic describes how to change a basic disk to a dynamic disk to create volumes spanning multiple disks.
+ms.date: 10/10/2017
 ms.prod: windows-server-threshold 
 ms.technology: storage 
 ms.topic: article 
 author: JasonGerend 
 manager: brianlic 
-ms.author: jrgerend 
+ms.author: jgerend 
 ---
 
 # Change a basic disk into a dynamic disk
@@ -25,8 +26,7 @@ Basic disks support only primary partitions, extended partitions, and logical dr
 <br />
 
 > [!NOTE]
-> The decision to convert a basic disk to a dynamic disk has implications that should be considered carefully. 
-Before you convert disks, close any programs that are running on those disks.
+> The decision to convert a basic disk to a dynamic disk has implications that should be considered carefully. Before you convert disks, close any programs that are running on those disks.
 
 ## Changing a basic disk into a dynamic disk
 

@@ -1,6 +1,7 @@
 ---
 title: Reactivate a missing or offline dynamic disk
 description: This article describes how to reactivate a missing or offline dynamic disk
+ms.date: 10/10/2017
 ms.prod: windows-server-threshold 
 ms.technology: storage 
 ms.topic: article 

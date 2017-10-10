@@ -1,6 +1,7 @@
 ---
 title: Overview of Disk Management
 description: This article gives an overview of the Disk Management utility
+ms.date: 10/10/2017
 ms.prod: windows-server-threshold 
 ms.technology: storage 
 ms.topic: article 
@@ -17,7 +18,6 @@ Disk Management is a system utility for managing hard disks and the volumes or p
 
 For details, see the following topics:
 
--   [Checklist: Add a new disk](checklist--add-a-new-disk.md)
 -   [Manage disks](manage-disks.md)
 -   [Manage basic volumes](manage-basic-volumes.md)
 -   [Manage dynamic volumes](manage-dynamic-volumes.md)

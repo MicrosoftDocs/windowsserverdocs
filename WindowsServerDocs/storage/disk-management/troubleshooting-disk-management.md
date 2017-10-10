@@ -1,6 +1,7 @@
 ---
 title: Troubleshooting Disk Management
 description: This article describes how to troubleshoot Disk Management issues
+ms.date: 10/10/2017
 ms.prod: windows-server-threshold 
 ms.technology: storage 
 ms.topic: article 
@@ -51,7 +52,7 @@ Disks might also display the **Unreadable** status while they are spinning up or
 
 In some cases, a disk that was previously connected to the system can display the **Foreign** status. Configuration data for dynamic disks is stored on all dynamic disks, so the information about which disks are owned by the system is lost when all dynamic disks fail.
 
-**Solution:** Add the disk to your computer's system configuration so that you can access data on the disk. To add a disk to your computer's system configuration, import the foreign disk (right-click the disk and then click **Import Foreign Disks**). Any existing volumes on the foreign disk become visible and accessible when you import the disk. See  [Disk Status Descriptions](http://go.microsoft.com/fwlink/?LinkId=64112).
+**Solution:** Add the disk to your computer's system configuration so that you can access data on the disk. To add a disk to your computer's system configuration, import the foreign disk (right-click the disk and then click **Import Foreign Disks**). Any existing volumes on the foreign disk become visible and accessible when you import the disk. 
 
 <a id="BKMK_5"></a>
 
@@ -59,7 +60,7 @@ In some cases, a disk that was previously connected to the system can display th
 
 **Cause:** The dynamic disk has I/O errors on a region of the disk. A warning icon appears on the dynamic disk with errors.
 
-**Solution:**  If the I/O errors are temporary, reactivate the disk to return it to **Online** status. For instructions describing how to bring the disk back online, see [Reactivate a Missing or Offline Dynamic Disk](reactivate-a-missing-or-offline-dynamic-disk.md). See also [disk status descriptions](http://go.microsoft.com/fwlink/?LinkId=64112).
+**Solution:**  If the I/O errors are temporary, reactivate the disk to return it to **Online** status. For instructions describing how to bring the disk back online, see [Reactivate a Missing or Offline Dynamic Disk](reactivate-a-missing-or-offline-dynamic-disk.md).
 
 <a id="BKMK_6"></a>
 
@@ -84,7 +85,7 @@ To bring a disk that is Offline and Missing back online:
 
 3. Try moving the disk to another computer. If you can get the disk to go **Online** on another computer, the problem is most likely due to the configuration of the computer on which the disk does not go **Online**.
 
-4. Try moving the disk to another computer that has dynamic disks. Import the disk on that computer and then move the disk back to the computer on which it would not go **Online**. See also [Disk Status Descriptions](http://go.microsoft.com/fwlink/?LinkId=64112).
+4. Try moving the disk to another computer that has dynamic disks. Import the disk on that computer and then move the disk back to the computer on which it would not go **Online**. 
 
 <a id="BKMK_7"></a>
 
