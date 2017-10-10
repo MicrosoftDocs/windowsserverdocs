@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 9cf87597-b15d-4f43-8aa1-91e60367f011
 ---
-# Windows Server Semi-Annual Channel Overview
+# Get started iwth Windows Server, version 1709
 
 >Applies To: Windows Server (Semi-Annual Channel)
 
@@ -30,11 +30,13 @@ Windows Server, version 1709 runs in Server Core mode. That means there is no lo
 ### What about Nano Server?
 Nano Server is available as a container operating system. See [Changes in Nano Server] for details.
 
-## Find out basic information about 1709
+## Additional information about this release
+To get a comprehensive view of the key facts about Windows Server, version 1709, you should also review these topics prior to installing it:
+
 - What hardware is needed to run it? See [System Requirements]
-- What new features and functionality has been added? See 
-- What has been removed? See
-- What issues need to be worked around? See
+- What new features and functionality has been added? See [whatsnew]
+- What has been removed? See [Features Removed]
+- What issues need to be worked around? See [relnotes]
 
 
 ## Where to obtain Windows Server, version 1709
