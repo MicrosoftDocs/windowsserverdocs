@@ -30,6 +30,7 @@ To verify the volume status, from the **View** menu, check the **Status** column
 Uninstall the disks you want to move using Device Manager.
 
 **To uninstall disks**
+
 1.  Open Device Manager in Computer Management.
 
 2.  In the device list, double-click **Disk drives**.

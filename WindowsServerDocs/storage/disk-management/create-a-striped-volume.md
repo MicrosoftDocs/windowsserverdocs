@@ -20,7 +20,6 @@ You can create striped volumes only on dynamic disks. Striped volumes cannot be 
 
 ## Creating a striped volume
 
-
 -   [Using the Windows interface](#BKMK_WINUI)
 -   [Using a command line](#BKMK_CMD)
 
@@ -28,13 +27,14 @@ You can create striped volumes only on dynamic disks. Striped volumes cannot be 
 > You must be a member of the **Backup Operators** or **Administrators** group, at minimum, to complete these steps.
 
 <a id="BKMK_WINUI"></a>
-**To create a striped volume using the Windows interface**
+#### To create a striped volume using the Windows interface
+
 1.  In Disk Management, right-click the unallocated space on one of the dynamic disks on which you want to create the striped volume, and then click **New Striped Volume**.
 
 2.  Follow the on-screen instructions.
 
 <a id="BKMK_CMD"></a>
-**To create a striped volume using a command line**
+#### To create a striped volume using a command line
 
 1.  Open a command prompt and type `diskpart`.
 

@@ -45,6 +45,7 @@ You cannot use the GPT partition style on removable media, or on cluster disks t
 1.  Back up or move the data on the basic MBR disk you want to convert into a GPT disk.
 
 2.  Open an elevated command prompt by right-clicking **Command Prompt**  and then choosing **Run as Administrator**.
+
 3. Type `diskpart`. If the disk does not contain any partitions or volumes, skip to step 6.
 
 4.  At the **DISKPART** prompt, type `list disk`. Note the disk number you want to convert.
@@ -56,7 +57,7 @@ You cannot use the GPT partition style on removable media, or on cluster disks t
 > [!NOTE]
 > Running the **clean** command will delete all partitions or volumes on the disk.
 
-6.  At the **DISKPART** prompt, type `convert gpt`.
+7.  At the **DISKPART** prompt, type `convert gpt`.
 
 <br />
 

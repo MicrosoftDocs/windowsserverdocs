@@ -27,7 +27,8 @@ You need at least two dynamic disks in addition to the startup disk to create a 
 > You must be a member of the **Backup Operators** or **Administrators** group, at minimum, to complete these steps.
 
 <a href="" id="BKMK_WINUI"></a>
-**To create a spanned volume using the Windows interface**
+#### To create a spanned volume using the Windows interface
+
 1.  In Disk Management, right-click the unallocated space on one of the dynamic disks on which you want to create the spanned volume.
 
 2.  Click **New Spanned Volume**.
@@ -35,7 +36,8 @@ You need at least two dynamic disks in addition to the startup disk to create a 
 3.  Follow the on-screen instructions.
 
 <a href="" id="BKMK_CMD"></a>
-**To create a spanned volume using a command line**
+#### To create a spanned volume using a command line
+
 1.  Open a command prompt and type `diskpart`.
 
 2.  At the **DISKPART** prompt, type `list disk`. Note the number of the disk on which you want to create a simple volume.

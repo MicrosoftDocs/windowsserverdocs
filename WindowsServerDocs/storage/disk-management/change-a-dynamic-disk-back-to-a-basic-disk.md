@@ -40,6 +40,7 @@ Basic disks support only primary partitions, extended partitions, and logical dr
 
 <a href="" id="BKMK_CMD"></a>
 #### To change a dynamic disk back to a basic disk using a command line
+
 1.  Back up all volumes on the disk you want to convert from dynamic to basic.
 
 2.  Open a command prompt and type `diskpart`.

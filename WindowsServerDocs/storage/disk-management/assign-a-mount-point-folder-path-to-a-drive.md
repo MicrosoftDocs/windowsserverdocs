@@ -64,7 +64,7 @@ You can use Disk Management to assign a mount point folder path (rather than a d
 -   Mount point folder paths are available only on empty folders on basic or dynamic NTFS volumes.
 -   To modify a mount point folder path, remove it, and then create a new folder path using the new location. You cannot modify the mount point folder path directly.
 -   When assigning a mount point folder path to a drive, use **Event Viewer** to check the system log for any Cluster service errors or warnings indicating mount point folder path failures. These errors would be listed as **ClusSvc** in the **Source** column and **Physical Disk Resource** in the **Category** column.
--   You can also create a mounted drive using the [**mountvol**](http://go.microsoft.com/fwlink/?linkid=64111) command.
+-   You can also create a mounted drive using the [mountvol](http://go.microsoft.com/fwlink/?linkid=64111) command.
 
 ## See also
 -   [Command-line syntax notation](https://technet.microsoft.com/library/cc742449(v=ws.11).aspx)

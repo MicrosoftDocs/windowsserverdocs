@@ -100,7 +100,9 @@ To bring a disk that is Offline and Missing back online:
     If the volume is a dynamic volume with **Failed** status: 
 -   Make sure the underlying disks are online. If not, return the disks to the **Online** status. If this succeeds, the volume automatically restarts and returns to the **Healthy** status. If the dynamic disk returns to the **Online** status, but the dynamic volume does not return to the **Healthy** status, you can reactivate the volume manually. 
 
-    For instructions describing how to reactivate or bring a disk online, see [Reactivate a Missing or Offline Dynamic Disk](reactivate-a-missing-or-offline-dynamic-disk.md). If the dynamic volume is a mirrored or RAID-5 volume with old data, bringing the underlying disk online will not automatically restart the volume. If the disks that contain current data are disconnected,  bring those disks online first (to allow the data to become synchronized). Otherwise, restart the mirrored or RAID-5 volume manually, and then run the Error-checking tool or Chkdsk.exe.
+    For instructions describing how to reactivate or bring a disk online, see [Reactivate a Missing or Offline Dynamic Disk](reactivate-a-missing-or-offline-dynamic-disk.md). 
+    
+-   If the dynamic volume is a mirrored or RAID-5 volume with old data, bringing the underlying disk online will not automatically restart the volume. If the disks that contain current data are disconnected,  bring those disks online first (to allow the data to become synchronized). Otherwise, restart the mirrored or RAID-5 volume manually, and then run the Error-checking tool or Chkdsk.exe.
 
 <a id="BKMK_8"></a>
 
@@ -114,16 +116,17 @@ To bring a disk that is Offline and Missing back online:
 
 ## A dynamic volume's status is Data Incomplete.
 
-**Cause:** You moved some but not all of the disks in a multi-disk volume. Data on this volume will be destroyed unless you move and import the remaining disks that contain this volume.
+**Cause:** You moved some, but not all of the disks in a multi-disk volume. Data on this volume will be destroyed unless you move and import the remaining disks that contain this volume.
 
 **Solution:**  
 1. Move all the disks that comprise the multi-disk volume to the computer.
 
 2. Import the disks. For instructions describing how to move and import disks, see [Move Disks to Another Computer](move-disks-to-another-computer.md).
 
-If you no longer require the multidisk volume, you can import the disk and create new volumes on it. To do so: 
+If you no longer require the multi-disk volume, you can import the disk and create new volumes on it. To do so: 
 
 1. Right-click the volume with **Failed** or **Failed Redundancy** status and then click **Delete Volume**. 
+
 2. Right-click the disk and then click **New Volume**.
 
 <a id="BKMK_10"></a>
@@ -134,7 +137,10 @@ If you no longer require the multidisk volume, you can import the disk and creat
 
 When the volume status is **Healthy (At Risk)**, an underlying disk's status is usually **Online (Errors)**.
 
-**Solution:**  Return the underlying disk to the **Online** status. Once the disk is returned to **Online** status, the volume should return to the **Healthy** status. If the **Healthy (At Risk)** status persists, the disk might be failing. Back up the data and replace the disk as soon as possible. For instructions describing how to bring the disk back online, see [Reactivate a Missing or Offline Dynamic Disk](reactivate-a-missing-or-offline-dynamic-disk.md). For more information, see [Volume Status Descriptions](http://go.microsoft.com/fwlink/?LinkId=64113).
+**Solution:**  
+1. Return the underlying disk to the **Online** status. Once the disk is returned to **Online** status, the volume should return to the **Healthy** status. If the **Healthy (At Risk)** status persists, the disk might be failing. 
+
+2. Back up the data and replace the disk as soon as possible. For instructions describing how to bring the disk back online, see [Reactivate a Missing or Offline Dynamic Disk](reactivate-a-missing-or-offline-dynamic-disk.md). 
 
 <a id="BKMK_11"></a>
 
@@ -150,9 +156,12 @@ When the volume status is **Healthy (At Risk)**, an underlying disk's status is 
 
 **Cause:**  If a remote computer does not support the Virtual Disk Service (VDS) or if you cannot establish a connection to the remote computer because it is blocked by Windows Firewall, you may receive this error.
 
-**Solution:**  If the remote computer supports VDS, you can configure Windows Defender Firewall to allow VDS connections. If the remote computer does not support VDS, you can use Remote Desktop Connection to connect to it and then run Disk Management directly on the remote computer.
+**Solution:**  
+1. If the remote computer supports VDS, you can configure Windows Defender Firewall to allow VDS connections. If the remote computer does not support VDS, you can use Remote Desktop Connection to connect to it and then run Disk Management directly on the remote computer.
 
-To manage disks on remote computers that do support VDS, you must configure the Windows Defender Firewall on both the local computer (on which you are running Disk Management) and the remote computer. On the local computer, configure Windows Defender Firewall to enable the Remote Volume Management Exception.
+2. To manage disks on remote computers that do support VDS, you must configure the Windows Defender Firewall on both the local computer (on which you are running Disk Management) and the remote computer.
+
+3. On the local computer, configure Windows Defender Firewall to enable the Remote Volume Management Exception.
 
 <br />
 

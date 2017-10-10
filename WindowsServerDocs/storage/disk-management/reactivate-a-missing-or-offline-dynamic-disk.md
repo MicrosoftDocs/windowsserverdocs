@@ -7,7 +7,7 @@ ms.technology: storage
 ms.topic: article 
 author: JasonGerend 
 manager: brianlic 
-ms.author: jrgerend 
+ms.author: jgerend 
 ---
 
 # Reactivate a missing or offline dynamic disk
@@ -17,7 +17,7 @@ ms.author: jrgerend
 A dynamic disk: 
 -  May become **Missing** when it is corrupted, powered down, or disconnected. 
 - May become **Offline** if it is corrupted or intermittently unavailable. 
-- May become **Offline** if you attempt to import a foreign (dynamic) disk and the import fails. An error icon appears on the **Offline** disk. 
+- May become **Offline** if you attempt to import a foreign (dynamic) disk and the import fails. An error icon appears on the **Offline** disk.
 
 > [!NOTE]
 > Only dynamic disks display the **Missing** or **Offline** status. Also, only dynamic disks can be reactivated.
@@ -32,6 +32,7 @@ A dynamic disk:
 
 <a id="BKMK_WINUI"></a>
 #### To reactivate a dynamic disk by using the Windows interface
+
 1.  In Disk Management, right-click the disk marked **Missing** or **Offline**.
 
 2.  Click **Reactivate Disk**. The disk should be marked **Online** after the disk is reactivated.

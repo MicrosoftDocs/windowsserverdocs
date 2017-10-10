@@ -39,11 +39,12 @@ VHDs appear just like physical disks in Disk Management. When a VHD has been att
 
 To make a VHD available for use (either one you have just created or another existing VHD): 
 
-1. On the **Action** menu, select **Attach VHD**. 
+1. On the **Action** menu, select **Attach VHD**.
+
 2. Specify the location of the VHD, using a fully-qualified path.
 
 To detach the VHD, making it unavailable: 
--   Right-click the disk, select **Detach VHD**, and then click **OK**. Detaching a VHD does not delete the VHD or any data stored in it.
+Right-click the disk, select **Detach VHD**, and then click **OK**. Detaching a VHD does not delete the VHD or any data stored in it.
 
 ## Additional considerations
 

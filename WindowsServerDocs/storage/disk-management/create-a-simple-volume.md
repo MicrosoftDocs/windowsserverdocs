@@ -25,13 +25,15 @@ A simple volume is a dynamic volume that is made up of disk space from a single 
 > You must be a member of the **Backup Operators** or **Administrators** group, at minimum, to complete these steps.
 
 <a id="BKMK_WINUI"></a>
-**To create a simple volume using the Windows interface**
+#### To create a simple volume using the Windows interface
+
 1.  In Disk Management, right-click the unallocated space on the dynamic disk on which you want to create the simple volume, and then click **New Simple Volume**.
 
 2.  In the New Volume Wizard, click **Next**, click **Simple**, and then follow the on-screen instructions.
 
 <a id="BKMK_CMD"></a>
-**To create a simple volume using a command line**
+#### To create a simple volume using a command line
+
 1.  Open a command prompt and type `diskpart`.
 
 2.  At the **DISKPART** prompt, type `list disk`. Make note of the number of the disk where you want to create a simple volume.

@@ -28,13 +28,14 @@ A dynamic disk may become **Missing** when it is corrupted, powered down, or dis
 > You must be a member of the **Backup Operators** or **Administrators** group, at minimum, to complete these steps.
 
 <a href="" id="BKMK_WINUI"></a>
-**To remove a missing dynamic disk using the Windows interface**
+#### To remove a missing dynamic disk using the Windows interface
+
 1.  In Disk Manager, right-click each volume on the dynamic disk marked **Missing**, and then click **Delete Volume** to remove all volumes on the **Missing** disk.
 
 2.  Right-click the dynamic disk marked **Missing**, and then click **Remove Disk**.
 
 <a href="" id="BKMK_CMD"></a>
-**To remove a missing dynamic disk using a command line**
+#### To remove a missing dynamic disk using a command line
 
 1.  Open a command prompt and type `diskpart`.
 

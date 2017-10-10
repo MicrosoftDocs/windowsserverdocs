@@ -28,7 +28,7 @@ You can extend a volume only if it does not have a file system or if it is forma
 
 
 <a id="BKMK_WINUI"></a>
-**To extend a simple or spanned volume using the Windows interface**
+#### To extend a simple or spanned volume using the Windows interface
 
 1.  In Disk Management, right-click the simple or spanned volume you want to extend.
 
@@ -37,7 +37,7 @@ You can extend a volume only if it does not have a file system or if it is forma
 3.  Follow the on-screen instructions.
 
 <a id="BKMK_CMD"></a> 
-**To extend a simple or spanned volume using a command line**
+#### To extend a simple or spanned volume using a command line
 
 1.  Open a command prompt and type `diskpart`.
 
