@@ -83,6 +83,7 @@
 #### [DHCP Subnet Selection Options](technologies/dhcp/dhcp-subnet-options.md)
 #### [DHCP Logging Events for DNS Record Registrations](technologies/dhcp/dhcp-dns-events.md)
 ### [Deploy DHCP Using Windows PowerShell](technologies/dhcp/dhcp-deploy-wps.md)
+## [Hyper-V Virtual Switch](technologies/vswitch-stub.md)
 ## [IP Address Management (IPAM)](technologies/ipam/ipam-top.md)
 ### [What's New in IPAM](technologies/ipam/What-s-New-in-IPAM.md)
 ### [Manage IPAM](technologies/ipam/Manage-IPAM.md)
