@@ -21,7 +21,7 @@ This topic lists new and updated topics in the [Storage](storage.md) documentati
 ## October 2017
 |New or changed topic|Description|
 |---|---|
-|[Overview of Disk Management](disk-management/overview-of-disk-management.md)| Published 22 new topics for Windows Server.|
+|[Overview of Disk Management](disk-management/overview-of-disk-management.md)| Published 13 new topics for Windows Server.|
 
 ## July 2017
 |New or changed topic|Description|

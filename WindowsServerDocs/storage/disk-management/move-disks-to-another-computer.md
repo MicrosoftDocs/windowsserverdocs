@@ -1,7 +1,7 @@
 ---
 title: Move disks to another computer
 description: This article describes how to move disks to another computer
-ms.date: 10/10/2017
+ms.date: 10/12/2017
 ms.prod: windows-server-threshold 
 ms.technology: storage 
 ms.topic: article 

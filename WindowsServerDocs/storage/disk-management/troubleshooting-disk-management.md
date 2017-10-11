@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting Disk Management
 description: This article describes how to troubleshoot Disk Management issues
-ms.date: 10/10/2017
+ms.date: 10/12/2017
 ms.prod: windows-server-threshold 
 ms.technology: storage 
 ms.topic: article 
@@ -60,7 +60,7 @@ In some cases, a disk that was previously connected to the system can display th
 
 **Cause:** The dynamic disk has I/O errors on a region of the disk. A warning icon appears on the dynamic disk with errors.
 
-**Solution:**  If the I/O errors are temporary, reactivate the disk to return it to **Online** status. For instructions describing how to bring the disk back online, see [Reactivate a Missing or Offline Dynamic Disk](reactivate-a-missing-or-offline-dynamic-disk.md).
+**Solution:**  If the I/O errors are temporary, reactivate the disk to return it to **Online** status.
 
 <a id="BKMK_6"></a>
 
@@ -74,7 +74,7 @@ If the disk status is **Offline** and the disk's name changes to **Missing**, th
 To bring a disk that is Offline and Missing back online:
 1. Repair any disk, controller, or cable problems. 
 2. Make sure that the physical disk is turned on, plugged in, and attached to the computer. 
-3. Next, use the **Reactivate Disk** command to bring the disk back online. For instructions describing how to reactivate missing or offline disks, see [Reactivate a Missing or Offline Dynamic Disk](reactivate-a-missing-or-offline-dynamic-disk.md)
+3. Next, use the **Reactivate Disk** command to bring the disk back online.
 
 4. If the disk status remains **Offline** and the disk name remains **Missing**, and you determine that the disk has a problem that cannot be repaired, you can remove the disk from the system by right-clicking the disk and then clicking **Remove Disk**). However, before you can remove the disk, you must delete all volumes (or mirrors) on the disk. You can save any mirrored volumes on the disk by removing the mirror instead of the entire volume. Deleting a volume destroys the data in the volume, so you should remove a disk only if you are absolutely certain that the disk is permanently damaged and unusable.
 
@@ -99,8 +99,6 @@ To bring a disk that is Offline and Missing back online:
 
     If the volume is a dynamic volume with **Failed** status: 
 -   Make sure the underlying disks are online. If not, return the disks to the **Online** status. If this succeeds, the volume automatically restarts and returns to the **Healthy** status. If the dynamic disk returns to the **Online** status, but the dynamic volume does not return to the **Healthy** status, you can reactivate the volume manually. 
-
-    For instructions describing how to reactivate or bring a disk online, see [Reactivate a Missing or Offline Dynamic Disk](reactivate-a-missing-or-offline-dynamic-disk.md). 
     
 -   If the dynamic volume is a mirrored or RAID-5 volume with old data, bringing the underlying disk online will not automatically restart the volume. If the disks that contain current data are disconnected,  bring those disks online first (to allow the data to become synchronized). Otherwise, restart the mirrored or RAID-5 volume manually, and then run the Error-checking tool or Chkdsk.exe.
 
@@ -140,7 +138,7 @@ When the volume status is **Healthy (At Risk)**, an underlying disk's status is 
 **Solution:**  
 1. Return the underlying disk to the **Online** status. Once the disk is returned to **Online** status, the volume should return to the **Healthy** status. If the **Healthy (At Risk)** status persists, the disk might be failing. 
 
-2. Back up the data and replace the disk as soon as possible. For instructions describing how to bring the disk back online, see [Reactivate a Missing or Offline Dynamic Disk](reactivate-a-missing-or-offline-dynamic-disk.md). 
+2. Back up the data and replace the disk as soon as possible. 
 
 <a id="BKMK_11"></a>
 

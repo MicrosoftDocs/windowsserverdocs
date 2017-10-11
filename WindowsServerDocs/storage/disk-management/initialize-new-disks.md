@@ -1,7 +1,7 @@
 ---
 title: Initialize new disks
 description: This article describe how to initialize new disks
-ms.date: 10/10/2017
+ms.date: 10/12/2017
 ms.prod: windows-server-threshold 
 ms.technology: storage 
 ms.topic: article 

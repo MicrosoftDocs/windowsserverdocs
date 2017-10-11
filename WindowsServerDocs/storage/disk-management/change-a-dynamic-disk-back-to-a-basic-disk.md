@@ -1,7 +1,7 @@
 ---
 title: Change a dynamic disk back to a basic disk
 description: Describes how to convert a dynamic disk back to a basic disk.
-ms.date: 10/10/2017
+ms.date: 10/12/2017
 ms.prod: windows-server-threshold 
 ms.technology: storage 
 ms.topic: article 
