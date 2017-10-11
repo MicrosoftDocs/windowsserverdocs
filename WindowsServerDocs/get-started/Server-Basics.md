@@ -14,7 +14,7 @@ ms.author: jaimeo
 
 >Applies To: Windows Server 2016
 
-<img src="media/1-getstarted.png" style='float:left; padding:.5em;' alt="Icon showing a box with a checkmark"> This collection contains detailed information to help you determine if you're ready to move to Windows Server 2016. Once you've checked the system requirements, upgrade options, and other information about moving to Windows Server 2016, you're ready to go back to the main [Windows Server 2016](Windows-Server-2016.md) hub and start down the path to installing the best edition and installation option for your needs. 
+<img src="media/1-getstarted.png" style='float:left; padding:.5em;' alt="Icon showing a box with a checkmark"> This collection contains detailed information to help you determine if you're ready to move to Windows Server 2016. Once you've checked the system requirements, upgrade options, and other information about moving to Windows Server 2016, you're ready to go back to the main [Windows Server 2016](../Windows-Server-2016.md) hub and start down the path to installing the best edition and installation option for your needs. 
 <br/>
 <br/>
 <br/>

@@ -48,7 +48,7 @@ Processor performance depends not only on the clock frequency of the processor, 
 - Supports CMPXCHG16b, LAHF/SAHF, and PrefetchW  
 - Supports Second Level Address Translation (EPT or NPT)  
 
-[Coreinfo] (https://technet.microsoft.com/sysinternals/cc835722.aspx) is a tool you can use to confirm which of these capabilities your CPU has.
+[Coreinfo] (https://docs.microsoft.com/en-us/sysinternals/downloads/coreinfo) is a tool you can use to confirm which of these capabilities your CPU has.
 
 ## RAM  
 The following are the estimated RAM requirements for this product:  
@@ -114,8 +114,8 @@ The following items are not strictly required, but are necessary for certain fea
 > A Trusted Platform Module (TPM) chip is not strictly required to install this release, though it is necessary in order to use certain features such as BitLocker Drive Encryption. If your computer uses TPM, it must meet these requirements:  
 >  
 >- Hardware-based TPMs must implement version 2.0 of the TPM specification.  
->- TPMs that implement version 2.0 must have an EK certificate that is >either pre-provisioned to the TPM by the hardware vendor or be capable of >being retrieved by the device during the first boot.  
->- TPMs that implement version 2.0 must ship with SHA-256 PCR banks and >implement PCRs 0 through 23 for SHA-256. It is acceptable to ship TPMs >with a single switchable PCR bank that can be used for both SHA-1 and >SHA-256 measurements.  
+>- TPMs that implement version 2.0 must have an EK certificate that is either pre-provisioned to the TPM by the hardware vendor or be capable of being retrieved by the device during the first boot.  
+>- TPMs that implement version 2.0 must ship with SHA-256 PCR banks and implement PCRs 0 through 23 for SHA-256. It is acceptable to ship TPMs with a single switchable PCR bank that can be used for both SHA-1 and SHA-256 measurements.  
 >- A UEFI option to turn off the TPM is not a requirement.  
 
 ## Installation of Nano Server  
