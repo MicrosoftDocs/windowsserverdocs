@@ -123,9 +123,15 @@ If you want to restrict access to your Remote Access Gateway and add pre-authent
   
     -   In Windows Server 2012 and Windows Server 2012 R2 this can be accomplished by running the following PowerShell cmdlet on the RDG Collection server:  
   
-        `Set-RDSessionCollectionConfiguration -CollectionName "<yourcollectionname>" -CustomRdpProperty "pre-authentication server address:s: <https://externalfqdn/rdweb/>  `n require pre-authentication:i:1"`  
+        ```
+        Set-RDSessionCollectionConfiguration -CollectionName "<yourcollectionname>" -CustomRdpProperty "pre-authentication server address:s: <https://externalfqdn/rdweb/>`nrequire pre-authentication:i:1"
+        ```
   
-        Make sure you remove the < and > brackets when you replace with your own values, for example:`Set-RDSessionCollectionConfiguration -CollectionName "MyAppCollection" -CustomRdpProperty "pre-authentication server address:s: https://rdg.contoso.com/rdweb/ `n require pre-authentication:i:1"`  
+        Make sure you remove the < and > brackets when you replace with your own values, for example:
+        
+        ```
+        Set-RDSessionCollectionConfiguration -CollectionName "MyAppCollection" -CustomRdpProperty "pre-authentication server address:s: https://rdg.contoso.com/rdweb/`nrequire pre-authentication:i:1"
+        ```
   
     -   In Windows Server 2008 R2:  
   
