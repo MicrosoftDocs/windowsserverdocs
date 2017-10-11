@@ -211,7 +211,7 @@ When specifying a bandwidth limit to Storage Replica, the limit is ignored and f
 
 `Set-SmbBandwidthLimit  -Category StorageReplication -BytesPerSecond 32MB`
 
-This issue occurs because of an interoperability issue between Storage Replica and SMB. This issue should be fixed in a later update to Windows Server 2016. There is no workaround using Windows Server, but you can use external QoS network policies to attain the desired effect.
+This issue occurs because of an interoperability issue between Storage Replica and SMB. This issue was first fixed in the July 2017 Cumulative Update of Windows Server 2016 and in Windows Server, Version 1709.
 
 ## Event 1241 warning repeated during initial sync
 When specifying a replication partnership is asynchronous, the source computer repeatedly logs warning event 1241 in the Storage Replica Admin channel. For example:

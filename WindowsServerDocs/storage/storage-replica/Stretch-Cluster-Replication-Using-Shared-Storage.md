@@ -216,7 +216,7 @@ You will now create a normal failover cluster. After configuration, validation, 
 
     For more information, review the Microsoft Ignite session: [Stretching Failover Clusters and Using Storage Replica in Windows Server vNext](http://channel9.msdn.com/Events/Ignite/2015/BRK3487) and the [Enable Change Notifications between Sites - How and Why?](http://blogs.technet.com/b/qzaidi/archive/2010/09/23/enable-change-notifications-between-sites-how-and-why.aspx) blog post.  
 
-11. **(Optional)** Configure VM resiliency so that guests do not pause for long pduring node failures. Instead, they failover to the new replication source storage within 10 seconds.  
+11. **(Optional)** Configure VM resiliency so that guests do not pause for long during node failures. Instead, they failover to the new replication source storage within 10 seconds.  
 
     ```  
     (Get-Cluster).ResiliencyDefaultPeriod=10  

@@ -70,13 +70,11 @@ On Windows Server Core and Windows Server 2016 Core, Project Honolulu can instal
 
    To install Project Honolulu and automatically generate a self-signed certificate:
    
-        msiexec /i ServerManagementGateway.msi /qn /l *v log.txt SME_PORT=<port>
-        SSL_CERTIFICATE_OPTION=generate
+        msiexec /i ServerManagementGateway.msi /qn /L*v log.txt SME_PORT=<port> SSL_CERTIFICATE_OPTION=generate
    
    To install Project Honolulu with an existing certificate:
 
-        msiexec /i ServerManagementGateway.msi /qn /l *v log.txt SME_PORT=<port>
-        SME_THUMBPRINT=<thumbprint> SSL_CERTIFICATE_OPTION=installed
+        msiexec /i ServerManagementGateway.msi /qn /L*v log.txt SME_PORT=<port> SME_THUMBPRINT=<thumbprint> SSL_CERTIFICATE_OPTION=installed
         
 > [!WARNING] 
 > Invoking `msiexec` from PowerShell using dot-slash relative path notation (e.g. `.\ServerManagementGateway.msi`) is not supported
