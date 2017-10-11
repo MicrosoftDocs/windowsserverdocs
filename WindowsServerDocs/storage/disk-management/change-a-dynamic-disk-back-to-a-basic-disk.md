@@ -14,12 +14,12 @@ ms.author: jgerend
 
 > **Applies To:** Windows 10, Windows 8.1, Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Basic disks support only primary partitions, extended partitions, and logical drives. Basic disks have been supported in operating systems since MS-DOS, while dynamic disks have been supported in operating systems since Windows 2000.
+This topic describes how to delete everything on a dynamic disk and then convert it back to a basic disk. Dynamic disks have been deprecated from Windows. We recommend using the newer [Storage Spaces](https://support.microsoft.com/help/12438/windows-10-storage-spaces) technology when you want to pool disks together into larger volumes. If you want to mirror the volume from which Windows boots, you might want to use a hardware RAID controller, such as the one included on many motherboards.
 
 <br />
 
-> [!NOTE]
-> The decision to convert a dynamic disk to a basic disk has implications that should be considered carefully. Before you convert disks, close any programs that are running on those disks. 
+> [!WARNING]
+> To convert a dynamic disk back to a basic disk you must delete all volumes from the disk, permanently erasing all data on the disk. Make sure you back up any data you want to keep before proceeding.
 
 ## Changing a dynamic disk back to a basic disk
 
