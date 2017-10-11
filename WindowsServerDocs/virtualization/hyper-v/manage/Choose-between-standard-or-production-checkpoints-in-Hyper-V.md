@@ -36,6 +36,9 @@ Starting with Windows Server 2016 and Windows 10, you can choose between standar
   
 5.  Click **Apply** to save your changes. If you're done, click **OK** to close the dialog box.  
   
+> [!NOTE]
+> Only **Production Checkpoints** are supported on guests that run Active Directory Domain Services role (Domain Controller) or Active Directory Lightweight Directory Services role.
+
 ## See also  
   
 -   [Production checkpoints](../What-s-new-in-Hyper-V-on-Windows.md#BKMK_check)  
