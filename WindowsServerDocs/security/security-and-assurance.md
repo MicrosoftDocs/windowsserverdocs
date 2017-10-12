@@ -11,7 +11,7 @@ ms.assetid: b886b2fd-3567-4f0a-8aa3-4ba7923d2d21
 author: coreyp-at-msft
 ms.author: coreyp
 ---
-# Security and Assurance in Windows Server 2016
+# Security and Assurance in Windows Server 
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
@@ -30,7 +30,7 @@ In this 6-minute video, Anders Vinberg provides an overview of Microsoft's secur
 ### [Protecting Your Datacenter and Cloud from Emerging Threats blog post](http://blogs.technet.com/b/windowsserver/archive/2015/11/18/protecting-your-datacenter-and-cloud-november-update.aspx)
 This blog post discusses how you can use Microsoft technologies to protect your datacenter and cloud investments from emerging threats.                   
 
-### [Security and Assurance Overview session at Ignite 2015](http://channel9.msdn.com/events/ignite/2015/brk2482)
+### [Security and Assurance Overview session at Ignite](http://channel9.msdn.com/events/ignite/2015/brk2482)
 This Ignite session addresses persistent threats, insider breaches, organized cybercrime, and securing the Microsoft Cloud Platform (on-premises and connected services with Azure). It includes scenarios for securing workloads, large enterprise tenants, and service providers.                                                                   
 
 ## Secure virtualization with Shielded VMs
@@ -42,14 +42,14 @@ A walkthrough of Shielded VM technology and benefits
 This 4-minute video describes the value of shielded VMs and the differences between a shielded VM and a non-shielded VM.                                   
 
 ### [Shielded Virtual Machines in Windows Server video walkthrough](http://microsoft-cloud.cloudguides.com/Guides/Shielded Virtual Machines in Windows Server.htm)
-This video walkthrough shows how the Host Guardian Service, a new role available in Windows Server 2016, enables shielded virtual machines so that sensitive data is protected from unauthorized access by Hyper-V host administrators.
+This video walkthrough shows how the Host Guardian Service enables shielded virtual machines so that sensitive data is protected from unauthorized access by Hyper-V host administrators.
 
 ### [Harden the Fabric: Protecting Tenant Secrets in Hyper-V (Ignite Video)](http://channel9.msdn.com/events/ignite/2015/brk3457)
 
 This Ignite presentation discusses enhancements in Hyper-V, Virtual Machine Manager, and a new Guardian Server role to enable shielded VMs.                
 
 ### [Guarded Fabric Deployment Guide](http://go.microsoft.com/fwlink/?LinkId=708624)
-This guide provides installation and validation information for Windows Server 2016 and System Center Virtual Machine Manager for Guarded Fabric Hosts and Shielded VMs.
+This guide provides installation and validation information for Windows Server and System Center Virtual Machine Manager for Guarded Fabric Hosts and Shielded VMs.
 
 ### [Shielded VM and Guarded Fabric Operations Guide](http://go.microsoft.com/fwlink/?LinkId=708320)
 This guide provides best practices and recommendations for how to configure your Shielded VM environment, including information specific to Guarded Hosts and tenants.
@@ -105,26 +105,26 @@ This Ignite presentation discusses how you can use Operational Insights to perfo
 ### [Microsoft Operations Management Suite (OMS)](https://www.microsoft.com/en-us/server-cloud/operations-management-suite/overview.aspx)
 The Microsoft Operations Management Suite (OMS) Security and Audit solution processes security logs and firewall events from on-premises and cloud environments to analyze and detect malicious behavior.
 
-### [OMS and Windows Server 2016](https://www.youtube.com/watch?v=_SaDw1dRy2k)
-This 3-minute video shows how OMS can help detect potential malicious behavior that is blocked by Windows Server 2016  
+### [OMS and Windows Server](https://www.youtube.com/watch?v=_SaDw1dRy2k)
+This 3-minute video shows how OMS can help detect potential malicious behavior that is blocked by Windows Server.  
 
 ### [Microsoft Advanced Threat Analytics](http://blogs.technet.com/b/ad/archive/2015/07/22/microsoft-advanced-threat-analytics-coming-next-month.aspx)
 This blog post discusses Microsoft Advanced Threat Analytics, an on-premises product that uses Active Directory network traffic and SIEM data to discover and alert on potential threats.
 
 ### [Microsoft Advanced Threat Analytics](https://www.youtube.com/watch?v=0nA9FeTRZFw&list=PL8nfc9haGeb5IZGM8HvmRozetHRpBDKSw)
-This 3-minute video presents an overview of how Microsoft is adding threat analytics capabilities in Windows Server 2016.                                                                                 |
+This 3-minute video presents an overview of how Microsoft is adding threat analytics capabilities in Windows Server.                                                                                 |
 
 ## Network Security
 
 ### [Datacenter Firewall Overview](https://technet.microsoft.com/library/dn920240.aspx)
 This overview discusses Datacenter Firewall, a network layer, 5-tuple (protocol, source and destination port numbers, source and destination IP addresses), stateful, multitenant firewall.
 
-### [What's New in DNS in Windows Server 2016](https://technet.microsoft.com/en-us/windows-server-docs/networking/dns/what-s-new-in-dns-server)
+### [What's New in DNS in Windows Server](https://technet.microsoft.com/en-us/windows-server-docs/networking/dns/what-s-new-in-dns-server)
 This overview topic provides brief descriptions of new capabilities in DNS, along with links for more information.                                                                           
 
 ## Mapping security features to compliance regulations
 
-Compliance is an important aspect of security features. We leave the expert advice on how to achieve your compliance and what compliance looks like to your trusted compliance advisers, but we also want to provide initial mapping for you to be able to use when evaluating Windows Server 2016.
+Compliance is an important aspect of security features. We leave the expert advice on how to achieve your compliance and what compliance looks like to your trusted compliance advisers, but we also want to provide initial mapping for you to be able to use when evaluating Windows Server.
 
 -   [Hyper-V Shielded VMs compliance mapping whitepaper](http://download.microsoft.com/download/6/D/0/6D06E149-B4C1-4EED-ACD5-DF6066E93CC0/Coalfire_Branded_Hyper_V_Shielded_VMs_Whitepaper_EN_US.pdf)
 
