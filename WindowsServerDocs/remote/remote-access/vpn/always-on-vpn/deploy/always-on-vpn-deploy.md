@@ -1,6 +1,6 @@
 ---
-title: Remote Access Always On VPN Deployment Guide for Windows Server 2016 and Windows 10
-description: You can use this guide to deploy Always On Virtual Private Network (VPN) connections for remote employees by using Remote Access in Windows Server 2016 and Always On VPN profiles for Windows 10 client computers.
+title: Remote Access Always On VPN Deployment Guide for Windows Server and Windows 10
+description: You can use this guide to deploy Always On Virtual Private Network (VPN) connections for remote employees by using Remote Access in Windows Server 2016 or later and Always On VPN profiles for Windows 10 client computers.
 ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
@@ -10,7 +10,7 @@ ms.author: jamesmci
 author: jamesmci
 ---
 
-# Remote Access Always On VPN Deployment Guide for Windows Server 2016 and Windows 10
+# Remote Access Always On VPN Deployment Guide for Windows Server and Windows 10
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
