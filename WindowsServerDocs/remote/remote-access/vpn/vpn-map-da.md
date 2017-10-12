@@ -1,6 +1,6 @@
 ---
 title: Always On VPN and DirectAccess Features Comparison
-description: You can use this topic to gain an understanding of how Windows 2016 and Windows 10 VPN features map to and improve upon old DirectAccess features.
+description: You can use this topic to gain an understanding of how Windows Server and Windows 10 VPN features map to and improve upon old DirectAccess features.
 ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
@@ -17,7 +17,7 @@ author: jamesmci
 
 With Windows 10 Virtual Private Networking \(VPN\), you can create Always On VPN connections so that remote computers and devices are always connected to your organization network when they are turned on and Internet connected.
 
-You can use this topic to gain an understanding of how Windows 2016 and Windows 10 Virtual Private Networking \(VPN\) features map to DirectAccess features, including details about the increased flexibility provided by new VPN features.
+You can use this topic to gain an understanding of how Windows Server 2016 and Windows 10 Virtual Private Networking \(VPN\) features map to DirectAccess features, including details about the increased flexibility provided by new VPN features.
 
 You can also use this topic for an overview of how Windows 10 VPN provides advantages over DirectAccess deployments.
 
@@ -44,8 +44,8 @@ Remote Access VPN deployments include the following advantages.
 - Similar solutions available to third party platforms, allowing enterprise administrators to deploy one solution across the device ecosystem
 - Three automatic connectivity choices:
 	- Always connected
-	- Name match\-based triggering
-	- Application\-launch based triggering
+	- Connection occurs based on a name match
+	- Connection occurs based on the launch of an application
 - Modern security features
 	- Per app VPN
 	- Traffic pattern\-based filters
@@ -134,7 +134,10 @@ You have three network connectivity options with Windows 10 VPN:
 
 #### DirectAccess
 
-DirectAccess only allows computers and devices to always be connected to your organization network when they are turned on and Internet connected, and provides no other connectivity options.
+DirectAccess only allows computers and devices to always be connected to your organization network when they are turned on and Internet connected, and provides no other connectivity options. 
+
+>[!NOTE]
+>In some DirectAccess configurations, users are allowed to disconnect and reconnect DirectAccess.
 
 ### VPN Client Options
 
@@ -161,13 +164,13 @@ Following are the differences between the ways VPN and DirectAccess use multiple
 
 You can deploy many Remote Access servers configured as Always On VPN organization entry points for your employees. With this multi\-site deployment, you must define multiple VPN server entries in VPN profiles so that users can select the VPN server to which they want to connect.
 
-Alternately, you can use third-party networking equipment or services, like Azure Traffic Manager \(ATM\) or a third-party Global Server Load Balancer \(GSLB\) to provide automatic multi\-site services.
+Alternately, you can use third-party networking equipment or services, like Azure Traffic Manager \(ATM\) or a third-party Global Server Load Balancer \(GSLB\) to provide automatic multi\-site services. For more information, see [Overview of Traffic Manager](https://docs.microsoft.com/azure/traffic-manager/traffic-manager-overview).
 
 Some third\-party Universal Windows Platform \(UWP\) VPN plug-ins might support similar multi\-site features for connecting to the nearest, or most appropriate, server VPN endpoint.
 
 #### DirectAccess
 
-DirectAccess uses multi\-site to provide multiple remote access entry points and geo-redundancy.
+DirectAccess uses multi\-site to provide multiple remote access entry points and geo\-redundancy with optional GSLB support.
 
 ### Use of Alternate Protocols
 
@@ -207,9 +210,9 @@ Following are the differences between how VPN and DirectAccess provide end\-to\-
 
 Windows 10 VPN provides connectivity to your organization's resources using tunnel policies that require authentication and encryption until they reach the VPN gateway.
 
-By default, the tunnel sessions terminate at the VPN gateway, which also functions as the IKEv2 Gateway. This provides end\-to\-edge security.
+By default, the tunnel sessions terminate at the VPN gateway, which also functions as the IKEv2, SSTP, or L2TP Gateway. This provides end-to-edge security.
 
-For end\-to\-end access, where traffic is protected between the remote VPN client and application servers on your organization network, you can use an IPsec transport policy that is tunneled inside the end-to-edge VPN tunnel.
+For end-to-end access, where traffic is protected between the remote VPN client and application servers on your organization network, you can use an IPsec transport policy that is tunneled inside the end-to-edge VPN tunnel.
 
 The VPN gateway then forwards the IPsec protected, authenticated traffic sessions to the application servers.
 
@@ -253,7 +256,7 @@ This is defined using the following VPNv2 CSP parameters:
 
 #### DirectAccess
 
-- No content available
+DirectAccess supports using computer certificates for authentication. For Windows 7 DirectAccess clients, computer certificates are required. For DirectAccess clients running operating systems later than Windows 7, computer certificates are optional but recommended.
 
 ### Support for Two Factor or OTP Authentication
 
@@ -328,6 +331,9 @@ Windows 10 VPN provides the ability to use protocols like IKEv2 and SSTP that fu
 #### DirectAccess
 
 DirectAccess supports deployment of DirectAccess servers behind an edge firewall or NAT device.
+
+>[!NOTE]
+>When DirectAccess servers are deployed behind a NAT device, only IPHTTPS is supported. Use of Teredo or 6to4 are not supported in this scenario.
 
 ### Support for Multiple Domains and Forests	
 
@@ -436,7 +442,7 @@ This is defined using the following VPNv2 CSP parameters:
 DirectAccess supports the use of NAP.
 
 >[!NOTE]
->NAP was deprecated in Windows Server 2012 R2 and is not available in Windows Server 2016.
+>NAP was deprecated in Windows 8.1 and Windows Server 2012 R2, and is not available in later versions of the operating systems.
 
 ### Name Resolution of Organization Resources
 
@@ -457,7 +463,7 @@ This is defined using the following VPNv2 CSP parameters:
 
 #### DirectAccess
 
-DirectAccess supports name resolution for NetBIOS names, FQDN, and DNS Suffix.
+DirectAccess supports name resolution for NetBIOS names, FQDN, and DNS Suffix based on the NRPT configuration.
 
 ### Monitoring of DirectAccess operational status
 
