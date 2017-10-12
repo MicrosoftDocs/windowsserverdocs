@@ -12,7 +12,7 @@ ms.date: 08/28/2017
 
 # Confirm guarded hosts can attest 
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 >[!div class="step-by-step"]
 [« Review prerequisites](guarded-fabric-guarded-host-prerequisites.md)

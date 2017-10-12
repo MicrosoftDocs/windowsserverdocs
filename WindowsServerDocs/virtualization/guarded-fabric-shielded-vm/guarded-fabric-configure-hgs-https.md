@@ -11,7 +11,7 @@ ms.date: 08/28/2017
 
 # Configure HGS for HTTPS communications
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 >[!div class="step-by-step"]
 [« Initialize HGS](guarded-fabric-initialize-hgs.md)

@@ -11,7 +11,7 @@ ms.technology: security-guarded-fabric
 
 # Guarded Fabric and Shielded VM Planning Guide for Tenants
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This topic focuses on VM owners who would like to protect their virtual machines (VMs) for compliance and security purposes. Regardless of whether the VMs run on a hosting provider’s guarded fabric or a private guarded fabric, VM owners need to control the security level of their shielded VMs, which includes maintaining the ability to decrypt them if needed.
 

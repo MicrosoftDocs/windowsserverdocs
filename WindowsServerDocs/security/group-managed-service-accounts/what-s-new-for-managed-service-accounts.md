@@ -1,5 +1,5 @@
 ---
-title: What&#39;s New for Managed Service Accounts
+title: What's New for Managed Service Accounts
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold
