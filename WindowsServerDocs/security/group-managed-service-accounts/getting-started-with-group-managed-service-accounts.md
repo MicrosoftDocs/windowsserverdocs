@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Getting Started with Group Managed Service Accounts
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 
 This guide provides step-by-step instructions and background information for enabling and using group Managed Service Accounts in  Windows Server 2012 .
