@@ -11,7 +11,7 @@ ms.date: 08/28/2017
 
 # Initialize HGS using Admin-trusted attestation
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 These steps vary depending on whether you are initializing HGS in a new forest or an existing bastion forest:
 

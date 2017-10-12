@@ -12,7 +12,7 @@ ms.date: 03/02/2017
 
 # Add host information to the HGS configuration
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 Get information about the hosts from the fabric admin and add it to HGS. This step varies depending on the mode of attestation:
 

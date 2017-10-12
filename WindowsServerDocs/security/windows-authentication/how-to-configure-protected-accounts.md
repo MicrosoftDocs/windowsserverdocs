@@ -15,7 +15,7 @@ ms.date: 10/12/2016
 ---
 # How to Configure Protected Accounts
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 Through Pass-the-hash (PtH) attacks, an attacker can authenticate to a remote server or service by using the underlying NTLM hash of a user's password (or other credential derivatives). Microsoft has previously [published guidance](http://www.microsoft.com/download/details.aspx?id=36036) to mitigate pass-the-hash attacks.  Windows Server 2012 R2  includes new features to help mitigate such attacks further. For more information about other security features that help protect against credential theft, see [Credentials Protection and Management](http://technet.microsoft.com/library/dn408190.aspx). This topic explains how to configure the following new features:  
   

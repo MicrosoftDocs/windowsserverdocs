@@ -11,7 +11,7 @@ ms.date: 10/14/2016
 
 # Guarded fabric and shielded VMs overview
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 ## Overview of the guarded fabric
 
