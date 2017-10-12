@@ -35,7 +35,7 @@ The following table shows the options for converting disks between the various p
 
 Disk Management displays the online and offline status of disks. 
 
-In Windows, by default, all newly-discovered disks are brought online with read and write access. In Windows Server and Windows Server Datacenter, by default, newly-discovered disks are brought online with read and write access unless they are on a shared bus (such as SCSI, iSCSI, Serial Attached SCSI, or Fibre Channel). Disks on a shared bus will be offline the first time they are detected.
+In Windows, by default, all newly-discovered disks are brought online with read and write access. In Windows Server, by default, newly-discovered disks are brought online with read and write access unless they are on a shared bus (such as SCSI, iSCSI, Serial Attached SCSI, or Fibre Channel). Disks on a shared bus will be offline the first time they are detected.
 
 If a disk is offline, you must bring it online before you can initialize it or create volumes on it. 
 

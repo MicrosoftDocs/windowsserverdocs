@@ -166,16 +166,7 @@ When the volume status is **Healthy (At Risk)**, an underlying disk's status is 
 > [!NOTE]
 > The Remote Volume Management Exception includes exceptions for Vds.exe, Vdsldr.exe, and TCP port 135.
 
-The following table details how to configure Windows Defender Firewall on various remote computers to allow connections from Disk Management that is running on a computer with Windows Server 2008, Windows Vista, or Windows Vista with Service Pack 1 (SP1).
-
 <br />
-
-| Remote computer operating system | Windows Defender Firewall configuration |
-| ---| --- |
-| <p>Windows Server 2008</p> | <p>Enable Remote Volume Management Exception.</p> | 
-|<p>Windows Vista</p> | <p> <ul><li>Enable Remote Volume Management Exception.</p></li> <p><li>Enable the File and Print Sharing exception.</p></li></ul> |
-| <p>Windows Vista with SP1</p> | <p> Enable Remote Volume Management Exception.</p> |
-| <p>Windows Server 2003 with SP1</p> | <p>Enable the following exceptions:</p><ul><li>TCP port 135<br /><br /></li><li>Vds.exe<br /><br /></li></ul> |
 
  > [!NOTE]
  > Remote connections in workgroups are not supported. Both the local computer and the remote computer must be members of a domain.
