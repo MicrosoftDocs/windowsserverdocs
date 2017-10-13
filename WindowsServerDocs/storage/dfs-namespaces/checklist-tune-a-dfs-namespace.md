@@ -9,14 +9,11 @@ author: JasonGerend
 manager: brianlic
 ms.author: jgerend
 ---
+# Checklist: Tune a DFS namespace
 
-# Checklist: Tune a DFS Namespace
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
-
-After creating a namespace and adding folders and targets, use the following checklist to tune or optimize the way the DFS Namespace handles referrals and polls Active Directory Domain Services (AD DS) for updated namespace data.
-
-
+After creating a namespace and adding folders and targets, use the following checklist to tune or optimize the way the DFS namespace handles referrals and polls Active Directory Domain Services (AD DS) for updated namespace data.
 
 -   Prevent users from seeing folders in a namespace that they do not have permissions to access. [Enable Access-Based Enumeration on a Namespace](enable-access-based-enumeration-on-a-namespace.md) 
 -   Enable or prevent users from being referred to a namespace or folder target when they access a folder in the namespace. [Enable or Disable Referrals and Client Failback](enable-or-disable-referrals-and-client-failback.md) 

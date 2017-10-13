@@ -12,7 +12,7 @@ description: How to install Data Deduplication on Windows Server, determine whet
 ---
 
 # Install and enable Data Deduplication
-> Applies to Windows Server 2016
+> Applies to Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This topic explains how to install [Data Deduplication](overview.md), evaluate workloads for deduplication, and enable Data Deduplication on specific volumes.
 

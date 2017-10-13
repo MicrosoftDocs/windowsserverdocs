@@ -8,12 +8,15 @@ author: wmgries
 manager: klaasl
 ms.author: wgries
 ms.date: 09/16/2016
---- 
+---
 # Data Deduplication interoperability
-> Applies to Windows Server 2016
+
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 ## <a id="supported"></a>Supported
+
 ### <a id="supported-clusters"></a>Failover Clustering
+
 [Failover Clustering](../..//failover-clustering/failover-clustering-overview.md) is fully supported, if every node in the cluster has the [Data Deduplication feature installed](install-enable.md#install-dedup). Other important notes:
 
 * [Manually started Data Deduplication jobs](run.md#running-dedup-jobs-manually) must be run on the Owner node for the Cluster Shared Volume.

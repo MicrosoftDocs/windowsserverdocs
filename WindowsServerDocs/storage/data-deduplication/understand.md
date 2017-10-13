@@ -8,14 +8,15 @@ author: wmgries
 manager: klaasl
 ms.author: wgries
 ms.date: 09/15/2016
---- 
-
+---
 # Understanding Data Deduplication
-> Applies to Windows Server 2016
+
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This document describes how [Data Deduplication](overview.md) works.
 
 ## <a name="how-does-dedup-work"></a>How does Data Deduplication work?
+
 Data Deduplication in Windows Server was created with the following two principles:
 
 1. **Optimization should not get in the way of writes to the disk**  
