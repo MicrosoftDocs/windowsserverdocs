@@ -13,7 +13,9 @@ ms.date: 09/25/2017
 ms.author: nirb
 ---
 
-# Beginning your General Data Protection Regulation (GDPR) journey for Windows Server 2016
+# Beginning your General Data Protection Regulation (GDPR) journey for Windows Server 
+
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This article provides info about the GDPR, including what it is, and the products Microsoft provides to help you to become compliant.
 

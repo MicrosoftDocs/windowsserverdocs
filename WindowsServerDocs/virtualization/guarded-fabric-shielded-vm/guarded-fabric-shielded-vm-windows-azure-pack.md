@@ -16,7 +16,7 @@ ms.date: 10/14/2016
 
 # Shielded VMs  for tenants - Deploying a shielded VM by using Windows Azure Pack
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 If your hosting service provider supports it, you can use Windows Azure Pack to deploy a shielded VM.
 

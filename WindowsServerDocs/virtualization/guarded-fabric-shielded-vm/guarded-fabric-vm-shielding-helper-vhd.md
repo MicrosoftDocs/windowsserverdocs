@@ -16,7 +16,7 @@ ms.date: 08/28/2017
 [« Deploy a shielded using Windows Azure Pack](guarded-fabric-shielded-vm-windows-azure-pack.md)
 [Shield an existing VM »](guarded-fabric-vm-shielding-helper-vhd.md)
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 <!-- This comment creates a break between the Applies To above and the Important note below. -->
 

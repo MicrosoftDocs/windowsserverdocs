@@ -12,7 +12,7 @@ ms.date: 10/14/2016
 
 # Shielded VMs - Hosting service provider creates a shielded VM template
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 >[!div class="step-by-step"]
 [« Deploy shielded VMs](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
