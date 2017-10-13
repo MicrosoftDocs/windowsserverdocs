@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 9cf87597-b15d-4f43-8aa1-91e60367f011
 ---
-# Get started iwth Windows Server, version 1709
+# Get started with Windows Server, version 1709
 
 >Applies To: Windows Server (Semi-Annual Channel)
 
@@ -25,7 +25,7 @@ Semi-Annual Channel releases such as this one are ideal for customers who are mo
 
 Windows Server, version 1709 runs in Server Core mode. That means there is no local console or graphical user interface, so you manage it remotely. However, it offers great advantages such as smaller hardware requirements, much smaller attack surface, and a reduction in the need for updates. If you're new to working with Server Core, [Manage a Server Core server](../administration/server-core/server-core-manage.md) will help you get used to this environment. [Manage Windows Server 2016](../administration/manage-windows-server.md) shows you the various options for managing servers remotely.
 
-[What's new in Windows Server] introduces you to the new features and functionality added in Windows Server, version 1709.
+[What's New in Windows Server version 1709](whats-new-in-windows-server-1709.md) introduces you to the new features and functionality added in Windows Server, version 1709.
 
 ### Why does Windows Server, version 1709 offer only the Server Core installation option?
 One of the most important steps we take in planning each release of Windows Server is listening to customer feedback – how are you using Windows Server? What new features will have the greatest impact on your Windows Server deployments, and by extension, your day-to-day business? Your feedback tells us that delivering new innovation as quickly and  efficiently as possible is a key priority. At the same time, for those customers innovating most quickly, you’ve told us that you’re primarily using command line scripting with PowerShell to manage your datacenters, and as such don’t have a strong need for the desktop GUI available in the installation of Windows Server with Desktop Experience. By focusing on the Server Core installation option, we’re able to dedicate more resources toward those new innovations, while also maintaining traditional Windows Server platform functionality and application compatibility. If you have feedback about this or other issues concerning Windows Server and our future releases, you can make suggestions and comments through the [Feedback Hub](https://support.microsoft.com/help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub-app).
@@ -37,10 +37,10 @@ Nano Server is available as a container operating system. See [Changes in Nano S
 ## Additional information about this release
 To get a comprehensive view of the key facts about Windows Server, version 1709, you should also review these topics prior to installing it:
 
-- What hardware is needed to run it? See [System Requirements](system-requirements.md)
-- What new features and functionality has been added? See [whatsnew]
+- What hardware is needed to run it? See [System requirements](system-requirements.md)
+- What new features and functionality have been added? See [What's New in Windows Server version 1709](whats-new-in-windows-server-1709.md)
 - What has been removed? See [Features Removed]
-- What issues need to be worked around? See [relnotes]
+- What issues need to be worked around? See [Release notes--Important issues in Windows Server, version 1709](server-1709-relnotes.md)
 
 
 ## Where to obtain Windows Server, version 1709
