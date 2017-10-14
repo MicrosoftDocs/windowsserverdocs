@@ -21,5 +21,5 @@ To deploy DFS Namespaces, refer to the following topics:
 -   [Add Namespace Servers to a Domain-based DFS Namespace](add-namespace-servers-to-a-domain-based-dfs-namespace.md)
 -   [Create a Folder in a DFS Namespace](create-a-folder-in-a-dfs-namespace.md)
 -   [Add Folder Targets](add-folder-targets.md)
--   [Replicate Folder Targets Using DFS Replication](replicate-folder-targets-using-dfs-replication.md])
+-   [Replicate Folder Targets Using DFS Replication](replicate-folder-targets-using-dfs-replication.md)
 -   [Delegate Management Permissions for DFS Namespaces](delegate-management-permissions-for-dfs-namespaces.md)
