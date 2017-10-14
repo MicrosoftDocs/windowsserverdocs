@@ -9,10 +9,9 @@ author: JasonGerend
 manager: brianlic
 ms.author: jgerend
 ---
-
 # Deploying DFS Namespaces
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
 To deploy DFS Namespaces, refer to the following topics:
 
@@ -22,7 +21,5 @@ To deploy DFS Namespaces, refer to the following topics:
 -   [Add Namespace Servers to a Domain-based DFS Namespace](add-namespace-servers-to-a-domain-based-dfs-namespace.md)
 -   [Create a Folder in a DFS Namespace](create-a-folder-in-a-dfs-namespace.md)
 -   [Add Folder Targets](add-folder-targets.md)
--   [Replicate Folder Targets Using DFS Replication](https://technet.microsoft.com/library/cc771488(v=ws.11).aspx)
+-   [Replicate Folder Targets Using DFS Replication](replicate-folder-targets-using-dfs-replication.md)
 -   [Delegate Management Permissions for DFS Namespaces](delegate-management-permissions-for-dfs-namespaces.md)
-
-

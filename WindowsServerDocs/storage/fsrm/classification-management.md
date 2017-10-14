@@ -12,7 +12,7 @@ ms.author: jgerend
 
 # Classification Management
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 Classification properties are used to categorize files and can be used to select files for scheduled file management tasks.
 
@@ -31,9 +31,3 @@ This section includes the following topics:
 ## See also
 
 [Setting File Server Resource Manager Options](setting-file-server-resource-manager-options.md)
-
-
-
-
-
-

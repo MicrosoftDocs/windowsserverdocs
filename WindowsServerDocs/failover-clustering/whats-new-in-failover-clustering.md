@@ -10,7 +10,7 @@ ms.author: jgerend
 ms.date: 10/11/2016
 ---
 # What's new in Failover Clustering in Windows Server 2016
-> Applies To: Windows Server 2016
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This topic explains the new and changed functionality in Failover Clustering in Windows Server 2016.  
 

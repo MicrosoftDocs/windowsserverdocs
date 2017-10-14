@@ -8,9 +8,10 @@ author: wmgries
 manager: klaasl
 ms.author: wgries
 ms.date: 09/15/2016
---- 
+---
 # What's New in Data Deduplication
-> Applies to Windows Server 2016
+
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 [Data Deduplication](overview.md) in Windows Server 2016 has been optimized to be highly performant, flexible, and manageable at private cloud scale. For more information about the software-defined storage stack in Windows Server 2016, please see [What's New in Storage in Windows Server 2016](../whats-new-in-storage.md).
 
@@ -25,6 +26,7 @@ Data Deduplication has the following enhancements in Windows Server 2016:
 | [Support for Cluster OS Rolling Upgrade](whats-new.md#cluster-upgrade-support) | New | Data Deduplication fully supports the new [Cluster OS Rolling Upgrade](../..//failover-clustering/cluster-operating-system-rolling-upgrade.md) feature of Windows Server 2016. |
 
 ## <a name="large-volume-support"></a>Support for large volumes
+
 **What value does this change add?**  
 To get the best performance out of Data Deduplication in Windows Server 2012 R2, volumes must be sized properly to ensure that the Optimization job can keep up with the rate of data changes, or "churn." Typically, this means that Data Deduplication is only performant on volumes of 10 TB or less, depending on the workload's write patterns.
 
