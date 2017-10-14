@@ -10,9 +10,9 @@ author: toklima
 ms.date: 10/04/2016
 ---
 # Updating drive firmware in Windows Server 2016
->Applies To: Windows 10, version 1703; Windows Server 2016
+>Applies to: Windows 10, Windows Server (Semi-Annual Channel), Windows Server 2016
 
-Updating the firmware for drives has historically been a cumbersome task with a potential for downtime, which is why we're making improvements to Storage Spaces, Windows Server 2016, and Windows 10. If you have drives that support the new firmware update mechanism included in Windows, you can update drive firmware of in-production drives without downtime. However, if you're going to update the firmware of a production drive, make sure to read our tips on how to minimize the risk while using this powerful new functionality.
+Updating the firmware for drives has historically been a cumbersome task with a potential for downtime, which is why we're making improvements to Storage Spaces, Windows Server, and Windows 10, version 1703 and newer. If you have drives that support the new firmware update mechanism included in Windows, you can update drive firmware of in-production drives without downtime. However, if you're going to update the firmware of a production drive, make sure to read our tips on how to minimize the risk while using this powerful new functionality.
 
   > [!Warning]
   > Firmware updates are a potentially risky maintenance operation and you should only apply them after thorough testing of the new firmware image. It is possible that new firmware on unsupported hardware could negatively affect reliability and stability, or even cause data loss. Administrators should read the release notes a given update comes with to determine its impact and applicability.

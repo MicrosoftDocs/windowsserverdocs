@@ -9,10 +9,9 @@ author: JasonGerend
 manager: brianlic
 ms.author: jgerend
 ---
-
 # Create a File Expiration Task
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 The following procedure guides you through the process of creating a file management task for expiring files. File expiration tasks are used to automatically move all files that match certain criteria to a specified expiration directory, where an administrator can then back those files up and delete them.
 
@@ -95,5 +94,3 @@ The new directory name is based on the name of the file management task and the 
 
 -   [Classification Management](classification-management.md)
 -   [File Management Tasks](file-management-tasks.md)
-
-

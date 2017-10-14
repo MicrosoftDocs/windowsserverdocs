@@ -28,7 +28,7 @@ To add a folder target by using DFS Management, use the following procedure:
 4.  If the folder is replicated using DFS Replication, you can specify whether to add the new folder target to the replication group.
 
 > [!TIP]
-> To add a folder target by using Windows PowerShell, use the [New-DfsnFolderTarget](../../../../powershell/module/dfsn/new-dfsnfoldertarget?view=win10-ps) cmdlet. The DFSN Windows PowerShell module was introduced in Windows Server 2012.
+> To add a folder target by using Windows PowerShell, use the [New-DfsnFolderTarget](https://docs.microsoft.com/powershell/module/dfsn/new-dfsnfoldertarget) cmdlet. The DFSN Windows PowerShell module was introduced in Windows Server 2012.
 
 > [!NOTE]
 > Folders can contain folder targets or other DFS folders, but not both, at the same level in the folder hierarchy.

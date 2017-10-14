@@ -12,7 +12,7 @@ description: How to deploy Work Folders, including installing the server role, c
 ---
 # Deploying Work Folders
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows 10, Windows 8.1, Windows 7
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10, Windows 8.1, Windows 7
 
 This topic discusses the steps needed to deploy Work Folders. It assumes that you've already read [Planning a Work Folders deployment](plan-work-folders.md).  
   

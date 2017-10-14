@@ -9,16 +9,15 @@ author: JasonGerend
 manager: brianlic
 ms.author: jgerend
 ---
+# Enable access-based enumeration on a namespace
 
-# Enable Access-based Enumeration on a Namespace
-
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
 Access-based enumeration hides files and folders that users do not have permissions to access. By default, this feature is not enabled for DFS namespaces. You can enable access-based enumeration of DFS folders by using DFS Management. To control access-based enumeration of files and folders in folder targets, you must enable access-based enumeration on each shared folder by using Share and Storage Management.
 
 To enable access-based enumeration on a namespace, all namespace servers must be running Windows Server 2008 or newer. Additionally, domain-based namespaces must use the Windows Server 2008 mode. For information about the requirements of the Windows Server 2008 mode, see [Choose a Namespace Type](choose-a-namespace-type.md).
 
-In some environments, enabling access-based enumeration can cause high CPU utilization on the server and slow response times for users. For more information, see the Microsoft<sup>®</sup> website [Windows Server Future Resources](http://go.microsoft.com/fwlink/?LinkId=140356)
+In some environments, enabling access-based enumeration can cause high CPU utilization on the server and slow response times for users.
 
 > [!NOTE]
 > If you upgrade the domain functional level to Windows Server 2008 while there are existing domain-based namespaces, DFS Management will allow you to enable access-based enumeration on these namespaces. However, you will not be able to edit permissions to hide folders from any groups or users unless you migrate the namespaces to the Windows Server 2008 mode. For more information, see [Migrate a Domain-based Namespace to Windows Server 2008 Mode](migrate-a-domain-based-namespace-to-windows-server-2008-mode.md).
