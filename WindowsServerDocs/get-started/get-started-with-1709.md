@@ -1,5 +1,5 @@
 ---
-title: Get started with Windows Server, version 1709
+title: Introducing Windows Server, version 1709
 description: How to obtain, install, and activate
 ms.prod: Windows Server
 ms.mktglfcycl: manage
@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 9cf87597-b15d-4f43-8aa1-91e60367f011
 ---
-# Get started with Windows Server, version 1709
+# Introducing Windows Server, version 1709
 
 >Applies To: Windows Server (Semi-Annual Channel)
 
@@ -39,7 +39,7 @@ To get a comprehensive view of the key facts about Windows Server, version 1709,
 
 - What hardware is needed to run it? See [System requirements](system-requirements.md)
 - What new features and functionality have been added? See [What's New in Windows Server version 1709](whats-new-in-windows-server-1709.md)
-- What has been removed? See [Features Removed]
+- What has been removed? See [Features Removed or Planned for Replacement starting with Windows Server (version 1709)](Removed-Features-1709.md)
 - What issues need to be worked around? See [Release notes--Important issues in Windows Server, version 1709](server-1709-relnotes.md)
 
 
