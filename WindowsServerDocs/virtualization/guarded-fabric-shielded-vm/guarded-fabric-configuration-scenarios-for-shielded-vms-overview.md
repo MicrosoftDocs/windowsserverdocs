@@ -7,7 +7,7 @@ ms.assetid: 5d1a06c9-24e1-4e14-9c9a-efb2adbfeddd
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 08/28/2017
+ms.date: 10/16/2017
 ---
 
 # Deploy shielded VMs
@@ -20,9 +20,9 @@ ms.date: 08/28/2017
 
 The following topics describe how a tenant can work with shielded VMs.
 
-1. (Optional) [Create a template disk](guarded-fabric-tenant-creates-template-disk.md). The template disk can be created by either the tenant or the hosting service provider. 
+1. (Optional) [Create a Windows template disk](guarded-fabric-create-a-shielded-vm-template.md) or [create a Linux template disk](guarded-fabric-create-a-linux-shielded-vm-template.md). The template disk can be created by either the tenant or the hosting service provider. 
 
-2. (Optional) [Convert an existing VM to a shielded VM](guarded-fabric-vm-shielding-helper-vhd.md). 
+2. (Optional) [Convert an existing Windows VM to a shielded VM](guarded-fabric-vm-shielding-helper-vhd.md). 
 
 3. [Create shielding data to define a shielded VM](guarded-fabric-tenant-creates-shielding-data.md).
 
