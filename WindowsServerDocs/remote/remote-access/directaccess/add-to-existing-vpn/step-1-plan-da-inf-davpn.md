@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # Step 1 Plan DirectAccess Infrastructure
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 The first step of planning for a basic Remote Access deployment on a single server is to perform planning for the infrastructure required for the deployment. This topic describes the infrastructure planning steps:  
   

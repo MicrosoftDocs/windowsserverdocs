@@ -30,6 +30,7 @@ Feature  | Generation | Guest operating system
 Checkpoints | 1 and 2 | Any supported guest  
 Guest clustering | 1 and 2 | Guests that run cluster-aware applications and have iSCSI target software installed  
 Replication | 1 and 2 | Any supported guest  
+Domain Controller | 1 and 2 | Any supported Windows Server guest using only production checkpoints. See [Supported Windows Server guest operating systems](https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/supported-windows-guest-operating-systems-for-hyper-v-on-windows#supported-windows-server-guest-operating-systems)   
   
 ## Compute  
   

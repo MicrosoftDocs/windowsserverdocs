@@ -11,7 +11,7 @@ ms.date: 07/05/2017
 
 # Initialize the HGS cluster using TPM mode in a new dedicated forest (default)
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 >[!div class="step-by-step"]
 [« Install HGS in a new forest](guarded-fabric-install-hgs-default.md)

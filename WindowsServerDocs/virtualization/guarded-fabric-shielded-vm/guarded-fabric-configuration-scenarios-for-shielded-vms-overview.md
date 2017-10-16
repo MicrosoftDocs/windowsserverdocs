@@ -16,7 +16,7 @@ ms.date: 08/28/2017
 [« Confirm attestation](guarded-fabric-confirm-hosts-can-attest-successfully.md)
 [Create a shielded VM template »](guarded-fabric-create-a-shielded-vm-template.md)
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 The following topics describe how a tenant can work with shielded VMs.
 

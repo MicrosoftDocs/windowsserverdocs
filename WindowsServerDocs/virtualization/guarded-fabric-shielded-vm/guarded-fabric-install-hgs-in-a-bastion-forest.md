@@ -11,7 +11,7 @@ ms.date: 07/05/2017
 
 # Install HGS in an existing bastion forest 
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 >[!div class="step-by-step"]
 [« Prepare for HGS](guarded-fabric-prepare-for-hgs.md)

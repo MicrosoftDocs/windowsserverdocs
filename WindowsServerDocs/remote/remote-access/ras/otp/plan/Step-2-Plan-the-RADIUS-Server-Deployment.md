@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # Step 2 Plan the RADIUS Server Deployment
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 After deploying a single Remote Access server, plan for the one-time password (OTP) authentication server.  
   

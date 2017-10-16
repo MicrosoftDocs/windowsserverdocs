@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Credentials Processes in Windows Authentication
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This reference topic for the IT professional describes how Windows authentication processes credentials.
 

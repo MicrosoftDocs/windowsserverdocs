@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # Step 2 Prepare Cluster Servers
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 Before you can configure a cluster deployment, you prepare additional servers to add to the cluster.  
   

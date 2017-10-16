@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # STEP 9 Configure EDGE1
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 The following procedures are performed on the EDGE1 server:  
   

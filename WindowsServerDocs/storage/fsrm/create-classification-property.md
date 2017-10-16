@@ -9,10 +9,9 @@ author: JasonGerend
 manager: brianlic
 ms.author: jgerend
 ---
-
 # Create a Classification Property
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 Classification properties are used to assign values to files within a specified folder or volume. There are many property types that you can choose from, depending on your needs. The following table defines the available property types.
 
@@ -48,5 +47,3 @@ The following procedure guides you through the process of creating a classificat
 
 -   [Create an Automatic Classification Rule](create-automatic-classification-rule.md)
 -   [Classification Management](classification-management.md)
-
-

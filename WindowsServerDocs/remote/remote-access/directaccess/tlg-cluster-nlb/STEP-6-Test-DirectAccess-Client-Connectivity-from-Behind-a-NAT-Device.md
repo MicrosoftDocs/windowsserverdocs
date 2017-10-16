@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # STEP 6 Test DirectAccess Client Connectivity from Behind a NAT Device
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 When a DirectAccess client is connected to the Internet from behind a NAT device or a web proxy server, the DirectAccess client uses either Teredo or IP-HTTPS to connect to the Remote Access server. 
 

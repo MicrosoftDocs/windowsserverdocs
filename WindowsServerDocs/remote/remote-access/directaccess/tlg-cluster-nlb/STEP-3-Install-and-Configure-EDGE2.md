@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # STEP 3 Install and Configure EDGE2
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 EDGE2 is the second member of a Remote Access cluster. EDGE2 is installed and configured before enabling the cluster configuration.
 

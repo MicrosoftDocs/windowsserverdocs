@@ -11,7 +11,7 @@ author: jamesmci
 ---
 # Use DNS Policy for Application Load Balancing
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use this topic to learn how to configure DNS policy to perform application load balancing.
 

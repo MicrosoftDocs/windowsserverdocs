@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # Overview of the DirectAccess Cluster-NLB Test Lab Scenario
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 In this test lab scenario, DirectAccess is deployed with:  
   

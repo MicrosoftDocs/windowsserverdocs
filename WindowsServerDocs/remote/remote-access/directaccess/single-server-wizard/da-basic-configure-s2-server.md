@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # Step 2 Configure the Basic DirectAccess Server
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This topic describes how to configure the client and server settings required for a basic DirectAccess deployment. Before beginning the deployment steps, ensure that you have completed the planning steps described in [Plan a Basic DirectAccess Deployment](Plan-a-Basic-DirectAccess-Deployment.md).  
   

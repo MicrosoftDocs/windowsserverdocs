@@ -12,7 +12,7 @@ author: jamesmci
 
 # Converged NIC Teamed NIC Configuration
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 The following sections provide instructions for deploying Converged NIC in a Teamed NIC configuration with Switch Embedded Teaming \(SET\). The example configuration in this guide depicts two Hyper-V hosts, Hyper-V Host 1, and Hyper-V Host 2.
 

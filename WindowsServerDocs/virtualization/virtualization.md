@@ -1,6 +1,6 @@
 ---
 title: Virtualization
-description: Provides an overview of virtualization technologies, such as Containers, Hyper-V, and Hyper-V Virtual Switch; and links to additional content for Windows Server 2016.
+description: Provides an overview of virtualization technologies, such as Containers, Hyper-V, and Hyper-V Virtual Switch; and links to additional content for Windows Server 2016 and later versions of the operating system.
 ms.prod: windows-server-threshold
 manager: brianlic
 ms.technology: compute
@@ -11,7 +11,7 @@ ms.author: jamesmci
 ---
 # Virtualization
 
->Applies To: Windows Server 2016 
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016 
 
 <img src="../get-started/media/virtualization.png" style='float:left; padding:.5em;' alt="Icon showing a box with spokes"> Virtualization in Windows Server 2016 is one of the foundational technologies required to create your software defined infrastructure. Along with networking and storage, virtualization features deliver the flexibility you need to power workloads for your customers.
 

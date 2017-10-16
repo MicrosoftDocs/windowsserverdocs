@@ -11,7 +11,7 @@ author: jamesmci
 ---
 # Plan Software Defined Networking
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 The topics in this section provide deployment planning and prerequisite information about the Software Defined Networking technologies that are included in Windows Server 2016.
 

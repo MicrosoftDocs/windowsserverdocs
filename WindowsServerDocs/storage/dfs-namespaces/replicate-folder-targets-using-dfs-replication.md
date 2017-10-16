@@ -9,10 +9,9 @@ author: JasonGerend
 manager: brianlic
 ms.author: jgerend
 ---
+# Replicate folder targets using DFS Replication
 
-# Replicate Folder Targets using DFS Replication
-
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, and Windows Server 2008
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, and Windows Server 2008
 
 You can use DFS Replication to keep the contents of folder targets in sync so that users see the same files regardless of which folder target the client computer is referred to.
 
@@ -34,5 +33,3 @@ To do so from a Windows PowerShell session, use the [Update-DfsrConfigurationFro
 -   [Deploying DFS Namespaces](deploying-dfs-namespaces.md)
 -   [Delegate Management Permissions for DFS Namespaces](delegate-management-permissions-for-dfs-namespaces.md)
 -   [Replication](https://technet.microsoft.com/library/cc770278(v=ws.11).aspx)
-
-

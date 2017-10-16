@@ -12,7 +12,7 @@ description: How to use Storage Replica to replicate volumes in one cluster to a
 ---
 # Cluster to cluster Storage Replication
 
-> Applies To: Windows Server 2016
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 Cluster-to-cluster replication is now available in Windows Server 2016 Datacenter Edition, including the replication of clusters using Storage Spaces Direct (i.e. shared nothing, direct-attached storage). The management and configuration is similar to server-to-server replication.  
 

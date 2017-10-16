@@ -13,7 +13,7 @@ author: jamesmci
 
 # DirectAccess
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 In Windows Server 2016, **DirectAccess and VPN** is a role service of the **Remote Access** server role.
 

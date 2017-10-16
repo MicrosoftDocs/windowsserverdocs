@@ -12,7 +12,7 @@ author: jamesmci
 
 # Performance Tools for Network Workloads
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use this topic to learn about performance tools.
 

@@ -12,7 +12,7 @@ ms.assetid: 1d9ed2a0-9d21-415b-93e9-272b09939f78
 ---
 # Introduction to Software Defined Networking in  Windows Server Datacenter
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This topic provides a high\-level overview of Microsoft's Software Defined Networking \(SDN\) solution. If you're new to SDN, or just looking for a clear place to start in understanding our solution, you're in the right place.
 

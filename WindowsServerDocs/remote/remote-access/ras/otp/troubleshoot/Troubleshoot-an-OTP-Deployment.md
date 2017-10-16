@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # Troubleshoot an OTP Deployment
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This topic describes how to troubleshoot the most common errors that may occur when configuring a Remote Access deployment using OTP authentication.  
 

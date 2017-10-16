@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # Plan to Enable DirectAccess
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 **Note:** Windows Server 2012 combines DirectAccess and Remote Access Service (RAS) into a single Remote Access role. This section describes the planning steps that are required to deploy a single Remote Access server running  Windows Server 2016 with basic features. 
 

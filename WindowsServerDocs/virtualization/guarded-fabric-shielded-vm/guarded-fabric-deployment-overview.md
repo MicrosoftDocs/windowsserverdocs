@@ -13,7 +13,7 @@ ms.date: 08/28/2017
 
 # Quick start for guarded fabric deployment
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 >[!div class="step-by-step"]
 [« Deploy a guarded fabric](guarded-fabric-deploying-hgs-overview.md)

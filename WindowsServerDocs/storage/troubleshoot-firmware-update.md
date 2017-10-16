@@ -11,9 +11,9 @@ ms.date: 04/18/2017
 ---
 # Troubleshooting drive firmware updates
 
->Applies To: Windows 10, version 1703
+>Applies to: Windows 10, Windows Server (Semi-Annual Channel),
 
-Windows 10, version 1703 includes the capability to update firmware of HDDs and SSDs that have been certified with the Firmware Upgradeable AQ (Additional Qualifier) via PowerShell.
+Windows 10, version 1703 and newer, and Windows Server (Semi-Annual Channel) include the capability to update firmware of HDDs and SSDs that have been certified with the Firmware Upgradeable AQ (Additional Qualifier) via PowerShell.
 
 You can find more information about this feature here:
 

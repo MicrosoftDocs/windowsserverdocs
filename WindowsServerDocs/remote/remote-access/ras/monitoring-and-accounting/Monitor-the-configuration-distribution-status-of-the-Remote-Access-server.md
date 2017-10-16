@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # Monitor the configuration distribution status of the Remote Access server
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 **Note:** Windows Server 2012 combines DirectAccess and Remote Access Service (RAS) into a single Remote Access role.  
   
