@@ -23,7 +23,7 @@ These release notes summarize the most critical issues in the Windows Server&reg
 This document is continuously updated. As critical issues requiring a workaround are discovered, they are added, as are new workarounds and fixes as they become available.  
   
 ## Storage Spaces Direct
-[comment]: # (ID: unknown; Submitter: stevenek; state: in review)  
+[comment]: # (ID: unknown; Submitter: stevenek; state: signed off)  
 Storage Spaces Direct is not included in Windows Server, version 1709. If you call *Enable-ClusterStorageSpacesDirect* or its alias *Enable-ClusterS2D*,  on a server running Windows Server, version 1709, you will receive an error with the message "The requested operation is not supported".
 
 It is also not supported to introduce servers running Windows Server, version 1709 into a Windows Server 2016 Storage Spaces Direct deployment.
