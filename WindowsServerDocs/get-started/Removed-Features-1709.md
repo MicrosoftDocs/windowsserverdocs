@@ -1,5 +1,5 @@
 ---
-title: Features Removed or Planned for Replacement in Windows Server (version 1709)
+title: Features removed or planned for replacement starting with Windows Server (version 1709)
 description: "Features and functionalities removed or planned for removal in releases."
 ms.custom: na
 ms.prod: windows-server-threshold
