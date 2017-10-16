@@ -1,5 +1,5 @@
 ---
-redirect_url: /windows-server/Windows-Server-2016
+redirect_url: /windows-server/windows-server
 ---
 
 

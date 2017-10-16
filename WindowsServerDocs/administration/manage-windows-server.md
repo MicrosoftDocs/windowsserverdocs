@@ -10,11 +10,9 @@ ms.date: 09/29/2017
 ---
 # Manage Windows Server 2016
 
->Applies to: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
- <img src="../get-started/media/8-management.png" style='float:left; padding:.5em;' alt="Icon showing a gear"> Once you have deployed Windows Server into your environment, including the specific roles for the features and functions you need, the next step is managing those servers. Windows Server includes a number of tools to help you understand your Windows Server environment, manage specific servers, fine-tune performance, and eventually automate many management tasks. 
-
-<br>
+ <img src="../media/landing-icons/manage.png" style='float:left; padding:.5em;' alt="Icon showing a gear"> Once you have deployed Windows Server into your environment, including the specific roles for the features and functions you need, the next step is managing those servers. Windows Server includes a number of tools to help you understand your Windows Server environment, manage specific servers, fine-tune performance, and eventually automate many management tasks. 
 
 ## Manage Windows Server systems and environments
 The tools you use to manage Windows Server instances depend, in large amount, on the types of systems you have deployed (Windows Server with Desktop Experience vs Server Core), physical versus virtual machines, and where your servers are located. Use the following information to perform basic management tasks on Windows Server.
