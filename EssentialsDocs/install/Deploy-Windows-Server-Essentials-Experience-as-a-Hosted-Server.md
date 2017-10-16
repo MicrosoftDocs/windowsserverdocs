@@ -79,7 +79,7 @@ This document includes information that is specific to hosters who intend to dep
   
 -   **Service integration** You can integrate the server with Microsoft online services (such as Office 365, SharePoint Online, and  Microsoft Azure Backup). You can also integrate the server with your services or services provided by third-party providers.  
   
--   **Anywhere Access** The customer can access the server, network computers, and data from virtually anywhere they have an Internet connection and by using almost any device. Remote Web Access enables them to access applications and data with a streamlined, touch-friendly browser experience. The My Server app enables them to access data from a Windows Phone or a Windows Store app.  
+-   **Anywhere Access** The customer can access the server, network computers, and data from virtually anywhere they have an Internet connection and by using almost any device. Remote Web Access enables them to access applications and data with a streamlined, touch-friendly browser experience. The My Server app enables them to access data from a Windows Phone or a Microsoft Store app.  
   
 -   **Media streaming** If you install the Media package on a server with  Windows Server Essentials Experience enabled, the end customer can store music, video, and photographs in shared folders, then access these media files from networked computers or Remote Web Access.  
   

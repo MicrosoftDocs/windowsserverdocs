@@ -499,7 +499,7 @@ Next, the package consumer should follow these steps:
 2. Install the app on Nano Server by running the [**Add-AppxPackage**](https://technet.microsoft.com/library/mt575516(v=wps.620).aspx) PowerShell cmdlet to install a WSA package on Nano Server. For example: `Add-AppxPackage wsaSample.appx`
 
 #### Additional resources for creating apps
-WSA is server extension of Windows app package technology (though it is not hosted in Windows Store). If you want to publish apps with WSA,these topics will help you familiarize youself with the app package pipeline:
+WSA is server extension of Windows app package technology (though it is not hosted in Microsoft Store). If you want to publish apps with WSA,these topics will help you familiarize youself with the app package pipeline:
 
 - [How to create a basic package manifest](https://msdn.microsoft.com/library/windows/desktop/br211475.aspx)
 - [App Packager (MakeAppx.exe)](https://msdn.microsoft.com/library/windows/desktop/hh446767(v=vs.85).aspx)
