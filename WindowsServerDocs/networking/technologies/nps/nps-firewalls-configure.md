@@ -12,7 +12,7 @@ author: jamesmci
 
 # Configure Firewalls for RADIUS Traffic
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 Firewalls can be configured to allow or block types of IP traffic to and from the computer or device on which the firewall is running. If firewalls are not properly configured to allow RADIUS traffic between RADIUS clients, RADIUS proxies, and RADIUS servers, network access authentication can fail, preventing users from accessing network resources. 
 

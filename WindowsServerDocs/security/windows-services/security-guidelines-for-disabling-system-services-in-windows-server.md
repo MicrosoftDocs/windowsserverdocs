@@ -287,7 +287,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 ## 	Client License Service (ClipSVC)		
 | | |			
 |---|---|	
-|	**Service description**	|	Provides infrastructure support for the Microsoft Store. This service is started on demand and if disabled applications bought using Windows Store will not behave correctly.
+|	**Service description**	|	Provides infrastructure support for the Microsoft Store. This service is started on demand and if disabled applications bought using Microsoft Store will not behave correctly.
 |	**Service name**	|	ClipSVC
 |	**Installation**	|	Always installed
 |	**StartType**	|	Manual
@@ -1134,7 +1134,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 ## Network Connection Broker			
 | | |			
 |---|---|		
-|	**Service description**	|	Brokers connections that allow Windows Store Apps to receive notifications from the internet.
+|	**Service description**	|	Brokers connections that allow Microsoft Store Apps to receive notifications from the internet.
 |	**Service name**	|	NcbService
 |	**Installation**	|	Only on Datacenter Edition
 |	**StartType**	|	Manual
@@ -2317,7 +2317,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 ## Windows License Manager Service 			
 | | |			
 |---|---|	
-|	**Service description**	|	Provides infrastructure support for the Windows Store.  This service is started on demand and if disabled then content acquired through the Windows Store will not function properly.
+|	**Service description**	|	Provides infrastructure support for the Microsoft Store.  This service is started on demand and if disabled then content acquired through the Microsoft Store will not function properly.
 |	**Service name**	|	LicenseManager
 |	**Installation**	|	Only on Datacenter Edition
 |	**StartType**	|	Manual

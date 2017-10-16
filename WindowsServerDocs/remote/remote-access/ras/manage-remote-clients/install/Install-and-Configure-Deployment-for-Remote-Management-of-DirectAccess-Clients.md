@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # Install and Configure Deployment for Remote Management of DirectAccess Clients
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This topic introduces the configuration steps that are required to deploy a single  Remote Access server that can be used for remote management of DirectAccess clients.  
   

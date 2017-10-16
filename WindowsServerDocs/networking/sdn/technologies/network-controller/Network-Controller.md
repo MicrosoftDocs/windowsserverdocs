@@ -11,7 +11,7 @@ author: jamesmci
 ---
 # Network Controller
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 New in  Windows Server 2016, Network Controller provides a centralized, programmable point of automation to manage, configure, monitor, and troubleshoot virtual and physical network infrastructure in your datacenter. 
 

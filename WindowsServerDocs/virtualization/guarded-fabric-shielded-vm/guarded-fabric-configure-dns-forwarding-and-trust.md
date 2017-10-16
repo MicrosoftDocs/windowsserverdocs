@@ -11,7 +11,7 @@ ms.date: 07/05/2017
 
 # Configure DNS forwarding in the HGS domain and a one-way trust with the fabric domain
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 >[!div class="step-by-step"]
 [« Configure fabrc DNS](guarded-fabric-configuring-fabric-dns-ad.md)

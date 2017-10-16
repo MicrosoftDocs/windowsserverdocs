@@ -12,7 +12,7 @@ author: jamesmci
 ---
 # Install the Network Controller Server Role Using Server Manager
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This topic provides instructions on how to install the Network Controller server role by using Server Manager.
 

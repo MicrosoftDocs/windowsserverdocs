@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # STEP 3 Configure DC1
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 DC1 acts as a domain controller, DNS server, and DHCP server for the corp.contoso.com domain. Configure DC1 as follows:  
   

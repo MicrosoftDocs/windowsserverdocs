@@ -5,7 +5,7 @@ description: Managing SSL Certificates in AD FS and WAP in Windows Server 2016
 author: jenfieldmsft
 ms.author: billmath
 manager: samueld
-ms.date: 05/31/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 
@@ -17,6 +17,9 @@ ms.technology: identity-adfs
 >Applies To: Windows Server 2016
 
 This article describes how to deploy a new SSL certificate to your AD FS and WAP servers.
+
+>[!NOTE]
+>The recommended way to replace the SSL certificate going forward for an AD FS farm is to use Azure AD Connect.  For more information see [Update the SSL certificate for an Active Directory Federation Services (AD FS) farm](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnectfed-ssl-update)
 
 ## Obtaining your SSL Certificates
 For production AD FS farms a publicly trusted SSL certificate is recommended. This is usually obtained by submitting a certificate signing request (CSR) to a third party, public certificate provider. There are a variety of ways to generate the CSR, including from a Windows 7 or higher PC. Your vendor should have documentation for this.

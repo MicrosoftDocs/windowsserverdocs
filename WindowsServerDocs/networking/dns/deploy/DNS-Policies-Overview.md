@@ -11,7 +11,7 @@ author: jamesmci
 ---
 # DNS Policies Overview
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use this topic to learn about DNS Policy, which is new in Windows Server 2016. You can use DNS Policy for Geo-Location based traffic management, intelligent DNS responses based on the time of day, to manage a single DNS server configured for split\-brain deployment, applying filters on DNS queries, and more. The following items provide more detail about these capabilities.
 

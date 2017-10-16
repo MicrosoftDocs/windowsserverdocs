@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # STEP 2 Configure APP1
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 Use the following steps to prepare APP1 for OTP support:  
   

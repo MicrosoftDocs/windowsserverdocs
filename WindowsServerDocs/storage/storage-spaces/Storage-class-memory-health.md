@@ -46,6 +46,9 @@ Doing so yields this example output:
 |802c-01-1602-117cb5fc|Healthy|OK||
 |802c-01-1602-117cb64f|Warning|Predictive Failure|{Threshold Exceeded,NVDIMM\_N Error}|
 
+> [!NOTE]
+> To find the Physical location of an NVDIMM-N device specified in an event, on the **Details** tab of the event in Event Viewer, go to **EventData** > **Location**. Note that Windows Server 2016 lists the incorrect location NVDIMM-N devices, but this is fixed in Windows Server, version 1709.
+
 For help understanding the various health conditions, see the following sections.
 
 ## "Warning" Health Status
@@ -135,3 +138,5 @@ Interleaved sets can often be created in a platform's BIOS to make multiple NVDI
 Windows Server 2016 and Windows 10 Anniversary Edition do not support interleaved sets of NVDIMM-Ns.
 
 At the time of this writing, there is no mechanism for the host operating system to correctly identify individual NVDIMM-Ns in such a set and clearly communicate to the user which particular device may have caused an error or needs to be serviced.
+
+

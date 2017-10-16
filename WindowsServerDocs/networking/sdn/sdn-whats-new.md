@@ -11,7 +11,7 @@ author: jamesmci
 ---
 # What's New in SDN for Windows Server 1709
 
->Applies To: Windows Server
+>Applies To: Windows Server (Semi-Annual Channel)
 
 You can use the following links to content that is new in Software Defined Networking \(SDN\) for Windows Server 1709.
 

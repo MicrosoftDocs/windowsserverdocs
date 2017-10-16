@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # Plan a Software Defined Network Infrastructure
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 Review the following information to help plan your Software Defined Network (SDN) infrastructure deployment. After you review this information, see [Deploy a Software Defined Network infrastructure](../deploy/Deploy-a-Software-Defined-Network-Infrastructure.md) for deployment information.
 

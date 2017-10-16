@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # STEP 10 Install and Configure 2-EDGE1
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 2-EDGE1 configuration consists of the following:  
   

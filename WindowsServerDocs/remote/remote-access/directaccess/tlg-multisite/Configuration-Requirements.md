@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # Configuration Requirements
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 The following components are required to configure Remote Access in the test lab:  
   

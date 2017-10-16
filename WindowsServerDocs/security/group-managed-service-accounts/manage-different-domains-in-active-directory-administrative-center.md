@@ -14,7 +14,7 @@ ms.date: 10/12/2016
 ---
 # Manage Different Domains in Active Directory Administrative Center
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
   When you open Active??Directory Administrative, the domain that you are currently logged on to on this computer \(the local domain\) appears in the Active??Directory Administrative Center navigation pane \(the left pane\). Depending on the rights of your current set of logon credentials, you can view or manage the Active??Directory objects in this local domain.
 

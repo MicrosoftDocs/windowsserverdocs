@@ -12,7 +12,7 @@ author: jamesmci
 
 # Virtual Private Networking \(VPN\)
 
->Applies To: Windows Server 2016, Windows 10
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows 10
 
 You can use this topic to learn about Windows Server 2016 and Windows 10 VPN features and functionality.
 

@@ -12,7 +12,7 @@ ms.date: 10/14/2016
 
 # Deploy the Host Guardian Service (HGS)
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 >[!div class="step-by-step"]
 [« Quick Start](guarded-fabric-deployment-overview.md)

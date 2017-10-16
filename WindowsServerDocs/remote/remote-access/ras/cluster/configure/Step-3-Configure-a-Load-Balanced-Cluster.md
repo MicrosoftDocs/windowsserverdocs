@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # Step 3 Configure a Load-Balanced Cluster
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 After preparing servers for the cluster, configure load-balancing on the single server, configure the required certificates, and deploy the cluster.  
   

@@ -12,7 +12,7 @@ ms.author: jgerend
 
 # Schedule a Set of Reports
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 To generate a set of reports on a regular schedule, you schedule a *report task.* The report task specifies which reports to generate and what parameters to use; which volumes and folders to report on; how often to generate the reports and which file formats to save them in.
 

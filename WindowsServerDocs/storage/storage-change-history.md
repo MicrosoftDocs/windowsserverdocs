@@ -10,13 +10,18 @@ ms.author: jgerend
 ms.date: 7/18/2017
 description: New and updated topics in the Storage documentation for Windows Server 2016
 ---
-# Change history for storage topics in Windows Server 2016
+# Change history for storage topics in Windows Server
 
->Applies To: Windows Server 2016
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This topic lists new and updated topics in the [Storage](storage.md) documentation for Windows Server 2016.
 
 > If you're looking for update history for Windows Server 2016, see [Windows 10 and Windows Server 2016 update history](https://support.microsoft.com/help/4000825/windows-10-and-windows-server-2016-update-history).
+
+## October 2017
+|New or changed topic|Description|
+|---|---|
+|[Overview of Disk Management](disk-management/overview-of-disk-management.md)| Published 13 new topics for Windows Server.|
 
 ## July 2017
 |New or changed topic|Description|

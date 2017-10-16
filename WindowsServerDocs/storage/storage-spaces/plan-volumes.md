@@ -9,7 +9,6 @@ ms.topic: article
 author: cosmosdarwin
 ms.date: 01/11/2016
 ---
-
 # Planning volumes in Storage Spaces Direct
 
 > Applies To: Windows Server 2016
@@ -44,7 +43,7 @@ ReFS is the premier filesystem purpose-built for virtualization and offers many 
 If your workload requires a feature that ReFS doesn't support yet, you can use NTFS instead.
 
    >[!TIP]
-   > Volumes with different filesystems can coexist in the same cluster.
+   > Volumes with different file systems can coexist in the same cluster.
 
 ## Choosing the resiliency type
 
@@ -63,7 +62,7 @@ If you have more than two servers, we recommend using one of the following resil
 
 ### With three servers
 
-With three servers, you should use three-way mirroring for better fault tolerance and performance. Three-way mirroring keeps three copies of all data, one copy on the drives in each server. Its storage efficiency is 33.3% – to write 1 TB of data, you need at least 3 TB of physical storage capacity in the storage pool. Three-way mirroring can safely tolerate [at least two hardware problems (drive or server) at a time](storage-spaces-fault-tolerance.md#examples). For example, if you're rebooting one server when suddenly another drive or server fails, all data remains safe and continuously accessible. 
+With three servers, you should use three-way mirroring for better fault tolerance and performance. Three-way mirroring keeps three copies of all data, one copy on the drives in each server. Its storage efficiency is 33.3% – to write 1 TB of data, you need at least 3 TB of physical storage capacity in the storage pool. Three-way mirroring can safely tolerate [at least two hardware problems (drive or server) at a time](storage-spaces-fault-tolerance.md#examples). For example, if you're rebooting one server when suddenly another drive or server fails, all data remains safe and continuously accessible.
 
 ![three-way-mirror](media/plan-volumes/three-way-mirror.png)
 
@@ -71,7 +70,7 @@ With three servers, you should use three-way mirroring for better fault toleranc
 
 With four or more servers, you can choose for each volume whether to use three-way mirroring, dual parity (often called "erasure coding"), or mix the two.
 
-Dual parity provides the same fault tolerance as three-way mirroring but with better storage efficiency. With four servers, its storage efficiency is 50.0% – to store 2 TB of data, you need 4 TB of physical storage capacity in the storage pool. This increases to 66.7% storage efficiency with seven servers, and continues up to 80.0% storage efficiency. The tradeoff is that parity encoding is more compute-intensive, which can limit its performance. For more details, see Fault tolerance and storage efficiency.
+Dual parity provides the same fault tolerance as three-way mirroring but with better storage efficiency. With four servers, its storage efficiency is 50.0% – to store 2 TB of data, you need 4 TB of physical storage capacity in the storage pool. This increases to 66.7% storage efficiency with seven servers, and continues up to 80.0% storage efficiency. The tradeoff is that parity encoding is more compute-intensive, which can limit its performance.
 
 ![dual-parity](media/plan-volumes/dual-parity.png)
 
@@ -82,7 +81,7 @@ Which resiliency type to use depends on the needs of your workload.
 Workloads that have strict latency requirements or that need lots of mixed random IOPS, such as SQL Server databases or performance-sensitive Hyper-V virtual machines, should run on volumes that use mirroring to maximize performance.
 
    >[!TIP]
-   > Mirroring is faster than any other resiliency type. We use mirroring for nearly all our performance showcases.
+   > Mirroring is faster than any other resiliency type. We use mirroring for nearly all our performance examples.
 
 #### When capacity matters most
 
@@ -113,7 +112,7 @@ Volumes in Storage Spaces Direct can be any size up to 32 TB.
    >[!TIP]
    > If you use a backup solution that relies on the Volume Shadow Copy service (VSS) and the Volsnap software provider – as is common with file server workloads - limiting the volume size to 10 TB will improve performance and reliability. Backup solutions that use the newer Hyper-V RCT API and/or ReFS block cloning and/or the native SQL backup APIs perform well up to 32 TB and beyond.
 
-#### Footprint
+### Footprint
 
 The size of a volume refers to its usable capacity, the amount of data it can store. This is provided by the **-Size** parameter of the **New-Volume** cmdlet and then appears in the **Size** property when you run the **Get-Volume** cmdlet.
 
@@ -123,7 +122,7 @@ The footprints of your volumes need to fit in the storage pool.
 
 ![size-versus-footprint](media/plan-volumes/size-versus-footprint.png)
 
-#### Reserve capacity
+### Reserve capacity
 
 Leaving some capacity in the storage pool unallocated gives volumes space to repair "in-place" after drives fail, improving data safety and performance. If there is sufficient capacity, an immediate, in-place, parallel repair can restore volumes to full resiliency even before the failed drives are replaced. This happens automatically.
 
@@ -171,8 +170,7 @@ The four volumes fit exactly on the physical storage capacity available in our p
    >[!TIP]
    > You don't need to create all the volumes right away. You can always extend volumes or create new volumes later.
 
-   >[!NOTE]
-   > For simplicity, this example uses decimal (base-10) units throughout, meaning 1 TB = 1,000,000,000,000 bytes. However, storage quantities in Windows appear in binary (base-2) units. For example, each 2 TB drive would appear as 1.82 TiB in Windows. Likewise, the 128 TB storage pool would appear as 116.41 TiB. This is expected.
+For simplicity, this example uses decimal (base-10) units throughout, meaning 1 TB = 1,000,000,000,000 bytes. However, storage quantities in Windows appear in binary (base-2) units. For example, each 2 TB drive would appear as 1.82 TiB in Windows. Likewise, the 128 TB storage pool would appear as 116.41 TiB. This is expected.
 
 ## Usage
 

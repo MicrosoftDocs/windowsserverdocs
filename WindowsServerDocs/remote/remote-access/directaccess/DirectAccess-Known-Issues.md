@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # DirectAccess Known Issues
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 
 ## Recommended hotfixes and updates for Windows Server 2012 DirectAccess  

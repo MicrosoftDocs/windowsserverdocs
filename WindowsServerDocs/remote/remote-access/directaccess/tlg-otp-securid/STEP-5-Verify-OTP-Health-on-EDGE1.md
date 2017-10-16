@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # STEP 5 Verify OTP Health on EDGE1
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 The following procedures verify that OTP is configured and functioning correctly using DirectAccess Server Health Monitoring on EDGE1.  
   

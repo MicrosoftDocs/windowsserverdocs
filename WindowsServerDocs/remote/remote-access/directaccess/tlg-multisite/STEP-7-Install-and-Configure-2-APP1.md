@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # STEP 7 Install and Configure 2-APP1
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 2-APP1 provides web and file sharing services. 2-APP1 configuration consists of the following:  
   

@@ -11,7 +11,7 @@ author: jamesmci
 ---
 # Use Windows PowerShell to Configure Non-Domain Member Client Computers
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use this procedure to manually configure a BranchCache client computer for distributed cache mode or hosted cache mode.  
   

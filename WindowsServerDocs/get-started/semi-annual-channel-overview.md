@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 9cf87597-b15d-4f43-8aa1-91e60367f011
 ---
-# Windows Server Semi-Annual Channel Overview
+# Windows Server Semi-Annual Channel overview
 
 >Applies To: Windows Server (Semi-Annual Channel)
 
@@ -35,7 +35,7 @@ Most of the features introduced in the Semi-Annual Channel will be rolled up int
 The Semi-Annual Channel will be available to volume-licensed customers with [Software Assurance](https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-default.aspx), as well as via the Azure Marketplace or other cloud/hosting service providers and loyalty programs such as Visual Studio Subscriptions.
 
 > [!Note]  
-> **The first Semi-Annual Channel release is Windows Server, version 1709**. If you want to join this channel, you should install Windows Server, version 1709, which can be installed in Server Core mode or as Nano Server run in a container. See [LINK to 1709 GS] to learn how to obtain and activate Windows Server, version 1709.
+> **The first Semi-Annual Channel release is Windows Server, version 1709**. If you want to join this channel, you should install Windows Server, version 1709, which can be installed in Server Core mode or as Nano Server run in a container. See [Introducing Windows Server, version 1709](get-started-with-1709.md) to learn how to obtain and activate Windows Server, version 1709.
 
 
 ![Semi-Annual Channel release timing](./media/SAC-release-timing.png)

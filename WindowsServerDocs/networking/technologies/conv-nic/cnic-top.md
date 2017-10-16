@@ -12,7 +12,7 @@ author: jamesmci
 
 # Converged Network Interface Card \(NIC\) Configuration Guide
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 Converged network interface card \(NIC\) allows you to expose RDMA through a host\-partition virtual NIC \(vNIC\) so that the host partition services can access Remote Direct Memory Access \(RDMA\) on the same NICs that the Hyper-V guests are using for TCP/IP traffic.
 

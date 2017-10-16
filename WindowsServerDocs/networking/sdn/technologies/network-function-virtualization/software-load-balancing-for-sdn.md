@@ -15,7 +15,7 @@ author: jamesmci
 ---
 # Software Load Balancing \(SLB\) for SDN
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use this topic to learn about Software Load Balancing for Software Defined Networking in Windows Server 2016.  
 

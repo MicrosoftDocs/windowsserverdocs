@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # Set Access Scope for a DNS Zone
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use this topic to set the access scope for a DNS zone by using the IPAM client console.  
   

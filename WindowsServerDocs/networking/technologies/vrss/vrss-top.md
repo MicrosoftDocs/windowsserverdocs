@@ -12,7 +12,7 @@ author: jamesmci
 
 # Virtual Receive Side Scaling \(vRSS\)
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use Virtual Receive Side Scaling \(vRSS) to configure a virtual network adapter to load balance incoming network traffic across multiple logical processor cores in a VM or multiple physical cores for a host virtual Network Interface Card \(vNIC\).
 

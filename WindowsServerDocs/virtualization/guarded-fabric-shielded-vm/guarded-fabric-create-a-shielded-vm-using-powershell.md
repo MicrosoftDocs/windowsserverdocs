@@ -11,7 +11,7 @@ ms.date: 08/28/2017
 
 # Create a shielded VM using PowerShell
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 >[!div class="step-by-step"]
 [« Create a shielding data file](guarded-fabric-tenant-creates-shielding-data.md)

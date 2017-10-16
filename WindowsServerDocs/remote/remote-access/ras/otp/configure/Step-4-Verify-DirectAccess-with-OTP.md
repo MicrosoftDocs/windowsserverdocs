@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # Step 4 Verify DirectAccess with OTP
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This topic describes how to verify that you have correctly configured your DirectAccess with OTP deployment.
   
