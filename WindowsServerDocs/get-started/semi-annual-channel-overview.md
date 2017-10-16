@@ -32,14 +32,12 @@ The Semi-Annual Channel releases will deliver new functionality for customers wh
 
 Most of the features introduced in the Semi-Annual Channel will be rolled up into the next Long-term Servicing Channel release of Windows Server. The editions, functionality, and supporting content might vary from release to release depending on customer feedback.
 
-<<<<<<< HEAD
 The Semi-Annual Channel will be available to volume-licensed customers with [Software Assurance](https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-default.aspx), as well as via the Azure Marketplace or other cloud/hosting service providers and loyalty programs such as Visual Studio Subscriptions.
 
 > [!Note]  
 > **The first Semi-Annual Channel release is Windows Server, version 1709**. If you want to join this channel, you should install Windows Server, version 1709, which can be installed in Server Core mode or as Nano Server run in a container. See [Introducing Windows Server, version 1709](get-started-with-1709.md) to learn how to obtain and activate Windows Server, version 1709.
-=======
-**The current LTSC product is Windows Server 2016**. If you want to stay in this channel, you should install (or continue using) Windows Server 2016, which can be installed in Server Core mode or Server with Desktop Experience Mode. See [Get Started with Windows Server 2016](https://docs.microsoft.com/windows-server/get-started/server-basic) for details.
->>>>>>> fbc9036768d818e7188c36857ea6fad574a5b865
+>
+>**The current LTSC product is Windows Server 2016**. If you want to stay in this channel, you should install (or continue using) Windows Server 2016, which can be installed in Server Core mode or Server with Desktop Experience Mode. See [Get Started with Windows Server 2016](https://docs.microsoft.com/windows-server/get-started/server-basic) for details.
 
 
 ![Semi-Annual Channel release timing](./media/SAC-release-timing.png)
