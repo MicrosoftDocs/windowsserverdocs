@@ -32,7 +32,7 @@ One of the most important steps we take in planning each release of Windows Serv
 
 
 ### What about Nano Server?
-Nano Server is available as a container operating system. See [Changes in Nano Server] for details.
+Nano Server is available as a container operating system. See [Changes to Nano Server in Windows Server Semi-Annual Channel](nano-in-semi-annual-channel.md) for details.
 
 ## Additional information about this release
 To get a comprehensive view of the key facts about Windows Server, version 1709, you should also review these topics prior to installing it:
