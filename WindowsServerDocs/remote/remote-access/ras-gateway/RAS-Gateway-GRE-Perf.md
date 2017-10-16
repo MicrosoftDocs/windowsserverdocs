@@ -25,7 +25,7 @@ RAS Gateway is a software router and gateway that you can use in either single t
 Single tenant mode allows organizations of any size to deploy the gateway as an exterior, or Internet\-facing edge virtual private network \(VPN\) server. In single tenant mode, you can deploy RAS Gateway on a physical server or virtual machine \(VM\). This topic describes RAS Gateway deployment on two Virtual Machines \(VMs\) that are configured in a failover cluster.
 
 >[!IMPORTANT]
->Because GRE tunnels provide encapsulation but not encryption, you should not use RAS Gateway configured with GRE as an Internet edge gateway.
+>Because GRE tunnels provide encapsulation but not encryption, you should not use RAS Gateway configured with GRE as an Internet edge gateway. To learn about the best uses for RAS Gateway with GRE tunnels, see [GRE Tunneling in Windows Server](gre-tunneling-windows-server.md).
 
 GRE is a lightweight tunneling protocol that can encapsulate a wide variety of network layer protocols inside virtual point\-to\-point links over an Internet Protocol internetwork. The Microsoft GRE implementation encapsulates both IPv4 and IPv6.
 
