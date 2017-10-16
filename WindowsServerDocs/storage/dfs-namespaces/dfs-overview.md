@@ -7,12 +7,11 @@ ms.technology: storage
 ms.topic: article
 author: jasongerend
 ms.date: 07/10/2017
-description: This topic describes DFS Namespaces, which is a role service in Windows Server enabling you to group shared folders located on different servers into one or more logically structured namespaces. 
-
+description: This topic describes DFS Namespaces, which is a role service in Windows Server enabling you to group shared folders located on different servers into one or more logically structured namespaces.
 ---
 # DFS Namespaces overview
 
-> Applies to: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
 DFS Namespaces is a role service in Windows Server that enables you to group shared folders located on different servers into one or more logically structured namespaces. This makes it possible to give users a virtual view of shared folders, where a single path leads to files located on multiple servers, as shown in the following figure:
 
@@ -37,11 +36,11 @@ A namespace server is a domain controller or member server that hosts a namespac
 
 Servers that are running the following operating systems can host multiple domain-based namespaces in addition to a single stand-alone namespace. 
 
+- Windows Server (Semi-Annual Channel)
 - Windows Server 2016 
 - Windows Server 2012 R2
 - Windows Server 2012
 - Windows Server 2008 R2 Datacenter/Enterprise
-
 
 Servers that are running the following operating systems can host a single stand-alone namespace:
 

@@ -11,7 +11,7 @@ ms.assetid: 12bc8e11-d63c-4aef-8129-f92324b2bf1b
 ---
 # Frequently Asked Questions about Storage Replica
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This topic contains answers to frequently asked questions (FAQs) about Storage Replica.
 

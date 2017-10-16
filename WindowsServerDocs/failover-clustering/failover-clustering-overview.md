@@ -10,7 +10,7 @@ ms.technology: storage-failover-clustering
 ms.date: 10/11/2016
 ---
 # Failover Clustering in Windows Server 2016
-> Applies To: Windows Server 2016
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 <img src="../get-started/media/3-failover.png" style='float:left; padding:.5em;' alt="Icon indicating a group of computers"> Failover clustering - a Windows Server feature that enables you to group multiple servers together into a fault-tolerant cluster - provides new and improved features for software-defined datacenter customers and many other workloads running clusters on physical hardware or in virtual machines.
 

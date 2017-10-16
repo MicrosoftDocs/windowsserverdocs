@@ -11,7 +11,7 @@ ms.assetid: 6c5b9431-ede3-4438-8cf5-a0091a8633b0
 ---
 # Stretch Cluster Replication Using Shared Storage
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 In this evaluation example, you will configure these computers and their storage in a single stretch cluster, where two nodes share one set of storage and two nodes share another set of storage, then replication keeps both sets of storage mirrored in the cluster to allow immediate failover. These nodes and their storage should be located in separate physical sites, although it is not required. There are separate steps for creating Hyper-V and File Server clusters as sample scenarios.  
 

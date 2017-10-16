@@ -12,7 +12,7 @@ description: How to plan a Work Folders deployment including system requirements
 ---
 # Planning a Work Folders deployment
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows 10, Windows 8.1, Windows 7
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10, Windows 8.1, Windows 7
 
 This topic explains the design process for a Work Folders implementation, and assumes that you have the following background:  
   

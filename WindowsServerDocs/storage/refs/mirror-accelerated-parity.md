@@ -11,7 +11,7 @@ ms.assetid:
 ---
 
 # Mirror-accelerated parity
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2016
 
 Storage Spaces can provide fault tolerance for data using two fundamental techniques: mirror and parity. In [Storage Spaces Direct](../storage-spaces/storage-spaces-direct-overview.md), ReFS introduces mirror-accelerated parity, which enables you to create volumes that use both mirror and parity resiliencies. Mirror-accelerated parity offers inexpensive, space-efficient storage without sacrificing performance. 
 
