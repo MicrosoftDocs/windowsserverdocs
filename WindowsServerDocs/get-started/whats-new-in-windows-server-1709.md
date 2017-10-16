@@ -8,15 +8,13 @@ ms.topic: article
 author: greg-lindsay
 ms.author: greg-lindsay
 ---
+
 # What's New in Windows Server version 1709
 
 >Applies To: Windows Server (semi-annual channel)
 
-<img src="media/whats-new.png" style='float:left; padding:.5em;' alt="Icon showing a newspaper">The content in this section describes what's new and changed in Windows Server, version 1709. The new features and changes listed here are the ones most likely to have the greatest impact as you work with this release.  
+<img src="media/whats-new.png" style='float:left; padding:.5em;' alt="Icon showing a newspaper">The content in this section describes what's new and changed in Windows Server, version 1709. The new features and changes listed here are the ones most likely to have the greatest impact as you work with this release. Also see [Windows Server, version 1709](https://blogs.technet.microsoft.com/windowsserver/2017/08/24/sneak-peek-1-windows-server-version-1709/).
    
-<br>
-<br>
-<br>
 <br>
 <br>
 ## New cadence of releases
@@ -42,6 +40,8 @@ For more information, see [Windows Server Semi-annual Channel Overview](https://
 - The Nano Server container image is nearly 80% smaller.
     - In the Windows Server Semi-Annual Channel, Nano Server as a container base OS image is decreased from 390 MB to 80 MB.
 - Linux containers with Hyper-V isolation 
+
+For more information, see [Changes to Nano Server in the next release of Windows Server](https://docs.microsoft.com/en-us/windows-server/get-started/nano-in-semi-annual-channel) and [Windows Server, version 1709 for developers](https://blogs.technet.microsoft.com/windowsserver/2017/09/13/sneak-peek-3-windows-server-version-1709-for-developers/).
 
 ## Modern management
 
@@ -73,12 +73,16 @@ Virtualized Persistent Memory (vPMEM) is enabled by creating a VHD file (.vhdpme
 
 **Network encryption** enables you to quickly encrypt network segments on software-defined networking infrastructure to meet security and compliance needs.
 
-**Host Guardian Service (HGS)** as a shielded VM is enabled. Prior to this release, the recommendation was to deploy a 3-node physical cluster in a shielded VM environment. While this ensures the HGS environment is not compromised by an administrator, it was often cost prohibitive.
+**Host Guardian Service (HGS)** as a shielded VM is enabled. Prior to this release, the recommendation was to deploy a 3-node physical cluster. While this ensures the HGS environment is not compromised by an administrator, it was often cost prohibitive.
+
+**Linux as a shielded VM** is now supported.
+
+For more information, see [Guarded fabric and shielded VMs overview](https://docs.microsoft.com/en-us/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms).
 
 ## Storage
 
 **Storage Replica**: The disaster recovery protection added by Storage Replica in Windows Server 2016 is now expanded to include:
-- **Test failover**: the option to mount the destination storage is now possible through the test failover feature. You can mount a snapshot of the replicated storage on destination nodes temporarily for testing or backup purposes.  For more information, review https://aka.ms/srfaq 
+- **Test failover**: the option to mount the destination storage is now possible through the test failover feature. You can mount a snapshot of the replicated storage on destination nodes temporarily for testing or backup purposes.  For more information, see [Frequently Asked Questions about Storage Replica](https://aka.ms/srfaq). 
 - **Project Honolulu support**: Support for graphical management of server to server replication is now available in Project Honolulu. This removes the requirement to use PowerShell to manage a common disaster protection workload.
 
 **SMB**: 
@@ -91,6 +95,12 @@ Virtualized Persistent Memory (vPMEM) is enabled by creating a VHD file (.vhdpme
 - **DataPort API for optimized ingress/egress to deduplicated volumes**: Developers can now take advantage of the knowledge Data Deduplication has about how to store data efficiently to move data between volumes, servers, and clusters efficiently.
 
 ## Networking
+
+**Docker's Routing Mesh** is supported. Ingress routing mesh is part of [swarm mode](https://docs.docker.com/engine/swarm/), Docker’s built-in orchestration solution for containers. For more information, see [Docker's routing mesh available with Windows Server version 1709](https://blogs.technet.microsoft.com/virtualization/2017/09/26/dockers-ingress-routing-mesh-available-with-windows-server-version-1709/).
+
+**New features for Docker** are available. For more information, see [Exciting new things for Docker with Windows Server 1709](https://blog.docker.com/2017/09/docker-windows-server-1709/).
+
+**Windows Networking at Parity with Linux for Kubernetes**: Windows is now on par with Linux in terms of networking. Customers can deploy mixed-OS, Kubernetes clusters in any environment including Azure, on-premises, and on 3rd-party cloud stacks with the same network primitives and topologies supported on Linux without the need for any workarounds or switch extensions.
 
 **Core network stack**: Several features of the core network stack are improved. For more information about these features, see [Core Network Stack Features in the Creators Update for Windows 10](https://blogs.technet.microsoft.com/networking/2017/07/13/core-network-stack-features-in-the-creators-update-for-windows-10/).
 - **TCP Fast Open (TFO)**: Support for TFO has been added to optimize the TCP 3-way handshake process. TFO establishes a secure TFO cookie in the first connection using a standard 3-way handshake.  Subsequent connections to the same server use the TFO cookie instead of a 3-way handshake to connect with zero round trip time.
@@ -133,9 +143,8 @@ Virtualized Persistent Memory (vPMEM) is enabled by creating a VHD file (.vhdpme
 
 **Remote Desktop Services (RDS)**
 
-- **RDS is integrated with Azure AD**, so customers can leverage Conditional Access policies, Multifactor Authentication, Integrated authentication with other SaaS Apps using Azure AD, and many more. 
-- **Modern infrastructure** (including RD Gateway, Web, Licensing and Connection Manager) roles are written as an Azure Web Apps, greatly simplifying management due to automatic scalability and elasticity, and significantly reducing consumption costs.
-- **Multiple deployments**: Roles can now serve multiple deployments, supporting multiple RDSH deployments with a single set of infrastructure roles.
+- **RDS is integrated with Azure AD**, so customers can leverage Conditional Access policies, Multifactor Authentication, Integrated authentication with other SaaS Apps using Azure AD, and many more. For more information, see [Integrate Azure AD Domain Services with your RDS deployment](https://docs.microsoft.com/windows-server/remote/remote-desktop-services/rds-azure-adds).
+- For a sneak peek at other exciting changes coming to RDS, see [Remote Desktop Services: Updates & upcoming innovations](https://blogs.technet.microsoft.com/enterprisemobility/2017/09/20/first-look-at-updates-coming-to-remote-desktop-services/)
 
 
 Not finding content you need? Windows 10 users, tell us what you want on [Feedback Hub](feedback-hub:?tabid=2&contextid=898). 
