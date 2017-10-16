@@ -24,7 +24,7 @@ For all types of application that you can publish using AD FS preauthentication,
 The general AD FS preauthentication flow is as follows:  
   
 > [!NOTE]  
-> This authentication flow is not applicable for clients that use Windows Store apps.  
+> This authentication flow is not applicable for clients that use Microsoft Store apps.  
   
 1.  The client device attempts to access a published web application on a particular resource URL; for example https://app1.contoso.com/.  
   
@@ -336,24 +336,24 @@ Add-WebApplicationProxyApplication
      -ADFSUserCertificateStore 'AdfsTrustedDevices'  
 ```  
   
-## <a name="BKMK_1.4"></a>Publish an Application that uses OAuth2 such as a Windows Store App  
-To publish an application for Windows Store apps, you must add a relying party trust for the application to the Federation Service.  
+## <a name="BKMK_1.4"></a>Publish an Application that uses OAuth2 such as a Microsoft Store App  
+To publish an application for Microsoft Store apps, you must add a relying party trust for the application to the Federation Service.  
   
 To allow Web Application Proxy to perform single sign-on (SSO) and to perform credentials delegation using Kerberos constrained delegation, the Web Application Proxy server must be joined to a domain. See [Plan Active Directory](https://technet.microsoft.com/library/dn383648.aspx#BKMK_AD).  
   
 > [!NOTE]  
-> Web Application Proxy supports publishing only for Windows Store apps that use the OAuth 2.0 protocol.  
+> Web Application Proxy supports publishing only for Microsoft Store apps that use the OAuth 2.0 protocol.  
   
 In the AD FS Management console, you must make sure that the OAuth endpoint is proxy enabled. To check if the OAuth endpoint is proxy enabled, open the AD FS Management console, expand **Service**, click **Endpoints**, in the **Endpoints** list, locate the OAuth endpoint and make sure that the value in the **Proxy Enabled** column is **Yes**.  
   
-The authentication flow for clients that use Windows Store apps is described below:  
+The authentication flow for clients that use Microsoft Store apps is described below:  
   
 > [!NOTE]  
-> The Web Application Proxy redirects to the AD FS server for authentication. Because Windows Store apps do not support redirects, if you use Windows Store apps, it is necessary to set the URL of the AD FS server using the Set-WebApplicationProxyConfiguration cmdlet and the OAuthAuthenticationURL parameter.  
+> The Web Application Proxy redirects to the AD FS server for authentication. Because Microsoft Store apps do not support redirects, if you use Microsoft Store apps, it is necessary to set the URL of the AD FS server using the Set-WebApplicationProxyConfiguration cmdlet and the OAuthAuthenticationURL parameter.  
 >   
-> Windows Store apps can be published only using Windows PowerShell.  
+> Microsoft Store apps can be published only using Windows PowerShell.  
   
-1.  The client attempts to access a published web application using a Windows Store app.  
+1.  The client attempts to access a published web application using a Microsoft Store app.  
   
 2.  The app sends an HTTPS request to the URL published by Web Application Proxy.  
   
@@ -430,7 +430,7 @@ Add-WebApplicationProxyApplication
     -BackendServerURL 'https://storeapp.contoso.com/'  
     -ExternalCertificateThumbprint '1a2b3c4d5e6f1a2b3c4d5e6f1a2b3c4d5e6f1a2b'  
     -ExternalURL 'https://storeapp.contoso.com/'  
-    -Name 'Windows Store app Server'  
+    -Name 'Microsoft Store app Server'  
     -ExternalPreAuthentication ADFS  
     -ADFSRelyingPartyName 'Store_app_Relying_Party'  
     -UseOAuthAuthentication  

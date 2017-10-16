@@ -27,7 +27,7 @@ Additional information:
 [RemoteFX Enabled Devices](http://social.technet.microsoft.com/wiki/contents/articles/14534.remotefx-enabled-devices.aspx)  
 [What's new in Windows Server 2012 R2 Remote Desktop Gateway](https://blogs.technet.microsoft.com/enterprisemobility/2013/03/14/whats-new-in-windows-server-2012-remote-desktop-gateway/#transport)  
 [Microsoft Remote Desktop Clients](https://technet.microsoft.com/library/dn473009.aspx)  
-[Remote Desktop app for Windows in the Microsoft Store](http://apps.microsoft.com/windows/app/remote-desktop/051f560e-5e9b-4dad-8b2e-fa5e0b05a480)  
+[Remote Desktop app for Windows in Microsoft Store](http://apps.microsoft.com/windows/app/remote-desktop/051f560e-5e9b-4dad-8b2e-fa5e0b05a480)  
 [Microsoft Remote Desktop - Android Apps on Google Play](https://play.google.com/store/apps/details?id=com.microsoft.rdc.android)  
 [Mac App Store - Microsoft Remote Desktop](https://itunes.apple.com/us/app/microsoft-remote-desktop/id715768417?mt=12)  
 [Microsoft Remote Desktop in the App Store](https://itunes.apple.com/us/app/microsoft-remote-desktop/id714464092?mt=8)  
