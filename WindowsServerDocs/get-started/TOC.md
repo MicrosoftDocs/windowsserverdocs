@@ -36,3 +36,4 @@
 ## [Install Server Core](Getting-started-with-Server-Core.md)
 ### [Configure Server Core with Sconfig.cmd](Sconfig-on-WS2016.md)
 ## [Install Server with Desktop Experience](Getting-started-with-Server-with-Desktop-Experience.md)
+## [Windows Server release information](windows-server-release-info.md)
