@@ -95,7 +95,7 @@ Windows Server, version 1709, is available in Standard and Datacenter editions, 
 |OSEs / Hyper-V containers|unlimited|	2|
 |Windows Server containers|unlimited|	unlimited|
 |Host Guardian Service| yes| yes|
-|Storage features including Storage Spaces Direct and Storage Replica| yes| no|
+|Storage features including Storage Replica| yes| no|
 |Shielded Virtual Machines| yes| no|
 |Software Defined Networking Infrastructure (Network Controller, Software Load Balancer, and Multi-tenant Gateway)| yes| no|
 
