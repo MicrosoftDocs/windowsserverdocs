@@ -10,7 +10,6 @@ ms.author: jaimeo
 manager: dongill
 ms.localizationpriority: high
 ---
-
 # Windows Server technical content library
 
 This library provides info for IT pros to evaluate, plan, deploy, secure, and manage Windows Server.
@@ -24,20 +23,20 @@ This library provides info for IT pros to evaluate, plan, deploy, secure, and ma
 <table border="0" width="100%" align='center'>
   <tr style="text-align:center;">
     <td valign="bottom" style="width:20%; border:0;">
-      <a href="/windows-server/get-started/what-s-new-in-windows-server-1709">
-        ![What's new icon](media/landing-icons/new.png)</br>What's New?</a>    
+      <a href="/windows-server/get-started/whats-new-in-windows-server-1709">
+        ![](media/landing-icons/new.png)</br>What's New?</a>    
     </td>
     <td valign="bottom" style="width:20%; border:0;">
       <a href="/windows-server/get-started/server-basics">
-        ![Get started icon](media/landing-icons/getstarted.png)</br>Get Started</a>
+        ![](media/landing-icons/getstarted.png)</br>Get Started</a>
     </td>
     <td valign="bottom" style="width:20%; border:0;">
       <a href="/windows-server/administration/manage-windows-server">
-        ![Manage icon](media/landing-icons/manage.png)</br>Manage</a>
+        ![](media/landing-icons/manage.png)</br>Manage</a>
     </td>
     <td valign="bottom" style="width:20%; border:0;">
       <a href="/windows-server/failover-clustering/failover-clustering-overview">
-        ![Cluster icon](media/landing-icons/cluster.png)</br>Failover Clustering</a>
+        ![](media/landing-icons/cluster.png)</br>Failover Clustering</a>
     </td>
     <td valign="bottom" style="width:20%; border:0;"><br/>
       <a href="/windows-server/identity/identity-and-access">
@@ -120,8 +119,8 @@ Now that you know which edition and installation option is right for you, click 
 <br/>
 
 <table border="0" width="100%" align='center'>
-    <td align='center' style="width:50%; border:0;"><a href="/windows-server/get-started/getting-started-with-server-core"> <img width="175" src="media/servercore.png" alt="Icon representing the Server Core installation" title="Server Core - Recommended" /><br/>Server Core - <br/>Recommended</a></td>
-   <td align='center' style="width:50%; border:0;"><a href="/windows-server/get-started/getting-started-with-server-with-desktop-experience"><img width="175" src="media/desktop.png" alt="Icon representing the full desktop experience installation option for Windows Server" title="Desktop Experience - Full Experience" /><br/>Desktop Experience - <br/>Full interface</a></td>
+    <td align='center' style="width:50%; border:0;"><a href="/windows-server/get-started/getting-started-with-server-core"> <img width="175" src="media/servercore.png" alt="" title="Server Core - Recommended" /><br/>Server Core - <br/>Recommended</a></td>
+   <td align='center' style="width:50%; border:0;"><a href="/windows-server/get-started/getting-started-with-server-with-desktop-experience"><img width="175" src="media/desktop.png" alt="" title="Desktop Experience - Full Experience" /><br/>Desktop Experience - <br/>Full interface</a></td>
   </tr>
 </table>
 
@@ -134,7 +133,7 @@ Virtualized Storage, Networking, Security and Management technologies are the bu
 <table border="0" width="100%" align='center'>
   <tr style="text-align:center;">
     <td align='center' style="width:10%; border:0;"></td>
-    <td align='center' style="width:50%; border:0;"><a href="/windows-server/sddc"><img width="400" src="media/sddc/WS16-heading.png" alt="Icon representing SDDC" title="Windows Server Software-Defined Datacenter (SDDC)" /><br/>Windows Server Software-Defined Datacenter (SDDC)</a></td>
+    <td align='center' style="width:50%; border:0;"><a href="/windows-server/sddc"><img width="400" src="media/sddc/WS16-heading.png" alt="" title="Windows Server Software-Defined Datacenter (SDDC)" /><br/>Windows Server Software-Defined Datacenter (SDDC)</a></td>
     <td align='center' style="width:10%; border:0;"></td>
   </tr>
 </table>
