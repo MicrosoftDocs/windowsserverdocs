@@ -20,6 +20,7 @@ The Windows Server release model is offering a new option in order to align with
 **There will be two primary release channels available to Windows Server customers, the Long-term Servicing Channel, and the new Semi-Annual Channel.**
 
 Check out this Microsoft Mechanics video for an overview of the updated release model, particularly the Semi-Annual Channel.
+
 <iframe src="https://www.youtube.com/embed/qSAsiM01GOU" width="640" height="360" allowfullscreen></iframe>
 
 
