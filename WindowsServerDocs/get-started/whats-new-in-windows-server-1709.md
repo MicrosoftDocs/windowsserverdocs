@@ -16,7 +16,6 @@ ms.author: greg-lindsay
 <img src="../media/landing-icons/new.png" style='float:left; padding:.5em;' alt="Icon showing a newspaper">The content in this section describes what's new and changed in Windows Server, version 1709. The new features and changes listed here are the ones most likely to have the greatest impact as you work with this release. Also see [Windows Server, version 1709](https://blogs.technet.microsoft.com/windowsserver/2017/08/24/sneak-peek-1-windows-server-version-1709/).
    
 <br>
-<br>
 ## New cadence of releases
 
 Starting with this release, you have two options for receiving Windows Server feature updates:
@@ -70,6 +69,8 @@ Virtualized Persistent Memory (vPMEM) is enabled by creating a VHD file (.vhdpme
 
 
 ## Security and Assurance
+
+**Windows security baselines** have been updated for Windows Server and Windows 10. A [security baseline](https://docs.microsoft.com/en-us/windows/device-security/windows-security-baselines) is a group of Microsoft-recommended configuration settings and explains their security impact. For more information, and to download the Policy Analyzer tool, see [Microsoft Security Compliance Toolkit 1.0](https://docs.microsoft.com/en-us/windows/device-security/security-compliance-toolkit-10).
 
 **Network encryption** enables you to quickly encrypt network segments on software-defined networking infrastructure to meet security and compliance needs.
 

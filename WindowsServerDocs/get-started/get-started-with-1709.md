@@ -19,7 +19,7 @@ Windows Server, version 1709 is the first release in the new Semi-Annual Channel
 
 Semi-Annual Channel releases such as this one are ideal for customers who are moving at a “cloud cadence," such as those on rapid development cycles or hosters keeping up with the latest Hyper-V investments. Windows Server products in the Semi-Annual Channel will have new releases available twice a year, in spring and fall. Each release in this channel will be supported for 18 months from the initial release.
 
-**The current LTSC product is Windows Server 2016**. If you want to stay in this channel, you should install (or continue using) Windows Server 2016, which can be installed in either Server Core mode or Server with Desktop Experience Mode. See [Get Started with Windows Server 2016](https://docs.microsoft.com/windows-server/get-started/server-basic) for details.
+**The current LTSC product is Windows Server 2016**. If you want to stay in this channel, you should install (or continue using) Windows Server 2016, which can be installed in either Server Core mode or Server with Desktop Experience mode. See [Get Started with Windows Server 2016](https://docs.microsoft.com/windows-server/get-started/server-basics) for details.
 
 ## What's different about 1709?
 

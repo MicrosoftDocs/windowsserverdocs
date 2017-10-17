@@ -189,7 +189,7 @@
 ## [Software Defined Networking (SDN)](sdn/software-defined-networking.md)
 ### [What's New in SDN for Windows Server](sdn/sdn-whats-new.md)
 #### [Virtual Network Encryption](sdn/vnet-encryption/sdn-vnet-encryption.md)
-#### [Configure Encryption for a Virtual Network](sdn/vnet-encryption/sdn-config-vnet-encryption.md)
+#### [Configure Encryption for a Virtual Subnet](sdn/vnet-encryption/sdn-config-vnet-encryption.md)
 ### [Introduction to Software Defined Networking in Windows Server Datacenter](sdn/sdn-intro.md)
 ### [Software Defined Networking Technologies](sdn/technologies/Software-Defined-Networking-Technologies.md)
 #### [Hyper-V Network Virtualization](sdn/technologies/hyper-v-network-virtualization/Hyper-V-Network-Virtualization.md)
