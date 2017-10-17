@@ -16,7 +16,7 @@ manager: dongill
 ---
 # Azure services and considerations for desktop hosting
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 The following sections describe Azure Infrastructure Services.  
   

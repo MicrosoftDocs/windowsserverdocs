@@ -1,14 +1,5 @@
 ---
-title: Windows Server 2016
-description: Get started with Windows Server 2016.
-ms.prod: windows-server-threshold
-ms.date: 06/15/2017
-ms.technology: server-general
-ms.topic: article
-ms.assetid: d8972680-d5ee-430e-a97a-991ac872b0d6
-author: jaimeo
-ms.author: jaimeo
-manager: dongill
+redirect_url: /windows-server/windows-server
 ---
 
 # Windows Server 2016
@@ -148,4 +139,4 @@ Virtualized Storage, Networking, Security and Management technologies are the bu
   </tr>
 </table>
 
-Not finding content you need? Windows 10 users, tell us what you want on [Feedback Hub](feedback-hub:?tabid=2&contextid=898). 
+Not finding content you need? Windows 10 users, tell us what you want on [Feedback Hub](feedback-hub://?referrer=techDocsUcPage&tabid=2&contextid=898&newFeedback=true&topic=Windows-Server-2016.md). 

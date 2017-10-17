@@ -12,11 +12,11 @@ ms.assetid: 4738fd49-0e80-4bdf-a773-0f973db3a710 vhorne
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # ftp: mls_1
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Displays an abbreviated list of files and subdirectories in a remote directory.   
 ## Syntax  

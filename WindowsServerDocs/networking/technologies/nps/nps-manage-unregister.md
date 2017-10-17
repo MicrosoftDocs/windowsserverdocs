@@ -12,7 +12,7 @@ author: jamesmci
 
 # Unregister an NPS Server from an Active Directory Domain
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 In the process of managing your NPS server deployment, you might find it useful to move an NPS server to another domain, to replace an NPS server, or to retire an NPS server. 
 

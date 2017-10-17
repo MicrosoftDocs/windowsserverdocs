@@ -78,7 +78,7 @@ Since Nano Server is new for Windows Server 2016, there isn't migration path fro
 -------------------------------------
 If you need a different installation option, you can head [back to the main Windows Server 2016 page](windows-server-2016.md) 
 
-Not finding content you need? Windows 10 users, tell us what you want on [Feedback Hub](feedback-hub:?tabid=2&contextid=898).   
+Not finding content you need? Windows 10 users, tell us what you want on [Feedback Hub](feedback-hub://?referrer=techDocsUcPage&tabid=2&contextid=898&newFeedback=true&topic=Getting-Started-with-Nano-Server.md).   
 
   
 

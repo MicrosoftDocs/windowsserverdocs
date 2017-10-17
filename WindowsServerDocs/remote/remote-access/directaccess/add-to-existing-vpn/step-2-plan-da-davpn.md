@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # Step 2 Plan the DirectAccess Deployment
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 After planning the Remote Access infrastructure, the next step in enabling DirectAccess is to plan the settings for the Enable DirectAccesss Wizard.  
   

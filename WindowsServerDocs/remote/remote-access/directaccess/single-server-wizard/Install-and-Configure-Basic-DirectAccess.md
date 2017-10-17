@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # Install and Configure Basic DirectAccess
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This overview provides an introduction to the configuration steps required to deploy a single DirectAccess server running  Windows Server 2016, Windows Server 2012 R2, or Windows Server 2012with basic settings.  
   

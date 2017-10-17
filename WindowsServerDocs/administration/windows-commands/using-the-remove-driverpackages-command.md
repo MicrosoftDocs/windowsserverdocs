@@ -12,11 +12,11 @@ ms.assetid: a527084b-305e-4d3d-95c3-4f5a5ea0637b
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # Using the remove-DriverPackages Command
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 removes driver packages from the server.
 ## Syntax

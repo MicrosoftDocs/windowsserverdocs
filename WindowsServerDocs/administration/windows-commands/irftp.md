@@ -12,11 +12,11 @@ ms.assetid: e15c60a7-546d-4e9f-9871-43aaa1b569d6 vhorne
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # irftp
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Sends files over an infrared link.    
 ## Syntax  

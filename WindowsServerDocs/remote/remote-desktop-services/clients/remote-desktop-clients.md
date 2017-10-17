@@ -32,7 +32,7 @@ The following client apps are available:
 | Mac      | [Mac app in the iTunes store](https://itunes.apple.com/us/app/microsoft-remote-desktop/id715768417?mt=12&ls=1) |[Getting started with Remote Desktop client on Mac](remote-desktop-mac.md)|
 
 >[!NOTE] 
-> The link for WIndows 8.1, Windows 8, and Windows 7 detects the OS that you are currently using and displays information that matches. So if you want information for Windows 8.1, be sure to access the link from a PC running WIndows 8.1.
+> The link for Windows 8.1, Windows 8, and Windows 7 detects the OS that you are currently using and displays information that matches. So if you want information for Windows 8.1, be sure to access the link from a PC running WIndows 8.1.
 
 
 ## Remote Desktop client URI scheme

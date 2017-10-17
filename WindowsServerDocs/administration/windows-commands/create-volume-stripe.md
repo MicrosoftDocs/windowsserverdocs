@@ -12,11 +12,11 @@ ms.assetid: 20dce735-5f7c-4f83-a580-d087e2913a00
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # create volume stripe
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 creates a striped volume using two or more specified dynamic disks.  
   

@@ -12,11 +12,11 @@ ms.assetid: bea41cf4-36e6-4181-afa5-00170ebd4fdc
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # Using the copy-Image Command
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Copies images that are within the same image group. To copy images between image groups, use the [Using the Export-Image Command](using-the-export-image-command.md) command and then the [Using the add-Image Command](using-the-add-image-command.md) command.
 for examples of how you can use this command, see [Examples](#BKMK_examples).

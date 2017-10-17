@@ -12,11 +12,11 @@ ms.assetid: 1d6f9029-807f-4420-a336-36669b5361bc
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # gpt
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 On basic GUID partition table (gpt) disks, assigns the gpt attribute(s) to the partition with focus.  gpt partition attributes give additional information about the use of the partition. Some attributes are specific to the partition type GUID.
 

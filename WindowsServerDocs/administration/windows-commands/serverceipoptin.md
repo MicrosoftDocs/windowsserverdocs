@@ -12,11 +12,11 @@ ms.assetid: 3d7d7fa7-0689-4797-b802-36fe260d21a0
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # serverceipoptin
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Allows you to participate in the Customer Experience Improvement Program (CEIP).
 ## Syntax

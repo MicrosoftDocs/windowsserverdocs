@@ -12,11 +12,11 @@ ms.assetid: bb6abcc4-310a-4fa4-927b-4084b62ca02e vhorne
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # lpq
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Displays the status of a print queue on a computer running Line printer Daemon (LPD).  
   

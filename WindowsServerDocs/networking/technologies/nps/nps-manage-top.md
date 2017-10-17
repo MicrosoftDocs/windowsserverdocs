@@ -12,7 +12,7 @@ author: jamesmci
 
 # Manage Network Policy Server (NPS)
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use the topics in this section to manage Network Policy Server.  
   

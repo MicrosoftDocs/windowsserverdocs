@@ -25,7 +25,7 @@ The migration guides support migrations of specified roles and features from one
 ## Before you begin
 
 Before you begin migrating roles and features, verify that both source and destination servers are running the most current service packs that are available for their operating systems.
-An e-book of Windows Server 2012 R2 and Windows Server 2012 migration guides is now available. For more information, and to download the e-book, see the [E-Book Gallery for Microsoft Technologies](https://social.technet.microsoft.com/wiki/contents/articles/11608.e-book-gallery-for-microsoft-technologies.aspx#MigrateRoles). Windows Server Migration Guides are also available as part of the PDF download, [Windows Server 2012 R2 and Windows Server 2012 TechNet Library Documentation](https://www.microsoft.com/download/details.aspx?id=41182), available on the Microsoft Download Center.
+An e-book of Windows Server 2012 R2 and Windows Server 2012 migration guides is now available. For more information, and to download the e-book, see the [E-Book Gallery for Microsoft Technologies](https://social.technet.microsoft.com/wiki/contents/articles/11608.e-book-gallery-for-microsoft-technologies.aspx#MigrateRoles). 
 
 >[!NOTE]
 >Whenever you migrate or upgrade to any version of Windows Server, you should review and understand the [support lifecycle policy](https://support.microsoft.com/lifecycle) and timeframe for that version and plan accordingly. You can [search for the lifecycle information](https://support.microsoft.com/lifecycle) for the particular Windows Server release that you are interested in.

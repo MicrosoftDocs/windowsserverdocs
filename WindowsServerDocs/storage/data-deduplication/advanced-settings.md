@@ -11,7 +11,7 @@ ms.date: 09/15/2016
 ---
 # Advanced Data Deduplication settings
 
-> Applies to Windows Server 2016
+> Applies to Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This document describes how to modify advanced [Data Deduplication](overview.md) settings. For [recommended workloads](install-enable.md#enable-dedup-candidate-workloads), the default settings should be sufficient. The main reason to modify these settings is to improve Data Deduplication's performance with other kinds of workloads.
 

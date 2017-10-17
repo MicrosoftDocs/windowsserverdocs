@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # STEP 4 Configure APP1
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 Configure static IPv6 addressing and gateway settings to enable APP1 access to the 2-Corpnet subnet.  
   

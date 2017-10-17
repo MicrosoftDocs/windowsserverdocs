@@ -12,11 +12,11 @@ ms.assetid: 8dcaca6a-212e-4c36-98e3-00938eef6b9c
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # Using the delete-AutoaddDevices Command
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 deletes computers that are pending, rejected, or approved from the Auto-add database. This database stores information about these computers on the server.
 ## Syntax

@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # Plan an Advanced DirectAccess Deployment
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This topic lists the planning steps that are required to deploy a single DirectAccess server running  Windows Server 2016, Windows Server 2012 R2, or Windows Server 2012 with a full range of basic and advanced features. The planning phase includes the following topics.  
   

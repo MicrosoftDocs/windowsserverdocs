@@ -6,7 +6,7 @@ ms.technology: performance-tuning-guide
 ms.topic: article
 author: phstee
 ms.author: RoopeshB, NedPyle
-ms.date: 10/31/2016
+ms.date: 10/16/2017
 ---
 # Performance Tuning NFS File Servers
 

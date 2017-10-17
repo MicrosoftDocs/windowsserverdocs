@@ -12,12 +12,12 @@ ms.assetid: 57b6c8d0-872e-4dba-9715-1db8ab892e98
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # list
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Lists writers, shadow copies, or currently registered shadow copy providers that are on the system. If used without parameters, **list** displays help at the command prompt.
 

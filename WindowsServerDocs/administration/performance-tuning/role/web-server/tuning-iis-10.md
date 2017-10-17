@@ -6,7 +6,7 @@ ms.technology: performance-tuning-guide
 ms.topic: landing-page
 ms.author: DavSo; Ericam; YaShi
 author: phstee
-ms.date: 04/24/2017
+ms.date: 10/16/2017
 ---
 
 # Tuning IIS 10.0
@@ -270,7 +270,7 @@ By default, ASP.NET limits request concurrency to reduce steady-state memory con
 
 ``` syntax
 <system.web>
-  <applicationPool maxConcurrentRequestsPerCPU=”5000″/>
+  <applicationPool maxConcurrentRequestsPerCPU=�?5000″/>
 </system.web>
 ```
 
@@ -285,7 +285,7 @@ Besides the maxConcurrentRequestPerCpu setting, ASP.NET 4.7 also provides settin
 
 ``` syntax
 <system.web>
-  <applicationPool percentCpuLimit=”90″ percentCpuLimitMinActiveRequestPerCpu=”100”/>
+  <applicationPool percentCpuLimit=�?90″ percentCpuLimitMinActiveRequestPerCpu=�?100�?/>
 </system.web>
 ```
 

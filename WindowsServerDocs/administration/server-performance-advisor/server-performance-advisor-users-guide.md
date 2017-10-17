@@ -5,14 +5,14 @@ ms.assetid: be99a5a9-b9c0-436b-912c-e5c5839a533d
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: manage
 ---
 # Server Performance Advisor User's Guide
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This user s guide for Microsoft Server Performance Advisor (SPA) provides guidelines about how you can use SPA to help them identify performance bottlenecks in their systems for various server roles.
 

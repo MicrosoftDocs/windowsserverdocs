@@ -12,11 +12,11 @@ ms.assetid: 27047868-b706-4208-b7e0-1437a2325dd3
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # tsprof
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Copies the remote Desktop Services user configuration information from one user to another.
 The remote Desktop Services user configuration information is displayed in the remote Desktop Services extensions to Local Users and Groups and active directory Users and computers.

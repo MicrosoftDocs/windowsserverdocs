@@ -8,10 +8,10 @@ author: toklima
 ms.technology: storage
 audience: "IT Pro"
 ms.topic: article
-ms.date: 11/07/2016
+ms.date: 10/16/2017
 ---
 # Fsutil wim
->Applies To: Windows Server 2016, Windows 10
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows 10
 
 Provides functions to discover and manage Windows Image (WIM)-backed files.
 

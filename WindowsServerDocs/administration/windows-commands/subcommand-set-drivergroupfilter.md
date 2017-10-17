@@ -12,12 +12,12 @@ ms.assetid: 829ab1f0-4514-421e-9cc0-767b238da69c
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # Subcommand: set-DriverGroupFilter
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Adds or removes an existing driver group filter from a driver group.
 

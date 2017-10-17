@@ -9,12 +9,11 @@ author: JasonGerend
 manager: brianlic
 ms.author: jgerend
 ---
+# Create a DFS namespace
 
-# Create a DFS Namespace
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
-
-To create a new namespace, you can use Server Manager to create the namespace when you install the DFS Namespaces role service. You can also use the [New-DfsnRoot cmdlet](https://technet.microsoft.com/library/jj884286.aspx) from a Windows PowerShell session. 
+To create a new namespace, you can use Server Manager to create the namespace when you install the DFS Namespaces role service. You can also use the [New-DfsnRoot cmdlet](https://docs.microsoft.com/powershell/module/dfsn/new-dfsnroot) from a Windows PowerShell session. 
 
 The DFSN Windows PowerShell module was introduced in Windows Server 2012. 
 

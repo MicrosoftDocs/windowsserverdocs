@@ -12,12 +12,12 @@ ms.assetid: a423030b-2bae-4e6f-8020-36163058fa3a
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # gettype
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Gettype is deprecated, and is not guaranteed to be supported in future releases of Windows.
 

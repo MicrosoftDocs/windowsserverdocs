@@ -10,7 +10,7 @@ ms.topic: article
 ms.assetid: b5387444-595f-4f38-abb7-163a70ea1895
 author: szarkos
 ms.author: szark
-ms.date: 02/15/2017
+ms.date: 10/16/2017
 ---
 # Linux Software Repository for Microsoft Products
 

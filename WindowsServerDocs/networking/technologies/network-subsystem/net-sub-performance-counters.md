@@ -12,7 +12,7 @@ author: jamesmci
 
 # Network-Related Performance Counters
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This topic lists the counters that are relevant to managing network performance, and contains the following sections.  
   

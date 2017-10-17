@@ -11,7 +11,7 @@ author: jamesmci
 ---
 # Install and Configure the NPS Server
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows 10
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
 You can use this section to install Network Policy Server \(NPS\) and perform configuration for Always On VPN.
 

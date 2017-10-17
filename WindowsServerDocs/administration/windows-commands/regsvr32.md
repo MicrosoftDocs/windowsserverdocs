@@ -12,12 +12,12 @@ ms.assetid: 3345e964-7d3e-42b8-abeb-42ed6edfe2b2
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # regsvr32
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Registers .dll files as command components in the registry.
 

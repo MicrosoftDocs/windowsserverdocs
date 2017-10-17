@@ -12,11 +12,11 @@ ms.assetid: 7c217abc-1182-466e-914c-1ff16755021b vhorne
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # telnet: send
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Sends telnet commands to the telnet server.   
 ## Syntax  

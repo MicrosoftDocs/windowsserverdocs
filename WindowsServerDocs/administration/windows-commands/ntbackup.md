@@ -12,12 +12,12 @@ ms.assetid: 6bce6b0d-646b-46b6-b833-0ff1d6f082c2
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # ntbackup
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 The **ntbackup** command is not available in Windows Vista or Windows Server 2008. Instead, you should use the **wbadmin** command and subcommands to back up and restore your computer and files from a command prompt.
 

@@ -12,11 +12,11 @@ ms.assetid: 9c29edc3-ec49-43f2-bc49-86bf0612d816
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # nslookup root
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 changes the default server to the server for the root of the Domain Name System (DNS) domain name space.
 ## Syntax

@@ -12,12 +12,12 @@ ms.assetid: d883d94c-3cb1-4848-9d74-1b4378044b31
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # Simulate restore
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Tests writer involvement in restore sessions on the computer without issuing **PreRestore** or **PostRestore** events to writers.
 

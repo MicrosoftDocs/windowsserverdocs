@@ -65,7 +65,7 @@ Benefits:
   
     -   Backup and Restore  
   
-    -   Access to the Windows Store with work account  
+    -   Access to Microsoft Store with work account  
   
     -   Live tiles and notifications  
   

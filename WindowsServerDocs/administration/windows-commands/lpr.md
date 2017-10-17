@@ -12,11 +12,11 @@ ms.assetid: afc8790b-8b52-45c4-acdf-be0ffa9da534 jpjofre
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # lpr
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Sends a file to a computer or printer sharing device running the Line printer Daemon (LPD) service in preparation for printing.  
   

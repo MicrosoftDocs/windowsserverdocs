@@ -12,7 +12,7 @@ author: jamesmci
 
 # Data Center Bridging \(DCB\)
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use this topic for introductory information about Data Center Bridging \(DCB\).
 

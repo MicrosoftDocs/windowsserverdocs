@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # NIC Teaming in Virtual Machines (VMs)
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This topic provides information about using NIC Teaming within Hyper-V VMs, and contains the following sections.  
   

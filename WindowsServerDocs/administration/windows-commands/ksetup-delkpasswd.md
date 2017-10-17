@@ -12,11 +12,11 @@ ms.assetid: 2db0bfcd-bc08-48e3-9f30-65b6411839c6
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # ksetup:delkpasswd
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 removes a Kerberos password server (Kpasswd) for a realm. For examples of how this command can be used, see [Examples](#BKMK_Examples).
 ## Syntax

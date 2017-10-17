@@ -1,4 +1,4 @@
-# [Windows Server 2016](Windows-Server-2016.md)
+# [Windows Server](windows-server.md)
 ## [Windows Server Software-Defined Datacenter (SDDC)](sddc.md)
 ## [Get Started](get-started/Server-Basics.md)
 ## [Manage Windows Server](administration/manage-windows-server.md)

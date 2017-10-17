@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # STEP 7 Test DirectAccess Connectivity from the Internet
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 The DirectAccess one-time password (OTP) deployment has been tested from the Homenet subnet, and can now be tested from the Internet.  
   

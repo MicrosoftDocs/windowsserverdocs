@@ -12,12 +12,12 @@ ms.assetid: 4f56f534-a356-4daa-8b4f-38e089341e42
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # diskcomp
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Compares the contents of two floppy disks. If used without parameters, **diskcomp** uses the current drive to compare both disks.For examples of how to use this command, see [Examples](#BKMK_examples).
 

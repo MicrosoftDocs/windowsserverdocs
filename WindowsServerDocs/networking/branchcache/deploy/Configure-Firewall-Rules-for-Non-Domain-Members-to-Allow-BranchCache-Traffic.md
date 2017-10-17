@@ -11,7 +11,7 @@ author: jamesmci
 ---
 # Configure Firewall Rules for Non-Domain Members to Allow BranchCache Traffic
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use the information in this topic to configure third party firewall products and to manually configure a client computer with firewall rules that allow BranchCache to run in distributed cache mode.  
   

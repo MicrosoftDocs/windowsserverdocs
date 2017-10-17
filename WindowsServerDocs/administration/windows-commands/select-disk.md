@@ -12,11 +12,11 @@ ms.assetid: a0da614b-09d9-433b-b4eb-9127f84431cb
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # select disk
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 selects the specified disk and shifts the focus to it.  
   

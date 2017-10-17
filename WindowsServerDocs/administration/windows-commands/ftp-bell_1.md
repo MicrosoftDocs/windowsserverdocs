@@ -12,11 +12,11 @@ ms.assetid: bfc00fb6-b3d0-42a1-ac6d-df46f89dc152 vhorne
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # ftp: bell_1
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Toggles an audible sound to occur after each file transfer command is completed.   
 ## Syntax  

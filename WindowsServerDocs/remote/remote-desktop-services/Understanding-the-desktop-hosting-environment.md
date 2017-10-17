@@ -15,7 +15,7 @@ manager: dongill
 ---
 # Understanding the desktop hosting environment
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 The following information describes the components of the desktop hosting service.  
   

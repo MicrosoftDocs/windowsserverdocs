@@ -12,12 +12,12 @@ ms.assetid: fe568423-00ae-4ede-a1e7-07977cb50ad1
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # list shadows
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Lists persistent and existing non-persistent shadow copies that are on the system.
 

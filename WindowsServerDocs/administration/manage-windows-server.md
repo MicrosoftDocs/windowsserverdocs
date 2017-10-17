@@ -6,15 +6,13 @@ ms.technology: manage
 ms.topic: article
 author: lizap
 ms.author: elizapo
-ms.date: 09/29/2017
+ms.date: 10/16/2017
 ---
 # Manage Windows Server 2016
 
->Applies to: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
- <img src="../get-started/media/8-management.png" style='float:left; padding:.5em;' alt="Icon showing a gear"> Once you have deployed Windows Server into your environment, including the specific roles for the features and functions you need, the next step is managing those servers. Windows Server includes a number of tools to help you understand your Windows Server environment, manage specific servers, fine-tune performance, and eventually automate many management tasks. 
-
-<br>
+ <img src="../media/landing-icons/manage.png" style='float:left; padding:.5em;' alt="Icon showing a gear"> Once you have deployed Windows Server into your environment, including the specific roles for the features and functions you need, the next step is managing those servers. Windows Server includes a number of tools to help you understand your Windows Server environment, manage specific servers, fine-tune performance, and eventually automate many management tasks. 
 
 ## Manage Windows Server systems and environments
 The tools you use to manage Windows Server instances depend, in large amount, on the types of systems you have deployed (Windows Server with Desktop Experience vs Server Core), physical versus virtual machines, and where your servers are located. Use the following information to perform basic management tasks on Windows Server.
@@ -42,6 +40,8 @@ If your environment includes installations of Server Core or remote servers (eit
 
 > [!IMPORTANT]
 > RSAT runs on Windows 10. You can't install RSAT on Windows Server Core.
+
+You can also manage Server Core installations from the command line. See [Basic administration tasks in Server Core](server-core/server-core-administer.md).
 
 ### Manage updates to Windows Server systems
 You can use [Windows Server Update Services (WSUS)](/windows-server-update-services/get-started/windows-server-update-services-wsus) to manage and deploy updates to the systems in your Windows Server environment.

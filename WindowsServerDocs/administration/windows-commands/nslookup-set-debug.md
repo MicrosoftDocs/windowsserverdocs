@@ -12,12 +12,12 @@ ms.assetid: b51e04e7-5f6f-4183-88bf-5628a506bdab
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # nslookup set debug
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Turns Debugging Mode on or off.
 

@@ -12,11 +12,11 @@ ms.assetid: d57c2df1-eb82-4b81-b8cd-e30564c6a929
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # san
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Displays or sets the storage area network (san) policy for the operating system.
 > [!NOTE]

@@ -11,7 +11,7 @@ author: jamesmci
 ---
 # Server Certificate Deployment Planning
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 Before you deploy server certificates, you must plan the following items:  
   

@@ -1,4 +1,4 @@
----
+9---
 title: Get started with Remote Desktop on Mac
 description: Learn how to set up the Remote Desktop client for Mac
 ms.custom: na
@@ -12,7 +12,7 @@ ms.assetid: 7afc65f8-3158-49c9-9d48-4dab1c69afba
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.date: 07/17/2017
+ms.date: 10/03/2017
 ---
 # Get started with Remote Desktop on Mac
 
@@ -21,7 +21,7 @@ ms.date: 07/17/2017
 You can use the Remote Desktop client for Mac to work with Windows apps, resources, and desktops from your Mac computer. Use the following information to get started - and check out the [FAQ](remote-desktop-client-faq.md) if you have questions.
 
 >[!Note]
-> - The Mac client runs on computers running macOS/OS 10.7 and newer.
+> - The Mac client runs on computers running macOS/OS 10.9 and newer.
 > - The information in this article applies primarily to the full version of the Mac client - the version available in the Mac AppStore. The latest Mac client beta does not yet have support for all of the features described below. For more information about the beta and what is available in that client, check out the [beta client release notes](http://go.microsoft.com/fwlink/?LinkID=619698&clcid=0x409).
 
 ## Get the Remote Desktop client
@@ -44,12 +44,14 @@ To create a remote desktop connection:
    - **PC name** - the name of the computer. This can be a Windows computer name (found in the **System** settings), a domain name, or an IP address. You can also add port information to the end of this name, like **MyDesktop:3389**.
    - **User name** - The user name to use to access the remote PC. Use one of these formats: *user_name*, *domain\user_name*, or *user_name@domain.com*. You can also choose whether to require a password. 
 
-3. You can also set these optional settings:
-   - Friendly name
-   - Gateway
-   - Sounds
+3. You can also set these optional settings for the connection:
+   - Set a friendly name 
+   - Add a Gateway
+   - Set the sound output
    - Swap mouse buttons
-   - Admin Mode
+   - Enable Admin Mode
+   - Redirect local folders into a remote session
+   - Forward local printers
 4. Click **Save**.
 
 To start the connection, just double-click it. The same is true for remote resources.
@@ -89,31 +91,29 @@ The remote resources will be displayed in the Connection Center.
 
 ## Connect to an RD Gateway to access internal assets
 
-A Remote Desktop Gateway (RD Gateway) lets you connect to a remote computer on a corporate network from anywhere on the Internet. You can create and manage your gateways using the Remote Desktop client.
+A Remote Desktop Gateway (RD Gateway) lets you connect to a remote computer on a corporate network from anywhere on the Internet. You can create and manage your gateways in the preferences of the app or while setting up a new desktop connection.
 
-To set up a new gateway:
+To set up a new gateway in preferences:
 
-1. In the Connection Center, click **Settings > Gateways**. 
-2. Click **Add Remote Desktop gateway**.
-3. Enter the following information:
+1. In the Connection Center, click **Preferences > Gateways**. 
+2. Click the **+** button at the bottom of the table Enter the following information:
   - **Server name** – The name of the computer you want to use as a gateway. This can be a Windows computer name, an Internet domain name, or an IP address. You can also add port information to the server name (for example: **RDGateway:443** or **10.0.0.1:443**).
   - **User name** - The user name and password to be used for the Remote Desktop gateway you are connecting to. You can also select **Use connection credentials** to use the same user name and password as those used for the remote desktop connection.
 
 
-## Manage your user accounts 
+## Manage your user accounts (available in beta only)
 
 When you connect to a desktop or remote resources, you can save the user accounts to select from again. You can manage your user accounts by using the Remote Desktop client.
 
 To create a new user account:
 
-1. In the Connection Center, click **Settings** > **User Names**.
-2. Tap **Add User Account**.
+1. In the Connection Center, click **Settings** > **Accounts**.
+2. Click **Add User Account**.
 3. Enter the following information:
    - **User Name** - The name of the user to save for use with a remote connection. You can enter the user name in any of the following formats: user_name, domain\user_name, or user_name@domain.com.
    - **Password** - The password for the user you specified. Every user account that you want to save to use for remote connections needs to have a password associated with it.
+   -**Friendly Name** - If you are using the same user account with different passwords set a friendly name to disticnt those user accounts.
 4. Tap **Save**, and then tap **Settings**.
-5. Tap **Done** to save the  new configuration.
-
 
 ## Customize your display resolution
 You can specify the display resolution for the remote desktop session.
@@ -160,4 +160,4 @@ To learn more about this feature, check out [http://aka.ms/paa-sample](http://ak
 > [!TIP]
 > Questions and comments are always welcome. However, please do NOT post a request for troubleshooting help by using the comment feature at the end of this article. Instead, go to the [Remote Desktop client forum](http://social.technet.microsoft.com/forums/windowsserver/en-us/home?forum=winrdc) and start a new thread. Have a feature suggestion? Tell us in the [client user voice forum](https://remotedesktop.uservoice.com/forums/272085-remote-desktop-for-android).
 
-Not finding content you need? Windows 10 users, tell us what you want on [Feedback Hub](feedback-hub:?tabid=2&contextid=898). 
+Not finding content you need? Windows 10 users, tell us what you want on [Feedback Hub](feedback-hub://?referrer=techDocsUcPage&tabid=2&contextid=898&newFeedback=true&topic=remote-desktop-mac.md). 

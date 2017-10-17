@@ -13,11 +13,11 @@ ms.assetid: 57912b73-622e-489b-b053-a369021ba8e1
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # assign
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 assigns a drive letter or mount point to the volume with focus.
 

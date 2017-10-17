@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # Role-based Access Control
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This topic provides information about using role-based access control in IPAM.  
   

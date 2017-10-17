@@ -12,12 +12,12 @@ ms.assetid: 8b2c8ff4-5c5d-446d-99e7-4daa1b36a163
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # tpmvscmgr
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 The Tpmvscmgr command-line tool allows users with Administrative credentials to create and delete TPM virtual smart cards on a computer. For examples of how this command can be used, see [Examples](#BKMK_Examples).
 
@@ -66,15 +66,15 @@ For alphanumeric inputs, the full 127 character ASCII set is allowed.
 
 The following command shows how to create a virtual smart card that can be later managed by a smart card management tool launched from another computer.
 ```
-tpmvscmgr.exe create /name “VirtualSmartCardForCorpAccess” /AdminKey DEFAULT /PIN PROMPT
+tpmvscmgr.exe create /name “VirtualSmartCardForCorpAccess�? /AdminKey DEFAULT /PIN PROMPT
 ```
 Alternatively, instead of using a default administrator key, you can create an administrator key at the command line. The following command shows how to create an administrator key.
 ```
-tpmvscmgr.exe create /name “VirtualSmartCardForCorpAccess” /AdminKey PROMPT /PIN PROMPT
+tpmvscmgr.exe create /name “VirtualSmartCardForCorpAccess�? /AdminKey PROMPT /PIN PROMPT
 ```
 The following command will create the unmanaged virtual smart card that can be used to enroll certificates.
 ```
-tpmvscmgr.exe create /name “VirtualSmartCardForCorpAccess” /AdminKey RANDOM /PIN PROMPT /generate
+tpmvscmgr.exe create /name “VirtualSmartCardForCorpAccess�? /AdminKey RANDOM /PIN PROMPT /generate
 ```
 The following command will create a virtual smart card with a randomized administrator key. The key is automatically discarded after the cardis created. This means that if the user forgets the PIN or wants to the change the PIN, the user needs to delete the card and create it again. To delete the card, the user can run the following command.
 ```

@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # STEP 6 Install and Configure 2-DC1
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 2-DC1 provides the following services:  
   

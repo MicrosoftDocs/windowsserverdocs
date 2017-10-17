@@ -1,6 +1,6 @@
 ---
-title: Install Data Center Bridging (DCB) in Windows Server 2016 or Windows 10
-description: This topic provides you with instructions on how to install Data Center Bridging in Windows Server 2016 or Windows 10.
+title: Install Data Center Bridging (DCB) in Windows Server or Client
+description: This topic provides you with instructions on how to install Data Center Bridging in Windows Server or Windows Client.
 ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
@@ -12,6 +12,8 @@ author: jamesmci
 
 # Install Data Center Bridging \(DCB\) in Windows Server 2016 or Windows 10
 
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+
 You can use this topic to learn how to install DCB in Windows Server 2016 or Windows 10.
 
 ## Prerequisites for using DCB
@@ -22,8 +24,9 @@ Following are the prerequisites for configuring and managing DCB.
 
 You can use the DCB commands from this guide in the following operating systems.
 
+- Windows Server (Semi-Annual Channel)
 - Windows Server 2016
-- Windows 10
+- Windows 10 \(all versions\)
 
 The following operating systems include previous versions of DCB that are not compatible with the commands that are used in DCB documentation for Windows Server 2016 and Windows 10.
 

@@ -1,11 +1,11 @@
 ---
-title: Configure a Server Core installation of Windows Server 2016 with Sconfig.cmd
+title: Configure a Server Core installation of Windows Server with Sconfig.cmd
 description: "Explains how to use Sconfig.cmd" 
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.date: 10/26/2016
+ms.date: 10/17/2017
 ms.technology: server-general
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -14,14 +14,14 @@ author: jaimeo
 ms.author: jaimeo
 manager: dongill
 ---
-# Configure a Server Core installation of Windows Server 2016 with Sconfig.cmd
-> Applies To: Windows Server 2016
+# Configure a Server Core installation of Windows Server 2016 or Windows Server, version 1709, with Sconfig.cmd
+> Applies To: Windows Server (Semi-Annual Channel) and Windows Server 2016
 
-In Windows Server 2012, Windows Server 2012 R2, and Windows Server 2016, you can use the Server Configuration tool (Sconfig.cmd) to configure and manage several common aspects of Server Core installations. The options available in Sconfig.cmd have changed in the Windows Server 2016 version. You must be a member of the Administrators group to use the tool.  
+In Windows Server 2016 and Windows Server, version 1709, you can use the Server Configuration tool (Sconfig.cmd) to configure and manage several common aspects of Server Core installations. You must be a member of the Administrators group to use the tool.  
   
-In Windows Server 2016, you can use Sconfig.cmd in Server Core and Server with Desktop Experience installations. 
+You can use Sconfig.cmd in Server Core and Server with Desktop Experience (Windows Server 2016 only) installations. 
   
-#### To start the Server Configuration Tool  
+## Start the Server Configuration Tool  
   
 1.  Change to the system drive.  
   
@@ -60,33 +60,31 @@ Screenshot of Sconfig.cmd user interface
   
  At any time, you can download and install applicable updates from the **Download and Install Updates** option on the main menu.
 
- In Windows Server 2016, a new option is available: **Download Only**. This option will scan for updates, download any that are available, and then notify you in the Action Center that they are ready for installation. This is default option.  
+ The **Download Only** option will scan for updates, download any that are available, and then notify you in the Action Center that they are ready for installation. This is default option.  
   
 ## Remote Desktop settings  
  The current status of remote desktop settings is displayed in the default Server Configuration Tool screen. You can configure the following Remote Desktop settings by accessing the **Remote Desktop** main menu option and following the instructions on screen.  
   
--   enable Remote Desktop for Clients running Remote Desktop with Network Level Authentication  
+-   Enable Remote Desktop for Clients running Remote Desktop with Network Level Authentication  
   
--   enable Remote Desktop for clients running any version of Remote Desktop  
+-   Enable Remote Desktop for clients running any version of Remote Desktop  
   
--   disable Remote  
+-   Disable Remote  
   
 ## Date and time settings  
  You can access and change date and time settings by accessing the **Date and Time** main menu option 
 
 ## Telemetry settings
-In Windows Server 2016, this option lets you configure what data is sent to Microsoft.
+This option lets you configure what data is sent to Microsoft.
 
 ## Windows Activation settings
-In Windows Server 2016, this option lets you configure Windows Activation.
+This option lets you configure Windows Activation.
   
 ## To enable remote management  
- You can enable various remote management scenarios from the **Configure Remote Management** main menu option:  
+You can enable various remote management scenarios from the **Configure Remote Management** main menu option:  
   
 -   Microsoft Management Console remote management  
-  
 -   Windows PowerShell  
-  
 -   Server Manager  
   
 ## To log off, restart, or shut down the server  

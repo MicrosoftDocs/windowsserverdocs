@@ -13,11 +13,11 @@ ms.assetid: 4f039017-4152-47eb-838e-bb6ef730b638
 author: brentfor
 ms.author: coreyp
 manager: dongill
-ms.date: 11/30/2016
+ms.date: 10/16/2017
 ---
 # Manage User Access Logging
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This document describes how to manage User Access Logging (UAL).  
   

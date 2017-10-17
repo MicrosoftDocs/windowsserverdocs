@@ -12,11 +12,11 @@ ms.assetid: 82a2b7ef-0db5-4575-a028-8acb0bf6c7ba
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # jetpack
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 compacts a Windows Internet Name Service (WINS) or Dynamic Host Configuration Protocol (DHCP) database. Microsoft recommends that you compact the WINS database whenever it approaches 30 MB. 
 

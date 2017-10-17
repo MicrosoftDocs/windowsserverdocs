@@ -12,12 +12,12 @@ ms.assetid: c30afb97-b149-478f-a4b9-2cbc25361818 vhorne
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # pushprinterconnections
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Reads Deployed Printer Connection settings from Group Policy, and deploys/removes printer connections as needed.
 
