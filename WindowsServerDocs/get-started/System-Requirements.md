@@ -5,7 +5,7 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.date: 09/15/2016
+ms.date: 10/17/2017
 ms.technology: server-general
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -16,9 +16,9 @@ manager: dongill
 ---
 # System Requirements
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server 2016, Windows Server Semi-Annual Channel
 
-This topic addresses the minimum system requirements to run Windows Server&reg; 2016.
+This topic addresses the minimum system requirements to run Windows Server&reg; 2016 or Windows Server, version 1709.
 
 
 > [!Note]  
