@@ -83,4 +83,3 @@ To uninstall an update manually, run the following command:
 Wusa /uninstall <update>.msu /quiet 
 ```
 
-Depending on the updates that are installed, you may need to restart the computer, although the system will not notify you of this.
