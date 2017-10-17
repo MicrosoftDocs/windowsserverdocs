@@ -10,7 +10,7 @@ ms.date: 10/17/2017
 ---
 # Patch a Server Core installation
 
-> Applies to: Windows Server, Windows Server 2016
+> Applies to: Windows Server (Semi-Annual Channel) and Windows Server 2016
 
 You can patch a server running Server Core installation in the following ways:
 
@@ -54,25 +54,10 @@ Use the following steps to patch the server automatically with Windows Update:
 
 If the server is a member of a domain, you can also configure Windows Update using Group Policy. For more information, see http://go.microsoft.com/fwlink/?LinkId=192470. However, when you use this method, only option 4 ("Auto download and schedule the install") is relevant to Server Core installations because of the lack of a graphical interface. For more control over which updates are installed and when, you can use a script which provides a command-line equivalent of most of the Windows Update graphical interface. For information about the script, see http://go.microsoft.com/fwlink/?LinkId=192471.
 
-<<<<<<< HEAD
-=======
-To verify the current Windows Update setting, at a command prompt, run the following command:
-Cscript scregedit.wsf /AU /v 
-To enable automatic updates, run the following commands:
-Net stop wsuaserv 
-Cscript scregedit.wsf /AU 4 
-Net start wsuaserv 
-To disable automatic updates, run the following commands:
-Net stop wsuaserv 
-Cscript scregedit.wsf /AU 1 
-Net start wsuaserv 
-If the server is a member of a domain, you can also configure Windows Update using Group Policy. For more information, see http://go.microsoft.com/fwlink/?LinkId=192470. However, when you use this method, only option 4 (“Auto download and schedule the install�?) is relevant to Server Core installations because of the lack of a graphical interface. For more control over which updates are installed and when, you can use a script which provides a command-line equivalent of most of the Windows Update graphical interface. For information about the script, see http://go.microsoft.com/fwlink/?LinkId=192471.
->>>>>>> f2862d3851092181fbb64f317b7a2b0050f479f4
 To force Windows Update to immediately detect and install any available updates, run the following command:
 
 ```
 Wuauclt /detectnow 
-<<<<<<< HEAD
 ```
 
 Depending on the updates that are installed, you may need to restart the computer, although the system will not notify you of this. To determine if the installation process has completed, use Task Manager to verify that the **Wuauclt** or **Trusted Installer** processes are not actively running. You can also use the methods in [View the updates installed on your Server Core server](#view-the-updates-installed-on-your-Server-Core-server) to check the list of installed updates.
@@ -82,14 +67,6 @@ Depending on the updates that are installed, you may need to restart the compute
 If the Server Core server is a member of a domain, you can configure it to use a WSUS server with Group Policy. For more information, download the [Group Policy reference information](https://www.microsoft.com/download/details.aspx?id=25250). You can also review [Configure Group Policy Settings for Automatic Updates](../windows-server-update-services/deploy/4-configure-group-policy-settings-for-automatic-updates.md)
 
 ## Patch the server manually
-=======
-Depending on the updates that are installed, you may need to restart the computer, although the system will not notify you of this. To determine if the installation process has completed, use Task Manager to verify that the Wuauclt or Trusted Installer processes are not actively running. You can also use the methods in the “Viewing installed updates�? section to check the list of installed updates.
-To service the server with WSUS 
-If the Server Core server is a member of a domain, you can configure it to use a WSUS server with Group Policy. For more information, see http://go.microsoft.com/fwlink/?LinkId=192472.
-If the server is not a member of a domain, edit the Registry to configure it to use a WSUS server. For more information, see http://go.microsoft.com/fwlink/?LinkId=192473.
-Whenever you configure WSUS settings, be sure to select options that are valid for Server Core installations. For example, since there is no graphical interface, there is no way to receive WSUS notifications. For more control over which updates are installed and when, you can use a script which provides a command-line equivalent of most of the Windows Update graphical interface. For information about the script, see http://go.microsoft.com/fwlink/?LinkId=192471.
-To service the server manually
->>>>>>> f2862d3851092181fbb64f317b7a2b0050f479f4
 
 Download the update and make it available to the Server Core installation.
 At a command prompt, run the following command:
