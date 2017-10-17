@@ -16,6 +16,7 @@ ms.author: greg-lindsay
 <img src="../media/landing-icons/new.png" style='float:left; padding:.5em;' alt="Icon showing a newspaper">The content in this section describes what's new and changed in Windows Server, version 1709. The new features and changes listed here are the ones most likely to have the greatest impact as you work with this release. Also see [Windows Server, version 1709](https://blogs.technet.microsoft.com/windowsserver/2017/08/24/sneak-peek-1-windows-server-version-1709/).
    
 <br>
+
 ## New cadence of releases
 
 Starting with this release, you have two options for receiving Windows Server feature updates:
@@ -87,7 +88,7 @@ For more information, see [Guarded fabric and shielded VMs overview](https://doc
 - **Project Honolulu support**: Support for graphical management of server to server replication is now available in Project Honolulu. This removes the requirement to use PowerShell to manage a common disaster protection workload.
 
 **SMB**: 
-- **SMB1 and guest authentication removal**: Windows Server, version 1709 no longer installs the SMB1 client and server by default. Additionally, the ability to authenticate as a guest in SMB2 and later is off by default. For more information, review https://support.microsoft.com/help/4034314/smbv1-is-not-installed-by-default-in-windows-10-rs3-and-windows-server & https://support.microsoft.com/help/4046019/guest-access-smb2-disabled-by-default-in-windows-10-server-2016  
+- **SMB1 and guest authentication removal**: Windows Server, version 1709 no longer installs the SMB1 client and server by default. Additionally, the ability to authenticate as a guest in SMB2 and later is off by default. For more information, review [SMBv1 is not installed by default in Windows 10, version 1709 and Windows Server, version 1709](https://support.microsoft.com/help/4034314/smbv1-is-not-installed-by-default-in-windows-10-rs3-and-windows-server). 
 
 - **SMB2/SMB3 security and compatibility**: Additional options for security and application compatibility were added, including the ability to disable oplocks in SMB2+ for legacy applications, as well as require signing or encryption on per-connection basis from a client. For more information, review the SMBShare PowerShell module help.
 
