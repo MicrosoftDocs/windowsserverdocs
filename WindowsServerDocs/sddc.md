@@ -154,7 +154,7 @@ Using industry-standard servers with local-attached drives, Storage Spaces Direc
 
 Storage Spaces Direct introduces the new Software Storage Bus and leverages many of the features you know today in Windows Server, such as Failover Clustering, Cluster Shared Volumes (CSVs), Server Message Block (SMB) 3, and Storage Spaces.
 
-![](media/sddc/learn.png)**[Learn more about Storage Spaces Direct](https://docs.microsoft.com/en-us/windows-server/storage/storage-spaces/storage-spaces-direct-overview)**
+![](media/sddc/learn.png)**[Learn more about Storage Spaces Direct](storage/storage-spaces/storage-spaces-direct-overview.md)**
 ### Storage Quality of Service ###
 
 
