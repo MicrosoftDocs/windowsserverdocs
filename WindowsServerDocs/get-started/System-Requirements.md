@@ -121,4 +121,8 @@ The following items are not strictly required, but are necessary for certain fea
 ## Installation of Nano Server  
 For detailed steps to install Windows Server 2016 as a Nano Server, see [Install Nano Server](Getting-Started-with-Nano-Server.md).
 
+<<<<<<< HEAD
 Not finding content you need? Windows 10 users, tell us what you want on [Feedback Hub](feedback-hub://?referrer=techDocsUcPage&tabid=2&contextid=898&newFeedback=true&topic=System-Requirements.md). 
+=======
+Not finding content you need? Windows 10 users, tell us what you want on [Feedback Hub](feedback-hub:?tabid=2&contextid=898). 
+>>>>>>> ca7dc3d56a33924ae5fe0e9ffb1274da6dc4e54d
