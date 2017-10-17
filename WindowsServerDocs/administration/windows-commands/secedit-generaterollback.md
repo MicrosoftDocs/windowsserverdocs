@@ -12,12 +12,12 @@ ms.assetid: 385a6799-51a7-4fe3-bd73-10c7998b6680
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # secedit:generaterollback
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Allows you to generate a rollback template for a specified configuration template. For examples of how this command can be used, see [Examples](#BKMK_Examples).
 
@@ -43,7 +43,7 @@ If the path for the log file is not provided, the default log file, (*systemroot
 
 Beginning with Windows Server 2008, `Secedit /refreshpolicy` has been replaced with `gpupdate`. For information on how to refresh security settings, see [Gpupdate](gpupdate.md).
 
-The successful running of this command will state “The task has completed successfully.” and logs only the mismatches between the stated security template and security policy configuration. It lists these mismatches in the scesrv.log.
+The successful running of this command will state “The task has completed successfully.�? and logs only the mismatches between the stated security template and security policy configuration. It lists these mismatches in the scesrv.log.
 
 If an existing rollback template is specified, this command will overwrite it. You can create a new rollback template with this command. No additional parameters are needed for either condition.
 

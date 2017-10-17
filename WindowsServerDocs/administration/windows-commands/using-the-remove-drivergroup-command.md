@@ -12,12 +12,12 @@ ms.assetid: 1fefe9df-9782-433c-8abe-3f1a35e50da2
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # Using the remove-DriverGroup Command
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Removes a driver group from a server.
 

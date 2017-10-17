@@ -12,12 +12,12 @@ ms.assetid: 39f0c6f0-4c50-4781-941e-0893495405e8
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # ksetup:removerealm
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Deletes all information for the specified realm from the registry. For examples of how this command can be used, see [Examples](#BKMK_Examples).
 
@@ -41,7 +41,7 @@ You cannot remove the default realm name from the domain controller because this
 
 ## <a name="BKMK_Examples"></a>Examples
 
-Mistakenly set the realm name by misspelling “.COM” on the local computer to CORP.CONTOSO.CON
+Mistakenly set the realm name by misspelling “.COM�? on the local computer to CORP.CONTOSO.CON
 ```
 ksetup /setrealm CORP.CONTOSO.CON
 ```

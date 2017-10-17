@@ -12,13 +12,13 @@ ms.assetid: 8ac1f283-6ecf-4523-8e96-95d435dd4f7f
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # End backup
 
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Ends a full backup session and issues a **BackupComplete** event with the appropriate writer state, if needed.
 

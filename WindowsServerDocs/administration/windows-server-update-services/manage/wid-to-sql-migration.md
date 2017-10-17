@@ -11,7 +11,7 @@ ms.assetid: 90e3464c-49d8-4861-96db-ee6f8a09g7dr
 author: coreyp-at-msft
 ms.author: coreyp
 manager: elizapog
-ms.date: 01/25/2017
+ms.date: 10/16/2017
 ---
 
 >Applies to: Windows Server 2012, Windows Server 2012 R2, Windows Server 2016

@@ -12,11 +12,11 @@ ms.assetid: c1d9fff7-b567-451c-af80-6be8f604e193
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # nslookup view
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 sorts and lists the output of the previous **ls** subcommand or commands.  
 ## Syntax  

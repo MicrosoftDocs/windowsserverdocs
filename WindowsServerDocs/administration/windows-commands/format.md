@@ -7,7 +7,7 @@ ms.technology: storage
 ms.topic: article
 ms.assetid: 51ec7423-9a01-4219-868a-25d69cdcc832
 author: JasonGerend
-ms.date: 09/15/2016
+ms.date: 10/16/2017
 ---
 
 # Format

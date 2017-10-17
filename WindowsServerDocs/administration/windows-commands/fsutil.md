@@ -8,11 +8,11 @@ author: toklima
 ms.technology: storage
 audience: "IT Pro"
 ms.topic: article
-ms.date: 11/07/2016
+ms.date: 10/16/2017
 ---
 # Fsutil
 
->Applies To: Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7
 
 Performs tasks that are related to file allocation table (FAT) and NTFS file systems, such as managing reparse points, managing sparse files, or dismounting a volume. If it is used without parameters, **Fsutil** displays a list of supported subcommands. 
 

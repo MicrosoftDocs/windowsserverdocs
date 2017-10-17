@@ -12,11 +12,11 @@ ms.assetid: dc1b1eec-6893-445e-81dc-16b3fae287fa
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # Subcommand: stop-TransportServer
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Stops all services on a Transport Server.
 ## Syntax

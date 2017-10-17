@@ -12,12 +12,12 @@ ms.assetid: 98bfc23a-14c4-401c-bcb3-9903c5cdde64
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # ksetup:addkdc
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Adds a Key Distribution Center (KDC) address for the given Kerberos realm. For examples of how this command can be used, see [Examples](#BKMK_Examples).
 
@@ -48,7 +48,7 @@ Configure a non-Windows KDC server and the realm that the workstation should use
 ```
 ksetup /addkdc CORP.CONTOSO.COM mitkdc.contoso.com
 ```
-Run the Ksetup tool at the command line of the same computer as in the preceding command to set the local computer account password to “p@sswrd1%”. Then restart the computer.
+Run the Ksetup tool at the command line of the same computer as in the preceding command to set the local computer account password to “p@sswrd1%�?. Then restart the computer.
 ```
 Ksetup /setcomputerpassword p@sswrd1%
 ```

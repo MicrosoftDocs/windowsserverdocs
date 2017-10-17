@@ -13,11 +13,11 @@ ms.assetid: 23d1044b-f5c1-4180-ae6d-f553b48da4d9
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # exit_2
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 exits the Cmd.exe program (the command interpreter) or the current batch script.  
 for examples of how to use this command, see [Examples](#BKMK_examples).  

@@ -12,11 +12,11 @@ ms.assetid: 0e93bc84-5b9e-4f9d-8cf0-1634417da0f6
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # Subcommand: start-TransportServer
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 starts all services for a Transport Server.
 ## Syntax

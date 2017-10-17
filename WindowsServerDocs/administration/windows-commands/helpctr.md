@@ -12,12 +12,12 @@ ms.assetid: d19ff7dc-57fb-49b2-aad7-b6b040f3fb49
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # helpctr
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Helpctr is deprecated, and is not guaranteed to be supported in future releases of Windows.
 

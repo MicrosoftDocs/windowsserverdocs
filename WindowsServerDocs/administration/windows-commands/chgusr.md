@@ -13,11 +13,11 @@ ms.assetid: f119d9d3-ed8b-42da-81f7-77591d908c83
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # chgusr
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 changes the install mode for the remote Desktop Session Host (rd Session Host) server.  
 > [!NOTE]  

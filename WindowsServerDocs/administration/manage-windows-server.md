@@ -6,7 +6,7 @@ ms.technology: manage
 ms.topic: article
 author: lizap
 ms.author: elizapo
-ms.date: 09/29/2017
+ms.date: 10/16/2017
 ---
 # Manage Windows Server 2016
 

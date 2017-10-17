@@ -8,10 +8,10 @@ author: toklima
 ms.technology: storage
 audience: "IT Pro"
 ms.topic: article
-ms.date: 11/07/2016
+ms.date: 10/16/2017
 ---
 # Fsutil tiering
->Applies To: Windows Server 2016, Windows 10
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows 10
 
 Enables management of storage tier functions, such as setting and disabling flags and listing of tiers.
 

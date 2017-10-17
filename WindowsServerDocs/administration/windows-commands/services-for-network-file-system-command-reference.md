@@ -12,12 +12,12 @@ ms.assetid: 06c81f88-a672-4405-9b73-085f8933114c
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # Services for Network File System Command Reference
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Services for Network File System (NFS) provides a file sharing solution that enables you to transfer files between computers running Windows Server 2008 and UNIX operating systems using the NFS protocol.
 

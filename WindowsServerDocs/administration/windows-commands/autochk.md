@@ -12,12 +12,12 @@ ms.assetid: 8787e6a3-f023-4ea5-b2d1-61c6876d8aff
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # autochk
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Runs when the computer is started and prior to Windows Server® 2008 R2 starting to verify the logical integrity of a file system.
 

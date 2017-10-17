@@ -12,11 +12,11 @@ ms.assetid: cdce64f6-7125-489d-be3c-4af1dfc8c46a
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016 
+ms.date: 10/16/2017 
 ---
 #bitsadmin getmaxdownloadtime
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Retrieves the download timeout in seconds.
 

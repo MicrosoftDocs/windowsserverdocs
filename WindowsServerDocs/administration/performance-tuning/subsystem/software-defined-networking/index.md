@@ -6,7 +6,7 @@ ms.technology: performance-tuning-guide
 ms.topic: article
 ms.author: grcusanz; AnPaul
 author: phstee
-ms.date: 04/24/2017
+ms.date: 10/16/2017
 ---
 
 # Performance Tuning Software Defined Networks

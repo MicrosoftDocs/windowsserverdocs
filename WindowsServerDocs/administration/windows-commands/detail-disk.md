@@ -12,12 +12,12 @@ ms.assetid: 6b09cf40-8d93-452b-b449-5242e62a4102
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # detail disk
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Displays the properties of the selected disk and the volumes on that disk.
 

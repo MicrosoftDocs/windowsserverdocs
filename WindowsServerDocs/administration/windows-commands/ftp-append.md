@@ -12,11 +12,11 @@ ms.assetid: 7c1a133c-31dc-41a4-9eb9-258efd79804d vhorne
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # ftp: append
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 appends a local file to a file on the remote computer using the current file type setting.   
 ## Syntax  

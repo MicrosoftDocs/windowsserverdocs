@@ -12,11 +12,11 @@ ms.assetid: ef23adf3-ead4-44c8-ac1d-c8a6f4b2bf73 vhorne
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # ftp: remotehelp_1
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Displays help for remote commands.   
 ## Syntax  

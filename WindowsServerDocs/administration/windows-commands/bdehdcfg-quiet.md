@@ -12,12 +12,12 @@ ms.assetid: 7f75b702-890b-4ff9-805c-edf5cadd8822
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # bdehdcfg: quiet
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Informs the Bdehdcfg command-line tool that all actions and errors are not to be displayed in the command-line interface. For an example of how this command can be used, see [Examples](#BKMK_Examples).
 

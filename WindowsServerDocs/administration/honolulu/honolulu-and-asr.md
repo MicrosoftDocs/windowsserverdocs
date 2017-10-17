@@ -10,11 +10,11 @@ ms.topic:
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 09/21/2017
+ms.date: 10/16/2017
 ---
 # Protect your Honolulu-managed Hyper-V Virtual Machines with Azure Site Recovery 
 
->Applies To: Windows Server, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 and Windows 10
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 and Windows 10
 
 Project Honolulu streamlines the process of replicating your virtual machines on your Hyper-V servers or clusters, making it easier to leverage the power of Azure from your own datacenter. To automate setup, you can connect the Honolulu gateway to Azure.
 
@@ -136,7 +136,7 @@ When registering ASR with a cluster, if a node fails to install ASR or register 
 1. Log into the Azure Portal at **https://portal.azure.com**.
 2. Go to **Azure Active Directory** > **App Registrations**.
 3. Click **New application registration** to create a new app, and then specify:
-     - **Name:** your choice (ex: “ASR-Honolulu-App”)
+     - **Name:** your choice (ex: “ASR-Honolulu-App�?)
      - **Application type:** 'Web app API'
      - **Sign-on URL:** http://localhost:<port>
 4. Click **Create**.
@@ -149,7 +149,7 @@ When registering ASR with a cluster, if a node fails to install ASR or register 
     ![](../media/honolulu/image2.png)
 
 7. Click **Save**.
-8. Click **Settings** > **Reply URLs**. Add the gateway endpoint to the list with the path ending: “*” (eg: <http://localhost:4200*>) and then click **Save**.
+8. Click **Settings** > **Reply URLs**. Add the gateway endpoint to the list with the path ending: “*�? (eg: <http://localhost:4200*>) and then click **Save**.
 9. Click **Settings** > **Required permissions**. Click **Add** > Select an API > **Windows Azure Service Management API** > **Select**. In the **Enable Access** form, check **Delegated Permissions** and then click **Done**.
 10. Click '**Settings** > **Required permissions**, and then click **Grant Permissions**.
 11. Find the parameters for **Tenant** and **Client ID** for a PowerShell script you will run in the next step:

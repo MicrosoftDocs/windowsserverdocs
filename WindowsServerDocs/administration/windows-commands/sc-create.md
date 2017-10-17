@@ -12,12 +12,12 @@ ms.assetid: 59416460-0661-4fef-85cc-73e9d8f4beb4
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # Sc create
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Creates a subkey and entries for a service in the registry and in the Service Control Manager database.
 

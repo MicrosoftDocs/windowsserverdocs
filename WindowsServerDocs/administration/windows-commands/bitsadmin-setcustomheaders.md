@@ -12,12 +12,12 @@ ms.assetid: ed926410-80d0-46ed-9a90-f752c164bb9a
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016 
+ms.date: 10/16/2017 
 ---
 
 # bitsadmin setcustomheaders
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Add a custom HTTP header to a GET request.
 

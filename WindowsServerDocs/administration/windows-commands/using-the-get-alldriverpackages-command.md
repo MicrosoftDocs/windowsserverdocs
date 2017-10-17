@@ -12,11 +12,11 @@ ms.assetid: 9eb8fcb7-ef46-4c8d-9623-8969a3c8b8a4
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # Using the get-AllDriverPackages Command
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Displays information about all the driver packages on a server that match the specified search criteria.
 ## Syntax

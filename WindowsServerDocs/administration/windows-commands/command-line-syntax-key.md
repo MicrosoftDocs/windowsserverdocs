@@ -12,12 +12,12 @@ ms.assetid: 338c0381-ad63-4a4c-bd2c-42c7a93821fe
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # Command-Line Syntax Key
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 The following table describes the notation used to indicate command-line syntax.
 

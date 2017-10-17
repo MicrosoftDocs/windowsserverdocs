@@ -8,7 +8,7 @@ ms.pagetype: store
 ms.technology: server-general
 author: TrudyHa
 ms.author: TrudyHa
-ms.date: 09/27/2017
+ms.date: 10/16/2017
 ---
 
 # Windows Server Hybrid Cloud Print overview

@@ -4,11 +4,11 @@ description: Server Performance Advisor Pack Development Guide
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # Server Performance Advisor Pack Development Guide
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This development guide for Microsoft Server Performance Advisor (SPA) provides guidelines to help developers and system administrators develop advisor packs to analyze server performance.
 

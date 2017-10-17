@@ -11,12 +11,12 @@ ms.assetid: 7541f0d1-534e-4c5f-90d3-c7e43bdb4c16
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # dfsutil Root import BlobSize
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 ## This topic is no longer available
 

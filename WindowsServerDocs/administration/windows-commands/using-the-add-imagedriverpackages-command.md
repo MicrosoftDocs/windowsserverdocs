@@ -12,11 +12,11 @@ ms.assetid: 9dc78909-a4d1-42a2-af8f-21ebcbfe8302
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # Using the add-ImageDriverPackages Command
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 adds driver packages from the driver store to a boot image. The image version must be Windows 7 or Windows Server 2008 R2 or later.
 for examples of how you can use this command, see [Examples](#BKMK_examples).

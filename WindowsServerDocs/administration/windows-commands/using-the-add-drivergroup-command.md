@@ -12,11 +12,11 @@ ms.assetid: 2a92fe8f-03f9-462a-b99e-f23275259807
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # Using the add-DriverGroup command
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 adds a driver group to the server.
 for examples of how you can use this command, see [Examples](#BKMK_examples).

@@ -12,11 +12,11 @@ ms.assetid: 82bee0e4-1c2c-43fe-afd3-04a6ce0f4518
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # rwinsta
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Enables you to reset (delete) a session on a remote Desktop Session Host (rd Session Host) server.
 > [!NOTE]

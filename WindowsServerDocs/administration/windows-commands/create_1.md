@@ -12,12 +12,12 @@ ms.assetid: 837aa449-9b60-41ae-9ef1-ef67af6e5918
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # create_1
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Starts the shadow copy creation process, using the current context and option settings. Requires at least one volume in the Shadow Copy Set.
 

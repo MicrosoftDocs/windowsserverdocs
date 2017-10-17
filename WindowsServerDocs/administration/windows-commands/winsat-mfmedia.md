@@ -13,12 +13,12 @@ ms.assetid: 09a3b3dd-f746-4e6e-b684-76a9bde0c78d
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # winsat mfmedia
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Measures the performance of video decoding (playback) using the Media Foundation framework.
 

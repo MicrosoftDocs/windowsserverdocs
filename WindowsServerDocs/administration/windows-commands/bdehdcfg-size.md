@@ -12,12 +12,12 @@ ms.assetid: 80f55b1d-a28d-4edf-9997-1fb918b7b5a1
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # bdehdcfg: size
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Specifies the size of the system partition when a new system drive is being created. For an example of how this command can be used, see [Examples](#BKMK_Examples).
 
