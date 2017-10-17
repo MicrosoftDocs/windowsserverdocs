@@ -96,6 +96,13 @@ For more information, see [Guarded fabric and shielded VMs overview](https://doc
 - **Data Deduplication now supports ReFS**: You no longer must choose between the advantages of a modern file system with ReFS and the Data Deduplication: now, you can enable Data Deduplication wherever you can enable ReFS. Increase storage efficiency by upwards of 95% with ReFS.
 - **DataPort API for optimized ingress/egress to deduplicated volumes**: Developers can now take advantage of the knowledge Data Deduplication has about how to store data efficiently to move data between volumes, servers, and clusters efficiently.
 
+## Remote Desktop Services (RDS)
+
+**RDS is integrated with Azure AD**, so customers can leverage Conditional Access policies, Multifactor Authentication, Integrated authentication with other SaaS Apps using Azure AD, and many more. For more information, see [Integrate Azure AD Domain Services with your RDS deployment](https://docs.microsoft.com/windows-server/remote/remote-desktop-services/rds-azure-adds).
+
+>[!TIP]
+>For a sneak peek at other exciting changes coming to RDS, see [Remote Desktop Services: Updates & upcoming innovations](https://blogs.technet.microsoft.com/enterprisemobility/2017/09/20/first-look-at-updates-coming-to-remote-desktop-services/)
+
 ## Networking
 
 **Docker's Routing Mesh** is supported. Ingress routing mesh is part of [swarm mode](https://docs.docker.com/engine/swarm/), Docker’s built-in orchestration solution for containers. For more information, see [Docker's routing mesh available with Windows Server version 1709](https://blogs.technet.microsoft.com/virtualization/2017/09/26/dockers-ingress-routing-mesh-available-with-windows-server-version-1709/).
@@ -142,11 +149,6 @@ For more information, see [Guarded fabric and shielded VMs overview](https://doc
 - **Pre-Logon Infrastructure Tunnels**. By default, Windows 10 VPN does not automatically create Infrastructure Tunnels when users are not logged on to their computer or device. You can configure Windows 10 VPN to automatically create Pre-Logon Infrastructure Tunnels by using the Device Tunnel (prelogon) feature in the VPN profile.
 - **Management of Remote Computers and Devices**.  You can manage Windows 10 VPN clients by configuring the Device Tunnel (prelogon) feature in the VPN profile. In addition, you must configure the VPN connection to dynamically register the IP addresses that are assigned to the VPN interface with internal DNS services.
 - **Specify Pre-Logon Gateways**. You can specify Pre-Logon Gateways with the Device Tunnel (prelogon) feature in the VPN profile, combined with traffic filters to control which management systems on the corporate network are accessible via the device tunnel.
-
-**Remote Desktop Services (RDS)**
-
-- **RDS is integrated with Azure AD**, so customers can leverage Conditional Access policies, Multifactor Authentication, Integrated authentication with other SaaS Apps using Azure AD, and many more. For more information, see [Integrate Azure AD Domain Services with your RDS deployment](https://docs.microsoft.com/windows-server/remote/remote-desktop-services/rds-azure-adds).
-- For a sneak peek at other exciting changes coming to RDS, see [Remote Desktop Services: Updates & upcoming innovations](https://blogs.technet.microsoft.com/enterprisemobility/2017/09/20/first-look-at-updates-coming-to-remote-desktop-services/)
 
 
 Not finding content you need? Windows 10 users, tell us what you want on [Feedback Hub](feedback-hub:?tabid=2&contextid=898). 
