@@ -10,6 +10,8 @@ ms.date: 10/17/2017
 ---
 # Configure memory dump files for Server Core installation
 
+>Applies To: Windows Server (Semi-Annual Channel) and Windows Server 2016
+
 Use the following steps to configure a memory dump for your Server Core installation. 
 
 ## Step 1: Disable the automatic system page file management

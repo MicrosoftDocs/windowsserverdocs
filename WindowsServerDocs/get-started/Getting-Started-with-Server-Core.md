@@ -22,15 +22,15 @@ When you install Windows Server 2016 for the first time, you have the following 
 >[!NOTE]
 > In the following list, editions without “Desktop Experience” are the Server Core installation options
 
--	Windows Server Standard Edition
--	Windows Server Standard Edition with Desktop Experience
--	Windows Server Datacenter Edition
--	Windows Server Datacenter Edition with Desktop Experience
+-	Windows Server Standard
+-	Windows Server Standard with Desktop Experience
+-	Windows Server Datacenter
+-	Windows Server Datacenter with Desktop Experience
 
 When you install Windows Server, version 1709, you have the following installation options:
 
--	Windows Server Standard Edition
--	Windows Server Datacenter Edition
+-	Windows Server Standard 
+-	Windows Server Datacenter
 
 The Server Core option reduces the space required on disk and the potential attack surface, so we recommend that you choose the Server Core installation unless you have a particular need for the additional user interface elements and graphical management tools that are included in the Server with Desktop Experience option. If you do feel you need the additional user interface elements, see [Install Server with Desktop Experience](Getting-Started-with-Server-with-Desktop-Experience.md). 
 
@@ -81,8 +81,6 @@ Installation steps for Windows Server, version 1709, are the same as installing 
 - No supported upgrades from previous versions of Windows Server to Windows Server, version 1709. A fresh installation is always required.
    This means that when you run setup.exe from the desktop of a Windows computer, the setup experience will not permit the upgrade option (it is grayed out).
 - There’s no evaluation version for Windows Server, version 1709.
-- There’s no OEM or retail version.
-
-   Windows Server version 1709 can only be licensed through Software Assurance or loyalty programs
+- There’s no OEM or retail version. Windows Server version 1709 can only be licensed through Software Assurance or loyalty programs.
 
 To get Windows Server version 1709, see [Introducing Windows Server, version 1709](get-started-with-1709.md).
