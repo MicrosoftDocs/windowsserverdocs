@@ -16,7 +16,7 @@ manager: elizapo
 ---
 # Recommended settings for VDI desktops
 
->Applies To: Windows Server 2016, Windows10
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows10
 
 Microsoft Desktop Virtualization automatically detects device configurations and network conditions to get users up and running sooner by enabling the instant setup of corporate applications and desktops, and it equips IT to provide access to legacy applications during migration to Windows 10.
 
