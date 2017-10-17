@@ -12,7 +12,7 @@ description: How to use Microsoft Azure to host the witness for a Windows Server
 ---
 # Deploy a Cloud Witness for a Failover Cluster
 
-> Applies to Windows Server 2016
+> Applies to: Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 Cloud Witness is a new type of Failover Cluster quorum witness being introduced in Windows Server 2016. This topic provides an overview of the Cloud Witness feature, the scenarios that it supports, and instructions about how to configure a cloud witness for a Failover Cluster that is running Windows Server 2016.
 
