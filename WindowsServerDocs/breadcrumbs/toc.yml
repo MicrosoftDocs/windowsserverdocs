@@ -4,7 +4,7 @@
   items:
     - name: Windows Server
       tocHref: /windows-server
-      topicHref: /windows-server/get-started/windows-server
+      topicHref: /windows-server/windows-server
       items:
       - name: Get started
         tocHref: /windows-server/get-started

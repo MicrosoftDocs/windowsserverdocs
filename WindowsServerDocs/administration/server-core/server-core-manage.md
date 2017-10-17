@@ -6,11 +6,11 @@ ms.mktglfcycl: manage
 ms.sitesec: library
 author: lizap
 ms.localizationpriority: medium
-ms.date: 09/26/2017
+ms.date: 10/17/2017
 ---
 # Manage a Server Core server
  
-> Applies to: Windows Server, Windows Server 2016
+> Applies to: Windows Server (Semi-Annual Channel) and Windows Server 2016
 
 You can manage a Server Core server in the following ways:
 - Using the [Project Honolulu management portal](../../manage/honolulu/honolulu.md)
@@ -24,16 +24,17 @@ You can also add hardware and manage drivers locally, as long as you do that fro
 
 There are some important limitations and tips to keep in mind when you work with Server Core:
 
-- If you close all command prompt windows and want to open a new Command Prompt window, you can do that from the Task Manager. Press **CTRL+ALT+DELETE**, click **Start Task Manager**, click **More Details > File > Run**, and then type **cmd.exe**. (Type **Powershell.exe** to open a PowerShell command windows.) Alternatively, you can sign out and then sign back in.
+- If you close all command prompt windows and want to open a new Command Prompt window, you can do that from the Task Manager. Press **CTRL\+ALT\+DELETE**, click **Start Task Manager**, click **More Details > File > Run**, and then type **cmd.exe**. (Type **Powershell.exe** to open a PowerShell command windows.) Alternatively, you can sign out and then sign back in.
 - Any command or tool that attempts to start Windows Explorer will not work. For example, running **start .** from a command prompt won't work.
 - There is no support for HTML rendering or HTML help in Server Core.
-- There are no notifications for activation, new updates, or password expiration because these notifications require the Windows Explorer shell, which is not present in Server Core.
-- If you need to write a script for managing Server Core that requires the secure inclusion of an administrative password, see the scripting column on Microsoft TechNet (http://go.microsoft.com/fwlink/?LinkID=56421).
 - Server Core supports Windows Installer in quiet mode so that you can install tools and utilities from Windows Installer files. When installing Windows Installer packages on Server Core, use the **/qb** option to display the basic user interface.
 - To change the time zone, run **Set-Date**.
 - To change international settings, run **control intl.cpl**.
 - **Control.exe** won't run on its own. You must run it with either **Timedate.cpl** or **Intl.cpl**.
 - **Winver.exe** isn't available in Server Core. To obtain version information use **Systeminfo.exe**.
+
+## Managing Server Core with Microsoft Project Honolulu
+[Microsoft Project Honolulu](../../manage/honolulu/honolulu.md) is a browser-based management app that enables on-premises administration of Windows Servers with no Azure or cloud dependency. Project Honolulu gives you full control over all aspects of your server infrastructure and is particularly useful for management on private networks that are not connected to the Internet. You can install Project Honolulu on Windows 10, on a gateway server, or on an installation of Windows Server with Desktop Experience, and then connect to the Server Core system that you want to manage.
 
 ## Managing Server Core remotely with Server Manager
 

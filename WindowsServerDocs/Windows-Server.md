@@ -15,7 +15,7 @@ ms.localizationpriority: high
 
 This library provides info for IT pros to evaluate, plan, deploy, secure, and manage Windows Server.
 
-What's new in Windows Server? Check out our latest mechanics video:
+**What's new in Windows Server? Check out our latest mechanics video:**
 <br>
 <iframe src="https://www.youtube.com/embed/yea9OXRZ8xg" width="640" height="360" allowfullscreen></iframe>
 

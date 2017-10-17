@@ -6,11 +6,11 @@ ms.mktglfcycl: manage
 ms.sitesec: library
 author: lizap
 ms.localizationpriority: medium
-ms.date: 09/18/2017
+ms.date: 10/17/2017
 ---
 # Roles, Role Services, and Features not in Windows Server - Server Core
 
-> Applies to: Windows Server, Windows Server 2016
+> Applies to: Windows Server (Semi-Annual Channel) and Windows Server 2016
 
 The following roles, role services, and features have been removed from the Server Core installation option of Windows Server. Use this information to help figure out if the Server Core option works for your environment.
 

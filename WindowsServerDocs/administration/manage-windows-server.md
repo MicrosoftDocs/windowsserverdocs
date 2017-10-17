@@ -41,6 +41,8 @@ If your environment includes installations of Server Core or remote servers (eit
 > [!IMPORTANT]
 > RSAT runs on Windows 10. You can't install RSAT on Windows Server Core.
 
+You can also manage Server Core installations from the command line. See [Basic administration tasks in Server Core](server-core/server-core-administer.md).
+
 ### Manage updates to Windows Server systems
 You can use [Windows Server Update Services (WSUS)](/windows-server-update-services/get-started/windows-server-update-services-wsus) to manage and deploy updates to the systems in your Windows Server environment.
 
