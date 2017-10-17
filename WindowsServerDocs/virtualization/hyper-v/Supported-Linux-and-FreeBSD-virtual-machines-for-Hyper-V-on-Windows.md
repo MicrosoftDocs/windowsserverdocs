@@ -62,4 +62,4 @@ The goal of this content is to provide information that helps facilitate your Li
 
 * [Best practices for running FreeBSD on Hyper-V](Best-practices-for-running-FreeBSD-on-Hyper-V.md)
 
-Not finding content you need? Windows 10 users, tell us what you want on [Feedback Hub](feedback-hub:?tabid=2&contextid=898). 
+Not finding content you need? Windows 10 users, tell us what you want on [Feedback Hub](feedback-hub://?referrer=techDocsUcPage&tabid=2&contextid=898&newFeedback=true&topic=Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md). 

@@ -167,6 +167,6 @@ add-windowsfeature rsat-hyper-v-tools
  
 [Install Hyper-V](..\get-started\Install-the-Hyper-V-role-on-Windows-Server.md) 
 
-Not finding content you need? Windows 10 users, tell us what you want on [Feedback Hub](feedback-hub:?tabid=2&contextid=898). 
+Not finding content you need? Windows 10 users, tell us what you want on [Feedback Hub](feedback-hub://?referrer=techDocsUcPage&tabid=2&contextid=898&newFeedback=true&topic=Remotely-manage-Hyper-V-hosts.md). 
 
 

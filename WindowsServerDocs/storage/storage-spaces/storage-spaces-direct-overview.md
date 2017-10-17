@@ -197,4 +197,4 @@ Try Storage Spaces Direct [in Microsoft Azure](https://blogs.technet.microsoft.c
 -   [Storage Quality of Service](../storage-qos/storage-qos-overview.md)
 - [Storage Spaces in Windows Server 2012 R2](https://technet.microsoft.com/library/hh831739%28v=ws.11%29.aspx) (with shared SAS storage enclosures)
 
-Not finding content you need? Windows 10 users, tell us what you want on [Feedback Hub](feedback-hub:?tabid=2&contextid=898). 
+Not finding content you need? Windows 10 users, tell us what you want on [Feedback Hub](feedback-hub://?referrer=techDocsUcPage&tabid=2&contextid=898&newFeedback=true&topic=storage-spaces-direct-overview.md). 

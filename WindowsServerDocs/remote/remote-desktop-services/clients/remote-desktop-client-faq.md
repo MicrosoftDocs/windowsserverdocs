@@ -204,5 +204,5 @@ This error happens when a Resource Authorization Policy on the gateway server st
 ### What does the STOP error in Windows XP mean?
 This is a bug in Windows XP SP2 and SP3 and has been addressed by Microsoft. You need to open a support ticket with Microsoft to officially download the patch. 
 
-Not finding content you need? Windows 10 users, tell us what you want on [Feedback Hub](feedback-hub:?tabid=2&contextid=898). 
+Not finding content you need? Windows 10 users, tell us what you want on [Feedback Hub](feedback-hub://?referrer=techDocsUcPage&tabid=2&contextid=898&newFeedback=true&topic=remote-desktop-client-faq.md). 
 

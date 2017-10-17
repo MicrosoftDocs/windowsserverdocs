@@ -44,4 +44,4 @@ Here are some next steps to help you get a better understanding of RDS and even 
 -	Review the [Remote Desktop Services architecture models](desktop-hosting-logical-architecture.md) that work best for your desired environment.
 -	Start to [deploy your RDS environment with ARM and Azure Marketplace](rds-in-azure.md).
 
-Not finding content you need? Windows 10 users, tell us what you want on [Feedback Hub](feedback-hub:?tabid=2&contextid=898). 
+Not finding content you need? Windows 10 users, tell us what you want on [Feedback Hub](feedback-hub://?referrer=techDocsUcPage&tabid=2&contextid=898&newFeedback=true&topic=Welcome-to-rds.md). 
