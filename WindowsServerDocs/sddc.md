@@ -148,11 +148,11 @@ SLB enables multiple servers to host the same workload, providing high availabil
 
 ![](media/sddc/storage-line.png)
 
-Using industry-standard servers with local-attached drives, SSD provides highly available, highly scalable software-defined storage at a fraction of the cost of traditional SAN or NAS arrays. Its architecture radically simplifies procurement and deployment.
+Using industry-standard servers with local-attached drives, Storage Spaces Direct provides highly available, highly scalable software-defined storage at a fraction of the cost of traditional SAN or NAS arrays. Its architecture radically simplifies procurement and deployment.
 
-![](media/sddc/spacer1.png)![](media/sddc/ssd.png)
+![Each node has locally attached drives pooled at the cluster level by Storage Spaces Direct then accessed by VMs via CSVs](media/sddc/spacer1.png)![](media/sddc/ssd.png)
 
-SSD introduces the new Software Storage Bus and leverages many of the features you know today in Windows Server, such as Failover Clustering, the Cluster Shared Volume (CSV) file system, Server Message Block (SMB) 3, and Storage Spaces.
+Storage Spaces Direct introduces the new Software Storage Bus and leverages many of the features you know today in Windows Server, such as Failover Clustering, Cluster Shared Volumes (CSVs), Server Message Block (SMB) 3, and Storage Spaces.
 
 ![](media/sddc/learn.png)**[Learn more about Storage Spaces Direct](https://docs.microsoft.com/en-us/windows-server/storage/storage-spaces/storage-spaces-direct-overview)**
 ### Storage Quality of Service ###
