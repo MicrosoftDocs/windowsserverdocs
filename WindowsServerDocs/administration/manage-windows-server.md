@@ -44,12 +44,12 @@ If your environment includes installations of Server Core or remote servers (eit
 You can also manage Server Core installations from the command line. See [Basic administration tasks in Server Core](server-core/server-core-administer.md).
 
 ### Manage updates to Windows Server systems
-You can use [Windows Server Update Services (WSUS)](/windows-server-update-services/get-started/windows-server-update-services-wsus) to manage and deploy updates to the systems in your Windows Server environment.
+You can use [Windows Server Update Services (WSUS)](windows-server-update-services/get-started/windows-server-update-services-wsus.md) to manage and deploy updates to the systems in your Windows Server environment.
 
 ## Gather information about your environment
 Many of the decisions you make as an administrator depend on data about the systems and users in your environment. Use the following information and tools to gather that data.
 
-Start with [Configure Windows telemetry in your organization](https://technet.microsoft.com/itpro/windows/administration/configure-windows-telemetry-in-your-organization) for information about the telemetry that can be gathered from Windows 10 and Windows Server.
+Start with [Configure Windows telemetry in your organization](/windows/configuration/configure-windows-telemetry-in-your-organization) for information about the telemetry that can be gathered from Windows 10 and Windows Server.
 
 ### [Setup and Boot Event Collection](get-started-with-setup-and-boot-event-collection.md)
 Setup and Boot Event Collection lets you designate a "collector" computer that can gather a variety of important events that occur on other computers when they boot or go through the setup process. You can then later analyze the collected events with Event Viewer, Message Analyzer, Wevtutil, or Windows PowerShell cmdlets. 
