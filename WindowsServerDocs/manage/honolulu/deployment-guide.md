@@ -10,7 +10,7 @@ ms.topic:
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 09/21/2017
+ms.date: 10/11/2017
 ---
 
 # Deploy Project Honolulu Gateway
