@@ -10,11 +10,11 @@ ms.topic:
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 09/21/2017
+ms.date: 10/18/2017
 ---
 # Troubleshoot Project Honolulu 
 
->Applies To: Windows Server, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 and Windows 10
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 and Windows 10
 
 This article describes common Honolulu configuration issues and how to fix them.
 
