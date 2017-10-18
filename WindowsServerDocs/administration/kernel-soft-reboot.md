@@ -1,4 +1,5 @@
 ---
+redirect_url: /windows-server/windows-server
 title: Using soft reboot in Windows Server
 description: Learn about the new soft reboot option in Windows Server
 ms.prod: windows-server-threshold

@@ -10,12 +10,12 @@ ms.topic:
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 09/21/2017
+ms.date: 10/18/2017
 ---
 
 # Deploy Project Honolulu Gateway
 
->Applies To: Windows Server, Windows Server 2016 and Windows 10
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016 and Windows 10
 
 This article describes the system requirements, prerequisites, and steps to install Honolulu on Windows 10 and Windows Server computers.
 

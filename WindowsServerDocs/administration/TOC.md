@@ -27,7 +27,6 @@
 #### [Filter, sort, and query Data in Server Manager Tiles](server-manager/filter-sort-and-query-data-in-server-manager-tiles.md)
 #### [Keyboard Shortcuts for Server Manager](server-manager/keyboard-shortcuts-for-server-manager.md)
 ### [Manage Server Core and remote systems Remote Server Administration Tools](../remote/remote-server-administration-tools.md)
-### [Set up soft reboot](kernel-soft-reboot.md)
 ### [Windows Server Update Services (WSUS)](windows-server-update-services/get-started/windows-server-update-services-wsus.md)
 #### [Deploy Windows Server Update Services](windows-server-update-services/deploy/deploy-windows-server-update-services.md)
 ##### [Plan your WSUS deployment](windows-server-update-services/plan/plan-your-wsus-deployment.md)
