@@ -1,4 +1,4 @@
----
+, o---
 title: Storage Spaces Direct Hardware Requirements
 ms.prod: windows-server-threshold
 description: Minimum hardware requirements for testing Storage Spaces Direct.
@@ -33,7 +33,7 @@ In addition, the following requirements apply.
 
 ### CPU
 
-- Minimum of Intel Nehalem or later compatible processor
+- Minimum of Intel Nehalem or later compatible processor, or AMD EPYC or later compatible processor
 
 ### Memory
 
