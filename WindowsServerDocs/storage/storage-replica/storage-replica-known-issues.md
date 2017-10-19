@@ -141,7 +141,8 @@ If you attempt to resize a replicated volume on the source server without settin
 
     PS C:\> Resize-Partition -DriveLetter I -Size 8GB
     Resize-Partition : Failed
-    Activity ID: {87aebbd6-4f47-4621-8aa4-5328dfa6c3be}
+
+Activity ID: {87aebbd6-4f47-4621-8aa4-5328dfa6c3be}
     At line:1 char:1
     + Resize-Partition -DriveLetter I -Size 8GB
     + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -192,6 +193,8 @@ If using the Cluster powershell cmdlet:
     + FullyQualifiedErrorId : Move-ClusterGroup,Microsoft.FailoverClusters.PowerShell.MoveClusterGroupCommand
 
 This occurs due to a by-design behavior in Windows Server 2016. Use `Set-SRPartnership` to move these PDR disks in an asynchronous stretched cluster.  
+
+THis behavior has been changed in Windows Server Version 1709 to allow manual and automated failovers with asynchronous replication, based on customer feedback.
 
 ## Attempting to add disks to a two-node asymmetric cluster returns "No disks suitable for cluster disks found" 
 When attempting to provision a cluster with only two nodes, prior to adding Storage Replica stretch replication, you attempt to add the disks in the second site to the Available Disks. You recieve the following error:
