@@ -4,7 +4,7 @@ description: The following document describes how to change the AD FS forms sign
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 10/13/2017
+ms.date: 10/20/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
@@ -35,6 +35,16 @@ To enable the new web theme use the following procedure:
 
 >![NOTE]
 >You need to ensure that idpinitiatedsignon has been enabled.  It is not enabled by default.  To enable idpinitiatedsignon use the following PowerShell command:  `Set-AdfsProperties –EnableIdpInitiatedSignonPage $True`
+
+## Image Recommendations
+The following are the size recommendations for the background image and the logo image:
+
+### Logo
+- size 24px height, 256px max width
+- Do not add any padding around the logo within the asset.  Ensure that the asset background is transparent.
+
+### Background
+- size 1024 x 768 pixels @ 96 DPI with a file size of no greater than 200KB.
 
 ## Next Steps
 - [AD FS Customization in Windows Server 2016](AD-FS-Customization-in-Windows-Server-2016.md)
