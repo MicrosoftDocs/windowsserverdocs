@@ -45,7 +45,7 @@ The Semi-Annual Channel will be available to volume-licensed customers with [Sof
 >**The current LTSC product is Windows Server 2016**. If you want to stay in this channel, you should install (or continue using) Windows Server 2016, which can be installed in Server Core mode or Server with Desktop Experience Mode. See [Get Started with Windows Server 2016](https://docs.microsoft.com/windows-server/get-started/server-basic) for details.
 
 
-![Semi-Annual Channel release timing](./media/SAC-release-timing.png)
+
 
 In this new model, Windows Server releases are identified by the year and month of release: for example, in 2017, a release in the 9th month (September) would be identified as **version 1709**. Windows Server will release Semi-nnually in fall and spring. Another release in March 2018 would be version 1803. The support lifecycle for each release is 18 months.
 
