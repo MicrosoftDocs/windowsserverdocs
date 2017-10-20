@@ -113,9 +113,4 @@ If **AutoCertificateRollover** is set to **False**, AD FS will not automatically
 After allowing a sufficient period of time for all of your federation partners to consume the new secondary certificate, promote this secondary certificate to primary (in the MMC snap-in, click the secondary token signing certificate and in the Actions pane, click **Set As Primary**.)
 
 ## Updating Azure AD
-AD FS provides single sign-on access to Microsoft cloud services such as Office 365 by authenticating users via their existing AD DS credentials. To set up single sign-on access, you set up a federated trust between your on-premises AD DS and Azure AD (in other words, you set up directory integration between your local and cloud directories).
-
-When a federated user signs in to Microsoft cloud services, AD FS applies a digital signature to a security token that is sent to Azure AD. When validating a token, Azure AD verifies that the certificate information associated with the signature in the token matches the certificate information that is stored as part of the trust between the local AD FS service and Azure AD.
-
-If you renew and configure a new token signing or token decrypting certificate for AD FS, you must update Azure AD with these new certificates.
-Perform the following steps while logged on to the primary AD FS server that has the Azure Active Directory Module for Windows PowerShell installed.
+AD FS provides single sign-on access to Microsoft cloud services such as Office 365 by authenticating users via their existing AD DS credentials.  For additional information on using certificates see [Renew federation certificates for Office 365 and Azure AD](https://docs.microsoft.com/en-us/azure/active-directory/connect/active-directory-aadconnect-o365-certs).
