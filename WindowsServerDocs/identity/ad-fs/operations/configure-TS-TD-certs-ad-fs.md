@@ -16,7 +16,7 @@ This topic describes tasks and procedures that you can perform to ensure that yo
 
 Token signing certificates are standard X509 certificates that are used to securely sign all tokens that the federation server issues. Token decryption certificates are standard X509 certificates that are used to decrypt any incoming tokens. They are also published in federation metadata.
 
-For additional information see [Certificate Requirements](../design/ad-fs-requirements#BKMK_1)
+For additional information see [Certificate Requirements](../design/ad-fs-requirements.md#BKMK_1)
 
 ## Determine whether AD FS renews the certificates automatically
 By default, AD FS is configured to generate token signing and token decryption certificates automatically, both at the initial configuration time and when the certificates are approaching their expiration date.
