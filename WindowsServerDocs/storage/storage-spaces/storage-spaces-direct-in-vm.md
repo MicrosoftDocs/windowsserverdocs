@@ -14,7 +14,7 @@ description: An overview of Storage Spaces Direct, a feature of Windows Server E
 You can deploy Storage Spaces Direct on a cluster of physical servers, or on virtual machines as discussed in this topic.This delivers virtual shared storage
 across a set of VMs on top of a private or public cloud so that application high availability solutions can be deployed to increase the availability of applications.
 
-![](media/7df3e97e0a6c0d988cc74ca4f7cd2e37.png)
+![](media/storage-spaces-direct-in-vm/storage-spaces-direct-in-vm.png)
 
 ## Deploying in Azure Iaas VMs
 
