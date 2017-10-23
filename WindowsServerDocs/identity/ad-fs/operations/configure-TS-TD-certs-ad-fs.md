@@ -1,10 +1,10 @@
 ---
 title: Obtain and Configure Token Signing and Token Decryption Certificates for AD FS
-description: Managing SSL Certificates in AD FS and WAP in Windows Server 2016
+description: This document describes how to obtain and configure the TS and TD certificates for AD FS
 author: jenfieldmsft
 ms.author: billmath
 manager: samueld
-ms.date: 10/20/2017
+ms.date: 10/23/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs

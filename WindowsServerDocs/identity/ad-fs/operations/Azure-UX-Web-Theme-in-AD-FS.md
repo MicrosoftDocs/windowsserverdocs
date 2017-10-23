@@ -4,7 +4,7 @@ description: The following document describes how to change the AD FS forms sign
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 10/20/2017
+ms.date: 10/23/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
