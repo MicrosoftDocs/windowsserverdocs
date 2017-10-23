@@ -1,17 +1,22 @@
-Deploying Storage Spaces Direct in a Virtual Machine
-====================================================
+---
+title: Deploying Storage Spaces Direct in a virtual machine
+ms.prod: windows-server-threshold
+ms.author: eldenc
+ms.manager: eldenc
+ms.technology: storage-spaces
+ms.topic: article
+author: eldenchristensen
+ms.date: 10/25/2017
+description: An overview of Storage Spaces Direct, a feature of Windows Server Enterprise Edition that enables you to cluster servers with internal storage into a software-defined storage solution.
+---
+# Deploying Storage Spaces Direct in a virtual machine
 
-Storage Spaces Direct is a powerful and flexible technology that can enable a
-breath of scenarios. In addition to deploying on bare-metal to create
-hyper-converged or Scale-out File Server solutions, Storage Spaces Direct can
-also be deployed in a virtual machine. This delivers virtual shared storage
-across a set of VMs on top of a private or public cloud so that application high
-availability solutions can be deployed to increase the SLA’s of applications.
+You can deploy Storage Spaces Direct on a cluster of physical servers, or on virtual machines as discussed in this topic.This delivers virtual shared storage
+across a set of VMs on top of a private or public cloud so that application high availability solutions can be deployed to increase the availability of applications.
 
 ![](media/7df3e97e0a6c0d988cc74ca4f7cd2e37.png)
 
-Deploying in Azure Iaas VMs
----------------------------
+## Deploying in Azure Iaas VMs
 
 [Azure
 templates](https://github.com/robotechredmond/301-storage-spaces-direct-md) have
@@ -19,15 +24,11 @@ been published decrease the complexity, configure best practices, and speed of
 your Storage Spaces Direct deployments in an Azure Iaas VM. This is the
 recommended solution for deploying in Azure.
 
-\<[embed video
-link](https://channel9.msdn.com/Series/Microsoft-Hybrid-Cloud-Best-Practices-for-IT-Pros/Step-by-Step-Deploy-Windows-Server-2016-Storage-Spaces-Direct-S2D-Cluster-in-Microsoft-Azure?ocid=player)\>
-
-\<iframe
+<iframe
 src="https://channel9.msdn.com/Series/Microsoft-Hybrid-Cloud-Best-Practices-for-IT-Pros/Step-by-Step-Deploy-Windows-Server-2016-Storage-Spaces-Direct-S2D-Cluster-in-Microsoft-Azure/player"
 width="960" height="540" allowFullScreen frameBorder="0"\>\</iframe\>
 
-Considerations when Deploying Storage Spaces Direct in a VM
------------------------------------------------------------
+## Considerations when deploying Storage Spaces Direct in a VM
 
 The following considerations apply when deploying Storage Spaces Direct in a
 virtualized environment.  
@@ -78,8 +79,7 @@ you and are the recommended solution when deploying in Azure IaaS VMs.
 
 dword:00002710
 
-Additional Information:
------------------------
+## See also
 
 Additional Azure Iaas VM templates for deploying Storage Spaces Direct, video’s,
 and step-by-step guides can be found at [this
