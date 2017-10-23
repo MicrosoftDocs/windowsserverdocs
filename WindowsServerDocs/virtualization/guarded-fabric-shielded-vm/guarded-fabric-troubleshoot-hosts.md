@@ -7,6 +7,7 @@ ms.assetid: 80ea38f4-4de6-4f85-8188-33a63bb1cf81
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
+ms.date: 10/23/2017
 ---
 
 # Troubleshooting Guarded Hosts
@@ -15,6 +16,23 @@ ms.technology: security-guarded-fabric
 
 This topic describes resolutions to common problems encountered when deploying or operating a guarded Hyper-V host in your guarded fabric.
 If you are unsure of the nature of your problem, first try running the [guarded fabric diagnostics](guarded-fabric-troubleshoot-diagnostics.md) on your Hyper-V hosts to narrow down the potential causes.
+
+## Guarded Host Feature
+
+If you are experiencing issues with your Hyper-V host, first ensure that the **Host Guardian Hyper-V Support** feature is installed.
+Without this feature, the Hyper-V host will be missing some critical configuration settings and software that allow it to pass attestation and provision shielded VMs.
+
+To check if the feature is installed, use Server Manager or run the following command in an elevated PowerShell window:
+
+```powershell
+Get-WindowsFeature HostGuardian
+```
+
+If the feature is not installed, install it with the following PowerShell command:
+
+```powershell
+Install-WindowsFeature HostGuardian -Restart
+```
 
 ## Attestation failures
 
