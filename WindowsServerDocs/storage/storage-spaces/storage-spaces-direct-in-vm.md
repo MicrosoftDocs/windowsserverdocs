@@ -26,7 +26,7 @@ recommended solution for deploying in Azure.
 
 <iframe
 src="https://channel9.msdn.com/Series/Microsoft-Hybrid-Cloud-Best-Practices-for-IT-Pros/Step-by-Step-Deploy-Windows-Server-2016-Storage-Spaces-Direct-S2D-Cluster-in-Microsoft-Azure/player"
-width="960" height="540" allowFullScreen frameBorder="0"\>\</iframe\>
+width="960" height="540" allowFullScreen frameBorder="0"\</iframe\>
 
 ## Considerations when deploying Storage Spaces Direct in a VM
 
