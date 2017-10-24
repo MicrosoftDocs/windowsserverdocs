@@ -65,7 +65,7 @@ Enables easier configuration of multiple network adapters in a cluster.
 * [Deploy a Scale-Out File Server](https://technet.microsoft.com/library/hh831359)
 * [iSCSI Target Block Storage, How To](https://technet.microsoft.com/library/hh848268)
 * [Deploy an Active Directory Detached Cluster](https://technet.microsoft.com/library/jj556313.aspx)
-* [Using Guest Clustering for High Availability](https://technet.microsoft.com/library/jj863389.aspx)
+* [Using Guest Clustering for High Availability](https://technet.microsoft.com/library/dn440540.aspx)
 * [Deploy a Guest Cluster using a Shared Virtual Hard Disk](https://technet.microsoft.com/library/dn265980.aspx)
 * [Building Your Cloud Infrastructure: Scenario Overview](https://technet.microsoft.com/library/hh831441.aspx)
 
