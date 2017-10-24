@@ -51,7 +51,7 @@ Domain controllers that run an operating system earlier than Windows Server 2012
 > [!Note]
 > The domain controllers will not support domain protections. 
 
-Protected Users group can be created by [transferring the primary domain controller (PDC) emulator role](http://technet.microsoft.com/library/cc816944(v=ws.10).aspx) to a domain controller that runs Windows Server 2012 R2. After that group object is replicated to other domain controllers, the PDC emulator role can be hosted on a domain controller that runs an earlier version of Windows Server.
+Protected Users group can be created by [transferring the primary domain controller (PDC) emulator role](https://technet.microsoft.com/library/cc816944(v=ws.10).aspx) to a domain controller that runs Windows Server 2012 R2. After that group object is replicated to other domain controllers, the PDC emulator role can be hosted on a domain controller that runs an earlier version of Windows Server.
 
 ### <a name="BKMK_ADgroup"></a>Protected Users group AD properties
 

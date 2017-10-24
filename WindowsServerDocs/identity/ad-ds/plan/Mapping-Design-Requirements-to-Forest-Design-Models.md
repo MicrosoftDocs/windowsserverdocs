@@ -92,7 +92,7 @@ Considerations for creating forests for data isolation include the following:
 -   Other forests can be configured to trust the organizational forest created for data isolation so that users in the isolated forest can access resources in other forests. However, users from the isolated forest must never interactively log on to workstations in the trusting forest. The computer in the trusting forest can potentially be compromised by malicious software and can be used to capture the logon credentials of the user.  
   
     > [!NOTE]  
-    > To prevent servers in a trusting forest from impersonating users from the isolated forest, and then accessing resources in the isolated forest, the forest owner can disable delegated authentication or use the constrained delegation feature. For more information about delegated authentication and constrained delegation, see Delegating authentication ([http://go.microsoft.com/fwlink/?LinkId=106614](http://go.microsoft.com/fwlink/?LinkId=106614)).  
+    > To prevent servers in a trusting forest from impersonating users from the isolated forest, and then accessing resources in the isolated forest, the forest owner can disable delegated authentication or use the constrained delegation feature. For more information about delegated authentication and constrained delegation, see Delegating authentication ([https://go.microsoft.com/fwlink/?LinkId=106614](https://go.microsoft.com/fwlink/?LinkId=106614)).  
   
 -   You might need to establish a firewall between the organizational forest and the other forests in the organization to limit user access to information outside of their forest.  
   
@@ -108,7 +108,7 @@ To meet a limited connectivity requirement, you can do one of the following:
   
 -   Use an organizational forest. Place the users, groups, and computers for the group for which connectivity is limited into a separate organizational forest. Assign an individual from that group to be the forest owner. The organizational forest provides a separate environment on the other side of the firewall. The forest includes user accounts and resources that are managed within the forest, so that users do not need to go through the firewall to accomplish their daily tasks. Specific users or applications might have special needs that require the capability to pass through the firewall to contact other forests. You can address these needs individually by opening the appropriate interfaces in the firewall, including those necessary for any trusts to function.  
   
-For more information about configuring firewalls for use with Active Directory Domain Services (AD DS), see Active Directory in Networks Segmented by Firewalls ([http://go.microsoft.com/fwlink/?LinkId=37928](http://go.microsoft.com/fwlink/?LinkId=37928)).  
+For more information about configuring firewalls for use with Active Directory Domain Services (AD DS), see Active Directory in Networks Segmented by Firewalls ([https://go.microsoft.com/fwlink/?LinkId=37928](https://go.microsoft.com/fwlink/?LinkId=37928)).  
   
 ## <a name="BKMK_6"></a>Scenario 6: Use an organizational forest or domain, and reconfigure the firewall for service autonomy with limited connectivity  
 If a group in your organization identifies service autonomy as a requirement, we recommend that you first reconsider this requirement. Achieving service autonomy creates more management overhead and additional costs for the organization. Ensure that the requirement for service autonomy is not simply for convenience and that you can justify the costs involved in meeting this requirement.  
@@ -119,7 +119,7 @@ If limited connectivity is an issue, and you have a requirement for service auto
   
 -   Place the users, groups, and computers in a separate domain in an existing organizational forest. This model provides for domain-level service autonomy only and not for full service autonomy, service isolation, or data isolation. Other groups in the forest must trust the service administrators of the new domain to the same degree that they trust the forest owner. For this reason, we do not recommend this approach. For more information about using organizational domains, see [Using the Organizational Domain Forest Model](../../ad-ds/plan/../../ad-ds/plan/Using-the-Organizational-Domain-Forest-Model.md).  
   
-You also need to open the firewall enough to allow Active Directory traffic to pass through. For more information about configuring firewalls for use with AD DS, see Active Directory in Networks Segmented by Firewalls ([http://go.microsoft.com/fwlink/?LinkId=37928](http://go.microsoft.com/fwlink/?LinkId=37928)).  
+You also need to open the firewall enough to allow Active Directory traffic to pass through. For more information about configuring firewalls for use with AD DS, see Active Directory in Networks Segmented by Firewalls ([https://go.microsoft.com/fwlink/?LinkId=37928](https://go.microsoft.com/fwlink/?LinkId=37928)).  
   
 ## <a name="BKMK_7"></a>Scenario 7: Use a resource forest, and reconfigure the firewall for service isolation with limited connectivity  
 If limited connectivity is an issue, and you have a requirement for service isolation, you can do one of the following:  
@@ -144,7 +144,7 @@ Considerations for service isolation include the following:
   
     Specific users or applications might have special needs that require the capability to pass through the firewall to contact other forests. You can address these needs individually by opening the appropriate interfaces in the firewall, including those necessary for any trusts to function.  
   
-For more information about configuring firewalls for use with AD DS, see Active Directory in Networks Segmented by Firewalls ([http://go.microsoft.com/fwlink/?LinkId=37928](http://go.microsoft.com/fwlink/?LinkId=37928)).  
+For more information about configuring firewalls for use with AD DS, see Active Directory in Networks Segmented by Firewalls ([https://go.microsoft.com/fwlink/?LinkId=37928](https://go.microsoft.com/fwlink/?LinkId=37928)).  
   
 
 

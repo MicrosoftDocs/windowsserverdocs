@@ -31,7 +31,7 @@ You can set retention periods for folders and put files on legal hold by using F
 -   [Step 4: Classify a file manually](Deploy-Implementing-Retention-of-Information-on-File-Servers--Demonstration-Steps-.md#BKMK_Step4)  
   
 > [!NOTE]  
-> This topic includes sample Windows PowerShell cmdlets that you can use to automate some of the procedures described. For more information, see [Using Cmdlets](http://go.microsoft.com/fwlink/p/?linkid=230693).  
+> This topic includes sample Windows PowerShell cmdlets that you can use to automate some of the procedures described. For more information, see [Using Cmdlets](https://go.microsoft.com/fwlink/p/?linkid=230693).  
   
 ## Prerequisites  
 The steps in this topic assume you have a SMTP server configured for file expiration notifications.  

@@ -23,7 +23,7 @@ After you configure a computer with the required certificates and have installed
   
 After you finish setting up the computer, verify that the federation server proxy is working as expected. For more information, see [Verify That a Federation Server Proxy Is Operational](Verify-That-a-Federation-Server-Proxy-Is-Operational.md).  
   
-Membership in **Administrators**, or equivalent, on the local computer is the minimum required to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](http://go.microsoft.com/fwlink/?LinkId=83477).   
+Membership in **Administrators**, or equivalent, on the local computer is the minimum required to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](https://go.microsoft.com/fwlink/?LinkId=83477).   
   
 ### To configure a computer for the federation server proxy role  
   
@@ -53,7 +53,7 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
 By default, the federation server proxy service is configured to use TCP port 443 for HTTPS traffic and port 80 for HTTP traffic for communication with the federation server. To configure different ports, such as TCP port 444 for HTTPS and port 81 for HTTP, the following tasks must be completed.  
   
 > [!NOTE]  
-> If you intend to initially deploy AD FS to operate under alternate TCP\/IP ports, you should first modify ports in your IIS protocol bindings for HTTP and HTTPS on both the federation server and federation server proxy computers. This should occur before you run the AD FS configuration wizards for initial configuration. If you configure Internet Information Services \(IIS\) first, your alternate TCP\/IP port settings are discovered when wizard\-based configuration occurs within AD FS, and the following procedure is not necessary. If you want to change the port settings later, update IIS protocol bindings first, and then use the following procedure to update port settings appropriately. For more information about editing IIS bindings, see [article 149605](http://go.microsoft.com/fwlink/?LinkId=190275) in the Microsoft Knowledge Base.  
+> If you intend to initially deploy AD FS to operate under alternate TCP\/IP ports, you should first modify ports in your IIS protocol bindings for HTTP and HTTPS on both the federation server and federation server proxy computers. This should occur before you run the AD FS configuration wizards for initial configuration. If you configure Internet Information Services \(IIS\) first, your alternate TCP\/IP port settings are discovered when wizard\-based configuration occurs within AD FS, and the following procedure is not necessary. If you want to change the port settings later, update IIS protocol bindings first, and then use the following procedure to update port settings appropriately. For more information about editing IIS bindings, see [article 149605](https://go.microsoft.com/fwlink/?LinkId=190275) in the Microsoft Knowledge Base.  
   
 #### To configure alternate TCP\/IP ports for the federation server proxy to use  
   

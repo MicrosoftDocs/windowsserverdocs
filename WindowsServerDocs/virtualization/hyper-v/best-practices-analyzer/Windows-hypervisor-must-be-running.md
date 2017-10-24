@@ -36,7 +36,7 @@ In the following sections, italics indicates UI text that appears in the Best Pr
   
 *Check the Windows Server catalog to see if this server is qualified to run Hyper-V. Next, make sure the BIOS is enabled for hardware-assisted virtualization and hardware-enforced data execution prevention. Then, check the Hyper-V-Hypervisor event log.*  
   
-To check the catalog, see [Windows Server catalog](http://go.microsoft.com/fwlink/?LinkId=111228) (http://go.microsoft.com/fwlink/?LinkId=111228).  
+To check the catalog, see [Windows Server catalog](https://go.microsoft.com/fwlink/?LinkId=111228) (https://go.microsoft.com/fwlink/?LinkId=111228).  
   
 > [!CAUTION]  
 > Changing certain parameters in the system BIOS of a computer can cause that computer to stop loading the operating system, or it can make hardware devices, such as hard disk drives, unavailable. Always consult the user manual for the computer to determine the proper way to configure the system BIOS. Also, it is always a good idea to keep track of the parameters that you modify and their original value so that you can restore them later if needed. If you experience problems after changing parameters in the system BIOS, try to load the default settings (an option is usually available in the BIOS configuration utility), or contact the computer manufacturer for assistance.  

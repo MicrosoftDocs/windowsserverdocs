@@ -25,4 +25,4 @@ You cannot run **autoconv** on the command-line. This will only be run at startu
 [Command-Line Syntax Key](command-line-syntax-key.md)
 [autochk](autochk.md)
 [convert](convert.md)
-[Working with File Systems](http://go.microsoft.com/fwlink/?LinkId=4509)
+[Working with File Systems](https://go.microsoft.com/fwlink/?LinkId=4509)

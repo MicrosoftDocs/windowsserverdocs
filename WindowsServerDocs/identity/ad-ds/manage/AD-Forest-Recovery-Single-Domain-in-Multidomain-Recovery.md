@@ -42,7 +42,7 @@ There can be times when it is necessary to recover only a single domain within a
   
  Removing lingering objects is advantageous for larger organizations that cannot risk the down time associated with the other options.  
   
- For more information, see [Use Repadmin to remove lingering objects](http://technet.microsoft.com/library/cc785298.aspx).
+ For more information, see [Use Repadmin to remove lingering objects](https://technet.microsoft.com/library/cc785298.aspx).
 
 ## Next Steps
 -   [AD Forest Recovery - Prerequisites](AD-Forest-Recovery-Prerequisties.md)  

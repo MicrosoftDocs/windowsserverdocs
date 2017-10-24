@@ -17,7 +17,7 @@ ms.technology: identity-adds
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 
-<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd">
+<developerConceptualDocument xmlns="https://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="https://www.w3.org/1999/xlink" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd">
   <introduction>
     <para>This topic explains symptoms, causes and how to resolve Active Directory replication error 8452: The naming context is in the process of being removed or is not replicated from the specified server.</para>
     <list class="bullet">
@@ -56,7 +56,7 @@ server.</codeFeaturedElement> The failure occurred at &lt;date&gt; &lt;time&gt;.
 The last success occurred at &lt;date&gt; &lt;time&gt;.
 3 failures have occurred since the last success.</code>
         </listItem>
-<listItem><para>REPADMIN.EXE reports that the last replication attempt has failed with status 8452.</para><para>REPADMIN commands that commonly cite the 8452 status include but are not limited to:</para><table xmlns:caps="http://schemas.microsoft.com/build/caps/2013/11"><tbody><tr><TD><list class="bullet"><listItem><para>REPADMIN /SHOWREPS</para></listItem><listItem><para>REPADMIN /REPLSUM</para></listItem></list></TD><TD><list class="bullet"><listItem><para>REPADMIN /SYNCALL</para></listItem></list></TD></tr></tbody></table><para>The following sample output from "REPADMIN /SHOWREPS" shows inbound replication from CONTOSO-DC2 to CONTOSO-DC1 failing with the "The naming context is in the process of being removed or is not replicated from the specified server" error:</para><code>Default-First-Site-NameCONTOSO-DC1
+<listItem><para>REPADMIN.EXE reports that the last replication attempt has failed with status 8452.</para><para>REPADMIN commands that commonly cite the 8452 status include but are not limited to:</para><table xmlns:caps="https://schemas.microsoft.com/build/caps/2013/11"><tbody><tr><TD><list class="bullet"><listItem><para>REPADMIN /SHOWREPS</para></listItem><listItem><para>REPADMIN /REPLSUM</para></listItem></list></TD><TD><list class="bullet"><listItem><para>REPADMIN /SYNCALL</para></listItem></list></TD></tr></tbody></table><para>The following sample output from "REPADMIN /SHOWREPS" shows inbound replication from CONTOSO-DC2 to CONTOSO-DC1 failing with the "The naming context is in the process of being removed or is not replicated from the specified server" error:</para><code>Default-First-Site-NameCONTOSO-DC1
 DSA Options: IS_GC 
 Site Options: (none)
 DSA object GUID: b6dc8589-7e00-4a5d-b688-045aef63ec01
@@ -71,7 +71,7 @@ The naming context is in the process of being removed or is not replicated from 
 Last success @ &lt;date&gt; &lt;time&gt;.
 </code>
 
-</listItem><listItem><para>In Active Directory Sites and Services, if you right-click the connection object and click <ui>Replicate now</ui>, the error "The naming context is in the process of being removed or is not replicated from the specified server." </para><para>Right-clicking on the connection object from a source DC and choosing "replicate now" fails with "The naming context is in the process of being removed or is not replicated from the specified server.". The on-screen error message text and screenshot is shown below:</para><para>Dialog title text: Replicate Now</para><para>Dialog message text: </para><para>The following error occurred during the attempt to synchronize naming context &lt;%directory partition name%&gt; from Domain Controller &lt;Source DC&gt; to Domain Controller &lt;Destination DC&gt;: </para><para>The naming context is in the process of being removed or is not replicated from the specified server.</para><para>The operation will not continue.</para></listItem><listItem><para>NTDS KCC, NTDS General or Microsoft-Windows-ActiveDirectory_DomainService events with the 8452 status are logged in the directory service event log.</para><para>Active Directory events that commonly cite the 8452 status include but are not limited to:</para><table xmlns:caps="http://schemas.microsoft.com/build/caps/2013/11"><thead><tr><TD><para>Event ID</para></TD><TD><para>Event Source</para></TD><TD><para>Event String</para></TD></tr></thead><tbody><tr><TD><para>1586</para></TD><TD><para>NTDS General</para></TD><TD><para>The checkpoint with the PDC was unsuccessful. The checkpointing process will be retried again in four hours. A full synchronization of the security database to downlevel domain controllers may take place if this machine is promoted to be the PDC before the next successful checkpoint. The error returned was: The naming context is in the process of being removed or is not replicated from the specified server.</para></TD></tr></tbody></table></listItem>
+</listItem><listItem><para>In Active Directory Sites and Services, if you right-click the connection object and click <ui>Replicate now</ui>, the error "The naming context is in the process of being removed or is not replicated from the specified server." </para><para>Right-clicking on the connection object from a source DC and choosing "replicate now" fails with "The naming context is in the process of being removed or is not replicated from the specified server.". The on-screen error message text and screenshot is shown below:</para><para>Dialog title text: Replicate Now</para><para>Dialog message text: </para><para>The following error occurred during the attempt to synchronize naming context &lt;%directory partition name%&gt; from Domain Controller &lt;Source DC&gt; to Domain Controller &lt;Destination DC&gt;: </para><para>The naming context is in the process of being removed or is not replicated from the specified server.</para><para>The operation will not continue.</para></listItem><listItem><para>NTDS KCC, NTDS General or Microsoft-Windows-ActiveDirectory_DomainService events with the 8452 status are logged in the directory service event log.</para><para>Active Directory events that commonly cite the 8452 status include but are not limited to:</para><table xmlns:caps="https://schemas.microsoft.com/build/caps/2013/11"><thead><tr><TD><para>Event ID</para></TD><TD><para>Event Source</para></TD><TD><para>Event String</para></TD></tr></thead><tbody><tr><TD><para>1586</para></TD><TD><para>NTDS General</para></TD><TD><para>The checkpoint with the PDC was unsuccessful. The checkpointing process will be retried again in four hours. A full synchronization of the security database to downlevel domain controllers may take place if this machine is promoted to be the PDC before the next successful checkpoint. The error returned was: The naming context is in the process of being removed or is not replicated from the specified server.</para></TD></tr></tbody></table></listItem>
 </list>
     </content>
   </section>
@@ -145,7 +145,7 @@ Last success @ &lt;date&gt; &lt;time&gt;.
           <para>For NTDS Replication event 1586, transfer the PDC emulator role to an Active Directory domain controller that is <placeholder>currently</placeholder> a direct replication partner of the previous PDC emulator.</para>
         </listItem>
         <listItem>
-          <para>If the error is caused by the demotion of a Windows 2000 global catalog server, execute the batch file in the "Directory Service is too busy to complete the operation" section of <externalLink><linkText>KB 249256</linkText><linkUri>http://support.microsoft.com/default.aspx?scid=kb;EN-US;249256</linkUri></externalLink> (http://support.microsoft.com/default.aspx?scid=kb;EN-US;249256).</para>
+          <para>If the error is caused by the demotion of a Windows 2000 global catalog server, execute the batch file in the "Directory Service is too busy to complete the operation" section of <externalLink><linkText>KB 249256</linkText><linkUri>https://support.microsoft.com/default.aspx?scid=kb;EN-US;249256</linkUri></externalLink> (https://support.microsoft.com/default.aspx?scid=kb;EN-US;249256).</para>
         </listItem>
       </list>
     </content>
@@ -232,13 +232,13 @@ Last success @ &lt;date&gt; &lt;time&gt;.
   <relatedTopics>
     <externalLink>
       <linkText>Troubleshooting Active Directory operations that fail with error 8452: "The naming context is in the process of being removed or is not replicated from the specified server."</linkText>
-      <linkUri>http://support.microsoft.com/kb/2023704</linkUri>
+      <linkUri>https://support.microsoft.com/kb/2023704</linkUri>
     </externalLink>
     <externalLink>
       <linkText>How the Active Directory Replication Model Works</linkText>
-      <linkUri>http://technet.microsoft.com/library/cc772726(WS.10).aspx</linkUri>
+      <linkUri>https://technet.microsoft.com/library/cc772726(WS.10).aspx</linkUri>
     </externalLink>
-<externalLink><linkText>repsFrom, RepsFrom</linkText><linkUri>http://msdn.microsoft.com/library/cc228409(PROT.13).aspx</linkUri></externalLink></relatedTopics>
+<externalLink><linkText>repsFrom, RepsFrom</linkText><linkUri>https://msdn.microsoft.com/library/cc228409(PROT.13).aspx</linkUri></externalLink></relatedTopics>
 </developerConceptualDocument>
 
 

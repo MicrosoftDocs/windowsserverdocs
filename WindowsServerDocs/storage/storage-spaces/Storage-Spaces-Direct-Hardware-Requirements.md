@@ -33,7 +33,7 @@ In addition, the following requirements apply.
 
 ### CPU
 
-- Minimum of Intel Nehalem or later compatible processor
+- Minimum of Intel Nehalem or later compatible processor, or AMD EPYC or later compatible processor
 
 ### Memory
 

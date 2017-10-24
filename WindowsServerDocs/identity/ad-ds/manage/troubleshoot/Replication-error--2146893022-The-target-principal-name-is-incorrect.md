@@ -17,7 +17,7 @@ ms.technology: identity-adds
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 
-<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd">
+<developerConceptualDocument xmlns="https://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="https://www.w3.org/1999/xlink" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd">
   <introduction>
     <para>This topic explains symptoms, causes and how to resolve Active Directory replication error -2146893022: The target principal name is incorrect.</para>
     <list class="bullet">
@@ -59,7 +59,7 @@ The failure occurred at &lt;date&gt; &lt;time&gt;.
 The last success occurred at &lt;date&gt; &lt;time&gt;.
 &lt;X&gt; failures have occurred since the last success.</code>
         </listItem>
-<listItem><para>REPADMIN.EXE reports that replication attempt has failed with status -2146893022 (0x80090322).</para><para>REPADMIN commands that commonly cite the -2146893022 (0x80090322 status) include but are not limited to:</para><table xmlns:caps="http://schemas.microsoft.com/build/caps/2013/11"><tbody><tr><TD><list class="bullet"><listItem><para>REPADMIN /REPLSUM</para></listItem><listItem><para>REPADMIN /SHOWREPL</para></listItem></list></TD><TD><list class="bullet"><listItem><para>REPADMIN /SHOWREPS</para></listItem><listItem><para>REPADMIN /SYNCALL</para></listItem></list></TD></tr></tbody></table><para>Sample output from "REPADMIN /SHOWREPS" and REPADMIN /SYNCALL depicting the "target principal name is incorrect" error are shown below:</para><code>c:&gt;repadmin /showreps
+<listItem><para>REPADMIN.EXE reports that replication attempt has failed with status -2146893022 (0x80090322).</para><para>REPADMIN commands that commonly cite the -2146893022 (0x80090322 status) include but are not limited to:</para><table xmlns:caps="https://schemas.microsoft.com/build/caps/2013/11"><tbody><tr><TD><list class="bullet"><listItem><para>REPADMIN /REPLSUM</para></listItem><listItem><para>REPADMIN /SHOWREPL</para></listItem></list></TD><TD><list class="bullet"><listItem><para>REPADMIN /SHOWREPS</para></listItem><listItem><para>REPADMIN /SYNCALL</para></listItem></list></TD></tr></tbody></table><para>Sample output from "REPADMIN /SHOWREPS" and REPADMIN /SYNCALL depicting the "target principal name is incorrect" error are shown below:</para><code>c:&gt;repadmin /showreps
 &lt;site name&gt;&lt;destination DC&gt;
 DC Options: IS_GC 
 Site Options: (none)
@@ -79,7 +79,7 @@ c:\&gt;repadmin /syncall /Ade
 Syncing all NC's held on localhost.
 Syncing partition: DC=&lt;Directory DN path&gt;
 <codeFeaturedElement>CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=&lt;server name&gt;,CN=Servers,CN=&lt;site name&gt;,CN=Sites,CN=Configuration,DC=&lt;forest root domain&gt; (network error): -2146893022 (0x80090322):</codeFeaturedElement>
-</code></listItem><listItem><para>The <ui>Replicate now</ui> command in Active Directory Sites and Services returns "The target principal name is incorrect."</para><para>Right-clicking on the connection object from a source DC and choosing <ui>Replicate now</ui> fails with ""The target principal name is incorrect." The on-screen error message text and screenshot is shown below:</para><para>Dialog title text: Replicate Now</para><para>Dialog message text: </para><para>The following error occurred during the attempt to contact the domain controller &lt;source DC name&gt;:</para><para>The target principal name is incorrect</para></listItem><listItem><para>NTDS KCC, NTDS General or Microsoft-Windows-ActiveDirectory_DomainService events with the -2146893022 status are logged in the Directory Services log in Event Viewer.</para><para>Active Directory events that commonly cite the -2146893022 status include but are not limited to:</para><table xmlns:caps="http://schemas.microsoft.com/build/caps/2013/11"><thead><tr><TD><para>Event ID</para></TD><TD><para>Event Source</para></TD><TD><para>Event String</para></TD></tr></thead><tbody><tr><TD><para>1586</para></TD><TD><para>NTDS Replication</para></TD><TD><para>The Windows NT 4.0 or earlier replication checkpoint with the PDC emulator master was unsuccessful. </para><para>
+</code></listItem><listItem><para>The <ui>Replicate now</ui> command in Active Directory Sites and Services returns "The target principal name is incorrect."</para><para>Right-clicking on the connection object from a source DC and choosing <ui>Replicate now</ui> fails with ""The target principal name is incorrect." The on-screen error message text and screenshot is shown below:</para><para>Dialog title text: Replicate Now</para><para>Dialog message text: </para><para>The following error occurred during the attempt to contact the domain controller &lt;source DC name&gt;:</para><para>The target principal name is incorrect</para></listItem><listItem><para>NTDS KCC, NTDS General or Microsoft-Windows-ActiveDirectory_DomainService events with the -2146893022 status are logged in the Directory Services log in Event Viewer.</para><para>Active Directory events that commonly cite the -2146893022 status include but are not limited to:</para><table xmlns:caps="https://schemas.microsoft.com/build/caps/2013/11"><thead><tr><TD><para>Event ID</para></TD><TD><para>Event Source</para></TD><TD><para>Event String</para></TD></tr></thead><tbody><tr><TD><para>1586</para></TD><TD><para>NTDS Replication</para></TD><TD><para>The Windows NT 4.0 or earlier replication checkpoint with the PDC emulator master was unsuccessful. </para><para>
 
 A full synchronization of the security accounts manager (SAM) database to domain controllers running Windows NT 4.0 and earlier might take place if the PDC emulator master role is transferred to the local domain controller before the next successful checkpoint.</para></TD></tr><tr><TD><para>1925</para></TD><TD><para>NTDS KCC</para></TD><TD><para>The attempt to establish a replication link for the following writable directory partition failed.</para></TD></tr><tr><TD><para>1308</para></TD><TD><para>NTDS KCC</para></TD><TD><para>The Knowledge Consistency Checker (KCC) has detected that successive attempts to replicate with the following domain controller has consistently failed.</para></TD></tr><tr><TD><para>1926</para></TD><TD><para>Microsoft-Windows-ActiveDirectory_DomainService</para></TD><TD><para>The attempt to establish a replication link to a read-only directory partition with the following parameters failed.</para></TD></tr><tr><TD><para>1373</para></TD><TD><para>NTDS Inter-site Messaging</para></TD><TD><para>The Intersite Messaging service could not receive any messages for the following service through the following transport. The query for messages failed.</para></TD></tr></tbody></table></listItem>
 </list>
@@ -157,7 +157,7 @@ A full synchronization of the security accounts manager (SAM) database to domain
           <para>
             <embeddedLabel>Network trace method</embeddedLabel> (as parsed by Network Monitor 3.3.1641 with full default parsers enabled)</para>
           <para>The table below shows a synopsis of network traffic exhibited when destination DC1 inbound replicates Active Directory from source DC2.</para>
-          <table xmlns:caps="http://schemas.microsoft.com/build/caps/2013/11">
+          <table xmlns:caps="https://schemas.microsoft.com/build/caps/2013/11">
             <thead>
               <tr>
                 <TD>
@@ -343,7 +343,7 @@ A full synchronization of the security accounts manager (SAM) database to domain
               </tr>
             </tbody>
           </table>
-          <table xmlns:caps="http://schemas.microsoft.com/build/caps/2013/11">
+          <table xmlns:caps="https://schemas.microsoft.com/build/caps/2013/11">
             <thead>
               <tr>
                 <TD>
@@ -410,7 +410,7 @@ Sname: &lt;verify that the sName in the AP response matches contains the hostnam
             <embeddedLabel>Name to IP mapping verification (without using a network trace)</embeddedLabel>
           </para>
           <para>From the console of the source DC:</para>
-          <table xmlns:caps="http://schemas.microsoft.com/build/caps/2013/11">
+          <table xmlns:caps="https://schemas.microsoft.com/build/caps/2013/11">
             <thead>
               <tr>
                 <TD>
@@ -441,7 +441,7 @@ Sname: &lt;verify that the sName in the AP response matches contains the hostnam
             </tbody>
           </table>
           <para>From the console of the destination DC:</para>
-          <table xmlns:caps="http://schemas.microsoft.com/build/caps/2013/11">
+          <table xmlns:caps="https://schemas.microsoft.com/build/caps/2013/11">
             <thead>
               <tr>
                 <TD>
@@ -608,7 +608,7 @@ Repeat for all DNS Servers IPs configured on destination DC. </para>
           <para>Workflow</para>
           <list class="ordered">
             <listItem>
-              <para>Client Computer calls <externalLink><linkText>IntializeSecurityContext</linkText><linkUri>http://msdn.microsoft.com/en-us/library/aa375506(VS.85).aspx</linkUri></externalLink> and specifies the Negotiate security support provider (SSP).</para>
+              <para>Client Computer calls <externalLink><linkText>IntializeSecurityContext</linkText><linkUri>https://msdn.microsoft.com/en-us/library/aa375506(VS.85).aspx</linkUri></externalLink> and specifies the Negotiate security support provider (SSP).</para>
             </listItem>
             <listItem>
               <para>The client contacts the KDC with its TGT and requests a TGS Ticket for the target DC.</para>
@@ -638,7 +638,7 @@ Repeat for all DNS Servers IPs configured on destination DC. </para>
               <para>If the target DC hosts the RPC server service UUID, then the on-wire Kerberos error "KRB_AP_ERR_NOT_US or KRB_AP_ERR_MODIFIED gets remapped to -2146893022 decimal / 0x80090322 / SEC_E_WRONG_PRINCIPAL / "The target principal name is incorrect."</para>
             </listItem>
           </list>
-          <para>See the <externalLink><linkText>Troubleshooting Kerberos Errors</linkText><linkUri>http://www.microsoft.com/download/en/details.aspx?displaylang=en&amp;id=21820</linkUri></externalLink> white paper for additional information</para>
+          <para>See the <externalLink><linkText>Troubleshooting Kerberos Errors</linkText><linkUri>https://www.microsoft.com/download/en/details.aspx?displaylang=en&amp;id=21820</linkUri></externalLink> white paper for additional information</para>
         </content>
       </section>
     </sections>
@@ -646,13 +646,13 @@ Repeat for all DNS Servers IPs configured on destination DC. </para>
   <relatedTopics>
     <externalLink>
       <linkText>Troubleshooting Active Directory operations that fail with error -2146893022: The target principal name is incorrect.</linkText>
-      <linkUri>http://support.microsoft.com/kb/2090913</linkUri>
+      <linkUri>https://support.microsoft.com/kb/2090913</linkUri>
     </externalLink>
     <externalLink>
       <linkText>How the Active Directory Replication Model Works</linkText>
-      <linkUri>http://technet.microsoft.com/library/cc772726(WS.10).aspx</linkUri>
+      <linkUri>https://technet.microsoft.com/library/cc772726(WS.10).aspx</linkUri>
     </externalLink>
-<externalLink><linkText>repsFrom, RepsFrom</linkText><linkUri>http://msdn.microsoft.com/library/cc228409(PROT.13).aspx</linkUri></externalLink></relatedTopics>
+<externalLink><linkText>repsFrom, RepsFrom</linkText><linkUri>https://msdn.microsoft.com/library/cc228409(PROT.13).aspx</linkUri></externalLink></relatedTopics>
 </developerConceptualDocument>
 
 

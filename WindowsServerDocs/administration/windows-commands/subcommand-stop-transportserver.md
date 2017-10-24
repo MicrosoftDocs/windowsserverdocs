@@ -1,6 +1,6 @@
 ---
 title: Subcommand stop-TransportServer
-description "Windows Commands topic for **** - "
+description: Windows Commands topic for stop-TransportServer
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

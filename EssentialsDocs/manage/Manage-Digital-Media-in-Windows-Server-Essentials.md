@@ -21,7 +21,7 @@ manager: dongill
 The following topics discuss the media streaming features of your server, and explain how to set up and use media streaming on your network.  
   
 > [!NOTE]
->  By default, the media streaming functionality is unavailable in  Windows Server Essentials and  Windows Server 2012 R2 with the  Windows Server Essentials Experience role installed. To add the media streaming functionality in these versions, [download and install the Windows Server Essentials Media Pack](http://www.microsoft.com/download/details.aspx?id=40837) from the Microsoft Download Center.  
+>  By default, the media streaming functionality is unavailable in  Windows Server Essentials and  Windows Server 2012 R2 with the  Windows Server Essentials Experience role installed. To add the media streaming functionality in these versions, [download and install the Windows Server Essentials Media Pack](https://www.microsoft.com/download/details.aspx?id=40837) from the Microsoft Download Center.  
   
 -   [Digital media overview](Manage-Digital-Media-in-Windows-Server-Essentials.md#BKMK_1)  
   
@@ -48,7 +48,7 @@ The following topics discuss the media streaming features of your server, and ex
 ##  <a name="BKMK_1"></a> Digital media overview  
  Digital media refers to audio, video, and photo content that has been encoded (digitally compressed). Encoding content involves converting audio and video input to a digital media file such as a Windows Media file. After digital media is encoded, it can be easily manipulated, distributed, and played by computers, and it is easily transmitted over computer networks.  
   
- Examples of digital media types include: Windows Media Audio (WMA), Windows Media Video (WMV), MP3, JPEG, and AVI. For information about the digital media types that are supported by Windows Media Player, see [File types supported by Windows Media Player](http://support.microsoft.com/kb/316992).  
+ Examples of digital media types include: Windows Media Audio (WMA), Windows Media Video (WMV), MP3, JPEG, and AVI. For information about the digital media types that are supported by Windows Media Player, see [File types supported by Windows Media Player](https://support.microsoft.com/kb/316992).  
   
 ### Why would I want to stream my digital media?  
  Many people store music, video, and pictures in shared folders in  Windows Server Essentials. There may be times when you want to do the following:  
@@ -103,7 +103,7 @@ The following topics discuss the media streaming features of your server, and ex
 ##  <a name="BKMK_4"></a> Turn media streaming on or off  
  You can share music, videos, and pictures from  Windows Server Essentials by streaming files to any supported digital media receiver (DMR) such as computers, mobile phones, televisions, digital media receivers, extenders for Windows Media Center (including Xbox 360), and other personal electronic devices.  
   
- For a current list of digital media devices that are compatible with  Windows Server Essentials, see the [Windows Compatibility Center](http://www.microsoft.com/windows/compatibility/CompatCenter/Home).  
+ For a current list of digital media devices that are compatible with  Windows Server Essentials, see the [Windows Compatibility Center](https://www.microsoft.com/windows/compatibility/CompatCenter/Home).  
   
 ### Enabling media sharing  
  To share the media that is stored in  Windows Server Essentials, you need to turn on media streaming. Media streaming is turned off by default.  
@@ -122,7 +122,7 @@ The following topics discuss the media streaming features of your server, and ex
   
 4.  Click **OK** to save your changes.  
   
- For information about the digital media types supported by Windows Media Player, see [File types supported by Windows Media Player](http://support.microsoft.com/kb/316992).  
+ For information about the digital media types supported by Windows Media Player, see [File types supported by Windows Media Player](https://support.microsoft.com/kb/316992).  
   
  For more information, see [Allow or restrict access to a media library on the server](Manage-Digital-Media-in-Windows-Server-Essentials.md#BKMK_6).  
   
@@ -146,7 +146,7 @@ The following topics discuss the media streaming features of your server, and ex
   
 ##  <a name="BKMK_6"></a> Allow or restrict access to a media library on the server  
   
--   When you turn on media sharing, it creates four predefined folders: Music, Pictures, Videos, and Recorded TV. If any of these folders preexists on the server, the existing folder is reused as a shared folder for media sharing. All the existing folder „¢s media content and user permissions are preserved, and they are shared with all network users.  
+-   When you turn on media sharing, it creates four predefined folders: Music, Pictures, Videos, and Recorded TV. If any of these folders preexists on the server, the existing folder is reused as a shared folder for media sharing. All the existing folder ï¿½ï¿½s media content and user permissions are preserved, and they are shared with all network users.  
   
 -   Before you turn on Media Library Sharing for a shared folder, you should know that Media Library Sharing bypasses any type of user-account access that you set for the shared folder. For example, let's say that you turn on Media Library Sharing for the **Photos** shared folder, and you set the **Photos** shared folder to **No Access** for a user account named Bobby. Bobby can still stream any digital media from the **Videos** shared folder to any supported digital media player or DMR. If you have digital media that you do not want to stream in this manner, store the files in a folder that does not have Media Library Sharing turned on.  
   
@@ -199,7 +199,7 @@ The following topics discuss the media streaming features of your server, and ex
   
  The format and bit rate chosen for transcoding is highly dependent on the performance of the server processor. The processor performance is identified as part of the Windows Experience Index. To determine the performance score of your server, do one of the following:  
   
--   On a network computer running Windows 7 or Windows 8 that has the same processor as your server, go to the **Control Panel**, click **Performance Information and Tools**, and then review the information on the **Rate and improve your computer „¢s performance** page.  
+-   On a network computer running Windows 7 or Windows 8 that has the same processor as your server, go to the **Control Panel**, click **Performance Information and Tools**, and then review the information on the **Rate and improve your computer ï¿½ï¿½s performance** page.  
   
 -   Contact the manufacturer of the processor.  
   
@@ -241,7 +241,7 @@ The following topics discuss the media streaming features of your server, and ex
 > [!NOTE]
 >  If you cannot use a file type that is listed in this table, the file may also be encoded with a codec that is not supported by Windows Media Player.  
   
- For additional information about supported file formats, see [File types supported by Windows Media Player](http://go.microsoft.com/fwlink/p/?LinkID=196118) and [Supported media formats, protocols, and log fields](http://go.microsoft.com/fwlink/p/?LinkId=203339) for Silverlight.  
+ For additional information about supported file formats, see [File types supported by Windows Media Player](https://go.microsoft.com/fwlink/p/?LinkID=196118) and [Supported media formats, protocols, and log fields](https://go.microsoft.com/fwlink/p/?LinkId=203339) for Silverlight.  
   
 ## See also  
   

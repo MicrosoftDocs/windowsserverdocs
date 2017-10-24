@@ -23,9 +23,9 @@ This document includes information that is specific to hosters who intend to dep
 ## What is Windows Server Essentials?  
  Windows Server Essentials is a cross-premises small business solution, which incorporates best-of-breed, 64-bit product technologies to deliver a server environment well suited for the vast majority of small businesses. The following technologies are included in Windows Server Essentials.  
   
- **Server Operating System:** Windows Server 2012 product technologies provide the core of Windows Server Essentials. For more information, visit the [Windows Server 2012 website](http://www.microsoft.com/en-us/server-cloud/products/windows-server-2012-r2/default.aspx#fbid=ZH0GD_CRAWh).  
+ **Server Operating System:** Windows Server 2012 product technologies provide the core of Windows Server Essentials. For more information, visit the [Windows Server 2012 website](https://www.microsoft.com/en-us/server-cloud/products/windows-server-2012-r2/default.aspx#fbid=ZH0GD_CRAWh).  
   
- **Data Protection:** Windows Server Essentials leverages several new features available in Windows Server 2012 to provide greatly improved data protection capabilities. The [new Storage Spaces feature](http://technet.microsoft.com/library/hh831739.aspx) allows you to aggregate the physical storage capacity of disparate hard drives, dynamically add hard drives, and create data volumes with specified levels of resilience. Windows Server Essentials can perform complete system backups and bare-metal restores of the server itself as well as the client computers connected to the network ?now with support for volumes larger than 2 TB. New with Windows Server 2012, the [Windows Azure Online Backup](http://technet.microsoft.com/library/hh831419.aspx) can be used to protect files and folders in a cloud-based storage service that is managed by Microsoft. Windows Server Essentials also centrally manages and configures the File History feature of Windows 8.1 clients, helping users to recover from accidentally deleted or overwritten files without requiring administrator assistance.  
+ **Data Protection:** Windows Server Essentials leverages several new features available in Windows Server 2012 to provide greatly improved data protection capabilities. The [new Storage Spaces feature](https://technet.microsoft.com/library/hh831739.aspx) allows you to aggregate the physical storage capacity of disparate hard drives, dynamically add hard drives, and create data volumes with specified levels of resilience. Windows Server Essentials can perform complete system backups and bare-metal restores of the server itself as well as the client computers connected to the network ?now with support for volumes larger than 2 TB. New with Windows Server 2012, the [Windows Azure Online Backup](https://technet.microsoft.com/library/hh831419.aspx) can be used to protect files and folders in a cloud-based storage service that is managed by Microsoft. Windows Server Essentials also centrally manages and configures the File History feature of Windows 8.1 clients, helping users to recover from accidentally deleted or overwritten files without requiring administrator assistance.  
   
  **Anywhere Access:** Remote Web Access provides a streamlined, touch-friendly browser experience for accessing applications and data from virtually anywhere you have an Internet connection and using almost any device. Windows Server Essentials also provides an updated Windows Phone app and a new app for Windows 8.1 client computers, allowing users to intuitively connect to, search across, and access files and folders on the server. Files are also automatically cached for offline access and synchronized when a connection to the server becomes available. Windows Server Essentials turns setting up virtual private networking (VPN) into a painless, wizard-driven process of just a few clicks, and simplifies the management of VPN access for users. Client computers can leverage a VPN connection to remotely join the Windows SBS environment without the need to commute to the office.  
   
@@ -33,10 +33,10 @@ This document includes information that is specific to hosters who intend to dep
   
  **Health Monitoring:** Windows Server Essentials monitors its own health status and the status of client computers running Windows 8.1, Windows 7, and Mac OS X version 10.5 and later. Health status notifies you of issues or problems related to computer backups, server storage, low disk space, and more.  
   
- **Extensibility:** Windows Server Essentials builds on the extensibility model of Windows SBS 2011 Essentials, which allows other software vendors to add capabilities and features to the core product, and adds a new set of web services APIs. It also maintains compatibility with the existing [software development kit](http://msdn.microsoft.com/library/gg513958.aspx) (SDK) and [add-ins](http://pinpoint.microsoft.com/applications/search?fpt=300105&q=small+business+server+essentials) created for Windows SBS 2011 Essentials.  
+ **Extensibility:** Windows Server Essentials builds on the extensibility model of Windows SBS 2011 Essentials, which allows other software vendors to add capabilities and features to the core product, and adds a new set of web services APIs. It also maintains compatibility with the existing [software development kit](https://msdn.microsoft.com/library/gg513958.aspx) (SDK) and [add-ins](https://pinpoint.microsoft.com/applications/search?fpt=300105&q=small+business+server+essentials) created for Windows SBS 2011 Essentials.  
   
 ## How can I customize an image?  
- Refer to the [Windows Server Essentials](http://go.microsoft.com/fwlink/p/?LinkID=249124), which is a standard Windows Server sysprep process with additional Windows Server Essentials customization steps. To finish the customization, follow the instructions in [Create a Simple Customized Image](http://technet.microsoft.com/en-us/library/jj200117) and [Customize the Image](http://technet.microsoft.com/en-us/library/jj200161), and then follow the instructions in [Preparing the Image for Deployment](http://technet.microsoft.com/en-us/library/jj200142) to capture your final image.  
+ Refer to the [Windows Server Essentials](https://go.microsoft.com/fwlink/p/?LinkID=249124), which is a standard Windows Server sysprep process with additional Windows Server Essentials customization steps. To finish the customization, follow the instructions in [Create a Simple Customized Image](https://technet.microsoft.com/en-us/library/jj200117) and [Customize the Image](https://technet.microsoft.com/en-us/library/jj200161), and then follow the instructions in [Preparing the Image for Deployment](https://technet.microsoft.com/en-us/library/jj200142) to capture your final image.  
   
  You should pay attention to the following points:  
   
@@ -57,7 +57,7 @@ This document includes information that is specific to hosters who intend to dep
   
 1.  Perform only unattended WinPE setup. This will automate only the WinPE setup, and let the installation stop before Initial Configuration so that end users can provide Corp, Domain, and Administrator information by themselves after RDP into server session. To do this:  
   
-    1.  Provide the Windows unattend.xml file. Follow the [Windows 8.1 ADK](http://go.microsoft.com/fwlink/?LinkId=248694) to generate the file, and provide all necessary information including server name, product keys, and administrator password. In the Microsoft-Windows-Setup section of the unattend.xml file, provide the information as below.  
+    1.  Provide the Windows unattend.xml file. Follow the [Windows 8.1 ADK](https://go.microsoft.com/fwlink/?LinkId=248694) to generate the file, and provide all necessary information including server name, product keys, and administrator password. In the Microsoft-Windows-Setup section of the unattend.xml file, provide the information as below.  
   
         ```  
         <InstallFrom>  
@@ -83,7 +83,7 @@ This document includes information that is specific to hosters who intend to dep
   
     1.  Provide the unattend.xml file as you did above, if the deployment starts from WinPE setup.  
   
-    2.  Refer to the Windows Server Essentials ADK section entitled, [Create the Cfg.ini File](http://technet.microsoft.com/en-us/library/jj200150), to generate the cfg.ini.  
+    2.  Refer to the Windows Server Essentials ADK section entitled, [Create the Cfg.ini File](https://technet.microsoft.com/en-us/library/jj200150), to generate the cfg.ini.  
   
     3.  Provide information in [InitialConfiguration].  
   
@@ -254,7 +254,7 @@ $Add-WssFolder -Name "MyTestFolder" -Path "C:\ServerFolders\MyTestFolder"
  Windows Server Essentials supports integration with two email solutions out of the box: Office 365 and on-premises Exchange. If you are running your own hosted email solution, you will need to develop an add-in to integrate Windows Server Essentials with your hosted email solution.  
   
 ## How do I migrate on-premises Windows SBS (2011/2008/2003) to the hosted Windows Server Essentials?  
- Migration guides are available for on-premises Windows Small Business Server (Windows SBS) to Windows Server Essentials migrations. Some of the steps may not apply exactly the same to your hosted environment. However, the general tasks and the workloads to be migrated should be the same. We recommend that you refer to the [migration guides](http://go.microsoft.com/fwlink/p/?LinkID=254292) and make necessary customizations based on your hosting environment.  
+ Migration guides are available for on-premises Windows Small Business Server (Windows SBS) to Windows Server Essentials migrations. Some of the steps may not apply exactly the same to your hosted environment. However, the general tasks and the workloads to be migrated should be the same. We recommend that you refer to the [migration guides](https://go.microsoft.com/fwlink/p/?LinkID=254292) and make necessary customizations based on your hosting environment.  
   
  It is recommended that you put the source server and the destination server in the same subnet. If this is not possible, you should make sure that:  
   
@@ -263,7 +263,7 @@ $Add-WssFolder -Name "MyTestFolder" -Path "C:\ServerFolders\MyTestFolder"
 -   All the necessary ports are open.  
   
 ## How can I upgrade Windows Server Essentials to Windows Server Standard?  
- You can upgrade Windows Server Essentials to Windows Server Standard. Remove locks and limits, and add the packages that are missing from Windows Server Standard. For more information, [download the document](http://go.microsoft.com/fwlink/p/?LinkID=253181).  
+ You can upgrade Windows Server Essentials to Windows Server Standard. Remove locks and limits, and add the packages that are missing from Windows Server Standard. For more information, [download the document](https://go.microsoft.com/fwlink/p/?LinkID=253181).  
   
 ## What are the native tools for monitoring and management?  
   
@@ -303,13 +303,13 @@ $Add-WssFolder -Name "MyTestFolder" -Path "C:\ServerFolders\MyTestFolder"
   
  **On-premises backup** allows you to perform block-level incremental backup on a regular basis to a separate disk. As a hoster, you could attach a virtual disk to the Windows Server Essentials VM and configure server backup to this virtual disk. The virtual disk should be located on a different physical disk than the Windows Server Essentials VM.  
   
--   If you have another mechanism to back up the Windows Server Essentials VM, and you do not want your user to see the Windows Server Essentials native Server Backup feature, you could turn it off and remove all related user interface from the Windows Server Essentials Dashboard. For more information, refer to the Customize Server Backup section of the [ADK document](http://go.microsoft.com/fwlink/p/?LinkID=249124).  
+-   If you have another mechanism to back up the Windows Server Essentials VM, and you do not want your user to see the Windows Server Essentials native Server Backup feature, you could turn it off and remove all related user interface from the Windows Server Essentials Dashboard. For more information, refer to the Customize Server Backup section of the [ADK document](https://go.microsoft.com/fwlink/p/?LinkID=249124).  
   
  **Off-premises backup** allows you to periodically back up server data to a cloud service. You can download and install the  Microsoft Azure Backup Integration Module for Windows Server Essentials to leverage the  Azure Backup provided by Microsoft.  
   
  If you or your users prefer another cloud service, you should:  
   
-1.  Update the user interface of the Windows Server Essentials Dashboard so that it provides a link to your preferred cloud service, instead of the default  Azure Backup. For more information, refer to the Customize the Image section of the [ADK document](http://go.microsoft.com/fwlink/p/?LinkID=249124).  
+1.  Update the user interface of the Windows Server Essentials Dashboard so that it provides a link to your preferred cloud service, instead of the default  Azure Backup. For more information, refer to the Customize the Image section of the [ADK document](https://go.microsoft.com/fwlink/p/?LinkID=249124).  
   
 2.  (Optional) Develop an add-in for Windows Server Essentials Dashboard to configure and manage the cloud backup service.  
   
@@ -319,7 +319,7 @@ $Add-WssFolder -Name "MyTestFolder" -Path "C:\ServerFolders\MyTestFolder"
 > [!NOTE]
 >  Backing up the client might impact performance because the data needs to be transferred from the client to the server over VPN.  
   
- **Full client backup** is by default on for all the client devices connected to the Windows Server Essentials network. It backs up the full client (system and data) incrementally and supports data deduplication. The backup data will be on the server running Windows Server Essentials. A failed client can get its data back to a previous backup point. You could turn this feature off by following the steps in the Create the Cfg.ini File section of the [ADK document](http://technet.microsoft.com/en-us/library/jj200150).  
+ **Full client backup** is by default on for all the client devices connected to the Windows Server Essentials network. It backs up the full client (system and data) incrementally and supports data deduplication. The backup data will be on the server running Windows Server Essentials. A failed client can get its data back to a previous backup point. You could turn this feature off by following the steps in the Create the Cfg.ini File section of the [ADK document](https://technet.microsoft.com/en-us/library/jj200150).  
   
  Some considerations for full client backup are:  
   
@@ -333,10 +333,10 @@ $Add-WssFolder -Name "MyTestFolder" -Path "C:\ServerFolders\MyTestFolder"
   
 -   Client Bare Metal Restore: because Windows Preinstall Environment does not support VPN connection, Client Bare Metal Restore is not supported.  
   
- **File History** is a Windows 8.1 feature for backing up profile data (Libraries, Desktop, Contacts, Favorites) to a network share. In Windows Server Essentials, we allow central management of the File History setting of all the Windows 8.1 clients joined to Windows Server Essentials. The backup data is stored on the server running Windows Server Essentials. You can turn this feature off by following the steps in the Create the Cfg.ini File section of the [ADK document](http://technet.microsoft.com/en-us/library/jj200150).  
+ **File History** is a Windows 8.1 feature for backing up profile data (Libraries, Desktop, Contacts, Favorites) to a network share. In Windows Server Essentials, we allow central management of the File History setting of all the Windows 8.1 clients joined to Windows Server Essentials. The backup data is stored on the server running Windows Server Essentials. You can turn this feature off by following the steps in the Create the Cfg.ini File section of the [ADK document](https://technet.microsoft.com/en-us/library/jj200150).  
   
 ### Storage management  
- The [new Storage Spaces feature](http://technet.microsoft.com/library/hh831739.aspx) allows you to aggregate the physical storage capacity of disparate hard drives, dynamically add hard drives, and create data volumes with specified levels of resilience. You can also attach an iSCSI disk to Windows Server Essentials to expand its storage.  
+ The [new Storage Spaces feature](https://technet.microsoft.com/library/hh831739.aspx) allows you to aggregate the physical storage capacity of disparate hard drives, dynamically add hard drives, and create data volumes with specified levels of resilience. You can also attach an iSCSI disk to Windows Server Essentials to expand its storage.  
   
 ## What are the main scenarios I should test?  
  From the hosting perspective, it is recommended that you test the following scenarios:  
@@ -396,8 +396,8 @@ $Add-WssFolder -Name "MyTestFolder" -Path "C:\ServerFolders\MyTestFolder"
 ## Where can I get more support?  
  You can get SDK and ADK documents from the links below:  
   
--   [SDK](http://go.microsoft.com/fwlink/p/?LinkID=248648)  
+-   [SDK](https://go.microsoft.com/fwlink/p/?LinkID=248648)  
   
--   [ADK](http://go.microsoft.com/fwlink/p/?LinkID=249124)  
+-   [ADK](https://go.microsoft.com/fwlink/p/?LinkID=249124)  
   
  You can report a bug to the feature team through Connect. To generate logs, zip the folder on both the server and the clients joining the server: C:\ProgramData\Microsoft\Windows Server\Logs.

@@ -134,14 +134,15 @@ If using the Disk Management MMC snapin, you receive this error:
 
 This occurs even if you correctly enable volume resizing on the source server using `Set-SRGroup -Name rg01 -AllowVolumeResize $TRUE`. 
 
-This issue was fixed in Cumulative Update for Windows 10 Version 1607 and Windows Server 2016: December 9, 2016 (KB3201845). 
+This issue was fixed in Cumulative Update for Windows 10, version 1607 (Anniversary Update) and Windows Server 2016: December 9, 2016 (KB3201845). 
 
 ## Attempting to grow a replicated volume fails due to missing step
 If you attempt to resize a replicated volume on the source server without setting `-AllowResizeVolume $TRUE` first, you will receive the following errors:
 
     PS C:\> Resize-Partition -DriveLetter I -Size 8GB
     Resize-Partition : Failed
-    Activity ID: {87aebbd6-4f47-4621-8aa4-5328dfa6c3be}
+
+Activity ID: {87aebbd6-4f47-4621-8aa4-5328dfa6c3be}
     At line:1 char:1
     + Resize-Partition -DriveLetter I -Size 8GB
     + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -193,6 +194,8 @@ If using the Cluster powershell cmdlet:
 
 This occurs due to a by-design behavior in Windows Server 2016. Use `Set-SRPartnership` to move these PDR disks in an asynchronous stretched cluster.  
 
+This behavior has been changed in Windows Server, version 1709 to allow manual and automated failovers with asynchronous replication, based on customer feedback.
+
 ## Attempting to add disks to a two-node asymmetric cluster returns "No disks suitable for cluster disks found" 
 When attempting to provision a cluster with only two nodes, prior to adding Storage Replica stretch replication, you attempt to add the disks in the second site to the Available Disks. You recieve the following error:
 
@@ -211,7 +214,7 @@ When specifying a bandwidth limit to Storage Replica, the limit is ignored and f
 
 `Set-SmbBandwidthLimit  -Category StorageReplication -BytesPerSecond 32MB`
 
-This issue occurs because of an interoperability issue between Storage Replica and SMB. This issue was first fixed in the July 2017 Cumulative Update of Windows Server 2016 and in Windows Server, Version 1709.
+This issue occurs because of an interoperability issue between Storage Replica and SMB. This issue was first fixed in the July 2017 Cumulative Update of Windows Server 2016 and in Windows Server, version 1709.
 
 ## Event 1241 warning repeated during initial sync
 When specifying a replication partnership is asynchronous, the source computer repeatedly logs warning event 1241 in the Storage Replica Admin channel. For example:
@@ -346,6 +349,22 @@ When running the Disk Management snap-in (DISKMGMT.MSC), you notice one or more 
 This behavior is by design. This not a volume, but a partition. Storage Replica creates a 512KB partition as a database slot for replication operations (the legacy DiskMgmt.msc tool rounds to the nearest MB). Having a partition like this for each replicated volume is normal and desirable. When no longer in use, you are free to delete this 512KB partition; in-use ones cannot be deleted. The partition will never grow or shrink. If you are recreating replication we recommend leaving the partition as Storage Replica will claim unused ones.
 
 To view details, use the DISKPART tool or Get-Partition cmdlet. These partitions will have a GPT Type of `558d43c5-a1ac-43c0-aac8-d1472b2923d1`. 
+
+## A Storage Replica node hangs when creating snapshots
+When creating a VSS snapshot (through backup, VSSADMIN, etc) a Storage Replica node hangs, and you must force a restart of the node to recover. There is no error, just a hard hang of the server.
+
+This issue occurs when you create a VSS snapshot of the log volume. The underlying cause is a legacy design aspect of VSS, not Storage Replica. The resulting behavior when you snapshot the Storage Replica log volume is a VSS I/O queing mechanism deadlocks the server.
+
+To prevent this behavior, do not snapshot Storage Replica log volumes. There is no need to snapshot Storage Replica log volumes, as these logs cannot be restored. Furthermore, the log volume should never contain any other workloads, so no snapshot is needed in general.
+
+## High IO latency increase when using Storage Spaces Direct with Storage Replica  
+When using Storage Spaces Direct with an NVME or SSD cache, you see a greater than expected increase in latency when configuring Storage Replica replication between Storage Spaces Direct clusters. The change in latency is proprtionally much higher than you see when using NVME and SSD in a performance + capacity configuration and no HDD tier nor capacity tier.
+
+This issue occurs due to architectural limitations within Storage Replica's log mechanism combined with the extremely low latency of NVME when compared to slower media. When using the Storage Spaces Direct cache, all I/O of Storage Replica logs, along with all recent read/write IO of applications, will occur in the cache and never on the performance or capacity tiers. This means that all Storage Replica activity happens on the same speed media - this configuration is not supported not recommended (see https://aka.ms/srfaq for log recommendations). 
+
+When using Storage Spaces Direct with HDDs, you cannot disable or avoid the cache. As a workaround, if using just SSD and NVME, you can configure just performance and capacity tiers. If using that configuration, and by placing the SR logs on the performance tier only with the data volumes they service being on the capacity tier only, you will avoid the high latency issue described above. The same could be done with a mix of faster and slower SSDs and no NVME.
+
+This workaround is of course not ideal and some customers may not be able to make use of it. The Storage Replica team is working on optimizations and an updated log mechanism for the future to reduce these artifical bottlenecks. There is no ETA for this, but when available to TAP customers for testing, this FAQ will be updated. 
 
 ## See also  
 - [Storage Replica](storage-replica-overview.md)  

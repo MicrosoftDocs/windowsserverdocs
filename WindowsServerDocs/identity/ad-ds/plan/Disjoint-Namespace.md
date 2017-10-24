@@ -69,7 +69,7 @@ Using a disjoint namespace can have the following disadvantages:
 -   To optimize name resolution, you must perform manual steps to modify and maintain Group Policy to configure member computers with alternate primary DNS suffixes.  
   
     > [!NOTE]  
-    > The Windows Internet Name Service (WINS) could be used to offset this disadvantage by resolving single-label names. For more information about WINS, see the WINS Technical Reference ([http://go.microsoft.com/fwlink/?LinkId=102303](http://go.microsoft.com/fwlink/?LinkId=102303)).  
+    > The Windows Internet Name Service (WINS) could be used to offset this disadvantage by resolving single-label names. For more information about WINS, see the WINS Technical Reference ([https://go.microsoft.com/fwlink/?LinkId=102303](https://go.microsoft.com/fwlink/?LinkId=102303)).  
   
 -   When your environment requires multiple primary DNS suffixes, you must configure the DNS suffix search order for all of the Active Directory domains in the forest appropriately.  
   
@@ -77,25 +77,25 @@ Using a disjoint namespace can have the following disadvantages:
   
 -   You must carefully test all applications for compatibility issues.  
   
-For more information about steps that you can take to address these disadvantages, see Create a Disjoint Namespace ([http://go.microsoft.com/fwlink/?LinkId=106638](http://go.microsoft.com/fwlink/?LinkId=106638)).  
+For more information about steps that you can take to address these disadvantages, see Create a Disjoint Namespace ([https://go.microsoft.com/fwlink/?LinkId=106638](https://go.microsoft.com/fwlink/?LinkId=106638)).  
   
 ### Planning a namespace transition  
 Before you modify a namespace, review the following considerations, which apply to transitions from contiguous namespaces to disjoint namespaces (or the reverse):  
   
 -   Manually configured Service Principal Names (SPNs) may no longer match DNS names after a namespace change. This can cause authentication failures.  
   
-    For more information, see Service Logons Fail Due to Incorrectly Set SPNs ([http://go.microsoft.com/fwlink/?LinkId=102304](http://go.microsoft.com/fwlink/?LinkId=102304)).  
+    For more information, see Service Logons Fail Due to Incorrectly Set SPNs ([https://go.microsoft.com/fwlink/?LinkId=102304](https://go.microsoft.com/fwlink/?LinkId=102304)).  
   
-    -   If you use Windows Server 2003-based computers with constrained delegation, those computers may require additional configuration to change SPNs. For more information, see article 936628 in the Microsoft Knowledge Base ([http://go.microsoft.com/fwlink/?LinkId=102306](http://go.microsoft.com/fwlink/?LinkId=102306)).  
+    -   If you use Windows Server 2003-based computers with constrained delegation, those computers may require additional configuration to change SPNs. For more information, see article 936628 in the Microsoft Knowledge Base ([https://go.microsoft.com/fwlink/?LinkId=102306](https://go.microsoft.com/fwlink/?LinkId=102306)).  
   
-    -   If you want to delegate permissions to modify SPNs to subordinate administrators, see Delegating Authority to Modify SPNs ([http://go.microsoft.com/fwlink/?LinkId=106639](http://go.microsoft.com/fwlink/?LinkId=106639)).  
+    -   If you want to delegate permissions to modify SPNs to subordinate administrators, see Delegating Authority to Modify SPNs ([https://go.microsoft.com/fwlink/?LinkId=106639](https://go.microsoft.com/fwlink/?LinkId=106639)).  
   
 -   If you use Lightweight Directory Access Protocol (LDAP) over Secure Sockets Layer (SSL) (known as LDAPS) with a CA in a deployment that has domain controllers that are configured in a disjoint namespace, you must use the appropriate Active Directory domain name and primary DNS suffix when you configure the LDAPS certificates.  
   
-    For more information about domain controller certificate requirements, see article 321051 in the Microsoft Knowledge Base ([http://go.microsoft.com/fwlink/?LinkId=102307](http://go.microsoft.com/fwlink/?LinkId=102307)).  
+    For more information about domain controller certificate requirements, see article 321051 in the Microsoft Knowledge Base ([https://go.microsoft.com/fwlink/?LinkId=102307](https://go.microsoft.com/fwlink/?LinkId=102307)).  
   
     > [!NOTE]  
-    > Domain controllers that use certificates for LDAPS may require you to redeploy their certificates. When you do so, domain controllers may not select an appropriate certificate until they are restarted. For more information about LDAPS authentication and a related update for Windows Server 2003, see article 932834 in the Microsoft Knowledge Base ([http://go.microsoft.com/fwlink/?LinkId=102308](http://go.microsoft.com/fwlink/?LinkId=102308)).  
+    > Domain controllers that use certificates for LDAPS may require you to redeploy their certificates. When you do so, domain controllers may not select an appropriate certificate until they are restarted. For more information about LDAPS authentication and a related update for Windows Server 2003, see article 932834 in the Microsoft Knowledge Base ([https://go.microsoft.com/fwlink/?LinkId=102308](https://go.microsoft.com/fwlink/?LinkId=102308)).  
   
 ### Planning for disjoint namespace deployments  
 Take the following precautions if you deploy computers in an environment that has a disjoint namespace:  

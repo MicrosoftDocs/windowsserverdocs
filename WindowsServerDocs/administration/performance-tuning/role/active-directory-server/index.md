@@ -20,10 +20,10 @@ This requires proper attention to three separate areas:
 - Active Directory client/application tuning – ensuring that clients and applications are using Active Directory in an optimal fashion
 
 ## Start with capacity planning
-Properly deploying a sufficient number of domain controllers, in the right domain, in the right locales, and to accommodate redundancy is critical to ensuring servicing client requests in a timely fashion. This is an in-depth topic and outside of the scope of this guide. Readers readers are encouraged start to their Active Directory performance tuning by reading and undestanding the recommendations and guidance found in [Capacity Planning for Active Directory Domain Services](http://go.microsoft.com/fwlink/?LinkId=324566).
+Properly deploying a sufficient number of domain controllers, in the right domain, in the right locales, and to accommodate redundancy is critical to ensuring servicing client requests in a timely fashion. This is an in-depth topic and outside of the scope of this guide. Readers readers are encouraged start to their Active Directory performance tuning by reading and undestanding the recommendations and guidance found in [Capacity Planning for Active Directory Domain Services](https://go.microsoft.com/fwlink/?LinkId=324566).
 
 >[!Important]
-> Proper configuration and sizing of Active Directory has a significant potential impact on overall system and workload performance. Readers are highly encouraged to start by reading [Capacity Planning for Active Directory Domain Services](http://go.microsoft.com/fwlink/?LinkId=324566).
+> Proper configuration and sizing of Active Directory has a significant potential impact on overall system and workload performance. Readers are highly encouraged to start by reading [Capacity Planning for Active Directory Domain Services](https://go.microsoft.com/fwlink/?LinkId=324566).
 
 ## Updates and evolving recommendations
 
@@ -42,4 +42,4 @@ We encourage you to stay up to date on the lastest news, guidance and best pract
 - [LDAP considerations](ldap-considerations.md)
 - [Proper placement of domain controllers and site considerations](site-definition-considerations.md)
 - [Troubleshooting ADDS performance](troubleshoot.md) 
-- [Capacity Planning for Active Directory Domain Services](http://go.microsoft.com/fwlink/?LinkId=324566)
+- [Capacity Planning for Active Directory Domain Services](https://go.microsoft.com/fwlink/?LinkId=324566)

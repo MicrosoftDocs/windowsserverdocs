@@ -120,4 +120,4 @@ format a: /v:DATA
 
 #### Additional references
 
-[Command-Line Syntax Key](http://technet.microsoft.com/library/cc771080.aspx)
+[Command-Line Syntax Key](https://technet.microsoft.com/library/cc771080.aspx)

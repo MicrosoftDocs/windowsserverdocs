@@ -87,11 +87,11 @@ A non-password protected backup is taken if the ConvertTo-SecureString function 
 |**Restore-CARoleService C:\ADCSBack14 -Password (Read-Host -Prompt "Password:" -AsSecureString)**|Restore-CARoleService : The system cannot find the file specified. (Exception from HRESULT: 0x80070002)|The path specified does not contain a valid database backup.  Perhaps the path is invalid or the backup was taken with the -KeysOnly option?|  
   
 ## Additional Resources  
-[Active Directory Certificate Services Migration Guide](http://technet.microsoft.com/library/ee126170(v=ws.10).aspx)  
+[Active Directory Certificate Services Migration Guide](https://technet.microsoft.com/library/ee126170(v=ws.10).aspx)  
   
-[Backing up a CA database and private key](http://technet.microsoft.com/library/ee126140(v=ws.10).aspx#BKMK_BackUpDB)  
+[Backing up a CA database and private key](https://technet.microsoft.com/library/ee126140(v=ws.10).aspx#BKMK_BackUpDB)  
   
-[Restoring the CA database and configuration on the destination server](http://technet.microsoft.com/library/ee126140(v=ws.10).aspx#BKMK_RestoreCA)  
+[Restoring the CA database and configuration on the destination server](https://technet.microsoft.com/library/ee126140(v=ws.10).aspx#BKMK_RestoreCA)  
   
 ## Try This: Backup the CA in your lab using Windows PowerShell  
   

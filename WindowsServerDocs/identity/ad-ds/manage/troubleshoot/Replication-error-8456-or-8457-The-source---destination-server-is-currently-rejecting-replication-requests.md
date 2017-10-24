@@ -17,7 +17,7 @@ ms.technology: identity-adds
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 
-<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd">
+<developerConceptualDocument xmlns="https://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="https://www.w3.org/1999/xlink" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd">
   <introduction>
     <para>This topic explains the symptoms, causes, and how to resolve Active Directory replication error 8456: the source server is currently rejecting replication requests or Active Directory replication error 8457: the destination server is currently rejecting replication requests. </para>
     <list class="bullet">
@@ -97,7 +97,7 @@ DC=Contoso,DC=COM
         </listItem>
         <listItem>
           <para>Event sources and event IDs that indicate that a USN rollback has occurred include but are not limited to the following:</para>
-          <table xmlns:caps="http://schemas.microsoft.com/build/caps/2013/11">
+          <table xmlns:caps="https://schemas.microsoft.com/build/caps/2013/11">
             <thead>
               <tr>
                 <TD>
@@ -195,7 +195,7 @@ DC=Contoso,DC=COM
             </tbody>
           </table>
           <para>Where embedded status codes 8456 and 8457 map to the following:</para>
-          <table xmlns:caps="http://schemas.microsoft.com/build/caps/2013/11">
+          <table xmlns:caps="https://schemas.microsoft.com/build/caps/2013/11">
             <thead>
               <tr>
                 <TD>
@@ -245,7 +245,7 @@ DC=Contoso,DC=COM
           <para>Time: &lt;time&gt;</para>
           <para>User: &lt;user name&gt;</para>
           <para>Computer: &lt;computer name&gt;</para>
-          <para>Description: The Active Directory database has been restored by using an unsupported restoration procedure. Active Directory will be unable to log on users while this condition persists. As a result, the Net Logon service has paused. User Action See previous event logs for details. For more information, visit the Help and Support Center at <externalLink><linkText>http://support.microsoft.com</linkText><linkUri>http://support.microsoft.com</linkUri></externalLink>.</para>
+          <para>Description: The Active Directory database has been restored by using an unsupported restoration procedure. Active Directory will be unable to log on users while this condition persists. As a result, the Net Logon service has paused. User Action See previous event logs for details. For more information, visit the Help and Support Center at <externalLink><linkText>https://support.microsoft.com</linkText><linkUri>https://support.microsoft.com</linkUri></externalLink>.</para>
         </listItem>
         <listItem>
           <para>NTDS General Event 1393 may be logged in the Directory Services event log. This indicates that the physical or virtual drive that is hosting the Active Directory database or log files lacks sufficient free disk space:</para>
@@ -293,7 +293,7 @@ DC=Contoso,DC=COM
           <para>The NETLOGON service status is changed from "running" to "paused."</para>
         </listItem>
       </list>
-      <para>The dominant root cause for this error condition is a USN rollback discussed in <externalLink><linkText>MSKB 875495 How to detect and recover from a USN rollback in Windows Server 2003, Windows Server 2008, and Windows Server 2008 R2</linkText><linkUri>http://support.microsoft.com/default.aspx?scid=kb;EN-US;875495</linkUri></externalLink>.</para>
+      <para>The dominant root cause for this error condition is a USN rollback discussed in <externalLink><linkText>MSKB 875495 How to detect and recover from a USN rollback in Windows Server 2003, Windows Server 2008, and Windows Server 2008 R2</linkText><linkUri>https://support.microsoft.com/default.aspx?scid=kb;EN-US;875495</linkUri></externalLink>.</para>
       <para>Do not assume that any nonzero value for "DSA not writable" or that a source or destination server "is currently rejecting replication requests" during DCPROMO or Active Directory Replication definitively means that a USN rollback has occurred and that such domain controllers implicitly have to be force-demoted or force-repromoted. Demotion <placeholder>may</placeholder> be the correct option. However, it may be excessive when the error is caused by insufficient free disk space.</para>
 
 </content>
@@ -306,7 +306,7 @@ DC=Contoso,DC=COM
           <para>Check the value for "DSA not writable."</para>
           <para>For each domain controller that is logging the 8456 or 8457 error, determine whether one of the three triggering events automatically disabled incoming or outgoing Active Directory Replication by reading the value for "DSA not writable" from the local registry.</para>
           <para>When replication is automatically disabled, the operating system writes one of four possible values to "DSA not writable":</para>
-          <table xmlns:caps="http://schemas.microsoft.com/build/caps/2013/11">
+          <table xmlns:caps="https://schemas.microsoft.com/build/caps/2013/11">
             <tbody>
               <tr>
                 <TD>
@@ -371,7 +371,7 @@ DC=Contoso,DC=COM
         <listItem>
           <para>Check the Directory Service event log for quarantine events.</para>
           <para>Assuming the Directory Service event log has not wrapped, you may find one or more related events logged in the Directory Service event log of a domain controller that is logging the 8456 or 8457 error.</para>
-          <table xmlns:caps="http://schemas.microsoft.com/build/caps/2013/11">
+          <table xmlns:caps="https://schemas.microsoft.com/build/caps/2013/11">
             <tbody>
               <tr>
                 <TD>
@@ -404,7 +404,7 @@ DC=Contoso,DC=COM
           <para>Perform the recovery based on the value of "DSA not writable" or on events that are logged on the system:</para>
           <list class="bullet">
             <listItem>
-              <para>If "DSA not writable" equals 4 or if NTDS General Event 2103 is logged, perform the recovery steps for a USN Rollback. For more information, see Microsoft Knowledge Base article <externalLink><linkText>875495</linkText><linkUri>http://support.microsoft.com/default.aspx?scid=kb;EN-US;875495</linkUri></externalLink>.</para>
+              <para>If "DSA not writable" equals 4 or if NTDS General Event 2103 is logged, perform the recovery steps for a USN Rollback. For more information, see Microsoft Knowledge Base article <externalLink><linkText>875495</linkText><linkUri>https://support.microsoft.com/default.aspx?scid=kb;EN-US;875495</linkUri></externalLink>.</para>
             </listItem>
             <listItem>
               <para>If "DSA not writable" equals 2 or if NTDS General event 1393 is logged, check for sufficient free disk space on the physical and virtual partitions that are hosting the Active Directory database and log files. Free up space as required.</para>
@@ -420,7 +420,7 @@ DC=Contoso,DC=COM
   <relatedTopics>
     <externalLink>
       <linkText>Troubleshooting Active Directory operations that fail with error 8456 or 8457: "The source | destination server is currently rejecting replication requests"</linkText>
-      <linkUri>http://support.microsoft.com/kb/2023007</linkUri>
+      <linkUri>https://support.microsoft.com/kb/2023007</linkUri>
     </externalLink>
   </relatedTopics>
 </developerConceptualDocument>

@@ -33,7 +33,7 @@ So that the federation servers can communicate directly with federation server p
   
 In addition, the intranet\-facing firewall server, such as a server running Internet Security and Acceleration \(ISA\) Server, uses a process known as server publishing to distribute Internet client requests to the appropriate corporate federation servers. This means that you must manually create a server publishing rule on the intranet server running ISA Server that publishes the clustered federation server URL, for example, http:\/\/fs.fabrikam.com.  
   
-For more information about how to configure server publishing in a perimeter network, see [Where to Place a Federation Server Proxy](Where-to-Place-a-Federation-Server-Proxy.md). For information about how to configure ISA Server to publish a server, see [Create a secure Web publishing rule](http://go.microsoft.com/fwlink/?LinkId=75182).  
+For more information about how to configure server publishing in a perimeter network, see [Where to Place a Federation Server Proxy](Where-to-Place-a-Federation-Server-Proxy.md). For information about how to configure ISA Server to publish a server, see [Create a secure Web publishing rule](https://go.microsoft.com/fwlink/?LinkId=75182).  
   
 ## See Also
 [AD FS Design Guide in Windows Server 2012](AD-FS-Design-Guide-in-Windows-Server-2012.md)

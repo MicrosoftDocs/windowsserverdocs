@@ -51,7 +51,7 @@ Screenshot of Sconfig.cmd user interface
  You can configure the IP address to be assigned automatically by a DHCP Server or you can assign a static IP address manually. This option allows you to configure DNS Server settings for the server as well.  
   
 > [!NOTE]
->  These options and many more are now available using the Networking Windows PowerShell cmdlets. For more information, see [Network Adapter Cmdlets](http://technet.microsoft.com/library/jj134956.aspx) in the Windows Server Library.  
+>  These options and many more are now available using the Networking Windows PowerShell cmdlets. For more information, see [Network Adapter Cmdlets](https://technet.microsoft.com/library/jj134956.aspx) in the Windows Server Library.  
   
 ## Windows Update settings  
  The current Windows Update settings are displayed in the default Server Configuration Tool screen. You can configure the server to use Automatic or Manual updates on the **Windows Update Settings** configuration option on the main menu.  

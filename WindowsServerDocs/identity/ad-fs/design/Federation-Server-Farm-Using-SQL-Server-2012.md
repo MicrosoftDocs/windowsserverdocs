@@ -42,7 +42,7 @@ This section describes various considerations about the intended audience, benef
 > [!NOTE]  
 > SQL Server supports many different data and application redundancy options including failover clustering, database mirroring, and several different types of SQL Server replication.  
   
-The Microsoft Information Technology \(IT\) department uses SQL Server database mirroring in high\-safety \(synchronous\) mode and failover clustering to provide high\-availability support for the SQL Server instance. SQL Server transactional \(peer\-to\-peer\) and merge replication have not been tested by the AD FS product team at Microsoft. For more information about SQL Server, see [High Availability Solutions Overview](http://go.microsoft.com/fwlink/?LinkId=179853) or [Selecting the Appropriate Type of Replication](http://go.microsoft.com/fwlink/?LinkId=214648).  
+The Microsoft Information Technology \(IT\) department uses SQL Server database mirroring in high\-safety \(synchronous\) mode and failover clustering to provide high\-availability support for the SQL Server instance. SQL Server transactional \(peer\-to\-peer\) and merge replication have not been tested by the AD FS product team at Microsoft. For more information about SQL Server, see [High Availability Solutions Overview](https://go.microsoft.com/fwlink/?LinkId=179853) or [Selecting the Appropriate Type of Replication](https://go.microsoft.com/fwlink/?LinkId=214648).  
   
 ### Supported SQL Server Versions  
 The following SQL server versions are supported with AD FS installed with Windows Server 2012:  

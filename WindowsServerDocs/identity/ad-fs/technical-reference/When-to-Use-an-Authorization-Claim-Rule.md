@@ -98,7 +98,7 @@ If a claim should be sent only when the claim value matches a custom pattern, yo
 When using the claim rule language syntax to authorize claims, a claim can also be issued based on the presence of multiple claims in the user’s original claims. The following rule issues an authorization claim only if the user is a member of the group Editors and has authenticated using Windows authentication:  
   
 ```  
-[type == "http://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod",   
+[type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod",   
 value == "urn:federation:authentication:windows" ]  
 && [type == "http://schemas.xmlsoap.org/claims/Group ", value == “editors”]   
 => issue(type = "http://schemas.xmlsoap.org/claims/authZ", value = "Granted");  
@@ -122,25 +122,25 @@ When you want to specify which user or users can create a proxy trust for a give
     If you choose method 3, you can use the following rule syntax to issue an authorization claim that will allow a specified user \(in this case, contoso\\frankm\) to create trusts for one or more federation server proxies to the Federation Service. You must apply this rule using the Windows PowerShell command **Set\-ADFSProperties AddProxyAuthorizationRules**.  
   
     ```  
-    c:[Type == "http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname", issuer=~"^AD AUTHORITY$" value == "contoso\frankm" ] => issue(Type = "http://schemas.microsoft.com/authorization/claims/permit", Value = "true")  
+    c:[Type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname", issuer=~"^AD AUTHORITY$" value == "contoso\frankm" ] => issue(Type = "https://schemas.microsoft.com/authorization/claims/permit", Value = "true")  
   
-    exists([Type == "http://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid", Value == "S-1-5-32-544", Issuer =~ "^AD AUTHORITY$"])   
-    => issue(Type = "http://schemas.microsoft.com/authorization/claims/permit", Value = "true");  
+    exists([Type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid", Value == "S-1-5-32-544", Issuer =~ "^AD AUTHORITY$"])   
+    => issue(Type = "https://schemas.microsoft.com/authorization/claims/permit", Value = "true");  
   
-    c:[Type == "http://schemas.microsoft.com/ws/2008/06/identity/claims/primarysid", Issuer =~ "^AD AUTHORITY$" ] => issue(store="_ProxyCredentialStore",types=("http://schemas.microsoft.com/authorization/claims/permit"),query="isProxyTrustManagerSid({0})", param= c.Value );  
+    c:[Type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/primarysid", Issuer =~ "^AD AUTHORITY$" ] => issue(store="_ProxyCredentialStore",types=("https://schemas.microsoft.com/authorization/claims/permit"),query="isProxyTrustManagerSid({0})", param= c.Value );  
   
-    c:[Type == "http://schemas.microsoft.com/ws/2008/06/identity/claims/proxytrustid", Issuer =~ "^SELF AUTHORITY$" ] => issue(store="_ProxyCredentialStore",types=("http://schemas.microsoft.com/authorization/claims/permit"),query="isProxyTrustProvisioned({0})", param=c.Value );  
+    c:[Type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/proxytrustid", Issuer =~ "^SELF AUTHORITY$" ] => issue(store="_ProxyCredentialStore",types=("https://schemas.microsoft.com/authorization/claims/permit"),query="isProxyTrustProvisioned({0})", param=c.Value );  
     ```  
   
     Later, if you want to remove the user so that the user can no longer create proxy trusts, you can revert to the default proxy trust authorization rule to remove the right for the user to create proxy trusts for the Federation Service. You must also apply this rule using the Windows PowerShell command **Set\-ADFSProperties AddProxyAuthorizationRules**.  
   
     ```  
-    exists([Type == "http://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid", Value == "S-1-5-32-544", Issuer =~ "^AD AUTHORITY$"])   
-    => issue(Type = "http://schemas.microsoft.com/authorization/claims/permit", Value = "true");  
+    exists([Type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid", Value == "S-1-5-32-544", Issuer =~ "^AD AUTHORITY$"])   
+    => issue(Type = "https://schemas.microsoft.com/authorization/claims/permit", Value = "true");  
   
-    c:[Type == "http://schemas.microsoft.com/ws/2008/06/identity/claims/primarysid", Issuer =~ "^AD AUTHORITY$" ] => issue(store="_ProxyCredentialStore",types=("http://schemas.microsoft.com/authorization/claims/permit"),query="isProxyTrustManagerSid({0})", param= c.Value );  
+    c:[Type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/primarysid", Issuer =~ "^AD AUTHORITY$" ] => issue(store="_ProxyCredentialStore",types=("https://schemas.microsoft.com/authorization/claims/permit"),query="isProxyTrustManagerSid({0})", param= c.Value );  
   
-    c:[Type == "http://schemas.microsoft.com/ws/2008/06/identity/claims/proxytrustid", Issuer =~ "^SELF AUTHORITY$" ] => issue(store="_ProxyCredentialStore",types=("http://schemas.microsoft.com/authorization/claims/permit"),query="isProxyTrustProvisioned({0})", param=c.Value );  
+    c:[Type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/proxytrustid", Issuer =~ "^SELF AUTHORITY$" ] => issue(store="_ProxyCredentialStore",types=("https://schemas.microsoft.com/authorization/claims/permit"),query="isProxyTrustProvisioned({0})", param=c.Value );  
     ```  
   
 For more information about how to use the claim rule language, see [The Role of the Claim Rule Language](The-Role-of-the-Claim-Rule-Language.md).  

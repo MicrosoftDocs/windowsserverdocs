@@ -45,7 +45,7 @@ wbadmin start systemstatebackup
 
 ## Remarks
 
-For information about saving a system state backup to a volume that, in turn, contains system state files, see article 944530 in the Microsoft Knowledge Base ([http://go.microsoft.com/fwlink/?LinkId=110439](http://go.microsoft.com/fwlink/?LinkId=110439)).
+For information about saving a system state backup to a volume that, in turn, contains system state files, see article 944530 in the Microsoft Knowledge Base ([https://go.microsoft.com/fwlink/?LinkId=110439](https://go.microsoft.com/fwlink/?LinkId=110439)).
 
 ## <a name="BKMK_examples"></a>Examples
 
@@ -58,4 +58,4 @@ wbadmin start systemstatebackup -backupTarget:f:
 
 -   [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)
--   [Start-WBBackup](http://technet.microsoft.com/library/jj902459.aspx) cmdlet
+-   [Start-WBBackup](https://technet.microsoft.com/library/jj902459.aspx) cmdlet

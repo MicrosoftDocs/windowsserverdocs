@@ -67,7 +67,7 @@ Active Directory forest schema extension and domain preparation now integrate in
   
 Adprep.exe remains on the DVD for separate forest and domain preparation. The version of the tool included with Windows Server 2012 is backwards compatible to Windows Server 2008 x64 and Windows Server 2008 R2. Adprep.exe also supports remote forestprep and domainprep, just like the ADDSDeployment-based domain controller configuration tools.  
   
-For information about Adprep and previous operating system forest preparation, see [Running Adprep (Windows Server 2008 R2)](http://technet.microsoft.com/library/dd464018(WS.10).aspx).  
+For information about Adprep and previous operating system forest preparation, see [Running Adprep (Windows Server 2008 R2)](https://technet.microsoft.com/library/dd464018(WS.10).aspx).  
   
 ### Server Manager AD DS Integration  
 ![simplified administration](media/AD-DS-Simplified-Administration/ADDS_SMI_TR_Dashboard.png)  
@@ -95,7 +95,7 @@ Windows Server 2008 R2 introduced the Active Directory Recycle Bin, which recove
   
 Windows Server 2012 enhances the existing Windows PowerShell-based restore capabilities with a new graphical interface in the Active Directory Administrative Center. This allows administrators to enable the Recycle Bin and locate or restore deleted objects in the domain contexts of the forest, all without directly running Windows PowerShell cmdlets. The Active Directory Administrative Center and Active Directory Recycle Bin still use Windows PowerShell under the covers, so previous scripts and procedures are still valuable.  
   
-For information about the Active Directory [Recycle Bin, see Active Directory Recycle Bin Step-by-Step Guide (Windows Server 2008 R2)](http://technet.microsoft.com/library/dd392261(WS.10).aspx).  
+For information about the Active Directory [Recycle Bin, see Active Directory Recycle Bin Step-by-Step Guide (Windows Server 2008 R2)](https://technet.microsoft.com/library/dd392261(WS.10).aspx).  
   
 ### Active Directory Administrative Center Fine-Grained Password Policy  
 ![simplified administration](media/AD-DS-Simplified-Administration/ADDS_SMI_TR_FGPP.png)  
@@ -104,7 +104,7 @@ Windows Server 2008 introduced the Fine-Grained Password policy, which allows ad
   
 Windows Server 2012 brings a graphical interface to Fine-Grained Password Policy. The Active Directory Administrative Center is the home of this new dialog, which brings simplified FGPP management to all administrators.  
   
-For information about the Fine-Grained Password Policy, see [AD DS Fine-Grained Password and Account Lockout Policy Step-by-Step Guide (Windows Server 2008 R2)](http://technet.microsoft.com/library/cc770842(WS.10).aspx).  
+For information about the Fine-Grained Password Policy, see [AD DS Fine-Grained Password and Account Lockout Policy Step-by-Step Guide (Windows Server 2008 R2)](https://technet.microsoft.com/library/cc770842(WS.10).aspx).  
   
 ### Active Directory Administrative Center Windows PowerShell History Viewer  
 ![simplified administration](media/AD-DS-Simplified-Administration/ADDS_SMI_TR_HistoryViewer.png)  
@@ -118,7 +118,7 @@ While the Active Directory module contains over a hundred cmdlets, the learning 
   
 Windows Server 2012 adds additional Active Directory replication cmdlets to the Active Directory Windows PowerShell module. These allow configuration of new or existing sites, subnets, connections, site links, and bridges. They also return Active Directory replication metadata, replication status, queuing, and up-to-dateness version vector information. The introduction of the replication cmdlets - combined with the deployment and other existing AD DS cmdlets - makes it possible to administer a forest using Windows PowerShell alone. This creates new opportunities for administrators wishing to provision and manage Windows Server 2012 without a graphical interface, which then reduces the operating system's attack surface and servicing requirements. This is especially important when deploying servers into high security networks such as Secret Internet Protocol Router (SIPR) and corporate DMZs.  
   
-For more information about AD DS site topology and replication, see the [Windows Server Technical Reference](http://technet.microsoft.com/library/cc739127(WS.10).aspx).  
+For more information about AD DS site topology and replication, see the [Windows Server Technical Reference](https://technet.microsoft.com/library/cc739127(WS.10).aspx).  
   
 ### RID Management and Issuance Improvements  
 Windows 2000 Active Directory introduced the RID Master, which issues pools of relative identifiers to domain controllers, in order to create security identifiers (SIDs) of security trustees like users, groups, and computers.  By default, this global RID space is limited to 2<sup>30</sup> (or 1,073,741,823) total SIDs created in a domain. SIDs cannot return to the pool or reissue. Over time, a large domain may begin to run low on RIDs, or accidents may lead to unnecessary RID depletion and eventual exhaustion.  
@@ -135,7 +135,7 @@ Windows Server 2012 addresses a number of RID issuance and management issues unc
   
 -   The global RID space can now be increased by one bit, doubling the size to 2<sup>31</sup> (2,147,483,648 SIDs)  
   
-For more information about RIDs and the RID Master, review [How Security Identifiers Work](http://technet.microsoft.com/library/cc778824(WS.10).aspx).  
+For more information about RIDs and the RID Master, review [How Security Identifiers Work](https://technet.microsoft.com/library/cc778824(WS.10).aspx).  
   
 ## New AD DS Deployment Architecture  
   
@@ -232,8 +232,8 @@ There is no need to run these cmdlets, ordinarily; they already automatically ex
 |CheckDomainPrep<br /><br />GroupMembership|LDAP,<br /><br />RPC over SMB (LSARPC)|Validate the user is a member of Domain Admins group and has the Manage Audit and Security Event Logs (SesScurityPrivilege) privilege on the existing domain controllers|  
 |CheckRODCPrep<br /><br />GroupMembership|LDAP,<br /><br />RPC over SMB (LSARPC)|Validate the user is a member of Enterprise Admins group and has the Manage Audit and Security Event Logs (SesScurityPrivilege) privilege on the existing domain controllers|  
 |VerifyInitSync<br /><br />AfterReboot|LDAP|Validate that the Schema Master has replicated at least once since it restarted by setting a dummy value on rootDSE attribute becomeSchemaMaster|  
-|VerifySFUHotFix<br /><br />Applied|LDAP|Validate the existing forest schema does not contain known problem SFU2 extension for the UID attribute  with OID 1.2.840.113556.1.4.7000.187.102<br /><br />([http://support.microsoft.com/kb/821732](http://support.microsoft.com/kb/821732))|  
-|VerifyExchange<br /><br />SchemaFixed|LDAP, WMI, DCOM, RPC|Validate the existing forest schema does not still contain problem Exchange 2000 extensions ms-Exch-Assistant-Name, ms-Exch-LabeledURI, and ms-Exch-House-Identifier ([http://support.microsoft.com/kb/314649](http://support.microsoft.com/kb/314649))|  
+|VerifySFUHotFix<br /><br />Applied|LDAP|Validate the existing forest schema does not contain known problem SFU2 extension for the UID attribute  with OID 1.2.840.113556.1.4.7000.187.102<br /><br />([https://support.microsoft.com/kb/821732](https://support.microsoft.com/kb/821732))|  
+|VerifyExchange<br /><br />SchemaFixed|LDAP, WMI, DCOM, RPC|Validate the existing forest schema does not still contain problem Exchange 2000 extensions ms-Exch-Assistant-Name, ms-Exch-LabeledURI, and ms-Exch-House-Identifier ([https://support.microsoft.com/kb/314649](https://support.microsoft.com/kb/314649))|  
 |VerifyWin2KSchema<br /><br />Consistency|LDAP|Validate the existing forest schema has consistent (not incorrectly modified by a third party) core attributes and classes.|  
 |DCPromo|DRSR over RPC,<br /><br />LDAP,<br /><br />DNS<br /><br />RPC over SMB (SAMR)|Validate the command-line syntax passed to the promotion code and test promotion. Validate the forest or domain does not already exist if creating new.|  
 |VerifyOutbound<br /><br />ReplicationEnabled|LDAP, DRSR over SMB, RPC over SMB (LSARPC)|Validate the existing domain controller specified as the replication partner has outbound replication enabled by checking the NTDS Settings object's options attribute for NTDSDSA_OPT_DISABLE_OUTBOUND_REPL (0x00000004)|  
