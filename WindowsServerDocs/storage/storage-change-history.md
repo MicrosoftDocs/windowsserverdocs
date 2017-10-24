@@ -7,7 +7,7 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.date: 7/18/2017
+ms.date: 10/25/2017
 description: New and updated topics in the Storage documentation for Windows Server 2016
 ---
 # Change history for storage topics in Windows Server
@@ -21,6 +21,7 @@ This topic lists new and updated topics in the [Storage](storage.md) documentati
 ## October 2017
 |New or changed topic|Description|
 |---|---|
+|[Deploying Storage Spaces Direct in a virtual machine guest cluster](storage-spaces/storage-spaces-direct-in-vm.md)|New topic|
 |[Overview of Disk Management](disk-management/overview-of-disk-management.md)| Published 13 new topics for Windows Server.|
 
 ## July 2017
