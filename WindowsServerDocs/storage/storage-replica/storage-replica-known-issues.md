@@ -134,7 +134,7 @@ If using the Disk Management MMC snapin, you receive this error:
 
 This occurs even if you correctly enable volume resizing on the source server using `Set-SRGroup -Name rg01 -AllowVolumeResize $TRUE`. 
 
-This issue was fixed in Cumulative Update for Windows 10 Version 1607 and Windows Server 2016: December 9, 2016 (KB3201845). 
+This issue was fixed in Cumulative Update for Windows 10, version 1607 (Anniversary Update) and Windows Server 2016: December 9, 2016 (KB3201845). 
 
 ## Attempting to grow a replicated volume fails due to missing step
 If you attempt to resize a replicated volume on the source server without setting `-AllowResizeVolume $TRUE` first, you will receive the following errors:
@@ -194,7 +194,7 @@ If using the Cluster powershell cmdlet:
 
 This occurs due to a by-design behavior in Windows Server 2016. Use `Set-SRPartnership` to move these PDR disks in an asynchronous stretched cluster.  
 
-THis behavior has been changed in Windows Server Version 1709 to allow manual and automated failovers with asynchronous replication, based on customer feedback.
+This behavior has been changed in Windows Server, version 1709 to allow manual and automated failovers with asynchronous replication, based on customer feedback.
 
 ## Attempting to add disks to a two-node asymmetric cluster returns "No disks suitable for cluster disks found" 
 When attempting to provision a cluster with only two nodes, prior to adding Storage Replica stretch replication, you attempt to add the disks in the second site to the Available Disks. You recieve the following error:
@@ -214,7 +214,7 @@ When specifying a bandwidth limit to Storage Replica, the limit is ignored and f
 
 `Set-SmbBandwidthLimit  -Category StorageReplication -BytesPerSecond 32MB`
 
-This issue occurs because of an interoperability issue between Storage Replica and SMB. This issue was first fixed in the July 2017 Cumulative Update of Windows Server 2016 and in Windows Server, Version 1709.
+This issue occurs because of an interoperability issue between Storage Replica and SMB. This issue was first fixed in the July 2017 Cumulative Update of Windows Server 2016 and in Windows Server, version 1709.
 
 ## Event 1241 warning repeated during initial sync
 When specifying a replication partnership is asynchronous, the source computer repeatedly logs warning event 1241 in the Storage Replica Admin channel. For example:
