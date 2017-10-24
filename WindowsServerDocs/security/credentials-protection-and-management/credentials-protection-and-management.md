@@ -67,7 +67,7 @@ For more information, see [Authentication Policies and Authentication Policy Sil
 For more information how to configure protected accounts, see [How to Configure Protected Accounts](how-to-configure-protected-accounts.md).
 
 ## See also
-For more information about the LSA and the LSASS, see the [Windows Logon and Authentication Technical Overview](http://technet.microsoft.com/library/dn169029(v=ws.10).aspx).
+For more information about the LSA and the LSASS, see the [Windows Logon and Authentication Technical Overview](https://technet.microsoft.com/library/dn169029(v=ws.10).aspx).
 
 
 

@@ -145,7 +145,7 @@ You can add a tab to Settings on the Dashboard by creating and installing a code
 16. Save and build the solution.  
   
 ###  <a name="BKMK_SignAssembly"></a> Sign the assembly with an Authenticode signature  
- You must Authenticode sign the assembly for it to be used in the operating system. For more information about signing the assembly, see [Signing and Checking Code with Authenticode](http://msdn.microsoft.com/library/ms537364\(VS.85\).aspx#SignCode).  
+ You must Authenticode sign the assembly for it to be used in the operating system. For more information about signing the assembly, see [Signing and Checking Code with Authenticode](https://msdn.microsoft.com/library/ms537364\(VS.85\).aspx#SignCode).  
   
 ###  <a name="BKMK_InstallAssembly"></a> Install the assembly on the reference computer  
  After you successfully build the solution, place a copy of the DashboardSettingsPage.dll file in the following folder on the reference computer:  

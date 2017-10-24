@@ -20,7 +20,7 @@ manager: dongill
 
 A health add-in provides definitions for alerts, health checks, and repairs for network problems. A health add-in consists of xml files that annotate code or data that is used to evaluate health information for a specific feature. Health add-ins are created by developers and installed on the server and client computers by the administrator.  
   
- Please refer to the [Windows Server Solutions SDK](http://go.microsoft.com/fwlink/?LinkID=248648) for details about creating a health add-in.  
+ Please refer to the [Windows Server Solutions SDK](https://go.microsoft.com/fwlink/?LinkID=248648) for details about creating a health add-in.  
   
 ## Installing health add-in files  
  After the developer has created the xml files, you must place a copy of the files in the appropriate location on the server and client computers.  

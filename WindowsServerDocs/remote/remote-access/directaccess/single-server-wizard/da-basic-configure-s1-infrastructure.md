@@ -31,7 +31,7 @@ This topic describes how to configure the infrastructure required for a basic Di
 |Configure security groups|Configure security groups that will contain DirectAccess client computers, and any other security groups required in the deployment.|  
   
 > [!NOTE]  
-> This topic includes sample Windows PowerShell cmdlets that you can use to automate some of the procedures described. For more information, see [Using Cmdlets](http://go.microsoft.com/fwlink/p/?linkid=230693).  
+> This topic includes sample Windows PowerShell cmdlets that you can use to automate some of the procedures described. For more information, see [Using Cmdlets](https://go.microsoft.com/fwlink/p/?linkid=230693).  
   
 ## <a name="ConfigNetworkSettings"></a>Configure server network settings  
 The following network interface settings are required for a single server deployment in an environment with IPv4 and IPv6. All IP addresses are configured by using **Change adapter settings** in the **Windows Networking and Sharing Center**.  
@@ -192,7 +192,7 @@ Restart-Computer
 ## <a name="ConfigGPOs"></a>Configure GPOs  
 To deploy Remote Access, you require a minimum of two Group policy objects: one Group policy object contains settings for the Remote Access server and one contains settings for DirectAccess client computers. When you configure Remote Access, the wizard automatically creates the required Group policy object. However, if your organization enforces a naming convention, or you do not have the required permissions to create or edit Group policy objects, they must be created prior to configuring Remote Access.  
   
-To create a Group policy object, see [Create and Edit a Group Policy Object](http://technet.microsoft.com/library/cc754740.aspx).  
+To create a Group policy object, see [Create and Edit a Group Policy Object](https://technet.microsoft.com/library/cc754740.aspx).  
   
 > [!IMPORTANT]  
 > The administrator can manually link the DirectAccess Group policy object to an Organizational Unit using these steps:  
@@ -200,7 +200,7 @@ To create a Group policy object, see [Create and Edit a Group Policy Object](htt
 > 1.  Before configuring DirectAccess, link the created GPOs to the respective Organizational Units.  
 > 2.  Configure DirectAccess, specifying a security group for the client computers.  
 > 3.  The administrator may or may not have permissions to link the Group Policy Objects to the domain. In either case, the Group Policy Objects will be configured automatically. If the GPOs are already linked to an OU, the links will not be removed. Nor will the GPOs be linked to the domain. For server GPO, the OU must contain the server computer object, else the GPO will be linked to the root of the domain.  
-> 4.  If the linking to OU has not been done before running the DirectAccess wizard, after the configuration is complete, the administrator can link the DirectAccess Group Policy Objects to the required Organizational Units. The link to the domain can be removed. Steps for linking a Group policy object to an Organization Unit can be found [here](http://technet.microsoft.com/library/cc732979.aspx)  
+> 4.  If the linking to OU has not been done before running the DirectAccess wizard, after the configuration is complete, the administrator can link the DirectAccess Group Policy Objects to the required Organizational Units. The link to the domain can be removed. Steps for linking a Group policy object to an Organization Unit can be found [here](https://technet.microsoft.com/library/cc732979.aspx)  
   
 > [!NOTE]  
 > If a Group policy object was created manually, it is possible during the DirectAccess configuration that the Group policy object will not be available. The Group policy object may not have been replicated to the closest Domain Controller to the management computer. In this event, the administrator can wait for replication to complete, or force the replication.  

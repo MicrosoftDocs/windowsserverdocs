@@ -57,7 +57,7 @@ Enables easier configuration of multiple network adapters in a cluster.
 
 ## Deployment
 
-* [Installing the Failover Clustering Feature and Tools](http://go.microsoft.com/fwlink/p/?LinkId=253342)
+* [Installing the Failover Clustering Feature and Tools](https://go.microsoft.com/fwlink/p/?LinkId=253342)
 * [Validate Hardware for a Failover Cluster](https://technet.microsoft.com/library/jj134244.aspx)
 * [Prestage Cluster Computer Objects in Active Directory Domain Services](https://technet.microsoft.com/library/dn466519.aspx)
 * [Creating a Failover Cluster](http://blogs.msdn.com/b/clustering/archive/2012/05/01/10299698.aspx)
@@ -76,11 +76,11 @@ Enables easier configuration of multiple network adapters in a cluster.
 
 ## Tools and settings
 
-* [Failover Clustering PowerShell Cmdlets](http://go.microsoft.com/fwlink/p/?LinkId=233200)
+* [Failover Clustering PowerShell Cmdlets](https://go.microsoft.com/fwlink/p/?LinkId=233200)
 * [Cluster Aware Updating PowerShell Cmdlets](https://technet.microsoft.com/library/hh847221.aspx)
 
 ## Community resources
 
-* [High Availability (Clustering) Forum](http://go.microsoft.com/fwlink/p/?LinkId=230641)
+* [High Availability (Clustering) Forum](https://go.microsoft.com/fwlink/p/?LinkId=230641)
 * [Failover Clustering and Network Load Balancing Team Blog](http://blogs.msdn.com/b/clustering/)
 

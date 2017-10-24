@@ -29,7 +29,7 @@ By default, the **Try Next Closest Site** setting is not enabled. When the setti
 -   If no domain controller is available in the same site, try to find any domain controller in the domain.  
   
 > [!NOTE]  
-> This is the same algorithm that DC Locator used in previous versions of Active Directory. For more information, see How DNS Support for Active Directory Works ([http://go.microsoft.com/fwlink/?LinkId=108587](http://go.microsoft.com/fwlink/?LinkId=108587)).  
+> This is the same algorithm that DC Locator used in previous versions of Active Directory. For more information, see How DNS Support for Active Directory Works ([https://go.microsoft.com/fwlink/?LinkId=108587](https://go.microsoft.com/fwlink/?LinkId=108587)).  
   
 If you enable the **Try Next Closest Site** setting, DC Locator uses the following algorithm to locate a domain controller:  
   

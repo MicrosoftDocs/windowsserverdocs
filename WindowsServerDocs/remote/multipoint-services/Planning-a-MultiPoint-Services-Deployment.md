@@ -32,4 +32,4 @@ Use the following information to plan your deployment:
 -   [Application Considerations](Application-Considerations.md)  
 -   [Predeployment Checklist](Predeployment-Checklist.md)  
   
-You can also visit the [MultiPoint Services Forum](http://social.technet.microsoft.com/Forums/windowsserver/home?forum=windowsmultipointserver&filter=alltypes&sort=lastpostdesc) for additional information.
+You can also visit the [MultiPoint Services Forum](https://social.technet.microsoft.com/Forums/windowsserver/home?forum=windowsmultipointserver&filter=alltypes&sort=lastpostdesc) for additional information.

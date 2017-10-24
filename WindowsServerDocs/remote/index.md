@@ -30,6 +30,6 @@ Web Application Proxy provides reverse proxy functionality for web applications 
 Use MultiPoint Services to enable multiple users, each with their own independent and familiar Windows experience, to simultaneously share one computer.
 
 
-## [Remote Server Administration Tools](http://technet.microsoft.com/library/mt126174.aspx)
+## [Remote Server Administration Tools](https://technet.microsoft.com/library/mt126174.aspx)
 
 To ease remote server management, you can download and install Remote Server Administration Tools for Windows 10. Remote Server Administration Tools for Windows 10 includes Server Manager, Microsoft Management Console (mmc) snap-ins, consoles, Windows PowerShell cmdlets and providers, and some command-line tools for managing roles and features that run on Windows Server 2016.  

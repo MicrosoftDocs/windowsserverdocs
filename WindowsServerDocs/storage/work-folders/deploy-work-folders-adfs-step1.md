@@ -39,7 +39,7 @@ If you intend to convert the test environment that you're setting up with these 
   
 Obtaining these items can take some time, depending on your company's policies, so it can be beneficial to start the request process for the items before you begin to create the test environment.  
   
-There are many commercial certificate authorities (CAs) from which you can purchase the certificate. You can find a list of the CAs that are trusted by Microsoft in [KB article 931125](http://support.microsoft.com/kb/931125). Another alternative is to get a certificate from your company's enterprise CA.  
+There are many commercial certificate authorities (CAs) from which you can purchase the certificate. You can find a list of the CAs that are trusted by Microsoft in [KB article 931125](https://support.microsoft.com/kb/931125). Another alternative is to get a certificate from your company's enterprise CA.  
   
 For the test environment, you will use a self-signed certificate that is created by one of the provided scripts.  
   

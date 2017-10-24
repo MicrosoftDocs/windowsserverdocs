@@ -23,7 +23,7 @@ ms.technology: identity-adfs
  Each domain has an object **CN=RID Manager$,CN=System,DC**=<*domain_name*>. This object has an attribute named **rIDAvailablePool**. This attribute value maintains the global RID space for an entire domain. The value is a large integer with upper and lower parts. The upper part defines the number of security principals that can be allocated for each domain (0x3FFFFFFF or just over 1 billion). The lower part is the number of RIDs that have been allocated in the domain.  
   
 > [!NOTE]
->  In Windows Server 2016 and 2012, the number of security principals that can be allocated is increased to just over 2 billion. For more information, see [Managing RID issuance](http://technet.microsoft.com/library/jj574229.aspx).  
+>  In Windows Server 2016 and 2012, the number of security principals that can be allocated is increased to just over 2 billion. For more information, see [Managing RID issuance](https://technet.microsoft.com/library/jj574229.aspx).  
   
 -   Sample Value: 4611686014132422708  
   

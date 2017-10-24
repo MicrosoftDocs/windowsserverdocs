@@ -19,7 +19,7 @@ ms.technology: identity-adfs
 ## Join your device with Workplace Join
 
 > [!NOTE]
-> Android workplace join requires Azure Active Directory Device Registration Service. In order to enforce conditional device policies on-premises, Directory Synchronization Tool (DirSync) must be deployed with device object write-back option enabled. At the present time, device write-back to Active Directory from Azure Active Directory can take up-to 3 hours. As such, users must wait for 3 hours to access on-premises web applications, after creating a work account. For more information about deploying Azure Active Directory Device Registration service, see, [Azure Active Directory Device Registration Service Overview](http://msdn.microsoft.com/library/azure/dn788908.aspx)
+> Android workplace join requires Azure Active Directory Device Registration Service. In order to enforce conditional device policies on-premises, Directory Synchronization Tool (DirSync) must be deployed with device object write-back option enabled. At the present time, device write-back to Active Directory from Azure Active Directory can take up-to 3 hours. As such, users must wait for 3 hours to access on-premises web applications, after creating a work account. For more information about deploying Azure Active Directory Device Registration service, see, [Azure Active Directory Device Registration Service Overview](https://msdn.microsoft.com/library/azure/dn788908.aspx)
 
 #### Create a Work account that joins your device with workplace Join
 

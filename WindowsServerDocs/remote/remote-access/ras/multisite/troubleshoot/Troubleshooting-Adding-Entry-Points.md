@@ -53,7 +53,7 @@ Multisite is not enabled on the server specified by the *ComputerName* parameter
   
 **Solution**  
   
-Enable multisite using the `Enable-DaMultiSite` cmdlet. For more information, see [Deploy multisite Remote Access](http://technet.microsoft.com/library/hh831664.aspx).  
+Enable multisite using the `Enable-DaMultiSite` cmdlet. For more information, see [Deploy multisite Remote Access](https://technet.microsoft.com/library/hh831664.aspx).  
   
 ## IPv6 prefix issues  
   

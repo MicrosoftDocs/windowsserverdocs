@@ -119,7 +119,7 @@ Functional levels are set at these default levels to give you the option of addi
 For more information about raising forest and domain functional levels, and for procedures to perform those tasks, see [Deploying a Windows Server 2008 Forest Root Domain \[LH\]](assetId:///92406e8d-dc1c-4740-a00a-2c4032896dd1).  
   
 > [!NOTE]  
-> Although ADMT v3.1 must be installed on Windows Server 2008, you can use ADMT v3.1 to migrate objects to a domain that is hosted by one or more  Windows Server 2008 R2  domain controllers. For more information, see [article 976659](http://go.microsoft.com/fwlink/?LinkId=180398) in the Microsoft Knowledge Base (http://go.microsoft.com/fwlink/?LinkId=180398).  
+> Although ADMT v3.1 must be installed on Windows Server 2008, you can use ADMT v3.1 to migrate objects to a domain that is hosted by one or more  Windows Server 2008 R2  domain controllers. For more information, see [article 976659](https://go.microsoft.com/fwlink/?LinkId=180398) in the Microsoft Knowledge Base (https://go.microsoft.com/fwlink/?LinkId=180398).  
   
 
 

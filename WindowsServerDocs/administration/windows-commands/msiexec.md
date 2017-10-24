@@ -24,4 +24,4 @@ ms.date: 10/16/2017
 
 Provides the means to install, modify, and perform operations on Windows Installer from the command line.
 
-For the syntax and examples of how to use this command, see [Msiexec](http://go.microsoft.com/fwlink/?LinkId=94329).
+For the syntax and examples of how to use this command, see [Msiexec](https://go.microsoft.com/fwlink/?LinkId=94329).

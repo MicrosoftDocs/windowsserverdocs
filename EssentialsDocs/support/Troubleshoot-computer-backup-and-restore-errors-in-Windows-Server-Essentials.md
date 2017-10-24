@@ -21,7 +21,7 @@ manager: dongill
 Use these procedures to troubleshoot computer backups in Windows Server Essentials, including backup configuration issues, incomplete or unsuccessful backups, backup health alerts, and issues with file, folder, or full-system restores.  
   
 > [!NOTE]
->  For the most recent troubleshooting information from the Windows Server Essentials community, visit the [Windows Server Essentials Forum](http://social.technet.microsoft.com/Forums//winserveressentials/threads).  
+>  For the most recent troubleshooting information from the Windows Server Essentials community, visit the [Windows Server Essentials Forum](https://social.technet.microsoft.com/Forums//winserveressentials/threads).  
   
 ##  <a name="BKMK_TroubleshootBackupConfigurationIssues"></a> Troubleshoot backup configuration issues for a connected computer  
  Use these procedures to troubleshoot issues with the backup configurations for computers that are backed up on your Windows Server Essentials server.  
@@ -93,7 +93,7 @@ Use these procedures to troubleshoot computer backups in Windows Server Essentia
   
 1.  Make sure that the hard disk is connected to the computer, turned on, and functioning properly.  
   
-2.  Run **chkdsk /f /r** to fix any errors on the hard disk (**/f**) and recover readable information from any bad sectors (**/r**). For more information about running **chkdsk**, see [CHKDSK](http://go.microsoft.com/fwlink/?LinkId=206562).  
+2.  Run **chkdsk /f /r** to fix any errors on the hard disk (**/f**) and recover readable information from any bad sectors (**/r**). For more information about running **chkdsk**, see [CHKDSK](https://go.microsoft.com/fwlink/?LinkId=206562).  
   
 3.  Make sure that the computer was not shut down or disconnected from the network while backup was running.  
   
@@ -116,7 +116,7 @@ Use these procedures to troubleshoot computer backups in Windows Server Essentia
     -   Delete content from the volume to make more space available.  
   
         > [!NOTE]
-        >  If you need to free up space on the system reserved volume, you can move the System Recovery Image to a different volume. For instructions, see [Deploy a System Recovery Image](http://technet.microsoft.com/library/dd744280\(v=ws.10\).aspx).  
+        >  If you need to free up space on the system reserved volume, you can move the System Recovery Image to a different volume. For instructions, see [Deploy a System Recovery Image](https://technet.microsoft.com/library/dd744280\(v=ws.10\).aspx).  
   
     -   Exclude the volume from the client backup. Do this only if it is not important to you to maintain a backup copy of the data on the volume.  
   
@@ -125,7 +125,7 @@ Use these procedures to troubleshoot computer backups in Windows Server Essentia
   
 5.  Check for other alerts on the server that may indicate there is not enough disk space on the server for backup to complete successfully. Follow the instructions in the alert to fix the issue.  
   
-6.  Run **vssadmin** in a command prompt to troubleshoot Volume Shadow Copy Service (VSS) issues. For information about **vssadmin**, see [VSSADMIN](http://go.microsoft.com/fwlink/?LinkID=94332).  
+6.  Run **vssadmin** in a command prompt to troubleshoot Volume Shadow Copy Service (VSS) issues. For information about **vssadmin**, see [VSSADMIN](https://go.microsoft.com/fwlink/?LinkID=94332).  
   
 ##  <a name="BKMK_TroubleshootBackupHealthAlertIssues"></a> Troubleshoot backup health alert issues  
   
@@ -148,7 +148,7 @@ Use these procedures to troubleshoot computer backups in Windows Server Essentia
     1.  On the server, click **Start**, and click **Administrative Tools**, and then click **Services**.  
   
         > [!NOTE]
-        >  If you are administering the server remotely, you must use Remote Desktop Connection to access the server desktop. For information about using Remote Desktop Connection, see [Connect to another computer using Remote Desktop Connection](http://windows.microsoft.com/windows-vista/Connect-to-another-computer-using-Remote-Desktop-Connection).  
+        >  If you are administering the server remotely, you must use Remote Desktop Connection to access the server desktop. For information about using Remote Desktop Connection, see [Connect to another computer using Remote Desktop Connection](https://windows.microsoft.com/windows-vista/Connect-to-another-computer-using-Remote-Desktop-Connection).  
   
     2.  Scroll down to and click **Windows Server Client Computer Backup Provider Service**. If the status of the service is not **Started**, right-click the service, and then click **Start**.  
   
@@ -200,7 +200,7 @@ Use these procedures to troubleshoot computer backups in Windows Server Essentia
   
         1.  Open a command prompt with administrator privileges, and run the following command:  
   
-             **%ProgramFiles%\Windows Server\Bin\BackupDriverInstaller.exe?  œi**  
+             **%ProgramFiles%\Windows Server\Bin\BackupDriverInstaller.exe?  ï¿½i**  
   
         2.  Refresh Device Manager. The driver should appear.  
   

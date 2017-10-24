@@ -548,7 +548,7 @@ After you join the computer to the domain, use this procedure to configure a Sin
 3. Join the new wireless computer to the domain \(for example, through an Ethernet connection that does not require IEEE 802.1X authentication\) and add the bootstrap wireless profile to the computer by using the **netsh wlan add profile** command.
 
     >[!NOTE]
-    >For more information, see Netsh Commands for Wireless Local Area Network \(WLAN\) at [http:\/\/technet.microsoft.com\/library\/dd744890.aspx](http://technet.microsoft.com/library/dd744890).
+    >For more information, see Netsh Commands for Wireless Local Area Network \(WLAN\) at [http:\/\/technet.microsoft.com\/library\/dd744890.aspx](https://technet.microsoft.com/library/dd744890).
 
 4. Distribute the new wireless computer to the user with the procedure to “Log on to the domain using computers running Windows 10.”
 

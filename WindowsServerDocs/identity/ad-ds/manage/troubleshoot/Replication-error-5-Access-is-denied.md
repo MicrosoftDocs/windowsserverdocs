@@ -17,7 +17,7 @@ ms.technology: identity-adds
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 
-<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd">
+<developerConceptualDocument xmlns="https://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="https://www.w3.org/1999/xlink" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd">
   <introduction>
     <para>This topic explains symptoms, causes and how to resolve Active Directory replication error 5: Access is denied.</para>
     <list class="bullet">
@@ -57,7 +57,7 @@ The failure occurred at &lt;date&gt; &lt;time&gt;.
 The last success occurred at &lt;date&gt; &lt;time&gt;.
 3 failures have occurred since the last success.</code>
         </listItem>
-<listItem><para>REPADMIN.EXE reports that the last replication attempt has failed with status 5.</para><para>REPADMIN commands that commonly cite the 5 status include but are not limited to:</para><table xmlns:caps="http://schemas.microsoft.com/build/caps/2013/11"><tbody><tr><TD><list class="bullet"><listItem><para>REPADMIN /KCC</para></listItem><listItem><para>REPADMIN /REPLICATE</para></listItem><listItem><para>REPADMIN /REPLSUM</para></listItem></list></TD><TD><list class="bullet"><listItem><para>REPADMIN /SHOWREPL</para></listItem><listItem><para>REPADMIN /SHOWREPS</para></listItem><listItem><para>REPADMIN /SYNCALL</para></listItem></list></TD></tr></tbody></table><para>The following sample output from "REPADMIN /SHOWREPS" shows inbound replication from CONTOSO-DC2 to CONTOSO-DC1 failing with the "replication access was denied" error:</para><code>Default-First-Site-NameCONTOSO-DC1
+<listItem><para>REPADMIN.EXE reports that the last replication attempt has failed with status 5.</para><para>REPADMIN commands that commonly cite the 5 status include but are not limited to:</para><table xmlns:caps="https://schemas.microsoft.com/build/caps/2013/11"><tbody><tr><TD><list class="bullet"><listItem><para>REPADMIN /KCC</para></listItem><listItem><para>REPADMIN /REPLICATE</para></listItem><listItem><para>REPADMIN /REPLSUM</para></listItem></list></TD><TD><list class="bullet"><listItem><para>REPADMIN /SHOWREPL</para></listItem><listItem><para>REPADMIN /SHOWREPS</para></listItem><listItem><para>REPADMIN /SYNCALL</para></listItem></list></TD></tr></tbody></table><para>The following sample output from "REPADMIN /SHOWREPS" shows inbound replication from CONTOSO-DC2 to CONTOSO-DC1 failing with the "replication access was denied" error:</para><code>Default-First-Site-NameCONTOSO-DC1
 DSA Options: IS_GC 
 Site Options: (none)
 DSA object GUID: b6dc8589-7e00-4a5d-b688-045aef63ec01
@@ -70,7 +70,7 @@ Last attempt @ &lt;date&gt; &lt;time&gt; failed, <codeFeaturedElement>result 5(0
 Access is denied.</codeFeaturedElement>
 &lt;#&gt; consecutive failure(s).
 Last success @ &lt;date&gt; &lt;time&gt;.
-</code></listItem><listItem><para>NTDS KCC, NTDS General or Microsoft-Windows-ActiveDirectory_DomainService events with the 5 status are logged in the Directory Services log in Event Viewer.</para><para>Active Directory events that commonly cite the 5 status include but are not limited to:</para><table xmlns:caps="http://schemas.microsoft.com/build/caps/2013/11"><thead><tr><TD><para>Event ID</para></TD><TD><para>Event Source</para></TD><TD><para>Event String</para></TD></tr></thead><tbody><tr><TD><para>1655</para></TD><TD><para>NTDS General</para></TD><TD><para>Active Directory attempted to communicate with the following global catalog and the attempts were unsuccessful.</para></TD></tr><tr><TD><para>1925</para></TD><TD><para>NTDS KCC</para></TD><TD><para>The attempt to establish a replication link for the following writable directory partition failed.</para></TD></tr><tr><TD><para>1926</para></TD><TD><para>NTDS KCC</para></TD><TD><para>The attempt to establish a replication link to a read-only directory partition with the following parameters failed.</para></TD></tr></tbody></table></listItem><listItem><para>The <ui>Replicate now</ui> command in Active Directory Sites and Services returns "Access is denied."</para><para>Right-clicking on the connection object from a source DC and choosing "replicate now" fails with "Access is denied. The on-screen error message text and screenshot is shown below:</para><para>Dialog title text: Replicate Now</para><para>Dialog message text: </para><para>The following error occurred during the attempt to synchronize naming context &lt;%directory partition name%&gt; from Domain Controller &lt;Source DC&gt; to Domain Controller &lt;Destination DC&gt;:</para><para>
+</code></listItem><listItem><para>NTDS KCC, NTDS General or Microsoft-Windows-ActiveDirectory_DomainService events with the 5 status are logged in the Directory Services log in Event Viewer.</para><para>Active Directory events that commonly cite the 5 status include but are not limited to:</para><table xmlns:caps="https://schemas.microsoft.com/build/caps/2013/11"><thead><tr><TD><para>Event ID</para></TD><TD><para>Event Source</para></TD><TD><para>Event String</para></TD></tr></thead><tbody><tr><TD><para>1655</para></TD><TD><para>NTDS General</para></TD><TD><para>Active Directory attempted to communicate with the following global catalog and the attempts were unsuccessful.</para></TD></tr><tr><TD><para>1925</para></TD><TD><para>NTDS KCC</para></TD><TD><para>The attempt to establish a replication link for the following writable directory partition failed.</para></TD></tr><tr><TD><para>1926</para></TD><TD><para>NTDS KCC</para></TD><TD><para>The attempt to establish a replication link to a read-only directory partition with the following parameters failed.</para></TD></tr></tbody></table></listItem><listItem><para>The <ui>Replicate now</ui> command in Active Directory Sites and Services returns "Access is denied."</para><para>Right-clicking on the connection object from a source DC and choosing "replicate now" fails with "Access is denied. The on-screen error message text and screenshot is shown below:</para><para>Dialog title text: Replicate Now</para><para>Dialog message text: </para><para>The following error occurred during the attempt to synchronize naming context &lt;%directory partition name%&gt; from Domain Controller &lt;Source DC&gt; to Domain Controller &lt;Destination DC&gt;:</para><para>
 Access is denied</para><para>The operation will not continue</para><para>&lt;insert ADDS_ReplError_AccessIsDenied&gt;</para></listItem>
 </list>
     </content>
@@ -230,12 +230,12 @@ Access is denied</para><para>The operation will not continue</para><para>&lt;ins
           <para>
             <externalLink>
               <linkText>MSKB 888179</linkText>
-              <linkUri>http://support.microsoft.com/default.aspx?scid=kb;EN-US;888179</linkUri>
+              <linkUri>https://support.microsoft.com/default.aspx?scid=kb;EN-US;888179</linkUri>
             </externalLink>: Issues that occur when the CrashOnAuditFail registry value is set to 1 on an Exchange computer or that occur when the Security event log reaches the maximum size in Windows 2000 Server</para>
           <para>
             <externalLink>
               <linkText>MSKB 140058</linkText>
-              <linkUri>http://support.microsoft.com/default.aspx?scid=kb;EN-US;140058</linkUri>
+              <linkUri>https://support.microsoft.com/default.aspx?scid=kb;EN-US;140058</linkUri>
             </externalLink>: How To Prevent Auditable Activities When Security Log Is Full</para>
         </listItem>
         <listItem>
@@ -254,20 +254,20 @@ Access is denied</para><para>The operation will not continue</para><para>&lt;ins
 &lt;- maps to "Ticket not yet valid"</code>
           <para>The TKE_NYV response indicates that the date range on the TGS ticket is newer than time on the target, indicating excessive time skew. </para>
           <para>Note: W32TM /MONITOR only checks time on DCs in the test computers domain so you need to run this in each domain and compare time between the domains. </para>
-          <para>Note: if system time was found to be inaccurate, make an effort to figure out why and what can be done to prevent inaccurate time going forward. Was the forest root PDC configured with an external time source? Are reference time sources online and available on the network? Was the time service running? Are DC role computers configured to use NT5DS hierarchy to source time? Was time rollback protection described in <externalLink><linkText>MSKB 884776</linkText><linkUri>http://support.microsoft.com/default.aspx?scid=kb;EN-US;884776</linkUri></externalLink> in place? Do system clocks have good batteries and accurate time in the bios? Are virtual host and guest computers configured to source time correctly? </para>
+          <para>Note: if system time was found to be inaccurate, make an effort to figure out why and what can be done to prevent inaccurate time going forward. Was the forest root PDC configured with an external time source? Are reference time sources online and available on the network? Was the time service running? Are DC role computers configured to use NT5DS hierarchy to source time? Was time rollback protection described in <externalLink><linkText>MSKB 884776</linkText><linkUri>https://support.microsoft.com/default.aspx?scid=kb;EN-US;884776</linkUri></externalLink> in place? Do system clocks have good batteries and accurate time in the bios? Are virtual host and guest computers configured to source time correctly? </para>
           <para>Note: When the time difference is too great on Windows Server 2008 R2 destination DCs, the <ui>Replicate now</ui> command in DSSITE.MSC fails with the on-screen error "There is a time and / or date difference between the client and the server." This error string maps to error 1398 decimal / 0x576 hex with symbolic error name ERROR_TIME_SKEW. </para>
           <para>
             <embeddedLabel>Related Content </embeddedLabel> </para>
           <para>
             <externalLink>
               <linkText>Setting Clock Synchronization Tolerance to Prevent Replay Attacks</linkText>
-              <linkUri>http://technet.microsoft.com/library/cc784130(WS.10).aspx</linkUri>
-            </externalLink> (http://technet.microsoft.com/library/cc784130(WS.10).aspx)</para>
+              <linkUri>https://technet.microsoft.com/library/cc784130(WS.10).aspx</linkUri>
+            </externalLink> (https://technet.microsoft.com/library/cc784130(WS.10).aspx)</para>
         </listItem>
         <listItem>
           <para>SMB signing mismatch</para>
-          <para>The best compatibility matrix for SMB signing is documented in the graphic and text "interoperability matrix" sections of <externalLink><linkText>MSKB 916846</linkText><linkUri>http://support.microsoft.com/default.aspx?scid=kb;EN-US;916846</linkUri></externalLink> and is defined by four policy settings and their registry-based equivalents:</para>
-          <table xmlns:caps="http://schemas.microsoft.com/build/caps/2013/11">
+          <para>The best compatibility matrix for SMB signing is documented in the graphic and text "interoperability matrix" sections of <externalLink><linkText>MSKB 916846</linkText><linkUri>https://support.microsoft.com/default.aspx?scid=kb;EN-US;916846</linkUri></externalLink> and is defined by four policy settings and their registry-based equivalents:</para>
+          <table xmlns:caps="https://schemas.microsoft.com/build/caps/2013/11">
             <thead>
               <tr>
                 <TD>
@@ -355,7 +355,7 @@ Access is denied</para><para>The operation will not continue</para><para>&lt;ins
         <listItem>
           <para>Invalid Secure channel / Password Mismatch</para>
           <para>Validate the secure channel with "nltest /sc:query" or "netdom verify". 
-On condition, reset the destination DCs password with NETDOM /RESETPWD as described in multiple articles including <externalLink><linkText>MSKB 325850</linkText><linkUri>http://support.microsoft.com/default.aspx?scid=kb;EN-US;325850</linkUri></externalLink>.</para>
+On condition, reset the destination DCs password with NETDOM /RESETPWD as described in multiple articles including <externalLink><linkText>MSKB 325850</linkText><linkUri>https://support.microsoft.com/default.aspx?scid=kb;EN-US;325850</linkUri></externalLink>.</para>
           <para>
             <embeddedLabel>User Action</embeddedLabel>
           </para>
@@ -380,7 +380,7 @@ On condition, reset the destination DCs password with NETDOM /RESETPWD as descri
           <para>
             <externalLink>
               <linkText>MSKB 325850</linkText>
-              <linkUri>http://support.microsoft.com/default.aspx?scid=kb;EN-US;325850</linkUri>
+              <linkUri>https://support.microsoft.com/default.aspx?scid=kb;EN-US;325850</linkUri>
             </externalLink> How to use Netdom.exe to reset machine account passwords of a Windows Server domain controller</para>
         </listItem>
         <listItem>
@@ -402,7 +402,7 @@ On condition, reset the destination DCs password with NETDOM /RESETPWD as descri
         </listItem>
         <listItem>
           <para>Invalid Kerberos realm - PolAcDmN / PolPrDmN </para>
-          <para>Copied from <externalLink><linkText>MKSB 837513</linkText><linkUri>http://support.microsoft.com/default.aspx?scid=kb;EN-US;837513</linkUri></externalLink> Domain controller is not functioning correctly</para>
+          <para>Copied from <externalLink><linkText>MKSB 837513</linkText><linkUri>https://support.microsoft.com/default.aspx?scid=kb;EN-US;837513</linkUri></externalLink> Domain controller is not functioning correctly</para>
           <list class="ordered">
             <listItem>
               <para>Start Registry Editor.</para>
@@ -563,13 +563,13 @@ Unable to verify the machine account (&lt;DN path for Dc machine account&gt;) fo
   <relatedTopics>
     <externalLink>
       <linkText>Troubleshooting Active Directory operations that fail with error 5: Access is denied</linkText>
-      <linkUri>http://support.microsoft.com/kb/2002013</linkUri>
+      <linkUri>https://support.microsoft.com/kb/2002013</linkUri>
     </externalLink>
     <externalLink>
       <linkText>How the Active Directory Replication Model Works</linkText>
-      <linkUri>http://technet.microsoft.com/library/cc772726(WS.10).aspx</linkUri>
+      <linkUri>https://technet.microsoft.com/library/cc772726(WS.10).aspx</linkUri>
     </externalLink>
-<externalLink><linkText>repsFrom, RepsFrom</linkText><linkUri>http://msdn.microsoft.com/library/cc228409(PROT.13).aspx</linkUri></externalLink></relatedTopics>
+<externalLink><linkText>repsFrom, RepsFrom</linkText><linkUri>https://msdn.microsoft.com/library/cc228409(PROT.13).aspx</linkUri></externalLink></relatedTopics>
 </developerConceptualDocument>
 
 

@@ -24,7 +24,7 @@ This guide describes sets of tasks for several possible starting points of a  Wi
   
 Although the strategies that are presented in this guide are appropriate for almost all server operating system deployments, they have been tested and validated specifically for environments that contain fewer than 100,000 users and fewer than 1,000 sites, with network connections of a minimum of 28.8 kilobits per second (Kbps). If your environment does not meet these criteria, consider using a consulting firm that has experience deploying AD DS in more complex environments.  
   
-For more information about testing the AD DS deployment process, see Testing and Verifying the Deployment Process ([http://go.microsoft.com/fwlink/?LinkId=100206](http://go.microsoft.com/fwlink/?LinkId=100206)).  
+For more information about testing the AD DS deployment process, see Testing and Verifying the Deployment Process ([https://go.microsoft.com/fwlink/?LinkId=100206](https://go.microsoft.com/fwlink/?LinkId=100206)).  
   
 > [!NOTE]  
 > The information in this guide also applies to  Windows Server 2008 R2  AD DS.  

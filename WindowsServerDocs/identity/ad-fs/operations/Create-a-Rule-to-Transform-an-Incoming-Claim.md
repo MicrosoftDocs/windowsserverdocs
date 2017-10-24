@@ -22,7 +22,7 @@ By using the **Transform an Incoming Claim** rule template in Active Directory 
   
 You can use the following procedure to create a claim rule with the AD FS Management snap\-in.  
   
-Membership in **Administrators**, or equivalent, on the local computer is the minimum requirement to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](http://go.microsoft.com/fwlink/?LinkId=83477). 
+Membership in **Administrators**, or equivalent, on the local computer is the minimum requirement to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](https://go.microsoft.com/fwlink/?LinkId=83477). 
 
 ## To create a rule to transform an incoming claim on a Relying Party Trust in Windows Server 2016 
 

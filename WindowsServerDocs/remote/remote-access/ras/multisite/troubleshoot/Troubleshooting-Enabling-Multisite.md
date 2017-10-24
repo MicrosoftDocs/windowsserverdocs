@@ -145,7 +145,7 @@ This may be caused by an unexpected entry point table configuration in the clien
   
 Review the entry point table configuration in all client GPOs and fix any inconsistencies in the multisite configuration between the different instances of the client GPOs and the DirectAccess configuration. Use the `Get-DaEntryPointTableItem` cmdlet with the name of the client GPO to get the entry point table on the client. Use the `Get-NetIPHttpsConfiguration` cmdlet to get all the IP-HTTPS profiles for all the entry points.  
   
-For further information, see [DirectAccess Client Cmdlets in Windows PowerShell](http://technet.microsoft.com/library/hh848426).  
+For further information, see [DirectAccess Client Cmdlets in Windows PowerShell](https://technet.microsoft.com/library/hh848426).  
   
 
 

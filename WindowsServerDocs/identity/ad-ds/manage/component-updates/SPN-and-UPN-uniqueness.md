@@ -38,7 +38,7 @@ Duplicate UPN values break synchronization between on-premises AD and Office 365
 |UPN uniqueness|Duplicate UPNs break synchronization of on-premises AD accounts with Windows Azure AD-based services such as Office 365.|  
 |SPN uniqueness|Kerberos requires SPNs for mutual authentication.  Duplicate SPNs result in authentication failures.|  
   
-For more information about uniqueness requirements for UPNs and SPNs, see [Uniqueness Constraints](http://msdn.microsoft.com/library/dn392337.aspx).  
+For more information about uniqueness requirements for UPNs and SPNs, see [Uniqueness Constraints](https://msdn.microsoft.com/library/dn392337.aspx).  
   
 ## Symptoms  
 Error codes 8467 or 8468 or their hex, symbolic or string equivalents are logged in various on-screen dialogues and in event ID 2974 in the Directory Services event log. The attempt to create a duplicate UPN or SPN is blocked only under the following circumstances:  
@@ -348,7 +348,7 @@ Experiment with SPN and UPN uniqueness.  Follow these prompts, or complete your 
   
 **Optionally**  
   
-1.  Verify with the classroom instructor that it is ok to enable the *[AD Recycle Bin](http://technet.microsoft.com/library/jj574144.aspx#BKMK_EnableRecycleBin)* in Active Directory Administrative Center.  If so, move on to the next step.  
+1.  Verify with the classroom instructor that it is ok to enable the *[AD Recycle Bin](https://technet.microsoft.com/library/jj574144.aspx#BKMK_EnableRecycleBin)* in Active Directory Administrative Center.  If so, move on to the next step.  
   
 2.  Populate the UPN on a user account  
   

@@ -53,10 +53,10 @@ Depending on the requirements of your organization, use one of the following pro
   
 |Actual Authentication method|Corresponding URI|  
 |--------------------------------|---------------------|  
-|User name and password authentication|http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password|  
-|Windows authentication|http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/windows|  
-|Transport Layer Security \(TLS\) Mutual authentication that uses X.509 certificates|http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/tlsclient|  
-|X.509\-based authentication that does not use TLS|http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/x509|  
+|User name and password authentication|https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password|  
+|Windows authentication|https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/windows|  
+|Transport Layer Security \(TLS\) Mutual authentication that uses X.509 certificates|https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/tlsclient|  
+|X.509\-based authentication that does not use TLS|https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/x509|  
 ![create rule](media/Create-a-Rule-to-Send-an-Authentication-Method-Claim/auth2.PNG)
   
 ## To create by using the Send Group Membership as Claims rule template on a Claims Provider Trust in Windows Server 2016 
@@ -85,10 +85,10 @@ Depending on the requirements of your organization, use one of the following pro
   
 |Actual Authentication method|Corresponding URI|  
 |--------------------------------|---------------------|  
-|User name and password authentication|http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password|  
-|Windows authentication|http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/windows|  
-|Transport Layer Security \(TLS\) Mutual authentication that uses X.509 certificates|http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/tlsclient|  
-|X.509\-based authentication that does not use TLS|http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/x509|  
+|User name and password authentication|https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password|  
+|Windows authentication|https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/windows|  
+|Transport Layer Security \(TLS\) Mutual authentication that uses X.509 certificates|https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/tlsclient|  
+|X.509\-based authentication that does not use TLS|https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/x509|  
 ![create rule](media/Create-a-Rule-to-Send-an-Authentication-Method-Claim/auth2.PNG)
 
 
@@ -122,10 +122,10 @@ Depending on the requirements of your organization, use one of the following pro
   
 |Actual authentication method|Corresponding URI|  
 |--------------------------------|---------------------|  
-|User name and password authentication|http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password|  
-|Windows authentication|http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/windows|  
-|TLS mutual authentication that uses X.509 certificates|http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/tlsclient|  
-|X.509\-based authentication that does not use TLS|http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/x509|  
+|User name and password authentication|https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password|  
+|Windows authentication|https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/windows|  
+|TLS mutual authentication that uses X.509 certificates|https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/tlsclient|  
+|X.509\-based authentication that does not use TLS|https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/x509|  
 ![create rule](media/Create-a-Rule-to-Send-an-Authentication-Method-Claim/auth4.PNG)
   
 > [!NOTE]  
@@ -161,10 +161,10 @@ Depending on the requirements of your organization, use one of the following pro
   
 |Actual authentication method|Corresponding URI|  
 |--------------------------------|---------------------|  
-|User name and password authentication|http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password|  
-|Windows authentication|http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/windows|  
-|TLS mutual authentication that uses X.509 certificates|http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/tlsclient|  
-|X.509\-based authentication that does not use TLS|http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/x509|  
+|User name and password authentication|https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password|  
+|Windows authentication|https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/windows|  
+|TLS mutual authentication that uses X.509 certificates|https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/tlsclient|  
+|X.509\-based authentication that does not use TLS|https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/x509|  
 ![create rule](media/Create-a-Rule-to-Send-an-Authentication-Method-Claim/auth4.PNG)
 
 
@@ -222,10 +222,10 @@ Depending on the requirements of your organization, use one of the following pro
   
 |Actual Authentication method|Corresponding URI|  
 |--------------------------------|---------------------|  
-|User name and password authentication|http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password|  
-|Windows authentication|http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/windows|  
-|Transport Layer Security \(TLS\) Mutual authentication that uses X.509 certificates|http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/tlsclient|  
-|X.509\-based authentication that does not use TLS|http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/x509|  
+|User name and password authentication|https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password|  
+|Windows authentication|https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/windows|  
+|Transport Layer Security \(TLS\) Mutual authentication that uses X.509 certificates|https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/tlsclient|  
+|X.509\-based authentication that does not use TLS|https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/x509|  
 ![create rule](media/Create-a-Rule-to-Send-an-Authentication-Method-Claim/auth1.PNG)
  
 > [!NOTE]  
@@ -270,10 +270,10 @@ Depending on the requirements of your organization, use one of the following pro
   
 |Actual authentication method|Corresponding URI|  
 |--------------------------------|---------------------|  
-|User name and password authentication|http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password|  
-|Windows authentication|http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/windows|  
-|TLS mutual authentication that uses X.509 certificates|http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/tlsclient|  
-|X.509\-based authentication that does not use TLS|http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/x509|  
+|User name and password authentication|https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password|  
+|Windows authentication|https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/windows|  
+|TLS mutual authentication that uses X.509 certificates|https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/tlsclient|  
+|X.509\-based authentication that does not use TLS|https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/x509|  
 ![create rule](media/Create-a-Rule-to-Send-an-Authentication-Method-Claim/auth3.PNG)
   
 > [!NOTE]  

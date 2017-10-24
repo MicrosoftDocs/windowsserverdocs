@@ -53,7 +53,7 @@ An advisor pack includes the following elements:
 
 -   **XML metadata** (ProvisionMetadata.xml)
 
-    -   [Performance Logs and Alerts (PLA)](http://msdn.microsoft.com/library/windows/desktop/aa372635.aspx) data collector set
+    -   [Performance Logs and Alerts (PLA)](https://msdn.microsoft.com/library/windows/desktop/aa372635.aspx) data collector set
 
     -   Report layout
 
@@ -422,7 +422,7 @@ The **KeytypeID** column can have one of the following types:
 
 ### Collect WMI
 
-You can add any WMI query. For more info about writing WMI queries, see [WQL (SQL for WMI)](http://msdn.microsoft.com/library/windows/desktop/aa394606.aspx).The following example queries a page file location:
+You can add any WMI query. For more info about writing WMI queries, see [WQL (SQL for WMI)](https://msdn.microsoft.com/library/windows/desktop/aa394606.aspx).The following example queries a page file location:
 
 ``` syntax
 <path>Root\Cimv2:select * FROM Win32_PageFileUsage</path>
@@ -1204,7 +1204,7 @@ A data type name can be any valid string. Here s a list of allowed SQL data type
 
 -   varchar
 
-for more info about these SQL data types, see [Data types (Transact-SQL)](http://msdn.microsoft.com/library/ms187752.aspx).
+for more info about these SQL data types, see [Data types (Transact-SQL)](https://msdn.microsoft.com/library/ms187752.aspx).
 
 ### <a href="" id="bkmk-ui-svg"></a>Single value groups
 
@@ -2302,7 +2302,7 @@ A data analysis session is a performance analysis on a specific target server. A
 
 **Event Tracing for Windows**
 
-[Event Tracing](http://msdn.microsoft.com/library/windows/desktop/bb968803.aspx) for Windows (ETW) is a high-performance, low-overhead, scalable tracing system that is provided in the Windows operating systems. It provides profiling and debugging capabilities, which can be used to troubleshoot a variety of scenarios. SPA uses ETW events as a data source for generating the performance reports. For general info about ETW, see [Improve Debugging and Performance Tuning with ETW](http://msdn.microsoft.com/magazine/cc163437.aspx).
+[Event Tracing](https://msdn.microsoft.com/library/windows/desktop/bb968803.aspx) for Windows (ETW) is a high-performance, low-overhead, scalable tracing system that is provided in the Windows operating systems. It provides profiling and debugging capabilities, which can be used to troubleshoot a variety of scenarios. SPA uses ETW events as a data source for generating the performance reports. For general info about ETW, see [Improve Debugging and Performance Tuning with ETW](https://msdn.microsoft.com/magazine/cc163437.aspx).
 
 **WMI query**
 

@@ -36,14 +36,14 @@ Below is an alphabetical list of Microsoft and third-party providers with MFA of
 |Gemalto|Gemalto Identity & Security Services|[http://www.gemalto.com/identity](http://www.gemalto.com/identity)|
 |inWebo Technologies|inWebo Enterprise Authentication service|[inWebo Enterprise Authentication](http://www.inwebo.com)|
 |Login People|Login People MFA API connector for AD FS 2012 R2 (public beta)|[https://www.loginpeople.com](https://www.loginpeople.com)|
-|Microsoft Corp.|Microsoft Azure MFA|[Walkthrough Guide: Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](http://technet.microsoft.com/library/dn280946.aspx) (see step 3)|
+|Microsoft Corp.|Microsoft Azure MFA|[Walkthrough Guide: Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](https://technet.microsoft.com/library/dn280946.aspx) (see step 3)|
 |RSA, The Security Division of EMC|RSA SecurID Authentication Agent for Microsoft Active Directory Federation Services|[RSA SecurID Authentication Agent for Microsoft Active Directory Federation Services](http://www.emc.com/security/rsa-securid/rsa-authentication-agents/microsoft-ad-fs.htm)|
 |SafeNet, Inc.|SafeNet Authentication Service (SAS) Agent for AD FS|[SafeNet Authentication Service: AD FS Agent Configuration Guide](http://www.safenet-inc.com/resources/integration-guide/data-protection/Safenet_Authentication_Service/SafeNet_Authentication_Service__AD_FS_Agent_Configuration_Guide/?langtype=1033)|
 |Swisscom|Mobile ID Authentication Service and Signature Services|[Mobile ID Authentication Service](http://swisscom.ch/mid)|
 |Symantec|Symantec Validation and ID Protection Service (VIP)|[Symantec Validation and ID Protection Service (VIP)](http://www.symantec.com/vip-authentication-service)|
 
 ## Custom Authentication Method for AD FS in Windows Server 2012 R2
-We now provide instructions for building your own custom authentication method for AD FS in Windows Server 2012 R2. For more information, see [Build a Custom Authentication Method for AD FS in Windows Server 2012 R2](http://go.microsoft.com/fwlink/?LinkID=511980).
+We now provide instructions for building your own custom authentication method for AD FS in Windows Server 2012 R2. For more information, see [Build a Custom Authentication Method for AD FS in Windows Server 2012 R2](https://go.microsoft.com/fwlink/?LinkID=511980).
 
 ## See Also
 [Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)

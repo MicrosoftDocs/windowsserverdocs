@@ -54,4 +54,4 @@ wdsutil /add-Device /Device:computer1 /ID:{E8A3EFAC-201F-4E69-953F-B2DAA1E8B1B6}
 [Using the get-AllDevices Command](using-the-get-alldevices-command.md)
 [Using the get-Device Command](using-the-get-device-command.md)
 [Subcommand: set-Device](subcommand-set-device.md)
-[New-WdsClient](http://technet.microsoft.com/library/dn283430.aspx)
+[New-WdsClient](https://technet.microsoft.com/library/dn283430.aspx)

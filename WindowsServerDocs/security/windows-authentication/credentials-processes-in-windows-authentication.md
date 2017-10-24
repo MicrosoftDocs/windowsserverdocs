@@ -159,7 +159,7 @@ Applications can run in user mode where the application can run as any principal
 
 SSPI is available through the Secur32.dll module, which is an API used for obtaining integrated security services for authentication, message integrity, and message privacy. It provides an abstraction layer between application-level protocols and security protocols. Because different applications require different ways of identifying or authenticating users and different ways of encrypting data as it travels across a network, SSPI provides a way to access dynamic-link libraries (DLLs) that contain different authentication and cryptographic functions. These DLLs are called Security Support Providers (SSPs).
 
-Managed service accounts and virtual accounts were introduced in  Windows Server 2008 R2  and  Windows 7  to provide crucial applications, such as Microsoft SQL Server and Internet Information Services (IIS), with the isolation of their own domain accounts, while eliminating the need for an administrator to manually administer the service principal name (SPN) and credentials for these accounts. For more information about these features and their role in authentication, see [Managed Service Accounts Documentation for Windows 7 and Windows Server 2008 R2](http://technet.microsoft.com/library/ff641731(v=ws.10).aspx) and [Group Managed Service Accounts Overview](../group-managed-service-accounts/group-managed-service-accounts-overview.md).
+Managed service accounts and virtual accounts were introduced in  Windows Server 2008 R2  and  Windows 7  to provide crucial applications, such as Microsoft SQL Server and Internet Information Services (IIS), with the isolation of their own domain accounts, while eliminating the need for an administrator to manually administer the service principal name (SPN) and credentials for these accounts. For more information about these features and their role in authentication, see [Managed Service Accounts Documentation for Windows 7 and Windows Server 2008 R2](https://technet.microsoft.com/library/ff641731(v=ws.10).aspx) and [Group Managed Service Accounts Overview](../group-managed-service-accounts/group-managed-service-accounts-overview.md).
 
 **Services and kernel mode**
 
@@ -316,7 +316,7 @@ Virtual smart card technology was introduced in Windows 8. It stores the smart c
 
 Remote and wireless network authentication is another technology that uses certificates for authentication. The Internet Authentication Service (IAS) and virtual private network servers use Extensible Authentication Protocol-Transport Level Security (EAP-TLS), Protected Extensible Authentication Protocol (PEAP), or Internet Protocol security (IPsec) to perform certificate-based authentication for many types of network access, including virtual private network (VPN) and wireless connections.
 
-For information about certificate-based authentication in networking, see [Network access authentication and certificates](http://technet.microsoft.com/library/cc759575(WS.10).aspx).
+For information about certificate-based authentication in networking, see [Network access authentication and certificates](https://technet.microsoft.com/library/cc759575(WS.10).aspx).
 
 ## <a name="BKMK_SeeAlso"></a>See also
 [Windows Authentication Concepts](https://technet.microsoft.com/library/d169018.aspx)

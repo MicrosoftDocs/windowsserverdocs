@@ -44,8 +44,8 @@ wevtutil [{el | enum-logs}] [{gl | get-log} <Logname> [/f:<Format>]]
 |{sl | set-log} \<Logname> [/e:<Enabled>] [/i:<Isolation>] [/lfn:<Logpath>] [/rt:<Retention>] [/ab:<Auto>] [/ms:<Size>] [/l:<Level>] [/k:<Keywords>] [/ca:<Channel>] [/c:<Config>]|Modifies the configuration of the specified log.|
 |{ep | enum-publishers}|Displays the event publishers on the local computer.|
 |{gp | get-publisher} \<Publishername> [/ge:<Metadata>] [/gm:<Message>] [/f:<Format>]]|Displays the configuration information for the specified event publisher.|
-|{im | install-manifest} \<Manifest>|Installs event publishers and logs from a manifest. For more information about event manifests and using this parameter, see the Windows Event Log SDK at the Microsoft Developers Network (MSDN) Web site (http://msdn.microsoft.com).|
-|{um | uninstall-manifest} \<Manifest>|Uninstalls all publishers and logs from a manifest. For more information about event manifests and using this parameter, see the Windows Event Log SDK at the Microsoft Developers Network (MSDN) Web site (http://msdn.microsoft.com).|
+|{im | install-manifest} \<Manifest>|Installs event publishers and logs from a manifest. For more information about event manifests and using this parameter, see the Windows Event Log SDK at the Microsoft Developers Network (MSDN) Web site (https://msdn.microsoft.com).|
+|{um | uninstall-manifest} \<Manifest>|Uninstalls all publishers and logs from a manifest. For more information about event manifests and using this parameter, see the Windows Event Log SDK at the Microsoft Developers Network (MSDN) Web site (https://msdn.microsoft.com).|
 |{qe | query-events} \<Path> [/lf:<Logfile>] [/sq:<Structquery>] [/q:<Query>] [/bm:<Bookmark>] [/sbm:<Savebm>] [/rd:<Direction>] [/f:<Format>] [/l:<Locale>] [/c:<Count>] [/e:<Element>]|Reads events from an event log, from a log file, or using a structured query. By default, you provide a log name for \<Path>. However, if you use the **/lf** option, then \<Path> must be a path to a log file. If you use the **/sq** parameter, \<Path> must be a path to a file that contains a structured query.|
 |{gli | get-loginfo} \<Logname> [/lf:<Logfile>]|Displays status information about an event log or log file. If the **/lf** option is used, \<Logname> is a path to a log file. You can run **wevtutil el** to obtain a list of log names.|
 |{epl | export-log} \<Path> <Exportfile> [/lf:<Logfile>] [/sq:<Structquery>] [/q:<Query>] [/ow:<Overwrite>]|Exports events from an event log, from a log file, or using a structured query to the specified file. By default, you provide a log name for \<Path>. However, if you use the **/lf** option, then \<Path> must be a path to a log file. If you use the **/sq** option, \<Path> must be a path to a file that contains a structured query. <Exportfile> is a path to the file where the exported events will be stored.|
@@ -65,7 +65,7 @@ wevtutil [{el | enum-logs}] [{gl | get-log} <Logname> [/f:<Format>]]
 |/ms:\<Size>|Sets the maximum size of the log in bytes. The minimum log size is 1048576 bytes (1024KB) and log files are always multiples of 64KB, so the value you enter will be rounded off accordingly.|
 |/l:\<Level>|Defines the level filter of the log. \<Level> can be any valid level value. This option is only applicable to logs with a dedicated session. You can remove a level filter by setting <Level> to 0.|
 |/k:\<Keywords>|Specifies the keywords filter of the log. \<Keywords> can be any valid 64 bit keyword mask. This option is only applicable to logs with a dedicated session.|
-|/ca:\<Channel>|Sets the access permission for an event log. \<Channel> is a security descriptor that uses the Security Descriptor Definition Language (SDDL). For more information about SDDL format, see the Microsoft Developers Network (MSDN) Web site (http://msdn.microsoft.com).|
+|/ca:\<Channel>|Sets the access permission for an event log. \<Channel> is a security descriptor that uses the Security Descriptor Definition Language (SDDL). For more information about SDDL format, see the Microsoft Developers Network (MSDN) Web site (https://msdn.microsoft.com).|
 |/c:\<Config>|Specifies the path to a configuration file. This option will cause log properties to be read from the configuration file defined in \<Config>. If you use this option, you must not specify a <Logname> parameter. The log name will be read from the configuration file.|
 |/ge:\<Metadata>|Gets metadata information for events that can be raised by this publisher. \<Metadata> can be true or false.|
 |/gm:\<Message>|Displays the actual message instead of the numeric message ID. \<Message> can be true or false.|
@@ -94,7 +94,7 @@ wevtutil [{el | enum-logs}] [{gl | get-log} <Logname> [/f:<Format>]]
     ```
     <?xml version="1.0" encoding="UTF-8"?>
     <channel name="Application" isolation="Application"
-    xmlns="http://schemas.microsoft.com/win/2004/08/events">
+    xmlns="https://schemas.microsoft.com/win/2004/08/events">
     <logging>
     <retention>true</retention>
     <autoBackup>true</autoBackup>

@@ -19,7 +19,7 @@ ms.date: 07/05/2017
 
 ## Join the HGS server to the existing domain
 
-In an existing bastion forest, HGS must be added to the root domain. Use Server Manager or [Add-Computer](http://go.microsoft.com/fwlink/?LinkId=821564) to join your HGS server to the root domain.
+In an existing bastion forest, HGS must be added to the root domain. Use Server Manager or [Add-Computer](https://go.microsoft.com/fwlink/?LinkId=821564) to join your HGS server to the root domain.
 
 ## Add the HGS server role
 
@@ -30,7 +30,7 @@ You can also use these steps to configure 2 or more independent HGS clusters tha
 
 ## Join the HGS server to the existing domain
 
-Use Server Manager or [Add-Computer](http://go.microsoft.com/fwlink/?LinkId=821564) to join the HGS servers to the desired domain.
+Use Server Manager or [Add-Computer](https://go.microsoft.com/fwlink/?LinkId=821564) to join the HGS servers to the desired domain.
 
 ## Prepare Active Directory objects
 

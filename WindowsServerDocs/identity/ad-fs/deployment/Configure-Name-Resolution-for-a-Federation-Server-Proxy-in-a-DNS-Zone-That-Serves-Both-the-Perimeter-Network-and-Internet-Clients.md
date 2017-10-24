@@ -31,7 +31,7 @@ So that client computers on the Internet can successfully access a federation se
 > [!NOTE]  
 > It is assumed that you are using a DNS server running Windows 2000 Server, Windows Server 2003, or  Windows Server 2008  with the DNS Server service to control the Internet DNS zone.  
   
-Membership in **Administrators**, or equivalent, is the minimum required to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](http://go.microsoft.com/fwlink/?LinkId=83477).   
+Membership in **Administrators**, or equivalent, is the minimum required to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](https://go.microsoft.com/fwlink/?LinkId=83477).   
   
 #### To add a host \(A\) resource record to the Internet DNS zone for a federation server proxy  
   
@@ -51,7 +51,7 @@ So that Internet client requests can be processed successfully by the federation
 > [!NOTE]  
 > It is assumed that you are using a DNS server running Windows 2000 Server, Windows Server 2003,  Windows Server 2008 , or Windows Server® 2012 with the DNS Server service to control the perimeter DNS zone.  
   
-Membership in **Administrators**, or equivalent, is the minimum required to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](http://go.microsoft.com/fwlink/?LinkId=83477).   
+Membership in **Administrators**, or equivalent, is the minimum required to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](https://go.microsoft.com/fwlink/?LinkId=83477).   
   
 #### To add a host \(A\) resource record to the perimeter DNS zone for a federation server proxy  
   

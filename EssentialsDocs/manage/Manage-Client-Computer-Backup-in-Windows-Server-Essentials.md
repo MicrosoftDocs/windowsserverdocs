@@ -104,7 +104,7 @@ manager: dongill
 4.  Click **Close** when backup is set up for the computer.  
   
 ### Critical system files  
- When you install the Windows operating system, the Setup program creates folders on your system drive where it places files that the system requires to start and run. Critical system files include files with .dll, .exe, .ocx, and .sys file extensions. Some of these files are True Type fonts. In addition, system state files, such as the system „¢s registry, are required for the operating system to run properly.  
+ When you install the Windows operating system, the Setup program creates folders on your system drive where it places files that the system requires to start and run. Critical system files include files with .dll, .exe, .ocx, and .sys file extensions. Some of these files are True Type fonts. In addition, system state files, such as the system ï¿½ï¿½s registry, are required for the operating system to run properly.  
   
 ### Find the file you are looking for  
  You can restore all the folders for a computer, multiple files and folders, or a single file or folder from an existing backup.  
@@ -127,7 +127,7 @@ manager: dongill
 -   You can only back up data from a local drive that is formatted as an NTFS file system. Drives formatted as FAT (including FAT32) or ReFS file systems do not appear in the list of drives to back up.  
   
 > [!IMPORTANT]
->  Volume Shadow Copy Service (VSS) does not support creating a shadow copy of a virtual volume and the host volume in the same snapshot set. VSS does support creating snapshots of volumes on a virtual hard disk (VHD), if backup of the virtual volume is necessary. For more information, see [Servicing and Backing Up Virtual Hard Disks](http://go.microsoft.com/fwlink/p/?LinkId=256577).  
+>  Volume Shadow Copy Service (VSS) does not support creating a shadow copy of a virtual volume and the host volume in the same snapshot set. VSS does support creating snapshots of volumes on a virtual hard disk (VHD), if backup of the virtual volume is necessary. For more information, see [Servicing and Backing Up Virtual Hard Disks](https://go.microsoft.com/fwlink/p/?LinkId=256577).  
   
 ##  <a name="BKMK_4"></a> Change the time that backup is scheduled to run  
  The backup process should be scheduled during a time when as few people as possible are using their networked computers. This is usually during the late evening or early morning hours. The default time for backup is 6:00 PM until 9:00 AM. The server attempts to back up client computers only during the scheduled window of time.  
@@ -395,7 +395,7 @@ manager: dongill
 -   On Sunday, Backup Cleanup runs.  
   
 > [!IMPORTANT]
->  Volume Shadow Copy Service (VSS) does not support creating a shadow copy of a virtual volume and the host volume in the same snapshot set. VSS does support creating snapshots of volumes on a virtual hard disk (VHD), if backup of the virtual volume is necessary. For more information, see [Servicing and Backing Up Virtual Hard Disks](http://go.microsoft.com/fwlink/p/?LinkId=256577).  
+>  Volume Shadow Copy Service (VSS) does not support creating a shadow copy of a virtual volume and the host volume in the same snapshot set. VSS does support creating snapshots of volumes on a virtual hard disk (VHD), if backup of the virtual volume is necessary. For more information, see [Servicing and Backing Up Virtual Hard Disks](https://go.microsoft.com/fwlink/p/?LinkId=256577).  
   
 ##  <a name="BKMK_16"></a> Tips to help prevent data loss due to corruption of the client backup database  
  If the client backup database becomes corrupt, you can lose critical data.  

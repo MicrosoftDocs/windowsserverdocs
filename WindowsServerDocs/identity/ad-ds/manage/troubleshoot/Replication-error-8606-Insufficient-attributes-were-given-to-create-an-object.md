@@ -17,7 +17,7 @@ ms.technology: identity-adds
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 
-<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd">
+<developerConceptualDocument xmlns="https://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="https://www.w3.org/1999/xlink" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd">
   <introduction>
     <para>This article covers symptoms, root causes, and how to resolve Active Directory replication error 8606: Insufficient attributes were given to create an object. </para>
     <list class="bullet">
@@ -121,7 +121,7 @@ Source domain controller</para>
   <section address="BKMK_Causes">
     <title>Causes</title>
     <content>
-      <para>The 8606 error is logged when a source domain controller sends an update to an object (instead of an originating object create) that was already created, deleted, and reclaimed by garbage collection from the copy of Active Directory on a destination domain controller <placeholder>and</placeholder> the destination domain controller was configured to run in <externalLink><linkText>strict replication consistency</linkText><linkUri>http://technet.microsoft.com/library/cc816938(WS.10).aspx</linkUri></externalLink>. 
+      <para>The 8606 error is logged when a source domain controller sends an update to an object (instead of an originating object create) that was already created, deleted, and reclaimed by garbage collection from the copy of Active Directory on a destination domain controller <placeholder>and</placeholder> the destination domain controller was configured to run in <externalLink><linkText>strict replication consistency</linkText><linkUri>https://technet.microsoft.com/library/cc816938(WS.10).aspx</linkUri></externalLink>. 
 </para>
       <para>If the destination domain controller was configured to use loose replication consistency, the object would instead be "reanimated" on the copy of Active Directory on the destination domain controller. Specific variations that can cause the 8606 error are documented in the "More Information" section. However, the error is caused by one of the following:</para>
       <list class="bullet">
@@ -181,7 +181,7 @@ Remember the following when you troubleshoot 8606 errors: </para>
         <listItem>
           <para>Identify the current value for the forest-wide <embeddedLabel>TombStoneLifeTime</embeddedLabel> attribute setting:</para>
           <code>c:&gt;repadmin /showattr . "CN=Directory Service,CN=Windows NT,CN=Services,CN=Configuration,DC=forest root domain,DC=TLD&gt; /atts:tombstonelifetime</code>
-          <para>See the "Tombstone lifetime and replication of deletions" section in Knowledge Base article <externalLink><linkText>910205</linkText><linkUri>http://support.microsoft.com/default.aspx?scid=kb;EN-US;910205</linkUri></externalLink>.</para>
+          <para>See the "Tombstone lifetime and replication of deletions" section in Knowledge Base article <externalLink><linkText>910205</linkText><linkUri>https://support.microsoft.com/default.aspx?scid=kb;EN-US;910205</linkUri></externalLink>.</para>
         </listItem>
         <listItem>
           <para>For each destination domain controller that is logging the 8606 error, filter the Directory Service event log on NTDS Replication event 1988.</para>
@@ -189,7 +189,7 @@ Remember the following when you troubleshoot 8606 errors: </para>
         <listItem>
           <para>Collect metadata for each <placeholder>unique</placeholder> object that is cited in the NTDS Replication event 1988.</para>
           <para>From each 1988 event that is logged on the destination domain controller that cites a new object, populate the following table:</para>
-          <table xmlns:caps="http://schemas.microsoft.com/build/caps/2013/11">
+          <table xmlns:caps="https://schemas.microsoft.com/build/caps/2013/11">
             <thead>
               <tr>
                 <TD>
@@ -283,7 +283,7 @@ Remember the following when you troubleshoot 8606 errors: </para>
           <para>DSA is the name of a domain controller that is running Windows 2000 SP4 or a later version and that hosts a read-only domain directory partition for a nonlocal domain. For example, a GC in root.contoso.com can rehost its read-only copy of child.contoso.com but cannot rehost root.contoso.com.</para>
           <para>&lt;Naming Context&gt; is the DN path of a read-only domain directory partition that is residing in a global catalog.</para>
           <para>&lt;Good Source DSA Address&gt; is the name of a domain controller that is running Windows 2000 SP4 or a later version and that hosts a writable copy of &lt;Naming Context&gt;. The domain controller must be network-available to the DSA computer.</para>
-          <para>If the lingering object that is reported in the 1988 event is not removed by repadmin, evaluate whether the object on the source domain controller was created in USN gap, or whether the objects originating domain controller does not exist in the source domain controller's up-to dateness vector as documented in Microsoft Knowledge Base article <externalLink><linkText>948071</linkText><linkUri>http://support.microsoft.com/default.aspx?scid=kb;EN-US;948071</linkUri></externalLink>. </para>
+          <para>If the lingering object that is reported in the 1988 event is not removed by repadmin, evaluate whether the object on the source domain controller was created in USN gap, or whether the objects originating domain controller does not exist in the source domain controller's up-to dateness vector as documented in Microsoft Knowledge Base article <externalLink><linkText>948071</linkText><linkUri>https://support.microsoft.com/default.aspx?scid=kb;EN-US;948071</linkUri></externalLink>. </para>
           <alert class="note">
             <para>Lingering objects can also be removed by using <externalLink><linkText>repldiag.exe</linkText><linkUri>http://activedirectoryutils.codeplex.com/releases/view/13664</linkUri></externalLink>. This tool automates the repadmin /removelingeringobjects process.</para>
           </alert>
@@ -292,7 +292,7 @@ Remember the following when you troubleshoot 8606 errors: </para>
       <section>
         <title>Monitoring Active Directory replication health daily</title>
         <content>
-          <para>If error 8606 / Event 1988 was caused by the domain controller's failing to replicate Active Directory changes in the last tombstone lifetime number of days, make sure that Active Directory replication health is being monitored on a day-to-day basis going forward. Replication health may be monitored by using a dedicated monitoring application or by viewing the output from the one inexpensive but effective option to run "repadmin /showrepl * /csv" command in a spreadsheet application such as Microsoft Excel. (See "Method 2: Monitor replication by using a command-line" in Microsoft Knowledge Base article <externalLink><linkText>910205</linkText><linkUri>http://support.microsoft.com/kb/910205</linkUri></externalLink>).
+          <para>If error 8606 / Event 1988 was caused by the domain controller's failing to replicate Active Directory changes in the last tombstone lifetime number of days, make sure that Active Directory replication health is being monitored on a day-to-day basis going forward. Replication health may be monitored by using a dedicated monitoring application or by viewing the output from the one inexpensive but effective option to run "repadmin /showrepl * /csv" command in a spreadsheet application such as Microsoft Excel. (See "Method 2: Monitor replication by using a command-line" in Microsoft Knowledge Base article <externalLink><linkText>910205</linkText><linkUri>https://support.microsoft.com/kb/910205</linkUri></externalLink>).
 </para>
           <para>
 Domain controllers that have not inbound-replicated in 50 percent of tombstone lifetime number of days should be put in a watch list that receive priority admin attention to make replication operational. Domain controllers that cannot be made to successfully replicate should be force-demoted if they have not replicated within 90 percent of tombstone lifetime (TSL).
@@ -334,7 +334,7 @@ Replication failures that appear on a destination domain controller may be cause
               <para>Are domain controller role computers configured to use NT5DS hierarchy to source time?</para>
             </listItem>
             <listItem>
-              <para>Was time rollback protection that is described in Microsoft Knowledge Base article <externalLink><linkText>884776</linkText><linkUri>http://support.microsoft.com/default.aspx?scid=kb;EN-US;884776</linkUri></externalLink> in place?</para>
+              <para>Was time rollback protection that is described in Microsoft Knowledge Base article <externalLink><linkText>884776</linkText><linkUri>https://support.microsoft.com/default.aspx?scid=kb;EN-US;884776</linkUri></externalLink> in place?</para>
             </listItem>
             <listItem>
               <para>Do system clocks have good batteries and accurate time in the BIOS on domain controllers on virtual host computers?</para>
@@ -343,7 +343,7 @@ Replication failures that appear on a destination domain controller may be cause
               <para>Are virtual host and guest computers configured to source time according to the hosting manufacturer's recommendations?</para>
             </listItem>
           </list>
-          <para>Microsoft Knowledge Base article <externalLink><linkText>884776</linkText><linkUri>http://support.microsoft.com/default.aspx?scid=kb;EN-US;884776</linkUri></externalLink> documents steps to help protect domain controllers from "listening" to invalid time samples. More information about MaxPosPhaseCorrection and MaxNegPhaseCorrection is available in the <externalLink><linkText>W32Time Blog</linkText><linkUri>http://blogs.msdn.com/b/w32time/</linkUri></externalLink> post <externalLink><linkText>Configuring the Time Service: Max[Pos/Neg]PhaseCorrection</linkText><linkUri>http://blogs.msdn.com/b/w32time/archive/2008/02/28/configuring-the-time-service-max-pos-neg-phasecorrection.aspx</linkUri></externalLink>. Microsoft Knowledge Base article <externalLink><linkText>961027</linkText><linkUri>http://support.microsoft.com/default.aspx?scid=kb;EN-US;961027</linkUri></externalLink> describes some helpful precision updates when you are configuring time-based settings in policy.</para>
+          <para>Microsoft Knowledge Base article <externalLink><linkText>884776</linkText><linkUri>https://support.microsoft.com/default.aspx?scid=kb;EN-US;884776</linkUri></externalLink> documents steps to help protect domain controllers from "listening" to invalid time samples. More information about MaxPosPhaseCorrection and MaxNegPhaseCorrection is available in the <externalLink><linkText>W32Time Blog</linkText><linkUri>https://blogs.msdn.com/b/w32time/</linkUri></externalLink> post <externalLink><linkText>Configuring the Time Service: Max[Pos/Neg]PhaseCorrection</linkText><linkUri>https://blogs.msdn.com/b/w32time/archive/2008/02/28/configuring-the-time-service-max-pos-neg-phasecorrection.aspx</linkUri></externalLink>. Microsoft Knowledge Base article <externalLink><linkText>961027</linkText><linkUri>https://support.microsoft.com/default.aspx?scid=kb;EN-US;961027</linkUri></externalLink> describes some helpful precision updates when you are configuring time-based settings in policy.</para>
           <para>Check for lingering objects by using "repadmin /removelingeringobjects /advisorymode," and then remove them as required. 
 </para>
           <para>
@@ -443,7 +443,7 @@ Any updates to the partial attribute set can cause temporary lingering objects t
       <section>
         <title>Requirements for end-to-end replicate knowledge of originating deletes</title>
         <content>
-          <para>Active Directory domain controllers support multi-master replication where any domain controller (holding a writable partition) can originate a create, change, or delete of an object or attribute (value). Knowledge of object/attribute deletes are persisted by the originating domain controller and any domain controller that has incoming replicated knowledge of an originating delete for TSL number of days. (See Microsoft Knowledge Base articles <externalLink><linkText>216996</linkText><linkUri>http://support.microsoft.com/default.aspx?scid=kb;EN-US;216993</linkUri></externalLink> and <externalLink><linkText>910205</linkText><linkUri>http://support.microsoft.com/default.aspx?scid=kb;EN-US;910205</linkUri></externalLink>)
+          <para>Active Directory domain controllers support multi-master replication where any domain controller (holding a writable partition) can originate a create, change, or delete of an object or attribute (value). Knowledge of object/attribute deletes are persisted by the originating domain controller and any domain controller that has incoming replicated knowledge of an originating delete for TSL number of days. (See Microsoft Knowledge Base articles <externalLink><linkText>216996</linkText><linkUri>https://support.microsoft.com/default.aspx?scid=kb;EN-US;216993</linkUri></externalLink> and <externalLink><linkText>910205</linkText><linkUri>https://support.microsoft.com/default.aspx?scid=kb;EN-US;910205</linkUri></externalLink>)
 </para>
           <para>
 Active Directory requires end-to-end replication from all partition holders to transitively replicate all originating deletes for all directory partitions to all partition holders. Failure to inbound-replicate a directory partition in a rolling TSL numbers of days results in lingering objects. A lingering object is an object that was intentionally deleted by at least one domain controller but that incorrectly exists on destination domain controllers that did not inbound-replicate the transient knowledge of all unique deletions.</para>
@@ -454,7 +454,7 @@ Active Directory requires end-to-end replication from all partition holders to t
   <relatedTopics>
     <externalLink>
       <linkText>Troubleshooting Active Directory operations that fail with error 8606: "Insufficient attributes were given to create an object"</linkText>
-      <linkUri>http://support.microsoft.com/kb/2028495</linkUri>
+      <linkUri>https://support.microsoft.com/kb/2028495</linkUri>
     </externalLink>
   </relatedTopics>
 </developerConceptualDocument>
