@@ -15,7 +15,7 @@ ms.assetid: 9cf87597-b15d-4f43-8aa1-91e60367f011
 
 >Applies To: Windows Server (Semi-Annual Channel)
 
-Windows Server, version 1709 is the first release in the new Semi-Annual Channel. For more about Semi-Annual Channel see [Semi-Annual Channel Overview](semi-annual-channel-overview.md).
+**Windows Server, version 1709 is the first release in the new Semi-Annual Channel.** For more about Semi-Annual Channel see [Semi-Annual Channel Overview](semi-annual-channel-overview.md).
 
 Semi-Annual Channel releases such as this one are ideal for customers who are moving at a “cloud cadence," such as those on rapid development cycles or hosters keeping up with the latest Hyper-V investments. Windows Server products in the Semi-Annual Channel will have new releases available twice a year, in spring and fall. Each release in this channel will be supported for 18 months from the initial release.
 
@@ -49,7 +49,7 @@ This release should be installed as a clean installation.
 
 - VLSC: Volume-licensed customers with [Software Assurance](https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-default.aspx) can obtain this release by going to the [Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx) and clicking **Sign In**. Then click **Downloads and Keys** and search for this release. 
 
-- If you use a hosting provider such as [Microsoft Azure](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/Microsoft.WindowsServer?tab=Overview) or Amazon Web Services, Windows Server, version 1709 is available through those services. Software Assuranc eis not required.
+- If you use a hosting provider such as [Microsoft Azure](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/Microsoft.WindowsServer?tab=Overview) or Amazon Web Services, Windows Server, version 1709 is available through those services. Software Assurance is not required.
 
 - Participants in **Visual Studio Subscriptions:** If you already participate in Visual Studio Subscriptions, you can obtain Windows Server, version 1709 by going to the [Visual Studio Subscriber download page](https://my.visualstudio.com/downloads?pid=2347) and completing the download available there. If you are not already a subscriber, go to [Visual Studio Subscriptions](https://www.visualstudio.com/subscriptions/) to sign up, and then visit the [Visual Studio Subscriber download page](https://my.visualstudio.com/downloads?pid=2347) as above.
 
