@@ -17,9 +17,9 @@ ms.technology: identity-adds
 
 You can review the following set of changes to help understand and prepare for the schema updates that are performed by adprep /domainprep in Windows Server 2012. There are no domain-wide operations performed by the **domainprep** command in Windows Server 2012 R2.
 
-Beginning in Windows Server 2012, Adprep commands run automatically as needed during AD DS installation. They can also be run separately in advance of AD DS installation. For more information, see [Running Adprep.exe](http://technet.microsoft.com/library/dd464018(v=ws.10).aspx).
+Beginning in Windows Server 2012, Adprep commands run automatically as needed during AD DS installation. They can also be run separately in advance of AD DS installation. For more information, see [Running Adprep.exe](https://technet.microsoft.com/library/dd464018(v=ws.10).aspx).
 
-For more information about how to interpret the access control entry (ACE) strings, see [ACE strings](http://msdn.microsoft.com/library/aa374928(VS.85).aspx). For more information about how to interpret the security ID (SID) strings, see [SID strings](http://msdn.microsoft.com/library/aa379602(VS.85).aspx).
+For more information about how to interpret the access control entry (ACE) strings, see [ACE strings](https://msdn.microsoft.com/library/aa374928(VS.85).aspx). For more information about how to interpret the security ID (SID) strings, see [SID strings](https://msdn.microsoft.com/library/aa379602(VS.85).aspx).
 
 ## Windows Server 2016: Domain-wide updates
 

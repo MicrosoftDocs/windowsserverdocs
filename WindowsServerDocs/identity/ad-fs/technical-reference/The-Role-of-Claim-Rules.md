@@ -82,7 +82,7 @@ For more information describing each of these claim rule templates, see [Determi
 For business rules that are beyond the scope of standard claim rule templates, you can use a custom rule template to express a series of complex logic conditions using the claim rule language. For more information about using a custom rule, see [When to Use a Custom Claim Rule](When-to-Use-a-Custom-Claim-Rule.md).  
   
 #### Using Windows PowerShell  
-You can also use the ADFSClaimRuleSet cmdlet object with Windows PowerShell to create or administer rules in AD FS. For more information about how you can use Windows PowerShell with this cmdlet, see [AD FS Administration with Windows PowerShell](http://go.microsoft.com/fwlink/?LinkID=179634).  
+You can also use the ADFSClaimRuleSet cmdlet object with Windows PowerShell to create or administer rules in AD FS. For more information about how you can use Windows PowerShell with this cmdlet, see [AD FS Administration with Windows PowerShell](https://go.microsoft.com/fwlink/?LinkID=179634).  
   
 ## What is a claim rule set?  
 As shown in the following illustration, a claim rule set is a grouping of one or more rules for a given federated trust that will define how claims will be processed by the claims rule engine. When an incoming claim is received by the Federation Service the claim rule engine applies the logic specified by the appropriate claim rule set. It is the final sum of the logic from each rule in the set that will determine how claims will be issued for a given trust in its entirety.  

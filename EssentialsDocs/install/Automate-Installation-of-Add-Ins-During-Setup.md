@@ -35,7 +35,7 @@ C:\Program Files\Windows Server\bin\Installaddin.exe <full path to wssx file> -q
 >  The xml schema needs to exactly follow the one below:  
   
 ```  
-<Package xmlns="http://schemas.microsoft.com/WindowsServerSolutions/2010/03/Addins" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">  
+<Package xmlns="https://schemas.microsoft.com/WindowsServerSolutions/2010/03/Addins" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">  
   <Id>...</Id>  
   <Version>...</Version>  
   <Name>...</Name>  
@@ -73,7 +73,7 @@ C:\Program Files\Windows Server\bin\Installaddin.exe <full path to wssx file> -q
  To implement an uninstall step, add the following contents in addin.xml (directly under Package):  
   
 ```  
-<Package xmlns="http://schemas.microsoft.com/WindowsServerSolutions/2010/03/Addins" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">  
+<Package xmlns="https://schemas.microsoft.com/WindowsServerSolutions/2010/03/Addins" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">  
   <Id>...</Id>  
   <Version>...</Version>  
   <Name>...</Name>  

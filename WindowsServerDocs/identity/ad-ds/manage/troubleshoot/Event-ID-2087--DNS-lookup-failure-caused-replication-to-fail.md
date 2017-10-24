@@ -17,7 +17,7 @@ ms.technology: identity-adds
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 
-<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd">
+<developerConceptualDocument xmlns="https://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="https://www.w3.org/1999/xlink" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd">
   <introduction>
     <para>This problem typically occurs when a Domain Name System (DNS) lookup failure causes replication to fail. When a destination domain controller receives Event ID 2087 in the Directory Service event log, attempts to resolve the globally unique identifier (GUID) in the alias (CNAME) resource record, the fully qualified domain name (FQDN), and the NetBIOS name to the IP address of the source domain controller have all failed. Failure to locate the source replication partner prevents replication with that source until the problem is fixed.</para>
     <para>The following is an example of the event text: </para>
@@ -69,7 +69,7 @@ Directory Domain Services and is accessible on the network by typing
 DNS server for DNS services, and that the source domain 
 controller's host record and CNAME record are correctly 
 registered, using the DNS Enhanced version of DCDIAG.EXE 
-available on http://www.microsoft.com/dns 
+available on https://www.microsoft.com/dns 
 
 dcdiag /test:dns 
 
@@ -81,7 +81,7 @@ domain controller, as follows:
 dcdiag /test:dns 
 
 5) For further analysis of DNS error failures see KB 824449: 
-http://support.microsoft.com/?kbid=824449 
+https://support.microsoft.com/?kbid=824449 
 
 Additional Data 
 Error value: 
@@ -239,7 +239,7 @@ type was found.
                       <para>
                         <codeInline>remove selected server &lt;ServerName1&gt; on &lt;ServerName2&gt;</codeInline>
                       </para>
-                      <table xmlns:caps="http://schemas.microsoft.com/build/caps/2013/11">
+                      <table xmlns:caps="https://schemas.microsoft.com/build/caps/2013/11">
                         <thead>
                           <tr>
                             <TD colspan="1">
@@ -356,7 +356,7 @@ type was found.
                     </listItem>
                     <listItem>
                       <para>At the <codeInline>metadata cleanup:</codeInline> and <codeInline>ntdsutil:</codeInline> prompts, type <codeInline>quit</codeInline>, and then press ENTER.</para>
-                      <table xmlns:caps="http://schemas.microsoft.com/build/caps/2013/11">
+                      <table xmlns:caps="https://schemas.microsoft.com/build/caps/2013/11">
                         <thead>
                           <tr>
                             <TD colspan="1">
@@ -868,7 +868,7 @@ type was found.
                       <para>On the name server or servers obtained in step b, open the DNS snap-in, and double-click the forward lookup zone for the forest root domain name. Double-click the _msdcs folder, and note the alias (CNAME) resource records that exist for your server name.</para>
                     </listItem>
                     <listItem>
-                      <para>If there are no records present or the records are incorrect, see article 241505 in the Microsoft Knowledge Base (<externalLink><linkText>http://go.microsoft.com/fwlink/?LinkId=69994</linkText><linkUri>http://go.microsoft.com/fwlink/?LinkId=69994</linkUri></externalLink>).</para>
+                      <para>If there are no records present or the records are incorrect, see article 241505 in the Microsoft Knowledge Base (<externalLink><linkText>https://go.microsoft.com/fwlink/?LinkId=69994</linkText><linkUri>https://go.microsoft.com/fwlink/?LinkId=69994</linkUri></externalLink>).</para>
                     </listItem>
                   </list>
                 </content>

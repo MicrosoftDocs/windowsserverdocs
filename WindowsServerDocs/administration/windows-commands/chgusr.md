@@ -21,7 +21,7 @@ ms.date: 10/16/2017
 
 changes the install mode for the remote Desktop Session Host (rd Session Host) server.  
 > [!NOTE]  
-> In Windows Server 2008 R2, Terminal Services was renamed remote Desktop Services. To find out what's new in the latest version, see [What s New in remote Desktop Services in Windows Server 2012](http://technet.microsoft.com/library/hh831527) in the Windows Server TechNet Library.  
+> In Windows Server 2008 R2, Terminal Services was renamed remote Desktop Services. To find out what's new in the latest version, see [What s New in remote Desktop Services in Windows Server 2012](https://technet.microsoft.com/library/hh831527) in the Windows Server TechNet Library.  
 ## remarks  
 This command is the same as the **change user** command.  
 #### additional references  

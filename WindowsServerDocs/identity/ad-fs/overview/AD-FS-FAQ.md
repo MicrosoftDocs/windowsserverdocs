@@ -28,11 +28,11 @@ You can upgrade AD FS using one of the following:
 	- [Upgrading to AD FS in Windows Server 2016 using a WID database](../deployment/Upgrading-to-AD-FS-in-Windows-Server-2016.md)
 	- [Upgrading to AD FS in Windows Server 2016 using a SQL database](../deployment/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL.md)
 - Windows Server 2012 AD FS to Windows Server 2012 R2 AD FS
-	- [Migrate to AD FS on Windows Server 2012 R2](http://technet.microsoft.com/library/dn486815.aspx)
+	- [Migrate to AD FS on Windows Server 2012 R2](https://technet.microsoft.com/library/dn486815.aspx)
 - AD FS 2.0 to Windows Server 2012 AD FS
-	- [Migrate to AD FS on Windows Server 2012](http://technet.microsoft.com/library/jj647765.aspx)
+	- [Migrate to AD FS on Windows Server 2012](https://technet.microsoft.com/library/jj647765.aspx)
 - AD FS 1.x to AD FS 2.0 
-	- [Upgrade from AD FS 1.x to AD FS 2.0](http://technet.microsoft.com/library/ff678035.aspx)
+	- [Upgrade from AD FS 1.x to AD FS 2.0](https://technet.microsoft.com/library/ff678035.aspx)
 
 If you need to upgrade from AD FS 2.0 or 2.1 (Windows Server 2008 R2 or Windows Server 2012), you must use the in-box scripts (located in C:\Windows\ADFS).
 

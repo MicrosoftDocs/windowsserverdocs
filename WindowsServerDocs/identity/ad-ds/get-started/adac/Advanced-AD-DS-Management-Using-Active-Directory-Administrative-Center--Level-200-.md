@@ -57,7 +57,7 @@ The underlying Windows PowerShell and layer of operations for the new Recycle Bi
   
 ### Limitations  
   
--   Because the Active Directory Administrative Center can only manage domain partitions, it cannot restore deleted objects from the Configuration, Domain DNS, or Forest DNS partitions (you cannot delete objects from the Schema partition). To restore objects from non-domain partitions, use [Restore-ADObject](http://technet.microsoft.com/library/ee617262.aspx).  
+-   Because the Active Directory Administrative Center can only manage domain partitions, it cannot restore deleted objects from the Configuration, Domain DNS, or Forest DNS partitions (you cannot delete objects from the Schema partition). To restore objects from non-domain partitions, use [Restore-ADObject](https://technet.microsoft.com/library/ee617262.aspx).  
   
 -   The Active Directory Administrative Center cannot restore sub-trees of objects in a single action. For example, if you delete an OU with nested OUs, users, groups, and computers, restoring the base OU does not restore the child objects.  
   
@@ -66,7 +66,7 @@ The underlying Windows PowerShell and layer of operations for the new Recycle Bi
   
 Active Directory Recycle Bin requires a Windows Server 2008 R2 Forest Functional Level and you must be a member of the Enterprise Admins group. Once enabled, you cannot disable Active Directory Recycle Bin. Active Directory Recycle Bin increases the size of the Active Directory database (NTDS.DIT) on every domain controller in the forest. Disk space used by the recycle bin continues to increase over time as it preserves objects and all their attribute data.  
   
-For more information, see [Active Directory Recycle Bin Step-by-Step Guide](http://technet.microsoft.com/library/dd392261(v=WS.10).aspx) and [Assess Hardware Requirements (for Active Directory Recycle Bin)](http://technet.microsoft.com/library/cc753439(WS.10).aspx).  
+For more information, see [Active Directory Recycle Bin Step-by-Step Guide](https://technet.microsoft.com/library/dd392261(v=WS.10).aspx) and [Assess Hardware Requirements (for Active Directory Recycle Bin)](https://technet.microsoft.com/library/cc753439(WS.10).aspx).  
   
 You can *lower* the forest and domain functional levels from Windows Server 2012 to Windows Server 2008 R2, even after enabling the Active Directory Recycle Bin. This requires using the **Set-ADForestMode** and **Set-ADDomainMode** Active Directory cmdlets.  
   
@@ -99,7 +99,7 @@ The equivalent Active Directory Windows PowerShell cmdlet is still:
 Enable-ADOptionalFeature  
 ```  
   
-For more information about using Windows PowerShell to enable the Active Directory Recycle Bin, see the [Active Directory Recycle Bin Step-by-Step Guide](http://technet.microsoft.com/library/dd392261(v=WS.10).aspx).  
+For more information about using Windows PowerShell to enable the Active Directory Recycle Bin, see the [Active Directory Recycle Bin Step-by-Step Guide](https://technet.microsoft.com/library/dd392261(v=WS.10).aspx).  
   
 ### Managing Active Directory Recycle Bin using Active Directory Administrative Center  
 This section uses the example of an existing domain named **corp.contoso.com**. This domain organizes users into a parent OU named **UserAccounts**. The **UserAccounts** OU contains three child OUs named by department, which each contain further OUs, users, and groups.  
@@ -176,7 +176,7 @@ You can also add, modify, or reorder the column headers to provide more detail w
   
 ![Advanced AD DS Management](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_ColumnHeaders.png)  
   
-For more information about Ambiguous Name Resolution, see [ANR Attributes](http://msdn.microsoft.com/library/ms675092(VS.85).aspx).  
+For more information about Ambiguous Name Resolution, see [ANR Attributes](https://msdn.microsoft.com/library/ms675092(VS.85).aspx).  
   
 ##### Single Object  
 Restoring deleted objects has always been a single operation.  The Active Directory Administrative Center makes that operation easier. To restore a deleted object, such as a single user:  
@@ -237,7 +237,7 @@ Filter on all the Sales users. Hold down the CTRL and A keys to select all the d
   
 If the **Sales** OU contained child OUs of its own, then you would restore the child OUs first before restoring their children, and so on.  
   
-To restore all nested deleted objects by specifying a deleted parent container, see [Appendix B: Restore Multiple, Deleted Active Directory Objects (Sample Script)](http://technet.microsoft.com/library/dd379504(WS.10).aspx).  
+To restore all nested deleted objects by specifying a deleted parent container, see [Appendix B: Restore Multiple, Deleted Active Directory Objects (Sample Script)](https://technet.microsoft.com/library/dd379504(WS.10).aspx).  
   
 The Active Directory Windows PowerShell cmdlet for restoring deleted objects is:  
   
@@ -262,7 +262,7 @@ It is possible that over time, the Deleted Objects container will accumulate ove
 ### Configuring Fine-Grained Password Policies  
 The Active Directory Administrative Center enables you to create and manage Fine-Grained Password Policy (FGPP) objects. Windows Server 2008 introduced the FGPP feature but Windows Server 2012 has the first graphical management interface for it. You apply Fine-Grained Password Policies at a domain level and it enables overriding the single domain password required by Windows Server 2003. By creating different FGPP with different settings, individual users or groups get differing password policies in a domain.  
   
-For information about the Fine-Grained Password Policy, see [AD DS Fine-Grained Password and Account Lockout Policy Step-by-Step Guide (Windows Server 2008 R2)](http://technet.microsoft.com/library/cc770842(WS.10).aspx).  
+For information about the Fine-Grained Password Policy, see [AD DS Fine-Grained Password and Account Lockout Policy Step-by-Step Guide (Windows Server 2008 R2)](https://technet.microsoft.com/library/cc770842(WS.10).aspx).  
   
 In the Navigation pane, click Tree View, click your domain, click **System**, click **Password Settings Container**, and then in the Tasks pane, click **New** and **Password Settings**.  
   
@@ -492,7 +492,7 @@ For example, while using the INFO level, which returns all results except the tr
 Setting the Verbose level also shows the .NET stacks for each function, but these do not include enough data to be particularly useful except when troubleshooting the Dsac.exe suffering an access violation or crash.  
   
 > [!IMPORTANT]  
-> There is also an out-of-band version of the service called the [Active Directory Management Gateway](http://www.microsoft.com/download/en/details.aspx?displaylang=en&id=2852), which runs on Windows Server 2008 SP2 and Windows Server 2003 SP2.  
+> There is also an out-of-band version of the service called the [Active Directory Management Gateway](https://www.microsoft.com/download/en/details.aspx?displaylang=en&id=2852), which runs on Windows Server 2008 SP2 and Windows Server 2003 SP2.  
   
 The two likely causes of this issue are:  
   

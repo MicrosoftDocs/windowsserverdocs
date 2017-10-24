@@ -19,8 +19,8 @@ ms.date: 10/16/2017
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 > [!IMPORTANT]
-> This command is available only on servers that are running  Windows Server 2008  or  Windows Server 2008 R2 . **Servermanagercmd.exe** has been deprecated, and is not available in  Windows Server 2012 . For information about how to install or remove roles, role services, and features in  Windows Server 2012 , see [Install or uninstall roles, role services, and features](http://go.microsoft.com/fwlink/?LinkID=239563) on Microsoft TechNet.
-Installs and removes roles, role services, and features. Also displays the list of all roles, role services, and features available, and shows which are installed on this computer. For additional information about the roles, role services, and features that you can specify by using this tool, see the [Server Manager help](http://go.microsoft.com/fwlink/?LinkID=137387). (http://go.microsoft.com/fwlink/?LinkID=137387).
+> This command is available only on servers that are running  Windows Server 2008  or  Windows Server 2008 R2 . **Servermanagercmd.exe** has been deprecated, and is not available in  Windows Server 2012 . For information about how to install or remove roles, role services, and features in  Windows Server 2012 , see [Install or uninstall roles, role services, and features](https://go.microsoft.com/fwlink/?LinkID=239563) on Microsoft TechNet.
+Installs and removes roles, role services, and features. Also displays the list of all roles, role services, and features available, and shows which are installed on this computer. For additional information about the roles, role services, and features that you can specify by using this tool, see the [Server Manager help](https://go.microsoft.com/fwlink/?LinkID=137387). (https://go.microsoft.com/fwlink/?LinkID=137387).
 for examples of how to use this command, see [Examples](#BKMK_examples).
 ## Syntax
 ```
@@ -41,7 +41,7 @@ servermanagercmd -version
 |-help|Displays help in the Command prompt window. You can also use the short form, **-?**.|
 |-version|Displays the Server Manager version number. You can also use the short form, **-v**.|
 ## remarks
-**Servermanagercmd** is deprecated, and is not guaranteed to be supported in future releases of Windows. We recommend that if you are running Server Manager on computers that are running  Windows Server 2008 R2 , you use the Windows PowerShell cmdlets that are available for Server Manager. For more information, see [Server Manager cmdlets](http://go.microsoft.com/fwlink/?LinkID=137653).
+**Servermanagercmd** is deprecated, and is not guaranteed to be supported in future releases of Windows. We recommend that if you are running Server Manager on computers that are running  Windows Server 2008 R2 , you use the Windows PowerShell cmdlets that are available for Server Manager. For more information, see [Server Manager cmdlets](https://go.microsoft.com/fwlink/?LinkID=137653).
 Servermanagercmd can be run from any directory on the server's local drives. You must be a member of the Administrators group on the server on which you want to install or remove software.
 > [!IMPORTANT]
 > Because of security restrictions imposed by User Account Control in  Windows Server 2008 R2 , you must run **Servermanagercmd** in a Command prompt window opened with elevated permissions. To do this, right-click the Command prompt executable, or the **Command prompt** object on the **start** menu, and then click **Run as administrator**.
@@ -59,6 +59,6 @@ The following example shows how to use the ** whatif** parameter with **serverma
 servermanagercmd -inputpath install.xml -whatif
 ```
 #### additional references
--   for a complete list of the role, role service, or feature identifiers you can specify for the *Id* parameter, or more information about using an XML answer file with **Servermanagercmd**, see the [Server Manager help](http://go.microsoft.com/fwlink/?LinkID=137387). (http://go.microsoft.com/fwlink/?LinkID=137387).
--   See [Server Manager cmdlets](http://go.microsoft.com/fwlink/?LinkID=137653) for a listing of Windows PowerShell cmdlets that are available for Server Manager.
+-   for a complete list of the role, role service, or feature identifiers you can specify for the *Id* parameter, or more information about using an XML answer file with **Servermanagercmd**, see the [Server Manager help](https://go.microsoft.com/fwlink/?LinkID=137387). (https://go.microsoft.com/fwlink/?LinkID=137387).
+-   See [Server Manager cmdlets](https://go.microsoft.com/fwlink/?LinkID=137653) for a listing of Windows PowerShell cmdlets that are available for Server Manager.
 -   [Command-Line Syntax Key](command-line-syntax-key.md)

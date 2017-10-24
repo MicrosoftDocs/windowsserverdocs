@@ -31,7 +31,7 @@ This topic provides troubleshooting for issues that occur when installing  Windo
 
   
 > [!NOTE]
->  For the most current troubleshooting information from the  Windows Server Essentials community, we suggest that you visit the [Windows Server Essentials Forum](http://social.technet.microsoft.com/Forums/winserveressentials/threads). The Windows Server Essentials Forum is a great place to search for help, or to ask a question.  
+>  For the most current troubleshooting information from the  Windows Server Essentials community, we suggest that you visit the [Windows Server Essentials Forum](https://social.technet.microsoft.com/Forums/winserveressentials/threads). The Windows Server Essentials Forum is a great place to search for help, or to ask a question.  
   
 ##  <a name="BKMK_GeneralTroubleshootingSteps"></a> General troubleshooting steps  
  If the installation of  Windows Server Essentials fails, take these steps to help identify the issue that caused the failure.  
@@ -43,7 +43,7 @@ This topic provides troubleshooting for issues that occur when installing  Windo
   
 1.  Verify that your server hardware meets the minimum requirements. For information about hardware requirements, see [System Requirements for Windows Server Essentials](../get-started/system-requirements.md).  
   
-2.  If you received the  Windows Server Essentials installation DVD from MSDN, verify that the DVD is valid by checking the SHA1 sum. For more information, see [Availability and description of the File Checksum Integrity Verifier utility](http://go.microsoft.com/fwlink/?LinkId=220495) (http://go.microsoft.com/fwlink/?LinkId=220495).  
+2.  If you received the  Windows Server Essentials installation DVD from MSDN, verify that the DVD is valid by checking the SHA1 sum. For more information, see [Availability and description of the File Checksum Integrity Verifier utility](https://go.microsoft.com/fwlink/?LinkId=220495) (https://go.microsoft.com/fwlink/?LinkId=220495).  
   
 3.  Verify that the network adapter on the server is connected to a router by a network cable.  
   

@@ -597,7 +597,7 @@ manager: dongill
 ###  <a name="BKMK_12"></a> Move computer data and settings manually  
   Windows Server Essentials and  Windows Server Essentials support user profile migration only for client computers that are running the Windows 7 operating system. When you connect a Windows 7-based computer to the server, the Connect Computer to the Server Wizard can automatically migrate the user profile.  
   
- The user profile cannot be transferred automatically when connecting a Windows 8,  Windows 8.1 or Windows 10 computer to the server. However, on a Windows 8 computer, you can use Windows Easy Transfer to transfer data and settings from the original local user to the domain-joined computer. To do that, you must be an Administrator on both the Windows 8 source computer and the Windows 8 destination computer. For information about using Windows Easy Transfer to transfer files and settings, see [article 2735227](http://support.microsoft.com/kb/2735227) in the Microsoft Knowledge Base.  
+ The user profile cannot be transferred automatically when connecting a Windows 8,  Windows 8.1 or Windows 10 computer to the server. However, on a Windows 8 computer, you can use Windows Easy Transfer to transfer data and settings from the original local user to the domain-joined computer. To do that, you must be an Administrator on both the Windows 8 source computer and the Windows 8 destination computer. For information about using Windows Easy Transfer to transfer files and settings, see [article 2735227](https://support.microsoft.com/kb/2735227) in the Microsoft Knowledge Base.  
   
 ###  <a name="BKMK_Transfer"></a> Transfer multiple user profiles during computer deployment  
  Before you connect a computer running the Windows 7 or Windows 7 SP1 operating system to the Windows Server Essentials server, in order to transfer multiple local user profiles you must first create the corresponding network user accounts on the server. For more information about creating network user accounts, see [Add a user account](../manage/Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Manage1).  
@@ -638,7 +638,7 @@ manager: dongill
 1.  Uninstall the Connector software from the computer by using the Control Panel. For step-by-step instructions, see [Uninstall the Connector software](Get-Connected-in-Windows-Server-Essentials.md#BKMK_13).   
 
   
-2.  Unjoin the computer from the Windows Server Essentials domain and join it to the workgroup. For step-by-step instructions for joining Windows to a workgroup, [Join or create a workgroup](http://windows.microsoft.com/windows7/Join-or-create-a-workgroup).  
+2.  Unjoin the computer from the Windows Server Essentials domain and join it to the workgroup. For step-by-step instructions for joining Windows to a workgroup, [Join or create a workgroup](https://windows.microsoft.com/windows7/Join-or-create-a-workgroup).  
   
 3.  Remove the computer from the server by using the Dashboard. For step-by-step instructions, see [Remove a computer from the server](../manage/Manage-Devices-in-Windows-Server-Essentials.md#BKMK_3).  
   
@@ -647,7 +647,7 @@ manager: dongill
 
 1.  Uninstall the Connector software from the computer by using the Control Panel. For step-by-step instructions, see [Uninstall the Connector software](Get-Connected-in-Windows-Server-Essentials.md#BKMK_13).  
   
-2.  Unjoin the computer from the Windows Server Essentials domain and join it to the workgroup. For step-by-step instructions for joining Windows to a workgroup, [Join or create a workgroup](http://windows.microsoft.com/windows7/Join-or-create-a-workgroup).  
+2.  Unjoin the computer from the Windows Server Essentials domain and join it to the workgroup. For step-by-step instructions for joining Windows to a workgroup, [Join or create a workgroup](https://windows.microsoft.com/windows7/Join-or-create-a-workgroup).  
   
 3.  Connect the computer to the server by using the Connect Computer Wizard. For step-by-step instructions, see [Connect computers to the server](Get-Connected-in-Windows-Server-Essentials.md#BKMK_9).  
   

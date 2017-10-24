@@ -96,7 +96,7 @@ Yes. CAU offers the following dimensions of flexibility to suit enterprise custo
   
 **Advanced Updating Run options** The administrator can additionally specify from a large set of advanced Updating Run options such as the maximum number of times that the update process is retried on each node. These options can be specified using either the CAU UI or the CAU PowerShell cmdlets. These custom settings can be saved in an Updating Run Profile and reused for later Updating Runs.  
   
-**Public plug\-in architecture** CAU includes features to Register, Unregister, and Select plug\-ins. CAU ships with two default plug\-ins: one coordinates the Windows Update Agent \(WUA\) APIs on each cluster node; the second applies hotfixes that are manually copied to a file share that is accessible to the cluster nodes. If an enterprise has unique needs that cannot be met with these two plug\-ins, the enterprise can build a new CAU plug\-in according to the public API specification. For more information, see [Cluster\-Aware Updating Plug\-in Reference](http://msdn.microsoft.com/library/hh418084(VS.85).aspx).  
+**Public plug\-in architecture** CAU includes features to Register, Unregister, and Select plug\-ins. CAU ships with two default plug\-ins: one coordinates the Windows Update Agent \(WUA\) APIs on each cluster node; the second applies hotfixes that are manually copied to a file share that is accessible to the cluster nodes. If an enterprise has unique needs that cannot be met with these two plug\-ins, the enterprise can build a new CAU plug\-in according to the public API specification. For more information, see [Cluster\-Aware Updating Plug\-in Reference](https://msdn.microsoft.com/library/hh418084(VS.85).aspx).  
   
 For information about configuring and customizing CAU plug\-ins to support different updating scenarios, see [How Plug\-ins Work](assetId:///847b571b-12b3-473c-953f-75a5a1f51333).  
   
@@ -149,9 +149,9 @@ Yes. CAU supports a number of Updating Run options that determine how the Updati
   
 ## Where is the CAU plug\-in specification?  
   
--   [Cluster\-Aware Updating Plug\-in Reference](http://msdn.microsoft.com/library/hh418084(VS.85).aspx)  
+-   [Cluster\-Aware Updating Plug\-in Reference](https://msdn.microsoft.com/library/hh418084(VS.85).aspx)  
   
--   [Cluster Aware Updating plug\-in sample](http://code.msdn.microsoft.com/windowsdesktop/Cluster-Aware-Updating-6a8854c9)  
+-   [Cluster Aware Updating plug\-in sample](https://code.msdn.microsoft.com/windowsdesktop/Cluster-Aware-Updating-6a8854c9)  
   
 ## See also  
   

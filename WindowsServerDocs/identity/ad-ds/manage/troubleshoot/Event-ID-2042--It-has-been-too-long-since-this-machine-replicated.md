@@ -17,7 +17,7 @@ ms.technology: identity-adds
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 
-<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd">
+<developerConceptualDocument xmlns="https://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="https://www.w3.org/1999/xlink" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd">
   <introduction>
     <para>If a domain controller has not replicated with its partner for longer than a tombstone lifetime, it is possible that a lingering object problem exists on one or both domain controllers. The tombstone lifetime in an Active Directory forest determines how long a deleted object (called a "tombstone") is retained in Active Directory Domain Services (AD DS). The tombstone lifetime is determined by the value of the <system>tombstoneLifetime</system> attribute on the Directory Service object in the configuration directory partition. </para>
 
@@ -104,7 +104,7 @@ exceeded the tombstone lifetime.</code>
         </listItem>
         <listItem>
           <para>Determine whether there are any replication failures that have been allowed to exceed the tombstone lifetime of the forest. Typically, the tombstone lifetime of the forest is 60 to 180 days by default. The event message indicates the tombstone lifetime of the forest as it is currently configured. </para>
-          <para>Run the command <system>repadmin /showrepl</system> to determine whether a replication issue exists. If you suspect that there is a replication issue, see <externalLink><linkText>Monitoring and Troubleshooting Active Directory Replication Using Repadmin</linkText><linkUri>http://go.microsoft.com/fwlink/?linkid=140631</linkUri></externalLink> (http://go.microsoft.com/fwlink/?linkid=140631) for information about how to resolve the issue.</para>
+          <para>Run the command <system>repadmin /showrepl</system> to determine whether a replication issue exists. If you suspect that there is a replication issue, see <externalLink><linkText>Monitoring and Troubleshooting Active Directory Replication Using Repadmin</linkText><linkUri>https://go.microsoft.com/fwlink/?linkid=140631</linkUri></externalLink> (https://go.microsoft.com/fwlink/?linkid=140631) for information about how to resolve the issue.</para>
         </listItem>
         <listItem>
           <para>Determine whether there are lingering objects. You can do this by running the command <system>repadmin /removelingeringobjects</system> in advisory mode, as described in the following procedure. </para>
@@ -168,7 +168,7 @@ exceeded the tombstone lifetime.</code>
                   <para>
                     <codeInline>repadmin /regkey &lt;hostname&gt; +allowDivergent</codeInline>
                   </para>
-                  <table xmlns:caps="http://schemas.microsoft.com/build/caps/2013/11">
+                  <table xmlns:caps="https://schemas.microsoft.com/build/caps/2013/11">
                     <thead>
                       <tr>
                         <TD>

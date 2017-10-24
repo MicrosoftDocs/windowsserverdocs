@@ -51,8 +51,8 @@ Use Diskpart `/s` to run scripts that automate disk\-related tasks, such as crea
 When DiskPart starts, the DiskPart version and computer name display at the command prompt. By default, if DiskPart encounters an error while attempting to perform a scripted task, DiskPart stops processing the script and displays an error code \(unless you specified the **noerr** parameter\). However, DiskPart always returns errors when it encounters syntax errors, regardless of whether you used the **noerr** parameter. The **noerr** parameter enables you to perform useful tasks such as using a single script to delete all partitions on all disks regardless of the total number of disks.  
   
 ## See Also  
-[Sample: Configure UEFI\/gpt\-Based Hard Drive Partitions by Using Windows PE and DiskPart](http://technet.microsoft.com/library/hh825686.aspx)  
-[Sample: Configure BIOS\/MBR\-Based Hard Disk Partitions by Using Windows PE and DiskPart](http://technet.microsoft.com/library/hh825677.aspx)  
-[Storage Cmdlets in Windows PowerShell](http://technet.microsoft.com/library/hh848705.aspx)  
+[Sample: Configure UEFI\/gpt\-Based Hard Drive Partitions by Using Windows PE and DiskPart](https://technet.microsoft.com/library/hh825686.aspx)  
+[Sample: Configure BIOS\/MBR\-Based Hard Disk Partitions by Using Windows PE and DiskPart](https://technet.microsoft.com/library/hh825677.aspx)  
+[Storage Cmdlets in Windows PowerShell](https://technet.microsoft.com/library/hh848705.aspx)  
   
 

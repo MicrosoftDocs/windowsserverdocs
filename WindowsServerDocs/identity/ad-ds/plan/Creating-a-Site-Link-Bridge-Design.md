@@ -24,7 +24,7 @@ By default, all site links are transitive. We recommend that you keep transitivi
   
 -   You need to control the replication flow of the changes made in Active Directory Domain Services (AD DS). By disabling **Bridge all site links** for the site link IP transport and configuring a site link bridge, the site link bridge becomes the equivalent of a disjointed network. All site links within the site link bridge can route transitively, but they do not route outside of the site link bridge.  
   
-For more information about how to use the Active Directory Sites and Services snap-in to disable the **Bridge all site links** setting, see Enable or disable site link bridges ([http://go.microsoft.com/fwlink/?LinkId=107073](http://go.microsoft.com/fwlink/?LinkId=107073)).  
+For more information about how to use the Active Directory Sites and Services snap-in to disable the **Bridge all site links** setting, see Enable or disable site link bridges ([https://go.microsoft.com/fwlink/?LinkId=107073](https://go.microsoft.com/fwlink/?LinkId=107073)).  
   
 ## Controlling AD DS replication flow  
 Two scenarios in which you need a site link bridge design to control replication flow include controlling replication failover and controlling replication through a firewall.  
@@ -33,7 +33,7 @@ Two scenarios in which you need a site link bridge design to control replication
 If your organization has a hub-and-spoke network topology, you generally do not want the satellite sites to create replication connections to other satellite sites if all domain controllers in the hub site fail. In such scenarios, you must disable **Bridge all site links** and create site link bridges so that replication connections are created between the satellite site and another hub site that is just one or two hops away from the satellite site.  
   
 ### Controlling replication through a firewall  
-If two domain controllers representing the same domain in two different sites are specifically allowed to communicate with each other only through a firewall, you can disable **Bridge all site links** and create site link bridges for sites on the same side of the firewall. Therefore, if your network is separated by firewalls, we recommend that you disable transitivity of site links and create site link bridges for the network on one side of the firewall. For information about managing replication through firewalls, see Active Directory in Networks Segmented by Firewalls ([http://go.microsoft.com/fwlink/?LinkId=107074](http://go.microsoft.com/fwlink/?LinkId=107074)).  
+If two domain controllers representing the same domain in two different sites are specifically allowed to communicate with each other only through a firewall, you can disable **Bridge all site links** and create site link bridges for sites on the same side of the firewall. Therefore, if your network is separated by firewalls, we recommend that you disable transitivity of site links and create site link bridges for the network on one side of the firewall. For information about managing replication through firewalls, see Active Directory in Networks Segmented by Firewalls ([https://go.microsoft.com/fwlink/?LinkId=107074](https://go.microsoft.com/fwlink/?LinkId=107074)).  
   
 
 

@@ -124,7 +124,7 @@ If you are using SQL Server for your AD FS configuration database, size the SQL 
 - At least one Windows Server 2016 domain controller is required for Microsoft Passport for Work.
   
 > [!NOTE]  
-> All support for environments with Windows Server 2003 domain controllers has ended. Visit [this page](http://support.microsoft.com/lifecycle/search/default.aspx?sort=PN&alpha=Windows+Server+2003&Filter=FilterNO) for additional information on the Microsoft Support Lifecycle.  
+> All support for environments with Windows Server 2003 domain controllers has ended. Visit [this page](https://support.microsoft.com/lifecycle/search/default.aspx?sort=PN&alpha=Windows+Server+2003&Filter=FilterNO) for additional information on the Microsoft Support Lifecycle.  
   
 **Domain functional\-level requirements**  
   

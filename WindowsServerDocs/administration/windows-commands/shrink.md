@@ -52,4 +52,4 @@ To display the maximum number of MB that the volume can be reduced by, type:
 shrink querymax
 ```
 
-[Resize-Partition](http://technet.microsoft.com/library/hh848680.aspx)
+[Resize-Partition](https://technet.microsoft.com/library/hh848680.aspx)

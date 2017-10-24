@@ -41,4 +41,4 @@ This utility is for use in machine startup or user logon scripts, and should not
 #### Additional references
 
 -   [Command-Line Syntax Key](command-line-syntax-key.md)
--   [Deploy Printers by Using Group Policy](http://go.microsoft.com/fwlink/?LinkId=230627)
+-   [Deploy Printers by Using Group Policy](https://go.microsoft.com/fwlink/?LinkId=230627)

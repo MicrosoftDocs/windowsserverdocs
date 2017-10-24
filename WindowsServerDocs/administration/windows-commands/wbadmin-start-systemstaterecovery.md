@@ -82,4 +82,4 @@ wbadmin start systemstaterecovery
 
 -   [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)
--   [Start-WBSystemStateRecovery](http://technet.microsoft.com/library/jj902449.aspx) cmdlet
+-   [Start-WBSystemStateRecovery](https://technet.microsoft.com/library/jj902449.aspx) cmdlet

@@ -52,7 +52,7 @@ Use the following steps to patch the server automatically with Windows Update:
    Net start wuauserv 
    ```
 
-If the server is a member of a domain, you can also configure Windows Update using Group Policy. For more information, see http://go.microsoft.com/fwlink/?LinkId=192470. However, when you use this method, only option 4 ("Auto download and schedule the install") is relevant to Server Core installations because of the lack of a graphical interface. For more control over which updates are installed and when, you can use a script which provides a command-line equivalent of most of the Windows Update graphical interface. For information about the script, see http://go.microsoft.com/fwlink/?LinkId=192471.
+If the server is a member of a domain, you can also configure Windows Update using Group Policy. For more information, see https://go.microsoft.com/fwlink/?LinkId=192470. However, when you use this method, only option 4 ("Auto download and schedule the install") is relevant to Server Core installations because of the lack of a graphical interface. For more control over which updates are installed and when, you can use a script which provides a command-line equivalent of most of the Windows Update graphical interface. For information about the script, see https://go.microsoft.com/fwlink/?LinkId=192471.
 
 To force Windows Update to immediately detect and install any available updates, run the following command:
 

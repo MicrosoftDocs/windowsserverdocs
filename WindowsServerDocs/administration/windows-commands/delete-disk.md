@@ -21,7 +21,7 @@ ms.date: 10/16/2017
 
 Deletes a missing dynamic disk from the list of disks.
 
-For instructions regarding how to use this command, see [Remove a Missing Dynamic Disk](http://go.microsoft.com/fwlink/?LinkId=207055) (http://go.microsoft.com/fwlink/?LinkId=207055).
+For instructions regarding how to use this command, see [Remove a Missing Dynamic Disk](https://go.microsoft.com/fwlink/?LinkId=207055) (https://go.microsoft.com/fwlink/?LinkId=207055).
 
 ## Syntax
 

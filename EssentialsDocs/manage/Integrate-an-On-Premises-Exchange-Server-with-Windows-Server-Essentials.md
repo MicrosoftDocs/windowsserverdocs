@@ -77,13 +77,13 @@ This guide provides information and basic instructions to help you set up and in
   
 2.  Run Windows PowerShell as an administrator.  
   
-3.  At the Windows PowerShell command prompt, type **Add-ADGroupMember ËœEnterprise Admins „¢ $env:username**, and then press Enter.  
+3.  At the Windows PowerShell command prompt, type **Add-ADGroupMember ËœEnterprise Admins ï¿½ï¿½ $env:username**, and then press Enter.  
   
 #### To install Exchange Server  
   
 1.  Log on to the second server as an administrator.  
   
-2.  Open your Internet browser, and then navigate to the [Exchange Server Deployment Assistant](http://go.microsoft.com/fwlink/p/?LinkID=249163) website.  
+2.  Open your Internet browser, and then navigate to the [Exchange Server Deployment Assistant](https://go.microsoft.com/fwlink/p/?LinkID=249163) website.  
   
 3.  Click **On-Premises Only**.  
   
@@ -109,7 +109,7 @@ This guide provides information and basic instructions to help you set up and in
   
 > [!NOTE]
 >  -   You must always choose to install the Management Tools on the server that is running Exchange Server. The Management Tools are required by the Exchange Server Integration feature on Windows Server Essentials.  
-> -   If you need to configure virtual directories, we recommend that you also set the **InternalUrl** property to be the same URL as the **ExternalUrl** property for each virtual directory. For more information, see [Managing Client Access Server Virtual Directories](http://go.microsoft.com/fwlink/p/?LinkId=251058) at the Exchange Server 2010 online Help website.  
+> -   If you need to configure virtual directories, we recommend that you also set the **InternalUrl** property to be the same URL as the **ExternalUrl** property for each virtual directory. For more information, see [Managing Client Access Server Virtual Directories](https://go.microsoft.com/fwlink/p/?LinkId=251058) at the Exchange Server 2010 online Help website.  
 > -   If you want to access Outlook Web Access (OWA) from within the Remote Web Access site on Windows Server Essentials, you must set the External URL property for OWA.  
   
  If you are installing Exchange Server 2010 in a clean setup, you can also use the following scripts to set up Exchange Server.  
@@ -120,7 +120,7 @@ This guide provides information and basic instructions to help you set up and in
   
      `Import-Module ServerManager`  
   
-     `Add-WindowsFeature NET-Framework,RSAT-ADDS,Web-Server,Web-Basic-Auth,Web-Windows-Auth,Web-Metabase,Web-Net-Ext,Web-Lgcy-Mgmt-Console,WAS-Process-Model,RSAT-Web-Server,Web-ISAPI-Ext,Web-Digest-Auth,Web-Dyn-Compression,NET-HTTP-Activation,Web-Asp-Net,Web-Client-Auth,Web-Dir-Browsing,Web-Http-Errors,Web-Http-Logging,Web-Http-Redirect,Web-Http-Tracing,Web-ISAPI-Filter,Web-Request-Monitor,Web-Static-Content,Web-WMI,RPC-Over-HTTP-Proxy  œRestart`  
+     `Add-WindowsFeature NET-Framework,RSAT-ADDS,Web-Server,Web-Basic-Auth,Web-Windows-Auth,Web-Metabase,Web-Net-Ext,Web-Lgcy-Mgmt-Console,WAS-Process-Model,RSAT-Web-Server,Web-ISAPI-Ext,Web-Digest-Auth,Web-Dyn-Compression,NET-HTTP-Activation,Web-Asp-Net,Web-Client-Auth,Web-Dir-Browsing,Web-Http-Errors,Web-Http-Logging,Web-Http-Redirect,Web-Http-Tracing,Web-ISAPI-Filter,Web-Request-Monitor,Web-Static-Content,Web-WMI,RPC-Over-HTTP-Proxy  ï¿½Restart`  
   
 2.  Save the file as **InstallDependencies.ps1**.  
   
@@ -164,13 +164,13 @@ This guide provides information and basic instructions to help you set up and in
   
      `#Import Exchange Certificate, and Enable it for POP IIS IMAP SMTP services.`  
   
-     `Import-ExchangeCertificate  œFileData ([Byte[]]$(Get-content -Path $CertPath  œEncoding byte  œReadCount 0)) -Password:$CertPassword -Force | Enable-ExchangeCertificate -Services 'POP, IIS, IMAP, SMTP' -Force`  
+     `Import-ExchangeCertificate  ï¿½FileData ([Byte[]]$(Get-content -Path $CertPath  ï¿½Encoding byte  ï¿½ReadCount 0)) -Password:$CertPassword -Force | Enable-ExchangeCertificate -Services 'POP, IIS, IMAP, SMTP' -Force`  
   
      `#New AcceptedDomain and set it to default`  
   
-     `New-AcceptedDomain  œName "official name"  œDomainName $domainname`  
+     `New-AcceptedDomain  ï¿½Name "official name"  ï¿½DomainName $domainname`  
   
-     `Set-AcceptedDomain  œIdentity "official name"  œMakeDefault $true`  
+     `Set-AcceptedDomain  ï¿½Identity "official name"  ï¿½MakeDefault $true`  
   
      `#New EmailAddress Policy`  
   
@@ -192,11 +192,11 @@ This guide provides information and basic instructions to help you set up and in
   
      `$ews = "https://" + $hostname + "/EWS/Exchange.asmx"`  
   
-     `Get-OwaVirtualDirectory | Set-OwaVirtualDirectory  œExternalUrl $owa  œInternalUrl $owa`  
+     `Get-OwaVirtualDirectory | Set-OwaVirtualDirectory  ï¿½ExternalUrl $owa  ï¿½InternalUrl $owa`  
   
-     `Get-EcpVirtualDirectory | Set-EcpVirtualDirectory  œExternalUrl $ecp  œInternalUrl $ecp`  
+     `Get-EcpVirtualDirectory | Set-EcpVirtualDirectory  ï¿½ExternalUrl $ecp  ï¿½InternalUrl $ecp`  
   
-     `Get-ActiveSyncVirtualDirectory | Set-ActiveSyncVirtualDirectory -ExternalUrl $activesync  œInternalUrl $activesync`  
+     `Get-ActiveSyncVirtualDirectory | Set-ActiveSyncVirtualDirectory -ExternalUrl $activesync  ï¿½InternalUrl $activesync`  
   
      `Get-OABVirtualDirectory | Set-OABVirtualDirectory -ExternalUrl $oab -InternalUrl $oab -RequireSSL:$true`  
   
@@ -204,7 +204,7 @@ This guide provides information and basic instructions to help you set up and in
   
      `#Enable outlook Anywhere`  
   
-     `Enable-OutlookAnywhere  œClientAuthenticationMethod:Basic  œExternalHostname:$hostname  œSSLOffloading:$false`  
+     `Enable-OutlookAnywhere  ï¿½ClientAuthenticationMethod:Basic  ï¿½ExternalHostname:$hostname  ï¿½SSLOffloading:$false`  
   
      `#new receive/send connector`  
   
@@ -266,13 +266,13 @@ This guide provides information and basic instructions to help you set up and in
   
 ##### To add your email domain as the default accepted domain  
   
-1.  Follow the instructions in the Exchange Server article [Create an Accepted Domain](http://go.microsoft.com/fwlink/p/?LinkId=249174) to add an accepted domain.  
+1.  Follow the instructions in the Exchange Server article [Create an Accepted Domain](https://go.microsoft.com/fwlink/p/?LinkId=249174) to add an accepted domain.  
   
 2.  Log on to the second server as an administrator, open the Exchange Management Console, and then navigate to the **Hub Transport** tab of the **Organization Configuration**.  
   
 3.  In the Exchange Management Console work pane, right-click the new accepted domain, and then click **Set as Default**.  
   
-4.  Follow the instructions in the Exchange Server article [Create an Email Address Policy](http://go.microsoft.com/fwlink/p/?LinkId=249179) to create a new email address policy. You can accept all of the default values except the email address. For email address, specify your public email domain.  
+4.  Follow the instructions in the Exchange Server article [Create an Email Address Policy](https://go.microsoft.com/fwlink/p/?LinkId=249179) to create a new email address policy. You can accept all of the default values except the email address. For email address, specify your public email domain.  
   
 ### Create SMTP Send and Receive connectors  
   
@@ -281,9 +281,9 @@ This guide provides information and basic instructions to help you set up and in
   
  You must configure an SMTP Send connector and an SMTP Receive connector for outbound/inbound transmission of email messages.  
   
- To create an SMTP Send connector, follow the instructions in the Exchange Server article [Create an SMTP Send Connector](http://technet.microsoft.com/library/aa997285.aspx).  
+ To create an SMTP Send connector, follow the instructions in the Exchange Server article [Create an SMTP Send Connector](https://technet.microsoft.com/library/aa997285.aspx).  
   
- To create an SMTP Receive connector, follow the instructions in the Exchange Server article [Create an SMTP Receive Connector](http://technet.microsoft.com/library/bb125159.aspx).  
+ To create an SMTP Receive connector, follow the instructions in the Exchange Server article [Create an SMTP Receive Connector](https://technet.microsoft.com/library/bb125159.aspx).  
   
  As an option, you can refer to the script earlier in this document for creating the send and receive connectors by using Exchange PowerShell cmdlets.  
   
@@ -300,10 +300,10 @@ This guide provides information and basic instructions to help you set up and in
 |80 (HTTP)|Internal IP of the server that is running Windows Server Essentials|80||  
 |443 (HTTPS)|Internal IP of the server that is running Windows Server Essentials|443||  
   
- If you support the POP3 or IMAP messaging protocols on your network, you must also configure port forwardings for those protocols. For related information, see the section **Client Access Servers** in the topic [Exchange Network Port Reference](http://go.microsoft.com/fwlink/p/?LinkId=250773) in the Exchange Server TechNet Library.  
+ If you support the POP3 or IMAP messaging protocols on your network, you must also configure port forwardings for those protocols. For related information, see the section **Client Access Servers** in the topic [Exchange Network Port Reference](https://go.microsoft.com/fwlink/p/?LinkId=250773) in the Exchange Server TechNet Library.  
   
 > [!NOTE]
->  -   We recommend that you configure static IP addresses for the server that is running Windows Server Essentials and for the second server that is running Exchange Server. For instructions about how to configure a static IP address on a computer running Windows Server 2003 or Windows Server 2008 R2, see [Configure a Static IP Address](http://technet.microsoft.com/library/cc754203\(v=ws.10\).aspx) in the Windows Server TechNet Library  
+>  -   We recommend that you configure static IP addresses for the server that is running Windows Server Essentials and for the second server that is running Exchange Server. For instructions about how to configure a static IP address on a computer running Windows Server 2003 or Windows Server 2008 R2, see [Configure a Static IP Address](https://technet.microsoft.com/library/cc754203\(v=ws.10\).aspx) in the Windows Server TechNet Library  
 >   
 >      **Note:** The DNS server setting should always point to the IP address of the server that is running Windows Server Essentials.  
 > -   On the router, make sure that the IP addresses of the server that is running Windows Server Essentials and the server that is running Exchange Server either are reserved, or are out of the DHCP IP addresses range.  
@@ -333,13 +333,13 @@ This guide provides information and basic instructions to help you set up and in
   
  Both Windows Server Essentials and Exchange Server support some remote access scenarios for network users. For example, if you turn on Anywhere Access on the server that is running Windows Server Essentials, you can remotely access the Remote Web Access site or use virtual private networking (VPN) to remotely connect to the Windows Server Essentials network. To remotely access email messages, you must use Outlook Anywhere, Outlook Web Access (OWA), or ActiveSync.  
   
- If Windows Server Essentials and the server running Exchange Server are both connected to the same router and there is only one inbound Internet connection from your Internet Service Provider to the router, you must use a reverse proxy solution to route different types of remote access requests from the Internet based on the destination host names. We recommend that you use the Microsoft supported IIS Application Request Routing (ARR) extension as your reverse proxy solution. For more information about IIS Application Request Routing, visit the [Application Request Routing website](http://go.microsoft.com/fwlink/p/?LinkId=249181).  
+ If Windows Server Essentials and the server running Exchange Server are both connected to the same router and there is only one inbound Internet connection from your Internet Service Provider to the router, you must use a reverse proxy solution to route different types of remote access requests from the Internet based on the destination host names. We recommend that you use the Microsoft supported IIS Application Request Routing (ARR) extension as your reverse proxy solution. For more information about IIS Application Request Routing, visit the [Application Request Routing website](https://go.microsoft.com/fwlink/p/?LinkId=249181).  
   
 ##### To install and configure Application Request Routing  
   
 1.  Log on to Windows Server Essentials as an administrator.  
   
-2.  Open your Internet browser, and navigate to the [Application Request Routing website](http://go.microsoft.com/fwlink/p/?LinkId=249181).  
+2.  Open your Internet browser, and navigate to the [Application Request Routing website](https://go.microsoft.com/fwlink/p/?LinkId=249181).  
   
 3.  On the ARR website, click **Install**, and then follow the instructions to install ARR.  
   
@@ -353,12 +353,12 @@ This guide provides information and basic instructions to help you set up and in
     > [!NOTE]
     >  After you install ARR, the **Remote Desktop Gateway** service may be stopped. To manually restart the service, open the **Services** administrative tool, and then restart the **Remote Desktop Gateway** service.  
   
-5.  [Download KB2732764 for ARR 2.5](http://go.microsoft.com/fwlink/?LinkID=258302), and then install the update on the server that is running Windows Server Essentials.  
+5.  [Download KB2732764 for ARR 2.5](https://go.microsoft.com/fwlink/?LinkID=258302), and then install the update on the server that is running Windows Server Essentials.  
   
 6.  Copy the SSL certificate file for Exchange Server to the server that is running Windows Server Essentials. The certificate file must contain the private key, and it must be in the PFX file format.  
   
     > [!NOTE]
-    >  If you are using a self-issued certificate, follow the instruction in the Exchange Server article [Export an Exchange Certificate](http://technet.microsoft.com/library/dd351274.aspx) to export the certificate.  
+    >  If you are using a self-issued certificate, follow the instruction in the Exchange Server article [Export an Exchange Certificate](https://technet.microsoft.com/library/dd351274.aspx) to export the certificate.  
   
 7.  Depending on which version of Windows Server Essentials you are running, do one of the following:  
   
@@ -370,18 +370,18 @@ This guide provides information and basic instructions to help you set up and in
   
     -   If you are performing a clean setup, run the following command:  
   
-         **ARRConfig config  œcert ** *path to the certificate file* **  œhostnames ** *host names for Exchange Server* ****  
+         **ARRConfig config  ï¿½cert ** *path to the certificate file* **  ï¿½hostnames ** *host names for Exchange Server* ****  
   
         > [!NOTE]
-        >  For example; **ARRConfig config  œcert ***c:\temp\certificate.pfx***  œhostnames ***mail.contoso.com*****  
+        >  For example; **ARRConfig config  ï¿½cert ***c:\temp\certificate.pfx***  ï¿½hostnames ***mail.contoso.com*****  
         >   
         >  Replace *mail.contoso.com* with the name of your domain that is protected by the certificate.  
   
     -   In you are migrating from Windows Small Business Server, run the following command:  
   
-         **ARRConfig config  œcert ** *path to the certificate file* **  œhostnames ** *host names for Exchange Server* **  œtargetserver ** *server name of Exchange Server* ****  
+         **ARRConfig config  ï¿½cert ** *path to the certificate file* **  ï¿½hostnames ** *host names for Exchange Server* **  ï¿½targetserver ** *server name of Exchange Server* ****  
   
-         For example; **ARRConfig config  œcert ***c:\temp\certificate.pfx***  œhostnames ***mail.contoso.com*** œtargetserver ***ExchangeSvr*****  
+         For example; **ARRConfig config  ï¿½cert ***c:\temp\certificate.pfx***  ï¿½hostnames ***mail.contoso.com*** ï¿½targetserver ***ExchangeSvr*****  
   
          Replace *mail.contoso.com* with the name of your domain. Replace *ExchangeSvr* with the name of your server that is running Exchange Server.  
   
@@ -391,7 +391,7 @@ This guide provides information and basic instructions to help you set up and in
 >  -   The host names that you provide must be contained in the SSL certificate that you purchased for Exchange Server.  
 > -   If you have multiple host names, use a comma (,) to separate them.  
   
- To verify that the configuration works, try to access the OWA website for your server that is running Exchange Server (https://mail. *yourdomainname*.com/owa) from a computer that is not a member of the domain. To troubleshoot connectivity issues, you can also use the online [Microsoft Remote Connectivity Analyzer](http://go.microsoft.com/fwlink/p/?LinkId=249455) tool.  
+ To verify that the configuration works, try to access the OWA website for your server that is running Exchange Server (https://mail. *yourdomainname*.com/owa) from a computer that is not a member of the domain. To troubleshoot connectivity issues, you can also use the online [Microsoft Remote Connectivity Analyzer](https://go.microsoft.com/fwlink/p/?LinkId=249455) tool.  
   
 ### Configure Split DNS for Exchange Server  
   
@@ -428,7 +428,7 @@ This guide provides information and basic instructions to help you set up and in
 10. On the **New Host** page, click **Done**.  
   
 > [!NOTE]
->  If you use ActiveSync but cannot synchronize the email for some mailbox accounts, determine if those accounts are members of one or more protected groups such as Domain Administrators. For related information that can help you resolve this issue, see [Exchange ActiveSync Returned an HTTP 500 Error](http://technet.microsoft.com/library/dd439375\(EXCHG.80\).aspx).  
+>  If you use ActiveSync but cannot synchronize the email for some mailbox accounts, determine if those accounts are members of one or more protected groups such as Domain Administrators. For related information that can help you resolve this issue, see [Exchange ActiveSync Returned an HTTP 500 Error](https://technet.microsoft.com/library/dd439375\(EXCHG.80\).aspx).  
   
 ## Related topics  
  For more information about integrating an on-premises Exchange Server, see the following sections.  
@@ -439,16 +439,16 @@ This guide provides information and basic instructions to help you set up and in
 ### What do I need to know about email accounts?  
  A hosted email solution is configured on your server. A solution from a hosted email provider, such as Microsoft  Office 365, can provide individual email accounts for network users. When you run the Add a User Account Wizard in Windows Server Essentials to create a user account, the wizard attempts to add the user account to the available hosted email solution. At the same time, the wizard assigns an email name (alias) to the user, and sets the maximum size of the mailbox (quota). The maximum size of the mailbox varies depending on the email provider that you use. After adding the user account, you can continue to manage the mailbox alias and quota information from the properties page for the user. For full management of your user accounts and hosted email provider, use the management console of your hosted provider. Depending on your provider, you can access their management console either from a web-based portal, or from a tab in the server Dashboard.  
   
- The alias that you provide when you run the Add a User Account Wizard is sent to the hosted email provider as the suggested name for the user alias. For example, if the user alias is *FrankM*, the user „¢s email address might be *FrankM@Contoso.com*.  
+ The alias that you provide when you run the Add a User Account Wizard is sent to the hosted email provider as the suggested name for the user alias. For example, if the user alias is *FrankM*, the user ï¿½ï¿½s email address might be *FrankM@Contoso.com*.  
   
  In addition, the password that you set for the user in the Add a User Account Wizard will be the initial password of the user in the hosted email solution.  
   
- Finally, if you delete the user by using the Delete a User Account Wizard on the server, the wizard also sends a request to the hosted email provider to delete the user from their system as well. The provider may delete both the user „¢s account and the email that is associated with the account.  
+ Finally, if you delete the user by using the Delete a User Account Wizard on the server, the wizard also sends a request to the hosted email provider to delete the user from their system as well. The provider may delete both the user ï¿½ï¿½s account and the email that is associated with the account.  
   
  For user information about how to set up required email client software, or how to access an email account, refer to the help documentation provided by your hosted email provider.  
   
 ### What is a mailbox quota?  
- The amount of storage space that is allocated for a network user „¢s Exchange mailbox data is known as the mailbox quota.  
+ The amount of storage space that is allocated for a network user ï¿½ï¿½s Exchange mailbox data is known as the mailbox quota.  
   
  When you run the **Set up Exchange Server Integration** task on the Dashboard, the wizard adds a page to the Add User Account Wizard that allows you to choose whether to enforce mailbox quotas, and to specify the quota size. By default, the **Enforce mailbox quotas** option is selected (on), and user mailboxes are assigned 2 GB of storage space. Exchange administrators can customize the mailbox quota settings to suit the needs of their business.  
   

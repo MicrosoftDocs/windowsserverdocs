@@ -16,7 +16,7 @@ ms.technology: identity-adds
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-*Law Number Five: Eternal vigilance is the price of security.* - [10 Immutable Laws of Security Administration](http://technet.microsoft.com/library/cc722488.aspx)  
+*Law Number Five: Eternal vigilance is the price of security.* - [10 Immutable Laws of Security Administration](https://technet.microsoft.com/library/cc722488.aspx)  
   
 A solid event log monitoring system is a crucial part of any secure Active Directory design. Many computer security compromises could be discovered early in the event if the victims enacted appropriate event log monitoring and alerting. Independent reports have long supported this conclusion. For example, the [2009 Verizon Data Breach Report](http://www.verizonbusiness.com/resources/security/reports/2009_databreach_rp.pdf) states:  
   
@@ -37,9 +37,9 @@ The following are links to the Microsoft official enterprise support blog. The c
   
 The following links provide information about improvements to Windows auditing in Windows 8 and Windows Server 2012, and information about AD DS auditing in Windows Server 2008.  
   
--   [What's New in Security Auditing](http://technet.microsoft.com/library/hh849638.aspx) - provides an overview of new security auditing features in Windows 8 and Windows Server 2012.  
+-   [What's New in Security Auditing](https://technet.microsoft.com/library/hh849638.aspx) - provides an overview of new security auditing features in Windows 8 and Windows Server 2012.  
   
--   [AD DS Auditing Step-by-Step Guide](http://technet.microsoft.com/library/a9c25483-89e2-4202-881c-ea8e02b4b2a5.aspx) - describes the new Active Directory Domain Services (AD DS) auditing feature in Windows Server 2008. It also provides procedures to implement this new feature.  
+-   [AD DS Auditing Step-by-Step Guide](https://technet.microsoft.com/library/a9c25483-89e2-4202-881c-ea8e02b4b2a5.aspx) - describes the new Active Directory Domain Services (AD DS) auditing feature in Windows Server 2008. It also provides procedures to implement this new feature.  
   
 ### Windows Audit Categories  
 Prior to Windows Vista and Windows Server 2008, Windows had only nine event log audit policy categories:  
@@ -323,7 +323,7 @@ This subcategory reports on the activities of the Internet Protocol security (IP
 ##### Other System Events  
 This subcategory reports on other system events.  
   
-For more information about the subcategory descriptions, refer to the [Microsoft Security Compliance Manager tool](http://technet.microsoft.com/library/cc677002.aspx).  
+For more information about the subcategory descriptions, refer to the [Microsoft Security Compliance Manager tool](https://technet.microsoft.com/library/cc677002.aspx).  
   
 Each organization should review the previous covered categories and subcategories and enable the ones which best fit their environment. Changes to audit policy should always be tested prior to deployment in a production environment.  
   
@@ -361,7 +361,7 @@ Auditpol.exe syntax examples:
 > Auditpol.exe sets Advanced Audit Policy locally. If local policy conflicts with Active Directory or local Group Policy, Group Policy settings usually prevail over auditpol.exe settings. When multiple group or local policy conflicts exist, only one policy will prevail (that is, replace). Audit policies will not merge.  
   
 #### Scripting Auditpol  
-Microsoft provides a [sample script](http://support.microsoft.com/kb/921469) for administrators who want to set Advanced Audit Policy by using a script instead of manually typing in each auditpol.exe command.  
+Microsoft provides a [sample script](https://support.microsoft.com/kb/921469) for administrators who want to set Advanced Audit Policy by using a script instead of manually typing in each auditpol.exe command.  
   
 **Note** Group Policy does not always accurately report the status of all enabled auditing policies, whereas auditpol.exe does. See [Getting the Effective Audit Policy in Windows 7 and Windows 2008 R2](http://blogs.technet.com/b/askds/archive/2011/03/11/getting-the-effective-audit-policy-in-windows-7-and-2008-r2.aspx) for more details.  
   
@@ -385,7 +385,7 @@ Auditpol.exe can be used to save and restore a local audit policy, and to view o
 This audit policy setting specifies whether the client generates an event when one or more of these privileges are assigned to a user security token: AssignPrimaryTokenPrivilege, AuditPrivilege, BackupPrivilege, CreateTokenPrivilege, DebugPrivilege, EnableDelegationPrivilege, ImpersonatePrivilege, LoadDriverPrivilege, RestorePrivilege, SecurityPrivilege, SystemEnvironmentPrivilege, TakeOwnershipPrivilege, and TcbPrivilege. If this option is not enabled (default=Disabled), the BackupPrivilege and RestorePrivilege privileges are not recorded. Enabling this option can make the security log extremely noisy (sometimes hundreds of events a second) during a backup operation. This policy can also be set with Group Policy by modifying the security option **Audit: Audit the use of Backup and Restore privilege**.  
   
 > [!NOTE]  
-> Some information provided here was taken from the Microsoft [Audit Option Type](http://msdn.microsoft.com/library/dd973862(prot.20).aspx) and the Microsoft SCM tool.  
+> Some information provided here was taken from the Microsoft [Audit Option Type](https://msdn.microsoft.com/library/dd973862(prot.20).aspx) and the Microsoft SCM tool.  
   
 ### Enforcing Traditional Auditing or Advanced Auditing  
 In Windows Server 2012, Windows Server 2008 R2, Windows Server 2008, Windows 8, Windows 7, and Windows Vista, administrators can choose to enable the nine traditional categories or to use the subcategories. It's a binary choice that must be made in each Windows system. Either the main categories can be enabled or the subcategoriesit cannot be both.  
@@ -398,13 +398,13 @@ Auditing subcategories can be configured by using several methods, including Gro
   
 For more information about Windows auditing, see the following articles:  
   
--   [Advanced Security Auditing in Windows 7 and Windows Server 2008 R2](http://social.technet.microsoft.com/wiki/contents/articles/advanced-security-auditing-in-windows-7-and-windows-server-2008-r2.aspx)  
+-   [Advanced Security Auditing in Windows 7 and Windows Server 2008 R2](https://social.technet.microsoft.com/wiki/contents/articles/advanced-security-auditing-in-windows-7-and-windows-server-2008-r2.aspx)  
   
--   [Auditing and Compliance in Windows Server 2008](http://technet.microsoft.com/magazine/2008.03.auditing.aspx)  
+-   [Auditing and Compliance in Windows Server 2008](https://technet.microsoft.com/magazine/2008.03.auditing.aspx)  
   
--   [How to use Group Policy to configure detailed security auditing settings for Windows Vista-based and Windows Server 2008-based computers in a Windows Server 2008 domain, in a Windows Server 2003 domain, or in a Windows 2000 domain](http://support.microsoft.com/kb/921469)  
+-   [How to use Group Policy to configure detailed security auditing settings for Windows Vista-based and Windows Server 2008-based computers in a Windows Server 2008 domain, in a Windows Server 2003 domain, or in a Windows 2000 domain](https://support.microsoft.com/kb/921469)  
   
--   [Advanced Security Audit Policy Step-by-Step Guide](http://technet.microsoft.com/library/dd408940(WS.10).aspx)  
+-   [Advanced Security Audit Policy Step-by-Step Guide](https://technet.microsoft.com/library/dd408940(WS.10).aspx)  
   
 
 

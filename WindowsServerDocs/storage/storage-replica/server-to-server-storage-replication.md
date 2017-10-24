@@ -101,13 +101,13 @@ Many of these requirements can be determined by using the `Test-SRTopology cmdle
 
         1.  Ensure that each server can see that site's storage enclosures only and that the SAS connections are correctly configured.  
 
-        2.  Provision the storage using Storage Spaces by following **Steps 1-3** provided in the [Deploy Storage Spaces on a Stand-Alone Server](http://technet.microsoft.com/library/jj822938.aspx) using Windows PowerShell or Server Manager.  
+        2.  Provision the storage using Storage Spaces by following **Steps 1-3** provided in the [Deploy Storage Spaces on a Stand-Alone Server](https://technet.microsoft.com/library/jj822938.aspx) using Windows PowerShell or Server Manager.  
 
     - **For iSCSI storage:**  
 
         1.  Ensure that each cluster can see that site's storage enclosures only. You should use more than one single network adapter if using iSCSI.    
 
-        2.  Provision the storage using your vendor documentation. If using Windows-based iSCSI Targeting, consult [iSCSI Target Block Storage, How To](http://technet.microsoft.com/library/hh848268.aspx).  
+        2.  Provision the storage using your vendor documentation. If using Windows-based iSCSI Targeting, consult [iSCSI Target Block Storage, How To](https://technet.microsoft.com/library/hh848268.aspx).  
 
     - **For FC SAN storage:**  
 
@@ -300,7 +300,7 @@ Now you will manage and operate your server-to-server replicated infrastructure.
 
     -   \Storage Replica Statistics(*)\Number of Messages Sent  
 
-    For more information on performance counters in Windows PowerShell, see [Get-Counter](http://technet.microsoft.com/library/hh849685.aspx).  
+    For more information on performance counters in Windows PowerShell, see [Get-Counter](https://technet.microsoft.com/library/hh849685.aspx).  
 
 3.  To move the replication direction from one site, use the `Set-SRPartnership` cmdlet.  
 

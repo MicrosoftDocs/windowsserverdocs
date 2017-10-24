@@ -86,7 +86,7 @@ Many of these requirements can be determined by using the `Test-SRTopology` cmdl
 
         ```  
 
-        For more information on these steps, see [Install or Uninstall Roles, Role Services, or Features](http://technet.microsoft.com/library/hh831809.aspx).  
+        For more information on these steps, see [Install or Uninstall Roles, Role Services, or Features](https://technet.microsoft.com/library/hh831809.aspx).  
 
 
 8. Configure storage as follows:  
@@ -108,13 +108,13 @@ Many of these requirements can be determined by using the `Test-SRTopology` cmdl
 
         1.  Ensure that each set of paired server nodes can see that site's storage enclosures only (i.e. asymmetric storage) and that the SAS connections are correctly configured.  
 
-        2.  Provision the storage using Storage Spaces by following **Steps 1-3** provided in the [Deploy Storage Spaces on a Stand-Alone Server](http://technet.microsoft.com/library/jj822938.aspx) using Windows PowerShell or Server Manager.  
+        2.  Provision the storage using Storage Spaces by following **Steps 1-3** provided in the [Deploy Storage Spaces on a Stand-Alone Server](https://technet.microsoft.com/library/jj822938.aspx) using Windows PowerShell or Server Manager.  
 
     -   **For iSCSI storage:**  
 
         1.  Ensure that each set of paired server nodes can see that site's storage enclosures only (i.e. asymmetric storage). You should use more than one single network adapter if using iSCSI.  
 
-        2.  Provision the storage using your vendor documentation. If using Windows-based iSCSI Targeting, consult [iSCSI Target Block Storage, How To](http://technet.microsoft.com/library/hh848268.aspx).  
+        2.  Provision the storage using your vendor documentation. If using Windows-based iSCSI Targeting, consult [iSCSI Target Block Storage, How To](https://technet.microsoft.com/library/hh848268.aspx).  
 
     -   **For FC SAN storage:**  
 
@@ -152,13 +152,13 @@ You will now create a normal failover cluster. After configuration, validation, 
     > Windows Server 2016 now includes an option for Cloud (Azure)-based Witness. You can choose this quorum option instead of the file share witness.  
 
     > [!WARNING]  
-    > For more information about quorum configuration, see the [Configure and Manage the Quorum in a Windows Server 2012 Failover Cluster guide's Witness Configuration](http://technet.microsoft.com/library/jj612870.aspx). For more information on the `Set-ClusterQuorum` cmdlet, see [Set-ClusterQuorum](http://technet.microsoft.com/library/hh847275.aspx).  
+    > For more information about quorum configuration, see the [Configure and Manage the Quorum in a Windows Server 2012 Failover Cluster guide's Witness Configuration](https://technet.microsoft.com/library/jj612870.aspx). For more information on the `Set-ClusterQuorum` cmdlet, see [Set-ClusterQuorum](https://technet.microsoft.com/library/hh847275.aspx).  
 
-5.  Review [Network Recommendations for a Hyper-V Cluster in Windows Server 2012](http://technet.microsoft.com/library/dn550728.aspx) and ensure that you have optimally configured cluster networking.  
+5.  Review [Network Recommendations for a Hyper-V Cluster in Windows Server 2012](https://technet.microsoft.com/library/dn550728.aspx) and ensure that you have optimally configured cluster networking.  
 
 6.  Add one disk in the Redmond site to the cluster CSV. To do so, right click a source disk in the **Disks** node of the **Storage** section, and then click **Add to Cluster Shared Volumes**.  
 
-7.  Using the [Deploy a Hyper-V Cluster](http://technet.microsoft.com/library/jj863389.aspx) guide, follow steps 7-10 within **Redmond** site to create a test virtual machine only to ensure the cluster is working normally within the two nodes sharing the storage in the first test site.  
+7.  Using the [Deploy a Hyper-V Cluster](https://technet.microsoft.com/library/jj863389.aspx) guide, follow steps 7-10 within **Redmond** site to create a test virtual machine only to ensure the cluster is working normally within the two nodes sharing the storage in the first test site.  
 
 9.  If you're creating a two-node stretch cluster, you must add all storage before continuing. To do so, open a PowerShell session with administrative permissions on the cluster nodes, and run the following command: `Get-ClusterAvailableDisk -All | Add-ClusterDisk`.
 
@@ -251,15 +251,15 @@ You will now create a normal failover cluster. After configuration, validation, 
     > [!NOTE]
     > Windows Server 2016 now includes an option for Cloud (Azure)-based Witness. You can choose this quorum option instead of the file share witness.  
     
-    For more information about quorum configuration, see the [Configure and Manage the Quorum in a Windows Server 2012 Failover Cluster guide's Witness Configuration](http://technet.microsoft.com/library/jj612870.aspx). For more information on the `Set-ClusterQuorum` cmdlet, see [Set-ClusterQuorum](http://technet.microsoft.com/library/hh847275.aspx).  
+    For more information about quorum configuration, see the [Configure and Manage the Quorum in a Windows Server 2012 Failover Cluster guide's Witness Configuration](https://technet.microsoft.com/library/jj612870.aspx). For more information on the `Set-ClusterQuorum` cmdlet, see [Set-ClusterQuorum](https://technet.microsoft.com/library/hh847275.aspx).  
 
-4.  Review [Network Recommendations for a Hyper-V Cluster in Windows Server 2012](http://technet.microsoft.com/library/dn550728.aspx) and ensure that you have optimally configured cluster networking.  
+4.  Review [Network Recommendations for a Hyper-V Cluster in Windows Server 2012](https://technet.microsoft.com/library/dn550728.aspx) and ensure that you have optimally configured cluster networking.  
 
 9.  If you're creating a two-node stretch cluster, you must add all storage before continuing. To do so, open a PowerShell session with administrative permissions on the cluster nodes, and run the following command: `Get-ClusterAvailableDisk -All | Add-ClusterDisk`.
 
     This is by-design behavior in Windows Server 2016.
 
-5.  Using the [Deploy a Hyper-V Cluster](http://technet.microsoft.com/library/jj863389.aspx) guide, follow steps 7-10 within **Redmond** site to create a test virtual machine only to ensure the cluster is working normally within the two nodes sharing the storage in the first test site.  
+5.  Using the [Deploy a Hyper-V Cluster](https://technet.microsoft.com/library/jj863389.aspx) guide, follow steps 7-10 within **Redmond** site to create a test virtual machine only to ensure the cluster is working normally within the two nodes sharing the storage in the first test site.  
 
 6.  Once satisfied, remove the test VM. Add any real test virtual machines needed for further evaluation to a proposed source node.  
 
@@ -725,7 +725,7 @@ Now you will manage and operate your stretch cluster. You can perform all of the
 
     -   \Storage Replica Statistics(*)\Number of Messages Sent  
 
-    For more information on performance counters in Windows PowerShell, see [Get-Counter](http://technet.microsoft.com/library/hh849685.aspx).  
+    For more information on performance counters in Windows PowerShell, see [Get-Counter](https://technet.microsoft.com/library/hh849685.aspx).  
 
 3.  To alter replication source and destination within the stretch cluster, use the following methods:  
 

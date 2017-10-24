@@ -393,7 +393,7 @@ For more information, see [How to turn on debug logging in the Windows Time Serv
 
 #### Performance Monitor
 The Windows Server 2016 Windows Time service exposes performance counters which can be used to collect logging for auditing.  These can be logged locally or remotely.  You can record the Computer Time Offset and Round Trip delay counters.  
-And like any performance counter, you can monitor them remotely and create alerts using System Center Operations Manager.  You can, for instance, use an alert to alarm you when the Time Offset drifts from the desired accuracy.  The [System Center Management Pack](http://social.technet.microsoft.com/wiki/contents/articles/15251.system-center-management-pack-authoring-guide.aspx) has more information.
+And like any performance counter, you can monitor them remotely and create alerts using System Center Operations Manager.  You can, for instance, use an alert to alarm you when the Time Offset drifts from the desired accuracy.  The [System Center Management Pack](https://social.technet.microsoft.com/wiki/contents/articles/15251.system-center-management-pack-authoring-guide.aspx) has more information.
 
 #### Windows Traceability Example
 From w32tm log files you will want to validate two pieces of information.  The first is an indication that the log file is currently condition clock.  This prove that your clock was being conditioned by the Windows Time Service at the disputed time.

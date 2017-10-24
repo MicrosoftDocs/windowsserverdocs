@@ -121,7 +121,7 @@ At a high level, software restriction policies consist of the following componen
 
 -   Resultant Set of Policies (RSoP), which can aid in the diagnosing of the effective policy that will be applied to a client.
 
-For more information about SRP architecture, how SRP manages rules, processes and interactions, see [How Software Restriction Policies Work](http://technet.microsoft.com/library/cc786941(v=WS.10).aspx) in the Windows Server 2003 Technical Library.
+For more information about SRP architecture, how SRP manages rules, processes and interactions, see [How Software Restriction Policies Work](https://technet.microsoft.com/library/cc786941(v=WS.10).aspx) in the Windows Server 2003 Technical Library.
 
 ## <a name="BKMK_Best_Practices"></a>Best practices
 
@@ -171,11 +171,11 @@ For more information about SRP architecture, how SRP manages rules, processes an
 
 |Content type|References|
 |--------|-------|
-|**Planning**|[Software Restriction Policies Technical Reference](http://technet.microsoft.com/library/cc728085(v=WS.10).aspx)|
+|**Planning**|[Software Restriction Policies Technical Reference](https://technet.microsoft.com/library/cc728085(v=WS.10).aspx)|
 |**Operations**|[Administer Software Restriction Policies](administer-software-restriction-policies.md)|
-|**Troubleshooting**|[Software Restriction Policies Troubleshooting (2003)](http://technet.microsoft.com/library/cc737011(v=WS.10).aspx)|
-|**Security**|[Threats and Countermeasures for Software Restriction Polices (2008)](http://technet.microsoft.com/library/dd349795(v=WS.10).aspx)<br /><br />[Threats and Countermeasures for Software Restriction Polices (2008 R2)](http://technet.microsoft.com/library/hh125926(v=WS.10).aspx)|
-|**Tools and settings**|[Software Restriction Policies Tools and Settings (2003)](http://technet.microsoft.com/library/cc782454(v=WS.10).aspx)|
-|**Community resources**|[Application Lockdown with Software Restriction Policies](http://technet.microsoft.com/magazine/2008.06.srp.aspx?pr=blog)|
+|**Troubleshooting**|[Software Restriction Policies Troubleshooting (2003)](https://technet.microsoft.com/library/cc737011(v=WS.10).aspx)|
+|**Security**|[Threats and Countermeasures for Software Restriction Polices (2008)](https://technet.microsoft.com/library/dd349795(v=WS.10).aspx)<br /><br />[Threats and Countermeasures for Software Restriction Polices (2008 R2)](https://technet.microsoft.com/library/hh125926(v=WS.10).aspx)|
+|**Tools and settings**|[Software Restriction Policies Tools and Settings (2003)](https://technet.microsoft.com/library/cc782454(v=WS.10).aspx)|
+|**Community resources**|[Application Lockdown with Software Restriction Policies](https://technet.microsoft.com/magazine/2008.06.srp.aspx?pr=blog)|
 
 

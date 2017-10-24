@@ -140,7 +140,7 @@ Although the total number of users that you can put in a domain in a multidomain
 ## Documenting the regions identified  
 After you divide your organization into regional domains, document the regions that you want represented and the number of users that will exist in each region. In addition, note the speed of the slowest links in each region that you will use for Active Directory replication. This information is used to determine if additional domains or forests are required.  
   
-For a worksheet to assist you in documenting the regions you identified, download Job_Aids_Designing_and_Deploying_Directory_and_Security_Services.zip from Job Aids for Windows Server 2003 Deployment Kit ([http://go.microsoft.com/fwlink/?LinkID=102558](http://go.microsoft.com/fwlink/?LinkID=102558)) and open "Identifying Regions" (DSSLOGI_4.doc).  
+For a worksheet to assist you in documenting the regions you identified, download Job_Aids_Designing_and_Deploying_Directory_and_Security_Services.zip from Job Aids for Windows Server 2003 Deployment Kit ([https://go.microsoft.com/fwlink/?LinkID=102558](https://go.microsoft.com/fwlink/?LinkID=102558)) and open "Identifying Regions" (DSSLOGI_4.doc).  
   
 
 

@@ -24,7 +24,7 @@ You can change the color scheme of the Dashboard and the Launchpad by defining t
  The following example shows the possible contents of the .xml file:  
   
 ```xml  
-<DashboardTheme xmlns="http://www.microsoft.com/HSBS/Dashboard/Branding/2010">  
+<DashboardTheme xmlns="https://www.microsoft.com/HSBS/Dashboard/Branding/2010">  
   
   <!-- Hex color values overwriting default SKU theme colors -->  
   

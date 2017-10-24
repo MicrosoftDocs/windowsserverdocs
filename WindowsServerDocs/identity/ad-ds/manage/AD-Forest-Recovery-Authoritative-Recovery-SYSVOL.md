@@ -19,7 +19,7 @@ ms.technology: identity-adfs
 
  There are different ways to perform an authoritative restore of SYSVOL. You can either edit the **msDFSR-Options** attribute or perform a system state restore using wbadmin –authsysvol. If you have the option to restore a system state backup (that is, you are restoring AD DS to the same hardware and operating system instance) then using wbadmin –authsysvol is simpler. But if you need to perform a bare metal restore, then you need to edit the **msDFSR-Options** attribute.  
   
- Use the following steps to perform an authoritative synchronization of SYSVOL (if it is replicated using DFSR) by editing the **msDFSR-Options** attribute. If SYSVOL is replicated using FRS, see [article 290762](http://go.microsoft.com/fwlink/?LinkId=148443).  
+ Use the following steps to perform an authoritative synchronization of SYSVOL (if it is replicated using DFSR) by editing the **msDFSR-Options** attribute. If SYSVOL is replicated using FRS, see [article 290762](https://go.microsoft.com/fwlink/?LinkId=148443).  
   
 ## To perform an authoritative synchronization of DFSR-replicated SYSVOL  
   
