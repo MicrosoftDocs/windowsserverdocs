@@ -11,6 +11,8 @@ description: An overview of Storage Spaces Direct, a feature of Windows Server E
 ---
 # Deploying Storage Spaces Direct in a virtual machine guest cluster
 
+> Applies To: Windows Server 2016
+
 You can deploy Storage Spaces Direct on a cluster of physical servers, or on virtual machine guest clusters as discussed in this topic. This type of deployment delivers virtual shared storage
 across a set of VMs on top of a private or public cloud so that application high availability solutions can be used to increase the availability of applications.
 
