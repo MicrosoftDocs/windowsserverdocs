@@ -93,6 +93,7 @@
 #### [Plan volumes](storage-spaces/plan-volumes.md)
 ### [Deploy](storage-spaces/deploy-storage-spaces-direct.md)
 #### [Hyper-converged solution](storage-spaces/hyper-converged-solution-using-storage-spaces-direct.md)
+#### [In a guest VM cluster](storage-spaces-direct-in-vm.md)
 #### [Create volumes](storage-spaces/create-volumes.md)
 ### [Manage](storage-spaces/manage-storage-spaces-direct.md)
 #### [Add servers or drives](storage-spaces/add-nodes.md)
