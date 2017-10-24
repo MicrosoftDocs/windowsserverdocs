@@ -11,12 +11,12 @@ description: An overview of Storage Spaces Direct, a feature of Windows Server E
 ---
 # Deploying Storage Spaces Direct in a virtual machine guest cluster
 
-You can deploy Storage Spaces Direct on a cluster of physical servers, or on virtual machines as discussed in this topic.This delivers virtual shared storage
-across a set of VMs on top of a private or public cloud so that application high availability solutions can be deployed to increase the availability of applications.
+You can deploy Storage Spaces Direct on a cluster of physical servers, or on virtual machine guest clusters as discussed in this topic. This type of deployment delivers virtual shared storage
+across a set of VMs on top of a private or public cloud so that application high availability solutions can be used to increase the availability of applications.
 
 ![](media/storage-spaces-direct-in-vm/storage-spaces-direct-in-vm.png)
 
-## Deploying in Azure Iaas VMs
+## Deploying in Azure Iaas VM guest clusters
 
 [Azure
 templates](https://github.com/robotechredmond/301-storage-spaces-direct-md) have
@@ -26,7 +26,7 @@ recommended solution for deploying in Azure.
 
 <iframe src="https://channel9.msdn.com/Series/Microsoft-Hybrid-Cloud-Best-Practices-for-IT-Pros/Step-by-Step-Deploy-Windows-Server-2016-Storage-Spaces-Direct-S2D-Cluster-in-Microsoft-Azure/player" width="960" height="540" allowfullscreen></iframe>
 
-## Considerations when deploying Storage Spaces Direct in a VM
+## Considerations when deploying Storage Spaces Direct in a VM guest cluster
 
 The following considerations apply when deploying Storage Spaces Direct in a
 virtualized environment.  
@@ -57,7 +57,7 @@ you and are the recommended solution when deploying in Azure IaaS VMs.
 -   Minimum of 2 virtual data disks presented to each VM (VHD / VHDX / VMDK)
 
     -   This number is different than bare-metal deployments because the virtual
-        "drives" are files which are not susceptible to physical failures
+        "drives" can be implemented as files which are not susceptible to physical failures
 
 -   Disable the automatic drive replacement capabilities in the Health Service
     by running the following PowerShell cmdlet:
@@ -70,12 +70,14 @@ you and are the recommended solution when deploying in Azure IaaS VMs.
     -   Leverage traditional guest level backup solutions to backup and restore
         the data on the Storage Spaces Direct volumes
 
--   To give greater resiliency to possible VHD storage latency, increase the
+-   To give greater resiliency to possible VHD / VHDX / VMDK storage latency in guest clusters, increase the
     spaces I/O timeout value:
 
 >   HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\spaceport\\Parameters\\HwTimeout
 
 dword:00002710
+
+The decimal equivalent is 30000, which is 30 seconds. Note that the default value is 1770 Hexadecimal, or 6000 Decimal, which is 6 seconds.
 
 ## See also
 
