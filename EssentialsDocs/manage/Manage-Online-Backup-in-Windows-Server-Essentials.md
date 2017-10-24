@@ -34,7 +34,7 @@ manager: dongill
   
  As a best practice, you should back up the most important business and user data. For example, you should back up server folders that contain critical data files. You should also back up the File History for network computers that contain critical information.  
   
- When deciding which data to back up online, consider the backup frequency and retention policy that you want to implement. Then review your budget and determine the amount of storage space you can afford. Balance the cost and volume of storage against your needs, and then configure online backup to protect as much of your important data as possible. For pricing information, see [pricing details for Azure Backup](http://azure.microsoft.com/pricing/details/backup/).  
+ When deciding which data to back up online, consider the backup frequency and retention policy that you want to implement. Then review your budget and determine the amount of storage space you can afford. Balance the cost and volume of storage against your needs, and then configure online backup to protect as much of your important data as possible. For pricing information, see [pricing details for Azure Backup](https://azure.microsoft.com/pricing/details/backup/).  
   
  The following sections describe various online backup tasks that can appear in the Windows Server Essentials Dashboard.  
   
@@ -66,7 +66,7 @@ manager: dongill
   
 3.  In the **ONLINE BACKUP** area, click **Upload certificate to Azure Backup vault**.  
   
-     That opens **Recovery Services** in the  Azure Management Portal. If you aren „¢t already signed in to  Azure, you'll need to sign in using your Microsoft account.  
+     That opens **Recovery Services** in the  Azure Management Portal. If you aren ï¿½ï¿½t already signed in to  Azure, you'll need to sign in using your Microsoft account.  
   
 4.  Click the name of the backup vault you'll use for online backups to open the **Quick Start** page for the backup vault.  
   
@@ -84,7 +84,7 @@ manager: dongill
     >  You can also use your own public certificate. To know what certificate is required, on the **Quick Start** page, click the **Acquire Certificate** link.  
   
     > [!NOTE]
-    >   Azure requires an x.509 v2 certificate with a public key. For more information, see [Manage vault certificates](http://msdn.microsoft.com/library/azure/dn169036.aspx).  
+    >   Azure requires an x.509 v2 certificate with a public key. For more information, see [Manage vault certificates](https://msdn.microsoft.com/library/azure/dn169036.aspx).  
   
 7.  After you select the certificate, click **OK** (check mark).  
   
@@ -119,7 +119,7 @@ manager: dongill
 5.  On the **Specify the Backup Retention Policy** page of the wizard, select the number of days that you want to keep online backups, and then click **Next**. The default is 7 days. You can also choose to keep online backups for 15 or 30 days.  
   
     > [!NOTE]
-    >   Azure Backup always retains your most recent backup. If the backup destination does not have sufficient space available to store the backup, the backup process will not succeed. To avoid this situation, either purchase additional storage space, or shorten the data retention period. For pricing information, see [Pricing Details](http://azure.microsoft.com/pricing/details/backup/) for  Microsoft Azure Backup.  
+    >   Azure Backup always retains your most recent backup. If the backup destination does not have sufficient space available to store the backup, the backup process will not succeed. To avoid this situation, either purchase additional storage space, or shorten the data retention period. For pricing information, see [Pricing Details](https://azure.microsoft.com/pricing/details/backup/) for  Microsoft Azure Backup.  
   
 6.  On the **Choose your bandwidth usage** page of the wizard, if you want to restrict the amount of Internet bandwidth that is allocated to online backup, select **Enable Internet bandwidth usage**. Use the options on the page to specify how much Internet bandwidth to allow your online backup to use during work hours and during non-work hours. Then define your business hours and business days.  
   
@@ -371,7 +371,7 @@ manager: dongill
   
      If you already have an  Azure subscription, click **Portal** in the upper-right corner of the web page to go to the  Azure Management Portal.  
   
-5.  On the  Azure Management Portal page, you'll see **Recovery Services** in the left pane. That „¢s where you „¢ll manage the backup vaults that store your online backups from Windows Server Essentials.  
+5.  On the  Azure Management Portal page, you'll see **Recovery Services** in the left pane. That ï¿½ï¿½s where you ï¿½ï¿½ll manage the backup vaults that store your online backups from Windows Server Essentials.  
   
 ####  <a name="BKMK_Createabackupvaulttostoreonlinebackups"></a> Create a backup vault to store online backups  
   
@@ -441,7 +441,7 @@ manager: dongill
 |------------|-----------------|  
 |**Folder Name:**|The name of the folder that is included in the online backup.<br /><br /> To add or exclude a folder, run the **Configure online backup** task.|  
 |**Folder Path:**|The location of the folder.|  
-|**Status:**|There are three types of status  œ **Protected**, **Not protected**, and **Unknown**.|  
+|**Status:**|There are three types of status  ï¿½ **Protected**, **Not protected**, and **Unknown**.|  
   
 ###  <a name="BKMK_19"></a> Online backup history in Windows Server Essentials  
  The **Backup History** sub-section in the Online Backup section of the Dashboard displays a list of recent online backups. You can use successful backups to restore file and folders. The following table describes the information that is included in the list.  
@@ -450,7 +450,7 @@ manager: dongill
 |------------|-----------------|  
 |**Operation:**|There are two types of operations - **Backup** and **Restore**.|  
 |**Time:**|This is the time logged for the most recent status.|  
-|**Status:**|There are five types of status  œ **Success**, **In progress**, **Canceled**, **Warning**, and **Unsuccessful**.|  
+|**Status:**|There are five types of status  ï¿½ **Success**, **In progress**, **Canceled**, **Warning**, and **Unsuccessful**.|  
   
 ## See also  
   

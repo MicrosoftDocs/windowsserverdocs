@@ -91,7 +91,7 @@ The following AD FS requirements are for the server functionality that is built 
 Domain controllers in all user domains and the domain to which the AD FS servers are joined must be running Windows Server 2008 or later.  
   
 > [!NOTE]  
-> All support for environments with Windows Server 2003 domain controllers will end after the Extended Support End Date for Windows Server 2003. Customers are strongly recommended to upgrade their domain controllers as soon as possible. Visit [this page](http://support.microsoft.com/lifecycle/search/default.aspx?sort=PN&alpha=Windows+Server+2003&Filter=FilterNO) for additional information on Microsoft Support Lifecycle. For issues discovered that are specific to Windows Server 2003 domain controller environments, fixes will be issued only for security issues and if a fix can be issued prior to the expiry of Extended Support for Windows Server 2003.  
+> All support for environments with Windows Server 2003 domain controllers will end after the Extended Support End Date for Windows Server 2003. Customers are strongly recommended to upgrade their domain controllers as soon as possible. Visit [this page](https://support.microsoft.com/lifecycle/search/default.aspx?sort=PN&alpha=Windows+Server+2003&Filter=FilterNO) for additional information on Microsoft Support Lifecycle. For issues discovered that are specific to Windows Server 2003 domain controller environments, fixes will be issued only for security issues and if a fix can be issued prior to the expiry of Extended Support for Windows Server 2003.  
   
 **Domain functional\-level requirements**  
   
@@ -183,7 +183,7 @@ AD FS creates session\-based and persistent cookies that must be stored on clien
 ## <a name="BKMK_extranet"></a>Extranet requirements  
 To provide extranet access to the AD FS service, you must deploy the Web Application Proxy role service as the extranet facing role that proxies authentication requests in a secure manner to the AD FS service. This provides isolation of the AD FS service endpoints as well as isolation of all security keys \(such as token signing certificates\) from requests that originate from the internet. In addition, features such as Soft Extranet Account Lockout require the use of the Web Application Proxy. For more information about Web Application Proxy, see [Web Application Proxy](https://technet.microsoft.com/library/dn584107.aspx).  
   
-If you want to use a third\-party proxy for extranet access, this third\-party proxy must support the protocol defined in [http:\/\/download.microsoft.com\/download\/9\/5\/E\/95EF66AF\-9026\-4BB0\-A41D\-A4F81802D92C\/%5bMS\-ADFSPIP%5d.pdf](http://download.microsoft.com/download/9/5/E/95EF66AF-9026-4BB0-A41D-A4F81802D92C/%5bMS-ADFSPIP%5d.pdf).  
+If you want to use a third\-party proxy for extranet access, this third\-party proxy must support the protocol defined in [http:\/\/download.microsoft.com\/download\/9\/5\/E\/95EF66AF\-9026\-4BB0\-A41D\-A4F81802D92C\/%5bMS\-ADFSPIP%5d.pdf](https://download.microsoft.com/download/9/5/E/95EF66AF-9026-4BB0-A41D-A4F81802D92C/%5bMS-ADFSPIP%5d.pdf).  
   
 ## <a name="BKMK_7"></a>Network requirements  
 Configuring the following network services appropriately is critical for successful deployment of AD FS in your organization:  
@@ -204,11 +204,11 @@ In addition, if client user certificate authentication \(clientTLS authenticatio
   
 -   For Windows Integrated authentication to work inside the network and outside the network for a subset of endpoints exposed through the Web Application Proxy, you must use an A record \(not CNAME\) to point to the load balancers.  
   
-For information on configuring corporate DNS for the federation service and Device Registration Service, see [Configure Corporate DNS for the Federation Service and DRS](http://technet.microsoft.com/library/dn486786.aspx).  
+For information on configuring corporate DNS for the federation service and Device Registration Service, see [Configure Corporate DNS for the Federation Service and DRS](https://technet.microsoft.com/library/dn486786.aspx).  
   
-For information on configuring corporate DNS for Web Application proxies, see the “Configure DNS” section in [Step 1: Configure the Web Application Proxy Infrastructure](http://technet.microsoft.com/library/dn383644.aspx).  
+For information on configuring corporate DNS for Web Application proxies, see the “Configure DNS” section in [Step 1: Configure the Web Application Proxy Infrastructure](https://technet.microsoft.com/library/dn383644.aspx).  
   
-For information about how to configure a cluster IP address or cluster FQDN using NLB, see Specifying the Cluster Parameters at [http:\/\/go.microsoft.com\/fwlink\/?LinkId\=75282](http://go.microsoft.com/fwlink/?LinkId=75282).  
+For information about how to configure a cluster IP address or cluster FQDN using NLB, see Specifying the Cluster Parameters at [http:\/\/go.microsoft.com\/fwlink\/?LinkId\=75282](https://go.microsoft.com/fwlink/?LinkId=75282).  
   
 ## <a name="BKMK_8"></a>Attribute store requirements  
 AD FS requires at least one attribute store to be used for authenticating users and extracting security claims for those users. For a list of attribute stores that AD FS supports, see [The Role of Attribute Stores](../../ad-fs/technical-reference/The-Role-of-Attribute-Stores.md).  
@@ -244,7 +244,7 @@ You can develop custom attribute stores to enable advanced scenarios.
   
 -   All custom attribute stores must be built on top of .NET 4.0 or higher.  
   
-When you work with a custom attribute store, you might also have to configure a connection string. In that case, you can enter a custom code of your choice that enables a connection to your custom attribute store. The connection string in this situation is a set of name\/value pairs that are interpreted as implemented by the developer of the custom attribute store.For more information about developing and using custom attribute stores, see [Attribute Store Overview](http://go.microsoft.com/fwlink/?LinkId=190782).  
+When you work with a custom attribute store, you might also have to configure a connection string. In that case, you can enter a custom code of your choice that enables a connection to your custom attribute store. The connection string in this situation is a set of name\/value pairs that are interpreted as implemented by the developer of the custom attribute store.For more information about developing and using custom attribute stores, see [Attribute Store Overview](https://go.microsoft.com/fwlink/?LinkId=190782).  
   
 ## <a name="BKMK_9"></a>Application requirements  
 AD FS supports claims\-aware applications that use the following protocols:  

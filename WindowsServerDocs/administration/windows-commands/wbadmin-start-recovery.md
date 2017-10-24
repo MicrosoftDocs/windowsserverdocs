@@ -96,7 +96,7 @@ wbadmin start recovery -version:04/30/2013-09:00 -backupTarget:\\servername\shar
 
 -   [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)
--   [Start-WBFileRecovery](http://technet.microsoft.com/library/jj902457.aspx) cmdlet
--   [Start-WBHyperVRecovery](http://technet.microsoft.com/library/jj902463.aspx) cmdlet
--   [Start-WBSystemStateRecovery](http://technet.microsoft.com/library/jj902449.aspx) cmdlet
--   [Start-WBVolumeRecovery](http://technet.microsoft.com/library/jj902470.aspx) cmdlet
+-   [Start-WBFileRecovery](https://technet.microsoft.com/library/jj902457.aspx) cmdlet
+-   [Start-WBHyperVRecovery](https://technet.microsoft.com/library/jj902463.aspx) cmdlet
+-   [Start-WBSystemStateRecovery](https://technet.microsoft.com/library/jj902449.aspx) cmdlet
+-   [Start-WBVolumeRecovery](https://technet.microsoft.com/library/jj902470.aspx) cmdlet

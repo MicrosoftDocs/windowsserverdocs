@@ -60,7 +60,7 @@ This section describes how to install  Windows Server Essentials and  Windows Se
   
 ##### To transfer the operations master roles  
   
-1.  On the Destination Server, open a Command Prompt window as an administrator. See [To open a Command Prompt window as an Administrator](http://technet.microsoft.com/library/cc947813\(v=WS.10\).aspx).  
+1.  On the Destination Server, open a Command Prompt window as an administrator. See [To open a Command Prompt window as an Administrator](https://technet.microsoft.com/library/cc947813\(v=WS.10\).aspx).  
   
 2.  At the command prompt, type **NETDOM QUERY FSMO**, and then press ENTER.  
   
@@ -91,7 +91,7 @@ This section describes how to install  Windows Server Essentials and  Windows Se
     6.  Type **q**, and then press ENTER until you return to the command prompt.  
   
 > [!NOTE]
->  From any server on the network, you can verify that the operations master roles have been transferred to the Destination Server. Open a Command Prompt window as an administrator (for more information, see [To open a Command Prompt window as an Administrator](http://technet.microsoft.com/library/cc947813\(v=WS.10\).aspx)). Type **netdom query fsmo**, and then press ENTER.  
+>  From any server on the network, you can verify that the operations master roles have been transferred to the Destination Server. Open a Command Prompt window as an administrator (for more information, see [To open a Command Prompt window as an Administrator](https://technet.microsoft.com/library/cc947813\(v=WS.10\).aspx)). Type **netdom query fsmo**, and then press ENTER.  
   
 ## Next steps  
  You have installed  Windows Server Essentials as a new replica domain controller. Now go to [Step 3: Join computers to the new Windows Server Essentials server](Step-3--Join-computers-to-the-new-Windows-Server-Essentials-server.md).  

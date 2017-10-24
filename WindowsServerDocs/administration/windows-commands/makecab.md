@@ -35,7 +35,7 @@ makecab [/v[<n>]] [/d var=<value> ...] /f <directives_file> [...]
 |/v[<n>]|Set debugging verbosity level (0=none,...,3=full).|
 |/?|Displays help at the command prompt.|
 ## remarks
--   Refer to [Microsoft Cabinet format](http://go.microsoft.com/fwlink/?LinkId=226852) on MSDN for information on directive_file.
+-   Refer to [Microsoft Cabinet format](https://go.microsoft.com/fwlink/?LinkId=226852) on MSDN for information on directive_file.
 
 ## additional references
 -   [Command-Line Syntax Key](command-line-syntax-key.md)

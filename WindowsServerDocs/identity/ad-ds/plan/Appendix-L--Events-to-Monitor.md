@@ -408,11 +408,11 @@ A potential criticality of High means that one occurrence of the event should be
 |5478|N/A|Low|IPsec Services has started successfully.|  
   
 > [!NOTE]  
-> Refer to [Microsoft Support article 947226](http://support.microsoft.com/kb/947226) for lists of many security event IDs and their meanings.  
+> Refer to [Microsoft Support article 947226](https://support.microsoft.com/kb/947226) for lists of many security event IDs and their meanings.  
 >   
 > Run **wevtutil gp Microsoft-Windows-Security-Auditing /ge /gm:true** to get a very detailed listing of all security event IDs  
   
-For more information about Windows security event IDs and their meanings, see the Microsoft Support articles [Description of security events in Windows Vista and in Windows Server 2008](http://support.microsoft.com/kb/947226) and [Description of security events in Windows 7 and in Windows Server 2008 R2](http://support.microsoft.com/kb/977519). You can also download [Security Audit Events for Windows 7 and Windows Server 2008 R2](http://www.microsoft.com/download/details.aspx?id=21561) and [Windows 8 and Windows Server 2012 Security Event Details](http://www.microsoft.com/download/details.aspx?id=35753), which provide detailed event information for the referenced operating systems in spreadsheet format.  
+For more information about Windows security event IDs and their meanings, see the Microsoft Support articles [Description of security events in Windows Vista and in Windows Server 2008](https://support.microsoft.com/kb/947226) and [Description of security events in Windows 7 and in Windows Server 2008 R2](https://support.microsoft.com/kb/977519). You can also download [Security Audit Events for Windows 7 and Windows Server 2008 R2](https://www.microsoft.com/download/details.aspx?id=21561) and [Windows 8 and Windows Server 2012 Security Event Details](https://www.microsoft.com/download/details.aspx?id=35753), which provide detailed event information for the referenced operating systems in spreadsheet format.  
   
 
 

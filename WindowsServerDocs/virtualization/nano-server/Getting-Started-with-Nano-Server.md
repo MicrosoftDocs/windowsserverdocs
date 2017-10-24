@@ -1,3 +1,3 @@
 ---
-redirect_url: http://go.microsoft.com/fwlink/?LinkID=825555
+redirect_url: https://go.microsoft.com/fwlink/?LinkID=825555
 ---

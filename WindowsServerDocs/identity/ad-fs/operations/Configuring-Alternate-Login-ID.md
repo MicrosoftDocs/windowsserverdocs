@@ -68,7 +68,7 @@ In order to configure alternate login ID, you must perform the following tasks:
 
 Configure your AD FS claims provider trusts to enable alternate login ID
 
-1.  Install [KB2919355](http://go.microsoft.com/fwlink/?LinkID=396590).  You can get it via Windows Update Services or download it directly.
+1.  Install [KB2919355](https://go.microsoft.com/fwlink/?LinkID=396590).  You can get it via Windows Update Services or download it directly.
 
 2.  Update the AD FS configuration by running the following PowerShell cmdlet on any of the federation servers in your farm (if you have a WID farm, you must run this command on the primary AD FS server in your farm):
 

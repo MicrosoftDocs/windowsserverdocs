@@ -75,7 +75,7 @@ You can add the ability for users to request third-level domain names in the Set
 8.  Add the Initialize method and the required variables to the class, which defines the offerings that are presented in the wizard.  
   
     > [!NOTE]
-    >  The Initialize method defines an identifier for the domain provider that must be unique. A typical way to do this is to define a GUID as the identifier. For more information about creating a GUID, see [Create Guid (guidgen.exe)](http://go.microsoft.com/fwlink/?LinkId=116098).  
+    >  The Initialize method defines an identifier for the domain provider that must be unique. A typical way to do this is to define a GUID as the identifier. For more information about creating a GUID, see [Create Guid (guidgen.exe)](https://go.microsoft.com/fwlink/?LinkId=116098).  
   
      The following code example shows the Initialize method.  
   
@@ -513,7 +513,7 @@ You can add the ability for users to request third-level domain names in the Set
 14. Save and build the solution.  
   
 ###  <a name="BKMK_SignAssembly"></a> Sign the assembly with an Authenticode signature  
- You must Authenticode sign the assembly for it to be used in the operating system. For more information about signing the assembly, see [Signing and Checking Code with Authenticode](http://msdn.microsoft.com/library/ms537364\(VS.85\).aspx#SignCode).  
+ You must Authenticode sign the assembly for it to be used in the operating system. For more information about signing the assembly, see [Signing and Checking Code with Authenticode](https://msdn.microsoft.com/library/ms537364\(VS.85\).aspx#SignCode).  
   
 ###  <a name="BKMK_InstallAssembly"></a> Install the assembly on the reference computer  
  Place the assembly in a folder on the reference computer. Make a note of the folder path because you will enter it into the registry in the next step.  

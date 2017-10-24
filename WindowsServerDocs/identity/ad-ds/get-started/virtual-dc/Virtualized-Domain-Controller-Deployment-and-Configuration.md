@@ -68,7 +68,7 @@ Even though Microsoft supports Windows 7 Virtual PC, Virtual PC 2007, Virtual PC
   
 For help with third party virtualization products and their support stance with virtualized domain controllers, contact that vendor directly.  
   
-For more information, review Support policy for [Microsoft software running in non-Microsoft hardware virtualization software](http://support.microsoft.com/kb/897615).  
+For more information, review Support policy for [Microsoft software running in non-Microsoft hardware virtualization software](https://support.microsoft.com/kb/897615).  
   
 ### Critical Caveats  
 Virtualized domain controllers do *not* support safe restore of the following:  
@@ -87,7 +87,7 @@ Neither of these operations is covered under VM-GenerationID semantics and there
 >   
 > After restoring a snapshot, the deltas of previously un-replicated changes originating from that domain controller after the snapshot are permanently lost. Safe restore implements automated non-authoritative restoration to prevent accidental domain controller quarantine *only*.  
   
-For more information about USN bubbles and lingering objects, see [Troubleshooting Active Directory operations that fail with error 8606: "Insufficient attributes were given to create an object"](http://support.microsoft.com/kb/2028495).  
+For more information about USN bubbles and lingering objects, see [Troubleshooting Active Directory operations that fail with error 8606: "Insufficient attributes were given to create an object"](https://support.microsoft.com/kb/2028495).  
   
 ## <a name="BKMK_VDCCloning"></a>Virtualized Domain Controller Cloning  
 There are a number of stages and steps to cloning a virtualized domain controller, regardless of using graphical tools or Windows PowerShell. At a high level, the three stages are:  
@@ -149,7 +149,7 @@ Before you attempt to clone a DC, you must validate that the domain controller h
     >   
     > Because this RPC method is new, your network analysis software requires updated parsers to include fields for the new Opnum 28 in the existing UUID E3514235-4B06-11D1-AB04-00C04FC2DCD2. Otherwise, you cannot parse this traffic.  
     >   
-    > For more information, see [4.1.29 IDL_DRSAddCloneDC (Opnum 28)](http://msdn.microsoft.com/en-us/library/hh554213(v=prot.13).aspx).  
+    > For more information, see [4.1.29 IDL_DRSAddCloneDC (Opnum 28)](https://msdn.microsoft.com/en-us/library/hh554213(v=prot.13).aspx).  
   
 ***This also means when using non-fully routed networks, virtualized domain controller cloning requires network segments with access to the PDCE***. It is acceptable to move a cloned domain controller to a different network after cloning - just like a physical domain controller - as long as you are careful to update the AD DS logical site information.  
   
@@ -241,7 +241,7 @@ Any programs or services previously returned by Get-ADDCCloningExcludedApplicati
 > [!WARNING]  
 > Any incompatible program or service not uninstalled or added to the CustomDCCloneAllowList.xml prevents cloning.  
   
-Use the Get-AdComputerServiceAccount cmdlet to locate any standalone Managed Service Accounts (MSAs) in the domain and if this computer is using any of them. If any MSA is installed, use the Uninstall-ADServiceAccount cmdlet to remove the locally installed service account. Once you are done with taking the source domain controller offline in step 6, you can re-add the MSA using Install-ADServiceAccount when the server is back online. For more information, see [Uninstall-ADServiceAccount](http://technet.microsoft.com/en-us/library/hh852310).  
+Use the Get-AdComputerServiceAccount cmdlet to locate any standalone Managed Service Accounts (MSAs) in the domain and if this computer is using any of them. If any MSA is installed, use the Uninstall-ADServiceAccount cmdlet to remove the locally installed service account. Once you are done with taking the source domain controller offline in step 6, you can re-add the MSA using Install-ADServiceAccount when the server is back online. For more information, see [Uninstall-ADServiceAccount](https://technet.microsoft.com/en-us/library/hh852310).  
   
 > [!IMPORTANT]  
 > Standalone MSAs - first released in Windows Server 2008 R2 - were replaced in Windows Server 2012 with group MSAs. Group MSAs support cloning.  
@@ -392,7 +392,7 @@ Get-VMIdeController dc2-sourceclone | Get-VMHardDiskDrive | select-Object {copy-
 > You cannot use passthru disks with cloning, as they do not use a virtual disk file but instead an actual hard disk.  
   
 > [!NOTE]  
-> For more information about more Windows PowerShell operations with pipelines, see [Piping and the Pipeline in Windows PowerShell](http://technet.microsoft.com/en-us/library/ee176927.aspx).  
+> For more information about more Windows PowerShell operations with pipelines, see [Piping and the Pipeline in Windows PowerShell](https://technet.microsoft.com/en-us/library/ee176927.aspx).  
   
 #### Exporting the VM  
 As an alternative to copying the disks, you can export the entire Hyper-V VM as a copy. Exporting automatically creates a folder named for the VM and containing all disks and configuration information.  
@@ -708,9 +708,9 @@ Do not restore all domain controllers in a single domain simultaneously. If all 
 > [!IMPORTANT]  
 > If all domain controllers are restored at once, use the following articles to set one domain controller - typically the PDC emulator - as authoritative, so that the other domain controllers can return to normal operation:  
 >   
-> [Using the BurFlags registry key to reinitialize File Replication Service replica sets](http://support.microsoft.com/kb/290762)  
+> [Using the BurFlags registry key to reinitialize File Replication Service replica sets](https://support.microsoft.com/kb/290762)  
 >   
-> [How to force an authoritative and non-authoritative synchronization for DFSR-replicated SYSVOL (like "D4/D2" for FRS)](http://support.microsoft.com/kb/2218556)  
+> [How to force an authoritative and non-authoritative synchronization for DFSR-replicated SYSVOL (like "D4/D2" for FRS)](https://support.microsoft.com/kb/2218556)  
   
 > [!WARNING]  
 > Do not run all domain controllers in a forest or domain on the same hypervisor host. That introduces a single point of failure that cripples AD DS, Exchange, SQL, and other enterprise operations each time the hypervisor goes offline. This is no different from using only one domain controller for an entire domain or forest. Multiple domain controllers on multiple platforms help provide redundancy and fault tolerance.  

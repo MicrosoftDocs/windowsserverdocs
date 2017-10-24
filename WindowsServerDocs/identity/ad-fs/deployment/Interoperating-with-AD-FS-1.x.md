@@ -39,6 +39,6 @@ Although most of the AD FS 1.*x* Federation Service settings work in a similar
 |Federation Service endpoint URL|WS\-Federation Passive Endpoint URL  
   
 ## See Also  
-[AD FS and AD FS 1.x Interoperability](http://go.microsoft.com/fwlink/?LinkId=200776)  
+[AD FS and AD FS 1.x Interoperability](https://go.microsoft.com/fwlink/?LinkId=200776)  
   
 

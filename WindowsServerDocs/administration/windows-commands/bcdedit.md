@@ -105,4 +105,4 @@ BCDEdit /Command [<Argument1>] [<Argument2>] ...
 
 ## Examples
 
-For examples of BCDEdit, see the [Windows Hardware Developer Center Web site](http://go.microsoft.com/fwlink/?LinkId=69448).
+For examples of BCDEdit, see the [Windows Hardware Developer Center Web site](https://go.microsoft.com/fwlink/?LinkId=69448).

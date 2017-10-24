@@ -24,7 +24,7 @@ The SPA Pack for Tiered Storage Spaces aims to expose relevant information about
 ## Setup
 
 
-You can download the SPA Pack for Tiered Storage Spaces [here](http://go.microsoft.com/fwlink/p/?linkid=327754). Once the folder is downloaded, place it into *&lt;SPA INSTALL dir&gt;*/APs folder and it will automatically appear when SPA is restarted.
+You can download the SPA Pack for Tiered Storage Spaces [here](https://go.microsoft.com/fwlink/p/?linkid=327754). Once the folder is downloaded, place it into *&lt;SPA INSTALL dir&gt;*/APs folder and it will automatically appear when SPA is restarted.
 
 **Note**
 The computer running SPA should have administrative rights to the system under test.

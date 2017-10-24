@@ -118,7 +118,7 @@ For additional related information, see the following resources.
 |------------------|----------------|
 |**Product evaluation**|[What's New in DFS Namespaces and DFS Replication in Windows Server](https://technet.microsoft.com/library/dn281957(v=ws.11).aspx)|
 |**Deployment**|[DFS Namespace Scalability Considerations](http://blogs.technet.com/b/filecab/archive/2012/08/26/dfs-namespace-scalability-considerations.aspx)|
-|**Operations**|[DFS Namespaces: Frequently Asked Questions](http://technet.microsoft.com/library/ee404780.aspx)|
-|**Community resources**|[The File Services and Storage TechNet Forum](http://social.technet.microsoft.com/forums/winserverfiles/threads/)|
-|**Protocols**|[File Services Windows Server Protocols](http://msdn.microsoft.com/library/cc239875.aspx)|
+|**Operations**|[DFS Namespaces: Frequently Asked Questions](https://technet.microsoft.com/library/ee404780.aspx)|
+|**Community resources**|[The File Services and Storage TechNet Forum](https://social.technet.microsoft.com/forums/winserverfiles/threads/)|
+|**Protocols**|[File Services Windows Server Protocols](https://msdn.microsoft.com/library/cc239875.aspx)|
 |**Related technologies**| [Failover Clustering](../../failover-clustering/failover-clustering-overview.md)|

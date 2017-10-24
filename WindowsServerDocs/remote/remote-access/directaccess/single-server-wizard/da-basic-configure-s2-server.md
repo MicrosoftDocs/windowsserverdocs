@@ -27,7 +27,7 @@ This topic describes how to configure the client and server settings required fo
 |Update clients with the DirectAccess configuration|To receive the DirectAccess settings, clients must update group policy while connected to the intranet.|  
   
 > [!NOTE]  
-> This topic includes sample Windows PowerShell cmdlets that you can use to automate some of the procedures described. For more information, see [Using Cmdlets](http://go.microsoft.com/fwlink/p/?linkid=230693).  
+> This topic includes sample Windows PowerShell cmdlets that you can use to automate some of the procedures described. For more information, see [Using Cmdlets](https://go.microsoft.com/fwlink/p/?linkid=230693).  
   
 ## <a name="BKMK_Role"></a>Install the Remote Access role  
 To deploy Remote Access, you must install the Remote Access role on a server in your organization that will act as the Remote Access server.  

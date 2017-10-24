@@ -51,7 +51,7 @@ manager: dongill
   
 -   [Network user name and password information](Get-Connected-in-Windows-Server-Essentials.md#BKMK_6)  
   
--   [Server administrator „¢s account](Get-Connected-in-Windows-Server-Essentials.md#BKMK_7)  
+-   [Server administrator ï¿½ï¿½s account](Get-Connected-in-Windows-Server-Essentials.md#BKMK_7)  
   
 -   [Remove a computer from a Windows domain](Get-Connected-in-Windows-Server-Essentials.md#BKMK_8)  
   
@@ -70,7 +70,7 @@ manager: dongill
   
 -   [Network user name and password information](Get-Connected-in-Windows-Server-Essentials.md#BKMK_6)  
   
--   [Server administrator „¢s account](Get-Connected-in-Windows-Server-Essentials.md#BKMK_7)  
+-   [Server administrator ï¿½ï¿½s account](Get-Connected-in-Windows-Server-Essentials.md#BKMK_7)  
   
 -   [Remove a computer from a Windows domain](Get-Connected-in-Windows-Server-Essentials.md#BKMK_8)  
   
@@ -107,7 +107,7 @@ manager: dongill
   
 -   The computer name does not include an underscore (_).  
   
--   The computer „¢s date and time settings align to the settings on the server.  
+-   The computer ï¿½ï¿½s date and time settings align to the settings on the server.  
   
 -   A client computer can be connected to only one Windows Server Essentials server at any given time.  
   
@@ -262,7 +262,7 @@ manager: dongill
   
 -   Installs Microsoft .NET Framework 4.5 on the computer if it is not already installed  
   
--   Creates shortcuts on the computer „¢s desktop to the Dashboard and Launchpad  
+-   Creates shortcuts on the computer ï¿½ï¿½s desktop to the Dashboard and Launchpad  
   
 -   Configures Windows Firewall ports on the computer to allow the following features to work:  
   
@@ -300,7 +300,7 @@ manager: dongill
   
  If you are the server administrator, you can create the network credentials by adding a user account from the **Users** tab of the Dashboard. For more information about user accounts, see [Manage user accounts using the Dashboard](../manage/Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Manage8).  
   
-###  <a name="BKMK_7"></a> Server administrator „¢s account  
+###  <a name="BKMK_7"></a> Server administrator ï¿½ï¿½s account  
  You must be able to provide a network administrator account name and password to install the Connector software. A network administrator account enables the user to manage the local area network for your organization and helps manage and maintain network devices such as switches and routers.  
   
  The tasks that can be performed by using a network administrator account can include:  
@@ -386,7 +386,7 @@ manager: dongill
   
 -   The user name and password of the person who will use the computer on the new network  
   
--   The user name and password of the computer „¢s local administrator account  
+-   The user name and password of the computer ï¿½ï¿½s local administrator account  
   
 > [!NOTE]
 
@@ -423,7 +423,7 @@ manager: dongill
   
     1.  Accept the end-user license agreement.  
   
-    2.  On the **Find my server** page, auto-detect the server in the local networks and select the server that you want to connect to. Or, if you have the information, you can manually input your server „¢s name or domain address.  
+    2.  On the **Find my server** page, auto-detect the server in the local networks and select the server that you want to connect to. Or, if you have the information, you can manually input your server ï¿½ï¿½s name or domain address.  
   
     3.  On the **Type your new network user name and password** page, do the following:  
   
@@ -442,7 +442,7 @@ manager: dongill
     > [!NOTE]
     >  When you log on to a computer that is running Windows 8 for the first time by using your network account, after it connects to the server, instructions for migrating files and applications from the old user account appear. Follow the instructions on the **How do I migrate files and applications from my old user account?** page to migrate all files and applications to the network user account.  
   
-9. After the computer is successfully connected to the server, shortcuts to the Connector TrayApp and the server Dashboard appear on the Start menu, which can be used as follows (if your computer is running  Windows 8,  Windows 8.1 or Windows 10, the Dashboard and Connector TrayApp will be available from the computer „¢s Start screen):  
+9. After the computer is successfully connected to the server, shortcuts to the Connector TrayApp and the server Dashboard appear on the Start menu, which can be used as follows (if your computer is running  Windows 8,  Windows 8.1 or Windows 10, the Dashboard and Connector TrayApp will be available from the computer ï¿½ï¿½s Start screen):  
   
     -   If your computer is running  Windows 8,  Windows 8.1 or Windows 10, the Dashboard and Connector TrayApp will be searchable as an App.  
   
@@ -567,11 +567,11 @@ manager: dongill
   
 -   Because client computer backup is not supported for the second server, the backup status is displayed as **Not supported**. In addition, if you select the second server and right-click, there are no backup and restore related tasks displayed for the second server.  
   
--   If you select the second server, and then click the **View the server properties** task, there is no **Backup** tab displayed on the server „¢s properties page.  
+-   If you select the second server, and then click the **View the server properties** task, there is no **Backup** tab displayed on the server ï¿½ï¿½s properties page.  
   
--   Because there is no Security Center on a Windows Server operating system, the second server „¢s security status displays as **Not applicable**.  
+-   Because there is no Security Center on a Windows Server operating system, the second server ï¿½ï¿½s security status displays as **Not applicable**.  
   
--   The second server „¢s Group Policy status displays as **Not applicable**.  
+-   The second server ï¿½ï¿½s Group Policy status displays as **Not applicable**.  
   
 ###  <a name="BKMK_11"></a> Install the Connector software  
  The Connector software in Windows Server Essentials is installed when you connect your computer to the server by using the Connect a Computer to the Server Wizard. You can launch this wizard by typing **http://<ServerName\>/connect** in the address bar of your web browser (where *<ServerName\>* is the name of your server).  
@@ -596,7 +596,7 @@ manager: dongill
 ###  <a name="BKMK_12"></a> Move computer data and settings manually  
   Windows Server Essentials and  Windows Server Essentials support user profile migration only for client computers that are running the Windows 7 operating system. When you connect a Windows 7-based computer to the server, the Connect Computer to the Server Wizard can automatically migrate the user profile.  
   
- The user profile cannot be transferred automatically when connecting a Windows 8,  Windows 8.1 or Windows 10 computer to the server. However, on a Windows 8 computer, you can use Windows Easy Transfer to transfer data and settings from the original local user to the domain-joined computer. To do that, you must be an Administrator on both the Windows 8 source computer and the Windows 8 destination computer. For information about using Windows Easy Transfer to transfer files and settings, see [article 2735227](http://support.microsoft.com/kb/2735227) in the Microsoft Knowledge Base.  
+ The user profile cannot be transferred automatically when connecting a Windows 8,  Windows 8.1 or Windows 10 computer to the server. However, on a Windows 8 computer, you can use Windows Easy Transfer to transfer data and settings from the original local user to the domain-joined computer. To do that, you must be an Administrator on both the Windows 8 source computer and the Windows 8 destination computer. For information about using Windows Easy Transfer to transfer files and settings, see [article 2735227](https://support.microsoft.com/kb/2735227) in the Microsoft Knowledge Base.  
   
 ###  <a name="BKMK_Transfer"></a> Transfer multiple user profiles during computer deployment  
  Before you connect a computer running the Windows 7 or Windows 7 SP1 operating system to the Windows Server Essentials server, in order to transfer multiple local user profiles you must first create the corresponding network user accounts on the server. For more information about creating network user accounts, see [Add a user account](../manage/Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Manage1).  
@@ -621,7 +621,7 @@ manager: dongill
   
 5.  In Windows Server Essentials, if the Windows Server Essentials Connector page appears suggesting to close the Launchpad, click **OK**.  
   
-6.  Wait for the program to uninstall. After the software is removed, **Windows Server Essentials Connector** no longer appears within the list of installed programs or updates. In addition, the shortcuts to the Launchpad and the Dashboard are no longer displayed on the computer „¢s desktop.  
+6.  Wait for the program to uninstall. After the software is removed, **Windows Server Essentials Connector** no longer appears within the list of installed programs or updates. In addition, the shortcuts to the Launchpad and the Dashboard are no longer displayed on the computer ï¿½ï¿½s desktop.  
   
 > [!NOTE]
 >  -   Uninstalling the Connector software does not remove the computer from the list of computers that are displayed on the **DEVICES** tab of the Dashboard. To remove the computer from the Dashboard, see [Remove a computer from the server](../manage/Manage-Devices-in-Windows-Server-Essentials.md#BKMK_3).  
@@ -637,7 +637,7 @@ manager: dongill
 1.  Uninstall the Connector software from the computer by using the Control Panel. For step-by-step instructions, see [Uninstall the Connector software](Get-Connected-in-Windows-Server-Essentials.md#BKMK_13).   
 
   
-2.  Unjoin the computer from the Windows Server Essentials domain and join it to the workgroup. For step-by-step instructions for joining Windows to a workgroup, [Join or create a workgroup](http://windows.microsoft.com/windows7/Join-or-create-a-workgroup).  
+2.  Unjoin the computer from the Windows Server Essentials domain and join it to the workgroup. For step-by-step instructions for joining Windows to a workgroup, [Join or create a workgroup](https://windows.microsoft.com/windows7/Join-or-create-a-workgroup).  
   
 3.  Remove the computer from the server by using the Dashboard. For step-by-step instructions, see [Remove a computer from the server](../manage/Manage-Devices-in-Windows-Server-Essentials.md#BKMK_3).  
   
@@ -646,7 +646,7 @@ manager: dongill
 
 1.  Uninstall the Connector software from the computer by using the Control Panel. For step-by-step instructions, see [Uninstall the Connector software](Get-Connected-in-Windows-Server-Essentials.md#BKMK_13).  
   
-2.  Unjoin the computer from the Windows Server Essentials domain and join it to the workgroup. For step-by-step instructions for joining Windows to a workgroup, [Join or create a workgroup](http://windows.microsoft.com/windows7/Join-or-create-a-workgroup).  
+2.  Unjoin the computer from the Windows Server Essentials domain and join it to the workgroup. For step-by-step instructions for joining Windows to a workgroup, [Join or create a workgroup](https://windows.microsoft.com/windows7/Join-or-create-a-workgroup).  
   
 3.  Connect the computer to the server by using the Connect Computer Wizard. For step-by-step instructions, see [Connect computers to the server](Get-Connected-in-Windows-Server-Essentials.md#BKMK_9).  
   

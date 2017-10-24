@@ -37,7 +37,7 @@ For example, the following illustration shows the sequence of events that occurs
 
 ![Intro to AD DS](../media/Introduction-to-Active-Directory-Domain-Services--AD-DS--Virtualization--Level-100-/ADDS_Exampleofhowreplicationcanbecomeinconsistent.png)
 
-A virtual machine (VM) makes it easy for hypervisor administrators to roll back a domain controller's USNs (its logical clock) by, for example, applying a snapshot outside of the domain controller's awareness. For more information about USN and USN rollback, including another illustration to demonstrate undetected instances of USN rollback, see [USN and USN Rollback](http://technet.microsoft.com/library/virtual_active_directory_domain_controller_virtualization_hyperv(WS.10).aspx#usn_and_usn_rollback).
+A virtual machine (VM) makes it easy for hypervisor administrators to roll back a domain controller's USNs (its logical clock) by, for example, applying a snapshot outside of the domain controller's awareness. For more information about USN and USN rollback, including another illustration to demonstrate undetected instances of USN rollback, see [USN and USN Rollback](https://technet.microsoft.com/library/virtual_active_directory_domain_controller_virtualization_hyperv(WS.10).aspx#usn_and_usn_rollback).
 
 Beginning with  Windows Server 2012 , AD DS virtual domain controllers hosted on hypervisor platforms that expose an identifier called VM-Generation ID can detect and employ necessary safety measures to protect the AD DS environment if the virtual machine is rolled back in time by the application of a VM snapshot. The VM-GenerationID design uses a hypervisor-vendor independent mechanism to expose this identifier in the address space of the guest virtual machine, so the safe virtualization experience is consistently available of any hypervisor that supports VM-GenerationID. This identifier can be sampled by services and applications running inside the virtual machine to detect if a virtual machine has been rolled back in time.
 
@@ -144,7 +144,7 @@ The cloning components include new cmdlets in the Active Directory module for Wi
 
     -   %windir%\system32\SampleDCCloneConfig.xml
 
-    It is recommended that you use the New-ADDCCloneConfigFile cmdlet to create the DCCloneConfig.xml file. Although you could also use the schema file with an XML-aware editor to create this file, manually editing the file increases the likelihood of errors. If you edit the file, it must be done by using XML-aware editors, such as Visual Studio, [XML Notepad](http://www.microsoft.com/download/details.aspx?displaylang=en&id=7973), or third-party applications (do not use Notepad).
+    It is recommended that you use the New-ADDCCloneConfigFile cmdlet to create the DCCloneConfig.xml file. Although you could also use the schema file with an XML-aware editor to create this file, manually editing the file increases the likelihood of errors. If you edit the file, it must be done by using XML-aware editors, such as Visual Studio, [XML Notepad](https://www.microsoft.com/download/details.aspx?displaylang=en&id=7973), or third-party applications (do not use Notepad).
 
 -   **Get-ADDCCloningExcludedApplicationList** " This cmdlet is run on the source domain controller before beginning the cloning process to determine which services or installed programs are not on the default supported list, DefaultDCCloneAllowList.xml, or a user-defined inclusion list named CustomDCCloneAllowList.xml file, and thereby have not been evaluated for cloning impact.
 
@@ -235,7 +235,7 @@ The following deployment scenarios are supported for virtual domain controller c
     Get-ADComputer (Get-ADDomainController "Discover "Service "PrimaryDC").name "Property operatingsystemversion | fl
     ```
 
-    The OperatingSystemVersion value should return as a version 6.2. If necessary, you can transfer the PDC emulator role to a domain controller that runs  Windows Server 2012 . For more information, see [Using Ntdsutil.exe to transfer or seize FSMO roles to a domain controller](http://support.microsoft.com/kb/255504).
+    The OperatingSystemVersion value should return as a version 6.2. If necessary, you can transfer the PDC emulator role to a domain controller that runs  Windows Server 2012 . For more information, see [Using Ntdsutil.exe to transfer or seize FSMO roles to a domain controller](https://support.microsoft.com/kb/255504).
 
 -   A deployed  Windows Server 2012  guest virtualized domain controller (**VirtualDC1**) that is in the same domain as the  Windows Server 2012  domain controller hosting the PDC emulator role (**DC1**). This will be the source domain controller used for cloning. The guest virtual domain controller will be hosted on a  Windows Server 2012  Hyper-V server (**HyperV1**).
 
@@ -246,7 +246,7 @@ The following deployment scenarios are supported for virtual domain controller c
 
     Eject any virtual floppy drive (VFD) the source DC may have. This can cause a sharing problem when trying to import the new VM.
 
-    Only  Windows Server 2012  domain controllers hosted on a VM-GenerationID hypervisor can be used as a source for cloning. The source  Windows Server 2012  domain controller used for cloning should be in a healthy state. To determine the state of the source domain controller run [dcdiag](http://technet.microsoft.com/library/cc731968(WS.10).aspx). To gain a better understanding of the output returned by dcdiag, see [What does DCDIAG actually...do?](http://blogs.technet.com/b/askds/archive/2011/03/22/what-does-dcdiag-actually-do.aspx).
+    Only  Windows Server 2012  domain controllers hosted on a VM-GenerationID hypervisor can be used as a source for cloning. The source  Windows Server 2012  domain controller used for cloning should be in a healthy state. To determine the state of the source domain controller run [dcdiag](https://technet.microsoft.com/library/cc731968(WS.10).aspx). To gain a better understanding of the output returned by dcdiag, see [What does DCDIAG actually...do?](http://blogs.technet.com/b/askds/archive/2011/03/22/what-does-dcdiag-actually-do.aspx).
 
     If the source domain controller is a DNS server, the cloned domain controller will also be a DNS server. You should choose a DNS server that hosts only Active Directory-integrated zones.
 
@@ -467,13 +467,13 @@ To create multiple clone domain controllers from the same source domain controll
     Start-VM -Name VirtualDC2 -ComputerName HyperV2
 
 > [!NOTE]
-> The PDC emulator must be running for cloning to succeed. If it was shutdown, make sure it has started and performed initial synchronization so it is aware that is holds the PDC emulator role. For more information, see Microsoft [KB article 305476](http://support.microsoft.com/kb/305476).
+> The PDC emulator must be running for cloning to succeed. If it was shutdown, make sure it has started and performed initial synchronization so it is aware that is holds the PDC emulator role. For more information, see Microsoft [KB article 305476](https://support.microsoft.com/kb/305476).
 
 After cloning completes, verify the name of the clone computer to ensure the cloning operation succeeded. Verify that the VM did not start in Directory Services Restore Mode (DSRM). If you try to log on and receive an error indicating no logon servers are available, try logging on in DSRM. If the DC did not clone successfully and it is booted in DSRM, check the logs in Event Viewer and dcpromo logs in the %systemroot%/debug folder.
 
 The cloned domain controller will be a member of the **Cloneable Domain Controllers** group because it copies the membership from the source domain controller. As a best practice, you should leave the **Cloneable Domain Controllers** group empty until you are ready to perform cloning operations, and you should remove members after cloning operations are complete.
 
-If the source domain controller stores a backup media, the cloned domain controller will also store the backup media. You can run `wbadmin get versions` to show the backup media on the cloned domain controller. A member of the Domain Admins group should delete the backup media on the cloned domain controller to prevent it from being accidentally restored. For more information about how to delete a system state backup using wbadmin.exe, see [Wbadmin delete systemstatebackup](http://technet.microsoft.com/library/cc742081(v=WS.10).aspx).
+If the source domain controller stores a backup media, the cloned domain controller will also store the backup media. You can run `wbadmin get versions` to show the backup media on the cloned domain controller. A member of the Domain Admins group should delete the backup media on the cloned domain controller to prevent it from being accidentally restored. For more information about how to delete a system state backup using wbadmin.exe, see [Wbadmin delete systemstatebackup](https://technet.microsoft.com/library/cc742081(v=WS.10).aspx).
 
 ## <a name="troubleshooting"></a>Troubleshooting
 If the clone domain controller (**VirtualDC2**) starts in Directory Services Restore Mode (DSRM), it does not return to a normal mode on its own on the next reboot. To log on to a domain controller that is started in DSRM, use **.\Administrator** and specify the DSRM password.

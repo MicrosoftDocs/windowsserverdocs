@@ -18,7 +18,7 @@ author: jamesmci
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
-The first step is to complete the [Test Lab Guide: Demonstrate DirectAccess Single Server Setup with Mixed IPv4 and IPv6](http://go.microsoft.com/fwlink/p/?LinkId=237004). If you have already completed the steps in that test lab guide and saved a snapshot or disk image of the test lab, you can restore the snapshot or image and begin with the next step.  
+The first step is to complete the [Test Lab Guide: Demonstrate DirectAccess Single Server Setup with Mixed IPv4 and IPv6](https://go.microsoft.com/fwlink/p/?LinkId=237004). If you have already completed the steps in that test lab guide and saved a snapshot or disk image of the test lab, you can restore the snapshot or image and begin with the next step.  
   
 
 

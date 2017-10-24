@@ -40,5 +40,5 @@ The deployment information is organized in the following way. At a minimum, you 
 ## See also  
   
 - [MultiPoint Services](MultiPoint-Services.md)
--   [MultiPoint Services Forum](http://social.technet.microsoft.com/Forums/windowsserver/home?forum=windowsmultipointserver&filter=alltypes&sort=lastpostdesc)  
+-   [MultiPoint Services Forum](https://social.technet.microsoft.com/Forums/windowsserver/home?forum=windowsmultipointserver&filter=alltypes&sort=lastpostdesc)  
   

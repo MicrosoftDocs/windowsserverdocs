@@ -19,7 +19,7 @@ ms.technology: identity-adfs
 So that the organizational partners in your Active Directory Federation Services (AD FS) deployment can collaborate successfully, you must first make sure that your corporate network infrastructure is configured to support AD FS requirements for accounts, name resolution, and certificates. AD FS has the following types of requirements:  
   
 > [!TIP]  
-> You can find additional AD FS resource links at the [AD FS Content Map](http://social.technet.microsoft.com/wiki/contents/articles/2735.aspx) page on the Microsoft TechNet Wiki. This page is managed by members of the AD FS Community and is monitored on a regular basis by the AD FS Product Team.  
+> You can find additional AD FS resource links at the [AD FS Content Map](https://social.technet.microsoft.com/wiki/contents/articles/2735.aspx) page on the Microsoft TechNet Wiki. This page is managed by members of the AD FS Community and is monitored on a regular basis by the AD FS Product Team.  
   
 ## Hardware requirements  
 The following minimum and recommended hardware requirements apply to the federation server and federation server proxy computers.  
@@ -103,7 +103,7 @@ The process of configuring DNS to support AD FS varies, depending on whether:
   
 -   You intend to add a federated server proxy to your perimeter network. When you want to authenticate user accounts that are located in the corporate network of your identity partner organization, the internal DNS servers in the corporate network forest must be configured to return the CNAME of the internal federation server proxy. For information about how to configure DNS to accommodate the addition of federation server proxies, see [Name Resolution Requirements for Federation Server Proxies](Name-Resolution-Requirements-for-Federation-Server-Proxies.md).  
   
--   You are setting up DNS for a test lab environment. If you plan to use AD FS in a test lab environment where no single root DNS server is authoritative, it is probable that you will have to set up DNS forwarders so that queries to names between two or more forests will be forwarded appropriately. For general information about how to set up an AD FS test lab environment, see [AD FS Step-by-Step and How To Guides](http://go.microsoft.com/fwlink/?LinkId=180357).  
+-   You are setting up DNS for a test lab environment. If you plan to use AD FS in a test lab environment where no single root DNS server is authoritative, it is probable that you will have to set up DNS forwarders so that queries to names between two or more forests will be forwarded appropriately. For general information about how to set up an AD FS test lab environment, see [AD FS Step-by-Step and How To Guides](https://go.microsoft.com/fwlink/?LinkId=180357).  
   
 ## Attribute store requirements  
 AD FS requires at least one attribute store to be used for authenticating users and extracting security claims for those users. For a list of attribute stores that AD FS supports, see [The Role of Attribute Stores](../../ad-fs/technical-reference/The-Role-of-Attribute-Stores.md) in the AD FS Design Guide.  
@@ -149,7 +149,7 @@ You can develop custom attribute stores to enable advanced scenarios. The policy
   
 When you work with a custom attribute store, you may also have to configure a connection string. In this situation, you can enter any custom code you like that enables a connection to your custom attribute store. The connection string in this situation is a set of name/value pairs that are interpreted as implemented by the developer of the custom attribute store.  
   
-For more information about developing and using custom attribute stores, see [Attribute Store Overview](http://go.microsoft.com/fwlink/?LinkId=190782).  
+For more information about developing and using custom attribute stores, see [Attribute Store Overview](https://go.microsoft.com/fwlink/?LinkId=190782).  
   
 ## Application requirements  
 Federation servers can communicate with and protect federation applications, such as claims-aware applications.  

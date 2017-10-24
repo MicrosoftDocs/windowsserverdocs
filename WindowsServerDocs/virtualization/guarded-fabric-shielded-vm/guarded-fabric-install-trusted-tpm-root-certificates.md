@@ -23,7 +23,7 @@ The following steps help you install certificates for TPMs produced by Microsoft
 Some TPMs do not use endorsement key certificates or use certificates not included in this package.
 Consult your TPM vendor or server OEM for further assistance in these cases.
 
-1.  Download the latest package from [http://tpmsec.microsoft.com/OnPremisesDHA/TrustedTPM.cab](http://tpmsec.microsoft.com/OnPremisesDHA/TrustedTPM.cab).
+1.  Download the latest package from [https://tpmsec.microsoft.com/OnPremisesDHA/TrustedTPM.cab](https://tpmsec.microsoft.com/OnPremisesDHA/TrustedTPM.cab).
 2.  Validate that the package is digitally signed by Microsoft. Do not expand the CAB file if it does not have a valid signature.
 
     ```powershell

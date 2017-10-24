@@ -48,7 +48,7 @@ The Knowledge Consistency Checker (KCC) creates connection objects automatically
 ## <a name="BKMK_2"></a>KCC  
 The KCC is a built-in process that runs on all domain controllers and generates replication topology for the Active Directory forest. The KCC creates separate replication topologies depending on whether replication is occurring within a site (intrasite) or between sites (intersite). The KCC also dynamically adjusts the topology to accommodate the addition of new domain controllers, the removal of existing domain controllers, the movement of domain controllers to and from sites, changing costs and schedules, and domain controllers that are temporarily unavailable or in an error state.  
   
-Within a site, the connections between writable domain controllers are always arranged in a bidirectional ring, with additional shortcut connections to reduce latency in large sites. On the other hand, the intersite topology is a layering of spanning trees, which means one intersite connection exists between any two sites for each directory partition and generally does not contain shortcut connections. For more information about spanning trees and Active Directory replication topology, see Active Directory Replication Topology Technical Reference ([http://go.microsoft.com/fwlink/?LinkID=93578](http://go.microsoft.com/fwlink/?LinkID=93578)).  
+Within a site, the connections between writable domain controllers are always arranged in a bidirectional ring, with additional shortcut connections to reduce latency in large sites. On the other hand, the intersite topology is a layering of spanning trees, which means one intersite connection exists between any two sites for each directory partition and generally does not contain shortcut connections. For more information about spanning trees and Active Directory replication topology, see Active Directory Replication Topology Technical Reference ([https://go.microsoft.com/fwlink/?LinkID=93578](https://go.microsoft.com/fwlink/?LinkID=93578)).  
   
 On each domain controller, the KCC creates replication routes by creating one-way inbound connection objects that define connections from other domain controllers. For domain controllers in the same site, the KCC creates connection objects automatically without administrative intervention. When you have more than one site, you configure site links between sites, and a single KCC in each site automatically creates connections between sites as well.  
   
@@ -60,7 +60,7 @@ One of the benefits of deploying RODC in this scenario is unidirectional replica
   
 However, one administrative challenge highlighted by the hub-spoke topology on previous versions of the Windows Server operating system is that after adding a new bridgehead domain controller in the hub, there is no automatic mechanism to redistribute the replication connections between the branch domain controllers and the hub domain controllers to take advantage of the new hub domain controller.  
   
-For Windows Server 2003 domain controllers, you can rebalance the workload by using a tool such as Adlb.exe from the Windows Server 2003 Branch Office Deployment Guide ([http://go.microsoft.com/fwlink/?LinkID=28523](http://go.microsoft.com/fwlink/?LinkID=28523)).  
+For Windows Server 2003 domain controllers, you can rebalance the workload by using a tool such as Adlb.exe from the Windows Server 2003 Branch Office Deployment Guide ([https://go.microsoft.com/fwlink/?LinkID=28523](https://go.microsoft.com/fwlink/?LinkID=28523)).  
   
 For  Windows Server 2008  RODCs, normal functioning of the KCC provides some rebalancing, which eliminates the need to use an additional tool such as Adlb.exe. The new functionality is enabled by default. You can disable it by adding the following registry key set on the RODC:  
   
@@ -69,7 +69,7 @@ For  Windows Server 2008  RODCs, normal functioning of the KCC provides some reb
 **"Random BH Loadbalancing Allowed"**  
 **1 = Enabled (default), 0 = Disabled**  
   
-For more information about how these KCC improvements work, see Planning and Deploying Active Directory Domain Services for Branch Offices ([http://go.microsoft.com/fwlink/?LinkId=107114](http://go.microsoft.com/fwlink/?LinkId=107114)).  
+For more information about how these KCC improvements work, see Planning and Deploying Active Directory Domain Services for Branch Offices ([https://go.microsoft.com/fwlink/?LinkId=107114](https://go.microsoft.com/fwlink/?LinkId=107114)).  
   
 ## <a name="BKMK_3"></a>Failover functionality  
 Sites ensure that replication is routed around network failures and offline domain controllers. The KCC runs at specified intervals to adjust the replication topology for changes that occur in AD DS, such as when new domain controllers are added and new sites are created. The KCC reviews the replication status of existing connections to determine if any connections are not working. If a connection is not working due to a failed domain controller, the KCC automatically builds temporary connections to other replication partners (if available) to ensure that replication occurs. If all the domain controllers in a site are unavailable, the KCC automatically creates replication connections between domain controllers from another site.  

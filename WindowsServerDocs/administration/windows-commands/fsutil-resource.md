@@ -86,6 +86,6 @@ fsutil resource setautoreset true c:\
 
 [Fsutil](Fsutil.md)
 
-[Transactional NTFS](http://go.microsoft.com/fwlink/?LinkID=165402)
+[Transactional NTFS](https://go.microsoft.com/fwlink/?LinkID=165402)
 
 

@@ -24,7 +24,7 @@ Converts an empty basic disk with the GUID Partition Table (GPT) partition style
 > [!IMPORTANT]
 > The disk must be empty to convert it into an MBR disk. Back up your data, and then delete all partitions or volumes before converting the disk.
 
-For instructions regarding how to use this command, see [Change a GUID Partition Table Disk into a Master Boot Record Disk](http://go.microsoft.com/fwlink/?LinkId=207050) (http://go.microsoft.com/fwlink/?LinkId=207050).
+For instructions regarding how to use this command, see [Change a GUID Partition Table Disk into a Master Boot Record Disk](https://go.microsoft.com/fwlink/?LinkId=207050) (https://go.microsoft.com/fwlink/?LinkId=207050).
 
 ## Syntax
 

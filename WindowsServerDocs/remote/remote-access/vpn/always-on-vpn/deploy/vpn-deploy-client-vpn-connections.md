@@ -605,24 +605,24 @@ Listing 2. Successful results from the Get-WmiObject cmdlet
       thentication><UserMethod>Eap</UserMethod><MachineMethod>Eap
       </MachineMethod><Eap><Configuration><EapHostConfig xmlns="h
       ttp://www.microsoft.com/provisioning/EapHostConfig"><EapMet
-      hod><Type xmlns="http://www.microsoft.com/provisioning/EapC
-      ommon">25</Type><VendorId xmlns="http://www.microsoft.com/p
+      hod><Type xmlns="https://www.microsoft.com/provisioning/EapC
+      ommon">25</Type><VendorId xmlns="https://www.microsoft.com/p
       rovisioning/EapCommon">0</VendorId><VendorType xmlns="http:
       //www.microsoft.com/provisioning/EapCommon">0</VendorType><
-      AuthorId xmlns="http://www.microsoft.com/provisioning/EapCo
+      AuthorId xmlns="https://www.microsoft.com/provisioning/EapCo
       mmon">0</AuthorId></EapMethod><Config xmlns="http://www.mic
       rosoft.com/provisioning/EapHostConfig"><Eap xmlns="http://w
       ww.microsoft.com/provisioning/BaseEapConnectionPropertiesV1
-      "><Type>25</Type><EapType xmlns="http://www.microsoft.com/p
+      "><Type>25</Type><EapType xmlns="https://www.microsoft.com/p
       rovisioning/MsPeapConnectionPropertiesV1"><ServerValidation
       ><DisableUserPromptForServerValidation>true</DisableUserPro
       mptForServerValidation><ServerNames>NPS</ServerNames><Trust
       edRootCA>3f 07 88 e8 ac 00 32 e4 06 3f 30 f8 db 74 25 e1
       2e 5b 84 d1 </TrustedRootCA></ServerValidation><FastReconne
       ct>true</FastReconnect><InnerEapOptional>false</InnerEapOpt
-      ional><Eap xmlns="http://www.microsoft.com/provisioning/Bas
+      ional><Eap xmlns="https://www.microsoft.com/provisioning/Bas
       eEapConnectionPropertiesV1"><Type>13</Type><EapType xmlns="
-      http://www.microsoft.com/provisioning/EapTlsConnectionPrope
+      https://www.microsoft.com/provisioning/EapTlsConnectionPrope
       rtiesV1"><CredentialsSource><CertificateStore><SimpleCertSe
       lection>true</SimpleCertSelection></CertificateStore></Cred
       entialsSource><ServerValidation><DisableUserPromptForServer
@@ -630,16 +630,16 @@ Listing 2. Successful results from the Get-WmiObject cmdlet
       erNames>NPS</ServerNames><TrustedRootCA>3f 07 88 e8 ac 00
       32 e4 06 3f 30 f8 db 74 25 e1 2e 5b 84 d1 </TrustedRootCA><
       /ServerValidation><DifferentUsername>false</DifferentUserna
-      me><PerformServerValidation xmlns="http://www.microsoft.com
+      me><PerformServerValidation xmlns="https://www.microsoft.com
       /provisioning/EapTlsConnectionPropertiesV2">true</PerformSe
       rverValidation><AcceptServerName xmlns="http://www.microsof
       t.com/provisioning/EapTlsConnectionPropertiesV2">true</Acce
       ptServerName></EapType></Eap><EnableQuarantineChecks>false<
       /EnableQuarantineChecks><RequireCryptoBinding>false</Requir
       eCryptoBinding><PeapExtensions><PerformServerValidation xml
-      ns="http://www.microsoft.com/provisioning/MsPeapConnectionP
+      ns="https://www.microsoft.com/provisioning/MsPeapConnectionP
       ropertiesV2">true</PerformServerValidation><AcceptServerNam
-      e xmlns="http://www.microsoft.com/provisioning/MsPeapConnec
+      e xmlns="https://www.microsoft.com/provisioning/MsPeapConnec
       tionPropertiesV2">true</AcceptServerName></PeapExtensions><
       /EapType></Eap></Config></EapHostConfig></Configuration></E
       ap></Authentication></NativeProfile><DomainNameInformation>

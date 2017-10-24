@@ -64,7 +64,7 @@ When you want to connect to a PC, you need the full name. You can find this info
 
 ### Why can’t I connect using Remote Desktop?
 
-Here are some possible solutions to common problems you might encounter when trying to connect to a remote PC. If these solutions don’t work, you can find more help on the [Microsoft Community website](http://go.microsoft.com/fwlink/p/?LinkId=242079).
+Here are some possible solutions to common problems you might encounter when trying to connect to a remote PC. If these solutions don’t work, you can find more help on the [Microsoft Community website](https://go.microsoft.com/fwlink/p/?LinkId=242079).
 
 - **The remote PC can’t be found.** Make sure you have the right PC name, and then check to see if you entered that name correctly. If you still can't connect, try using the IP address of the remote PC instead of the PC name.
 - **There’s a problem with the network.** Make sure you have internet connection. 

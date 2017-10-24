@@ -48,10 +48,10 @@ The following table gives links to information about guest operating systems sup
   
 |Host operating system|Topic|  
 |-------------------------|---------|  
-|Windows 10|[Supported Guest Operating Systems for Client Hyper-V in Windows 10](http://msdn.microsoft.com/virtualization/hyperv_on_windows/about/supported_guest_os)|  
+|Windows 10|[Supported Guest Operating Systems for Client Hyper-V in Windows 10](https://msdn.microsoft.com/virtualization/hyperv_on_windows/about/supported_guest_os)|  
 |Windows Server 2012 R2 and Windows 8.1|-   [Supported Windows Guest Operating Systems for Hyper-V in Windows Server 2012 R2 and Windows 8.1](https://technet.microsoft.com/library/dn792027.aspx)<br />-   [Linux and FreeBSD Virtual Machines on Hyper-V](Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md)|  
 |Windows Server 2012 and Windows 8|[Supported Windows Guest Operating Systems for Hyper-V in Windows Server 2012 and Windows 8](https://technet.microsoft.com/library/dn792028.aspx)|  
-|Windows Server 2008 and Windows Server 2008 R2|[About Virtual Machines and Guest Operating Systems](http://technet.microsoft.com/library/cc794868.aspx)|  
+|Windows Server 2008 and Windows Server 2008 R2|[About Virtual Machines and Guest Operating Systems](https://technet.microsoft.com/library/cc794868.aspx)|  
   
 ## How Microsoft provides support for guest operating systems  
 
@@ -67,7 +67,7 @@ Microsoft provides support for guest operating systems in the following manner:
   
 -   [Linux and FreeBSD Virtual Machines on Hyper-V](Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md)  
   
--   [Supported Guest Operating Systems for Client Hyper-V in Windows 10](http://msdn.microsoft.com/virtualization/hyperv_on_windows/about/supported_guest_os)  
+-   [Supported Guest Operating Systems for Client Hyper-V in Windows 10](https://msdn.microsoft.com/virtualization/hyperv_on_windows/about/supported_guest_os)  
   
 
 

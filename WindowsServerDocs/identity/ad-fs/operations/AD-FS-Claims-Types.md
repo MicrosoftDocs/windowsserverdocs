@@ -19,7 +19,7 @@ To provide additional request context information, Client Access Policies use th
 
 ##X-MS-Forwarded-Client-IP
 
-Claim type: `http://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip`
+Claim type: `https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip`
 
 This AD FS claim represents a “best attempt” at ascertaining the IP address of the user (for example, the Outlook client) making the request. This claim can contain multiple IP addresses, including the address of every proxy that forwarded the request.  This claim is populated from an HTTP header that is currently only set by Exchange Online, which populates the header when passing the authentication request to AD FS. The value of the claim can be one of the following:
 
@@ -43,7 +43,7 @@ This AD FS claim represents a “best attempt” at ascertaining the IP address 
 
 ## X-MS-Client-Application
 
-Claim type: `http://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-application`
+Claim type: `https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-application`
 
 This AD FS claim represents the protocol used by the end client, which corresponds loosely to the application being used.  This claim is populated from an HTTP header that is currently only set by Exchange Online, which populates the header when passing the authentication request to AD FS. Depending on the application, the value of this claim will be one of the following:
 
@@ -65,7 +65,7 @@ This AD FS claim represents the protocol used by the end client, which correspon
 
 ## X-MS-Client-User-Agent
 
-Claim type: `http://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-user-agent`
+Claim type: `https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-user-agent`
 
 This AD FS claim provides a string to represent the device type that the client is using to access the service. This can be used when customers would like to prevent access for certain devices (such as particular types of smart phones).  This claim is populated from an HTTP header that is currently only set by Exchange Online, which populates the header when passing the authentication request to AD FS. Example values for this claim include (but are not limited to) the values below.
 >![Note] 
@@ -85,7 +85,7 @@ This AD FS claim provides a string to represent the device type that the client 
 
 ## X-MS-Proxy
 
-Claim type: `http://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-proxy`
+Claim type: `https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-proxy`
 
 This AD FS claim indicates that the request has passed through the federation server proxy.  This claim is populated by the federation server proxy, which populates the header when passing the authentication request to the back end Federation Service. AD FS then converts it to a claim. 
 
@@ -93,7 +93,7 @@ The value of the claim is the DNS name of the federation server proxy that passe
 
 ## X-MS-Endpoint-Absolute-Path (Active vs Passive)
 
-Claim type: `http://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-endpoint-absolute-path`
+Claim type: `https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-endpoint-absolute-path`
 
 This claim type can be used for determining requests originating from “active” (rich) clients versus “passive” (web-browser-based) clients. This enables external requests from browser-based applications such as the Outlook Web Access, SharePoint Online, or the Office 365 portal to be allowed while requests originating from rich clients such as Microsoft Outlook are blocked.
 
