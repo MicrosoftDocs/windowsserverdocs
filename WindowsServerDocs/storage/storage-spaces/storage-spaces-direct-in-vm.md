@@ -9,7 +9,7 @@ author: eldenchristensen
 ms.date: 10/25/2017
 description: An overview of Storage Spaces Direct, a feature of Windows Server Enterprise Edition that enables you to cluster servers with internal storage into a software-defined storage solution.
 ---
-# Deploying Storage Spaces Direct in a virtual machine
+# Deploying Storage Spaces Direct in a virtual machine guest cluster
 
 You can deploy Storage Spaces Direct on a cluster of physical servers, or on virtual machines as discussed in this topic.This delivers virtual shared storage
 across a set of VMs on top of a private or public cloud so that application high availability solutions can be deployed to increase the availability of applications.
