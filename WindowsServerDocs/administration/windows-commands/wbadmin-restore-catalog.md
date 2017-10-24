@@ -61,4 +61,4 @@ wbadmin restore catalog -backupTarget:\\servername\share -machine:server01
 
 -   [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)
--   [Restore-WBCatalog](http://technet.microsoft.com/library/jj902437.aspx) cmdlet
+-   [Restore-WBCatalog](https://technet.microsoft.com/library/jj902437.aspx) cmdlet

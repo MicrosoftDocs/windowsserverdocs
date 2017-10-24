@@ -47,5 +47,5 @@ You must run **wbadmin** from an elevated command prompt. (To open an elevated c
 
 #### Additional references
 
--   [Backup and Recovery](http://go.microsoft.com/fwlink/?LinkID=195054)
--   [Windows Server Backup Cmdlets in Windows PowerShell](http://technet.microsoft.com/library/jj902428.aspx)
+-   [Backup and Recovery](https://go.microsoft.com/fwlink/?LinkID=195054)
+-   [Windows Server Backup Cmdlets in Windows PowerShell](https://technet.microsoft.com/library/jj902428.aspx)

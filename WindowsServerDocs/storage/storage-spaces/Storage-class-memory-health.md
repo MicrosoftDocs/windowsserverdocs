@@ -23,7 +23,7 @@ JEDEC-compliant NVDIMM-N storage-class memory devices are supported in Windows w
 
 All conditions listed here are expected to be very rare occurrences, but depend on the conditions in which the hardware is used.
 
-The various cases below may refer to Storage Spaces configurations. The particular configuration of interest is one where two NVDIMM-N devices are utilized as a mirrored write-back cache in a storage space. To set up such a configuration, see [Configuring Storage Spaces with a NVDIMM-N write-back cache](http://msdn.microsoft.com/library/mt650885.aspx).
+The various cases below may refer to Storage Spaces configurations. The particular configuration of interest is one where two NVDIMM-N devices are utilized as a mirrored write-back cache in a storage space. To set up such a configuration, see [Configuring Storage Spaces with a NVDIMM-N write-back cache](https://msdn.microsoft.com/library/mt650885.aspx).
 
 In Windows Server 2016, the Storage Spaces GUI shows NVDIMM-N bus type as UNKNOWN. It doesn't have any fuctionality loss or inability in creation of Pool, Storage VD. You can verify the bus type by running the following command:
 

@@ -42,4 +42,4 @@ This subcommand has no parameters.
 
 -   [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)
--   [Get-WBJob](http://technet.microsoft.com/library/jj902426.aspx) cmdlet
+-   [Get-WBJob](https://technet.microsoft.com/library/jj902426.aspx) cmdlet

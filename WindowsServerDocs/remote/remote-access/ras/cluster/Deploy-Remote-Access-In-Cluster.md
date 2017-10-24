@@ -102,7 +102,7 @@ The following are known issues when configuring a cluster scenario:
 
     To resolve this issue:  
 
-    1.  Download the backup and restore scripts from [Back up and Restore Remote Access Configuration](http://gallery.technet.microsoft.com/Back-up-and-Restore-Remote-e157e6a6).  
+    1.  Download the backup and restore scripts from [Back up and Restore Remote Access Configuration](https://gallery.technet.microsoft.com/Back-up-and-Restore-Remote-e157e6a6).  
 
     2.  Back up your Remote Access GPOs using the downloaded script Backup\-RemoteAccess.ps1  
 

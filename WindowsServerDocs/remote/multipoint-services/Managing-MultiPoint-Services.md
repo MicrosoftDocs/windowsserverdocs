@@ -32,4 +32,4 @@ Use the following information to learn about the tasks that you can perform in M
   
 ## See also  
   
--   [MultiPoint Services Forum](http://social.technet.microsoft.com/Forums/windowsserver/home?forum=windowsmultipointserver&filter=alltypes&sort=lastpostdesc)  
+-   [MultiPoint Services Forum](https://social.technet.microsoft.com/Forums/windowsserver/home?forum=windowsmultipointserver&filter=alltypes&sort=lastpostdesc)  

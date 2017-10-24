@@ -68,7 +68,7 @@ manager: dongill
 4.  Log on to the Windows Server Essentials network by using your network user name and password.  
   
 ##  <a name="BKMK_App"></a> Use the My Server app to connect to Windows Server Essentials  
- The My Server app lets you connect to resources and perform light administrative tasks on your  Windows Server Essentials server from your Windows-based PC, laptop, or Surface device. If your server is running  Windows Server 2012, download the original My Server app from [Apps for Windows](http://windows.microsoft.com/windows-8/apps). If your server is running  Windows Server Essentials, you must download the My Server 2012 R2 app instead.  
+ The My Server app lets you connect to resources and perform light administrative tasks on your  Windows Server Essentials server from your Windows-based PC, laptop, or Surface device. If your server is running  Windows Server 2012, download the original My Server app from [Apps for Windows](https://windows.microsoft.com/windows-8/apps). If your server is running  Windows Server Essentials, you must download the My Server 2012 R2 app instead.  
   
  With the expanded My Server 2012 R2 app, you can connect to the server or client computers by using Remote Desktop. If your  Windows Server Essentials server is integrated with  Office 365, and your subscription includes SharePoint Online, you also can work with documents in your SharePoint Online libraries and open your SharePoint team sites from My Server 2012 R2.  
   

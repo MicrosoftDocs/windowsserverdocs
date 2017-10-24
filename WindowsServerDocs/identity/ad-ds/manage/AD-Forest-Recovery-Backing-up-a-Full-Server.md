@@ -25,7 +25,7 @@ Windows Server Backup is not installed by default. In Windows Server 2016 and Wi
 >[!NOTE]
 >Please be aware that the steps may vary slightly between Windows Server 2016 and Windows Server 2012 R2.
 
-For steps to install it in Windows Server 2008 and Windows Server 2008 R2, see [Installing Windows Server Backup](http://technet.microsoft.com/library/cc771232.aspx).  
+For steps to install it in Windows Server 2008 and Windows Server 2008 R2, see [Installing Windows Server Backup](https://technet.microsoft.com/library/cc771232.aspx).  
 
 ### To install Windows Server Backup
 1. Open **Server Manager** and click **Add roles and features**.

@@ -89,7 +89,7 @@ manager: dongill
 4.  From the drop-down list, select the new region, and then click **Apply** to accept the new region setting.  
   
 ###  <a name="BKMK_ManagePerms"></a> Manage Remote Web Access permissions  
- When you add a user account in Windows Server Essentials, the new user is allowed by default to use Remote Web Access. If you chose not to allow Remote Web Access for a user account, and then find that the user needs to use Remote Web Access, you can update the user account „¢s properties.  
+ When you add a user account in Windows Server Essentials, the new user is allowed by default to use Remote Web Access. If you chose not to allow Remote Web Access for a user account, and then find that the user needs to use Remote Web Access, you can update the user account ï¿½ï¿½s properties.  
   
 ##### To manage Remote Web Access permissions for a user account  
   
@@ -151,10 +151,10 @@ manager: dongill
 > [!NOTE]
 >  Your network configuration should follow the supported network requirements for Windows Server Essentials. There should be only one router on your network.  
   
- If the router is not set up by the Set Up Your Domain Name Wizard, you must manually forward port 443. For information about how to set up port forwarding on your router, see [Router Setup](http://social.technet.microsoft.com/wiki/contents/articles/windows-small-business-server-2011-essentials-router-setup.aspx).  
+ If the router is not set up by the Set Up Your Domain Name Wizard, you must manually forward port 443. For information about how to set up port forwarding on your router, see [Router Setup](https://social.technet.microsoft.com/wiki/contents/articles/windows-small-business-server-2011-essentials-router-setup.aspx).  
   
 ###  <a name="BKMK_ReplaceRouter"></a> Replace a router  
- Replace the router according to the manufacturer „¢s instructions, and then run the Set Up Your Router Wizard to configure the new router.  
+ Replace the router according to the manufacturer ï¿½ï¿½s instructions, and then run the Set Up Your Router Wizard to configure the new router.  
   
 ##### To set up your new router  
   
@@ -233,7 +233,7 @@ manager: dongill
   
 -   A custom domain name for  Remote Web Access (for example, *yourhostname*.remotewebaccess.com). Your domain name is associated with your public IP address.  
   
--   A DNS dynamic update protocol service so that  Remote Web Access using your domain name will not be interrupted if your public IP address changes. Typically, Internet Service Providers (ISPs) for your organization „¢s broadband connections provide dynamic public IP addresses that can change.  
+-   A DNS dynamic update protocol service so that  Remote Web Access using your domain name will not be interrupted if your public IP address changes. Typically, Internet Service Providers (ISPs) for your organization ï¿½ï¿½s broadband connections provide dynamic public IP addresses that can change.  
   
 -   A trusted certificate associated with the domain name.  
   
@@ -249,7 +249,7 @@ manager: dongill
   
 -   If you have an existing domain name that you purchased from one of the supported domain name service providers, you can use the Set Up Your Domain Name Wizard to set up the domain name for your server. Click **I want to use a domain name I already own**, and then type the domain name in the **Set Up Your Domain Name** text box. You must provide the user name and password that you used to purchase the domain name.  
   
--   If you have an existing domain name that you purchased from a domain name service provider that is not supported by Windows Server Essentials, and you want to use the Set Up Your Domain Name Wizard to set up the domain name for your server, you can transfer the domain name to one of the domain name service providers listed in the wizard. Click **I want to use a domain name I already own**, type the domain name in the **Domain Name** text box, and then follow the instructions on the domain name service provider „¢s website to transfer the domain name.  
+-   If you have an existing domain name that you purchased from a domain name service provider that is not supported by Windows Server Essentials, and you want to use the Set Up Your Domain Name Wizard to set up the domain name for your server, you can transfer the domain name to one of the domain name service providers listed in the wizard. Click **I want to use a domain name I already own**, type the domain name in the **Domain Name** text box, and then follow the instructions on the domain name service provider ï¿½ï¿½s website to transfer the domain name.  
   
 ###  <a name="BKMK_SetUpName"></a> Set up a domain name  
  When you turn on Remote Web Access, you can choose to set up the Internet domain name of the server.  
@@ -265,7 +265,7 @@ manager: dongill
 4.  Follow the instructions to complete the wizard. If you do not already own a domain name and certificate, the wizard helps you find a domain name provider to purchase a domain name and certificate, or you can get a personalized Microsoft domain name.  
   
 ###  <a name="BKMK_ChooseProvider"></a> Choose a domain name service provider  
- You should choose a domain name service provider that supports the domain name extension that you want to use. The Set Up Your Domain Name Wizard includes a list of qualified providers that you can use with a link to each provider „¢s website. Click the **More Info** link beside each provider „¢s name to obtain information about the services and prices that are offered by the provider.  
+ You should choose a domain name service provider that supports the domain name extension that you want to use. The Set Up Your Domain Name Wizard includes a list of qualified providers that you can use with a link to each provider ï¿½ï¿½s website. Click the **More Info** link beside each provider ï¿½ï¿½s name to obtain information about the services and prices that are offered by the provider.  
   
 > [!NOTE]
 >  Some domain name service providers serve broad international regions and others serve smaller markets. Because of this, some providers may not offer a website that is translated into your language of preference.  
@@ -325,7 +325,7 @@ manager: dongill
 |.de|For use by websites in Germany|  
 |.co.uk|For use by websites in the United Kingdom|  
   
- To view the complete list of top-level domains, see the [Internet Assigned Numbers Authority website](http://go.microsoft.com/fwlink/?LinkId=117438).  
+ To view the complete list of top-level domains, see the [Internet Assigned Numbers Authority website](https://go.microsoft.com/fwlink/?LinkId=117438).  
   
 #### If a domain extension is not available to select in the Set Up Domain Name Wizard  
  When you run the Set Up Domain Name Wizard, the wizard looks at your system information to determine your country or region. The wizard then displays only those domain extensions that the participating providers in your area support. If the domain extension that you want does not appear in the list, you must choose a different domain extension to continue. Select an extension from the list that the wizard returned.  
@@ -337,7 +337,7 @@ manager: dongill
 >  Work with your domain name service provider to determine the type of certificate that you need. The certificate can be one of the inexpensive certificates that are offered. However, you should review the documentation and features of higher level security certificates to determine if they better meet your business needs.  
   
 ###  <a name="BKMK_ExportCert"></a> Export or import your certificate on your server  
- If you want to create a backup copy of a certificate or use it on another server, you must export the certificate. For information about exporting certificates, see [Export a Certificate](http://go.microsoft.com/fwlink/p/?LinkId=214362).  
+ If you want to create a backup copy of a certificate or use it on another server, you must export the certificate. For information about exporting certificates, see [Export a Certificate](https://go.microsoft.com/fwlink/p/?LinkId=214362).  
   
 ###  <a name="BKMK_SetNameManually"></a> Set up a domain name manually  
  If you choose this option, the server does not monitor or maintain your domain name, and it does not alert you if there is a configuration issue. You might also consider this option if any of the following is true:  

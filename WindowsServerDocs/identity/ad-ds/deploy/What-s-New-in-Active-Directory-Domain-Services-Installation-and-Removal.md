@@ -106,7 +106,7 @@ The  Windows Server 2012  version of adprep.exe works using smartcard as credent
 Adprep.exe requires /userdomain if /user is specified. For smartcard credentials, the /userdomain should be the domain of the underlying user account represented by the smartcard.  
   
 #### Adprep /domainprep /gpprep command is not run automatically  
-The adprep /domainprep /gpprep command is not run as part of AD DS installation. This command sets permissions that are required for Resultant Set of Policy (RSOP) planning mode functionality. For more information about this command, see [Microsoft Knowledge Base article 324392](http://support.microsoft.com/kb/324392). If the command needs to be run in your Active Directory domain, you can run it separately from the AD DS installation. If the command has already been run in preparation of deploying domain controllers that run Windows Server 2003 SP1 or later, the command does not need to be run again.  
+The adprep /domainprep /gpprep command is not run as part of AD DS installation. This command sets permissions that are required for Resultant Set of Policy (RSOP) planning mode functionality. For more information about this command, see [Microsoft Knowledge Base article 324392](https://support.microsoft.com/kb/324392). If the command needs to be run in your Active Directory domain, you can run it separately from the AD DS installation. If the command has already been run in preparation of deploying domain controllers that run Windows Server 2003 SP1 or later, the command does not need to be run again.  
   
 You can safely add domain controllers that run  Windows Server 2012  to an existing domain without running adprep /domainprep /gpprep, but RSOP planning mode will not function properly.  
   
@@ -134,7 +134,7 @@ Other prerequisite checks that are carried forward from the legacy Active Direct
 -   Tree domain name verification: Ensures that the specified tree name is valid and that it does not currently exist.  
   
 ## <a name="BKMK_SystemReqs"></a>System requirements  
-System requirements for  Windows Server 2012  are unchanged from Windows Server 2008 R2. For more information, see [Windows Server 2008 R2 with SP1 System Requirements](http://www.microsoft.com/windowsserver2008/en/us/system-requirements.aspx) (http://www.microsoft.com/windowsserver2008/en/us/system-requirements.aspx).  
+System requirements for  Windows Server 2012  are unchanged from Windows Server 2008 R2. For more information, see [Windows Server 2008 R2 with SP1 System Requirements](https://www.microsoft.com/windowsserver2008/en/us/system-requirements.aspx) (https://www.microsoft.com/windowsserver2008/en/us/system-requirements.aspx).  
   
 Some features can have additional requirements. For example, the virtual domain controller cloning feature requires that the PDC emulator run  Windows Server 2012  and a computer running  Windows Server 2012  with the Hyper-V role installed.  
   
@@ -241,7 +241,7 @@ If you experience this problem, check the dcpromo.log file in the %systemroot%\d
   
     ```  
   
-    If the error is caused by specifying a local Administrator account and password, in order to recover you need to reinstall the operating system, [perform metadata cleanup](http://technet.microsoft.com/library/cc816907(WS.10).aspx) of the account for the domain controller that failed to complete installation, and then retry the AD DS installation using Domain Admin credentials. Restarting the server will not correct this error condition because the server will indicate that AD DS is installed even though the installation did not finish successfully.  
+    If the error is caused by specifying a local Administrator account and password, in order to recover you need to reinstall the operating system, [perform metadata cleanup](https://technet.microsoft.com/library/cc816907(WS.10).aspx) of the account for the domain controller that failed to complete installation, and then retry the AD DS installation using Domain Admin credentials. Restarting the server will not correct this error condition because the server will indicate that AD DS is installed even though the installation did not finish successfully.  
   
 ### <a name="BKMK_nonnormalDNSNameWarning"></a>Active Directory Domain Services Configuration Wizard warns when a non-normalized DNS name is specified  
 If you create a new domain or forest and you specify a DNS domain name that includes internationalized characters that are not normalized, then the Active Directory Domain Services Configuration Wizard displays a warning that DNS queries for the name can fail. Although the DNS domain name is specified in the Deployment Configuration page, the warning appears on the Prerequisites Check page later in the wizard.  
@@ -264,6 +264,6 @@ The following example explains one of the issues that can happen when using an I
   
 If the warning appears in the Prerequisites Check page in the Active Directory Domain Services Configuration Wizard, return to the Deployment Configuration page and specify a normalized DNS domain name. If you are installing a new domain using Windows PowerShell, specify a normalized DNS name for the -DomainName option.  
   
-For more information about IDNs, see [Handling Internationalized Domain Names (IDNs)](http://msdn.microsoft.com/library/windows/desktop/dd318142(v=vs.85).aspx).  
+For more information about IDNs, see [Handling Internationalized Domain Names (IDNs)](https://msdn.microsoft.com/library/windows/desktop/dd318142(v=vs.85).aspx).  
   
 

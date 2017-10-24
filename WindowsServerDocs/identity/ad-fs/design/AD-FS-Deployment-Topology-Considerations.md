@@ -36,7 +36,7 @@ Database features
 |Feature|Supported by WID?|Supported by SQL Server?|More information about this feature|  
 |-----------|---------------------|----------------------------|---------------------------------------|  
 |Basic database redundancy using pull replication, where one or more servers hosting a read\-only copy of the database request changes that are made on a source server that hosts a read\/write copy of the database|Yes|No|[The Role of the AD FS Configuration Database](../../ad-fs/technical-reference/The-Role-of-the-AD-FS-Configuration-Database.md)|  
-|Database redundancy using high\-availability solutions, such as failover clustering or mirroring \(at the database layer only\) **Note:** All AD FS deployment topologies support clustering at the AD FS service layer.|No|Yes|[The Role of the AD FS Configuration Database](../../ad-fs/technical-reference/The-Role-of-the-AD-FS-Configuration-Database.md)<br /><br />[High Availability Solutions Overview](http://go.microsoft.com/fwlink/?LinkId=179853)|  
+|Database redundancy using high\-availability solutions, such as failover clustering or mirroring \(at the database layer only\) **Note:** All AD FS deployment topologies support clustering at the AD FS service layer.|No|Yes|[The Role of the AD FS Configuration Database](../../ad-fs/technical-reference/The-Role-of-the-AD-FS-Configuration-Database.md)<br /><br />[High Availability Solutions Overview](https://go.microsoft.com/fwlink/?LinkId=179853)|  
   
 ### SQL Server considerations  
 You should consider the following deployment facts if you select SQL Server as the configuration database for your AD FS deployment.  

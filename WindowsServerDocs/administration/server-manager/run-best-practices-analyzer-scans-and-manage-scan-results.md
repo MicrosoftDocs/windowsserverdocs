@@ -94,7 +94,7 @@ Follow these steps to scan one or more roles in the BPA GUI.
 Use the following procedures to scan one or more roles by using Windows PowerShell cmdlets.
 
 > [!NOTE]
-> The procedures in this section do not show all BPA cmdlets and parameters. For more information about BPA operations in Windows PowerShell, in your Windows PowerShell session, enter **Get-help***BPACmdlet***-full**, where *BPACmdlet* can be one of the following values. You can also find BPA cmdlet help topics on the [Windows Server TechCenter](http://go.microsoft.com/fwlink/p/?LinkId=240177).
+> The procedures in this section do not show all BPA cmdlets and parameters. For more information about BPA operations in Windows PowerShell, in your Windows PowerShell session, enter **Get-help***BPACmdlet***-full**, where *BPACmdlet* can be one of the following values. You can also find BPA cmdlet help topics on the [Windows Server TechCenter](https://go.microsoft.com/fwlink/p/?LinkId=240177).
 
 -   **Get-BPAmodel**
 
@@ -299,6 +299,6 @@ To view and manage scan results by using Windows PowerShell cmdlets, see the fol
         **Example:**`Get-BPAResult Microsoft/Windows/FileServices | Export-CSV C:\BPAResults\FileServices.txt`
 
 ## See Also
-[Best Practices Analyzer resolution content on the Windows Server TechCenter](http://go.microsoft.com/fwlink/p/?LinkId=241597)
+[Best Practices Analyzer resolution content on the Windows Server TechCenter](https://go.microsoft.com/fwlink/p/?LinkId=241597)
 [Filter, sort, and query Data in Server Manager Tiles](filter-sort-and-query-data-in-server-manager-tiles.md)
 [Manage Multiple, remote Servers with Server Manager](manage-multiple-remote-servers-with-server-manager.md)

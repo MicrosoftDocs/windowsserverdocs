@@ -65,7 +65,7 @@ In the tasks pane on the right side of the dashboard are the various tasks that 
 
 -   **Disable Azure VNET Integration** Disconnects the Azure VNET and removes integration from the Windows Server Essentials dashboard. Note this does not delete the Azure VNET, settings are still preserved in Azure if you want to later re-integrate Azure VNET with the dashboard.
 
--   **Learn More About Azure VNET** [http://azure.microsoft.com/en-us/services/virtual-network/](http://azure.microsoft.com/en-us/services/virtual-network/).
+-   **Learn More About Azure VNET** [https://azure.microsoft.com/en-us/services/virtual-network/](https://azure.microsoft.com/en-us/services/virtual-network/).
 
 See also
 --------

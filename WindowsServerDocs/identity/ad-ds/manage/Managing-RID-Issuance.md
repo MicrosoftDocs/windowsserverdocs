@@ -91,7 +91,7 @@ If you increase the global RID pool, the available pool will change to 2,147,483
 > This unlock operation cannot be reverted or removed, except by a complete forest recovery to earlier backups.  
   
 #### Important Caveats  
-Windows Server 2003 and Windows Server 2008 Domain Controllers cannot issue RIDs when the global RID pool 31<sup>st</sup> bit is unlocked. Windows Server 2008 R2 domain controllers *can* use 31<sup>st</sup> bit RIDs *but only if* they have hotfix [KB 2642658](http://support.microsoft.com/kb/2642658) installed. Unsupported and unpatched domain controllers treat the global RID pool as exhausted when unlocked.  
+Windows Server 2003 and Windows Server 2008 Domain Controllers cannot issue RIDs when the global RID pool 31<sup>st</sup> bit is unlocked. Windows Server 2008 R2 domain controllers *can* use 31<sup>st</sup> bit RIDs *but only if* they have hotfix [KB 2642658](https://support.microsoft.com/kb/2642658) installed. Unsupported and unpatched domain controllers treat the global RID pool as exhausted when unlocked.  
   
 This feature is not enforced by any domain functional level; take great care that only Windows Server 2012 or updated Windows Server 2008 R2 domain controllers exist in the domain.  
   
@@ -199,7 +199,7 @@ To remove the block once reaching the artificial ceiling, perform the following 
     ![RID issuance](media/Managing-RID-Issuance/ADDS_RID_TR_LDPRaiseCeilingSuccess.png)  
   
 ### Other RID Fixes  
-Previous Windows Server operating systems had a RID pool leak when missing rIDSetReferences attribute. To resolve this problem on domain controllers that run Windows Server 2008 R2, install the hotfix from [KB 2618669](http://support.microsoft.com/kb/2618669).  
+Previous Windows Server operating systems had a RID pool leak when missing rIDSetReferences attribute. To resolve this problem on domain controllers that run Windows Server 2008 R2, install the hotfix from [KB 2618669](https://support.microsoft.com/kb/2618669).  
   
 ### Unfixed RID Issues  
 There has historically been a RID leak on account creation failure; when creating an account, failure still uses up a RID. The common example is to create a user with a password that does not meet complexity.  
@@ -240,7 +240,7 @@ To troubleshoot issues not explained by the aforementioned logs - especially old
   
 3.  Does the error returned specifically mention RIDs but is otherwise non-specific? For example, "Windows cannot create the object because the Directory Service was unable to allocate a relative identifier."  
   
-    1.  Examine the System Event log on the domain controller for "legacy" (pre-Windows Server 2012) RID events detailed in [RID Pool Request](http://technet.microsoft.com/en-us/library/ee406152(WS.10).aspx) (16642, 16643, 16644, 16645, 16656).  
+    1.  Examine the System Event log on the domain controller for "legacy" (pre-Windows Server 2012) RID events detailed in [RID Pool Request](https://technet.microsoft.com/en-us/library/ee406152(WS.10).aspx) (16642, 16643, 16644, 16645, 16656).  
   
     2.  Examine the System Event on the domain controller and the RID Master for new block-indicating events detailed below in this topic (16655, 16656, 16657).  
   
@@ -262,7 +262,7 @@ The following new messages log in the System event log on Windows Server 2012 do
 |Event ID|16654|  
 |Source|Directory-Services-SAM|  
 |Severity|Informational|  
-|Message|A pool of account-identifiers (RIDs) has been invalidated. This may occur in the following expected cases:<br /><br />1. A domain controller is restored from backup.<br /><br />2. A domain controller running on a virtual machine is restored from snapshot.<br /><br />3. An administrator has manually invalidated the pool.<br /><br />See http://go.microsoft.com/fwlink/?LinkId=226247 for more information.|  
+|Message|A pool of account-identifiers (RIDs) has been invalidated. This may occur in the following expected cases:<br /><br />1. A domain controller is restored from backup.<br /><br />2. A domain controller running on a virtual machine is restored from snapshot.<br /><br />3. An administrator has manually invalidated the pool.<br /><br />See https://go.microsoft.com/fwlink/?LinkId=226247 for more information.|  
 |Notes and resolution|If this event is unexpected, contact all domain administrators and determine which of them performed the action. The Directory Services event log also contains further information on when one of these steps was performed.|  
   
 |||  
@@ -279,14 +279,14 @@ The following new messages log in the System event log on Windows Server 2012 do
 |Source|Directory-Services-SAM|  
 |Severity|Warning|  
 |Message|The global maximum for account-identifiers (RIDs) has been increased to %1.|  
-|Notes and resolution|Action required! An account-identifier (RID) pool was allocated to this domain controller. The pool value indicates this domain has consumed a considerable portion of the total available account-identifiers.<br /><br />A protection mechanism will be activated when the domain reaches the following threshold of total available account-identifiers remaining: %1.  The protection mechanism will prevent account creation until you manually re-enable account-identifier allocation on the RID master domain controller.<br /><br />See http://go.microsoft.com/fwlink/?LinkId=228610 for more information.|  
+|Notes and resolution|Action required! An account-identifier (RID) pool was allocated to this domain controller. The pool value indicates this domain has consumed a considerable portion of the total available account-identifiers.<br /><br />A protection mechanism will be activated when the domain reaches the following threshold of total available account-identifiers remaining: %1.  The protection mechanism will prevent account creation until you manually re-enable account-identifier allocation on the RID master domain controller.<br /><br />See https://go.microsoft.com/fwlink/?LinkId=228610 for more information.|  
   
 |||  
 |-|-|  
 |Event ID|16657|  
 |Source|Directory-Services-SAM|  
 |Severity|Error|  
-|Message|Action required! This domain has consumed a considerable portion of the total available account-identifiers (RIDs). A protection mechanism has been activated because the total available account-identifiers remaining is less than: X% [artificial ceiling argument].<br /><br />The protection mechanism prevents account creation until you manually re-enable account-identifier allocation on the RID master domain controller.<br /><br />It is extremely important that certain diagnostics are performed prior to re-enabling account creation to ensure this domain is not consuming account-identifiers at an abnormally high rate. Any issues identified should be resolved prior to re-enabling account creation.<br /><br />Failure to diagnose and fix any underlying issue causing an abnormally high rate of account-identifier consumption can lead to account-identifier exhaustion in the domain after which account creation will be permanently disabled in this domain.<br /><br />See http://go.microsoft.com/fwlink/?LinkId=228610 for more information.|  
+|Message|Action required! This domain has consumed a considerable portion of the total available account-identifiers (RIDs). A protection mechanism has been activated because the total available account-identifiers remaining is less than: X% [artificial ceiling argument].<br /><br />The protection mechanism prevents account creation until you manually re-enable account-identifier allocation on the RID master domain controller.<br /><br />It is extremely important that certain diagnostics are performed prior to re-enabling account creation to ensure this domain is not consuming account-identifiers at an abnormally high rate. Any issues identified should be resolved prior to re-enabling account creation.<br /><br />Failure to diagnose and fix any underlying issue causing an abnormally high rate of account-identifier consumption can lead to account-identifier exhaustion in the domain after which account creation will be permanently disabled in this domain.<br /><br />See https://go.microsoft.com/fwlink/?LinkId=228610 for more information.|  
 |Notes and resolution|Contact all domain administrators and inform them that no further security principals can be created in this domain until this protection is overridden. For more information about how to override the protection and possibly increase the overall RID pool, see [Global RID Space Size Unlock](../../ad-ds/manage/../../ad-ds/manage/../../ad-ds/manage/../../ad-ds/manage/Managing-RID-Issuance.md#BKMK_GlobalRidSpaceUnlock).|  
   
 |||  
@@ -294,7 +294,7 @@ The following new messages log in the System event log on Windows Server 2012 do
 |Event ID|16658|  
 |Source|Directory-Services-SAM|  
 |Severity|Warning|  
-|Message|This event is a periodic update on the remaining total quantity of available account-identifiers (RIDs). The number of remaining account-identifiers is approximately: %1.<br /><br />Account-identifiers are used as accounts are created, when they are exhausted no new accounts may be created in the domain.<br /><br />See http://go.microsoft.com/fwlink/?LinkId=228745 for more information.|  
+|Message|This event is a periodic update on the remaining total quantity of available account-identifiers (RIDs). The number of remaining account-identifiers is approximately: %1.<br /><br />Account-identifiers are used as accounts are created, when they are exhausted no new accounts may be created in the domain.<br /><br />See https://go.microsoft.com/fwlink/?LinkId=228745 for more information.|  
 |Notes and resolution|Contact all domain administrators and inform them that RID consumption has crossed a major milestone; determine if this is expected behavior or not by reviewing security trustee creation patterns. To ever see this event would be highly unusual, as it means that at least ~100 million RIDS have been allocated.|  
   
 ## See Also  

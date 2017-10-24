@@ -16,7 +16,7 @@ ms.technology: identity-adds
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-*Law Number Ten: Technology is not a panacea.* - [10 Immutable Laws of Security Administration](http://technet.microsoft.com/library/cc722488.aspx)  
+*Law Number Ten: Technology is not a panacea.* - [10 Immutable Laws of Security Administration](https://technet.microsoft.com/library/cc722488.aspx)  
   
 When you have created a manageable, secure environment for your critical business assets, your focus should shift to ensuring that it is maintained securely. Although you've been given specific technical controls to increase the security of your AD DS installations, technology alone will not protect an environment in which IT does not work in partnership with the business to maintain a secure, usable infrastructure. The high level recommendations in this section are meant to be used as guidelines that you can use to develop not only effective security, but effective lifecycle management.  
   

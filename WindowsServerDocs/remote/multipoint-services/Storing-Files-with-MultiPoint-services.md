@@ -19,7 +19,7 @@ MultiPoint Services supports storing user files in the following ways:
   
 -   **On the operating system partition of the hard disk drive.** By default, MultiPoint Services stores user files on the hard disk drive with the operating system.  
   
--   **On a separate partition of the hard disk drive.** When the MultiPoint Services system is set up for the first time, you can *partition* the hard disk drive. That is, you can configure a section of the drive so that it functions as if it were a separate drive. This makes it easier to restore or upgrade the operating system without affecting user files. For more information, see [Create a partition or logical drive](http://go.microsoft.com/fwlink/?LinkId=182618) in the Windows Server Technical Library.  
+-   **On a separate partition of the hard disk drive.** When the MultiPoint Services system is set up for the first time, you can *partition* the hard disk drive. That is, you can configure a section of the drive so that it functions as if it were a separate drive. This makes it easier to restore or upgrade the operating system without affecting user files. For more information, see [Create a partition or logical drive](https://go.microsoft.com/fwlink/?LinkId=182618) in the Windows Server Technical Library.  
   
 -   **On an additional internal or external hard disk drive.** You can attach additional internal or external hard disk drives to MultiPoint Services for saving and backing up data.  
   

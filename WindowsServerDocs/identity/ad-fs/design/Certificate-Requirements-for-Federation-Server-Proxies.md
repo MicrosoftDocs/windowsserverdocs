@@ -24,7 +24,7 @@ When you have a federation server proxy farm, all federation server proxy comput
   
 It is important to verify that the subject name in the server authentication certificate matches the Federation Service name value that is specified in the AD FS Management snap\-in. To locate this value, open the snap\-in, right\-click **Service**, click **Edit Federation Service Properties**, and then find the value in **Federation Service name** text box.  
   
-For general information about using SSL certificates, see Configuring Secure Sockets Layer in IIS 7.0 \([http:\/\/go.microsoft.com\/fwlink\/?LinkID\=108544](http://go.microsoft.com/fwlink/?LinkID=108544)\) and Configuring Server Certificates in IIS 7.0 \([http:\/\/go.microsoft.com\/fwlink\/?LinkID\=108545](http://go.microsoft.com/fwlink/?LinkID=108545)\).  
+For general information about using SSL certificates, see Configuring Secure Sockets Layer in IIS 7.0 \([http:\/\/go.microsoft.com\/fwlink\/?LinkID\=108544](https://go.microsoft.com/fwlink/?LinkID=108544)\) and Configuring Server Certificates in IIS 7.0 \([http:\/\/go.microsoft.com\/fwlink\/?LinkID\=108545](https://go.microsoft.com/fwlink/?LinkID=108545)\).  
   
 > [!NOTE]  
 > Client authentication certificates are not required for AD FS federation server proxies.  

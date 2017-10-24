@@ -17,12 +17,12 @@ ms.technology: identity-adds
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 
-<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd">
+<developerConceptualDocument xmlns="https://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="https://www.w3.org/1999/xlink" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd">
   <introduction>
     <para>This section provides a description of security problems that you might experience when Active Directory replication is enabled. When security problems cause replication to fail, various event log messages and Repadmin messages contain error codes that identify the problems.</para>
     <para>The Dcdiag.exe tool reports on the overall health of replication with respect to Active Directory Domain Services (AD DS). Dcdiag detects common causes of "Access denied" events, "Account unknown" events, and similar events. The Dcdiag security test was introduced in Windows Server 2003 with Service Pack 1 (SP1). It is not available in earlier versions of Windows Server.</para>
     <para>The error codes that Dcdiag detects are described in the following table. Error codes that are marked with an asterisk (*) are not always caused by a security problem. </para>
-    <table xmlns:caps="http://schemas.microsoft.com/build/caps/2013/11">
+    <table xmlns:caps="https://schemas.microsoft.com/build/caps/2013/11">
       <thead>
         <tr>
           <TD colspan="1">

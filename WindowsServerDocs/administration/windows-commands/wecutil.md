@@ -87,11 +87,11 @@ wecutil  [{es | enum-subscription}]
 ## Remarks
 
 > [!IMPORTANT]
-> If you receive the message, “The RPC server is unavailable�? when you try to run wecutil, you need to start the Windows Event Collector service (wecsvc). To start wecsvc, at an elevated command prompt type net start wecsvc.
+> If you receive the message, “The RPC server is unavailable�? when you try to run wecutil, you need to start the Windows Event Collector service (wecsvc). To start wecsvc, at an elevated command prompt type net start wecsvc.
 -   The following example shows the contents of a configuration file:  
     ```
-    <Subscription xmlns="http://schemas.microsoft.com/2006/03/windows/events/subscription">
-    <Uri>http://schemas.microsoft.com/wbem/wsman/1/windows/EventLog</Uri>
+    <Subscription xmlns="https://schemas.microsoft.com/2006/03/windows/events/subscription">
+    <Uri>https://schemas.microsoft.com/wbem/wsman/1/windows/EventLog</Uri>
     <!-- Use Normal (default), Custom, MinLatency, MinBandwidth -->
     <ConfigurationMode>Normal</ConfigurationMode>
     <Description>Forward Sample Subscription</Description>

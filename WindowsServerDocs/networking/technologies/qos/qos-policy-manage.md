@@ -275,7 +275,7 @@ By default, computers running Windows Server 2016, Windows 10, Windows Server 20
 
 ##### Wireless Multimedia and DSCP values
 
-The [Wi-Fi Alliance](http://go.microsoft.com/fwlink/?LinkId=160769) has established a certification for Wireless Multimedia \(WMM\) that defines four access categories \(WMM_AC\) for prioritizing network traffic transmitted on a Wi\-Fi wireless network. The access categories include \(in order of highest-to-lowest priority\): voice, video, best effort, and background; respectively abbreviated as VO, VI, BE, and BK. The WMM specification defines which DSCP values correspond with each of the four access categories:
+The [Wi-Fi Alliance](https://go.microsoft.com/fwlink/?LinkId=160769) has established a certification for Wireless Multimedia \(WMM\) that defines four access categories \(WMM_AC\) for prioritizing network traffic transmitted on a Wi\-Fi wireless network. The access categories include \(in order of highest-to-lowest priority\): voice, video, best effort, and background; respectively abbreviated as VO, VI, BE, and BK. The WMM specification defines which DSCP values correspond with each of the four access categories:
   
 |DSCP Value|WMM Access Category|
 |----------|-------------------|

@@ -50,13 +50,13 @@ When you have the answers for these questions, you can start configuring the fol
 ### 2.1.1. Connection from the WSUS server to the Internet
 if there is a corporate firewall between WSUS and the Internet, you might have to configure that firewall to ensure WSUS can obtain updates. To obtain updates from Microsoft Update, the WSUS server uses port 443 for HTTPS protocol. Although most of corporate firewalls allow this type of traffic, there are some companies that restrict Internet access from the servers due the company's security policies. if your company restricts access, you need to obtain authorization to allow Internet access from WSUS to the following list of URLs:
 
--   http://windowsupdate.microsoft.com
-
--   http://*.windowsupdate.microsoft.com
+-   https://windowsupdate.microsoft.com
 
 -   https://*.windowsupdate.microsoft.com
 
--   http://*.update.microsoft.com
+-   https://*.windowsupdate.microsoft.com
+
+-   https://*.update.microsoft.com
 
 -   https://*.update.microsoft.com
 
@@ -64,18 +64,18 @@ if there is a corporate firewall between WSUS and the Internet, you might have t
 
 -   http://download.windowsupdate.com
 
--   http://download.microsoft.com
+-   https://download.microsoft.com
 
 -   http://*.download.windowsupdate.com
 
 -   http://wustat.windows.com
 
--   http://ntservicepack.microsoft.com
+-   https://ntservicepack.microsoft.com
 
--   http://go.microsoft.com
+-   https://go.microsoft.com
 
 > [!IMPORTANT]
-> For a scenario in which WSUS is failing to obtain updates due firewall configurations, see [article 885819](http://support.microsoft.com/kb/885819) in the Microsoft Knowledge Base.
+> For a scenario in which WSUS is failing to obtain updates due firewall configurations, see [article 885819](https://support.microsoft.com/kb/885819) in the Microsoft Knowledge Base.
 
 The following section describes how to configure a corporate firewall that is positioned between WSUS and the Internet. Because WSUS initiates all the network traffic, you it is not necessary to configure Windows Firewall on the WSUS server. Although the connection between Microsoft Update and WSUS requires ports 80 and 443 to be open, you can configure multiple WSUS servers to synchronize with a custom port.
 
@@ -328,7 +328,7 @@ You must consider the following limitations when you use SSL to secure a WSUS de
 
 -   move the remote database server and the WSUS server to a private network.
 
--   Deploy Internet Protocol security (IPsec) to help secure network traffic. For more information about IPsec, see [Creating and Using IPsec Policies](http://go.microsoft.com/fwlink/?LinkID=203841).
+-   Deploy Internet Protocol security (IPsec) to help secure network traffic. For more information about IPsec, see [Creating and Using IPsec Policies](https://go.microsoft.com/fwlink/?LinkID=203841).
 
 ### <a name="consswsus"></a>Configure SSL on the WSUS server
 WSUS requires two ports for SSL: one port that uses HTTPS to send encrypted metadata, and one port that uses HTTP to send updates. When you configure WSUS to use SSL, consider the following:
@@ -359,7 +359,7 @@ WSUS requires two ports for SSL: one port that uses HTTPS to send encrypted meta
 
 -   The certificate of the certification authority (CA) must be imported into the local computer Trusted Root CA store, or the Windows Server Update Service Trusted Root CA store on downstream WSUS servers. if the certificate is only imported to the Local User Trusted Root CA store, the downstream WSUS server will not be authenticated on the upstream server.
 
-    for more information about how to use SSL certificates in IIS, see [Require Secure Sockets Layer (IIS 7)](http://go.microsoft.com/fwlink/?LinkID=203846).
+    for more information about how to use SSL certificates in IIS, see [Require Secure Sockets Layer (IIS 7)](https://go.microsoft.com/fwlink/?LinkID=203846).
 
 -   You must import the certificate to all computers that will communicate with the WSUS server. This includes all client computers, downstream servers, and computers that run the WSUS Administration Console. The certificate should be imported into the local computer Trusted Root CA store or into the Windows Server Update Service Trusted Root CA store.
 
@@ -418,22 +418,22 @@ The following instructions configure a downstream server to synchronize to an up
 ### <a name="addlsl"></a>additional SSL resources
 The steps that are required to set up a certification authority, bind the certificate to the WSUS website, and establish a trust between the client computers and the certificate are beyond the scope of this guide. For more information and for instructions about how to install certificates and set up this environment, see the following topics:
 
--   [Suite B PKI Step-by-Step Guide](http://go.microsoft.com/fwlink/?LinkID=203858)
+-   [Suite B PKI Step-by-Step Guide](https://go.microsoft.com/fwlink/?LinkID=203858)
 
--   [Implementing and Administering Certificate Templates](http://go.microsoft.com/fwlink/?LinkID=203859)
+-   [Implementing and Administering Certificate Templates](https://go.microsoft.com/fwlink/?LinkID=203859)
 
--   [active directory Certificate Services Upgrade and Migration Guide](http://go.microsoft.com/fwlink/?LinkID=203860)
+-   [active directory Certificate Services Upgrade and Migration Guide](https://go.microsoft.com/fwlink/?LinkID=203860)
 
--   [Configure Certificate Autoenrollment](http://go.microsoft.com/fwlink/?LinkID=203861)
+-   [Configure Certificate Autoenrollment](https://go.microsoft.com/fwlink/?LinkID=203861)
 
 ### 2.6. Complete IIS Configuration
 By default, anonymous read access is enabled for the default and all new IIS websites. Some applications, notably Windows SharePoint Services, may remove anonymous access. if this has occurred, you must re-enable the anonymous read access before you can successfully install and operate WSUS.
 
 To enable anonymous read access, follow the steps for the applicable version of IIS:
 
-1.  [Enable Anonymous Authentication (IIS 7)](http://go.microsoft.com/fwlink/?LinkID=205316), as documented in the IIS 7 Operations Guide.
+1.  [Enable Anonymous Authentication (IIS 7)](https://go.microsoft.com/fwlink/?LinkID=205316), as documented in the IIS 7 Operations Guide.
 
-2.  [Enabling Anonymous Authentication (IIS 6.0)](http://go.microsoft.com/fwlink/?LinkId=211391), as documented in the IIS 6.0 Operations Guide.
+2.  [Enabling Anonymous Authentication (IIS 6.0)](https://go.microsoft.com/fwlink/?LinkId=211391), as documented in the IIS 6.0 Operations Guide.
 
 ### 2.7. Configure a Signing Certificate
 WSUS has the ability to publish custom update packages to update Microsoft and non-Microsoft products. WSUS can automatically sign these custom update packages for you with an Authenticode certificate. To enable custom update signing, you must install a package signing certificate on your WSUS server. There are several considerations associated with custom update signing.

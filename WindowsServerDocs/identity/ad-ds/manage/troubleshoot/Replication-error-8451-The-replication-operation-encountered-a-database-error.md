@@ -17,7 +17,7 @@ ms.technology: identity-adds
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 
-<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd">
+<developerConceptualDocument xmlns="https://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="https://www.w3.org/1999/xlink" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd">
   <introduction>
     <para>This article covers symptoms, root causes, and how to resolve Active Directory replication error 8451: The replication operation encountered a database error. </para>
     <list class="bullet">
@@ -50,7 +50,7 @@ ms.technology: identity-adds
       <list class="ordered">
         <listItem>
           <para>On-screen errors, logged events, or diagnostic output identify the existence of a database error, with possible formats as shown in the following table.</para>
-          <table xmlns:caps="http://schemas.microsoft.com/build/caps/2013/11">
+          <table xmlns:caps="https://schemas.microsoft.com/build/caps/2013/11">
             <thead>
               <tr>
                 <TD>
@@ -215,7 +215,7 @@ Active Directory Domain Services could not replicate the directory partition
         </listItem>
         <listItem>
           <para>REPADMIN commands that commonly cite the 8606 status include but are not limited to:</para>
-          <table xmlns:caps="http://schemas.microsoft.com/build/caps/2013/11">
+          <table xmlns:caps="https://schemas.microsoft.com/build/caps/2013/11">
             <tbody>
               <tr>
                 <TD>
@@ -272,7 +272,7 @@ Last success @ &lt;date&gt; &lt;time&gt;.
         <listItem>
           <para>NTDS KCC, NTDS General or Microsoft-Windows-ActiveDirectory_DomainService events with the 8451 status are logged in the directory service event log.</para>
           <para>Active Directory events that commonly cite the 8451 status include but are not limited to:</para>
-          <table xmlns:caps="http://schemas.microsoft.com/build/caps/2013/11">
+          <table xmlns:caps="https://schemas.microsoft.com/build/caps/2013/11">
             <thead>
               <tr>
                 <TD>
@@ -468,7 +468,7 @@ network address.</para>
         <listItem>
           <para>The following table lists Event Sources and Event ID that frequently accompany other events that contain the 8451 error.</para>
           <para>Increasing NTDS diagnostic logging levels on the domain controller produces additional events.</para>
-          <table xmlns:caps="http://schemas.microsoft.com/build/caps/2013/11">
+          <table xmlns:caps="https://schemas.microsoft.com/build/caps/2013/11">
             <thead>
               <tr>
                 <TD>
@@ -618,7 +618,7 @@ to domain controller &lt;destination DC&gt;:</para>
           <para>This operation will not continue.</para>
         </listItem>
         <listItem>
-          <para>Error codes decoded with <externalLink><linkText>Microsoft Exchange Server Error Code Lookup</linkText><linkUri>http://www.microsoft.com/download/en/details.aspx?displaylang=en&amp;id=985</linkUri></externalLink> (err.exe) relating to the 8451 error and accompanying errors:</para>
+          <para>Error codes decoded with <externalLink><linkText>Microsoft Exchange Server Error Code Lookup</linkText><linkUri>https://www.microsoft.com/download/en/details.aspx?displaylang=en&amp;id=985</linkUri></externalLink> (err.exe) relating to the 8451 error and accompanying errors:</para>
           <code>C:\&gt;err 8451
 # for decimal 8451 / hex 0x2103 :
 ERROR_DS_DRA_DB_ERROR winerror.h
@@ -756,7 +756,7 @@ JET_errDatabaseCorrupted esent98.h
         </listItem>
         <listItem>
           <para>Based on the additional information from the increased logging consult the table below for a potential resolution.</para>
-          <table xmlns:caps="http://schemas.microsoft.com/build/caps/2013/11">
+          <table xmlns:caps="https://schemas.microsoft.com/build/caps/2013/11">
             <thead>
               <tr>
                 <TD>
@@ -811,7 +811,7 @@ JET_errDatabaseCorrupted esent98.h
                   <para>
                     <externalLink>
                       <linkText>832851</linkText>
-                      <linkUri>http://support.microsoft.com/default.aspx?scid=kb;EN-US;832851</linkUri>
+                      <linkUri>https://support.microsoft.com/default.aspx?scid=kb;EN-US;832851</linkUri>
                     </externalLink>
                   </para>
                   <para>Inbound Replication Fails on Domain Controllers with Event ID: 1699, Error 8451 or jet error -1601</para>
@@ -959,7 +959,7 @@ JET_errDatabaseCorrupted esent98.h
     <title>More information</title>
     <content>
       <para>Validate the vertical jet database stack from the bottom up (proceeding up to the next layer only when the underlying layer checks out "good"), just like you do with TCP.</para>
-      <table xmlns:caps="http://schemas.microsoft.com/build/caps/2013/11">
+      <table xmlns:caps="https://schemas.microsoft.com/build/caps/2013/11">
         <thead>
           <tr>
             <TD>
@@ -1020,7 +1020,7 @@ ESENTUTL / D</para>
   <relatedTopics>
     <externalLink>
       <linkText>Troubleshooting Active Directory Operations that fail with error 8451: The replication operation encountered a database error</linkText>
-      <linkUri>http://support.microsoft.com/kb/2645996/en-gb</linkUri>
+      <linkUri>https://support.microsoft.com/kb/2645996/en-gb</linkUri>
     </externalLink>
   </relatedTopics>
 </developerConceptualDocument>

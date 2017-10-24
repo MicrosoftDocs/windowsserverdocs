@@ -17,7 +17,7 @@ ms.technology: identity-adds
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 
-<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd">
+<developerConceptualDocument xmlns="https://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="https://www.w3.org/1999/xlink" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd">
   <introduction>
     <para>This article describes the symptoms, cause, and resolution steps for cases when Active Directory replication fails with error 1256: The remote system is not available.</para>
     <list class="bullet">
@@ -50,7 +50,7 @@ Naming Context: &lt;directory partition DN path&gt;
 <codeFeaturedElement>The remote system is not available.</codeFeaturedElement> For information about network troubleshooting, see Windows Help.
 The failure occurred at &lt;date&gt; &lt;time&gt;
 The last success occurred at &lt;date&gt; &lt;time&gt;
-</code></listItem><listItem><para>REPADMIN.EXE reports that a replication attempt has failed with status 1256.</para><para>REPADMIN commands that commonly cite the 1256 status include but are not limited to:</para><table xmlns:caps="http://schemas.microsoft.com/build/caps/2013/11"><tbody><tr><TD><list class="bullet"><listItem><para>REPADMIN /REPLSUM</para></listItem><listItem><para>REPADMIN /SHOWREPL</para></listItem></list></TD><TD><list class="bullet"><listItem><para>REPADMIN /SHOWREPS</para></listItem><listItem><para>REPADMIN /FAILCACHE</para></listItem></list></TD></tr></tbody></table><para>Sample output from "REPADMIN /SHOWREPS" depicting inbound replication from LonEMEADC to LonContosoDC failing with "The remote system is not available" error is shown below: </para><code>Repadmin: running command /showrepl against full DC localhost
+</code></listItem><listItem><para>REPADMIN.EXE reports that a replication attempt has failed with status 1256.</para><para>REPADMIN commands that commonly cite the 1256 status include but are not limited to:</para><table xmlns:caps="https://schemas.microsoft.com/build/caps/2013/11"><tbody><tr><TD><list class="bullet"><listItem><para>REPADMIN /REPLSUM</para></listItem><listItem><para>REPADMIN /SHOWREPL</para></listItem></list></TD><TD><list class="bullet"><listItem><para>REPADMIN /SHOWREPS</para></listItem><listItem><para>REPADMIN /FAILCACHE</para></listItem></list></TD></tr></tbody></table><para>Sample output from "REPADMIN /SHOWREPS" depicting inbound replication from LonEMEADC to LonContosoDC failing with "The remote system is not available" error is shown below: </para><code>Repadmin: running command /showrepl against full DC localhost
 LondonLONCONTOSODC
 DSA Options: IS_GC 
 Site Options: (none)
@@ -65,7 +65,7 @@ Last attempt @ 2010-06-10 17:35:46 failed, <codeFeaturedElement>result 1256 (0x4
 <codeFeaturedElement>The remote system is not available.</codeFeaturedElement> For information about network troubleshooting, see Windows Help.
 &lt;#&gt; consecutive failure(s).
 Last success @ &lt;date&gt; &lt;time&gt;. 
-</code></listItem><listItem><para>NTDS KCC, NTDS Replication, or ActiveDirectory_DomainService events with the 1256 status are logged in the directory service event log.</para><table xmlns:caps="http://schemas.microsoft.com/build/caps/2013/11"><thead><tr><TD><para>Event ID</para></TD><TD><para>Event Source</para></TD><TD><para>Event String</para></TD></tr></thead><tbody><tr><TD><para>1085</para><alert class="note"><para>Event 1085 is logged only if the NTDS Diagnostics value <embeddedLabel>"5 Replication Events"</embeddedLabel> has been set to a value of 1 or higher.</para></alert></TD><TD><para>NTDS Replication</para><para>ActiveDirectory_DomainService</para></TD><TD><para>Internal event: Active Directory Domain Services could not synchronize the following directory partition with the directory service at the following network address.</para></TD></tr><tr><TD><para>1308</para></TD><TD><para>NTDS KCC</para><para>ActiveDirectory_DomainService</para></TD><TD><para>The Knowledge Consistency Checker (KCC) has detected that successive attempts to replicate with the following domain controller has consistently failed. </para><para>The Knowledge Consistency Checker (KCC) has detected that successive attempts to replicate with the following directory service has consistently failed.</para></TD></tr></tbody></table></listItem></list>
+</code></listItem><listItem><para>NTDS KCC, NTDS Replication, or ActiveDirectory_DomainService events with the 1256 status are logged in the directory service event log.</para><table xmlns:caps="https://schemas.microsoft.com/build/caps/2013/11"><thead><tr><TD><para>Event ID</para></TD><TD><para>Event Source</para></TD><TD><para>Event String</para></TD></tr></thead><tbody><tr><TD><para>1085</para><alert class="note"><para>Event 1085 is logged only if the NTDS Diagnostics value <embeddedLabel>"5 Replication Events"</embeddedLabel> has been set to a value of 1 or higher.</para></alert></TD><TD><para>NTDS Replication</para><para>ActiveDirectory_DomainService</para></TD><TD><para>Internal event: Active Directory Domain Services could not synchronize the following directory partition with the directory service at the following network address.</para></TD></tr><tr><TD><para>1308</para></TD><TD><para>NTDS KCC</para><para>ActiveDirectory_DomainService</para></TD><TD><para>The Knowledge Consistency Checker (KCC) has detected that successive attempts to replicate with the following domain controller has consistently failed. </para><para>The Knowledge Consistency Checker (KCC) has detected that successive attempts to replicate with the following directory service has consistently failed.</para></TD></tr></tbody></table></listItem></list>
     </content>
   </section>
   <section address="BKMK_Cause">
@@ -79,7 +79,7 @@ Last success @ &lt;date&gt; &lt;time&gt;.
     <title>Resolution</title>
     <content>
       <para>The win32 error 1256 should not be the focus of troubleshooting efforts, instead find the replication status that led to the RPC bind failure and then follow the corresponding article on TechNet. 
-Microsoft Knowledge Base article <externalLink><linkText>2498185</linkText><linkUri>http://support.microsoft.com/kb/2498185</linkUri></externalLink> contains a list of Active Directory Replication troubleshooting articles.</para>
+Microsoft Knowledge Base article <externalLink><linkText>2498185</linkText><linkUri>https://support.microsoft.com/kb/2498185</linkUri></externalLink> contains a list of Active Directory Replication troubleshooting articles.</para>
       <para>In order to determine the actual win32 error to troubleshoot use <placeholder>one</placeholder> of the following methods:</para>
       <list class="ordered">
         <listItem>
@@ -108,7 +108,7 @@ Microsoft Knowledge Base article <externalLink><linkText>2498185</linkText><link
             <listItem>
               <para>Column K, <embeddedLabel>Last Failure Status</embeddedLabel> will list the 1256s along with the real win32 error that led to the RPC bind failure.</para>
               <para>In the following example, win32 error 1722 is logged for the Configuration and Schema partitions and should be the focus of troubleshooting.</para>
-              <table xmlns:caps="http://schemas.microsoft.com/build/caps/2013/11">
+              <table xmlns:caps="https://schemas.microsoft.com/build/caps/2013/11">
                 <tbody>
                   <tr>
                     <TD>
@@ -358,7 +358,7 @@ DsReplicaSync() <codeFeaturedElement>failed with status 1722 (0x6ba)</codeFeatur
 The RPC server is unavailable.
 </code>
           <para>Take note that after manually initiating replication for the partition that the status has changed from 1256 to 1722:</para>
-          <table xmlns:caps="http://schemas.microsoft.com/build/caps/2013/11">
+          <table xmlns:caps="https://schemas.microsoft.com/build/caps/2013/11">
             <tbody>
               <tr>
                 <TD>
@@ -603,7 +603,7 @@ The RPC server is unavailable.
   <relatedTopics>
     <externalLink>
       <linkText>Troubleshooting Active Directory operations that fail with error 1256: The remote system is not available.</linkText>
-      <linkUri>http://support.microsoft.com/kb/2200187</linkUri>
+      <linkUri>https://support.microsoft.com/kb/2200187</linkUri>
     </externalLink>
   </relatedTopics>
 </developerConceptualDocument>

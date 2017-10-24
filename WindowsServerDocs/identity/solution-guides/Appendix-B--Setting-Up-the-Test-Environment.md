@@ -164,7 +164,7 @@ Create the following users by using Active Directory Administrative Center.
     |Jeff Low|JLow|JLow@contoso.com|HR||US|  
     |RMS Server|rms|rms@contoso.com||||  
   
-    For more information about creating security groups, see [Create a New Group](http://technet.microsoft.com/library/dd861305.aspx) on the Windows Server website.  
+    For more information about creating security groups, see [Create a New Group](https://technet.microsoft.com/library/dd861305.aspx) on the Windows Server website.  
   
 ##### To create a Group Policy Object  
   
@@ -223,7 +223,7 @@ Create the following users by using Active Directory Administrative Center.
 #### Install the Microsoft Office Filter Packs on the file server  
 You should install the Microsoft Office Filter Packs on  Windows Server 2012  to enable IFilters for a wider array of Office files than are provided by default.  Windows Server 2012  does not have any IFilters for Microsoft Office Files installed by default, and the file classification infrastructure uses IFilters to perform content analysis.  
   
-To download and install the IFilters, see [Microsoft Office 2010 Filter Packs](http://go.microsoft.com/fwlink/?LinkID=234122).  
+To download and install the IFilters, see [Microsoft Office 2010 Filter Packs](https://go.microsoft.com/fwlink/?LinkID=234122).  
   
 #### Configure email notifications on FILE1  
 When you create quotas and file screens, you have the option of sending email notifications to users when their quota limit is approaching or after they have attempted to save files that have been blocked. If you want to routinely notify certain administrators of quota and file screening events, you can configure one or more default recipients. To send these notifications, you must specify the SMTP server to be used for forwarding the email messages.  
@@ -373,7 +373,7 @@ Add the Active Directory Rights Management Services (AD RMS) and all required fe
 >     -   NLTEST /SC_RESET:contoso.com  
 > 2.  On the domain controller (DC1), replicate Active Directory.  
 >   
->     For more information about steps to force the replication of Active Directory, see [Active Directory Replication](http://technet.microsoft.com/library/cc794809(WS.10).aspx)  
+>     For more information about steps to force the replication of Active Directory, see [Active Directory Replication](https://technet.microsoft.com/library/cc794809(WS.10).aspx)  
   
 Optionally, instead of using the Add Roles and Features Wizard in Server Manager, you can use Windows PowerShell to install and configure the AD RMS server role as show in the following procedure.  
   
@@ -499,7 +499,7 @@ Optionally, instead of using the Add Roles and Features Wizard in Server Manager
 ### Build the mail server (SRV1)  
 SRV1 is the SMTP/POP3 mail server. You need to set it up so that you can send email notifications as part of the Access-Denied assistance scenario.  
   
-Configure Microsoft Exchange Server on this computer. For more information, see [How to Install Exchange Server](http://go.microsoft.com/fwlink/?prd=12364).  
+Configure Microsoft Exchange Server on this computer. For more information, see [How to Install Exchange Server](https://go.microsoft.com/fwlink/?prd=12364).  
   
 ### Build the client virtual machine (CLIENT1)  
   
@@ -554,9 +554,9 @@ Configure Microsoft Exchange Server on this computer. For more information, see 
 -   Connect the virtual machine to the ID_AD_Network.  
   
 > [!IMPORTANT]  
-> Joining virtual machines to a domain and deploying claim types across forests require that the virtual machines be able to resolve the FQDNs of the relevant domains. You may have to manually configure the DNS settings on the virtual machines to accomplish this. For more information, see [Configuring a virtual network](http://technet.microsoft.com/library/cc732470%28v=ws.10%29.aspx).  
+> Joining virtual machines to a domain and deploying claim types across forests require that the virtual machines be able to resolve the FQDNs of the relevant domains. You may have to manually configure the DNS settings on the virtual machines to accomplish this. For more information, see [Configuring a virtual network](https://technet.microsoft.com/library/cc732470%28v=ws.10%29.aspx).  
 >   
-> All the virtual machine images (servers and clients) must be reconfigured to use a static IP version 4 (IPv4) address and Domain Name System (DNS) client settings. For more information, see [Configure a DNS Client for Static IP Address](http://go.microsoft.com/fwlink/?LinkId=150952).  
+> All the virtual machine images (servers and clients) must be reconfigured to use a static IP version 4 (IPv4) address and Domain Name System (DNS) client settings. For more information, see [Configure a DNS Client for Static IP Address](https://go.microsoft.com/fwlink/?LinkId=150952).  
   
 ### <a name="BKMK_2.2"></a>Set up a new forest called adatum.com  
   
@@ -609,7 +609,7 @@ Configure Microsoft Exchange Server on this computer. For more information, see 
 > -   Sign in to adatum.com as adatum\administrator. Open a Command Prompt window, type **nslookup contoso.com**, and then press ENTER.  
 > -   Sign in to contoso.com as contoso\administrator. Open a Command Prompt window, type **nslookup adatum.com**, and then press ENTER.  
 >   
-> If these commands execute without errors, the forests can communicate with each other. For more information on nslookup errors, see the troubleshooting section in the topic [Using NSlookup.exe](http://support.microsoft.com/kb/200525)  
+> If these commands execute without errors, the forests can communicate with each other. For more information on nslookup errors, see the troubleshooting section in the topic [Using NSlookup.exe](https://support.microsoft.com/kb/200525)  
   
 ### <a name="BKMK_2.22"></a>Set contoso.com as a trusting forest to adatum.com  
 In this step, you create a trust relationship between the Adatum Corporation site and the Contoso, Ltd. site.  

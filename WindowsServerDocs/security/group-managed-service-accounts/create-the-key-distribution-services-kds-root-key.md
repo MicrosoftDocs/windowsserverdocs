@@ -22,7 +22,7 @@ This topic for the IT professional describes how to create a Microsoft Key Distr
 
  Windows Server 2012  domain controllers (DC) require a root key to begin generating gMSA passwords. The domain controllers will wait up to 10 hours from time of creation to allow all domain controllers to converge their AD replication before allowing the creation of a gMSA. The 10 hours is a safety measure to prevent password generation from occurring before all DCs in the environment are capable of answering gMSA requests.  If you try to use a gMSA too soon the key might not have been replicated to all Windows Server 2012 DCs and therefore password retrieval might fail when the gMSA host attempts to retrieve the password. gMSA password retrieval failures can also occur when using DCs with limited replication schedules or if there is a replication issue.
 
-Membership in the **Domain Admins** or **Enterprise Admins** groups, or equivalent, is the minimum required to complete this procedure. For detailed information about using the appropriate accounts and group memberships, see [Local and Domain Default Groups](http://technet.microsoft.com/library/dd728026(WS.10).aspx).
+Membership in the **Domain Admins** or **Enterprise Admins** groups, or equivalent, is the minimum required to complete this procedure. For detailed information about using the appropriate accounts and group memberships, see [Local and Domain Default Groups](https://technet.microsoft.com/library/dd728026(WS.10).aspx).
 
 > [!NOTE]
 > A 64-bit architecture is required to run the Windows PowerShell commands which are used to administer group Managed Service Accounts.
