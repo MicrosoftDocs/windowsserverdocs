@@ -33,11 +33,11 @@ ms.technology: identity-adfs
 
 -   [Remote Server Administration Tools for Windows 10](https://www.microsoft.com/download/details.aspx?id=45520)
   
--   [Remote Server Administration Tools for Windows 8](http://www.microsoft.com/download/details.aspx?id=28972)  
+-   [Remote Server Administration Tools for Windows 8](https://www.microsoft.com/download/details.aspx?id=28972)  
 
--   [Remote Server Administration Tools for Windows 7 with Service Pack 1 (SP1)](http://www.microsoft.com/download/details.aspx?id=7887)  
+-   [Remote Server Administration Tools for Windows 7 with Service Pack 1 (SP1)](https://www.microsoft.com/download/details.aspx?id=7887)  
   
--   [Microsoft Remote Server Administration Tools for Windows Vista](http://www.microsoft.com/download/details.aspx?id=21090)  
+-   [Microsoft Remote Server Administration Tools for Windows Vista](https://www.microsoft.com/download/details.aspx?id=21090)  
   
  The following procedure is the same for DCs that run either Windows Server 2016, 2012, 2008 R2, or 2008. The target DC of the metadata cleanup operation can run any version of Windows Server.  
   

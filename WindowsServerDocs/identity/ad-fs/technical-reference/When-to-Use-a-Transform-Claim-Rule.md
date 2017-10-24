@@ -80,7 +80,7 @@ If the outgoing claim must be constructed from the content of more than one inco
 When using the claim rule language syntax to transform claims, you can set a property of the transformed claim to a new literal value. For example, the following rule changes the value of role claims from “Administrators” to “root” while keeping the same claim type:  
   
 ```  
-c:[type == “http://schemas.microsoft.com/ws/2008/06/identity/claims/role”, value == “Administrators”]  => issue(type = c.type, value = “root”);  
+c:[type == “https://schemas.microsoft.com/ws/2008/06/identity/claims/role”, value == “Administrators”]  => issue(type = c.type, value = “root”);  
 ```  
   
 Regular expressions can also be used for claim transformations. For example, the following rule will set the domain in windows user name claims in DOMAIN\\USER format to FABRIKAM:  

@@ -26,7 +26,7 @@ You must add the following resource records to corporate Domain Name System \(DN
   
 You can use the following procedure to add a host \(A\) and alias \(CNAME\) resource records to corporate DNS for the federation server and the Device Registration Service.  
   
-Membership in **Administrators**, or equivalent, is the minimum requirement to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](http://go.microsoft.com/fwlink/?LinkId=83477).   
+Membership in **Administrators**, or equivalent, is the minimum requirement to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](https://go.microsoft.com/fwlink/?LinkId=83477).   
   
 #### To add a host \(A\) and alias \(CNAME\) resource records to DNS for your federation server  
   

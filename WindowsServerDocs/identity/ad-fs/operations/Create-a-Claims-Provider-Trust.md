@@ -18,7 +18,7 @@ ms.technology: identity-adfs
 
 To add a new claims provider trust by using the AD FS Management snap\-in and manually configure the settings, perform the following procedure on a resource partner federation server in the resource partner organization.  
   
-Membership in **Administrators**, or equivalent, on the local computer is the minimum requirement to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](http://go.microsoft.com/fwlink/?LinkId=83477).   
+Membership in **Administrators**, or equivalent, on the local computer is the minimum requirement to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](https://go.microsoft.com/fwlink/?LinkId=83477).   
   
 ## To create a claims provider trust manually  
   

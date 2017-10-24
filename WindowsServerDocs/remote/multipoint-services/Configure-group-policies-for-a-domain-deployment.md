@@ -60,7 +60,7 @@ For a domain deployment of MultiPoint Services, you should update the following 
   
     HKEY_USERS\<SIDofWMSshell>\Software\Policies\Microsoft\Windows\Control Panel\Desktop  
   
-    where '<SIDofWMSshell>' is the security identifier (SID) for the WMSshell account. To find out how to identify the SID, see [How to Associate a Username with a Security Identifier (SID)](http://support.microsoft.com/kb/154599).  
+    where '<SIDofWMSshell>' is the security identifier (SID) for the WMSshell account. To find out how to identify the SID, see [How to Associate a Username with a Security Identifier (SID)](https://support.microsoft.com/kb/154599).  
   
 3.  In the list on the right, update the following subkeys.  
   

@@ -21,7 +21,7 @@ manager: dongill
 The Assessment and Deployment Kit (ADK) for the  Windows Server Essentials server software is based on the ADK for the  Windows Server® 2012 operating system, so the documentation for that ADK applies here, unless otherwise noted. The information included here is specific to partners who intend to preinstall the operating system for their customers.  
   
 > [!NOTE]
->  You can download the Assessment and Deployment Kit (ADK) for the  Windows Server Essentials from the [Microsoft Download Center](http://www.microsoft.com/download/details.aspx?id=34866).  
+>  You can download the Assessment and Deployment Kit (ADK) for the  Windows Server Essentials from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=34866).  
   
 ## In this section  
  This section includes the following topics:  

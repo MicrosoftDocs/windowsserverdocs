@@ -41,4 +41,4 @@ Runs when the computer is started and prior to Windows Server® 2008 R2 starting
 
 [Chkntfs](chkntfs.md)
 
-[Troubleshooting Disks and File Systems](http://go.microsoft.com/fwlink/?LinkId=4527)
+[Troubleshooting Disks and File Systems](https://go.microsoft.com/fwlink/?LinkId=4527)

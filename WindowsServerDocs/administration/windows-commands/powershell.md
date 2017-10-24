@@ -45,20 +45,20 @@ You can use the **PowerShell.exe** command-line tool to start a Windows PowerShe
     ```  
 6.  To end a Windows PowerShell session in a Command Prompt window, type `exit`. The typical command prompt returns.
 
-For a complete list of the **PowerShell.exe** command-line parameters, see [about_PowerShell.Exe](http://go.microsoft.com/fwlink/?LinkID=113439).
+For a complete list of the **PowerShell.exe** command-line parameters, see [about_PowerShell.Exe](https://go.microsoft.com/fwlink/?LinkID=113439).
 
 ## Other Ways to Start Windows PowerShell
 
-For information about other ways to start Windows PowerShell, see [Starting Windows PowerShell](http://go.microsoft.com/fwlink/?LinkID=135259).
+For information about other ways to start Windows PowerShell, see [Starting Windows PowerShell](https://go.microsoft.com/fwlink/?LinkID=135259).
 
 ## Remarks
 
-Windows PowerShell runs on the Server Core installation option of Windows Server operating systems. However, features that require a graphic user interface, such as the [Windows PowerShell Integrated Scripting Environment (ISE)](http://technet.microsoft.com/library/hh849182), and the [Out-GridView](http://go.microsoft.com/fwlink/?LinkID=113364) and [Show-Command](http://go.microsoft.com/fwlink/?LinkID=217448) cmdlets, do not run on Server Core installations.
+Windows PowerShell runs on the Server Core installation option of Windows Server operating systems. However, features that require a graphic user interface, such as the [Windows PowerShell Integrated Scripting Environment (ISE)](https://technet.microsoft.com/library/hh849182), and the [Out-GridView](https://go.microsoft.com/fwlink/?LinkID=113364) and [Show-Command](https://go.microsoft.com/fwlink/?LinkID=217448) cmdlets, do not run on Server Core installations.
 
 ##
 
-[about_PowerShell.Exe](http://go.microsoft.com/fwlink/?LinkID=113439)
-[about_PowerShell_Ise.exe](http://go.microsoft.com/fwlink/?LinkId=256512)
-[Windows PowerShell](http://go.microsoft.com/fwlink/?LinkID=107116)
-[Scripting with Windows PowerShell](http://technet.microsoft.com/scriptcenter/dd742419)
+[about_PowerShell.Exe](https://go.microsoft.com/fwlink/?LinkID=113439)
+[about_PowerShell_Ise.exe](https://go.microsoft.com/fwlink/?LinkId=256512)
+[Windows PowerShell](https://go.microsoft.com/fwlink/?LinkID=107116)
+[Scripting with Windows PowerShell](https://technet.microsoft.com/scriptcenter/dd742419)
 See Also

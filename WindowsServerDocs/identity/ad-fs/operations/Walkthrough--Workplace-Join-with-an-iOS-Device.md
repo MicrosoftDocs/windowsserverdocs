@@ -37,7 +37,7 @@ In this demonstration, you join the device to the workplace.
     -   **When On-premises DRS is the configured DRS**: 
         Open Apple Safari and navigate to the Device Registration Service (DRS) Over-the-Air Profile endpoint for iOS devices, `https://adf1s.contoso.com/enrollmentserver/otaprofile`
 
-    There are many ways to communicate this URL to your users. One recommended way is to publish this URL in a custom application access denied message in AD FS. This is covered in the upcoming section: [Create an application access policy and custom access denied message](http://msdn.microsoft.com/library/azure/dn788908.aspx)
+    There are many ways to communicate this URL to your users. One recommended way is to publish this URL in a custom application access denied message in AD FS. This is covered in the upcoming section: [Create an application access policy and custom access denied message](https://msdn.microsoft.com/library/azure/dn788908.aspx)
 
 2.  Log on to the webpage by using a company domain account:  **roberth@contoso.com** and password: **P@ssword**.
 

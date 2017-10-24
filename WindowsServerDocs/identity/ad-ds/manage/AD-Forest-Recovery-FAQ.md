@@ -58,15 +58,15 @@ Although speed of recovery is not the primary goal of this guide, you can achiev
   
 -   Reduce the time for retrieving backup media by:  
   
-    -   Using the Active Directory Database Mounting Tool (Dsamain.exe) to identify the best backup to use for restore operations. For more information about using the Active Directory Database Mounting Tool, see the [Active Directory Database Mounting Tool Step-by-Step Guide](http://go.microsoft.com/fwlink/?LinkId=132577) (http://go.microsoft.com/fwlink/?LinkId=132577).  
+    -   Using the Active Directory Database Mounting Tool (Dsamain.exe) to identify the best backup to use for restore operations. For more information about using the Active Directory Database Mounting Tool, see the [Active Directory Database Mounting Tool Step-by-Step Guide](https://go.microsoft.com/fwlink/?LinkId=132577) (https://go.microsoft.com/fwlink/?LinkId=132577).  
   
     -   Labeling the backup media clearly and storing the media in an organized fashion at a convenient, yet secure, location that allows fast retrieval.  
   
-    -   Using the Volume Shadow Copy Service with a storage area network (SAN) to maintain backups from different points in time. For more information, see [Windows Server 2003 Active Directory Fast Recovery with Volume Shadow Copy Service and Virtual Disk Service](http://go.microsoft.com/fwlink/?LinkId=70781) (http://go.microsoft.com/fwlink/?LinkId=70781).  
+    -   Using the Volume Shadow Copy Service with a storage area network (SAN) to maintain backups from different points in time. For more information, see [Windows Server 2003 Active Directory Fast Recovery with Volume Shadow Copy Service and Virtual Disk Service](https://go.microsoft.com/fwlink/?LinkId=70781) (https://go.microsoft.com/fwlink/?LinkId=70781).  
   
 -   Force the removal of AD DS from the DCs instead of reinstalling the operating system. If the cause of the forest-wide failure has been identified to be purely within the scope of AD DS, you do not have to reinstall the operating system on the DCs.  
   
-     For more information about forcing the removal of AD DS from a DC that runs Windows Server 2008 or later, see [Forcing the Removal of a Windows Server 2008 Domain Controller](http://go.microsoft.com/fwlink/?LinkId=132627) (http://go.microsoft.com/fwlink/?LinkId=132627). For more information about forcing the removal of AD DS from a DC that runs Windows Server 2003, see [article 332199](http://go.microsoft.com/fwlink/?LinkId=70780) in the Microsoft Knowledge Base (http://go.microsoft.com/fwlink/?LinkId=70780).  
+     For more information about forcing the removal of AD DS from a DC that runs Windows Server 2008 or later, see [Forcing the Removal of a Windows Server 2008 Domain Controller](https://go.microsoft.com/fwlink/?LinkId=132627) (https://go.microsoft.com/fwlink/?LinkId=132627). For more information about forcing the removal of AD DS from a DC that runs Windows Server 2003, see [article 332199](https://go.microsoft.com/fwlink/?LinkId=70780) in the Microsoft Knowledge Base (https://go.microsoft.com/fwlink/?LinkId=70780).  
   
 -   Use faster tape devices or disk backups to reduce the time that is required for restore operations.  
   

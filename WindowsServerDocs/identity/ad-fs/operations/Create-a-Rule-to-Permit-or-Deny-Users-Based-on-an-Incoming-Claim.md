@@ -22,7 +22,7 @@ For example, you can use this to create a rule that will permit only users that 
   
 You can use the following procedure to create a claim rule with the AD FS Management snap\-in.  
   
-Membership in **Administrators**, or equivalent, on the local computer is the minimum required to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](http://go.microsoft.com/fwlink/?LinkId=83477).  
+Membership in **Administrators**, or equivalent, on the local computer is the minimum required to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](https://go.microsoft.com/fwlink/?LinkId=83477).  
 
 ## To create a rule to permit users based on an incoming claim on Windows Server 2016
  

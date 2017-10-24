@@ -19,110 +19,110 @@ ms.technology: identity-adds
 
 Active Directory replication problems can have several different sources. For example, Domain Name System (DNS) problems, networking issues, or security problems can all cause Active Directory replication to fail. 
 
-The rest of this topic explains tools and a general methodology to fix Active Directory replication errors. For a hands-on lab that demonstrates how to troubleshoot Active Directory replication problems, see [TechNet Virtual Lab: Troubleshooting Active Directory Replication Errors](http://go.microsoft.com/?linkid=9844718)
+The rest of this topic explains tools and a general methodology to fix Active Directory replication errors. For a hands-on lab that demonstrates how to troubleshoot Active Directory replication problems, see [TechNet Virtual Lab: Troubleshooting Active Directory Replication Errors](https://go.microsoft.com/?linkid=9844718)
 
 The following subtopics cover symptoms, causes, and how to resolve specific replication errors:
    
-[Fixing Replication Lingering Object Problems (Event IDs 1388, 1988, 2042)](http://technet.microsoft.com/library/cc949124.aspx)
+[Fixing Replication Lingering Object Problems (Event IDs 1388, 1988, 2042)](https://technet.microsoft.com/library/cc949124.aspx)
   
-[Fixing Replication Security Problems](http://technet.microsoft.com/library/cc949132.aspx)
+[Fixing Replication Security Problems](https://technet.microsoft.com/library/cc949132.aspx)
 
-[Fixing Replication DNS Lookup Problems (Event IDs 1925, 2087, 2088)](http://technet.microsoft.com/library/cc949133.aspx)
+[Fixing Replication DNS Lookup Problems (Event IDs 1925, 2087, 2088)](https://technet.microsoft.com/library/cc949133.aspx)
   
-[Fixing Replication Connectivity Problems (Event ID 1925)](http://technet.microsoft.com/library/cc949131.aspx)
+[Fixing Replication Connectivity Problems (Event ID 1925)](https://technet.microsoft.com/library/cc949131.aspx)
   
-[Fixing Replication Topology Problems (Event ID 1311)](http://technet.microsoft.com/library/cc949129.aspx)
+[Fixing Replication Topology Problems (Event ID 1311)](https://technet.microsoft.com/library/cc949129.aspx)
   
-[Verify DNS Functionality to Support Directory Replication](http://technet.microsoft.com/library/dd728017.aspx)
+[Verify DNS Functionality to Support Directory Replication](https://technet.microsoft.com/library/dd728017.aspx)
   
-[Replication error 8614 The Active Directory cannot replicate with this server because the time since the last replication with this server has exceeded the tombstone lifetime](http://technet.microsoft.com/library/replication-error-8614-the-active-directory-cannot-replicate-with-this-server-because-the-time-since-the-last-replication-with-this-server-has-exceeded-the-tombstone-lifetime.aspx)
+[Replication error 8614 The Active Directory cannot replicate with this server because the time since the last replication with this server has exceeded the tombstone lifetime](https://technet.microsoft.com/library/replication-error-8614-the-active-directory-cannot-replicate-with-this-server-because-the-time-since-the-last-replication-with-this-server-has-exceeded-the-tombstone-lifetime.aspx)
      
-[Replication error 8524 The DSA operation is unable to proceed because of a DNS lookup failure](http://technet.microsoft.com/library/replication-error-8524-the-dsa-operation-is-unable-to-proceed-because-of-a-dns-lookup-failure.aspx)
+[Replication error 8524 The DSA operation is unable to proceed because of a DNS lookup failure](https://technet.microsoft.com/library/replication-error-8524-the-dsa-operation-is-unable-to-proceed-because-of-a-dns-lookup-failure.aspx)
    
-[Replication error 8456 or 8457 The source | destination server is currently rejecting replication requests](http://technet.microsoft.com/library/replication-error-8456-the-source-server-is-currently-rejecting-replication-requests-or-replication-error-8457-the-destination-server-is-currently-rejecting-replication-requests.aspx)
+[Replication error 8456 or 8457 The source | destination server is currently rejecting replication requests](https://technet.microsoft.com/library/replication-error-8456-the-source-server-is-currently-rejecting-replication-requests-or-replication-error-8457-the-destination-server-is-currently-rejecting-replication-requests.aspx)
    
-[Replication error 8453 Replication access was denied](http://technet.microsoft.com/library/replication-error-8453-replication-access-was-denied.aspx)
+[Replication error 8453 Replication access was denied](https://technet.microsoft.com/library/replication-error-8453-replication-access-was-denied.aspx)
   
-[Replication error 8452 The naming context is in the process of being removed or is not replicated from the specified server](http://technet.microsoft.com/library/replication-error-8452-the-naming-context-is-in-the-process-of-being-removed-or-is-not-replicated-from-the-specified-server.aspx)
+[Replication error 8452 The naming context is in the process of being removed or is not replicated from the specified server](https://technet.microsoft.com/library/replication-error-8452-the-naming-context-is-in-the-process-of-being-removed-or-is-not-replicated-from-the-specified-server.aspx)
    
-[Replication error 5 Access is denied](http://technet.microsoft.com/library/replication-error-5-access-is-denied.aspx)
+[Replication error 5 Access is denied](https://technet.microsoft.com/library/replication-error-5-access-is-denied.aspx)
   
 
       
       
 
   
-[Replication error -2146893022 The target principal name is incorrect](http://technet.microsoft.com/library/replication-error-2146893022-the-target-principal-name-is-incorrect.aspx)
+[Replication error -2146893022 The target principal name is incorrect](https://technet.microsoft.com/library/replication-error-2146893022-the-target-principal-name-is-incorrect.aspx)
   
 
       
       
 
   
-[Replication error 1753 There are no more endpoints available from the endpoint mapper](http://technet.microsoft.com/library/replication-error-1753-there-are-no-more-endpoints-available-from-the-endpoint-mapper.aspx)
+[Replication error 1753 There are no more endpoints available from the endpoint mapper](https://technet.microsoft.com/library/replication-error-1753-there-are-no-more-endpoints-available-from-the-endpoint-mapper.aspx)
   
 
       
       
 
   
-[Replication error 1722 The RPC server is unavailable](http://technet.microsoft.com/library/replication-error-1722-the-rpc-server-is-unavailable.aspx)
+[Replication error 1722 The RPC server is unavailable](https://technet.microsoft.com/library/replication-error-1722-the-rpc-server-is-unavailable.aspx)
   
 
       
       
 
   
-[Replication error 1396 Logon Failure The target account name is incorrect](http://technet.microsoft.com/library/replication-error-1396-logon-failure-the-target-account-name-is-incorrect.aspx)
+[Replication error 1396 Logon Failure The target account name is incorrect](https://technet.microsoft.com/library/replication-error-1396-logon-failure-the-target-account-name-is-incorrect.aspx)
   
 
       
       
 
   
-[Replication error 1256 The remote system is not available](http://technet.microsoft.com/library/replication-error-1256-the-remote-system-is-not-available.aspx)
+[Replication error 1256 The remote system is not available](https://technet.microsoft.com/library/replication-error-1256-the-remote-system-is-not-available.aspx)
   
 
       
       
 
   
-[Replication error 1127 While accessing the hard disk, a disk operation failed even after retries](http://technet.microsoft.com/library/replication-error-1127-while-accessing-the-hard-disk-a-disk-operation-failed-even-after-retries.aspx)
+[Replication error 1127 While accessing the hard disk, a disk operation failed even after retries](https://technet.microsoft.com/library/replication-error-1127-while-accessing-the-hard-disk-a-disk-operation-failed-even-after-retries.aspx)
   
 
       
       
 
   
-[Replication error 8451 The replication operation encountered a database error](http://technet.microsoft.com/library/replication-error-8451-the-replication-operation-encountered-a-database-error.aspx)
+[Replication error 8451 The replication operation encountered a database error](https://technet.microsoft.com/library/replication-error-8451-the-replication-operation-encountered-a-database-error.aspx)
   
 
       
       
 
   
-[Replication error 8606 Insufficient attributes were given to create an object](http://technet.microsoft.com/library/replication-error-8606-insufficient-attributes-were-given-to-create-an-object.aspx)
+[Replication error 8606 Insufficient attributes were given to create an object](https://technet.microsoft.com/library/replication-error-8606-insufficient-attributes-were-given-to-create-an-object.aspx)
   
 
 ## Introduction and resources for troubleshooting Active Directory replication
 
 Inbound or outbound replication failure causes Active Directory objects that represent the replication topology, replication schedule, domain controllers, users, computers, passwords, security groups, group memberships, and Group Policy to be inconsistent between domain controllers. Directory inconsistency and replication failure cause either operational failures or inconsistent results, depending on the domain controller that is contacted for the operation, and can prevent the application of Group Policy and access control permissions. Active Directory Domain Services (AD DS) depends on network connectivity, name resolution, authentication and authorization, the directory database, the replication topology, and the replication engine. When the root cause of a replication problem is not immediately obvious, determining the cause among the many possible causes requires systematic elimination of probable causes. 
 
-For a UI-based tool to help monitor replication and diagnose errors, see [Active Directory Replication Status Tool](http://www.microsoft.com/download/details.aspx?id=30005). There is also a [hands-on lab](http://go.microsoft.com/?linkid=9844718) that demonstrates how to use Active Directory Replication Status and other tools to troubleshoot errors. 
+For a UI-based tool to help monitor replication and diagnose errors, see [Active Directory Replication Status Tool](https://www.microsoft.com/download/details.aspx?id=30005). There is also a [hands-on lab](https://go.microsoft.com/?linkid=9844718) that demonstrates how to use Active Directory Replication Status and other tools to troubleshoot errors. 
 
-For a comprehensive document that describes how you can use the Repadmin tool to troubleshoot Active Directory replication is available; see [Monitoring and Troubleshooting Active Directory Replication Using Repadmin](http://go.microsoft.com/fwlink/?LinkId=122830).
+For a comprehensive document that describes how you can use the Repadmin tool to troubleshoot Active Directory replication is available; see [Monitoring and Troubleshooting Active Directory Replication Using Repadmin](https://go.microsoft.com/fwlink/?LinkId=122830).
 
 For information about how Active Directory replication works, see the following technical references:
 
 
-- [Active Directory Replication Model Technical Reference](http://go.microsoft.com/fwlink/?LinkId=65958)
-- [Active Director Replication Topology Technical Reference](http://go.microsoft.com/fwlink/?LinkId=93578)
+- [Active Directory Replication Model Technical Reference](https://go.microsoft.com/fwlink/?LinkId=65958)
+- [Active Director Replication Topology Technical Reference](https://go.microsoft.com/fwlink/?LinkId=93578)
 
 ## Event and tool solution recommendations
 
 Ideally, the red (Error) and yellow (Warning) events in the Directory Service event log suggest the specific constraint that is causing replication failure on the source or destination domain controller. If the event message suggests steps for a solution, try the steps that are described in the event. The Repadmin tool and other diagnostic tools also provide information that can help you resolve replication failures. 
 
-For detailed information about using Repadmin for troubleshooting replication problems, see [Monitoring and Troubleshooting Active Directory Replication Using Repadmin](http://go.microsoft.com/fwlink/?LinkId=122830).
+For detailed information about using Repadmin for troubleshooting replication problems, see [Monitoring and Troubleshooting Active Directory Replication Using Repadmin](https://go.microsoft.com/fwlink/?LinkId=122830).
 
 ## Ruling out intentional disruptions or hardware failures
 
@@ -140,11 +140,11 @@ Periodic hardware upgrades can also cause domain controllers to be out of servic
 
 ### Firewall configuration
 
-By default, Active Directory replication remote procedure calls (RPCs) occur dynamically over an available port through the RPC Endpoint Mapper (RPCSS) on port 135. Make sure that Windows Firewall with Advanced Security and other firewalls are configured properly to allow for replication. For information about specifying the port for Active Directory replication and port settings, see [article 224196 in the Microsoft Knowledge Base](http://go.microsoft.com/fwlink/?LinkId=22578). 
+By default, Active Directory replication remote procedure calls (RPCs) occur dynamically over an available port through the RPC Endpoint Mapper (RPCSS) on port 135. Make sure that Windows Firewall with Advanced Security and other firewalls are configured properly to allow for replication. For information about specifying the port for Active Directory replication and port settings, see [article 224196 in the Microsoft Knowledge Base](https://go.microsoft.com/fwlink/?LinkId=22578). 
 
-For information about the ports that Active Directory replication uses, see [Active Directory Replication Tools and Settings](http://go.microsoft.com/fwlink/?LinkId=123774). 
+For information about the ports that Active Directory replication uses, see [Active Directory Replication Tools and Settings](https://go.microsoft.com/fwlink/?LinkId=123774). 
 
-For information about managing Active Directory replication over firewalls, see [Active Directory Replication over Firewalls](http://go.microsoft.com/fwlink/?LinkId=123775).
+For information about managing Active Directory replication over firewalls, see [Active Directory Replication over Firewalls](https://go.microsoft.com/fwlink/?LinkId=123775).
 
 ## Responding to failure of an outdated server running Windows 2000 Server
 
@@ -154,7 +154,7 @@ If a domain controller running Windows 2000 Server has failed for longer than th
 2. Either forcefully remove Active Directory or reinstall the operating system.
 3. Remove the server metadata from Active Directory so that the server object cannot be revived. 
 
-You can use a script to clean up server metadata on most Windows operating systems. For information about using this script, see [Remove Active Directory Domain Controller Metadata](http://go.microsoft.com/fwlink/?LinkID=123599). 
+You can use a script to clean up server metadata on most Windows operating systems. For information about using this script, see [Remove Active Directory Domain Controller Metadata](https://go.microsoft.com/fwlink/?LinkID=123599). 
 
 By default, NTDS Settings objects that are deleted are revived automatically for a period of 14 days. Therefore, if you do not remove server metadata (use Ntdsutil or the script mentioned previously to perform metadata cleanup), the server metadata is reinstated in the directory, which prompts replication attempts to occur. In this case, errors will be logged persistently as a result of the inability to replicate with the missing domain controller.
 
@@ -177,14 +177,14 @@ Use the following general approach to fixing replication problems:
 
 1. Monitor replication health daily, or use Repadmin.exe to retrieve replication status daily.
 2. Attempt to resolve any reported failure in a timely manner by using the methods that are described in event messages and this guide. If software might be causing the problem, uninstall the software before you continue with other solutions.
-3. If the problem that is causing replication to fail cannot be resolved by any known methods, remove AD DS from the server and then reinstall AD DS. For more information about reinstalling AD DS, see [Decommissioning a Domain Controller](http://go.microsoft.com/fwlink/?LinkId=128290).
+3. If the problem that is causing replication to fail cannot be resolved by any known methods, remove AD DS from the server and then reinstall AD DS. For more information about reinstalling AD DS, see [Decommissioning a Domain Controller](https://go.microsoft.com/fwlink/?LinkId=128290).
 4. If AD DS cannot be removed normally while the server is connected to the network, use one of the following methods to resolve the problem:
  
 
 	- Force AD DS removal in Directory Services Restore Mode (DSRM), clean up server metadata, and then reinstall AD DS.
 	- Reinstall the operating system, and rebuild the domain controller.
 
-For more information about forcing removal of AD DS, see [Forcing the Removal of a Domain Controller](http://go.microsoft.com/fwlink/?LinkId=128291).
+For more information about forcing removal of AD DS, see [Forcing the Removal of a Domain Controller](https://go.microsoft.com/fwlink/?LinkId=128291).
 
 ## Using Repadmin to retrieve replication status</title>
 
@@ -270,5 +270,5 @@ The following table lists common events that might indicate problems with Active
 |2088 NTDS Replication |AD DS could not resolve the DNS host name of the source domain controller to an IP address, but replication succeeded.|Fixing Replication DNS Lookup Problems (Event IDs 1925, 2087, 2088)|
 |5805 Net Logon|A machine account failed to authenticate, which is usually caused by either multiple instances of the same computer name or the computer name not replicating to every domain controller.|Fixing Replication Security Problems| 
 
-For more information about replication concepts, see [Active Directory Replication Technologies](http://go.microsoft.com/fwlink/?LinkId=41950).
+For more information about replication concepts, see [Active Directory Replication Technologies](https://go.microsoft.com/fwlink/?LinkId=41950).
   

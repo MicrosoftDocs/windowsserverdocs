@@ -12,7 +12,7 @@ ms.date: 10/16/2017
 # Hardware considerations in ADDS performance tuning 
 
 >[!Important]
-> The following is a summary of the key recommendations and considerations to optimize server hardware for Active Directory workloads covered in greater depth in the [Capacity Planning for Active Directory Domain Services](http://go.microsoft.com/fwlink/?LinkId=324566) article. Readers are highly encouraged to review [Capacity Planning for Active Directory Domain Services](http://go.microsoft.com/fwlink/?LinkId=324566) for a greater technical understanding and implications of these recommendations.
+> The following is a summary of the key recommendations and considerations to optimize server hardware for Active Directory workloads covered in greater depth in the [Capacity Planning for Active Directory Domain Services](https://go.microsoft.com/fwlink/?LinkId=324566) article. Readers are highly encouraged to review [Capacity Planning for Active Directory Domain Services](https://go.microsoft.com/fwlink/?LinkId=324566) for a greater technical understanding and implications of these recommendations.
 
 ## Avoid going to disk
 
@@ -20,7 +20,7 @@ Active Directory caches as much of the database as memory allows. Fetching pages
 
 -   Active Directory Best Practices recommend putting enough RAM to load the entire DIT into memory, plus accommodate the operating system and other installed applications, such as anti-virus, backup software, monitoring, and so on.
 
-    -   For limitations of the legacy platforms, see [Memory usage by the Lsass.exe process on domain controllers that are running Windows Server 2003 or Windows 2000 Server](http://support.microsoft.com/kb/308356).
+    -   For limitations of the legacy platforms, see [Memory usage by the Lsass.exe process on domain controllers that are running Windows Server 2003 or Windows 2000 Server](https://support.microsoft.com/kb/308356).
 
     -   Use the Memory\\Long-Term Average Standby Cache Lifetime (s) &gt; 30 minutes performance counter.
 
@@ -71,4 +71,4 @@ Just like with processors, excessive network adapter utilization will cause long
 - [LDAP considerations](ldap-considerations.md)
 - [Proper placement of domain controllers and site considerations](site-definition-considerations.md)
 - [Troubleshooting ADDS performance](troubleshoot.md) 
-- [Capacity Planning for Active Directory Domain Services](http://go.microsoft.com/fwlink/?LinkId=324566)
+- [Capacity Planning for Active Directory Domain Services](https://go.microsoft.com/fwlink/?LinkId=324566)

@@ -47,7 +47,7 @@ You can add tasks to the **SETUP**, **ADD-INS**, **QUICK STATUS** task lists, an
   
     ```  
   
-    <Tasks version=?2.0? xmlns=?http://schemas.microsoft.com/WindowsServerSolutions/2010/01/Dashboard>  
+    <Tasks version=?2.0? xmlns=?https://schemas.microsoft.com/WindowsServerSolutions/2010/01/Dashboard>  
        <SetupMyServerTasks>  
           <Task name="MyTask"  
              description="MyTaskDescription"  
@@ -98,10 +98,10 @@ You can add tasks to the **SETUP**, **ADD-INS**, **QUICK STATUS** task lists, an
     |---------------|-----------------|  
     |Name (Task)|The name that is displayed for the task in the list. If you create an embedded resource file, the value of this attribute is the string resource.|  
     |description (Task)|The description of the task. If you create an embedded resource file, the value of this attribute is the string resource.|  
-    |id (Task)|The identifier of the task. This identifier must be a GUID. You create a new GUID for an **exe** task, but for a **global** task, you use the GUID that you created when you defined the task for the task pane of the sub-tab. For more information about creating a GUID, see [Create Guid (guidgen.exe)](http://go.microsoft.com/fwlink/?LinkId=116098).|  
+    |id (Task)|The identifier of the task. This identifier must be a GUID. You create a new GUID for an **exe** task, but for a **global** task, you use the GUID that you created when you defined the task for the task pane of the sub-tab. For more information about creating a GUID, see [Create Guid (guidgen.exe)](https://go.microsoft.com/fwlink/?LinkId=116098).|  
     |image|This field will be ignored.|  
     |Name (Action)|Displays the name of the task.|  
-    |Type (Action)|Describes the type of task. The task can one of the following:- **global** task, **exe**, or a url task. A **global** task is the same global task that you created when defining the tasks for the task pane in the sub-tab. For more information about creating a global task that can be used in both the tasks pane of the sub-tab and the Getting Started Tasks or Common Tasks lists of the home page, see œCreating the support classes? in œHow to: Create a Sub-Tab? of the [Windows Server Solutions SDK](http://go.microsoft.com/fwlink/?LinkID=248648). An **exe** task can be used to run applications from the Getting Started Tasks or Common Tasks lists.|  
+    |Type (Action)|Describes the type of task. The task can one of the following:- **global** task, **exe**, or a url task. A **global** task is the same global task that you created when defining the tasks for the task pane in the sub-tab. For more information about creating a global task that can be used in both the tasks pane of the sub-tab and the Getting Started Tasks or Common Tasks lists of the home page, see œCreating the support classes? in œHow to: Create a Sub-Tab? of the [Windows Server Solutions SDK](https://go.microsoft.com/fwlink/?LinkID=248648). An **exe** task can be used to run applications from the Getting Started Tasks or Common Tasks lists.|  
     |exelocation|The path to the application that is associated with the task. This attribute is only used for **exe** tasks.|  
     |replaceid|The identifier of the task that is replaced with this task.|  
     |assembly|The AssemblyName of the assembly which provides the class to implement quick status query. The assembly needs to be located in Program files\ windows server\bin\\.|  
@@ -132,7 +132,7 @@ You can add tasks to the **SETUP**, **ADD-INS**, **QUICK STATUS** task lists, an
   
 10. Save the OEMHomePageContent.home file.  
   
- For how to implement a quick status query, please refer to documents and samples in the [Windows Server Solutions SDK](http://go.microsoft.com/fwlink/?LinkID=248648).  
+ For how to implement a quick status query, please refer to documents and samples in the [Windows Server Solutions SDK](https://go.microsoft.com/fwlink/?LinkID=248648).  
   
 #### Change the status of a SETUP/ADD-INS task  
  The tasks that are listed in SETUP and ADD-INS can be toggled in states of completed (configured for Add-ins) and not completed (not configured for Add-ins).  
@@ -173,7 +173,7 @@ You can add tasks to the **SETUP**, **ADD-INS**, **QUICK STATUS** task lists, an
   
     ```  
   
-    <Tasks version=?2.0? xmlns=?http://schemas.microsoft.com/WindowsServerSolutions/2010/01/Dashboard>  
+    <Tasks version=?2.0? xmlns=?https://schemas.microsoft.com/WindowsServerSolutions/2010/01/Dashboard>  
        <SetupMyServerTasks>  
           <Task name="MyTask"  
              description="MyDescription"  
@@ -197,7 +197,7 @@ You can add tasks to the **SETUP**, **ADD-INS**, **QUICK STATUS** task lists, an
 5.  Save the OEMHomePageContent.home.resx file, and then build the solution.  
   
 #####  <a name="BKMK_SignAssembly"></a> Sign the assembly with an Authenticode signature  
- You must Authenticode sign the assembly for it to be used in the operating system. For more information about signing the assembly, see [Signing and Checking Code with Authenticode](http://msdn.microsoft.com/library/ms537364\(VS.85\).aspx#SignCode).  
+ You must Authenticode sign the assembly for it to be used in the operating system. For more information about signing the assembly, see [Signing and Checking Code with Authenticode](https://msdn.microsoft.com/library/ms537364\(VS.85\).aspx#SignCode).  
   
 ##### Install the task files  
  After you create the .home and .home.resx files, you must install them on the server.  

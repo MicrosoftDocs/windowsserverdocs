@@ -87,7 +87,7 @@ dir
 ```  
   
 ## <a name="BKMK_Rid"></a>RID Issuance Hotfixes for Previous Operating Systems  
-See [An update is available to detect and prevent too much consumption of the global RID pool on a domain controller that is running Windows Server 2008 R2](http://support.microsoft.com/kb/2618669).  
+See [An update is available to detect and prevent too much consumption of the global RID pool on a domain controller that is running Windows Server 2008 R2](https://support.microsoft.com/kb/2618669).  
   
 ## <a name="BKMK_IFM"></a>Ntdsutil.exe Install from Media Changes  
 Windows Server 2012 adds two additional options to the Ntdsutil.exe command-line tool for the **IFM (IFM Media Creation)** menu. These allow you to create IFM stores without first performing an offline defrag of the exported NTDS.DIT database file. When disk space is not a premium, this saves time creating the IFM.  

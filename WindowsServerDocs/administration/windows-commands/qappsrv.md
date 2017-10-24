@@ -20,7 +20,7 @@ ms.date: 10/16/2017
 
 Displays a list of all remote Desktop Session Host (rd Session Host) servers on the network.
 > [!NOTE]
-> In Windows Server 2008 R2, Terminal Services was renamed remote Desktop Services. To find out what's new in the latest version, see [What s New in remote Desktop Services in Windows Server 2012](http://technet.microsoft.com/library/hh831527) in the Windows Server TechNet Library.
+> In Windows Server 2008 R2, Terminal Services was renamed remote Desktop Services. To find out what's new in the latest version, see [What s New in remote Desktop Services in Windows Server 2012](https://technet.microsoft.com/library/hh831527) in the Windows Server TechNet Library.
 ## remarks
 This command is the same as the **query termserver** command.
 #### additional references

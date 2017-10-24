@@ -87,7 +87,7 @@ Check out [What's New in Windows Server version 1709](get-started/whats-new-in-w
 
 ## Windows Server editions
 
-Windows Server, version 1709, is available in Standard and Datacenter editions, while Windows Server 2016 is available in Standard, Datacenter, and Essentials editions. Windows Server Datacenter includes unlimited virtualization rights plus new features to build a software-defined datacenter. Windows Server Standard offers enterprise-class features with limited virtualization rights. Windows Server 2016 Essentials is an ideal cloud-connected first server. It has its own [extensive documentation](http://go.microsoft.com/fwlink/?LinkID=827171)—the content here focuses on Standard and Datacenter editions. The following table briefly summarizes the key differences between Standard and Datacenter editions:
+Windows Server, version 1709, is available in Standard and Datacenter editions, while Windows Server 2016 is available in Standard, Datacenter, and Essentials editions. Windows Server Datacenter includes unlimited virtualization rights plus new features to build a software-defined datacenter. Windows Server Standard offers enterprise-class features with limited virtualization rights. Windows Server 2016 Essentials is an ideal cloud-connected first server. It has its own [extensive documentation](https://go.microsoft.com/fwlink/?LinkID=827171)—the content here focuses on Standard and Datacenter editions. The following table briefly summarizes the key differences between Standard and Datacenter editions:
 
 |Feature|Datacenter|Standard|  
 |-------------------|----------|-----------------------|  

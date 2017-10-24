@@ -117,15 +117,15 @@ This topic includes forest recovery procedures for domain controllers (DCs) that
   
 5.  Click **Start**, point to **All Programs**, point to **Administrative Tools**, and then click **DNS**.  
   
-6.  Create DNS zones for the same DNS domain names that were hosted on the DNS servers before the critical malfunction. For more information, see Add a Forward Lookup Zone ([http://go.microsoft.com/fwlink/?LinkId=74574](http://go.microsoft.com/fwlink/?LinkId=74574)).  
+6.  Create DNS zones for the same DNS domain names that were hosted on the DNS servers before the critical malfunction. For more information, see Add a Forward Lookup Zone ([https://go.microsoft.com/fwlink/?LinkId=74574](https://go.microsoft.com/fwlink/?LinkId=74574)).  
   
 7.  Configure the DNS data as it existed before the critical malfunction. For example:  
   
-    -   Configure DNS zones to be stored in AD DS. For more information, see Change the Zone Type ([http://go.microsoft.com/fwlink/?LinkId=74579](http://go.microsoft.com/fwlink/?LinkId=74579)).  
+    -   Configure DNS zones to be stored in AD DS. For more information, see Change the Zone Type ([https://go.microsoft.com/fwlink/?LinkId=74579](https://go.microsoft.com/fwlink/?LinkId=74579)).  
   
-    -   Configure the DNS zone that is authoritative for domain controller locator (DC Locator) resource records to allow secure dynamic update. For more information, see Allow Only Secure Dynamic Updates ([http://go.microsoft.com/fwlink/?LinkId=74580](http://go.microsoft.com/fwlink/?LinkId=74580)).  
+    -   Configure the DNS zone that is authoritative for domain controller locator (DC Locator) resource records to allow secure dynamic update. For more information, see Allow Only Secure Dynamic Updates ([https://go.microsoft.com/fwlink/?LinkId=74580](https://go.microsoft.com/fwlink/?LinkId=74580)).  
   
-8.  Ensure that the parent DNS zone contains delegation resource records (name server (NS) and glue host (A) resource records) for the child zone that is hosted on this DNS server. For more information, see Create a Zone Delegation ([http://go.microsoft.com/fwlink/?LinkId=74562](http://go.microsoft.com/fwlink/?LinkId=74562)).  
+8.  Ensure that the parent DNS zone contains delegation resource records (name server (NS) and glue host (A) resource records) for the child zone that is hosted on this DNS server. For more information, see Create a Zone Delegation ([https://go.microsoft.com/fwlink/?LinkId=74562](https://go.microsoft.com/fwlink/?LinkId=74562)).  
   
 9. After you configure DNS, at the command prompt, type the following command, and then press ENTER:  
   

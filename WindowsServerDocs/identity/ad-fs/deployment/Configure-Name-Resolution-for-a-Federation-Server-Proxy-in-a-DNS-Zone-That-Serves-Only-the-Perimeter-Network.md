@@ -28,7 +28,7 @@ So that name resolution can work successfully for a federation server in an Acti
 ## Add the IP address of a federation server to the hosts file  
 So that a federation server proxy can work as expected in the perimeter network of an account partner, you must add an entry to the hosts file on that federation server proxy that points to a federation server's DNS host name \(for example, fs.fabrikam.com\) and IP address \(for example, 192.168.1.4\) in the corporate network of the account partner. Adding this entry to the hosts file prevents the federation server proxy from contacting itself to resolve a client\-initiated call to a federation server in the account partner.  
   
-Membership in **Administrators**, or equivalent, on the local computer is the minimum required to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](http://go.microsoft.com/fwlink/?LinkId=83477).   
+Membership in **Administrators**, or equivalent, on the local computer is the minimum required to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](https://go.microsoft.com/fwlink/?LinkId=83477).   
   
 #### To add the IP address of a federation server to the hosts file  
   
@@ -48,7 +48,7 @@ So that clients on the Internet can successfully access a federation server thro
 > [!NOTE]  
 > It is assumed that you are using a DNS server, running Windows 2000 Server, Windows Server 2003, or  Windows Server 2008  with the DNS Server service, to control the perimeter DNS zone.  
   
-Membership in **Administrators**, or equivalent, is the minimum required to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](http://go.microsoft.com/fwlink/?LinkId=83477).   
+Membership in **Administrators**, or equivalent, is the minimum required to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](https://go.microsoft.com/fwlink/?LinkId=83477).   
   
 #### To add a host \(A\) resource record to perimeter DNS for a federation server proxy  
   

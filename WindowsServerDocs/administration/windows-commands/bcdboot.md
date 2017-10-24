@@ -21,7 +21,7 @@ ms.date: 10/16/2017
 
 Enables you to quickly set up a system partition, or to repair the boot environment located on the system partition. The system partition is set up by copying a simple set of Boot Configuration Data (BCD) files to an existing empty partition.
 
-For more information about BCDboot, including information on where to find BCDboot and examples of how to use this command, see the [BCDboot Command-Line Options](http://technet.microsoft.com/library/hh824874.aspx) topic.
+For more information about BCDboot, including information on where to find BCDboot and examples of how to use this command, see the [BCDboot Command-Line Options](https://technet.microsoft.com/library/hh824874.aspx) topic.
 
 ## Syntax
 
@@ -39,7 +39,7 @@ bcdboot <source> [/l] [/s]
 
 ## <a name="BKMK_examples"></a>Examples
 
-For more examples of how to use this command, see the [BCDboot Command-Line Options](http://technet.microsoft.com/library/hh824874.aspx) topic.
+For more examples of how to use this command, see the [BCDboot Command-Line Options](https://technet.microsoft.com/library/hh824874.aspx) topic.
 
 #### Additional references
 
