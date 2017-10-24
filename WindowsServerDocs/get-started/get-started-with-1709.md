@@ -6,7 +6,7 @@ ms.mktglfcycl: manage
 ms.sitesec: library
 author: jaimeo
 ms.localizationpriority: high
-ms.date: 10/17/2017
+ms.date: 10/23/2017
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 9cf87597-b15d-4f43-8aa1-91e60367f011
@@ -40,18 +40,21 @@ To get a comprehensive view of the key facts about Windows Server, version 1709,
 - What hardware is needed to run it? See [System requirements](system-requirements.md)
 - What new features and functionality have been added? See [What's New in Windows Server version 1709](whats-new-in-windows-server-1709.md)
 - What has been removed? See [Features Removed or Planned for Replacement starting with Windows Server (version 1709)](Removed-Features-1709.md)
-- What issues need to be worked around? See [Release notes--Important issues in Windows Server, version 1709](server-1709-relnotes.md)
+- What issues unique to this release need to be worked around? See [Release notes--Important issues in Windows Server, version 1709](server-1709-relnotes.md)
 
 
 ## Where to obtain Windows Server, version 1709
 
 This release should be installed as a clean installation.
 
-- VLSC: Volume-licensed customers with [Software Assurance](https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-default.aspx) can obtain this release by going to the [Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx) and clicking **Sign In**. Then click **Downloads and Keys** and search for this release.  **This is the only option that allows you to run Windows Server, version 1709 in production.**
+- VLSC: Volume-licensed customers with [Software Assurance](https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-default.aspx) can obtain this release by going to the [Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx) and clicking **Sign In**. Then click **Downloads and Keys** and search for this release. 
 
-- If you use a hosting provider such as [Microsoft Azure](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/Microsoft.WindowsServer?tab=Overview) or Amazon Web Services, Windows Server, version 1709 is available through those services. **You can use Windows Server, version 1709 in those services for testing and development.**
+- If you use a hosting provider such as [Microsoft Azure](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/Microsoft.WindowsServer?tab=Overview) or Amazon Web Services, Windows Server, version 1709 is available through those services. Software Assuranc eis not required.
 
 - Participants in **Visual Studio Subscriptions:** If you already participate in Visual Studio Subscriptions, you can obtain Windows Server, version 1709 by going to the [Visual Studio Subscriber download page](https://my.visualstudio.com/downloads?pid=2347) and completing the download available there. If you are not already a subscriber, go to [Visual Studio Subscriptions](https://www.visualstudio.com/subscriptions/) to sign up, and then visit the [Visual Studio Subscriber download page](https://my.visualstudio.com/downloads?pid=2347) as above.
+
+> [!Note]  
+> If you want to run Windows Server, version 1709 **in production**, you should either obtain it through the Volume Licensing Servicing Center (Software Assurance is required) or through a hosting provider such as Microsoft Azure (Software Assurance is not required). Otherwise, this release is supported for development and testing only.
 
 
 ## Activating Windows Server, version 1709
