@@ -620,7 +620,7 @@ An administrative forest design should include the following considerations:
 For more information engaging about Microsoft services to design and deploy an ESAE for your environment, see [this page](https://www.microsoft.com/services).
 
 ## <a name="T0E_BM"></a>Tier 0 Equivalency
-Most organizations control membership to powerful Tier 0 Active Directory groups like Administrators, Domain Admins, and Enterprise Admins.  Many organizations overlook the risk of other groups that are effectively equivalent in privilege in a typical active directory environment. These groups are offer a relatively easy escalation path for an attacker to the same explicit Tier 0 privileges using various different attack methods.
+Most organizations control membership to powerful Tier 0 Active Directory groups like Administrators, Domain Admins, and Enterprise Admins.  Many organizations overlook the risk of other groups that are effectively equivalent in privilege in a typical active directory environment. These groups offer a relatively easy escalation path for an attacker to the same explicit Tier 0 privileges using various different attack methods.
 
 As an example, a server operator could gain access to a backup media of a domain controller and extract all the credentials from the files in that media and use them to escalate privileges.
 
