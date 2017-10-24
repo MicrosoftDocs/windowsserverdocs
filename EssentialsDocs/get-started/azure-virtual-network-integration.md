@@ -55,17 +55,17 @@ Once the configuration of the Azure Virtual network is completed, the status wil
 
 In the tasks pane on the right side of the dashboard are the various tasks that the you can take with your Azure Virtual network.
 
--   **Disconnect From Azure VNET** ÉSetting up an Azure Virtual network is free, but there is a charge for the VPN gateway that connects to on-premises and other VNETs in Azure. Disconnecting from the Azure VNET stops all billing.
+-   **Disconnect From Azure VNET** Setting up an Azure Virtual network is free, but there is a charge for the VPN gateway that connects to on-premises and other VNETs in Azure. Disconnecting from the Azure VNET stops all billing.
 
--   **Switch Over VPN Device** ÉIn the event that y0u wants to change from a VPN Server to a VPN Router, this task will enable the you to make the switch and notify the Azure VNET.
+-   **Switch Over VPN Device** In the event that you want to change from a VPN Server to a VPN Router, this task will enable you to make the switch and notify the Azure VNET.
 
--   **Configure Azure VNET** ÉThis task allows you to change advanced configuration options of the Azure VNET by redirecting them to the Azure portal configuration page for Azure VNET.
+-   **Configure Azure VNET** This task allows you to change advanced configuration options of the Azure VNET by redirecting them to the Azure portal configuration page for Azure VNET.
 
--   **Refresh Status** ÉRefreshes the status page, updating the connection status of the Azure VNET including data in/out.
+-   **Refresh Status** Refreshes the status page, updating the connection status of the Azure VNET including data in/out.
 
--   **Disable Azure VNET Integration** ÉDisconnects the Azure VNET and removes integration from the Windows Server Essentials dashboard. Note this does not delete the Azure VNET, settings are still preserved in Azure if you want to later re-integrate Azure VNET with the dashboard.
+-   **Disable Azure VNET Integration** Disconnects the Azure VNET and removes integration from the Windows Server Essentials dashboard. Note this does not delete the Azure VNET, settings are still preserved in Azure if you want to later re-integrate Azure VNET with the dashboard.
 
--   **Learn More About Azure VNET** É<http://azure.microsoft.com/en-us/services/virtual-network/>.
+-   **Learn More About Azure VNET** [http://azure.microsoft.com/en-us/services/virtual-network/](http://azure.microsoft.com/en-us/services/virtual-network/).
 
 See also
 --------
