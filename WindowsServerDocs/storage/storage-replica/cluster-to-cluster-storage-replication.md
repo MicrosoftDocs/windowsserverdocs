@@ -7,7 +7,7 @@ ms.technology: storage-replica
 ms.topic: get-started-article
 ms.assetid: 834e8542-a67a-4ba0-9841-8a57727ef876
 author: nedpyle
-ms.date: 10/11/2016
+ms.date: 10/11/2017
 description: How to use Storage Replica to replicate volumes in one cluster to another cluster running Windows Server 2016 Datacenter Edition.
 ---
 # Cluster to cluster Storage Replication
