@@ -14,8 +14,7 @@ description: Resources to help you manage a Storage Spaces Direct deployment con
 
 >Applies To: Windows Server 2016
 
-<img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/manage.png" style='float:left; padding:.3em;' width="75"; alt="Managing Storage Spaces Direct">
-
+<img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/manage.png" style='float:left; padding:.3em;width:75px'>
 This topic provides resources that help you manage a [Storage Spaces Direct](storage-spaces-direct-overview.md) cluster. Storage Spaces Direct is a Windows Server-based storage solution that uses industry-standard servers with local-attached drives to create highly available, highly scalable software-defined storage.
 
 When managing Storage Spaces Direct, you can use Windows PowerShell, System Center Virtual Machine Manager (VMM) and Operations Manager, and/or Failover Cluster Manager.
