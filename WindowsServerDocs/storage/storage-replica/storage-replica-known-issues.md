@@ -6,14 +6,14 @@ ms.author: nedpyle
 ms.technology: storage-replica
 ms.topic: get-started-article
 author: nedpyle
-ms.date: 10/13/2016
+ms.date: 10/25/2017
 ms.assetid: ceddb0fa-e800-42b6-b4c6-c06eb1d4bc55
 ---
 # Known issues with Storage Replica
 
 >Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
-This section discusses known issues with Storage Replica in Windows Server 2016.  
+This section discusses known issues with Storage Replica in Windows Server 2016 and Windows Server, version 1709.  
 
 ## After removing replication, disks are offline and you cannot configure replication again  
 In Windows Server 2016, you may be unable to provision replication on a volume that was previously replicated or may find un-mountable volumes. This may occur when some error condition prevents removal of replication or when you reinstall the operating system on a computer that was previously replicating data.  
