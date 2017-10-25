@@ -29,9 +29,10 @@ This topic lists new and updated topics in the [Storage](storage.md) documentati
 |[Cluster to cluster storage replication](storage-replica/cluster-to-cluster-storage-replication.md)|Revised the number of supported cluster nodes for Storage Spaces Direct.|
 
 ## July 2017
+
 |New or changed topic|Description|
 |---|---|
-|[DFS Namespaces](dfs-namespaces/dfs-overview.md)|New topic for Windows Server 2016.|
+|[DFS Namespaces](dfs-namespaces/dfs-overview.md)|Published 20 new topics for Windows Server 2016.|
 |[File Server Resource Manager](fsrm/fsrm-overview.md)|Published 33 new topics for Windows Server 2016.|
 |[Understanding the cache in Storage Spaces Direct](storage-spaces/understand-the-cache.md)|Added a Storage Spaces Direct design considerations video.|
 |[Storage Replica frequently asked questions](storage-replica/storage-replica-frequently-asked-questions.md)|Added more best practices around log volumes.|
