@@ -25,9 +25,9 @@ You can also connect to virtual networks on the server that is running Hyper\-V 
 > - [Network Switch Team Cmdlets in Windows PowerShell](https://technet.microsoft.com/library/jj553812.aspx)
 > - [What's New in VMM 2016](https://docs.microsoft.com/system-center/vmm/whats-new#networking)
 > - [Set up the VMM networking fabric](https://docs.microsoft.com/system-center/vmm/manage-networks)
-> - [Create networks with VMM 2012](http://social.technet.microsoft.com/wiki/contents/articles/3140.create-networks-with-vmm-2012.aspx)  
-> - [Hyper-V: Configure VLANs and VLAN Tagging](http://social.technet.microsoft.com/wiki/contents/articles/1306.hyper-v-configure-vlans-and-vlan-tagging.aspx)  
-> - [Hyper-V: The WFP virtual switch extension should be enabled if it is required by third party extensions](http://social.technet.microsoft.com/wiki/contents/articles/13071.hyper-v-the-wfp-virtual-switch-extension-should-be-enabled-if-it-is-required-by-third-party-extensions.aspx)
+> - [Create networks with VMM 2012](https://social.technet.microsoft.com/wiki/contents/articles/3140.create-networks-with-vmm-2012.aspx)  
+> - [Hyper-V: Configure VLANs and VLAN Tagging](https://social.technet.microsoft.com/wiki/contents/articles/1306.hyper-v-configure-vlans-and-vlan-tagging.aspx)  
+> - [Hyper-V: The WFP virtual switch extension should be enabled if it is required by third party extensions](https://social.technet.microsoft.com/wiki/contents/articles/13071.hyper-v-the-wfp-virtual-switch-extension-should-be-enabled-if-it-is-required-by-third-party-extensions.aspx)
 >
 > For more information about other networking technologies, see [Networking in Windows Server 2016](https://docs.microsoft.com/windows-server/networking/networking).
   

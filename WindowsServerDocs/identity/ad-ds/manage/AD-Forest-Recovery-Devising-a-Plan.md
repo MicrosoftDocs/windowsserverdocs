@@ -19,7 +19,7 @@ ms.technology: identity-adfs
 
 Depending on your environment and business requirements, you might or might not need to perform all the steps described in this guide to perform a successful forest recovery. Given that this guide serves only as a template for forest recovery, it is vital that you devise a custom forest recovery plan that suits your environment and meets your business needs.  
   
- For example, in your forest recovery plan, you should have a detailed topology map of your forests. The map should list all the information about the DCs, such as their names, their roles and backup status, and the trust relationships between them. For a tool that you can use to create a topology map, see [Microsoft Active Directory Topology Diagrammer](http://www.microsoft.com/download/details.aspx?id=13380).  
+ For example, in your forest recovery plan, you should have a detailed topology map of your forests. The map should list all the information about the DCs, such as their names, their roles and backup status, and the trust relationships between them. For a tool that you can use to create a topology map, see [Microsoft Active Directory Topology Diagrammer](https://www.microsoft.com/download/details.aspx?id=13380).  
   
  You should practice your forest recovery plan at least once a year. Also, it is a good idea to perform a forest recovery drill when there are membership changes to the Enterprise Admins or Domain Admins group. This helps ensure that your information technology (IT) staff fully understands the forest recovery plan.
 

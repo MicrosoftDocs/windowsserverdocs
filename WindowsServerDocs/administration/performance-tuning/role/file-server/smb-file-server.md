@@ -48,7 +48,7 @@ For more info about SMB Multichannel, see [Deploy SMB Multichannel](https://aka.
 
 SMB Scale-out allows SMB 3.0 in a cluster configuration to show a share in all nodes of a cluster. This active/active configuration makes it possible to scale file server clusters further, without a complex configuration with multiple volumes, shares and cluster resources. The maximum share bandwidth is the total bandwidth of all file server cluster nodes. The total bandwidth is no longer limited by the bandwidth of a single cluster node, but rather depends on the capability of the backing storage system. You can increase the total bandwidth by adding nodes.
 
-For more info about SMB Scale-Out, see [Scale-Out File Server for Application Data Overview](http://technet.microsoft.com/library/hh831349.aspx) and the blog post [To scale out or not to scale out, that is the question](http://blogs.technet.com/b/filecab/archive/2013/12/05/to-scale-out-or-not-to-scale-out-that-is-the-question.aspx).
+For more info about SMB Scale-Out, see [Scale-Out File Server for Application Data Overview](https://technet.microsoft.com/library/hh831349.aspx) and the blog post [To scale out or not to scale out, that is the question](http://blogs.technet.com/b/filecab/archive/2013/12/05/to-scale-out-or-not-to-scale-out-that-is-the-question.aspx).
 
 ### Performance counters for SMB 3.0
 

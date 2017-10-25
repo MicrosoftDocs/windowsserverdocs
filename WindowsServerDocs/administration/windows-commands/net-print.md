@@ -21,7 +21,7 @@ ms.date: 10/16/2017
 Displays information about a specified printer queue or a specified print job, or controls a specified print job.
 for examples of how to use this command, see the [Examples](#BKMK_examples) section of this document.
 > [!NOTE]
-> This command has been deprecated in  Windows 7  and  Windows Server 2008 R2 . However, you can perform many of the same tasks using prnjobs, Windows Management Instrumentation (WMI), or Windows PowerShell cmdlets. For more information, see [prnjobs](prnjobs.md), [Windows Management Instrumentation](http://go.microsoft.com/fwlink/?LinkID=29991) (http://go.microsoft.com/fwlink/?LinkID=29991), [Windows PowerShell](http://go.microsoft.com/fwlink/?LinkID=128426) (http://go.microsoft.com/fwlink/?LinkID=128426), and the [TechNet Script Center Gallery](http://go.microsoft.com/fwlink/?LinkId=164635) (http://go.microsoft.com/fwlink/?LinkId=164635).
+> This command has been deprecated in  Windows 7  and  Windows Server 2008 R2 . However, you can perform many of the same tasks using prnjobs, Windows Management Instrumentation (WMI), or Windows PowerShell cmdlets. For more information, see [prnjobs](prnjobs.md), [Windows Management Instrumentation](https://go.microsoft.com/fwlink/?LinkID=29991) (https://go.microsoft.com/fwlink/?LinkID=29991), [Windows PowerShell](https://go.microsoft.com/fwlink/?LinkID=128426) (https://go.microsoft.com/fwlink/?LinkID=128426), and the [TechNet Script Center Gallery](https://go.microsoft.com/fwlink/?LinkId=164635) (https://go.microsoft.com/fwlink/?LinkId=164635).
 ## Syntax
 ```
 Net print {\\<computerName>\<Sharename> | 

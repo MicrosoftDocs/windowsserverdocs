@@ -50,4 +50,4 @@ WDSUTIL /Add-AllDriverPackages /FolderPath:"C:\Temp\Drivers\Printers" /DriverGro
 
 [Command-Line Syntax Key](command-line-syntax-key.md)
 
-[Add-WdsDriverPackage](http://technet.microsoft.com/library/dn283440.aspx)
+[Add-WdsDriverPackage](https://technet.microsoft.com/library/dn283440.aspx)

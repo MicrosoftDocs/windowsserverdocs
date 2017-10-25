@@ -24,7 +24,7 @@ User Access Logging (UAL) is feature in Windows Server that aggregates client us
 UAL is installed and enabled by default, and collects data in nearly real-time. No administrator configuration is required, although UAL can be disabled or enabled. For more information, see [Manage User Access Logging](Manage-User-Access-Logging.md). The User Access Logging service aggregates client usage data by roles and products into local database files.  IT administrators can later use Windows Management Instrumentation (WMI) or Windows PowerShell cmdlets to retrieve quantities and instances by server role (or software product), by user, by device, by the local server, and by date.  
   
 > [!NOTE]  
-> UAL supports the [Microsoft Assessment and Planning Toolkit](http://go.microsoft.com/fwlink/?LinkID=111000).  
+> UAL supports the [Microsoft Assessment and Planning Toolkit](https://go.microsoft.com/fwlink/?LinkID=111000).  
   
 ## <a name="BKMK_APP"></a>Practical applications  
 UAL aggregates unique client device and user request events that are logged into a local database. These records are then made available (through a query by a server administrator) to retrieve quantities and instances by server role, by user, by device, by the local server, and by date.  In addition, UAL has been extended to enable non-Microsoft software developers to instrument their UAL events to be aggregated by Windows Server.  
@@ -127,7 +127,7 @@ The following device-related data is logged with UAL.
 UAL can be used on any computer running versions of Windows Server after Windows Server 2012.  
   
 ## See also  
-[User Access Logging](http://msdn.microsoft.com/library/windows/desktop/hh437528(v=vs.85).aspx) on MSDN.  
+[User Access Logging](https://msdn.microsoft.com/library/windows/desktop/hh437528(v=vs.85).aspx) on MSDN.  
 [Manage User Access Logging](Manage-User-Access-Logging.md)  
   
 

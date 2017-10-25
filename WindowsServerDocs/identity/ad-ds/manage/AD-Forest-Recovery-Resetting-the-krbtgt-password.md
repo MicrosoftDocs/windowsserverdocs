@@ -22,7 +22,7 @@ ms.technology: identity-adfs
 > [!IMPORTANT]
 >  If you plan to recover RODCs online during the forest recovery, do not delete the krbtgt accounts for the RODCs. The krbtgt account for an RODC is listed in the format krbtgt_*number*.  
 >   
->  If you use a customized password filter (such as passfilt.dll) on a DC, then you might receive an error when you try to reset the krbtgt password. For more information, including a workaround, see Microsoft Knowledge Base [article 2549833](http://support.microsoft.com/kb/2549833) (http://support.microsoft.com/kb/2549833).  
+>  If you use a customized password filter (such as passfilt.dll) on a DC, then you might receive an error when you try to reset the krbtgt password. For more information, including a workaround, see Microsoft Knowledge Base [article 2549833](https://support.microsoft.com/kb/2549833) (https://support.microsoft.com/kb/2549833).  
   
 ## To reset the krbtgt password  
   

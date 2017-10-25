@@ -57,7 +57,7 @@ ms.technology: identity-adfs
   
      **HKLM\System\CurrentControlSet\Services\NTDS\Parameters\Repl Perform Initial Synchronizations**  
   
-     Create the entry with the data type **REG_DWORD** and a value of **0**. After the forest is recovered completely, you can reset the value of this entry to **1**, which requires a domain controller that restarts and holds operations master roles to have successful AD DS inbound and outbound replication with its known replica partners before it advertises itself as domain controller and starts providing services to clients. For more information about initial synchronization requirements, see KB article [305476](http://support.microsoft.com/kb/305476).  
+     Create the entry with the data type **REG_DWORD** and a value of **0**. After the forest is recovered completely, you can reset the value of this entry to **1**, which requires a domain controller that restarts and holds operations master roles to have successful AD DS inbound and outbound replication with its known replica partners before it advertises itself as domain controller and starts providing services to clients. For more information about initial synchronization requirements, see KB article [305476](https://support.microsoft.com/kb/305476).  
   
      Continue to the next steps only after you restore and verify the data and before you join this computer to the production network.  
   
@@ -76,11 +76,11 @@ ms.technology: identity-adfs
 7.  If you have DNS zones that are stored in AD DS, ensure that the local DNS Server service is installed and running on the DC that you have restored. If this DC was not a DNS server before the forest failure, you must install and configure the DNS server.  
   
     > [!NOTE]
-    >  If the restored DC runs Windows Server 2008, you need to install the hotfix in KB article [975654](http://support.microsoft.com/kb/975654) or connect the server to an isolated network temporarily in order to install DNS server. The hotfix is not required for any other versions of Windows Server.  
+    >  If the restored DC runs Windows Server 2008, you need to install the hotfix in KB article [975654](https://support.microsoft.com/kb/975654) or connect the server to an isolated network temporarily in order to install DNS server. The hotfix is not required for any other versions of Windows Server.  
   
-     In the forest root domain, configure the restored DC with its own IP address (or a loopback address, such as 127.0.0.1) as its preferred DNS server. You can configure this setting in the TCP/IP properties of the local area network (LAN) adapter. This is the first DNS server in the forest. For more information, see [Configure TCP/IP to use DNS](http://technet.microsoft.com/library/cc779282\(WS.10\).aspx).  
+     In the forest root domain, configure the restored DC with its own IP address (or a loopback address, such as 127.0.0.1) as its preferred DNS server. You can configure this setting in the TCP/IP properties of the local area network (LAN) adapter. This is the first DNS server in the forest. For more information, see [Configure TCP/IP to use DNS](https://technet.microsoft.com/library/cc779282\(WS.10\).aspx).  
   
-     In each child domain, configure the restored DC with the IP address of the first DNS server in the forest root domain as its preferred DNS server. You can configure this setting in the TCP/IP properties of the LAN adapter. For more information, see [Configure TCP/IP to use DNS](http://technet.microsoft.com/library/cc779282\(WS.10\).aspx).  
+     In each child domain, configure the restored DC with the IP address of the first DNS server in the forest root domain as its preferred DNS server. You can configure this setting in the TCP/IP properties of the LAN adapter. For more information, see [Configure TCP/IP to use DNS](https://technet.microsoft.com/library/cc779282\(WS.10\).aspx).  
   
      In the _msdcs and domain DNS zones, delete NS records of DCs that no longer exist after metadata cleanup. Check if the SRV records of the cleaned up DCs have been removed. To help speed up DNS SRV record removal, run:  
   
@@ -118,7 +118,7 @@ ms.technology: identity-adfs
   
      If you did restore a DC that was a global catalog—either inadvertently or because that was the solitary backup that you trusted—we recommend that you prevent the occurrence of lingering objects by disabling the global catalog soon after the restore operation is complete. Disabling the global catalog flag will result in the computer losing all its partial replicas (partitions) and relegating itself to regular DC status.  
   
-13. Configure Windows Time Service. In the forest root domain, configure the PDC emulator to synchronize time from an external time source. For more information, see [Configure the Windows Time service on the PDC emulator in the Forest Root Domain](http://technet.microsoft.com/library/cc786897.aspx).  
+13. Configure Windows Time Service. In the forest root domain, configure the PDC emulator to synchronize time from an external time source. For more information, see [Configure the Windows Time service on the PDC emulator in the Forest Root Domain](https://technet.microsoft.com/library/cc786897.aspx).  
   
  
 

@@ -64,11 +64,11 @@ There are two server farm options that you can consider when you obtain token\-s
   
 ![token signing](media/adfs2_fedserver_certstory_4.gif)  
   
-For information about installing a certificate when you use Microsoft Certificate Services as your enterprise CA, see [IIS 7.0: Create a Domain Server Certificate in IIS 7.0](http://go.microsoft.com/fwlink/?LinkId=108548).  
+For information about installing a certificate when you use Microsoft Certificate Services as your enterprise CA, see [IIS 7.0: Create a Domain Server Certificate in IIS 7.0](https://go.microsoft.com/fwlink/?LinkId=108548).  
   
-For information about installing a certificate from a public CA, see [IIS 7.0: Request an Internet Server Certificate](http://go.microsoft.com/fwlink/?LinkId=108549).  
+For information about installing a certificate from a public CA, see [IIS 7.0: Request an Internet Server Certificate](https://go.microsoft.com/fwlink/?LinkId=108549).  
   
-For information about installing a self\-signed certificate, see [IIS 7.0: Create a Self\-Signed Server Certificate in IIS 7.0](http://go.microsoft.com/fwlink/?LinkID=108271).  
+For information about installing a self\-signed certificate, see [IIS 7.0: Create a Self\-Signed Server Certificate in IIS 7.0](https://go.microsoft.com/fwlink/?LinkID=108271).  
   
 ## See Also
 [AD FS Design Guide in Windows Server 2012](AD-FS-Design-Guide-in-Windows-Server-2012.md)

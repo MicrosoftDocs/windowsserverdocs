@@ -32,7 +32,7 @@ Rights and privileges are effectively the same system-wide capabilities that are
 
 In interfaces such as the Group Policy Object Editor, all of these assignable capabilities are referred to broadly as user rights. In reality however, some user rights are programmatically referred to as rights, while others are programmatically referred to as privileges. Table B-1: User Rights and Privileges provides some of the most common assignable user rights and their programmatic constants. Although Group Policy and other interfaces refer to all of these as user rights, some are programmatically identified as rights, while others are defined as privileges.  
 
-For more information about each of the user rights listed in the following table, use the links in the table or see [Threats and Countermeasures Guide: User Rights](http://technet.microsoft.com/library/hh125917(v=ws.10).aspx) in the [Threats and Vulnerabilities Mitigation](http://technet.microsoft.com/library/cc755181(v=ws.10).aspx) guide for Windows Server 2008 R2 on the Microsoft TechNet site. For information applicable to Windows Server 2008, please see [User Rights](http://technet.microsoft.com/library/dd349804(v=WS.10).aspx) in the [Threats and Vulnerabilities Mitigation](http://technet.microsoft.com/library/cc755181(v=ws.10).aspx) documentation on the Microsoft TechNet site. As of the writing of this document, corresponding documentation for Windows Server 2012 is not yet published.  
+For more information about each of the user rights listed in the following table, use the links in the table or see [Threats and Countermeasures Guide: User Rights](https://technet.microsoft.com/library/hh125917(v=ws.10).aspx) in the [Threats and Vulnerabilities Mitigation](https://technet.microsoft.com/library/cc755181(v=ws.10).aspx) guide for Windows Server 2008 R2 on the Microsoft TechNet site. For information applicable to Windows Server 2008, please see [User Rights](https://technet.microsoft.com/library/dd349804(v=WS.10).aspx) in the [Threats and Vulnerabilities Mitigation](https://technet.microsoft.com/library/cc755181(v=ws.10).aspx) documentation on the Microsoft TechNet site. As of the writing of this document, corresponding documentation for Windows Server 2012 is not yet published.  
 
 > [!NOTE]  
 > For the purposes of this document, the terms "rights" and "user rights" are used to identify rights and privileges unless otherwise specified.  
@@ -42,56 +42,56 @@ For more information about each of the user rights listed in the following table
 |||  
 |-|-|  
 |**User Right in Group Policy**|**Name of Constant**|  
-|[Access Credential Manager as a trusted caller](http://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_2)|SeTrustedCredManAccessPrivilege|  
-|[Access this computer from the network](http://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_1)|SeNetworkLogonRight|  
-|[Act as part of the operating system](http://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_3)|SeTcbPrivilege|  
-|[Add workstations to domain](http://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_4)|SeMachineAccountPrivilege|  
-|[Adjust memory quotas for a process](http://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_5)|SeIncreaseQuotaPrivilege|  
-|[Allow log on locally](http://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_6)|SeInteractiveLogonRight|  
-|[Allow log on through Terminal Services](http://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_7)|SeRemoteInteractiveLogonRight|  
-|[Back up files and directories](http://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_8)|SeBackupPrivilege|  
-|[Bypass traverse checking](http://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_9)|SeChangeNotifyPrivilege|  
-|[Change the system time](http://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_10)|SeSystemtimePrivilege|  
-|[Change the time zone](http://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_11)|SeTimeZonePrivilege|  
-|[Create a pagefile](http://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_12)|SeCreatePagefilePrivilege|  
-|[Create a token object](http://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_13)|SeCreateTokenPrivilege|  
-|[Create global objects](http://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_14)|SeCreateGlobalPrivilege|  
-|[Create permanent shared objects](http://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_15)|SeCreatePermanentPrivilege|  
-|[Create symbolic links](http://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_16)|SeCreateSymbolicLinkPrivilege|  
-|[Debug programs](http://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_17)|SeDebugPrivilege|  
-|[Deny access to this computer from the network](http://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_18)|SeDenyNetworkLogonRight|  
-|[Deny log on as a batch job](http://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_18a)|SeDenyBatchLogonRight|  
-|[Deny log on as a service](http://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_19)|SeDenyServiceLogonRight|  
-|[Deny log on locally](http://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_20)|SeDenyInteractiveLogonRight|  
-|[Deny log on through Terminal Services](http://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_21)|SeDenyRemoteInteractiveLogonRight|  
-|[Enable computer and user accounts to be trusted for delegation](http://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_22)|SeEnableDelegationPrivilege|  
-|[Force shutdown from a remote system](http://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_23)|SeRemoteShutdownPrivilege|  
-|[Generate security audits](http://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_24)|SeAuditPrivilege|  
-|[Impersonate a client after authentication](http://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_25)|SeImpersonatePrivilege|  
-|[Increase a process working set](http://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_26)|SeIncreaseWorkingSetPrivilege|  
-|[Increase scheduling priority](http://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_27)|SeIncreaseBasePriorityPrivilege|  
-|[Load and unload device drivers](http://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_28)|SeLoadDriverPrivilege|  
-|[Lock pages in memory](http://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_29)|SeLockMemoryPrivilege|  
-|[Log on as a batch job](http://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_30)|SeBatchLogonRight|  
-|[Log on as a service](http://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_31)|SeServiceLogonRight|  
-|[Manage auditing and security log](http://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_32)|SeSecurityPrivilege|  
-|[Modify an object label](http://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_33)|SeRelabelPrivilege|  
-|[Modify firmware environment values](http://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_34)|SeSystemEnvironmentPrivilege|  
-|[Perform volume maintenance tasks](http://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_35)|SeManageVolumePrivilege|  
-|[Profile single process](http://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_36)|SeProfileSingleProcessPrivilege|  
-|[Profile system performance](http://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_37)|SeSystemProfilePrivilege|  
-|[Remove computer from docking station](http://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_38)|SeUndockPrivilege|  
-|[Replace a process level token](http://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_39)|SeAssignPrimaryTokenPrivilege|  
-|[Restore files and directories](http://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_40)|SeRestorePrivilege|  
-|[Shut down the system](http://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_41)|SeShutdownPrivilege|  
-|[Synchronize directory service data](http://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_42)|SeSyncAgentPrivilege|  
-|[Take ownership of files or other objects](http://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_43)|SeTakeOwnershipPrivilege|  
+|[Access Credential Manager as a trusted caller](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_2)|SeTrustedCredManAccessPrivilege|  
+|[Access this computer from the network](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_1)|SeNetworkLogonRight|  
+|[Act as part of the operating system](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_3)|SeTcbPrivilege|  
+|[Add workstations to domain](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_4)|SeMachineAccountPrivilege|  
+|[Adjust memory quotas for a process](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_5)|SeIncreaseQuotaPrivilege|  
+|[Allow log on locally](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_6)|SeInteractiveLogonRight|  
+|[Allow log on through Terminal Services](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_7)|SeRemoteInteractiveLogonRight|  
+|[Back up files and directories](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_8)|SeBackupPrivilege|  
+|[Bypass traverse checking](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_9)|SeChangeNotifyPrivilege|  
+|[Change the system time](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_10)|SeSystemtimePrivilege|  
+|[Change the time zone](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_11)|SeTimeZonePrivilege|  
+|[Create a pagefile](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_12)|SeCreatePagefilePrivilege|  
+|[Create a token object](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_13)|SeCreateTokenPrivilege|  
+|[Create global objects](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_14)|SeCreateGlobalPrivilege|  
+|[Create permanent shared objects](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_15)|SeCreatePermanentPrivilege|  
+|[Create symbolic links](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_16)|SeCreateSymbolicLinkPrivilege|  
+|[Debug programs](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_17)|SeDebugPrivilege|  
+|[Deny access to this computer from the network](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_18)|SeDenyNetworkLogonRight|  
+|[Deny log on as a batch job](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_18a)|SeDenyBatchLogonRight|  
+|[Deny log on as a service](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_19)|SeDenyServiceLogonRight|  
+|[Deny log on locally](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_20)|SeDenyInteractiveLogonRight|  
+|[Deny log on through Terminal Services](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_21)|SeDenyRemoteInteractiveLogonRight|  
+|[Enable computer and user accounts to be trusted for delegation](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_22)|SeEnableDelegationPrivilege|  
+|[Force shutdown from a remote system](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_23)|SeRemoteShutdownPrivilege|  
+|[Generate security audits](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_24)|SeAuditPrivilege|  
+|[Impersonate a client after authentication](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_25)|SeImpersonatePrivilege|  
+|[Increase a process working set](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_26)|SeIncreaseWorkingSetPrivilege|  
+|[Increase scheduling priority](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_27)|SeIncreaseBasePriorityPrivilege|  
+|[Load and unload device drivers](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_28)|SeLoadDriverPrivilege|  
+|[Lock pages in memory](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_29)|SeLockMemoryPrivilege|  
+|[Log on as a batch job](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_30)|SeBatchLogonRight|  
+|[Log on as a service](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_31)|SeServiceLogonRight|  
+|[Manage auditing and security log](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_32)|SeSecurityPrivilege|  
+|[Modify an object label](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_33)|SeRelabelPrivilege|  
+|[Modify firmware environment values](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_34)|SeSystemEnvironmentPrivilege|  
+|[Perform volume maintenance tasks](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_35)|SeManageVolumePrivilege|  
+|[Profile single process](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_36)|SeProfileSingleProcessPrivilege|  
+|[Profile system performance](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_37)|SeSystemProfilePrivilege|  
+|[Remove computer from docking station](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_38)|SeUndockPrivilege|  
+|[Replace a process level token](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_39)|SeAssignPrimaryTokenPrivilege|  
+|[Restore files and directories](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_40)|SeRestorePrivilege|  
+|[Shut down the system](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_41)|SeShutdownPrivilege|  
+|[Synchronize directory service data](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_42)|SeSyncAgentPrivilege|  
+|[Take ownership of files or other objects](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_43)|SeTakeOwnershipPrivilege|  
 
 #### Permissions  
 Permissions are access controls that are applied to securable objects such as the file system, registry, service, and Active Directory objects. Each securable object has an associated access control list (ACL), which contains access control entries (ACEs) that grant or deny security principals (users, services, computers, or groups) the ability to perform various operations on the object. For example, the ACLs for many objects in Active Directory contain ACEs that allow Authenticated Users to read general information about the objects, but do not grant them the ability to read sensitive information or to change the objects.
 With the exception of each domain's built-in Guest account, every security principal that logs on and is authenticated by a domain controller in an Active Directory forest or a trusted forest has the Authenticated Users Security Identifier (SID) added to its access token by default. Therefore, whether a user, service, or computer account attempts to read general properties on user objects in a domain, the read operation is successful.  
 
-If a security principal attempts to access an object for which no ACEs are defined and that contain a SID that is present in the principal's access token, the principal cannot access the object. Moreover, if an ACE in an object's ACL contains a deny entry for a SID that matches the user's access token, the "deny" ACE will generally override a conflicting "allow" ACE. For more information about access control in Windows, see [Access Control](http://msdn.microsoft.com/library/aa374860(v=VS.85).aspx) on the MSDN website.  
+If a security principal attempts to access an object for which no ACEs are defined and that contain a SID that is present in the principal's access token, the principal cannot access the object. Moreover, if an ACE in an object's ACL contains a deny entry for a SID that matches the user's access token, the "deny" ACE will generally override a conflicting "allow" ACE. For more information about access control in Windows, see [Access Control](https://msdn.microsoft.com/library/aa374860(v=VS.85).aspx) on the MSDN website.  
 
 Within this document, permissions refers to capabilities that are granted or denied to security principals on securable objects. Whenever there is a conflict between a user right and a permission, the user right generally takes precedence. For example, if an object in Active Directory has been configured with an ACL that denies Administrators all read and write access to an object, a user who is a member of the domain's Administrators group will be unable to view much information about the object. However, because the Administrators group is granted the user right "Take ownership of files or other objects," the user can simply take ownership of the object in question, then rewrite the object's ACL to grant Administrators full control of the object.  
 

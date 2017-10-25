@@ -56,19 +56,19 @@ You can view or change the following settings in the **Properties** tile on the 
 |------|--------|
 |computer name|Displays the computer friendly name, and opens the **System Properties** dialog box, which lets you change the server's name, domain membership, and other system settings such as user profiles.|
 |Domain (or Workgroup, if the server is not joined to a domain)|Displays the domain or workgroup of which the server is a member. Opens the **System Properties** dialog box, which lets you change the server's name, domain membership, and other system settings such as user profiles.|
-|Windows Firewall|Displays Windows Firewall status for the local server. Opens **Control Panel\System and Security\Windows Firewall**. For more information about configuring Windows Firewall, see [Windows Firewall with Advanced Security and IPsec](http://go.microsoft.com/fwlink/?LinkId=253465).|
+|Windows Firewall|Displays Windows Firewall status for the local server. Opens **Control Panel\System and Security\Windows Firewall**. For more information about configuring Windows Firewall, see [Windows Firewall with Advanced Security and IPsec](https://go.microsoft.com/fwlink/?LinkId=253465).|
 |remote management|Displays Server Manager and Windows PowerShell remote management status. Opens the **Configure remote Management** dialog box. For more information about remote management, see [Configure remote Management in Server Manager](configure-remote-management-in-server-manager.md).|
 |remote Desktop|Shows whether users can connect to the server remotely by using remote Desktop sessions. Opens the **remote** tab of the **System Properties** dialog box.|
-|NIC Teaming|Shows whether the local server is participating in NIC teaming. Opens the **NIC Teaming** dialog box, and lets you join the local server to a NIC team if desired. For more information about NIC Teaming, see the [NIC Teaming white paper](http://go.microsoft.com/fwlink/?LinkID=253449).|
+|NIC Teaming|Shows whether the local server is participating in NIC teaming. Opens the **NIC Teaming** dialog box, and lets you join the local server to a NIC team if desired. For more information about NIC Teaming, see the [NIC Teaming white paper](https://go.microsoft.com/fwlink/?LinkID=253449).|
 |Ethernet|Displays the networking status of the server. Opens **Control Panel\Network and Internet\Network Connections**.|
 |Operating system version|This read-only field displays the version number of the Windows operating system that the local server is running.|
 |Hardware information|This read-only field displays the manufacturer and model name and number of the server hardware.|
 |Last installed updates|Displays the day and time that Windows updates were last installed. Opens **Control Panel\System and Security\Windows Update**.|
 |Windows Update|Displays Windows Update settings for the local server. Opens **Control Panel\System and Security\Windows Update**.|
 |Last checked for updates|Displays the day and time that the server last checked for available Windows updates. Opens **Control Panel\System and Security\Windows Update**.|
-|Windows Error Reporting|Displays Windows Error Reporting opt-in status. Opens the **Windows Error Reporting Configuration** dialog box. For more information about Windows Error Reporting, its benefits, privacy statements, and opt-in settings, see [Windows Error Reporting](http://go.microsoft.com/fwlink/?LinkID=245991).|
-|Customer Experience Improvement Program|Displays Windows Customer Experience Improvement Program opt-in status. Opens the **Customer Experience Improvement Program Configuration** dialog box. For more information about Windows Customer Experience Improvement Program, its benefits, and opt-in settings, see [Windows Customer Experience Improvement Program](http://go.microsoft.com/fwlink/?LinkID=245992).|
-|Internet Explorer (IE) Enhanced Security Configuration|Shows whether IE Enhanced Security Configuration (also known as IE hardening or IE ESC) is turned on or off. Opens the **Internet Explorer Enhanced Security Configuration** dialog box. IE Enhanced Security Configuration is a security measure for servers that prevents web pages from opening in Internet Explorer. For more information about IE Enhanced Security Configuration, its benefits, and settings, see [Internet Explorer: Enhanced Security Configuration](http://go.microsoft.com/fwlink/?LinkId=253461).|
+|Windows Error Reporting|Displays Windows Error Reporting opt-in status. Opens the **Windows Error Reporting Configuration** dialog box. For more information about Windows Error Reporting, its benefits, privacy statements, and opt-in settings, see [Windows Error Reporting](https://go.microsoft.com/fwlink/?LinkID=245991).|
+|Customer Experience Improvement Program|Displays Windows Customer Experience Improvement Program opt-in status. Opens the **Customer Experience Improvement Program Configuration** dialog box. For more information about Windows Customer Experience Improvement Program, its benefits, and opt-in settings, see [Windows Customer Experience Improvement Program](https://go.microsoft.com/fwlink/?LinkID=245992).|
+|Internet Explorer (IE) Enhanced Security Configuration|Shows whether IE Enhanced Security Configuration (also known as IE hardening or IE ESC) is turned on or off. Opens the **Internet Explorer Enhanced Security Configuration** dialog box. IE Enhanced Security Configuration is a security measure for servers that prevents web pages from opening in Internet Explorer. For more information about IE Enhanced Security Configuration, its benefits, and settings, see [Internet Explorer: Enhanced Security Configuration](https://go.microsoft.com/fwlink/?LinkId=253461).|
 |time zone|Displays the local server's time zone. Opens the **date and time** dialog box.|
 |Product ID|Displays the Windows activation status and product ID number (if Windows has been activated) of the Windows Server 2016 operating system. This is not the same number as the Windows product key. Opens the **Windows Activation** dialog box.|
 |Processors|This read-only field displays manufacturer, model name, and speed information about the local server's processors.|
@@ -157,9 +157,9 @@ After you add servers to the Server Manager server pool, and Server Manager coll
 
 In Windows Server 2016, the following roles and feature have management tools that are integrated into Server Manager console as pages.
 
--   **File and Storage Services.** File and Storage Services pages include custom tiles and commands for managing volumes, shares, iSCSI virtual disks, and storage pools. When you open the File and Storage Services role home page in Server Manager, a retracting pane opens that displays custom management pages for File and Storage Services. For more information about deploying and managing File and Storage Services, see [File and Storage Services](http://go.microsoft.com/fwlink/p/?LinkId=241530).
+-   **File and Storage Services.** File and Storage Services pages include custom tiles and commands for managing volumes, shares, iSCSI virtual disks, and storage pools. When you open the File and Storage Services role home page in Server Manager, a retracting pane opens that displays custom management pages for File and Storage Services. For more information about deploying and managing File and Storage Services, see [File and Storage Services](https://go.microsoft.com/fwlink/p/?LinkId=241530).
 
--   **remote Desktop Services.** remote Desktop Services pages include custom tiles and commands for managing sessions, licenses, gateways, and virtual desktops. For more information about deploying and managing remote Desktop Services, see [remote Desktop Services (rdS)](http://go.microsoft.com/fwlink/p/?LinkId=241532).
+-   **remote Desktop Services.** remote Desktop Services pages include custom tiles and commands for managing sessions, licenses, gateways, and virtual desktops. For more information about deploying and managing remote Desktop Services, see [remote Desktop Services (rdS)](https://go.microsoft.com/fwlink/p/?LinkId=241532).
 
 -   **IP address Management (IPAM).** The IPAM role page includes a custom **Welcome** tile containing links to common IPAM configuration and management tasks, including a wizard for provisioning an IPAM server. The IPAM home page also includes tiles for viewing the managed network, configuration summary, and scheduled tasks.
 
@@ -167,16 +167,16 @@ In Windows Server 2016, the following roles and feature have management tools th
 
     Dashboard thumbnails also display limited rows for IPAM, compared to thumbnails for other roles and groups. By clicking the IPAM thumbnail rows, you can view events, performance data, and manageability status alerts for servers that are running IPAM. IPAM-related services can be managed from pages for server groups that contain IPAM servers, such as the page for the **All Servers** group.
 
-    for more information about deploying and managing IPAM, see [IP address Management (IPAM)](http://go.microsoft.com/fwlink/p/?LinkId=241533).
+    for more information about deploying and managing IPAM, see [IP address Management (IPAM)](https://go.microsoft.com/fwlink/p/?LinkId=241533).
 
 ## See Also
 [Server Manager](server-manager.md)
 [add Servers to Server Manager](add-servers-to-server-manager.md)
 [create and Manage Server Groups](create-and-manage-server-groups.md)
 [View and Configure Performance, Event, and Service Data](view-and-configure-performance-event-and-service-data.md)
-[File and Storage Services](http://go.microsoft.com/fwlink/p/?LinkId=241530)
-[remote Desktop Services (rdS)](http://go.microsoft.com/fwlink/p/?LinkId=241532)
-[IP address Management (IPAM)](http://go.microsoft.com/fwlink/p/?LinkId=241533)
+[File and Storage Services](https://go.microsoft.com/fwlink/p/?LinkId=241530)
+[remote Desktop Services (rdS)](https://go.microsoft.com/fwlink/p/?LinkId=241532)
+[IP address Management (IPAM)](https://go.microsoft.com/fwlink/p/?LinkId=241533)
 
 
 

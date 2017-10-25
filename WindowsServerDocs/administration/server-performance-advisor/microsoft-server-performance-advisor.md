@@ -61,9 +61,9 @@ SPA cannot understand all hardware and user scenario contexts. You should use th
 
 Use the following links to download Server Performance Advisor for Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, or Windows Server 2008:
 
--   [Microsoft Server Performance Advisor 3.1 (32-bit)](http://go.microsoft.com/fwlink/p/?linkid=327751)
+-   [Microsoft Server Performance Advisor 3.1 (32-bit)](https://go.microsoft.com/fwlink/p/?linkid=327751)
 
--   [Microsoft Server Performance Advisor 3.1 (64-bit)](http://go.microsoft.com/fwlink/p/?linkid=327752)
+-   [Microsoft Server Performance Advisor 3.1 (64-bit)](https://go.microsoft.com/fwlink/p/?linkid=327752)
 
 You can extract the files in the CAB file by using the following commands:
 

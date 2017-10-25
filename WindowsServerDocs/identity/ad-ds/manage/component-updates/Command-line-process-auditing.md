@@ -96,11 +96,11 @@ The following procedure shows how to prevent conflicts by blocking the applicati
 6.  Click Enabled, and then click OK.  
   
 ## Additional Resources  
-[Audit Process Creation](http://technet.microsoft.com/library/dd941613(v=WS.10).aspx)  
+[Audit Process Creation](https://technet.microsoft.com/library/dd941613(v=WS.10).aspx)  
   
-[Advanced Security Audit Policy Step-by-Step Guide](http://technet.microsoft.com/library/dd408940(v=WS.10).aspx)  
+[Advanced Security Audit Policy Step-by-Step Guide](https://technet.microsoft.com/library/dd408940(v=WS.10).aspx)  
   
-[AppLocker: Frequently Asked Questions](http://technet.microsoft.com/library/ee619725(v=ws.10).aspx)  
+[AppLocker: Frequently Asked Questions](https://technet.microsoft.com/library/ee619725(v=ws.10).aspx)  
   
 ## Try This: Explore command line process auditing  
   

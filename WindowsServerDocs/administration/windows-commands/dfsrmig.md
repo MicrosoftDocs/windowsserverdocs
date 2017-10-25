@@ -100,6 +100,6 @@ To delete the global AD DS settings for DFS Replication for all read-only domain
 dfsrmig /deleteRoDfsrMember
 ```
 ## additional references
-[Command-Line Syntax Key](http://go.microsoft.com/fwlink/?LinkId=122056)
+[Command-Line Syntax Key](https://go.microsoft.com/fwlink/?LinkId=122056)
 
-[SYSvol Migration Series: Part 2 dfsrmig.exe: The SYSvol Migration Tool](http://go.microsoft.com/fwlink/?LinkID=121757)
+[SYSvol Migration Series: Part 2 dfsrmig.exe: The SYSvol Migration Tool](https://go.microsoft.com/fwlink/?LinkID=121757)

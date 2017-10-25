@@ -61,7 +61,7 @@ ms.technology: identity-adfs
     |----------|-----------------|-------------|  
     |Domain naming master|Enterprise Admins|**Seize naming master**|  
     |Schema master|Schema Admins|**Seize schema master**|  
-    |Infrastructure master **Note:**  After you seize the infrastructure master role, you may receive an error later if you need to run Adprep /Rodcprep. For more information, see KB article [949257](http://support.microsoft.com/kb/949257).|Domain Admins|**Seize infrastructure master**|  
+    |Infrastructure master **Note:**  After you seize the infrastructure master role, you may receive an error later if you need to run Adprep /Rodcprep. For more information, see KB article [949257](https://support.microsoft.com/kb/949257).|Domain Admins|**Seize infrastructure master**|  
     |PDC emulator master|Domain Admins|**Seize pdc**|  
     |RID master|Domain Admins|**Seize rid master**|  
   

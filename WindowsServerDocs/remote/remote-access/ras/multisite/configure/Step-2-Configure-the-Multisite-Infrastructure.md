@@ -28,14 +28,14 @@ To configure a multisite deployment, there are a number of steps required to mod
 |2.4. Configure GPOs|Configure additional Group Policy Objects as required.|  
   
 > [!NOTE]  
-> This topic includes sample Windows PowerShell cmdlets that you can use to automate some of the procedures described. For more information, see [Using Cmdlets](http://go.microsoft.com/fwlink/p/?linkid=230693).  
+> This topic includes sample Windows PowerShell cmdlets that you can use to automate some of the procedures described. For more information, see [Using Cmdlets](https://go.microsoft.com/fwlink/p/?linkid=230693).  
   
 ## <a name="BKMK_ConfigAD"></a>2.1. Configure additional Active Directory sites  
 All entry points can reside in a single Active Directory site. Therefore, at least one Active Directory site is required for the implementation of Remote Access servers in a multisite configuration. Use this procedure if you need to create the first Active Directory site, or if you desire to use additional Active Directory sites for the multisite deployment. Use the Active Directory Sites and Services snap-in to create new sites in your organization"s network.  
 
-Membership in the **Enterprise Admins** group in the forest or the **Domain Admins** group in the forest root domain, or equivalent, at a minimum is required to complete this procedure. Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](http://go.microsoft.com/fwlink/?LinkId=83477).  
+Membership in the **Enterprise Admins** group in the forest or the **Domain Admins** group in the forest root domain, or equivalent, at a minimum is required to complete this procedure. Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](https://go.microsoft.com/fwlink/?LinkId=83477).  
 
-For more information, see [Adding a Site to the Forest](http://technet.microsoft.com/library/cc732761.aspx).  
+For more information, see [Adding a Site to the Forest](https://technet.microsoft.com/library/cc732761.aspx).  
 
 ### To configure additional Active Directory sites  
   
@@ -92,7 +92,7 @@ To configure a multisite deployment in a single domain, it is recommended that y
   
 To perform this procedure, at a minimum you must be a member of the Domain Admins group in the domain in which the domain controller is being installed.  
   
-For more information, see [Installing an Additional Domain Controller](http://technet.microsoft.com/library/cc733027.aspx).
+For more information, see [Installing an Additional Domain Controller](https://technet.microsoft.com/library/cc733027.aspx).
   
 ### To configure additional domain controllers  
   
@@ -206,7 +206,7 @@ When you configure Remote Access, the wizard automatically creates the required 
 > [!IMPORTANT]  
 > After manually creating the GPOs for Remote Access you must allow sufficient time for Active Directory and DFS replication to the domain controller in the Active Directory site that is associated with the Remote Access server. If Remote Access automatically created the Group Policy Objects, then no wait time is required.  
   
-To create Group Policy Objects, see [Create and Edit a Group Policy Object](http://technet.microsoft.com/library/cc754740.aspx).  
+To create Group Policy Objects, see [Create and Edit a Group Policy Object](https://technet.microsoft.com/library/cc754740.aspx).  
   
 ### <a name="DCMaintandDowntime"></a>Domain controller maintenance and downtime  
 When a domain controller running as the PDC emulator, or domain controllers managing server GPOs experience downtime, it is not possible to load or modify the Remote Access configuration. This does not affect client connectivity if other domain controllers are available.  
@@ -236,7 +236,7 @@ To load or modify the Remote Access configuration, you can transfer the PDC emul
   
 #### <a name="ChangeDC"></a>To change the domain controller that manages server GPOs  
   
--   Run the Windows PowerShell cmdlet  `HYPERLINK "http://technet.microsoft.com/en-us/library/hh918412.aspx" Set-DAEntryPointDC` on the Remote Access server and specify the unreachable domain controller name for the *ExistingDC* parameter. This command modifies the domain controller association for the server GPOs of the entry points that are currently managed by that domain controller.  
+-   Run the Windows PowerShell cmdlet  `HYPERLINK "https://technet.microsoft.com/en-us/library/hh918412.aspx" Set-DAEntryPointDC` on the Remote Access server and specify the unreachable domain controller name for the *ExistingDC* parameter. This command modifies the domain controller association for the server GPOs of the entry points that are currently managed by that domain controller.  
   
     -   To replace the unreachable domain controller "dc1.corp.contoso.com" with the domain controller "dc2.corp.contoso.com", do the following:  
   
@@ -295,7 +295,7 @@ Domain controller association information is stored both in the registry of the 
     ![Windows PowerShell](../../../../media/Step-2-Configure-the-Multisite-Infrastructure/DCAssocFinal.png)  
   
 ### <a name="ConfigDistOptimization"></a>Optimization of configuration distribution  
-When making configuration changes, the changes are applied only after the server GPOs propagate to the Remote Access servers. To reduce the configuration distribution time, Remote Access automatically selects a writable domain controller which is  HYPERLINK "http://technet.microsoft.com/en-us/library/cc978016.aspx" closest to the Remote Access server when creating its server GPO.  
+When making configuration changes, the changes are applied only after the server GPOs propagate to the Remote Access servers. To reduce the configuration distribution time, Remote Access automatically selects a writable domain controller which is  HYPERLINK "https://technet.microsoft.com/en-us/library/cc978016.aspx" closest to the Remote Access server when creating its server GPO.  
   
 In some scenarios, it may be required to manually modify the domain controller that manages a server GPO in order to optimize configuration distribution time:  
   

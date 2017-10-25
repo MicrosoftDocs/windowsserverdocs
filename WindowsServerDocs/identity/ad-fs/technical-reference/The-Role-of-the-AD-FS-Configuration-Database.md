@@ -52,7 +52,7 @@ A primary federation server is a computer running Windows Server 2008, Windows
 Secondary federation servers store a copy of the AD FS configuration database from the primary federation server, but these copies are read\-only. Secondary federation servers connect to and synchronize the data with the primary federation server in the farm by polling it at regular intervals to check whether data has changed. The secondary federation servers exist to provide fault tolerance for the primary federation server while acting to load\-balance access requests that are made in different sites throughout your network environment.  
   
 > [!NOTE]  
-> If a primary federation server crashes and is offline, all secondary federation servers continue to process requests as normal. However, no new changes can be made to the Federation Service until the primary federation server has been brought back online. You can also nominate a secondary federation server to become the primary federation server by using Windows PowerShell. For more information, see the [AD FS Administration with Windows PowerShell](http://go.microsoft.com/fwlink/?LinkID=179634).  
+> If a primary federation server crashes and is offline, all secondary federation servers continue to process requests as normal. However, no new changes can be made to the Federation Service until the primary federation server has been brought back online. You can also nominate a secondary federation server to become the primary federation server by using Windows PowerShell. For more information, see the [AD FS Administration with Windows PowerShell](https://go.microsoft.com/fwlink/?LinkID=179634).  
   
 #### How the AD FS configuration database is synchronized  
 Because of the important role that the AD FS configuration database plays, it is made available on all the federation servers in the network to provide fault tolerance and load\-balancing capabilities when processing requests \(when network load\-balancers are used\). However, for secondary federation servers to serve in this capacity, the AD FS configuration database that is stored on the primary federation server must be synchronized.  
@@ -61,12 +61,12 @@ When you add a federation server to the farm, the new computer that will become 
   
 ![AD FS roles](media/adfs2_WID.png)  
   
-Each secondary federation server polls the primary federation server every five minutes for changes. You can adjust this default five\-minute value or force an immediate synchronization anytime by using a Windows PowerShell cmdlet. For more information about how to do this, see [AD FS Administration with Windows PowerShell](http://go.microsoft.com/fwlink/?LinkID=179634).  
+Each secondary federation server polls the primary federation server every five minutes for changes. You can adjust this default five\-minute value or force an immediate synchronization anytime by using a Windows PowerShell cmdlet. For more information about how to do this, see [AD FS Administration with Windows PowerShell](https://go.microsoft.com/fwlink/?LinkID=179634).  
   
 The WID synchronization process also supports incremental transfers for more efficient transfers of intermediate changes. The incremental transfer process requires substantially less traffic on a network, and transfers are completed much faster.  
   
 > [!NOTE]  
-> The migration of an AD FS configuration database from WID to an instance of SQL Server is supported. For more information about how to do this, see [AD FS: Migrate Your AD FS Configuration Database to SQL Server](http://go.microsoft.com/fwlink/?LinkId=192232) on the TechNet Wiki site.  
+> The migration of an AD FS configuration database from WID to an instance of SQL Server is supported. For more information about how to do this, see [AD FS: Migrate Your AD FS Configuration Database to SQL Server](https://go.microsoft.com/fwlink/?LinkId=192232) on the TechNet Wiki site.  
   
 ## Using SQL Server to store the AD FS configuration database  
 You can create the AD FS configuration database using a single SQL Server database instance as the store by using the Fsconfig.exe command\-line tool. Using a SQL Server database as the AD FS configuration database provides the following benefits over WID:  
@@ -83,7 +83,7 @@ The term “primary federation server” does not apply when the AD FS configur
   
 You can use SQL Server to configure two or more servers to work together as a server cluster to ensure that AD FS is made highly available to service incoming client requests. High availability provides a scale\-out architecture in which you can increase server capacity by adding additional servers. Single points of failure are mitigated by automatic cluster failover.  
   
-You can achieve high availability by using the network load\-balancing and failover services that SQL clustering technologies provide. For more information about how to configure SQL Server for high availability, see [High Availability Solutions Overview](http://go.microsoft.com/fwlink/?LinkId=179853).  
+You can achieve high availability by using the network load\-balancing and failover services that SQL clustering technologies provide. For more information about how to configure SQL Server for high availability, see [High Availability Solutions Overview](https://go.microsoft.com/fwlink/?LinkId=179853).  
   
 ### SAML artifact resolution  
 Security Assertion Markup Language \(SAML\) artifact resolution is an endpoint based on the part of the SAML 2.0 protocol that describes how a relying party can retrieve a token directly from a claims provider. In the first stage of the resolution process, a browser client contacts a resource federation server and provides it with an artifact. In the second stage, resource federation servers send the artifact to a SAML artifact endpoint URL that is hosted somewhere in an account partner organization in order to resolve the artifact message. In the final stage, the account federation server issues the token to the federation server on behalf of the browser client.  

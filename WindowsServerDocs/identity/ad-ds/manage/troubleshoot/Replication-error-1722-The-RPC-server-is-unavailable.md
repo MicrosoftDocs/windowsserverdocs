@@ -17,7 +17,7 @@ ms.technology: identity-adds
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 
-<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd">
+<developerConceptualDocument xmlns="https://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="https://www.w3.org/1999/xlink" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd">
   <introduction>
     <para>This topic explains symptoms, causes and how to resolve Active Directory replication error 1722: The RPC server is unavailable.</para>
     <list class="bullet">
@@ -61,7 +61,7 @@ The last success occurred at &lt;date&gt; &lt;time&gt;.
 [&lt;dc name&gt;] DsBindWithSpnEx()<codeFeaturedElement>failed with error 1722,
 The RPC server is unavailable.</codeFeaturedElement>.
 Printing RPC Extended Error Info: 
-&lt;snip&gt;</code></listItem><listItem><para>REPADMIN.EXE reports that the last replication attempt has failed with status 1722 (0x6ba).</para><para>REPADMIN commands that commonly cite the 1722 (0x6ba) status include but are not limited to:</para><table xmlns:caps="http://schemas.microsoft.com/build/caps/2013/11"><tbody><tr><TD><list class="bullet"><listItem><para>REPADMIN /REPLSUM</para></listItem><listItem><para>REPADMIN /SHOWREPL</para></listItem></list></TD><TD><list class="bullet"><listItem><para>REPADMIN /SHOWREPS</para></listItem><listItem><para>REPADMIN /SYNCALL</para></listItem></list></TD></tr></tbody></table><para>Sample output from "REPADMIN /SHOWREPS" and REPADMIN /SYNCALL depicting "The RPC server is unavailable" error is shown below:</para><code>c:&gt; <codeFeaturedElement>repadmin /showreps</codeFeaturedElement>
+&lt;snip&gt;</code></listItem><listItem><para>REPADMIN.EXE reports that the last replication attempt has failed with status 1722 (0x6ba).</para><para>REPADMIN commands that commonly cite the 1722 (0x6ba) status include but are not limited to:</para><table xmlns:caps="https://schemas.microsoft.com/build/caps/2013/11"><tbody><tr><TD><list class="bullet"><listItem><para>REPADMIN /REPLSUM</para></listItem><listItem><para>REPADMIN /SHOWREPL</para></listItem></list></TD><TD><list class="bullet"><listItem><para>REPADMIN /SHOWREPS</para></listItem><listItem><para>REPADMIN /SYNCALL</para></listItem></list></TD></tr></tbody></table><para>Sample output from "REPADMIN /SHOWREPS" and REPADMIN /SYNCALL depicting "The RPC server is unavailable" error is shown below:</para><code>c:&gt; <codeFeaturedElement>repadmin /showreps</codeFeaturedElement>
 &lt;site name&gt;&lt;destination DC&gt;
 DC Options: &lt;list of flags&gt;
 Site Options: (none)
@@ -80,7 +80,7 @@ CALLBACK MESSAGE: Error contacting server &lt;object guid of NTDS
 Settings object&gt;._msdcs.&lt;forest root domain&gt;.&lt;top level domain&gt;
 (network error): 1722 (0x6ba):
 The RPC server is unavailable. 
-</code></listItem><listItem><para>The "replicate now" command in Active Directory Sites and Services returns "The RPC server is unavailable."</para><para>Right-clicking on the connection object from a source DC and choosing <ui>Replicate now</ui> fails with "The RPC server is unavailable." The on-screen error message is shown below:</para><para>Dialog title text:</para><para>Replicate Now</para><para>Dialog message text: </para><para>The following error occurred during the attempt to synchronize naming context &lt;DNS name of directory partition&gt; from domain controller &lt;source Dc host name&gt; to domain controller &lt;destination DC hostname&gt;:The RPC server is unavailable. This operation will not continue. This condition may be caused by a DNS lookup problem. For information about troubleshooting common DNS lookup problems, please see the following Microsoft Web site: http://go.microsoft.com/fwlink/?LinkId=5171. </para></listItem><listItem><para>NTDS KCC, NTDS General or Microsoft-Windows-ActiveDirectory_DomainService events with the 1722 status are logged in the Directory Services log in Event Viewer.</para><para>Active Directory events that commonly cite the 1722 status include but are not limited to:</para><table xmlns:caps="http://schemas.microsoft.com/build/caps/2013/11"><thead><tr><TD><para>Event ID</para></TD><TD><para>Event Source</para></TD><TD><para>Event String</para></TD></tr></thead><tbody><tr><TD><para>1125</para></TD><TD><para>Microsoft-Windows-ActiveDirectory_DomainService</para></TD><TD><para>The Active Directory Domain Services Installation Wizard (Dcpromo) was unable to establish connection with the following domain controller.</para></TD></tr><tr><TD><para>1311</para></TD><TD><para>NTDS KCC</para></TD><TD><para>The Knowledge Consistency Checker (KCC) has detected problems with the following directory partition.</para></TD></tr><tr><TD><para>1865</para></TD><TD><para>NTDS KCC</para></TD><TD><para>The Knowledge Consistency Checker (KCC) was unable to form a complete spanning tree network topology. As a result, the following list of sites cannot be reached from the local site.</para></TD></tr><tr><TD><para>1925</para></TD><TD><para>NTDS KCC</para></TD><TD><para>The attempt to establish a replication link for the following writable directory partition failed.</para></TD></tr><tr><TD><para>1960</para></TD><TD><para>NTDS Replication</para></TD><TD><para>Internal event: The following domain controller received an exception from a remote procedure call (RPC) connection. The operation may have failed.</para></TD></tr></tbody></table></listItem>
+</code></listItem><listItem><para>The "replicate now" command in Active Directory Sites and Services returns "The RPC server is unavailable."</para><para>Right-clicking on the connection object from a source DC and choosing <ui>Replicate now</ui> fails with "The RPC server is unavailable." The on-screen error message is shown below:</para><para>Dialog title text:</para><para>Replicate Now</para><para>Dialog message text: </para><para>The following error occurred during the attempt to synchronize naming context &lt;DNS name of directory partition&gt; from domain controller &lt;source Dc host name&gt; to domain controller &lt;destination DC hostname&gt;:The RPC server is unavailable. This operation will not continue. This condition may be caused by a DNS lookup problem. For information about troubleshooting common DNS lookup problems, please see the following Microsoft Web site: https://go.microsoft.com/fwlink/?LinkId=5171. </para></listItem><listItem><para>NTDS KCC, NTDS General or Microsoft-Windows-ActiveDirectory_DomainService events with the 1722 status are logged in the Directory Services log in Event Viewer.</para><para>Active Directory events that commonly cite the 1722 status include but are not limited to:</para><table xmlns:caps="https://schemas.microsoft.com/build/caps/2013/11"><thead><tr><TD><para>Event ID</para></TD><TD><para>Event Source</para></TD><TD><para>Event String</para></TD></tr></thead><tbody><tr><TD><para>1125</para></TD><TD><para>Microsoft-Windows-ActiveDirectory_DomainService</para></TD><TD><para>The Active Directory Domain Services Installation Wizard (Dcpromo) was unable to establish connection with the following domain controller.</para></TD></tr><tr><TD><para>1311</para></TD><TD><para>NTDS KCC</para></TD><TD><para>The Knowledge Consistency Checker (KCC) has detected problems with the following directory partition.</para></TD></tr><tr><TD><para>1865</para></TD><TD><para>NTDS KCC</para></TD><TD><para>The Knowledge Consistency Checker (KCC) was unable to form a complete spanning tree network topology. As a result, the following list of sites cannot be reached from the local site.</para></TD></tr><tr><TD><para>1925</para></TD><TD><para>NTDS KCC</para></TD><TD><para>The attempt to establish a replication link for the following writable directory partition failed.</para></TD></tr><tr><TD><para>1960</para></TD><TD><para>NTDS Replication</para></TD><TD><para>Internal event: The following domain controller received an exception from a remote procedure call (RPC) connection. The operation may have failed.</para></TD></tr></tbody></table></listItem>
 </list>
     </content>
   </section>
@@ -130,7 +130,7 @@ The RPC server is unavailable.
       <list class="ordered">
         <listItem>
           <para>Verify the startup value and service status is correct for the Remote Procedure Call (RPC), Remote Procedure Call (RPC) Locator and Kerberos Key Distribution Center. The operating system version will determine the correct values for the source and destination system that is logging the replication error. Use the following table to help validate the settings.</para>
-          <table xmlns:caps="http://schemas.microsoft.com/build/caps/2013/11">
+          <table xmlns:caps="https://schemas.microsoft.com/build/caps/2013/11">
             <thead>
               <tr>
                 <TD>
@@ -213,7 +213,7 @@ The RPC server is unavailable.
         </listItem>
         <listItem>
           <para>Verify the <embeddedLabel>ClientProtocols</embeddedLabel> key exists under <embeddedLabel>HKLMSoftwareMicrosoftRpc</embeddedLabel>, and that it contains the correct default protocols.</para>
-          <table xmlns:caps="http://schemas.microsoft.com/build/caps/2013/11">
+          <table xmlns:caps="https://schemas.microsoft.com/build/caps/2013/11">
             <thead>
               <tr>
                 <TD>
@@ -348,7 +348,7 @@ Delegation is configured properly from parent to subordinate domain
 The summary provides remediation steps for the more common 
 </code>
               <para>The summary provides remediation steps for the more common failures from this test.
-Explanation and additional options for this test can be found at <externalLink><linkText>Domain Controller Diagnostics Tool (dcdiag.exe)</linkText><linkUri>http://technet.microsoft.com/library/cc776854(WS.10).aspx</linkUri></externalLink>.</para>
+Explanation and additional options for this test can be found at <externalLink><linkText>Domain Controller Diagnostics Tool (dcdiag.exe)</linkText><linkUri>https://technet.microsoft.com/library/cc776854(WS.10).aspx</linkUri></externalLink>.</para>
             </listItem>
             <listItem>
               <para>
@@ -425,14 +425,14 @@ Glue: &lt;IP Adress&gt;
 CNAME: a2c5007f-7082-4adb-ba7d-a9c47db1efc3._msdcs.domain.com
 Alias: dc2.child.domain.com
 Glue: &lt;IP Address&gt;</code>
-              <para>For more information, see <externalLink><linkText>Description of the DNSLint utility</linkText><linkUri>http://support.microsoft.com/kb/321045</linkUri></externalLink>.</para>
+              <para>For more information, see <externalLink><linkText>Description of the DNSLint utility</linkText><linkUri>https://support.microsoft.com/kb/321045</linkUri></externalLink>.</para>
             </listItem>
           </list>
         </listItem>
         <listItem>
           <para>Verify network ports are not blocked by a firewall or 3rd party application listening on the required ports.</para>
           <para>The endpoint mapper (listening on port 135) tells the client which randomly assigned port a service (FRS, AD replication, MAPI, and so on) is listening on.</para>
-          <table xmlns:caps="http://schemas.microsoft.com/build/caps/2013/11">
+          <table xmlns:caps="https://schemas.microsoft.com/build/caps/2013/11">
             <thead>
               <tr>
                 <TD>
@@ -563,18 +563,18 @@ Glue: &lt;IP Address&gt;</code>
               </tr>
             </tbody>
           </table>
-          <para>Portqry can be used to identify if a port is blocked from a Dc when targeting another DC. It can be downloaded at <externalLink><linkText>PortQry Command Line Port Scanner Version 2.0</linkText><linkUri>http://www.microsoft.com/download/en/details.aspx?displaylang=en&amp;id=17148</linkUri></externalLink>.</para>
+          <para>Portqry can be used to identify if a port is blocked from a Dc when targeting another DC. It can be downloaded at <externalLink><linkText>PortQry Command Line Port Scanner Version 2.0</linkText><linkUri>https://www.microsoft.com/download/en/details.aspx?displaylang=en&amp;id=17148</linkUri></externalLink>.</para>
           <para>Example syntax:</para>
           <code>portqry -n &lt;problem_server&gt; -e 135 </code>
           <code>portqry -n &lt;problem_server&gt; -r 1024-5000</code>
-          <para>A graphical version of portqry, called Portqryui can be found at PortQryUI - User Interface for the PortQry Command Line Port Scanner<externalLink><linkText>PortQryUI - User Interface for the PortQry Command Line Port Scanner</linkText><linkUri>http://www.microsoft.com/download/en/details.aspx?displaylang=en&amp;id=24009</linkUri></externalLink>.</para>
+          <para>A graphical version of portqry, called Portqryui can be found at PortQryUI - User Interface for the PortQry Command Line Port Scanner<externalLink><linkText>PortQryUI - User Interface for the PortQry Command Line Port Scanner</linkText><linkUri>https://www.microsoft.com/download/en/details.aspx?displaylang=en&amp;id=24009</linkUri></externalLink>.</para>
           <para> If the Dynamic Port range has ports being blocked, please use the below links to configure a port range that manageable:</para>
           <list class="bullet">
             <listItem>
               <para>
                 <externalLink>
                   <linkText>How to configure RPC dynamic port allocation to work with firewalls</linkText>
-                  <linkUri>http://support.microsoft.com/?id=154596</linkUri>
+                  <linkUri>https://support.microsoft.com/?id=154596</linkUri>
                 </externalLink>
               </para>
             </listItem>
@@ -582,7 +582,7 @@ Glue: &lt;IP Address&gt;</code>
               <para>
                 <externalLink>
                   <linkText>Restricting Active Directory replication traffic and client RPC traffic to a specific port</linkText>
-                  <linkUri>http://support.microsoft.com/?id=224196</linkUri>
+                  <linkUri>https://support.microsoft.com/?id=224196</linkUri>
                 </externalLink>
               </para>
             </listItem>
@@ -590,7 +590,7 @@ Glue: &lt;IP Address&gt;</code>
               <para>
                 <externalLink>
                   <linkText>How to restrict FRS replication traffic to a specific static port</linkText>
-                  <linkUri>http://support.microsoft.com/?id=319553</linkUri>
+                  <linkUri>https://support.microsoft.com/?id=319553</linkUri>
                 </externalLink>
               </para>
             </listItem>
@@ -598,7 +598,7 @@ Glue: &lt;IP Address&gt;</code>
               <para>
                 <externalLink>
                   <linkText>How to configure a firewall for domains and trusts</linkText>
-                  <linkUri>http://support.microsoft.com/?id=179442</linkUri>
+                  <linkUri>https://support.microsoft.com/?id=179442</linkUri>
                 </externalLink>
               </para>
             </listItem>
@@ -606,7 +606,7 @@ Glue: &lt;IP Address&gt;</code>
               <para>
                 <externalLink>
                   <linkText>Service overview and network port requirements for the Windows Server system</linkText>
-                  <linkUri>http://support.microsoft.com/?id=832017</linkUri>
+                  <linkUri>https://support.microsoft.com/?id=832017</linkUri>
                 </externalLink>
               </para>
             </listItem>
@@ -646,27 +646,27 @@ EnableSecuritySignature=is server agrees (0 disable, 1 enable).</para>
   <relatedTopics>
     <externalLink>
       <linkText>Troubleshooting Active Directory operations that fail with error 1722: The RPC server is unavailable</linkText>
-      <linkUri>http://support.microsoft.com/kb/2102154</linkUri>
+      <linkUri>https://support.microsoft.com/kb/2102154</linkUri>
     </externalLink>
     <externalLink>
       <linkText>RPC Return Values</linkText>
-      <linkUri>http://msdn.microsoft.com/library/aa378645(VS.85).aspx</linkUri>
+      <linkUri>https://msdn.microsoft.com/library/aa378645(VS.85).aspx</linkUri>
     </externalLink>
     <externalLink>
       <linkText>Understanding Extended Error Information</linkText>
-      <linkUri>http://msdn.microsoft.com/library/aa379109(VS.85).aspx</linkUri>
+      <linkUri>https://msdn.microsoft.com/library/aa379109(VS.85).aspx</linkUri>
     </externalLink>
     <externalLink>
       <linkText>Extended Error Information Detection Locations</linkText>
-      <linkUri>http://msdn.microsoft.com/library/aa373838(VS.85).aspx</linkUri>
+      <linkUri>https://msdn.microsoft.com/library/aa373838(VS.85).aspx</linkUri>
     </externalLink>
     <externalLink>
       <linkText>Enabling Extended Error Information</linkText>
-      <linkUri>http://msdn.microsoft.com/library/aa373803(VS.85).aspx</linkUri>
+      <linkUri>https://msdn.microsoft.com/library/aa373803(VS.85).aspx</linkUri>
     </externalLink>
     <externalLink>
       <linkText>Network Connectivity</linkText>
-      <linkUri>http://technet.microsoft.com/library/cc961803.aspx</linkUri>
+      <linkUri>https://technet.microsoft.com/library/cc961803.aspx</linkUri>
     </externalLink>
   </relatedTopics>
 </developerConceptualDocument>

@@ -22,9 +22,9 @@ Moving accounts between domains can impact end users. Before deciding whether to
   
 For more information about upgrading Active Directory domains to  Windows Server 2008 , see [Upgrading Active Directory Domains to Windows Server 2008 and Windows Server 2008 R2 AD DS Domains](https://technet.microsoft.com/library/cc731188.aspx).  
   
-For more information about restructuring AD DS domains within and between forests, see Active Directory Migration Tool version 3.1 Migration Guide ([http://go.microsoft.com/fwlink/?LinkId=93678](http://go.microsoft.com/fwlink/?LinkId=93678)).  
+For more information about restructuring AD DS domains within and between forests, see Active Directory Migration Tool version 3.1 Migration Guide ([https://go.microsoft.com/fwlink/?LinkId=93678](https://go.microsoft.com/fwlink/?LinkId=93678)).  
   
-For a worksheet to assist you in documenting your plans for new and upgraded domains, download Job_Aids_Designing_and_Deploying_Directory_and_Security_Services.zip from Job Aids for Windows Server 2003 Deployment Kit ([http://go.microsoft.com/fwlink/?LinkID=102558](http://go.microsoft.com/fwlink/?LinkID=102558)) and open "Domain Planning" (DSSLOGI_5.doc).  
+For a worksheet to assist you in documenting your plans for new and upgraded domains, download Job_Aids_Designing_and_Deploying_Directory_and_Security_Services.zip from Job Aids for Windows Server 2003 Deployment Kit ([https://go.microsoft.com/fwlink/?LinkID=102558](https://go.microsoft.com/fwlink/?LinkID=102558)) and open "Domain Planning" (DSSLOGI_5.doc).  
   
 
 

@@ -37,7 +37,7 @@ The following shows some additional code examples.
     Set-AdfsGlobalWebContent -ErrorPageDescriptionText "Il s'agit de description de page erreur de Contoso" –locale "fr"  
  
   
-If you want to customize the web content to languages other than English that requires the input of Unicode, we recommend that you use the Windows PowerShell ISE. For additional information see [Introducing the Windows PowerShell ISE](http://technet.microsoft.com/library/dd315244.aspx).  
+If you want to customize the web content to languages other than English that requires the input of Unicode, we recommend that you use the Windows PowerShell ISE. For additional information see [Introducing the Windows PowerShell ISE](https://technet.microsoft.com/library/dd315244.aspx).  
 
 ## Additional references 
 [AD FS User Sign-in Customization](AD-FS-user-sign-in-customization.md) 

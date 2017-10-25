@@ -22,9 +22,9 @@ PowerShell cmdlets as well as the following command-line tools:
 
 You can use these tools to manage storage resources on a local computer or a remote computer. For more information about these command-line tools, see the following references:
 
--   **Dirquota**: <http://go.microsoft.com/fwlink/?LinkId=92741>
--   **Filescrn**: <http://go.microsoft.com/fwlink/?LinkId=92742>
--   **Storrept**: <http://go.microsoft.com/fwlink/?LinkId=92743>
+-   **Dirquota**: <https://go.microsoft.com/fwlink/?LinkId=92741>
+-   **Filescrn**: <https://go.microsoft.com/fwlink/?LinkId=92742>
+-   **Storrept**: <https://go.microsoft.com/fwlink/?LinkId=92743>
 
 
 > [!Note]

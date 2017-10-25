@@ -34,7 +34,7 @@ This guide describes how to migrate an existing Windows SBS 2003 domain to  Wind
 
   
 ## Additional resources  
- For links to additional information, tools, and community resources to help guide you through the migration process, visit the [Windows Small Business Server Migration](http://go.microsoft.com/fwlink/?LinkId=217520) website.  
+ For links to additional information, tools, and community resources to help guide you through the migration process, visit the [Windows Small Business Server Migration](https://go.microsoft.com/fwlink/?LinkId=217520) website.  
   
 ## Terms and definitions  
  **Source Server:** The existing server from which you are migrating your settings and data.  

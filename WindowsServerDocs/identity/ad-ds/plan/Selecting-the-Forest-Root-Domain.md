@@ -62,7 +62,7 @@ To select a suffix for the forest root domain:
 We recommend that you use DNS names that are registered with an Internet authority in the Active Directory namespace. Only registered names are guaranteed to be globally unique. If another organization later registers the same DNS domain name (or if your organization merges with, acquires, or is acquired by another company that uses the same DNS name), the two infrastructures cannot interact with one another.  
   
 > [!CAUTION]  
-> Do not use single-label DNS names. For more information, see Information about configuring Windows for domains with single-label DNS names ([http://go.microsoft.com/fwlink/?LinkId=106631](http://go.microsoft.com/fwlink/?LinkId=106631)). Also, we do not recommend using unregistered suffixes, such as .local.  
+> Do not use single-label DNS names. For more information, see Information about configuring Windows for domains with single-label DNS names ([https://go.microsoft.com/fwlink/?LinkId=106631](https://go.microsoft.com/fwlink/?LinkId=106631)). Also, we do not recommend using unregistered suffixes, such as .local.  
   
 ### Selecting a prefix  
 If you chose a registered suffix that is already in use on the network, select a prefix for the forest root domain name by using the prefix rules in the table below. Add a prefix that is not currently in use to create a new subordinate name. For example, if your DNS root name is contoso.com, you can create the Active Directory forest root domain name concorp.contoso.com if the namespace concorp.contoso.com is not already in use on the network. This new branch of the namespace will be dedicated to AD DS and can be integrated easily with the existing DNS implementation.  
@@ -80,7 +80,7 @@ The following table lists the rules for selecting a prefix for a registered DNS 
 It is important for the Active Directory DNS owner to work with the DNS owner for the organization to obtain ownership of the name that will be used for the Active Directory namespace. For more information about designing a DNS infrastructure to support AD DS, see [Creating a DNS Infrastructure Design](../../ad-ds/plan/Creating-a-DNS-Infrastructure-Design.md).  
   
 ## Documenting the forest root domain name  
-Document the DNS prefix and suffix that you select for the forest root domain. At this point, identify what domain will be the forest root. You can add the forest root domain name information to the "Domain Planning" worksheet that you created to document your plan for new and upgraded domains and your domain names. To open it, download Job_Aids_Designing_and_Deploying_Directory_and_Security_Services.zip from Job Aids for Windows Server 2003 Deployment Kit ([http://go.microsoft.com/fwlink/?LinkID=102558](http://go.microsoft.com/fwlink/?LinkID=102558)) and open "Domain Planning" (DSSLOGI_5.doc).  
+Document the DNS prefix and suffix that you select for the forest root domain. At this point, identify what domain will be the forest root. You can add the forest root domain name information to the "Domain Planning" worksheet that you created to document your plan for new and upgraded domains and your domain names. To open it, download Job_Aids_Designing_and_Deploying_Directory_and_Security_Services.zip from Job Aids for Windows Server 2003 Deployment Kit ([https://go.microsoft.com/fwlink/?LinkID=102558](https://go.microsoft.com/fwlink/?LinkID=102558)) and open "Domain Planning" (DSSLOGI_5.doc).  
   
 
 

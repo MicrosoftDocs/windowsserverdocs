@@ -17,7 +17,7 @@ ms.date: 06/09/2016
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Privileged Access Workstations (PAWs) provide a dedicated operating system for sensitive tasks that is protected from Internet attacks and threat vectors. Separating these sensitive tasks and accounts from the daily use workstations and devices provides very strong protection from phishing attacks, application and OS vulnerabilities, various impersonation attacks, and credential theft attacks such as keystroke logging, [Pass-the-Hash](http://www.microsoft.com/en-us/download/details.aspx?id=36036), and [Pass-The-Ticket](https://download.microsoft.com/download/7/7/A/77ABC5BD-8320-41AF-863C-6ECFB10CB4B9/Mitigating%20Pass-the-Hash%20(PtH)%20Attacks%20and%20Other%20Credential%20Theft%20Techniques_English.pdf).
+Privileged Access Workstations (PAWs) provide a dedicated operating system for sensitive tasks that is protected from Internet attacks and threat vectors. Separating these sensitive tasks and accounts from the daily use workstations and devices provides very strong protection from phishing attacks, application and OS vulnerabilities, various impersonation attacks, and credential theft attacks such as keystroke logging, [Pass-the-Hash](https://www.microsoft.com/en-us/download/details.aspx?id=36036), and [Pass-The-Ticket](https://download.microsoft.com/download/7/7/A/77ABC5BD-8320-41AF-863C-6ECFB10CB4B9/Mitigating%20Pass-the-Hash%20(PtH)%20Attacks%20and%20Other%20Credential%20Theft%20Techniques_English.pdf).
 
 ## Architecture Overview
 The diagram below depicts a separate "channel" for administration (a highly sensitive task) that is created by maintaining separate dedicated administrative accounts and workstations.
@@ -54,7 +54,7 @@ This threat environment requires an organizations to adopt an "assume breach" se
 
 This figure depicts risk to managed assets if an attacker gains control of a user workstation where sensitive credentials are used.
 
-An attacker in control of an operating system has numerous ways in which to illicitly gain access to all activity on the workstation and impersonate the legitimate account. A variety of known and unknown attack techniques can be used to gain this level of access. The increasing volume and sophistication of cyberattacks have made it necessary to extend that separation concept to completely separate client operating systems for sensitive accounts. For more information on these types of attacks, please visit the [Pass The Hash web site](http://www.microsoft.com/pth) for informative white papers, videos and more.
+An attacker in control of an operating system has numerous ways in which to illicitly gain access to all activity on the workstation and impersonate the legitimate account. A variety of known and unknown attack techniques can be used to gain this level of access. The increasing volume and sophistication of cyberattacks have made it necessary to extend that separation concept to completely separate client operating systems for sensitive accounts. For more information on these types of attacks, please visit the [Pass The Hash web site](https://www.microsoft.com/pth) for informative white papers, videos and more.
 
 The PAW approach is an extension of the well-established recommended practice to use separate admin and user accounts for administrative personnel. This practice uses an individually assigned administrative account that is completely separate from the user's standard user account. PAW builds on that account separation practice by providing a trustworthy workstation for those sensitive accounts.
 
@@ -180,7 +180,7 @@ The security controls in PAW are focused on mitigating the highest impact and mo
 > A PAW will not protect an environment from an adversary that has already gained administrative access over an Active Directory Forest.
 > Because many existing implementations of Active Directory Domain Services have been operating for years at risk of credential theft, organizations should assume breach and consider the possibility that they may have an undetected compromise of domain or enterprise administrator credentials. An organization that suspects domain compromise should consider the use of professional incident response services.
 >
-> For more information on response and recovery guidance, see the "Respond to suspicious activity" and "Recover from a breach" sections of [Mitigating Pass-the-Hash and Other Credential Theft](http://www.microsoft.com/pth), version 2.
+> For more information on response and recovery guidance, see the "Respond to suspicious activity" and "Recover from a breach" sections of [Mitigating Pass-the-Hash and Other Credential Theft](https://www.microsoft.com/pth), version 2.
 >
 > Visit [Microsoft's Incident Response and Recovery services](https://www.microsoft.com/en-us/microsoftservices/campaigns/cybersecurity-protection.aspx) page for more information.
 
@@ -342,17 +342,17 @@ Phase 1 includes the following steps:
         Ensure that the hardware used for the PAW is sourced from a manufacturer and supplier whose security practices are trusted by the organization. This is an application of the clean source principle to supply chain security.
 
         > [!NOTE]
-        > For more background on the importance of supply chain security, visit [this site](http://www.microsoft.com/security/cybersecurity/).
+        > For more background on the importance of supply chain security, visit [this site](https://www.microsoft.com/security/cybersecurity/).
 
     4.  Acquire and validate the required Windows 10 Enterprise Edition and application software. Obtain the software required for PAW and validate it using the guidance in [Clean Source for installation media](http://aka.ms/cleansource).
 
         -   Windows 10 Enterprise Edition
 
-        -   [Remote Server Administration Tools](http://www.microsoft.com/en-us/download/details.aspx?id=45520.) for Windows 10
+        -   [Remote Server Administration Tools](https://www.microsoft.com/en-us/download/details.aspx?id=45520.) for Windows 10
 
         -   Windows 10 [Security Baselines](http://aka.ms/win10baselines)
 
-        -   [Enhanced Mitigation Experience Toolkit (EMET)](http://www.microsoft.com/en-us/download/details.aspx?id=49166)
+        -   [Enhanced Mitigation Experience Toolkit (EMET)](https://www.microsoft.com/en-us/download/details.aspx?id=49166)
 
             > [!NOTE]
             > Microsoft publishes MD5 hashes for all operating systems and applications on MSDN, but not all software vendors provide similar documentation.  In those cases, other strategies will be required.  For additional information on validating software, please refer to [Clean Source](http://aka.ms/cleansource) for installation media.
@@ -784,7 +784,7 @@ Phase 1 includes the following steps:
     2.  Set a unique complex password for the local Administrator account.  Do not use a password that has been used for any other account in the environment.
 
         > [!NOTE]
-        > Microsoft recommends using [Local Administrator Password Solution (LAPS)](http://www.microsoft.com/en-us/download/details.aspx?id=46899) to manage the local Administrator password for all workstations, including PAWs.  If you use LAPS, ensure that you only grant the PAW Maintenance group the right to read LAPS-managed passwords for the PAWs.
+        > Microsoft recommends using [Local Administrator Password Solution (LAPS)](https://www.microsoft.com/en-us/download/details.aspx?id=46899) to manage the local Administrator password for all workstations, including PAWs.  If you use LAPS, ensure that you only grant the PAW Maintenance group the right to read LAPS-managed passwords for the PAWs.
 
     3.  Install Remote Server Administration Tools for Windows 10 using the clean source installation media.
 
@@ -1186,10 +1186,10 @@ The PAW solution should be operated using the standards in [Operational Standard
 
 [Mitigating Credential Theft using the Windows 10 Isolated User Mode (Channel 9)](https://channel9.msdn.com/Blogs/Seth-Juarez/Mitigating-Credential-Theft-using-the-Windows-10-Isolated-User-Mode)
 
-[Enabling Strict KDC Validation in Windows Kerberos](http://www.microsoft.com/en-us/download/details.aspx?id=6382)
+[Enabling Strict KDC Validation in Windows Kerberos](https://www.microsoft.com/en-us/download/details.aspx?id=6382)
 
-[What's New in Kerberos Authentication for Windows Server 2012](http://technet.microsoft.com/library/hh831747.aspx)
+[What's New in Kerberos Authentication for Windows Server 2012](https://technet.microsoft.com/library/hh831747.aspx)
 
-[Authentication Mechanism Assurance for AD DS in Windows Server 2008 R2 Step-by-Step Guide](http://technet.microsoft.com/library/dd378897(v=ws.10).aspx)
+[Authentication Mechanism Assurance for AD DS in Windows Server 2008 R2 Step-by-Step Guide](https://technet.microsoft.com/library/dd378897(v=ws.10).aspx)
 
 [Trusted Platform Module](C:\sd\docs\p_ent_keep_secure\p_ent_keep_secure\trusted_platform_module_technology_overview.xml)

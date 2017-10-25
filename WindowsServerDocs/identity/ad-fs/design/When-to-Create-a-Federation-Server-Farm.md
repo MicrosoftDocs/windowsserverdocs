@@ -25,7 +25,7 @@ You can create a federation server farm or install additional federation servers
   
 Before federation servers can be grouped as a farm, they must first be clustered so that requests that arrive at a single fully qualified domain name \(FQDN\) are routed to the various federation servers in the server farm. You can create the server cluster by deploying Network Load Balancing \(NLB\) inside the corporate network. This guide assumes that NLB has been configured appropriately to cluster each of the federation servers in the farm.  
   
-For more information about how to configure a cluster FQDN using Microsoft NLB technology, see [Specifying the Cluster Parameters](http://go.microsoft.com/fwlink/?LinkID=74651).  
+For more information about how to configure a cluster FQDN using Microsoft NLB technology, see [Specifying the Cluster Parameters](https://go.microsoft.com/fwlink/?LinkID=74651).  
   
 ## Best practices for deploying a federation server farm  
 We recommend the following best practices for deploying a federation server in a production environment:  

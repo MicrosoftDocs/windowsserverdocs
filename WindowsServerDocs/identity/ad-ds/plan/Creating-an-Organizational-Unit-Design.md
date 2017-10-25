@@ -18,7 +18,7 @@ ms.technology: identity-adds
 
 Forest owners are responsible for creating organizational unit (OU) designs for their domains. Creating an OU design involves designing the OU structure, assigning the OU owner role, and creating account and resource OUs.  
   
-Initially, design your OU structure to enable delegation of administration. When the OU design is complete, you can create additional OU structures for the application of Group Policy to the users and computers and to limit the visibility of objects. For more information, see Designing a Group Policy Infrastructure ([http://go.microsoft.com/fwlink/?LinkId=106655](http://go.microsoft.com/fwlink/?LinkId=106655)).  
+Initially, design your OU structure to enable delegation of administration. When the OU design is complete, you can create additional OU structures for the application of Group Policy to the users and computers and to limit the visibility of objects. For more information, see Designing a Group Policy Infrastructure ([https://go.microsoft.com/fwlink/?LinkId=106655](https://go.microsoft.com/fwlink/?LinkId=106655)).  
   
 ## OU owner role  
 The forest owner designates an OU owner for each OU that you design for the domain. OU owners are data managers who control a subtree of objects in Active Directory Domain Services (AD DS). OU owners can control how administration is delegated and how policy is applied to objects within their OU. They can also create new subtrees and delegate administration of OUs within those subtrees.  
@@ -37,7 +37,7 @@ Assemble a team to design the OU structure that you use to delegate control over
   
 It is important to document your OU design. List the names of the OUs that you plan to create. And, for each OU, document the type of OU, the OU owner, the parent OU (if applicable), and the origin of that OU.  
   
-For a worksheet to assist you in documenting your OU design, download Job_Aids_Designing_and_Deploying_Directory_and_Security_Services.zip from Job Aids for Windows Server 2003 Deployment Kit ([http://go.microsoft.com/fwlink/?LinkID=102558](http://go.microsoft.com/fwlink/?LinkID=102558)) and open "Identifying OUs for Each Domain" (DSSLOGI_9.doc).  
+For a worksheet to assist you in documenting your OU design, download Job_Aids_Designing_and_Deploying_Directory_and_Security_Services.zip from Job Aids for Windows Server 2003 Deployment Kit ([https://go.microsoft.com/fwlink/?LinkID=102558](https://go.microsoft.com/fwlink/?LinkID=102558)) and open "Identifying OUs for Each Domain" (DSSLOGI_9.doc).  
   
 ## In this section  
   

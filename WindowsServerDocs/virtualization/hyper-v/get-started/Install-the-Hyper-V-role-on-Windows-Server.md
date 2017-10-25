@@ -22,7 +22,7 @@ To learn more about Hyper-V, see the [Hyper-V Technology Overview](..\Hyper-V-Te
 
 Before you install Windows Server 2016 or add the Hyper-V role, make sure that:
 *  Your computer hardware is compatible. For details, see [System Requirements for Windows Server](../../../get-started/System-Requirements.md) and [System requirements for Hyper-V on Windows Server 2016](../System-requirements-for-Hyper-V-on-Windows.md).
-*  You don't plan to use third-party virtualization apps that rely on the same processor features that Hyper-V requires. Examples include VMWare Workstation and VirtualBox. You can install Hyper-V without uninstalling these other apps. But, if you try to use them to manage virtual machines when the Hyper-V hypervisor is running, the virtual machines might not start or might run unreliably. For details and instructions for turning off the Hyper-V hypervisor if you need to use one of these apps, see [Virtualization applications do not work together with Hyper-V, Device Guard, and Credential Guard](http://support.microsoft.com/kb/3204980).
+*  You don't plan to use third-party virtualization apps that rely on the same processor features that Hyper-V requires. Examples include VMWare Workstation and VirtualBox. You can install Hyper-V without uninstalling these other apps. But, if you try to use them to manage virtual machines when the Hyper-V hypervisor is running, the virtual machines might not start or might run unreliably. For details and instructions for turning off the Hyper-V hypervisor if you need to use one of these apps, see [Virtualization applications do not work together with Hyper-V, Device Guard, and Credential Guard](https://support.microsoft.com/kb/3204980).
 
 If you want to install only the management tools, such as Hyper-V Manager, see [Remotely manage Hyper-V hosts with Hyper-V Manager](..\Manage\Remotely-manage-Hyper-V-hosts.md). 
   
@@ -73,7 +73,7 @@ If you want to install only the management tools, such as Hyper-V Manager, see [
   
 ## See also  
   
--   [Install-WindowsFeature](http://technet.microsoft.com/jj205467.aspx)  
+-   [Install-WindowsFeature](https://technet.microsoft.com/jj205467.aspx)  
   
 
 

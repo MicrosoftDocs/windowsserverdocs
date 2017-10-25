@@ -17,7 +17,7 @@ ms.technology: identity-adds
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
     
-    <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd">
+    <developerConceptualDocument xmlns="https://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="https://www.w3.org/1999/xlink" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd">
       <introduction>
     <para>When a destination domain controller running Windows Server 2003 with Service Pack 1 (SP1) receives Event ID 2088 in the Directory Service event log, attempts to resolve the globally unique identifier (GUID) in the alias (CNAME) resource record to an IP address for the source domain controller failed. However, the destination domain controller tried other means to resolve the name and succeeded by using either the fully qualified domain name (FQDN) or the NetBIOS name of the source domain controller. Although replication was successful, the Domain Name System (DNS) problem should be diagnosed and resolved. </para>
     <para>The following is an example of the event text: </para>
@@ -74,7 +74,7 @@ or "ping &lt;source DC name&gt;".
 3) Verify that the source domain controller is using a valid DNS server 
 for DNS services, and that the source domain controller's host record 
 and CNAME record are correctly registered, using the DNS Enhanced 
-version of DCDIAG.EXE available on http://www.microsoft.com/dns 
+version of DCDIAG.EXE available on https://www.microsoft.com/dns 
 
 dcdiag /test:dns 
 
@@ -86,7 +86,7 @@ domain controller, as follows:
 dcdiag /test:dns 
 
 5) For further analysis of DNS error failures see KB 824449: 
-http://support.microsoft.com/?kbid=824449 
+https://support.microsoft.com/?kbid=824449 
 
 Additional Data 
 Error value: 

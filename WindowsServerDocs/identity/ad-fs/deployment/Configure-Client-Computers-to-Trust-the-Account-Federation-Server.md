@@ -38,7 +38,7 @@ To perform this procedure, log on as the user who will be accessing federated ap
 ## Configuring Internet Explorer settings by using Group Policy  
 For most deployments, we recommend that you use Group Policy to push the appropriate Internet Explorer settings to each client computer.  
   
-Membership in **Domain Admins** or **Enterprise Admins**, or equivalent, in Active Directory Domain Services \(AD DS\) is the minimum required to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](http://go.microsoft.com/fwlink/?LinkId=83477) \(http:\/\/go.microsoft.com\/fwlink\/?LinkId\=83477\).   
+Membership in **Domain Admins** or **Enterprise Admins**, or equivalent, in Active Directory Domain Services \(AD DS\) is the minimum required to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](https://go.microsoft.com/fwlink/?LinkId=83477) \(http:\/\/go.microsoft.com\/fwlink\/?LinkId\=83477\).   
   
 #### To configure client computers to trust the account federation server by using Group Policy  
   

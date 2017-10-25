@@ -134,14 +134,15 @@ If using the Disk Management MMC snapin, you receive this error:
 
 This occurs even if you correctly enable volume resizing on the source server using `Set-SRGroup -Name rg01 -AllowVolumeResize $TRUE`. 
 
-This issue was fixed in Cumulative Update for Windows 10 Version 1607 and Windows Server 2016: December 9, 2016 (KB3201845). 
+This issue was fixed in Cumulative Update for Windows 10, version 1607 (Anniversary Update) and Windows Server 2016: December 9, 2016 (KB3201845). 
 
 ## Attempting to grow a replicated volume fails due to missing step
 If you attempt to resize a replicated volume on the source server without setting `-AllowResizeVolume $TRUE` first, you will receive the following errors:
 
     PS C:\> Resize-Partition -DriveLetter I -Size 8GB
     Resize-Partition : Failed
-    Activity ID: {87aebbd6-4f47-4621-8aa4-5328dfa6c3be}
+
+Activity ID: {87aebbd6-4f47-4621-8aa4-5328dfa6c3be}
     At line:1 char:1
     + Resize-Partition -DriveLetter I -Size 8GB
     + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -193,6 +194,8 @@ If using the Cluster powershell cmdlet:
 
 This occurs due to a by-design behavior in Windows Server 2016. Use `Set-SRPartnership` to move these PDR disks in an asynchronous stretched cluster.  
 
+This behavior has been changed in Windows Server, version 1709 to allow manual and automated failovers with asynchronous replication, based on customer feedback.
+
 ## Attempting to add disks to a two-node asymmetric cluster returns "No disks suitable for cluster disks found" 
 When attempting to provision a cluster with only two nodes, prior to adding Storage Replica stretch replication, you attempt to add the disks in the second site to the Available Disks. You recieve the following error:
 
@@ -211,7 +214,7 @@ When specifying a bandwidth limit to Storage Replica, the limit is ignored and f
 
 `Set-SmbBandwidthLimit  -Category StorageReplication -BytesPerSecond 32MB`
 
-This issue occurs because of an interoperability issue between Storage Replica and SMB. This issue was first fixed in the July 2017 Cumulative Update of Windows Server 2016 and in Windows Server, Version 1709.
+This issue occurs because of an interoperability issue between Storage Replica and SMB. This issue was first fixed in the July 2017 Cumulative Update of Windows Server 2016 and in Windows Server, version 1709.
 
 ## Event 1241 warning repeated during initial sync
 When specifying a replication partnership is asynchronous, the source computer repeatedly logs warning event 1241 in the Storage Replica Admin channel. For example:
@@ -362,6 +365,33 @@ This issue occurs due to architectural limitations within Storage Replica's log 
 When using Storage Spaces Direct with HDDs, you cannot disable or avoid the cache. As a workaround, if using just SSD and NVME, you can configure just performance and capacity tiers. If using that configuration, and by placing the SR logs on the performance tier only with the data volumes they service being on the capacity tier only, you will avoid the high latency issue described above. The same could be done with a mix of faster and slower SSDs and no NVME.
 
 This workaround is of course not ideal and some customers may not be able to make use of it. The Storage Replica team is working on optimizations and an updated log mechanism for the future to reduce these artifical bottlenecks. There is no ETA for this, but when available to TAP customers for testing, this FAQ will be updated. 
+
+## Error when running Test-SRTopology between two clusters
+
+When running Test-SRTopology between two clusters and their CSV paths, it fails with error: 
+
+    PS C:\Windows\system32> Test-SRTopology -SourceComputerName NedClusterA -SourceVolumeName C:\ClusterStorage\Volume1 -SourceLogVolumeName L: -DestinationComputerName NedClusterB -DestinationVolumeName C:\ClusterStorage\Volume1 -DestinationLogVolumeName L: -DurationInMinutes 1 -ResultPath C:\Temp
+
+    Validating data and log volumes...
+    Measuring Storage Replica recovery and initial synchronization performance...
+    WARNING: Could not find file '\\NedNode1\C$\CLUSTERSTORAGE\VOLUME1TestSRTopologyRecoveryTest\SRRecoveryTestFile01.txt'.
+    WARNING: System.IO.FileNotFoundException
+    WARNING:    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+    at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 buff
+    erSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+    at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+    at Microsoft.FileServices.SR.Powershell.TestSRTopologyCommand.GenerateWriteIOWorkload(String Path, UInt32 IoSizeInBytes, UInt32 Parallel
+    IoCount, UInt32 Duration)
+    at Microsoft.FileServices.SR.Powershell.TestSRTopologyCommand.<>c__DisplayClass75_0.<PerformRecoveryTest>b__0()
+    at System.Threading.Tasks.Task.Execute()
+    Test-SRTopology : Could not find file '\\NedNode1\C$\CLUSTERSTORAGE\VOLUME1TestSRTopologyRecoveryTest\SRRecoveryTestFile01.txt'.
+    At line:1 char:1
+    + Test-SRTopology -SourceComputerName NedClusterA -SourceVolumeName  ...
+    + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (:) [Test-SRTopology], FileNotFoundException
+    + FullyQualifiedErrorId : TestSRTopologyFailure,Microsoft.FileServices.SR.Powershell.TestSRTopologyCommand 
+
+This is caused by a known code defect in Windows Server 2016. This issue was first fixed in Windows Server, version 1709 and the associated RSAT tools. For a downlevel resolution, please contact Microsoft Support and request a backport update. There is no workaround.
 
 ## See also  
 - [Storage Replica](storage-replica-overview.md)  

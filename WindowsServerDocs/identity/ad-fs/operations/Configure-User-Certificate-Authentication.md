@@ -29,7 +29,7 @@ AD FS can be configured for x509 user certificate authentication using one of th
 - Enable user certificate authentication as an intranet or extranet authentication method in AD FS, using either the AD FS Management console or the PowerShell cmdlet Set-AdfsGlobalAuthenticationPolicy
 - Ensure that the entire chain of trust, including any intermediate certificates, is installed on every AD FS and WAP server. 
 The intermediate certificates should be installed in the local computer intermediate certification authorities store on all AD FS and WAP servers.
-- If you wish to use claims based on certificate fields and extensions in addition to EKU (claim type http://schemas.microsoft.com/2012/12/certificatecontext/extension/eku), configure additional claim pass through rules on the Active Directory claims provider trust.  See below for a complete list of available certificate claims.  
+- If you wish to use claims based on certificate fields and extensions in addition to EKU (claim type https://schemas.microsoft.com/2012/12/certificatecontext/extension/eku), configure additional claim pass through rules on the Active Directory claims provider trust.  See below for a complete list of available certificate claims.  
 - [Optional] Configure allowed issuing certification authorities for client certificates using the guidance under "Management of trusted issuers for client authentication" in [this article](https://technet.microsoft.com/en-us/library/dn786429(v=ws.11).aspx).
 
 ## Troubleshooting
@@ -40,21 +40,21 @@ The intermediate certificates should be installed in the local computer intermed
 
 |Claim type|Example Value
 |-----|-----
-|http://schemas.microsoft.com/2012/12/certificatecontext/field/x509version | 3
-|http://schemas.microsoft.com/2012/12/certificatecontext/field/signaturealgorithm | sha256RSA
-|http://schemas.microsoft.com/2012/12/certificatecontext/field/issuer | CN=entca, DC=domain, DC=contoso, DC=com
-|http://schemas.microsoft.com/2012/12/certificatecontext/field/issuername | CN=entca, DC=domain, DC=contoso, DC=com
-|http://schemas.microsoft.com/2012/12/certificatecontext/field/notbefore | 12/05/2016 20:50:18
-|http://schemas.microsoft.com/2012/12/certificatecontext/field/notafter | 12/05/2017 20:50:18
-|http://schemas.microsoft.com/2012/12/certificatecontext/field/subject | E=user@contoso.com, CN=user, CN=Users, DC=domain, DC=contoso, DC=com
-|http://schemas.microsoft.com/2012/12/certificatecontext/field/subjectname | E=user@contoso.com, CN=user, CN=Users, DC=domain, DC=contoso, DC=com
-|http://schemas.microsoft.com/2012/12/certificatecontext/field/rawdata | {Base64 encoded digital certificate data}
-|http://schemas.microsoft.com/2012/12/certificatecontext/extension/keyusage | DigitalSignature
-|http://schemas.microsoft.com/2012/12/certificatecontext/extension/keyusage | KeyEncipherment
-|http://schemas.microsoft.com/2012/12/certificatecontext/extension/subjectkeyidentifier | 9D11941EC06FACCCCB1B116B56AA97F3987D620A
-|http://schemas.microsoft.com/2012/12/certificatecontext/extension/authoritykeyidentifier | KeyID=d6 13 e3 6b bc e5 d8 15 52 0a fd 36 6a d5 0b 51 f3 0b 25 7f
-|http://schemas.microsoft.com/2012/12/certificatecontext/extension/certificatetemplatename | User
-|http://schemas.microsoft.com/2012/12/certificatecontext/extension/san | Other Name:Principal Name=user@contoso.com, RFC822 Name=user@contoso.com
-|http://schemas.microsoft.com/2012/12/certificatecontext/extension/eku | 1.3.6.1.4.1.311.10.3.4
+|https://schemas.microsoft.com/2012/12/certificatecontext/field/x509version | 3
+|https://schemas.microsoft.com/2012/12/certificatecontext/field/signaturealgorithm | sha256RSA
+|https://schemas.microsoft.com/2012/12/certificatecontext/field/issuer | CN=entca, DC=domain, DC=contoso, DC=com
+|https://schemas.microsoft.com/2012/12/certificatecontext/field/issuername | CN=entca, DC=domain, DC=contoso, DC=com
+|https://schemas.microsoft.com/2012/12/certificatecontext/field/notbefore | 12/05/2016 20:50:18
+|https://schemas.microsoft.com/2012/12/certificatecontext/field/notafter | 12/05/2017 20:50:18
+|https://schemas.microsoft.com/2012/12/certificatecontext/field/subject | E=user@contoso.com, CN=user, CN=Users, DC=domain, DC=contoso, DC=com
+|https://schemas.microsoft.com/2012/12/certificatecontext/field/subjectname | E=user@contoso.com, CN=user, CN=Users, DC=domain, DC=contoso, DC=com
+|https://schemas.microsoft.com/2012/12/certificatecontext/field/rawdata | {Base64 encoded digital certificate data}
+|https://schemas.microsoft.com/2012/12/certificatecontext/extension/keyusage | DigitalSignature
+|https://schemas.microsoft.com/2012/12/certificatecontext/extension/keyusage | KeyEncipherment
+|https://schemas.microsoft.com/2012/12/certificatecontext/extension/subjectkeyidentifier | 9D11941EC06FACCCCB1B116B56AA97F3987D620A
+|https://schemas.microsoft.com/2012/12/certificatecontext/extension/authoritykeyidentifier | KeyID=d6 13 e3 6b bc e5 d8 15 52 0a fd 36 6a d5 0b 51 f3 0b 25 7f
+|https://schemas.microsoft.com/2012/12/certificatecontext/extension/certificatetemplatename | User
+|https://schemas.microsoft.com/2012/12/certificatecontext/extension/san | Other Name:Principal Name=user@contoso.com, RFC822 Name=user@contoso.com
+|https://schemas.microsoft.com/2012/12/certificatecontext/extension/eku | 1.3.6.1.4.1.311.10.3.4
 
 

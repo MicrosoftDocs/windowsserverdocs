@@ -285,7 +285,7 @@ Log Record Bytes Generated: 0
 ### Try This: Use LDP to return query statistics  
 Perform the following on a domain controller, or from a domain-joined client or server that has the AD DS tools installed.  Repeat the following targeting your Windows Server 2012 DC and your Windows Server 2012 R2 DC.  
   
-1.  Review the ["Creating More Efficient Microsoft AD Enabled Applications"](http://msdn.microsoft.com/library/ms808539.aspx) article and refer back to it as needed.  
+1.  Review the ["Creating More Efficient Microsoft AD Enabled Applications"](https://msdn.microsoft.com/library/ms808539.aspx) article and refer back to it as needed.  
   
 2.  Using LDP, enable search statistics (see [To enable the Stats control in LDP](../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/Directory-Services-component-updates.md#BKMK_EnableStats))  
   
@@ -296,18 +296,18 @@ Perform the following on a domain controller, or from a domain-joined client or 
 5.  Attempt to construct a search that takes a long time to complete (you may want to increase the **Time limit** option so the search does not timeout).  
   
 ### Additional Resources  
-[What Are Active Directory Searches?](http://technet.microsoft.com/library/cc783845(v=ws.10).aspx)  
+[What Are Active Directory Searches?](https://technet.microsoft.com/library/cc783845(v=ws.10).aspx)  
   
-[How Active Directory Searches Work](http://technet.microsoft.com/library/cc755809(v=WS.10).aspx)  
+[How Active Directory Searches Work](https://technet.microsoft.com/library/cc755809(v=WS.10).aspx)  
   
-[Creating More Efficient Microsoft Active Directory-Enabled Applications](http://msdn.microsoft.com/library/ms808539.aspx)  
+[Creating More Efficient Microsoft Active Directory-Enabled Applications](https://msdn.microsoft.com/library/ms808539.aspx)  
   
-[951581](http://support.microsoft.com/kb/951581) LDAP queries are executed more slowly than expected in the AD or LDS/ADAM directory service and Event ID 1644 may be logged  
+[951581](https://support.microsoft.com/kb/951581) LDAP queries are executed more slowly than expected in the AD or LDS/ADAM directory service and Event ID 1644 may be logged  
   
 ## <a name="BKMK_1644"></a>1644 Event improvements  
   
 ### Overview  
-This update adds additional LDAP search result statistics to event ID 1644 to aid in troubleshooting purposes.  Additionally, there is a new registry value that can be used to enable logging on a time-based threshold.  These improvements were made available in Windows Server 2012 and Windows Server 2008 R2 SP1 via KB [2800945](http://support.microsoft.com/kb/2800945) and will be made available to Windows Server 2008 SP2.  
+This update adds additional LDAP search result statistics to event ID 1644 to aid in troubleshooting purposes.  Additionally, there is a new registry value that can be used to enable logging on a time-based threshold.  These improvements were made available in Windows Server 2012 and Windows Server 2008 R2 SP1 via KB [2800945](https://support.microsoft.com/kb/2800945) and will be made available to Windows Server 2008 SP2.  
   
 > [!NOTE]  
 > -   Additional LDAP search statistics are added to event ID 1644 to aid in troubleshooting inefficient or expensive LDAP searches  
@@ -399,7 +399,7 @@ This updates increase the maximum throughput to around 600 Mbps by changing the 
 > There are no configurable settings to modify this behavior.  
   
 ### Additional Resources  
-[How the Active Directory Replication Model Works](http://technet.microsoft.com/library/cc772726(v=WS.10).aspx)  
+[How the Active Directory Replication Model Works](https://technet.microsoft.com/library/cc772726(v=WS.10).aspx)  
   
 
 

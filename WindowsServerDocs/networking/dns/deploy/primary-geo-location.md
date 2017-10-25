@@ -93,7 +93,7 @@ You can use the following Windows PowerShell commands to create DNS Client Subne
     Add-DnsServerClientSubnet -Name "EuropeSubnet" -IPv4Subnet "141.1.0.0/24"  
       
   
-For more information, see [Add-DnsServerClientSubnet](https://technet.microsoft.com/library/mt126261.aspx).  
+For more information, see [Add-DnsServerClientSubnet](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverclientsubnet?view=win10-ps).  
   
 ### <a name="bkmk_scopes"></a>Create Zone Scopes  
 After the client subnets are configured, you must partition the zone whose traffic you want to redirect into two different zone scopes, one scope for each of the DNS Client Subnets that you have configured.   
@@ -112,7 +112,7 @@ You can use the following Windows PowerShell commands to create zone scopes.
       
     Add-DnsServerZoneScope -ZoneName "woodgrove.com" -Name "EuropeZoneScope"  
 
-For more information, see [Add-DnsServerZoneScope](https://technet.microsoft.com/library/mt126267.aspx).  
+For more information, see [Add-DnsServerZoneScope](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverzonescope?view=win10-ps).  
   
 ### <a name="bkmk_records"></a>Add Records to the Zone Scopes  
 Now you must add the records representing the web server host into the two zone scopes.   
@@ -137,7 +137,7 @@ In this example, you must also use the following Windows PowerShell commands to 
  
 The **ZoneScope** parameter is not included when you add a record in the default scope. This is the same as adding records to a standard DNS zone.  
   
-For more information, see [Add-DnsServerResourceRecord](https://technet.microsoft.com/library/jj649925.aspx).  
+For more information, see [Add-DnsServerResourceRecord](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverresourcerecord?view=win10-ps).  
   
 ### <a name="bkmk_policies"></a>Create the Policies  
 After you have created the subnets, the partitions (zone scopes), and you have added records, you must create policies that connect the subnets and partitions, so that when a query comes from a source in one of the DNS client subnets, the query response is returned from the correct scope of the zone. No policies are required for mapping the default zone scope.   
@@ -149,7 +149,7 @@ You can use the following Windows PowerShell commands to create a DNS policy tha
       
     Add-DnsServerQueryResolutionPolicy -Name "EuropePolicy" -Action ALLOW -ClientSubnet "eq,EuropeSubnet" -ZoneScope "EuropeZoneScope,1" -ZoneName "woodgrove.com"  
      
-For more information, see [Add-DnsServerQueryResolutionPolicy](https://technet.microsoft.com/library/mt126273.aspx).  
+For more information, see [Add-DnsServerQueryResolutionPolicy](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy?view=win10-ps).  
   
 Now the DNS server is configured with the required DNS policies to redirect traffic based on geo-location.  
   
