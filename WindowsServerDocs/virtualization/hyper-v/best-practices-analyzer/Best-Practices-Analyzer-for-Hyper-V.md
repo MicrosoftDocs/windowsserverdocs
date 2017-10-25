@@ -19,7 +19,7 @@ In Windows management, *best practices* are guidelines that are considered the i
   
 The Best Practices Analyzer scans your computer using rules based on these best practices and reports the results. Each best practice rule includes details about how to comply with the rule. This section documents these rules to help you understand the best practices that apply to Hyper-V, as well interpret results when a scan finds conditions that don't comply with best practices.  
   
-For more details about Best Practices Analyzer and scans, see [Best Practices Analyzer](http://go.microsoft.com/fwlink/?LinkId=122786).  
+For more details about Best Practices Analyzer and scans, see [Best Practices Analyzer](https://go.microsoft.com/fwlink/?LinkId=122786).  
   
 ## About Hyper-V  
 Hyper-V lets you run multiple operating systems at the same time on one physical computer, by running each one in a virtual machine. Virtual machines can help you use your computing resources more efficiently and flexibly. For more about Hyper-V, see [Hyper-V on Windows Server 2016](../Hyper-V-on-Windows-Server.md).  

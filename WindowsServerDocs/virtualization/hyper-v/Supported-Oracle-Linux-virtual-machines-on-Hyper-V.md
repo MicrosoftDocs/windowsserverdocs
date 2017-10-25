@@ -42,7 +42,7 @@ The 32-bit kernel for the 6.x series is PAE enabled. There is no built-in LIS su
 
 |**Feature**|**Windows server version**|**6.4-6.8 and 7.0-7.3**|**6.4-6.8 and 7.0-7.2**|**RHCK 7.0-7.2**|**RHCK 6.8**|**RHCK 6.6, 6.7**|**RHCK 6.5**|**RHCK6.4**|
 |-|-|-|-|-|-|-|-|-|
-|**Availability**||[LIS 4.2](http://www.microsoft.com/download/details.aspx?id=55106)|[LIS 4.1](https://www.microsoft.com/download/details.aspx?id=51612)|Built in|Built in|Built in|Built in|Built in|
+|**Availability**||[LIS 4.2](https://www.microsoft.com/download/details.aspx?id=55106)|[LIS 4.1](https://www.microsoft.com/download/details.aspx?id=51612)|Built in|Built in|Built in|Built in|Built in|
 |**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_core)**|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |Windows Server 2016 Accurate Time|2016|||||||
 |**[Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Networking)**|
@@ -169,7 +169,7 @@ The Oracle Linux Unbreakable Enterprise Kernel (UEK) is 64-bit only and has LIS 
 
 See Also
 
-* [Set-VMFirmware](http://technet.microsoft.com/library/dn464287.aspx)
+* [Set-VMFirmware](https://technet.microsoft.com/library/dn464287.aspx)
 
 * [Supported CentOS and Red Hat Enterprise Linux virtual machines on Hyper-V](Supported-CentOS-and-Red-Hat-Enterprise-Linux-virtual-machines-on-Hyper-V.md)
 

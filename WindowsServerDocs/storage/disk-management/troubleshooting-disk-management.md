@@ -24,7 +24,7 @@ This topic lists a few common issues you may encounter when using Disk Managemen
 Dynamic disks appear as **Foreign** when they are added to the system. To use the volumes, you must import the **Foreign** disks and then bring the volumes **Online**.
 Removable media devices (such as Zip or Jaz drives), and optical discs (such as CD-ROM or DVD-RAM) are always automatically mounted by the system.
 
-**Solution:** Manually mount the basic volumes by assigning drive letters, or by creating mount points using Disk Management or the [DiskPart](http://go.microsoft.com/fwlink/?LinkId=64110) or [mountvol](http://go.microsoft.com/fwlink/?LinkId=64111) commands.
+**Solution:** Manually mount the basic volumes by assigning drive letters, or by creating mount points using Disk Management or the [DiskPart](https://go.microsoft.com/fwlink/?LinkId=64110) or [mountvol](https://go.microsoft.com/fwlink/?LinkId=64111) commands.
 
 <a id="BKMK_2"></a>
 

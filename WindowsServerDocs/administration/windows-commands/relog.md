@@ -90,7 +90,7 @@ Using the **/config** option:
     -   csv  
     -   [t]  
     -   5  
-for more information about incorporating **relog** into your Windows Management Instrumentation (WMI) scripts, see "Scripting WMI" at the [Microsoft Windows Resource Kits Web site](http://go.microsoft.com/fwlink/?LinkId=4665).  
+for more information about incorporating **relog** into your Windows Management Instrumentation (WMI) scripts, see "Scripting WMI" at the [Microsoft Windows Resource Kits Web site](https://go.microsoft.com/fwlink/?LinkId=4665).  
 ## <a name="BKMK_Examples"></a>Examples  
 To resample existing trace logs at fixed intervals of 30, list counter paths, output files and formats:  
 ```  

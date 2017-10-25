@@ -160,7 +160,7 @@ The DSA operation is unable to proceed because of a DNS lookup failure.
       Computer: <dc name>.<domain name>
       Description: Active Directory Domain Services could not resolve the following DNS host name of the source domain controller to an IP address. This error prevents additions, deletions and changes in Active Directory Domain Services from replicating between one or more domain controllers in the forest. Security groups, group policy, users and computers and their passwords will be inconsistent between domain controllers until this error is resolved, potentially affecting logon authentication and access to network resources.
    
-      Remainder of event truncated, see MSKB [824449](http://support.microsoft.com/?kbid=824449) for full text.
+      Remainder of event truncated, see MSKB [824449](https://support.microsoft.com/?kbid=824449) for full text.
    ```
 
    ```
@@ -180,7 +180,7 @@ The DSA operation is unable to proceed because of a DNS lookup failure.
          
     You should immediately resolve this DNS configuration error so that this domain controller can resolve the IP address of the source domain controller using DNS.
     
-    <Remainder of event truncated, see MSKB [824449](http://support.microsoft.com/?kbid=824449) for full text.
+    <Remainder of event truncated, see MSKB [824449](https://support.microsoft.com/?kbid=824449) for full text.
     ```
       
 
@@ -226,7 +226,7 @@ GUI Metadata Cleanup using Active Directory Sites and Services (DSSITE.MSC):
 
          A DCs NTDS Settings object appears below the Sites, Site Name, Servers container and %server name% container and above the inbound connection object displayed in in the right-hand pane of Active Directory Sites and Services. Right click on the stale NTDS Settings object you want to remove then click <ui>Delete</ui>.
    
-Metadata cleanup can also be performed from the Windows Server 2008 or Windows Server 2008 R2 version of Active Directory Users and Computers snap-in as documented in [Clean Up Server Metadata](http://technet.microsoft.com/library/cc816907%28WS.10%29.aspx), or by using NTDSUTIL (documented in MSKB [216498](http://support.microsoft.com/default.aspx?scid=kb;EN-US;216498).
+Metadata cleanup can also be performed from the Windows Server 2008 or Windows Server 2008 R2 version of Active Directory Users and Computers snap-in as documented in [Clean Up Server Metadata](https://technet.microsoft.com/library/cc816907%28WS.10%29.aspx), or by using NTDSUTIL (documented in MSKB [216498](https://support.microsoft.com/default.aspx?scid=kb;EN-US;216498).
 
 ### Run DCDIAG /TEST:DNS on the source DC + destination DC. 
 
@@ -317,7 +317,7 @@ The error message text in DS RPC Client event 2087 documents a user action for r
 On the source DC, verify that DNS Client settings point *exclusively*  to operational DNS Severs that either host, forward or delegate the:
 - _msdcs.<forest root domain> zone (i.e. All DCs in the contoso.com forest register CNAME records in the _msdcs.contoso.com zone), AND
 - The DNS zone for the Active Directory domain (i.e. a computer in the contoso.com domain would register host records in in contoso.com zone), AND
-- The computers primary DNS suffix domain if different from the Active Directory domain name (see [Disjoint Namespace](http://technet.microsoft.com/library/cc731125.aspx)).
+- The computers primary DNS suffix domain if different from the Active Directory domain name (see [Disjoint Namespace](https://technet.microsoft.com/library/cc731125.aspx)).
 
 Options to validate that a DNS Server hosts, forwards or delegates (i.e. "can resolve") such zones include:
       - Start the DNS management tool for your DNS and verify that the DNS Servers that the source DC points to for name resolution host the zones in question.
@@ -392,7 +392,7 @@ c:\>net stop netlogon & net start netlogon
 
 > Timing issues during OS startup can delay successful Dynamic DNS registration.
 
-> If a DCs CNAME record was successfully registered but later disappears, check for the [zone transfer delete bug](http://support.microsoft.com/default.aspx?scid=kb;EN-US;953317), duplicate DNS zones in different replication scopes or overly aggressive scavenging by the DNS Server.
+> If a DCs CNAME record was successfully registered but later disappears, check for the [zone transfer delete bug](https://support.microsoft.com/default.aspx?scid=kb;EN-US;953317), duplicate DNS zones in different replication scopes or overly aggressive scavenging by the DNS Server.
 
 > If the CNAME record registration is failing on the DNS servers that the source DC points to for name resolution, review NETLOGN events in the SYSTEM event log for DNS registration failures.
 
@@ -443,7 +443,7 @@ On the destination DC, verify that DNS Client settings point *exclusively* to op
 
 - _msdcs.<forest root domain> zone (i.e. All DCs in the contoso.com forest register CNAME records in the _msdcs.contoso.com zone), AND
 - The DNS zone for the Active Directory domain (i.e. a computer in the contoso.com domain would register host records in in contoso.com zone), AND
-- The computers primary DNS suffix domain if different from the Active Directory domain name (see [Disjoint Namespace](http://technet.microsoft.com/library/cc731125.aspx)
+- The computers primary DNS suffix domain if different from the Active Directory domain name (see [Disjoint Namespace](https://technet.microsoft.com/library/cc731125.aspx)
 
 Options to validate that a DNS Server hosts, forwards or delegates (i.e. "can resolve") such zones include:
 
@@ -525,7 +525,7 @@ If the DNS Servers used by the source and destination host AD-integrated copies 
 If the DNS zones used by the source and destination DC are stored in primary and secondary copies of DNS zones, check for:
 - The "allow zone transfers" checkbox is not enabled on the DNS that hosts the primary copy of the zone
 - The "Only the following servers" checkbox is enabled but the IP address of the secondary DNS has not been added to the allow list on the primary DNS 
-- The DNS zone on the Windows Server 2008 DNS hosting the secondary copy of the zone is empty due to MSKB [953317](http://support.microsoft.com/default.aspx?scid=kb;EN-US;953317).
+- The DNS zone on the Windows Server 2008 DNS hosting the secondary copy of the zone is empty due to MSKB [953317](https://support.microsoft.com/default.aspx?scid=kb;EN-US;953317).
 
 If the DNS servers used by the source and destination DC have parent / child relationships, check for:
 - Invalid delegations on the DNS that owns the parent zone that is delegating to the subordinate zone

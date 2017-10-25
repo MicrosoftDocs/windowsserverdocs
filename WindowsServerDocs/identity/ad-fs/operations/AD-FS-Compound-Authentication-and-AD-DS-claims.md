@@ -1,6 +1,6 @@
 ---
 title: Compound Authentication and Active Directory Domain Services claims in Active Directory Federation Services
-description:The following document discusses compound authentication and AD DS claims in AD FS.
+description: The following document discusses compound authentication and AD DS claims in AD FS.
 author: billmath
 ms.author: billmath
 manager: femila
@@ -85,7 +85,7 @@ Set-AdfsGlobalAuthenticationPolicy -PrimaryIntranetAuthenticationProvider 'Windo
 2.  In AD FS Management, under **Service**, right-click **Claim description** and select **Add claim description**
 3.  Enter the following information in the claim description
 	- Display Name: 'Windows device group' 
-	- Claim Description: 'http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsdevicegroup' `
+	- Claim Description: 'https://schemas.microsoft.com/ws/2008/06/identity/claims/windowsdevicegroup' `
 4. Place a check in both boxes.
 5. Click **OK**.
 
@@ -93,7 +93,7 @@ Set-AdfsGlobalAuthenticationPolicy -PrimaryIntranetAuthenticationProvider 'Windo
 
 6. Using PowerShell you can use the **Add-AdfsClaimDescription** cmdlet.
 ``` powershell
-Add-AdfsClaimDescription -Name 'Windows device group' -ClaimType 'http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsdevicegroup' `
+Add-AdfsClaimDescription -Name 'Windows device group' -ClaimType 'https://schemas.microsoft.com/ws/2008/06/identity/claims/windowsdevicegroup' `
 -ShortName 'windowsdevicegroup' -IsAccepted $true -IsOffered $true -IsRequired $false -Notes 'The windows group SID of the device' 
 ```
 
@@ -227,7 +227,7 @@ For example – The following **AdditionalAuthenticationRules** Tells AD FS to i
 However, if any of the above conditions are met, do not invoke MFA.
 
 ```
-'NOT EXISTS([Type == "http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsdevicegroup", Value =~ "S-1-5-21-2134745077-1211275016-3050530490-1115"])
-&& NOT EXISTS([Type == "http://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid", Value =~ "S-1-5-21-2134745077-1211275016-3050530490-1117"])
-=> issue(Type = "http://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", Value = "http://schemas.microsoft.com/claims/multipleauthn");'
+'NOT EXISTS([Type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/windowsdevicegroup", Value =~ "S-1-5-21-2134745077-1211275016-3050530490-1115"])
+&& NOT EXISTS([Type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid", Value =~ "S-1-5-21-2134745077-1211275016-3050530490-1117"])
+=> issue(Type = "https://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", Value = "https://schemas.microsoft.com/claims/multipleauthn");'
 ```

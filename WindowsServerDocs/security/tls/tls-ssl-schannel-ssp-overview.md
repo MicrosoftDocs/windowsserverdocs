@@ -22,11 +22,11 @@ This topic for the IT professional introduces the TLS/SSL implementation in Wind
 
 **Did you mean???**
 
--   [The Schannel security package](http://msdn.microsoft.com/library/ms678421.aspx)
+-   [The Schannel security package](https://msdn.microsoft.com/library/ms678421.aspx)
 
--   [Secure Channel](http://msdn.microsoft.com/library/windows/desktop/aa380123.aspx)
+-   [Secure Channel](https://msdn.microsoft.com/library/windows/desktop/aa380123.aspx)
 
--   [Transport Layer Security Protocol](http://msdn.microsoft.com/library/windows/desktop/aa380516.aspx)
+-   [Transport Layer Security Protocol](https://msdn.microsoft.com/library/windows/desktop/aa380516.aspx)
 
 ## <a name="BKMK_OVER"></a>TLS\SSL \(Schannel\) description
 Schannel is a Security Support Provider \(SSP\) that implements the Secure Sockets Layer \(SSL\) and Transport Layer Security \(TLS\) Internet standard authentication protocols.

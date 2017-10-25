@@ -37,4 +37,4 @@ To remove all formatting from the selected disk, type:
 clean
 ```
 
-[Clear-Disk](http://technet.microsoft.com/library/hh848661.aspx)
+[Clear-Disk](https://technet.microsoft.com/library/hh848661.aspx)

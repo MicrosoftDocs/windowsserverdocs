@@ -145,7 +145,7 @@ With its higher than zero RPO, asynchronous replication is less suitable for HA 
 
 -   The destination volume is not accessible while replicating in Windows Server 2016. When you configure replication, the destination volume dismounts, making it inaccessible to any reads or writes by users. Its driver letter may be visible in typical interfaces like File Explorer, but an application cannot access the volume itself. Block-level replication technologies are incompatible with allowing access to the destination target's mounted file system in a volume; NTFS and ReFS do not support users writing data to the volume while blocks change underneath them. 
 
-In Windows Server, Version 1709 the new Test-Failover option was added. This now supports temporarily mounting a read-write snapshot of the destination volume for backups, testing, etc. See https://aka.ms/srfaq for more info.
+In Windows Server, version 1709 the new Test-Failover option was added. This now supports temporarily mounting a read-write snapshot of the destination volume for backups, testing, etc. See https://aka.ms/srfaq for more info.
 
 -   The Microsoft implementation of asynchronous replication is different than most. Most industry implementations of asynchronous replication rely on snapshot-based replication, where periodic differential transfers move to the other node and merge. Storage Replica asynchronous replication operates just like synchronous replication, except that it removes the requirement for a serialized synchronous acknowledgment from the destination. This means that Storage Replica theoretically has a lower RPO as it continuously replicates. However, this also means it relies on internal application consistency guarantees rather than using snapshots to force consistency in application files. Storage Replica guarantees crash consistency in all replication modes  
 
@@ -168,6 +168,19 @@ This guide frequently uses the following terms:
 -   A replication partnership is the synchronization relationship between a source and destination computer for one or more volumes and utilizes a single log.  
 
 -   A replication group is the organization of volumes and their replication configuration within a partnership, on a per server basis. A group may contain one or more volumes.  
+
+### What's new for Storage Replica in Windows Server, version 1709
+Two new features are available in Windows Server, version 1709:
+
+-   The test failover feature. This allows mounting of destination storage in order to validate replication or backup data. For more info, see https://aka.ms/srfaq
+
+-   The "Project Honolulu" Server Manager Experience tool now supports managing Storage Replica graphically for server-to-server configurations, with no need to use PowerShell for general deployment, management, failover, and removal operations operations.
+
+Additionally, Windows Server, version 1709:
+
+-   Contains multiple bug fixes 
+
+-   Alters asynchronous stretch cluster behaviors so that automatic failovers now occur
 
 ## See also
 - [Stretch Cluster Replication Using Shared Storage](stretch-cluster-replication-using-shared-storage.md)  

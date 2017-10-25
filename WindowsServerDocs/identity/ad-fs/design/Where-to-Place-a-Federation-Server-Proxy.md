@@ -30,7 +30,7 @@ For the federation server proxy redirection process to be successful, all firewa
   
 In addition, the Internet\-facing firewall server, such as a computer running Microsoft Internet Security and Acceleration \(ISA\) Server, uses a process known as server publishing to distribute Internet client requests to the appropriate perimeter and corporate network servers, such as federation server proxies or federation servers.  
   
-Server publishing rules determine how server publishing works—essentially, filtering all incoming and outgoing requests through the ISA Server computer. Server publishing rules map incoming client requests to the appropriate servers behind the ISA Server computer. For information about how to configure ISA Server to publish a server, see [Create a Secure Web Publishing Rule](http://go.microsoft.com/fwlink/?LinkId=75182).  
+Server publishing rules determine how server publishing works—essentially, filtering all incoming and outgoing requests through the ISA Server computer. Server publishing rules map incoming client requests to the appropriate servers behind the ISA Server computer. For information about how to configure ISA Server to publish a server, see [Create a Secure Web Publishing Rule](https://go.microsoft.com/fwlink/?LinkId=75182).  
   
 In the federated world of AD FS, these client requests are typically made to a specific URL, for example, a federation server identifier URL such as http://fs.fabrikam.com. Because these client requests come in from the Internet, the Internet\-facing firewall server must be configured to publish the federation server identifier URL for each federation server proxy that is deployed in the perimeter network.  
   

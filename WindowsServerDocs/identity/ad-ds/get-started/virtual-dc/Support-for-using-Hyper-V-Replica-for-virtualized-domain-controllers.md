@@ -22,7 +22,7 @@ Hyper-V Replica asynchronously replicates selected VMs from a primary Hyper-V ho
   
 Failover can be either planned or unplanned. A planned failover is initiated by an administrator on the primary VM, and any un-replicated changes are copied over to the replica VM to prevent any data loss. An unplanned failover is initiated on the replica VM in response to an unexpected failure of the primary VM. Data loss is possible because there is no opportunity to transmit changes on the primary VM that might not have been replicated yet.  
   
-For more information about Hyper-V Replica, see [Hyper-V Replica Overview](http://technet.microsoft.com/library/jj134172.aspx) and [Deploy Hyper-V Replica](http://technet.microsoft.com/library/jj134207.aspx).  
+For more information about Hyper-V Replica, see [Hyper-V Replica Overview](https://technet.microsoft.com/library/jj134172.aspx) and [Deploy Hyper-V Replica](https://technet.microsoft.com/library/jj134207.aspx).  
   
 > [!NOTE]  
 > Hyper-V Replica can be run only on Windows Server Hyper-V, not the version of Hyper-V that runs on Windows 8.  
@@ -31,19 +31,19 @@ For more information about Hyper-V Replica, see [Hyper-V Replica Overview](http:
 Windows Server 2012 Hyper-V also introduces VM-GenerationID (VMGenID). VMGenID provides a way for the hypervisor to communicate to the guest OS when significant changes have occurred. For example, the hypervisor can communicate to a virtualized DC that a restore from snapshot has occurred (Hyper-V snapshot restore technology, not backup restore). AD DS in Windows Server 2012 is aware of VMGenID VM technology and uses it to detect when hypervisor operations are performed, such as snapshot restore, which allows it to better protect itself.  
   
 > [!NOTE]  
-> To reinforce the point, only AD DS on Windows Server 2012 DCs provides these safety measures resulting from VMGenID; DCs that run all previous releases of Windows Server are subject to problems such as USN rollback that can occur when a virtualized DC is restored using an unsupported mechanism, such as snapshot restore. For more information about these safeguards and when they are triggered, see [Virtualized Domain Controller Architecture](http://technet.microsoft.com/library/jj574118.aspx).  
+> To reinforce the point, only AD DS on Windows Server 2012 DCs provides these safety measures resulting from VMGenID; DCs that run all previous releases of Windows Server are subject to problems such as USN rollback that can occur when a virtualized DC is restored using an unsupported mechanism, such as snapshot restore. For more information about these safeguards and when they are triggered, see [Virtualized Domain Controller Architecture](https://technet.microsoft.com/library/jj574118.aspx).  
   
 When a Hyper-V replica failover occurs (planned or unplanned), the Windows Server 2012 virtualized DC detects a VMGenID reset, triggering the aforementioned safety features. Active Directory operations then proceed as normal. The replica VM runs in place of the primary VM.  
   
 > [!NOTE]  
 > Given that now there are now two instances of the same DC identity, there is a potential for both the primary instance and the replicated instance to run. While Hyper-V Replica has control mechanisms in place to ensure the primary and replica VMs do not run simultaneously, it is possible for them to run at the same time in the event the link between them fails after replication of the VM. In the event of this unlikely occurrence, virtualized DCs that run Windows Server 2012 have safeguards to help protect AD DS, whereas virtualized DCs that run earlier versions of Windows Server do not.  
   
-When using Hyper-V Replica, ensure that you follow best practices for [running virtual domain controllers on Hyper-V](http://technet.microsoft.com/library/virtual_active_directory_domain_controller_virtualization_hyperv(v=WS.10).aspx). This discusses, for example, recommendations for storing Active Directory files on virtual SCSI disks, which provides stronger guarantees of data durability.  
+When using Hyper-V Replica, ensure that you follow best practices for [running virtual domain controllers on Hyper-V](https://technet.microsoft.com/library/virtual_active_directory_domain_controller_virtualization_hyperv(v=WS.10).aspx). This discusses, for example, recommendations for storing Active Directory files on virtual SCSI disks, which provides stronger guarantees of data durability.  
   
 ## Supported and unsupported scenarios  
 Only VMs that run Windows Server 2012 are supported for unplanned failover and for testing failover. Even for planned failover, Windows Server 2012 is recommended for the virtualized DC in order to mitigate risks in the event that an administrator inadvertently starts both the primary VM and the replicated VM at the same time.  
   
-VMs that run earlier versions of Windows Server are supported for planned failover but unsupported for unplanned failover because of the potential for USN rollback. For more information about USN rollback, see [USN and USN Rollback](http://technet.microsoft.com/library/d2cae85b-41ac-497f-8cd1-5fbaa6740ffe(v=ws.10)).  
+VMs that run earlier versions of Windows Server are supported for planned failover but unsupported for unplanned failover because of the potential for USN rollback. For more information about USN rollback, see [USN and USN Rollback](https://technet.microsoft.com/library/d2cae85b-41ac-497f-8cd1-5fbaa6740ffe(v=ws.10)).  
   
 > [!NOTE]  
 > There are no functional level requirements for the domain or forest; there are only operating system requirements for the DCs that run as VMs that are replicated using Hyper-V Replica. The VMs can be deployed in a forest that contains other physical or virtual DCs that run earlier versions of Windows Server and may or may not also be replicated using Hyper-V Replica.  
@@ -65,7 +65,7 @@ The following table explains support for virtualized DCs that run Windows Server
 |||  
 |-|-|  
 |Planned Failover|Unplanned Failover|  
-|Supported but not recommended because DCs that run these versions of Windows Server do not support VMGenID or use associated virtualization safeguards. This places them at risk for USN rollback. For more information, see [USN and USN Rollback](http://technet.microsoft.com/en-us/library/d2cae85b-41ac-497f-8cd1-5fbaa6740ffe(v=ws.10)).|Not supported **Note:** Unplanned failover would be supported where USN rollback is not a risk, such as a single DC in the forest (a configuration that is not recommended).|  
+|Supported but not recommended because DCs that run these versions of Windows Server do not support VMGenID or use associated virtualization safeguards. This places them at risk for USN rollback. For more information, see [USN and USN Rollback](https://technet.microsoft.com/en-us/library/d2cae85b-41ac-497f-8cd1-5fbaa6740ffe(v=ws.10)).|Not supported **Note:** Unplanned failover would be supported where USN rollback is not a risk, such as a single DC in the forest (a configuration that is not recommended).|  
 |Test case:<br /><br />-   DC1 and DC2 are running Windows Server 2008 R2.<br /><br />-   DC2 is shut down and a planned failover is performed on DC2-Rec. All data on DC2 is replicated to DC2-Rec before the shutdown is complete.<br /><br />-   After DC2-Rec starts, it resumes replication with DC1 using the same invocationID as DC2.|N/A|  
   
 

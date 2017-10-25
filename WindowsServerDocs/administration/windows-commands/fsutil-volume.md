@@ -86,6 +86,6 @@ fsutil volume querycluster C: 50 0x2000
 
 [Fsutil](Fsutil.md)
 
-[How NTFS Works](http://go.microsoft.com/fwlink/?LinkId=183396)
+[How NTFS Works](https://go.microsoft.com/fwlink/?LinkId=183396)
 
 

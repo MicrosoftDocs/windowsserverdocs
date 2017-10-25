@@ -18,7 +18,7 @@ manager: dongill
 
 >Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
-You can include add-ins on all server or client computers by installing them before creating an image. These add-ins will then be automatically included on all computers replicated using that image. You can either install an add-in by running the .wssx file or you can install individual add-in files by following the guidance in the [SDK documentation](http://go.microsoft.com/fwlink/?LinkID=248648)for each type of add-in. If you install by using a .wssx file, the add-in can be uninstalled through the Add-In Manager. If you install the individual files, the add-in is not managed from the Add-In Manager.  
+You can include add-ins on all server or client computers by installing them before creating an image. These add-ins will then be automatically included on all computers replicated using that image. You can either install an add-in by running the .wssx file or you can install individual add-in files by following the guidance in the [SDK documentation](https://go.microsoft.com/fwlink/?LinkID=248648)for each type of add-in. If you install by using a .wssx file, the add-in can be uninstalled through the Add-In Manager. If you install the individual files, the add-in is not managed from the Add-In Manager.  
   
 > [!NOTE]
 >  Any software that is installed or downloaded on the server (including Dashboard tabs and health notifications) should have a localized interface that matches the language of the operating system that is installed on the server.  

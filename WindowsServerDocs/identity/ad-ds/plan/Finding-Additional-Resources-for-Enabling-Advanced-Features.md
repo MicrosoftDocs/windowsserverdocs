@@ -22,7 +22,7 @@ You can find the following documentation about Active Directory Domain Services 
   
 -   For more information about upgrading an Active Directory domain to  Windows Server 2008 , see [Upgrading Active Directory Domains to Windows Server 2008 AD DS Domains \[LH\]](assetId:///9c91be5f-df14-40b2-b176-2b1852a51e61).  
   
--   For more information about deploying AD DS, see the Step-by-Step Guide for  Windows Server 2008  Active Directory Domain Services Installation and Removal ([http://go.microsoft.com/fwlink/?LinkId=100492](http://go.microsoft.com/fwlink/?LinkId=100492)).  
+-   For more information about deploying AD DS, see the Step-by-Step Guide for  Windows Server 2008  Active Directory Domain Services Installation and Removal ([https://go.microsoft.com/fwlink/?LinkId=100492](https://go.microsoft.com/fwlink/?LinkId=100492)).  
   
 
 

@@ -53,5 +53,5 @@ dcgpofix /ignoreschema /target:DC
 
 #### Additional references
 
--   [Group Policy TechCenter](http://go.microsoft.com/fwlink/?LinkID=145531)
+-   [Group Policy TechCenter](https://go.microsoft.com/fwlink/?LinkID=145531)
 -   [Command-Line Syntax Key](command-line-syntax-key.md)

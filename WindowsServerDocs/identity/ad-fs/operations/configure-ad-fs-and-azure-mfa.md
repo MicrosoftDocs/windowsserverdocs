@@ -50,7 +50,7 @@ The following pre-requisites are required when using Azure MFA for authenticatio
 > Azure AD and Azure MFA are included in Azure AD Premium and the Enterprise Mobility Suite (EMS).  If you have either of these you do not need individual subscriptions.   
 - A Windows Server 2016 AD FS on-premises environment.  
 - Your on-premises environment is [federated with Azure AD.](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect-get-started-custom/#configuring-federation-with-ad-fs)  
-- [Windows Azure Active Directory Module for Windows PowerShell](http://go.microsoft.com/fwlink/p/?linkid=236297).  
+- [Windows Azure Active Directory Module for Windows PowerShell](https://go.microsoft.com/fwlink/p/?linkid=236297).  
 - Global administrator permissions on your instance of Azure AD to configure it using Azure AD PowerShell.  
 - Enterprise administrator credentials to configure the AD FS farm for Azure MFA.  
   

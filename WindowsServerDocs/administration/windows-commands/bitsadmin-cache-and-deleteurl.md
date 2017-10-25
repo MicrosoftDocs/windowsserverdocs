@@ -35,9 +35,9 @@ bitsadmin /DeleteURL url
 
 ## <a name="BKMK_examples"></a>Examples
 
-The following example deletes all cache entries for http://www.microsoft.com/en/us/default.aspx
+The following example deletes all cache entries for https://www.microsoft.com/en/us/default.aspx
 ```
-C:\>bitsadmin /DeleteURL http://www.microsoft.com/en/us/default.aspx 
+C:\>bitsadmin /DeleteURL https://www.microsoft.com/en/us/default.aspx 
 ```
 
 #### Additional references

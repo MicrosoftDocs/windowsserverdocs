@@ -19,7 +19,7 @@ ms.author: billmath
 
 For clients on the corporate network to successfully access a federation server using Windows Integrated authentication, a host \(A\) resource record must first be created in the corporate Domain Name System \(DNS\) that resolves the host name of the account federation server \(for example, fs.fabrikam.com\) to the IP address of the federation server or federation server cluster. You can use the following procedure to add a host \(A\) resource record to corporate DNS for a federation server.  
   
-Membership in **Administrators**, or equivalent, is the minimum required to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](http://go.microsoft.com/fwlink/?LinkId=83477).   
+Membership in **Administrators**, or equivalent, is the minimum required to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](https://go.microsoft.com/fwlink/?LinkId=83477).   
   
 ### To add a host \(A\) resource record to corporate DNS for a federation server  
   

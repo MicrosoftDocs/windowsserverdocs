@@ -46,7 +46,7 @@ fsutil repair [wait][<WaitType>] <VolumePath>
 
 ## Remarks
 
--   Self-healing NTFS attempts to correct corruptions of the NTFS file system online, without requiring **Chkdsk.exe** to be run. This feature was introduced in Windows Server 2008. For more information, see [Self Healing NTFS](http://go.microsoft.com/fwlink/?LinkID=165401).
+-   Self-healing NTFS attempts to correct corruptions of the NTFS file system online, without requiring **Chkdsk.exe** to be run. This feature was introduced in Windows Server 2008. For more information, see [Self Healing NTFS](https://go.microsoft.com/fwlink/?LinkID=165401).
 
 ## <a name="BKMK_examples"></a>Examples
 
@@ -73,6 +73,6 @@ fsutil repair set c: 0
 
 [Fsutil](Fsutil.md)
 
-[Self Healing NTFS](http://go.microsoft.com/fwlink/?LinkID=165401)
+[Self Healing NTFS](https://go.microsoft.com/fwlink/?LinkID=165401)
 
 

@@ -41,4 +41,4 @@ fondue.exe /enable-feature:NETFX3 /caller-name:Admin.bat /hide-ux:all
 ## additional references
 -   [Command-Line Syntax Key](command-line-syntax-key.md)
 ## See Also
-[Microsoft .NET Framework 3.5 Deployment Considerations](http://go.microsoft.com/fwlink/?LinkId=248869)
+[Microsoft .NET Framework 3.5 Deployment Considerations](https://go.microsoft.com/fwlink/?LinkId=248869)

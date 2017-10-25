@@ -99,7 +99,7 @@ SLES12 and SLES12SP1 are 64-bit only.
 
 ## See Also
 
-* [Set-VMFirmware](http://technet.microsoft.com/library/dn464287.aspx)
+* [Set-VMFirmware](https://technet.microsoft.com/library/dn464287.aspx)
 
 * [Supported CentOS and Red Hat Enterprise Linux virtual machines on Hyper-V](Supported-CentOS-and-Red-Hat-Enterprise-Linux-virtual-machines-on-Hyper-V.md)
 

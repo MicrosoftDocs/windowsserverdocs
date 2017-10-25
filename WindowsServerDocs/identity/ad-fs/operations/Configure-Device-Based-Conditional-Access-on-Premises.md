@@ -222,5 +222,5 @@ To enable automatic MDM enrollment of registered devices so that you can use the
 ### Related Articles  
 * [Securing access to Office 365 and other apps connected to Azure Active Directory](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access/)  
 * [Conditional access device policies for Office 365 services](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-device-policies/)  
-* [Setting up on-premises conditional access using Azure Active Directory Device Registration](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-on-premises-setup/)  
+* [Setting up on-premises conditional access using Azure Active Directory Device Registration](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-device-registration-on-premises-setup)  
 * [Connect domain-joined devices to Azure AD for Windows 10 experiences](https://azure.microsoft.com/en-us/documentation/articles/active-directory-azureadjoin-devices-group-policy/)  

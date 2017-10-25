@@ -24,7 +24,7 @@ To change the name of the company that is displayed on the sign\-in page, use th
  
   
 > [!NOTE]  
-> You can also use the Windows PowerShell Integrated Scripting Environment \(ISE\) to change the company name. By using the Windows PowerShell ISE, you can display content in a Unicode\-compliant environment. For additional information, see [Introducing the Windows PowerShell ISE](http://technet.microsoft.com/library/dd315244.aspx).  
+> You can also use the Windows PowerShell Integrated Scripting Environment \(ISE\) to change the company name. By using the Windows PowerShell ISE, you can display content in a Unicode\-compliant environment. For additional information, see [Introducing the Windows PowerShell ISE](https://technet.microsoft.com/library/dd315244.aspx).  
 
 ## Additional references 
 [AD FS User Sign-in Customization](AD-FS-user-sign-in-customization.md)  

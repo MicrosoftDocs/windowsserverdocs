@@ -45,7 +45,7 @@ You can have only one server on your network that is running  Windows Server Ess
 1.  Turn on the Destination Server and insert  Windows Server Essentials DVD1 into the DVD drive. If you see a message that asks if you want to boot from a CD or DVD, press any key to do so.  
   
     > [!NOTE]
-    >  If the Destination Server supports booting from a USB flash drive, you can use the **Windows 7 USB/DVD Download Tool** to create a bootable USB Flash drive from the  Windows Server Essentials ISO file. Using a USB flash drive can significantly speed up the installation process because flash drives read data much faster than DVD-ROM drives do. After you create a bootable USB flash drive, you can add an answer file to the flash drive. You can [download the Windows 7 USB/DVD Download Tool](http://go.microsoft.com/fwlink/p/?LinkId=248282) free at Microsoft Store website.  
+    >  If the Destination Server supports booting from a USB flash drive, you can use the **Windows 7 USB/DVD Download Tool** to create a bootable USB Flash drive from the  Windows Server Essentials ISO file. Using a USB flash drive can significantly speed up the installation process because flash drives read data much faster than DVD-ROM drives do. After you create a bootable USB flash drive, you can add an answer file to the flash drive. You can [download the Windows 7 USB/DVD Download Tool](https://go.microsoft.com/fwlink/p/?LinkId=248282) free at Microsoft Store website.  
   
     > [!NOTE]
     >  If the Destination Server does not boot from the DVD, restart the computer and check the BIOS Setup to ensure that **DVD-ROM** is listed first in the boot sequence. For more information about how to change the BIOS Setup boot sequence, see your hardware manufacturer's documentation.  
@@ -72,9 +72,9 @@ You can have only one server on your network that is running  Windows Server Ess
   
 |Tool|Description|  
 |----------|-----------------|  
-|Netdiag|Helps isolate networking and connectivity issues. For more information and to download, see [Netdiag](http://go.microsoft.com/fwlink/?LinkId=217388).|  
-|Dcdiag.exe|Analyzes the state of domain controllers in a forest or enterprise, and reports issues to assist you in troubleshooting. For more information and to download, see [Dcdiag](http://go.microsoft.com/fwlink/?LinkId=217389).|  
-|Repadmin.exe|Assists you in diagnosing replication issues between domain controllers. This tool requires command-line parameters to run. For more information and to download, see [Repadmin](http://go.microsoft.com/fwlink/?LinkId=217387).|  
+|Netdiag|Helps isolate networking and connectivity issues. For more information and to download, see [Netdiag](https://go.microsoft.com/fwlink/?LinkId=217388).|  
+|Dcdiag.exe|Analyzes the state of domain controllers in a forest or enterprise, and reports issues to assist you in troubleshooting. For more information and to download, see [Dcdiag](https://go.microsoft.com/fwlink/?LinkId=217389).|  
+|Repadmin.exe|Assists you in diagnosing replication issues between domain controllers. This tool requires command-line parameters to run. For more information and to download, see [Repadmin](https://go.microsoft.com/fwlink/?LinkId=217387).|  
   
  You should correct all the issues that these tools report before you proceed with the migration.  
   

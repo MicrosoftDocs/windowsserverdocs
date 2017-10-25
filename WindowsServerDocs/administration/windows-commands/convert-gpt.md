@@ -21,7 +21,7 @@ ms.date: 10/16/2017
 
 Converts an empty basic disk with the master boot record (MBR) partition style into a basic disk with the GUID partition table (GPT) partition style.
 
-For instructions regarding how to use this command, see [Change a Master Boot Record Disk into a GUID Partition Table Disk](http://go.microsoft.com/fwlink/?LinkId=207049) (http://go.microsoft.com/fwlink/?LinkId=207049).
+For instructions regarding how to use this command, see [Change a Master Boot Record Disk into a GUID Partition Table Disk](https://go.microsoft.com/fwlink/?LinkId=207049) (https://go.microsoft.com/fwlink/?LinkId=207049).
 
 ## Syntax
 

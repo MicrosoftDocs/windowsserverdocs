@@ -29,11 +29,11 @@ Accidental deletion of Active Directory objects is a common occurrence for users
 
 In Windows Server 2008, you could use the Windows Server Backup feature and **ntdsutil** authoritative restore command to mark objects as authoritative to ensure that the restored data was replicated throughout the domain. The drawback to the authoritative restore solution was that it had to be performed in Directory Services Restore Mode (DSRM). During DSRM, the domain controller being restored had to remain offline. Therefore, it was not able to service client requests.
 
-In Windows Server 2003 Active Directory and Windows Server 2008 AD DS, you could recover deleted Active Directory objects through tombstone reanimation. However, reanimated objects' link-valued attributes (for example, group memberships of user accounts) that were physically removed and non-link-valued attributes that were cleared were not recovered. Therefore, administrators could not rely on tombstone reanimation as the ultimate solution to accidental deletion of objects. For more information about tombstone reanimation, see [Reanimating Active Directory Tombstone Objects](http://go.microsoft.com/fwlink/?LinkID=125452).
+In Windows Server 2003 Active Directory and Windows Server 2008 AD DS, you could recover deleted Active Directory objects through tombstone reanimation. However, reanimated objects' link-valued attributes (for example, group memberships of user accounts) that were physically removed and non-link-valued attributes that were cleared were not recovered. Therefore, administrators could not rely on tombstone reanimation as the ultimate solution to accidental deletion of objects. For more information about tombstone reanimation, see [Reanimating Active Directory Tombstone Objects](https://go.microsoft.com/fwlink/?LinkID=125452).
 
 Active Directory Recycle Bin, starting in Windows Server 2008 R2, builds on the existing tombstone reanimation infrastructure and enhances your ability to preserve and recover accidentally deleted Active Directory objects.
 
-When you enable Active Directory Recycle Bin, all link-valued and non-link-valued attributes of the deleted Active Directory objects are preserved and the objects are restored in their entirety to the same consistent logical state that they were in immediately before deletion. For example, restored user accounts automatically regain all group memberships and corresponding access rights that they had immediately before deletion, within and across domains. Active Directory Recycle Bin works for both AD DS and AD LDS environments. For a detailed description of Active Directory Recycle Bin, see [What's New in AD DS: Active Directory Recycle Bin](http://technet.microsoft.com/library/dd391916(WS.10).aspx).
+When you enable Active Directory Recycle Bin, all link-valued and non-link-valued attributes of the deleted Active Directory objects are preserved and the objects are restored in their entirety to the same consistent logical state that they were in immediately before deletion. For example, restored user accounts automatically regain all group memberships and corresponding access rights that they had immediately before deletion, within and across domains. Active Directory Recycle Bin works for both AD DS and AD LDS environments. For a detailed description of Active Directory Recycle Bin, see [What's New in AD DS: Active Directory Recycle Bin](https://technet.microsoft.com/library/dd391916(WS.10).aspx).
 
 **What's new?** In  Windows Server 2012 , the Active Directory Recycle Bin feature has been enhanced with a new graphical user interface for users to manage and restore deleted objects. Users can now visually locate a list of deleted objects and restore them to their original or desired locations.
 
@@ -48,7 +48,7 @@ If you plan to enable Active Directory Recycle Bin in  Windows Server 2012 , con
     > [!NOTE]
     > You can use **Server Manager** to install Remote Server Administration Tools (RSAT) on  Windows Server 2012  computers to use the correct version of Active Directory Administrative Center to manage Recycle Bin through a user interface.
     > 
-    > You can use [RSAT](http://go.microsoft.com/fwlink/?LinkID=238560) on Windows&reg; 8 computers to use the correct version of Active Directory Administrative Center to manage Recycle Bin through a user interface.
+    > You can use [RSAT](https://go.microsoft.com/fwlink/?LinkID=238560) on Windows&reg; 8 computers to use the correct version of Active Directory Administrative Center to manage Recycle Bin through a user interface.
 
 ### Active Directory Recycle Bin step-by-step
 In the following steps, you will use ADAC to perform the following Active Directory Recycle Bin tasks in  Windows Server 2012 :
@@ -237,7 +237,7 @@ Get-ADObject -Filter 'Name -Like "*test*"' -IncludeDeletedObjects | Restore-ADOb
 ## <a name="fine_grained_pswd_policy_mgmt"></a>Fine-Grained Password Policy
 The Windows Server 2008 operating system provides organizations with a way to define different password and account lockout policies for different sets of users in a domain. In Active Directory domains prior to Windows Server 2008, only one password policy and account lockout policy could be applied to all users in the domain. These policies were specified in the Default Domain Policy for the domain. As a result, organizations that wanted different password and account lockout settings for different sets of users had to either create a password filter or deploy multiple domains. Both are costly options.
 
-You can use fine-grained password policies to specify multiple password policies within a single domain and apply different restrictions for password and account lockout policies to different sets of users in a domain. For example, you can apply stricter settings to privileged accounts and less strict settings to the accounts of other users. In other cases, you might want to apply a special password policy for accounts whose passwords are synchronized with other data sources. For a detailed description of Fine-Grained Password Policy, see [AD DS: Fine-Grained Password Policies](http://technet.microsoft.com/library/cc770394(WS.10).aspx)
+You can use fine-grained password policies to specify multiple password policies within a single domain and apply different restrictions for password and account lockout policies to different sets of users in a domain. For example, you can apply stricter settings to privileged accounts and less strict settings to the accounts of other users. In other cases, you might want to apply a special password policy for accounts whose passwords are synchronized with other data sources. For a detailed description of Fine-Grained Password Policy, see [AD DS: Fine-Grained Password Policies](https://technet.microsoft.com/library/cc770394(WS.10).aspx)
 
 **What's new?** In  Windows Server 2012 , fine-grained password policy management is made easier and more visual by providing a user interface for AD DS administrators to manage them in ADAC. Administrators can now view a given user's resultant policy, view and sort all password policies within a given domain, and manage individual password policies visually.
 
@@ -250,7 +250,7 @@ If you plan to use fine-grained password policies in  Windows Server 2012 , cons
     > [!NOTE]
     > You can use **Server Manager** to install Remote Server Administration Tools (RSAT) on  Windows Server 2012  computers to use the correct version of Active Directory Administrative Center to manage Recycle Bin through a user interface.
     > 
-    > You can use [RSAT](http://go.microsoft.com/fwlink/?LinkID=238560) on Windows&reg; 8 computers to use the correct version of Active Directory Administrative Center to manage Recycle Bin through a user interface.
+    > You can use [RSAT](https://go.microsoft.com/fwlink/?LinkID=238560) on Windows&reg; 8 computers to use the correct version of Active Directory Administrative Center to manage Recycle Bin through a user interface.
 
 ### Fine-Grained Password Policy step-by-step
 In the following steps, you will use ADAC to perform the following fine-grained password policy tasks:
@@ -409,9 +409,9 @@ When using the Windows PowerShell History Viewer in  Windows Server 2012  consid
     > [!NOTE]
     > You can use **Server Manager** to install Remote Server Administration Tools (RSAT) on  Windows Server 2012  computers to use the correct version of Active Directory Administrative Center to manage Recycle Bin through a user interface.
     > 
-    > You can use [RSAT](http://go.microsoft.com/fwlink/?LinkID=238560) on Windows&reg; 8 computers to use the correct version of Active Directory Administrative Center to manage Recycle Bin through a user interface.
+    > You can use [RSAT](https://go.microsoft.com/fwlink/?LinkID=238560) on Windows&reg; 8 computers to use the correct version of Active Directory Administrative Center to manage Recycle Bin through a user interface.
 
--   Have some basic Windows PowerShell knowledge. For example, you need to know how piping in Windows PowerShell works. For more information about piping in Windows PowerShell, see [Piping and the Pipeline in Windows PowerShell](http://technet.microsoft.com/library/ee176927.aspx).
+-   Have some basic Windows PowerShell knowledge. For example, you need to know how piping in Windows PowerShell works. For more information about piping in Windows PowerShell, see [Piping and the Pipeline in Windows PowerShell](https://technet.microsoft.com/library/ee176927.aspx).
 
 ### Windows PowerShell History Viewer step-by-step
 In the following procedure, you will use the Windows PowerShell History Viewer in ADAC to construct a Windows PowerShell script.  Before you begin this procedure, remove user, **test1** from the group, **group1**.

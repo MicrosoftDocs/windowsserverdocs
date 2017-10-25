@@ -26,7 +26,7 @@ This same concept is true of federation server proxy farms in the sense that all
   
 Depending on which role this computer will play, use this procedure on the federation server computer or federation server proxy computer where you installed the server authentication certificate with the private key. When you finish the procedure, you can then import this certificate on the Default Web Site of each server in the farm. For more information, see [Import a Server Authentication Certificate to the Default Web Site](Import-a-Server-Authentication-Certificate-to-the-Default-Web-Site.md).  
   
-Membership in **Administrators**, or equivalent, on the local computer is the minimum required to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](http://go.microsoft.com/fwlink/?LinkId=83477).   
+Membership in **Administrators**, or equivalent, on the local computer is the minimum required to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](https://go.microsoft.com/fwlink/?LinkId=83477).   
   
 ### To export the private key portion of a server authentication certificate  
   
@@ -49,7 +49,7 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
     > [!IMPORTANT]  
     > So that this certificate can be imported to the local certificate store on the new server, you must transfer the file to physical media and protect its security during transport to the new server. It is extremely important to guard the security of the private key. If this key is compromised, the security of your entire AD FS deployment \(including resources within your organization and in resource partner organizations\) is compromised.  
   
-9. Import the exported server authentication certificate into the certificate store on the new server before you install the Federation Service. For information about how to import the certificate, see Import a Server Certificate \([http:\/\/go.microsoft.com\/fwlink\/?LinkId\=108283](http://go.microsoft.com/fwlink/?LinkId=108283)\).  
+9. Import the exported server authentication certificate into the certificate store on the new server before you install the Federation Service. For information about how to import the certificate, see Import a Server Certificate \([http:\/\/go.microsoft.com\/fwlink\/?LinkId\=108283](https://go.microsoft.com/fwlink/?LinkId=108283)\).  
   
 ## Additional references  
 [Checklist: Setting Up a Federation Server](Checklist--Setting-Up-a-Federation-Server.md)  

@@ -20,7 +20,7 @@ For a deeper overview of Microsoft SDN infrastructure, skip this topic and start
 
 ## What can Microsoft SDN provide for your business?
 
-<table width=100%>
+<table width="100%">
 	<tr style="border: 0;",  align="left">
 	 <td style="border: 0;", align="left">
 	  <b>Increased agility</b>
@@ -157,7 +157,7 @@ The following list of SDN technologies provides links to documentation for each 
 
 ## SDN Learning Resources
 The links [above](https://docs.microsoft.com/en-us/windows-server/networking/sdn/sdn-intro#key-components-of-sdn-architecture) lead to the official documentation on SDN and the key components of SDN architecture. In addition to this core documentation, we have also published several videos, blog posts and other items on SDN. Refer to the links below as additional resources for understanding SDN, and how you might use it to boost your organization's network infrastructure:
-- [Microsoft Software Defined Networking Datasheet](http://download.microsoft.com/download/1/5/A/15AC87E7-E99C-4E98-B6AF-9346790AD2DF/Software_Defined_Networking_is_built_in_with_Windows_Server_2016_solution_brief_EN_US.pdf)
+- [Microsoft Software Defined Networking Datasheet](https://download.microsoft.com/download/1/5/A/15AC87E7-E99C-4E98-B6AF-9346790AD2DF/Software_Defined_Networking_is_built_in_with_Windows_Server_2016_solution_brief_EN_US.pdf)
 - TechNet Virtual Lab: [Implementing a Software Defined Network with Windows Server 2016](http://msft.social/LryGa6)
 - Blog post: [How to find the SDN gateway local address for BGP peering in Windows Server 2016](https://blogs.technet.microsoft.com/networking/2017/03/23/how-to-find-the-sdn-gateway-local-address-for-bgp-peering-in-windows-server-2016/)
 - Blog post: [Troubleshoot Configuring SDN RAS Gateway VPN Bandwidth Settings in Virtual Machine Manager](https://blogs.technet.microsoft.com/networking/2017/03/06/troubleshoot-configuring-sdn-ras-gateway-vpn-bandwidth-settings-in-virtual-machine-manager/)

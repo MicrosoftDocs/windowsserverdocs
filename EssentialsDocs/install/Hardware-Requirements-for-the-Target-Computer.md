@@ -48,7 +48,7 @@ This section provides hardware requirements for  Windows Server Essentials.
   
  For more information about the hardware requirements, see the [Windows Server Catalog](http://www.windowsservercatalog.com).  
   
- All server hardware should meet the requirements established for the  Windows Server 2012 Logo Program for Systems. For more information, see [Windows Logo Program](http://www.microsoft.com/whdc/winlogo/hwrequirements.mspx).  
+ All server hardware should meet the requirements established for the  Windows Server 2012 Logo Program for Systems. For more information, see [Windows Logo Program](https://www.microsoft.com/whdc/winlogo/hwrequirements.mspx).  
   
 ## See Also  
 

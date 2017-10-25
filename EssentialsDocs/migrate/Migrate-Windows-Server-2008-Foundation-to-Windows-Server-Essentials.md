@@ -24,7 +24,7 @@ This guide describes how to migrate an existing Windows Server 2008 Foundation d
 >  To avoid problems during migration, the  Windows Server Essentials product development team strongly recommends that you read this document before you begin the migration.  
   
 ## Additional resources  
- For links to additional information, tools, and community resources to help guide you through the migration process, see [Windows Small Business Server Migration](http://go.microsoft.com/fwlink/?LinkId=217520).  
+ For links to additional information, tools, and community resources to help guide you through the migration process, see [Windows Small Business Server Migration](https://go.microsoft.com/fwlink/?LinkId=217520).  
   
 ## Terms and definitions  
  **Source Server:** The existing server from which you are migrating your settings and data.  

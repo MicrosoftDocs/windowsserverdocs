@@ -18,7 +18,7 @@ manager: dongill
 
 >Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
-To create and customize an image of  Windows Server Essentials, you use many of the tools in the [Windows 8 ADK](http://go.microsoft.com/fwlink/?LinkId=248647), but there are some important differences between the Windows 8 ADK and the  Windows Server Essentials ADK.  
+To create and customize an image of  Windows Server Essentials, you use many of the tools in the [Windows 8 ADK](https://go.microsoft.com/fwlink/?LinkId=248647), but there are some important differences between the Windows 8 ADK and the  Windows Server Essentials ADK.  
   
  You should be aware of the following important differences:  
   
@@ -30,7 +30,7 @@ To create and customize an image of  Windows Server Essentials, you use many of 
   
 -   During Initial Configuration, the end user is prompted to create a new account and password. This new account becomes the network administrator account for the operating system. The Administrator account and auto logon is then disabled. You can automate this process by using the cfg.ini file for quality assurance testing.  
   
--   Refer to the [Windows 8 ADK](http://go.microsoft.com/fwlink/?LinkId=248694) documentation for details on creating an unattend.xml file.  
+-   Refer to the [Windows 8 ADK](https://go.microsoft.com/fwlink/?LinkId=248694) documentation for details on creating an unattend.xml file.  
   
 ## See Also  
 

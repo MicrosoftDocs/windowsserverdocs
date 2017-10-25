@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 > Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Monitors a queue for incoming messages and performs an action, in the form of an executable file or COM component, when the rules of a trigger are evaluated as true. For examples of how the Message Queuing Triggers service can be used, see [Message Queuing Triggers](http://go.microsoft.com/fwlink/?LinkId=248725)on MSDN.
+Monitors a queue for incoming messages and performs an action, in the form of an executable file or COM component, when the rules of a trigger are evaluated as true. For examples of how the Message Queuing Triggers service can be used, see [Message Queuing Triggers](https://go.microsoft.com/fwlink/?LinkId=248725)on MSDN.
 
 ## Syntax
 

@@ -17,7 +17,7 @@ ms.technology: identity-adds
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 
-<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd">
+<developerConceptualDocument xmlns="https://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="https://www.w3.org/1999/xlink" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd">
   <introduction>
     <para>The description text in event ID 1925 reports that the attempt to establish a replication link for the following writable directory partition failed, and the description text provides the distinguished name of the directory partition that the destination is attempting to replicate from the source. The error code in the event gives more specific information about the cause of the problem.</para>
     <para>The following is an example of the event text: </para>
@@ -79,7 +79,7 @@ Error value:
       <section address="BKMK_verifyWAN">
         <title>Verify WAN connectivity</title>
         <content>
-          <para>Verify that there are no basic connectivity problems with the underlying network between the domain controllers, especially if they are separated by a wide area network (WAN) link or firewalls. For information about testing this type of problem, see article 310099 (<externalLink><linkText>http://go.microsoft.com/fwlink/?LinkId=69995</linkText><linkUri>http://go.microsoft.com/fwlink/?LinkId=69995</linkUri></externalLink>) and article 159211 (<externalLink><linkText>http://go.microsoft.com/fwlink/?LinkId=69996</linkText><linkUri>http://go.microsoft.com/fwlink/?LinkId=69996</linkUri></externalLink>) in the Microsoft Knowledge Base).</para>
+          <para>Verify that there are no basic connectivity problems with the underlying network between the domain controllers, especially if they are separated by a wide area network (WAN) link or firewalls. For information about testing this type of problem, see article 310099 (<externalLink><linkText>https://go.microsoft.com/fwlink/?LinkId=69995</linkText><linkUri>https://go.microsoft.com/fwlink/?LinkId=69995</linkUri></externalLink>) and article 159211 (<externalLink><linkText>https://go.microsoft.com/fwlink/?LinkId=69996</linkText><linkUri>https://go.microsoft.com/fwlink/?LinkId=69996</linkUri></externalLink>) in the Microsoft Knowledge Base).</para>
         </content>
       </section>
       <section address="BKMK_MaxPacket">
@@ -184,7 +184,7 @@ Error value:
     </sections>
   </section>
   <relatedTopics>
-<externalLink><linkText>Monitoring and Troubleshooting Active Directory Replication Using Repadmin</linkText><linkAlternateText>http://go.microsoft.com/fwlink/?LinkId=122830</linkAlternateText><linkUri>http://go.microsoft.com/fwlink/?LinkId=122830</linkUri></externalLink>
+<externalLink><linkText>Monitoring and Troubleshooting Active Directory Replication Using Repadmin</linkText><linkAlternateText>https://go.microsoft.com/fwlink/?LinkId=122830</linkAlternateText><linkUri>https://go.microsoft.com/fwlink/?LinkId=122830</linkUri></externalLink>
 </relatedTopics>
 </developerConceptualDocument>
 

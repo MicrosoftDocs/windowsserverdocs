@@ -27,7 +27,7 @@ Brings disks that are currently offline to an online state.
 > [!IMPORTANT]
 > This command will fail if it is used on a read-only disk.
 
-For instructions regarding how to use this command, see [Reactivate a Missing or Offline Dynamic Disk](http://go.microsoft.com/fwlink/?LinkId=207046) (http://go.microsoft.com/fwlink/?LinkId=207046).
+For instructions regarding how to use this command, see [Reactivate a Missing or Offline Dynamic Disk](https://go.microsoft.com/fwlink/?LinkId=207046) (https://go.microsoft.com/fwlink/?LinkId=207046).
 
 ## Syntax
 
