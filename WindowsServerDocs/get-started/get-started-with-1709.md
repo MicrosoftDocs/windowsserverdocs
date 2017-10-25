@@ -6,7 +6,7 @@ ms.mktglfcycl: manage
 ms.sitesec: library
 author: jaimeo
 ms.localizationpriority: high
-ms.date: 10/23/2017
+ms.date: 10/25/2017
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 9cf87597-b15d-4f43-8aa1-91e60367f011
@@ -15,20 +15,23 @@ ms.assetid: 9cf87597-b15d-4f43-8aa1-91e60367f011
 
 >Applies To: Windows Server (Semi-Annual Channel)
 
-**Windows Server, version 1709 is the first release in the new Semi-Annual Channel.** For more about Semi-Annual Channel see [Semi-Annual Channel Overview](semi-annual-channel-overview.md).
+**Windows Server, version 1709 is the first release in the new Semi-Annual Channel.** 
 
-Semi-Annual Channel releases such as this one are ideal for customers who are moving at a “cloud cadence," such as those on rapid development cycles or hosters keeping up with the latest Hyper-V investments. Windows Server products in the Semi-Annual Channel will have new releases available twice a year, in spring and fall. Each release in this channel will be supported for 18 months from the initial release.
+## What the Semi-Annual Channel is--and isn't
+As the first release in this new channel, Windows Server, version 1709 is *not* an "update" or "service pack" for Windows Server 2016. It's the first of twice-yearly server releases on a **new release track** that is designed for customers who are moving at a “cloud cadence," such as those on rapid development cycles or hosters keeping up with the latest Hyper-V investments. Each release in this track is supported for 18 months from the initial release. For more about Semi-Annual Channel, plus **tips for deciding which channel to join** (or remain on) see [Semi-Annual Channel Overview](semi-annual-channel-overview.md).
 
-**The current LTSC product is Windows Server 2016**. If you want to stay in this channel, you should install (or continue using) Windows Server 2016, which can be installed in either Server Core mode or Server with Desktop Experience mode. See [Get Started with Windows Server 2016](https://docs.microsoft.com/windows-server/get-started/server-basics) for details.
+
+**The current Long-Term Servicing Channel (LTSC) product is Windows Server 2016**. The LTSC is best if you need long-term stability and predictability in your server operating system to support traditional workloads and applications. If you want to stay in the LTSC, you should install (or continue using) Windows Server 2016, which can be installed in either Server Core mode or Server with Desktop Experience mode. See [Get Started with Windows Server 2016](https://docs.microsoft.com/windows-server/get-started/server-basics) for details.
+
 
 ## What's different about 1709?
 
-Windows Server, version 1709 runs in Server Core mode. That means there is no local console or graphical user interface, so you manage it remotely. However, it offers great advantages such as smaller hardware requirements, much smaller attack surface, and a reduction in the need for updates. If you're new to working with Server Core, [Manage a Server Core server](../administration/server-core/server-core-manage.md) will help you get used to this environment. [Manage Windows Server 2016](../administration/manage-windows-server.md) shows you the various options for managing servers remotely.
+Windows Server, version 1709 runs in Server Core mode. That means there is no graphical user interface, so you manage it remotely. However, it offers great advantages such as smaller hardware requirements, much smaller attack surface, and a reduction in the need for updates. If you're new to working with Server Core, [Manage a Server Core server](../administration/server-core/server-core-manage.md) will help you get used to this environment. [Manage Windows Server 2016](../administration/manage-windows-server.md) shows you the various options for managing servers remotely.
 
 [What's New in Windows Server version 1709](whats-new-in-windows-server-1709.md) introduces you to the new features and functionality added in Windows Server, version 1709.
 
 ### Why does Windows Server, version 1709 offer only the Server Core installation option?
-One of the most important steps we take in planning each release of Windows Server is listening to customer feedback – how are you using Windows Server? What new features will have the greatest impact on your Windows Server deployments, and by extension, your day-to-day business? Your feedback tells us that delivering new innovation as quickly and  efficiently as possible is a key priority. At the same time, for those customers innovating most quickly, you’ve told us that you’re primarily using command line scripting with PowerShell to manage your datacenters, and as such don’t have a strong need for the desktop GUI available in the installation of Windows Server with Desktop Experience. By focusing on the Server Core installation option, we’re able to dedicate more resources toward those new innovations, while also maintaining traditional Windows Server platform functionality and application compatibility. If you have feedback about this or other issues concerning Windows Server and our future releases, you can make suggestions and comments through the [Feedback Hub](https://support.microsoft.com/help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub-app).
+One of the most important steps we take in planning each release of Windows Server is listening to customer feedback – how are you using Windows Server? What new features will have the greatest impact on your Windows Server deployments, and by extension, your day-to-day business? Your feedback tells us that delivering new innovation as quickly and efficiently as possible is a key priority. At the same time, for those customers innovating most quickly, you’ve told us that you’re primarily using command line scripting with PowerShell to manage your datacenters, and as such don’t have a strong need for the desktop GUI available in the installation of Windows Server with Desktop Experience. By focusing on the Server Core installation option, we’re able to dedicate more resources toward those new innovations, while also maintaining traditional Windows Server platform functionality and application compatibility. If you have feedback about this or other issues concerning Windows Server and our future releases, you can make suggestions and comments through the [Feedback Hub](https://support.microsoft.com/help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub-app).
 
 
 ### What about Nano Server?
@@ -37,7 +40,7 @@ Nano Server is available as a container operating system. See [Changes to Nano S
 ## Additional information about this release
 To get a comprehensive view of the key facts about Windows Server, version 1709, you should also review these topics prior to installing it:
 
-- What hardware is needed to run it? See [System requirements](system-requirements.md)
+- What hardware is needed to run it? See [System requirements](system-requirements.md); the system requirements for this release are the same as for Windows Server 2016.
 - What new features and functionality have been added? See [What's New in Windows Server version 1709](whats-new-in-windows-server-1709.md)
 - What has been removed? See [Features Removed or Planned for Replacement starting with Windows Server (version 1709)](Removed-Features-1709.md)
 - What issues unique to this release need to be worked around? See [Release notes--Important issues in Windows Server, version 1709](server-1709-relnotes.md)
@@ -49,7 +52,7 @@ This release should be installed as a clean installation.
 
 - VLSC: Volume-licensed customers with [Software Assurance](https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-default.aspx) can obtain this release by going to the [Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx) and clicking **Sign In**. Then click **Downloads and Keys** and search for this release. 
 
-- If you use a hosting provider such as [Microsoft Azure](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/Microsoft.WindowsServer?tab=Overview) or Amazon Web Services, Windows Server, version 1709 is available through those services. Software Assurance is not required.
+- If you use a hosting provider such as [Microsoft Azure](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/Microsoft.WindowsServer?tab=Overview) or other cloud service providers, Windows Server, version 1709 is available through those services. Software Assurance is not required in those environments.
 
 - Participants in **Visual Studio Subscriptions:** If you already participate in Visual Studio Subscriptions, you can obtain Windows Server, version 1709 by going to the [Visual Studio Subscriber download page](https://my.visualstudio.com/downloads?pid=2347) and completing the download available there. If you are not already a subscriber, go to [Visual Studio Subscriptions](https://www.visualstudio.com/subscriptions/) to sign up, and then visit the [Visual Studio Subscriber download page](https://my.visualstudio.com/downloads?pid=2347) as above.
 
