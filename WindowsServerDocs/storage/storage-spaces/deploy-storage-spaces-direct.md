@@ -13,7 +13,7 @@ ms.date: 1/10/2017
 
 >Applies To: Windows Server 2016
 
-<img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/deploy.png" style='float:left; padding:.3em;' width= 75; alt="Deploying Storage Spaces Direct">
+<img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/deploy.png" style='float:left; padding:.3em;' width="75"; alt="Deploying Storage Spaces Direct">
 
 This topic provides resources that help you deploy a [Storage Spaces Direct](storage-spaces-direct-overview.md) cluster. Storage Spaces Direct is a Windows Server-based storage solution that uses industry-standard servers with local-attached drives to create highly available, highly scalable software-defined storage.
 
