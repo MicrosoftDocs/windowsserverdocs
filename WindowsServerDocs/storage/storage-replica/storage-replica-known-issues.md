@@ -6,14 +6,14 @@ ms.author: nedpyle
 ms.technology: storage-replica
 ms.topic: get-started-article
 author: nedpyle
-ms.date: 10/13/2016
+ms.date: 10/25/2017
 ms.assetid: ceddb0fa-e800-42b6-b4c6-c06eb1d4bc55
 ---
 # Known issues with Storage Replica
 
 >Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
-This section discusses known issues with Storage Replica in Windows Server 2016.  
+This section discusses known issues with Storage Replica in Windows Server 2016 and Windows Server, version 1709.  
 
 ## After removing replication, disks are offline and you cannot configure replication again  
 In Windows Server 2016, you may be unable to provision replication on a volume that was previously replicated or may find un-mountable volumes. This may occur when some error condition prevents removal of replication or when you reinstall the operating system on a computer that was previously replicating data.  
@@ -365,6 +365,33 @@ This issue occurs due to architectural limitations within Storage Replica's log 
 When using Storage Spaces Direct with HDDs, you cannot disable or avoid the cache. As a workaround, if using just SSD and NVME, you can configure just performance and capacity tiers. If using that configuration, and by placing the SR logs on the performance tier only with the data volumes they service being on the capacity tier only, you will avoid the high latency issue described above. The same could be done with a mix of faster and slower SSDs and no NVME.
 
 This workaround is of course not ideal and some customers may not be able to make use of it. The Storage Replica team is working on optimizations and an updated log mechanism for the future to reduce these artifical bottlenecks. There is no ETA for this, but when available to TAP customers for testing, this FAQ will be updated. 
+
+## Error when running Test-SRTopology between two clusters
+
+When running Test-SRTopology between two clusters and their CSV paths, it fails with error: 
+
+    PS C:\Windows\system32> Test-SRTopology -SourceComputerName NedClusterA -SourceVolumeName C:\ClusterStorage\Volume1 -SourceLogVolumeName L: -DestinationComputerName NedClusterB -DestinationVolumeName C:\ClusterStorage\Volume1 -DestinationLogVolumeName L: -DurationInMinutes 1 -ResultPath C:\Temp
+
+    Validating data and log volumes...
+    Measuring Storage Replica recovery and initial synchronization performance...
+    WARNING: Could not find file '\\NedNode1\C$\CLUSTERSTORAGE\VOLUME1TestSRTopologyRecoveryTest\SRRecoveryTestFile01.txt'.
+    WARNING: System.IO.FileNotFoundException
+    WARNING:    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+    at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 buff
+    erSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+    at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+    at Microsoft.FileServices.SR.Powershell.TestSRTopologyCommand.GenerateWriteIOWorkload(String Path, UInt32 IoSizeInBytes, UInt32 Parallel
+    IoCount, UInt32 Duration)
+    at Microsoft.FileServices.SR.Powershell.TestSRTopologyCommand.<>c__DisplayClass75_0.<PerformRecoveryTest>b__0()
+    at System.Threading.Tasks.Task.Execute()
+    Test-SRTopology : Could not find file '\\NedNode1\C$\CLUSTERSTORAGE\VOLUME1TestSRTopologyRecoveryTest\SRRecoveryTestFile01.txt'.
+    At line:1 char:1
+    + Test-SRTopology -SourceComputerName NedClusterA -SourceVolumeName  ...
+    + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (:) [Test-SRTopology], FileNotFoundException
+    + FullyQualifiedErrorId : TestSRTopologyFailure,Microsoft.FileServices.SR.Powershell.TestSRTopologyCommand 
+
+This is caused by a known code defect in Windows Server 2016. This issue was first fixed in Windows Server, version 1709 and the associated RSAT tools. For a downlevel resolution, please contact Microsoft Support and request a backport update. There is no workaround.
 
 ## See also  
 - [Storage Replica](storage-replica-overview.md)  

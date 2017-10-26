@@ -20,7 +20,7 @@ For a deeper overview of Microsoft SDN infrastructure, skip this topic and start
 
 ## What can Microsoft SDN provide for your business?
 
-<table width=100%>
+<table width="100%">
 	<tr style="border: 0;",  align="left">
 	 <td style="border: 0;", align="left">
 	  <b>Increased agility</b>
