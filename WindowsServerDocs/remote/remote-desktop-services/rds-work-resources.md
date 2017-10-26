@@ -1,3 +1,12 @@
+---
+title: Customizing the RDS title “Work Resources” using PowerShell on Windows Server
+description: Provides description of how to change workspace name from default in Windows Server.
+ms.technology: remote-desktop-services
+ms.author: helohr
+ms.date: 10/26/2017  
+ms.topic: article
+author: Heidilohr
+---
 # Customizing the RDS title “Work Resources” using PowerShell on Windows Server
 
 When using Windows Server to access Remote Apps or desktops through RD WebAccess or the new Remote Desktop App, you may have noticed that the workspace is titled  “Work Resources" by default.  Although the config file called RDWAStrings.xml (inside C:\Windows\Web\RDWeb\Pages\en-US) allows changes in certain strings, the title “Work Resources” is set on a deployment (workspace) level and can't be changed using the .xml file. We can only change it with PowerShell.
