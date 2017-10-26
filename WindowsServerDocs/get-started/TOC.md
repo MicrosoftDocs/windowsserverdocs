@@ -21,7 +21,7 @@
 ### [Features Removed or Deprecated in Windows Server 2016](Deprecated-Features.md)
 ## [Windows Server 2016 Edition Comparison](2016-Edition-Comparison.md)
 ## [ Windows Server 2016 Activation Guide](Server-2016-activation.md)
-### [KMS Client Setup Keys](KMSkeys.md)
+### [KMS Client Setup Keys](KMSclientkeys.md)
 ## [Install Nano Server](Getting-started-with-Nano-Server.md)
 ### [Changes to Nano Server in the next release of Windows Server](nano-in-semi-annual-channel.md)
 ### [Nano Server Quick Start](Nano-Server-Quick-start.md)
