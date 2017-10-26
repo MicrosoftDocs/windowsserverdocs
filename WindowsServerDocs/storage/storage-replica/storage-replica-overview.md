@@ -6,7 +6,7 @@ ms.author: nedpyle
 ms.technology: storage-replica
 ms.topic: get-started-article
 author: nedpyle
-ms.date: 10/11/2016
+ms.date: 10/11/2017
 ms.assetid: e9b18e14-e692-458a-a39f-d5b569ae76c5
 ---
 # Storage Replica overview

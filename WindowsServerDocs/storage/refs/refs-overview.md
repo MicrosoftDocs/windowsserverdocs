@@ -100,6 +100,7 @@ Deploying ReFS on basic disks is best suited for applications that implement the
 | Functionality       | ReFS                                        | NTFS |
 |---------------------------|------------------|-----------------------|
 | BitLocker encryption | Yes | Yes |
+| Data Deduplication | Yes | Yes |
 | Cluster Shared Volume (CSV) support | Yes | Yes |
 | Soft links | Yes | Yes |
 | Failover cluster support | Yes | Yes |
@@ -129,7 +130,6 @@ Deploying ReFS on basic disks is best suited for applications that implement the
 |---------------------------|------------------|-----------------------|
 | File system compression | No | Yes |
 | File system encryption | No | Yes |
-| Data Deduplication | No | Yes |
 | Transactions | No | Yes |
 | Hard links | No | Yes |
 | Object IDs | No | Yes |
