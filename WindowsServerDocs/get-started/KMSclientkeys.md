@@ -1,12 +1,12 @@
 ---
 title: KMS client setup keys
 description: Keys needed to activate Windows products from a KMS server
-ms.prod: Windows Server
+ms.prod: windows-server-threshold
 ms.mktglfcycl: manage
 ms.sitesec: library
 author: jaimeo
 ms.localizationpriority: high
-ms.date: 10/24/2017
+ms.date: 10/26/2017
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 
@@ -23,24 +23,23 @@ clients with no additional configuration needed.
 
 **To use the keys listed here (which are GVLKs), you must first have a KMS host
 running in your deployment.** If you haven’t already configured a KMS host, see
-Deploy KMS Activation for steps to set one up.
+[Deploy KMS Activation](https://technet.microsoft.com/library/dn502531(v=ws.11).aspx) for steps to set one up.
 
 If you are converting a computer from a KMS host, MAK, or retail edition of
 Windows to a KMS client, install the applicable setup key (GVLK) from the
 following tables. To install a client setup key, open an administrative command
-prompt on the client, type slmgr /ipk \<setup key\> and then press **Enter**.
+prompt on the client, type **slmgr /ipk \<setup key\>** and then press **Enter**.
 
 | If you want to…                                                                                                                                                                                          | …use these resources                                                                                                         |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
 | Activate Windows outside of a volume-activation scenario (that is, you’re trying to activate a retail version of Windows), **these keys will not work**.                                                     | Use these links for retail versions of Windows:                                                                              |
-| Fix this error that you get when you try to activate a Windows 8.1, Windows Server 2012 R2 or newer system: “Error: 0xC004F050 The Software Licensing Service reported that the product key is invalid”… | Install this update on the KMS host if it is running Windows 8.1, Windows Server 2012 R2, Windows 8, or Windows Server 2012. |
+| Fix this error that you get when you try to activate a Windows 8.1, Windows Server 2012 R2 or newer system: “Error: 0xC004F050 The Software Licensing Service reported that the product key is invalid”… | [Install this update](https://support.microsoft.com/en-us/help/3172614/july-2016-update-rollup-for-windows-8-1-and-windows-server-2012-r2) on the KMS host if it is running Windows 8.1, Windows Server 2012 R2, Windows 8, or Windows Server 2012. |
 
--   Install, upgrade, & activate (use the menu to the right to select the
-    Windows version you are interested in)
+-   [Get Windows 10](https://www.microsoft.com/en-us/windows/get-windows-10)
 
--   Get a new Windows product key
+-   [Get a new Windows product key](https://support.microsoft.com/help/10749/windows-product-key)
 
--   Genuine Windows Help & How-to
+-   [Genuine Windows Help & How-to](https://support.microsoft.com/help/15087/windows-genuine)
 
 -   Microsoft Community forum on installation and activation
 
@@ -153,6 +152,6 @@ Windows Vista and Windows Server 2008
 
 See also
 
-• Plan for Volume Activation
+• [Plan for Volume Activation](https://technet.microsoft.com/library/jj134042(v=ws.11).aspx)
 
 
