@@ -19,7 +19,7 @@ For this deployment, you must install a new Remote Access server that is running
 
 The following illustration shows the infrastructure that is required to deploy Always On VPN.
 
-![Always On VPN Infrastructure](../../../../media/Always-On-Vpn/Ao-Vpn-Overview.jpg)
+![Always On VPN Infrastructure](../../../../media/Always-On-Vpn/Ao-Vpn-Overview.jpg =358x358)
 
 ## VPN Connection Process Overview
 
@@ -33,7 +33,7 @@ The connection process depicted in this illustration is comprised of the followi
 
 4. The NPS server processes the connection request, including performing authorization and authentication, and determines whether to allow or deny the connection request.
 
-5. The NPS server forwards an Access-Accept or Access-Deny response to the VPN gateway.
+5. The NPS server forwards an Access-Accept or Access-Deny response to the VPN gateway. 
 
 6. The connection is initiated or terminated based on the response that the VPN server received from the NPS server.
 
