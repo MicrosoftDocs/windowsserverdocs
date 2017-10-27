@@ -6,7 +6,7 @@ ms.manager: dongill
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 3/20/2017
+ms.date: 10/30/2017
 ms.assetid: 8bd0d09a-0421-40a4-b752-40ecb5350ffd
 description: An overview of Storage Spaces Direct, a feature of Windows Server Enterprise Edition that enables you to cluster servers with internal storage into a software-defined storage solution.
 ---
@@ -17,6 +17,9 @@ description: An overview of Storage Spaces Direct, a feature of Windows Server E
 Storage Spaces Direct uses industry-standard servers with local-attached drives to create highly available, highly scalable software-defined storage at a fraction of the cost of traditional SAN or NAS arrays. Its converged or hyper-converged architecture radically simplifies procurement and deployment, while features like caching, storage tiers, and erasure coding, together with the latest hardware innovation like RDMA networking and NVMe drives, deliver unrivaled efficiency and performance.
 
 Storage Spaces Direct is included in Windows Server 2016 Datacenter and [Windows Server Insider Preview Builds](https://insider.windows.com/en-us/for-business-getting-started-server/).<br><br>
+
+> [!WARNING]
+> Microsoft has a critical product advisory for Storage Spaces Direct customers using the Intel P3x00 family of NVMe devices (all capacities of the P3500, P3600, P3700). See KB article **N** for more information.
 
 <table>
     <tr style="border: 0;">
@@ -30,8 +33,6 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter and [Windows
 			  <li><a href="storage-spaces-fault-tolerance.md">Fault tolerance and storage efficiency</a></li>
 		  	</ul>
         </td>
-    </tr>
-    <tr style="border: 0;">
         <td style="padding: 10px; border: 0; width:125px">
         <img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/plan.png" width="125" alt="">            
         </td>
@@ -41,6 +42,7 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter and [Windows
 			  <li><a href="storage-spaces-direct-hardware-requirements.md">Hardware requirements</a></li>
 			  <li><a href="choosing-drives.md">Choose drives</a></li>
 			  <li><a href="plan-volumes.md">Plan volumes</a></li>
+              <li><a href="storage-spaces-direct-in-vm.md">Guest VM clusters</a></li>
 		    </ul>
         </td>
     </tr>
@@ -54,9 +56,7 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter and [Windows
 			  <li><a href="hyper-converged-solution-using-storage-spaces-direct.md">Hyper-converged solution</a></li>
 			  <li><a href="create-volumes.md">Create volumes</a></li>
 		    </ul>
-        </td>
-    </tr>
-    <tr style="border: 0;">
+        </td>        
         <td style="padding: 10px; border: 0; width:125px">
             <img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/manage.png" width="125" alt="">
         </td>
@@ -71,6 +71,7 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter and [Windows
 		    </ul>
         </td>
     </tr>
+    
 </table>
 
 ## Videos

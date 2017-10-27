@@ -7,7 +7,7 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.date: 10/26/2017
+ms.date: 10/30/2017
 description: New and updated topics in the Storage documentation for Windows Server 2016
 ---
 # Change history for storage topics in Windows Server
@@ -22,8 +22,9 @@ This topic lists new and updated topics in the [Storage](storage.md) documentati
 
 |New or changed topic|Description|
 |---|---|
+|[Storage Spaces Direct overview](storage-spaces/storage-spaces-direct-overview.md)|Added a warning about a specific line of NVMe devices.|
 |[Deploying Storage Spaces Direct in a virtual machine guest cluster](storage-spaces/storage-spaces-direct-in-vm.md)|New topic.|
-|[Overview of Disk Management](disk-management/overview-of-disk-management.md)| Published 13 new topics for Windows Server.|
+|[Overview of Disk Management](disk-management/overview-of-disk-management.md)| Published 13 new topics for Windows and Windows Server.|
 |[Storage Replica overview](storage-replica/storage-replica-overview.md)|Added what's new info for Windows Server, version 1709.|
 |[Storage Replica known issues](storage-replica/storage-replica-known-issues.md)|Added new information.|
 |[Cluster to cluster storage replication](storage-replica/cluster-to-cluster-storage-replication.md)|Revised the number of supported cluster nodes for Storage Spaces Direct.|
