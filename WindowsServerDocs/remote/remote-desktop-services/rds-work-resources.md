@@ -18,8 +18,6 @@ To change the title, open up a new PowerShell window and import the RemoteDeskto
 
 Next, use the set-RDWorkspace command to change the workspace name.
 
-SYNTAX
-
     Set-RDWorkspace [-Name] <string> [-ConnectionBroker <string>]  [<CommonParameters>]
 
 For example, you can use the following command to change the workpsace name to "XYZ Applications":
