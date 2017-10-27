@@ -19,15 +19,15 @@ You can use this topic to learn about the Software Defined Networking (SDN) tech
 > In addition to this topic, the following SDN content is available.
 > 
 > - [What's New in SDN for Windows Server](sdn-whats-new.md)
-> - [Introduction to Software Defined Networking in Windows Server 2016](sdn-intro.md)
-> - [Software Defined Networking Technologies](technologies/Software-Defined-Networking-Technologies.md)  
-> - [Plan Software Defined Networking](plan/Plan-Software-Defined-Networking.md) 
-> - [Deploy Software Defined Networking](deploy/Deploy-Software-Defined-Networking.md)  
-> - [Manage Software Defined Networking](manage/manage-sdn.md)
-> - [Security for Software Defined Networking](security/sdn-security-top.md)
-> - [Troubleshoot Software Defined Networking](troubleshoot/Troubleshoot-Software-Defined-Networking.md)
-> - [System Center Technologies for Software Defined Networking](Sc-Tech-for-Sdn.md)
-> - [Microsoft Azure and Software Defined Networking](Azure_and_Sdn.md)
+> - [Introduction to SDN in Windows Server Datacenter](sdn-intro.md)
+> - [SDN Technologies](technologies/Software-Defined-Networking-Technologies.md)  
+> - [Plan SDN](plan/Plan-Software-Defined-Networking.md) 
+> - [Deploy SDN](deploy/Deploy-Software-Defined-Networking.md)  
+> - [Manage SDN](manage/manage-sdn.md)
+> - [Security for SDN](security/sdn-security-top.md)
+> - [Troubleshoot SDN](troubleshoot/Troubleshoot-Software-Defined-Networking.md)
+> - [System Center Technologies for SDN](Sc-Tech-for-Sdn.md)
+> - [Microsoft Azure and SDN](Azure_and_Sdn.md)
 > - [Contact the Datacenter and Cloud Networking Team](contact-sdn-team.md)
   
 ## <a name="bkmk_sdn"></a>Software Defined Networking Overview
