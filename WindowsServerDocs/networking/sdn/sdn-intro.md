@@ -1,5 +1,5 @@
 ---
-title: Introduction to Software Defined Networking In Windows Server Datacenter
+title: Introduction to SDN In Windows Server Datacenter
 ms.prod: windows-server-threshold
 ms.author: jamesmci
 ms.manager: brianlic
@@ -10,7 +10,7 @@ manager: ravirao
 ms.date: 1/30/2017
 ms.assetid: 1d9ed2a0-9d21-415b-93e9-272b09939f78
 ---
-# Introduction to Software Defined Networking in  Windows Server Datacenter
+# Introduction to SDN in Windows Server Datacenter
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 

@@ -1,6 +1,6 @@
 
 ---
-title: Security for Software Defined Networking
+title: Security for SDN
 description: You can use the topics in this section to learn about security in Software Defined Networking \(SDN\) in Windows Server 2016 Datacenter.
 manager: brianlic
 ms.prod: windows-server-threshold
@@ -11,7 +11,7 @@ ms.author: jamesmci
 author: jamesmci
 ---
 
-# Security for Software Defined Networking
+# Security for SDN
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
@@ -20,11 +20,11 @@ You can use the topics in this section to learn about security in Software Defin
 >[!Note]
 >For additional Software Defined Networking documentation, you can use the following library sections.
 >
-> - [Software Defined Networking Technologies](../technologies/Software-Defined-Networking-Technologies.md)  
-> - [Plan Software Defined Networking](../plan/Plan-Software-Defined-Networking.md) 
-> - [Deploy Software Defined Networking](../deploy/Deploy-Software-Defined-Networking.md)  
-> - [Manage Software Defined Networking](../manage/manage-sdn.md)  
-> - [Troubleshoot Software Defined Networking](../troubleshoot/Troubleshoot-Software-Defined-Networking.md)
+> - [SDN Technologies](../technologies/Software-Defined-Networking-Technologies.md)  
+> - [Plan SDN](../plan/Plan-Software-Defined-Networking.md) 
+> - [Deploy SDN](../deploy/Deploy-Software-Defined-Networking.md)  
+> - [Manage SDN](../manage/manage-sdn.md)  
+> - [Troubleshoot SDN](../troubleshoot/Troubleshoot-Software-Defined-Networking.md)
 
 This section contains the following topics.
 
