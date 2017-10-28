@@ -22,7 +22,9 @@ This topic lists new and updated topics in the [Storage](storage.md) documentati
 
 |New or changed topic|Description|
 |---|---|
+|[What's new in storage](whats-new-in-storage.md)|Added info about what's new in Windows Server, version 1709.|
 |[Storage Spaces Direct overview](storage-spaces/storage-spaces-direct-overview.md)|Added a warning about a specific line of NVMe devices.|
+|[Add servers or drives](storage-spaces/add-nodes.md)|Added information about how Storage Spaces Direct automatically optimizes drive usage after adding drives.|
 |[Deploying Storage Spaces Direct in a virtual machine guest cluster](storage-spaces/storage-spaces-direct-in-vm.md)|New topic.|
 |[Overview of Disk Management](disk-management/overview-of-disk-management.md)| Published 13 new topics for Windows and Windows Server.|
 |[Storage Replica overview](storage-replica/storage-replica-overview.md)|Added what's new info for Windows Server, version 1709.|

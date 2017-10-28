@@ -16,7 +16,7 @@ description: An overview of Storage Spaces Direct, a feature of Windows Server E
 
 Storage Spaces Direct uses industry-standard servers with local-attached drives to create highly available, highly scalable software-defined storage at a fraction of the cost of traditional SAN or NAS arrays. Its converged or hyper-converged architecture radically simplifies procurement and deployment, while features like caching, storage tiers, and erasure coding, together with the latest hardware innovation like RDMA networking and NVMe drives, deliver unrivaled efficiency and performance.
 
-Storage Spaces Direct is included in Windows Server 2016 Datacenter and [Windows Server Insider Preview Builds](https://insider.windows.com/en-us/for-business-getting-started-server/).<br><br>
+Storage Spaces Direct is included in Windows Server 2016 Datacenter and [Windows Server Insider Preview Builds](https://insider.windows.com/en-us/for-business-getting-started-server/).
 
 > [!WARNING]
 > Microsoft has a critical product advisory for Storage Spaces Direct customers using the Intel P3x00 family of NVMe devices (all capacities of the P3500, P3600, P3700). See KB article **N** for more information.
@@ -34,7 +34,7 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter and [Windows
 		  	</ul>
         </td>
         <td style="padding: 10px; border: 0; width:125px">
-        <img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/plan.png" width="125" alt="">            
+        <img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/plan.png" width="125" alt="">
         </td>
         <td style="padding: 10px; border: 0;">
             <strong><a href="plan-storage-spaces-direct.md">Plan</a></strong>
