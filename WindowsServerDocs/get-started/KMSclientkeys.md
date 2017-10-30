@@ -14,7 +14,7 @@ ms.topic: get-started-article
 
 # Appendix A: KMS Client Setup Keys
 
->Applies To: Windows Server Semi-Annual Channel, Windows 10, version 1709, Windows 10, Windows 8.1, Windows Server 2012 R2
+>Applies To: Windows Server Semi-Annual Channel, Windows Server 2016, Windows 10
 
 Computers that are running volume licensed editions of Windows Server, Windows 10, Windows 8.1,
 Windows Server 2012 R2, Windows 8, Windows Server 2012, Windows 7, Windows
