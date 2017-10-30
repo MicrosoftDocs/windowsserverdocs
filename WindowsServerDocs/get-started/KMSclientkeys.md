@@ -139,7 +139,6 @@ Windows Vista and Windows Server 2008
 |------------------------------------------------|-------------------------------|
 | Windows Vista Business                         | YFKBB-PQJJV-G996G-VWGXY-2V3X8 |
 | Windows Vista Business N                       | HMBQG-8H2RH-C77VX-27R82-VMQBT |
-|                                                |                               |
 | Windows Vista Enterprise                       | VKK3X-68KWM-X2YGT-QR4M6-4BWMV |
 | Windows Vista Enterprise N                     | VTC42-BM838-43QHV-84HX6-XJXKV |
 | Windows Web Server 2008                        | WYR28-R7TFJ-3X2YQ-YCY4H-M249D |
