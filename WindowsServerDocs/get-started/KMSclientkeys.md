@@ -41,7 +41,6 @@ prompt on the client, type **slmgr /ipk \<setup key\>** and then press **Enter**
 
 -   [Genuine Windows Help & How-to](https://support.microsoft.com/help/15087/windows-genuine)
 
--   Microsoft Community forum on installation and activation
 
 >   If you are running Windows Server 2008 R2 or Windows 7, be on the lookout
 >   for an update to support using those as KMS hosts for Windows 10 clients.
