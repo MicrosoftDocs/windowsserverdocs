@@ -6,7 +6,7 @@ ms.mktglfcycl: manage
 ms.sitesec: library
 author: jaimeo
 ms.localizationpriority: high
-ms.date: 10/26/2017
+ms.date: 10/30/2017
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 
@@ -14,9 +14,9 @@ ms.topic: get-started-article
 
 # Appendix A: KMS Client Setup Keys
 
->Applies To: Windows 10, Windows 8.1, Windows Server 2012 R2
+>Applies To: Windows Server Semi-Annual Channel, Windows Server 2016, Windows 10
 
-Computers that are running volume licensed editions of Windows 10, Windows 8.1,
+Computers that are running volume licensed editions of Windows Server, Windows 10, Windows 8.1,
 Windows Server 2012 R2, Windows 8, Windows Server 2012, Windows 7, Windows
 Server 2008 R2, Windows Vista, and Windows Server 2008 are, by default, KMS
 clients with no additional configuration needed.
@@ -41,10 +41,17 @@ prompt on the client, type **slmgr /ipk \<setup key\>** and then press **Enter**
 
 -   [Genuine Windows Help & How-to](https://support.microsoft.com/help/15087/windows-genuine)
 
--   Microsoft Community forum on installation and activation
 
 >   If you are running Windows Server 2008 R2 or Windows 7, be on the lookout
 >   for an update to support using those as KMS hosts for Windows 10 clients.
+
+## Windows Server, version 1709
+
+| Operating system edition       | KMS Client Setup Key          |
+|--------------------------------|-------------------------------|
+| Windows Server Datacenter | 6Y6KB-N82V8-D8CQV-23MJW-BWTG6  | 
+| Windows Server Standard   | DPCNP-XQFKJ-BJF7R-FRC8D-GF6G4  |
+
 
 ## Windows Server 2016
 
@@ -53,10 +60,7 @@ prompt on the client, type **slmgr /ipk \<setup key\>** and then press **Enter**
 | Windows Server 2016 Datacenter | CB7KF-BWN84-R7R2Y-793K2-8XDDG |
 | Windows Server 2016 Standard   | WC2BQ-8NRM3-FDDYY-2BFGV-KHKQY |
 | Windows Server 2016 Essentials | JCKRF-N37P4-C2D82-9YXRT-4M63B |
-|                                |                               |
 
-> [!Note]  
-> To activate Windows Server, version 1709 (the first Semi-Annual Channel release), depending on where you obtained it, you can use your Windows Server 2016 license key, or the installation might be automatically activated. See [Introducing Windows Server, version 1709](get-started-with-1709.md) for details about obtaining and activating that release.
 
 
 ## Windows 10, version 1709
@@ -94,7 +98,7 @@ prompt on the client, type **slmgr /ipk \<setup key\>** and then press **Enter**
 | Windows Server 2012 R2 Datacenter      | W3GGN-FT8W3-Y4M27-J84CP-Q3VJ9 |
 | Windows Server 2012 R2 Essentials      | KNC87-3J2TX-XB4WP-VCPJV-M4FWM |
 
-Windows Server 2012 and Windows 8
+## Windows Server 2012 and Windows 8
 
 | Operating system edition                | KMS Client Setup Key          |
 |-----------------------------------------|-------------------------------|
@@ -109,12 +113,10 @@ Windows Server 2012 and Windows 8
 | Windows Server 2012 Server Standard     | XC9B7-NBPP2-83J2H-RHMBY-92BT4 |
 | Windows Server 2012 MultiPoint Standard | HM7DN-YVMH3-46JC3-XYTG7-CYQJJ |
 | Windows Server 2012 MultiPoint Premium  | XNH6W-2V9GX-RGJ4K-Y8X6F-QGJ2G |
-|                                         |                               |
 | Windows Server 2012 Datacenter          | 48HP8-DN98B-MYWDG-T2DCC-8W83P |
 
-[**DELETE FROM HERE DOWN B/C OUT OF SUPPORT?**]
 
-Windows 7 and Windows Server 2008 R2
+## Windows 7 and Windows Server 2008 R2
 
 | Operating system edition                         | KMS Client Setup Key          |
 |--------------------------------------------------|-------------------------------|
@@ -131,13 +133,12 @@ Windows 7 and Windows Server 2008 R2
 | Windows Server 2008 R2 Datacenter                | 74YFP-3QFB3-KQT8W-PMXWJ-7M648 |
 | Windows Server 2008 R2 for Itanium-based Systems | GT63C-RJFQ3-4GMB6-BRFB9-CB83V |
 
-Windows Vista and Windows Server 2008
+## Windows Vista and Windows Server 2008
 
 | Operating system edition                       | KMS Client Setup Key          |
 |------------------------------------------------|-------------------------------|
 | Windows Vista Business                         | YFKBB-PQJJV-G996G-VWGXY-2V3X8 |
 | Windows Vista Business N                       | HMBQG-8H2RH-C77VX-27R82-VMQBT |
-|                                                |                               |
 | Windows Vista Enterprise                       | VKK3X-68KWM-X2YGT-QR4M6-4BWMV |
 | Windows Vista Enterprise N                     | VTC42-BM838-43QHV-84HX6-XJXKV |
 | Windows Web Server 2008                        | WYR28-R7TFJ-3X2YQ-YCY4H-M249D |
