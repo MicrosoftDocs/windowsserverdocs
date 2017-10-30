@@ -98,7 +98,7 @@ prompt on the client, type **slmgr /ipk \<setup key\>** and then press **Enter**
 | Windows Server 2012 R2 Datacenter      | W3GGN-FT8W3-Y4M27-J84CP-Q3VJ9 |
 | Windows Server 2012 R2 Essentials      | KNC87-3J2TX-XB4WP-VCPJV-M4FWM |
 
-Windows Server 2012 and Windows 8
+## Windows Server 2012 and Windows 8
 
 | Operating system edition                | KMS Client Setup Key          |
 |-----------------------------------------|-------------------------------|
@@ -116,7 +116,7 @@ Windows Server 2012 and Windows 8
 | Windows Server 2012 Datacenter          | 48HP8-DN98B-MYWDG-T2DCC-8W83P |
 
 
-Windows 7 and Windows Server 2008 R2
+## Windows 7 and Windows Server 2008 R2
 
 | Operating system edition                         | KMS Client Setup Key          |
 |--------------------------------------------------|-------------------------------|
@@ -133,7 +133,7 @@ Windows 7 and Windows Server 2008 R2
 | Windows Server 2008 R2 Datacenter                | 74YFP-3QFB3-KQT8W-PMXWJ-7M648 |
 | Windows Server 2008 R2 for Itanium-based Systems | GT63C-RJFQ3-4GMB6-BRFB9-CB83V |
 
-Windows Vista and Windows Server 2008
+## Windows Vista and Windows Server 2008
 
 | Operating system edition                       | KMS Client Setup Key          |
 |------------------------------------------------|-------------------------------|
