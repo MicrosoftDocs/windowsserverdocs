@@ -6,7 +6,7 @@ ms.mktglfcycl: manage
 ms.sitesec: library
 author: jaimeo
 ms.localizationpriority: high
-ms.date: 10/26/2017
+ms.date: 10/30/2017
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 
@@ -14,9 +14,9 @@ ms.topic: get-started-article
 
 # Appendix A: KMS Client Setup Keys
 
->Applies To: Windows 10, Windows 8.1, Windows Server 2012 R2
+>Applies To: Windows Server Semi-Annual Channel, Windows 10, version 1709, Windows 10, Windows 8.1, Windows Server 2012 R2
 
-Computers that are running volume licensed editions of Windows 10, Windows 8.1,
+Computers that are running volume licensed editions of Windows Server, Windows 10, Windows 8.1,
 Windows Server 2012 R2, Windows 8, Windows Server 2012, Windows 7, Windows
 Server 2008 R2, Windows Vista, and Windows Server 2008 are, by default, KMS
 clients with no additional configuration needed.
@@ -46,6 +46,14 @@ prompt on the client, type **slmgr /ipk \<setup key\>** and then press **Enter**
 >   If you are running Windows Server 2008 R2 or Windows 7, be on the lookout
 >   for an update to support using those as KMS hosts for Windows 10 clients.
 
+## Windows Server, version 1709
+
+| Operating system edition       | KMS Client Setup Key          |
+|--------------------------------|-------------------------------|
+| Windows Server Datacenter | 6Y6KB-N82V8-D8CQV-23MJW-BWTG6  | 
+| Windows Server Standard   | DPCNP-XQFKJ-BJF7R-FRC8D-GF6G4  |
+
+
 ## Windows Server 2016
 
 | Operating system edition       | KMS Client Setup Key          |
@@ -53,10 +61,7 @@ prompt on the client, type **slmgr /ipk \<setup key\>** and then press **Enter**
 | Windows Server 2016 Datacenter | CB7KF-BWN84-R7R2Y-793K2-8XDDG |
 | Windows Server 2016 Standard   | WC2BQ-8NRM3-FDDYY-2BFGV-KHKQY |
 | Windows Server 2016 Essentials | JCKRF-N37P4-C2D82-9YXRT-4M63B |
-|                                |                               |
 
-> [!Note]  
-> To activate Windows Server, version 1709 (the first Semi-Annual Channel release), depending on where you obtained it, you can use your Windows Server 2016 license key, or the installation might be automatically activated. See [Introducing Windows Server, version 1709](get-started-with-1709.md) for details about obtaining and activating that release.
 
 
 ## Windows 10, version 1709
