@@ -116,7 +116,6 @@ Windows Server 2012 and Windows 8
 |                                         |                               |
 | Windows Server 2012 Datacenter          | 48HP8-DN98B-MYWDG-T2DCC-8W83P |
 
-[**DELETE FROM HERE DOWN B/C OUT OF SUPPORT?**]
 
 Windows 7 and Windows Server 2008 R2
 
