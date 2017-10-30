@@ -63,7 +63,7 @@ For more help choosing drives, see the [Choosing drives](choosing-drives.md) top
 - Use a separate, dedicated drive or RAID 1 mirror for Windows Server (200 GB is a recommended minimum size).
 - **Not supported:** Multi-path IO (MPIO) or physically connecting drives via multiple paths.
 > [!WARNING]
-> Microsoft has a critical product advisory for Storage Spaces Direct customers using the Intel P3x00 family of NVMe devices (all capacities of the P3500, P3600, P3700). See Knowledge Base article [4052341](https://support.microsoft.com/4052341) for more information.
+> Microsoft has a critical product advisory for Storage Spaces Direct customers using the Intel P3x00 family of NVMe devices (all capacities of the P3500, P3600, P3700). See Knowledge Base article [4052341](https://support.microsoft.com/help/4052341) for more information.
 
 #### Minimum number of drives
 
