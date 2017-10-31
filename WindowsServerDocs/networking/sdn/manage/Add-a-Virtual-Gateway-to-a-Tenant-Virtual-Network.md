@@ -216,7 +216,7 @@ $logicalsubnet.ResourceId = "Contoso_L3_Subnet"
 $logicalsubnet.Properties = New-Object Microsoft.Windows.NetworkController.LogicalSubnetProperties  
 $logicalsubnet.Properties.VlanID = 1001  
 $logicalsubnet.Properties.AddressPrefix = "10.127.134.0/25"  
-$logicalsubnet.Properties.DefaultGateway = "10.127.134.1"  
+$logicalsubnet.Properties.DefaultGateways = "10.127.134.1"  
   
 $lnProperties.Subnets += $logicalsubnet  
   
