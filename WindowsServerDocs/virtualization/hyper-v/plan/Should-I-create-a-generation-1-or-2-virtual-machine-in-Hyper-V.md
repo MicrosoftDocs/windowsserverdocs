@@ -77,7 +77,7 @@ The following table shows which versions of Red Hat Enterprise Linux \(RHEL\) an
 |Operating system versions|Generation 1|Generation 2|  
 |-----------------------------|----------------|----------------|  
 |RHEL/CentOS 7.x series|&#10004;|&#10004;|  
-|RHEL/CentOS 6.x series|&#10004;| &#10006;|  
+|RHEL/CentOS 6.x series|&#10004;|&#10004;</br>**Note:** Only supported on Windows Server 2016 and above.|  
 |RHEL/CentOS 5.x series|&#10004;| &#10006;|  
 
 For more information, see [CentOS and Red Hat Enterprise Linux virtual machines on Hyper-V](../Supported-CentOS-and-Red-Hat-Enterprise-Linux-virtual-machines-on-Hyper-V.md).  
