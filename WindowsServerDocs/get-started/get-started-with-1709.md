@@ -1,12 +1,12 @@
 ---
 title: Introducing Windows Server, version 1709
 description: How to obtain, install, and activate
-ms.prod: Windows Server
+ms.prod: windows-server-threshold
 ms.mktglfcycl: manage
 ms.sitesec: library
 author: jaimeo
 ms.localizationpriority: high
-ms.date: 10/25/2017
+ms.date: 10/31/2017
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 9cf87597-b15d-4f43-8aa1-91e60367f011
