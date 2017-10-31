@@ -1,5 +1,5 @@
 ---
-title: Plan Software Defined Networking
+title: Plan SDN
 description: The topics in this section provide deployment planning and prerequisite information about the Software Defined Networking technologies that are included in Windows Server 2016.
 manager: brianlic
 ms.prod: windows-server-threshold
@@ -9,7 +9,7 @@ ms.assetid: e2feb222-328b-4f2e-9290-09fe3c3d5cf0
 ms.author: jamesmci
 author: jamesmci
 ---
-# Plan Software Defined Networking
+# Plan SDN
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
@@ -18,11 +18,11 @@ The topics in this section provide deployment planning and prerequisite informat
 >[!NOTE]
 >For additional Software Defined Networking documentation, you can use the following library sections:
 >
-> - [Software Defined Networking Technologies](../technologies/Software-Defined-Networking-Technologies.md)  
-> - [Deploy Software Defined Networking](../deploy/Deploy-Software-Defined-Networking.md)
-> - [Manage Software Defined Networking](../manage/manage-sdn.md)
-> - [Security for Software Defined Networking](../security/sdn-security-top.md)
-> - [Troubleshoot Software Defined Networking](../troubleshoot/Troubleshoot-Software-Defined-Networking.md)
+> - [SDN Technologies](../technologies/Software-Defined-Networking-Technologies.md)  
+> - [Deploy SDN](../deploy/Deploy-Software-Defined-Networking.md)
+> - [Manage SDN](../manage/manage-sdn.md)
+> - [Security for SDN](../security/sdn-security-top.md)
+> - [Troubleshoot SDN](../troubleshoot/Troubleshoot-Software-Defined-Networking.md)
 
 This section includes the following topics:
 

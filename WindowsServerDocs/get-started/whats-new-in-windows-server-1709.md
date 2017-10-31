@@ -68,8 +68,6 @@ For more information about containers, see [Container Networking Overview](https
 
 ## Security and Assurance
 
-**Windows security baselines** have been updated for Windows Server and Windows 10. A [security baseline](https://docs.microsoft.com/en-us/windows/device-security/windows-security-baselines) is a group of Microsoft-recommended configuration settings and explains their security impact. For more information, and to download the Policy Analyzer tool, see [Microsoft Security Compliance Toolkit 1.0](https://docs.microsoft.com/en-us/windows/device-security/security-compliance-toolkit-10).
-
 **Network encryption** enables you to quickly encrypt network segments on software-defined networking infrastructure to meet security and compliance needs.
 
 **Host Guardian Service (HGS)** as a shielded VM is enabled. Prior to this release, the recommendation was to deploy a 3-node physical cluster. While this ensures the HGS environment is not compromised by an administrator, it was often cost prohibitive.
