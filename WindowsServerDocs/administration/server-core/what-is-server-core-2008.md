@@ -1,0 +1,63 @@
+---
+title: What is Server Core 2008?
+description: Learn about the Server Core installation option in Windows Server 2008
+ms.prod: windows-server-threshold
+author: helohr
+ms.date: 11/01/2017
+---
+#What is Server Core 2008?
+The Server Core option is a new minimal installation option that is available when you are deploying the Standard, Enterprise, or Datacenter edition of Windows Server 20081. Server Core provides you with a minimal installation of Windows Server 2008 that supports installing only certain server roles, as described later in this chapter. Contrast this with the Full installation option for Windows Server 2008, which supports installing all available server roles and also other Microsoft or third-party server applications, such as Microsoft Exchange Server or SAP. 
+Before we go any further, the phrase "installation option" needs to be explained. Normally, when you purchase a copy of Windows Server 2008, you purchase a license to use certain editions or stock-keeping units (SKUs). Table 1-1 lists the various editions of Windows Server 2008 that are available. The table also indicates which installation options (Full, Server Core, or both) are available for each edition.
+
+**Table 1-1** Windows Server 2008 Editions and Their Support for Installation Options
+| Edition       | Full          | Server core  |
+| ------------- |:-------------:| ------------:|
+| Windows Server 2008 Standard (x86 and x64)       | available | available        |
+| Windows Server 2008 Enterprise (x86 and x64)       | available | available        |
+| Windows Server 2008 Datacenter (x86 and x64)        | available | available       |
+| Windows Web Server 2008 (x86 and x64)       | available | available        |
+| Windows Server 2008 For Itanium-based systems       | available | unavailable     |
+| Windows HPC Server 2008 (x64 only)       | available | unavailable        |
+| Windows Server 2008 Standard without Hyper-V (x86 and x64) | available | available|
+| Windows Server 2008 Enterprise without Hyper-V (x86 and x64)  | available  | available |
+| Windows Server 2008 Standard without Hyper-V (x86 and x64) | available | available|
+
+To understand what an "installation option" is, let's say you've purchased a volume license that lets you install a copy of Windows Server 2008 Enterprise Edition. When you insert your volume-licensed media into a system and begin the installation process, one of the screens you'll see, as shown in Figure 1-1, presents you with a choice of editions and installation options.
+
+**Figure 1-1**
+
+In Figure 1-1, your volume license (or product key, for retail media) gives you two installation options you can choose between: the second option (a Full Installation of Windows Server 2008 Enterprise) and the fifth option (a Server Core Installation of Windows Server 2008 Enterprise), with the latter selected in this example. You'll learn more about installing Server Core in Chapter 2, "Deploying Server Core." 
+
+##Full vs. Server Core 
+Since the early days of the Microsoft Windows platform, Windows servers were essentially "everything" servers that included all kinds of features, some of which you might never actually use in your networking environment. For instance, when you installed Windows Server 2003 on a system, the binaries for Routing and Remote Access Service (RRAS) were installed on your server even if you had no need for this service (although you still had to configure and enable RRAS before it would work). Windows Server 2008 improves earlier versions by installing the binaries needed by a server role only if you choose to install that particular role on your server. However, the Full installation option of Windows Server 2008 still installs many services and other components that are often not needed for a particular usage scenario. 
+
+That's the reason Microsoft created a second installation option—Server Core—for Windows Server 2008: to eliminate any services and other features that are not essential for the support of certain commonly used server roles. For example, a Domain Name System (DNS) server really doesn't need Windows Internet Explorer installed on it because you wouldn't want to browse the Web from a DNS server for security reasons. And a DNS server doesn't even need a graphical user interface (GUI), because you can manage virtually all aspects of DNS either from the command line using the powerful Dnscmd.exe command, or remotely using the DNS Microsoft Management Console (MMC) snap-in.
+
+To avoid this, Microsoft decided to strip everything from Windows Server 2008 that was not absolutely essential for running core network services like Active Directory Domain Services (AD DS), DNS, Dynamic Host Configuration Protocol (DHCP), File and Print, and a few other server roles. The result is the new Server Core installation option, which can be used to create a server that supports only a limited number of roles and features. 
+
+##The Server Core GUI
+When you finish installing Server Core on a system and log on for the first time, you're in for a bit of a surprise. Figure 1-2 shows the Server Core user interface after first logon.
+
+**Figure 1-**
+
+There's no desktop! That is, there is no Windows Explorer shell, with its Start menu, Taskbar, and the other features you may be used to seeing. All you have is a command prompt, which means that you have to do most of the work of configuring a Server Core installation either by typing commands one at a time, which is slow, or by using scripts and batch files, which can help you speed up and simplify your configuration tasks by automating them. You can also perform some initial configuration tasks using answer files when you perform an unattended installation of Server Core. 
+
+For administrators who are experts in using command-line tools like Netsh.exe, Dfscmd.exe, and Dnscmd.exe, configuring and managing a Server Core installation can be easy, even fun. For those who are not experts, however, all is not lost'you can still use the standard Windows Server 2008 MMC tools for managing a Server Core installation. You just need to use them on a different system running either a full installation of Windows Server 2008 or Windows Vista with Service Pack 1. 
+
+You'll learn more about configuring and managing a Server Core installation in Chapters 3 to 6 of this book, while later chapters deal with how to manage specific server roles and other components. Meanwhile, if you think you need to learn more about the various Windows command-line tools and how to use them, there are two good resources to consult:
+* The Command Reference section of the Windows Server 2008 Technical Library () 
+* The Windows Command-Line Administrator's Pocket Consultant by William R. Stanek (Microsoft Press, 2008) 
+
+Table 1-2 lists the main GUI applications, together with their executables, that are available in a Server Core installation.
+
+**Table 1-2** GUI Applications Available in a Server Core Installation
+| Gui Application | Executable with Path |
+| -------------   |:-------------:       | 
+| Command prompt | %WINDIR%\System32\Cmd.exe |
+| Microsoft Support Diagnostic Tool | %WINDIR%\System32\MSdt.exe |
+| Notepad | %WINDIR%\System32\Notepad.exe |
+| Registry editor | %WINDIR%\System32\Regedt32.exe |
+| System information | %WINDIR%\System32\MSinfo32.exe |
+| Task manager | %WINDIR%\System32\Taskmgr.exe |
+| Windows Installer | %WINDIR%\System32\MSiexec.exe |
+
