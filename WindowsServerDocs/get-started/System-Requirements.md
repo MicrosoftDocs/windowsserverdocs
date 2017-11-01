@@ -87,7 +87,6 @@ Network adapters used with this release should include these features:
 **Minimum**:  
 - An Ethernet adapter capable of at least gigabit throughput  
 - Compliant with the PCI Express architecture specification.  
-- Supports Pre-boot Execution Environment (PXE).  
 
 A network adapter that supports network debugging (KDNet) is useful, but not a minimum requirement.   
 
