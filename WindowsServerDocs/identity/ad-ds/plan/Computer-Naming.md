@@ -20,7 +20,7 @@ When a computer running the Windows 2000, Windows XP, Windows Server 2003,  Wind
   
 If a computer already has a different DNS domain name that was statically entered into a DNS zone or registered by an integrated DNS/Dynamic Host Configuration Protocol (DHCP) Server service, the FQDN of the computer is distinct from the name that was registered previously. The computer can be referenced by either name.  
   
-For more information about naming conventions in Active Directory Domain Services (AD DS), see Naming conventions in Active Directory for computers, domains, sites, and organizational units ([http://go.microsoft.com/fwlink/?LinkID=106629](http://go.microsoft.com/fwlink/?LinkID=106629)).  
+For more information about naming conventions in Active Directory Domain Services (AD DS), see Naming conventions in Active Directory for computers, domains, sites, and organizational units ([https://go.microsoft.com/fwlink/?LinkID=106629](https://go.microsoft.com/fwlink/?LinkID=106629)).  
   
 
 

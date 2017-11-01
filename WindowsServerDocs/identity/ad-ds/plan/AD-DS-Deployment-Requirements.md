@@ -42,7 +42,7 @@ When you restructure domains between  Windows Server 2008  forests (interforest 
   
 When you restructure  Windows Server 2008  domains within a  Windows Server 2008  forest (intraforest restructure), you can consolidate your domain structure and therefore reduce administrative complexity and overhead. When you restructure domains within a forest, the migrated accounts no longer exist in the source domain.  
   
-For more information about how to use the Active Directory Migration Tool (ADMT) version 3.1 (ADMT v3.1) to restructure domains, see [ADMT v3.1 Migration Guide](http://go.microsoft.com/fwlink/?LinkId=93678).  
+For more information about how to use the Active Directory Migration Tool (ADMT) version 3.1 (ADMT v3.1) to restructure domains, see [ADMT v3.1 Migration Guide](https://go.microsoft.com/fwlink/?LinkId=93678).  
   
 
 

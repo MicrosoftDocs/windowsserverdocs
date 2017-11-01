@@ -122,7 +122,7 @@ The following sections provide more information about these elements of the SLB 
 ### SCVMM  
 With System Center 2016, you can configure Network Controller on  Windows Server 2016, including the SLB Manager and Health Monitor. You can also use System Center to deploy SLB MUXs and to install SLB Host Agents on computers that are running  Windows Server 2016 and Hyper-V.  
   
-For more information about System Center 2016, see [System Center 2016](http://www.microsoft.com/en-us/server-cloud/products/system-center-2016/).  
+For more information about System Center 2016, see [System Center 2016](https://www.microsoft.com/en-us/server-cloud/products/system-center-2016/).  
   
 > [!NOTE]  
 > If you do not want to use System Center 2016, you can use Windows PowerShell or another management application to install and configure Network Controller and other SLB infrastructure. For more information, see [Deploy Network Controller using Windows PowerShell](../../../sdn/deploy/Deploy-Network-Controller-using-Windows-PowerShell.md).  

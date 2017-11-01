@@ -60,4 +60,4 @@ Start-DedupJob -Type Unoptimization -Volume <Desired-Volume>
 
 ## <a id="faq"></a>Frequently Asked Questions
 **Is there a System Center Operations Manager Management Pack available to monitor Data Deduplication?**  
-Yes. Data Deduplication can be monitored through the System Center Management Pack for File Server. For more information, see the  [Guide for System Center Management Pack for File Server 2012 R2](http://download.microsoft.com/download/6/F/7/6F7A33B9-9383-48ED-9252-23C2C8AD1BDA/MPGuide_FileServer2012R2.doc) document.
+Yes. Data Deduplication can be monitored through the System Center Management Pack for File Server. For more information, see the  [Guide for System Center Management Pack for File Server 2012 R2](https://download.microsoft.com/download/6/F/7/6F7A33B9-9383-48ED-9252-23C2C8AD1BDA/MPGuide_FileServer2012R2.doc) document.

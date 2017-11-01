@@ -21,7 +21,7 @@ manager: dongill
 This topic provides troubleshooting for issues encountered while monitoring the health status of computers in the Alert Viewer and through email notifications in  Windows Server Essentials.  
   
 > [!NOTE]
->  For the most current troubleshooting information from the  Windows Server Essentials community, we suggest that you visit the [Windows Server Essentials Forum](http://social.technet.microsoft.com/Forums/winserveressentials/threads). The Windows Server Essentials Forum is a great place to search for help, or to ask a question.  
+>  For the most current troubleshooting information from the  Windows Server Essentials community, we suggest that you visit the [Windows Server Essentials Forum](https://social.technet.microsoft.com/Forums/winserveressentials/threads). The Windows Server Essentials Forum is a great place to search for help, or to ask a question.  
   
 ##  <a name="BKMK_TS"></a> Troubleshooting email notifications for alerts  
  This section lists various issues that you might encounter when using email notifications for alerts.  
@@ -48,7 +48,7 @@ This topic provides troubleshooting for issues encountered while monitoring the 
      %ProgramData%\Microsoft\Windows Server\Logs\SharedServiceHost-AlertServiceConfig.log  
   
     > [!TIP]
-    >  To see the ProgramData folder, you must have hidden items displayed. If you don „¢t see the ProgramData folder, on the ribbon „¢s **View** tab, in the **Show/hide** group, select the **Hidden items** text box.  
+    >  To see the ProgramData folder, you must have hidden items displayed. If you don ï¿½ï¿½t see the ProgramData folder, on the ribbon ï¿½ï¿½s **View** tab, in the **Show/hide** group, select the **Hidden items** text box.  
   
 ##### To update your email notification setup for alerts  
   

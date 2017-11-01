@@ -37,7 +37,7 @@ This topic explains the new AD DS replication and topology management cmdlets in
 ## <a name="BKMK_Intro"></a>Introduction  
 Windows Server 2012 extends the Active Directory module for Windows PowerShell with twenty-five new cmdlets to manage replication and forest topology. Prior to this, you were forced to use the generic **\*-AdObject** nouns or call .NET functions.  
   
-Like all Active Directory Windows PowerShell cmdlets, this new functionality requires installing the [Active Directory Management Gateway Service](http://www.microsoft.com/download/details.aspx?displaylang=en&id=2852) on at least one domain controller (and preferably, all domain controllers).  
+Like all Active Directory Windows PowerShell cmdlets, this new functionality requires installing the [Active Directory Management Gateway Service](https://www.microsoft.com/download/details.aspx?displaylang=en&id=2852) on at least one domain controller (and preferably, all domain controllers).  
   
 The following table lists new replication and topology cmdlets added to the Active Directory Windows PowerShell module.  
   
@@ -131,7 +131,7 @@ get-adobject -filter 'objectclass -eq "group"' | Get-ADReplicationAttributeMetad
   
 ![advanced management with powershell](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSGetADReplAttrMdClass.png)  
   
-For more information about more Windows PowerShell operations with pipelines, see [Piping and the Pipeline in Windows PowerShell](http://technet.microsoft.com/library/ee176927.aspx).  
+For more information about more Windows PowerShell operations with pipelines, see [Piping and the Pipeline in Windows PowerShell](https://technet.microsoft.com/library/ee176927.aspx).  
   
 Alternatively, to find out every group that has Tony Wang as a member and when the group was last modified:  
   

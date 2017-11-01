@@ -36,11 +36,11 @@ To resolve, update any policies that deny based on the endpoint claim to allow e
 
 For example, the rule below:
 
-`c1:[Type == "http://custom/ipoutsiderange", Value == "true"] && c2:[Type == "http://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-endpoint-absolute-path", Value != "/adfs/ls/"] => issue(Type = "http://schemas.microsoft.com/authorization/claims/deny", Value = " DenyUsersWithClaim");`  
+`c1:[Type == "https://custom/ipoutsiderange", Value == "true"] && c2:[Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-endpoint-absolute-path", Value != "/adfs/ls/"] => issue(Type = "https://schemas.microsoft.com/authorization/claims/deny", Value = " DenyUsersWithClaim");`  
 
 would be updated to:
 
-`c1:[Type == "http://custom/ipoutsiderange", Value == "true"] && c2:[Type == "http://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-endpoint-absolute-path", Value != "(/adfs/ls/)|(/adfs/services/trust/2005/windowstransport)|(/adfs/services/trust/13/windowstransport)|(/adfs/services/trust/2005/usernamemixed)|(/adfs/services/trust/13/usernamemixed)|(/adfs/services/trust/2005/certificatemixed)|(/adfs/services/trust/13/certificatemixed)"] => issue(Type = "http://schemas.microsoft.com/authorization/claims/deny", Value = " DenyUsersWithClaim");`
+`c1:[Type == "https://custom/ipoutsiderange", Value == "true"] && c2:[Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-endpoint-absolute-path", Value != "(/adfs/ls/)|(/adfs/services/trust/2005/windowstransport)|(/adfs/services/trust/13/windowstransport)|(/adfs/services/trust/2005/usernamemixed)|(/adfs/services/trust/13/usernamemixed)|(/adfs/services/trust/2005/certificatemixed)|(/adfs/services/trust/13/certificatemixed)"] => issue(Type = "https://schemas.microsoft.com/authorization/claims/deny", Value = " DenyUsersWithClaim");`
 
 
 
@@ -75,10 +75,10 @@ The policies described in this article should always be used with another authen
 4.  On the **Select Rule Template** page, under **Claim rule template**, select **Send Claims Using a Custom Rule**, and then click **Next**.  
   
 5.  On the **Configure Rule** page, under **Claim rule name**, type the display name for this rule, for example “If there is any IP claim outside the desired range, deny”. Under **Custom rule**, type or paste the following claim rule language syntax (replace the value above for “x-ms-forwarded-client-ip” with a valid IP expression):  
-`c1:[Type == " http://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", Value == "false"] && c2:[Type == "http://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip", Value =~ "^(?!192\.168\.1\.77|10\.83\.118\.23)"] => issue(Type = "http://schemas.microsoft.com/authorization/claims/deny", Value = " DenyUsersWithClaim");` </br>
+`c1:[Type == " https://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", Value == "false"] && c2:[Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip", Value =~ "^(?!192\.168\.1\.77|10\.83\.118\.23)"] => issue(Type = "https://schemas.microsoft.com/authorization/claims/deny", Value = " DenyUsersWithClaim");` </br>
 6.  Click **Finish**. Verify that the new rule appears in the Issuance Authorization Rules list before to the default **Permit Access to All Users** rule (the Deny rule will take precedence even though it appears earlier in the list).  If you do not have the default permit access rule, you can add one at the end of your list using the claim rule language as follows:  </br>
   	
-	`c:[] => issue(Type = "http://schemas.microsoft.com/authorization/claims/permit", Value = "true"); ` 
+	`c:[] => issue(Type = "https://schemas.microsoft.com/authorization/claims/permit", Value = "true"); ` 
 
 7.  To save the new rules, in the **Edit Claim Rules** dialog box, click **OK**. The resulting list should look like the following.  
   
@@ -99,7 +99,7 @@ The policies described in this article should always be used with another authen
   
 5.  On the **Configure Rule** page, under **Claim rule name**, type the display name for this rule, for example “If there is any IP claim outside the desired range, issue ipoutsiderange claim”. Under **Custom rule**, type or paste the following claim rule language syntax (replace the value above for “x-ms-forwarded-client-ip” with a valid IP expression):  
     
-    `c1:[Type == " http://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", Value == "false"] && c2:[Type == "http://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip", Value =~ "^(?!192\.168\.1\.77|10\.83\.118\.23)"] => issue(Type = "http://custom/ipoutsiderange", Value = "true");`  
+    `c1:[Type == " https://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", Value == "false"] && c2:[Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip", Value =~ "^(?!192\.168\.1\.77|10\.83\.118\.23)"] => issue(Type = "http://custom/ipoutsiderange", Value = "true");`  
 
 6.  Click **Finish**. Verify that the new rule appears in the **Issuance Authorization Rules** list.  
   
@@ -110,7 +110,7 @@ The policies described in this article should always be used with another authen
 9. On the **Configure Rule** page, under **Claim rule name**, type the display name for this rule, for example “If there is an IP outside the desired range AND there is a non-EAS x-ms-client-application claim, deny”. Under **Custom rule**, type or paste the following claim rule language syntax:  
   
 
-    `c1:[Type == "http://custom/ipoutsiderange", Value == "true"] && c2:[Type == "http://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-application", Value != "Microsoft.Exchange.ActiveSync"] => issue(Type = "http://schemas.microsoft.com/authorization/claims/deny", Value = "DenyUsersWithClaim");`  
+    `c1:[Type == "https://custom/ipoutsiderange", Value == "true"] && c2:[Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-application", Value != "Microsoft.Exchange.ActiveSync"] => issue(Type = "https://schemas.microsoft.com/authorization/claims/deny", Value = "DenyUsersWithClaim");`  
   
 10. Click **Finish**. Verify that the new rule appears in the **Issuance Authorization Rules** list.  
   
@@ -121,7 +121,7 @@ The policies described in this article should always be used with another authen
 13. On the **Configure Rule** page, under **Claim rule name**, type the display name for this rule, for example “check if application claim exists”. Under **Custom rule**, type or paste the following claim rule language syntax:  
   
     ```  
-    NOT EXISTS([Type == "http://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-application"]) => add(Type = "http://custom/xmsapplication", Value = "fail");  
+    NOT EXISTS([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-application"]) => add(Type = "http://custom/xmsapplication", Value = "fail");  
     ```  
   
 14. Click **Finish**. Verify that the new rule appears in the **Issuance Authorization Rules** list.  
@@ -132,8 +132,8 @@ The policies described in this article should always be used with another authen
   
 17. On the **Configure Rule** page, under **Claim rule name**, type the display name for this rule, for example “deny users with ipoutsiderange true and application fail”. Under **Custom rule**, type or paste the following claim rule language syntax:  
   
-`c1:[Type == "http://custom/ipoutsiderange", Value == "true"] && c2:[Type == "http://custom/xmsapplication", Value == "fail"] => issue(Type = "http://schemas.microsoft.com/authorization/claims/deny", Value = "DenyUsersWithClaim");`</br>  
-18. Click **Finish**. Verify that the new rule appears immediately below the previous rule and before to the default Permit Access to All Users rule in the Issuance Authorization Rules list (the Deny rule will take precedence even though it appears earlier in the list).  </br>If you do not have the default permit access rule, you can add one at the end of your list using the claim rule language as follows:</br></br>      `c:[] => issue(Type = "http://schemas.microsoft.com/authorization/claims/permit", Value = "true");`</br></br>
+`c1:[Type == "https://custom/ipoutsiderange", Value == "true"] && c2:[Type == "https://custom/xmsapplication", Value == "fail"] => issue(Type = "https://schemas.microsoft.com/authorization/claims/deny", Value = "DenyUsersWithClaim");`</br>  
+18. Click **Finish**. Verify that the new rule appears immediately below the previous rule and before to the default Permit Access to All Users rule in the Issuance Authorization Rules list (the Deny rule will take precedence even though it appears earlier in the list).  </br>If you do not have the default permit access rule, you can add one at the end of your list using the claim rule language as follows:</br></br>      `c:[] => issue(Type = "https://schemas.microsoft.com/authorization/claims/permit", Value = "true");`</br></br>
 19. To save the new rules, in the **Edit Claim Rules** dialog box, click OK. The resulting list should look like the following.  
   
      ![Issuance Authorization Rules](media/Access-Control-Policies-W2K12/clientaccess2.png )  
@@ -151,7 +151,7 @@ The policies described in this article should always be used with another authen
 4.  On the **Select Rule Template** page, under **Claim rule template**, select **Send Claims Using a Custom Rule**, and then click **Next**.  
   
 5.  On the **Configure Rule** page, under **Claim rule name**, type the display name for this rule, for example “If there is any IP claim outside the desired range, issue ipoutsiderange claim”. Under **Custom rule**, type or paste the following claim rule language syntax(replace the value above for “x-ms-forwarded-client-ip” with a valid IP expression):  </br>
-`c1:[Type == "http://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", Value == "false"] && c2:[Type == "http://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip", Value =~ "^(?!192\.168\.1\.77|10\.83\.118\.23)"] => issue(Type = "http://custom/ipoutsiderange", Value = "true");`   
+`c1:[Type == "https://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", Value == "false"] && c2:[Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip", Value =~ "^(?!192\.168\.1\.77|10\.83\.118\.23)"] => issue(Type = "http://custom/ipoutsiderange", Value = "true");`   
 6.  Click **Finish**. Verify that the new rule appears in the **Issuance Authorization Rules** list.  
   
 7.  Next, in the **Edit Claim Rules** dialog box, on the **Issuance Authorization Rules** tab, click **Add Rule** to start the Claim Rule Wizard again.  
@@ -161,11 +161,11 @@ The policies described in this article should always be used with another authen
 9. On the **Configure Rule** page, under **Claim rule name**, type the display name for this rule, for example “If there is an IP outside the desired range AND the endpoint is not /adfs/ls, deny”. Under **Custom rule**, type or paste the following claim rule language syntax:  
   
  
-    `c1:[Type == "http://custom/ipoutsiderange", Value == "true"] && c2:[Type == "http://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-endpoint-absolute-path", Value != "/adfs/ls/"] => issue(Type = "http://schemas.microsoft.com/authorization/claims/deny", Value = " DenyUsersWithClaim");`  
+    `c1:[Type == "https://custom/ipoutsiderange", Value == "true"] && c2:[Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-endpoint-absolute-path", Value != "/adfs/ls/"] => issue(Type = "https://schemas.microsoft.com/authorization/claims/deny", Value = " DenyUsersWithClaim");`  
   
 10. Click **Finish**. Verify that the new rule appears in the Issuance Authorization Rules list before to the default **Permit Access to All Users** rule (the Deny rule will take precedence even though it appears earlier in the list).  </br></br> If you do not have the default permit access rule, you can add one at the end of your list using the claim rule language as follows:  
   
-    `c:[] => issue(Type = "http://schemas.microsoft.com/authorization/claims/permit", Value = "true");`
+    `c:[] => issue(Type = "https://schemas.microsoft.com/authorization/claims/permit", Value = "true");`
   
 11. To save the new rules, in the **Edit Claim Rules** dialog box, click **OK**. The resulting list should look like the following.  
   
@@ -187,7 +187,7 @@ The policies described in this article should always be used with another authen
 5.  On the **Configure Rule** page, under **Claim rule name**, type the display name for this rule, for example “If there is any IP claim outside the desired range, issue ipoutsiderange claim.” Under **Custom rule**, type or paste the following claim rule language syntax(replace the value above for “x-ms-forwarded-client-ip” with a valid IP expression):  
   
       
-    `c1:[Type == "http://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip", Value =~ "^(?!192\.168\.1\.77|10\.83\.118\.23)"] && c2:[Type == "http://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", Value == "false"] => issue(Type = "http://custom/ipoutsiderange", Value = "true");`  
+    `c1:[Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip", Value =~ "^(?!192\.168\.1\.77|10\.83\.118\.23)"] && c2:[Type == "https://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", Value == "false"] => issue(Type = "http://custom/ipoutsiderange", Value = "true");`  
 
 6.  Click **Finish**. Verify that the new rule appears in the **Issuance Authorization Rules** list.  
   
@@ -197,7 +197,7 @@ The policies described in this article should always be used with another authen
   
 9. On the **Configure Rule** page, under **Claim rule name**, type the display name for this rule, for example “check group SID”. Under **Custom rule**, type or paste the following claim rule language syntax (replace "groupsid" with the actual SID of the AD group you are using):  
    
-    `NOT EXISTS([Type == "http://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid", Value == "S-1-5-32-100"]) => add(Type = "http://custom/groupsid", Value = "fail");`  
+    `NOT EXISTS([Type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid", Value == "S-1-5-32-100"]) => add(Type = "http://custom/groupsid", Value = "fail");`  
 
 10. Click **Finish**. Verify that the new rule appears in the **Issuance Authorization Rules** list.  
   
@@ -207,11 +207,11 @@ The policies described in this article should always be used with another authen
   
 13. On the **Configure Rule** page, under **Claim rule name**, type the display name for this rule, for example “deny users with ipoutsiderange true and groupsid fail”. Under **Custom rule**, type or paste the following claim rule language syntax:  
    
-    `c1:[Type == "http://custom/ipoutsiderange", Value == "true"] && c2:[Type == "http://custom/groupsid", Value == "fail"] => issue(Type = "http://schemas.microsoft.com/authorization/claims/deny", Value = "DenyUsersWithClaim");`  
+    `c1:[Type == "https://custom/ipoutsiderange", Value == "true"] && c2:[Type == "https://custom/groupsid", Value == "fail"] => issue(Type = "https://schemas.microsoft.com/authorization/claims/deny", Value = "DenyUsersWithClaim");`  
 
 14. Click **Finish**. Verify that the new rule appears immediately below the previous rule and before to the default Permit Access to All Users rule in the Issuance Authorization Rules list (the Deny rule will take precedence even though it appears earlier in the list).  </br></br>If you do not have the default permit access rule, you can add one at the end of your list using the claim rule language as follows:  
    
-    `c:[] => issue(Type = "http://schemas.microsoft.com/authorization/claims/permit", Value = "true");`  
+    `c:[] => issue(Type = "https://schemas.microsoft.com/authorization/claims/permit", Value = "true");`  
 
 15. To save the new rules, in the **Edit Claim Rules** dialog box, click OK. The resulting list should look like the following.  
   
@@ -285,7 +285,7 @@ The policies described in this article should always be used with another authen
  AD FS in Windows Server 2012 R2 provides request context information using the following claim types:  
   
 ### X-MS-Forwarded-Client-IP  
- Claim type: `http://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip`  
+ Claim type: `https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip`  
   
  This AD FS claim represents a “best attempt” at ascertaining the IP address of the user (for example, the Outlook client) making the request. This claim can contain multiple IP addresses, including the address of every proxy that forwarded the request.  This claim is populated from an HTTP. The value of the claim can be one of the following:  
   
@@ -307,7 +307,7 @@ The policies described in this article should always be used with another authen
 >  Exchange Online currently supports only IPV4 addresses; it does not support IPV6 addresses.  
   
 ### X-MS-Client-Application  
- Claim type: `http://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-application`  
+ Claim type: `https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-application`  
   
  This AD FS claim represents the protocol used by the end client, which corresponds loosely to the application being used.  This claim is populated from an HTTP header that is currently only set by Exchange Online, which populates the header when passing the authentication request to AD FS. Depending on the application, the value of this claim will be one of the following:  
   
@@ -334,7 +334,7 @@ The policies described in this article should always be used with another authen
     -   Microsoft.Exchange.Imap  
   
 ### X-MS-Client-User-Agent  
- Claim type: `http://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-user-agent`  
+ Claim type: `https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-user-agent`  
   
  This AD FS claim provides a string to represent the device type that the client is using to access the service. This can be used when customers would like to prevent access for certain devices (such as particular types of smart phones).  Example values for this claim include (but are not limited to) the values below.  
   
@@ -357,19 +357,19 @@ The policies described in this article should always be used with another authen
  It is also possible that this value is empty.  
   
 ### X-MS-Proxy  
- Claim type: `http://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-proxy`  
+ Claim type: `https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-proxy`  
   
  This AD FS claim indicates that the request has passed through the Web Application proxy.  This claim is populated by the Web Application proxy, which populates the header when passing the authentication request to the back end Federation Service. AD FS then converts it to a claim.  
   
  The value of the claim is the DNS name of the Web Application proxy that passed the request.  
   
 ### InsideCorporateNetwork  
- Claim type: `http://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork`  
+ Claim type: `https://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork`  
   
  Similar to the above x-ms-proxy claim type, this claim type indicates whether the request has passed through the web application proxy. Unlike x-ms-proxy, insidecorporatenetwork is a boolean value with True indicating a request directly to the federation service from inside the corporate network.  
   
 ### X-MS-Endpoint-Absolute-Path (Active vs Passive)  
- Claim type: `http://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-endpoint-absolute-path`  
+ Claim type: `https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-endpoint-absolute-path`  
   
  This claim type can be used for determining requests originating from “active” (rich) clients versus “passive” (web-browser-based) clients. This enables external requests from browser-based applications such as the Outlook Web Access, SharePoint Online, or the Office 365 portal to be allowed while requests originating from rich clients such as Microsoft Outlook are blocked.  
   

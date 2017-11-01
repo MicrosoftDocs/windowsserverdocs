@@ -41,7 +41,7 @@ You can change the order of tabs in the Dashboard so that your tab is the first 
   
 6.  Type the GUID that was defined for the top-level tab, and then press **Enter**.  
   
-     For more information about creating and identifying top-level tabs, see [Create a Top-Level Tab](http://msdn.microsoft.com/library/gg513957) in the Windows Server Solutions SDK.  
+     For more information about creating and identifying top-level tabs, see [Create a Top-Level Tab](https://msdn.microsoft.com/library/gg513957) in the Windows Server Solutions SDK.  
   
 7.  Save the changes to the registry.  
   

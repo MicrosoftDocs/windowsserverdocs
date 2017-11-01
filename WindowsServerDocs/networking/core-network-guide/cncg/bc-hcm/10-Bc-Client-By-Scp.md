@@ -22,7 +22,7 @@ With this procedure you can use Group Policy to enable and configure BranchCache
 - Windows 8 Enterprise
 
 > [!NOTE]  
-> To configure domain-joined computers that are running Windows Server 2008 R2 or Windows 7, see the Windows Server 2008 R2 [BranchCache Deployment Guide](http://technet.microsoft.com/library/ee649232.aspx).
+> To configure domain-joined computers that are running Windows Server 2008 R2 or Windows 7, see the Windows Server 2008 R2 [BranchCache Deployment Guide](https://technet.microsoft.com/library/ee649232.aspx).
 
 Membership in **Domain Admins**, or equivalent is the minimum required to perform this procedure.
 

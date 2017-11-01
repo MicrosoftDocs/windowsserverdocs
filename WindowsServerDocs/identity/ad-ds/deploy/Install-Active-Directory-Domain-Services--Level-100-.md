@@ -46,11 +46,11 @@ The following credentials are required to run Adprep.exe and install AD DS.
     >     > If you have already run adprep /rodcprep in Windows Server 2008 or Windows Server 2008 R2, you do not need to run it again for  Windows Server 2012 .  
   
 ## <a name="BKMK_PS"></a>Installing AD DS by Using Windows PowerShell  
-Beginning with  Windows Server 2012 , you can install AD DS using Windows PowerShell. Dcpromo.exe is deprecated beginning with  Windows Server 2012 , but you can still run dcpromo.exe by using an answer file (dcpromo /unattend:<answerfile> or dcpromo /answer:<answerfile>). The ability to continue running dcpromo.exe with an answer file provides organizations that have resources invested in existing automation time to convert the automation from dcpromo.exe to Windows PowerShell. For more information about running dcpromo.exe with an answer file, see [http://support.microsoft.com/kb/947034](http://support.microsoft.com/kb/947034).  
+Beginning with  Windows Server 2012 , you can install AD DS using Windows PowerShell. Dcpromo.exe is deprecated beginning with  Windows Server 2012 , but you can still run dcpromo.exe by using an answer file (dcpromo /unattend:<answerfile> or dcpromo /answer:<answerfile>). The ability to continue running dcpromo.exe with an answer file provides organizations that have resources invested in existing automation time to convert the automation from dcpromo.exe to Windows PowerShell. For more information about running dcpromo.exe with an answer file, see [https://support.microsoft.com/kb/947034](https://support.microsoft.com/kb/947034).  
   
 For more information about removing AD DS using Windows PowerShell, see [Remove AD DS using Windows PowerShell](assetId:///99b97af0-aa7e-41ed-8c81-4eee6c03eb4c#BKMK_RemovePS).  
   
-Start with adding the role using Windows PowerShell. This command installs the AD DS server role and installs the AD DS and AD LDS server administration tools, including GUI-based tools such as Active Directory Users and Computers and command-line tools such as dcdia.exe. Server administration tools are not installed by default when you use Windows PowerShell. You need to specify **"IncludeManagementTools** to manage the local server or install [Remote Server Administration Tools](http://www.microsoft.com/download/details.aspx?id=28972) to manage a remote server.  
+Start with adding the role using Windows PowerShell. This command installs the AD DS server role and installs the AD DS and AD LDS server administration tools, including GUI-based tools such as Active Directory Users and Computers and command-line tools such as dcdia.exe. Server administration tools are not installed by default when you use Windows PowerShell. You need to specify **"IncludeManagementTools** to manage the local server or install [Remote Server Administration Tools](https://www.microsoft.com/download/details.aspx?id=28972) to manage a remote server.  
   
 ```  
 Install-windowsfeature -name AD-Domain-Services -IncludeManagementTools  
@@ -79,7 +79,7 @@ Get-Help Add-ADDSReadOnlyDomainControllerAccount
   
 Optional arguments appear in square brackets.  
   
-You can also download the latest Help examples and concepts for Windows PowerShell cmdlets. For more information, see [about_Updatable_Help](http://technet.microsoft.com/library/hh847735.aspx).  
+You can also download the latest Help examples and concepts for Windows PowerShell cmdlets. For more information, see [about_Updatable_Help](https://technet.microsoft.com/library/hh847735.aspx).  
   
 You can run Windows PowerShell cmdlets against remote servers:  
   
@@ -126,19 +126,19 @@ Similarly, because **"installdns** has a default value of $False if you install 
   
 |Argument|Description|  
 |------------|---------------|  
-|**ADPrepCredential <PS Credential>** **Note:** Required if you are installing the first  Windows Server 2012  domain controller in a domain or forest and the credentials of the current user are insufficient to perform the operation.|Specifies the account with Enterprise Admins and Schema Admins group membership that can prepare the forest, according to the rules of [Get-Credential](http://technet.microsoft.com/library/dd315327.aspx) and a PSCredential object.<br /><br />If no value is specified, the value of the **"credential** argument is used.|  
+|**ADPrepCredential <PS Credential>** **Note:** Required if you are installing the first  Windows Server 2012  domain controller in a domain or forest and the credentials of the current user are insufficient to perform the operation.|Specifies the account with Enterprise Admins and Schema Admins group membership that can prepare the forest, according to the rules of [Get-Credential](https://technet.microsoft.com/library/dd315327.aspx) and a PSCredential object.<br /><br />If no value is specified, the value of the **"credential** argument is used.|  
 |AllowDomainControllerReinstall|Specifies whether to continue installing this writable domain controller, despite the fact that another writable domain controller account with the same name is detected.<br /><br />Use **$True** only if you are sure that the account is not currently used by another writable domain controller.<br /><br />The default is **$False**.<br /><br />This argument is not valid for an RODC.|  
 |AllowDomainReinstall|Specifies whether an existing domain is recreated.<br /><br />The default is **$False**.|  
 |AllowPasswordReplicationAccountName <string []>|Specifies the names of user accounts, group accounts, and computer accounts whose passwords can be replicated to this RODC. Use an empty string "" if you want to keep the value empty. By default, only the Allowed RODC Password Replication Group is allowed, and it is originally created empty.<br /><br />Supply values as a string array. For example:<br /><br />Code -AllowPasswordReplicationAccountName "JSmith","JSmithPC","Branch Users"|  
 |ApplicationPartitionsToReplicate <string []> **Note:** There is no equivalent option in the UI. If you install using the UI, or using IFM, then all application partitions will be replicated.|Specifies the application directory partitions to replicate. This argument is applied only when you specify the **-InstallationMediaPath** argument to install from media (IFM). By default, all application partitions will replicate based on their own scopes.<br /><br />Supply values as a string array. For example:<br /><br />Code -<br /><br />-ApplicationPartitionsToReplicate "partition1","partition2","partition3"|  
 |Confirm|Prompts you for confirmation before running the cmdlet.|  
 |CreateDnsDelegation **Note:** You cannot specify this argument when you run the Add-ADDSReadOnlyDomainController cmdlet.|Indicates whether to create a DNS delegation that references the new DNS server that you are installing along with the domain controller. Valid for Active Directory"integrated DNS only. Delegation records can be created only on Microsoft DNS servers that are online and accessible. Delegation records cannot be created for domains that are immediately subordinate to top-level domains such as .com, .gov, .biz, .edu or two-letter country code domains such as .nz and .au.<br /><br />The default is computed automatically based on the environment.|  
-|**Credential <PS Credential>** **Note:** Required only if the credentials of the current user are insufficient to perform the operation.|Specifies the domain account that can logon to the domain, according to the rules of [Get-Credential](http://technet.microsoft.com/library/dd315327.aspx) and a PSCredential object.<br /><br />If no value is specified, the credentials of the current user are used.|  
+|**Credential <PS Credential>** **Note:** Required only if the credentials of the current user are insufficient to perform the operation.|Specifies the domain account that can logon to the domain, according to the rules of [Get-Credential](https://technet.microsoft.com/library/dd315327.aspx) and a PSCredential object.<br /><br />If no value is specified, the credentials of the current user are used.|  
 |CriticalReplicationOnly|Specifies whether the AD DS installation operation performs only critical replication before reboot and then continues. The noncritical replication happens after the installation finishes and the computer reboots.<br /><br />Using this argument is not recommended.<br /><br />There is no equivalent for this option in the user interface (UI).|  
 |DatabasePath <string>|Specifies the fully qualified, non"Universal Naming Convention (UNC) path to a directory on a fixed disk of the local computer that contains the domain database, for example, **C:\Windows\NTDS.**<br /><br />The default is **%SYSTEMROOT%\NTDS**. **Important:** While you can store the AD DS database and log files on volume formatted with Resilient File System (ReFS), there are no specific benefits for hosting AD DS on ReFS, other than the normal benefits of resiliency you get for hosting any data on ReFS.|  
 |DelegatedAdministratorAccountName <string>|Specifies the name of the user or group that can install and administer the RODC.<br /><br />By default, only members of the Domain Admins group can administer an RODC.|  
 |DenyPasswordReplicationAccountName <string []>|Specifies the names of user accounts, group accounts, and computer accounts whose passwords are not to be replicated to this RODC. Use an empty string "" if you do not want to deny the replication of credentials of any users or computers. By default, Administrators, Server Operators, Backup Operators, Account Operators, and the Denied RODC Password Replication Group are denied. By default, the Denied RODC Password Replication Group includes Cert Publishers, Domain Admins, Enterprise Admins, Enterprise Domain Controllers, Enterprise Read-Only Domain Controllers, Group Policy Creator Owners, the krbtgt account, and Schema Admins.<br /><br />Supply values as a string array. For example:<br /><br />Code -<br /><br />-DenyPasswordReplicationAccountName "RegionalAdmins","AdminPCs"|  
-|DnsDelegationCredential <PS Credential> **Note:** You cannot specify this argument when you run the Add-ADDSReadOnlyDomainController cmdlet.|Specifies the user name and password for creating DNS delegation, according to the rules of [Get-Credential](http://technet.microsoft.com/library/dd315327.aspx) and a PSCredential object.|  
+|DnsDelegationCredential <PS Credential> **Note:** You cannot specify this argument when you run the Add-ADDSReadOnlyDomainController cmdlet.|Specifies the user name and password for creating DNS delegation, according to the rules of [Get-Credential](https://technet.microsoft.com/library/dd315327.aspx) and a PSCredential object.|  
 |DomainMode <DomainMode> {Win2003 &#124; Win2008 &#124; Win2008R2 &#124; Win2012 &#124; Win2012R2}<br /><br />Or<br /><br />DomainMode <DomainMode> {2 &#124; 3 &#124; 4 &#124; 5 &#124; 6}|Specifies the domain functional level during the creation of a new domain.<br /><br />The domain functional level cannot be lower than the forest functional level, but it can be higher.<br /><br />The default value is automatically computed and set to the existing forest functional level or the value that is set for **-ForestMode**.|  
 |**DomainName**<br /><br />Required for Install-ADDSForest and Install-ADDSDomainController cmdlets.|Specifies the FQDN of the domain in which you want to install an additional domain controller.|  
 |**DomainNetbiosName <string>**<br /><br />Required for Install-ADDSForest if FQDN prefix name is longer than 15 characters.|Use with Install-ADDSForest. Assigns a NetBIOS name to the new forest root domain.|  
@@ -166,7 +166,7 @@ Similarly, because **"installdns** has a default value of $False if you install 
 |WhatIf|Shows what would happen if the cmdlet runs. The cmdlet is not run.|  
   
 ### <a name="BKMK_PSCreds"></a>Specifying Windows PowerShell Credentials  
-You can specify credentials without revealing them in plain text on screen by using [Get-credential](http://technet.microsoft.com/library/dd315327.aspx).  
+You can specify credentials without revealing them in plain text on screen by using [Get-credential](https://technet.microsoft.com/library/dd315327.aspx).  
   
 The operation for the -SafeModeAdministratorPassword and LocalAdministratorPassword arguments is special:  
   
@@ -315,10 +315,10 @@ AD DS can be installed in  Windows Server 2012  by using the Add Roles Wizard in
 The following sections explain how to create server pools in order to install and manage AD DS on multiple servers, and how to use the wizards to install AD DS.  
   
 ### <a name="BKMK_ServerPools"></a>Creating server pools  
-Server Manager can pool other servers on the network as long as they are accessible from the computer running Server Manager. Once pooled, you choose those servers for remote installation of AD DS or any other configuration options possible within Server Manager. The computer running Server Manager automatically pools itself. For more information about server pools, see [Add Servers to Server Manager](http://technet.microsoft.com/library/hh831453.aspx).  
+Server Manager can pool other servers on the network as long as they are accessible from the computer running Server Manager. Once pooled, you choose those servers for remote installation of AD DS or any other configuration options possible within Server Manager. The computer running Server Manager automatically pools itself. For more information about server pools, see [Add Servers to Server Manager](https://technet.microsoft.com/library/hh831453.aspx).  
   
 > [!NOTE]  
-> In order to manage a domain-joined computer using Server Manager on a workgroup server, or vice-versa, additional configuration steps are needed. For more information, see "Add and manage servers in workgroups" in [Add Servers to Server Manager](http://technet.microsoft.com/library/hh831453.aspx).  
+> In order to manage a domain-joined computer using Server Manager on a workgroup server, or vice-versa, additional configuration steps are needed. For more information, see "Add and manage servers in workgroups" in [Add Servers to Server Manager](https://technet.microsoft.com/library/hh831453.aspx).  
   
 ### <a name="BKMK_installADDSGUI"></a>Installing AD DS  
 **Administrative credentials**  
@@ -345,7 +345,7 @@ Use the following procedures to install AD DS using the GUI method. The steps ca
   
 4.  On the **Select destination server** page, click **Select a server from the server pool**, click the name of the server where you want to install AD DS and then click **Next**.  
   
-    To select remote servers, first create a server pool and add the remote servers to it. For more information about creating server pools, see [Add Servers to Server Manager](http://technet.microsoft.com/library/hh831453.aspx).  
+    To select remote servers, first create a server pool and add the remote servers to it. For more information about creating server pools, see [Add Servers to Server Manager](https://technet.microsoft.com/library/hh831453.aspx).  
   
 5.  On the **Select server roles** page, click **Active Directory Domain Services**, then on the **Add Roles and Features Wizard** dialog box, click **Add Features**, and then click **Next**.  
   
@@ -397,11 +397,11 @@ Use the following procedures to install AD DS using the GUI method. The steps ca
   
     If a DNS server that hosts the parent zone cannot be contacted, the **Update DNS Delegation** option is not available.  
   
-    For more information about whether you need to update the DNS delegation, see [Understanding Zone Delegation](http://technet.microsoft.com/library/cc771640.aspx). If you attempt to update the DNS delegation and encounter an error, see [DNS Options](../../ad-ds/deploy/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions.md#BKMK_DNSOptionsPage).  
+    For more information about whether you need to update the DNS delegation, see [Understanding Zone Delegation](https://technet.microsoft.com/library/cc771640.aspx). If you attempt to update the DNS delegation and encounter an error, see [DNS Options](../../ad-ds/deploy/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions.md#BKMK_DNSOptionsPage).  
   
 13. On the **RODC Options** page (which appears only if you install an RODC), specify the name of a group or user who will manage the RODC, add accounts to or remove accounts from the Allowed or Denied password replication groups, and then click **Next**.  
   
-    For more information, see [Password Replication Policy](http://technet.microsoft.com/library/cc730883(v=ws.10)).  
+    For more information, see [Password Replication Policy](https://technet.microsoft.com/library/cc730883(v=ws.10)).  
   
 14. On the **Additional Options** page, choose one of the following options:  
   
@@ -409,7 +409,7 @@ Use the following procedures to install AD DS using the GUI method. The steps ca
   
     -   If you are adding a domain controller to an existing domain, select the domain controller that you want to replicate the AD DS installation data from (or allow the wizard to select any domain controller). If you are installing from media, click **Install from media path** type and verify the path to the installation source files, and then click **Next**.  
   
-        You cannot use install from media (IFM) to install the first domain controller in a domain. IFM does not work across different operating system versions. In other words, in order to install an additional domain controller that runs  Windows Server 2012  by using IFM, you must create the backup media on a  Windows Server 2012  domain controller. For more information about IFM, see [Installing an Additional Domain Controller by Using IFM](http://technet.microsoft.com/library/cc816722(WS.10).aspx).  
+        You cannot use install from media (IFM) to install the first domain controller in a domain. IFM does not work across different operating system versions. In other words, in order to install an additional domain controller that runs  Windows Server 2012  by using IFM, you must create the backup media on a  Windows Server 2012  domain controller. For more information about IFM, see [Installing an Additional Domain Controller by Using IFM](https://technet.microsoft.com/library/cc816722(WS.10).aspx).  
   
 15. On the **Paths** page, type the locations for the Active Directory database, log files, and SYSVOL folder (or accept default locations), and click **Next**.  
   

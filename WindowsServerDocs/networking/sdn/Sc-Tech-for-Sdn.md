@@ -1,5 +1,5 @@
 ---
-title: System Center Technologies for Software Defined Networking
+title: System Center Technologies for SDN
 description: You can use this topic to learn about the Software Defined Networking (SDN) technologies that are provided in System Center.
 manager: brianlic
 ms.custom: na
@@ -13,7 +13,7 @@ ms.assetid: f66ee49a-1fd3-4927-a813-64a15017b63b
 ms.author: jamesmci
 author: jamesmci
 ---
-# System Center Technologies for Software Defined Networking
+# System Center Technologies for SDN
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 

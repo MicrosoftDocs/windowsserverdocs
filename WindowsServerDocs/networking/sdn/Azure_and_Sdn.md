@@ -1,5 +1,5 @@
 ---
-title: Microsoft Azure and Software Defined Networking
+title: Microsoft Azure and SDN
 description: You can use this topic to learn about the Software Defined Networking (SDN) technologies that are provided in Microsoft Azure.
 manager: brianlic
 ms.custom: na
@@ -23,4 +23,4 @@ Microsoft's approach to software defined networking includes designing, building
   
 Microsoft Azure runs on the same Windows Server and Hyper-V platform that are included in Windows Server. Windows Server and System Center include improvements and best practices from Microsoft's experience in operating global scale datacenter networks like Microsoft Azure to you so that you can deploy the same technologies for flexibility, automation, and control when using software designed networking technologies.  
   
-For more information, see [What is Microsoft Azure?](http://azure.microsoft.com/overview/what-is-azure/?WT.mc_id=azurebg_us_sem_bing_br_nontest_whatisazure_whatisazure&WT.srch=1).  
+For more information, see [What is Microsoft Azure?](https://azure.microsoft.com/overview/what-is-azure/?WT.mc_id=azurebg_us_sem_bing_br_nontest_whatisazure_whatisazure&WT.srch=1).  

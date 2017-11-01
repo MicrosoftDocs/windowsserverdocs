@@ -60,7 +60,7 @@ mediaStreamingManager.SetMediaLibraryName(mediaLibraryName);
   
 ```  
   
- For more information, see [Windows Server Solutions SDK](http://go.microsoft.com/fwlink/?LinkID=248648).  
+ For more information, see [Windows Server Solutions SDK](https://go.microsoft.com/fwlink/?LinkID=248648).  
   
 ##  <a name="BKMK_StreamingQuality"></a> Set video streaming quality  
  You set the video streaming quality by obtaining the WinSAT CPU score and then creating and installing the .xml file that contains the WinSAT score information. If the .xml file that contains the WinSAT score information is installed before Initial Configuration runs, the user interface for setting video quality will not appear to the customer. For more information, see [Set the WinSAT Score on the Server](Set-the-WinSAT-Score-on-the-Server.md).  

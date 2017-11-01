@@ -29,4 +29,4 @@ You cannot run **Autofmt** directly from the command-line.
 
 [Command-Line Syntax Key](command-line-syntax-key.md)
 
-[Working with File Systems](http://go.microsoft.com/fwlink/?LinkId=4509)
+[Working with File Systems](https://go.microsoft.com/fwlink/?LinkId=4509)

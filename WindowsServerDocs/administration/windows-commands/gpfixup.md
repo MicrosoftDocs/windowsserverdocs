@@ -64,6 +64,6 @@ gpfixup /olddns: MyOldDnsName /newdns:MyNewDnsName /dc:MyDcDnsName 2>&1 >gpfixup
 
 #### Additional references
 
--   [Administering Active Directory Domain Rename](http://go.microsoft.com/fwlink/?LinkId=198385)
--   [Group Policy TechCenter](http://go.microsoft.com/fwlink/?LinkID=145531)
+-   [Administering Active Directory Domain Rename](https://go.microsoft.com/fwlink/?LinkId=198385)
+-   [Group Policy TechCenter](https://go.microsoft.com/fwlink/?LinkID=145531)
 -   [Command-Line Syntax Key](command-line-syntax-key.md)

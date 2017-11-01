@@ -59,4 +59,4 @@ wbadmin get versions -backupTarget:\\servername\share -machine:server01
 
 -   [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)
--   [Get-WBBackupTarget](http://technet.microsoft.com/library/jj902447.aspx) cmdlet
+-   [Get-WBBackupTarget](https://technet.microsoft.com/library/jj902447.aspx) cmdlet

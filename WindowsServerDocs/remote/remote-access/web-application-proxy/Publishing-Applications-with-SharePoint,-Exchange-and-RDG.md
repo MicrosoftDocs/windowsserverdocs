@@ -28,7 +28,7 @@ You can publish a SharePoint site through Web Application Proxy when the SharePo
   
     To allow users to authenticate using Integrated Windows authentication, the Web Application Proxy server must be joined to a domain.  
   
-    You must configure the application to support Kerberos constrained delegation. You can do this on the domain controller for any application. You can also configure the application directly on the backend server if it is running on  Windows Server 2012 R2  or  Windows Server 2012 . For more information, see [What's New in Kerberos Authentication](http://technet.microsoft.com/library/hh831747.aspx). You must also make sure that the Web Application Proxy servers are configured for delegation to the service principal names of the backend servers. For a walkthrough of how to configure Web Application Proxy to publish an application using Integrated Windows authentication, see [Configure a site to use Integrated Windows authentication](assetId:///b0788958-627f-450f-877c-209b1bd0db52).  
+    You must configure the application to support Kerberos constrained delegation. You can do this on the domain controller for any application. You can also configure the application directly on the backend server if it is running on  Windows Server 2012 R2  or  Windows Server 2012 . For more information, see [What's New in Kerberos Authentication](https://technet.microsoft.com/library/hh831747.aspx). You must also make sure that the Web Application Proxy servers are configured for delegation to the service principal names of the backend servers. For a walkthrough of how to configure Web Application Proxy to publish an application using Integrated Windows authentication, see [Configure a site to use Integrated Windows authentication](assetId:///b0788958-627f-450f-877c-209b1bd0db52).  
   
 If your SharePoint site is configured using either alternate access mappings (AAM) or host-named site collections, you can use different external and backend server URLs to publish your application. However, if you do not configure your SharePoint site using AAM or host-named site collections, you must use the same external and backend server URLs.  
   
@@ -37,10 +37,10 @@ The following table describes the Exchange services that you can publish through
   
 |Exchange service|Pre-authentication|Notes|  
 |--------------------|-----------------------|---------|  
-|Outlook Web App|-   AD FS using non-claims-based authentication<br />-   Pass-through<br />-   AD FS using claims-based authentication for on-premises Exchange 2013 Service Pak 1 (SP1)|For more information see: [Using AD FS claims-based authentication with Outlook Web App and EAC](http://go.microsoft.com/fwlink/?LinkId=393723)|  
+|Outlook Web App|-   AD FS using non-claims-based authentication<br />-   Pass-through<br />-   AD FS using claims-based authentication for on-premises Exchange 2013 Service Pak 1 (SP1)|For more information see: [Using AD FS claims-based authentication with Outlook Web App and EAC](https://go.microsoft.com/fwlink/?LinkId=393723)|  
 |Exchange Control Panel|Pass-through||  
 |Outlook Anywhere|Pass-through|You must publish three URLs for Outlook Anywhere to work correctly:<br /><br />-   The autodiscover URL.<br />-   The external host name of the Exchange Server; that is, the URL that is configured for clients to connect to.<br />-   The internal FQDN of the Exchange Server.|  
-|Exchange ActiveSync|Pass-through||  
+|Exchange ActiveSync|Pass-through<br/> AD FS using HTTP Basic authorization protocol|| For more information see: https://docs.microsoft.com/en-us/windows-server/remote/remote-access/web-application-proxy/publishing-applications-using-ad-fs-preauthentication 
   
 To publish Outlook Web App using Integrated Windows authentication, you must use the Add Non-Claims-Based Relying Party Trust Wizard to configure the relying party trust for the application.  
   
@@ -48,7 +48,7 @@ To allow users to authenticate using Kerberos constrained delegation the Web App
   
 You must configure the application to support Kerberos authentication. Additionally you need to register a service principal name (SPN) to the account that the web service is running under. You can do this on the domain controller or on the backend servers. In a load balanced Exchange environment this would require using the Alternate Service Account, see [Configuring Kerberos authentication for load-balanced Client Access servers](https://technet.microsoft.com/en-us/library/ff808312(v=exchg.150).aspx)  
   
-You can also configure the application directly on the backend server if it is running on Windows Server 2012 R2 or Windows Server 2012. For more information, see [What's New in Kerberos Authentication](http://technet.microsoft.com/library/hh831747.aspx). You must also make sure that the Web Application Proxy servers are configured for delegation to the service principal names of the backend servers.  
+You can also configure the application directly on the backend server if it is running on Windows Server 2012 R2 or Windows Server 2012. For more information, see [What's New in Kerberos Authentication](https://technet.microsoft.com/library/hh831747.aspx). You must also make sure that the Web Application Proxy servers are configured for delegation to the service principal names of the backend servers.  
   
 ## Publishing Remote Desktop Gateway through Web Application Proxy  
 If you want to restrict access to your Remote Access Gateway and add pre-authentication for remote access, you can roll it out through Web Application Proxy. This is a really good way to make sure you have rich pre-authentication for RDG including MFA. Publishing without pre-authentication is also an option and provides a single point of entry into your  systems.  
@@ -63,10 +63,10 @@ If you want to restrict access to your Remote Access Gateway and add pre-authent
   
 3.  If the RD Web Access and the RD Gateway are hosted on separate RDG servers, you have to publish the two virtual directories individually. You can use the same or different external FQDN's e.g. https://rdweb.contoso.com/rdweb/ and https://gateway.contoso.com/rpc/.  
   
-4.  If the External and Internal FQDN's are different you should disable request header translation on the RDWeb publishing rule. This can be done by running the following PowerShell script on the Web Application Proxy server  
+4.  If the External and Internal FQDN's are different you should not disable request header translation on the RDWeb publishing rule. This can be done by running the following PowerShell script on the Web Application Proxy server but it should be enabled by default.
   
     ```  
-    Get-WebApplicationProxyApplication applicationname | Set-WebApplicationProxyApplication -DisableTranslateUrlInRequestHeaders:$true  
+    Get-WebApplicationProxyApplication applicationname | Set-WebApplicationProxyApplication -DisableTranslateUrlInRequestHeaders:$false  
     ```  
   
     > [!NOTE]  
@@ -101,10 +101,10 @@ If you want to restrict access to your Remote Access Gateway and add pre-authent
   
     It is possible to publish /rdweb and /rpc as separate applications and even to use different published servers. You just need to ensure that you publish both using the same Relying Party Trust as the Web Application Proxy token is issued for the Relying Party Trust and is therefore valid across applications published with the same Relying Party Trust.  
   
-5.  If the External and Internal FQDN's are different you should disable request header translation on the RDWeb publishing rule. This can be done by running the following PowerShell script on the Web Application Proxy server:  
+5.  If the External and Internal FQDN's are different you should not disable request header translation on the RDWeb publishing rule. This can be done by running the following PowerShell script on the Web Application Proxy server but it should be enabled by default:
   
     ```  
-    Get-WebApplicationProxyApplication applicationname | Set-WebApplicationProxyApplication -DisableTranslateUrlInRequestHeaders:$true  
+    Get-WebApplicationProxyApplication applicationname | Set-WebApplicationProxyApplication -DisableTranslateUrlInRequestHeaders:$false 
     ```  
   
 6.  Disable the HttpOnly cookie property in Web Application Proxy on the RDG published application. To allow the RDG ActiveX control access to the Web Application Proxy authentication cookie, you have to disable the HttpOnly property on the Web Application Proxy cookie.  
@@ -123,9 +123,15 @@ If you want to restrict access to your Remote Access Gateway and add pre-authent
   
     -   In Windows Server 2012 and Windows Server 2012 R2 this can be accomplished by running the following PowerShell cmdlet on the RDG Collection server:  
   
-        `Set-RDSessionCollectionConfiguration -CollectionName "<yourcollectionname>" -CustomRdpProperty "pre-authentication server address:s: <https://externalfqdn/rdweb/>  `n require pre-authentication:i:1"`  
+        ```
+        Set-RDSessionCollectionConfiguration -CollectionName "<yourcollectionname>" -CustomRdpProperty "pre-authentication server address:s: <https://externalfqdn/rdweb/>`nrequire pre-authentication:i:1"
+        ```
   
-        Make sure you remove the < and > brackets when you replace with your own values, for example:`Set-RDSessionCollectionConfiguration -CollectionName "MyAppCollection" -CustomRdpProperty "pre-authentication server address:s: https://rdg.contoso.com/rdweb/ `n require pre-authentication:i:1"`  
+        Make sure you remove the < and > brackets when you replace with your own values, for example:
+        
+        ```
+        Set-RDSessionCollectionConfiguration -CollectionName "MyAppCollection" -CustomRdpProperty "pre-authentication server address:s: https://rdg.contoso.com/rdweb/`nrequire pre-authentication:i:1"
+        ```
   
     -   In Windows Server 2008 R2:  
   

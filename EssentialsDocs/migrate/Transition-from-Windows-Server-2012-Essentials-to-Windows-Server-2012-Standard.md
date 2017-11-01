@@ -50,14 +50,14 @@ manager: dongill
   
 1.  Purchase a license for  Windows Server 2012 Standard and the appropriate number of user and/or device Client Access Licenses for your environment.  
   
-     You can purchase a license for  Windows Server 2012 Standard from a Retail Outlet, a Distributor, or with the help of a [Microsoft Partner](http://pinpoint.microsoft.com/SelectCulture.aspx).  
+     You can purchase a license for  Windows Server 2012 Standard from a Retail Outlet, a Distributor, or with the help of a [Microsoft Partner](https://pinpoint.microsoft.com/SelectCulture.aspx).  
   
     > [!NOTE]
     >  If you purchased  Windows Server 2012 Standard initially and exercised your downgrade rights to install one of your two virtual instances as  Windows Server Essentials, you do not need to purchase anything additional.  
     >   
     >  If you purchase  Windows Server 2012 Standard through the Volume Licensing channel, you can download an ISO image and a product key for  Windows Server 2012 Standard from the Volume Licensing Service Center (VLSC).  
     >   
-    >  If you purchase  Windows Server 2012 Standard from all other channels can download an ISO image and an evaluation product key for  Windows Server Essentials from the [TechNet Evaluation Center](http://technet.microsoft.com/evalcenter/jj659306.aspx). Performing the transition as described in the next step will convert the evaluation product to a fully licensed and supported product.  
+    >  If you purchase  Windows Server 2012 Standard from all other channels can download an ISO image and an evaluation product key for  Windows Server Essentials from the [TechNet Evaluation Center](https://technet.microsoft.com/evalcenter/jj659306.aspx). Performing the transition as described in the next step will convert the evaluation product to a fully licensed and supported product.  
   
 2.  Open Windows PowerShell as Administrator, and then run the following command.  
   

@@ -133,7 +133,7 @@ You might want use a computer's local resources to:
 -   Test and troubleshoot developer applications that require USB and sound redirection without using RDP.  
   
 ## See Also  
-[Connect to a Virtual Machine](http://technet.microsoft.com/library/cc742407.aspx)  
+[Connect to a Virtual Machine](https://technet.microsoft.com/library/cc742407.aspx)  
 [Should I create a generation 1 or 2 virtual machine in Hyper-V?](../plan/Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md)
 
 Not finding content you need? Windows 10 users, tell us what you want on [Feedback Hub](feedback-hub:?tabid=2&contextid=898).   

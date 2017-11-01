@@ -50,11 +50,11 @@ The following topics provide information about the server and network management
   
 ## End-to-end solution guides  
   
--    To learn how to centralize data storage, restrict data access permissions, and back up your data both on-premises and in the cloud, see [Provide data protection in small and midsize businesses](http://technet.microsoft.com/library/dn582043.aspx).  
+-    To learn how to centralize data storage, restrict data access permissions, and back up your data both on-premises and in the cloud, see [Provide data protection in small and midsize businesses](https://technet.microsoft.com/library/dn582043.aspx).  
   
--    To learn how to securely access business data on any Internet-connected device from any location, see [Secure remote access in small and midsize businesses](http://technet.microsoft.com/library/dn629457.aspx).  
+-    To learn how to securely access business data on any Internet-connected device from any location, see [Secure remote access in small and midsize businesses](https://technet.microsoft.com/library/dn629457.aspx).  
   
--    To learn how to securely collaborate with partners and vendors, see [Improve collaboration in small and midsize businesses](http://technet.microsoft.com/library/dn747893.aspx).  
+-    To learn how to securely collaborate with partners and vendors, see [Improve collaboration in small and midsize businesses](https://technet.microsoft.com/library/dn747893.aspx).  
   
 ## See also  
   

@@ -17,7 +17,7 @@ ms.technology: identity-adds
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 
-<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd">
+<developerConceptualDocument xmlns="https://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="https://www.w3.org/1999/xlink" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd">
   <introduction>
     <para>This topic explains symptoms, causes and how to resolve Active Directory replication error 8453 Replication access was denied.</para>
     <list class="bullet">
@@ -121,7 +121,7 @@ Directory Changes" on the directory partition in question.
         <listItem>
           <para>REPADMIN.EXE reports that replication attempt has failed with status 8453.</para>
           <para>REPADMIN commands that commonly cite the 8453 status include but are not limited to:</para>
-          <table xmlns:caps="http://schemas.microsoft.com/build/caps/2013/11">
+          <table xmlns:caps="https://schemas.microsoft.com/build/caps/2013/11">
             <tbody>
               <tr>
                 <TD>
@@ -195,7 +195,7 @@ Buttons in Dialog: OK</para>
         <listItem>
           <para>NTDS KCC, NTDS General or Microsoft-Windows-ActiveDirectory_DomainService events with the 8453 status are logged in the directory service event log.</para>
           <para>Active Directory events that commonly cite the 8453 status include but are not limited to:</para>
-          <table xmlns:caps="http://schemas.microsoft.com/build/caps/2013/11">
+          <table xmlns:caps="https://schemas.microsoft.com/build/caps/2013/11">
             <thead>
               <tr>
                 <TD>
@@ -295,7 +295,7 @@ Buttons in Dialog: OK</para>
           <para>The permissions needed to trigger ad-hoc replication is correctly defined on the relevant directory partitions but the user is <embeddedLabel>*NOT*</embeddedLabel> a member any security groups that have been granted the replication directory changes permission. </para>
         </listItem>
         <listItem>
-          <para>The user triggering ad-hoc replication <embeddedLabel>*IS*</embeddedLabel> a member of the required security groups AND those security groups have been granted the "replicating directory changes" permission but membership in the group granting the "replicating directory changes" permission has been removed from the users security token by the <externalLink><linkText>User Account Control</linkText><linkUri>http://technet.microsoft.com/library/cc772207(WS.10).aspx</linkUri></externalLink> (split user access token) feature introduced in Windows Vista and Windows Server 2008.</para>
+          <para>The user triggering ad-hoc replication <embeddedLabel>*IS*</embeddedLabel> a member of the required security groups AND those security groups have been granted the "replicating directory changes" permission but membership in the group granting the "replicating directory changes" permission has been removed from the users security token by the <externalLink><linkText>User Account Control</linkText><linkUri>https://technet.microsoft.com/library/cc772207(WS.10).aspx</linkUri></externalLink> (split user access token) feature introduced in Windows Vista and Windows Server 2008.</para>
           <alert class="note">
             <para>Do not confuse the User Account Control split token security feature introduced in Windows Vista and Windows Server 2008 with the <embeddedLabel>UserAccountControl</embeddedLabel> attribute defined on DC role computer accounts stored in Active Directory.</para>
           </alert>
@@ -355,9 +355,9 @@ Buttons in Dialog: OK</para>
           <para>
             <embeddedLabel>Fix Invalid UserAccountControl</embeddedLabel>
           </para>
-          <para>The UserAccountControl attribute consists of a bitmask that defines the capabilities and the state of a user or computer account. More information on UserAccountControl flags can be found in <externalLink><linkText>MSKB 305144</linkText><linkUri>http://support.microsoft.com/kb/305144</linkUri></externalLink> and <externalLink><linkText>MSDN</linkText><linkUri>http://msdn.microsoft.com/library/ms680832(VS.85).aspx</linkUri></externalLink>.</para>
+          <para>The UserAccountControl attribute consists of a bitmask that defines the capabilities and the state of a user or computer account. More information on UserAccountControl flags can be found in <externalLink><linkText>MSKB 305144</linkText><linkUri>https://support.microsoft.com/kb/305144</linkUri></externalLink> and <externalLink><linkText>MSDN</linkText><linkUri>https://msdn.microsoft.com/library/ms680832(VS.85).aspx</linkUri></externalLink>.</para>
           <para>The typical UserAccountControl attribute value for a <placeholder>writable</placeholder> ("full") domain controller computer account is 532480 decimal or 82000 hex. UserAccountControl values for a domain controller computer account may vary but <placeholder>must</placeholder> contain the SERVER_TRUST_ACCOUNT and TRUSTED_FOR_DELEGATION flags shown in the table below:</para>
-          <table xmlns:caps="http://schemas.microsoft.com/build/caps/2013/11">
+          <table xmlns:caps="https://schemas.microsoft.com/build/caps/2013/11">
             <thead>
               <tr>
                 <TD>
@@ -408,7 +408,7 @@ Buttons in Dialog: OK</para>
             </tbody>
           </table>
           <para>The typical UserAccountControl attribute value for a <placeholder>read-only domain controller</placeholder> computer account is 83890176 decimal or 5001000 hex:</para>
-          <table xmlns:caps="http://schemas.microsoft.com/build/caps/2013/11">
+          <table xmlns:caps="https://schemas.microsoft.com/build/caps/2013/11">
             <thead>
               <tr>
                 <TD>
@@ -603,7 +603,7 @@ Buttons in Dialog: OK</para>
             </listItem>
           </list>
           <para>Permissions are defined on the top of each directory partition (called a naming context or "NC" head) and inherited throughout the partition tree. Verify that explicit groups (groups that the user is direct member of) and implicit groups (those that explicit groups have nested membership of) have the required permissions and that Deny permissions assigned to implicit or explicit groups are not trumping the required permissions.</para>
-          <para>More information about default directory partitions is available at <externalLink><linkText>Default Security of the Configuration Directory Partition</linkText><linkUri>http://technet.microsoft.com/library/cc961739.aspx</linkUri></externalLink>.</para>
+          <para>More information about default directory partitions is available at <externalLink><linkText>Default Security of the Configuration Directory Partition</linkText><linkUri>https://technet.microsoft.com/library/cc961739.aspx</linkUri></externalLink>.</para>
           <list class="ordered">
             <listItem>
               <para>Verify that default permissions exist in the "top" of each directory partition that is failing with the "Replication access was denied" error.</para>
@@ -626,7 +626,7 @@ Buttons in Dialog: OK</para>
 
 </list>
               <para>The table below shows the default permission defined on the schema, configuration, domain and DNS applications by operating system version:</para>
-              <table xmlns:caps="http://schemas.microsoft.com/build/caps/2013/11">
+              <table xmlns:caps="https://schemas.microsoft.com/build/caps/2013/11">
                 <thead>
                   <tr>
                     <TD>
@@ -717,7 +717,7 @@ Buttons in Dialog: OK</para>
                 </tbody>
               </table>
               <alert class="note">
-                <para>The DCDIAG NcSecDesc test may report false positive errors when run in environments with mixed operating system versions as documented in <externalLink><linkText>MSKB 829306</linkText><linkUri>http://support.microsoft.com/kb/829306</linkUri></externalLink>. </para>
+                <para>The DCDIAG NcSecDesc test may report false positive errors when run in environments with mixed operating system versions as documented in <externalLink><linkText>MSKB 829306</linkText><linkUri>https://support.microsoft.com/kb/829306</linkUri></externalLink>. </para>
               </alert>
               <para>The DSACLS command can be used to dump the permissions on a given directory partition using the syntax "DSACLS &lt;DN path of directory partition&gt;".</para>
               <code>C:\&gt;dsacls dc=contoso,dc=com</code>
@@ -756,18 +756,18 @@ Buttons in Dialog: OK</para>
               <para>
                 <externalLink>
                   <linkText>MSKB 303972</linkText>
-                  <linkUri>http://support.microsoft.com/kb/303972</linkUri>
+                  <linkUri>https://support.microsoft.com/kb/303972</linkUri>
                 </externalLink> describes the process of creating a security group, adding the required members to those groups, then granting the group the required DACLS on Active Directory partitions. Grant the security group in question the same permissions listed in the table of the "Fix Invalid Default Security Descriptors" section this article.</para>
               <para>Related content:</para>
               <para>
                 <externalLink>
                   <linkText>MSKB article 303305</linkText>
-                  <linkUri>http://support.microsoft.com/kb/303305</linkUri>
+                  <linkUri>https://support.microsoft.com/kb/303305</linkUri>
                 </externalLink>: "Access Denied" Error Message When You Use the Active Directory Sites and Services Tool</para>
               <para>
                 <externalLink>
                   <linkText>Best Practices for delegating Active Directory</linkText>
-                  <linkUri>http://www.microsoft.com/download/en/details.aspx?displaylang=en&amp;id=21678</linkUri>
+                  <linkUri>https://www.microsoft.com/download/en/details.aspx?displaylang=en&amp;id=21678</linkUri>
                 </externalLink>
               </para>
             </listItem>
@@ -786,7 +786,7 @@ Buttons in Dialog: OK</para>
               <para>From a CMD prompt type "WHOAMI /ALL" and verify membership in the security groups that have been granted the "replicating directory changes" permissions on the relevant directory partitions.</para>
               <para>If the user was added to the permissioned group modified <placeholder>after</placeholder> the last user logon, log on again and retry the "whoami /all" command.</para>
               <para>If "WHOAMI /ALL" still does not show membership in the expected security groups, launch an elevated CMD prompt (right-click <ui>Command Prompt</ui> and click <ui>Run as Administrator</ui>) on the local machine and run the "WHOAMI /ALL" from inside the elevated CMD prompt.</para>
-              <para>If the group membership is different between the WHOAMI /ALL output generated by elevated and non-elevated CMD prompts, refer to <externalLink><linkText>MSKB 976063</linkText><linkUri>http://support.microsoft.com/default.aspx?scid=kb;EN-US;976063</linkUri></externalLink>.</para>
+              <para>If the group membership is different between the WHOAMI /ALL output generated by elevated and non-elevated CMD prompts, refer to <externalLink><linkText>MSKB 976063</linkText><linkUri>https://support.microsoft.com/default.aspx?scid=kb;EN-US;976063</linkUri></externalLink>.</para>
             </listItem>
             <listItem>
               <para>Verify that the expected nested group memberships exist.</para>
@@ -798,7 +798,7 @@ Buttons in Dialog: OK</para>
           <para>
             <embeddedLabel>RODC Replication</embeddedLabel>
           </para>
-          <para>If computer-initiated replication is failing on RODCs, verify that you have run ADPREP /RODCPREP as specified in <externalLink><linkText>MSKB 967482</linkText><linkUri>http://support.microsoft.com/kb/967482</linkUri></externalLink> AND that the Enterprise Read-only Domain Controllers group has been granted "replicate directory changes" right on each NC head.</para>
+          <para>If computer-initiated replication is failing on RODCs, verify that you have run ADPREP /RODCPREP as specified in <externalLink><linkText>MSKB 967482</linkText><linkUri>https://support.microsoft.com/kb/967482</linkUri></externalLink> AND that the Enterprise Read-only Domain Controllers group has been granted "replicate directory changes" right on each NC head.</para>
         </listItem>
         <listItem>
           <para>
@@ -808,12 +808,12 @@ Buttons in Dialog: OK</para>
           <para>
             <externalLink>
               <linkText>982020</linkText>
-              <linkUri>http://support.microsoft.com/default.aspx?scid=kb;EN-US;982020</linkUri>
+              <linkUri>https://support.microsoft.com/default.aspx?scid=kb;EN-US;982020</linkUri>
             </externalLink>: Office Communications Server 2007 R2, OCS 2007 or LCS 2005 does not work correctly after you upgrade to Windows Server 2008 R2</para>
           <para>
             <externalLink>
               <linkText>982021</linkText>
-              <linkUri>http://support.microsoft.com/default.aspx?scid=kb;EN-US;982021</linkUri>
+              <linkUri>https://support.microsoft.com/default.aspx?scid=kb;EN-US;982021</linkUri>
             </externalLink>: Supportability is available for Office Communications Server 2007 R2 member server role on a Windows Server 2008 R2 operating system</para>
         </listItem>
       </list>
@@ -822,7 +822,7 @@ Buttons in Dialog: OK</para>
   <relatedTopics>
     <externalLink>
       <linkText>Troubleshooting Active Directory operations that fail with error 8453: "Replication access was denied."</linkText>
-      <linkUri>http://support.microsoft.com/kb/2022387</linkUri>
+      <linkUri>https://support.microsoft.com/kb/2022387</linkUri>
     </externalLink>
   </relatedTopics>
 </developerConceptualDocument>

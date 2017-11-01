@@ -117,7 +117,7 @@ This article describes the rules used by the  Windows Server Essentials Best Pra
 ### Active Directory Web Services is not set to the default start mode  
  **Issue:**  Active Directory Web Services is not set to the default start mode of Automatic.  
   
- **Impact:**  Active Directory Web Services (ADWS) is not set to the default start mode of Automatic. If ADWS on the server is stopped or disabled, client applications such as the Active Directory module for Windows PowerShell or the Active Directory Administrative Center cannot access or manage directory service instances that are running on this server. For more information, see [What's New in AD DS: Active Directory Web Services](http://technet.microsoft.com/library/dd391908\(WS.10\).aspx) (http://technet.microsoft.com/library/dd391908(WS.10).aspx) in the Windows Server Technical Library.  
+ **Impact:**  Active Directory Web Services (ADWS) is not set to the default start mode of Automatic. If ADWS on the server is stopped or disabled, client applications such as the Active Directory module for Windows PowerShell or the Active Directory Administrative Center cannot access or manage directory service instances that are running on this server. For more information, see [What's New in AD DS: Active Directory Web Services](https://technet.microsoft.com/library/dd391908\(WS.10\).aspx) (https://technet.microsoft.com/library/dd391908(WS.10).aspx) in the Windows Server Technical Library.  
   
  **Resolution:**  
   
@@ -276,7 +276,7 @@ This article describes the rules used by the  Windows Server Essentials Best Pra
 ### Active Directory Web Services is not started  
  **Issue:**  Active Directory Web Services is not started.  
   
- **Impact:**  Active Directory Web Services (ADWS) is not started. If ADWS on the server is stopped or disabled, client applications such as the Active Directory module for Windows PowerShell or the Active Directory Administrative Center cannot access or manage directory service instances that are running on this server. For more information, see [What's New in AD DS: Active Directory Web Services](http://technet.microsoft.com/library/dd391908\(WS.10\).aspx) (http://technet.microsoft.com/library/dd391908(WS.10).aspx) in the Windows Server Technical Library.  
+ **Impact:**  Active Directory Web Services (ADWS) is not started. If ADWS on the server is stopped or disabled, client applications such as the Active Directory module for Windows PowerShell or the Active Directory Administrative Center cannot access or manage directory service instances that are running on this server. For more information, see [What's New in AD DS: Active Directory Web Services](https://technet.microsoft.com/library/dd391908\(WS.10\).aspx) (https://technet.microsoft.com/library/dd391908(WS.10).aspx) in the Windows Server Technical Library.  
   
  **Resolution:**  
   
@@ -414,7 +414,7 @@ This article describes the rules used by the  Windows Server Essentials Best Pra
 ### Active Directory Web Services is not the default logon account  
  **Issue:**  Active Directory Web Services is not the default logon account. By default, the logon account is set to **Local System account**.  
   
- **Impact:**  Active Directory Web Services (ADWS) is not started. If ADWS on the server is stopped or disabled, client applications such as the Active Directory module for Windows PowerShell or the Active Directory Administrative Center cannot access or manage directory service instances that are running on this server. For more information, see [What's New in AD DS: Active Directory Web Services](http://technet.microsoft.com/library/dd391908\(WS.10\).aspx) (http://technet.microsoft.com/library/dd391908(WS.10).aspx) in the Windows Server Technical Library.  
+ **Impact:**  Active Directory Web Services (ADWS) is not started. If ADWS on the server is stopped or disabled, client applications such as the Active Directory module for Windows PowerShell or the Active Directory Administrative Center cannot access or manage directory service instances that are running on this server. For more information, see [What's New in AD DS: Active Directory Web Services](https://technet.microsoft.com/library/dd391908\(WS.10\).aspx) (https://technet.microsoft.com/library/dd391908(WS.10).aspx) in the Windows Server Technical Library.  
   
  **Resolution:**  
   
@@ -525,7 +525,7 @@ This article describes the rules used by the  Windows Server Essentials Best Pra
   
  **Impact:**  If the Administrator creates an alert and configures the alert to run when the Administrator is not logged on, the alert will fail with an error code of 2147943785.  
   
- **Resolution:**  For information about how to give the built-in Administrators group permission to log on as a batch job, see [Give the built-in Administrator group the right to log on as a batch job](http://technet.microsoft.com/library/jj635076) (http://technet.microsoft.com/library/jj635076).  
+ **Resolution:**  For information about how to give the built-in Administrators group permission to log on as a batch job, see [Give the built-in Administrator group the right to log on as a batch job](https://technet.microsoft.com/library/jj635076) (https://technet.microsoft.com/library/jj635076).  
   
 ### The Windows Firewall is turned off  
  **Issue:**  Windows Firewall is turned off. The default value is on.  
@@ -863,7 +863,7 @@ This article describes the rules used by the  Windows Server Essentials Best Pra
   
  **Impact:**  If user accounts have duplicate CN names, users might not be able to log on to the network. In addition, searches of Active Directory for users can return incorrect values.  
   
- **Resolution:**  To resolve this Issue: , ensure that network user accounts do not have duplicate "CN=" names. To make this easier, consider exporting Active Directory contents to a text file for review. For information about how to do this, see [Using LDIFDE to import and export directory objects to Active Directory (Knowledge Base article 237677)](http://support.microsoft.com/kb/237677) (http://support.microsoft.com/kb/237677).  
+ **Resolution:**  To resolve this Issue: , ensure that network user accounts do not have duplicate "CN=" names. To make this easier, consider exporting Active Directory contents to a text file for review. For information about how to do this, see [Using LDIFDE to import and export directory objects to Active Directory (Knowledge Base article 237677)](https://support.microsoft.com/kb/237677) (https://support.microsoft.com/kb/237677).  
   
 ### NT Backup is installed  
  **Issue:**  The Windows NT Backup program is installed on the server.  
@@ -958,7 +958,7 @@ This article describes the rules used by the  Windows Server Essentials Best Pra
   
  **Impact:**  Windows Server Backup can only back up partitions that are formatted as NTFS.  
   
- **Resolution:**  Do not configure Windows Server Backup to back up non-NTFS partitions. For more information, see [Event IDs 12290 and 16387 are logged when system state backup fails on a Windows Server 2008-based computer (Knowledge Base article 968128)](http://support.microsoft.com/kb/968128) (http://support.microsoft.com/kb/968128).  
+ **Resolution:**  Do not configure Windows Server Backup to back up non-NTFS partitions. For more information, see [Event IDs 12290 and 16387 are logged when system state backup fails on a Windows Server 2008-based computer (Knowledge Base article 968128)](https://support.microsoft.com/kb/968128) (https://support.microsoft.com/kb/968128).  
   
 ### The most recent backup did not succeed  
  **Issue:**  The most recent backup attempt did not complete successfully.  
@@ -1207,4 +1207,4 @@ This article describes the rules used by the  Windows Server Essentials Best Pra
     net start tsgateway  
     ```  
   
-     For more information, see [How to Manage the Remote Desktop Gateway Service in Windows Server Essentials (Knowledge Base article 2472211)](http://support.microsoft.com/kb/2472211) (http://support.microsoft.com/kb/2472211).
+     For more information, see [How to Manage the Remote Desktop Gateway Service in Windows Server Essentials (Knowledge Base article 2472211)](https://support.microsoft.com/kb/2472211) (https://support.microsoft.com/kb/2472211).

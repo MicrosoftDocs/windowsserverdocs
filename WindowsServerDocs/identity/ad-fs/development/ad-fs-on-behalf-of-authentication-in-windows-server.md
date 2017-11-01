@@ -126,10 +126,10 @@ In order to enable on-behalf-of authentication, we need to ensure that AD FS ret
     => issue(claim = c);
 
     @RuleName = "Issue open id scope"
-    => issue(Type = "http://schemas.microsoft.com/identity/claims/scope", Value = "openid");
+    => issue(Type = "https://schemas.microsoft.com/identity/claims/scope", Value = "openid");
 
     @RuleName = "Issue user_impersonation scope"
-    => issue(Type = "http://schemas.microsoft.com/identity/claims/scope", Value = "user_impersonation");
+    => issue(Type = "https://schemas.microsoft.com/identity/claims/scope", Value = "user_impersonation");
 
 ![AD FS OBO](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO10.PNG)
 
@@ -332,7 +332,7 @@ Add reference to System.Web.Extensions. Modify the class members by replacing th
     //
     private static string graphResourceId = ConfigurationManager.AppSettings["ida:GraphResourceId"];
     private static string graphUserUrl = ConfigurationManager.AppSettings["ida:GraphUserUrl"];
-    private const string TenantIdClaimType = "http://schemas.microsoft.com/identity/claims/tenantid";
+    private const string TenantIdClaimType = "https://schemas.microsoft.com/identity/claims/tenantid";
 
 with
 
@@ -358,7 +358,7 @@ Copy and paste the code below in ToDoListController.cs and replace the code for 
     // POST api/todolist
     public async Task Post(TodoItem todo)
     {
-        if (!ClaimsPrincipal.Current.FindFirst("http://schemas.microsoft.com/identity/claims/scope").Value.Contains("user_impersonation"))
+        if (!ClaimsPrincipal.Current.FindFirst("https://schemas.microsoft.com/identity/claims/scope").Value.Contains("user_impersonation"))
         {
             throw new HttpResponseException(new HttpResponseMessage { StatusCode = HttpStatusCode.Unauthorized, ReasonPhrase = "The Scope claim does not contain 'user_impersonation' or scope claim not found" });
         }

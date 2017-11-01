@@ -66,7 +66,7 @@ After you install the Active Directory Federation Services \(AD FS\) role serv
   
 8.  On the **Pre\-requisite Checks** page, verify that all prerequisite checks are successfully completed, and then click **Configure**.  
   
-9. On the **Results** page, review the results and check whether the configuration is completed successfully, and then click **Next steps required for completing your federation service deployment**. For more information, see [Next steps for completing your AD FS installation](http://go.microsoft.com/fwlink/p/?LinkId=286704). Click **Close** to exit the wizard.  
+9. On the **Results** page, review the results and check whether the configuration is completed successfully, and then click **Next steps required for completing your federation service deployment**. For more information, see [Next steps for completing your AD FS installation](https://go.microsoft.com/fwlink/p/?LinkId=286704). Click **Close** to exit the wizard.  
   
 ### <a name="BKMK_3"></a>To configure the first federation server in a new federation server farm via Windows PowerShell  
 You can create a new federation server farm by using either a new or existing gMSA account or an existing domain user account.  
@@ -164,7 +164,7 @@ You can create a new federation server farm by using either a new or existing gM
   
 8.  On the **Pre\-requisite Checks** page, verify that all prerequisite checks are successfully completed, and then click **Configure**.  
   
-9. On the **Results** page, review the results and check whether the configuration is completed successfully, and then click **Next steps required for completing your federation service deployment**. For more information, see [Next steps for completing your AD FS installation](http://go.microsoft.com/fwlink/p/?LinkId=286704). Click **Close** to exit the wizard.  
+9. On the **Results** page, review the results and check whether the configuration is completed successfully, and then click **Next steps required for completing your federation service deployment**. For more information, see [Next steps for completing your AD FS installation](https://go.microsoft.com/fwlink/p/?LinkId=286704). Click **Close** to exit the wizard.  
   
 ### To add a federation server to an existing federation server farm via Windows PowerShell  
 You can add a federation server to an existing farm by using either an existing gMSA account or an existing domain user account.  

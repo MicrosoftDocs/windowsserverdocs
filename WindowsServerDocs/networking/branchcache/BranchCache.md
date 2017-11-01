@@ -230,7 +230,7 @@ In the following operating systems, BranchCache does not support HTTP and SMB fu
 -   Windows 7 Pro, BITS support only
 
 > [!NOTE]
-> BranchCache is not available by default in the Windows Server 2008 or Windows Vista operating systems. On these operating systems, however, if you download and install the Windows Management Framework update, BranchCache functionality is available for the Background Intelligent Transfer Service (BITS) protocol only. For more information, and to download Windows Management Framework, see [Windows Management Framework (Windows PowerShell 2.0, WinRM 2.0, and BITS 4.0)](http://go.microsoft.com/fwlink/?LinkId=188677) at http://go.microsoft.com/fwlink/?LinkId=188677.
+> BranchCache is not available by default in the Windows Server 2008 or Windows Vista operating systems. On these operating systems, however, if you download and install the Windows Management Framework update, BranchCache functionality is available for the Background Intelligent Transfer Service (BITS) protocol only. For more information, and to download Windows Management Framework, see [Windows Management Framework (Windows PowerShell 2.0, WinRM 2.0, and BITS 4.0)](https://go.microsoft.com/fwlink/?LinkId=188677) at https://go.microsoft.com/fwlink/?LinkId=188677.
   
 ### Operating systems for BranchCache content server functionality
 

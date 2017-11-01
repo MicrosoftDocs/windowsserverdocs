@@ -91,6 +91,7 @@
 #### [Hardware requirements](storage-spaces/storage-spaces-direct-hardware-requirements.md)
 #### [Choose drives](storage-spaces/choosing-drives.md)
 #### [Plan volumes](storage-spaces/plan-volumes.md)
+#### [Guest VM clusters](storage-spaces/storage-spaces-direct-in-vm.md)
 ### [Deploy](storage-spaces/deploy-storage-spaces-direct.md)
 #### [Hyper-converged solution](storage-spaces/hyper-converged-solution-using-storage-spaces-direct.md)
 #### [Create volumes](storage-spaces/create-volumes.md)

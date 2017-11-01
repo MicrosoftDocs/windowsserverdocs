@@ -55,7 +55,7 @@ Digital media refers to audio, video, and photo content that has been digitally 
 ##  <a name="BKMK_1"></a> Digital media overview  
  Digital media refers to audio, video, and photo content that has been encoded (digitally compressed). Encoding content involves converting audio and video input to a digital media file such as a Windows Media file. After digital media is encoded, it can be easily manipulated, distributed, and played by computers, and it is easily transmitted over computer networks.  
   
- Examples of digital media types include: Windows Media Audio (WMA), Windows Media Video (WMV), MP3, JPEG, and AVI. For information about the digital media types that are supported by Windows Media Player, see [File types supported by Windows Media Player](http://support.microsoft.com/kb/316992).  
+ Examples of digital media types include: Windows Media Audio (WMA), Windows Media Video (WMV), MP3, JPEG, and AVI. For information about the digital media types that are supported by Windows Media Player, see [File types supported by Windows Media Player](https://support.microsoft.com/kb/316992).  
   
 ### Why would I want to stream my digital media?  
  Many people store music, video, and pictures in shared folders in  Windows Server Essentials. There may be times when you want to do following:  
@@ -75,7 +75,7 @@ Digital media refers to audio, video, and photo content that has been digitally 
  After you set up your network and successfully connect your computers and media devices to the server network, you can search for any digital media files that you store and share on the server.  
   
 > [!NOTE]
->  For a current list of digital media player/receive devices that are compatible with  Windows Server Essentials, see the [Windows Compatibility Center](http://www.microsoft.com/windows/compatibility/CompatCenter/Home).  
+>  For a current list of digital media player/receive devices that are compatible with  Windows Server Essentials, see the [Windows Compatibility Center](https://www.microsoft.com/windows/compatibility/CompatCenter/Home).  
   
  You can use either of the following ways to search for and play digital media files that are stored on your server:  
   
@@ -154,7 +154,7 @@ Digital media refers to audio, video, and photo content that has been digitally 
   
 ####  <a name="BKMK_Other"></a> Search for and play media files by using other digital media players or receivers that are compatible with Windows Server Essentials  
   
-1.  Go to the [Windows Compatibility Center](http://www.microsoft.com/windows/compatibility/CompatCenter/Home) and make sure that your digital media player or receiver appears in the list of compatible devices.  
+1.  Go to the [Windows Compatibility Center](https://www.microsoft.com/windows/compatibility/CompatCenter/Home) and make sure that your digital media player or receiver appears in the list of compatible devices.  
   
 2.  Because search steps vary depending on the digital media player that you are using, consult the Help for your device for detailed instructions.  
   

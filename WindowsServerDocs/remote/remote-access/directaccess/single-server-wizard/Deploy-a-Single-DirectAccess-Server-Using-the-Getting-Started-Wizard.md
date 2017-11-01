@@ -145,10 +145,10 @@ The following table provides links to additional resources.
   
 |Content type|References|  
 |--------|-------|  
-|**Remote Access on TechNet**|[Remote Access TechCenter](http://technet.microsoft.com/network/bb545655.aspx)|  
-|**Tools and settings**|[Remote Access PowerShell cmdlets](http://technet.microsoft.com/library/hh918399.aspx)|  
-|**Community resources**|[DirectAccess Wiki entries](http://go.microsoft.com/fwlink/?LinkId=236871)|  
-|**Related technologies**|[How IPv6 works](http://technet.microsoft.com/library/cc781672(v=WS.10).aspx)|  
+|**Remote Access on TechNet**|[Remote Access TechCenter](https://technet.microsoft.com/network/bb545655.aspx)|  
+|**Tools and settings**|[Remote Access PowerShell cmdlets](https://technet.microsoft.com/library/hh918399.aspx)|  
+|**Community resources**|[DirectAccess Wiki entries](https://go.microsoft.com/fwlink/?LinkId=236871)|  
+|**Related technologies**|[How IPv6 works](https://technet.microsoft.com/library/cc781672(v=WS.10).aspx)|  
   
 
 
