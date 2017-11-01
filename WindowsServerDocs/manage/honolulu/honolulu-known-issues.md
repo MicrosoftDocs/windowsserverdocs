@@ -21,7 +21,13 @@ Project Honolulu is under development and currently in Technical Preview, so the
 
 If you encounter an issue not described on this page, please [let us know](http://aka.ms/honolulufeedback).
 
+## Installer
+
+- When installing Honolulu using your own certificate, be mindful that if you copy the thumbprint from the certificate manager MMC tool, [it will contain an invalid character at the beginning.](https://support.microsoft.com/en-us/help/2023835/certificate-thumbprint-displayed-in-mmc-certificate-snap-in-has-extra) As a workaround, type the first character of the thumbprint, and copy/paste the rest.
+
 ## General
+
+- When disconnected from the internet, the Honolulu gateway may displays errors trying to reach aka.ms (looking for available update) or myget.org (looking for available extentions.) [1709-14483239] [1709-14483301]
 
 - If you are specifying credentials while adding a new server connection, make sure to click **Retry with credentials** before submitting the form. You may have to scroll down to reveal the button. [1709-13706997]
 
@@ -113,7 +119,7 @@ If it is not installed, you can [download and install WMF 5.1](https://www.micro
 
 ### Services
 
-* Please [report bugs!](http://aka.ms/honolulufeedback)
+* Deeplinking to some services may not work. If you encounter this please [create a bug](http://aka.ms/honolulufeedback)
 
 ### Storage
 
@@ -132,6 +138,8 @@ If it is not installed, you can [download and install WMF 5.1](https://www.micro
 * After installing updates, install status may be cached and require browser refresh.
 
 ## Failover Cluster Manager solution
+
+* When managing a cluster, (either Hyper-Converged or traditional?) you may encounter a **shell was not found** error. If this happens either reload your browser, or navigate away to another tool and back. [1709-13882442]
 
 * An issue can occur when managing a down-level (Windows Server 2012 or 2012 R2) cluster that hasn’t been configured completely. The fix for this issue is to ensure that the Windows feature **RSAT-Clustering-PowerShell** has been installed and enabled on **each member node** of the cluster. To do this with PowerShell, enter the command `Install-WindowsFeature -Name RSAT-Windows-PowerShell` on all the cluster nodes. [1709-12524664]
 
