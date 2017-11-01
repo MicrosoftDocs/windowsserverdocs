@@ -2,7 +2,7 @@
 title: What is Server Core 2008?
 description: Learn about the Server Core installation option in Windows Server 2008
 ms.prod: windows-server-threshold
-author: helohr
+author: hlohr
 ms.date: 11/01/2017
 ---
 #What is Server Core 2008?
@@ -99,3 +99,18 @@ A Server Core installation includes only a limited number of server roles compar
 | WEb Server (IIS) | available  | available |
 | Windows Deployment Services  | available  | unavailable |
 
+While the roles available for Server Core are generally the same regardless of architecture (x86 or x64) and product edition, there are a few exceptions:
+* The Hyper-V (virtualization) role is available only if you purchased Windows Server 2008 with Hyper-V product media (Hyper-V is available only for x64 versions). If you do not need this role, you can purchase Windows Server 2008 without Hyper-V product media instead. For more information about installing Hyper-V on Server Core, see Chapter 12, 'Hyper-V and Other Roles.' 
+* The File Services role on Standard Edition is limited to one standalone Distributed File System (DFS) root and does not support Cross-File Replication (DFS-R). For more information about this, see Chapter 10, 'File and Print Services Roles.' 
+* Before you can install the Streaming Media Services role on Server Core, you need to download and install the appropriate Microsoft Update Standalone Package (.msu file) for your server's architecture (x86 or x64) from the Microsoft Download Center. For more information concerning this, see Chapter 12. 
+The Web Server (IIS) role does not support ASP.NET. This is because the .NET Framework is not supported on Server Core, which limits what you can do with a Server Core Web server. 
+
+See Chapter 4, 'Installing Roles and Features,' to learn about different ways of installing and removing roles on Server Core. Also see Chapters 7 through 12 for specific information concerning installing and managing each server role. 
+
+##Supported Optional Features
+A Server Core installation also supports only a limited subset of the features available on a Full installation of Windows Server 2008. Table 1-4 compares the features available for both Full and Server Core installations of Windows Server 2008 Enterprise Edition.
+
+**Table 1-4** Comparison of Features for Full and Server Core Installations of Windows Server 2008 Enterprise Edition
+
+| Feature  | Available in Full Installation  | Available in Server Core  |
+| ------------- |:-------------:| ------------:|
