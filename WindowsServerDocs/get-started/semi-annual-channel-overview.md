@@ -1,5 +1,5 @@
 ---
-title: Windows Server Semi-Annual Channel overview
+title: Windows Server Channel overview
 description: Microsoft is streamlining servicing of Windows Server to make operating system updates simpler to test, manage, and deploy.
 ms.prod: Windows Server
 ms.mktglfcycl: manage
@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 9cf87597-b15d-4f43-8aa1-91e60367f011
 ---
-# Windows Server Semi-Annual Channel overview
+# Windows Server Channel overview
 
 >Applies To: Windows Server (Semi-Annual Channel)
 
