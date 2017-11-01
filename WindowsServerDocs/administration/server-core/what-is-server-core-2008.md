@@ -61,3 +61,41 @@ Table 1-2 lists the main GUI applications, together with their executables, that
 | Task manager | %WINDIR%\System32\Taskmgr.exe |
 | Windows Installer | %WINDIR%\System32\MSiexec.exe |
 
+That's a pretty short list! Now here's a list of user interface elements that are not included in Server Core:
+* The Windows Explorer desktop shell (Explorer.exe) and any supporting features such as Themes 
+* All MMC consoles 
+* All Control Panel utilities, with the exception of Regional And Language Options (Intl.cpl) and Date And Time (Timedate.cpl) 
+* All Hypertext Markup Language (HTML) rendering engines, including Internet Explorer and HTML Help 
+* Windows Mail 
+* Windows Media Player 
+* Most accessories such as Paint, Calculator, and Wordpad
+
+The .NET Framework is also not present in Server Core, which means there's no support for running managed code on a Server Core installation. Only native code—code written using Windows application programming interfaces (APIs)—can run on Server Core. In summary, any GUI applications that depend on either the .NET Framework or on the Explorer.exe shell won't run on Server Core. You'll learn more about running applications on Server Core in Chapter 13, 'Maintaining Server Core.' 
+
+**Note** Because Windows PowerShell requires the .NET Framework, you cannot install Windows PowerShell onto Server Core. You can, however, manage a Server Core installation remotely using Windows PowerShell so long as you use only PowerShell WMI commands. For more information on managing Server Core using Windows PowerShell, see Chapter 6, 'Remote Management.' 
+
+##Supported Server Roles 
+A Server Core installation includes only a limited number of server roles compared with a Full installation of Windows Server 2008. Table 1-3 compares the roles available for both Full and Server Core installations of Windows Server 2008 Enterprise Edition. 
+
+**Table 1-3** Comparison of Server Roles for Full and Server Core Installations of Windows Server 2008 Enterprise Edition
+| Server Role  | Available in Full Installation  | Available in Server Core  |
+| ------------- |:-------------:| ------------:|
+| Active Directory Certificate Services (AD CS)  | available  | unavailable |
+| Active Directory Domain Services (AD DS)  | available  | available |
+| Active Directory Federation Services (AD FS)  | available  | unavailable |
+| Active Directory Lightweight Directory Services (AD LDS)  | available  | available |
+| Active Directory Rights Management Services (AD RMS)  | available  | unavailable |
+| Application Server  | available  | unavailable |
+| DHCP Server  | available  | available |
+| DNS Server  | available  | available |
+| Fax Server  | available  | unavailable |
+| File Services  | available  | available |
+| Hyper-V  | available  | available |
+| Network Policy and Access Services  | available  | unavailable |
+| Print Services  | available  | available |
+| Streaming Media Services  | available  | available |
+| Terminal Services  | available  | unavailable |
+| UDDI Services  | available  | unavailable |
+| WEb Server (IIS) | available  | available |
+| Windows Deployment Services  | available  | unavailable |
+
