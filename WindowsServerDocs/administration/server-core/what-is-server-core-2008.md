@@ -9,6 +9,10 @@ author: Heidilohr
 ---
 #What is Server Core 2008?
 The Server Core option is a new minimal installation option that is available when you are deploying the Standard, Enterprise, or Datacenter edition of Windows Server 2008.<sup>1</sup> Server Core provides you with a minimal installation of Windows Server 2008 that supports installing only certain server roles, as described later in this chapter. Contrast this with the Full installation option for Windows Server 2008, which supports installing all available server roles and also other Microsoft or third-party server applications, such as Microsoft Exchange Server or SAP. 
+
+>[!NOTE]
+>This information applies to Windows Server 2008. For information about Servercore in Windows Server 2012, see [What is the Server Core Installation in Windows Server](https://docs.microsoft.com/en-us/windows-server/administration/server-core/what-is-server-core). 
+
 Before we go any further, the phrase "installation option" needs to be explained. Normally, when you purchase a copy of Windows Server 2008, you purchase a license to use certain editions or stock-keeping units (SKUs). Table 1-1 lists the various editions of Windows Server 2008 that are available. The table also indicates which installation options (Full, Server Core, or both) are available for each edition.
 
 **Table 1-1** Windows Server 2008 Editions and Their Support for Installation Options
@@ -26,7 +30,9 @@ Before we go any further, the phrase "installation option" needs to be explained
 
 To understand what an "installation option" is, let's say you've purchased a volume license that lets you install a copy of Windows Server 2008 Enterprise Edition. When you insert your volume-licensed media into a system and begin the installation process, one of the screens you'll see, as shown in Figure 1-1, presents you with a choice of editions and installation options.
 
-**Figure 1-1**
+![Selecting a Server Core installation option to install](c:\Users\helohr\Desktop\Repositories\it-server\WindowsServerDocs\administration\media\what-is-server-core-2008\FIg_1-1.png)
+
+**Figure 1-1** Selecting a Server Core installation option to install
 
 In Figure 1-1, your volume license (or product key, for retail media) gives you two installation options you can choose between: the second option (a Full Installation of Windows Server 2008 Enterprise) and the fifth option (a Server Core Installation of Windows Server 2008 Enterprise), with the latter selected in this example. You'll learn more about installing Server Core in Chapter 2, "Deploying Server Core." 
 
@@ -40,7 +46,9 @@ To avoid this, Microsoft decided to strip everything from Windows Server 2008 th
 ##The Server Core GUI
 When you finish installing Server Core on a system and log on for the first time, you're in for a bit of a surprise. Figure 1-2 shows the Server Core user interface after first logon.
 
-**Figure 1-**
+![Server Core user interface](c:\Users\helohr\Desktop\Repositories\it-server\WindowsServerDocs\administration\media\what-is-server-core-2008\Fig_1-2.png)
+
+**Figure 1-2** Server Core user interface
 
 There's no desktop! That is, there is no Windows Explorer shell, with its Start menu, Taskbar, and the other features you may be used to seeing. All you have is a command prompt, which means that you have to do most of the work of configuring a Server Core installation either by typing commands one at a time, which is slow, or by using scripts and batch files, which can help you speed up and simplify your configuration tasks by automating them. You can also perform some initial configuration tasks using answer files when you perform an unattended installation of Server Core. 
 
@@ -166,7 +174,9 @@ Figure 1-3 shows a simplified view of the architecture of both a Full installati
 
 The diagram illustrates the modular architecture of Windows Server 2008, with Server Core being constructed upon a subset of the core operating system features. For the same hardware architecture and edition, every file present on a clean install of Server Core is also present on a Full installation, with the exception of two special files (Scregedit.wsf and Oclist.exe), which are present only on Server Core. These special files were included on Server Core to simplify the initial configuration of a Server Core installation and the addition or removal of roles and optional components. For more information concerning Scregedit.wsf, see Chapter 3, 'Initial Configuration,' and for more information concerning Oclist.exe, see Chapter 4. 
 
-**Figure 1-3**
+![The architectures of Server Core and Full installations](c:\Users\helohr\Desktop\Repositories\it-server\WindowsServerDocs\administration\media\what-is-server-core-2008\Fig_1-3.png)
+
+**Figure 1-3** The architectures of Server Core and Full installations
 
 ##Driver Support
 The architectural diagram of Server Core shown in Figure 1-3 is obviously simplified; one thing it doesn't show is the difference in device driver support between Server Core and Full installations. A Full installation of Windows Server 2008 contains thousands of in-box drivers for different types of devices, which enable you to install products on a wide variety of different hardware configurations. (Client operating systems like Windows Vista include even more drivers to support devices such as digital cameras and scanners that are normally not used with servers.) 
