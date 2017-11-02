@@ -75,7 +75,7 @@ $Vnet = Get-NetworkControllerVirtualNetwork -ConnectionUri $uri  -ResourceId "Co
 $Vnet | ConvertTo-Json -Depth 4   
   
 # Retrieve the Tenant Virtual Subnet configuration  
-$RoutingSubnet = Get-NetworkControllerVirtualSubnet -ConnectionUri $uri  -ResourceId "Contoso_WebTier"   
+$RoutingSubnet = Get-NetworkControllerVirtualSubnet -ConnectionUri $uri  -ResourceId "Contoso_WebTier" -VirtualNetworkID $vnet.ResourceId   
   
 # Display in JSON format  
 $RoutingSubnet | ConvertTo-Json -Depth 4   
