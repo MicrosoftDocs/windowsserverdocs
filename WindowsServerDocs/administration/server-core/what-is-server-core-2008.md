@@ -205,3 +205,5 @@ Table 1-5 lists the services that are installed by default on a Server Core inst
 | DPS  | Diagnostic Policy Service  | Auto | LocalService |
 | Eventlog | Windows Event Log  | Auto | LocalService |
 | EventSystem  | COM+ Event System  | Auto | LocalService |
+| FCRegSvc  | Microsoft Fibre Channel Platform Registration Service  | Manual | LocalService |
+| gpsvc  | Group Policy Client  | Auto | LocalSystem |
