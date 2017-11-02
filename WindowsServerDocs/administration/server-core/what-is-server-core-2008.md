@@ -118,3 +118,36 @@ A Server Core installation also supports only a limited subset of the features a
 | ------------- | ------------- | ------------ |
 | .NET Framework 3.0 Features  | available  | unavailable |
 | BitLocker Drive Encryption  | available  | available |
+| BITS Server Extensions  | available  | unavailable |
+| Connection Manager Administration Kit  | available  | unavailable |
+| Desktop Experience  | available  | unavailable |
+| Failover Clustering  | available  | available |
+| Group Policy Management  | available  | unavailable |
+| Internet Printing Client  | available  | unavailable |
+| Internet Storage Name Server  | available  | unavailable |
+| LPR Port Monitor  | available  | unavailable |
+| Message Queuing  | available  | unavailable |
+| Multipath IO  | available  | available |
+| Network Load Balancing  | available  | available |
+| Peer Name Resolution Protocol  | available  | unavailable |
+| Quality Windows Audio Video Experience  | available  | unavailable |
+| Remote Assistance  | available  | unavailable |
+| Remote Differential Compression | available  | unavailable |
+| Remote Server Administration Tools  | available  | unavailable |
+| Removable Storage Manager | available  | available |
+| RPC Over HTTP Proxy | available  | unavailable |
+| Simple TCP/IP Services  | available  | unavailable |
+| SMTP Server  | available  | unavailable |
+| SMNP Services  | available  | available |
+| Storage Manager for SANs  | available  | unavailable |
+| Subsystem for UNIX-based Applications | available  | available |
+| Telnet Client  | available  | available |
+| Telnet Server  | available  | unavailable |
+| TFTP Client  | available  | unavailable |
+| Windows Internal Database  | available  | unavailable |
+| Windows PowerShell  | available  | unavailable |
+| Windows Product Activation Service  | available  | unavailable |
+| Windows Server Backup Features  | available  | available |
+| Windows System Resource Manager  | available  | unavailable |
+| WINS Server  | available  | available |
+| Wireless LAN Service | available  | unavailable |
