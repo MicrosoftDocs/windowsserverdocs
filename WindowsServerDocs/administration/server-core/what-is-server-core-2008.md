@@ -207,3 +207,5 @@ Table 1-5 lists the services that are installed by default on a Server Core inst
 | EventSystem  | COM+ Event System  | Auto | LocalService |
 | FCRegSvc  | Microsoft Fibre Channel Platform Registration Service  | Manual | LocalService |
 | gpsvc  | Group Policy Client  | Auto | LocalSystem |
+| hidserv | Human Interface Device Access  | Manual | LocalSystem |
+| hkmsvc  | Health Key and Certificate Management  | Manual | LocalSystem |
