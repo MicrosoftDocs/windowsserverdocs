@@ -151,3 +151,57 @@ A Server Core installation also supports only a limited subset of the features a
 | Windows System Resource Manager  | available  | unavailable |
 | WINS Server  | available  | available |
 | Wireless LAN Service | available  | unavailable |
+
+Again, there are some points you need to know about concerning the features available on Server Core:
+* Some features may require special hardware to function properly (or at all) on Server Core. These features include BitLocker Drive Encryption, Failover Clustering, Multipath IO, Network Load Balancing, and Removable Storage. 
+* Failover Clustering is not available on Standard Edition.
+
+##Server Core Architecture
+Digging deeper into Server Core, let's briefly look at the architecture of a Server Core installation of Windows Server 2008 by comparing it with that of a Full installation. First, remember that Server Core is not a different version of Windows Server 2008 but simply an installation option that you can select when installing Windows Server 2008 onto a system. This implies the following:
+* The kernel on a Server Core installation is the same one found on a Full installation of the same hardware architecture (x86 or x64) and edition. 
+* If a binary is present on a Server Core installation, a Full installation of the same hardware architecture (x86 or x64) and edition has the same version of that particular binary (with two exceptions discussed later). 
+* If a particular setting (for example, a specific firewall exception or the startup type of a particular service) has a certain default configuration on a Server Core installation, that setting is configured exactly the same way on a Full installation of the same hardware architecture (x86 or x64) and edition.
+
+Figure 1-3 shows a simplified view of the architecture of both a Full installation and a Server Core installation of Windows Server 2008. The dotted line indicates the architecture of Server Core, while the entire diagram represents the architecture of a Full installation. 
+
+The diagram illustrates the modular architecture of Windows Server 2008, with Server Core being constructed upon a subset of the core operating system features. For the same hardware architecture and edition, every file present on a clean install of Server Core is also present on a Full installation, with the exception of two special files (Scregedit.wsf and Oclist.exe), which are present only on Server Core. These special files were included on Server Core to simplify the initial configuration of a Server Core installation and the addition or removal of roles and optional components. For more information concerning Scregedit.wsf, see Chapter 3, 'Initial Configuration,' and for more information concerning Oclist.exe, see Chapter 4. 
+
+**Figure 1-3**
+
+##Driver Support
+The architectural diagram of Server Core shown in Figure 1-3 is obviously simplified; one thing it doesn't show is the difference in device driver support between Server Core and Full installations. A Full installation of Windows Server 2008 contains thousands of in-box drivers for different types of devices, which enable you to install products on a wide variety of different hardware configurations. (Client operating systems like Windows Vista include even more drivers to support devices such as digital cameras and scanners that are normally not used with servers.) 
+
+If a new device is connected to (or installed in) a Full installation of Windows Server 2008, the Plug and Play (PnP) subsystem first checks whether an in-box driver for the device is present. If a compatible in-box driver is found, the PnP subsystem automatically installs the driver and the device then operates. On a Full installation of Windows Server 2008, a balloon popup notification may be displayed, indicating that the driver has been installed and the device is ready for use. 
+
+On a Server Core installation, the driver installation process is the same (the PnP subsystem is present on Server Core) with two qualifications. First, Server Core includes only a minimal number of in-box drivers, and only for the following types of devices:
+* A standard Video Graphics Array (VGA) video driver 
+* Drivers for storage devices 
+* Drivers for network adapters
+
+Note that for each of the three device categories shown here, Server Core includes the same in-box drivers that are found on a corresponding Full installation (for the same hardware architecture). 
+
+Also, when the PnP subsystem automatically installs a driver for a new device, it does so silently—no balloon popup notification is displayed. Why not? Because there is no GUI on Server Core'there's no taskbar, so there's no notification area on the taskbar! 
+
+So what do you do when you add the Print Services role to a Server Core installation and you want to install a printer? You add the printer driver manually to the server—Server Core has no in-box print drivers. For more information on installing device drivers on Server Core, see Chapter 13. 
+
+##Service Footprint
+Because Server Core is a minimal installation, it has a smaller system service footprint than a corresponding Full installation of the same hardware architecture and edition. For example, about 75 system services are installed by default on a Full installation of Windows Server 2008, of which approximately 50 are configured for automatic startup. By contrast, Server Core has only about 70 services installed by default, and fewer than 40 of these start automatically. 
+
+Table 1-5 lists the services that are installed by default on a Server Core installation, with the startup mode for and account used by each service.
+
+**Table 1-5** System Services Installed by Default on Server Core
+
+| Service Name  | Display Name  | Startup Mode  | Account  |
+| ------------- | ------------- | ------------ | ------------ |
+| AeLookupSvc  | Application Experience  | Auto | LocalSystem |
+| AppMgmt  | Application Management  | Manual | LocalSystem |
+| BFE | Base Filtering Engine  | Auto | LocalSystem |
+| Browser | Computer Browser  | Manual | LocalSystem |
+| COMSysApp  | COM+ System Application  | Manual | LocalSystem |
+| CryptSvc  | Cryptographic Services  | Auto | Network-Service |
+| DcomLaunch  | DCOM Server Process Launcher  | Auto | LocalSystem |
+| Dhcp  | DHCP Client  | Auto | LocalService |
+| Dnscache | DNS Client  | Auto | Network-Service |
+| DPS  | Diagnostic Policy Service  | Auto | LocalService |
+| Eventlog | Windows Event Log  | Auto | LocalService |
+| EventSystem  | COM+ Event System  | Auto | LocalService |
