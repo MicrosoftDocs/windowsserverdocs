@@ -8,7 +8,7 @@ ms.topic: article
 author: Heidilohr
 ---
 #What is Server Core 2008?
-The Server Core option is a new minimal installation option that is available when you are deploying the Standard, Enterprise, or Datacenter edition of Windows Server 20081. Server Core provides you with a minimal installation of Windows Server 2008 that supports installing only certain server roles, as described later in this chapter. Contrast this with the Full installation option for Windows Server 2008, which supports installing all available server roles and also other Microsoft or third-party server applications, such as Microsoft Exchange Server or SAP. 
+The Server Core option is a new minimal installation option that is available when you are deploying the Standard, Enterprise, or Datacenter edition of Windows Server 2008.<sup>1</sup> Server Core provides you with a minimal installation of Windows Server 2008 that supports installing only certain server roles, as described later in this chapter. Contrast this with the Full installation option for Windows Server 2008, which supports installing all available server roles and also other Microsoft or third-party server applications, such as Microsoft Exchange Server or SAP. 
 Before we go any further, the phrase "installation option" needs to be explained. Normally, when you purchase a copy of Windows Server 2008, you purchase a license to use certain editions or stock-keeping units (SKUs). Table 1-1 lists the various editions of Windows Server 2008 that are available. The table also indicates which installation options (Full, Server Core, or both) are available for each edition.
 
 **Table 1-1** Windows Server 2008 Editions and Their Support for Installation Options
@@ -209,3 +209,59 @@ Table 1-5 lists the services that are installed by default on a Server Core inst
 | gpsvc  | Group Policy Client  | Auto | LocalSystem |
 | hidserv | Human Interface Device Access  | Manual | LocalSystem |
 | hkmsvc  | Health Key and Certificate Management  | Manual | LocalSystem |
+| IKEEXT  | IKE and AuthIP IPsec Keying Modules  | Auto | LocalSystem |
+| iphlpsvc  | IP Helper  | Auto | LocalSystem |
+| KtmRm  | KtmRm for Distributed Transaction Coordinator  | Auto | Network-Service |
+| LanmanServer  | Server  | Auto | LocalSystem |
+| LanmanWorkstation  | Workstatione  | Auto | LocalService |
+| lltdsvc  | Link-Layer Topology Discovery Mapper  | Manual | LocalService |
+| lmhosts  | TCP/IP NetBIOS helper  | Auto | LocalService |
+| MpsSvc  | Windows Firewall  | Auto | LocalService |
+| MSDTC  | Distributed Transaction Coordinator  | Auto | Network-Service |
+| MSISCSI  | Microsoft ISCSI Initiator Service  | Manual | LocalSystem |
+| msiserver  | Windows Installer  | Manual | LocalSystem |
+| napagent  | Network Access Protection Agent  | Manual | Network-Service |
+| Netlogon  | Netlogon  | Manual | LocalSystem |
+| netprofm  | Network List Service  | Auto | LocalService |
+| NlaSvc  | Network Location Awareness  | Auto | Network-Service |
+| nsi  | Network Store Interface Service  | Auto | LocalService |
+| pla  | Performance Logs & Alerts  | Manual | LocalService |
+| PlugPlay  | Plug and Play  | Auto | LocalSystem |
+| PolicyAgent  | IPsec Policy Agent  | Auto | Network-Service |
+| ProfSvc  | User Profile Service  | Auto | LocalSystem |
+| ProtectedStorage  | Protected Storage  | Manual | LocalSystem |
+| RemoteRegistry  | Remote Registry  | Auto | LocalService |
+| RpcSs  | Remote Procedure Call (RPC)  | Auto | Network-Service |
+| RSoPProv | Resultant Set of Policy Provider  | Manual | LocalSystem |
+| sacsvr  | Special Administration Console Helper  | Manual | LocalSystem |
+| SamSs  | Security Accounts Manager  | Auto | LocalSystem |
+| SCardSvr | Smart Card  | Manual | LocalService |
+| Schedule | Task Scheduler  | Auto | LocalSystem |
+| SCPolicySvc | Smart Card Removal Policy  | Manual | LocalSystem |
+| seclogon | Secondary Logon  | Auto | LocalSystem |
+| SENS | System Event Notification Service  | Auto | LocalSystem |
+| SessionEnv | Terminal Services Configuration  | Manual | LocalSystem |
+| slsvc  | Software Licensing | Auto | Network-Service |
+| SNMPTRAP  | SNMP Trap  | Manual | LocalService |
+| swprv  | Microsoft Software Shadow Copy Provider | Manual | LocalSystem |
+| TBS | TPM Base Services  | Manual | LocalService |
+| TermService  | Terminal Services | Auto | Network-Service |
+| TrustedInstaller | Windows Modules Installer  | Auto | LocalSystem |
+| UmRdpService | Terminal Services UserMode Port Redirector  | Manual | LocalSystem |
+| vds | Virtual Disk  | Manual | LocalSystem |
+| VSS | Volume Shadow Copy  | Manual | LocalSystem |
+| W32Time | Windows Time  | Auto | LocalService |
+| WcsPlugInService  | Windows Color System  | Manual | LocalService |
+| WdiServiceHost  | Diagnostic Service Host  | Manual | LocalService |
+| WdiSystemHost  | Diagnostic System Host  | Manual | LocalSystem |
+| Wecsvc | Windows Event Collector  | Manual | Network-Service |
+| WinHttpAuto-ProxySvc  | WinHTTP Web Proxy Auto-Discovery Service  | Auto | LocalService |
+| Winmgmt | Windows Management Instrumentation | Auto | LocalSystem |
+| WinRM  | Windows Remote Management (WS-Management) | Auto | Network-Service |
+| wmiApSrv  | WMI Performance Adapter  | Manual | LocalSystem |
+| wuauserv | Windows Update | Auto | LocalSystem |
+
+For information on managing services on a Server Core installation, see Chapter 13.
+
+<sup>1</sup> 
+ Windows Web Server 2008, which is designed to be used as a single-purpose or scale-out front-end Web server, also supports both the Full and Server Core installation options. However, Windows Web Server 2008 is available only on preinstalled systems through system builder and original equipment manufacturer (OEM) channels. This book focuses on supporting only Server Core installations of Standard, Enterprise, and Datacenter editions.
