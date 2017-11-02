@@ -2,8 +2,10 @@
 title: What is Server Core 2008?
 description: Learn about the Server Core installation option in Windows Server 2008
 ms.prod: windows-server-threshold
-author: hlohr
+author: helohr
 ms.date: 11/01/2017
+ms.topic: article
+author: Heidilohr
 ---
 #What is Server Core 2008?
 The Server Core option is a new minimal installation option that is available when you are deploying the Standard, Enterprise, or Datacenter edition of Windows Server 20081. Server Core provides you with a minimal installation of Windows Server 2008 that supports installing only certain server roles, as described later in this chapter. Contrast this with the Full installation option for Windows Server 2008, which supports installing all available server roles and also other Microsoft or third-party server applications, such as Microsoft Exchange Server or SAP. 
@@ -11,7 +13,7 @@ Before we go any further, the phrase "installation option" needs to be explained
 
 **Table 1-1** Windows Server 2008 Editions and Their Support for Installation Options
 | Edition       | Full          | Server core  |
-| ------------- |:-------------:| ------------:|
+| ------------- | ------------- | ------------ |
 | Windows Server 2008 Standard (x86 and x64)       | available | available        |
 | Windows Server 2008 Enterprise (x86 and x64)       | available | available        |
 | Windows Server 2008 Datacenter (x86 and x64)        | available | available       |
@@ -52,7 +54,7 @@ Table 1-2 lists the main GUI applications, together with their executables, that
 
 **Table 1-2** GUI Applications Available in a Server Core Installation
 | Gui Application | Executable with Path |
-| -------------   |:-------------:       | 
+| -------------   | -------------       | 
 | Command prompt | %WINDIR%\System32\Cmd.exe |
 | Microsoft Support Diagnostic Tool | %WINDIR%\System32\MSdt.exe |
 | Notepad | %WINDIR%\System32\Notepad.exe |
@@ -79,7 +81,7 @@ A Server Core installation includes only a limited number of server roles compar
 
 **Table 1-3** Comparison of Server Roles for Full and Server Core Installations of Windows Server 2008 Enterprise Edition
 | Server Role  | Available in Full Installation  | Available in Server Core  |
-| ------------- |:-------------:| ------------:|
+| ------------- | ------------- | ------------ |
 | Active Directory Certificate Services (AD CS)  | available  | unavailable |
 | Active Directory Domain Services (AD DS)  | available  | available |
 | Active Directory Federation Services (AD FS)  | available  | unavailable |
@@ -113,4 +115,6 @@ A Server Core installation also supports only a limited subset of the features a
 **Table 1-4** Comparison of Features for Full and Server Core Installations of Windows Server 2008 Enterprise Edition
 
 | Feature  | Available in Full Installation  | Available in Server Core  |
-| ------------- |:-------------:| ------------:|
+| ------------- | ------------- | ------------ |
+| .NET Framework 3.0 Features  | available  | unavailable |
+| BitLocker Drive Encryption  | available  | available |
