@@ -15,7 +15,6 @@ When using Windows Server to access RemoteApps or desktops through RD WebAccess 
 To change the title, open up a new PowerShell window and import the RemoteDesktop module with the following command.
 
 ```powershell
-
     Import-Module RemoteDesktop
 ```
 
@@ -28,7 +27,6 @@ Next, use the set-RDWorkspace command to change the workspace name.
 For example, you can use the following command to change the workpsace name to "Contoso RemoteApps":
 
 ```powershell
-
     set-RDWorkspace -Name "Contoso RemoteApps" -ConnectionBroker broker01.contoso.com
 ```
 
