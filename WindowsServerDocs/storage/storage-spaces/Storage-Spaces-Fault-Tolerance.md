@@ -9,6 +9,7 @@ author: cosmosdarwin
 ms.date: 10/11/2017
 ms.assetid: 5e1d7ecc-e22e-467f-8142-bad6d82fc5d0
 description: A discussion of resiliency options in Storage Spaces Direct including mirroring and parity.
+ms.localizationpriority: medium
 ---
 # Fault tolerance and storage efficiency in Storage Spaces Direct
 

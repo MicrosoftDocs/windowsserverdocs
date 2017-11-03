@@ -8,6 +8,7 @@ author: JasonGerend
 manager: dongill
 ms.author: jgerend
 ms.date: 10/17/2017
+ms.localizationpriority: high
 ---
 # Storage in Windows Server
 

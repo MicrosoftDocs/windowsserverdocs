@@ -11,6 +11,7 @@ ms.topic: get-started-article
 ms.assetid: 9f109c91-7c2e-4065-856c-ce9e2e9ce558
 author: jaimeo
 ms.author: jaimeo
+ms.localizationpriority: low
 ---
 # Deploy Nano Server
 

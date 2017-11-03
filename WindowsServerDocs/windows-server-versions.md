@@ -13,6 +13,7 @@ ms.assetid: 0c3dc323-8beb-4d7d-a2e0-12bda848ddcb
 author: lizap
 ms.author: elizapo
 manager: dongill
+ms.localizationpriority: low
 ---
 # Windows Server - IT administrator content for current and previous releases
 
