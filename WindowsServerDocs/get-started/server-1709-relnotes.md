@@ -13,6 +13,7 @@ ms.assetid: 134aab85-664f-4d44-87ef-9e5fd389071f
 author: jaimeo
 ms.author: jaimeo
 manager: elizapo
+ms.localizationpriority: medium
 ---
 # Release Notes: Important Issues in Windows Server, version 1709
 

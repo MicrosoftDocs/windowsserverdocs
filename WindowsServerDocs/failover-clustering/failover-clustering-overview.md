@@ -8,6 +8,7 @@ author: JasonGerend
 ms.author: jgerend  
 ms.technology: storage-failover-clustering
 ms.date: 10/11/2016
+ms.localizationpriority: high
 ---
 # Failover Clustering in Windows Server
 

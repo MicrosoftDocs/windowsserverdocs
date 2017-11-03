@@ -9,6 +9,7 @@ author: eldenchristensen
 ms.date: 03/20/2017
 Keywords: Storage Spaces Direct, S2D, maintenance
 ms.assetid: 73dd8f9c-dcdb-4b25-8540-1d8707e9a148
+ms.localizationpriority: medium
 ---
 
 # Taking a Storage Spaces Direct server offline for maintenance

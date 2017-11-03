@@ -8,6 +8,7 @@ ms.technology: storage-spaces
 ms.topic: article
 author: JasonGerend
 ms.date: 08/24/2016
+ms.localizationpriority: low
 ---
 # Storage-class Memory (NVDIMM-N) Health Management in Windows
 > Applies To: Windows Server 2016, Windows 10 (version 1607)

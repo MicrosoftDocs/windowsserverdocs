@@ -9,6 +9,7 @@ ms.date: 02/14/2017
 ms.topic: article
 author: jaimeo
 ms.author: jaimeo
+ms.localizationpriority: medium
 ---
 # Get Started with Windows Server 2016
 

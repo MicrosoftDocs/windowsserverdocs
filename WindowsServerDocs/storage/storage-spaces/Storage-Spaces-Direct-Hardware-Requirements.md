@@ -8,6 +8,7 @@ ms.technology: storage-spaces
 ms.topic: article
 author: eldenchristensen
 ms.date: 10/30/2017
+ms.localizationpriority: medium
 ---
 # Storage Spaces Direct hardware requirements
 

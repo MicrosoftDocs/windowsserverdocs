@@ -11,6 +11,7 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/18/2017
+ms.localizationpriority: low
 ---
 
 # Deploy Project Honolulu Gateway

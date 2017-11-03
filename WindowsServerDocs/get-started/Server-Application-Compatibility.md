@@ -12,7 +12,8 @@ ms.topic: article
 ms.assetid: 2afe7c32-1fda-4441-989b-1415dabddc72
 author: jaimeo
 ms.author: jaimeo
-manager: elizapo
+manager: 
+ms.localizationpriority: medium
 ---
 # Windows Server 2016 and Microsoft Server Application Compatibility
 

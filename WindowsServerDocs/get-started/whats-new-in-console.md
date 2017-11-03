@@ -13,6 +13,7 @@ ms.assetid: da9fc582-033b-4973-84e7-0c6024ecfcbc
 author: jaimeo
 ms.author: jaimeo
 manager: dongill
+ms.localizationpriority: low
 ---
 # What's New in the Windows Console in Windows Server 2016
 >Applies To: Windows Server 2016

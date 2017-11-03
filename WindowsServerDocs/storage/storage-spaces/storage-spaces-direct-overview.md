@@ -9,6 +9,7 @@ author: cosmosdarwin
 ms.date: 10/30/2017
 ms.assetid: 8bd0d09a-0421-40a4-b752-40ecb5350ffd
 description: An overview of Storage Spaces Direct, a feature of Windows Server Enterprise Edition that enables you to cluster servers with internal storage into a software-defined storage solution.
+ms.localizationpriority: medium
 ---
 # Storage Spaces Direct in Windows Server 2016
 
