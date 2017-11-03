@@ -9,6 +9,7 @@ ms.topic: article
 author: jasongerend
 ms.date: 1/10/2017
 description: Resources to help you understand Storage Spaces Direct, a Windows Server-based software-defined storage solution.
+ms.localizationpriority: medium
 ---
 # Understanding Storage Spaces Direct
 

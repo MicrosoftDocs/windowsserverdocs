@@ -9,6 +9,7 @@ ms.assetid: 20fee213-8ba5-4cd3-87a6-e77359e82bc0
 author: stevenek
 ms.date: 6/23/2017
 description: Deploy Storage Spaces Direct in a hyper-converged cluster in a test lab.
+ms.localizationpriority: medium
 ---
 # Hyper-converged solution using Storage Spaces Direct in Windows Server 2016
 
