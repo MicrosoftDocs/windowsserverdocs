@@ -7,7 +7,7 @@ ms.technology: compute
 ms.topic: article
 author: jamesmci
 ms.author: jamesmci
-
+ms.localizationpriority: high
 ---
 # Virtualization
 

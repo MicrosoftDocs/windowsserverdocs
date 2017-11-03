@@ -7,6 +7,7 @@ ms.technology: server-general
 ms.topic: article
 author: greg-lindsay
 ms.author: greg-lindsay
+ms.localizationpriority: high
 ---
 
 # What's New in Windows Server version 1709

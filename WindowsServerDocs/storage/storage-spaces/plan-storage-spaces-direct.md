@@ -9,6 +9,7 @@ ms.topic: article
 author: jasongerend
 ms.date: 10/25/2017
 description: Resources to help you design a Storage Spaces Direct deployment consisting of multiple servers clustered to provide software-defined storage using Windows Server.
+ms.localizationpriority: medium
 ---
 # Planning Storage Spaces Direct
 

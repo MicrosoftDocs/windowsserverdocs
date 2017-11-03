@@ -8,6 +8,7 @@ ms.topic: article
 author: kumudd
 ms.date: 11/21/2016
 ms.assetid: 0eec0e7e-28f3-4fb2-bd41-e97bc3560bcb
+ms.localizationpriority: medium
 ---
 # Storage Spaces Optimize Pool
 

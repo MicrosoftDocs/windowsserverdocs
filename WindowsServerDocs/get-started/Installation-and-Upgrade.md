@@ -13,6 +13,7 @@ ms.assetid: 98f876bd-63ff-4c3a-95d4-a8dd8d0d119c
 author: jaimeo
 ms.author: jaimeo
 manager: elizapo
+ms.localizationpriority: medium
 ---
 # Windows Server Installation and Upgrade
 

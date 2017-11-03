@@ -8,6 +8,7 @@ ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
 ms.date: 1/11/2017
+ms.localizationpriority: medium
 ---
 
 # Creating volumes in Storage Spaces Direct

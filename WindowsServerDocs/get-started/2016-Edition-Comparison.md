@@ -13,6 +13,7 @@ ms.assetid: c5ca3bfe-7ced-49f6-a932-80cab33f419e
 author: jaimeo
 ms.author: jaimeo
 manager: dongill
+ms.localizationpriority: medium
 ---
 # Comparison of Standard and Datacenter editions of Windows Server 2016
 
