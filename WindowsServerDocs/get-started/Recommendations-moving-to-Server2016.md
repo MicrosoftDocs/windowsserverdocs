@@ -13,6 +13,7 @@ ms.assetid: 74aa1da3-7076-4a1f-ad5b-9e17bd46dba2
 author: jaimeo
 ms.author: jaimeo
 manager: dongill
+ms.localizationpriority: medium
 ---
 # Recommendations for moving to Windows Server 2016
 

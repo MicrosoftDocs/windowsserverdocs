@@ -13,10 +13,11 @@ ms.assetid: 4a8b42d7-9fe5-4efe-9ea1-ace2131fe068
 author: jaimeo
 ms.author: jaimeo
 manager: dongill
+ms.localizationpriority: high
 ---
 # System Requirements
 
->Applies To: Windows Server 2016, Windows Server Semi-Annual Channel
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016 
 
 This topic addresses the minimum system requirements to run Windows Server&reg; 2016 or Windows Server, version 1709.
 

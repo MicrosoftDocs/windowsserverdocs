@@ -9,6 +9,7 @@ ms.topic: article
 author: jasongerend
 ms.date: 2/6/2017
 description: Resources to help you manage a Storage Spaces Direct deployment consisting of multiple servers clustered to provide software-defined storage using Windows Server.
+ms.localizationpriority: medium
 ---
 # Managing Storage Spaces Direct
 

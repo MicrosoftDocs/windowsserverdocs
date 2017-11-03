@@ -13,6 +13,7 @@ ms.assetid: 2827f332-44d4-4785-8b13-98429087dcc7
 author: jaimeo
 ms.author: jaimeo
 manager: dongill
+ms.localizationpriority: high
 ---
 # What's New in Windows Server 2016
 

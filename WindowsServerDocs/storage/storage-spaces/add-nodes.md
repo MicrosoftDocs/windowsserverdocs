@@ -9,6 +9,7 @@ ms.topic: article
 author: cosmosdarwin
 ms.date: 01/23/2017
 description: How to add servers or drives to a Storage Spaces Direct cluster.
+ms.localizationpriority: medium
 ---
 # Adding servers or drives to Storage Spaces Direct
 >Applies To: Windows Server 2016

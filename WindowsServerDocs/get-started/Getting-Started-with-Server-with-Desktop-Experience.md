@@ -13,6 +13,7 @@ ms.assetid: 5b38b8a0-4dfc-4130-be00-fc58bba99595
 author: jaimeo
 ms.author: jaimeo
 manager: dongill
+ms.localizationpriority: high
 ---
 # Install Server with Desktop Experience
 > Applies To: Windows Server 2016

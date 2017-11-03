@@ -13,6 +13,7 @@ ms.assetid: 5d10c5f9-ebac-49a0-b808-c0b1702e0437
 author: jaimeo
 ms.author: jaimeo
 manager: elizapo
+ms.localizationpriority: medium
 ---
 # Features Removed or Deprecated in  Windows Server 2016
 

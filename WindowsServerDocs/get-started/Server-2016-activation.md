@@ -13,6 +13,7 @@ ms.assetid: 99f7daa4-30ce-4d13-be65-0a45d5cc7a54
 author: jaimeo
 ms.author: jaimeo
 manager: elizapo
+ms.localizationpriority: high
 ---
 # Windows Server 2016 Activation
 
