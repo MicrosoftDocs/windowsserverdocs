@@ -16,7 +16,7 @@ The Server Core option is a new minimal installation option that is available wh
 Before we go any further, the phrase "installation option" needs to be explained. Normally, when you purchase a copy of Windows Server 2008, you purchase a license to use certain editions or stock-keeping units (SKUs). Table 1-1 lists the various editions of Windows Server 2008 that are available. The table also indicates which installation options (Full, Server Core, or both) are available for each edition.
 
 **Table 1-1** Windows Server 2008 Editions and Their Support for Installation Options
-| Edition       | Full          | Server core  |
+| Edition       | Full          | Server Core  |
 | ------------- | :-------------: | :------------: |
 | Windows Server 2008 Standard (x86 and x64)       | ![available](../media/what-is-server-core-2008/checkgrn.png) | ![available](../media/what-is-server-core-2008/checkgrn.png)        |
 | Windows Server 2008 Enterprise (x86 and x64)       | ![available](../media/what-is-server-core-2008/checkgrn.png) | ![available](../media/what-is-server-core-2008/checkgrn.png)        |
@@ -106,7 +106,7 @@ A Server Core installation includes only a limited number of server roles compar
 | Streaming Media Services  | ![available](../media/what-is-server-core-2008/checkgrn.png)  | ![available](../media/what-is-server-core-2008/checkgrn.png) |
 | Terminal Services  | ![available](../media/what-is-server-core-2008/checkgrn.png)  |  |
 | UDDI Services  | ![available](../media/what-is-server-core-2008/checkgrn.png)  |  |
-| WEb Server (IIS) | ![available](../media/what-is-server-core-2008/checkgrn.png) | ![available](../media/what-is-server-core-2008/checkgrn.png) |
+| Web Server (IIS) | ![available](../media/what-is-server-core-2008/checkgrn.png) | ![available](../media/what-is-server-core-2008/checkgrn.png) |
 | Windows Deployment Services  | ![available](../media/what-is-server-core-2008/checkgrn.png) | ![available](../media/what-is-server-core-2008/checkgrn.png) |
 
 While the roles available for Server Core are generally the same regardless of architecture (x86 or x64) and product edition, there are a few exceptions:
