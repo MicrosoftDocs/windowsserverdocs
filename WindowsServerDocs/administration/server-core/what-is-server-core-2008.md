@@ -8,7 +8,7 @@ ms.topic: article
 author: Heidilohr
 ---
 #What is Server Core 2008?
-The Server Core option is a new minimal installation option that is available when you are deploying the Standard, Enterprise, or Datacenter edition of Windows Server 2008.<sup>1</sup> Server Core provides you with a minimal installation of Windows Server 2008 that supports installing only certain server roles, as described later in this chapter. Contrast this with the Full installation option for Windows Server 2008, which supports installing all available server roles and also other Microsoft or third-party server applications, such as Microsoft Exchange Server or SAP. 
+The Server Core option is a new minimal installation option that is available when you are deploying the Standard, Enterprise, or Datacenter edition of Windows Server 2008. Server Core provides you with a minimal installation of Windows Server 2008 that supports installing only certain server roles, as described later in this chapter. Contrast this with the Full installation option for Windows Server 2008, which supports installing all available server roles and also other Microsoft or third-party server applications, such as Microsoft Exchange Server or SAP. 
 
 >[!NOTE]
 >This information applies to Windows Server 2008. For information about Servercore in Windows Server 2012, see [What is the Server Core Installation in Windows Server](https://docs.microsoft.com/en-us/windows-server/administration/server-core/what-is-server-core). 
@@ -30,7 +30,7 @@ Before we go any further, the phrase "installation option" needs to be explained
 
 To understand what an "installation option" is, let's say you've purchased a volume license that lets you install a copy of Windows Server 2008 Enterprise Edition. When you insert your volume-licensed media into a system and begin the installation process, one of the screens you'll see, as shown in Figure 1-1, presents you with a choice of editions and installation options.
 
-![Selecting a Server Core installation option to install](media/what-is-server-core-2008/FIg1-1.png)
+![Selecting a Server Core installation option to install](/media/what-is-server-core-2008/FIg1-1.png)
 
 **Figure 1-1** Selecting a Server Core installation option to install
 
@@ -46,7 +46,7 @@ To avoid this, Microsoft decided to strip everything from Windows Server 2008 th
 ##The Server Core GUI
 When you finish installing Server Core on a system and log on for the first time, you're in for a bit of a surprise. Figure 1-2 shows the Server Core user interface after first logon.
 
-![Server Core user interface](media/what-is-server-core-2008/Fig1-2.png)
+![Server Core user interface](/media/what-is-server-core-2008/Fig1-2.png)
 
 **Figure 1-2** Server Core user interface
 
@@ -174,7 +174,7 @@ Figure 1-3 shows a simplified view of the architecture of both a Full installati
 
 The diagram illustrates the modular architecture of Windows Server 2008, with Server Core being constructed upon a subset of the core operating system features. For the same hardware architecture and edition, every file present on a clean install of Server Core is also present on a Full installation, with the exception of two special files (Scregedit.wsf and Oclist.exe), which are present only on Server Core. These special files were included on Server Core to simplify the initial configuration of a Server Core installation and the addition or removal of roles and optional components. For more information concerning Scregedit.wsf, see Chapter 3, 'Initial Configuration,' and for more information concerning Oclist.exe, see Chapter 4. 
 
-![The architectures of Server Core and Full installations](media/what-is-server-core-2008/Fig1-3.png)
+![The architectures of Server Core and Full installations](/media/what-is-server-core-2008/Fig1-3.png)
 
 **Figure 1-3** The architectures of Server Core and Full installations
 
@@ -272,6 +272,3 @@ Table 1-5 lists the services that are installed by default on a Server Core inst
 | wuauserv | Windows Update | Auto | LocalSystem |
 
 For information on managing services on a Server Core installation, see Chapter 13.
-
-<sup>1</sup> 
- Windows Web Server 2008, which is designed to be used as a single-purpose or scale-out front-end Web server, also supports both the Full and Server Core installation options. However, Windows Web Server 2008 is available only on preinstalled systems through system builder and original equipment manufacturer (OEM) channels. This book focuses on supporting only Server Core installations of Standard, Enterprise, and Datacenter editions.
