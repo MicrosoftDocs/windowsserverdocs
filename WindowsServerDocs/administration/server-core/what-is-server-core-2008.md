@@ -30,7 +30,7 @@ Before we go any further, the phrase "installation option" needs to be explained
 
 To understand what an "installation option" is, let's say you've purchased a volume license that lets you install a copy of Windows Server 2008 Enterprise Edition. When you insert your volume-licensed media into a system and begin the installation process, one of the screens you'll see, as shown in Figure 1-1, presents you with a choice of editions and installation options.
 
-![Selecting a Server Core installation option to install](/media/what-is-server-core-2008/FIg1-1.png)
+![Selecting a Server Core installation option to install](/administration/media/what-is-server-core-2008/FIg1-1.png)
 
 **Figure 1-1** Selecting a Server Core installation option to install
 
