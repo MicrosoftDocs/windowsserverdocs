@@ -124,7 +124,7 @@ A Server Core installation also supports only a limited subset of the features a
 
 | Feature  | Available in Full Installation  | Available in Server Core  |
 | ------------- | ------------- | ------------ |
-| .NET Framework 3.0 Features  | available  | unavailable |
+| .NET Framework 3.0 Features  | ![available](../media/what-is-server-core-2008/checkgrn.png)  |  |
 | BitLocker Drive Encryption  | available  | available |
 | BITS Server Extensions  | available  | unavailable |
 | Connection Manager Administration Kit  | available  | unavailable |
