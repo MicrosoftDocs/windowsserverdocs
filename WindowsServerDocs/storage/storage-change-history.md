@@ -7,7 +7,7 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.date: 10/26/2017
+ms.date: 11/6/2017
 description: New and updated topics in the Storage documentation for Windows Server 2016
 ---
 # Change history for storage topics in Windows Server
@@ -18,12 +18,20 @@ This topic lists new and updated topics in the [Storage](storage.md) documentati
 
 > If you're looking for update history for Windows Server 2016, see [Windows 10 and Windows Server 2016 update history](https://support.microsoft.com/help/4000825/windows-10-and-windows-server-2016-update-history).
 
+## November 2017
+
+|New or changed topic|Description|
+|---|---|
+|[What's new in storage](whats-new-in-storage.md)|Added info about what's new in Windows Server, version 1709.|
+|[Add servers or drives](storage-spaces/add-nodes.md)|Added information about how Storage Spaces Direct automatically optimizes drive usage after adding drives.|
+
 ## October 2017
 
 |New or changed topic|Description|
 |---|---|
+|[Storage Spaces Direct overview](storage-spaces/storage-spaces-direct-overview.md)|Added a warning about a specific line of NVMe devices.|
 |[Deploying Storage Spaces Direct in a virtual machine guest cluster](storage-spaces/storage-spaces-direct-in-vm.md)|New topic.|
-|[Overview of Disk Management](disk-management/overview-of-disk-management.md)| Published 13 new topics for Windows Server.|
+|[Overview of Disk Management](disk-management/overview-of-disk-management.md)| Published 13 new topics for Windows and Windows Server.|
 |[Storage Replica overview](storage-replica/storage-replica-overview.md)|Added what's new info for Windows Server, version 1709.|
 |[Storage Replica known issues](storage-replica/storage-replica-known-issues.md)|Added new information.|
 |[Cluster to cluster storage replication](storage-replica/cluster-to-cluster-storage-replication.md)|Revised the number of supported cluster nodes for Storage Spaces Direct.|

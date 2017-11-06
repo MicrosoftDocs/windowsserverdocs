@@ -122,3 +122,4 @@ For additional related information, see the following resources.
 |**Community resources**|[The File Services and Storage TechNet Forum](https://social.technet.microsoft.com/forums/winserverfiles/threads/)|
 |**Protocols**|[File Services Windows Server Protocols](https://msdn.microsoft.com/library/cc239875.aspx)|
 |**Related technologies**| [Failover Clustering](../../failover-clustering/failover-clustering-overview.md)|
+|**Support**|[Windows IT Pro Support](https://www.microsoft.com/itpro/windows/support)|
