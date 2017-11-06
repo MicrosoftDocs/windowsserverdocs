@@ -7,8 +7,8 @@ ms.manager: dongill
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 10/30/2017
-description: How to add servers or drives to a Storage Spaces Direct cluster.
+ms.date: 11/6/2017
+description: How to add servers or drives to a Storage Spaces Direct cluster
 ms.localizationpriority: medium
 ---
 # Adding servers or drives to Storage Spaces Direct
@@ -182,16 +182,20 @@ If the drives don't appear, manually scan for hardware changes. This can be done
    >[!NOTE]
    > Automatic pooling depends on you having only one pool. If you've circumvented the standard configuration to create multiple pools, you will need to add new drives to your preferred pool yourself using **Add-PhysicalDisk**.
 
-## Optimizing drive usage after adding drives
+## Optimizing drive usage after adding drives or servers
 
-Over time, as drives are added or removed, the distribution of data among the set of drives that comprise the pool may become uneven. In some cases, this may result in certain drives becoming full while other drives in the same pool have much lower consumption.
+Over time, as drives are added or removed, the distribution of data among the drives in the pool can become uneven. In some cases, this can result in certain drives becoming full while other drives in pool have much lower consumption.
 
-For this reason, Storage Spaces Direct automatically optimizes drive usage after you add drives to the pool (this is a manual process for Storage Spaces systems that use Shared SAS enclosures). This optimization process starts 30 minutes after you add a new drive to the pool. Pool optimization runs as a low-priority background operation, so it can take hours or days to complete, especially if you're using large hard drives.
+To help keep drive allocation even across the pool, Storage Spaces Direct automatically optimizes drive usage after you add drives or servers to the pool (this is a manual process for Storage Spaces systems that use Shared SAS enclosures). Optimization starts 30 minutes after you add a new drive to the pool. Pool optimization runs as a low-priority background operation, so it can take hours or days to complete, especially if you're using large hard drives.
 
-You can monitor the progress of the optimize job with the following command:
+Optimization uses two jobs - one called *Optimize* and one called *Rebalance* - and you can monitor their progress with the following command:
 
 ```powershell
-Get-StorageJob | ? Name -eq Optimize
+Get-StorageJob
 ```
 
-You can manually optimize a storage pool with the Optimize-StoragePool cmdlet.
+You can manually optimize a storage pool with the [Optimize-StoragePool](https://docs.microsoft.com/powershell/module/storage/optimize-storagepool?view=win10-ps) cmdlet. Here's an example:
+
+```powershell
+Get-StoragePool <PoolName> | Optimize-StoragePool
+```

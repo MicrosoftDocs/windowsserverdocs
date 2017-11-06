@@ -22,9 +22,6 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter and [Windows
 > [!WARNING]
 > Microsoft has a critical product advisory for Storage Spaces Direct customers using the Intel P3x00 family of NVMe devices (all capacities of the P3500, P3600, P3700). See Knowledge Base article [4052341](https://support.microsoft.com/4052341) for more information.
 
-> [!WARNING]
-> Microsoft has a critical product advisory for Storage Spaces Direct customers using the Intel P3x00 family of NVMe devices (all capacities of the P3500, P3600, P3700). See Knowledge Base article [4052341](https://support.microsoft.com/help/4052341) for more information.
-
 <table>
     <tr style="border: 0;">
         <td style="padding: 10px; border: 0; width:125px">
