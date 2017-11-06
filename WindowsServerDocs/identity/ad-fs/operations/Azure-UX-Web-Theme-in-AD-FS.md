@@ -4,7 +4,7 @@ description: The following document describes how to change the AD FS forms sign
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 10/23/2017
+ms.date: 10/24/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
@@ -44,7 +44,7 @@ The following are the size recommendations for the background image and the logo
 - Do not add any padding around the logo within the asset.  Ensure that the asset background is transparent.
 
 ### Background
-- size 1024 x 768 pixels @ 96 DPI with a file size of no greater than 200KB.
+- size 1024 x 1080 pixels with a file size of no greater than 200KB.  You should use the highest resolution possible with aspect ratio 16:9/16:10 that keeps the image size under the restriction.
 
 ## Next Steps
 - [AD FS Customization in Windows Server 2016](AD-FS-Customization-in-Windows-Server-2016.md)

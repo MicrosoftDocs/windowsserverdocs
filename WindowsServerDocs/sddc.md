@@ -11,6 +11,7 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 08/28/2017
+ms.localizationpriority: high
 ---
 
 >Applies To: Windows Server 2016

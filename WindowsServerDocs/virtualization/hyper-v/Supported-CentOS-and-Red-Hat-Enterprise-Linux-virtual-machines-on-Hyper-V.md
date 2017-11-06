@@ -121,7 +121,8 @@ The 32-bit kernel for this series is PAE enabled. There is no built-in LIS suppo
 |Hyper-V Sockets|2016|&#10004;|&#10004;|||||
 |PCI Passthrough/DDA|2016|||||||
 |**[Generation 2 virtual machines](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_gen2)**|
-|Boot using UEFI|2016, 2012 R2|&#10004; Note 14|&#10004; Note 14|&#10004; Note 14||||
+|Boot using UEFI|2012 R2|||||||
+||2016|&#10004; Note 14|&#10004; Note 14|&#10004; Note 14||||
 |Secure boot|2016||||||
 
 ## <a name="BKMK_5x"></a>RHEL/CentOS 5.x Series

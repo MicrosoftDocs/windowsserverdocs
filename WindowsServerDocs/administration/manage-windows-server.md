@@ -7,6 +7,7 @@ ms.topic: article
 author: lizap
 ms.author: elizapo
 ms.date: 10/16/2017
+ms.localizationpriority: high
 ---
 # Manage Windows Server 2016
 
