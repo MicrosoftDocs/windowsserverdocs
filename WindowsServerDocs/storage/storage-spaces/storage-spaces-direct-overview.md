@@ -17,10 +17,10 @@ ms.localizationpriority: medium
 
 Storage Spaces Direct uses industry-standard servers with local-attached drives to create highly available, highly scalable software-defined storage at a fraction of the cost of traditional SAN or NAS arrays. Its converged or hyper-converged architecture radically simplifies procurement and deployment, while features like caching, storage tiers, and erasure coding, together with the latest hardware innovation like RDMA networking and NVMe drives, deliver unrivaled efficiency and performance.
 
-Storage Spaces Direct is included in Windows Server 2016 Datacenter and [Windows Server Insider Preview Builds](https://insider.windows.com/en-us/for-business-getting-started-server/).<br><br>
+Storage Spaces Direct is included in Windows Server 2016 Datacenter and [Windows Server Insider Preview Builds](https://insider.windows.com/en-us/for-business-getting-started-server/).
 
 > [!WARNING]
-> Microsoft has a critical product advisory for Storage Spaces Direct customers using the Intel P3x00 family of NVMe devices (all capacities of the P3500, P3600, P3700). See Knowledge Base article [4052341](https://support.microsoft.com/help/4052341) for more information.
+> Microsoft has a critical product advisory for Storage Spaces Direct customers using the Intel P3x00 family of NVMe devices (all capacities of the P3500, P3600, P3700). See Knowledge Base article [4052341](https://support.microsoft.com/4052341) for more information.
 
 <table>
     <tr style="border: 0;">
@@ -34,10 +34,8 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter and [Windows
 			  <li><a href="storage-spaces-fault-tolerance.md">Fault tolerance and storage efficiency</a></li>
 		  	</ul>
         </td>
-    </tr>
-    <tr style="border: 0;">
         <td style="padding: 10px; border: 0; width:125px">
-        <img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/plan.png" width="125" alt="">            
+        <img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/plan.png" width="125" alt="">
         </td>
         <td style="padding: 10px; border: 0;">
             <strong><a href="plan-storage-spaces-direct.md">Plan</a></strong>
@@ -45,6 +43,7 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter and [Windows
 			  <li><a href="storage-spaces-direct-hardware-requirements.md">Hardware requirements</a></li>
 			  <li><a href="choosing-drives.md">Choose drives</a></li>
 			  <li><a href="plan-volumes.md">Plan volumes</a></li>
+              <li><a href="storage-spaces-direct-in-vm.md">Guest VM clusters</a></li>
 		    </ul>
         </td>
     </tr>
@@ -58,9 +57,7 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter and [Windows
 			  <li><a href="hyper-converged-solution-using-storage-spaces-direct.md">Hyper-converged solution</a></li>
 			  <li><a href="create-volumes.md">Create volumes</a></li>
 		    </ul>
-        </td>
-    </tr>
-    <tr style="border: 0;">
+        </td>        
         <td style="padding: 10px; border: 0; width:125px">
             <img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/manage.png" width="125" alt="">
         </td>
@@ -75,6 +72,7 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter and [Windows
 		    </ul>
         </td>
     </tr>
+    
 </table>
 
 ## Videos
@@ -200,5 +198,6 @@ Try Storage Spaces Direct [in Microsoft Azure](https://blogs.technet.microsoft.c
 -   [Storage Replica in Windows Server 2016](../storage-replica/storage-replica-overview.md)  
 -   [Storage Quality of Service](../storage-qos/storage-qos-overview.md)
 - [Storage Spaces in Windows Server 2012 R2](https://technet.microsoft.com/library/hh831739%28v=ws.11%29.aspx) (with shared SAS storage enclosures)
+- [Windows IT Pro Support](https://www.microsoft.com/itpro/windows/support)
 
 Not finding content you need? Windows 10 users, tell us what you want on [Feedback Hub](feedback-hub://?referrer=techDocsUcPage&tabid=2&contextid=898&newFeedback=true&topic=storage-spaces-direct-overview.md). 

@@ -1,7 +1,7 @@
 ---
 title: Overview of Disk Management
 description: This article gives an overview of the Disk Management utility
-ms.date: 10/12/2017
+ms.date: 11/6/2017
 ms.prod: windows-server-threshold 
 ms.technology: storage 
 ms.topic: article 
@@ -21,3 +21,6 @@ For details, see the following topics:
 -   [Manage disks](manage-disks.md)
 -   [Manage basic volumes](manage-basic-volumes.md)
 -   [Troubleshooting Disk Management](troubleshooting-disk-management.md)
+
+> [!TIP]
+> If you're having trouble and need help with Disk Management or other Windows tasks, we suggest asking for help at the [Microsoft community](https://answers.microsoft.com/en-us/windows) site. The comments thread for this topic is intended for feedback on this specific topic and isn't monitored for support questions.
