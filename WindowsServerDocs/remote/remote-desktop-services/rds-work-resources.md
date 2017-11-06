@@ -18,7 +18,7 @@ To change the title, open up a new PowerShell window and import the RemoteDeskto
     Import-Module RemoteDesktop
 ```
 
-Next, use the set-RDWorkspace command to change the workspace name.
+Next, use the Set-RDWorkspace command to change the workspace name.
 
 ```powershell
     Set-RDWorkspace [-Name] <string> [-ConnectionBroker <string>]  [<CommonParameters>]
@@ -27,7 +27,7 @@ Next, use the set-RDWorkspace command to change the workspace name.
 For example, you can use the following command to change the workpsace name to "Contoso RemoteApps":
 
 ```powershell
-    set-RDWorkspace -Name "Contoso RemoteApps" -ConnectionBroker broker01.contoso.com
+    Set-RDWorkspace -Name "Contoso RemoteApps" -ConnectionBroker broker01.contoso.com
 ```
 
 If you are running multiple Connection Brokers in High Availability mode, you must run this against the active broker. You can use this command:
