@@ -74,6 +74,7 @@ Enables easier configuration of multiple network adapters in a cluster.
 * [Configure and Manage the Quorum in a Failover Cluster](https://technet.microsoft.com/library/jj612870.aspx)
 * [Use Cluster Shared Volumes in a Failover Cluster](https://technet.microsoft.com/library/jj612868.aspx)
 * [Cluster-Aware Updating Overview](https://technet.microsoft.com/library/hh831694.aspx)
+* [Windows IT Pro Support](https://www.microsoft.com/itpro/windows/support)
 
 ## Tools and settings
 
