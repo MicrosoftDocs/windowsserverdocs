@@ -1,3 +1,3 @@
 ---
-redirect_url: add-nodes#Optimizing-drive-usage-after-adding-drives
+redirect_url: add-nodes#optimizing-drive-usage-after-adding-drives-or-servers
 ---
