@@ -52,16 +52,16 @@ When you finish installing Server Core on a system and log on for the first time
 
 There's no desktop! That is, there is no Windows Explorer shell, with its Start menu, Taskbar, and the other features you may be used to seeing. All you have is a command prompt, which means that you have to do most of the work of configuring a Server Core installation either by typing commands one at a time, which is slow, or by using scripts and batch files, which can help you speed up and simplify your configuration tasks by automating them. You can also perform some initial configuration tasks using answer files when you perform an unattended installation of Server Core. 
 
-For administrators who are experts in using command-line tools like Netsh.exe, Dfscmd.exe, and Dnscmd.exe, configuring and managing a Server Core installation can be easy, even fun. For those who are not experts, however, all is not lost'you can still use the standard Windows Server 2008 MMC tools for managing a Server Core installation. You just need to use them on a different system running either a full installation of Windows Server 2008 or Windows Vista with Service Pack 1. 
+For administrators who are experts in using command-line tools like Netsh.exe, Dfscmd.exe, and Dnscmd.exe, configuring and managing a Server Core installation can be easy, even fun. For those who are not experts, however, all is not lost. You can still use the standard Windows Server 2008 MMC tools for managing a Server Core installation. You just need to use them on a different system running either a full installation of Windows Server 2008 or Windows Vista with Service Pack 1. 
 
 You'll learn more about configuring and managing a Server Core installation in Chapters 3 to 6 of this book, while later chapters deal with how to manage specific server roles and other components. Meanwhile, if you think you need to learn more about the various Windows command-line tools and how to use them, there are two good resources to consult:
 * The Command Reference section of the Windows Server 2008 Technical Library () 
-* The Windows Command-Line Administrator's Pocket Consultant by William R. Stanek (Microsoft Press, 2008) 
+* *The Windows Command-Line Administrator's Pocket Consultant* by William R. Stanek (Microsoft Press, 2008) 
 
 Table 1-2 lists the main GUI applications, together with their executables, that are available in a Server Core installation.
 
 **Table 1-2** GUI Applications Available in a Server Core Installation
-| Gui Application | Executable with Path |
+| GUI Application | Executable with Path |
 | -------------   | -------------       | 
 | Command prompt | %WINDIR%\System32\Cmd.exe |
 | Microsoft Support Diagnostic Tool | %WINDIR%\System32\MSdt.exe |
@@ -206,7 +206,9 @@ Table 1-5 lists the services that are installed by default on a Server Core inst
 | AeLookupSvc  | Application Experience  | Auto | LocalSystem |
 | AppMgmt  | Application Management  | Manual | LocalSystem |
 | BFE | Base Filtering Engine  | Auto | LocalSystem |
+| BITS | Background Intelligent Transfer Service  | Auto | LocalService |
 | Browser | Computer Browser  | Manual | LocalSystem |
+| CertPropSvc | Certificate Propagation  | Manual | LocalSystem |
 | COMSysApp  | COM+ System Application  | Manual | LocalSystem |
 | CryptSvc  | Cryptographic Services  | Auto | Network-Service |
 | DcomLaunch  | DCOM Server Process Launcher  | Auto | LocalSystem |
@@ -225,7 +227,7 @@ Table 1-5 lists the services that are installed by default on a Server Core inst
 | LanmanServer  | Server  | Auto | LocalSystem |
 | LanmanWorkstation  | Workstatione  | Auto | LocalService |
 | lltdsvc  | Link-Layer Topology Discovery Mapper  | Manual | LocalService |
-| lmhosts  | TCP/IP NetBIOS helper  | Auto | LocalService |
+| lmhosts  | TCP/IP NetBIOS Helper  | Auto | LocalService |
 | MpsSvc  | Windows Firewall  | Auto | LocalService |
 | MSDTC  | Distributed Transaction Coordinator  | Auto | Network-Service |
 | MSISCSI  | Microsoft ISCSI Initiator Service  | Manual | LocalSystem |
