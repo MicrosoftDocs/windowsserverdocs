@@ -205,8 +205,8 @@ Table 1-5 lists the services that are installed by default on a Server Core inst
 | ------------- | ------------- | ------------ | ------------ |
 | AeLookupSvc  | Application Experience  | Auto | LocalSystem |
 | AppMgmt  | Application Management  | Manual | LocalSystem |
-| BFE | Base Filtering Engine  | Auto | LocalSystem |
-| BITS | Background Intelligent Transfer Service  | Auto | LocalService |
+| BFE | Base Filtering Engine  | Auto | LocalService |
+| BITS | Background Intelligent Transfer Service  | Auto | LocalSystem |
 | Browser | Computer Browser  | Manual | LocalSystem |
 | CertPropSvc | Certificate Propagation  | Manual | LocalSystem |
 | COMSysApp  | COM+ System Application  | Manual | LocalSystem |
@@ -223,6 +223,7 @@ Table 1-5 lists the services that are installed by default on a Server Core inst
 | hkmsvc  | Health Key and Certificate Management  | Manual | LocalSystem |
 | IKEEXT  | IKE and AuthIP IPsec Keying Modules  | Auto | LocalSystem |
 | iphlpsvc  | IP Helper  | Auto | LocalSystem |
+| KeyIso | CNG Key Isolation  | Manual | LocalSystem |
 | KtmRm  | KtmRm for Distributed Transaction Coordinator  | Auto | Network-Service |
 | LanmanServer  | Server  | Auto | LocalSystem |
 | LanmanWorkstation  | Workstatione  | Auto | LocalService |
@@ -230,7 +231,7 @@ Table 1-5 lists the services that are installed by default on a Server Core inst
 | lmhosts  | TCP/IP NetBIOS Helper  | Auto | LocalService |
 | MpsSvc  | Windows Firewall  | Auto | LocalService |
 | MSDTC  | Distributed Transaction Coordinator  | Auto | Network-Service |
-| MSISCSI  | Microsoft ISCSI Initiator Service  | Manual | LocalSystem |
+| MSiSCSI  | Microsoft iSCSI Initiator Service  | Manual | LocalSystem |
 | msiserver  | Windows Installer  | Manual | LocalSystem |
 | napagent  | Network Access Protection Agent  | Manual | Network-Service |
 | Netlogon  | Netlogon  | Manual | LocalSystem |
