@@ -82,7 +82,8 @@ That's a pretty short list! Now here's a list of user interface elements that ar
 
 The .NET Framework is also not present in Server Core, which means there's no support for running managed code on a Server Core installation. Only native code—code written using Windows application programming interfaces (APIs)—can run on Server Core. In summary, any GUI applications that depend on either the .NET Framework or on the Explorer.exe shell won't run on Server Core. You'll learn more about running applications on Server Core in Chapter 13, 'Maintaining Server Core.' 
 
-**Note** Because Windows PowerShell requires the .NET Framework, you cannot install Windows PowerShell onto Server Core. You can, however, manage a Server Core installation remotely using Windows PowerShell so long as you use only PowerShell WMI commands. For more information on managing Server Core using Windows PowerShell, see Chapter 6, 'Remote Management.' 
+>[!NOTE]
+>Because Windows PowerShell requires the .NET Framework, you cannot install Windows PowerShell onto Server Core. You can, however, manage a Server Core installation remotely using Windows PowerShell so long as you use only PowerShell WMI commands. For more information on managing Server Core using Windows PowerShell, see Chapter 6, 'Remote Management.' 
 
 ##Supported Server Roles 
 A Server Core installation includes only a limited number of server roles compared with a Full installation of Windows Server 2008. Table 1-3 compares the roles available for both Full and Server Core installations of Windows Server 2008 Enterprise Edition. 
