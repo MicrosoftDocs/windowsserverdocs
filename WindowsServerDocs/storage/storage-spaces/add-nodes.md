@@ -7,20 +7,21 @@ ms.manager: dongill
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 01/23/2017
-description: How to add servers or drives to a Storage Spaces Direct cluster.
+ms.date: 11/6/2017
+description: How to add servers or drives to a Storage Spaces Direct cluster
 ms.localizationpriority: medium
 ---
 # Adding servers or drives to Storage Spaces Direct
->Applies To: Windows Server 2016
 
-This topic describes how to add servers or drives to Storage Spaces Direct. 
+>Applies to: Windows Server 2016
+
+This topic describes how to add servers or drives to Storage Spaces Direct.
 
 ## <a name="adding-servers"></a> Adding servers
 
-Adding servers, often called scaling out, adds storage capacity and can improve storage performance and unlock better storage efficiency. If your deployment is hyper-converged, adding servers also provides more compute resources for your workload. 
+Adding servers, often called scaling out, adds storage capacity and can improve storage performance and unlock better storage efficiency. If your deployment is hyper-converged, adding servers also provides more compute resources for your workload.
 
-![scaling-out](media/add-nodes/Scaling-Out.gif)
+![Animation of adding a server to a four-node cluster](media/add-nodes/Scaling-Out.gif)
 
 Typical deployments are simple to scale out by adding servers. There are just two steps:
 
@@ -46,7 +47,7 @@ Add-ClusterNode -Name NewNode
 
 ### From 2 to 3 servers: unlocking three-way mirroring
 
-![scaling-from-2-to-3](media/add-nodes/Scaling-2-to-3.png)
+![adding a third server to a two-node cluster](media/add-nodes/Scaling-2-to-3.png)
 
 With two servers, you can only create two-way mirrored volumes (compare with distributed RAID-1). With three servers, you can create three-way mirrored volumes for better fault tolerance. We recommend using three-way mirroring whenever possible.
 
@@ -84,7 +85,7 @@ New-Volume -FriendlyName <Name> -FileSystem CSVFS_ReFS -StoragePoolFriendlyName 
 
 ### From 3 to 4 servers: unlocking dual parity
 
-![scaling-from-3-to-4](media/add-nodes/Scaling-3-to-4.png)
+![adding a fourth server to a three-node cluster](media/add-nodes/Scaling-3-to-4.png)
 
 With four servers, you can use dual parity, also commonly called erasure coding (compare to distributed RAID-6). This provides the same fault tolerance as three-way mirroring, but with better storage efficiency. To learn more, see [Fault tolerance and storage efficiency](storage-spaces-fault-tolerance.md).
 
@@ -166,7 +167,7 @@ Adding drives, also known as scaling up, adds storage capacity and can improve p
    >[!IMPORTANT]
    > We strongly recommend that all servers have identical storage configurations.
 
-![scale-up](media/add-nodes/Scale-Up.gif)
+![Animation showing adding drives to a sytem](media/add-nodes/Scale-Up.gif)
 
 To scale up, connect the drives and verify that Windows discovers them. They should appear in the output of the **Get-PhysicalDisk** cmdlet in PowerShell with their **CanPool** property set to **True**. If they show as **CanPool = False**, you can see why by checking their **CannotPoolReason** property.
 
@@ -180,3 +181,21 @@ If the drives don't appear, manually scan for hardware changes. This can be done
 
    >[!NOTE]
    > Automatic pooling depends on you having only one pool. If you've circumvented the standard configuration to create multiple pools, you will need to add new drives to your preferred pool yourself using **Add-PhysicalDisk**.
+
+## Optimizing drive usage after adding drives or servers
+
+Over time, as drives are added or removed, the distribution of data among the drives in the pool can become uneven. In some cases, this can result in certain drives becoming full while other drives in pool have much lower consumption.
+
+To help keep drive allocation even across the pool, Storage Spaces Direct automatically optimizes drive usage after you add drives or servers to the pool (this is a manual process for Storage Spaces systems that use Shared SAS enclosures). Optimization starts 30 minutes after you add a new drive to the pool. Pool optimization runs as a low-priority background operation, so it can take hours or days to complete, especially if you're using large hard drives.
+
+Optimization uses two jobs - one called *Optimize* and one called *Rebalance* - and you can monitor their progress with the following command:
+
+```powershell
+Get-StorageJob
+```
+
+You can manually optimize a storage pool with the [Optimize-StoragePool](https://docs.microsoft.com/powershell/module/storage/optimize-storagepool?view=win10-ps) cmdlet. Here's an example:
+
+```powershell
+Get-StoragePool <PoolName> | Optimize-StoragePool
+```
