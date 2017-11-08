@@ -12,7 +12,7 @@ author: Heidilohr
 
 When using Windows Server to access RemoteApps or desktops through RD WebAccess or the new Remote Desktop app, you may have noticed that the workspace is titled  “Work Resources" by default.  You can easily change the title by using PowerShell cmdlets.
 
-To change the title, open up a new PowerShell window and import the RemoteDesktop module with the following command.
+To change the title, open up a new PowerShell window on the connection broker server and import the RemoteDesktop module with the following command.
 
 ```powershell
     Import-Module RemoteDesktop
