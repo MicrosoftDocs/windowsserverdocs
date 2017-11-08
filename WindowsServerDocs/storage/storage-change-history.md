@@ -34,6 +34,7 @@ This topic lists new and updated topics in the [Storage](storage.md) documentati
 |[Storage Replica overview](storage-replica/storage-replica-overview.md)|Added what's new info for Windows Server, version 1709.|
 |[Storage Replica known issues](storage-replica/storage-replica-known-issues.md)|Added new information.|
 |[Cluster to cluster storage replication](storage-replica/cluster-to-cluster-storage-replication.md)|Revised the number of supported cluster nodes for Storage Spaces Direct.|
+|[Storage Spaces Direct hardware requirements](storage-spaces/storage-spaces-direct-hardware-requirements.md)|Added a note about a specific line of NVMe devices.|
 
 ## July 2017
 
