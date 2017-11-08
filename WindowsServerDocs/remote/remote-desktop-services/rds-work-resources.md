@@ -36,4 +36,4 @@ If you are running multiple Connection Brokers in High Availability mode, you mu
     Set-RDWorkspace -Name "Contoso RemoteApps" -ConnectionBroker (Get-RDConnectionBrokerHighAvailability).ActiveManagementServer
 ```
 
-For more information about the Set-RDWorkspace cmdlet, see the [Set-RDSWorkspace](https://docs.microsoft.com/en-us/powershell/module/remotedesktop/set-rdworkspace?view=win10-ps) reference.
+For more information about the Set-RDWorkspace cmdlet, see the [Set-RDSWorkspace](https://docs.microsoft.com/powershell/module/remotedesktop/set-rdworkspace?view=win10-ps) reference.
