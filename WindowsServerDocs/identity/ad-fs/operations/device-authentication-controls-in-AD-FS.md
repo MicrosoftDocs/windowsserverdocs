@@ -10,6 +10,9 @@ ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ---
 
+# Device authentication controls in AD FS
+The following document shows how to enable device authentication controls in Windows Server 2016 and 2012 R2.
+
 ## Device Authentication controls in AD FS 2012 R2
 Originally in AD FS 2012 R2 there was one global authentication property called `DeviceAuthenticationEnabled` that controlled device authentication.
 
