@@ -20,7 +20,7 @@ Before we go any further, the phrase "installation option" needs to be explained
 **Table 1-1** Windows Server 2008 editions and their support for installation options
 | Edition       | Full          | Server Core  |
 | ------------- | :-------------: | :------------: |
-| Windows Server 2008 Standard (x86 and x64)       | ![available](../media/what-is-server-core-2008/checkgrn.png){: height="50%" width="50%"} | ![available](../media/what-is-server-core-2008/checkgrn.png)        |
+| Windows Server 2008 Standard (x86 and x64)       | ![available](../media/what-is-server-core-2008/checkgrn.png){height=50% width=50%} | ![available](../media/what-is-server-core-2008/checkgrn.png)        |
 | Windows Server 2008 Enterprise (x86 and x64)       | ![available](../media/what-is-server-core-2008/checkgrn.png) | ![available](../media/what-is-server-core-2008/checkgrn.png)        |
 | Windows Server 2008 Datacenter (x86 and x64)        | ![available](../media/what-is-server-core-2008/checkgrn.png) | ![available](../media/what-is-server-core-2008/checkgrn.png)       |
 | Windows Web Server 2008 (x86 and x64)       | ![available](../media/what-is-server-core-2008/checkgrn.png) | ![available](../media/what-is-server-core-2008/checkgrn.png)  |
