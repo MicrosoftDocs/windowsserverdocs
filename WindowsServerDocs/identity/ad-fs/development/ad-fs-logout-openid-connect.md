@@ -17,6 +17,10 @@ Building on the initial Oauth support in AD FS in Windows Server 2012 R2, AD FS 
 
 
 ## Discovery doc
+OpenID Connect uses a JSON document called a "Discovery document" to provide details about configuration.  This includes URIs of the authentication, token, userinfo, and public-endpoints.
+
+
+
 AD FS property EnableOAuthLogout will be enabled by default. Following two additional values will be available in the discovery doc to indicate support for Front Channel Logout:
 
 
