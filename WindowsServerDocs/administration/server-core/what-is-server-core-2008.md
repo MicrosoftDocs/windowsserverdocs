@@ -20,15 +20,15 @@ Before we go any further, the phrase "installation option" needs to be explained
 **Table 1-1** Windows Server 2008 editions and their support for installation options
 | Edition       | Full          | Server Core  |
 | ------------- | :-------------: | :------------: |
-| Windows Server 2008 Standard (x86 and x64)       | ![available](../media/what-is-server-core-2008/checkgrn.png) | ![available](../media/what-is-server-core-2008/checkgrn.png)        |
-| Windows Server 2008 Enterprise (x86 and x64)       | ![available](../media/what-is-server-core-2008/checkgrn.png) | ![available](../media/what-is-server-core-2008/checkgrn.png)        |
-| Windows Server 2008 Datacenter (x86 and x64)        | ![available](../media/what-is-server-core-2008/checkgrn.png) | ![available](../media/what-is-server-core-2008/checkgrn.png)       |
-| Windows Web Server 2008 (x86 and x64)       | ![available](../media/what-is-server-core-2008/checkgrn.png) | ![available](../media/what-is-server-core-2008/checkgrn.png)  |
-| Windows Server 2008 For Itanium-based systems       | ![available](../media/what-is-server-core-2008/checkgrn.png) |     |
-| Windows HPC Server 2008 (x64 only)       | ![available](../media/what-is-server-core-2008/checkgrn.png) |   |
-| Windows Server 2008 Standard without Hyper-V (x86 and x64) | ![available](../media/what-is-server-core-2008/checkgrn.png) | ![available](../media/what-is-server-core-2008/checkgrn.png) |
-| Windows Server 2008 Enterprise without Hyper-V (x86 and x64)  | ![available](../media/what-is-server-core-2008/checkgrn.png) | ![available](../media/what-is-server-core-2008/checkgrn.png) |
-| Windows Server 2008 Standard without Hyper-V (x86 and x64) | ![available](../media/what-is-server-core-2008/checkgrn.png) | ![available](../media/what-is-server-core-2008/checkgrn.png) |
+| Windows Server 2008 Standard (x86 and x64)       | X | X        |
+| Windows Server 2008 Enterprise (x86 and x64)       | X | X        |
+| Windows Server 2008 Datacenter (x86 and x64)        | X | X       |
+| Windows Web Server 2008 (x86 and x64)       | X | X  |
+| Windows Server 2008 For Itanium-based systems       | X |     |
+| Windows HPC Server 2008 (x64 only)       | X |   |
+| Windows Server 2008 Standard without Hyper-V (x86 and x64) | X | X |
+| Windows Server 2008 Enterprise without Hyper-V (x86 and x64)  | X | X |
+| Windows Server 2008 Standard without Hyper-V (x86 and x64) | X | X |
 
 To understand what an "installation option" is, let's say you've purchased a volume license that lets you install a copy of Windows Server 2008 Enterprise Edition. When you insert your volume-licensed media into a system and begin the installation process, one of the screens you'll see, as shown in Figure 1-1, presents you with a choice of editions and installation options.
 
@@ -93,24 +93,24 @@ A Server Core installation includes only a limited number of server roles compar
 **Table 1-3** Comparison of server roles for Full and Server Core installations of Windows Server 2008 Enterprise Edition
 | Server role  | Available in Full installation  | Available in Server Core  |
 | ------------- | :-------------: | :------------: |
-| Active Directory Certificate Services (AD CS)  | ![available](../media/what-is-server-core-2008/checkgrn.png) |  |
-| Active Directory Domain Services (AD DS)  | ![available](../media/what-is-server-core-2008/checkgrn.png)  | ![available](../media/what-is-server-core-2008/checkgrn.png) |
-| Active Directory Federation Services (AD FS)  | ![available](../media/what-is-server-core-2008/checkgrn.png)  |  |
-| Active Directory Lightweight Directory Services (AD LDS)  | ![available](../media/what-is-server-core-2008/checkgrn.png)  | ![available](../media/what-is-server-core-2008/checkgrn.png) |
-| Active Directory Rights Management Services (AD RMS)  | ![available](../media/what-is-server-core-2008/checkgrn.png)  |  |
-| Application Server  | ![available](../media/what-is-server-core-2008/checkgrn.png)  |  |
-| DHCP Server  | ![available](../media/what-is-server-core-2008/checkgrn.png)  | ![available](../media/what-is-server-core-2008/checkgrn.png) |
-| DNS Server  | ![available](../media/what-is-server-core-2008/checkgrn.png)  | ![available](../media/what-is-server-core-2008/checkgrn.png) |
-| Fax Server  | ![available](../media/what-is-server-core-2008/checkgrn.png)  |  |
-| File Services  | ![available](../media/what-is-server-core-2008/checkgrn.png)  | ![available](../media/what-is-server-core-2008/checkgrn.png) |
-| Hyper-V  | ![available](../media/what-is-server-core-2008/checkgrn.png) | ![available](../media/what-is-server-core-2008/checkgrn.png) |
-| Network Policy and Access Services  | ![available](../media/what-is-server-core-2008/checkgrn.png)  |  |
-| Print Services  | ![available](../media/what-is-server-core-2008/checkgrn.png)  | ![available](../media/what-is-server-core-2008/checkgrn.png) |
-| Streaming Media Services  | ![available](../media/what-is-server-core-2008/checkgrn.png)  | ![available](../media/what-is-server-core-2008/checkgrn.png) |
-| Terminal Services  | ![available](../media/what-is-server-core-2008/checkgrn.png)  |  |
-| UDDI Services  | ![available](../media/what-is-server-core-2008/checkgrn.png)  |  |
-| Web Server (IIS) | ![available](../media/what-is-server-core-2008/checkgrn.png) | ![available](../media/what-is-server-core-2008/checkgrn.png) |
-| Windows Deployment Services  | ![available](../media/what-is-server-core-2008/checkgrn.png) | ![available](../media/what-is-server-core-2008/checkgrn.png) |
+| Active Directory Certificate Services (AD CS)  | X |  |
+| Active Directory Domain Services (AD DS)  | X  | X |
+| Active Directory Federation Services (AD FS)  | X  |  |
+| Active Directory Lightweight Directory Services (AD LDS)  | X  | X |
+| Active Directory Rights Management Services (AD RMS)  | X  |  |
+| Application Server  | X  |  |
+| DHCP Server  | X  | X |
+| DNS Server  | X  | X |
+| Fax Server  | X  |  |
+| File Services  | X  | X |
+| Hyper-V  | X | X |
+| Network Policy and Access Services  | X  |  |
+| Print Services  | X  | X |
+| Streaming Media Services  | X  | X |
+| Terminal Services  | X  |  |
+| UDDI Services  | X  |  |
+| Web Server (IIS) | X | X |
+| Windows Deployment Services  | X | X |
 
 While the roles available for Server Core are generally the same regardless of architecture (x86 or x64) and product edition, there are a few exceptions:
 * The Hyper-V (virtualization) role is available only if you purchased Windows Server 2008 with Hyper-V product media (Hyper-V is available only for x64 versions). If you do not need this role, you can purchase Windows Server 2008 without Hyper-V product media instead. 
@@ -125,41 +125,41 @@ A Server Core installation also supports only a limited subset of the features a
 
 | Feature  | Available in Full installation  | Available in Server Core  |
 | ------------- | :-------------: | :------------: |
-| .NET Framework 3.0 Features  | ![available](../media/what-is-server-core-2008/checkgrn.png)  |  |
-| BitLocker Drive Encryption  | ![available](../media/what-is-server-core-2008/checkgrn.png)  | ![available](../media/what-is-server-core-2008/checkgrn.png) |
-| BITS Server Extensions  | ![available](../media/what-is-server-core-2008/checkgrn.png)  |  |
-| Connection Manager Administration Kit  | ![available](../media/what-is-server-core-2008/checkgrn.png) |  |
-| Desktop Experience  | ![available](../media/what-is-server-core-2008/checkgrn.png) |  |
-| Failover Clustering  | ![available](../media/what-is-server-core-2008/checkgrn.png)  | ![available](../media/what-is-server-core-2008/checkgrn.png) |
-| Group Policy Management  | ![available](../media/what-is-server-core-2008/checkgrn.png)  |  |
-| Internet Printing Client  | ![available](../media/what-is-server-core-2008/checkgrn.png)  |  |
-| Internet Storage Name Server  | ![available](../media/what-is-server-core-2008/checkgrn.png)  |  |
-| LPR Port Monitor  | ![available](../media/what-is-server-core-2008/checkgrn.png)  |  |
-| Message Queuing  | ![available](../media/what-is-server-core-2008/checkgrn.png)  |  |
-| Multipath IO  | ![available](../media/what-is-server-core-2008/checkgrn.png)  | ![available](../media/what-is-server-core-2008/checkgrn.png) |
-| Network Load Balancing  | ![available](../media/what-is-server-core-2008/checkgrn.png)  | ![available](../media/what-is-server-core-2008/checkgrn.png) |
-| Peer Name Resolution Protocol  | ![available](../media/what-is-server-core-2008/checkgrn.png)  |  |
-| Quality Windows Audio Video Experience  | ![available](../media/what-is-server-core-2008/checkgrn.png) |  |
-| Remote Assistance  | ![available](../media/what-is-server-core-2008/checkgrn.png)  |  |
-| Remote Differential Compression | ![available](../media/what-is-server-core-2008/checkgrn.png)  |  |
-| Remote Server Administration Tools  | ![available](../media/what-is-server-core-2008/checkgrn.png)  |  |
-| Removable Storage Manager | ![available](../media/what-is-server-core-2008/checkgrn.png)  | ![available](../media/what-is-server-core-2008/checkgrn.png) |
-| RPC Over HTTP Proxy | ![available](../media/what-is-server-core-2008/checkgrn.png)  |  |
-| Simple TCP/IP Services  | ![available](../media/what-is-server-core-2008/checkgrn.png)  |  |
-| SMTP Server  | ![available](../media/what-is-server-core-2008/checkgrn.png)  |  |
-| SMNP Services  | ![available](../media/what-is-server-core-2008/checkgrn.png)  | ![available](../media/what-is-server-core-2008/checkgrn.png)  |
-| Storage Manager for SANs  | ![available](../media/what-is-server-core-2008/checkgrn.png)  |  |
-| Subsystem for UNIX-based Applications | ![available](../media/what-is-server-core-2008/checkgrn.png) | ![available](../media/what-is-server-core-2008/checkgrn.png)  |
-| Telnet Client  | ![available](../media/what-is-server-core-2008/checkgrn.png) | ![available](../media/what-is-server-core-2008/checkgrn.png)  |
-| Telnet Server  | ![available](../media/what-is-server-core-2008/checkgrn.png)   |  |
-| TFTP Client  | ![available](../media/what-is-server-core-2008/checkgrn.png)   |  |
-| Windows Internal Database  | ![available](../media/what-is-server-core-2008/checkgrn.png)  |  |
-| Windows PowerShell  | ![available](../media/what-is-server-core-2008/checkgrn.png)  |  |
-| Windows Product Activation Service  | ![available](../media/what-is-server-core-2008/checkgrn.png)   |  |
-| Windows Server Backup Features  | ![available](../media/what-is-server-core-2008/checkgrn.png)  | ![available](../media/what-is-server-core-2008/checkgrn.png)  |
-| Windows System Resource Manager  | ![available](../media/what-is-server-core-2008/checkgrn.png)  |  |
-| WINS Server  | ![available](../media/what-is-server-core-2008/checkgrn.png) | ![available](../media/what-is-server-core-2008/checkgrn.png) |
-| Wireless LAN Service | ![available](../media/what-is-server-core-2008/checkgrn.png)  |  |
+| .NET Framework 3.0 Features  | X  |  |
+| BitLocker Drive Encryption  | X  | X |
+| BITS Server Extensions  | X  |  |
+| Connection Manager Administration Kit  | X |  |
+| Desktop Experience  | X |  |
+| Failover Clustering  | X  | X |
+| Group Policy Management  | X  |  |
+| Internet Printing Client  | X  |  |
+| Internet Storage Name Server  | X  |  |
+| LPR Port Monitor  | X  |  |
+| Message Queuing  | X  |  |
+| Multipath IO  | X  | X |
+| Network Load Balancing  | X  | X |
+| Peer Name Resolution Protocol  | X  |  |
+| Quality Windows Audio Video Experience  | X |  |
+| Remote Assistance  | X  |  |
+| Remote Differential Compression | X  |  |
+| Remote Server Administration Tools  | X  |  |
+| Removable Storage Manager | X  | X |
+| RPC Over HTTP Proxy | X  |  |
+| Simple TCP/IP Services  | X  |  |
+| SMTP Server  | X  |  |
+| SMNP Services  | X  | X  |
+| Storage Manager for SANs  | X  |  |
+| Subsystem for UNIX-based Applications | X | X  |
+| Telnet Client  | X | X  |
+| Telnet Server  | X   |  |
+| TFTP Client  | X   |  |
+| Windows Internal Database  | X  |  |
+| Windows PowerShell  | X  |  |
+| Windows Product Activation Service  | X   |  |
+| Windows Server Backup Features  | X  | X  |
+| Windows System Resource Manager  | X  |  |
+| WINS Server  | X | X |
+| Wireless LAN Service | X  |  |
 
 Again, there are some points you need to know about concerning the features available on Server Core:
 * Some features may require special hardware to function properly (or at all) on Server Core. These features include BitLocker Drive Encryption, Failover Clustering, Multipath IO, Network Load Balancing, and Removable Storage. 
