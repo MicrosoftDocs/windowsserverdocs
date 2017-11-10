@@ -20,6 +20,7 @@
 ### [Features removed or planned for replacement starting with Windows Server, version 1709](Removed-Features-1709.md)
 ### [Features Removed or Deprecated in Windows Server 2016](Deprecated-Features.md)
 ## [Windows Server 2016 Edition Comparison](2016-Edition-Comparison.md)
+## [Azure Hybrid Benefit for Windows Server](azure-hybrid-benefit.md)
 ## [ Windows Server 2016 Activation Guide](Server-2016-activation.md)
 ### [KMS Client Setup Keys](KMSclientkeys.md)
 ## [Install Nano Server](Getting-started-with-Nano-Server.md)
