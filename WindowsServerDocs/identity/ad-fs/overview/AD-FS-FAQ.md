@@ -5,7 +5,7 @@ description: Frequently asked questions for AD FS 2016
 author: jenfieldmsft
 ms.author:  billmath
 manager: femila
-ms.date: 09/19/2017
+ms.date: 11/10/2017
 ms.topic: article
 ms.custom: it-pro
 ms.prod: windows-server-threshold
@@ -146,3 +146,17 @@ It is not recommended to do SSL termination before WAP. In case SSL termination 
 
 ### I am trying to get additional claims on the user info endpoint, but its only returning subject. How can I get additional claims?
 The ADFS userinfo endpoint always returns the subject claim as specified in the OpenID standards. AD FS does not provide additional claims requested via the UserInfo endpoint. If you need additional claims in ID token, refer to [Custom ID Tokens in AD FS](../development/custom-id-tokens-in-ad-fs.md).
+
+### Why do I see alot of 1021 errors on my AD FS servers?
+This event is logged usually for an invalid resource access on AD FS for resource 00000003-0000-0000-c000-000000000000. This error is caused by an erroneous behavior of the client where it tries to get an access token for the Azure AD Graph service. Since the resource is not present on AD FS, this results in event ID 1021 on the AD FS servers. It’s safe to ignore any warnings or errors for resource 00000003-0000-0000-c000-000000000000 on AD FS. 
+
+### Why am I seeing a warning for failure to add the AD FS service account to the Enterprise Key Admins group?
+This group is only created when a Windows 2016 Domain Controller with the FSMO PDC role exists in the Domain. To resolve the error, you can create the Group manually and follow the below to give the required permission after adding the service account as member of the group.
+1.	Open **Active Directory Users and Computers**. 
+2.	**Right-click** your domain name from the navigation pane and **click** Properties.
+3.	**Click** Security (if the Security tab is missing, turn on Advanced Features from the View menu).
+4.	**Click** Advanced. **Click** Add. **Click** Select a principal.
+5.	The Select User, Computer, Service Account, or Group dialog box appears.  In the Enter the object name to select text box, type Key Admin Group.  Click OK.
+6.	In the Applies to list box, select **Descendant User objects**.
+7.	Using the scroll bar, scroll to the bottom of the page and **click** Clear all.
+8.	In the Properties section, select **Read msDS-KeyCredentialLink** and **Write msDS-KeyCrendentialLink**.
