@@ -385,6 +385,7 @@
 #### [Enabling Oauth Confidential Clients with AD FS 2016](ad-fs/development/Enabling-Oauth-Confidential-Clients-with-AD-FS.md)
 #### [Single Page Application with AD FS](ad-fs/development/Single-Page-Application-with-AD-FS.md)
 
+
 ### [AD FS Operations](ad-fs/AD-FS-Operations.md)
 #### [AD FS Access Control Policies](ad-fs/operations/AD-FS-Client-Access-Policies.md)
 ##### [Access Control Policies in AD FS for Windows Server 2016](ad-fs/operations/Access-Control-Policies-in-AD-FS.md)
@@ -410,6 +411,7 @@
 #### [Create a Claims Provider Trust](ad-fs/operations/create-a-Claims-Provider-Trust.md) 
 #### [Create a Non-Claims Aware Relying Party Trust](ad-fs/operations/create-a-Non-Claims-Aware-Relying-Party-Trust.md)
 #### [Create a Relying Party Trust](ad-fs/operations/create-a-Relying-Party-Trust.md) 
+#### [Device Authentication Controls in AD FS](ad-fs/operations/device-authentication-controls-in-AD-FS.md)
 #### [Improved interoperability with SAML 2.0](ad-fs/operations/Improved-interoperability-with-SAML-2.0.md)
 #### [Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across company Applications](ad-fs/operations/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-company-Applications.md)
 #### [Manage Risk with additional Multi-Factor Authentication for Sensitive Applications](ad-fs/operations/Manage-Risk-with-additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
