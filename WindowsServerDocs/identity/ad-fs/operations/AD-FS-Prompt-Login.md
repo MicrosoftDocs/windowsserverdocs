@@ -16,11 +16,7 @@ The following document describes the native support for the prompt=login paramet
 
 ## What is prompt=login?  
 
-Some Office 365 applications (with modern authentication enabled) send the prompt=login parameter to Azure AD as part of each authentication request.  By default, Azure AD translates this into two parameters:
-    
- ```
-    <b>wauth</b>=urn:oasis:names:tc:SAML:1.0:am:password, and <b>wfresh</b>=0
- ```
+Some Office 365 applications (with modern authentication enabled) send the prompt=login parameter to Azure AD as part of each authentication request.  By default, Azure AD translates this into two parameters: <code><b>wauth</b>=urn:oasis:names:tc:SAML:1.0:am:password</code>, and <code><b>wfresh</b>=0</code>.
 
 This can cause problems with corporate intranet and multi-factor authentication scenarios in which an authentication type other than username and password is desired.  
 
