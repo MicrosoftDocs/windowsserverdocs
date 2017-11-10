@@ -1,25 +1,14 @@
 ---
 # required metadata
-
 title: [ARTICLE TITLE]
 description:
 author: [GITHUB USERNAME]
 ms.author: [MICROSOFT ALIAS]
-manager: [ALIAS]
 ms.date: [DATE]
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology:
-ms.assetid: [GET ONE FROM guidgenerator.com]
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-#ms.reviewer: [ALIAS]
-#ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.localizationpriority: [high/medium/low]
 ---
 
 # Metadata and Markdown Template
@@ -31,15 +20,13 @@ When creating a Markdown file, you should copy this template to a new file, fill
 
 ## Metadata 
 
-The full metadata block is above, divided into required fields and optional fields. Some key notes:
+The full metadata block is above. Some key notes:
 
 - You **must** have a space between the colon (:) and the value for a metadata element.
-- If an optional metadata element does not have a value, comment out the element with a # (do not leave it blank or use "na"); if you are adding a value to an element that was commented out, be sure to remove the #.
 - Colons in a value (for example, a title) break the metadata parser. In their place, use the HTML encoding for a colon of `&#58;` (for example, `"title: Azure Rights Management&#58; the basics | Azure RMS"`).
 - **title**: This title will appear in search engine results. 
-- **author**, **manager**, **reviewer**: The author field should contain the **GitHub username** of the author, not their alias.  The "manager" and "reviewer" fields, on the other hand, should contain aliases. ms.reviewer specifies the name of the PM associated with the article or service.
-- **ms.assetid**: This is the GUID of the article from CAPS. When creating a new Markdown file, get a GUID from [https://www.guidgenerator.com](https://www.guidgenerator.com). 
-- **ms.prod**, **ms.service**, **ms.technology**, **ms.devlang**, **ms.topic**, **ms.tgt_pltfrm**: Possible values for these elements can be found [here](https://microsoft.sharepoint.com/teams/STBCSI/Insights/_layouts/15/WopiFrame.aspx?sourcedoc=%7b7A321BF1-0611-4184-84DA-A0E964C435FA%7d&file=WEDCS_MasterList_CSIValues.xlsx&action=default).
+- **author**: The author field should contain the **GitHub username** of the author, not their alias.
+- **ms.prod**, **ms.technology**: Use "windows-server-threshold" for ms.prod (or w10 if you're using this template to create content for Windows 10). Talk to your CX contact to get the ms.technology value.
 
 ## Basic Markdown, GFM, and special characters
 
