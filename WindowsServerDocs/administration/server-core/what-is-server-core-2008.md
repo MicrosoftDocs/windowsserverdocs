@@ -2,7 +2,7 @@
 title: What is Server Core 2008?
 description: Learn about the Server Core installation option in Windows Server 2008
 ms.prod: windows-server-threshold
-author: helohr
+ms.author: helohr
 ms.date: 11/01/2017
 ms.topic: article
 author: Heidilohr
