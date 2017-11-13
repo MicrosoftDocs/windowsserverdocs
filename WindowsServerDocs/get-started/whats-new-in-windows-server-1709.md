@@ -66,6 +66,7 @@ For more information about containers, see [Container Networking Overview](https
 
 **Container storage – persistent data volumes with SMB global mapping**. In Windows Server, version 1709 we’ve added support for mapping an SMB file share to a drive letter inside a container – this is called SMB global mapping. This mapped drive is then accessible to all users on the local server so that container I/O on the data volume can go through the mounted drive to the underlying file share. For more info, see [Container Storage Support with Cluster Shared Volumes (CSV), Storage Spaces Direct (S2D), SMB Global Mapping](https://blogs.msdn.microsoft.com/clustering/2017/08/10/container-storage-support-with-cluster-shared-volumes-csv-storage-spaces-direct-s2d-smb-global-mapping/).
 
+**Virtual machine configuration file format (updated)**. An additional file (.vmgs) has been added for virtual machines with a configuration version of 8.2 and higher. VMGS stands for VM guest state and is a new internal file which includes device state that was previously part of the VM runtime state file.
 
 ## Security and Assurance
 
