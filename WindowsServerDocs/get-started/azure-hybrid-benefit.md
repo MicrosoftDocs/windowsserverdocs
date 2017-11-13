@@ -53,7 +53,7 @@ Example configurations for several licensing positions:
  
 If you want to learn more about the Azure Hybrid Benefit for Windows Server, please go to the Azure Hybrid Benefit website.
 
-## How to Maintain Compliance
+## How to maintain compliance
 
 Customers seeking to apply the Azure Hybrid Benefit to their Windows Server VMs need to verify the number of eligible licenses and respective coverage period of their SA/Subscription before any activation of this benefit and apply the guidelines above to deploy the correct number of VMs with the benefit. 
 If you already have VMs running with the Azure Hybrid Benefit, you will need to perform an inventory of how many units you are running, and check against the active SA licenses you have.  Please contact your Microsoft Enterprise Agreement licensing specialist to validate your SA licensing position.
