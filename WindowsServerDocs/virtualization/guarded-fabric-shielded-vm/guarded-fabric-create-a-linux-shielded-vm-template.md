@@ -120,7 +120,7 @@ These steps will walk you through the bare minimum requirements to get a Linux V
 13. If you are planning to use System Center Virtual Machine Manager to deploy your VMs, install the VMM guest agent to enable VMM to specialize your OS during VM provisioning.
     Specialization allows each VM to be set up securely with different users and SSH keys, networking configurations, and custom setup steps.
     Learn how to [obtain and install the VMM guest agent](https://docs.microsoft.com/en-us/system-center/vmm/vm-linux#install-the-vmm-guest-agent) in the VMM documentation.
-ls
+
 14. Next, [add the Microsoft Linux Software Repository to your package manager](../../administration/linux-package-repository-for-microsoft-software.md).
 
 15. Using your package manager, install the lsvmtools package which contains the Linux shielded VM bootloader shim, provisioning components, and disk preparation tool.
@@ -145,6 +145,13 @@ ls
     ```
 
 15. Shut down your VM.
+
+16. If you took any checkpoints of your VM (including automatic checkpoints created by Hyper-V with the Windows 10 Fall Creators Update), be sure to delete them before continuing.
+    Checkpoints create differencing disks (.avhdx) that are not supported by the Template Disk Wizard.
+    
+    To delete checkpoints, open **Hyper-V Manager**, select your VM,  right click the topmost checkpoint in the Checkpoints pane, then click **Delete Checkpoint Subtree**.
+
+    ![Delete all checkpoints for your template VM in Hyper-V manager](../media/Guarded-Fabric-Shielded-VM/delete-checkpoints-lsvm-template.png)
 
 ## Protect the template disk
 
