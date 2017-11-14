@@ -21,9 +21,7 @@ The Windows Server release model is offering a new option in order to align with
 
 Check out this Microsoft Mechanics video for an overview of the updated release model, particularly the Semi-Annual Channel.
 
-<iframe src="https://www.youtube.com/embed/qSAsiM01GOU" width="640" height="360" allowfullscreen></iframe>
-
-
+> [!VIDEO https://www.youtube.com/embed/qSAsiM01GOU]
 
 ## Long-Term Servicing Channel (LTSC)
 This is the release model you’re already familiar with (formerly called the “Long-Term Servicing *Branch*”) where a new major version of Windows Server is released every 2-3 years. Users are entitled to 5 years of mainstream support and 5 years of extended support. This channel is appropriate for systems that require a longer servicing option and functional stability. Deployments of Windows Server 2016 and earlier versions of Windows Server will not be affected by the new Semi-Annual Channel releases. The Long-Term Servicing Channel will continue to receive security and non-security updates, but it will not receive the new features and functionality.
@@ -87,7 +85,7 @@ Pre-release builds of Windows Server will be available for download via the Wind
 1. Register at [Windows Insider Program for Business](https://insider.windows.com/ForBusiness). 
 2. Choose one or more servers for preview testing. 
 3. Download builds from the [Windows Server Insider Preview](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewserver) page. See the [Windows Server blog](https://blogs.technet.microsoft.com/windowsserver/ ) for an announcement when the preview is available.
-4. Bookmark the Docker Hub or other external sites where some code and docs will be published. See [Windows Containers Documentation](http://aka.ms/containers/insiders).
+4. Bookmark the Docker Hub or other external sites where some code and docs will be published. See [Windows Containers Documentation](https://aka.ms/containers/insiders).
 5. Send us your feedback via the Windows 10 Feedback Hub application.
 6. Join the [Windows Server Tech Community](https://techcommunity.microsoft.com/t5/Windows-Server/ct-p/Windows-Server) to collaborate, share and learn from experts. 
 
