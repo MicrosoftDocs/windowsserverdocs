@@ -56,7 +56,7 @@ These steps will walk you through the bare minimum requirements to get a Linux V
 2.  Download the ISO image from a trustworthy source and store it on your virtualization server, or on a file share accessible to your virtualization server.
 
 3.  On your management computer running Windows 10 or Windows Server 2016, install the Hyper-V Remote Server Administration Tools to remotely manage your virtualization server.
-    On Windows 10, download and install the [Remote Server Administration Tools package](https://www.giganews.com/support/vyprvpn/vpn-setup/windows-10/l2tp.html).
+    On Windows 10, download and install the [Remote Server Administration Tools package](https://www.microsoft.com/download/details.aspx?id=45520).
     On Windows Server 2016, run the following command:
 
     ```powershell
