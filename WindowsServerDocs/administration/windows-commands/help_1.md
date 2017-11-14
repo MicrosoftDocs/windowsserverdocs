@@ -12,11 +12,11 @@ ms.assetid: 75dbf94f-d79c-45b2-9463-c06648218f4a
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # help_1
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Displays a list of the available commands or detailed help information on a specified command.  
   

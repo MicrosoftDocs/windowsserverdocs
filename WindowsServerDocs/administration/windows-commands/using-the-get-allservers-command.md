@@ -12,12 +12,12 @@ ms.assetid: fe2e3c69-8f2e-457d-af55-d249ebf70f53
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # Using the get-AllServers Command
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Retrieves information about all Windows Deployment Services servers.
 

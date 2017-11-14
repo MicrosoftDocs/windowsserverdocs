@@ -10,6 +10,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 author: jaimeo
 ms.author: jaimeo
+ms.localizationpriority: low
 ---
 # Updating Nano Server
 
@@ -24,8 +25,8 @@ Nano Server offers a variety of methods for staying up to date. Compared to othe
 > If you install an optional Nano Server package from media or online repository, it won't have recent security fixes included. To avoid a version mismatch between the optional packages and base operating system, you should install the latest cumulative update immediately after installing any optional packages and **before** restarting the server.
 
 In the case of the Cumulative Update for Windows Server 2016: September 26, 2016 ([KB3192366](https://support.microsoft.com/en-us/kb/3192366)), you should first install the latest Servicing Stack Update for Windows 10 Version 1607: August 23, 2016 as a prerequisite ([KB3176936](https://support.microsoft.com/en-us/kb/3176936)). For most of the options below, you need the .msu files containing the .cab update packages. Visit the Microsoft Update Catalog to download each of these update packages:
-- [http://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB3192366](http://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB3192366)
-- [http://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB3176936](http://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB3176936)
+- [https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB3192366](https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB3192366)
+- [https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB3176936](https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB3176936)
 
 After downloading the .msu files from the Microsoft Update Catalog, save them to a network share or local directory such as C:\ServicingPackages. You can rename the .msu files based on their KB number as we've done below to make them easier to identify. Then use the EXPAND utility to extract the .cab files from the .msu files into separate directories and copy the .cabs into a single folder.
 

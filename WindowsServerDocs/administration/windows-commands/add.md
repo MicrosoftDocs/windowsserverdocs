@@ -12,12 +12,12 @@ ms.assetid: 6ac1f002-9702-4b55-8e4e-2098f3bb4fa9
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # add
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Mirrors the simple volume with focus to the specified disk.
 

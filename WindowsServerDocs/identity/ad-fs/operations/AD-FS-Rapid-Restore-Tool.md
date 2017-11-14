@@ -37,7 +37,7 @@ The tool backs up the following AD FS configuration
 - A list of the custom authentication providers, attribute stores, and local claims provider trusts that are installed.
 
 ## How to use the tool
-First, [download](http://go.microsoft.com/fwlink/?LinkId=825646) and install the MSI to your AD FS server.  
+First, [download](https://go.microsoft.com/fwlink/?LinkId=825646) and install the MSI to your AD FS server.  
 
 Run the following command from a PowerShell prompt:
 

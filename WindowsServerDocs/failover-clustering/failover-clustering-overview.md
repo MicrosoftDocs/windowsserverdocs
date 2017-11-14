@@ -8,8 +8,10 @@ author: JasonGerend
 ms.author: jgerend  
 ms.technology: storage-failover-clustering
 ms.date: 10/11/2016
+ms.localizationpriority: high
 ---
-# Failover Clustering in Windows Server 2016
+# Failover Clustering in Windows Server
+
 > Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 <img src="../media/landing-icons/cluster.png" style='float:left; padding:.5em;' alt="Icon indicating a group of computers"> Failover clustering - a Windows Server feature that enables you to group multiple servers together into a fault-tolerant cluster - provides new and improved features for software-defined datacenter customers and many other workloads running clusters on physical hardware or in virtual machines.
@@ -56,7 +58,7 @@ Enables easier configuration of multiple network adapters in a cluster.
 
 ## Deployment
 
-* [Installing the Failover Clustering Feature and Tools](http://go.microsoft.com/fwlink/p/?LinkId=253342)
+* [Installing the Failover Clustering Feature and Tools](https://go.microsoft.com/fwlink/p/?LinkId=253342)
 * [Validate Hardware for a Failover Cluster](https://technet.microsoft.com/library/jj134244.aspx)
 * [Prestage Cluster Computer Objects in Active Directory Domain Services](https://technet.microsoft.com/library/dn466519.aspx)
 * [Creating a Failover Cluster](http://blogs.msdn.com/b/clustering/archive/2012/05/01/10299698.aspx)
@@ -64,7 +66,7 @@ Enables easier configuration of multiple network adapters in a cluster.
 * [Deploy a Scale-Out File Server](https://technet.microsoft.com/library/hh831359)
 * [iSCSI Target Block Storage, How To](https://technet.microsoft.com/library/hh848268)
 * [Deploy an Active Directory Detached Cluster](https://technet.microsoft.com/library/jj556313.aspx)
-* [Using Guest Clustering for High Availability](https://technet.microsoft.com/library/jj863389.aspx)
+* [Using Guest Clustering for High Availability](https://technet.microsoft.com/library/dn440540.aspx)
 * [Deploy a Guest Cluster using a Shared Virtual Hard Disk](https://technet.microsoft.com/library/dn265980.aspx)
 * [Building Your Cloud Infrastructure: Scenario Overview](https://technet.microsoft.com/library/hh831441.aspx)
 
@@ -72,14 +74,15 @@ Enables easier configuration of multiple network adapters in a cluster.
 * [Configure and Manage the Quorum in a Failover Cluster](https://technet.microsoft.com/library/jj612870.aspx)
 * [Use Cluster Shared Volumes in a Failover Cluster](https://technet.microsoft.com/library/jj612868.aspx)
 * [Cluster-Aware Updating Overview](https://technet.microsoft.com/library/hh831694.aspx)
+* [Windows IT Pro Support](https://www.microsoft.com/itpro/windows/support)
 
 ## Tools and settings
 
-* [Failover Clustering PowerShell Cmdlets](http://go.microsoft.com/fwlink/p/?LinkId=233200)
+* [Failover Clustering PowerShell Cmdlets](https://go.microsoft.com/fwlink/p/?LinkId=233200)
 * [Cluster Aware Updating PowerShell Cmdlets](https://technet.microsoft.com/library/hh847221.aspx)
 
 ## Community resources
 
-* [High Availability (Clustering) Forum](http://go.microsoft.com/fwlink/p/?LinkId=230641)
+* [High Availability (Clustering) Forum](https://go.microsoft.com/fwlink/p/?LinkId=230641)
 * [Failover Clustering and Network Load Balancing Team Blog](http://blogs.msdn.com/b/clustering/)
 

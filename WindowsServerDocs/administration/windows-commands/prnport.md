@@ -12,11 +12,11 @@ ms.assetid: 6a0ec638-a21e-4a34-be5c-bd0f7ca89ffe
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # prnport
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 creates, deletes, and lists standard TCP/IP printer ports, in addition to displaying and changing port configuration.
 
@@ -43,7 +43,7 @@ cscript prnport {-a | -d | -l | -g | -t | -?} [-r <PortName>]
 |-q <QueueName>|Specifies the queue name for a TCP raw port.|
 |-n <PortNumber>|Specifies the port number for a TCP raw port. The default port number is 9100.|
 |-m{e &#124; d}|Specifies whether SNMP is enabled. The parameter **e** enables SNMP. The parameter **d** disables SNMP.|
-|-i <SNMPIndex|Specifies the SNMP index, if SNMP is enabled. For more information, see Rfc 1759 at the Rfc editor Web site (http://go.microsoft.com/fwlink/?LinkId=569).|
+|-i <SNMPIndex|Specifies the SNMP index, if SNMP is enabled. For more information, see Rfc 1759 at the Rfc editor Web site (https://go.microsoft.com/fwlink/?LinkId=569).|
 |-y <CommunityName>|Specifies the SNMP community name, if SNMP is enabled.|
 |-2{e &#124; -d}|Specifies whether double spools (also known as respooling) are enabled for TCP lpr ports. Double spools are necessary because TCP lpr must include an accurate byte count in the control file that is sent to the printer, but the protocol cannot get the count from the local print provider. Therefore, when a file is spooled to a TCP lpr print queue, it is also spooled as a temporary file in the system32 directory. TCP lpr determines the size of the temporary file and sends the size to the server running LPD. The parameter **e** enables double spools. The parameter **d** disables double spools.|
 |/?|Displays help at the command prompt.|

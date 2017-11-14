@@ -12,11 +12,11 @@ ms.assetid: 758335e1-fd8d-448c-a654-993126239dd9
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # ftp
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Transfers files to and from a computer running a File Transfer Protocol (ftp) server service. **ftp** can be used interactively or in batch mode by processing ASCII text files. 
 ## Syntax

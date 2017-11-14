@@ -12,11 +12,11 @@ ms.assetid: 4b61926a-dc60-4b4c-96d3-64e5c91c18ba vhorne
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # ftp: open_1
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Connects to the specified ftp server.   
 ## Syntax  

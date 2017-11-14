@@ -12,11 +12,11 @@ ms.assetid: 5793d7ad-827e-4285-b2c6-ae60eeb0e886
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # Set id
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 The Diskpart Set ID command changes the partition type field for the partition with focus.  
   

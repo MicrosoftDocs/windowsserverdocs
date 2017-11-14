@@ -8,6 +8,7 @@ ms.topic: article
 author: kumudd
 ms.date: 12/7/2016
 ms.assetid: 7266d237-4d46-4a37-8165-d68df509e215
+ms.localizationpriority: low
 ---
 # Software Storage Bus Overview
 > Applies To: Windows Server 2016

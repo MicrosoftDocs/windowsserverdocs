@@ -10,7 +10,7 @@ ms.topic:
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 09/21/2017
+ms.date: 10/16/2017
 ---
 # Configure Microsoft Hyper-V Server for management by Project Honolulu
 

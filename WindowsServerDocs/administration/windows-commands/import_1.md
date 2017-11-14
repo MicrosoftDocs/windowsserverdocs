@@ -12,12 +12,12 @@ ms.assetid: 4b9d2751-7637-4738-83b0-8c578eb28f27
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # import_1
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Imports a foreign disk group into the disk group of the local computer.
 

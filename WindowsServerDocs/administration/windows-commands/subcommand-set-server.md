@@ -12,11 +12,11 @@ ms.assetid: da55c29d-a94a-4d73-877b-af480f906ca0
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # Subcommand: set-Server
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Configures the settings for a Windows Deployment Services server.
 ## Syntax

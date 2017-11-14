@@ -13,6 +13,7 @@ ms.assetid: 2827f332-44d4-4785-8b13-98429087dcc7
 author: jaimeo
 ms.author: jaimeo
 manager: dongill
+ms.localizationpriority: high
 ---
 # What's New in Windows Server 2016
 
@@ -34,7 +35,7 @@ Physical and virtual machines benefit from greater time accuracy due to improvem
 ### Hyper-V  
 -   [What's new in Hyper-V on Windows Server 2016](../virtualization/hyper-v/What-s-new-in-Hyper-V-on-Windows.md). This topic explains the new and changed functionality of the Hyper-V role in Windows Server 2016, Client Hyper-V running on Windows 10, and Microsoft Hyper-V Server 2016.  
 
--   [Windows Containers](https://msdn.microsoft.com/virtualization/windowscontainers/containers_welcome):  Windows Server 2016 container support adds performance improvements, simplified network management, and support for Windows containers on Windows 10. For some additional information on containers, see [Containers: Docker, Windows and Trends](http://azure.microsoft.com/blog/2015/08/17/containers-docker-windows-and-trends/).  
+-   [Windows Containers](https://msdn.microsoft.com/virtualization/windowscontainers/containers_welcome):  Windows Server 2016 container support adds performance improvements, simplified network management, and support for Windows containers on Windows 10. For some additional information on containers, see [Containers: Docker, Windows and Trends](https://azure.microsoft.com/blog/2015/08/17/containers-docker-windows-and-trends/).  
 
 ### Nano Server  
 What's New in [Nano Server](getting-started-with-nano-server.md). Nano Server now has an updated module for building Nano Server images, including more separation of physical host and guest virtual machine functionality as well as support for different Windows Server editions.   
@@ -203,4 +204,4 @@ Three new features are added in Microsoft Windows 10 and Windows Server 2016:
 ## See Also  
 -   [Release Notes: Important Issues in Windows Server 2016](Windows-Server-2016-GA-Release-Notes.md)  
 
-Not finding content you need? Windows 10 users, tell us what you want on [Feedback Hub](feedback-hub:?tabid=2&contextid=898). 
+Not finding content you need? Windows 10 users, tell us what you want on [Feedback Hub](feedback-hub://?referrer=techDocsUcPage&tabid=2&contextid=898&newFeedback=true&topic=whats-new-in-windows-server-2016.md). 

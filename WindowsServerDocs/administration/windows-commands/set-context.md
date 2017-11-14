@@ -12,12 +12,12 @@ ms.assetid: fc16c7dd-e8f0-4c2a-8742-0bddb2848bfd
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # Set contex
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Sets the context for shadow copy creation. If used without parameters, **set context** displays help at the command prompt.
 

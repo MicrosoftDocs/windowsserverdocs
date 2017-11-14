@@ -12,11 +12,11 @@ ms.assetid: a1b2d459-1ece-49d4-997c-9d206c463b61
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # Subcommand: start-MulticastTransmission
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 starts a Scheduled-Cast transmission of an image.
 ## Syntax

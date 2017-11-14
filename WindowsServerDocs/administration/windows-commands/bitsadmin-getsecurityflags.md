@@ -12,11 +12,11 @@ ms.assetid: c2e73519-34f4-487b-af11-97d5d08ef9bb
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 #bitsadmin getsecurityflags
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Reports the HTTP security flags for URL redirection and checks performed on the server certificate during the transfer.
 

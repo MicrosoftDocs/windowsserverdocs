@@ -16,7 +16,7 @@ manager: dongill
 ---
 # Remote Desktop Services - Multi-Factor Authentication
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 Leverage the power of Active Directory with Multi-Factor Authentication to enforce high security protection of your business resources.
 

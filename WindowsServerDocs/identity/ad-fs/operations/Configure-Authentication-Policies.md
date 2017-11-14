@@ -34,7 +34,7 @@ For more information about MFA and multi\-factor access control in Active Direc
 -   [Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](../../ad-fs/operations/Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
 
 ## Configure authentication policies via the AD FS Management snap\-in  
-Membership in **Administrators**, or equivalent, on the local computer is the minimum requirement to complete these procedures.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](http://go.microsoft.com/fwlink/?LinkId=83477).   
+Membership in **Administrators**, or equivalent, on the local computer is the minimum requirement to complete these procedures.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](https://go.microsoft.com/fwlink/?LinkId=83477).   
   
 In AD FS, in Windows Server 2012 R2, you can specify an authentication policy at a global scope that is applicable to all applications and services that are secured by AD FS. You can also set authentication policies for specific applications and services that rely on party trusts and are secured by AD FS. Specifying an authentication policy for a particular application per relying party trust does not override the global authentication policy. If either global or per relying party trust authentication policy requires MFA, MFA is triggered when the user tries to authenticate to this relying party trust. The global authentication policy is a fallback for relying party trusts for applications and services that do not have a specific configured authentication policy. 
 
@@ -102,7 +102,7 @@ In AD FS, in Windows Server 2012 R2, you can specify an authentication policy at
 ## Configure authentication policies via Windows PowerShell  
 Windows PowerShell enables greater flexibility in using various factors of access control and the authentication mechanism that are available in AD FS in  Windows Server 2012 R2  to configure authentication policies and authorization rules that are necessary to implement true conditional access for your AD FS \-secured resources.  
   
-Membership in Administrators, or equivalent, on the local computer is the minimum requirement to complete these procedures.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](http://go.microsoft.com/fwlink/?LinkId=83477) \(http:\/\/go.microsoft.com\/fwlink\/?LinkId\=83477\).   
+Membership in Administrators, or equivalent, on the local computer is the minimum requirement to complete these procedures.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](https://go.microsoft.com/fwlink/?LinkId=83477) \(http:\/\/go.microsoft.com\/fwlink\/?LinkId\=83477\).   
   
 ### To configure an additional authentication method via Windows PowerShell  
   
@@ -129,7 +129,7 @@ Membership in Administrators, or equivalent, on the local computer is the minimu
 2.  In the same Windows PowerShell command window, run the following command.  
   
  
-    $MfaClaimRule = “c:[Type == ‘“http://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid’”, Value =~ ‘“^(?i) <group_SID>$’”] => issue(Type = ‘“http://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod’”, Value ‘“http://schemas.microsoft.com/claims/multipleauthn’”);” 
+    $MfaClaimRule = “c:[Type == ‘“https://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid’”, Value =~ ‘“^(?i) <group_SID>$’”] => issue(Type = ‘“https://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod’”, Value ‘“https://schemas.microsoft.com/claims/multipleauthn’”);” 
     
     Set-AdfsRelyingPartyTrust –TargetRelyingParty $rp –AdditionalAuthenticationRules $MfaClaimRule
   
@@ -142,8 +142,8 @@ Membership in Administrators, or equivalent, on the local computer is the minimu
 1.  On your federation server, open the Windows PowerShell command window and run the following command.  
   
 
-    $MfaClaimRule = “c:[Type == ‘" http://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid’", Value == ‘"group_SID’"]  
-     => issue(Type = ‘"http://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod’", Value = ‘"http://schemas.microsoft.com/claims/multipleauthn’");”  
+    $MfaClaimRule = “c:[Type == ‘" https://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid’", Value == ‘"group_SID’"]  
+     => issue(Type = ‘"https://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod’", Value = ‘"https://schemas.microsoft.com/claims/multipleauthn’");”  
       
     Set-AdfsAdditionalAuthenticationRule $MfaClaimRule  
 
@@ -156,8 +156,8 @@ Membership in Administrators, or equivalent, on the local computer is the minimu
 1.  On your federation server, open the Windows PowerShell command window and run the following command.  
   
  
-    $MfaClaimRule = “c:[Type == ‘" http://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork’", Value == ‘"true_or_false’"]  
-     => issue(Type = ‘"http://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod’", Value = ‘"http://schemas.microsoft.com/claims/multipleauthn’");”  
+    $MfaClaimRule = “c:[Type == ‘" https://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork’", Value == ‘"true_or_false’"]  
+     => issue(Type = ‘"https://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod’", Value = ‘"https://schemas.microsoft.com/claims/multipleauthn’");”  
   
     Set-AdfsAdditionalAuthenticationRule $MfaClaimRule  
   
@@ -171,8 +171,8 @@ Membership in Administrators, or equivalent, on the local computer is the minimu
 1.  On your federation server, open the Windows PowerShell command window and run the following command.  
   
 
-    $MfaClaimRule = "c:[Type == ‘" http://schemas.microsoft.com/2012/01/devicecontext/claims/isregistereduser’", Value == ‘"true_or_false"']  
-     => issue(Type = ‘"http://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod’", Value = ‘"http://schemas.microsoft.com/claims/multipleauthn’");"  
+    $MfaClaimRule = "c:[Type == ‘" https://schemas.microsoft.com/2012/01/devicecontext/claims/isregistereduser’", Value == ‘"true_or_false"']  
+     => issue(Type = ‘"https://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod’", Value = ‘"https://schemas.microsoft.com/claims/multipleauthn’");"  
   
     Set-AdfsAdditionalAuthenticationRule $MfaClaimRule  
 
@@ -185,7 +185,7 @@ Membership in Administrators, or equivalent, on the local computer is the minimu
 1.  On your federation server, open the Windows PowerShell command window and run the following command.  
   
  
-    `Set-AdfsAdditionalAuthenticationRule "c:[Type == '"http://schemas.microsoft.com/2012/01/devicecontext/claims/isregistereduser'", Value == '"true_or_false'"] && c2:[Type == '"http://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork'", Value == '" true_or_false '"] => issue(Type = '"http://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod'", Value ='"http://schemas.microsoft.com/claims/multipleauthn'");" ` 
+    `Set-AdfsAdditionalAuthenticationRule "c:[Type == '"https://schemas.microsoft.com/2012/01/devicecontext/claims/isregistereduser'", Value == '"true_or_false'"] && c2:[Type == '"https://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork'", Value == '" true_or_false '"] => issue(Type = '"https://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod'", Value ='"https://schemas.microsoft.com/claims/multipleauthn'");" ` 
  
   
 > [!NOTE]  
@@ -196,7 +196,7 @@ Membership in Administrators, or equivalent, on the local computer is the minimu
 1.  On your federation server, open the Windows PowerShell command window and run the following command.  
   
 
-    Set-AdfsAdditionalAuthenticationRule "c:[Type == `"http://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid`", Value == `"group_SID`"] && c2:[Type == `"http://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork`", Value== `"true_or_false`"] => issue(Type = `"http://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod`", Value =`"http://schemas.microsoft.com/claims/
+    Set-AdfsAdditionalAuthenticationRule "c:[Type == `"https://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid`", Value == `"group_SID`"] && c2:[Type == `"https://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork`", Value== `"true_or_false`"] => issue(Type = `"https://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod`", Value =`"https://schemas.microsoft.com/claims/
       
 > [!NOTE]  
 > Ensure to replace *<group\_SID>* with the value of the group SID and *<true\_or\_false>* with either `true` or `false`, which depends on your specific rule condition that is based on whether the access request comes from the extranet or intranet.  
@@ -217,7 +217,7 @@ Membership in Administrators, or equivalent, on the local computer is the minimu
   
     ```  
   
-      $GroupAuthzRule = "@RuleTemplate = `“Authorization`” @RuleName = `"Foo`" c:[Type == `"http://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid`", Value =~ `"^(?i)<group_SID>$`"] =>issue(Type = `"http://schemas.microsoft.com/authorization/claims/deny`", Value = `"DenyUsersWithClaim`");"  
+      $GroupAuthzRule = "@RuleTemplate = `“Authorization`” @RuleName = `"Foo`" c:[Type == `"https://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid`", Value =~ `"^(?i)<group_SID>$`"] =>issue(Type = `"https://schemas.microsoft.com/authorization/claims/deny`", Value = `"DenyUsersWithClaim`");"  
     Set-AdfsRelyingPartyTrust –TargetRelyingParty $rp –IssuanceAuthorizationRules $GroupAuthzRule  
     ```  
   
@@ -240,7 +240,7 @@ Membership in Administrators, or equivalent, on the local computer is the minimu
     ```  
     $GroupAuthzRule = "@RuleTemplate = `"Authorization`"  
     @RuleName = `"PermitAccessWithMFA`"  
-    c:[Type == `"http://schemas.microsoft.com/claims/authnmethodsreferences`", Value =~ `"^(?i)http://schemas\.microsoft\.com/claims/multipleauthn$`"] => issue(Type = `"http://schemas.microsoft.com/authorization/claims/permit`", Value = ‘“PermitUsersWithClaim’");"  
+    c:[Type == `"https://schemas.microsoft.com/claims/authnmethodsreferences`", Value =~ `"^(?i)https://schemas\.microsoft\.com/claims/multipleauthn$`"] => issue(Type = `"https://schemas.microsoft.com/authorization/claims/permit`", Value = ‘“PermitUsersWithClaim’");"  
   
     ```  
   
@@ -261,7 +261,7 @@ Membership in Administrators, or equivalent, on the local computer is the minimu
 
     $GroupAuthzRule = "@RuleTemplate = `"Authorization`"  
     @RuleName = `"PermitAccessFromRegisteredWorkplaceJoinedDevice`"  
-    c:[Type == `"http://schemas.microsoft.com/2012/01/devicecontext/claims/isregistereduser`", Value =~ `"^(?i)true$`"] => issue(Type = `"http://schemas.microsoft.com/authorization/claims/permit`", Value = `"PermitUsersWithClaim`");  
+    c:[Type == `"https://schemas.microsoft.com/2012/01/devicecontext/claims/isregistereduser`", Value =~ `"^(?i)true$`"] => issue(Type = `"https://schemas.microsoft.com/authorization/claims/permit`", Value = `"PermitUsersWithClaim`");  
   
 
   
@@ -281,8 +281,8 @@ Membership in Administrators, or equivalent, on the local computer is the minimu
     ```  
     $GroupAuthzRule = ‘@RuleTemplate = “Authorization”  
     @RuleName = “RequireMFAOnRegisteredWorkplaceJoinedDevice”  
-    c1:[Type == `"http://schemas.microsoft.com/claims/authnmethodsreferences`", Value =~ `"^(?i)http://schemas\.microsoft\.com/claims/multipleauthn$`"] &&  
-    c2:[Type == `"http://schemas.microsoft.com/2012/01/devicecontext/claims/isregistereduser`", Value =~ `"^(?i)true$”] => issue(Type = "http://schemas.microsoft.com/authorization/claims/permit`", Value = `"PermitUsersWithClaim`");"  
+    c1:[Type == `"https://schemas.microsoft.com/claims/authnmethodsreferences`", Value =~ `"^(?i)http://schemas\.microsoft\.com/claims/multipleauthn$`"] &&  
+    c2:[Type == `"https://schemas.microsoft.com/2012/01/devicecontext/claims/isregistereduser`", Value =~ `"^(?i)true$”] => issue(Type = "https://schemas.microsoft.com/authorization/claims/permit`", Value = `"PermitUsersWithClaim`");"  
   
     ```  
   
@@ -302,8 +302,8 @@ Membership in Administrators, or equivalent, on the local computer is the minimu
 
     $GroupAuthzRule = "@RuleTemplate = `"Authorization`"  
     @RuleName = `"RequireMFAForExtranetAccess`"  
-    c1:[Type == `"http://schemas.microsoft.com/claims/authnmethodsreferences`", Value =~ `"^(?i)http://schemas\.microsoft\.com/claims/multipleauthn$`"] &&  
-    c2:[Type == `"http://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork`", Value =~ `"^(?i)false$`"] => issue(Type = `"http://schemas.microsoft.com/authorization/claims/permit`", Value = `"PermitUsersWithClaim`");"  
+    c1:[Type == `"https://schemas.microsoft.com/claims/authnmethodsreferences`", Value =~ `"^(?i)http://schemas\.microsoft\.com/claims/multipleauthn$`"] &&  
+    c2:[Type == `"https://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork`", Value =~ `"^(?i)false$`"] => issue(Type = `"https://schemas.microsoft.com/authorization/claims/permit`", Value = `"PermitUsersWithClaim`");"  
 
 ## Additional references  
 

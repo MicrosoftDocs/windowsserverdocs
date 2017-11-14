@@ -11,6 +11,7 @@ ms.topic: get-started-article
 ms.assetid: 9f109c91-7c2e-4065-856c-ce9e2e9ce558
 author: jaimeo
 ms.author: jaimeo
+ms.localizationpriority: low
 ---
 # Deploy Nano Server
 
@@ -25,7 +26,7 @@ This topic covers information you need to deploy Nano Server images that are mor
 
 The Nano Server Image Builder is a tool that helps you create a custom Nano Server image and bootable USB media with the aid of a graphical interface. Based on the inputs you provide, it generates reusable PowerShell scripts that allow you easily automate consistent installations of Nano Server running either Windows Server 2016 Datacenter or Standard editions.
 
-Obtain the tool from the [Download Center](http://www.microsoft.com/en-us/download/details.aspx?id=54065). 
+Obtain the tool from the [Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=54065). 
 
 The tool also requires [Windows Assessment and Deployment Kit (ADK)](https://developer.microsoft.com/en-us/windows/hardware/windows-assessment-deployment-kit).
 
@@ -601,7 +602,7 @@ Put this Unattend.xml file into the C:\NanoServer folder, and then use the follo
   
 **dism\dismmedia:.\mountdir /Apply-Unattend:.\unattend.xml**  
   
-Create a "Panther" folder (used by Windows systems for storing files during setup; see [Windows 7, Windows Server 2008 R2, and Windows Vista setup log file locations](http://support.microsoft.com/en-us/kb/927521) if you're curious), copy the Unattend.xml file to it, and then unmount the VHD with these commands:  
+Create a "Panther" folder (used by Windows systems for storing files during setup; see [Windows 7, Windows Server 2008 R2, and Windows Vista setup log file locations](https://support.microsoft.com/en-us/kb/927521) if you're curious), copy the Unattend.xml file to it, and then unmount the VHD with these commands:  
   
 **md .\mountdir\windows\panther**  
   
@@ -703,7 +704,7 @@ For instructions on how to install and use SSH on Nano Server with the OpenSSH p
   
 ```  
 <?xml version='1.0' encoding='utf-8'?>  
-<unattend xmlns="urn:schemas-microsoft-com:unattend" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
+<unattend xmlns="urn:schemas-microsoft-com:unattend" xmlns:wcm="https://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   
   <settings pass="offlineServicing">  
     <component name="Microsoft-Windows-UnattendedJoin" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">  

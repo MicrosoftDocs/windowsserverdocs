@@ -15,7 +15,7 @@ manager: dongill
 ---
 # Set up disaster recovery for RDS using Azure Site Recovery
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use Azure Site Recovery to create a disaster recovery solution for your Remote Desktop Services deployment. 
 
@@ -39,7 +39,7 @@ Before you can configure Azure Site Recovery for your deployment, make sure you 
 
 - Create an [on-premises RDS deployment](rds-deploy-infrastructure.md).
 - Add [Azure Site Recovery Services vault](/azure/site-recovery/site-recovery-vmm-to-azure#create-a-recovery-services-vault) to your Microsoft Azure subscription.
-- If you are going to use Azure as your recovery site, run the [Azure Virtual Machine Readiness Assessment tool](http://azure.microsoft.com/downloads/vm-readiness-assessment/) on your VMs to ensure they are compatible with Azure VMs and Azure Site Recovery Services.
+- If you are going to use Azure as your recovery site, run the [Azure Virtual Machine Readiness Assessment tool](https://azure.microsoft.com/downloads/vm-readiness-assessment/) on your VMs to ensure they are compatible with Azure VMs and Azure Site Recovery Services.
  
 ## Implementation checklist
 

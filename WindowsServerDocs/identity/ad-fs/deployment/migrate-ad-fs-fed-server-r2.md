@@ -134,7 +134,7 @@ Get-ADFSClaimDescription | Out-File “.\claimtypes.txt”`.
 1.  You must manually export all custom attribute stores that you want to keep in your new AD FS farm in Windows Server 2012 R2.  
   
 > [!NOTE]
->  In Windows Server 2012 R2, AD FS requires custom attribute stores that are based on .NET Framework 4.0 or above. Follow the instructions in [Microsoft .NET Framework 4.5](http://www.microsoft.com/download/details.aspx?id=30653) to install and setup .Net Framework 4.5.  
+>  In Windows Server 2012 R2, AD FS requires custom attribute stores that are based on .NET Framework 4.0 or above. Follow the instructions in [Microsoft .NET Framework 4.5](https://www.microsoft.com/download/details.aspx?id=30653) to install and setup .Net Framework 4.5.  
   
 You can find information about custom attribute stores in use by AD FS by running the following Windows PowerShell command: 
 

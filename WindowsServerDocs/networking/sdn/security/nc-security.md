@@ -129,8 +129,8 @@ For each of the authentication modes supported by Network Controller, the follow
 
 Communication between Network Controller nodes is encrypted using WCF Transport level encryption. This form of encryption is used when the authentication and authorization methods are either Kerberos or X509 certificates. For more information, see the following topics.
 
-- [How to: Secure a Service with Windows Credentials](http://msdn.microsoft.com/library/ms734673.aspx)
-- [How to: Secure a Service with X.509 Certificates](http://msdn.microsoft.com/library/ms788968.aspx).
+- [How to: Secure a Service with Windows Credentials](https://msdn.microsoft.com/library/ms734673.aspx)
+- [How to: Secure a Service with X.509 Certificates](https://msdn.microsoft.com/library/ms788968.aspx).
 
 ## Southbound Communication
 

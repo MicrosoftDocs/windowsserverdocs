@@ -11,6 +11,7 @@ ms.topic: get-started-article
 ms.assetid: 599d6438-a506-4d57-a0ea-1eb7ec19f46e
 author: jaimeo
 ms.author: jaimeo
+ms.localizationpriority: low
 ---
 # Manage Nano Server
 
@@ -116,7 +117,7 @@ If you want install a servicing packages, use the -ServicingPackagePath paramete
   
 Often, a servicing package or hotfix is downloaded as a KB item which contains a .cab file. Follow these steps to extract the .cab file, which you can then install with the -ServicingPackagePath parameter:  
   
-1.  Download the servicing package (from the associated Knowledge Base article or from [Microsoft Update Catalog](http://catalog.update.microsoft.com/v7/site/home.aspx). Save it to a local directory or network share, for example: C:\ServicingPackages  
+1.  Download the servicing package (from the associated Knowledge Base article or from [Microsoft Update Catalog](https://catalog.update.microsoft.com/v7/site/home.aspx). Save it to a local directory or network share, for example: C:\ServicingPackages  
 2.  Create a folder in which you will save the extracted servicing package.  Example: c:\KB3157663_expanded  
 3.  Open a Windows PowerShell console and use the `Expand` command specifying the path to the .msu file of the servicing package, including the `-f:*` parameter and the path where you want servicing package to be extracted to.  For example:  `Expand "C:\ServicingPackages\Windows10.0-KB3157663-x64.msu" -f:* "C:\KB3157663_expanded"`  
   

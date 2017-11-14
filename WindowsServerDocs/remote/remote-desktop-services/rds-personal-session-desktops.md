@@ -15,7 +15,7 @@ manager: dongill
 ---
 # Use personal session desktops with Remote Desktop Services
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can deploy server-based personal desktops in a cloud-computing environment by using personal session desktops.  (A cloud-computing environment has a separation between the fabric Hyper-V servers and the guest virtual machines, such as Microsoft Azure Cloud or the Microsoft Cloud Platform.) The personal session desktop capability extends the session-based desktop deployment scenario in Remote Desktop Services to create a new type of session collection where each user is assigned to their own personal session host with administrative rights. 
 
@@ -93,7 +93,7 @@ The **Export-RDPersonalPersonalDesktopAssignment** cmdlet exports the current as
 -Path \<string\>
 
 
-All new cmdlets support the common parameters: -Verbose, -Debug, -ErrorAction, -ErrorVariable, -OutBuffer, and -OutVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/p/?LinkID=113216).
+All new cmdlets support the common parameters: -Verbose, -Debug, -ErrorAction, -ErrorVariable, -OutBuffer, and -OutVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## Hardware accelerated graphics
 Windows Server 2016 extends the RemoteFX 3D Graphics adapter (vGPU) technology to support OpenGL and supports single-user Windows Server 2016 guest VMs. You can combine personal session desktops with the new vGPU capabilities to provide support for hosted applications that require accelerated graphics. Alternatively, you can combine personal session desktops with the new Discrete Device Assignment (DDA) capability to also provide support for hosted applications that require accelerated graphics.

@@ -12,12 +12,12 @@ ms.assetid: 46578835-d5ce-423b-be4d-62ddb9e1908d
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # bitsadmin cache and setlimit
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Sets the cache size limit.
 

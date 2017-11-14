@@ -18,7 +18,7 @@ ms.technology: identity-adfs
 It is recommended that you learn about the important concepts for Active Directory Federation Services and become familiar with its feature set.  
   
 > [!TIP]  
-> You can find additional AD FS resource links at the [AD FS Content Map](http://social.technet.microsoft.com/wiki/contents/articles/2735.aspx) page on the Microsoft TechNet Wiki. This page is managed by members of the AD FS Community and is monitored on a regular basis by the AD FS Product Team.  
+> You can find additional AD FS resource links at the [AD FS Content Map](https://social.technet.microsoft.com/wiki/contents/articles/2735.aspx) page on the Microsoft TechNet Wiki. This page is managed by members of the AD FS Community and is monitored on a regular basis by the AD FS Product Team.  
   
 ## AD FS terminology used in this guide  
   

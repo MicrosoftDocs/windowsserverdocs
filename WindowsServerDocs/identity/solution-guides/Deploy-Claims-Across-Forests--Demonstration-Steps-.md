@@ -172,9 +172,9 @@ Following is a list of additional common cases in claims transformation.
   
 ## <a name="BKMK_Links"></a>See also  
   
--   For a list of all Windows PowerShell cmdlets that are available for claims transformation, see [Active Directory PowerShell Cmdlet Reference](http://go.microsoft.com/fwlink/?LinkId=243150).  
+-   For a list of all Windows PowerShell cmdlets that are available for claims transformation, see [Active Directory PowerShell Cmdlet Reference](https://go.microsoft.com/fwlink/?LinkId=243150).  
   
--   For advanced tasks that involve export and import of DAC configuration information between two forests, use the [Dynamic Access Control PowerShell Reference](http://go.microsoft.com/fwlink/?LinkId=243150)  
+-   For advanced tasks that involve export and import of DAC configuration information between two forests, use the [Dynamic Access Control PowerShell Reference](https://go.microsoft.com/fwlink/?LinkId=243150)  
   
 -   [Deploy Claims Across Forests](Deploy-Claims-Across-Forests.md)  
   

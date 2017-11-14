@@ -12,11 +12,11 @@ ms.assetid: ddd5c395-451b-44a0-8e08-a05db26d2282
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # Setting up Update Synchronizations
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 During synchronization, a WSUS server downloads updates (update metadata and files) from an update source. It also downloads new product classifications and categories, if any. When your WSUS server synchronizes for the first time, it will download all of the updates that you specified when you configured synchronization options. After the first synchronization, your WSUS server downloads only updates from the update source, as well as revisions in metadata for existing updates, and expirations to updates.
 

@@ -10,7 +10,8 @@ author: cosmosdarwin
 ms.date: 09/16/2016
 ---
 # Fault domain awareness in Windows Server 2016
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+
+> Applies to: Windows Server 2016
 
 Failover Clustering enables multiple servers to work together to provide high availability – or put another way, to provide node fault tolerance. But today's businesses demand ever-greater availability from their infrastructure. To achieve cloud-like uptime, even highly unlikely occurrences such as chassis failures, rack outages, or natural disasters must be protected against. That's why Failover Clustering in Windows Server 2016 introduces chassis, rack, and site fault tolerance as well.
 

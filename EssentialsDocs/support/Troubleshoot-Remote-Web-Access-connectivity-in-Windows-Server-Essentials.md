@@ -27,7 +27,7 @@ manager: dongill
   
 -   The UPnP setting for your router is turned off.  
   
--   Your router may not fully support the UPnP standard. Microsoft maintains a list of routers that work with the Windows operating systems. To view the list of routers (including wireless routers) that are compatible with Windows Server Essentials, visit the [Windows Compatibility Center](http://www.microsoft.com/windows/compatibility/CompatCenter/Home).  
+-   Your router may not fully support the UPnP standard. Microsoft maintains a list of routers that work with the Windows operating systems. To view the list of routers (including wireless routers) that are compatible with Windows Server Essentials, visit the [Windows Compatibility Center](https://www.microsoft.com/windows/compatibility/CompatCenter/Home).  
   
 ## Possible fixes  
  The following actions may fix these issues:  
@@ -48,7 +48,7 @@ manager: dongill
   
          Before you manually configure the router to forward the required ports to Windows Server Essentials, you must set up a Dynamic Host Configuration Protocol (DHCP) reservation for your server that is running Windows Server Essentials on the router. This step guarantees that the IP address that you will be forwarding the ports to do not change.  
   
-         For information about how to manually set up a DHCP reservation for your server on your router, see the manufacturer „¢s documentation for your router.  
+         For information about how to manually set up a DHCP reservation for your server on your router, see the manufacturer ï¿½ï¿½s documentation for your router.  
   
     -   Configure port forwarding on your router for the following ports:  
   
@@ -57,7 +57,7 @@ manager: dongill
         |HTTP|TCP 80|  
         |HTTPS|TCP 443|  
   
-     For information about how to manually set up port forwarding on your router, see the manufacturer „¢s documentation.  
+     For information about how to manually set up port forwarding on your router, see the manufacturer ï¿½ï¿½s documentation.  
   
      A typical router configuration page includes a table that resembles the following.  
   

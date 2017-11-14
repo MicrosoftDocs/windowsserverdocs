@@ -12,11 +12,11 @@ ms.assetid: ee925b4d-85d2-47b1-b7d6-3832b7ec5505 vhorne
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # ftp: binary
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Sets the file transfer type to binary.   
 ## Syntax  

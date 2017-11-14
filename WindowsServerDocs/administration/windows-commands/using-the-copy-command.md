@@ -12,11 +12,11 @@ ms.assetid: 5228b72f-659f-4692-960b-0fae0d16cf2e
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # Using the copy Command
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Copies an image or a driver group.
 ## Subcommands

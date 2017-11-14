@@ -12,12 +12,12 @@ ms.assetid: ab2da47d-3aac-44a0-b7fd-bd9561d61553
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # bcdedit
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Boot Configuration Data (BCD) files provide a store that is used to describe boot applications and boot application settings. The objects and elements in the store effectively replace Boot.ini.
 
@@ -105,4 +105,4 @@ BCDEdit /Command [<Argument1>] [<Argument2>] ...
 
 ## Examples
 
-For examples of BCDEdit, see the [Windows Hardware Developer Center Web site](http://go.microsoft.com/fwlink/?LinkId=69448).
+For examples of BCDEdit, see the [Windows Hardware Developer Center Web site](https://go.microsoft.com/fwlink/?LinkId=69448).

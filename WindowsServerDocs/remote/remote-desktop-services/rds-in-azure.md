@@ -16,7 +16,7 @@ ms.date: 02/10/2017
 ---
 # Seamlessly deploy RDS with ARM and Azure Marketplace
 
->Applies To: Windows Server 2016, Windows Server 2012 R2
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2
 
 Remote Desktop Services (RDS) is the platform of choice to cost-effectively host Windows desktops and applications. You can use an [Azure Marketplace offering](#basic-rds-through-the-azure-marketplace) or a [quickstart template](#Customized-RDS-using-Quickstart-templates) to quickly create an RDS on Azure IaaS deployment. Azure marketplace creates a test domain for you, making it a simple and easy mechanism for testing and proof-of-concepts. The quickstart templates, on the other hand, allow you to use an existing domain, making them a great tool to build out a production environment. Once set up, you can connect to the published desktops and applications from various platforms and devices, using the Microsoft Remote Desktop apps for Windows, Mac, iOS, and Android.
 
@@ -54,7 +54,7 @@ Now that you have an RDS deployment, you can [add and manage users](rds-user-man
 
 ## Customized RDS using Quickstart templates
 
-You can use Azure Resource Manager templates to deploy RDS in Azure. This is especially useful if you want a basic RDS deployment but have existing components (like AD) that you want to use. Unlike the Marketplace offering, you can make further customizations, such as use an existing AD on a virtual network, use a custom OS image for the RDSH VMs, and layer on high availability for RDS components. After adding on high availability to each component, your environment will look like the [highly availabile RDS architecture](desktop-hosting-logical-architecture.md#highly-available-deployment).
+You can use Azure Resource Manager templates to deploy RDS in Azure. This is especially useful if you want a basic RDS deployment but have existing components (like AD) that you want to use. Unlike the Marketplace offering, you can make further customizations, such as using an existing AD on a virtual network, using a custom OS image for the RDSH VMs, and layering on high availability for RDS components. After adding on high availability to each component, your environment will look like the [highly availabile RDS architecture](desktop-hosting-logical-architecture.md#highly-available-deployment).
 
 Use these steps to create your small-footprint RDS deployment with an Azure RDS template: 
 

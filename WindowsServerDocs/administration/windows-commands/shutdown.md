@@ -13,12 +13,12 @@ ms.assetid: c432f5cf-c5aa-4665-83af-0ec52c87112e
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # shutdown
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Enables you to shut down or restart local or remote computers one at a time.
 
@@ -45,7 +45,7 @@ shutdown [/i | /l | /s | /r | /a | /p | /h | /e] [/f] [/m \\<ComputerName>] [/t 
 |/f|Forces running applications to close without warning users.</br>Caution: Using the **/f** option might result in loss of unsaved data.|
 |/m \\\\\<ComputerName>|Specifies the target computer. Cannot be used with the **/l** option.|
 |/t \<XXX>|Sets the time-out period or delay to *XXX* seconds before a restart or shutdown. This causes a warning to display on the local console. You can specify 0-600 seconds. If you do not use **/t**, the time-out period is 30 seconds by default.|
-|/d [p|u:]\<XX>:<YY>|Lists the reason for the system restart or shutdown. The following are the parameter values:</br>**p** Indicates that the restart or shutdown is planned.</br>**u** Indicates that the reason is user defined.</br>Note: If **p** or **u** are not specified, the restart or shutdown is unplanned.</br>*XX* Specifies the major reason number (positive integer less than 256).</br>*YY* Specifies the minor reason number (positive integer less than 65536).|
+|/d [p\|u:]\<XX>:\<YY>|Lists the reason for the system restart or shutdown. The following are the parameter values:</br>**p** Indicates that the restart or shutdown is planned.</br>**u** Indicates that the reason is user defined.</br>Note: If **p** or **u** are not specified, the restart or shutdown is unplanned.</br>*XX* Specifies the major reason number (positive integer less than 256).</br>*YY* Specifies the minor reason number (positive integer less than 65536).|
 |/c "\<Comment>"|Enables you to comment in detail about the reason for the shutdown. You must first provide a reason by using the **/d** option. You must enclose comments in quotation marks. You can use a maximum of 511 characters.|
 |/?|Displays help at the command prompt, including a list of the major and minor reasons that are defined on your local computer.|
 

@@ -75,7 +75,7 @@ Many network adapters provide options to optimize operating system-induced laten
 
 Following are some performance tuning suggestions for microsecond-sensitive networks.
 
-- Set the computer BIOS to **High Performance**, with C-states disabled. However, note that this is system and BIOS dependent, and some systems will provide higher performance if the operating system controls power management. You can check and adjust your power management settings from **Settings** or by using the **powercfg** command. For more information, see [Powercfg Command-Line Options](http://technet.microsoft.com/library/cc748940.aspx)
+- Set the computer BIOS to **High Performance**, with C-states disabled. However, note that this is system and BIOS dependent, and some systems will provide higher performance if the operating system controls power management. You can check and adjust your power management settings from **Settings** or by using the **powercfg** command. For more information, see [Powercfg Command-Line Options](https://technet.microsoft.com/library/cc748940.aspx)
 
 - Set the operating system power management profile to **High Performance System**. Note that this will not work properly if the system BIOS has been set to disable operating system control of power management.
 
@@ -139,7 +139,7 @@ All of these settings had the following registry location:
 The Windows Filtering Platform (WFP) that was introduced in Windows Vista and Windows Server 2008 provides APIs to non-Microsoft independent software vendors (ISVs) to create packet processing filters. Examples include firewall and antivirus software.
 
 >[!NOTE]
->A poorly written WFP filter can significantly decrease a server’s networking performance. For more information, see [Porting Packet-Processing Drivers and Apps to WFP](http://msdn.microsoft.com/windows/hardware/gg463267.aspx) in the Windows Dev Center.
+>A poorly written WFP filter can significantly decrease a server’s networking performance. For more information, see [Porting Packet-Processing Drivers and Apps to WFP](https://msdn.microsoft.com/windows/hardware/gg463267.aspx) in the Windows Dev Center.
 
 
 For links to all topics in this guide, see [Network Subsystem Performance Tuning](net-sub-performance-top.md).

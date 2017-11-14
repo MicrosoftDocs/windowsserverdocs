@@ -12,12 +12,12 @@ ms.assetid: b8f7192f-ea38-47d0-9d4e-58ef68336ae6
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # offline volume
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Takes the online volume with focus to the offline state.
 

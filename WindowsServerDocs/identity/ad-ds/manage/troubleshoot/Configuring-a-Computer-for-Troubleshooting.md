@@ -16,10 +16,10 @@ ms.technology: identity-adds
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 
-<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd">
+<developerConceptualDocument xmlns="https://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="https://www.w3.org/1999/xlink" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd">
   <introduction>
     <para>Before you use advanced troubleshooting techniques to identify and fix Active Directory problems, configure your computers for troubleshooting. You should also have a basic understanding of <token>nextref_longhorincludes> troubleshooting concepts, procedures, and tools. </para>
-    <para>For information about monitoring tools for Windows Server 2008, see the Step-by-Step Guide for Performance and Reliability Monitoring in Windows Server 2008 (<externalLink><linkText>http://go.microsoft.com/fwlink/?LinkId=123737</linkText><linkUri>http://go.microsoft.com/fwlink/?LinkId=123737</linkUri></externalLink>).</para>
+    <para>For information about monitoring tools for Windows Server 2008, see the Step-by-Step Guide for Performance and Reliability Monitoring in Windows Server 2008 (<externalLink><linkText>https://go.microsoft.com/fwlink/?LinkId=123737</linkText><linkUri>https://go.microsoft.com/fwlink/?LinkId=123737</linkUri></externalLink>).</para>
   </introduction>
   <section>
     <title>Configuration tasks for troubleshooting</title>

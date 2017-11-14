@@ -12,11 +12,11 @@ ms.assetid: a29a92a5-7b79-4e6e-95cf-2ccb38bb6fb2 vhorne
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # ftp: dir
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Displays a list of directory files and subdirectories on a remote computer.   
 ## Syntax  

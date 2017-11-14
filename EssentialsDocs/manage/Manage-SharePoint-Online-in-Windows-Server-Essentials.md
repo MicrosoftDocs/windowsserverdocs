@@ -22,7 +22,7 @@ You can manage your  SharePoint Online libraries and team sites from the Dashboa
   
  As a bonus, your users will be able to use the My Server 2012 R2 app to access files in your  SharePoint Online libraries from anywhere using their mobile device or Windows phone. [Where can I get the My Server app?](../use/Use-the-My-Server-App-to-Connect-to-Windows-Server-Essentials.md)  
   
- Haven't tried SharePoint yet? [What you can do now](http://office.microsoft.com/office365-sharepoint-online-enterprise-help/get-started-with-sharepoint-2013-HA102772778.aspx)  
+ Haven't tried SharePoint yet? [What you can do now](https://office.microsoft.com/office365-sharepoint-online-enterprise-help/get-started-with-sharepoint-2013-HA102772778.aspx)  
   
 ## Where on the Dashboard will I manage my libraries and team sites?  
  You'll use the new **SharePoint Online** tab, which is added to the **Storage** area of the Dashboard when you integrate  Office 365 with the server, to manage  SharePoint Online resources.  
@@ -42,7 +42,7 @@ You can manage your  SharePoint Online libraries and team sites from the Dashboa
  
 |-|-|  
 |Manage SharePoint team sites|The **Manage team sites** action lets you sign in to  Office 365 and manage your  SharePoint Online team sites. What you can do in  Office 365 will be determined by the online account that you sign in with.<br /><br /> When you close  Office 365 and return to the Dashboard, click **Refresh** to show the changes. 
-|View or change team site permissions|Since a library inherits permissions from its team site by default, it's helpful to have easy access to the team site. To view or change   permissions for a team site, select the team site or any of its libraries, and click **View the site permissions**.<br /><br /> **Tip:** Need help with the fine points of SharePoint team site permissions? There's a useful [Learn more](http://office.microsoft.com/office365-sharepoint-online-enterprise-help/introduction-control-user-access-with-permissions-HA102771919.aspx?CTT=5&origin=HA102771924) link in the team site permissions.  
+|View or change team site permissions|Since a library inherits permissions from its team site by default, it's helpful to have easy access to the team site. To view or change   permissions for a team site, select the team site or any of its libraries, and click **View the site permissions**.<br /><br /> **Tip:** Need help with the fine points of SharePoint team site permissions? There's a useful [Learn more](https://office.microsoft.com/office365-sharepoint-online-enterprise-help/introduction-control-user-access-with-permissions-HA102771919.aspx?CTT=5&origin=HA102771924) link in the team site permissions.  
   
 ## Tips  
   
@@ -56,11 +56,11 @@ You can manage your  SharePoint Online libraries and team sites from the Dashboa
   
 -   [Use a My Server app to work with your SharePoint Online libraries from anywhere](../use/Use-the-My-Server-App-to-Connect-to-Windows-Server-Essentials.md)  
   
--   [Learn more about assigning permissions for SharePoint team sites](http://office.microsoft.com/office365-sharepoint-online-enterprise-help/introduction-control-user-access-with-permissions-HA102771919.aspx?CTT=5&origin=HA102771924)  
+-   [Learn more about assigning permissions for SharePoint team sites](https://office.microsoft.com/office365-sharepoint-online-enterprise-help/introduction-control-user-access-with-permissions-HA102771919.aspx?CTT=5&origin=HA102771924)  
   
--   [Find out what you can do with SharePoint features](http://office.microsoft.com/office365-sharepoint-online-enterprise-help/get-started-with-sharepoint-2013-HA102772778.aspx)  
+-   [Find out what you can do with SharePoint features](https://office.microsoft.com/office365-sharepoint-online-enterprise-help/get-started-with-sharepoint-2013-HA102772778.aspx)  
   
--   [Take a look at the Office 365 business plans that are available](http://office.microsoft.com/business/compare-office-365-for-business-plans-FX102918419.aspx?CR_CC=200061904&WT.srch=1&WT.mc_ID=PS_bing_O365Comm_what-is-office-365-for_Text)  
+-   [Take a look at the Office 365 business plans that are available](https://office.microsoft.com/business/compare-office-365-for-business-plans-FX102918419.aspx?CR_CC=200061904&WT.srch=1&WT.mc_ID=PS_bing_O365Comm_what-is-office-365-for_Text)  
   
 -   [Integrate Office 365 with your server](Manage-Office-365-in-Windows-Server-Essentials.md)  
   

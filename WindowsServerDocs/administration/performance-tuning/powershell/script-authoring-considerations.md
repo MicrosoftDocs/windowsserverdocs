@@ -6,7 +6,7 @@ ms.technology: performance-tuning-guide
 ms.topic: article
 ms.author: JasonSh
 author: lzybkr
-ms.date: 08/31/2017
+ms.date: 10/16/2017
 ---
 
 # PowerShell scripting performance considerations

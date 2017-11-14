@@ -12,12 +12,12 @@ ms.assetid: 345d3192-401e-4a3b-a8ac-36a85c7be79d
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # tree
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Displays the directory structure of a path or of the disk in a drive graphically.
 

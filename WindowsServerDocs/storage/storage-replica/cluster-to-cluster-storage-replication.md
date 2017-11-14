@@ -7,7 +7,7 @@ ms.technology: storage-replica
 ms.topic: get-started-article
 ms.assetid: 834e8542-a67a-4ba0-9841-8a57727ef876
 author: nedpyle
-ms.date: 10/11/2016
+ms.date: 10/11/2017
 description: How to use Storage Replica to replicate volumes in one cluster to another cluster running Windows Server 2016 Datacenter Edition.
 ---
 # Cluster to cluster Storage Replication
@@ -21,7 +21,7 @@ You will configure these computers and storage in a cluster-to-cluster configura
 There are no graphical tools in Windows Server 2016 Datacenter Edition that can configure Storage Replica for cluster-to-cluster replication, though Azure Site Recovery will be able to configure this scenario in the future.
 
 > [!IMPORTANT]
-> In this test, the four servers are an example. You can use any number of servers supported by Microsoft in each cluster, which is currently 16 for a Storage Spaces Direct cluster and 64 for a shared storage cluster.  
+> In this test, the four servers are an example. You can use any number of servers supported by Microsoft in each cluster, which is currently 8 for a Storage Spaces Direct cluster and 64 for a shared storage cluster.  
 >   
 > This guide does not cover configuring Storage Spaces Direct. For information about configuring Storage Spaces Direct, see [Storage Spaces Direct in Windows Server 2016](../storage-spaces/storage-spaces-direct-overview.md).  
 
@@ -47,6 +47,7 @@ This walkthrough uses the following environment as an example:
 * Appropriate firewall and router rules to allow ICMP, SMB (port 445, plus 5445 for SMB Direct) and WS-MAN (port 5985) bi-directional traffic between all nodes.  
 * A network between servers with enough bandwidth to contain your IO write workload and an average of =5ms round trip latency, for synchronous replication. Asynchronous replication does not have a latency recommendation.  
 * The replicated storage cannot be located on the drive containing the Windows operating system folder.
+* There are important considerations & limitations for Storage Spaces Direct replication - please review the detailed information below.
 
 Many of these requirements can be determined by using the `Test-SRTopology` cmdlet. You get access to this tool if you install Storage Replica or the Storage Replica Management Tools features on at least one server. There is no need to configure Storage Replica to use this tool, only to install the cmdlet. More information is included in the steps below.  
 
@@ -88,7 +89,7 @@ Many of these requirements can be determined by using the `Test-SRTopology` cmdl
         $Servers | ForEach { Install-WindowsFeature -ComputerName $_ -Name Storage-Replica,Failover-Clustering,FS-FileServer -IncludeManagementTools -restart }  
         ```  
 
-        For more information on these steps, see [Install or Uninstall Roles, Role Services, or Features](http://technet.microsoft.com/library/hh831809.aspx)  
+        For more information on these steps, see [Install or Uninstall Roles, Role Services, or Features](https://technet.microsoft.com/library/hh831809.aspx)  
 
 9. Configure storage as follows:  
 
@@ -101,19 +102,26 @@ Many of these requirements can be determined by using the `Test-SRTopology` cmdl
     > -   All log disks must have the same sector sizes.  
     > -   The log volumes should use flash-based storage, such as SSD.  Microsoft recommends that the log storage be faster than the data storage. Log volumes must never be used for other workloads.
     > -   The data disks can use HDD, SSD, or a tiered combination and can use either mirrored or parity spaces or RAID 1 or 10, or RAID 5 or RAID 50.  
-    > -   The log volume must be at least 9GB by default and may be larger or smaller based on log requirements.  
+    > -   The log volume must be at least 9GB by default and may be larger or smaller based on log requirements.
+    > -   When using Storage Spaces Direct (S2D) with an NVME or SSD cache, you see a greater than expected increase in latency when configuring Storage Replica replication between S2D clusters. The change in latency is proprtionally much higher than you see when using NVME and SSD in a performance + capacity configuration and no HDD tier nor capacity tier.
+
+This issue occurs due to architectural limitations within SR's log mechanism combined with the extremely low latency of NVME when compared to slower media. When using the S2D cache, all IO of SR logs, along with all recent read/write IO of applications, will occur in the cache and never on the performance or capacity tiers. This means that all SR activity happens on the same speed media - this configuration is not supported not recommended (see https://aka.ms/srfaq for log recommendations). 
+
+When using S2D with HDDs, you cannot disable or avoid the cache. As a workaround, if using just SSD and NVME, you can configure just performance and capacity tiers. If using that configuration, and by placing the SR logs on the performance tier only with the data volumes they service being on the capacity tier only, you will avoid the high latency issue described above. The same could be done with a mix of faster and slower SSDs and no NVME.
+
+This workaround is of course not ideal and some customers may not be able to make use of it. The SR team is working on optimizations and and updated log mechanism for the future to reduce these artifical bottlenecks that occur. There is no ETA for this, but when available to TAP customers for testing, this FAQ will be updated. 
 
     -   **For JBOD enclosures:**  
 
         1.  Ensure that each cluster can see that site's storage enclosures only and that the SAS connections are correctly configured.  
 
-        2.  Provision the storage using Storage Spaces by following **Steps 1-3** provided in the [Deploy Storage Spaces on a Stand-Alone Server](http://technet.microsoft.com/library/jj822938.aspx) using Windows PowerShell or Server Manager.  
+        2.  Provision the storage using Storage Spaces by following **Steps 1-3** provided in the [Deploy Storage Spaces on a Stand-Alone Server](https://technet.microsoft.com/library/jj822938.aspx) using Windows PowerShell or Server Manager.  
 
     -   **For iSCSI Target storage:**  
 
         1.  Ensure that each cluster can see that site's storage enclosures only. You should use more than one single network adapter if using iSCSI.  
 
-        2.  Provision the storage using your vendor documentation. If using Windows-based iSCSI Targeting, consult [iSCSI Target Block Storage, How To](http://technet.microsoft.com/library/hh848268.aspx).  
+        2.  Provision the storage using your vendor documentation. If using Windows-based iSCSI Targeting, consult [iSCSI Target Block Storage, How To](https://technet.microsoft.com/library/hh848268.aspx).  
 
     -   **For FC SAN storage:**  
 
@@ -161,11 +169,11 @@ You will now create two normal failover clusters. After configuration, validatio
     > Windows Server 2016 now includes an option for Cloud (Azure)-based Witness. You can choose this quorum option instead of the file share witness.  
 
     > [!WARNING]  
-    > For more information about quorum configuration, see the **Witness Configuration** section in [Configure and Manage the Quorum in a Windows Server 2012 Failover Cluster](http://technet.microsoft.com/library/jj612870.aspx). For more information on the `Set-ClusterQuorum` cmdlet, see [Set-ClusterQuorum](http://technet.microsoft.com/library/hh847275.aspx).  
+    > For more information about quorum configuration, see the **Witness Configuration** section in [Configure and Manage the Quorum in a Windows Server 2012 Failover Cluster](https://technet.microsoft.com/library/jj612870.aspx). For more information on the `Set-ClusterQuorum` cmdlet, see [Set-ClusterQuorum](https://technet.microsoft.com/library/hh847275.aspx).  
 
 5.  Add one disk in the **Redmond** site to the cluster CSV. To do so, right click a source disk in the **Disks** node of the **Storage** section, and then click **Add to Cluster Shared Volumes**.  
 
-6.  Create the clustered Scale-Out File Servers on both clusters using the instructions in [Configure Scale-Out File Server](http://technet.microsoft.com/library/hh831718.aspx)  
+6.  Create the clustered Scale-Out File Servers on both clusters using the instructions in [Configure Scale-Out File Server](https://technet.microsoft.com/library/hh831718.aspx)  
 
 ### Windows PowerShell method  
 
@@ -193,7 +201,7 @@ You will now create two normal failover clusters. After configuration, validatio
     > Windows Server 2016 now includes an option for Cloud (Azure)-based Witness. You can choose this quorum option instead of the file share witness.  
 
     > [!WARNING]  
-    > For more information about quorum configuration, see the **Witness Configuration** section in [Configure and Manage the Quorum in a Windows Server 2012 Failover Cluster](http://technet.microsoft.com/library/jj612870.aspx). For more information on the `Set-ClusterQuorum` cmdlet, see [Set-ClusterQuorum](http://technet.microsoft.com/library/hh847275.aspx).  
+    > For more information about quorum configuration, see the **Witness Configuration** section in [Configure and Manage the Quorum in a Windows Server 2012 Failover Cluster](https://technet.microsoft.com/library/jj612870.aspx). For more information on the `Set-ClusterQuorum` cmdlet, see [Set-ClusterQuorum](https://technet.microsoft.com/library/hh847275.aspx).  
 
 4.  Create the clustered Scale-Out File Servers on both clusters using the instructions in [Configure Scale-Out File Server](https://technet.microsoft.com/library/hh831718.aspx)  
 

@@ -88,7 +88,7 @@ count([type == “http://schemas.xmlsoap.org/claims/Reports“] ) > 0 => issue(=
 The following rule issues a Private Personal Identifier \(PPID\) claim based on the **windowsaccountname** and **originalissuer** attributes of users in an LDAP attribute store:  
   
 ```  
-c:[Type == "http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname"]  
+c:[Type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname"]  
  => issue(store = "_OpaqueIdStore", types = ("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/privatepersonalidentifier"), query = "{0};{1};{2}", param = "ppid", param = c.Value, param = c.OriginalIssuer);  
 ```  
   

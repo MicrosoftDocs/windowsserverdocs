@@ -11,12 +11,12 @@ ms.topic: article
 author: brentfor
 ms.author: coreyp
 manager: lizapo
-ms.date: 02/28/2017
+ms.date: 10/16/2017
 ---
 
 # Troubleshoot Software Inventory Logging 
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 ##Understanding SIL
 

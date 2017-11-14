@@ -12,12 +12,12 @@ ms.assetid: 998366c1-0a64-45e6-9ed3-4c3f5b8406f0
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # wbadmin start systemstatebackup
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Creates a system state backup of the local computer and stores it on the location specified.
 
@@ -45,7 +45,7 @@ wbadmin start systemstatebackup
 
 ## Remarks
 
-For information about saving a system state backup to a volume that, in turn, contains system state files, see article 944530 in the Microsoft Knowledge Base ([http://go.microsoft.com/fwlink/?LinkId=110439](http://go.microsoft.com/fwlink/?LinkId=110439)).
+For information about saving a system state backup to a volume that, in turn, contains system state files, see article 944530 in the Microsoft Knowledge Base ([https://go.microsoft.com/fwlink/?LinkId=110439](https://go.microsoft.com/fwlink/?LinkId=110439)).
 
 ## <a name="BKMK_examples"></a>Examples
 
@@ -58,4 +58,4 @@ wbadmin start systemstatebackup -backupTarget:f:
 
 -   [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)
--   [Start-WBBackup](http://technet.microsoft.com/library/jj902459.aspx) cmdlet
+-   [Start-WBBackup](https://technet.microsoft.com/library/jj902459.aspx) cmdlet

@@ -12,12 +12,12 @@ ms.assetid: 2b145410-fc75-4526-932d-f16b7ee3aaef
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # gpfixup
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Fix domain name dependencies in Group Policy Objects and Group Policy links after a domain rename operation. For examples of how this command can be used, see [Examples](#BKMK_Examples).
 
@@ -64,6 +64,6 @@ gpfixup /olddns: MyOldDnsName /newdns:MyNewDnsName /dc:MyDcDnsName 2>&1 >gpfixup
 
 #### Additional references
 
--   [Administering Active Directory Domain Rename](http://go.microsoft.com/fwlink/?LinkId=198385)
--   [Group Policy TechCenter](http://go.microsoft.com/fwlink/?LinkID=145531)
+-   [Administering Active Directory Domain Rename](https://go.microsoft.com/fwlink/?LinkId=198385)
+-   [Group Policy TechCenter](https://go.microsoft.com/fwlink/?LinkID=145531)
 -   [Command-Line Syntax Key](command-line-syntax-key.md)

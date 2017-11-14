@@ -6,7 +6,7 @@ ms.technology: performance-tuning-guide
 ms.topic: article
 ms.author: HammadBu; VladmiS
 author: phstee
-ms.date: 04/24/2017
+ms.date: 10/16/2017
 ---
 
 # Performance Tuning Remote Desktop Session Hosts
@@ -88,13 +88,13 @@ Consider the following suggestions when you configure apps that are to be used o
 
 -   Disable unnecessary processes that are registered to start with user sign-in or a session startup.
 
-    These processes can significantly contribute to the cost of CPU usage when creating a new user session, which generally is a CPU-intensive process, and it can be very expensive in morning scenarios. Use MsConfig.exe or MsInfo32.exe to obtain a list of processes that are started at user sign-in. For more detailed info, you can use [Autoruns for Windows](http://technet.microsoft.com/sysinternals/bb963902.aspx).
+    These processes can significantly contribute to the cost of CPU usage when creating a new user session, which generally is a CPU-intensive process, and it can be very expensive in morning scenarios. Use MsConfig.exe or MsInfo32.exe to obtain a list of processes that are started at user sign-in. For more detailed info, you can use [Autoruns for Windows](https://technet.microsoft.com/sysinternals/bb963902.aspx).
 
 For memory consumption, you should consider the following:
 
 -   Verify that DLLs loaded by an app are not relocated.
 
-    -   Relocated DLLs can be verified by selecting Process DLL view, as shown in the following figure, by using [Process Explorer](http://technet.microsoft.com/sysinternals/bb896653.aspx).
+    -   Relocated DLLs can be verified by selecting Process DLL view, as shown in the following figure, by using [Process Explorer](https://technet.microsoft.com/sysinternals/bb896653.aspx).
 
     -   Here we can see that y.dll was relocated because x.dll already occupied its default base address and ASLR was not enabled
 

@@ -121,11 +121,11 @@ Set-AdfsProperties -PersistentSsoCutoffTime <DateTime>
 ```  
 @RuleTemplate = "PassThroughClaims"  
 @RuleName = "Pass through claim - InsideCorporateNetwork"  
-c:[Type == "http://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork"]  
+c:[Type == "https://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork"]  
 => issue(claim = c);   
 A custom Issuance Transform rule to pass through the persistent SSO claim  
 @RuleName = "Pass Through Claim - Psso"  
-c:[Type == "http://schemas.microsoft.com/2014/03/psso"]  
+c:[Type == "https://schemas.microsoft.com/2014/03/psso"]  
 => issue(claim = c);  
   
 ```

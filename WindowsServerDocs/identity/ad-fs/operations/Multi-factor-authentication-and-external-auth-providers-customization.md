@@ -15,7 +15,7 @@ ms.technology: identity-adfs
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2
 
-In AD FS, the support for multifactor authentication is provided out\-of\-the\-box. For example, you can configure AD FS to use built\-in Certificate Authentication as the second factor authentication. You can also use external authentication providers. This approach can enable AD FS to integrate with additional services, such as Azure Multi-factor Authentication, or you can develop your own provider. See [Solution Guide: Manage Risk with Multi\-factor Access Control](http://technet.microsoft.com/library/dn280937.aspx) for more information about how to register external authentication provider by using AD FS.  
+In AD FS, the support for multifactor authentication is provided out\-of\-the\-box. For example, you can configure AD FS to use built\-in Certificate Authentication as the second factor authentication. You can also use external authentication providers. This approach can enable AD FS to integrate with additional services, such as Azure Multi-factor Authentication, or you can develop your own provider. See [Solution Guide: Manage Risk with Multi\-factor Access Control](https://technet.microsoft.com/library/dn280937.aspx) for more information about how to register external authentication provider by using AD FS.  
   
 We recommend that an external authentication provider use the classes that are defined in the .css file that AD FS provides to author the authentication UI. You can use the following cmdlet to export the default web theme and inspect the user interface classes and elements that are defined in the .css file. The .css file can be used in the development of the sign\-in user interface of an external authentication provider.  
   
@@ -43,7 +43,7 @@ Before you write a new custom authentication method, we recommend that you study
   
     -   **form factor styles** \- These are styles for different form factors. You should understand this section to ensure that your content works with different form factors, for example, phones and tablets.  
   
-For additional information, see [Solution Guide: Manage Risk with Multi\-factor Access Control](http://technet.microsoft.com/library/dn280937.aspx) and [Solution Guide: Manage Risk with Additional Multi\-Factor Authentication for Sensitive Applications](http://tnstage.redmond.corp.microsoft.com/library/dn280949.aspx).  
+For additional information, see [Solution Guide: Manage Risk with Multi\-factor Access Control](https://technet.microsoft.com/library/dn280937.aspx) and [Solution Guide: Manage Risk with Additional Multi\-Factor Authentication for Sensitive Applications](https://tnstage.redmond.corp.microsoft.com/library/dn280949.aspx).  
 
 ## Additional references 
 [AD FS User Sign-in Customization](AD-FS-user-sign-in-customization.md) 

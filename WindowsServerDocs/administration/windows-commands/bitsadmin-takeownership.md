@@ -12,12 +12,12 @@ ms.assetid: ea0ce7cb-440a-498f-a3ef-8368fa43e399
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # bitsadmin takeownership
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Lets a user with administrative privileges take ownership of the specified job.
 

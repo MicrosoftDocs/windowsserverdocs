@@ -17,7 +17,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server 2016
 
-Securing privileged access is a critical first step to establishing security assurances for business assets in a modern organization. The security of most or all business assets in an organization depends on the integrity of the privileged accounts that administer and manage IT systems. Cyber-attackers are targeting these accounts and other elements of privileged access to rapidly gain access to targeted data and systems using credential theft attacks like [Pass-the-Hash and Pass-the-Ticket](http://www.microsoft.com/pth).
+Securing privileged access is a critical first step to establishing security assurances for business assets in a modern organization. The security of most or all business assets in an organization depends on the integrity of the privileged accounts that administer and manage IT systems. Cyber-attackers are targeting these accounts and other elements of privileged access to rapidly gain access to targeted data and systems using credential theft attacks like [Pass-the-Hash and Pass-the-Ticket](https://www.microsoft.com/pth).
 
 Protecting administrative access against determined adversaries require you to take a complete and thoughtful approach to isolate these systems from risks. This figure depicts the three stages of recommendations for separating and protecting administration in this roadmap:
 
@@ -53,7 +53,7 @@ An adversary that gains control of an administrative account can use those privi
 
 ![Diagram showing how an adversary that gains control of an administrative account can use those privileges to pursue their gain at the expense of the target organization](../media/securing-privileged-access/PAW_LP_Fig3.JPG)
 
-For more information on the types of attacks that commonly lead to attackers in control of administrative accounts, please visit the [Pass The Hash web site](http://www.microsoft.com/pth) for informative white papers, videos and more.
+For more information on the types of attacks that commonly lead to attackers in control of administrative accounts, please visit the [Pass The Hash web site](https://www.microsoft.com/pth) for informative white papers, videos and more.
 
 This figure depicts the separate "channel" for administration that the roadmap establishes to isolate privileged access tasks from high risk standard user tasks like web browsing and accessing email.
 
@@ -134,11 +134,11 @@ To reduce opportunities for adversaries to take control of a forest, you should 
 
 **6. Attack Detection**
 
-To get visibility into active credential theft and identity attacks so that you can respond quickly to events and contain damage, deploy and configure [Microsoft Advanced Threat Analytics (ATA)](http://www.microsoft.com/ata).
+To get visibility into active credential theft and identity attacks so that you can respond quickly to events and contain damage, deploy and configure [Microsoft Advanced Threat Analytics (ATA)](https://www.microsoft.com/ata).
 
 Prior to installing ATA, you should ensure you have a process in place to handle a major security incident that ATA may detect.
 
--   For more information on setting up an incident response process, see [Responding to IT Security Incidents](http://aka.ms/irr) and the "Respond to suspicious activity" and "Recover from a breach" sections of [Mitigating Pass-the-Hash and Other Credential Theft](https://www.microsoft.com/pth), version 2.
+-   For more information on setting up an incident response process, see [Responding to IT Security Incidents](https://aka.ms/irr) and the "Respond to suspicious activity" and "Recover from a breach" sections of [Mitigating Pass-the-Hash and Other Credential Theft](https://www.microsoft.com/pth), version 2.
 
 -   For more information on engaging Microsoft services to assist with preparing your IR process for ATA generated events and deploying ATA, contact your Microsoft representative by accessing [this page](https://www.microsoft.com/en-us/microsoftservices/campaigns/cybersecurity-protection.aspx).
 
@@ -201,10 +201,10 @@ For more information on engaging Microsoft services to assist with any of these 
 
 [Mitigating Credential Theft using the Windows 10 Isolated User Mode (Channel 9)](https://channel9.msdn.com/Blogs/Seth-Juarez/Mitigating-Credential-Theft-using-the-Windows-10-Isolated-User-Mode)
 
-[Enabling Strict KDC Validation in Windows Kerberos](http://www.microsoft.com/en-us/download/details.aspx?id=6382)
+[Enabling Strict KDC Validation in Windows Kerberos](https://www.microsoft.com/en-us/download/details.aspx?id=6382)
 
-[What's New in Kerberos Authentication for Windows Server 2012](http://technet.microsoft.com/library/hh831747.aspx)
+[What's New in Kerberos Authentication for Windows Server 2012](https://technet.microsoft.com/library/hh831747.aspx)
 
-[Authentication Mechanism Assurance for AD DS in Windows Server 2008 R2 Step-by-Step Guide](http://technet.microsoft.com/library/dd378897(v=ws.10).aspx)
+[Authentication Mechanism Assurance for AD DS in Windows Server 2008 R2 Step-by-Step Guide](https://technet.microsoft.com/library/dd378897(v=ws.10).aspx)
 
 [Trusted Platform Module](C:\sd\docs\p_ent_keep_secure\p_ent_keep_secure\trusted_platform_module_technology_overview.xml)

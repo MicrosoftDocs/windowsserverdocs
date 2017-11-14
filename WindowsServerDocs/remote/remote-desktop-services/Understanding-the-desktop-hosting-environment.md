@@ -15,7 +15,7 @@ manager: dongill
 ---
 # Understanding the desktop hosting environment
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 The following information describes the components of the desktop hosting service.  
   
@@ -67,7 +67,7 @@ The VM used to deploy the file server must have an Azure data disk attached and 
 For small tenants, the cost can be reduced by combining the file server with the virtual machine running the RD Connection Broker and RD Licensing roles on a single virtual machine in the tenant's environment.  
   
 Additional information  
-[File and Storage Services Overview](http://technet.microsoft.com/library/hh831487.aspx)  
+[File and Storage Services Overview](https://technet.microsoft.com/library/hh831487.aspx)  
 [How to Attach a Data Disk to a Virtual Machine](http://www.windowsazure.com/manage/windows/how-to-guides/attach-a-disk/)  
   
 ### User Profile Disks  

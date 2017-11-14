@@ -12,12 +12,12 @@ ms.assetid: 0b14db49-84ac-4c2f-bf1f-f65e13cbfb35
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # bitsadmin cache and help
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Displays the command-line usage for the **Cache** commands.
 

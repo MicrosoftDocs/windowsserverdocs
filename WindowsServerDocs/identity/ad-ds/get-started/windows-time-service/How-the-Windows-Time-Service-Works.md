@@ -43,7 +43,7 @@ Although the Windows Time service is not an exact implementation of the Network 
 -   The amount of CPU and network resources available to the Windows Time service  
   
 > [!IMPORTANT]  
-> Prior to Windows Server 2016, the W32Time service was not designed to meet time-sensitive application needs.  However, updates to Windows Server 2016 now allow you to implement a solution for 1ms accuracy in your domain.  See [Windows 2016 Accurate Time](Windows-2016-Accurate-Time.md) and  [Support boundary to configure the Windows Time service for high-accuracy environments](http://go.microsoft.com/fwlink/?LinkID=179459) for more information.  
+> Prior to Windows Server 2016, the W32Time service was not designed to meet time-sensitive application needs.  However, updates to Windows Server 2016 now allow you to implement a solution for 1ms accuracy in your domain.  See [Windows 2016 Accurate Time](Windows-2016-Accurate-Time.md) and  [Support boundary to configure the Windows Time service for high-accuracy environments](https://go.microsoft.com/fwlink/?LinkID=179459) for more information.  
   
 Computers that synchronize their time less frequently, such as computers running Windows XP Home Edition, computers with intermittent network connections, or computers that are not joined to a domain, are configured by default to synchronize with time.windows.com. Because they do not synchronize their clock frequently and because the factors that affect time accuracy may not be known, it is impossible to guarantee time accuracy on computers that have intermittent or no network connections.  
   
@@ -128,7 +128,7 @@ Hardware-based clocks such as GPS or radio clocks are often used as highly accur
   
 Hardware devices, such as a cesium clock or a Global Positioning System (GPS) receiver, provide accurate current time by following a standard to obtain an accurate definition of time. Cesium clocks are extremely stable and are unaffected by factors such as temperature, pressure, or humidity, but are also very expensive. A GPS receiver is much less expensive to operate and is also an accurate reference clock. GPS receivers obtain their time from satellites that obtain their time from a cesium clock. Without the use of an independent time provider, Windows time servers can acquire their time by connecting to an external NTP server, which is connected to a hardware device by means of a telephone or the Internet. Organizations such as the United States Naval Observatory provide NTP servers that are connected to extremely reliable reference clocks.  
   
-Many GPS receivers and other time devices can function as NTP servers on a network. You can configure your AD DS forest to synchronize time from these external hardware devices only if they are also acting as NTP servers on your network. To do so, configure the domain controller functioning as the primary domain controller (PDC) emulator in your forest root to synchronize with the NTP server provided by the GPS device. To do so, see [Configure the Windows Time service on the PDC emulator in the Forest Root Domain](http://go.microsoft.com/fwlink/?LinkId=91969) (http://go.microsoft.com/fwlink/?LinkId=91969).  
+Many GPS receivers and other time devices can function as NTP servers on a network. You can configure your AD DS forest to synchronize time from these external hardware devices only if they are also acting as NTP servers on your network. To do so, configure the domain controller functioning as the primary domain controller (PDC) emulator in your forest root to synchronize with the NTP server provided by the GPS device. To do so, see [Configure the Windows Time service on the PDC emulator in the Forest Root Domain](https://go.microsoft.com/fwlink/?LinkId=91969) (https://go.microsoft.com/fwlink/?LinkId=91969).  
   
 ### Simple Network Time Protocol  
 The Simple Network Time Protocol (SNTP) is a simplified time protocol that is intended for servers and clients that do not require the degree of accuracy that NTP provides. SNTP, a more rudimentary version of NTP, is the primary time protocol that is used in Windows 2000. Because the network packet formats of SNTP and NTP are identical, the two protocols are interoperable. The primary difference between the two is that SNTP does not have the error management and complex filtering systems that NTP provides. For more information about the Simple Network Time Protocol, see RFC 1769 in the IETF RFC Database.  
@@ -264,7 +264,7 @@ The Windows Time service communicates on a network to identify reliable time sou
 ## See Also  
 [Windows Time Service Technical Reference](https://technet.microsoft.com/library/cc773061.aspx)  
 [Windows Time Service Tools and Settings](Windows-Time-Service-Tools-and-Settings.md)  
-[Microsoft Knowledge Base article 902229](http://go.microsoft.com/fwlink/?LinkId=186066)  
+[Microsoft Knowledge Base article 902229](https://go.microsoft.com/fwlink/?LinkId=186066)  
   
 
 

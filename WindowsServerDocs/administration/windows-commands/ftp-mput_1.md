@@ -12,11 +12,11 @@ ms.assetid: 980f15e7-7cf1-4813-9946-a8cc4edfb198 vhorne
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # ftp: mput_1
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Copies local files to the remote computer using the current file transfer type.   
 ## Syntax  

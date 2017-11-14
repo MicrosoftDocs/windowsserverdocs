@@ -13,11 +13,11 @@ ms.assetid: f9d42500-7bea-4aa8-a9f0-c22f6ed3e73b
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # bitsadmin suspend
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Suspends the specified job.
 ## Syntax

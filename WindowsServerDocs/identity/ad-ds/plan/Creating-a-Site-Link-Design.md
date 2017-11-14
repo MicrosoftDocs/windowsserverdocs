@@ -36,7 +36,7 @@ When you create a site link object in the respective Inter-Site Transports conta
   
 When a direct IP connection is not available, you can configure replication between sites to use SMTP. However, SMTP replication functionality is limited and requires an enterprise certification authority (CA). SMTP can only replicate the configuration, schema, and application directory partitions and does not support the replication of domain directory partitions.  
   
-To name site links, use a consistent naming scheme, such as name_of_site1-name_of_site2. Record the list of sites, linked sites, and the names of the site links connecting these sites in a worksheet. For a worksheet to assist you in recording site names and associated site link names, see Job Aids for Windows Server 2003 Deployment Kit ([http://go.microsoft.com/fwlink/?LinkID=102558](http://go.microsoft.com/fwlink/?LinkID=102558)), download Job_Aids_Designing_and_Deploying_Directory_and_Security_Services.zip, and open"Sites and Associated Site Links" (DSSTOPO_5.doc).  
+To name site links, use a consistent naming scheme, such as name_of_site1-name_of_site2. Record the list of sites, linked sites, and the names of the site links connecting these sites in a worksheet. For a worksheet to assist you in recording site names and associated site link names, see Job Aids for Windows Server 2003 Deployment Kit ([https://go.microsoft.com/fwlink/?LinkID=102558](https://go.microsoft.com/fwlink/?LinkID=102558)), download Job_Aids_Designing_and_Deploying_Directory_and_Security_Services.zip, and open"Sites and Associated Site Links" (DSSTOPO_5.doc).  
   
 ## In this guide  
 [Setting Site Link Properties](Setting-Site-Link-Properties.md)  

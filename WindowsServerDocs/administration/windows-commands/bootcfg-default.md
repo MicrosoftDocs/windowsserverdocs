@@ -12,11 +12,11 @@ ms.assetid: e21824d7-8278-41d7-a2c5-ce09803d513a
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # bootcfg default
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Specifies the operating system entry to designate as the default.
 

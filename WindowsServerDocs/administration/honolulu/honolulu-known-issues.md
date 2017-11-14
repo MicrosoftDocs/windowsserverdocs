@@ -10,12 +10,12 @@ ms.topic:
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 09/20/2017
+ms.date: 10/16/2017
 ---
 
 # Project Honolulu known issues
 
->Applies To: Windows Server, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 and Windows 10
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 and Windows 10
 
 Project Honolulu is under development and currently in Technical Preview, so there are some known issues that you may have to work around.
 

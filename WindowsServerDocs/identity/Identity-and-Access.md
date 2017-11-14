@@ -8,7 +8,7 @@ manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
-
+ms.localizationpriority: high
 ms.technology: identity-adds
 ---
 

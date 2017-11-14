@@ -6,18 +6,19 @@ ms.topic: get-started-article
 ms.assetid: 6e102c1f-df26-4eaa-bc7a-d0d55d3b82d5
 author: jasongerend
 ms.author: jgerend
-ms.date: 09/15/2016
+ms.date: 10/17/2017
 ---
 # Cluster operating system rolling upgrade
 
-> Applies to Windows Server 2016
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
-Cluster OS Rolling Upgrade is a new feature in Windows Server 2016 that enables an administrator to upgrade the operating system of the cluster nodes from Windows Server 2012 R2 to Windows Server 2016 without stopping the Hyper-V or the Scale-Out File Server workloads. Using this feature, the downtime penalties against Service Level Agreements (SLA) can be avoided.  
+Cluster OS Rolling Upgrade enables an administrator to upgrade the operating system of the cluster nodes without stopping the Hyper-V or the Scale-Out File Server workloads. Using this feature, the downtime penalties against Service Level Agreements (SLA) can be avoided.
 
-Cluster OS Rolling Upgrade provides the following benefits:  
-- Failover clusters running Hyper-V virtual machine and Scale-out File Server (SOFS) workloads can be upgraded from  Windows Server 2012 R2  (running on all nodes in the cluster) to Windows Server 2016 (running on all cluster nodes of the cluster)  without downtime. Other cluster workloads, such as SQL Server, will be unavailable during the time (typically less than five minutes) it takes to failover to Windows Server 2016.  
-- It does not require any additional hardware. Although, you can add additional cluster nodes temporarily to small clusters to improve availability of the cluster during the Cluster OS Rolling Upgrade process.  
-- The cluster does not need to be stopped or restarted.  
+Cluster OS Rolling Upgrade provides the following benefits:
+
+- Failover clusters running Hyper-V virtual machine and Scale-out File Server (SOFS) workloads can be upgraded from Windows Server 2012 R2  (running on all nodes in the cluster) to Windows Server 2016 (running on all cluster nodes of the cluster) without downtime. Other cluster workloads, such as SQL Server, will be unavailable during the time (typically less than five minutes) it takes to failover to Windows Server 2016.  
+- It doesn't require any additional hardware. Although, you can add additional cluster nodes temporarily to small clusters to improve availability of the cluster during the Cluster OS Rolling Upgrade process.  
+- The cluster doesn't need to be stopped or restarted.  
 - A new cluster is not required. The existing cluster is upgraded. In addition, existing cluster objects stored in Active Directory are used.  
 - The upgrade process is reversible until the customer choses the "point-of-no-return", when all cluster nodes are running Windows Server 2016, and when the Update-ClusterFunctionalLevel PowerShell cmdlet is run.  
 - The cluster can support patching and maintenance operations while running in the mixed-OS mode.  
@@ -39,14 +40,17 @@ The following scenario is not supported in Windows Server 2016:
 Cluster OS Rolling Upgrade is fully supported by System Center Virtual Machine Manager (SCVMM) 2016. If you are using SCVMM 2016, see [Upgrading Windows Server 2012 R2 clusters to Windows Server 2016 in VMM](https://technet.microsoft.com/library/mt445417.aspx) for guidance on upgrading the clusters and automating the steps that are described in this document.  
 
 ## Requirements  
-Complete the following requirements before you begin the Cluster OS Rolling Upgrade process:  
-- Start with a  Windows Server 2012 R2  Failover Cluster  
-    - If the cluster workload is Hyper-V VMs, or Scale-Out File Server, you can expect zero-downtime upgrade.  
-    - Verify that the Hyper-V nodes have CPUs that support Second-Level Addressing Table (SLAT) using one of the following methods;  
-        - Review the [Are you SLAT Compatible? WP8 SDK Tip 01](http://blogs.msdn.com/b/devfish/archive/2012/11/06/are-you-slat-compatible-wp8-sdk-tip-01.aspx) article that describes two methods to check if a CPU supports SLATs  
-        - Download the [Coreinfo v3.31](https://technet.microsoft.com/sysinternals/cc835722) tool to determine if a CPU supports SLAT.  
+Complete the following requirements before you begin the Cluster OS Rolling Upgrade process:
 
-## Cluster transition states during Cluster OS Rolling Upgrade  
+- Start with a Failover Cluster running Windows Server (Semi-Annual Channel), Windows Server 2016, or Windows Server 2012 R2.
+- Upgrading a Storage Spaces Direct cluster to Windows Server, version 1709 isn't supported.
+- If the cluster workload is Hyper-V VMs, or Scale-Out File Server, you can expect zero-downtime upgrade.
+- Verify that the Hyper-V nodes have CPUs that support Second-Level Addressing Table (SLAT) using one of the following methods;  
+        - Review the [Are you SLAT Compatible? WP8 SDK Tip 01](http://blogs.msdn.com/b/devfish/archive/2012/11/06/are-you-slat-compatible-wp8-sdk-tip-01.aspx) article that describes two methods to check if a CPU supports SLATs  
+        - Download the [Coreinfo v3.31](https://technet.microsoft.com/sysinternals/cc835722) tool to determine if a CPU supports SLAT.
+
+## Cluster transition states during Cluster OS Rolling Upgrade
+
 This section describes the various transition states of the  Windows Server 2012 R2  cluster that is being upgraded to Windows Server 2016 using Cluster OS Rolling Upgrade.  
 
 In order to keep the cluster workloads running during the Cluster OS Rolling Upgrade process, moving a cluster workload from a Windows Server 2012 R2 node to Windows Server 2016 node works as if both nodes were running the  Windows Server 2012 R2  operating system. When Windows Server 2016 nodes are added to the cluster, they operate in a Windows Server 2012 R2 compatibility mode. A new conceptual cluster mode, called "mixed-OS mode", allows nodes of different versions to exist in the same cluster (see Figure 1).  
@@ -56,7 +60,8 @@ In order to keep the cluster workloads running during the Cluster OS Rolling Upg
 
 A  Windows Server 2012 R2 cluster enters mixed-OS mode when a Windows Server 2016 node is added to the cluster. The process is fully reversible - Windows Server 2016 nodes can be removed from the cluster and  Windows Server 2012 R2 nodes can be added to the cluster in this mode. The "point of no return" occurs when the Update-ClusterFunctionalLevel PowerShell cmdlet is run on the cluster. In order for this cmdlet to succeed, all nodes must be Windows Server 2016, and all nodes must be online.  
 
-## Transition states of a four-node cluster while performing Rolling OS Upgrade  
+## Transition states of a four-node cluster while performing Rolling OS Upgrade
+
 This section illustrates and describes the four different stages of a cluster with shared storage whose nodes are upgraded from Windows Server 2012 R2 to Windows Server 2016.  
 
 "Stage 1" is the initial state - we start with a Windows Server 2012 R2 cluster.  
@@ -82,7 +87,8 @@ After the Update-ClusterFunctionalLevelcmdlet is run, the cluster enters "Stage 
 ![Illustration showing that the cluster rolling OS upgrade has been successfully completed; all nodes have been upgraded to Windows Server 2016, and the cluster is running at the Windows Server 2016 cluster functional level](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_Stage4.png)  
 **Figure 5: Final State: Windows Server 2016 Failover Cluster (Stage 4)**  
 
-## Cluster OS Rolling Upgrade Process  
+## Cluster OS Rolling Upgrade Process
+
 This section describes the workflow for performing Cluster OS Rolling Upgrade.  
 
 ![Illustration showing the workflow for upgrading a cluster](media/Cluster-Operating-System-Rolling-Upgrade/Clustering_RollingUpgrade_Workflow.png)  
@@ -121,7 +127,7 @@ Cluster OS Rolling upgrade includes the following steps:
         ![Screencap showing the output of the Remove-ClusterNode cmdlet](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_RemoveNode.png)  
         **Figure 12: Remove a node from the cluster using [`Remove-ClusterNode`](https://technet.microsoft.com/library/ee461001.aspx) cmdlet**  
 
-    3.  Reformat the system drive and perform a "clean operating system install" of Windows Server 2016 on the node using the **Custom: Install Windows only (advanced)** installation (See Figure 13) option in setup.exe. Avoid selecting the **Upgrade: Install Windows and keep files, settings, and applications** option since Cluster OS Rolling Upgrade does not encourage in-place upgrade.  
+    3.  Reformat the system drive and perform a "clean operating system install" of Windows Server 2016 on the node using the **Custom: Install Windows only (advanced)** installation (See Figure 13) option in setup.exe. Avoid selecting the **Upgrade: Install Windows and keep files, settings, and applications** option since Cluster OS Rolling Upgrade doesn't encourage in-place upgrade.  
 
         ![Screencap of the Windows Server 2016 installation wizard showing the custom install option selected](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_InstallOption.png)  
         **Figure 13: Available installation options for Windows Server 2016**  

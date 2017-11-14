@@ -9,11 +9,11 @@ ms.assetid: 35865398-b011-447a-b781-1c52bc0c9e3a
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 01/09/2016
+ms.date: 10/16/2017
 ---
 # Plan your WSUS deployment
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 The first step in the deployment of Windows Server Update Services (WSUS) is to make important decisions, such as deciding the WSUS deployment scenario, choosing a network topology, and understanding the system requirements. The following checklist summarizes the steps that are involved in preparing for your deployment.
 
@@ -92,7 +92,7 @@ Be aware that configuring client computers (including servers) to update by usin
 2.  Windows client editions will not be able to install .NET 3.5 on demand from the web. The same considerations as server roles apply to .NET 3.5.
 
 > [!NOTE]
-> Configuring a Features on Demand installation source does not involve WSUS. For information on how to configure Features, see [Configure Features on Demand in Windows Server](http://technet.microsoft.com/library/jj127275.aspx).
+> Configuring a Features on Demand installation source does not involve WSUS. For information on how to configure Features, see [Configure Features on Demand in Windows Server](https://technet.microsoft.com/library/jj127275.aspx).
 
 ### <a name="BKM_1.1.1."></a>WSUS database requirements
 WSUS requires one of the following databases:
@@ -232,9 +232,9 @@ We recommend that you use Windows Internal Database in the following cases:
 
 Windows Internal Database does not provide a user interface or any database management tools. If you select this database for WSUS, you must use external tools to manage the database. For more information, see:
 
--   [Backup and Restore WSUS Data and Backing Up Your Server](http://technet.microsoft.com/library/dd939904(WS.10).aspx)
+-   [Backup and Restore WSUS Data and Backing Up Your Server](https://technet.microsoft.com/library/dd939904(WS.10).aspx)
 
--   [Reindex the WSUS database](http://technet.microsoft.com/library/dd939795(WS.10).aspx)
+-   [Reindex the WSUS database](https://technet.microsoft.com/library/dd939795(WS.10).aspx)
 
 #### WSUS with SQL Server
 We recommend that you use SQL Server with WSUS in the following cases:
@@ -312,7 +312,7 @@ Choosing languages for an upstream server is not the same as choosing languages 
 WSUS allows you to target updates to groups of client computers, so you can ensure that specific computers always get the right updates at the most convenient times. For example, if all the computers in one department (such as the Accounting team) have a specific configuration, you can set up a group for that team, decide which updates their computers need and what time they should be installed, and then use WSUS reports to evaluate the updates for the team.
 
 > [!NOTE]
-> If a WSUS server is running in replica mode, computer groups cannot be created on that server. All the computer groups that are needed for client computers of the replica server must be created on the WSUS server that is the root of the WSUS server hierarchy. For more information about replica mode, see Manage WSUS Replica Servers [Manage WSUS Replica Servers](http://technet.microsoft.com/library/dd939893(WS.10).aspx) in the WSUS 3.0 SP2 Operations Guide.
+> If a WSUS server is running in replica mode, computer groups cannot be created on that server. All the computer groups that are needed for client computers of the replica server must be created on the WSUS server that is the root of the WSUS server hierarchy. For more information about replica mode, see Manage WSUS Replica Servers [Manage WSUS Replica Servers](https://technet.microsoft.com/library/dd939893(WS.10).aspx) in the WSUS 3.0 SP2 Operations Guide.
 
 Computers are always assigned to the **All computers** group, and they remain assigned to the **Unassigned computers** group until you assign them to another group. Computers can belong to more than one group.
 
@@ -424,14 +424,14 @@ Not all updates are good candidates for distribution by using express installati
 ### <a name="BKMK_1.6.LargeUpdates"></a>Large update deployment
 When you deploy large updates (such as service packs), you can avoid saturating the network by using the following practices:
 
-1.  Use Background Intelligent Transfer Service (BITS) throttling. BITS bandwidth limitations can be controlled by time-of-day, but they apply to all applications that are using BITS. To learn how to control BITS throttling, please see [Group Policies](http://msdn.microsoft.com/library/windows/desktop/aa362844(v=vs.85).aspx)
+1.  Use Background Intelligent Transfer Service (BITS) throttling. BITS bandwidth limitations can be controlled by time-of-day, but they apply to all applications that are using BITS. To learn how to control BITS throttling, please see [Group Policies](https://msdn.microsoft.com/library/windows/desktop/aa362844(v=vs.85).aspx)
 
 2.  Use Internet Information Services (IIS) throttling to limit throttling to one or more web services.
 
 3.  Use computer groups to control the rollout. A client computer identifies itself as a member of a particular computer group when it sends information to the WSUS server. The WSUS server uses this information to determine which updates should be deployed to this computer. You can set up multiple computer groups and sequentially approve large service pack downloads for a subset of these groups.
 
 ### <a name="BKMK_1.6.BITS"></a>Background Intelligent Transfer Service
-WSUS uses the Background Intelligent Transfer Service (BITS) protocol for all its file transfer tasks. This includes downloads to client computers and server synchronizations. BITS enables programs to download files by using spare bandwidth. BITS maintains file transfers through network disconnections and computer restarts. For more information, see: [Background Intelligent Transfer Service](http://msdn.microsoft.com/library/bb968799.aspx).
+WSUS uses the Background Intelligent Transfer Service (BITS) protocol for all its file transfer tasks. This includes downloads to client computers and server synchronizations. BITS enables programs to download files by using spare bandwidth. BITS maintains file transfers through network disconnections and computer restarts. For more information, see: [Background Intelligent Transfer Service](https://msdn.microsoft.com/library/bb968799.aspx).
 
 ## <a name="BKMK_1.7."></a>1.7. Plan Automatic Updates settings
 You can specify a deadline to approve updates on the WSUS server. The deadline causes client computers to install the update at a specific time, but there are a number of different situations, depending on whether the deadline has expired, whether there are other updates in the queue for the computer to install, and whether the update (or another update in the queue) requires a restart.

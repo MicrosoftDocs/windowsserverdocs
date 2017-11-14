@@ -12,12 +12,12 @@ ms.assetid: cab3afc3-d046-432f-a0bf-6282f0099032
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # pause
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Suspends the processing of a batch program and displays the following prompt:
 ```

@@ -12,11 +12,11 @@ ms.assetid: 000aa80a-60a0-4b51-815f-3237a4f3e0f4 vhorne
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # ftp: send_1
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Copies a local file to the remote computer using the current file transfer type.   
 ## Syntax  

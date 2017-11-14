@@ -12,12 +12,12 @@ ms.assetid: 85447184-1732-4816-a365-2e3599551bf8
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # bitsadmin getreplyfilename
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Gets the path of the file that contains the server reply.
 

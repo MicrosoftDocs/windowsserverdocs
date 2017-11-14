@@ -12,12 +12,12 @@ ms.assetid: 46d9cd64-8186-4cd4-a500-44700340fe81
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # rundll32
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Loads and runs 32-bit dynamic-link libraries (DLLs). There are no configurable settings for Rundll32. Help information is provided for a specific DLL you run with the **rundll32** command.
 
@@ -37,7 +37,7 @@ Rundll32 <DLLname>
 
 ## Remarks
 
-Rundll32 can only call functions from a DLL that are explicitly written to be called by Rundll32. For more information about Rundll32 requirements see [article 164787](http://go.microsoft.com/fwlink/?LinkID=165773) in the Microsoft Knowledge Base (http://go.microsoft.com/fwlink/?LinkID=165773).
+Rundll32 can only call functions from a DLL that are explicitly written to be called by Rundll32. For more information about Rundll32 requirements see [article 164787](https://go.microsoft.com/fwlink/?LinkID=165773) in the Microsoft Knowledge Base (https://go.microsoft.com/fwlink/?LinkID=165773).
 
 #### Additional references
 

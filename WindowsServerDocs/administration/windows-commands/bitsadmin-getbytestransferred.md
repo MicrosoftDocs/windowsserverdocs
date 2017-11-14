@@ -12,12 +12,12 @@ ms.assetid: 47bbf184-e06f-4be0-b2ba-d32b10d82002
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # bitsadmin getbytestransferred
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Retrieves the number of bytes transferred for the specified job.
 

@@ -12,11 +12,11 @@ ms.assetid: aee5ea0b-bb17-4c14-bde7-2f7a91f2f22b
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # nslookup lserver
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 changes the default server to the specified Domain Name System (DNS) domain.
 ## Syntax

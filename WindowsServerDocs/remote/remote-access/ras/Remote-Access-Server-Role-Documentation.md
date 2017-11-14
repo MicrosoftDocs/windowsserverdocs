@@ -22,9 +22,9 @@ Remote Access Server Role documentation includes topics that you can use when yo
   
 In addition to this topic, the following Remote Access Server Role documentation is available.  
   
--   [Deploy Remote Access in an Enterprise](http://technet.microsoft.com/library/jj134200.aspx)  
+-   [Deploy Remote Access in an Enterprise](https://technet.microsoft.com/library/jj134200.aspx)  
   
--   [Managing Remote Access](http://technet.microsoft.com/library/hh831539.aspx)  
+-   [Managing Remote Access](https://technet.microsoft.com/library/hh831539.aspx)  
   
 
 

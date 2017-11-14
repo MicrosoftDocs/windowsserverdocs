@@ -22,7 +22,7 @@ You can use the Remote Desktop client for Mac to work with Windows apps, resourc
 
 >[!Note]
 > - The Mac client runs on computers running macOS/OS 10.9 and newer.
-> - The information in this article applies primarily to the full version of the Mac client - the version available in the Mac AppStore. The latest Mac client beta does not yet have support for all of the features described below. For more information about the beta and what is available in that client, check out the [beta client release notes](http://go.microsoft.com/fwlink/?LinkID=619698&clcid=0x409).
+> - The information in this article applies primarily to the full version of the Mac client - the version available in the Mac AppStore. The latest Mac client beta does not yet have support for all of the features described below. For more information about the beta and what is available in that client, check out the [beta client release notes](https://go.microsoft.com/fwlink/?LinkID=619698&clcid=0x409).
 
 ## Get the Remote Desktop client
 Follow these steps to get started with Remote Desktop on your Mac:
@@ -32,7 +32,7 @@ Follow these steps to get started with Remote Desktop on your Mac:
 3. Add a Remote Desktop connection or a remote resource. You use a connection to connect to a directly to a Windows PC and a remote resource to use a RemoteApp program, session-based desktop, or a virtual desktop published on-premises using RemoteApp and Desktop Connections. This feature is typically available in corporate environments.
 
 ## What about the Mac beta client?
-We're currently testing a new beta client for Mac. Want to check it out? Go to [Microsoft Remote Desktop for Mac](http://go.microsoft.com/fwlink/?LinkID=619698) and click **Download**. You don't need to create an account or sign into HockeyApp to download the beta client.
+We're currently testing a new beta client for Mac. Want to check it out? Go to [Microsoft Remote Desktop for Mac](https://go.microsoft.com/fwlink/?LinkID=619698) and click **Download**. You don't need to create an account or sign into HockeyApp to download the beta client.
 
 If you already have the client, you can check for updates to ensure you have the latest version. In the beta client, click **Microsoft Remote Desktop Beta** at the top, and then click **Check for updates**. 
 
@@ -158,6 +158,6 @@ To learn more about this feature, check out [http://aka.ms/paa-sample](http://ak
 
 
 > [!TIP]
-> Questions and comments are always welcome. However, please do NOT post a request for troubleshooting help by using the comment feature at the end of this article. Instead, go to the [Remote Desktop client forum](http://social.technet.microsoft.com/forums/windowsserver/en-us/home?forum=winrdc) and start a new thread. Have a feature suggestion? Tell us in the [client user voice forum](https://remotedesktop.uservoice.com/forums/272085-remote-desktop-for-android).
+> Questions and comments are always welcome. However, please do NOT post a request for troubleshooting help by using the comment feature at the end of this article. Instead, go to the [Remote Desktop client forum](https://social.technet.microsoft.com/forums/windowsserver/en-us/home?forum=winrdc) and start a new thread. Have a feature suggestion? Tell us in the [client user voice forum](https://remotedesktop.uservoice.com/forums/272085-remote-desktop-for-android).
 
-Not finding content you need? Windows 10 users, tell us what you want on [Feedback Hub](feedback-hub:?tabid=2&contextid=898). 
+Not finding content you need? Windows 10 users, tell us what you want on [Feedback Hub](feedback-hub://?referrer=techDocsUcPage&tabid=2&contextid=898&newFeedback=true&topic=remote-desktop-mac.md). 

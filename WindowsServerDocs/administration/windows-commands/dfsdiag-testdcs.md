@@ -12,11 +12,11 @@ ms.assetid: abb915ab-23eb-45d7-9a2e-b6b9a5756a70
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # dfsdiag TestDCs
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Checks the configuration of domain controllers by performing the following tests on each domain controller in the specified domain:  
   

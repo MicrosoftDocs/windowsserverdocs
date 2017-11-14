@@ -14,7 +14,7 @@ ms.date: 8/16/2016
 
 >Applies To: Windows Server 2016
  
-For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](http://go.microsoft.com/fwlink/p/?LinkID=223177).  
+For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](https://go.microsoft.com/fwlink/p/?LinkID=223177).  
   
 |Property|Details|  
 |-|-|  

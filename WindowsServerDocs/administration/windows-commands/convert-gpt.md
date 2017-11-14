@@ -12,16 +12,16 @@ ms.assetid: b3b1b747-0a7a-4be2-8487-2c4be16ee190
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # convert gpt
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Converts an empty basic disk with the master boot record (MBR) partition style into a basic disk with the GUID partition table (GPT) partition style.
 
-For instructions regarding how to use this command, see [Change a Master Boot Record Disk into a GUID Partition Table Disk](http://go.microsoft.com/fwlink/?LinkId=207049) (http://go.microsoft.com/fwlink/?LinkId=207049).
+For instructions regarding how to use this command, see [Change a Master Boot Record Disk into a GUID Partition Table Disk](https://go.microsoft.com/fwlink/?LinkId=207049) (https://go.microsoft.com/fwlink/?LinkId=207049).
 
 ## Syntax
 

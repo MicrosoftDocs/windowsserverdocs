@@ -12,12 +12,12 @@ ms.assetid: e543945e-92c4-491e-8c2d-344f8a3e342d
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # bitsadmin getmodificationtime
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Retrieves the last time the job was modified or data was successfully transferred.
 

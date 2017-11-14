@@ -12,12 +12,12 @@ ms.assetid: 49a8b241-aa8c-45b7-844d-67a29fab708e
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # secedit:export
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Exports security settings stored in a database configured with security templates. For examples of how this command can be used, see [Examples](#BKMK_Examples).
 

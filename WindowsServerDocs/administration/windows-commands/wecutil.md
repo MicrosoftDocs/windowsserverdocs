@@ -12,12 +12,12 @@ ms.assetid: 0c82a6cb-d652-429c-9c3d-0f568c78d54b
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # wecutil
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Enables you to create and manage subscriptions to events that are forwarded from remote computers, which support WS-Management protocol. For examples of how to use this command, see [Examples](#BKMK_examples).
 
@@ -87,11 +87,11 @@ wecutil  [{es | enum-subscription}]
 ## Remarks
 
 > [!IMPORTANT]
-> If you receive the message, “The RPC server is unavailable” when you try to run wecutil, you need to start the Windows Event Collector service (wecsvc). To start wecsvc, at an elevated command prompt type net start wecsvc.
+> If you receive the message, “The RPC server is unavailable�? when you try to run wecutil, you need to start the Windows Event Collector service (wecsvc). To start wecsvc, at an elevated command prompt type net start wecsvc.
 -   The following example shows the contents of a configuration file:  
     ```
-    <Subscription xmlns="http://schemas.microsoft.com/2006/03/windows/events/subscription">
-    <Uri>http://schemas.microsoft.com/wbem/wsman/1/windows/EventLog</Uri>
+    <Subscription xmlns="https://schemas.microsoft.com/2006/03/windows/events/subscription">
+    <Uri>https://schemas.microsoft.com/wbem/wsman/1/windows/EventLog</Uri>
     <!-- Use Normal (default), Custom, MinLatency, MinBandwidth -->
     <ConfigurationMode>Normal</ConfigurationMode>
     <Description>Forward Sample Subscription</Description>

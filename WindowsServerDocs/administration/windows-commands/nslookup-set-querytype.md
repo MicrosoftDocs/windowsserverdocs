@@ -12,11 +12,11 @@ ms.assetid: 5af54ac5-fc1a-4af6-977b-f8e97c8eba90
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # nslookup set querytype
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 changes the resource record type for the query.
 ## Syntax

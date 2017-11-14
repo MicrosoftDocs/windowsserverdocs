@@ -12,11 +12,11 @@ ms.assetid: 0ecaa999-72ad-4191-adb5-a418de42a001
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # Using the get-Image Command
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Retrieves information about an image.
 ## Syntax

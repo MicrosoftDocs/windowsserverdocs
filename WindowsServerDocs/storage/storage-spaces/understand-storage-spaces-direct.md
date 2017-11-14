@@ -9,14 +9,14 @@ ms.topic: article
 author: jasongerend
 ms.date: 1/10/2017
 description: Resources to help you understand Storage Spaces Direct, a Windows Server-based software-defined storage solution.
+ms.localizationpriority: medium
 ---
 # Understanding Storage Spaces Direct
 
 >Applies To: Windows Server 2016
 
-<img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/understand.png" style='float:left; padding:.3em;' width= 75; alt="Understanding Storage Spaces Direct">
-
-This topic provides resources that help you understand [Storage Spaces Direct](storage-spaces-direct-overview.md), a Windows Server-based storage solution that uses industry-standard servers with local-attached drives to create highly available, highly scalable software-defined storage.
+<img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/understand.png" style='float:left; padding:.3em;width:75px'>This topic provides resources that help you understand [Storage Spaces Direct](storage-spaces-direct-overview.md), a Windows Server-based storage solution that uses industry-standard servers with local-attached drives to create highly available, highly scalable software-defined storage.
+<br>
 
 ## Resources for understanding
 

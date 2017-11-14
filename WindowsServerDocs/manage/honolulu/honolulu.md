@@ -10,17 +10,18 @@ ms.topic:
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 09/25/2017
+ms.date: 10/18/2017
+ms.localizationpriority: low
 ---
 # Microsoft Project Honolulu
 
->Applies To: Windows Server, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 and Windows 10
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 and Windows 10
 
 ## What is Honolulu?
 
 Honolulu is a locally deployed, browser-based, management tool set that enables on-premises administration of Windows Servers with no Azure or cloud dependency. Honolulu gives IT Admins full control over all aspects of their Server infrastructure, and is particularly useful for management on private networks that are not connected to the Internet.
 
-Honolulu is the modern evolution of “in-box” management tools, like Server Manager and MMC. It is complementary to System Center and Operations Management Suite, and is not intended to replace these products and services.
+Honolulu is the modern evolution of “in-box�? management tools, like Server Manager and MMC. It is complementary to System Center and Operations Management Suite, and is not intended to replace these products and services.
 
 ![](../media/honolulu/honolulu-deploy-graphic.png)
 

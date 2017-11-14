@@ -12,11 +12,11 @@ ms.assetid: 6d652d8e-3935-4a91-8ced-b17c0e7937be
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # create partition primary
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 creates a primary partition on the basic disk with focus.  
   

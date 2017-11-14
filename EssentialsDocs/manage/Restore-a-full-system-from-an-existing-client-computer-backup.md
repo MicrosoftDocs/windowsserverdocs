@@ -59,11 +59,11 @@ manager: dongill
 > [!NOTE]
 >  After a successful full system restore, you must reactivate BitLocker on the computer.  
 >   
->  For instructions about how to enable BitLocker on computers that are running  Windows 8, see [BitLocker: How to enable BitLocker](http://go.microsoft.com/fwlink/p/?LinkID=254918).  
+>  For instructions about how to enable BitLocker on computers that are running  Windows 8, see [BitLocker: How to enable BitLocker](https://go.microsoft.com/fwlink/p/?LinkID=254918).  
 >   
->  For instructions about how to enable BitLocker on computers that are running  Windows 7, see [BitLocker Drive Encryption Step-by-Step Guide for Windows 7](http://go.microsoft.com/fwlink/p/?LinkId=140225).  
+>  For instructions about how to enable BitLocker on computers that are running  Windows 7, see [BitLocker Drive Encryption Step-by-Step Guide for Windows 7](https://go.microsoft.com/fwlink/p/?LinkId=140225).  
   
- For more information about BitLocker Drive Encryption basics, see [BitLocker Frequently Asked Questions (FAQ)](http://go.microsoft.com/fwlink/p/?LinkID=254917).  
+ For more information about BitLocker Drive Encryption basics, see [BitLocker Frequently Asked Questions (FAQ)](https://go.microsoft.com/fwlink/p/?LinkID=254917).  
   
 ### Encrypting File System-encrypted files  
  The Encrypting File System (EFS) feature in Windows can provide additional user-based file level encryption for different levels of security among multiple users of the same computer. It is important to note that, unlike BitLocker-encrypted drives, EFS-encrypted folders and files continue to be encrypted in any computer backup. EFS is not available in Windows XP Home Edition,  Windows Vista Starter,  Windows Vista Home Basic, Windows Vista Home Premium,  Windows 7 Starter,  Windows 7 Home Basic,  Windows 7 Home Premium, or Windows 8. It is only available in Windows 8 Pro.  
@@ -124,7 +124,7 @@ manager: dongill
 > [!NOTE]
 >   Windows Server Essentials does not support the following restore scenarios:  
 >   
->  -   Restoring a Master Boot Record (MBR) disk to a Unified Extensible Firmware Interface (UEFI) œbased computer.  
+>  -   Restoring a Master Boot Record (MBR) disk to a Unified Extensible Firmware Interface (UEFI) ï¿½based computer.  
 > -   Restoring a UEFI/GPT backup to a BIOS system.  
 >   
 >  If you restore data in either of these scenarios, you will not be able to boot the system. In addition, you might not be able to use hard drives that are larger than two terabytes in size.  
@@ -235,7 +235,7 @@ manager: dongill
         1.  Click **Run Disk Manager (advanced)**, and create a new volume that is the same size as the system reserved volume.  
   
             > [!NOTE]
-            >  If a client computer is Unified Extensible Firmware Interface (UEFI) œbased, you must use the **diskpart** tool to initialize the system disk. To do this, open a command window (press Ctrl+Alt+Shift for 5 seconds in the WinPE environment), run **diskpart.exe**, and then run the following diskpart commands:  
+            >  If a client computer is Unified Extensible Firmware Interface (UEFI) ï¿½based, you must use the **diskpart** tool to initialize the system disk. To do this, open a command window (press Ctrl+Alt+Shift for 5 seconds in the WinPE environment), run **diskpart.exe**, and then run the following diskpart commands:  
             >   
             >  1.  **DISKPART>  list disk**  
             > 2.  **DISKPART> select disk #** *<disk\>*  
@@ -269,7 +269,7 @@ manager: dongill
     >  If BitLocker Drive Encryption was enabled on the computer before the restore, you must enable BitLocker manually after the computer restarts.  
   
 ##  <a name="BKMK_FindDrivers"></a> Where can I find the drivers for my hardware?  
- Depending on the new or restored computer hardware, the restore media may not include all of the storage and network adapter drivers that are needed when you restart your restored computer. You must determine which drivers are missing, locate those drivers on existing media or on the manufacturer „¢s website, copy them to a flash drive, and then copy them from the flash drive to the new or restored computer when you run the Full System Restore Wizard.  
+ Depending on the new or restored computer hardware, the restore media may not include all of the storage and network adapter drivers that are needed when you restart your restored computer. You must determine which drivers are missing, locate those drivers on existing media or on the manufacturer ï¿½ï¿½s website, copy them to a flash drive, and then copy them from the flash drive to the new or restored computer when you run the Full System Restore Wizard.  
   
  When a computer is backed up, the drivers for the computer are saved in the backup. If your recovery media does not include all of the drivers that you need, you can open a backup for that computer, and then copy the drivers to a USB flash drive.  
   

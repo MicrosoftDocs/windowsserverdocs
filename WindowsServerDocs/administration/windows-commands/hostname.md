@@ -12,11 +12,11 @@ ms.assetid: b9e7aab4-8f8d-4e18-b5a2-8e81b34a8566
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # hostname
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Displays the host name portion of the full computer name of the computer. 
 ## Syntax

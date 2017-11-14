@@ -12,16 +12,16 @@ ms.assetid: 44079900-e4ed-49d0-81e4-d652c38cd636
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # delete disk
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Deletes a missing dynamic disk from the list of disks.
 
-For instructions regarding how to use this command, see [Remove a Missing Dynamic Disk](http://go.microsoft.com/fwlink/?LinkId=207055) (http://go.microsoft.com/fwlink/?LinkId=207055).
+For instructions regarding how to use this command, see [Remove a Missing Dynamic Disk](https://go.microsoft.com/fwlink/?LinkId=207055) (https://go.microsoft.com/fwlink/?LinkId=207055).
 
 ## Syntax
 

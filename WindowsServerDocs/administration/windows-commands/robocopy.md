@@ -12,12 +12,12 @@ ms.assetid: d4c6e8e9-fcb3-4a4a-9d04-2d8c367b6354
 author: coreyp-at-msft
 ms.author: coreyp
 manager: lizapo
-ms.date: 02/28/2017
+ms.date: 10/16/2017
 ---
 
 # robocopy
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Copies file data.
 

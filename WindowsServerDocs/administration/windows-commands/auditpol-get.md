@@ -13,11 +13,11 @@ ms.assetid: fe13de4e-836c-4207-b47c-64b6272d6c41
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # auditpol get
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Retrieves the system policy, per-user policy, auditing options, and audit security descriptor object.
 

@@ -12,11 +12,11 @@ ms.assetid: a009706b-8e89-486b-8e3d-512cd9f4de74
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # Using the disable-TransportServer Command
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Disables all services for a Transport Server.
 ## Syntax

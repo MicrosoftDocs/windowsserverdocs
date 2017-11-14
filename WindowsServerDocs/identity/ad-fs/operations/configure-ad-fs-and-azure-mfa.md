@@ -5,7 +5,7 @@ description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 05/31/2017
+ms.date: 11/01/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 
@@ -22,6 +22,11 @@ Unlike with AD FS in Windows Server 2012 R2, the AD FS 2016 Azure MFA adapter in
 
 ## Note on Registering users for Azure MFA with AD FS 2016
 AD FS does not currently support inline proof up (registration) of Azure MFA security verification information.  As a result, when a user who has not yet registered (configured verification information) in Azure AD tries to authenticate with Azure MFA at AD FS, they will get an error.  While we are working to add inline proofing functionality, the following are the recommended configurations for enabling Azure MFA with AD FS.
+>[!NOTE]   
+> As a workaround to enable users to register for MFA you can:
+ - If you have an additional MFA method configured such as smart cards, you can customize the AD FS error page to direct users to https://aka.ms/mfasetup, where they can sign on with their smart card and then register for Azure MFA
+ - If you do not have another MFA method configured, you can configure AD FS to issue the MFA claim (claim type http://schemas.microsoft.com/claims/authnmethodsreferences, value http://schemas.microsoft.com/claims/multipleauthn ) under limited conditions such as when the user is on a domain joined computer on the corporate intranet, then customize the AD FS error page as mentioned above.
+
 
 ### Recommended deployment topologies
 
@@ -50,7 +55,7 @@ The following pre-requisites are required when using Azure MFA for authenticatio
 > Azure AD and Azure MFA are included in Azure AD Premium and the Enterprise Mobility Suite (EMS).  If you have either of these you do not need individual subscriptions.   
 - A Windows Server 2016 AD FS on-premises environment.  
 - Your on-premises environment is [federated with Azure AD.](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect-get-started-custom/#configuring-federation-with-ad-fs)  
-- [Windows Azure Active Directory Module for Windows PowerShell](http://go.microsoft.com/fwlink/p/?linkid=236297).  
+- [Windows Azure Active Directory Module for Windows PowerShell](https://go.microsoft.com/fwlink/p/?linkid=236297).  
 - Global administrator permissions on your instance of Azure AD to configure it using Azure AD PowerShell.  
 - Enterprise administrator credentials to configure the AD FS farm for Azure MFA.  
   
@@ -100,5 +105,4 @@ This cmdlet needs to be executed only once for an AD FS farm.  Use PowerShell to
 After this, you will see that Azure MFA is available as a primary authentication method for intranet and extranet use.    
   
 ![AD FS and MFA](media/Configure-AD-FS-2016-and-Azure-MFA/ADFS_AzureMFA6.png)  
-
 

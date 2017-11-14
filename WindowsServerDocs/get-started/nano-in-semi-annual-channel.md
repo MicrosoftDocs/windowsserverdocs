@@ -15,12 +15,8 @@ ms.assetid: a270334d-42a7-46ff-8eed-d8656a276544
 
 >Applies To: Windows Server, Semi-Annual Channel
 
-<<<<<<< HEAD
 
 As described in [Window Server Semi-Annual Channel Overview](semi-annual-channel-overview.md), Windows Server, version 1709 is offering a new option: the Semi-Annual Channel.
-=======
-As described in [Window Server Semi-annual Channel Overview](semi-annual-channel-overview.md), the next release of Windows Server is offering a new option: the Semi-annual Channel.
->>>>>>> a767ed59e38b5e439cd2954340aa46ca8a7cf4f3
 
 If you're already running Nano Server, this servicing model will be familiar, since it is already serviced by the Current Branch for Business (CBB) model. Windows Server's new Semi-Annual Channel is just a new name for the same model. In this model, feature update releases of Nano Server are expected two to three times per year.
 

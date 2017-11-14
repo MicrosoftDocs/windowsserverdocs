@@ -12,6 +12,7 @@ ms.date: 10/17/2017
 author: jaimeo
 ms.author: jaimeo
 manager: elizapo
+ms.localizationpriority: medium
 ---
 # Features removed or planned for replacement starting with Windows Server, version 1709
 
@@ -22,7 +23,7 @@ The following is a list of features and functionalities in Windows Server, versi
 ## Features removed from Windows Server, version 1709
 Windows Server, version 1709 contains the same features present in Windows Server 2016. However, this release does offer different installation options than Windows Server 2016 does:
 
-- As a Semi-Annual Channel release, Windows Server, version 1709 offers only the Server Core installation option. For details, see [Windows Server Semi-Annual Channel overview](semi-annual-channel-overview.md) [possibly also link into top of revised Server Core material?]
+- As a Semi-Annual Channel release, Windows Server, version 1709 offers only the Server Core installation option. For details, see [Windows Server Semi-Annual Channel overview](semi-annual-channel-overview.md).
 - Starting with this release, Nano Server is not available as an installable host operating system. Instead, Nano Server is available as a container operating system. See [Changes to Nano Server in Windows Server, version 1709](nano-in-semi-annual-channel.md).
 
 

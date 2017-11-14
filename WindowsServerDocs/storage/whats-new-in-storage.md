@@ -6,16 +6,42 @@ ms.author: jgerend
 ms.manager: dongill
 ms.technology: storage
 ms.topic: article
-author: kumudd
-ms.date: 09/15/2016
---- 
-# What's new in Storage in Windows Server 2016
+author: jasongerend
+ms.date: 11/6/2017
+---
+# What's new in Storage in Windows Server
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel); Windows Server 2016
 
-This topic explains the new and changed functionality in Storage in Windows Server 2016.
+This topic explains the new and changed functionality in storage in Windows Server, version 1709 and Windows Server 2016.
 
-## <a name="s2d"></a>Storage Spaces Direct  
+## What's new in storage in Windows Server, version 1709
+
+Windows Server, version 1709 is the first Windows Server release in the Semi-Annual Channel. The Semi-Annual Channel is a Software Assurance benefit and is fully supported in production for 18 months, with a new version every six months.
+
+For more information, see [Windows Server Semi-annual Channel Overview](https://docs.microsoft.com/en-us/windows-server/get-started/semi-annual-channel-overview).
+
+### Storage Replica
+
+The disaster recovery protection added by Storage Replica in Windows Server 2016 is now expanded to include:
+
+- **Test failover**: the option to mount the destination storage is now possible through the test failover feature. You can mount a snapshot of the replicated storage on destination nodes temporarily for testing or backup purposes. For more information, see [Frequently Asked Questions about Storage Replica](https://aka.ms/srfaq).
+- **Project Honolulu support**: Support for graphical management of server to server replication is now available in Project Honolulu. This removes the requirement to use PowerShell to manage a common disaster protection workload.
+
+### SMB
+
+- **SMB1 and guest authentication removal**: Windows Server, version 1709 no longer installs the SMB1 client and server by default. Additionally, the ability to authenticate as a guest in SMB2 and later is off by default. For more information, review [SMBv1 is not installed by default in Windows 10, version 1709 and Windows Server, version 1709](https://support.microsoft.com/help/4034314/smbv1-is-not-installed-by-default-in-windows-10-rs3-and-windows-server). 
+
+- **SMB2/SMB3 security and compatibility**: Additional options for security and application compatibility were added, including the ability to disable oplocks in SMB2+ for legacy applications, as well as require signing or encryption on per-connection basis from a client. For more information, review the SMBShare PowerShell module help.
+
+### Data Deduplication
+
+- **Data Deduplication now supports ReFS**: You no longer must choose between the advantages of a modern file system with ReFS and the Data Deduplication: now, you can enable Data Deduplication wherever you can enable ReFS. Increase storage efficiency by upwards of 95% with ReFS.
+- **DataPort API for optimized ingress/egress to deduplicated volumes**: Developers can now take advantage of the knowledge Data Deduplication has about how to store data efficiently to move data between volumes, servers, and clusters efficiently.
+
+## What's new in storage in Windows Server 2016
+
+### <a name="s2d"></a>Storage Spaces Direct  
 Storage Spaces Direct enables building highly available and scalable storage using servers with local storage. It simplifies the deployment and management of software-defined storage systems and unlocks use of new classes of disk devices, such as SATA SSD and NVMe disk devices, that were previously not possible with clustered Storage Spaces with shared disks.  
 
 **What value does this change add?**  
@@ -27,7 +53,7 @@ For more information, see the [Storage Spaces Direct in Windows Server 2016](sto
 **What works differently?**  
 This capability is new in Windows Server 2016.  
 
-## <a name="storage-replica"></a>Storage Replica  
+### <a name="storage-replica"></a>Storage Replica  
 Storage Replica enables storage-agnostic, block-level, synchronous replication between servers or clusters for disaster recovery, as well as stretching of a failover cluster between sites. Synchronous replication enables mirroring of data in physical sites with crash-consistent volumes to ensure zero data loss at the file-system level. Asynchronous replication allows site extension beyond metropolitan ranges with the possibility of data loss.  
 
 **What value does this change add?**  
@@ -50,7 +76,7 @@ For more information, see the [Storage Replica in Windows Server 2016](storage-r
 **What works differently?**  
 This capability is new in Windows Server 2016.  
 
-## <a name="storage-qos"></a>Storage Quality of Service  
+### <a name="storage-qos"></a>Storage Quality of Service  
 You can now use storage quality of service (QoS) to centrally monitor end-to-end storage performance and create management policies using Hyper-V and CSV clusters in Windows Server 2016.  
 
 **What value does this change add?**  
@@ -69,7 +95,7 @@ This capability is new in Windows Server 2016. Managing minimum reserves, monito
 
 For more information, see [Storage Quality of Service](storage-qos/storage-qos-overview.md)
 
-## <a name="dedup"></a>Data Deduplication  
+### <a name="dedup"></a>Data Deduplication  
 | Functionality | New or Updated | Description |
 |---------------|----------------|-------------|
 | [Support for Large Volumes](data-deduplication/whats-new.md#large-volume-support) | Updated | Prior to Windows Server 2016, volumes had to specifically sized for the expected churn, with volume sizes above 10 TB not being good candidates for deduplication. In Windows Server 2016, Data Deduplication supports volume sizes **up to 64 TB**. |
@@ -78,7 +104,7 @@ For more information, see [Storage Quality of Service](storage-qos/storage-qos-o
 | [Simplified Backup Support](data-deduplication/whats-new.md#simple-backup-support) | New | In Windows Server 2012 R2, Virtualized Backup Applications, such as Microsoft's [Data Protection Manager](https://technet.microsoft.com/en-us/library/hh758173.aspx), were supported through a series of manual configuration steps. In Windows Server 2016, a new default Usage Type "Backup", has been added for seamless deployment of Data Deduplication for Virtualized Backup Applications. |
 | [Support for Cluster OS Rolling Upgrades](data-deduplication/whats-new.md#cluster-upgrade-support) | New | Data Deduplication fully supports the new [Cluster OS Rolling Upgrade](..//failover-clustering/cluster-operating-system-rolling-upgrade.md) feature of Windows Server 2016. |
 
-## <a name="smb-hardening-improvements"></a>SMB hardening improvements for SYSVOL and NETLOGON connections  
+### <a name="smb-hardening-improvements"></a>SMB hardening improvements for SYSVOL and NETLOGON connections  
 In Windows 10 and Windows Server 2016 client connections to the Active Directory Domain Services default SYSVOL and NETLOGON shares on domain controllers now require SMB signing and mutual authentication (such as Kerberos).   
 
 **What value does this change add?**  
@@ -90,9 +116,9 @@ If SMB signing and mutual authentication are unavailable, a Windows 10 or Window
 > [!NOTE]  
 > The registry values for these settings aren't present by default, but the hardening rules still apply until overridden by Group Policy or other registry values.  
 
-For more information on these security improvements - also referred to as UNC hardening, see Microsoft Knowledge Base article [3000483](http://support.microsoft.com/kb/3000483) and [MS15-011 & MS15-014: Hardening Group Policy](http://blogs.technet.microsoft.com/srd/2015/02/10/ms15-011-ms15-014-hardening-group-policy).  
+For more information on these security improvements - also referred to as UNC hardening, see Microsoft Knowledge Base article [3000483](https://support.microsoft.com/kb/3000483) and [MS15-011 & MS15-014: Hardening Group Policy](https://blogs.technet.microsoft.com/srd/2015/02/10/ms15-011-ms15-014-hardening-group-policy).  
 
-## Work Folders
+### Work Folders
 Improved change notification when the Work Folders sever is running Windows Server 2016 and the Work Folders client is Windows 10.
 
 **What value does this change add?**<br>
@@ -103,7 +129,7 @@ This capability is new in Windows Server 2016. This requires a Windows Server 20
 
 If you're using an older client or the Work Folders server is Windows Server 2012 R2, the client will continue to poll every 10 minutes for changes.
 
-## ReFS 
+### ReFS 
 The next iteration of ReFS provides support for large-scale storage deployments with diverse workloads, delivering reliability, resiliency, and scalability for your data.     
 
 **What value does this change add?**<br>

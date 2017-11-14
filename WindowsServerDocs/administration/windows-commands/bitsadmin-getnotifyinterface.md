@@ -12,12 +12,12 @@ ms.assetid: 40bf9dd8-b167-406a-80a6-a5a6f1b8cf7f
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # bitsadmin getnotifyinterface
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Determines if another program has registered a COM callback interface for the specified job.
 

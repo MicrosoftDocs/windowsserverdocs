@@ -12,11 +12,11 @@ ms.assetid: fba3cbca-594e-4663-bb22-4ee0f63a1ac6
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # cscript
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 starts a script so that it runs in a command-line environment.
 ## Syntax

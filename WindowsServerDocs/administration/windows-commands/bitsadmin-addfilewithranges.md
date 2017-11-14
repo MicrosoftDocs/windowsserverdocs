@@ -12,12 +12,12 @@ ms.assetid: df0ce0bf-dff1-4a48-a16f-fd2f4d5f7189
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # bitsadmin addfilewithranges
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Adds a file to the specified job. BITS downloads the specified ranges from the remote file.
 

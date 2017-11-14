@@ -12,12 +12,12 @@ ms.assetid: d3041407-4577-4716-a39f-2c8ab48818d1
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # wbadmin delete catalog
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Deletes the backup catalog that is stored on the local computer. Use this command when the backup catalog has been corrupted and you cannot restore it using **wbadmin restore catalog**.
 
@@ -44,4 +44,4 @@ If you delete the backup catalog for a computer, you will not be able to access 
 
 -   [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)
--   [Remove-WBCatalog](http://technet.microsoft.com/library/jj902445.aspx)
+-   [Remove-WBCatalog](https://technet.microsoft.com/library/jj902445.aspx)

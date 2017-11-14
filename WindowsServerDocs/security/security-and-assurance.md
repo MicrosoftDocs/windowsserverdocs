@@ -10,6 +10,7 @@ ms.date: 5/22/2017
 ms.assetid: b886b2fd-3567-4f0a-8aa3-4ba7923d2d21
 author: coreyp-at-msft
 ms.author: coreyp
+ms.localizationpriority: high
 ---
 # Security and Assurance in Windows Server 
 
@@ -48,13 +49,13 @@ This video walkthrough shows how the Host Guardian Service enables shielded virt
 
 This Ignite presentation discusses enhancements in Hyper-V, Virtual Machine Manager, and a new Guardian Server role to enable shielded VMs.                
 
-### [Guarded Fabric Deployment Guide](http://go.microsoft.com/fwlink/?LinkId=708624)
+### [Guarded Fabric Deployment Guide](https://go.microsoft.com/fwlink/?LinkId=708624)
 This guide provides installation and validation information for Windows Server and System Center Virtual Machine Manager for Guarded Fabric Hosts and Shielded VMs.
 
-### [Shielded VM and Guarded Fabric Operations Guide](http://go.microsoft.com/fwlink/?LinkId=708320)
+### [Shielded VM and Guarded Fabric Operations Guide](https://go.microsoft.com/fwlink/?LinkId=708320)
 This guide provides best practices and recommendations for how to configure your Shielded VM environment, including information specific to Guarded Hosts and tenants.
 
-### [Shielded VM and Guarded Fabric Troubleshooting Guide](http://go.microsoft.com/fwlink/?LinkId=708321)
+### [Shielded VM and Guarded Fabric Troubleshooting Guide](https://go.microsoft.com/fwlink/?LinkId=708321)
 This guide provides information about how to resolve issues you may encounter in your Shielded VM environment.
 
 ### [Shielded VM Article](http://windowsitpro.com/hyper-v/super-secure-hyper-v-environments-shielded-vms-2016)
@@ -126,12 +127,12 @@ This overview topic provides brief descriptions of new capabilities in DNS, alon
 
 Compliance is an important aspect of security features. We leave the expert advice on how to achieve your compliance and what compliance looks like to your trusted compliance advisers, but we also want to provide initial mapping for you to be able to use when evaluating Windows Server.
 
--   [Hyper-V Shielded VMs compliance mapping whitepaper](http://download.microsoft.com/download/6/D/0/6D06E149-B4C1-4EED-ACD5-DF6066E93CC0/Coalfire_Branded_Hyper_V_Shielded_VMs_Whitepaper_EN_US.pdf)
+-   [Hyper-V Shielded VMs compliance mapping whitepaper](https://download.microsoft.com/download/6/D/0/6D06E149-B4C1-4EED-ACD5-DF6066E93CC0/Coalfire_Branded_Hyper_V_Shielded_VMs_Whitepaper_EN_US.pdf)
 
--   [JEA and JIT compliance mapping whitepaper](http://download.microsoft.com/download/2/7/A/27A2B5BB-6B52-4482-87C1-DA9D6B6D8C8D/Coalfire_Branded_Privileged_Identity_Manager_Whitepaper_EN_US.pdf)
+-   [JEA and JIT compliance mapping whitepaper](https://download.microsoft.com/download/2/7/A/27A2B5BB-6B52-4482-87C1-DA9D6B6D8C8D/Coalfire_Branded_Privileged_Identity_Manager_Whitepaper_EN_US.pdf)
 
--   [Device Guard compliance mapping whitepaper](http://download.microsoft.com/download/6/9/D/69D9E610-D23C-4F7E-A8CC-D65B87CEB4F8/Coalfire_Branded_Device_Guard_Whitepaper_EN_US.pdf)
+-   [Device Guard compliance mapping whitepaper](https://download.microsoft.com/download/6/9/D/69D9E610-D23C-4F7E-A8CC-D65B87CEB4F8/Coalfire_Branded_Device_Guard_Whitepaper_EN_US.pdf)
 
--   [Credential Guard compliance mapping whitepaper](http://download.microsoft.com/download/8/1/2/812009C9-E4B8-4D4B-AADD-FDC373D0A076/Coalfire_Branded_Credential_Guard_Whitepaper_EN_US.pdf)
+-   [Credential Guard compliance mapping whitepaper](https://download.microsoft.com/download/8/1/2/812009C9-E4B8-4D4B-AADD-FDC373D0A076/Coalfire_Branded_Credential_Guard_Whitepaper_EN_US.pdf)
 
--   [Windows Defender compliance mapping whitepaper](http://download.microsoft.com/download/C/7/7/C778B7BB-0783-42D7-93A9-B86DFB5A7BAD/Coalfire_Branded_Windows_Defender_Whitepaper_EN_US.pdf)
+-   [Windows Defender compliance mapping whitepaper](https://download.microsoft.com/download/C/7/7/C778B7BB-0783-42D7-93A9-B86DFB5A7BAD/Coalfire_Branded_Windows_Defender_Whitepaper_EN_US.pdf)

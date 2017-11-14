@@ -12,11 +12,11 @@ ms.assetid: 1f59b79a-d690-4d0e-ad38-40df5a0ce38e
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # create partition logical
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 creates a logical partition in an existing extended partition. You can only use this command on master boot record \(MBR\) disks.  
   

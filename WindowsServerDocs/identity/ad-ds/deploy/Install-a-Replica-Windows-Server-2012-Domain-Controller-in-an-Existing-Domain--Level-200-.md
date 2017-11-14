@@ -156,7 +156,7 @@ The **DNS Options** ADDSDeployment cmdlet arguments are:
   
 ![Install a replica](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_SMI_TR_UpgradeCreds.png)  
   
-For more information about whether you need to create a DNS delegation, see [Understanding Zone Delegation](http://technet.microsoft.com/library/cc771640.aspx).  
+For more information about whether you need to create a DNS delegation, see [Understanding Zone Delegation](https://technet.microsoft.com/library/cc771640.aspx).  
   
 ### Additional Options  
 ![Install a replica](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_SMI_TR_UpgradeAdditionalOptions.png)  

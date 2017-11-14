@@ -169,7 +169,7 @@ DsAcls $ADGroupPath /I:S /G ""$GroupName":RPWP;msDS-SyncServerUrl;user"
 4.  On the **Select the server and path** page, specify where to store the sync share. If you already have a file share created for this user data, you can choose that share. Alternatively you can create a new folder.  
   
     > [!NOTE]
-    >  By default, sync shares aren't directly accessible via a file share (unless you pick an existing file share). If you want to make a sync share accessible via a file share, use the **Shares** tile of Server Manager or the [New-SmbShare](http://technet.microsoft.com/library/jj635722.aspx) cmdlet to create a file share, preferably with access-based enumeration enabled.  
+    >  By default, sync shares aren't directly accessible via a file share (unless you pick an existing file share). If you want to make a sync share accessible via a file share, use the **Shares** tile of Server Manager or the [New-SmbShare](https://technet.microsoft.com/library/jj635722.aspx) cmdlet to create a file share, preferably with access-based enumeration enabled.  
   
 5.  On the **Specify the structure for user folders** page, choose a naming convention for user folders within the sync share. There are two options available:  
   
@@ -191,11 +191,11 @@ DsAcls $ADGroupPath /I:S /G ""$GroupName":RPWP;msDS-SyncServerUrl;user"
     -   **Automatically lock screen, and require a password** Requests that client PCs and devices automatically lock their screens after 15 minutes, require a six-character or longer password to unlock the screen, and activate a device lockout mode after 10 failed retries  
   
         > [!IMPORTANT]
-        >  To enforce password policies for Windows 7 PCs and for non-administrators on domain-joined PCs, use Group Policy password policies for the computer domains and exclude these domains from the Work Folders password policies. You can exclude domains by using the [Set-Syncshare -PasswordAutoExcludeDomain](http://technet.microsoft.com/library/dn296649\(v=wps.630\).aspx) cmdlet after creating the sync share. For information about setting Group Policy password policies, see [Password Policy](https://technet.microsoft.com/library/hh994572(v=ws.11).aspx).  
+        >  To enforce password policies for Windows 7 PCs and for non-administrators on domain-joined PCs, use Group Policy password policies for the computer domains and exclude these domains from the Work Folders password policies. You can exclude domains by using the [Set-Syncshare -PasswordAutoExcludeDomain](https://technet.microsoft.com/library/dn296649\(v=wps.630\).aspx) cmdlet after creating the sync share. For information about setting Group Policy password policies, see [Password Policy](https://technet.microsoft.com/library/hh994572(v=ws.11).aspx).  
   
 9. Review your selections and complete the wizard to create the sync share.
 
-You can create sync shares using Windows PowerShell by using the [New-SyncShare](http://technet.microsoft.com/library/dn296635.aspx) cmdlet. Below is an example of this method:  
+You can create sync shares using Windows PowerShell by using the [New-SyncShare](https://technet.microsoft.com/library/dn296635.aspx) cmdlet. Below is an example of this method:  
   
 ```powershell  
 New-SyncShare "HR Sync Share" K:\Share-1 –User "HR Sync Share Users"  
@@ -204,7 +204,7 @@ New-SyncShare "HR Sync Share" K:\Share-1 –User "HR Sync Share Users"
 The example above creates a new sync share named *Share01* with the path *K:\Share-1*, and access granted to the group named *HR Sync Share Users*  
   
 > [!TIP]
->  After you create sync shares you can use File Server Resource Manager functionality to manage the data in the shares. For example, you can use the **Quota** tile inside the Work Folders page in Server Manager to set quotas on the user folders. You can also use [File Screening Management](http://technet.microsoft.com/library/cc732074.aspx) to control the types of files that Work Folders will sync, or you can use the scenarios described in [Dynamic Access Control](https://technet.microsoft.com/windows-server-docs/identity/solution-guides/dynamic-access-control--scenario-overview) for more sophisticated file classification tasks.  
+>  After you create sync shares you can use File Server Resource Manager functionality to manage the data in the shares. For example, you can use the **Quota** tile inside the Work Folders page in Server Manager to set quotas on the user folders. You can also use [File Screening Management](https://technet.microsoft.com/library/cc732074.aspx) to control the types of files that Work Folders will sync, or you can use the scenarios described in [Dynamic Access Control](https://technet.microsoft.com/windows-server-docs/identity/solution-guides/dynamic-access-control--scenario-overview) for more sophisticated file classification tasks.  
   
 ## Step 8: Optionally specify a tech support email address   
  After installing Work Folders on a file server, you probably want to specify an administrative contact email address for the server. To add an email address, use the following procedure:  
@@ -226,7 +226,7 @@ The example above creates a new sync share named *Share01* with the path *K:\Sha
 >The msDS-SyncServerURL property in Active Directory should not be defined for remote users that are accessing Work Folders through a reverse proxy solution such as Web Application Proxy or Azure AD Application Proxy. If the msDS-SyncServerURL property is defined, the Work Folders client will try to access an internal URL that’s not accessible through the reverse proxy solution. When using Web Application Proxy or Azure AD Application Proxy, you need to create unique proxy applications for each Work Folders server. For more details, see [Deploying Work Folders with AD FS and Web Application Proxy: Overview](deploy-work-folders-adfs-overview.md) or [Deploying Work Folders with Azure AD Application Proxy](https://blogs.technet.microsoft.com/filecab/2017/05/31/enable-remote-access-to-work-folders-using-azure-active-directory-application-proxy/).
 
 
- Before you can do so, you must install a Windows Server 2012 R2 domain controller or update the forest and domain schemas by using the `Adprep /forestprep` and `Adprep /domainprep` commands. For information on how to safely run these commands, see [Running Adprep](http://technet.microsoft.com/library/dd464018.aspx).  
+ Before you can do so, you must install a Windows Server 2012 R2 domain controller or update the forest and domain schemas by using the `Adprep /forestprep` and `Adprep /domainprep` commands. For information on how to safely run these commands, see [Running Adprep](https://technet.microsoft.com/library/dd464018.aspx).  
   
  You probably also want to create a security group for file server administrators and give them delegated permissions to modify this particular user attribute, as described in Step 5 and Step 6. Without these steps you would need to get a member of the Domain Admins or Enterprise Admins group to configure automatic discovery for each user.  
   

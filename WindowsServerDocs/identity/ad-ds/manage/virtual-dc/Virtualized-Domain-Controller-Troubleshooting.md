@@ -567,7 +567,7 @@ Below are the Windows Server 2012 cloning-specific events in the Directory Servi
 |Source|Microsoft-Windows-ActiveDirectory_DomainService|  
 |Severity|Error|  
 |Message|Virtual domain controller cloning failed. The following %1 Managed Service Account(s) exist on the cloned machine:<br /><br />%2<br /><br />For cloning to succeed, all Managed Service Accounts must be removed. This can be done using the Remove-ADComputerServiceAccount PowerShell cmdlet.|  
-|Notes and resolution|Expected when using standalone MSAs (not group MSA). Do *not* follow the event advice to remove the account - it is incorrectly written. Use Uninstall-AdServiceAccount - [http://technet.microsoft.com/library/hh852310](http://technet.microsoft.com/library/hh852310).<br /><br />Standalone MSAs - first released in Windows Server 2008 R2 - were replaced in Windows Server 2012 with group MSAs (gMSA). GMSAs support cloning.|  
+|Notes and resolution|Expected when using standalone MSAs (not group MSA). Do *not* follow the event advice to remove the account - it is incorrectly written. Use Uninstall-AdServiceAccount - [https://technet.microsoft.com/library/hh852310](https://technet.microsoft.com/library/hh852310).<br /><br />Standalone MSAs - first released in Windows Server 2008 R2 - were replaced in Windows Server 2012 with group MSAs (gMSA). GMSAs support cloning.|  
   
 |||  
 |-|-|  
@@ -646,7 +646,7 @@ Below are the Windows Server 2012 cloning-specific events in the Directory Servi
 |Event ID|29251|  
 |Source|Microsoft-Windows-DirectoryServices-DSROLE-Server|  
 |Severity|Error|  
-|Message|Virtual domain controller cloning failed to reset the IP addresses of the clone machine.<br /><br />The returned error code is %1 (%2).<br /><br />This error might be caused by misconfiguration in network configuration sections in the virtual domain controller configuration file.<br /><br />Please see %systemroot%\debug\dcpromo.log for more information about errors that correspond to IP addresses resetting during virtual domain controller cloning attempts.<br /><br />Details on resetting machine IP addresses on the cloned machine can be found at http://go.microsoft.com/fwlink/?LinkId=208030|  
+|Message|Virtual domain controller cloning failed to reset the IP addresses of the clone machine.<br /><br />The returned error code is %1 (%2).<br /><br />This error might be caused by misconfiguration in network configuration sections in the virtual domain controller configuration file.<br /><br />Please see %systemroot%\debug\dcpromo.log for more information about errors that correspond to IP addresses resetting during virtual domain controller cloning attempts.<br /><br />Details on resetting machine IP addresses on the cloned machine can be found at https://go.microsoft.com/fwlink/?LinkId=208030|  
 |Notes and resolution|Verify the IP information set in the dccloneconfig.xml is valid and does not duplicate the original source machine.|  
   
 |||  
@@ -905,7 +905,7 @@ The promotion process means that the cloning starts, the DC is scrubbed of its c
 > [!NOTE]  
 > For further explanation of the dcpromo.log see the Understand and Troubleshoot AD DS Simplified Administration in Windows Server 2012.  
 >   
-> [http://go.microsoft.com/fwlink/p/?LinkId=237244](http://go.microsoft.com/fwlink/p/?LinkId=237244)  
+> [https://go.microsoft.com/fwlink/p/?LinkId=237244](https://go.microsoft.com/fwlink/p/?LinkId=237244)  
   
 -   Start clone-based promotion  
   
@@ -1674,7 +1674,7 @@ The System event log notes that the machine time that occurs when bringing an of
 |-|-|-|  
 |**Event ID**|**Source**|**Message**|  
 |**1**|Kernel-General|The system time has changed to *?<now>* from *<snapshot time/date>*.<br /><br />Change Reason: An application or system component changed the time.|  
-|**16654**|Directory-Services-SAM|A pool of account-identifiers (RIDs) has been invalidated. This may occur in the following expected cases:<br /><br />1. A domain controller is restored from backup.<br /><br />2. A domain controller running on a virtual machine is restored from snapshot.<br /><br />3. An administrator has manually invalidated the pool.<br /><br />See http://go.microsoft.com/fwlink/?LinkId=226247 for more information.|  
+|**16654**|Directory-Services-SAM|A pool of account-identifiers (RIDs) has been invalidated. This may occur in the following expected cases:<br /><br />1. A domain controller is restored from backup.<br /><br />2. A domain controller running on a virtual machine is restored from snapshot.<br /><br />3. An administrator has manually invalidated the pool.<br /><br />See https://go.microsoft.com/fwlink/?LinkId=226247 for more information.|  
 |**7036**|Service Control Manager|The DFS Replication service entered the stopped state.|  
 |**7036**|Service Control Manager|The DFS Replication service entered the running state.|  
   

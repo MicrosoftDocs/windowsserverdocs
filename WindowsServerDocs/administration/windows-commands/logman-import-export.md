@@ -12,11 +12,11 @@ ms.assetid: c258daba-fb93-47c0-a53b-2fe83ed2c743
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # logman import | export
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 import a Data Collector Set from an XML file, or export a Data Collector Set to an XML file.  
   

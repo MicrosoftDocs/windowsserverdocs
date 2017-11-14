@@ -17,7 +17,7 @@ ms.technology: identity-adds
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 
-<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd">
+<developerConceptualDocument xmlns="https://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="https://www.w3.org/1999/xlink" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd">
   <introduction>
     <para>If a destination domain controller logs Event ID 1388 or Event ID 1988, a lingering object has been detected and one of two conditions exists on the destination domain controller: </para>
     <list class="bullet">
@@ -93,7 +93,7 @@ ms.technology: identity-adds
     <content>
       <para>This event indicates that a destination domain controller that does not have strict replication consistency enabled received a request to update an object that does not reside in the local copy of the Active Directory database. In response, the destination domain controller requested the full object from the source replication partner. In this way, a lingering object was replicated to the destination domain controller. Therefore, the lingering object was reintroduced into the directory. </para>
       <alert class="important">
-        <para>When Event ID 1388 occurs, if either the source domain controller (the replication partner that is outbound-replicating the lingering object) or the destination domain controller (the inbound replication partner that reports Event ID 1388) is running Windows 2000 Server, you cannot use the Repadmin tool to remove lingering objects. For information about how to remove lingering objects in this case, see article 314282 in the Microsoft Knowledge Base (<externalLink><linkText>http://go.microsoft.com/fwlink/?LinkId=41410</linkText><linkUri>http://go.microsoft.com/fwlink/?LinkId=41410</linkUri></externalLink>). The procedures and information in this article apply to the removal of lingering objects from global catalog servers as well as from domain controllers that are not global catalog servers. </para>
+        <para>When Event ID 1388 occurs, if either the source domain controller (the replication partner that is outbound-replicating the lingering object) or the destination domain controller (the inbound replication partner that reports Event ID 1388) is running Windows 2000 Server, you cannot use the Repadmin tool to remove lingering objects. For information about how to remove lingering objects in this case, see article 314282 in the Microsoft Knowledge Base (<externalLink><linkText>https://go.microsoft.com/fwlink/?LinkId=41410</linkText><linkUri>https://go.microsoft.com/fwlink/?LinkId=41410</linkUri></externalLink>). The procedures and information in this article apply to the removal of lingering objects from global catalog servers as well as from domain controllers that are not global catalog servers. </para>
       </alert>
       <para>The event text identifies the source domain controller and the outdated (lingering) object. The following is an example of the event text:</para>
       <code>
@@ -242,7 +242,7 @@ a21aa6d9-7e8a-4a8f-bebf-c3e38d0b733a </code>
                   <para>
                     <codeInline>repadmin /showrepl &lt;ServerName&gt;</codeInline>
                   </para>
-                  <table xmlns:caps="http://schemas.microsoft.com/build/caps/2013/11">
+                  <table xmlns:caps="https://schemas.microsoft.com/build/caps/2013/11">
                     <thead>
                       <tr>
                         <TD>
@@ -286,7 +286,7 @@ a21aa6d9-7e8a-4a8f-bebf-c3e38d0b733a </code>
       <section address="BKMK_RemoveLingeringObjects">
         <title>Use Repadmin to remove lingering objects</title>
         <content>
-          <para>If the destination domain controller and source domain controller are running either Windows Server 2003 or <token>nextref_longhorincludes>, you can use this procedure to remove lingering objects with Repadmin. If either domain controller is running Windows 2000 Server, follow the instructions in article 314282 in the Microsoft Knowledge Base (<externalLink><linkText>http://go.microsoft.com/fwlink/?LinkId=41410</linkText><linkUri>http://go.microsoft.com/fwlink/?LinkId=41410</linkUri></externalLink>).</para>
+          <para>If the destination domain controller and source domain controller are running either Windows Server 2003 or <token>nextref_longhorincludes>, you can use this procedure to remove lingering objects with Repadmin. If either domain controller is running Windows 2000 Server, follow the instructions in article 314282 in the Microsoft Knowledge Base (<externalLink><linkText>https://go.microsoft.com/fwlink/?LinkId=41410</linkText><linkUri>https://go.microsoft.com/fwlink/?LinkId=41410</linkUri></externalLink>).</para>
           <para>
             <embeddedLabel>Requirements</embeddedLabel>
           </para>
@@ -315,7 +315,7 @@ a21aa6d9-7e8a-4a8f-bebf-c3e38d0b733a </code>
                   <para>
                     <codeInline>repadmin /removelingeringobjects &lt;ServerName&gt; &lt;ServerGUID&gt; &lt;DirectoryPartition&gt; /advisory_mode</codeInline>
                   </para>
-                  <table xmlns:caps="http://schemas.microsoft.com/build/caps/2013/11">
+                  <table xmlns:caps="https://schemas.microsoft.com/build/caps/2013/11">
                     <thead>
                       <tr>
                         <TD colspan="1">
@@ -425,7 +425,7 @@ a21aa6d9-7e8a-4a8f-bebf-c3e38d0b733a </code>
                       <para>
                         <codeInline>repadmin /regkey &lt;DC_LIST&gt; +strict</codeInline>
                       </para>
-                      <table xmlns:caps="http://schemas.microsoft.com/build/caps/2013/11">
+                      <table xmlns:caps="https://schemas.microsoft.com/build/caps/2013/11">
                         <thead>
                           <tr>
                             <TD>
@@ -536,7 +536,7 @@ a21aa6d9-7e8a-4a8f-bebf-c3e38d0b733a </code>
   <section address="BKMK_Ensure_Strict">
     <title>Ensure that strict replication consistency is enabled for newly promoted domain controllers</title>
     <content>
-      <para>If you are upgrading a forest that was originally created using a computer running Windows 2000 Server, you should ensure that the forest is configured to enable strict replication consistency on newly promoted domain controllers to help avoid lingering objects. After you update the forest as described in Upgrading Active Directory Domains to Windows Server 2008 AD DS Domains (<externalLink><linkText>http://go.microsoft.com/fwlink/?LinkId=89032</linkText><linkUri>http://go.microsoft.com/fwlink/?LinkId=89032</linkUri></externalLink>), all new domain controllers that you subsequently add to the forest are created with strict replication consistency disabled. However, you can implement a forest configuration change that causes new domain controllers to have strict replication consistency enabled. To ensure that new domain controllers that you add to the forest have strict replication consistency enabled, you can use the Ldifde.exe tool to create an object in the configuration directory partition of the forest. This object is responsible for enabling strict replication consistency on any Windows Server 2003 or <token>nextref_longhorincludes> domain controller that is promoted into the forest.</para>
+      <para>If you are upgrading a forest that was originally created using a computer running Windows 2000 Server, you should ensure that the forest is configured to enable strict replication consistency on newly promoted domain controllers to help avoid lingering objects. After you update the forest as described in Upgrading Active Directory Domains to Windows Server 2008 AD DS Domains (<externalLink><linkText>https://go.microsoft.com/fwlink/?LinkId=89032</linkText><linkUri>https://go.microsoft.com/fwlink/?LinkId=89032</linkUri></externalLink>), all new domain controllers that you subsequently add to the forest are created with strict replication consistency disabled. However, you can implement a forest configuration change that causes new domain controllers to have strict replication consistency enabled. To ensure that new domain controllers that you add to the forest have strict replication consistency enabled, you can use the Ldifde.exe tool to create an object in the configuration directory partition of the forest. This object is responsible for enabling strict replication consistency on any Windows Server 2003 or <token>nextref_longhorincludes> domain controller that is promoted into the forest.</para>
       <para>The object that you create is an operational GUID with the following name:</para>
       <para>CN=94fdebc6-8eeb-4640-80de-ec52b9ca17fa,CN=Operations,CN=ForestUpdates,CN=Configuration,DC=&lt;ForestRootDomain&gt;</para>
       <para>You can use the following procedure on any domain controller in the forest to add this object to the configuration directory partition.</para>
@@ -568,7 +568,7 @@ objectCategory: CN=Container,CN=Schema,CN=Configuration,DC=&lt;ForestRootDomain&
               <para>
                 <codeInline>ldifde -i -f &lt;Path&gt;&lt;FileName&gt;</codeInline>
               </para>
-              <table xmlns:caps="http://schemas.microsoft.com/build/caps/2013/11">
+              <table xmlns:caps="https://schemas.microsoft.com/build/caps/2013/11">
                 <thead>
                   <tr>
                     <TD>
@@ -610,7 +610,7 @@ objectCategory: CN=Container,CN=Schema,CN=Configuration,DC=&lt;ForestRootDomain&
           </step>
         </steps>
       </procedure>
-      <para>For information about using Ldifde, see LDIFDE (<externalLink><linkText>http://go.microsoft.com/fwlink/?LinkId=42656</linkText><linkUri>http://go.microsoft.com/fwlink/?LinkId=42656</linkUri></externalLink>).</para>
+      <para>For information about using Ldifde, see LDIFDE (<externalLink><linkText>https://go.microsoft.com/fwlink/?LinkId=42656</linkText><linkUri>https://go.microsoft.com/fwlink/?LinkId=42656</linkUri></externalLink>).</para>
     </content>
   </section>
   <relatedTopics />

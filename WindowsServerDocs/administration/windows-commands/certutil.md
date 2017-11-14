@@ -12,12 +12,12 @@ ms.assetid: c264ccf0-ba1e-412b-9dd3-d77dd9345ad9
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # certutil
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Certutil.exe is a command-line program that is installed as part of Certificate Services. You can use Certutil.exe to dump and display certification authority (CA) configuration information, configure Certificate Services, backup and restore CA components, and verify certificates, key pairs, and certificate chains.
 
@@ -994,7 +994,7 @@ Set, Verify or Delete CA site names
 [-f] [-config Machine\CAName] [-dc DCName]
 
 > [!NOTE]
-> For more information on configuring CAs for Active Directory Domain Services (AD DS) site awareness, see [AD DS Site Awareness for AD CS and PKI clients](http://social.technet.microsoft.com/wiki/contents/articles/14106.ad-ds-site-awareness-for-ad-cs-and-pki-clients.aspx).
+> For more information on configuring CAs for Active Directory Domain Services (AD DS) site awareness, see [AD DS Site Awareness for AD CS and PKI clients](https://social.technet.microsoft.com/wiki/contents/articles/14106.ad-ds-site-awareness-for-ad-cs-and-pki-clients.aspx).
 
 Return to [Menu](#BKMK_menu)
 
@@ -1708,10 +1708,10 @@ Return to [Menu](#BKMK_menu)
 ## <a name="BKMK_AddedExamples"></a>Additional certutil examples
 
 For some examples of how to use this command, see
-1.  [Certutil Examples for Managing Active Directory Certificate Services (AD CS) from the Command Line](http://social.technet.microsoft.com/wiki/contents/articles/3063.certutil-examples-for-managing-active-directory-certificate-services-ad-cs-from-the-command-line.aspx)
-2.  [Certutil tasks for managing certificates](http://technet.microsoft.com/library/cc772898.aspx)
-3.  [Binary Request Export Using the CertUtil.exe Command-Line Tool Walkthrough](http://social.technet.microsoft.com/wiki/contents/articles/7573.active-directory-certificate-services-pki-key-archival-and-management.aspx)
-4.  [Root CA certificate renewal](http://social.technet.microsoft.com/wiki/contents/articles/2016.root-ca-certificate-renewal.aspx)
-5.  [Certutil](http://msdn.microsoft.com/subscriptions/cc773087.aspx)
+1.  [Certutil Examples for Managing Active Directory Certificate Services (AD CS) from the Command Line](https://social.technet.microsoft.com/wiki/contents/articles/3063.certutil-examples-for-managing-active-directory-certificate-services-ad-cs-from-the-command-line.aspx)
+2.  [Certutil tasks for managing certificates](https://technet.microsoft.com/library/cc772898.aspx)
+3.  [Binary Request Export Using the CertUtil.exe Command-Line Tool Walkthrough](https://social.technet.microsoft.com/wiki/contents/articles/7573.active-directory-certificate-services-pki-key-archival-and-management.aspx)
+4.  [Root CA certificate renewal](https://social.technet.microsoft.com/wiki/contents/articles/2016.root-ca-certificate-renewal.aspx)
+5.  [Certutil](https://msdn.microsoft.com/subscriptions/cc773087.aspx)
 
 Return to [Menu](#BKMK_menu)

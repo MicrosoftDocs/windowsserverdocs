@@ -12,12 +12,12 @@ ms.assetid: 9ab50021-7433-4fac-92be-f164b2c7453a
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # sysocmgr
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Sysocmgr is deprecated, and is not guaranteed to be supported in future releases of Windows.
 

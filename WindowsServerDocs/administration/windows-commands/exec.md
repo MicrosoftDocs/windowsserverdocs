@@ -12,12 +12,12 @@ ms.assetid: 364e8baf-576f-401b-a431-7d3c06621614
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # exec
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Executes a file on the local computer. The file can be a **cmd** script.
 

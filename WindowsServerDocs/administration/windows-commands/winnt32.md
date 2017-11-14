@@ -12,11 +12,11 @@ ms.assetid: 5a0a6fb3-ba4e-4ace-8984-7f6d3875560e
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # winnt32
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Performs an installation of or upgrade to a product in Windows Server 2003. You can run **winnt32** at the command prompt on a computer running Windows 95, Windows 98, Windows Millennium edition, Windows NT, Windows 2000, Windows XP, or a product in the Windows Server 2003. If you run **winnt32** on a computer running Windows NT version 4.0, you must first apply Service Pack 5 or later.
 ## Syntax

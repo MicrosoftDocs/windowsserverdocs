@@ -12,12 +12,12 @@ ms.assetid: 5fe12f5d-11e9-4f3d-b7f9-40b26c8685e5
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # add alias
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Adds aliases to the alias environment. If used without parameters, **add alias** displays help at the command prompt.
 

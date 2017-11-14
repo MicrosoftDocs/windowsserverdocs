@@ -12,11 +12,11 @@ ms.assetid: e1b6a464-6a93-4e66-9969-04f175226d8d
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # dfsrmig
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 The `dfsrmig` command migrates SYSvol replication from File Replication Service (FRS) to Distributed File System (DFS) Replication, provides information about the progress of the migration, and modifies active directory Domain Services (AD DS) objects to support the migration.
 for examples of how to use this command, see the [Examples](#BKMK_examples) section later in this document.
@@ -100,6 +100,6 @@ To delete the global AD DS settings for DFS Replication for all read-only domain
 dfsrmig /deleteRoDfsrMember
 ```
 ## additional references
-[Command-Line Syntax Key](http://go.microsoft.com/fwlink/?LinkId=122056)
+[Command-Line Syntax Key](https://go.microsoft.com/fwlink/?LinkId=122056)
 
-[SYSvol Migration Series: Part 2 dfsrmig.exe: The SYSvol Migration Tool](http://go.microsoft.com/fwlink/?LinkID=121757)
+[SYSvol Migration Series: Part 2 dfsrmig.exe: The SYSvol Migration Tool](https://go.microsoft.com/fwlink/?LinkID=121757)

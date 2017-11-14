@@ -32,7 +32,7 @@ ms.technology: identity-adfs
 -   An attacker has managed to install malicious software on DCs, and you have been advised by Microsoft Support to recover the forest from backup.  
   
     > [!IMPORTANT]
-    >  This paper does not cover security recommendations about how to recover a forest that has been hacked or compromised. In general, it is recommended to follow Pass-the-Hash mitigation techniques to harden the environment. For more information, see [Mitigating Pass-the-Hash (PtH) Attacks and Other Credential Theft Techniques](http://www.microsoft.com/download/details.aspx?id=36036).  
+    >  This paper does not cover security recommendations about how to recover a forest that has been hacked or compromised. In general, it is recommended to follow Pass-the-Hash mitigation techniques to harden the environment. For more information, see [Mitigating Pass-the-Hash (PtH) Attacks and Other Credential Theft Techniques](https://www.microsoft.com/download/details.aspx?id=36036).  
   
 -   None of the DCs can replicate with their replication partners.  
   

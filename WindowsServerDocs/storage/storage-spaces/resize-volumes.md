@@ -8,6 +8,7 @@ ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
 ms.date: 01/23/2017
+ms.localizationpriority: medium
 ---
 
 # Extending volumes in Storage Spaces Direct

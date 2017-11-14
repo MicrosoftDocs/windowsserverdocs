@@ -16,7 +16,7 @@ manager: dongill
 ---
 # Remote Desktop Services - Secure data storage with UPDs
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 Store business resources, user personalization data, and settings securely on-premises or in Azure. RD Session Hosts use AD authentication and empower users with the resources they need in a personalized environment, securely. 
 

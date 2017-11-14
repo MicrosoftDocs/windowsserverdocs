@@ -38,7 +38,7 @@ The following table lists technologies that you might want to use in your virtua
 |--------------|---------------|  
 |[Client Hyper-V](https://msdn.microsoft.com/virtualization/hyperv_on_windows/windows_welcome)|Virtualization technology included with Windows 8, Windows 8.1 and Windows 10 that you can install through **Programs and Features** in the **Control Panel**.|  
 |[Failover Clustering](https://technet.microsoft.com/library/dn765474.aspx)|Windows Server feature that provides high availability for Hyper-V hosts and virtual machines.|  
-|[Nano Server](http://technet.microsoft.com/library/mt126167.aspx)|New installation option for Windows Server 2016 that is a remotely administered server operating system optimized for hosting in private clouds and datacenters.|  
+|[Nano Server](https://technet.microsoft.com/library/mt126167.aspx)|New installation option for Windows Server 2016 that is a remotely administered server operating system optimized for hosting in private clouds and datacenters.|  
 |[Virtual Machine Manager](https://technet.microsoft.com/system-center-docs/vmm/vmm)|System Center component that provides a management solution for the virtualized datacenter. You can configure and manage your virtualization hosts, networks, and storage resources so you can create and deploy virtual machines and services to private clouds that you've created.|  
 |[Windows Containers](https://msdn.microsoft.com/virtualization/windowscontainers/)|Use Windows Server and Hyper-V containers to provide standardized environments for development, test, and production teams.|  
   

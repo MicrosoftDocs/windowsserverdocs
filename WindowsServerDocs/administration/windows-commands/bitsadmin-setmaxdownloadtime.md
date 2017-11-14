@@ -12,12 +12,12 @@ ms.assetid: 16b96cf1-5738-415c-9b9d-c4ea8d5e4fec
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016 
+ms.date: 10/16/2017 
 ---
 
 # bitsadmin setmaxdownloadtime
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Sets the download timeout in seconds.
 
