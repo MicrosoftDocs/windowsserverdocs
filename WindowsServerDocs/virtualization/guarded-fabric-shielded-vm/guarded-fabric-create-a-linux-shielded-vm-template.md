@@ -120,7 +120,7 @@ These steps will walk you through the bare minimum requirements to get a Linux V
 13. If you are planning to use System Center Virtual Machine Manager to deploy your VMs, install the VMM guest agent to enable VMM to specialize your OS during VM provisioning.
     Specialization allows each VM to be set up securely with different users and SSH keys, networking configurations, and custom setup steps.
     Learn how to [obtain and install the VMM guest agent](https://docs.microsoft.com/en-us/system-center/vmm/vm-linux#install-the-vmm-guest-agent) in the VMM documentation.
-
+ls
 14. Next, [add the Microsoft Linux Software Repository to your package manager](../../administration/linux-package-repository-for-microsoft-software.md).
 
 15. Using your package manager, install the lsvmtools package which contains the Linux shielded VM bootloader shim, provisioning components, and disk preparation tool.
@@ -136,10 +136,12 @@ These steps will walk you through the bare minimum requirements to get a Linux V
     sudo yum install lsvmtools
     ```
 
-14. When you're done customizing the Linux OS, run the following command to install the components needed to provision and run your Linux shielded VM.
+14. When you're done customizing the Linux OS, locate the lsvmprep installation program on your system and run it.
     
     ```bash
-    sudo lsvmprep
+    # The path below may change based on the version of lsvmprep installed
+    # Run "find /opt -name lsvmprep" to locate the lsvmprep executable
+    sudo /opt/lsvmtools-1.0.0-x86-64/lsvmprep
     ```
 
 15. Shut down your VM.
