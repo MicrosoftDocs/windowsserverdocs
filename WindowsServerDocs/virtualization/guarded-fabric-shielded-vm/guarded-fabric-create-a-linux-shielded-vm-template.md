@@ -109,7 +109,7 @@ These steps will walk you through the bare minimum requirements to get a Linux V
 
     ```bash
     sudo zypper install hyper-v
-    sudo chkconfig hv\_kvp\_daemon on
+    sudo chkconfig hv_kvp_daemon on
     sudo systemctl enable sshd
     ```
 
