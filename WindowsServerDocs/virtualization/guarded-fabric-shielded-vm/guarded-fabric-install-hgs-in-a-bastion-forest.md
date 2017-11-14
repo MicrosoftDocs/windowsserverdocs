@@ -45,6 +45,8 @@ If this is the first gMSA in the domain, you will need to add a Key Distribution
 Each HGS node will need to be permitted to access the gMSA password.
 The easiest way to configure this is to create a security group that contains all of your HGS nodes and grant that security group access to retrieve the gMSA password.
 
+You must reboot your HGS server after adding it to a security group to ensure it obtains its new group membership.
+
 ```powershell
 # Check if the KDS root key has been set up
 if (-not (Get-KdsRootKey)) {
@@ -90,6 +92,9 @@ To set up your first HGS node, you will need to create one Cluster Name Object (
 The CNO represents the name of the cluster, and is primarily used internally by Failover Clustering.
 The VCO represents the HGS service that resides on top of the cluster and will be the name registered with the DNS server.
 
+> [!IMPORTANT]
+> The user who will run `Initialize-HgsServer` requires **Full Control** over the CNO and VCO objects in Active Directory.
+
 To quickly prestage your CNO and VCO, have an Active Directory admin run the following PowerShell commands:
 
 ```powershell
@@ -106,6 +111,31 @@ $ace = New-Object System.DirectoryServices.ActiveDirectoryAccessRule $cno.SID, "
 $acl.AddAccessRule($ace)
 Set-Acl -Path $vcoPath -AclObject $acl
 ```
+
+## Security baseline exceptions
+
+If you are deploying HGS into a highly locked down environment, certain group policies may prevent HGS from operating normally.
+Check your group policy objects for the following settings and follow the guidance if you are affected:
+
+### Network Logon
+
+**Policy Path:** Computer Configuration\Windows Settings\Security Settings\Local Policies\User Rights Assignments
+
+**Policy Name:** Deny access to this computer from the network
+
+**Required value:** Ensure the value does not block network logons for all local accounts. You can safely block local administrator accounts, however.
+
+**Reason:** Failover Clustering relies on a non-administrator local account called CLIUSR to manage cluster nodes. Blocking network logon for this user will prevent the cluster from operating correctly.
+
+### Kerberos Encryption
+
+**Policy Path:** Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options
+
+**Policy Name:** Network Security: Configure encryption types allowed for Kerberos
+
+**Action**: If this policy is configured, you must update the gMSA account with [Set-ADServiceAccount](https://docs.microsoft.com/en-us/powershell/module/addsadministration/set-adserviceaccount?view=win10-ps) to use only the supported encryption types in this policy. For instance, if your policy only allows AES128\_HMAC\_SHA1 and AES256\_HMAC\_SHA1, you should run `Set-ADServiceAccount -Identity HGSgMSA -KerberosEncryptionType AES128,AES256`.
+
+
 
 ## Next steps
 
