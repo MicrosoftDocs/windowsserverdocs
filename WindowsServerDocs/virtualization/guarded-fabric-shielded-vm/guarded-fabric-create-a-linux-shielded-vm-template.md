@@ -85,9 +85,9 @@ These steps will walk you through the bare minimum requirements to get a Linux V
 10. Proceed through the setup process for your selected Linux distribution.
     While each Linux distribution uses a different setup wizard, the following requirements must be met for VMs that will become Linux shielded VM template disks:
 
-        - The disk must be partitioned using the GUID Paritioning Table (GPT) layout
-        - The root partition must be encrypted with dm-crypt. The passphrase should be set to **passphrase** (all lowercase). This passphrase will be randomized and the partition re-encrypted when a shielded VM is provisioned.
-        - The boot partition must use the **ext2** file system
+    - The disk must be partitioned using the GUID Paritioning Table (GPT) layout
+    - The root partition must be encrypted with dm-crypt. The passphrase should be set to **passphrase** (all lowercase). This passphrase will be randomized and the partition re-encrypted when a shielded VM is provisioned.
+    - The boot partition must use the **ext2** file system
 
 11. Once your Linux OS has fully booted and you have signed in, it is recommended that you install the linux-virtual kernel and associated Hyper-V integration services packages.
     Additionally, you will want to install an SSH server or other remote management tool to access the VM once it is shielded.
