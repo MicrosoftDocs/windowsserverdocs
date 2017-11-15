@@ -21,9 +21,9 @@ ms.date: 10/12/2016
 Kerberos is an authentication protocol that is used to verify the identity of a user or host. This topic contains information about Kerberos authentication in Windows Server 2012 and Windows 8.
 
 ## <a name="BKMK_OVER"></a>Feature description
-The Windows??Server operating systems implement the Kerberos version 5 authentication protocol and extensions for public key authentication, transporting authorization data, and delegation. The Kerberos authentication client is implemented as a security support provider \(SSP\), and it can be accessed through the Security Support Provider Interface \(SSPI\). Initial user authentication is integrated with the Winlogon single sign\-on architecture.
+The Windows Server operating systems implement the Kerberos version 5 authentication protocol and extensions for public key authentication, transporting authorization data, and delegation. The Kerberos authentication client is implemented as a security support provider \(SSP\), and it can be accessed through the Security Support Provider Interface \(SSPI\). Initial user authentication is integrated with the Winlogon single sign\-on architecture.
 
-The Kerberos Key Distribution Center \(KDC\) is integrated with other Windows Server??security services that run on the domain controller. The KDC uses the domain's Active Directory Domain Services database as its security account database. Active Directory Domain Services is required for default Kerberos implementations within the domain or forest.
+The Kerberos Key Distribution Center \(KDC\) is integrated with other Windows Server security services that run on the domain controller. The KDC uses the domain's Active Directory Domain Services database as its security account database. Active Directory Domain Services is required for default Kerberos implementations within the domain or forest.
 
 ## <a name="kerb_tr_Kerb_Benefits"></a>Practical applications
 The benefits gained by using Kerberos for domain\-based authentication are:

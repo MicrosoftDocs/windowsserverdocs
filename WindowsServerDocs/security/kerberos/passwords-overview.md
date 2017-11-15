@@ -23,7 +23,7 @@ This topic for the IT professional describes passwords as used in the Windows op
 ## <a name="BKMK_OVER"></a>Feature description
 Operating systems and applications today are architected around passwords and even if you use smart cards or biometric systems, all accounts still have passwords and they can still be used in some circumstances. Some accounts, notably accounts used to run services, cannot even use smart cards and biometric tokens and therefore must use a password to authenticate. Windows protects passwords using cryptographic hashes.
 
-For more information about Windows passwords, see the [Passwords Technical Overview](https://technet.microsoft.com/library/hh994558(WS.10).aspx) in the Windows??Server??2008??TechNet Library.
+For more information about Windows passwords, see [Passwords Technical Overview](https://technet.microsoft.com/library/hh994558(WS.10).aspx).
 
 ## <a name="BKMK_APP"></a>Practical applications
 In Windows and many other operating systems, the most common method for authenticating a user's identity is to use a secret passphrase or password. Securing your network environment requires that strong passwords be used by all users. This helps avoid the threat of a malicious user guessing a weak password, whether through manual methods or by using tools, to acquire the credentials of a compromised user account. This is especially true for administrative accounts. When you change a complex password regularly, it reduces the likelihood of a password attack compromising that account.
