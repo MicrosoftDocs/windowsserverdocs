@@ -45,7 +45,7 @@ Members of the Protected Users group are limited further by the following method
 -   The default Kerberos Ticket Granting Tickets (TGTs) lifetime setting of four hours is configurable using Authentication Policies and Silos accessed through the Active Directory Administrative Center (ADAC). This means that when four hours has passed, the user must authenticate again.
 
 > [!WARNING]
-> Accounts for services and computers should not be members of the Protected Users group. This group provides no local protection because the password or certificate is always available on the host. Authentication will fail with the error ???the user name or password is incorrect??? for any service or computer that is added to the Protected Users group.
+> Accounts for services and computers should not be members of the Protected Users group. This group provides no local protection because the password or certificate is always available on the host. Authentication will fail with the error "the user name or password is incorrect" for any service or computer that is added to the Protected Users group.
 
 For more information about this group, see [Protected Users Security Group](protected-users-security-group.md).
 
