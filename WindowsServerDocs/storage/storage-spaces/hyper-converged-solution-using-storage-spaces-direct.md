@@ -24,14 +24,14 @@ Before deploying Storage Spaces Direct, we recommended reviewing the [Storage Sp
 
 ## Hyper-converged and disaggregated solutions
 
-You can deploy Storage Spaces Direct either:
+You can deploy Storage Spaces Direct in the following configurations:
 
 - **Hyper-converged** - Hyper-V VMs run directly on the Storage Spaces Direct cluster that hosts the storage, as shown in Figure 1. Virtual machine files are stored on local CSVs. This allows for scaling Hyper-V compute clusters together with the storage it is using, reducing the number of clusters required.
 - **Disaggregated** - Workloads run in a separate cluster from the Storage Spaces Direct cluster. Files for the workloads are stored on file shares hosted by the Storage Spaces Direct cluster and accessed across the network. This allows you to scale your workload cluster(s) separately from your storage, but does increase the number of clusters involved.
 
-![A hyper-converged cluster with virtual machines hosted by the Storage Spaces Direct cluster](media/Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016/StorageSpacesDirectHyperconverged.png)
+   ![A hyper-converged cluster with virtual machines hosted by the Storage Spaces Direct cluster](media/Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016/StorageSpacesDirectHyperconverged.png)
 
-**FIGURE 1:** Storage Spaces Direct in a hyper-converged deployment with virtual machines running directly on the storage cluster
+   **FIGURE 1:** Storage Spaces Direct in a hyper-converged deployment with virtual machines running directly on the storage cluster
 
 ## Information gathering
 
