@@ -170,7 +170,7 @@ In addition, only Android devices fail when attempting to connect to a Federatio
 
 #### Cause
 Android - across all versions and all devices - does not support downloading additional certificates from the authorityInformationAccess field of the certificate. This is true of the Chrome browser as well. Any Server Authentication certificate that’s missing intermediate certificates will result in this error if the entire certificate chain is not passed from AD FS.
-[SD] I am not sure whether some of our customers will understand the term “extra download based on authorityInformationAccess”. Instead, I think we should say, SSL certificate  I think we should also present a link to a tool (like the Exchange one I alluded to below) that the admins can use to validate their SSL configuration.
+
 
 #### Resolution
 A proper solution is to configure the AD FS and WAP servers to send the necessary intermediate certificates along with the SSL certificate.
