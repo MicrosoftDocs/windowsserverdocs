@@ -177,5 +177,5 @@ A proper solution is to configure the AD FS and WAP servers to send the necessar
 
 When exporting the SSL certificate from one machine to be imported to the computer’s personal store of the AD FS and WAP server(s), make sure to export the Private key and select “Personal Information Exchange - PKCS #12”. It is important that the check box to “Include all certificates in the certificate path if possible” is checked, as well as “Export all extended properties”. Run certlm.msc on the Windows servers and import the *.PFX into the Computer’s Personal Certificate store. This will cause the server to pass the entire certificate chain to the ADAL library.  
 
->[Note!]
+>[!NOTE]
 > The certificate store of Network Load Balancers should also be updated to include the entire certificate chain if present
