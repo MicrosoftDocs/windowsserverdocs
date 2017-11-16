@@ -306,6 +306,16 @@ Do the following steps from a management system using *Enter-PSSession* to conne
 
     Values should show **True** for RDMA Capable for the RDMA enabled interfaces. The following is an example where you show true for the adapters **vEthernet (SMB\_1)** and **vEthernet (SMB\_2)**.
 
+    ```
+    Interface Index RSS Capable RDMA Capable Speed    IpAddresses                                                    Friendly Name                                                   
+    --------------- ----------- ------------ -----    -----------                                                    -------------                                                   
+    15              True        True        20 Gbps  {fe80::4dec:79a4:95c1:69ff, 10.0.1.200, 10.0.1.50, 10.0.1.113} vEthernet (SMB_1)                                               
+    10              True        True        20 Gbps  {fe80::8522:df04:73ae:266, 10.0.2.200}                         vEthernet (SMB_2)                                               
+    28              False       False        10 Gbps  {fe80::c5e3:bfc7:1c78:910e, 169.254.4.227}                     Local Area Connection* 11                                       
+    21              True        False        20 Gbps  {fe80::d1d4:70ca:8b8b:d29c, 10.0.1.107}                        vEthernet (SETswitch)                                           
+    22              True        False        1 Gbps   {fe80::a031:def0:3a80:d997, 169.254.217.151}                   NIC1                                                          
+    ```
+
 ## Step 3: Configure Storage Spaces Direct
 
 The following steps are done on a management system that is the same version as the servers being configured. The following steps should NOT be run remotely using a PowerShell session, but instead run in a local PowerShell session on the management system, with administrative permissions.
