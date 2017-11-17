@@ -4,7 +4,7 @@ description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 10/23/2017
+ms.date: 11/17/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
@@ -59,8 +59,13 @@ The following additional values will be available in the discovery doc to indica
 - end_session_endpoint: this is the oauth logout uri tht the client can use to initiate logout on the server.
 
 
-## AD FS Properties
-The AD FS property EnableOAuthLogout will be enabled by default. 
+## AD FS server configuration
+The AD FS property EnableOAuthLogout will be enabled by default.  This property tells the AD FS server to browse for the URL (LogoutURI) with the SID to initiate logout on the client.  
+If you do not have [KB4038801](https://support.microsoft.com/en-gb/help/4038801/windows-10-update-kb4038801) installed you can use the following PowerShell command:
+
+```PowerShell
+Set-ADFSProperties -EnableOAuthLogout $true
+```
 
 >[!NOTE]
 > `EnableOAuthLogout` parameter will be marked as obsolete after installing [KB4038801](https://support.microsoft.com/en-gb/help/4038801/windows-10-update-kb4038801). `EnableOAUthLogout` will always be true and will have no impact on the logout functionality.
@@ -73,7 +78,11 @@ Client needs to implement a url which 'logs off' the logged in user. Administrat
 - `(Add | Set)-AdfsServerApplication`
 - `(Add | Set)-AdfsClient`
 
-For implementing the `LogoutUri`, the client needs to ensure it clears the authentication state of the user in the application, for example, dropping the authentication tokens that it has. AD FS will browse to that URL, with the SID as the query parameter, signaling the relying party / application to log off the user. 
+```PowerShell
+Set-AdfsClient -LogoutUri <url>
+```
+
+The `LogoutUri` is the url used by AF FS to "log off" the user. For implementing the `LogoutUri`, the client needs to ensure it clears the authentication state of the user in the application, for example, dropping the authentication tokens that it has. AD FS will browse to that URL, with the SID as the query parameter, signaling the relying party / application to log off the user. 
 
 ![](media/ad-fs-logout-openid-connect/adfs_single_logout2.png)
 
