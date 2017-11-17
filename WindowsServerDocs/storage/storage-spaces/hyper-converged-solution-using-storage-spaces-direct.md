@@ -18,9 +18,11 @@ ms.localizationpriority: medium
 This topic provides instructions for how to deploy [Storage Spaces Direct](storage-spaces-direct-overview.md) to provide software-defined storage for your workloads. It describes both hyper-converged solutions where the cluster hosts the storage and virtual machines as well as a disaggregated (also known as converged) solution where workloads run on a different cluster. Storage Spaces Direct runs on Windows Server 2016 Datacenter Edition.
 
 > [!NOTE]
-> Note that for production environments we recommend acquiring a *Windows Server Software-Defined* hardware/software offering, which includes production deployment tools and procedures. These offerings are designed, assembled, and validated to meet Microsoft's requirements for private cloud environments, helping ensure reliable operation. More information about the program and links to our partner websites can be found at: [Windows Server Software Defined](https://www.microsoft.com/cloud-platform/software-defined-datacenter).<br>To evaluate Storage Spaces Direct without investing in hardware, you can use Hyper-V virtual machines, as described in [Using Storage Spaces Direct in guest virtual machine clusters](storage-spaces-direct-in-vm.md).
+> Note that for production environments we recommend acquiring a *Windows Server Software-Defined* hardware/software offering, which includes production deployment tools and procedures. These offerings are designed, assembled, and validated to meet Microsoft's requirements for private cloud environments, helping ensure reliable operation. More information about the program and links to our partner websites can be found at: [Windows Server Software Defined](https://www.microsoft.com/cloud-platform/software-defined-datacenter).
 
-Before deploying Storage Spaces Direct, we recommended reviewing the [Storage Spaces Direct hardware requirements](Storage-Spaces-Direct-Hardware-Requirements.md) and skimming this document to familiarize yourself with the overall approach, and to get a sense for the important notes associated with some steps.
+To evaluate Storage Spaces Direct without investing in hardware, you can use Hyper-V virtual machines, as described in [Using Storage Spaces Direct in guest virtual machine clusters](storage-spaces-direct-in-vm.md).
+
+Before deploying Storage Spaces Direct, we recommended reviewing the [Storage Spaces Direct hardware requirements](Storage-Spaces-Direct-Hardware-Requirements.md) and skimming this document to familiarize yourself with the overall approach, and to get a sense for the important notes associated with some steps. You also might want to review the extensive and handy [Windows Server 2016 rapid lab deployment scripts](https://aka.ms/ws2016lab), which we use for training purposes.
 
 ## Hyper-converged and disaggregated solutions
 
@@ -459,7 +461,7 @@ The next step in setting up the cluster services for your file server is creatin
 4.  On the **Client Access Point** page, type a name for the Scale-Out File Server.
 5.  Verify that the role was successfully set up by going to **Roles** and confirming that the **Status** column shows **Running** next to the clustered file server role you created, as shown in Figure 2.
 
-    ![Failover Cluster Manager showing the Scale&#45;Out File Server](../Image/Failover%20Cluster%20Manager%20showing%20the%20Scale-Out%20File%20Server.png "Failover Cluster Manager showing the Scale-Out File Server")
+    ![Failover Cluster Manager showing the Scale&#45;Out File Server](media\Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016\SOFS_in_FCM.png "Failover Cluster Manager showing the Scale-Out File Server")
 
      **Figure 2** Failover Cluster Manager showing the Scale-Out File Server with the Running status
 
@@ -471,7 +473,7 @@ The next step in setting up the cluster services for your file server is creatin
  In a Windows PowerShell session that's connected to the file server cluster, enter the following commands to create the Scale-Out File Server role, changing *FSCLUSTER* to match the name of your cluster, and *SOFS* to match the name you want to give the Scale-Out File Server role:
 
 ```PowerShell
-Add-ClusterScaleOutFileServerRole -Name SOFS -Cluster FSCLUSTER  
+Add-ClusterScaleOutFileServerRole -Name SOFS -Cluster FSCLUSTER
 ```
 
 > [!NOTE]
