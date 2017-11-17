@@ -135,7 +135,7 @@ From the management system, perform the following steps:
 
 ### Step 1.3: Install server roles and features
 
-The next step is to install the following server roles and features on all of the nodes:
+The next step is to [install the server roles and features](../../administration/server-manager/install-or-uninstall-roles-role-services-or-features) on all of the nodes:
 * Failover Clustering
 * Hyper-V
 * File Server (if you want to host any file shares, such as for a disaggregated deployment)
@@ -143,10 +143,16 @@ The next step is to install the following server roles and features on all of th
 * RSAT-Clustering-PowerShell
 * Hyper-V-PowerShell
 
-To do so, use the following PowerShell command:
+To do so, use the Install-WindowsFeature cmdlet. Here's an example PowerShell script you can use to install the roles and features on all members - just change the *ClusterName* and *ClusterRoles* variables to fit your deployment:
 
 ```PowerShell
-Install-WindowsFeature -Name "Data-Center-Bridging","Failover-Clustering","Hyper-V","RSAT-Clustering-PowerShell","Hyper-V-PowerShell","FS-FileServer"
+# Fill in these variables with your values
+$Servers = "storage-node01","storage-node02","storage-node03","storage-node04"
+$ClusterRoles = "Data-Center-Bridging","Failover-Clustering","Hyper-V","RSAT-Clustering-PowerShell","Hyper-V-PowerShell","FS-FileServer"
+
+foreach ($server in $servers){
+    Install-WindowsFeature –Computername $server –Name $ClusterRoles
+}
 ```
 
 ## Step 2: Configure the network
