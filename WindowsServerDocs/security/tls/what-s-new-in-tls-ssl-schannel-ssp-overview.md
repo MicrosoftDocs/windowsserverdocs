@@ -96,7 +96,7 @@ For information about what data, including the application-defined store, is def
 
 **Defaults for Trust Modes**
 
-There are three Client Authentication Trust Modes supported by the Schannel provider. The trust mode controls how validation of the client's certificate chain is performed and is a system-wide setting controlled by the REG_DWORD ???ClientAuthTrustMode??? under HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\Schannel.
+There are three Client Authentication Trust Modes supported by the Schannel provider. The trust mode controls how validation of the client's certificate chain is performed and is a system-wide setting controlled by the REG_DWORD "ClientAuthTrustMode" under HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\Schannel.
 
 |Value|Trust Mode|Description|
 |-----|-------|--------|
@@ -132,7 +132,7 @@ The DTLS version 1.0 protocol has been added to the Schannel Security Support Pr
 
 **What value does this add?**
 
-Datagrams are common in streaming media ??? such as gaming or secured video conferencing. Adding the DTLS protocol to the Schannel provider gives you the ability to use the familiar Windows SSPI model in securing the communication between client computers and servers. DTLS is deliberately designed to be as similar to TLS as possible, both to minimize new security invention and to maximize the amount of code and infrastructure reuse.
+Datagrams are common in streaming media, such as gaming or secured video conferencing. Adding the DTLS protocol to the Schannel provider gives you the ability to use the familiar Windows SSPI model in securing the communication between client computers and servers. DTLS is deliberately designed to be as similar to TLS as possible, both to minimize new security invention and to maximize the amount of code and infrastructure reuse.
 
 **How it works**
 

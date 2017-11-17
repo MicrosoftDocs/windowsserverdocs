@@ -20,7 +20,7 @@ ms.date: 10/12/2016
 
 This topic for the IT professional introduces the TLS/SSL implementation in Windows using the Schannel Security Service Provider (SSP) by describing practical applications, changes in Microsoft's implementation, and software requirements, plus additional resources for Windows Server 2012 and Windows 8.
 
-**Did you mean???**
+**Did you mean:**
 
 -   [The Schannel security package](https://msdn.microsoft.com/library/ms678421.aspx)
 

@@ -80,7 +80,7 @@ Protected accounts have the following deployment requirements:
 This section covers new logs to help troubleshoot events that are related to Protected Users and how Protected Users can impact changes to troubleshoot either ticket-granting tickets (TGT) expiration or delegation issues.  
   
 #### New logs for Protected Users  
-Two new operational administrative logs are available to help troubleshoot events that are related to Protected Users: Protected User ??? Client Log and Protected User Failures ??? Domain Controller Log. These new logs are located in Event Viewer and are disabled by default. To enable a log, click **Applications and Services Logs**, click **Microsoft**, click **Windows**, click **Authentication**, and then click the name of the log and click **Action** (or right-click the log) and click **Enable Log**.  
+Two new operational administrative logs are available to help troubleshoot events that are related to Protected Users: Protected User - Client Log and Protected User Failures - Domain Controller Log. These new logs are located in Event Viewer and are disabled by default. To enable a log, click **Applications and Services Logs**, click **Microsoft**, click **Windows**, click **Authentication**, and then click the name of the log and click **Action** (or right-click the log) and click **Enable Log**.  
   
 For more information about events in these logs, see [Authentication Policies and Authentication Policy Silos](https://technet.microsoft.com/library/dn486813.aspx).  
   
@@ -330,8 +330,8 @@ The accounts section in the Authentication Policy shows the accounts that have d
   
 ![Screenshot of the accounts section in Authentication Policy showing the accounts that have directly applied the policy](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_AccountsAssigned.gif)  
   
-#### Use the Authentication Policy Failures ??? Domain Controller administrative log  
-A new **Authentication Policy Failures ??? Domain Controller** administrative log under **Applications and Services Logs** > **Microsoft** > **Windows** > **Authentication** has been created to make it easier to discover failures due to Authentication Policies. The log is disabled by default. To enable it, right-click the log name and click **Enable Log**. The new events are very similar in content to the existing Kerberos TGT and service ticket auditing events. For more information about these events, see [Authentication Policies and Authentication Policy Silos](https://technet.microsoft.com/library/dn486813.aspx).  
+#### Use the Authentication Policy Failures - Domain Controller administrative log  
+A new **Authentication Policy Failures - Domain Controller** administrative log under **Applications and Services Logs** > **Microsoft** > **Windows** > **Authentication** has been created to make it easier to discover failures due to Authentication Policies. The log is disabled by default. To enable it, right-click the log name and click **Enable Log**. The new events are very similar in content to the existing Kerberos TGT and service ticket auditing events. For more information about these events, see [Authentication Policies and Authentication Policy Silos](https://technet.microsoft.com/library/dn486813.aspx).  
   
 ### <a name="BKMK_ManageAuthnPoliciesUsingPSH"></a>Manage authentication policies by using Windows PowerShell  
 This command creates an authentication policy named **TestAuthenticationPolicy**. The **UserAllowedToAuthenticateFrom** parameter specifies the devices from which users can authenticate by an SDDL string in the file named someFile.txt.  
@@ -427,13 +427,13 @@ You can create an authentication policy silo by using Active Directory Administr
 This command creates an authentication policy silo object and enforces it.  
   
 ```  
-PS C:\>New-ADAuthenticationPolicySilo -Name newSilo ???Enforce  
+PS C:\>New-ADAuthenticationPolicySilo -Name newSilo -Enforce  
 ```  
   
 This command gets all the authentication policy silos that match the filter that is specified by the **Filter** parameter. The output is then passed to the **Format-Table** cmdlet to display the name of the policy and the value for **Enforce** on each policy.  
   
 ```  
-PS C:\>Get-ADAuthenticationPolicySilo -Filter 'Name -like "*silo*"' | Format-Table Name, Enforce ???AutoSize  
+PS C:\>Get-ADAuthenticationPolicySilo -Filter 'Name -like "*silo*"' | Format-Table Name, Enforce -AutoSize  
   
 Name  Enforce  
 --  ----  
@@ -457,13 +457,13 @@ PS C:\>Grant-ADAuthenticationPolicySiloAccess -Identity Silo -Account User01
 This command revokes access to the authentication policy silo named *Silo* for the user account named *User01*. Because the **Confirm** parameter is set to **$False**, no confirmation message appears.  
   
 ```  
-PS C:\>Revoke-ADAuthenticationPolicySiloAccess ???Identity Silo ???Account User01 ???Confirm:$False  
+PS C:\>Revoke-ADAuthenticationPolicySiloAccess -Identity Silo -Account User01 -Confirm:$False  
 ```  
   
 This example first uses the **Get-ADComputer** cmdlet to get all computer accounts that match the filter that the **Filter** parameter specifies. The output of this command is passed to **Set-ADAccountAuthenticatinPolicySilo** to assign the authentication policy silo named *Silo* and the authentication policy named *AuthenticationPolicy02* to them.  
   
 ```  
-PS C:\>Get-ADComputer ???Filter 'Name ???like "newComputer*"' | Set-ADAccountAuthenticationPolicySilo ???AuthenticationPolicySilo Silo ???AuthenticationPolicy AuthenticationPolicy02  
+PS C:\>Get-ADComputer -Filter 'Name -like "newComputer*"' | Set-ADAccountAuthenticationPolicySilo -AuthenticationPolicySilo Silo -AuthenticationPolicy AuthenticationPolicy02  
 ```  
   
 
