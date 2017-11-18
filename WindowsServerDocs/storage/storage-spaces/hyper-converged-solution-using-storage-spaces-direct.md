@@ -135,7 +135,7 @@ From the management system, perform the following steps:
 
 ### Step 1.3: Install server roles and features
 
-The next step is to [install the server roles and features](../../administration/server-manager/install-or-uninstall-roles-role-services-or-features) on all of the nodes:
+The next step is to [install the server roles and features](../../administration/server-manager/install-or-uninstall-roles-role-services-or-features.md) on all of the nodes:
 * Failover Clustering
 * Hyper-V
 * File Server (if you want to host any file shares, such as for a disaggregated deployment)
@@ -143,17 +143,19 @@ The next step is to [install the server roles and features](../../administration
 * RSAT-Clustering-PowerShell
 * Hyper-V-PowerShell
 
-To do so, use the Install-WindowsFeature cmdlet. Here's an example PowerShell script you can use to install the roles and features on all members - just change the *ClusterName* and *ClusterRoles* variables to fit your deployment:
+To do so, use the Install-WindowsFeature cmdlet. Here's an example PowerShell script you can use to install the roles and features on all members - just change the *Servers* and *ServerRoles* variables to fit your deployment:
 
 ```PowerShell
 # Fill in these variables with your values
 $Servers = "storage-node01","storage-node02","storage-node03","storage-node04"
-$ClusterRoles = "Data-Center-Bridging","Failover-Clustering","Hyper-V","RSAT-Clustering-PowerShell","Hyper-V-PowerShell","FS-FileServer"
+$ServerRoles = "Data-Center-Bridging","Failover-Clustering","Hyper-V","RSAT-Clustering-PowerShell","Hyper-V-PowerShell","FS-FileServer"
 
 foreach ($server in $servers){
-    Install-WindowsFeature –Computername $server –Name $ClusterRoles
+    Install-WindowsFeature –Computername $server –Name $ServerRoles
 }
 ```
+
+If you later need to remove some features, update the *$Roles* variable and replace *Install-WindowsFeature* with *Remove-WindowsFeature*.
 
 ## Step 2: Configure the network
 
@@ -161,7 +163,7 @@ Storage Spaces Direct requires high bandwidth and low latency network connection
 
 There are two common versions of RDMA network adapters - RoCE and iWARP. You can use either with Storage Spaces Direct as long as it has the Windows Server 2016 logo. iWARP usually requires minimal configuration. Top of Rack switches and server configurations may vary, depending on the network adapter and switch. Configuring the server and switch correctly is important to ensure reliability and performance of Storage Spaces Direct.
 
-Windows Server 2016 also introduces a new virtual switch that has network teaming built in called Switch Embedded Teaming (SET). This virtual switch allows the same 2 physical NIC ports to be used for VMs as well as the parent partition of the server to have RDMA connectivity. The result is reducing the number of physical NIC ports that would otherwise be required and allows managing the networking through the Software Defined Network features of Windows Server. The steps in this guide are for implementing the new virtual switch with RDMA enabled to the parent partition and SET configured.
+Windows Server 2016 also introduces a new virtual switch that has network teaming built in called Switch Embedded Teaming (SET). This virtual switch allows the same 2 physical NIC ports to be used for all network traffic while using RDMA. This reduces the number of physical NIC ports that would otherwise be required and allows managing the networking through the Software Defined Network features of Windows Server. The steps in this guide are for implementing the new virtual switch with RDMA enabled to the parent partition and SET configured.
 
 The following assumes 2 RDMA physical NIC Ports (1 dual port, or 2 single port) and the Hyper-V switch deployed with RDMA-enabled host virtual NICs. Complete the following steps to configure the network *on each server*.
 
@@ -242,9 +244,9 @@ Network QoS is used to ensure that Storage Spaces Direct has enough bandwidth to
     New-NetQosTrafficClass "SMB" –Priority 3 –BandwidthPercentage 30 –Algorithm ETS
     ```
 
-### Step 2.3: Create a Hyper-V virtual switch
+### Step 2.3: Create a Hyper-V virtual switch (optional on disaggregated deployments)
 
-The Hyper-V virtual switch allows the physical NIC ports to be used for both the host and virtual machines (in a hyper-converged configuration) and enables RDMA from the host which allows for more throughput, lower latency, and less system (CPU) impact. The physical network interfaces are teamed using the Switch Embedded Teaming (SET) feature.
+The Hyper-V virtual switch allows the physical NIC ports to be used for both the host and virtual machines (in a hyper-converged configuration) and enables RDMA from the host which allows for more throughput, lower latency, and less system (CPU) impact. The physical network interfaces are teamed using the Switch Embedded Teaming (SET) feature. This step is optional for disaggregated deployments.
 
 Do the following steps from a management system using *Enter-PSSession* to connect to each of the servers.
 
@@ -497,15 +499,15 @@ Use the scripts included in the [SMB Share Configuration for Hyper-V Workloads](
 To create file shares by using PowerShell scripts, do the following:
 
 1. Download the scripts included in [SMB Share Configuration for Hyper-V Workloads](http://gallery.technet.microsoft.com/SMB-Share-Configuration-4a36272a) to one of the nodes of the file server cluster.
-2. Open a Windows PowerShell session with Domain Administrator credentials on one of the file server nodes, and then use the following script to create the appropriate Active Directory group, changing the values for the variables as appropriate for your environment:
+2. Open a Windows PowerShell session with Domain Administrator credentials on the management system with the Active Directory Domain Services PowerShell module, and then use the following script to create an Active Directory group for the Hyper-V computer objects, changing the values for the variables as appropriate for your environment:
 
-    ```PowerShell  
-    $HyperVClusterName = "Compute01" <#15 character limit#>  
-    $HyperVObjectADGroupSamName = "Hyper-VServerComputerAccounts" <#No spaces#>  
-    $ScriptFolder = "C:\Scripts\SetupSMBSharesWithHyperV"  
+    ```PowerShell
+    $HyperVClusterName = "Compute01" <#15 character limit#>
+    $HyperVObjectADGroupSamName = "Hyper-VServerComputerAccounts" <#No spaces#>
+    $ScriptFolder = "C:\Scripts\SetupSMBSharesWithHyperV"
 
-    CD $ScriptFolder  
-    .\ADGroupSetup.ps1 -HyperVObjectADGroupSamName $HyperVObjectADGroupSamName -HyperVClusterName $HyperVClusterName     
+    CD $ScriptFolder
+    .\ADGroupSetup.ps1 -HyperVObjectADGroupSamName $HyperVObjectADGroupSamName -HyperVClusterName $HyperVClusterName
     ```
 3. Use the following script to create shares for each CSV and set appropriate permissions for the shares.
 
