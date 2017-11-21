@@ -13,12 +13,14 @@ ms.technology: active-directory-federation-services
 
 # Single Page Application with AD FS
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 This walkthrough provides instruction for authenticating against AD FS using ADAL for JavaScript securing an AngularJS based single page application, implemented with an ASP.NET Web API backend.
 
 >WARNING: The example that you can build here is for educational purposes only. These instructions are for the simplest, most minimal implementation possible to expose the required elements of the model. The example may not include all aspects of error handling and other relate functionality.
 
+>[!NOTE]
+>This walkthrough is applicable **only** to AD FS Server 2016 and higher 
 
 ## Overview
 In this sample we will be creating an authentication flow where a single page application client will be authenticating against AD FS to secure access to the WebAPI resources on the backend. Below is the overall authentication flow
