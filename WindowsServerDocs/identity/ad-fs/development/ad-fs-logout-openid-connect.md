@@ -60,7 +60,7 @@ The following additional values will be available in the discovery doc to indica
 
 
 ## AD FS server configuration
-The AD FS property EnableOAuthLogout will be enabled by default.  This property tells the AD FS server to browse for the URL (LogoutURI) with the SID to initiate logout on the client.  
+The AD FS property EnableOAuthLogout will be enabled by default.  This property tells the AD FS server to browse for the URL (LogoutURI) with the SID to initiate logout on the client. 
 If you do not have [KB4038801](https://support.microsoft.com/en-gb/help/4038801/windows-10-update-kb4038801) installed you can use the following PowerShell command:
 
 ```PowerShell
@@ -69,6 +69,9 @@ Set-ADFSProperties -EnableOAuthLogout $true
 
 >[!NOTE]
 > `EnableOAuthLogout` parameter will be marked as obsolete after installing [KB4038801](https://support.microsoft.com/en-gb/help/4038801/windows-10-update-kb4038801). `EnableOAUthLogout` will always be true and will have no impact on the logout functionality.
+
+>[!NOTE]
+>frontchannel_logout is supported **only** after installtion of [KB4038801](https://support.microsoft.com/en-gb/help/4038801/windows-10-update-kb4038801)
 
 ## Client configuration
 Client needs to implement a url which 'logs off' the logged in user. Administrator can configure the LogoutUri in the client configuration using the following PowerShell cmdlets. 
@@ -96,7 +99,7 @@ The `LogoutUri` is the url used by AF FS to "log off" the user. For implementing
 **Q:** I do not see the frontchannel_logout_supported and frontchannel_logout_session_supported parameters in the discovery doc.</br>
 **A:** Ensure that you have [KB4038801](https://support.microsoft.com/en-gb/help/4038801/windows-10-update-kb4038801) installed on all the AD FS servers. Refer to Single log-out in Server 2016 with [KB4038801](https://support.microsoft.com/en-gb/help/4038801/windows-10-update-kb4038801).
 
-**Q:** I have configured single logout as directed, but user stays logged-in on other clients.
+**Q:** I have configured single logout as directed, but user stays logged-in on other clients.</br>
 **A:** Ensure that `LogoutUri` is set for all the clients where the user is logged-in. Also, AD FS does a best-case attempt to send the sign-out request on the registered `LogoutUri`. Client must implement logic to handle the request and take action to sign-out the user from application.</br>
 
 **Q:** If after logout, one of the clients goes back to AD FS with a valid refresh token, will AD FS issue an access token?</br>
