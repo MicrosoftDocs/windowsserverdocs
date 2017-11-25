@@ -110,6 +110,8 @@ $acl = Get-Acl $vcoPath
 $ace = New-Object System.DirectoryServices.ActiveDirectoryAccessRule $cno.SID, "GenericAll", "Allow"
 $acl.AddAccessRule($ace)
 Set-Acl -Path $vcoPath -AclObject $acl
+
+# Allow time for your new CNO and VCO to replicate to your other Domain Controllers before continuing
 ```
 
 ## Security baseline exceptions
