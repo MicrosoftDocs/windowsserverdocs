@@ -28,8 +28,8 @@ Before deploying Storage Spaces Direct, we recommended reviewing the [Storage Sp
 
 You can deploy Storage Spaces Direct in the following configurations:
 
-- **Hyper-converged** - Hyper-V VMs run directly on the Storage Spaces Direct cluster that hosts the storage, as shown in Figure 1. Virtual machine files are stored on local CSVs. This allows for scaling Hyper-V compute clusters together with the storage it is using, reducing the number of clusters required.
 - **Disaggregated** - Workloads run in a separate cluster from the Storage Spaces Direct cluster. Files for the workloads are stored on file shares hosted by the Storage Spaces Direct cluster and accessed across the network. This allows you to scale your workload cluster(s) separately from your storage, but does increase the number of clusters involved.
+- **Hyper-converged** - Hyper-V VMs run directly on the Storage Spaces Direct cluster that hosts the storage, as shown in Figure 1. Virtual machine files are stored on local CSVs. This allows for scaling Hyper-V compute clusters together with the storage it is using, reducing the number of clusters required.
 
    ![A hyper-converged cluster with virtual machines hosted by the Storage Spaces Direct cluster](media/Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016/StorageSpacesDirectHyperconverged.png)
 
@@ -499,36 +499,47 @@ Use the scripts included in the [SMB Share Configuration for Hyper-V Workloads](
 To create file shares by using PowerShell scripts, do the following:
 
 1. Download the scripts included in [SMB Share Configuration for Hyper-V Workloads](http://gallery.technet.microsoft.com/SMB-Share-Configuration-4a36272a) to one of the nodes of the file server cluster.
-2. Open a Windows PowerShell session with Domain Administrator credentials on the management system with the Active Directory Domain Services PowerShell module, and then use the following script to create an Active Directory group for the Hyper-V computer objects, changing the values for the variables as appropriate for your environment:
+2. Open a Windows PowerShell session with Domain Administrator credentials on the management system, and then use the following script to create an Active Directory group for the Hyper-V computer objects, changing the values for the variables as appropriate for your environment:
 
     ```PowerShell
-    $HyperVClusterName = "Compute01" <#15 character limit#>
+    $HyperVClusterName = "Compute01"
     $HyperVObjectADGroupSamName = "Hyper-VServerComputerAccounts" <#No spaces#>
     $ScriptFolder = "C:\Scripts\SetupSMBSharesWithHyperV"
 
     CD $ScriptFolder
     .\ADGroupSetup.ps1 -HyperVObjectADGroupSamName $HyperVObjectADGroupSamName -HyperVClusterName $HyperVClusterName
     ```
-3. Use the following script to create shares for each CSV and set appropriate permissions for the shares.
+3. Open a Windows PowerShell session with Administrator credentials on one of the storage nodes, and then use the following script to create shares for each CSV and grant administrative permissions for the shares to the Domain Admins group and the compute cluster.
 
-    ```PowerShell  
-    #Replace the values of these variables  
-    $HyperVClusterName = "Compute01" <#15 character limit#>  
-    $HyperVObjectADGroupSamName = "Hyper-VServerComputerAccounts" <#No spaces#>  
-    $SOFSName = "SOFS"  
-    $SharePrefix = "Share"  
-    $ScriptFolder = "C:\Scripts\SetupSMBSharesWithHyperV"  
-  
-    #Start of the script itself  
-    CD $ScriptFolder  
-    Get-ClusterSharedVolume | ForEach-Object {  
-    $ShareName = $SharePrefix + $_.SharedVolumeInfo.friendlyvolumename.trimstart("C:\ClusterStorage\Volume")   
-  
-    Write-host "Creating share $ShareName on "$_.name "on Volume: " $_.SharedVolumeInfo.friendlyvolumename  
-    .\FileShareSetup.ps1 -CSVVolumeNumber $_.SharedVolumeInfo.friendlyvolumename.trimstart("C:\ClusterStorage\Volume")`  
-     -HyperVClusterName $HyperVClusterName  -ScaleOutFSName $SOFSName -ShareName $ShareName -HyperVObjectADGroupSamName $HyperVObjectADGroupSamName  
-    }  
+    ```PowerShell
+    # Replace the values of these variables
+    $StorageClusterName = "StorageSpacesDirect1"
+    $HyperVObjectADGroupSamName = "Hyper-VServerComputerAccounts" <#No spaces#>
+    $SOFSName = "SOFS"
+    $SharePrefix = "Share"
+    $ScriptFolder = "C:\Scripts\SetupSMBSharesWithHyperV"
+
+    # Start of the script itself
+    CD $ScriptFolder
+    Get-ClusterSharedVolume -Cluster $StorageClusterName | ForEach-Object
+    {
+        $ShareName = $SharePrefix + $_.SharedVolumeInfo.friendlyvolumename.trimstart("C:\ClusterStorage\Volume")
+        Write-host "Creating share $ShareName on "$_.name "on Volume: " $_.SharedVolumeInfo.friendlyvolumename
+        .\FileShareSetup.ps1 -HyperVClusterName $StorageClusterName -CSVVolumeNumber $_.SharedVolumeInfo.friendlyvolumename.trimstart("C:\ClusterStorage\Volume") -ScaleOutFSName $SOFSName -ShareName $ShareName -HyperVObjectADGroupSamName $HyperVObjectADGroupSamName
+    }
     ```
+### Step 4.3 Enable Kerberos constrained delegation
+
+To setup Kerberos constrained delegation for remote scenario management and increased Live Migration security, from one of the storage cluster nodes, use the KCDSetup.ps1 script included in [SMB Share Configuration for Hyper-V Workloads](http://gallery.technet.microsoft.com/SMB-Share-Configuration-4a36272a). Here's a little wrapper for the script:
+
+```PowerShell
+$HyperVClusterName = "Compute01"
+$ScaleOutFSName = "SOFS"
+$ScriptFolder = "C:\Scripts\SetupSMBSharesWithHyperV"
+
+CD $ScriptFolder
+.\KCDSetup.ps1 -HyperVClusterName $HyperVClusterName -ScaleOutFSName $ScaleOutFSName -EnableLM
+```
 
 ## Next steps
 
