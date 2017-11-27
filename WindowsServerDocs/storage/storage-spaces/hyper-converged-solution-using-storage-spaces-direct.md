@@ -7,15 +7,15 @@ ms.technology: storage-spaces
 ms.topic: get-started-article
 ms.assetid: 20fee213-8ba5-4cd3-87a6-e77359e82bc0
 author: stevenek
-ms.date: 11/20/2017
+ms.date: 11/28/2017
 description: Deploy Storage Spaces Direct in a hyper-converged cluster in a test lab.
 ms.localizationpriority: medium
 ---
-# Deploying Storage Spaces Direct in a hyper-converged or disaggregated solution
+# Deploying Storage Spaces Direct
 
 >Applies to: Windows Server 2016
 
-This topic provides instructions for how to deploy [Storage Spaces Direct](storage-spaces-direct-overview.md) to provide software-defined storage for your workloads. It describes both hyper-converged solutions where the cluster hosts the storage and virtual machines as well as a disaggregated (also known as converged) solution where workloads run on a different cluster. Storage Spaces Direct runs on Windows Server 2016 Datacenter Edition.
+This topic provides instructions for how to deploy [Storage Spaces Direct](storage-spaces-direct-overview.md) to provide software-defined storage for your workloads. It describes both hyper-converged solutions where the cluster hosts the storage and virtual machines as well as a converged (also known as disaggregated) solution where workloads run on a different cluster. Storage Spaces Direct runs on Windows Server 2016 Datacenter Edition.
 
 > [!NOTE]
 > Note that for production environments we recommend acquiring a *Windows Server Software-Defined* hardware/software offering, which includes production deployment tools and procedures. These offerings are designed, assembled, and validated to meet Microsoft's requirements for private cloud environments, helping ensure reliable operation. More information about the program and links to our partner websites can be found at: [Windows Server Software Defined](https://www.microsoft.com/cloud-platform/software-defined-datacenter).
@@ -24,11 +24,11 @@ To evaluate Storage Spaces Direct without investing in hardware, you can use Hyp
 
 Before deploying Storage Spaces Direct, we recommended reviewing the [Storage Spaces Direct hardware requirements](Storage-Spaces-Direct-Hardware-Requirements.md) and skimming this document to familiarize yourself with the overall approach, and to get a sense for the important notes associated with some steps. You also might want to review the extensive and handy [Windows Server 2016 rapid lab deployment scripts](https://aka.ms/ws2016lab), which we use for training purposes.
 
-## Hyper-converged and disaggregated solutions
+## Converged and hyper-converged solutions
 
 You can deploy Storage Spaces Direct in the following configurations:
 
-- **Disaggregated** - Workloads run in a separate cluster from the Storage Spaces Direct cluster. Files for the workloads are stored on file shares hosted by the Storage Spaces Direct cluster and accessed across the network. This allows you to scale your workload cluster(s) separately from your storage, but does increase the number of clusters involved.
+- **Converged (disaggregated)** - Workloads run in a separate cluster from the Storage Spaces Direct cluster. Files for the workloads are stored on file shares hosted by the Storage Spaces Direct cluster and accessed across the network. This allows you to scale your workload cluster(s) separately from your storage, but does increase the number of clusters involved.
 - **Hyper-converged** - Hyper-V VMs run directly on the Storage Spaces Direct cluster that hosts the storage, as shown in Figure 1. Virtual machine files are stored on local CSVs. This allows for scaling Hyper-V compute clusters together with the storage it is using, reducing the number of clusters required.
 
    ![A hyper-converged cluster with virtual machines hosted by the Storage Spaces Direct cluster](media/Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016/StorageSpacesDirectHyperconverged.png)
@@ -138,7 +138,7 @@ From the management system, perform the following steps:
 The next step is to [install the server roles and features](../../administration/server-manager/install-or-uninstall-roles-role-services-or-features.md) on all of the nodes:
 * Failover Clustering
 * Hyper-V
-* File Server (if you want to host any file shares, such as for a disaggregated deployment)
+* File Server (if you want to host any file shares, such as for a converged deployment)
 * Data-Center-Bridging (if you're using RoCEv2 instead of iWARP network adapters)
 * RSAT-Clustering-PowerShell
 * Hyper-V-PowerShell
@@ -244,9 +244,9 @@ Network QoS is used to ensure that Storage Spaces Direct has enough bandwidth to
     New-NetQosTrafficClass "SMB" –Priority 3 –BandwidthPercentage 30 –Algorithm ETS
     ```
 
-### Step 2.3: Create a Hyper-V virtual switch (optional on disaggregated deployments)
+### Step 2.3: Create a Hyper-V virtual switch (optional on converged deployments)
 
-The Hyper-V virtual switch allows the physical NIC ports to be used for both the host and virtual machines (in a hyper-converged configuration) and enables RDMA from the host which allows for more throughput, lower latency, and less system (CPU) impact. The physical network interfaces are teamed using the Switch Embedded Teaming (SET) feature. This step is optional for disaggregated deployments.
+The Hyper-V virtual switch allows the physical NIC ports to be used for both the host and virtual machines (in a hyper-converged configuration) and enables RDMA from the host which allows for more throughput, lower latency, and less system (CPU) impact. The physical network interfaces are teamed using the Switch Embedded Teaming (SET) feature. This step is optional for converged deployments unless you're using ROCE for RDMA networking, in which case the virtual switch makes configuring the VLANs easier. If you skip this step, go to Step 3: Configure Storage Spaces Direct.
 
 Do the following steps from a management system using *Enter-PSSession* to connect to each of the servers.
 
@@ -474,9 +474,9 @@ The virtual machine's files should be stored on the systems CSV namespace (examp
 
 You can use in-box tools or other tools to manage the storage and virtual machines, such as System Center Virtual Machine Manager.
 
-## Step 4: Deploy Scale-Out File Server for disaggregated solutions
+## Step 4: Deploy Scale-Out File Server for converged solutions
 
-If you're deploying a disaggregated solution, the next step is to create a Scale-Out File Server instance and setup some file shares. If you're deploying a hyper-converged cluster - you're finished and don't need this section.
+If you're deploying a converged solution, the next step is to create a Scale-Out File Server instance and setup some file shares. If you're deploying a hyper-converged cluster - you're finished and don't need this section.
 
 ### Step 4.1: Create the Scale-Out File Server role
 
