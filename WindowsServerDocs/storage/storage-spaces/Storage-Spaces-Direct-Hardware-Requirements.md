@@ -7,14 +7,16 @@ ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: eldenchristensen
-ms.date: 11/8/2017
+ms.date: 11/27/2017
 ms.localizationpriority: medium
 ---
 # Storage Spaces Direct hardware requirements
 
 >Applies to: Windows Server 2016
 
-This topic describes minimum hardware requirements for testing Storage Spaces Direct. For production environments we recommend acquiring a Windows Server Software-Defined hardware/software offering, which includes production deployment tools and procedures. These offerings are designed, assembled, and validated to meet Microsoft's requirements for private cloud environments, helping ensure reliable operation. Windows Server Software-Defined offerings are available are our partner websites.  More information about the program and links to our partner websites can be found at: [Windows Server Software Defined](Https://www.microsoft.com/cloud-platform/software-defined-datacenter).
+This topic describes minimum hardware requirements for Storage Spaces Direct.
+
+For production environments we recommend acquiring a [Windows Server Software-Defined](https://microsoft.com/wssd) hardware/software offering, which includes production deployment tools and procedures. These offerings are designed, assembled, and validated to meet Microsoft's requirements for private cloud environments, helping ensure reliable operation. Windows Server Software-Defined offerings are available through our partners' websites. Learn more at [https://microsoft.com/wssd](https://microsoft.com/wssd).
 
 If you would like to evaluate Storage Spaces Direct without investing in hardware, you can use Hyper-V virtual machines, as described in [Using Storage Spaces Direct in guest virtual machine clusters](storage-spaces-direct-in-vm.md).
 
