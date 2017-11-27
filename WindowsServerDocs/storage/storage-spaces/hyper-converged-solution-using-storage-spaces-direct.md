@@ -451,13 +451,15 @@ You can optionally enable the cluster shared volume (CSV) cache to use system me
 
 Enabling the CSV cache reduces the amount of memory available to run VMs on a hyper-converged cluster, so you'll have to balance storage performance with memory available to VHDs. 10 GB of memory for a two-node cluster is a common CSV cache size, with 20 GB common for a four-node cluster. Consider adding 5 GB of CSV cache per additional node, again, balancing this against available memory for the operating system and VMs.
 
-To set the size of the CSV cache, open a PowerShell session on use this command
+To set the size of the CSV cache, open a PowerShell session on the management system with an account that has administrator permissions on the storage cluster, and then use this script:
 
 ```PowerShell
 $ClusterName = "StorageSpacesDirect1"
 $CSVCacheSize = 10240 #Size in MB
 
+Write-Output "Setting the CSV cache..."
 (Get-Cluster $ClusterName).BlockCacheSize = $CSVCacheSize
+
 $CSVCurrentCacheSize = (Get-Cluster $ClusterName).BlockCacheSize
 Write-Output "$ClusterName CSV cache size: $CSVCurrentCacheSize MB"
 ```
