@@ -74,17 +74,14 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter and [Windows
 
 ## Videos
 
-<table style="width: 100%; table-layout: fixed;">
-	<tr style="border: 0;">
-		<td style="padding: 10px; border: 0; width=50%">
-			<strong>Quick Video Overview</strong><br>(5 minutes)<br>
-			<iframe src="https://www.youtube.com/embed/raeUiNtMk0E" width="315" height="177" allowfullscreen></iframe>
-		</td>
-		<td style="padding: 10px; border: 0; width=50%">
-			<strong>Launch Event at Microsoft Ignite 2016</strong><br>(1 hour)<br>
-			<iframe src="https://www.youtube.com/embed/-LK2ViRGbWs" width="315" height="177" allowfullscreen></iframe>
-		</td>
-</table>
+### Quick Video Overview (5 minutes)
+<iframe src="https://www.youtube.com/embed/raeUiNtMk0E" width="560" height="315" allowfullscreen></iframe>
+
+### Storage Spaces Direct at Microsoft Ignite 2017 (1 hour)
+![https://www.youtube.com/watch?v=YDr2sqNB-3c](Watch on YouTube)
+
+### Launch Event at Microsoft Ignite 2016 (1 hour)
+![https://www.youtube.com/watch?v=-LK2ViRGbWs](Watch on YouTube)
 
 ## Key benefits
 
