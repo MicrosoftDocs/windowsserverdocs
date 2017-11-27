@@ -464,6 +464,8 @@ $CSVCurrentCacheSize = (Get-Cluster $ClusterName).BlockCacheSize
 Write-Output "$ClusterName CSV cache size: $CSVCurrentCacheSize MB"
 ```
 
+For more info, see [How to Enable CSV Cache](https://blogs.msdn.microsoft.com/clustering/2013/07/19/how-to-enable-csv-cache/).
+
 ### Step 3.7: Deploy virtual machines for hyper-converged deployments
 
 If you're deploying a hyper-converged cluster, the last step is to provision virtual machines on the Storage Spaces Direct cluster.
