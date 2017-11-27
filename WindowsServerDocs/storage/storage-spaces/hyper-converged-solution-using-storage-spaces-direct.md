@@ -519,10 +519,12 @@ To create file shares by using PowerShell scripts, do the following:
 2. Open a Windows PowerShell session with Domain Administrator credentials on the management system, and then use the following script to create an Active Directory group for the Hyper-V computer objects, changing the values for the variables as appropriate for your environment:
 
     ```PowerShell
+    # Replace the values of these variables
     $HyperVClusterName = "Compute01"
     $HyperVObjectADGroupSamName = "Hyper-VServerComputerAccounts" <#No spaces#>
     $ScriptFolder = "C:\Scripts\SetupSMBSharesWithHyperV"
 
+    # Start of script itself
     CD $ScriptFolder
     .\ADGroupSetup.ps1 -HyperVObjectADGroupSamName $HyperVObjectADGroupSamName -HyperVClusterName $HyperVClusterName
     ```
@@ -545,6 +547,7 @@ To create file shares by using PowerShell scripts, do the following:
         .\FileShareSetup.ps1 -HyperVClusterName $StorageClusterName -CSVVolumeNumber $_.SharedVolumeInfo.friendlyvolumename.trimstart("C:\ClusterStorage\Volume") -ScaleOutFSName $SOFSName -ShareName $ShareName -HyperVObjectADGroupSamName $HyperVObjectADGroupSamName
     }
     ```
+
 ### Step 4.3 Enable Kerberos constrained delegation
 
 To setup Kerberos constrained delegation for remote scenario management and increased Live Migration security, from one of the storage cluster nodes, use the KCDSetup.ps1 script included in [SMB Share Configuration for Hyper-V Workloads](http://gallery.technet.microsoft.com/SMB-Share-Configuration-4a36272a). Here's a little wrapper for the script:
