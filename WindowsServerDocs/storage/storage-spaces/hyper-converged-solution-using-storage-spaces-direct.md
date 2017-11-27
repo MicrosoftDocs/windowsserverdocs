@@ -445,6 +445,23 @@ We recommend using the **New-Volume** cmdlet as it provides the fastest and most
 
 For more information, check out [Creating volumes in Storage Spaces Direct](create-volumes.md).
 
+### Step 3.7: Enable the CSV cache
+
+You can optionally enable the cluster shared volume (CSV) cache to use system memory (RAM) as a write-through block-level cache of read operations that aren't already cached by the Windows cache manager. This can improve performance for applications such as Hyper-V, which conducts unbuffered I/O operations when accessing a VHD. The CSV cache can boost the performance of read requests without caching write requests. Enabling the CSV cache is also useful for Scale-Out File Server scenarios.
+
+Enabling the CSV cache reduces the amount of memory available to run VMs on a hyper-converged cluster, so you'll have to balance storage performance with memory available to VHDs. 10 GB of memory for a two-node cluster is a common CSV cache size, with 20 GB common for a four-node cluster. Consider adding 5 GB of CSV cache per additional node, again, balancing this against available memory for the operating system and VMs.
+
+To set the size of the CSV cache, open a PowerShell session on use this command
+
+```PowerShell
+$ClusterName = "StorageSpacesDirect1"
+$CSVCacheSize = 10240 #Size in MB
+
+(Get-Cluster $ClusterName).BlockCacheSize = $CSVCacheSize
+$CSVCurrentCacheSize = (Get-Cluster $ClusterName).BlockCacheSize
+Write-Output "$ClusterName CSV cache size: $CSVCurrentCacheSize MB"
+```
+
 ### Step 3.7: Deploy virtual machines for hyper-converged deployments
 
 If you're deploying a hyper-converged cluster, the last step is to provision virtual machines on the Storage Spaces Direct cluster.
