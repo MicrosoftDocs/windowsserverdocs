@@ -84,6 +84,7 @@ To create a network interface object in Network Controller, use the following ex
     $vmnicproperties = new-object Microsoft.Windows.NetworkController.NetworkInterfaceProperties
     $vmnicproperties.PrivateMacAddress = "001122334455" 
     $vmnicproperties.PrivateMacAllocationMethod = "Static" 
+    $vmnicproperties.IsPrimary = $true 
 
     $vmnicproperties.DnsSettings = new-object Microsoft.Windows.NetworkController.NetworkInterfaceDnsSettings
     $vmnicproperties.DnsSettings.DnsServers = @("24.30.1.11", "24.30.1.12")
@@ -192,7 +193,8 @@ To obtain the logical network subnet and create the network interface using the 
     $vmnicproperties = new-object Microsoft.Windows.NetworkController.NetworkInterfaceProperties
     $vmnicproperties.PrivateMacAddress = "00-1D-C8-B7-01-02"
     $vmnicproperties.PrivateMacAllocationMethod = "Static"
-
+    $vmnicproperties.IsPrimary = $true 
+    
     $vmnicproperties.DnsSettings = new-object Microsoft.Windows.NetworkController.NetworkInterfaceDnsSettings
     $vmnicproperties.DnsSettings.DnsServers = $logicalnet.Properties.Subnets[0].DNSServers
 

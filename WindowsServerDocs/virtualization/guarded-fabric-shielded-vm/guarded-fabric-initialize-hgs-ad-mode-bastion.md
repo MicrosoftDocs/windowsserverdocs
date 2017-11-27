@@ -24,6 +24,9 @@ Active Directory Domain Services will be installed on the machine, but should re
 Before you continue, ensure that you have prestaged your cluster objects for the Host Guardian Service and granted the logged in user **Full Control** over the VCO and CNO objects in Active Directory.
 The virtual computer object name needs to be passed to the `-HgsServiceName` parameter, and the cluster name to the `-ClusterName` parameter.
 
+> [!TIP]
+> Double check your AD Domain Controllers to ensure your cluster objects have replicated to all DCs before continuing.
+
 If you are using PFX-based certificates, run the following commands on the HGS server:
 
 ```powershell

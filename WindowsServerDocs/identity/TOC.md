@@ -383,6 +383,7 @@
 #### [AD FS On-behalf-of Authentication in Windows Server 2016](ad-fs/development/AD-FS-On-behalf-of-Authentication-in-Windows-Server.md)
 #### [Enabling OpenId Connect with AD FS 2016](ad-fs/development/Enabling-OpenId-Connect-with-AD-FS.md)
 #### [Enabling Oauth Confidential Clients with AD FS 2016](ad-fs/development/Enabling-Oauth-Confidential-Clients-with-AD-FS.md)
+#### [Single log-out for OpenID Connect with AD FS](ad-fs/development/ad-fs-logout-openid-connect.md)
 #### [Single Page Application with AD FS](ad-fs/development/Single-Page-Application-with-AD-FS.md)
 
 

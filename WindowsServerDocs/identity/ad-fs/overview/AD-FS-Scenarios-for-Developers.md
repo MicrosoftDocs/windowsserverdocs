@@ -128,7 +128,7 @@ AD FS responds by returning an authorization code as the "code" parameter in the
 2.  The native client then sends the code, along with the following parameters, to the AD FS token endpoint:  
   
 **Token Request:**  
-POST https://fs.contoso.com/adfs/oautincludes   
+POST https://fs.contoso.com/adfs/oauth2/token  
   
 Parameter|Value  
 ---------|---------  
@@ -148,7 +148,8 @@ Subsequent client requests within 1 hour (by default) the access_token will stil
   
 After the access token expires, ADAL will automatically send a refresh token based request to the AD FS token endpoint (skipping the authorization request automatically).  
 **Refresh token request:**  
-POST https://fs.contoso.com/adfs/oautincludes   
+POST https://fs.contoso.com/adfs/oauth2/token
+   
 
 Parameter|Value|
 ---------|---------
@@ -192,7 +193,7 @@ AD FS responds by returning an authorization code as the "code" parameter in the
   
 3.  At this point the web app, having received the code, initiates a request to the AD FS token endpoint, sending the following  
 **Token request:**  
-POST https://fs.contoso.com/adfs/oautincludes  
+POST https://fs.contoso.com/adfs/oauth2/token  
   
 Parameter|Value  
 ---------|---------  
@@ -218,7 +219,8 @@ Otherwise, if the web app is smart enough to know if the user is already authent
 * a request token based request can be sent to the AD FS token endpoint, as described below  
   
 **Refresh token request:**  
-POST https://fs.contoso.com/adfs/oautincludes   
+POST https://fs.contoso.com/adfs/oauth2/token
+   
 Parameter|Value  
 ---------|---------  
 grant_type|"refresh_token"  
@@ -260,7 +262,7 @@ AD FS responds with an HTTP 200 and form containing the below as hidden elements
 3.  At this point the web app, having received the code, initiates a request to the AD FS token endpoint, sending the following  
   
 **Token request:**  
-POST https://fs.contoso.com/adfs/oautincludes  
+POST https://fs.contoso.com/adfs/oauth2/token
   
   
   
