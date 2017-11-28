@@ -1,7 +1,7 @@
 ---
 ms.assetid: 2a5d5271-6ac6-4c1b-b4ef-9b568932a55a
-title: Active Directory Domain-Wide Updates
-description:
+title: Active Directory domain-wide schema updates
+description: Domain-wide schema updates performed by adprep /domainprep when promoting a Domain Controller
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: femila
@@ -11,15 +11,23 @@ ms.prod: windows-server-threshold
 
 ms.technology: identity-adds
 ---
-# Domain-Wide Updates
+# Domain-wide schema updates
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-You can review the following set of changes to help understand and prepare for the schema updates that are performed by adprep /domainprep in Windows Server 2012. There are no domain-wide operations performed by the **domainprep** command in Windows Server 2012 R2.
+You can review the following set of changes to help understand and prepare for the schema updates that are performed by adprep /domainprep in Windows Server. 
 
 Beginning in Windows Server 2012, Adprep commands run automatically as needed during AD DS installation. They can also be run separately in advance of AD DS installation. For more information, see [Running Adprep.exe](https://technet.microsoft.com/library/dd464018(v=ws.10).aspx).
 
 For more information about how to interpret the access control entry (ACE) strings, see [ACE strings](https://msdn.microsoft.com/library/aa374928(VS.85).aspx). For more information about how to interpret the security ID (SID) strings, see [SID strings](https://msdn.microsoft.com/library/aa379602(VS.85).aspx).
+
+## Windows Server (Semi-Annual Channel): Domain-wide updates
+
+After the operations that are performed by **domainprep** in Windows Server 2016 (operation 89) complete, the **revision** attribute for the CN=ActiveDirectoryUpdate,CN=DomainUpdates,CN=System,DC=ForestRootDomain object is set to **16**.
+
+|Operations number and GUID|Description|Attributes|Permissions|
+|------------------------------|---------------|--------------|---------------|
+|**Operation 89**: {A0C238BA-9E30-4EE6-80A6-43F731E9A5CD}|Delete the ACE granting Full Control to Enterprise Key Admins and add an ACE granting Enterprise Key Admins Full Control over just the msdsKeyCredentialLink attribute.|N/A|Delete (A;CI;RPWPCRLCLOCCDCRCWDWOSDDTSW;;;Enterprise Key Admins) <br /> <br />Add (OA;CI;RPWP;5b47d60f-6090-40b2-9f37-2a4de88f3063;;Enterprise Key Admins)|
 
 ## Windows Server 2016: Domain-wide updates
 
