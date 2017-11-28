@@ -20,66 +20,65 @@ This topic lists the LDF files that include the changes that Adprep.exe makes.
 
 These are the LDF files included in Windows Server 2016:
 
--   [Sch58.ldf](#Sch58ldf)
+-   [Sch58.ldf](#BKMK_Sch58)
 
--   [Sch59.ldf](#Sch59ldf)
+-   [Sch59.ldf](#BKMK_Sch59)
 
--   [Sch60.ldf](#Sch60ldf)
+-   [Sch60.ldf](#BKMK_Sch60)
 
--   [Sch61.ldf](#Sch61ldf)
+-   [Sch61.ldf](#BKMK_Sch61)
 
--   [Sch62.ldf](#Sch62ldf)
+-   [Sch62.ldf](#BKMK_Sch62)
 
--   [Sch63.ldf](#Sch63ldf)
+-   [Sch63.ldf](#BKMK_Sch63)
 
--   [Sch64.ldf](#Sch64ldf)
+-   [Sch64.ldf](#BKMK_Sch64)
 
--   [Sch65.ldf](#Sch65ldf)
+-   [Sch65.ldf](#BKMK_Sch65)
 
--   [Sch66.ldf](#Sch66ldf)
+-   [Sch66.ldf](#BKMK_Sch66)
 
--   [Sch67.ldf](#Sch67ldf)
+-   [Sch67.ldf](#BKMK_Sch67)
 
--   [Sch68.ldf](#Sch68ldf)
+-   [Sch68.ldf](#BKMK_Sch68)
 
--   [Sch69.ldf](#Sch69ldf)
+-   [Sch69.ldf](#BKMK_Sch69)
 
--   [Sch70.ldf](#Sch70ldf)
+-   [Sch70.ldf](#BKMK_Sch70)
 
--   [Sch71.ldf](#Sch71ldf)
+-   [Sch71.ldf](#BKMK_Sch71)
 
--   [Sch72.ldf](#Sch72ldf)
+-   [Sch72.ldf](#BKMK_Sch72)
 
--   [Sch73.ldf](#Sch73ldf)
+-   [Sch73.ldf](#BKMK_Sch73)
 
--   [Sch74.ldf](#Sch74ldf)
+-   [Sch74.ldf](#BKMK_Sch74)
 
--   [Sch75.ldf](#Sch75ldf)
+-   [Sch75.ldf](#BKMK_Sch75)
 
--   [Sch76.ldf](#Sch76ldf)
+-   [Sch76.ldf](#BKMK_Sch76)
 
--   [Sch77.ldf](#Sch77ldf)
+-   [Sch77.ldf](#BKMK_Sch77)
 
--   [Sch78.ldf](#Sch78ldf)
+-   [Sch78.ldf](#BKMK_Sch78)
 
--   [Sch79.ldf](#Sch79ldf)
+-   [Sch79.ldf](#BKMK_Sch79)
 
--   [Sch80.ldf](#Sch80ldf)
+-   [Sch80.ldf](#BKMK_Sch80)
 
--   [Sch81.ldf](#Sch81ldf)
+-   [Sch81.ldf](#BKMK_Sch81)
 
--   [Sch82.ldf](#Sch82ldf)
+-   [Sch82.ldf](#BKMK_Sch82)
 
--   [Sch83.ldf](#Sch83ldf)
+-   [Sch83.ldf](#BKMK_Sch83)
 
--   [Sch84.ldf](#Sch84ldf)
+-   [Sch84.ldf](#BKMK_Sch84)
 
--   [Sch85.ldf](#Sch85ldf)
+-   [Sch85.ldf](#BKMK_Sch85)
 
--   [Sch86.ldf](#Sch86ldf)
+-   [Sch86.ldf](#BKMK_Sch86)
 
--   [Sch87.ldf](#Sch87ldf)
-
+-   [Sch87.ldf](#BKMK_Sch87)
 
 These are the LDF files included in Windows Server 2012 R2:  
   
@@ -131,7 +130,7 @@ These are the LDF files included in Windows Server 2012:
 
 ## Schema Updates in Windows Server 2016  
   
-### Sch58.ldf  
+### <a name="BKMK_Sch58"></a>Sch58.ldf  
 
 ```
 dn: CN=ms-DS-Resource-Property-List,CN=Schema,CN=Configuration,DC=X
@@ -153,7 +152,7 @@ objectVersion: 58
 -
 ```
 
-### Sch59.ldf  
+### <a name="BKMK_Sch59"></a>Sch59.ldf  
 
 ```
 dn: CN=ms-DS-User-Device-Registration,CN=Schema,CN=Configuration,DC=X
@@ -385,7 +384,7 @@ objectVersion: 59
 -
 ```
 
-### Sch60.ldf  
+### <a name="BKMK_Sch60"></a>Sch60.ldf  
 
 ```
 dn: CN=ms-DS-Is-Member-Of-DL-Transitive,CN=Schema,CN=Configuration,DC=X
@@ -529,7 +528,7 @@ objectVersion: 60
 -
 ```
 
-### Sch61.ldf  
+### <a name="BKMK_Sch61"></a>Sch61.ldf  
 
 ```
 dn: CN=ms-DS-Drs-Farm-ID,CN=Schema,CN=Configuration,DC=X
@@ -577,7 +576,7 @@ schemaUpdateNow: 1
 
 ```
 
-### Sch62.ldf  
+### <a name="BKMK_Sch62"></a>Sch62.ldf  
 
 ```
 dn: CN=ms-DS-Issuer-Public-Certificates,CN=Schema,CN=Configuration,DC=X
@@ -626,7 +625,7 @@ objectVersion: 62
 
 ```
 
-### Sch63.ldf  
+### <a name="BKMK_Sch63"></a>Sch63.ldf  
 
 ```
 dn: CN=ms-DS-Issuer-Certificates,CN=Schema,CN=Configuration,DC=X
@@ -661,7 +660,7 @@ objectVersion: 63
 
 ```
 
-### Sch64.ldf  
+### <a name="BKMK_Sch64"></a>Sch64.ldf  
 
 ```
 dn: CN=ms-DS-Device-Registration-Service,CN=Schema,CN=Configuration,DC=X
@@ -702,7 +701,7 @@ objectVersion: 64
 
 ```
 
-### Sch65.ldf  
+### <a name="BKMK_Sch65"></a>Sch65.ldf  
 
 ```
 dn: CN=ms-DS-Registration-Quota,CN=Schema,CN=Configuration,DC=X
@@ -904,7 +903,7 @@ objectVersion: 65
 
 ```
 
-### Sch66.ldf  
+### <a name="BKMK_Sch66"></a>Sch66.ldf  
 
 ```
 dn: CN=ms-DS-SyncServerUrl,CN=Schema,CN=Configuration,DC=X
@@ -952,7 +951,7 @@ schemaUpdateNow: 1
 
 ```
 
-### Sch67.ldf  
+### <a name="BKMK_Sch67"></a>Sch67.ldf  
 
 ```
 dn: CN=ms-DS-Device-Registration-Service,CN=Schema,CN=Configuration,DC=X
@@ -987,7 +986,7 @@ schemaUpdateNow: 1
 
 ```
 
-### Sch68.ldf  
+### <a name="BKMK_Sch68"></a>Sch68.ldf  
 
 ```
 dn: CN=ms-DS-User-Allowed-To-Authenticate-To,CN=Schema,CN=Configuration,DC=X
@@ -1499,7 +1498,7 @@ schemaUpdateNow: 1
 
 ```
 
-### Sch69.ldf  
+### <a name="BKMK_Sch69"></a>Sch69.ldf  
 
 ```
 dn: CN=ms-DS-AuthN-Policy-Silo,CN=Schema,CN=Configuration,DC=X
@@ -1528,7 +1527,7 @@ schemaUpdateNow: 1
 
 ```
 
-### Sch70.ldf  
+### <a name="BKMK_Sch70"></a>Sch70.ldf  
 
 ```
 dn: CN=ms-DS-Device-MDMStatus,CN=Schema,CN=Configuration,DC=X
@@ -1576,7 +1575,7 @@ schemaUpdateNow: 1
 
 ```
 
-### Sch71.ldf  
+### <a name="BKMK_Sch71"></a>Sch71.ldf  
 
 ```
 dn: CN=ms-DS-GeoCoordinates-Altitude,CN=Schema,CN=Configuration,DC=X
@@ -1624,7 +1623,7 @@ schemaUpdateNow: 1
 
 ```
 
-### Sch72.ldf  
+### <a name="BKMK_Sch72"></a>Sch72.ldf  
 
 ```
 dn: CN=ms-DS-External-Directory-Object-Id,CN=Schema,CN=Configuration,DC=X
@@ -1673,7 +1672,7 @@ objectVersion: 72
 
 ```
 
-### Sch73.ldf  
+### <a name="BKMK_Sch73"></a>Sch73.ldf  
 
 ```
 dn: CN=ms-DS-Is-Compliant,CN=Schema,CN=Configuration,DC=x
@@ -1720,7 +1719,7 @@ schemaUpdateNow: 1
 
 ```
 
-### Sch74.ldf  
+### <a name="BKMK_Sch74"></a>Sch74.ldf  
 
 ```
 dn: CN=ms-DS-Key-Id,CN=Schema,CN=Configuration,DC=X
@@ -1949,7 +1948,7 @@ schemaUpdateNow: 1
 
 ```
 
-### Sch75.ldf  
+### <a name="BKMK_Sch75"></a>Sch75.ldf  
 
 ```
 dn: CN=ms-DS-Device-Trust-Type,CN=Schema,CN=Configuration,DC=X
@@ -2011,7 +2010,7 @@ schemaUpdateNow: 1
 
 ```
 
-### Sch76.ldf  
+### <a name="BKMK_Sch76"></a>Sch76.ldf  
 
 ```
 dn: CN=ms-DS-Shadow-Principal-Sid,CN=Schema,CN=Configuration,DC=X
@@ -2108,7 +2107,7 @@ schemaUpdateNow: 1
 
 ```
 
-### Sch77.ldf  
+### <a name="BKMK_Sch77"></a>Sch77.ldf  
 
 ```
 dn: CN=ms-DS-Key-Id,CN=Schema,CN=Configuration,DC=X
@@ -2185,7 +2184,7 @@ schemaUpdateNow: 1
 
 ```
 
-### Sch78.ldf  
+### <a name="BKMK_Sch78"></a>Sch78.ldf  
 
 ```
 #
@@ -2237,7 +2236,7 @@ schemaUpdateNow: 1
 
 ```
 
-### Sch79.ldf  
+### <a name="BKMK_Sch79"></a>Sch79.ldf  
 
 ```
 dn: CN=ms-DS-Device,CN=Schema,CN=Configuration,DC=X
@@ -2260,7 +2259,7 @@ schemaUpdateNow: 1
 
 ```
 
-### Sch80.ldf  
+### <a name="BKMK_Sch80"></a>Sch80.ldf  
 
 ```
 dn: CN=ms-DS-Key-Credential-Link,CN=schema,CN=configuration,DC=X
@@ -2328,7 +2327,7 @@ schemaUpdateNow: 1
 
 ```
 
-### Sch81.ldf  
+### <a name="BKMK_Sch81"></a>Sch81.ldf  
 
 ```
 dn: CN=DS-Validated-Write-Computer,CN=Extended-Rights,CN=Configuration,DC=X
@@ -2360,7 +2359,7 @@ schemaUpdateNow: 1
 
 ```
 
-### Sch82.ldf  
+### <a name="BKMK_Sch82"></a>Sch82.ldf  
 
 ```
 dn: CN=Dns-Zone-Scope-Container,CN=Schema,CN=Configuration,DC=X
@@ -2438,7 +2437,7 @@ schemaUpdateNow: 1
 
 ```
 
-### Sch83.ldf  
+### <a name="BKMK_Sch83"></a>Sch83.ldf  
 
 ```
 dn: CN=ms-DS-Expire-Passwords-On-Smart-Card-Only-Accounts,CN=Schema,CN=Configuration,DC=X
@@ -2484,7 +2483,7 @@ schemaUpdateNow: 1
 
 ```
 
-### Sch84.ldf  
+### <a name="BKMK_Sch84"></a>Sch84.ldf  
 
 ```
 dn: CN=ms-DS-Token-Group-Names,CN=Schema,CN=Configuration,DC=X
@@ -2590,7 +2589,7 @@ schemaUpdateNow: 1
 
 ```
 
-### Sch85.ldf  
+### <a name="BKMK_Sch85"></a>Sch85.ldf  
 
 ```
 dn: CN=ms-DS-User-Allowed-NTLM-Network-Authentication,CN=Schema,CN=Configuration,DC=X
@@ -2678,7 +2677,7 @@ schemaUpdateNow: 1
 
 ```
 
-### Sch86.ldf  
+### <a name="BKMK_Sch86"></a>Sch86.ldf
 
 ```
 dn: CN=ms-DS-Source-Anchor,CN=Schema,CN=Configuration,DC=X
@@ -2751,7 +2750,7 @@ schemaUpdateNow: 1
 
 ```
 
-### Sch87.ldf  
+### <a name="BKMK_Sch87"></a>Sch87.ldf  
 
 ```
 dn: CN=Send-As,CN=Extended-Rights,CN=Configuration,DC=X
