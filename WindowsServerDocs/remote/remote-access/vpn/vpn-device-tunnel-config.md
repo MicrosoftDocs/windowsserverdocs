@@ -31,7 +31,6 @@ Following are device tunnel features.
 4. Device tunnel is hidden from the user and not visible through the UI
 
 ## Requirements for Device Tunnels
-
 Following are requirements for device tunnels.
 
 - The device must be a domain joined computer
@@ -62,7 +61,7 @@ Following is the sample VPN profileXML.
  <!-- disable the addition of a class based route for the assigned IP address on the VPN interface -->
 <DisableClassBasedDefaultRoute>true</DisableClassBasedDefaultRoute>  
   </NativeProfile> 
-  <!-- use host routes(/32) to prevent routing conflicts -- >  
+  <!-- use host routes(/32) to prevent routing conflicts -->  
   <Route>  
 <Address>10.10.0.2</Address>  
 <PrefixSize>32</PrefixSize>  
@@ -71,13 +70,13 @@ Following is the sample VPN profileXML.
 <Address>10.10.0.3</Address>  
 <PrefixSize>32</PrefixSize>  
   </Route>  
-<!-- traffic filters for the routes specified above so that only this traffic can go over the device tunnel -- > 
+<!-- traffic filters for the routes specified above so that only this traffic can go over the device tunnel --> 
   <TrafficFilter>  
 <RemoteAddressRanges>10.10.0.2, 10.10.0.3</RemoteAddressRanges>  
   </TrafficFilter>
-<!-- need to specify always on = true -- > 
+<!-- need to specify always on = true --> 
   <AlwaysOn>true</AlwaysOn> 
-<! -- new node to specify that this is a device tunnel -- >  
+<! -- new node to specify that this is a device tunnel -->  
  <DeviceTunnel>true</DeviceTunnel>
 <!--new node to register client IP address in DNS to enable manage out -->
 <RegisterDNS>true</RegisterDNS>
