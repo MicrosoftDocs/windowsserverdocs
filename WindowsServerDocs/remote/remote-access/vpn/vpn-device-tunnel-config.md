@@ -1,5 +1,5 @@
 ---
-title: Configure VPN Device Tunnels in Windows 10
+title: Configure the VPN Device Tunnel in Windows 10
 description: You can use this topic to learn how to create a VPN device tunnel in Windows 10.
 manager: brianlic
 ms.prod: windows-server-threshold
@@ -14,12 +14,12 @@ author: maricia
 
 >Applies To: Windows 10 version 1709
 
-You can use this topic to learn how to create and configure Virtual Private Network \(VPN\) device tunnels for VPN connections in Windows 10.
+You can use this topic to learn how to create and configure a Virtual Private Network \(VPN\) device tunnel for VPN connections in Windows 10.
 
 Windows 10 VPN connections include two types of tunnels.
 
-- **Device tunnels**. This tunnel connects to specified VPN servers before users log on to the device. Device tunnel is used for pre-logon connectivity scenarios and device management purposes.
-- **User tunnels**. This tunnel connects only after a user logs on to the device. User tunnel allows users to access organization resources through VPN servers.
+- **Device tunnel**. This tunnel connects to specified VPN servers before users log on to the device. Device tunnel is used for pre-logon connectivity scenarios and device management purposes.
+- **User tunnel**. This tunnel connects only after a user logs on to the device. User tunnel allows users to access organization resources through VPN servers.
 
 ## Device Tunnel Features
 
@@ -30,8 +30,8 @@ Following are device tunnel features.
 3. Device tunnel can coexist with one active user tunnel
 4. Device tunnel is hidden from the user and not visible through the UI
 
-## Requirements for Device Tunnels
-Following are requirements for device tunnels.
+## Requirements for the Device Tunnel
+Following are requirements for the device tunnel.
 
 - The device must be a domain joined computer
 - The device must be running Windows 10 Enterprise or Education version 1709 or later
@@ -76,7 +76,7 @@ Following is the sample VPN profileXML.
   </TrafficFilter>
 <!-- need to specify always on = true --> 
   <AlwaysOn>true</AlwaysOn> 
-<! -- new node to specify that this is a device tunnel -->  
+<!-- new node to specify that this is a device tunnel -->  
  <DeviceTunnel>true</DeviceTunnel>
 <!--new node to register client IP address in DNS to enable manage out -->
 <RegisterDNS>true</RegisterDNS>
@@ -86,7 +86,7 @@ Following is the sample VPN profileXML.
 Depending on the needs of each particular deployment scenario, another VPN feature that can be configured with the device tunnel is [Trusted Network Detection](https://social.technet.microsoft.com/wiki/contents/articles/38546.new-features-for-vpn-in-windows-10-and-windows-server-2016.aspx#Trusted_Network_Detection).
 
 ```
- <! -- inside/outside detection -- > 
+ <!-- inside/outside detection --> 
   <TrustedNetworkDetection>corp.contoso.com</TrustedNetworkDetection> 
 ```
 
