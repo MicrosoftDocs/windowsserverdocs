@@ -32,17 +32,17 @@ Follow these steps to get started with Remote Desktop on your Mac:
 3. Add a Remote Desktop connection or a remote resource. You use a connection to connect to a directly to a Windows PC and a remote resource to use a RemoteApp program, session-based desktop, or a virtual desktop published on-premises using RemoteApp and Desktop Connections. This feature is typically available in corporate environments.
 
 ## What about the Mac beta client?
-We're testing a new features on our preview channel on HockeyApp. Want to check it out? Go to [Microsoft Remote Desktop for Mac](https://go.microsoft.com/fwlink/?LinkID=619698) and click **Download**. You don't need to create an account or sign into HockeyApp to download the beta client.
+We're testing new features on our preview channel on HockeyApp. Want to check it out? Go to [Microsoft Remote Desktop for Mac](https://go.microsoft.com/fwlink/?LinkID=619698) and click **Download**. You don't need to create an account or sign into HockeyApp to download the beta client.
 
 If you already have the client, you can check for updates to ensure you have the latest version. In the beta client, click **Microsoft Remote Desktop Beta** at the top, and then click **Check for updates**. 
 
 ## Add a Remote Desktop connection
 To create a remote desktop connection:
 
-1. In the Connection Center, click **+** and then click **Desktop**.
+1. In the Connection Center, click **+**, and then click **Desktop**.
 2. Enter the following information:
    - **PC name** - the name of the computer. This can be a Windows computer name (found in the **System** settings), a domain name, or an IP address. You can also add port information to the end of this name, like **MyDesktop:3389**.
-   - **User Account** - Add the user account you use to access the remote PC. Use one of these formats: *user_name*, *domain\user_name*, or *user_name@domain.com*. You can also choose whether to require a password. When managing multiple user accounts with the same password set a friendly name to differentiate the accounts.Manage your saved user accounts in the preferences of the app. 
+   - **User Account** - Add the user account you use to access the remote PC. Use one of these formats: *user_name*, *domain\user_name*, or *user_name@domain.com*. You can also choose whether to require a password. When managing multiple user accounts with the same password, set a friendly name to differentiate the accounts. Manage your saved user accounts in the preferences of the app. 
 
 3. You can also set these optional settings for the connection:
    - Set a friendly name 
