@@ -650,6 +650,8 @@ Organizations should control and monitor membership in all of the Tier 0 groups 
 
 -   Cryptographic Operators
 
+-   Distributed COM Users
+
 -   Other Delegated Groups
 
     > [!NOTE]
