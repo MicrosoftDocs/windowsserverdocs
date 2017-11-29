@@ -21,28 +21,28 @@ ms.date: 10/03/2017
 You can use the Remote Desktop client for Mac to work with Windows apps, resources, and desktops from your Mac computer. Use the following information to get started - and check out the [FAQ](remote-desktop-client-faq.md) if you have questions.
 
 >[!Note]
-> - The Mac client runs on computers running macOS/OS 10.9 and newer.
-> - The information in this article applies primarily to the full version of the Mac client - the version available in the Mac AppStore. The latest Mac client beta does not yet have support for all of the features described below. For more information about the beta and what is available in that client, check out the [beta client release notes](https://go.microsoft.com/fwlink/?LinkID=619698&clcid=0x409).
+> - The Mac client runs on computers running macOS 10.10 and newer.
+> - The information in this article applies primarily to the full version of the Mac client - the version available in the Mac AppStore. Test-drive new features downloading our preview app here:  [beta client release notes](https://go.microsoft.com/fwlink/?LinkID=619698&clcid=0x409).
 
 ## Get the Remote Desktop client
 Follow these steps to get started with Remote Desktop on your Mac:
 
-1. Download the Microsoft Remote Desktop client from the [Mac App Store](https://itunes.apple.com/us/app/microsoft-remote-desktop/id715768417?mt=12&ls=1).
+1. Download the Microsoft Remote Desktop client from the [Mac App Store](https://itunes.apple.com/us/app/microsoft-remote-desktop/id1295203466?mt=12).
 2. [Set up your PC to accept remote connections](remote-desktop-client-faq.md#how-do-i-set-up-a-pc-for-remote-desktop). (If you skip this step, you can't connect to your PC.)
 3. Add a Remote Desktop connection or a remote resource. You use a connection to connect to a directly to a Windows PC and a remote resource to use a RemoteApp program, session-based desktop, or a virtual desktop published on-premises using RemoteApp and Desktop Connections. This feature is typically available in corporate environments.
 
 ## What about the Mac beta client?
-We're currently testing a new beta client for Mac. Want to check it out? Go to [Microsoft Remote Desktop for Mac](https://go.microsoft.com/fwlink/?LinkID=619698) and click **Download**. You don't need to create an account or sign into HockeyApp to download the beta client.
+We're testing a new features on our preview channel on HockeyApp. Want to check it out? Go to [Microsoft Remote Desktop for Mac](https://go.microsoft.com/fwlink/?LinkID=619698) and click **Download**. You don't need to create an account or sign into HockeyApp to download the beta client.
 
 If you already have the client, you can check for updates to ensure you have the latest version. In the beta client, click **Microsoft Remote Desktop Beta** at the top, and then click **Check for updates**. 
 
 ## Add a Remote Desktop connection
 To create a remote desktop connection:
 
-1. In the Connection Center, click **+** and then click **Add PC or Server**.
+1. In the Connection Center, click **+** and then click **Desktop**.
 2. Enter the following information:
    - **PC name** - the name of the computer. This can be a Windows computer name (found in the **System** settings), a domain name, or an IP address. You can also add port information to the end of this name, like **MyDesktop:3389**.
-   - **User name** - The user name to use to access the remote PC. Use one of these formats: *user_name*, *domain\user_name*, or *user_name@domain.com*. You can also choose whether to require a password. 
+   - **User Account** - Add the user account you use to access the remote PC. Use one of these formats: *user_name*, *domain\user_name*, or *user_name@domain.com*. You can also choose whether to require a password. When managing multiple user accounts with the same password set a friendly name to differentiate the accounts.Manage your saved user accounts in the preferences of the app. 
 
 3. You can also set these optional settings for the connection:
    - Set a friendly name 
@@ -52,6 +52,7 @@ To create a remote desktop connection:
    - Enable Admin Mode
    - Redirect local folders into a remote session
    - Forward local printers
+   - Forward Smart Cards
 4. Click **Save**.
 
 To start the connection, just double-click it. The same is true for remote resources.
@@ -101,7 +102,7 @@ To set up a new gateway in preferences:
   - **User name** - The user name and password to be used for the Remote Desktop gateway you are connecting to. You can also select **Use connection credentials** to use the same user name and password as those used for the remote desktop connection.
 
 
-## Manage your user accounts (available in beta only)
+## Manage your user accounts
 
 When you connect to a desktop or remote resources, you can save the user accounts to select from again. You can manage your user accounts by using the Remote Desktop client.
 
