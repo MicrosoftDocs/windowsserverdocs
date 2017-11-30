@@ -18,6 +18,16 @@ ms.date: 10/18/2017
 
 This article describes common Honolulu configuration issues and how to fix them.
 
+## Clear your browser cache
+
+After upgrading Honolulu from a previous version, you may sometimes need to clear your browser cache if you find that portions of the interface are not responding.
+
+## Delete data from previous install
+
+If you have previously installed Honolulu on Windows Server (not Windows 10), you may need to delete the application data if the service fails to start, or if your connection list appears corrupted. 
+
+To remove the application data, delete the **Server Management Experience** folder under **C:\\Windows\\ServiceProfiles\\NetworkService\\AppData\\Roaming\\Microsoft**
+
 ## Configure TrustedHosts
 
 When installing Project Honolulu, you are given the option to let Honolulu manage the gateway’s TrustedHosts setting. This is required in a workgroup environment, or when using local administrator credentials in a domain. If you choose to forego this setting, you must configure TrustedHosts manually.
@@ -64,21 +74,16 @@ When entering credentials in the server connection’s **Manage As** dialog box,
 
     REG ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v LocalAccountTokenFilterPolicy /t REG_DWORD /d 1
 
-## Delete data from previous install
-
-If you have previously installed Honolulu on Windows Server (not Windows 10), you may need to delete the **appdata** folder and reinstall Honolulu if your connection list seems corrupted.
-
-**To delete the appdata folder**
-
-1. Uninstall Honolulu.
-2. Delete the **Server Management Experience** folder under **C:\\Windows\\ServiceProfiles\\NetworkService\\AppData\\Roaming\\Microsoft**
-3. Reinstall Honolulu
-
 ## Are you connecting to a workgroup machine on a different subnet?
 
 To connect to a workgroup machine that is not on the same subnet as the gateway, make sure the firewall port for WinRM (TCP 5985) allows inbound traffic on the target machine. You can run the following command in PowerShell or at a Command Prompt as Administrator on the target machine to create this firewall rule:
-  
+
+**Windows Server**
+
     Set-NetFirewallRule -Name WINRM-HTTP-In-TCP-PUBLIC –RemoteAddress Any
+**Windows 10**
+
+    Set-NetFirewallRule -Name WINRM-HTTP-In-TCP –RemoteAddress Any
 
 ## Hyper-V PowerShell not installed
 
