@@ -27,7 +27,7 @@ If you encounter an issue not described on this page, please [let us know](http:
 
 ## General
 
-- When disconnected from the internet, the Honolulu gateway may displays errors trying to reach aka.ms (looking for available update) or myget.org (looking for available extentions.) [1709-14483239] [1709-14483301]
+ - When disconnected from the internet, the Honolulu gateway may displays errors trying to reach aka.ms (looking for available update) or myget.org (looking for available extentions.) [1709-14483239] [1709-14483301]
 
 - If you are specifying credentials while adding a new server connection, make sure to click **Retry with credentials** before submitting the form. You may have to scroll down to reveal the button. [1709-13706997]
 
@@ -56,6 +56,10 @@ If you encounter an issue not described on this page, please [let us know](http:
 - When adding servers to manage, using the FQDN as server name is highly recommended. You may encounter connection errors if a computer name or IP address is used. [1709-11551175]
 
 - There may be minor variance between version numbers of OS's running in Honolulu modules, and what is listed within the 3rd Party Software Notice.
+
+## WebSocket compatibility when using a proxy service
+
+Remote Desktop, PowerShell, and Events modules in Honolulu utilize the WebSocket protocol, which is often not supported when using a     proxy such as Azure AD App Proxy. If you depend on this configuration, please add your vote [here](https://feedback.azure.com/forums/169401-azure-active-directory/suggestions/20213116-support-websocket-protocol-in-azure-ad-application).
 
 ## Support for Windows Server versions before 2016 (2012 & 2012R2)
 
@@ -99,6 +103,14 @@ If it is not installed, you can [download and install WMF 5.1](https://www.micro
 
 * When you set a network adapter to DHCP, or update to a new IP address, it can take some time for the change to take effect, even if a success notification was shown. If this happens, waiting should fix the problem. There is no harm in sending the request again if there is no change after a long period of time. [1709-13383236]
 
+### PowerShell
+
+* Pasting with a single right click as in the desktop PowerShell console does not work. Instead you will get the browser’s context menu, where you can select paste. Ctrl-V works as well.
+
+* Ctrl-C to copy does not work, it will always send the Ctrl-C break command to the console. Copy from the right-click context menu works.
+
+* When you make the Honolulu window smaller, the terminal content will reflow, but when you make it larger again, the content may not return to it’s previous state. If things get jumbled, you can try Clear-Host, or disconnect and reconnect using the button above the terminal.
+
 ### Processes
 
 * Starting a new process not yet implemented. [1709-11804107]
@@ -108,6 +120,26 @@ If it is not installed, you can [download and install WMF 5.1](https://www.micro
 * Search functionality not implemented. [1709-13820009]
 
 * Export may fail in the case of a very long key name [1709-13760106]
+
+### Remote Desktop
+
+* The Remote Desktop tool does not currently support any text, image, or file copy/paste between the local desktop and the remote session.
+
+* To do any copy/paste within the remote session, you can copy as normal (right click + copy or Ctrl+C), but paste requires right click + paste (Ctrl+V does NOT work)
+
+* Opening the web browser’s debugger while a Remote Desktop session is active may cause your computer to crash. Don’t do it.
+
+* You cannot send the following key commands to the remote session
+
+  * Ctrl+Alt+End / Ctrl+Alt+Del
+  
+  * Alt+Tab
+  
+  * Function keys
+  
+  * Windows Key
+  
+  * PrtScn
 
 ### Roles and Features
 
@@ -133,9 +165,29 @@ If it is not installed, you can [download and install WMF 5.1](https://www.micro
 
 * Advanced features available in Hyper-V Manager such as Virtual SAN Manager, Move VM, Export VM, VM Replication are currently not supported.
 
+### Virtual Switches
+
+* Switch Embedded Teaming (SET): When adding NICs to a team, they must be on the same subnet.
+
 ### Windows Update
 
 * After installing updates, install status may be cached and require browser refresh.
+
+## Computer Management Solution
+
+The Computer Management solution contains a subset of the tools from the Server Manager solution, so the same known issues apply, as well as the following Computer Management solution specific issues:
+
+* If you try to add a Windows PC connection, but the add connection dialog tries to add it as a server, refresh your browser. If the problem persists, clear your browser cache.
+
+* When you try to manage the localhost, you will be prompted to elevate the gateway process. If you click **no** in the User Account Control popup that follows, Honolulu won’t be able to display it again. In this case, exit the gateway process by right-clicking the Project Honolulu icon in the system tray and choosing exit, then relaunch Project Honolulu from the Start Menu.
+
+* If you have the RSAT tools installed, the Virtual Machine tool will throw a cluster service error [1711-14598645]
+
+* Windows 10 does not have WinRM/PowerShell remoting on by default
+  
+  * To enable management of the Windows 10 Client, you must issue the command ```Enable-PSRemoting``` from an elevated PowerShell prompt.
+
+  * You may also need to update your firewall to allow connections from outside the local subnet with ```Set-NetFirewallRule -Name WINRM-HTTP-In-TCP –RemoteAddress Any``` For more restrictive networks scenarios, please refer to [this documentation](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/enable-psremoting?view=powershell-5.1).
 
 ## Failover Cluster Manager solution
 
