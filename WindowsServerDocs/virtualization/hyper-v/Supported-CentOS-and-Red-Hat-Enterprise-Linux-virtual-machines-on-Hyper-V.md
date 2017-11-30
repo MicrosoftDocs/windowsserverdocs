@@ -8,9 +8,9 @@ ms.technology: compute-hyper-v
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4bf8783d-dee5-4b3e-8cce-2b11b117c189
-author: shirgall
-ms.author: kathydav
-ms.date: 10/03/2016
+author: danihalfin
+ms.author: daniha
+ms.date: 11/27/2017
 ---
 # Supported CentOS and Red Hat Enterprise Linux virtual machines on Hyper-V
 
@@ -21,6 +21,9 @@ The following feature distribution maps indicate the features that are present i
 The built-in Red Hat Enterprise Linux Integration Services drivers for Hyper-V (available since Red Hat Enterprise Linux 6.4) are sufficient for Red Hat Enterprise Linux guests to run using the high performance synthetic devices on Hyper-V hosts.These built-in drivers are certified by Red Hat for this use. Certified configurations can be viewed on this Red Hat web page: [Red Hat Certification Catalog](https://access.redhat.com/ecosystem/search/#/ecosystem/Red%20Hat%20Enterprise%20Linux?sort=sortTitle%20asc&vendors=Microsoft&category=Server). It isn't necessary to download and install Linux Integration Services packages from the Microsoft Download Center, and doing so may limit your Red Hat support as described in Red Hat Knowledgebase article 1067: [Red Hat Knowledgebase 1067](https://access.redhat.com/articles/1067).
 
 Because of potential conflicts between the built-in LIS support and the downloadable LIS support when you upgrade the kernel, disable automatic updates, uninstall the LIS downloadable packages, update the kernel, reboot, and then install the latest LIS release, and reboot again.
+
+>[!NOTE]
+>Official Red Hat Enterprise Linux certification information is available through the [Red Hat Customer Portal](https://access.redhat.com/ecosystem/search/#/category/Server?sort=sortTitle%20asc&query=windows%20server&ecosystem=Red%20Hat%20Enterprise%20Linux).
 
 In this section:
 
@@ -44,7 +47,7 @@ In this section:
 
 This series only has 64-bit kernels.
 
-|**Feature**|**Windows Server version**|**7.0-7.3**|**7.0-7.2**|**7.3**|**7.2**|**7.1**|**7.0**|
+|**Feature**|**Windows Server version**|**7.0-7.4**|**7.0-7.2**|**7.3**|**7.2**|**7.1**|**7.0**|
 |-|-|-|-|-|-|-|-|
 |**Availability**||[LIS 4.2](https://www.microsoft.com/download/details.aspx?id=55106)|[LIS 4.1](https://www.microsoft.com/download/details.aspx?id=51612)|Built in|Built in|Built in|Built in|
 |**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_core)**|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
