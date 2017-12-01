@@ -45,16 +45,18 @@ When data is moved from mirror to parity, the data is read, parity encodings are
 
 1.	**Writes to Mirror:**
 
-    a. If the incoming write modifies existing data in mirror, ReFS will modify the data in place.
-    b. If the incoming write is a new write, and ReFS can successfully find enough free space in mirror to service this write, ReFS will write to mirror.
+    - **1a.** If the incoming write modifies existing data in mirror, ReFS will modify the data in place.
+    - **1b.** If the incoming write is a new write, and ReFS can successfully find enough free space in mirror to service this write, ReFS will write to mirror.
     ![Write-to-Mirror](media/mirror-accelerated-parity/Write-to-Mirror.png)
 
 2. **Writes to Mirror, Reallocated from Parity:**
-    - **a.** If the incoming write modifies data that’s in parity, and ReFS can successfully find enough free space in mirror to service the incoming write, ReFS will first invalidate the previous data in parity and then write to mirror. This invalidation is a quick and inexpensive metadata operation that helps meaningfully improve write performance made to parity.
+
+    If the incoming write modifies data that’s in parity, and ReFS can successfully find enough free space in mirror to service the incoming write, ReFS will first invalidate the previous data in parity and then write to mirror. This invalidation is a quick and inexpensive metadata operation that helps meaningfully improve write performance made to parity.
     ![Reallocated-Write](media/mirror-accelerated-parity/Reallocated-Write.png)
 
 3. **Writes to Parity:**
-    - **a.** If ReFS cannot successfully find enough free space in mirror, ReFS will write new data to parity or modify existing data in parity directly. The “Performance optimizations” section below provides guidance that helps minimize writes to parity.
+    
+    If ReFS cannot successfully find enough free space in mirror, ReFS will write new data to parity or modify existing data in parity directly. The “Performance optimizations” section below provides guidance that helps minimize writes to parity.
     ![Write-to-Parity](media/mirror-accelerated-parity/Write-to-Parity.png)
 
 **Reads:** ReFS will read directly from the tier containing the relevant data. If parity is constructed with HDDs, the cache in Storage Spaces Direct will cache this data to accelerate future reads. 
