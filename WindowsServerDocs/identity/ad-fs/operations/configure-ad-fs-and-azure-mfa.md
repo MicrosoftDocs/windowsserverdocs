@@ -85,7 +85,10 @@ In order to enable the AD FS servers to communicate with the Azure Multi-Factor 
 2. **Set the certificate as the new credential against the Azure Multi-Factor Auth Client**  
 	
 	`New-MsolServicePrincipalCredential -AppPrincipalId 981f26a1-7f43-403b-a875-f8b09b8cd720 -Type asymmetric -Usage verify -Value $certBase64 `
-  
+
+>[!IMPORTANT]
+>  This command needs to be run on all of the AD FS servers in your farm.  Azure AD MFA will fail on servers that have not have the certificate set as the new credential against the Azure Multi-Factor Auth Client. 
+
 >[!NOTE]  
 > 981f26a1-7f43-403b-a875-f8b09b8cd720 is the guid for Azure Multi-Factor Auth Client.  
   
