@@ -78,5 +78,5 @@ On Windows Server Core and Windows Server 2016 Core, Project Honolulu can instal
         msiexec /i <HonoluluInstallerName>.msi /qn /L*v log.txt SME_PORT=<port> SME_THUMBPRINT=<thumbprint> SSL_CERTIFICATE_OPTION=installed
         
 > [!WARNING] 
-> Invoking `msiexec` from PowerShell using dot-slash relative path notation (e.g. `.\ServerManagementGateway.msi`) is not supported
+> Invoking `msiexec` from PowerShell using dot-slash relative path notation (e.g. `.\<HonoluluInstallerName>.msi`) is not supported
 > and will result in installation failure. Remove the `.\` prefix or specify the full path to the MSI.
