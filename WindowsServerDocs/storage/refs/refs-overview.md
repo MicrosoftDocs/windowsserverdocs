@@ -29,23 +29,22 @@ ReFS introduces new features that can precisely detect corruptions and also fix 
 ### Performance
 In addition to providing resiliency improvements, ReFS introduces new features for performance-sensitive and virtualized workloads. Real-time tier optimization, block cloning, and sparse VDL are good examples of the evolving capabilities of ReFS, which are designed to support dynamic and diverse workloads:
 
-- **[Mirror-accelerated parity](./mirror-accelerated-parity.md)** - Mirror-accelerated parity delivers both high performance and also capacity efficient storage for your data. 
+- **[Mirror-accelerated parity](./mirror-accelerated-parity.md)** - Mirror-accelerated parity delivers both high performance and also capacity efficient storage for your data.
 
     - To deliver both high performance and capacity efficient storage, ReFS divides a volume into two logical storage groups, known as tiers. These tiers can have their own drive and resiliency types, allowing each tier to optimize for either performance or capacity. Some example configurations include: 
-    
-    
-    | Performance tier | Capacity tier |
-    |----------------|-----------------|
-     Mirrored SSD | Mirrored HDD |
-     Mirrored SSD | Parity SSD |
-     Mirrored SSD | Parity HDD |   
+       
+       | Performance tier | Capacity tier |
+       |----------------|-----------------|
+       | Mirrored SSD | Mirrored HDD |
+       | Mirrored SSD | Parity SSD |
+       | Mirrored SSD | Parity HDD |   
             
     - Once these tiers are configured, ReFS use them to deliver fast storage for hot data and capacity-efficient storage for cold data:
         - All writes will occur in the performance tier, and large chunks of data that remain in the performance tier will be efficiently moved to the capacity tier in real-time.
         - If using a [hybrid deployment](../storage-spaces/choosing-drives.md) (mixing flash and HDD drives), [the cache in Storage Spaces Direct](../storage-spaces/understand-the-cache.md) will help accelerate reads, reducing the effect of data fragmentation characteristic of virtualized workloads. Otherwise, if using an all-flash deployment, reads will also occur in the performance tier. 
 
 >[!NOTE]
->For Server deployments, mirror-accelerated parity is only supported on [Storage Spaces Direct](../storage-spaces/storage-spaces-direct-overview.md).
+>For Server deployments, mirror-accelerated parity is only supported on [Storage Spaces Direct](../storage-spaces/storage-spaces-direct-overview.md). Mirror-accelerated parity is recommended for archival and backup workloads. Virtualized and other high performance random workloads are not supported. 
 
 - **Accelerated VM operations** - ReFS introduces new functionality specifically targeted to improve the performance of virtualized workloads:
     - [Block cloning](./block-cloning.md) - Block cloning accelerates copy operations, enabling quick, low-impact VM checkpoint merge operations. 
@@ -78,7 +77,7 @@ Deploying ReFS on basic disks is best suited for applications that implement the
 - Applications that introduce their own resiliency and availability software solutions can leverage integrity-streams, block-cloning, and the ability to scale and support large data sets. 
 
 >[!NOTE]
->ReFS is not supported on SAN-attached storage.
+>ReFS is supported with Storage Spaces, Storage Spaces Direct, and non-removable direct attached drives. ReFS is not supported with hardware virtualized storage such as SANs or RAID controllers in non-passthrough mode. USB drives are also not supported.
 
 
 ## Feature comparison
@@ -89,8 +88,8 @@ Deploying ReFS on basic disks is best suited for applications that implement the
 |----------------|------------------------------------------------|-----------------------|
 | Maximum file name length | 255 Unicode characters  | 255 Unicode characters               |
 | Maximum path name length |32K Unicode characters | 32K Unicode characters                |
-| Maximum file size | 18 EB (exabytes)  | 18 EB (exabytes)                |
-| Maximum volume size | 4.7 ZB (zettabytes)                           | 256 TB                |
+| Maximum file size | 35 PB (petabytes)  | 256 TB (terabytes)                |
+| Maximum volume size | 35 PB (petabytes)                           | 256 TB (terabytes)                |
 
 
 ### Functionality
@@ -136,7 +135,8 @@ Deploying ReFS on basic disks is best suited for applications that implement the
 | Short names | No | Yes |
 | Extended attributes | No | Yes |
 | Disk quotas | No | Yes |
-| Bootable | No | Yes |
+| Bootable | No | Yes 
+| Page File Support | No | Yes |
 | Supported on removable media | No | Yes |
 | NTFS storage tiers | No | Yes |
 
