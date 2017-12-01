@@ -27,7 +27,7 @@ If you encounter an issue not described on this page, please [let us know](http:
 
 ## General
 
- - When disconnected from the internet, the Honolulu gateway may displays errors trying to reach aka.ms (looking for available update) or myget.org (looking for available extentions.) [1709-14483239] [1709-14483301]
+ - When disconnected from the internet, the Honolulu gateway may display errors trying to reach aka.ms (looking for available update) or myget.org (looking for available extentions.) [1709-14483239] [1709-14483301]
 
 - If you are specifying credentials while adding a new server connection, make sure to click **Retry with credentials** before submitting the form. You may have to scroll down to reveal the button. [1709-13706997]
 
@@ -59,7 +59,7 @@ If you encounter an issue not described on this page, please [let us know](http:
 
 ## WebSocket compatibility when using a proxy service
 
-Remote Desktop, PowerShell, and Events modules in Honolulu utilize the WebSocket protocol, which is often not supported when using a     proxy such as Azure AD App Proxy. If you depend on this configuration, please add your vote [here](https://feedback.azure.com/forums/169401-azure-active-directory/suggestions/20213116-support-websocket-protocol-in-azure-ad-application).
+Remote Desktop, PowerShell, and Events modules in Honolulu utilize the WebSocket protocol, which is often not supported when using a proxy such as Azure AD App Proxy. If you depend on this configuration, please add your vote [here](https://feedback.azure.com/forums/169401-azure-active-directory/suggestions/20213116-support-websocket-protocol-in-azure-ad-application).
 
 ## Support for Windows Server versions before 2016 (2012 & 2012R2)
 
@@ -105,7 +105,7 @@ If it is not installed, you can [download and install WMF 5.1](https://www.micro
 
 ### PowerShell
 
-* Pasting with a single right click as in the desktop PowerShell console does not work. Instead you will get the browser’s context menu, where you can select paste. Ctrl-V works as well.
+* Pasting with a single right-click as in the desktop PowerShell console does not work. Instead you will get the browser’s context menu, where you can select paste. Ctrl-V works as well.
 
 * Ctrl-C to copy does not work, it will always send the Ctrl-C break command to the console. Copy from the right-click context menu works.
 
