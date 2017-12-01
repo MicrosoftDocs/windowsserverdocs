@@ -123,6 +123,12 @@ If it is not installed, you can [download and install WMF 5.1](https://www.micro
 
 ### Remote Desktop
 
+* Remote Desktop tool fails to connect, showing “Session disconnected” popup dialog and the following error:
+Unexpected error in RDP Client: disconnect code=UnknownError(46), extended code=<null>, reason=X509_NAME_print_ex failed, (OSSL error: ERR_error_string returned "error:00000000:lib(0):func(0):reason(0)") Thrown in thread 0 at: certificateutils.cpp(152)
+
+   This is due to a bug in the Remote Desktop web control when the certificate on the gateway does not have a subject field. We are        planning to fix this in a future update, and for now, use a certificate that has a subject when installing Honolulu.
+
+
 * The Remote Desktop tool does not currently support any text, image, or file copy/paste between the local desktop and the remote session.
 
 * To do any copy/paste within the remote session, you can copy as normal (right click + copy or Ctrl+C), but paste requires right click + paste (Ctrl+V does NOT work)
