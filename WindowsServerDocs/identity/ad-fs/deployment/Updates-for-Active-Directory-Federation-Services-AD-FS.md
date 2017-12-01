@@ -5,7 +5,7 @@ description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 05/31/2017
+ms.date: 11/28/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 
@@ -25,6 +25,12 @@ Updates for Windows Server 2016 are delivered monthly via Windows Update and are
 
 |KB # |Description|Date Released
 |----- | ----- |-----
+|[4041688 (OS Build 14393.1794)](https://support.microsoft.com/kb/4041688)|This fix addresses an issue that intermittently misdirects AD Authority requests to the wrong Identity Provider because of incorrect caching behavior. This can effect authentication features like Multi Factor Authentication. </br></br>Added the ability for AAD Connect Health to report ADFS server health with correct fidelity (using verbose auditing) on mixed WS2012R2 and WS2016 ADFS farms.</br></br>Fixed a problem where during upgrade of 2012 R2 ADFS farm to ADFS 2016, the powershell cmdlet to raise the farm behavior level fails with a timeout when there are many relying party trusts.</br></br>Addressed an issue where AD FS causes authentication failures by modifying the wct parameter value while federating the requests to other Security Token Server (STS).|October 2017|
+|[4038801 (OS Build 14393.1737)](https://support.microsoft.com/kb/4038801)|Support added for OIDC logout using federated LDPs. This will allow "Kiosk Scenarios" where multiple users might be serially logged into a single device where there is federation with an LDP.</br></br>Fixed a WinHello issue where CEP/CES based certificates don't work with gMSA accounts.</br></br>Fixes a problem where the Windows Internal Database (WID) on Windows Server 2016 ADFS servers fails to sync some settings, such as the ApplicationGroupId columns from IdentityServerPolicy.Scopes and IdentityServerPolicy.Clients tables)  due to a foreign key constraint. Such sync failures can cause different claim, claim provider and application experiences between primary to secondary ADFS servers. Also, if the WID primary role is moved to a secondary node, application groups will no longer be manageable in the ADFS management UX.</br></br>This update fixes an issues where Multi Factor Authentication does not work correctly with Mobile devices that use custom culture definitions|September 2017|
+|[4034661 (OS Build 14393.1613)](https://support.microsoft.com/kb/4034661)|Fixes a problem where the caller IP address is nog logged by 411 events in the Security Event log of ADFS 4.0 \ Windows Server 2016 RS1 ADFS servers even after enabling “success audits” and “failure audits”.</br></br>This fix addresses an issue with Azure Multi Factor Authentication (MFA) when an ADFX server is configured to use an HTTP Proxy.</br></br>"Addressed an issue where presenting an expired or revoked certificate to the ADFS Proxy server does not return an error to the user."|August 2017|
+|[4034658 (OS Build 14393.1593)](https://support.microsoft.com/kb/4034658)|Fix for 2016 AD FS server in order to support MFA certificate enrollment for Windows Hello For Business for on prem deployments|August 2017| 
+|[4025334 (OS Build 14393.1532)](https://support.microsoft.com/kb/4025334)|Addressed an issue where the PkeyAuth token handler could fail an authentication if the pkeyauth request contains incorrect data. The authentication should still continue without performing device authentication|July 2017|
+|[4022723 (OS Build 14393.1378)](https://support.microsoft.com/kb/4022723)|[Web Application Proxy] Value of DisableHttpOnlyCookieProtection configuration property is not picked up by WAP 2016 in 2012R2/2016 mixed deployment </br></br>[Web Application Proxy] Unable to obtain user access token from AD FS in EAS Pre-auth scenarios.</br></br>AD FS 2016 : WSFED sign-out leads to an exception|June 2017 
 |[3213986](https://support.microsoft.com/kb/3213986)|Cumulative Update for Windows Server 2016 for x64-based Systems (KB3213986)| January 2017
 
 ## Updates for AD FS and WAP in Windows Server 2012 R2
@@ -32,6 +38,11 @@ Below is the list of hotfixes and update rollups that have been released for Act
 
 |KB # |Description|Date Released
 |----- | ----- |-----
+|[4041685](https://support.microsoft.com/kb/4041685)|Addressed an AD FS issue where MSISConext cookies in request headers can eventually overflow the headers size limit and cause failure to authenticate with HTTP status code 400 “Bad Request - Header Too Long".</br></br>Fixed a problem where ADFS can no longer ignore "prompt=login" during authentication. A "Disabled" option was added to restore scenarios where non-password authentication is used.|October 2017 Preview of Update Rollup|
+|[4019217](https://support.microsoft.com/kb/4019217)|Work Folders clients using token broker do not work when using a Server 2012 R2 AD FS Server|May 2017 Preview Update Rollup| 
+|[4015550](https://support.microsoft.com/kb/4015550)|Fixed an issue with AD FS not authenticating External users and AD FS WAP randomly failing to forward request|April 2017 Update Rollup| 
+|[4015547](https://support.microsoft.com/kb/4015547)|Fixed an issue with AD FS not authenticating External users and AD FS WAP randomly failing to forward request|April 2017 Security Update| 
+|[4012216](https://support.microsoft.com/kb/4009970)|MS17-019 This security update resolves a vulnerability in Active Directory Federation Services (ADFS). The vulnerability could allow information disclosure if an attacker sends a specially crafted request to an AD FS server, allowing the attacker to read sensitive information about the target system.|March 2017 Update Rollup| 
 |[3179574](https://support.microsoft.com/kb/3179574)|Fixed issue with AD FS extranet password update. |August 2016 Update Rollup
 |[3172614](https://support.microsoft.com/kb/3172614)|Introduced prompt=login [support](https://technet.microsoft.com/en-us/windows-server-docs/identity/ad-fs/overview/ad-fs-faq#BKMK_7), fixed issue with the AD FS management console and AlwaysRequireAuthentication setting. |July 2016 Update Rollup
 |[3163306](https://support.microsoft.com/kb/3163306)|Active Directory Federation Services (AD FS) 3.0 can't connect to Lightweight Directory Access Protocol (LDAP) attribute stores that are configured to use Secure Sockets Layer (SSL) port 636 or 3269 in connection string. |June 2016 Update Rollup
