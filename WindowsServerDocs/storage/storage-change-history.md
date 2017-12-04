@@ -7,7 +7,7 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.date: 11/8/2017
+ms.date: 12/4/2017
 description: New and updated topics in the Storage documentation for Windows Server 2016
 ---
 # Change history for storage topics in Windows Server
@@ -17,6 +17,12 @@ description: New and updated topics in the Storage documentation for Windows Ser
 This topic lists new and updated topics in the [Storage](storage.md) documentation for Windows Server 2016.
 
 > If you're looking for update history for Windows Server 2016, see [Windows 10 and Windows Server 2016 update history](https://support.microsoft.com/help/4000825/windows-10-and-windows-server-2016-update-history).
+
+## November 2017
+
+|New or changed topic|Description|
+|---|---|
+|[ReFS overview](refs/refs-overview.md)|Clarified recommended workloads for mirror-accellerated parity and corrected the supported file and volume sizes for ReFS and NTFS.|
 
 ## November 2017
 
