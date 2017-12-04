@@ -10,7 +10,7 @@ ms.topic:
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/18/2017
+ms.date: 12/01/2017
 ---
 # Microsoft Project Honolulu Frequently Asked Questions
 
