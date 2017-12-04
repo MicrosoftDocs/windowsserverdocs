@@ -20,12 +20,13 @@ If your organization is federated with Azure AD, you can use Azure Multi-Factor 
   
 Unlike with AD FS in Windows Server 2012 R2, the AD FS 2016 Azure MFA adapter integrates directly with Azure AD and does not require an on premises Azure MFA server.   The Azure MFA adapter is built in to Windows Server 2016, and there is no need for additional installation.
 
-## Note on Registering users for Azure MFA with AD FS 2016
-AD FS does not currently support inline proof up (registration) of Azure MFA security verification information.  As a result, when a user who has not yet registered (configured verification information) in Azure AD tries to authenticate with Azure MFA at AD FS, they will get an error.  While we are working to add inline proofing functionality, the following are the recommended configurations for enabling Azure MFA with AD FS.
->[!NOTE]   
-> As a workaround to enable users to register for MFA you can:
- - If you have an additional MFA method configured such as smart cards, you can customize the AD FS error page to direct users to https://aka.ms/mfasetup, where they can sign on with their smart card and then register for Azure MFA
- - If you do not have another MFA method configured, you can configure AD FS to issue the MFA claim (claim type http://schemas.microsoft.com/claims/authnmethodsreferences, value http://schemas.microsoft.com/claims/multipleauthn ) under limited conditions such as when the user is on a domain joined computer on the corporate intranet, then customize the AD FS error page as mentioned above.
+## Registering users for Azure MFA with AD FS 2016
+AD FS does not support inline proof up (registration) of Azure MFA security verification information. As a result, users must be proofed up prior to using Azure MFA for authenticating to AD FS applications. When a user who has not yet registered and proofed up (configured verification information) in Azure AD, tries to authenticate with Azure MFA at AD FS, they will get an error. This error experience can be customized by detecting the error message string via [JS customization](Advanced-Customization-of-AD-FS-Sign-in-Pages.md) of the AD FS pages and adding a new message to guide the users to register and proof up Azure MFA verification at [https://aka.ms/mfasetup](https://aka.ms/mfasetup). 
+
+Users currently are required to prove that they have authenticated with strong credentials for the registration action. This can be done in one of the following ways: 
+
+- If you have an additional MFA method configured such as smart cards, you can customize the AD FS error page to direct users to [https://aka.ms/mfasetup](https://aka.ms/mfasetup), where they can sign on with their smart card and then register for Azure MFA. You may also be using a 3rd party MFA product integrated with AD FS and are in the process of migrating to Azure MFA. In this case, the user can now use their password in addition to the 3rd party MFA to strongly sign-in and then register for Azure MFA. 
+- If you do not have another MFA method configured, you can configure AD FS to issue the MFA claim (claim type **http://schemas.microsoft.com/claims/authnmethodsreferences**, value **http://schemas.microsoft.com/claims/multipleauthn**) under limited conditions such as when the user is on a domain joined computer on the corporate intranet, then customize the AD FS error page as mentioned above.
 
 
 ### Recommended deployment topologies
