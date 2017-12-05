@@ -115,7 +115,7 @@ Hardware requirements for this scenario include the following:
         > If some or all of your client computers are running Windows 7, you must use the Advanced Setup Wizard. The Getting Started Setup Wizard described in this document does not support client computers that are running Windows 7. See [Deploy a Single DirectAccess Server with Advanced Settings](../../../remote-access/directaccess/single-server-advanced/../../../remote-access/directaccess/single-server-advanced/../../../remote-access/directaccess/single-server-advanced/Deploy-a-Single-DirectAccess-Server-with-Advanced-Settings.md) for instructions on how to use Windows 7 clients with DirectAccess.  
   
         > [!NOTE]  
-        > Only the following operating systems can be used as DirectAccess clients: Windows 10, Windows 8.1 Enterprise,  Windows Server 2016,  Windows Server 2012 R2 ,  Windows Server 2012 , Windows 8 Enterprise, Windows Server 2008 R2, Windows 7 Enterprise, and Windows 7 Ultimate.  
+        > Only the following operating systems can be used as DirectAccess clients: Windows 10 Enterprise, Windows 8.1 Enterprise,  Windows Server 2016,  Windows Server 2012 R2 ,  Windows Server 2012 , Windows 8 Enterprise, Windows Server 2008 R2, Windows 7 Enterprise, and Windows 7 Ultimate.  
   
 -   Infrastructure and management server requirements:  
   

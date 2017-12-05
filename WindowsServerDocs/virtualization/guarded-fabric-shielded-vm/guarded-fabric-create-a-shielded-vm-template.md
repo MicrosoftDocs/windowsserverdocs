@@ -1,5 +1,5 @@
 ---
-title: Shielded VMs - Hosting service provider creates a shielded VM template
+title: Create a Windows shielded VM template disk
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.topic: article
@@ -10,7 +10,7 @@ ms.technology: security-guarded-fabric
 ms.date: 10/14/2016
 ---
 
-# Shielded VMs - Hosting service provider creates a shielded VM template
+# Create a Windows shielded VM template disk
 
 >Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
@@ -37,13 +37,6 @@ First prepare an OS disk that you will then run through the Shielded Template Di
 
 > [!NOTE]
 > If you use VMM, do not copy the template disk into the VMM library at this stage. 
-
-### Required packages to create a Nano Server template disk
-
-If you are planning to run Nano Server as your guest OS in shielded VMs, you must ensure your Nano Server image includes the following packages:
-
-- Microsoft-NanoServer-Guest-Package
-- Microsoft-NanoServer-SecureStartup-Package
 
 ## Run Windows Update on the template operating system
 

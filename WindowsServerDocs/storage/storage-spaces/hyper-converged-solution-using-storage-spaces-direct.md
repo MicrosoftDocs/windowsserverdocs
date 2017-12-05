@@ -7,8 +7,9 @@ ms.technology: storage-spaces
 ms.topic: get-started-article
 ms.assetid: 20fee213-8ba5-4cd3-87a6-e77359e82bc0
 author: stevenek
-ms.date: 6/23/2017
+ms.date: 11/27/2017
 description: Deploy Storage Spaces Direct in a hyper-converged cluster in a test lab.
+ms.localizationpriority: medium
 ---
 # Hyper-converged solution using Storage Spaces Direct in Windows Server 2016
 
@@ -16,7 +17,7 @@ description: Deploy Storage Spaces Direct in a hyper-converged cluster in a test
 
 This topic provides instructions for how to deploy [Storage Spaces Direct](storage-spaces-direct-overview.md) to provide software-defined storage for virtual machines hosted in the same hyper-converged cluster.
 
-Note that for production environments we recommend acquiring a *Windows Server Software-Defined* hardware/software offering, which includes production deployment tools and procedures. These offerings are designed, assembled, and validated to meet Microsoft's requirements for private cloud environments, helping ensure reliable operation. Windows Server Software-Defined offerings will be available later this year - check back for updates! 
+Note that for production environments we recommend acquiring a [Windows Server Software-Defined](https://microsoft.com/wssd) hardware/software offering, which includes production deployment tools and procedures. These offerings are designed, assembled, and validated to meet Microsoft's requirements for private cloud environments, helping ensure reliable operation.
 
 If you would like to evaluate Storage Spaces Direct in Windows Server 2016 without investing in hardware, you can use Hyper-V virtual machines, as described in [Testing Storage Spaces Direct using Windows Server 2016 virtual machines](http://blogs.msdn.com/b/clustering/archive/2015/05/27/10617612.aspx).
 

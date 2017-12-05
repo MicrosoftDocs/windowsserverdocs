@@ -2,10 +2,10 @@
 ms.assetid: abf69b09-6528-42e0-b164-813c7c2c78e7
 title: Schema Updates
 description:
-author: billmath
-ms.author: billmath
+author: MicrosoftGuyJFlo
+ms.author: joflore
 manager: femila
-ms.date: 05/31/2017
+ms.date: 11/27/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 
@@ -16,9 +16,71 @@ ms.technology: identity-adds
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-This topic lists the LDF files that include the changes that Adprep.exe makes in  Windows Server 2012 R2  and.  
-  
-These are the LDF files included in  Windows Server 2012 R2 :  
+This topic lists the LDF files that include the changes that Adprep.exe makes.  
+
+These are the LDF files included in Windows Server 2016:
+
+-   [Sch58.ldf](#BKMK_Sch58)
+
+-   [Sch59.ldf](#BKMK_Sch59)
+
+-   [Sch60.ldf](#BKMK_Sch60)
+
+-   [Sch61.ldf](#BKMK_Sch61)
+
+-   [Sch62.ldf](#BKMK_Sch62)
+
+-   [Sch63.ldf](#BKMK_Sch63)
+
+-   [Sch64.ldf](#BKMK_Sch64)
+
+-   [Sch65.ldf](#BKMK_Sch65)
+
+-   [Sch66.ldf](#BKMK_Sch66)
+
+-   [Sch67.ldf](#BKMK_Sch67)
+
+-   [Sch68.ldf](#BKMK_Sch68)
+
+-   [Sch69.ldf](#BKMK_Sch69)
+
+-   [Sch70.ldf](#BKMK_Sch70)
+
+-   [Sch71.ldf](#BKMK_Sch71)
+
+-   [Sch72.ldf](#BKMK_Sch72)
+
+-   [Sch73.ldf](#BKMK_Sch73)
+
+-   [Sch74.ldf](#BKMK_Sch74)
+
+-   [Sch75.ldf](#BKMK_Sch75)
+
+-   [Sch76.ldf](#BKMK_Sch76)
+
+-   [Sch77.ldf](#BKMK_Sch77)
+
+-   [Sch78.ldf](#BKMK_Sch78)
+
+-   [Sch79.ldf](#BKMK_Sch79)
+
+-   [Sch80.ldf](#BKMK_Sch80)
+
+-   [Sch81.ldf](#BKMK_Sch81)
+
+-   [Sch82.ldf](#BKMK_Sch82)
+
+-   [Sch83.ldf](#BKMK_Sch83)
+
+-   [Sch84.ldf](#BKMK_Sch84)
+
+-   [Sch85.ldf](#BKMK_Sch85)
+
+-   [Sch86.ldf](#BKMK_Sch86)
+
+-   [Sch87.ldf](#BKMK_Sch87)
+
+These are the LDF files included in Windows Server 2012 R2:  
   
 -   [Sch57.ldf](#BKMK_Sch57)  
   
@@ -46,7 +108,7 @@ These are the LDF files included in  Windows Server 2012 R2 :
   
 -   [Sch69.ldf](#BKMK_Sch69)  
   
-These are the LDF files included in  Windows Server 2012 :  
+These are the LDF files included in Windows Server 2012:  
   
 -   [Sch48.ldf](#BKMK_Sch48)  
   
@@ -65,7 +127,2688 @@ These are the LDF files included in  Windows Server 2012 :
 -   [Sch55.ldf](#BKMK_Sch55)  
   
 -   [Sch56.ldf](#BKMK_Sch56)  
+
+## Schema Updates in Windows Server 2016  
   
+### <a name="BKMK_Sch58"></a>Sch58.ldf  
+
+```
+dn: CN=ms-DS-Resource-Property-List,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+replace: defaultHidingValue
+defaultHidingValue: FALSE
+-
+
+dn:
+changetype: modify
+add: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+dn: CN=Schema,CN=Configuration,DC=X
+changeType: ntdsSchemaModify
+replace: objectVersion
+objectVersion: 58
+-
+```
+
+### <a name="BKMK_Sch59"></a>Sch59.ldf  
+
+```
+dn: CN=ms-DS-User-Device-Registration,CN=Schema,CN=Configuration,DC=X
+changeType: ntdsSchemaModify
+replace: isDefunct
+isDefunct: TRUE
+-
+
+dn: CN=ms-DS-User-Device-Registration-Container,CN=Schema,CN=Configuration,DC=X
+changeType: ntdsSchemaModify
+replace: isDefunct
+isDefunct: TRUE
+-
+
+dn: CN=ms-DS-Device,CN=Schema,CN=Configuration,DC=X
+changeType: ntdsSchemaModify
+delete: systemMayContain
+systemMayContain: 1.2.840.113556.1.4.2246
+-
+
+dn: CN=User,CN=Schema,CN=Configuration,DC=X
+changeType: ntdsSchemaModify
+delete: systemMayContain
+systemMayContain: 1.2.840.113556.1.4.2244
+-
+
+dn: CN=ms-DS-User-Device-Registration-Link,CN=Schema,CN=Configuration,DC=X
+changeType: ntdsSchemaModify
+replace: isDefunct
+isDefunct: TRUE
+-
+
+dn: CN=ms-DS-User-Device-Registration-Link-BL,CN=Schema,CN=Configuration,DC=X
+changeType: ntdsSchemaModify
+replace: isDefunct
+isDefunct: TRUE
+-
+
+dn: CN=ms-DS-Authentication-Level,CN=Schema,CN=Configuration,DC=X
+changeType: ntdsSchemaModify
+replace: isDefunct
+isDefunct: TRUE
+-
+
+dn: CN=ms-DS-Approximate-Last-Use-Time-Stamp,CN=Schema,CN=Configuration,DC=X
+changeType: ntdsSchemaModify
+replace: isDefunct
+isDefunct: TRUE
+-
+
+dn: CN=ms-DS-Device-Reference,CN=Schema,CN=Configuration,DC=X
+changeType: ntdsSchemaModify
+replace: isDefunct
+isDefunct: TRUE
+-
+
+dn: CN=ms-DS-Device-Location,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: attributeSchema
+cn: ms-DS-Device-Location
+adminDisplayName: ms-DS-Device-Location
+adminDescription: The DN under which the device objects will be created.
+ldapDisplayName: msDS-DeviceLocation
+attributeId: 1.2.840.113556.1.4.2261
+omSyntax: 127
+omObjectClass:: KwwCh3McAIVK
+attributeSyntax: 2.5.5.1
+isSingleValued: TRUE
+instanceType: 4
+searchFlags: 0
+systemOnly: TRUE
+schemaIdGuid:: yFb74+hd9UWxsdK2zTHnYg==
+showInAdvancedViewOnly: TRUE
+systemFlags: 16
+
+dn: CN=ms-DS-Registered-Owner,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: attributeSchema
+cn: ms-DS-Registered-Owner
+adminDisplayName: ms-DS-Registered-Owner
+adminDescription: Single valued binary attribute containing the primary SID referencing the first user to register the device. The value is not removed during de-registration, but could be managed by an administrator.
+ldapDisplayName: msDS-RegisteredOwner
+attributeId: 1.2.840.113556.1.4.2258
+omSyntax: 4
+attributeSyntax: 2.5.5.10
+isSingleValued: TRUE
+instanceType: 4
+searchFlags: 1
+isMemberOfPartialAttributeSet: TRUE
+systemOnly: FALSE
+schemaIdGuid:: 6SZ2YesBz0KZH85heYIjfg==
+systemFlags: 18
+
+dn: CN=ms-DS-Registered-Users,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: attributeSchema
+cn: ms-DS-Registered-Users
+adminDisplayName: ms-DS-Registered-Users
+adminDescription: Contains the list of users that have registered the device.  Users in this list have all of the features provided by the “Company Portal” app.  And they have SSO to company resources.
+ldapDisplayName: msDS-RegisteredUsers
+attributeId: 1.2.840.113556.1.4.2263
+omSyntax: 4
+attributeSyntax: 2.5.5.10
+isSingleValued: FALSE
+instanceType: 4
+searchFlags: 1
+isMemberOfPartialAttributeSet: TRUE
+systemOnly: FALSE
+schemaIdGuid:: DBZJBI5ayE+wUgHA9uSPAg==
+systemFlags: 18
+
+dn: CN=ms-DS-Approximate-Last-Logon-Time-Stamp,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: attributeSchema
+cn: ms-DS-Approximate-Last-Logon-Time-Stamp
+adminDisplayName: ms-DS-Approximate-Last-Logon-Time-Stamp
+adminDescription: The approximate time a user last logged on with from the device.
+ldapDisplayName: msDS-ApproximateLastLogonTimeStamp
+attributeId: 1.2.840.113556.1.4.2262
+omSyntax: 65
+attributeSyntax: 2.5.5.16
+isSingleValued: TRUE
+instanceType: 4
+searchFlags: 1
+isMemberOfPartialAttributeSet: TRUE
+systemOnly: FALSE
+schemaIdGuid:: O5hPo8aEDE+QUKOhSh01pA==
+systemFlags: 16
+
+dn: CN=ms-DS-Device-Object-Version,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: attributeSchema
+cn: ms-DS-Device-Object-Version
+adminDisplayName: ms-DS-Device-Object-Version
+adminDescription: This attribute is used to identify the schema version of the device.
+ldapDisplayName: msDS-DeviceObjectVersion
+attributeId: 1.2.840.113556.1.4.2257
+omSyntax: 2
+attributeSyntax: 2.5.5.9
+isSingleValued: TRUE
+instanceType: 4
+searchFlags: 1
+isMemberOfPartialAttributeSet: TRUE
+systemOnly: FALSE
+schemaIdGuid:: Wmll73nxak6T3rAeBmgc+w==
+systemFlags: 18
+
+dn: CN=ms-DS-Device-OS-Type,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+replace: isSingleValued
+isSingleValued: TRUE
+-
+
+dn: CN=ms-DS-Device-OS-Type,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+replace: searchFlags
+searchFlags: 1
+-
+
+dn: CN=ms-DS-Device-OS-Version,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+replace: isSingleValued
+isSingleValued: TRUE
+-
+
+dn: CN=ms-DS-Device-Physical-IDs,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+replace: omSyntax
+omSyntax: 64
+-
+
+dn: CN=ms-DS-Device-Physical-IDs,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+replace: attributeSyntax
+attributeSyntax: 2.5.5.12
+-
+
+dn: CN=ms-DS-Device-Physical-IDs,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+replace: rangeUpper
+rangeUpper: 1024
+-
+
+dn:
+changetype: modify
+add: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+dn: CN=ms-DS-Device-Registration-Service,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+add: systemMustContain
+systemMustContain: 1.2.840.113556.1.4.2261
+-
+
+dn: CN=ms-DS-Device,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+add: systemMayContain
+systemMayContain: 1.2.840.113556.1.4.2257
+systemMayContain: 1.2.840.113556.1.4.2258
+systemMayContain: 1.2.840.113556.1.4.2262
+systemMayContain: 1.2.840.113556.1.4.2263
+-
+
+dn: CN=ms-DS-Device,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+delete: systemMayContain
+systemMayContain: 1.2.840.113556.1.4.2248
+-
+
+dn: CN=ms-DS-Device,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+add: systemMustContain
+systemMustContain: 1.2.840.113556.1.4.2248
+systemMustContain: 1.2.840.113556.1.2.13
+systemMustContain: 1.2.840.113556.1.4.867
+-
+
+dn:
+changetype: modify
+add: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+dn: CN=Schema,CN=Configuration,DC=X
+changeType: ntdsSchemaModify
+replace: objectVersion
+objectVersion: 59
+-
+```
+
+### <a name="BKMK_Sch60"></a>Sch60.ldf  
+
+```
+dn: CN=ms-DS-Is-Member-Of-DL-Transitive,CN=Schema,CN=Configuration,DC=X
+# This constructed attribute transitively expands the 
+# linked attribute "isMemberOfDL"
+changetype: ntdsschemaadd
+objectClass: attributeSchema
+lDAPDisplayName: msds-memberOfTransitive
+adminDisplayName: msds-memberOfTransitive
+adminDescription: msds-memberOfTransitive
+attributeID: 1.2.840.113556.1.4.2236
+attributeSyntax: 2.5.5.1
+oMSyntax: 127
+oMObjectClass:: KwwCh3McAIVK
+isSingleValued: FALSE
+systemOnly: TRUE
+# 0x800(only return on base search) 
+searchFlags: 2048
+showInAdvancedViewOnly: TRUE
+schemaIdGuid:: tmYhhkHJJ0eVZUi//ylB3g==
+# 0x10 (base schema) +
+# 0x08 (operational) +
+# 0x04 (constructed) +
+# 0x01 (not replicated)
+systemFlags: 29
+
+dn: CN=ms-DS-Member-Transitive,CN=Schema,CN=Configuration,DC=X
+# This constructed attribute transitively expands the 
+# linked attribute "member"
+changetype: ntdsschemaadd
+objectClass: attributeSchema
+lDAPDisplayName: msds-memberTransitive
+adminDisplayName: msds-memberTransitive
+adminDescription: msds-memberTransitive
+attributeID: 1.2.840.113556.1.4.2238
+attributeSyntax: 2.5.5.1
+oMSyntax: 127
+oMObjectClass:: KwwCh3McAIVK
+isSingleValued: FALSE
+systemOnly: TRUE
+# 0x800(only return on base search) 
+searchFlags: 2048
+showInAdvancedViewOnly: TRUE
+schemaIdGuid:: WzkV4gSR2US4lDmeyeId/A==
+# 0x10 (base schema) +
+# 0x08 (operational) +
+# 0x04 (constructed) +
+# 0x01 (not replicated)
+systemFlags: 29
+
+dn: CN=ms-DS-Parent-Dist-Name,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsschemaadd
+objectClass: attributeSchema
+lDAPDisplayName: msDS-parentdistname
+adminDisplayName: ms-DS-Parent-Dist-Name
+adminDescription: ms-DS-Parent-Dist-Name
+attributeID: 1.2.840.113556.1.4.2203
+attributeSyntax: 2.5.5.1
+oMSyntax: 127
+oMObjectClass:: KwwCh3McAIVK
+isSingleValued: TRUE
+systemOnly: TRUE
+searchFlags: 0
+schemaIDGUID:: ff4YuRqXBPSeIZJhq+yXCw==
+showInAdvancedViewOnly: TRUE
+# 0x10 (base schema) + 
+# 0x08 (operational) + 
+# 0x04 (constructed) + 
+# 0x01 (not replicated)
+systemFlags: 29
+
+dn: CN=ms-DS-Repl-Value-Meta-Data-Ext,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: attributeSchema
+ldapDisplayName: msDS-ReplValueMetaDataExt
+adminDisplayName: ms-DS-Repl-Value-Meta-Data-Ext
+adminDescription: ms-DS-Repl-Value-Meta-Data-Ext
+attributeId: 1.2.840.113556.1.4.2235
+attributeSyntax: 2.5.5.12
+omSyntax: 64
+isSingleValued: FALSE
+systemOnly: FALSE
+searchFlags: 0
+schemaIdGuid:: 79ICHq1EskamfZ/RjXgLyg==
+showInAdvancedViewOnly: TRUE
+# 0x10 (base schema) + 
+# 0x04 (constructed)
+systemFlags: 20
+
+dn:
+changetype: modify
+add: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+dn: cn=Top,cn=Schema,cn=Configuration,dc=X
+changetype: ntdsschemamodify
+add: systemMayContain
+systemMayContain: 1.2.840.113556.1.4.2238
+systemMayContain: 1.2.840.113556.1.4.2236
+systemMayContain: 1.2.840.113556.1.4.2203
+systemMayContain: 1.2.840.113556.1.4.2235
+-
+
+dn: CN=DS-Set-Owner,CN=Extended-Rights,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: controlAccessRight
+displayName: Set Owner of an object during creation.
+rightsGuid: 4125c71f-7fac-4ff0-bcb7-f09a41325286
+appliesTo: 26f11b08-a29d-4869-99bb-ef0b99fd883e
+validAccesses: 256
+
+dn: CN=DS-Bypass-Quota,CN=Extended-Rights,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: controlAccessRight
+displayName: Bypass the quota restrictions during creation.
+rightsGuid: 88a9933e-e5c8-4f2a-9dd7-2527416b8092
+appliesTo: 26f11b08-a29d-4869-99bb-ef0b99fd883e
+validAccesses: 256
+
+dn: CN=DS-Read-Partition-Secrets,CN=Extended-Rights,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: controlAccessRight
+displayName: Read secret attributes of objects in a Partition
+rightsGuid: 084c93a2-620d-4879-a836-f0ae47de0e89
+appliesTo: 26f11b08-a29d-4869-99bb-ef0b99fd883e
+validAccesses: 256
+
+dn: CN=DS-Write-Partition-Secrets,CN=Extended-Rights,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: controlAccessRight
+displayName: Write secret attributes of objects in a Partition
+rightsGuid: 94825A8D-B171-4116-8146-1E34D8F54401
+appliesTo: 26f11b08-a29d-4869-99bb-ef0b99fd883e
+validAccesses: 256
+
+dn: CN=Schema,CN=Configuration,DC=X
+changeType: ntdsSchemaModify
+replace: objectVersion
+objectVersion: 60
+-
+```
+
+### <a name="BKMK_Sch61"></a>Sch61.ldf  
+
+```
+dn: CN=ms-DS-Drs-Farm-ID,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: attributeSchema
+cn: ms-DS-Drs-Farm-ID
+adminDisplayName: ms-DS-Drs-Farm-ID
+adminDescription: This attribute stores the name of the federation service this DRS object is associated with.
+ldapDisplayName: msDS-DrsFarmID
+attributeId: 1.2.840.113556.1.4.2265
+omSyntax: 64
+attributeSyntax: 2.5.5.12
+isSingleValued: TRUE
+instanceType: 4
+searchFlags: 0
+isMemberOfPartialAttributeSet: TRUE
+systemOnly: TRUE
+schemaIdGuid:: ZvdVYC4gzUmovuUrsVnt+w==
+systemFlags: 16
+
+dn:
+changetype: modify
+add: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+dn: CN=ms-DS-Device-Registration-Service,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+add: systemMustContain
+systemMustContain: 1.2.840.113556.1.4.2248
+systemMustContain: 1.2.840.113556.1.4.2265
+-
+
+dn: CN=Schema,CN=Configuration,DC=X
+changeType: ntdsSchemaModify
+replace: objectVersion
+objectVersion: 61
+-
+
+dn:
+changetype: modify
+add: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+```
+
+### <a name="BKMK_Sch62"></a>Sch62.ldf  
+
+```
+dn: CN=ms-DS-Issuer-Public-Certificates,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: attributeSchema
+cn: ms-DS-Issuer-Public-Certificates
+adminDisplayName: ms-DS-Issuer-Public-Certificates
+adminDescription: The public keys  of the keys used to sign certificates issued by the Registration Service.
+ldapDisplayName: msDS-IssuerPublicCertificates
+attributeId: 1.2.840.113556.1.4.2269
+omSyntax: 4
+attributeSyntax: 2.5.5.10
+isSingleValued: FALSE
+instanceType: 4
+rangeLower: 1
+rangeUpper: 65536
+searchFlags: 0
+systemOnly: FALSE
+schemaIdGuid:: /u3xtdK0dkCrD2FINCsL9g==
+showInAdvancedViewOnly: TRUE
+systemFlags: 16
+
+dn:
+changetype: modify
+add: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+dn: CN=ms-DS-Device-Registration-Service,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+add: systemMayContain
+systemMayContain: 1.2.840.113556.1.4.2269
+-
+
+dn:
+changetype: modify
+add: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+dn: CN=Schema,CN=Configuration,DC=X
+changeType: ntdsSchemaModify
+replace: objectVersion
+objectVersion: 62
+-
+
+```
+
+### <a name="BKMK_Sch63"></a>Sch63.ldf  
+
+```
+dn: CN=ms-DS-Issuer-Certificates,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+replace: searchFlags
+searchFlags: 128
+-
+
+dn: CN=ms-DS-Device-Registration-Service,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+replace: defaultSecurityDescriptor
+defaultSecurityDescriptor: D:(A;;RPLCLORC;;;AU)(A;;RPWPCRCCDCLCLORCWOWDSDDTSW;;;DA)(A;;RPWPCRCCDCLCLORCWOWDSDDTSW;;;SY)
+-
+
+dn: CN=ms-DS-Device-Registration-Service-Container,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+replace: defaultSecurityDescriptor
+defaultSecurityDescriptor: D:(A;;RPLCLORC;;;AU)(A;;RPWPCRCCDCLCLORCWOWDSDDTSW;;;DA)(A;;RPWPCRCCDCLCLORCWOWDSDDTSW;;;SY)
+-
+
+dn:
+changetype: modify
+add: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+dn: CN=Schema,CN=Configuration,DC=X
+changeType: ntdsSchemaModify
+replace: objectVersion
+objectVersion: 63
+-
+
+```
+
+### <a name="BKMK_Sch64"></a>Sch64.ldf  
+
+```
+dn: CN=ms-DS-Device-Registration-Service,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+replace: defaultSecurityDescriptor
+defaultSecurityDescriptor: D:(A;;RPLCLORC;;;AU)(A;;RPWPCRCCDCLCLORCWOWDSDDTSW;;;EA)(A;;RPWPCRCCDCLCLORCWOWDSDDTSW;;;SY)
+-
+
+dn: CN=ms-DS-Device-Registration-Service-Container,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+replace: defaultSecurityDescriptor
+defaultSecurityDescriptor: D:(A;;RPLCLORC;;;AU)(A;;RPWPCRCCDCLCLORCWOWDSDDTSW;;;EA)(A;;RPWPCRCCDCLCLORCWOWDSDDTSW;;;SY)
+-
+
+dn: CN=ms-DS-Device,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+delete: systemMayContain
+systemMayContain: 1.2.840.113556.1.4.2252
+-
+
+dn: CN=ms-DS-Device,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+add: systemMustContain
+systemMustContain: 1.2.840.113556.1.4.2252
+-
+
+dn:
+changetype: modify
+add: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+dn: CN=Schema,CN=Configuration,DC=X
+changeType: ntdsSchemaModify
+replace: objectVersion
+objectVersion: 64
+-
+
+```
+
+### <a name="BKMK_Sch65"></a>Sch65.ldf  
+
+```
+dn: CN=ms-DS-Registration-Quota,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+add: showInAdvancedViewOnly
+showInAdvancedViewOnly: TRUE
+-
+
+dn: CN=ms-DS-Maximum-Registration-Inactivity-Period,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+add: showInAdvancedViewOnly
+showInAdvancedViewOnly: TRUE
+-
+
+dn: CN=ms-DS-Registered-Owner,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+add: showInAdvancedViewOnly
+showInAdvancedViewOnly: TRUE
+-
+
+dn: CN=ms-DS-Registered-Users,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+add: showInAdvancedViewOnly
+showInAdvancedViewOnly: TRUE
+-
+
+dn: CN=ms-DS-Approximate-Last-Logon-Time-Stamp,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+add: showInAdvancedViewOnly
+showInAdvancedViewOnly: TRUE
+-
+
+dn: CN=ms-DS-Is-Enabled,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+add: showInAdvancedViewOnly
+showInAdvancedViewOnly: TRUE
+-
+
+dn: CN=ms-DS-Device-OS-Type,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+add: showInAdvancedViewOnly
+showInAdvancedViewOnly: TRUE
+-
+
+dn: CN=ms-DS-Device-OS-Version,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+add: showInAdvancedViewOnly
+showInAdvancedViewOnly: TRUE
+-
+
+dn: CN=ms-DS-Device-Physical-IDs,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+add: showInAdvancedViewOnly
+showInAdvancedViewOnly: TRUE
+-
+
+dn: CN=ms-DS-Device-ID,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+add: showInAdvancedViewOnly
+showInAdvancedViewOnly: TRUE
+-
+
+dn: CN=ms-DS-Device-Object-Version,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+add: showInAdvancedViewOnly
+showInAdvancedViewOnly: TRUE
+-
+
+dn: CN=ms-DS-Drs-Farm-ID,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+add: showInAdvancedViewOnly
+showInAdvancedViewOnly: TRUE
+-
+
+dn: CN=ms-DS-IsManaged,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: attributeSchema
+cn: ms-DS-IsManaged
+adminDisplayName: ms-DS-IsManaged
+adminDescription: This attribute is used to indicate the device is managed by a on-premises MDM.
+ldapDisplayName: msDS-IsManaged
+attributeId: 1.2.840.113556.1.4.2270
+omSyntax: 1
+attributeSyntax: 2.5.5.8
+isSingleValued: TRUE
+instanceType: 4
+searchFlags: 1
+systemOnly: FALSE
+schemaIdGuid:: zmpoYCds3kOk5fAML40zCQ==
+showInAdvancedViewOnly: TRUE
+systemFlags: 16
+
+dn: CN=ms-DS-Cloud-IsManaged,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: attributeSchema
+cn: ms-DS-Cloud-IsManaged
+adminDisplayName: ms-DS-Cloud-IsManaged
+adminDescription: This attribute is used to indicate the device is managed by a cloud MDM.
+ldapDisplayName: msDS-CloudIsManaged
+attributeId: 1.2.840.113556.1.4.2271
+omSyntax: 1
+attributeSyntax: 2.5.5.8
+isSingleValued: TRUE
+instanceType: 4
+searchFlags: 1
+systemOnly: FALSE
+schemaIdGuid:: jroVU4+VUku9OBNJowTdYw==
+showInAdvancedViewOnly: TRUE
+systemFlags: 16
+
+dn: CN=ms-DS-Cloud-Anchor,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: attributeSchema
+cn: ms-DS-Cloud-Anchor
+adminDisplayName: ms-DS-Cloud-Anchor
+adminDescription: This attribute is used by the DirSync engine to indicate the object SOA and to maintain the relationship between the on-premises and cloud object.
+ldapDisplayName: msDS-CloudAnchor
+attributeId: 1.2.840.113556.1.4.2273
+omSyntax: 4
+attributeSyntax: 2.5.5.10
+isSingleValued: TRUE
+instanceType: 4
+searchFlags: 0
+systemOnly: FALSE
+schemaIdGuid:: gF5WeNQD40+vrIw7yi82Uw==
+showInAdvancedViewOnly: TRUE
+systemFlags: 16
+
+dn: CN=ms-DS-Cloud-Issuer-Public-Certificates,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: attributeSchema
+cn: ms-DS-Cloud-Issuer-Public-Certificates
+adminDisplayName: ms-DS-Cloud-Issuer-Public-Certificates
+adminDescription: The public keys used by the cloud DRS to sign certificates issued by the Registration Service.
+ldapDisplayName: msDS-CloudIssuerPublicCertificates
+attributeId: 1.2.840.113556.1.4.2274
+omSyntax: 4
+attributeSyntax: 2.5.5.10
+isSingleValued: FALSE
+instanceType: 4
+rangeLower: 1
+rangeUpper: 65536
+searchFlags: 0
+systemOnly: FALSE
+schemaIdGuid:: T7XoodZL0k+Y4rzukqVUlw==
+showInAdvancedViewOnly: TRUE
+systemFlags: 16
+
+dn: CN=ms-DS-Cloud-IsEnabled,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: attributeSchema
+cn: ms-DS-Cloud-IsEnabled
+adminDisplayName: ms-DS-Cloud-IsEnabled
+adminDescription: This attribute is used to indicate whether cloud DRS is enabled.
+ldapDisplayName: msDS-CloudIsEnabled
+attributeId: 1.2.840.113556.1.4.2275
+omSyntax: 1
+attributeSyntax: 2.5.5.8
+isSingleValued: TRUE
+instanceType: 4
+searchFlags: 0
+systemOnly: FALSE
+schemaIdGuid:: KIOEiU58b0+gEyjOOtKC3A==
+showInAdvancedViewOnly: TRUE
+systemFlags: 16
+
+dn:
+changetype: modify
+add: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+dn: CN=ms-DS-Device,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+add: systemMayContain
+systemMayContain: 1.2.840.113556.1.4.2270
+systemMayContain: 1.2.840.113556.1.4.2271
+systemMayContain: 1.2.840.113556.1.4.2273
+-
+
+dn: CN=ms-DS-Device-Registration-Service,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+add: systemMayContain
+systemMayContain: 1.2.840.113556.1.4.2274
+systemMayContain: 1.2.840.113556.1.4.2275
+-
+
+dn:
+changetype: modify
+add: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+dn: CN=Schema,CN=Configuration,DC=X
+changeType: ntdsSchemaModify
+replace: objectVersion
+objectVersion: 65
+-
+
+```
+
+### <a name="BKMK_Sch66"></a>Sch66.ldf  
+
+```
+dn: CN=ms-DS-SyncServerUrl,CN=Schema,CN=Configuration,DC=X
+changeType: ntdsSchemaAdd
+objectClass: attributeSchema
+cn: ms-DS-SyncServerUrl
+ldapDisplayName: msDS-SyncServerUrl
+adminDisplayName: ms-DS-SyncServerUrl
+adminDescription: Use this attribute to store the sync server (Url format) which hosts the user sync folder
+AttributeID: 1.2.840.113556.1.4.2276
+attributeSyntax: 2.5.5.12
+omSyntax: 64
+isSingleValued: FALSE
+SystemOnly: FALSE
+searchFlags: 1
+rangeLower: 1
+rangeUpper: 512
+schemaIdGuid:: 0sOst3QqpE+sJeY/6LYSGA==
+showInAdvancedViewOnly: FALSE
+systemFlags: 16
+
+dn:
+changetype: modify
+add: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+dn: CN=User,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+add: systemMayContain
+systemMayContain: 1.2.840.113556.1.4.2276
+-
+
+dn: CN=Schema,CN=Configuration,DC=X
+changeType: ntdsSchemaModify
+replace: objectVersion
+objectVersion: 66
+-
+
+dn:
+changetype: modify
+add: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+```
+
+### <a name="BKMK_Sch67"></a>Sch67.ldf  
+
+```
+dn: CN=ms-DS-Device-Registration-Service,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+delete: systemMustContain
+systemMustContain: 1.2.840.113556.1.4.2265
+-
+
+dn:
+changetype: modify
+add: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+dn: CN=ms-DS-Drs-Farm-ID,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+add: isDefunct
+isDefunct: TRUE
+-
+
+dn: CN=Schema,CN=Configuration,DC=X
+changeType: ntdsSchemaModify
+replace: objectVersion
+objectVersion: 67
+-
+
+dn:
+changetype: modify
+add: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+```
+
+### <a name="BKMK_Sch68"></a>Sch68.ldf  
+
+```
+dn: CN=ms-DS-User-Allowed-To-Authenticate-To,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: attributeSchema
+ldapDisplayName: msDS-UserAllowedToAuthenticateTo
+adminDisplayName: ms-DS-User-Allowed-To-Authenticate-To
+adminDescription: This attribute is used to determine if a user has permission to authenticate to a service.
+attributeId: 1.2.840.113556.1.4.2277
+attributeSyntax: 2.5.5.10
+omSyntax: 4
+isSingleValued: TRUE
+systemOnly: FALSE
+searchFlags: 0
+schemaIdGuid:: f6oM3k5yhkKxeRkmce/GZA==
+systemFlags: 16
+RangeLower: 0
+RangeUpper: 132096
+instanceType: 4
+
+dn: CN=ms-DS-User-Allowed-To-Authenticate-From,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: attributeSchema
+ldapDisplayName: msDS-UserAllowedToAuthenticateFrom
+adminDisplayName: ms-DS-User-Allowed-To-Authenticate-From
+adminDescription: This attribute is used to determine if a user has permission to authenticate from a computer.
+attributeId: 1.2.840.113556.1.4.2278
+attributeSyntax: 2.5.5.10
+omSyntax: 4
+isSingleValued: TRUE
+systemOnly: FALSE
+searchFlags: 0
+schemaIdGuid:: AJZMLOGwfUSN2nSQIle9tQ==
+systemFlags: 16
+RangeLower: 0
+RangeUpper: 132096
+instanceType: 4
+
+dn: CN=ms-DS-User-TGT-Lifetime,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: attributeSchema
+ldapDisplayName: msDS-UserTGTLifetime
+adminDisplayName: User TGT Lifetime
+adminDescription: This attribute specifies the maximum age of a Kerberos TGT issued to a user in units of 10^(-7) seconds.
+attributeId: 1.2.840.113556.1.4.2279
+attributeSyntax: 2.5.5.16
+omSyntax: 65
+isSingleValued: TRUE
+systemOnly: FALSE
+searchFlags: 0
+schemaIdGuid:: g8khhZn1D0K5q7EiK9+VwQ==
+systemFlags: 16
+instanceType: 4
+
+dn: CN=ms-DS-Computer-Allowed-To-Authenticate-To,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: attributeSchema
+ldapDisplayName: msDS-ComputerAllowedToAuthenticateTo
+adminDisplayName: ms-DS-Computer-Allowed-To-Authenticate-To
+adminDescription: This attribute is used to determine if a computer has permission to authenticate to a service.
+attributeId: 1.2.840.113556.1.4.2280
+attributeSyntax: 2.5.5.10
+omSyntax: 4
+isSingleValued: TRUE
+systemOnly: FALSE
+searchFlags: 0
+schemaIdGuid:: 6atbEH4Hk0e5dO8EELYlcw==
+systemFlags: 16
+RangeLower: 0
+RangeUpper: 132096
+instanceType: 4
+
+dn: CN=ms-DS-Computer-TGT-Lifetime,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: attributeSchema
+ldapDisplayName: msDS-ComputerTGTLifetime
+adminDisplayName: Computer TGT Lifetime
+adminDescription: This attribute specifies the maximum age of a Kerberos TGT issued to a computer in units of 10^(-7) seconds.
+attributeId: 1.2.840.113556.1.4.2281
+attributeSyntax: 2.5.5.16
+omSyntax: 65
+isSingleValued: TRUE
+systemOnly: FALSE
+searchFlags: 0
+schemaIdGuid:: JHWTLrnfrEykNqW32mT9Zg==
+systemFlags: 16
+instanceType: 4
+
+dn: CN=ms-DS-Service-Allowed-To-Authenticate-To,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: attributeSchema
+ldapDisplayName: msDS-ServiceAllowedToAuthenticateTo
+adminDisplayName: ms-DS-Service-Allowed-To-Authenticate-To
+adminDescription: This attribute is used to determine if a service has permission to authenticate to a service.
+attributeId: 1.2.840.113556.1.4.2282
+attributeSyntax: 2.5.5.10
+omSyntax: 4
+isSingleValued: TRUE
+systemOnly: FALSE
+searchFlags: 0
+schemaIdGuid:: MTGX8k2bIEi03gR07zuEnw==
+systemFlags: 16
+RangeLower: 0
+RangeUpper: 132096
+instanceType: 4
+
+dn: CN=ms-DS-Service-Allowed-To-Authenticate-From,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: attributeSchema
+ldapDisplayName: msDS-ServiceAllowedToAuthenticateFrom
+adminDisplayName: ms-DS-Service-Allowed-To-Authenticate-From
+adminDescription: This attribute is used to determine if a service has permission to authenticate from a computer.
+attributeId: 1.2.840.113556.1.4.2283
+attributeSyntax: 2.5.5.10
+omSyntax: 4
+isSingleValued: TRUE
+systemOnly: FALSE
+searchFlags: 0
+schemaIdGuid:: mnDalxY3Zkmx0YOLpTw9iQ==
+systemFlags: 16
+RangeLower: 0
+RangeUpper: 132096
+instanceType: 4
+
+dn: CN=ms-DS-Service-TGT-Lifetime,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: attributeSchema
+ldapDisplayName: msDS-ServiceTGTLifetime
+adminDisplayName: Service TGT Lifetime
+adminDescription: This attribute specifies the maximum age of a Kerberos TGT issued to a service in units of 10^(-7) seconds.
+attributeId: 1.2.840.113556.1.4.2284
+attributeSyntax: 2.5.5.16
+omSyntax: 65
+isSingleValued: TRUE
+systemOnly: FALSE
+searchFlags: 0
+schemaIdGuid:: IDz+XSnKfUCbq4Qh5V63XA==
+systemFlags: 16
+instanceType: 4
+
+dn: CN=ms-DS-Assigned-AuthN-Policy-Silo,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: attributeSchema
+ldapDisplayName: msDS-AssignedAuthNPolicySilo
+adminDisplayName: Assigned Authentication Policy Silo
+adminDescription: This attribute specifies which AuthNPolicySilo a principal is assigned to.
+attributeId: 1.2.840.113556.1.4.2285
+attributeSyntax: 2.5.5.1
+omObjectClass:: KwwCh3McAIVK
+omSyntax: 127
+isSingleValued: TRUE
+systemOnly: FALSE
+searchFlags: 0
+schemaIdGuid:: QcE/svUN6kqzPWz0kwd7Pw==
+systemFlags: 16
+instanceType: 4
+linkID: 2202
+
+dn: CN=ms-DS-Assigned-AuthN-Policy-Silo-BL,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: attributeSchema
+ldapDisplayName: msDS-AssignedAuthNPolicySiloBL
+adminDisplayName: Assigned Authentication Policy Silo Backlink
+adminDescription: This attribute is the backlink for msDS-AssignedAuthNPolicySilo.
+attributeId: 1.2.840.113556.1.4.2286
+attributeSyntax: 2.5.5.1
+omObjectClass:: KwwCh3McAIVK
+omSyntax: 127
+isSingleValued: FALSE
+systemOnly: TRUE
+searchFlags: 0
+schemaIdGuid:: FAUUM3r10keOxATEZmYAxw==
+systemFlags: 16
+instanceType: 4
+linkID: 2203
+
+dn: CN=ms-DS-AuthN-Policy-Silo-Members,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: attributeSchema
+ldapDisplayName: msDS-AuthNPolicySiloMembers
+adminDisplayName: Authentication Policy Silo Members
+adminDescription: This attribute specifies which principals are assigned to the AuthNPolicySilo.
+attributeId: 1.2.840.113556.1.4.2287
+attributeSyntax: 2.5.5.1
+omObjectClass:: KwwCh3McAIVK
+omSyntax: 127
+isSingleValued: FALSE
+systemOnly: FALSE
+searchFlags: 0
+schemaIdGuid:: BR5NFqZIhkio6XeiAG48dw==
+systemFlags: 16
+instanceType: 4
+linkID: 2204
+
+dn: CN=ms-DS-AuthN-Policy-Silo-Members-BL,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: attributeSchema
+ldapDisplayName: msDS-AuthNPolicySiloMembersBL
+adminDisplayName: Authentication Policy Silo Members Backlink
+adminDescription: This attribute is the backlink for msDS-AuthNPolicySiloMembers.
+attributeId: 1.2.840.113556.1.4.2288
+attributeSyntax: 2.5.5.1
+omObjectClass:: KwwCh3McAIVK
+omSyntax: 127
+isSingleValued: FALSE
+systemOnly: TRUE
+searchFlags: 0
+schemaIdGuid:: x8v8EeT7UUm0t63fb579RA==
+systemFlags: 16
+instanceType: 4
+linkID: 2205
+
+dn: CN=ms-DS-User-AuthN-Policy,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: attributeSchema
+ldapDisplayName: msDS-UserAuthNPolicy
+adminDisplayName: User Authentication Policy
+adminDescription: This attribute specifies which AuthNPolicy should be applied to users assigned to this silo object.
+attributeId: 1.2.840.113556.1.4.2289
+attributeSyntax: 2.5.5.1
+omObjectClass:: KwwCh3McAIVK
+omSyntax: 127
+isSingleValued: TRUE
+systemOnly: FALSE
+searchFlags: 0
+schemaIdGuid:: 87kmzRXUKkSPeHxhUj7pWw==
+systemFlags: 16
+instanceType: 4
+linkID: 2206
+
+dn: CN=ms-DS-User-AuthN-Policy-BL,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: attributeSchema
+ldapDisplayName: msDS-UserAuthNPolicyBL
+adminDisplayName: User Authentication Policy Backlink
+adminDescription: This attribute is the backlink for msDS-UserAuthNPolicy.
+attributeId: 1.2.840.113556.1.4.2290
+attributeSyntax: 2.5.5.1
+omObjectClass:: KwwCh3McAIVK
+omSyntax: 127
+isSingleValued: FALSE
+systemOnly: TRUE
+searchFlags: 0
+schemaIdGuid:: qfoXL0ddH0uXfqpS+r5lyA==
+systemFlags: 16
+instanceType: 4
+linkID: 2207
+
+dn: CN=ms-DS-Computer-AuthN-Policy,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: attributeSchema
+ldapDisplayName: msDS-ComputerAuthNPolicy
+adminDisplayName: Computer Authentication Policy
+adminDescription: This attribute specifies which AuthNPolicy should be applied to computers assigned to this silo object.
+attributeId: 1.2.840.113556.1.4.2291
+attributeSyntax: 2.5.5.1
+omObjectClass:: KwwCh3McAIVK
+omSyntax: 127
+isSingleValued: TRUE
+systemOnly: FALSE
+searchFlags: 0
+schemaIdGuid:: yWO4r6O+D0Sp82FTzGaJKQ==
+systemFlags: 16
+instanceType: 4
+linkID: 2208
+
+dn: CN=ms-DS-Computer-AuthN-Policy-BL,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: attributeSchema
+ldapDisplayName: msDS-ComputerAuthNPolicyBL
+adminDisplayName: Computer Authentication Policy Backlink
+adminDescription: This attribute is the backlink for msDS-ComputerAuthNPolicy.
+attributeId: 1.2.840.113556.1.4.2292
+attributeSyntax: 2.5.5.1
+omObjectClass:: KwwCh3McAIVK
+omSyntax: 127
+isSingleValued: FALSE
+systemOnly: TRUE
+searchFlags: 0
+schemaIdGuid:: MmLvK6EwfkWGBHr22/ExuA==
+systemFlags: 16
+instanceType: 4
+linkID: 2209
+
+dn: CN=ms-DS-Service-AuthN-Policy,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: attributeSchema
+ldapDisplayName: msDS-ServiceAuthNPolicy
+adminDisplayName: Service Authentication Policy
+adminDescription: This attribute specifies which AuthNPolicy should be applied to services assigned to this silo object.
+attributeId: 1.2.840.113556.1.4.2293
+attributeSyntax: 2.5.5.1
+omObjectClass:: KwwCh3McAIVK
+omSyntax: 127
+isSingleValued: TRUE
+systemOnly: FALSE
+searchFlags: 0
+schemaIdGuid:: lW1qKs4o7km7JG0fwB4xEQ==
+systemFlags: 16
+instanceType: 4
+linkID: 2210
+
+dn: CN=ms-DS-Service-AuthN-Policy-BL,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: attributeSchema
+ldapDisplayName: msDS-ServiceAuthNPolicyBL
+adminDisplayName: Service Authentication Policy Backlink
+adminDescription: This attribute is the backlink for msDS-ServiceAuthNPolicy.
+attributeId: 1.2.840.113556.1.4.2294
+attributeSyntax: 2.5.5.1
+omObjectClass:: KwwCh3McAIVK
+omSyntax: 127
+isSingleValued: FALSE
+systemOnly: TRUE
+searchFlags: 0
+schemaIdGuid:: 7CgRLKJao0KzLfCXnKn80g==
+systemFlags: 16
+instanceType: 4
+linkID: 2211
+
+dn: CN=ms-DS-Assigned-AuthN-Policy,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: attributeSchema
+ldapDisplayName: msDS-AssignedAuthNPolicy
+adminDisplayName: Assigned Authentication Policy
+adminDescription: This attribute specifies which AuthNPolicy should be applied to this principal.
+attributeId: 1.2.840.113556.1.4.2295
+attributeSyntax: 2.5.5.1
+omObjectClass:: KwwCh3McAIVK
+omSyntax: 127
+isSingleValued: TRUE
+systemOnly: FALSE
+searchFlags: 0
+schemaIdGuid:: 2Ap6uPdUwUmEoOZNEoU1iA==
+systemFlags: 16
+instanceType: 4
+linkID: 2212
+
+dn: CN=ms-DS-Assigned-AuthN-Policy-BL,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: attributeSchema
+ldapDisplayName: msDS-AssignedAuthNPolicyBL
+adminDisplayName: Assigned Authentication Policy Backlink
+adminDescription: This attribute is the backlink for msDS-AssignedAuthNPolicy.
+attributeId: 1.2.840.113556.1.4.2296
+attributeSyntax: 2.5.5.1
+omObjectClass:: KwwCh3McAIVK
+omSyntax: 127
+isSingleValued: FALSE
+systemOnly: TRUE
+searchFlags: 0
+schemaIdGuid:: PBsTLZ/T7kqBXo20vBznrA==
+systemFlags: 16
+instanceType: 4
+linkID: 2213
+
+dn: CN=ms-DS-AuthN-Policy-Enforced,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: attributeSchema
+ldapDisplayName: msDS-AuthNPolicyEnforced
+adminDisplayName: Authentication Policy Enforced
+adminDescription: This attribute specifies whether the authentication policy is enforced.
+attributeId: 1.2.840.113556.1.4.2297
+attributeSyntax: 2.5.5.8
+omSyntax: 1
+isSingleValued: TRUE
+systemOnly: FALSE
+searchFlags: 0
+schemaIdGuid:: wgxWekXsukSy1yEjatWf1Q==
+instanceType: 4
+systemFlags: 16
+
+dn: CN=ms-DS-AuthN-Policy-Silo-Enforced,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: attributeSchema
+ldapDisplayName: msDS-AuthNPolicySiloEnforced
+adminDisplayName: Authentication Policy Silo Enforced
+adminDescription: This attribute specifies whether the authentication policy silo is enforced.
+attributeId: 1.2.840.113556.1.4.2298
+attributeSyntax: 2.5.5.8
+omSyntax: 1
+isSingleValued: TRUE
+systemOnly: FALSE
+searchFlags: 0
+schemaIdGuid:: AhH18uBrPUmHJhVGzbyHcQ==
+instanceType: 4
+systemFlags: 16
+
+dn: CN=ms-DS-AuthN-Policy-Silos,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: classSchema
+ldapDisplayName: msDS-AuthNPolicySilos
+adminDisplayName: Authentication Policy Silos
+adminDescription: A container of this class can contain authentication policy silo objects.
+governsId: 1.2.840.113556.1.5.291
+objectClassCategory: 1
+rdnAttId: cn
+schemaIdGuid:: Ckex0oSPHkmnUrQB7gD+XA==
+defaultSecurityDescriptor: D:(A;;RPWPCRCCDCLCLOLORCWOWDSDDTDTSW;;;EA)(A;;RPWPCRCCDCLCLORCWOWDSDDTSW;;;SY)(A;;RPLCLORC;;;AU)
+showInAdvancedViewOnly: TRUE
+defaultHidingValue: TRUE
+systemOnly: FALSE
+defaultObjectCategory: CN=ms-DS-AuthN-Policy-Silos,CN=Schema,CN=Configuration,DC=X
+instanceType: 4
+systemFlags: 16
+subClassOf: top
+systemPossSuperiors: 1.2.840.113556.1.3.23
+
+dn: CN=ms-DS-AuthN-Policies,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: classSchema
+ldapDisplayName: msDS-AuthNPolicies
+adminDisplayName: Authentication Policies
+adminDescription: A container of this class can contain authentication policy objects.
+governsId: 1.2.840.113556.1.5.293
+objectClassCategory: 1
+rdnAttId: cn
+schemaIdGuid:: Xd+aOpd7fk+rtOW1XBwGtA==
+defaultSecurityDescriptor: D:(A;;RPWPCRCCDCLCLOLORCWOWDSDDTDTSW;;;EA)(A;;RPWPCRCCDCLCLORCWOWDSDDTSW;;;SY)(A;;RPLCLORC;;;AU)
+showInAdvancedViewOnly: TRUE
+defaultHidingValue: TRUE
+systemOnly: FALSE
+defaultObjectCategory: CN=ms-DS-AuthN-Policies,CN=Schema,CN=Configuration,DC=X
+instanceType: 4
+systemFlags: 16
+subClassOf: top
+systemPossSuperiors: 1.2.840.113556.1.3.23
+
+dn:
+changetype: modify
+add: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+dn: CN=ms-DS-AuthN-Policy-Silo,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: classSchema
+ldapDisplayName: msDS-AuthNPolicySilo
+adminDisplayName: Authentication Policy Silo
+adminDescription: An instance of this class defines authentication policies and related behaviors for assigned users, computers, and services.
+governsId: 1.2.840.113556.1.5.292
+objectClassCategory: 1
+rdnAttId: cn
+schemaIdGuid:: Hkbw+X1piUaSmTfmHWF7DQ==
+defaultSecurityDescriptor: D:(A;;RPWPCRCCDCLCLOLORCWOWDSDDTDTSW;;;EA)(A;;RPWPCRCCDCLCLORCWOWDSDDTSW;;;SY)(A;;RPLCLORC;;;AU)
+systemOnly: FALSE
+defaultObjectCategory: CN=ms-DS-AuthN-Policy-Silo,CN=Schema,CN=Configuration,DC=X
+systemFlags: 16
+instanceType: 4
+systemmaycontain: msDS-AuthNPolicySiloMembers
+systemmaycontain: msDS-UserAuthNPolicy
+systemmaycontain: msDS-ComputerAuthNPolicy
+systemmaycontain: msDS-ServiceAuthNPolicy
+systemmaycontain: msDS-AssignedAuthNPolicySiloBL
+systemmaycontain: msDS-AuthNPolicySiloEnforced
+subClassOf: top
+systemPossSuperiors: msDS-AuthNPolicySilos
+
+dn: CN=ms-DS-AuthN-Policy,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: classSchema
+ldapDisplayName: msDS-AuthNPolicy
+adminDisplayName: Authentication Policy
+adminDescription: An instance of this class defines authentication policy behaviors for assigned principals.
+governsId: 1.2.840.113556.1.5.294
+objectClassCategory: 1
+rdnAttId: cn
+schemaIdGuid:: VhFqq8dN9UCRgI5M5C/lzQ==
+defaultSecurityDescriptor: D:(A;;RPWPCRCCDCLCLOLORCWOWDSDDTDTSW;;;EA)(A;;RPWPCRCCDCLCLORCWOWDSDDTSW;;;SY)(A;;RPLCLORC;;;AU)
+systemOnly: FALSE
+defaultObjectCategory: CN=ms-DS-AuthN-Policy,CN=Schema,CN=Configuration,DC=X
+systemFlags: 16
+instanceType: 4
+systemmaycontain: msDS-UserAllowedToAuthenticateTo
+systemmaycontain: msDS-UserAllowedToAuthenticateFrom
+systemmaycontain: msDS-UserTGTLifetime
+systemmaycontain: msDS-ComputerAllowedToAuthenticateTo
+systemmaycontain: msDS-ComputerTGTLifetime
+systemmaycontain: msDS-ServiceAllowedToAuthenticateTo
+systemmaycontain: msDS-ServiceAllowedToAuthenticateFrom
+systemmaycontain: msDS-ServiceTGTLifetime
+systemmaycontain: msDS-UserAuthNPolicyBL
+systemmaycontain: msDS-ComputerAuthNPolicyBL
+systemmaycontain: msDS-ServiceAuthNPolicyBL
+systemmaycontain: msDS-AssignedAuthNPolicyBL
+systemmaycontain: msDS-AuthNPolicyEnforced
+subClassOf: top
+systemPossSuperiors: msDS-AuthNPolicies
+
+dn: CN=user,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+add:  systemmaycontain
+systemmaycontain: msDS-AssignedAuthNPolicy
+systemmaycontain: msDS-AssignedAuthNPolicySilo
+systemmaycontain: msDS-AuthNPolicySiloMembersBL
+-
+
+dn: CN=Schema,CN=Configuration,DC=X
+changeType: ntdsSchemaModify
+replace: objectVersion
+objectVersion: 68
+-
+
+dn:
+changetype: modify
+add: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+```
+
+### <a name="BKMK_Sch69"></a>Sch69.ldf  
+
+```
+dn: CN=ms-DS-AuthN-Policy-Silo,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+add: defaultHidingValue
+defaultHidingValue: FALSE
+-
+
+dn: CN=ms-DS-AuthN-Policy,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+add: defaultHidingValue
+defaultHidingValue: FALSE
+-
+
+dn: CN=Schema,CN=Configuration,DC=X
+changeType: ntdsSchemaModify
+replace: objectVersion
+objectVersion: 69
+-
+
+dn:
+changetype: modify
+add: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+```
+
+### <a name="BKMK_Sch70"></a>Sch70.ldf  
+
+```
+dn: CN=ms-DS-Device-MDMStatus,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: attributeSchema
+cn: ms-DS-Device-MDMStatus
+adminDisplayName: ms-DS-Device-MDMStatus
+adminDescription: This attribute is used to manage the mobile device management status of the device.
+ldapDisplayName: msDS-DeviceMDMStatus
+attributeId: 1.2.840.113556.1.4.2308
+omSyntax: 64
+attributeSyntax: 2.5.5.12
+isSingleValued: TRUE
+instanceType: 4
+rangeUpper: 256
+searchFlags: 0
+systemOnly: FALSE
+schemaIdGuid:: lo8K9sRXLEKjrZ4voJzm9w==
+showInAdvancedViewOnly: TRUE
+systemFlags: 16
+
+dn:
+changetype: modify
+add: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+dn: CN=ms-DS-Device,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+add: systemMayContain
+systemMayContain: 1.2.840.113556.1.4.2308
+-
+
+dn: CN=Schema,CN=Configuration,DC=X
+changeType: ntdsSchemaModify
+replace: objectVersion
+objectVersion: 70
+-
+
+dn:
+changetype: modify
+add: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+```
+
+### <a name="BKMK_Sch71"></a>Sch71.ldf  
+
+```
+dn: CN=ms-DS-GeoCoordinates-Altitude,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+replace: systemFlags
+systemFlags: 16
+-
+
+dn: CN=ms-DS-GeoCoordinates-Latitude,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+replace: systemFlags
+systemFlags: 16
+-
+
+dn: CN=ms-DS-GeoCoordinates-Longitude,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+replace: systemFlags
+systemFlags: 16
+-
+
+dn: CN=ms-DS-Device-OS-Version,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+replace: searchFlags
+searchFlags: 1
+-
+
+dn: CN=ms-DS-Device-OS-Type,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+replace: searchFlags
+searchFlags: 1
+-
+
+# Increase schema version
+dn: CN=Schema,CN=Configuration,DC=X
+changeType: ntdsSchemaModify
+replace: objectVersion
+objectVersion: 71
+-
+
+dn:
+changetype: modify
+add: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+```
+
+### <a name="BKMK_Sch72"></a>Sch72.ldf  
+
+```
+dn: CN=ms-DS-External-Directory-Object-Id,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: attributeSchema
+adminDisplayName: ms-DS-External-Directory-Object-Id
+adminDescription: ms-DS-External-Directory-Object-Id
+ldapDisplayName: msDS-ExternalDirectoryObjectId
+attributeSecurityGuid:: hri1d0qU0RGuvQAA+ANnwQ==
+attributeId: 1.2.840.113556.1.4.2310
+attributeSyntax: 2.5.5.12
+omSyntax: 64
+isMemberOfPartialAttributeSet: TRUE
+isSingleValued: TRUE
+instanceType: 4
+rangeUpper: 256
+schemaIdGuid:: kL8pva1m4UCIexDfBwQZpg==
+searchFlags: 9
+showInAdvancedViewOnly: FALSE
+systemOnly: FALSE
+systemFlags: 16
+
+dn:
+changetype: ntdsSchemaModify
+add: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+dn: CN=Mail-Recipient,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: 1.2.840.113556.1.4.2310
+-
+
+dn: CN=Top,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+add: systemMayContain
+systemMayContain: 1.2.840.113556.1.4.2273
+-
+
+dn: CN=Schema,CN=Configuration,DC=X
+changeType: ntdsSchemaModify
+replace: objectVersion
+objectVersion: 72
+-
+
+```
+
+### <a name="BKMK_Sch73"></a>Sch73.ldf  
+
+```
+dn: CN=ms-DS-Is-Compliant,CN=Schema,CN=Configuration,DC=x
+changetype: ntdsSchemaAdd
+objectClass: attributeSchema
+CN: ms-DS-Is-Compliant
+adminDescription: This attribute is used to determine if the object is compliant with company policies.
+adminDisplayName: msDS-IsCompliant
+lDAPDisplayName: msDS-IsCompliant
+attributeId: 1.2.840.113556.1.4.2314
+oMSyntax: 1
+attributeSyntax: 2.5.5.8
+isSingleValued: TRUE
+instanceType: 4
+searchFlags: 0
+isMemberOfPartialAttributeSet: TRUE
+systemOnly: FALSE
+schemaIDGUID:: D31SWcC34kyh3XHO9pYykg==
+systemFlags: 16
+
+dn:
+changetype: modify
+add: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+dn: CN=ms-DS-Device,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+add: systemMayContain
+systemMayContain: 1.2.840.113556.1.4.2314
+-
+
+dn: CN=Schema,CN=Configuration,DC=X
+changeType: ntdsSchemaModify
+replace: objectVersion
+objectVersion: 73
+-
+
+dn:
+changetype: modify
+add: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+```
+
+### <a name="BKMK_Sch74"></a>Sch74.ldf  
+
+```
+dn: CN=ms-DS-Key-Id,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: attributeSchema
+ldapDisplayName: msDS-KeyId
+adminDisplayName: msDS-KeyId
+adminDescription: This attribute contains a key identifier.
+attributeId: 1.2.840.113556.1.4.2315
+attributeSyntax: 2.5.5.10
+omSyntax: 4
+isSingleValued: TRUE
+isMemberOfPartialAttributeSet: TRUE
+systemOnly: FALSE
+searchFlags: 1
+schemaIdGuid:: S/iUwq0vcUu+TJ/FcB9gug==
+systemFlags: 16
+RangeLower: 0
+RangeUpper: 132096
+instanceType: 4
+showInAdvancedViewOnly: TRUE
+
+dn: CN=ms-DS-Key-Material,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: attributeSchema
+ldapDisplayName: msDS-KeyMaterial
+adminDisplayName: msDS-KeyMaterial
+adminDescription: This attribute contains key material.
+attributeId: 1.2.840.113556.1.4.2316
+attributeSyntax: 2.5.5.10
+omSyntax: 4
+isSingleValued: TRUE
+isMemberOfPartialAttributeSet: TRUE
+systemOnly: FALSE
+searchFlags: 0
+schemaIdGuid:: nw4uodveMU+PIRMRuVgYLw==
+systemFlags: 16
+RangeLower: 0
+RangeUpper: 132096
+instanceType: 4
+showInAdvancedViewOnly: TRUE
+
+dn: CN=ms-DS-Key-Usage,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: attributeSchema
+ldapDisplayName: msDS-KeyUsage
+adminDisplayName: msDS-KeyUsage
+adminDescription: This attribute identifies the usage scenario for the key.
+attributeId: 1.2.840.113556.1.4.2317
+attributeSyntax: 2.5.5.12
+omSyntax: 64
+isSingleValued: TRUE
+isMemberOfPartialAttributeSet: TRUE
+systemOnly: FALSE
+searchFlags: 0
+schemaIdGuid:: TLRx3ropl0WeysM0is4ZFw==
+systemFlags: 16
+RangeLower: 0
+RangeUpper: 132096
+instanceType: 4
+showInAdvancedViewOnly: TRUE
+
+dn: CN=ms-DS-Key-Principal,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: attributeSchema
+ldapDisplayName: msDS-KeyPrincipal
+adminDisplayName: msDS-KeyPrincipal
+adminDescription: This attribute specifies the principal that a key object applies to.
+attributeId: 1.2.840.113556.1.4.2318
+attributeSyntax: 2.5.5.1
+omObjectClass:: KwwCh3McAIVK
+omSyntax: 127
+isSingleValued: TRUE
+isMemberOfPartialAttributeSet: TRUE
+systemOnly: FALSE
+searchFlags: 0
+schemaIdGuid:: OyVhvQGUOUGmkzVvxADz6g==
+systemFlags: 16
+instanceType: 4
+linkID: 2218
+showInAdvancedViewOnly: TRUE
+
+dn: CN=ms-DS-Key-Principal-BL,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: attributeSchema
+ldapDisplayName: msDS-KeyPrincipalBL
+adminDisplayName: msDS-KeyPrincipalBL
+adminDescription: This attribute is the backlink for msDS-KeyPrincipal.
+attributeId: 1.2.840.113556.1.4.2319
+attributeSyntax: 2.5.5.1
+omObjectClass:: KwwCh3McAIVK
+omSyntax: 127
+isSingleValued: FALSE
+isMemberOfPartialAttributeSet: TRUE
+systemOnly: TRUE
+searchFlags: 0
+schemaIdGuid:: vI8y0XSFUEGIHQsQiIJ4eA==
+systemFlags: 16
+instanceType: 4
+linkID: 2219
+showInAdvancedViewOnly: TRUE
+
+dn: CN=ms-DS-Device-DN,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: attributeSchema
+ldapDisplayName: msDS-DeviceDN
+adminDisplayName: msDS-DeviceDN
+adminDescription: This attribute identifies the registered device from which this key object was provisioned.
+attributeId: 1.2.840.113556.1.4.2320
+attributeSyntax: 2.5.5.12
+omSyntax: 64
+isSingleValued: TRUE
+isMemberOfPartialAttributeSet: TRUE
+systemOnly: FALSE
+searchFlags: 0
+schemaIdGuid:: KREsZJk4IUeOIUg545iM5Q==
+systemFlags: 16
+instanceType: 4
+showInAdvancedViewOnly: TRUE
+
+dn: CN=ms-DS-Computer-SID,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: attributeSchema
+ldapDisplayName: msDS-ComputerSID
+adminDisplayName: msDS-ComputerSID
+adminDescription: This attribute identifies a domain-joined computer.
+attributeId: 1.2.840.113556.1.4.2321
+attributeSyntax: 2.5.5.17
+omSyntax: 4
+isSingleValued: TRUE
+isMemberOfPartialAttributeSet: TRUE
+systemOnly: FALSE
+searchFlags: 1
+schemaIdGuid:: INf733IILkCZQPzXjbBJug==
+systemFlags: 16
+showInAdvancedViewOnly: TRUE
+
+dn: CN=ms-DS-Custom-Key-Information,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: attributeSchema
+ldapDisplayName: msDS-CustomKeyInformation
+adminDisplayName: msDS-CustomKeyInformation
+adminDescription: This attribute contains additional information about the key.
+attributeId: 1.2.840.113556.1.4.2322
+attributeSyntax: 2.5.5.10
+omSyntax: 4
+isSingleValued: TRUE
+isMemberOfPartialAttributeSet: TRUE
+systemOnly: FALSE
+searchFlags: 0
+schemaIdGuid:: iOnltuTlhkyirg2suXCg4Q==
+systemFlags: 16
+RangeLower: 0
+RangeUpper: 132096
+instanceType: 4
+showInAdvancedViewOnly: TRUE
+
+dn: CN=ms-DS-Key-Approximate-Last-Logon-Time-Stamp,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: attributeSchema
+adminDisplayName: msDS-KeyApproximateLastLogonTimeStamp
+adminDescription: The approximate time this key was last used in a logon operation.
+ldapDisplayName: msDS-KeyApproximateLastLogonTimeStamp
+attributeId: 1.2.840.113556.1.4.2323
+attributeSyntax: 2.5.5.16
+omSyntax: 65
+isSingleValued: TRUE
+instanceType: 4
+searchFlags: 1
+isMemberOfPartialAttributeSet: TRUE
+systemOnly: FALSE
+schemaIdGuid:: jcmaZJqbQU2va/YW8qYuSg==
+systemFlags: 16
+showInAdvancedViewOnly: TRUE
+
+dn:
+changetype: modify
+add: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+dn: CN=ms-DS-Key-Credential,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: classSchema
+ldapDisplayName: msDS-KeyCredential
+adminDisplayName: msDS-KeyCredential
+adminDescription: An instance of this class contains key material.
+governsId: 1.2.840.113556.1.5.297
+objectClassCategory: 1
+rdnAttId: cn
+schemaIdGuid:: Q1Uf7i58akeLP+EfSvbEmA==
+defaultSecurityDescriptor: D:(A;;RPWPCRCCDCLCLOLORCWOWDSDDTDTSW;;;EA)(A;;RPWPCRCCDCLCLORCWOWDSDDTSW;;;SY)
+defaultHidingValue: FALSE
+showInAdvancedViewOnly: TRUE
+systemOnly: FALSE
+systemFlags: 16
+instanceType: 4
+subClassOf: top
+systemPossSuperiors: 1.2.840.113556.1.3.23
+systemMustContain: 1.2.840.113556.1.4.2315
+systemMayContain: 1.2.840.113556.1.4.2316
+systemMayContain: 1.2.840.113556.1.4.2317
+systemMayContain: 1.2.840.113556.1.4.2318
+systemMayContain: 1.2.840.113556.1.4.2320
+systemMayContain: 1.2.840.113556.1.4.2321
+systemMayContain: 1.2.840.113556.1.4.2322
+systemMayContain: 1.2.840.113556.1.4.2323
+
+dn: CN=User,CN=Schema,CN=Configuration,DC=X
+changeType: ntdsSchemaModify
+add:  systemMayContain
+systemMayContain: 1.2.840.113556.1.4.2319
+-
+
+dn: CN=Schema,CN=Configuration,DC=X
+changeType: ntdsSchemaModify
+replace: objectVersion
+objectVersion: 74
+-
+
+dn:
+changetype: modify
+add: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+```
+
+### <a name="BKMK_Sch75"></a>Sch75.ldf  
+
+```
+dn: CN=ms-DS-Device-Trust-Type,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: attributeSchema
+CN: ms-DS-Device-Trust-Type
+adminDescription: Represents join type for devices.
+adminDisplayName: msDS-DeviceTrustType
+lDAPDisplayName: msDS-DeviceTrustType
+attributeId: 1.2.840.113556.1.4.2325
+oMSyntax: 2
+attributeSyntax: 2.5.5.9
+instanceType: 4
+isMemberOfPartialAttributeSet: TRUE
+isSingleValued: TRUE
+searchFlags: 0
+showInAdvancedViewOnly: TRUE
+systemOnly: FALSE
+schemaIDGUID:: B2ikxNxqu0uX3mvtGBob/g==
+systemFlags: 16
+
+dn:
+changetype: modify
+add: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+dn: CN=ms-DS-Device,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+add: systemMayContain
+systemMayContain: 1.2.840.113556.1.4.2325
+-
+
+#
+# Optional Feature Object
+#
+dn: CN=Expiring Group Membership Feature,CN=Optional Features,CN=Directory Service,CN=Windows NT,CN=Services,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: msDS-OptionalFeature
+msDS-OptionalFeatureFlags: 1
+msDS-OptionalFeatureGUID:: c+hD7OjMQEa0qwf/5KtbzQ==
+msDS-RequiredForestBehaviorVersion: 7
+# 0x800000000
+# 0x080000000
+# 0x040000000
+systemFlags: 2348810240
+
+dn: CN=Schema,CN=Configuration,DC=X
+changeType: ntdsSchemaModify
+replace: objectVersion
+objectVersion: 75
+-
+
+dn:
+changetype: modify
+add: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+```
+
+### <a name="BKMK_Sch76"></a>Sch76.ldf  
+
+```
+dn: CN=ms-DS-Shadow-Principal-Sid,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: attributeSchema
+lDAPDisplayName: msDS-ShadowPrincipalSid
+adminDisplayName: ms-DS-Shadow-Principal-Sid
+adminDescription: Contains the SID of a principal from an external forest.
+attributeID: 1.2.840.113556.1.4.2324
+attributeSyntax: 2.5.5.17
+oMSyntax: 4
+isSingleValued: TRUE
+systemOnly: FALSE
+searchFlags: 1
+schemaIDGUID:: IgfMHbCq70+Vbydv4Z3hBw==
+systemFlags: 16
+instanceType: 4
+showInAdvancedViewOnly: TRUE
+
+dn:
+changetype: modify
+add: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+dn: CN=ms-DS-Shadow-Principal-Container,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: classSchema
+ldapDisplayName: msDS-ShadowPrincipalContainer
+adminDisplayName: ms-DS-Shadow-Principal-Container
+adminDescription: Dedicated container for msDS-ShadowPrincipal objects.
+governsId: 1.2.840.113556.1.5.298
+objectClassCategory: 1
+rdnAttId: cn
+schemaIdGuid:: RVX5ERLXUEy4R9J4FTfGMw==
+defaultSecurityDescriptor: D:(A;;RPWPCRCCDCLCLOLORCWOWDSDDTDTSW;;;EA)(A;;RPWPCRCCDCLCLORCWOWDSDDTSW;;;SY)(A;;RPLCLORC;;;AU)
+defaultHidingValue: FALSE
+showInAdvancedViewOnly: TRUE
+systemOnly: FALSE
+systemFlags: 16
+instanceType: 4
+subClassOf: container
+
+dn:
+changetype: modify
+add: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+dn: CN=ms-DS-Shadow-Principal,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: classSchema
+ldapDisplayName: msDS-ShadowPrincipal
+adminDisplayName: ms-DS-Shadow-Principal
+adminDescription: Represents a principal from an external forest.
+governsId: 1.2.840.113556.1.5.299
+objectClassCategory: 1
+rdnAttId: cn
+schemaIdGuid:: s0wPd0MWnEa3Zu3XeqdeFA==
+defaultHidingValue: FALSE
+showInAdvancedViewOnly: TRUE
+systemOnly: FALSE
+systemFlags: 16
+instanceType: 4
+subClassOf: top
+systemPossSuperiors: msDS-ShadowPrincipalContainer
+systemMayContain: member
+systemMustContain: msDS-ShadowPrincipalSid
+
+dn: CN=Shadow Principal Feature,CN=Optional Features,CN=Directory Service,CN=Windows NT,CN=Services,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: msDS-OptionalFeature
+msDS-OptionalFeatureFlags: 1
+msDS-OptionalFeatureGUID:: KbW388juRVatNjmTdiXpNg==
+msDS-RequiredForestBehaviorVersion: 7
+systemFlags: 2348810240
+
+dn: CN=Shadow Principal Configuration,CN=Services,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: msDS-ShadowPrincipalContainer
+showInAdvancedViewOnly: TRUE
+
+dn: CN=Schema,CN=Configuration,DC=X
+changeType: ntdsSchemaModify
+replace: objectVersion
+objectVersion: 76
+-
+
+dn:
+changetype: modify
+add: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+```
+
+### <a name="BKMK_Sch77"></a>Sch77.ldf  
+
+```
+dn: CN=ms-DS-Key-Id,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+replace: isMemberOfPartialAttributeSet
+isMemberOfPartialAttributeSet: FALSE
+-
+
+dn: CN=ms-DS-Key-Material,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+replace: isMemberOfPartialAttributeSet
+isMemberOfPartialAttributeSet: FALSE
+-
+
+dn: CN=ms-DS-Key-Usage,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+replace: isMemberOfPartialAttributeSet
+isMemberOfPartialAttributeSet: FALSE
+-
+
+dn: CN=ms-DS-Key-Principal,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+replace: isMemberOfPartialAttributeSet
+isMemberOfPartialAttributeSet: FALSE
+-
+
+dn: CN=ms-DS-Device-DN,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+replace: isMemberOfPartialAttributeSet
+isMemberOfPartialAttributeSet: FALSE
+-
+
+dn: CN=ms-DS-Computer-SID,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+replace: isMemberOfPartialAttributeSet
+isMemberOfPartialAttributeSet: FALSE
+-
+
+dn: CN=ms-DS-Custom-Key-Information,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+replace: isMemberOfPartialAttributeSet
+isMemberOfPartialAttributeSet: FALSE
+-
+
+dn: CN=ms-DS-Key-Approximate-Last-Logon-Time-Stamp,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+replace: isMemberOfPartialAttributeSet
+isMemberOfPartialAttributeSet: FALSE
+-
+
+dn:
+changetype: modify
+add: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+dn: CN=ms-DS-Key-Credential,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+add: systemMayContain
+systemMayContain: 1.2.840.113556.1.4.2252
+-
+
+dn: CN=Schema,CN=Configuration,DC=X
+changeType: ntdsSchemaModify
+replace: objectVersion
+objectVersion: 77
+-
+
+dn:
+changetype: modify
+add: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+```
+
+### <a name="BKMK_Sch78"></a>Sch78.ldf  
+
+```
+#
+# Optional Feature Object
+#
+dn: CN=Expiring Group Membership Feature,CN=Optional Features,CN=Directory Service,CN=Windows NT,CN=Services,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+replace: systemFlags
+# FLAG_ALLOW_RENAME 0x400000
+systemFlags: 1073741824
+-
+
+dn: CN=Expiring Group Membership Feature,CN=Optional Features,CN=Directory Service,CN=Windows NT,CN=Services,CN=Configuration,DC=X
+changetype: ntdsSchemaModRdn
+newrdn: Privileged Access Management Feature
+deleteoldrdn: 1
+
+dn: CN=Privileged Access Management Feature,CN=Optional Features,CN=Directory Service,CN=Windows NT,CN=Services,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+replace: systemFlags
+# FLAG_DISALLOW_DELETE           0x80000000
+# FLAG_DOMAIN_DISALLOW_RENAME    0x08000000
+# FLAG_DOMAIN_DISALLOW_MOVE      0x04000000
+systemFlags: 2348810240
+-
+
+dn: CN=Shadow Principal Feature,CN=Optional Features,CN=Directory Service,CN=Windows NT,CN=Services,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+# FLAG_DOMAIN_DISALLOW_RENAME    0x08000000
+# FLAG_DOMAIN_DISALLOW_MOVE      0x04000000
+replace: systemFlags
+systemFlags: 201326592
+-
+
+dn: CN=Shadow Principal Feature,CN=Optional Features,CN=Directory Service,CN=Windows NT,CN=Services,CN=Configuration,DC=X
+changetype: ntdsSchemaDelete
+
+dn: CN=Schema,CN=Configuration,DC=X
+changeType: ntdsSchemaModify
+replace: objectVersion
+objectVersion: 78
+-
+
+dn:
+changetype: modify
+add: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+```
+
+### <a name="BKMK_Sch79"></a>Sch79.ldf  
+
+```
+dn: CN=ms-DS-Device,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+add: systemMayContain
+systemMayContain: 1.2.840.113556.1.4.2321
+-
+
+dn: CN=Schema,CN=Configuration,DC=X
+changeType: ntdsSchemaModify
+replace: objectVersion
+objectVersion: 79
+-
+
+dn:
+changetype: modify
+add: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+```
+
+### <a name="BKMK_Sch80"></a>Sch80.ldf  
+
+```
+dn: CN=ms-DS-Key-Credential-Link,CN=schema,CN=configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: attributeSchema
+attributeID: 1.2.840.113556.1.4.2328
+attributeSyntax: 2.5.5.7
+adminDisplayName: ms-DS-Key-Credential-Link
+adminDescription: Contains key material and usage.
+oMSyntax: 127
+oMObjectClass:: KoZIhvcUAQEBCw==
+lDAPDisplayName: msDS-KeyCredentialLink
+isSingleValued: FALSE
+systemOnly: FALSE
+schemaIDGUID:: D9ZHW5BgskCfNypN6I8wYw==
+searchFlags: 0
+showInAdvancedViewOnly: TRUE
+systemFlags: 16
+linkId: 2220
+
+dn: CN=ms-DS-Key-Credential-Link-BL,CN=schema,CN=configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: attributeSchema
+attributeID: 1.2.840.113556.1.4.2329
+attributeSyntax: 2.5.5.1
+oMSyntax: 127
+lDAPDisplayName: msDS-KeyCredentialLink-BL
+isSingleValued: FALSE
+systemOnly: FALSE
+schemaIDGUID:: iNeKk18i7k6Tua0koVnh2w==
+searchFlags: 0
+showInAdvancedViewOnly: TRUE
+systemFlags: 16
+linkId: 2221
+
+dn:
+changetype: modify
+add: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+dn: CN=User,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+add: systemMayContain
+systemMayContain: 1.2.840.113556.1.4.2328
+-
+
+dn: CN=ms-DS-Device,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+add: systemMayContain
+systemMayContain: 1.2.840.113556.1.4.2328
+-
+
+dn: CN=Schema,CN=Configuration,DC=X
+changeType: ntdsSchemaModify
+replace: objectVersion
+objectVersion: 80
+-
+
+dn:
+changetype: modify
+add: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+```
+
+### <a name="BKMK_Sch81"></a>Sch81.ldf  
+
+```
+dn: CN=DS-Validated-Write-Computer,CN=Extended-Rights,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: controlAccessRight
+displayName: Validated write to computer attributes.
+rightsGuid: 9b026da6-0d3c-465c-8bee-5199d7165cba
+appliesTo: bf967a86-0de6-11d0-a285-00aa003049e2
+ShowInAdvancedViewOnly: TRUE
+validAccesses: 8
+
+dn: CN=ms-DS-Key-Credential-Link,CN=schema,CN=configuration,DC=X
+changetype: ntdsSchemaModify
+add: attributeSecurityGUID
+attributeSecurityGUID:: pm0CmzwNXEaL7lGZ1xZcug==
+-
+
+dn: CN=Schema,CN=Configuration,DC=X
+changeType: ntdsSchemaModify
+replace: objectVersion
+objectVersion: 81
+-
+
+dn:
+changetype: modify
+add: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+```
+
+### <a name="BKMK_Sch82"></a>Sch82.ldf  
+
+```
+dn: CN=Dns-Zone-Scope-Container,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: classSchema
+cn: Dns-Zone-Scope-Container
+adminDisplayName: Dns-Zone-Scope-Container
+adminDescription: Container for Dns Zone Scope objects.
+ldapDisplayName: dnsZoneScopeContainer
+rDNAttID: cn
+defaultSecurityDescriptor: D:(A;;RPWPCRCCDCLCLORCWOWDSDDTSW;;;DA)(A;;RPWPCRCCDCLCLORCWOWDSDDTSW;;;ED)(A;;RPWPCRCCDCLCLORCWOWDSDDTSW;;;SY)(A;;CC;;;AU)(A;;RPLCLORC;;;WD)(A;;RPWPCRCCDCLCLORCWOWDSDDTSW;;;CO)
+governsId: 1.2.840.113556.1.5.300
+instanceType: 4
+objectClassCategory: 1
+schemaIdGuid:: k5Bp8lryIEKd6wPfTMSpxQ==
+showInAdvancedViewOnly: TRUE
+defaultHidingValue: TRUE
+systemOnly: FALSE
+systemFlags: 16
+subClassOf: top
+systemPossSuperiors: 1.2.840.113556.1.5.85
+
+dn:
+changetype: modify
+add: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+dn: CN=Dns-Zone-Scope,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: classSchema
+cn: Dns-Zone-Scope
+adminDisplayName: Dns-Zone-Scope
+adminDescription: A zonescope of a zone is another copy of the zone contained in the zone with different set of resource records.
+ldapDisplayName: dnsZoneScope
+rDNAttID: cn
+defaultSecurityDescriptor: D:(A;;RPWPCRCCDCLCLORCWOWDSDDTSW;;;DA)(A;;RPWPCRCCDCLCLORCWOWDSDDTSW;;;ED)(A;;RPWPCRCCDCLCLORCWOWDSDDTSW;;;SY)(A;;CC;;;AU)(A;;RPLCLORC;;;WD)(A;;RPWPCRCCDCLCLORCWOWDSDDTSW;;;CO)
+governsId: 1.2.840.113556.1.5.301
+instanceType: 4
+objectClassCategory: 1
+schemaIdGuid:: YYpvaT8tzkCks+J138xJxQ==
+showInAdvancedViewOnly: TRUE
+defaultHidingValue: TRUE
+systemOnly: FALSE
+systemFlags: 16
+subClassOf: top
+systemPossSuperiors: 1.2.840.113556.1.5.300
+systemMustContain: 0.9.2342.19200300.100.1.25
+systemMayContain: 1.2.840.113556.1.4.1306
+systemMayContain: 1.2.840.113556.1.4.653
+
+dn:
+changetype: modify
+add: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+dn: CN=Dns-Node,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+add: systemPossSuperiors
+systemPossSuperiors: 1.2.840.113556.1.5.301
+-
+
+dn: CN=Schema,CN=Configuration,DC=X
+changeType: ntdsSchemaModify
+replace: objectVersion
+objectVersion: 82
+-
+
+dn:
+changetype: modify
+add: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+```
+
+### <a name="BKMK_Sch83"></a>Sch83.ldf  
+
+```
+dn: CN=ms-DS-Expire-Passwords-On-Smart-Card-Only-Accounts,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: attributeSchema
+CN: ms-DS-Expire-Passwords-On-Smart-Card-Only-Accounts
+attributeID: 1.2.840.113556.1.4.2344
+attributeSyntax: 2.5.5.8
+adminDisplayName: ms-DS-Expire-Passwords-On-Smart-Card-Only-Accounts
+adminDescription: This attribute controls whether the passwords on smart-card-only accounts expire in accordance with the password policy.
+oMSyntax: 1
+lDAPDisplayName: msDS-ExpirePasswordsOnSmartCardOnlyAccounts
+isSingleValued: TRUE
+systemOnly: FALSE
+schemaIDGUID:: SKsXNCTfsU+AsA/LNn4l4w==
+systemFlags: 16
+searchFlags: 0
+instanceType: 4
+
+dn:
+changetype: modify
+add: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+dn: CN=Domain-DNS,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+add: systemMayContain
+systemMayContain: 1.2.840.113556.1.4.2344
+-
+
+dn: CN=Schema,CN=Configuration,DC=X
+changeType: ntdsSchemaModify
+replace: objectVersion
+objectVersion: 83
+-
+
+dn:
+changetype: modify
+add: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+```
+
+### <a name="BKMK_Sch84"></a>Sch84.ldf  
+
+```
+dn: CN=ms-DS-Token-Group-Names,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: attributeSchema
+ldapDisplayName: msds-tokenGroupNames
+adminDisplayName: ms-DS-Token-Group-Names
+adminDescription: The distinguished names of security groups the principal is directly or indirectly a member of.
+attributeId: 1.2.840.113556.1.4.2345
+attributeSyntax: 2.5.5.1
+omSyntax: 127
+omObjectClass:: KwwCh3McAIVK
+isSingleValued: FALSE
+systemOnly: TRUE
+# 0x00000800 (Attribute is returned only on base searches.)
+# searchFlags hex value 0x00000800
+searchFlags: 2048
+schemaIdGuid:: dgVlZZlGyU+NGCbgzQE3pg==
+attributeSecurityGuid:: +IhwA+EK0hG0IgCgyWj5OQ==
+showInAdvancedViewOnly: TRUE
+# 0x00000001 (Attribute is not replicated)
+# 0x00000004 (Attribute is constructed)
+# 0x00000008 (Attribute is operational)
+# 0x00000010 (Attribute is in the base schema)
+# systemFlags hex value 0x0000001D
+systemFlags: 29
+
+dn: CN=ms-DS-Token-Group-Names-Global-And-Universal,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: attributeSchema
+ldapDisplayName: msds-tokenGroupNamesGlobalAndUniversal
+adminDisplayName: ms-DS-Token-Group-Names-Global-And-Universal
+adminDescription: The distinguished names of global and universal security groups the principal is directly or indirectly a member of.
+attributeId: 1.2.840.113556.1.4.2346
+attributeSyntax: 2.5.5.1
+omSyntax: 127
+omObjectClass:: KwwCh3McAIVK
+isSingleValued: FALSE
+systemOnly: TRUE
+# 0x00000800 (Attribute is returned only on base searches.)
+# searchFlags hex value 0x00000800
+searchFlags: 2048
+schemaIdGuid:: 9NEG+iJ5rUq3nLIgH1RBfA==
+attributeSecurityGuid:: +IhwA+EK0hG0IgCgyWj5OQ==
+showInAdvancedViewOnly: TRUE
+# 0x00000001 (Attribute is not replicated)
+# 0x00000004 (Attribute is constructed)
+# 0x00000008 (Attribute is operational)
+# 0x00000010 (Attribute is in the base schema)
+# systemFlags hex value 0x0000001D
+systemFlags: 29
+
+dn: CN=ms-DS-Token-Group-Names-No-GC-Acceptable,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: attributeSchema
+ldapDisplayName: msds-tokenGroupNamesNoGCAcceptable
+adminDisplayName: ms-DS-Token-Group-Names-No-GC-Acceptable
+adminDescription: The distinguished names of security groups the principal is directly or indirectly a member of as reported by the local DC.
+attributeId: 1.2.840.113556.1.4.2347
+attributeSyntax: 2.5.5.1
+omSyntax: 127
+omObjectClass:: KwwCh3McAIVK
+isSingleValued: FALSE
+systemOnly: TRUE
+# 0x00000800 (Attribute is returned only on base searches.)
+# searchFlags hex value 0x00000800
+searchFlags: 2048
+schemaIdGuid:: yMY/UvSaAkqc1z3qEp7rJw==
+attributeSecurityGuid:: +IhwA+EK0hG0IgCgyWj5OQ==
+showInAdvancedViewOnly: TRUE
+# 0x00000001 (Attribute is not replicated)
+# 0x00000004 (Attribute is constructed)
+# 0x00000008 (Attribute is operational)
+# 0x00000010 (Attribute is in the base schema)
+# systemFlags hex value 0x0000001D
+systemFlags: 29
+
+dn:
+changetype: modify
+add: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+dn: CN=Security-Principal,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+add: systemMayContain
+systemMayContain: 1.2.840.113556.1.4.2345
+systemMayContain: 1.2.840.113556.1.4.2346
+systemMayContain: 1.2.840.113556.1.4.2347
+-
+
+dn: CN=Schema,CN=Configuration,DC=X
+changeType: ntdsSchemaModify
+replace: objectVersion
+objectVersion: 84
+-
+
+dn:
+changetype: modify
+add: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+```
+
+### <a name="BKMK_Sch85"></a>Sch85.ldf  
+
+```
+dn: CN=ms-DS-User-Allowed-NTLM-Network-Authentication,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: attributeSchema
+ldapDisplayName: msDS-UserAllowedNTLMNetworkAuthentication
+adminDisplayName: ms-DS-User-Allowed-NTLM-Network-Authentication
+adminDescription: This attribute is used to determine if a user is allowed to authenticate using NTLM authentication.
+attributeId: 1.2.840.113556.1.4.2348
+attributeSyntax: 2.5.5.8
+omSyntax: 1
+isSingleValued: TRUE
+systemOnly: FALSE
+# searchFlags hex value 0x00000000
+searchFlags: 0
+# schemaIdGuid {7ece040f-9327-4cdc-aad3-037adfe62639}
+schemaIdGuid:: DwTOfieT3Eyq0wN63+YmOQ==
+# attributeSecurityGuid {00000000-0000-0000-0000-000000000000}
+showInAdvancedViewOnly: TRUE
+# systemFlags hex value 0x00000010
+# 0x00000010 (Attribute is in the base schema)
+systemFlags: 16
+
+dn: CN=ms-DS-Service-Allowed-NTLM-Network-Authentication,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: attributeSchema
+ldapDisplayName: msDS-ServiceAllowedNTLMNetworkAuthentication
+adminDisplayName: ms-DS-Service-Allowed-NTLM-Network-Authentication
+adminDescription: This attribute is used to determine if a service is allowed to authenticate using NTLM authentication.
+attributeId: 1.2.840.113556.1.4.2349
+attributeSyntax: 2.5.5.8
+omSyntax: 1
+isSingleValued: TRUE
+systemOnly: FALSE
+# searchFlags hex value 0x00000000
+searchFlags: 0
+# schemaIdGuid {278947b9-5222-435e-96b7-1503858c2b48}
+schemaIdGuid:: uUeJJyJSXkOWtxUDhYwrSA==
+# attributeSecurityGuid {00000000-0000-0000-0000-000000000000}
+showInAdvancedViewOnly: TRUE
+# systemFlags hex value 0x00000010
+# 0x00000010 (Attribute is in the base schema)
+systemFlags: 16
+
+dn: CN=ms-DS-Strong-NTLM-Policy,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: attributeSchema
+ldapDisplayName: msDS-StrongNTLMPolicy
+adminDisplayName: ms-DS-Strong-NTLM-Policy
+adminDescription: This attribute specifies policy options for NTLM secrets with strong entropy.
+attributeId: 1.2.840.113556.1.4.2350
+attributeSyntax: 2.5.5.9
+omSyntax: 2
+isSingleValued: TRUE
+systemOnly: FALSE
+# searchFlags hex value 0x00000000
+searchFlags: 0
+# schemaIdGuid {aacd2170-482a-44c6-b66e-42c2f66a285c}
+schemaIdGuid:: cCHNqipIxkS2bkLC9mooXA==
+# attributeSecurityGuid {00000000-0000-0000-0000-000000000000}
+showInAdvancedViewOnly: TRUE
+# systemFlags hex value 0x00000010
+# 0x00000010 (Attribute is in the base schema)
+systemFlags: 16
+
+dn: CN=ms-DS-AuthN-Policy,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+add: systemMayContain
+systemMayContain: 1.2.840.113556.1.4.2348
+systemMayContain: 1.2.840.113556.1.4.2349
+systemMayContain: 1.2.840.113556.1.4.2350
+-
+
+dn: CN=Schema,CN=Configuration,DC=X
+changeType: ntdsSchemaModify
+replace: objectVersion
+objectVersion: 85
+-
+
+dn:
+changetype: modify
+add: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+```
+
+### <a name="BKMK_Sch86"></a>Sch86.ldf
+
+```
+dn: CN=ms-DS-Source-Anchor,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: attributeSchema
+ldapDisplayName: msDS-SourceAnchor
+adminDisplayName: ms-DS-Source-Anchor
+adminDescription: Unique, immutable identifier for the object in the authoritative directory.
+attributeId: 1.2.840.113556.1.4.2352
+attributeSyntax: 2.5.5.12
+# Syntax: String
+oMSyntax: 64
+isSingleValued: TRUE
+# Note that we do not supply rangeUpper here.  DS API enforces a maximum length of 256 Unicode characters,
+# which may translate to more than 256 multi-byte characters in AD given that the AD syntax for this
+# attribute is not String(Unicode).
+rangeLower: 1
+systemOnly: FALSE
+# searchFlags: +fPDNTATTINDEX for SearchForAddressListObjects
+# searchFlags: fPDNTATTINDEX | fPRESERVEONDELETE
+searchFlags: 10
+schemaIDGUID:: B/QCsEAT60G8oL19k44lqQ==
+# attributeSecurityGuid {00000000-0000-0000-0000-000000000000}
+showInAdvancedViewOnly: TRUE
+# systemFlags hex value 0x00000010
+# 0x00000010 (Attribute is in the base schema)
+systemFlags: 16
+
+dn: CN=ms-DS-Object-SOA,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: attributeSchema
+ldapDisplayName: msDS-ObjectSoa
+adminDisplayName: ms-DS-Object-SOA
+adminDescription: This attribute is used to identify the source of authority of the object.
+attributeId: 1.2.840.113556.1.4.2353
+attributeSyntax: 2.5.5.12
+# Syntax: String
+oMSyntax: 64
+isSingleValued: TRUE
+# Note that we do not supply rangeUpper here.  DS API enforces a maximum length of 256 Unicode characters,
+# which may translate to more than 256 multi-byte characters in AD given that the AD syntax for this
+# attribute is not String(Unicode).
+rangeLower: 1
+systemOnly: FALSE
+searchFlags: 0
+schemaIDGUID:: 9b32NHkuO0yOFD2Tt1qriQ==
+showInAdvancedViewOnly: TRUE
+# systemFlags hex value 0x00000010
+# 0x00000010 (Attribute is in the base schema)
+systemFlags: 16
+
+dn: CN=Top,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+add: systemMayContain
+systemMayContain: 1.2.840.113556.1.4.2352
+systemMayContain: 1.2.840.113556.1.4.2353
+-
+
+dn: CN=Schema,CN=Configuration,DC=X
+changeType: ntdsSchemaModify
+replace: objectVersion
+objectVersion: 86
+-
+
+dn:
+changetype: modify
+add: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+```
+
+### <a name="BKMK_Sch87"></a>Sch87.ldf  
+
+```
+dn: CN=Send-As,CN=Extended-Rights,CN=Configuration,DC=X
+changetype: modify
+add: appliesTo
+appliesTo: 7b8b558a-93a5-4af7-adca-c017e67f1057
+-
+
+dn: CN=Receive-As,CN=Extended-Rights,CN=Configuration,DC=X
+changetype: modify
+add: appliesTo
+appliesTo: 7b8b558a-93a5-4af7-adca-c017e67f1057
+-
+
+dn: CN=Personal-Information,CN=Extended-Rights,CN=Configuration,DC=X
+changetype: modify
+add: appliesTo
+appliesTo: 7b8b558a-93a5-4af7-adca-c017e67f1057
+-
+
+dn: CN=Public-Information,CN=Extended-Rights,CN=Configuration,DC=X
+changetype: modify
+add: appliesTo
+appliesTo: 7b8b558a-93a5-4af7-adca-c017e67f1057
+-
+
+dn: CN=Validated-SPN,CN=Extended-Rights,CN=Configuration,DC=X
+changetype: modify
+add: appliesTo
+appliesTo: 7b8b558a-93a5-4af7-adca-c017e67f1057
+-
+
+dn: CN=Allowed-To-Authenticate,CN=Extended-Rights,CN=Configuration,DC=X
+changetype: modify
+add: appliesTo
+appliesTo: 7b8b558a-93a5-4af7-adca-c017e67f1057
+-
+
+dn: CN=MS-TS-GatewayAccess,CN=Extended-Rights,CN=Configuration,DC=X
+changetype: modify
+add: appliesTo
+appliesTo: 7b8b558a-93a5-4af7-adca-c017e67f1057
+-
+
+dn: CN=Schema,CN=Configuration,DC=X
+changeType: ntdsSchemaModify
+replace: objectVersion
+objectVersion: 87
+-
+
+dn:
+changetype: modify
+add: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+```
+
 ## <a name="BKMK_SchemaUpdates2012R2"></a>Schema Updates in Windows Server 2012 R2  
   
 ### <a name="BKMK_Sch57"></a>Sch57.ldf  

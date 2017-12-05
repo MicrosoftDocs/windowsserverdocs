@@ -5,7 +5,7 @@ description: Frequently asked questions for AD FS 2016
 author: jenfieldmsft
 ms.author:  billmath
 manager: femila
-ms.date: 09/19/2017
+ms.date: 11/16/2017
 ms.topic: article
 ms.custom: it-pro
 ms.prod: windows-server-threshold
@@ -146,3 +146,34 @@ It is not recommended to do SSL termination before WAP. In case SSL termination 
 
 ### I am trying to get additional claims on the user info endpoint, but its only returning subject. How can I get additional claims?
 The ADFS userinfo endpoint always returns the subject claim as specified in the OpenID standards. AD FS does not provide additional claims requested via the UserInfo endpoint. If you need additional claims in ID token, refer to [Custom ID Tokens in AD FS](../development/custom-id-tokens-in-ad-fs.md).
+
+### Why do I see alot of 1021 errors on my AD FS servers?
+This event is logged usually for an invalid resource access on AD FS for resource 00000003-0000-0000-c000-000000000000. This error is caused by an erroneous behavior of the client where it tries to get an access token for the Azure AD Graph service. Since the resource is not present on AD FS, this results in event ID 1021 on the AD FS servers. It’s safe to ignore any warnings or errors for resource 00000003-0000-0000-c000-000000000000 on AD FS. 
+
+### Why am I seeing a warning for failure to add the AD FS service account to the Enterprise Key Admins group?
+This group is only created when a Windows 2016 Domain Controller with the FSMO PDC role exists in the Domain. To resolve the error, you can create the Group manually and follow the below to give the required permission after adding the service account as member of the group.
+1.	Open **Active Directory Users and Computers**. 
+2.	**Right-click** your domain name from the navigation pane and **click** Properties.
+3.	**Click** Security (if the Security tab is missing, turn on Advanced Features from the View menu).
+4.	**Click** Advanced. **Click** Add. **Click** Select a principal.
+5.	The Select User, Computer, Service Account, or Group dialog box appears.  In the Enter the object name to select text box, type Key Admin Group.  Click OK.
+6.	In the Applies to list box, select **Descendant User objects**.
+7.	Using the scroll bar, scroll to the bottom of the page and **click** Clear all.
+8.	In the **Properties** section, select **Read msDS-KeyCredentialLink** and **Write msDS-KeyCrendentialLink**.
+
+### Why does modern authentication from Android devices fail if the server does not send all the intermediate certificates in the chain with the SSL cert?
+
+Federated users may experience authentication to Azure AD for apps that use the Android ADAL library failing. The app will get an **AuthenticationException** when it tries to show the login page. In chrome the AD FS login page might be called out as unsafe.
+
+Android - across all versions and all devices - does not support downloading additional certificates from the **authorityInformationAccess** field of the certificate. This is true of the Chrome browser as well. Any Server Authentication certificate that’s missing intermediate certificates will result in this error if the entire certificate chain is not passed from AD FS. 
+
+A proper solution to this problem is to configure the AD FS and WAP servers to send the necessary intermediate certificates along with the SSL certificate. 
+
+When exporting the SSL certificate, from one machine, to be imported to the computer’s personal store, of the AD FS and WAP server(s), make sure to export the Private key and select **Personal Information Exchange - PKCS #12**. 
+
+It is important that the check box to **Include all certificates in the certificate path if possible** is checked, as well as **Export all extended properties**. 
+
+Run certlm.msc on the Windows servers and import the *.PFX into the Computer’s Personal Certificate store. This will cause the server to pass the entire certificate chain to the ADAL library. 
+
+>[!NOTE]
+> The certificate store of Network Load Balancers should also be updated to include the entire certificate chain if present

@@ -8,6 +8,7 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: lizapo
 ms.date: 03/17/2017
+ms.localizationpriority: high
 ---
 
 # Remote access and server management

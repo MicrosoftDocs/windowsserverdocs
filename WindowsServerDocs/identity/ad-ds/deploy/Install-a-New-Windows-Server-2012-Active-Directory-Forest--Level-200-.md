@@ -285,7 +285,7 @@ The **Review Options** page enables you to validate your settings and ensure the
   
 The **Review Options** page in Server Manager also offers an optional **View Script** button to create a Unicode text file that contains the current ADDSDeployment configuration as a single Windows PowerShell script. This enables you to use the Server Manager graphical interface as a Windows PowerShell deployment studio. Use the Active Directory Domain Services Configuration Wizard to configure options, export the configuration, and then cancel the wizard. This process creates a valid and syntactically correct sample for further modification or direct use. For example:  
   
-```  
+```powershell 
 #  
 # Windows PowerShell Script for AD DS Deployment  
 #  
@@ -359,7 +359,7 @@ The ServerManager module exposes role installation, status, and removal portions
   
 Use **Get-Command** to export the aliases and cmdlets in ServerManager.  
   
-```  
+```powershell  
 Get-Command -module ServerManager  
 ```  
   
@@ -369,13 +369,13 @@ For example:
   
 To add the Active Directory Domain Services role, simply run the **Install-WindowsFeature** with the AD DS role name as an argument. Like Server Manager, all required services implicit to the AD DS role install automatically.  
   
-```  
+```powershell  
 Install-WindowsFeature -name AD-Domain-Services  
 ```  
   
 If you also want the AD DS management tools installed - and this is highly recommended - then provide the **-IncludeManagementTools** argument:  
   
-```  
+```powershell  
 Install-WindowsFeature -name AD-Domain-Services -IncludeManagementTools  
 ```  
   
@@ -385,19 +385,19 @@ For example:
   
 To list all features and roles with their installation status, use **Get-WindowsFeature** without arguments. Specify **-ComputerName** argument for the installation status from a remote server.  
   
-```  
+```powershell  
 Get-WindowsFeature  
 ```  
   
 Because **Get-WindowsFeature** does not have a filtering mechanism, you must use **Where-Object** with a pipeline to find specific features. The pipeline is a channel used between multiple cmdlets to pass data and the Where-Object cmdlet acts as a filter. The built-in **$_** variable acts as the current object passing through the pipeline with any properties it may contain.  
   
-```  
+```powershell  
 Get-WindowsFeature | where-object <options>  
 ```  
   
 For example, to find all features containing "Active Dir" in their **Display Name** property, use:  
   
-```  
+```powershell  
 Get-WindowsFeature | where displayname -like "*active dir*"  
 ```  
   
@@ -409,13 +409,13 @@ For more information about more Windows PowerShell operations with pipelines and
   
 Note also that Windows PowerShell 3.0 significantly simplified the command-line arguments needed in this pipeline operation. Windows PowerShell 2.0 would have required:  
   
-```  
+```powershell  
 Get-WindowsFeature | where {$_.displayname - like "*active dir*"}  
 ```  
   
 By using the Windows PowerShell pipeline, you can create readable results. For example:  
   
-```  
+```powershell  
 Install-WindowsFeature | Format-List  
 Install-WindowsFeature | select-object | Format-List  
   
@@ -433,7 +433,7 @@ Note how using the **Select-Object** cmdlet with the **-expandproperty** argumen
 ### <a name="BKMK_PS"></a>Create an AD DS Forest Root Domain with Windows PowerShell  
 To install a new Active Directory forest using the ADDSDeployment module, use the following cmdlet:  
   
-```  
+```powershell  
 Install-addsforest  
 ```  
   
@@ -449,14 +449,14 @@ The **Install-AddsForest** cmdlet only has two phases (prerequisite checking and
   
 The equivalent Server Manager **Deployment Configuration** ADDSDeployment cmdlet and arguments are:  
   
-```  
+```powershell  
 Install-ADDSForest  
 -DomainName <string>  
 ```  
   
 The equivalent Server Manager Domain Controller Options ADDSDeployment cmdlet arguments are:  
   
-```  
+```powershell  
 -ForestMode <{Win2003 | Win2008 | Win2008R2 | Win2012 | Default}>  
 -DomainMode <{Win2003 | Win2008 | Win2008R2 | Win2012 | Default}>  
 -InstallDNS <{$false | $true}>  
@@ -472,7 +472,7 @@ The **SafeModeAdministratorPassword** argument's operation is special:
   
     For example, to create a new forest named corp.contoso.com and be prompted to enter and confirm a masked password:  
   
-    ```  
+    ```powershell  
     Install-ADDSForest "DomainName corp.contoso.com  
     ```  
   
@@ -480,7 +480,7 @@ The **SafeModeAdministratorPassword** argument's operation is special:
   
 For example, you can manually prompt for a password by using the **Read-Host** cmdlet to prompt the user for a secure string:  
   
-```  
+```powershell  
 -safemodeadministratorpassword (read-host -prompt "Password:" -assecurestring)  
 ```  
   
@@ -489,13 +489,13 @@ For example, you can manually prompt for a password by using the **Read-Host** c
   
 You can also provide a secure string as a converted clear-text variable, although this is highly discouraged.  
   
-```  
+```powershell  
 -safemodeadministratorpassword (convertto-securestring "Password1" -asplaintext -force)  
 ```  
   
 Finally, you could store the obfuscated password in a file, and then reuse it later, without the clear text password ever appearing. For example:  
   
-```  
+```powershell  
 $file = "c:\pw.txt"  
 $pw = read-host -prompt "Password:" -assecurestring  
 $pw | ConvertFrom-SecureString | Set-Content $file  
@@ -509,7 +509,7 @@ $pw | ConvertFrom-SecureString | Set-Content $file
   
 The ADDSDeployment cmdlet offers an additional option to skip automatic configuration of DNS client settings, forwarders, and root hints. You cannot skip this configuration option when using Server Manager. This argument matters only if you installed the DNS Server role prior to configuring the domain controller:  
   
-```  
+```powershell  
 -SkipAutoConfigureDNS  
 ```  
   
@@ -525,13 +525,13 @@ The **DomainNetBIOSName** operation is also special:
   
 The equivalent Server Manager Additional Options ADDSDeployment cmdlet argument is:  
   
-```  
+```powershell  
 -domainnetbiosname <string>  
 ```  
   
 The equivalent Server Manager **Paths** ADDSDeployment cmdlet arguments are:  
   
-```  
+```powershell  
 -databasepath <string>  
 -logpath <string>  
 -sysvolpath <string>  
@@ -546,7 +546,7 @@ For example:
   
 You cannot bypass the **Prerequisite Check** when using Server Manager, but you can skip the process when using the AD DS Deployment cmdlet using the following argument:  
   
-```  
+```powershell  
 -skipprechecks  
 ```  
   

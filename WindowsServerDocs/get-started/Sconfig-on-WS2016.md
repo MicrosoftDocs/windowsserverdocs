@@ -13,6 +13,7 @@ ms.assetid: e6cac074-c6fc-46dd-9664-fa0342c0a5e8
 author: jaimeo
 ms.author: jaimeo
 manager: dongill
+ms.localizationpriority: high
 ---
 # Configure a Server Core installation of Windows Server 2016 or Windows Server, version 1709, with Sconfig.cmd
 > Applies To: Windows Server (Semi-Annual Channel) and Windows Server 2016

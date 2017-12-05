@@ -10,6 +10,7 @@ ms.date: 10/31/2017
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 9cf87597-b15d-4f43-8aa1-91e60367f011
+ms.localizationpriority: high
 ---
 # Introducing Windows Server, version 1709
 

@@ -8,6 +8,7 @@ ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
 ms.date: 01/11/2016
+ms.localizationpriority: medium
 ---
 # Planning volumes in Storage Spaces Direct
 

@@ -58,6 +58,7 @@
 ### [Manage personal desktop session collections](rds-manage-personal-collection.md)
 ### [Recommended configuration for VDI desktops](rds-vdi-recommendations.md)
 ### [Manage users in your RDS collection](rds-user-management.md)
+### [Customize the RDS title “Work Resources” using PowerShell on Windows Server](rds-work-resources.md)
 
 ## [Additional Remote Desktop support](rds-get-support.md)
 ## [Remote Desktop clients](clients/remote-desktop-clients.md)
