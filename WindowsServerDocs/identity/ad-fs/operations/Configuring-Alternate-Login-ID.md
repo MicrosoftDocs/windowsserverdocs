@@ -5,7 +5,7 @@ description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 09/15/2017
+ms.date: 12/04/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 
@@ -58,11 +58,11 @@ Below, the following screenshots are an additional example using Skype for Busin
 
 Enter SIP address in Sign-in field.
 
-![Skype sign-in](media/Configure-Alternate-Login-ID/SkypeA.png)
+![Skype](media/Configure-Alternate-Login-ID/SkypeA.png)
 
-![Skype sign-in](media/Configure-Alternate-Login-ID/SkypeB.png)
+![Skype](media/Configure-Alternate-Login-ID/SkypeB.png)
 
-![Skype sign-in](media/Configure-Alternate-Login-ID/SkypeC.png)
+![Skype](media/Configure-Alternate-Login-ID/SkypeC.png)
 
 ## To configure alternate login ID
 In order to configure alternate login ID, you must perform the following tasks:
