@@ -63,5 +63,5 @@ This release should be installed as a clean installation.
 ## Activating Windows Server, version 1709
 
 - If you've obtained this release from the Volume Licensing Service Center, you can activate it by using your Windows Server 2016 activation key.
-- If you are using a hosting provider, this release should automatically be activated.
+- If you are using Microsoft Azure, this release should automatically be activated.
 - If you obtain this release from Visual Studio Subscriptions, it should automatically be activated.
