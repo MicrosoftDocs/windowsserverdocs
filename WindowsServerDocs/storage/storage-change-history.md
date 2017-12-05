@@ -7,22 +7,22 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.date: 12/4/2017
-description: New and updated topics in the Storage documentation for Windows Server 2016
+ms.date: 12/05/2017
+description: New and updated topics in the on-premises storage documentation for Windows Server for IT Pros.
 ---
 # Change history for storage topics in Windows Server
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
-This topic lists new and updated topics in the [Storage](storage.md) documentation for Windows Server 2016.
+This topic lists new and updated topics in the [Storage](storage.md) documentation for Windows Server.
 
-> If you're looking for update history for Windows Server 2016, see [Windows 10 and Windows Server 2016 update history](https://support.microsoft.com/help/4000825/windows-10-and-windows-server-2016-update-history).
+> If you're looking for update history for Windows Server, see [Windows 10 and Windows Server 2016 update history](https://support.microsoft.com/help/4000825/windows-10-and-windows-server-2016-update-history).
 
-## November 2017
+## December 2017
 
 |New or changed topic|Description|
 |---|---|
-|[ReFS overview](refs/refs-overview.md)|Clarified recommended workloads for mirror-accellerated parity and corrected the supported file and volume sizes for ReFS and NTFS.|
+|[ReFS overview](refs/refs-overview.md)|Clarified recommended workloads for mirror-accelerated parity and corrected the supported file and volume sizes for ReFS and NTFS.|
 
 ## November 2017
 
@@ -69,7 +69,6 @@ This topic lists new and updated topics in the [Storage](storage.md) documentati
 |[Hyper-converged solution using Storage Spaces Direct](storage-spaces/hyper-converged-solution-using-storage-spaces-direct.md)|Added step 1.3 with required features and fixed an obsolete parameter in Enable-NetAdapterQos.||[Storage Replica overview](storage-replica/storage-replica-overview.md) (and other Storage Replica topics)|Added recommendation to use fast, exclusive storage for Storage Replica logs.|
 |[Storage Replica frequently asked questions](storage-replica/storage-replica-frequently-asked-questions.md)|Added info on how to choose between different replication topologies.|
 |[Storage Spaces Direct hardware requirements](storage-spaces/storage-spaces-direct-hardware-requirements.md)|Changed drive endurance requirements for cache devices.|
-
 
 ## April 2017
 
