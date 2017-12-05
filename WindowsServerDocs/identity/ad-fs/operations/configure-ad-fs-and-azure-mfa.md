@@ -63,7 +63,10 @@ The following pre-requisites are required when using Azure MFA for authenticatio
   
   
 ## Configure the AD FS Servers  
-In order to complete configuration for Azure MFA for AD FS, you need to configure each AD FS server using the steps described. Ensure that these steps are performed on **all** AD FS servers in the farm. If you have have multiple AD FS servers in your farm, you can perform the necessary configuration remotely using Azure AD Powershell.  
+In order to complete configuration for Azure MFA for AD FS, you need to configure each AD FS server using the steps described. 
+
+>[!NOTE]
+>Ensure that these steps are performed on **all** AD FS servers in the farm. If you have have multiple AD FS servers in your farm, you can perform the necessary configuration remotely using Azure AD Powershell.  
   
   
   
