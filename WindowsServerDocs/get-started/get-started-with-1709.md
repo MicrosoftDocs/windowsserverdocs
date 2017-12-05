@@ -6,7 +6,7 @@ ms.mktglfcycl: manage
 ms.sitesec: library
 author: jaimeo
 ms.localizationpriority: high
-ms.date: 10/31/2017
+ms.date: 12/5/2017
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 9cf87597-b15d-4f43-8aa1-91e60367f011
@@ -53,12 +53,11 @@ This release should be installed as a clean installation.
 
 - VLSC: Volume-licensed customers with [Software Assurance](https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-default.aspx) can obtain this release by going to the [Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx) and clicking **Sign In**. Then click **Downloads and Keys** and search for this release. 
 
-- If you use a hosting provider such as [Microsoft Azure](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/Microsoft.WindowsServer?tab=Overview) or other cloud service providers, Windows Server, version 1709 is available through those services. Software Assurance is not required in those environments.
+- Windows Server, version 1709 is also available in  [Microsoft Azure](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/Microsoft.WindowsServer?tab=Overview).
 
-- Participants in **Visual Studio Subscriptions:** If you already participate in Visual Studio Subscriptions, you can obtain Windows Server, version 1709 by going to the [Visual Studio Subscriber download page](https://my.visualstudio.com/downloads?pid=2347) and completing the download available there. If you are not already a subscriber, go to [Visual Studio Subscriptions](https://www.visualstudio.com/subscriptions/) to sign up, and then visit the [Visual Studio Subscriber download page](https://my.visualstudio.com/downloads?pid=2347) as above.
+- Participants in **Visual Studio Subscriptions:** If you already participate in Visual Studio Subscriptions, you can obtain Windows Server, version 1709 by going to the [Visual Studio Subscriber download page](https://my.visualstudio.com/downloads?pid=2347) and completing the download available there. If you are not already a subscriber, go to [Visual Studio Subscriptions](https://www.visualstudio.com/subscriptions/) to sign up, and then visit the [Visual Studio Subscriber download page](https://my.visualstudio.com/downloads?pid=2347) as above. Releases obtained through Visual Studio Subscriptions are for development and testing only.
 
-> [!Note]  
-> If you want to run Windows Server, version 1709 **in production**, you should either obtain it through the Volume Licensing Servicing Center (Software Assurance is required) or through a hosting provider such as Microsoft Azure (Software Assurance is not required). Otherwise, this release is supported for development and testing only.
+
 
 
 ## Activating Windows Server, version 1709
