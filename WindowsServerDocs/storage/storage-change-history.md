@@ -18,7 +18,7 @@ This topic lists new and updated topics in the [Storage](storage.md) documentati
 
 > If you're looking for update history for Windows Server 2016, see [Windows 10 and Windows Server 2016 update history](https://support.microsoft.com/help/4000825/windows-10-and-windows-server-2016-update-history).
 
-## November 2017
+## Decemeber 2017
 
 |New or changed topic|Description|
 |---|---|
