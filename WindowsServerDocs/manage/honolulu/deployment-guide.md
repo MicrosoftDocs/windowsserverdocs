@@ -22,15 +22,17 @@ This article describes the system requirements, prerequisites, and steps to inst
 
 ## Supported operating systems ##
 
- You can install Project Honolulu on the following Windows operating systems:
+You can *install* Honolulu on the following Windows operating systems:
 
-| **Version**| **Install Honolulu** | **Managed node** via Server Manager, and **managed cluster** via Failover Cluster Mgr | **Managed HCI cluster** via HC Cluster Mgr (early preview)|
-|-------------------------|---------------|-----|------------------------|
-| Windows 10              | Yes (local)   | N/A | N/A                    |
-| Windows Server, version 1709| Yes (gateway) | Yes | Yes, on Insider builds |
-| Windows Server 2016     | Yes (gateway) | Yes | Future                 |
-| Windows Server 2012 R2  | No            | Yes | N/A                    |
-| Windows Server 2012     | No            | Yes | N/A                    |
+| **Version** | **Installation Mode** |
+|-------------|-----------------------|
+|Windows 10   | Desktop mode |
+|Windows Server, version 1709 | Gateway mode |
+|Windows Server 2016 | Gateway mode |
+
+**Desktop Mode:** Connect to the Honolulu gateway from the same computer on which it's installed (i.e. `http://localhost:[port]`)
+
+**Gateway Mode:** Connect to the Honolulu  gateway from a client browser on a different machine (i.e. `https://servername`)
 
 ## Install on Windows 10
 
