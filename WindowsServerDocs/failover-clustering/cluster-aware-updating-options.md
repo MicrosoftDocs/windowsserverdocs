@@ -7,7 +7,6 @@ manager: dongill
 ms.author: jgerend
 author: JasonGerend
 ms.date: 6/7/2017
-ms.prod: storage-failover-clustering
 description: How to configure advanced options and updating run profiles for Cluster-Aware Updating (CAU)
 ---
 # Cluster-Aware Updating advanced options and updating run profiles
