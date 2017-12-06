@@ -555,7 +555,7 @@ An administrative forest design should include the following considerations:
 
     -   Administrative privileges over the admin forest should be tightly controlled by an offline process to reduce the opportunity for an attacker or malicious insider to erase audit logs. This also helps ensure that personnel with production admin accounts cannot relax the restrictions on their accounts and increase risk to the organization.
 
-    -   The administrative forest should follow the Microsoft Security Compliance Manager (SCM) configurations for the domain, including strong configurations for authentication protocols.
+    -   The administrative forest should follow the Microsoft Security Compliance Baseline (SCB) configurations for the domain, including strong configurations for authentication protocols.
 
     -   All admin forest hosts should be automatically updated with security updates. While this may create risk of interrupting domain controller maintenance operations, it provides a significant mitigation of security risk of unpatched vulnerabilities.
 
@@ -578,7 +578,7 @@ An administrative forest design should include the following considerations:
     -   Security Baselines should be used as starting configurations.
 
         > [!NOTE]
-        > Customers can use the Microsoft Security Compliance Manager (SCM) for configuring the baselines on the administrative hosts.
+        > Customers can use the Microsoft Security Compliance Toolkit (SCT) for configuring the baselines on the administrative hosts.
 
     -   Secure Boot to mitigate against attackers or malware attempting to load unsigned code into the boot process.
 
