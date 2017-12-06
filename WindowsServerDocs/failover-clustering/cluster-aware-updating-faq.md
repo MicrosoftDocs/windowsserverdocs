@@ -2,11 +2,11 @@
 ms.assetid: 6416d125-bcaf-433d-971a-2f0283bca2c2
 title: Cluster-Aware Updating - Frequently Asked Questions
 ms.topic: article
+ms.prod: windows-server-threshold
 manager: dongill
 ms.author: jgerend
 author: JasonGerend
 ms.date: 4/28/2017
-ms.prod: storage-failover-clustering
 description: Answers to frequently asked questions about Cluster-Aware Updating in Windows Server.
 ---
 # Cluster-Aware Updating: Frequently Asked Questions
