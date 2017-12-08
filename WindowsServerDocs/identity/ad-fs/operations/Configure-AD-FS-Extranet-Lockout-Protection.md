@@ -44,7 +44,7 @@ Set-AdfsProperties -EnableExtranetLockout $true -ExtranetLockoutThreshold 15 -Ex
 These settings will apply to all domains that the AD FS service can authenticate. The way that it works is that when AD FS receives an authentication request, it will access the Primary Domain Controller (PDC) through an LDAP call and perform a lookup for the **badPwdCount** attribute for the user on the PDC. If AD FS finds the value of **badPwdCount** >= ExtranetLockoutThreshold setting and the time defined in the Extranet Observation Window has not passed yet, AD FS will reject the request immediately, which means no matter whether the user enters a good or bad password from extranet, the logon will fail because AD FS does not send the credentials to AD. AD FS does not maintain any state with regard to **badPwdCount** or locked out user accounts. AD FS uses AD for all state tracking. 
 
 > [!warning]
-> When AD FS Extranet lockout on Server 2012 R2 is enabled all authentication requests through the WAP are validated by AD FS on the PDC. When the PDC is unavailble, users will be unable to authenticate from the extranet.
+> When AD FS Extranet lockout on Server 2012 R2 is enabled all authentication requests through the WAP are validated by AD FS on the PDC. When the PDC is unavailable, users will be unable to authenticate from the extranet.
 
 Server 2016 offers an additional parameter that allows AD FS to fallback to another domain controller when the PDC is unavailable:
 
