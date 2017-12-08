@@ -5,7 +5,7 @@ description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 05/31/2017
+ms.date: 12/05/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 
@@ -53,6 +53,8 @@ This solution guides takes you through the following walkthrough steps:
 1.  [Walkthrough: Workplace Join with a Windows Device](../../ad-fs/operations/Walkthrough--Workplace-Join-with-a-Windows-Device.md)
 
 2.  [Walkthrough: Workplace Join with an iOS Device](../../ad-fs/operations/Walkthrough--Workplace-Join-with-an-iOS-Device.md)
+
+3.  [Walkthrough: Workplace Join with an Android Device](../../ad-fs/operations/walkthrough--workplace-join-to-an-android-device.md)
 
 ## See Also
 [Configure a federation server with Device Registration Service](assetId:///007016d9-b1c9-4ee1-a30f-13865f784c80)
