@@ -18,7 +18,9 @@ ms.technology: identity-adds
 You can review the following set of changes to help understand and prepare for the schema updates that are performed by adprep /forestprep in Windows Server 2012 R2 and Windows Server 2012.
 
 The schema update is irreversible ,for the rollback , you have restore the entire forest.
-Beginning in Windows 2012, if you use a account membre of Schema Admins,Enterprise Admins and domain Admins of the root domain to install the first Domain controller on Windows 2012 or higher in the forest, adprep will be launched automatically during the ADDS installation to update schema version.. For more information, see [Running Adprep.exe](https://technet.microsoft.com/library/dd464018(v=ws.10).aspx).
+Beginning in Windows 2012, if you use a account membre of Schema Admins,Enterprise Admins and domain Admins of the root domain to install the first Domain controller on Windows 2012 or higher in the forest, adprep will be launched automatically during the ADDS installation to update schema version.
+If you perform a upgradein-place, you have to execute adprep.exe commands before starting the upgrade.
+For more information, see [Running Adprep.exe](https://technet.microsoft.com/library/dd464018(v=ws.10).aspx).
 
 For more information about how to interpret the access control entry (ACE) strings, see [ACE strings](https://msdn.microsoft.com/library/aa374928(VS.85).aspx). For more information about how to interpret the security ID (SID) strings, see [SID strings](https://msdn.microsoft.com/library/aa379602(VS.85).aspx).
 
