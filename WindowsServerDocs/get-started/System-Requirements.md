@@ -27,7 +27,7 @@ This topic addresses the minimum system requirements to run Windows Server&reg; 
 >   
 
 > [!NOTE]  
-> If at the time of installation, you choose to install with the Server Core option, you should be aware that no GUI components are installed at all and you will not be able to install or uninstall them with Server Manager. If you need GUI features, be sure to choose the "Server with Desktop Experience" option when you install Windows Server 2016. For more information, see [Install Nano Server](Getting-Started-with-Nano-Server.md)  
+> If at the time of installation, you choose to install with the Server Core option, you should be aware that no GUI components are installed at all and you will not be able to install or uninstall them with Server Manager. If you need GUI features, be sure to choose the "Server with Desktop Experience" option when you install Windows Server 2016. 
 
 
 ## Review system requirements  
@@ -56,6 +56,8 @@ The following are the estimated RAM requirements for this product:
 
 **Minimum**:  
 - 512 MB (2 GB for Server with Desktop Experience installation option)
+
+**Strongly recommended**
 - ECC (Error Correcting Code) type or similar technology  
 
 > [!IMPORTANT]  
@@ -66,8 +68,8 @@ The following are the estimated RAM requirements for this product:
 > -   Allocate more than 800 MB RAM to the virtual machine you intend to install this release on. Once Setup has completed, you can change the allocation to as little as 512 MB RAM, depending on the actual server configuration.  
 > -   Interrupt the boot process of this release on the virtual machine with SHIFT+F10. In the command prompt that opens, use Diskpart.exe to create and format an installation partition. Run **Wpeutil createpagefile /path=C:\pf.sys** (assuming the installation partition you created was C:). Close the command prompt and proceed with Setup.  
 
-## Storage controller and disk space requirements  
-Computers that run Windows Server 2016 must include a storage adapter that is compliant with the PCI Express architecture specification. Persistent storage devices on servers classified as hard disk drives must not be PATA. Windows Server 2016 does not allow ATA/PATA/IDE/EIDE for boot, page, or data drives.  
+## Storage controller and disk space requirements and recommendations  
+Computers that run Windows Server 2016 should include a storage adapter that is compliant with the PCI Express architecture specification. Persistent storage devices on servers classified as hard disk drives should not be PATA. Windows Server 2016 does not allow ATA/PATA/IDE/EIDE for boot, page, or data drives except for virtualization environments (e. g. virtual machines on Microsoft Azure) that do not support other boot controllers.
 
 The following are the estimated **minimum** disk space requirements for the system partition.  
 
@@ -88,28 +90,32 @@ Network adapters used with this release should include these features:
 **Minimum**:  
 - An Ethernet adapter capable of at least gigabit throughput  
 - Compliant with the PCI Express architecture specification.  
-- Supports Pre-boot Execution Environment (PXE).  
 
-A network adapter that supports network debugging (KDNet) is useful, but not a minimum requirement.   
+ > [!NOTE]  
+ > A network adapter that supports network debugging (KDNet) is useful, but not a minimum requirement.   
 
-
+ > [!NOTE]  
+ > For large scale deployments, installation over the network via a PXE-capable network adapter and firmware is often
+ > very useful.  Although not strictly required for the network hardware, this is strongly recommended.
 
 ## Other requirements  
 Computers running this release also must have the following:  
-
 
 -   DVD drive (if you intend to install the operating system from DVD media)  
 
 The following items are not strictly required, but are necessary for certain features:  
 
-- UEFI 2.3.1c-based system and firmware that supports secure boot  
+- UEFI 2.3.1c-based system and firmware that supports Secure Boot  
 - Trusted Platform Module  
 
--   Graphics device and monitor capable of Super VGA (1024 x 768) or higher-resolution  
+**Physical deployments**
+
+Physical, non-virtualized deployments have the following additional requirements:
+
+-   Graphics device and monitor capable of Super VGA (1024 x 768) or higher-resolution for non-virtualized environments
 
 -   Keyboard and Microsoft&reg; mouse (or other compatible pointing device)  
 
--   Internet access (fees may apply)  
 
 >[!NOTE]  
 > A Trusted Platform Module (TPM) chip is not strictly required to install this release, though it is necessary in order to use certain features such as BitLocker Drive Encryption. If your computer uses TPM, it must meet these requirements:  
