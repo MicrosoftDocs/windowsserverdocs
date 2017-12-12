@@ -18,17 +18,17 @@ ms.localizationpriority: medium
 This topic provides instructions for how to deploy [Storage Spaces Direct](storage-spaces-direct-overview.md) to provide software-defined storage for your workloads. It describes both hyper-converged solutions where the cluster hosts the storage and virtual machines as well as a converged (also known as disaggregated) solution where workloads run on a different cluster. Storage Spaces Direct runs on Windows Server 2016 Datacenter Edition.
 
 > [!NOTE]
-> Note that for production environments we recommend acquiring a *Windows Server Software-Defined* hardware/software offering, which includes production deployment tools and procedures. These offerings are designed, assembled, and validated to meet Microsoft's requirements for private cloud environments, helping ensure reliable operation. More information about the program and links to our partner websites can be found at: [Windows Server Software Defined](https://www.microsoft.com/cloud-platform/software-defined-datacenter).
+> Note that for production environments we recommend acquiring a *Windows Server Software-Defined* hardware/software offering. These offerings are designed, assembled, and validated to meet Microsoft's requirements for private cloud environments, helping ensure reliable operation. More information about the program and links to our partner websites can be found at: [Windows Server Software Defined](https://www.microsoft.com/cloud-platform/software-defined-datacenter).
 
 To evaluate Storage Spaces Direct without investing in hardware, you can use Hyper-V virtual machines, as described in [Using Storage Spaces Direct in guest virtual machine clusters](storage-spaces-direct-in-vm.md).
 
-Before deploying Storage Spaces Direct, we recommended reviewing the [Storage Spaces Direct hardware requirements](Storage-Spaces-Direct-Hardware-Requirements.md) and skimming this document to familiarize yourself with the overall approach, and to get a sense for the important notes associated with some steps. You also might want to review the extensive and handy [Windows Server 2016 rapid lab deployment scripts](https://aka.ms/ws2016lab), which we use for training purposes.
+Before deploying Storage Spaces Direct, we recommend reviewing the [Storage Spaces Direct hardware requirements](Storage-Spaces-Direct-Hardware-Requirements.md) and skimming this document to familiarize yourself with the overall approach, and to get a sense for the important notes associated with some steps. You also might want to review the extensive and handy [Windows Server 2016 rapid lab deployment scripts](https://aka.ms/ws2016lab), which we use for training purposes.
 
 ## Converged and hyper-converged solutions
 
 You can deploy Storage Spaces Direct in the following configurations:
 
-- **Converged (disaggregated)** - Workloads run in a separate cluster from the Storage Spaces Direct cluster. Files for the workloads are stored on file shares hosted by the Storage Spaces Direct cluster and accessed across the network. This allows you to scale your workload cluster(s) separately from your storage, but does increase the number of clusters involved.
+- **Converged (disaggregated)** - Workloads run in a separate cluster from the Storage Spaces Direct cluster. Files for the workloads are stored on file shares hosted by the Storage Spaces Direct cluster and accessed across the network. This allows you to scale your workload cluster(s) separately from your storage but does increase the number of clusters involved.
 - **Hyper-converged** - Hyper-V VMs run directly on the Storage Spaces Direct cluster that hosts the storage, as shown in Figure 1. Virtual machine files are stored on local CSVs. This allows for scaling Hyper-V compute clusters together with the storage it is using, reducing the number of clusters required.
 
    ![A hyper-converged cluster with virtual machines hosted by the Storage Spaces Direct cluster](media/Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016/StorageSpacesDirectHyperconverged.png)
@@ -65,7 +65,7 @@ For the purposes of this document, the machine that has the management tools to 
 
 - Running Windows Server 2016 with the same updates as the servers it's managing, and also joined to the same domain or a fully trusted domain.
 
-- Remote Server Administration Tools (RSAT) and PowerShell modules for Hyper-V and Failover Clustering. RSAT tools and PowerShell modules are available on Windows Server 2016 and can be installed without installing other features.  
+- Remote Server Administration Tools (RSAT) and PowerShell modules for Hyper-V and Failover Clustering. RSAT tools and PowerShell modules are available on Windows Server and can be installed without installing other features. You can also install the [Remote Server Administration Tools](https://www.microsoft.com/download/details.aspx?id=45520) on a Windows 10 management PC.
 
 - Management system can be run inside of a virtual machine or on a physical machine.  
 
@@ -84,32 +84,13 @@ You'll need a management system that has Windows Server with the same updates to
 
 1. On the Management system install the Failover Cluster and Hyper-V management tools. This can be done through Server Manager using the **Add Roles and Features** wizard. On the **Features** page, select **Remote Server Administration Tools**, and then select the tools to install.
 
-    Open a PowerShell session with Administrator privileges and execute the following. This will configure the trusted hosts to all hosts.
-
-    ```PowerShell
-    Set-Item WSMan:\localhost\Client\TrustedHosts "*"
-    ```
-
-    After the onetime configuration above, You'll not need to repeat Set-Item. However, each time you close and reopen the PowerShell console you should establish a new remote PS Session to the server by running the commands below:
-
 2. Enter the PS session and use either the server name or the IP address of the node you want to connect to. You'll be prompted for a password after you execute this command, enter the administrator password you specified when setting up Windows.
 
    ```PowerShell
    Enter-PSSession -ComputerName <myComputerName> -Credential LocalHost\Administrator
    ```
 
-Examples of doing the same thing in a way that is more useful in scripts, in case you need to do this more than once:
-
-**Example 1:** using an IP address:
-
-   ```PowerShell
-   $ip = "10.100.0.1"
-   $user = "$ip\Administrator"
-
-   Enter-PSSession -ComputerName $ip -Credential $user
-   ```
-
-**Example 2:** OR you can do something similar with computer name instead of IP address.
+   Here's an example of doing the same thing in a way that is more useful in scripts, in case you need to do this more than once:
 
    ```PowerShell
    $myServer1 = "myServer-1"
@@ -118,16 +99,34 @@ Examples of doing the same thing in a way that is more useful in scripts, in cas
    Enter-PSSession -ComputerName $myServer1 -Credential $user
    ```
 
-### Step 1.2: Adding domain accounts
+    > [!TIP]
+    >  If you're using a management computer that's not joined to the same domain as your file server cluster, you might get the following error when you try to connect to the nodes by using Windows PowerShell.  
+    >   
+    >  `Connecting to remote server <Node1> failed with the following error message : WinRM cannot process the request. The following error with errorcode 0x80090311 occurred while using Kerberos authentication: There are currently no logon servers available to service the logon request.`  
+    >   
+    >  To fix this, use Windows PowerShell to add each node to the Trusted Hosts list on your management computer. Here's how (if your nodes all share a common prefix, you can use a wildcard, as shown below):  
+    >   
+    >  `Set-Item WSMAN:\Localhost\Client\TrustedHosts -Value Node* -Force`  
+    >   
+    >  To view your Trusted Hosts list, type `Get-Item WSMAN:\Localhost\Client\TrustedHosts`.  
+    >   
+    >  To empty the list, type `Clear-Item WSMAN:\Localhost\Client\TrustedHost`.  
+
+### Step 1.2: Joining a domain and adding domain accounts
 
 So far this guide has had you deploying and configuring individual nodes with the local administrator account &lt;ComputerName&gt;\\Administrator.
 
-Managing a Storage Spaces Direct cluster often requires using a domain account that is in the Administrators group on each node.
+Managing a Storage Spaces Direct cluster often requires using an Active Directory Domain Services domain account that is in the Administrators group on each node. You'll also want to join all the nodes to a domain.
 
 From the management system, perform the following steps:
 
 1. On the management system, open a PowerShell console with Administrator privileges.
-2. Use Enter-PSSession to connect to each node and then run the following command to add your domain account(s) to the Administrators local security group. See the section above for information about how to connect to the servers using PSSession.
+2. Use Enter-PSSession to connect to each node and then run the following command to add a node to the appropriate domain, substituting your own computer name, domain name, and domain credentials:
+
+    ```PowerShell  
+    Add-Computer -NewName "FSNode01" -DomainName "contoso.com" -Credential "CONTOSO\GAppel" -Restart -Force  
+    ``` 
+3. If your storage administrator account isn't a member of the Domain Admins group, add your storage administrator account to the local Administrators group on each node - or better yet, add the group you use for storage administrators.  You can use the following command (or write a Windows PowerShell function to do so - see [Use PowerShell to Add Domain Users to a Local Group](http://blogs.technet.com/b/heyscriptingguy/archive/2010/08/19/use-powershell-to-add-domain-users-to-a-local-group.aspx) for more info):
 
     ```
     Net localgroup Administrators <Domain\Account> /add
@@ -159,172 +158,17 @@ If you later need to remove some features, update the *$Roles* variable and repl
 
 ## Step 2: Configure the network
 
-Storage Spaces Direct requires high bandwidth and low latency network connections between nodes. This network connectivity is important for both system performance and reliability. We recommended using at least two 10Gb connections between the nodes, preferably with RDMA to increase throughput and reduce the CPU usage for network traffic.
+Storage Spaces Direct requires high bandwidth and low latency network connections between nodes. This network connectivity is important for both system performance and reliability. We recommend using at least two 10 Gb connections between the nodes, preferably with RDMA to increase throughput and reduce the CPU usage for network traffic.
 
-There are two common versions of RDMA network adapters - RoCE and iWARP. You can use either with Storage Spaces Direct as long as it has the Windows Server 2016 logo. iWARP usually requires minimal configuration. Top of Rack switches and server configurations may vary, depending on the network adapter and switch. Configuring the server and switch correctly is important to ensure reliability and performance of Storage Spaces Direct.
+There are two common versions of RDMA network adapters - RoCE and iWARP. You can use either with Storage Spaces Direct as long as it has the Windows Server 2016 logo (iWARP usually requires less configuration). Top of Rack switches and server configurations may vary, depending on the network adapter and switch. Configuring the server and switch correctly is important to ensure reliability and performance of Storage Spaces Direct.
 
-Windows Server 2016 also introduces a new virtual switch that has network teaming built in called Switch Embedded Teaming (SET). This virtual switch allows the same 2 physical NIC ports to be used for all network traffic while using RDMA. This reduces the number of physical NIC ports that would otherwise be required and allows managing the networking through the Software Defined Network features of Windows Server. The steps in this guide are for implementing the new virtual switch with RDMA enabled to the parent partition and SET configured.
+Windows Server 2016 also introduces a new virtual switch that has network teaming built in called Switch Embedded Teaming (SET). This virtual switch allows the same physical NIC ports to be used for all network traffic while using RDMA. This reduces the number of physical NIC ports that would otherwise be required and allows managing the networking through the Software Defined Network features of Windows Server. The steps in this guide are for implementing the new virtual switch with RDMA enabled to the parent partition and SET configured.
 
 The following assumes 2 RDMA physical NIC Ports (1 dual port, or 2 single port) and the Hyper-V switch deployed with RDMA-enabled host virtual NICs. Complete the following steps to configure the network *on each server*.
 
 Skip this **Network Configuration** section, if you are testing Storage Spaces Direct inside of virtual machines. RDMA is not available for networking inside a virtual machine.
 
-### Step 2.1: Configure the Top of Rack (TOR) Switch
-
-Our example configuration is using a network adapter that implements RDMA using RoCEv2. Network QoS and reliable flow of data for this type of RDMA requires that the TOR have specific capabilities set for the network ports that the NICs are connected to. If you are deploying with iWarp, the TOR might not need any configuration.
-
-### Step 2.2: Enable Network Quality of Service (QoS)
-
-Network QoS is used to ensure that Storage Spaces Direct has enough bandwidth to communicate between the nodes to ensure resiliency and performance. Do the following steps from a management system using [*Enter-PSSession*](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/enter-pssession) to connect and do the following to each of the servers.
-
-1.  Set a network QoS policy for SMB-Direct, which is the protocol that the software defined storage system uses.
-
-    ```PowerShell
-    New-NetQosPolicy "SMB" –NetDirectPortMatchCondition 445 –PriorityValue8021Action 3
-    ```
-
-    The output should look something like this:
-
-    ```
-    Name : SMB
-    Owner : Group Policy (Machine)
-    NetworkProfile : All
-    Precedence : 127
-    JobObject :
-    NetDirectPort : 445
-    PriorityValue :
-    ```
-
-2.  If you are using RoCEv2, install Data-Center-Bridging if you haven't already (see Step 1.3), then turn on Flow Control for SMB as follows (not required for iWarp):
-
-    ```PowerShell
-    Enable-NetQosFlowControl –Priority 3
-    ```
-
-3.  Disable flow control for other traffic as follows (optional for iWarp):
-
-    ```PowerShell
-    Disable-NetQosFlowControl –Priority 0,1,2,4,5,6,7
-    ```
-
-4.  Get a list of the network adapters to identify the target adapters (RDMA adapters) as follows:
-
-    ```PowerShell
-    Get-NetAdapter | FT Name, InterfaceDescription, Status, LinkSpeed
-    ```
-
-    The output should look something like the following. The Mellanox ConnectX03 Pro adapters are the RDMA network adapters and are the only ones connected to a switch, in this example configuration.
-
-    ```
-    Name       InterfaceDescription                                      Status       LinkSpeed
-    ----       --------------------------------------------------------- ----------   ----------
-    NIC3       QLogic BCM57800 Gigabit Ethernet (NDIS VBD Client) #46    Disconnected 0 bps
-    Ethernet 2 Mellanox ConnectX-3 Pro Ethernet Adapter #2               Up           10 Gbps
-    SLOT #     Mellanox ConnectX-3 Pro Ethernet Adapter                  Up           10 Gbps
-    NIC4       QLogic BCM57800 Gigabit Ethernet (NDIS VBD Client) #47    Disconnected 0 bps
-    NIC1       QLogic BCM57800 10 Gigabit Ethernet (NDIS VBD Client) #44 Disconnected 0 bps
-    NIC2       QLogic BCM57800 10 Gigabit Ethernet (NDIS VBD Client) #45 Disconnected 0 bps
-    ```
-
-5. Apply network QoS policy to the target adapters. The target adapters are the RDMA adapters. Use the "Name" of the target adapters for the –Name in the following example
-
-    ```PowerShell
-    Enable-NetAdapterQos –Name "<adapter1>", "<adapter2>"
-    ```
-
-   Using the example above, the command would look like this:
-
-    ```PowerShell
-    Enable-NetAdapterQoS –Name "Ethernet 2", "SLOT #"
-    ```
-
-6.  Create a Traffic class and give SMB Direct 30% of the bandwidth minimum. The name of the class will be "SMB".
-
-    ```PowerShell
-    New-NetQosTrafficClass "SMB" –Priority 3 –BandwidthPercentage 30 –Algorithm ETS
-    ```
-
-### Step 2.3: Create a Hyper-V virtual switch (optional on converged deployments)
-
-The Hyper-V virtual switch allows the physical NIC ports to be used for both the host and virtual machines (in a hyper-converged configuration) and enables RDMA from the host which allows for more throughput, lower latency, and less system (CPU) impact. The physical network interfaces are teamed using the Switch Embedded Teaming (SET) feature. This step is optional for converged deployments unless you're using ROCE for RDMA networking, in which case the virtual switch makes configuring the VLANs easier. If you skip this step, go to Step 3: Configure Storage Spaces Direct.
-
-Do the following steps from a management system using *Enter-PSSession* to connect to each of the servers.
-
-1.  Identify the network adapters (you'll use this info in step \#2)
-
-    ```PowerShell
-    Get-NetAdapter | FT Name, InterfaceDescription, Status, LinkSpeed
-    ```
-1.  Create the virtual switch connected to both of the physical network adapters, and enable the Switch Embedded Teaming (SET). You may notice a message that your PSSession lost connection. This is expected and your session will reconnect.
-
-    ```PowerShell
-    New-VMSwitch –Name SETswitch –NetAdapterName "<adapter1>", "<adapter2>" –EnableEmbeddedTeaming $true
-    ```
-1.  Add host vNICs to the virtual switch. This configures a virtual NIC (vNIC) from the virtual switch that you just configured for the management OS to use.
-
-     ```PowerShell
-     Add-VMNetworkAdapter –SwitchName SETswitch –Name SMB_1 –managementOS
-     Add-VMNetworkAdapter –SwitchName SETswitch –Name SMB_2 –managementOS
-     ```
-1.  Configure the host vNIC to use a VLAN. They can be on the same or different Vlans.
-
-    ```PowerShell
-    Set-VMNetworkAdapterVlan -VMNetworkAdapterName "SMB_1" -VlanId <vlan number> -Access -ManagementOS
-    Set-VMNetworkAdapterVlan -VMNetworkAdapterName "SMB_2" -VlanId <vlan number> -Access -ManagementOS
-    ```
-1.  Verify that the VLANID is set
-
-    ```PowerShell
-    Get-VMNetworkAdapterVlan –ManagementOS
-    ```
-
-    The output should look like this:
-
-    ```
-    VMName VMNetworkAdapterName Mode VlanList
-    ------ ------------------- ---- --------
-           SMB_1               Access 13
-           SETswitch           Untagged
-           SMB_2               Access 13
-    ```
-
-1.  Restart each host vNIC adapter so that the Vlan is active.
-
-    ```PowerShell
-    Restart-NetAdapter "vEthernet (SMB_1)"
-    Restart-NetAdapter "vEthernet (SMB_2)"
-    ```
-
-1.  Enable RDMA on the host vNIC adapters
-
-    ```PowerShell
-    Enable-NetAdapterRDMA "vEthernet (SMB_1)", "vEthernet (SMB_2)"
-    ```
-
-1.  Associate each of the vNICs configured for RDMA to a physical adapter that is connected to the virtual switch
-
-    ```PowerShell
-    Set-VMNetworkAdapterTeamMapping -VMNetworkAdapterName "SMB_1" –ManagementOS –PhysicalNetAdapterName "SLOT 2"
-    Set-VMNetworkAdapterTeamMapping -VMNetworkAdapterName "SMB_2" –ManagementOS –PhysicalNetAdapterName "SLOT 2 2"
-    ```
-
-1.  Verify RDMA capabilities.
-
-    ```PowerShell
-    Get-SmbClientNetworkInterface
-    ```
-
-    Values should show **True** for RDMA Capable for the RDMA enabled interfaces. The following is an example where you show true for the adapters **vEthernet (SMB\_1)** and **vEthernet (SMB\_2)**.
-
-    ```
-    Interface Index RSS Capable RDMA Capable Speed    IpAddresses                                                    Friendly Name                                                   
-    --------------- ----------- ------------ -----    -----------                                                    -------------                                                   
-    15              True        True        20 Gbps  {fe80::4dec:79a4:95c1:69ff, 10.0.1.200, 10.0.1.50, 10.0.1.113} vEthernet (SMB_1)                                               
-    10              True        True        20 Gbps  {fe80::8522:df04:73ae:266, 10.0.2.200}                         vEthernet (SMB_2)                                               
-    28              False       False        10 Gbps  {fe80::c5e3:bfc7:1c78:910e, 169.254.4.227}                     Local Area Connection* 11                                       
-    21              True        False        20 Gbps  {fe80::d1d4:70ca:8b8b:d29c, 10.0.1.107}                        vEthernet (SETswitch)                                           
-    22              True        False        1 Gbps   {fe80::a031:def0:3a80:d997, 169.254.217.151}                   NIC1                                                          
-    ```
+There are a number of valid ways to setup networking with Storage Spaces Direct. For details, see [RDMA configuration guidelines for Windows Server 2016 and Windows Server](https://gallery.technet.microsoft.com/RDMA-configuration-425bcdf2).
 
 ## Step 3: Configure Storage Spaces Direct
 
@@ -447,11 +291,11 @@ For more information, check out [Creating volumes in Storage Spaces Direct](crea
 
 ### Step 3.7: Enable the CSV cache
 
-You can optionally enable the cluster shared volume (CSV) cache to use system memory (RAM) as a write-through block-level cache of read operations that aren't already cached by the Windows cache manager. This can improve performance for applications such as Hyper-V, which conducts unbuffered I/O operations when accessing a VHD. The CSV cache can boost the performance of read requests without caching write requests. Enabling the CSV cache is also useful for Scale-Out File Server scenarios.
+You can optionally enable the cluster shared volume (CSV) cache to use system memory (RAM) as a write-through block-level cache of read operations that aren't already cached by the Windows cache manager. This can improve performance for applications such as Hyper-V. The CSV cache can boost the performance of read requests and is also useful for Scale-Out File Server scenarios.
 
-Enabling the CSV cache reduces the amount of memory available to run VMs on a hyper-converged cluster, so you'll have to balance storage performance with memory available to VHDs. 10 GB of memory for a two-node cluster is a common CSV cache size, with 20 GB common for a four-node cluster. Consider adding 5 GB of CSV cache per additional node, again, balancing this against available memory for the operating system and VMs.
+Enabling the CSV cache reduces the amount of memory available to run VMs on a hyper-converged cluster, so you'll have to balance storage performance with memory available to VHDs. 10 GB of memory per node in a two-node cluster is a common CSV cache size, with 20 GB per node common for a four-node cluster. When scaling to larger clusters, consider adding 5 GB of CSV cache per node for each additional node you add to the cluster, again, balancing this against available memory for the operating system and VMs.
 
-To set the size of the CSV cache, open a PowerShell session on the management system with an account that has administrator permissions on the storage cluster, and then use this script:
+To set the size of the CSV cache, open a PowerShell session on the management system with an account that has administrator permissions on the storage cluster, and then use this script, changing the `$ClusterName` and `$CSVCacheSize` variables as appropriate (this example sets a 10 GB CSV cache):
 
 ```PowerShell
 $ClusterName = "StorageSpacesDirect1"
