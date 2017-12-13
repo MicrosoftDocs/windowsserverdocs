@@ -366,7 +366,7 @@ When using Storage Spaces Direct with HDDs, you cannot disable or avoid the cach
 
 This workaround is of course not ideal and some customers may not be able to make use of it. The Storage Replica team is working on optimizations and an updated log mechanism for the future to reduce these artifical bottlenecks. There is no ETA for this, but when available to TAP customers for testing, this FAQ will be updated. 
 
-## Error when running Test-SRTopology between two clusters
+## Error "Could not find file" when running Test-SRTopology between two clusters
 
 When running Test-SRTopology between two clusters and their CSV paths, it fails with error: 
 
@@ -392,6 +392,21 @@ When running Test-SRTopology between two clusters and their CSV paths, it fails 
     + FullyQualifiedErrorId : TestSRTopologyFailure,Microsoft.FileServices.SR.Powershell.TestSRTopologyCommand 
 
 This is caused by a known code defect in Windows Server 2016. This issue was first fixed in Windows Server, version 1709 and the associated RSAT tools. For a downlevel resolution, please contact Microsoft Support and request a backport update. There is no workaround.
+
+## Error "specified volume could not be found" when running Test-SRTopology between two clusters
+
+When running Test-SRTopology between two clusters and their CSV paths, it fails with error: 
+
+    PS C:\> Test-SRTopology -SourceComputerName RRN44-14-09 -SourceVolumeName C:\ClusterStorage\Volume1 -SourceLogVolumeName L: -DestinationComputerName RRN44-14-13 -DestinationVolumeName C:\ClusterStorage\Volume1 -DestinationLogVolumeName L: -DurationInMinutes 30 -ResultPath c:\report
+
+    Test-SRTopology : The specified volume C:\ClusterStorage\Volume1 cannot be found on computer RRN44-14-09. If this is a cluster node, the volume must be part of a role or CSV; volumes in Available Storage are not accessible
+    At line:1 char:1
+    + Test-SRTopology -SourceComputerName RRN44-14-09 -SourceVolumeName C:\ ...
+    + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        + CategoryInfo          : ObjectNotFound: (:) [Test-SRTopology], Exception
+        + FullyQualifiedErrorId : TestSRTopologyFailure,Microsoft.FileServices.SR.Powershell.TestSRTopologyCommand
+
+When specifying the source node CSV as the source volume, you must select the node that owns the CSV. You can either move the CSV to the specified node or change the node name you specified in `-SourceComputerName`. This error will receive an improved message in the next version of Windows Server. 
 
 ## See also  
 - [Storage Replica](storage-replica-overview.md)  
