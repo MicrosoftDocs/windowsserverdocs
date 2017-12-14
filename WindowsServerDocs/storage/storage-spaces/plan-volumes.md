@@ -77,12 +77,6 @@ Dual parity provides the same fault tolerance as three-way mirroring but with be
 
 Which resiliency type to use depends on the needs of your workload.
 
-| **Resiliency type**| **Storage capacity efficiency**| **Performance characteristics**| **Recommended workloads**| **Unsupported workloads**|
-|--------------------|--------------------------------|--------------------------------|--------------------------|-------------|
-| **Mirror**         | Three-way mirror: 33% <br>Two-way-mirror: 50%     | Highest performance write and read for random & sequential  | Virtualized workloads Databases Other high performance workloads | None |
-| **Mirror-accelerated parity** | Depends on proportion of mirror and parity | Much lower performance than mirror, but up to twice the performance of dual-parity Higher I/O latency & CPU usage on writes - but somewhat better than dual-parity Best for large sequential writes and reads | Archival and backup VDI     | Virtualized workloads and other high performance random workloads |
-| **Dual-parity**               | 4 servers: 50% <br>8 servers: 80% | Highest I/O latency & CPU usage on writes Best for large sequential writes and reads | Archival and backup VDI  | Virtualized workloads and other high performance random workloads |
-
 #### When performance matters most
 
 Workloads that have strict latency requirements or that need lots of mixed random IOPS, such as SQL Server databases or performance-sensitive Hyper-V virtual machines, should run on volumes that use mirroring to maximize performance.
