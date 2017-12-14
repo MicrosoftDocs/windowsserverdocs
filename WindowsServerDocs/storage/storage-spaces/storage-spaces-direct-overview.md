@@ -21,8 +21,6 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter and [Windows
 
 <table>
     <tr style="border: 0;">
-        <td style="padding: 5px; border: 0; width:50px">
-        <img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/understand-small.png" alt="">        </td>
         <td style="padding: 5px; border: 0;">
             <strong><a href="understand-storage-spaces-direct.md">Understand</a></strong>
             <ul>
@@ -30,9 +28,6 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter and [Windows
 			  <li><a href="understand-the-cache.md">Understand the cache</a></li>
 			  <li><a href="storage-spaces-fault-tolerance.md">Fault tolerance and storage efficiency</a></li>
 		  	</ul>
-        </td>
-        <td style="padding: 5px; border: 0; width:50px">
-        <img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/plan-small.png" alt="">
         </td>
         <td style="padding: 5px; border: 0;">
             <strong><a href="plan-storage-spaces-direct.md">Plan</a></strong>
@@ -45,19 +40,13 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter and [Windows
         </td>
     </tr>
     <tr style="border: 0;">
-        <td style="padding: 5px; border: 0; width:50px">
-            <img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/deploy-small.png" alt="">
-        </td>
         <td style="padding: 5px; border: 0;">
             <strong><a href="deploy-storage-spaces-direct.md">Deploy</a></strong>
             <ul>
 			  <li><a href="hyper-converged-solution-using-storage-spaces-direct.md">Hyper-converged solution</a></li>
-			  <li><a href="create-volumes.md">Create volumes</a></li>
+			  <li><a href="create-volumes.md">Create volumes</a><br><br><br><br></li>
 		    </ul>
         </td>        
-        <td style="padding: 5px; border: 0; width:50px">
-            <img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/manage-small.png" alt="">
-        </td>
         <td style="padding: 5px; border: 0;">
             <strong><a href="manage-storage-spaces-direct.md">Manage</a></strong>
             <ul>
