@@ -23,6 +23,7 @@ This topic lists new and updated topics in the [Storage](storage.md) documentati
 |New or changed topic|Description|
 |---|---|
 |[ReFS overview](refs/refs-overview.md)|Clarified recommended workloads for mirror-accelerated parity and corrected the supported file and volume sizes for ReFS and NTFS.|
+|[Storage Replica known issues](storage-replica/storage-replica-known-issues.md)|Added new information.|
 
 ## November 2017
 
