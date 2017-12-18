@@ -6,7 +6,7 @@ ms.manager: masriniv
 ms.technology: storage-file-systems
 ms.topic: article
 author: gawatu
-ms.date: 12/1/2017
+ms.date: 12/18/2017
 ms.assetid:
 ---
 # Mirror-accelerated parity
@@ -89,7 +89,7 @@ ReFS compaction addresses these performance issues by freeing up space in mirror
 ## Performance optimizations
 
 >[!IMPORTANT]
->For Hyper-V workloads on mirror-accelerated parity, ReFS delivers the best performance when write-heavy VHDs are distributed across multiple directories. Thus, to achieve optimal performance, it is recommended to not place many, write-heavy VHDs in the same subdirectory.   
+> We recommend placing write-heavy VHDs in different subdirectories. This is because ReFS writes metadata changes at the level of a directory and its files. So if you distribute write-heavy files across directories, metadata operations are smaller and run in parallel, reducing latency for apps.
 
 ### Performance counters
 
