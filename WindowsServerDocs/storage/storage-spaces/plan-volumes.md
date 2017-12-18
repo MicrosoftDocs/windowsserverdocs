@@ -75,13 +75,13 @@ Dual parity provides the same fault tolerance as three-way mirroring but with be
 
 ![dual-parity](media/plan-volumes/dual-parity.png)
 
-Which resiliency type to use depends on the needs of your workload.
+Which resiliency type to use depends on the needs of your workload. Here's a table that summarizes the performance and storage efficiency characteristics of each resiliency type available with four or more cluster nodes.
 
-| **Resiliency type**| **Storage capacity efficiency**| **Performance characteristics**| **Recommended workloads**| **Unsupported workloads**|
+| **Resiliency type**| **Storage capacity efficiency**| **Performance characteristics**| **Recommended workloads**| **Workloads to avoid**|
 |--------------------|--------------------------------|--------------------------------|--------------------------|-------------|
-| **Mirror**         | Three-way mirror: 33% <br>Two-way-mirror: 50%     | Highest performance write and read for random & sequential  | Virtualized workloads Databases Other high performance workloads | None |
-| **Mirror-accelerated parity** | Depends on proportion of mirror and parity | Much lower performance than mirror, but up to twice the performance of dual-parity Higher I/O latency & CPU usage on writes - but somewhat better than dual-parity Best for large sequential writes and reads | Archival and backup VDI     | Virtualized workloads and other high performance random workloads |
-| **Dual-parity**               | 4 servers: 50% <br>8 servers: 80% | Highest I/O latency & CPU usage on writes Best for large sequential writes and reads | Archival and backup VDI  | Virtualized workloads and other high performance random workloads |
+| **Mirror**         | ![](\media\plan-volumes\3-way-mirror-storage-efficiency.png)<br>Three-way mirror: 33% <br>Two-way-mirror: 50%     |![](\media\plan-volumes\three-way-mirror-perf.png)<br> Highest performance  | Virtualized workloads<br> Databases<br>Other high performance workloads | None |
+| **Mirror-accelerated parity** |![](\media\plan-volumes\mirror-accelerated-parity-storage-efficiency.png)<br> Depends on proportion of mirror and parity | ![](\media\plan-volumes\mirror-accelerated-parity-perf.png)<br>Much slower than mirror, but up to twice as fast as dual-parity<br> Higher I/O latency & CPU usage on writes - but somewhat better than dual-parity<br> Best for large sequential writes and reads | Archival and backup VDI     | Virtualized workloads and other high performance random workloads |
+| **Dual-parity**               | ![](\media\plan-volumes\dual-parity-storage-efficiency.png)<br>4 servers: 50% <br>8 servers: 80% | ![](\media\plan-volumes\dual-parity-perf.png)<br>Highest I/O latency & CPU usage on writes<br> Best for large sequential writes and reads | Archival and backup VDI  | Virtualized workloads and other high performance random workloads |
 
 #### When performance matters most
 
