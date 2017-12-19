@@ -7,7 +7,7 @@ ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 01/11/2016
+ms.date: 12/19/2017
 ms.localizationpriority: medium
 ---
 # Planning volumes in Storage Spaces Direct
@@ -75,7 +75,13 @@ Dual parity provides the same fault tolerance as three-way mirroring but with be
 
 ![dual-parity](media/plan-volumes/dual-parity.png)
 
-Which resiliency type to use depends on the needs of your workload.
+Which resiliency type to use depends on the needs of your workload. Here's a table that summarizes which workloads are a good fit for each resiliency type, as well as the performance and storage efficiency of each resiliency type.
+
+| **Resiliency type**| **Capacity efficiency**| **Speed**| **Workloads**
+|--------------------|--------------------------------|--------------------------------|--------------------------
+| **Mirror**         | ![Storage efficiency showing 33%](media\plan-volumes\3-way-mirror-storage-efficiency.png)<br>Three-way mirror: 33% <br>Two-way-mirror: 50%     |![Performance showing 100%](media\plan-volumes\three-way-mirror-perf.png)<br> Highest performance  | Virtualized workloads<br> Databases<br>Other high performance workloads |
+| **Mirror-accelerated parity** |![Storage efficiency showing around 50%](media\plan-volumes\mirror-accelerated-parity-storage-efficiency.png)<br> Depends on proportion of mirror and parity | ![Performance showing around 20%](media\plan-volumes\mirror-accelerated-parity-perf.png)<br>Much slower than mirror, but up to twice as fast as dual-parity<br> Best for large sequential writes and reads | Archival and backup<br> Virtualized desktop infrastructure     |
+| **Dual-parity**               | ![Storage efficiency showing around 80%](media\plan-volumes\dual-parity-storage-efficiency.png)<br>4 servers: 50% <br>8 servers: 80% | ![Performance showing around 10%](media\plan-volumes\dual-parity-perf.png)<br>Highest I/O latency & CPU usage on writes<br> Best for large sequential writes and reads | Archival and backup<br> Virtualized desktop infrastructure  |
 
 #### When performance matters most
 
