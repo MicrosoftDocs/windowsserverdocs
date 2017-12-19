@@ -7,7 +7,7 @@ ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 01/11/2016
+ms.date: 12/19/2017
 ms.localizationpriority: medium
 ---
 # Planning volumes in Storage Spaces Direct
