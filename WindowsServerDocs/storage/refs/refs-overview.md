@@ -6,7 +6,7 @@ ms.manager: dmoss
 ms.technology: storage-file-systems
 ms.topic: article
 author: gawatu
-ms.date: 12/4/2017
+ms.date: 12/18/2017
 ---
 # Resilient File System (ReFS) overview
 
@@ -41,10 +41,10 @@ In addition to providing resiliency improvements, ReFS introduces new features f
             
     - Once these tiers are configured, ReFS use them to deliver fast storage for hot data and capacity-efficient storage for cold data:
         - All writes will occur in the performance tier, and large chunks of data that remain in the performance tier will be efficiently moved to the capacity tier in real-time.
-        - If using a [hybrid deployment](../storage-spaces/choosing-drives.md) (mixing flash and HDD drives), [the cache in Storage Spaces Direct](../storage-spaces/understand-the-cache.md) will help accelerate reads, reducing the effect of data fragmentation characteristic of virtualized workloads. Otherwise, if using an all-flash deployment, reads will also occur in the performance tier. 
+        - If using a hybrid deployment (mixing flash and HDD drives), [the cache in Storage Spaces Direct](../storage-spaces/understand-the-cache.md) helps accelerate reads, reducing the effect of data fragmentation characteristic of virtualized workloads. Otherwise, if using an all-flash deployment, reads also occur in the performance tier.
 
 >[!NOTE]
->For Server deployments, mirror-accelerated parity is only supported on [Storage Spaces Direct](../storage-spaces/storage-spaces-direct-overview.md). We recommend using mirror-accelerated parity with archival and backup workloads only. Virtualized and other high performance random workloads aren't supported.
+>For Server deployments, mirror-accelerated parity is only supported on [Storage Spaces Direct](../storage-spaces/storage-spaces-direct-overview.md). We recommend using mirror-accelerated parity with archival and backup workloads only. For virtualized and other high performance random workloads, we recommend using three-way mirrors for better performance.
 
 - **Accelerated VM operations** - ReFS introduces new functionality specifically targeted to improve the performance of virtualized workloads:
     - [Block cloning](./block-cloning.md) - Block cloning accelerates copy operations, enabling quick, low-impact VM checkpoint merge operations.
@@ -142,6 +142,7 @@ Deploying ReFS on basic disks is best suited for applications that implement the
 
 ## See also
 
+-   [Storage Spaces Direct overview](../storage-spaces/storage-spaces-direct-overview.md)
 -   [ReFS block cloning](block-cloning.md)
 -   [ReFS integrity streams](integrity-streams.md)
--   [Storage Spaces Direct overview](../storage-spaces/storage-spaces-direct-overview.md)
+
