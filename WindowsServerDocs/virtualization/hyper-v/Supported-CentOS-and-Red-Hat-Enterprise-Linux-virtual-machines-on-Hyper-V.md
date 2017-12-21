@@ -62,14 +62,14 @@ This series only has 64-bit kernels.
 |**[Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Storage)**||||
 |VHDX resize|2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |Virtual Fibre Channel|2016, 2012 R2|&#10004; Note 3|&#10004; Note 3|&#10004; Note 3|&#10004; Note 3|&#10004; Note 3|&#10004; Note 3|&#10004; Note 3|
-|Live virtual machine backup|2016, 2012 R2|&#10004; Note 5|&#10004; Note 5|&#10004; Note 5|&#10004; Note 4, 5|&#10004; Note 4, 5|&#10004; Note 4, 5|&#10004; Note 4, 5|
+|Live virtual machine backup|2016, 2012 R2|&#10004; Note 5|&#10004; Note 5|&#10004; Note 4, 5|&#10004; Note 4, 5|&#10004; Note 4, 5|&#10004; Note 4, 5|&#10004; Note 4, 5|
 |TRIM support|2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|||
 |SCSI WWN|2016, 2012 R2|&#10004;|&#10004;|||||
 |**[Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Memory)**||||
 |PAE Kernel Support|2016, 2012 R2, 2012, 2008 R2|N/A|N/A|N/A|N/A|N/A|N/A|N/A|
 |Configuration of MMIO gap|2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
-|Dynamic Memory - Hot-Add|2016, 2012 R2, 2012|&#10004; Note 8, 9, 10|&#10004; Note 8, 9, 10|&#10004; Note 8, 9, 10|&#10004; Note 9, 10|&#10004; Note 9, 10|&#10004; Note 9, 10|&#10004; Note 8, 9, 10|
-|Dynamic Memory - Ballooning|2016, 2012 R2, 2012|&#10004; Note 8, 9, 10|&#10004; Note 8, 9, 10|&#10004; Note 8, 9, 10|&#10004; Note 9, 10|&#10004; Note 9, 10|&#10004; Note 9, 10|&#10004; Note 8, 9, 10|
+|Dynamic Memory - Hot-Add|2016, 2012 R2, 2012|&#10004; Note 8, 9, 10|&#10004; Note 8, 9, 10|&#10004; Note 9, 10|&#10004; Note 9, 10|&#10004; Note 9, 10|&#10004; Note 9, 10|&#10004; Note 8, 9, 10|
+|Dynamic Memory - Ballooning|2016, 2012 R2, 2012|&#10004; Note 8, 9, 10|&#10004; Note 8, 9, 10|&#10004; Note 9, 10|&#10004; Note 9, 10|&#10004; Note 9, 10|&#10004; Note 9, 10|&#10004; Note 8, 9, 10|
 |Runtime Memory Resize|2016|&#10004;|&#10004;||||||
 |**[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Video)**||||
 |Hyper-V-specific video device|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
