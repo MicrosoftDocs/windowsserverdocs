@@ -31,10 +31,10 @@ It's also possible that the disk is having hardware problems or issues plugging 
 
 There are a bunch of reasons a disk might be missing or fail to initialize, with a common reason being because the disk is failing. There's only so much you can do to fix a failing disk, but here are some steps to try to see if we can get it working again. If the disk works after one of these steps, don't bother with the next steps, just kick back, celebrate, and maybe update your backups.
 
-1. Look at the disk in Disk Management. If it appears *Offline* (as shown here), try right-clicking it and selecting **Online**.
+1. Look at the disk in Disk Management. If it appears *Offline* as shown here, try right-clicking it and selecting **Online**.
 
     ![Disk shown as offline](media/offline-disk.png)
-1. If the disk appears in Disk Management as *Online*, and has a primary partition (shown here) that's listed as *Healthy*, that's a good sign.
+1. If the disk appears in Disk Management as *Online*, and has a primary partition that's listed as *Healthy*, as shown here, that's a good sign.
 
     ![Disk shown as online with a healthy volume](media/healthy-volume.png)
     - If the partition has a file system, but no drive letter (for example, E:), see [Change a drive letter](change-a-drive-letter.md) to add a drive letter manually.
