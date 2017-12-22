@@ -7,7 +7,7 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.date: 12/19/2017
+ms.date: 12/22/2017
 description: New and updated topics in the on-premises storage documentation for Windows Server for IT Pros.
 ---
 # Change history for storage topics in Windows Server
@@ -22,6 +22,9 @@ This topic lists new and updated topics in the [Storage](storage.md) documentati
 
 |New or changed topic|Description|
 |---|---|
+|[Change a drive letter](disk-management/change-a-drive-letter.md)|New topic.|
+|[Troubleshooting Disk Management](disk-management/troubleshooting-disk-management.md)|Rewrote the [A disk's status is Not Initialized or the disk is missing entirely](disk-management/troubleshooting-disk-management.md#disk-not-initialized) section to add extensive troubleshooting steps, based on customer requests.|
+|[Initialize new disks](disk-management/initialize-new-disks.md)|Rewrote to attempt to make it easier to understand and address customer questions.|
 |[Planning volumes in Storage Spaces Direct](storage-spaces/plan-volumes.md)|Added a table summarizing the resiliency types available on four-node and larger clusters.|
 |[ReFS overview](refs/refs-overview.md)|Clarified recommended workloads for mirror-accelerated parity and corrected the supported file and volume sizes for ReFS and NTFS.|
 |[Mirror-accelerated parity](refs/mirror-accelerated-parity.md)|Clarified recommendation to place write-heavy files in separate directories.|
