@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting Disk Management
 description: This article describes how to troubleshoot Disk Management issues
-ms.date: 10/12/2017
+ms.date: 12/22/2017
 ms.prod: windows-server-threshold 
 ms.technology: storage 
 ms.topic: article 
@@ -9,30 +9,44 @@ author: JasonGerend
 manager: brianlic 
 ms.author: jgerend 
 ---
-
 # Troubleshooting Disk Management
 
-> **Applies To:** Windows 10, Windows 8.1, Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> **Applies To:** Windows 10, Windows 8.1, Windows 7, Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic lists a few common issues you may encounter when using Disk Management.
 
+> [!TIP]
+> If you're having trouble and need help with Disk Management or other Windows tasks, we suggest asking for help at the [Microsoft community](https://answers.microsoft.com/en-us/windows) site. The comments thread for this topic is intended for feedback on this specific topic and isn't monitored for support questions.
+
 <a id="BKMK_1"></a>
+## A disk's status is Not Initialized or the disk is missing entirely
+
+![](media\uninitialized-disk.PNG)
+**Cause:**
+If you have a disk that doesn't appear in File Explorer and is listed in Disk Management as *Not Initialized*, it could be because the disk doesn't have a valid disk signature. Basically this means that the disk has never been initialized and formatted, or the drive formatting has become corrupted somehow.
+
+**Solution:**  If the drive is brand new and just needs to be initialized, erasing any data on it, the solution is easy - see [Initialize New Disks](initialize-new-disks.md). However, there's a good chance you've already tried this, and it didn't work. Or maybe you have a disk full of important files, and you don't want to erase the disk by initializing it.
+
+There are a bunch of reasons a disk might be missing or fail to initialize, with a common reason being because the disk is failing. There's only so much you can do to fix a failing disk, but here are some steps to try to see if we can get it working again. If the disk works after one of the steps, don't bother with the next steps, just kick back, celebrate, and maybe update your backups.
+
+1. Unplug the disk, plug it back in, and then select **Action** > **Rescan Disks**.
+2. Shut down your PC, turn off your external hard disk (if it's an external disk with a power cord), and then turn your PC and the disk back on. <br>To turn off your PC in Windows 10, select the Start button, select the Power button, and then select **Shut down**.
+3. Plug the disk into a different USB port that's directly on your PC (not on a hub).<br>Sometimes USB disks don't get enough power from some ports, or have other issues with particular ports. This is especially common with USB hubs, but sometimes there are differences between ports on a PC, so try a few different ports if you have them.
+4. Try a different cable.<br>It might sound crazy, but cables fail a lot, so try using a different cable to plug the disk in.
+5. Check Device Manager for issues.<br>Press and hold (or right-click) the Start button, then select Device Manager from the context menu. Look for any devices with an exclamation point next to it or other issues, double-click the device and then read its status. Here's a list of [Error codes in Device Manager](https://support.microsoft.com/help/310123/error-codes-in-device-manager-in-windows), but one approach that sometimes works is to right-click the problematic device, select **Uninstall device**, and then **Action** > **Scan for hardware changes**.
+6. Plug the disk into a different PC.<br>If the disk doesn't work on another PC, it's a good sign that there's something bad going on with the disk, and not your PC. No fun, we know. There are some more steps you can try in [External USB drive error "You must initialize the disk before Logical Disk Manager can access it"](https://social.technet.microsoft.com/Forums/windows/en-US/2b069948-82e9-49ef-bbb7-e44ec7bfebdb/forum-faq-external-usb-drive-error-you-must-initialize-the-disk-before-logical-disk-manager-can?forum=w7itprohardware), but it might be time to search for and ask for help at the [Microsoft community](https://answers.microsoft.com/en-us/windows) site, or contact your disk manufacturer. If you just can't get it working, there are also apps that can try to recover data from a failing disk, or if the files are really important, you can pay a data recovery lab to try to recover them. If you find something that works for you, let us know in the comments section below.
+
+> [!IMPORTANT]
+> Disks fail pretty often, so it's important to regularly backup any files you care about. If you have a disk that sometimes doesn't appear or gives errors, consider this a reminder to double-check your backup methods. It's OK if you're a little behind - we've all been there. The best backup solution is one you use, so we encourage you to find one that works for you and stick with it. <br><br>For info on how to use apps built into Windows to backup files to an external drive such as a USB drive, see [Back up and restore your files](https://support.microsoft.com/help/17143/windows-10-back-up-your-files). You can also save files in Microsoft OneDrive, which syncs files from your PC to the cloud. If your hard disk fails, you'll still be able to get any files you store in OneDrive from OneDrive.com. For more info, see [OneDrive on your PC](https://support.microsoft.com/help/17184/windows-10-onedrive).
+<a id="BKMK_2"></a>
 
 ## Partitions on basic disks added to the system do not appear in the Disk Management Volume List view.
 
 **Cause:** Volumes on basic disks added to the system are not automatically mounted and assigned drive letters by default.
 Dynamic disks appear as **Foreign** when they are added to the system. To use the volumes, you must import the **Foreign** disks and then bring the volumes **Online**.
-Removable media devices (such as Zip or Jaz drives), and optical discs (such as CD-ROM or DVD-RAM) are always automatically mounted by the system.
+Removable media devices (such as flash drives), and optical discs (such as CD-ROM or DVD-RAM) are always automatically mounted by the system.
 
 **Solution:** Manually mount the basic volumes by assigning drive letters, or by creating mount points using Disk Management or the [DiskPart](https://go.microsoft.com/fwlink/?LinkId=64110) or [mountvol](https://go.microsoft.com/fwlink/?LinkId=64111) commands.
-
-<a id="BKMK_2"></a>
-
-## A basic disk's status is Not Initialized.
-
-**Cause:**  The disk does not contain a valid signature. After you install a new disk, the operating system must write a disk signature, the end of sector marker (also called signature word), and a Master Boot Record or GUID Partition Table before you can create partitions on the disk. When you first start Disk Management after installing a new disk, a wizard appears that provides a list of the new disks detected by the operating system. If you cancel the wizard before the disk signature is written, the disk status remains **Not Initialized**.
-
-**Solution:**  Initialize the disk. The disk status briefly changes to **Initializing** and then to **Online** status. For instructions describing how to initialize a disk, see [Initialize New Disks](initialize-new-disks.md). 
 
 <a id="BKMK_3"></a>
 
@@ -42,7 +56,7 @@ Removable media devices (such as Zip or Jaz drives), and optical discs (such as 
 
 Disks might also display the **Unreadable** status while they are spinning up or when Disk Management is rescanning all of the disks on the system. In some cases, an unreadable disk has failed and is not recoverable. For dynamic disks, the **Unreadable** status usually results from corruption or I/O errors on part of the disk, rather than failure of the entire disk.
 
-**Solution:** Rescan the disks or restart the computer to see if the disk status changes.
+**Solution:** Rescan the disks or restart the computer to see if the disk status changes. Also try the troubleshooting steps described in [A disk's status is Not Initialized or the disk is missing entirely](disk-management/troubleshooting-disk-management.md#BKMK_1).
 
 <a id="BKMK_4"></a>
 
