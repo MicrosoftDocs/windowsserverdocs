@@ -10,7 +10,7 @@ manager: brianlic
 ms.author: jgerend 
 ---
 
-# Change a Master Boot Record (MBR) disk into a GUID Partition Table (GPT) disk
+# Convert an MBR disk into a GPT disk
 
 > **Applies To:** Windows 10, Windows 8.1, Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
