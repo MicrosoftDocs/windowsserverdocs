@@ -18,10 +18,10 @@ This topic lists a few common issues you may encounter when using Disk Managemen
 > [!TIP]
 > If you're having trouble and need help with Disk Management or other Windows tasks, we suggest asking for help at the [Microsoft community](https://answers.microsoft.com/en-us/windows) site. The comments thread for this topic is intended for feedback on this specific topic and isn't monitored for support questions.
 
-<a id="BKMK_1"></a>
-## A disk's status is Not Initialized or the disk is missing entirely
+## <a id="disk-not-initialized"></a> A disk's status is Not Initialized or the disk is missing
 
-![](media\uninitialized-disk.PNG)
+![Disk Management showing an unknown disk that must be initialized.](media\uninitialized-disk.PNG)
+
 **Cause:**
 If you have a disk that doesn't appear in File Explorer and is listed in Disk Management as *Not Initialized*, it could be because the disk doesn't have a valid disk signature. Basically this means that the disk has never been initialized and formatted, or the drive formatting has become corrupted somehow.
 

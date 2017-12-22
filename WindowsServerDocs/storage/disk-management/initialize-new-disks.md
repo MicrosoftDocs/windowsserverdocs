@@ -1,6 +1,6 @@
 ---
 title: Initialize new disks
-description: This article describe how to initialize new disks
+description: How to initialize new disks with Disk Management, getting them ready to use. Also includes links to troubleshooting issues.
 ms.date: 12/22/2017
 ms.prod: windows-server-threshold 
 ms.technology: storage 
@@ -16,14 +16,14 @@ ms.author: jgerend
 If you add a brand new disk to your PC, you might need to initialize it before using it. Initializing a disk erases everything on it and prepares it for use by Windows, after which you can format it and then store files on it.
 
 > [!WARNING]
-> If your disk already has files on it that you care about, don't initialize it - you'll lose all the files. Instead we recommend troubleshooting the disk to see if you can read the files - see [A disk's status is Not Initialized or the disk is missing entirely](disk-management/troubleshooting-disk-management.md#BKMK_1).
+> If your disk already has files on it that you care about, don't initialize it - you'll lose all the files. Instead we recommend troubleshooting the disk to see if you can read the files - see [A disk's status is Not Initialized or the disk is missing entirely](troubleshooting-disk-management.md#disk-not-initialized).
 
 ## To initialize new disks
 
 1. In Disk Management, right-click the disk you want to initialize, and then click **Initialize Disk**.
 
     ![](media\uninitialized-disk.PNG)
-2. In the **Initialize Disk** dialog box, check to make sure that the correct disk is selected and then click **OK** to accept the default partition style. If you need to change the partition style (GPT or MBR) see [About partition style - GPT and MBR](#about-partition-styles-GPT-and-MBR).<br>The disk status briefly changes to **Initializing** and then to the **Online** status. If initializing fails for some reason, see [A disk's status is Not Initialized or the disk is missing entirely](disk-management/troubleshooting-disk-management.md#BKMK_1).
+2. In the **Initialize Disk** dialog box, check to make sure that the correct disk is selected and then click **OK** to accept the default partition style. If you need to change the partition style (GPT or MBR) see [About partition style - GPT and MBR](#about-partition-styles-GPT-and-MBR).<br>The disk status briefly changes to **Initializing** and then to the **Online** status. If initializing fails for some reason, see [A disk's status is Not Initialized or the disk is missing entirely](troubleshooting-disk-management.md#disk-not-initialized).
 
     ![](media\initialize-disk.PNG)
 

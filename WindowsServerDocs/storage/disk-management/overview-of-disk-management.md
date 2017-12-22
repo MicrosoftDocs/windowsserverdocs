@@ -25,9 +25,9 @@ Most of the time you don't need to use Disk Management - for example, here are s
 
 However, if you need to tinker with the drives in your PC, here are some of the things Disk Management is good for:
 
-- To setup a new drive, see [Initializing a new drive](initialize-new-disk.md).
+- To setup a new drive, see [Initializing a new drive](initialize-new-disks.md).
 - To extend a volume into space that's not already part of a volume on the same drive, see [Extend a basic volume](extend-a-basic-volume.md).
-- To shrink a partition, usually so that you can extend a neighboring partition, see [Shrink a basic volume](srhink-a-basic-volume.md).
+- To shrink a partition, usually so that you can extend a neighboring partition, see [Shrink a basic volume](shrink-a-basic-volume.md).
 - To change a drive letter or assign a new drive letter, see [Change a drive letter](change-a-drive-letter.md).
 
 > [!TIP]
