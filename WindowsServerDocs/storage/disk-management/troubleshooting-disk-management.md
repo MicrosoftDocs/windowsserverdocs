@@ -16,7 +16,7 @@ ms.author: jgerend
 This topic lists a few common issues you may encounter when using Disk Management.
 
 > [!TIP]
-> If you're having trouble and need help with Disk Management or other Windows tasks, we suggest asking for help at the [Microsoft community](https://answers.microsoft.com/en-us/windows) site. The comments thread for this topic is intended for feedback on this specific topic and isn't monitored for support questions.
+> If you get an error or something doesn't work when following these procedures - don't panic! There's a ton of info on the [Microsoft community](https://answers.microsoft.com/en-us/windows) site - try searching the [Files, folders, and storage](https://answers.microsoft.com/en-us/windows/forum/windows_10-files?sort=lastreplydate&dir=desc&tab=All&status=all&mod=&modAge=&advFil=&postedAfter=&postedBefore=&threadType=all&isFilterExpanded=true&tm=1514405359639) section, and if you still need help, post a question there and Microsoft or other members of the community will try to help. If you have feedback on how to improve these topics, we'd love to hear from you! Just answer the *Is this page helpful?* prompt, and leave any comments there or in the public comments thread at the bottom of this topic.
 
 ## <a id="disk-not-initialized"></a> A disk's status is Not Initialized or the disk is missing
 
