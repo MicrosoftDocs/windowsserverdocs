@@ -12,7 +12,7 @@ manager: brianlic
 ---
 # Health and operational states for Storage Spaces
 
-> Applies to: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10, Windows 8.1
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10, Windows 8.1
 
 This topic discusses the health and operational states of various objects in Storage Spaces and [Storage Spaces Direct](storage-spaces-direct-overview.md), including volumes, virtual disks, storage pools, and physical disks. It also discusses why a physical disk can't be added to a pool (the CannotPoolReason).
 
