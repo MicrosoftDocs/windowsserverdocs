@@ -4,7 +4,7 @@ description: How to understand the different health and operational states of St
 keywords: Storage Spaces,detached,virtual disk,physical disk,degraded
 author: jasongerend
 ms.author: jgerend
-ms.date: 7/27/2017
+ms.date: 12/29/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: storage-spaces
@@ -30,11 +30,11 @@ The following sections list the operational states that map to each health state
 
 ### Pool health state: Warning
 
-When the storage pool is in the **Warning** health state, it means that the pool is accessible, but one or more physical disks failed or are missing. As a result, your virtual disks might have reduced resilience.
+When the storage pool is in the **Warning** health state, it means that the pool is accessible, but one or more physical disks failed or are missing. As a result, your storage pool might have reduced resilience.
 
 |Operational state    |Description|
 |---------            |---------          |
-|Degraded|There are failed or missing physical disks in the storage pool. <br><br>**Action**: Check the state of your physical disks and replace any failed disks before there are additional failures.|
+|Degraded|There are failed or missing physical disks in the storage pool. This condition only occurs with disks hosting pool metadata. <br><br>**Action**: Check the state of your physical disks and replace any failed disks before there are additional failures.|
 
 ### Pool health state: Error
 
@@ -77,7 +77,7 @@ When a virtual disk is in an **Unhealthy** health state, some or all of the data
 |---------            |---------       |--------   |
 |Detached            |Majority Disks Unhealthy |Too many physical disks used by this virtual disk failed, are missing, or have stale data.   <br><br>**Action**: Reconnect any missing disks, replace any failed disks, and then repair the virtual disk using the [Repair-VirtualDisk](https://technet.microsoft.com/itpro/powershell/windows/storage/repair-virtualdisk) cmdlet. If you're using Windows Server 2016 you don't need to use Repair-VirtualDisk - reconnecting or replacing the disk automatically starts a repair if needed. <br>If more disks failed than you have copies of your data and the virtual disk wasn't repaired in-between failures, all data on the virtual disk is permanently lost - delete the virtual disk, create a new virtual disk, and then restore from a backup.|
 |                     |Incomplete |Not enough physical disks are present to read the virtual disk.    <br><br>**Action**: Reconnect any missing physical disks and then repair the virtual disk using the [Repair-VirtualDisk](https://technet.microsoft.com/itpro/powershell/windows/storage/repair-virtualdisk) cmdlet. If you're using Windows Server 2016 you don't need to use Repair-VirtualDisk - reconnecting the disk automatically starts a repair if needed. <br>If more disks failed than you have copies of your data and the virtual disk wasn't repaired in-between failures, all data on the virtual disk is permanently lost - delete the virtual disk, create a new virtual disk, and then restore from a backup.|
-| |Timeout|Contacting the virtual disk timed out. <br><br> **Action:** **TO DO: Need more info here**   |
+| |Timeout|Attaching the virtual disk took too long <br><br> **Action:** This shouldn't happen often, so you might try see if the condition passes in time. Or you can try disconnecting the virtual disk with the [Disconnect-VirtualDisk](https://docs.microsoft.com/powershell/module/storage/disconnect-virtualdisk?view=win10-ps) cmdlet, then using the [Connect-VirtualDisk](https://docs.microsoft.com/powershell/module/storage/connect-virtualdisk?view=win10-ps)  cmdlet to reconnect it. |
 |No redundancy||The virtual disk has lost data because too many physical disks failed.<br><br>**Action**: Replace failed physical disks and then restore your data from backup.|
 
 ### Virtual disk health state: Information/Unknown
@@ -86,7 +86,7 @@ The virtual disk can also be in the **Information** health state (as shown in th
 
 |Operational state    |Detached reason |Description|
 |---------            |---------       |--------   |
-|Detached             |By Policy            |An administrator took the virtual disk offline, or set the virtual disk to require manual attachment, in which case you'll have to manually attach the virtual disk every time Windows restarts.,<br><br>**Action**: Bring the virtual disk back online. To do so when the virtual disk is in a clustered storage pool, in Failover Cluster Manager select **Storage** > **Pools** > **Virtual Disks**, select the virtual disk that shows the **Offline** status and then select **Bring Online**. <br><br>To bring a virtual disk back online when not in a cluster, you can try opening a PowerShell session as an Administrator and then using the following command:<br><br> **Get-VirtualDisk \| Where-Object -Filter { $_.OperationalStatus -eq "Detached" } \| Connect-VirtualDisk**<br><br>To automatically attach all non-clustered virtual disks after Windows restarts, open a PowerShell session as an Administrator and then use the following command:<br><br> **Get-VirtualDisk \| Set-VirtualDisk -ismanualattach $true**|
+|Detached             |By Policy            |An administrator took the virtual disk offline, or set the virtual disk to require manual attachment, in which case you'll have to manually attach the virtual disk every time Windows restarts.,<br><br>**Action**: Bring the virtual disk back online. To do so when the virtual disk is in a clustered storage pool, in Failover Cluster Manager select **Storage** > **Pools** > **Virtual Disks**, select the virtual disk that shows the **Offline** status and then select **Bring Online**. <br><br>To bring a virtual disk back online when not in a cluster, you can try opening a PowerShell session as an Administrator and then using the following command:<br><br> **Get-VirtualDisk \| Where-Object -Filter { $_.OperationalStatus -eq "Detached" } \| Connect-VirtualDisk**<br><br>To automatically attach all non-clustered virtual disks after Windows restarts, open a PowerShell session as an Administrator and then use the following command:<br><br> **Get-VirtualDisk \| Set-VirtualDisk -ismanualattach $false**|
 
 ## Physical disk states
 
