@@ -16,13 +16,13 @@ ms.date: 10/12/2016
 ---
 # Overview of TLS - SSL (Schannel SSP)
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This topic for the IT professional describes the changes in functionality in the Schannel Security Support Provider (SSP), which includes the Transport Layer Security (TLS), the Secure Sockets Layer (SSL), and the Datagram Transport Layer Security (DTLS) authentication protocols, for  Windows Server 2012 R2 ,  Windows Server 2012 , Windows 8.1, and Windows 8.
 
 Schannel is a Security Support Provider (SSP) that implements the SSL, TLS and DTLS Internet standard authentication protocols. The Security Support Provider Interface (SSPI) is an API used by Windows systems to perform security-related functions including authentication. The SSPI functions as a common interface to several Security Support Providers (SSPs), including the Schannel SSP.
 
-For more information about Microsoft's implementation of TLS and SSL in the Schannel SSP, see the [TLS/SSL Technical Reference (2003)](http://technet.microsoft.com/library/cc784149(v=ws.10).aspx).
+For more information about Microsoft's implementation of TLS and SSL in the Schannel SSP, see the [TLS/SSL Technical Reference (2003)](https://technet.microsoft.com/library/cc784149(v=ws.10).aspx).
 
 
 ##TLS/SSL (Schannel SSP) features
@@ -88,15 +88,15 @@ If the  **Trusted Root Certifictation Authorities** store that was used contains
 
 The Schannel SSP architecture in Windows Server 2012 will by default use the stores as described above to manage the Trusted Issuers list. You can still use the existing certificate management commandlets of the PowerShell provider, as well as command line tools such as Certutil to manage certificates.
 
-For information about managing certificates using the PowerShell provider, see [AD CS Administration Cmdlets in Windows](http://technet.microsoft.com/library/hh848365(v=wps.620).aspx).
+For information about managing certificates using the PowerShell provider, see [AD CS Administration Cmdlets in Windows](https://technet.microsoft.com/library/hh848365(v=wps.620).aspx).
 
-For information about managing certificates using the certificate utility, see [certutil.exe](http://technet.microsoft.com/library/cc732443.aspx).
+For information about managing certificates using the certificate utility, see [certutil.exe](https://technet.microsoft.com/library/cc732443.aspx).
 
-For information about what data, including the application-defined store, is defined for an Schannel credential, see [SCHANNEL_CRED structure (Windows)](http://msdn.microsoft.com/library/windows/desktop/aa379810(v=vs.85).aspx).
+For information about what data, including the application-defined store, is defined for an Schannel credential, see [SCHANNEL_CRED structure (Windows)](https://msdn.microsoft.com/library/windows/desktop/aa379810(v=vs.85).aspx).
 
 **Defaults for Trust Modes**
 
-There are three Client Authentication Trust Modes supported by the Schannel provider. The trust mode controls how validation of the client's certificate chain is performed and is a system-wide setting controlled by the REG_DWORD ???ClientAuthTrustMode??? under HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\Schannel.
+There are three Client Authentication Trust Modes supported by the Schannel provider. The trust mode controls how validation of the client's certificate chain is performed and is a system-wide setting controlled by the REG_DWORD "ClientAuthTrustMode" under HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\Schannel.
 
 |Value|Trust Mode|Description|
 |-----|-------|--------|
@@ -104,7 +104,7 @@ There are three Client Authentication Trust Modes supported by the Schannel prov
 |1|Exclusive Root Trust|Requires that a client certificate chains to a root certificate contained in the caller-specified trusted issuer store. The certificate must also be issued by an issuer in the Trusted Issuers list|
 |2|Exclusive CA Trust|Requires that a client certificate chain to either an intermediate CA certificate or root certificate in the caller-specified trusted issuer store.|
 
-For information about authentication failures due to trusted issuers configuration issues, see Knowledge Base article [280256](http://support.microsoft.com/kb/2802568).
+For information about authentication failures due to trusted issuers configuration issues, see Knowledge Base article [280256](https://support.microsoft.com/kb/2802568).
 
 ### <a name="BKMK_SNI"></a>TLS support for Server Name Indicator (SNI) Extensions
 Server Name Indication feature extends the SSL and TLS protocols to allow proper identification of the server when numerous virtual images are running on a single server. To properly secure the communication between a client computer and a server, the client computer requests a digital certificate from the server. After the server responds to the request and sends the certificate, the client computer examines it, uses it to encrypt the communication, and proceeds with the normal request-response exchange. However, in a virtual hosting scenario, several domains, each with its own potentially distinct certificate, are hosted on one server. In this case, the server has no way of knowing beforehand which certificate to send to the client computer. SNI allows the client computer to inform the target domain earlier in the protocol, and this allows the server to correctly select the proper certificate.
@@ -132,7 +132,7 @@ The DTLS version 1.0 protocol has been added to the Schannel Security Support Pr
 
 **What value does this add?**
 
-Datagrams are common in streaming media ??? such as gaming or secured video conferencing. Adding the DTLS protocol to the Schannel provider gives you the ability to use the familiar Windows SSPI model in securing the communication between client computers and servers. DTLS is deliberately designed to be as similar to TLS as possible, both to minimize new security invention and to maximize the amount of code and infrastructure reuse.
+Datagrams are common in streaming media, such as gaming or secured video conferencing. Adding the DTLS protocol to the Schannel provider gives you the ability to use the familiar Windows SSPI model in securing the communication between client computers and servers. DTLS is deliberately designed to be as similar to TLS as possible, both to minimize new security invention and to maximize the amount of code and infrastructure reuse.
 
 **How it works**
 
@@ -142,7 +142,7 @@ Applications that use DTLS over UDP can use the SSPI model in Windows Server 201
 In the Schannel SSP for Windows Server 2012 and Windows 8, there are no deprecated features or functionality.
 
 ## See also
--   [Private Cloud Security Model - Wrapper Functionality](http://social.technet.microsoft.com/wiki/contents/articles/6756.private-cloud-security-model-wrapper-functionality.aspx)
+-   [Private Cloud Security Model - Wrapper Functionality](https://social.technet.microsoft.com/wiki/contents/articles/6756.private-cloud-security-model-wrapper-functionality.aspx)
 
 
 

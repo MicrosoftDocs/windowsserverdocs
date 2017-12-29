@@ -12,18 +12,18 @@ ms.assetid: aab895f2-fe4d-4408-b66b-cdeadbd8969e
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # add Servers to Server Manager
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 In Windows Server you can manage multiple remote servers by using a single Server Manager console. Servers that you want to manage by using Server Manager can be running Windows Server 2016,  Windows Server 2012 R2 ,  Windows Server 2012 ,  Windows Server 2008 R2 , or  Windows Server 2008 . Note that you cannot manage a newer release of Windows Server with an older release of Server Manager.
 
 This topic describes how to add servers to the Server Manager server pool.
 
 > [!NOTE]
-> In our tests, Server Manager in  Windows Server 2012  and later releases of Windows Server can be used to manage up to 100 servers that are configured with a typical workload. The number of servers that you can manage by using a single Server Manager console can vary depending on the amount of data that you request from managed servers, and hardware and network resources available to the computer running Server Manager. As the amount of data you want to display approaches that computer's resource capacity, you can experience slow responses from Server Manager, and delays in the completion of refreshes. To help increase the number of servers that you can manage by using Server Manager, we recommend limiting the event data that Server Manager gets from your managed servers, by using settings in the **Configure Event Data** dialog box. Configure Event Data can be opened from the **Tasks** menu in the **Events** tile. If you need to manage an enterprise-level number of servers in your organization, we recommend evaluating products in the [Microsoft System Center suite](http://go.microsoft.com/fwlink/p/?LinkId=239437).
+> In our tests, Server Manager in  Windows Server 2012  and later releases of Windows Server can be used to manage up to 100 servers that are configured with a typical workload. The number of servers that you can manage by using a single Server Manager console can vary depending on the amount of data that you request from managed servers, and hardware and network resources available to the computer running Server Manager. As the amount of data you want to display approaches that computer's resource capacity, you can experience slow responses from Server Manager, and delays in the completion of refreshes. To help increase the number of servers that you can manage by using Server Manager, we recommend limiting the event data that Server Manager gets from your managed servers, by using settings in the **Configure Event Data** dialog box. Configure Event Data can be opened from the **Tasks** menu in the **Events** tile. If you need to manage an enterprise-level number of servers in your organization, we recommend evaluating products in the [Microsoft System Center suite](https://go.microsoft.com/fwlink/p/?LinkId=239437).
 >
 > Server Manager can receive only online or offline status from servers that are running Windows Server 2003. Although you can use Server Manager to perform management tasks on servers that are running  Windows Server 2008 R2  or  Windows Server 2008 , you cannot add roles and features to servers that are running  Windows Server 2008 R2 ,  Windows Server 2008  or Windows Server 2003.
 >
@@ -156,7 +156,7 @@ These or similar errors can occur in the following conditions.
 
 5.  Log off of the computer on which you are running Server Manager, and then log on again by using the built-in Administrator account. Repeat the preceding step, to verify that Server Manager is able to connect to and collect data from the remote server.
 
-if you have followed the procedures in this section, and you continue to have problems managing workgroup computers, or managing other computers from workgroup computers, see [about_remote_Troubleshooting](http://technet.microsoft.com/library/dd347642.aspx) on the Microsoft website.
+if you have followed the procedures in this section, and you continue to have problems managing workgroup computers, or managing other computers from workgroup computers, see [about_remote_Troubleshooting](https://technet.microsoft.com/library/dd347642.aspx) on the Microsoft website.
 
 ### add and manage servers in clusters
 You can use Server Manager to manage servers that are in failover clusters (also called server clusters or MSCS). Servers that are in failover clusters (whether the cluster nodes are physical or virtual) have some unique behaviors and management limitations in Server Manager.

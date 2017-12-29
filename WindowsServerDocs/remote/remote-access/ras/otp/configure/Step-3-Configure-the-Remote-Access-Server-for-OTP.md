@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # Step 3 Configure the Remote Access Server for OTP
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 Once the RADIUS server has been configured with software distribution tokens, communication ports are open, a shared secret has been created, user accounts corresponding to Active Directory have been created on the RADIUS server, and the Remote Access server has been configured as a RADIUS authentication agent, then the Remote Access server needs to be configured to support OTP.  
   
@@ -27,7 +27,7 @@ Once the RADIUS server has been configured with software distribution tokens, co
 |[3.3 Smart cards for additional authorization](#BKMK_Smartcard)|Additional information regarding the use of smart cards.|  
   
 > [!NOTE]  
-> This topic includes sample Windows PowerShell cmdlets that you can use to automate some of the procedures described. For more information, see [Using Cmdlets](http://go.microsoft.com/fwlink/p/?linkid=230693).  
+> This topic includes sample Windows PowerShell cmdlets that you can use to automate some of the procedures described. For more information, see [Using Cmdlets](https://go.microsoft.com/fwlink/p/?linkid=230693).  
   
 ## <a name="BKMK_Exempt"></a>3.1 Exempt users from OTP authentication (optional)  
 If specific users are to be exempted from OTP authentication, then these steps must be taken prior to the Remote Access configuration:  

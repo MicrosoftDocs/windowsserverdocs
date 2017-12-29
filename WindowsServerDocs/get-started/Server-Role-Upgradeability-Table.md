@@ -13,6 +13,7 @@ ms.assetid: 7e031a64-b1e6-4cf6-994a-e7c575835f6a
 author: jaimeo
 ms.author: jaimeo
 manager: dongill
+ms.localizationpriority: medium
 ---
 # Server role upgrade and migration matrix for Windows Server 2016
 

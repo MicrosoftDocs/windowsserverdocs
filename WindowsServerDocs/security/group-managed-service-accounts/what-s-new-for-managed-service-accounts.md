@@ -1,5 +1,5 @@
 ---
-title: What&#39;s New for Managed Service Accounts
+title: What's New for Managed Service Accounts
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # What&#39;s New for Managed Service Accounts
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This topic for the IT professional describes the changes in functionality for Managed Service Accounts with the introduction of the group Managed Service Account (gMSA) in Windows Server 2012 and Windows 8.
 

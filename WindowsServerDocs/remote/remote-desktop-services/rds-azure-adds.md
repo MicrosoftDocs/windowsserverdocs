@@ -18,8 +18,8 @@ ms.localizationpriority: medium
 You can use [Azure AD Domain Services](/azure/active-directory-domain-services/active-directory-ds-overview) (Azure AD DS) in your Remote Desktop Services deployment in the place of Windows Server Active Directory. Azure AD DS lets you use your existing Azure AD identities in with classic Windows workloads.
 
 With Azure AD DS you can: 
-- Create an Azure environment with a local domain for organizations that are born in the cloud 
-- Create an isolated Azure environment with the same identities used for your on-premise and online environment, without needing to create a site-to-site VPN or ExpressRoute 
+- Create an Azure environment with a local domain for born-in-the-cloud organizations. 
+- Create an isolated Azure environment with the same identities used for your on-premise and online environment, without needing to create a site-to-site VPN or ExpressRoute. 
 
 When you finish integrating Azure AD DS into your Remote Desktop deployment, your architecture will look something like this:
 
@@ -27,13 +27,13 @@ When you finish integrating Azure AD DS into your Remote Desktop deployment, you
 
 To see how this architecture compares with other RDS deployment scenarios, check out [Remote Desktop Services architectures](desktop-hosting-logical-architecture.md).
 
-To get a better understanding of Azure AD DS, check out the [Azure AD DS overview](/azure/active-directory-domain-services/active-directory-ds-overview) and [If Azure AD DS is right for you](/azure/active-directory-domain-services/active-directory-ds-comparison).
+To get a better understanding of Azure AD DS, check out the [Azure AD DS overview](/azure/active-directory-domain-services/active-directory-ds-overview) and [How to decide if Azure AD DS is right for your use-case](/azure/active-directory-domain-services/active-directory-ds-comparison).
 
 Use the following information to deploy Azure AD DS with RDS.
 
 ## Prerequisites
 
-Before you can bring your identities from Azure AD to use in an RDS deployment, [configure Azure AD to save the hashed passwords for your users’ identities](/azure/active-directory-domain-services/active-directory-ds-getting-started-password-sync). Born in the cloud organizations don’t need to make any additional changes in their directory; however, on-premise organizations need to allow password hashes to be synchronized and stored in Azure AD, which may not be permissible to some organizations. Users will have to reset their passwords after making this configuration change.
+Before you can bring your identities from Azure AD to use in an RDS deployment, [configure Azure AD to save the hashed passwords for your users’ identities](/azure/active-directory-domain-services/active-directory-ds-getting-started-password-sync). Born-in-the-cloud organizations don’t need to make any additional changes in their directory; however, on-premise organizations need to allow password hashes to be synchronized and stored in Azure AD, which may not be permissible to some organizations. Users will have to reset their passwords after making this configuration change.
 
 ## Deploy Azure AD DS and RDS 
 Use the following steps to deploy Azure AD DS and RDS.
@@ -61,7 +61,7 @@ Use the following steps to deploy Azure AD DS and RDS.
       - **Template**
          - Remove all properties of **dnsServers**: after selecting **Edit template** from the Azure quickstart template page, search for "dnsServers" and remove the property. 
 
-            For example, here's one example, before removing the **dnsServers** property:
+            For example, before removing the **dnsServers** property:
       
             ![Azure quickstart template with dnsSettings property](media/rds-remove-dnssettings-before.png)
 
@@ -71,8 +71,3 @@ Use the following steps to deploy Azure AD DS and RDS.
    
    - [Deploy RDS manually](rds-deploy-infrastructure.md). 
 
-## Known issues
-Implementing Azure AD DS to replace Windows Server Active Directory for your RDS deployment eases ongoing management for your domain, but there are a few known issues:
-
-- You'll get errors and warnings when you configure the RD licensing server. You can ignore these, but you *will* have to use an alternate method to track license compliance. (You can track logon events, connections made through the RD Gateway, or connections through the RD Connection Broker.) 
-- Your users will get warnings when they connect to a full desktop. They, and you, can ignore these - despite the warnings, your users won't lose their connection to the session.

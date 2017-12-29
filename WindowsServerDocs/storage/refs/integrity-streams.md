@@ -12,7 +12,7 @@ ms.assetid: 1f1215cd-404f-42f2-b55f-3888294d8a1f
 ---
 
 # ReFS integrity streams
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10
 
 Integrity streams is an optional feature in ReFS that validates and maintains data integrity using checksums. While ReFS always uses checksums for metadata, ReFS doesn't, by default, generate or validate checksums for file data. Integrity streams is an optional feature that allows users to utilize checksums for file data. When integrity streams are enabled, ReFS can clearly determine if data is valid or corrupt. Additionally, ReFS and Storage Spaces can jointly correct corrupt metadata and data automatically.
 
@@ -22,7 +22,7 @@ Integrity streams can be enabled for individual files, directories, or the entir
 
 Once integrity streams is enabled, ReFS will create and maintain a checksum for the specified file(s) in that file's metadata. This checksum allows ReFS to validate the integrity of the data before accessing it. Before returning any data that has integrity streams enabled, ReFS will first calculate its checksum:
 
-<img src=media/compute-checksum.gif alt="Compute checksum for file data"/>
+![Compute checksum for file data](media/compute-checksum.gif)
 
 Then, this checksum is compared to the checksum contained in the file metadata. If the checksums match, then the data is marked as valid and returned to the user. If the checksums don't match, then the data is corrupt. The resiliency of the volume determines how ReFS responds to corruptions:
 
@@ -33,7 +33,7 @@ Then, this checksum is compared to the checksum contained in the file metadata. 
 
 ReFS will record all corruptions in the System Event Log, and the log will reflect whether the corruptions were fixed. 
 
-<img src=media/corrective-write.gif alt="Corrective write restores data integrity."/>
+![Corrective write restores data integrity](media/corrective-write.gif)
 
 ## Performance 
 

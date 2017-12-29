@@ -16,7 +16,7 @@ manager: scottman
 ---
 # Upgrading your Remote Desktop Virtualization Host to Windows Server 2016
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 ## Supported OS upgrades with RDS role installed
 Upgrades to Windows Server 2016 are supported only from Windows Server 2012 R2 and Windows Server 2016 TP5.

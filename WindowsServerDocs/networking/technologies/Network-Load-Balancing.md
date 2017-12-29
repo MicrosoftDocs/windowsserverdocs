@@ -11,7 +11,7 @@ author: jamesmci
 ---
 # Network Load Balancing
 
->Applies To:  Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This topic provides an overview of the Network Load Balancing \(NLB\) feature in Windows Server 2016, and includes links to additional guidance about creating, configuring, and managing NLB clusters.
 
@@ -147,8 +147,8 @@ The following table provides links to additional information about the NLB featu
   
 |Content type|References|  
 |----------------|--------------|  
-|Deployment|[Network Load Balancing Deployment Guide](http://technet.microsoft.com/library/cc754833(WS.10).aspx) &#124; [Configuring Network Load Balancing with Terminal Services](http://technet.microsoft.com/library/cc771300(v=WS.10).aspx)|  
-|Operations|[Managing Network Load Balancing Clusters](http://technet.microsoft.com/library/cc753954(WS.10).aspx) &#124; [Setting Network Load Balancing Parameters](http://technet.microsoft.com/library/cc731619(WS.10).aspx) &#124; [Controlling Hosts on Network Load Balancing Clusters](http://technet.microsoft.com/library/cc770870(WS.10).aspx)|  
-|Troubleshooting|[Troubleshooting Network Load Balancing Clusters](http://technet.microsoft.com/library/cc732592(WS.10).aspx) &#124; [NLB Cluster Events and Errors](http://technet.microsoft.com/library/cc731678(WS.10).aspx)|
-|Tools and settings|[Network Load Balancing Windows PowerShell cmdlets](http://go.microsoft.com/fwlink/p/?LinkId=238123)|
-|Community resources|[High Availability \(Clustering\) Forum](http://go.microsoft.com/fwlink/p/?LinkId=230641)
+|Deployment|[Network Load Balancing Deployment Guide](https://technet.microsoft.com/library/cc754833(WS.10).aspx) &#124; [Configuring Network Load Balancing with Terminal Services](https://technet.microsoft.com/library/cc771300(v=WS.10).aspx)|  
+|Operations|[Managing Network Load Balancing Clusters](https://technet.microsoft.com/library/cc753954(WS.10).aspx) &#124; [Setting Network Load Balancing Parameters](https://technet.microsoft.com/library/cc731619(WS.10).aspx) &#124; [Controlling Hosts on Network Load Balancing Clusters](https://technet.microsoft.com/library/cc770870(WS.10).aspx)|  
+|Troubleshooting|[Troubleshooting Network Load Balancing Clusters](https://technet.microsoft.com/library/cc732592(WS.10).aspx) &#124; [NLB Cluster Events and Errors](https://technet.microsoft.com/library/cc731678(WS.10).aspx)|
+|Tools and settings|[Network Load Balancing Windows PowerShell cmdlets](https://go.microsoft.com/fwlink/p/?LinkId=238123)|
+|Community resources|[High Availability \(Clustering\) Forum](https://go.microsoft.com/fwlink/p/?LinkId=230641)

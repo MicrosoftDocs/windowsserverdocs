@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # Step 3 Plan the Multisite Deployment
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 After planning the multisite infrastructure, plan any additional certificate requirements, how client computers select entry points, and IPv6 addresses assigned in your deployment.  
 
@@ -104,7 +104,7 @@ In a multisite deployment, you can additionally configure a global server load b
   
 3.  If the client computer is behind a web proxy (and cannot use DNS resolution), or if the global server load balancer FQDN does not resolve to any configured global server load balancer IP address, then an entry point will be selected automatically using an HTTPS probe to the IP-HTTPS URLs of all entry points. The client will connect to server that responds first.  
   
-For a list of global server load balancing devices that support Remote Access, go to the Find a Partner page at [Microsoft Server and Cloud Platform](http://www.microsoft.com/server-cloud/).  
+For a list of global server load balancing devices that support Remote Access, go to the Find a Partner page at [Microsoft Server and Cloud Platform](https://www.microsoft.com/server-cloud/).  
   
 ## <a name="bkmk_3_5_EP_Selection"></a>3.5 Plan DirectAccess client entry point selection  
 When you configure a multisite deployment, by default, Windows 10 and Windows 8 client computers are configured with the information required to connect to all entry points in the deployment and to automatically connect to a single entry point based on a selection algorithm. You can also configure your deployment to allow Windows 10 and Windows 8 client computers to manually select the entry point to which they will connect. If a Windows 10 or Windows 8 client computer is currently connected to the United States entry point and automatic entry point selection is enabled, if the United States entry point becomes unreachable, after a few minutes the client computer will attempt to connect through the Europe entry point. Using automatic entry point selection is recommended; however, allowing manual entry point selection enables end users to connect to a different entry point based on current network conditions. For example, if a computer is connected to the United States entry point and the connection to the internal network becomes much slower than expected. In this situation, the end user can manually select to connect to the Europe entry point to improve the connection to the internal network.  
@@ -255,7 +255,7 @@ The transition from an IPv4-only to an IPv6-only corporate network cannot be don
   
 When you have completed the transition, you can uninstall the first DirectAccess deployment. When uninstalling, the following issues may occur:  
   
--   If the deployment was configured to support only clients on mobile computers, the WMI filter will be deleted. If the client security groups of the second deployment include desktop computers, the DirectAccess client GPO will not filter desktop computers and may cause issues on them. If a mobile computers filter is needed, recreate it by following the instructions on [Create WMI Filters for the GPO](http://technet.microsoft.com/library/cc947846.aspx).  
+-   If the deployment was configured to support only clients on mobile computers, the WMI filter will be deleted. If the client security groups of the second deployment include desktop computers, the DirectAccess client GPO will not filter desktop computers and may cause issues on them. If a mobile computers filter is needed, recreate it by following the instructions on [Create WMI Filters for the GPO](https://technet.microsoft.com/library/cc947846.aspx).  
   
 -   If both deployments were originally created on the same Active Directory domain, the DNS probe entry which points to localhost will be deleted and may cause client connectivity issues. For example, clients may connect using IP-HTTPS rather than Teredo, or switch between DirectAccess multisite entry points. In this case, you must add the following DNS entry to the corporate DNS:  
   

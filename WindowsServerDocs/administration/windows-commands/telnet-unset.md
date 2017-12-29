@@ -12,11 +12,11 @@ ms.assetid: da9a0d99-1930-4858-93c7-0e9c3797ee09 vhorne
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # telnet: unset
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Turns off previously set options.   
 ## Syntax  

@@ -12,11 +12,11 @@ ms.assetid: b7111f7f-4162-4d1a-8e53-d766db0ede1f britw
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # logman update trace
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Update the properties of an existing event trace data collector.  
   

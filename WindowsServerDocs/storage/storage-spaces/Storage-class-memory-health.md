@@ -8,6 +8,7 @@ ms.technology: storage-spaces
 ms.topic: article
 author: JasonGerend
 ms.date: 08/24/2016
+ms.localizationpriority: low
 ---
 # Storage-class Memory (NVDIMM-N) Health Management in Windows
 > Applies To: Windows Server 2016, Windows 10 (version 1607)
@@ -23,7 +24,7 @@ JEDEC-compliant NVDIMM-N storage-class memory devices are supported in Windows w
 
 All conditions listed here are expected to be very rare occurrences, but depend on the conditions in which the hardware is used.
 
-The various cases below may refer to Storage Spaces configurations. The particular configuration of interest is one where two NVDIMM-N devices are utilized as a mirrored write-back cache in a storage space. To set up such a configuration, see [Configuring Storage Spaces with a NVDIMM-N write-back cache](http://msdn.microsoft.com/library/mt650885.aspx).
+The various cases below may refer to Storage Spaces configurations. The particular configuration of interest is one where two NVDIMM-N devices are utilized as a mirrored write-back cache in a storage space. To set up such a configuration, see [Configuring Storage Spaces with a NVDIMM-N write-back cache](https://msdn.microsoft.com/library/mt650885.aspx).
 
 In Windows Server 2016, the Storage Spaces GUI shows NVDIMM-N bus type as UNKNOWN. It doesn't have any fuctionality loss or inability in creation of Pool, Storage VD. You can verify the bus type by running the following command:
 
@@ -45,6 +46,9 @@ Doing so yields this example output:
 |---|---|---|---|
 |802c-01-1602-117cb5fc|Healthy|OK||
 |802c-01-1602-117cb64f|Warning|Predictive Failure|{Threshold Exceeded,NVDIMM\_N Error}|
+
+> [!NOTE]
+> To find the Physical location of an NVDIMM-N device specified in an event, on the **Details** tab of the event in Event Viewer, go to **EventData** > **Location**. Note that Windows Server 2016 lists the incorrect location NVDIMM-N devices, but this is fixed in Windows Server, version 1709.
 
 For help understanding the various health conditions, see the following sections.
 
@@ -135,3 +139,5 @@ Interleaved sets can often be created in a platform's BIOS to make multiple NVDI
 Windows Server 2016 and Windows 10 Anniversary Edition do not support interleaved sets of NVDIMM-Ns.
 
 At the time of this writing, there is no mechanism for the host operating system to correctly identify individual NVDIMM-Ns in such a set and clearly communicate to the user which particular device may have caused an error or needs to be serviced.
+
+

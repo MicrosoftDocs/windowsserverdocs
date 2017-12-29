@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Protected Users Security Group
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This topic for the IT professional describes the Active Directory security group Protected Users, and explains how it works. This group was introduced in  Windows Server 2012 R2 domain controllers.
 
@@ -51,7 +51,7 @@ Domain controllers that run an operating system earlier than Windows Server 2012
 > [!Note]
 > The domain controllers will not support domain protections. 
 
-Protected Users group can be created by [transferring the primary domain controller (PDC) emulator role](http://technet.microsoft.com/library/cc816944(v=ws.10).aspx) to a domain controller that runs Windows Server 2012 R2. After that group object is replicated to other domain controllers, the PDC emulator role can be hosted on a domain controller that runs an earlier version of Windows Server.
+Protected Users group can be created by [transferring the primary domain controller (PDC) emulator role](https://technet.microsoft.com/library/cc816944(v=ws.10).aspx) to a domain controller that runs Windows Server 2012 R2. After that group object is replicated to other domain controllers, the PDC emulator role can be hosted on a domain controller that runs an earlier version of Windows Server.
 
 ### <a name="BKMK_ADgroup"></a>Protected Users group AD properties
 

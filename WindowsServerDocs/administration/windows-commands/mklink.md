@@ -12,7 +12,7 @@ ms.assetid: 0ce4df22-2dbc-48fc-9c16-b721ae85f857
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # mklink

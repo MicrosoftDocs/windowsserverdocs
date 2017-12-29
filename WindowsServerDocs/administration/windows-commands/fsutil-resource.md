@@ -8,10 +8,10 @@ author: toklima
 ms.technology: storage
 audience: "IT Pro"
 ms.topic: article
-ms.date: 11/07/2016
+ms.date: 10/16/2017
 ---
 # Fsutil resource
->Applies To: Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows 2008, Windows Vista
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows 2008, Windows Vista
 
 Creates a Secondary Transactional Resource Manager, starts or stops a Transactional Resource Manager, or displays information about a Transactional Resource Manager and modifies the following behavior:
 
@@ -86,6 +86,6 @@ fsutil resource setautoreset true c:\
 
 [Fsutil](Fsutil.md)
 
-[Transactional NTFS](http://go.microsoft.com/fwlink/?LinkID=165402)
+[Transactional NTFS](https://go.microsoft.com/fwlink/?LinkID=165402)
 
 

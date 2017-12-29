@@ -12,12 +12,12 @@ ms.assetid: 93cb93c9-666f-4c74-814b-1c404a949935
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # Set verbose
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Specifies whether verbose output is provided during shadow copy creation. If used without parameters, **set verbose** displays help at the command prompt.
 

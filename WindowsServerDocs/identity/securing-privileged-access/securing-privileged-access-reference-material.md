@@ -130,7 +130,7 @@ The source of the software should be validated through one of the following mean
 
         `certutil -hashfile <filename>`
 
-When possible, all application software, such as application installers and tools should be digitally signed and verified using Windows Authenticode with the [Windows Sysinternal](http://www.microsoft.com/sysinternals)s tool, *sigcheck.exe*, with revocation checking. Some software may be required where the vendor may not provide this type of digital signature.
+When possible, all application software, such as application installers and tools should be digitally signed and verified using Windows Authenticode with the [Windows Sysinternal](https://www.microsoft.com/sysinternals)s tool, *sigcheck.exe*, with revocation checking. Some software may be required where the vendor may not provide this type of digital signature.
 
 #### Software storage and transfer
 After obtaining the software, it should be stored in a location that is protected from modification, especially by internet-connected hosts or personnel trusted at a lower level than the systems where the software or operating system will be installed. This storage can be physical media or a secure electronic location.
@@ -391,7 +391,7 @@ Ensure that the following practices are applied for this scenario:
 
 -   **Remote server support** - When remotely accessing a server, Tier 1 administrators must follow these guidelines:
 
-    -   **Primary (tool)** - Remote tools that use network logons (type 3). For more information, see [Mitigating Pass-the-Hash and Other Credential Theft](http://www.microsoft.com/pth) v1 (pp 42-47).
+    -   **Primary (tool)** - Remote tools that use network logons (type 3). For more information, see [Mitigating Pass-the-Hash and Other Credential Theft](https://www.microsoft.com/pth) v1 (pp 42-47).
 
     -   **Primary (interactive)** - Use RDP RestrictedAdmin from an admin workstation with a domain account that uses permissions obtained just-in-time from a privileged access management solution.
 
@@ -422,7 +422,7 @@ Help Desk and user support organizations perform support for end users (which do
 
 -   **Remote user support** - The Tier 2 support personnel is physically remote to the user.
 
-    -   **Primary** - Remote Assistance, Skype for Business, or similar user-screen sharing may be used. For more information, see [What is Windows Remote Assistance?](http://windows.microsoft.com/en-us/windows/what-is-windows-remote-assistance)
+    -   **Primary** - Remote Assistance, Skype for Business, or similar user-screen sharing may be used. For more information, see [What is Windows Remote Assistance?](https://windows.microsoft.com/en-us/windows/what-is-windows-remote-assistance)
 
     -   **Forbidden** - Logging on with domain account administrative credentials is not allowed in this scenario. Switch to workstation support if administrative privileges are required.
 
@@ -549,13 +549,13 @@ An administrative forest design should include the following considerations:
 
     -   Granting rights to administer domain controllers and delegate permissions requires adding admin forest accounts to the BUILTIN\Administrators domain local group. This is because the Domain Admins global group cannot have members from an external domain.
 
-    -   One caveat to using this group to grant rights is that they won't have administrative access to new group policy objects by default. This can be changed by following the procedure in [this knowledge base article](http://support.microsoft.com/kb/321476) to change the schema default permissions.
+    -   One caveat to using this group to grant rights is that they won't have administrative access to new group policy objects by default. This can be changed by following the procedure in [this knowledge base article](https://support.microsoft.com/kb/321476) to change the schema default permissions.
 
     -   Accounts in the admin forest that are used to administer the production environment should not be granted administrative privileges to the admin forest, domains in it, or workstations in it.
 
     -   Administrative privileges over the admin forest should be tightly controlled by an offline process to reduce the opportunity for an attacker or malicious insider to erase audit logs. This also helps ensure that personnel with production admin accounts cannot relax the restrictions on their accounts and increase risk to the organization.
 
-    -   The administrative forest should follow the Microsoft Security Compliance Manager (SCM) configurations for the domain, including strong configurations for authentication protocols.
+    -   The administrative forest should follow the Microsoft Security Compliance Baseline (SCB) configurations for the domain, including strong configurations for authentication protocols.
 
     -   All admin forest hosts should be automatically updated with security updates. While this may create risk of interrupting domain controller maintenance operations, it provides a significant mitigation of security risk of unpatched vulnerabilities.
 
@@ -578,7 +578,7 @@ An administrative forest design should include the following considerations:
     -   Security Baselines should be used as starting configurations.
 
         > [!NOTE]
-        > Customers can use the Microsoft Security Compliance Manager (SCM) for configuring the baselines on the administrative hosts.
+        > Customers can use the Microsoft Security Compliance Toolkit (SCT) for configuring the baselines on the administrative hosts.
 
     -   Secure Boot to mitigate against attackers or malware attempting to load unsigned code into the boot process.
 
@@ -620,7 +620,7 @@ An administrative forest design should include the following considerations:
 For more information engaging about Microsoft services to design and deploy an ESAE for your environment, see [this page](https://www.microsoft.com/services).
 
 ## <a name="T0E_BM"></a>Tier 0 Equivalency
-Most organizations control membership to powerful Tier 0 Active Directory groups like Administrators, Domain Admins, and Enterprise Admins.  Many organizations overlook the risk of other groups that are effectively equivalent in privilege in a typical active directory environment. These groups are offer a relatively easy escalation path for an attacker to the same explicit Tier 0 privileges using various different attack methods.
+Most organizations control membership to powerful Tier 0 Active Directory groups like Administrators, Domain Admins, and Enterprise Admins.  Many organizations overlook the risk of other groups that are effectively equivalent in privilege in a typical active directory environment. These groups offer a relatively easy escalation path for an attacker to the same explicit Tier 0 privileges using various different attack methods.
 
 As an example, a server operator could gain access to a backup media of a domain controller and extract all the credentials from the files in that media and use them to escalate privileges.
 
@@ -649,6 +649,8 @@ Organizations should control and monitor membership in all of the Tier 0 groups 
 -   Group Policy Creators Owners
 
 -   Cryptographic Operators
+
+-   Distributed COM Users
 
 -   Other Delegated Groups
 
@@ -709,7 +711,7 @@ The symbols in this table defined as follows:
 
 -   (v) denotes when credentials are exposed.
 
-For management applications that are not in this table, you can determine the logon type from the logon type field in the audit logon events. For more information, see [Audit logon events](http://technet.microsoft.com/en-us/library/cc787567(v=ws.10).aspx).
+For management applications that are not in this table, you can determine the logon type from the logon type field in the audit logon events. For more information, see [Audit logon events](https://technet.microsoft.com/en-us/library/cc787567(v=ws.10).aspx).
 
 In Windows-based computers, all authentications are processed as one of several logon types, regardless of which authentication protocol or authenticator is used. This table includes most common logon types and their attributes relative to credential theft:
 
@@ -736,4 +738,4 @@ Column definitions:
 -   **Examples** list common scenarios in which the logon type is used.
 
 > [!NOTE]
-> For more information about Logon Types, see [SECURITY_LOGON_TYPE enumeration](http://technet.microsoft.com/en-us/library/aa380129(VS.85).aspx).
+> For more information about Logon Types, see [SECURITY_LOGON_TYPE enumeration](https://technet.microsoft.com/en-us/library/aa380129(VS.85).aspx).

@@ -7,14 +7,18 @@ ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: eldenchristensen
-ms.date: 05/23/2017
+ms.date: 11/27/2017
+ms.localizationpriority: medium
 ---
 # Storage Spaces Direct hardware requirements
->Applies To: Windows Server 2016
 
-This topic describes minimum hardware requirements for testing Storage Spaces Direct. For production environments we recommend acquiring a *Windows Server Software-Defined* hardware/software offering, which includes production deployment tools and procedures. These offerings are designed, assembled, and validated to meet Microsoft's requirements for private cloud environments, helping ensure reliable operation. Windows Server Software-Defined offerings are available are our partner websites.  More information about the program and links to our partner websites can be found at: [Windows Server Software Defined](Https://www.microsoft.com/en-us/cloud-platform/software-defined-datacenter).
+>Applies to: Windows Server 2016
 
-If you would like to evaluate Storage Spaces Direct in Windows Server 2016 without investing in hardware, you can use Hyper-V virtual machines, as described in [Testing Storage Spaces Direct using Windows Server 2016 virtual machines](http://blogs.msdn.com/b/clustering/archive/2015/05/27/10617612.aspx).
+This topic describes minimum hardware requirements for Storage Spaces Direct.
+
+For production environments we recommend acquiring a [Windows Server Software-Defined](https://microsoft.com/wssd) hardware/software offering, which includes production deployment tools and procedures. These offerings are designed, assembled, and validated to meet Microsoft's requirements for private cloud environments, helping ensure reliable operation. Windows Server Software-Defined offerings are available through our partners' websites. Learn more at [https://microsoft.com/wssd](https://microsoft.com/wssd).
+
+If you would like to evaluate Storage Spaces Direct without investing in hardware, you can use Hyper-V virtual machines, as described in [Using Storage Spaces Direct in guest virtual machine clusters](storage-spaces-direct-in-vm.md).
 
 ## Basic requirements
 
@@ -29,11 +33,11 @@ In addition, the following requirements apply.
 ### Servers
 
 - Minimum of 2 servers, maximum of 16 servers
-- All servers should be the same make and model
+- Recommended that all servers be the same make and model
 
 ### CPU
 
-- Minimum of Intel Nehalem or later compatible processor
+- Minimum of Intel Nehalem or later compatible processor, or AMD EPYC or later compatible processor
 
 ### Memory
 
@@ -62,6 +66,9 @@ For more help choosing drives, see the [Choosing drives](choosing-drives.md) top
 - Use a separate, dedicated drive or RAID 1 mirror for Windows Server (200 GB is a recommended minimum size).
 - **Not supported:** Multi-path IO (MPIO) or physically connecting drives via multiple paths.
 
+> [!NOTE]
+> Microsoft has a critical product advisory for Storage Spaces Direct customers using the Intel P3x00 family of NVMe devices (all capacities of the P3500, P3600, P3700). See Knowledge Base article [4052341](https://support.microsoft.com/help/4052341) for more information.
+
 #### Minimum number of drives
 
 - If there are drives used as cache, there must be at least 2 per server
@@ -77,7 +84,7 @@ For more help choosing drives, see the [Choosing drives](choosing-drives.md) top
 | NVMe + SSD + HDD      | 2 NVMe + 4 Others       |
 
    >[!NOTE]
-   >  This table provides the minimum number of drives required for bare-metal deployments. If you're deploying Storage Spaces Direct using virtual machines and virtualized storage, such as [in Azure](https://blogs.technet.microsoft.com/filecab/2016/05/05/s2dazuretp5/), this requirement is waived because your "drives" aren't expected to ever fail. In this case, the requirement is just two "drives" per server. In Azure, we recommend using [premium data disks](https://azure.microsoft.com//documentation/articles/storage-premium-storage/) for better performance. 
+   >  This table provides the minimum number of drives required for bare-metal deployments. If you're deploying Storage Spaces Direct using virtual machines and virtualized storage, such as in Microsoft Azure, see [Using Storage Spaces Direct in guest virtual machine clusters](storage-spaces-direct-in-vm.md).
 
 #### Maximum
 

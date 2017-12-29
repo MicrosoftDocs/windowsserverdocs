@@ -13,11 +13,11 @@ ms.assetid: 3a30304f-655e-43d2-a4ac-7568abf8975c
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # ipxroute
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Displays and modifies information about the routing tables used by the IPX protocol. Used without parameters,  **ipxroute** displays the default settings for packets that are sent to unknown, broadcast, and multicast addresses.   
 ## Syntax  

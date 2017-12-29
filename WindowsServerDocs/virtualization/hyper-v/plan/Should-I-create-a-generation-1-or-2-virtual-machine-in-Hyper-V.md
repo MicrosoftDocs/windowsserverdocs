@@ -18,7 +18,7 @@ ms.date: 12/05/2016
 
 Your choice to create a generation 1 or generation 2 virtual machine depends on which guest operating system you want to install and the boot method you want to use to deploy the virtual machine. We recommend that you create a generation 2 virtual machine to take advantage of features like Secure Boot unless one of the following statements is true:  
 
--   The VHD you want to boot from is not [UEFI-compatible](http://technet.microsoft.com/library/hh824898.aspx).  
+-   The VHD you want to boot from is not [UEFI-compatible](https://technet.microsoft.com/library/hh824898.aspx).  
 
 -   You [plan to move your virtual machine to Azure](https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-questions/).  
 
@@ -77,7 +77,7 @@ The following table shows which versions of Red Hat Enterprise Linux \(RHEL\) an
 |Operating system versions|Generation 1|Generation 2|  
 |-----------------------------|----------------|----------------|  
 |RHEL/CentOS 7.x series|&#10004;|&#10004;|  
-|RHEL/CentOS 6.x series|&#10004;| &#10006;|  
+|RHEL/CentOS 6.x series|&#10004;|&#10004;</br>**Note:** Only supported on Windows Server 2016 and above.|  
 |RHEL/CentOS 5.x series|&#10004;| &#10006;|  
 
 For more information, see [CentOS and Red Hat Enterprise Linux virtual machines on Hyper-V](../Supported-CentOS-and-Red-Hat-Enterprise-Linux-virtual-machines-on-Hyper-V.md).  
@@ -188,7 +188,7 @@ The following table compares the devices available between generation 1 and gene
 Here are some additional tips about using generation 2 virtual machines.
 ###  Attach or add a DVD drive
 
-- You can't attach a physical CD or DVD drive to a generation 2 virtual machine. The virtual DVD drive in generation 2 virtual machines only supports ISO image files. To create an ISO image file of a Windows environment, you can use the Oscdimg  command line tool. For more information, see [Oscdimg Command-Line Options](http://msdn.microsoft.com/library/hh824847.aspx).
+- You can't attach a physical CD or DVD drive to a generation 2 virtual machine. The virtual DVD drive in generation 2 virtual machines only supports ISO image files. To create an ISO image file of a Windows environment, you can use the Oscdimg  command line tool. For more information, see [Oscdimg Command-Line Options](https://msdn.microsoft.com/library/hh824847.aspx).
 - When you create a new virtual machine with the New-VM Windows PowerShell cmdlet, the generation 2 virtual machine doesn't have a DVD drive. You can add a DVD drive while the virtual machine is running.
 
 ###  Use UEFI firmware

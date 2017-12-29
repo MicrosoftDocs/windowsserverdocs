@@ -12,11 +12,11 @@ ms.assetid: 4da95297-c593-427b-9f76-2f389c46cbf4
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # makecab
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Package existing files into a cabinet (.cab) file.
 ## Syntax
@@ -35,7 +35,7 @@ makecab [/v[<n>]] [/d var=<value> ...] /f <directives_file> [...]
 |/v[<n>]|Set debugging verbosity level (0=none,...,3=full).|
 |/?|Displays help at the command prompt.|
 ## remarks
--   Refer to [Microsoft Cabinet format](http://go.microsoft.com/fwlink/?LinkId=226852) on MSDN for information on directive_file.
+-   Refer to [Microsoft Cabinet format](https://go.microsoft.com/fwlink/?LinkId=226852) on MSDN for information on directive_file.
 
 ## additional references
 -   [Command-Line Syntax Key](command-line-syntax-key.md)

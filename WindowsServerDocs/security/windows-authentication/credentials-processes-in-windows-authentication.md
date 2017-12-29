@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Credentials Processes in Windows Authentication
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This reference topic for the IT professional describes how Windows authentication processes credentials.
 
@@ -78,7 +78,7 @@ The following diagram shows the credential process for Windows Server 2003, Micr
 
 **Credential provider architecture**
 
-The credential provider architecture applies to those versions designated in the **Applies To** list at the beginning of this topic. In these systems, the credentials input architecture changed to an extensible design by using credential providers. These providers are represented by the different logon tiles on the secure desktop that permit any number of logon scenarios???different accounts for the same user and different authentication methods, such as password, smart card, and biometrics.
+The credential provider architecture applies to those versions designated in the **Applies To** list at the beginning of this topic. In these systems, the credentials input architecture changed to an extensible design by using credential providers. These providers are represented by the different logon tiles on the secure desktop that permit any number of logon scenarios - different accounts for the same user and different authentication methods, such as password, smart card, and biometrics.
 
 With the credential provider architecture, Winlogon always starts Logon UI after it receives a secure attention sequence event. Logon UI queries each credential provider for the number of different credential types the provider is configured to enumerate. Credential providers have the option of specifying one of these tiles as the default. After all providers have enumerated their tiles, Logon UI displays them to the user. The user interacts with a tile to supply their credentials. Logon UI submits these credentials for authentication.
 
@@ -92,7 +92,7 @@ Credential providers are registered on the computer and are responsible for the 
 
 -   Packaging credentials for interactive and network logon.
 
-Packaging credentials for interactive and network logon includes the process of serialization. By serializing credentials multiple logon tiles can be displayed on the logon UI. Therefore, your organization can control the logon display'such as users, target systems for logon, pre-logon access to the network and workstation lock/unlock policies???through the use of customized credential providers. Multiple credential providers can co-exist on the same computer.
+Packaging credentials for interactive and network logon includes the process of serialization. By serializing credentials multiple logon tiles can be displayed on the logon UI. Therefore, your organization can control the logon display such as users, target systems for logon, pre-logon access to the network and workstation lock/unlock policies - through the use of customized credential providers. Multiple credential providers can co-exist on the same computer.
 
 Single sign-on (SSO) providers can be developed as a standard credential provider or as a Pre-Logon-Access Provider.
 
@@ -159,7 +159,7 @@ Applications can run in user mode where the application can run as any principal
 
 SSPI is available through the Secur32.dll module, which is an API used for obtaining integrated security services for authentication, message integrity, and message privacy. It provides an abstraction layer between application-level protocols and security protocols. Because different applications require different ways of identifying or authenticating users and different ways of encrypting data as it travels across a network, SSPI provides a way to access dynamic-link libraries (DLLs) that contain different authentication and cryptographic functions. These DLLs are called Security Support Providers (SSPs).
 
-Managed service accounts and virtual accounts were introduced in  Windows Server 2008 R2  and  Windows 7  to provide crucial applications, such as Microsoft SQL Server and Internet Information Services (IIS), with the isolation of their own domain accounts, while eliminating the need for an administrator to manually administer the service principal name (SPN) and credentials for these accounts. For more information about these features and their role in authentication, see [Managed Service Accounts Documentation for Windows 7 and Windows Server 2008 R2](http://technet.microsoft.com/library/ff641731(v=ws.10).aspx) and [Group Managed Service Accounts Overview](../group-managed-service-accounts/group-managed-service-accounts-overview.md).
+Managed service accounts and virtual accounts were introduced in  Windows Server 2008 R2  and  Windows 7  to provide crucial applications, such as Microsoft SQL Server and Internet Information Services (IIS), with the isolation of their own domain accounts, while eliminating the need for an administrator to manually administer the service principal name (SPN) and credentials for these accounts. For more information about these features and their role in authentication, see [Managed Service Accounts Documentation for Windows 7 and Windows Server 2008 R2](https://technet.microsoft.com/library/ff641731(v=ws.10).aspx) and [Group Managed Service Accounts Overview](../group-managed-service-accounts/group-managed-service-accounts-overview.md).
 
 **Services and kernel mode**
 
@@ -253,7 +253,7 @@ On restart, the user is automatically signed in via the Autologon mechanism, and
 For more information about ARSO, see [Winlogon Automatic Restart Sign-On &#40;ARSO&#41;](winlogon-automatic-restart-sign-on-arso.md).
 
 ### Stored user names and passwords in Windows Vista and Windows XP
-In  Windows Server 2008 , Windows Server 2003, Windows Vista, and Windows XP, **Stored User Names and Passwords** in Control Panel simplifies the management and use of multiple sets of logon credentials, including X.509 certificates used with smart cards and Windows Live credentials (now called Microsoft account). The credentials???part of the user's profile???are stored until needed. This action can increase security on a per-resource basis by ensuring that if one password is compromised, it does not compromise all security.
+In  Windows Server 2008 , Windows Server 2003, Windows Vista, and Windows XP, **Stored User Names and Passwords** in Control Panel simplifies the management and use of multiple sets of logon credentials, including X.509 certificates used with smart cards and Windows Live credentials (now called Microsoft account). The credentials - part of the user's profile - are stored until needed. This action can increase security on a per-resource basis by ensuring that if one password is compromised, it does not compromise all security.
 
 After a user logs on and attempts to access additional password-protected resources, such as a share on a server, and if the user's default logon credentials are not sufficient to gain access, **Stored User Names and Passwords** is queried. If alternate credentials with the correct logon information have been saved in **Stored User Names and Passwords**, these credentials are used to gain access. Otherwise, the user is prompted to supply new credentials, which can then be saved for reuse, either later in the logon session or during a subsequent session.
 
@@ -277,7 +277,7 @@ The next time the service is used, Credential Manager automatically supplies the
 ## <a name="BKMK_SAM"></a>Security Accounts Manager database
 The Security Accounts Manager (SAM) is a database that stores local user accounts and groups. It is present in every Windows operating system; however, when a computer is joined to a domain, Active Directory manages domain accounts in Active Directory domains.
 
-For example, client computers running a Windows operating system participate in a network domain by communicating with a domain controller even when no human user is logged on. To initiate communications, the computer must have an active account in the domain. Before accepting communications from the computer, the LSA on the domain controller authenticates the computer's identity and then constructs the computer's security context just as it does for a human security principal. This security context defines the identity and capabilities of a user or service on a particular computer or a user, service, or computer on a network. For example, the access token contained within the security context defines the resources (such as a file share or printer) that can be accessed and the actions (such as Read, Write, or Modify) that can be performed by that principal???a user, computer, or service on that resource.
+For example, client computers running a Windows operating system participate in a network domain by communicating with a domain controller even when no human user is logged on. To initiate communications, the computer must have an active account in the domain. Before accepting communications from the computer, the LSA on the domain controller authenticates the computer's identity and then constructs the computer's security context just as it does for a human security principal. This security context defines the identity and capabilities of a user or service on a particular computer or a user, service, or computer on a network. For example, the access token contained within the security context defines the resources (such as a file share or printer) that can be accessed and the actions (such as Read, Write, or Modify) that can be performed by that principal - a user, computer, or service on that resource.
 
 The security context of a user or computer can vary from one computer to another, such as when a user logs on to a server or a workstation other than the user's own primary workstation. It can also vary from one session to another, such as when an administrator modifies the user's rights and permissions. In addition, the security context is usually different when a user or computer is operating on a stand-alone basis, in a network, or as part of an Active Directory domain.
 
@@ -316,7 +316,7 @@ Virtual smart card technology was introduced in Windows 8. It stores the smart c
 
 Remote and wireless network authentication is another technology that uses certificates for authentication. The Internet Authentication Service (IAS) and virtual private network servers use Extensible Authentication Protocol-Transport Level Security (EAP-TLS), Protected Extensible Authentication Protocol (PEAP), or Internet Protocol security (IPsec) to perform certificate-based authentication for many types of network access, including virtual private network (VPN) and wireless connections.
 
-For information about certificate-based authentication in networking, see [Network access authentication and certificates](http://technet.microsoft.com/library/cc759575(WS.10).aspx).
+For information about certificate-based authentication in networking, see [Network access authentication and certificates](https://technet.microsoft.com/library/cc759575(WS.10).aspx).
 
 ## <a name="BKMK_SeeAlso"></a>See also
 [Windows Authentication Concepts](https://technet.microsoft.com/library/d169018.aspx)

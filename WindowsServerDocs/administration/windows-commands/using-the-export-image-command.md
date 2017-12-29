@@ -12,11 +12,11 @@ ms.assetid: a9b8b467-0f2d-4754-8998-55503a262778
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # Using the Export-Image Command
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Exports an existing image from the image store to another Windows Image (.wim) file.
 ## Syntax

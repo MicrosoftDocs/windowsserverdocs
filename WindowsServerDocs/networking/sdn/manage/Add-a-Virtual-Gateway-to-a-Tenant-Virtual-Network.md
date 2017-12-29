@@ -15,7 +15,7 @@ author: jamesmci
 ---
 # Add a Virtual Gateway to a Tenant Virtual Network
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use this topic to learn how to configure tenant Virtual Gateways, using Windows PowerShell cmdlets and scripts, to provide your tenants' Virtual Networks with site-to-site connectivity to their organization sites and to the Internet.   
   
@@ -75,7 +75,7 @@ $Vnet = Get-NetworkControllerVirtualNetwork -ConnectionUri $uri  -ResourceId "Co
 $Vnet | ConvertTo-Json -Depth 4   
   
 # Retrieve the Tenant Virtual Subnet configuration  
-$RoutingSubnet = Get-NetworkControllerVirtualSubnet -ConnectionUri $uri  -ResourceId "Contoso_WebTier"   
+$RoutingSubnet = Get-NetworkControllerVirtualSubnet -ConnectionUri $uri  -ResourceId "Contoso_WebTier" -VirtualNetworkID $vnet.ResourceId   
   
 # Display in JSON format  
 $RoutingSubnet | ConvertTo-Json -Depth 4   
@@ -216,7 +216,7 @@ $logicalsubnet.ResourceId = "Contoso_L3_Subnet"
 $logicalsubnet.Properties = New-Object Microsoft.Windows.NetworkController.LogicalSubnetProperties  
 $logicalsubnet.Properties.VlanID = 1001  
 $logicalsubnet.Properties.AddressPrefix = "10.127.134.0/25"  
-$logicalsubnet.Properties.DefaultGateway = "10.127.134.1"  
+$logicalsubnet.Properties.DefaultGateways = "10.127.134.1"  
   
 $lnProperties.Subnets += $logicalsubnet  
   

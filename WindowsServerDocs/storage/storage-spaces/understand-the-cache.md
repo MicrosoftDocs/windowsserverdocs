@@ -8,6 +8,7 @@ ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
 ms.date: 07/18/2017
+ms.localizationpriority: medium
 ---
 # Understanding the cache in Storage Spaces Direct
 

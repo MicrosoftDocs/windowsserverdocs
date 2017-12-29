@@ -24,7 +24,7 @@ There are two ways to run PowerShell Direct:
   
 -   Run script or command with the Invoke-Command cmdlet  
   
-If you're managing older virtual machines, use Virtual Machine Connection (VMConnect) or [configure a virtual network for the virtual machine](http://technet.microsoft.com/library/cc816585.aspx).  
+If you're managing older virtual machines, use Virtual Machine Connection (VMConnect) or [configure a virtual network for the virtual machine](https://technet.microsoft.com/library/cc816585.aspx).  
   
 ## Create and exit a PowerShell Direct session using PSSession cmdlets  
   
@@ -50,7 +50,7 @@ If you're managing older virtual machines, use Virtual Machine Connection (VMCon
     ```  
   
 ## Run script or command with Invoke-Command cmdlet  
-You can use the [Invoke-Command](http://technet.microsoft.com/library/hh849719.aspx) cmdlet to run a pre-determined set of commands on the virtual machine. Here is an example of how you can use the Invoke-Command cmdlet where PSTest is the virtual machine name and the script to run (foo.ps1) is in the script folder on the C:/ drive:  
+You can use the [Invoke-Command](https://technet.microsoft.com/library/hh849719.aspx) cmdlet to run a pre-determined set of commands on the virtual machine. Here is an example of how you can use the Invoke-Command cmdlet where PSTest is the virtual machine name and the script to run (foo.ps1) is in the script folder on the C:/ drive:  
   
 ```  
 Invoke-Command -VMName PSTest  -FilePath C:\script\foo.ps1  
@@ -75,12 +75,12 @@ To create a PowerShell Direct session on a virtual machine,
   
 -   The virtual machine must run at least Windows 10 or Windows Server 2016.  
   
-You can use the [Get-VM](http://technet.microsoft.com/library/hh848479.aspx) cmdlet to check that the credentials you're using have the Hyper-V administrator role and to get a list of the virtual machines running locally on the host and booted.  
+You can use the [Get-VM](https://technet.microsoft.com/library/hh848479.aspx) cmdlet to check that the credentials you're using have the Hyper-V administrator role and to get a list of the virtual machines running locally on the host and booted.  
   
 ## See Also  
-[Enter-PSSession](http://technet.microsoft.com/library/hh849707.aspx)  
-[Exit-PSSession](http://technet.microsoft.com/library/hh849743.aspx)  
-[Invoke-Command](http://technet.microsoft.com/library/hh849719.aspx)  
+[Enter-PSSession](https://technet.microsoft.com/library/hh849707.aspx)  
+[Exit-PSSession](https://technet.microsoft.com/library/hh849743.aspx)  
+[Invoke-Command](https://technet.microsoft.com/library/hh849719.aspx)  
   
 
 

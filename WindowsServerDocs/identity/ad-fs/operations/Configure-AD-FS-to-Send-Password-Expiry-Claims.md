@@ -20,8 +20,8 @@ You can configure Active Directory Federation Services (AD FS) to send password 
 To configure AD FS to send password expiry claims to a relying party trust, you must add the following claim rules to this relying party trust:
 
 ```
-c1:[Type == "http://schemas.microsoft.com/ws/2012/01/passwordexpirationtime"]
-=> issue(store = "_PasswordExpiryStore", types = ("http://schemas.microsoft.com/ws/2012/01/passwordexpirationtime", "http://schemas.microsoft.com/ws/2012/01/passwordexpirationdays", "http://schemas.microsoft.com/ws/2012/01/passwordchangeurl"), query = "{0};", param = c1.Value);
+c1:[Type == "https://schemas.microsoft.com/ws/2012/01/passwordexpirationtime"]
+=> issue(store = "_PasswordExpiryStore", types = ("https://schemas.microsoft.com/ws/2012/01/passwordexpirationtime", "https://schemas.microsoft.com/ws/2012/01/passwordexpirationdays", "https://schemas.microsoft.com/ws/2012/01/passwordchangeurl"), query = "{0};", param = c1.Value);
 ```
 
 > [!NOTE]

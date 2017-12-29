@@ -15,7 +15,7 @@ manager: dongill
 ---
 # Desktop hosting service
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 The following information describes the components of the desktop hosting service.  
   
@@ -32,9 +32,9 @@ Matching digital certificates must be installed on the server and clients. For d
 For tenants with small numbers of users, the RD Web Access and Remote Desktop Gateway workloads may be combined in a single virtual machine to reduce cost. To provide a highly available service and to scale-out to larger numbers of users, additional RD Web virtual machines may be added to an RD Web Access farm. When a RD Web Access farm has been implemented in a multiple VMs for high availability and scale out, the virtual machines must be configured in a load-balanced set.  
   
 Additional information:  
-[Deploying and Configuring RD Web Access](http://social.technet.microsoft.com/wiki/contents/articles/10758.deploying-and-configuring-rd-webaccess-in-windows-server-2012.aspx)  
-[Publishing RemoteApps in Windows Server 2012 R2](http://social.technet.microsoft.com/wiki/contents/articles/10817.publishing-remoteapps-in-windows-server-2012.aspx)  
-[Distribution of Remote Apps and Desktops in Windows Server 2012 R2](http://social.technet.microsoft.com/wiki/contents/articles/14488.distribution-of-remote-apps-and-desktops-in-windows-server-2012.aspx)  
+[Deploying and Configuring RD Web Access](https://social.technet.microsoft.com/wiki/contents/articles/10758.deploying-and-configuring-rd-webaccess-in-windows-server-2012.aspx)  
+[Publishing RemoteApps in Windows Server 2012 R2](https://social.technet.microsoft.com/wiki/contents/articles/10817.publishing-remoteapps-in-windows-server-2012.aspx)  
+[Distribution of Remote Apps and Desktops in Windows Server 2012 R2](https://social.technet.microsoft.com/wiki/contents/articles/14488.distribution-of-remote-apps-and-desktops-in-windows-server-2012.aspx)  
   
 ##  Remote Desktop Gateway  
   
@@ -45,7 +45,7 @@ The RD Gateway component uses Secure Sockets Layer (SSL) to provide an encrypted
 For tenants with small number of users, the RD Web Access and RD Gateway can be combined on a single virtual machine to reduce cost. To provide a highly available service and to scale-out to larger numbers of users, additional RD Gateway virtual machines may be added to an RD Gateway farm. When an RD Gateway farm has been implemented in multiple VMs for high availability and scale out, the virtual machines must be configured in a load-balanced set. Using Remote Desktop Gateway on a Windows Server 2016 virtual machine does not require IP affinity, which was required for Windows Server 2012R2.  
   
 Additional information:  
-[Deploying and Configuring RD Gateway](http://social.technet.microsoft.com/wiki/contents/articles/10974.deploying-and-configuring-rd-gateway-in-windows-server-2012.aspx)  
+[Deploying and Configuring RD Gateway](https://social.technet.microsoft.com/wiki/contents/articles/10974.deploying-and-configuring-rd-gateway-in-windows-server-2012.aspx)  
 [What's New In Windows Server 2012 R2 RD Gateway?](https://blogs.technet.microsoft.com/enterprisemobility/2013/03/14/whats-new-in-windows-server-2012-remote-desktop-gateway/#loadbalancing)  
   
 ##  Azure Active Directory Domain Services  
@@ -92,7 +92,7 @@ For small tenants, the cost can be reduced by combining the file server and RD L
   
 Additional information:  
 [Deploying Remote Desktop Licensing Step-by-Step Guide](https://technet.microsoft.com/library/dd983943(WS.10).aspx)  
-[Managing RDS Licensing Using PowerShell on Windows Server 2012 R2](http://social.technet.microsoft.com/wiki/contents/articles/13293.managing-rds-licensing-using-powershell-on-windows-server-2012.aspx)  
+[Managing RDS Licensing Using PowerShell on Windows Server 2012 R2](https://social.technet.microsoft.com/wiki/contents/articles/13293.managing-rds-licensing-using-powershell-on-windows-server-2012.aspx)  
 [Generate Per User CAL Report](https://gallery.technet.microsoft.com/ScriptCenter/9739eaee-fb8a-4cb8-8456-7f138d175934/)  
 [Microsoft Volume Licensing: Licensing Options for Service Providers](https://www.microsoft.com/en-us/licensing/licensing-programs/spla-program.aspx#tab=1)  
   
@@ -123,7 +123,7 @@ The VM used to deploy the file server must have an Azure data disk attached and 
 For small tenants, the cost can be reduced by combining the file server and RD Licensing components on a single virtual machine in the tenant's environment.  
   
 Additional information  
-[File and Storage Services Overview](http://technet.microsoft.com/library/hh831487.aspx)  
+[File and Storage Services Overview](https://technet.microsoft.com/library/hh831487.aspx)  
 [How to Attach a Data Disk to a Virtual Machine](http://www.windowsazure.com/manage/windows/how-to-guides/attach-a-disk/)  
   
 ### User Profile Disks  

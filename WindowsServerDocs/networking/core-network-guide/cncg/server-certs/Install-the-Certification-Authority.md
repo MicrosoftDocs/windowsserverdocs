@@ -11,7 +11,7 @@ author: jamesmci
 ---
 # Install the Certification Authority
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use this procedure to install Active Directory Certificate Services (AD CS) so that you can enroll a server certificate to servers that are running Network Policy Server (NPS), Routing and Remote Access Service (RRAS), or both.  
   

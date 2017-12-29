@@ -1,14 +1,5 @@
 ---
-title: Windows Server 2016
-description: Get started with Windows Server 2016.
-ms.prod: windows-server-threshold
-ms.date: 06/15/2017
-ms.technology: server-general
-ms.topic: article
-ms.assetid: d8972680-d5ee-430e-a97a-991ac872b0d6
-author: jaimeo
-ms.author: jaimeo
-manager: dongill
+redirect_url: /windows-server/windows-server
 ---
 
 # Windows Server 2016
@@ -93,7 +84,7 @@ This library provides info for IT pros to evaluate, plan, deploy, secure, and ma
 
 ## Windows Server 2016 editions
 
-Windows Server 2016 is available in Standard, Datacenter, and Essentials editions. Windows Server 2016 Datacenter includes unlimited virtualization rights plus new features to build a software-defined datacenter. Windows Server 2016 Standard offers enterprise-class features with limited virtualization rights. Windows Server Essentials is an ideal cloud-connected first server. It has its own [extensive documentation](http://go.microsoft.com/fwlink/?LinkID=827171)—the content here focuses on Standard and Datacenter editions. The following table briefly summarizes the key differences between Standard and Datacenter editions:
+Windows Server 2016 is available in Standard, Datacenter, and Essentials editions. Windows Server 2016 Datacenter includes unlimited virtualization rights plus new features to build a software-defined datacenter. Windows Server 2016 Standard offers enterprise-class features with limited virtualization rights. Windows Server Essentials is an ideal cloud-connected first server. It has its own [extensive documentation](https://go.microsoft.com/fwlink/?LinkID=827171)—the content here focuses on Standard and Datacenter editions. The following table briefly summarizes the key differences between Standard and Datacenter editions:
 
 |Feature|Datacenter|Standard|  
 |-------------------|----------|-----------------------|  
@@ -148,4 +139,4 @@ Virtualized Storage, Networking, Security and Management technologies are the bu
   </tr>
 </table>
 
-Not finding content you need? Windows 10 users, tell us what you want on [Feedback Hub](feedback-hub:?tabid=2&contextid=898). 
+Not finding content you need? Windows 10 users, tell us what you want on [Feedback Hub](feedback-hub://?referrer=techDocsUcPage&tabid=2&contextid=898&newFeedback=true&topic=Windows-Server-2016.md). 

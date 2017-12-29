@@ -15,7 +15,7 @@ author: jamesmci
 ---
 # Deploy Remote Access with OTP Authentication
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
  Windows Server 2016 and Windows Server 2012 combine DirectAccess and Routing and Remote Access Service \(RRAS\) VPN into a single Remote Access role.   
 
@@ -33,7 +33,7 @@ Before you begin deploying this scenario, review this list for important require
   
 -   A Public Key Infrastructure must be deployed.  
   
-    For more information see: [Test Lab Guide Mini-Module: Basic PKI for Windows Server 2012.](http://social.technet.microsoft.com/wiki/contents/articles/7862.test-lab-guide-mini-module-basic-pki-for-windows-server-2012.aspx)  
+    For more information see: [Test Lab Guide Mini-Module: Basic PKI for Windows Server 2012.](https://social.technet.microsoft.com/wiki/contents/articles/7862.test-lab-guide-mini-module-basic-pki-for-windows-server-2012.aspx)  
   
 -   Changing policies outside of the DirectAccess management console or Windows PowerShell cmdlets is not supported.  
   
@@ -95,7 +95,7 @@ There are a number of requirements for this scenario:
   
     3.  Security group-To exempt users from strong authentication, an Active Directory security group containing these users is required.  
   
-    4.  Client\-side requirements-For Windows 10 and Windows 8 client computers, the Network Connectivity Assistant \(NCA\) service is used to detect whether OTP credentials are required. If they are, the DirectAccess Media Manager prompts for credentials.  NCA is included in the operating system, and no installation or deployment is required. For Windows 7 client computers, DirectAccess Connectivity Assistant \(DCA\) 2.0 is required. This is available as a download on the [Microsoft Download Center](http://www.microsoft.com/download/details.aspx?id=29039).  
+    4.  Client\-side requirements-For Windows 10 and Windows 8 client computers, the Network Connectivity Assistant \(NCA\) service is used to detect whether OTP credentials are required. If they are, the DirectAccess Media Manager prompts for credentials.  NCA is included in the operating system, and no installation or deployment is required. For Windows 7 client computers, DirectAccess Connectivity Assistant \(DCA\) 2.0 is required. This is available as a download on the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=29039).  
   
     5.  Note the following:  
   
@@ -107,7 +107,7 @@ There are a number of requirements for this scenario:
   
         4.  In a Remote Access multisite deployment, OTP settings are global and identify for all entry points. If multiple RADIUS or CA servers are configured for OTP, they are sorted by each Remote Access server according to availability and proximity.  
   
-        5.  When configuring OTP in a Remote Access multi\-forest environment, OTP CAs should be from the resource forest only, and certificate enrollment should be configured across forest trusts. For more information, see [AD CS: Cross-forest Certificate Enrollment with Windows Server 2008 R2](http://technet.microsoft.com/library/ff955842.aspx).  
+        5.  When configuring OTP in a Remote Access multi\-forest environment, OTP CAs should be from the resource forest only, and certificate enrollment should be configured across forest trusts. For more information, see [AD CS: Cross-forest Certificate Enrollment with Windows Server 2008 R2](https://technet.microsoft.com/library/ff955842.aspx).  
   
         6.  Users who are using a KEY FOB OTP token should insert the PIN followed by the tokencode \(without any separators\) in the DirectAccess OTP dialog. Users who are using PIN PAD OTP token should insert only the tokencode in the dialog.  
   

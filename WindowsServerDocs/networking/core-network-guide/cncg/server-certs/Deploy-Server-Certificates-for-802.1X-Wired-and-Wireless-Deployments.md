@@ -11,7 +11,7 @@ author: jamesmci
 ---
 # Deploy Server Certificates for 802.1X Wired and Wireless Deployments
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use this guide to deploy server certificates to your Remote Access and Network Policy Server (NPS) infrastructure servers.   
 
@@ -79,7 +79,7 @@ Following are technology overviews for AD CS and Web Server (IIS).
 ### Active Directory Certificate Services  
 AD CS in  Windows Server 2016 provides customizable services for creating and managing the X.509 certificates that are used in software security systems that employ public key technologies. Organizations can use AD CS to enhance security by binding the identity of a person, device, or service to a corresponding public key. AD CS also includes features that allow you to manage certificate enrollment and revocation in a variety of scalable environments.  
 
-For more information, see [Active Directory Certificate Services Overview](https://technet.microsoft.com/library/hh831740.aspx) and [Public Key Infrastructure Design Guidance](http://social.technet.microsoft.com/wiki/contents/articles/2901.public-key-infrastructure-design-guidance.aspx).  
+For more information, see [Active Directory Certificate Services Overview](https://technet.microsoft.com/library/hh831740.aspx) and [Public Key Infrastructure Design Guidance](https://social.technet.microsoft.com/wiki/contents/articles/2901.public-key-infrastructure-design-guidance.aspx).  
 
 ### Web Server (IIS)  
 

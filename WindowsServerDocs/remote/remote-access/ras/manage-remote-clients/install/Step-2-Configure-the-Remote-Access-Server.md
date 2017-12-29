@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # Step 2 Configure the Remote Access Server
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This topic describes how to configure the client and server settings that are required for remote management of DirectAccess clients. Before you begin the deployment steps, ensure that you have completed the planning steps that are described in [Step 2 Plan the Remote Access Deployment](../plan/Step-2-Plan-the-Remote-Access-Deployment.md).  
   
@@ -31,7 +31,7 @@ This topic describes how to configure the client and server settings that are re
 |Configuration summary and alternate GPOs|View the Remote Access configuration summary, and modify the GPOs if desired.|  
   
 > [!NOTE]  
-> This topic includes sample Windows PowerShell cmdlets that you can use to automate some of the procedures described. For more information, see [Using Cmdlets](http://go.microsoft.com/fwlink/p/?linkid=230693).  
+> This topic includes sample Windows PowerShell cmdlets that you can use to automate some of the procedures described. For more information, see [Using Cmdlets](https://go.microsoft.com/fwlink/p/?linkid=230693).  
   
 ## <a name="BKMK_Role"></a>Install the Remote Access role  
 You must install the Remote Access role on a server in your organization that will act as the Remote Access server.  

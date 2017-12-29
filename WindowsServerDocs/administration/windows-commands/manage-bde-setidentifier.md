@@ -12,12 +12,12 @@ ms.assetid: 7092d18f-4ac9-4c73-a20f-1246ca60e75e
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # manage-bde: setidentifier
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Sets the drive identifier field on the drive to the value specified in the **Provide the unique identifiers for your organization** Group Policy setting. For examples of how this command can be used, see [Examples](#BKMK_Examples).
 
@@ -48,4 +48,4 @@ manage-bde –setidentifier C:
 
 -   [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Manage-bde](manage-bde.md)
--   [Using Data Recovery Agents with BitLocker](http://technet.microsoft.com/library/dd875560(WS.10).aspx)
+-   [Using Data Recovery Agents with BitLocker](https://technet.microsoft.com/library/dd875560(WS.10).aspx)

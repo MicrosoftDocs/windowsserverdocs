@@ -61,7 +61,7 @@ A typical tool for preparing an image is sysprep.exe. Running this tool generali
     <unattend xmlns="urn:schemas-microsoft-com:unattend" xmlns:ms="urn:schemas-microsoft-com:asm.v3">  
   
       <settings pass="oobeSystem">  
-        <component name="Microsoft-Windows-Shell-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
+        <component name="Microsoft-Windows-Shell-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="https://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   
           <!-- Must have -->  
           <OOBE>  
@@ -118,7 +118,7 @@ A typical tool for preparing an image is sysprep.exe. Running this tool generali
     ```  
   
     > [!IMPORTANT]
-    >  You can also add the unattend.xml under %systemdrive% instead of as a parameter of sysprep. If the file is located under c:\ it will covered by user „¢s settings, but if used as a parameter of sysprep, it will not be covered by user „¢s settings. The unattend.xml under %systemdrive% will be deleted each time the server restarts. Hence, ensure that after you create unattend.xml under %systemdrive%, the server is not restarted.  
+    >  You can also add the unattend.xml under %systemdrive% instead of as a parameter of sysprep. If the file is located under c:\ it will covered by user ï¿½ï¿½s settings, but if used as a parameter of sysprep, it will not be covered by user ï¿½ï¿½s settings. The unattend.xml under %systemdrive% will be deleted each time the server restarts. Hence, ensure that after you create unattend.xml under %systemdrive%, the server is not restarted.  
   
 10. Run the following command to add the registry key to skip Windows OOBE key page.  
   

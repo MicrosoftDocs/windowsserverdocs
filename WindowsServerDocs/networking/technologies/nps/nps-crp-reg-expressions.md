@@ -12,7 +12,7 @@ author: jamesmci
 
 # Use Regular Expressions in NPS
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This topic explains the use of regular expressions for pattern matching in NPS in Windows Server 2016. You can use this syntax to specify the conditions of network policy attributes and RADIUS realms.
 

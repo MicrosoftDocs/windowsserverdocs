@@ -10,11 +10,11 @@ ms.topic:
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 09/21/2017
+ms.date: 12/01/2017
 ---
 # Protect your Honolulu-managed Hyper-V Virtual Machines with Azure Site Recovery 
 
->Applies To: Windows Server, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 and Windows 10
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 and Windows 10
 
 Project Honolulu streamlines the process of replicating your virtual machines on your Hyper-V servers or clusters, making it easier to leverage the power of Azure from your own datacenter. To automate setup, you can connect the Honolulu gateway to Azure.
 
@@ -22,9 +22,9 @@ Project Honolulu streamlines the process of replicating your virtual machines on
 
 **Azure Site Recovery** is an Azure service that replicates workloads running on VMs so that your business-critical infrastructure is protected in case of a disaster.  [Learn more about Azure Site Recovery](https://docs.microsoft.com/en-us/azure/site-recovery/site-recovery-overview).
 
-Azure Site Recovery consists of two components: **replication** and **failover**. The replication portion protects your VMs in case of disaster by replicating the target VM’s VHD to an Azure storage account. You can then failover these VMs and run them in Azure in the event of a disaster. You can also perform a test failover without impacting your primary VMs to test the recovery process in Azure.
+Azure Site Recovery consists of two components: **replication** and **failover**. The replication portion protects your VMs in case of disaster by replicating the target VMâ€™s VHD to an Azure storage account. You can then failover these VMs and run them in Azure in the event of a disaster. You can also perform a test failover without impacting your primary VMs to test the recovery process in Azure.
 
-Completing setup for the replication component alone is sufficient to protect your VM in the case of disaster. However, you will not be able to start the VM in Azure until you have configured the failover portion. The failover portion can be setup at the time you wish to failover to an Azure VM, and is not required as part of initial setup. If the host server goes down and you haven’t yet configured the failover component, you can configure it at that time and access the workloads of the protected VM. However, it is a good practice to configure the failover related settings before a disaster.
+Completing setup for the replication component alone is sufficient to protect your VM in the case of disaster. However, you will not be able to start the VM in Azure until you have configured the failover portion. The failover portion can be setup at the time you wish to failover to an Azure VM, and is not required as part of initial setup. If the host server goes down and you havenâ€™t yet configured the failover component, you can configure it at that time and access the workloads of the protected VM. However, it is a good practice to configure the failover related settings before a disaster.
  
 ## In this guide
 
@@ -74,7 +74,7 @@ This guide outlines the steps to configure replication settings and create a rec
 
 1. Navigate to the server or cluster hosting VMs you wish to protect (either with Server Manager or Hyper-Converged Cluster Manager).
 2. Go to **Virtual Machines** > **Inventory**.
-3. Select any VM (this doesn’t need to be the VM you want to protect).
+3. Select any VM (this doesnâ€™t need to be the VM you want to protect).
 4. Select **More** > **Protect VM**.
 5. Login to your Azure Account in the popup dialog.
 6. Enter the required parameters:
@@ -101,7 +101,7 @@ This could take up to 10 minutes. You can watch the progress by going to **Notif
 
     If you want to use a premium storage account, [create one in the Azure portal](https://docs.microsoft.com/en-us/azure/storage/common/storage-premium-storage). The **Create New** option provided in the Honolulu pane will create a standard storage account.
 
-5. Enter the name of the **Storage Account** to use for this VM’s replication and select **Protect VM**. This step enables replication for the selected Virtual Machine. 
+5. Enter the name of the **Storage Account** to use for this VMâ€™s replication and select **Protect VM**. This step enables replication for the selected Virtual Machine. 
 
 6. ASR will start replication. Replication is completed and the VM is protected when the value in the **Protected** column of the **Virtual Machine Inventory** grid changes to **Yes**. This can take several minutes.  
 
@@ -109,7 +109,7 @@ This could take up to 10 minutes. You can watch the progress by going to **Notif
 
  Although this step does not need to be completed when starting VM replication (the VM will already be protected with just replication), we recommend you configure failover settings when setting up Azure Site Recovery. If you want to prepare for failover to an Azure VM, complete the following steps:
 
-1. [Set up an Azure network](https://docs.microsoft.com/en-us/azure/site-recovery/hyper-v-site-walkthrough-prepare-azure)– the failed-over VM will attach to this VNET. Note that the other steps listed in the linked page are completed automatically by Honolulu;  you only need to set up the Azure network.
+1. [Set up an Azure network](https://docs.microsoft.com/en-us/azure/site-recovery/hyper-v-site-walkthrough-prepare-azure)â€“ the failed-over VM will attach to this VNET. Note that the other steps listed in the linked page are completed automatically by Honolulu;  you only need to set up the Azure network.
 
 2. [Run a test failover](https://docs.microsoft.com/en-us/azure/site-recovery/hyper-v-site-walkthrough-test-failover).
 
@@ -411,7 +411,7 @@ Copy and paste this code into a PowerShell console or into Notepad and save loca
 1. Log into the Azure Portal at **https://portal.azure.com**.
 2. Go to **Azure Active Directory** > **App Registrations**.
 3. Click **New application registration** to create a new app, and then specify:
-     - **Name:** your choice (ex: “ASR-Honolulu-App”)
+     - **Name:** your choice (ex: â€œASR-Honolulu-Appâ€?)
      - **Application type:** 'Web app API'
      - **Sign-on URL:** http://localhost:[port]
 4. Click **Create**.
@@ -424,7 +424,7 @@ Copy and paste this code into a PowerShell console or into Notepad and save loca
     ![](../media/honolulu/image2.png)
 
 7. Click **Save**.
-8. Click **Settings** > **Reply URLs**. Add the gateway endpoint to the list with the path ending: “*” (eg: <http://localhost:4200*>) and then click **Save**.
+8. Click **Settings** > **Reply URLs**. Add the gateway endpoint to the list with the path ending: â€œ*â€? (eg: <http://localhost:4200*>) and then click **Save**.
 9. Click **Settings** > **Required permissions**. Click **Add** > Select an API > **Windows Azure Service Management API** > **Select**. In the **Enable Access** form, check **Delegated Permissions** and then click **Done**.
 10. Click '**Settings** > **Required permissions**, and then click **Grant Permissions**.
 11. Find the parameters for **Tenant** and **Client ID** for a PowerShell script you will run in the next step:

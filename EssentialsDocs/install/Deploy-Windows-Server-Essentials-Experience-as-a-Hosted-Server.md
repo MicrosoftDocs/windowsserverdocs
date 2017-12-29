@@ -79,7 +79,7 @@ This document includes information that is specific to hosters who intend to dep
   
 -   **Service integration** You can integrate the server with Microsoft online services (such as Office 365, SharePoint Online, and  Microsoft Azure Backup). You can also integrate the server with your services or services provided by third-party providers.  
   
--   **Anywhere Access** The customer can access the server, network computers, and data from virtually anywhere they have an Internet connection and by using almost any device. Remote Web Access enables them to access applications and data with a streamlined, touch-friendly browser experience. The My Server app enables them to access data from a Windows Phone or a Windows Store app.  
+-   **Anywhere Access** The customer can access the server, network computers, and data from virtually anywhere they have an Internet connection and by using almost any device. Remote Web Access enables them to access applications and data with a streamlined, touch-friendly browser experience. The My Server app enables them to access data from a Windows Phone or a Microsoft Store app.  
   
 -   **Media streaming** If you install the Media package on a server with  Windows Server Essentials Experience enabled, the end customer can store music, video, and photographs in shared folders, then access these media files from networked computers or Remote Web Access.  
   
@@ -94,7 +94,7 @@ This document includes information that is specific to hosters who intend to dep
   
 -   **Extensibility** The Windows Server Essentials Dashboard and Windows Server Essentials Connector software are extensible. You can add your own branding and service integration, so that your customers have one entry point for everything about their server and service.  
   
--   **Monitor** A new version of the System Center Monitoring Pack is available to monitor and manage multiple servers running Windows Server Essentials. To download the management pack, see [System Center Management Pack for Windows Server Essentials](http://www.microsoft.com/download/details.aspx?id=40809).  
+-   **Monitor** A new version of the System Center Monitoring Pack is available to monitor and manage multiple servers running Windows Server Essentials. To download the management pack, see [System Center Management Pack for Windows Server Essentials](https://www.microsoft.com/download/details.aspx?id=40809).  
   
 ##  <a name="BKMK_SupportedDeployment"></a> Supported deployment options  
   Windows Server Essentials Experience can be deployed as a domain controller in a new Active Directory environment; or it can be deployed into an existing Active Directory environment as a domain member.  
@@ -164,7 +164,7 @@ Install-WssVpnServer -IPv4AddressRange ('192.168.0.160','192.168.0.240') -ApplyT
 >  If you cannot provide a VPN connection before the customer takes possession of the server, ensure that server port 3389 is reachable over the Internet so that the customer can use Remote Desktop Protocol to connect to the server and configure it.  
   
 ##  <a name="BKMK_CustomizeImage"></a> Customize the image of Windows Server Essentials Experience role  
- You can customize the image before configuring the Windows Server Essentials Experience role. To learn about the standard Windows Server Sysprep process, see [Windows Assessment and Deployment Kit](http://msdn.microsoft.com/library/hh825420.aspx). After you prepare the image by using Sysprep, you can use it or reseal it into Install.wim for a new deployment.  
+ You can customize the image before configuring the Windows Server Essentials Experience role. To learn about the standard Windows Server Sysprep process, see [Windows Assessment and Deployment Kit](https://msdn.microsoft.com/library/hh825420.aspx). After you prepare the image by using Sysprep, you can use it or reseal it into Install.wim for a new deployment.  
   
  If you are using Virtual Machine Manager, you can create a template by using the running instance. This process uses Sysprep to prepare the instance, and it shuts down the computer. After you store the template in your library, you can use it on a case-by-case basis.  
   
@@ -184,14 +184,14 @@ Install-WssVpnServer -IPv4AddressRange ('192.168.0.160','192.168.0.240') -ApplyT
   
 -   **Anywhere Access** Router and VPN configuration will be skipped by default when you run the Set Up Anywhere Access Wizard.  
   
- If you want to control the behavior of each feature listed, you can set the corresponding registry key for each of them. For information about how to set the registry key, refer to the [Customize and Deploy Windows Server Essentials in Windows Server 2012 R2](http://technet.microsoft.com/library/dn293241.aspx)  
+ If you want to control the behavior of each feature listed, you can set the corresponding registry key for each of them. For information about how to set the registry key, refer to the [Customize and Deploy Windows Server Essentials in Windows Server 2012 R2](https://technet.microsoft.com/library/dn293241.aspx)  
   
 ##  <a name="BKMK_AutomateDeployment"></a> Automate the deployment of Windows Server Essentials Experience  
  To automate the deployment, you need to first deploy the operating system and then install the  Windows Server Essentials Experience role.  
   
--   To automatically deploy  Windows Server 2012 R2 Standard or  Windows Server 2012 R2 Datacenter, follow the instructions in [Windows Assessment and Deployment Kit](http://msdn.microsoft.com/library/hh825420.aspx).  
+-   To automatically deploy  Windows Server 2012 R2 Standard or  Windows Server 2012 R2 Datacenter, follow the instructions in [Windows Assessment and Deployment Kit](https://msdn.microsoft.com/library/hh825420.aspx).  
   
--   To learn how to install the  Windows Server Essentials Experience role by using Windows PowerShell, see [Install and Configure Windows Server Essentials](http://technet.microsoft.com/library/dn281793.aspx).  
+-   To learn how to install the  Windows Server Essentials Experience role by using Windows PowerShell, see [Install and Configure Windows Server Essentials](https://technet.microsoft.com/library/dn281793.aspx).  
   
 > [!NOTE]
 >  Ensure that the time zone settings of the host virtual machine and the  Windows Server Essentials Experience are the same. Otherwise, you may experience several errors. These include: the initial configuration of the server may not be successful on certificate related tasks, the certificate may not work for a few hours after the  Windows Server Essentials Experience role is installed, and device information will not update correctly.  
@@ -216,7 +216,7 @@ New-ItemProperty "HKLM:\Software\Microsoft\Windows Server\Setup"Ã‚Â  -Name 
 >  -   The source server and the destination server can access each other „¢s internal DNS names.  
 > -   All the necessary ports are open.  
   
- After migration, you can upgrade your licenses to remove the locks and limits. For more information, see [Transition from Windows Server Essentials to Windows Server 2012 Standard](http://technet.microsoft.com/library/jj247582.aspx).  
+ After migration, you can upgrade your licenses to remove the locks and limits. For more information, see [Transition from Windows Server Essentials to Windows Server 2012 Standard](https://technet.microsoft.com/library/jj247582.aspx).  
   
 ##  <a name="BKMK_PowerShell"></a> Perform common tasks by using Windows PowerShell  
  This section explains some of the common tasks that you can perform by using Windows PowerShell.  
@@ -255,7 +255,7 @@ New-ItemProperty "HKLM:\Software\Microsoft\Windows Server\Setup"Ã‚Â  -Name 
  This command will add a server folder named MyTestFolder at the specified location.  
   
 ##  <a name="BKMK_EmailIntegration"></a> Email integration with Windows Server Essentials  
- You can integrate  Windows Server Essentials Experience with Office 365 or hosted Exchange Server. If you want your  customer to use your hosted email, you need to develop an add-in to integrate Windows Server Essentials Experience with your hosted email solution. For more information, see [Windows Server Essentials SDK](http://msdn.microsoft.com/library/gg513877.aspx).  
+ You can integrate  Windows Server Essentials Experience with Office 365 or hosted Exchange Server. If you want your  customer to use your hosted email, you need to develop an add-in to integrate Windows Server Essentials Experience with your hosted email solution. For more information, see [Windows Server Essentials SDK](https://msdn.microsoft.com/library/gg513877.aspx).  
   
 ##  <a name="BKMK_Monitoring"></a> Monitor and manage by using native tools  
  This section discusses the native tools that are available in  Windows Server 2012 R2 to monitor and manage the server.  
@@ -267,7 +267,7 @@ New-ItemProperty "HKLM:\Software\Microsoft\Windows Server\Setup"Ã‚Â  -Name 
 >  In a hosted environment, if Folder Redirection for a user profile is enabled, it can increase the time for end user to sign in when the data size is big.  
   
 ### System Center Monitoring Pack  
- System Center Monitoring Pack for  Windows Server Essentials Experience monitors the health alert system to help you manage large numbers of servers running Windows Server Essentials that are dedicated to small business organizations. For more information, see [System Center Management Pack for Windows Server Essentials](http://www.microsoft.com/download/details.aspx?id=40809).  
+ System Center Monitoring Pack for  Windows Server Essentials Experience monitors the health alert system to help you manage large numbers of servers running Windows Server Essentials that are dedicated to small business organizations. For more information, see [System Center Management Pack for Windows Server Essentials](https://www.microsoft.com/download/details.aspx?id=40809).  
   
 ### Backup and restore  
   Windows Server 2012 R2 with Windows Server Essentials Experience allows you to back up server and client computers in the network.  
@@ -278,7 +278,7 @@ New-ItemProperty "HKLM:\Software\Microsoft\Windows Server\Setup"Ã‚Â  -Name 
 -   **On-premises backup** Allows you to perform block-level incremental backups on a regular basis to a separate disk. As a hoster, you could attach a virtual hard disk to the virtual machine running Windows Server Essentials, and then configure the server backup to this virtual hard disk. The virtual hard disk should be located on a different physical disk than the virtual machine running Windows Server Essentials.  
   
     > [!NOTE]
-    >  If you have other backup solutions for your virtual machines and you do not want your users to see the Windows Server Essentials native Server Backup feature, you can turn it off and remove the related user interface from the Dashboard. For more information, see the [Customize Server Backup](http://technet.microsoft.com/library/dn293413.aspx) section of [Customize and Deploy Windows Server Essentials in Windows Server 2012 R2](http://technet.microsoft.com/library/dn293241.aspx).  
+    >  If you have other backup solutions for your virtual machines and you do not want your users to see the Windows Server Essentials native Server Backup feature, you can turn it off and remove the related user interface from the Dashboard. For more information, see the [Customize Server Backup](https://technet.microsoft.com/library/dn293413.aspx) section of [Customize and Deploy Windows Server Essentials in Windows Server 2012 R2](https://technet.microsoft.com/library/dn293241.aspx).  
   
 -   **Off-premises backup** Allows you to periodically back up your server data to a cloud-based service. You can download and install the  Microsoft Azure Backup Integration Module for Windows Server Essentials to leverage the  Azure Backup that is provided by Microsoft.  
   
@@ -309,13 +309,13 @@ New-ItemProperty "HKLM:\Software\Microsoft\Windows Server\Setup"Ã‚Â  -Name 
   
     -   To change the checkpoint threshold: On the client, change **HKLM\Software\Microsoft\Windows Server\Backup\CheckPointThreshold** from its default value of 40 GB.  
   
--   **Client bare metal restore** Because the Windows Preinstall Environment does not support a VPN connection, client bare metal restore is not supported. You should hide the Client Restore Service task by following the steps in [Customize and Deploy Windows Server Essentials in Windows Server 2012 R2](http://technet.microsoft.com/library/dn293241.aspx).  
+-   **Client bare metal restore** Because the Windows Preinstall Environment does not support a VPN connection, client bare metal restore is not supported. You should hide the Client Restore Service task by following the steps in [Customize and Deploy Windows Server Essentials in Windows Server 2012 R2](https://technet.microsoft.com/library/dn293241.aspx).  
   
 ##### File History  
- File History is a feature in Windows 8.1 and Windows 8 for backing up profile data (Libraries, Desktop, Contacts, Favorites) to a network share. You can centrally manage the File History setting of all computers running Windows 8.1 or Windows 8 that are joined to Windows Server Essentials network. The backup data is stored on the server running Windows Server Essentials. You should hide the Client Restore Service task by following the steps in [Customize and Deploy Windows Server Essentials in Windows Server 2012 R2](http://technet.microsoft.com/library/dn293241.aspx)  
+ File History is a feature in Windows 8.1 and Windows 8 for backing up profile data (Libraries, Desktop, Contacts, Favorites) to a network share. You can centrally manage the File History setting of all computers running Windows 8.1 or Windows 8 that are joined to Windows Server Essentials network. The backup data is stored on the server running Windows Server Essentials. You should hide the Client Restore Service task by following the steps in [Customize and Deploy Windows Server Essentials in Windows Server 2012 R2](https://technet.microsoft.com/library/dn293241.aspx)  
   
 ### Storage management  
- Storage Spaces allows you to aggregate the physical storage capacity of disparate hard drives, dynamically add hard drives, and create data volumes with specified levels of resilience. You can do this on the host or on the virtual machine. If you want to hide this feature in a virtual machine running Windows Server Essentials, follow the instructions in [Customize and Deploy Windows Server Essentials in Windows Server 2012 R2](http://technet.microsoft.com/library/dn293241.aspx).  
+ Storage Spaces allows you to aggregate the physical storage capacity of disparate hard drives, dynamically add hard drives, and create data volumes with specified levels of resilience. You can do this on the host or on the virtual machine. If you want to hide this feature in a virtual machine running Windows Server Essentials, follow the instructions in [Customize and Deploy Windows Server Essentials in Windows Server 2012 R2](https://technet.microsoft.com/library/dn293241.aspx).  
   
 ##  <a name="BKMK_Scenarios"></a> Test scenarios  
  From the hosting perspective, we recommend that you test the following scenarios:  
@@ -393,9 +393,9 @@ New-ItemProperty "HKLM:\Software\Microsoft\Windows Server\Setup"Ã‚Â  -Name 
 ##  <a name="BKMK_Support"></a> Support information  
  You can download the Windows Server Essentials Software Development Kit (SDK) and the Windows Server Essentials Assessment and Deployment Kit (ADK):  
   
--   [Windows Server Essentials Software Development Kit](http://msdn.microsoft.com/library/gg513877.aspx)SDK  
+-   [Windows Server Essentials Software Development Kit](https://msdn.microsoft.com/library/gg513877.aspx)SDK  
   
--   [Customize and Deploy Windows Server Essentials in Windows Server 2012 R2](http://technet.microsoft.com/library/dn293241.aspx)  
+-   [Customize and Deploy Windows Server Essentials in Windows Server 2012 R2](https://technet.microsoft.com/library/dn293241.aspx)  
   
 ## See also  
   

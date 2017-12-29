@@ -13,6 +13,7 @@ ms.assetid: 99f7daa4-30ce-4d13-be65-0a45d5cc7a54
 author: jaimeo
 ms.author: jaimeo
 manager: elizapo
+ms.localizationpriority: high
 ---
 # Windows Server 2016 Activation
 
@@ -56,7 +57,7 @@ After the first KMS host is activated, the KMS key that is used on the first hos
 If your organization needs more than six KMS hosts, you should request additional activations for your organization’s KMS key—for example, if you have ten physical locations under one volume licensing agreement and you want each location to have a local KMS host.
 
 >[!NOTE] 
->To request this exception, contact your Activation Call Center. For more information, see [Microsoft Volume Licensing](http://go.microsoft.com/fwlink/?LinkID=73076).
+>To request this exception, contact your Activation Call Center. For more information, see [Microsoft Volume Licensing](https://go.microsoft.com/fwlink/?LinkID=73076).
 
 Computers that are running volume licensing editions of Windows 10, Windows Server 2016, Windows 8.1, Windows Server 2012 R2, Windows Server 2012, Windows 7, Windows Server 2008 R2 are, by default, KMS clients with no additional configuration needed.
 

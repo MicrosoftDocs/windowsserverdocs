@@ -12,12 +12,12 @@ ms.assetid: 85322d85-3376-4806-845b-93ac77fe27bf
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # clip
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Redirects command output from the command line to the Windows clipboard. You can then paste this text output into other programs.
 

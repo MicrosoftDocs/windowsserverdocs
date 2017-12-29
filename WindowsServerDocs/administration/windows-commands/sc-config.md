@@ -12,12 +12,12 @@ ms.assetid: ad4d68a6-efe5-452b-8501-7f1f1c552a4a
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # Sc config
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Modifies the value of a service's entries in the registry and in the Service Control Manager database.
 

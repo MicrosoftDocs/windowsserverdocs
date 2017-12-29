@@ -45,9 +45,9 @@ To troubleshoot issues not explained by the logs, use the following tools as a s
   
 -   Repadmin.exe  
   
--   [AutoRuns.exe](http://technet.microsoft.com/sysinternals/bb963902.aspx), Task Manager, and MSInfo32.exe  
+-   [AutoRuns.exe](https://technet.microsoft.com/sysinternals/bb963902.aspx), Task Manager, and MSInfo32.exe  
   
--   [Network Monitor 3.4](http://www.microsoft.com/download/en/details.aspx?displaylang=en&id=4865) (or a third party network capture and analysis tool)  
+-   [Network Monitor 3.4](https://www.microsoft.com/download/en/details.aspx?displaylang=en&id=4865) (or a third party network capture and analysis tool)  
   
 ### General Methodology for Troubleshooting Domain Controller Configuration  
   
@@ -301,7 +301,7 @@ The following are common issues seen during the Windows Server 2012 development 
 |-|-|  
 |Issue|Prerequisite adprep check fails with error "Unable to perform Exchange schema conflict check"|  
 |Symptoms|When attempting to promote a Windows Server 2012 domain controller into an existing Windows Server 2003, Windows Server 2008, or Windows Server 2008 R2 forest, prerequisite check fails with error:<br /><br />Code - Verification of prerequisites for AD prep failed. Unable to perform Exchange schema conflict check for domain  *<domain name>* (Exception: the RPC server is unavailable)<br /><br />The adprep.log shows error:<br /><br />Code - Adprep could not retrieve data from the server *<domain controller>*<br /><br />through Windows Management Instrumentation (WMI).|  
-|Resolution and Notes|The new domain controller cannot access WMI through DCOM/RPC protocols against the existing domain controllers. To date, there have been three causes for this:<br /><br />-   A firewall rule blocks access to the existing domain controllers<br /><br />-   The NETWORK SERVICE account is missing from the "Logon as a service" (SeServiceLogonRight) privilege on the existing domain controllers<br /><br />-   NTLM is disabled on domain controllers, using security policies described in [Introducing the Restriction of NTLM Authentication](http://technet.microsoft.com/library/dd560653(WS.10).aspx)|  
+|Resolution and Notes|The new domain controller cannot access WMI through DCOM/RPC protocols against the existing domain controllers. To date, there have been three causes for this:<br /><br />-   A firewall rule blocks access to the existing domain controllers<br /><br />-   The NETWORK SERVICE account is missing from the "Logon as a service" (SeServiceLogonRight) privilege on the existing domain controllers<br /><br />-   NTLM is disabled on domain controllers, using security policies described in [Introducing the Restriction of NTLM Authentication](https://technet.microsoft.com/library/dd560653(WS.10).aspx)|  
   
 |||  
 |-|-|  

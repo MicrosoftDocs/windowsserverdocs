@@ -12,11 +12,11 @@ ms.assetid: fc4467f6-ddbb-4d6d-b51e-5a50a957b8c0
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # fondue
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Enables Windows optional features by downloading required files from Windows Update or another source specified by Group Policy. The manifest file for the feature must already be installed in your Windows image. 
 ## Syntax
@@ -41,4 +41,4 @@ fondue.exe /enable-feature:NETFX3 /caller-name:Admin.bat /hide-ux:all
 ## additional references
 -   [Command-Line Syntax Key](command-line-syntax-key.md)
 ## See Also
-[Microsoft .NET Framework 3.5 Deployment Considerations](http://go.microsoft.com/fwlink/?LinkId=248869)
+[Microsoft .NET Framework 3.5 Deployment Considerations](https://go.microsoft.com/fwlink/?LinkId=248869)

@@ -12,12 +12,12 @@ ms.assetid: 0aaf6fa5-8b5b-4a1e-ae9b-8b5c6d89f571
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # Using the copy-DriverGroup Command
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Duplicates an existing driver group on the server including the filters, driver packages, and enabled/disabled status.
 

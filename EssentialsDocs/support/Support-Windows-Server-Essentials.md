@@ -24,17 +24,17 @@ This topic provides support and troubleshooting options for Windows Server Essen
   
 -   [Top support solutions for Windows Server 2012 R2 and Windows Server 2012](http://blogs.technet.com/b/topsupportsolutions/archive/2014/02/04/top-support-solutions-for-microsoft-windows-server-2012.aspx)  
   
--   [Update for the Windows Server Essentials Migration Preparation Tool](http://support.microsoft.com/kb/2908176) (December 2013)  
+-   [Update for the Windows Server Essentials Migration Preparation Tool](https://support.microsoft.com/kb/2908176) (December 2013)  
   
--   [Update Rollup 1 for Windows Server Essentials](http://support.microsoft.com/kb/2887595) (November 2013)  
+-   [Update Rollup 1 for Windows Server Essentials](https://support.microsoft.com/kb/2887595) (November 2013)  
   
--   [Update Rollup 3 for Windows Server Essentials](http://support.microsoft.com/kb/2862551) (October 2013)  
+-   [Update Rollup 3 for Windows Server Essentials](https://support.microsoft.com/kb/2862551) (October 2013)  
   
--   [Update Rollup 2 for Windows Server Essentials](http://support.microsoft.com/kb/2824160) (June 2013)  
+-   [Update Rollup 2 for Windows Server Essentials](https://support.microsoft.com/kb/2824160) (June 2013)  
   
--   [Update Rollup 1 for Windows Server Essentials](http://support.microsoft.com/kb/2781267) (February 2013)  
+-   [Update Rollup 1 for Windows Server Essentials](https://support.microsoft.com/kb/2781267) (February 2013)  
   
--   [Hotfix: You cannot enable the Windows Server Update Services role in Windows Server Essentials](http://support.microsoft.com/kb/2762663) (February 2013)  
+-   [Hotfix: You cannot enable the Windows Server Update Services role in Windows Server Essentials](https://support.microsoft.com/kb/2762663) (February 2013)  
   
 ## Troubleshoot  
  This section provides information to help you troubleshoot common problems that you may encounter when using Windows Server Essentials. The troubleshooting information is organized in logical areas that correspond to key product features.  
@@ -81,13 +81,13 @@ This topic provides support and troubleshooting options for Windows Server Essen
   
 ## Ask a question in the forums  
   
--   [Windows Server Essentials General](http://social.technet.microsoft.com/Forums/windowsserver/home?forum=winserveressentials)  
+-   [Windows Server Essentials General](https://social.technet.microsoft.com/Forums/windowsserver/home?forum=winserveressentials)  
   
--   [Windows SBS 2011 Essentials](http://social.technet.microsoft.com/Forums/home?forum=smallbusinessserver2011essentials)  
+-   [Windows SBS 2011 Essentials](https://social.technet.microsoft.com/Forums/home?forum=smallbusinessserver2011essentials)  
   
--   [Small Business Server](http://social.technet.microsoft.com/Forums/home?forum=smallbusinessserver)  
+-   [Small Business Server](https://social.technet.microsoft.com/Forums/home?forum=smallbusinessserver)  
   
--   [Windows Server Forums](http://social.technet.microsoft.com/Forums/windowsserver/home?category=windowsserver)  
+-   [Windows Server Forums](https://social.technet.microsoft.com/Forums/windowsserver/home?category=windowsserver)  
   
 ## Get additional help  
   
@@ -99,27 +99,27 @@ This topic provides support and troubleshooting options for Windows Server Essen
   
 -   [Microsoft Business Hub](http://www.microsoftbusinesshub.com/Gigya/Insider)  
   
--   [Microsoft Premier Support Services](http://www.microsoft.com/microsoftservices/support.aspx)  
+-   [Microsoft Premier Support Services](https://www.microsoft.com/microsoftservices/support.aspx)  
   
--   [For users outside the U.S.](http://support.microsoft.com/common/international.aspx?&sd=tech)  
+-   [For users outside the U.S.](https://support.microsoft.com/common/international.aspx?&sd=tech)  
   
--   [Microsoft product support lifecycle](http://support.microsoft.com/lifecycle/)  
+-   [Microsoft product support lifecycle](https://support.microsoft.com/lifecycle/)  
   
--   [Software assurance support](http://support.microsoft.com/default.aspx?scid=fh;%5Bln%5D;SoftAssurance)  
+-   [Software assurance support](https://support.microsoft.com/default.aspx?scid=fh;%5Bln%5D;SoftAssurance)  
   
--   [Microsoft Technology Centers](http://www.microsoft.com/mtc/default.aspx)  
+-   [Microsoft Technology Centers](https://www.microsoft.com/mtc/default.aspx)  
   
--   [Support for small businesses](http://smallbusiness.support.microsoft.com/contact)  
+-   [Support for small businesses](https://smallbusiness.support.microsoft.com/contact)  
   
 -   [Windows Server Essentials and Small Business Server Blog](http://blogs.technet.com/b/sbs/)  
   
 ## End-to-end solution guides  
   
--    To learn how to centralize data storage, restrict data access permissions, and back up your data both on-premises and in the cloud, see [Provide data protection in small and midsize businesses](http://technet.microsoft.com/library/dn582043.aspx).  
+-    To learn how to centralize data storage, restrict data access permissions, and back up your data both on-premises and in the cloud, see [Provide data protection in small and midsize businesses](https://technet.microsoft.com/library/dn582043.aspx).  
   
--    To learn how to securely access business data on any Internet-connected device from any location, see [Secure remote access in small and midsize businesses](http://technet.microsoft.com/library/dn629457.aspx).  
+-    To learn how to securely access business data on any Internet-connected device from any location, see [Secure remote access in small and midsize businesses](https://technet.microsoft.com/library/dn629457.aspx).  
   
--    To learn how to securely collaborate with partners and vendors, see [Improve collaboration in small and midsize businesses](http://technet.microsoft.com/library/dn747893.aspx).  
+-    To learn how to securely collaborate with partners and vendors, see [Improve collaboration in small and midsize businesses](https://technet.microsoft.com/library/dn747893.aspx).  
   
 ## See also  
   

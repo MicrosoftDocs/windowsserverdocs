@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Windows Authentication Concepts
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This reference overview topic describes the concepts on which Windows authentication is based.
 
@@ -89,12 +89,12 @@ When a trust exists between two domains, the authentication mechanisms for each 
 
 How a specific trust passes authentication requests depends on how it is configured. Trust relationships can be one-way, by providing access from the trusted domain to resources in the trusting domain, or two-way, by providing access from each domain to resources in the other domain. Trusts are also either nontransitive, in which case trust exists only between the two trust partner domains, or transitive, in which case trust automatically extends to any other domains that either of the partners trusts.
 
-For information about how a trust works, see [How Domain and Forest Trusts Work](http://technet.microsoft.com/library/cc773178(v=ws.10).aspx).
+For information about how a trust works, see [How Domain and Forest Trusts Work](https://technet.microsoft.com/library/cc773178(v=ws.10).aspx).
 
 ### Protocol transition
 Protocol transition assists application designers by letting applications support different authentication mechanisms at the user authentication tier and by switching to the Kerberos protocol for security features, such as mutual authentication and constrained delegation, in the subsequent application tiers.
 
-For more information about protocol transition, see [Kerberos Protocol Transition and Constrained Delegation](http://technet.microsoft.com/library/cc758097(v=ws.10).aspx).
+For more information about protocol transition, see [Kerberos Protocol Transition and Constrained Delegation](https://technet.microsoft.com/library/cc758097(v=ws.10).aspx).
 
 ### Constrained delegation
 Constrained delegation gives administrators the ability to specify and enforce application trust boundaries by limiting the scope where application services can act on behalf of a user. You can specify particular services from which a computer that is trusted for delegation can request resources. The flexibility to constrain authorization rights for services helps improve application security design by reducing the opportunities for compromise by untrusted services.

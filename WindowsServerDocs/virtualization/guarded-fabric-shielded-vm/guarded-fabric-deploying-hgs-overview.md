@@ -12,7 +12,7 @@ ms.date: 08/28/2017
 
 # Deploying the Host Guardian Service for guarded hosts and shielded VMs
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 >[!div class="step-by-step"]
 [« Plan a guarded fabric](guarded-fabric-plan-overview.md)

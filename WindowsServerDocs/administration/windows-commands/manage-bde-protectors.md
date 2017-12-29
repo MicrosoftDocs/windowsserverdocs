@@ -12,11 +12,11 @@ ms.assetid: 1f9b22c5-cc93-45df-9165-bedee94998da
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # manage-bde: protectors
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Manages the protection methods used for the BitLocker encryption key. For examples of how this command can be used, see [Examples](#BKMK_Examples).
 ## Syntax

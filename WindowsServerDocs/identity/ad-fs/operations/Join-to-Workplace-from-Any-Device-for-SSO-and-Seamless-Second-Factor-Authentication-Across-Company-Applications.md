@@ -5,7 +5,7 @@ description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 05/31/2017
+ms.date: 12/05/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 
@@ -30,7 +30,7 @@ By using Workplace Join, information workers can join their personal devices wit
 ### <a name="BKMK_DRS"></a>Azure Active Directory Device Registration service
 Workplace Join is made possible by the Azure Active Directory Device Registration service. When a device is joined by Workplace Join, the service provisions a device object in Azure Active Directory and then sets a key on the local device that is used to represent the device identity. This device identity can then be used with access control rules for applications that are hosted in the cloud and on-premises.
 
-For more information about enabling Azure Active Directory Device registration service, see [Azure Active Directory Device Registration Service Overview](http://msdn.microsoft.com/6a14cb1f-a058-4453-8ede-d9f4a66a7073.aspx).
+For more information about enabling Azure Active Directory Device registration service, see [Azure Active Directory Device Registration Service Overview](https://msdn.microsoft.com/6a14cb1f-a058-4453-8ede-d9f4a66a7073.aspx).
 
 ### Workplace Join as a seamless second factor authentication
 Companies can manage the risk that is related to information access and drive governance and compliance while granting consumer devices access to corporate resources. Workplace Join on devices provides the following capabilities to administrators:
@@ -46,13 +46,15 @@ Single Sign-On (SSO) in the context of this scenario is the functionality that r
 As part of this solution, you learn how to use Workplace Join on a supported device and experience Single Sign-On to a company resource.
 
 > [!NOTE]
-> To support Windows 8.1, iOS 6.0+, and Android 4.0+ devices, you MUST configure Azure Active Directory Device Registration along with device object write-back, see [Step-by-Step Guide for On-premises Conditional Access using Azure Active Directory Device Registration Service](http://msdn.microsoft.com/library/azure/dn788908.aspx)
+> To support Windows 8.1, iOS 6.0+, and Android 4.0+ devices, you MUST configure Azure Active Directory Device Registration along with device object write-back, see [Step-by-Step Guide for On-premises Conditional Access using Azure Active Directory Device Registration Service](https://msdn.microsoft.com/library/azure/dn788908.aspx)
 
 This solution guides takes you through the following walkthrough steps:
 
 1.  [Walkthrough: Workplace Join with a Windows Device](../../ad-fs/operations/Walkthrough--Workplace-Join-with-a-Windows-Device.md)
 
 2.  [Walkthrough: Workplace Join with an iOS Device](../../ad-fs/operations/Walkthrough--Workplace-Join-with-an-iOS-Device.md)
+
+3.  [Walkthrough: Workplace Join with an Android Device](../../ad-fs/operations/walkthrough--workplace-join-to-an-android-device.md)
 
 ## See Also
 [Configure a federation server with Device Registration Service](assetId:///007016d9-b1c9-4ee1-a30f-13865f784c80)

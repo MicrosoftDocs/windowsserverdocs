@@ -12,11 +12,11 @@ ms.assetid: 37156c2e-c4d4-4fd8-a03d-245fb60bf996
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # atmadm
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Monitors connections and addresses that are registered by the atM call Manager on an asynchronous transfer mode (atM) network. You can use **atmadm** to display statistics for incoming and outgoing calls on atM adapters. Used without parameters, **atmadm** displays statistics for monitoring the status of active atM connections. 
 ## Syntax

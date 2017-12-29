@@ -12,12 +12,12 @@ ms.assetid: 22053041-1eb4-47f5-bed9-3d5681bcde7d
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # ksetup:delrealmflags
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Removes realm flags from the specified realm.  For examples of how this command can be used, see [Examples](#BKMK_Examples).
 

@@ -52,11 +52,11 @@ A veteran AD DS administrator should find their previous knowledge highly releva
 ### What You Should Know Before You Begin  
 This topic assumes familiarity with previous releases of Active Directory Domain Services, and does not provide foundational detail around their purpose and functionality. For more information about AD DS, see the TechNet Portal pages linked below:  
   
--   [Active Directory Domain Services for Windows Server 2008 R2](http://technet.microsoft.com/library/dd378801(WS.10).aspx)  
+-   [Active Directory Domain Services for Windows Server 2008 R2](https://technet.microsoft.com/library/dd378801(WS.10).aspx)  
   
--   [Active Directory Domain Services for Windows Server 2008](http://technet.microsoft.com/library/dd378891(WS.10).aspx)  
+-   [Active Directory Domain Services for Windows Server 2008](https://technet.microsoft.com/library/dd378891(WS.10).aspx)  
   
--   [Windows Server Technical Reference](http://technet.microsoft.com/library/cc739127(WS.10).aspx)  
+-   [Windows Server Technical Reference](https://technet.microsoft.com/library/cc739127(WS.10).aspx)  
   
 ### Functional Descriptions  
   
@@ -87,11 +87,11 @@ These new features are not backwards compatible to Windows Server 2008 R2 or old
 > [!IMPORTANT]  
 > Dcpromo.exe no longer contains a graphical wizard and no longer installs role or feature binaries. Attempting to run Dcpromo.exe from the Explorer shell returns:  
 >   
-> "The Active Directory Domain Services Installation Wizard is relocated in Server Manager. For more information, see http://go.microsoft.com/fwlink/?LinkId=220921."  
+> "The Active Directory Domain Services Installation Wizard is relocated in Server Manager. For more information, see https://go.microsoft.com/fwlink/?LinkId=220921."  
 >   
 > Attempting to run Dcpromo.exe /unattend still installs the binaries, as in previous operating systems, but warns:  
 >   
-> "The dcpromo unattended operation is replaced by the ADDSDeployment module for Windows PowerShell. For more information, see http://go.microsoft.com/fwlink/?LinkId=220924."  
+> "The dcpromo unattended operation is replaced by the ADDSDeployment module for Windows PowerShell. For more information, see https://go.microsoft.com/fwlink/?LinkId=220924."  
 >   
 > Windows Server 2012 deprecates dcpromo.exe and it will not be included with future versions of Windows, nor will it receive further enhancements in this operating system. Administrators should discontinue its use and switch to the supported Windows PowerShell modules if they wish to create domain controllers from the command-line.  
   
@@ -235,7 +235,7 @@ Server Manager begins every domain controller promotion with the **Deployment Co
   
 To create a new Active Directory forest, click **Add a new forest**. You must provide a valid root domain name; the name cannot be single-labeled (for example, the name must be *contoso.com* or similar and not just *contoso*) and must use allowed DNS domain naming requirements.  
   
-For more information on valid domain names, see KB article [Naming conventions in Active Directory for computers, domains, sites, and OUs](http://support.microsoft.com/kb/909264).  
+For more information on valid domain names, see KB article [Naming conventions in Active Directory for computers, domains, sites, and OUs](https://support.microsoft.com/kb/909264).  
   
 > [!WARNING]  
 > Do not create new Active Directory forests with the same name as an external DNS name. For example, if your Internet DNS URL is http://contoso.com, you must choose a different name for your internal forest to avoid future compatibility issues. That name should be unique and unlikely for web traffic. For example: corp.contoso.com.  
@@ -249,7 +249,7 @@ A new forest does not need new credentials for the domain's Administrator accoun
   
 The **Domain Controller Options** enables you to configure the **forest functional level** and **domain functional level** for the new forest root domain. By default, these settings are  Windows Server 2012  in a new forest root domain. The  Windows Server 2012  forest functional level does not provide any new functionality over the Windows Server 2008 R2 forest functional level. The  Windows Server 2012  domain functional level is required only in order to implement the new Kerberos settings "always provide claims" and "Fail unarmored authentication requests." A primary use for functional levels in  Windows Server 2012  is to restrict participation in the domain to domain controllers that meet minimum-allowed operating system requirements. In other words, you can specify  Windows Server 2012  domain functional level only domain controllers that run  Windows Server 2012  can host the domain.  Windows Server 2012  implements a new domain controller flag called **DS_WIN8_REQUIRED** in the **DSGetDcName** function of NetLogon that exclusively locates  Windows Server 2012  domain controllers. This allows you the flexibility of a more homogeneous or heterogeneous forest in terms of which operating systems are permitted to be run on domain controllers.  
   
-For more information about domain controller Location, review [Directory Service Functions](http://msdn.microsoft.com/library/ms675900(VS.85).aspx).  
+For more information about domain controller Location, review [Directory Service Functions](https://msdn.microsoft.com/library/ms675900(VS.85).aspx).  
   
 The only configurable domain controller capability is the DNS server option. Microsoft recommends that all domain controllers provide DNS services for high availability in distributed environments, which is why this option is selected by default when installing a domain controller in any mode or domain. The Global Catalog and read only domain controller options are unavailable when creating a new forest root domain; the first domain controller must be a GC, and cannot be a read only domain controller (RODC).  
   
@@ -262,7 +262,7 @@ The **DNS Options** page enables you to configure DNS delegation and provide alt
   
 You cannot configure DNS options or delegation in the Active Directory Domain Services Configuration Wizard when installing a new Active Directory Forest Root Domain where you selected the **DNS server** on the **Domain Controller Options** page. The **Create DNS delegation** option is available when creating a new forest root DNS zone in an existing DNS server infrastructure. This option enables you to provide alternate DNS administrative credentials that have the rights to update DNS zone.  
   
-For more information about whether you need to create a DNS delegation, see [Understanding Zone Delegation](http://technet.microsoft.com/library/cc771640.aspx).  
+For more information about whether you need to create a DNS delegation, see [Understanding Zone Delegation](https://technet.microsoft.com/library/cc771640.aspx).  
   
 #### Additional Options  
 ![Install a new forest](media/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-/ADDS_SMI_TR_ForestAdditionalOptions.png)  
@@ -271,7 +271,7 @@ The **Additional Options** page shows the NetBIOS name of the domain and enables
   
 If the name is 15 characters or less and does not conflict with another NetBIOS name, it is unaltered. If it does conflict with another NetBIOS name, a number is appended to the name. If the name is more than 15 characters, the wizard provides a unique, truncated suggestion. In either case, the wizard first validates the name is not already in use via a WINS lookup and NetBIOS broadcast.  
   
-For more information on valid domain names, see KB article [Naming conventions in Active Directory for computers, domains, sites, and OUs](http://support.microsoft.com/kb/909264).  
+For more information on valid domain names, see KB article [Naming conventions in Active Directory for computers, domains, sites, and OUs](https://support.microsoft.com/kb/909264).  
   
 #### Paths  
 ![Install a new forest](media/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-/ADDS_SMI_TR_ForestPaths.png)  
@@ -285,7 +285,7 @@ The **Review Options** page enables you to validate your settings and ensure the
   
 The **Review Options** page in Server Manager also offers an optional **View Script** button to create a Unicode text file that contains the current ADDSDeployment configuration as a single Windows PowerShell script. This enables you to use the Server Manager graphical interface as a Windows PowerShell deployment studio. Use the Active Directory Domain Services Configuration Wizard to configure options, export the configuration, and then cancel the wizard. This process creates a valid and syntactically correct sample for further modification or direct use. For example:  
   
-```  
+```powershell 
 #  
 # Windows PowerShell Script for AD DS Deployment  
 #  
@@ -359,7 +359,7 @@ The ServerManager module exposes role installation, status, and removal portions
   
 Use **Get-Command** to export the aliases and cmdlets in ServerManager.  
   
-```  
+```powershell  
 Get-Command -module ServerManager  
 ```  
   
@@ -369,13 +369,13 @@ For example:
   
 To add the Active Directory Domain Services role, simply run the **Install-WindowsFeature** with the AD DS role name as an argument. Like Server Manager, all required services implicit to the AD DS role install automatically.  
   
-```  
+```powershell  
 Install-WindowsFeature -name AD-Domain-Services  
 ```  
   
 If you also want the AD DS management tools installed - and this is highly recommended - then provide the **-IncludeManagementTools** argument:  
   
-```  
+```powershell  
 Install-WindowsFeature -name AD-Domain-Services -IncludeManagementTools  
 ```  
   
@@ -385,19 +385,19 @@ For example:
   
 To list all features and roles with their installation status, use **Get-WindowsFeature** without arguments. Specify **-ComputerName** argument for the installation status from a remote server.  
   
-```  
+```powershell  
 Get-WindowsFeature  
 ```  
   
 Because **Get-WindowsFeature** does not have a filtering mechanism, you must use **Where-Object** with a pipeline to find specific features. The pipeline is a channel used between multiple cmdlets to pass data and the Where-Object cmdlet acts as a filter. The built-in **$_** variable acts as the current object passing through the pipeline with any properties it may contain.  
   
-```  
+```powershell  
 Get-WindowsFeature | where-object <options>  
 ```  
   
 For example, to find all features containing "Active Dir" in their **Display Name** property, use:  
   
-```  
+```powershell  
 Get-WindowsFeature | where displayname -like "*active dir*"  
 ```  
   
@@ -405,17 +405,17 @@ Further examples illustrated below:
   
 ![Install a new forest](media/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-/ADDS_PSGetWindowsFeature.png)  
   
-For more information about more Windows PowerShell operations with pipelines and Where-Object, see [Piping and the Pipeline in Windows PowerShell](http://technet.microsoft.com/library/ee176927.aspx).  
+For more information about more Windows PowerShell operations with pipelines and Where-Object, see [Piping and the Pipeline in Windows PowerShell](https://technet.microsoft.com/library/ee176927.aspx).  
   
 Note also that Windows PowerShell 3.0 significantly simplified the command-line arguments needed in this pipeline operation. Windows PowerShell 2.0 would have required:  
   
-```  
+```powershell  
 Get-WindowsFeature | where {$_.displayname - like "*active dir*"}  
 ```  
   
 By using the Windows PowerShell pipeline, you can create readable results. For example:  
   
-```  
+```powershell  
 Install-WindowsFeature | Format-List  
 Install-WindowsFeature | select-object | Format-List  
   
@@ -433,7 +433,7 @@ Note how using the **Select-Object** cmdlet with the **-expandproperty** argumen
 ### <a name="BKMK_PS"></a>Create an AD DS Forest Root Domain with Windows PowerShell  
 To install a new Active Directory forest using the ADDSDeployment module, use the following cmdlet:  
   
-```  
+```powershell  
 Install-addsforest  
 ```  
   
@@ -449,14 +449,14 @@ The **Install-AddsForest** cmdlet only has two phases (prerequisite checking and
   
 The equivalent Server Manager **Deployment Configuration** ADDSDeployment cmdlet and arguments are:  
   
-```  
+```powershell  
 Install-ADDSForest  
 -DomainName <string>  
 ```  
   
 The equivalent Server Manager Domain Controller Options ADDSDeployment cmdlet arguments are:  
   
-```  
+```powershell  
 -ForestMode <{Win2003 | Win2008 | Win2008R2 | Win2012 | Default}>  
 -DomainMode <{Win2003 | Win2008 | Win2008R2 | Win2012 | Default}>  
 -InstallDNS <{$false | $true}>  
@@ -472,7 +472,7 @@ The **SafeModeAdministratorPassword** argument's operation is special:
   
     For example, to create a new forest named corp.contoso.com and be prompted to enter and confirm a masked password:  
   
-    ```  
+    ```powershell  
     Install-ADDSForest "DomainName corp.contoso.com  
     ```  
   
@@ -480,7 +480,7 @@ The **SafeModeAdministratorPassword** argument's operation is special:
   
 For example, you can manually prompt for a password by using the **Read-Host** cmdlet to prompt the user for a secure string:  
   
-```  
+```powershell  
 -safemodeadministratorpassword (read-host -prompt "Password:" -assecurestring)  
 ```  
   
@@ -489,13 +489,13 @@ For example, you can manually prompt for a password by using the **Read-Host** c
   
 You can also provide a secure string as a converted clear-text variable, although this is highly discouraged.  
   
-```  
+```powershell  
 -safemodeadministratorpassword (convertto-securestring "Password1" -asplaintext -force)  
 ```  
   
 Finally, you could store the obfuscated password in a file, and then reuse it later, without the clear text password ever appearing. For example:  
   
-```  
+```powershell  
 $file = "c:\pw.txt"  
 $pw = read-host -prompt "Password:" -assecurestring  
 $pw | ConvertFrom-SecureString | Set-Content $file  
@@ -509,7 +509,7 @@ $pw | ConvertFrom-SecureString | Set-Content $file
   
 The ADDSDeployment cmdlet offers an additional option to skip automatic configuration of DNS client settings, forwarders, and root hints. You cannot skip this configuration option when using Server Manager. This argument matters only if you installed the DNS Server role prior to configuring the domain controller:  
   
-```  
+```powershell  
 -SkipAutoConfigureDNS  
 ```  
   
@@ -525,13 +525,13 @@ The **DomainNetBIOSName** operation is also special:
   
 The equivalent Server Manager Additional Options ADDSDeployment cmdlet argument is:  
   
-```  
+```powershell  
 -domainnetbiosname <string>  
 ```  
   
 The equivalent Server Manager **Paths** ADDSDeployment cmdlet arguments are:  
   
-```  
+```powershell  
 -databasepath <string>  
 -logpath <string>  
 -sysvolpath <string>  
@@ -546,7 +546,7 @@ For example:
   
 You cannot bypass the **Prerequisite Check** when using Server Manager, but you can skip the process when using the AD DS Deployment cmdlet using the following argument:  
   
-```  
+```powershell  
 -skipprechecks  
 ```  
   
@@ -565,12 +565,12 @@ To accept the reboot prompt automatically, use the **-force** or **-confirm:$fal
 > Overriding the reboot is discouraged. The domain controller must reboot to function correctly.  
   
 ## See Also  
-[Active Directory Domain Services  (TechNet Portal)](http://technet.microsoft.com/library/cc770946(WS.10).aspx)  
-[Active Directory Domain Services for Windows Server 2008 R2](http://technet.microsoft.com/library/dd378801(WS.10).aspx)  
-[Active Directory Domain Services for Windows Server 2008](http://technet.microsoft.com/library/dd378891(WS.10).aspx)  
-[Windows Server Technical Reference (Windows Server 2003)](http://technet.microsoft.com/library/cc739127(WS.10).aspx)  
-[Active Directory Administrative Center: Getting Started (Windows Server 2008 R2)](http://technet.microsoft.com/library/dd560651(WS.10).aspx)  
-[Active Directory Administration with Windows PowerShell (Windows Server 2008 R2)](http://technet.microsoft.com/library/dd378937(WS.10).aspx)  
+[Active Directory Domain Services  (TechNet Portal)](https://technet.microsoft.com/library/cc770946(WS.10).aspx)  
+[Active Directory Domain Services for Windows Server 2008 R2](https://technet.microsoft.com/library/dd378801(WS.10).aspx)  
+[Active Directory Domain Services for Windows Server 2008](https://technet.microsoft.com/library/dd378891(WS.10).aspx)  
+[Windows Server Technical Reference (Windows Server 2003)](https://technet.microsoft.com/library/cc739127(WS.10).aspx)  
+[Active Directory Administrative Center: Getting Started (Windows Server 2008 R2)](https://technet.microsoft.com/library/dd560651(WS.10).aspx)  
+[Active Directory Administration with Windows PowerShell (Windows Server 2008 R2)](https://technet.microsoft.com/library/dd378937(WS.10).aspx)  
 [Ask the Directory Services Team (Official Microsoft Commercial Technical Support Blog)](http://blogs.technet.com/b/askds)  
   
 

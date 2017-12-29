@@ -12,12 +12,12 @@ ms.assetid: 32c41b5b-a210-47d9-bd8c-91eb9830b4f0
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # PowerShell_ise
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Windows PowerShell Integrated Scripting Environment (ISE) is a graphical host application that enables you to read, write, run, debug, and test scripts and modules in a graphic-assisted environment. Key features such as IntelliSense, Show-Command, snippets, tab completion, syntax-coloring, visual debugging, and context-sensitive Help provide a rich scripting experience.
 
@@ -48,11 +48,11 @@ You can use **PowerShell_ISE.exe** to start and end a Windows PowerShell session
     ```
     PowerShell_Ise -help, -?, /?
     ```  
-For a complete list of the **PowerShell_ISE.exe** command-line parameters, see [about_PowerShell_Ise.exe](http://go.microsoft.com/fwlink/?LinkId=256512).
+For a complete list of the **PowerShell_ISE.exe** command-line parameters, see [about_PowerShell_Ise.exe](https://go.microsoft.com/fwlink/?LinkId=256512).
 
 ## Start Windows PowerShell ISE in other ways
 
-For information about other ways to start Windows PowerShell ISE, see [Starting Windows PowerShell](http://go.microsoft.com/fwlink/?LinkID=135259).
+For information about other ways to start Windows PowerShell ISE, see [Starting Windows PowerShell](https://go.microsoft.com/fwlink/?LinkID=135259).
 
 ## Remarks
 
@@ -60,8 +60,8 @@ Windows PowerShell runs on the Server Core installation option of Windows Server
 
 ##
 
-[about_PowerShell_Ise.exe](http://go.microsoft.com/fwlink/?LinkId=256512)
-[about_PowerShell.exe](http://go.microsoft.com/fwlink/?LinkID=113439)
-[Windows PowerShell](http://go.microsoft.com/fwlink/?LinkID=107116)
-[Scripting with Windows PowerShell](http://technet.microsoft.com/scriptcenter/dd742419)
+[about_PowerShell_Ise.exe](https://go.microsoft.com/fwlink/?LinkId=256512)
+[about_PowerShell.exe](https://go.microsoft.com/fwlink/?LinkID=113439)
+[Windows PowerShell](https://go.microsoft.com/fwlink/?LinkID=107116)
+[Scripting with Windows PowerShell](https://technet.microsoft.com/scriptcenter/dd742419)
 See Also

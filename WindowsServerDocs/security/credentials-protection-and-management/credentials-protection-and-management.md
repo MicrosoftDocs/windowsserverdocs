@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Credentials Protection and Management
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This topic for the IT professional discusses features and methods introduced in  Windows Server 2012 R2  and Windows 8.1 for credential protection and domain authentication controls to reduce credential theft.
 
@@ -45,7 +45,7 @@ Members of the Protected Users group are limited further by the following method
 -   The default Kerberos Ticket Granting Tickets (TGTs) lifetime setting of four hours is configurable using Authentication Policies and Silos accessed through the Active Directory Administrative Center (ADAC). This means that when four hours has passed, the user must authenticate again.
 
 > [!WARNING]
-> Accounts for services and computers should not be members of the Protected Users group. This group provides no local protection because the password or certificate is always available on the host. Authentication will fail with the error ???the user name or password is incorrect??? for any service or computer that is added to the Protected Users group.
+> Accounts for services and computers should not be members of the Protected Users group. This group provides no local protection because the password or certificate is always available on the host. Authentication will fail with the error "the user name or password is incorrect" for any service or computer that is added to the Protected Users group.
 
 For more information about this group, see [Protected Users Security Group](protected-users-security-group.md).
 
@@ -67,7 +67,7 @@ For more information, see [Authentication Policies and Authentication Policy Sil
 For more information how to configure protected accounts, see [How to Configure Protected Accounts](how-to-configure-protected-accounts.md).
 
 ## See also
-For more information about the LSA and the LSASS, see the [Windows Logon and Authentication Technical Overview](http://technet.microsoft.com/library/dn169029(v=ws.10).aspx).
+For more information about the LSA and the LSASS, see the [Windows Logon and Authentication Technical Overview](https://technet.microsoft.com/library/dn169029(v=ws.10).aspx).
 
 
 

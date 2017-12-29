@@ -12,11 +12,11 @@ ms.assetid: ede94a76-931c-40ed-9fda-6766bed8ff72 britw
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # logman update alert
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Update the properties of an existing alert data collector.  
   

@@ -11,7 +11,7 @@ author: jamesmci
 ---
 # Use DNS Policy for Intelligent DNS Responses Based on the Time of Day
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use this topic to learn how to distribute application traffic across different geographically distributed instances of an application by using DNS policies that are based on the time of day.  
   
@@ -76,7 +76,7 @@ Add-DnsServerClientSubnet -Name "AmericaSubnet" -IPv4Subnet "192.0.0.0/24, 182.0
 Add-DnsServerClientSubnet -Name "EuropeSubnet" -IPv4Subnet "141.1.0.0/24, 151.1.0.0/24"  
   
 ```  
-For more information, see [Add-DnsServerClientSubnet](https://technet.microsoft.com/library/mt126261.aspx).  
+For more information, see [Add-DnsServerClientSubnet](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverclientsubnet?view=win10-ps).  
   
 #### <a name="bkmk_zscopes"></a>Create the Zone Scopes  
 After the client subnets are configured, you must partition the zone whose traffic you want to redirect into two different zone scopes, one scope for each of the DNS Client Subnets that you have configured.  
@@ -96,7 +96,7 @@ Add-DnsServerZoneScope -ZoneName "contosogiftservices.com" -Name "SeattleZoneSco
 Add-DnsServerZoneScope -ZoneName "contosogiftservices.com" -Name "DublinZoneScope"  
   
 ```  
-For more information, see [Add-DnsServerZoneScope](https://technet.microsoft.com/library/mt126267.aspx).  
+For more information, see [Add-DnsServerZoneScope](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverzonescope?view=win10-ps).  
   
 #### <a name="bkmk_records"></a>Add Records to the Zone Scopes  
 Now you must add the records representing the web server host into the two zone scopes.  
@@ -113,7 +113,7 @@ Add-DnsServerResourceRecord -ZoneName "contosogiftservices.com" -A -Name "www" -
 ```  
 The ZoneScope parameter is not included when you add a record in the default scope. This is the same as adding records to a standard DNS zone.  
   
-For more information, see [Add-DnsServerResourceRecord](https://technet.microsoft.com/library/jj649925.aspx).  
+For more information, see [Add-DnsServerResourceRecord](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverresourcerecord?view=win10-ps).  
   
 #### <a name="bkmk_policies"></a>Create the DNS Policies  
 After you have created the subnets, the partitions (zone scopes), and you have added records, you must create policies that connect the subnets and partitions, so that when a query comes from a source in one of the DNS client subnets, the query response is returned from the correct scope of the zone. No policies are required for mapping the default zone scope.  
@@ -144,7 +144,7 @@ Add-DnsServerQueryResolutionPolicy -Name "EuropePolicy" -Action ALLOW -ClientSub
 Add-DnsServerQueryResolutionPolicy -Name "RestOfWorldPolicy" -Action ALLOW --ZoneScope "DublinZoneScope,1;SeattleZoneScope,1" -ZoneName "contosogiftservices.com" -ProcessingOrder 5  
   
 ```  
-For more information, see [Add-DnsServerQueryResolutionPolicy](https://technet.microsoft.com/library/mt126273.aspx).  
+For more information, see [Add-DnsServerQueryResolutionPolicy](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy?view=win10-ps).  
   
 Now the DNS server is configured with the required DNS policies to redirect traffic based on geo-location and time of day.  
   

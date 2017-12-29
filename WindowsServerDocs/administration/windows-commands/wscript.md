@@ -12,12 +12,12 @@ ms.assetid: 2fbaf193-cdbd-414c-84c9-bb5720f84c29
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # wscript
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Windows Script Host provides an environment in which users can execute scripts in a variety of languages, languages that use a variety of object models to perform tasks.
 

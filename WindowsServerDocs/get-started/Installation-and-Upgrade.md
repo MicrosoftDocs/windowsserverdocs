@@ -13,6 +13,7 @@ ms.assetid: 98f876bd-63ff-4c3a-95d4-a8dd8d0d119c
 author: jaimeo
 ms.author: jaimeo
 manager: elizapo
+ms.localizationpriority: medium
 ---
 # Windows Server Installation and Upgrade
 
@@ -21,13 +22,13 @@ manager: elizapo
 Is it time to move to a newer version of Windows Server? Depending on what you are running now, you have lots of options to get there.
 
 ## Installation
-If you want to move to a newer version of Windows Server on the same hardware, one way that always works is a **clean installation**, where you just install the newer operating system directly over the old one on the same hardware, thus deleting the previous operating system. That is the simplest way, but you will need to back up your data first and plan to reinstall your applications. There are a few things to be aware of, such as system requirements, so be sure to check the details for [Windows Server 2016](http://go.microsoft.com/fwlink/?LinkID=825558), [Windows Server 2012 R2](https://technet.microsoft.com/en-us/library/dn303418), and [Windows Server 2012](https://technet.microsoft.com/en-us/library/jj134246.aspx).
+If you want to move to a newer version of Windows Server on the same hardware, one way that always works is a **clean installation**, where you just install the newer operating system directly over the old one on the same hardware, thus deleting the previous operating system. That is the simplest way, but you will need to back up your data first and plan to reinstall your applications. There are a few things to be aware of, such as system requirements, so be sure to check the details for [Windows Server 2016](https://go.microsoft.com/fwlink/?LinkID=825558), [Windows Server 2012 R2](https://technet.microsoft.com/en-us/library/dn303418), and [Windows Server 2012](https://technet.microsoft.com/en-us/library/jj134246.aspx).
 
 Moving from any pre-release version (such as Windows Server 2016 Technical Preview) to the released version (Windows Server 2016) always requires a clean installation.
 
 ## Migration (recommended for Windows Server 2016)
 
-Windows Server [migration] documentation helps you migrate one role or feature at a time from a source computer that is running Windows Server to another destination computer that is running Windows Server, either the same or a newer version. For these purposes, migration is defined as moving one role or feature and its data to a different computer, not upgrading the feature on the same computer. This is the recommended manner in which to move your existing workload and data to a more recent version of Windows Server. To get started, check the [server role upgrade and migration matrix](http://go.microsoft.com/fwlink/?LinkId=828595) for Windows Server 2016.
+Windows Server [migration] documentation helps you migrate one role or feature at a time from a source computer that is running Windows Server to another destination computer that is running Windows Server, either the same or a newer version. For these purposes, migration is defined as moving one role or feature and its data to a different computer, not upgrading the feature on the same computer. This is the recommended manner in which to move your existing workload and data to a more recent version of Windows Server. To get started, check the [server role upgrade and migration matrix](https://go.microsoft.com/fwlink/?LinkId=828595) for Windows Server 2016.
 
 ## Cluster OS Rolling Upgrade
 Cluster OS Rolling Upgrade is a new feature in Windows Server 2016 that enables an administrator to upgrade the operating system of the cluster nodes from Windows Server 2012 R2 to Windows Server 2016 without stopping the Hyper-V or the Scale-Out File Server workloads. This feature allows you to avoid downtime which could impact Service Level Agreements. This new feature is discussed in more detail at [Cluster operating system rolling upgrade](https://technet.microsoft.com/en-us/windows-server-docs/failover-clustering/cluster-operating-system-rolling-upgrade).
@@ -45,14 +46,14 @@ You can upgrade from an evaluation version of the operating system to a retail v
 
 Before you get started with an upgrade, have a look at the tables on this page to see how to get from where you are to where you want to be.
 
-For information about the differences between the installation options available for Windows Server 2016 Technical Preview, including the features that are installed with each option and the management options available after installation, see [Windows Server 2016](http://go.microsoft.com/fwlink/?LinkId=828598).
+For information about the differences between the installation options available for Windows Server 2016 Technical Preview, including the features that are installed with each option and the management options available after installation, see [Windows Server 2016](https://go.microsoft.com/fwlink/?LinkId=828598).
 
 >[!NOTE]
 >Whenever you migrate or upgrade to any version of Windows Server, you should review and understand the [support lifecycle policy](https://support.microsoft.com/lifecycle) and timeframe for that version and plan accordingly. You can [search for the lifecycle information](https://support.microsoft.com/lifecycle) for the particular Windows Server release that you are interested in.
  
  
 ## Upgrading to Windows Server 2016
-For details, including important caveats and limitations on upgrade, license conversion between editions of Windows Server 2016, and conversion of evaluation editions to retail, see [Supported Upgrade Paths for Windows Server 2016](http://go.microsoft.com/fwlink/?LinkId=828602).
+For details, including important caveats and limitations on upgrade, license conversion between editions of Windows Server 2016, and conversion of evaluation editions to retail, see [Supported Upgrade Paths for Windows Server 2016](https://go.microsoft.com/fwlink/?LinkId=828602).
  
 >[!NOTE]
 >Note: Upgrades that switch from a Server Core installation to a Server with a Desktop installation (or vice versa) are not supported. If the older operating system you are upgrading or converting is a Server Core installation, the result will still be a Server Core installation of the newer operating system.

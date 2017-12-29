@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # Deploy a Single DirectAccess Server with Advanced Settings
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This topic provides an introduction to the DirectAccess scenario that uses a single DirectAccess server, and allows you to deploy DirectAccess with advanced settings.  
   
@@ -144,9 +144,9 @@ The following table provides links to additional resources.
 |Content type|References|  
 |--------|-------|  
 |**Deployment**|[DirectAccess Deployment Paths in Windows Server](../../../remote-access/directaccess/DirectAccess-Deployment-Paths-in-Windows-Server.md)<br /><br />[Deploy a Single DirectAccess Server Using the Getting Started Wizard](../../../remote-access/directaccess/single-server-wizard/Deploy-a-Single-DirectAccess-Server-Using-the-Getting-Started-Wizard.md)|  
-|**Tools and settings**|[Remote Access PowerShell cmdlets](http://technet.microsoft.com/library/hh918399.aspx)|  
-|**Community resources**|[DirectAccess Survival Guide](http://social.technet.microsoft.com/wiki/contents/articles/23210.directaccess-survival-guide.aspx)<br /><br />[DirectAccess Wiki entries](http://go.microsoft.com/fwlink/?LinkId=236871)|  
-|**Related technologies**|[How IPv6 works](http://technet.microsoft.com/library/cc781672(v=WS.10).aspx)|  
+|**Tools and settings**|[Remote Access PowerShell cmdlets](https://technet.microsoft.com/library/hh918399.aspx)|  
+|**Community resources**|[DirectAccess Survival Guide](https://social.technet.microsoft.com/wiki/contents/articles/23210.directaccess-survival-guide.aspx)<br /><br />[DirectAccess Wiki entries](https://go.microsoft.com/fwlink/?LinkId=236871)|  
+|**Related technologies**|[How IPv6 works](https://technet.microsoft.com/library/cc781672(v=WS.10).aspx)|  
   
 
 

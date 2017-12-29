@@ -12,12 +12,12 @@ ms.assetid: 85a47b90-783a-41e4-96f2-81f26ae8ca93
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # bitsadmin nowrap
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Truncates any line of output text extending beyond the rightmost edge of the command window.
 

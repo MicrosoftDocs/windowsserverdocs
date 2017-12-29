@@ -12,12 +12,12 @@ ms.assetid: 69b105a1-9710-4a06-8102-38cc9e475ca5
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # list_1
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Displays a list of disks, of partitions in a disk, of volumes in a disk, or of virtual hard disks (VHDs).
 

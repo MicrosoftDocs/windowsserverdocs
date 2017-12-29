@@ -11,7 +11,7 @@ ms.assetid: 938cdda2-f17e-4964-9218-f5868fd96735
 ---
 # Deploy Work Folders with AD FS and Web Application Proxy: Step 1, Set-up AD FS
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This topic describes the first step in deploying Work Folders with Active Directory Federation Services (AD FS) and Web Application Proxy. You can find the other steps in this process in these topics:  
   
@@ -39,7 +39,7 @@ If you intend to convert the test environment that you're setting up with these 
   
 Obtaining these items can take some time, depending on your company's policies, so it can be beneficial to start the request process for the items before you begin to create the test environment.  
   
-There are many commercial certificate authorities (CAs) from which you can purchase the certificate. You can find a list of the CAs that are trusted by Microsoft in [KB article 931125](http://support.microsoft.com/kb/931125). Another alternative is to get a certificate from your company's enterprise CA.  
+There are many commercial certificate authorities (CAs) from which you can purchase the certificate. You can find a list of the CAs that are trusted by Microsoft in [KB article 931125](https://support.microsoft.com/kb/931125). Another alternative is to get a certificate from your company's enterprise CA.  
   
 For the test environment, you will use a self-signed certificate that is created by one of the provided scripts.  
   

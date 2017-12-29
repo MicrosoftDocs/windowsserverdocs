@@ -12,11 +12,11 @@ ms.assetid: dfaa3adf-2c83-486c-86d6-23f93c5c883c
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # gpresult
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Displays the Resultant Set of Policy (RSoP) information for a remote user and computer.
 To use RSoP reporting for remotely targeted computers through the firewall, you must have firewall rules that enable inbound network traffic on the ports.
@@ -60,6 +60,6 @@ The following example displays RSoP data for the computer **srvmain** and the lo
 gpresult /s srvmain /u maindom\hiropln /p p@ssW23 /r
 ```
 ## additional references
--   [Group Policy TechCenter](http://go.microsoft.com/fwlink/?LinkID=145531)
+-   [Group Policy TechCenter](https://go.microsoft.com/fwlink/?LinkID=145531)
 
 -   [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -7,12 +7,11 @@ ms.technology: storage
 ms.topic: article
 author: jasongerend
 ms.date: 07/10/2017
-description: This topic describes DFS Namespaces, which is a role service in Windows Server enabling you to group shared folders located on different servers into one or more logically structured namespaces. 
-
+description: This topic describes DFS Namespaces, which is a role service in Windows Server enabling you to group shared folders located on different servers into one or more logically structured namespaces.
 ---
 # DFS Namespaces overview
 
-> Applies to: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
 DFS Namespaces is a role service in Windows Server that enables you to group shared folders located on different servers into one or more logically structured namespaces. This makes it possible to give users a virtual view of shared folders, where a single path leads to files located on multiple servers, as shown in the following figure:
 
@@ -37,11 +36,11 @@ A namespace server is a domain controller or member server that hosts a namespac
 
 Servers that are running the following operating systems can host multiple domain-based namespaces in addition to a single stand-alone namespace. 
 
+- Windows Server (Semi-Annual Channel)
 - Windows Server 2016 
 - Windows Server 2012 R2
 - Windows Server 2012
 - Windows Server 2008 R2 Datacenter/Enterprise
-
 
 Servers that are running the following operating systems can host a single stand-alone namespace:
 
@@ -119,7 +118,8 @@ For additional related information, see the following resources.
 |------------------|----------------|
 |**Product evaluation**|[What's New in DFS Namespaces and DFS Replication in Windows Server](https://technet.microsoft.com/library/dn281957(v=ws.11).aspx)|
 |**Deployment**|[DFS Namespace Scalability Considerations](http://blogs.technet.com/b/filecab/archive/2012/08/26/dfs-namespace-scalability-considerations.aspx)|
-|**Operations**|[DFS Namespaces: Frequently Asked Questions](http://technet.microsoft.com/library/ee404780.aspx)|
-|**Community resources**|[The File Services and Storage TechNet Forum](http://social.technet.microsoft.com/forums/winserverfiles/threads/)|
-|**Protocols**|[File Services Windows Server Protocols](http://msdn.microsoft.com/library/cc239875.aspx)|
+|**Operations**|[DFS Namespaces: Frequently Asked Questions](https://technet.microsoft.com/library/ee404780.aspx)|
+|**Community resources**|[The File Services and Storage TechNet Forum](https://social.technet.microsoft.com/forums/winserverfiles/threads/)|
+|**Protocols**|[File Services Windows Server Protocols](https://msdn.microsoft.com/library/cc239875.aspx)|
 |**Related technologies**| [Failover Clustering](../../failover-clustering/failover-clustering-overview.md)|
+|**Support**|[Windows IT Pro Support](https://www.microsoft.com/itpro/windows/support)|

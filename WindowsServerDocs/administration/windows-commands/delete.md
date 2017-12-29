@@ -12,12 +12,12 @@ ms.assetid: 021799a3-11a2-4e7f-8fdc-fba24ca2ba21
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # delete
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Deletes a partition or a volume. It also deletes a dynamic disk from the list of disks.
 

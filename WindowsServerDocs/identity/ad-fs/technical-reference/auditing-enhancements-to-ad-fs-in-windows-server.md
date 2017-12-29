@@ -5,7 +5,7 @@ description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 05/31/2017
+ms.date: 10/25/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 
@@ -48,14 +48,10 @@ AD FS Audit Events can be of different types, based on the different types of re
 |Application Token Success|1200|A request where a security token is issued successfully by the Federation Service. For WS-Federation, SAML-P this is logged when the request is processed with the SSO artifact. (such as the SSO cookie).|  
 |Application Token Failure|1201|A request where  security token issuance failed on the Federation Service. For WS-Federation, SAML-P this is logged when the request was processed with the SSO artifact. (such as the SSO cookie).|  
 |Password Change Request Success|1204|A transaction where the password change request was successfully processed by the Federation Service.|  
-|Password Change Request Error|1205|A transaction where the password change request failed to be processed by the Federation Service.|  
-|System|-|Describes that this was a system request. For example, these are ADFS server to server request, proxy to STS requests.|  
-|Discovery|-|A request to Federation metadata or MEX End Points.|  
+|Password Change Request Error|1205|A transaction where the password change request failed to be processed by the Federation Service.| 
 |Sign Out Success|1206|Describes a successful sign-out request.|  
 |Sign Out Failure|1207|Describes a failed sign-out request.|  
-|Device Registration|-|Request for device registration service.|  
-|Resource|-|This includes requests for resources such as java-script, images.|  
-|Configuration|-|This describes a configuration request into the system. Important for admins to understand change management on a business critical request.|  
+
   
 
 

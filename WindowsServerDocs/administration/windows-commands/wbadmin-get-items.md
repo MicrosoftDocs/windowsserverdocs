@@ -12,12 +12,12 @@ ms.assetid: 27d08ce3-6e06-4260-b264-fc1bde132d09
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # wbadmin get items
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Lists the items included in a specific backup.
 
@@ -57,4 +57,4 @@ wbadmin get items -version:04/30/2013-09:00 -backupTarget:\\servername\share -ma
 
 -   [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)
--   [Get-WBBackupSet](http://technet.microsoft.com/library/jj902473.aspx) cmdlet
+-   [Get-WBBackupSet](https://technet.microsoft.com/library/jj902473.aspx) cmdlet

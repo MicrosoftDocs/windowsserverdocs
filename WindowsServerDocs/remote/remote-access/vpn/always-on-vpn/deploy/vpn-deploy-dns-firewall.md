@@ -11,7 +11,7 @@ author: jamesmci
 ---
 # Configure DNS and Firewall Settings
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows 10
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
 You can use this section to configure DNS and Firewall settings.
 
@@ -66,7 +66,7 @@ By default, NPS and VPN listen for RADIUS traffic on ports 1812, 1813, 1645, and
 
 If you are using the default RADIUS port configuration on the VPN Server and the NPS Server, ensure that you open the following ports on the Internal Perimeter Network Firewall.
 
-- Ports 1812, 1813, 1645, and 1646
+- Ports UDP1812, UDP1813, UDP1645, and UDP1646
 
 If you are not using the default RADIUS ports in your NPS deployment, you must configure the firewall to allow RADIUS traffic on the ports that you are using.
 

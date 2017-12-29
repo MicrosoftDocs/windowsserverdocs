@@ -12,12 +12,12 @@ ms.assetid: c65b5ac3-711a-4368-95b8-ba82e2d00713
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # help
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Provides online information about system commands (that is, non-network commands). If used without parameters, **help** lists and briefly describes every system command.
 

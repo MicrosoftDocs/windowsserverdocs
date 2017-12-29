@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # NIC Teaming
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This topic provides an overview of Network Interface Card (NIC) Teaming in Windows Server 2016.
 

@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # Deploy a Single DirectAccess Server Using the Getting Started Wizard
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This topic provides an introduction to the DirectAccess scenario that uses a single DirectAccess server, and allows you to deploy DirectAccess in a few easy steps.  
   
@@ -115,7 +115,7 @@ Hardware requirements for this scenario include the following:
         > If some or all of your client computers are running Windows 7, you must use the Advanced Setup Wizard. The Getting Started Setup Wizard described in this document does not support client computers that are running Windows 7. See [Deploy a Single DirectAccess Server with Advanced Settings](../../../remote-access/directaccess/single-server-advanced/../../../remote-access/directaccess/single-server-advanced/../../../remote-access/directaccess/single-server-advanced/Deploy-a-Single-DirectAccess-Server-with-Advanced-Settings.md) for instructions on how to use Windows 7 clients with DirectAccess.  
   
         > [!NOTE]  
-        > Only the following operating systems can be used as DirectAccess clients: Windows 10, Windows 8.1 Enterprise,  Windows Server 2016,  Windows Server 2012 R2 ,  Windows Server 2012 , Windows 8 Enterprise, Windows Server 2008 R2, Windows 7 Enterprise, and Windows 7 Ultimate.  
+        > Only the following operating systems can be used as DirectAccess clients: Windows 10 Enterprise, Windows 8.1 Enterprise,  Windows Server 2016,  Windows Server 2012 R2 ,  Windows Server 2012 , Windows 8 Enterprise, Windows Server 2008 R2, Windows 7 Enterprise, and Windows 7 Ultimate.  
   
 -   Infrastructure and management server requirements:  
   
@@ -145,10 +145,10 @@ The following table provides links to additional resources.
   
 |Content type|References|  
 |--------|-------|  
-|**Remote Access on TechNet**|[Remote Access TechCenter](http://technet.microsoft.com/network/bb545655.aspx)|  
-|**Tools and settings**|[Remote Access PowerShell cmdlets](http://technet.microsoft.com/library/hh918399.aspx)|  
-|**Community resources**|[DirectAccess Wiki entries](http://go.microsoft.com/fwlink/?LinkId=236871)|  
-|**Related technologies**|[How IPv6 works](http://technet.microsoft.com/library/cc781672(v=WS.10).aspx)|  
+|**Remote Access on TechNet**|[Remote Access TechCenter](https://technet.microsoft.com/network/bb545655.aspx)|  
+|**Tools and settings**|[Remote Access PowerShell cmdlets](https://technet.microsoft.com/library/hh918399.aspx)|  
+|**Community resources**|[DirectAccess Wiki entries](https://go.microsoft.com/fwlink/?LinkId=236871)|  
+|**Related technologies**|[How IPv6 works](https://technet.microsoft.com/library/cc781672(v=WS.10).aspx)|  
   
 
 

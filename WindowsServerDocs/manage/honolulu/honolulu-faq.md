@@ -10,11 +10,11 @@ ms.topic:
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 09/21/2017
+ms.date: 12/01/2017
 ---
 # Microsoft Project Honolulu Frequently Asked Questions
 
->Applies To: Windows Server, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Microsoft Hyper-V Server 2016, Microsoft Hyper-V Server 2012 R2 and Windows 10
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Microsoft Hyper-V Server 2016, Microsoft Hyper-V Server 2012 R2 and Windows 10
 
 ## Q: Is project Honolulu new?
 

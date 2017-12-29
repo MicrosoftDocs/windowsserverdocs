@@ -1,14 +1,13 @@
 ---
-ms.assetid: a3a91034-a4da-4ad7-93f8-0cd2ec3e7824
 title: Active Directory Domain Services Component Updates
-description:This document discusses the AD DS component updates for Windows Server 2012 R2
+description: This document discusses the AD DS component updates for Windows Server 2012 R2
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 09/08/2017
 ms.topic: article
 ms.prod: windows-server-threshold
-
+ms.assetid: a3a91034-a4da-4ad7-93f8-0cd2ec3e7824
 ms.technology: identity-adds
 ---
 

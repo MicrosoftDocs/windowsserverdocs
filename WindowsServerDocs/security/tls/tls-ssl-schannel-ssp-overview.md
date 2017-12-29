@@ -16,17 +16,17 @@ ms.date: 10/12/2016
 ---
 # TLS - SSL (Schannel SSP) Overview
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This topic for the IT professional introduces the TLS/SSL implementation in Windows using the Schannel Security Service Provider (SSP) by describing practical applications, changes in Microsoft's implementation, and software requirements, plus additional resources for Windows Server 2012 and Windows 8.
 
-**Did you mean???**
+**Did you mean:**
 
--   [The Schannel security package](http://msdn.microsoft.com/library/ms678421.aspx)
+-   [The Schannel security package](https://msdn.microsoft.com/library/ms678421.aspx)
 
--   [Secure Channel](http://msdn.microsoft.com/library/windows/desktop/aa380123.aspx)
+-   [Secure Channel](https://msdn.microsoft.com/library/windows/desktop/aa380123.aspx)
 
--   [Transport Layer Security Protocol](http://msdn.microsoft.com/library/windows/desktop/aa380516.aspx)
+-   [Transport Layer Security Protocol](https://msdn.microsoft.com/library/windows/desktop/aa380516.aspx)
 
 ## <a name="BKMK_OVER"></a>TLS\SSL \(Schannel\) description
 Schannel is a Security Support Provider \(SSP\) that implements the Secure Sockets Layer \(SSL\) and Transport Layer Security \(TLS\) Internet standard authentication protocols.

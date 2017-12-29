@@ -12,11 +12,11 @@ ms.assetid: 59febc81-0b14-487e-8aa3-642f59d0b34f vhorne
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # ftp: verbose_1
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Toggles **verbose** mode.   
 ## Syntax  

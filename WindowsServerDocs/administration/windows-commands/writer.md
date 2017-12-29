@@ -12,12 +12,12 @@ ms.assetid: 7cf98295-411d-4705-8573-f898ff45c140
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # writer
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Verifies that a writer or component is included or excludes a writer or component from the backup or restore procedure. If used without parameters, **writer** displays help at the command prompt.
 
@@ -42,7 +42,7 @@ To verify a writer by specifying its GUID (for this example, 4dc3bdd4-ab48-4d07-
 ```
 writer verify {4dc3bdd4-ab48-4d07-adb0-3bee2926fd7f}
 ```
-To exclude a writer with the name “System Writer,” type:
+To exclude a writer with the name “System Writer,�? type:
 ```
 writer exclude "System Writer"
 ```

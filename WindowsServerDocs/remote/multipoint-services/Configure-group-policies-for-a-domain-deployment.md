@@ -13,7 +13,6 @@ ms.assetid: 13e5fa90-d330-4155-a6b8-78eb650cbbfa
 author: evaseydl    
 manager: scottman
 ms.author: evas
-ms.date: 08/04/2016
 ---
 # Configure group policies for a domain deployment
 To ensure that your domain deployment of MultiPoint Services works properly, apply the following group policy settings to the WMSshell user account on a MultiPoint Services system.  
@@ -60,7 +59,7 @@ For a domain deployment of MultiPoint Services, you should update the following 
   
     HKEY_USERS\<SIDofWMSshell>\Software\Policies\Microsoft\Windows\Control Panel\Desktop  
   
-    where '<SIDofWMSshell>' is the security identifier (SID) for the WMSshell account. To find out how to identify the SID, see [How to Associate a Username with a Security Identifier (SID)](http://support.microsoft.com/kb/154599).  
+    where '<SIDofWMSshell>' is the security identifier (SID) for the WMSshell account. To find out how to identify the SID, see [How to Associate a Username with a Security Identifier (SID)](https://support.microsoft.com/kb/154599).  
   
 3.  In the list on the right, update the following subkeys.  
   

@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # Troubleshooting Enabling OTP
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This topic contains troubleshooting information for issues related to enabling DirectAccess OTP authentication using either the **Enable-DAOtpAuthentication** PowerShell cmdlet or the Remote Access Management console.
   
@@ -98,7 +98,7 @@ The Certificate Templates MMC snap-in in Windows Server 2003 doesn't allow you t
   
 **Solution**  
   
-Install Certificate Templates snap-in on a post-Windows Server 2003 server and use it to configure the OTP logon template, see [Install the Certificate Templates Snap-In](http://technet.microsoft.com/library/cc732445.aspx).  
+Install Certificate Templates snap-in on a post-Windows Server 2003 server and use it to configure the OTP logon template, see [Install the Certificate Templates Snap-In](https://technet.microsoft.com/library/cc732445.aspx).  
   
 
 

@@ -17,6 +17,7 @@
 ### [Choose how you pay](rds-plan-choose-how-you-pay.md)
 ### [Office 2016 in RDS and VDI deployments](rds-office-vdi-rdsh.md)
 #### [Dealing with Outlook search in non-persistent environments](rds-outlook-data-fslogix.md)
+#### [Dealing with OneDrive for Business in non-persistent environments](rds-onedrive-for-business.md)
 ### [Desktop Hosting Reference Architecture](Desktop-Hosting-Reference-Architecture.md)
 #### [Remote Desktop Services architecture](Desktop-hosting-logical-architecture.md)
 #### [Desktop hosting service](Desktop-hosting-service.md)
@@ -57,6 +58,7 @@
 ### [Manage personal desktop session collections](rds-manage-personal-collection.md)
 ### [Recommended configuration for VDI desktops](rds-vdi-recommendations.md)
 ### [Manage users in your RDS collection](rds-user-management.md)
+### [Customize the RDS title “Work Resources” using PowerShell on Windows Server](rds-work-resources.md)
 
 ## [Additional Remote Desktop support](rds-get-support.md)
 ## [Remote Desktop clients](clients/remote-desktop-clients.md)

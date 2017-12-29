@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Authentication Policies and Authentication Policy Silos
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This topic for the IT professional describes authentication policy silos and the policies that can restrict accounts to those silos. It also explains how authentication policies can be used to restrict the scope of accounts.
 
@@ -133,9 +133,9 @@ For more information about this security group, see [How the Protected Users gro
 
 Authentication policy silos and authentication policies leverage the existing Windows authentication infrastructure. The use of the NTLM protocol is rejected, and the Kerberos protocol with newer encryption types is used. Authentication policies complement the Protected Users security group by providing a way to apply configurable restrictions to accounts, in addition to providing restrictions for accounts for services and computers. Authentication policies are enforced during the Kerberos protocol authentication service (AS) or ticket-granting service (TGS) exchange. For more information about how Windows uses the Kerberos protocol, and what changes have been made to support authentication policy silos and authentication policies, see:
 
--   [How the Kerberos Version 5 Authentication Protocol Works](http://technet.microsoft.com/library/cc772815(v=ws.10).aspx)
+-   [How the Kerberos Version 5 Authentication Protocol Works](https://technet.microsoft.com/library/cc772815(v=ws.10).aspx)
 
--   [Changes in Kerberos Authentication](http://technet.microsoft.com/library/dd560670(v=ws.10).aspx) (Windows Server 2008 R2 and Windows 7)
+-   [Changes in Kerberos Authentication](https://technet.microsoft.com/library/dd560670(v=ws.10).aspx) (Windows Server 2008 R2 and Windows 7)
 
 ### <a name="BKMK_HowKerbUsed"></a>How the Kerberos protocol is used with authentication policy silos and policies
 When a domain account is linked to an authentication policy silo, and the user signs in, the Security Accounts Manager adds the claim type of Authentication Policy Silo that includes the silo as the value. This claim on the account provides the access to the targeted silo.

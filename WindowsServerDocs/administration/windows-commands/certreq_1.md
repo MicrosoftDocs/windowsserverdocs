@@ -12,12 +12,12 @@ ms.assetid: 7a04e51f-f395-4bff-b57a-0e9efcadf973
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # certreq_1
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Certreq can be used to request certificates from a certification authority (CA), to retrieve a response to a previous request from a CA, to create a new request from an .inf file, to accept and install a response to a request, to construct a cross-certification or qualified subordination request from an existing CA certificate or request, and to sign a cross-certification or qualified subordination request.
 
@@ -87,7 +87,7 @@ To submit a simple certificate request use the example below:
 ```
 certreq –submit certRequest.req certnew.cer certnew.pfx
 ```
-To request a certificate by specifying the SAN attribute, see the detailed steps in Microsoft Knowledge Base article 931351 [How to add a Subject Alternative Name to a secure LDAP certificate](http://support.microsoft.com/kb/931351) in the "How to use the Certreq.exe utility to create and submit a certificate request that includes a SAN" section.
+To request a certificate by specifying the SAN attribute, see the detailed steps in Microsoft Knowledge Base article 931351 [How to add a Subject Alternative Name to a secure LDAP certificate](https://support.microsoft.com/kb/931351) in the "How to use the Certreq.exe utility to create and submit a certificate request that includes a SAN" section.
 
 Return to [Contents](#BKMK_Contents)
 
@@ -153,7 +153,7 @@ This section is mandatory for an INF file that acts as a template for a new cert
 |RenewalCert|If you need to renew a certificate that exists on the system where the certificate request is generated, you must specify its certificate hash as the value for this key.|The certificate hash of any certificate that is available at the computer where the certificate request is created. If you do not know the certificate hash, use the Certificates MMC Snap-In and look at the certificate that should be renewed. Open the certificate properties and see the "Thumbprint" attribute of the certificate. Certificate renewal requires either a PKCS#7 or a CMC request format.|RenewalCert = 4EDF274BD2919C6E9EC6A522F0F3B153E9B1582D|
 |RequesterName</br>Note: This makes the request to enroll on behalf of another user request.The request must also be signed with an Enrollment Agent certificate, or the CA will reject the request. Use the -cert option to specify the enrollment agent certificate.|The requester name can be specified for certificate requests if the RequestType is set to PKCS#7 or CMC. If the RequestType is set to PKCS#10, this key will be ignored. The Requestername can only be set as part of the request. You cannot manipulate the Requestername in a pending request.|Domain\User|Requestername = "Contoso\BSmith"|
 |RequestType|Determines the standard that is used to generate and send the certificate request.|PKCS10 -- 1</br>PKCS7 -- 2</br>CMC -- 3</br>Cert -- 4</br>Tip: This option indicates a self-signed or self-issued certificate. It does not generate a request, but rather a new certificate and then installs the certificate.Self-signed is the default.Specify a signing cert by using the –cert option to create a self-issued certificate that is not self-signed.|RequestType = CMC|
-|SecurityDescriptor</br>Tip: This is relevant only for machine context non-smart card keys.|Contain the security information associated with securable objects. For most securable objects, you can specify an object's security descriptor in the function call that creates the object.|Strings based on [security descriptor definition language](http://msdn.microsoft.com/library/aa379567(v=vs.85).aspx).|SecurityDescriptor = "D:P(A;;GA;;;SY)(A;;GA;;;BA)"|
+|SecurityDescriptor</br>Tip: This is relevant only for machine context non-smart card keys.|Contain the security information associated with securable objects. For most securable objects, you can specify an object's security descriptor in the function call that creates the object.|Strings based on [security descriptor definition language](https://msdn.microsoft.com/library/aa379567(v=vs.85).aspx).|SecurityDescriptor = "D:P(A;;GA;;;SY)(A;;GA;;;BA)"|
 |AlternateSignatureAlgorithm|Specifies and retrieves a Boolean value that indicates whether the signature algorithm object identifier (OID) for a PKCS#10 request or certificate signature is discrete or combined.|true, false|AlternateSignatureAlgorithm = false</br>Tip: For an RSA signature, false indicates a Pkcs1 v1.5. True indicates a v2.1 signature.|
 |Silent|By default, this option allows the CSP access to the interactive user desktop and request information such as a smart card PIN from the user. If this key is set to TRUE, the CSP must not interact with the desktop and will be blocked from displaying any user interface to the user.|true, false|Silent = true|
 |SMIME|If this parameter is set to TRUE, an extension with the object identifier value 1.2.840.113549.1.9.15 is added to the request. The number of object identifiers depends on the on the operating system version installed and CSP capability, which refer to symmetric encryption algorithms that may be used by Secure Multipurpose Internet Mail Extensions (S/MIME) applications such as Outlook.|true, false|SMIME = true|
@@ -201,7 +201,7 @@ This section is optional.
 Return to [Contents](#BKMK_Contents)
 
 > [!NOTE]
-> SubjectNameFlags allows the INF file to specify which Subject and SubjectAltName extension fields should be auto-populated by certreq based on the current user or current machine properties: DNS name, UPN, and so on. Using the literal “template” means the template name flags are used instead. This allows a single INF file to be used in multiple contexts to generate requests with context-specific subject information.</br>> X500NameFlags specifies the flags to be passed directly to CertStrToName API when the Subject INF keys value is converted to an ASN.1 encoded Distinguished Name.
+> SubjectNameFlags allows the INF file to specify which Subject and SubjectAltName extension fields should be auto-populated by certreq based on the current user or current machine properties: DNS name, UPN, and so on. Using the literal “template�? means the template name flags are used instead. This allows a single INF file to be used in multiple contexts to generate requests with context-specific subject information.</br>> X500NameFlags specifies the flags to be passed directly to CertStrToName API when the Subject INF keys value is converted to an ASN.1 encoded Distinguished Name.
 
 To request a certificate based using certreq -new use the steps from the example below:
 
@@ -218,7 +218,7 @@ KeySpec = 1
 KeyUsage = 0xf0 
 MachineKeySet = TRUE 
 [RequestAttributes]
-CertificateTemplate=”WebServer”
+CertificateTemplate=�?WebServer�?
 [Extensions] 
 OID = 1.3.6.1.5.5.7.3.1 
 OID = 1.3.6.1.5.5.7.3.2  
@@ -273,7 +273,7 @@ Return to [Contents](#BKMK_Contents)
 certreq -policy [-attrib AttributeString] [-binary] [-cert CertID] [RequestFileIn [PolicyFileIn [RequestFileOut [PKCS10FileOut]]]]
 ```
 -   The configuration file that defines the constraints that are applied to a CA certificate when qualified subordination is defined is called Policy.inf..
--   You can find an example of the Policy.inf file in the [Appendix A of Planning and Implementing Cross-Certification and Qualified Subordination](http://technet.microsoft.com/library/cc738878(WS.10).aspx) white paper.
+-   You can find an example of the Policy.inf file in the [Appendix A of Planning and Implementing Cross-Certification and Qualified Subordination](https://technet.microsoft.com/library/cc738878(WS.10).aspx) white paper.
 -   If you type the certreq -policy without any additional parameter it will open a dialog window so you can select the requested fie (req, cmc, txt, der, cer or crt). Once you select the requested file and click Open button, another dialog window will open in order to select the INF file.
 
 You can use this example to build a cross certificate request:
@@ -344,7 +344,7 @@ Return to [Contents](#BKMK_Contents)
 |-crl|Includes certificate revocation lists (CRLs) in the output to the base64-encoded PKCS #7 file specified by CertChainFileOut or to the base64-encoded file specified by RequestFileOut.|
 |-rpc|Instructs Active Directory Certificate Services (AD CS) to use a remote procedure call (RPC) server connection instead of Distributed COM.|
 |-AdminForceMachine|Use the Key Service or impersonation to submit the request from Local System context. Requires that the user invoking this option be a member of Local Administrators.|
-|-RenewOnBehalfOf|Submit a renewal on behalf of the subject identified in the signing certificate. This sets CR_IN_ROBO when calling [ICertRequest::Submit](http://technet.microsoft.com/subscriptions/aa385040.aspx)|
+|-RenewOnBehalfOf|Submit a renewal on behalf of the subject identified in the signing certificate. This sets CR_IN_ROBO when calling [ICertRequest::Submit](https://technet.microsoft.com/subscriptions/aa385040.aspx)|
 |-f|Force existing files to be overwritten. This also bypasses caching templates and policy.|
 |-q|Use silent mode; suppress all interactive prompts.|
 |-Unicode|Writes Unicode output when standard output is redirected or piped to another command, which helps when invoked from Windows PowerShell® scripts).|
@@ -367,13 +367,13 @@ Return to [Contents](#BKMK_Contents)
 ## <a name="BKMK_Examples"></a>Additional certreq examples
 
 The following articles contain examples of certreq usage:
--   [How to Request a Certificate With a Custom Subject Alternative Name](http://technet.microsoft.com/library/ff625722.aspx)
--   [Test Lab Guide: Deploying an AD CS Two-Tier PKI Hierarchy](http://technet.microsoft.com/library/hh831348.aspx)
--   [Appendix 3: Certreq.exe Syntax](http://technet.microsoft.com/library/cc736326.aspx)
+-   [How to Request a Certificate With a Custom Subject Alternative Name](https://technet.microsoft.com/library/ff625722.aspx)
+-   [Test Lab Guide: Deploying an AD CS Two-Tier PKI Hierarchy](https://technet.microsoft.com/library/hh831348.aspx)
+-   [Appendix 3: Certreq.exe Syntax](https://technet.microsoft.com/library/cc736326.aspx)
 -   [How to create a web server SSL certificate manually](http://blogs.technet.com/b/pki/archive/2009/08/05/how-to-create-a-web-server-ssl-certificate-manually.aspx)
--   [Request an AMT Provisioning Certificate Using a Windows Server 2008 CA](http://social.technet.microsoft.com/wiki/contents/articles/request-an-amt-provisioning-certificate-using-a-windows-server-2008-ca.aspx)
--   [Certificate Enrollment for System Center Operations Manager Agent](http://social.technet.microsoft.com/wiki/contents/articles/certificate-enrollment-for-system-center-operations-manager-agent.aspx)
--   [AD CS Step by Step Guide: Two Tier PKI Hierarchy Deployment](http://social.technet.microsoft.com/wiki/contents/articles/15037.ad-cs-step-by-step-guide-two-tier-pki-hierarchy-deployment.aspx)
--   [How to enable LDAP over SSL with a third-party certification authority](http://support.microsoft.com/kb/321051)
+-   [Request an AMT Provisioning Certificate Using a Windows Server 2008 CA](https://social.technet.microsoft.com/wiki/contents/articles/request-an-amt-provisioning-certificate-using-a-windows-server-2008-ca.aspx)
+-   [Certificate Enrollment for System Center Operations Manager Agent](https://social.technet.microsoft.com/wiki/contents/articles/certificate-enrollment-for-system-center-operations-manager-agent.aspx)
+-   [AD CS Step by Step Guide: Two Tier PKI Hierarchy Deployment](https://social.technet.microsoft.com/wiki/contents/articles/15037.ad-cs-step-by-step-guide-two-tier-pki-hierarchy-deployment.aspx)
+-   [How to enable LDAP over SSL with a third-party certification authority](https://support.microsoft.com/kb/321051)
 
 Return to [Contents](#BKMK_Contents)

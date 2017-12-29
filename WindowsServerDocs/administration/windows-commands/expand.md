@@ -12,11 +12,11 @@ ms.assetid: 66de0488-a0c4-40c2-9b03-e40c107ba343
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # expand
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 expands one or more compressed files. You can use this command to retrieve compressed files from distribution disks.  
 ## Syntax  
@@ -39,7 +39,7 @@ expand <source>.cab /f:<files> <destination>
 |/?|Displays help at the command prompt.|  
 ## remarks  
 -   Using **expand** at the recovery Console  
-    The **expand** command, with different parameters, is available from the recovery Console. For more information about the recovery Console, see [article 314058](http://support.microsoft.com/kb/314058) in the Microsoft Knowledge Base.  
+    The **expand** command, with different parameters, is available from the recovery Console. For more information about the recovery Console, see [article 314058](https://support.microsoft.com/kb/314058) in the Microsoft Knowledge Base.  
 ## additional references  
 [Command-Line Syntax Key](command-line-syntax-key.md)  
 [Command-Line Reference_1](command-line-reference_1.md)  

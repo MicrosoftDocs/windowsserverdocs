@@ -12,12 +12,12 @@ ms.assetid: 2ca66b22-3b7c-4166-8503-eb75fc53ab46
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # find
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Searches for a string of text in a file or files, and displays lines of text that contain the specified string.
 

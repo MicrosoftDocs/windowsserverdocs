@@ -6,7 +6,7 @@ ms.technology: performance-tuning-guide
 ms.topic: landing-page
 ms.author: DavSo; Ericam; YaShi
 author: akino
-ms.date: 04/24/2017
+ms.date: 10/16/2017
 ---
 
 # Performance tuning Windows Server containers

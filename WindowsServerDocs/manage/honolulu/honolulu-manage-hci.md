@@ -10,12 +10,12 @@ ms.topic:
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 09/21/2017
+ms.date: 12/01/2017
 ---
 
 # Manage Hyper-Converged Infrastructure with Project Honolulu
 
->Applies To: Windows Server, Windows Server 2016, Windows Server 2012 R2
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2
 
 ## What is Hyper-Converged Infrastructure?
 

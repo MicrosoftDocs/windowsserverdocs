@@ -12,7 +12,7 @@ ms.assetid: 3a17e686-e7f2-47e2-b7af-733777c38b5f
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # Manage Multiple, remote Servers with Server Manager
 
@@ -20,7 +20,7 @@ ms.date: 10/12/2016
 
 Server Manager is a management console in Windows Server 2012 R2 and Windows Server 2012 that helps IT professionals provision and manage both local and remote Windows-based servers from their desktops, without requiring either physical access to servers, or the need to enable remote Desktop protocol (rdP) connections to each server. Although Server Manager is available in  Windows Server 2008 R2 and Windows Server 2008, Server Manager was updated in  Windows Server 2012, to support remote, multi-server management, and help increase the number of servers an administrator can manage.
 
-In our tests, Server Manager in  Windows Server 2012 R2  and  Windows Server 2012 can be used to manage up to 100 servers that are configured with a typical workload. The number of servers that you can manage by using a single Server Manager console can vary depending on the amount of data that you request from managed servers, and hardware and network resources available to the computer running Server Manager. As the amount of data you want to display approaches that computer's resource capacity, you can experience slow responses from Server Manager, and delays in the completion of refreshes. To help increase the number of servers that you can manage by using Server Manager, we recommend limiting the event data that Server Manager gets from your managed servers, by using settings in the **Configure Event Data** dialog box. Configure Event Data can be opened from the **Tasks** menu in the **Events** tile. If you need to manage an enterprise-level number of servers in your organization, we recommend evaluating products in the [Microsoft System Center suite](http://go.microsoft.com/fwlink/p/?LinkId=239437).
+In our tests, Server Manager in  Windows Server 2012 R2  and  Windows Server 2012 can be used to manage up to 100 servers that are configured with a typical workload. The number of servers that you can manage by using a single Server Manager console can vary depending on the amount of data that you request from managed servers, and hardware and network resources available to the computer running Server Manager. As the amount of data you want to display approaches that computer's resource capacity, you can experience slow responses from Server Manager, and delays in the completion of refreshes. To help increase the number of servers that you can manage by using Server Manager, we recommend limiting the event data that Server Manager gets from your managed servers, by using settings in the **Configure Event Data** dialog box. Configure Event Data can be opened from the **Tasks** menu in the **Events** tile. If you need to manage an enterprise-level number of servers in your organization, we recommend evaluating products in the [Microsoft System Center suite](https://go.microsoft.com/fwlink/p/?LinkId=239437).
 
 This topic and its subtopics provide information about how to use features in the Server Manager console. This topic contains the following sections.
 
@@ -41,30 +41,30 @@ The following sections list some initial considerations that you need to review,
 Server Manager is installed by default with all editions of  Windows Server 2012 R2  and  Windows Server 2012 . No additional hardware requirements exist for Server Manager.
 
 ### <a name="BKMK_softconfig"></a>Software and configuration requirements
-Server Manager is installed by default with all editions of  Windows Server 2012 . Although you can use Server Manager to manage [Server Core installation options](http://go.microsoft.com/fwlink/p/?LinkID=241573) of  Windows Server 2012  and  Windows Server 2008 R2  that are running on remote computers, Server Manager does not run directly on Server Core installation options.
+Server Manager is installed by default with all editions of  Windows Server 2012 . Although you can use Server Manager to manage [Server Core installation options](https://go.microsoft.com/fwlink/p/?LinkID=241573) of  Windows Server 2012  and  Windows Server 2008 R2  that are running on remote computers, Server Manager does not run directly on Server Core installation options.
 
 To fully manage remote servers that are running  Windows Server 2008  or  Windows Server 2008 R2 , install the following updates on the servers you want to manage, in the order shown.
 
 To manage servers that are running  Windows Server 2012 ,  Windows Server 2008 R2 , or  Windows Server 2008  by using Server Manager in  Windows Server 2012 R2 , apply the following updates to the older operating systems.
 
--   [.NET Framework 4.5](http://www.microsoft.com/download/details.aspx?id=30653)
+-   [.NET Framework 4.5](https://www.microsoft.com/download/details.aspx?id=30653)
 
--   [Windows Management Framework 4.0](http://go.microsoft.com/fwlink/?LinkId=293881). The Windows Management Framework 4.0 download package updates Windows Management Instrumentation (WMI) providers on  Windows Server 2012 ,  Windows Server 2008 R2 , and  Windows Server 2008 . The updated WMI providers let Server Manager collect information about roles and features that are installed on the managed servers. Until the update is applied, servers that are running  Windows Server 2012 ,  Windows Server 2008 R2  or  Windows Server 2008  have a manageability status of **Not accessible**.
+-   [Windows Management Framework 4.0](https://go.microsoft.com/fwlink/?LinkId=293881). The Windows Management Framework 4.0 download package updates Windows Management Instrumentation (WMI) providers on  Windows Server 2012 ,  Windows Server 2008 R2 , and  Windows Server 2008 . The updated WMI providers let Server Manager collect information about roles and features that are installed on the managed servers. Until the update is applied, servers that are running  Windows Server 2012 ,  Windows Server 2008 R2  or  Windows Server 2008  have a manageability status of **Not accessible**.
 
--   The performance update associated with [Knowledge Base article 2682011](http://go.microsoft.com/fwlink/p/?LinkID=245487) allows Server Manager to collect performance data from  Windows Server 2008  and  Windows Server 2008 R2 . This performance update is not necessary on servers that are running  Windows Server 2012 .
+-   The performance update associated with [Knowledge Base article 2682011](https://go.microsoft.com/fwlink/p/?LinkID=245487) allows Server Manager to collect performance data from  Windows Server 2008  and  Windows Server 2008 R2 . This performance update is not necessary on servers that are running  Windows Server 2012 .
 
 To manage servers that are running  Windows Server 2008 R2  or  Windows Server 2008 , apply the following updates to the older operating systems.
 
--   [.NET Framework 4](http://www.microsoft.com/download/en/details.aspx?id=17718)
+-   [.NET Framework 4](https://www.microsoft.com/download/en/details.aspx?id=17718)
 
--   [Windows Management Framework 3.0](http://go.microsoft.com/fwlink/p/?LinkID=229019) The Windows Management Framework 3.0 download package updates Windows Management Instrumentation (WMI) providers on  Windows Server 2008  and  Windows Server 2008 R2 . The updated WMI providers let Server Manager collect information about roles and features that are installed on the managed servers. Until the update is applied, servers that are running  Windows Server 2008  or  Windows Server 2008 R2  have a manageability status of **Not accessible - verify earlier versions run Windows Management Framework 3.0**.
+-   [Windows Management Framework 3.0](https://go.microsoft.com/fwlink/p/?LinkID=229019) The Windows Management Framework 3.0 download package updates Windows Management Instrumentation (WMI) providers on  Windows Server 2008  and  Windows Server 2008 R2 . The updated WMI providers let Server Manager collect information about roles and features that are installed on the managed servers. Until the update is applied, servers that are running  Windows Server 2008  or  Windows Server 2008 R2  have a manageability status of **Not accessible - verify earlier versions run Windows Management Framework 3.0**.
 
--   The performance update associated with [Knowledge Base article 2682011](http://go.microsoft.com/fwlink/p/?LinkID=245487) allows Server Manager to collect performance data from  Windows Server 2008 and  Windows Server 2008 R2.
+-   The performance update associated with [Knowledge Base article 2682011](https://go.microsoft.com/fwlink/p/?LinkID=245487) allows Server Manager to collect performance data from  Windows Server 2008 and  Windows Server 2008 R2.
 
 Server Manager runs in the Minimal Server Graphical Interface; that is, when the Server Graphical Shell feature has been uninstalled. The Server Graphical Shell feature is installed by default on  Windows Server 2012 R2  and Windows Server 2012. If you uninstall Server Graphical Shell, the Server Manager console runs, but some applications or tools available from the console are not available. Internet browsers cannot run without Server Graphical Shell, so webpages and applications such as HTML help (The mmc F1 help, for example) cannot be opened. You cannot open dialog boxes for configuring Windows automatic updating and feedback when Server Graphical Shell is not installed; commands that open these dialog boxes in the Server Manager console are redirected to run **sconfig.cmd**.
 
 #### Manage remote computers from a client computer
-The Server Manager console is included with [Remote Server Administration Tools](http://go.microsoft.com/fwlink/?LinkID=304145) for Windows 8.1 and [Remote Server Administration Tools](http://go.microsoft.com/fwlink/p/?LinkID=238560) for Windows 8. Note that when Remote Server Administration Tools is installed on a client computer, you cannot manage the local computer by using Server Manager; Server Manager cannot be used to manage computers or devices that are running a Windows client operating system. You can use Server Manager to manage only Windows-based servers.
+The Server Manager console is included with [Remote Server Administration Tools](https://go.microsoft.com/fwlink/?LinkID=304145) for Windows 8.1 and [Remote Server Administration Tools](https://go.microsoft.com/fwlink/p/?LinkID=238560) for Windows 8. Note that when Remote Server Administration Tools is installed on a client computer, you cannot manage the local computer by using Server Manager; Server Manager cannot be used to manage computers or devices that are running a Windows client operating system. You can use Server Manager to manage only Windows-based servers.
 
 |Server Manager Source Operating System|Targeted at  Windows Server 2012 R2 |Targeted at  Windows Server 2012 |Targeted at  Windows Server 2008 R2  or  Windows Server 2008 |Targeted at Windows Server 2003|
 |-------------------------------|---------------------------------------|------------------------------------|-----------------------------------------------------------------------|------------------|
@@ -73,13 +73,13 @@ The Server Manager console is included with [Remote Server Administration Tools]
 
 ###### To start Server Manager on a client computer
 
-1.  Follow instructions in [Deploy Remote Server Administration Tools](http://go.microsoft.com/fwlink/?LinkID=238562) to install Remote Server Administration Tools for Windows 8.1 or Remote Server Administration Tools for Windows 8.
+1.  Follow instructions in [Deploy Remote Server Administration Tools](https://go.microsoft.com/fwlink/?LinkID=238562) to install Remote Server Administration Tools for Windows 8.1 or Remote Server Administration Tools for Windows 8.
 
 2.  On the **start** screen, click **Server Manager**. The **Server Manager** tile is available after you install Remote Server Administration Tools.
 
 3.  if neither the **Administrative Tools** nor the **Server Manager** tiles are displayed on the **start** screen after installing Remote Server Administration Tools, and searching for Server Manager on the **start** screen does not display results, verify that the **Show administrative tools** setting is turned on. To view this setting, hover the mouse cursor over the upper right corner of the **start** screen, and then click **Settings**. If **Show administrative tools** is turned off, turn the setting on to display tools that you have installed as part of Remote Server Administration Tools.
 
-for more information about running Remote Server Administration Tools for Windows 8 to manage remote servers, see [Remote Server Administration Tools](http://go.microsoft.com/fwlink/?LinkID=221055) on the TechNet Wiki.
+for more information about running Remote Server Administration Tools for Windows 8 to manage remote servers, see [Remote Server Administration Tools](https://go.microsoft.com/fwlink/?LinkID=221055) on the TechNet Wiki.
 
 #### Configure remote management on servers that you want to manage
 
@@ -122,22 +122,22 @@ To perform management tasks on remote servers by using Server Manager, remote se
     > [!NOTE]
     > This command also works in a command prompt that has been opened with elevated user rights (Run as Administrator).
 
-    if enabling remote management fails, see [about_remote_Troubleshooting](http://go.microsoft.com/fwlink/p/?LinkID=135188) on Microsoft TechNet for troubleshooting tips and best practices.
+    if enabling remote management fails, see [about_remote_Troubleshooting](https://go.microsoft.com/fwlink/p/?LinkID=135188) on Microsoft TechNet for troubleshooting tips and best practices.
 
 ###### To enable Server Manager and Windows PowerShell remote management on older operating systems
 
 -   Do one of the following.
 
-    -   To enable remote management on servers that are running  Windows Server 2008 R2 , see [remote Management with Server Manager](http://go.microsoft.com/fwlink/?LinkID=137378) in the  Windows Server 2008 R2  help.
+    -   To enable remote management on servers that are running  Windows Server 2008 R2 , see [remote Management with Server Manager](https://go.microsoft.com/fwlink/?LinkID=137378) in the  Windows Server 2008 R2  help.
 
-    -   To enable remote management on servers that are running  Windows Server 2008 , see [Enable and Use remote Commands in Windows PowerShell](http://go.microsoft.com/fwlink/p/?LinkId=242565).
+    -   To enable remote management on servers that are running  Windows Server 2008 , see [Enable and Use remote Commands in Windows PowerShell](https://go.microsoft.com/fwlink/p/?LinkId=242565).
 
-    -   To enable remote management on servers that are running Windows Server 2003, enable WMI DCOM exceptions in Windows Firewall. For more information about how to do this on servers that are running Windows Server 2003, see [Connecting Through Windows Firewall](http://msdn.microsoft.com/library/aa389286.aspx) on MSDN.
+    -   To enable remote management on servers that are running Windows Server 2003, enable WMI DCOM exceptions in Windows Firewall. For more information about how to do this on servers that are running Windows Server 2003, see [Connecting Through Windows Firewall](https://msdn.microsoft.com/library/aa389286.aspx) on MSDN.
 
 ## <a name="BKMK_tasks"></a>Tasks that you can perform in Server Manager
 Server Manager makes server administration more efficient by allowing administrators to do tasks in the following table by using a single tool. In  Windows Server 2012 R2  and  Windows Server 2012 , both standard users of a server and members of the Administrators group can perform management tasks in Server Manager, but by default, standard users are prevented from performing some tasks, as shown in the following table.
 
-Administrators can use two Windows PowerShell cmdlets in the Server Manager cmdlet module, [Enable-ServerManagerStandardUserremoting](http://technet.microsoft.com/library/jj205470.aspx) and [Disable-ServerManagerStandardUserremoting](http://technet.microsoft.com/library/jj205468.aspx), to further control standard user access to some additional data. The **Enable-ServerManagerStandardUserremoting** cmdlet can provide one or more standard, non-Administrator users access to event, service, performance counter, and role and feature inventory data.
+Administrators can use two Windows PowerShell cmdlets in the Server Manager cmdlet module, [Enable-ServerManagerStandardUserremoting](https://technet.microsoft.com/library/jj205470.aspx) and [Disable-ServerManagerStandardUserremoting](https://technet.microsoft.com/library/jj205468.aspx), to further control standard user access to some additional data. The **Enable-ServerManagerStandardUserremoting** cmdlet can provide one or more standard, non-Administrator users access to event, service, performance counter, and role and feature inventory data.
 
 > [!IMPORTANT]
 > Server Manager cannot be used to manage a newer release of the Windows Server operating system. Server Manager running on  Windows Server 2012  or Windows 8 cannot be used to manage servers that are running  Windows Server 2012 R2 .
@@ -146,7 +146,7 @@ Administrators can use two Windows PowerShell cmdlets in the Server Manager cmdl
 |----------|----------------------------------|-------------|
 |add remote servers to a pool of servers that Server Manager can be used to manage.|Yes|No|
 |create and edit custom groups of servers, such as servers that are in a specific geographic location or serve a specific purpose.|Yes|Yes|
-|Install or uninstall roles, role services, and features on the local or on remote servers that are running  Windows Server 2012 R2  or  Windows Server 2012 . For definitions of roles, role services, and features, see [Roles, Role Services, and Features](http://go.microsoft.com/fwlink/p/?LinkId=239558).|Yes|No|
+|Install or uninstall roles, role services, and features on the local or on remote servers that are running  Windows Server 2012 R2  or  Windows Server 2012 . For definitions of roles, role services, and features, see [Roles, Role Services, and Features](https://go.microsoft.com/fwlink/p/?LinkId=239558).|Yes|No|
 |View and make changes to server roles and features that are installed on either local or remote servers. **Note:** In Server Manager, role and feature data is displayed in the base language of the system, also called the system default GUI language, or the language selected during installation of the operating system.|Yes|Standard users can view and manage roles and features, and perform tasks such as viewing role events, but cannot add or remove role services.|
 |start management tools such as Windows PowerShell or mmc snap-ins. You can start a Windows PowerShell session targeted at a remote server by right-clicking the server in the **Servers** tile, and then clicking **Windows PowerShell**. You can start mmc snap-ins from the **Tools** menu of the Server Manager console, and then point the mmc toward a remote computer after the snap-in is open.|Yes|Yes|
 |Manage remote servers with different credentials by right-clicking a server in the **Servers** tile, and then clicking **Manage As**. You can use **Manage As** for general server and File and Storage Services management tasks.|Yes|No|

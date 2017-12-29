@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Windows Authentication Technical Overview
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This topic for the IT professional provides links to topics for the Windows Authentication Technical Overview. Windows authentication is the process to prove the authenticity of a user or service attempting to access Windows.
 
@@ -63,15 +63,15 @@ This collection of topics does not cover procedures for designing, implementing,
 
 -   For configuring and monitoring security, including authentication, in your Windows environment, see:
 
-    -   [Windows XP Security Guide](http://www.microsoft.com/download/details.aspx?id=962)
+    -   [Windows XP Security Guide](https://www.microsoft.com/download/details.aspx?id=962)
 
-    -   [Windows Vista Security Baseline](http://technet.microsoft.com/library/dd450978.aspx)
+    -   [Windows Vista Security Baseline](https://technet.microsoft.com/library/dd450978.aspx)
 
-    -   [Windows Server 2003 Security Baseline](http://technet.microsoft.com/library/cc163140.aspx) and the [Threats and Countermeasures Guide](http://technet.microsoft.com/library/dd162275.aspx)
+    -   [Windows Server 2003 Security Baseline](https://technet.microsoft.com/library/cc163140.aspx) and the [Threats and Countermeasures Guide](https://technet.microsoft.com/library/dd162275.aspx)
 
-    -   [Windows Server 2008 Security Guide](http://www.microsoft.com/download/details.aspx?id=17606)
+    -   [Windows Server 2008 Security Guide](https://www.microsoft.com/download/details.aspx?id=17606)
 
-    -   [Windows Server 2008 R2 Security Baseline](http://technet.microsoft.com/library/gg236605.aspx)
+    -   [Windows Server 2008 R2 Security Baseline](https://technet.microsoft.com/library/gg236605.aspx)
 
 -   For information about auditing logon and authentication events in Windows, see [Auditing Security Events](https://technet.microsoft.com/library/cc776394.aspx).
 

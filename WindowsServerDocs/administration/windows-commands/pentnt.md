@@ -12,12 +12,12 @@ ms.assetid: c0455cd4-ad6b-4945-bcc8-ed621a00b530
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # pentnt
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Pentnt is deprecated, and is not guaranteed to be supported in future releases of Windows.
 

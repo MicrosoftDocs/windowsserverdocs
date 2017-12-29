@@ -5,7 +5,7 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.date: 09/15/2016
+ms.date: 10/17/2017
 ms.technology: server-general
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -13,12 +13,13 @@ ms.assetid: 4a8b42d7-9fe5-4efe-9ea1-ace2131fe068
 author: jaimeo
 ms.author: jaimeo
 manager: dongill
+ms.localizationpriority: high
 ---
 # System Requirements
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016 
 
-This topic addresses the minimum system requirements to run Windows Server&reg; 2016.
+This topic addresses the minimum system requirements to run Windows Server&reg; 2016 or Windows Server, version 1709.
 
 
 > [!Note]  
@@ -120,5 +121,6 @@ The following items are not strictly required, but are necessary for certain fea
 
 ## Installation of Nano Server  
 For detailed steps to install Windows Server 2016 as a Nano Server, see [Install Nano Server](Getting-Started-with-Nano-Server.md).
+
 
 Not finding content you need? Windows 10 users, tell us what you want on [Feedback Hub](feedback-hub:?tabid=2&contextid=898). 

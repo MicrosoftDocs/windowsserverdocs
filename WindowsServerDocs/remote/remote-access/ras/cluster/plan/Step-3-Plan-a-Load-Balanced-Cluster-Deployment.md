@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # Step 3 Plan a Load-Balanced Cluster Deployment
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 The next step is to plan the load-balancing configuration and cluster deployment.  
   

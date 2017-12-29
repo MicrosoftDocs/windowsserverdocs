@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # Step 4 Plan for OTP on the Remote Access Server
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 After planning for the one-time password (OTP) RADIUS server and certificate settings, the final step in planning a Remote Access OTP deployment is to plan for client OTP settings on the Remote Access server.  
   
@@ -33,7 +33,7 @@ When OTP authentication is enabled, by default all users are required to authent
 > Only client computers from a single forest may be exempted due to the fact that only one security group can be selected for client exemptions.  
   
 ## <a name="bkmk_4_2_Win7"></a>4.2 Plan for Windows 7 clients  
-By default,  Windows 7  client computers cannot authenticate using OTP.  Windows 7  client computers require DCA 2.0 to authenticate using OTP in a  Windows Server 2012  Remote Access deployment. For more information about DCA 2.0, see [DirectAccess Connectivity Assistant 2.0](http://go.microsoft.com/fwlink/?LinkId=253699) on the Microsoft Download Center.  
+By default,  Windows 7  client computers cannot authenticate using OTP.  Windows 7  client computers require DCA 2.0 to authenticate using OTP in a  Windows Server 2012  Remote Access deployment. For more information about DCA 2.0, see [DirectAccess Connectivity Assistant 2.0](https://go.microsoft.com/fwlink/?LinkId=253699) on the Microsoft Download Center.  
   
 ## <a name="BKMK_smartcard"></a>4.3 Plan for smart cards  
 When OTP authentication is enabled, the option to enable the use of smart cards for additional authorization is available. Create a security group to allow temporary access in the event that a user's smart card is not functional.  

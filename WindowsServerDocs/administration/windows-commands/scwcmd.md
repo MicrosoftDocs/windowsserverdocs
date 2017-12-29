@@ -12,7 +12,7 @@ ms.assetid: 188ae881-c7d4-4a7a-b967-8fdc79f5f345
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # Scwcmd

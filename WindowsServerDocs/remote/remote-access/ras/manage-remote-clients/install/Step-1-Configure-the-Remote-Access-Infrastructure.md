@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # Step 1 Configure the Remote Access Infrastructure
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 **Note:** Windows Server 2012 combines DirectAccess and Routing and Remote Access Service (RRAS) into a single Remote Access role.  
   
@@ -35,7 +35,7 @@ This topic describes how to configure the infrastructure that is required for an
 |Configure the network location server|Configure the network location server, including installing the network location server website certificate.|  
   
 > [!NOTE]  
-> This topic includes sample Windows PowerShell cmdlets that you can use to automate some of the procedures described. For more information, see [Using Cmdlets](http://go.microsoft.com/fwlink/p/?linkid=230693).  
+> This topic includes sample Windows PowerShell cmdlets that you can use to automate some of the procedures described. For more information, see [Using Cmdlets](https://go.microsoft.com/fwlink/p/?linkid=230693).  
   
 ## <a name="BKMK_ConfigNetworkSettings"></a>Configure server network settings  
 Depending on if you decide to place the Remote Access server at the edge or behind a Network Address Translation (NAT) device, the following network interface address settings are required for a single server deployment in an environment with IPv4 and IPv6. All IP addresses are configured by using **Change adapter settings** in the **Windows Networking and Sharing Center**.  
@@ -122,32 +122,32 @@ Apply the following internal network firewall exceptions for Remote Access traff
 ## <a name="BKMK_ConfigCAs"></a>Configure CAs and certificates  
 With Remote Access in  Windows Server 2012 , you to choose between using certificates for computer authentication or using a built-in Kerberos authentication that uses user names and passwords. You must also configure an IP-HTTPS certificate on the Remote Access server. This section explains how to configure these certificates.  
   
-For information about setting up a public key infrastructure (PKI), see [Active Directory Certificate Services](http://technet.microsoft.com/library/cc770357.aspx).  
+For information about setting up a public key infrastructure (PKI), see [Active Directory Certificate Services](https://technet.microsoft.com/library/cc770357.aspx).  
   
 ### <a name="BKMK_ConfigIPsec"></a>Configure IPsec authentication  
 A certificate is required on the Remote Access server and all DirectAccess clients so that they can use IPsec authentication. The certificate must be issued by an internal certification authority (CA). Remote Access servers and DirectAccess clients must trust the CA that issues the root and intermediate certificates.  
   
 ##### To configure IPsec authentication  
   
-1.  On the internal CA, decide if you will use the default computer certificate template, or if you will create a new certificate template as described in [Creating Certificate Templates](http://technet.microsoft.com/library/cc731705.aspx).  
+1.  On the internal CA, decide if you will use the default computer certificate template, or if you will create a new certificate template as described in [Creating Certificate Templates](https://technet.microsoft.com/library/cc731705.aspx).  
   
     > [!NOTE]  
     > If you create a new template, it must be configured for client authentication.  
   
-2.  Deploy the certificate template if required. For more information, see [Deploying Certificate Templates](http://technet.microsoft.com/library/cc770794.aspx).  
+2.  Deploy the certificate template if required. For more information, see [Deploying Certificate Templates](https://technet.microsoft.com/library/cc770794.aspx).  
   
 3.  Configure the template for autoenrollment if required.  
   
-4.  Configure certificate autoenrollment if required. For more information, see [Configure Certificate Autoenrollment](http://technet.microsoft.com/library/cc731522.aspx).  
+4.  Configure certificate autoenrollment if required. For more information, see [Configure Certificate Autoenrollment](https://technet.microsoft.com/library/cc731522.aspx).  
   
 ### <a name="BKMK_ConfigCertTemp"></a>Configure certificate templates  
 When you use an internal CA to issue certificates, you must configure certificate templates for the IP-HTTPS certificate and the network location server website certificate.  
   
 ##### To configure a certificate template  
   
-1.  On the internal CA, create a certificate template as described in [Creating Certificate Templates](http://technet.microsoft.com/library/cc731705.aspx).  
+1.  On the internal CA, create a certificate template as described in [Creating Certificate Templates](https://technet.microsoft.com/library/cc731705.aspx).  
   
-2.  Deploy the certificate template as described in [Deploying Certificate Templates](http://technet.microsoft.com/library/cc770794.aspx).  
+2.  Deploy the certificate template as described in [Deploying Certificate Templates](https://technet.microsoft.com/library/cc770794.aspx).  
   
 After you prepare your templates, you can use them to configure the certificates. See the following procedures for details:  
   
@@ -325,7 +325,7 @@ Restart-Computer
 ## <a name="BKMK_ConfigGPOs"></a>Configure GPOs  
 To deploy Remote Access, you require a minimum of two Group Policy Objects. One Group Policy Object contains settings for the Remote Access server, and one contains settings for DirectAccess client computers. When you configure Remote Access, the wizard automatically creates the required Group Policy Objects. However, if your organization enforces a naming convention, or you do not have the required permissions to create or edit Group Policy Objects, they must be created prior to configuring Remote Access.  
   
-To create Group Policy Objects, see [Create and Edit a Group Policy Object](http://technet.microsoft.com/library/cc754740.aspx).  
+To create Group Policy Objects, see [Create and Edit a Group Policy Object](https://technet.microsoft.com/library/cc754740.aspx).  
   
 An administrator can manually link the DirectAccess Group Policy Objects to an organizational unit (OU). Consider the following:  
   
@@ -341,7 +341,7 @@ An administrator can manually link the DirectAccess Group Policy Objects to an o
   
 6.  If the OU has not been linked previously by running the DirectAccess Setup Wizard, after the configuration is complete, the administrator can link the DirectAccess GPOs to the required OUs, and remove the link to the domain.  
   
-    For more information, see [Link a Group Policy Object](http://technet.microsoft.com/library/cc732979.aspx).  
+    For more information, see [Link a Group Policy Object](https://technet.microsoft.com/library/cc732979.aspx).  
   
 > [!NOTE]  
 > If a Group Policy Object was created manually, it is possible that the Group Policy Object will not be available during the DirectAccess configuration. The Group Policy Object may not have been replicated to the domain controller closest to the management computer. The administrator can wait for replication to complete or force the replication.  

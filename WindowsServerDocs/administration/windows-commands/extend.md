@@ -12,11 +12,11 @@ ms.assetid: 2414e21d-fc0b-40e8-9e33-3e072f8ad76b
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # extend
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 extends the volume or partition with focus and its file system into free \(unallocated\) space on a disk.  
   

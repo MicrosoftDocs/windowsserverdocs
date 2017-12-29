@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Getting Started with Group Managed Service Accounts
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 
 This guide provides step-by-step instructions and background information for enabling and using group Managed Service Accounts in  Windows Server 2012 .
@@ -37,7 +37,7 @@ This guide provides step-by-step instructions and background information for ena
 
 
 > [!NOTE]
-> This topic includes sample Windows PowerShell cmdlets that you can use to automate some of the procedures described. For more information, see [Using Cmdlets](http://go.microsoft.com/fwlink/p/?linkid=230693).
+> This topic includes sample Windows PowerShell cmdlets that you can use to automate some of the procedures described. For more information, see [Using Cmdlets](https://go.microsoft.com/fwlink/p/?linkid=230693).
 
 ## <a name="BKMK_Prereqs"></a>Prerequisites
 See the section in this topic on [Requirements for group Managed Service Accounts](#BKMK_gMSA_Req).
@@ -171,7 +171,7 @@ Membership in **Domain Admins**, **Account Operators** or ability to create msDS
 
     ```
 
-Membership in **Domain Admins**, **Account Operators**, or ability to create msDS-GroupManagedServiceAccount objects, is the minimum required to complete this procedure. For detailed information about using the appropriate accounts and group memberships, see [Local and Domain Default Groups](http://technet.microsoft.com/library/dd728026(WS.10).aspx).
+Membership in **Domain Admins**, **Account Operators**, or ability to create msDS-GroupManagedServiceAccount objects, is the minimum required to complete this procedure. For detailed information about using the appropriate accounts and group memberships, see [Local and Domain Default Groups](https://technet.microsoft.com/library/dd728026(WS.10).aspx).
 
 ##### To create a gMSA for outbound authentication only using the New-ADServiceAccount cmdlet
 
@@ -202,15 +202,15 @@ To configure the services in  Windows Server 2012 , see the following feature do
 
 -   IIS application pool
 
-    For more information, see [Specify an Identity for an Application Pool (IIS 7)](http://technet.microsoft.com/library/cc771170(WS.10).aspx).
+    For more information, see [Specify an Identity for an Application Pool (IIS 7)](https://technet.microsoft.com/library/cc771170(WS.10).aspx).
 
 -   Windows Services
 
-    For more information, see [Services](http://technet.microsoft.com/library/cc772408.aspx).
+    For more information, see [Services](https://technet.microsoft.com/library/cc772408.aspx).
 
 -   Tasks
 
-    For more information, see the [Task Scheduler Overview](http://technet.microsoft.com/library/cc721871.aspx).
+    For more information, see the [Task Scheduler Overview](https://technet.microsoft.com/library/cc721871.aspx).
 
 Other services could support gMSA. See the appropriate product documentation for details on how to configure those services.
 
@@ -221,15 +221,15 @@ Membership in **Domain Admins**, or the ability to add members to the security g
 
 -   Method 1: Active Directory Users and Computers
 
-    For procedures how to use this method, see [Add a computer account to a group](http://technet.microsoft.com/library/cc733097.aspx) using the Windows interface, and [Manage Different Domains in Active Directory Administrative Center](manage-different-domains-in-active-directory-administrative-center.md).
+    For procedures how to use this method, see [Add a computer account to a group](https://technet.microsoft.com/library/cc733097.aspx) using the Windows interface, and [Manage Different Domains in Active Directory Administrative Center](manage-different-domains-in-active-directory-administrative-center.md).
 
 -   Method 2: dsmod
 
-    For procedures how to use this method, see [Add a computer account to a group](http://technet.microsoft.com/library/cc733097.aspx) using the command line.
+    For procedures how to use this method, see [Add a computer account to a group](https://technet.microsoft.com/library/cc733097.aspx) using the command line.
 
 -   Method 3: Windows PowerShell Active Directory cmdlet Add-ADPrincipalGroupMembership
 
-    For procedures how to use this method, see [Add-ADPrincipalGroupMembership](http://technet.microsoft.com/library/ee617203.aspx).
+    For procedures how to use this method, see [Add-ADPrincipalGroupMembership](https://technet.microsoft.com/library/ee617203.aspx).
 
 If using computer accounts, find the existing accounts and then add the new computer account.
 
@@ -271,7 +271,7 @@ Membership in **Domain Admins**, **Account Operators**, or the ability to write 
 
 Open the Active Directory Module for Windows PowerShell, and set any property by using the Set-ADServiceAccount cmdlet.
 
-For detailed information how to set these properties, see [Set-ADServiceAccount](http://technet.microsoft.com/library/ee617252.aspx) in the TechNet Library or by typing **Get-Help Set-ADServiceAccount** at the Active Directory module for Windows PowerShell command prompt and pressing ENTER.
+For detailed information how to set these properties, see [Set-ADServiceAccount](https://technet.microsoft.com/library/ee617252.aspx) in the TechNet Library or by typing **Get-Help Set-ADServiceAccount** at the Active Directory module for Windows PowerShell command prompt and pressing ENTER.
 
 ## <a name="BKMK_DecommMemberHosts"></a>Decommissioning member hosts from an existing server farm
 Membership in **Domain Admins**, or ability to remove members from the security group object, is the minimum required to complete these procedures.
@@ -281,15 +281,15 @@ If using security groups for managing member hosts, remove the computer account 
 
 -   Method 1: Active Directory Users and Computers
 
-    For procedures how to use this method, see [Delete a Computer Account](http://technet.microsoft.com/library/cc754624.aspx) using the Windows interface, and [Manage Different Domains in Active Directory Administrative Center](manage-different-domains-in-active-directory-administrative-center.md).
+    For procedures how to use this method, see [Delete a Computer Account](https://technet.microsoft.com/library/cc754624.aspx) using the Windows interface, and [Manage Different Domains in Active Directory Administrative Center](manage-different-domains-in-active-directory-administrative-center.md).
 
 -   Method 2: drsm
 
-    For procedures how to use this method, see [Delete a Computer Account](http://technet.microsoft.com/library/cc754624.aspx) using the command line.
+    For procedures how to use this method, see [Delete a Computer Account](https://technet.microsoft.com/library/cc754624.aspx) using the command line.
 
 -   Method 3: Windows PowerShell Active Directory cmdlet Remove-ADPrincipalGroupMembership
 
-    For detailed information how to do this, see  [Remove-ADPrincipalGroupMembership](http://technet.microsoft.com/library/ee617243.aspx) in the TechNet Library or by typing **Get-Help Remove-ADPrincipalGroupMembership** at the Active Directory module for Windows PowerShell command prompt and pressing ENTER.
+    For detailed information how to do this, see  [Remove-ADPrincipalGroupMembership](https://technet.microsoft.com/library/ee617243.aspx) in the TechNet Library or by typing **Get-Help Remove-ADPrincipalGroupMembership** at the Active Directory module for Windows PowerShell command prompt and pressing ENTER.
 
 If listing computer accounts, retrieve the existing accounts and then add all but the removed computer account.
 
@@ -347,7 +347,7 @@ Membership in **Administrators**, or equivalent, is the minimum required to comp
     Uninstall-ADServiceAccount ITFarm1
     ```
 
-For more information about the Uninstall-ADServiceAccount cmdlet, at the Active Directory module for Windows PowerShell command prompt, type **Get-Help Uninstall-ADServiceAccount**, and then press ENTER, or see the information on the TechNet web at [Uninstall-ADServiceAccount](http://technet.microsoft.com/library/ee617202.aspx).
+For more information about the Uninstall-ADServiceAccount cmdlet, at the Active Directory module for Windows PowerShell command prompt, type **Get-Help Uninstall-ADServiceAccount**, and then press ENTER, or see the information on the TechNet web at [Uninstall-ADServiceAccount](https://technet.microsoft.com/library/ee617202.aspx).
 
 
 

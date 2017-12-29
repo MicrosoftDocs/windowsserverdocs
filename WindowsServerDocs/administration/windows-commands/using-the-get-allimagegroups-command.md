@@ -12,11 +12,11 @@ ms.assetid: 2ca06533-bcf5-4590-ac8e-263d6c9874f8
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # Using the get-AllImageGroups Command
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Retrieves information about all image groups on a server and all images in those image groups.
 ## Syntax

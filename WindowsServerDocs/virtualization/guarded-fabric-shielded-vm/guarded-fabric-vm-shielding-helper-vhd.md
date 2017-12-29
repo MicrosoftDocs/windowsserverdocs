@@ -1,5 +1,5 @@
 ---
-title: Shielded VMs - hosting service provider prepares a VM Shielding Helper VHD
+title: Shielded VMs - Preparing a VM Shielding Helper VHD
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.topic: article
@@ -7,16 +7,16 @@ ms.assetid: 0e3414cf-98ca-4e91-9e8d-0d7bce56033b
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 08/28/2017
+ms.date: 10/16/2017
 ---
 
-# Shielded VMs - Hosting service provider prepares a VM Shielding Helper VHD
+# Shielded VMs - Preparing a VM Shielding Helper VHD
 
 >[!div class="step-by-step"]
 [« Deploy a shielded using Windows Azure Pack](guarded-fabric-shielded-vm-windows-azure-pack.md)
 [Shield an existing VM »](guarded-fabric-vm-shielding-helper-vhd.md)
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 <!-- This comment creates a break between the Applies To above and the Important note below. -->
 
@@ -26,6 +26,14 @@ ms.date: 08/28/2017
 This section outlines steps performed by a hosting service provider to enable support for converting existing VMs to shielded VMs.
 
 To understand how this topic fits in the overall process of deploying shielded VMs, see [Hosting service provider configuration steps for guarded hosts and shielded VMs](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md).
+
+## Which VMs can be shielded?
+
+The shielding process for existing VMs is only available for VMs that meet the following prerequisites:
+
+- The guest OS is Windows Server 2012, 2012 R2, 2016, or a semi-annual channel release. Existing Linux VMs cannot be converted to shielded VMs.
+- The VM is a generation 2 VM (UEFI firmware)
+- The VM does not use differencing disks for its OS volume.
 
 ## Prepare Helper VHD
 
@@ -38,7 +46,9 @@ To understand how this topic fits in the overall process of deploying shielded V
 
 3.  In an elevated Windows PowerShell window, run the following command to prepare the VHDX created earlier to become a VM shielding helper disk. Update the path with the correct path for your environment.
 
-        Initialize-VMShieldingHelperVHD -Path 'C:\VHD\shieldingHelper.vhdx'
+    ```powershell
+    Initialize-VMShieldingHelperVHD -Path 'C:\VHD\shieldingHelper.vhdx'
+    ```
 
 4.  Once the command has completed successfully, copy the VHDX to your VMM library share. **Do not** start up the VM from step 1 again. Doing so will corrupt the helper disk.
 

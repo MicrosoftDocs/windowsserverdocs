@@ -12,11 +12,11 @@ ms.assetid: 509182ed-c37d-4b81-84bc-aee43d006873
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # Configure remote Management in Server Manager
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 In Windows Server, you can use Server Manager to perform management tasks on remote servers. remote management is enabled by default on servers that are running Windows Server 2016. To manage a server remotely by using Server Manager, you add the server to the Server Manager server pool.
 
@@ -26,9 +26,9 @@ To manage servers that are running Windows Server releases older than Windows Se
 
 |Operating System|Required Software|Manageability|
 |----------|-----------|---------|
-| Windows Server 2012 R2  or  Windows Server 2012 |-   [.NET Framework 4.6](http://www.microsoft.com/download/details.aspx?id=45497)<br />-   [Windows Management Framework 5.0](http://go.microsoft.com/fwlink/?LinkID=395058). The Windows Management Framework 5.0 download package updates Windows Management Instrumentation (WMI) providers on  Windows Server 2012 R2 ,  Windows Server 2012 , and  Windows Server 2008 R2 . The updated WMI providers let Server Manager collect information about roles and features that are installed on the managed servers. Until the update is applied, servers that are running  Windows Server 2012 R2 ,  Windows Server 2012 , or  Windows Server 2008 R2  have a manageability status of **Not accessible**.<br />-   The performance update associated with [Knowledge Base article 2682011](http://go.microsoft.com/fwlink/p/?LinkID=245487) is no longer necessary on servers that are running  Windows Server 2012 R2  or  Windows Server 2012 .||
-| Windows Server 2008 R2 |-   [.NET Framework 4.5](http://www.microsoft.com/download/details.aspx?id=30653)<br />-   [Windows Management Framework 4.0](http://go.microsoft.com/fwlink/?LinkId=293881). The Windows Management Framework 4.0 download package updates Windows Management Instrumentation (WMI) providers on  Windows Server 2008 R2 . The updated WMI providers let Server Manager collect information about roles and features that are installed on the managed servers. Until the update is applied, servers that are running  Windows Server 2008 R2  have a manageability status of **Not accessible**.<br />-   The performance update associated with [Knowledge Base article 2682011](http://go.microsoft.com/fwlink/p/?LinkID=245487) lets Server Manager collect performance data from  Windows Server 2008 R2 .||
-| Windows Server 2008 |-   [.NET Framework 4](http://www.microsoft.com/download/en/details.aspx?id=17718)<br />-   [Windows Management Framework 3.0](http://go.microsoft.com/fwlink/p/?LinkID=229019) The Windows Management Framework 3.0 download package updates Windows Management Instrumentation (WMI) providers on  Windows Server 2008 . The updated WMI providers let Server Manager collect information about roles and features that are installed on the managed servers. Until the update is applied, servers that are running  Windows Server 2008  have a manageability status of **Not accessible - verify earlier versions run Windows Management Framework 3.0**.<br />-   The performance update associated with [Knowledge Base article 2682011](http://go.microsoft.com/fwlink/p/?LinkID=245487) lets Server Manager collect performance data from  Windows Server 2008 .||
+| Windows Server 2012 R2  or  Windows Server 2012 |-   [.NET Framework 4.6](https://www.microsoft.com/download/details.aspx?id=45497)<br />-   [Windows Management Framework 5.0](https://go.microsoft.com/fwlink/?LinkID=395058). The Windows Management Framework 5.0 download package updates Windows Management Instrumentation (WMI) providers on  Windows Server 2012 R2 ,  Windows Server 2012 , and  Windows Server 2008 R2 . The updated WMI providers let Server Manager collect information about roles and features that are installed on the managed servers. Until the update is applied, servers that are running  Windows Server 2012 R2 ,  Windows Server 2012 , or  Windows Server 2008 R2  have a manageability status of **Not accessible**.<br />-   The performance update associated with [Knowledge Base article 2682011](https://go.microsoft.com/fwlink/p/?LinkID=245487) is no longer necessary on servers that are running  Windows Server 2012 R2  or  Windows Server 2012 .||
+| Windows Server 2008 R2 |-   [.NET Framework 4.5](https://www.microsoft.com/download/details.aspx?id=30653)<br />-   [Windows Management Framework 4.0](https://go.microsoft.com/fwlink/?LinkId=293881). The Windows Management Framework 4.0 download package updates Windows Management Instrumentation (WMI) providers on  Windows Server 2008 R2 . The updated WMI providers let Server Manager collect information about roles and features that are installed on the managed servers. Until the update is applied, servers that are running  Windows Server 2008 R2  have a manageability status of **Not accessible**.<br />-   The performance update associated with [Knowledge Base article 2682011](https://go.microsoft.com/fwlink/p/?LinkID=245487) lets Server Manager collect performance data from  Windows Server 2008 R2 .||
+| Windows Server 2008 |-   [.NET Framework 4](https://www.microsoft.com/download/en/details.aspx?id=17718)<br />-   [Windows Management Framework 3.0](https://go.microsoft.com/fwlink/p/?LinkID=229019) The Windows Management Framework 3.0 download package updates Windows Management Instrumentation (WMI) providers on  Windows Server 2008 . The updated WMI providers let Server Manager collect information about roles and features that are installed on the managed servers. Until the update is applied, servers that are running  Windows Server 2008  have a manageability status of **Not accessible - verify earlier versions run Windows Management Framework 3.0**.<br />-   The performance update associated with [Knowledge Base article 2682011](https://go.microsoft.com/fwlink/p/?LinkID=245487) lets Server Manager collect performance data from  Windows Server 2008 .||
 
 for detailed information about how to add servers that are in workgroups to manage, or manage remote servers from a workgroup computer that is running Server Manager, see [add Servers to Server Manager](add-servers-to-server-manager.md).
 
@@ -37,7 +37,7 @@ In Windows Server 2016, remote management is enabled by default. Before you can 
 
 Local administrator accounts other than the built-in Administrator account may not have rights to manage a server remotely, even if remote management is enabled. The remote User Account Control (UAC) **LocalAccountTokenFilterPolicy** registry setting must be configured to allow local accounts of the Administrators group other than the built-in administrator account to remotely manage the server.
 
-In Windows Server 2016, Server Manager relies on Windows remote Management (WinRM) and the Distributed component Object model (DCOM) for remote communications. The settings that are controlled by the **Configure remote Management** dialog box only affect parts of Server Manager and Windows PowerShell that use WinRM for remote communications. They do not affect parts of Server Manager that use DCOM for remote communications. For example, Server Manager uses WinRM to communicate with remote servers that are running Windows Server 2016,  Windows Server 2012 R2, or  Windows Server 2012, but uses DCOM to communicate with servers that are running  Windows Server 2008  and  Windows Server 2008 R2, but do not have the [Windows Management Framework 4.0](http://go.microsoft.com/fwlink/?LinkId=293881) or [Windows Management Framework 3.0](http://go.microsoft.com/fwlink/p/?LinkID=229019) updates applied. Microsoft Management Console (mmc) and other legacy management tools use DCOM. For more information about how to change these settings, see [To configure mmc or other tool remote management over DCOM](#BKMK_dcom) in this topic.
+In Windows Server 2016, Server Manager relies on Windows remote Management (WinRM) and the Distributed component Object model (DCOM) for remote communications. The settings that are controlled by the **Configure remote Management** dialog box only affect parts of Server Manager and Windows PowerShell that use WinRM for remote communications. They do not affect parts of Server Manager that use DCOM for remote communications. For example, Server Manager uses WinRM to communicate with remote servers that are running Windows Server 2016,  Windows Server 2012 R2, or  Windows Server 2012, but uses DCOM to communicate with servers that are running  Windows Server 2008  and  Windows Server 2008 R2, but do not have the [Windows Management Framework 4.0](https://go.microsoft.com/fwlink/?LinkId=293881) or [Windows Management Framework 3.0](https://go.microsoft.com/fwlink/p/?LinkID=229019) updates applied. Microsoft Management Console (mmc) and other legacy management tools use DCOM. For more information about how to change these settings, see [To configure mmc or other tool remote management over DCOM](#BKMK_dcom) in this topic.
 
 > [!NOTE]
 > Procedures in this section can be completed only on computers that are running Windows Server. You cannot enable or disable remote management on a computer that is running Windows 10 by using these procedures, because the client operating system cannot be managed by using Server Manager.
@@ -109,9 +109,9 @@ In Windows Server 2016, Server Manager relies on Windows remote Management (WinR
 
     -   To enable remote management on servers that are running  Windows Server 2012 , see [To enable Server Manager remote management by using the Windows interface](#BKMK_windows) in this topic.
 
-    -   To enable remote management on servers that are running  Windows Server 2008 R2 , see [remote Management with Server Manager](http://go.microsoft.com/fwlink/?LinkID=137378) in the  Windows Server 2008 R2  help.
+    -   To enable remote management on servers that are running  Windows Server 2008 R2 , see [remote Management with Server Manager](https://go.microsoft.com/fwlink/?LinkID=137378) in the  Windows Server 2008 R2  help.
 
-    -   To enable remote management on servers that are running  Windows Server 2008 , see [Enable and Use remote Commands in Windows PowerShell](http://go.microsoft.com/fwlink/p/?LinkId=242565).
+    -   To enable remote management on servers that are running  Windows Server 2008 , see [Enable and Use remote Commands in Windows PowerShell](https://go.microsoft.com/fwlink/p/?LinkId=242565).
 
 ### <a name="BKMK_dcom"></a>To configure mmc or other tool remote management over DCOM
 
@@ -153,7 +153,7 @@ In Windows Server 2016, Server Manager relies on Windows remote Management (WinR
 
 ### <a name="BKMK_unattend"></a>To disable remote management by using an answer file during unattended installation
 
-1.  create an unattended installation answer file for Windows Server 2016 installations by using Windows System Image Manager (Windows SIM). For more information about how to create an answer file and use Windows SIM, see [What is Windows System Image Manager?](http://technet.microsoft.com/library/cc766347.aspx) and [Step-by-Step: Basic Windows Deployment for IT Professionals](http://technet.microsoft.com/library/dd349348.aspx).
+1.  create an unattended installation answer file for Windows Server 2016 installations by using Windows System Image Manager (Windows SIM). For more information about how to create an answer file and use Windows SIM, see [What is Windows System Image Manager?](https://technet.microsoft.com/library/cc766347.aspx) and [Step-by-Step: Basic Windows Deployment for IT Professionals](https://technet.microsoft.com/library/dd349348.aspx).
 
 2.  In your answer file, locate the setting **Microsoft-Windows-Web-Services-for-Management-Core\EnableServerremoteManagement**.
 
@@ -183,8 +183,8 @@ for more information about how to configure WinRM listener settings, at a comman
 
 ## See Also
 [add Servers to Server Manager](add-servers-to-server-manager.md)
-[Windows PowerShell: about_remote_Troubleshooting on the Windows Server TechCenter](http://technet.microsoft.com/library/dd347642.aspx)
-[Description of User Account Control](http://support.microsoft.com/kb/951016)
+[Windows PowerShell: about_remote_Troubleshooting on the Windows Server TechCenter](https://technet.microsoft.com/library/dd347642.aspx)
+[Description of User Account Control](https://support.microsoft.com/kb/951016)
 
 
 

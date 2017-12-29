@@ -12,16 +12,16 @@ ms.assetid: 7b8fa4b1-850f-4e48-b05f-871c883ea33c
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # convert dynamic
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Converts a basic disk into a dynamic disk.
 
-For instructions regarding how to use this command, see [Change a Basic Disk into a Dynamic Disk](http://go.microsoft.com/fwlink/?LinkId=207047) (http://go.microsoft.com/fwlink/?LinkId=207047).
+For instructions regarding how to use this command, see [Change a Basic Disk into a Dynamic Disk](https://go.microsoft.com/fwlink/?LinkId=207047) (https://go.microsoft.com/fwlink/?LinkId=207047).
 
 ## Syntax
 

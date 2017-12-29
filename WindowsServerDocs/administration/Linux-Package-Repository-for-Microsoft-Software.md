@@ -10,7 +10,7 @@ ms.topic: article
 ms.assetid: b5387444-595f-4f38-abb7-163a70ea1895
 author: szarkos
 ms.author: szark
-ms.date: 02/15/2017
+ms.date: 10/16/2017
 ---
 # Linux Software Repository for Microsoft Products
 
@@ -34,37 +34,37 @@ Repositories can be configured automatically by installing the Linux package tha
 
  - Enterprise Linux 6 (EL6)
 
-		sudo rpm -Uvh http://packages.microsoft.com/config/rhel/6/packages-microsoft-prod.rpm
+		sudo rpm -Uvh https://packages.microsoft.com/config/rhel/6/packages-microsoft-prod.rpm
 
  - Enterprise Linux 7 (EL7)
 
-		sudo rpm -Uvh http://packages.microsoft.com/config/rhel/7/packages-microsoft-prod.rpm
+		sudo rpm -Uvh https://packages.microsoft.com/config/rhel/7/packages-microsoft-prod.rpm
 
 
 ### Ubuntu
 
  - Ubuntu 14.04 (Trusty)
 
-		wget http://packages.microsoft.com/config/ubuntu/14.04/packages-microsoft-prod.deb
+		wget https://packages.microsoft.com/config/ubuntu/14.04/packages-microsoft-prod.deb
 		sudo dpkg -i packages-microsoft-prod.deb
 		sudo apt-get update
 
  - Ubuntu 16.04 (Xenial)
 
-		wget http://packages.microsoft.com/config/ubuntu/16.04/packages-microsoft-prod.deb
+		wget https://packages.microsoft.com/config/ubuntu/16.04/packages-microsoft-prod.deb
 		sudo dpkg -i packages-microsoft-prod.deb
 		sudo apt-get update
 
  - Ubuntu 16.10 (Yakkety)
 
-		wget http://packages.microsoft.com/config/ubuntu/16.10/packages-microsoft-prod.deb
+		wget https://packages.microsoft.com/config/ubuntu/16.10/packages-microsoft-prod.deb
 		sudo dpkg -i packages-microsoft-prod.deb
 		sudo apt-get update
 
 
 ### SUSE Linux Enterprise 12
 
-		sudo rpm -Uvh http://packages.microsoft.com/config/sles/12/packages-microsoft-prod.rpm
+		sudo rpm -Uvh https://packages.microsoft.com/config/sles/12/packages-microsoft-prod.rpm
 
 
 ## Manual Configuration

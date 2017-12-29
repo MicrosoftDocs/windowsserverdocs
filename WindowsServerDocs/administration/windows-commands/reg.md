@@ -12,12 +12,12 @@ ms.assetid: c97496b2-d1ff-4887-b5d2-6e1524be465a
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # reg
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Performs operations on registry subkey information and values in registry entries. The **reg** commands include:
 

@@ -49,7 +49,7 @@ Complete the following preliminary steps to ensure that the settings and data on
   
 ##### To back up the Source Server  
   
-1.  Perform a full backup of the Source Server. For more information about backing up Windows Small Business Server 2011 Essentials, see [Learn more about setting up server backup](http://technet.microsoft.com/library/server-backup-support-1.aspx).  
+1.  Perform a full backup of the Source Server. For more information about backing up Windows Small Business Server 2011 Essentials, see [Learn more about setting up server backup](https://technet.microsoft.com/library/server-backup-support-1.aspx).  
   
 2.  Verify that the backup ran successfully. To test the integrity of the backup, select random files from your backup, restore them to an alternate location, and then confirm that the restored files are the same as the original files.  
   
@@ -84,7 +84,7 @@ Complete the following preliminary steps to ensure that the settings and data on
   
 ###### To use the Windows Server Solutions BPA to analyze your Source Server  
   
-1.  Download and install the [Windows Server Solutions Best Practices Analyzer](http://www.microsoft.com/en-us/download/details.aspx?id=15556) at the Microsoft Download Center.  
+1.  Download and install the [Windows Server Solutions Best Practices Analyzer](https://www.microsoft.com/en-us/download/details.aspx?id=15556) at the Microsoft Download Center.  
   
 2.  After the download is complete, click **Start**, point to **All Programs**, and then click **SBS Best Practices Analyzer Tool**.  
   
@@ -155,11 +155,11 @@ Complete the following preliminary steps to ensure that the settings and data on
   
  Before you can install Windows Update Agent on the Source Server, you must first install Windows PowerShell 2.0 and Microsoft Baseline Configuration Analyzer 2.0.  
   
--   To download and install Windows PowerShell 2.0, see [article 968929](http://go.microsoft.com/fwlink/p/?LinkId=241483) in the Microsoft Knowledge Base.  
+-   To download and install Windows PowerShell 2.0, see [article 968929](https://go.microsoft.com/fwlink/p/?LinkId=241483) in the Microsoft Knowledge Base.  
   
--   To download and install Microsoft Baseline Configuration Analyzer 2.0, see the [Microsoft Baseline Configuration Analyzer 2.0](http://go.microsoft.com/fwlink/p/?LinkId=241484) at the Microsoft Download Center.  
+-   To download and install Microsoft Baseline Configuration Analyzer 2.0, see the [Microsoft Baseline Configuration Analyzer 2.0](https://go.microsoft.com/fwlink/p/?LinkId=241484) at the Microsoft Download Center.  
   
--   To download and install the latest version of Windows Update Agent, see [article 949104](http://go.microsoft.com/fwlink/p/?LinkId=237493) in the Microsoft Knowledge Base.  
+-   To download and install the latest version of Windows Update Agent, see [article 949104](https://go.microsoft.com/fwlink/p/?LinkId=237493) in the Microsoft Knowledge Base.  
   
 ##### To install and run the Migration Preparation Tool on the Source Server  
   
@@ -176,7 +176,7 @@ Complete the following preliminary steps to ensure that the settings and data on
 3.  In the Migration Preparation Tool, select **I have a backup and am ready to proceed**, and then click **Next**.  
   
     > [!WARNING]
-    >  If you receive an error message relating to a hotfix installation, see Method 2: Rename the Catroot2 Folder in [article 822798](http://go.microsoft.com/FWLink/p/?LinkID=118672) in the Microsoft Knowledge Base.  
+    >  If you receive an error message relating to a hotfix installation, see Method 2: Rename the Catroot2 Folder in [article 822798](https://go.microsoft.com/FWLink/p/?LinkID=118672) in the Microsoft Knowledge Base.  
   
      The Migration Preparation Tool prepares the source domain for migration by extending the Active Directory schema. After the task is completed, click **Next** to continue.  
   

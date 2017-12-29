@@ -12,7 +12,7 @@ author: jamesmci
 
 # QoS Policy Frequently Asked Questions
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 Following are frequently asked questions – and answers to those questions – for QoS Policy.
   

@@ -11,7 +11,7 @@ author: jamesmci
 ---
 # Use DNS Policy for Geo-Location Based Traffic Management with Primary-Secondary Deployments
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use this topic to learn how to create DNS policy for geo-location based traffic management when your DNS deployment includes both primary and secondary DNS servers.  
 
@@ -107,7 +107,7 @@ You can use the following Windows PowerShell commands to create the secondary zo
     Add-DnsServerSecondaryZone -Name "woodgrove.com" -ZoneFile "woodgrove.com.dns" -MasterServers 10.0.0.1 -ComputerName SecondaryServer2  
       
 
-For more information, see [Add-DnsServerSecondaryZone](https://technet.microsoft.com/library/jj649900.aspx).  
+For more information, see [Add-DnsServerSecondaryZone](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserversecondaryzone?view=win10-ps).  
   
 ### <a name="bkmk_zonexfer"></a>Configure the Zone Transfer Settings on the Primary Zone
 
@@ -125,7 +125,7 @@ You can use the following Windows PowerShell commands to configure the zone tran
     Set-DnsServerPrimaryZone -Name "woodgrove.com" -Notify Notify -SecondaryServers "10.0.0.2,10.0.0.3" -SecureSecondaries TransferToSecureServers -ComputerName PrimaryServer  
      
   
-For more information, see [Set-DnsServerPrimaryZone](https://technet.microsoft.com/library/jj649865.aspx).  
+For more information, see [Set-DnsServerPrimaryZone](https://https://docs.microsoft.com/powershell/module/dnsserver/set-dnsserverprimaryzone?view=win10-ps).  
   
   
 ### <a name="bkmk_client"></a>Copy the DNS Client Subnets
@@ -140,7 +140,7 @@ You can use the following Windows PowerShell commands to copy the subnets to the
     Get-DnsServerClientSubnet -ComputerName PrimaryServer | Add-DnsServerClientSubnet -ComputerName SecondaryServer2  
       
 
-For more information, see [Add-DnsServerClientSubnet](https://technet.microsoft.com/library/mt126261.aspx).  
+For more information, see [Add-DnsServerClientSubnet](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverclientsubnet?view=win10-ps).  
   
 ### <a name="bkmk_zonescopes"></a>Create the Zone Scopes on the Secondary Server
 
@@ -157,7 +157,7 @@ You can use the following Windows PowerShell commands to create the zone scopes 
 >[!NOTE]
 >In these example commands, the **-ErrorAction Ignore** parameter is included, because a default zone scope exists on every zone. The default zone scope cannot be created or deleted. Pipelining will result in an attempt to create that scope and it will fail. Alternatively, you can create the non-default zone scopes on two secondary zones.  
   
-For more information, see [Add-DnsServerZoneScope](https://technet.microsoft.com/library/mt126267.aspx).  
+For more information, see [Add-DnsServerZoneScope](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverzonescope?view=win10-ps).  
   
 ### <a name="bkmk_dnspolicy"></a>Configure DNS policy
 
@@ -172,7 +172,7 @@ You can use the following Windows PowerShell commands to create a DNS policy tha
     $policy | Add-DnsServerQueryResolutionPolicy -ZoneName "woodgrove.com" -ComputerName SecondaryServer2  
       
 
-For more information, see [Add-DnsServerQueryResolutionPolicy](https://technet.microsoft.com/library/mt126273.aspx).  
+For more information, see [Add-DnsServerQueryResolutionPolicy](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy?view=win10-ps).  
   
 Now the secondary DNS servers are configured with the required DNS policies to redirect traffic based on geo-location.  
   

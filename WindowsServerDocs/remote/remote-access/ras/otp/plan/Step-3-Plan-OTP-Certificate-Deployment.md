@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # Step 3 Plan OTP Certificate Deployment
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 After planning the RADIUS server, you must plan for certification authority (CA) requirements, including the CA that will issue one-time password (OTP) certificates, the OTP certificate template, and the registration authority certificate used by the Remote Access server to sign all DirectAccess client OTP certificate requests. These certificates are used as follows:  
   
@@ -53,7 +53,7 @@ Each DirectAccess client requires an OTP authentication certificate in order to 
 -   The validity period should be set to one hour.  
   
     > [!NOTE]  
-    > In situations where the CA server is a Windows Server 2003 computer, then the template must be configured on a different computer. This is due to the fact that setting the **Validity period** in hours is not possible when running Windows versions prior to 2008/Vista. If the computer that you use to configure the template does not have the Certification Service role installed, or it is a client computer, then you may need to install the Certificate Templates snap-in. For more information on this subject click [here](http://technet.microsoft.com/library/cc732445.aspx).  
+    > In situations where the CA server is a Windows Server 2003 computer, then the template must be configured on a different computer. This is due to the fact that setting the **Validity period** in hours is not possible when running Windows versions prior to 2008/Vista. If the computer that you use to configure the template does not have the Certification Service role installed, or it is a client computer, then you may need to install the Certificate Templates snap-in. For more information on this subject click [here](https://technet.microsoft.com/library/cc732445.aspx).  
   
 -   The renewal period should be set to 0.  
   

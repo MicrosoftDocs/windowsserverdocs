@@ -27,8 +27,6 @@ The following tables compare support for device and other redirections on the Re
 
 If you remote into your personal desktop, there are additional redirections that you can configure in the **Additional Settings** for the session. If your remote desktop or apps are managed by your organization, your admin can enable or disable redirections through Group Policy settings.
 
-Please note that we are working on a new Remote Desktop application for macOS that supports more redirection than our official app published in the Mac App Store. Test drive our [new preview Mac client](https://aka.ms/rdmac-preview). 
-
 ### Input redirection
 
 | Redirection | Remote Desktop<br> Connection | Universal | Android | iOS | macOS |
@@ -53,11 +51,11 @@ When you enable USB port redirection, any USB devices attached to the USB port a
 
 | Redirection         | Remote Desktop Connection | Universal   | Android | iOS         | macOS                                     |
 |---------------------|---------------------------|-------------|---------|-------------|------------------------------------------|
-| Clipboard           | X                         | text, image | text    | text, image | text, image (full support in preview client)                             |
-| Microphone          | X                         |X            |         |             | X (in preview client)                       |
+| Clipboard           | X                         | text, image | text    | text, image | text, image                             |
+| Microphone          | X                         |X            |         |             | X                                          |
 | Local drive/storage | X                         |             | X       |             | x                                          |
 | Printers            | X                         |             |         |             | X (CUPS only)                              |
-| Smart Card          | X                         |             |         |             | X (preview client, Windows authentication not supported) |
+| Smart Card          | X                         |             |         |             | X (Windows authentication not supported) |
 | Speakers            | X                         | X           | X       | X           | X                                        |
 
-*For printer redirection - the Mac applications support the Publisher Imagesetter printer driver by default. They do not support redirecting native printer drivers.
+*For printer redirection - the Mac application supports the Publisher Imagesetter printer driver by default. They do not support redirecting native printer drivers.

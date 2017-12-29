@@ -6,7 +6,7 @@ ms.technology: performance-tuning-guide
 ms.topic: landing-page
 ms.author: Pavel; ATales
 author: phstee
-ms.date: 04/24/2017
+ms.date: 10/16/2017
 ---
 
 # Performance Tuning Cache and Memory Manager

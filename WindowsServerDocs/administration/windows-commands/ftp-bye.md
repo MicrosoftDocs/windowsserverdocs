@@ -12,11 +12,11 @@ ms.assetid: f20e2bf2-7d12-4606-942a-8ed555eb8e90 vhorne
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # ftp: bye
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Ends the ftp session with the remote computer and exits.   
 ## Syntax  

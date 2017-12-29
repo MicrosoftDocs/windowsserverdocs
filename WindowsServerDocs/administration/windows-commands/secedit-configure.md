@@ -12,12 +12,12 @@ ms.assetid: a92e68ca-003c-4219-8655-0e7734f5fab3
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # secedit:configure
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Allows you to configure the current system settings using security settings stored in a database. For examples of how this command can be used, see [Examples](#BKMK_Examples).
 

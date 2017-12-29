@@ -11,7 +11,7 @@ ms.assetid: 12bc8e11-d63c-4aef-8129-f92324b2bf1b
 ---
 # Frequently Asked Questions about Storage Replica
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This topic contains answers to frequently asked questions (FAQs) about Storage Replica.
 
@@ -109,7 +109,21 @@ You can grow (extend) volumes, but not shrink them. By default, Storage Replica 
 3. Use against the source computer: `Set-SRGroup -Name YourRG -AllowVolumeResize $FALSE` 
 
 ## <a name="FAQ6"></a>Can I bring a destination volume online for read-only access?  
-Not in Windows Server 2016. Storage Replica dismounts the destination volume when replication begins. This may change in a later release.  
+Not in Windows Server 2016 RTM, aka the so-called "RS1" release. Storage Replica dismounts the destination volume when replication begins. 
+
+However, in Windows Server Version, 1709 the option to mount the destination storage is now possible - this feature is called "Test Failover". To do this, you must have an unused, NTFS or ReFS formatted volume that is not currently replicating on the destination. Then you can mount a snapshot of the replicated storage temporarily for testing or backup purposes. 
+
+For example, to create a test failover where you are replicating a volume "D:" in the Replication Group "RG2" on the destination server "SRV2" and have a "T:" drive on SRV2 that is not being replicated:
+
+ `Mount-SRDestination -Name RG2 -Computername SRV2 -TemporaryPath T:\`
+ 
+The replicated volume D: is now accessible on SRV2. You can read and write to it normally, copy files off it, or run an online backup that you save elsewhere for safekeeping.
+
+To remove the test failover snapshot and discard its changes:
+
+ `Dismount-SRDestination -Name RG2 -Computername SRV2`
+ 
+You should only use the test failover feature for short-term temporary operations. It is not intended for long term usage. When in use, replication continues to the real destination volume. 
 
 ## <a name="FAQ7"></a> Can I configure Scale-out File Server (SOFS) in a stretch cluster?  
 While technically possible, this is not a recommended configuration in Windows Server 2016 due to the lack of site awareness in the compute nodes contacting the SOFS. If using campus-distance networking, where latencies are typically sub-millisecond, this configuration typically works works without issues.   
@@ -202,7 +216,7 @@ Storage Replica comes in three main configurations: strech cluster, cluster-to-c
 
 The stretch cluster topology is ideal for workloads requiring automatic failover with orchestration, such as Hyper-V private cloud clusters and SQL Server FCI. It also has a built-in graphical interface using Failover Cluster Manager. It utilizes the classic asymmetric cluster shared storage architecture of Storage Spaces, SAN, iSCSI, and RAID via persistent reservation. You can run this with as few as 2 nodes.
 
-The cluster-to-cluster topology uses two separate clusters and is ideal for administrators who want manual failover, especially when the second site is provisioned for disaster recovery and not everyday usage. Orchestration is manual. Unlike stretch cluster, Storage Spaces Direct can be used in this configuration. You can run this with as few as four nodes. 
+The cluster-to-cluster topology uses two separate clusters and is ideal for administrators who want manual failover, especially when the second site is provisioned for disaster recovery and not everyday usage. Orchestration is manual. Unlike stretch cluster, Storage Spaces Direct can be used in this configuration (with caveats - see the Storage Replica FAQ and cluster-to-cluster documentation). You can run this with as few as four nodes. 
 
 The server-to-server topology is ideal for customers running hardware that cannot be clustered. It requires manual failover and orchestration. It is ideal for inexpensive deployments between branch offices and central datacenters, especially when using asynchronous replication. This configuration can often replace instances of DFSR-protected File Servers used for single-master disaster recovery scenarios.
 

@@ -12,11 +12,11 @@ ms.assetid: 0f06f310-c585-42f4-9d15-4680b4a3355d
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # Using the New Command
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 creates capture and discover images, multicast transmissions, and namespaces.
 ## Subcommands

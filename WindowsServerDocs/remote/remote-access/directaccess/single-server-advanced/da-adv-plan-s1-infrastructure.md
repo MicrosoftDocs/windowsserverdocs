@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # Step 1 Plan the Advanced DirectAccess Infrastructure
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 The first step of planning for an advanced DirectAccess deployment on a single server is to plan the infrastructure that is required for the deployment. This topic describes the infrastructure planning steps. These planning tasks do not need to be completed in a specific order.  
   
@@ -52,9 +52,9 @@ This section explains how to plan for your network, including:
   
     DirectAccess uses IPv6 with IPsec to create a secure connection between DirectAccess client computers and the internal corporate network. However, DirectAccess does not necessarily require connectivity to the IPv6 Internet or native IPv6 support on internal networks. Instead, it automatically configures and uses IPv6 transition technologies to tunnel IPv6 traffic across the IPv4 Internet (by using 6to4, Teredo, or IP-HTTPS) and across your IPv4-only intranet (by using NAT64 or ISATAP). For an overview of these transition technologies, see the following resources:  
   
-    -   [IPv6 Transition Technologies](http://technet.microsoft.com/library/bb726951.aspx)  
+    -   [IPv6 Transition Technologies](https://technet.microsoft.com/library/bb726951.aspx)  
   
-    -   [IP-HTTPS Tunneling Protocol Specification](http://msdn.microsoft.com/library/dd358571(PROT.10).aspx)  
+    -   [IP-HTTPS Tunneling Protocol Specification](https://msdn.microsoft.com/library/dd358571(PROT.10).aspx)  
   
 3.  Configure required adapters and addresses according to the following table. For deployments that use a single network adapter and are set up behind a NAT device, configure your IP addresses by using only the **Internal network adapter** column.  
   
@@ -165,7 +165,7 @@ The certification authority (CA) requirements for each scenario are summarized i
 ||**Recommended**<br /><br />Public CA:<br /><br />It is recommended to use a public CA to issue the IP-HTTPS certificate. This ensures that the CRL distribution point is available externally.|  
   
 ### <a name="BKMK_compcert"></a>1.3.1 Plan computer certificates for IPsec authentication  
-If you are using certificate-based IPsec authentication, the DirectAccess server and clients are required to obtain a computer certificate. The simplest way to install the certificates is to configure Group Policy-based automatic enrollment for computer certificates. This ensures that all domain members obtain a certificate from an enterprise CA. If you do not have an enterprise CA set up in your organization, see [Active Directory Certificate Services](http://technet.microsoft.com/library/cc770357.aspx).  
+If you are using certificate-based IPsec authentication, the DirectAccess server and clients are required to obtain a computer certificate. The simplest way to install the certificates is to configure Group Policy-based automatic enrollment for computer certificates. This ensures that all domain members obtain a certificate from an enterprise CA. If you do not have an enterprise CA set up in your organization, see [Active Directory Certificate Services](https://technet.microsoft.com/library/cc770357.aspx).  
   
 This certificate has the following requirements:  
   
@@ -578,7 +578,7 @@ GPOs can be configured in two ways:
 Whether you are using automatically or manually configured GPOs, you need to add a policy for slow link detection if your clients will use 3G networks. The path for **Policy: Configure Group Policy slow link detection** is: **Computer configuration/Polices/Administrative Templates/System/Group Policy**.  
   
 > [!CAUTION]  
-> Use the following procedure to back up all Remote Access GPOs before you run DirectAccess cmdlets: [Back up and Restore Remote Access Configuration](http://go.microsoft.com/fwlink/?LinkID=257928).  
+> Use the following procedure to back up all Remote Access GPOs before you run DirectAccess cmdlets: [Back up and Restore Remote Access Configuration](https://go.microsoft.com/fwlink/?LinkID=257928).  
   
 If the correct permissions (which are listed in the following sections) for linking GPOs do not exist, a warning is issued. The Remote Access operation will continue but linking will not occur. If this warning is issued, links will not be created automatically, even when the permissions are added later. Instead the administrator needs to create the links manually.  
   
@@ -629,7 +629,7 @@ If you want to manually modify GPO settings, consider the following:
   
 In addition, if you modify settings on a domain controller that is not the domain controller associated with the DirectAccess server (for the server GPO) or the PDC (for client and application server GPOs), consider the following:  
   
--   Before you modify the settings, ensure that the domain controller is replicated with an up-to-date GPO, and back up your GPO settings. For more information, see [Back up and Restore Remote Access Configuration](http://go.microsoft.com/fwlink/?LinkID=257928). If the GPO is not updated, merge conflicts during replication might occur, which can result in a corrupt Remote Access configuration.  
+-   Before you modify the settings, ensure that the domain controller is replicated with an up-to-date GPO, and back up your GPO settings. For more information, see [Back up and Restore Remote Access Configuration](https://go.microsoft.com/fwlink/?LinkID=257928). If the GPO is not updated, merge conflicts during replication might occur, which can result in a corrupt Remote Access configuration.  
   
 -   After you modify the settings, you must wait for changes to replicate to the domain controllers that are associated with the GPOs. Do not make additional changes by using the Remote Access Management console or Remote Access PowerShell cmdlets until replication is complete. If a GPO is edited on two domain controllers before replication is complete, merge conflicts might occur, which can result in a corrupt Remote Access configuration.  
   

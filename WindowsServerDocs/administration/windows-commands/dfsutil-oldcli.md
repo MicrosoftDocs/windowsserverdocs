@@ -11,12 +11,12 @@ ms.assetid: 89d1dc0d-c6cd-4d5f-9783-07fca81d2a01
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # dfsutil oldcli
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 ## This topic is no longer available
 

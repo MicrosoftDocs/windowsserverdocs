@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # Step 2 Configure Advanced DirectAccess Servers
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This topic describes how to configure the client and server settings that are required for an advanced Remote Access deployment that uses a single Remote Access server in a mixed IPv4 and IPv6 environment. Before you begin the deployment steps, ensure that you have completed the planning steps that are described in [Plan an Advanced DirectAccess Deployment](Plan-an-Advanced-DirectAccess-Deployment.md).  
   
@@ -32,7 +32,7 @@ This topic describes how to configure the client and server settings that are re
 |2.8. How to configure the Remote Access server using Windows PowerShell|Configure Remote Access by using Windows PowerShell.|  
   
 > [!NOTE]  
-> This topic includes sample Windows PowerShell cmdlets that you can use to automate some of the procedures described. For more information, see [Using Cmdlets](http://go.microsoft.com/fwlink/p/?linkid=230693).  
+> This topic includes sample Windows PowerShell cmdlets that you can use to automate some of the procedures described. For more information, see [Using Cmdlets](https://go.microsoft.com/fwlink/p/?linkid=230693).  
   
 ## <a name="BKMK_Role"></a>2.1. Install the Remote Access role  
 To deploy Remote Access, you must install the Remote Access role on a server in your organization that will act as the Remote Access server.  

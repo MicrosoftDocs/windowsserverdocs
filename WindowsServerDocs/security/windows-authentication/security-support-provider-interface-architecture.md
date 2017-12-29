@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Security Support Provider Interface Architecture
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This reference topic for the IT professional describes the Windows authentication protocols that are used within the Security Support Provider Interface (SSPI) architecture.
 
@@ -81,13 +81,13 @@ This provider is included by default in versions designated in the **Applies to*
 
 **Additional resources for the Kerberos protocol and the Kerberos SSP**
 
--   [Microsoft Kerberos (Windows)](http://msdn.microsoft.com/library/aa378747(VS.85).aspx)
+-   [Microsoft Kerberos (Windows)](https://msdn.microsoft.com/library/aa378747(VS.85).aspx)
 
--   [\[MS-KILE\]: Kerberos Protocol Extensions](http://msdn.microsoft.com/library/cc233855(PROT.10).aspx)
+-   [\[MS-KILE\]: Kerberos Protocol Extensions](https://msdn.microsoft.com/library/cc233855(PROT.10).aspx)
 
--   [\[MS-SFU\]: Kerberos Protocol Extensions: Service for User and Constrained Delegation Protocol Specification](http://msdn.microsoft.com/library/cc246071(PROT.13).aspx)
+-   [\[MS-SFU\]: Kerberos Protocol Extensions: Service for User and Constrained Delegation Protocol Specification](https://msdn.microsoft.com/library/cc246071(PROT.13).aspx)
 
--   [Kerberos SSP/AP (Windows)](http://msdn.microsoft.com/library/aa377942(VS.85).aspx)
+-   [Kerberos SSP/AP (Windows)](https://msdn.microsoft.com/library/aa377942(VS.85).aspx)
 
 -   [Kerberos Enhancements](https://technet.microsoft.com/library/cc749438(v=ws.10).aspx) for Windows Vista
 
@@ -114,11 +114,11 @@ This provider is included by default in versions designated in the **Applies to*
 
 **Additional resources for the NTLM protocol and the NTLM SSP**
 
--   [MSV1_0 Authentication Package (Windows)](http://msdn.microsoft.com/library/aa378753(VS.85).aspx)
+-   [MSV1_0 Authentication Package (Windows)](https://msdn.microsoft.com/library/aa378753(VS.85).aspx)
 
 -   [Changes in NTLM Authentication](https://technet.microsoft.com/library/dd566199(v=ws.10).aspx) in  Windows 7 
 
--   [Microsoft NTLM (Windows)](http://msdn.microsoft.com/library/aa378749(VS.85).aspx)
+-   [Microsoft NTLM (Windows)](https://msdn.microsoft.com/library/aa378749(VS.85).aspx)
 
 -   [Auditing and restricting NTLM usage guide](https://technet.microsoft.com/library/jj865674(v=ws.10).aspx)
 
@@ -137,9 +137,9 @@ This provider is included by default in versions designated in the **Applies to*
 
 **Additional resources for the Digest protocol and the Digest SSP**
 
--   [Microsoft Digest Authentication (Windows)](http://msdn.microsoft.com/library/aa378745(VS.85).aspx)
+-   [Microsoft Digest Authentication (Windows)](https://msdn.microsoft.com/library/aa378745(VS.85).aspx)
 
--   [\[MS-DPSP\]: Digest Protocol Extensions](http://msdn.microsoft.com/library/cc227906(PROT.13).aspx)
+-   [\[MS-DPSP\]: Digest Protocol Extensions](https://msdn.microsoft.com/library/cc227906(PROT.13).aspx)
 
 ### <a name="BKMK_SchannelSSP"></a>Schannel Security Support Provider
 The Secure Channel (Schannel) is used for web-based server authentication, such as when a user attempts to access a secure web server.
@@ -173,11 +173,11 @@ This provider is included by default in versions designated in the **Applies to*
 
 **Additional resources for the TLS and SSL protocols and the Schannel SSP**
 
--   [Secure Channel (Windows)](http://msdn.microsoft.com/library/aa380123(VS.85).aspx)
+-   [Secure Channel (Windows)](https://msdn.microsoft.com/library/aa380123(VS.85).aspx)
 
 -   [TLS/SSL Technical Reference](https://technet.microsoft.com/library/cc784149(v=ws.10).aspx)
 
--   [\[MS-TLSP\]: Transport Layer Security (TLS) Profile](http://msdn.microsoft.com/library/dd207968(PROT.13).aspx)
+-   [\[MS-TLSP\]: Transport Layer Security (TLS) Profile](https://msdn.microsoft.com/library/dd207968(PROT.13).aspx)
 
 ### <a name="BKMK_NegoSSP"></a>Negotiate Security Support Provider
 The Simple and Protected GSS-API Negotiation Mechanism (SPNEGO) forms the basis for the Negotiate SSP, whichcan be used to negotiate a specific authentication protocol. When an application calls into SSPI to log on to a network, it can specify an SSP to process the request. If the application specifies the Negotiate SSP, it analyzes the request and picks the appropriate provider to handle the request, based on customer-configured security policies.
@@ -192,11 +192,11 @@ This provider is included by default in versions designated in the **Applies to*
 
 **Additional resources for the Negotiate SSP**
 
--   [Microsoft Negotiate (Windows)](http://msdn.microsoft.com/library/aa378748(VS.85).aspx)
+-   [Microsoft Negotiate (Windows)](https://msdn.microsoft.com/library/aa378748(VS.85).aspx)
 
--   [\[MS-SPNG\]: Simple and Protected GSS-API Negotiation Mechanism (SPNEGO)  Extensions](http://msdn.microsoft.com/library/cc247021(PROT.13).aspx)
+-   [\[MS-SPNG\]: Simple and Protected GSS-API Negotiation Mechanism (SPNEGO)  Extensions](https://msdn.microsoft.com/library/cc247021(PROT.13).aspx)
 
--   [\[MS-N2HT\]: Negotiate and Nego2 HTTP Authentication Protocol Specification](http://msdn.microsoft.com/library/dd303576(PROT.13).aspx)
+-   [\[MS-N2HT\]: Negotiate and Nego2 HTTP Authentication Protocol Specification](https://msdn.microsoft.com/library/dd303576(PROT.13).aspx)
 
 ### <a name="BKMK_CredSSP"></a>Credential Security Support Provider
 The Credential Security Service Provider (CredSSP) provides a single sign-on (SSO) user experience when starting new Terminal Services and Remote Desktop Services sessions. CredSSP enables applications to delegate users' credentials from the client computer (by using the client-side SSP) to the target server (through the server-side SSP), based on the client's policies. CredSSP policies are configured by using Group Policy, and the delegation of credentials is turned off by default.
@@ -207,7 +207,7 @@ This provider is included by default in versions designated in the **Applies to*
 
 **Additional resources for the Credentials SSP**
 
--   [\[MS-CSSP\]: Credential Security Support Provider (CredSSP) Protocol Specification](http://msdn.microsoft.com/library/cc226764(PROT.13).aspx)
+-   [\[MS-CSSP\]: Credential Security Support Provider (CredSSP) Protocol Specification](https://msdn.microsoft.com/library/cc226764(PROT.13).aspx)
 
 -   [Credential Security Service Provider and SSO for Terminal Services Logon](https://technet.microsoft.com/library/cc749211(v=ws.10).aspx)
 

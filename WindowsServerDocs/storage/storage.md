@@ -7,13 +7,14 @@ ms.topic: article
 author: JasonGerend
 manager: dongill
 ms.author: jgerend
-ms.date: 07/10/2017
+ms.date: 12/14/2017
+ms.localizationpriority: high
 ---
-# Storage in Windows Server 2016
+# Storage in Windows Server
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
-<img src="../get-started/media/7-storage.png" style='float:left; padding:.5em;' alt="Icon representing a drive"> Storage in Windows Server 2016 provides new and improved features for software-defined datacenter (SDDC) customers focusing on virtualized workloads. Windows Server also provides extensive support for enterprise customers using file servers with existing workloads. 
+<img src="../media/landing-icons/storage.png" style='float:left; padding:.5em;' alt="Icon representing a drive"> Storage in Windows Server provides new and improved features for software-defined datacenter (SDDC) customers focusing on virtualized workloads. Windows Server also provides extensive support for enterprise customers using file servers with existing workloads.
 
 To find out about what's new in storage, see [What's new in storage](whats-new-in-storage.md) and [What's new in Failover Clustering](../failover-clustering/whats-new-in-failover-clustering.md).
 
@@ -21,12 +22,11 @@ For an overview of storage technologies included in Windows Server, see the foll
 
 ## Software-defined storage for virtualized workloads
 
-* [Storage Spaces](storage-spaces/storage-spaces-direct-overview.md)  - 
-    Storage Spaces now includes support for Storage Spaces Direct - a new architecture for Storage Spaces clusters that uses directly attached local storage - including SATA and NVME devices. Other enhancements include the ability to optimize disk usage after adding new physical disks and faster virtual disk repair times.
+* [Storage Spaces Direct](storage-spaces/storage-spaces-direct-overview.md) - Storage Spaces now includes support for Storage Spaces Direct - a new architecture for Storage Spaces clusters that uses directly attached local storage - including SATA and NVME devices. Other enhancements include the ability to optimize disk usage after adding new physical disks and faster virtual disk repair times.
 
-* [Storage Replica](storage-replica/storage-replica-overview.md) (new) - Storage Replica enables storage-agnostic, block-level, synchronous replication between clusters or servers for disaster preparedness and recovery, as well as stretching of a failover cluster across sites for high availability. Synchronous replication enables mirroring of data in physical sites with crash-consistent volumes, ensuring zero data loss at the file system level. Asynchronous replication allows site extension beyond metropolitan ranges.
+* [Storage Replica](storage-replica/storage-replica-overview.md) - Storage Replica enables storage-agnostic, block-level, synchronous replication between clusters or servers for disaster preparedness and recovery, as well as stretching of a failover cluster across sites for high availability. Synchronous replication enables mirroring of data in physical sites with crash-consistent volumes, ensuring zero data loss at the file system level. Asynchronous replication allows site extension beyond metropolitan ranges.
 
-* [Storage QoS](storage-qos/storage-qos-overview.md) (new) - Storage Quality of Service (QoS) provides a way to centrally monitor and manage storage performance for virtual machines using Hyper-V and the Scale-Out File Server roles. The feature automatically improves storage resource fairness between multiple virtual machines using the same file server cluster and allows specific minimum and maximum performance goals to be configured in units of normalized IOPs.
+* [Storage QoS](storage-qos/storage-qos-overview.md) - Storage Quality of Service (QoS) provides a way to centrally monitor and manage storage performance for virtual machines using Hyper-V and the Scale-Out File Server roles. The feature automatically improves storage resource fairness between multiple virtual machines using the same file server cluster and allows specific minimum and maximum performance goals to be configured in units of normalized IOPs.
 
 * [Data Deduplication](data-deduplication/overview.md) - Data Deduplication is a feature of Windows Server 2016 that can help reduce the impact of redundant data on storage costs. When enabled, Data Deduplication optimizes free space on a volume by examining the data on the volume for duplication. Once identified, duplicated portions of the volume's dataset are stored once and are (optionally) compressed for additional savings. Data Deduplication optimizes redundancies without compromise data fidelity or integrity.
 
@@ -40,17 +40,7 @@ For an overview of storage technologies included in Windows Server, see the foll
 
 * [DFS Replication](https://technet.microsoft.com/library/jj127250(v=ws.11).aspx) - Enables you to efficiently replicate folders (including those referred to by a DFS namespace path) across multiple servers and sites. DFS Replication uses a compression algorithm known as remote differential compression (RDC). RDC detects changes to the data in a file, and it enables DFS Replication to replicate only the changed file blocks instead of the entire file.
 
-* [File Server Resource Manager](fsrm/fsrm-overview.md) - File Server Resource Manager enables you to manage and classify data stored on file servers. File Server Resource Manager includes the following functionality:
-
-  * [File Classification](fsrm/classification-management.md) - File Classification, also known as File Classification Infrastructure, provides insight into your data by automating classification processes so that you can manage your data more effectively. You can classify files and apply policies based on this classification. Example policies include dynamic access control for restricting access to files, file encryption, and file expiration. Files can be classified automatically by using file classification rules or manually by modifying the properties of a selected file or folder.
-
-  * [File Screens](fsrm/file-screening-management.md) - File screens help you control the types of files that user can store on a file server. You can limit the extension that can be stored on your shared files. For example, you can create a file screen that does not allow files with an MP3 extension to be stored in personal shared folders on a file server.
-
-  * [File Management Tasks](fsrm/file-management-tasks.md) - File Management Tasks enables you to apply a conditional policy or action to files based on their classification. The conditions of a file management task include the file location, the classification properties, the date the file was created, the last modified date of the file, or the last time the file was accessed. The actions that a file management task can take include the ability to expire files, encrypt files, or run a custom command.
-
-  * [Quotas](fsrm/quota-management.md) - Quotas allow you to limit the space that is allowed for a volume or folder, and they can be automatically applied to new folders that are created on a volume. You can also define quota templates that can be applied to new volumes or folders.
-
-  * [Storage Reports](fsrm/storage-reports-management.md) - Storage reports are used to help you identify trends in disk usage and how your data is classified. You can also monitor a selected group of users for attempts to save unauthorized files.
+* [File Server Resource Manager](fsrm/fsrm-overview.md) - File Server Resource Manager enables you to manage and classify data stored on file servers.
 
 * [iSCSI Target Server](https://technet.microsoft.com/library/hh848272(v=ws.11).aspx) - iSCSI Target Server provides block storage to other servers and applications on the network by using the Internet SCSI (iSCSI) standard.
 
@@ -72,8 +62,9 @@ For an overview of storage technologies included in Windows Server, see the foll
 
 ## See also
 
-* [PowerShell cmdlets in Windows Server 2016 and Windows 10](https://technet.microsoft.com/library/mt156917.aspx)
 * [What's new in storage](whats-new-in-storage.md)
 * [What's new in Failover Clustering](../failover-clustering/whats-new-in-failover-clustering.md)
+* [Windows IT Pro Support](https://www.microsoft.com/itpro/windows/support)
+* [PowerShell cmdlets in Windows Server 2016 and Windows 10](https://technet.microsoft.com/library/mt156917.aspx)
 * [Azure Storage](https://azure.microsoft.com/documentation/services/storage/)
 * [Azure StorSimple](https://www.microsoft.com/en-us/cloud-platform/azure-storsimple)

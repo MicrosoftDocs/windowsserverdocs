@@ -12,12 +12,12 @@ ms.assetid: 063528bf-d235-4b44-887a-52a7d983e01a
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # manage-bde: autounlock
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Manages the automatic unlocking of BitLocker-protected data drives. For examples of how this command can be used, see [Examples](#BKMK_Examples).
 

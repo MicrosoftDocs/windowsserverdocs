@@ -12,16 +12,16 @@ ms.assetid: 5ff18dc3-5bd8-400a-b311-fd73a3267e8c
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # regini
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Modifies the registry from the command line or a script, and applies changes that were preset in one or more text files. You can create, modify, or delete registry keys, in addition to modifying the permissions on the registry keys.
 
-For details on the format and content of the text script file that Regini.exe uses to make changes to the registry, see the Regini reference document originally provided as part of the Windows Server 2000 Resource Kit, now available at the Microsoft Download Center at [http://go.microsoft.com/fwlink/?LinkId=201803](http://go.microsoft.com/fwlink/?LinkId=201803).
+For details on the format and content of the text script file that Regini.exe uses to make changes to the registry, see the Regini reference document originally provided as part of the Windows Server 2000 Resource Kit, now available at the Microsoft Download Center at [https://go.microsoft.com/fwlink/?LinkId=201803](https://go.microsoft.com/fwlink/?LinkId=201803).
 
 ## Syntax
 

@@ -10,12 +10,12 @@ ms.topic:
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 09/21/2017
+ms.date: 12/01/2017
 ---
 
 # Manage Windows Server with Project Honolulu #
 
->Applies To: Windows Server, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10
 
 This article describes the management capabilities of Honolulu, and how to connect to your Windows Server nodes so you can start managing them with Honolulu.
 

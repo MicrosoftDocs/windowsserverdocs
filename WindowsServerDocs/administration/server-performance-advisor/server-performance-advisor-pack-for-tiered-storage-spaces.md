@@ -5,14 +5,14 @@ ms.assetid: 30e4152e-7585-4fa0-bf0d-fda987effe24
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: manage
 ---
 # Server Performance Advisor Pack for Tiered Storage Spaces
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Tiered Storage Spaces, introduced in Windows Server 2012 R2, dynamically move chunks of stored data between different classes of storage, such as fast SSDs and slower hard drives to optimize data placement with respect to common access patterns. Provisioning decisions such as the size of the SSD tier and the ratio of SSD to HDD heavily affect the performance of the system in response to the system s workloads. The Server Performance Advisor (SPA) Pack for Tiered Storage Spaces collects and exposes performance data for tiered storage spaces deployed on a system and provides you with useful statistics and recommendations for configuring the system to maximize performance.
 
@@ -24,7 +24,7 @@ The SPA Pack for Tiered Storage Spaces aims to expose relevant information about
 ## Setup
 
 
-You can download the SPA Pack for Tiered Storage Spaces [here](http://go.microsoft.com/fwlink/p/?linkid=327754). Once the folder is downloaded, place it into *&lt;SPA INSTALL dir&gt;*/APs folder and it will automatically appear when SPA is restarted.
+You can download the SPA Pack for Tiered Storage Spaces [here](https://go.microsoft.com/fwlink/p/?linkid=327754). Once the folder is downloaded, place it into *&lt;SPA INSTALL dir&gt;*/APs folder and it will automatically appear when SPA is restarted.
 
 **Note**
 The computer running SPA should have administrative rights to the system under test.

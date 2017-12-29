@@ -16,13 +16,13 @@ author: jamesmci
 ---
 # Steps for Configuring the Test Lab
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 The following steps describe how to configure the Remote Access infrastructure, configure the Remote Access server and client, and test DirectAccess connectivity from the Homenet and Internet subnets.  
   
 In this test lab guide you will build a Remote Access with OTP environment by performing the following steps:  
   
--   [STEP 1: Complete the DirectAccess Configuration](assetId:///4dbf877f-02fb-439b-907a-f5b3f1d8afa6). Complete all the steps in the [Test Lab Guide: Demonstrate DirectAccess Single Server Setup with Mixed IPv4 and IPv6](http://go.microsoft.com/fwlink/p/?LinkId=237004).  
+-   [STEP 1: Complete the DirectAccess Configuration](assetId:///4dbf877f-02fb-439b-907a-f5b3f1d8afa6). Complete all the steps in the [Test Lab Guide: Demonstrate DirectAccess Single Server Setup with Mixed IPv4 and IPv6](https://go.microsoft.com/fwlink/p/?LinkId=237004).  
   
 -   [STEP 2: Configure APP1](assetId:///c1bb590f-91d4-4ed5-bceb-b0e36eabd4ff). Configure APP1 with OTP certificate templates for use by EDGE1.  
   

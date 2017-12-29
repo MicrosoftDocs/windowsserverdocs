@@ -12,7 +12,7 @@ author: haley-rowland
 ---
 # Dealing with Outlook search in non-persistent environments
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 A common issue customers face with their non-persistent (pooled) Remote Desktop Services environments is handling users' Outlook data. When Outlook is running in cached exchange mode, the .OST storing a user's Outlook data must follow the user as they roam from host to host. Windows Search Service indexes the .OST and creates an index catalog to enable search functionality in Outlook. In non-persistent RDS environments, the index catalog doesn't roam with user data and must be rebuilt every time the user signs into a new PC, which could potentially be every sign-on. Until the Windows Search Service finishes indexing the .OST, users get limited or incomplete search functionality. 
 

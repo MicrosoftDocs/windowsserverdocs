@@ -5,7 +5,7 @@ description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 09/15/2017
+ms.date: 12/04/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 
@@ -13,7 +13,7 @@ ms.technology: identity-adfs
 ---
 # Configuring Alternate Login ID
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2
 
 Users can sign in to Active Directory Federation Services (AD FS) enabled applications using any form of user identifier that is accepted by Active Directory Domain Services (AD DS). These include User Principal Names (UPNs) (johndoe@contoso.com) or domain qualified sam-account names (contoso\johndoe or contoso.com\johndoe).
 
@@ -35,6 +35,7 @@ Please refer to the table below for the user experience with Alternate ID using 
 |Cross premises Delegation|Not supported|Currently cross premises permissions are not supported in a hybrid configuration, but they also will not work if you use AltID.||
 |Archive mailbox access (Mailbox on-premises - archive in the cloud)|Supported|Users will get an extra prompt for credentials when accessing the archive, they will have to provide there alternate ID when prompted.<br /><br />See the first image below the table for user experience demo.||
 |Office 365 Pro Plus activation page|Supported - client side registry key recommended|With Alternate ID configured you will see the on-premises UPN is pre-populated In the verification field. This needs to be changed to the alternate Identity that is being used. We recommend to use the client side reg key  noted in the link column.<br /><br />See the second image below the table for user experience demo.|[Office 2013 and Lync 2013 periodically prompt for credentials to SharePoint Online, OneDrive, and Lync Online](https://support.microsoft.com/en-us/kb/2913639)|
+|Microsoft Teams|Supported|Microsoft Teams supports AD FS (SAML-P, WS-Fed, WS-Trust, and OAuth) and Modern Authentication.<br/><br/> Core Microsoft Teams such as Channels, chats and files functionalities does work with Altnernate Login ID. </br></br>1st and 3rd party apps have to be separately investigated  by the customer. This is because each application has their own supportability authentication protocols.| 
 |Skype for Business/ Lync|Supported (except as noted) but there is a potential for user confusion.  On mobile clients, Alternate Id is supported only if SIP address= email address = Alternate ID.|Users may need to sign-in twice to the Skype for Business desktop client, first using the on-premises UPN and then using the Alternate ID. (Note that the “Sign-in address” is actually the SIP address which may not be the same as the “User name”, though often is).  When first prompted for a User name, the user should enter the UPN, even if it is incorrectly pre-populated with the Alternate ID or SIP address. After the user clicks sign-in with the UPN, the User name prompt will reappear, this time prepopulated with the UPN. This time the user must replace this with the Alternate ID and click Sign in to complete the sign in process. On mobile clients, users should enter the on-premises user ID in the advanced page, using SAM-style format (domain\username), not UPN format.<br /><br />After successful sign-in, if Skype for Business or Lync says "Exchange needs your credentials", you need to provide the credentials that are valid for where the mailbox is located. If the mailbox is in the cloud you need to provide the Alternate ID. If the Mailbox is on-premises you need to provide the on-premises UPN.|[Modern Authentication in Office 2013](https://blogs.office.com/2015/03/23/office-2013-modern-authentication-public-preview-announced/)|
 |Outlook Web Access|Supported|||
 |Outlook Mobile Apps for Android, IOS, and Windows Phone|Supported|||
@@ -57,18 +58,18 @@ Below, the following screenshots are an additional example using Skype for Busin
 
 Enter SIP address in Sign-in field.
 
-![Skype sign-in](media/Configure-Alternate-Login-ID/SkypeA.png)
+![Skype](media/Configure-Alternate-Login-ID/SkypeA.png)
 
-![Skype sign-in](media/Configure-Alternate-Login-ID/SkypeB.png)
+![Skype](media/Configure-Alternate-Login-ID/SkypeB.png)
 
-![Skype sign-in](media/Configure-Alternate-Login-ID/SkypeC.png)
+![Skype](media/Configure-Alternate-Login-ID/SkypeC.png)
 
 ## To configure alternate login ID
 In order to configure alternate login ID, you must perform the following tasks:
 
 Configure your AD FS claims provider trusts to enable alternate login ID
 
-1.  Install [KB2919355](http://go.microsoft.com/fwlink/?LinkID=396590).  You can get it via Windows Update Services or download it directly.
+1.  Install [KB2919355](https://go.microsoft.com/fwlink/?LinkID=396590).  You can get it via Windows Update Services or download it directly.
 
 2.  Update the AD FS configuration by running the following PowerShell cmdlet on any of the federation servers in your farm (if you have a WID farm, you must run this command on the primary AD FS server in your farm):
 

@@ -12,11 +12,11 @@ ms.assetid: 5f01dcb8-9237-4564-ad94-8a8dd0fd0cca
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # Detach vdisk
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Stops the selected virtual hard disk \(VHD\) from appearing as a local hard disk drive on the host computer. When a VHD is detached, you can copy it to other locations.  
   

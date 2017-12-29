@@ -20,7 +20,7 @@ By using the **Send Claims Using a Custom Rule** template in Active Directory F
   
 You can use the following procedure to create a claim rule by using the AD FS Management snap\-in.  
   
-Membership in **Administrators**, or equivalent, on the local computer is the minimum requirement to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](http://go.microsoft.com/fwlink/?LinkId=83477).
+Membership in **Administrators**, or equivalent, on the local computer is the minimum requirement to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](https://go.microsoft.com/fwlink/?LinkId=83477).
 
 
 

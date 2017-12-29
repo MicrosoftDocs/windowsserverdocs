@@ -16,11 +16,11 @@ ms.date: 10/12/2016
 ---
 # Windows Logon Scenarios
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This reference topic for the IT professional summarizes common Windows logon and sign-in scenarios.
 
-The Windows operating systems require all users to log on to the computer with a valid account to access local and network resources. Windows-based computers secure resources by implementing the logon process, in which users are authenticated. After a user is authenticated, authorization and access control technologies implement the second phase of protecting resources???determining if the authenticated user is authorized to access a resource.
+The Windows operating systems require all users to log on to the computer with a valid account to access local and network resources. Windows-based computers secure resources by implementing the logon process, in which users are authenticated. After a user is authenticated, authorization and access control technologies implement the second phase of protecting resources: determining if the authenticated user is authorized to access a resource.
 
 The contents of this topic apply to versions of Windows designated in the **Applies to** list at the beginning of this topic.
 
@@ -86,12 +86,12 @@ To provide this type of authentication, the security system includes these authe
 
 -   Digest
 
--   NTLM, for compatibility with Microsoft Windows NT 4.0???based systems
+-   NTLM, for compatibility with Microsoft Windows NT 4.0-based systems
 
 For information about the elements and processes, see the interactive logon diagram above.
 
 ## <a name="BKMK_SmartCardLogon"></a>Smart card logon
-Smart cards can be used to log on only to domain accounts, not local accounts. Smart card authentication requires the use of the Kerberos authentication protocol. Introduced in Windows 2000 Server, in Windows-based operating systems a public key extension to the Kerberos protocol's initial authentication request is implemented. In contrast to shared secret key cryptography, public key cryptography is asymmetric, that is, two different keys are needed???one to encrypt, another to decrypt. Together, the keys that are required to perform both operations make up a private/public key pair.
+Smart cards can be used to log on only to domain accounts, not local accounts. Smart card authentication requires the use of the Kerberos authentication protocol. Introduced in Windows 2000 Server, in Windows-based operating systems a public key extension to the Kerberos protocol's initial authentication request is implemented. In contrast to shared secret key cryptography, public key cryptography is asymmetric, that is, two different keys are needed: one to encrypt, another to decrypt. Together, the keys that are required to perform both operations make up a private/public key pair.
 
 To initiate a typical logon session, a user must prove his or her identity by providing information known only to the user and the underlying Kerberos protocol infrastructure. The secret information is a cryptographic shared key derived from the user's password. A shared secret key is symmetric, which means that the same key is used for both encryption and decryption.
 

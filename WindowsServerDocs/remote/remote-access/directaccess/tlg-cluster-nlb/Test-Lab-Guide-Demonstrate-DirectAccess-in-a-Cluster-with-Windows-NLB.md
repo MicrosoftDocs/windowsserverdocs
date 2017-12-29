@@ -16,9 +16,9 @@ author: jamesmci
 ---
 # Test Lab Guide: Demonstrate DirectAccess in a Cluster with Windows NLB
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
-Remote Access is a server role in the  Windows Server 2016, Windows Server 2012 R2 andWindows Server 2012 operating systems that enables remote users to securely access internal network resources using DirectAccess or RRAS VPN. This guide contains step-by-step instructions for extending the [Test Lab Guide: Demonstrate DirectAccess Single Server Setup with Mixed IPv4 and IPv6](http://go.microsoft.com/fwlink/p/?LinkId=237004) to demonstrate DirectAccess Network Load Balancing and cluster configuration.  
+Remote Access is a server role in the  Windows Server 2016, Windows Server 2012 R2 andWindows Server 2012 operating systems that enables remote users to securely access internal network resources using DirectAccess or RRAS VPN. This guide contains step-by-step instructions for extending the [Test Lab Guide: Demonstrate DirectAccess Single Server Setup with Mixed IPv4 and IPv6](https://go.microsoft.com/fwlink/p/?LinkId=237004) to demonstrate DirectAccess Network Load Balancing and cluster configuration.  
   
 ## About this guide  
 This guide contains instructions for configuring and demonstrating Remote Access using six servers and two client computers. The completed Remote Access test lab with NLB simulates an intranet, the Internet, and a home network and demonstrates Remote Access functionality in different Internet connection scenarios.  
@@ -33,7 +33,7 @@ The following are known issues when configuring a cluster scenario:
   
     To resolve this issue:  
   
-    1.  Download the backup and restore scripts from [Back up and Restore Remote Access Configuration](http://gallery.technet.microsoft.com/Back-up-and-Restore-Remote-e157e6a6).  
+    1.  Download the backup and restore scripts from [Back up and Restore Remote Access Configuration](https://gallery.technet.microsoft.com/Back-up-and-Restore-Remote-e157e6a6).  
   
     2.  Back up your Remote Access GPOs using the downloaded script Backup-RemoteAccess.ps1  
   

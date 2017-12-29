@@ -64,7 +64,7 @@ When you want to connect to a PC, you need the full name. You can find this info
 
 ### Why can’t I connect using Remote Desktop?
 
-Here are some possible solutions to common problems you might encounter when trying to connect to a remote PC. If these solutions don’t work, you can find more help on the [Microsoft Community website](http://go.microsoft.com/fwlink/p/?LinkId=242079).
+Here are some possible solutions to common problems you might encounter when trying to connect to a remote PC. If these solutions don’t work, you can find more help on the [Microsoft Community website](https://go.microsoft.com/fwlink/p/?LinkId=242079).
 
 - **The remote PC can’t be found.** Make sure you have the right PC name, and then check to see if you entered that name correctly. If you still can't connect, try using the IP address of the remote PC instead of the PC name.
 - **There’s a problem with the network.** Make sure you have internet connection. 
@@ -201,8 +201,5 @@ This error happens when a Resource Authorization Policy on the gateway server st
 - The remote PC name is the same as the name of the gateway. Then, when you try to connect to the remote PC, the connection goes to the gateway instead, which you probably don't have permission to access. If you need to connect to the gateway, do not use the external gateway name as PC name. Instead use "localhost" or the IP address (127.0.0.1), or the internal server name. 
 - Your user account isn't a member of the user group for remote access.
 
-### What does the STOP error in Windows XP mean?
-This is a bug in Windows XP SP2 and SP3 and has been addressed by Microsoft. You need to open a support ticket with Microsoft to officially download the patch. 
-
-Not finding content you need? Windows 10 users, tell us what you want on [Feedback Hub](feedback-hub:?tabid=2&contextid=898). 
+Not finding content you need? Windows 10 users, tell us what you want on [Feedback Hub](feedback-hub://?referrer=techDocsUcPage&tabid=2&contextid=898&newFeedback=true&topic=remote-desktop-client-faq.md). 
 

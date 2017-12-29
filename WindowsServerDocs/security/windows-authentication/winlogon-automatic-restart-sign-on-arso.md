@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Winlogon Automatic Restart Sign-On (ARSO)
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 **Author**: Justin Turner, Senior Support Escalation Engineer with the Windows group  
   
@@ -83,7 +83,7 @@ This policy setting controls whether a device will automatically sign-in the las
   
 If you enable or do not configure this policy setting, the device securely saves the user's credentials (including the user name, domain, and encrypted password) to configure automatic sign-in after a Windows Update restart. After the Windows Update restart, the user is automatically signed-in and the session is automatically locked with all the lock screen apps configured for that user.  
   
-If you disable this policy setting, the device does not store the user's credentials for automatic sign-in after a Windows Update restart. The users??? lock screen apps are not restarted after the system restarts.  
+If you disable this policy setting, the device does not store the user's credentials for automatic sign-in after a Windows Update restart. The users' lock screen apps are not restarted after the system restarts.  
   
 **Registry Editor**  
   
@@ -141,6 +141,6 @@ The Logon Hours and parental controls can prohibit a new user session from being
   
 |Term|Definition|  
 |----|-------|  
-|Autologon|Autologon is a feature that has been present in Windows for several releases.  It is a documented feature of Windows that even has tools such as Autologon for Windows v3.01 *[http:/technet.microsoft.com/sysinternals/bb963905.aspx](http://technet.microsoft.com/sysinternals/bb963905.aspx)*<br /><br />It allows a single user of the device to sign in automatically without entering credentials. The credentials are configured and stored in registry as an encrypted LSA secret.|  
+|Autologon|Autologon is a feature that has been present in Windows for several releases.  It is a documented feature of Windows that even has tools such as Autologon for Windows v3.01 *[http:/technet.microsoft.com/sysinternals/bb963905.aspx](https://technet.microsoft.com/sysinternals/bb963905.aspx)*<br /><br />It allows a single user of the device to sign in automatically without entering credentials. The credentials are configured and stored in registry as an encrypted LSA secret.|  
   
 

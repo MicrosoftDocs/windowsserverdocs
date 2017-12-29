@@ -12,12 +12,12 @@ ms.assetid: e108b76b-fae9-4c16-bf4c-d74c9f025953
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # bitsadmin cache and deleteurl
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Deletes all cache entries for the given URL.
 
@@ -35,9 +35,9 @@ bitsadmin /DeleteURL url
 
 ## <a name="BKMK_examples"></a>Examples
 
-The following example deletes all cache entries for http://www.microsoft.com/en/us/default.aspx
+The following example deletes all cache entries for https://www.microsoft.com/en/us/default.aspx
 ```
-C:\>bitsadmin /DeleteURL http://www.microsoft.com/en/us/default.aspx 
+C:\>bitsadmin /DeleteURL https://www.microsoft.com/en/us/default.aspx 
 ```
 
 #### Additional references

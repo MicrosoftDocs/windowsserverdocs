@@ -115,7 +115,7 @@ manager: dongill
   
 2.  Format the hard drive and set it up for server backup. If you choose this option, the Set Up Server Backup Wizard is launched, and it walks you through the server backup configuration.  
   
-3.  If a storage space doesn „¢t exist, use the new hard drive to create a storage space. You must have at least two hard drives to create a storage space.  
+3.  If a storage space doesn ï¿½ï¿½t exist, use the new hard drive to create a storage space. You must have at least two hard drives to create a storage space.  
   
 4.  If a storage space already exists, use the new hard drive to increase the capacity of a storage pool. This option is only displayed if there is an existing storage space created on the server. If you choose this option, the wizard will add this hard drive to the storage pool.  
   
@@ -188,14 +188,14 @@ manager: dongill
 5.  Follow the instructions to finish the wizard.  
   
 ##  <a name="BKMK_5"></a> Storage Spaces Overview  
- Storage Spaces lets you group disks together in a storage pool. You can then use pool capacity to create storage spaces. Storage spaces are virtual drives that appear on the **Hard Drives** tab of the Dashboard. You can use storage spaces like any other drive, so it „¢s easy to work with files on them. When you run low on pool capacity, you can create large storage spaces and add more drives to the storage pool. If you have two or more disks within the storage pool, you can create storage spaces with a two-way mirror that won't be affected by a drive failure ?or even the failure of two drives ?if you create a three-way mirror storage space.  
+ Storage Spaces lets you group disks together in a storage pool. You can then use pool capacity to create storage spaces. Storage spaces are virtual drives that appear on the **Hard Drives** tab of the Dashboard. You can use storage spaces like any other drive, so it ï¿½ï¿½s easy to work with files on them. When you run low on pool capacity, you can create large storage spaces and add more drives to the storage pool. If you have two or more disks within the storage pool, you can create storage spaces with a two-way mirror that won't be affected by a drive failure ?or even the failure of two drives ?if you create a three-way mirror storage space.  
   
  To create a storage space, all you need is one or more extra drives in addition to the drive on which Windows is installed. These drives can be internal or external hard drives, or solid state drives. You can use a variety of types of drives with Storage Spaces, including USB, SATA, and SAS drives.  
   
 > [!NOTE]
 >  If you configure Storage Spaces on a server running  Windows Server Essentials, you cannot perform a Factory Reset with the **Clean Data** option. The workaround for this issue is to first remove Storage Spaces and then perform a Factory Reset with the **Clean Data** option.  
   
- For more information about Storage Spaces, see [Storage Spaces Frequently Asked Questions (FAQ)](http://social.technet.microsoft.com/wiki/contents/articles/11382.storage-spaces-frequently-asked-questions-faq.aspx).  
+ For more information about Storage Spaces, see [Storage Spaces Frequently Asked Questions (FAQ)](https://social.technet.microsoft.com/wiki/contents/articles/11382.storage-spaces-frequently-asked-questions-faq.aspx).  
   
 ##  <a name="BKMK_6"></a> Create a storage space  
  To begin working with Storage Spaces on server, the following minimum requirements must be met:  

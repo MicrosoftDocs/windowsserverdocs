@@ -16,7 +16,7 @@ author: jamesmci
 ---
 #  Step 2 Configure the DirectAccess-VPN Server
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This topic describes how to configure the client and server settings required for a basic Remote Access deployment using the Enable DirectAccess Wizard.
 

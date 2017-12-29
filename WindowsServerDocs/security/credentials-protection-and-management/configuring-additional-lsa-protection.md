@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Configuring Additional LSA Protection
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This topic for the IT professional explains how to configure additional protection for the Local Security Authority (LSA) process to prevent code injection that could compromise credentials.
 
@@ -29,13 +29,13 @@ For an LSA plug-in or driver to successfully load as a protected process, it mus
 
     Protected mode requires that any plug-in that is loaded into the LSA is digitally signed with a Microsoft signature. Therefore, any plug-ins that are unsigned or are not signed with a Microsoft signature will fail to load in LSA. Examples of these plug-ins are smart card drivers, cryptographic plug-ins, and password filters.
 
-    LSA plug-ins that are drivers, such as smart card drivers, need to be signed by using the WHQL Certification. For more information, see [WHQL Release Signature (Windows Drivers)](http://msdn.microsoft.com/library/windows/hardware/ff553976%28v=vs.85%29.aspx).
+    LSA plug-ins that are drivers, such as smart card drivers, need to be signed by using the WHQL Certification. For more information, see [WHQL Release Signature (Windows Drivers)](https://msdn.microsoft.com/library/windows/hardware/ff553976%28v=vs.85%29.aspx).
 
-    LSA plug-ins that do not have a WHQL Certification process, must be signed by using the [file signing service for LSA](http://go.microsoft.com/fwlink/?LinkId=392590).
+    LSA plug-ins that do not have a WHQL Certification process, must be signed by using the [file signing service for LSA](https://go.microsoft.com/fwlink/?LinkId=392590).
 
 2.  Adherence to the Microsoft Security Development Lifecycle (SDL) process guidance
 
-    All of the plug-ins must conform to the applicable SDL process guidance. For more information, see the [Microsoft Security Development Lifecycle (SDL) Appendix](http://msdn.microsoft.com/library/windows/desktop/cc307891.aspx).
+    All of the plug-ins must conform to the applicable SDL process guidance. For more information, see the [Microsoft Security Development Lifecycle (SDL) Appendix](https://msdn.microsoft.com/library/windows/desktop/cc307891.aspx).
 
     Even if the plug-ins are properly signed with a Microsoft signature, non-compliance with the SDL process can result in failure to load a plug-in.
 
@@ -168,9 +168,9 @@ You can use the following procedures to enable or disable LSA protection:
 
 3.  Use the Local Security Authority (LSA) Protected Process Opt-out tool to delete the UEFI variable if the device is using Secure Boot.
 
-    For more information about the opt-out tool, see [Download Local Security Authority (LSA) Protected Process Opt-out from Official Microsoft Download Center](http://www.microsoft.com/download/details.aspx?id=40897).
+    For more information about the opt-out tool, see [Download Local Security Authority (LSA) Protected Process Opt-out from Official Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=40897).
 
-    For more information about managing Secure Boot, see [UEFI Firmware](http://technet.microsoft.com/library/hh824898.aspx).
+    For more information about managing Secure Boot, see [UEFI Firmware](https://technet.microsoft.com/library/hh824898.aspx).
 
     > [!WARNING]
     > When Secure Boot is turned off, all the Secure Boot and UEFI-related configurations are reset. You should turn off Secure Boot only when all other means to disable LSA protection have failed.
@@ -183,6 +183,6 @@ To discover if LSA was started in protected mode when Windows started, search fo
 ## Additional resources
 [Credentials Protection and Management](credentials-protection-and-management.md)
 
-[File signing service for LSA](http://go.microsoft.com/fwlink/?LinkId=392590)
+[File signing service for LSA](https://go.microsoft.com/fwlink/?LinkId=392590)
 
 

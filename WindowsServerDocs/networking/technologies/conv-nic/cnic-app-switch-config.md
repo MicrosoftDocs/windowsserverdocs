@@ -12,7 +12,7 @@ author: jamesmci
 
 # Physical Switch Configuration for Converged NIC
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use the following sections as guidelines for configuring your physical switches.
 

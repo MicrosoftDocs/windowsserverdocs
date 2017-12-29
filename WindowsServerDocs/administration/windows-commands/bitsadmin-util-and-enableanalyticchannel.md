@@ -13,12 +13,12 @@ ms.assetid: 0d7645aa-b91b-4ed7-b630-a1e1be6f6ae9
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # bitsadmin util and enableanalyticchannel
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Enables or disables the BITS client analytic channel.
 

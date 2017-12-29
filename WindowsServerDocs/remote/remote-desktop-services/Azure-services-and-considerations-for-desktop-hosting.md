@@ -16,7 +16,7 @@ manager: dongill
 ---
 # Azure services and considerations for desktop hosting
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 The following sections describe Azure Infrastructure Services.  
   
@@ -24,7 +24,7 @@ The following sections describe Azure Infrastructure Services.
 After the provider creates an Azure subscription, the Azure portal can be used to manually create each tenant's environment. This process can also be automated using PowerShell Scripts.  
   
 Additional information:  
-[Microsoft Azure](http://www.azure.microsoft.com)  
+[Microsoft Azure](https://www.azure.microsoft.com)  
   
 ##  Azure Load Balancer  
 The tenant's components run on virtual machines that communicate with each other on an isolated network. During the deployment process, these virtual machines can be accessed externally through the Azure Load Balancer using Remote Desktop Protocol endpoints or Remote PowerShell endpoint. Once a deployment is complete, these endpoints will typically be deleted to reduce the attack surface area. The only endpoints will be the HTTPS and UDP endpoints created for the VM running the RD Web and RD Gateway components. This allows clients on the Internet to connect to sessions running in the tenant's desktop hosting service. If a user opens an application that connects to the Internet, such as Internet Explorer Web browser, the connections will be passed through the Azure Load Balancer.  

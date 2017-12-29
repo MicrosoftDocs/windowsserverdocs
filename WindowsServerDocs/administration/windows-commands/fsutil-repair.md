@@ -8,10 +8,10 @@ author: toklima
 ms.technology: storage
 audience: "IT Pro"
 ms.topic: article
-ms.date: 11/07/2016
+ms.date: 10/16/2017
 ---
 # Fsutil repair
->Applies To: Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7
 
 Administers and monitors NTFS self-healing repair operations.
 
@@ -46,7 +46,7 @@ fsutil repair [wait][<WaitType>] <VolumePath>
 
 ## Remarks
 
--   Self-healing NTFS attempts to correct corruptions of the NTFS file system online, without requiring **Chkdsk.exe** to be run. This feature was introduced in Windows Server 2008. For more information, see [Self Healing NTFS](http://go.microsoft.com/fwlink/?LinkID=165401).
+-   Self-healing NTFS attempts to correct corruptions of the NTFS file system online, without requiring **Chkdsk.exe** to be run. This feature was introduced in Windows Server 2008. For more information, see [Self Healing NTFS](https://go.microsoft.com/fwlink/?LinkID=165401).
 
 ## <a name="BKMK_examples"></a>Examples
 
@@ -73,6 +73,6 @@ fsutil repair set c: 0
 
 [Fsutil](Fsutil.md)
 
-[Self Healing NTFS](http://go.microsoft.com/fwlink/?LinkID=165401)
+[Self Healing NTFS](https://go.microsoft.com/fwlink/?LinkID=165401)
 
 

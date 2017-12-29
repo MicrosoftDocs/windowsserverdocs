@@ -4,7 +4,6 @@ description: Describes how to manage User Access Logging
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.technology: manage-user-access-logging
-ms.prod: windows-server-2012
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -13,11 +12,11 @@ ms.assetid: 4f039017-4152-47eb-838e-bb6ef730b638
 author: brentfor
 ms.author: coreyp
 manager: dongill
-ms.date: 11/30/2016
+ms.date: 10/16/2017
 ---
 # Manage User Access Logging
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This document describes how to manage User Access Logging (UAL).  
   
@@ -234,11 +233,11 @@ The maximum number of accesses that can be recorded with UAL is 65,535 per day.Â
 ## Recovering from a corrupt state  
 This section discusses UALâ€™s use of the Extensible Storage Engine (ESE) at a high level and what an administrator can do if UAL data is corrupted or unrecoverable.  
   
-UAL uses ESE to optimize use of system resources and for its resistance to corruption.  For more information about the benefits of ESE, see [Extensible Storage Engine](http://msdn.microsoft.com/library/windows/desktop/gg269259(v=exchg.10).aspx) on MSDN.  
+UAL uses ESE to optimize use of system resources and for its resistance to corruption.  For more information about the benefits of ESE, see [Extensible Storage Engine](https://msdn.microsoft.com/library/windows/desktop/gg269259(v=exchg.10).aspx) on MSDN.  
   
-Each time the UAL service starts ESE performs a soft recovery. For more information, see [Extensible Storage Engine Files](http://msdn.microsoft.com/library/windows/desktop/gg294069(v=exchg.10).aspx) on MSDN.  
+Each time the UAL service starts ESE performs a soft recovery. For more information, see [Extensible Storage Engine Files](https://msdn.microsoft.com/library/windows/desktop/gg294069(v=exchg.10).aspx) on MSDN.  
   
-If there is a problem with the soft recovery, ESE will perform a crash recovery. For more information, see [JetInit Function](http://msdn.microsoft.com/library/windows/desktop/gg294068(v=exchg.10).aspx) on MSDN.  
+If there is a problem with the soft recovery, ESE will perform a crash recovery. For more information, see [JetInit Function](https://msdn.microsoft.com/library/windows/desktop/gg294068(v=exchg.10).aspx) on MSDN.  
   
 If UAL is still unable to start with the existing set of ESE files, it will delete all files in the \Windows\System32\LogFiles\SUM\ directory. After these files are deleted, the User Access Logging Service will restart and new files are created. The UAL service will then resume as if on a freshly installed computer.  
   

@@ -16,7 +16,7 @@ manager: scottman
 ---
 # Deploy a two-node Storage Spaces Direct scale-out file server for UPD storage in Azure
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 Remote Desktop Services (RDS) requires a domain-joined file server for user profile disks (UPDs). To deploy a high availability domain-joined scale-out file server (SOFS) in Azure, use Storage Spaces Direct with Windows Server 2016. If you’re not familiar with UPDs or Remote Desktop Services, check out [Welcome to Remote Desktop Services](welcome-to-rds.md).
 
@@ -131,4 +131,4 @@ Use the following steps to create a domain controller (we called ours "my-dc" be
       New-SmbShare -Name UpdStorage -Path C:\ClusterStorage\Volume1\Data
       ```
 
-You now have a share at &#92;\my-sofs1\UpdStorage, which you can use for UPD storage when you [enable UPD](http://social.technet.microsoft.com/wiki/contents/articles/15304.installing-and-configuring-user-profile-disks-upd-in-windows-server-2012.aspx) for your users. 
+You now have a share at &#92;\my-sofs1\UpdStorage, which you can use for UPD storage when you [enable UPD](https://social.technet.microsoft.com/wiki/contents/articles/15304.installing-and-configuring-user-profile-disks-upd-in-windows-server-2012.aspx) for your users. 

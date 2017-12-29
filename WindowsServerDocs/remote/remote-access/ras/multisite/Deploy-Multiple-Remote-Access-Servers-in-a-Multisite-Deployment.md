@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # Deploy Multiple Remote Access Servers in a Multisite Deployment
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
  Windows Server 2016 and Windows Server 2012 combine DirectAccess and Remote Access Service (RAS) VPN into a single Remote Access role. Remote Access can be deployed in a number of enterprise scenarios. This overview provides an introduction to the enterprise scenario for deploying Remote Access servers in a multisite configuration.  
   
@@ -44,7 +44,7 @@ Before you begin deploying this scenario, review this list for important require
   
 -   A Public Key Infrastructure must be deployed.  
   
-    For more information see: [Test Lab Guide Mini-Module: Basic PKI for Windows Server 2012.](http://social.technet.microsoft.com/wiki/contents/articles/7862.test-lab-guide-mini-module-basic-pki-for-windows-server-2012.aspx)  
+    For more information see: [Test Lab Guide Mini-Module: Basic PKI for Windows Server 2012.](https://social.technet.microsoft.com/wiki/contents/articles/7862.test-lab-guide-mini-module-basic-pki-for-windows-server-2012.aspx)  
   
 -   The corporate network must be IPv6 enabled. If you are using ISATAP, you should remove it and use native IPv6.  
   

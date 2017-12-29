@@ -12,11 +12,11 @@ ms.assetid: 9d4d28e8-6e88-42cc-801f-94e9d8e051f4
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # nslookup set domain
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 changes the default Domain Name System (DNS) domain name to the name specified.
 ## Syntax

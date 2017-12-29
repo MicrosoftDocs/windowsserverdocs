@@ -10,26 +10,29 @@ ms.topic:
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 09/21/2017
+ms.date: 12/01/2017
+ms.localizationpriority: low
 ---
 
 # Deploy Project Honolulu Gateway
 
->Applies To: Windows Server, Windows Server 2016 and Windows 10
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016 and Windows 10
 
 This article describes the system requirements, prerequisites, and steps to install Honolulu on Windows 10 and Windows Server computers.
 
 ## Supported operating systems ##
 
- You can install Project Honolulu on the following Windows operating systems:
+You can *install* Honolulu on the following Windows operating systems:
 
-| **Version**| **Install Honolulu** | **Managed node** via Server Manager, and **managed cluster** via Failover Cluster Mgr | **Managed HCI cluster** via HC Cluster Mgr (early preview)|
-|-------------------------|---------------|-----|------------------------|
-| Windows 10              | Yes (local)   | N/A | N/A                    |
-| Windows Server, version 1709| Yes (gateway) | Yes | Yes, on Insider builds |
-| Windows Server 2016     | Yes (gateway) | Yes | Future                 |
-| Windows Server 2012 R2  | No            | Yes | N/A                    |
-| Windows Server 2012     | No            | Yes | N/A                    |
+| **Version** | **Installation Mode** |
+|-------------|-----------------------|
+|Windows 10   | Desktop mode |
+|Windows Server, version 1709 | Gateway mode |
+|Windows Server 2016 | Gateway mode |
+
+**Desktop Mode:** Connect to the Honolulu gateway from the same computer on which it's installed (i.e. `http://localhost:[port]`)
+
+**Gateway Mode:** Connect to the Honolulu  gateway from a client browser on a different machine (i.e. `https://servername`)
 
 ## Install on Windows 10
 
@@ -70,14 +73,12 @@ On Windows Server Core and Windows Server 2016 Core, Project Honolulu can instal
 
    To install Project Honolulu and automatically generate a self-signed certificate:
    
-        msiexec /i ServerManagementGateway.msi /qn /l *v log.txt SME_PORT=<port>
-        SSL_CERTIFICATE_OPTION=generate
+        msiexec /i <HonoluluInstallerName>.msi /qn /L*v log.txt SME_PORT=<port> SSL_CERTIFICATE_OPTION=generate
    
    To install Project Honolulu with an existing certificate:
 
-        msiexec /i ServerManagementGateway.msi /qn /l *v log.txt SME_PORT=<port>
-        SME_THUMBPRINT=<thumbprint> SSL_CERTIFICATE_OPTION=installed
+        msiexec /i <HonoluluInstallerName>.msi /qn /L*v log.txt SME_PORT=<port> SME_THUMBPRINT=<thumbprint> SSL_CERTIFICATE_OPTION=installed
         
 > [!WARNING] 
-> Invoking `msiexec` from PowerShell using dot-slash relative path notation (e.g. `.\ServerManagementGateway.msi`) is not supported
+> Invoking `msiexec` from PowerShell using dot-slash relative path notation (e.g. `.\<HonoluluInstallerName>.msi`) is not supported
 > and will result in installation failure. Remove the `.\` prefix or specify the full path to the MSI.

@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # Troubleshooting Adding Entry Points
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This topic contains troubleshooting information for issues related to the `Add-DAEntryPoint` command. To confirm that the error you received is related to adding an entry point, check in the Windows Event log for the event ID 10067.  
   
@@ -53,7 +53,7 @@ Multisite is not enabled on the server specified by the *ComputerName* parameter
   
 **Solution**  
   
-Enable multisite using the `Enable-DaMultiSite` cmdlet. For more information, see [Deploy multisite Remote Access](http://technet.microsoft.com/library/hh831664.aspx).  
+Enable multisite using the `Enable-DaMultiSite` cmdlet. For more information, see [Deploy multisite Remote Access](https://technet.microsoft.com/library/hh831664.aspx).  
   
 ## IPv6 prefix issues  
   

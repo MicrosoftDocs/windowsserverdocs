@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # Step 2 Configure the RADIUS Server
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 Before you configure the Remote Access server to support DirectAccess with OTP support, you configure the RADIUS server.  
   

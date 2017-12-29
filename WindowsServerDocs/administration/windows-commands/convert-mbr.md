@@ -12,19 +12,19 @@ ms.assetid: a635a4c0-af73-4330-b021-51d483424537
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # convert mbr
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Converts an empty basic disk with the GUID Partition Table (GPT) partition style into a basic disk with the master boot record (MBR) partition style.
 
 > [!IMPORTANT]
 > The disk must be empty to convert it into an MBR disk. Back up your data, and then delete all partitions or volumes before converting the disk.
 
-For instructions regarding how to use this command, see [Change a GUID Partition Table Disk into a Master Boot Record Disk](http://go.microsoft.com/fwlink/?LinkId=207050) (http://go.microsoft.com/fwlink/?LinkId=207050).
+For instructions regarding how to use this command, see [Change a GUID Partition Table Disk into a Master Boot Record Disk](https://go.microsoft.com/fwlink/?LinkId=207050) (https://go.microsoft.com/fwlink/?LinkId=207050).
 
 ## Syntax
 

@@ -12,12 +12,12 @@ ms.assetid: c0891e67-0187-4f18-923d-5623e6127f90
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # dfsdiag
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 The `Dfsdiag` command provides diagnostic information for DFS Namespaces.
 

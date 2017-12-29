@@ -12,7 +12,7 @@ description: How to use plug-ins to coordinate updates when using Cluster-Aware 
 ---
 # How Cluster-Aware Updating plug-ins work
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 [Cluster-Aware Updating](cluster-aware-updating.md) (CAU) uses plug-ins to coordinate the installation of updates across nodes in a failover cluster. This topic provides information about using the built\-in CAU plug\-ins or other plug\-ins that you install for CAU.
 
@@ -135,7 +135,7 @@ To configure a **QueryString** argument that installs only drivers:
   
 **QueryString\="IsInstalled\=0 and Type\='Driver' and IsHidden\=0"**  
   
-For more information about query strings for the default plug\-in, **Microsoft.WindowsUpdatePlugin**, the search criteria \(such as **IsInstalled**\), and the syntax that you can include in the query strings, see the section about search criteria in the [Windows Update Agent (WUA) API Reference](http://go.microsoft.com/fwlink/p/?LinkId=223304).  
+For more information about query strings for the default plug\-in, **Microsoft.WindowsUpdatePlugin**, the search criteria \(such as **IsInstalled**\), and the syntax that you can include in the query strings, see the section about search criteria in the [Windows Update Agent (WUA) API Reference](https://go.microsoft.com/fwlink/p/?LinkId=223304).  
   
 ## <a name="BKMK_HFP"></a>Use the Microsoft.HotfixPlugin  
 The plug\-in **Microsoft.HotfixPlugin** can be used to apply Microsoft limited distribution release \(LDR\) updates \(also called hotfixes, and formerly called QFEs\) that you download independently to address specific Microsoft software issues. The plug-in installs updates from a root folder on an SMB file share and can also be customized to apply non\-Microsoft driver, firmware, and BIOS updates.
@@ -377,7 +377,7 @@ However, as a best practice in many environments, we recommend that you use the 
   
 To check for data integrity in the connections between the cluster nodes and the SMB file share, the hotfix plug\-in requires that you enable settings on the SMB file share for SMB signing or SMB Encryption. SMB Encryption, which provides enhanced security and better performance in many environments, is supported starting in Windows Server 2012. You can enable either or both of these settings, as follows:  
   
--   To enable SMB signing, see the procedure in the [article 887429](http://support.microsoft.com/kb/887429) in the Microsoft Knowledge Base.  
+-   To enable SMB signing, see the procedure in the [article 887429](https://support.microsoft.com/kb/887429) in the Microsoft Knowledge Base.  
   
 -   To enable SMB Encryption for the SMB shared folder, run the following PowerShell cmdlet on the SMB server:  
   
@@ -402,5 +402,5 @@ You must enable the **File Server Remote Management \(SMB\-in\)** rule in Window
   
 -   [Cluster-Aware Updating Windows PowerShell Cmdlets](https://technet.microsoft.com/itpro/powershell/windows/cluster-aware-updating)  
   
--   [Cluster-Aware Updating Plug-in Reference](http://msdn.microsoft.com/library/hh418084.aspx)  
+-   [Cluster-Aware Updating Plug-in Reference](https://msdn.microsoft.com/library/hh418084.aspx)  
   

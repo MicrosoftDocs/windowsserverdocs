@@ -12,12 +12,12 @@ ms.assetid: e1e296fb-20cf-4a60-9db4-4cbac7d4dab5
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # Using the get-ImageFile Command
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Retrieves information about the images contained in a Windows Image (.wim) file.
 

@@ -12,7 +12,7 @@ description: Requirements for using Cluster-Aware Updating to install updates on
 ---
 # Cluster-Aware Updating requirements and best practices
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This section describes the requirements and dependencies that are needed to use [Cluster-Aware Updating](cluster-aware-updating.md) (CAU) to apply updates to a failover cluster running Windows Server.
   
@@ -20,7 +20,7 @@ This section describes the requirements and dependencies that are needed to use 
 > You may need to independently validate that your cluster environment is ready to apply updates if you use a plug\-in other than **Microsoft.WindowsUpdatePlugin**. If you are using a non\-Microsoft plug\-in, contact the publisher for more information. For more information about plug\-ins, see [How Plug\-ins Work](cluster-aware-updating-plug-ins.md).   
   
 ## <a name="BKMK_REQ_CLUS"></a>Install the Failover Clustering feature and the Failover Clustering Tools  
-CAU requires an installation of the Failover Clustering feature and the Failover Clustering Tools. The Failover Clustering Tools include the CAU tools \(clusterawareupdating.dll\), the Failover Clustering  cmdlets, and other components needed for CAU operations. For steps to install the Failover Clustering feature, see [Installing the Failover Clustering Feature and Tools](http://go.microsoft.com/fwlink/p/?LinkId=253342).  
+CAU requires an installation of the Failover Clustering feature and the Failover Clustering Tools. The Failover Clustering Tools include the CAU tools \(clusterawareupdating.dll\), the Failover Clustering  cmdlets, and other components needed for CAU operations. For steps to install the Failover Clustering feature, see [Installing the Failover Clustering Feature and Tools](https://go.microsoft.com/fwlink/p/?LinkId=253342).  
   
 The exact installation requirements for the Failover Clustering Tools depend on whether CAU coordinates updates as a clustered role on the failover cluster \(by using self\-updating mode\) or from a remote computer. The self\-updating mode of CAU additionally requires the installation of the CAU clustered role on the failover cluster by using the CAU tools.    
   
@@ -67,8 +67,8 @@ These requirements are in addition to the installation requirements for the [Ins
 |---------------|---|-----------------------|-------------------------|  
 |[Enable a firewall rule to allow automatic restarts](#BKMK_FW)|Disabled|Required on all cluster nodes if a firewall is in use|Required on all cluster nodes if a firewall is in use|  
 |[Enable Windows Management Instrumentation](#BKMK_WMI)|Enabled|Required on all cluster nodes|Required on all cluster nodes|  
-|[Enable Windows PowerShell 3.0 or 4.0 and Windows PowerShell remoting](#BKMK_PS)|Enabled|Required on all cluster nodes|Required on all cluster nodes to run the following:<br /><br />-   The [Save-CauDebugTrace](https://technet.microsoft.com/itpro/powershell/windows/cluster-aware-updating/save-caudebugtrace) cmdlet<br />-    PowerShell pre\-update and post\-update scripts during an Updating Run<br />-   Tests of cluster updating readiness using the Cluster-Aware Updating window or the [Test\-CauSetup](http://go.microsoft.com/fwlink/p/?LinkId=242384) Windows PowerShell cmdlet|  
-|[Install .NET Framework 4.6 or 4.5](#BKMK_NET)|Enabled|Required on all cluster nodes|Required on all cluster nodes to run the following:<br /><br />-   The [Save-CauDebugTrace](https://technet.microsoft.com/itpro/powershell/windows/cluster-aware-updating/save-caudebugtrace) cmdlet<br />-   PowerShell pre\-update and post\-update scripts during an Updating Run<br />-   Tests of cluster updating readiness using the Cluster-Aware Updating window or the [Test\-CauSetup](http://go.microsoft.com/fwlink/p/?LinkId=242384) Windows PowerShell cmdlet|  
+|[Enable Windows PowerShell 3.0 or 4.0 and Windows PowerShell remoting](#BKMK_PS)|Enabled|Required on all cluster nodes|Required on all cluster nodes to run the following:<br /><br />-   The [Save-CauDebugTrace](https://technet.microsoft.com/itpro/powershell/windows/cluster-aware-updating/save-caudebugtrace) cmdlet<br />-    PowerShell pre\-update and post\-update scripts during an Updating Run<br />-   Tests of cluster updating readiness using the Cluster-Aware Updating window or the [Test\-CauSetup](https://go.microsoft.com/fwlink/p/?LinkId=242384) Windows PowerShell cmdlet|  
+|[Install .NET Framework 4.6 or 4.5](#BKMK_NET)|Enabled|Required on all cluster nodes|Required on all cluster nodes to run the following:<br /><br />-   The [Save-CauDebugTrace](https://technet.microsoft.com/itpro/powershell/windows/cluster-aware-updating/save-caudebugtrace) cmdlet<br />-   PowerShell pre\-update and post\-update scripts during an Updating Run<br />-   Tests of cluster updating readiness using the Cluster-Aware Updating window or the [Test\-CauSetup](https://go.microsoft.com/fwlink/p/?LinkId=242384) Windows PowerShell cmdlet|  
 
 ### <a name="BKMK_FW"></a>Enable a firewall rule to allow automatic restarts  
 To allow automatic restarts after updates are applied \(if the installation of an update requires a restart\), if Windows Firewall or a non\-Microsoft firewall is in use on the cluster nodes, a firewall rule must be enabled on each node that allows the following traffic:  
@@ -194,7 +194,7 @@ netsh winhttp set proxy MyProxy.CONTOSO.com:443 "<local>"
   
 -   You should set appropriate permissions on pre\-update and post\-update scripts that are saved on network shared folders to prevent potential tampering with these files by unauthorized users.  
   
--   To configure CAU in self\-updating mode, a virtual computer object \(VCO\) for the CAU clustered role must be created in Active Directory. CAU can create this object automatically at the time that the CAU clustered role is added, if the failover cluster has sufficient permissions. However, because of the security policies in certain organizations, it may be necessary to prestage the object in Active Directory. For a procedure to do this, see [Steps for prestaging an account for a clustered role](http://go.microsoft.com/fwlink/p/?LinkId=237624).  
+-   To configure CAU in self\-updating mode, a virtual computer object \(VCO\) for the CAU clustered role must be created in Active Directory. CAU can create this object automatically at the time that the CAU clustered role is added, if the failover cluster has sufficient permissions. However, because of the security policies in certain organizations, it may be necessary to prestage the object in Active Directory. For a procedure to do this, see [Steps for prestaging an account for a clustered role](https://go.microsoft.com/fwlink/p/?LinkId=237624).  
   
 -   To save and reuse Updating Run settings across failover clusters with similar updating needs in the IT organization, you can create Updating Run Profiles. Additionally, depending on the updating mode, you can save and manage the Updating Run Profiles on a file share that is accessible to all remote Update Coordinator computers or failover clusters. For more information, see [Advanced Options and Updating Run Profiles for CAU](cluster-aware-updating-options.md).  
   

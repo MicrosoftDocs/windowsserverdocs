@@ -12,16 +12,16 @@ ms.assetid: 61329896-3b56-4959-8d58-45cbe18ba860
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # convert basic
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Converts an empty dynamic disk to a basic disk.
 
-For instructions regarding how to use this command, see [Change a Dynamic Disk Back to a Basic Disk](http://go.microsoft.com/fwlink/?LinkId=207048) (http://go.microsoft.com/fwlink/?LinkId=207048).
+For instructions regarding how to use this command, see [Change a Dynamic Disk Back to a Basic Disk](https://go.microsoft.com/fwlink/?LinkId=207048) (https://go.microsoft.com/fwlink/?LinkId=207048).
 
 ## Syntax
 

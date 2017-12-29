@@ -6,7 +6,7 @@ ms.technology: performance-tuning-guide
 ms.topic: article
 ms.author:  Qizha;TristanB
 author: phstee
-ms.date: 04/24/2017
+ms.date: 10/16/2017
 ---
 
 # Processor Power Management (PPM) Tuning for the Windows Server Balanced Power Plan
@@ -23,7 +23,7 @@ If you run a server system that has dramatically different workload characterist
 
 ### Tested workloads
 
-Workloads are selected to cover a best-effort set of “typical” Windows Server workloads. Obviously this set is not intended to be representative of the entire breadth of real-world server environments.
+Workloads are selected to cover a best-effort set of “typical�? Windows Server workloads. Obviously this set is not intended to be representative of the entire breadth of real-world server environments.
 
 The tuning in each power policy is data driven by the following five workloads:
 
@@ -60,7 +60,7 @@ Given that most servers are sold with 1 to 4 processor sockets, and since scale-
 
 ### Metrics
 
-All of the tested benchmarks use throughput as the performance metric. Response Time is considered as an SLA requirement for these workloads (except for SAP, where it is a primary metric). For example, a benchmark run is considered “valid” if the mean or maximum response time is less than certain value.
+All of the tested benchmarks use throughput as the performance metric. Response Time is considered as an SLA requirement for these workloads (except for SAP, where it is a primary metric). For example, a benchmark run is considered “valid�? if the mean or maximum response time is less than certain value.
 
 Therefore, the PPM tuning analysis also uses throughput as its performance metric.  At the highest load level (100% CPU utilization), our goal is that the throughput should not decrease more than a few percent due to power management optimizations. But the primary consideration is to maximize the power efficiency (as defined below) at medium and low load levels.
 
@@ -85,7 +85,7 @@ If your primary workload characteristics differ significantly from the five work
 
 Due to the number and complexity of parameters, this may be a challenging task, but if you are looking for the best tradeoff between energy consumption and workload efficacy for your particular environment, it may be worth the effort.
 
- The complete set of tunable PPM parameters can be found in [Processor power management tuning](http://msdn.microsoft.com/windows/hardware/gg566941.aspx). Some of the simplest power parameters to start with could be:
+ The complete set of tunable PPM parameters can be found in [Processor power management tuning](https://msdn.microsoft.com/windows/hardware/gg566941.aspx). Some of the simplest power parameters to start with could be:
 
 -   **Processor Performance Increase Threshold and Processor Performance Increase Time** – larger values slow the perf response to increased activity
 
@@ -93,20 +93,20 @@ Due to the number and complexity of parameters, this may be a challenging task, 
 
 -   **Processor Performance Decrease Time** – larger values more gradually decrease perf during idle periods
 
--   **Processor Performance Increase Policy** – the “Single” policy slows the perf response to increased and sustained activity; the “Rocket” policy reacts quickly to increased activity
+-   **Processor Performance Increase Policy** – the “Single�? policy slows the perf response to increased and sustained activity; the “Rocket�? policy reacts quickly to increased activity
 
--   **Processor Performance Decrease Policy** – the “Single” policy more gradually decreases perf over longer idle periods; the “Rocket” policy drops power very quickly when entering an idle period
+-   **Processor Performance Decrease Policy** – the “Single�? policy more gradually decreases perf over longer idle periods; the “Rocket�? policy drops power very quickly when entering an idle period
 
 >[!Important]
 > Before starting any experiments, you should first understand your workloads, which will help you make the right PPM parameter choices and reduce the tuning effort.
 
 ### Understand high-level performance and power requirements
 
-If your workload is “real time” (e.g., susceptible to glitching or other visible end-user impacts) or has very tight responsiveness requirement (e.g., a stock brokerage), and if energy consumption is not a primary criteria for your environment, you should probably just switch to the **High Performance** power plan. Otherwise, you should understand the response time requirements of your workloads, and then tune the PPM parameters for the best possible power efficiency that still meets those requirements.
+If your workload is “real time�? (e.g., susceptible to glitching or other visible end-user impacts) or has very tight responsiveness requirement (e.g., a stock brokerage), and if energy consumption is not a primary criteria for your environment, you should probably just switch to the **High Performance** power plan. Otherwise, you should understand the response time requirements of your workloads, and then tune the PPM parameters for the best possible power efficiency that still meets those requirements.
 
 ### Understand underlying workload characteristics
 
-You should know your workloads and design the experiment parameter sets for tuning. For example, if frequencies of the CPU cores need to be ramped very fast (perhaps you have a bursty workload with significant idle periods, but you need very quick responsiveness when a new transaction comes along), then the processor performance increase policy might need to be set to “rocket” (which, as the name implies, shoots the CPU core frequency to its maximum value rather than stepping it up over a period of time).
+You should know your workloads and design the experiment parameter sets for tuning. For example, if frequencies of the CPU cores need to be ramped very fast (perhaps you have a bursty workload with significant idle periods, but you need very quick responsiveness when a new transaction comes along), then the processor performance increase policy might need to be set to “rocket�? (which, as the name implies, shoots the CPU core frequency to its maximum value rather than stepping it up over a period of time).
 
 If your workload is very bursty, the PPM check interval can be reduced to make the CPU frequency start stepping up sooner after a burst arrives. If your workload doesn’t have high thread concurrency, then core parking can be enabled to force the workload to execute on a smaller number of cores, which could also potentially improve processor cache hit ratios.
 

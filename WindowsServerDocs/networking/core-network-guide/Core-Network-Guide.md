@@ -11,7 +11,7 @@ author: jamesmci
 ---
 # Core Network Guide
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This guide provides instructions on how to plan and deploy the core components required for a fully functioning network and a new Active Directory domain in a new forest.
 
@@ -1154,17 +1154,17 @@ For more information about the technologies in this guide, see the following res
 
 -   [What's new in Active Directory Domain Services (AD DS) in Windows Server 2016](https://technet.microsoft.com/en-us/library/mt163897.aspx)
 
--   [Active Directory Domain Services overview](http://technet.microsoft.com/library/hh831484.aspx) at http://technet.microsoft.com/library/hh831484.aspx.
+-   [Active Directory Domain Services overview](https://technet.microsoft.com/library/hh831484.aspx) at https://technet.microsoft.com/library/hh831484.aspx.
 
--   [Domain Name System (DNS) overview](http://technet.microsoft.com/library/hh831667.aspx) at http://technet.microsoft.com/library/hh831667.aspx.
+-   [Domain Name System (DNS) overview](https://technet.microsoft.com/library/hh831667.aspx) at https://technet.microsoft.com/library/hh831667.aspx.
 
 -   [Implementing the DNS Admins Role](https://technet.microsoft.com/library/cc756152(WS.10).aspx)
 
--   [Dynamic Host Configuration Protocol (DHCP) overview](http://technet.microsoft.com/library/hh831825.aspx) at http://technet.microsoft.com/library/hh831825.aspx.
+-   [Dynamic Host Configuration Protocol (DHCP) overview](https://technet.microsoft.com/library/hh831825.aspx) at https://technet.microsoft.com/library/hh831825.aspx.
 
--   [Network Policy and Access Services overview](http://technet.microsoft.com/library/hh831683.aspx) at http://technet.microsoft.com/library/hh831683.aspx.
+-   [Network Policy and Access Services overview](https://technet.microsoft.com/library/hh831683.aspx) at https://technet.microsoft.com/library/hh831683.aspx.
 
--   [Web Server (IIS) overview](http://technet.microsoft.com/library/hh831725.aspx) at http://technet.microsoft.com/library/hh831725.aspx.
+-   [Web Server (IIS) overview](https://technet.microsoft.com/library/hh831725.aspx) at https://technet.microsoft.com/library/hh831725.aspx.
 
 ## <a name="BKMK_appendix"></a>Appendices A through E
 The following sections contain additional configuration information for computers that are running operating systems other than  Windows Server 2016, Windows 10,  Windows Server 2012 , and Windows 8. In addition, a network preparation worksheet is provided to assist you with your deployment.

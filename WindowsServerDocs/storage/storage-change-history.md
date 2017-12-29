@@ -7,25 +7,56 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.date: 7/24/2017
-description: New and updated topics in the Storage documentation for Windows Server 2016
+ms.date: 12/29/2017
+description: New and updated topics in the on-premises storage documentation for Windows Server for IT Pros.
 ---
-# Change history for storage topics in Windows Server 2016
+# Change history for storage topics in Windows Server
 
->Applies To: Windows Server 2016
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
-This topic lists new and updated topics in the [Storage](storage.md) documentation for Windows Server 2016.
+This topic lists new and updated topics in the [Storage](storage.md) documentation for Windows Server.
 
-> If you're looking for update history for Windows Server 2016, see [Windows 10 and Windows Server 2016 update history](https://support.microsoft.com/help/4000825/windows-10-and-windows-server-2016-update-history).
+> If you're looking for update history for Windows Server, see [Windows 10 and Windows Server 2016 update history](https://support.microsoft.com/help/4000825/windows-10-and-windows-server-2016-update-history).
+
+## December 2017
+
+|New or changed topic|Description|
+|---|---|
+|[Change a drive letter](disk-management/change-a-drive-letter.md)|New topic.|
+|[Health states for Storage Spaces](storage-spaces/storage-spaces-states.md)|New topic.|
+|[Troubleshooting Disk Management](disk-management/troubleshooting-disk-management.md)|Rewrote the [A disk's status is Not Initialized or the disk is missing entirely](disk-management/troubleshooting-disk-management.md#disk-not-initialized) section to add extensive troubleshooting steps, based on customer requests.|
+|[Initialize new disks](disk-management/initialize-new-disks.md)|Rewrote to attempt to make it easier to understand and address customer questions.|
+|[Planning volumes in Storage Spaces Direct](storage-spaces/plan-volumes.md)|Added a table summarizing the resiliency types available on four-node and larger clusters.|
+|[ReFS overview](refs/refs-overview.md)|Clarified recommended workloads for mirror-accelerated parity and corrected the supported file and volume sizes for ReFS and NTFS.|
+|[Mirror-accelerated parity](refs/mirror-accelerated-parity.md)|Clarified recommendation to place write-heavy files in separate directories.|
+|[Storage Replica known issues](storage-replica/storage-replica-known-issues.md)|Added new information.|
+
+## November 2017
+
+|New or changed topic|Description|
+|---|---|
+|[What's new in storage](whats-new-in-storage.md)|Added info about what's new in Windows Server, version 1709.|
+|[Add servers or drives](storage-spaces/add-nodes.md)|Added information about how Storage Spaces Direct automatically optimizes drive usage after adding drives.|
+
+## October 2017
+
+|New or changed topic|Description|
+|---|---|
+|[Deploying Storage Spaces Direct in a virtual machine guest cluster](storage-spaces/storage-spaces-direct-in-vm.md)|New topic.|
+|[Overview of Disk Management](disk-management/overview-of-disk-management.md)| Published 13 new topics for Windows and Windows Server.|
+|[Storage Replica overview](storage-replica/storage-replica-overview.md)|Added what's new info for Windows Server, version 1709.|
+|[Storage Replica known issues](storage-replica/storage-replica-known-issues.md)|Added new information.|
+|[Cluster to cluster storage replication](storage-replica/cluster-to-cluster-storage-replication.md)|Revised the number of supported cluster nodes for Storage Spaces Direct.|
+|[Storage Spaces Direct hardware requirements](storage-spaces/storage-spaces-direct-hardware-requirements.md)|Added a note about a specific line of NVMe devices.|
 
 ## July 2017
 
 |New or changed topic|Description|
 |---|---|
-|[Health states for Storage Spaces](storage-spaces/storage-spaces-states.md)|New topic.|
-|[DFS Namespaces](dfs-namespaces/dfs-overview.md)|New topic for Windows Server 2016.|
+|[DFS Namespaces](dfs-namespaces/dfs-overview.md)|Published 20 new topics for Windows Server 2016.|
 |[File Server Resource Manager](fsrm/fsrm-overview.md)|Published 33 new topics for Windows Server 2016.|
 |[Understanding the cache in Storage Spaces Direct](storage-spaces/understand-the-cache.md)|Added a Storage Spaces Direct design considerations video.|
+|[Storage Replica frequently asked questions](storage-replica/storage-replica-frequently-asked-questions.md)|Added more best practices around log volumes.|
 
 ## June 2017
 

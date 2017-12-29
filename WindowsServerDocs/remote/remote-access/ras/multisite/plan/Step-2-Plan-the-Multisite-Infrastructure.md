@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # Step 2 Plan the Multisite Infrastructure
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 The next step in deploying Remote Access in a multisite topology is to complete the multisite infrastructure planning; including, Active Directory, security groups, and Group Policy Objects.  
 ## <a name="bkmk_2_1_AD"></a>2.1 Plan Active Directory  
@@ -137,7 +137,7 @@ If you want to manually modify GPO settings note the following:
   
 -   If you modify settings on a domain controller that is not the domain controller associated with the entry point (for server GPOs) or the PDC emulator (for client GPOs), note the following:  
   
-    1.  Before modifying the settings, ensure that the domain controller is replicated with an up-to-date GPO, and [back up GPO settings](http://go.microsoft.com/fwlink/?LinkID=257928), before making changes. If the GPO is not updated, merge conflicts during replication might occur, resulting in a corrupt Remote Access configuration.  
+    1.  Before modifying the settings, ensure that the domain controller is replicated with an up-to-date GPO, and [back up GPO settings](https://go.microsoft.com/fwlink/?LinkID=257928), before making changes. If the GPO is not updated, merge conflicts during replication might occur, resulting in a corrupt Remote Access configuration.  
   
     2.  After modifying the settings, you must wait for changes to replicate to the domain controller that is associated with the GPOs. Do not make additional changes using the Remote Access Management console or Remote Access PowerShell cmdlets until replication is complete. If a GPO is edited on two different domain controllers before replication is complete, merge conflicts might occur, resulting in a corrupt configuration  
   

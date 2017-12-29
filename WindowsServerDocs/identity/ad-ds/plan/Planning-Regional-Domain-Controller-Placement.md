@@ -71,7 +71,7 @@ For example, consider a network that has branch offices that are connected throu
   
 If reducing the cost of maintaining domain controllers is more important than network traffic, either centralize the domain controllers for that domain and do not place any regional domain controllers at the location or consider placing RODCs at the location.  
   
-For a worksheet to assist you in documenting the placement of regional domain controllers and the number of users for each domain that is represented in each location, see Job Aids for Windows Server 2003 Deployment Kit ([http://go.microsoft.com/fwlink/?LinkID=102558](http://go.microsoft.com/fwlink/?LinkID=102558)), download Job_Aids_Designing_and_Deploying_Directory_and_Security_Services.zip, and open "Domain Controller Placement" (DSSTOPO_4.doc).  
+For a worksheet to assist you in documenting the placement of regional domain controllers and the number of users for each domain that is represented in each location, see Job Aids for Windows Server 2003 Deployment Kit ([https://go.microsoft.com/fwlink/?LinkID=102558](https://go.microsoft.com/fwlink/?LinkID=102558)), download Job_Aids_Designing_and_Deploying_Directory_and_Security_Services.zip, and open "Domain Controller Placement" (DSSTOPO_4.doc).  
   
 You will need to refer to the information about locations in which you need to place regional domain controllers when you deploy regional domains. For more information about deploying regional domains, see [Deploying Windows Server 2008 Regional Domains](https://technet.microsoft.com/library/cc755118.aspx).  
   

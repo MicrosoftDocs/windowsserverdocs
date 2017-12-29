@@ -14,13 +14,13 @@ ms.assetid: ed51c13c-7cbf-4144-a675-011fd29379d4
 author: brentfor
 ms.author: coreyp
 manager: dongill
-ms.date: 11/30/2016
+ms.date: 10/16/2017
 ---
 # Get Started with Software Inventory Logging
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
- Software Inventory Logging collects Microsoft software inventory data on a per server basis. Before using Software Inventory Logging with Windows Server 2012 R2, make sure that Windows Update [KB 3000850](http://support.microsoft.com/kb/3000850) and [KB 3060681](http://support.microsoft.com/kb/3060681) are installed on each system that will be inventoried. No Windows Update is required for Windows Server 2016. Also, if you want to use SIL’s capability to forward data to an aggregation server, be sure you have SSL certificates valid for your network.
+ Software Inventory Logging collects Microsoft software inventory data on a per server basis. Before using Software Inventory Logging with Windows Server 2012 R2, make sure that Windows Update [KB 3000850](https://support.microsoft.com/kb/3000850) and [KB 3060681](https://support.microsoft.com/kb/3060681) are installed on each system that will be inventoried. No Windows Update is required for Windows Server 2016. Also, if you want to use SIL’s capability to forward data to an aggregation server, be sure you have SSL certificates valid for your network.
 
 ## <a name="BKMK_OVER"></a>Feature description
 Software Inventory Logging in Windows Server is a feature with a simple set of PowerShell cmdlets that help server administrators retrieve a list of the Microsoft software that is installed on their servers. It also provides the capability to collect and forward this data periodically over the network to a target web server, using the HTTPS protocol, for aggregation. Managing the feature, primarily for hourly collection and forwarding, is also done with PowerShell commands.
@@ -43,7 +43,7 @@ Software Inventory Logging can assist server administrators in performing the fo
 ## See Also
 [Software Inventory Logging Aggregator](https://technet.microsoft.com/en-US/library/mt572043.aspx)<br>
 [Manage Software Inventory Logging](manage-software-inventory-logging.md)<br>
-[Software Inventory Logging Cmdlets in Windows PowerShell](http://technet.microsoft.com/library/dn283390.aspx)<br>
-[Microsoft Assessment and Planning Toolkit](http://www.microsoft.com/download/en/details.aspx?id=7826)
+[Software Inventory Logging Cmdlets in Windows PowerShell](https://technet.microsoft.com/library/dn283390.aspx)<br>
+[Microsoft Assessment and Planning Toolkit](https://www.microsoft.com/download/en/details.aspx?id=7826)
 [Volume Activation Management Tool](http://blogs.technet.com/b/volume-licensing/)
 

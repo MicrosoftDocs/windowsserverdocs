@@ -12,12 +12,12 @@ ms.assetid: 52381316-a0fa-459f-b6a6-01e31fb21612
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # wbadmin start recovery
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Runs a recovery operation based on the parameters that you specify.
 
@@ -96,7 +96,7 @@ wbadmin start recovery -version:04/30/2013-09:00 -backupTarget:\\servername\shar
 
 -   [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)
--   [Start-WBFileRecovery](http://technet.microsoft.com/library/jj902457.aspx) cmdlet
--   [Start-WBHyperVRecovery](http://technet.microsoft.com/library/jj902463.aspx) cmdlet
--   [Start-WBSystemStateRecovery](http://technet.microsoft.com/library/jj902449.aspx) cmdlet
--   [Start-WBVolumeRecovery](http://technet.microsoft.com/library/jj902470.aspx) cmdlet
+-   [Start-WBFileRecovery](https://technet.microsoft.com/library/jj902457.aspx) cmdlet
+-   [Start-WBHyperVRecovery](https://technet.microsoft.com/library/jj902463.aspx) cmdlet
+-   [Start-WBSystemStateRecovery](https://technet.microsoft.com/library/jj902449.aspx) cmdlet
+-   [Start-WBVolumeRecovery](https://technet.microsoft.com/library/jj902470.aspx) cmdlet

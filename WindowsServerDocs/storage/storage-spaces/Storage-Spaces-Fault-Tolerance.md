@@ -6,11 +6,13 @@ ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 01/11/2017
+ms.date: 10/11/2017
 ms.assetid: 5e1d7ecc-e22e-467f-8142-bad6d82fc5d0
 description: A discussion of resiliency options in Storage Spaces Direct including mirroring and parity.
+ms.localizationpriority: medium
 ---
 # Fault tolerance and storage efficiency in Storage Spaces Direct
+
 >Applies To: Windows Server 2016
 
 This topic introduces the resiliency options available in [Storage Spaces Direct](storage-spaces-direct-overview.md) and outlines the scale requirements, storage efficiency, and general advantages and tradeoffs of each. It also presents some usage instructions to get you started, and references some great papers, blogs, and additional content where you can learn more.
@@ -40,7 +42,7 @@ Two-way mirroring writes two copies of everything. Its storage efficiency is 50%
 
 ### Three-way mirror
 
-Three-way mirroring writes three copies of everything. Its storage efficiency is 33.3% – to write 1 TB of data, you need at least 3 TB of physical storage capacity. Likewise, you need at least three hardware fault domains – with Storage Spaces Direct, that means three servers. 
+Three-way mirroring writes three copies of everything. Its storage efficiency is 33.3% – to write 1 TB of data, you need at least 3 TB of physical storage capacity. Likewise, you need at least three hardware fault domains – with Storage Spaces Direct, that means three servers.
 
 Three-way mirroring can safely tolerate at least [two hardware problems (drive or server) at a time](#examples). For example, if you're rebooting one server when suddenly another drive or server fails, all data remains safe and continuously accessible.
 
@@ -51,6 +53,9 @@ Three-way mirroring can safely tolerate at least [two hardware problems (drive o
 Parity encoding, often called 'erasure coding', provides fault tolerance using bitwise arithmetic, which can get [remarkably complicated](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/LRC12-cheng20webpage.pdf). The way this works is less obvious than mirroring, and there are many great online resources (for example, this third-party [Dummies Guide to Erasure Coding](http://smahesh.com/blog/2012/07/01/dummies-guide-to-erasure-coding/)) that can help you get the idea. Sufficed to say it provides better storage efficiency without compromising fault tolerance.
 
 In Windows Server 2016, Storage Spaces offers two flavors of parity – 'single' parity and 'dual' parity, the latter employing an advanced technique called 'local reconstruction codes' at larger scales.
+
+> [!IMPORTANT]
+> We recommend using mirroring for most performance-sensitive workloads. To learn more about how to balance performance and capacity depending on your workload, see [Plan volumes](plan-volumes.md#choosing-the-resiliency-type).
 
 ### Single parity
 Single parity keeps only one bitwise parity symbol, which provides fault tolerance against only one failure at a time. It most closely resembles RAID-5. To use single parity, you need at least three hardware fault domains – with Storage Spaces Direct, that means three servers. Because three-way mirroring provides more fault tolerance at the same scale, we discourage using single parity. But, it's there if you insist on using it, and it is fully supported.
@@ -78,7 +83,7 @@ With hard disk drives (HDD) the group size is four symbols; with solid-state dri
 
 ![local-reconstruction-codes](media/Storage-Spaces-Fault-Tolerance/local-reconstruction-codes-180px.png)
 
-We recommend this in-depth yet eminently readable walkthrough of [how local reconstruction codes handle various failure scenarios, and why they're appealing](https://blogs.technet.microsoft.com/filecab/2016/09/06/volume-resiliency-and-efficiency-in-storage-spaces-direct/), by our very own [Claus Joergensen](https://twitter.com/clausjor).
+We recommend this in-depth yet eminently readable walk-through of [how local reconstruction codes handle various failure scenarios, and why they're appealing](https://blogs.technet.microsoft.com/filecab/2016/09/06/volume-resiliency-and-efficiency-in-storage-spaces-direct/), by our very own [Claus Joergensen](https://twitter.com/clausjor).
 
 ## Mirror-accelerated parity
 
@@ -87,6 +92,9 @@ Beginning in Windows Server 2016, a Storage Spaces Direct volume can be part mir
 To mix three-way mirror and dual parity, you need at least four fault domains, meaning four servers.
 
 The storage efficiency of mirror-accelerated parity is in between what you'd get from using all mirror or all parity, and depends on the proportions you choose. For example, the demo at the 37-minute mark of this presentation shows [various mixes achieving 46%, 54%, and 65% efficiency](https://www.youtube.com/watch?v=-LK2ViRGbWs&t=36m55s) with 12 servers.
+
+> [!IMPORTANT]
+> We recommend using mirroring for most performance-sensitive workloads. To learn more about how to balance performance and capacity depending on your workload, see [Plan volumes](plan-volumes.md#choosing-the-resiliency-type).
 
 ## <a name="summary"></a>Summary
 
@@ -187,7 +195,7 @@ These six examples show what three-way mirroring and/or dual parity **can** tole
 Over its lifetime, Storage Spaces can tolerate any number of failures, because it restores to full resiliency after each one, given sufficient time. However, at most two fault domains can safely be affected by failures at any given moment. The following are therefore examples of what three-way mirroring and/or dual parity **cannot** tolerate.
 
 - **7.** Drives lost in three or more servers at once
-- **8.**	Three or more servers lost at once
+- **8.** Three or more servers lost at once
 
 ![fault-tolerance-examples-7-and-8](media/Storage-Spaces-Fault-Tolerance/Fault-Tolerance-Example-78.png)
 

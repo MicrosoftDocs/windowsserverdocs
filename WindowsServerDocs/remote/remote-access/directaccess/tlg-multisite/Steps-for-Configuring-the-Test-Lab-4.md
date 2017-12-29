@@ -16,13 +16,13 @@ author: jamesmci
 ---
 # Steps for Configuring the Test Lab
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 The following steps describe how to configure the Remote Access infrastructure, configure the Remote Access servers and clients and test DirectAccess connectivity from the Internet and Homenet subnets.  
   
 In this test lab guide you will build a multisite Remote Access deployment by performing the following steps:  
   
--   [STEP 1: Complete the Base Configuration](assetId:///9eb4a9ba-9118-4ea3-8963-e643ec81c3ed). Complete all the steps in the [Test Lab Guide: Demonstrate DirectAccess Single Server Setup with Mixed IPv4 and IPv6](http://go.microsoft.com/fwlink/p/?LinkId=237004).  
+-   [STEP 1: Complete the Base Configuration](assetId:///9eb4a9ba-9118-4ea3-8963-e643ec81c3ed). Complete all the steps in the [Test Lab Guide: Demonstrate DirectAccess Single Server Setup with Mixed IPv4 and IPv6](https://go.microsoft.com/fwlink/p/?LinkId=237004).  
   
 -   [STEP 2: Install and configure ROUTER1](assetId:///e4b1a298-d5b0-410e-970b-c5358a9378f9). ROUTER1 provides routing and forwarding functionality between the Corpnet and 2-Corpnet subnets.  
   

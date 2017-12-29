@@ -12,11 +12,11 @@ ms.assetid: 067c45f3-e4e8-4450-b8b6-836994f6adfe vhorne
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 # ftp: delete
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 deletes files on remote computers.   
 ## Syntax  

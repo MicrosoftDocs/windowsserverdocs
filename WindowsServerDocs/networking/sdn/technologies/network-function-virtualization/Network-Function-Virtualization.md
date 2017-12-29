@@ -15,7 +15,7 @@ author: jamesmci
 ---
 # Network Function Virtualization
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use this topic to learn about Network Function Virtualization, which allows you to deploy virtual networking appliances such as Datacenter Firewall, multitenant RAS Gateway, and Software Load Balancing \(SLB\) multiplexer \(MUX\).
   
@@ -101,7 +101,7 @@ The following virtual appliances are provided with Windows Server 2016:
   
 **Software load balancer**  
   
-A layer-4 load balancer operating at datacenter scale. This is a similar version of Azure's load balancer that has been deployed at scale in the Azure environment. For more information about the Microsoft Software Load Balancer, see [Software Load Balancing (SLB) for SDN](https://technet.microsoft.com/library/mt632286.aspx). For more information about Microsoft Azure Load Balancing Services, see [Microsoft Azure Load Balancing Services](http://azure.microsoft.com/blog/2014/04/08/microsoft-azure-load-balancing-services/).  
+A layer-4 load balancer operating at datacenter scale. This is a similar version of Azure's load balancer that has been deployed at scale in the Azure environment. For more information about the Microsoft Software Load Balancer, see [Software Load Balancing (SLB) for SDN](https://technet.microsoft.com/library/mt632286.aspx). For more information about Microsoft Azure Load Balancing Services, see [Microsoft Azure Load Balancing Services](https://azure.microsoft.com/blog/2014/04/08/microsoft-azure-load-balancing-services/).  
   
 **Gateway**. RAS Gateway provides all combinations of the following gateway functions.  
   

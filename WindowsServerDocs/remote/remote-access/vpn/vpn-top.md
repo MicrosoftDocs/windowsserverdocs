@@ -12,7 +12,7 @@ author: jamesmci
 
 # Virtual Private Networking \(VPN\)
 
->Applies To: Windows Server 2016, Windows 10
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows 10
 
 You can use this topic to learn about Windows Server 2016 and Windows 10 VPN features and functionality.
 
@@ -20,6 +20,7 @@ You can use this topic to learn about Windows Server 2016 and Windows 10 VPN fea
 >In addition to this topic, the following VPN documentation is available.
 >
 >- [Always On VPN and DirectAccess Features Comparison](vpn-map-da.md)
+>- [Configure VPN Device Tunnels in Windows 10](vpn-device-tunnel-config.md)
 >- [Remote Access Always On VPN Deployment Guide for Windows Server 2016 and Windows 10](always-on-vpn/deploy/always-on-vpn-deploy.md)
 >- Windows 10 [VPN technical guide](https://docs.microsoft.com/windows/access-protection/vpn/vpn-guide)
 

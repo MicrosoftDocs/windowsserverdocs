@@ -12,7 +12,7 @@ ms.date: 10/14/2016
 
 # Shielded VMs - Generate an answer file by using the New-ShieldingDataAnswerFile function
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 As part of the process of configuring shielded VMs, you may need to create a virtual machine (VM) specialization answer file, `unattend.xml`. The **New-ShieldingDataAnswerFile** Windows PowerShell function helps you do this. You can then use the answer file when you're creating shielded VMs from a template by using System Center Virtual Machine Manager (or any other fabric controller).
 

@@ -12,12 +12,12 @@ ms.assetid: c85aa1c7-3485-4839-a292-99dfcd6db252
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 10/16/2017
 ---
 
 # manage-bde: changepin
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Modifies the PIN for an operating system drive. The user is prompted to enter a new PIN. For examples of how this command can be used, see [Examples](#BKMK_Examples).
 

@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # DirectAccess Offline Domain Join
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This guide explains the steps to perform an offline domain join with DirectAccess. During an offline domain join, a computer is configured to join a domain without physical or VPN connection.  
   
@@ -71,7 +71,7 @@ The following procedures show how to grant the user rights with Group Policy and
 #### Granting user rights to join workstations to the domain  
 You can use the Group Policy Management Console (GPMC) to modify the domain policy or create a new policy that has settings that grant the user rights to add workstations to a domain.  
   
-Membership in **Domain Admins**, or equivalent, is the minimum required to grant user rights.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](http://go.microsoft.com/fwlink/?LinkId=83477) (http://go.microsoft.com/fwlink/?LinkId=83477).   
+Membership in **Domain Admins**, or equivalent, is the minimum required to grant user rights.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](https://go.microsoft.com/fwlink/?LinkId=83477) (https://go.microsoft.com/fwlink/?LinkId=83477).   
   
 ###### To grant rights to join workstations to a domain  
   
@@ -90,7 +90,7 @@ Membership in **Domain Admins**, or equivalent, is the minimum required to grant
 ## <a name="BKMK_ODKSxS"></a>Offline domain join process  
 Run Djoin.exe at an elevated command prompt to provision the computer account metadata. When you run the provisioning command, the computer account metadata is created in a binary file that you specify as part of the command.  
   
-For more information about the NetProvisionComputerAccount function that is used to provision the computer account during an offline domain join, see [NetProvisionComputerAccount Function](http://go.microsoft.com/fwlink/?LinkId=162426) (http://go.microsoft.com/fwlink/?LinkId=162426). For more information about the NetRequestOfflineDomainJoin function that runs locally on the destination computer, see [NetRequestOfflineDomainJoin Function](http://go.microsoft.com/fwlink/?LinkId=162427) (http://go.microsoft.com/fwlink/?LinkId=162427).  
+For more information about the NetProvisionComputerAccount function that is used to provision the computer account during an offline domain join, see [NetProvisionComputerAccount Function](https://go.microsoft.com/fwlink/?LinkId=162426) (https://go.microsoft.com/fwlink/?LinkId=162426). For more information about the NetRequestOfflineDomainJoin function that runs locally on the destination computer, see [NetRequestOfflineDomainJoin Function](https://go.microsoft.com/fwlink/?LinkId=162427) (https://go.microsoft.com/fwlink/?LinkId=162427).  
   
 ## <a name="BKMK_ODJSteps"></a>Steps for performing a DirectAccess offline domain join  
 The offline domain join process includes the following steps:  
@@ -154,8 +154,8 @@ Complete the following steps to perform the offline domain join:
 3.  Reboot the client computer. The computer will be joined to the domain. Following the reboot, the client will be joined to the domain and have connectivity to the corporate network with DirectAccess.  
   
 ## See Also  
-[NetProvisionComputerAccount Function](http://go.microsoft.com/fwlink/?LinkId=162426)  
-[NetRequestOfflineDomainJoin Function](http://go.microsoft.com/fwlink/?LinkId=162427)  
+[NetProvisionComputerAccount Function](https://go.microsoft.com/fwlink/?LinkId=162426)  
+[NetRequestOfflineDomainJoin Function](https://go.microsoft.com/fwlink/?LinkId=162427)  
   
 
 

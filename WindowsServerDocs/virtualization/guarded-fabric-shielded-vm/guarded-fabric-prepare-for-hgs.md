@@ -12,7 +12,7 @@ ms.date: 04/24/2017
 
 # Review prerequisites for the Host Guardian Service
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 >[!div class="step-by-step"]
 [« Deploy HGS](guarded-fabric-setting-up-the-host-guardian-service-hgs.md)
@@ -35,7 +35,7 @@ This topic covers HGS prerequisites and initial steps to prepare for the HGS dep
 ## Supported upgrade scenarios
 
 Before you deploy a guarded fabric, make sure the servers have installed the [latest Cumulative Update](https://support.microsoft.com/help/4000825/windows-10-and-windows-server-2016-update-history). 
-If you deployed a guarded fabric before the release of the [October 27, 2016 Cumulative Update](http://support.microsoft.com/kb/3197954), the servers need to be upgraded:
+If you deployed a guarded fabric before the release of the [October 27, 2016 Cumulative Update](https://support.microsoft.com/kb/3197954), the servers need to be upgraded:
 - Guarded hosts can be upgraded in-place by installing the latest Cumulative Update.
 - HGS servers need to be rebuilt, including configuring certificates and information about the hosts. 
 

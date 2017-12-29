@@ -1,6 +1,5 @@
 {
   "redirections": [
-
     {
       "source_path": "WindowsServerDocs/identity/ad-ds/Windows-Server-2016-Functional-Levels.md",
       "redirect_url": "/windows-server/identity/ad-ds/active-directory-functional-levels",
@@ -177,7 +176,7 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "WindowsServerDocs/virtualization/hyper-v/plan/Plan-for-Hyper-V-networking-in-Windows-Server-2016.mdv",
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/plan/Plan-for-Hyper-V-networking-in-Windows-Server-2016.md",
       "redirect_url": "/windows-server/virtualization/hyper-v/plan/plan-hyper-v-networking-in-windows-server",
       "redirect_document_id": false
     },	
@@ -8020,6 +8019,56 @@
       "source_path": "WindowsServerDocs/administration/get-started-with-smt.md",
       "redirect_url": "https://blogs.technet.microsoft.com/servermanagement/2017/05/17/smt-preview-service-is-being-retired-on-june-30-2017/",
       "redirect_document_id": true
-    }
+    },
+        {
+          "source_path": "WindowsServerDocs/get-started/what-s-new-in-windows-server-2016.md",
+          "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2016",
+          "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/honolulu/deployment-guide.md",
+      "redirect_url": "/windows-server/manage/honolulu/deployment-guide",
+      "redirect_document_id": true
+},
+{
+  "source_path": "WindowsServerDocs/administration/honolulu/honolulu.md",
+  "redirect_url": "/windows-server/manage/honolulu/honolulu",
+  "redirect_document_id": true
+},
+{
+  "source_path": "WindowsServerDocs/administration/honolulu/honolulu-and-asr.md",
+  "redirect_url": "/windows-server/manage/honolulu/honolulu-and-asr",
+  "redirect_document_id": true
+},
+{
+  "source_path": "WindowsServerDocs/administration/honolulu/honolulu-faq.md",
+  "redirect_url": "/windows-server/manage/honolulu/honolulu-faq",
+  "redirect_document_id": true
+},
+{
+  "source_path": "WindowsServerDocs/administration/honolulu/honolulu-known-issues.md",
+  "redirect_url": "/windows-server/manage/honolulu/honolulu-known-issues",
+  "redirect_document_id": true
+},
+{
+  "source_path": "WindowsServerDocs/administration/honolulu/honolulu-manage.md",
+  "redirect_url": "/windows-server/manage/honolulu/honolulu-manage",
+  "redirect_document_id": true
+},
+{
+  "source_path": "WindowsServerDocs/administration/honolulu/honolulu-manage-hci.md",
+  "redirect_url": "/windows-server/manage/honolulu/honolulu-manage-hci",
+  "redirect_document_id": true
+},
+{
+  "source_path": "WindowsServerDocs/administration/honolulu/honolulu-standalone-hyper-v.md",
+  "redirect_url": "/windows-server/manage/honolulu/honolulu-standalone-hyper-v",
+  "redirect_document_id": true
+},
+{
+  "source_path": "WindowsServerDocs/administration/honolulu/honolulu-troubleshoot.md",
+  "redirect_url": "/windows-server/manage/honolulu/honolulu-troubleshoot",
+  "redirect_document_id": true
+}
   ]
 }
