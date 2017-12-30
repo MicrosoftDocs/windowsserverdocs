@@ -101,7 +101,7 @@ The following sections describe the health states a physical disk can be in.
 
 ### Disk health state: Warning
 
-A physical disk in the Warning state can read and write data successfully, but has an issue.
+A physical disk in the Warning state can read and write data successfully but has an issue.
 
 |Operational state    |Description|
 |---------            |---------          |
