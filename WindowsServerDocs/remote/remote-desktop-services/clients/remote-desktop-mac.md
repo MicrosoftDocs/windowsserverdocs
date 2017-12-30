@@ -1,4 +1,4 @@
-9---
+---
 title: Get started with Remote Desktop on Mac
 description: Learn how to set up the Remote Desktop client for Mac
 ms.custom: na
