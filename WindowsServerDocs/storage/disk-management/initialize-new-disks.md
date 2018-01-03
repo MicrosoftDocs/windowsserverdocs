@@ -1,7 +1,7 @@
 ---
 title: Initialize new disks
 description: How to initialize new disks with Disk Management, getting them ready to use. Also includes links to troubleshooting issues.
-ms.date: 12/22/2017
+ms.date: 12/29/2017
 ms.prod: windows-server-threshold 
 ms.technology: storage 
 ms.topic: article 
@@ -20,6 +20,8 @@ If you add a brand new disk to your PC, you might need to initialize it before u
 
 ## To initialize new disks
 
+Here's how to initialize a new disk using Disk Management. If you prefer using PowerShell, use the [initialize-disk](https://docs.microsoft.com/powershell/module/storage/initialize-disk) cmdlet instead.
+
 1. In Disk Management, right-click the disk you want to initialize, and then click **Initialize Disk** (shown here). If the disk is listed as *Offline*, first right-click it and select **Online**.
 
     ![](media\uninitialized-disk.PNG)
@@ -35,7 +37,7 @@ As fascinating as this probably isn't, the bottom line is that these days, you d
 
 Most PCs use the GUID Partition Table (GPT) disk type for hard drives and SSDs. GPT is more robust and allows for volumes bigger than 2 TB. The older Master Boot Record (MBR) disk type is used by 32-bit PCs, older PCs, and removable drives such as memory cards.
 
-If you decide that you want to convert a disk from MBR to GPT or vice versa, you can, just know that you have to delete all volumes from the disk first, which erases everything on the disk. For more info, see [Convert an MBR disk into a GPT disk](change-an-mbr-disk-into-a-gpt-disk.md), or [Convert a GPT disk into an MBR disk](change-a-gpt-disk-into-an-mbr-disk.md).
+To convert a disk from MBR to GPT or vice versa, you first have to delete all volumes from the disk, erasing everything on the disk. For more info, see [Convert an MBR disk into a GPT disk](change-an-mbr-disk-into-a-gpt-disk.md), or [Convert a GPT disk into an MBR disk](change-a-gpt-disk-into-an-mbr-disk.md).
 
 ## Additional considerations
 
