@@ -87,6 +87,8 @@
 #### [Create a VHD set](hyper-v/manage/Create-VHDSet-file.md)
 #### [Enable or disable checkpoints](hyper-v/manage/Enable-or-disable-checkpoints-in-Hyper-V.md)
 #### [Manage hosts with Hyper-V Manager](hyper-v/manage/Remotely-manage-Hyper-V-hosts.md)
+#### [Manage host CPU resource controls](hyper-v/manage/manage-hyper-v-minroot-2016.md.md)
+#### [Using VM CPU Groups](hyper-v/manage/manage-hyper-v-cpugroups.md.md)
 #### [Manage Integration Services](hyper-v/manage/Manage-Hyper-V-integration-services.md)
 #### [Manage Windows VMs with PowerShell Direct](hyper-v/manage/Manage-Windows-virtual-machines-with-powershell-direct.md)
 #### [Set up Hyper-V Replica](hyper-v/manage/Set-up-Hyper-V-Replica.md) 
