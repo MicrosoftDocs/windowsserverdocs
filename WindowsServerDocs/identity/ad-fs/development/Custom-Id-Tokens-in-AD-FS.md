@@ -4,7 +4,7 @@ description: A technical overview of the custom id token conecpts in AD FS 2016
 author: anandyadavmsft
 ms.author: billmath
 manager: femila
-ms.date: 01/03/2018
+ms.date: 01/04/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.reviewer: anandy
@@ -103,7 +103,7 @@ For example, in a .NET MVC sample app, open one of the controller files and ente
 
 ```
 
->[NOTE!]
+>[!NOTE]
 >Please be aware that the resource parameter is required in the Oauth2 request.
 >
 >Bad example:
