@@ -45,17 +45,19 @@ forfiles [/p <Path>] [/m <SearchMask>] [/s] [/c "<Command>"] [/d [{+|-}][{<Date>
 -   **Forfiles** is most commonly used in batch files.
 -   **Forfiles /s** is similar to **dir /s.**
 -   You can use the following variables in the command string as specified by the **/c** command-line option.  
-    |Variable|Description|
-    |--------|-----------|
-    |@FILE|File name.|
-    |@FNAME|File name without extension.|
-    |@EXT|File name extension.|
-    |@PATH|Full path of the file.|
-    |@RELPATH|Relative path of the file.|
-    |@ISDIR|Evaluates to TRUE if a file type is a directory. Otherwise, this variable evaluates to FALSE.|
-    |@FSIZE|File size, in bytes.|
-    |@FDATE|Last modified date stamp on the file.|
-    |@FTIME|Last modified time stamp on the file.|
+
+|Variable|Description|
+|--------|-----------|
+|@FILE|File name.|
+|@FNAME|File name without extension.|
+|@EXT|File name extension.|
+|@PATH|Full path of the file.|
+|@RELPATH|Relative path of the file.|
+|@ISDIR|Evaluates to TRUE if a file type is a directory. Otherwise, this variable evaluates to FALSE.|
+|@FSIZE|File size, in bytes.|
+|@FDATE|Last modified date stamp on the file.|
+|@FTIME|Last modified time stamp on the file.|
+
 -   With **forfiles**, you can run a command on or pass arguments to multiple files. For example, you could run the **type** command on all files in a tree with the .txt file name extension. Or you could execute every batch file (*.bat) on drive C, with the file name "Myinput.txt" as the first argument.
 -   With **forfiles**, you can do any of the following:  
     -   Select files by an absolute date or a relative date by using the **/d** parameter.
