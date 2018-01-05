@@ -41,7 +41,7 @@ This document contains a list of all of the documentation operations for AD FS f
 - [Create a Claims Provider Trust](../ad-fs/operations/Create-a-Claims-Provider-Trust.md) 
 - [Create a Non-Claims Aware Relying Party Trust](../ad-fs/operations/Create-a-Non-Claims-Aware-Relying-Party-Trust.md)
 - [Create a Relying Party Trust](../ad-fs/operations/Create-a-Relying-Party-Trust.md)
-- [Device Authentication Contorls in AD FS](../ad-fs/operations/device-authentication-controls-in-AD-FS.md) 
+- [Device Authentication Controls in AD FS](../ad-fs/operations/device-authentication-controls-in-AD-FS.md) 
 - [Improved interoperability with SAML 2.0](../ad-fs/operations/Improved-interoperability-with-SAML-2.0.md)
 - [Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications](../ad-fs/operations/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md)
 - [Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](../ad-fs/operations/Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
