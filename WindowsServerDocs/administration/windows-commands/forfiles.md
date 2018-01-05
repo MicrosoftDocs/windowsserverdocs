@@ -29,6 +29,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 forfiles [/p <Path>] [/m <SearchMask>] [/s] [/c "<Command>"] [/d [{+|-}][{<Date>|<Days>}]]
 ```
 
+
 ## Parameters
 
 |Parameter|Description|
@@ -37,7 +38,7 @@ forfiles [/p <Path>] [/m <SearchMask>] [/s] [/c "<Command>"] [/d [{+|-}][{<Date>
 |/m \<SearchMask>|Searches files according to the specified search mask. The default search mask is **\*.\***.|
 |/s|Instructs the **forfiles** command to search into subdirectories recursively.|
 |/c "\<Command>"|Runs the specified command on each file. Command strings should be enclosed in quotation marks. The default command is **"cmd /c echo @file"**.|
-|<span style="white-space:nowrap;">/d [{+\|-}][{\<Date>\|\<Days>}]</span>|Selects files with a last modified date within the specified time frame.</br>-   Selects files with a last modified date later than or equal to (**+**) or earlier than or equal to (**-**) the specified date, where *Date* is in the format MM/DD/YYYY.</br>-   Selects files with a last modified date later than or equal to (**+**) the current date plus the number of days specified, or earlier than or equal to (**-**) the current date minus the number of days specified.</br>-   Valid values for *Days* include any number in the range 0–32,768. If no sign is specified, **+** is used by default.|
+|/d&nbsp;[{+\|-}]&#8288;[{\<Date>\|&#8288;\<Days>}]|Selects files with a last modified date within the specified time frame.</br>-   Selects files with a last modified date later than or equal to (**+**) or earlier than or equal to (**-**) the specified date, where *Date* is in the format MM/DD/YYYY.</br>-   Selects files with a last modified date later than or equal to (**+**) the current date plus the number of days specified, or earlier than or equal to (**-**) the current date minus the number of days specified.</br>-   Valid values for *Days* include any number in the range 0–32,768. If no sign is specified, **+** is used by default.|
 |/?|Displays help at the command prompt.|
 
 ## Remarks
