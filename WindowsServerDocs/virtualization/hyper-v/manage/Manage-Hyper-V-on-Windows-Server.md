@@ -19,6 +19,9 @@ ms.date: 10/03/2016
 Use the resources in this section to help you manage Hyper-V on Windows Server 2016.   
 - [Choose between standard or production checkpoints](Choose-between-standard-or-production-checkpoints-in-Hyper-V.md)  
 - [Enable or disable checkpoints](Enable-or-disable-checkpoints-in-Hyper-V.md)  
+- [Manage hosts with Hyper-V Manager](hyper-v/manage/Remotely-manage-Hyper-V-hosts.md)
+- [Manage host CPU resource controls](manage-hyper-v-minroot-2016.md)
+- [Using VM CPU Groups](manage-hyper-v-cpugroups.md)
 - [Manage Windows virtual machines with PowerShell Direct](Manage-Windows-virtual-machines-with-PowerShell-Direct.md)  
 - [Set up Hyper-V Replica](Set-up-Hyper-V-Replica.md)
 - [Use live migration without Failover Clustering to move a virtual machine](Use-live-migration-without-Failover-Clustering-to-move-a-virtual-machine.md)
