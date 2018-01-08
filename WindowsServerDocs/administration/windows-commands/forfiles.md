@@ -29,6 +29,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 forfiles [/p <Path>] [/m <SearchMask>] [/s] [/c "<Command>"] [/d [{+|-}][{<Date>|<Days>}]]
 ```
 
+
 ## Parameters
 
 |Parameter|Description|
@@ -37,7 +38,7 @@ forfiles [/p <Path>] [/m <SearchMask>] [/s] [/c "<Command>"] [/d [{+|-}][{<Date>
 |/m \<SearchMask>|Searches files according to the specified search mask. The default search mask is **\*.\***.|
 |/s|Instructs the **forfiles** command to search into subdirectories recursively.|
 |/c "\<Command>"|Runs the specified command on each file. Command strings should be enclosed in quotation marks. The default command is **"cmd /c echo @file"**.|
-|/d [{+|-}][{\<Date>|<Days>}]|Selects files with a last modified date within the specified time frame.</br>-   Selects files with a last modified date later than or equal to (**+**) or earlier than or equal to (**-**) the specified date, where *Date* is in the format MM/DD/YYYY.</br>-   Selects files with a last modified date later than or equal to (**+**) the current date plus the number of days specified, or earlier than or equal to (**-**) the current date minus the number of days specified.</br>-   Valid values for *Days* include any number in the range 0–32,768. If no sign is specified, **+** is used by default.|
+|/d&nbsp;[{+\|-}]&#8288;[{\<Date>\|&#8288;\<Days>}]|Selects files with a last modified date within the specified time frame.</br>-   Selects files with a last modified date later than or equal to (**+**) or earlier than or equal to (**-**) the specified date, where *Date* is in the format MM/DD/YYYY.</br>-   Selects files with a last modified date later than or equal to (**+**) the current date plus the number of days specified, or earlier than or equal to (**-**) the current date minus the number of days specified.</br>-   Valid values for *Days* include any number in the range 0–32,768. If no sign is specified, **+** is used by default.|
 |/?|Displays help at the command prompt.|
 
 ## Remarks
@@ -45,17 +46,19 @@ forfiles [/p <Path>] [/m <SearchMask>] [/s] [/c "<Command>"] [/d [{+|-}][{<Date>
 -   **Forfiles** is most commonly used in batch files.
 -   **Forfiles /s** is similar to **dir /s.**
 -   You can use the following variables in the command string as specified by the **/c** command-line option.  
-    |Variable|Description|
-    |--------|-----------|
-    |@FILE|File name.|
-    |@FNAME|File name without extension.|
-    |@EXT|File name extension.|
-    |@PATH|Full path of the file.|
-    |@RELPATH|Relative path of the file.|
-    |@ISDIR|Evaluates to TRUE if a file type is a directory. Otherwise, this variable evaluates to FALSE.|
-    |@FSIZE|File size, in bytes.|
-    |@FDATE|Last modified date stamp on the file.|
-    |@FTIME|Last modified time stamp on the file.|
+
+|Variable|Description|
+|--------|-----------|
+|@FILE|File name.|
+|@FNAME|File name without extension.|
+|@EXT|File name extension.|
+|@PATH|Full path of the file.|
+|@RELPATH|Relative path of the file.|
+|@ISDIR|Evaluates to TRUE if a file type is a directory. Otherwise, this variable evaluates to FALSE.|
+|@FSIZE|File size, in bytes.|
+|@FDATE|Last modified date stamp on the file.|
+|@FTIME|Last modified time stamp on the file.|
+
 -   With **forfiles**, you can run a command on or pass arguments to multiple files. For example, you could run the **type** command on all files in a tree with the .txt file name extension. Or you could execute every batch file (*.bat) on drive C, with the file name "Myinput.txt" as the first argument.
 -   With **forfiles**, you can do any of the following:  
     -   Select files by an absolute date or a relative date by using the **/d** parameter.
