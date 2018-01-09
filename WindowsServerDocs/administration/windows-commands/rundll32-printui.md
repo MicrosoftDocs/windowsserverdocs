@@ -1,5 +1,5 @@
 ---
-title: rundll32 printui.dll,printUIEntry
+title: rundll32 printui.dll,PrintUIEntry
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,24 +14,24 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ---
-# rundll32 printui.dll,printUIEntry
+# rundll32 printui.dll,PrintUIEntry
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Automates many printer configuration tasks. printui.dll is the executable file that contains the functions used by the printer configuration dialog boxes. These functions can also be called from within a script or a command-line batch file, or they can be run interactively from the command prompt. For examples of how this command can be used, see [Examples](#BKMK_Examples).  
 ## Syntax  
 ```  
-rundll32 printui.dll printUIEntry [BaseParameter] [ModificationParameter1] [ModificationParameter2] [ModificationParameterN]  
+rundll32 printui.dll PrintUIEntry [BaseParameter] [ModificationParameter1] [ModificationParameter2] [ModificationParameterN]  
 ```  
 You can also use the following alternate syntaxes, although the examples in this topic use the previous syntax:  
 ```  
-rundll32 printui.dll,printUIEntry [BaseParameter] [ModificationParameter1] [ModificationParameter2] [ModificationParameterN]  
+rundll32 printui.dll,PrintUIEntry [BaseParameter] [ModificationParameter1] [ModificationParameter2] [ModificationParameterN]  
 ```  
 ```  
-rundll32 printui printUIEntry [BaseParameter] [ModificationParameter1] [ModificationParameter2] [ModificationParameterN]  
+rundll32 printui PrintUIEntry [BaseParameter] [ModificationParameter1] [ModificationParameter2] [ModificationParameterN]  
 ```  
 ```  
-rundll32 printui,printUIEntry [BaseParameter] [ModificationParameter1] [ModificationParameter2] [ModificationParameterN]  
+rundll32 printui,PrintUIEntry [BaseParameter] [ModificationParameter1] [ModificationParameter2] [ModificationParameterN]  
 ```  
 ## Parameters  
 There are two types of parameters: base parameters and modification parameters. Base parameters specify the function that the command is to perform. Only one of these parameters can appear in a given command line. Then, you can modify the base parameter by using one or more of the modification parameters if they are applicable to the base parameter (not all modification parameters are supported by all base parameters).  
@@ -89,36 +89,36 @@ There are two types of parameters: base parameters and modification parameters. 
 |/W[flags]|Specifies any parameters or options for the add printer wizard, the add printer Driver Wizard, and the Network printer Installation Wizard.<br /><br />**r**: Enables the wizards to be restarted from the last page.|  
 |/G[flags]|Specifies global parameters and options that you want to use.<br /><br />**w**: Suppresses setup driver warnings to the user.|  
 ## remarks  
--   The **printUIEntry** keyword is case sensitive, and you must enter the syntax for this command with the exact capitalization shown in the examples in this topic.  
--   See [Examples](#BKMK_Examples) in this document for the syntax for some common tasks. For more examples, at a command prompt type: **rundll32 printui.dll,printUIEntry /?**  
+-   The **PrintUIEntry** keyword is case sensitive, and you must enter the syntax for this command with the exact capitalization shown in the examples in this topic.  
+-   See [Examples](#BKMK_Examples) in this document for the syntax for some common tasks. For more examples, at a command prompt type: **rundll32 printui.dll,PrintUIEntry /?**  
 ## <a name="BKMK_Examples"></a>Examples  
 To add a new remote printer, printer1, for a computer, Client1, which is visible for the user account where this command is run, type:  
 ```  
-rundll32 printui.dll printUIEntry /in /n\\client1\printer1  
+rundll32 printui.dll PrintUIEntry /in /n\\client1\printer1  
 ```  
 To add a printer using the add printer wizard and using an .inf file, InfFile.inf, located on drive c: at Infpath, type:  
 ```  
-rundll32 printui.dll printUIEntry /ii /f c:\Infpath\InfFile.inf  
+rundll32 printui.dll PrintUIEntry /ii /f c:\Infpath\InfFile.inf  
 ```  
 To delete an existing printer, printer1, on a computer, Client1, type:  
 ```  
-rundll32 printui.dll printUIEntry /dn /n\\client1\printer1  
+rundll32 printui.dll PrintUIEntry /dn /n\\client1\printer1  
 ```  
 To add a per computer printer connection, printer2, for all users of a computer, Client2, type (the connection will be applied when a user logs on):  
 ```  
-rundll32 printui.dll printUIEntry /ga /n\\client2\printer2  
+rundll32 printui.dll PrintUIEntry /ga /n\\client2\printer2  
 ```  
 To delete a per computer printer connection, printer2, for all users of a computer, Client2, type (the connection will be deleted when a user logs on):  
 ```  
-rundll32 printui.dll printUIEntry /gd /n\\client2\printer2  
+rundll32 printui.dll PrintUIEntry /gd /n\\client2\printer2  
 ```  
 To view the properties of the print server, printServer1, type:  
 ```  
-rundll32 printui.dll printUIEntry /s /t1 /c\\printserver1  
+rundll32 printui.dll PrintUIEntry /s /t1 /c\\printserver1  
 ```  
 To view the properties of a printer, printer3, type:  
 ```  
-rundll32 printui.dll printUIEntry /p /n\\printer3  
+rundll32 printui.dll PrintUIEntry /p /n\\printer3  
 ```  
 ## additional references  
 -   [Command-Line Reference_1](command-line-reference_1.md)  
