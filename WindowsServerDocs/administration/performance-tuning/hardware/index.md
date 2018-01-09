@@ -6,7 +6,7 @@ ms.technology: performance-tuning-guide
 ms.topic: landing-page
 ms.author: phstee
 author: phstee
-ms.date: 10/16/2017
+ms.date: 01/08/2018
 ---
 
 # Server Hardware Performance Considerations
@@ -23,7 +23,7 @@ Multiple cores are not expected to provide a perfect linear scaling, and the sca
 
 
 >[!Important]
-Match and scale the memory and I/O subsystem with the CPU performance, and vice versa.
+> Match and scale the memory and I/O subsystem with the CPU performance, and vice versa.
 
 Do not compare CPU frequencies across manufacturers and generations of processors because the comparison can be a misleading indicator of speed.
 
@@ -35,7 +35,8 @@ Choose large L2 or L3 processor caches. On newer architectures, such as Haswell 
 
 ## Memory (RAM) and Paging Storage Recommendations
 
->[!Note] Some systems may exhibit reduced storage performance when running a new install of Windows Server 2016 versus Windows Server 2012 R2. A number of changes were made during the development of Windows Server 2016 to improve security and reliability of the platform. Some of those changes, such as enabling Windows Defender by default, result in longer I/O paths that can reduce I/O performance in specific workloads and patterns. Microsoft does not recommend disabling Windows Defender as it is an important layer of protection for your systems. 
+>[!Note] 
+> Some systems may exhibit reduced storage performance when running a new install of Windows Server 2016 versus Windows Server 2012 R2. A number of changes were made during the development of Windows Server 2016 to improve security and reliability of the platform. Some of those changes, such as enabling Windows Defender by default, result in longer I/O paths that can reduce I/O performance in specific workloads and patterns. Microsoft does not recommend disabling Windows Defender as it is an important layer of protection for your systems. 
 
 Increase the RAM to match your memory needs.
 When your computer runs low on memory and it needs more immediately, Windows uses hard disk space to supplement system RAM through a procedure called paging. Too much paging degrades the overall system performance.
