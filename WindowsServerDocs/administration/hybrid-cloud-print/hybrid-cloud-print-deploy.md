@@ -1,6 +1,6 @@
 ---
-title: How to Setup Microsoft Hybrid Cloud Print Solution
-description: "How to Setup Microsoft Hybrid Cloud Print Solution"
+title: Deploy Windows Server Hybrid Cloud Print
+description: "How to set up Microsoft Hybrid Cloud Print"
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
@@ -14,35 +14,43 @@ manager: dongill
 ms.date: 1/5/2018
 ---
 
-# How to Setup Microsoft Hybrid Cloud Print Solution
+# Deploy Windows Server Hybrid Cloud Print
 
 >Applies To: Windows Server 2016
 
-This topic, for IT administrators, describes the end-to-end deployment of the Microsoft Hybrid Cloud Print solution. This solution layers on top of existing Windows Server(s) running as Print Server, and enables Azure Active Directory joined, and MDM managed devices, to discover and print to organization managed printers.
+This topic, for IT administrators, describes the end-to-end deployment of the Microsoft Hybrid Cloud Print solution. This solution layers on top of existing Windows Server(s) running as Print Server, and enables Azure Active Directory joined, and MDM managed, devices to discover and print to organization managed printers.
 
 ## Pre-requisites
 
-There are a number of subscriptions, services, and computers you'll need to aquire before starting this installation. They are as follows:
+There are a number of subscriptions, services, and computers you'll need to acquire before starting this installation. They are as follows:
 
 -   Azure AD premium subscription
-    See [Get started with an Azure subscription](https://azure.microsoft.com/en-us/trial/get-started-active-directory/), for a trial subscription to Azure. 
+    
+
+     See [Get started with an Azure subscription](https://azure.microsoft.com/en-us/trial/get-started-active-directory/), for a trial subscription to Azure. 
 
 -   MDM service, such as Intune
+    
     See [Microsoft Intune](https://www.microsoft.com/en-us/cloud-platform/microsoft-intune), for a trial subscription to Intune.
 
 -   Windows Server running as Active Directory
+
     See [Step-By-Step: Setting up Active Directory in Windows Server 2016](https://blogs.technet.microsoft.com/canitpro/2017/02/22/step-by-step-setting-up-active-directory-in-windows-server-2016/), for help setting up Active Directory.
 
 -   Domain joined Windows Server 2016 running as Print Server
+    
     See [Install roles, role services, and features by using the add Roles and Features Wizard](https://docs.microsoft.com/en-us/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features#BKMK_installarfw), for information on how to install roles and role services on Windows Server.
 
 -   Azure AD Connect
+    
     See [Custom installation of Azure AD Connect](https://docs.microsoft.com/en-us/azure/active-directory/connect/active-directory-aadconnect-get-started-custom), for help setting up Azure AD Connect.
 
 -   Azure Application Proxy Connector on a separate domain joined Windows Server machine
+    
     See [Get started with Application Proxy and install the connector](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-application-proxy-enable), for help setting up Azure Application Proxy Connector.
 
 -   Public facing domain name
+    
     You can use the domain name created for you by Azure, or purchase your own domain name.
 
 ## Deployment steps
@@ -57,8 +65,8 @@ This guide outlines five (5) installation steps:
 
 ### Step 1 - Install Azure AD Connect to sync between Azure AD and on-premises AD
 1. On the Windows Server Active Directory machine, download the Azure AD Connect software
-2. Launch the Azure AD Connect installation package and select "Use express settings"
-3. Enter the information requested in the installation process and click "Install"
+2. Launch the Azure AD Connect installation package and select **Use express settings**
+3. Enter the information requested in the installation process and click **Install**
 
 ### Step 2 - Install Hybrid Cloud Print package on the Print Server
 
@@ -87,36 +95,38 @@ This guide outlines five (5) installation steps:
 
 5.  Copy the SQLite dlls to the MopriaCloudService Webapp \<bin\> folder (**C:\\inetpub\\mcs\\bin**): <br>
     - The SQLite binaries should be at “\\Program Files\\PackageManagement\\NuGet\\Packages”
-        \\System.Data.SQLite.**Core**.x.x.x.x\\lib\\net46\\System.Data.SQLite.dll
-        --\> \<bin\>\\System.Data.SQLite.dll  
-        \\System.Data.SQLite.**Core**.x.x.x.x\\build\\net46\\x86\\SQLite.Interop.dll
-        --\> \<bin\>\\**x86**\\SQLite.Interop.dll  
-        \\System.Data.SQLite.**Core**.x.x.x.x\\build\\net46\\x64\\SQLite.Interop.dll
-        --\> \<bin\>\\**x64**\\SQLite.Interop.dll
-        \\System.Data.SQLite.**Linq**.x.x.x.x\\lib\\net46\\System.Data.SQLite.Linq.dll
-        --\> \<bin\>\\System.Data.SQLite.Linq.dll  
-        \\System.Data.SQLite.**EF6**.x.x.x.x\\lib\\net46\\System.Data.SQLite.EF6.dll
-        --\> \<bin\>\\System.Data.SQLite.EF6.dll
+
+            \\System.Data.SQLite.**Core**.x.x.x.x\\lib\\net46\\System.Data.SQLite.dll
+            --\> \<bin\>\\System.Data.SQLite.dll  
+            \\System.Data.SQLite.**Core**.x.x.x.x\\build\\net46\\x86\\SQLite.Interop.dll
+            --\> \<bin\>\\**x86**\\SQLite.Interop.dll  
+            \\System.Data.SQLite.**Core**.x.x.x.x\\build\\net46\\x64\\SQLite.Interop.dll
+            --\> \<bin\>\\**x64**\\SQLite.Interop.dll
+            \\System.Data.SQLite.**Linq**.x.x.x.x\\lib\\net46\\System.Data.SQLite.Linq.dll
+            --\> \<bin\>\\System.Data.SQLite.Linq.dll  
+            \\System.Data.SQLite.**EF6**.x.x.x.x\\lib\\net46\\System.Data.SQLite.EF6.dll
+            --\> \<bin\>\\System.Data.SQLite.EF6.dll
 
     > NOTE: x.x.x.x is the SQLite version installed above.
 
-6.  Update the `c:\inetpub\mcs\web.config` file to include the SQLite version x.x.x.x in the following \<runtime\>/\<assemblyBinding\> sections: <br>
-    `<dependentAssembly>
-        <assemblyIdentity name="System.Data.SQLite" culture="neutral" publicKeyToken="db937bc2d44ff139" />
+6.  Update the `c:\inetpub\mcs\web.config` file to include the SQLite version x.x.x.x in the following \<runtime\>/\<assemblyBinding\> sections:
+
+        <dependentAssembly>
+        assemblyIdentity name="System.Data.SQLite" culture="neutral" publicKeyToken="db937bc2d44ff139" /
         <bindingRedirect oldVersion="0.0.0.0-x.x.x.x" newVersion="x.x.x.x" />
-    </dependentAssembly>
-    <dependentAssembly>
+        </dependentAssembly>
+        <dependentAssembly>
         <assemblyIdentity name="System.Data.SQLite.Core" culture="neutral" publicKeyToken="db937bc2d44ff139" />
         <bindingRedirect oldVersion="0.0.0.0-x.x.x.x" newVersion="x.x.x.x" />
-    </dependentAssembly>
-    <dependentAssembly>
+        </dependentAssembly>
+        <dependentAssembly>
         <assemblyIdentity name="System.Data.SQLite.EF6" culture="neutral" publicKeyToken="db937bc2d44ff139" />
         <bindingRedirect oldVersion="0.0.0.0-x.x.x.x" newVersion="x.x.x.x" />
-    </dependentAssembly>
-    <dependentAssembly>
+        </dependentAssembly>
+        <dependentAssembly>
         <assemblyIdentity name="System.Data.SQLite.Linq" culture="neutral" publicKeyToken="db937bc2d44ff139" />
         <bindingRedirect oldVersion="0.0.0.0-x.x.x.x" newVersion="x.x.x.x" />
-    </dependentAssembly>`
+        </dependentAssembly>
 
 7. Create the SQLite database:
     -  Download and install the SQLite Tools binaries from <https://www.sqlite.org/>
