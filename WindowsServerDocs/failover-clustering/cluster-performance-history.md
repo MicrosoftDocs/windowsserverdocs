@@ -5,7 +5,7 @@ ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 01/09/2018
+ms.date: 01/10/2018
 Keywords: Storage Spaces Direct
 ms.localizationpriority: medium
 ---
@@ -14,20 +14,20 @@ ms.localizationpriority: medium
 
 > Applies To: Windows Server Insider Preview
 
-Cluster performance history is a new feature available for [Storage Spaces Direct](storage-spaces-direct-overview.md) that can collect, store, and provide cmdlets to query performance history.
+Cluster performance history is a new feature that gives [Storage Spaces Direct](../storage/storage-spaces/storage-spaces-direct-overview.md) administrators easy access to historical performance and capacity data from their cluster. Performance history is collected and stored locally, and includes compute, memory, network, and storage metrics across host servers, virtual machines, drives, volumes, and more.
 
    > [!IMPORTANT]
    > This feature is available in Windows Server Insider Preview only. It is not available in Windows Server 2016.
 
 ## Getting started
 
-All you need is [Storage Spaces Direct](storage-spaces-direct-overview.md) in Windows Server Insider Preview build 123.456 or later. There is nothing additional to install, configure, or start.
+Cluster performance history is enabled by default. No external database is required. You do not need to install, configure, or start anything. All you need is Storage Spaces Direct in Windows Server Insider Preview build 123.456 or later.
 
-To opt out, use the **-CollectPerformanceHistory** parameter of the **Enable-ClusterStorageSpacesDirect** cmdlet:
+## How to access
 
-```PowerShell
-Enable-ClusterS2D -CollectPerformanceHistory $False
-```
+The easiest way to see cluster performance history is in (Project Honolulu)[/../manage/honolulu/honolulu], the next-generation in-box management tool for Windows Server. It is fully integrated into every page of the Hyper-Converged Cluster connection, as demonstrated at [Microsoft Ignite 2017](https://www.youtube.com/watch?v=CkZgq5RuJHs&).
+
+Cluster performance history is fully scriptable for powerful monitoring automation, report generation, and more. See [Usage in PowerShell](#usage-in-powershell).
 
 ## What's collected
 
@@ -47,13 +47,13 @@ Performance history is collected for these 7 types of objects:
 
 New measurements are taken every *interval* and stored for *retention* period. For example, one measurement every 10 seconds for 1 hour gives 360 total measurements in the *Last hour* timeframe.
 
-| Timeframe  | Interval   | Retention | Total measurements |
-|------------|------------|-----------|--------------------|
-| Last hour  | 10 secs    | 1 hour    | 360                |
-| Last day   | 5 minutes  | 25 hours  | 300                |
-| Last week  | 15 minutes | 8 days    | 768                |
-| Last month | 1 hour     | 35 days   | 840                |
-| Last year  | Daily      | 400 days  | 400                |
+| Timeframe  | Measurement frequency | Retained for | Total measurements |
+|------------|-----------------------|--------------|--------------------|
+| Last hour  | Every 10 secs         | 1 hour       | 360                |
+| Last day   | Every 5 minutes       | 25 hours     | 300                |
+| Last week  | Every 15 minutes      | 8 days       | 768                |
+| Last month | Every 1 hour          | 35 days      | 840                |
+| Last year  | Every Daily           | 400 days     | 400                |
 
 ### Series
 
@@ -184,10 +184,16 @@ All server series, such as **node.cpu.usage**, are aggregated for all servers in
 
 ## Usage in PowerShell
 
-See cluster performance history in PowerShell with the **Get-ClusterPerformanceHistory** cmdlet. Optionally, you can specify the object, timeframe, and/or series you want.
+See cluster performance history in PowerShell with the **Get-ClusterPerformanceHistory** cmdlet.
+
+```PowerShell
+Get-ClusterPerformanceHistory
+```
 
    > [!TIP]
    > Use the **Get-ClusterPerf** alias to save some keystrokes.
+
+Optionally, you can specify the object, timeframe, and/or series you want.
 
 ### Specify the object
 
@@ -293,14 +299,36 @@ To save them to a text file, run:
 
 ## Troubleshooting
 
-### Symptom: the cmdlet won't run
+### I want to disable this feature
 
-An error message like *The term 'Get-ClusterPerf' is not recognized as the name of a cmdlet* means the feature is not available or installed. Verify that you have Windows Server Insider Preview build 123.456 or later and that you're running [Storage Spaces Direct](storage-spaces-direct-overview.md).
+If you know beforehand that you don't want cluster performance history, use the `-CollectPerformanceHistory` parameter of the `Enable-ClusterS2D` cmdlet:
+
+```PowerShell
+Enable-ClusterS2D -CollectPerformanceHistory $False
+```
+
+If you already ran `Enable-ClusterS2D`, you can disable cluster performance history by:
+
+1. Remove the path to the volume:
+
+```PowerShell
+Get-StorageSubSystem Cluster* | Remove-StorageHealthSetting -Name "System.PerformanceHistory.Path"
+```
+
+2. Delete the volume:
+
+```PowerShell
+Remove-VirtualDisk "ClusterPerformanceHistory"
+```
+
+### The cmdlet won't run
+
+An error message like "*The term 'Get-ClusterPerf' is not recognized as the name of a cmdlet*" means the feature is not available or installed. Verify that you have Windows Server Insider Preview build 123.456 or later and that you're running [Storage Spaces Direct](../storage/storage-spaces/storage-spaces-direct-overview.md).
 
    > [!NOTE]
    > This feature is not available on Windows Server 2016 or earlier.
 
-### Symptom: the cmdlet works but returns nothing
+### The cmdlet works but does nothing
 
 If the cmdlet doesn't return the latest measurement (within the last ten seconds), performance history collection may have lapsed or stopped.
 
@@ -322,14 +350,12 @@ Measurements are stored on the *ClusterPerformanceHistory* volume. Verify that i
 Get-Volume -FriendlyName "ClusterPerformanceHistory"
 ```
 
-If the volume is failed or missing, see below.
-
    > [!NOTE]
-   > If the resource or volume fails over (moves to another cluster node), there may be a brief lapse in collection. It will resume automatically.
+   > If the Health resource or volume fails over (moves to another server in the cluster), there will be a very brief lapse in performance history collection. It will resume automatically.
 
-### Symptom: the volume is failed or missing
+### The volume is deleted or missing
 
-To provision the *ClusterPerformanceHistory* volume again:
+To provision the ClusterPerformanceHistory volume again:
 
 1. Confirm the volume is deleted:
 
@@ -337,19 +363,19 @@ To provision the *ClusterPerformanceHistory* volume again:
 Remove-VirtualDisk "ClusterPerformanceHistory"
 ```
 
-2.	Clear its path as saved by the Health Service:
+2.	Remove the path to the volume:
 
 ```PowerShell
 Get-StorageSubSystem Cluster* | Remove-StorageHealthSetting -Name "System.PerformanceHistory.Path"
 ```
 
-3.	Set the Health Service to provision the volume again:
+3.	Set `AutoProvision` back to `True`:
 
 ```PowerShell
 Get-StorageSubSystem Cluster* | Set-StorageHealthSetting -Name "System.PerformanceHistory.AutoProvision.Enabled" -Value "True"
 ```
 
-It may take up to ten minutes for the Health Service to detect the settings change and re-provision the volume. It will then automatically resume collecting performance history, which may take up to (another) ten minutes.
+It may take up to 15 minutes for the changes to take effect.
 
 ## Extensibility
 
@@ -357,4 +383,4 @@ Cluster performance history cannot be extended to collect for additional objects
 
 ## See also
 
-- [Storage Spaces Direct overview](storage-spaces-direct-overview.md)
+- [Storage Spaces Direct](../storage/storage-spaces/storage-spaces-direct-overview.md)
