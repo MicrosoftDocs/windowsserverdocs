@@ -4,7 +4,7 @@ description: How to understand the different health and operational states of St
 keywords: Storage Spaces,detached,virtual disk,physical disk,degraded
 author: jasongerend
 ms.author: jgerend
-ms.date: 12/29/2017
+ms.date: 1/12/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: storage-spaces
