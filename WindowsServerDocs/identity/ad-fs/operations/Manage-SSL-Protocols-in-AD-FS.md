@@ -280,5 +280,5 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319
 
 - [Cipher Suites in TLS/SSL (Schannel SSP)](https://msdn.microsoft.com/en-us/library/windows/desktop/aa374757.aspx)
 - [TLS Cipher Suites in Windows 8.1](https://msdn.microsoft.com/en-us/library/windows/desktop/mt767781.aspx)
-- [Prioritizing Schannel Cipher Suites](https://msdn.microsoft.com/en-us/library/windows/desktop/bb87093.aspx)
+- [Prioritizing Schannel Cipher Suites](https://msdn.microsoft.com/en-us/library/windows/desktop/bb870930.aspx)
 - [Speaking in Ciphers and other Enigmatic tongues](https://blogs.technet.microsoft.com/askds/2015/12/08/speaking-in-ciphers-and-other-enigmatic-tonguesupdate/)
