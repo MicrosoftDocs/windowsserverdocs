@@ -27,7 +27,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 ## Syntax
 
 ```
-timeout/t <TimeoutInSeconds> [/nobreak] 
+timeout /t <TimeoutInSeconds> [/nobreak] 
 ```
 
 ## Parameters

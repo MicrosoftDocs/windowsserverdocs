@@ -4,8 +4,8 @@ title: AD FS 2016 FAQ
 description: Frequently asked questions for AD FS 2016
 author: jenfieldmsft
 ms.author:  billmath
-manager: femila
-ms.date: 11/16/2017
+manager: mtillman
+ms.date: 01/04/2018
 ms.topic: article
 ms.custom: it-pro
 ms.prod: windows-server-threshold
@@ -177,3 +177,6 @@ Run certlm.msc on the Windows servers and import the *.PFX into the Computer’s
 
 >[!NOTE]
 > The certificate store of Network Load Balancers should also be updated to include the entire certificate chain if present
+
+### Does AD FS support HEAD requests?
+AD FS does not support HEAD requests.  Applications should not be using HEAD requests against AD FS endpoints.  This may cause HTTP error responses that are unexpected and/or delayed.  Additionally, you may see unexpected error events in the AD FS event log.
