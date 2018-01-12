@@ -83,7 +83,7 @@ There is a known issue where the AD user account cannot authentication with AD F
 - The Extranet Lockout feature only applies to **username & password authentication**
 - AD FS does not keep any track of **badPwdCount** or users that are soft-locked out. AD FS uses AD for all state tracking
 - AD FS performs a lookup for the **badPwdCount** attribute through LDAP call for the user on the PDC for every authentication attempt  
-- AD FS will fail if it cannot access the PDC. We are looking into making an improvement for the next version of AD FS that will allow AD FS to fall back to local DC in case of failure
+- AD FS older than 2016 will fail if it cannot access the PDC. AD FS 2016 introduced improvements that will allow AD FS to fall back to other domain controllers in case of the PDC is not available. 
 - AD FS will allow authentication requests from extranet if badPwdCount < ExtranetLockoutThreshold 
 - If **badPwdCount** >= **ExtranetLockoutThreshold** AND **badPasswordTime** + **ExtranetObservationWindow** < Current time, AD FS will reject authentication requests from extranet
 - To avoid malicious account lockout, you should make sure **ExtranetLockoutThreshold** < **Account Lockout Threshold** AND **ExtranetObservationWindow** > **Reset Account Lockout Counter**

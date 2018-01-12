@@ -38,7 +38,7 @@ cmd [/c|/k] [/s] [/q] [/d] [/a|/u] [/t:{<B><F>|<F>}] [/e:{on|off}] [/f:{on|off}]
 |/d|Disables execution of AutoRun commands.|
 |/a|Formats internal command output to a pipe or a file as American National Standards Institute (ANSI).|
 |/u|Formats internal command output to a pipe or a file as Unicode.|
-|/t:{\<B><F>|<F>}|Sets the background (*B*) and foreground (*F*) colors.|
+|/t:{\<B\>\<F\>\|\<F\>}|Sets the background (*B*) and foreground (*F*) colors.|
 |/e:on|Enables command extensions.|
 |/e:off|Disables commands extensions.|
 |/f:on|Enables file and directory name completion.|
@@ -48,7 +48,7 @@ cmd [/c|/k] [/s] [/q] [/d] [/a|/u] [/t:{<B><F>|<F>}] [/e:{on|off}] [/f:{on|off}]
 |\<String>|Specifies the command you want to carry out.|
 |/?|Displays help at the command prompt.|
 
-The following table lists valid hexadecimal digits that you can use as the values for \<B> and <F>:
+The following table lists valid hexadecimal digits that you can use as the values for \<B\> and \<F\>
 
 |Value|Color|
 |-----|-----|
