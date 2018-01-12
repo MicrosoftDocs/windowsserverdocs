@@ -18,9 +18,12 @@ ms.technology: identity-adds
 
 
 ## Appendix D: Securing Built-In Administrator Accounts in Active Directory  
-In each domain in Active Directory, an Administrator account is created as part of the creation of the domain. This account is by default a member of the Domain Admins and Administrators groups in the domain, and if the domain is the forest root domain, the account is also a member of the Enterprise Admins group.  
+In each domain in Active Directory, an Administrator account is created as part of the creation of the domain. This account is by default a member of the Domain Admins and Administrators groups in the domain, and if the domain is the forest root domain, the account is also a member of the Enterprise Admins group.
 
-Use of a domain's Administrator account should be reserved only for initial build activities, and possibly, disaster-recovery scenarios. To ensure that an Administrator account can be used to effect repairs in the event that no other accounts can be used, you should not change the default membership of the Administrator account in any domain in the forest. Instead, you should secure the Administrator account in each domain in the forest as described in the following section and detailed in the step-by-step instructions that follow.  
+Use of a domain's Administrator account should be reserved only for initial build activities, and possibly, disaster-recovery scenarios. To ensure that an Administrator account can be used to effect repairs in the event that no other accounts can be used, you should not change the default membership of the Administrator account in any domain in the forest. Instead, you should secure the Administrator account in each domain in the forest as described in the following section and detailed in the step-by-step instructions that follow. 
+
+> [!NOTE]
+> This guide used to recommend disabling the account. This was removed as the forest recovery white paper makes use of the default administrator account. The reason is, this is the only account that allows logon without a Global Catalog Server.
 
 
 #### Controls for Built-in Administrator Accounts  
@@ -29,8 +32,6 @@ For the built-in Administrator account in each domain in your forest, you should
 -   Enable the **Account is sensitive and cannot be delegated** flag on the account.  
 
 -   Enable the **Smart card is required for interactive logon** flag on the account.  
-
--   Disable the account.  
 
 -   Configure GPOs to restrict the Administrator account's use on domain-joined systems:  
 
@@ -45,9 +46,9 @@ For the built-in Administrator account in each domain in your forest, you should
         -   Deny log on through Remote Desktop Services  
 
 > [!NOTE]  
-> When you add accounts to this setting, you must specify whether you are configuring local Administrator accounts or domain Administrator accounts. For example, to add the NWTRADERS domain's Administrator account to these deny rights, you must type the account as NWTRADERS\Administrator, or browse to the Administrator account for the NWTRADERS domain. If you type "Administrator" in these user rights settings in the Group Policy Object Editor, you will restrict the local Administrator account on each computer to which the GPO is applied.  
+> When you add accounts to this setting, you must specify whether you are configuring local Administrator accounts or domain Administrator accounts. For example, to add the NWTRADERS domain's Administrator account to these deny rights, you must type the account as NWTRADERS\Administrator, or browse to the Administrator account for the NWTRADERS domain. If you type "Administrator" in these user rights settings in the Group Policy Object Editor, you will restrict the local Administrator account on each computer to which the GPO is applied.
 >   
-> We recommend restricting local Administrator accounts on member servers and workstations in the same manner as domain-based Administrator accounts. Therefore you should generally add the Administrator account for each domain in the forest and the Administrator account for the local computers to these user rights settings. The following screenshot shows an example of configuring these user rights to block local Administrator accounts and a domain's Administrator account from performing logons that should not be needed for these accounts.  
+> We recommend restricting local Administrator accounts on member servers and workstations in the same manner as domain-based Administrator accounts. Therefore, you should generally add the Administrator account for each domain in the forest and the Administrator account for the local computers to these user rights settings. The following screenshot shows an example of configuring these user rights to block local Administrator accounts and a domain's Administrator account from performing logons that should not be needed for these accounts.  
 
 
 ![securing built-in admin accounts](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_23.gif)  
@@ -91,17 +92,7 @@ For the built-in Administrator account in each domain in your forest, you should
 
     3.  Under **Account** options, select the **Smart card is required for interactive logon** flag as indicated in the following screenshot, and click **OK**.  
 
-        ![securing built-in admin accounts](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_25.gif)  
-
-4.  To disable the account, perform the following steps:  
-
-    1.  Right-click the **Administrator** account and click **Properties**.  
-
-    2.  Click the **Account** tab.  
-
-    3.  In the **Account** options field, select the **Account is disabled** flag as indicated in the following screenshot, and click **OK**.  
-
-        ![securing built-in admin accounts](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_26.gif)  
+        ![securing built-in admin accounts](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_25.gif) 
 
 ##### Configuring GPOs to Restrict Administrator Accounts at the Domain-Level  
 
