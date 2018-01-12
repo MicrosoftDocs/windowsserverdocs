@@ -14,14 +14,14 @@ ms.localizationpriority: medium
 
 > Applies To: Windows Server Insider Preview
 
-Cluster performance history is a new feature available for [Storage Spaces Direct](storage-spaces-direct-overview.md) that can collect, store, and provide cmdlets to query performance history.
+Cluster performance history is a new feature available for [Storage Spaces Direct](..\storage\storage-spaces\storage-spaces-direct-overview.md) that can collect, store, and provide cmdlets to query performance history.
 
    > [!IMPORTANT]
    > This feature is available in Windows Server Insider Preview only. It is not available in Windows Server 2016.
 
 ## Getting started
 
-All you need is [Storage Spaces Direct](storage-spaces-direct-overview.md) in Windows Server Insider Preview build 123.456 or later. There is nothing additional to install, configure, or start.
+All you need is [Storage Spaces Direct](..\storage\storage-spaces\storage-spaces-direct-overview.md) in Windows Server Insider Preview build 123.456 or later. There is nothing additional to install, configure, or start.
 
 To opt out, use the **-CollectPerformanceHistory** parameter of the **Enable-ClusterStorageSpacesDirect** cmdlet:
 
@@ -295,7 +295,7 @@ To save them to a text file, run:
 
 ### Symptom: the cmdlet won't run
 
-An error message like *The term 'Get-ClusterPerf' is not recognized as the name of a cmdlet* means the feature is not available or installed. Verify that you have Windows Server Insider Preview build 123.456 or later and that you're running [Storage Spaces Direct](storage-spaces-direct-overview.md).
+An error message like *The term 'Get-ClusterPerf' is not recognized as the name of a cmdlet* means the feature is not available or installed. Verify that you have Windows Server Insider Preview build 123.456 or later and that you're running [Storage Spaces Direct](..\storage\storage-spaces\storage-spaces-direct-overview.md).
 
    > [!NOTE]
    > This feature is not available on Windows Server 2016 or earlier.
@@ -357,4 +357,4 @@ Cluster performance history cannot be extended to collect for additional objects
 
 ## See also
 
-- [Storage Spaces Direct overview](storage-spaces-direct-overview.md)
+- [Storage Spaces Direct overview](..\storage\storage-spaces\storage-spaces-direct-overview.md)
