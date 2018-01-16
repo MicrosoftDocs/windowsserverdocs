@@ -5,7 +5,7 @@ description:
 author: jenfieldmsft
 ms.author: billmath
 manager: samueld
-ms.date: 05/31/2017
+ms.date: 01/12/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.service: active-directory
@@ -15,7 +15,7 @@ ms.technology: identity-adfs
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2
 
-AD FS can be configured for x509 user certificate authentication using one of the modes described in [this article](https://link-to-managing-ssl-certs-certauth-modes.md). This capability can be used [with Azure Active Directory](https://blogs.msdn.microsoft.com/samueld/2016/07/19/adfs-certauth-aad-o365/) or on its own, to enable clients and devices provisioned with user certificates to access AD FS resources from the intranet or the extranet.
+AD FS can be configured for x509 user certificate authentication using one of the modes described in [this article](ad-fs-support-for-alternate-hostname-binding-for-certificate-authentication.md). This capability can be used [with Azure Active Directory](https://blogs.msdn.microsoft.com/samueld/2016/07/19/adfs-certauth-aad-o365/) or on its own, to enable clients and devices provisioned with user certificates to access AD FS resources from the intranet or the extranet.
 
 ## Prerequisites
 - Ensure that your user certificates are trusted by all AD FS and WAP servers

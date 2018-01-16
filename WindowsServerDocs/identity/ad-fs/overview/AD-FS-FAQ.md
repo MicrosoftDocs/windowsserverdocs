@@ -4,7 +4,7 @@ title: AD FS 2016 FAQ
 description: Frequently asked questions for AD FS 2016
 author: jenfieldmsft
 ms.author:  billmath
-manager: mtillman
+manager: femila
 ms.date: 01/04/2018
 ms.topic: article
 ms.custom: it-pro
