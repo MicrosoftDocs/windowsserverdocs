@@ -16,7 +16,7 @@ manager: dongill
 
 # Manage Digital Media in Windows Server Essentials
 
->Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
+>Applies To: Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 The following topics discuss the media streaming features of your server, and explain how to set up and use media streaming on your network.  
   
