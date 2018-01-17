@@ -43,11 +43,7 @@ We recommend using drives of the same model and firmware version whenever possib
 
 ### Size
 
-We recommend using drives of the same sizes whenever possible.
-
-Using capacity drives of different sizes may result in some unusable capacity – see the next section.
-
-Using cache drives of different sizes may not improve cache performance – see the next section.
+We recommend using drives of the same sizes whenever possible. Using capacity drives of different sizes may result in some unusable capacity, and using cache drives of different sizes may not improve cache performance. See the next section for details.
 
    > [!WARNING]
    > Differing capacity drives sizes across servers may result in stranded capacity.
@@ -91,10 +87,10 @@ Here are some supported and unsupported configurations:
 
 The first two servers use NVMe model "X" but the third server uses NVMe model "Z", which is very similar.
 
-| Server 1                    | Server 2                    | Server 3                     |
-|-----------------------------|-----------------------------|------------------------------|
-| 2 x NVMe Model X (cache)    | 2 x NVMe Model X (cache)    | 2 x NVMe Model <mark>Z</mark> (cache) |
-| 10 x SSD Model Y (capacity) | 10 x SSD Model Y (capacity) | 10 x SSD Model Y (capacity)  |
+| Server 1                    | Server 2                    | Server 3                    |
+|-----------------------------|-----------------------------|-----------------------------|
+| 2 x NVMe Model X (cache)    | 2 x NVMe Model X (cache)    | 2 x NVMe Model Z (cache)    |
+| 10 x SSD Model Y (capacity) | 10 x SSD Model Y (capacity) | 10 x SSD Model Y (capacity) |
 
 This is supported.
 
@@ -102,11 +98,11 @@ This is supported.
 
 Every server uses some different mix of HDD models "Y" and "Z", which are very similar.
 
-| Server 1                       | Server 2                       | Server 3                       |
-|--------------------------------|--------------------------------|--------------------------------|
-| 2 x SSD Model X (cache)        | 2 x SSD Model X (cache)        | 2 x SSD Model X (cache)        |
-| <mark>7</mark> x HDD Model Y (capacity) | <mark>5</mark> x HDD Model Y (capacity) | <mark>1</mark> x HDD Model Y (capacity) |
-| <mark>3</mark> x HDD Model Z (capacity) | <mark>5</mark> x HDD Model Z (capacity) | <mark>9</mark> x HDD Model Z (capacity) |
+| Server 1                   | Server 2                   | Server 3                   |
+|----------------------------|----------------------------|----------------------------|
+| 2 x SSD Model X (cache)    | 2 x SSD Model X (cache)    | 2 x SSD Model X (cache)    |
+| 7 x HDD Model Y (capacity) | 5 x HDD Model Y (capacity) | 1 x HDD Model Y (capacity) |
+| 3 x HDD Model Z (capacity) | 5 x HDD Model Z (capacity) | 9 x HDD Model Z (capacity) |
 
 This is supported – every server has 10 total HDD.
 
@@ -114,10 +110,10 @@ This is supported – every server has 10 total HDD.
 
 The first two servers use 4 TB HDD but the third server uses very similar 6 TB HDD.
 
-| Server 1                | Server 2                | Server 3                    |
-|-------------------------|-------------------------|-----------------------------|
-| 2 x 800 GB NVMe (cache) | 2 x 800 GB NVMe (cache) | 2 x 800 GB NVMe (cache)     |
-| 4 x 4 TB HDD (capacity) | 4 x 4 TB HDD (capacity) | 4 x <mark>6</mark> TB HDD (capacity) |
+| Server 1                | Server 2                | Server 3                |
+|-------------------------|-------------------------|-------------------------|
+| 2 x 800 GB NVMe (cache) | 2 x 800 GB NVMe (cache) | 2 x 800 GB NVMe (cache) |
+| 4 x 4 TB HDD (capacity) | 4 x 4 TB HDD (capacity) | 4 x 6 TB HDD (capacity) |
 
 This is supported, although it will result in stranded capacity.
 
@@ -125,11 +121,11 @@ This is supported, although it will result in stranded capacity.
 
 Every server uses some different mix of 1.2 TB and very similar 1.6 TB SSD.
 
-| Server 1                   | Server 2                   | Server 3                 |
-|----------------------------|----------------------------|--------------------------|
-| 3 x 1.2 TB SSD (cache)     | 2 x 1.2 TB SSD (cache)     | 4 x 1.2 TB SSD (cache)   |
-| 1 x <mark>1.6 TB</mark> SSD (cache) | 2 x <mark>1.6 TB</mark> SSD (cache) | -                        |
-| 20 x 4 TB HDD (capacity)   | 20 x 4 TB HDD (capacity)   | 20 x 4 TB HDD (capacity) |
+| Server 1                 | Server 2                 | Server 3                 |
+|--------------------------|--------------------------|--------------------------|
+| 3 x 1.2 TB SSD (cache)   | 2 x 1.2 TB SSD (cache)   | 4 x 1.2 TB SSD (cache)   |
+| 1 x 1.6 TB SSD (cache)   | 2 x 1.6 TB SSD (cache)   | -                        |
+| 20 x 4 TB HDD (capacity) | 20 x 4 TB HDD (capacity) | 20 x 4 TB HDD (capacity) |
 
 This is supported – every server has 4 total SSD.
 
@@ -137,11 +133,11 @@ This is supported – every server has 4 total SSD.
 
 Server 1 has NVMe but the others don't.
 
-| Server 1             | Server 2            | Server 3            |
-|----------------------|---------------------|---------------------|
-| 6 x <mark>NVMe</mark> (cache) | -                   | -                   |
-| -                    | 6 x SSD (cache)     | 6 x SSD (cache)     |
-| 18 x HDD (capacity)  | 18 x HDD (capacity) | 18 x HDD (capacity) |
+| Server 1            | Server 2            | Server 3            |
+|---------------------|---------------------|---------------------|
+| 6 x NVMe (cache)    | -                   | -                   |
+| -                   | 6 x SSD (cache)     | 6 x SSD (cache)     |
+| 18 x HDD (capacity) | 18 x HDD (capacity) | 18 x HDD (capacity) |
 
 This isn't supported. The types of drives should be the same in every server.
 
@@ -149,16 +145,16 @@ This isn't supported. The types of drives should be the same in every server.
 
 Server 3 has more drives than the others.
 
-| Server 1            | Server 2            | Server 3                |
-|---------------------|---------------------|-------------------------|
-| 2 x NVMe (cache)    | 2 x NVMe (cache)    | <mark>4</mark> x NVMe (cache)    |
-| 10 x HDD (capacity) | 10 x HDD (capacity) | <mark>20</mark> x HDD (capacity) |
+| Server 1            | Server 2            | Server 3            |
+|---------------------|---------------------|---------------------|
+| 2 x NVMe (cache)    | 2 x NVMe (cache)    | 4 x NVMe (cache)    |
+| 10 x HDD (capacity) | 10 x HDD (capacity) | 20 x HDD (capacity) |
 
 This isn't supported. The number of drives of each type should be the same in every server.
 
 ## Summary
 
-To recap, every server in the cluster should have the same types of drives and the same number of each type. It is supported to mix-and-match drive models and drive sizes as needed, with the considerations above.
+To recap, every server in the cluster should have the same types of drives and the same number of each type. It's supported to mix-and-match drive models and drive sizes as needed, with the considerations above.
 
 | Constraint                               |               |
 |------------------------------------------|---------------|
