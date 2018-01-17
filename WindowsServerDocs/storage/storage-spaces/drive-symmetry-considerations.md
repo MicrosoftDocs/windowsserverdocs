@@ -35,13 +35,13 @@ All servers must have the same number of drives of each type. For example, if on
 
 ### Same drive models in every server
 
-It is recommended to use drives of the same model and firmware version. If you can't, select drives which are as similar as possible and verify that they don't have any conflicting requirements, such as system, adapter, or driver incompatibility.
+It is recommended to use drives of the same model and firmware version whenever possible. If you can't, carefully select drives which are as similar as possible and verify that they don't have any conflicting requirements, such as system, adapter, or driver incompatibility.
 
 It is not advisable to mix-and-match drives of the same type with sharply different performance or endurance characteristics (unless one is cache and the other is capacity) because Storage Spaces Direct distributes IO evenly and does not discriminate based on model.
 
 ### Same drive sizes in every server
 
-It is recommended to use drives of the same size (per type, unless one is cache and the other is capacity).
+It is recommended to use drives of the same sizes whenever possible.
 
 Mixing-and-matching cache drives of different sizes will not boost cache performance uniformly: only IO to [bindings](understand-the-cache.md#server-side-architecture) with larger cache drives may see improved performance. See [Understanding the cache](understand-the-cache.md) to learn more.
 
@@ -118,7 +118,7 @@ Every server uses some different mix of 1.2 TB and very similar 1.6 TB SSD.
 | 1 x **1.6 TB** SSD (cache) | 2 x **1.6 TB** SSD (cache) | -                        |
 | 20 x 4 TB HDD (capacity)   | 20 x 4 TB HDD (capacity)   | 20 x 4 TB HDD (capacity) |
 
-This is supported.
+This is supported. (Note that every server has 4 total SSD.)
 
 ### ![unsupported](media/drive-symmetry-considerations/unsupported.png) Not supported: Different types of drives across servers
 
