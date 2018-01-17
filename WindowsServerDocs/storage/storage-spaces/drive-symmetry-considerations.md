@@ -24,57 +24,53 @@ This topic explains the constraints and provides examples of supported and unsup
 
 ### Same types of drives in every server
 
-All servers must have the same [types of drives](choosing-drives.md#drive-types).
-
-For example, if one server has NVMe, they must *all* have NVMe.
+All servers must have the same [types of drives](choosing-drives.md#drive-types). For example, if one server has NVMe, they must *all* have NVMe.
 
 ### Same number of each type in every server
 
-All servers must have the same number of drives of each type.
-
-For example, if one server has *six* HDD, they must all have *six* HDD.
+All servers must have the same number of drives of each type. For example, if one server has *six* HDD, they must all have *six* HDD.
 
    > [!NOTE]
    > It is okay for the number of drives to differ temporarily during failures or while adding or removing drives.
 
 ### Same drive models in every server
 
-It is recommended (but not required) to use drives of the same model and firmware version. If you can't, select drives which are as similar as possible and verify that they don't have any conflicting requirements, such as system, adapter, or driver incompatibility.
+It is recommended to use drives of the same model and firmware version. If you can't, select drives which are as similar as possible and verify that they don't have any conflicting requirements, such as system, adapter, or driver incompatibility.
 
 It is not advisable to mix-and-match drives of the same type with sharply different performance or endurance characteristics (unless one is cache and the other is capacity) because Storage Spaces Direct distributes IO evenly and does not discriminate based on model.
 
 ### Same drive sizes in every server
 
-It is recommended (but not required) to use drives of the same size (per type, unless one is cache and the other is capacity).
+It is recommended to use drives of the same size (per type, unless one is cache and the other is capacity).
 
-To mix-and-match cache drives of different sizes will not uniformly boost cache performance: only IO to [bindings](understand-the-cache.md#server-side-architecture) with larger cache drives may see improved performance. See [Understanding the cache](understand-the-cache.md) to learn more.
+Mixing-and-matching cache drives of different sizes will not boost cache performance uniformly: only IO to [bindings](understand-the-cache.md#server-side-architecture) with larger cache drives may see improved performance. See [Understanding the cache](understand-the-cache.md) to learn more.
 
-To mix-and-match capacity drives of different sizes may result in stranded capacity – see the next section.
+Mixing-and-matching capacity drives of different sizes may result in stranded capacity – see the next section.
 
    > [!WARNING]
    > Capacity drives of different sizes in different servers may result in stranded capacity.
 
 ## Understand: Stranded capacity
 
-Storage Spaces Direct is robust to capacity imbalance across drives and across servers. Even if the imbalance is severe, everything will continue to work seamlessly. However, depending on your scale and resiliency, capacity that is not available in every server may not be usable.
+Storage Spaces Direct is robust to capacity imbalance across drives and across servers. Even if the imbalance is severe, everything will continue to work. However, depending on several factors, capacity that is not available in every server may not be usable.
 
-To see why this happens, suppose each colored square below represents one copy of mirrored data. For example, the squares marked A, A', and A'' are three copies of the same extent of data. To preserve server fault tolerance, these copies of the same data *must* be stored in different servers.
+To see why this happens, consider the example below. Each colored square below represents one copy of mirrored data. For example, the squares marked A, A', and A'' are three copies of the same data. To preserve server fault tolerance, these copies of the same data *must* be stored in different servers.
 
-### Example with stranded capacity
+### With stranded capacity
 
-As drawn, Server 1 and Server 2 are full. Server 3 has larger drives, therefore its total capacity is larger. However, to store more three-way mirror data on Server 3 would require copies on Server 1 and Server 2 too, which are already full. The remaining capacity on Server 3 cannot be used. If the three servers had 10 TB, 10 TB, and 15 TB of capacity respectively, the last 5 TB on the third server would be stranded capacity.
+As drawn, Server 1 (10 TB) and Server 2 (10 TB) are full. Server 3 has larger drives, therefore its total capacity is larger (15 TB). However, to store more three-way mirror data on Server 3 would require copies on Server 1 and Server 2 too, which are already full. The remaining capacity on Server 3 cannot be used. The last 5 TB on the third server is stranded capacity.
 
 ![Three-way mirror, three servers, stranded capacity](media/drive-symmetry-considerations/Size-Asymmetry-3N-Stranded.png)
 
-### Example without stranded capacity
+### Without stranded capacity
 
 With four servers of 10 TB, 10 TB, 10 TB, and 15 TB capacity respectively, and three-way mirror resiliency, it *is* possible to validly place copies in a way that uses all available capacity. Whenever this is possible, the Storage Spaces Direct allocator will find and use the optimal placement, leaving no stranded capacity.
 
 ![Three-way mirror, four servers, no stranded capacity](media/drive-symmetry-considerations/Size-Asymmetry-4N-No-Stranded.png)
 
-The number of servers, the resiliency, the severity of the capacity imbalance, and other factors affect whether there is stranded capacity. **The most prudent general rule is to assume that only capacity available in every server is guaranteed to be usable.**
+The number of servers, the resiliency, and the severity of the capacity imbalance affect whether there is stranded capacity. **The most prudent general rule is to assume that only capacity available in every server is guaranteed to be usable.**
 
-## Examples
+## Example configurations
 
 Here are some supported and unsupported configurations:
 
@@ -103,7 +99,7 @@ This is supported. ![supported](media/drive-symmetry-considerations/supported.pn
 
 ### Different sizes across servers
 
-The first two servers use 4 TB HDD but the third server uses 6 TB HDD, which are very similar.
+The first two servers use 4 TB HDD but the third server uses very similar 6 TB HDD.
 
 | Server 1                | Server 2                | Server 3                    |
 |-------------------------|-------------------------|-----------------------------|
@@ -114,7 +110,7 @@ This is supported. ![supported](media/drive-symmetry-considerations/supported.pn
 
 ### Different sizes within server
 
-Every server uses some different mix of 1.2 TB and 1.6 TB SSD, which are very similar.
+Every server uses some different mix of 1.2 TB and very similar 1.6 TB SSD.
 
 | Server 1                   | Server 2                   | Server 3                 |
 |----------------------------|----------------------------|--------------------------|
