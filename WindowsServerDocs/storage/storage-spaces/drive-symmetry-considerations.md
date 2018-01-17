@@ -1,5 +1,5 @@
 ---
-title: Symmetry considerations for Storage Spaces Direct 
+title: Drive symmetry considerations for Storage Spaces Direct 
 ms.author: cosdar
 ms.manager: eldenc
 ms.technology: storage-spaces
@@ -10,7 +10,7 @@ Keywords: Storage Spaces Direct
 ms.localizationpriority: medium
 ---
 
-# Symmetry considerations for Storage Spaces Direct 
+# Drive symmetry considerations for Storage Spaces Direct 
 
 > Applies To: Windows Server 2016
 
@@ -22,39 +22,43 @@ This topic explains the constraints and provides examples of supported and unsup
 
 ## Constraints
 
-### Same types of drives in every server
+### Type
 
-All servers must have the same [types of drives](choosing-drives.md#drive-types). For example, if one server has NVMe, they must *all* have NVMe.
+All servers must have the same [types of drives](choosing-drives.md#drive-types).
 
-### Same number of each type in every server
+For example, if one server has NVMe, they must *all* have NVMe.
 
-All servers must have the same number of drives of each type. For example, if one server has *six* HDD, they must all have *six* HDD.
+### Number
+
+All servers must have the same number of drives of each type.
+
+For example, if one server has *six* HDD, they must all have *six* HDD.
 
    > [!NOTE]
    > It is okay for the number of drives to differ temporarily during failures or while adding or removing drives.
 
-### Same drive models in every server
+### Model
 
 It is recommended to use drives of the same model and firmware version whenever possible. If you can't, carefully select drives which are as similar as possible and verify that they don't have any conflicting requirements, such as system, adapter, or driver incompatibility.
 
 It is not advisable to mix-and-match drives of the same type with sharply different performance or endurance characteristics (unless one is cache and the other is capacity) because Storage Spaces Direct distributes IO evenly and does not discriminate based on model.
 
-### Same drive sizes in every server
+### Size
 
 It is recommended to use drives of the same sizes whenever possible.
 
-Mixing-and-matching cache drives of different sizes will not boost cache performance uniformly: only IO to [bindings](understand-the-cache.md#server-side-architecture) with larger cache drives may see improved performance. See [Understanding the cache](understand-the-cache.md) to learn more.
+Mixing-and-matching cache drives of different sizes will not boost cache performance uniformly: only IO to [drive bindings](understand-the-cache.md#server-side-architecture) with larger cache drives may see improved performance. See [Understanding the cache](understand-the-cache.md) to learn more.
 
 Mixing-and-matching capacity drives of different sizes may result in stranded capacity – see the next section.
 
    > [!WARNING]
    > Capacity drives of different sizes in different servers may result in stranded capacity.
 
-## Understand: Stranded capacity
+## Understand: stranded capacity
 
 Storage Spaces Direct is robust to capacity imbalance across drives and across servers. Even if the imbalance is severe, everything will continue to work. However, depending on several factors, capacity that is not available in every server may not be usable.
 
-To see why this happens, consider the example below. Each colored box represents one copy of mirrored data. For example, the boxes marked A, A', and A'' are three copies of the same data. To preserve server fault tolerance, these copies of the same data *must* be stored in different servers.
+To see why this happens, consider the simplified illustration below. Each colored box represents one copy of mirrored data. For example, the boxes marked A, A', and A'' are three copies of the same data. To honor server fault tolerance, these copies *must* be stored in different servers.
 
 ### With stranded capacity
 
@@ -74,7 +78,7 @@ The number of servers, the resiliency, and the severity of the capacity imbalanc
 
 Here are some supported and unsupported configurations:
 
-### ![supported](media/drive-symmetry-considerations/supported.png) Supported: Different models between servers
+### ![supported](media/drive-symmetry-considerations/supported.png) Supported: different models between servers
 
 The first two servers use NVMe model "X" but the third server uses NVMe model "Z", which is very similar.
 
@@ -85,7 +89,7 @@ The first two servers use NVMe model "X" but the third server uses NVMe model "Z
 
 This is supported.
 
-### ![supported](media/drive-symmetry-considerations/supported.png) Supported: Different models within server
+### ![supported](media/drive-symmetry-considerations/supported.png) Supported: different models within server
 
 Every server uses some different mix of HDD models "Y" and "Z", which are very similar.
 
@@ -97,7 +101,7 @@ Every server uses some different mix of HDD models "Y" and "Z", which are very s
 
 This is supported.
 
-### ![supported](media/drive-symmetry-considerations/supported.png) Supported: Different sizes across servers
+### ![supported](media/drive-symmetry-considerations/supported.png) Supported: different sizes across servers
 
 The first two servers use 4 TB HDD but the third server uses very similar 6 TB HDD.
 
@@ -108,7 +112,7 @@ The first two servers use 4 TB HDD but the third server uses very similar 6 TB H
 
 This is supported, although it will result in stranded capacity.
 
-### ![supported](media/drive-symmetry-considerations/supported.png) Supported: Different sizes within server
+### ![supported](media/drive-symmetry-considerations/supported.png) Supported: different sizes within server
 
 Every server uses some different mix of 1.2 TB and very similar 1.6 TB SSD.
 
@@ -120,7 +124,7 @@ Every server uses some different mix of 1.2 TB and very similar 1.6 TB SSD.
 
 This is supported. (Note that every server has 4 total SSD.)
 
-### ![unsupported](media/drive-symmetry-considerations/unsupported.png) Not supported: Different types of drives across servers
+### ![unsupported](media/drive-symmetry-considerations/unsupported.png) Not supported: different types of drives across servers
 
 Server 1 has NVMe but the others don't.
 
@@ -132,7 +136,7 @@ Server 1 has NVMe but the others don't.
 
 This is not supported. The types of drives must be the same in every server.
 
-### ![unsupported](media/drive-symmetry-considerations/unsupported.png) Not supported: Different number of each type across servers
+### ![unsupported](media/drive-symmetry-considerations/unsupported.png) Not supported: different number of each type across servers
 
 Server 3 has more drives than the others.
 
