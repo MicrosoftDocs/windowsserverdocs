@@ -74,7 +74,7 @@ The number of servers, the resiliency, and the severity of the capacity imbalanc
 
 Here are some supported and unsupported configurations:
 
-### Example 1: Different models between servers
+### ![supported](media/drive-symmetry-considerations/supported.png) Supported: Different models between servers
 
 The first two servers use NVMe model "X" but the third server uses NVMe model "Z", which is very similar.
 
