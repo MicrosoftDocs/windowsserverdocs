@@ -83,9 +83,9 @@ The first two servers use NVMe model "X" but the third server uses NVMe model "Z
 | 2 x NVMe Model X (cache)    | 2 x NVMe Model X (cache)    | 2 x NVMe Model **Z** (cache) |
 | 10 x SSD Model Y (capacity) | 10 x SSD Model Y (capacity) | 10 x SSD Model Y (capacity)  |
 
-![supported](media/drive-symmetry-considerations/supported.png) This is supported.
+This is supported.
 
-### Example 2: Different models within server
+### ![supported](media/drive-symmetry-considerations/supported.png) Supported: Different models within server
 
 Every server uses some different mix of HDD models "Y" and "Z", which are very similar.
 
@@ -95,9 +95,9 @@ Every server uses some different mix of HDD models "Y" and "Z", which are very s
 | **7** x HDD Model Y (capacity) | **5** x HDD Model Y (capacity) | **1** x HDD Model Y (capacity) |
 | **3** x HDD Model Z (capacity) | **5** x HDD Model Z (capacity) | **9** x HDD Model Z (capacity) |
 
-![supported](media/drive-symmetry-considerations/supported.png) This is supported.
+This is supported.
 
-### Example 3: Different sizes across servers
+### ![supported](media/drive-symmetry-considerations/supported.png) Supported: Different sizes across servers
 
 The first two servers use 4 TB HDD but the third server uses very similar 6 TB HDD.
 
@@ -106,9 +106,9 @@ The first two servers use 4 TB HDD but the third server uses very similar 6 TB H
 | 2 x 800 GB NVMe (cache) | 2 x 800 GB NVMe (cache) | 2 x 800 GB NVMe (cache)     |
 | 4 x 4 TB HDD (capacity) | 4 x 4 TB HDD (capacity) | 4 x **6** TB HDD (capacity) |
 
-![supported](media/drive-symmetry-considerations/supported.png) This is supported.
+This is supported, although it will result in stranded capacity.
 
-### Example 4: Different sizes within server
+### ![supported](media/drive-symmetry-considerations/supported.png) Supported: Different sizes within server
 
 Every server uses some different mix of 1.2 TB and very similar 1.6 TB SSD.
 
@@ -118,9 +118,9 @@ Every server uses some different mix of 1.2 TB and very similar 1.6 TB SSD.
 | 1 x **1.6 TB** SSD (cache) | 2 x **1.6 TB** SSD (cache) | -                        |
 | 20 x 4 TB HDD (capacity)   | 20 x 4 TB HDD (capacity)   | 20 x 4 TB HDD (capacity) |
 
-![supported](media/drive-symmetry-considerations/supported.png) This is supported.
+This is supported.
 
-### Example 5: Different types of drives across servers
+### ![unsupported](media/drive-symmetry-considerations/unsupported.png) Not supported: Different types of drives across servers
 
 Server 1 has NVMe but the others don't.
 
@@ -130,9 +130,9 @@ Server 1 has NVMe but the others don't.
 | -                    | 6 x SSD (cache)     | 6 x SSD (cache)     |
 | 18 x HDD (capacity)  | 18 x HDD (capacity) | 18 x HDD (capacity) |
 
-![unsupported](media/drive-symmetry-considerations/unsupported.png) This is not supported.
+This is not supported. The types of drives must be the same in every server.
 
-### Example 6: Different number of each type across servers
+### ![unsupported](media/drive-symmetry-considerations/unsupported.png) Not supported: Different number of each type across servers
 
 Server 3 has more drives than the others.
 
@@ -141,7 +141,7 @@ Server 3 has more drives than the others.
 | 2 x NVMe (cache)    | 2 x NVMe (cache)    | **4** x NVMe (cache)    |
 | 10 x HDD (capacity) | 10 x HDD (capacity) | **20** x HDD (capacity) |
 
-![unsupported](media/drive-symmetry-considerations/unsupported.png) This is not supported.
+This is not supported. The number of drives of each type must be the same in every server.
 
 ## Summary
 
