@@ -151,7 +151,7 @@ This is not supported. ![unsupported](media/drive-symmetry-considerations/unsupp
 
 In summary, every server in the cluster must have the same types of drives and the same number of each type, but mixing drive models and drive sizes is supported.
 
-| Constraint                               | Required?     |
+| Constraint                               |               |
 |------------------------------------------|---------------|
 | Same types of drives in every server     | **Required**  |
 | Same number of each type in every server | **Required**  |
