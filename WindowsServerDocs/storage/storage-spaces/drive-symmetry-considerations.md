@@ -84,7 +84,7 @@ The first two servers use NVMe model "X" but the third server uses NVMe model "Z
 
 | Server 1                    | Server 2                    | Server 3                     |
 |-----------------------------|-----------------------------|------------------------------|
-| 2 x NVMe Model X (cache)    | 2 x NVMe Model X (cache)    | 2 x NVMe Model **Z** (cache) |
+| 2 x NVMe Model X (cache)    | 2 x NVMe Model X (cache)    | 2 x NVMe Model <mark>Z</mark> (cache) |
 | 10 x SSD Model Y (capacity) | 10 x SSD Model Y (capacity) | 10 x SSD Model Y (capacity)  |
 
 This is supported.
