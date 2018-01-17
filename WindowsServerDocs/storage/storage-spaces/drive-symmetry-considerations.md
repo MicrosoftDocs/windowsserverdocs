@@ -39,7 +39,7 @@ For example, if one server has six HDD, they should *all* have six HDD.
 
 ### Model
 
-We recommend using drives of the same model and firmware version whenever possible. If you can't, carefully select drives that are as similar as possible. We discourage mixing-and-matching drives of the same type with sharply different performance or endurance characteristics (unless one is cache and the other is capacity) because Storage Spaces Direct distributes IO evenly and does not discriminate based on model.
+We recommend using drives of the same model and firmware version whenever possible. If you can't, carefully select drives that are as similar as possible. We discourage mixing-and-matching drives of the same type with sharply different performance or endurance characteristics (unless one is cache and the other is capacity) because Storage Spaces Direct distributes IO evenly and doesn't discriminate based on model.
 
 ### Size
 
@@ -54,13 +54,13 @@ Using cache drives of different sizes may not improve cache performance – see 
 
 ## Understand: capacity imbalance
 
-Storage Spaces Direct is robust to capacity imbalance across drives and across servers. Even if the imbalance is severe, everything will continue to work. However, depending on several factors, capacity that is not available in every server may not be usable.
+Storage Spaces Direct is robust to capacity imbalance across drives and across servers. Even if the imbalance is severe, everything will continue to work. However, depending on several factors, capacity that isn't available in every server may not be usable.
 
 To see why this happens, consider the simplified illustration below. Each colored box represents one copy of mirrored data. For example, the boxes marked A, A', and A'' are three copies of the same data. To honor server fault tolerance, these copies *must* be stored in different servers.
 
 ### Stranded capacity
 
-As drawn, Server 1 (10 TB) and Server 2 (10 TB) are full. Server 3 has larger drives, therefore its total capacity is larger (15 TB). However, to store more three-way mirror data on Server 3 would require copies on Server 1 and Server 2 too, which are already full. The remaining 5 TB capacity on Server 3 cannot be used – it is *"stranded"* capacity.
+As drawn, Server 1 (10 TB) and Server 2 (10 TB) are full. Server 3 has larger drives, therefore its total capacity is larger (15 TB). However, to store more three-way mirror data on Server 3 would require copies on Server 1 and Server 2 too, which are already full. The remaining 5 TB capacity on Server 3 can't be used – it's *"stranded"* capacity.
 
 ![Three-way mirror, three servers, stranded capacity](media/drive-symmetry-considerations/Size-Asymmetry-3N-Stranded.png)
 
@@ -76,7 +76,7 @@ The number of servers, the resiliency, the severity of the capacity imbalance, a
 
 Storage Spaces Direct is robust to cache imbalance across drives and across servers. Even if the imbalance is severe, everything will continue to work. Moreover, Storage Spaces Direct always uses all available cache to the fullest.
 
-However, using cache drives of different sizes may not improve cache performance uniformly or predictably: only IO to [drive bindings](understand-the-cache.md#server-side-architecture) with larger cache drives may see improved performance. Storage Spaces Direct distributes IO evenly across bindings and does not discriminate based on cache-to-capacity ratio.
+However, using cache drives of different sizes may not improve cache performance uniformly or predictably: only IO to [drive bindings](understand-the-cache.md#server-side-architecture) with larger cache drives may see improved performance. Storage Spaces Direct distributes IO evenly across bindings and doesn't discriminate based on cache-to-capacity ratio.
 
 ![Cache imbalance](media/drive-symmetry-considerations/Cache-Asymmetry.png)
 
@@ -143,7 +143,7 @@ Server 1 has NVMe but the others don't.
 | -                    | 6 x SSD (cache)     | 6 x SSD (cache)     |
 | 18 x HDD (capacity)  | 18 x HDD (capacity) | 18 x HDD (capacity) |
 
-This isn't supported. The types of drives must be the same in every server.
+This isn't supported. The types of drives should be the same in every server.
 
 ### ![unsupported](media/drive-symmetry-considerations/unsupported.png) Not supported: different number of each type across servers
 
@@ -154,11 +154,11 @@ Server 3 has more drives than the others.
 | 2 x NVMe (cache)    | 2 x NVMe (cache)    | <mark>4</mark> x NVMe (cache)    |
 | 10 x HDD (capacity) | 10 x HDD (capacity) | <mark>20</mark> x HDD (capacity) |
 
-This isn't supported. The number of drives of each type must be the same in every server.
+This isn't supported. The number of drives of each type should be the same in every server.
 
 ## Summary
 
-To recap, every server in the cluster must have the same types of drives and the same number of each type. It is supported to mix-and-match drive models and drive sizes as needed, with the considerations above.
+To recap, every server in the cluster should have the same types of drives and the same number of each type. It is supported to mix-and-match drive models and drive sizes as needed, with the considerations above.
 
 | Constraint                               |               |
 |------------------------------------------|---------------|
