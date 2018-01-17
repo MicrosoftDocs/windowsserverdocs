@@ -149,7 +149,7 @@ This is not supported. The number of drives of each type must be the same in eve
 
 ## Summary
 
-To recap, every server in the cluster <span style="background-color: #FFFF00">must</span> have the same types of drives and the same number of each type. It is supported to mix-and-match drive models and drive sizes as needed, with the caveats described above.
+To recap, every server in the cluster must have the same types of drives and the same number of each type. It is supported to mix-and-match drive models and drive sizes as needed, with the caveats described above.
 
 | Constraint                               |               |
 |------------------------------------------|---------------|
