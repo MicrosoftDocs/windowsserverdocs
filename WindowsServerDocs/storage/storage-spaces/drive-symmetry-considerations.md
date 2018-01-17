@@ -54,7 +54,7 @@ Mixing-and-matching capacity drives of different sizes may result in stranded ca
 
 Storage Spaces Direct is robust to capacity imbalance across drives and across servers. Even if the imbalance is severe, everything will continue to work. However, depending on several factors, capacity that is not available in every server may not be usable.
 
-To see why this happens, consider the example below. Each colored square below represents one copy of mirrored data. For example, the squares marked A, A', and A'' are three copies of the same data. To preserve server fault tolerance, these copies of the same data *must* be stored in different servers.
+To see why this happens, consider the example below. Each colored box represents one copy of mirrored data. For example, the boxes marked A, A', and A'' are three copies of the same data. To preserve server fault tolerance, these copies of the same data *must* be stored in different servers.
 
 ### With stranded capacity
 
@@ -74,7 +74,7 @@ The number of servers, the resiliency, and the severity of the capacity imbalanc
 
 Here are some supported and unsupported configurations:
 
-### Different models between servers
+### Example 1: Different models between servers
 
 The first two servers use NVMe model "X" but the third server uses NVMe model "Z", which is very similar.
 
@@ -83,9 +83,9 @@ The first two servers use NVMe model "X" but the third server uses NVMe model "Z
 | 2 x NVMe Model X (cache)    | 2 x NVMe Model X (cache)    | 2 x NVMe Model **Z** (cache) |
 | 10 x SSD Model Y (capacity) | 10 x SSD Model Y (capacity) | 10 x SSD Model Y (capacity)  |
 
-This is supported. ![supported](media/drive-symmetry-considerations/supported.png)
+![supported](media/drive-symmetry-considerations/supported.png) This is supported.
 
-### Different models within server
+### Example 2: Different models within server
 
 Every server uses some different mix of HDD models "Y" and "Z", which are very similar.
 
@@ -95,9 +95,9 @@ Every server uses some different mix of HDD models "Y" and "Z", which are very s
 | **7** x HDD Model Y (capacity) | **5** x HDD Model Y (capacity) | **1** x HDD Model Y (capacity) |
 | **3** x HDD Model Z (capacity) | **5** x HDD Model Z (capacity) | **9** x HDD Model Z (capacity) |
 
-This is supported. ![supported](media/drive-symmetry-considerations/supported.png)
+![supported](media/drive-symmetry-considerations/supported.png) This is supported.
 
-### Different sizes across servers
+### Example 3: Different sizes across servers
 
 The first two servers use 4 TB HDD but the third server uses very similar 6 TB HDD.
 
@@ -106,9 +106,9 @@ The first two servers use 4 TB HDD but the third server uses very similar 6 TB H
 | 2 x 800 GB NVMe (cache) | 2 x 800 GB NVMe (cache) | 2 x 800 GB NVMe (cache)     |
 | 4 x 4 TB HDD (capacity) | 4 x 4 TB HDD (capacity) | 4 x **6** TB HDD (capacity) |
 
-This is supported. ![supported](media/drive-symmetry-considerations/supported.png)
+![supported](media/drive-symmetry-considerations/supported.png) This is supported.
 
-### Different sizes within server
+### Example 4: Different sizes within server
 
 Every server uses some different mix of 1.2 TB and very similar 1.6 TB SSD.
 
@@ -118,9 +118,9 @@ Every server uses some different mix of 1.2 TB and very similar 1.6 TB SSD.
 | 1 x **1.6 TB** SSD (cache) | 2 x **1.6 TB** SSD (cache) | -                        |
 | 20 x 4 TB HDD (capacity)   | 20 x 4 TB HDD (capacity)   | 20 x 4 TB HDD (capacity) |
 
-This is supported. ![supported](media/drive-symmetry-considerations/supported.png)
+![supported](media/drive-symmetry-considerations/supported.png) This is supported.
 
-### Different types of drives across servers
+### Example 5: Different types of drives across servers
 
 Server 1 has NVMe but the others don't.
 
@@ -130,9 +130,9 @@ Server 1 has NVMe but the others don't.
 | -                    | 6 x SSD (cache)     | 6 x SSD (cache)     |
 | 18 x HDD (capacity)  | 18 x HDD (capacity) | 18 x HDD (capacity) |
 
-This is not supported. ![unsupported](media/drive-symmetry-considerations/unsupported.png)
+![unsupported](media/drive-symmetry-considerations/unsupported.png) This is not supported.
 
-### Different number of each type across servers
+### Example 6: Different number of each type across servers
 
 Server 3 has more drives than the others.
 
@@ -141,11 +141,11 @@ Server 3 has more drives than the others.
 | 2 x NVMe (cache)    | 2 x NVMe (cache)    | **4** x NVMe (cache)    |
 | 10 x HDD (capacity) | 10 x HDD (capacity) | **20** x HDD (capacity) |
 
-This is not supported. ![unsupported](media/drive-symmetry-considerations/unsupported.png)
+![unsupported](media/drive-symmetry-considerations/unsupported.png) This is not supported.
 
 ## Summary
 
-In summary, every server in the cluster must have the same types of drives and the same number of each type, but mixing drive models and drive sizes is supported.
+To recap, every server in the cluster must have the same types of drives and the same number of each type. It is supported to mix-and-match drive models and drive sizes as needed, with the caveats described above.
 
 | Constraint                               |               |
 |------------------------------------------|---------------|
