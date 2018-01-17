@@ -8,7 +8,7 @@ ms.suite: na
 ms.technology: server-general
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.date: 09/14/2017
+ms.date: 01/17/2018
 ms.assetid: 0c3dc323-8beb-4d7d-a2e0-12bda848ddcb
 author: lizap
 ms.author: elizapo
@@ -32,13 +32,13 @@ Use the links below to view technical content for IT professionals for the diffe
 
 ## Windows Server 2012 R2 and Windows Server 2012
 
-[Windows Server 2012 R2 and Windows Server 2012 Technical Library](https://technet.microsoft.com/library/hh801901) 
+[Windows Server 2012 R2 and Windows Server 2012 Technical Library](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/) 
 
 [Windows Server 2012 R2 Developer Library on MSDN](https://msdn.microsoft.com/library/dn609939(v=vs.85).aspx) 
 
 ## Windows Server 2008 R2 and Windows Server 2008
 
-[Windows Server 2008 R2 and Windows Server 2008 Technical Library](https://technet.microsoft.com/library/dd349801)
+[Windows Server 2008 R2 and Windows Server 2008 Technical Library](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008)
  
 [Windows Server 2008 Developer Library on MSDN](https://msdn.microsoft.com/library/hh738539.aspx) 
 
