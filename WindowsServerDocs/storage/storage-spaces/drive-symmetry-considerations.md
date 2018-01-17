@@ -47,7 +47,7 @@ It is not advisable to mix-and-match drives of the same type with sharply differ
 
 It is recommended to use drives of the same sizes whenever possible.
 
-Using cache drives of different sizes will not boost cache performance uniformly: only IO to [drive bindings](understand-the-cache.md#server-side-architecture) with larger cache drives may see improved performance. See [Understanding the cache](understand-the-cache.md) to learn more.
+Using cache drives of different sizes will not boost cache performance predictably or uniformly: only IO to [drive bindings](understand-the-cache.md#server-side-architecture) with larger cache drives may see improved performance. See [Understanding the cache](understand-the-cache.md) to learn more.
 
 Using capacity drives of different sizes may result in stranded capacity – see the next section.
 
