@@ -55,16 +55,15 @@ Note that RAM sizes use base-2 numbering (where 1 GB = 1,024 MB), while drives a
 
 For more help choosing drives, see the [Choosing drives](choosing-drives.md) topic.
 
-- Use local-attached SATA, SAS, or NVMe drives.
-- Every drive must be physically connected to only one server.
-- All servers must have the same drive types (if one server has NVMe, they all require NVMe.  If one has HDD, they all require HDD)
-- Recommended: All servers have the same drive configuration (type, size, firmware)
-- SSDs must have [power-loss protection](https://blogs.technet.microsoft.com/filecab/2016/11/18/dont-do-it-consumer-ssd/), i.e. they are "enterprise-grade"
-- Recommended: Cache drives must have high write endurance: at least 3 drive-writes-per-day (DWPD) or at least 4 terabytes written (TBW) per day. To learn more, see [Understanding drive writes per day (DWPD), terabytes written (TBW), and the minimum recommended for Storage Spaces Direct](https://blogs.technet.microsoft.com/filecab/2017/08/11/understanding-dwpd-tbw/).
-- Recommended: Add capacity drives in multiples of the number of NVMe or SSD cache devices.
-- Drives can be 512n, 512e, or 4K native - they all work equally well.
-- Use a separate, dedicated drive or RAID 1 mirror for Windows Server (200 GB is a recommended minimum size).
-- **Not supported:** Multi-path IO (MPIO) or physically connecting drives via multiple paths.
+- Use local-attached SATA, SAS, or NVMe drives
+- Every drive must be physically connected to only one server
+- Every server in the cluster should have the same types of drives and the same number of each type. We recommend using drives of the same model, size, and firmware version whenever possible. To learn more, see [Drive symmetry considerations for Storage Spaces Direct](drive-symmetry-considerations.md).
+- SSDs must be "enterprise-grade" meaning they provide [power-loss protection](https://blogs.technet.microsoft.com/filecab/2016/11/18/dont-do-it-consumer-ssd/)
+- Recommended: Cache drives should have high write endurance: at least 3 drive-writes-per-day (DWPD) or at least 4 terabytes written (TBW) per day. To learn more, see [Understanding drive writes per day (DWPD), terabytes written (TBW), and the minimum recommended for Storage Spaces Direct](https://blogs.technet.microsoft.com/filecab/2017/08/11/understanding-dwpd-tbw/).
+- Recommended: Add capacity drives in multiples of the number of NVMe or SSD cache devices
+- Drives can be 512n, 512e, or 4K native
+- Use a separate, dedicated drive or RAID 1 mirror for Windows Server boot (recommended 200 GB minimum size)
+- **Not supported:** Multi-path IO (MPIO) or physically connecting drives via multiple paths
 
 > [!NOTE]
 > Microsoft has a critical product advisory for Storage Spaces Direct customers using the Intel P3x00 family of NVMe devices (all capacities of the P3500, P3600, P3700). See Knowledge Base article [4052341](https://support.microsoft.com/help/4052341) for more information.
