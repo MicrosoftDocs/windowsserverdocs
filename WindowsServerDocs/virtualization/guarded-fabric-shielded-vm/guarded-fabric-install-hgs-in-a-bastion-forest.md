@@ -65,6 +65,9 @@ Add-ADGroupMember -Identity $hgsNodes -Members "HGS01"
 New-ADServiceAccount -Name 'HGSgMSA' -DnsHostName 'HGSgMSA.yourdomain.com' -PrincipalsAllowedToRetrieveManagedPassword $hgsNodes
 ```
 
+The gMSA will require the right to generate events in the security log on each HGS server.
+If you use Group Policy to configure User Rights Assignment, ensure that the gMSA account is granted the [generate audit events privilege](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn221956%28v=ws.11%29) on your HGS servers.
+
 > [!NOTE]
 > Group managed service accounts are available beginning with the Windows Server 2012 Active Directory schema.
 > For more information, see [group managed service account requirements](https://technet.microsoft.com/library/jj128431.aspx).
