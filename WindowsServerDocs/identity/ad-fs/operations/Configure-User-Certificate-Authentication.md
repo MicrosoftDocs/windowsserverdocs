@@ -5,7 +5,7 @@ description:
 author: jenfieldmsft
 ms.author: billmath
 manager: samueld
-ms.date: 01/12/2018
+ms.date: 01/18/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.service: active-directory
@@ -31,6 +31,12 @@ AD FS can be configured for x509 user certificate authentication using one of th
 The intermediate certificates should be installed in the local computer intermediate certification authorities store on all AD FS and WAP servers.
 - If you wish to use claims based on certificate fields and extensions in addition to EKU (claim type https://schemas.microsoft.com/2012/12/certificatecontext/extension/eku), configure additional claim pass through rules on the Active Directory claims provider trust.  See below for a complete list of available certificate claims.  
 - [Optional] Configure allowed issuing certification authorities for client certificates using the guidance under "Management of trusted issuers for client authentication" in [this article](https://technet.microsoft.com/en-us/library/dn786429(v=ws.11).aspx).
+
+## Configure Seamless Certificate Authentication for Chrome browser on Windows Desktops
+When multiple user certificates (such as Wi-Fi certificates) are present on the machine that satisfy the purposes of client authentication, the Chrome browser on Windows desktop will prompt the user to select the right certificate. This may be confusing to the end user. To optimize this experience, you can set a policy for Chrome to auto-select the right certificate for a better user experience. This policy can be set manually by making a registry change or configured automatically via GPO (to set the registry keys). This requires your user client certificates for authentication against AD FS to have distinct issuers from other use cases. 
+
+For more information on configuring this for Chrome, please refer to this [link](http://www.chromium.org/administrators/policy-list-3#AutoSelectCertificateForUrls).  
+
 
 ## Troubleshooting
 - If certificate authentication requests fail with an HTTP 204 "No Content from https://certauth.fs.contoso.com" response, verify that the root and any intermediate CA certificates are installed, respectively, to the trusted root CA and intermediate CA certificate stores on all federation servers.
