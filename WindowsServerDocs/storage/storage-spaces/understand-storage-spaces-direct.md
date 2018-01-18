@@ -7,7 +7,7 @@ ms.manager: dongill
 ms.technology: storage-spaces
 ms.topic: article
 author: jasongerend
-ms.date: 1/10/2017
+ms.date: 1/18/2017
 description: Resources to help you understand Storage Spaces Direct, a Windows Server-based software-defined storage solution.
 ms.localizationpriority: medium
 ---
@@ -23,6 +23,7 @@ ms.localizationpriority: medium
 - [Storage Spaces Direct overview](storage-spaces-direct-overview.md)
 - [Understanding the cache in Storage Spaces Direct](understand-the-cache.md)
 - [Fault tolerance and storage efficiency in Storage Spaces Direct](storage-spaces-fault-tolerance.md)
+- [Drive symmetry considerations](drive-symmetry-considerations.md)
 
 
 ## See also
