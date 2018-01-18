@@ -1,4 +1,4 @@
----
+8--
 title: Storage Spaces Direct Hardware Requirements
 ms.prod: windows-server-threshold
 description: Minimum hardware requirements for testing Storage Spaces Direct.
@@ -7,7 +7,7 @@ ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: eldenchristensen
-ms.date: 11/27/2017
+ms.date: 01/18/2018
 ms.localizationpriority: medium
 ---
 # Storage Spaces Direct hardware requirements
@@ -50,6 +50,7 @@ Note that RAM sizes use base-2 numbering (where 1 GB = 1,024 MB), while drives a
 - Minimum of 10 Gbps network interface for intra-cluster communication
 - Recommended: Two NICs for redundancy and performance
 - Recommended: NICS that are remote-direct memory access (RDMA) capable, iWARP or RoCE
+- With 2 servers, direct-connect (switchless) is supported
 
 ### Drives
 
