@@ -2,7 +2,7 @@
 title: Windows Server
 description: Get started with Windows Server
 ms.prod: windows-server-threshold
-ms.date: 10/17/2017
+ms.date: 01/17/2018
 ms.technology: server-general
 ms.topic: article
 author: jaimeo
@@ -13,6 +13,9 @@ ms.localizationpriority: high
 # Windows Server technical content library
 
 This library provides info for IT pros to evaluate, plan, deploy, secure, and manage Windows Server.
+
+>[!TIP]
+> Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/) on docs.microsoft.com. You can also [search this site](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions) for specific information.
 
 **What's new in Windows Server? Check out our latest mechanics video:**
 <br>
