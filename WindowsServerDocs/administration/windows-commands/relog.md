@@ -37,7 +37,9 @@ Specifies the pathname of the text file that lists the performance counters to b
 Specifies the pathname of the output file format. The default format is **bin**. For a SQL database, the output file specifies the *DSN!CounterLog*. You can specify the database location by using the ODBC manager to configure the DSN (Database System Name).  
 **-t** *Value*  
 Specifies sample intervals in "*N*" records. Includes every nth data point in the relog file. Default is every data point.  
-**-o** {*OutputFile* | *DSN!CounterLog*}  
+**-o** {*OutputFile* | *"SQL:DSN!Counter_Log*}
+where DSN is a ODMC DSN defined on the system.
+Note: For the 64-bit and 32-bit versions of Relog.exe, you need to define a DSN in the ODBC Data Source (64-bit and 32-bit respectively)   
 Specifies the pathname of the output file or SQL database where the counters will be written.  
 **-b** *M***/***D***/***YYYY* [[ *HH***:**]*MM***:**]*SS*  
 Specifies begin time for copying first record from the input file. date and time must be in this exact format *M***/***D***/***YYYYHH***:***MM***:***SS*.  
@@ -99,7 +101,11 @@ relog c:\perflogs\daily_trace_log.blg /cf counter_file.txt /o c:\perflogs\reduce
 To resample existing trace logs at fixed intervals of 30, list counter paths and output file:  
 ```  
 relog c:\perflogs\daily_trace_log.blg /cf counter_file.txt /o c:\perflogs\reduced_log.blg /t 30  
-```  
+```
+To resample existing trace logs into a database use:
+```
+relog "c:\perflogs\daily_trace_log.blg" -f sql -o "SQL:sql2016x64odbc!counter_log"
+```
 ## additional references  
 -   [Command-Line Syntax Key](command-line-syntax-key.md)  
 -   [Command-Line Reference_1](command-line-reference_1.md)  
