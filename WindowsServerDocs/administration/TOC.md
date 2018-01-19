@@ -1,7 +1,8 @@
 # [Manage Windows Server](manage-windows-server.md)
 ## Manage Windows Server systems and environments
 ### [Manage Windows Server Hybrid Cloud Print](hybrid-cloud-print/hybrid-cloud-print-overview.md)
-#### [Deploy Windows Server Hybrid Cloud Print](hybrid-cloud-print/hybrid-cloud-print-deploy.md)
+#### [Deploy Windows Server Hybrid Cloud Print with Pre-Authentication](hybrid-cloud-print/hybrid-cloud-print-deploy.md)
+#### [Deploy Windows Server Hybrid Cloud Print with Passthrough Auth](hybrid-cloud-print/hybrid-cloud-print-deploy-passthrough.md)
 ### [Manage on-premises systems with Microsoft Project Honolulu](../manage/honolulu/honolulu.md)
 #### [Deploy Project Honolulu Gateway](../manage/honolulu/deployment-guide.md)
 #### [Manage Windows Server with Project Honolulu](../manage/honolulu/honolulu-manage.md) 
