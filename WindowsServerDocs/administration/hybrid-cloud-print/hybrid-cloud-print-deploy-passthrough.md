@@ -1,6 +1,6 @@
 ---
-title: Deploy Windows Server Hybrid Cloud Print
-description: "How to set up Microsoft Hybrid Cloud Print"
+title: Deploy Windows Server Hybrid Cloud Print - Passthrough Auth
+description: "How to set up Microsoft Hybrid Cloud Print with passthrough authentication"
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
@@ -11,10 +11,10 @@ ms.assetid: fc239aec-e719-47ea-92fc-d82a7247c5e9
 author: msjimwu
 ms.author: coreyp
 manager: dongill
-ms.date: 1/5/2018
+ms.date: 1/16/2018
 ---
 
-# Deploy Windows Server Hybrid Cloud Print with Pre-Authentication
+# Deploy Windows Server Hybrid Cloud Print with Passthrough Authentication
 
 >Applies To: Windows Server 2016
 
@@ -58,7 +58,7 @@ This guide outlines five (5) installation steps:
 
 - Step 1: Install Azure AD Connect to sync between Azure AD and on-premises AD
 - Step 2: Install Hybrid Cloud Print package on the Print Server
-- Step 3: Install Azure Application Proxy (AAP) with Kerberos Constrained Delegation (KCD)
+- Step 3: Install Azure Application Proxy (AAP) with Passthrough Authentication
 - Step 4: Configure the required MDM policies
 - Step 5: Publish shared printers
 
@@ -162,7 +162,7 @@ This guide outlines five (5) installation steps:
                 `ms-appx-web://Microsoft.AAD.BrokerPlugin/\<NativeClientAppID\>`
                 `ms-appx-web://Microsoft.AAD.BrokerPlugin/S-1-15-2-3784861210-599250757-1266852909-3189164077-45880155-1246692841-283550366`
 
-### Step 3 - Install Azure Application Proxy (AAP) with Kerberos Constrained Delegation (KCD)
+### Step 3 - Install Azure Application Proxy (AAP) with Passthrough Authentication
 1. Login to your Azure AD (AAD) tenant management portal
     - In the AAD menu list, select "Application proxy"
     - Click "Enable application proxy" at the top of the screen
@@ -170,52 +170,21 @@ This guide outlines five (5) installation steps:
 2. On the WAP machine, login as an Administrator and install the "Application Proxy Connector"
     - During installation, give the application proxy connector the credentials to your Azure tenet that you want to enable AAP on
     - Make sure the WAP machine is domain joined to your on-premises Active Directory
-3. On the Active Directory machine, go to **Tools -> Users and Computers**
-    - Select the machine that is running the Application Proxy Connector
-    - Right-click and select **Properties -> Delegation** tab
-    - Select **Trust this computer for delegation to specified services only.**
-    - Select **Use any authentication protocol.**
-    - Under **Services to which this account can present delegated credentials**
-        - Add the value for the SPN identity of the machine running the Services (MopriaDiscoveryService and MicrosoftEnterpriseCloudPrint service)
-            - For SPN, enter the SPN of the machine itself, i.e.
-                    "HOST/\<MachineName\>.\<Domain\>"<br>
-                `HOST/appServer.Contoso.com`
-4. Go back to the AAD tenant management portal and add the application proxies
+3. Go back to the AAD tenant management portal and add the application proxies
     - Go to the **Applications** tab
     - Click **Add**
     - Select **Publish an application that will be accessible from outside your network** and fill in the fields
         - Name: Any name you wish
         - Internal URL: This is the internal URL to the Mopria Discovery Cloud Service which your WAP machine can access
-        - Preauthentication Method: Azure Active Directory
-        - Internal Authentication Method: Integrated Windows Authentication
-        - Internal Application SPN: set to the SPN you specified in 3, above
+        - Preauthentication Method: Passthrough
 
     >   Note: If you don’t find all the settings above, add the proxy with the settings available and then select the application proxy you just created and go to the "Configure" tab and add all the above information.
 
-5. Repeat 4, above, for the Enterprise Cloud Print Service and provide the Internal URL to your Enterprise Cloud Print Service
-6. Go to the "Application Proxy -> Configure" tab to configure the external URL of the Mopria Discovery Cloud Service endpoint and the Enterprise Cloud Print Service endpoint
-7. Go back to the Azure AD tenant management portal and go into the Native Client App settings
-    - Select **Required permissions**
-        - Add the 2 new proxy applications you just created
-        - Grant Delegated Permissions for these 2 applications
+4. Repeat 3, above, for the Enterprise Cloud Print Service and provide the Internal URL to your Enterprise Cloud Print Service
+5. Go to the "Application Proxy -> Configure" tab to configure the external URL of the Mopria Discovery Cloud Service endpoint and the Enterprise Cloud Print Service endpoint
 
     >   Note: The https://&lt;services-machine-endpoint&gt;/mcs URL mentioned below should be the External URL you setup for your Mopria Cloud Service and/or Enterprise Cloud Print Service.
 
-8. Enable Windows Authentication in IIS for the Mopria Cloud Service and Enterprise Cloud Print Service machine(s)
-    - Make sure Windows Authentication feature is installed:
-        1. Open Server Manager
-        2. Click **Manage**
-        3. Click **Add Roles and Features**
-        4. Select **Role-based or feature-based installation**
-        5. Select the Server
-        6. Under Web Server (IIS) -> Web Server -> Security, select **Windows Authentication**
-        7. Click next until you finish installation
-    - Enable Windows Authentication in IIS:
-        1. Open Internet Information Services (IIS) Manager
-        2. For each service/site:
-            1.  Select the service/site
-            2.  Double click **Authentication**
-            3.  Click **Windows Authentication** and click **Enable** under **Actions**
 
 ### Step 4 - Configure the required MDM policies
 - Login to your MDM provider
@@ -230,7 +199,7 @@ This guide outlines five (5) installation steps:
 
 - OMA-URI
     - `CloudPrintOAuthAuthority = ./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/CloudPrintOAuthAuthority`
-        - Value = `https://login.microsoftonline.com/`\<Azure AD Directory ID\>
+        - Value = https://login.microsoftonline.com/\<Azure AD Directory ID\>
     - `CloudPrintOAuthClientId = ./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/CloudPrintOAuthClientId`
         - Value = \<Azure AD Native App's Application ID\>
     - `CloudPrintResourceId = ./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/CloudPrintResourceId`

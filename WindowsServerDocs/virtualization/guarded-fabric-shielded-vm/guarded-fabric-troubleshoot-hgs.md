@@ -157,3 +157,20 @@ You can verify the attestation mode of your HGS server by running [Get-HgsServer
 If you are trying to configure memory dump encryption policies and do not see the default HGS dump policies (Hgs\_NoDumps, Hgs\_DumpEncryption and Hgs\_DumpEncryptionKey) or the dump policy cmdlet (Add-HgsAttestationDumpPolicy), it is likely that you do not have the latest cumulative update installed.
 To fix this, [update your HGS server](guarded-fabric-manage-hgs.md#patching-hgs) to the latest cumulative Windows update and [activate the new attestation policies](guarded-fabric-manage-hgs.md#updates-requiring-policy-activation).
 Ensure you update your Hyper-V hosts to the same cumulative update before activating the new attestation policies, as hosts that do not have the new dump encryption capabilities installed will likely fail attestation once the HGS policy is activated.
+
+## Endorsement Key Certificate error messages
+
+When registering a host using the [Add-HgsAttestationTpmHost](https://docs.microsoft.com/en-us/powershell/module/hgsattestation/add-hgsattestationtpmhost) cmdlet, two TPM identifiers are extracted from the provided platform identifier file: the endorsement key certficate (EKcert) and the public endorsement key (EKpub).
+The EKcert identifies the manufacturer of the TPM, providing assurances that the TPM is authentic and manufactured through the normal supply chain.
+The EKpub uniquely identifies that specific TPM, and is one of the measures HGS uses to grant a host access to run shielded VMs.
+
+You will receive an error when registering a TPM host if either of the two conditions are true:
+1. The platform identifier file **does not** contain an endorsement key certificate
+2. The platform identifier file contains an endorsement key certificate, but that certificate is **not trusted** on your system
+
+Certain TPM manufacturers do not include EKcerts in their TPMs.
+If you suspect that this is the case with your TPM, confirm with your OEM that your TPMs should not have an EKcert and use the `-Force` flag to manually register the host with HGS.
+If your TPM should have an EKcert but one was not found in the platform identifier file, ensure you are using an administrator (elevated) PowerShell console when running [Get-PlatformIdentifier](https://docs.microsoft.com/en-us/powershell/module/platformidentifier/get-platformidentifier) on the host.
+
+If you received the error that your EKcert is untrusted, ensure that you have [installed the trusted TPM root certificates package](guarded-fabric-install-trusted-tpm-root-certificates.md) on each HGS server and that the root certificate for your TPM vendor is present in the local machine's **TrustedTPM\_RootCA** store. Any applicable intermediate certificates also need to be installed in the **TrustedTPM\_IntermediateCA** store on the local machine.
+After installing the root and intermediate certificates, you should be able to run `Add-HgsAttestationTpmHost` successfully.
