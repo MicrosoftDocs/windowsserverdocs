@@ -34,11 +34,6 @@ This document contains a list of all of the documentation for deploying AD FS fo
 
 * [Upgrading to AD FS in Windows Server 2016 using a SQL database](deployment/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL.md)  
 
-
-* [Required updates for AD FS and WAP](deployment/Updates-for-Active-Directory-Federation-Services-AD-FS.md)
-
-
-
 * [Windows Server 2016 and 2012 R2 Deployment Guide](deployment/Windows-Server-2012-R2-AD-FS-Deployment-Guide.md)
 
 * [Windows Server 2012 Deployment Guide](deployment/Windows-Server-2012-AD-FS-Deployment-Guide.md)
