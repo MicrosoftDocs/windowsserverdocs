@@ -64,4 +64,3 @@ Use the links below to view technical content for IT professionals for the diffe
 > [!TIP]
 > Are you having a problem? Start with [Microsoft Support](https://support.microsoft.com) - just type your problem into the search bar. You can get help with Windows, Office, Skype, you name it. 
 
-Not finding content you need? Windows 10 users, tell us what you want on [Feedback Hub](feedback-hub://?referrer=techDocsUcPage&tabid=2&contextid=898&newFeedback=true&topic=windows-server-versions.md). 

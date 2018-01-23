@@ -147,5 +147,3 @@ For more information, see [Guarded fabric and shielded VMs overview](https://doc
 - **Management of Remote Computers and Devices**.  You can manage Windows 10 VPN clients by configuring the Device Tunnel (prelogon) feature in the VPN profile. In addition, you must configure the VPN connection to dynamically register the IP addresses that are assigned to the VPN interface with internal DNS services.
 - **Specify Pre-Logon Gateways**. You can specify Pre-Logon Gateways with the Device Tunnel (prelogon) feature in the VPN profile, combined with traffic filters to control which management systems on the corporate network are accessible via the device tunnel.
 
-
-Not finding content you need? Windows 10 users, tell us what you want on [Feedback Hub](feedback-hub:?tabid=2&contextid=898). 

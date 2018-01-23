@@ -33,4 +33,3 @@ Be aware that when you enable access to Remote Desktop, you are granting anyone 
  
 If you want to restrict who can access your PC, choose to allow access only with Network Level Authentication (NLA). When you enable this option, users have to authenticate themselves to the network before they can connect to your PC. Allowing connections only from computers running Remote Desktop with NLA is a more secure authentication method that can help protect your computer from malicious users and software. To learn more about NLA and Remote Desktop, check out  [Configure NLA for RDS Connections](https://technet.microsoft.com/library/cc732713(v=ws.11).aspx). 
  
-Not finding content you need? Windows 10 users, tell us what you want on [Feedback Hub](feedback-hub://?referrer=techDocsUcPage&tabid=2&contextid=898&newFeedback=true&topic=remote-desktop-allow-access.md). 
