@@ -1,8 +1,23 @@
+---
+title: Manage Azure IaaS Virtual Machines with Honolulu
+description: "How to manage Azure IaaS VMs with Honolulu"
+ms.prod: windows-server-threshold
+ms.reviewer: na
+ms.suite: na
+ms.technology: Honolulu
+ms.tgt_pltfrm: na
+ms.topic:
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 01/23/2018
+---
 
+# Manage Azure IaaS Virtual Machines with Honolulu
 
-# Azure IaaS VM management with Honolulu
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10
 
-You can use Project Honolulu to manage your Azure VMs as well as on-premise machines. There are several different configurations possible. This article will walk through you those options to help you decide which configuration makes sense for your scenario.
+You can use Project Honolulu to manage your Azure VMs as well as on-premises machines. There are several different configurations possible. This article will walk through you those options to help you decide which configuration makes sense for your scenario.
 
 ## Manage with an on-premise Honolulu gateway
 
