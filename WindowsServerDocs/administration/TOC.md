@@ -9,6 +9,7 @@
 ##### [Manage Hyper-Converged Infrastructure with Project Honolulu](../manage/honolulu/honolulu-manage-hci.md)
 ##### [Configure Windows Server standalone Hyper-V Server for management by Project Honolulu](../manage/honolulu/honolulu-standalone-hyper-v.md) 
 ##### [Protect your Honolulu-managed Hyper-V Virtual Machines with Azure Site Recovery](../manage/honolulu/honolulu-and-asr.md) 
+##### [Manage Azure IaaS Virtual Machines with Honolulu](../manage/honolulu/honolulu-manage-azure-vms.md)
 #### [Troubleshoot Project Honolulu](../manage/honolulu/honolulu-troubleshoot.md) 
 ##### [Project Honolulu known issues](../manage/honolulu/honolulu-known-issues.md)
 #### [Project Honolulu FAQ](../manage/honolulu/honolulu-faq.md)
