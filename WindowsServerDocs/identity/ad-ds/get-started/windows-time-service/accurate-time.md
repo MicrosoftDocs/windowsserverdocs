@@ -197,7 +197,8 @@ The following chart compares 1 virtual network hop to 6 physical network hops wi
 
 ![Windows Time](media/Windows-2016-Accurate-Time/chart3.png)
 
-## <a Name=BestPractices></a>Best Practices for accurate timekeeping
+## <a name="BestPractices"></a>Best Practices for accurate timekeeping
+
 ### Solid Source Clock
 A machines time is only as good as the source clock it synchronizes with.  In order to achieve 1 ms of accuracy, you’ll need GPS hardware or a time appliance on your network you reference as the master source clock.  Using the default of time.windows.com, may not provide a stable and local time source.  Additionally, as you get further away from the source clock, the network affects the accuracy.  Having a master source clock in each data center is required for the best accuracy.
 
