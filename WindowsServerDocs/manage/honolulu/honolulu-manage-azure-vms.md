@@ -19,9 +19,9 @@ ms.date: 01/23/2018
 
 You can use Project Honolulu to manage your Azure VMs as well as on-premises machines. There are several different configurations possible. This article will walk through you those options to help you decide which configuration makes sense for your scenario.
 
-## Manage with an on-premise Honolulu gateway
+## Manage with an on-premises Honolulu gateway
 
-If you’ve already installed Honolulu on an on-premise gateway (either on Windows 10 or Windows Server 2016), you can use this same gateway to manage Windows 10 or Windows Server 2012, 2012R2, or 2016 VMs in Azure. 
+If you’ve already installed Honolulu on an on-premises gateway (either on Windows 10 or Windows Server 2016), you can use this same gateway to manage Windows 10 or Windows Server 2012, 2012R2, or 2016 VMs in Azure. 
 
 ### Connecting to VMs with a public IP
 
@@ -52,7 +52,7 @@ You must also enable inbound connections to port 5985 for WinRM over HTTP in ord
 
 ### Connecting to VMs without a public IP
 
-If your target Azure VMs do not have public IPs, and wish to manage these VMs from a Honolulu gateway deployed in your on-premise network, you will need to configure your on-premise network to have connectivity to the VNet on which the target VMs are connected. There are 3 ways you can do this: ExpressRoute, Site-to-Site VPN, or Point-to-Site. [Learn which connectivity option makes sense in your environment.](https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-plan-design) 
+If your target Azure VMs do not have public IPs, and wish to manage these VMs from a Honolulu gateway deployed in your on-premises network, you will need to configure your on-premises network to have connectivity to the VNet on which the target VMs are connected. There are 3 ways you can do this: ExpressRoute, Site-to-Site VPN, or Point-to-Site. [Learn which connectivity option makes sense in your environment.](https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-plan-design) 
 
 Ensure WinRM is running on your target VM(s) by running the following in PowerShell or the Command Prompt on the target VM: `winrm quickconfig`
 
@@ -61,7 +61,7 @@ If you run into any issues, consult [Troubleshoot Project Honolulu](https://docs
 ## Manage with a Honolulu gateway deployed in Azure
 
 ### Deployment considerations
-You can manage Azure VMs without any on-premise dependency by deploying Project Honolulu in the VNet where your target VMs are connected. 
+You can manage Azure VMs without any on-premises dependency by deploying Project Honolulu in the VNet where your target VMs are connected. 
 
 To manage VMs outside of the VNet on which the Honolulu gateway is deployed, you must establish VNet-to-VNet connectivity between the VNet of the Honolulu gateway and the VNet of the target servers. This connectivity can be established with VNet Peering, VNet-to-VNet connection, or a Site-to-Site connection. [Learn more about which VNet-to-VNet connectivity option makes sense in your environment.](https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-howto-vnet-vnet-resource-manager-portal)
 
