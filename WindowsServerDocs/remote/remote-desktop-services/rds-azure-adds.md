@@ -41,9 +41,6 @@ Use the following steps to deploy Azure AD DS and RDS.
 1. Enable [Azure AD DS](/azure/active-directory-domain-services/active-directory-ds-getting-started). Note that the linked article does the following:
    - Walk through creating the appropriate Azure AD groups for domain administration.
    - Highlight when you might have to force users to change their password so their accounts can work with Azure AD DS.
-
-   > [!NOTE]
-   > Azure AD DS support for Azure Resource Manager virtual networks is in public preview. 
    
 2. Set up RDS. You can either use an Azure template or deploy RDS manually.
    - Use the [Existing AD template](https://azure.microsoft.com/resources/templates/rds-deployment-existing-ad/). Make sure to customize the following:
