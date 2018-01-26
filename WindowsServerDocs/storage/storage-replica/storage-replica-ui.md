@@ -12,11 +12,13 @@ manager: brianlic
 ---
 # Using Storage Replica with Project Honolulu
 
-This topic walks you through using the Project Honolulu browser-based management tool with Storage Replica to replicate storage between servers.
+This topic walks you through using the Project Honolulu browser-based management tool for *Server to Server Storage Replication.*
+
+![image](media\Storage-Replica-UI\Honolulu_SR_Partnership.png)
 
 Storage Replica is Windows Server technology that enables replication of volumes between servers or clusters for disaster recovery. It also enables you to create stretch failover clusters that span two sites, with all nodes staying in sync. For more information, see [Storage Replica overview](storage-replica-overview.md).
 
-Project Honolulu is a locally deployed, browser-based, management tool set that enables on-premises administration of Windows Servers with no Azure or cloud dependency. Project Honolulu gives IT administrators full control over all aspects of their server infrastructure and is particularly useful for management on private networks that are not connected to the Internet. For more information, see [Project Honolulu overview]().
+Project Honolulu is a locally deployed, browser-based, management tool set that enables on-premises administration of Windows Servers with no Azure or cloud dependency. Project Honolulu gives IT administrators full control over all aspects of their server infrastructure and is particularly useful for management on private networks that are not connected to the Internet. For more information, see [Project Honolulu overview](../../manage/Honolulu/Honolulu.md).
 
 ## Setup requirements
 
@@ -25,12 +27,12 @@ Storage Replica and Project Honolulu have the following requirements:
 | System                        | Operating system                                            | Required for     |
 |-------------------------------|-------------------------------------------------------------|------------------|
 | Two servers (VMs or hardware) | Windows Server (Semi-Annual Channel) or Windows Server 2016 | Storage Replica  |
-| One PC                        | Windows 10                                                  | Project Honolulu |
+| One PC  (Client Machine)                      | Windows 10                                                  | Project Honolulu |
 
 ## Install Project Honolulu and Storage Replica
 
-1. Provision operating system, features, roles, storage, and network on the servers. For more information, see Server to Server Storage Replication.
-2. Add the client to the same domain as the servers.
+1. Provision operating system, features, roles, storage, and network on the servers. For more information, see [Server to Server Storage Replication](server-to-server-storage-replication.md).
+2. Add the server machines and client to the same domain.
 3. [Download](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-honolulu) and install Project Honolulu on the client.
 4. [Download](https://www.microsoft.com/en-us/download/details.aspx?id=45520) and install RSAT (Remote Server Administration tools) on the client to allow remote management of Windows Server.
 
@@ -44,6 +46,8 @@ Storage Replica and Project Honolulu have the following requirements:
     ```
 
 3. Type **Y** to enable WinRM services and enable WinRM Firewall Exception.
+
+![image](media\Storage-Replica-UI\Winrm_QuickConfig.png)
 
 ## Set up Storage Replica in Project Honolulu
 
