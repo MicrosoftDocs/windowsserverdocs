@@ -22,6 +22,8 @@ One of the most important goals of providing a hosted environment is to guarante
 
 ## Video: Deploying a guarded fabric 
 
+[!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/dcd8e99f-36f1-4bc8-b3d2-9576da38d9f1?autoplay=false]
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/nPJfI7r_AGg" frameborder="0" allowfullscreen></iframe>
 
 ## Deployment tasks for guarded fabrics and shielded VMs
