@@ -141,4 +141,3 @@ Virtualized Storage, Networking, Security and Management technologies are the bu
   </tr>
 </table>
 
-Not finding content you need? Windows 10 users, tell us what you want on [Feedback Hub](feedback-hub:?tabid=2&contextid=898). 

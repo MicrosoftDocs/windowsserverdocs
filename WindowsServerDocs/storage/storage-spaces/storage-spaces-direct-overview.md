@@ -184,6 +184,4 @@ Try Storage Spaces Direct [in Microsoft Azure](https://blogs.technet.microsoft.c
 -   [Storage Spaces Direct throughput with iWARP](https://blogs.technet.microsoft.com/filecab/2017/03/13/storage-spaces-direct-throughput-with-iwarp) (TechNet blog)
 -   [What's New in Failover Clustering in Windows Server](../../failover-clustering/whats-new-in-failover-clustering.md)  
 -   [Storage Quality of Service](../storage-qos/storage-qos-overview.md)
-- [Windows IT Pro Support](https://www.microsoft.com/itpro/windows/support)
-
-Not finding content you need? Windows 10 users, tell us what you want on [Feedback Hub](feedback-hub://?referrer=techDocsUcPage&tabid=2&contextid=898&newFeedback=true&topic=storage-spaces-direct-overview.md). 
+-   [Windows IT Pro Support](https://www.microsoft.com/itpro/windows/support)
