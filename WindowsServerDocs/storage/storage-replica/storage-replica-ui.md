@@ -26,7 +26,7 @@ Storage Replica and Project Honolulu have the following requirements:
 
 | System                        | Operating system                                            | Required for     |
 |-------------------------------|-------------------------------------------------------------|------------------|
-| Two servers <br>(any mix of on-premises hardware, VMs, and cloud VMs including Azure VMs)| Windows Server (Semi-Annual Channel) or Windows Server 2016 | Storage Replica  |
+| Two servers <br>(any mix of on-premises hardware, VMs, and cloud VMs including Azure VMs)| Datacenter edition of Windows Server (Semi-Annual Channel) or Windows Server 2016 | Storage Replica  |
 | One PC                     | Windows 10                                                  | Project Honolulu |
 
 ## Install Project Honolulu and Storage Replica
