@@ -19,38 +19,10 @@ This topic provides a high\-level overview of Microsoft's Software Defined Netwo
 For a deeper overview of Microsoft SDN infrastructure, skip this topic and start with the topic [Software Defined Networking (SDN)](software-defined-networking.md).
 
 ## What can Microsoft SDN provide for your business?
-
-<table width="100%">
-	<tr style="border: 0;",  align="left">
-	 <td style="border: 0;", align="left">
-	  <b>Increased agility</b>
-	 </td>
-	 <td style="border: 0;">
-	  <b>Enhanced network security</b>
-	 </td>
-	  <td style="border: 0;">
-	  <b>Optimal efficiency</b>
-	 </td>
-	</tr>
-	<tr style="border: 0;">
-	 <td style="border: 0;">
-	 <br>&#10003; Accelerate your DevOps cycle</br>
-	 <br>&#10003; Manage complex policies on-demand</br>
-	 <br>&#10003; Onboard large workloads quickly</br>
-	 <br>&#10003; Work seamlessly between your private datacenter and the public cloud</br>
-	 </td>
-	<td style="border: 0;">
-	<br>&#10003; Layered architecture for stronger protection and threat isolation</br>
-	<br>&#10003; Full network control for instant reaction to threats</br>
-          <br>&#10003; Granular firewall policies</br>
-	  </td>
-		<td style="border: 0;">
-			<br> &#10003; Minimized operation and infrastructure costs </br>
-            <br> &#10003; Highly available, self-healing architecture </br>
-			<br> &#10003; Smart and flexible resource management </br>
-	 </td>
-	</tr>
-</table>
+| Increased agility | Enhanced network security | Optimal efficiency |
+| ----------- | --------- | ------|
+| &#10003; Accelerate your DevOps cycle<br>&#10003; Manage complex policies on-dmand<br>&#10003; Onboard large workloads quickly<br>&#10003; Work seamlessly between your private datacenter and the public cloud | &#10003; Layerd architecture for stronger protection and threat isolation<br>&#10003; Full network control for instant reaction to threats<br>&#10003; Granular firewall policies | &#10003; Minimized operation and infrastructure costs<br>&#10003; Highly available, self-healing architecture<br>&#10003; Smart and flexible resource management |
+|
 
 ## Microsoft SDN Mechanics Video
 
