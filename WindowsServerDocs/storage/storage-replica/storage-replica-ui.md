@@ -1,6 +1,6 @@
 ---
 title: Using Storage Replica with Project Honolulu
-description: 
+description: How to set up and use Project Honolulu to manage Storage Replica for server-to-server replication in Windows Server.
 keywords: Storage Replica, Project Honolulu, Server Manager, Windows Server
 author: arduppal
 ms.author: arduppal
