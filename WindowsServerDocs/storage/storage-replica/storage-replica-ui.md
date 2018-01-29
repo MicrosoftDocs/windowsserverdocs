@@ -2,7 +2,7 @@
 title: Using Storage Replica with Project Honolulu
 description: 
 keywords: Storage Replica, Project Honolulu, Server Manager, Windows Server
-author: arpitaduppala
+author: arduppal
 ms.author: arduppal
 ms.date: 1/29/2017
 ms.topic: article
