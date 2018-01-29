@@ -12,7 +12,7 @@ manager: mchad
 ---
 # Using Storage Replica with Project Honolulu
 
-This topic walks you through using the Project Honolulu browser-based management tool for server to server storage replication.<br>
+This topic walks you through using the Project Honolulu browser-based management tool for server-to-server storage replication.<br>
 
 ![Project Honolulu in a browser window showing the Storage Replica user interface.](media\Storage-Replica-UI\Honolulu_SR_Partnership_Result.png)
 
