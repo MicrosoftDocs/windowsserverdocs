@@ -52,13 +52,18 @@ Storage Replica and Project Honolulu have the following requirements:
 ## Set up Storage Replica in Project Honolulu
 
 1. Add the source server.
+![image](media\Storage-Replica-UI\Honolulu_Add_Connection.png)
     1. Select the `Add` button.
     2. Select **Add server connection**.
     3. Type the name of the server and then select **Submit**.
 2.  On the **All Connections** page, select the source server.
+![image](media\Storage-Replica-UI\Honolulu_Connect_To_Source_Server.png)
 3. Select **Storage Replica** from Tools panel.
+![image](media\Storage-Replica-UI\Honolulu_Select_SR.png)
 4. Select the **New** button to create a new partnership.
+![image](media\Storage-Replica-UI\Honolulu_Select_New_SR_Partnership.png)
 5. Provide the details of the partnership, and then select **Create**.
+![image](media\Storage-Replica-UI\Honolulu_SR_CReate_Partnership.png)
 
 ## Known issues
 
