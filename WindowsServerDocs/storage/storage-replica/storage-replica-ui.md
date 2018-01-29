@@ -2,13 +2,13 @@
 title: Using Storage Replica with Project Honolulu
 description: 
 keywords: Storage Replica, Project Honolulu, Server Manager, Windows Server
-author: jasongerend
-ms.author: jgerend
-ms.date: 1/25/2017
+author: arpitaduppala
+ms.author: arduppal
+ms.date: 1/29/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: storage-replica
-manager: brianlic
+manager: mchad
 ---
 # Using Storage Replica with Project Honolulu
 
@@ -26,8 +26,8 @@ Storage Replica and Project Honolulu have the following requirements:
 
 | System                        | Operating system                                            | Required for     |
 |-------------------------------|-------------------------------------------------------------|------------------|
-| Two servers (VMs or hardware) | Windows Server (Semi-Annual Channel) or Windows Server 2016 | Storage Replica  |
-| One PC  (Client Machine)                      | Windows 10                                                  | Project Honolulu |
+| Two servers <br>(any mix of on-premises hardware, VMs, and cloud VMs including Azure VMs)| Windows Server (Semi-Annual Channel) or Windows Server 2016 | Storage Replica  |
+| One PC                     | Windows 10                                                  | Project Honolulu |
 
 ## Install Project Honolulu and Storage Replica
 
@@ -47,8 +47,6 @@ Storage Replica and Project Honolulu have the following requirements:
 
 3. Type **Y** to enable WinRM services and enable WinRM Firewall Exception.
 
-![image](media\Storage-Replica-UI\Winrm_QuickConfig.png)
-
 ## Set up Storage Replica in Project Honolulu
 
 1. Add the source server.
@@ -57,11 +55,8 @@ Storage Replica and Project Honolulu have the following requirements:
     2. Select **Add server connection**.
     3. Type the name of the server and then select **Submit**.
 2.  On the **All Connections** page, select the source server.
-![image](media\Storage-Replica-UI\Honolulu_Connect_To_Source_Server.png)
 3. Select **Storage Replica** from Tools panel.
-![image](media\Storage-Replica-UI\Honolulu_Select_SR.png)
 4. Select the **New** button to create a new partnership.
-![image](media\Storage-Replica-UI\Honolulu_Select_New_SR_Partnership.png)
 5. Provide the details of the partnership, and then select **Create**.
 ![image](media\Storage-Replica-UI\Honolulu_SR_CReate_Partnership.png)
 
