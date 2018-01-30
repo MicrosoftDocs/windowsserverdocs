@@ -7,7 +7,7 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.date: 1/18/2017
+ms.date: 1/29/2018
 description: New and updated topics in the on-premises storage documentation for Windows Server for IT Pros.
 ---
 # Change history for storage topics in Windows Server
@@ -23,6 +23,7 @@ This topic lists new and updated topics in the [Storage](storage.md) documentati
 |New or changed topic|Description|
 |---|---|
 |[Drive symmetry considerations in Storage Spaces Direct](storage-spaces/drive-symmetry-considerations.md)| New topic.|
+|[Using Storage Replica with Project Honolulu](storage-replica/storage-replica-ui.md)|New topic.|
 
 ## December 2017
 
