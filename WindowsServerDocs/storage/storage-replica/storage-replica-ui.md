@@ -12,9 +12,9 @@ manager: mchad
 ---
 # Using Storage Replica with Project Honolulu
 
-This topic walks you through using the Project Honolulu browser-based management tool for *Server to Server Storage Replication.* <br>
+This topic walks you through using the Project Honolulu browser-based management tool for server-to-server storage replication.<br>
 
-![image](media\Storage-Replica-UI\Honolulu_SR_Partnership_Result.png)
+![Project Honolulu in a browser window showing the Storage Replica user interface.](media\Storage-Replica-UI\Honolulu_SR_Partnership_Result.png)
 
 Storage Replica is Windows Server technology that enables replication of volumes between servers or clusters for disaster recovery. It also enables you to create stretch failover clusters that span two sites, with all nodes staying in sync. For more information, see [Storage Replica overview](storage-replica-overview.md).
 
@@ -49,16 +49,18 @@ Storage Replica and Project Honolulu have the following requirements:
 
 ## Set up Storage Replica in Project Honolulu
 
-1. Add the source server. <br>
-![image](media\Storage-Replica-UI\Honolulu_Add_Connection.png)
-    1. Select the `Add` button.
+1. Add the source server.
+    1. Select the **Add** button.
     2. Select **Add server connection**.
     3. Type the name of the server and then select **Submit**.
-2.  On the **All Connections** page, select the source server.
+
+   ![The Add Server Connection screen showing entering the name of a Storage Replica server.](media\Storage-Replica-UI\Honolulu_Add_Connection.png)
+
+2. On the **All Connections** page, select the source server.
 3. Select **Storage Replica** from Tools panel.
 4. Select the **New** button to create a new partnership.
 5. Provide the details of the partnership, and then select **Create**. <br>
-![image](media\Storage-Replica-UI\Honolulu_SR_CReate_Partnership.png)
+![The New Partnership screen showing partnership details, such as an 8 GB log size.](media\Storage-Replica-UI\Honolulu_SR_CReate_Partnership.png)
 
 ## Known issues
 
