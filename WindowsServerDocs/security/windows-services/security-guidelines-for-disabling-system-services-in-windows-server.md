@@ -1048,7 +1048,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |	**Installation**	|	Always installed
 |	**StartType**	|	Manual
 |	**Recommendation**	|	Do not disable
-|	**Comments**	|	Our telemetry indicates this is used on client as well as server. No benefit to disabling this.
+|	**Comments**	|	Our diagnostic data indicates this is used on client as well as server. No benefit to disabling this.
 |||			
 			
 <br />			
