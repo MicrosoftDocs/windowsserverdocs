@@ -1,5 +1,5 @@
 ---
-title: Health Service in Windows Server 2016
+title: Health Service in Windows Server
 ms.prod: windows-server-threshold
 manager: eldenc
 ms.author: cosdar
@@ -9,7 +9,7 @@ ms.assetid: 5bc71e71-920e-454f-8195-afebd2a23725
 author: cosmosdarwin
 ms.date: 01/26/2018
 ---
-# Health Service in Windows Server 2016
+# Health Service in Windows Server
 
 > Applies to Windows Server 2016
 
@@ -99,7 +99,7 @@ If the **Cache** section is provided, only the drives listed are used for cachin
 >[!IMPORTANT]
 > The Supported Components Document does not apply retroactively to drives already pooled and in use.  
 
-#### Example  
+#### Example
 
 ```XML
 <Components>
