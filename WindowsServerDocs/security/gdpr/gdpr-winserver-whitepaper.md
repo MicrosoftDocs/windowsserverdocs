@@ -310,7 +310,7 @@ As noted in the Windows Security Center white paper, [Post Breach: Dealing with 
 
 In this section we will look at how Windows Server can help you meet your GDPR breach notification obligations. This starts with understanding the underlying threat data available to Microsoft that is gathered and analyzed for your benefit and how, through Windows Defender Advanced Threat Protection (ATP), that data can be critical to you.
 
-#### Insightful security telemetry
+#### Insightful security diagnostic data
 For nearly two decades, Microsoft has been turning threats into useful intelligence that can help fortify its platform and protect customers. Today, with the immense computing advantages afforded by the cloud, we are finding new ways to use our rich analytics engines driven by threat intelligence to protect our customers.
 
 By applying a combination of automated and manual processes, machine learning and human experts, we can create an Intelligent Security Graph that learns from itself and evolves in real-time, reducing our collective time to detect and respond to new incidents across our products.
