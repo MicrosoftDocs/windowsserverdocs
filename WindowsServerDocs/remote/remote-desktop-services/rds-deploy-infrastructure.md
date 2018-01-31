@@ -48,8 +48,10 @@ If you are using virtual machines for any of the Remote Desktop Services servers
     3.  Enter the SSL certificate name for the RD Gateway server using the external fully qualified DNS Name (FQDN) of the RD Gateway server. In Azure, this is the **DNS name** label and uses the format servicename.location.cloudapp.azure.com. For example, contoso.westus.cloudapp.azure.com.  
     4.  Click **Next**, and then click **Add**.
 6.  Create and install self-signed certificates for the RD Gateway and RD Connection Broker servers.
+
        > [!NOTE]
        > If you are providing and installing certificates from a trusted certificate authority, perform the procedures from step h to step k for each role. You will need to have the .pfx file available for each of these certificates.
+       
     1.  In Server Manager, click **Remote Desktop Services > Overview > Tasks > Edit Deployment Properties**.  
     2.  Expand **Certificates**, and then scroll down to the table. Click **RD Gateway > Create new certificate**.  
     3.  Enter the certificate name, using the external FQDN of the RD Gateway server (for example, contoso.westus.cloudapp.azure.com) and then enter the password.  
