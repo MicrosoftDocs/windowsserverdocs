@@ -135,7 +135,7 @@ If the 8524 error / event refers to... | Then...
 A DC that is currently offline but still a valid DC in the forest, | make it operational
 An inactive DC (a DC install that no longer exists on the network but whose NTDS Settings object still exists in the destination DCs copy of Active Directory), | remove the stale metadata for that DC from the destination DCs copy of Active Directory
 
-Microsoft CSS regularly finds stale metadata for nonexistent DCs, or stale metadata from previous promotions of a DC with the same computer name that has not been removed from Active Directory.
+Microsoft CSS regularly finds stale metadata for nonexistent DCs, or from previous promotions of a DC with the same computer name that has not been removed from Active Directory.
 
 ### Remove stale DC metadata if present
 

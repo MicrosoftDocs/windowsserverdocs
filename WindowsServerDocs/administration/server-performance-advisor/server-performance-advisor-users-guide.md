@@ -12,7 +12,7 @@ ms.technology: manage
 ---
 # Server Performance Advisor User's Guide
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10, Windows 8
 
 This user s guide for Microsoft Server Performance Advisor (SPA) provides guidelines about how you can use SPA to help them identify performance bottlenecks in their systems for various server roles.
 
@@ -26,32 +26,6 @@ SPA can help you with the following things:
 
 > [!NOTE]
 > The SPA Console does not make any changes to the servers.
-
-This guide can be used to run analysis on the following versions of Windows Server:
-
-* Windows Server 2012 R2
-
-* Windows Server 2012
-
-* Windows Server 2008 R2
-
-* Windows Server 2008
-
-However, you can run the SPA console on any of the following:
-
-* Windows 8.1
-
-* Windows 8
-
-* Windows 7
-
-* Windows Server 2012 R2
-
-* Windows Server 2012
-
-* Windows Server 2008 R2
-
-* Windows Server 2008
 
 For more info about developing SPA Advisor Packs, see [Server Performance Advisor Pack Development Guide](server-performance-advisor-pack-development-guide.md).
 
