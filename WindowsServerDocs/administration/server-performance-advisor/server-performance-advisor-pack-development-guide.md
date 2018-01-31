@@ -1103,7 +1103,6 @@ Running \[dbo\].\[DebugReportScript\] returns multiple result sets, including:
 
 ## Best practices
 
-
 ### Naming convention and styles
 
 Pascal casing | Camel casing | Uppercase
@@ -1129,7 +1128,6 @@ Pascal casing | Camel casing | Uppercase
 * Always include major version number in the advisor pack display name.
 
 ## <a href="" id="bkmk-advancedtopics"></a>Advanced topics
-
 
 ### Run multiple advisor packs simultaneously
 

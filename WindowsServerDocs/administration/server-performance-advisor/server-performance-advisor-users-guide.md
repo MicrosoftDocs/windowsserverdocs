@@ -24,10 +24,8 @@ SPA can help you with the following things:
 
 * Provides recommendations based on the data that it collects from the server and by applying rules which capture best practices.
 
-**Note**
-The SPA Console does not make any changes to the servers.
-
- 
+> [!NOTE]
+> The SPA Console does not make any changes to the servers.
 
 This guide can be used to run analysis on the following versions of Windows Server:
 
