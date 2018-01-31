@@ -1,5 +1,5 @@
 ---
-title: add Servers to Server Manager
+title: Add Servers to Server Manager
 description: "Server Manager"
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ---
-# add Servers to Server Manager
+# Add Servers to Server Manager
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -31,7 +31,7 @@ This topic describes how to add servers to the Server Manager server pool.
 
 This topic contains the following sections.
 
--   [add servers to manage](#BKMK_add)
+-   [Add Servers to Manage](#BKMK_add)
 
 -   [Provide credentials with the Manage As command](#BKMK_creds)
 
@@ -57,14 +57,14 @@ After you add servers to manage by following procedures in this topic, but befor
 > [!NOTE]
 > Roles and features that do not support the **Manage As** command include remote Desktop Services (rdS) and IP address Management (IPAM) Server. If you cannot manage the remote rdS or IPAM server by using the same credentials you are using on the computer on which you are running Server Manager, try adding the account you typically use to manage these remote servers to the Administrators group on the computer that is running Server Manager. Then, log on to the computer that is running Server Manager with the account you use to manage the remote server that is running rdS or IPAM.
 
-## <a name="BKMK_add"></a>add servers to manage
+## <a name="BKMK_add"></a>Add Servers to Manage
 You can add servers to Server Manager to manage by using any of three methods in the **add Servers** dialog box.
 
--   **active directory Domain Services** add servers to manage that active directory finds in the same domain as the local computer.
+-   **Active Directory Domain Services** add servers to manage that active directory finds in the same domain as the local computer.
 
 -   **Domain Name System (DNS) entry** Search for servers to manage by computer name or IP address.
 
--   **import multiple servers** Specify multiple servers to import in a file that contains servers listed by computer name or IP address.
+-   **Import Multiple Servers** Specify multiple servers to import in a file that contains servers listed by computer name or IP address.
 
 #### To add servers to the server pool
 
@@ -86,7 +86,7 @@ You can add servers to Server Manager to manage by using any of three methods in
 
 4.  When you are finished adding servers, click **OK**.
 
-### add and manage servers in workgroups
+### Add and Manage Servers in Workgroups
 Although adding servers that are in workgroups to Server Manager might be successful, after they are added, the **Manageability** column of the **Servers** tile on a role or group page that includes a workgroup server can display **Credentials not valid** errors that occur while trying to connect to or collect data from the remote, workgroup server.
 
 These or similar errors can occur in the following conditions.
@@ -105,7 +105,7 @@ These or similar errors can occur in the following conditions.
 
 -   The server you want to manage has been added by using its IP address.
 
-##### To add remote workgroup servers to Server Manager
+##### To add Remote Workgroup Servers to Server Manager
 
 1.  On the computer that is running Server Manager, add the workgroup server name to the **TrustedHosts** list. This is a requirement of NTLM authentication. To add a computer name to an existing list of trusted hosts, add the `Concatenate` parameter to the command. For example, to add the `Server01` computer to an existing list of trusted hosts, use the following command.
 
@@ -158,7 +158,7 @@ These or similar errors can occur in the following conditions.
 
 if you have followed the procedures in this section, and you continue to have problems managing workgroup computers, or managing other computers from workgroup computers, see [about_remote_Troubleshooting](https://technet.microsoft.com/library/dd347642.aspx) on the Microsoft website.
 
-### add and manage servers in clusters
+### Add and Manage Servers in Clusters
 You can use Server Manager to manage servers that are in failover clusters (also called server clusters or MSCS). Servers that are in failover clusters (whether the cluster nodes are physical or virtual) have some unique behaviors and management limitations in Server Manager.
 
 -   Both physical and virtual servers in clusters are automatically added to Server Manager when one server in the cluster is added to Server Manager. Similarly, when you remove a clustered server from Server Manager, you are prompted to remove other servers in the cluster.
