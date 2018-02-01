@@ -4,8 +4,8 @@ title: Windows Time Service
 description:
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: mtillman
+ms.date: 02/01/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 
