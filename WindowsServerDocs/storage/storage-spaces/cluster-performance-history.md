@@ -14,7 +14,7 @@ ms.localizationpriority: medium
 
 > Applies To: Windows Server Insider Preview build 17090 and later
 
-Cluster performance history is a new feature that gives [Storage Spaces Direct](storage-spaces-direct-overview.md) administrators easy access to historical performance and capacity data from their cluster. Performance history is collected and stored on the cluster, and covers compute, memory, network, and storage metrics across host servers, virtual machines, drives, volumes, and more.
+Cluster performance history is a new feature that gives [Storage Spaces Direct](storage-spaces-direct-overview.md) administrators easy access to historical performance and capacity data from their cluster. Performance history is collected and stored on the cluster, and covers compute, memory, network, and storage across host servers, virtual machines, drives, volumes, and more.
 
    > [!IMPORTANT]
    > This feature is new in Windows Server Insider Preview build 17090 and later. It is not available in Windows Server 2016. To try this feature, we suggest a clean OS install, not an in-place upgrade.
@@ -33,7 +33,7 @@ To see your cluster's performance history, use [Project Honolulu (Technical Prev
 
 ![How it works](media/performance-history/how-it-works.png)
 
-**1**. When Storage Spaces Direct is enabled, the [Health Service](../../failover-clustering/health-service.md) creates an approximately 10 GB three-way mirror volume named `ClusterPerformanceHistory` and provisions an instance of the Extensible Storage Engine there. This lightweight database will store performance history.
+**1**. When Storage Spaces Direct is enabled, the [Health Service](../../failover-clustering/health-service.md) creates an approximately 10 GB three-way mirror volume named ClusterPerformanceHistory and provisions an instance of the Extensible Storage Engine (also known as Microsoft JET) there. This lightweight database stores the performance history.
 
 **2**. The Health Service automatically discovers relevant objects, such as virtual machines, anywhere in the cluster and begins streaming their performance counters. The counters are aggregated, synchronized, and inserted into the database. Streaming runs continously and is optimized for minimal system impact.
 
@@ -43,7 +43,7 @@ To see your cluster's performance history, use [Project Honolulu (Technical Prev
 
 ### Objects
 
-Performance history is collected for 7 types of objects: drives, network adapters, servers, virtual machines, virtual hard disk files, volumes, and the overall cluster.
+Performance history is collected for 7 types of objects: drives, network adapters, servers, virtual machines, virtual hard disk files, volumes, and the overall cluster. In many cases, history is aggregated across peer objects to their parent: for example, `networkadapter.bytes.inbound` is collected for each network adapter separately, and also aggregated to the overall server; likewise, `node.cpu.usage` is collected for each server separately, and also aggregated to the overall cluster; and so on.
 
 ![Types of objects](media/performance-history/types-of-object.png)
 
@@ -69,11 +69,9 @@ Here are the available timeframes:
 
 ### Series
 
-Over 40 unique series provide broad and deep visibility into compute and memory usage, network activity, storage activity, storage capacity, and more. Many series are aggregated to multiple scopes. For example, `networkadapter.bytes.total` is collected for each network adapter individually and aggregated to the overall server; likewise, `node.cpu.usage` is collected for each server individually and aggregated to the overall cluster; and so on.
-
 #### Drive
 
-The following series are collected for each drive:
+These series are collected for each drive:
 
 | Series                        | Unit             | Description                                                                 |
 |-------------------------------|------------------|-----------------------------------------------------------------------------|
@@ -94,7 +92,7 @@ The following series are collected for each drive:
 
 #### Network adapter
 
-The following series are collected for each network adapter:
+These series are collected for each network adapter:
 
 | Series                             | Unit             | Description                                                                                        |
 |------------------------------------|------------------|----------------------------------------------------------------------------------------------------|
@@ -113,7 +111,7 @@ The following series are collected for each network adapter:
 
 #### Server
 
-All network adapter series, such as `networkadapter.bytes.total`, are aggregated for all network adapters attached to the server. Drive capacity series, such as `physicaldisk.size.total`, are aggregated for all drives attached to the server.  In addition, the following series are collected for each server:
+All network adapter series, such as `networkadapter.bytes.total`, are aggregated for all network adapters attached to the server. Drive capacity series, such as `physicaldisk.size.total`, are aggregated for all drives attached to the server.  In addition, these series are collected for each server:
 
 | Series                  | Unit    | Description                                                           |
 |-------------------------|---------|-----------------------------------------------------------------------|
@@ -131,7 +129,7 @@ All network adapter series, such as `networkadapter.bytes.total`, are aggregated
 
 #### Virtual hard disk (VHD)
 
-The following series are collected for each virtual hard disk file:
+These series are collected for each virtual hard disk file:
 
 | Series                  | Unit             | Description                                                                                                      |
 |-------------------------|------------------|------------------------------------------------------------------------------------------------------------------|
@@ -150,7 +148,7 @@ The following series are collected for each virtual hard disk file:
 
 #### Virtual machine (VM)
 
-All virtual hard disk series, such as `vhd.iops.total`, are aggregated for all VHDs attached to the virtual machine. In addition, the following series are collected for each virtual machine:
+All virtual hard disk series, such as `vhd.iops.total`, are aggregated for all VHDs attached to the virtual machine. In addition, these series are collected for each virtual machine:
 
 | Series                               | Unit             | Description                                                                                                  |
 |--------------------------------------|------------------|--------------------------------------------------------------------------------------------------------------|
@@ -171,7 +169,7 @@ All virtual hard disk series, such as `vhd.iops.total`, are aggregated for all V
 
 #### Volume
 
-The following series are collected for each volume:
+These series are collected for each volume:
 
 | Series                  | Unit             | Description                                                                   |
 |-------------------------|------------------|-------------------------------------------------------------------------------|
@@ -192,11 +190,15 @@ The following series are collected for each volume:
 
 #### Cluster
 
-All server series, such as `node.cpu.usage`, are aggregated for all servers in the cluster. All volume series, such as `volume.iops.total`, are aggregated for all volumes in the cluster. And drive capacity series, such as `physicaldisk.size.total`, are aggregated for all drives in the cluster.
+All server series, such as `node.cpu.usage`, are aggregated for all servers in the cluster.
+
+All volume series, such as `volume.iops.total`, are aggregated for all volumes in the cluster.
+
+And drive capacity series, such as `physicaldisk.size.total`, are aggregated for all drives in the cluster.
 
 ## Usage in PowerShell
 
-See cluster performance history in PowerShell with the `Get-ClusterPerformanceHistory` cmdlet.
+See performance history in PowerShell with the `Get-ClusterPerformanceHistory` cmdlet.
 
 ```PowerShell
 Get-ClusterPerformanceHistory
@@ -309,31 +311,41 @@ To save them to a text file, run:
 ($Measurements).Group >> file.txt
 ```
 
-## Troubleshooting
+## Frequently asked questions
 
-### I want to disable this feature
+### How are failures handled?
 
-If you know beforehand, use the `-CollectPerformanceHistory` parameter of the `Enable-ClusterS2D` cmdlet:
+The Health Service, which collects measurements and inserts them into the database, is highly available. If the server where it is running fails, it will resume moments later on another server in the cluster. There will be a very brief lapse in performance history collection, but it's quick. Resiliency for the database storage is provided by three-way mirroring. The ClusterPerformanceHistory volume is repaired after drive or server failures just like any other volume in Storage Spaces Direct.
 
-```PowerShell
-Enable-ClusterS2D -CollectPerformanceHistory $False
-```
+### How do I disable this feature?
 
-If you decide later (after runnning `Enable-ClusterS2D`), you can disable by:
+If you have already enabled Storage Spaces Direct, there are two steps:
 
-1. Remove the path to the volume:
+1. Remove the path to the volume. This prevents the Health Service from collecting new measurements.
 
 ```PowerShell
 Get-StorageSubSystem Cluster* | Remove-StorageHealthSetting -Name "System.PerformanceHistory.Path"
 ```
 
-2. Delete the volume:
+2. Delete the volume to delete existing measurements.
 
 ```PowerShell
 Remove-VirtualDisk "ClusterPerformanceHistory"
 ```
 
-### The cmdlet won't run
+If you have not yet enabled Storage Spaces Direct, use the `-CollectPerformanceHistory` parameter of the `Enable-ClusterS2D` cmdlet. Set it to `$False`.
+
+```PowerShell
+Enable-ClusterS2D -CollectPerformanceHistory $False
+```
+
+### What extensibility is available?
+
+We designed cluster performance history to be scripting-friendly. You can use PowerShell to pull any available history from the database to build automated reporting or alerting, export it for safekeeping, roll your own visualizations, and much more. However, it is not currently possible to collect history for additional objects, timeframes, or series.
+
+## Troubleshooting
+
+### The cmdlet doesn't work
 
 An error message like "*The term 'Get-ClusterPerf' is not recognized as the name of a cmdlet*" means the feature is not available or installed. Verify that you have Windows Server Insider Preview build 17090 or later and that you're running Storage Spaces Direct.
 
@@ -342,9 +354,7 @@ An error message like "*The term 'Get-ClusterPerf' is not recognized as the name
 
 ### The cmdlet works but does nothing
 
-If the cmdlet doesn't return the latest measurement (within the last ten seconds), performance history collection may have lapsed or stopped.
-
-Collection is managed by the *Health* cluster resource. Verify that it is present and Online:
+If the cmdlet doesn't return the latest measurement (within the last ten seconds), performance history collection may have lapsed or stopped. Collection is managed by the *Health* cluster resource. Verify that it is present and Online:
 
 ```PowerShell
 Get-ClusterResource Health
@@ -356,18 +366,15 @@ If the cluster resource is stopped, start it:
 Start-ClusterResource Health
 ```
 
-Measurements are stored on the volume name `ClusterPerformanceHistory`. Verify that it is present and OK:
+Measurements are stored on the volume name ClusterPerformanceHistory. Verify that it is present and OK:
 
 ```PowerShell
 Get-Volume -FriendlyName "ClusterPerformanceHistory"
 ```
 
-   > [!NOTE]
-   > If the Health resource or volume fails over (moves to another server in the cluster), there will be a very brief lapse in performance history collection. It will resume automatically.
-
 ### The volume is deleted or missing
 
-To provision the `ClusterPerformanceHistory` volume again:
+To provision the ClusterPerformanceHistory volume again:
 
 1. Confirm the volume is deleted:
 
@@ -388,10 +395,6 @@ Get-StorageSubSystem Cluster* | Set-StorageHealthSetting -Name "System.Performan
 ```
 
 It may take up to half an hour for the changes to take effect.
-
-## Extensibility
-
-Cluster performance history cannot be extended to collect for additional objects, timeframes, or series - yet.
 
 ## See also
 
