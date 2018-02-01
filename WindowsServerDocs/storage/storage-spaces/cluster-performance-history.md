@@ -14,36 +14,50 @@ ms.localizationpriority: medium
 
 > Applies To: Windows Server Insider Preview build 17090 and later
 
-Cluster performance history is a new feature that gives [Storage Spaces Direct](storage-spaces-direct-overview.md) administrators easy access to historical performance and capacity data from their cluster. Performance history is collected and stored locally, and includes compute, memory, network, and storage metrics across host servers, virtual machines, drives, volumes, and more.
+Cluster performance history is a new feature that gives [Storage Spaces Direct](storage-spaces-direct-overview.md) administrators easy access to historical performance and capacity data from their cluster. Performance history is collected and stored on the cluster, and covers compute, memory, network, and storage metrics across host servers, virtual machines, drives, volumes, and more.
 
    > [!IMPORTANT]
    > This feature is new in Windows Server Insider Preview build 17090 and later. It is not available in Windows Server 2016. To try this feature, we suggest a clean OS install, not an in-place upgrade.
 
+(PLACEHOLDER FOR OVERVIEW VIDEO)
+
 ## Getting started
 
-Cluster performance history is enabled by default. An external database is not required. You do not need to install, configure, or start anything. All you need is Storage Spaces Direct in Windows Server Insider Preview build 17090 or later.
+Performance history is collected by default. You do not need to install, configure, or start anything. An external database is not required. An Internet connection is not required. Sold-separately products or agents are not required.
 
-## How to access
+To see your cluster's performance history, use [Project Honolulu (Technical Preview)](/../manage/honolulu/honolulu), the next-generation in-box management tool for Windows Server, or the new `Get-ClusterPerformanceHistory` cmdlet. See [Usage in PowerShell](#usage-in-powershell) for details.
 
-The easiest way to see cluster performance history is in [Project Honolulu](/../manage/honolulu/honolulu), the next-generation in-box management tool for Windows Server. It is fully integrated into every page of the Hyper-Converged Cluster connection, as demonstrated at [Microsoft Ignite 2017](https://www.youtube.com/watch?v=CkZgq5RuJHs&).
+(PLACEHOLDER FOR TUTORIAL VIDEO)
 
-Cluster performance history is fully scriptable for powerful monitoring automation, report generation, and more. See [Usage in PowerShell](#usage-in-powershell).
+## How it works
+
+![How it works](media/performancehistory/how-it-works.png)
+
+**1**. When Storage Spaces Direct is enabled, the [Health Service](../../failover-clustering/health-service.md) creates an approximately 10 GB three-way mirror volume named `ClusterPerformanceHistory` and provisions an instance of the Extensible Storage Engine there. This lightweight database will store performance history.
+
+**2**. The Health Service automatically discovers relevant objects, such as virtual machines, anywhere in the cluster and begins streaming their performance counters. The counters are aggregated, synchronized, and inserted into the database. Streaming runs continously and is optimized for minimal system impact.
+
+**3**. You can see performance history in Project Honolulu (Technical Preview) or in PowerShell with the new `Get-ClusterPerformanceHistory` cmdlet. Performance history is stored for up to one year, with diminishing granularity. Queries are served directly from the database for consistent, snappy performance and to minimize system impact.
 
 ## What's collected
 
 ### Objects
 
-Performance history is collected for these 7 types of objects:
+Performance history is collected for 7 types of objects: drives, network adapters, servers, virtual machines, virtual hard disk files, volumes, and the overall cluster.
 
-- Drive
-- Network adapter
-- Server
-- Virtual machine
-- Virtual hard disk
-- Volume
-- Cluster
+![Types of objects](media/performancehistory/types-of-object.png)
 
 ### Timeframes
+
+Performance history is stored for up to one year, with diminishing granularity. For the most recent hour, measurements are available every ten seconds. Thereafter, they are intelligently merged (by averaging or summing, as appropriate) into less granular series that span more time. For the most recent day, measurements are available every five minutes; for the most recent week, every fifteen minutues; and so on.
+
+In Project Honolulu, you can select the timeframe in the upper-right above the chart.
+
+![Timeframes in Honolulu](media/performancehistory/timeframes-in-honolulu.png)
+
+In PowerShell, use the `-TimeFrame` parameter.
+
+Here are the available timeframes:
 
 | Timeframe  | Measurement frequency | Retained for |
 |------------|-----------------------|--------------|
