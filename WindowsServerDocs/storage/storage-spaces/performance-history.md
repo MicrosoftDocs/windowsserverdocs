@@ -1,5 +1,5 @@
 ---
-title: Cluster performance history
+title: Performance history for Storage Spaces Direct
 ms.author: cosdar
 ms.manager: eldenc
 ms.technology: storage-spaces
@@ -10,11 +10,11 @@ Keywords: Storage Spaces Direct
 ms.localizationpriority: medium
 ---
 
-# Cluster performance history
+# Performance history for Storage Spaces Direct
 
 > Applies To: Windows Server Insider Preview build 17090 and later
 
-Cluster performance history is a new feature that gives [Storage Spaces Direct](storage-spaces-direct-overview.md) administrators easy access to historical performance and capacity data from their cluster. Performance history is collected and stored on the cluster, and covers compute, memory, network, and storage across host servers, virtual machines, drives, volumes, and more.
+Performance history is a new feature that gives [Storage Spaces Direct](storage-spaces-direct-overview.md) administrators easy access to historical performance and capacity data from their cluster. Performance history is collected and stored on the cluster, and covers compute, memory, network, and storage across host servers, virtual machines, drives, volumes, and more.
 
    > [!IMPORTANT]
    > This feature is new in Windows Server Insider Preview build 17090 and later. It is not available in Windows Server 2016. To try this feature, we suggest a clean OS install, not an in-place upgrade.
