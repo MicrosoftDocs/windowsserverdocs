@@ -21,7 +21,7 @@ Cluster performance history is a new feature that gives [Storage Spaces Direct](
 
 (PLACEHOLDER FOR OVERVIEW VIDEO)
 
-## Getting started
+## Get started
 
 Performance history is collected by default. You do not need to install, configure, or start anything. An external database is not required. An Internet connection is not required. Sold-separately products or agents are not required.
 
