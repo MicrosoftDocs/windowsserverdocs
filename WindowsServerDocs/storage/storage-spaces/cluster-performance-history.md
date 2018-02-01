@@ -31,7 +31,7 @@ To see your cluster's performance history, use [Project Honolulu (Technical Prev
 
 ## How it works
 
-![How it works](media/performancehistory/how-it-works.png)
+![How it works](media/performance-history/how-it-works.png)
 
 **1**. When Storage Spaces Direct is enabled, the [Health Service](../../failover-clustering/health-service.md) creates an approximately 10 GB three-way mirror volume named `ClusterPerformanceHistory` and provisions an instance of the Extensible Storage Engine there. This lightweight database will store performance history.
 
@@ -45,7 +45,7 @@ To see your cluster's performance history, use [Project Honolulu (Technical Prev
 
 Performance history is collected for 7 types of objects: drives, network adapters, servers, virtual machines, virtual hard disk files, volumes, and the overall cluster.
 
-![Types of objects](media/performancehistory/types-of-object.png)
+![Types of objects](media/performance-history/types-of-object.png)
 
 ### Timeframes
 
@@ -53,7 +53,7 @@ Performance history is stored for up to one year, with diminishing granularity. 
 
 In Project Honolulu, you can select the timeframe in the upper-right above the chart.
 
-![Timeframes in Honolulu](media/performancehistory/timeframes-in-honolulu.png)
+![Timeframes in Honolulu](media/performance-history/timeframes-in-honolulu.png)
 
 In PowerShell, use the `-TimeFrame` parameter.
 
