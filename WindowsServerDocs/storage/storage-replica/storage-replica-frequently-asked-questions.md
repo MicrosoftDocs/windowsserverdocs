@@ -15,47 +15,22 @@ ms.assetid: 12bc8e11-d63c-4aef-8129-f92324b2bf1b
 
 This topic contains answers to frequently asked questions (FAQs) about Storage Replica.
 
-## <a name="FAQ1"></a> Is Storage Replica supported on Nano Server?  
-Yes.  
+## <a name="FAQ1"></a> Is Storage Replica supported on Azure?  
+Yes. You can use the following scenarios with Azure:
 
-> [!NOTE]
-> You must use the **Storage** Nano Server package during setup. For more information about deploying Nano Server, see [Getting Started with Nano Server](https://technet.microsoft.com/library/mt126167.aspx).  
+1. Server-to-server replication inside Azure (synchronously or asynchronously between IaaS VMs in one or two datacenter fault domains, or asynchronously between two separate regions)
+2. Server-to-server asynchronous replication between Azure and on-premises (using VPN or Azure ExpressRoute)
+3. Cluster-to-cluster replication inside Azure (synchronously or asynchronously between IaaS VMs in one or two datacenter fault domains, or asynchronously between two separate regions)
+4. Cluster-to-cluster asynchronous replication between Azure and on-premises (using VPN or Azure ExpressRoute)
 
-Install Storage Replica on Nano Server using  PowerShell remoting as follows:  
+Further notes on guest clustering in Azure can be found at: https://blogs.msdn.microsoft.com/clustering/2017/02/14/deploying-an-iaas-vm-guest-clusters-in-microsoft-azure/
 
-1. Add the Nano server to your client trust list.  
-   > [!NOTE]
-   > This step is only necessary if the computer is not a member of an Active Directory Domain Services forest or in an untrusted forest. It adds NTLM support to PSSession remoting, which is disabled by default for security reasons. For more information, see [PowerShell Remoting Security Considerations](https://msdn.microsoft.com/powershell/scriptiwinrmsecurity).  
+Important notes:
 
-   ```  
-       Set-Item WSMan:\localhost\Client\TrustedHosts "<computer name of Nano Server>"  
-   ```  
-2.  To install the Storage Replica feature, run the following cmdlet from a management computer:  
-
-    ```  
-    Install-windowsfeature -Name storage-replica,RSAT-Storage-Replica -ComputerName <nano server> -Restart -IncludeManagementTools  
-    ```  
-
-    Using the `Test-SRTopology` cmdlet with Nano Server in Windows Server 2016 requires remote script invocation with CredSSP. Unlike other Storage Replica cmdlets, `Test-SRTopology` requires running locally on the source server.   
-On the Nano server (through a remote PSSession) :  
-
-    >[!NOTE]
-    >CREDSSP is needed for Kerberos double-hop support in the `Test-SRTopology` cmdlet, and not needed by other Storage Replica cmdlets, which handle distributed system credentials automatically. Using CREDSSP is not recommended under typical circumstances. For an alternative to CREDSSP, review the following Microsoft blog post: "PowerShell Remoting Kerberos Double Hop Solved Securely" - https://blogs.technet.microsoft.com/ashleymcglone/2016/08/30/powershell-remoting-kerberos-double-hop-solved-securely/ 
-
-        Enable-WSManCredSSP -role server       
-
-    On the management computer:  
-
-         Enable-WSManCredSSP Client -DelegateComputer <remote server name>  
-
-         $CustomCred = Get-Credential  
-
-         Invoke-Command -ComputerName sr-srv01 -ScriptBlock { Test-SRTopology <commands> } -Authentication Credssp -Credential $CustomCred  
-
-       Then copy the results to your management computer or share the path. Because Nano lacks the necessary graphical libraries, you can use Test-SRTopology to process the results and give you a report file with charts. For example:  
-
-        Test-SRTopology -GenerateReport -DataPath \\sr-srv05\c$\temp  
-
+1. Azure does not support shared VHDX guest clustering, which requires guest Windows Failover Cluster guests use iSCSI targets for classic shared-storage PDR clustering.
+2. There are ARM templates for Storage Spaces Direct-based SR clustering at https://aka.ms/azure-storage-replica-cluster  
+3. Cluster to cluster RPC communication in Azure (required by the cluster APIs for granting access between cluster) requires configuring network access for the CNO. Reference https://blogs.technet.microsoft.com/askcore/2015/06/24/building-windows-server-failover-cluster-on-azure-iaas-vm-part-2-network-and-creation/  
+4. It is possible to use two-node guest clusters, where each node is using loopback iSCSI for an asymmetric cluster replicated by SR. But this will likely have very poor performance and should be used only for very limited workloads or testing.  
 
 ## <a name="FAQ2"></a> How do I see the progress of replication during initial sync?  
 The Event 1237 messages shown in the Storage Replica Admin even log on the destination server show number of bytes copied and bytes remaining every 10 seconds. You can also use the Storage Replica performance counter on the destination showing **\Storage Replica Statistics\Total Bytes Received** for one or more replicated volumes. You can also query the replication group using Windows PowerShell. For instance,  this sample command gets the name of the groups on the destination  then queries one group named **Replication 2** every 10 seconds to show progress:  
