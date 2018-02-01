@@ -23,7 +23,16 @@ Performance history is a new feature that gives [Storage Spaces Direct](storage-
 
 ## Get started
 
-Performance history is collected by default. You do not need to install, configure, or start anything. An external database is not required. An Internet connection is not required. Sold-separately products or agents are not required.
+When released, performance history will be collected by default. You will not need to install, configure, or start anything. An external database is not required. An Internet connection is not required. System Center, Operations Management Suite, and Azure are not required.
+
+In Insider Preview builds, it is necessary to run the following PowerShell cmdlets (just copy/paste and run) to enable the feature. Run these after you enable Storage Spaces Direct. The change may take several minutes to take effect.
+
+```PowerShell
+Get-StorageSubSystem Cluster* | Set-StorageHealthSetting -Name "System.PerformanceHistory.AutoProvision.Enabled" -Value "True"
+Get-ClusterResource Health | Set-ClusterParameter -Name Providers -Value @("{bb20ff2e-7127-4d86-9f52-906f891230be}","{e24b3e7e-a73a-4108-b79f-894cc1184295}","{a8c23fac-e655-4f0b-9ee2-fb70e71634df}","{89290bad-72c0-43c2-aa41-217818de7528}","{c06b98bf-0dbc-4259-ae0d-5801eda8e7e1}","{29d1f3ee-dbcf-44e9-b0cc-085bfa362499}","{7547C610-BD45-4E54-971B-8D319BF0A7A6}") 
+Stop-ClusterResource Health
+Start-ClusterResource Health
+```
 
 To see your cluster's performance history, use [Project Honolulu (Technical Preview)](/../manage/honolulu/honolulu), the next-generation in-box management tool for Windows Server, or the new `Get-ClusterPerformanceHistory` cmdlet. See [Usage in PowerShell](#usage-in-powershell) for details.
 
@@ -394,7 +403,7 @@ Get-StorageSubSystem Cluster* | Remove-StorageHealthSetting -Name "System.Perfor
 Get-StorageSubSystem Cluster* | Set-StorageHealthSetting -Name "System.PerformanceHistory.AutoProvision.Enabled" -Value "True"
 ```
 
-It may take up to half an hour for the changes to take effect.
+It may take several minutes for the changes to take effect.
 
 ## See also
 
