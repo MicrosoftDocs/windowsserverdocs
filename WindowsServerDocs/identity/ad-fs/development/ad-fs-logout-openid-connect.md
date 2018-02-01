@@ -56,7 +56,7 @@ The following additional values will be available in the discovery doc to indica
 
 - frontchannel_logout_supported: value will be 'true'
 - frontchannel_logout_session_supported: value will be 'true'.
-- end_session_endpoint: this is the oauth logout uri tht the client can use to initiate logout on the server.
+- end_session_endpoint: this is the OAuth logout URI that the client can use to initiate logout on the server.
 
 
 ## AD FS server configuration
