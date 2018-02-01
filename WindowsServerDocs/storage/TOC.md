@@ -71,6 +71,7 @@
 ### [Cluster to cluster storage replication](storage-replica/cluster-to-cluster-storage-replication.md)
 ### [Storage Replica: known issues](storage-replica/storage-replica-known-issues.md)
 ### [Storage Replica: Frequently Asked Questions](storage-replica/storage-replica-frequently-asked-questions.md)
+### [Using Storage Replica with Project Honolulu](storage-replica/storage-replica-ui.md)
 ## [Storage Spaces Direct](storage-spaces/storage-spaces-direct-overview.md)
 ### [Understand](storage-spaces/understand-storage-spaces-direct.md)
 #### [Understand the cache](storage-spaces/understand-the-cache.md)

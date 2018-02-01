@@ -5,27 +5,27 @@ ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 01/10/2018
+ms.date: 01/31/2018
 Keywords: Storage Spaces Direct
 ms.localizationpriority: medium
 ---
 
 # Cluster performance history
 
-> Applies To: Windows Server Insider Preview
+> Applies To: Windows Server Insider Preview build 17090 and later
 
-Cluster performance history is a new feature that gives [Storage Spaces Direct](../storage/storage-spaces/storage-spaces-direct-overview.md) administrators easy access to historical performance and capacity data from their cluster. Performance history is collected and stored locally, and includes compute, memory, network, and storage metrics across host servers, virtual machines, drives, volumes, and more.
+Cluster performance history is a new feature that gives [Storage Spaces Direct](storage-spaces-direct-overview.md) administrators easy access to historical performance and capacity data from their cluster. Performance history is collected and stored locally, and includes compute, memory, network, and storage metrics across host servers, virtual machines, drives, volumes, and more.
 
    > [!IMPORTANT]
-   > This feature is available in Windows Server Insider Preview only. It is not available in Windows Server 2016.
+   > This feature is new in Windows Server Insider Preview build 17090 and later. It is not available in Windows Server 2016. To try this feature, we suggest a clean OS install, not an in-place upgrade.
 
 ## Getting started
 
-Cluster performance history is enabled by default. An external database is not required. You do not need to install, configure, or start anything. All you need is Storage Spaces Direct in Windows Server Insider Preview build 123.456 or later.
+Cluster performance history is enabled by default. An external database is not required. You do not need to install, configure, or start anything. All you need is Storage Spaces Direct in Windows Server Insider Preview build 17090 or later.
 
 ## How to access
 
-The easiest way to see cluster performance history is in (Project Honolulu)[/../manage/honolulu/honolulu], the next-generation in-box management tool for Windows Server. It is fully integrated into every page of the Hyper-Converged Cluster connection, as demonstrated at [Microsoft Ignite 2017](https://www.youtube.com/watch?v=CkZgq5RuJHs&).
+The easiest way to see cluster performance history is in [Project Honolulu](/../manage/honolulu/honolulu), the next-generation in-box management tool for Windows Server. It is fully integrated into every page of the Hyper-Converged Cluster connection, as demonstrated at [Microsoft Ignite 2017](https://www.youtube.com/watch?v=CkZgq5RuJHs&).
 
 Cluster performance history is fully scriptable for powerful monitoring automation, report generation, and more. See [Usage in PowerShell](#usage-in-powershell).
 
@@ -321,10 +321,10 @@ Remove-VirtualDisk "ClusterPerformanceHistory"
 
 ### The cmdlet won't run
 
-An error message like "*The term 'Get-ClusterPerf' is not recognized as the name of a cmdlet*" means the feature is not available or installed. Verify that you have Windows Server Insider Preview build 123.456 or later and that you're running [Storage Spaces Direct](../storage/storage-spaces/storage-spaces-direct-overview.md).
+An error message like "*The term 'Get-ClusterPerf' is not recognized as the name of a cmdlet*" means the feature is not available or installed. Verify that you have Windows Server Insider Preview build 17090 or later and that you're running Storage Spaces Direct.
 
    > [!NOTE]
-   > This feature is not available on Windows Server 2016 or earlier.
+   > This feature is not available on Windows Server 2016 or earlier. 
 
 ### The cmdlet works but does nothing
 
@@ -381,4 +381,4 @@ Cluster performance history cannot be extended to collect for additional objects
 
 ## See also
 
-- [Storage Spaces Direct overview](../storage/storage-spaces/storage-spaces-direct-overview.md)
+- [Storage Spaces Direct overview](storage-spaces-direct-overview.md)
