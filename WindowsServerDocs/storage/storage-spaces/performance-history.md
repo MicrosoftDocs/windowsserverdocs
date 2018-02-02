@@ -80,24 +80,7 @@ Here are the available timeframes:
 
 #### Drive
 
-These series are collected for each drive:
-
-| Series                        | Unit             | Description                                                                 |
-|-------------------------------|------------------|-----------------------------------------------------------------------------|
-| physicaldisk.iops.read        | per second       | Number of read operations per second completed by the drive.                |
-| physicaldisk.iops.write       | per second       | Number of write operations per second completed by the drive.               |
-| physicaldisk.iops.total       | per second       | Total number of read or write operations per second completed by the drive. |
-| physicaldisk.throughput.read  | bytes per second | Quantity of data read from the drive per second.                            |
-| physicaldisk.throughput.write | bytes per second | Quantity of data written to the drive per second.                           |
-| physicaldisk.throughput.total | bytes per second | Total quantity of data read from or written to the drive per second.        |
-| physicaldisk.latency.read     | seconds          | Average latency of read operations from the drive.                          |
-| physicaldisk.latency.write    | seconds          | Average latency of write operations to the drive.                           |
-| physicaldisk.latency.average  | seconds          | Average latency of all operations to or from the drive.                     |
-| physicaldisk.size.total       | bytes            | The total storage capacity of the drive.                                    |
-| physicaldisk.size.used        | bytes            | The used storage capacity of the drive.                                     |
-
-   > [!NOTE]
-   > Performance history is only collected for drives in the cluster storage subsystem. This excludes the OS boot drive in each server. Performance history cannot be collected for drives in a server that is down. Collection resumes automatically when the server comes back up.
+See [Performance history for drives](performance-history-for-drives.md).
 
 #### Network adapter
 
