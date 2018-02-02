@@ -132,24 +132,7 @@ All virtual hard disk series, such as `vhd.iops.total`, are aggregated for all V
 
 #### Volume
 
-These series are collected for each volume:
-
-| Series                  | Unit             | Description                                                                   |
-|-------------------------|------------------|-------------------------------------------------------------------------------|
-| volume.iops.read        | per second       | Number of read operations per second completed by this volume.                |
-| volume.iops.write       | per second       | Number of write operations per second completed by this volume.               |
-| volume.iops.total       | per second       | Total number of read or write operations per second completed by this volume. |
-| volume.throughput.read  | bytes per second | Quantity of data read from this volume per second.                            |
-| volume.throughput.write | bytes per second | Quantity of data written to this volume per second.                           |
-| volume.throughput.total | bytes per second | Total quantity of data read from or written to this volume per second.        |
-| volume.latency.read     | seconds          | Average latency of read operations from this volume.                          |
-| volume.latency.write    | seconds          | Average latency of write operations to this volume.                           |
-| volume.latency.average  | seconds          | Average latency of all operations to or from this volume.                     |
-| volume.size.total       | bytes            | The total storage capacity of the volume.                                     |
-| volume.size.available   | bytes            | The available storage capacity of the volume.                                 |
-
-   > [!NOTE]
-   > Volume performance history is only collected for Cluster Shared Volume (CSV) instances. This excludes the OS boot volume in each server and any other non-CSV storage. It may take several minutes for collection to begin for newly created or renamed volumes.
+See [Performance history for volumes](performance-history-for-volumes.md).
 
 #### Cluster
 
