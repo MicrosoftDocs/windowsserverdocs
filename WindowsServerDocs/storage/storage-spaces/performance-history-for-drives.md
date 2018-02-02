@@ -14,14 +14,10 @@ ms.localizationpriority: medium
 
 > Applies To: Windows Server Insider Preview build 17090 and later
 
-This sub-topic of [Performance history for Storage Spaces Direct](performance-history.md) describes in detail the performance history collected for drives.
-
-## Eligibility
-
-Performance history is collected separately for every drive in the cluster storage subsystem. This excludes OS boot drives.
+This sub-topic of [Performance history for Storage Spaces Direct](performance-history.md) describes in detail the performance history collected for drives. Performance history is available for every drive in the cluster storage subsystem. However, it is not available for OS boot drives.
 
    > [!NOTE]
-   > Performance history cannot be collected for drives in a server that is down. Collection resumes automatically when the server comes back up.
+   > Performance history cannot be collected for drives in a server that is down. Collection will resume automatically when the server comes back up.
 
 ## Series names and units
 
@@ -72,6 +68,9 @@ The `iops.*`, `throughput.*`, and `latency.*` series are collected from the `Phy
 | physicaldisk.latency.read     | Avg. Disk sec/Read     |
 | physicaldisk.latency.write    | Avg. Disk sec/Writes   |
 | physicaldisk.latency.average  | Avg. Disk sec/Transfer |
+
+   > [!NOTE]
+   > Counters are measured over the entire interval, not sampled. For example, if the drive is idle for 9 seconds but completes 30 IOs in the 10th second, its `physicaldisk.iops.total` will be recorded as 3 IO/s on average during this 10-second interval. This ensures its performance history captures all activity and is robust to noise.
 
 The `size.*` series are collected from the `MSFT_PhysicalDisk` class in WMI, one instance per drive.
 
