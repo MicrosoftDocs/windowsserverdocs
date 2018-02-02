@@ -84,22 +84,7 @@ See [Performance history for drives](performance-history-for-drives.md).
 
 #### Network adapter
 
-These series are collected for each network adapter:
-
-| Series                             | Unit             | Description                                                                                        |
-|------------------------------------|------------------|----------------------------------------------------------------------------------------------------|
-| networkadapter.bytes.inbound       | bytes per second | Rate of data received by the network adapter.                                                      |
-| networkadapter.bytes.outbound      | bytes per second | Rate of data sent by the network adapter.                                                          |
-| networkadapter.bytes.total         | bytes per second | Total rate of data received or sent by the network adapter.                                        |
-| networkadapter.bytes.rdma.inbound  | bytes per second | Rate of data received via remote direct memory access (RDMA) by the network adapter.               |
-| networkadapter.bytes.rdma.outbound | bytes per second | Rate of data sent via remote direct memory access (RDMA) by the network adapter.                   |
-| networkadapter.bytes.rdma.total    | bytes per second | Total rate of data received or sent via remote direct memory access (RDMA) by the network adapter. |
-
-   > [!NOTE]
-   > Network adapter performance history is only collected for physical network adapters. Remote Direct Memory Access (RDMA) performance history is only collected for network adapters with RDMA enabled.
-
-   > [!NOTE]
-   > Network adapter performance history is recorded in bytes per second, not bits per second. One 10 GbE network adapter can send and receive approximately 1,000,000,000 bits = 125,000,000 bytes = 1.25 GB per second at its theoretical maximum.
+See [Performance history for network adapters](performance-history-for-network-adapters.md).
 
 #### Server
 
