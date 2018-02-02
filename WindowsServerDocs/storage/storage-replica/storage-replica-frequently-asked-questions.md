@@ -191,9 +191,9 @@ To remove the bandwidth limit, use:
 ## <a name="FAQ15"></a>What network ports does Storage Replica require?
 Storage Replica relies on SMB and WSMAN for its replication and management. This means the following ports are required:
 
-   445 (SMB - replication transport protocol)
-   5445 (iWARP SMB - only needed when using iWARP RDMA networking)
-   5895 (WSManHTTP - Management protocol for WMI/CIM/PowerShell)
+ 445 (SMB - replication transport protocol, cluster RPC management protocol)
+ 5445 (iWARP SMB - only needed when using iWARP RDMA networking)
+ 5985 (WSManHTTP - Management protocol for WMI/CIM/PowerShell)
 
 Note: The Test-SRTopology cmdlet requires ICMPv4/ICMPv6, but not for replication or management.
 
