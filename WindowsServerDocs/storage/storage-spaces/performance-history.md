@@ -90,26 +90,11 @@ See [Performance history for network adapters](performance-history-for-network-a
 
 See [Performance history for servers](performance-history-for-servers.md).
 
-#### Virtual hard disk (VHD)
+#### Virtual hard disk (VHD) files
 
-These series are collected for each virtual hard disk file:
+See [Performance history for virtual hard disk files](performance-history-for-vhds.md).
 
-| Series                  | Unit             | Description                                                                                                      |
-|-------------------------|------------------|------------------------------------------------------------------------------------------------------------------|
-| vhd.iops.read           | per second       | Number of read operations per second completed by the virtual hard disk.                                         |
-| vhd.iops.write          | per second       | Number of write operations per second completed by the virtual hard disk.                                        |
-| vhd.iops.total          | per second       | Total number of read or write operations per second completed by the virtual hard disk.                          |
-| vhd.throughput.read     | bytes per second | Quantity of data read from the virtual hard disk per second.                                                     |
-| vhd.throughput.write    | bytes per second | Quantity of data written to the virtual hard disk per second.                                                    |
-| vhd.throughput.total    | bytes per second | Total quantity of data read from or written to the virtual hard disk per second.                                 |
-| vhd.latency.average     | seconds          | Average latency of all operations to or from the virtual hard disk.                                              |
-| vhd.size.current        | bytes            | The current file size of the virtual hard disk, if dynamically expanding. If fixed, the series is not collected. |
-| vhd.size.maximum        | bytes            | The maximum size of the virtual hard disk, if dynamically expanding. If fixed, the is the size.                  |
-
-   > [!NOTE]
-   > Virtual hard disk performance history is only collected for VHDs attached to running, clustered virtual machines. Although performance history is collected for both VHD and VHDX formats, it is not collected for shared VHDX files – yet.
-
-#### Virtual machine (VM)
+#### Virtual machines (VM)
 
 All virtual hard disk series, such as `vhd.iops.total`, are aggregated for all VHDs attached to the virtual machine. In addition, these series are collected for each virtual machine:
 
