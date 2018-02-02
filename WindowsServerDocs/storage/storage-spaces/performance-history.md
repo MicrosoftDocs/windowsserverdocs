@@ -88,21 +88,7 @@ See [Performance history for network adapters](performance-history-for-network-a
 
 #### Server
 
-All network adapter series, such as `networkadapter.bytes.total`, are aggregated for all network adapters attached to the server. Drive capacity series, such as `physicaldisk.size.total`, are aggregated for all drives attached to the server.  In addition, these series are collected for each server:
-
-| Series                  | Unit    | Description                                                           |
-|-------------------------|---------|-----------------------------------------------------------------------|
-| node.cpu.usage          | percent | Percentage of processor time that is not idle.                        |
-| node.cpu.usage.guest    | percent | Percentage of processor time used for guest (virtual machine) demand. |
-| node.cpu.usage.host     | percent | Percentage of processor time used for host demand.                    |
-| node.memory.total       | bytes   | The total physical memory of the server.                              |
-| node.memory.available   | bytes   | The available memory of the server.                                   |
-| node.memory.usage       | bytes   | The allocated (not available) memory of the server.                   |
-| node.memory.usage.guest | bytes   | The memory allocated to guest (virtual machine) demand.               |
-| node.memory.usage.host  | bytes   | The memory allocated to host demand.                                  |
-
-   > [!NOTE]
-   > Performance history cannot be collected for a server that is down. Collection resumes automatically when the server comes back up.
+See [Performance history for servers](performance-history-for-servers.md).
 
 #### Virtual hard disk (VHD)
 
