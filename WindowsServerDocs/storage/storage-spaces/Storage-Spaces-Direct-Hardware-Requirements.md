@@ -57,6 +57,7 @@ Note that RAM sizes use base-2 numbering (where 1 GB = 1,024 MB), while drives a
 For more help choosing drives, see the [Choosing drives](choosing-drives.md) topic.
 
 - Use local-attached SATA, SAS, or NVMe drives
+    - Note: fibre channel attached drives are not suported for 2012/2016 storage spaces.
 - Every drive must be physically connected to only one server
 - Every server in the cluster should have the same types of drives and the same number of each type. We recommend using drives of the same model, size, and firmware version whenever possible. To learn more, see [Drive symmetry considerations for Storage Spaces Direct](drive-symmetry-considerations.md).
 - SSDs must be "enterprise-grade" meaning they provide [power-loss protection](https://blogs.technet.microsoft.com/filecab/2016/11/18/dont-do-it-consumer-ssd/)
