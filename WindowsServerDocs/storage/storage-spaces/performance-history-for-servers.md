@@ -21,11 +21,7 @@ This sub-topic of [Performance history for Storage Spaces Direct](performance-hi
 
 ## Series names and units
 
-Drive series, such as `physicaldisk.size.total`, are aggregated for all eligible drives attached to the server.
-
-Network adapter series, such as `networkadapter.bytes.total`, are aggregated for all eligible network adapters attached to the server.
-
-In addition, these series are collected for every eligible server:
+These series are collected for every eligible server:
 
 | Series                    | Unit    |
 |---------------------------|---------|
@@ -37,6 +33,8 @@ In addition, these series are collected for every eligible server:
 | `node.memory.usage`       | bytes   |
 | `node.memory.usage.guest` | bytes   |
 | `node.memory.usage.host`  | bytes   |
+
+In addition, drive series such as `physicaldisk.size.total` are aggregated for all eligible drives attached to the server, and network adapter series such as `networkadapter.bytes.total` are aggregated for all eligible network adapters attached to the server.
 
 ## How to interpret
 
@@ -59,19 +57,19 @@ If Hyper-V is enabled:
 
 | Series                    | Source counter |
 |---------------------------|----------------|
-| `node.cpu.usage`          | `Hyper-V Hypervisor Logical Processor` counter set, `_Total` instance, `% Total Run Time` counter      |
-| `node.cpu.usage.guest`    | `Hyper-V Hypervisor Root Virtual Processor` counter set, `_Total` instance, `% Total Run Time` counter |
-| `node.cpu.usage.host`     | `Hyper-V Hypervisor Virtual Processor` counter set, `_Total` instance, `% Total Run Time` counter      |
+| `node.cpu.usage`          | `Hyper-V Hypervisor Logical Processor` > `_Total` > `% Total Run Time`      |
+| `node.cpu.usage.guest`    | `Hyper-V Hypervisor Root Virtual Processor` > `_Total` > `% Total Run Time` |
+| `node.cpu.usage.host`     | `Hyper-V Hypervisor Virtual Processor` > `_Total` > `% Total Run Time`      |
 
 Using the `% Total Run Time` counters ensures that performance history attributes all usage, including any hypervisor overhead.
 
 If Hyper-V is NOT enabled:
 
-| Series                    | Source counter  |
-|---------------------------|-----------------|
-| `node.cpu.usage`          | `Processor` counter set, `_Total` instance, `% Processor Time` counter |
-| `node.cpu.usage.guest`    | *same as above* |
-| `node.cpu.usage.host`     | *zero*          |
+| Series                    | Source counter |
+|---------------------------|----------------|
+| `node.cpu.usage`          | `Processor` > `_Total` > `% Processor Time` |
+| `node.cpu.usage.guest`    | *zero* |
+| `node.cpu.usage.host`     | *same as total usage* |
 
 Notwithstanding imperfect synchronization, `node.cpu.usage` is always `node.cpu.usage.host` plus `node.cpu.usage.guest`.
 
