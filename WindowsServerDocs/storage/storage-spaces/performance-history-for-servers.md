@@ -58,8 +58,8 @@ If Hyper-V is enabled:
 | Series                    | Source counter |
 |---------------------------|----------------|
 | `node.cpu.usage`          | `Hyper-V Hypervisor Logical Processor` > `_Total` > `% Total Run Time`      |
-| `node.cpu.usage.guest`    | `Hyper-V Hypervisor Root Virtual Processor` > `_Total` > `% Total Run Time` |
-| `node.cpu.usage.host`     | `Hyper-V Hypervisor Virtual Processor` > `_Total` > `% Total Run Time`      |
+| `node.cpu.usage.guest`    | `Hyper-V Hypervisor Virtual Processor` > `_Total` > `% Total Run Time`      |
+| `node.cpu.usage.host`     | `Hyper-V Hypervisor Root Virtual Processor` > `_Total` > `% Total Run Time` |
 
 Using the `% Total Run Time` counters ensures that performance history attributes all usage, including any hypervisor overhead.
 
