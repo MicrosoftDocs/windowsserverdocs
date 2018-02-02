@@ -37,14 +37,14 @@ These series are collected for every eligible network adapter:
 
 ## How to interpret
 
-| Series                               | How to interpret                                                                                   |
-|--------------------------------------|----------------------------------------------------------------------------------------------------|
-| `networkadapter.bytes.inbound`       | Rate of data received by the network adapter.                                                      |
-| `networkadapter.bytes.outbound`      | Rate of data sent by the network adapter.                                                          |
-| `networkadapter.bytes.total`         | Total rate of data received or sent by the network adapter.                                        |
-| `networkadapter.bytes.rdma.inbound`  | Rate of data received via remote direct memory access (RDMA) by the network adapter.               |
-| `networkadapter.bytes.rdma.outbound` | Rate of data sent via remote direct memory access (RDMA) by the network adapter.                   |
-| `networkadapter.bytes.rdma.total`    | Total rate of data received or sent via remote direct memory access (RDMA) by the network adapter. |
+| Series                               | How to interpret                                                      |
+|--------------------------------------|-----------------------------------------------------------------------|
+| `networkadapter.bytes.inbound`       | Rate of data received by the network adapter.                         |
+| `networkadapter.bytes.outbound`      | Rate of data sent by the network adapter.                             |
+| `networkadapter.bytes.total`         | Total rate of data received or sent by the network adapter.           |
+| `networkadapter.bytes.rdma.inbound`  | Rate of data received over RDMA by the network adapter.               |
+| `networkadapter.bytes.rdma.outbound` | Rate of data sent over RDMA by the network adapter.                   |
+| `networkadapter.bytes.rdma.total`    | Total rate of data received or sent over RDMA by the network adapter. |
 
 ## Where they come from
 
