@@ -160,20 +160,20 @@ If you don't specify, every series available for the specified object is returne
 
 ### Example
 
-For example, this cmdlet gets the CPU usage of the virtual machine named *MyVM* for the last hour.
+To get the CPU usage of the virtual machine named *MyVM* for the last hour:
 
 ```PowerShell
 Get-VM "MyVM" | Get-ClusterPerf -TimeFrame LastHour -VirtualMachineSeriesName "VirtualMachine.Cpu.Usage"
 ```
 
-To print the series of measurements to the PowerShell console, run:
+To print the series of measurements to the PowerShell console:
 
 ```PowerShell
 $Measurements = Get-VM "MyVM" | Get-ClusterPerf -TimeFrame LastHour -VirtualMachineSeriesName "VirtualMachine.Cpu.Usage"
 ($Measurements).Group
 ```
 
-To save them to a text file, run:
+To save the series of measurements to an output file:
 
 ```PowerShell
 ($Measurements).Group >> file.txt
