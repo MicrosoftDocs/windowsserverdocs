@@ -5,14 +5,14 @@ ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 02/01/2018
+ms.date: 02/02/2018
 Keywords: Storage Spaces Direct
 ms.localizationpriority: medium
 ---
 
 # Performance history for virtual machines
 
-> Applies To: Windows Server Insider Preview build 17090 and later
+> Applies To: Windows Server Insider Preview
 
 This sub-topic of [Performance history for Storage Spaces Direct](performance-history.md) describes in detail the performance history collected for virtual machines (VM). Performance history is available for every running, clustered VM.
 
