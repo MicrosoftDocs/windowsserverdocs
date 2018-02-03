@@ -52,6 +52,9 @@ In addition, all virtual hard disk (VHD) series, such as `vhd.iops.total`, are a
 | `virtualnetworkadapter.bytes.outbound` | Rate of data sent by the virtual machine across all its virtual network adapters.                            |
 | `virtualnetworkadapter.bytes.total`    | Total rate of data received or sent by the virtual machine across all its virtual network adapters.          |
 
+   > [!NOTE]
+   > Counters are measured over the entire interval, not sampled. For example, if the VM is idle for 9 seconds but spikes to use 50% of host CPU in the 10th second, its `virtualmachine.cpu.usage` will be recorded as 5% on average during this 10-second interval. This ensures its performance history captures all activity and is robust to noise.
+
 ## See also
 
 - [Performance history for Storage Spaces Direct](performance-history.md)
