@@ -53,6 +53,9 @@ These series are collected for every eligible volume:
 | `volume.size.total`       | The total storage capacity of the volume.                                     |
 | `volume.size.available`   | The available storage capacity of the volume.                                 |
 
+   > [!NOTE]
+   > Counters are measured over the entire interval, not sampled. For example, if the volume is idle for 9 seconds but completes 30 IOs in the 10th second, its `volume.iops.total` will be recorded as 3 IOs per second on average during this 10-second interval. This ensures its performance history captures all activity and is robust to noise.
+
 ## See also
 
 - [Performance history for Storage Spaces Direct](performance-history.md)
