@@ -90,30 +90,13 @@ See [Performance history for network adapters](performance-history-for-network-a
 
 See [Performance history for servers](performance-history-for-servers.md).
 
-#### Virtual hard disk (VHD) files
+#### Virtual hard disks
 
-See [Performance history for virtual hard disk files](performance-history-for-vhds.md).
+See [Performance history for virtual hard disks](performance-history-for-vhds.md).
 
-#### Virtual machines (VM)
+#### Virtual machines
 
-All virtual hard disk series, such as `vhd.iops.total`, are aggregated for all VHDs attached to the virtual machine. In addition, these series are collected for each virtual machine:
-
-| Series                               | Unit             | Description                                                                                                  |
-|--------------------------------------|------------------|--------------------------------------------------------------------------------------------------------------|
-| virtualmachine.cpu.usage             | percent          | Percentage the virtual machine is using of its host server's processor(s).                                   |
-| virtualmachine.memory.assigned       | bytes            | The quantity of memory assigned to the virtual machine.                                                      |
-| virtualmachine.memory.available      | bytes            | The quantity of memory that remains available, of the amount assigned.                                       |
-| virtualmachine.memory.maximum        | bytes            | If using dynamic memory, this is the maximum quantity of memory that may be assigned to the virtual machine. |
-| virtualmachine.memory.minimum        | bytes            | If using dynamic memory, this is the minimum quantity of memory that may be assigned to the virtual machine. |
-| virtualmachine.memory.pressure       | -                | The ratio of memory demanded by the virtual machine over memory allocated to the virtual machine.            |
-| virtualmachine.memory.startup        | bytes            | The quantity of memory required for the virtual machine to start.                                            |
-| virtualmachine.memory.total          | bytes            | Total memory. |
-| virtualnetworkadapter.bytes.inbound  | bytes per second | Rate of data received by the virtual machine across all its virtual network adapters.                        |
-| virtualnetworkadapter.bytes.outbound | bytes per second | Rate of data sent by the virtual machine across all its virtual network adapters.                            |
-| virtualnetworkadapter.bytes.total    | bytes per second | Total rate of data received or sent by the virtual machine across all its virtual network adapters.          |
-
-   > [!NOTE]
-   > Virtual machine performance history is only collected for running, clustered virtual machines.
+See [Performance history for virtual machines](performance-history-for-vms.md).
 
 #### Volume
 
