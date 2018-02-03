@@ -56,6 +56,14 @@ These series are collected for every eligible volume:
    > [!NOTE]
    > Counters are measured over the entire interval, not sampled. For example, if the volume is idle for 9 seconds but completes 30 IOs in the 10th second, its `volume.iops.total` will be recorded as 3 IOs per second on average during this 10-second interval. This ensures its performance history captures all activity and is robust to noise.
 
+## Usage in PowerShell
+
+Use the [Get-Volume](https://docs.microsoft.com/powershell/module/storage/get-volume) cmdlet:
+
+```PowerShell
+Get-Volume -FriendlyName <FriendlyName> | Get-ClusterPerf
+```
+
 ## See also
 
 - [Performance history for Storage Spaces Direct](performance-history.md)
