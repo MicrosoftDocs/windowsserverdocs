@@ -14,11 +14,11 @@ ms.localizationpriority: medium
 
 > Applies To: Windows Server Insider Preview build 17090 and later
 
-This sub-topic of [Performance history for Storage Spaces Direct](performance-history.md) describes in detail the performance history collected for virtual machines. Performance history is available for every running, clustered virtual machine.
+This sub-topic of [Performance history for Storage Spaces Direct](performance-history.md) describes in detail the performance history collected for virtual machines (VM). Performance history is available for every running, clustered VM.
 
 ## Series names and units
 
-These series are collected for every eligible virtual machine:
+These series are collected for every eligible VM:
 
 | Series                                 | Unit             |
 |----------------------------------------|------------------|
@@ -33,6 +33,8 @@ These series are collected for every eligible virtual machine:
 | `virtualnetworkadapter.bytes.inbound`  | bytes per second |
 | `virtualnetworkadapter.bytes.outbound` | bytes per second |
 | `virtualnetworkadapter.bytes.total`    | bytes per second |
+
+In addition, all virtual hard disk (VHD) series, such as `vhd.iops.total`, are aggregated for every VHD attached to the VM.
 
 ## How to interpret
 
