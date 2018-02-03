@@ -1,5 +1,5 @@
 ---
-title: Performance history for virtual hard disk (VHD) files
+title: Performance history for virtual hard disks
 ms.author: cosdar
 ms.manager: eldenc
 ms.technology: storage-spaces
@@ -10,7 +10,7 @@ Keywords: Storage Spaces Direct
 ms.localizationpriority: medium
 ---
 
-# Performance history for virtual hard disk (VHD) files
+# Performance history for virtual hard disks
 
 > Applies To: Windows Server Insider Preview build 17090 and later
 
