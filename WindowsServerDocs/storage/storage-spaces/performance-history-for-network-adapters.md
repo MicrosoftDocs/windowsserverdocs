@@ -67,6 +67,14 @@ The `rdma.*` series are collected from the `RDMA Activity` performance counter s
    > [!NOTE]
    > Counters are measured over the entire interval, not sampled. For example, if the network adapter is idle for 9 seconds but transfers 30 bytes in the 10th second, its `networkadapter.bytes.total` will be recorded as 3 bytes per second on average during this 10-second interval. This ensures its performance history captures all activity and is robust to noise.
 
+## Usage in PowerShell
+
+Use the [Get-NetAdapter](https://docs.microsoft.com/powershell/module/netadapter/get-netadapter) cmdlet:
+
+```PowerShell
+Get-NetAdapter <Name> | Get-ClusterPerf
+```
+
 ## See also
 
 - [Performance history for Storage Spaces Direct](performance-history.md)
