@@ -78,15 +78,15 @@ Here are the available timeframes:
 
 ### Series
 
-#### Drive
+#### Drives
 
 See [Performance history for drives](performance-history-for-drives.md).
 
-#### Network adapter
+#### Network adapters
 
 See [Performance history for network adapters](performance-history-for-network-adapters.md).
 
-#### Server
+#### Servers
 
 See [Performance history for servers](performance-history-for-servers.md).
 
@@ -98,17 +98,13 @@ See [Performance history for virtual hard disks](performance-history-for-vhds.md
 
 See [Performance history for virtual machines](performance-history-for-vms.md).
 
-#### Volume
+#### Volumes
 
 See [Performance history for volumes](performance-history-for-volumes.md).
 
-#### Cluster
+#### Clusters
 
-All server series, such as `node.cpu.usage`, are aggregated for all servers in the cluster.
-
-All volume series, such as `volume.iops.total`, are aggregated for all volumes in the cluster.
-
-And drive capacity series, such as `physicaldisk.size.total`, are aggregated for all drives in the cluster.
+See [Performance history for clusters](performance-history-for-clusters.md).
 
 ## Usage in PowerShell
 
@@ -127,7 +123,7 @@ Optionally, you can specify the object, timeframe, and/or series you want.
 
 Specify an object via the pipeline to see its performance history. This works with 7 object types:
 
-#### Drive
+#### Drives
 
 Use the [Get-PhysicalDisk](https://docs.microsoft.com/powershell/module/storage/get-physicaldisk) cmdlet:
 
@@ -135,7 +131,7 @@ Use the [Get-PhysicalDisk](https://docs.microsoft.com/powershell/module/storage/
 Get-PhysicalDisk -SerialNumber <SerialNumber> | Get-ClusterPerf
 ```
 
-#### Network adapter
+#### Network adapters
 
 Use the [Get-NetAdapter](https://docs.microsoft.com/powershell/module/netadapter/get-netadapter) cmdlet:
 
@@ -143,7 +139,7 @@ Use the [Get-NetAdapter](https://docs.microsoft.com/powershell/module/netadapter
 Get-NetAdapter <Name> | Get-ClusterPerf
 ```
 
-#### Server
+#### Servers
 
 Use the [Get-ClusterNode](https://docs.microsoft.com/powershell/module/failoverclusters/get-clusternode) cmdlet:
 
@@ -151,7 +147,7 @@ Use the [Get-ClusterNode](https://docs.microsoft.com/powershell/module/failoverc
 Get-ClusterNode <Name> | Get-ClusterPerf
 ```
 
-#### Virtual hard disk (VHD)
+#### Virtual hard disks
 
 Use the [Get-VHD](https://docs.microsoft.com/powershell/module/hyper-v/get-vhd) cmdlet:
 
@@ -168,7 +164,7 @@ To get the path of every virtual hard disk from the virtual machine:
    > [!NOTE]
    > The Get-VHD cmdlet requires a file path to be provided.
 
-#### Virtual machine (VM)
+#### Virtual machines
 
 Use the [Get-VM](https://docs.microsoft.com/powershell/module/hyper-v/get-vm) cmdlet:
 
@@ -179,7 +175,7 @@ Get-VM <Name> | Get-ClusterPerf
    > [!NOTE]
    > The Get-VM cmdlet only returns virtual machines on the local (or specified) server, not across the cluster.
 
-#### Volume
+#### Volumes
 
 Use the [Get-Volume](https://docs.microsoft.com/powershell/module/storage/get-volume) cmdlet:
 
@@ -187,7 +183,7 @@ Use the [Get-Volume](https://docs.microsoft.com/powershell/module/storage/get-vo
 Get-Volume -FriendlyName <FriendlyName> | Get-ClusterPerf
 ```
 
-#### Server
+#### Cluster
 
 Use the [Get-Cluster](https://docs.microsoft.com/powershell/module/failoverclusters/get-cluster) cmdlet:
 
@@ -204,7 +200,7 @@ Specify the timeframe of history you want with the `-TimeFrame` parameter. Possi
 
 ### Specify the series
 
-Specify the series you want with the `PhysicalDiskSeriesName`, `NetAdapterSeriesName`, `ClusterNodeSeriesName`, `VHDSeriesName`, `VirtualMachineSeriesName`, `VolumeSeriesName`, or `ClusterSeriesName` parameters. See the cmdlet help, the documentation above, or use tab-completion to discover available series names.
+Specify the series you want with the `PhysicalDiskSeriesName`, `NetworkAdapterSeriesName`, `ClusterNodeSeriesName`, `VHDSeriesName`, `VirtualMachineSeriesName`, `VolumeSeriesName`, or `ClusterSeriesName` parameters. See the cmdlet help, the documentation above, or use tab-completion to discover available series names.
 
 For example, this cmdlet gets the CPU usage of the virtual machine named *MyVM* for the last hour.
 
