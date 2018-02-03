@@ -46,6 +46,9 @@ These series are collected for every eligible virtual hard disk:
 | `vhd.size.current`        | The current file size of the virtual hard disk, if dynamically expanding. If fixed, the series is not collected. |
 | `vhd.size.maximum`        | The maximum size of the virtual hard disk, if dynamically expanding. If fixed, the is the size.                  |
 
+   > [!NOTE]
+   > Counters are measured over the entire interval, not sampled. For example, if the VHD is inactive for 9 seconds but completes 30 IOs in the 10th second, its `vhd.iops.total` will be recorded as 3 IOs per second on average during this 10-second interval. This ensures its performance history captures all activity and is robust to noise.
+
 ## See also
 
 - [Performance history for Storage Spaces Direct](performance-history.md)
