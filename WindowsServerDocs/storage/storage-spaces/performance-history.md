@@ -5,7 +5,7 @@ ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 02/01/2018
+ms.date: 02/02/2018
 Keywords: Storage Spaces Direct
 ms.localizationpriority: medium
 ---
@@ -47,26 +47,6 @@ Performance history is collected for 7 types of objects: drives, network adapter
 
 ![Types of objects](media/performance-history/types-of-object.png)
 
-### Timeframes
-
-Performance history is stored for up to one year, with diminishing granularity. For the most recent hour, measurements are available every ten seconds. Thereafter, they are intelligently merged (by averaging or summing, as appropriate) into less granular series that span more time. For the most recent day, measurements are available every five minutes; for the most recent week, every fifteen minutues; and so on.
-
-In Project Honolulu, you can select the timeframe in the upper-right above the chart.
-
-![Timeframes in Honolulu](media/performance-history/timeframes-in-honolulu.png)
-
-In PowerShell, use the `-TimeFrame` parameter.
-
-Here are the available timeframes:
-
-| Timeframe  | Measurement frequency | Retained for |
-|------------|-----------------------|--------------|
-| Last hour  | Every 10 secs         | 1 hour       |
-| Last day   | Every 5 minutes       | 25 hours     |
-| Last week  | Every 15 minutes      | 8 days       |
-| Last month | Every 1 hour          | 35 days      |
-| Last year  | Every Daily           | 400 days     |
-
 ### Series
 
 #### Drives
@@ -97,6 +77,26 @@ See [Performance history for volumes](performance-history-for-volumes.md).
 
 See [Performance history for clusters](performance-history-for-clusters.md).
 
+### Timeframes
+
+Performance history is stored for up to one year, with diminishing granularity. For the most recent hour, measurements are available every ten seconds. Thereafter, they are intelligently merged (by averaging or summing, as appropriate) into less granular series that span more time. For the most recent day, measurements are available every five minutes; for the most recent week, every fifteen minutues; and so on.
+
+In Project Honolulu, you can select the timeframe in the upper-right above the chart.
+
+![Timeframes in Honolulu](media/performance-history/timeframes-in-honolulu.png)
+
+In PowerShell, use the `-TimeFrame` parameter.
+
+Here are the available timeframes:
+
+| Timeframe  | Measurement frequency | Retained for |
+|------------|-----------------------|--------------|
+| Last hour  | Every 10 secs         | 1 hour       |
+| Last day   | Every 5 minutes       | 25 hours     |
+| Last week  | Every 15 minutes      | 8 days       |
+| Last month | Every 1 hour          | 35 days      |
+| Last year  | Every Daily           | 400 days     |
+
 ## Usage in PowerShell
 
 See performance history in PowerShell with the `Get-ClusterPerformanceHistory` cmdlet.
@@ -108,100 +108,57 @@ Get-ClusterPerformanceHistory
    > [!TIP]
    > Use the **Get-ClusterPerf** alias to save some keystrokes.
 
-Optionally, you can specify the object, timeframe, and/or series you want.
-
 ### Specify the object
 
-Specify an object via the pipeline to see its performance history. This works with 7 types of objects:
+You can specify an object via the pipeline to see its performance history. This works with 7 types of objects:
 
 | Object type        | Cmdlet for pipeline  |             |
 |--------------------|----------------------|-------------|
-| Drives             | Get-PhysicalDisk     | [Example]() |
-| Network adapters   | Get-NetAdapter       | [Example]() |
-| Servers            | Get-ClusterNode      | [Example]() |
-| Virtual hard disks | Get-VHD              | [Example]() |
-| Virtual machines   | Get-VM               | [Example]() |
-| Volumes            | Get-Volume           | [Example]() |
-| Clusters           | Get-Cluster          | [Example]() |
+| Drives             | Get-PhysicalDisk     | [Example](performance-history-for-drives.md#usage-in-powershell) |
+| Network adapters   | Get-NetAdapter       | [Example](performance-history-for-network-adapters.md#usage-in-powershell) |
+| Servers            | Get-ClusterNode      | [Example](performance-history-for-servers.md#usage-in-powershell) |
+| Virtual hard disks | Get-VHD              | [Example](performance-history-for-vhds.md#usage-in-powershell) |
+| Virtual machines   | Get-VM               | [Example](performance-history-for-vms.md#usage-in-powershell) |
+| Volumes            | Get-Volume           | [Example](performance-history-for-volumes.md#usage-in-powershell) |
+| Clusters           | Get-Cluster          | [Example](performance-history-for-clusters.md#usage-in-powershell) |
 
-#### Drives
-
-Use the [Get-PhysicalDisk](https://docs.microsoft.com/powershell/module/storage/get-physicaldisk) cmdlet:
-
-```PowerShell
-Get-PhysicalDisk -SerialNumber <SerialNumber> | Get-ClusterPerf
-```
-
-#### Network adapters
-
-Use the [Get-NetAdapter](https://docs.microsoft.com/powershell/module/netadapter/get-netadapter) cmdlet:
-
-```PowerShell
-Get-NetAdapter <Name> | Get-ClusterPerf
-```
-
-#### Servers
-
-Use the [Get-ClusterNode](https://docs.microsoft.com/powershell/module/failoverclusters/get-clusternode) cmdlet:
-
-```PowerShell
-Get-ClusterNode <Name> | Get-ClusterPerf
-```
-
-#### Virtual hard disks
-
-Use the [Get-VHD](https://docs.microsoft.com/powershell/module/hyper-v/get-vhd) cmdlet:
-
-```PowerShell
-Get-VHD <Path> | Get-ClusterPerf
-```
-
-To get the path of every virtual hard disk from the virtual machine:
-
-```PowerShell
-(Get-VM <Name>).HardDrives | Select Path
-```
-
-   > [!NOTE]
-   > The Get-VHD cmdlet requires a file path to be provided.
-
-#### Virtual machines
-
-Use the [Get-VM](https://docs.microsoft.com/powershell/module/hyper-v/get-vm) cmdlet:
-
-```PowerShell
-Get-VM <Name> | Get-ClusterPerf
-```
-
-   > [!NOTE]
-   > The Get-VM cmdlet only returns virtual machines on the local (or specified) server, not across the cluster.
-
-#### Volumes
-
-Use the [Get-Volume](https://docs.microsoft.com/powershell/module/storage/get-volume) cmdlet:
-
-```PowerShell
-Get-Volume -FriendlyName <FriendlyName> | Get-ClusterPerf
-```
-
-#### Cluster
-
-Use the [Get-Cluster](https://docs.microsoft.com/powershell/module/failoverclusters/get-cluster) cmdlet:
-
-```PowerShell
-Get-Cluster | Get-ClusterPerf
-```
+If you don't specify, the cmdlet returns performance history for the overall cluster.
 
 ### Specify the timeframe
 
-Specify the timeframe of history you want with the `-TimeFrame` parameter. Possible values are `MostRecent` (default), `LastHour`, `LastDay`, `LastWeek`, `LastMonth`, and `LastYear`.
+You can specify the timeframe of history you want with the `-TimeFrame` parameter. The possible values are:
+
+| Value        |
+|--------------|
+| `MostRecent` |
+| `LastHour`   |
+| `LastDay`    |
+| `LastWeek`   |
+| `LastMonth`  |
+| `LastYear`   |
+
+If you don't specify, the default is the `MostRecent` measurement.
 
    > [!TIP]
    > Consider specifying the series you want too.
 
 ### Specify the series
 
-Specify the series you want with the `PhysicalDiskSeriesName`, `NetworkAdapterSeriesName`, `ClusterNodeSeriesName`, `VHDSeriesName`, `VirtualMachineSeriesName`, `VolumeSeriesName`, or `ClusterSeriesName` parameters. See the cmdlet help, the documentation above, or use tab-completion to discover available series names.
+You can specify the series you want with these parameters (which support tab-completion for discoverability):
+
+| Object type        | Parameter to specify series name |
+|--------------------|-----------------------------|
+| Drives             | -PhysicalDiskSeriesName     |
+| Network adapters   | -NetworkAdapterSeriesName   |
+| Servers            | -ClusterNodeSeriesName      |
+| Virtual hard disks | -VHDSeriesName              |
+| Virtual machines   | -VirtualMachineSeriesName   |
+| Volumes            | -VolumeSeriesName           |
+| Clusters           | -ClusterSeriesName          |
+
+If you don't specify, the cmdlet returns every series available for the specified object.
+
+### Example
 
 For example, this cmdlet gets the CPU usage of the virtual machine named *MyVM* for the last hour.
 
