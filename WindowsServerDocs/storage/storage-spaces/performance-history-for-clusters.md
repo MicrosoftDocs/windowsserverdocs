@@ -1,0 +1,23 @@
+---
+title: Performance history for clusters
+ms.author: cosdar
+ms.manager: eldenc
+ms.technology: storage-spaces
+ms.topic: article
+author: cosmosdarwin
+ms.date: 02/01/2018
+Keywords: Storage Spaces Direct
+ms.localizationpriority: medium
+---
+
+# Performance history for clusters
+
+> Applies To: Windows Server Insider Preview build 17090 and later
+
+This sub-topic of [Performance history for Storage Spaces Direct](performance-history.md) describes in detail the performance history collected for clusters.
+
+There are no series that originate at the cluster level. Instead, server series, such as `node.cpu.usage`, are aggregated for all servers in the cluster. Volume series, such as `volume.iops.total`, are aggregated for all volumes in the cluster. And drive series, such as `physicaldisk.size.total`, are aggregated for all drives in the cluster.
+
+## See also
+
+- [Performance history for Storage Spaces Direct](performance-history.md)
