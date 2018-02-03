@@ -79,6 +79,14 @@ The `size.*` series are collected from the `MSFT_PhysicalDisk` class in WMI, one
 | `physicaldisk.size.total`       | `Size`            |
 | `physicaldisk.size.used`        | `AllocatedSize`   |
 
+## Usage in PowerShell
+
+Use the [Get-PhysicalDisk](https://docs.microsoft.com/powershell/module/storage/get-physicaldisk) cmdlet:
+
+```PowerShell
+Get-PhysicalDisk -SerialNumber <SerialNumber> | Get-ClusterPerf
+```
+
 ## See also
 
 - [Performance history for Storage Spaces Direct](performance-history.md)
