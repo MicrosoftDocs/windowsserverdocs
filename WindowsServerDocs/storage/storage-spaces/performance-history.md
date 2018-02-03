@@ -110,25 +110,25 @@ Get-ClusterPerformanceHistory
 
 ### Specify the object
 
-You can specify an object via the pipeline to see its performance history. This works with 7 types of objects:
+You can specify an object you want by the pipeline. This works with 7 types of objects:
 
-| Object type        | Cmdlet for pipeline  |             |
-|--------------------|----------------------|-------------|
-| Drives             | Get-PhysicalDisk     | [Example](performance-history-for-drives.md#usage-in-powershell) |
-| Network adapters   | Get-NetAdapter       | [Example](performance-history-for-network-adapters.md#usage-in-powershell) |
-| Servers            | Get-ClusterNode      | [Example](performance-history-for-servers.md#usage-in-powershell) |
-| Virtual hard disks | Get-VHD              | [Example](performance-history-for-vhds.md#usage-in-powershell) |
-| Virtual machines   | Get-VM               | [Example](performance-history-for-vms.md#usage-in-powershell) |
-| Volumes            | Get-Volume           | [Example](performance-history-for-volumes.md#usage-in-powershell) |
-| Clusters           | Get-Cluster          | [Example](performance-history-for-clusters.md#usage-in-powershell) |
+| Object from pipeline |             |
+|----------------------|-------------|
+| `Get-PhysicalDisk`   | [Example](performance-history-for-drives.md#usage-in-powershell)           |
+| `Get-NetAdapter`     | [Example](performance-history-for-network-adapters.md#usage-in-powershell) |
+| `Get-ClusterNode`    | [Example](performance-history-for-servers.md#usage-in-powershell)          |
+| `Get-VHD`            | [Example](performance-history-for-vhds.md#usage-in-powershell)             |
+| `Get-VM`             | [Example](performance-history-for-vms.md#usage-in-powershell)              |
+| `Get-Volume`         | [Example](performance-history-for-volumes.md#usage-in-powershell)          |
+| `Get-Cluster`        | [Example](performance-history-for-clusters.md#usage-in-powershell)         |
 
-If you don't specify, the cmdlet returns performance history for the overall cluster.
+If you don't specify, performance history for the overall cluster is returned.
 
 ### Specify the timeframe
 
-You can specify the timeframe of history you want with the `-TimeFrame` parameter. The possible values are:
+You can specify the timeframe of history you want with the `-TimeFrame` parameter:
 
-| Value        |
+| -TimeFrame   |
 |--------------|
 | `MostRecent` |
 | `LastHour`   |
@@ -137,26 +137,26 @@ You can specify the timeframe of history you want with the `-TimeFrame` paramete
 | `LastMonth`  |
 | `LastYear`   |
 
-If you don't specify, the default is the `MostRecent` measurement.
+If you don't specify, the `MostRecent` measurement is returned.
 
    > [!TIP]
    > Consider specifying the series you want too.
 
 ### Specify the series
 
-You can specify the series you want with these parameters (which support tab-completion for discoverability):
+You can specify the series you want with these parameters, which support tab-completion for discoverability:
 
-| Object type        | Parameter to specify series name |
-|--------------------|-----------------------------|
-| Drives             | -PhysicalDiskSeriesName     |
-| Network adapters   | -NetworkAdapterSeriesName   |
-| Servers            | -ClusterNodeSeriesName      |
-| Virtual hard disks | -VHDSeriesName              |
-| Virtual machines   | -VirtualMachineSeriesName   |
-| Volumes            | -VolumeSeriesName           |
-| Clusters           | -ClusterSeriesName          |
+| Parameter                     |
+|-------------------------------|
+| `-PhysicalDiskSeriesName`     |
+| `-NetworkAdapterSeriesName`   |
+| `-ClusterNodeSeriesName`      |
+| `-VHDSeriesName`              |
+| `-VirtualMachineSeriesName`   |
+| `-VolumeSeriesName`           |
+| `-ClusterSeriesName`          |
 
-If you don't specify, the cmdlet returns every series available for the specified object.
+If you don't specify, every series available for the specified object is returned.
 
 ### Example
 
