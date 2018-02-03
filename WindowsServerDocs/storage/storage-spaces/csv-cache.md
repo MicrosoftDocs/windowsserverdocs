@@ -6,7 +6,7 @@ ms.manager: siroy
 ms.technology: storage-spaces
 ms.topic: article
 author: eldenchristensen
-ms.date: 02/02/2018
+ms.date: 02/05/2018
 ms.localizationpriority: medium
 ---
 
@@ -27,20 +27,20 @@ The in-memory read cache is most effective for read-intensive workloads, such as
 You can use up to 80% of total physical memory for the CSV in-memory read cache.
 
   > [!TIP]
-  >  For hyper-converged deployments, where compute and storage run on the same servers, be careful to leave enough memory for your virtual machines. For converged Scale-Out File Server (SoFS) deployments, with less memory contention, you can allocate more generously.
+  >  For hyper-converged deployments, where compute and storage run on the same servers, be careful to leave enough memory for your virtual machines. For converged Scale-Out File Server (SoFS) deployments, with less contention for memory, this doesn't apply.
 
 ## Configuring the in-memory read cache
 
 In Windows Server 2016, the CSV in-memory read cache is off by default.
 
-In Windows Server Insider Preview builds, it is on by default.
+In Windows Server Insider Preview builds, it is on by default, with 1 GB allocated.
 
 | OS version                     | Default CSV cache size |
 |--------------------------------|------------------------|
 | Windows Server 2016            | 0 (disabled)           |
 | Windows Server Insider Preview | 1 GB                   |
 
-To see how much memory is being used for CSV in-memory read cache, run this PowerShell cmdlet:
+To see how much memory is being used for CSV in-memory read cache using PowerShell, run:
 
 ```PowerShell
 (Get-Cluster).BlockCacheSize
@@ -48,7 +48,7 @@ To see how much memory is being used for CSV in-memory read cache, run this Powe
 
 The value returned is in megabytes (MB) per server. For example, `1024` represents 1 gigabyte (GB).
 
-You can change the amount of memory by directly modifying this value. For example, this sets the CSV in-memory read cache to use 2 GB per server:
+To change how much memory, you can directly modify this value in PowerShell. For example, to set the CSV in-memory read cache to use 2 GB per server, run:
 
 ```PowerShell
 (Get-Cluster).BlockCacheSize = 2048
