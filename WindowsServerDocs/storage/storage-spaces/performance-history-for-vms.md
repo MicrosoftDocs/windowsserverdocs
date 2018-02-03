@@ -58,6 +58,17 @@ In addition, all virtual hard disk (VHD) series, such as `vhd.iops.total`, are a
    > [!NOTE]
    > Counters are measured over the entire interval, not sampled. For example, if the VM is idle for 9 seconds but spikes to use 50% of host CPU in the 10th second, its `virtualmachine.cpu.usage` will be recorded as 5% on average during this 10-second interval. This ensures its performance history captures all activity and is robust to noise.
 
+## Usage in PowerShell
+
+Use the [Get-VM](https://docs.microsoft.com/powershell/module/hyper-v/get-vm) cmdlet:
+
+```PowerShell
+Get-VM <Name> | Get-ClusterPerf
+```
+
+   > [!NOTE]
+   > The Get-VM cmdlet only returns virtual machines on the local (or specified) server, not across the cluster.
+
 ## See also
 
 - [Performance history for Storage Spaces Direct](performance-history.md)
