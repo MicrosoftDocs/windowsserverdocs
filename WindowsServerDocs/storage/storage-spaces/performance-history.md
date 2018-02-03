@@ -112,7 +112,17 @@ Optionally, you can specify the object, timeframe, and/or series you want.
 
 ### Specify the object
 
-Specify an object via the pipeline to see its performance history. This works with 7 object types:
+Specify an object via the pipeline to see its performance history. This works with 7 types of objects:
+
+| Object type        | Cmdlet for pipeline  |             |
+|--------------------|----------------------|-------------|
+| Drives             | Get-PhysicalDisk     | [Example]() |
+| Network adapters   | Get-NetAdapter       | [Example]() |
+| Servers            | Get-ClusterNode      | [Example]() |
+| Virtual hard disks | Get-VHD              | [Example]() |
+| Virtual machines   | Get-VM               | [Example]() |
+| Volumes            | Get-Volume           | [Example]() |
+| Clusters           | Get-Cluster          | [Example]() |
 
 #### Drives
 
