@@ -7,7 +7,7 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.date: 2/1/2017
+ms.date: 2/2/2017
 description: New and updated topics in the on-premises storage documentation for Windows Server for IT Pros.
 ---
 # Change history for storage topics in Windows Server
@@ -18,12 +18,17 @@ This topic lists new and updated topics in the [Storage](storage.md) documentati
 
 > If you're looking for update history for Windows Server, see [Windows 10 and Windows Server 2016 update history](https://support.microsoft.com/help/4000825/windows-10-and-windows-server-2016-update-history).
 
+## February 2018
+
+|New or changed topic|Description|
+|---|---|
+|[Storage Spaces health and operational states](storage-spaces/storage-spaces-states.md)| New topic.|
+
 ## January 2018
 
 |New or changed topic|Description|
 |---|---|
 |[Drive symmetry considerations in Storage Spaces Direct](storage-spaces/drive-symmetry-considerations.md)| New topic.|
-|[Storage Spaces health and operational states](storage-spaces/storage-spaces-states.md)| New topic.|
 |[Using Storage Replica with Project Honolulu](storage-replica/storage-replica-ui.md)|New topic.|
 
 ## December 2017

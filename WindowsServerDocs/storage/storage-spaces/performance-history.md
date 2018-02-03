@@ -9,7 +9,6 @@ ms.date: 02/01/2018
 Keywords: Storage Spaces Direct
 ms.localizationpriority: medium
 ---
-
 # Performance history for Storage Spaces Direct
 
 > Applies To: Windows Server Insider Preview build 17090 and later
@@ -42,7 +41,7 @@ To see your cluster's performance history, use [Project Honolulu (Technical Prev
 
 ![How it works](media/performance-history/how-it-works.png)
 
-1. When Storage Spaces Direct is enabled, the [Health Service](../../failover-clustering/health-service.md) creates an approximately 10 GB three-way mirror volume named ClusterPerformanceHistory and provisions an instance of the Extensible Storage Engine (also known as Microsoft JET) there. This lightweight database stores the performance history.
+1. When Storage Spaces Direct is enabled, the [Health Service](../../failover-clustering/health-service-overview.md) creates an approximately 10 GB three-way mirror volume named ClusterPerformanceHistory and provisions an instance of the Extensible Storage Engine (also known as Microsoft JET) there. This lightweight database stores the performance history.
 
 2. The Health Service automatically discovers relevant objects, such as virtual machines, anywhere in the cluster and begins streaming their performance counters. The counters are aggregated, synchronized, and inserted into the database. Streaming runs continously and is optimized for minimal system impact.
 
