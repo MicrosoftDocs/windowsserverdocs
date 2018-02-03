@@ -80,6 +80,14 @@ The `memory.*` series are (COMING SOON).
   > [!NOTE]
   > Counters are measured over the entire interval, not sampled. For example, if the server is idle for 9 seconds but spikes to 100% CPU in the 10th second, its `node.cpu.usage` will be recorded as 10% on average during this 10-second interval. This ensures its performance history captures all activity and is robust to noise.
 
+## Usage in PowerShell
+
+Use the [Get-ClusterNode](https://docs.microsoft.com/powershell/module/failoverclusters/get-clusternode) cmdlet:
+
+```PowerShell
+Get-ClusterNode <Name> | Get-ClusterPerf
+```
+
 ## See also
 
 - [Performance history for Storage Spaces Direct](performance-history.md)
