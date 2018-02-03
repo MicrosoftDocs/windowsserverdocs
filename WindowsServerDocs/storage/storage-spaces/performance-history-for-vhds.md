@@ -57,6 +57,15 @@ Use the [Get-VHD](https://docs.microsoft.com/powershell/module/hyper-v/get-vhd) 
 Get-VHD <Path> | Get-ClusterPerf
 ```
 
+To get the path of every VHD from the virtual machine:
+
+```PowerShell
+(Get-VM <Name>).HardDrives | Select Path
+```
+
+   > [!NOTE]
+   > The Get-VHD cmdlet requires a file path to be provided. It does not support enumeration.
+
 ## See also
 
 - [Performance history for Storage Spaces Direct](performance-history.md)
