@@ -16,7 +16,7 @@ ms.localizationpriority: medium
 
 This topic describes how to use system memory to boost the performance of [Storage Spaces Direct](storage-spaces-direct-overview.md).
 
-Storage Spaces Direct is compatible with the Cluster Shared Volume (CSV) in-memory read cache. Introduced in Windows Server 2012, it uses system memory to provide read-only caching of any unbuffered I/O. This can significantly improve performance for applications like Hyper-V, which uses unbuffered I/O to access VHD or VHDX files. Unbuffered IOs are operations that are not cached by the Windows Cache Manager.
+Storage Spaces Direct is compatible with the Cluster Shared Volume (CSV) in-memory read cache. Using system memory to cache reads can significantly improve performance for applications like Hyper-V, which uses unbuffered I/O to access VHD or VHDX files. Unbuffered IOs are any operations that are not cached by the Windows Cache Manager.
 
 Because the in-memory cache is server-local, it improves data locality for hyper-converged Storage Spaces Direct deployments: recent reads are cached in memory on the same host where the virtual machine is running, reducing how often reads go over the network. This results in lower latency and better storage performance.
 
