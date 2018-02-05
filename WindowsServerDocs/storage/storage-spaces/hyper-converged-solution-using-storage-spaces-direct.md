@@ -157,7 +157,11 @@ If you later need to remove some features, update the *$Roles* variable and repl
 
 ## Step 2: Configure the network
 
-There are a number of ways to setup networking with Storage Spaces Direct. For details, see [RDMA configuration guidelines for Windows Server 2016 and Windows Server](https://gallery.technet.microsoft.com/RDMA-configuration-425bcdf2). If you're testing Storage Spaces Direct inside of virtual machines, skip this **Network Configuration** section. RDMA is not available for networking inside a virtual machine.
+There are a number of ways to setup networking with Storage Spaces Direct. For details, see [RDMA configuration guidelines for Windows Server 2016 and Windows Server](https://gallery.technet.microsoft.com/RDMA-configuration-425bcdf2). 
+
+If you're testing Storage Spaces Direct inside of virtual machines, skip this section. RDMA is not available for networking inside a virtual machine.
+
+Here are a few points about networking and Storage Spaces Direct:
 
 - Storage Spaces Direct requires high bandwidth and low latency network connections between nodes. This network connectivity is important for both system performance and reliability. We recommend using at least two 10 Gb connections between the nodes, preferably with RDMA to increase throughput and reduce the CPU usage for network traffic.
 
