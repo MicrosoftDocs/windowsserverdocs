@@ -612,7 +612,7 @@ Phase 1 includes the following steps:
             > [!NOTE]
             > Note: Any custom created groups with effective Tier 0 access, see Tier 0 equivalency for more details.
 
-            Teir 1 Admins
+            Tier 1 Admins
 
             > [!NOTE]
             > Note: This Group was created earlier in Phase 1

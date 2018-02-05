@@ -10,7 +10,7 @@ ms.topic:
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/18/2017
+ms.date: 01/31/2018
 ms.localizationpriority: low
 ---
 
@@ -22,19 +22,21 @@ This article describes the system requirements, prerequisites, and steps to inst
 
 ## Supported operating systems ##
 
- You can install Project Honolulu on the following Windows operating systems:
+You can *install* Honolulu on the following Windows operating systems:
 
-| **Version**| **Install Honolulu** | **Managed node** via Server Manager, and **managed cluster** via Failover Cluster Mgr | **Managed HCI cluster** via HC Cluster Mgr (early preview)|
-|-------------------------|---------------|-----|------------------------|
-| Windows 10              | Yes (local)   | N/A | N/A                    |
-| Windows Server, version 1709| Yes (gateway) | Yes | Yes, on Insider builds |
-| Windows Server 2016     | Yes (gateway) | Yes | Future                 |
-| Windows Server 2012 R2  | No            | Yes | N/A                    |
-| Windows Server 2012     | No            | Yes | N/A                    |
+| **Version** | **Installation Mode** |
+|-------------|-----------------------|
+|Windows 10   | Desktop mode |
+|Windows Server, version 1709 | Gateway mode |
+|Windows Server 2016 | Gateway mode |
+
+**Desktop Mode:** Connect to the Honolulu gateway from the same computer on which it's installed (i.e. `http://localhost:[port]`)
+
+**Gateway Mode:** Connect to the Honolulu  gateway from a client browser on a different machine (i.e. `https://servername`)
 
 ## Install on Windows 10
 
-When installing on Windows 10, Project Honolulu will use port 6515 by default, but you have the option to specify a different port. You are also given the choice to create a desktop shortcut and let Project Honolulu mange your TrustedHosts.
+When installing on Windows 10, Project Honolulu will use port 6516 by default, but you have the option to specify a different port. You are also given the choice to create a desktop shortcut and let Project Honolulu manage your TrustedHosts.
 
 > [!NOTE]
 > Modifying TrustedHosts is required in a workgroup environment, or when using local administrator credentials in a domain. If you choose to forego this setting, you must [configure TrustedHosts manually](honolulu-troubleshoot.md#configure-trustedhosts).
@@ -78,5 +80,5 @@ On Windows Server Core and Windows Server 2016 Core, Project Honolulu can instal
         msiexec /i <HonoluluInstallerName>.msi /qn /L*v log.txt SME_PORT=<port> SME_THUMBPRINT=<thumbprint> SSL_CERTIFICATE_OPTION=installed
         
 > [!WARNING] 
-> Invoking `msiexec` from PowerShell using dot-slash relative path notation (e.g. `.\ServerManagementGateway.msi`) is not supported
+> Invoking `msiexec` from PowerShell using dot-slash relative path notation (e.g. `.\<HonoluluInstallerName>.msi`) is not supported
 > and will result in installation failure. Remove the `.\` prefix or specify the full path to the MSI.

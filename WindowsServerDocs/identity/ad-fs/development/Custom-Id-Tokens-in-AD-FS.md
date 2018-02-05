@@ -4,7 +4,7 @@ description: A technical overview of the custom id token conecpts in AD FS 2016
 author: anandyadavmsft
 ms.author: billmath
 manager: femila
-ms.date: 09/19/2017
+ms.date: 01/04/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.reviewer: anandy
@@ -14,7 +14,7 @@ ms.technology: identity-adfs
 # Custom ID Tokens in AD FS
 
 ## Overview
-The article [here](Customize-Id-Token-AD-FS-2016.md) shows how to build an app that uses AD FS for OpenID Connect sign on. However, by default there are only a fixed set of claims available in the id_token. AD FS 2016 has the capability to customize the id_token in OpenID Connect scenarios.
+The article [here](enabling-openId-connect-with-ad-fs.md) shows how to build an app that uses AD FS for OpenID Connect sign on. However, by default there are only a fixed set of claims available in the id_token. AD FS 2016 has the capability to customize the id_token in OpenID Connect scenarios.
 
 ## When are custom ID token used?
 In certain scenarios it is possible that the client application does not have a resource that it is trying to access. Therefore, it doesn’t really need an access token. In such cases, the client application essentially needs only an ID token but with some additional claims to help in the functionality.
@@ -87,6 +87,7 @@ Grant-AdfsApplicationPermission -ClientRoleIdentifier "5db77ce4-cedf-4319-85f7-c
 Then, using the same bit of code you have always used to access claims, you can see the additional claims that will become part of the id_token.
 For example, in a .NET MVC sample app, open one of the controller files and enter code like the below:
 
+
 ``` code
     [Authorize]
     public ActionResult About()
@@ -101,3 +102,16 @@ For example, in a .NET MVC sample app, open one of the controller files and ente
     }
 
 ```
+
+>[!NOTE]
+>Please be aware that the resource parameter is required in the Oauth2 request.
+>
+>Bad example:
+>
+>**https&#58;//sts.contoso.com/adfs/oauth2/authorize?response_type=id_token&scope=openid&redirect_uri=https&#58;//myportal/auth&nonce=b3ceb943fc756d927777&client_id=6db3ec2a-075a-4c72-9b22-ca7ab60cb4e7&state=42c2c156aef47e8d0870&resource=6db3ec2a-075a-4c72-9b22-ca7ab60cb4e7**
+>
+>Good example:
+>
+>**https&#58;//sts.contoso.com/adfs/oauth2/authorize?response_type=id_token&scope=openid&redirect_uri=https&#58;//myportal/auth&nonce=b3ceb943fc756d927777&client_id=6db3ec2a-075a-4c72-9b22-ca7ab60cb4e7&state=42c2c156aef47e8d0870&resource=https&#58;//customidrp1/**
+>
+>If the resource parameter is not in the request you may recieve an error or a token without any custom claims.

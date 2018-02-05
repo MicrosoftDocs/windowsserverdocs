@@ -7,8 +7,8 @@ ms.technology: storage-spaces
 ms.topic: get-started-article
 ms.assetid: 20fee213-8ba5-4cd3-87a6-e77359e82bc0
 author: stevenek
-ms.date: 11/28/2017
-description: Deploy Storage Spaces Direct in a hyper-converged cluster in a test lab.
+ms.date: 2/5/2017
+description: Deploy software-defined storage with Storage Spaces Direct and Windows Server in either a hyper-converged solution - where the cluster hosts the storage and virtual machines - or a converged (also known as disaggregated) solution where workloads run on a different cluster. 
 ms.localizationpriority: medium
 ---
 # Deploying Storage Spaces Direct
@@ -17,8 +17,7 @@ ms.localizationpriority: medium
 
 This topic provides instructions for how to deploy [Storage Spaces Direct](storage-spaces-direct-overview.md) to provide software-defined storage for your workloads. It describes both hyper-converged solutions where the cluster hosts the storage and virtual machines as well as a converged (also known as disaggregated) solution where workloads run on a different cluster. Storage Spaces Direct runs on Windows Server 2016 Datacenter Edition.
 
-> [!NOTE]
-> Note that for production environments we recommend acquiring a *Windows Server Software-Defined* hardware/software offering. These offerings are designed, assembled, and validated to meet Microsoft's requirements for private cloud environments, helping ensure reliable operation. More information about the program and links to our partner websites can be found at: [Windows Server Software Defined](https://www.microsoft.com/cloud-platform/software-defined-datacenter).
+Note that for production environments we recommend acquiring a [Windows Server Software-Defined](https://microsoft.com/wssd) hardware/software offering, which includes production deployment tools and procedures. These offerings are designed, assembled, and validated to meet Microsoft's requirements for private cloud environments, helping ensure reliable operation.
 
 To evaluate Storage Spaces Direct without investing in hardware, you can use Hyper-V virtual machines, as described in [Using Storage Spaces Direct in guest virtual machine clusters](storage-spaces-direct-in-vm.md).
 
@@ -158,17 +157,13 @@ If you later need to remove some features, update the *$Roles* variable and repl
 
 ## Step 2: Configure the network
 
-Storage Spaces Direct requires high bandwidth and low latency network connections between nodes. This network connectivity is important for both system performance and reliability. We recommend using at least two 10 Gb connections between the nodes, preferably with RDMA to increase throughput and reduce the CPU usage for network traffic.
+There are a number of ways to setup networking with Storage Spaces Direct. For details, see [RDMA configuration guidelines for Windows Server 2016 and Windows Server](https://gallery.technet.microsoft.com/RDMA-configuration-425bcdf2). If you're testing Storage Spaces Direct inside of virtual machines, skip this **Network Configuration** section. RDMA is not available for networking inside a virtual machine.
 
-There are two common versions of RDMA network adapters - RoCE and iWARP. You can use either with Storage Spaces Direct as long as it has the Windows Server 2016 logo (iWARP usually requires less configuration). Top of Rack switches and server configurations may vary, depending on the network adapter and switch. Configuring the server and switch correctly is important to ensure reliability and performance of Storage Spaces Direct.
+- Storage Spaces Direct requires high bandwidth and low latency network connections between nodes. This network connectivity is important for both system performance and reliability. We recommend using at least two 10 Gb connections between the nodes, preferably with RDMA to increase throughput and reduce the CPU usage for network traffic.
 
-Windows Server 2016 also introduces a new virtual switch that has network teaming built in called Switch Embedded Teaming (SET). This virtual switch allows the same physical NIC ports to be used for all network traffic while using RDMA. This reduces the number of physical NIC ports that would otherwise be required and allows managing the networking through the Software Defined Network features of Windows Server. The steps in this guide are for implementing the new virtual switch with RDMA enabled to the parent partition and SET configured.
+- There are two common versions of RDMA network adapters - RoCE and iWARP. You can use either with Storage Spaces Direct as long as it has the Windows Server 2016 logo, but iWARP usually requires less configuration. Top of Rack switches and server configurations vary depending on the network adapters and switches. Configuring the server and switch correctly is important to ensure reliability and performance of Storage Spaces Direct.
 
-The following assumes 2 RDMA physical NIC Ports (1 dual port, or 2 single port) and the Hyper-V switch deployed with RDMA-enabled host virtual NICs. Complete the following steps to configure the network *on each server*.
-
-Skip this **Network Configuration** section, if you are testing Storage Spaces Direct inside of virtual machines. RDMA is not available for networking inside a virtual machine.
-
-There are a number of valid ways to setup networking with Storage Spaces Direct. For details, see [RDMA configuration guidelines for Windows Server 2016 and Windows Server](https://gallery.technet.microsoft.com/RDMA-configuration-425bcdf2).
+- Windows Server 2016 also introduces a new virtual switch that has network teaming built in called Switch Embedded Teaming (SET). This virtual switch allows the same physical NIC ports to be used for all network traffic while using RDMA. This reduces the number of physical NIC ports that would otherwise be required and allows managing the networking through the Software Defined Network features of Windows Server.
 
 ## Step 3: Configure Storage Spaces Direct
 
@@ -415,7 +410,7 @@ After deploying your clustered file server, we recommend testing the performance
 
 ## See also
 
--   [Storage Spaces Direct in Windows Server 2016](storage-spaces-direct-overview.md)  
+-   [Storage Spaces Direct in Windows Server 2016](storage-spaces-direct-overview.md)
 -   [Understand the cache in Storage Spaces Direct](understand-the-cache.md)
 -   [Planning volumes in Storage Spaces Direct](plan-volumes.md)
 -   [Storage Spaces Fault Tolerance](storage-spaces-fault-tolerance.md)

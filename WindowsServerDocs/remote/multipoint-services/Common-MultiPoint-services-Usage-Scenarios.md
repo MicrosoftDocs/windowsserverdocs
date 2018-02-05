@@ -2,7 +2,6 @@
 title: Common MultiPoint Services Usage Scenarios
 description: Learn about common uses for MultiPoint Services
 ms.custom: na
-ms.date: 07/22/2016
 ms.prod: windows-server-threshold
 ms.technology: multipoint-services
 ms.reviewer: na

@@ -123,8 +123,6 @@ To do this, from an elevated command prompt, run:
 
 Where \<key\> is the appropriate volume-license, retail, or OEM product key.
 
-Not finding content you need? Windows 10 users, tell us what you want on [Feedback Hub](feedback-hub://?referrer=techDocsUcPage&tabid=2&contextid=898&newFeedback=true&topic=Supported-Upgrade-Paths.md). 
-
 
  
 

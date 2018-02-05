@@ -10,7 +10,7 @@ ms.topic:
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/18/2017
+ms.date: 12/01/2017
 ms.localizationpriority: low
 ---
 # Microsoft Project Honolulu
@@ -21,7 +21,7 @@ ms.localizationpriority: low
 
 Honolulu is a locally deployed, browser-based, management tool set that enables on-premises administration of Windows Servers with no Azure or cloud dependency. Honolulu gives IT Admins full control over all aspects of their Server infrastructure, and is particularly useful for management on private networks that are not connected to the Internet.
 
-Honolulu is the modern evolution of “in-box�? management tools, like Server Manager and MMC. It is complementary to System Center and Operations Management Suite, and is not intended to replace these products and services.
+Honolulu is the modern evolution of “in-box" management tools, like Server Manager and MMC. It is complementary to System Center and Operations Management Suite, and is not intended to replace these products and services.
 
 ![](../media/honolulu/honolulu-deploy-graphic.png)
 
@@ -44,16 +44,26 @@ Publishing the web server to DNS and setting up the corporate firewall can allow
 
 ## Supported operating systems
 
-You can use Honolulu on the following Windows operating systems:
+You can *install* Honolulu on the following Windows operating systems:
 
-| **Version**| **Install Honolulu** | **Managed node** via Server Manager, and **managed cluster** via Failover Cluster Mgr | **Managed HCI cluster** via HC Cluster Mgr (early preview)|
+| **Version** | **Installation Mode** |
+|-------------|-----------------------|
+|Windows 10   | Desktop mode |
+|Windows Server, version 1709 | Gateway mode |
+|Windows Server 2016 | Gateway mode |
+
+**Desktop Mode:** Connect to the Honolulu gateway from the same computer on which it's installed (i.e. `http://localhost:[port]`)
+
+**Gateway Mode:** Connect to the Honolulu  gateway from a client browser on a different machine (i.e. `https://servername`)
+
+You can use Honolulu to *manage* the following Windows operating systems:
+
+| **Version** | **Managed node** via Server Manager | **Managed cluster** via Failover Cluster Mgr | **Managed HCI cluster** via HC Cluster Mgr (early preview)|
 |-------------------------|---------------|-----|------------------------|
-| Windows 10              | Yes (local)   | N/A | N/A                    |
-| Windows Server, version 1709| Yes (gateway) | Yes | Yes, on Insider builds |
-| Windows Server 2016     | Yes (gateway) | Yes | Future                 |
-| Windows Server 2012 R2  | No            | Yes | N/A                    |
-| Windows Server 2012     | No            | Yes | N/A                    |
-
+| Windows Server, version 1709| Yes | Yes | Yes, on Insider builds |
+| Windows Server 2016     | Yes | Yes | Future                 |
+| Windows Server 2012 R2  | Yes           | Yes | N/A                    |
+| Windows Server 2012     | Yes            | Yes | N/A                    |
 > [!NOTE]
 > Honolulu requires PowerShell features that are not included in Windows Server 2012 and 2012 R2. If you will manage Windows Server 2012 or 2012 R2 with Honolulu, you will need to install Windows Management Framework (WMF) version 5.0 or higher on those servers.
 

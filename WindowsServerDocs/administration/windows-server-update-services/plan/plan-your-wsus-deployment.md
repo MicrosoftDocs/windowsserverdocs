@@ -9,7 +9,7 @@ ms.assetid: 35865398-b011-447a-b781-1c52bc0c9e3a
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/16/2017
+ms.date: 01/31/2018
 ---
 # Plan your WSUS deployment
 
@@ -28,7 +28,8 @@ The first step in the deployment of Windows Server Update Services (WSUS) is to 
 |[1.7. Plan Automatic Updates settings](plan-your-wsus-deployment.md#BKMK_1.7.)|Plan how you will configure the automatic updates settings for your scenario.|
 
 ## <a name="BKMK_1.1"></a>1.1. Review considerations and system requirements
-**System Requirements:**
+
+### System Requirements
 
 Before you enable the WSUS server role, confirm that the server meets the system requirements and confirm that you have the necessary permissions to complete the installation by adhering with the following guidelines:
 
@@ -44,7 +45,7 @@ Before you enable the WSUS server role, confirm that the server meets the system
 
 -   Software Requirements:
 
-    -   For viewing reports, WSUS requires the [Microsoft Report Viewer Redistributable 2008](https://www.microsoft.com/download/details.aspx?id=6576)
+    -   For viewing reports, WSUS requires the [Microsoft Report Viewer Redistributable 2008](https://www.microsoft.com/download/details.aspx?id=6576). On Windows Server 2016, WSUS requires [Microsoft Report Viewer Runtime 2012](https://www.microsoft.com/download/details.aspx?id=35747)
 
 -   If you install roles or software updates that require you to restart the server when installation is complete, restart the server before you enable the WSUS server role.
 
@@ -61,7 +62,7 @@ Before you enable the WSUS server role, confirm that the server meets the system
 
 -   Confirm that the account you plan to use to install WSUS is a member of the Local Administrators group.
 
-**Installation Considerations:**
+### Installation Considerations
 
 During the installation process, WSUS will install the following by default:
 
@@ -83,7 +84,7 @@ During the installation process, WSUS will install the following by default:
 
     -   DSS Authentication Web Service
 
-**Features on Demand Considerations**
+### Features on Demand Considerations
 
 Be aware that configuring client computers (including servers) to update by using WSUS will result in the following limitations:
 
@@ -91,8 +92,15 @@ Be aware that configuring client computers (including servers) to update by usin
 
 2.  Windows client editions will not be able to install .NET 3.5 on demand from the web. The same considerations as server roles apply to .NET 3.5.
 
-> [!NOTE]
-> Configuring a Features on Demand installation source does not involve WSUS. For information on how to configure Features, see [Configure Features on Demand in Windows Server](https://technet.microsoft.com/library/jj127275.aspx).
+    > [!NOTE]
+    > Configuring a Features on Demand installation source does not involve WSUS. For information on how to configure Features, see [Configure Features on Demand in Windows Server](https://technet.microsoft.com/library/jj127275.aspx).
+
+3. Enterprise devices running Windows 10, version 1709, cannot install any Features on Demand directly from WSUS. To install Features on Demand, [create a feature file (side-by-side store)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj127275%28v=ws.11%29#create-a-feature-file-or-side-by-side-store) or obtain the Feature on Demand package from one of the following sources:
+    - [Volume Licensing Service Center](https://www.microsoft.com/licensing/servicecenter) (VLSC) - VL access is required
+    - OEM Portal - OEM access is required
+    - MSDN Download - MSDN subscription is required
+
+    Individually-obtained Feature on Demand packages can be installed using [DISM command-line options](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-operating-system-package-servicing-command-line-options).
 
 ### <a name="BKM_1.1.1."></a>WSUS database requirements
 WSUS requires one of the following databases:

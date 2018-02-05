@@ -5,7 +5,7 @@ description: Frequently asked questions for AD FS 2016
 author: jenfieldmsft
 ms.author:  billmath
 manager: femila
-ms.date: 11/10/2017
+ms.date: 01/04/2018
 ms.topic: article
 ms.custom: it-pro
 ms.prod: windows-server-threshold
@@ -160,3 +160,23 @@ This group is only created when a Windows 2016 Domain Controller with the FSMO P
 6.	In the Applies to list box, select **Descendant User objects**.
 7.	Using the scroll bar, scroll to the bottom of the page and **click** Clear all.
 8.	In the **Properties** section, select **Read msDS-KeyCredentialLink** and **Write msDS-KeyCrendentialLink**.
+
+### Why does modern authentication from Android devices fail if the server does not send all the intermediate certificates in the chain with the SSL cert?
+
+Federated users may experience authentication to Azure AD for apps that use the Android ADAL library failing. The app will get an **AuthenticationException** when it tries to show the login page. In chrome the AD FS login page might be called out as unsafe.
+
+Android - across all versions and all devices - does not support downloading additional certificates from the **authorityInformationAccess** field of the certificate. This is true of the Chrome browser as well. Any Server Authentication certificate that’s missing intermediate certificates will result in this error if the entire certificate chain is not passed from AD FS. 
+
+A proper solution to this problem is to configure the AD FS and WAP servers to send the necessary intermediate certificates along with the SSL certificate. 
+
+When exporting the SSL certificate, from one machine, to be imported to the computer’s personal store, of the AD FS and WAP server(s), make sure to export the Private key and select **Personal Information Exchange - PKCS #12**. 
+
+It is important that the check box to **Include all certificates in the certificate path if possible** is checked, as well as **Export all extended properties**. 
+
+Run certlm.msc on the Windows servers and import the *.PFX into the Computer’s Personal Certificate store. This will cause the server to pass the entire certificate chain to the ADAL library. 
+
+>[!NOTE]
+> The certificate store of Network Load Balancers should also be updated to include the entire certificate chain if present
+
+### Does AD FS support HEAD requests?
+AD FS does not support HEAD requests.  Applications should not be using HEAD requests against AD FS endpoints.  This may cause HTTP error responses that are unexpected and/or delayed.  Additionally, you may see unexpected error events in the AD FS event log.

@@ -8022,8 +8022,53 @@
     },
         {
           "source_path": "WindowsServerDocs/get-started/what-s-new-in-windows-server-2016.md",
-          "redirect_url": "https://docs.microsoft.com/en-us/windows-server/get-started/whats-new-in-windows-server-2016",
+          "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2016",
           "redirect_document_id": true
-    }
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/honolulu/deployment-guide.md",
+      "redirect_url": "/windows-server/manage/honolulu/deployment-guide",
+      "redirect_document_id": true
+},
+{
+  "source_path": "WindowsServerDocs/administration/honolulu/honolulu.md",
+  "redirect_url": "/windows-server/manage/honolulu/honolulu",
+  "redirect_document_id": true
+},
+{
+  "source_path": "WindowsServerDocs/administration/honolulu/honolulu-and-asr.md",
+  "redirect_url": "/windows-server/manage/honolulu/honolulu-and-asr",
+  "redirect_document_id": true
+},
+{
+  "source_path": "WindowsServerDocs/administration/honolulu/honolulu-faq.md",
+  "redirect_url": "/windows-server/manage/honolulu/honolulu-faq",
+  "redirect_document_id": true
+},
+{
+  "source_path": "WindowsServerDocs/administration/honolulu/honolulu-known-issues.md",
+  "redirect_url": "/windows-server/manage/honolulu/honolulu-known-issues",
+  "redirect_document_id": true
+},
+{
+  "source_path": "WindowsServerDocs/administration/honolulu/honolulu-manage.md",
+  "redirect_url": "/windows-server/manage/honolulu/honolulu-manage",
+  "redirect_document_id": true
+},
+{
+  "source_path": "WindowsServerDocs/administration/honolulu/honolulu-manage-hci.md",
+  "redirect_url": "/windows-server/manage/honolulu/honolulu-manage-hci",
+  "redirect_document_id": true
+},
+{
+  "source_path": "WindowsServerDocs/administration/honolulu/honolulu-standalone-hyper-v.md",
+  "redirect_url": "/windows-server/manage/honolulu/honolulu-standalone-hyper-v",
+  "redirect_document_id": true
+},
+{
+  "source_path": "WindowsServerDocs/administration/honolulu/honolulu-troubleshoot.md",
+  "redirect_url": "/windows-server/manage/honolulu/honolulu-troubleshoot",
+  "redirect_document_id": true
+}
   ]
 }

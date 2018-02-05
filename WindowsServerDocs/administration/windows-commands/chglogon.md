@@ -9,13 +9,10 @@ ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8280c5b3-ac10-48ae-87ca-678594837f03
-author: coreyp
-ms.author: coreyp-at-msft
 ms.date: 10/16/2017
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/16/2017
 ---
 
 # chglogon

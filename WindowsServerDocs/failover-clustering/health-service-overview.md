@@ -1,5 +1,5 @@
 ---
-title: Health Service in Windows Server 2016
+title: Health Service in Windows Server
 ms.prod: windows-server-threshold
 manager: eldenc
 ms.author: cosdar
@@ -7,9 +7,10 @@ ms.technology: storage-health-service
 ms.topic: article
 ms.assetid: 5bc71e71-920e-454f-8195-afebd2a23725
 author: cosmosdarwin
-ms.date: 08/14/2017
+ms.date: 01/26/2018
 ---
-# Health Service in Windows Server 2016
+# Health Service in Windows Server
+
 > Applies to Windows Server 2016
 
 The Health Service is a new feature in Windows Server 2016 that improves the day-to-day monitoring and operational experience for clusters running Storage Spaces Direct.
@@ -85,7 +86,7 @@ The Health Service provides an enforcement mechanism to restrict the components 
 
 ### Usage  
 
-The Supported Components Document uses an XML-inspired syntax. We recommend using your favorite text editor, such as Visual Studio Code (available for free [here](http://code.visualstudio.com/)) or Notepad, to create an XML document which you can save and reuse.
+The Supported Components Document uses an XML-inspired syntax. We recommend using your favorite text editor, such as the free [Visual Studio Code](http://code.visualstudio.com/) or Notepad, to create an XML document which you can save and reuse.
 
 #### Sections
 
@@ -93,12 +94,12 @@ The document has two independent sections: **Disks** and **Cache**.
 
 If the **Disks** section is provided, only the drives listed are allowed to join pools. Any unlisted drives are prevented from joining pools, which effectively precludes their use in production. If this section is left empty, any drive will be allowed to join pools.
 
-If the **Cache** section is provided, only the drives listed will be used for caching. If this section is left empty, Storage Spaces Direct will attempt to guess based on media type and bus type. For example, if your deployment uses solid-state drives (SSD) and hard disk drives (HDD), the former is automatically chosen for caching; however, if your deployment uses all-flash, you may need to specify the higher endurance devices you'd like to use for caching here.
+If the **Cache** section is provided, only the drives listed are used for caching. If this section is left empty, Storage Spaces Direct attempts to [guess based on media type and bus type](../storage/storage-spaces/understand-the-cache.md#cache-drives-are-selected-automatically). Drives listed here should also be listed in **Disks**.
 
 >[!IMPORTANT]
 > The Supported Components Document does not apply retroactively to drives already pooled and in use.  
 
-#### Example  
+#### Example
 
 ```XML
 <Components>
@@ -116,6 +117,10 @@ If the **Cache** section is provided, only the drives listed will be used for ca
         <Version>2.1</Version>
         <BinaryPath>\\path\to\image.bin</BinaryPath>
       </TargetFirmware>
+    </Disk>
+    <Disk>
+      <Manufacturer>Fabrikam</Manufacturer>
+      <Model>QRSTUV</Model>
     </Disk>
   </Disks>
 

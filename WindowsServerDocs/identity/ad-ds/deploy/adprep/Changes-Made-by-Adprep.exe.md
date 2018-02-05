@@ -11,7 +11,6 @@ ms.suite: na
 ms.technology: active-directory-domain-services
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: a5f06078-afa4-45ac-ae8a-94723b95d2fd
 author: Femila
 ---
 # Changes Made by Adprep.exe
