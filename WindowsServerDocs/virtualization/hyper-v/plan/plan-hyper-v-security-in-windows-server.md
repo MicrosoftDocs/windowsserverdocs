@@ -11,7 +11,7 @@ ms.assetid: 115db481-b57e-41c3-8354-504f4bc6113a
 manager: dongill
 author: larsiwer
 ms.author: kathyDav
-ms.date: 10/07/2016
+ms.date: 02/05/2018
 ---
 
 # Plan for Hyper-V security in Windows Server 2016
@@ -62,4 +62,4 @@ For more secure environments:
 
 For more secure environments:
 
-- **Deploy virtual machines with shielding enabled and deploy them to a guarded fabric.** For more information, see [Generation 2 security settings](../learn-more/Generation-2-virtual-machine-security-settings-for-Hyper-V.md) and [Guarded fabric](../../Guarded-Fabric-and-Shielded-VMs.md).
+- **Deploy virtual machines with shielding enabled and deploy them to a guarded fabric.** For more information, see [Generation 2 security settings](../learn-more/Generation-2-virtual-machine-security-settings-for-Hyper-V.md) and [Guarded fabric](../../guarded-fabric-shielded-vm/guarded-fabric-deployment-overview.md).
