@@ -8,7 +8,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 author: chrishuybregts
 ms.author: chrihu
-ms.assetid: dd8d35b2-133c-475d-8756-52a6c553f901
+ms.date: 02/06/2018
 ---
 # Plan for Deploying Devices using Discrete Device Assignment
 >Applies To: Microsoft Hyper-V Server 2016, Windows Server 2016
@@ -42,9 +42,9 @@ Once the device is mounted inside the guest, the Manufacturer's device driver ca
 ## Virtual Machine Limitations
 Due to the nature of how Discrete Device Assignment is implemented, some features of a virtual machine are restricted while a device is attached.  The follow features are not available:
 - VM Save/Restore
-- Live Migration of a VM
-- The use of Dynamic Memory
-- Adding the VM to a High Availability (HA) Cluster
+- Live migration of a VM
+- The use of dynamic memory
+- Adding the VM to a high availability (HA) cluster
 
 ## Security
 Discrete Device Assignment passes the entire device into the VM.  This means all capabilities of that device are accessible from the guest operating system. Some capabilities, like firmware updating, may adversely impact the stability of the system. As such, numerous warnings are presented to the admin when dismounting the device from the host. We highly recommend that Discrete Device Assignment is only used where the tenants of the VMs are trusted.  
