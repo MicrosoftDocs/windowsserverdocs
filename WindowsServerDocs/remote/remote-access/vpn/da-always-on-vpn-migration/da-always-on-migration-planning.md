@@ -1,19 +1,31 @@
+---
+title: Remote Access Always On VPN migration planning
+description: Migrating from DirectAccess to Always On VPN requires proper planning to determine your migration phases, which helps identify any issues before they affect the entire organization. 
+manager: brianlic
+ms.prod: windows-server
+ms.technology: networking-ras
+ms.topic: article
+ms.assetid: eeca4cf7-90f0-485d-843c-76c5885c54b0
+ms.author: pashort
+author: shortpatti
+---
+
 # Remote Access Always On VPN migration planning
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows 10
 
-Migrating from DirectAccess to Always On VPN requires proper planning to determine your migration phases, which helps identify any issues before they affect the entire organization. The goal during the migration is for users to maintain remote connectivity to the office throughout the process. If you perform tasks out of order, a race condition may occur, leaving remote users with no way to access company resources. Therefore, Microsoft recommends performing a planned, side-by-side migration from DirectAccess to Always On VPN.
+Migrating from DirectAccess to Always On VPN requires proper planning to determine your migration phases, which helps identify any issues before they affect the entire organization. The goal during the migration is for users to maintain remote connectivity to the office throughout the process. If you perform tasks out of order, a race condition may occur, leaving remote users with no way to access company resources. Therefore, Microsoft recommends performing a planned, side-by-side migration from DirectAccess to Always On VPN. For details, see [Remote Access Always On VPN migration deployment](da-always-on-migration-deploy.md).
 
-This topic describes feature similarities and difference between DirectAccess and Always On VPN, benefits of separating users for the migration, standard configuration considerations, and Always On VPN feature enhancements.
+This topic describes feature similarities and difference between DirectAccess and Always On VPN, benefits of separating users for the migration, standard configuration considerations, and Always On VPN feature enhancements. The migration planning phase includes:
 
-1. **[Build migration rings](#build-migration-rings).** As in most other system migrations, target client migrations in phases to help identify any issues before they affect the entire organization. The first part of Always On VPN migration is no different.
-2. **[Review the feature mapping between DirectAccess and Always On VPN](#feature-mapping).** Similar to DirectAccess, Always On VPN has many security, connectivity, authentication, and other options.
-3. **[Review new features of Always On VPN](#win10-vpn-enhancements).**  Discover new or improved features that Always On VPN offers to improve your configuration.
+1. **[Building migration rings](#build-migration-rings).** As in most other system migrations, target client migrations in phases to help identify any issues before they affect the entire organization. The first part of Always On VPN migration is no different.
+2. **[Reviewing the feature mapping between DirectAccess and Always On VPN](#feature-mapping).** Similar to DirectAccess, Always On VPN has many security, connectivity, authentication, and other options.
+3. **[Reviewing the new features of Always On VPN](#win10-vpn-enhancements).**  Discover new or improved features that Always On VPN offers to improve your configuration.
 
 ## <a name="build-migration-rings"></a>Build migration rings
 Migration rings are used to divide the Always On VPN client migration effort into multiple phases. By the time you get to the last phase, your process should be well tested and consistent.
 
-This section provides a template for separating users into migration phases, and then managing those phases. Regardless of the user phase separation method you choose, maintain a single VPN Users group for easier management when the migration is complete.
+This section provides a template<!-- is this true? should this be "guidelines"?--> for separating users into migration phases, and then managing those phases. Regardless of the <!-- what does this mean? are there more user phase separation methods?-->user phase separation method you choose, maintain a single VPN Users group for easier management when the migration is complete.
 
 > [!NOTE]
 > The word _phase_ is not intended to indicate that this is a long process. Whether you move through each phase in a couple of days or a couple of months, Microsoft recommends that you take advantage of side-by-side migration and use a phased approach.
@@ -21,42 +33,43 @@ This section provides a template for separating users into migration phases, and
 ### Benefits of dividing the migration effort into multiple phases
 
 - **Mass outage protection.** By dividing a migration into phases, the number of people a migration-generated issue can affect is much smaller.
-- **Process or communication improvement from feedback.** When each phase is complete, solicit feedback from those who were migrated. Ideally, users didn't even notice that the migration occurred. If their experience was less than optimal, however, their feedback gives you an opportunity to improve your communication plan to include the possibility of whatever occurred or help you avoid that issue in the future.
+- **Process or communication improvement from feedback.** Ideally, users didn't even notice that the migration occurred. However, if their experience was less than optimal, feedback from those who were migrated gives you an opportunity to improve your planning and avoid issues in the future.
 
 ### Tips for when building your migration ring
 
 - **Identify remote users.** Start by separating users into two buckets: those who frequently come into the office and those who don't. The migration process is the same for both groups, but it is likely to take longer for the remote clients to receive the update than for those who connect more frequently. Each migration phase should include members from each bucket.
-- **Prioritize users.** VIP users such as executives are typically among the last users to be migrated. When prioritizing users, however, consider their business productivity impact if migration of their client computer were to fail. For example, if you had a rating of 1 to 3, with 1 meaning that the employee would not be able to work and 3 meaning no immediate work interruption, a business analyst using only internal line-of-business (LOB) apps remotely would be a 1, whereas a salesperson using a cloud app would be a 3.
+- **Prioritize users.** Leadership and other high-impact users are typically among the last users to be migrated. When prioritizing users, however, consider their business productivity impact if migration of their client computer were to fail. For example, if you had a rating of 1 to 3, with 1 meaning that the employee would not be able to work and 3 meaning no immediate work interruption, a business analyst using only internal line-of-business (LOB) apps remotely would be a 1, whereas a salesperson using a cloud app would be a 3.
 - **Don't migrate an entire department at once.** Microsoft strongly recommends that you don't migrate an entire department at the same time. If an issue should arise, you don't want it to hinder remote work for the whole department. Instead, migrate each department or business unit in at least two phases.
-- **Gradually increase user counts.** Most migration scenarios start with members of the IT organization and then move to business users followed by leadership and other high-impact users. Each migration phase typically involves progressively more people. For example, the first phase may include 10 users, and the final group may include 5,000 users. To simplify the deployment, create a single VPN Users security group, and add users to it as their phase arrives. In this way, you end up with a single VPN Users group to which you can add members in the future.
+- **Gradually increase user counts.** Most typical migration scenarios start with members of the IT organization and then move to business users followed by leadership and other high-impact users. Each migration phase typically involves progressively more people. For example, the first phase may include 10 users, and the final group may include 5,000 users. To simplify the deployment, create a single VPN Users security group, and add users to it as their phase arrives. In this way, you end up with a single VPN Users group to which you can add members in the future.
 
 ## Standard configuration considerations
 
-Always VPN has many configuration options. When migrating from DirectAccess to Always On VPN, however, consider starting with configuration options that are comparable to what you have, and then expand from there. However you choose your VPN configuration, though, include the following information:
+Always ON VPN has many configuration options. When migrating from DirectAccess to Always On VPN, however, consider starting with configuration options that are comparable to what you have, and then expand from there. However you choose your VPN configuration, though, include the following information:
 
 - **Connection type.** Connection protocol selection is important and ultimately goes hand in hand with the type of authentication you'll use. For details about the tunneling protocols available, see [VPN connection types](https://docs.microsoft.com/windows/access-protection/vpn/vpn-connection-type).
-- **Routing.** In this context, routing rules determine whether users can use other network routes while connected to the VPN. _Split tunneling_ allows simultaneous access to other networks, such as the Internet; _force tunneling_ requires all traffic to go exclusively through the VPN and does not allow simultaneous access to other networks.
+- **Routing.** In this context, routing rules determine whether users can use other network routes while connected to the VPN. 
+    - _Split tunneling_ allows simultaneous access to other networks, such as the Internet. 
+    - _force tunneling_ requires all traffic to go exclusively through the VPN and does not allow simultaneous access to other networks.
 - **Triggering.** _Triggering_ determines how and when a VPN connection is initiated (for example, when an app opens, when the device is turned on, manually by the user). For triggering options, see the [VPN connectivity](#vpn-connectivity).
 - **Device or user authentication.** DirectAccess uses machine certificates to enable devices to initiate the remote connection. This approach results in persistent remote network connectivity, with no user action required. Always On VPN can also use device certificates and device-initiated connection through a feature called _Device Tunnel_. That connection can be initiated automatically and is persistent, resembling a DirectAccess infrastructure tunnel connection.
 
-By using user certificates, the Always On VPN client can still connect automatically, but it does so at the user level (after user sign-in) instead of at the device level (before user sign-in). The experience is still seamless to the user, but it supports more advanced authentication mechanisms, like Windows Hello for Business.
-
-
+By using user certificates, the Always On VPN client connects automatically, but it does so at the user level (after user sign-in) instead of at the device level (before user sign-in). The experience is still seamless to the user, but it supports more advanced authentication mechanisms, like Windows Hello for Business.
 
 ## <a name="feature-mapping"></a>Feature mapping between DirectAccess and Always On VPN
 
-This section covers feature similarities and differences between DirectAccess and the new Windows 10 VPN feature and describes how they translate to Always On VPN. This list isn't exhaustive, but it does include some of the most common features and functions of DirectAccess. The features and scenarios discussed fall into three categories:
+This section covers feature similarities and differences between DirectAccess and Always On VPN. This list isn't exhaustive, but it does include some of the most common features and functions of DirectAccess. The features and scenarios discussed fall into three categories:
 
-- **[Equivalent functionality](#equivalent-functionality).** These are scenarios and features used in DirectAccess that have a directly related capability in Always On VPN. Where possible, this guide provides the CSP parameter for configuring each option so that you're aware of the XML setting name.
+- **[Equivalent functionality](#equivalent-functionality).** These are scenarios and features used in DirectAccess that have a directly related capability in Always On VPN. Where possible, this guide provides the configuration service provider (CSP) parameter for configuring each option so that you're aware of the XML setting name.
 - **Improved functionality.** These are situations or scenarios in which Always On VPN provides improved functionality over DirectAccess or fills a gap in functionality. Where possible, this guide provides the CSP parameter for configuring each option so that you're aware of the XML setting name.
 - **Limited comparable functionality.** In a few situations, Always On VPN requires an alternate way to incorporate existing functionality. This section discusses those changes and how you can gain the functionality with Always On VPN.
 
+<!-- Can I clean up the document that this note is referencing? it's hard to scan.-->
 > [!NOTE]
 > For additional details about the feature comparison between DirectAccess and Always On VPN, see [Always On VPN and DirectAccess Features Comparison](https://docs.microsoft.com/windows-server/remote/remote-access/vpn/vpn-map-da).
 
 ### <a name="equivalent-functionality"></a>Equivalent functionality
 
-Each item in this section is a use case scenario or commonly used DirectAccess feature for which Always On VPN has an equivalent. The DirectAccess functionality is in bold, followed by an explanation of how Always On VPN achieves the equivalent functionality:
+Each item in this section is a use case scenario or commonly used DirectAccess feature for which Always On VPN has an equivalent. 
 
 DirectAccess functionality | Always On VPN equivalent 
 ------- | ---
@@ -79,49 +92,32 @@ Use of Inbox or RADIUS accounting for reporting of DirectAccess connections. | A
 
 ### Improved functionality
 
-Each item in this section is a use case scenario or commonly used DirectAccess function for which Always On VPN has improved functionality—either through an expansion of functionality or elimination of a previous limitation. The DirectAccess functionality is in bold, followed by an explanation of how Microsoft has improved the equivalent functionality in Always On VPN:
+Each item in this section is a use case scenario or commonly used DirectAccess function for which Always On VPN has improved functionality—either through an expansion of functionality or elimination of a previous limitation. 
 
-- **Requirement for domain-joined devices with Enterprise SKUs.** Always On VPN supports domain-joined, nondomain-joined (workgroup), or Azure AD–joined devices to allow for both enterprise and BYOD scenarios. Always On VPN is available in all Windows editions, and the platform features are available to third parties by way of UWP VPN plug-in support.
-- **DirectAccess clients depend on IPv6 and associated IPv6 translation services to function.** With Always On VPN, users can access both IPv4 and IPv6 resources on the corporate network. The Always On VPN client uses a dual-stack approach that doesn't specifically depend on IPv6 or the need for the VPN gateway to provide NAT64 or DNS64 translation services.
-- **Support for two-factor or OTP authentication.** The Always On VPN platform natively supports EAP, which allows for the use of diverse Microsoft and third-party EAP types as part of the authentication workflow. Always On VPN specifically supports smart card (both physical and virtual) and Windows Hello for Business certificates to satisfy two-factor authentication requirements. In addition, Always On VPN supports OTP and MFA by way of EAP RADIUS integration.
-
-> [!NOTE] 
-> Define this functionality by using the following VPNv2 CSP parameter:
->
->     VPNv2/ProfileName/NativeProfile/Authentication
-
-- **Support for multiple domains and forests.** The Always On VPN platform has no dependency on Active Directory Domain Services (AD DS) forests or domain topology (or associated functional/schema levels) because it doesn't require the VPN client to be domain joined to function. Group Policy is therefore not a dependency to define VPN profile settings because you don't use it during client configuration. Where Active Directory authorization integration is required, you can achieve it through RADIUS as part of the EAP authentication and authorization process.
-- **Support for both split and force tunnel for internet/intranet traffic separation.** You can configure Always On VPN to support both force tunnel (the default operating mode) and split tunnel natively. Always On VPN provides additional granularity for application-specific routing policies.
-
-> [!NOTE] 
-> Define this functionality by using the following VPNv2 CSP parameters:
->
->     VPNv2/ProfileName/NativeProfile/RoutingPolicyType
->     VPNv2/ProfileName/TrafficFilterList/App/RoutingPolicyType
-
-- **Support for IP-HTTPS transition technology.** Always On VPN does not require the use of an IPv6 encapsulation protocol like IP-HTTPS. You can configure it to support SSTP natively if Secure Sockets Layer fallback from IKEv2 is required.
-- **Support for the DirectAccess Connectivity Assistant to provide corporate connectivity status.** Always On VPN is fully integrated with the native Network Connectivity Assistant and provides connectivity status from the View All Networks interface. With the advent of Windows 10 Creators Update (version 1703), VPN connection status and VPN connection control are now available through the Network flyout, as well.
-- **Name resolution of corporate resources using short-name, fully qualified domain name (FQDN), and DNS suffix.** Always On VPN can natively define one or more DNS suffixes as part of the VPN connection and IP address assignment process, including corporate resource name resolution for short names, FQDNs, or entire DNS namespaces. Always On VPN also supports use of Name Resolution Policy Tables to provide namespace-specific resolution granularity.
-
-> [!NOTE] 
-> Define this functionality by using the following VPNv2 CSP parameters:
->
->     VPNv2/ProfileName/DnsSuffix
->     VPNv2/ProfileName/DomainNameInformationList
+DirectAccess functionality | Always On VPN equivalent 
+------- | ---
+Requirement for domain-joined devices with Enterprise SKUs. | Always On VPN supports domain-joined, nondomain-joined (workgroup), or Azure AD–joined devices to allow for both enterprise and BYOD scenarios. Always On VPN is available in all Windows editions, and the platform features are available to third parties by way of UWP VPN plug-in support.
+DirectAccess clients depend on IPv6 and associated IPv6 translation services to function. | With Always On VPN, users can access both IPv4 and IPv6 resources on the corporate network. The Always On VPN client uses a dual-stack approach that doesn't specifically depend on IPv6 or the need for the VPN gateway to provide NAT64 or DNS64 translation services.
+Support for two-factor or OTP authentication. | The Always On VPN platform natively supports EAP, which allows for the use of diverse Microsoft and third-party EAP types as part of the authentication workflow. Always On VPN specifically supports smart card (both physical and virtual) and Windows Hello for Business certificates to satisfy two-factor authentication requirements. In addition, Always On VPN supports OTP and MFA by way of EAP RADIUS integration.<br><br>Define this functionality by using the following VPNv2 CSP parameter:<br>`    VPNv2/ProfileName/NativeProfile/Authentication`
+Support for multiple domains and forests. | The Always On VPN platform has no dependency on Active Directory Domain Services (AD DS) forests or domain topology (or associated functional/schema levels) because it doesn't require the VPN client to be domain joined to function. Group Policy is therefore not a dependency to define VPN profile settings because you don't use it during client configuration. Where Active Directory authorization integration is required, you can achieve it through RADIUS as part of the EAP authentication and authorization process.
+Support for both split and force tunnel for internet/intranet traffic separation. | You can configure Always On VPN to support both force tunnel (the default operating mode) and split tunnel natively. Always On VPN provides additional granularity for application-specific routing policies.<br><br>Define this functionality by using the following VPNv2 CSP parameters:<br>`VPNv2/ProfileName/NativeProfile/RoutingPolicyType`<br>` VPNv2/ProfileName/TrafficFilterList/App/RoutingPolicyType`
+Support for IP-HTTPS transition technology. | Always On VPN does not require the use of an IPv6 encapsulation protocol like IP-HTTPS. You can configure it to support SSTP natively if Secure Sockets Layer fallback from IKEv2 is required.
+Support for the DirectAccess Connectivity Assistant to provide corporate connectivity status. | Always On VPN is fully integrated with the native Network Connectivity Assistant and provides connectivity status from the View All Networks interface. With the advent of Windows 10 Creators Update (version 1703), VPN connection status and VPN connection control are now available through the Network flyout, as well.
+Name resolution of corporate resources using short-name, fully qualified domain name (FQDN), and DNS suffix. | Always On VPN can natively define one or more DNS suffixes as part of the VPN connection and IP address assignment process, including corporate resource name resolution for short names, FQDNs, or entire DNS namespaces. Always On VPN also supports use of Name Resolution Policy Tables to provide namespace-specific resolution granularity.<br><br>Define this functionality by using the following VPNv2 CSP parameters:<br>`VPNv2/ProfileName/DnsSuffix`<br>`VPNv2/ProfileName/DomainNameInformationList`
 
 ### Limited comparable functionality
 
-Each item in this section is a use case scenario or commonly used DirectAccess function for which Always On VPN does not have an equivalent natively. Fortunately, you can implement this functionality in other ways. The DirectAccess functionality is in bold, followed by an explanation of how you can use add-ons to achieve the same functionality in Always On VPN:
+Each item in this section is a use case scenario or commonly used DirectAccess function for which Always On VPN does not have an equivalent natively. Fortunately, you can implement this functionality in other ways.<!-- so what are the other ways?-->
 
-- **Use of multisite to provide multiple remote access entry points and geo-redundancy.** No native multisite-equivalent feature exists in Always On VPN without the use of third-party networking equipment or services such as Azure Traffic Manager or a third-party global server load balancer. However, users can manually select an appropriate VPN endpoint if you define multiple entries in the VPN profile. Third-Party UWP VPN plug-ins may support similar features for connecting to the nearest or most appropriate server VPN endpoint, but this varies by provider.
-- **Deployment of client and server configuration settings through Group Policy.** Always On VPN does not require devices to be domain joined, so there are no dedicated Group Policy settings to configure it. Instead, you configure clients by using Windows PowerShell, System Center Configuration Manager, Intune (or a third-party MDM provider), or Windows Configuration Designer. Also, because there's no dependency on a Microsoft VPN gateway, you must configure and manage server settings independent of the Always On VPN.
+DirectAccess functionality | Always On VPN equivalent 
+------- | ---
+Use of multisite to provide multiple remote access entry points and geo-redundancy. | No native multisite-equivalent feature exists in Always On VPN without the use of third-party networking equipment or services such as Azure Traffic Manager or a third-party global server load balancer. However, users can manually select an appropriate VPN endpoint if you define multiple entries in the VPN profile. Third-Party UWP VPN plug-ins may support similar features for connecting to the nearest or most appropriate server VPN endpoint, but this varies by provider.
+Deployment of client and server configuration settings through Group Policy. | Always On VPN does not require devices to be domain joined, so there are no dedicated Group Policy settings to configure it. Instead, you configure clients by using Windows PowerShell, System Center Configuration Manager, Intune (or a third-party MDM provider), or Windows Configuration Designer. Also, because there's no dependency on a Microsoft VPN gateway, you must configure and manage server settings independent of the Always On VPN.
 
 ## <a name="win10-vpn-enhancements"></a>Always On VPN enhancements
-<!-- is this the same at Always On VPN? -->
-
 Always On VPN has many benefits over the Windows VPN solutions of the past. Key improvements in integration, security, connectivity, networking control, and compatibility align Always On VPN with Microsoft's cloud-first, mobile-first vision.
 
-Because many of the devices that require remote access are personal devices, Always On VPN does not require that a device be domain joined. When you migrate domain-joined devices that use DirectAccess, Always On VPN can provide a single, cohesive solution for remote access for all your connected devices going forward, even personally owned devices. Also, organizations can choose which management platform they prefer for deploying the Always On VPN configuration because the configuration service provider (CSP) isn't vendor specific.
+Because many of the devices that require remote access are personal devices, Always On VPN does not require that a device be domain joined. When you migrate domain-joined devices that use DirectAccess, Always On VPN can provide a single, cohesive solution for remote access for all your connected devices going forward, even personally owned devices. Also, organizations can choose which management platform they prefer for deploying the Always On VPN configuration because the CSP isn't vendor specific.
 
 > [!NOTE]
 > For additional details about the advantages of Always On VPN, see [Always On VPN and DirectAccess Features Comparison](https://docs.microsoft.com/windows-server/remote/remote-access/vpn/vpn-map-da).
@@ -130,9 +126,9 @@ Because many of the devices that require remote access are personal devices, Alw
 
 Always On VPN has improved integration with the Windows operating system and third-party solutions to provide a robust platform for countless advanced connection scenarios. Microsoft has introduced or improved the following integration capabilities in Always On VPN:
 
-- **Windows Information Protection (WIP).** Integration with WIP allows network policy enforcement to determine whether traffic is allowed to go over the VPN. If the user profile is active and WIP policies are applied, Always On VPN is automatically triggered to connect. Also, when you use WIP, there's no need to specify AppTriggerList and TrafficFilterList rules separately in the VPN profile (unless you want more advanced configuration) because the WIP policies and application lists automatically take effect.
-- **Windows Hello for Business.** Always On VPN natively supports Windows Hello for Business (in certificate-based authentication mode) to provide a seamless single sign-on experience for both sign-in to the machine and connection to the VPN. Therefore, no secondary authentication (user name and password) is needed for the VPN connection, making it possible to use an Always On connection with Windows Hello for Business authentication.
-- **Microsoft Azure conditional access.** The Always On VPN client can integrate with the Azure conditional access platform to enforce multifactor authentication (MFA), device compliance, or a combination of the two. When compliant with conditional access policies, Azure Active Directory (Azure AD) issues a short-lived (by default, 60 minutes) IP Security (IPsec) authentication certificate that can then be used to authenticate to the VPN gateway. Device compliance uses System Center Configuration Manager/Intune compliance policies, which can include the device health attestation state as part of the connection compliance check.
+- **[Windows Information Protection (WIP)](https://docs.microsoft.com/en-us/windows/threat-protection/windows-information-protection/protect-enterprise-data-using-wip).** Integration with WIP allows network policy enforcement to determine whether traffic is allowed to go over the VPN. If the user profile is active and WIP policies are applied, Always On VPN is automatically triggered to connect. Also, when you use WIP, there's no need to specify AppTriggerList and TrafficFilterList rules separately in the VPN profile (unless you want more advanced configuration) because the WIP policies and application lists automatically take effect.
+- **[Windows Hello for Business](https://docs.microsoft.com/en-us/windows/access-protection/hello-for-business/hello-overview).** Always On VPN natively supports Windows Hello for Business (in certificate-based authentication mode) to provide a seamless single sign-on experience for both sign-in to the machine and connection to the VPN. Therefore, no secondary authentication (user name and password) is needed for the VPN connection, making it possible to use an Always On connection with Windows Hello for Business authentication.
+- **[Microsoft Azure conditional access](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-conditional-access-controls).** The Always On VPN client can integrate with the Azure conditional access platform to enforce multifactor authentication (MFA), device compliance, or a combination of the two. When compliant with conditional access policies, Azure Active Directory (Azure AD) issues a short-lived (by default, 60 minutes) IP Security (IPsec) authentication certificate that can then be used to authenticate to the VPN gateway. Device compliance uses System Center Configuration Manager/Intune compliance policies, which can include the device health attestation state as part of the connection compliance check.
 - **Azure MFA.** When combined with Remote Authentication Dial-In User Service (RADIUS) services and the Network Policy Server (NPS) extension for Azure MFA, VPN authentication can use strong MFA.
 - **Third-party VPN plug-in.** With the Universal Windows Platform (UWP), third-party VPN providers can create a single application for the full range of Windows 10 devices. The UWP provides a guaranteed core API layer across devices, eliminating the complexity of and problems often associated with writing kernel-level drivers. Currently, Windows 10 UWP VPN plug-ins exist for Pulse Secure, F5 Access, Check Point Capsule VPN, FortiClient, and SonicWall Mobile Connect; no doubt, others will appear in the future.
 

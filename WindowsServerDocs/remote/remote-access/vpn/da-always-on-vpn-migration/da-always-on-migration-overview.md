@@ -30,6 +30,8 @@ The DirectAccess–to–Always On VPN migration process consists of three primar
     2. **[Decommission DirectAccess](#decommission-da-infra).** After you have successfully migrated all clients to Always On VPN, you will remove DirectAccess from your environment.
 
 For further details about each step in the process, see the [Windows client migration](#da-always-on-migration-deploy.md/win-client-migration).
+
+<!-- does this make sense to have the scenarios here?  Does it flow with the rest of the content? Maybe include a workflow diagram to show the process visually -->
  
 ## <a name="da-deployment-scenario"></a>DirectAccess deployment scenario
 
@@ -70,3 +72,5 @@ In this deployment scenario, you focus on migrating a simple DirectAccess enviro
 | Name resolution | Domain name information list and Domain Name System (DNS) suffix |
 | Triggering | Always on and trusted network detection |
 | Authentication | Protected Extensible Authentication Protocol-Transport Layer Security (PEAP-TLS) with Trusted Platform Module–protected user certificates |
+
+<!-- maybe add a list of related documents -->
