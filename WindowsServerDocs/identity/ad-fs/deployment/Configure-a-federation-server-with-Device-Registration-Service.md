@@ -21,7 +21,7 @@ You can enable Device Registration Service \(DRS\) on your federation server aft
 ## Prepare your Active Directory forest to support devices  
   
 > [!NOTE]  
-> This is a one\-time operation that you must run to prepare your Active Directory forest to support devices. You must be logged on with enterprise administrator permissions and your Active Directory forest must have the Windows Server 2012 R2 schema to complete this procedure. Additionally, DRS requires that you have at least one global catalog server in your forest root domain.  
+> This is a one\-time operation that you must run to prepare your Active Directory forest to support devices. You must be logged on with enterprise administrator permissions and your Active Directory forest must have the Windows Server 2012 R2 schema to complete this procedure.  
 >   
 > Additionally, DRS requires that you have at least one global catalog server in your forest root domain. The global catalog server is required in order to run Initialize\-ADDeviceRegistration and during AD FS authentication. AD FS initializes an in\-memory representation of the DRS config object on each authentication request and if the DRS config object cannot be found on a DC in the current domain, the request is attempted against the GC on which the DRS objects were provisioned during Initialize\-ADDeviceRegistration.  
   
