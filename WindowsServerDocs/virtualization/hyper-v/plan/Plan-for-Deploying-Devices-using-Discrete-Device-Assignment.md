@@ -44,6 +44,7 @@ Due to the nature of how Discrete Device Assignment is implemented, some feature
 - VM Save/Restore
 - Live Migration of a VM
 - The use of Dynamic Memory
+- Adding the VM to a High Availability (HA) Cluster
 
 ## Security
 Discrete Device Assignment passes the entire device into the VM.  This means all capabilities of that device are accessible from the guest operating system. Some capabilities, like firmware updating, may adversely impact the stability of the system. As such, numerous warnings are presented to the admin when dismounting the device from the host. We highly recommend that Discrete Device Assignment is only used where the tenants of the VMs are trusted.  
