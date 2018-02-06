@@ -4,7 +4,7 @@ description: How to find and understand the different health and operational sta
 keywords: Storage Spaces,detached,virtual disk,physical disk,degraded
 author: jasongerend
 ms.author: jgerend
-ms.date: 1/29/2017
+ms.date: 2/2/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: storage-spaces
