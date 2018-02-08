@@ -11,7 +11,7 @@ ms.assetid: fc239aec-e719-47ea-92fc-d82a7247c5e9
 author: msjimwu
 ms.author: coreyp
 manager: dongill
-ms.date: 1/16/2018
+ms.date: 2/1/2018
 ---
 
 # Deploy Windows Server Hybrid Cloud Print with Passthrough Authentication
@@ -92,7 +92,7 @@ This guide outlines five (5) installation steps:
 
     > NOTE: It is recommended to download and install the latest version by leaving out the "-requiredversion" option.
 
-5.  Copy the SQLite dlls to the MopriaCloudService Webapp \<bin\> folder (**C:\\inetpub\\mcs\\bin**): <br>
+5.  Copy the SQLite dlls to the MopriaCloudService Webapp \<bin\> folder (**C:\\inetpub\\wwwroot\\MopriaCloudService\\bin**): <br>
     - The SQLite binaries should be at “\\Program Files\\PackageManagement\\NuGet\\Packages”
 
             \\System.Data.SQLite.**Core**.x.x.x.x\\lib\\net46\\System.Data.SQLite.dll
@@ -108,7 +108,7 @@ This guide outlines five (5) installation steps:
 
     > NOTE: x.x.x.x is the SQLite version installed above.
 
-6.  Update the `c:\inetpub\mcs\web.config` file to include the SQLite version x.x.x.x in the following \<runtime\>/\<assemblyBinding\> sections:
+6.  Update the `c:\inetpub\wwwroot\MopriaCloudService\web.config` file to include the SQLite version x.x.x.x in the following \<runtime\>/\<assemblyBinding\> sections:
 
         <dependentAssembly>
         assemblyIdentity name="System.Data.SQLite" culture="neutral" publicKeyToken="db937bc2d44ff139" /
@@ -129,35 +129,32 @@ This guide outlines five (5) installation steps:
 
 7. Create the SQLite database:
     -  Download and install the SQLite Tools binaries from <https://www.sqlite.org/>
-    -  Go to **c:\\inetpub\\mcs\\Database** directory
+    -  Go to **c:\\inetpub\\wwwroot\\MopriaCloudService\\Database** directory
     -  Execute the following command to create the database in this directory:
         `sqlite3.exe MopriaDeviceDb.db ".read MopriaSQLiteDb.sql"`
     -  From File Explorer, open up the MopriaDeviceDb.db file properties to add Users/Groups which are allowed to publish to Mopria database in the Security tab
         - Recommend only adding the required Admin user group.
 8. Register the 2 web app with Azure AD to support OAuth2 authentication
     -   Login as the Global Admin to the Azure AD tenant management portal
-        1. Go "Applications" tab to add print endpoint
-            -   Add application, select "Add an application my organization is developing"
-            -   Provide an appropriate name and select "Web Application and/or Web API"
+        1. Go "App registrations" tab to add print endpoint
+            -   Add application, select "New application registration"
+            -   Provide an appropriate name and select "Web app / API"
             -   Sign-on URL = "http://MicrosoftEnterpriseCloudPrint/CloudPrint"
-            -   App ID URL = "http://MicrosoftEnterpriseCloudPrint/CloudPrint"
-            -   Make sure the "Windows Azure Active Directory" delegated permission setting is set to "Sign in and read user profile".
         2.  Repeat for the discovery endpoint
             -   Sign-on URL = "http://MopriaDiscoveryService/CloudPrint"
-            -   App ID URL = "http://MopriaDiscoveryService/CloudPrint"
-            -   Make sure the "Windows Azure Active Directory" delegated permission setting is set to "Sign in and read user profile".
         3.  Repeat for the native client application
-            -   When providing the app name, make sure you select "Native Client Application" as the "Type"
+            -   When providing the app name, make sure you select "Native Client Application" as the "Application type"
             -   Redirect URI = "https://\<services-machine-endpoint\>/RedirectUrl"
-        4.  Go into the Native Client App "All settings"
+        4.  Go into the Native Client App "Settings"
             -   Copy the "Application ID" value to be used for later setup steps
-            -   Select to "Required permissions"
-                1.  Click "Add application"
-                2.  Search for the print endpoint and the discovery endpoint by the name you defined when creating the app endpoint
-                3.  Add the 2 endpoints
-                4.  Make sure the "Delegated Permissions:" option for each app endpoint is enabled.
-                5.  For the "Windows Azure Active Directory", set the "Delegated Permissions:" option to "Sign in and read user profile".
-                6.  Make sure you click the "Save" button at the bottom
+            -   Select "Required permissions"
+                1.  Click "Add"
+                2.  Click "Select an API"
+                3.  Search for the print endpoint and the discovery endpoint by the name you defined when creating the app endpoint
+                4.  Add the 2 endpoints
+                5.  Make sure the "Delegated Permissions" option for each app endpoint is enabled
+                6.  Make sure you click the "Done" button at the bottom
+                7.  Click "Grant Permissions", once both endpoints have been added.  Select "Yes" when prompted to approve request.
             -   Go to “REDIRECT URIS” and add the following redirect URIs to the list:
                 `ms-appx-web://Microsoft.AAD.BrokerPlugin/\<NativeClientAppID\>`
                 `ms-appx-web://Microsoft.AAD.BrokerPlugin/S-1-15-2-3784861210-599250757-1266852909-3189164077-45880155-1246692841-283550366`
@@ -171,17 +168,17 @@ This guide outlines five (5) installation steps:
     - During installation, give the application proxy connector the credentials to your Azure tenet that you want to enable AAP on
     - Make sure the WAP machine is domain joined to your on-premises Active Directory
 3. Go back to the AAD tenant management portal and add the application proxies
-    - Go to the **Applications** tab
-    - Click **Add**
-    - Select **Publish an application that will be accessible from outside your network** and fill in the fields
+    - Go to the **Enterprise applications** tab
+    - Click **New application**
+    - Select **On-premises application** and fill in the fields
         - Name: Any name you wish
         - Internal URL: This is the internal URL to the Mopria Discovery Cloud Service which your WAP machine can access
+        - External URL: Configure as appropriate for your organization
         - Preauthentication Method: Passthrough
 
-    >   Note: If you don’t find all the settings above, add the proxy with the settings available and then select the application proxy you just created and go to the "Configure" tab and add all the above information.
+    >   Note: If you don’t find all the settings above, add the proxy with the settings available and then select the application proxy you just created and go to the **Application proxy** tab and add all the above information.
 
 4. Repeat 3, above, for the Enterprise Cloud Print Service and provide the Internal URL to your Enterprise Cloud Print Service
-5. Go to the "Application Proxy -> Configure" tab to configure the external URL of the Mopria Discovery Cloud Service endpoint and the Enterprise Cloud Print Service endpoint
 
     >   Note: The https://&lt;services-machine-endpoint&gt;/mcs URL mentioned below should be the External URL you setup for your Mopria Cloud Service and/or Enterprise Cloud Print Service.
 
@@ -189,25 +186,26 @@ This guide outlines five (5) installation steps:
 ### Step 4 - Configure the required MDM policies
 - Login to your MDM provider
 - Find the Enterprise Cloud Print policy group and configure the policies following the guidelines below:
-    - AzureTenantGuid = Directory ID of your Azure AD tenant
-    - AzureNativeWebAppClientId = "Client ID" value of the Native Web App that you registered in Azure AD management portal
-    - MopriaCloudServiceEndPoint = Internet URL of the Mopria Discovery Service Azure Application Proxy created in sequence 3.6 (must be exactly the same including the trailing /)
-    - MopriaDiscoveryResourceId = Internet URL of the Mopria Discovery Service Azure Application Proxy created in sequence 3.6 (must be exactly the same including the trailing /)
-    - CloudPrintResourceId = Internet URL of the Enterprise Cloud Print Service Azure Application Proxy created in sequence 3.6 (must be exactly the same including the trailing /)
+    - CloudPrintOAuthAuthority = https://login.microsoftonline.com/\<Azure AD Directory ID\>
+    - CloudPrintOAuthClientId = "Application ID" value of the Native Web App that you registered in Azure AD management portal
+    - CloudPrinterDiscoveryEndPoint = External URL of the Mopria Discovery Service Azure Application Proxy created in Step 3.3 (must be exactly the same but without the trailing /)
+    - MopriaDiscoveryResourceId = The "App ID URI" of the Web app / API for the discovery endpoint registered in Step 2.8.  You can find this under the Settings -> Properties of the app
+    - CloudPrintResourceId = The "App ID URI" of the Web app / API for the print endpoint registered in Step 2.8. You can find this under the Settings -> Properties of the app
+    - DiscoveryMaxPrinterLimit = \<a positive integer\>
 
 >   Note: If the Enterprise Cloud Print policy group is not available, but the MDM provider supports OMA-URI settings, then you can set the same policies.  Please refer to this <a href="https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-enterprisecloudprint#enterprisecloudprint-cloudprintoauthauthority">article</a> for additional info.
 
 - OMA-URI
     - `CloudPrintOAuthAuthority = ./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/CloudPrintOAuthAuthority`
-        - Value = https://login.microsoftonline.com/\<Azure AD Directory ID\>
+        - Value = `https://login.microsoftonline.com/`\<Azure AD Directory ID\>
     - `CloudPrintOAuthClientId = ./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/CloudPrintOAuthClientId`
         - Value = \<Azure AD Native App's Application ID\>
-    - `CloudPrintResourceId = ./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/CloudPrintResourceId`
-        - Value = Internet URL of the Enterprise Cloud Print Service as specified in sequence 3.6
     - `CloudPrinterDiscoveryEndPoint = ./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/CloudPrinterDiscoveryEndPoint`
-        - Value = Internet URL of the Mopria Discovery Service as specified in sequence 3.6
+        - Value = External URL of the Mopria Discovery Service Azure Application Proxy created in Step 3.3 (must be exactly the same but without the trailing /)
     - `MopriaDiscoveryResourceId = ./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/MopriaDiscoveryResourceId`
-        - Value = Internet URL of the Mopria Discovery Service as specified in sequence 3.6
+        - Value = The "App ID URI" of the Web app / API for the discovery endpoint registered in Step 2.8.  You can find this under the Settings -> Properties of the app
+    - `CloudPrintResourceId = ./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/CloudPrintResourceId`
+        - Value = The "App ID URI" of the Web app / API for the print endpoint registered in Step 2.8. You can find this under the Settings -> Properties of the app
     - `DiscoveryMaxPrinterLimit = ./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/DiscoveryMaxPrinterLimit`
         - Value = \<a positive integer\>
   
