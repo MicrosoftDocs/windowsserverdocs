@@ -48,13 +48,13 @@ taskkill [/s <computer> [/u [<Domain>\]<UserName> [/p [<Password>]]]] {[/fi <Fil
 |SERVICES|eq, ne|Service name|
 |WINDOWTITLE|eq, ne|Window title|
 |MODULES|eq, ne|DLL name|
-## remarks
--   The WINDOWTITLE and STatUS filters are not supported when a remote system is specified.
--   The wildcard character (**\***) is accepted for the **/im** option only when a filter is applied.
--   Termination of remote processes is always carried out forcefully, regardless of whether the **/f** option is specified.
--   Supplying a computer name to the hostname filter causes a shutdown and all processes are stopped.
--   You can use **tasklist** to determine the process ID (PID) for the process to be terminated.
-## <a name="BKMK_examples"></a>Examples
+## Remarks
+* The WINDOWTITLE and STatUS filters are not supported when a remote system is specified.
+* The wildcard character (**\***) is accepted for the **/im** option only when a filter is applied.
+* Termination of remote processes is always carried out forcefully, regardless of whether the **/f** option is specified.
+* Supplying a computer name to the hostname filter causes a shutdown and all processes are stopped.
+* You can use **tasklist** to determine the process ID (PID) for the process to be terminated.
+## Examples
 To end the processes with process IDs 1230, 1241, and 1253, type:
 ```
 taskkill /pid 1230 /pid 1241 /pid 1253
