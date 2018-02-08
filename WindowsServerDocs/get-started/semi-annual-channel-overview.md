@@ -19,7 +19,7 @@ The Windows Server release model is offering a new option in order to align with
 
 **There will be two primary release channels available to Windows Server customers, the Long-Term Servicing Channel, and the new Semi-Annual Channel.** You can keep servers on the Long-Term Servicing Channel (LTSC), move them to the new Semi-Annual Channel, or have some servers on either track, depending on what works best for your needs.
 
-Check out this Microsoft Mechanics video for an overview of the updated release model, particularly the Semi-Annual Channel.
+click the following Microsoft Mechanics video for an overview of the updated release model, particularly the Semi-Annual Channel.
 
 
 [![YouTube video of Michael Niehouse explaining how the Semi-Annual Channel works](media/SAC_vid_crop.jpg)](https://youtu.be/qSAsiM01GOU) 
