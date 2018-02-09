@@ -176,9 +176,21 @@ To save the series of measurements to an output file:
 
 ## Frequently asked questions
 
-### How are failures handled?
+### What extensibility is available?
 
-The Health Service, which collects measurements and inserts them into the database, is highly available. If the server where it is running fails, it will resume moments later on another server in the cluster. There will be a very brief lapse in performance history collection, but it's quick. Resiliency for the database storage is provided by three-way mirroring. The ClusterPerformanceHistory volume is repaired after drive or server failures just like any other volume in Storage Spaces Direct.
+We designed cluster performance history to be scripting-friendly. You can use PowerShell to pull any available history from the database. You can build automated reporting or alerting, export history for safekeeping, roll your own visualizations, and much more. However, it is not currently possible to collect history for additional objects, timeframes, or series.
+
+### Can I change the measurement frequency and/or retention period?
+
+No, measurement frequency and retention period are not currently configurable.
+
+### How does this feature handle failures?
+
+The Health Service, which collects measurements and inserts them into the database, is highly available. If the server where it is running goes down, it will resume moments later on another server in the cluster. Performance history collection may lapse briefly, but it will resume automatically. Resiliency for the database storage is provided by three-way mirroring. The ClusterPerformanceHistory volume is repaired after drive or server failures just like any other volume in Storage Spaces Direct.
+
+### How are missing measurements handled?
+
+When measurements are merged into less granular series that span more time, as described in [Timeframes](#Timeframes), periods of missing data are excluded. For example, if the server was down for 30 minutes, then running at 50% CPU for the next 30 minutes, the `node.cpu.usage` average for the hour will be recorded as 50%.
 
 ### How do I disable this feature?
 
@@ -201,10 +213,6 @@ If you have not yet enabled Storage Spaces Direct, use the `-CollectPerformanceH
 ```PowerShell
 Enable-ClusterS2D -CollectPerformanceHistory $False
 ```
-
-### What extensibility is available?
-
-We designed cluster performance history to be scripting-friendly. You can use PowerShell to pull any available history from the database to build automated reporting or alerting, export it for safekeeping, roll your own visualizations, and much more. However, it is not currently possible to collect history for additional objects, timeframes, or series.
 
 ## Troubleshooting
 
