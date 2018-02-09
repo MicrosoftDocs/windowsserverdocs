@@ -72,6 +72,9 @@ The `iops.*`, `throughput.*`, and `latency.*` series are collected from the `Clu
    > [!NOTE]
    > Counters are measured over the entire interval, not sampled. For example, if the volume is idle for 9 seconds but completes 30 IOs in the 10th second, its `volume.iops.total` will be recorded as 3 IOs per second on average during this 10-second interval. This ensures its performance history captures all activity and is robust to noise.
 
+   > [!TIP]
+   > These are the same counters used by the popular [VM Fleet](https://github.com/Microsoft/diskspd/blob/master/Frameworks/VMFleet/watch-cluster.ps1) benchmark framework.
+
 The `size.*` series are collected from the `MSFT_Volume` class in WMI, one instance per volume.
 
 | Series                    | Source property |
