@@ -90,7 +90,7 @@ Here are the available timeframes:
 | Last day   | Every 5 minutes       | 25 hours     |
 | Last week  | Every 15 minutes      | 8 days       |
 | Last month | Every 1 hour          | 35 days      |
-| Last year  | Every Daily           | 400 days     |
+| Last year  | Every 1 day           | 400 days     |
 
 ## Usage in PowerShell
 
