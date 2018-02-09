@@ -74,10 +74,10 @@ The `iops.*`, `throughput.*`, and `latency.*` series are collected from the `Phy
 
 The `size.*` series are collected from the `MSFT_PhysicalDisk` class in WMI, one instance per drive.
 
-| Series                          | Source property   |
-|---------------------------------|-------------------|
-| `physicaldisk.size.total`       | `Size`            |
-| `physicaldisk.size.used`        | `AllocatedSize`   |
+| Series                          | Source property        |
+|---------------------------------|------------------------|
+| `physicaldisk.size.total`       | `Size`                 |
+| `physicaldisk.size.used`        | `VirtualDiskFootprint` |
 
 ## Usage in PowerShell
 
