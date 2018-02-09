@@ -22,7 +22,7 @@ Performance history is a new feature that gives [Storage Spaces Direct](storage-
 
 Performance history is collected by default. You do not need to install, configure, or start anything. An external database is not required. An Internet connection is not required. System Center is not required.
 
-To see your cluster's performance history, use [Project Honolulu (Technical Preview)](/../manage/honolulu/honolulu), the next-generation in-box management tool for Windows Server, or the new `Get-ClusterPerformanceHistory` cmdlet. See [Usage in PowerShell](#usage-in-powershell) for details.
+To see your cluster's performance history, use [Project Honolulu (Technical Preview)](https://docs.microsoft.com/windows-server/manage/honolulu/honolulu), the next-generation in-box management tool for Windows Server, or the new `Get-ClusterPerformanceHistory` cmdlet. See [Usage in PowerShell](#usage-in-powershell) for details.
 
 ## How it works
 
