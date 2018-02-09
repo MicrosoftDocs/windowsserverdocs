@@ -7,7 +7,7 @@ ms.technology: storage-health-service
 ms.topic: article
 ms.assetid: 5bc71e71-920e-454f-8195-afebd2a23725
 author: cosmosdarwin
-ms.date: 01/26/2018
+ms.date: 02/09/2018
 ---
 # Health Service in Windows Server
 
@@ -90,11 +90,11 @@ The Supported Components Document uses an XML-inspired syntax. We recommend usin
 
 #### Sections
 
-The document has two independent sections: **Disks** and **Cache**.
+The document has two independent sections: `Disks` and `Cache`.
 
-If the **Disks** section is provided, only the drives listed are allowed to join pools. Any unlisted drives are prevented from joining pools, which effectively precludes their use in production. If this section is left empty, any drive will be allowed to join pools.
+If the `Disks` section is provided, only the drives listed (as `Disk`) are allowed to join pools. Any unlisted drives are prevented from joining pools, which effectively precludes their use in production. If this section is left empty, any drive will be allowed to join pools.
 
-If the **Cache** section is provided, only the drives listed are used for caching. If this section is left empty, Storage Spaces Direct attempts to [guess based on media type and bus type](../storage/storage-spaces/understand-the-cache.md#cache-drives-are-selected-automatically). Drives listed here should also be listed in **Disks**.
+If the `Cache` section is provided, only the drives listed (as `CacheDisk`) are used for caching. If this section is left empty, Storage Spaces Direct attempts to [guess based on media type and bus type](../storage/storage-spaces/understand-the-cache.md#cache-drives-are-selected-automatically). Drives listed here should also be listed in `Disks`.
 
 >[!IMPORTANT]
 > The Supported Components Document does not apply retroactively to drives already pooled and in use.  
@@ -125,28 +125,29 @@ If the **Cache** section is provided, only the drives listed are used for cachin
   </Disks>
 
   <Cache>
-    <Disk>
+    <CacheDisk>
       <Manufacturer>Fabrikam</Manufacturer>
       <Model>QRSTUV</Model>
-    </Disk>
+    </CacheDisk>
   </Cache>
 
 </Components>
 
 ```
 
-To list multiple drives, simply add additional **&lt;Disk&gt;** tags within either section.
+To list multiple drives, simply add additional `<Disk>` or `<CacheDisk>` tags.
 
-To inject this XML when deploying Storage Spaces Direct, use the **-XML** flag:
+To inject this XML when deploying Storage Spaces Direct, use the `-XML` parameter:
 
 ```PowerShell
-Enable-ClusterS2D -XML <MyXML>
+$MyXML = Get-Content <Filepath> | Out-String  
+Enable-ClusterS2D -XML $MyXML
 ```
 
-To set or modify the Supported Components Document once Storage Spaces Direct has been deployed (i.e. once the Health Service is already running), use the following PowerShell cmdlet:
+To set or modify the Supported Components Document once Storage Spaces Direct has been deployed:
 
 ```PowerShell
-$MyXML = Get-Content <\\path\to\file.xml> | Out-String  
+$MyXML = Get-Content <Filepath> | Out-String  
 Get-StorageSubSystem Cluster* | Set-StorageHealthSetting -Name "System.Storage.SupportedComponents.Document" -Value $MyXML  
 ```
 
