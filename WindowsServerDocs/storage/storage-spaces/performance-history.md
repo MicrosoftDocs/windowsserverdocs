@@ -18,15 +18,11 @@ Performance history is a new feature that gives [Storage Spaces Direct](storage-
    > [!IMPORTANT]
    > This feature is new in Windows Server Insider Preview build 17093 and later. It is not available in Windows Server 2016.
 
-(PLACEHOLDER FOR OVERVIEW VIDEO)
-
 ## Get started
 
 Performance history is collected by default. You do not need to install, configure, or start anything. An external database is not required. An Internet connection is not required. System Center is not required.
 
 To see your cluster's performance history, use [Project Honolulu (Technical Preview)](/../manage/honolulu/honolulu), the next-generation in-box management tool for Windows Server, or the new `Get-ClusterPerformanceHistory` cmdlet. See [Usage in PowerShell](#usage-in-powershell) for details.
-
-(PLACEHOLDER FOR TUTORIAL VIDEO)
 
 ## How it works
 
