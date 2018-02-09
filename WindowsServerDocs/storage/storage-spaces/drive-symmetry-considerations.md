@@ -5,7 +5,7 @@ ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 01/18/2018
+ms.date: 02/09/2018
 Keywords: Storage Spaces Direct
 ms.localizationpriority: medium
 ---
@@ -40,6 +40,9 @@ For example, if one server has six HDD, they should *all* have six HDD.
 ### Model
 
 We recommend using drives of the same model and firmware version whenever possible. If you can't, carefully select drives that are as similar as possible. We discourage mixing-and-matching drives of the same type with sharply different performance or endurance characteristics (unless one is cache and the other is capacity) because Storage Spaces Direct distributes IO evenly and doesn't discriminate based on model.
+
+   > [!NOTE]
+   > It is okay to mix-and-match similar SATA and SAS drives.
 
 ### Size
 
@@ -96,7 +99,7 @@ This is supported.
 
 ### ![supported](media/drive-symmetry-considerations/supported.png) Supported: different models within server
 
-Every server uses some different mix of HDD models "Y" and "Z", which are very similar.
+Every server uses some different mix of HDD models "Y" and "Z", which are very similar. Every server has 10 total HDD.
 
 | Server 1                   | Server 2                   | Server 3                   |
 |----------------------------|----------------------------|----------------------------|
@@ -104,7 +107,7 @@ Every server uses some different mix of HDD models "Y" and "Z", which are very s
 | 7 x HDD Model Y (capacity) | 5 x HDD Model Y (capacity) | 1 x HDD Model Y (capacity) |
 | 3 x HDD Model Z (capacity) | 5 x HDD Model Z (capacity) | 9 x HDD Model Z (capacity) |
 
-This is supported – every server has 10 total HDD.
+This is supported.
 
 ### ![supported](media/drive-symmetry-considerations/supported.png) Supported: different sizes across servers
 
@@ -119,7 +122,7 @@ This is supported, although it will result in stranded capacity.
 
 ### ![supported](media/drive-symmetry-considerations/supported.png) Supported: different sizes within server
 
-Every server uses some different mix of 1.2 TB and very similar 1.6 TB SSD.
+Every server uses some different mix of 1.2 TB and very similar 1.6 TB SSD. Every server has 4 total SSD.
 
 | Server 1                 | Server 2                 | Server 3                 |
 |--------------------------|--------------------------|--------------------------|
@@ -127,7 +130,7 @@ Every server uses some different mix of 1.2 TB and very similar 1.6 TB SSD.
 | 1 x 1.6 TB SSD (cache)   | 2 x 1.6 TB SSD (cache)   | -                        |
 | 20 x 4 TB HDD (capacity) | 20 x 4 TB HDD (capacity) | 20 x 4 TB HDD (capacity) |
 
-This is supported – every server has 4 total SSD.
+This is supported.
 
 ### ![unsupported](media/drive-symmetry-considerations/unsupported.png) Not supported: different types of drives across servers
 
