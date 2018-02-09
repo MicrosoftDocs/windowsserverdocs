@@ -29,7 +29,7 @@ Similarly, the VMMQ (Virtual Switch RSS) feature can be enabled on the physical 
 
 In the guest additional TCP tuning can be performed by increasing limits. For the best performance spreading workload over multiple CPUs and having deep workloads produces the best throughput, as virtualized workloads will have higher latency than "bare metal" ones.
 
-Some example tuning paramters that have been useful in network benchmarks include:
+Some example tuning parameters that have been useful in network benchmarks include:
 
 ```PowerShell
 net.core.netdev_max_backlog = 30000
