@@ -22,7 +22,7 @@ Performance history is a new feature that gives [Storage Spaces Direct](storage-
 
 Performance history is collected by default. You do not need to install, configure, or start anything. An external database is not required. An Internet connection is not required. System Center is not required.
 
-To see your cluster's performance history, use [Project Honolulu (Technical Preview)](/../manage/honolulu/honolulu), the next-generation in-box management tool for Windows Server, or the new `Get-ClusterPerformanceHistory` cmdlet. See [Usage in PowerShell](#usage-in-powershell) for details.
+To see your cluster's performance history, use [Project Honolulu (Technical Preview)](https://docs.microsoft.com/windows-server/manage/honolulu/honolulu), the next-generation in-box management tool for Windows Server, or the new `Get-ClusterPerformanceHistory` cmdlet. See [Usage in PowerShell](#usage-in-powershell) for details.
 
 ## How it works
 
@@ -84,13 +84,13 @@ In PowerShell, use the `-TimeFrame` parameter.
 
 Here are the available timeframes:
 
-| Timeframe  | Measurement frequency | Retained for |
-|------------|-----------------------|--------------|
-| Last hour  | Every 10 secs         | 1 hour       |
-| Last day   | Every 5 minutes       | 25 hours     |
-| Last week  | Every 15 minutes      | 8 days       |
-| Last month | Every 1 hour          | 35 days      |
-| Last year  | Every Daily           | 400 days     |
+| Timeframe   | Measurement frequency | Retained for |
+|-------------|-----------------------|--------------|
+| `LastHour`  | Every 10 secs         | 1 hour       |
+| `LastDay`   | Every 5 minutes       | 25 hours     |
+| `LastWeek`  | Every 15 minutes      | 8 days       |
+| `LastMonth` | Every 1 hour          | 35 days      |
+| `LastYear`  | Every 1 day           | 400 days     |
 
 ## Usage in PowerShell
 
@@ -107,7 +107,7 @@ Get-ClusterPerformanceHistory
 
 You can specify an object you want by the pipeline. This works with 7 types of objects:
 
-| Object from pipeline |             |
+| Object from pipeline | Example     |
 |----------------------|-------------|
 | `Get-PhysicalDisk`   | [Example](performance-history-for-drives.md#usage-in-powershell)           |
 | `Get-NetAdapter`     | [Example](performance-history-for-network-adapters.md#usage-in-powershell) |
@@ -118,21 +118,6 @@ You can specify an object you want by the pipeline. This works with 7 types of o
 | `Get-Cluster`        | [Example](performance-history-for-clusters.md#usage-in-powershell)         |
 
 If you don't specify, performance history for the overall cluster is returned.
-
-### Specify the timeframe
-
-You can specify the timeframe of history you want with the `-TimeFrame` parameter:
-
-| -TimeFrame   |
-|--------------|
-| `MostRecent` |
-| `LastHour`   |
-| `LastDay`    |
-| `LastWeek`   |
-| `LastMonth`  |
-| `LastYear`   |
-
-If you don't specify, the `MostRecent` measurement is returned.
 
    > [!TIP]
    > Consider specifying the series you want too.
@@ -152,6 +137,12 @@ You can specify the series you want with these parameters, which support tab-com
 | `-ClusterSeriesName`          |
 
 If you don't specify, every series available for the specified object is returned.
+
+### Specify the timeframe
+
+You can specify the timeframe of history you want with the `-TimeFrame` parameter.
+
+If you don't specify, the `MostRecent` measurement is returned.
 
 ### Example
 
