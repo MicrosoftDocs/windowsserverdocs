@@ -5,7 +5,7 @@ ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 02/02/2018
+ms.date: 02/09/2018
 Keywords: Storage Spaces Direct
 ms.localizationpriority: medium
 ---
@@ -53,8 +53,34 @@ These series are collected for every eligible volume:
 | `volume.size.total`       | The total storage capacity of the volume.                                     |
 | `volume.size.available`   | The available storage capacity of the volume.                                 |
 
+## Where they come from
+
+The `iops.*`, `throughput.*`, and `latency.*` series are collected from the `Cluster CSVFS` performance counter set. Every server in the cluster has an instance for every CSV volume, regardless of ownership. The performance history recorded for volume `MyVolume` is the aggregate of the `MyVolume` instances on every server in the cluster.
+
+| Series                    | Source counter         |
+|---------------------------|------------------------|
+| `volume.iops.read`        | `Reads/sec`            |
+| `volume.iops.write`       | `Writes/sec`           |
+| `volume.iops.total`       | *sum of the above*     |
+| `volume.throughput.read`  | `Read bytes/sec`       |
+| `volume.throughput.write` | `Write bytes/sec`      |
+| `volume.throughput.total` | *sum of the above*     |
+| `volume.latency.read`     | `Avg. sec/Read`        |
+| `volume.latency.write`    | `Avg. sec/Write`       |
+| `volume.latency.average`  | *average of the above* |
+
    > [!NOTE]
    > Counters are measured over the entire interval, not sampled. For example, if the volume is idle for 9 seconds but completes 30 IOs in the 10th second, its `volume.iops.total` will be recorded as 3 IOs per second on average during this 10-second interval. This ensures its performance history captures all activity and is robust to noise.
+
+   > [!TIP]
+   > These are the same counters used by the popular [VM Fleet](https://github.com/Microsoft/diskspd/blob/master/Frameworks/VMFleet/watch-cluster.ps1) benchmark framework.
+
+The `size.*` series are collected from the `MSFT_Volume` class in WMI, one instance per volume.
+
+| Series                    | Source property |
+|---------------------------|-----------------|
+| `volume.size.total`       | `Size`          |
+| `volume.size.available`   | `SizeRemaining` |
 
 ## Usage in PowerShell
 
