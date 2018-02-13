@@ -5,7 +5,7 @@ description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 08/10/2017
+ms.date: 02/13/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 
@@ -221,6 +221,17 @@ For additional information see [Best practices for securing Active Directory Fed
 -   For user certificate authentication on port 443, "certauth.\<federation service name\>" must be configured in DNS to resolve to the federation server or web application proxy.
 
 -   For device registration or for modern authentication to on premises resources using pre-Windows 10 clients, "enterpriseregistration.\<upn suffix\>", for each UPN suffix in use in your organization, must be configured to resolve to the federation server or web application proxy.
+
+**Load Balancer requirements**
+- The load balancer MUST NOT terminate SSL. AD FS supports multiple use cases with certificate authentication which will break when terminating SSL. Terminating SSL at the load balancer is not supported for any use case. 
+- It is recommended to use a load balancer that supports SNI. In the event it does not, using the 0.0.0.0 fallback binding on your AD FS / Web Application Proxy server should provide a workaround.
+- It is recommended to use the HTTP (not HTTPS) health probe endpoints to perform load balancer health checks for routing traffic. This avoids any issues relating to SNI. The response to these probe endpoints is an HTTP 200 OK and is served locally with no dependence on back-end services. The HTTP probe can be accessed over HTTP using the path ‘/adfs/probe’
+    - http://<Web Application Proxy name>/adfs/probe
+    - http://<ADFS server name>/adfs/probe
+    - http://<Web Application Proxy IP address>/adfs/probe
+    - http://<ADFS IP address>/adfs/probe
+- It is NOT recommended to use DNS round robin as a way to load balance. Using this type of load balancing does not provide an automated way to remove a node from the load balancer using health probes. 
+- It is NOT recommended to use IP based session affinity or sticky sessions for authentication traffic to AD FS within the load balancer. This can cause an overload of certain nodes when using legacy authentication protocol for mail clients to connect to Office 365 mail services (Exchange Online). 
 
 ## <a name="BKMK_13"></a>Permissions requirements  
 The administrator that performs the installation and the initial configuration of AD FS must have local administrator permissions on the AD FS server.  If the local administrator does not have permissions to create objects in Active Directory, they must first have a domain admin create the required AD objects, then configure the AD FS farm using the AdminConfiguration parameter.  
