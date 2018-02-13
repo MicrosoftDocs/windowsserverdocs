@@ -1,18 +1,13 @@
 ---
 ms.assetid: 28f4a518-1341-4a10-8a4e-5f84625b314b
 title: AD FS 2016 Requirements
-description:
+description: Requirements for installing Active Directory Federation Services.
 author: billmath
 ms.author: billmath
-manager: femila
-<<<<<<< HEAD
+manager: mtillman
 ms.date: 02/13/2018
-=======
-ms.date: 01/16/2018
->>>>>>> c1bf92cbd31206b0c1c563fd313f19714550b9a6
 ms.topic: article
 ms.prod: windows-server-threshold
-
 ms.technology: identity-adfs
 ---
 
