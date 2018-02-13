@@ -1,7 +1,6 @@
 ---
 title: winsat mfmedia
-description: "WIndows Commands"
-description: "Windows Commands topic for **** - "
+description: "Windows Commands"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

@@ -166,4 +166,3 @@ ms.localizationpriority: medium
 |Inherited activation|As guest if hosted on Datacenter|Can be host or guest|
 |Work folders|Yes|Yes|
 
-Not finding content you need? Windows 10 users, tell us what you want on [Feedback Hub](feedback-hub://?referrer=techDocsUcPage&tabid=2&contextid=898&newFeedback=true&topic=2016-Edition-Comparison.md). 

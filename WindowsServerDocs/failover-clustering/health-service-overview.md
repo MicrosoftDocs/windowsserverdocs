@@ -1,5 +1,5 @@
 ---
-title: Health Service in Windows Server 2016
+title: Health Service in Windows Server
 ms.prod: windows-server-threshold
 manager: eldenc
 ms.author: cosdar
@@ -7,9 +7,10 @@ ms.technology: storage-health-service
 ms.topic: article
 ms.assetid: 5bc71e71-920e-454f-8195-afebd2a23725
 author: cosmosdarwin
-ms.date: 08/14/2017
+ms.date: 02/09/2018
 ---
-# Health Service in Windows Server 2016
+# Health Service in Windows Server
+
 > Applies to Windows Server 2016
 
 The Health Service is a new feature in Windows Server 2016 that improves the day-to-day monitoring and operational experience for clusters running Storage Spaces Direct.
@@ -85,20 +86,20 @@ The Health Service provides an enforcement mechanism to restrict the components 
 
 ### Usage  
 
-The Supported Components Document uses an XML-inspired syntax. We recommend using your favorite text editor, such as Visual Studio Code (available for free [here](http://code.visualstudio.com/)) or Notepad, to create an XML document which you can save and reuse.
+The Supported Components Document uses an XML-inspired syntax. We recommend using your favorite text editor, such as the free [Visual Studio Code](http://code.visualstudio.com/) or Notepad, to create an XML document which you can save and reuse.
 
 #### Sections
 
-The document has two independent sections: **Disks** and **Cache**.
+The document has two independent sections: `Disks` and `Cache`.
 
-If the **Disks** section is provided, only the drives listed are allowed to join pools. Any unlisted drives are prevented from joining pools, which effectively precludes their use in production. If this section is left empty, any drive will be allowed to join pools.
+If the `Disks` section is provided, only the drives listed (as `Disk`) are allowed to join pools. Any unlisted drives are prevented from joining pools, which effectively precludes their use in production. If this section is left empty, any drive will be allowed to join pools.
 
-If the **Cache** section is provided, only the drives listed will be used for caching. If this section is left empty, Storage Spaces Direct will attempt to guess based on media type and bus type. For example, if your deployment uses solid-state drives (SSD) and hard disk drives (HDD), the former is automatically chosen for caching; however, if your deployment uses all-flash, you may need to specify the higher endurance devices you'd like to use for caching here.
+If the `Cache` section is provided, only the drives listed (as `CacheDisk`) are used for caching. If this section is left empty, Storage Spaces Direct attempts to [guess based on media type and bus type](../storage/storage-spaces/understand-the-cache.md#cache-drives-are-selected-automatically). Drives listed here should also be listed in `Disks`.
 
 >[!IMPORTANT]
 > The Supported Components Document does not apply retroactively to drives already pooled and in use.  
 
-#### Example  
+#### Example
 
 ```XML
 <Components>
@@ -117,31 +118,36 @@ If the **Cache** section is provided, only the drives listed will be used for ca
         <BinaryPath>\\path\to\image.bin</BinaryPath>
       </TargetFirmware>
     </Disk>
-  </Disks>
-
-  <Cache>
     <Disk>
       <Manufacturer>Fabrikam</Manufacturer>
       <Model>QRSTUV</Model>
     </Disk>
+  </Disks>
+
+  <Cache>
+    <CacheDisk>
+      <Manufacturer>Fabrikam</Manufacturer>
+      <Model>QRSTUV</Model>
+    </CacheDisk>
   </Cache>
 
 </Components>
 
 ```
 
-To list multiple drives, simply add additional **&lt;Disk&gt;** tags within either section.
+To list multiple drives, simply add additional `<Disk>` or `<CacheDisk>` tags.
 
-To inject this XML when deploying Storage Spaces Direct, use the **-XML** flag:
+To inject this XML when deploying Storage Spaces Direct, use the `-XML` parameter:
 
 ```PowerShell
-Enable-ClusterS2D -XML <MyXML>
+$MyXML = Get-Content <Filepath> | Out-String  
+Enable-ClusterS2D -XML $MyXML
 ```
 
-To set or modify the Supported Components Document once Storage Spaces Direct has been deployed (i.e. once the Health Service is already running), use the following PowerShell cmdlet:
+To set or modify the Supported Components Document once Storage Spaces Direct has been deployed:
 
 ```PowerShell
-$MyXML = Get-Content <\\path\to\file.xml> | Out-String  
+$MyXML = Get-Content <Filepath> | Out-String  
 Get-StorageSubSystem Cluster* | Set-StorageHealthSetting -Name "System.Storage.SupportedComponents.Document" -Value $MyXML  
 ```
 

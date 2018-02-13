@@ -33,7 +33,7 @@ For IT Admins, **Hybrid Cloud Print** provides secure user access to on-premises
 ## Deployment
 **Hybrid Cloud Print** supports a couple of different deployment options depending on where your organization requires user authentication. Here's what a deployment could look like:
 
-![Alt text needed for graphic.](media/wshcp-deployment-options.png)
+![A diagram showing a graphic depiction of the Hybrid Cloud Print solution](../media/hybrid-cloud-print/wshcp-deployment-options.png)
 
 *Hybrid Cloud Print solution diagram*
 

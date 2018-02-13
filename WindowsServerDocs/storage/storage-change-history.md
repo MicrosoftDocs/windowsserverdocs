@@ -7,16 +7,41 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.date: 11/8/2017
-description: New and updated topics in the Storage documentation for Windows Server 2016
+ms.date: 2/2/2017
+description: New and updated topics in the on-premises storage documentation for Windows Server for IT Pros.
 ---
 # Change history for storage topics in Windows Server
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
-This topic lists new and updated topics in the [Storage](storage.md) documentation for Windows Server 2016.
+This topic lists new and updated topics in the [Storage](storage.md) documentation for Windows Server.
 
-> If you're looking for update history for Windows Server 2016, see [Windows 10 and Windows Server 2016 update history](https://support.microsoft.com/help/4000825/windows-10-and-windows-server-2016-update-history).
+> If you're looking for update history for Windows Server, see [Windows 10 and Windows Server 2016 update history](https://support.microsoft.com/help/4000825/windows-10-and-windows-server-2016-update-history).
+
+## February 2018
+
+|New or changed topic|Description|
+|---|---|
+|[Storage Spaces health and operational states](storage-spaces/storage-spaces-states.md)| New topic.|
+
+## January 2018
+
+|New or changed topic|Description|
+|---|---|
+|[Drive symmetry considerations in Storage Spaces Direct](storage-spaces/drive-symmetry-considerations.md)| New topic.|
+|[Using Storage Replica with Project Honolulu](storage-replica/storage-replica-ui.md)|New topic.|
+
+## December 2017
+
+|New or changed topic|Description|
+|---|---|
+|[Change a drive letter](disk-management/change-a-drive-letter.md)|New topic.|
+|[Troubleshooting Disk Management](disk-management/troubleshooting-disk-management.md)|Rewrote the [A disk's status is Not Initialized or the disk is missing entirely](disk-management/troubleshooting-disk-management.md#disk-not-initialized) section to add extensive troubleshooting steps, based on customer requests.|
+|[Initialize new disks](disk-management/initialize-new-disks.md)|Rewrote to attempt to make it easier to understand and address customer questions.|
+|[Planning volumes in Storage Spaces Direct](storage-spaces/plan-volumes.md)|Added a table summarizing the resiliency types available on four-node and larger clusters.|
+|[ReFS overview](refs/refs-overview.md)|Clarified recommended workloads for mirror-accelerated parity and corrected the supported file and volume sizes for ReFS and NTFS.|
+|[Mirror-accelerated parity](refs/mirror-accelerated-parity.md)|Clarified recommendation to place write-heavy files in separate directories.|
+|[Storage Replica known issues](storage-replica/storage-replica-known-issues.md)|Added new information.|
 
 ## November 2017
 
@@ -63,7 +88,6 @@ This topic lists new and updated topics in the [Storage](storage.md) documentati
 |[Hyper-converged solution using Storage Spaces Direct](storage-spaces/hyper-converged-solution-using-storage-spaces-direct.md)|Added step 1.3 with required features and fixed an obsolete parameter in Enable-NetAdapterQos.||[Storage Replica overview](storage-replica/storage-replica-overview.md) (and other Storage Replica topics)|Added recommendation to use fast, exclusive storage for Storage Replica logs.|
 |[Storage Replica frequently asked questions](storage-replica/storage-replica-frequently-asked-questions.md)|Added info on how to choose between different replication topologies.|
 |[Storage Spaces Direct hardware requirements](storage-spaces/storage-spaces-direct-hardware-requirements.md)|Changed drive endurance requirements for cache devices.|
-
 
 ## April 2017
 

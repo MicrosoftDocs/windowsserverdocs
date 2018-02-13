@@ -121,7 +121,7 @@ In Windows Settings area, clicking the **Devices** icon gives you access to a nu
 |Removable drive:|Choose a default|Take no action|
 |Memory card|Choose a default|Take no action|
 
-### In the "Personalization" area of Windows Serttings
+### In the "Personalization" area of Windows Settings
 In Windows Settings area, clicking the **Personalization** icon gives you access to a number of system-related settings. Not all of them need adjustment for optimum VDI use--these settings are the most important:
 
 #### Background
@@ -141,7 +141,7 @@ Sometimes the default black background can cause users to think the computer is 
 #### Taskbar
 The default setting is to use large taskbar buttons (that is, a value of "Off" for **Use small taskbar buttons**). This setting causes the Cortana item to use a lot of taskbar area. To avoid this, set **Use small taskbar buttons** to "On." If you prefer that the taskbar items stay larger, but prefer not to have Cortana taking up so much space, right-click the taskbar, point to **Cortana**, and in the menu that flies out, select **Hidden**.
 
-### In the "Privacy" area of Windows Serttings
+### In the "Privacy" area of Windows Settings
 In Windows Settings area, clicking the **Privacy** icon gives you access to a number of system-related settings. Not all of them need adjustment for optimum VDI use--these settings are the most important:
 
 #### General

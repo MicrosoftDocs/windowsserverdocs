@@ -80,7 +80,7 @@ If you have decided to use Kerberos to authenticate live migration traffic, conf
 The configuration changes take effect after both of the following happen:  
   
   -  The changes are replicated to the domain controllers that the servers running Hyper-V are logged into.  
-  -  The domain controller issues a new kerboros ticket.  
+  -  The domain controller issues a new Kerberos ticket.  
   
 ## <a name="BKMK_Step2"></a>Step 2: Set up the source and destination computers for live migration  
 This step includes choosing options for authentication and networking. As a security best practice, we recommend that you select specific networks to use for live migration traffic, as discussed above. This step also shows you how to choose the performance option.   

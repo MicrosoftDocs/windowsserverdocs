@@ -4,7 +4,6 @@ description: Describes how to manage User Access Logging
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.technology: manage-user-access-logging
-ms.prod: windows-server-2012
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na

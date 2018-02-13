@@ -70,6 +70,9 @@ If you install any applications which add shortcut items inside a folder on the 
 
 Go back to the main [Windows Server 2016](Windows-Server-2016.md) hub.
 
+## Storport Performance
+Some systems may exhibit reduced storage performance when running a new install of Windows Server 2016 versus Windows Server 2012 R2.  A number of changes were made during the development of Windows Server 2016 to improve security and reliability of the platform. Some of those changes, like enabling Windows Defender by default, result in longer I/O paths that can reduce I/O performance in certain workloads and patterns. Microsoft does not recommend disabling Windows Defender as it is an important layer of protection for your systems.  
+
 ## Copyright  
 This document is provided "as-is". Information and views expressed in this document, including URL and other Internet Web site references, may change without notice.  
 
