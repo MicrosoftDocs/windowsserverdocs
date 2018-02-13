@@ -39,6 +39,9 @@ The tool backs up the following AD FS configuration
 ## How to use the tool
 First, [download](https://go.microsoft.com/fwlink/?LinkId=825646) and install the MSI to your AD FS server.  
 
+>[!NOTE] 
+>AD FS Rapid Restore Tool is not FIPS compliant
+
 Run the following command from a PowerShell prompt:
 
 ```powershell
