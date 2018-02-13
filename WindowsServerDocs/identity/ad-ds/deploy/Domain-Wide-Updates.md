@@ -25,9 +25,9 @@ For more information about how to interpret the access control entry (ACE) strin
 
 After the operations that are performed by **domainprep** in Windows Server 2016 (operation 89) complete, the **revision** attribute for the CN=ActiveDirectoryUpdate,CN=DomainUpdates,CN=System,DC=ForestRootDomain object is set to **16**.
 
-|Operations number and GUID|Description|Attributes|Permissions|
+|Operations number and GUID|Description|Permissions|
 |------------------------------|---------------|--------------|---------------|
-|**Operation 89**: {A0C238BA-9E30-4EE6-80A6-43F731E9A5CD}|Delete the ACE granting Full Control to Enterprise Key Admins and add an ACE granting Enterprise Key Admins Full Control over just the msdsKeyCredentialLink attribute.|N/A|Delete (A;CI;RPWPCRLCLOCCDCRCWDWOSDDTSW;;;Enterprise Key Admins) <br /> <br />Add (OA;CI;RPWP;5b47d60f-6090-40b2-9f37-2a4de88f3063;;Enterprise Key Admins)|
+|**Operation 89**: {A0C238BA-9E30-4EE6-80A6-43F731E9A5CD}|Delete the ACE granting Full Control to Enterprise Key Admins and add an ACE granting Enterprise Key Admins Full Control over just the msdsKeyCredentialLink attribute.|Delete (A;CI;RPWPCRLCLOCCDCRCWDWOSDDTSW;;;Enterprise Key Admins) <br /> <br />Add (OA;CI;RPWP;5b47d60f-6090-40b2-9f37-2a4de88f3063;;Enterprise Key Admins)|
 
 ## Windows Server 2016: Domain-wide updates
 
