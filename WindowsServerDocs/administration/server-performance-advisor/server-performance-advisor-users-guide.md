@@ -12,50 +12,22 @@ ms.technology: manage
 ---
 # Server Performance Advisor User's Guide
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10, Windows 8
 
 This user s guide for Microsoft Server Performance Advisor (SPA) provides guidelines about how you can use SPA to help them identify performance bottlenecks in their systems for various server roles.
 
 SPA can help you with the following things:
 
--   helps you manage your server performance and troubleshoot server performance issues.
+* Helps you manage your server performance and troubleshoot server performance issues.
 
--   Provides data reports and recommendations about common configuration and performance issues.
+* Provides data reports and recommendations about common configuration and performance issues.
 
--   Provides recommendations based on the data that it collects from the server and by applying rules which capture best practices.
+* Provides recommendations based on the data that it collects from the server and by applying rules which capture best practices.
 
-**Note**
-The SPA Console does not make any changes to the servers.
+> [!NOTE]
+> The SPA Console does not make any changes to the servers.
 
- 
-
-This guide can be used to run analysis on the following versions of Windows Server:
-
--   Windows Server 2012 R2
-
--   Windows Server 2012
-
--   Windows Server 2008 R2
-
--   Windows Server 2008
-
-However, you can run the SPA console on any of the following:
-
--   Windows 8.1
-
--   Windows 8
-
--   Windows 7
-
--   Windows Server 2012 R2
-
--   Windows Server 2012
-
--   Windows Server 2008 R2
-
--   Windows Server 2008
-
-for more info about developing SPA Advisor Packs, see [Server Performance Advisor Pack Development Guide](server-performance-advisor-pack-development-guide.md).
+For more info about developing SPA Advisor Packs, see [Server Performance Advisor Pack Development Guide](server-performance-advisor-pack-development-guide.md).
 
 ## Server Performance Advisor overview
 
@@ -74,29 +46,29 @@ Since the release of the original SPA, there are several major changes in the se
 
 Although SPA 3.1 shares the same design goals and performance analysis paradigm as the original tool, it has been rewritten with the latest technology. It also has the following key improvements:
 
--   Can perform analysis against servers running Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, and Windows Server 2008.
+* Can perform analysis against servers running Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, and Windows Server 2008.
 
--   Supports remote analysis capability, which allows SPA 3.1 to collect and analyze data from a central console, with no need to install code on the servers to be analyzed.
+* Supports remote analysis capability, which allows SPA 3.1 to collect and analyze data from a central console, with no need to install code on the servers to be analyzed.
 
--   Uses a Microsoft SQL Server for data analysis and storage, which enables processing and storing large amount of data.
+* Uses a Microsoft SQL Server for data analysis and storage, which enables processing and storing large amount of data.
 
--   Separates the tool from the Advisor Packs. Performance analysis logic for each server role is released in the form of an advisor pack, which can be released or updated separately from the tool.
+* Separates the tool from the Advisor Packs. Performance analysis logic for each server role is released in the form of an advisor pack, which can be released or updated separately from the tool.
 
--   Provides Advisor Packs that are developed in SQL scripts with an open architecture. Non-Microsoft parties can develop advisor packs or extend the existing advisor packs from Microsoft to cover special needs.
+* Provides Advisor Packs that are developed in SQL scripts with an open architecture. Non-Microsoft parties can develop advisor packs or extend the existing advisor packs from Microsoft to cover special needs.
 
--   Supports new features like side-by-side comparison reports, and trend and historical charts to help you find abnormalities.
+* Supports new features like side-by-side comparison reports, and trend and historical charts to help you find abnormalities.
 
--   Provides features such as modify, import, and export thresholds to help you fine tune the reports and notifications and share those tunings with other SPA users.
+* Provides features such as modify, import, and export thresholds to help you fine tune the reports and notifications and share those tunings with other SPA users.
 
--   Supports multiple projects, which can be used to group targeted servers.
+* Supports multiple projects, which can be used to group targeted servers.
 
--   Provides recurring data collection from within the SPA console.
+* Provides recurring data collection from within the SPA console.
 
--   Enables custom queries and report generation by using Microsoft SQL Server (for advanced users).
+* Enables custom queries and report generation by using Microsoft SQL Server (for advanced users).
 
--   Customized Windows PowerShell cmdlets are available to use with SPA
+* Customized Windows PowerShell cmdlets are available to use with SPA
 
--   Backward compatible for importing and viewing reports from a SPA 3.0 database
+* Backward compatible for importing and viewing reports from a SPA 3.0 database
 
 ### Target audience
 
@@ -108,19 +80,19 @@ SPA offers recommendations to help you solve performance problems; however, it i
 
 The following features and enhancements were added in SPA 3.1:
 
--   active directory Advisor Pack helps analyze the general performance of the server s active directory Domain Services server role.
+* Active directory Advisor Pack helps analyze the general performance of the server s active directory Domain Services server role.
 
--   Support for developers to add lost ETW event notifications alert in the advisor packs and making the alert visible when a report has been generated and events were lost due to high frequency logging on a slow or heavily contended disk
+* Support for developers to add lost ETW event notifications alert in the advisor packs and making the alert visible when a report has been generated and events were lost due to high frequency logging on a slow or heavily contended disk
 
 ### Target scenarios
 
 The following are the target scenarios for SPA:
 
--   **Server environment**
+* **Server environment**
 
     SPA is designed to easily set up and maintain. It applies to server environments that use 1 to 100 servers. SPA will not scale well if you are trying to manage performance for more than 100 servers. For larger or more sophisticated environments, you should consider using System Center Operations Manager.
 
--   **Performance troubleshooting**
+* **Performance troubleshooting**
 
     You can use SPA as a performance troubleshooting tool. It provides the ability to collect high-level performance data, it performs a thorough post processing on the data to give you a better understanding of their overall system behavior, and it flags any anomalies. When a performance issue is suspected by a customer, you can use SPA to collect and analyze performance data from the server.
 
@@ -131,7 +103,7 @@ The following are the target scenarios for SPA:
 
      
 
--   **Performance index monitoring**
+* **Performance index monitoring**
 
     You can use SPA to monitor the performance index of servers. You can choose to run SPA routinely on servers to collect performance data, and then run a trend chart or an historical chart to spot the abnormalities. You can view the report for a particular analysis, find out more information about the performance issue, and then use the recommendations or other report data to resolve the issue.
 
@@ -145,19 +117,19 @@ The SPA console user interfaces and interactions are built as part of the SPACon
 
 The SPA console can run on the following operating systems:
 
--   Windows 8.1
+* Windows 8.1
 
--   Windows 8
+* Windows 8
 
--   Windows 7
+* Windows 7
 
--   Windows Server 2012 R2
+* Windows Server 2012 R2
 
--   Windows Server 2012
+* Windows Server 2012
 
--   Windows Server 2008 R2
+* Windows Server 2008 R2
 
--   Windows Server 2008
+* Windows Server 2008
 
 In a typical business application, there are three tiers: the presentation layer, the business logic layer, and the storage layer. SPA is designed as a two tier product the console and the database. The console serves as a presentation layer with certain process-related logic included, and the database serves as the storage layer and the business logic layer. The console captures user input, and it controls the steps for data collection, data processing, and report generation. SPA does not depend on Windows system services.
 
@@ -199,28 +171,28 @@ Because users can create and manage databases with SPA, the user account that is
 
 SPA is packaged as a .cab file that includes all the binaries for the SPA framework, the Windows PowerShell  cmdlets that are used in advanced scenarios, and the following advisor packs: Core OS, Hyper-V, active directory, and IIS. After you extract the .cab file to a folder, no additional installation is required. However, to run SPA, you need to enable data collection from the target servers as follows:
 
--   To run PLA data collection, the user account that you use to run the SPA console must be part of the Administrators security group on the target server. If the target server and the console are in the same domain, the domain user account must be part of the Administrators security group on the target server. If the target server and the console are not in the same domain, create an administrative user account on the target server with the same user name and password as the user account that you use to run the SPA console.
+* To run PLA data collection, the user account that you use to run the SPA console must be part of the Administrators security group on the target server. If the target server and the console are in the same domain, the domain user account must be part of the Administrators security group on the target server. If the target server and the console are not in the same domain, create an administrative user account on the target server with the same user name and password as the user account that you use to run the SPA console.
 
--   create a shared folder for results on the server.
+* Create a shared folder for results on the server.
 
--   Make sure that the user account you use to run the SPA console has read and write permissions to the shared folder. PLA will use this account to write logs to the folder, and the SPA console will use the same account to read logs and import them into database.
+* Make sure that the user account you use to run the SPA console has read and write permissions to the shared folder. PLA will use this account to write logs to the folder, and the SPA console will use the same account to read logs and import them into database.
 
     **Note**
     ETW implements a circular buffer to store the trace and moves them to the shared folder when possible. If the server is busy or the write operation is slow, ETW drops the traces when the buffer is full. It is IMPORTANT that the shared folder is located on a server with fast I/O access. We recommend that each target server has a shared folder to minimize data loss caused by slow file I/O.
 
      
 
--   for PLA to access target servers, set the Windows Firewall to allow remote Performance Logs and Alerts access on target servers. PLA uses TCP port 139.
+* For PLA to access target servers, set the Windows Firewall to allow remote Performance Logs and Alerts access on target servers. PLA uses TCP port 139.
 
--   Make sure the **Performance Logs & Alerts** Service is running.
+* Make sure the **Performance Logs & Alerts** Service is running.
 
--   if the console and target server are located in different subnets, you also need to set the remote IP address field in the inbound firewall rules in the **Scope** settings on the **Performance Logs and Alerts** page, as shown here.
+* If the console and target server are located in different subnets, you also need to set the remote IP address field in the inbound firewall rules in the **Scope** settings on the **Performance Logs and Alerts** page, as shown here.
 
     ![pla properties](../media/server-performance-advisor/spa-user-manual-pla-firewall.png)
 
--   Turn on Network Discovery on the console and on each of the target servers.
+* Turn on Network Discovery on the console and on each of the target servers.
 
--   if the target server is not joined to a domain, enable the following registry setting: **HKLM\\SOFTWARE\\Microsoft\\Windows\\Currentversion\\Policies\\system\\LocalAccountTokenFilterPolicy**.
+* If the target server is not joined to a domain, enable the following registry setting: **HKLM\\SOFTWARE\\Microsoft\\Windows\\Currentversion\\Policies\\system\\LocalAccountTokenFilterPolicy**.
 
 **Note**
 By default, SPA writes diagnostic logs to the folder where SpaConsole.exe is located. If SPA is installed under the Program Files folder, SPA will only be able to write the log when SpaConsole.exe is ran as an administrator.
@@ -241,11 +213,11 @@ After everything is set up, you can create your first SPA project. As described 
 
 2.  To create a new project, click **File**, and then click **New project**. This launches the First time Use Wizard. The first page shows the steps that you will follow while using the wizard:
 
-    -   create a database
+    * Create a database
 
-    -   Provision advisor packs
+    * Provision advisor packs
 
-    -   add servers to the target server list
+    * Add servers to the target server list
 
 3.  Click **Next**. The **create project database** page asks you to provide the name of the Microsoft SQL Server instance where you want to create your database. For example, if it is on the same computer as the console, you can use **localhost\\&lt;your SQL server name&gt;**.
 
@@ -304,24 +276,24 @@ After setting up the database, you can run performance analysis on the servers.
 
 Every time the SPA console launches, the last project that was used by the current user opens automatically. The main window contains a list of servers. Each server has four properties: Server Name, Analysis Result, Current Status, and remark.
 
--   **Server Name** The name of the server, which is the identifier for server. No duplicate names are allowed.
+* **Server Name** The name of the server, which is the identifier for server. No duplicate names are allowed.
 
--   **Analysis Result** By default, it shows the result of the latest performance analysis run against the server. If there has not been any performance analysis run against the server, it shows **No report**. If there is a warning raised by the report, it shows **Warning** and the time stamp when the latest report was generated. If no issue was found during the latest analysis on the server, it shows **OK** and the time stamp.
+* **Analysis Result** By default, it shows the result of the latest performance analysis run against the server. If there has not been any performance analysis run against the server, it shows **No report**. If there is a warning raised by the report, it shows **Warning** and the time stamp when the latest report was generated. If no issue was found during the latest analysis on the server, it shows **OK** and the time stamp.
 
     **Note**
     if you recently changed a system setting, we recommend that you run the analysis again to evaluate the overall impact of the change and get an updated report of the system state. SPA does not track configuration changes to the system under test.
 
      
 
--   **Current Status** Shows the status of performance analysis tasks currently running on the server. You can cancel a running task by clicking the **Cancel** icon, which is designated by a red X.
+* **Current Status** Shows the status of performance analysis tasks currently running on the server. You can cancel a running task by clicking the **Cancel** icon, which is designated by a red X.
 
--   **remark** Describes the current target server. For example, you can describe your server by using the server role (for example,  SQL Server ) or a location (for example,  Kent ). SPA uses the **Server name** and **remark** to help search and find the proper server. You can type in the search text box. If the **Server name** or **remark** columns contains the exact string that you entered in the search box, the server will be displayed in the server list.
+* **remark** Describes the current target server. For example, you can describe your server by using the server role (for example,  SQL Server ) or a location (for example,  Kent ). SPA uses the **Server name** and **remark** to help search and find the proper server. You can type in the search text box. If the **Server name** or **remark** columns contains the exact string that you entered in the search box, the server will be displayed in the server list.
 
 The following controls are also available on the console:
 
--   **Repeat** A check box that describes the ability to regularly repeat a collection, based on a time interval. For most server installations, you would want to have a SPA collection repeat hourly to have sufficient history for analysis. If you want to run the collection only once, you should not select the **Repeat** check box.
+* **Repeat** A check box that describes the ability to regularly repeat a collection, based on a time interval. For most server installations, you would want to have a SPA collection repeat hourly to have sufficient history for analysis. If you want to run the collection only once, you should not select the **Repeat** check box.
 
--   **remove Recurrence** A button that enables you to cancel an ongoing repeat collection job. It cancels the repeat collection, but not the current collection (if any) is in progress. This option allows you to reset a new repeat collection interval or run the collection manually.
+* **remove Recurrence** A button that enables you to cancel an ongoing repeat collection job. It cancels the repeat collection, but not the current collection (if any) is in progress. This option allows you to reset a new repeat collection interval or run the collection manually.
 
 Before you start the performance analysis, select the data collection duration. Although collecting more data helps provide a more accurate image of the server performance situation, it also generates a larger number of logs, and it could have more potential impact on the server. Choose the proper data collection duration based on your specific need. Each advisor pack defines a minimum valid duration. The data collection duration that you choose must be longer than the minimum duration of the selected advisor packs.
 
@@ -341,11 +313,11 @@ After running performance analysis, a report is generated for each of the adviso
 
 There are three icons next to the advisor pack name that show the status of latest analysis run on the server:
 
--   The **Latest** icon shows the report that was generated by the latest performance analysis on this server for the advisor pack.
+* The **Latest** icon shows the report that was generated by the latest performance analysis on this server for the advisor pack.
 
--   The **find** icon shows the list of performance analysis reports, which enables you to pick the correct report. The **Advisor pack** and **Target server** fields are prefilled with the current advisor pack and target server information. The default time range is set to one week, and the end date is set to today. If you click the **Search** button in the upper-right corner, you can get a list of all the performance analysis reports for the selected server and advisor pack within the time range.
+* The **find** icon shows the list of performance analysis reports, which enables you to pick the correct report. The **Advisor pack** and **Target server** fields are prefilled with the current advisor pack and target server information. The default time range is set to one week, and the end date is set to today. If you click the **Search** button in the upper-right corner, you can get a list of all the performance analysis reports for the selected server and advisor pack within the time range.
 
--   The **View Charts** icon opens the trend and historical chart view.
+* The **View Charts** icon opens the trend and historical chart view.
 
 The following figure shows the **Latest**, **find**, and **View Charts** icons after each advisor pack:
 
@@ -377,13 +349,13 @@ The notification section is divided into two parts: **Warning** and **Other noti
 
 if the data source for a rule meets certain conditions based on the logic and threshold settings, a warning appears in the **Warning** area. A warning includes the following parts:
 
--   A warning icon indicates the existence of a potential issue.
+* A warning icon indicates the existence of a potential issue.
 
--   The name of the rule. For example, **Network receive packet drops** is a link that points to the rule detail page, as described in [Managing advisor packs](#bkmk-manageadvisorpacks).
+* The name of the rule. For example, **Network receive packet drops** is a link that points to the rule detail page, as described in [Managing advisor packs](#bkmk-manageadvisorpacks).
 
--   A simple description about the potential issue.
+* A simple description about the potential issue.
 
--   A recommendation for a possible solution to the potential performance issue.
+* A recommendation for a possible solution to the potential performance issue.
 
 Different servers can have dramatically different configuration and usage patterns, and it is impossible to set the thresholds and rules that are applicable for all servers under all conditions. SPA provides the capability to modify the thresholds. You can also choose to disable a rule if the rule does not apply to your scenario. By default, all rules are enabled. A disabled rule will not show up in the notification area. For more info, see [Managing advisor packs](#bkmk-manageadvisorpacks).
 
@@ -397,13 +369,13 @@ Data sections contain the performance data that the advisor pack generates based
 
 The Core OS SPA Advisor Pack and the IIS SPA Advisor Pack contain a **System overview** section. This section includes the top-level information about the resource usage and configuration. Other top-level sections represent areas of performance data. SPA presents report data in the following ways:
 
--   **Single value** A key/value pair. The key is a string, which represents the meaning of the value. The value can be a string, a numeric value, or a Boolean value. This is often used to show static information, like configuration for example, the CPU architecture, the total memory size, and the BIOS version, which do not change over time.
+* **Single value** A key/value pair. The key is a string, which represents the meaning of the value. The value can be a string, a numeric value, or a Boolean value. This is often used to show static information, like configuration for example, the CPU architecture, the total memory size, and the BIOS version, which do not change over time.
 
--   **list value** This is sometimes a key/value pair, but the list value can contain multiple fields. For example, the attribute of the CPU can be shown in a table with multiple columns and multiple rows. Each row represents one CPU, and each column represents an attribute of the CPU.
+* **list value** This is sometimes a key/value pair, but the list value can contain multiple fields. For example, the attribute of the CPU can be shown in a table with multiple columns and multiple rows. Each row represents one CPU, and each column represents an attribute of the CPU.
 
--   **Statistics** Can be considered a special type of single value. It can only contain numeric data. During the time of data collection, many of the numeric data points fluctuate instead of stay constant. For example, the CPU usage changes each time the PLA collects the performance counter. Showing only a single value cannot accurately reflect the performance situation. Instead of showing only one value, average, maximum, minimum, and 90% value are used for such dynamic numeric data points. The 90% value represents activity at or above the 90th percentile across all events for that counter in that given collection interval.
+* **Statistics** Can be considered a special type of single value. It can only contain numeric data. During the time of data collection, many of the numeric data points fluctuate instead of stay constant. For example, the CPU usage changes each time the PLA collects the performance counter. Showing only a single value cannot accurately reflect the performance situation. Instead of showing only one value, average, maximum, minimum, and 90% value are used for such dynamic numeric data points. The 90% value represents activity at or above the 90th percentile across all events for that counter in that given collection interval.
 
--   **Top list** Usually contains the top consumers of a specific resource or the top entities that experienced certain events. For example, **Top 10 processes in terms of average CPU usage** includes the top ten processes with highest average CPU usage during the time of data collection. Because CPU usage is also a dynamic numeric data point, other statistics like maximum, minimum, and 90% value are also included in the list to give the user a more complete picture of the CPU consumption.
+* **Top list** Usually contains the top consumers of a specific resource or the top entities that experienced certain events. For example, **Top 10 processes in terms of average CPU usage** includes the top ten processes with highest average CPU usage during the time of data collection. Because CPU usage is also a dynamic numeric data point, other statistics like maximum, minimum, and 90% value are also included in the list to give the user a more complete picture of the CPU consumption.
 
 As mentioned in previous sections, SPA relies on PLA to collect ETW trace, WMI queries, performance counters, registry keys, and configuration files to generate the report. It is IMPORTANT to understand the data source behind each data point in the report. SPA provides such information through tooltips. You can hover over the key columns or rows to view the data-source tooltip. For example, **WMI:Win32\_DisDrive:Caption** means that the data source is from a WMI query, the WMI class name is Win32\_DiskDrive, and the property is **Caption**.
 
@@ -443,17 +415,17 @@ There are a couple of ways to use a historical chart:
 
 In an historical chart, users can do the following:
 
--   Show multiple data series in the chart area. Each data series is shown as a line chart in the report viewer. Each line chart is automatically scaled to fit in the report viewer.
+* Show multiple data series in the chart area. Each data series is shown as a line chart in the report viewer. Each line chart is automatically scaled to fit in the report viewer.
 
--   add or remove a data series from the data series list at the bottom of the historical chart viewer.
+* Add or remove a data series from the data series list at the bottom of the historical chart viewer.
 
--   Show or hide a data series in the data series list. Users can click a specific data series in the list to highlight the corresponding line chart in the chart area.
+* Show or hide a data series in the data series list. Users can click a specific data series in the list to highlight the corresponding line chart in the chart area.
 
--   Zoom in to a certain time period by selecting the time period inside the chart area. To zoom out, click the button that is located in the bottom-left corner of the chart.
+* Zoom in to a certain time period by selecting the time period inside the chart area. To zoom out, click the button that is located in the bottom-left corner of the chart.
 
--   Investigate a single report by double-clicking a particular data point.
+* Investigate a single report by double-clicking a particular data point.
 
--   copy the data and make it available for other programs, such as Microsoft Excel. This allows you to utilize Microsoft Excel charting capabilities, when appropriate.
+* Copy the data and make it available for other programs, such as Microsoft Excel. This allows you to utilize Microsoft Excel charting capabilities, when appropriate.
 
 ### Trend charts
 
@@ -623,61 +595,12 @@ Before you run any Windows PowerShell cmdlets, you need to register the cmdlets 
 
 The following table describes the SPA Windows PowerShell cmdlets:
 
-<table>
-<colgroup>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Cmdlet name</th>
-<th>Parameters</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>start-SpaAnalysis</p></td>
-<td><ul>
-<li><p><strong>-ServerName</strong> Name of the target server</p></li>
-<li><p><strong>-AdvisorPackName</strong> Full name of the advisor pack to be queued on server. When more than one pack is scheduled to run at the same time, the value of the parameter should be formatted as  AP1name ,  AP2name. </p></li>
-<li><p><strong>-Duration</strong> Duration for the data collection</p></li>
-<li><p><strong>-Credential</strong> User credentials for the account that will run data collection on the target server</p></li>
-<li><p><strong>-SqlInstanceName</strong> Name of the SQL Server instance</p></li>
-<li><p><strong>-SqlDatabaseName</strong> Name of the SPA project database</p></li>
-</ul></td>
-<td><p>starts a SPA data collection session on the specified server.</p></td>
-</tr>
-<tr class="even">
-<td><p>Stop-SpaAnalysis</p></td>
-<td><ul>
-<li><p><strong>-SqlInstanceName</strong> Name of the SQL Server instance</p></li>
-<li><p><strong>-SqlDatabaseName</strong> Name of the SPA project database</p></li>
-<li><p><strong>-ServerName</strong> Name of the target server</p></li>
-</ul></td>
-<td><p>attempts to stop a running SPA session. If a session is already complete, it will return without doing anything.</p></td>
-</tr>
-<tr class="odd">
-<td><p>Get-SpaServer</p></td>
-<td><ul>
-<li><p><strong>-SqlInstanceName</strong> Name of the SQL Server instance</p></li>
-<li><p><strong>-SqlDatabaseName</strong> Name of the SPA project database</p></li>
-</ul></td>
-<td><p>Gets the server list in the database. It returns a list of objects, including these properties: Name, Status, FileShare, and remark.</p></td>
-</tr>
-<tr class="even">
-<td><p>Get-SpaAdvisorPacks</p></td>
-<td><ul>
-<li><p><strong>-SqlInstanceName</strong> Name of the SQL Server instance</p></li>
-<li><p><strong>-SqlDatabaseName</strong> Name of the SPA project database</p></li>
-</ul></td>
-<td><p>Gets the advisor pack list in the database. It returns a list of objects, including these properties: Name, DisplayName, Author, and version.</p></td>
-</tr>
-</tbody>
-</table>
-
- 
+| Cmdlet name | Parameters | Description |
+| ------ | ------- | ------ |
+| Start-SpaAnalysis | **-ServerName** Name of the target server.<br>**-AdvisorPackName** Full name of the advisor pack to be queued on server. When more than one pack is scheduled to run at the same time, the value of the parameter should be formatted as AP1name, AP2name.<br>**-Duration** Duration for the data collection.<br>**-Credential** User credentials for the account that runs data collection on the target server.<br>**-SqlInstanceName** Name of the SQL Server instance.<br>**-SqlDatabaseName** Name of the SPA project database. | Starts a SPA data collection session on the specified server. |
+| Stop-SpaAnalysis | **-SqlInstanceName** Name of the SQL Server instance.<br>**-SqlDatabaseName** Name of the SPA project database.<br>**-ServerName** Name of the target server. | Attempts to stop a running SPA session. If a session is already complete, it  returns without doing anything. |
+| Get-SpaServer | **-SqlInstanceName** Name of the SQL Server instance.<br>**-SqlDatabaseName** Name of the SPA project database. | Gets the server list in the database. It returns a list of objects, including these properties: Name, Status, FileShare, and Remark. |
+| Get-SpaAdvisorPacks | **-SqlInstanceName** Name of the SQL Server instance<br>**-SqlDatabaseName** Name of the SPA project database | Gets the advisor pack list in the database. It returns a list of objects, including these properties: Name, DisplayName, Author, and Version. |
 
 Windows PowerShell provides the capability to pass credentials through encrypted files to enable automation scenarios. For more info about using encrypted files to pass credentials to a cmdlet, see [create Windows PowerShell Scripts that Accept Credentials](https://technet.microsoft.com/magazine/ff714574.aspx).
 
@@ -750,11 +673,11 @@ SPA provides basic logging functionality. It only allows logs to be written to a
 
 SPA contains the following valid log levels:
 
--   **Informational** Dumps logs for every action that the SPA console takes, and it is primarily designed for debugging purposes.
+* **Informational** Dumps logs for every action that the SPA console takes, and it is primarily designed for debugging purposes.
 
--   **Warning** Logs all the failures and exceptions that happen inside the SPA console. Some of the failures are simply validation failures that can be handled by the SPA console.
+* **Warning** Logs all the failures and exceptions that happen inside the SPA console. Some of the failures are simply validation failures that can be handled by the SPA console.
 
--   **Critical** Logs only failures and exceptions that cannot be handled by the SPA console. These failures will cause the SPA console to crash. The logs provide the context information for such failures.
+* **Critical** Logs only failures and exceptions that cannot be handled by the SPA console. These failures will cause the SPA console to crash. The logs provide the context information for such failures.
 
 By default, the log level is Warning, which means that SPA will only log failures and exceptions that happen in SPA. The log level can be changed by editing the **SpaConsole.exe.config** file in the same folder as SpaConsole.exe is located. All the logs are written to log.txt file in the same folder.
 
@@ -814,9 +737,9 @@ When you run performance analysis on target servers, the user account that runs 
 
 if you get a  Cannot create PLA Data Collection Set on target server  message, make sure to do the following:
 
--   Make sure the **Performance Logs & Alerts** service is running
+* Make sure the **Performance Logs & Alerts** service is running
 
--   The security setting **Network access: Do not allow storage of passwords and credentials for network authentication** is disabled. The security setting must be disabled because SPA needs to use the user credentials to create the Data Collection Set on the target server.
+* The security setting **Network access: Do not allow storage of passwords and credentials for network authentication** is disabled. The security setting must be disabled because SPA needs to use the user credentials to create the Data Collection Set on the target server.
 
 ### <a href="" id="running-spa-against-the-console-"></a>Running SPA against the console
 
@@ -851,38 +774,38 @@ if the data collector results contain incomplete data other than ETW trace loss 
 
 Here are some of the terms used with SPA:
 
--   **Advisor pack** A collection of metadata and T-SQL scripts that process the performance logs that are collected from the target server. The advisor pack then generates reports from the performance log data. The metadata in the advisor pack defines the data to be collected from the target server for performance measurements. The metadata also defines the set of rules, the thresholds, and the report format. Most often, an advisor pack is written specifically for a single server role, for example, Internet Information Services (IIS).
+* **Advisor pack** A collection of metadata and T-SQL scripts that process the performance logs that are collected from the target server. The advisor pack then generates reports from the performance log data. The metadata in the advisor pack defines the data to be collected from the target server for performance measurements. The metadata also defines the set of rules, the thresholds, and the report format. Most often, an advisor pack is written specifically for a single server role, for example, Internet Information Services (IIS).
 
--   **SPA console** SpaConsole.exe, which is the central part of SPA. SPA does not need to run on the target server that you are testing. The SPA console contains all the user interfaces for SPA, from setting up the project to running analysis and viewing reports. By design, SPA is a two-tier application. The SPA console contains the UI layer and part of the business-logic layer. The SPA console schedules and processes performance analysis requests.
+* **SPA console** SpaConsole.exe, which is the central part of SPA. SPA does not need to run on the target server that you are testing. The SPA console contains all the user interfaces for SPA, from setting up the project to running analysis and viewing reports. By design, SPA is a two-tier application. The SPA console contains the UI layer and part of the business-logic layer. The SPA console schedules and processes performance analysis requests.
 
--   **SPA framework** Provides all the user interfaces, performance log processing, configuration, error handling, and database APIs, and management procedures.
+* **SPA framework** Provides all the user interfaces, performance log processing, configuration, error handling, and database APIs, and management procedures.
 
--   **SPA project** A database that contains all the information about the target servers, advisor packs, and performance analysis reports that are generated on the target servers for the advisor packs. You can compare and view history and trend charts within the same SPA project. You can create more than one project. The SPA projects are independent of one another, and there is no data shared across projects.
+* **SPA project** A database that contains all the information about the target servers, advisor packs, and performance analysis reports that are generated on the target servers for the advisor packs. You can compare and view history and trend charts within the same SPA project. You can create more than one project. The SPA projects are independent of one another, and there is no data shared across projects.
 
--   **Target server** The physical computer or virtual machine that runs Windows Server with certain server roles, such as IIS.
+* **Target server** The physical computer or virtual machine that runs Windows Server with certain server roles, such as IIS.
 
--   **Data analysis session** A performance analysis on a specific target server. A data analysis session can include multiple advisor packs. The data collector sets from those advisor packs are merged into a single data collector set. All performance logs for a single data analysis session are collected during the same time period. Analyzing reports that are generated by advisor packs running in the same data analysis session can help users understand the overall performance situation and identify root causes for performance issues.
+* **Data analysis session** A performance analysis on a specific target server. A data analysis session can include multiple advisor packs. The data collector sets from those advisor packs are merged into a single data collector set. All performance logs for a single data analysis session are collected during the same time period. Analyzing reports that are generated by advisor packs running in the same data analysis session can help users understand the overall performance situation and identify root causes for performance issues.
 
--   **Event Tracing for Windows** A high-performance, low-overhead, scalable tracing system that is provided in Windows. It provides profiling and debugging capabilities, which can be used to troubleshoot a variety of scenarios. SPA uses ETW events as a data source for generating the performance reports. For general information about ETW, see [Improve Debugging and Performance Tuning with ETW](https://msdn.microsoft.com/magazine/cc163437.aspx).
+* **Event Tracing for Windows** A high-performance, low-overhead, scalable tracing system that is provided in Windows. It provides profiling and debugging capabilities, which can be used to troubleshoot a variety of scenarios. SPA uses ETW events as a data source for generating the performance reports. For general information about ETW, see [Improve Debugging and Performance Tuning with ETW](https://msdn.microsoft.com/magazine/cc163437.aspx).
 
--   **Windows Management Instrumentation (WMI)** The infrastructure for management data and operations in Windows. You can write WMI scripts or applications to automate administrative tasks on remote computers. WMI also supplies management data to other parts of the operating system and to products. SPA uses WMI class information and data points as sources for generating performance reports.
+* **Windows Management Instrumentation (WMI)** The infrastructure for management data and operations in Windows. You can write WMI scripts or applications to automate administrative tasks on remote computers. WMI also supplies management data to other parts of the operating system and to products. SPA uses WMI class information and data points as sources for generating performance reports.
 
--   **Performance counters** Used to provide information about how well the operating system or an application, service, or driver is performing. The performance counter data can help determine system bottlenecks, and fine-tune system and application performance. The operating system, network, and devices provide counter data that an application can consume to provide users with a graphical view of how well the system is performing. SPA uses performance counter information and data points as sources to generate performance reports.
+* **Performance counters** Used to provide information about how well the operating system or an application, service, or driver is performing. The performance counter data can help determine system bottlenecks, and fine-tune system and application performance. The operating system, network, and devices provide counter data that an application can consume to provide users with a graphical view of how well the system is performing. SPA uses performance counter information and data points as sources to generate performance reports.
 
--   **Performance Logs and Alerts (PLA)** Collects performance logs and traces and raises performance alerts when certain triggers are met. PLA can be used to collect performance counters, event tracing for Windows (ETW), WMI queries, registry keys, and configuration files. PLA also supports remote data collection through remote procedure calls (RPC). The user defines a data collector set, which includes information about the data to be collected, frequency of data collection, data collection duration, filters, and a location for saving the result files. SPA uses PLA to collect all the performance data from the target servers.
+* **Performance Logs and Alerts (PLA)** Collects performance logs and traces and raises performance alerts when certain triggers are met. PLA can be used to collect performance counters, event tracing for Windows (ETW), WMI queries, registry keys, and configuration files. PLA also supports remote data collection through remote procedure calls (RPC). The user defines a data collector set, which includes information about the data to be collected, frequency of data collection, data collection duration, filters, and a location for saving the result files. SPA uses PLA to collect all the performance data from the target servers.
 
--   **Single report** A SPA report that is generated based on one data analysis session for one advisor pack on a single target server. It can contain notifications and various data sections.
+* **Single report** A SPA report that is generated based on one data analysis session for one advisor pack on a single target server. It can contain notifications and various data sections.
 
--   **Side-by-side report** A SPA report that compares two single reports for the same advisor pack. The two reports can be generated from different target servers or from separate performance analysis runs on the same target server. The side-by-side report creates the capability to compare two reports to help users identify abnormal behaviors or settings in one of the reports. A side-by-side report contains notifications and various data sections. In each section, data from both reports are listed side-by-side.
+* **Side-by-side report** A SPA report that compares two single reports for the same advisor pack. The two reports can be generated from different target servers or from separate performance analysis runs on the same target server. The side-by-side report creates the capability to compare two reports to help users identify abnormal behaviors or settings in one of the reports. A side-by-side report contains notifications and various data sections. In each section, data from both reports are listed side-by-side.
 
--   **Trend chart** A SPA report that is used to investigate repetitive patterns of performance issues. Many repetitive performance issues are caused by scheduled server load changes from the server or from client computers, which can happen daily or weekly. SPA provides a 24-hour trend chart and a 7-day trend chart to identify these issues.
+* **Trend chart** A SPA report that is used to investigate repetitive patterns of performance issues. Many repetitive performance issues are caused by scheduled server load changes from the server or from client computers, which can happen daily or weekly. SPA provides a 24-hour trend chart and a 7-day trend chart to identify these issues.
 
     The user can choose one or more data series at a time, which is a numeric value inside the single report, such as **Average total CPU usage**. more specifically, a numeric value is a scalar value from a single server that is generated by a single AP at a given time instance. SPA groups those values into 24 groups, one for each hour of the day (seven for a 7-day report, one for each day of the week). SPA calculates average, minimum, maximum, and standard deviations for each group.
 
--   **Historical chart** A SPA report that is used to show changes in certain numeric values inside single reports for a given server and advisor pack pair over time. The user can choose multiple data series and show them together in the historical chart to understand the correlation between different data series.
+* **Historical chart** A SPA report that is used to show changes in certain numeric values inside single reports for a given server and advisor pack pair over time. The user can choose multiple data series and show them together in the historical chart to understand the correlation between different data series.
 
--   **Data series** Numeric data that is collected from the same data source over a period of time. The same source means that the data has to come from the same target server, such as the average request queue length for IIS on one server.
+* **Data series** Numeric data that is collected from the same data source over a period of time. The same source means that the data has to come from the same target server, such as the average request queue length for IIS on one server.
 
--   **Rules** Combinations of logic, thresholds, and descriptions. They represent a potential performance issue. Each advisor pack contains multiple rules. Each rule is triggered by a report generation process. A rule applies the logic and thresholds to the data in single report. If the criteria are met, a warning notification is raised. If not, the notification is set to the **OK** state. If the rule does not apply, the notification is set to the Not Applicable (**NA**) state.
+* **Rules** Combinations of logic, thresholds, and descriptions. They represent a potential performance issue. Each advisor pack contains multiple rules. Each rule is triggered by a report generation process. A rule applies the logic and thresholds to the data in single report. If the criteria are met, a warning notification is raised. If not, the notification is set to the **OK** state. If the rule does not apply, the notification is set to the Not Applicable (**NA**) state.
 
--   **Notifications** Information that a rule displays to users. It includes the status of the rule (**OK**, **NA**, or a **Warning**), the name of the rule, and possible recommendations to address the performance issues.
+* **Notifications** Information that a rule displays to users. It includes the status of the rule (**OK**, **NA**, or a **Warning**), the name of the rule, and possible recommendations to address the performance issues.
