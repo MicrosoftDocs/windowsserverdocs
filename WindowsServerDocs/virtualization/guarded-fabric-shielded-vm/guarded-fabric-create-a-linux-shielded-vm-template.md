@@ -47,17 +47,15 @@ These steps will walk you through the bare minimum requirements to get a Linux V
 > This means that you must create a new VM that is pre-encrypted using dm-crypt to create a Linux shielded VM template disk.
 
 
-1.  On the virtualization server, ensure that Hyper-V and the Shielded VM Tools features are installed by running the following commands in an elevated PowerShell console:
+1.  On the virtualization server, ensure that Hyper-V and the Host Guardian Hyper-V Support features are installed by running the following commands in an elevated PowerShell console:
 
     ```powershell
-    Install-WindowsFeature Hyper-V, RSAT-Shielded-VM-Tools -IncludeManagementTools -Restart
+    Install-WindowsFeature Hyper-V, HostGuardian -IncludeManagementTools -Restart
     ```
 
 2.  Download the ISO image from a trustworthy source and store it on your virtualization server, or on a file share accessible to your virtualization server.
 
-3.  On your management computer running Windows 10 or Windows Server 2016, install the Hyper-V Remote Server Administration Tools to remotely manage your virtualization server.
-    On Windows 10, download and install the [Remote Server Administration Tools package](https://www.microsoft.com/download/details.aspx?id=45520) (either WindowsTH-RSAT_WS2016-x64.msu or WindowsTH-RSAT_WS2016-x86.msu).
-    On Windows Server 2016, run the following command:
+3.  On your management computer running Windows Server version 1709, install the Shielded VM Remote Server Administration Tools by running the following command:
 
     ```powershell
     Install-WindowsFeature RSAT-Hyper-V-Tools
