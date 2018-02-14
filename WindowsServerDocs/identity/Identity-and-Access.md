@@ -5,7 +5,7 @@ description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 05/31/2017
+ms.date: 02/14/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.localizationpriority: high
@@ -16,10 +16,10 @@ ms.technology: identity-adds
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-<img src="../media/landing-icons/identity.png" style='float:left; padding:.5em;' alt="Icon showing a user"> The following new features in Identity improve the ability for organizations to secure Active Directory environments and help them migrate to cloud-only deployments and hybrid deployments, where some applications and services are hosted in the cloud and others are hosted on premises. The improvements are covered in the following sections.
+ The following new features in Identity improve the ability for organizations to secure Active Directory environments and help them migrate to cloud-only deployments and hybrid deployments, where some applications and services are hosted in the cloud and others are hosted on premises. The improvements are covered in the following sections.
 
 
-## [What's new in Active Directory Federation Services for Windows Server 2016](ad-fs/overview/whats-new-active-directory-federation-services-windows-server-2016.md)
+## [What's new in Active Directory Federation Services for Windows Server 2016](ad-fs/overview/whats-new-active-directory-federation-services-windows-server.md)
 An overview of all of the new features available for AD FS in Windows Server 2016.  
 
 ## [What's new in Active Directory Domain Services for Windows Server 2016](whats-new-active-directory-domain-services.md)
