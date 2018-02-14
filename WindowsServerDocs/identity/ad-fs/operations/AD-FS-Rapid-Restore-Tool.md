@@ -99,27 +99,27 @@ The following are backup examples for using the AD FS Rapid Restore Tool.
 
 ### Backup the AD FS configuration, with the DKM, to the File System, while running as the domain admin
 
-     ```powershell
-     Backup-ADFS -StorageType "FileSystem" -StoragePath "C:\Users\administrator\testExport\" -EncryptionPassword "password" -BackupComment "Clean Install of ADFS (FS)" -BackupDKM
-     ```
+```powershell
+Backup-ADFS -StorageType "FileSystem" -StoragePath "C:\Users\administrator\testExport\" -EncryptionPassword "password" -BackupComment "Clean Install of ADFS (FS)" -BackupDKM
+```
  
 ### Backup the AD FS configuration, with the DKM, to the file system with the service account credential, running as local admin
 
-     ```powershell
-     Backup-ADFS -StorageType "FileSystem" -StoragePath "C:\Users\administrator\testExport\" -EncryptionPassword "password" -BackupComment "Clean Install of ADFS (FS)" -BackupDKM -ServiceAccountCredential $cred
-     ```
+```powershell
+Backup-ADFS -StorageType "FileSystem" -StoragePath "C:\Users\administrator\testExport\" -EncryptionPassword "password" -BackupComment "Clean Install of ADFS (FS)" -BackupDKM -ServiceAccountCredential $cred
+```
 
 ### Backup the AD FS configuration without the DKM to the Azure Storage Container.
 
-     ```powershell
-     Backup-ADFS -StorageType "Azure" -AzureConnectionCredentials $cred -AzureStorageContainer "adfsbackups"  -EncryptionPassword "password" -BackupComment "Clean Install of ADFS"
-     ```
+```powershell
+Backup-ADFS -StorageType "Azure" -AzureConnectionCredentials $cred -AzureStorageContainer "adfsbackups"  -EncryptionPassword "password" -BackupComment "Clean Install of ADFS"
+```
 
 ### Backup the AD FS configuration without the DKM to the File System
 
-     ```powershell 	
-     Backup-ADFS -StorageType "FileSystem" -StoragePath "C:\Users\administrator\testExport\" -EncryptionPassword "password" -BackupComment "Clean Install of ADFS (FS)"
-     ```
+```powershell 	
+Backup-ADFS -StorageType "FileSystem" -StoragePath "C:\Users\administrator\testExport\" -EncryptionPassword "password" -BackupComment "Clean Install of ADFS (FS)"
+```
 
 ## Restore from backup
 To apply a configuration created using Backup-ADFS to a new AD FS installation, use the Restore-ADFS cmdlet.
