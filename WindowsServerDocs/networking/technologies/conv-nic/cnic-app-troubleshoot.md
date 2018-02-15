@@ -110,7 +110,7 @@ Remote node’s IP address is shown as RDMA capable.
 If your results are unexpected, perform the following steps.
 
 1. Make sure ping works both ways.
-2. Make sure the firewall is not blocking SMB connection initiation. Specifically, enable the firewall rule for SMB Direct port 5445.
+2. Make sure the firewall is not blocking SMB connection initiation. Specifically, enable the firewall rule for SMB Direct port 5445 for iWARP and 445 for ROCE.
 
 ## Get-SmbClientNetworkInterface
 
