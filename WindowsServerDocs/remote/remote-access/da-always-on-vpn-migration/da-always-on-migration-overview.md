@@ -29,23 +29,23 @@ The DirectAccess–to–Always On VPN migration process consists of three primar
 
 2.  **[Migrate](#remote-access-always-on-vpn-migration-de).** Following a specific process to migrate clients helps minimize race conditions that arise from performing migration steps out of order.
 
-    1.  **[Deploy a side-by-side VPN infrastructure](#deploy-a-side-by-side-vpn-infrastructure).** After you have determined your migration phases and the features you want to include in your deployment, you will deploy the VPN infrastructure side by side with the existing DirectAccess infrastructure.
+    1.  **[Deploy a side-by-side VPN infrastructure](#deploy-a-side-by-side-vpn-infrastructure).** After you have determined your migration phases and the features you want to include in your deployment, you deploy the VPN infrastructure side by side with the existing DirectAccess infrastructure.
 
-    2.  **[Deploy certificates and the VPN configuration script.](#deploy-certificates-and-vpn-configuration-script-to-the-clients).** After the VPN infrastructure is ready, you will create and publish the required certificates. When the clients have received the certificates, deploy the VPN_Profile.ps1 configuration script. Alternatively, you can use Intune to configure the VPN client.
+    2.  **[Deploy certificates and the VPN configuration script.](#deploy-certificates-and-vpn-configuration-script-to-the-clients).** After the VPN infrastructure is ready, you create and publish the required certificates. When the clients have received the certificates, deploy the VPN_Profile.ps1 configuration script. Alternatively, you can use Intune to configure the VPN client.
 
 3.  **[Remove and decommission](#remove-decom).** Properly decommission the environment after you have migrated everyone off DirectAccess.
 
     1.  **[Remove the DirectAccess configuration from the client](#remove-devices-from-the-directaccess-security-group).** Monitor Microsoft System Center Configuration Manager or Microsoft Intune for successful VPN configuration deployments. Then, use reporting
-        to determine device-assignment information and discover which device belongs to each user. As users migrate successfully, you will remove their devices from the DirectAccess security group so that you can remove DirectAccess.
+        to determine device-assignment information and discover which device belongs to each user. As users migrate successfully, you remove their devices from the DirectAccess security group so that you can remove DirectAccess.
 
-    2.  **[Decommission DirectAccess](#decommission-the-directaccess-infrastructure).** After you have successfully migrated all clients to Always On VPN, you will remove DirectAccess from your environment.
+    2.  **[Decommission DirectAccess](#decommission-the-directaccess-infrastructure).** After you have successfully migrated all clients to Always On VPN, you remove DirectAccess from your environment.
 
 For further details about each step in the process, see the [Always On VPN migration deployment](#remote-access-always-on-vpn-migration-de) section.
 
 DirectAccess deployment scenario
 --------------------------------
 
-In this deployment scenario, you use a simple DirectAccess deployment scenario as a starting point for the migration this guide presents. You don't need to match this deployment scenario before migrating to Always On VPN, but for many organizations, this simple setup is an accurate representation of their current DirectAccess deployment. The following table provides a list of basic features for this setup.
+In this deployment scenario, you use a simple DirectAccess deployment scenario as a starting point for the migration this guide presents. You do not need to match this deployment scenario before migrating to Always On VPN, but for many organizations, this simple setup is an accurate representation of their current DirectAccess deployment. The following table provides a list of basic features for this setup.
 
 Many DirectAccess deployment scenarios and options exist, so your implementation is likely to be different from the one described here. If so, refer to [Feature mapping between DirectAccess and Always On VPN](#feature-mapping-between-directaccess-and-always-on-vpn) to determine the Always On VPN feature set mapping for your current additions, and then add those features to your configuration. Also, you can refer to the [Always On VPN enhancements](#always-on-vpn-enhancements) to add options to your Always On VPN deployment.
 

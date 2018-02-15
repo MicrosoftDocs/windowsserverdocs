@@ -74,7 +74,7 @@ You must ensure that the **VPN_Profile.ps1** comes _after_ the certificate has b
 3.  **Identify users who have received a VPN authentication certificate.** You are migrating from DirectAccess, so you will need to add a method for identifying when a client has received the required certificate and is ready to receive the VPN configuration information. Run the **GetUsersWithCert.ps1** script to add users who are currently issued nonrevoked certificates originating from the specified template name to a specified AD DS security group. For example, after running the **GetUsersWithCert.ps1** script, any user issued a valid  certificate from the VPN Authentication Certificate template is added to the VPN Deployment Ready group.
 
     >[!NOTE] 
-    >If you do not have a method to identify when a client has received the required certificate, you could deploy the VPN configuration before the certificate has been issued to the user, causing the VPN connection to fail. To avoid this situation, run the **GetUsersWithCert.ps1** script on the certification authority or on a schedule to synchronize users who have received the certificate to the VPN Deployment Ready group. You will then use that security group to target your VPN configuration deployment in System Center Configuration Manager or Intune, which ensures that the managed client doesn't receive the VPN configuration before it has received the certificate.
+    >If you do not have a method to identify when a client has received the required certificate, you could deploy the VPN configuration before the certificate has been issued to the user, causing the VPN connection to fail. To avoid this situation, run the **GetUsersWithCert.ps1** script on the certification authority or on a schedule to synchronize users who have received the certificate to the VPN Deployment Ready group. You will then use that security group to target your VPN configuration deployment in System Center Configuration Manager or Intune, which ensures that the managed client does not receive the VPN configuration before it has received the certificate.
     
     ### GetUsersWithCert.ps1
     
@@ -122,7 +122,7 @@ You must ensure that the **VPN_Profile.ps1** comes _after_ the certificate has b
     | If you are using...  | Then... |
     | ---- | ----|
     | System Center Configuration Manager | Create a user collection based on that security group's membership.<br><br>![](media/b38723b3ffcfacd697b83dd41a177f66.png) |
-    | Intune | Simply target the security group directly once it's synchronized. |
+    | Intune | Simply target the security group directly once it is synchronized. |
     |
     
     Each time you run the GetUsersWithCert.ps1 configuration script, you must also run an AD DS discovery rule to update the security group membership in System Center Configuration Manager. Also, ensure that the membership update for the deployment collection frequently occurs enough (aligned with the script and discovery rule).
@@ -154,6 +154,6 @@ When you have finished migrating all your DirectAccess clients to Always On VPN,
 
 2.  **Clean up DNS.** Be sure to remove any records from your internal DNS server and public DNS server related to DirectAccess, for example, DA.contoso.com, DAGateway.contoso.com.
 
-3.  **Decommission the DirectAccess server.** When you have successfully removed the configuration settings and DNS records, you're ready to tear down the DirectAccess server. To do so, either remove the role in Server Manager or decommission the server and remove it from AD DS.
+3.  **Decommission the DirectAccess server.** When you have successfully removed the configuration settings and DNS records, you are ready to tear down the DirectAccess server. To do so, either remove the role in Server Manager or decommission the server and remove it from AD DS.
 
 4.  **Remove any DirectAccess certificates from Active Directory Certificate Services.** If you used computer certificates for your DirectAccess implementation, remove the published templates from the Certificate Templates folder in the Certification Authority console.
