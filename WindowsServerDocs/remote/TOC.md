@@ -4,7 +4,7 @@
 ## [Remote Access](remote-access/remote-Access.md)
 ### [Border Gateway Protocol (BGP)](remote-access/bgp/Border-Gateway-Protocol-BGP.md)
 #### [BGP Windows PowerShell Command Reference](remote-access/bgp/BGP-Windows-powershell-Command-Reference.md)
-### [DirectAccess to Always On VPN migration guide](remote/da-always-on-vpn-migration/da-always-on-migration-overview)
+### [DirectAccess to Always On VPN migration guide](remote-access/da-always-on-vpn-migration/da-always-on-migration-overview.md)
 ### [DirectAccess](remote-access/directaccess/directAccess.md)
 #### [DirectAccess Deployment paths in Windows Server](remote-access/directaccess/directAccess-Deployment-paths-in-Windows-Server.md)
 #### [Prerequisites for Deploying DirectAccess](remote-access/directaccess/Prerequisites-for-Deploying-directAccess.md)
