@@ -4,6 +4,7 @@
 ## [Remote Access](remote-access/remote-Access.md)
 ### [Border Gateway Protocol (BGP)](remote-access/bgp/Border-Gateway-Protocol-BGP.md)
 #### [BGP Windows PowerShell Command Reference](remote-access/bgp/BGP-Windows-powershell-Command-Reference.md)
+
 ### [DirectAccess](remote-access/directaccess/directAccess.md)
 #### [DirectAccess Deployment paths in Windows Server](remote-access/directaccess/directAccess-Deployment-paths-in-Windows-Server.md)
 #### [Prerequisites for Deploying DirectAccess](remote-access/directaccess/Prerequisites-for-Deploying-directAccess.md)
@@ -145,6 +146,9 @@
 ####### [Step 3: Verify the Deployment](remote-access/directaccess/single-server-advanced/Step-3-verify-the-Deployment.md)
 ### [Virtual Private Networking (VPN)](remote-access/vpn/vpn-top.md)
 #### [Always On VPN and DirectAccess Features Comparison](remote-access/vpn/vpn-map-da.md)
+#### [Migrating from DirectAccess to Always On VPN](remote-access/da-always-on-vpn-migration/da-always-on-migration-overview.md)
+##### [DirectAccess to Always On VPN Deployment Planning](remote-access/da-always-on-vpn-migration/da-always-on-migration-planning.md)
+##### [DirectAccess to Always On VPN Deployment](remote-access/da-always-on-vpn-migration/da-always-on-migration-deploy.md)
 #### [Configure VPN Device Tunnels in Windows 10](remote-access/vpn/vpn-device-tunnel-config.md)
 #### [Remote Access Always On VPN Deployment Guide for Windows Server and Windows 10](remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy.md)
 ##### [Remote Access Always On VPN Deployment Overview](remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-overview.md)
