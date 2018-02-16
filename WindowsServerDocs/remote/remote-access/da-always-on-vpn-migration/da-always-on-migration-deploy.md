@@ -119,12 +119,12 @@ You must ensure that the **VPN_Profile.ps1** comes _after_ the certificate has b
 
 4. Deploy the Always On VPN configuration. As the VPN authentication certificates are issued, and you run the **GetUsersWithCert.ps1** script, the users are added to the VPN Deployment Ready security group.
 
-    
-    | If you are using...  | Then... |
-    | ---- | ----|
-    | System Center Configuration Manager | Create a user collection based on that security group's membership.<br><br>![](media/b38723b3ffcfacd697b83dd41a177f66.png) |
-    | Intune | Simply target the security group directly once it is synchronized. |
-    |
+
+| If you are using...  | Then... |
+| ---- | ----|
+| System Center Configuration Manager | Create a user collection based on that security group's membership.<br><br>![](media/b38723b3ffcfacd697b83dd41a177f66.png) |
+| Intune | Simply target the security group directly once it is synchronized. |
+|
     
     Each time you run the GetUsersWithCert.ps1 configuration script, you must also run an AD DS discovery rule to update the security group membership in System Center Configuration Manager. Also, ensure that the membership update for the deployment collection frequently occurs enough (aligned with the script and discovery rule).
 
