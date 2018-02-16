@@ -20,11 +20,11 @@ Migrating from DirectAccess to Always On VPN requires proper planning to determi
 
 The section describes feature similarities and difference between DirectAccess and Always On VPN, benefits of separating users for the migration, standard configuration considerations, and Always On VPN feature enhancements. The migration planning phase includes:
 
-1.  **[Building migration rings](#build-migration-rings).** As in most other system migrations, target client migrations in phases to help identify any issues before they affect the entire organization. The first part of Always On VPN migration is no different.
+1.  **Building migration rings.** As in most other system migrations, target client migrations in phases to help identify any issues before they affect the entire organization. The first part of Always On VPN migration is no different.
 
-2.  **[Reviewing the feature mapping between DirectAccess and Always On VPN](#feature-mapping-between-directaccess-and-always-on-vpn).** Similar to DirectAccess, Always On VPN has many security, connectivity, authentication, and other options.
+2.  **Reviewing the feature mapping between DirectAccess and Always On VPN.** Similar to DirectAccess, Always On VPN has many security, connectivity, authentication, and other options.
 
-3.  **[Reviewing the new features of Always On VPN](#always-on-vpn-enhancements).** Discover new or improved features that Always On VPN offers to improve your configuration.
+3.  **Reviewing the new features of Always On VPN.** Discover new or improved features that Always On VPN offers to improve your configuration.
 
 Build migration rings
 ---------------------
@@ -76,11 +76,11 @@ Feature mapping between DirectAccess and Always On VPN
 
 This section covers feature similarities and differences between DirectAccess and Always On VPN. This list is not exhaustive, but it does include some of the most common features and functions of DirectAccess. The features and scenarios discussed fall into three categories:
 
--   **[Equivalent functionality](#equivalent-functionality).** These are scenarios and features used in DirectAccess that have a directly related capability in Always On VPN. Where possible, this guide provides the configuration service provider (CSP) parameter for configuring each option so that you're aware of the XML setting name.
+-   **Equivalent functionality.** These are scenarios and features used in DirectAccess that have a directly related capability in Always On VPN. Where possible, this guide provides the configuration service provider (CSP) parameter for configuring each option so that you're aware of the XML setting name.
 
--   **[Improved functionality](#improved-functionality).** These are situations or scenarios in which Always On VPN provides improved functionality over DirectAccess or fills a gap in functionality. Where possible, this guide provides the CSP parameter for configuring each option so that you're aware of the XML setting name.
+-   **Improved functionality.** These are situations or scenarios in which Always On VPN provides improved functionality over DirectAccess or fills a gap in functionality. Where possible, this guide provides the CSP parameter for configuring each option so that you're aware of the XML setting name.
 
--   **[Limited comparable functionality](#limited-comparable-functionality).** In a few situations, Always On VPN requires an alternate way to incorporate existing functionality. This section discusses those changes and how you can gain the functionality with Always On VPN.
+-   **Limited comparable functionality.** In a few situations, Always On VPN requires an alternate way to incorporate existing functionality. This section discusses those changes and how you can gain the functionality with Always On VPN.
 
 For additional details about the feature comparison between DirectAccess and Always On VPN, see [Always On VPN and DirectAccess Features Comparison](https://docs.microsoft.com/windows-server/remote/remote-access/vpn/vpn-map-da).
 
