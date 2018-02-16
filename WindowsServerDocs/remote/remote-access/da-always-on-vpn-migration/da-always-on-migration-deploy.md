@@ -8,6 +8,7 @@ ms.topic: article
 ms.assetid: eeca4cf7-90f0-485d-843c-76c5885c54b0
 ms.author: pashort
 author: shortpatti
+ms.date: 2/15/2018
 ---
 
 DirectAccess to Always On VPN migration deployment
@@ -25,13 +26,13 @@ Before starting the migration process from DirectAccess to Always On VPN, be sur
 
 Migrating from DirectAccess to Always On VPN requires a specific process to migrate clients, which helps minimize race conditions that arise from performing migration steps out of order. At a high level, the deployment process consists of these four primary steps:
 
-1.  **[Deploy a side-by-side VPN infrastructure](#deploy-a-side-by-side-vpn-infrastructure).** After you have determined your migration phases and the features you want to include in your deployment, you will deploy the VPN infrastructure side by side with the existing DirectAccess infrastructure.
+1.  **Deploy a side-by-side VPN infrastructure.** After you have determined your migration phases and the features you want to include in your deployment, you will deploy the VPN infrastructure side by side with the existing DirectAccess infrastructure.
 
-2.  **[Deploy certificates and VPN configuration script to the clients](#deploy-certificates-and-vpn-configuration-script-to-the-clients).** After the VPN infrastructure is ready, you will create and publish the required certificates to the client. When the clients have received the certificates, you will deploy the VPN_Profile.ps1 configuration script. Alternatively, you can use Intune to configure the VPN client. Use Microsoft System Center Configuration Manager or Microsoft Intune to monitor for successful VPN configuration deployments.
+2.  **Deploy certificates and VPN configuration script to the clients.** After the VPN infrastructure is ready, you will create and publish the required certificates to the client. When the clients have received the certificates, you will deploy the VPN_Profile.ps1 configuration script. Alternatively, you can use Intune to configure the VPN client. Use Microsoft System Center Configuration Manager or Microsoft Intune to monitor for successful VPN configuration deployments.
 
-3.  **[Remove devices from the DirectAccess security group](#remove-devices-from-the-directaccess-security-group).** As users migrate successfully, you will remove their devices from the DirectAccess security group before you remove DirectAccess from your environment. Use Microsoft System Center Configuration Manager or Microsoft Intune to determine device-assignment information and discover which device belongs to each user.
+3.  **Remove devices from the DirectAccess security group.** As users migrate successfully, you will remove their devices from the DirectAccess security group before you remove DirectAccess from your environment. Use Microsoft System Center Configuration Manager or Microsoft Intune to determine device-assignment information and discover which device belongs to each user.
 
-4.  **[Decommission the DirectAccess infrastructure](#decommission-the-directaccess-infrastructure).** After you have successfully migrated all clients to Always On VPN, you will remove DirectAccess from your environment.
+4.  **Decommission the DirectAccess infrastructure.** After you have successfully migrated all clients to Always On VPN, you will remove DirectAccess from your environment.
 
 >[!IMPORTANT] 
 >This section is NOT a step-by-step deployment guide for Always On VPN but rather is intended to complement [Remote Access Always On VPN Deployment Guide for Windows Server and Windows 10](https://docs.microsoft.com/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy) and provide migration-specific deployment guidance.
@@ -118,14 +119,14 @@ You must ensure that the **VPN_Profile.ps1** comes _after_ the certificate has b
 
 4. Deploy the Always On VPN configuration. As the VPN authentication certificates are issued, and you run the **GetUsersWithCert.ps1** script, the users are added to the VPN Deployment Ready security group.
 
+
+| If you are using...  | Then... |
+| ---- | ---- |
+| System Center Configuration Manager | Create a user collection based on that security group's membership.<br><br>![](media/b38723b3ffcfacd697b83dd41a177f66.png) |
+| Intune | Simply target the security group directly once it is synchronized. |
+|
     
-    | If you are using...  | Then... |
-    | ---- | ----|
-    | System Center Configuration Manager | Create a user collection based on that security group's membership.<br><br>![](media/b38723b3ffcfacd697b83dd41a177f66.png) |
-    | Intune | Simply target the security group directly once it is synchronized. |
-    |
-    
-    Each time you run the GetUsersWithCert.ps1 configuration script, you must also run an AD DS discovery rule to update the security group membership in System Center Configuration Manager. Also, ensure that the membership update for the deployment collection frequently occurs enough (aligned with the script and discovery rule).
+Each time you run the GetUsersWithCert.ps1 configuration script, you must also run an AD DS discovery rule to update the security group membership in System Center Configuration Manager. Also, ensure that the membership update for the deployment collection frequently occurs enough (aligned with the script and discovery rule).
 
 For additional information about using System Center Configuration Manager or Intune to deploy Always On VPN to Windows clients, see [Remote Access Always On VPN Deployment Guide for Windows Server and Windows 10](https://docs.microsoft.com/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy). Be sure, however, to incorporate these migration-specific tasks.
 
