@@ -126,7 +126,7 @@ You must ensure that the **VPN_Profile.ps1** comes _after_ the certificate has b
 | Intune | Simply target the security group directly once it is synchronized. |
 |
     
-    Each time you run the GetUsersWithCert.ps1 configuration script, you must also run an AD DS discovery rule to update the security group membership in System Center Configuration Manager. Also, ensure that the membership update for the deployment collection frequently occurs enough (aligned with the script and discovery rule).
+Each time you run the GetUsersWithCert.ps1 configuration script, you must also run an AD DS discovery rule to update the security group membership in System Center Configuration Manager. Also, ensure that the membership update for the deployment collection frequently occurs enough (aligned with the script and discovery rule).
 
 For additional information about using System Center Configuration Manager or Intune to deploy Always On VPN to Windows clients, see [Remote Access Always On VPN Deployment Guide for Windows Server and Windows 10](https://docs.microsoft.com/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy). Be sure, however, to incorporate these migration-specific tasks.
 
