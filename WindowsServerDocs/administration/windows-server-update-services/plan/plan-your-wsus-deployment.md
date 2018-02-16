@@ -88,7 +88,7 @@ During the installation process, WSUS will install the following by default:
 
 Be aware that configuring client computers (including servers) to update by using WSUS will result in the following limitations:
 
-1.  Server roles that have had their payloads removed using Features on Demand cannot be installed on demand from Microsoft Update. You will must either provide an installation source at the time you try to install such server roles, or configure a source for Features on Demand in Group Policy.
+1.  Server roles that have had their payloads removed using Features on Demand cannot be installed on demand from Microsoft Update. You must either provide an installation source at the time you try to install such server roles, or configure a source for Features on Demand in Group Policy.
 
 2.  Windows client editions will not be able to install .NET 3.5 on demand from the web. The same considerations as server roles apply to .NET 3.5.
 
