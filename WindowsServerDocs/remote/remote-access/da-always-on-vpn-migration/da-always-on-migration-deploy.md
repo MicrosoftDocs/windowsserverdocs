@@ -121,7 +121,7 @@ You must ensure that the **VPN_Profile.ps1** comes _after_ the certificate has b
 
 
 | If you are using...  | Then... |
-| ---- | ----|
+| ---- | ---- |
 | System Center Configuration Manager | Create a user collection based on that security group's membership.<br><br>![](media/b38723b3ffcfacd697b83dd41a177f66.png) |
 | Intune | Simply target the security group directly once it is synchronized. |
 |
