@@ -21,7 +21,7 @@ You can use this topic to gain an understanding of how Windows Server 2016 and W
 
 You can also use this topic for an overview of how Windows 10 VPN provides advantages over DirectAccess deployments.
 
-## Windows 10 VPN Advantages
+## Aways ON VPN Advantages
 
 You can use this section for an overview of new VPN functionality and how it provides advantages over using DirectAccess for an Always On remote access connectivity solution.
 
