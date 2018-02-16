@@ -160,7 +160,7 @@ DirectAccess clients must be domain-joined devices that are running supported Wi
 
 Following are the differences between the ways VPN and DirectAccess use multiple remote access servers to provide users with more connectivity options.
 
-#### Windows 10 VPN
+#### Always On VPN
 
 You can deploy many Remote Access servers configured as Always On VPN organization entry points for your employees. With this multi\-site deployment, you must define multiple VPN server entries in VPN profiles so that users can select the VPN server to which they want to connect.
 
