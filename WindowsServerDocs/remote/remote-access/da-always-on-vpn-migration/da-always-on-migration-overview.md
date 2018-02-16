@@ -41,14 +41,14 @@ The DirectAccess–to–Always On VPN migration process consists of three primar
 
     2.  **Decommission DirectAccess.** After you have successfully migrated all clients to Always On VPN, you remove DirectAccess from your environment.
 
-For further details about each step in the process, see the [Always On VPN migration deployment](#remote-access-always-on-vpn-migration-de) section.
+For further details about each step in the process, see the [Always On VPN migration deployment](da-always-on-migration-deploy.md) section.
 
 DirectAccess deployment scenario
 --------------------------------
 
 In this deployment scenario, you use a simple DirectAccess deployment scenario as a starting point for the migration this guide presents. You do not need to match this deployment scenario before migrating to Always On VPN, but for many organizations, this simple setup is an accurate representation of their current DirectAccess deployment. The following table provides a list of basic features for this setup.
 
-Many DirectAccess deployment scenarios and options exist, so your implementation is likely to be different from the one described here. If so, refer to [Feature mapping between DirectAccess and Always On VPN](#feature-mapping-between-directaccess-and-always-on-vpn) to determine the Always On VPN feature set mapping for your current additions, and then add those features to your configuration. Also, you can refer to the [Always On VPN enhancements](#always-on-vpn-enhancements) to add options to your Always On VPN deployment.
+Many DirectAccess deployment scenarios and options exist, so your implementation is likely to be different from the one described here. If so, refer to [Feature mapping between DirectAccess and Always On VPN](da-always-on-migration-planning.md/#feature-mapping) to determine the Always On VPN feature set mapping for your current additions, and then add those features to your configuration. Also, you can refer to the [Always On VPN enhancements](da-always-on-migration-planning.md/#always-on-vpn-enhancements) to add options to your Always On VPN deployment.
 
 >[!NOTE] 
 >For nondomain-joined devices, there are additional considerations, such as certificate enrollment. For details, see [Remote Access Always On VPN Deployment Guide for Windows Server and Windows 10](https://docs.microsoft.com/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy).
@@ -73,7 +73,7 @@ Many DirectAccess deployment scenarios and options exist, so your implementation
 Always On VPN deployment scenario
 ---------------------------------
 
-In this deployment scenario, you focus on migrating a simple DirectAccess environment to a simple Always On VPN environment, which is the DirectAccess replacement solution. The following table provides the features used in this simple solution. For more detailed information about additional enhancements to the Always On VPN client, see the [Always On VPN enhancements](#always-on-vpn-enhancements) section.
+In this deployment scenario, you focus on migrating a simple DirectAccess environment to a simple Always On VPN environment, which is the DirectAccess replacement solution. The following table provides the features used in this simple solution. For more detailed information about additional enhancements to the Always On VPN client, see the [Always On VPN enhancements](da-always-on-migration-planning.md/#always-on-vpn-enhancements) section.
 
 ##### Always On VPN features used in the simple environment
 

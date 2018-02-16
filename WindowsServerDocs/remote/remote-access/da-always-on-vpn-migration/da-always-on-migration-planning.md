@@ -26,8 +26,8 @@ The section describes feature similarities and difference between DirectAccess a
 
 3.  **Reviewing the new features of Always On VPN.** Discover new or improved features that Always On VPN offers to improve your configuration.
 
-Build migration rings
----------------------
+## Build migration rings
+
 
 Migration rings are used to divide the Always On VPN client migration effort into multiple phases. By the time you get to the last phase, your process should be well tested and consistent.
 
@@ -52,8 +52,7 @@ This section provides one approach for separating users into migration phases, a
 
 -   **Gradually increase user counts.** Most typical migration scenarios start with members of the IT organization and then move to business users followed by leadership and other high-impact users. Each migration phase typically involves progressively more people. For example, the first phase may include ten users, and the final group may include 5,000 users. To simplify the deployment, create a single VPN Users security group, and add users to it as their phase arrives. In this way, you end up with a single VPN Users group to which you can add members in the future.
 
-Standard configuration considerations
--------------------------------------
+## Standard configuration considerations
 
 Always ON VPN has many configuration options. When migrating from DirectAccess to Always On VPN, however, consider starting with  configuration options that are comparable to what you have, and then expand from there. However you choose your VPN configuration, though, include the following information:
 
@@ -71,8 +70,7 @@ Always ON VPN has many configuration options. When migrating from DirectAccess t
 
 By using user certificates, the Always On VPN client connects automatically, but it does so at the user level (after user sign-in) instead of at the device level (before user sign-in). The experience is still seamless to the user, but it supports more advanced authentication mechanisms, like Windows Hello for Business.
 
-Feature mapping between DirectAccess and Always On VPN
-------------------------------------------------------
+## <a name="feature-mapping"></a>Feature mapping between DirectAccess and Always On VPN
 
 This section covers feature similarities and differences between DirectAccess and Always On VPN. This list is not exhaustive, but it does include some of the most common features and functions of DirectAccess. The features and scenarios discussed fall into three categories:
 
@@ -131,8 +129,7 @@ Each item in this section is a use case scenario or commonly used DirectAccess f
 | Use of multisite to provide multiple remote access entry points and geo-redundancy. | <!-- pashort 2/15/2018: eventually re-write this column for the two; let's make some sense out of these to prevent user confusion --> No native multisite-equivalent feature exists in Always On VPN without the use of third-party networking equipment or services such as Azure Traffic Manager or a third-party global server load balancer. However, users can manually select an appropriate VPN endpoint if you define multiple entries in the VPN profile. Third-Party UWP VPN plug-ins may support similar features for connecting to the nearest or most appropriate server VPN endpoint, but this varies by provider. |
 | Deployment of client and server configuration settings through Group Policy. | Always On VPN does not require devices to be domain joined, so there are no dedicated Group Policy settings to configure it. Instead, you can configure clients by using Windows PowerShell, System Center Configuration Manager, Intune (or a third-party MDM provider), or Windows Configuration Designer. Also, because there's no dependency on a Microsoft VPN gateway, you must configure and manage server settings independent of the Always On VPN. |
 
-Always On VPN enhancements
---------------------------
+##<a name="always-on-vpn-enhancements"></a> Always On VPN enhancements
 
 Always On VPN has many benefits over the Windows VPN solutions of the past. Key improvements in integration, security, connectivity, networking control, and compatibility align Always On VPN with Microsoft's cloud-first, mobile-first vision.
 
