@@ -37,16 +37,16 @@ The DirectAccess–to–Always On VPN migration process consists of three primar
 3.  **Remove and decommission.** Properly decommission the environment after you have migrated everyone off DirectAccess.
 
     1.  **Remove the DirectAccess configuration from the client.** Monitor Microsoft System Center Configuration Manager or Microsoft Intune for successful VPN configuration deployments. Then, use reporting
-        to determine device-assignment information and discover which device belongs to each user. As users migrate successfully, you remove their devices from the DirectAccess security group so that you can remove DirectAccess.
+        to determine device-assignment information and discover which device belongs to each user. As users migrate successfully, you remove their devices from the DirectAccess security group so that you can remove DirectAccess from your environment.
 
-    2.  **Decommission DirectAccess.** After you have successfully migrated all clients to Always On VPN, you remove DirectAccess from your environment.
+    2.  **Decommission DirectAccess.** After you have successfully migrated all clients to Always On VPN, you remove DirectAccess from your environment. For further details about each step in the process, see the [Always On VPN migration deployment](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/da-always-on-vpn-migration/da-always-on-migration-deploy) section.
 
-For further details about each step in the process, see the [Always On VPN migration deployment](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/da-always-on-vpn-migration/da-always-on-migration-deploy) section.
+<!-- pashort 2/17/2018: maybe move these scenarios to the top of the planning page under a section for "Deployment scenarios"; the opening of the planning doc will need to be reworked to include a statement about the scenarios (stem sentence) -->
 
 DirectAccess deployment scenario
 --------------------------------
 
-In this deployment scenario, you use a simple DirectAccess deployment scenario as a starting point for the migration this guide presents. You do not need to match this deployment scenario before migrating to Always On VPN, but for many organizations, this simple setup is an accurate representation of their current DirectAccess deployment. The following table provides a list of basic features for this setup.
+In this deployment scenario, you use a simple DirectAccess deployment scenario as a starting point for the migration this guide presents. You do not need to match this deployment scenario before migrating to Always On VPN, but for many organizations, this simple setup is an accurate representation of their current DirectAccess deployment. The table below provides a list of basic features for this setup.
 
 Many DirectAccess deployment scenarios and options exist, so your implementation is likely to be different from the one described here. If so, refer to [Feature mapping between DirectAccess and Always On VPN](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/da-always-on-vpn-migration/da-always-on-migration-planning#feature-mapping) to determine the Always On VPN feature set mapping for your current additions, and then add those features to your configuration. Also, you can refer to the [Always On VPN enhancements](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/da-always-on-vpn-migration/da-always-on-migration-planning#always-on-vpn-enhancements) to add options to your Always On VPN deployment.
 
@@ -84,3 +84,9 @@ In this deployment scenario, you focus on migrating a simple DirectAccess enviro
 | Name resolution | Domain name information list and Domain Name System (DNS) suffix |
 | Triggering | Always on and trusted network detection |
 | Authentication  | Protected Extensible Authentication Protocol-Transport Layer Security (PEAP-TLS) with Trusted Platform Module–protected user certificates |
+
+<!-- Next steps -->
+## Next steps
+**[Plan your migration](da-always-on-migration-planning.md).** The primary goal of the migration is for users to maintain remote connectivity to the office throughout the process.
+
+<!-- pashort 2/17/2018: put a related documents section here with the external docs that are referenced -->
