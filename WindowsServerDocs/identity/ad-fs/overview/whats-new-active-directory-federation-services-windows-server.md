@@ -39,7 +39,7 @@ AD FS 2016 builds upon the multi-factor authentication (MFA) capabilities of AD 
 * Azure MFA can be configured for intranet or extranet, or as part of any access control policy.
 
 For more information about Azure MFA with AD FS
-*  [Configure AD FS 2016 and Azure MFA](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication-get-started-adfs)  
+*  [Configure AD FS 2016 and Azure MFA](https://docs.microsoft.com/windows-server/identity/ad-fs/operations/configure-ad-fs-and-azure-mfa)  
 
 ### Password-less Access from Compliant Devices
 AD FS 2016 builds on previous device registration capabilities to enable sign on and access control based the device compliance status. Users can sign on using the device credential, and compliance is re-evaluated when device attributes change, so that you can always ensure policies are being enforced.  This enables policies such as
