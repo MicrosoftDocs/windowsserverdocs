@@ -10,9 +10,21 @@ author: Heidilohr
 ---
 # Remote Desktop web client
 
+## Requirements
+
+Before getting started, keep the following things in mind:
+
+* You'll need a Remote Desktop deployment with Gateway, Broker and RDWA roles all running Server 2016 Operating System. The endpoints (RDSH or Windows Client SKUs) can be running any Windows Operating System since Windows 7 SP1 / Windows Server 2008 R2. The client performance will be better when connecting to Windows Server 2016 or Windows 10 Anniversary Edition or later.
+* The RD deployment should NOT be configured to use per-device license.
+* The Server 2016 machine hosting RD Gateway role must have the [Windows 10 KB4025334 update](https://support.microsoft.com/en-us/help/4025334/windows-10-update-kb4025334) installed.
+* The Gateway and RDWA roles of your deployment should be using public trusted certificates
+* For the web client, you'll need a client desktop machine running Windows, Mac, or Linux.
+* Mobile devices are not supported.
+* The client currently supports Edge, IE 11, Google Chrome, and Safari. Firefox support is still in progress.
+
 ## Get the RD client and start using it
 
-Follow these steps to get started with Remote Desktop on your Android device:
+Follow these steps to get started with Remote Desktop web client:
 
 1. Download the Remote Desktop client.
 2. [Set up your PC to accept remote connections](remote-desktop-allow-access.md).
