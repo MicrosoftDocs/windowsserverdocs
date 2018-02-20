@@ -448,7 +448,7 @@ In Windows Server 2016, the Health Service provides the following fault coverage
 #### FaultType: Microsoft.Health.FaultType.NetworkAdapter.Disabled
 * Severity: Warning
 * Reason: *"The network interface {network interface} is not enabled and is not being used."*
-* RecommendedAction: *"Enable the the network interface."*
+* RecommendedAction: *"Enable the network interface."*
 
 ### **Enclosure (6)**
 
