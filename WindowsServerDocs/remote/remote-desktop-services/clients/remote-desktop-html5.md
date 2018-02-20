@@ -14,7 +14,7 @@ author: Heidilohr
 
 Before getting started, keep the following things in mind:
 
-* You'll need a Remote Desktop deployment with Gateway, Broker and RDWA roles all running Server 2016 Operating System. The endpoints (RDSH or Windows Client SKUs) can be running any Windows Operating System since Windows 7 SP1 / Windows Server 2008 R2. The client performance will be better when connecting to Windows Server 2016 or Windows 10 Anniversary Edition or later.
+* You'll need a Remote Desktop deployment with Gateway, Broker and RDWA roles all running Server 2016 Operating System. The endpoints (RDSH or Windows Client SKUs) can run any Windows OS with Windows 7 SP1 or Windows Server 2008 R2 or later. Client performance will be at its best when connecting to Windows Server 2016 or Windows 10 Anniversary Edition or later.
 * The Remote Desktop deployment should not be configured to use per-device license.
 * The Server 2016 machine hosting the RD Gateway role must have the [Windows 10 KB4025334 update](https://support.microsoft.com/en-us/help/4025334/windows-10-update-kb4025334) installed.
 * The Gateway and RDWA roles of your deployment should use public trusted certificates.
@@ -102,7 +102,7 @@ To install the web client for the first time, follow these steps:
     ```PowerShell
     Publish-RDWebClientPackage -Production -Latest
     ```
-1. Make sure the web client can be accessed at the web client URL with your server name. <https://server FQDN/RDWeb/Pages/webclient>. It's important to use the server name that matches the RDWeb public cert in the URL (typically the machine FQDN).
+1. Make sure the web client can be accessed at the web client URL with your server name, formatted as <https://server_FQDN/RDWeb/Pages/webclient>. It's important to use the server name that matches the RDWeb public cert in the URL (typically the machine FQDN).
 
 ### Updating the web client
 
@@ -121,7 +121,7 @@ To update the web client whenever an update is available, follow these steps:
     ```PowerShell
     Run Publish-RDWebClientPackage -Test –Latest
     ```
-    The client should appear on this URL: https://<server FQDN>/RDWeb/Pages/webclient-test
+    The client should appear on this URL (for example, <https://server_FQDN/RDWeb/Pages/webclient-test>).
 * Publish the client for users by running the following command:
     ```PowerShell
     Publish-RDWebClientPackage -Production -Latest

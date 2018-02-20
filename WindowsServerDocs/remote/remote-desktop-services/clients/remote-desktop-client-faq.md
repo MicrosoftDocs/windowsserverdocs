@@ -118,13 +118,39 @@ Verify that VPN is enabled on your device. You can test your VPN connection by g
 ### How do I configure L2TP or PPTP VPN connections?
 If you are using L2TP or PPTP in your VPN, make sure to set **Send all traffic** to **ON** in the VPN configuration.
 
+## Web client
+
+### Which browsers does the web client support?
+
+The web client supports Edge, Internet Explorer 11, and Google Chrome.
+
+### What devices does the web client support?
+
+The web client supports devices running a desktop operating system, such as Windows, Mac, Linux, and Chromebook devices.
+
+### Can I use the web client in a Remote Desktop deployment without a gateway?
+
+No. The client requires a Server 2016 Remote Desktop gateway to connect.
+
+### Does the Remote Desktop web client replace the existing Remote Desktop web access page?
+
+No. The RD Web Client is hosted at a different URL than the existing RD Web Access page. Both the client and the web access page can be used to view the resource feed in a browser.
+
+### Can I embed the web client in another web page?
+
+This feature is not supported at the moment, but there are plans to implement it in future versions.
+
+### Can I customize the Remote Desktop web client?
+
+This feature is not supported at the moment, but there are plans to implement it in future versions.
+
 ## Monitors, audio, and mouse
 
 ### How do I use all of my monitors?
 To use two or more screens, do the following:
 
-1. Right-click the remote desktop that you want to enable multiple screens for, and then click **Edit.**
-2. Enable **Use all monitors** and **Full screen**. 
+1. Right-click the remote desktop that you want to enable multiple screens for, and then click **Edit**.
+2. Enable **Use all monitors** and **Full screen**.
 
 ### Is bi-directional sound supported?
 Sound upstream (from client to server, for microphones) is not supported by the Remote Desktop Client.
@@ -198,5 +224,6 @@ This error is caused by a misconfiguration on the remote PC. Make sure the RDP s
 ### What does "TS_RAP You are not allowed to connect to the given host" mean?
 This error happens when a Resource Authorization Policy on the gateway server stops your user name from connecting to the remote PC. This can happen in the following instances:
 
-- The remote PC name is the same as the name of the gateway. Then, when you try to connect to the remote PC, the connection goes to the gateway instead, which you probably don't have permission to access. If you need to connect to the gateway, do not use the external gateway name as PC name. Instead use "localhost" or the IP address (127.0.0.1), or the internal server name. 
+- The remote PC name is the same as the name of the gateway. Then, when you try to connect to the remote PC, the connection goes to the gateway instead, which you probably don't have permission to access. If you need to connect to the gateway, do not use the external gateway name as PC name. Instead use "localhost" or the IP address (127.0.0.1), or the internal server name.
 - Your user account isn't a member of the user group for remote access.
+
