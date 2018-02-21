@@ -126,6 +126,7 @@ To update the web client whenever an update is available, follow these steps:
     ```PowerShell
     Publish-RDWebClientPackage -Production -Latest
     ```
+    
     This will replace the client for all users when they relaunch the web page.
 
 To see a list of all supported commands for the RDWebClientManagement module, run **Get-Commands** in PowerShell.
