@@ -1,5 +1,5 @@
 ---
-title: Remote Desktop web client
+title: Getting started with the Remote Desktop web client
 description: Describes Remote Desktop web client and how to set it up.
 ms.prod: remote-desktop-modern-infrastructure
 ms.technology: remote-desktop-services
@@ -8,7 +8,7 @@ ms.date: 2/16/2018
 ms.topic: article
 author: Heidilohr
 ---
-# Remote Desktop web client
+# Getting started with the Remote Desktop web client
 
 ## Requirements
 
