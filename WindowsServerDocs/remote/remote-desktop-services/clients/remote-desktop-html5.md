@@ -42,9 +42,6 @@ To create a Remote Desktop connection:
 3. You can also set the following additional options:
     * **Friendly name**—An easy-to-remember name for the PC you are connecting to. You can use any string, but if you do not specify a friendly name, the PC name is displayed.
     * **Gateway**—The Remote Desktop gateway that you want to use to connect to virtual desktops, RemoteApp programs, and session-based desktops on an internal corporate network. Get the information about the gateway from your system administrator.
-
-    Need to configure a Remote Desktop Gateway?
-
     * **Sound**—Select the device to use for audio during your remote session. You can choose to play sound on the local devices, the remote device, or not at all.
     * **Customize display resolution**—Set a custom resolution for a connection by enabling this setting. When turned off, the resolution which you have defined in the global settings of the app will be applied.
     * **Swap mouse buttons**—Use this option to swap the left mouse button functions for the right mouse button. (This is especially useful if the remote PC is configured for a left-handed user but you use a right-handed mouse.)
