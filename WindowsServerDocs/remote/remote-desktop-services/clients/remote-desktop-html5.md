@@ -90,18 +90,22 @@ To install the web client for the first time, follow these steps:
     ```PowerShell
     Import-Module ($Env:ProgramFiles + '\rd-html5-manage\RDWebClientManagement')
     ```
+    
 1. Then run this command:
     ```PowerShell
     Install-RDWebClientPackage
     ```
+    
 1. After that, run this command with the bracketed value replaced with the .cer file path you copied from the RD Broker:
     ```PowerShell
     Import-RDWebClientBrokerCert <.cer file path>
     ```
+    
 1. Finally, run this command:
     ```PowerShell
     Publish-RDWebClientPackage -Production -Latest
     ```
+    
 1. Make sure the web client can be accessed at the web client URL with your server name, formatted as <https://server_FQDN/RDWeb/Pages/webclient>. It's important to use the server name that matches the RDWeb public cert in the URL (typically the machine FQDN).
 
 ### Updating the web client
@@ -126,7 +130,7 @@ To update the web client whenever an update is available, follow these steps:
     ```PowerShell
     Publish-RDWebClientPackage -Production -Latest
     ```
-    
+
     This will replace the client for all users when they relaunch the web page.
 
 To see a list of all supported commands for the RDWebClientManagement module, run **Get-Commands** in PowerShell.
