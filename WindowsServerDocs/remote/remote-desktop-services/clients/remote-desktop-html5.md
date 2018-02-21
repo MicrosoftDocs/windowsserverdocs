@@ -123,9 +123,9 @@ To update the web client whenever an update is available, follow these steps:
     ```
 * Optionally, you can publish the client for testing before official release by running this command:
     ```PowerShell
-    Run Publish-RDWebClientPackage -Test –Latest
+    Run Publish-RDWebClientPackage -Test -Latest
     ```
-    
+
     The client should appear on this URL (for example, <https://server_FQDN/RDWeb/Pages/webclient-test>).
 * Publish the client for users by running the following command:
     ```PowerShell
