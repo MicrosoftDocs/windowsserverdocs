@@ -66,9 +66,9 @@ The following considerations apply when deploying Storage Spaces Direct in a vir
 
     `HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\spaceport\\Parameters\\HwTimeout`
 
-    `dword: 00002710`
+    `dword: 00007530`
 
-    The decimal equivalent is 30000, which is 30 seconds. Note that the default value is 1770 Hexadecimal, or 6000 Decimal, which is 6 seconds.
+    The decimal equivalent of Hexadecimal 7530 is 30000, which is 30 seconds. Note that the default value is 1770 Hexadecimal, or 6000 Decimal, which is 6 seconds.
 
 ## See also
 
