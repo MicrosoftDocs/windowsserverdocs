@@ -19,7 +19,7 @@ You can use [Azure AD Domain Services](/azure/active-directory-domain-services/a
 
 With Azure AD DS you can: 
 - Create an Azure environment with a local domain for born-in-the-cloud organizations. 
-- Create an isolated Azure environment with the same identities used for your on-premise and online environment, without needing to create a site-to-site VPN or ExpressRoute. 
+- Create an isolated Azure environment with the same identities used for your on-premises and online environment, without needing to create a site-to-site VPN or ExpressRoute. 
 
 When you finish integrating Azure AD DS into your Remote Desktop deployment, your architecture will look something like this:
 

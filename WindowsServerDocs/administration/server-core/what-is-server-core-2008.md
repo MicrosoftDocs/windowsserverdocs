@@ -110,7 +110,7 @@ A Server Core installation includes only a limited number of server roles compar
 | Terminal Services  | X  |  |
 | UDDI Services  | X  |  |
 | Web Server (IIS) | X | X |
-| Windows Deployment Services  | X | X |
+| Windows Deployment Services  | X |  |
 
 While the roles available for Server Core are generally the same regardless of architecture (x86 or x64) and product edition, there are a few exceptions:
 * The Hyper-V (virtualization) role is available only if you purchased Windows Server 2008 with Hyper-V product media (Hyper-V is available only for x64 versions). If you do not need this role, you can purchase Windows Server 2008 without Hyper-V product media instead. 
