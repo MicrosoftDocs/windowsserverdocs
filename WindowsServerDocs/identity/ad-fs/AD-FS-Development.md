@@ -27,8 +27,13 @@ This document contains a list of all of the documentation walkthroughs for AD FS
 
 * [Build a multi-tiered application using On-Behalf-Of (OBO) using OAuth with AD FS 2016](../ad-fs/development/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016.md) 
 
+* [Build a native client application using OAuth public clients with AD FS 2012 R2 or higher](https://msdn.microsoft.com/library/dn633593.aspx)
+
 - [Customize claims to be emitted in id_token when using OpenID Connect or OAuth with AD FS 2016](../ad-fs/development/Customize-Id-Token-AD-FS-2016.md)
 
-- [Single log-out for OpenID Connect with AD FS 2016](../ad-fs/development/ad-fs-logout-openid-connect.md)
 - [Identity delegation with AD FS](../ad-fs/development/ad-fs-identity-delegation.md)
+
+- [Single log-out for OpenID Connect with AD FS 2016](../ad-fs/development/ad-fs-logout-openid-connect.md)
+
+
 
