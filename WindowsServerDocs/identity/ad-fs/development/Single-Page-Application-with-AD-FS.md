@@ -1,17 +1,17 @@
 ---
-title: Single Page Application with AD FS
+title: Build a single page web application using OAuth and ADAL.JS with AD FS 2016
 description:
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: mtillman
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 
 ms.technology: active-directory-federation-services
 ---
 
-# Single Page Application with AD FS
+# Build a single page web application using OAuth and ADAL.JS with AD FS 2016
 
 >Applies To: Windows Server 2016
 
@@ -169,3 +169,6 @@ In Fiddler you can see the token being returned as part of the URL in the # frag
 You will be able to now call the backend API to add ToDo List items for the logged-in user:
 
 ![Fiddler](media/Single-Page-Application-with-AD-FS/singleapp6.PNG)
+
+## Next Steps
+[AD FS Development](../../ad-fs/AD-FS-Development.md)  
