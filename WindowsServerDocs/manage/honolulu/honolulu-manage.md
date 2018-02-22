@@ -81,9 +81,7 @@ Honolulu supports several mechanisms for authenticating with a managed node. Sin
 
 **Single Sign-on**
 
-You can use your current Windows credentials to authenticate with the managed node. This is the default, and Honolulu attempts the sign-on when you add a server. If a server shows **Online** status after being added, then single sign-on was successful:
-
-![](../media/honolulu/spacer1.png)![](../media/honolulu/online.png)
+You can use your current Windows credentials to authenticate with the managed node. This is the default, and Honolulu attempts the sign-on when you add a server. 
 
 **Single sign-on when deployed as a Service on Windows Server**
 
