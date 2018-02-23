@@ -6,7 +6,7 @@ ms.author:
 ms.manager: 
 ms.technology: storage-spaces
 ms.topic: article
-author: cosmosdarwin
+author: adagashe
 ms.date: 
 ms.localizationpriority: 
 ---
