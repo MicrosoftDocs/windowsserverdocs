@@ -62,6 +62,7 @@ You can create a bootable USB flash drive to use to deploy  Windows Server Essen
  [Additional Customizations](Additional-Customizations.md)   
  [Preparing the Image for Deployment](Preparing-the-Image-for-Deployment.md)   
  [Testing the Customer Experience](Testing-the-Customer-Experience.md)   
+ http://tutorialfit.com/make-usb-bootable-windows-instalation/
 
  [Getting Started with the Windows Server Essentials ADK](../install/Getting-Started-with-the-Windows-Server-Essentials-ADK.md)   
  [Creating and Customizing the Image](../install/Creating-and-Customizing-the-Image.md)   
