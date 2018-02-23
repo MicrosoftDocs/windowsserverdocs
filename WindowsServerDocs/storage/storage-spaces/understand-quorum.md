@@ -109,8 +109,6 @@ Whenever surviving nodes successfully verify they are the *majority*, the defini
 
 Dynamic Quorum enables the ability to assign a vote to a node dynamically to avoid losing the majority of votes and to allow the cluster to run with one node (known as last-man standing). Let’s take a four-node cluster as an example. Assume that quorum requires 3 votes. 
 
-### Example:
-
 Without dynamic quorum, the cluster will go down if you lose two nodes.
 
 ![Normal 4-node case](media/understand-quorum/dynamic-quorum-base-case.png)
@@ -119,7 +117,65 @@ With Dynamic Quorum enabled, you are better off. The *total number of votes* req
 
 ![Dynamic Quorum Step Through](media/understand-quorum/dynamic-quorum-step-through.png)
 
-Now that we understand how dynamic quorum works, let's look at the types of quorum witnesses.
+### Examples
+
+1. <strong>2 NODES, NO WITNESS</strong>. One node’s vote is zeroed. The *majority* is out of <strong>/1</strong>. If the non-voting node goes down unexpectedly, the survivor has 1/1 and the cluster survives. If the voting node goes down unexpectedly, the survivor has 0/1 and the cluster goes down. If the voting node is gracefully powered down, the vote is transferred to the other node, and the cluster survives.
+
+![Quorum 2 Node No Witness](media/understand-quorum/2-node-no-witness.png)
+
+- Can survive one server failure: <strong>Fifty percent chance</strong>.
+- Can survive one server failure, then another: <strong>No</strong>.
+- Can survive two server failures at once: <strong>No</strong>. 
+
+2. <strong>2 NODES PLUS WITNESS</strong>. Both nodes vote, plus the witness votes. The *majority* is out of <strong>/3</strong>. If either node goes down, the survivor has 2/3 and the cluster survives.
+
+![Quorum 2 Node Witness](media/understand-quorum/2-node-witness.png)
+
+- Can survive one server failure: <strong>Yes</strong>.
+- Can survive one server failure, then another: <strong>No</strong>.
+- Can survive two server failures at once: <strong>No</strong>. 
+
+3. <strong>3 NODES, NO WITNESS</strong>. All nodes vote. The *majority* is out of <strong>/3</strong>. If any node goes down, the survivors are 2/3 and the cluster survives. The cluster becomes 2 nodes, no witness – at that point, you’re in Scenario 1.
+
+![Quorum 3 Node No Witness](media/understand-quorum/3-node-no-witness.png)
+
+- Can survive one server failure: <strong>Yes</strong>.
+- Can survive one server failure, then another: <strong>Fifty percent chance</strong>.
+- Can survive two server failures at once: <strong>No</strong>. 
+
+4. <strong>3 NODES PLUS WITNESS</strong>. All nodes vote, the witness does not initially vote. Majority is out of <strong>/3</strong>. After one failure, the cluster becomes 2 nodes plus witness – meaning Scenario 2. The witness thereafter votes.
+
+![Quorum 3 Node Witness](media/understand-quorum/3-node-witness.png)
+
+- Can survive one server failure: <strong>Yes</strong>.
+- Can survive one server failure, then another: <strong>Yes</strong>.
+- Can survive two server failures at once: <strong>No</strong>. 
+
+5. <strong>4 NODES, NO WITNESS</strong>. One node’s vote is zeroed. Majority is out of <strong>/3</strong>. After one failure, the cluster becomes 3 nodes, and you’re in Scenario 3.
+
+![Quorum 4 Node No Witness](media/understand-quorum/4-node-no-witness.png)
+
+- Can survive one server failure: <strong>Yes</strong>.
+- Can survive one server failure, then another: <strong>Yes</strong>.
+- Can survive two server failures at once: <strong>Fifty percent chance</strong>. 
+
+6. <strong>4 NODES PLUS WITNESS</strong>. All nodes votes, and the witness votes. Majority is out of <strong>/5</strong>. After one failure, you’re in Scenario 4. After two simultaneous failures, you skip down to Scenario 2.
+
+![Quorum 4 Node Witness](media/understand-quorum/4-node-witness.png)
+
+- Can survive one server failure: <strong>Yes</strong>.
+- Can survive one server failure, then another: <strong>Yes</strong>.
+- Can survive two server failures at once: <strong>Yes</strong>. 
+
+7. <strong>5 NODES AND BEYOND</strong>. All nodes vote, or all but one vote, whatever makes the total odd. Storage Spaces Direct cannot handle more than 2 servers down anyway, so at this point, no witness is needed or useful.
+
+![Quorum 5 Nodes and Beyond](media/understand-quorum/5-nodes.png)
+
+- Can survive one server failure: <strong>Yes</strong>.
+- Can survive one server failure, then another: <strong>Yes</strong>.
+- Can survive two server failures at once: <strong>Yes</strong>. 
+
+Now that we understand how quorum works, let's look at the types of quorum witnesses.
 
 ### Quorum Witness Types
 
@@ -129,77 +185,99 @@ Failover Clustering in Windows Server 2016 supports three types of Quorum Witnes
 - <strong>File Share Witness</strong> – A SMB file share that is configured on a file server running Windows Server. It maintains clustering information in a witness.log file, but does not store a copy of the cluster database.
 - <strong>Disk Witness</strong> - A small clustered disk which is in the Cluster Available Storage group. This disk is highly-available and can failover between nodes. It contains a copy of the cluster database.  <strong>*A Disk Witness is not supported with Storage Spaces Direct*</strong>.
 
+## Pool Quorum Overview
 
+The table below gives an overview of the Pool Quorum outcomes per scenario:
 
+<table class="tg">
+  <tr>
+    <th class="tg-9hbo">Scenario</th>
+    <th class="tg-9hbo">Can survive one node failure</th>
+    <th class="tg-9hbo">Can survive one node failure, then another</th>
+    <th class="tg-9hbo">Can survive two simultaneous node failures</th>
+  </tr>
+  <tr>
+    <td class="tg-9hbo">2</td>
+    <td class="tg-9hbo">No</td>
+    <td class="tg-9hbo">No</td>
+    <td class="tg-9hbo">No</td>
+  </tr>
+  <tr>
+    <td class="tg-9hbo">2 + Witness</td>
+    <td class="tg-9hbo">Yes</td>
+    <td class="tg-9hbo">No</td>
+    <td class="tg-9hbo">No</td>
+  </tr>
+  <tr>
+    <td class="tg-9hbo">3</td>
+    <td class="tg-9hbo">Yes</td>
+    <td class="tg-9hbo">No</td>
+    <td class="tg-9hbo">No</td>
+  </tr>
+  <tr>
+    <td class="tg-9hbo">3 + Witness</td>
+    <td class="tg-9hbo">Yes</td>
+    <td class="tg-9hbo">No</td>
+    <td class="tg-9hbo">No</td>
+  </tr>
+  <tr>
+    <td class="tg-9hbo">4</td>
+    <td class="tg-9hbo">Yes</td>
+    <td class="tg-9hbo">No</td>
+    <td class="tg-9hbo">No</td>
+  </tr>
+  <tr>
+    <td class="tg-9hbo">4 + Witness</td>
+    <td class="tg-9hbo">Yes</td>
+    <td class="tg-9hbo">Yes</td>
+    <td class="tg-9hbo">Yes</td>
+  </tr>
+  <tr>
+    <td class="tg-9hbo">5 ...</td>
+    <td class="tg-9hbo">Yes</td>
+    <td class="tg-9hbo">Yes</td>
+    <td class="tg-9hbo">Yes</td>
+  </tr>
+</table>
 
+## How Pool Quorum Works
 
+When drives fail, or when some subset of drives loses contact with another subset, surviving drives need to verify that they constitute the *majority* of the pool to remain online. If they can’t verify that, they’ll go offline.
 
+But pool quorum works differently from cluster quorum in the following ways:
 
+- the pool uses one node in the cluster as a witness as a tie-breaker to survive half of drives gone (this node that is the pool resource owner)
+- pool quorum does NOT have dynamic quorum
+- pool quorum does NOT implement its own version of removing a vote
 
+### Examples
 
+1. <strong>4 NODES, SYMMETRICAL</strong>. Each of the 16 drives has one vote and node 2 also has one vote (since it is the pool resource owner). The *majority* is out of <strong>/16</strong>. If nodes 3 and 4 go down, the surviving subset has 8 drives and the pool resource owner, which is 9/16 votes. So, the pool survives.
 
+![Pool Quorum 1](media/understand-quorum/pool-1.png)
 
+- Can survive one server failure: <strong>Yes</strong>.
+- Can survive one server failure, then another: <strong>Yes</strong>.
+- Can survive two server failures at once: <strong>Yes</strong>. 
 
+2. <strong>4 NODES, DRIVE FAILURE, SYMMETRICAL</strong>. Each of the 16 drives has one vote and node 2 also has one vote (since it is the pool resource owner). The *majority* is out of <strong>/16</strong>. First, drive 7 goes down. If nodes 3 and 4 go down, the surviving subset has 7 drives and the pool resource owner, which is 8/16 votes. So, the pool does not have majority and goes down.
 
+![Pool Quorum 2](media/understand-quorum/pool-2.png)
 
+- Can survive one server failure: <strong>Yes</strong>.
+- Can survive one server failure, then another: <strong>No</strong>.
+- Can survive two server failures at once: <strong>No</strong>. 
 
+3. <strong>4 NODES, NON-SYMMETRICAL</strong>. Each of the 24 drives has one vote and node 2 also has one vote (since it is the pool resource owner). The *majority* is out of <strong>/24</strong>. If nodes 3 and 4 go down, the surviving subset has 8 drives and the pool resource owner, which is 9/24 votes. So, the pool does not have majority and goes down.
 
+![Pool Quorum 3](media/understand-quorum/pool-3.png)
 
+- Can survive one server failure: <strong>Yes</strong>.
+- Can survive one server failure, then another: <strong>No</strong>.
+- Can survive two server failures at once: <strong>No</strong>. 
 
+### Therefore, our guidance is:
 
-
-
-
-
-
-To use higher-endurance drives to cache for lower-endurance drives of the same type, you can specify which drive model to use with the **-CacheDeviceModel** parameter of the **Enable-ClusterS2D** cmdlet. Once Storage Spaces Direct is enabled, all drives of that model will be used for caching.
-
-   >[!TIP]
-   > Be sure to match the model string exactly as it appears in the output of **Get-PhysicalDisk**.
-
-####  Example
-
-```
-PS C:\> Get-PhysicalDisk | Group Model -NoElement
-
-Count Name
------ ----
-    8 FABRIKAM NVME-1710
-   16 CONTOSO NVME-1520
-
-PS C:\> Enable-ClusterS2D -CacheDeviceModel "FABRIKAM NVME-1710"
-```
-
-You can verify that the drives you intended are being used for caching by running **Get-PhysicalDisk** in PowerShell and verifying that their **Usage** property says **"Journal"**.
-
-### Manual deployment possibilities
-
-Manual configuration enables the following deployment possibilities:
-
-![Exotic-Deployment-Possibilities](media/understand-the-cache/Exotic-Deployment-Possibilities.png)
-
-### Set cache behavior
-
-It is possible to override the default behavior of the cache. For example, you can set it to cache reads even in an all-flash deployment. We discourage modifying the behavior unless you are certain the default does not suit your workload.
-
-To override the behavior, use **Set-ClusterS2D** cmdlet and its **-CacheModeSSD** and **-CacheModeHDD** parameters. The **CacheModeSSD** parameter sets the cache behavior when caching for solid-state drives. The **CacheModeHDD** parameter sets cache behavior when caching for hard disk drives. This can be done at any time after Storage Spaces Direct is enabled.
-
-You can use **Get-ClusterS2D** to verify the behavior is set.
-
-#### Example
-
-```
-PS C:\> Get-ClusterS2D
-
-CacheModeHDD : ReadWrite
-CacheModeSSD : WriteOnly
-...
-
-PS C:\> Set-ClusterS2D -CacheModeSSD ReadWrite
-
-PS C:\> Get-ClusterS2D
-
-CacheModeHDD : ReadWrite
-CacheModeSSD : ReadWrite
-...
-```
+- Ensure that each node in your cluster is symmetrical (each node has the same number of drives)
+- Enable 3-way mirror so that you can tolerate a 2 node failure and keep the virtual disks online
+- When a node goes down, diagnose it immediately and attempt to fix it quickly since you are more at risk of losing data with multiple failures.
