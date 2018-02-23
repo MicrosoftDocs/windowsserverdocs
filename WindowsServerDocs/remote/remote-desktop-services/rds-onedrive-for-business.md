@@ -1,24 +1,26 @@
 ---
-title: RDS and OneDrive for Business in non-persistent environments
-description: Learn about a solution from FSLogix to support OneDrive for Business in non-persistent RDS environments
+title: RDS and OneDrive for Business in persistent and non-persistent environments
+description: Learn about OneDrive in VDI environments
 ms.prod: windows-server-threshold
 ms.technology: remote-desktop-services
 ms.mktglfcycl: manage
 ms.sitesec: library
 author: lizap
 ms.localizationpriority: low
-ms.date: 10/18/2017
+ms.date: 02/23/2018
 ---
-# Dealing with OneDrive for Business in non-persistent environments 
+# OneDrive for Business and VDI environments 
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
-We’ve heard from customers that the lack of OneDrive for Business support within non-persistent (pooled) RDS environments is a problem. The officially supported solution is to use the OneDrive for Business web experience.  
+For information about using OneDrive for Business in virtualized environments, including Remote Desktop Services, check out the "Windows specific restrictions and limitations" information in [Restrictions and limitations when you sync files and folders](https://support.microsoft.com/help/3125202/restrictions-and-limitations-when-you-sync-files-and-folders).
 
-[RDS Gurus](http://rdsgurus.com/) recently published a report on [FSLogix’s Office 365 Container](https://fslogix.com/products/office-365-container), a third-party solution that lets users in non-persistent RDS environments use the OneDrive for Business native sync client, instead of the web experience. FSLogix’s O365 Containers roam a user’s OneDrive for Business local cache so that it does not need to be completely resynced each time a user logs on to a session. FSLogix’s O365 Containers provides a user experience comparable to that of a persistent or local environment. For example, users can access their OneDrive for Business files in File Explorer.  
+The OneDrive for Business sync app isn’t supported for client sessions that are hosted on Windows 2008 Terminal Services or Windows 2012 Remote Desktop Services (RDS). This includes both persistent and non-persistent Virtual Desktop Infrastructure (VDI).
 
+For the OneDrive for Business sync app to work as designed, the following requirements must be met: 
 
-RDS Gurus tested FSLogix’s O365 Containers with OneDrive for Business in both on-premise and Azure RDS environments for non-persistent sessions on RDSH, focusing on user experience performance as the system becomes loaded with other "noisy neighbors." They found that "FSLogix Office 365 Container works well for OneDrive for Business. … Most importantly, because the local cache is stored in the FSLogix container, it follows the user as the user roams."  
+- The application must be installed on the local computer.
+- The user must be able to write to the user profile.
+- Data that's written to the user profile must be saved to the local hard disk and be available without a network connection.
 
-
-You can read more about the results and conclusions on the [RDS Gurus blog](http://www.rdsgurus.com/onedrive-for-business-performance-in-non-persistent-environments-using-fslogixs-office-365-containers/). 
+Currently we recommend that OneDrive customers in these environments leverage our OneDrive Office 365 web portal or download our OneDrive [UWP app](https://www.microsoft.com/en-us/store/p/onedrive/9wzdncrfj1p3) (Universal Windows Platform) found in the Microsoft Store.
