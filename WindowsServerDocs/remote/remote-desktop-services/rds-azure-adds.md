@@ -19,7 +19,7 @@ You can use [Azure AD Domain Services](/azure/active-directory-domain-services/a
 
 With Azure AD DS you can: 
 - Create an Azure environment with a local domain for born-in-the-cloud organizations. 
-- Create an isolated Azure environment with the same identities used for your on-premise and online environment, without needing to create a site-to-site VPN or ExpressRoute. 
+- Create an isolated Azure environment with the same identities used for your on-premises and online environment, without needing to create a site-to-site VPN or ExpressRoute. 
 
 When you finish integrating Azure AD DS into your Remote Desktop deployment, your architecture will look something like this:
 
@@ -33,7 +33,7 @@ Use the following information to deploy Azure AD DS with RDS.
 
 ## Prerequisites
 
-Before you can bring your identities from Azure AD to use in an RDS deployment, [configure Azure AD to save the hashed passwords for your users’ identities](/azure/active-directory-domain-services/active-directory-ds-getting-started-password-sync). Born-in-the-cloud organizations don’t need to make any additional changes in their directory; however, on-premise organizations need to allow password hashes to be synchronized and stored in Azure AD, which may not be permissible to some organizations. Users will have to reset their passwords after making this configuration change.
+Before you can bring your identities from Azure AD to use in an RDS deployment, [configure Azure AD to save the hashed passwords for your users’ identities](/azure/active-directory-domain-services/active-directory-ds-getting-started-password-sync). Born-in-the-cloud organizations don’t need to make any additional changes in their directory; however, on-premises organizations need to allow password hashes to be synchronized and stored in Azure AD, which may not be permissible to some organizations. Users will have to reset their passwords after making this configuration change.
 
 ## Deploy Azure AD DS and RDS 
 Use the following steps to deploy Azure AD DS and RDS.
