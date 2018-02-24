@@ -111,7 +111,7 @@ Dynamic Quorum enables the ability to assign a vote to a node dynamically to avo
 
 Without dynamic quorum, the cluster will go down if you lose two nodes.
 
-![Normal 4-node case](media/understand-quorum/dynamic-quorum-base-case.png)
+![Normal 4-node case](media/understand-quorum/dynamic-quorum-base.png)
 
 With Dynamic Quorum enabled, you are better off. The *total number of votes* required for quorum is now determined based on the number of nodes available. So, with dynamic quorum, the cluster will stay up even if you lose three nodes.
 
