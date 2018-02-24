@@ -84,7 +84,7 @@ The table below gives an overview of the Cluster Quorum outcomes per scenario:
 
 - If you have 2 nodes, a witness is <strong>REQUIRED</strong>!
 - If you have 3 or 4 nodes, witness is <strong>STRONGLY recommended</strong>!
-- If you have internet access, use a [cloud witness](../../failover-clustering\deploy-cloud-witness.md)
+- If you have internet access, use a <strong>[cloud witness](../../failover-clustering\deploy-cloud-witness.md)</strong>
 - If you’re in an IT environment with other machines and file shares, use a file share witness
 
 ## How Cluster Quorum Works
