@@ -14,12 +14,13 @@ author: maricia
 
 >Applies To: Windows 10 version 1709
 
-You can use this topic to learn how to create and configure a Virtual Private Network \(VPN\) device tunnel for VPN connections in Windows 10.
+Always On VPN gives you the ability to create a dedicated VPN profile for device or machine. Alays On VPN connections include two types of tunnels: 
+* _Device tunnel_ connects to specified VPN servers before users log on to the device. Device tunnel is used for pre-logon connectivity scenarios and device management purposes.
+* _User tunnel_  connects only after a user logs on to the device. User tunnel allows users to access organization resources through VPN servers.
 
-Windows 10 VPN connections include two types of tunnels.
+Unlike User Tunnel, which only connects after a user logs on to the device or machine, Device Tunnel allows the VPN to establish connectivity before user sign-in. Additionally, Device Tunnel provides feature parity with the Infrastructure Tunnel concept of DirectAccess.
 
-- **Device tunnel**. This tunnel connects to specified VPN servers before users log on to the device. Device tunnel is used for pre-logon connectivity scenarios and device management purposes.
-- **User tunnel**. This tunnel connects only after a user logs on to the device. User tunnel allows users to access organization resources through VPN servers.
+You can use traffic filters to control which corporate resources as available through the Device Tunnel and when machine certificate authentication is employed. Both Device Tunnel and User Tunnel operate independently with their VPN profiles, can be connected at the same time, and can use different authentication methods and other VPN configuration settings as appropriate.
 
 ## Device Tunnel Features
 
