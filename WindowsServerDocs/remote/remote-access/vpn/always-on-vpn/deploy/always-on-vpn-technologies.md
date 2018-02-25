@@ -20,7 +20,7 @@ For this deployment, it is not a requirement that your infrastructure servers, s
 Following are brief overviews of these technologies and links to additional documentation.
 
 
-## [Remote Access as a RAS Gateway VPN Server](vpn-deply-ras.md)
+## [Remote Access as a RAS Gateway VPN Server](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-ras)
 
 The VPN Server is a new physical server or virtual machine \(VM\) that you must install. 
 
