@@ -1,6 +1,15 @@
 ---
 title: Configure the Always On VPN Server Infrastructure
+description: This topic provides detailed instructions for deploying Always On VPN in Windows Server 2016.
+ms.prod: windows-server-threshold
+ms.technology: networking
+ms.topic: article
+ms.date: 
+ms.assetid: d165822d-b65c-40a2-b440-af495ad22f42
+manager: brianlic
+ms.author: pashort
 author: shortpatti
+ms.date: 2/25/2018
 ---
 
 Configure the Server Infrastructure
@@ -162,9 +171,8 @@ security by selecting upgraded compatibility levels and choosing the Microsoft
 Platform Crypto Provider. Microsoft Platform Crypto Provider lets you use the
 Trusted Platform Module (TPM) on client computers to secure the certificate.
 
->   [!NOTE] For more information about TPM, see [Trusted Platform Module
->   Technology
->   Overview](https://docs.microsoft.com/windows/device-security/tpm/trusted-platform-module-overview).
+>[!NOTE] 
+>For more information about TPM, see [Trusted Platform Module Technology Overview](https://docs.microsoft.com/windows/device-security/tpm/trusted-platform-module-overview).
 
 With this step you can configure a new Server Authentication template for your
 VPN server.
@@ -358,8 +366,8 @@ used for the user certificate. Like the user certificate, the NPS server will
 automatically enroll its authentication certificate, so all you need to do is
 validate it.
 
->   [!NOTE] You might need to restart the VPN and NPS servers to allow them to
->   update their group memberships before you can complete these steps.
+>[!NOTE] 
+>You might need to restart the VPN and NPS servers to allow them to update their group memberships before you can complete these steps.
 
 1.  On the VPN server’s Start menu, type **certlm.msc**, and press Enter.
 
