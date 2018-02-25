@@ -25,7 +25,7 @@ Because many of the devices that require remote access are personal devices, Alw
 
 For additional details about the advantages of Always On VPN, see [Always On VPN and DirectAccess Features Comparison](https://docs.microsoft.com/windows-server/remote/remote-access/vpn/vpn-map-da).
 
-### Platform integration
+## Platform integration
 
 Always On VPN has improved integration with the Windows operating system and third-party solutions to provide a robust platform for countless advanced connection scenarios. Microsoft has introduced or improved the following integration capabilities in Always On VPN:
 
@@ -37,7 +37,7 @@ Always On VPN has improved integration with the Windows operating system and thi
 | **Azure MFA** | When combined with Remote Authentication Dial-In User Service (RADIUS) services and the Network Policy Server (NPS) extension for Azure MFA, VPN authentication can use strong MFA. For more details, see [Integrate RADIUS authentication with Azure Multi-Factor Authentication Server](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication-get-started-server-radius) |
 | **Third-party VPN plug-in** | With the Universal Windows Platform (UWP), third-party VPN providers can create a single application for the full range of Windows 10 devices. The UWP provides a guaranteed core API layer across devices, eliminating the complexity of and problems often associated with writing kernel-level drivers. Currently, Windows 10 UWP VPN plug-ins exist for Pulse Secure, F5 Access, Check Point Capsule VPN, FortiClient, and SonicWall Mobile Connect; no doubt, others will appear in the future. |
 
-### Security
+## Security
 
 VPNs create a pinhole connection in your network firewall. Securing that connection is important, especially when that connection is active most of the time. Always On VPN has new, advanced security capabilities to restrict the type of traffic, which applications can use the VPN connection, and which authentication methods you can use to initiate the connection. The primary improvements in security are in the following areas:
 
@@ -50,7 +50,7 @@ VPNs create a pinhole connection in your network firewall. Securing that connect
 | **Native Extensible Authentication Protocol (EAP) support** | Always On VPN natively supports EAP, which allows you to use a diverse set of Microsoft and third-party EAP types as part of the authentication workflow. EAP provides secure authentication based on the following authentication types:<ul><li>User name and password</li><li>Smart card (both physical and virtual)</li><li>User or machines certificates</li><li>Windows Hello for Business</li><li>One-time password (OTP) or MFA support by way of EAP RADIUS integration</li></ul>The application vendor controls third-party UWP VPN plug-in authentication methods, although they have an array of available options, including custom credential types and OTP support. |
 | **Trusted Platform Module (TPM) Key Attestation** | Always On VPN supports a user certificate with a TPM-attested key that provides higher security assurance, backed up by non-exportability, anti-hammering, and isolation of keys provided by the TPM. For more details, see [TPM Key Attestation](https://docs.microsoft.com/windows-server/identity/ad-ds/manage/component-updates/tpm-key-attestation) or [VPN technical guide](https://docs.microsoft.com/windows/access-protection/vpn/vpn-guide).
 
-###<a name="vpn-connectivity"></a> VPN connectivity
+##<a name="vpn-connectivity"></a> VPN connectivity
 
 Windows 10 has improved connectivity options over previous versions of the Windows operating system. When comparing DirectAccess to Always On VPN in the past, this is where DirectAccess often stood out. Until Always On VPN in Windows 10, the ability to create a persistent connection through either user or device authentication was not possible. Now, using the Always On feature with or without Device Tunnel, you can easily configure a persistent connection by using user or device authentication.
 
@@ -64,7 +64,7 @@ With Always On VPN, the connection type does not have to be exclusively user or 
 | **Trusted network detection** | Always On VPN includes this feature to ensure that VPN connectivity is not triggered if a user is connected to a trusted network within the corporate boundary. You can combine this feature with any of the triggering methods mentioned earlier to provide a seamless "only connect when needed" user experience. |
 | **[Device Tunnel](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/vpn-device-tunnel-config)** | Always On VPN gives you the ability to create a dedicated VPN profile for device or machine. Unlike _User Tunnel_, which only connects after a user logs on to the device or machine, _Device Tunnel_ allows the VPN to establish connectivity before user sign-in. Additionally, Device Tunnel provides feature parity with the _Infrastructure Tunnel_ concept of DirectAccess. You can use traffic filters to control which corporate resources as available through the Device Tunnel and when machine certificate authentication is employed. Both Device Tunnel and User Tunnel operate independently with their VPN profiles, can be connected at the same time, and can use different authentication methods and other VPN configuration settings as appropriate. |
 
-### Networking
+## Networking
 
 Microsoft added advanced networking capabilities to Always On VPN to allow administrators to specify routing policies at a more granular level—even down to the individual application—which is perfect for line-of-business (LOB) apps that require special remote access. Always On VPN is also fully compatible with both Internet Protocol version 4 (IPv4) and version 6 (IPv6). Unlike DirectAccess, there is no specific dependency on IPv6. The following are some of the networking improvements in Always On VPN:
 
@@ -76,10 +76,9 @@ Microsoft added advanced networking capabilities to Always On VPN to allow admin
 | **Server resilience and load balancing** | In environments that require high availability or support large numbers of requests, you can increase the performance and resiliency of Remote Access by using load balancing between multiple servers that are running Network Policy Server (NPS) and enabling Remote Access server clustering. For more details, see [NPS Proxy Server Load Balancing](https://docs.microsoft.com/en-us/windows-server/networking/technologies/nps/nps-manage-proxy-lb) or [Deploy Remote Access in a Cluster](https://docs.microsoft.com/windows-server/remote/remote-access/ras/cluster/deploy-remote-access-in-cluster) |
 | **Geographic site reslience** | For IP-based geolocation, you can use Global Traffic Manager with DNS in Windows Server 2016. For more robust geographic load balancing, you can use Global Server Load Balancing solutions, such as Microsoft Azure Traffic Manager. For more information, see [Overview of Traffic Manager](https://docs.microsoft.com/azure/traffic-manager/traffic-manager-overview) and [Microsoft Azure Traffic Manager](https://azure.microsoft.com/en-us/services/traffic-manager). |
 
-### Configuration and compatibility
+## Configuration and compatibility
 
-You can deploy and manage Always On VPN in several ways, which gives Always On VPN several advantages over other VPN client software that may require advanced software packaging and deployment, end-user involvement in the configuration, or simply lack features like Always On or Device Tunnel. As long as the standard protocols and authentication mechanisms work with the additional gateways, you can use the features of Always On VPN without having to set up a Always On VPN server infrastructure. The following are some of the configuration and
-compatibility improvements in Always On VPN:
+You can deploy and manage Always On VPN in several ways, giving Always On VPN several advantages over other VPN client software with platform limitations. As long as the standard protocols and authentication mechanisms work with the additional gateways, you can use the features of Always On VPN without having to set up an Always On VPN server infrastructure. The following are some of the configuration and compatibility improvements in Always On VPN:
 
 | Key improvement | Description |
 | ---- | ---- |
