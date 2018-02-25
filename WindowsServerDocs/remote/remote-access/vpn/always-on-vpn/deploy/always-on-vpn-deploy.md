@@ -94,7 +94,7 @@ compatibility improvements in Always On VPN:
 
 |If you...  |Then see...  |
 |---------|---------|
-|Want to know more about DirectAccess and Always On VPN feature comparison     |[Always On VPN and DirectAccess Features Comparison](../../vpn-map.md)         |
+|Want to know more about DirectAccess and Always On VPN feature comparison     |[Always On VPN and DirectAccess Features Comparison](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/vpn-map-da)         |
 |Want to know more about the Always On VPN technologies    |[Always On VPN Technology Overview](always-on-vpn-technologies.md)         |
 |Are ready to get started planning your Always On VPN deployment     |[Always On VPN Deployment Overview](always-on-vpn-deploy-overview.md)         |
 
