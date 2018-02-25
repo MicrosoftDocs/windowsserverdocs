@@ -14,7 +14,7 @@ author: shortpatti
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-Always On VPN requires a specific process to deploy to Always On VPN connections for remote Windows 10 client computers that are domain joined. At a high level, the deployment process consists of these four primary steps:
+Always On VPN requires a specific process to deploy the Always On VPN connections for remote Windows 10 client computers that are domain joined. At a high level, the deployment process consists of these four primary steps:
 
 1. **[Configure the Always On VPN Server Infrastructure](vpn-deploy-server-infrastructure.md)**. 
     a. AD DS: Enable certificate autoenrollment in Group Policy for both computers and users, create the VPN Users Group, the VPN Servers Group, and the NPS Servers Group, and add members to each group.
@@ -33,4 +33,4 @@ Always On VPN requires a specific process to deploy to Always On VPN connections
 >For this deployment, it is not a requirement that your infrastructure servers, such as computers running Active Directory Domain Services, Active Directory Certificate Services, and Network Policy Server, are running Windows Server 2016. You can use earlier versions of Windows Server, such as Windows Server 2012 R2, for the infrastructure servers and for the server that is running Remote Access.
 
 ## Next steps
-**[Configure the Server Infrastructure](vpn-deploy-server-infrastructure.md)
+**[Configure the Server Infrastructure](vpn-deploy-server-infrastructure.md)**. Install and configure the server-side components necessary to support the VPN, including configuring PKI to distribute the certificates used by users, the VPN server, and the NPS server.

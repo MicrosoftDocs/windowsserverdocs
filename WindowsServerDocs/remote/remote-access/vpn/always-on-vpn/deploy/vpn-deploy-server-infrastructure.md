@@ -6,20 +6,22 @@ ms.technology: networking
 ms.topic: article
 ms.assetid: 8223117a-96f3-4ae9-96e8-67a3a2b8d462
 manager: brianlic
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
+ms.date: 2/25/2018
 ---
 # Configure the Server Infrastructure
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-In this section, you install and configure the server-side components necessary to support the VPN, including configuring PKI to distribute the certificates used by users, the VPN server, and the NPS server; configuring RRAS to support IKEv2 connections; and configuring the NPS server to perform authorization for the VPN connections.
+Configuring the server infrastructure is the first process in deploying Always On VPN. This topic provides instructions on how to install and configure the server-side components necessary to support the VPN. The server-side components include:
+* Configuring PKI to distribute the certificates used by users, the VPN server and the NPS.  
+* Configuring RRAS to support IKEv2 connections.
+* Configuring the NPS to perform authorization for the VPN connections.
 
-## Step 1. Configure certificate autoenrollment in Group Policy
+## STEP 1. Configure certificate autoenrollment in Group Policy
 
-Configure Group Policy on the domain controller so that domain members request user and computer certificates automatically.
-
-This allows VPN users to automatically request and retrieve user certificates that authenticate VPN connections. Likewise, this policy allows NPS servers to automatically request server authentication certificates. (You will manually enroll certificates on VPN servers.)
+By configuring certificate autoenrollment in Group Policy allows VPN users to automatically request and retrieve user certificates that authenticate VPN connections. Likewise, this policy allows the NPS to automatically request server authentication certificates. You must manually enroll certificates on VPN servers.
 
 
 1. On a domain controller, open Group Policy Management.
@@ -58,7 +60,7 @@ This allows VPN users to automatically request and retrieve user certificates th
 
 7.  Close Group Policy Management.
 
-## Create the VPN Users, VPN Servers, and NPS Servers Groups
+## STEP 2: Create the VPN Users, VPN Servers, and NPS Servers Groups
 
 With this step you can add a new Active Directory group that contains the users allowed to use the VPN to connect to your organization network. This group serves two purposes:
 
@@ -108,7 +110,7 @@ You will also add a group containing VPN servers and another group containing NP
 
 10. Close Active Directory Users and Computers.
 
-## Create the User Authentication template
+## STEP 3: Create the User Authentication template
 
 You can use this section to configure a custom client–server authentication template. 
 
@@ -175,7 +177,7 @@ This template is required because you want to improve the certificate’s overal
 
 14. Close the Certification Authority snap-in.
 
-## Create the VPN Server Authentication template
+## STEP 5: Create the VPN Server Authentication template
 
 With this step you can configure a new Server Authentication template for your VPN server.
 
@@ -232,7 +234,7 @@ Adding the IP Security \(IPsec\) IKE Intermediate application policy allows the 
 
 12. Close the Certification Authority snap-in.
 
-## Create the NPS Server Authentication template
+## STEP 6: Create the NPS Server Authentication template
 
 The third and last certificate template to create is the NPS Server Authentication template. The NPS Server Authentication template is a simple copy of the RAS and IAS Server template secured to the NPS Server group that you created earlier in this section. 
 
@@ -270,7 +272,7 @@ You will configure this certificate for autoenrollment.
 
 10. Close the Certification Authority snap-in.
 
-## Enroll and validate the user certificate
+## STEP 7: Enroll and validate the user certificate
 
 Because you’re using Group Policy to autoenroll user certificates, you need only update the policy, and Windows 10 will automatically enroll the user account for the correct certificate. You can then validate the certificate in the Certificates console.
 
@@ -290,7 +292,7 @@ Because you’re using Group Policy to autoenroll user certificates, you need on
 
 7.  Click **OK**, and close the Certificates snap-in.
 
-## Enroll and validate the server certificates
+## STEP 8: Enroll and validate the server certificates
 
 Unlike the user certificate, you must manually enroll the VPN server’s certificate. After you’ve enrolled it, validate it by using the same process you used for the user certificate. Like the user certificate, the NPS server will automatically enroll its authentication certificate, so all you need to do is validate it.
 
@@ -353,4 +355,5 @@ Unlike the user certificate, you must manually enroll the VPN server’s certifi
 
 7.  Close the Certificates snap-in.
 
-For the next Always On VPN deployment steps, see [Configure the Remote Access Server for Always On VPN](vpn-deploy-ras.md).
+## Next steps
+**[Configure the Remote Access Server for Always On VPN](vpn-deploy-ras.md)**. Install and configure the Remote Access server role on the computer or virtual machine \(VM\) that you want to use as your VPN server.

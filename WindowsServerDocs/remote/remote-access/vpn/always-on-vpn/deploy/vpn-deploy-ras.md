@@ -21,7 +21,7 @@ The steps in this section allow you to complete the following items.
 
 2. On the Remote Access server, you can configure Remote Access as a RAS Gateway VPN server.
 
-## Install Remote Access as a RAS Gateway VPN Server
+## STEP 1: Install Remote Access as a RAS Gateway VPN Server
 
 You can use this section to install the Remote Access role as a single tenant RAS Gateway VPN server.
 
@@ -74,11 +74,9 @@ You can use the following procedure to install Remote Access using Server Manage
 
 13. When the installation is complete, click **Close**.
 
-## Configure Remote Access as a VPN Server
+## STEP 2: Configure Remote Access as a VPN Server
 
 In this section, you configure Remote Access VPN to allow IKEv2 VPN connections, deny connections from other VPN protocols, and assign a static IP address pool for issuance of IP addresses to connecting authorized VPN clients.
-
-### To Configure Remote Access as a VPN Server
 
 1.  On the VPN server, in Server Manager, click the **Notifications** flag; then, in the **Tasks** menu, click **Open the Getting Started Wizard**. The **Configure Remote Access** wizard opens.
 
@@ -146,4 +144,5 @@ In this section, you configure Remote Access VPN to allow IKEv2 VPN connections,
 
 20. If prompted, click **Close** to restart the server.
 
-For the next Always On VPN deployment steps, see [Install and Configure the NPS Server](vpn-deploy-nps.md).
+## Next steps
+**[Install and Configure the NPS Server](vpn-deploy-nps.md)**. Install Network Policy Server \(NPS\) and perform configuration for Always On VPN.

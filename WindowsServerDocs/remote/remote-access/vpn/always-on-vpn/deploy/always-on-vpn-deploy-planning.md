@@ -94,7 +94,7 @@ Configure the VPN server to assign addresses to VPN clients from a static addres
 
 - **Verify that all VPN users have user accounts in Active Directory User \(AD DS\)**. Before users can connect to the network with VPN connections, they must have user accounts in AD DS.
 
-## Routing and Firewall Preparations
+## Prepare the Routing and Firewall
 
 The following steps provide instructions on how to make minor adjustments to the firewall configuration to support VPN deployment.
 
