@@ -101,8 +101,8 @@ You can deploy and manage Always On VPN in several ways, giving Always On VPN se
 
 
 ## Related topics
-[Always On VPN and DirectAccess Features Comparison](vpn-map-da.md)
-[VPN Device Tunnels in Always On VPN](vpn-device-tunnel-config.md)
+[Always On VPN and DirectAccess Features Comparison](../vpn-map-da.md)
+[VPN Device Tunnels in Always On VPN](../vpn-device-tunnel-config.md)
 Windows 10 [VPN technical guide](https://docs.microsoft.com/windows/access-protection/vpn/vpn-guide)
 [How to Create VPN profiles in System Center Configuration Manager](https://docs.microsoft.com/sccm/protect/deploy-use/create-vpn-profiles)
 [VPN profile options](https://docs.microsoft.com/en-us/windows/access-protection/vpn/vpn-profile-options)
