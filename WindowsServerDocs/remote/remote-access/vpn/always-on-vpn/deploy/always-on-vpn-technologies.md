@@ -17,7 +17,7 @@ ms.date: 2/24/2018
 
 For this deployment, it is not a requirement that your infrastructure servers, such as computers running AD DS, AD CS, and NPS, are running Windows Server 2016. You can use earlier versions of Windows Server, such as Windows Server 2012 R2, for the infrastructure servers and for the server that is running Remote Access.
  
-Following are brief overviews of these technologies and links to additional documentation.
+This section provides a brief overview of the technologies of Always On VPN and links to additional documentation.
 
 
 ## [Remote Access as a RAS Gateway VPN Server](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-ras)

@@ -1,6 +1,6 @@
 ---
-title: Always On VPN and DirectAccess Features Comparison
-description: This section provides information of how Windows Server 2016 and Always On VPN features map to DirectAccess features, including details about the increased flexibility provided by new VPN features.
+title: Feature Comparison of Always On VPN and DirectAccess
+description: In previous versions of the Windows VPN architecture, platform limitations made it difficult to provide the critical functionality needed to replace DirectAccess (like automatic connections initiated before users sign in).
 ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
@@ -11,7 +11,7 @@ ms.author: pashort
 author: shortpatti
 ---
 
-# Always On VPN and DirectAccess Features Comparison
+# Feature Comparison of Always On VPN and DirectAccess
 
 >Applies To: Windows Server \(Semi-Annual Channel\), Windows Server 2016, Windows 10
 
