@@ -1,5 +1,5 @@
 ---
-title: Remote Access Always On VPN Deployment Guide for Windows Server and Windows 10
+title: Always On VPN Deployment Guide for Windows Server and Windows 10
 description: You can use this guide to deploy Always On Virtual Private Network (VPN) connections for remote employees by using Remote Access in Windows Server 2016 or later and Always On VPN profiles for Windows 10 client computers.
 ms.prod: windows-server-threshold
 ms.technology: networking, remote access, vpn
@@ -15,7 +15,7 @@ ms.date: 2/24/2018
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-What is Always On VPN? Well, in previous versions of the Windows VPN architecture, platform limitations made it difficult to provide the critical functionality needed to replace DirectAccess (like automatic connections initiated before users sign in). Always On VPN, however, has mitigated most of those limitations or expanded the VPN functionality beyond the capabilities of DirectAccess. Always On VPN addresses the previous gaps between Windows VPNs and DirectAccess; therefore, Always On VPN is the DirectAccess replacement solution.
+What is Always On VPN and why use it instead of DirectAccess? Well, in previous versions of the Windows VPN architecture, platform limitations made it difficult to provide the critical functionality needed to replace DirectAccess (like automatic connections initiated before users sign in). Always On VPN, however, has mitigated most of those limitations or expanded the VPN functionality beyond the capabilities of DirectAccess. Always On VPN addresses the previous gaps between Windows VPNs and DirectAccess; therefore, Always On VPN is the DirectAccess replacement solution.
 
 ## Benefits of Always On VPN
 
@@ -98,3 +98,11 @@ You can deploy and manage Always On VPN in several ways, giving Always On VPN se
 |Are ready to get started planning your Always On VPN deployment     |[Always On VPN Deployment Overview](always-on-vpn-deploy-overview.md)         |
 
 <!-- put a related documents section here with the external docs that are referenced -->
+
+
+## Related topics
+[Always On VPN and DirectAccess Features Comparison](vpn-map-da.md)
+[VPN Device Tunnels in Always On VPN](vpn-device-tunnel-config.md)
+Windows 10 [VPN technical guide](https://docs.microsoft.com/windows/access-protection/vpn/vpn-guide)
+[How to Create VPN profiles in System Center Configuration Manager](https://docs.microsoft.com/sccm/protect/deploy-use/create-vpn-profiles)
+[VPN profile options](https://docs.microsoft.com/en-us/windows/access-protection/vpn/vpn-profile-options)

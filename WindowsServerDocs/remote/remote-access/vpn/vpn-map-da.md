@@ -25,8 +25,6 @@ This section covers feature similarities and differences between DirectAccess an
 
 -   **Limited comparable functionality.** In a few situations, Always On VPN requires an alternate way to incorporate existing functionality. This section discusses those changes and how you can gain the functionality with Always On VPN.
 
-For additional details about the feature comparison between DirectAccess and Always On VPN, see [Always On VPN and DirectAccess Features Comparison](https://docs.microsoft.com/windows-server/remote/remote-access/vpn/vpn-map-da).
-
 ## Equivalent functionality
 
 Each item in this section is a use case scenario or commonly used DirectAccess feature for which Always On VPN has an equivalent.
