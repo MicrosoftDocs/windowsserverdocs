@@ -107,4 +107,4 @@ In addition, the VPN server is installed inside the perimeter network, which par
 In most environments, you can simply adjust static routes on the edge firewall and the VPN server to allow them to reach this new internal perimeter network. In complex environments, you may need to add static routes to internal routers or adjust internal firewall rules for the VPN server and the block of IP addresses associated with VPN clients.
 
 ## Next steps
-**Deploy Always On VPN Connections**. This section provides instructions on how to deploy Always On VPN connections for remote Windows 10 client computers that are joined to your domain.
+**[Deploy Always On VPN Connections](always-on-vpn-deploy-deployment.md)**. This section provides instructions on how to deploy Always On VPN connections for remote Windows 10 client computers that are joined to your domain.
