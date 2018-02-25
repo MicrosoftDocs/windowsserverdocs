@@ -130,7 +130,7 @@ You can use this procedure to configure a new RADIUS client in NPS.
 
 6. Click **OK**. The VPN Server appears in the list of RADIUS clients that are configured on the NPS server.
 
-## STEP 6: Configure Network Policy for VPN Connections
+## STEP 6: Configure Network Policy Server for VPN Connections
 
 You can use this procedure to configure NPS as a RADIUS server on your organization network.
 
