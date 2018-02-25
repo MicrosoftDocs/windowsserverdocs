@@ -1,6 +1,6 @@
 ---
 title: Always On VPN Technology Overview
-description: 
+description: This section provides a brief overview of the technologies of Always On VPN and links to additional documentation.
 ms.prod: windows-server-threshold
 ms.technology: networking, remote access, vpn
 ms.topic: article
@@ -32,13 +32,30 @@ In the process of completing the steps in this guide, you must perform the follo
 - Configure Remote Access as a RADIUS Client so that it can send connection requests to the organization NPS server for processing.
 - Enroll and validate the VPN server certificate from your certification authority \(CA\).
 
-## NPS Server
+In Windows Server 2016, the Remote Access server role is a multifaceted gateway and router that provides centralized administration, configuration, and monitoring of Virtual Private Network \(VPN\) remote access services. 
+
+You can manage Remote Access Service \(RAS\) Gateways by using Windows PowerShell commands and the Remote Access Microsoft Management Console \(MMC\). 
+
+For more information, see [Remote Access](https://docs.microsoft.com/windows-server/remote/remote-access/remote-access).
+
+## Network Policy Server (NPS)
+
+NPS allows you to create and enforce organization-wide network access policies for connection request authentication and authorization. When you use NPS as a Remote Authentication Dial-In User Service \(RADIUS\) server, you configure network access servers, such as VPN servers, as RADIUS clients in NPS. 
+
+You also configure network policies that NPS uses to authorize connection requests, and you can configure RADIUS accounting so that NPS logs accounting information to log files on the local hard disk or in a Microsoft SQL Server database. 
+
+For more information, see [Network Policy Server (NPS)](https://docs.microsoft.com/windows-server/networking/technologies/nps/nps-top).
+
 
 The NPS Server is installed on your organization/corporate network. 
 
 You must configure this NPS server as a RADIUS server that receives connection requests from the VPN server. The NPS server processes the connection requests, performing authorization and authentication, and sends either an Access\-Accept or Access\-Reject message to the VPN Server.
 
-## AD DS Server
+## Active Directory Domain Services \(AD DS\) Server
+
+AD DS provides a distributed database that stores and manages information about network resources and application-specific data from directory-enabled applications. Administrators can use AD DS to organize elements of a network, such as users, computers, and other devices, into a hierarchical containment structure. The hierarchical containment structure includes the Active Directory forest, domains in the forest, and organizational units \(OUs\) in each domain. A server that is running AD DS is called a domain controller. 
+
+AD DS contains the user accounts, computer accounts, and account properties that are required by Protected Extensible Authentication Protocol \(PEAP\) to authenticate user credentials and to evaluate authorization for VPN connection requests.
 
 The Active Directory Domain Services \(AD DS\) server is an on\-premises Active Directory domain, which hosts on\-premises user accounts.
 
@@ -49,7 +66,23 @@ During completion of the steps in this guide, you will configure the following i
 - Create the VPN Servers Group
 - Create the NPS Servers Group
 
-## CA Server
+For information about deploying AD DS, see the Windows Server 2016 [Core Network Guide](https://docs.microsoft.com/windows-server/networking/core-network-guide/core-network-guide).
+
+### Active Directory Users and Computers
+
+Active Directory Users and Computers is a component of AD DS that contains accounts that represent physical entities, such as a computer, a person, or a security group. A security group is a collection of user or computer accounts that administrators can manage as a single unit. User and computer accounts that belong to a particular group are referred to as group members. 
+
+### Group Policy Management
+
+Group Policy Management enables directory-based change and configuration management of user and computer settings, including security and user information. You use Group Policy to define configurations for groups of users and computers. 
+
+With Group Policy, you can specify settings for registry entries, security, software installation, scripts, folder redirection, remote installation services, and Internet Explorer maintenance. The Group Policy settings that you create are contained in a Group Policy object \(GPO\). By associating a GPO with selected Active Directory system containers — sites, domains, and OUs — you can apply the GPO's settings to the users and computers in those Active Directory containers. To manage Group Policy objects across an enterprise, you can use the Group Policy Management Editor Microsoft Management Console \(MMC\). 
+
+## Active Directory Certificate Services \(AD CA\) Server
+
+AD CS in Windows Server 2016 provides customizable services for creating and managing the X.509 certificates that are used in software security systems that employ public key technologies. Organizations can use AD CS to enhance security by binding the identity of a person, device, or service to a corresponding public key. AD CS also includes features that allow you to manage certificate enrollment and revocation in a variety of scalable environments.
+
+For more information, see [Active Directory Certificate Services Overview](https://technet.microsoft.com/library/hh831740.aspx) and [Public Key Infrastructure Design Guidance](https://social.technet.microsoft.com/wiki/contents/articles/2901.public-key-infrastructure-design-guidance.aspx). 
 
 The Certification Authority \(CA\) Server is a certification authority that is running Active Directory Certificate Services. The VPN configuration requires an Active Directory–based public key infrastructure \(PKI\). 
 
@@ -59,12 +92,43 @@ The CA enrolls certificates that are used for PEAP client–server authenticatio
 - The VPN Server Authentication certificate template
 - The NPS Server Authentication certificate template 
 
-## DNS Servers \(Public and Private\)
+## Domain Name System \(DNS\) Servers \(Public and Private\)
+
+DNS is a name resolution protocol for TCP/IP networks, such as the Internet or an organization network. A DNS server hosts the information that enables client computers and services to resolve easily recognized, alphanumeric DNS names to the IP addresses that computers use to communicate with each other.
+
+For more overview information about DNS, see [Domain Name System (DNS)](https://docs.microsoft.com/windows-server/networking/dns/dns-top).
+
+For information about deploying AD DS with DNS, see the Windows Server 2016 [Core Network Guide](https://docs.microsoft.com/windows-server/networking/core-network-guide/core-network-guide).
 
 Both internal and external Domain Name System \(DNS\) zones are required, which assumes that the internal zone is a delegated subdomain of the external zone \(e.g., corp.contoso.com and contoso.com\). 
 
 >[!NOTE]
 >Other DNS designs, such as split-brain DNS \(using the same domain name internally and externally in separate DNS zones\) or unrelated internal and external domains \(e.g., contoso.local and contoso.com\) are also possible, but the configuration for these environments is beyond the scope of this guide.
+
+### Certificate Templates
+
+Certificate templates can greatly simplify the task of administering a certification authority \(CA\) by allowing you to issue certificates that are preconfigured for selected tasks. The Certificate Templates MMC snap-in allows you to perform the following tasks.
+
+- View properties for each certificate template.
+- Copy and modify certificate templates.
+- Control which users and computers can read templates and enroll for certificates.
+- Perform other administrative tasks relating to certificate templates.
+
+Certificate templates are an integral part of an enterprise certification authority (CA). They are an important element of the certificate policy for an environment, which is the set of rules and formats for certificate enrollment, use, and management.
+
+For more information, see [Certificate Templates](https://technet.microsoft.com/library/cc730705.aspx).
+
+### Digital Server Certificates
+
+This guide provides instructions for using Active Directory Certificate Services (AD CS) to both enroll and automatically enroll certificates to Remote Access and NPS infrastructure servers. AD CS allows you to build a public key infrastructure \(PKI\) and provide public key cryptography, digital certificates, and digital signature capabilities for your organization.  
+
+When you use digital server certificates for authentication between computers on your network, the certificates provide:
+
+1. Confidentiality through encryption. 
+2. Integrity through digital signatures. 
+3. Authentication by associating certificate keys with computer, user, or device accounts on a computer network. 
+
+For more information, see [AD CS Step by Step Guide: Two Tier PKI Hierarchy Deployment](https://social.technet.microsoft.com/wiki/contents/articles/15037.ad-cs-step-by-step-guide-two-tier-pki-hierarchy-deployment.aspx).
 
 ## Windows 10 VPN Client
 
@@ -84,6 +148,8 @@ Table 1. VPN Features and Configurations Discussed in This Guide
 
 >[!NOTE]
 >PEAP\-TLS and TPM are "Protected Extensible Authentication Protocol with Transport Layer Security" and "Trusted Platform Module," respectively.
+
+For detailed feature descriptions and a full list of the VPN capabilities in Windows 10, see the [Windows 10 VPN Technical Guide](https://docs.microsoft.com/windows/access-protection/vpn/vpn-guide).
 
 ### VPNv2 CSP Nodes
 
@@ -128,105 +194,3 @@ This is the default setting for all user accounts. In some cases, however, this 
 To protect against this possibility, you can configure the NPS server to ignore user account dial in properties.
 
 For more information, see [Configure NPS to Ignore User Account Dial-in Properties](https://docs.microsoft.com/en-us/windows-server/networking/technologies/nps/nps-np-configure#configure-nps-to-ignore-user-account-dial-in-properties).
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### Remote Access
-
-In Windows Server 2016, the Remote Access server role is a multifaceted gateway and router that provides centralized administration, configuration, and monitoring of Virtual Private Network \(VPN\) remote access services. 
-
-You can manage Remote Access Service \(RAS\) Gateways by using Windows PowerShell commands and the Remote Access Microsoft Management Console \(MMC\). 
-
-For more information, see [Remote Access](https://docs.microsoft.com/windows-server/remote/remote-access/remote-access).
-
-#### Windows 10 VPN Clients
-
-Remote client computers must be running the Windows 10 Anniversary Update \(version 1607\) or later operating system, and must be joined to your Active Directory domain.
-
-For detailed feature descriptions and a full list of the VPN capabilities in Windows 10, see the [Windows 10 VPN Technical Guide](https://docs.microsoft.com/windows/access-protection/vpn/vpn-guide).
-
-### Active Directory Domain Services \(AD DS\)
-
-AD DS provides a distributed database that stores and manages information about network resources and application-specific data from directory-enabled applications. Administrators can use AD DS to organize elements of a network, such as users, computers, and other devices, into a hierarchical containment structure. The hierarchical containment structure includes the Active Directory forest, domains in the forest, and organizational units \(OUs\) in each domain. A server that is running AD DS is called a domain controller. 
-
-AD DS contains the user accounts, computer accounts, and account properties that are required by Protected Extensible Authentication Protocol \(PEAP\) to authenticate user credentials and to evaluate authorization for VPN connection requests.
-
-For information about deploying AD DS, see the Windows Server 2016 [Core Network Guide](https://docs.microsoft.com/windows-server/networking/core-network-guide/core-network-guide).
-
-#### Active Directory Users and Computers
-
-Active Directory Users and Computers is a component of AD DS that contains accounts that represent physical entities, such as a computer, a person, or a security group. A security group is a collection of user or computer accounts that administrators can manage as a single unit. User and computer accounts that belong to a particular group are referred to as group members. 
-
-#### Group Policy Management
-
-Group Policy Management enables directory-based change and configuration management of user and computer settings, including security and user information. You use Group Policy to define configurations for groups of users and computers. 
-
-With Group Policy, you can specify settings for registry entries, security, software installation, scripts, folder redirection, remote installation services, and Internet Explorer maintenance. The Group Policy settings that you create are contained in a Group Policy object \(GPO\). By associating a GPO with selected Active Directory system containers — sites, domains, and OUs — you can apply the GPO's settings to the users and computers in those Active Directory containers. To manage Group Policy objects across an enterprise, you can use the Group Policy Management Editor Microsoft Management Console \(MMC\). 
-
-### Domain Name System \(DNS\)
-
-DNS is a name resolution protocol for TCP/IP networks, such as the Internet or an organization network. A DNS server hosts the information that enables client computers and services to resolve easily recognized, alphanumeric DNS names to the IP addresses that computers use to communicate with each other.
-
-For more overview information about DNS, see [Domain Name System (DNS)](https://docs.microsoft.com/windows-server/networking/dns/dns-top).
-
-For information about deploying AD DS with DNS, see the Windows Server 2016 [Core Network Guide](https://docs.microsoft.com/windows-server/networking/core-network-guide/core-network-guide).
-
-### Active Directory Certificate Services
-
-AD CS in Windows Server 2016 provides customizable services for creating and managing the X.509 certificates that are used in software security systems that employ public key technologies. Organizations can use AD CS to enhance security by binding the identity of a person, device, or service to a corresponding public key. AD CS also includes features that allow you to manage certificate enrollment and revocation in a variety of scalable environments.
-
-For more information, see [Active Directory Certificate Services Overview](https://technet.microsoft.com/library/hh831740.aspx) and [Public Key Infrastructure Design Guidance](https://social.technet.microsoft.com/wiki/contents/articles/2901.public-key-infrastructure-design-guidance.aspx). 
-
-#### Certificate Templates
-
-Certificate templates can greatly simplify the task of administering a certification authority \(CA\) by allowing you to issue certificates that are preconfigured for selected tasks. The Certificate Templates MMC snap-in allows you to perform the following tasks.
-
-- View properties for each certificate template.
-- Copy and modify certificate templates.
-- Control which users and computers can read templates and enroll for certificates.
-- Perform other administrative tasks relating to certificate templates.
-
-Certificate templates are an integral part of an enterprise certification authority (CA). They are an important element of the certificate policy for an environment, which is the set of rules and formats for certificate enrollment, use, and management.
-
-For more information, see [Certificate Templates](https://technet.microsoft.com/library/cc730705.aspx).
-
-#### Digital Server Certificates
-
-This guide provides instructions for using Active Directory Certificate Services (AD CS) to both enroll and automatically enroll certificates to Remote Access and NPS infrastructure servers. AD CS allows you to build a public key infrastructure \(PKI\) and provide public key cryptography, digital certificates, and digital signature capabilities for your organization.  
-
-When you use digital server certificates for authentication between computers on your network, the certificates provide:
-
-1. Confidentiality through encryption. 
-2. Integrity through digital signatures. 
-3. Authentication by associating certificate keys with computer, user, or device accounts on a computer network. 
-
-For more information, see [AD CS Step by Step Guide: Two Tier PKI Hierarchy Deployment](https://social.technet.microsoft.com/wiki/contents/articles/15037.ad-cs-step-by-step-guide-two-tier-pki-hierarchy-deployment.aspx).
-
-### Network Policy Server (NPS)
-
-NPS allows you to create and enforce organization-wide network access policies for connection request authentication and authorization. When you use NPS as a Remote Authentication Dial-In User Service \(RADIUS\) server, you configure network access servers, such as VPN servers, as RADIUS clients in NPS. 
-
-You also configure network policies that NPS uses to authorize connection requests, and you can configure RADIUS accounting so that NPS logs accounting information to log files on the local hard disk or in a Microsoft SQL Server database. 
-
-For more information, see [Network Policy Server (NPS)](https://docs.microsoft.com/windows-server/networking/technologies/nps/nps-top).
-
-
-
-
-
-
-
