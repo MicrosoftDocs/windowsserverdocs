@@ -63,44 +63,52 @@ After you install NPS, you have to do basic configuration, set a friendly name, 
 * Autoenroll the NPS Server certificate
 
 <!-- What are the configuration steps for configuring NPS with powershell? -->
+### Register the NPS Server in Active Directory
+so that it has permission to access user account information while processing connection requests
 
 1. In Server Manager, click **Tools**, and click **Network Policy Server**.<br>The NPS console opens.
-1. Register the NPS Server in Active Directory o that it has permission to access user account information while processing connection requests:
-   a. Right\-click **NPS \(Local\)** and click **Register server in Active Directory**.<br>The Network Policy Server dialog box opens.
-   b. Click **OK** twice.
-2. Configure RADIUS Accounting for your NPS Server:
-    a. In the navigation pane, click **Accounting**.
-    b. In Details, click **Configure Accounting**.<br>For more details, see [Configure RADIUS Accounting for your NPS Server](https://docs.microsoft.com/windows-server/networking/technologies/nps/nps-accounting-configure). <!-- what information from the Configure Network Policy Server Accounting section should go in here, even at a high level? -->
-3. Add the VPN Server as a RADIUS Client in NPS:
-    a. In the navigation pane, double-click **RADIUS Clients and Servers**. 
-    b. Right-click **RADIUS Clients** and click **New**.<br>The New RADIUS Client dialog box opens.<br>
-    c. Verify that the **Enable this RADIUS client** check box is selected.
-    d. In **Friendly name**, enter a display name for the VPN server. 
-    e. In **Address \(IP or DNS\)**, enter one of the following:<br>
-        * NAS IP address 
-        * Fully qualified domain name \(FQDN\)
-        If you entered the FQDN, click **Verify** to verify that the name is correct and maps to a valid IP address.
-    f. In **Shared secret**, verify that **Manual** is selected, and in **Shared secret**, enter the strong text string that you entered on the VPN server. 
-    g. Retype the shared secret in **Confirm shared secret**.
-    h. Click **OK** to close the New RADIUS Client dialog box.<br>The VPN Server appears in the list of RADIUS clients that are configured on the NPS server.<!-- is Server Manager still open at this point? -->
-4. Configure Network Policy for VPN Connections:
-    a. In the navigation pane, click **NPS (Local)**.
-    b. In Standard Configuration, verify that the **RADIUS server for Dial\-Up or VPN Connections** is selected and click **Configure VPN or Dial-Up**.<br>The Configure VPN or Dial-Up wizard opens.
-    c.  Click **Virtual Private Network (VPN) Connections** and click **Next**.
-    d.  Under RADIUS Clients, select the name of the VPN Server and click **Next**.
-    e. Clear the **Microsoft Encrypted Authentication version 2 (MS-CHAPv2)** check box.
-    f.  Select the **Extensible Authentication Protocol** check box, select **Microsoft: Protected EAP \(PEAP\)**, and click **Configure**.<br>The Edit Protected EAP Properties dialog box opens.
-    g.  Click **Remove** to remove the Secured Password \(EAP-MSCHAP v2\) EAP type and click **Add**.<br>The Add EAP dialog box opens. 
-    h. Click **Smart Card or other certificate** and click **OK**.
-    i.  Click **OK** to close Edit Protected EAP Properties and click **Next**.
-    j.  In Specify User Groups, click **Add**.<br>The Select Users, Computers, Service Accounts, or Groups dialog box opens.
-    k.  Type **VPN Users**, click **OK**, and click **Next**.
-    l.  Click **Next** in Specify IP Filters to accept the default selections.
-    m.  Click **Next** in Specify Encryption Settings to accept the default selections.<br>Do not make any changes. These settings apply only to Microsoft Point-to-Point Encryption \(MPPE\) connections, which this scenario doesn’t support.
-    n.  Click **Next** in Specify a Realm Name to accept the default selections and click **Finish** to close the wizard.
-5. Autoenrool the NPS Server certificate:
-    a.  On the computer where NPS is installed, open Windows PowerShell.
-    b.  Type **gpupdate**, and then press ENTER.
+2. Right\-click **NPS \(Local\)** and click **Register server in Active Directory**.<br>The Network Policy Server dialog box opens.
+3. Click **OK** twice.
+
+### Configure RADIUS Accounting for your NPS Server
+1. In the navigation pane of the NPS console, click **Accounting**.
+2. In Details, click **Configure Accounting**.
+3. Follow the instructions in [Configure RADIUS Accounting for your NPS Server](https://docs.microsoft.com/windows-server/networking/technologies/nps/nps-accounting-configure). <!-- what information from the Configure Network Policy Server Accounting section should go in here, even at a high level? -->
+ 
+### Add the VPN Server as a RADIUS Client in NPS
+
+1. In the navigation pane of the NPS Console, double-click **RADIUS Clients and Servers**. 
+2. Right-click **RADIUS Clients** and click **New**.<br>The New RADIUS Client dialog box opens.<br>
+3. Verify that the **Enable this RADIUS client** check box is selected.
+4. In **Friendly name**, enter a display name for the VPN server. 
+e. In **Address \(IP or DNS\)**, enter one of the following:<br>
+    * NAS IP address 
+    * Fully qualified domain name \(FQDN\)
+    If you entered the FQDN, click **Verify** to verify that the name is correct and maps to a valid IP address.
+5. In **Shared secret**, verify that **Manual** is selected, and in **Shared secret**, enter the strong text string that you entered on the VPN server. 
+6. Retype the shared secret in **Confirm shared secret**.
+7. Click **OK** to close the New RADIUS Client dialog box.<br>The VPN Server appears in the list of RADIUS clients that are configured on the NPS server.<!-- is Server Manager still open at this point? -->
+ 
+### Configure Network Policy for VPN Connections
+
+1. In the navigation pane of the NPS console, click **NPS (Local)**.
+2. In Standard Configuration, verify that the **RADIUS server for Dial\-Up or VPN Connections** is selected and click **Configure VPN or Dial-Up**.<br>The Configure VPN or Dial-Up wizard opens.
+3.  Click **Virtual Private Network (VPN) Connections** and click **Next**.
+4.  Under RADIUS Clients, select the name of the VPN Server and click **Next**.
+5. Clear the **Microsoft Encrypted Authentication version 2 (MS-CHAPv2)** check box.
+6.  Select the **Extensible Authentication Protocol** check box, select **Microsoft: Protected EAP \(PEAP\)**, and click **Configure**.<br>The Edit Protected EAP Properties dialog box opens.
+7.  Click **Remove** to remove the Secured Password \(EAP-MSCHAP v2\) EAP type and click **Add**.<br>The Add EAP dialog box opens. 
+8. Click **Smart Card or other certificate** and click **OK**.
+9.  Click **OK** to close Edit Protected EAP Properties and click **Next**.
+10.  In Specify User Groups, click **Add**.<br>The Select Users, Computers, Service Accounts, or Groups dialog box opens.
+11.  Type **VPN Users**, click **OK**, and click **Next**.
+12.  Click **Next** in Specify IP Filters to accept the default selections.
+13.  Click **Next** in Specify Encryption Settings to accept the default selections.<br>Do not make any changes. These settings apply only to Microsoft Point-to-Point Encryption \(MPPE\) connections, which this scenario does not support.
+14.  Click **Next** in Specify a Realm Name to accept the default selections and click **Finish** to close the wizard.
+
+### Autoenrool the NPS Server certificate
+1.  On the computer where NPS is installed, open Windows PowerShell.
+2.  Type **gpupdate**, and then press ENTER.
 
 ## Next steps
 **[Configure DNS and Firewall Settings for Always On VPN](vpn-deploy-dns-firewall.md)**. 
