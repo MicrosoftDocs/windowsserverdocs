@@ -6,16 +6,18 @@ ms.technology: networking
 ms.topic: article
 ms.assetid: 6896e85e-a05e-44c2-9437-85417bed343d
 manager: brianlic
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
+ms.date: 2/25/2018
 ---
 # Install and Configure the NPS Server
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-You can use this section to install Network Policy Server \(NPS\) and perform configuration for Always On VPN.
-
-NPS server processing of connection requests that are sent by the VPN server includes performing authorization - to verify that the user has permission to connect; performing authentication - to verify the user's identity; and performing accounting - to log the aspects of the connection request that you chose when you configured RADIUS accounting in NPS.
+NPS server processing of connection requests that are sent by the VPN server includes performing authorization to:
+- Verify that the user has permission to connect (performing authentication).
+- Verify the user's identity (performing accounting).
+- Log the aspects of the connection request that you chose when you configured RADIUS accounting in NPS.
 
 The steps in this section allow you to complete the following items.
 

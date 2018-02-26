@@ -15,8 +15,7 @@ ms.date: 2/25/2018
 Configure the Server Infrastructure
 ===================================
 
->   Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016,
->   Windows Server 2012 R2, Windows 10
+>   Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
 Configuring the server infrastructure is the first thing you do to deploy Always
 On VPN. This topic provides instructions on how to install and configure the
@@ -142,14 +141,15 @@ STEP 3: Create the Authentication templates
 After you have created the users and servers group, you create one of three authentication templates:
 
 * **User Authentication template**. Choose Microsoft Platform Crypto Provider to improve the certificate's overall security. Microsoft Platform Crypto Provider lets you use the Trusted Platform Module (TPM) on client computers to secure the certificate. For more details, see [Trusted Platform Module Technology Overview](https://docs.microsoft.com/windows/device-security/tpm/trusted-platform-module-overview).
-* **VPN Server Authentication template**. Adding the IP Security (IPsec) IKE Intermediate application policy allows the server to filter certificates if more than one certificate is available with the Server Authentication extended key usage.<br>
+
+* **VPN Server Authentication template**. Adding the IP Security (IPsec) IKE Intermediate application policy allows the server to filter certificates if more than one certificate is available with the Server Authentication extended key usage.
     >[!IMPORTANT] 
     >Because VPN clients access this server from the public Internet, the subject and alternative names are different than the internal server name. As a result, you cannot autoenroll this certificate on VPN servers.
 * **NPS Server Authentication template**. A simple copy of the RAS and IAS Server template secured to the NPS Server group that you created earlier in this section. You will configure this certificate for autoenrollment.
 
 1.  On the CA, open Certification Authority.
 
-2.  In the navigation pane, right-click **Certificate Templates**, and click **Manage**. The Certificate Templates console opens.
+2.  In the navigation pane, right-click **Certificate Templates**, and click **Manage**.<br><br>The Certificate Templates console opens.
 
 3.  Configure the User Authentication template by doing the following:
 
