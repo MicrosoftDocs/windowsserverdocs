@@ -6,35 +6,34 @@ ms.technology: networking
 ms.topic: article
 ms.assetid: 7607a9b7-c9a4-4c4d-8a62-2d4c422e2a1f
 manager: brianlic
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
+ms.date: 2/26/2018
 ---
 # Configure the Remote Access Server for Always On VPN
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-The next step in the deployment process is installing and configuring the Remote Access server role on the VPN server. In Windows Server 2016, the Remote Access server role is a logical grouping of the following related network access technologies:
+The next stop in the Always On VPN deployment process is to install and configure the Remote Access server role on the VPN server. The Remote Access server role includes:
+* Remote Access Service (RAS) 
+* Local area network (LAN) Routing
+* Web Application Proxy
 
-- Remote Access Service (RAS)
-- Routing
-- Web Application Proxy
+RAS allows you to provide network connectivity to remote employees, site-to-site VPN to connect remote office locations over the Internet, and the RAS Gateway, which has multitenant and Border Gateway Protocol (BGP) capabilities for Enterprises and Cloud Service Providers (CSPs).
 
-These technologies are the role services of the Remote Access server role so you can install one or more of these role services. 
-
-When you install the **DirectAccess and VPN \(RAS\)** role service, you are deploying the Remote Access Service Gateway \(**RAS Gateway**\). You can deploy RAS Gateway as a single tenant RAS Gateway virtual private network \(VPN\) server that provides many advanced features and enhanced functionality.
+When you install the Remote Access server role service, you are deploying the Remote Access Service Gateway \(**RAS Gateway**\). You can deploy RAS Gateway as a single tenant RAS Gateway virtual private network \(VPN\) server that provides many advanced features and enhanced functionality.
 
 >[!NOTE]
 >You can also deploy RAS Gateway as a Multitenant VPN server for use with Software Defined Networking \(SDN\), or as a DirectAccess server. For more information, see [RAS Gateway](https://docs.microsoft.com/windows-server/remote/remote-access/ras-gateway/ras-gateway), [Software Defined Networking (SDN)](https://docs.microsoft.com/windows-server/networking/sdn/software-defined-networking), and [DirectAccess](https://docs.microsoft.com/windows-server/remote/remote-access/directaccess/directaccess).
 
+## Prerequisites
+Membership in **Administrators**, or equivalent, is the minimum required to perform these procedures.
 
 ## STEP 1: Install Remote Access as a RAS Gateway VPN Server
 
 Install the Remote Access role as a single tenant RAS Gateway VPN server.<!-- why is this installation for single tenant?  after reading this, and if I want multi tenant, then Always On VPN is not the solution I'm looking for.  Can you install RRAS Gateway VPN Server on a multitentant vpn server? --> For more information, see [Remote Access](https://docs.microsoft.com/windows-server/remote/remote-access/remote-access).
 
->![IMPORTANT]
->Membership in **Administrators**, or equivalent, is the minimum required to perform these procedures.
-
-### Use Windows PowerShell to install Remote Access
+### Use Windows PowerShell 
 
 1. Run Windows PowerShell as Administrator.
 2. Type the following command:<br><br>`Install-WindowsFeature DirectAccess-VPN -IncludeManagementTools`
@@ -46,9 +45,9 @@ After installation successfully completes, the following message appears in Wind
 |------- |--------------| ---------|  --------------|
 |True|No |Success|{RAS Connection Manager Administration Kit|
 
-### Use Server Manager to install Remote Access
+### Use Server Manager 
 
-1.  On the VPN server, in **Server Manager**, click **Manage**, and then click **Add Roles and Features**.<br><br>The Add Roles and Features Wizard opens.
+1.  On the VPN server, in Server Manager, click **Manage**, and then click **Add Roles and Features**.<br><br>The Add Roles and Features Wizard opens.
 
 2.  In **Before you begin**, click **Next**.
 
@@ -77,6 +76,8 @@ After installation successfully completes, the following message appears in Wind
 
 ## STEP 2: Configure Remote Access as a VPN Server
 
+<!-- what's the powershell equivelant?-->
+
 Configure the Remote Access VPN to allow IKEv2 VPN connections, deny connections from other VPN protocols, and assign a static IP address pool for issuance of IP addresses to connecting authorized VPN clients.
 
 1. On the VPN server, in Server Manager, click the **Notifications** flag.
@@ -85,10 +86,11 @@ Configure the Remote Access VPN to allow IKEv2 VPN connections, deny connections
 	>[!NOTE]
 	>The Configure Remote Access wizard might open behind Server Manager. If you think the wizard is taking too long to open, move or minimize Server Manager to find out whether the wizard is behind it. If not, wait for the wizard to initialize.
 
-3.  In **Configure Remote Access**, click **Deploy VPN only**.<br><br>The Routing and Remote Access Microsoft Management Console \(MMC\) opens.
+3.  Click **Deploy VPN only**.<br><br>The Routing and Remote Access Microsoft Management Console \(MMC\) opens.
 
 4.  Right-click the VPN server, and click **Configure and Enable Routing and Remote Access**.<br><br>The Routing and Remote Access Server Setup Wizard opens. 
-5.  In the Routing and Remote Access Server Setup Wizard, click **Next**.
+
+5.  Click **Next**.
 
 6.  In **Configuration**, click **Custom Configuration**, and then click **Next**.
 
@@ -100,7 +102,7 @@ Configure the Remote Access VPN to allow IKEv2 VPN connections, deny connections
 
 10.  In the Remote Access MMC, right\-click the VPN server, and click **Properties**.
 
-11.  In **Properties**, click the **IPv4** tab and do the following:
+11.  Click the **IPv4** tab and do the following:
     a. click **Static address pool**.
 
     b.  Click **Add** to configure an IP address pool.<br><br>The static address pool should contain addresses from the internal perimeter network. These addresses are on the internal-facing network connection on the VPN server, not the corporate network.
@@ -115,7 +117,7 @@ Configure the Remote Access VPN to allow IKEv2 VPN connections, deny connections
     e.  Click **Adapter**.<br><br>The resulting list displays the network adapters that are installed. 
     f. Click the Ethernet adapter that is connected to your internal perimeter network.
 
-12. In **Properties**, click the **Security** tab and do the following:
+12. In Properties, click the **Security** tab and do the following:
     a. Click **Authentication provider** and click **RADIUS Authentication**. 
     b. Click **Configure**.<br><br>The RADIUS Authentication dialog box opens.
     c. Click **Add**.<br><br>The Add RADIUS Server dialog box opens.
@@ -127,32 +129,42 @@ Configure the Remote Access VPN to allow IKEv2 VPN connections, deny connections
     >![IMPORTANT]
     >Save this text string. When you configure the NPS Server on your Organization/Corporate network, you will add this VPN Server as a RADIUS Client. During that configuration, you will use this same shared secret so that the NPS and VPN Servers can communicate.
 
-    h. In **Add RADIUS Server**, review the default settings for **Time-out**, **Initial score**, and **Port**. If necessary, change the values to match the requirements for your environment, and then click **OK**.
+    h. In **Add RADIUS Server**, review the default settings for:
+        * **Time-out**
+        * **Initial score**
+        * **Port**
+        If necessary, change the values to match the requirements for your environment.<br><br>A NAS using a RADIUS infrastructure is also a RADIUS client, sending connection requests and accounting messages to a RADIUS server for authentication, authorization, and accounting.
+    i. Click **OK**.
+    j. Review the setting for **Accounting provider**.<br>
 
-13. In **Properties**, click the **Security** tab, review the setting for **Accounting provider**.<br><br>If you want Remote Access activity logged on the Remote Access server, ensure that **Windows Accounting** is selected. If you want your NPS server to perform accounting services for VPN, change **Accounting provider** to **RADIUS Accounting**, and then configure the NPS server as the accounting provider.
+    |If you want the...  |Then..  |
+    |---------|---------|
+    |Remote Access activity logged on the Remote Access server     |Make sure that **Windows Accounting** is selected.         |
+    |NPS to perfrom accounting services for VPN     |Change **Accounting provider** to **RADIUS Accounting** and then confiture the NPS as the accounting provider.        |
+    
 
-14.  Click **OK** to close the **Properties** dialog box.
+    k.  Click **OK** to close the Properties dialog box.
 
-15.  In the Routing and Remote Access MMC, right-click **Ports,** and then click **Properties**.<br><br>The Ports Properties dialog box opens.
+13.  In the Routing and Remote Access MMC, right-click **Ports,** and then click **Properties**.<br><br>The Ports Properties dialog box opens.
 
-16.  Click **WAN Miniport \(SSTP\)** and do the following:
+14.  Click **WAN Miniport \(SSTP\)** and do the following:
     a. Click **Configure**.<br><br>The Configure Device - WAN Miniport \(SSTP\) dialog box opens.
     b. Clear the **Remote access connections \(inbound only\)** and **Demand-dial routing connections \(inbound and outbound\)** check boxes.
     c. Click **OK**.
-17. Click **WAN Miniport \(L2TP\)** and do the following:
+15. Click **WAN Miniport \(L2TP\)** and do the following:
     a. Click **Configure**.<br><br>The Configure Device - WAN Miniport \(IKEv2\) dialog box opens.
     b. In **Maximum ports**, type the number of ports to match the maximum number of simultaneous VPN connections that you want to support.
     c. Click **OK**.
-18. Click **WAN Miniport \(PPTP\)** and do the following:
+16. Click **WAN Miniport \(PPTP\)** and do the following:
     a. Click **Configure**.<br><br>The Configure Device - WAN Miniport \(IKEv2\) dialog box opens.
     b. In **Maximum ports**, type the number of ports to match the maximum number of simultaneous VPN connections that you want to support.
     c. Click **OK**.
     d. In **Maximum ports**, type the number of ports to match the maximum number of simultaneous VPN connections that you want to support.
     e. Click **OK**.
 
-19. If prompted, click **Yes** to confirm restarting the server.
+17. If prompted, click **Yes** to confirm restarting the server.
 
-20. If prompted, click **Close** to restart the server.
+18. If prompted, click **Close** to restart the server.
 
 ## Next steps
 **[Install and Configure the NPS Server](vpn-deploy-nps.md)**. Install Network Policy Server \(NPS\) and perform configuration for Always On VPN.
