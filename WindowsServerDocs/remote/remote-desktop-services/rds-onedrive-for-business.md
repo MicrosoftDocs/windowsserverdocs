@@ -1,5 +1,5 @@
 ---
-title: RDS and OneDrive for Business in persistent and non-persistent environments
+title: OneDrive for Business and VDI environments
 description: Learn about OneDrive in VDI environments
 ms.prod: windows-server-threshold
 ms.technology: remote-desktop-services
