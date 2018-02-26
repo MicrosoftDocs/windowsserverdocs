@@ -23,7 +23,7 @@ Quorum determines the number of failures that the cluster can sustain while stil
 ### In Windows Server 2016, there are 2 components of the system that have their own quorum mechanisms on an Storage Spaces Direct (S2D) cluster:
 
 - <strong>Cluster Quorum</strong>: This operates at the cluster level (i.e. you can lose nodes and have the cluster stay up)
-- <strong>Pool Quorum</strong>: This operates on the pool level (i.e. you can lose nodes and drives and have the pool stay up)
+- <strong>Pool Quorum</strong>: This operates on the pool level (i.e. you can lose nodes and drives and have the pool stay up). Storage pools were designed to be used in both clustered and non-clustered scenarios, which is why they have a different quorum mechanism.
 
 ## Cluster Quorum Overview
 
@@ -31,7 +31,7 @@ The table below gives an overview of the Cluster Quorum outcomes per scenario:
 
 <table class="tg">
   <tr>
-    <th class="tg-9hbo">Scenario</th>
+    <th class="tg-9hbo">Server Nodes</th>
     <th class="tg-9hbo">Can survive one node failure</th>
     <th class="tg-9hbo">Can survive one node failure, then another</th>
     <th class="tg-9hbo">Can survive two simultaneous node failures</th>
@@ -73,7 +73,7 @@ The table below gives an overview of the Cluster Quorum outcomes per scenario:
     <td class="tg-9hbo">Yes</td>
   </tr>
   <tr>
-    <td class="tg-9hbo">5 ...</td>
+    <td class="tg-9hbo">5 and above</td>
     <td class="tg-9hbo">Yes</td>
     <td class="tg-9hbo">Yes</td>
     <td class="tg-9hbo">Yes</td>
@@ -191,7 +191,7 @@ The table below gives an overview of the Pool Quorum outcomes per scenario:
 
 <table class="tg">
   <tr>
-    <th class="tg-9hbo">Scenario</th>
+    <th class="tg-9hbo">Server Nodes</th>
     <th class="tg-9hbo">Can survive one node failure</th>
     <th class="tg-9hbo">Can survive one node failure, then another</th>
     <th class="tg-9hbo">Can survive two simultaneous node failures</th>
@@ -233,7 +233,7 @@ The table below gives an overview of the Pool Quorum outcomes per scenario:
     <td class="tg-9hbo">Yes</td>
   </tr>
   <tr>
-    <td class="tg-9hbo">5 ...</td>
+    <td class="tg-9hbo">5 and above</td>
     <td class="tg-9hbo">Yes</td>
     <td class="tg-9hbo">Yes</td>
     <td class="tg-9hbo">Yes</td>
