@@ -16,7 +16,7 @@ ms.technology: identity-adds
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Organizations can use Active Directory Domain Services (AD DS) in  Windows Server 2012 / 2012 R2 / 2016  to simplify user and resource management while creating scalable, secure, and manageable infrastructures. You can use AD DS to manage your network infrastructure, including branch office, Microsoft Exchange Server, and multiple forest environments.  
+Organizations can use Active Directory Domain Services (AD DS) in  Windows Server to simplify user and resource management while creating scalable, secure, and manageable infrastructures. You can use AD DS to manage your network infrastructure, including branch office, Microsoft Exchange Server, and multiple forest environments.  
   
 An AD DS deployment project involves three phases: a design phase, a deployment phase, and an operations phase. During the design phase, the design team creates a design for the AD DS logical structure that best meets the needs of each division in the organization that will use the directory service. After the design is approved, the deployment team tests the design in a lab environment and then implements the design in the production environment. Because testing is performed by the deployment team and it potentially affects the design phase, it is an interim activity that overlaps both design and deployment. When the deployment is complete, the operations team is responsible for maintaining the directory service.  
   
