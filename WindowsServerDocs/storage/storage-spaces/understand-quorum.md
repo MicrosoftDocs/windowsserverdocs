@@ -242,13 +242,13 @@ The table below gives an overview of the Pool Quorum outcomes per scenario:
 
 ## How Pool Quorum Works
 
-When drives fail, or when some subset of drives loses contact with another subset, surviving drives need to verify that they constitute the *majority* of the pool to remain online. If they can’t verify that, they’ll go offline.
+When drives fail, or when some subset of drives loses contact with another subset, surviving drives need to verify that they constitute the *majority* of the pool to remain online. If they can’t verify that, they’ll go offline. The pool is the entity that goes offline or stays online based on whether it has enough disks for quorum (50% + 1). The pool resource owner (active cluster node) can be the +1.
 
 But pool quorum works differently from cluster quorum in the following ways:
 
 - the pool uses one node in the cluster as a witness as a tie-breaker to survive half of drives gone (this node that is the pool resource owner)
-- pool quorum does NOT have dynamic quorum
-- pool quorum does NOT implement its own version of removing a vote
+- the pool does NOT have dynamic quorum
+- the pool does NOT implement its own version of removing a vote
 
 ### Examples
 
@@ -273,11 +273,11 @@ But pool quorum works differently from cluster quorum in the following ways:
 ![Pool Quorum 3](media/understand-quorum/pool-3.png)
 
 - Can survive one server failure: <strong>Yes</strong>.
-- Can survive one server failure, then another: <strong>No</strong>.
-- Can survive two server failures at once: <strong>No</strong>. 
+- Can survive one server failure, then another: <strong>Depends </strong>(cannot survive if both nodes 3 and 4 go down, but can survive all other scenarios.
+- Can survive two server failures at once: <strong>Depends </strong>(cannot survive if both nodes 3 and 4 go down, but can survive all other scenarios.
 
 ### Therefore, our guidance is:
 
 - Ensure that each node in your cluster is symmetrical (each node has the same number of drives)
-- Enable 3-way mirror so that you can tolerate a 2 node failure and keep the virtual disks online
-- When a node goes down, diagnose it immediately and attempt to fix it quickly since you are more at risk of losing data with multiple failures.
+- Enable 3-way mirror or dual parity so that you can tolerate a node failures and keep the virtual disks online. See our [volume guidance page](https://docs.microsoft.com/en-us/windows-server/storage/storage-spaces/plan-volumes) for more details.
+- If more than 2 nodes are down, or 2 nodes and a disk on another node are down, volumes may not have access to all 3 copies of their data, and therefore be taken offline and be unavailable. It’s recommended to bring the servers back or replace the disks quickly to ensure the most resiliency for all the data in the volume.
