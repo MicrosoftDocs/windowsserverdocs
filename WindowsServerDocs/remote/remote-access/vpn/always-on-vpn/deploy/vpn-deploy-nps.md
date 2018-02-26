@@ -73,7 +73,7 @@ so that it has permission to access user account information while processing co
 ### Configure RADIUS Accounting for your NPS Server
 1. In the navigation pane of the NPS console, click **Accounting**.
 2. In Details, click **Configure Accounting**.
-3. Follow the instructions in [Configure RADIUS Accounting for your NPS Server](https://docs.microsoft.com/windows-server/networking/technologies/nps/nps-accounting-configure). <!-- what information from the Configure Network Policy Server Accounting section should go in here, even at a high level? -->
+3. Follow the instructions in [Configure RADIUS Accounting for your NPS Server](https://docs.microsoft.com/windows-server/networking/technologies/nps/nps-accounting-configure) for further details. <!-- what information from the Configure Network Policy Server Accounting section should go in here, even at a high level? -->
  
 ### Add the VPN Server as a RADIUS Client in NPS
 
