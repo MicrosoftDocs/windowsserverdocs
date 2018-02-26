@@ -60,7 +60,7 @@ This guide does not provide instructions for deploying the following items.
 - Additional network resources, such as application and file servers, that remote users can access over an Always On VPN connection.
 - Internet connectivity
 
-## Prepare the Remote Access Server
+## STEP 1: Prepare the Remote Access Server
 Before you install the Remote Access server role on the VPN server, you must:
 
 - **Ensure VPN server software and hardware configuration is correct**. 
@@ -74,13 +74,13 @@ Before you install the Remote Access server role on the VPN server, you must:
 
 - **Connect the VPN server to the network**. Install the VPN server on a perimeter network, between the edge firewall and the perimeter firewall.
 
-## Plan Authentication Methods
+## STEP 2: Plan Authentication Methods
 
 IKEv2 is a VPN tunneling protocol described in Internet Engineering Task Force Request for Comments 7296. The primary advantage of IKEv2 is that it tolerates interruptions in the underlying network connection. For example, if the connection is temporarily lost or if a user moves a client computer from one network to another, IKEv2 automatically restores the VPN connection when the network connection is reestablished — all without user intervention.
 
 Configure the Remote Access VPN server to support IKEv2 connections while also disabling unused protocols, which reduces the server’s security footprint. 
 
-## Plan IP Addresses for Remote Clients
+## STEP 3: Plan IP Addresses for Remote Clients
 
 Configure the VPN server to assign addresses to VPN clients from a static address pool that you configure, or you can use IP addresses obtained from a DHCP server. 
 
@@ -94,7 +94,7 @@ Configure the VPN server to assign addresses to VPN clients from a static addres
 
 - **Verify that all VPN users have user accounts in Active Directory User \(AD DS\)**. Before users can connect to the network with VPN connections, they must have user accounts in AD DS.
 
-## Prepare the Routing and Firewall
+## STEP 4: Prepare the Routing and Firewall
 
 The following steps provide instructions on how to make minor adjustments to the firewall configuration to support VPN deployment.
 

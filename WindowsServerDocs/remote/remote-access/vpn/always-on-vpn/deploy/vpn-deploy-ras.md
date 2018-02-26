@@ -133,7 +133,7 @@ Configure the Remote Access VPN to allow IKEv2 VPN connections, deny connections
         * **Time-out**
         * **Initial score**
         * **Port**
-        If necessary, change the values to match the requirements for your environment.<br><br>A NAS using a RADIUS infrastructure is also a RADIUS client, sending connection requests and accounting messages to a RADIUS server for authentication, authorization, and accounting.
+        If necessary, change the values to match the requirements for your environment.<br><br>A NAS is a device that provides some level of access to a larger network. A NAS using a RADIUS infrastructure is also a RADIUS client, sending connection requests and accounting messages to a RADIUS server for authentication, authorization, and accounting.
     i. Click **OK**.
     j. Review the setting for **Accounting provider**.<br>
 
