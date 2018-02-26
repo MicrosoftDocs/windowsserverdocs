@@ -8,7 +8,7 @@ ms.assetid: 6896e85e-a05e-44c2-9437-85417bed343d
 manager: brianlic
 ms.author: pashort
 author: shortpatti
-ms.date: 2/25/2018
+ms.date: 2/26/2018
 ---
 # Install and Configure the NPS Server
 
@@ -38,32 +38,20 @@ Install NPS by using either Windows PowerShell or the Server Manager Add Roles a
 3. Press ENTER.
 
 ### Server Manager
-
-1.  In Server Manager, click **Manage**, and click **Add Roles and Features**.<br><br>The Add Roles and Features Wizard opens.
-
-2.  In **Before You Begin**, click **Next**.
-
-    > [!NOTE]
-    > The **Before You Begin** page of the Add Roles and Features Wizard is not displayed if you have previously selected **Skip this page by default** when the Add Roles and Features Wizard was run.
-
-3.  In **Select Installation Type**, verify that the **Role-Based or feature-based installation** is selected, and click **Next**.
-
-4.  In **Select destination server**, verify that the **Select a server from the server pool** is selected. 
-5. In **Server Pool**, verify that the the local computer is selected.
-6. Click **Next**.
-
-5.  In **Select Server Roles**, in **Roles**, select **Network Policy and Access Services**.<br>A dialog box opens asking if it should add features that are required for Network Policy and Access Services. 
+1. In Server Manager, click **Manage** and click **Add Roles and Features**.<br>The Add Roles and Features Wizard opens.
+2. In **Before You Begin**, click **Next**.<br>The **Before You Begin** page of the Add Roles and Features Wizard is not displayed if you have previously selected **Skip this page by default** when the Add Roles and Features Wizard was run.
+3. In **Select Installation Type**, verify that the **Role-Based or feature-based installation** is selected and click **Next**.
+4. In **Select destination server**, verify that the **Select a server from the server pool** is selected. 
+5. In **Server Pool**, verify that the the local computer is selected and click **Next**.
+7. In **Select Server Roles**, in **Roles**, select **Network Policy and Access Services**.<br>A dialog box opens asking if it should add features that are required for Network Policy and Access Services.<br>
     a. Click **Add Features** and click **Next**
-
-    b. Click **Next** to accept the default feature selections. 
+    b. Click **Next** to accept the default feature selections.
     c. Review the information and click **Next**.
-
-6.  In **Select role services**, click **Network Policy Server**.  
-7. Click **Add Features** and click **Next**.
-
-8.  In **Confirm installation selections**, click **Restart the destination server automatically if required**. 
-9. Click **Yes** and **Install**.<br>The Installation progress page displays status during the installation process. When the process completes, the message "Installation succeeded on _ComputerName_" is displayed, where _ComputerName_ is the name of the computer upon which you installed Network Policy Server. 
-10. Click **Close**.
+8. In **Select role services**, click **Network Policy Server**.
+9. Click **Add Features** and click **Next**.
+10. In **Confirm installation selections**, click **Restart the destination server automatically if required**. 
+11. Click **Yes** and **Install**.<br>The Installation progress page displays status during the installation process. When the process completes, the message "Installation succeeded on _ComputerName_" is displayed, where _ComputerName_ is the name of the computer upon which you installed Network Policy Server. 
+12. Click **Close**.
 
 ## STEP 2: Configure Network Policy Server
 After you install NPS, you have to do basic configuration, set a friendly name, the IP address and a shared secret with the virtual private network (VPN) client. The configuration process includes the following high-level steps:
@@ -78,17 +66,17 @@ After you install NPS, you have to do basic configuration, set a friendly name, 
 
 1. In Server Manager, click **Tools**, and click **Network Policy Server**.<br>The NPS console opens.
 2. Register the NPS Server in Active Directory o that it has permission to access user account information while processing connection requests:
-    a. Right\-click **NPS \(Local\)** and click **Register server in Active Directory**.<br>The Network Policy Server dialog box opens.
-    b. Click **OK** twice.
+   a. Right\-click **NPS \(Local\)** and click **Register server in Active Directory**.<br>The Network Policy Server dialog box opens.
+   b. Click **OK** twice.
 3. Configure RADIUS Accounting for your NPS Server:
     a. In the navigation pane, click **Accounting**.
     b. In Details, click **Configure Accounting**.<br>For more details, see [Configure RADIUS Accounting for your NPS Server](https://docs.microsoft.com/windows-server/networking/technologies/nps/nps-accounting-configure). <!-- what information from the Configure Network Policy Server Accounting section should go in here, even at a high level? -->
 4. Add the VPN Server as a RADIUS Client in NPS:
     a. In the navigation pane, double-click **RADIUS Clients and Servers**. 
-    b. Right-click **RADIUS Clients** and click **New**.<br>The New RADIUS Client dialog box opens.
+    b. Right-click **RADIUS Clients** and click **New**.<br>The New RADIUS Client dialog box opens.<br>
     c. Verify that the **Enable this RADIUS client** check box is selected.
     d. In **Friendly name**, enter a display name for the VPN server. 
-    e. In **Address \(IP or DNS\)**, enter one of the following:
+    e. In **Address \(IP or DNS\)**, enter one of the following:<br>
         * NAS IP address 
         * Fully qualified domain name \(FQDN\)
         If you entered the FQDN, click **Verify** to verify that the name is correct and maps to a valid IP address.
