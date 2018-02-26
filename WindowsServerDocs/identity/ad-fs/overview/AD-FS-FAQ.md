@@ -43,9 +43,6 @@ HTTP/2 support was added in Windows Server 2016, but HTTP/2 can't be used for cl
 ### Is using Windows 2016 WAP Servers to publish the AD FS farm to the internet without upgrading the back-end AD FS farm supported?
 Yes, this configuration is supported, however no new AD FS 2016 features would be supported in this configuration.  This configuration is meant to be temporary during the migration phase from AD FS 2012 R2 to AD FS 2016 and should not be deployed for long periods of time.
 
-### Are third party proxies supported with AD FS?
-Yes, third party proxies can be placed in front of the Web Application Proxy, but any third party proxy must support the [MS-ADFSPIP](https://msdn.microsoft.com/library/dn392811.aspx) protocol to be used in place of the Web Application Proxy.
-
 ## Design
 
 ### What third party multi-factor authentication providers are available for AD FS? 
