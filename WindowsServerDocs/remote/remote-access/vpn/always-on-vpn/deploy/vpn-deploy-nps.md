@@ -60,6 +60,7 @@ After you install NPS, you have to do basic configuration, set a friendly name, 
 * Configure RADIUS Accounting for your NPS Server
 * Add the VPN Server as a RADIUS Client in NPS
 * Configure Network Policy for VPN Connections
+* Record NPS certificate settings
 * Autoenroll the NPS Server certificate
 
 <!-- What are the configuration steps for configuring NPS with powershell? -->
@@ -106,9 +107,32 @@ e. In **Address \(IP or DNS\)**, enter one of the following:<br>
 13.  Click **Next** in Specify Encryption Settings to accept the default selections.<br>Do not make any changes. These settings apply only to Microsoft Point-to-Point Encryption \(MPPE\) connections, which this scenario does not support.
 14.  Click **Next** in Specify a Realm Name to accept the default selections and click **Finish** to close the wizard.
 
-### Autoenrool the NPS Server certificate
-1.  On the computer where NPS is installed, open Windows PowerShell.
-2.  Type **gpupdate**, and then press ENTER.
+### Record NPS certificate settings
+
+Before you can configure the Windows 10 client Always On VPN connections and create the ProfileXML template, you first need to note a few NPS server settings:
+* Host name or FQDN of the NPS server from the server’s certificate
+* Name of the CA that issued the certificate.
+
+1. In the navigation pane of the NPS console, under Policies, click **Network Policies**.
+2. Right-click **Virtual Private Network (VPN) Connections** and click **Properties**.<br>The Virtual Private Network (VPN) Connection Properties dialob box opens.
+3. Click the **Constraints** tab and click **Authentication Methods**.
+4. In **EAP Types**, click **Microsoft: Protected EAP (PEAP)**, click **Edit**, and record the values for: 
+    - **Certificate issued to**
+    - **Issuer**<br>
+    You will use these values in the upcoming VPN template configuration. For example, if the
+    server’s FQDN is nps01.corp.contoso.com and the host name is NPS01, the certificate name is based upon the FQDN or DNS name of the server - for example, nps01.corp.contoso.com.
+5. Cancel the Edit Protected EAP Properties dialog box.
+6. Cancel the Virtual Private network (VPN) Connections Properties dialog box.
+7. Close Network Policy Server.
+
+>[!NOTE] If you have multiple NPS servers, complete these steps on each one so that the VPN profile can verify each of them should they be used. 
+
+### Autoenroll the NPS Server certificate
+1. Open Windows PowerShell as Administrator.
+2. Type **gpupdate**.
+3. Press ENTER.
+4. Restart the NPS Server.
+
 
 ## Next steps
 **[Configure DNS and Firewall Settings for Always On VPN](vpn-deploy-dns-firewall.md)**. 

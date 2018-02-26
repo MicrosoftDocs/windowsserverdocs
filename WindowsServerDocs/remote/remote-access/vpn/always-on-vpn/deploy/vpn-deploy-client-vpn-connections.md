@@ -12,161 +12,56 @@ The final step in the Always On VPN deployment process, unless you are migrating
 You can use several technologies to configure Windows 10 VPN clients, including
 Windows PowerShell, System Center Configuration Manager, and Intune in which all three require an XML VPN profile to configure the appropriate VPN settings.
 
-
-
-The section “Create the ProfileXML configuration files” describes creation of
-the ProfileXML VPN profile that this guide uses.
-
 >[!NOTE] Group Policy does not include administrative templates to configure the Windows 10 Remote Access Always On VPN client, however you can use logon scripts.
 
-In this guide’s scenario, you use Protected Extensible Authentication Protocol
-(PEAP) to secure communication between the client and the server. Unlike a
-simple user name and password, this connection requires a unique
-EAPConfiguration section in the VPN profile to work.
+In this guide’s scenario, you use Protected Extensible Authentication Protocol (PEAP) to secure communication between the client and the server. Unlike a simple user name and password, this connection requires a unique EAPConfiguration section in the VPN profile to work.
 
-Rather than describing how to create the XML markup for that section from
-scratch, you can use the Windows user interface to create a template VPN
-profile, and then use Windows PowerShell to consume the EAPConfiguration portion
-from that template to create the final ProfileXML that you will deploy later in
-the guide.
+Rather than describing how to create the XML markup for that section from scratch, you can use the Windows user interface to create a template VPN profile, and then use Windows PowerShell to consume the EAPConfiguration portion from that template to create the final ProfileXML that you will deploy later in the guide.
 
 ## Prerequisites
 - Make sure you review the [ProfileXML Overview](../profile-overview.md) to have an understanding of the ProfileXML conifuguration files. The ProfileXML Overview section also includes the [MakeProfile.ps1 Full Script](../profile-overview.md#makeprofile-full-script) section includes all of the code to generate two files: VPN_Profile.xml and VPN_Profile.ps1. 
 - Ensure you have the host name or FQDN of the NPS from the server's certificate and the name of the CA that issued the certificate.
 
-## STEP 1: Record NPS certificate settings
+## STEP 1: Configure the template VPN profile on a domain-joined client computer
 
-Before creating the template, you first need to note a few NPS server settings. You need the host name or fully qualified domain name (FQDN) of the NPS server from the server’s certificate and the name of the CA that issued the certificate.
+Now that you have the necessary information, you can configure the template VPN profile on a domain-joined client computer. The type of user account you use, such as standard user or administrator, for this part of the process does not matter.
 
-1.  On your NPS server, open Network Policy Server.
+However, if you have not restarted the computer since configuring certificate autoenrollment, do so before configuring the template VPN connection to ensure you have a usable certificate enrolled on it.
 
-2.  In the Network Policy Server snap-in, under **Policies**, click **Network Policies**.
+>[!NOTE] There is no way to manually add any advanced properties of VPN, such as NRPT rules, Always On, Trusted network detection, etc. In the next step, you create a test VPN connection to verify that the VPN server is configured correctly, and to verify that you can establish a VPN connection to the server.
 
-3.  Right-click **Virtual Private Network (VPN) Connections**, and click **Properties**.
+1.  Sign into a domain-joined client computer as a member of the **VPN Users** group.
+2.  On the Start menu, type **VPN** and press Enter.
+3.  Click **Add a VPN connection** and do the following:
+    a.  In the **VPN Provider** list, select **Windows (built-in)**.
+    b.  In **Connection Name**, type **Template**.
+    c.  In **Server name or address**, enter the **external** FQDN of your VPN server, for example, **vpn.contoso.com**.
+    d.  Click **Save**.
+4.  In the right pane, under **Related Settings**, click **Change adapter options**.
+5. Right-click **Template**, and click **Properties** and do the following:
+    a. Click the **Security** tab, in **Type of VPN**, select **IKEv2**.
+    b. In **Data encryption**, click **Maximum strength encryption**.
+    c. Click the **Use Extensible Authentication Protocol (EAP)** check box and then select **Microsoft: Protected EAP (PEAP) (encryption enabled)** from the list.
+    d. Click **Properties** to open the Protected EAP Properties dialog box.
+    e. In the **Connect to these servers** box, type the name of the NPS server, for example, NPS01.<br>The server name you type must match the name in the certificate. You recovered this name earlier in this section. If the name does not match, the connection will fail, stating that “The connection was prevented because of a policy configured on your RAS/VPN server.”
+    f.  Under **Trusted Root Certification Authorities**, select the root CA that issued the NPS server’s certificate, for example, contoso-CA.
+    c.  In Notifications before connecting, select **Don’t ask user to authorize new servers or trusted CAs** from the list.
+    d.  In Select Authentication Method, select **Smart Card or other certificate** from the list and click **Configure**.<br>The Smart Card or other Certificate Properties dialog opens.
+    e.  Click **Use a certificate on this computer**.
+    f.  Click the **Connect to these servers** check box and enter the name of the NPS server.
+    g.  Under **Trusted Root Certification Authorities**, select the root CA that issued the NPS server’s certificate.
+    h.  Select the **Don’t prompt user to authorize new servers or trusted certification authorities** check box.
+    i.  Click **OK** to close the Smart Card or other Certificate Properties dialog box.
+    j.  Click **OK** to close the Protected EAP Properties dialog box.
+6. Click **OK** to close the Template Properties dialog box.
+7. Close the Network Connections window.
+8. In Settings, test the VPN by clicking **Template**, and clicking **Connect**.
 
-4.  On the Virtual Private Network (VPN) Connections Properties dialog box, on
-    the **Constraints** tab, click **Authentication Methods**.
+>[!IMPORTANT] Make sure that the template VPN connection to your VPN server is successful. Doing so ensures that the EAP settings are correct before you use them in the next example. You must connect at least once before continuing; otherwise, the profile will not contain all the information necessary to connect to the VPN.
 
-5.  In **EAP Types**, click **Microsoft: Protected EAP (PEAP)**, and then click
-    **Edit**.
+## STEP 2: Prepare and create the ProfileXML configuration files
 
-6.  Record the values for **Certificate issued to** and **Issuer**. You will use
-    these values in the upcoming VPN template configuration. For example, if the
-    server’s FQDN is nps01.corp.contoso.com and the host name is NPS01, the
-    certificate name is based upon the FQDN or DNS name of the server - for
-    example, nps01.corp.contoso.com.
-
-7.  Cancel the Edit Protected EAP Properties dialog box.
-
-8.  Cancel the Virtual Private network (VPN) Connections Properties dialog box.
-
-9.  Close Network Policy Server.
-
->   [!NOTE] If you have multiple NPS servers, complete these steps on each one
->   so that the VPN profile can verify each of them should they be used.
-
-## STEP 2: Configure the template VPN profile on a domain-joined client computer
-
-Now that you have the necessary information, configure the template VPN profile
-on a domain-joined client computer. The type of user account you use (i.e.,
-standard user or administrator) for this part of the process does not matter.
-
-However, if you haven’t restarted the computer since configuring certificate
-autoenrollment, do so before configuring the template VPN connection to ensure
-you have a usable certificate enrolled on it.
-
->   [!NOTE] There is no way to manually add any advanced properties of VPN, such
->   as NRPT rules, Always On, Trusted network detection, etc. In the next step,
->   you create a test VPN connection to verify that the VPN server is configured
->   correctly, and to verify that you can establish a VPN connection to the
->   server.
-
-1.  Sign in to a domain-joined client computer as a member of the **VPN Users**
-    group.
-
-2.  On the Start menu, type **VPN**, and press Enter.
-
-3.  In the details pane, click **Add a VPN connection**.
-
-4.  In the **VPN Provider** list, click **Windows (built-in)**.
-
-5.  In **Connection Name**, type **Template**.
-
-6.  In **Server name or address**, type the **external** FQDN of your VPN server
-    (for example, **vpn.contoso.com**).
-
-7.  Click **Save**.
-
-8.  Under **Related Settings**, click **Change adapter options**.
-
-9.  Right-click **Template**, and click **Properties**.
-
-10. On the **Security** tab, in **Type of VPN**, click **IKEv2**.
-
-11. In **Data encryption**, click **Maximum strength encryption**.
-
-12. Click **Use Extensible Authentication Protocol (EAP)**; then, in **Use
-    Extensible Authentication Protocol (EAP)**, click **Microsoft: Protected EAP
-    (PEAP) (encryption enabled)**.
-
-13. Click **Properties** to open the Protected EAP Properties dialog box, and
-    complete the following steps:
-
-14. In the **Connect to these servers** box, type the name of the NPS server
-    that you retrieved from the NPS server authentication settings earlier in
-    this section (e.g., NPS01).
-
->   [!NOTE] The server name you type must match the name in the certificate. You
->   recovered this name earlier in this section. If the name does not match, the
->   connection will fail, stating that “The connection was prevented because of
->   a policy configured on your RAS/VPN server.”
-
-1.  Under **Trusted Root Certification Authorities**, select the root CA that
-    issued the NPS server’s certificate (e.g., contoso-CA).
-
-2.  In **Notifications before connecting**, click **Don’t ask user to authorize
-    new servers or trusted CAs**.
-
-3.  In **Select Authentication Method**, click **Smart Card or other
-    certificate**, and click **Configure**.
-
-4.  On the Smart Card or other Certificate Properties dialog box, click **Use a
-    certificate on this computer**.
-
-5.  In the **Connect to these servers** box, type the name of the NPS server you
-    retrieved from the NPS server authentication settings in the previous steps.
-
-6.  Under **Trusted Root Certification Authorities**, select the root CA that
-    issued the NPS server’s certificate.
-
-7.  Select the **Don’t prompt user to authorize new servers or trusted
-    certification authorities** check box.
-
-8.  Click **OK** to close the Smart Card or other Certificate Properties dialog
-    box.
-
-9.  Click **OK** to close the Protected EAP Properties dialog box.
-
-10. Click **OK** to close the Template Properties dialog box.
-
-11. Close the Network Connections window.
-
-12. In Settings, test the VPN by clicking **Template**, and clicking
-    **Connect**.
-
->   [!IMPORTANT] Make sure that the template VPN connection to your VPN server
->   is successful. Doing so ensures that the EAP settings are correct before you
->   use them in the next example. You must connect at least once before
->   continuing; otherwise, the profile will not contain all the information
->   necessary to connect to the VPN.
-
-## STEP 3: Create the ProfileXML configuration files
-
-Before completing this section, make sure you have created and tested the
-template VPN connection that the section [Manually create a template connection
-profile](#bkmk_profile) describes. Testing the VPN connection is necessary to
-ensure that the profile contains all the information required to connect to the
-VPN.
+Before completing this section, make sure you have tested the VPN connection to ensure that the profile contains all the information required to connect to the VPN.
 
 The MakeProfile.ps1 Windows PowerShell script creates two files on the desktop,
 both of which contain **EAPConfiguration** tags based on the template connection
@@ -182,20 +77,53 @@ profile you created previously:
     Center Configuration Manager. You cannot run this script in a Remote Desktop
     session, including a Hyper-V enhanced session.
 
->   [!IMPORTANT] The example commands below require Windows 10 Build 1607 or
->   later.
+>[!IMPORTANT] The example commands below require Windows 10 Build 1607 or later.
 
-1.  Sign in to the domain-joined client computer containing the template VPN profile with the same user account that the section “Manually create a template connection profile” described.
+1. On the domain-joined client computer, open Windows PowerShell as an administrator.
+2. Copy the MakeProfile.ps1 Full Script from the [ProfileXML Overview](../profilexml-overview.md) section and paste it into Windows PowerShell.
+3. Customize the following parameters described in the comments. 
+    - **\$Template**. The name of the template from which to retrieve the EAP
+configuration.
+    - **\$ProfileName**. Unique alpha numeric identifier for the profile. The profile
+name must not include a forward slash (/). If the profile name has a space or
+other non-alphanumeric character, it must be properly escaped according to the
+URL encoding standard.
+    - **\$Servers**. Public or routable IP address or DNS name for the VPN gateway. It
+can point to the external IP of a gateway or a virtual IP for a server farm.
+Examples, 208.147.66.130 or vpn.contoso.com.
+    - **\$DnsSuffix**. Specifies one or more comma separated DNS suffixes. The first
+in the list is also used as the primary connection specific DNS suffix for the
+VPN Interface. The entire list will also be added into the SuffixSearchList.
+    - **\$DomainName**. Used to indicate the namespace to which the policy applies.
+When a Name query is issued, the DNS client compares the name in the query to
+all of the namespaces under DomainNameInformationList to find a match. This
+parameter can be one of the following types: FQDN and Suffix.
+    - **\$TrustedNetwork**. Comma separated string to identify the trusted network.
+VPN will not connect automatically when the user is on their corporate wireless
+network where protected resources are directly accessible to the device.
+    - **\$DNSServers**. List of comma separated DNS Server IP addresses to use for the
+namespace. 
+4. Run the **MakeProfile.ps1** script to generate VPN_Profile.xml and VPN_Profile.ps1 on the desktop.
 
-2.  Copy the [MakeProfile.ps1 script](../profilexml-overview.md) and paste it into Windows PowerShell integrated scripting environment (ISE), and customize the parameters described in the comments. These are \$Template, \$ProfileName, \$Servers, \$DnsSuffix, \$DomainName, \$TrustedNetwork, and \$DNSServers. A full description of each setting is in the comments.
 
-3.  Run the script to generate VPN_Profile.xml and VPN_Profile.ps1 on the desktop.
 
-### STEP 3: Prepare and create the profile XML
+### Example values for parameters 
 
-The following example commands get EAP settings from the template profile.
+Ensure that you change these values for your environment.
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
+$TemplateName = 'Template'
+$ProfileName = 'Contoso AlwaysOn VPN'
+$Servers = 'vpn.contoso.com'
+$DnsSuffix = 'corp.contoso.com'
+$DomainName = '.corp.contoso.com'
+$DNSServers = '10.10.0.2,10.10.0.3'
+$TrustedNetwork = 'corp.contoso.com'
+```
+
+### Example commands get EAP settings from the template profile
+
+```
 $Connection = Get-VpnConnection -Name $TemplateName
 if(!$Connection)
 {
@@ -204,11 +132,10 @@ Write-Host "$Message"
 exit
 }
 $EAPSettings= $Connection.EapConfigXmlStream.InnerXml
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
 
-### Create the profile XML
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+### Example of ProfileXML
+```
 $ProfileXML =
 '<VPNProfile>
   <DnsSuffix>' + $DnsSuffix + '</DnsSuffix>
@@ -233,15 +160,15 @@ $ProfileXML =
 <DnsServers>' + $DNSServers + '</DnsServers>
 </DomainNameInformation>
 </VPNProfile>'
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
 
 ### Output VPN_Profile.xml for Intune
 
 You can use the following example command to save the profile XML file.
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
 $ProfileXML | Out-File -FilePath ($env:USERPROFILE + '\desktop\VPN_Profile.xml')
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
 
 ### Output VPN_Profile.ps1 for the desktop and System Center Configuration Manager
 
