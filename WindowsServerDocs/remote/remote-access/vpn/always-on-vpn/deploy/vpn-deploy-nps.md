@@ -56,22 +56,22 @@ Install NPS by using either Windows PowerShell or the Server Manager Add Roles a
 ## STEP 2: Configure Network Policy Server
 After you install NPS, you have to do basic configuration, set a friendly name, the IP address and a shared secret with the virtual private network (VPN) client. The configuration process includes the following high-level steps:
 
-- Register the NPS Server in Active Directory
-- Configure RADIUS Accounting for your NPS Server
-- Add the VPN Server as a RADIUS Client in NPS
-- Configure Network Policy for VPN Connections
-- Autoenroll the NPS Server certificate
+* Register the NPS Server in Active Directory
+* Configure RADIUS Accounting for your NPS Server
+* Add the VPN Server as a RADIUS Client in NPS
+* Configure Network Policy for VPN Connections
+* Autoenroll the NPS Server certificate
 
 <!-- What are the configuration steps for configuring NPS with powershell? -->
 
 1. In Server Manager, click **Tools**, and click **Network Policy Server**.<br>The NPS console opens.
-2. Register the NPS Server in Active Directory o that it has permission to access user account information while processing connection requests:
+1. Register the NPS Server in Active Directory o that it has permission to access user account information while processing connection requests:
    a. Right\-click **NPS \(Local\)** and click **Register server in Active Directory**.<br>The Network Policy Server dialog box opens.
    b. Click **OK** twice.
-3. Configure RADIUS Accounting for your NPS Server:
+2. Configure RADIUS Accounting for your NPS Server:
     a. In the navigation pane, click **Accounting**.
     b. In Details, click **Configure Accounting**.<br>For more details, see [Configure RADIUS Accounting for your NPS Server](https://docs.microsoft.com/windows-server/networking/technologies/nps/nps-accounting-configure). <!-- what information from the Configure Network Policy Server Accounting section should go in here, even at a high level? -->
-4. Add the VPN Server as a RADIUS Client in NPS:
+3. Add the VPN Server as a RADIUS Client in NPS:
     a. In the navigation pane, double-click **RADIUS Clients and Servers**. 
     b. Right-click **RADIUS Clients** and click **New**.<br>The New RADIUS Client dialog box opens.<br>
     c. Verify that the **Enable this RADIUS client** check box is selected.
@@ -83,7 +83,7 @@ After you install NPS, you have to do basic configuration, set a friendly name, 
     f. In **Shared secret**, verify that **Manual** is selected, and in **Shared secret**, enter the strong text string that you entered on the VPN server. 
     g. Retype the shared secret in **Confirm shared secret**.
     h. Click **OK** to close the New RADIUS Client dialog box.<br>The VPN Server appears in the list of RADIUS clients that are configured on the NPS server.<!-- is Server Manager still open at this point? -->
-5. Configure Network Policy for VPN Connections:
+4. Configure Network Policy for VPN Connections:
     a. In the navigation pane, click **NPS (Local)**.
     b. In Standard Configuration, verify that the **RADIUS server for Dial\-Up or VPN Connections** is selected and click **Configure VPN or Dial-Up**.<br>The Configure VPN or Dial-Up wizard opens.
     c.  Click **Virtual Private Network (VPN) Connections** and click **Next**.
@@ -98,7 +98,7 @@ After you install NPS, you have to do basic configuration, set a friendly name, 
     l.  Click **Next** in Specify IP Filters to accept the default selections.
     m.  Click **Next** in Specify Encryption Settings to accept the default selections.<br>Do not make any changes. These settings apply only to Microsoft Point-to-Point Encryption \(MPPE\) connections, which this scenario doesn’t support.
     n.  Click **Next** in Specify a Realm Name to accept the default selections and click **Finish** to close the wizard.
-6. Autoenrool the NPS Server certificate:
+5. Autoenrool the NPS Server certificate:
     a.  On the computer where NPS is installed, open Windows PowerShell.
     b.  Type **gpupdate**, and then press ENTER.
 
