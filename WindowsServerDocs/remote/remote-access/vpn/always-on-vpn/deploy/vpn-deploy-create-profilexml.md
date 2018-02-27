@@ -7,10 +7,8 @@ author: shortpatti
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-The final step in the Always On VPN deployment process, unless you are migrating from DirectAccess to Always On VPN, is to configure the Always On VPN connection in Windows 10 client.
 
-You can use several technologies to configure Windows 10 VPN clients, including
-Windows PowerShell, System Center Configuration Manager, and Intune in which all three require an XML VPN profile to configure the appropriate VPN settings.
+
 
 >[!NOTE] Group Policy does not include administrative templates to configure the Windows 10 Remote Access Always On VPN client, however you can use logon scripts.
 

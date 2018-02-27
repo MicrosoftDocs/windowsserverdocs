@@ -13,7 +13,8 @@
 ##### [Step 2: Configure the Remote Access Server for Always On VPN](remote-access/vpn/always-on-vpn/deploy/vpn-deploy-ras.md)
 ##### [Step 3:Install and Configure the NPS Server](remote-access/vpn/always-on-vpn/deploy/vpn-deploy-nps.md)
 ##### [Step 4: Configure DNS and Firewall Settings](remote-access/vpn/always-on-vpn/deploy/vpn-deploy-dns-firewall.md)
-##### [Step 5: Configure Windows 10 Client Always On VPN Connections](remote-access/vpn/always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md)
+##### [Step 5: Create the ProfileXML for Always On VPN Connections](remote-access/vpn/always-on-vpn/deploy/vpn-deploy-create-profilexml.md)
+##### [Step 6: Configure Windows 10 Client Always On VPN Connections](remote-access/vpn/always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md)
 
 #### [Migrate from DirectAccess to Always On VPN](remote-access/da-always-on-vpn-migration/da-always-on-migration-overview.md)
 ##### [Plan your migration from DirectAccess to Always On VPN](remote-access/da-always-on-vpn-migration/da-always-on-migration-planning.md)
