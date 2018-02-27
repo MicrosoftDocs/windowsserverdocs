@@ -163,7 +163,7 @@ There are two things that might cause this:
 
 If your connection issue is caused by the certificate, close the browser, export the certificate and install it manually on the client machine's trusted root store, then relaunch the browser.
 
-If installing the certificate doesn't solve the connectivity problem, then the issue might be that your RD Gateway machine isn't up to date. Make sure that you have [this update](https://support.microsoft.com/en-us/help/4025334/windows-10-update-kb4025334) installed to the machine.
+If installing the certificate doesn't solve the connectivity problem, then the issue might be that your RD Gateway machine isn't up to date. Make sure that you have installed [this update](https://support.microsoft.com/en-us/help/4025334/windows-10-update-kb4025334) to the machine.
 
 If you're getting a "mismatched certificate" error when you can't connect, then you'll need to check the RD Broker machine's certificate. The error message will show the thumbprint of the expected certificate. Search the RD Broker machine's certmgr using that thumbprint to find the right certificate. After making sure the certificate hasn'te xpired, copy the certificate in .cer file format to the RDWeb machine and run the following command on the RDWeb machine with the bracketed value replaced by the certificate's file path:
 
