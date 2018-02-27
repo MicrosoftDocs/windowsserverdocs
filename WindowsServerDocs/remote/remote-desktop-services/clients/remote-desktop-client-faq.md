@@ -144,6 +144,33 @@ This feature is not supported at the moment, but there are plans to implement it
 
 This feature is not supported at the moment, but there are plans to implement it in future versions.
 
+### Why does my browser show a security warning when I try to access the web client?
+
+The RDWA role might not be using a trusted certificate. If it isn't, export the certificate and install it manually on the client machine to the trusted root store, then relaunch the browser.
+
+If that doesn't work, that means your server name in the web client URL doesn't exactly match the name provided by the RDWeb certificate. Make sure you're using the FQDN of the machine hosting the RDWeb role.
+
+### Why am I getting an "unsupported browser" error when launching the web client in IE 11?
+
+This is an issue with your browser's settings. To fix this, open up "Compatibility View settings" in your browser, then uncheck the "Display intranet sites in Compatibility view" option's checkbox.
+
+### Why can't I connect to the web client when I can see the feed?
+
+There are two things that might cause this:
+
+- The RD Gateway role isn't using a trusted public certificate.
+- The RD Gateway machine isn't up to date.
+
+If your connection issue is caused by the certificate, close the browser, export the certificate and install it manually on the client machine's trusted root store, then relaunch the browser.
+
+If installing the certificate doesn't solve the connectivity problem, then the issue might be that your RD Gateway machine isn't up to date. Make sure that you have [this update](https://support.microsoft.com/en-us/help/4025334/windows-10-update-kb4025334) installed to the machine.
+
+If you're getting a "mismatched certificate" error when you can't connect, then you'll need to check the RD Broker machine's certificate. The error message will show the thumbprint of the expected certificate. Search the RD Broker machine's certmgr using that thumbprint to find the right certificate. After making sure the certificate hasn'te xpired, copy the certificate in .cer file format to the RDWeb machine and run the following command on the RDWeb machine with the bracketed value replaced by the certificate's file path:
+
+```PowerShell
+Import-RDWebClientBrokerCert <cert file path>
+```
+
 ## Monitors, audio, and mouse
 
 ### How do I use all of my monitors?
@@ -226,4 +253,3 @@ This error happens when a Resource Authorization Policy on the gateway server st
 
 - The remote PC name is the same as the name of the gateway. Then, when you try to connect to the remote PC, the connection goes to the gateway instead, which you probably don't have permission to access. If you need to connect to the gateway, do not use the external gateway name as PC name. Instead use "localhost" or the IP address (127.0.0.1), or the internal server name.
 - Your user account isn't a member of the user group for remote access.
-
