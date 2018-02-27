@@ -1,18 +1,18 @@
 ---
 ms.assetid: 5052f13c-ff35-471d-bff5-00b5dd24f8aa
-title: AD FS On-behalf-of Authentication in Windows Server 2016
+title: Build a multi-tiered application using On-Behalf-Of (OBO) using OAuth with AD FS 2016
 description:
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: mtillman
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 
 ms.technology: identity-adfs
 ---
 
-# AD FS On-behalf-of Authentication in Windows Server 2016
+# Build a multi-tiered application using On-Behalf-Of (OBO) using OAuth with AD FS 2016
 
 >Applies To: Windows Server 2016
 
@@ -495,4 +495,5 @@ In the first interaction, we present the access code to the token endpoint and g
 In the second interaction with the token endpoint, you can see that we have **requested_token_use** set as **on_behalf_of** and we are using the access token obtained for the middle-tier web service, i.e. https://localhost:44321/ as the assertion to obtain the on-behalf-of token.
 ![AD FS OBO](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO23.PNG)
 
-
+## Next Steps
+[AD FS Development](../../ad-fs/AD-FS-Development.md)  
