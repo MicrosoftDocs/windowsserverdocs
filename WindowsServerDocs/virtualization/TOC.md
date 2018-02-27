@@ -45,6 +45,7 @@
 ##### [Shield an existing VM](guarded-fabric-shielded-vm/guarded-fabric-vm-shielding-helper-vhd.md)
 ### [Manage](guarded-fabric-shielded-vm/guarded-fabric-manage-overview.md)
 #### [Manage the Host Guardian Service](guarded-fabric-shielded-vm/guarded-fabric-manage-hgs.md)
+#### [Branch office considerations](guarded-fabric-shielded-vm/guarded-fabric-manage-branch-office.md)
 ### [Troubleshoot](guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-overview.md)
 #### [Guarded Fabric Diagnostic Tool](guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-diagnostics.md)
 #### [HGS](guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-hgs.md)
