@@ -22,6 +22,7 @@ Now that you've set up the Remote Desktop client on your device (Android, Mac, i
 
 - [Setting up](#Setting-up)
 - [Connections, gateway, and networks](#connection-gateway-and-networks)
+- [Web client](#web-client)
 - [Monitors, audio, and mouse](#monitors-audio-and-mouse)
 - [Mac hardware](#mac-client---hardware-questions)
 - [Specific error messages](#specific-errors)
@@ -58,7 +59,6 @@ For Windows 8.1, follow the instructions to allow remote connections in [Connect
 > You can’t connect to a PC that's asleep or hibernating, so make sure the settings for sleep and hibernation on the remote PC are set to **Never** (hibernation isn't available on all PCs.).
 
 When you want to connect to a PC, you need the full name. You can find this information in the **System** settings.
-
 
 ## Connection, gateway, and networks
 
@@ -173,7 +173,7 @@ In order to make use of the right-click inside an open session you have three op
 No, the Remote Desktop client doesn't support AirPrint. (This is true for both Mac and iOS clients.)
 
 ### Why do incorrect characters appear in the session?
-If you are using an international keyboard, you might see an issue where the characters that appear in the session do match the characters you typed on the Mac keyboard. 
+If you are using an international keyboard, you might see an issue where the characters that appear in the session do match the characters you typed on the Mac keyboard.
 
 This can occur in the following scenarios:
 
