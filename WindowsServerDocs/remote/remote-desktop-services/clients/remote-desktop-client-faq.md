@@ -154,7 +154,7 @@ If that doesn't work, that means your server name in the web client URL doesn't 
 
 This is an issue with your browser's settings. To fix this, open up "Compatibility View settings" in your browser, then uncheck the "Display intranet sites in Compatibility view" option's checkbox.
 
-### Why can't I connect to the web client when I can see the feed?
+### Why can't I connect to the web client even though I can see the feed?
 
 There are two things that might cause this:
 
