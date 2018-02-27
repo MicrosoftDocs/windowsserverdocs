@@ -71,9 +71,5 @@ To find out if your Exchange server that you connect through RPC/HTTP is accessi
 ```
 rpcping /t ncacn_http /s exchange_server /o RpcProxy=front_end_proxy /P "username,domain,*" /H Basic /u NTLM /a connect /F 3
 ```
-<Here is where you put a detailed description of another example.>
-```
-This /is /a: different  /example
-```
 ## additional references
 -   [Command-Line Syntax Key](command-line-syntax-key.md)
