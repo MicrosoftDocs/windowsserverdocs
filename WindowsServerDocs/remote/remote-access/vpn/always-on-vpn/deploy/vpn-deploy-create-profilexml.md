@@ -8,17 +8,16 @@ author: shortpatti
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-
-
-
->[!NOTE] Group Policy does not include administrative templates to configure the Windows 10 Remote Access Always On VPN client, however you can use logon scripts.
-
 In this guide’s scenario, you use Protected Extensible Authentication Protocol (PEAP) to secure communication between the client and the server. Unlike a simple user name and password, this connection requires a unique EAPConfiguration section in the VPN profile to work.
 
 Rather than describing how to create the XML markup for that section from scratch, you can use the Windows user interface to create a template VPN profile, and then use Windows PowerShell to consume the EAPConfiguration portion from that template to create the final ProfileXML that you will deploy later in the guide.
 
+>[!NOTE] Group Policy does not include administrative templates to configure the Windows 10 Remote Access Always On VPN client, however you can use logon scripts.
+
+
+
 ## Prerequisites
-- Make sure you review the [ProfileXML Overview](../profile-overview.md) to have an understanding of the ProfileXML conifuguration files. The ProfileXML Overview section also includes the [MakeProfile.ps1 Full Script](../profile-overview.md#makeprofile-full-script) section includes all of the code to generate two files: VPN_Profile.xml and VPN_Profile.ps1. 
+- Make sure you review the [ProfileXML Overview](../../profile-overview.md) to have an understanding of the ProfileXML conifuguration files. The ProfileXML Overview section also includes the [MakeProfile.ps1 Full Script](../../profile-overview.md#makeprofile-full-script) section includes all of the code to generate two files: VPN_Profile.xml and VPN_Profile.ps1. 
 - Ensure you have the host name or FQDN of the NPS from the server's certificate and the name of the CA that issued the certificate.
 
 ## STEP 1: Configure the template VPN profile on a domain-joined client computer
@@ -175,7 +174,7 @@ the ProfileXML node in the VPNv2 CSP.
 You can use this script on the Windows 10 desktop or in System Center
 Configuration Manager.
 
-### Define key VPN profile parameters
+## STEP 3: Define key VPN profile parameters
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 $Script = '$ProfileName = ''' + $ProfileName + '''
@@ -189,7 +188,7 @@ Define VPN ProfileXML
 $ProfileXML = ''' + $ProfileXML + '''
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-### Escape special characters in the profile
+## STEP 4: Escape special characters in the profile
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 $ProfileXML = $ProfileXML -replace ''<'', ''&lt;''
@@ -197,7 +196,7 @@ $ProfileXML = $ProfileXML -replace ''>'', ''&gt;''
 $ProfileXML = $ProfileXML -replace ''"'', ''&quot;''
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-### Define WMI-to-CSP Bridge properties
+## STEP 5: Define WMI-to-CSP Bridge properties
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 $nodeCSPURI = ''./Vendor/MSFT/VPNv2''
@@ -205,7 +204,7 @@ $namespaceName = ''root\cimv2\mdm\dmmap''
 $className = ''MDM_VPNv2_01''
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-### Determine user SID for VPN profile:
+## STEP 6: Determine user SID for VPN profile:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 try
@@ -225,7 +224,7 @@ exit
 }
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-### Define WMI session:
+## STEP 7: Define WMI session:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 $session = New-CimSession
@@ -234,7 +233,7 @@ $options.SetCustomOption(''PolicyPlatformContext_PrincipalContext_Type'', ''Poli
 $options.SetCustomOption(''PolicyPlatformContext_PrincipalContext_Id'', "$SidValue", $false)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-### Detect and delete previous VPN profile:
+## STEP 8: Detect and delete previous VPN profile:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 try
@@ -262,7 +261,7 @@ catch [Exception]
 }
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-### Create the VPN profile:
+## STEP 9: Create the VPN profile:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 try
@@ -291,7 +290,7 @@ $Message = "Script Complete"
 Write-Host "$Message"'
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-### Save the profile XML file
+## STEP 10: Save the profile XML file
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 $Script | Out-File -FilePath ($env:USERPROFILE + '\desktop\VPN_Profile.ps1')

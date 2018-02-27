@@ -22,7 +22,7 @@ In this guide’s scenario, you use Protected Extensible Authentication Protocol
 Rather than describing how to create the XML markup for that section from scratch, you can use the Windows user interface to create a template VPN profile, and then use Windows PowerShell to consume the EAPConfiguration portion from that template to create the final ProfileXML that you will deploy later in the guide.
 
 ## Prerequisites
-- Make sure you review the [ProfileXML Overview](../profile-overview.md) to have an understanding of the ProfileXML conifuguration files. The ProfileXML Overview section also includes the [MakeProfile.ps1 Full Script](../profile-overview.md#makeprofile-full-script) section includes all of the code to generate two files: VPN_Profile.xml and VPN_Profile.ps1. 
+- Make sure you review the [ProfileXML Overview](../../profile-overview.md) to have an understanding of the ProfileXML conifuguration files. The ProfileXML Overview section also includes the [MakeProfile.ps1 Full Script](../../profile-overview.md#makeprofile-full-script) section includes all of the code to generate two files: VPN_Profile.xml and VPN_Profile.ps1. 
 - Ensure you have the host name or FQDN of the NPS from the server's certificate and the name of the CA that issued the certificate.
 
 
