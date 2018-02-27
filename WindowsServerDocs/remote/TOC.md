@@ -6,6 +6,8 @@
 ### [Always On VPN](remote-access/vpn/always-on-vpn/deploy/always-on-vpn-top.md)
 #### [Features Comparison of Always On VPN and DirectAccess](remote-access/vpn/vpn-map-da.md)
 #### [Always On VPN Technology Overview](remote-access/vpn/always-on-vpn/deploy/always-on-vpn-technologies.md)
+#### [VPN Device Tunnels in Always On VPN](remote-access/vpn/vpn-device-tunnel-config.md)
+#### [ProfileXML Configuration Files Overview]
 #### [Overview of the Always On VPN Deployment](remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-overview.md)
 #### [Plan and stage your environment](remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-planning.md)
 #### [Deploy Always On VPN Connections](remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-deployment.md)
@@ -15,12 +17,9 @@
 ##### [Step 4: Configure DNS and Firewall Settings](remote-access/vpn/always-on-vpn/deploy/vpn-deploy-dns-firewall.md)
 ##### [Step 5: Create the ProfileXML for Always On VPN Connections](remote-access/vpn/always-on-vpn/deploy/vpn-deploy-create-profilexml.md)
 ##### [Step 6: Configure Windows 10 Client Always On VPN Connections](remote-access/vpn/always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md)
-
 #### [Migrate from DirectAccess to Always On VPN](remote-access/da-always-on-vpn-migration/da-always-on-migration-overview.md)
 ##### [Plan your migration from DirectAccess to Always On VPN](remote-access/da-always-on-vpn-migration/da-always-on-migration-planning.md)
 ##### [Migrate to Always On VPN](remote-access/da-always-on-vpn-migration/da-always-on-migration-deploy.md)
-
-#### [VPN Device Tunnels in Always On VPN](remote-access/vpn/vpn-device-tunnel-config.md)
 #### [Troubleshoot Always On VPN](remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting.md)
 
 ### [Border Gateway Protocol (BGP)](remote-access/bgp/Border-Gateway-Protocol-BGP.md)
@@ -101,9 +100,11 @@
 ###### [Step 1: Configure the DirectAccess Infrastructure](remote-access/directaccess/add-to-existing-vpn/step-1-configure-da-inf-davpn.md)
 ###### [Step 2: Configure the DirectAccess-VPN Server](remote-access/directaccess/add-to-existing-vpn/step-2-configure-server-davpn.md)
 ###### [Step 3: Verify the Deployment](remote-access/directaccess/add-to-existing-vpn/step-3-verify-davpn.md)
+
 ### [RAS Gateway](remote-access/ras-gateway/RAS-Gateway.md)
 #### [GRE Tunneling in Windows Server](remote-access/ras-gateway/gre-tunneling-windows-server.md)
 #### [RAS Gateway GRE Tunnel Throughput and Performance](remote-access/ras-gateway/RAS-Gateway-GRE-Perf.md)
+
 ### [Remote Access Server Role Documentation](remote-access/ras/remote-Access-Server-Role-Documentation.md)
 #### [Deploy Remote Access in an Enterprise](remote-access/ras/Deploy-remote-Access-in-an-Enterprise.md)
 ##### [Deploy Remote Access in a Cluster](remote-access/ras/cluster/Deploy-remote-Access-In-Cluster.md)

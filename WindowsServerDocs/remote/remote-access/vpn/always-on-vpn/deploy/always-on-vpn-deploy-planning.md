@@ -6,8 +6,8 @@ ms.technology: networking
 ms.topic: article
 ms.assetid: 3c9de3ec-4bbd-4db0-b47a-03507a315383
 manager: brianlic
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 # Plan and Stage the Always On VPN Environment 
 
@@ -84,7 +84,7 @@ Configure the Remote Access VPN server to support IKEv2 connections while also d
 
 Configure the VPN server to assign addresses to VPN clients from a static address pool that you configure, or you can use IP addresses obtained from a DHCP server. 
 
-## Prepare the Environment
+## SEP 4: Prepare the Environment
 
 - **Ensure that you have permissions to configure your external firewall and that you have a valid public IP address**. To support Internet Key Exchange version 2 \(IKEv2\) VPN connections, you must open ports on the firewall. To accept connections from external clients, you need a public IP address.
 
@@ -94,7 +94,7 @@ Configure the VPN server to assign addresses to VPN clients from a static addres
 
 - **Verify that all VPN users have user accounts in Active Directory User \(AD DS\)**. Before users can connect to the network with VPN connections, they must have user accounts in AD DS.
 
-## STEP 4: Prepare the Routing and Firewall
+## STEP 5: Prepare the Routing and Firewall
 
 The following steps provide instructions on how to make minor adjustments to the firewall configuration to support VPN deployment.
 
