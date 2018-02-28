@@ -337,8 +337,4 @@ Windows Time follows the NTP specification, which requires the use of UDP port 1
 The following resources contain additional information that is relevant to this section.  
   
 -   RFC *1305* in the IETF RFC Database  
-  
-## See Also  
-[Videos about the Windows Time Service](https://go.microsoft.com/fwlink/?LinkID=197277)  <!-- broken link -->
-
 

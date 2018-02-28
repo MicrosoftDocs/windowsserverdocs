@@ -78,8 +78,4 @@ The Windows Time service uses NTP to help synchronize time across a network. NTP
 ## See Also  
 [How the Windows Time Service Works](How-the-Windows-Time-Service-Works.md)  
 [Windows Time Service Tools and Settings](Windows-Time-Service-Tools-and-Settings.md)  
-[Microsoft Knowledge Base article 902229](https://go.microsoft.com/fwlink/?LinkId=186066)  
-[Videos about the Windows Time Service](https://go.microsoft.com/fwlink/?LinkID=197277)  <!-- broken link -->
-  
-
-
+[Microsoft Knowledge Base article 902229](https://go.microsoft.com/fwlink/?LinkId=186066)
