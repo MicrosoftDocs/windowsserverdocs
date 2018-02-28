@@ -14,6 +14,7 @@
 ##### [Project Honolulu known issues](../manage/honolulu/honolulu-known-issues.md)
 #### [Project Honolulu FAQ](../manage/honolulu/honolulu-faq.md)
 ### [What is the Server Core installation option?](server-core/what-is-server-core.md)
+#### [What's included in the Server Core installation option?](server-core/server-core-roles-and-services.md)
 #### [Basic administration tasks in Server Core](server-core/server-core-administer.md)
 #### [Manage Server Core](server-core/server-core-manage.md)
 #### [Configure memory dump files](server-core/server-core-memory-dump.md)
