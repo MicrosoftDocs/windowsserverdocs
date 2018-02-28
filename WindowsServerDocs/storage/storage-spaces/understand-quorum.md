@@ -1,13 +1,15 @@
 ---
 title: Understanding Quorum in Storage Spaces Direct
+description: Understanding Cluster and Pool Quorum in Storage Spaces Direct, with specific examples to go over the intricacies.
+keywords: Storage Spaces,Quorum,Witness,S2D,Cluster Quorum,Pool Quorum,Cluster,Pool
 ms.assetid: 
 ms.prod: 
-ms.author: 
-ms.manager: 
+ms.author: adagashe
+ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
-author: adagashe
-ms.date: 
+author: adagashe, cosmosdarwin
+ms.date: 02/23/2018
 ms.localizationpriority: 
 ---
 # Understanding Quorum in Storage Spaces Direct
