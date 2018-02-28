@@ -18,12 +18,12 @@ Windows Server Insider Preview introduces an option to manually delimit the allo
 
 ## Prerequisites
 
-### ![supported](supported.png) Consider using this option if:
+### ![supported](media/delimit-volume-allocation/supported.png) Consider using this option if:
 
 - Your cluster has six or more servers; and
 - Your cluster uses only [three-way mirror](storage-spaces-fault-tolerance.md#mirroring) resiliency
 
-### ![unsupported](unsupported.png) Do not use this option if:
+### ![unsupported](media/delimit-volume-allocation/unsupported.png) Do not use this option if:
 
 - Your cluster has fewer than six servers; or
 - Your cluster uses [parity](storage-spaces-fault-tolerance.md#parity) or [mirror-accelerated parity](storage-spaces-fault-tolerance.md#mirror-accelerated-parity) resiliency
@@ -32,7 +32,7 @@ Windows Server Insider Preview introduces an option to manually delimit the allo
 
 With regular three-way mirroring, the volume is divided into many small "slabs" that are copied three times and distributed evenly across every drive in every server in the cluster. For more details, read [this Deep Dive blog](https://blogs.technet.microsoft.com/filecab/2016/11/21/deep-dive-pool-in-spaces-direct/).
 
-![regular-allocation](regular-allocation.png)
+![regular-allocation](media/delimit-volume-allocation/regular-allocation.png)
 
 This default allocation maximizes parallel reads and writes, yielding better performance, and is appealing in its simplicity: every server is equally busy, every drive is equally full, and all volumes live and die together. Every volume is guaranteed to survive up to two concurrent failures, as [these examples](storage-spaces-fault-tolerance.md#examples) illustrate.
 
@@ -40,13 +40,13 @@ However, with this allocation, no volume can survive three concurrent failures. 
 
 In the example below, servers 1, 3, and 5 fail at the same time. Although many slabs have surviving copies, some do not:
 
-![regular-does-not-survive](regular-does-not-survive.png)
+![regular-does-not-survive](media/delimit-volume-allocation/regular-does-not-survive.png)
 
 The volume is inaccessible until the servers are recovered.
 
 With delimited allocation, you specify a subset of servers to use (minimum three for three-way mirror). As before, the volume is divided into slabs that are copied three times – but instead of allocating across every server, **the slabs are allocated only to the subset of servers you specify**.
 
-![delimited-allocation](delimited-allocation.png)
+![delimited-allocation](media/delimit-volume-allocation/delimited-allocation.png)
 
 ### Advantages
 
@@ -54,7 +54,7 @@ With this allocation, the volume is very likely to survive three concurrent fail
 
 In the example (same as above), servers 1, 3, and 5 fail at the same time. Our delimited allocation ensures that server 2 contains a copy of *every* slab, so every slab has a surviving copy, and the volume stays accessible:
 
-![delimited-does-survive](delimited-does-survive.png)
+![delimited-does-survive](media/delimit-volume-allocation/delimited-does-survive.png)
 
 ### Disadvantages
 
@@ -133,7 +133,7 @@ For example, to move MyVolume "to the right" by one server:
     Optimize-StoragePool
     ```
 
-![move-gif](move.gif)
+![move-gif](media/delimit-volume-allocation/move.gif)
 
 Once the rebalance has completed (you can monitor it with `Get-StorageJob`), you can verify that MyVolume has moved by running the `Get-VirtualDiskFootprintBySSU.ps1` script again.
 
