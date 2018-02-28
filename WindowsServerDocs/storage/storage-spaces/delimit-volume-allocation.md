@@ -11,7 +11,7 @@ ms.date: 02/28/2018
 # Delimit the allocation of volumes in Storage Spaces Direct
 > Applies To: Windows Server Insider Preview
 
-Windows Server Insider Preview introduces an option to manually delimit the allocation of volumes in Storage Spaces Direct. Doing so can significantly increase fault tolerance under certain conditions, but imposes some management considerations and complexity. This topic explains how it works and gives examples in PowerShell.
+Windows Server Insider Preview introduces an option to manually delimit the allocation of volumes in Storage Spaces Direct. Doing so can significantly increase fault tolerance under certain conditions, but imposes some added management considerations and complexity. This topic explains how it works and gives examples in PowerShell.
 
    > [!IMPORTANT]
    > This feature is new in Windows Server Insider Preview only. It is not available in Windows Server 2016.
@@ -50,7 +50,7 @@ With delimited allocation, you specify a subset of servers to use (minimum three
 
 ### Advantages
 
-With this allocation, the volume is very likely to survive three concurrent failures: in fact, the probability of survival is increased from 0% (with regular allocation) to 95% (with delimited allocation)! Intuitively, this is because the volume is not affected by failures in servers 4, 5, or 6 because it does not depend on their drives to store its slabs. Survival probability depends on the number of servers and other factors – for more details, see the [analysis](#analysis-of-survival-probabilities) section. 
+With this allocation, the volume is very likely to survive three concurrent failures: in fact, the probability of survival increases from 0% (with regular allocation) to 95% (with delimited allocation)! Intuitively, this is because the volume does not depend on servers 4, 5, or 6 so it is not affected by their failures. Survival probability depends on the number of servers and other factors – for more details, see the [analysis](#analysis-of-survival-probabilities) section. 
 
 In the example (same as above), servers 1, 3, and 5 fail at the same time. Our delimited allocation ensures that server 2 contains a copy of *every* slab, so every slab has a surviving copy, and the volume stays accessible:
 
