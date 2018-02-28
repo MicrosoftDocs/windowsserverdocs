@@ -60,7 +60,7 @@ In the example (same as above), servers 1, 3, and 5 fail at the same time. Our d
 
 Delimited allocation imposes some added management considerations and complexity:
 
-1. You are responsible for delimiting the allocation of each volume in a way that balances storage utilization across servers and upholds high probability of survival. We recommend delimiting each volume to three servers, and ensuring that every volume's delimitation is unique, meaning it does not share *all three* servers with another volume. With 6 servers, there are 20 unique combinations; with 8 servers, there are 56 unique combinations; and so on. See the [analysis](#analysis-of-survival-probabilities) section for more details.
+1. You are responsible for delimiting the allocation of each volume in a way that balances storage utilization across servers and upholds high probability of survival. We recommend delimiting each volume to three servers, and ensuring that every volume's delimitation is unique, meaning it does not share *all* three servers with another volume (sharing *some* servers is fine). With 6 servers, there are 20 unique combinations; with 8 servers, there are 56 unique combinations; and so on. See the [analysis](#analysis-of-survival-probabilities) section for more details.
 
 2. When using delimited allocation, we recommend reserving the equivalent of one capacity drive per server, **with no maximum**. This is more than the [published recommendation](plan-volumes#choosing-the-size-of-volumes) for regular allocation, which maxes out at four capacity drives total.
 
