@@ -15,14 +15,15 @@ You can use several technologies to configure Windows 10 VPN clients, including
 Windows PowerShell, System Center Configuration Manager, and Intune in which all three require an XML VPN profile to configure the appropriate VPN settings.
 
 
->[!NOTE] Group Policy does not include administrative templates to configure the Windows 10 Remote Access Always On VPN client, however you can use logon scripts.
+>[!NOTE] 
+>Group Policy does not include administrative templates to configure the Windows 10 Remote Access Always On VPN client, however you can use logon scripts.
 
 In this guide’s scenario, you use Protected Extensible Authentication Protocol (PEAP) to secure communication between the client and the server. Unlike a simple user name and password, this connection requires a unique EAPConfiguration section in the VPN profile to work.
 
 Rather than describing how to create the XML markup for that section from scratch, you can use the Windows user interface to create a template VPN profile, and then use Windows PowerShell to consume the EAPConfiguration portion from that template to create the final ProfileXML that you will deploy later in the guide.
 
 ## Prerequisites
-- Make sure you review the [ProfileXML Overview](../../profile-overview.md) to have an understanding of the ProfileXML conifuguration files. The ProfileXML Overview section also includes the [MakeProfile.ps1 Full Script](../../profile-overview.md#makeprofile-full-script) section includes all of the code to generate two files: VPN_Profile.xml and VPN_Profile.ps1. 
+- Make sure you review the [ProfileXML Overview](../profilexml-overview.md) to have an understanding of the ProfileXML conifuguration files. The ProfileXML Overview section also includes the [MakeProfile.ps1 Full Script](../profilexml-overview.md#makeprofile-full-script) section includes all of the code to generate two files: VPN_Profile.xml and VPN_Profile.ps1. 
 - Ensure you have the host name or FQDN of the NPS from the server's certificate and the name of the CA that issued the certificate.
 
 
@@ -315,10 +316,8 @@ With the ProfileXML configuration script deployed, sign in to a Windows 10
 client computer with the user account you selected when you built the user
 collection. Verify configuration of the VPN client.
 
->   [!NOTE] The script VPN_Profile.ps1 will not work in a Remote Desktop
->   session. Likewise, it will not work in a Hyper-V enhanced session. If you’re
->   testing a Remote Access Always On VPN in virtual machines, disable enhanced
->   session on your client VMs before continuing.
+>[!NOTE] 
+>The script VPN_Profile.ps1 will not work in a Remote Desktop session. Likewise, it will not work in a Hyper-V enhanced session. If you’re testing a Remote Access Always On VPN in virtual machines, disable enhanced session on your client VMs before continuing.
 
 **To verify configuration of the VPN client**
 

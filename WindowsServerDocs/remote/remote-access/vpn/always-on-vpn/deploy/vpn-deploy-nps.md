@@ -125,7 +125,8 @@ Before you can configure the Windows 10 client Always On VPN connections and cre
 6. Cancel the Virtual Private network (VPN) Connections Properties dialog box.
 7. Close Network Policy Server.
 
->[!NOTE] If you have multiple NPS servers, complete these steps on each one so that the VPN profile can verify each of them should they be used. 
+>[!NOTE] 
+>If you have multiple NPS servers, complete these steps on each one so that the VPN profile can verify each of them should they be used. 
 
 ### Autoenroll the NPS Server certificate
 1. Open Windows PowerShell as Administrator.

@@ -86,8 +86,8 @@ as Microsoft Intune.
 You can use the script VPN_Profile.ps1 to configure ProfileXML by using Windows
 PowerShell on the Windows 10 desktop or in System Center Configuration Manager.
 
->   [!NOTE] To view the full example script, see the section [MakeProfile.ps1
->   Full Script](#bkmk_fullscript).
+>[!NOTE] 
+>To view the full example script, see the section [MakeProfile.ps1 Full Script](#makeprofile-full-script).
 
 ## Parameters
 
@@ -152,12 +152,8 @@ then it creates a new instance of the MDM_VPNv2_01 WMI class in that session.
 This WMI class uses the WMI-to-CSP bridge to configure the VPNv2 CSP. Therefore,
 by adding the class instance, you configure the CSP.
 
->   [!NOTE] The script VPN_Profile.ps1 uses the current user’s SID to identify
->   the user’s context. Because no SID is available in a Remote Desktop session,
->   the script will not work in a Remote Desktop session. Likewise, it will not
->   work in a Hyper-V enhanced session. If you’re testing a Remote Access Always
->   On VPN in virtual machines, disable enhanced session on your client VMs
->   before running this script.
+>[!NOTE] 
+>The script VPN_Profile.ps1 uses the current user’s SID to identify the user’s context. Because no SID is available in a Remote Desktop session, the script will not work in a Remote Desktop session. Likewise, it will not work in a Hyper-V enhanced session. If you’re testing a Remote Access Always On VPN in virtual machines, disable enhanced session on your client VMs before running this script.
 
 The following example script includes all of the code examples from previous
 sections. Ensure that you change example values to values that are appropriate
