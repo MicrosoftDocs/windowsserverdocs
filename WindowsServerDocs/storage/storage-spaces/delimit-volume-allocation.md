@@ -134,7 +134,7 @@ For example, to move MyVolume "to the right" by one server:
 3. Rebalance the storage pool for the change to take effect:
 
     ```PowerShell
-    Optimize-StoragePool
+    Get-StoragePool S2D* | Optimize-StoragePool
     ```
 
 ![move-gif](media/delimit-volume-allocation/move.gif)
@@ -161,7 +161,7 @@ Coming soon.
 
 Yes. You can choose per-volume whether or not to delimit allocation.
 
-### Are there any changes to drive replacement?
+### Does delimited allocation change how drive replacement works?
 
 No. Drive replacement works the same with delimited allocation as with regular allocation.
 
