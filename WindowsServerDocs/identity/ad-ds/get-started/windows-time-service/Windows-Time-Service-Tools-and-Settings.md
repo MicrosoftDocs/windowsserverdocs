@@ -31,7 +31,7 @@ ms.technology: identity-adds
 -   [Related Information](#w2k3tr_times_tools_qoep)  
   
 > [!NOTE]  
-> This topic contains information only about tools and settings for Windows Time service (W32Time). If you only want to synchronize time for a domain-joined client computer, see [Configure a client computer for automatic domain time synchronization](https://technet.microsoft.com/en-us/library/cc758905(v=ws.10)). For additional topics about how to configure Windows Time service, see the list of topics in the section [Where to Find Windows Time Service Configuration Information](https://technet.microsoft.com/library/cc773061.aspx).  
+> This topic contains information only about tools and settings for Windows Time service (W32Time). If you only want to synchronize time for a domain-joined client computer, see [Configure a client computer for automatic domain time synchronization](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc816884%28v%3dws.10%29). For additional topics about how to configure Windows Time service, see the list of topics in the section [Where to Find Windows Time Service Configuration Information](https://technet.microsoft.com/library/cc773061.aspx).  
   
 > [!CAUTION]  
 > You should not use the Net time command to configure or set time when the Windows Time service is running.  
@@ -339,6 +339,6 @@ The following resources contain additional information that is relevant to this 
 -   RFC *1305* in the IETF RFC Database  
   
 ## See Also  
-[Videos about the Windows Time Service](https://go.microsoft.com/fwlink/?LinkID=197277)  
+[Videos about the Windows Time Service](https://go.microsoft.com/fwlink/?LinkID=197277)  <!-- broken link -->
 
 
