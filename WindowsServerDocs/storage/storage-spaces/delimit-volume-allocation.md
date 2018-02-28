@@ -30,6 +30,8 @@ Windows Server Insider Preview introduces an option to manually delimit the allo
 
 ## Understand: Regular versus delimited allocation
 
+### Regular allocation
+
 With regular three-way mirroring, the volume is divided into many small "slabs" that are copied three times and distributed evenly across every drive in every server in the cluster. For more details, read [this Deep Dive blog](https://blogs.technet.microsoft.com/filecab/2016/11/21/deep-dive-pool-in-spaces-direct/).
 
 ![regular-allocation](media/delimit-volume-allocation/regular-allocation.png)
@@ -44,11 +46,13 @@ In the example below, servers 1, 3, and 5 fail at the same time. Although many s
 
 The volume is inaccessible until the servers are recovered.
 
+### Delimited allocation
+
 With delimited allocation, you specify a subset of servers to use (minimum three for three-way mirror). As before, the volume is divided into slabs that are copied three times – but instead of allocating across every server, **the slabs are allocated only to the subset of servers you specify**.
 
 ![delimited-allocation](media/delimit-volume-allocation/delimited-allocation.png)
 
-### Advantages
+#### Advantages
 
 With this allocation, the volume is very likely to survive three concurrent failures: in fact, the probability of survival increases from 0% (with regular allocation) to 95% (with delimited allocation)! Intuitively, this is because the volume does not depend on servers 4, 5, or 6 so it is not affected by their failures. Survival probability depends on the number of servers and other factors – for more details, see the [analysis](#analysis-of-survival-probabilities) section. 
 
@@ -56,15 +60,15 @@ In the example (same as above), servers 1, 3, and 5 fail at the same time. Our d
 
 ![delimited-does-survive](media/delimit-volume-allocation/delimited-does-survive.png)
 
-### Disadvantages
+#### Disadvantages
 
 Delimited allocation imposes some added management considerations and complexity:
 
-1. You are responsible for delimiting the allocation of each volume in a way that balances storage utilization across servers and upholds high probability of survival. We recommend delimiting each volume to three servers, and ensuring that every volume's delimitation is unique, meaning it does not share *all* its servers with another volume (sharing *some* is expected). With 6 servers, there are 20 unique combinations; with 8 servers, there are 56 unique combinations; and so on. See the [analysis](#analysis-of-survival-probabilities) section for more details.
+1. You are responsible for delimiting the allocation of each volume to balance storage utilization across servers and uphold high probability of survival. We recommend delimiting each volume to three servers, and ensuring that every volume's delimitation is unique, meaning it does not share *all* its servers with another volume (sharing *some* is expected). With 6 servers, there are 20 unique combinations; with 8 servers, there are 56 unique combinations; and so on. See the [analysis](#analysis-of-survival-probabilities) section for more details.
 
 2. When using delimited allocation, we recommend reserving the equivalent of one capacity drive per server, **with no maximum**. This is more than the [published recommendation](plan-volumes#choosing-the-size-of-volumes) for regular allocation, which maxes out at four capacity drives total.
 
-3. If a server fails and needs to be replaced, as described in [Remove a server and its drives](remove-servers#remove-a-server-and-its-drives), you are responsible for updating the delimitation of each affected volume (i.e. adding a new server to its delimitation and removing the failed one – example below).
+3. If a server fails and needs to be replaced, as described in [Remove a server and its drives](remove-servers#remove-a-server-and-its-drives), you are responsible for changing the delimitation of affected volumes (i.e. adding a new server and removing the failed one – example below).
 
 ## Usage in PowerShell
 
