@@ -64,7 +64,7 @@ Delimited allocation imposes some added management considerations and complexity
 
 2. When using delimited allocation, we recommend reserving the equivalent of one capacity drive per server, **with no maximum**. This is more than the [published recommendation](plan-volumes#choosing-the-size-of-volumes) for regular allocation, which maxes out at four capacity drives total.
 
-3. If a server fails and needs to be replaced, as described in [Remove a server and its drives](remove-servers#remove-a-server-and-its-drives), you are responsible for updating the delimitation of each affected volume accordingly.
+3. If a server fails and needs to be replaced, as described in [Remove a server and its drives](remove-servers#remove-a-server-and-its-drives), you are responsible for updating the delimitation of each affected volume (i.e. adding a new server to its delimitation and removing the failed one – example below).
 
 ## Usage in PowerShell
 
