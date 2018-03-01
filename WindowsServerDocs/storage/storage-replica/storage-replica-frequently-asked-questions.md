@@ -27,10 +27,10 @@ Further notes on guest clustering in Azure can be found at: [Deploying IaaS VM G
 
 Important notes:
 
-1. Azure doesn't support shared VHDX guest clustering, which requires guest Windows Failover Cluster guests use iSCSI targets for classic shared-storage persistent disk reservation clustering.
+1. Azure doesn't support shared VHDX guest clustering, so Windows Failover Cluster virtual machines must use iSCSI targets for classic shared-storage persistent disk reservation clustering or Storage Spaces Direct.
 2. There are Azure Resource Manager templates for Storage Spaces Direct-based Storage Replica clustering at [Create a Storage Spaces Direct (S2D) SOFS Clusters with Storage Replica for Disaster Recovery across Azure Regions](https://aka.ms/azure-storage-replica-cluster).  
 3. Cluster to cluster RPC communication in Azure (required by the cluster APIs for granting access between cluster) requires configuring network access for the CNO. You must allow TCP port 135 and the dynamic range above TCP port 49152. Reference [Building Windows Server Failover Cluster on Azure IAAS VM – Part 2 Network and Creation](https://blogs.technet.microsoft.com/askcore/2015/06/24/building-windows-server-failover-cluster-on-azure-iaas-vm-part-2-network-and-creation/).  
-4. It's possible to use two-node guest clusters, where each node is using loopback iSCSI for an asymmetric cluster replicated by SR. But this will likely have very poor performance and should be used only for very limited workloads or testing.  
+4. It's possible to use two-node guest clusters, where each node is using loopback iSCSI for an asymmetric cluster replicated by Storage Replica. But this will likely have very poor performance and should be used only for very limited workloads or testing.  
 
 ## <a name="FAQ2"></a> How do I see the progress of replication during initial sync?  
 The Event 1237 messages shown in the Storage Replica Admin even log on the destination server show number of bytes copied and bytes remaining every 10 seconds. You can also use the Storage Replica performance counter on the destination showing **\Storage Replica Statistics\Total Bytes Received** for one or more replicated volumes. You can also query the replication group using Windows PowerShell. For instance,  this sample command gets the name of the groups on the destination  then queries one group named **Replication 2** every 10 seconds to show progress:  
