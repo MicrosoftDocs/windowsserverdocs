@@ -51,7 +51,7 @@ This can be cause by:
 
 By default, AD FS has this set to "allow".  You can change this setting using the PowerShell cmdlt `Set-ADFSProperties -ExtendProtectionTokenCheck`
 
-For more information on this see [Best Practices for Secure Planning and Deployment of AD FS](design/best-practices-for-secure-planning-and-deployment-of-ad-fs.md).
+For more information on this see [Best Practices for Secure Planning and Deployment of AD FS](../../ad-fs/design/best-practices-for-secure-planning-and-deployment-of-ad-fs.md).
 
 ## Internet Explorer configuration
 By default, Internet explorer will be have the following way:

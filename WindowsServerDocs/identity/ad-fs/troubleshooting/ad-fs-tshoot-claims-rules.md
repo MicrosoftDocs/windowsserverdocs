@@ -17,10 +17,10 @@ A claim is a statement that one subject makes about itself or another subject.  
 >You can use [ClaimsXRay](https://adfshelp.microsoft.com/ClaimsXray/TokenRequest) on the [ADFS Help](https://adfshelp.microsoft.com) site to assist in troubleshooting claims issues.   
 
 ## How claim rules are processed
-Claim rules are processed through the [claims pipeline](The-Role-of-the-Claims-Pipeline.md) using the [claims engine](The-Role-of-the-Claims-Engine.md). The claims engine is a logical component of the Federation Service that examines the set of incoming claims presented by a user, and will then, depending on the logic in each rule, produce an output set of claims.
+Claim rules are processed through the [claims pipeline](../../ad-fs/technical-reference/The-Role-of-the-Claims-Pipeline.md) using the [claims engine](../../ad-fs/technical-reference/The-Role-of-the-Claims-Engine.md). The claims engine is a logical component of the Federation Service that examines the set of incoming claims presented by a user, and will then, depending on the logic in each rule, produce an output set of claims.
 
 ## How to create a claim rule
-Claim rules are created separately for each federated trust relationship within the Federation Service and are not shared across multiple trusts. You can either create a rule from a [claim rule template](technical-reference/determine-the-type-of-claim-rule-template-to-use.md), start from scratch by authoring the rule using the [claim rule language](technical-reference/when-to-use-a-custom-claim-rule.md) or use Windows PowerShell to customize a rule.
+Claim rules are created separately for each federated trust relationship within the Federation Service and are not shared across multiple trusts. You can either create a rule from a [claim rule template](../../ad-fs/technical-reference/determine-the-type-of-claim-rule-template-to-use.md), start from scratch by authoring the rule using the [claim rule language](../../ad-fs/technical-reference/when-to-use-a-custom-claim-rule.md) or use Windows PowerShell to customize a rule.
 
 ## Understanding the components of the claim rule language
 The claim rule language consists of the following components, separated by the “ =>” operator:
@@ -37,7 +37,7 @@ The following claim has the following:
 - condition - `c:[type == "Name", value == "domain user"] ` - evaluates the input claim of whether the windows account name is a domain user
 - issuance - `issue(type = "Role", value = "employee")` - if the condition is true, adds a new claim to the input claim with the role of employee.
 
-For more information on claims and the syntax see [The Role of the Claims Rule Language](technical-reference/the-role-of-the-claim-rule-language.md).
+For more information on claims and the syntax see [The Role of the Claims Rule Language](../../ad-fs/technical-reference/the-role-of-the-claim-rule-language.md).
 
 ## Claims rule editor
 Syntax checking is performed by the claims rule editor once you have completed the claim and click **OK**.  So if you have the incorrect syntax then the editor will let you know.
