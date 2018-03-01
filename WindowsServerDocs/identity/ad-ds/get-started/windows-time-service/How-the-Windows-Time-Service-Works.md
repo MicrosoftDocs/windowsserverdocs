@@ -16,8 +16,6 @@ ms.technology: identity-adds
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-  
-  
 **In this section**  
   
 -   [Windows Time Service Architecture](#w2k3tr_times_how_rrfo)  

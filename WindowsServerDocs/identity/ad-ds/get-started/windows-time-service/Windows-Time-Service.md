@@ -15,8 +15,7 @@ ms.technology: identity-adds
 # Windows Time Service
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
-  
+ 
   
 ## <a name="w2k3tr_times_intro"></a>Windows Time Service Technical Reference  
 **In this guide**  
