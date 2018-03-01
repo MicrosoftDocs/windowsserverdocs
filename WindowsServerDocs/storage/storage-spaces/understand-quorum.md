@@ -103,7 +103,9 @@ There are two ways the cluster can make the *total number of votes* odd:
 Whenever surviving nodes successfully verify they are the *majority*, the definition of *majority* is updated to be among just the survivors. This allows the cluster to lose one node, then another, then another, and so forth. This concept of the *total number of votes* adapting after successive failures is known as <strong>*Dynamic Quorum*</strong>.  
 ### Dynamic Witness
 
-Dynamic Witness toggles the vote of the witness to make sure that the *total number of votes* is odd. If this fails, then the Dynamic Quorum steps in and works in the way described below.
+Dynamic Witness toggles the vote of the witness to make sure that the *total number of votes* is odd. If there are an odd number of votes, the witness does not have a vote. If there is an even number of votes, the witness has a vote. Dynamic witness significantly reduces the risk that the cluster will go down because of witness failure. The cluster decides whether to use the witness vote based on the number of voting nodes that are available in the cluster.
+
+Dynamic Quorum works with Dynamic Witness in the way described below.
 
 ### Dynamic Quorum Behavior
 
