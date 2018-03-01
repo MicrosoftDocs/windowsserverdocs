@@ -126,29 +126,27 @@ The web client supports Edge, Internet Explorer 11, and Google Chrome.
 
 ### What devices does the web client support?
 
-The web client supports devices running a desktop operating system, such as Windows, Mac, Linux, and Chromebook devices.
+The web client supports desktop PCs like Windows, Mac, Linux, or Chromebook.
 
 ### Can I use the web client in a Remote Desktop deployment without a gateway?
 
-No. The client requires a Server 2016 Remote Desktop gateway to connect.
+No. The client requires a Remote Desktop gateway to connect. Don't know what that means? Ask your admin about it.
 
-### Does the Remote Desktop web client replace the existing Remote Desktop web access page?
+### Does the Remote Desktop web client replace the Remote Desktop web access page?
 
-No. The RD Web Client is hosted at a different URL than the existing RD Web Access page. Both the client and the web access page can be used to view the resource feed in a browser.
+No. The RD Web Client is hosted at a different URL than the RD Web Access page. You can use either the client or the web access page to view the resource feed in a browser.
 
 ### Can I embed the web client in another web page?
 
-This feature is not supported at the moment, but there are plans to implement it in future versions.
+This feature is not supported at the moment.
 
 ### Can I customize the Remote Desktop web client?
 
-This feature is not supported at the moment, but there are plans to implement it in future versions.
+This feature is not supported at the moment.
 
 ### Why does my browser show a security warning when I try to access the web client?
 
-The RDWA role might not be using a trusted certificate. If it isn't, export the certificate and install it manually on the client machine to the trusted root store, then relaunch the browser.
-
-If that doesn't work, that means your server name in the web client URL doesn't exactly match the name provided by the RDWeb certificate. Make sure you're using the FQDN of the machine hosting the RDWeb role.
+Either your certificate isn't trusted, or the server name in your remote web client URL doesn't exactly match the name provided by the RDWeb certificate. Let your admin know you're getting a security warning so that they can fix the issue.
 
 ### Why am I getting an "unsupported browser" error when launching the web client in IE 11?
 
