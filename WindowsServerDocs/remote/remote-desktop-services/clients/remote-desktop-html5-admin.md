@@ -78,29 +78,32 @@ To update the web client whenever an update is available, follow these steps:
 
 To see a list of all supported commands for the RDWebClientManagement module, run **Get-Commands** in PowerShell.
 
+## Troubleshooting
 
-### Why does my browser show a security warning when I try to access the web client?
+If you encounter any of the following issues when opening the web client for the first time, the following sections will tell you what to do to fix them.
+
+### What to do if your browser shows a security warning when you try to access the web client
 
 The RDWA role might not be using a trusted certificate. If it isn't, export the certificate and install it manually on the client machine to the trusted root store, then relaunch the browser.
 
-If that doesn't work, that means your server name in the web client URL doesn't exactly match the name provided by the RDWeb certificate. Make sure you're using the FQDN of the machine hosting the RDWeb role.
+If that doesn't work, that means your server name in the web client URL doesn't exactly match the name provided by the RDWeb certificate. Make sure your URL uses the FQDN of the machine hosting the RDWeb role.
 
-### Why am I getting an "unsupported browser" error when launching the web client in IE 11?
+### What to do if you get an "unsupported browser" error when launching the web client in IE 11
 
-This is an issue with your browser's settings. To fix this, open up "Compatibility View settings" in your browser, then uncheck the "Display intranet sites in Compatibility view" option's checkbox.
+This is caused by a conflict with your browser settings. To fix this, open up "Compatibility View settings" in your browser, then uncheck the "Display intranet sites in Compatibility view" option's checkbox.
 
-### Why can't I connect to the web client even though I can see the feed?
+### What to do if you can't connect to the web client even though you can see the feed
 
-There are two things that might cause this:
+If you can't connect to the web client even though you can see the feed, check the following things:
 
-- The RD Gateway role isn't using a trusted public certificate.
-- The RD Gateway machine isn't up to date.
+* Is the RD Gateway role using a trusted public certificate?
+* Is the RD Gateway machine up to date?
 
-If your connection issue is caused by the certificate, close the browser, export the certificate and install it manually on the client machine's trusted root store, then relaunch the browser.
+To fix the certificate, close the browser, export the certificate and install it manually on the client machine's trusted root store, then relaunch the browser.
 
-If installing the certificate doesn't solve the connectivity problem, then the issue might be that your RD Gateway machine isn't up to date. Make sure that you have installed [this update](https://support.microsoft.com/en-us/help/4025334/windows-10-update-kb4025334) to the machine.
+If manually installing the certificate doesn't solve the connectivity problem, then the issue might be that your RD Gateway machine isn't up to date. Make sure that your machine has [this update](https://support.microsoft.com/en-us/help/4025334/windows-10-update-kb4025334) installed.
 
-If you're getting a "mismatched certificate" error when you can't connect, then you'll need to check the RD Broker machine's certificate. The error message will show the thumbprint of the expected certificate. Search the RD Broker machine's certmgr using that thumbprint to find the right certificate. After making sure the certificate hasn'te xpired, copy the certificate in .cer file format to the RDWeb machine and run the following command on the RDWeb machine with the bracketed value replaced by the certificate's file path:
+If you get a "mismatched certificate" error when you try to connect, then you'll need to check the RD Broker machine's certificate. The error message will show the thumbprint of the expected certificate. Search the RD Broker machine's certmgr using that thumbprint to find the right certificate. After making sure the certificate hasn't expired, copy the certificate in .cer file format to the RDWeb machine and run the following command on the RDWeb machine with the bracketed value replaced by the certificate's file path:
 
 ```PowerShell
 Import-RDWebClientBrokerCert <cert file path>
