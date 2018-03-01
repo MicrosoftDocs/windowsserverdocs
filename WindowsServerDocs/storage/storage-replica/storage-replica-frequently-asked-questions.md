@@ -23,14 +23,14 @@ Yes. You can use the following scenarios with Azure:
 3. Cluster-to-cluster replication inside Azure (synchronously or asynchronously between IaaS VMs in one or two datacenter fault domains, or asynchronously between two separate regions)
 4. Cluster-to-cluster asynchronous replication between Azure and on-premises (using VPN or Azure ExpressRoute)
 
-Further notes on guest clustering in Azure can be found at: https://blogs.msdn.microsoft.com/clustering/2017/02/14/deploying-an-iaas-vm-guest-clusters-in-microsoft-azure/
+Further notes on guest clustering in Azure can be found at: [Deploying IaaS VM Guest Clusters in Microsoft Azure](https://blogs.msdn.microsoft.com/clustering/2017/02/14/deploying-an-iaas-vm-guest-clusters-in-microsoft-azure/).
 
 Important notes:
 
-1. Azure does not support shared VHDX guest clustering, which requires guest Windows Failover Cluster guests use iSCSI targets for classic shared-storage PDR clustering.
-2. There are ARM templates for Storage Spaces Direct-based SR clustering at https://aka.ms/azure-storage-replica-cluster  
-3. Cluster to cluster RPC communication in Azure (required by the cluster APIs for granting access between cluster) requires configuring network access for the CNO. Reference https://blogs.technet.microsoft.com/askcore/2015/06/24/building-windows-server-failover-cluster-on-azure-iaas-vm-part-2-network-and-creation/  
-4. It is possible to use two-node guest clusters, where each node is using loopback iSCSI for an asymmetric cluster replicated by SR. But this will likely have very poor performance and should be used only for very limited workloads or testing.  
+1. Azure doesn't support shared VHDX guest clustering, which requires guest Windows Failover Cluster guests use iSCSI targets for classic shared-storage persistent disk reservation clustering.
+2. There are Azure Resource Manager templates for Storage Spaces Direct-based SR clustering at [Create a Storage Spaces Direct (S2D) SOFS Clusters with Storage Replica for Disaster Recovery across Azure Regions](https://aka.ms/azure-storage-replica-cluster).  
+3. Cluster to cluster RPC communication in Azure (required by the cluster APIs for granting access between cluster) requires configuring network access for the CNO. You must allow TCP port 135 and the dynamic range above TCP port 49152. Reference [Building Windows Server Failover Cluster on Azure IAAS VM – Part 2 Network and Creation](https://blogs.technet.microsoft.com/askcore/2015/06/24/building-windows-server-failover-cluster-on-azure-iaas-vm-part-2-network-and-creation/).  
+4. It's possible to use two-node guest clusters, where each node is using loopback iSCSI for an asymmetric cluster replicated by SR. But this will likely have very poor performance and should be used only for very limited workloads or testing.  
 
 ## <a name="FAQ2"></a> How do I see the progress of replication during initial sync?  
 The Event 1237 messages shown in the Storage Replica Admin even log on the destination server show number of bytes copied and bytes remaining every 10 seconds. You can also use the Storage Replica performance counter on the destination showing **\Storage Replica Statistics\Total Bytes Received** for one or more replicated volumes. You can also query the replication group using Windows PowerShell. For instance,  this sample command gets the name of the groups on the destination  then queries one group named **Replication 2** every 10 seconds to show progress:  
@@ -102,6 +102,11 @@ You should only use the test failover feature for short-term temporary operation
 
 ## <a name="FAQ7"></a> Can I configure Scale-out File Server (SOFS) in a stretch cluster?  
 While technically possible, this is not a recommended configuration in Windows Server 2016 due to the lack of site awareness in the compute nodes contacting the SOFS. If using campus-distance networking, where latencies are typically sub-millisecond, this configuration typically works works without issues.   
+
+If configuring cluster-to-cluster replication, Storage Replica fully supports Scale-out File Servers, including the use of Storage Spaces Direct, when replicating between two clusters.  
+
+## <a name="FAQ7"></a> Is CSV required to replicate in a stretch cluster or between clusters?  
+No. You can replicate with CSV or persistent disk reservation (PDR) owned by a cluster resource, such as a File Server role. 
 
 If configuring cluster-to-cluster replication, Storage Replica fully supports Scale-out File Servers, including the use of Storage Spaces Direct, when replicating between two clusters.  
 
@@ -185,6 +190,8 @@ There are SR performance counters that will tell you the rate the log is churnin
 Storage Replica relies on the log for all write performance. Log performance critical to replication performance. You must ensure that the log volume performs better than the data volume, as the log will serialize and sequentialize all write IO. You should always use flash media like SSD on log volumes. You must never allow any other workloads to run on the log volume, the same way you would never allow other workloads to run on SQL database log volumes. 
 
 Again: Microsoft strongly recommends that the log storage be faster than the data storage and that log volumes must never be used for other workloads.
+
+You can get log sizing recommendations by running the Test-SRTopology tool. Alternatively, you can use performance counters on existing servers to make a log size judgement. The formula is simple:  monitor the data disk throughput (Avg Write Bytes/Sec) under the workload and use it to calculate the amount of time it will take to fill up the log of different sizes. For example, data disk throughput of 50 MB/s will cause the log of 120GB to wrap in 120GB/50MB seconds or 2400 seconds or 40 minutes. So the amount of time that the destination server could be unreachable before the log wrapped is 40 minutes. If the log wraps but the destination becomes reachable again, the source would replay blocks via the bit map log instead of the main log. 
 
 ## <a name="FAQ16"></a> Why would you choose a stretch cluster versus cluster-to-cluster versus server-to-server topology?  
 Storage Replica comes in three main configurations: strech cluster, cluster-to-cluster, and server-to-server. There are different advantages to each.
