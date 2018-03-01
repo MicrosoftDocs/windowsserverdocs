@@ -6,7 +6,7 @@ ms.mktglfcycl: manage
 ms.sitesec: library
 author: lizap
 ms.localizationpriority: medium
-ms.date: 10/17/2017
+ms.date: 02/23/2018
 ---
 # Roles, Role Services, and Features not in Windows Server - Server Core
 
@@ -14,16 +14,18 @@ ms.date: 10/17/2017
 
 The following roles, role services, and features have been removed from the Server Core installation option of Windows Server. Use this information to help figure out if the Server Core option works for your environment.
 
+> [!NOTE]
+> You can also see a list of the roles, role services, and features that [ARE included in Server Core](server-core-roles-and-services.md). It's a very large list, so for best results, search that list for the specific role or feature you're interested in.
+
 ## Roles not in Server Core
 
 - Fax
 - MultiPointServerRole
 - NPAS
 - WDS
-- Print-Scan-Server
 
 ## Role Services not in Server Core
-Note that RDS Remote Admin is included in Server Core, but other RDS role services are NOT.
+Note that some Remote Desktop role services are included in Server Core (Connection Broker, Licensing, Virtualization Host), but others are NOT (Gateway, RD Session Host, Web Access).
 
 - Print-Scan-Server
 - Print-Internet
@@ -47,9 +49,7 @@ Note that RDS Remote Admin is included in Server Core, but other RDS role servic
 - Remote-Assistance
 - RSAT-SMTP
 - RSAT-Feature-Tools-BitLocker-RemoteAdminTool
-- RSAT-Feature-Tools-BitLocker-BdeAducExt
 - RSAT-Bits-Server
-- RSAT-Clustering-Mgmt
 - RSAT-NLB
 - RSAT-SNMP
 - RSAT-WINS
@@ -70,7 +70,6 @@ Note that RDS Remote Admin is included in Server Core, but other RDS role servic
 - RSAT-NFS-Admin
 - RSAT-NPAS
 - RSAT-Print-Services
-- RSAT-RemoteAccess-Mgmt
 - RSAT-VA-Tools
 - WDS-AdminPack
 - SMTP-Server

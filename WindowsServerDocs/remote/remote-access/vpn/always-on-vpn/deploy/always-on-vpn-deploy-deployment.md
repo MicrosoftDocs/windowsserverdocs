@@ -27,7 +27,7 @@ Always On VPN requires a specific process to deploy the Always On VPN connection
     a. Install and configure your organization NPS as a RADIUS server.
     b. Enroll and validate the NPS certificate.
 4. **[Configure DNS and Firewall Settings for Always On VPN](vpn-deploy-dns-firewall.md)**. Configure DNS, Internal Perimeter Network Firewall, and Edge Firewall settings.
-5. **[Create the ProfileXML for Always On VPN Connections](remote-access/vpn/always-on-vpn/deploy/vpn-deploy-create-profilexml.md)**. Configure the template VPN profile on a domain-joined client computer and create the ProfileXML configuration files.
+5. **[Create the ProfileXML for Always On VPN Connections](vpn-deploy-create-profilexml.md)**. Configure the template VPN profile on a domain-joined client computer and create the ProfileXML configuration files.
 6. **[Configure Windows 10 Client Always On VPN Connections](vpn-deploy-client-vpn-connections.md)**. Configure the Remote Access Always On VPN client by using Windows PowerShell, Microsoft System Center Configuration Manager, or Intune.
 
 >[!IMPORTANT]

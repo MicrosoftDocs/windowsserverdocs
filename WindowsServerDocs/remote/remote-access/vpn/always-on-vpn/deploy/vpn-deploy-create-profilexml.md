@@ -12,12 +12,13 @@ In this guide’s scenario, you use Protected Extensible Authentication Protocol
 
 Rather than describing how to create the XML markup for that section from scratch, you can use the Windows user interface to create a template VPN profile, and then use Windows PowerShell to consume the EAPConfiguration portion from that template to create the final ProfileXML that you will deploy later in the guide.
 
->[!NOTE] Group Policy does not include administrative templates to configure the Windows 10 Remote Access Always On VPN client, however you can use logon scripts.
+>[!NOTE] 
+>Group Policy does not include administrative templates to configure the Windows 10 Remote Access Always On VPN client, however you can use logon scripts.
 
 
 
 ## Prerequisites
-- Make sure you review the [ProfileXML Overview](../../profile-overview.md) to have an understanding of the ProfileXML conifuguration files. The ProfileXML Overview section also includes the [MakeProfile.ps1 Full Script](../../profile-overview.md#makeprofile-full-script) section includes all of the code to generate two files: VPN_Profile.xml and VPN_Profile.ps1. 
+- Make sure you review the [ProfileXML Overview](../profilexml-overview.md) to have an understanding of the ProfileXML conifuguration files. The ProfileXML Overview section also includes the [MakeProfile.ps1 Full Script](../profilexml-overview.md#makeprofile-full-script) section includes all of the code to generate two files: VPN_Profile.xml and VPN_Profile.ps1. 
 - Ensure you have the host name or FQDN of the NPS from the server's certificate and the name of the CA that issued the certificate.
 
 ## STEP 1: Configure the template VPN profile on a domain-joined client computer
@@ -26,7 +27,8 @@ Now that you have the necessary information, you can configure the template VPN 
 
 However, if you have not restarted the computer since configuring certificate autoenrollment, do so before configuring the template VPN connection to ensure you have a usable certificate enrolled on it.
 
->[!NOTE] There is no way to manually add any advanced properties of VPN, such as NRPT rules, Always On, Trusted network detection, etc. In the next step, you create a test VPN connection to verify that the VPN server is configured correctly, and to verify that you can establish a VPN connection to the server.
+>[!NOTE] 
+>There is no way to manually add any advanced properties of VPN, such as NRPT rules, Always On, Trusted network detection, etc. In the next step, you create a test VPN connection to verify that the VPN server is configured correctly, and to verify that you can establish a VPN connection to the server.
 
 1.  Sign into a domain-joined client computer as a member of the **VPN Users** group.
 2.  On the Start menu, type **VPN** and press Enter.
@@ -55,7 +57,8 @@ However, if you have not restarted the computer since configuring certificate au
 7. Close the Network Connections window.
 8. In Settings, test the VPN by clicking **Template**, and clicking **Connect**.
 
->[!IMPORTANT] Make sure that the template VPN connection to your VPN server is successful. Doing so ensures that the EAP settings are correct before you use them in the next example. You must connect at least once before continuing; otherwise, the profile will not contain all the information necessary to connect to the VPN.
+>[!IMPORTANT] 
+>Make sure that the template VPN connection to your VPN server is successful. Doing so ensures that the EAP settings are correct before you use them in the next example. You must connect at least once before continuing; otherwise, the profile will not contain all the information necessary to connect to the VPN.
 
 ## STEP 2: Prepare and create the ProfileXML configuration files
 
@@ -75,7 +78,8 @@ profile you created previously:
     Center Configuration Manager. You cannot run this script in a Remote Desktop
     session, including a Hyper-V enhanced session.
 
->[!IMPORTANT] The example commands below require Windows 10 Build 1607 or later.
+>[!IMPORTANT] 
+>The example commands below require Windows 10 Build 1607 or later.
 
 1. On the domain-joined client computer, open Windows PowerShell as an administrator.
 2. Copy the MakeProfile.ps1 Full Script from the [ProfileXML Overview](../profilexml-overview.md) section and paste it into Windows PowerShell.
