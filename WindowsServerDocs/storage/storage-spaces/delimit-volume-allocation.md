@@ -28,9 +28,9 @@ Windows Server Insider Preview introduces an option to manually delimit the allo
 - Your cluster has fewer than six servers; or
 - Your cluster uses [parity](storage-spaces-fault-tolerance.md#parity) or [mirror-accelerated parity](storage-spaces-fault-tolerance.md#mirror-accelerated-parity) resiliency
 
-## Understand: Regular versus delimited allocation
+## Understand
 
-### Review: Regular allocation
+### Review: regular allocation
 
 With regular three-way mirroring, the volume is divided into many small "slabs" that are copied three times and distributed evenly across every drive in every server in the cluster. For more details, read [this Deep Dive blog](https://blogs.technet.microsoft.com/filecab/2016/11/21/deep-dive-pool-in-spaces-direct/).
 
@@ -46,7 +46,7 @@ In the example below, servers 1, 3, and 5 fail at the same time. Although many s
 
 The volume is inaccessible until the servers are recovered.
 
-### New: Delimited allocation
+### New: delimited allocation
 
 With delimited allocation, you specify a subset of servers to use (minimum three for three-way mirror). As before, the volume is divided into slabs that are copied three times – but instead of allocating across every server, **the slabs are allocated only to the subset of servers you specify**.
 
