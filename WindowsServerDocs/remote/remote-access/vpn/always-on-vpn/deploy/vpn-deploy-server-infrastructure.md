@@ -17,10 +17,7 @@ Configure the Server Infrastructure
 
 >   Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-Configuring the server infrastructure is the first thing you do to deploy Always
-On VPN. This topic provides instructions on how to install and configure the
-server-side components necessary to support the VPN. The server-side components
-includes configuring: 
+Configuring the server infrastructure is the first thing you do to deploy Always On VPN. This topic provides instructions on how to install and configure the server-side components necessary to support the VPN. The server-side components includes configuring: 
 * PKI to distribute the certificates used by users, theVPN server and the NPS.  
 * RRAS to support IKEv2 connections. 
 * NPS to perform authorization for the VPN connections.
@@ -61,13 +58,13 @@ server authentication certificates.
 
 6.  Configure user certificate autoenrollment by doing the following:
 
-    a.  In the navigation pane, click **User Configuration\\Policies\\Windows         Settings\\Security Settings\\Public Key Policies**.
+    a.  In the navigation pane, click **User Configuration\\Policies\\Windows Settings\\Security Settings\\Public Key Policies**.
 
-    b.  In the details pane, right-click **Certificate Services Client –         Auto-Enrollment**, and click **Properties**.<br><br>The Certificate Services Client – Auto-Enrollment Properties dialog box opens.
+    b.  In the details pane, right-click **Certificate Services Client – Auto-Enrollment**, and click **Properties**.<br><br>The Certificate Services Client – Auto-Enrollment Properties dialog box opens.
 
-    c.  In **Configuration Model**, click **Enabled** and select the following:
+    c.  In Configuration Model, click **Enabled** and select the following:
 
-       -   **Renew expired certificates, update pending certificates, and             remove revoked certificates**
+       -   **Renew expired certificates, update pending certificates, and remove revoked certificates**
 
        -   **Update certificates that use certificate templates**
 
@@ -78,21 +75,11 @@ server authentication certificates.
 STEP 2: Create the Users and Servers Groups
 -------------------------------------------
 
-After you have configred certificate autoenrollment in Group Policy, you add a
-new Active Directory group that contains the users allowed to use the VPN to
-connect to your organization network. The Active Directory group defines which
-users:
+After you have configured certificate autoenrollment in Group Policy, you add the following three new Active Directory groups that contain:
+•	**Users** allowed to use the VPN to connect to their corporate network. 
+•	**VPN servers** and **NPS servers** used to restrict certificate requests to their members.
 
--   Are allowed to autoenroll for the user certificates the VPN requires.
-
--   The NPS authorizes for VPN access.
-
-By using a custom group, if you ever want to revoke a user’s VPN access, you can
-simply remove that user from the group.
-
-You will also add a group containing VPN servers and another group containing
-NPS servers. You use these groups to restrict certificate requests to their
-members.
+By using a custom group, if you ever want to revoke a user’s VPN access, you can simply remove that user from the group.
 
 1.  On a domain controller, open Active Directory Users and Computers.
 
@@ -147,7 +134,7 @@ After you have created the users and servers group, you create one of three auth
     >Because VPN clients access this server from the public Internet, the subject and alternative names are different than the internal server name. As a result, you cannot autoenroll this certificate on VPN servers.
 * **NPS Server Authentication template**. A simple copy of the RAS and IAS Server template secured to the NPS Server group that you created earlier in this section. You will configure this certificate for autoenrollment.
 
-1.  On the CA, open Certification Authority.
+1.  On the AD CA, open Certification Authority.
 
 2.  In the navigation pane, right-click **Certificate Templates**, and click **Manage**.<br><br>The Certificate Templates console opens.
 
@@ -156,48 +143,43 @@ After you have created the users and servers group, you create one of three auth
     a.  Right-click **User** and click **Duplicate Template**.<br><br>The Properties of
         New Template dialog box opens.
 
-    b.  Click the **General** tab, in **Template display name**, type **VPN User         Authentication**, and select the **Publish certificate in Active Directory** check box.
+    b.  Click the **General** tab, in **Template display name**, type **VPN User Authentication**, and select the **Publish certificate in Active Directory** check box.
 
     c.  Click the **Security** tab, complete the following steps:
 
-       1.  Click **Add**.<br><br>The Select Users, Computers, Service Accounts, or
+    d.  Click **Add**.<br><br>The Select Users, Computers, Service Accounts, or
             Groups dialog box opens.
 
-       2.  Type **VPN Users**, and click **OK**.
+    e.  Type **VPN Users**, and click **OK**.
 
-       3.  In **Group or user names**, click **VPN Users**.<br><br>The Permissions for
+    f.  In **Group or user names**, click **VPN Users**.<br><br>The Permissions for
             VPN Users dialog opens.
 
-       4.  In the Allow column, select the **Enroll** and **Autoenroll** check
+    g.  In the Allow column, select the **Enroll** and **Autoenroll** check
             boxes, and click **OK**.
 
-       5.  In **Group or user names**, click **Domain Users**, and click
+    h.  In **Group or user names**, click **Domain Users**, and click
             **Remove**.
 
-    d.  Click the **Compatibility** tab, complete the following steps:
+    i.  Click the **Compatibility** tab, complete the following steps:
 
-       1.  In **Certification Authority**, click **Windows Server 2012 R2**.<br><br>The Resulting changes dialog box opens.
+    j.  In **Certification Authority**, click **Windows Server 2012 R2** and click **OK**.<br><br>The Resulting changes dialog box opens.
 
-       2.  Click **OK**.
+    k.  In **Certificate recipient**, click **Windows 8.1/Windows Server 2012 R2**.<br><br>The Resulting changes dialog box opens.
 
-       3.  In **Certificate recipient**, click **Windows 8.1/Windows Server 2012 R2**.<br><br>The Resulting changes dialog box opens.
+    l.  Click the **Request Handling** tab, clear the **Allow private key to be exported** check box.
 
-       4.  Click **OK**.
+    m.  Click the **Cryptography** tab, complete the following steps:
 
-    e.  Click the **Request Handling** tab, clear the **Allow private key to be exported** check box.
-
-    f.  Click the **Cryptography** tab, complete the following steps:
-
-       1.  In **Provider Category**, click **Key Storage Provider**.
+    n.  In **Provider Category**, click **Key Storage Provider**.
     
-       2.  Click **Requests must use one of the following providers**.
+    o.  Click **Requests must use one of the following providers**.
     
-       3.  Select the **Microsoft Platform Crypto Provider** check box.
+    p.  Select the **Microsoft Platform Crypto Provider** check box.
 
-    g.  (Optional) Click the **Subject Name** tab, if you do not have an email
-    address listed on all user accounts, clear the **Include e-mail name in subject name** and **E-mail name** check boxes.
+    q.  (Optional) if you do not have an email address listed on all user accounts, click the **Subject Name** tab, clear the **Include e-mail name in subject name** and **E-mail name** check boxes.
 
-    h.  Click **OK** to save the VPN User Authentication certificate.
+    r.  Click **OK** to save the VPN User Authentication certificate.
 
 4.  Configure VPN Server Authentication template by doing the following:
 
@@ -205,62 +187,50 @@ After you have created the users and servers group, you create one of three auth
 
     b.  Click the **General** tab, in **Template display name**, type **VPN Server Authentication**.
 
-    c. Click the **Extensions** tab, complete the following steps:
-
-       1.  Click **Application Policies**, and click **Edit**.
+    c. Click the **Extensions** tab, click **Application Policies**, and click **Edit**.<br><br>The Edit Application Policies Extension dialog opens.
     
-       2.  On the **Edit Application Policies Extension** dialog box,
-            click **Add**.<br><br>The Add Application Policy dialog box opens.
+    d.  Click **Add**.<br><br>The Add Application Policy dialog box opens.
     
-       3.  Click **IP security IKE intermediate** and click **OK**.
+    e.  Click **IP security IKE intermediate**, click **OK**, click **OK** again.
     
-       4.  Click **OK**.
-
-    d. Click the **Security** tab, complete the following steps:
-
-       1.  Click **Add**.<br><br>The Select Users, Computers, Service Accounts, or Groups dialob box opens.
+    f. Click the **Security** tab, click **Add**.<br><br>The Select Users, Computers, Service Accounts, or Groups dialob box opens.
     
-       2.  Type **VPN Servers** and click **OK**.
+    g.  Type **VPN Servers** and click **OK**.
     
-       3.  In **Group or user names**, click **VPN Servers**.
+    h.  In **Group or user names**, click **VPN Servers**.
     
-       4.  In **Permissions for VPN Servers**, in the Allow column, select the **Enroll** check box.
+    i.  In **Permissions for VPN Servers**, in the Allow column, select the **Enroll** check box.
     
-       5.  In **Group or user names**, click **RAS and IAS Servers**, and click
+    j.  In **Group or user names**, click **RAS and IAS Servers**, and click
             **Remove**.
 
-    e. Click the **Subject Name** tab, click **Supply in the Request** and click **OK**
+    k. Click the **Subject Name** tab, click **Supply in the Request** and click **OK**
     on the Certificate Templates warning dialog box.
 
-    f. Click **OK** to save the VPN Server certificate template.
+    l. Click **OK** to save the VPN Server certificate template.
 
 5. Configure VPN Server Authentication template by doing the following:
 
-    a. Right-click **RAS and IAS Server**, and click **Duplicate Template**. The
+    a. Right-click **RAS and IAS Server**, and click **Duplicate Template**.<br><br>The
     Properties of New Template dialog box opens.
 
     b. Click the **General** tab, in **Template display name**, type **NPS Server Authentication**.
 
-    b. On the **Security** tab, complete the following steps:
+    c. On the **Security** tab, click **Add**.<br><br>The Select Users, Computers, Service Accounts, or Groups dialog box opens.
 
-       1.  Click **Add**. The Select Users, Computers, Service Accounts, or Groups dialog box opens.
+    d.  Type **NPS Servers**, and click **OK**.
 
-       2.  Type **NPS Servers**, and click **OK**.
+    e.  In **Group or user names**, click **NPS Servers**.
 
-       3.  In **Group or user names**, click **NPS Servers**.
+    f.  In **Permissions for NPS Servers**, in the Allow column, select the **Enroll** and **Autoenroll** check boxes.
 
-       4.  In **Permissions for NPS Servers**, in the Allow column, select the **Enroll** and **Autoenroll** check boxes.
-
-       5. In **Group or user names**, click **RAS and IAS Servers**, and click
-        **Remove**.
+    g. In **Group or user names**, click **RAS and IAS Servers**, and click **Remove**.
 
     c. Click **OK** to save the NPS Server certificate template.
 
 6. Close the Certificate Templates console.
 
-7. In the navigation pane of the Certification Authority snap-in,
-    right-click **Certificate Templates**, click **New**, and
-    click **Certificate Template to Issue**.
+7. In the navigation pane of the Certification Authority snap-in, right-click **Certificate Templates**, click **New**, and     click **Certificate Template to Issue**.
 
     a.  Click **VPN User Authentication**, and click **OK**.
 
@@ -338,17 +308,17 @@ Unlike the user certificate, you must manually enroll the VPN server’s certifi
 
 9.  In the Certificates snap-in, under **Personal**, click **Certificates**.<br><br>Your certificates are listed in the details pane.
 
-10. Right-click the certificate that has your VPN server’s name, and click
-    **Open**.
+10. Right-click the certificate that has your VPN server’s name, and click **Open**.
 
-11. On the **General** tab, confirm that the date listed under **Valid from** is
-    today’s date.<br><br>If the Valid from date is not today's date, then select another certificate before continuing.
+11. On the **General** tab, confirm that the date listed under **Valid from** is today’s date.<br><br>If the Valid from date is not today's date, then select another certificate before continuing.
 
-12. On the **Details** tab, click **Enhanced Key Usage**, and verify that **IP     security IKE intermediate** and **Server Authentication** are listed.
+12. On the **Details** tab, click **Enhanced Key Usage**, and verify that **IP security IKE intermediate** and **Server Authentication** are listed.
 
 13. Click **OK** to close the certificate.
 
 14. Close the Certificates snap-in.
+
+15. Restart the VPN server to allow the group memberships to update.
 
 STEP 6: Validate the NPS certificate
 -----------------------------------------------

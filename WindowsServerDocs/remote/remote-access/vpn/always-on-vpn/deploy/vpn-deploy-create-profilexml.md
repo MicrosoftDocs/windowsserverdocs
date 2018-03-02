@@ -8,9 +8,9 @@ author: shortpatti
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-In this guide’s scenario, you use Protected Extensible Authentication Protocol (PEAP) to secure communication between the client and the server. Unlike a simple user name and password, this connection requires a unique EAPConfiguration section in the VPN profile to work.
+ProfileXML is a URI node within the VPNv2 CSP. Rather than configuring each VPNv2 CSP node individually—such as triggers, route lists, and authentication protocols—use this node to configure a Windows 10 VPN client by delivering all the settings as a single XML block to a single CSP node. The ProfileXML schema matches the schema of the VPNv2 CSP nodes almost identically, but some terms are slightly different.
 
-Rather than describing how to create the XML markup for that section from scratch, you can use the Windows user interface to create a template VPN profile, and then use Windows PowerShell to consume the EAPConfiguration portion from that template to create the final ProfileXML that you will deploy later in the guide.
+You use ProfileXML in all the delivery methods this guide describes, including Windows PowerShell, System Center Configuration Manager, and Intune. 
 
 >[!NOTE] 
 >Group Policy does not include administrative templates to configure the Windows 10 Remote Access Always On VPN client, however you can use logon scripts.
@@ -41,18 +41,18 @@ However, if you have not restarted the computer since configuring certificate au
 5. Right-click **Template**, and click **Properties** and do the following:
     a. Click the **Security** tab, in **Type of VPN**, select **IKEv2**.
     b. In **Data encryption**, click **Maximum strength encryption**.
-    c. Click the **Use Extensible Authentication Protocol (EAP)** check box and then select **Microsoft: Protected EAP (PEAP) (encryption enabled)** from the list.
+    c. Click the **Use Extensible Authentication Protocol (EAP)** check box and select **Microsoft: Protected EAP (PEAP) (encryption enabled)** from the list.
     d. Click **Properties** to open the Protected EAP Properties dialog box.
     e. In the **Connect to these servers** box, type the name of the NPS server, for example, NPS01.<br>The server name you type must match the name in the certificate. You recovered this name earlier in this section. If the name does not match, the connection will fail, stating that “The connection was prevented because of a policy configured on your RAS/VPN server.”
     f.  Under **Trusted Root Certification Authorities**, select the root CA that issued the NPS server’s certificate, for example, contoso-CA.
-    c.  In Notifications before connecting, select **Don’t ask user to authorize new servers or trusted CAs** from the list.
-    d.  In Select Authentication Method, select **Smart Card or other certificate** from the list and click **Configure**.<br>The Smart Card or other Certificate Properties dialog opens.
-    e.  Click **Use a certificate on this computer**.
-    f.  Click the **Connect to these servers** check box and enter the name of the NPS server.
-    g.  Under **Trusted Root Certification Authorities**, select the root CA that issued the NPS server’s certificate.
-    h.  Select the **Don’t prompt user to authorize new servers or trusted certification authorities** check box.
-    i.  Click **OK** to close the Smart Card or other Certificate Properties dialog box.
-    j.  Click **OK** to close the Protected EAP Properties dialog box.
+    g.  In Notifications before connecting, select **Don’t ask user to authorize new servers or trusted CAs** from the list.
+    h.  In Select Authentication Method, select **Smart Card or other certificate** from the list and click **Configure**.<br>The Smart Card or other Certificate Properties dialog opens.
+    i.  Click **Use a certificate on this computer**.
+    j.  Click the **Connect to these servers** check box and enter the name of the NPS server.
+    k.  Under **Trusted Root Certification Authorities**, select the root CA that issued the NPS server’s certificate.
+    l.  Select the **Don’t prompt user to authorize new servers or trusted certification authorities** check box.
+    m.  Click **OK** to close the Smart Card or other Certificate Properties dialog box.
+    n.  Click **OK** to close the Protected EAP Properties dialog box.
 6. Click **OK** to close the Template Properties dialog box.
 7. Close the Network Connections window.
 8. In Settings, test the VPN by clicking **Template**, and clicking **Connect**.

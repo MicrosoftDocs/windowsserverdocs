@@ -28,7 +28,7 @@ The Always On VPN planning process consists of these primary components and high
 This section provides a high-level overview of the Always On VPN deployment server and client requirements. Microsoft recommends that you review the design and deployment guides for each of the technologies that are used in the deployment scenario. These guides help you determine whether this deployment scenario provides the services and configuration you need for your organization's network.
 
 >[!IMPORTANT]
->For this deployment, it is not a requirement that your infrastructure servers, such as computers running Active Directory Domain Services, Active Directory Certificate Services, and Network Policy Server, are running Windows Server 2016. You can use earlier versions of Windows Server, such as Windows Server 2012 R2, for the infrastructure servers and for the server that is running Remote Access.
+>For this deployment, it is not a requirement that your infrastructure servers, such as computers running Active Directory Domain Services (AD DS), Active Directory Certificate Services (AD CS), and Network Policy Server (NPS), are running Windows Server 2016. You can use earlier versions of Windows Server, such as Windows Server 2012 R2, for the infrastructure servers and for the server that is running Remote Access.
 
 ### Servers
 |Requirement  |Description  |
@@ -63,16 +63,17 @@ This guide does not provide instructions for deploying the following items.
 ## STEP 1: Prepare the Remote Access Server
 Before you install the Remote Access server role on the VPN server, you must:
 
-- **Ensure VPN server software and hardware configuration is correct**. 
+1. Ensure VPN server software and hardware configuration is correct. 
     - Windows Server 2012 R2 or Windows Server 2016
     - Two physical network adapters to connect to the external (Internet) and internal perimeter networks (private network)
 
-- **Identify which network adapter connects to the Internet and which network adapter connects to your private network**. The Internet facing network adapter must be configured with a public IP address, while the adapter facing the Intranet can use an IP address from the local network.
+2. Identify which network adapter connects to the Internet and which network adapter connects to your private network. 
+    The Internet facing network adapter must be configured with a public IP address, while the adapter facing the Intranet can use an IP address from the local network.
 
->[!NOTE]
->If you prefer not to use a public IP address on your perimeter network, you can configure the Edge Firewall with a public IP address, and then configure the firewall to forward VPN connection requests to the VPN server.
+    >[!NOTE]
+    >If you prefer not to use a public IP address on your perimeter network, you can configure the Edge Firewall with a public IP address, and then configure the firewall to forward VPN connection requests to the VPN server.
 
-- **Connect the VPN server to the network**. Install the VPN server on a perimeter network, between the edge firewall and the perimeter firewall.
+3. Install the VPN server on a perimeter network, between the edge firewall and the perimeter firewall.
 
 ## STEP 2: Plan Authentication Methods
 
@@ -84,27 +85,35 @@ Configure the Remote Access VPN server to support IKEv2 connections while also d
 
 Configure the VPN server to assign addresses to VPN clients from a static address pool that you configure, or you can use IP addresses obtained from a DHCP server. 
 
+1.	Determine the maximum number of simultaneous VPN clients that you want to support.
+2.	Plan a range of static IP addresses on the internal perimeter network to meet that requirement (i.e., the static address pool). 
+3.	(Optional) If you’re using Dynamic Host Configuration Protocol (DHCP) to supply IP addresses on the internal DMZ, you might also need to create an exclusion for those static IP addresses in DHCP.
+
+
 ## SEP 4: Prepare the Environment
 
-- **Ensure that you have permissions to configure your external firewall and that you have a valid public IP address**. To support Internet Key Exchange version 2 \(IKEv2\) VPN connections, you must open ports on the firewall. To accept connections from external clients, you need a public IP address.
+1.	Ensure that you have permissions to configure your external firewall and that you have a valid public IP address. 
+    To support IKEv2 VPN connections, you must open ports on the firewall. To accept connections from external clients, you need a public IP address.
+2.	Choose a range of static IP addresses for VPN clients. 
+3.	Ensure that you can edit your public DNS zone. 
+    To support the VPN infrastructure, you must add DNS records to your public DNS domain. Ensure that you have permissions to edit this zone.
+4.	Verify that all VPN users have user accounts in Active Directory User (AD DS). 
+    Before users can connect to the network with VPN connections, they must have user accounts in AD DS.
 
-- **Choose a range of static IP addresses for VPN clients**. Determine the maximum number of simultaneous VPN clients that you want to support, and plan a range of static IP addresses on the internal perimeter network to meet that requirement (i.e., the *static address pool*). If you’re using Dynamic Host Configuration Protocol \(DHCP\) to supply IP addresses on the internal DMZ, you might also need to create an exclusion for those static IP addresses in DHCP.
-
-- **Ensure that you can edit your public DNS zone**. To support the VPN infrastructure, you must add DNS records to your public DNS domain. Ensure that you have permissions to edit this zone.
-
-- **Verify that all VPN users have user accounts in Active Directory User \(AD DS\)**. Before users can connect to the network with VPN connections, they must have user accounts in AD DS.
 
 ## STEP 5: Prepare the Routing and Firewall
 
-The following steps provide instructions on how to make minor adjustments to the firewall configuration to support VPN deployment.
+The VPN server is installed inside the perimeter network, which partitions the perimeter network into internal and external perimeter networks. Because of this, you might need to make several routing modifications, depending on your network environment.
 
-In addition, the VPN server is installed inside the perimeter network, which partitions the perimeter network into internal and external perimeter networks. Because of this, you might need to make several routing modifications, depending on your network environment.
+1.	(Optional) Configure port forwarding. 
+    Your edge firewall must open the ports and protocol IDs associated with an IKEv2 VPN and forward them to the VPN server. In most environments, doing so requires you to configure port forwarding. Redirect Universal Datagram Protocol (UDP) ports 500 and 4500 to the VPN server.
+2.	Configure routing so that the DNS servers and VPN servers can reach the Internet. 
+    This deployment uses IKEv2 and Network Address Translation (NAT). 
+3.	Ensure that the VPN server can reach all the required internal networks and network resources that you want to provide to remote users. 
+    Any network or resource that is not reachable from the VPN server is also unreachable over VPN connections from remote locations.
 
-- **Configure port forwarding \(optional\)**. Your edge firewall must open the ports and protocol IDs associated with an IKEv2 VPN and forward them to the VPN server. In most environments, doing so requires you to configure port forwarding. Redirect Universal Datagram Protocol (UDP) ports 500 and 4500 to the VPN server.
-
-- **Configure routing so that the DNS servers and VPN servers can reach the Internet**. This deployment uses IKEv2 and Network Address Translation \(NAT\). Ensure that the VPN server can reach all of the required internal networks and network resources that you want to provide to remote users. Any network or resource that is not reachable from the VPN server will also be unreachable over VPN connections from remote locations.
-
-In most environments, you can simply adjust static routes on the edge firewall and the VPN server to allow them to reach this new internal perimeter network. In complex environments, you may need to add static routes to internal routers or adjust internal firewall rules for the VPN server and the block of IP addresses associated with VPN clients.
+>[!TIP] 
+>In most environments, you can simply adjust static routes on the edge firewall and the VPN server to allow them to reach this new internal perimeter network. In complex environments, you may need to add static routes to internal routers or adjust internal firewall rules for the VPN server and the block of IP addresses associated with VPN clients.
 
 ## Next steps
 **[Deploy Always On VPN Connections](always-on-vpn-deploy-deployment.md)**. This section provides instructions on how to deploy Always On VPN connections for remote Windows 10 client computers that are joined to your domain.

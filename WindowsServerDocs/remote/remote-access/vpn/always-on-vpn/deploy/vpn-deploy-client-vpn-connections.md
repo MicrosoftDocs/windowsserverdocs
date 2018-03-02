@@ -10,9 +10,8 @@ author: shortpatti
 
 The final step in the Always On VPN deployment process, unless you are migrating from DirectAccess to Always On VPN, is to configure the Always On VPN connection in Windows 10 client.
 
+You can use several technologies to configure Windows 10 VPN clients, including Windows PowerShell, System Center Configuration Manager, and Intune in which all three require an XML VPN profile to configure the appropriate VPN settings.
 
-You can use several technologies to configure Windows 10 VPN clients, including
-Windows PowerShell, System Center Configuration Manager, and Intune in which all three require an XML VPN profile to configure the appropriate VPN settings.
 
 
 >[!NOTE] 
@@ -30,103 +29,96 @@ Rather than describing how to create the XML markup for that section from scratc
 
 ### Configure the VPN client by using Windows PowerShell
 
-To configure the VPNv2 CSP on a Windows 10 client computer, run the
-VPN_Profile.ps1 Windows PowerShell script that you created in the section
-“Create the ProfileXML configuration files.” Open Windows PowerShell as an
-Administrator; otherwise, you’ll receive an error saying, “Access denied.”
+To configure the VPNv2 CSP on a Windows 10 client computer, 
+1.	Open Windows PowerShell as an Administrator and run the VPN_Profile.ps1 script that you created in the section [Create the ProfileXML for Always On VPN Connections](vpn-deploy-create-profilexml.md).
+2.	Verify, at any time, that the script ran successfully buy running the following command: 
+    ```
+    Get-WmiObject -Namespace root\cimv2\mdm\dmmap -Class MDM_VPNv2_01
+    ```
+    Successful results from the Get-WmiObject cmdlet look like:
+    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    __GENUS : 2
+    __CLASS : MDM_VPNv2_01
+    __SUPERCLASS:
+    __DYNASTY   : MDM_VPNv2_01
+    __RELPATH   : MDM_VPNv2_01.InstanceID="Contoso%20AlwaysOn%20VPN",ParentID
+      ="./Vendor/MSFT/VPNv2"
+    __PROPERTY_COUNT: 10
+    __DERIVATION: {}
+    __SERVER: WIN01
+    __NAMESPACE : root\cimv2\mdm\dmmap
+    __PATH  : \\WIN01\root\cimv2\mdm\dmmap:MDM_VPNv2_01.InstanceID="Conto
+      so%20AlwaysOn%20VPN",ParentID="./Vendor/MSFT/VPNv2"
+    AlwaysOn: True
+    ByPassForLocal  :
+    DnsSuffix   : corp.contoso.com
+    EdpModeId   :
+    InstanceID  : Contoso%20AlwaysOn%20VPN
+    LockDown:
+    ParentID: ./Vendor/MSFT/VPNv2
+    ProfileXML  : <VPNProfile><RememberCredentials>true</RememberCredentials>
+      <AlwaysOn>true</AlwaysOn><DnsSuffix>corp.contoso.com</DnsSu
+      ffix><TrustedNetworkDetection>corp.contoso.com</TrustedNetw
+      orkDetection><NativeProfile><Servers>vpn.contoso.com;vpn.co
+      ntoso.com</Servers><RoutingPolicyType>SplitTunnel</RoutingP
+      olicyType><NativeProtocolType>Ikev2</NativeProtocolType><Au
+      thentication><UserMethod>Eap</UserMethod><MachineMethod>Eap
+      </MachineMethod><Eap><Configuration><EapHostConfig xmlns="h
+      ttp://www.microsoft.com/provisioning/EapHostConfig"><EapMet
+      hod><Type xmlns="https://www.microsoft.com/provisioning/EapC
+      ommon">25</Type><VendorId xmlns="https://www.microsoft.com/p
+      rovisioning/EapCommon">0</VendorId><VendorType xmlns="http:
+      //www.microsoft.com/provisioning/EapCommon">0</VendorType><
+      AuthorId xmlns="https://www.microsoft.com/provisioning/EapCo
+      mmon">0</AuthorId></EapMethod><Config xmlns="http://www.mic
+      rosoft.com/provisioning/EapHostConfig"><Eap xmlns="http://w
+      ww.microsoft.com/provisioning/BaseEapConnectionPropertiesV1
+      "><Type>25</Type><EapType xmlns="https://www.microsoft.com/p
+      rovisioning/MsPeapConnectionPropertiesV1"><ServerValidation
+      ><DisableUserPromptForServerValidation>true</DisableUserPro
+      mptForServerValidation><ServerNames>NPS</ServerNames><Trust
+      edRootCA>3f 07 88 e8 ac 00 32 e4 06 3f 30 f8 db 74 25 e1
+      2e 5b 84 d1 </TrustedRootCA></ServerValidation><FastReconne
+      ct>true</FastReconnect><InnerEapOptional>false</InnerEapOpt
+      ional><Eap xmlns="https://www.microsoft.com/provisioning/Bas
+      eEapConnectionPropertiesV1"><Type>13</Type><EapType xmlns="
+      https://www.microsoft.com/provisioning/EapTlsConnectionPrope
+      rtiesV1"><CredentialsSource><CertificateStore><SimpleCertSe
+      lection>true</SimpleCertSelection></CertificateStore></Cred
+      entialsSource><ServerValidation><DisableUserPromptForServer
+      Validation>true</DisableUserPromptForServerValidation><Serv
+      erNames>NPS</ServerNames><TrustedRootCA>3f 07 88 e8 ac 00
+      32 e4 06 3f 30 f8 db 74 25 e1 2e 5b 84 d1 </TrustedRootCA><
+      /ServerValidation><DifferentUsername>false</DifferentUserna
+      me><PerformServerValidation xmlns="https://www.microsoft.com
+      /provisioning/EapTlsConnectionPropertiesV2">true</PerformSe
+      rverValidation><AcceptServerName xmlns="http://www.microsof
+      t.com/provisioning/EapTlsConnectionPropertiesV2">true</Acce
+      ptServerName></EapType></Eap><EnableQuarantineChecks>false<
+      /EnableQuarantineChecks><RequireCryptoBinding>false</Requir
+      eCryptoBinding><PeapExtensions><PerformServerValidation xml
+      ns="https://www.microsoft.com/provisioning/MsPeapConnectionP
+      ropertiesV2">true</PerformServerValidation><AcceptServerNam
+      e xmlns="https://www.microsoft.com/provisioning/MsPeapConnec
+      tionPropertiesV2">true</AcceptServerName></PeapExtensions><
+      /EapType></Eap></Config></EapHostConfig></Configuration></E
+      ap></Authentication></NativeProfile><DomainNameInformation>
+      <DomainName>corp.contoso.com</DomainName><DnsServers>10.10.
+      0.2,10.10.0.3</DnsServers><AutoTrigger>true</AutoTrigger></
+      DomainNameInformation></VPNProfile>
+    RememberCredentials : True
+    TrustedNetworkDetection : corp.contoso.com
+    PSComputerName  : WIN01
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-After running VPN_Profile.ps1 to configure the VPN profile, you can verify at
-any time that it was successful by running the following command in the Windows
-PowerShell ISE:
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Get-WmiObject -Namespace root\cimv2\mdm\dmmap -Class MDM_VPNv2_01
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Successful results look similar to Listing 2.
-
-Listing 2. Successful results from the Get-WmiObject cmdlet
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-__GENUS : 2
-__CLASS : MDM_VPNv2_01
-__SUPERCLASS:
-__DYNASTY   : MDM_VPNv2_01
-__RELPATH   : MDM_VPNv2_01.InstanceID="Contoso%20AlwaysOn%20VPN",ParentID
-  ="./Vendor/MSFT/VPNv2"
-__PROPERTY_COUNT: 10
-__DERIVATION: {}
-__SERVER: WIN01
-__NAMESPACE : root\cimv2\mdm\dmmap
-__PATH  : \\WIN01\root\cimv2\mdm\dmmap:MDM_VPNv2_01.InstanceID="Conto
-  so%20AlwaysOn%20VPN",ParentID="./Vendor/MSFT/VPNv2"
-AlwaysOn: True
-ByPassForLocal  :
-DnsSuffix   : corp.contoso.com
-EdpModeId   :
-InstanceID  : Contoso%20AlwaysOn%20VPN
-LockDown:
-ParentID: ./Vendor/MSFT/VPNv2
-ProfileXML  : <VPNProfile><RememberCredentials>true</RememberCredentials>
-  <AlwaysOn>true</AlwaysOn><DnsSuffix>corp.contoso.com</DnsSu
-  ffix><TrustedNetworkDetection>corp.contoso.com</TrustedNetw
-  orkDetection><NativeProfile><Servers>vpn.contoso.com;vpn.co
-  ntoso.com</Servers><RoutingPolicyType>SplitTunnel</RoutingP
-  olicyType><NativeProtocolType>Ikev2</NativeProtocolType><Au
-  thentication><UserMethod>Eap</UserMethod><MachineMethod>Eap
-  </MachineMethod><Eap><Configuration><EapHostConfig xmlns="h
-  ttp://www.microsoft.com/provisioning/EapHostConfig"><EapMet
-  hod><Type xmlns="https://www.microsoft.com/provisioning/EapC
-  ommon">25</Type><VendorId xmlns="https://www.microsoft.com/p
-  rovisioning/EapCommon">0</VendorId><VendorType xmlns="http:
-  //www.microsoft.com/provisioning/EapCommon">0</VendorType><
-  AuthorId xmlns="https://www.microsoft.com/provisioning/EapCo
-  mmon">0</AuthorId></EapMethod><Config xmlns="http://www.mic
-  rosoft.com/provisioning/EapHostConfig"><Eap xmlns="http://w
-  ww.microsoft.com/provisioning/BaseEapConnectionPropertiesV1
-  "><Type>25</Type><EapType xmlns="https://www.microsoft.com/p
-  rovisioning/MsPeapConnectionPropertiesV1"><ServerValidation
-  ><DisableUserPromptForServerValidation>true</DisableUserPro
-  mptForServerValidation><ServerNames>NPS</ServerNames><Trust
-  edRootCA>3f 07 88 e8 ac 00 32 e4 06 3f 30 f8 db 74 25 e1
-  2e 5b 84 d1 </TrustedRootCA></ServerValidation><FastReconne
-  ct>true</FastReconnect><InnerEapOptional>false</InnerEapOpt
-  ional><Eap xmlns="https://www.microsoft.com/provisioning/Bas
-  eEapConnectionPropertiesV1"><Type>13</Type><EapType xmlns="
-  https://www.microsoft.com/provisioning/EapTlsConnectionPrope
-  rtiesV1"><CredentialsSource><CertificateStore><SimpleCertSe
-  lection>true</SimpleCertSelection></CertificateStore></Cred
-  entialsSource><ServerValidation><DisableUserPromptForServer
-  Validation>true</DisableUserPromptForServerValidation><Serv
-  erNames>NPS</ServerNames><TrustedRootCA>3f 07 88 e8 ac 00
-  32 e4 06 3f 30 f8 db 74 25 e1 2e 5b 84 d1 </TrustedRootCA><
-  /ServerValidation><DifferentUsername>false</DifferentUserna
-  me><PerformServerValidation xmlns="https://www.microsoft.com
-  /provisioning/EapTlsConnectionPropertiesV2">true</PerformSe
-  rverValidation><AcceptServerName xmlns="http://www.microsof
-  t.com/provisioning/EapTlsConnectionPropertiesV2">true</Acce
-  ptServerName></EapType></Eap><EnableQuarantineChecks>false<
-  /EnableQuarantineChecks><RequireCryptoBinding>false</Requir
-  eCryptoBinding><PeapExtensions><PerformServerValidation xml
-  ns="https://www.microsoft.com/provisioning/MsPeapConnectionP
-  ropertiesV2">true</PerformServerValidation><AcceptServerNam
-  e xmlns="https://www.microsoft.com/provisioning/MsPeapConnec
-  tionPropertiesV2">true</AcceptServerName></PeapExtensions><
-  /EapType></Eap></Config></EapHostConfig></Configuration></E
-  ap></Authentication></NativeProfile><DomainNameInformation>
-  <DomainName>corp.contoso.com</DomainName><DnsServers>10.10.
-  0.2,10.10.0.3</DnsServers><AutoTrigger>true</AutoTrigger></
-  DomainNameInformation></VPNProfile>
-RememberCredentials : True
-TrustedNetworkDetection : corp.contoso.com
-PSComputerName  : WIN01
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-The ProfileXML configuration must be correct in structure, spelling,
+>[!IMPORTANT]
+>The ProfileXML configuration must be correct in structure, spelling,
 configuration, and sometimes letter case. If you see something different in
 structure to Listing 1, the ProfileXML markup likely contains an error.
 
-If you need to troubleshoot the markup, it is easier to put it in an XML editor
+>[!TIP]
+>If you need to troubleshoot the markup, it is easier to put it in an XML editor
 than to troubleshoot it in the Windows PowerShell ISE. In either case, start
 with the simplest version of the profile, and add components back one at a time
 until the issue occurs again.
@@ -137,14 +129,14 @@ Configure the VPN client by using System Center Configuration Manager
 In System Center Configuration Manager, you can deploy VPN profiles by using the
 ProfileXML CSP node, just like you did in Windows PowerShell. Here, you use the
 VPN_Profile.ps1 Windows PowerShell script that you created in the section
-[Create the ProfileXML configuration files](#bkmk_ProfileXML).
+[Create the ProfileXML for Always On VPN Connections](vpn-deploy-create-profilexml.md).
 
 To use System Center Configuration Manager to deploy a Remote Access Always On
 VPN profile to Windows 10 client computers, you must start by creating a group
 of machines or users to whom you will deploy the profile. In this scenario,
 create a user group to deploy the configuration script.
 
-**To create a user group**
+### Create a user group
 
 1.  In the Configuration Manager console, open Assets and Compliance\\User
     Collections.
@@ -191,160 +183,98 @@ create a user group to deploy the configuration script.
 
 After you create the user group to receive the VPN profile, you can create a
 package and program to deploy the Windows PowerShell configuration script that
-you created in the section [Create the ProfileXML configuration
-files](#bkmk_ProfileXML).
+you created in the section [Create the ProfileXML for Always On VPN Connections](vpn-deploy-create-profilexml.md).
 
-**To create a package containing the ProfileXML configuration script**
+### Create a package containing the ProfileXML configuration script
 
-1.  Host the script VPN_Profile.ps1 on a network share that the site server
-    computer account can access.
+1.  Host the script **VPN_Profile.ps1** on a network share that the site server computer account can access.
 
-2.  In the Configuration Manager console, open Software Library\\Application
-    Management\\Packages.
+2.  In the Configuration Manager console, open **Software Library\\Application Management\\Packages**.
 
-3.  On the **Home** ribbon, in the **Create** group, click **Create Package** to
-    start the Create Package and Program Wizard.
+3.  On the Home ribbon, in the **Create** group, click **Create Package** to start the Create Package and Program Wizard.
 
 4.  On the Package page, complete the following steps:
+    a. In Name, type **Windows 10 Always On VPN Profile**.
+    b. Select the **This package contains source files** check box, and click **Browse**.
+    c. In the Set Source Folder dialog box, click **Browse**, select the file share containing VPN_Profile.ps1, and click **OK**.<br><br>Make sure you select a network path, not a local path. In other words the path should be something like _\\fileserver\\vpnscript_, not _c:\\vpnscript._.
 
-    1.  In **Name**, type **Windows 10 Always On VPN Profile**.
+    d.  Click **Next**.
 
-    2.  Select the **This package contains source files** check box, and click
-        **Browse**.
-
-    3.  In the Set Source Folder dialog box, click **Browse**, select the file
-        share containing VPN_Profile.ps1, and click **OK**.
-
-Make sure you select a network path, not a local path. In other words, the path
-should be something like *\\fileserver\\vpnscript*, not *c:\\vpnscript.*.
-
-1.  Click **Next**.
-
-2.  On the Program Type page, click **Next**.
-
-3.  On the Standard Program page, complete the following steps:
-
-    1.  In **Name**, type **VPN Profile Script**.
-
-    2.  In **Command line**, type **PowerShell.exe -ExecutionPolicy Bypass -File
-        "VPN_Profile.ps1"**.
-
-    3.  In **Run mode**, click **Run with administrative rights**.
-
-    4.  Click **Next**.
+5.  On the Program Type page, click **Next**.
+    a. On the Standard Program page, in Name, type **VPN Profile Script**.
+    b. In Command line, type 'PowerShell.exe -ExecutionPolicy Bypass -File "VPN_Profile.ps1'.
+    c. In Run mode, click **Run with administrative rights**, and click **Next**.
 
 4.  On the Requirements page, complete the following steps:
-
-    1.  Select **This program can run only on specified platforms**.
-
-    2.  Select the **All Windows 10 (32-bit)** and **All Windows 10 (64-bit)**
-        check boxes.
-
-    3.  In **Estimated disk space**, type **1**.
-
-    4.  In **Maximum allowed run time (minutes)**, type **15**.
-
-    5.  Click **Next**.
+    a. Select **This program can run only on specified platforms**.
+    b. Select the **All Windows 10 (32-bit)** and **All Windows 10 (64-bit)** check boxes.
+    c. In Estimated disk space, type **1**.
+    d. In Maximum allowed run time (minutes), type **15** and click **Next**.
 
 5.  On the Summary page, click **Next**.
 
 6.  On the Completion page, click **Close**.
 
-With the package and program created, you need to deploy it to the **VPN Users**
-group.
+With the package and program created, you need to deploy it to the **VPN Users** group.
 
-**To deploy the ProfileXML configuration script**
+### Deploy the ProfileXML configuration script
 
-1.  In the Configuration Manager console, open Software Library\\Application
-    Management\\Packages.
+1.  In the Configuration Manager console, open **Software Library\\Application Management\\Packages.
 
-2.  In **Packages**, click **Windows 10 Always On VPN Profile**.
+2.  In Packages, click **Windows 10 Always On VPN Profile**.
 
-3.  On the **Programs** tab, at the bottom of the details pane, right-click
-    **VPN Profile Script**, click **Properties**, and complete the following
-    steps:
+3.  On the **Programs** tab, at the bottom of the details pane, right-click **VPN Profile Script**, click **Properties**, and complete the following steps:
+    a. On the **Advanced** tab, in When this program is assigned to a computer, click **Once for every user who logs on**.
+    b. Click **OK**.
 
-    1.  On the **Advanced** tab, in **When this program is assigned to a
-        computer**, click **Once for every user who logs on**.
-
-    2.  Click **OK**.
-
-4.  Right-click **VPN Profile Script,** and click **Deploy** to start the Deploy
-    Software Wizard.
+4.  Right-click **VPN Profile Script,** and click **Deploy** to start the Deploy Software Wizard.
 
 5.  On the General page, complete the following steps:
-
-    1.  Beside **Collection**, click **Browse**.
-
-    2.  In the **Collection Types** list (top left), click **User Collections**.
-
-    3.  Click **VPN Users**, and click **OK**.
-
-    4.  Click **Next**.
+    a. Beside Collection, click **Browse**.
+    b. In the Collection Types list (top left), click **User Collections**.
+    c. Click **VPN Users**, and click **OK**.
+    d. Click **Next**.
 
 6.  On the Content page, complete the following steps:
-
-    1.  Click **Add**, and click **Distribution Point**.
-
-    2.  In **Available distribution points**, select the distribution points to
-        which you want to distribute the ProfileXML configuration script, and
-        click **OK**.
-
-    3.  Click **Next**.
+    a. Click **Add**, and click **Distribution Point**.
+    b. In Available distribution points, select the distribution points to which you want to distribute the ProfileXML configuration script, andclick **OK**.
+    c. Click **Next**.
 
 7.  On the Deployment settings page, click **Next**.
 
-8.  On the Scheduling page, complete the following steps:
-
-    1.  Click **New** to open the Assignment Schedule dialog box.
-
-    2.  Click **Assign immediately after this event**, and then click **OK**.
-
-    3.  Click **Next**.
+8.  On the Scheduling page, complete the following steps: 
+    a. Click **New** to open the Assignment Schedule dialog box. 
+    b. Click **Assign immediately after this event**, and click **OK**.
+    c. Click **Next**.
 
 9.  On the User Experience page, complete the following steps:
-
-    1.  Select the **Software Installation** check box.
-
-    2.  Click **Summary**.
+    a. Select the **Software Installation** check box.
+    b. Click **Summary**.
 
 10. On the Summary page, click **Next**.
 
 11. On the Completion page, click **Close**.
 
-With the ProfileXML configuration script deployed, sign in to a Windows 10
-client computer with the user account you selected when you built the user
-collection. Verify configuration of the VPN client.
+### Verify configuration of the VPN client
+
+With the ProfileXML configuration script deployed, sign in to a Windows 10 client computer with the user account you selected when you built the user collection. Verify configuration of the VPN client.
 
 >[!NOTE] 
 >The script VPN_Profile.ps1 will not work in a Remote Desktop session. Likewise, it will not work in a Hyper-V enhanced session. If you’re testing a Remote Access Always On VPN in virtual machines, disable enhanced session on your client VMs before continuing.
 
-**To verify configuration of the VPN client**
+1.  In Control Panel, under System\\Security, click **Configuration Manager**.<br><br>The Configuration Manager Properties dialog box opens.
 
-1.  In Control Panel, click **Configuration Manager**. **Configuration Manager**
-    is under **System**\\**Security**.
+2.  Clickn the **Actions** tab, complete the following steps: 
+    a. Click **Machine Policy Retrieval & Evaluation Cycle**, click **Run Now**, and click **OK**. 
+    b. Click **User Policy Retrieval & Evaluation Cycle**, click **Run Now**, and click **OK**.
+    c. Click **OK**.
 
-2.  In the Configuration Manager Properties dialog box, on the **Actions** tab,
-    complete the following steps:
-
-    1.  Click **Machine Policy Retrieval & Evaluation Cycle**, click **Run
-        Now**, and click **OK**.
-
-    2.  Click **User Policy Retrieval & Evaluation Cycle**, click **Run Now**,
-        and click **OK**.
-
-    3.  Click **OK**.
-
-3.  Close Control Panel.
-
-You should see the new VPN profile shortly.
+3.  Close Control Panel.<br><br>The new VPN profile appears after a few minutes.
 
 Configure the VPN client by using Intune
 ----------------------------------------
 
-To use Intune to deploy Windows 10 Remote Access Always On VPN profiles, you can
-configure the ProfileXML CSP node by using the VPN profile you created in the
-section [Create the ProfileXML configuration files](#bkmk_ProfileXML).
+To use Intune to deploy Windows 10 Remote Access Always On VPN profiles, you can configure the ProfileXML CSP node by using the VPN profile you created in the section [Create the ProfileXML for Always On VPN Connections](vpn-deploy-create-profilexml.md).
 
 In this example, you use the profile stored in VPN_Profile.xml.
 

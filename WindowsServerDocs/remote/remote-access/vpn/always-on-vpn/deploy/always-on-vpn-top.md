@@ -19,9 +19,9 @@ What is Always On VPN and why use it? Well, in previous versions of the Windows 
 
 ## Benefits of Always On VPN
 
-Always On VPN has many benefits over the Windows VPN solutions of the past. Key improvements in integration, security, connectivity, networking control, and compatibility align Always On VPN with Microsoft's cloud-first, mobile-first vision.
+Always On VPN has many benefits over the Windows VPN solutions of the past. Unlike a traditional VPN, this iteration of Remote Access is designed to be persistent. A user automatically connects to your network by connecting to any external network. Key improvements in integration, security, connectivity, networking control, and compatibility align Always On VPN with Microsoft's cloud-first, mobile-first vision.
 
-Because many of the devices that require remote access are personal devices, Always On VPN does not require that a device be domain joined. Always On VPN can provides a single, cohesive solution for remote access for all your connected devices going forward, even personally owned devices. Also, organizations can choose which management platform they prefer for deploying the Always On VPN configuration because the CSP is not vendor specific.
+Because many of the devices that require remote access are personal devices, Always On VPN does not require that a device be domain joined. Always On VPN provides a single, cohesive solution for remote access for all your connected devices going forward, even personally owned devices. Also, organizations can choose which management platform they prefer for deploying the Always On VPN configuration because the CSP is not vendor specific.
 
 For additional details about the advantages of Always On VPN, see [Always On VPN and DirectAccess Features Comparison](https://docs.microsoft.com/windows-server/remote/remote-access/vpn/vpn-map-da).
 

@@ -56,23 +56,24 @@ After installation successfully completes, the following message appears in Wind
 4.  In **Select destination server**, ensure that **Select a server from the server pool** is selected. 
 5. In **Server Pool**, ensure that the local computer is selected. Click **Next**.
 
-5.  In **Select server roles**, in **Roles**, click **Remote Access**, and then click **Next**.
+6.  In **Select server roles**, in **Roles**, click **Remote Access**, and then click **Next**.
 
-6.  In **Select features**, click **Next**.
+7.  In **Select features**, click **Next**.
 
-7.  In **Remote Access**, click **Next**.
+8.  In **Remote Access**, click **Next**.
 
-8.  In **Select role service**, in **Role services**, click **DirectAccess and VPN \(RAS\)**. <br><br>The Add Roles and Features Wizard dialog box opens.
+9.  In **Select role service**, in **Role services**, click **DirectAccess and VPN \(RAS\)**. <br><br>The Add Roles and Features Wizard dialog box opens.
 
-9.  Click **Add Features** to close the dialog box, and then click **Next**.
+10.  Click **Add Features** to close the dialog box, and then click **Next**.
 
-10. In **Web Server Role (IIS)**, click **Next**.
+11. In **Web Server Role (IIS)**, click **Next**.
 
-11. In **Select role services**, click **Next**.
+12. In **Select role services**, click **Next**.
 
-12. In **Confirm installation selections**, review the choices you've made, and then click **Install**.
+13. In **Confirm installation selections**, review the choices you've made, and then click **Install**.
 
-13. When the installation is complete, click **Close**.
+14. When the installation is complete, click **Close**.
+
 
 ## STEP 2: Configure Remote Access as a VPN Server
 
@@ -88,13 +89,11 @@ Configure the Remote Access VPN to allow IKEv2 VPN connections, deny connections
 
 3.  Click **Deploy VPN only**.<br><br>The Routing and Remote Access Microsoft Management Console \(MMC\) opens.
 
-4.  Right-click the VPN server, and click **Configure and Enable Routing and Remote Access**.<br><br>The Routing and Remote Access Server Setup Wizard opens. 
+4.  Right-click the VPN server, click **Configure and Enable Routing and Remote Access**, and click **Next**.<br><br>The Routing and Remote Access Server Setup Wizard opens. 
 
-5.  Click **Next**.
+6.  In **Configuration**, click **Custom Configuration**, and click **Next**.
 
-6.  In **Configuration**, click **Custom Configuration**, and then click **Next**.
-
-7.  In **Custom Configuration**, click **VPN access**, and then click **Next**.<br><br>The Completing the Routing and Remote Access Server Setup Wizard opens.
+7.  In **Custom Configuration**, click **VPN access**, and click **Next**.<br><br>The Completing the Routing and Remote Access Server Setup Wizard opens.
 
 8.  Click **Finish** to close the wizard, and click **OK** to close the Routing and Remote Access dialog box.
 

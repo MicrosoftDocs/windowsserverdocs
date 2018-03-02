@@ -18,7 +18,7 @@ When remote VPN clients connect, they use the same DNS servers that your interna
 ## STEP 1: Configure DNS name resolution
 The DNS database contains resource records (entries) that resolve name resolution queries sent to the DNS server. Each DNS server contains the resource records (RRs) it needs to respond to name resolution queries for the portion of the DNS namespace for which it is authoritative. 
 
-Although there are different types of resource records, you are adding the A and AAAA resource records:
+Although there are different types of resource records, you are adding one of the following resource records:
 - **A** resource record maps host (computer or other network device) to an IPv4 address. 
 - **AAAA** record maps a host name to an IPv6 address.
 
@@ -33,15 +33,15 @@ Although there are different types of resource records, you are adding the A and
 
 ## STEP 2: Configure the Firewalls
 
-In this step, you configure the the following firewalls:
-
-* Edge Firewall. Separates the External Perimeter Network from the Public Internet. 
-* Internal Perimeter Network Firewall. Separates the Organization/Corporate Network from the Internal Perimeter Network. 
+Because the Remote Access VPN server on the perimeter network is configured as a RADIUS Client and sends RADIUS traffic to the NPS on the Organization/Corporate network - and receives RADIUS traffic from the NPS Server - you must configure the firewall to allow RADIUS traffic to flow in both directions.
 
 >[!NOTE]
 >The NPS server on the Organization/Corporate network functions as a RADIUS Server for the VPN Server, which is a RADIUS Client. For more information about the RADIUS infrastructure, see [Network Policy Server (NPS)](https://docs.microsoft.com/windows-server/networking/technologies/nps/nps-top).
 
-Because the Remote Access VPN server on the perimeter network is configured as a RADIUS Client and sends RADIUS traffic to the NPS on the Organization/Corporate network - and also receives RADIUS traffic from the NPS Server - you must configure the firewall to allow RADIUS traffic to flow in both directions.
+Configure the the following firewalls:
+
+* Edge Firewall. Separates the External Perimeter Network from the Public Internet. 
+* Internal Perimeter Network Firewall. Separates the Organization/Corporate Network from the Internal Perimeter Network. 
 
 Your Edge Firewall must allow and forward specific ports to your VPN server. If you use Network Address Translation \(NAT\) on your edge firewall, you might need to enable port forwarding for User Datagram Protocol \(UDP\) ports 500 and 4500. You should forward these ports to the IP address that is assigned to the external interface of your VPN server.
 
@@ -49,14 +49,7 @@ If you’re routing traffic inbound and performing NAT at or behind the VPN serv
 
 In either case, if your firewall supports deep packet inspection and you have difficulty establishing client connections, you should attempt to relax or disable deep packet inspection for IKE sessions.
 
-For instructions, see [Configure Firewalls for RADIUS Traffice](https://docs.microsoft.com/en-us/windows-server/networking/technologies/nps/nps-firewalls-configure)
-
 For information on how to make these configuration changes, see your firewall documentation.
-
-
-
-
-<!-- 
 
 ### RADIUS Traffic Ports on the VPN Server and NPS Server
 
@@ -73,8 +66,9 @@ If you are using the default RADIUS port configuration on the VPN Server and the
 
 If you are not using the default RADIUS ports in your NPS deployment, you must configure the firewall to allow RADIUS traffic on the ports that you are using.
 
+
 For more information, see [Configure Firewalls for RADIUS Traffic](https://docs.microsoft.com/windows-server/networking/technologies/nps/nps-firewalls-configure).
--->
+
 
 
 ## Next steps
