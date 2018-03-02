@@ -66,9 +66,9 @@ Delimited allocation imposes some added management considerations and complexity
 
 1. You are responsible for delimiting the allocation of each volume to balance storage utilization across servers and uphold high probability of survival. We recommend delimiting each volume to three servers, and ensuring that every volume's delimitation is unique, meaning it does not share *all* its servers with another volume (sharing *some* is expected). With 6 servers, there are 20 unique combinations; with 8 servers, there are 56 unique combinations; and so on. See the [analysis](#analysis-of-survival-probabilities) section for more details.
 
-2. When using delimited allocation, we recommend reserving the equivalent of one capacity drive per server, **with no maximum**. This is more than the [published recommendation](plan-volumes#choosing-the-size-of-volumes) for regular allocation, which maxes out at four capacity drives total.
+2. When using delimited allocation, we recommend reserving the equivalent of one capacity drive per server, **with no maximum**. This is more than the [published recommendation](plan-volumes.md#choosing-the-size-of-volumes) for regular allocation, which maxes out at four capacity drives total.
 
-3. If a server fails and needs to be replaced, as described in [Remove a server and its drives](remove-servers#remove-a-server-and-its-drives), you are responsible for changing the delimitation of affected volumes (i.e. adding a new server and removing the failed one – example below).
+3. If a server fails and needs to be replaced, as described in [Remove a server and its drives](remove-servers.md#remove-a-server-and-its-drives), you are responsible for changing the delimitation of affected volumes (i.e. adding a new server and removing the failed one – example below).
 
 ## Usage in PowerShell
 
@@ -168,7 +168,7 @@ No. Drive replacement works the same with delimited allocation as with regular a
 ## See also
 
 - [Storage Spaces Direct overview](storage-spaces-direct-overview.md)
-- [Fault tolerance in Storage Spaces Direct](storage-spaces-fault-tolerance)
+- [Fault tolerance in Storage Spaces Direct](storage-spaces-fault-tolerance.md)
 
 ## Appendix
 
