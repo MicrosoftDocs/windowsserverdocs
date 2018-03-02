@@ -9,12 +9,12 @@ ms.date: 03/03/2018
 ---
 
 # Delimit the allocation of volumes in Storage Spaces Direct
-> Applies To: Windows Server Insider Preview
+> Applies To: Windows Server Insider Preview, build 17093 and later
 
 Windows Server Insider Preview introduces an option to manually delimit the allocation of volumes in Storage Spaces Direct. Doing so can significantly increase fault tolerance under certain conditions, but imposes some added management considerations and complexity. This topic explains how it works and gives examples in PowerShell.
 
    > [!IMPORTANT]
-   > This feature is new in Windows Server Insider Preview only. It is not available in Windows Server 2016.
+   > This feature is new in Windows Server Insider Preview, build 17093 and later. It is not available in Windows Server 2016.
 
 ## Prerequisites
 
@@ -38,7 +38,7 @@ With regular three-way mirroring, the volume is divided into many small "slabs" 
 
 This default allocation maximizes parallel reads and writes, yielding better performance, and is appealing in its simplicity: every server is equally busy, every drive is equally full, and all volumes live and die together. Every volume is guaranteed to survive up to two concurrent failures, as [these examples](storage-spaces-fault-tolerance.md#examples) illustrate.
 
-However, with this allocation, volumes can survive three concurrent failures. If three servers fail at once, or if drives in three servers fail at once, volumes become inaccessible because at least *some* slabs were (with very high probability) allocated to the exact three drives or servers that failed.
+However, with this allocation, volumes can't survive three concurrent failures. If three servers fail at once, or if drives in three servers fail at once, volumes become inaccessible because at least *some* slabs were (with very high probability) allocated to the exact three drives or servers that failed.
 
 In the example below, servers 1, 3, and 5 fail at the same time. Although many slabs have surviving copies, some do not:
 
