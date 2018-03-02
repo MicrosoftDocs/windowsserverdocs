@@ -89,3 +89,7 @@ Request:
 Response:
 
 - The response is OK
+
+## Next Steps
+
+- [AD FS Troubleshooting](ad-fs-tshoot-overview.md)
