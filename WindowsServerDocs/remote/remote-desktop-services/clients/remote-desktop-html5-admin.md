@@ -48,11 +48,11 @@ To install the web client for the first time, follow these steps:
     Publish-RDWebClientPackage -Production -Latest
     ```
     
-1. Make sure the web client can be accessed at the web client URL with your server name, formatted as <https://server_FQDN/RDWeb/Pages/webclient>. It's important to use the server name that matches the RDWeb public cert in the URL (typically the machine FQDN).
+1. Make sure you can access the web client at the web client URL with your server name, formatted as <https://server_FQDN/RDWeb/Pages/webclient>. It's important to use the server name that matches the RDWeb public cert in the URL (typically the machine FQDN).
 
 ### Updating the web client
 
-To update the web client whenever an update is available, follow these steps:
+To update the web client, follow these steps:
 
 * Copy the content of **rd-html5-packages.zip** into **%ProgramFiles%\rd-html5-packages**.
 * Open an Administrator PowerShell prompt and run the following two commands:
