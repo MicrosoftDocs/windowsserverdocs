@@ -7,7 +7,7 @@ ms.technology: storage-spaces
 ms.topic: get-started-article
 ms.assetid: 20fee213-8ba5-4cd3-87a6-e77359e82bc0
 author: stevenek
-ms.date: 2/5/2017
+ms.date: 3/5/2017
 description: Deploy software-defined storage with Storage Spaces Direct and Windows Server in either a hyper-converged solution - where the cluster hosts the storage and virtual machines - or a converged (also known as disaggregated) solution where workloads run on a different cluster. 
 ms.localizationpriority: medium
 ---
@@ -48,7 +48,7 @@ The following information will be needed as inputs to configure provision and ma
 
     -   Network adapter make/model
 
-        There are 2 types of RDMA protocols, note which type your RDMA adapter is (RoCE v2 or iWarp).
+        There are 2 types of RDMA protocols, note which type your RDMA adapter is (iWarp or RoCE - also note RoCE version).
 
     -   VLAN ID to be used for the 2 network interfaces used by the management OS on the hyper-converged hosts. You should be able to obtain this from your network administrator.  
 
