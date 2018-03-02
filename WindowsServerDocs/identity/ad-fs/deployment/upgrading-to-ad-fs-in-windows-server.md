@@ -35,7 +35,9 @@ Be aware that while in mixed farm mode, the AD FS farm is not capable of any new
 The remainder of the is document provides the steps for adding a Windows Server 2016 federation server to a Windows Server 2012 R2 environment and then raising the FBL to Windows Server 2016.  These steps were performed in a test environment outlined by the architectural diagram below.  
 
 > [!NOTE]  
-> Before you can move to AD FS in Windows Server 2016 FBL, you must remove all of the Windows 2012 R2 nodes.  You cannot just upgrade a Windows Server 2012 R2 OS to Windows Server 2016 and have it become a 2016 node.  You will need to remove it and replace it with a new 2016 node.  
+> Before you can move to AD FS in Windows Server 2016 FBL, you must remove all of the Windows 2012 R2 nodes.  You cannot just upgrade a Windows Server 2012 R2 OS to Windows Server 2016 and have it become a 2016 node.  You will need to remove it and replace it with a new 2016 node.
+>
+> Upgrading the FBL when using SQL to store AD FS configuration does create a new management database "AdfsConfigurationV3".
 
 ##### To upgrade your AD FS farm to Windows Server 2016 Farm Behavior Level  
 
@@ -78,6 +80,9 @@ The remainder of the is document provides the steps for adding a Windows Server 
 11. When prompted, type Y.  This will begin raising the level.  Once this completes you have successfully raised the FBL.  
 
     ![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_10.png)  
+
+> [!NOTE]  
+> If your AD FS servers use SQL for configuration, a new manamgement database has now been created with the name "AdfsConfiguraionV3". 
 
 12. Now, if you go to AD FS Management, you will see the new nodes that have been added for AD FS in Windows Server 2016  
 

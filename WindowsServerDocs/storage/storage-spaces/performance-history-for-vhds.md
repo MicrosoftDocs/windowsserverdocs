@@ -5,7 +5,7 @@ ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 02/02/2018
+ms.date: 02/09/2018
 Keywords: Storage Spaces Direct
 ms.localizationpriority: medium
 ---
@@ -15,6 +15,9 @@ ms.localizationpriority: medium
 > Applies To: Windows Server Insider Preview
 
 This sub-topic of [Performance history for Storage Spaces Direct](performance-history.md) describes in detail the performance history collected for virtual hard disk (VHD) files. Performance history is available for every VHD attached to a running, clustered virtual machine. Performance history is available for both VHD and VHDX formats, however it is not available for Shared VHDX files.
+
+   > [!NOTE]
+   > It may take several minutes for collection to begin for newly created or moved VHD files.
 
 ## Series names and units
 
@@ -45,6 +48,20 @@ These series are collected for every eligible virtual hard disk:
 | `vhd.latency.average`     | Average latency of all operations to or from the virtual hard disk.                                              |
 | `vhd.size.current`        | The current file size of the virtual hard disk, if dynamically expanding. If fixed, the series is not collected. |
 | `vhd.size.maximum`        | The maximum size of the virtual hard disk, if dynamically expanding. If fixed, the is the size.                  |
+
+## Where they come from
+
+The `iops.*`, `throughput.*`, and `latency.*` series are collected from the `Hyper-V Virtual Storage Device` performance counter set on the server where the virtual machine is running, one instance per VHD or VHDX.
+
+| Series                    | Source counter         |
+|---------------------------|------------------------|
+| `vhd.iops.read`           | `Read Operations/Sec`  |
+| `vhd.iops.write`          | `Write Operations/Sec` |
+| `vhd.iops.total`          | *sum of the above*     |
+| `vhd.throughput.read`     | `Read Bytes/sec`       |
+| `vhd.throughput.write`    | `Write Bytes/sec`      |
+| `vhd.throughput.total`    | *sum of the above*     |
+| `vhd.latency.average`     | `Latency`              |
 
    > [!NOTE]
    > Counters are measured over the entire interval, not sampled. For example, if the VHD is inactive for 9 seconds but completes 30 IOs in the 10th second, its `vhd.iops.total` will be recorded as 3 IOs per second on average during this 10-second interval. This ensures its performance history captures all activity and is robust to noise.

@@ -5,7 +5,7 @@ description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 05/31/2017
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 
@@ -39,6 +39,9 @@ The tool backs up the following AD FS configuration
 ## How to use the tool
 First, [download](https://go.microsoft.com/fwlink/?LinkId=825646) and install the MSI to your AD FS server.  
 
+>[!NOTE]
+>The AD FS Rapid Restore Tool is not FIPS compliant.
+
 Run the following command from a PowerShell prompt:
 
 ```powershell
@@ -48,7 +51,7 @@ import-module 'C:\Program Files (x86)\ADFS Rapid Recreation Tool\ADFSRapidRecrea
 >[!NOTE] 
 >If you are using the Windows Integrated Database (WID), then this tool needs to be run on the primary AD FS server.  You can use the `Get-SyncProperties` PowerShell cmdlet to determine whether or not the server you are on is the primary server.
 
-### System Requirements
+### System requirements
 
 - This tool works for AD FS in Windows Server 2012 R2 and later. 
 - The required .NET framework is at least 4.0. 
@@ -67,7 +70,7 @@ Parameter Sets
 
 ![AD FS Rapid Restore Tool](media/AD-FS-Rapid-Restore-Tool/parameter1.png)
 
-### Detailed Description
+### Detailed description
 
 - **BackupDKM** -  Backs up the Active Directory DKM container that contains the AD FS keys in the default configuration (automatically generated token signing and decrypting certificates). This uses an AD Tool  'ldifde' to export the AD Container and all its subtrees.
 
@@ -91,26 +94,28 @@ For the file system to be used, a storage path must be given. In that directory,
 - **BackupComment &lt;string[]&gt;** - An informational string about the backup that will be displayed during the restore, similar to the concept of Hyper-V checkpoint naming. The default is an empty string
 
  
-### Examples
-1.	Back up the AD FS configuration, with the DKM, to the File System, while running as the domain admin
+## Backup examples
+The following are backup examples for using the AD FS Rapid Restore Tool.
+
+### Backup the AD FS configuration, with the DKM, to the File System, while running as the domain admin
 
 ```powershell
 Backup-ADFS -StorageType "FileSystem" -StoragePath "C:\Users\administrator\testExport\" -EncryptionPassword "password" -BackupComment "Clean Install of ADFS (FS)" -BackupDKM
 ```
  
-2.	Back up the ADFS configuration, with the DKM, to the file system with the service account credential, running as local admin
+### Backup the AD FS configuration, with the DKM, to the file system with the service account credential, running as local admin
 
 ```powershell
 Backup-ADFS -StorageType "FileSystem" -StoragePath "C:\Users\administrator\testExport\" -EncryptionPassword "password" -BackupComment "Clean Install of ADFS (FS)" -BackupDKM -ServiceAccountCredential $cred
 ```
 
-3.	Back up the ADFS configuration without the DKM to the Azure Storage Container.
+### Backup the AD FS configuration without the DKM to the Azure Storage Container.
 
 ```powershell
 Backup-ADFS -StorageType "Azure" -AzureConnectionCredentials $cred -AzureStorageContainer "adfsbackups"  -EncryptionPassword "password" -BackupComment "Clean Install of ADFS"
 ```
 
-4.	This backs up the ADFS configuration without the DKM to the File System
+### Backup the AD FS configuration without the DKM to the File System
 
 ```powershell 	
 Backup-ADFS -StorageType "FileSystem" -StoragePath "C:\Users\administrator\testExport\" -EncryptionPassword "password" -BackupComment "Clean Install of ADFS (FS)"
@@ -130,7 +135,7 @@ The cmdlet takes the following parameters:
 
 ![AD FS Rapid Restore Tool](media/AD-FS-Rapid-Restore-Tool/parameter2.png)
 
-### Detailed Description
+### Detailed description
 
 - **StorageType &lt;string&gt;** - The type of storage the user wants to use.
  "FileSystem" indicates that the user wants to store it in a folder locally or in the network
@@ -156,57 +161,57 @@ The cmdlet takes the following parameters:
 
 - **RestoreDKM &lt;bool&gt;** - Restore the DKM Container to the AD, should be set if going to a new AD and the DKM was backed up initially.
 
-### Examples
+## Restore examples
 
-1.	This restores the AD FS configuration without the DKM from the Azure Storage Container
+### Restore the AD FS configuration without the DKM from the Azure Storage Container
 
 ```powershell
 Restore-ADFS -StorageType "Azure" -AzureConnectionCredential $cred -DecryptionPassword "password" -AzureStorageContainer "adfsbackups"
 ```
 
-2.	This restores the AD FS configuration without the DKM from the File System
+### Restore the AD FS configuration without the DKM from the File System
  
 ```powershell
 Restore-ADFS -StorageType "FileSystem" -StoragePath "C:\uSERS\administrator\testExport\" -DecryptionPassword "password"
 ```
 
-3.	This restores the AD FS configuration with the DKM to the File 
+### Restore the AD FS configuration with the DKM to the File System 
  
 ```powershell
 Restore-ADFS -StorageType "FileSystem" -StoragePath "C:\uSERS\administrator\testExport\" -DecryptionPassword "password" -RestoreDKM
 ```
 
-4.	This restores the AD FS Configuration to WID
+### Restore the AD FS Configuration to WID
 
 ```powershell
 Restore-ADFS -StorageType "FileSystem" -StoragePath "C:\uSERS\administrator\testExport\" -DecryptionPassword "password" -DBConnectionString "WID"
 ``` 
 
-5.	This restores the AD FS Configuration to SQL
+### Restore the AD FS Configuration to SQL
 
 ```powershell
 Restore-ADFS -StorageType "FileSystem" -StoragePath "C:\uSERS\administrator\testExport\" -DecryptionPassword "password" -DBConnectionString "Data Source=TESTMACHINE\SQLEXPRESS; Integrated Security=True"
 ```
 
-6.	This restores the AD FS Configuration with the specified GMSA
+### Restores the AD FS Configuration with the specified GMSA
 
 ```powershell
 Restore-ADFS -StorageType "FileSystem" -StoragePath "C:\uSERS\administrator\testExport\" -DecryptionPassword "password" -GroupServiceAccountIdentifier "mangupd1\adfsgmsa$"
 ```
-7.	This restores the AD FS Configuration with the specified service account creds
+### Restore the AD FS Configuration with the specified service account creds
 
 ```powershell
 Restore-ADFS -StorageType "FileSystem" -StoragePath "C:\uSERS\administrator\testExport\" -DecryptionPassword "password" -ServiceAccountCredential $cred
 ```
 
-## Appendix: Encryption information
+## Encryption information
 All backup data is encrypted before pushing it to the cloud or storing it in the file system.  
 
 Each document that is created as part of the backup is encrypted using AES-256. The password passed into the tool is used as a pass phrase to generate a new password using the Rfc2898DeriveBytes Class. 
 
 RngCryptoServiceProvider is used to generate the salt used by AES and the Rfc2898DeriveBytes Class. 
 
-## Appendix: Log Files
+## Log Files
 Every time a backup or restore is performed a log file is created. These can be found at the following location:
 
 - **%localappdata%\ADFSRapidRecreationTool**

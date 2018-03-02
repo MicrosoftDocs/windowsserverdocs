@@ -29,35 +29,33 @@ To prepare and test a Linux shielded VM, you will need the following resources a
 - Internet access to download the lsvmtools package and OS updates
 
 > [!IMPORTANT]
-> Newer versions of the OSes listed above may include a known TPM driver bug which will prevent them from successfully provisioning as shielded VMs.
+> Newer versions of the preceding Linux OSes may include a known TPM driver bug which will prevent them from successfully provisioning as shielded VMs.
 > It is not recommended that you update your templates or shielded VMs to a newer release until a fix is available.
 > The list of supported OSes above will be updated when the updates are made public.
 
 ## Prepare a Linux VM
 
 Shielded VMs are created from secure template disks.
-Template disks contain the operating system for the VM and metadata including a digital signature of the /boot and /root partitions to ensure core OS components are not modified before deployment.
+Template disks contain the operating system for the VM and metadata, including a digital signature of the /boot and /root partitions, to ensure core OS components are not modified before deployment.
 
 To create a template disk, you must first create a regular (unshielded) VM that you will prepare as the base image for future shielded VMs.
 The software you install and configuration changes you make to this VM will apply to all shielded VMs created from this template disk.
 These steps will walk you through the bare minimum requirements to get a Linux VM ready for templatization.
 
 > [!NOTE]
-> Linux disk encryption is configured at the time the disk is partitioned.
+> Linux disk encryption is configured when the disk is partitioned.
 > This means that you must create a new VM that is pre-encrypted using dm-crypt to create a Linux shielded VM template disk.
 
 
-1.  On the virtualization server, ensure that Hyper-V and the Shielded VM Tools features are installed by running the following commands in an elevated PowerShell console:
+1.  On the virtualization server, ensure that Hyper-V and the Host Guardian Hyper-V Support features are installed by running the following commands in an elevated PowerShell console:
 
     ```powershell
-    Install-WindowsFeature Hyper-V, RSAT-Shielded-VM-Tools -IncludeManagementTools -Restart
+    Install-WindowsFeature Hyper-V, HostGuardian -IncludeManagementTools -Restart
     ```
 
 2.  Download the ISO image from a trustworthy source and store it on your virtualization server, or on a file share accessible to your virtualization server.
 
-3.  On your management computer running Windows 10 or Windows Server 2016, install the Hyper-V Remote Server Administration Tools to remotely manage your virtualization server.
-    On Windows 10, download and install the [Remote Server Administration Tools package](https://www.microsoft.com/download/details.aspx?id=45520).
-    On Windows Server 2016, run the following command:
+3.  On your management computer running Windows Server version 1709, install the Shielded VM Remote Server Administration Tools by running the following command:
 
     ```powershell
     Install-WindowsFeature RSAT-Hyper-V-Tools
@@ -70,7 +68,7 @@ These steps will walk you through the bare minimum requirements to get a Linux V
 5.  Using Hyper-V Manager, [configure an external switch](../hyper-v/get-started/create-a-virtual-switch-for-hyper-v-virtual-machines.md) on your virtualization server so the Linux VM can access the Internet to obtain updates.
 
 6.  Next, create a new virtual machine to install the Linux OS onto.
-    In the Actions pane, click **New > Virtual Machine** to bring up the wizard.
+    In the Actions pane, click **New** > **Virtual Machine** to bring up the wizard.
     Provide a friendly name for your VM, such as "Pre-templatized Linux" and click **Next**.
 
 7.  On the second page of the Wizard, select **Generation 2** to ensure the VM is provisioned with a UEFI-based firmware profile.
@@ -119,7 +117,7 @@ These steps will walk you through the bare minimum requirements to get a Linux V
 
 13. If you are planning to use System Center Virtual Machine Manager to deploy your VMs, install the VMM guest agent to enable VMM to specialize your OS during VM provisioning.
     Specialization allows each VM to be set up securely with different users and SSH keys, networking configurations, and custom setup steps.
-    Learn how to [obtain and install the VMM guest agent](https://docs.microsoft.com/en-us/system-center/vmm/vm-linux#install-the-vmm-guest-agent) in the VMM documentation.
+    Learn how to [obtain and install the VMM guest agent](https://docs.microsoft.com/system-center/vmm/vm-linux#install-the-vmm-guest-agent) in the VMM documentation.
 
 14. Next, [add the Microsoft Linux Software Repository to your package manager](../../administration/linux-package-repository-for-microsoft-software.md).
 
@@ -188,7 +186,7 @@ Copy your template disk and certificate to a computer running Windows Server, ve
 The VHDX you provide to the `-Path` parameter will be overwritten with the updated template disk, so be sure to make a copy before running the command.
 
 > [!IMPORTANT]
-> The Remote Server Administrator Tools available on Windows Server 2016 or Windows 10 cannot be used to prepare a Linux shielded VM template disk.
+> The Remote Server Administration Tools available on Windows Server 2016 or Windows 10 cannot be used to prepare a Linux shielded VM template disk.
 > Only use the [Protect-TemplateDisk](https://docs.microsoft.com/en-us/powershell/module/shieldedvmtemplate/protect-templatedisk?view=win10-ps) cmdlet available on Windows Server, version 1709 to prepare a Linux shielded VM template disk.
 
 ```powershell

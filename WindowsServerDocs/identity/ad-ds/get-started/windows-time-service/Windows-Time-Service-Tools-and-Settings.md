@@ -16,8 +16,7 @@ ms.technology: identity-adds
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-  
-  
+
 **In this section**  
   
 -   [Windows Time Service Tools](#w2k3tr_times_tools_dyax)  
@@ -31,14 +30,14 @@ ms.technology: identity-adds
 -   [Related Information](#w2k3tr_times_tools_qoep)  
   
 > [!NOTE]  
-> This topic contains information only about tools and settings for Windows Time service (W32Time). If you only want to synchronize time for a domain-joined client computer, see [Configure a client computer for automatic domain time synchronization](https://technet.microsoft.com/en-us/library/cc758905(v=ws.10)). For additional topics about how to configure Windows Time service, see the list of topics in the section [Where to Find Windows Time Service Configuration Information](https://technet.microsoft.com/library/cc773061.aspx).  
+> This topic contains information only about tools and settings for Windows Time service (W32Time). If you only want to synchronize time for a domain-joined client computer, see [Configure a client computer for automatic domain time synchronization](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc816884%28v%3dws.10%29). For additional topics about how to configure Windows Time service, see the list of topics in the section [Where to Find Windows Time Service Configuration Information](https://technet.microsoft.com/library/cc773061.aspx).  
   
 > [!CAUTION]  
 > You should not use the Net time command to configure or set time when the Windows Time service is running.  
 
 Also, on older computers that run Windows XP or earlier, the command Net time /querysntp displays the name of a Network Time Protocol (NTP) server with which a computer is configured to synchronize, but that NTP server is used only when the computer's time client is configured as NTP or AllSync. That command has since been deprecated.  
   
-Most domain member computers have a time client type of NT5DS, which means that they synchronize time from the domain hierarchy. The only typical exception to this is the domain controller that functions as the primary domain controller (PDC) emulator operations master of the forest root domain, which is usually configured to synchronize time with an external time source. To view the time client configuration of a computer, run the W32tm /query /configuration command from an elevated Command Prompt in starting in Windows Server 2008, and Windows Vista, and read the **Type** line in the command output. For more information, see [How Windows Time Service Works](https://go.microsoft.com/fwlink/?LinkId=117753) (https://go.microsoft.com/fwlink/?LinkId=117753). You can run the command **reg query HKLM\SYSTEM\CurrentControlSet\Services\W32Time\Parameters** and read the value of **NtpServer** in the command output.  
+Most domain member computers have a time client type of NT5DS, which means that they synchronize time from the domain hierarchy. The only typical exception to this is the domain controller that functions as the primary domain controller (PDC) emulator operations master of the forest root domain, which is usually configured to synchronize time with an external time source. To view the time client configuration of a computer, run the W32tm /query /configuration command from an elevated Command Prompt in starting in Windows Server 2008, and Windows Vista, and read the **Type** line in the command output. For more information, see [How Windows Time Service Works](https://go.microsoft.com/fwlink/?LinkId=117753). You can run the command **reg query HKLM\SYSTEM\CurrentControlSet\Services\W32Time\Parameters** and read the value of **NtpServer** in the command output.  
   
 > [!IMPORTANT]  
 > Prior to Windows Server 2016, the W32Time service was not designed to meet time-sensitive application needs.  However, updates to Windows Server 2016 now allow you to implement a solution for 1ms accuracy in your domain.  See [Windows 2016 Accurate Time](Windows-2016-Accurate-Time.md) and  [Support boundary to configure the Windows Time service for high-accuracy environments](https://go.microsoft.com/fwlink/?LinkID=179459) for more information.  
@@ -87,7 +86,7 @@ This information is provided as a reference for use in troubleshooting or verify
 When possible, use Group Policy or other Windows tools, such as Microsoft Management Console (MMC), to accomplish tasks rather than editing the registry directly. If you must edit the registry, use extreme caution.  
   
 > [!WARNING]  
-> Some of the preset values that are configured in the System Administrative template file (System.adm) for the Group Policy object (GPO) settings are different from the corresponding default registry entries. If you plan to use a GPO to configure any Windows Time setting, be sure that you review [Preset values for the Windows Time service Group Policy settings are different from the corresponding Windows Time service registry entries in Windows Server 2003](https://go.microsoft.com/fwlink/?LinkId=186066) (https://go.microsoft.com/fwlink/?LinkId=186066). This issue applies to  Windows Server 2008 R2 ,  Windows Server 2008 , Windows Server 2003 R2, and Windows Server 2003.  
+> Some of the preset values that are configured in the System Administrative template file (System.adm) for the Group Policy object (GPO) settings are different from the corresponding default registry entries. If you plan to use a GPO to configure any Windows Time setting, be sure that you review [Preset values for the Windows Time service Group Policy settings are different from the corresponding Windows Time service registry entries in Windows Server 2003](https://go.microsoft.com/fwlink/?LinkId=186066). This issue applies to  Windows Server 2008 R2 ,  Windows Server 2008 , Windows Server 2003 R2, and Windows Server 2003.  
   
 Many registry entries for the Windows Time service are the same as the Group Policy setting of the same name. The Group Policy settings correspond to the registry entries of the same name located in:  
   
@@ -289,7 +288,7 @@ You can find the Group Policy settings used to configure W32Time in the Group Po
     Enable **Windows NTP Server** here.  
   
 > [!WARNING]  
-> Some of the preset values that are configured in the System Administrative template file (System.adm) for the Group Policy object (GPO) settings are different from the corresponding default registry entries. If you plan to use a GPO to configure any Windows Time setting, be sure that you review [Preset values for the Windows Time service Group Policy settings are different from the corresponding Windows Time service registry entries in Windows Server 2003](https://go.microsoft.com/fwlink/?LinkId=186066) (https://go.microsoft.com/fwlink/?LinkId=186066). This issue applies to  Windows Server 2008 R2 ,  Windows Server 2008 , Windows Server 2003 R2, and Windows Server 2003.  
+> Some of the preset values that are configured in the System Administrative template file (System.adm) for the Group Policy object (GPO) settings are different from the corresponding default registry entries. If you plan to use a GPO to configure any Windows Time setting, be sure that you review [Preset values for the Windows Time service Group Policy settings are different from the corresponding Windows Time service registry entries in Windows Server 2003](https://go.microsoft.com/fwlink/?LinkId=186066). This issue applies to  Windows Server 2008 R2 ,  Windows Server 2008 , Windows Server 2003 R2, and Windows Server 2003.  
   
 The following table lists the global Group Policy settings that are associated with the Windows Time service and the pre-set value associated with each setting. For more information about each setting, see the corresponding registry entries in "[Windows Time Service Registry Entries](#w2k3tr_times_tools_uhlp)" earlier in this subject. The following settings are contained in a single GPO called **Global Configuration Settings**.  
   
@@ -337,8 +336,4 @@ Windows Time follows the NTP specification, which requires the use of UDP port 1
 The following resources contain additional information that is relevant to this section.  
   
 -   RFC *1305* in the IETF RFC Database  
-  
-## See Also  
-[Videos about the Windows Time Service](https://go.microsoft.com/fwlink/?LinkID=197277)  
-
 

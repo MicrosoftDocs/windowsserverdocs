@@ -35,6 +35,13 @@ There are two HNV implementations which will be available in  Windows Server 201
 -   **HNVv1**  
   
     HNVv1 is compatible with  Windows Server 2012 R2  and System Center 2012 R2 Virtual Machine Manager (VMM). Configuration for HNVv1 relies on WMI management and Windows PowerShell cmdlets (facilitated through System Center VMM) to define isolation settings and Customer Address (CA) - virtual network - to Physical Address (PA) mappings and routing. No additional features have been added to HNVv1 in  Windows Server 2016 and no new features are planned.  
+    
+    •	SET Teaming and HNV V1 are not compatible by platform.
+    
+    o	To use HA NVGRE gateways users need to either use LBFO team or No team. Or
+    
+    o	Use Network Controller Deployed gateways with SET teamed switch.
+
   
 -   **HNVv2**  
   

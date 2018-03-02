@@ -5,28 +5,24 @@ ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 02/02/2018
+ms.date: 02/09/2018
 Keywords: Storage Spaces Direct
 ms.localizationpriority: medium
 ---
 # Performance history for Storage Spaces Direct
 
-> Applies To: Windows Server Insider Preview build 17090 and later
+> Applies To: Windows Server Insider Preview build 17093 and later
 
 Performance history is a new feature that gives [Storage Spaces Direct](storage-spaces-direct-overview.md) administrators easy access to historical compute, memory, network, and storage measurements across host servers, drives, volumes, virtual machines, and more. Performance history is collected automatically and stored on the cluster for up to one year.
 
    > [!IMPORTANT]
-   > This feature is new in Windows Server Insider Preview build 17090 and later. It is not available in Windows Server 2016. To try this feature, we suggest a clean OS install, not an in-place upgrade.
-
-(PLACEHOLDER FOR OVERVIEW VIDEO)
+   > This feature is new in Windows Server Insider Preview build 17093 and later. It is not available in Windows Server 2016.
 
 ## Get started
 
 Performance history is collected by default. You do not need to install, configure, or start anything. An external database is not required. An Internet connection is not required. System Center is not required.
 
-To see your cluster's performance history, use [Project Honolulu (Technical Preview)](/../manage/honolulu/honolulu), the next-generation in-box management tool for Windows Server, or the new `Get-ClusterPerformanceHistory` cmdlet. See [Usage in PowerShell](#usage-in-powershell) for details.
-
-(PLACEHOLDER FOR TUTORIAL VIDEO)
+To see your cluster's performance history, use [Project Honolulu (Technical Preview)](https://docs.microsoft.com/windows-server/manage/honolulu/honolulu), the next-generation in-box management tool for Windows Server, or the new `Get-ClusterPerformanceHistory` cmdlet. See [Usage in PowerShell](#usage-in-powershell) for details.
 
 ## How it works
 
@@ -34,7 +30,7 @@ To see your cluster's performance history, use [Project Honolulu (Technical Prev
 
 1. When Storage Spaces Direct is enabled, the [Health Service](../../failover-clustering/health-service-overview.md) creates an approximately 10 GB three-way mirror volume named ClusterPerformanceHistory and provisions an instance of the Extensible Storage Engine (also known as Microsoft JET) there. This lightweight database stores the performance history.
 
-2. The Health Service automatically discovers relevant objects, such as virtual machines, anywhere in the cluster and begins streaming their performance counters. The counters are aggregated, synchronized, and inserted into the database. Streaming runs continously and is optimized for minimal system impact.
+2. The Health Service automatically discovers relevant objects, such as virtual machines, anywhere in the cluster and begins streaming their performance counters. The counters are aggregated, synchronized, and inserted into the database. Streaming runs continuously and is optimized for minimal system impact.
 
 3. You can see performance history in Project Honolulu (Technical Preview) or in PowerShell. Performance history is stored for up to one year, with diminishing granularity. Queries are served directly from the database for consistent, snappy performance and to minimize system impact.
 
@@ -78,7 +74,7 @@ See [Performance history for clusters](performance-history-for-clusters.md).
 
 ### Timeframes
 
-Performance history is stored for up to one year, with diminishing granularity. For the most recent hour, measurements are available every ten seconds. Thereafter, they are intelligently merged (by averaging or summing, as appropriate) into less granular series that span more time. For the most recent day, measurements are available every five minutes; for the most recent week, every fifteen minutues; and so on.
+Performance history is stored for up to one year, with diminishing granularity. For the most recent hour, measurements are available every ten seconds. Thereafter, they are intelligently merged (by averaging or summing, as appropriate) into less granular series that span more time. For the most recent day, measurements are available every five minutes; for the most recent week, every fifteen minutes; and so on.
 
 In Project Honolulu, you can select the timeframe in the upper-right above the chart.
 
@@ -88,13 +84,13 @@ In PowerShell, use the `-TimeFrame` parameter.
 
 Here are the available timeframes:
 
-| Timeframe  | Measurement frequency | Retained for |
-|------------|-----------------------|--------------|
-| Last hour  | Every 10 secs         | 1 hour       |
-| Last day   | Every 5 minutes       | 25 hours     |
-| Last week  | Every 15 minutes      | 8 days       |
-| Last month | Every 1 hour          | 35 days      |
-| Last year  | Every Daily           | 400 days     |
+| Timeframe   | Measurement frequency | Retained for |
+|-------------|-----------------------|--------------|
+| `LastHour`  | Every 10 secs         | 1 hour       |
+| `LastDay`   | Every 5 minutes       | 25 hours     |
+| `LastWeek`  | Every 15 minutes      | 8 days       |
+| `LastMonth` | Every 1 hour          | 35 days      |
+| `LastYear`  | Every 1 day           | 400 days     |
 
 ## Usage in PowerShell
 
@@ -111,7 +107,7 @@ Get-ClusterPerformanceHistory
 
 You can specify an object you want by the pipeline. This works with 7 types of objects:
 
-| Object from pipeline |             |
+| Object from pipeline | Example     |
 |----------------------|-------------|
 | `Get-PhysicalDisk`   | [Example](performance-history-for-drives.md#usage-in-powershell)           |
 | `Get-NetAdapter`     | [Example](performance-history-for-network-adapters.md#usage-in-powershell) |
@@ -122,21 +118,6 @@ You can specify an object you want by the pipeline. This works with 7 types of o
 | `Get-Cluster`        | [Example](performance-history-for-clusters.md#usage-in-powershell)         |
 
 If you don't specify, performance history for the overall cluster is returned.
-
-### Specify the timeframe
-
-You can specify the timeframe of history you want with the `-TimeFrame` parameter:
-
-| -TimeFrame   |
-|--------------|
-| `MostRecent` |
-| `LastHour`   |
-| `LastDay`    |
-| `LastWeek`   |
-| `LastMonth`  |
-| `LastYear`   |
-
-If you don't specify, the `MostRecent` measurement is returned.
 
    > [!TIP]
    > Consider specifying the series you want too.
@@ -156,6 +137,12 @@ You can specify the series you want with these parameters, which support tab-com
 | `-ClusterSeriesName`          |
 
 If you don't specify, every series available for the specified object is returned.
+
+### Specify the timeframe
+
+You can specify the timeframe of history you want with the `-TimeFrame` parameter.
+
+If you don't specify, the `MostRecent` measurement is returned.
 
 ### Example
 
@@ -180,9 +167,21 @@ To save the series of measurements to an output file:
 
 ## Frequently asked questions
 
-### How are failures handled?
+### What extensibility is available?
 
-The Health Service, which collects measurements and inserts them into the database, is highly available. If the server where it is running fails, it will resume moments later on another server in the cluster. There will be a very brief lapse in performance history collection, but it's quick. Resiliency for the database storage is provided by three-way mirroring. The ClusterPerformanceHistory volume is repaired after drive or server failures just like any other volume in Storage Spaces Direct.
+We designed cluster performance history to be scripting-friendly. You can use PowerShell to pull any available history from the database. You can build automated reporting or alerting, export history for safekeeping, roll your own visualizations, and much more. However, it is not currently possible to collect history for additional objects, timeframes, or series.
+
+### Can I change the measurement frequency and/or retention period?
+
+No, measurement frequency and retention period are not currently configurable.
+
+### How does this feature handle failures?
+
+The Health Service, which collects measurements and inserts them into the database, is highly available. If the server where it is running goes down, it will resume moments later on another server in the cluster. Performance history collection may lapse briefly, but it will resume automatically. Resiliency for the database storage is provided by three-way mirroring. The ClusterPerformanceHistory volume is repaired after drive or server failures just like any other volume in Storage Spaces Direct.
+
+### How are missing measurements handled?
+
+When measurements are merged into less granular series that span more time, as described in [Timeframes](#Timeframes), periods of missing data are excluded. For example, if the server was down for 30 minutes, then running at 50% CPU for the next 30 minutes, the `node.cpu.usage` average for the hour will be recorded as 50%.
 
 ### How do I disable this feature?
 
@@ -206,15 +205,11 @@ If you have not yet enabled Storage Spaces Direct, use the `-CollectPerformanceH
 Enable-ClusterS2D -CollectPerformanceHistory $False
 ```
 
-### What extensibility is available?
-
-We designed cluster performance history to be scripting-friendly. You can use PowerShell to pull any available history from the database to build automated reporting or alerting, export it for safekeeping, roll your own visualizations, and much more. However, it is not currently possible to collect history for additional objects, timeframes, or series.
-
 ## Troubleshooting
 
 ### The cmdlet doesn't work
 
-An error message like "*The term 'Get-ClusterPerf' is not recognized as the name of a cmdlet*" means the feature is not available or installed. Verify that you have Windows Server Insider Preview build 17090 or later and that you're running Storage Spaces Direct.
+An error message like "*The term 'Get-ClusterPerf' is not recognized as the name of a cmdlet*" means the feature is not available or installed. Verify that you have Windows Server Insider Preview build 17093 or later and that you're running Storage Spaces Direct.
 
    > [!NOTE]
    > This feature is not available on Windows Server 2016 or earlier. 
