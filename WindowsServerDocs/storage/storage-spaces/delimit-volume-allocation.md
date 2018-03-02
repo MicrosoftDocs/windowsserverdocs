@@ -68,7 +68,7 @@ Delimited allocation imposes some added management considerations and complexity
 
 2. With delimited allocation, reserve the equivalent of **one capacity drive per server (with no maximum)**. This is more than the [published recommendation](plan-volumes.md#choosing-the-size-of-volumes) for regular allocation, which maxes out at four capacity drives total.
 
-3. If a server fails and needs to be replaced, as described in [Remove a server and its drives](remove-servers.md#remove-a-server-and-its-drives), you are responsible for changing the delimitation of affected volumes by adding a new server and removing the failed one – example below.
+3. If a server fails and needs to be replaced, as described in [Remove a server and its drives](remove-servers.md#remove-a-server-and-its-drives), the administrator is responsible for updating the delimitation of affected volumes by adding the new server and removing the failed one – example below.
 
 ## Usage in PowerShell
 
@@ -101,7 +101,7 @@ To create a three-way mirror volume and delimit its allocation:
 
 ### See a delimited allocation
 
-To see how *MyVolume* is allocated, use the `Get-VirtualDiskFootprintBySSU.ps1` script in [appendix]:
+To see how *MyVolume* is allocated, use the `Get-VirtualDiskFootprintBySSU.ps1` script in [Appendix]:
 
 ```PowerShell
 PS C:\> .\Get-VirtualDiskFootprintBySSU.ps1
@@ -141,7 +141,7 @@ For example, to move MyVolume "to the right" by one server:
 
 You can monitor the progress of the rebalance with `Get-StorageJob`.
 
-Once it is complete, verify that MyVolume has moved by running `Get-VirtualDiskFootprintBySSU.ps1` again.
+Once it is complete, verify that *MyVolume* has moved by running `Get-VirtualDiskFootprintBySSU.ps1` again.
 
 ```PowerShell
 PS C:\> .\Get-VirtualDiskFootprintBySSU.ps1
@@ -151,7 +151,7 @@ VirtualDiskFriendlyName TotalFootprint Server1 Server2 Server3 Server4 Server5 S
 MyVolume                300 GB         0       100 GB  100 GB  100 GB  0       0      
 ```
 
-Note that Server1 does not contain slabs of MyVolume anymore – instead, Server04 does.
+Note that Server1 does not contain slabs of *MyVolume* anymore – instead, Server04 does.
 
 ## Analysis
 
