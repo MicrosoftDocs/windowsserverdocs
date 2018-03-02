@@ -85,8 +85,6 @@ On Windows Server Core and Windows Server 2016 Core, Project Honolulu can instal
 
 
 ## Deploy Project Honolulu with high availability
-> [!NOTE]
-> High availability deployment is supported in Project Honolulu version 1802. This version is currently available only to Windows Insiders and will be made available to the public early March. To get access to this feature now, [join the Windows Insider Program](https://insider.windows.com/for-business-getting-started-server/) and download Honolulu from [Windows Server Insider Preview](https://www.microsoft.com/software-download/windowsinsiderpreviewserver).
 
 You can deploy Project Honolulu in a failover cluster to provide high availability of your Honolulu gateway service. The solution provided is an active-passive solution, where only one instance of Honolulu is active. If one of the nodes in the cluster fails, Project Honolulu gracefully fails over to another node, letting you continue managing the servers in your environment seamlessly. 
 
@@ -105,13 +103,14 @@ You can deploy Project Honolulu in a failover cluster to provide high availabili
     - `-clientAccessPoint`: choose a name that you will use to access Project Honolulu. For example, if you run the script with the parameter `-clientAccessPoint contosoHonolulu`, you will access the Project Honolulu service by visiting `https://contosoHonolulu.<domain>.com`
     - `-msiPath`: The path for the Project Honolulu .msi file.
     - `-certPath`: Optional. The path for a certificate .pfx file. 
-    - `-certPassword`: Optional. The password for the certificate .pfx provided in `-certPath`
+    - `-certPassword`: Optional. A SecureString password for the certificate .pfx provided in `-certPath`
     - `-generateSslCert`: Optional. If you do not want to provide a signed certificate, include this parameter flag to generate a self-signed certificate. Note that the self-signed certificate will expire in 90 days. 
     - `-portNumber`: Optional. If no port is specified, the gateway service will be deployed on port 443 (HTTPS). If you wish to use a different port, specify in this parameter. Note that if you use a custom port (anything besides 443), you will access the Project Honolulu by visiting `https://<clientAccessPoint>:<port>`.
 
 For example, to install with a signed certificate:
 
-    C:\PS> .\Install-HonoluluHA.ps1 -clusterStorage C:\ClusterStorage\Volume1 -clientAccessPoint contoso-ha-gateway -msiPath '.\ServerManagementGateway.msi' -certPath cert.pfx -certPassword certPassword
+    C:\PS> $certPassword = Read-Host -AsSecureString
+    C:\PS> .\Install-HonoluluHA.ps1 -clusterStorage C:\ClusterStorage\Volume1 -clientAccessPoint contoso-ha-gateway -msiPath '.\ServerManagementGateway.msi' -certPath cert.pfx -certPassword $certPassword
 
 And to install with a self-signed certificate:
     
@@ -132,3 +131,25 @@ You can update your HA installation when a newer version of Honolulu is released
 ### Uninstall the Honolulu gateway from your failover cluster
 The Uninstall-HonoluluHA.ps1 script uninstalls Honolulu from all the nodes on your failover cluster. 
 1.	Run the Uninstall-HonoluluHA.ps1 on a node in the Failover Cluster where Honolulu is deployed. No parameters are needed.
+
+## Gateway Access Management
+
+> [!NOTE] 
+> Access management only applies when you are running Honolulu as a service on Windows Server.
+
+**Gateway users** can connect to the Honolulu gateway service in order to manage servers through that gateway, but they cannot change access permissions nor the authentication mechanism used to authenticate to the gateway.
+
+**Gateway administrators** can configure who gets access as well as how users will authenticate to the gateway. Only gateway administrators can view and configure the Access settings in Honolulu. Local administrators on the gateway machine are always administrators of the Honolulu gateway service.
+
+> [!NOTE] 
+> Access to the gateway does not imply access to managed servers visible by the gateway. To manage a target server, the connecting user must use credentials (either via their passed through Windows credential, or via credentials provided in the Honolulu session using the "Manage as" action) that are local administrators or part of the administrators group of that target server.
+
+By default, any user that navigates to the gateway URL has access to the Honolulu service. Only local administrators on the gateway machine have administrator access to the Honolulu service.
+
+Under the "Access" tab in Project Honolulu general settings, administrators can configure gateway access using Active Directory/local groups.
+
+Under the "Users" tab, you can control who can access Honolulu as a gateway user. By default, and if no security groups are listed, any user that access the gateway URL has access. Once you add one or more security groups to the users list, access is restricted to the members of those groups.
+
+You can enforce **smartcard authentication** by specifying an additional _required_ group for smartcard-based security groups. Once you have added a smartcard-based security group, a user will only have access to the Honolulu service if they are a member of any security group AND a smartcard group included in the users list.
+
+Under the "Administrators" tab, you can control who can access Honolulu as a gateway administrator. The local administrators group on the machine will always have full administrator access and cannot be removed from the list. By adding security groups, you give members of those groups privileges to change Honolulu gateway settings. The administrators list supports smartcard authentication in the same way as the users list: with the AND condition for a security group and a smartcard group.
