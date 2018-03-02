@@ -99,7 +99,7 @@ Deploying ReFS on basic disks is best suited for applications that implement the
 | Functionality       | ReFS                                        | NTFS |
 |---------------------------|------------------|-----------------------|
 | BitLocker encryption | Yes | Yes |
-| Data Deduplication | Yes | Yes |
+| Data Deduplication | Yes<sup>1</sup> | Yes |
 | Cluster Shared Volume (CSV) support | Yes | Yes |
 | Soft links | Yes | Yes |
 | Failover cluster support | Yes | Yes |
@@ -114,7 +114,7 @@ Deploying ReFS on basic disks is best suited for applications that implement the
 | Oplocks | Yes | Yes |
 | Sparse files | Yes | Yes |
 | Named streams | Yes | Yes |
-
+1. Available on Windows Server, version 1709 and later.
 #### The following features are only available on ReFS:
 
 | Functionality       | ReFS                                        | NTFS |
