@@ -223,7 +223,7 @@ With the package and program created, you need to deploy it to the **VPN Users**
 
 2.  In Packages, click **Windows 10 Always On VPN Profile**.
 
-3.  On the **Programs** tab, at the bottom of the details pane, right-click **VPN Profile Script**, click **Properties**, and complete the following steps:
+3.  On the Programs tab, at the bottom of the details pane, right-click **VPN Profile Script**, click **Properties**, and complete the following steps:
     a. On the **Advanced** tab, in When this program is assigned to a computer, click **Once for every user who logs on**.
     b. Click **OK**.
 
@@ -237,7 +237,7 @@ With the package and program created, you need to deploy it to the **VPN Users**
 
 6.  On the Content page, complete the following steps:
     a. Click **Add**, and click **Distribution Point**.
-    b. In Available distribution points, select the distribution points to which you want to distribute the ProfileXML configuration script, andclick **OK**.
+    b. In Available distribution points, select the distribution points to which you want to distribute the ProfileXML configuration script, and click **OK**.
     c. Click **Next**.
 
 7.  On the Deployment settings page, click **Next**.
