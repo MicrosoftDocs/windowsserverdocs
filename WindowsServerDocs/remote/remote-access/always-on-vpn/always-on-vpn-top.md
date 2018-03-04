@@ -8,22 +8,32 @@ ms.assetid: 5ae1a40b-4f10-4ace-8aaf-13f7ab581f4f
 manager: brianlic
 ms.author: pashort
 author: shortpatti
-ms.date: 2/24/2018
+ms.date: 3/4/2018
 ---
 
 # Always On VPN Deployment Guide for Windows Server and Windows 10
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-What is Always On VPN and why use it? Well, in previous versions of the Windows VPN architecture, platform limitations made it difficult to provide the critical functionality needed to replace DirectAccess (like automatic connections initiated before users sign in). Always On VPN, however, has mitigated most of those limitations or expanded the VPN functionality beyond the capabilities of DirectAccess. Always On VPN addresses the previous gaps between Windows VPNs and DirectAccess; therefore, Always On VPN is the DirectAccess replacement solution.
+What is Always On VPN and why use it instead of DirectAccess? Well, in previous versions of the Windows VPN architecture, platform limitations made it difficult to provide the critical functionality needed to replace DirectAccess (such as automatic connections initiated before users sign in). Always On VPN, however, has mitigated most of those limitations or expanded the VPN functionality beyond the capabilities of DirectAccess. Always On VPN addresses the previous gaps between Windows VPNs and DirectAccess; therefore, Always On VPN is the DirectAccess replacement solution.
 
 ## Benefits of Always On VPN
 
-Always On VPN has many benefits over the Windows VPN solutions of the past. Unlike a traditional VPN, this iteration of Remote Access is designed to be persistent. A user automatically connects to your network by connecting to any external network. Key improvements in integration, security, connectivity, networking control, and compatibility align Always On VPN with Microsoft's cloud-first, mobile-first vision.
+Always On VPN has many benefits over the Windows VPN solutions of the past. The key improvements that aligns Always On VPN with Microsoft’s cloud-first, mobile-first vision:
 
-Because many of the devices that require remote access are personal devices, Always On VPN does not require that a device be domain joined. Always On VPN provides a single, cohesive solution for remote access for all your connected devices going forward, even personally owned devices. Also, organizations can choose which management platform they prefer for deploying the Always On VPN configuration because the CSP is not vendor specific.
+-   Platform integration
 
-For additional details about the advantages of Always On VPN, see [Always On VPN and DirectAccess Features Comparison](https://docs.microsoft.com/windows-server/remote/remote-access/vpn/vpn-map-da).
+-   Security
+
+-   Connectivity
+
+-   Networking control
+
+-   Compatibility
+
+Because many of the devices that require remote access are personal devices, Always On VPN does not require that a device be domain joined. Always On VPN can provides a single, cohesive solution for remote access for all your connected devices going forward, even personally owned devices. Also, organizations can choose which management platform they prefer for deploying the Always On VPN configuration because the CSP is not vendor specific.
+
+For additional details about the advantages of Always On VPN, see [Always On VPN and DirectAccess Features Comparison](vpn/vpn-map-da.md).
 
 ## Platform integration
 
@@ -88,23 +98,163 @@ You can deploy and manage Always On VPN in several ways, giving Always On VPN se
 | **Diverse management and deployment mechanisms** | You can use many management and deployment mechanisms to manage VPN settings (called a *VPN profile*), including Windows PowerShell, System Center Configuration Manager, Intune (or third-party mobile device management [MDM] tool), and Windows Configuration Designer. These options simplify the configuration of Always On VPN regardless of the client management tools you use. |
 | **Standardized VPN profile definition** | Always On VPN supports configuration using a standard XML profile (ProfileXML), providing a standard configuration template format that most management and deployment toolsets use. |
 
-<!-- Next steps -->
+## Always On VPN Connection Process Overview
+
+The following illustration shows the infrastructure that is required to deploy
+Always On VPN.
+
+![](media/f53a61328824c42748733ab064499e7d.jpg)
+
+Always On VPN Infrastructure
+
+1.  Using public DNS servers, the Windows 10 VPN client performs a name resolution query for the IP address of the VPN gateway.
+
+2.  Using the IP address returned by DNS, the VPN client sends a connection request to the VPN gateway.
+
+3.  The VPN gateway is also configured as a Remote Authentication Dial In User Service (RADIUS) Client; the VPN RADIUS Client sends the connection request to the organization/corporate NPS server for connection request processing. 
+
+4.  The NPS server processes the connection request, including performing authorization and authentication, and determines whether to allow or deny the connection request.
+
+5.  The NPS server forwards an Access-Accept or Access-Deny response to the VPN gateway.
+
+6.  The connection is initiated or terminated based on the response that the VPN server received from the NPS server.
+
+For more information on each infrastructure component depicted in the illustration above, see [Always On VPN Technology Overview](always-on-vpn-technologies.md).
+
+## Always On VPN Deployment and Migration Overview
+
+In previous versions of the Windows VPN architecture, platform limitations made it difficult to provide the critical functionality needed to replace DirectAccess (like automatic connections initiated before users sign in). Always On VPN, however, has mitigated most of those limitations or expanded the VPN functionality beyond the capabilities of DirectAccess. Always On VPN addresses the previous gaps between Windows VPNs and DirectAccess. 
+
+Always On VPN requires a specific process to deploy or migrate the Always On VPN connections for remote Windows 10 client computers that are domain joined. The Always On VPN deployment and migration process consists of these primary components and high-level processes:
+
+![](media/0a1b4e068428fd0128623f55b96cd38e.png)
+
+1.  **Plan and stage your environment.** Deploying Always On VPN requires proper planning to determine your deployment phases, which helps identify any issues before they affect the entire organization.
+
+    1.  Prepare the Remote Access Server.
+
+    2.  Plan the Authentication Methods.
+
+    3.  Plan IP Addresses for Remote Clients.
+
+    4.  Prepare the Environment.
+
+    5.  Prepare the Routing and Firewall.
+
+2.  **(Migration step) If you are migrating from DirectAccess, plan the migration to Always On VPN.** Migrating from DirectAccess to Always On VPN requires proper planning to determine your migration phases, which helps identify any issues before they affect the entire organization. The primary goal of the migration is for users to maintain remote connectivity to the office throughout the process. If you perform tasks out of order, a race condition may occur, leaving remote users with no way to access company resources.
+
+    >[!NOTE] The word *phase* is not intended to indicate that this is a long process. Whether you move through each phase in a couple of days or a couple of months, Microsoft recommends that you take advantage of side-by-side migration and use a phased approach.
+
+3.  **Configure the Always On VPN Server Infrastructure.** Configuring the server infrastructure is the first thing you do to deploy Always On VPN.
+
+    a.  AD DS: Enable certificate autoenrollment in Group Policy for both computers and users, create the VPN Users Group, the VPN Servers Group, and the NPS Servers Group, and add members to each group.
+
+    b.  AD CS: Create the User Authentication, VPN Server Authentication, and NPS Server Authentication certificate templates.
+
+    c.  Domain-joined Windows 10 client: Enroll and validate user certificates.
+
+4.  **Configure the Remote Access Server for Always On VPN.** The next step in the Always On VPN deployment process is to install and configure the Remote Access server role on the VPN server.
+
+    a.  Enroll and validate the VPN server certificate.
+
+    b.  Install and configure Remote Access VPN.
+
+5.  **Install and configure the Network Policy Server (NPS).** The next step in the Always On VPN deployment process is to install and configure the Network Policy Server (NPS). The NPS allows you to create and enforce organization-wide network access policies for connection request authentication and authorization.
+
+    a.  Install and configure your organization NPS as a RADIUS server.
+
+    b.  Enroll and validate the NPS certificate.
+
+6.  **Configure DNS and Firewall settings for Always On VPN.** When remote VPN clients connect, they use the same DNS servers that your internal clients use, which allows them to resolve names in the same manner as the rest of your internal workstations. Because of this, you must ensure that the computer name that external clients use to connect to the VPN server matches the subject alternative name that is defined in the certificates you issue to the VPN server.
+
+7.  **Configure the ProfileXML configuration files.** You use ProfileXML in all the delivery methods this guide describes, including Windows PowerShell,  Microsoft System Center Configuration Manager (SCCM, and Microsoft Intune. 
+
+8.  **Configure Always On VPN connections on Windows 10.** The final step in the Always On VPN deployment process, unless you are migrating from DirectAccess to Always On VPN, is to configure the Always On VPN connection in Windows 10 client. If you are migrating from DirectAccess to Always On VPN, see Migrate from DirectAccess to Always On VPN section.
+
+9.  **(Migration step) Start migrating users from DirectAccess.** After the Always On VPN infrastructure is ready, you will create and publish the required certificates to the client. When the clients have received the certificates, you will deploy the VPN_Profile.ps1 configuration script. Alternatively, you can use Intune to configure the VPN client. Use Microsoft System Center Configuration Manager or Microsoft Intune to monitor for successful VPN configuration deployments.
+
+10. **(Migration step) Remove and decommission DirectAccess.** As users migrate successfully, you remove their devices from the DirectAccess security group before you remove DirectAccess from your environment. Use Microsoft System Center Configuration Manager or Microsoft Intune to determine device-assignment information and discover which device belongs to each user. Once you have successfully migrated all clients to Always On VPN, you remove DirectAccess from your environment.
+
+>[!IMPORTANT] 
+>It is not a requirement that your infrastructure servers, such as computers running Active Directory Domain Services, Active Directory Certificate Services, and Network Policy Server, are running Windows Server 2016. You can use earlier versions of Windows Server, such as Windows Server 2012 R2, for the infrastructure servers and for the server that is running Remote Access.
+
+## DirectAccess deployment scenario
+
+In this deployment scenario, you use a simple DirectAccess deployment scenario as a starting point for the migration this guide presents. You do not need to match this deployment scenario before migrating to Always On VPN, but for many organizations, this simple setup is an accurate representation of their current DirectAccess deployment. The table below provides a list of basic features for this setup.
+
+Many DirectAccess deployment scenarios and options exist, so your implementation is likely to be different from the one described here. If so, refer to [Feature mapping between DirectAccess and Always On VPN](remote-access/vpn/vpn-map-da.md) to determine the Always On VPN feature set mapping for your current additions, and then add those features to your configuration. 
+
+
+### Deployment scenario feature list
+
+| DirectAccess feature | Typical scenario |
+|-----|----|
+| Deployment scenario                   | Deploy full DirectAccess for client access and remote management                                               |
+| Network adapters                      | 2                                                                                                              |
+| User authentication                   | Active Directory credentials                                                                                   |
+| Use computer certificates             | Yes                                                                                                            |
+| Security groups                       | Yes                                                                                                            |
+| Single DirectAccess server            | Yes                                                                                                            |
+| Network topology                      | Network address translation (NAT) behind an edge firewall with two network adapters                            |
+| Access mode                           | End to edge                                                                                                    |
+| Tunneling                             | Split tunnel                                                                                                   |
+| Authentication                        | Standard public key infrastructure (PKI) authentication with machine certificate plus Kerberos (not KerbProxy) |
+| Protocols                             | IP over HTTPS (IP-HTTPS)                                                                                       |
+| Network location server (NLS) off-box | Yes                                                                                                            |
+
+## Always On VPN deployment scenario
+
+In this deployment scenario, you focus on migrating a simple DirectAccess environment to a simple Always On VPN environment, which is the DirectAccess replacement solution. The following table provides the features used in this simple solution. 
+
+### Always On VPN features used in the simple environment
+
+| VPN feature | Deployment scenario configuration |
+|-----|-----|
+| Connection type | Native Internet Key Exchange version 2 (IKEv2) |
+| Routing | Split Tunneling |
+| Name resolution | Domain name information list and Domain Name System (DNS) suffix |
+| Triggering | Always on and trusted network detection |
+| Authentication  | Protected Extensible Authentication Protocol-Transport Layer Security (PEAP-TLS) with Trusted Platform Module–protected user certificates |
+
+Following are RAS Gateway resources.
+
+-   [Configure RRAS with a Computer Authentication Certificate](https://technet.microsoft.com/en-us/library/dd458982.aspx)
+
+-   [Troubleshooting IKEv2 VPN Connections](https://technet.microsoft.com/en-us/library/dd941612.aspx)
+
+-   [Configure IKEv2-based Remote Access](https://technet.microsoft.com/en-us/library/ff687731.aspx)
+
+## What this guide does not provide
+
+This guide does not provide instructions for deploying the following items.
+
+-   Active Directory Domain Services (AD DS)
+
+-   Active Directory Certificate Services (AD CS) and a Public Key
+    Infrastructure (PKI).
+
+-   Dynamic Host Configuration Protocol (DHCP) automatic IP address assignment
+    to computers and other devices that are configured as DHCP clients.
+
+-   Network hardware, such as Ethernet cabling, firewalls, switches, and hubs.
+
+-   Additional network resources, such as application and file servers, that
+    remote users can access over an Always On VPN connection.
+
+-   Internet connectivity
+
 ## Next steps 
 
 |If you...  |Then see...  |
 |---------|---------|
-|Want to know more about DirectAccess and Always On VPN feature comparison     |[Always On VPN and DirectAccess Features Comparison](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/vpn-map-da)         |
+|Want to know more about DirectAccess and Always On VPN feature comparison     |[Always On VPN and DirectAccess Features Comparison](remote-access/vpn/vpn-map-da.md)         |
 |Want to know more about the Always On VPN technologies    |[Always On VPN Technology Overview](always-on-vpn-technologies.md)         |
-|What to know more about VPN Device Tunnels in Always On VPN | [VPN Device Tunnels in Always On VPN](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/vpn-device-tunnel-config) |
+|What to know more about VPN Device Tunnels in Always On VPN | [VPN Device Tunnels in Always On VPN](vpn/vpn-device-tunnel-config) |
 |Want to know more about configuring Always On VPN on Windows clients | Windows 10 [VPN technical guide](https://docs.microsoft.com/windows/access-protection/vpn/vpn-guide) |
 |Want to know how to create VPN profiles in System Center Configuration Manager |[How to Create VPN profiles in System Center Configuration Manager](https://docs.microsoft.com/sccm/protect/deploy-use/create-vpn-profiles)    |
 |Want to know more about the options for VPN profiles |[VPN profile options](https://docs.microsoft.com/en-us/windows/access-protection/vpn/vpn-profile-options)   |
-|Are ready to get started planning your Always On VPN deployment     |[Always On VPN Deployment Overview](always-on-vpn-deploy-overview.md)         |
+|Are ready to get started planning your Always On VPN deployment     |[STEP 1: Plan and stage your environment](always-on-vpn-deploy-planning.md)         |
 
 <!-- put a related documents section here with the external docs that are referenced -->
 
 
-## Related topics
-[EAP configuration](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/eap-configuration)
-[ProfileXML XSD](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/vpnv2-profile-xsd)
-[Microsoft server software support for Microsoft Azure virtual machines](https://support.microsoft.com/help/2721672/microsoft-server-software-support-for-microsoft-azure-virtual-machines)
