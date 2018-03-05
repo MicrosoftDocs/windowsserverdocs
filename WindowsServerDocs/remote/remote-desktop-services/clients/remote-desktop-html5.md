@@ -16,7 +16,7 @@ author: Heidilohr
 
 ## Start using the Remote Desktop client
 
-To sign in to the client, enter your domain and user name in the format ```Domain\user name```, enter your password, and then select **Sign in**.
+To sign in to the client, open your web browser and navigate to the Work Resources URL that your admin set up. At the sign in page, enter your domain and user name in the format ```Domain\user name```, enter your password, and then select **Sign in**.
 
 >[!NOTE]
 >By signing in to the web client, you agree that your computer complies with your organization's securty policy.
