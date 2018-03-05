@@ -16,7 +16,7 @@ ms.date: 2/24/2018
 >Applies to: \>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
 For this deployment, it is not a requirement that your infrastructure servers, such as computers running AD DS, AD CS, and NPS, are running Windows Server
-2016. You can use earlier versions of Windows Server, such as Windows Server 2012 R2, for the infrastructure servers and for the server that is running
+2016\. You can use earlier versions of Windows Server, such as Windows Server 2012 R2, for the infrastructure servers and for the server that is running
 Remote Access. 
 
 This section provides a brief overview of the technologies of Always On VPN and links to additional documentation.
@@ -199,7 +199,7 @@ Similar to how you use the Group Policy Management Editor to configure Group Pol
 
 MDM products like Intune offer a user-friendly configuration option that configures the CSP in the operating system.
 
-![Mobile Device Management to CSP configuration](./media/d98badaf25921b7c134a944f4ecbf6e2.jpg)
+![Mobile Device Management to CSP configuration](/media/d98badaf25921b7c134a944f4ecbf6e2.jpg)
 
 Mobile Device Management to CSP configuration
 
