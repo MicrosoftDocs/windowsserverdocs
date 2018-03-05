@@ -262,5 +262,5 @@
 
 ## [Windows Time Service](windows-time-service/windows-time-service.md)
 ### [Windows Server 2016 Accurate Time](windows-time-service/accurate-time.md)
-#### [How the Windows Time Service Works](windows-time-service/How-the-Windows-Time-Service-Works.md)
-#### [Windows Time Service Tools and Settings](windows-time-service/Windows-Time-Service-Tools-and-Settings.md)
+### [How the Windows Time Service Works](windows-time-service/How-the-Windows-Time-Service-Works.md)
+### [Windows Time Service Tools and Settings](windows-time-service/Windows-Time-Service-Tools-and-Settings.md)
