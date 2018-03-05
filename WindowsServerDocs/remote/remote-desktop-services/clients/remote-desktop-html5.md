@@ -26,4 +26,4 @@ After you sign in, the client will take you to the **Resources** page. Under the
 When you're finished with your session, select the **Sign Out** button in the upper right-hand corner.
 
 >[!NOTE]
->Your RD Web Access session will automatically time out after a period of inactivity. If your session ends before you're ready due to inactivity, just refresh your browser and sign in again.
+>Your Remote Desktop web client session will automatically time out after a period of inactivity. If your session ends before you're ready due to timing out, just refresh your browser and sign in again.
