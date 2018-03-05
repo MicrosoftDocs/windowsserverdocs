@@ -25,7 +25,9 @@ Following are additional options for high availability.
 
 In environments that require high availability or support large numbers of requests, you can increase the performance and resiliency of Remote Access by using load balancing between multiple servers that are running Network Policy Server \(NPS\) and enabling Remote Access server clustering.
 
-For more information, see [NPS Proxy Server Load Balancing](../../../../../networking/technologies/nps/nps-manage-proxy-lb.md). 
+For more information, see [NPS Proxy Server Load Balancing](https://docs.microsoft.com/en-us/windows-server/networking/technologies/nps/nps-manage-proxy-lb). 
+
+
 
 For more information about deploying Remote Access with load-balanced clusters, see [Deploy Remote Access in a Cluster](https://docs.microsoft.com/windows-server/remote/remote-access/ras/cluster/deploy-remote-access-in-cluster).
 
