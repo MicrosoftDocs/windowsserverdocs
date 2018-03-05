@@ -14,55 +14,16 @@ author: Heidilohr
 * Mobile devices are not supported at this time.
 * The client currently supports Edge, IE 11, Google Chrome, and Safari. Firefox support is still in progress.
 
-## Get the RD client and start using it
+## Start using the Remote Desktop client
 
-Follow these steps to get started with Remote Desktop web client:
+To sign in to the client, enter your domain and user name in the format ```Domain\user name```, enter your password, and then select **Sign in**.
 
-1. Download the Remote Desktop client.
-2. [Set up your PC to accept remote connections](remote-desktop-allow-access.md).
-3. Add a Remote Desktop connection or a remote resource. You use a connection to connect directly to a Windows PC and a remote resource to use a RemoteApp program, session-based desktop, or virtual desktop published on-premises.
-4. Create a widget so you can get to Remote Desktop quickly.
+>[!NOTE]
+>By signing in to the web client, you agree that your computer complies with your organization's securty policy.
 
-### Add a Remote Desktop connection
+After you sign in, the client will take you to the **Resources** page. Under the **Work Resources** menu, you'll see several icons for the apps the admin has made available to the work group. To start using an app, select the icon for the app you want to use, enter your username and password when prompted, and then select **Connect**.
 
-To create a Remote Desktop connection:
+When you're finished with your session, select the **Sign Out** button in the upper right-hand corner.
 
-1. In the Connection Center, select **+**, then select **Desktop**.
-2. Enter the following information for the computer you want to connect to:
-    * **PC name**—The name of the computer. This can be a Windows computer name, an Internet domain name, or an IP address. You can also append port information to the PC name (for example, **MyDesktop:3389** or **10.0.0.1:3389**).
-    * **User name**—The user name to use to access the remote PC. You can use the following formats: **user_name**, **domain\user_name**, or **user_name@domain.com**. You can also specify whether to prompt for a user name and password.
-3. You can also set the following additional options:
-    * **Friendly name**—An easy-to-remember name for the PC you are connecting to. You can use any string, but if you do not specify a friendly name, the PC name is displayed.
-    * **Gateway**—The Remote Desktop gateway that you want to use to connect to virtual desktops, RemoteApp programs, and session-based desktops on an internal corporate network. Get the information about the gateway from your system administrator.
-    * **Sound**—Select the device to use for audio during your remote session. You can choose to play sound on the local devices, the remote device, or not at all.
-    * **Customize display resolution**—Set a custom resolution for a connection by enabling this setting. When turned off, the resolution which you have defined in the global settings of the app will be applied.
-    * **Swap mouse buttons**—Use this option to swap the left mouse button functions for the right mouse button. (This is especially useful if the remote PC is configured for a left-handed user but you use a right-handed mouse.)
-    * **Connect to admin session**—Use this option to connect to a console session to administrate a Windows server.
-    * **Redirect to local storage**—Mounts your local storage as a remote file system on the remote PC.
-4. Select **Save**.
-
-Need to edit these settings? Select the overflow menu (**...**) next to the name of the desktop, then select **edit**.
-
-Want to delete the connection? Again, select the overflow menu (**...**), and then select **remove**.
-
-### Add a remote resource
-
-Remote resources are RemoteApp programs, session-based desktops, and virtual desktops published using RemoteApp and Desktop Connections.
-
-To add a remote resource:
-
-1. On the Connection Center screen, select **+**, and then select **Remote Resources Feed**.
-2. Enter information for the Remote Resource:
-   * **Email or URL**—The URL of the RD Web Access server. You can also enter your corporate email account in this field—this tells the client to search for the RD Web Access Server associated with your email address.
-   * **User name**—The user name to use for the RD Web Access server you are connecting to.
-   * **Password**—The password to use for the RD Web Access server you are connecting to.
-3. Select **Save**.
-
-The remote resources will be displayed in the Connection Center.
-
-To delete remote resources:
-
-1. In the Connection Center, select the overflow menu (**...**) next to the remote resource.
-2. Select **Remove**.
-3. Confirm the deletion.
-
+>[!NOTE]
+>Your RD Web Access session will automatically time out after a period of inactivity. If your session ends before you're ready due to inactivity, just refresh your browser and sign in again.
