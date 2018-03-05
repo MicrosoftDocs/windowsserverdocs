@@ -6,7 +6,7 @@
 ### [Always On VPN](remote-access/always-on-vpn/always-on-vpn-top.md)
 #### [Features Comparison of Always On VPN and DirectAccess](remote-access/vpn/vpn-map-da.md)
 #### [Always On VPN Technology Overview](remote-access/always-on-vpn/always-on-vpn-technologies.md)
-#### [VPN Device Tunnels in Always On VPN](remote-access/vpn-device-tunnel-config.md)
+#### [VPN Device Tunnels in Always On VPN](remote-access/vpn/vpn-device-tunnel-config.md)
 #### [ProfileXML Configuration Files Overview](remote-access/always-on-vpn/profilexml-overview.md)
 ##### [Step 1: Plan and stage your environment](remote-access/always-on-vpn/always-on-vpn-deploy-planning.md)
 ##### [Step 2: Plan your migration](da-always-on-vpn-mirgration/da-always-on-migration-planning.md)
