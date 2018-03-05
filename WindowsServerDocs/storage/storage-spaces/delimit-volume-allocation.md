@@ -101,7 +101,7 @@ To create a three-way mirror volume and delimit its allocation:
 
 ### See a delimited allocation
 
-To see how *MyVolume* is allocated, use the `Get-VirtualDiskFootprintBySSU.ps1` script in [appendix](#appendix):
+To see how *MyVolume* is allocated, use the `Get-VirtualDiskFootprintBySSU.ps1` script in [Appendix](#appendix):
 
 ```PowerShell
 PS C:\> .\Get-VirtualDiskFootprintBySSU.ps1
