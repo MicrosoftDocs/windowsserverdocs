@@ -886,7 +886,7 @@ After creating the VPN Users group, create the VPN configuration policy with whi
 
 	e.  Click **Browse**, and open VPN_Profile.xml, which you created in the section [Create the ProfileXML configuration files](#bkmk_ProfileXML). The following illustration depicts the completed **OMA-URI** setting for Contoso.
 
-	![Completed OMA-URI setting](../../../../media/Always-On-Vpn/Vpn-Settings.jpg)
+    ![Completed OMA-URI setting](../../../../media/Always-On-Vpn/Vpn-Settings.jpg)
 
 6.  Click **OK** to add the setting to the configuration policy.
 
