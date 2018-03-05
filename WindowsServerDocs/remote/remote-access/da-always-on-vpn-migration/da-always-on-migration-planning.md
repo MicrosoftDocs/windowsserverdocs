@@ -66,4 +66,4 @@ By using user certificates, the Always On VPN client connects automatically, but
 
 ## Next steps
 
-[STEP 3: Configure the Server Infrastructure](always-on-vpn/vpn-deploy-ras.md). Install and configure the Remote Access server role on the computer or virtual machine (VM) that you want to use as your VPN server.
+[STEP 4: Configure the Remote Access Server for Always On VPN](../always-on-vpn/vpn-deploy-ras.md). Install and configure the Remote Access server role on the computer or virtual machine (VM) that you want to use as your VPN server.

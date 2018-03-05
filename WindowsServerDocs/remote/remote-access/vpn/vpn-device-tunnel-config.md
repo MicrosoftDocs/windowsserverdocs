@@ -27,7 +27,7 @@ authentication methods and other VPN configuration settings as appropriate.
 
 ## Device Tunnel Features and Requirements
 
-![Device Tunnel Features and Requirements](media/ec2456e60ba37b4cc0ac9c1f35ea593c.png)
+![Device Tunnel Features and Requirements](../../media/Always-On-Vpn/device-tunnel-requirements.png)
 
 ## VPN Device Tunnel Configuration
 
