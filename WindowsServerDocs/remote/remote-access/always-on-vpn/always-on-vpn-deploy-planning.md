@@ -100,5 +100,5 @@ Next steps
 
 | **If you…**                      | **Then …**      |
 |----------------------------------|--------------------------|
-| Are migrating from DirectAccess  | Refer to [STEP 2: Plan your migration](da-always-on-vpn-migration/da-always-on-migration-planning)**.** The primary goal of the migration is for users to maintain remote connectivity to the office throughout the process.                                                                                    |
+| Are migrating from DirectAccess  | Refer to [STEP 2: Plan your migration](../da-always-on-vpn-migration/da-always-on-migration-planning.md)**.** The primary goal of the migration is for users to maintain remote connectivity to the office throughout the process.                                                                                    |
 | Are just deploying Always On VPN | Refer to [STEP 3: Configure the Server Infrastructure](vpn-deploy-server-infrastructure.md). Install and configure the server-side components necessary to support the VPN, including configuring PKI to distribute the certificates used by users, the VPN server, and the NPS server. |
