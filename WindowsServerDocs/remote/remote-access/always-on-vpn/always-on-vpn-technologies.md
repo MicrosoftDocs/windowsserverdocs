@@ -131,7 +131,8 @@ For information about deploying AD DS with DNS, see the Windows Server 2016 [Cor
 Both internal and external DNS zones are required, which assumes that the internal zone is a delegated subdomain of the external zone (e.g.,
 corp.contoso.com and contoso.com).
 
->[!NOTE] Other DNS designs, such as split-brain DNS (using the same domain name internally and externally in separate DNS zones) or unrelated internal and external domains (e.g., contoso.local and contoso.com) are also possible, but the configuration for these environments is beyond the scope of this guide.
+>[!NOTE] 
+>Other DNS designs, such as split-brain DNS (using the same domain name internally and externally in separate DNS zones) or unrelated internal and external domains (e.g., contoso.local and contoso.com) are also possible, but the configuration for these environments is beyond the scope of this guide.
 
 ### Certificate Templates
 
@@ -183,7 +184,8 @@ Table 1. VPN Features and Configurations Discussed in This Guide
 | Triggering      | Always On and Trusted Network Detection       |
 | Authentication  | PEAP-TLS with TPM–protected user certificates |
 
->[!NOTE] PEAP-TLS and TPM are "Protected Extensible Authentication Protocol with Transport Layer Security" and "Trusted Platform Module," respectively.
+>[!NOTE] 
+>PEAP-TLS and TPM are "Protected Extensible Authentication Protocol with Transport Layer Security" and "Trusted Platform Module," respectively.
 
 For detailed feature descriptions and a full list of the VPN capabilities in Windows 10, see the [Windows 10 VPN Technical Guide](https://docs.microsoft.com/windows/access-protection/vpn/vpn-guide).
 
@@ -197,7 +199,7 @@ Similar to how you use the Group Policy Management Editor to configure Group Pol
 
 MDM products like Intune offer a user-friendly configuration option that configures the CSP in the operating system.
 
-![Mobile Device Management to CSP configuration](media/d98badaf25921b7c134a944f4ecbf6e2.jpg)
+![Mobile Device Management to CSP configuration](remote/media/d98badaf25921b7c134a944f4ecbf6e2.jpg)
 
 Mobile Device Management to CSP configuration
 
