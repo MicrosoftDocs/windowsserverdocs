@@ -1,5 +1,5 @@
 ---
-title: Configure the VPN Device Tunnel in Windows 10
+title: VPN Device Tunnels in Always On VPN
 description: You can use this topic to learn how to create a VPN device tunnel in Windows 10.
 manager: brianlic
 ms.prod: windows-server-threshold
@@ -7,10 +7,10 @@ ms.date:
 ms.technology: networking-ras
 ms.topic: article
 ms.assetid: 158b7a62-2c52-448b-9467-c00d5018f65b
-ms.author: jamesmci
-author: maricia
+ms.author: pashort
+author: shortpatti
 ---
-# Configure VPN Device Tunnels in Windows 10
+# VPN Device Tunnels in Always On VPN
 
 >Applies To: Windows 10 version 1709
 
