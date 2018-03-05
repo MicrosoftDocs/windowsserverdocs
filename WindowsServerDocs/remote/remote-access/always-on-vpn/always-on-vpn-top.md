@@ -33,7 +33,7 @@ Always On VPN has many benefits over the Windows VPN solutions of the past. The 
 
 Because many of the devices that require remote access are personal devices, Always On VPN does not require that a device be domain joined. Always On VPN can provide a single, cohesive solution for remote access for all your connected devices going forward, even personally owned devices. Also, organizations can choose which management platform they prefer for deploying the Always On VPN configuration because the CSP is not vendor-specific.
 
-For more information about the advantages of Always On VPN, see [Always On VPN and DirectAccess Features Comparison](remote/remote-access/vpn/vpn-map-da.md).
+For more information about the advantages of Always On VPN, see [Always On VPN and DirectAccess Features Comparison](../../remote-access/vpn/vpn-map-da.md).
 
 ## Platform integration
 
@@ -103,7 +103,7 @@ You can deploy and manage Always On VPN in several ways, giving Always On VPN se
 The following illustration shows the infrastructure that is required to deploy
 Always On VPN.
 
-![](../media/f53a61328824c42748733ab064499e7d.jpg)
+![Always On VPN overview](../../media/Always-On-Vpn/Ao-Vpn-Overview.jpg)
 
 Always On VPN Infrastructure
 
@@ -127,7 +127,7 @@ In previous versions of the Windows VPN architecture, platform limitations made 
 
 Always On VPN requires a specific process to deploy or migrate the Always On VPN connections for remote Windows 10 client computers that are domain joined. The Always On VPN deployment and migration process consist of these primary components and high-level processes:
 
-![](../media/0a1b4e068428fd0128623f55b96cd38e.png)
+![Always On VPN deployment and migration workflow](../../media/Always-On-Vpn/da-to-aov-workflow.png)
 
 1.  **Plan and stage your environment.** Deploying Always On VPN requires proper planning to determine your deployment phases, which helps identify any issues before they affect the entire organization.
 
@@ -183,7 +183,7 @@ Always On VPN requires a specific process to deploy or migrate the Always On VPN
 
 In this deployment scenario, you use a simple DirectAccess deployment scenario as a starting point for the migration this guide presents. You do not need to match this deployment scenario before migrating to Always On VPN, but for many organizations, this simple setup is an accurate representation of their current DirectAccess deployment. The table below provides a list of basic features for this setup.
 
-Many DirectAccess deployment scenarios and options exist, so your implementation is likely to be different from the one described here. If so, refer to [Feature mapping between DirectAccess and Always On VPN](../../vpn/vpn-map-da.md) to determine the Always On VPN feature set mapping for your current additions, and then add those features to your configuration. 
+Many DirectAccess deployment scenarios and options exist, so your implementation is likely to be different from the one described here. If so, refer to [Feature mapping between DirectAccess and Always On VPN](../../remote-access/vpn/vpn-map-da.md) to determine the Always On VPN feature set mapping for your current additions, and then add those features to your configuration. 
 
 
 ### Deployment scenario feature list
@@ -248,9 +248,9 @@ This guide does not provide instructions for deploying the following items:
 
 |If you...  |Then see...  |
 |---------|---------|
-|Want to know more about DirectAccess and Always On VPN feature comparison     |[Always On VPN and DirectAccess Features Comparison](remote/remote-access/vpn/vpn-map-da.md)         |
+|Want to know more about DirectAccess and Always On VPN feature comparison     |[Always On VPN and DirectAccess Features Comparison](../../remote-access/vpn/vpn-map-da.md)         |
 |Want to know more about the Always On VPN technologies    |[Always On VPN Technology Overview](always-on-vpn-technologies.md)         |
-|What to know more about VPN Device Tunnels in Always On VPN | [VPN Device Tunnels in Always On VPN](remote/remote-access/vpn/vpn-device-tunnel-config,md) |
+|What to know more about VPN Device Tunnels in Always On VPN | [VPN Device Tunnels in Always On VPN](../../remote-access/vpn/vpn-device-tunnel-config,md) |
 |Want to know more about configuring Always On VPN on Windows clients | Windows 10 [VPN technical guide](https://docs.microsoft.com/windows/access-protection/vpn/vpn-guide) |
 |Want to know how to create VPN profiles in System Center Configuration Manager |[How to Create VPN profiles in System Center Configuration Manager](https://docs.microsoft.com/sccm/protect/deploy-use/create-vpn-profiles)    |
 |Want to know more about the options for VPN profiles |[VPN profile options](https://docs.microsoft.com/en-us/windows/access-protection/vpn/vpn-profile-options)   |

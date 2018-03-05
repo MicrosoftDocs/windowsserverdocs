@@ -32,7 +32,7 @@ In this guide’s scenario, you use Protected Extensible Authentication Protocol
 
 ## Prerequisites
 
--   Make sure you review the [ProfileXML Overview](profile-overview.md) to understand the ProfileXML configuration files.
+-   Make sure you review the [ProfileXML Overview](profilexml-overview.md) to understand the ProfileXML configuration files.
 
 -   Generated files for VPN_Profile.xml and VPN_Profile.ps1 that you created in the Create the ProfileXML configuration files section.
 
@@ -370,7 +370,7 @@ After creating the VPN Users group, create the VPN configuration policy to confi
 
     d.  Click **Browse**, and open VPN_Profile.xml, which you created in the Create the ProfileXML configuration files section.<br><br>The following illustration shows the completed **OMA-URI** setting for Contoso.
 
-    ![](media/31496f23ec18f0d474a053db0f445f06.jpg)
+    ![OMA-URI VPN settings](../../media/Always-On-Vpn/Vpn-Settings.jpg)
 
 6.  Click **OK** to add the setting to the configuration policy.
 
@@ -401,5 +401,5 @@ After you have created the Always On VPN configuration policy, sync and test the
 
 | **If you…**         | **Then…**                      |
 |---------------------|--------------------------------|
-| Are migrating to Always On       | Refer to [STEP 9: Migrate from DirectAccess to Always On VPN](remote-access/da-always-on-vpn-migration/da-always-on-migration-deploy.md). Before starting the migration process from DirectAccess to Always On VPN, be sure you have divided the migration effort into multiple phases. |
+| Are migrating to Always On       | Refer to [STEP 9: Migrate from DirectAccess to Always On VPN](../da-always-on-vpn-migration/da-always-on-migration-deploy.md). Before starting the migration process from DirectAccess to Always On VPN, be sure you have divided the migration effort into multiple phases. |
 | Are just deploying Always On VPN | You are complete with the Always On VPN deployment. Ensure the test the Always On VPN connections, and if necessary, refer to the Always On VPN Troubleshooting section.                                                                                                                                    |

@@ -73,7 +73,7 @@ As the VPN authentication certificates are issued, and you run the **GetUsersWit
 | If you are using...                 | Then...                                                             |
 |-------------------------------------|---------------------------------------------------------------------|
 | System Center Configuration Manager | Create a user collection based on that security group's membership. |
-| Intune                              | Target the security group directly once it is synchronized.<br>![](media/b38723b3ffcfacd697b83dd41a177f66.png)  |
+| Intune                              | Target the security group directly once it is synchronized.<br>![![Microsoft Intune target user security group](media/b38723b3ffcfacd697b83dd41a177f66.png)](../../media/Always-On-Vpn/b38723b3ffcfacd697b83dd41a177f66.png)  |
 
 2.  Each time you run the **GetUsersWithCert.ps1** configuration script, you must also run an AD DS discovery rule to update the security group membership in SCCM.
 
@@ -97,7 +97,7 @@ When you have finished migrating all your DirectAccess clients to Always On VPN,
 
 1.  **Remove the configuration settings.** Remove the GPOs and the Remote Access Group policy settings Remote Access created by opening the Remote Access Management console and selecting Remove Configuration Settings, as shown in the image below. If you remove the group before you remove the configuration, you will likely get errors.
 
-    ![](media/dbdc3d80e8dc1b8665f7b15d7d2ee1f6.png)
+    ![Remote the DirectAccess configuration settings](../../media/Always-On-Vpn/da-rm-config-settings.png)
 
 2.  **Remove the DirectAccess security group.** When you have completed the process in this guide, the DirectAccess security group should be empty. As the deployment of Always On VPN continues, remove devices for each user from the DirectAccess security group so that you can remove DirectAccess from your environment. **Do not** remove the security group if it still contains members. If you do remove the security group with members in it, you risk leaving employees without remote access from their devices.
 

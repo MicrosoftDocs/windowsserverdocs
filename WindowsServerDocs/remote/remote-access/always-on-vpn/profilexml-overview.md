@@ -270,7 +270,7 @@ Write-Host "$Message"
 | Are ready to get started planning your Always On VPN deployment           | [STEP 1: Plan and state the Always On VPN Environment](always-on-vpn-deploy-planning.md) |
 | Want to know more about DirectAccess and Always On VPN feature comparison | [Always On VPN and DirectAccess Features Comparison](../vpn/vpn-map-da.md)                                    |
 | Want to know more about the Always On VPN technologies                    | [Always On VPN Technology Overview](always-on-vpn-technologies.md)                       |
-| What to know more about VPN Device Tunnels in Always On VPN               | [VPN Device Tunnels in Always On VPN](remote-access/vpn/vpn-device-tunnel-config.md)                                     |
+| What to know more about VPN Device Tunnels in Always On VPN               | [VPN Device Tunnels in Always On VPN](../vpn/vpn-device-tunnel-config.md)                                     |
 | Want to know more about configuring Always On VPN on Windows clients      | Windows 10 [VPN technical guide](https://docs.microsoft.com/windows/access-protection/vpn/vpn-guide)                                                                         |
 | Want to know how to create VPN profiles in SCCM                           | [How to Create VPN profiles in System Center Configuration Manager](https://docs.microsoft.com/sccm/protect/deploy-use/create-vpn-profiles)                                  |
 | Want to know how to create VPN profiles in Intune                         | [How to configure certificates in Microsoft Intune](https://docs.microsoft.com/intune/certificates-configure)                                                                |

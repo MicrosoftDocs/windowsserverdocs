@@ -199,7 +199,7 @@ Similar to how you use the Group Policy Management Editor to configure Group Pol
 
 MDM products like Intune offer a user-friendly configuration option that configures the CSP in the operating system.
 
-![Mobile Device Management to CSP configuration](/media/d98badaf25921b7c134a944f4ecbf6e2.jpg)
+![Mobile Device Management to CSP configuration](../../media/Always-On-Vpn/Vpn-Mdm.jpg)
 
 Mobile Device Management to CSP configuration
 
