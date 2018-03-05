@@ -2,7 +2,7 @@
 ## [Remote Server Administration Tools](remote-server-administration-tools.md)
 ## [Remote Desktop Services](remote-desktop-services/welcome-to-rds.md)
 ## [Remote Access](remote-access/remote-Access.md)
-
+<!-- 
 ### [Always On VPN](remote-access/vpn/always-on-vpn/deploy/always-on-vpn-top.md)
 #### [Features Comparison of Always On VPN and DirectAccess](remote-access/vpn/vpn-map-da.md)
 #### [Always On VPN Technology Overview](remote-access/vpn/always-on-vpn/deploy/always-on-vpn-technologies.md)
@@ -21,7 +21,7 @@
 ##### [Plan your migration from DirectAccess to Always On VPN](remote-access/da-always-on-vpn-migration/da-always-on-migration-planning.md)
 ##### [Migrate to Always On VPN](remote-access/da-always-on-vpn-migration/da-always-on-migration-deploy.md)
 #### [Troubleshoot Always On VPN](remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting.md)
-
+-->
 ### [Border Gateway Protocol (BGP)](remote-access/bgp/Border-Gateway-Protocol-BGP.md)
 #### [BGP Windows PowerShell Command Reference](remote-access/bgp/BGP-Windows-powershell-Command-Reference.md)
 
