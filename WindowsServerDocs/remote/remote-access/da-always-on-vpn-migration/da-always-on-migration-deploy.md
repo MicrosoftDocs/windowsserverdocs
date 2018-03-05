@@ -73,7 +73,7 @@ As the VPN authentication certificates are issued, and you run the **GetUsersWit
 | If you are using...                 | Then...                                                             |
 |-------------------------------------|---------------------------------------------------------------------|
 | System Center Configuration Manager | Create a user collection based on that security group's membership. |
-| Intune                              | Simply target the security group directly once it is synchronized.<br>![](media/b38723b3ffcfacd697b83dd41a177f66.png)  |
+| Intune                              | Target the security group directly once it is synchronized.<br>![](media/b38723b3ffcfacd697b83dd41a177f66.png)  |
 
 2.  Each time you run the **GetUsersWithCert.ps1** configuration script, you must also run an AD DS discovery rule to update the security group membership in SCCM.
 
@@ -86,14 +86,14 @@ As the VPN authentication certificates are issued, and you run the **GetUsersWit
 
 As users receive the authentication certificate and the **VPN_Profile.ps1** configuration script, you see corresponding successful VPN configuration script deployments in either SCCM or Intune.
 
-After each deployment, remove that user's device from the DirectAccess security group so that you can later remove DirectAccess. Both Intune and SCCM contains user device assignment information to help you determine each user's device.
+After each deployment, remove that user's device from the DirectAccess security group so that you can later remove DirectAccess. Both Intune and SCCM contain user device assignment information to help you determine each user's device.
 
 >[!NOTE] 
 >If you are applying DirectAccess GPOs through organizational units (OUs) rather than computer groups, move the user's computer object out of the OU.
 
 ## STEP 9.3: Decommission the DirectAccess infrastructure
 
-When you have finished migrating all your DirectAccess clients to Always On VPN, you can decommission the DirectAccess infrastructure and remove the DirectAccess settings from Group Policy. Microsoft recommends performing the following steps to remove DirectAccess from your environment gracefully:
+When you have finished migrating all your DirectAccess clients to Always On VPN, you can decommission the DirectAccess infrastructure and remove the DirectAccess settings from Group Policy. To remove DirectAccess from your environment gracefully, Microsoft recommends performing the following steps:
 
 1.  **Remove the configuration settings.** Remove the GPOs and the Remote Access Group policy settings Remote Access created by opening the Remote Access Management console and selecting Remove Configuration Settings, as shown in the image below. If you remove the group before you remove the configuration, you will likely get errors.
 

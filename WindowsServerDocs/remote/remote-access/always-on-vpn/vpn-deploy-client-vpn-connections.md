@@ -144,7 +144,7 @@ When using SCCM to configure the VPN client, you create a:
 
 -   Verify configuration of the VPN client
 
-The **VPN_Profile.ps1** must come *after* the certificate has been issued so that the VPN client does not attempt to connect without it. To do that, you execute a script that adds only those users who have enrolled in the certificate to your VPN Deployment Ready group, which you use to deploy the Always On VPN
+It is important that the_ **VPN_Profile.ps1** come *after* the certificate has been issued so that the VPN client does not attempt to connect without it. To do that, you execute a script that adds only those users who have enrolled in the certificate to your VPN Deployment Ready group, which you use to deploy the Always On VPN
 configuration.
 
 ### Create a user group
@@ -322,9 +322,9 @@ When using SCCM to configure the VPN client, you create a:
 
 2.  Click **GROUPS** and click **Groups**.
 
-3.  Click **Access your groups in the new Azure portal by clicking here**.<br><br>You now manage Intune groups in the Azure Portal. For this reason, you’ll be     redirected to the Azure Portal when you click the **Create Groups** link.
+3.  Click **Access your groups in the new Azure portal by clicking here**.<br><br>You now manage Intune groups in the Azure portal. For this reason, you’ll be     redirected to the Azure portal when you click the **Create Groups** link.
 
-4.  In the Azure Portal, near the top of the page, click **New group**.
+4.  In the Azure portal, near the top of the page, click **New group**.
 
 5.  In **Name**, type **VPN Users**.
 
@@ -344,7 +344,7 @@ When using SCCM to configure the VPN client, you create a:
 
 8.  Click **Create** to create the group.
 
-9.  Close the Azure Portal.
+9.  Close the Azure portal.
 
 After creating the VPN Users group, create the VPN configuration policy to configure the Windows 10 client computers for the users you added to the group.
 
@@ -354,7 +354,7 @@ After creating the VPN Users group, create the VPN configuration policy to confi
 
 2.  In the Policies workspace, click **Add** to start the Create a New Policy Wizard.
 
-3.  On the Select a template for the new policy page, under Windows, click **Custom Configuration (Windows 10 Desktop and Mobile and later)**, andclick **Create Policy**.<br><br>You notice a configuration policy called VPN Profile (Windows 10 Desktop and Mobile and later). This configuration policy does not provide the ability to configure the Always On setting. To configure Always On triggering, you must configure the ProfileXML node of the VPNv2 CSP by using the OMA-URI in the Custom Configuration (Windows 10 Desktop and Mobile and later) configuration policy.
+3.  On the Select a template for the new policy page, under Windows, click **Custom Configuration (Windows 10 Desktop and Mobile and later)**, and click **Create Policy**.<br><br>You notice a configuration policy called VPN Profile (Windows 10 Desktop and Mobile and later). This configuration policy does not provide the ability to configure the Always On setting. To configure Always On triggering, you must configure the ProfileXML node of the VPNv2 CSP by using the OMA-URI in the Custom Configuration (Windows 10 Desktop and Mobile and later) configuration policy.
 
 4.  In **Name**, enter a descriptive name for the VPN profile<br><br>For example, Contoso Always On VPN Profile.
 
@@ -366,9 +366,9 @@ After creating the VPN Users group, create the VPN configuration policy to confi
 
     b.  In **Data type**, click **String (XML)**.
 
-    c.  In **OMA-URI**, type **./User/Vendor/MSFT/VPNv2/ContosoVPN/ProfileXML**.<br><br>**ContosoVPN** is the profile name and is visible to the user in         **Settings**. Change this name to the profile name you want users to see. If the name contains spaces, escape each space with %20. (e.g., Contoso VPN would be Contoso%20VPN).
+    c.  In **OMA-URI**, type **./User/Vendor/MSFT/VPNv2/ContosoVPN/ProfileXML**.<br><br>**ContosoVPN** is the profile name and is visible to the user in         **Settings**. Change this name to the profile name you want users to see. If the name contains spaces, escape each space with %20. (for example, Contoso VPN would be Contoso%20VPN).
 
-    d.  Click **Browse**, and open VPN_Profile.xml, which you created in the section Create the ProfileXML configuration files.<br><br>The following illustration shows the completed **OMA-URI** setting for Contoso.
+    d.  Click **Browse**, and open VPN_Profile.xml, which you created in the Create the ProfileXML configuration files section.<br><br>The following illustration shows the completed **OMA-URI** setting for Contoso.
 
     ![](media/31496f23ec18f0d474a053db0f445f06.jpg)
 
@@ -394,7 +394,7 @@ After you have created the Always On VPN configuration policy, sync and test the
 
 5.  Click **Sync** to force an Intune policy evaluation and retrieval.
 
-6.  Close Settings. The VPN profiles is now available on the computer.
+6.  Close Settings. The VPN profile is now available on the computer.
 
 ## Next steps
 

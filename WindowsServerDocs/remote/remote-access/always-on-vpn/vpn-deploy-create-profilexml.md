@@ -24,7 +24,7 @@ You use ProfileXML in all the delivery methods, including Windows PowerShell, Sy
 
 ## Prerequisites
 
--   Make sure you review the [ProfileXML Overview](profilexml-overview.md) to have an understanding of the ProfileXML conifuguration files. The ProfileXML Overview section also includes the [MakeProfile.ps1 Full Script](profilexml-overview.md#full-script) section includes all of the code to generate two files: VPN_Profile.xml and VPN_Profile.ps1.
+-   Make sure you review the [ProfileXML Overview](profilexml-overview.md) to have an understanding of the ProfileXML configuration files. The ProfileXML Overview section also includes the [MakeProfile.ps1 Full Script](profilexml-overview.md#full-script) section includes all of the code to generate two files: VPN_Profile.xml and VPN_Profile.ps1.
 
 -   Ensure you have the host name or FQDN of the NPS from the server's certificate and the name of the CA that issued the certificate.
 
@@ -90,7 +90,7 @@ Configure the template VPN profile on a domain-joined client computer. The type 
 
 7.  Close the Network Connections window.
 
-8.  In Settings, click **Template**, and clicking **Connect** to test the VPN.<br><br>You must connect at least once before continuing; otherwise, the profile does not contain all the information necessary to connect to the VPN.
+8.  In Settings, click **Template**, and clicking **Connect** to test the VPN.<br><br>Connect at least once before continuing; otherwise, the profile does not contain all the information necessary to connect to the VPN.
 
 9.  Make sure that the template VPN connection to your VPN server is successful.<br><br>Doing so ensures that the EAP settings are correct.
 
@@ -126,8 +126,8 @@ The MakeProfile.ps1 Windows PowerShell script creates two files on the desktop, 
         gateway. It can point to the external IP of a gateway or a virtual IP
         for a server farm. Examples, 208.147.66.130 or vpn.contoso.com.
 
-    -   **\$DnsSuffix**. Specifies one or more comma separated DNS suffixes. The
-        first in the list is also used as the primary connection specific DNS
+    -   **\$DnsSuffix**. Specifies one or more comma-separated DNS suffixes. The
+        first in the list is also used as the primary connection-specific DNS
         suffix for the VPN Interface. The entire list will also be added into
         the SuffixSearchList.
 
@@ -137,12 +137,12 @@ The MakeProfile.ps1 Windows PowerShell script creates two files on the desktop, 
         find a match. This parameter can be one of the following types: FQDN and
         Suffix.
 
-    -   **\$TrustedNetwork**. Comma separated string to identify the trusted
+    -   **\$TrustedNetwork**. Comma-separated string to identify the trusted
         network. VPN will not connect automatically when the user is on their
         corporate wireless network where protected resources are directly
         accessible to the device.
 
-    -   **\$DNSServers**. List of comma separated DNS Server IP addresses to use
+    -   **\$DNSServers**. List of comma-separated DNS Server IP addresses to use
         for the namespace.
 
 >   **Example values for parameters**

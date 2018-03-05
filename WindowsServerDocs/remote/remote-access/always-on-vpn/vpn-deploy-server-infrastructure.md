@@ -16,9 +16,9 @@ ms.date: 3/4/2018
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-Configuring the server infrastructure is the first thing you do to deploy Always On VPN. This topic provides instructions on how to install and configure the server-side components necessary to support the VPN. The server-side components include configuring:
+Configuring the server infrastructure is the first thing you do to deploy Always On VPN. This article provides instructions on how to install and configure the server-side components necessary to support the VPN. The server-side components include configuring:
 
--   PKI to distribute the certificates used by users, the VPN server and the
+-   PKI to distribute the certificates used by users, the VPN server, and the
     NPS.
 
 -   RRAS to support IKEv2 connections.
@@ -83,7 +83,7 @@ After you have configured certificate autoenrollment in Group Policy, you add th
 
 -   **VPN servers** and **NPS servers** used to restrict certificate requests to their members.
 
-By using a custom group, if you ever want to revoke a user’s VPN access, you can simply remove that user from the group.
+By using a custom group, if you ever want to revoke a user’s VPN access, you can remove that user from the group.
 
 1.  On a domain controller, open Active Directory Users and Computers.
 
@@ -128,14 +128,14 @@ By using a custom group, if you ever want to revoke a user’s VPN access, you c
 
 After you have created the users and servers group, you create one of three authentication templates:
 
--   **User Authentication template**. Choose Microsoft Platform Crypto Provider to improve the certificate's overall security. Microsoft Platform Crypto Provider lets you use the Trusted Platform Module (TPM) on client computers to secure the certificate. For more details, see [Trusted Platform Module Technology Overview](https://docs.microsoft.com/windows/device-security/tpm/trusted-platform-module-overview).
+-   **User Authentication template**. Choose Microsoft Platform Crypto Provider to improve the certificate's overall security. Microsoft Platform Crypto Provider lets you use the Trusted Platform Module (TPM) on client computers to secure the certificate. For more information, see [Trusted Platform Module Technology Overview](https://docs.microsoft.com/windows/device-security/tpm/trusted-platform-module-overview).
 
 -   **VPN Server Authentication template**. Adding the IP Security (IPsec) IKE Intermediate application policy allows the server to filter certificates if more than one certificate is available with the Server Authentication extended key usage.
 
 >[!IMPORTANT] 
 >Because VPN clients access this server from the public Internet, the subject and alternative names are different than the internal server name. As a result, you cannot autoenroll this certificate on VPN servers.
 
--   **NPS Server Authentication template**. A simple copy of the RAS and IAS Server template secured to the NPS Server group that you created earlier in his section. You will configure this certificate for autoenrollment.
+-   **NPS Server Authentication template**. A simple copy of the RAS and IAS Server template secured to the NPS Server group that you created earlier in this section. You will configure this certificate for autoenrollment.
 
 **Procedure:**
 
@@ -198,7 +198,7 @@ After you have created the users and servers group, you create one of three auth
 
     k. In Group or user names, click **RAS and IAS Servers**, and click **Remove**.
 
-    l. Click the **Subject Name** tab, click **Supply in the Request** and click **OK** on the Certificate Templates warning dialog box.
+    l. Click the **Subject Name** tab, click Supply in the Request, and click **OK** on the Certificate Templates warning dialog box.
 
     m. Click **OK** to save the VPN Server certificate template.
 
@@ -274,12 +274,12 @@ Unlike the user certificate, you must manually enroll the VPN server’s certifi
 
     a.  Under **Subject name**, in **Type**, click **Common Name**.
 
-    b.  Under **Subject name**, in **Value**, type the name of the external domain clients will use to connect to the VPN (e.g., vpn.contoso.com),
+    b.  Under **Subject name**, in **Value**, type the name of the external domain clients will use to connect to the VPN (for example, vpn.contoso.com),
         and click **Add**.
 
     c.  Under **Alternative Name**, in **Type**, click **DNS**.
 
-    d.  Under **Alternative Name**, in **Value**, type the name of the external domain clients will use to connect to the VPN (e.g., vpn.contoso.com), and click **Add**.
+    d.  Under **Alternative Name**, in **Value**, type the name of the external domain clients will use to connect to the VPN (for example, vpn.contoso.com), and click **Add**.
 
     e.  Click **OK**.
 

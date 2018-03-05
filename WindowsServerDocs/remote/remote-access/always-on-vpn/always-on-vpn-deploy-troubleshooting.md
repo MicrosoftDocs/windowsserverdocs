@@ -31,8 +31,8 @@ The remote connection was not made because the attempted VPN tunnels failed. The
 | **Possible solutions** | <ul><li>If you know which tunnel to use for your deployment, set the type of VPN to that specific tunnel type on the VPN client side.</li><li>By making a VPN connection with a specific tunnel type, your connection will still fail, but it will result in a more tunnel-specific error (for example, “GRE blocked for PPTP”).</li><li>This error also occurs when the VPN server cannot be reached, or the tunnel connection fails.</li><li>Verify that the IKE ports ((UDP ports 500 and 4500) are not blocked.</li><li>Verify that the correct certificates for IKE are present on both the client and the server.</li></ul> |
 
 ## Error code: 812
-The connection was prevented because of a policy configured on your RAS/VPN server. Specifically, the authentication method the server used to verify your user name and password may not match the authentication method configured in your connection profile. Please contact the administrator of the RAS server and
-notify him or her of this error.
+The connection was prevented because of a policy configured on your RAS/VPN server. Specifically, the authentication method the server used to verify your user name and password may not match the authentication method configured in your connection profile. Contact the administrator of the RAS server and
+notify them of this error.
 
 | **Possible cause** | <ul><li>The typical cause of this error is that the NPS has specified an authentication condition that the client cannot meet. For example, the NPS may specify the use of a certificate to secure the PEAP connection, but the client is attempting to use EAP-MSCHAPv2.</li><li>Event log 20276 is logged to the event viewer when the RRAS-based VPN server authentication protocol setting doesn’t match that of the VPN client computer.</li></ul> |
 |--------------------|-----------------------------|
@@ -40,7 +40,7 @@ notify him or her of this error.
 
 
 ## Error code: 809
-The network connection between your computer and the VPN server could not be established because the remote server is not responding. This could be because one of the network devices (e.g., firewalls, NAT, routers) between your computer and the remote server is not configured to allow VPN connections. Please contact your administrator or your service provider to determine which device may be causing the problem.
+The network connection between your computer and the VPN server could not be established because the remote server is not responding. This could be because one of the network devices (for example, firewalls, NAT, routers) between your computer and the remote server is not configured to allow VPN connections. To determine which device may be causing the problem, contact your administrator or your service provider.
 
 | **Possible cause**     | This error typically occurs when a firewall between the client and the server blocks the ports that the VPN tunnel uses. |
 |------------------------|--------------------------------------------------------------------------------------------------------------------------|
@@ -80,7 +80,7 @@ Generally, the VPN client machine is joined to the Active Directory–based doma
 
 ## NPS logs
 
-NPS accounting logs are created and stored by NPS. By default, these are stored in %SYSTEMROOT%\\System32\\Logfiles\\ in a file named IN*XXXX.*txt, where _XXXX_ is the date the file was created.
+NPS accounting logs are created and stored by NPS. By default, the NPS accounting logs are stored in %SYSTEMROOT%\\System32\\Logfiles\\ in a file named IN*XXXX.*txt, where _XXXX_ is the date the file was created.
 
 By default, these logs are in comma-separated values format, but they do not include a heading row. The heading row is:
 

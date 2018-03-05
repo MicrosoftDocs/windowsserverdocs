@@ -21,7 +21,7 @@ You use ProfileXML in all the delivery methods this guide describes, including W
 
 -   **Windows Management Instrumentation (WMI)-to-CSP bridge**. The second method of configuring the ProfileXML CSP node is to use the WMI-to-CSP bridge—a WMI class  called **MDM_VPNv2_01**—that can access the VPNv2 CSP and therefore the ProfileXML node. When you create a new instance of that WMI class, WMI uses the CSP to create  the VPN profile. This is the method you use to configure the Remote Access Always On VPN client by using Windows PowerShell and System Center Configuration Manager.
 
-Even though these configuration methods differ, both require a properly formatted XML VPN profile. To use the ProfileXML VPNv2 CSP setting, you construct XML by using the ProfileXML schema to configure the tags necessary for the simple deployment scenario. For more details, see [ProfileXML XSD](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/vpnv2-profile-xsd).
+Even though these configuration methods differ, both require a properly formatted XML VPN profile. To use the ProfileXML VPNv2 CSP setting, you construct XML by using the ProfileXML schema to configure the tags necessary for the simple deployment scenario. For more information, see [ProfileXML XSD](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/vpnv2-profile-xsd).
 
 In the section “Infrastructure requirements,” Table 1 provided an overview of the individual settings for the VPN client. Below is each of those required settings and its corresponding ProfileXML tag. You configure each setting in a specific tag within the ProfileXML schema, and not all of them are found under the native profile.
 
@@ -86,7 +86,7 @@ After you assemble a script from this example code and run the script, the scrip
 
 ## Parameters
 
-You must configure the following parameters.
+You must configure the following parameters:
 
 **\$Template**. The name of the template from which to retrieve the EAP configuration.
 
@@ -94,7 +94,7 @@ You must configure the following parameters.
 
 **\$Servers**. Public or routable IP address or DNS name for the VPN gateway. It can point to the external IP of a gateway or a virtual IP for a server farm. Examples, 208.147.66.130 or vpn.contoso.com.
 
-**\$DnsSuffix**. Specifies one or more comma separated DNS suffixes. The first in the list is also used as the primary connection specific DNS suffix for the VPN Interface. The entire list will also be added into the SuffixSearchList.
+**\$DnsSuffix**. Specifies one or more comma-separated DNS suffixes. The first in the list is also used as the primary connection-specific DNS suffix for the VPN Interface. The entire list will also be added into the SuffixSearchList.
 
 **\$DomainName**. Used to indicate the namespace to which the policy applies. When a Name query is issued, the DNS client compares the name in the query to all the namespaces under DomainNameInformationList to find a match. This parameter can be one of the following types:
 
@@ -102,9 +102,9 @@ You must configure the following parameters.
 
 -   Suffix - A domain suffix that will be appended to the shortname query for DNS resolution. To specify a suffix, prepend a . to the DNS suffix.
 
-**\$DNSServers**. List of comma separated DNS Server IP addresses to use for the namespace.
+**\$DNSServers**. List of comma-separated DNS Server IP addresses to use for the namespace.
 
-**\$TrustedNetwork**. Comma separated string to identify the trusted network. VPN will not connect automatically when the user is on their corporate wireless network where protected resources are directly accessible to the device. 
+**\$TrustedNetwork**. Comma-separated string to identify the trusted network. VPN will not connect automatically when the user is on their corporate wireless network where protected resources are directly accessible to the device. 
 
 Following are example values for parameters used in the commands below. Ensure that you change these values for your environment.
 
@@ -268,7 +268,7 @@ Write-Host "$Message"
 | If you...                                                                 | Then see...     |
 |-----|----|
 | Are ready to get started planning your Always On VPN deployment           | [STEP 1: Plan and state the Always On VPN Environment](always-on-vpn-deploy-planning.md) |
-| Want to know more about DirectAccess and Always On VPN feature comparison | [Always On VPN and DirectAccess Features Comparison](remote-access/vpn/vpn-map-da.md)                                    |
+| Want to know more about DirectAccess and Always On VPN feature comparison | [Always On VPN and DirectAccess Features Comparison](../vpn/vpn-map-da.md)                                    |
 | Want to know more about the Always On VPN technologies                    | [Always On VPN Technology Overview](always-on-vpn-technologies.md)                       |
 | What to know more about VPN Device Tunnels in Always On VPN               | [VPN Device Tunnels in Always On VPN](remote-access/vpn/vpn-device-tunnel-config.md)                                     |
 | Want to know more about configuring Always On VPN on Windows clients      | Windows 10 [VPN technical guide](https://docs.microsoft.com/windows/access-protection/vpn/vpn-guide)                                                                         |

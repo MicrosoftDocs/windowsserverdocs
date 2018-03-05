@@ -128,15 +128,15 @@ For more overview information about DNS, see [Domain Name System (DNS)](https://
 
 For information about deploying AD DS with DNS, see the Windows Server 2016 [Core Network Guide](https://docs.microsoft.com/windows-server/networking/core-network-guide/core-network-guide).
 
-Both internal and external DNS zones are required, which assumes that the internal zone is a delegated subdomain of the external zone (e.g.,
+Both internal and external DNS zones are required, which assumes that the internal zone is a delegated subdomain of the external zone (for example,
 corp.contoso.com and contoso.com).
 
 >[!NOTE] 
->Other DNS designs, such as split-brain DNS (using the same domain name internally and externally in separate DNS zones) or unrelated internal and external domains (e.g., contoso.local and contoso.com) are also possible, but the configuration for these environments is beyond the scope of this guide.
+>Other DNS designs, such as split-brain DNS (using the same domain name internally and externally in separate DNS zones) or unrelated internal and external domains (for example, contoso.local and contoso.com) are also possible, but the configuration for these environments is beyond the scope of this guide.
 
 ### Certificate Templates
 
-Certificate templates can greatly simplify the task of administering a certification authority (CA) by allowing you to issue certificates that are preconfigured for selected tasks. The Certificate Templates MMC snap-in allows you to perform the following tasks.
+Certificate templates can greatly simplify the task of administering a certification authority (CA) by allowing you to issue certificates that are preconfigured for selected tasks. The Certificate Templates MMC snap-in allows you to perform the following tasks:
 
 -   View properties for each certificate template.
 
@@ -250,6 +250,6 @@ Access Permission** property of the user account is set to **Control access thro
 This is the default setting for all user accounts. In some cases, however, this setting might have a different configuration that blocks the user from
 connecting using VPN.
 
-To protect against this possibility, you can configure the NPS server to ignore user account dial in properties.
+To protect against this possibility, you can configure the NPS server to ignore user account dial-in properties.
 
 For more information, see [Configure NPS to Ignore User Account Dial-in Properties](https://docs.microsoft.com/en-us/windows-server/networking/technologies/nps/nps-np-configure#configure-nps-to-ignore-user-account-dial-in-properties).

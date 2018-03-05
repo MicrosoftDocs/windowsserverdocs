@@ -14,7 +14,7 @@ ms.date: 3/4/2018
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-When remote VPN clients connect, they use the same DNS servers that your internal clients use, which allows them to resolve names in the same manner as the rest of your internal workstations. Because of this, you must ensure that the computer name that external clients use to connect to the VPN server matches the subject alternative name that is defined in the certificates you issue to the VPN server.
+When remote VPN clients connect, they use the same DNS servers that your internal clients use, which allows them to resolve names in the same manner as the rest of your internal workstations. Ensure that the computer name that external clients use to connect to the VPN server matches the subject alternative name that is defined in the certificates you issue to the VPN server.
 
 ## STEP 6.1: Configure DNS name resolution
 
@@ -59,7 +59,7 @@ network - and receives RADIUS traffic from the NPS Server - you must configure t
 
 2.  Configure the Internal Perimeter Network Firewall. Separates the Organization/Corporate Network from the Internal Perimeter Network.
 
-Your Edge Firewall must allow and forward specific ports to your VPN server. If you use Network Address Translation (NAT) on your edge firewall, you might need to enable port forwarding for User Datagram Protocol (UDP) ports 500 and 4500. You should forward these ports to the IP address that is assigned to the external interface of your VPN server.
+Your Edge Firewall must allow and forward specific ports to your VPN server. If you use Network Address Translation (NAT) on your edge firewall, you might need to enable port forwarding for User Datagram Protocol (UDP) ports 500 and 4500. Forward these ports to the IP address that is assigned to the external interface of your VPN server.
 
 In either case, if your firewall supports deep packet inspection and you have difficulty establishing client connections, you should attempt to relax or disable deep packet inspection for IKE sessions. 
 

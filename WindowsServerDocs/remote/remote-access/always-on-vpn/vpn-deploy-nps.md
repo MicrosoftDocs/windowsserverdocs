@@ -79,7 +79,7 @@ Install NPS by using either Windows PowerShell or the Server Manager Add Roles a
 
 ## STEP 5.2: Configure Network Policy Server
 
-After you install NPS, you must do basic configuration, set a friendly name, the IP address and a shared secret with the virtual private network (VPN) client. The configuration process includes the following high-level steps:
+After you install NPS, you must do basic configuration, set a friendly name, the IP address, and a shared secret with the virtual private network (VPN) client. The configuration process includes the following high-level steps:
 
 1.  Register the NPS Server in Active Directory
 
@@ -95,7 +95,7 @@ After you install NPS, you must do basic configuration, set a friendly name, the
 
 ### Register the NPS Server in Active Directory
 
-You must register the NPS server in AD so that the NPS server has permission to access user account information while processing connection requests.
+Register the NPS server in AD so that the NPS server has permission to access user account information while processing connection requests.
 
 1.  In Server Manager, click **Tools**, and click **Network Policy Server**.<br><br>The NPS console opens.
 
@@ -175,7 +175,7 @@ Before you can configure the Windows 10 client Always On VPN connections and cre
 
 1.  In the navigation pane of the NPS console, under Policies, click **Network Policies**.
 
-2.  Right-click **Virtual Private Network (VPN) Connections** and click **Properties**.<br><br>The Virtual Private Network (VPN) Connection Properties dialob box opens.
+2.  Right-click **Virtual Private Network (VPN) Connections** and click **Properties**.<br><br>The Virtual Private Network (VPN) Connection Properties dialog box opens.
 
 3.  Click the **Constraints** tab and click **Authentication Methods**.
 
