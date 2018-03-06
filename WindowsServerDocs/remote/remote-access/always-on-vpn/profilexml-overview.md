@@ -29,46 +29,51 @@ In the section “Infrastructure requirements,” Table 1 provided an overview 
 
 ProfileXML element:
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
 <NativeProtocolType>IKEv2</NativeProtocolType>
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
 
 **Routing:** Split tunneling
 
 ProfileXML element:
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
 <RoutingPolicyType>SplitTunnel</RoutingPolicyType>
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
 
 **Name resolution:** Domain Name Information List and DNS suffix
 
 ProfileXML elements:
 
->   \<DomainNameInformation\>  
->   \<DomainName\>.corp.contoso.com\</DomainName\>  
->   \<DnsServers\>10.10.1.10,10.10.1.50\</DnsServers\>  
->   \</DomainNameInformation\>  
->     
->   \<DnsSuffix\>corp.contoso.com\</DnsSuffix\>
+```
+<DomainNameInformation>
+<DomainName>.corp.contoso.com</DomainName>
+<DnsServers>10.10.1.10,10.10.1.50</DnsServers>
+</DomainNameInformation>
+
+<DnsSuffix>corp.contoso.com</DnsSuffix>
+```
 
 **Triggering:** Always On and Trusted Network Detection
 
 ProfileXML elements:
 
->   \<AlwaysOn\>true\</AlwaysOn\>  
->   \<TrustedNetworkDetection\>corp.contoso.com\</TrustedNetworkDetection\>
-
+```
+<AlwaysOn>true</AlwaysOn>
+<TrustedNetworkDetection>corp.contoso.com</TrustedNetworkDetection>
+```
 **Authentication:** PEAP-TLS with TPM-protected user certificates
 
 ProfileXML elements:
 
->   \<Authentication\>  
->   \<UserMethod\>Eap\</UserMethod\>  
->   \<Eap\>  
->   \<Configuration\>...\</Configuration\>  
->   \</Eap\>  
->   \</Authentication\>
+```
+<Authentication>
+<UserMethod>Eap</UserMethod>
+<Eap>
+<Configuration>...</Configuration>
+</Eap>
+</Authentication>
+```
 
 You can use simple tags to configure some VPN authentication mechanisms. However, EAP and PEAP are more involved. The easiest way to create the XML markup is to configure a VPN client with its EAP settings, and then export that configuration to XML.
 
@@ -107,8 +112,7 @@ You must configure the following parameters:
 **\$TrustedNetwork**. Comma-separated string to identify the trusted network. VPN will not connect automatically when the user is on their corporate wireless network where protected resources are directly accessible to the device. 
 
 Following are example values for parameters used in the commands below. Ensure that you change these values for your environment.
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
 $TemplateName = 'Template'
 $ProfileName = 'Contoso AlwaysOn VPN'
 $Servers = 'vpn.contoso.com'
@@ -116,7 +120,7 @@ $DnsSuffix = 'corp.contoso.com'
 $DomainName = '.corp.contoso.com'
 $DNSServers = '10.10.0.2,10.10.0.3'
 $TrustedNetwork = 'corp.contoso.com'
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
 
 ## <a name="full-script"></a>MakeProfile.ps1 Full Script
 
@@ -129,7 +133,7 @@ However, this will not work in System Center Configuration Manager because you c
 
 The following example script includes all the code examples. Ensure that you change example values to values that are appropriate for your environment.
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
 $TemplateName = 'Template'
 $ProfileName = 'Contoso AlwaysOn VPN'
 $Servers = 'vpn.contoso.com'
@@ -261,7 +265,7 @@ $Script | Out-File -FilePath ($env:USERPROFILE + '\desktop\VPN_Profile.ps1')
 
 $Message = "Successfully created VPN_Profile.xml and VPN_Profile.ps1 on the desktop."
 Write-Host "$Message"
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
 
 ## Next steps
 
