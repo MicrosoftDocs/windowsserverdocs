@@ -28,6 +28,7 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter and [Windows
 			  <li><a href="understand-the-cache.md">Understand the cache</a></li>
 			  <li><a href="storage-spaces-fault-tolerance.md">Fault tolerance and storage efficiency</a></li>
               <li><a href="drive-symmetry-considerations.md">Drive symmetry considerations</a></li>
+              <li><a href="understand-quorum.md">Understanding quorum in Storage Spaces Direct</a></li>
 		  	</ul>
         </td>
         <td style="padding: 5px; border: 0;">

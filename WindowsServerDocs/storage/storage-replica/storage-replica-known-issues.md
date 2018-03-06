@@ -408,7 +408,19 @@ When running Test-SRTopology between two clusters and their CSV paths, it fails 
 
 When specifying the source node CSV as the source volume, you must select the node that owns the CSV. You can either move the CSV to the specified node or change the node name you specified in `-SourceComputerName`. This error will receive an improved message in the next version of Windows Server. 
 
-## See also  
+## Unable to access Data Drive in Storage Replica after unexpected reboot when Bitlocker enabled
+
+If Bitlocker is enabled on both drives (Log Drive and Data Drive) and in both Storage replica drives, if the Primary Server reboots then you are unable to access the Primary Drive even after unlocking the Log Drive from Bitlocker.
+
+This is an expected behavior. To recover the data or access the drive, you need to unlock the log drive first and then open Diskmgmt.msc to locate the data drive. Turn the data drive offline and online again. Locate the Bitlocker icon on the drive and unlock the drive.
+
+## Issue unlocking the Data drive on secondary server after breaking the Storage Replica partnership
+
+After Disabling the SR Partnership and removing the Storage Replica, it is expected if you are unable to unlock the Secondary Server’s Data drive with its respective password or key. 
+
+You need to use Key or Password of Primary Server’s Data drive to unlock the Secondary Server’s data drive.
+
+## See also  
 - [Storage Replica](storage-replica-overview.md)  
 - [Stretch Cluster Replication Using Shared Storage](stretch-cluster-replication-using-shared-storage.md)  
 - [Server to Server Storage Replication](server-to-server-storage-replication.md)  
