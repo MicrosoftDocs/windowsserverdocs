@@ -5,7 +5,7 @@ description: Frequently asked questions for AD FS 2016
 author: jenfieldmsft
 ms.author:  billmath
 manager: femila
-ms.date: 01/04/2018
+ms.date: 03/06/2018
 ms.topic: article
 ms.custom: it-pro
 ms.prod: windows-server-threshold
@@ -58,6 +58,12 @@ Below is a list of third party providers we are aware of.  There may always be p
 
 ### Are third party proxies supported with AD FS?
 Yes, third party proxies can be placed in front of the Web Application Proxy, but any third party proxy must support the [MS-ADFSPIP protocol](https://msdn.microsoft.com/library/dn392811.aspx) to be used in place of the Web Application Proxy.
+
+### Which third party proxies are available for AD FS that support MS-ADFSPIP?
+
+Below is a list of third party providers we are aware of.  There may always be providers available that we do not know about and we will update the list as we learn about them.
+
+- [F5 Access Policy Manager](https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-third-party-integration-13-1-0/12.html#guid-1ee8fbb3-1b33-4982-8bb3-05ae6868d9ee)
 
 ### Where is the capacity planning sizing spreadsheet for AD FS 2016?
 The AD FS 2016 version of the spreadsheet can be downloaded [here](http://adfsdocs.blob.core.windows.net/adfs/ADFSCapacity2016.xlsx).
