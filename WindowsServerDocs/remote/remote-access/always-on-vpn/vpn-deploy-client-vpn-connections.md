@@ -168,7 +168,7 @@ configuration.
 
     b.  On the **Welcome** page, click **Next**.
 
-    c.  On the Search for Resources page, in **Value**, type the name of the user you want to add. The resource name includes the user’s domain. To include results based on a partial match, insert the **%** character at either end of your search criterion. For example, to find all users containing the string “lori,” type **%lori%**. Click **Next**.
+    c.  On the Search for Resources page, in **Value**, type the name of the user you want to add.<br><br>The resource name includes the user’s domain. To include results based on a partial match, insert the **%** character at either end of your search criterion. For example, to find all users containing the string “lori,” type **%lori%**. Click **Next**.
 
     d.  On the Select Resources page, select the users you want to add to the group, and click **Next**.
 

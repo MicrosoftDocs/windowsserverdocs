@@ -142,207 +142,197 @@ The MakeProfile.ps1 Windows PowerShell script creates two files on the desktop, 
         corporate wireless network where protected resources are directly
         accessible to the device.
 
-    -   **\$DNSServers**. List of comma-separated DNS Server IP addresses to use
-        for the namespace.
-
->   **Example values for parameters**
-
->   Ensure that you change these values for your environment.
+    -   **\$DNSServers**. List of comma-separated DNS Server IP addresses to use for the namespace.<br><br>**Example values for parameters**
     ```
->   $TemplateName = 'Template'  
->   $ProfileName = 'Contoso AlwaysOn VPN'
->   $Servers = 'vpn.contoso.com'
->   $DnsSuffix = 'corp.contoso.com'
->   $DomainName = '.corp.contoso.com'
->   $DNSServers = '10.10.0.2,10.10.0.3' 
->   $TrustedNetwork = 'corp.contoso.com'
+    $TemplateName = 'Template'
+    $ProfileName = 'Contoso AlwaysOn VPN'
+    $Servers = 'vpn.contoso.com'
+    $DnsSuffix = 'corp.contoso.com'
+    $DomainName = '.corp.contoso.com'
+    $DNSServers = '10.10.0.2,10.10.0.3'
+    $TrustedNetwork = 'corp.contoso.com'
     ```
-4.  Run the **MakeProfile.ps1** script to generate VPN_Profile.xml and VPN_Profile.ps1 on the desktop.
+4.  Run the **MakeProfile.ps1** script to generate VPN_Profile.xml and VPN_Profile.ps1 on the desktop.<br><br>**Example commands get EAP settings from the template profile**
+    ```
+    $Connection = Get-VpnConnection -Name $TemplateName
+    if(!$Connection)
+    {
+    $Message = "Unable to get $TemplateName connection profile: $_"
+    Write-Host "$Message"
+    exit
+    }
+    $EAPSettings= $Connection.EapConfigXmlStream.InnerXml
+    ```
 
->   **Example commands get EAP settings from the template profile**
+    **Example of ProfileXML**
+    ```
+    $ProfileXML =
+    '<VPNProfile>
+      <DnsSuffix>' + $DnsSuffix + '</DnsSuffix>
+      <NativeProfile>
+    <Servers>' + $Servers + '</Servers>
+    <NativeProtocolType>IKEv2</NativeProtocolType>
+    <Authentication>
+      <UserMethod>Eap</UserMethod>
+      <Eap>
+       <Configuration>
+     '+ $EAPSettings + '
+       </Configuration>
+      </Eap>
+    </Authentication>
+    <RoutingPolicyType>SplitTunnel</RoutingPolicyType>
+      </NativeProfile>
+     <AlwaysOn>true</AlwaysOn>
+     <RememberCredentials>true</RememberCredentials>
+     <TrustedNetworkDetection>' + $TrustedNetwork + '</TrustedNetworkDetection>
+      <DomainNameInformation>
+    <DomainName>' + $DomainName + '</DomainName>
+    <DnsServers>' + $DNSServers + '</DnsServers>
+    </DomainNameInformation>
+    </VPNProfile>'
+    ```
 
->   \$Connection = Get-VpnConnection -Name \$TemplateName  
->   if(!\$Connection)  
->   {  
->   \$Message = "Unable to get \$TemplateName connection profile: \$_"  
->   Write-Host "\$Message"  
->   exit  
->   }  
->   \$EAPSettings= \$Connection.EapConfigXmlStream.InnerXml
-
->   **Example of ProfileXML**
-
->   \$ProfileXML =  
->   '\<VPNProfile\>  
->   \<DnsSuffix\>' + \$DnsSuffix + '\</DnsSuffix\>  
->   \<NativeProfile\>  
->   \<Servers\>' + \$Servers + '\</Servers\>  
->   \<NativeProtocolType\>IKEv2\</NativeProtocolType\>  
->   \<Authentication\>  
->   \<UserMethod\>Eap\</UserMethod\>  
->   \<Eap\>  
->   \<Configuration\>  
->   '+ \$EAPSettings + '  
->   \</Configuration\>  
->   \</Eap\>  
->   \</Authentication\>  
->   \<RoutingPolicyType\>SplitTunnel\</RoutingPolicyType\>  
->   \</NativeProfile\>  
->   \<AlwaysOn\>true\</AlwaysOn\>  
->   \<RememberCredentials\>true\</RememberCredentials\>  
->   \<TrustedNetworkDetection\>' + \$TrustedNetwork +
->   '\</TrustedNetworkDetection\>  
->   \<DomainNameInformation\>  
->   \<DomainName\>' + \$DomainName + '\</DomainName\>  
->   \<DnsServers\>' + \$DNSServers + '\</DnsServers\>  
->   \</DomainNameInformation\>  
->   \</VPNProfile\>'
-
->   **Output VPN_Profile.xml for Intune**
-
->   You can use the following example command to save the profile XML file.
-
->   \$ProfileXML \| Out-File -FilePath (\$env:USERPROFILE +
->   '\\desktop\\VPN_Profile.xml')
-
->   **Output VPN_Profile.ps1 for the desktop and System Center Configuration
->   Manager**
-
->   You can use this script on the Windows 10 desktop or in System Center
->   Configuration Manager.
-
->   `$Script | Out-File -FilePath ($env:USERPROFILE +
->   '\desktop\VPN_Profile.ps1')`
-
+    **Output VPN_Profile.xml for Intune**
+    
+    You can use the following example command to save the profile XML file.
+    
+    ```
+    $ProfileXML | Out-File -FilePath ($env:USERPROFILE + '\desktop\VPN_Profile.xml')
+    ```
+    **Output VPN_Profile.ps1 for the desktop and System Center Configuration Manager**
+    
+    You can use this script on the Windows 10 desktop or in System Center Configuration Manager.
+    
+    ```
+    $Script | Out-File -FilePath ($env:USERPROFILE + '\desktop\VPN_Profile.ps1')
+    ```
 5.  Define key VPN profile parameters.
 
->   `$Script = '$ProfileName = ''' + $ProfileName + '''`  
->   `$ProfileNameEscaped = $ProfileName -replace '' '', ''%20''`
+    ```
+    $Script = '$ProfileName = ''' + $ProfileName + '''
+    $ProfileNameEscaped = $ProfileName -replace '' '', ''%20''
+    ```
 
 6.  Define VPN ProfileXML.
 
->   `$ProfileXML = ''' + $ProfileXML + '''`
+    ```
+    $ProfileXML = ''' + $ProfileXML + '''
+    ```
 
 7.  Escape special characters in the profile.
 
-    `$ProfileXML = $ProfileXML -replace ''<'', ''&lt;''`  
-    `$ProfileXML = $ProfileXML -replace ''>'', ''&gt;''`  
-    `$ProfileXML = $ProfileXML -replace ''"'', ''&quot;''`
-
+    ```
+    $ProfileXML = $ProfileXML -replace ''<'', ''&lt;''
+    $ProfileXML = $ProfileXML -replace ''>'', ''&gt;''
+    $ProfileXML = $ProfileXML -replace ''"'', ''&quot;''
+    ```
 8.  Define WMI-to-CSP Bridge properties.
 
-    `$nodeCSPURI = ''./Vendor/MSFT/VPNv2''`  
-    `$namespaceName = ''root\cimv2\mdm\dmmap''`  
-    `$className = ''MDM_VPNv2_01''`
-
+    ```
+    $nodeCSPURI = ''./Vendor/MSFT/VPNv2''
+    $namespaceName = ''root\cimv2\mdm\dmmap''
+    $className = ''MDM_VPNv2_01''
+    ```
 9.  Determine user SID for VPN profile.
 
-    `try`  
-    `{`  
-    `$username = Gwmi -Class Win32_ComputerSystem | select username`  
-    `$objuser = New-Object
-    System.Security.Principal.NTAccount($username.username)`  
-    `$sid = $objuser.Translate([System.Security.Principal.SecurityIdentifier])`  
-    `$SidValue = $sid.Value`  
-    `$Message = "User SID is $SidValue."`  
-    `Write-Host "$Message"`  
-    `}`  
-    `catch [Exception]`  
-    `{`  
-    `$Message = "Unable to get user SID. User may be logged on over Remote
-    Desktop: $_"`  
-    `Write-Host "$Message"`  
-    `exit`  
-    `}`
+    ```
+    try
+    {
+    $username = Gwmi -Class Win32_ComputerSystem | select username
+    $objuser = New-Object System.Security.Principal.NTAccount($username.username)
+    $sid = $objuser.Translate([System.Security.Principal.SecurityIdentifier])
+    $SidValue = $sid.Value
+    $Message = "User SID is $SidValue."
+    Write-Host "$Message"
+    }
+    catch [Exception]
+    {
+    $Message = "Unable to get user SID. User may be logged on over Remote Desktop: $_"
+    Write-Host "$Message"
+    exit
+    }
+    ```
 
 10.  Define WMI session.
 
-    `$session = New-CimSession`  
-    `$options = New-Object
-    Microsoft.Management.Infrastructure.Options.CimOperationOptions`  
-    `$options.SetCustomOption(''PolicyPlatformContext_PrincipalContext_Type'',
-    ''PolicyPlatform_UserContext'', $false)`  
-    `$options.SetCustomOption(''PolicyPlatformContext_PrincipalContext_Id'',
-    "$SidValue", $false)`
+    ```
+    $session = New-CimSession
+    $options = New-Object Microsoft.Management.Infrastructure.Options.CimOperationOptions
+    $options.SetCustomOption(''PolicyPlatformContext_PrincipalContext_Type'', ''PolicyPlatform_UserContext'', $false)
+    $options.SetCustomOption(''PolicyPlatformContext_PrincipalContext_Id'', "$SidValue", $false)
+    ```
 
 11.  Detect and delete previous VPN profile.
 
-    `try`  
-    `{`  
-    `    $deleteInstances = $session.EnumerateInstances($namespaceName,
-    $className, $options)`  
-    `    foreach ($deleteInstance in $deleteInstances)`  
-    `    {`  
-    `        $InstanceId = $deleteInstance.InstanceID`  
-    `        if ("$InstanceId" -eq "$ProfileNameEscaped")`  
-    `        {`  
-    `            $session.DeleteInstance($namespaceName, $deleteInstance,
-    $options)`  
-    `            $Message = "Removed $ProfileName profile $InstanceId"`  
-    `            Write-Host "$Message"`  
-    `        } else {`  
-    `            $Message = "Ignoring existing VPN profile $InstanceId"`  
-    `            Write-Host "$Message"`  
-    `        }`  
-    `    }`  
-    `}`  
-    `catch [Exception]`  
-    `{`  
-    `    $Message = "Unable to remove existing outdated instance(s) of
-    $ProfileName profile: $_"`  
-    `    Write-Host "$Message"`  
-    `    exit`  
-    `}`
+    ```
+    try
+    {
+        $deleteInstances = $session.EnumerateInstances($namespaceName, $className, $options)
+        foreach ($deleteInstance in $deleteInstances)
+        {
+            $InstanceId = $deleteInstance.InstanceID
+            if ("$InstanceId" -eq "$ProfileNameEscaped")
+            {
+                $session.DeleteInstance($namespaceName, $deleteInstance, $options)
+                $Message = "Removed $ProfileName profile $InstanceId"
+                Write-Host "$Message"
+            } else {
+                $Message = "Ignoring existing VPN profile $InstanceId"
+                Write-Host "$Message"
+            }
+        }
+    }
+    catch [Exception]
+    {
+        $Message = "Unable to remove existing outdated instance(s) of $ProfileName profile: $_"
+        Write-Host "$Message"
+        exit
+    }
+    ```
 
 12.  Create the VPN profile.
 
-    `try`  
-    `{`  
-    `    $newInstance = New-Object
-    Microsoft.Management.Infrastructure.CimInstance $className, $namespaceName`  
-    `    $property =
-    [Microsoft.Management.Infrastructure.CimProperty]::Create("ParentID",
-    "$nodeCSPURI", ''String'', ''Key'')`  
-    `    $newInstance.CimInstanceProperties.Add($property)`  
-    `    $property =
-    [Microsoft.Management.Infrastructure.CimProperty]::Create("InstanceID",
-    "$ProfileNameEscaped", ''String'', ''Key'')`  
-    `    $newInstance.CimInstanceProperties.Add($property)`  
-    `    $property =
-    [Microsoft.Management.Infrastructure.CimProperty]::Create("ProfileXML",
-    "$ProfileXML", ''String'', ''Property'')`  
-    `    $newInstance.CimInstanceProperties.Add($property)`  
-    `    $session.CreateInstance($namespaceName, $newInstance, $options)`  
-    `    $Message = "Created $ProfileName profile."`  
-      
-      
-    `    Write-Host "$Message"`  
-    `}`  
-    `catch [Exception]`  
-    `{`  
-    `$Message = "Unable to create $ProfileName profile: $_"`  
-    `Write-Host "$Message"`  
-    `exit`  
-    `}`  
-      
-    `$Message = "Script Complete"`  
-    `Write-Host "$Message"'`
+    ```
+    try
+    {
+        $newInstance = New-Object Microsoft.Management.Infrastructure.CimInstance $className, $namespaceName
+        $property = [Microsoft.Management.Infrastructure.CimProperty]::Create("ParentID", "$nodeCSPURI", ''String'', ''Key'')
+        $newInstance.CimInstanceProperties.Add($property)
+        $property = [Microsoft.Management.Infrastructure.CimProperty]::Create("InstanceID", "$ProfileNameEscaped", ''String'', ''Key'')
+        $newInstance.CimInstanceProperties.Add($property)
+        $property = [Microsoft.Management.Infrastructure.CimProperty]::Create("ProfileXML", "$ProfileXML", ''String'', ''Property'')
+        $newInstance.CimInstanceProperties.Add($property)
+        $session.CreateInstance($namespaceName, $newInstance, $options)
+        $Message = "Created $ProfileName profile."
+    
+    
+        Write-Host "$Message"
+    }
+    catch [Exception]
+    {
+    $Message = "Unable to create $ProfileName profile: $_"
+    Write-Host "$Message"
+    exit
+    }
+    
+    $Message = "Script Complete"
+    Write-Host "$Message"'
+    ```
 
 13.  Save the VPN configuration file.
 
 -   **Intune:**
-
-    `$ProfileXML | Out-File -FilePath ($env:USERPROFILE +
-    '\desktop\VPN_Profile.xml')`
+    ```
+    $ProfileXML | Out-File -FilePath ($env:USERPROFILE + '\desktop\VPN_Profile.xml')
+    ```
 
 -   **System Center Configuration Manager:**
-
-    `$Script | Out-File -FilePath ($env:USERPROFILE +
-    '\desktop\VPN_Profile.ps1')`  
-      
-    `$Message = "Successfully created VPN_Profile.xml and VPN_Profile.ps1 on the
-    desktop."`  
-    `Write-Host "$Message"`
+    ```
+    $Script | Out-File -FilePath ($env:USERPROFILE + '\desktop\VPN_Profile.ps1')
+    
+    $Message = "Successfully created VPN_Profile.xml and VPN_Profile.ps1 on the desktop."
+    Write-Host "$Message"
+    ```
 
 ## Next steps
 
