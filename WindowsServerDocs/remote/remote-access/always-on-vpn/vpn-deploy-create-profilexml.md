@@ -235,98 +235,96 @@ The MakeProfile.ps1 Windows PowerShell script creates two files on the desktop, 
     ```
 9.  Determine user SID for VPN profile.
 
-    ```
-    try
-    {
-    $username = Gwmi -Class Win32_ComputerSystem | select username
-    $objuser = New-Object System.Security.Principal.NTAccount($username.username)
-    $sid = $objuser.Translate([System.Security.Principal.SecurityIdentifier])
-    $SidValue = $sid.Value
-    $Message = "User SID is $SidValue."
-    Write-Host "$Message"
-    }
-    catch [Exception]
-    {
-    $Message = "Unable to get user SID. User may be logged on over Remote Desktop: $_"
-    Write-Host "$Message"
-    exit
-    }
-    ```
+```
+try
+{
+$username = Gwmi -Class Win32_ComputerSystem | select username
+$objuser = New-Object System.Security.Principal.NTAccount($username.username)
+$sid = $objuser.Translate([System.Security.Principal.SecurityIdentifier])
+$SidValue = $sid.Value
+$Message = "User SID is $SidValue."
+Write-Host "$Message"
+}
+catch [Exception]
+{
+$Message = "Unable to get user SID. User may be logged on over Remote Desktop: $_"
+Write-Host "$Message"
+exit
+}
+```
 
 10.  Define WMI session.
 
-    ```
-    $session = New-CimSession
-    $options = New-Object Microsoft.Management.Infrastructure.Options.CimOperationOptions
-    $options.SetCustomOption(''PolicyPlatformContext_PrincipalContext_Type'', ''PolicyPlatform_UserContext'', $false)
-    $options.SetCustomOption(''PolicyPlatformContext_PrincipalContext_Id'', "$SidValue", $false)
-    ```
+```
+$session = New-CimSession
+$options = New-Object Microsoft.Management.Infrastructure.Options.CimOperationOptions
+$options.SetCustomOption(''PolicyPlatformContext_PrincipalContext_Type'', ''PolicyPlatform_UserContext'', $false)
+$options.SetCustomOption(''PolicyPlatformContext_PrincipalContext_Id'', "$SidValue", $false)
+```
 
 11.  Detect and delete previous VPN profile.
 
-    ```
-    try
+```PowerShell
+try
+{
+    $deleteInstances = $session.EnumerateInstances($namespaceName, $className, $options)
+    foreach ($deleteInstance in $deleteInstances)
     {
-        $deleteInstances = $session.EnumerateInstances($namespaceName, $className, $options)
-        foreach ($deleteInstance in $deleteInstances)
+        $InstanceId = $deleteInstance.InstanceID
+        if ("$InstanceId" -eq "$ProfileNameEscaped")
         {
-            $InstanceId = $deleteInstance.InstanceID
-            if ("$InstanceId" -eq "$ProfileNameEscaped")
-            {
-                $session.DeleteInstance($namespaceName, $deleteInstance, $options)
-                $Message = "Removed $ProfileName profile $InstanceId"
-                Write-Host "$Message"
-            } else {
-                $Message = "Ignoring existing VPN profile $InstanceId"
-                Write-Host "$Message"
-            }
+            $session.DeleteInstance($namespaceName, $deleteInstance, $options)
+            $Message = "Removed $ProfileName profile $InstanceId"
+            Write-Host "$Message"
+        } else {
+            $Message = "Ignoring existing VPN profile $InstanceId"
+            Write-Host "$Message"
         }
     }
-    catch [Exception]
-    {
-        $Message = "Unable to remove existing outdated instance(s) of $ProfileName profile: $_"
-        Write-Host "$Message"
-        exit
-    }
-    ```
-
-12.  Create the VPN profile.
-
-    ```
-    try
-    {
-        $newInstance = New-Object Microsoft.Management.Infrastructure.CimInstance $className, $namespaceName
-        $property = [Microsoft.Management.Infrastructure.CimProperty]::Create("ParentID", "$nodeCSPURI", ''String'', ''Key'')
-        $newInstance.CimInstanceProperties.Add($property)
-        $property = [Microsoft.Management.Infrastructure.CimProperty]::Create("InstanceID", "$ProfileNameEscaped", ''String'', ''Key'')
-        $newInstance.CimInstanceProperties.Add($property)
-        $property = [Microsoft.Management.Infrastructure.CimProperty]::Create("ProfileXML", "$ProfileXML", ''String'', ''Property'')
-        $newInstance.CimInstanceProperties.Add($property)
-        $session.CreateInstance($namespaceName, $newInstance, $options)
-        $Message = "Created $ProfileName profile."
-    
-    
-        Write-Host "$Message"
-    }
-    catch [Exception]
-    {
-    $Message = "Unable to create $ProfileName profile: $_"
+}
+catch [Exception]
+{
+    $Message = "Unable to remove existing outdated instance(s) of $ProfileName profile: $_"
     Write-Host "$Message"
     exit
-    }
-    
-    $Message = "Script Complete"
-    Write-Host "$Message"'
-    ```
+}
+```
+
+12.  Create the VPN profile.<br>
+```PowerShell
+try
+{
+    $newInstance = New-Object Microsoft.Management.Infrastructure.CimInstance $className, $namespaceName
+    $property = [Microsoft.Management.Infrastructure.CimProperty]::Create("ParentID", "$nodeCSPURI", ''String'', ''Key'')
+    $newInstance.CimInstanceProperties.Add($property)
+    $property = [Microsoft.Management.Infrastructure.CimProperty]::Create("InstanceID", "$ProfileNameEscaped", ''String'', ''Key'')
+    $newInstance.CimInstanceProperties.Add($property)
+    $property = [Microsoft.Management.Infrastructure.CimProperty]::Create("ProfileXML", "$ProfileXML", ''String'', ''Property'')
+    $newInstance.CimInstanceProperties.Add($property)
+    $session.CreateInstance($namespaceName, $newInstance, $options)
+    $Message = "Created $ProfileName profile."
+
+
+    Write-Host "$Message"
+}
+catch [Exception]
+{
+$Message = "Unable to create $ProfileName profile: $_"
+Write-Host "$Message"
+exit
+}
+
+$Message = "Script Complete"
+Write-Host "$Message"'
+```
 
 13.  Save the VPN configuration file.
+- **Intune**:
 
--   **Intune:**
     ```
     $ProfileXML | Out-File -FilePath ($env:USERPROFILE + '\desktop\VPN_Profile.xml')
     ```
-
--   **System Center Configuration Manager:**
+- **System Center Configuration Manager:**<br>
     ```
     $Script | Out-File -FilePath ($env:USERPROFILE + '\desktop\VPN_Profile.ps1')
     
