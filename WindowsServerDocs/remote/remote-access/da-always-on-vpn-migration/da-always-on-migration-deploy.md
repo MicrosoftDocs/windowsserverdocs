@@ -32,7 +32,7 @@ As the VPN authentication certificates are issued, and you run the **GetUsersWit
 1.  Run the **GetUsersWithCert.ps1** script to add users who are currently issued nonrevoked certificates originating from the specified template name to a specified AD DS security group.<br><br>For example, after running the **GetUsersWithCert.ps1** script, any user issued a valid certificate from the VPN Authentication Certificate template is added to the VPN Deployment Ready group.
 
 >   **GetUsersWithCert.ps1**
-```powershell
+```PowerShell
 Import-module ActiveDirectory
 Import-Module AdcsAdministration
 
@@ -57,17 +57,17 @@ $Col = $Row.EnumCertViewColumn()
 [void]$Col.Next()
 do {
 $Cert | Add-Member -MemberType NoteProperty $($Col.GetDisplayName()) -Value $($Col.GetValue(1)) -Force
-        }
+      }
 until ($Col.Next() -eq -1)
 $col = ''
 
 if($cert."Certificate Template" -eq $TemplateID -and $cert."Revocation Date" -eq $NULL){
-    $users= $users+= $cert."User Principal Name"
+   $users= $users+= $cert."User Principal Name"
 $temp = $cert."User Principal Name"
 $user = get-aduser -Filter {UserPrincipalName -eq $temp} –Property UserPrincipalName
 Add-ADGroupMember $GroupName $user
-    }
-    }
+   }
+  }
 ```
 
 | If you are using...                 | Then...                                                             |
