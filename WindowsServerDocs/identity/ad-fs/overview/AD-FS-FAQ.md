@@ -59,7 +59,7 @@ Below is a list of third party providers we are aware of.  There may always be p
 ### Are third party proxies supported with AD FS?
 Yes, third party proxies can be placed in front of the Web Application Proxy, but any third party proxy must support the [MS-ADFSPIP protocol](https://msdn.microsoft.com/library/dn392811.aspx) to be used in place of the Web Application Proxy.
 
-### Which third party proxies are available for AD FS that support MS-ADFSPIP?
+### What third party proxies are available for AD FS that support MS-ADFSPIP?
 
 Below is a list of third party providers we are aware of.  There may always be providers available that we do not know about and we will update the list as we learn about them.
 
