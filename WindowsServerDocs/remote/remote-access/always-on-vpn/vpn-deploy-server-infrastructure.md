@@ -45,10 +45,7 @@ By configuring certificate autoenrollment in Group Policy, VPN users automatical
     a.  In the navigation pane, click **Computer onfiguration\\Policies\\Windows Settings\\Security Settings\\Public Key Policies**.
 
     b.  In the details pane, right-click **Certificate Services Client –
-        Auto-Enrollment**, and click **Properties**.  
-          
-        The Certificate Services Client – Auto-Enrollment Properties dialog box
-        opens.
+        Auto-Enrollment**, and click **Properties**.<br><br>The Certificate Services Client – Auto-Enrollment Properties dialog box opens.
 
     c.  In **Configuration Model**, click **Enabled** and select the following:
 
@@ -56,8 +53,7 @@ By configuring certificate autoenrollment in Group Policy, VPN users automatical
     
         -   **Update certificates that use certificate templates**
 
-    d.  Click **OK** to close the Certificate Services Client - Auto-Enrollment
-        Properties dialog box.
+    d.  Click **OK** to close the Certificate Services Client - Auto-Enrollment Properties dialog box.
 
 6.  Configure _user_ certificate autoenrollment by doing the following: 
 
@@ -95,12 +91,9 @@ By using a custom group, if you ever want to revoke a user’s VPN access, you c
 
     c.  Right-click **VPN Users**, and click **Properties**.<br><br>The VPN Users Properties dialog box opens.
 
-    d.  Click the **Members** tab and click **Add**.  
-          
-        The Select Users dialog box opens.
+    d.  Click the **Members** tab and click **Add**.<br><br>The Select Users dialog box opens.
 
-    e.  Add all the users who need VPN access and click **OK** to close the
-        Select Users dialog box.
+    e.  Add all the users who need VPN access and click **OK** to close the Select Users dialog box.
 
     f.  Click **OK** to close the VPN Users Properties dialog box.
 
