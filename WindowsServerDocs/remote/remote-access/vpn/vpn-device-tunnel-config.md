@@ -39,8 +39,7 @@ For server initiated push cases, like Windows Remote Management (WinRM), Remote 
 ### Sample VPN profileXML
 
 Following is the sample VPN profileXML.
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```PowerShell
 <VPNProfile>  
   <NativeProfile>  
 <Servers>vpn.contoso.com</Servers>  
@@ -72,16 +71,16 @@ Following is the sample VPN profileXML.
 <!--new node to register client IP address in DNS to enable manage out -->
 <RegisterDNS>true</RegisterDNS>
 </VPNProfile>
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
 
 Depending on the needs of each particular deployment scenario, another VPN
 feature that can be configured with the device tunnel is [Trusted Network
 Detection](https://social.technet.microsoft.com/wiki/contents/articles/38546.new-features-for-vpn-in-windows-10-and-windows-server-2016.aspx#Trusted_Network_Detection).
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
  <!-- inside/outside detection --> 
   <TrustedNetworkDetection>corp.contoso.com</TrustedNetworkDetection> 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
 
 ## Deployment and Testing
 
@@ -94,9 +93,9 @@ For more information, see [Using PowerShell scripting with the WMI Bridge Provid
 
 Verify that you have successfully deployed a device profile, run the following Windows PowerShell command:
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-`Get-VpnConnection -AllUserConnection`
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
+Get-VpnConnection -AllUserConnection
+```
 
 The output displays a list of the device-wide VPN profiles that are deployed on the device.
 
@@ -104,7 +103,7 @@ The output displays a list of the device-wide VPN profiles that are deployed on 
 
 You can use the following Windows PowerShell script to assist in creating your own script for profile creation.
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
 Param(
 [string]$xmlFilePath,
 [string]$ProfileName
@@ -153,4 +152,4 @@ exit
 }
 $Message = "Complete."
 Write-Host "$Message"
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
