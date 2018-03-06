@@ -48,81 +48,82 @@ In Windows PowerShell, you deploy VPN profiles to deploy the VPN_Profile.ps1 scr
 
 2.  Verify, at any time, that the script ran successfully buy running the  following command:<br><br>`Get-WmiObject -Namespace root\cimv2\mdm\dmmap -Class MDM_VPNv2_01`
 
->   Successful results from the **Get-WmiObject** cmdlet look like:
+<br>Successful results from the **Get-WmiObject** cmdlet look like:
 
->   \__GENUS : 2  
->   \__CLASS : MDM_VPNv2_01  
->   \__SUPERCLASS:  
->   \__DYNASTY   : MDM_VPNv2_01  
->   \__RELPATH   : MDM_VPNv2_01.InstanceID="Contoso%20AlwaysOn%20VPN",ParentID  
->   ="./Vendor/MSFT/VPNv2"  
->   \__PROPERTY_COUNT: 10  
->   \__DERIVATION: {}  
->   \__SERVER: WIN01  
->   \__NAMESPACE : root\\cimv2\\mdm\\dmmap  
->   \__PATH  : \\\\WIN01\\root\\cimv2\\mdm\\dmmap:MDM_VPNv2_01.InstanceID="Conto  
->   so%20AlwaysOn%20VPN",ParentID="./Vendor/MSFT/VPNv2"  
->   AlwaysOn: True  
->   ByPassForLocal  :  
->   DnsSuffix   : corp.contoso.com  
->   EdpModeId   :  
->   InstanceID  : Contoso%20AlwaysOn%20VPN  
->   LockDown:  
->   ParentID: ./Vendor/MSFT/VPNv2  
->   ProfileXML  :
->   \<VPNProfile\>\<RememberCredentials\>true\</RememberCredentials\>  
->   \<AlwaysOn\>true\</AlwaysOn\>\<DnsSuffix\>corp.contoso.com\</DnsSu  
->   ffix\>\<TrustedNetworkDetection\>corp.contoso.com\</TrustedNetw  
->   orkDetection\>\<NativeProfile\>\<Servers\>vpn.contoso.com;vpn.co  
->   ntoso.com\</Servers\>\<RoutingPolicyType\>SplitTunnel\</RoutingP  
->   olicyType\>\<NativeProtocolType\>Ikev2\</NativeProtocolType\>\<Au  
->   thentication\>\<UserMethod\>Eap\</UserMethod\>\<MachineMethod\>Eap  
->   \</MachineMethod\>\<Eap\>\<Configuration\>\<EapHostConfig xmlns="h  
->   ttp://www.microsoft.com/provisioning/EapHostConfig"\>\<EapMet  
->   hod\>\<Type xmlns="https://www.microsoft.com/provisioning/EapC  
->   ommon"\>25\</Type\>\<VendorId xmlns="https://www.microsoft.com/p  
->   rovisioning/EapCommon"\>0\</VendorId\>\<VendorType xmlns="http:  
->   //www.microsoft.com/provisioning/EapCommon"\>0\</VendorType\>\<  
->   AuthorId xmlns="https://www.microsoft.com/provisioning/EapCo  
->   mmon"\>0\</AuthorId\>\</EapMethod\>\<Config xmlns="http://www.mic  
->   rosoft.com/provisioning/EapHostConfig"\>\<Eap xmlns="http://w  
->   ww.microsoft.com/provisioning/BaseEapConnectionPropertiesV1  
->   "\>\<Type\>25\</Type\>\<EapType xmlns="https://www.microsoft.com/p  
->   rovisioning/MsPeapConnectionPropertiesV1"\>\<ServerValidation  
->   \>\<DisableUserPromptForServerValidation\>true\</DisableUserPro  
->   mptForServerValidation\>\<ServerNames\>NPS\</ServerNames\>\<Trust  
->   edRootCA\>3f 07 88 e8 ac 00 32 e4 06 3f 30 f8 db 74 25 e1  
->   2e 5b 84 d1 \</TrustedRootCA\>\</ServerValidation\>\<FastReconne  
->   ct\>true\</FastReconnect\>\<InnerEapOptional\>false\</InnerEapOpt  
->   ional\>\<Eap xmlns="https://www.microsoft.com/provisioning/Bas  
->   eEapConnectionPropertiesV1"\>\<Type\>13\</Type\>\<EapType xmlns="  
->   https://www.microsoft.com/provisioning/EapTlsConnectionPrope  
->   rtiesV1"\>\<CredentialsSource\>\<CertificateStore\>\<SimpleCertSe  
->   lection\>true\</SimpleCertSelection\>\</CertificateStore\>\</Cred  
->   entialsSource\>\<ServerValidation\>\<DisableUserPromptForServer  
->   Validation\>true\</DisableUserPromptForServerValidation\>\<Serv  
->   erNames\>NPS\</ServerNames\>\<TrustedRootCA\>3f 07 88 e8 ac 00  
->   32 e4 06 3f 30 f8 db 74 25 e1 2e 5b 84 d1 \</TrustedRootCA\>\<  
->   /ServerValidation\>\<DifferentUsername\>false\</DifferentUserna  
->   me\>\<PerformServerValidation xmlns="https://www.microsoft.com  
->   /provisioning/EapTlsConnectionPropertiesV2"\>true\</PerformSe  
->   rverValidation\>\<AcceptServerName xmlns="http://www.microsof  
->   t.com/provisioning/EapTlsConnectionPropertiesV2"\>true\</Acce  
->   ptServerName\>\</EapType\>\</Eap\>\<EnableQuarantineChecks\>false\<  
->   /EnableQuarantineChecks\>\<RequireCryptoBinding\>false\</Requir  
->   eCryptoBinding\>\<PeapExtensions\>\<PerformServerValidation xml  
->   ns="https://www.microsoft.com/provisioning/MsPeapConnectionP  
->   ropertiesV2"\>true\</PerformServerValidation\>\<AcceptServerNam  
->   e xmlns="https://www.microsoft.com/provisioning/MsPeapConnec  
->   tionPropertiesV2"\>true\</AcceptServerName\>\</PeapExtensions\>\<  
->   /EapType\>\</Eap\>\</Config\>\</EapHostConfig\>\</Configuration\>\</E  
->   ap\>\</Authentication\>\</NativeProfile\>\<DomainNameInformation\>  
->   \<DomainName\>corp.contoso.com\</DomainName\>\<DnsServers\>10.10.  
->   0.2,10.10.0.3\</DnsServers\>\<AutoTrigger\>true\</AutoTrigger\>\</  
->   DomainNameInformation\>\</VPNProfile\>  
->   RememberCredentials : True  
->   TrustedNetworkDetection : corp.contoso.com  
->   PSComputerName  : WIN01
+```
+__GENUS : 2
+__CLASS : MDM_VPNv2_01
+__SUPERCLASS:
+__DYNASTY   : MDM_VPNv2_01
+__RELPATH   : MDM_VPNv2_01.InstanceID="Contoso%20AlwaysOn%20VPN",ParentID
+  ="./Vendor/MSFT/VPNv2"
+__PROPERTY_COUNT: 10
+__DERIVATION: {}
+__SERVER: WIN01
+__NAMESPACE : root\cimv2\mdm\dmmap
+__PATH  : \\WIN01\root\cimv2\mdm\dmmap:MDM_VPNv2_01.InstanceID="Conto
+  so%20AlwaysOn%20VPN",ParentID="./Vendor/MSFT/VPNv2"
+AlwaysOn: True
+ByPassForLocal  :
+DnsSuffix   : corp.contoso.com
+EdpModeId   :
+InstanceID  : Contoso%20AlwaysOn%20VPN
+LockDown:
+ParentID: ./Vendor/MSFT/VPNv2
+ProfileXML  : <VPNProfile><RememberCredentials>true</RememberCredentials>
+  <AlwaysOn>true</AlwaysOn><DnsSuffix>corp.contoso.com</DnsSu
+  ffix><TrustedNetworkDetection>corp.contoso.com</TrustedNetw
+  orkDetection><NativeProfile><Servers>vpn.contoso.com;vpn.co
+  ntoso.com</Servers><RoutingPolicyType>SplitTunnel</RoutingP
+  olicyType><NativeProtocolType>Ikev2</NativeProtocolType><Au
+  thentication><UserMethod>Eap</UserMethod><MachineMethod>Eap
+  </MachineMethod><Eap><Configuration><EapHostConfig xmlns="h
+  ttp://www.microsoft.com/provisioning/EapHostConfig"><EapMet
+  hod><Type xmlns="https://www.microsoft.com/provisioning/EapC
+  ommon">25</Type><VendorId xmlns="https://www.microsoft.com/p
+  rovisioning/EapCommon">0</VendorId><VendorType xmlns="http:
+  //www.microsoft.com/provisioning/EapCommon">0</VendorType><
+  AuthorId xmlns="https://www.microsoft.com/provisioning/EapCo
+  mmon">0</AuthorId></EapMethod><Config xmlns="http://www.mic
+  rosoft.com/provisioning/EapHostConfig"><Eap xmlns="http://w
+  ww.microsoft.com/provisioning/BaseEapConnectionPropertiesV1
+  "><Type>25</Type><EapType xmlns="https://www.microsoft.com/p
+  rovisioning/MsPeapConnectionPropertiesV1"><ServerValidation
+  ><DisableUserPromptForServerValidation>true</DisableUserPro
+  mptForServerValidation><ServerNames>NPS</ServerNames><Trust
+  edRootCA>3f 07 88 e8 ac 00 32 e4 06 3f 30 f8 db 74 25 e1
+  2e 5b 84 d1 </TrustedRootCA></ServerValidation><FastReconne
+  ct>true</FastReconnect><InnerEapOptional>false</InnerEapOpt
+  ional><Eap xmlns="https://www.microsoft.com/provisioning/Bas
+  eEapConnectionPropertiesV1"><Type>13</Type><EapType xmlns="
+  https://www.microsoft.com/provisioning/EapTlsConnectionPrope
+  rtiesV1"><CredentialsSource><CertificateStore><SimpleCertSe
+  lection>true</SimpleCertSelection></CertificateStore></Cred
+  entialsSource><ServerValidation><DisableUserPromptForServer
+  Validation>true</DisableUserPromptForServerValidation><Serv
+  erNames>NPS</ServerNames><TrustedRootCA>3f 07 88 e8 ac 00
+  32 e4 06 3f 30 f8 db 74 25 e1 2e 5b 84 d1 </TrustedRootCA><
+  /ServerValidation><DifferentUsername>false</DifferentUserna
+  me><PerformServerValidation xmlns="https://www.microsoft.com
+  /provisioning/EapTlsConnectionPropertiesV2">true</PerformSe
+  rverValidation><AcceptServerName xmlns="http://www.microsof
+  t.com/provisioning/EapTlsConnectionPropertiesV2">true</Acce
+  ptServerName></EapType></Eap><EnableQuarantineChecks>false<
+  /EnableQuarantineChecks><RequireCryptoBinding>false</Requir
+  eCryptoBinding><PeapExtensions><PerformServerValidation xml
+  ns="https://www.microsoft.com/provisioning/MsPeapConnectionP
+  ropertiesV2">true</PerformServerValidation><AcceptServerNam
+  e xmlns="https://www.microsoft.com/provisioning/MsPeapConnec
+  tionPropertiesV2">true</AcceptServerName></PeapExtensions><
+  /EapType></Eap></Config></EapHostConfig></Configuration></E
+  ap></Authentication></NativeProfile><DomainNameInformation>
+  <DomainName>corp.contoso.com</DomainName><DnsServers>10.10.
+  0.2,10.10.0.3</DnsServers><AutoTrigger>true</AutoTrigger></
+  DomainNameInformation></VPNProfile>
+RememberCredentials : True
+TrustedNetworkDetection : corp.contoso.com
+PSComputerName  : WIN01
+```
 
 >[!IMPORTANT] 
 >The ProfileXML configuration must be correct in structure, spelling, configuration, and sometimes letter case. If you see something different in structure to the MakeProfile.ps1 full script, the ProfileXML markup likely contains an error.
@@ -401,5 +402,5 @@ After you have created the Always On VPN configuration policy, sync and test the
 
 | **If you…**         | **Then…**                      |
 |---------------------|--------------------------------|
-| Are migrating to Always On       | Refer to [STEP 9: Migrate from DirectAccess to Always On VPN](../da-always-on-vpn-migration/da-always-on-migration-deploy.md). Before starting the migration process from DirectAccess to Always On VPN, be sure you have divided the migration effort into multiple phases. |
+| Are you migrating to Always On       | Refer to [STEP 9: Migrate from DirectAccess to Always On VPN](../da-always-on-vpn-migration/da-always-on-migration-deploy.md). Before starting the migration process from DirectAccess to Always On VPN, be sure you have divided the migration effort into multiple phases. |
 | Are just deploying Always On VPN | You are complete with the Always On VPN deployment. Ensure the test the Always On VPN connections, and if necessary, refer to the Always On VPN Troubleshooting section.                                                                                                                                    |
