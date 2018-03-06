@@ -77,6 +77,7 @@
 #### [Understand the cache](storage-spaces/understand-the-cache.md)
 #### [Fault tolerance and storage efficiency](storage-spaces/Storage-Spaces-Fault-Tolerance.md)
 #### [Drive symmetry considerations](storage-spaces/drive-symmetry-considerations.md)
+#### [Cluster and pool quorum](storage-spaces/understand-quorum.md)
 ### [Plan](storage-spaces/plan-storage-spaces-direct.md)
 #### [Hardware requirements](storage-spaces/storage-spaces-direct-hardware-requirements.md)
 #### [Choose drives](storage-spaces/choosing-drives.md)
