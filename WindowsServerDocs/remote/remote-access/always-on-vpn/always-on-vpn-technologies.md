@@ -13,7 +13,7 @@ ms.date: 2/24/2018
 
 # Always On VPN Technology Overview
 
->Applies to: \>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
 For this deployment, it is not a requirement that your infrastructure servers, such as computers running AD DS, AD CS, and NPS, are running Windows Server
 2016\. You can use earlier versions of Windows Server, such as Windows Server 2012 R2, for the infrastructure servers and for the server that is running
