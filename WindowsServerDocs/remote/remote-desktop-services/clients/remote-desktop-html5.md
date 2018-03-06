@@ -21,7 +21,7 @@ To sign in to the client, open your web browser and navigate to the Work Resourc
 >[!NOTE]
 >By signing in to the web client, you agree that your computer complies with your organization's securty policy.
 
-After you sign in, the client will take you to the **Resources** page. Under the **Work Resources** menu, you'll see several icons for the apps the admin has made available to the work group. To start using an app, select the icon for the app you want to use, enter your username and password when prompted, and then select **Connect**.
+After you sign in, the client will take you to the **Resources** page. Under the **Work Resources** menu, you'll see several icons for the apps the admin has made available to the work group. To start using an app, select the icon for the app you want to use, enter the same user name and password you used to log in to the web client when prompted, and then select **Connect**. Wait for the remote desktop to load, and then start using the app as you would normally.
 
 When you're finished with your session, select the **Sign Out** button in the upper right-hand corner.
 
