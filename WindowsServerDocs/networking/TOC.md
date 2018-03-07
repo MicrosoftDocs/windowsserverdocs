@@ -1,6 +1,8 @@
 # [Networking](Networking.md)
 ## [Windows Server Supported Networking Scenarios](windows-server-supported-networking-scenarios.md)
+
 ## [What's New in Networking](What-s-New-in-Networking.md)
+
 ## [Core Network Guide for Windows Server](core-network-guide/core-network-guide-windows-server.md)
 ### [Core Network Guide](core-network-guide/Core-Network-Guide.md)
 ### [Core Network companion Guides](core-network-guide/cncg/Core-Network-companion-Guides.md)
@@ -35,6 +37,7 @@
 ####### [Import Data Packages on the Hosted Cache Server (Optional)](core-network-guide/cncg/bc-hcm/9-Bc-import-Data.md)
 ###### [Configure Client Automatic Hosted Cache Discovery by Service Connection Point](core-network-guide/cncg/bc-hcm/10-Bc-Client-By-Scp.md)
 ##### [Additional Resources](core-network-guide/cncg/bc-hcm/11-Bc-Hcm-additional-resources.md)
+
 ## [BranchCache](branchcache/BranchCache.md)
 ### [BranchCache Network Shell and Windows PowerShell Commands](branchcache/BranchCache-Network-Shell-and-Windows-powershell-Commands.md)
 ### [BranchCache Deployment Guide](branchcache/deploy/BranchCache-Deployment-Guide.md)
@@ -63,7 +66,8 @@
 ###### [Use Windows PowerShell to Configure Non-Domain Member Client computers](branchcache/deploy/Use-Windows-powershell-to-Configure-Non-Domain-Member-Client-computers.md)
 ####### [Configure Firewall Rules for Non-Domain Members to Allow BranchCache Traffic](branchcache/deploy/Configure-Firewall-Rules-for-Non-Domain-Members-to-Allow-BranchCache-Traffic.md)
 ###### [Verify Client computer Settings](branchcache/deploy/verify-Client-computer-Settings.md)
-## [DirectAccess](../remote/remote-access/da-stub.md)
+
+## [DirectAccess](../remote/remote-access/da-stub.md) 
 ## [Domain Name System (DNS)](dns/dns-top.md)
 ### [What's New in DNS Client in Windows Server](dns/What-s-New-in-DNS-Client.md)
 ### [What's New in DNS Server in Windows Server](dns/What-s-New-in-DNS-Server.md)
@@ -78,12 +82,15 @@
 #### [Use DNS Policy for Applying Filters on DNS Queries](dns/deploy/apply-filters-on-dns-queries.md)
 #### [Use DNS Policy for Application Load Balancing](dns/deploy/app-lb.md)
 #### [Use DNS Policy for Application Load Balancing With Geo-Location Awareness](dns/deploy/app-lb-geo.md)
+
 ## [Dynamic Host Configuration Protocol (DHCP)](technologies/dhcp/dhcp-top.md)
 ### [What's New in DHCP](technologies/dhcp/What-s-New-in-DHCP.md)
 #### [DHCP Subnet Selection Options](technologies/dhcp/dhcp-subnet-options.md)
 #### [DHCP Logging Events for DNS Record Registrations](technologies/dhcp/dhcp-dns-events.md)
 ### [Deploy DHCP Using Windows PowerShell](technologies/dhcp/dhcp-deploy-wps.md)
+
 ## [Hyper-V Virtual Switch](technologies/vswitch-stub.md)
+
 ## [IP Address Management (IPAM)](technologies/ipam/ipam-top.md)
 ### [What's New in IPAM](technologies/ipam/What-s-New-in-IPAM.md)
 ### [Manage IPAM](technologies/ipam/Manage-IPAM.md)
@@ -107,7 +114,9 @@
 ###### [Set Access Scope for DNS Resource Records](technologies/ipam/Set-Access-Scope-for-DNS-Resource-Records.md)
 ###### [View Roles and Role Permissions](technologies/ipam/View-Roles-and-Role-Permissions.md)
 ##### [Manage Role Based Access Control with Windows PowerShell](technologies/ipam/Manage-Role-Based-Access-Control-with-Windows-powershell.md)
+
 ## [Network Load Balancing](technologies/Network-Load-Balancing.md)
+
 ## [Network Offload and Optimization Technologies](technologies/network-offload.md)
 ### [Converged NIC Configuration Guide](technologies/conv-nic/cnic-top.md)
 #### [Converged NIC Configuration with a Single Network Adapter](technologies/conv-nic/cnic-single.md)
@@ -123,6 +132,7 @@
 #### [Manage vRSS](technologies/vrss/vrss-manage.md)
 #### [vRSS Frequently Asked Questions](technologies/vrss/vrss-faq.md)
 #### [Windows PowerShell Commands for RSS and vRSS](technologies/vrss/vrss-wps.md)
+
 ## [Network Policy Server (NPS)](technologies/nps/nps-top.md)
 ### [Network Policy Server Best Practices](technologies/nps/nps-best-practices.md)
 ### [Getting Started with Network Policy Server](technologies/nps/nps-getstart-top.md)
@@ -161,15 +171,18 @@
 ##### [Use Regular Expressions in NPS](technologies/nps/nps-crp-reg-expressions.md)
 ##### [Verify Configuration After NPS Server Changes](technologies/nps/nps-manage-verify.md)
 #### [Manage NPS Templates](technologies/nps/nps-manage-templates.md)
+
 ## [Network Shell (Netsh)](technologies/netsh/netsh.md)
 ### [Netsh Command Syntax, Contexts, and Formatting](technologies/netsh/netsh-contexts.md)
 ### [Network Shell (Netsh) Example Batch File](technologies/netsh/netsh-wins.md)
+
 ## [Network Subsystem Performance Tuning](technologies/network-subsystem/net-sub-performance-top.md)
 ### [Choosing a Network Adapter](technologies/network-subsystem/net-sub-choose-nic.md)
 ### [Configure the Order of Network Interfaces](technologies/network-subsystem/net-sub-interface-metric.md)
 ### [Performance Tuning Network Adapters](technologies/network-subsystem/net-sub-performance-tuning-nics.md)
 ### [Network-Related Performance Counters](technologies/network-subsystem/net-sub-performance-counters.md)
 ### [Performance Tools for Network Workloads](technologies/network-subsystem/net-sub-performance-tools.md)
+
 ## [NIC Teaming](technologies/nic-teaming/NIC-Teaming.md)
 ### [NIC Teaming in Virtual Machines (VMs)](technologies/nic-teaming/nict-vms.md)
 ### [NIC Teaming and Virtual Local Area Networks (VLANs)](technologies/nic-teaming/nict-and-vlans.md)
@@ -179,6 +192,7 @@
 #### [Create a New NIC Team](technologies/nic-teaming/create-a-New-NIC-Team.md)
 ### [Troubleshooting NIC Teaming](technologies/nic-teaming/Troubleshooting-NIC-Teaming.md)
 ## [Quality of Service (QoS) Policy](technologies/qos/qos-policy-top.md)
+
 ### [Getting Started with QoS Policy](technologies/qos/qos-policy-get-started.md)
 #### [How QoS Policy Works](technologies/qos/qos-policy-works.md)
 #### [QoS Policy Architecture](technologies/qos/qos-policy-architecture.md)
@@ -186,6 +200,7 @@
 ###[Manage QoS Policy](technologies/qos/qos-policy-manage.md)
 #### [QoS Policy Events and Errors](technologies/qos/qos-policy-errors.md)
 ### [QoS Policy Frequently Asked Questions](technologies/qos/qos-policy-faq.md)
+
 ## [Software Defined Networking (SDN)](sdn/software-defined-networking.md)
 ### [What's New in SDN for Windows Server](sdn/sdn-whats-new.md)
 #### [Virtual Network Encryption](sdn/vnet-encryption/sdn-vnet-encryption.md)
@@ -242,4 +257,10 @@
 ### [Microsoft Azure and SDN](sdn/Azure_and_Sdn.md)
 ### [Contact the Datacenter and Cloud Networking Team](sdn/contact-sdn-team.md)
 ## [Virtual Private Networking (VPN)](technologies/vpn-stub.md)
+
 ## [Windows Internet Name Service (WINS)](technologies/wins/wins-top.md)
+
+## [Windows Time Service](windows-time-service/windows-time-service.md)
+### [Windows Server 2016 Accurate Time](windows-time-service/accurate-time.md)
+### [How the Windows Time Service Works](windows-time-service/How-the-Windows-Time-Service-Works.md)
+### [Windows Time Service Tools and Settings](windows-time-service/Windows-Time-Service-Tools-and-Settings.md)

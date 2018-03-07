@@ -19,6 +19,7 @@
 ##### [Claims Transformation Rules Language](solution-guides/Claims-Transformation-Rules-Language.md)
 #### [Appendix A: Dynamic Access Control Glossary](solution-guides/appendix-A--Dynamic-Access-Control-Glossary.md)
 #### [Appendix B: Setting Up the Test Environment](solution-guides/appendix-B--Setting-Up-the-Test-Environment.md)
+
 ## [Active Directory Domain Services](ad-ds/active-directory-Domain-Services.md)
 ### [What's new in Active Directory Domain Services](whats-new-active-directory-domain-services.md)
 ### [AD DS Getting started](ad-ds/AD-DS-Getting-started.md)
@@ -36,10 +37,7 @@
 ###### [Virtualized Domain Controller additional Resources](ad-ds/reference/virtual-dc/Virtualized-Domain-Controller-additional-Resources.md)
 ##### [Virtualized Domain Controller Cloning Test Guidance for Application Vendors](ad-ds/reference/virtual-dc/Virtualized-Domain-Controller-Cloning-Test-Guidance-for-Application-Vendors.md)
 ##### [Support for using Hyper-V Replica for virtualized domain controllers](ad-ds/get-started/virtual-dc/Support-for-using-Hyper-V-Replica-for-virtualized-domain-controllers.md)
-#### [Windows Time Service](ad-ds/get-started/windows-time-service/Windows-time-Service.md)
-##### [How the Windows Time Service Works](ad-ds/get-started/windows-time-service/How-the-Windows-time-Service-Works.md)
-##### [Windows Time Service Tools and Settings](ad-ds/get-started/windows-time-service/Windows-time-Service-Tools-and-Settings.md)
-#### [Windows Accurate Time](ad-ds/get-started/windows-time-service/accurate-time.md)
+
 #### [Windows Server Functional Levels](ad-ds/active-directory-functional-levels.md)
 ### [AD DS Design and Planning](ad-ds/plan/AD-DS-Design-and-Planning.md)
 #### [Understanding AD DS Design](ad-ds/plan/Understanding-AD-DS-Design.md)
@@ -216,6 +214,7 @@
 ##### [Replication error 8606 Insufficient attributes were given to create an object](ad-ds/manage/troubleshoot/Replication-error-8606-Insufficient-attributes-were-given-to-create-an-object.md)
 ##### [Replication error 8451 The replication operation encountered a database error](ad-ds/manage/troubleshoot/Replication-error-8451-The-replication-operation-encountered-a-database-error.md)
 ### [Additional Resources_12](additional-Resources_12.md)
+
 ## [Active Directory Federation Services](active-directory-Federation-Services.md)
 ### [AD FS Overview](ad-fs/AD-FS-Overview.md)
 #### [What's new in Active Directory Federation Services for Windows Server 2016](ad-fs/overview/whats-new-active-directory-federation-services-windows-server.md)
@@ -429,6 +428,9 @@
 #### [Walkthrough: Workplace Join with an iOS Device](ad-fs/operations/Walkthrough--Workplace-Join-with-an-iOS-Device.md)
 #### [Walkthrough: Workplace Join with an Android Device](ad-fs/operations/Walkthrough--Workplace-Join-to-an-Android-device.md)
 
+
+
+
 ### [AD FS Technical Reference](ad-fs/AD-FS-Technical-Reference.md)
 #### [AD FS and certificate KeySpec property information](ad-fs/technical-reference/AD-FS-and-KeySpec-Property.md)
 #### [Auditing Enhancements to AD FS in Windows Server](ad-fs/technical-reference/auditing-enhancements-to-ad-fs-in-windows-server.md)
@@ -444,9 +446,11 @@
 ##### [How URIs Are Used in AD FS](ad-fs/technical-reference/How-URIs-Are-Used-in-AD-FS.md)
 #### [Device registration Technical Reference](ad-fs/technical-reference/device-registration-technical-reference.md)
 ### [AD FS 2016 FAQ](ad-fs/overview/AD-FS-FAQ.md)
+
 ## [Securing Privileged Access](securing-privileged-access/securing-privileged-access.md)
 ### [Privileged Access Workstations](securing-privileged-access/privileged-access-workstations.md)
 ### [Securing Privileged Access Reference Material](securing-privileged-access/securing-privileged-access-reference-material.md)
+
 ## [Software Restriction Policies](software-restriction-policies/software-restriction-policies.md)
 ### [Software Restriction Policies Technical Overview](software-restriction-policies/software-restriction-policies-technical-overview.md)
 ### [Administer Software Restriction Policies](software-restriction-policies/administer-software-restriction-policies.md)
