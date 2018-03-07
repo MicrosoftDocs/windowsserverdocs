@@ -6,7 +6,7 @@ ms.author: nedpyle
 ms.technology: storage-replica
 ms.topic: get-started-article
 author: nedpyle
-ms.date: 07/20/2017
+ms.date: 03/01/2018
 ms.assetid: 12bc8e11-d63c-4aef-8129-f92324b2bf1b
 ---
 # Frequently Asked Questions about Storage Replica
@@ -105,7 +105,7 @@ While technically possible, this is not a recommended configuration in Windows S
 
 If configuring cluster-to-cluster replication, Storage Replica fully supports Scale-out File Servers, including the use of Storage Spaces Direct, when replicating between two clusters.  
 
-## <a name="FAQ7"></a> Is CSV required to replicate in a stretch cluster or between clusters?  
+## <a name="FAQ7.5"></a> Is CSV required to replicate in a stretch cluster or between clusters?  
 No. You can replicate with CSV or persistent disk reservation (PDR) owned by a cluster resource, such as a File Server role. 
 
 If configuring cluster-to-cluster replication, Storage Replica fully supports Scale-out File Servers, including the use of Storage Spaces Direct, when replicating between two clusters.  
@@ -177,7 +177,7 @@ Storage Replica relies on SMB and WSMAN for its replication and management. This
 
 Note: The Test-SRTopology cmdlet requires ICMPv4/ICMPv6, but not for replication or management.
 
-## <a name="FAQ15"></a>What are the log volume best practices?
+## <a name="FAQ15.5"></a>What are the log volume best practices?
 The optimal size size of the log varies widely per environment and workload, and is determined by how much write IO your workload performs. 
 
 1.	A larger or smaller log doesn’t make you any faster or slower

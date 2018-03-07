@@ -22,7 +22,9 @@ This topic lists new and updated topics in the [Storage](storage.md) documentati
 
 |New or changed topic|Description|
 |---|---|
+|[Understanding Quorum in Storage Spaces Direct](storage-spaces/understand-quorum.md)| New topic.|
 |[Deploying Storage Spaces Direct](storage-spaces/hyper-converged-solution-using-storage-spaces-direct.md)| Heavily revised to include both converged and hyper-converged scenarios.|
+|[Storage Replica frequently asked questions](storage-replica/storage-replica-frequently-asked-questions.md)|Added [Is CSV required to replicate in a stretch cluster or between clusters?](storage-replica/storage-replica-frequently-asked-questions.md#FAQ7.5).|
 
 ## February 2018
 
