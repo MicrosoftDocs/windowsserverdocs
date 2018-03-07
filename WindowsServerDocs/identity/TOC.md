@@ -428,6 +428,9 @@
 #### [Walkthrough: Workplace Join with an iOS Device](ad-fs/operations/Walkthrough--Workplace-Join-with-an-iOS-Device.md)
 #### [Walkthrough: Workplace Join with an Android Device](ad-fs/operations/Walkthrough--Workplace-Join-to-an-Android-device.md)
 
+
+
+
 ### [AD FS Technical Reference](ad-fs/AD-FS-Technical-Reference.md)
 #### [AD FS and certificate KeySpec property information](ad-fs/technical-reference/AD-FS-and-KeySpec-Property.md)
 #### [Auditing Enhancements to AD FS in Windows Server](ad-fs/technical-reference/auditing-enhancements-to-ad-fs-in-windows-server.md)

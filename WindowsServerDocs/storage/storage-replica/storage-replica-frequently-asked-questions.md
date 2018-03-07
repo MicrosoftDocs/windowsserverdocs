@@ -6,7 +6,7 @@ ms.author: nedpyle
 ms.technology: storage-replica
 ms.topic: get-started-article
 author: nedpyle
-ms.date: 07/20/2017
+ms.date: 03/01/2018
 ms.assetid: 12bc8e11-d63c-4aef-8129-f92324b2bf1b
 ---
 # Frequently Asked Questions about Storage Replica
@@ -15,47 +15,22 @@ ms.assetid: 12bc8e11-d63c-4aef-8129-f92324b2bf1b
 
 This topic contains answers to frequently asked questions (FAQs) about Storage Replica.
 
-## <a name="FAQ1"></a> Is Storage Replica supported on Nano Server?  
-Yes.  
+## <a name="FAQ1"></a> Is Storage Replica supported on Azure?  
+Yes. You can use the following scenarios with Azure:
 
-> [!NOTE]
-> You must use the **Storage** Nano Server package during setup. For more information about deploying Nano Server, see [Getting Started with Nano Server](https://technet.microsoft.com/library/mt126167.aspx).  
+1. Server-to-server replication inside Azure (synchronously or asynchronously between IaaS VMs in one or two datacenter fault domains, or asynchronously between two separate regions)
+2. Server-to-server asynchronous replication between Azure and on-premises (using VPN or Azure ExpressRoute)
+3. Cluster-to-cluster replication inside Azure (synchronously or asynchronously between IaaS VMs in one or two datacenter fault domains, or asynchronously between two separate regions)
+4. Cluster-to-cluster asynchronous replication between Azure and on-premises (using VPN or Azure ExpressRoute)
 
-Install Storage Replica on Nano Server using  PowerShell remoting as follows:  
+Further notes on guest clustering in Azure can be found at: [Deploying IaaS VM Guest Clusters in Microsoft Azure](https://blogs.msdn.microsoft.com/clustering/2017/02/14/deploying-an-iaas-vm-guest-clusters-in-microsoft-azure/).
 
-1. Add the Nano server to your client trust list.  
-   > [!NOTE]
-   > This step is only necessary if the computer is not a member of an Active Directory Domain Services forest or in an untrusted forest. It adds NTLM support to PSSession remoting, which is disabled by default for security reasons. For more information, see [PowerShell Remoting Security Considerations](https://msdn.microsoft.com/powershell/scriptiwinrmsecurity).  
+Important notes:
 
-   ```  
-       Set-Item WSMan:\localhost\Client\TrustedHosts "<computer name of Nano Server>"  
-   ```  
-2.  To install the Storage Replica feature, run the following cmdlet from a management computer:  
-
-    ```  
-    Install-windowsfeature -Name storage-replica,RSAT-Storage-Replica -ComputerName <nano server> -Restart -IncludeManagementTools  
-    ```  
-
-    Using the `Test-SRTopology` cmdlet with Nano Server in Windows Server 2016 requires remote script invocation with CredSSP. Unlike other Storage Replica cmdlets, `Test-SRTopology` requires running locally on the source server.   
-On the Nano server (through a remote PSSession) :  
-
-    >[!NOTE]
-    >CREDSSP is needed for Kerberos double-hop support in the `Test-SRTopology` cmdlet, and not needed by other Storage Replica cmdlets, which handle distributed system credentials automatically. Using CREDSSP is not recommended under typical circumstances. For an alternative to CREDSSP, review the following Microsoft blog post: "PowerShell Remoting Kerberos Double Hop Solved Securely" - https://blogs.technet.microsoft.com/ashleymcglone/2016/08/30/powershell-remoting-kerberos-double-hop-solved-securely/ 
-
-        Enable-WSManCredSSP -role server       
-
-    On the management computer:  
-
-         Enable-WSManCredSSP Client -DelegateComputer <remote server name>  
-
-         $CustomCred = Get-Credential  
-
-         Invoke-Command -ComputerName sr-srv01 -ScriptBlock { Test-SRTopology <commands> } -Authentication Credssp -Credential $CustomCred  
-
-       Then copy the results to your management computer or share the path. Because Nano lacks the necessary graphical libraries, you can use Test-SRTopology to process the results and give you a report file with charts. For example:  
-
-        Test-SRTopology -GenerateReport -DataPath \\sr-srv05\c$\temp  
-
+1. Azure doesn't support shared VHDX guest clustering, so Windows Failover Cluster virtual machines must use iSCSI targets for classic shared-storage persistent disk reservation clustering or Storage Spaces Direct.
+2. There are Azure Resource Manager templates for Storage Spaces Direct-based Storage Replica clustering at [Create a Storage Spaces Direct (S2D) SOFS Clusters with Storage Replica for Disaster Recovery across Azure Regions](https://aka.ms/azure-storage-replica-cluster).  
+3. Cluster to cluster RPC communication in Azure (required by the cluster APIs for granting access between cluster) requires configuring network access for the CNO. You must allow TCP port 135 and the dynamic range above TCP port 49152. Reference [Building Windows Server Failover Cluster on Azure IAAS VM – Part 2 Network and Creation](https://blogs.technet.microsoft.com/askcore/2015/06/24/building-windows-server-failover-cluster-on-azure-iaas-vm-part-2-network-and-creation/).  
+4. It's possible to use two-node guest clusters, where each node is using loopback iSCSI for an asymmetric cluster replicated by Storage Replica. But this will likely have very poor performance and should be used only for very limited workloads or testing.  
 
 ## <a name="FAQ2"></a> How do I see the progress of replication during initial sync?  
 The Event 1237 messages shown in the Storage Replica Admin even log on the destination server show number of bytes copied and bytes remaining every 10 seconds. You can also use the Storage Replica performance counter on the destination showing **\Storage Replica Statistics\Total Bytes Received** for one or more replicated volumes. You can also query the replication group using Windows PowerShell. For instance,  this sample command gets the name of the groups on the destination  then queries one group named **Replication 2** every 10 seconds to show progress:  
@@ -130,6 +105,11 @@ While technically possible, this is not a recommended configuration in Windows S
 
 If configuring cluster-to-cluster replication, Storage Replica fully supports Scale-out File Servers, including the use of Storage Spaces Direct, when replicating between two clusters.  
 
+## <a name="FAQ7.5"></a> Is CSV required to replicate in a stretch cluster or between clusters?  
+No. You can replicate with CSV or persistent disk reservation (PDR) owned by a cluster resource, such as a File Server role. 
+
+If configuring cluster-to-cluster replication, Storage Replica fully supports Scale-out File Servers, including the use of Storage Spaces Direct, when replicating between two clusters.  
+
 ## <a name="FAQ8"></a>Can I configure Storage Spaces Direct in a stretch cluster with Storage Replica?  
 This is not a supported configuration in Windows Server 2016.  This may change in a later release. If configuring cluster-to-cluster replication, Storage Replica fully supports Scale Out File Servers and Hyper-V Servers, including the use of Storage Spaces Direct.  
 
@@ -197,7 +177,7 @@ Storage Replica relies on SMB and WSMAN for its replication and management. This
 
 Note: The Test-SRTopology cmdlet requires ICMPv4/ICMPv6, but not for replication or management.
 
-## <a name="FAQ15"></a>What are the log volume best practices?
+## <a name="FAQ15.5"></a>What are the log volume best practices?
 The optimal size size of the log varies widely per environment and workload, and is determined by how much write IO your workload performs. 
 
 1.	A larger or smaller log doesn’t make you any faster or slower
@@ -205,11 +185,11 @@ The optimal size size of the log varies widely per environment and workload, and
 
 A larger log simply collects and retains more write IOs before they are wrapped out. This allows an interruption in service between the source and destination computer – such as a network outage or the destination being offline - to go longer. If the log can hold 10 hours of writes, and the network goes down for 2 hours, when the network returns the source can simply play the delta of unsynced changes back to the destination very fast and you are protected again very quickly. If the log holds 10 hours and the outage is 2 days, the source now has to play back from a different log called the bitmap – and will likely be slower to get back into sync. Once in sync it returns to using the log.
 
-There are SR performance counters that will tell you the rate the log is churning, allowing you to make some judgements. Also the Test-SRTopology cmdlet does this. Basically you are just looking at write IO on an existing workload to decide how much IO will likely flow the log per minute, hour, or day.
-
 Storage Replica relies on the log for all write performance. Log performance critical to replication performance. You must ensure that the log volume performs better than the data volume, as the log will serialize and sequentialize all write IO. You should always use flash media like SSD on log volumes. You must never allow any other workloads to run on the log volume, the same way you would never allow other workloads to run on SQL database log volumes. 
 
 Again: Microsoft strongly recommends that the log storage be faster than the data storage and that log volumes must never be used for other workloads.
+
+You can get log sizing recommendations by running the Test-SRTopology tool. Alternatively, you can use performance counters on existing servers to make a log size judgement. The formula is simple:  monitor the data disk throughput (Avg Write Bytes/Sec) under the workload and use it to calculate the amount of time it will take to fill up the log of different sizes. For example, data disk throughput of 50 MB/s will cause the log of 120GB to wrap in 120GB/50MB seconds or 2400 seconds or 40 minutes. So the amount of time that the destination server could be unreachable before the log wrapped is 40 minutes. If the log wraps but the destination becomes reachable again, the source would replay blocks via the bit map log instead of the main log. The size of the log does not have an effect on performance.
 
 ## <a name="FAQ16"></a> Why would you choose a stretch cluster versus cluster-to-cluster versus server-to-server topology?  
 Storage Replica comes in three main configurations: strech cluster, cluster-to-cluster, and server-to-server. There are different advantages to each.
