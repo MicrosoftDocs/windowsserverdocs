@@ -73,9 +73,7 @@ Following is the sample VPN profileXML.
 </VPNProfile>
 ```
 
-Depending on the needs of each particular deployment scenario, another VPN
-feature that can be configured with the device tunnel is [Trusted Network
-Detection](https://social.technet.microsoft.com/wiki/contents/articles/38546.new-features-for-vpn-in-windows-10-and-windows-server-2016.aspx#Trusted_Network_Detection).
+Depending on the needs of each particular deployment scenario, another VPN feature that can be configured with the device tunnel is [Trusted Network Detection](https://social.technet.microsoft.com/wiki/contents/articles/38546.new-features-for-vpn-in-windows-10-and-windows-server-2016.aspx#Trusted_Network_Detection).
 
 ```
  <!-- inside/outside detection --> 
@@ -153,3 +151,27 @@ exit
 $Message = "Complete."
 Write-Host "$Message"
 ```
+
+## Additional Resources
+
+Following are additional resources to assist with your VPN deployment.
+
+### VPN client configuration resources
+
+These are VPN client configuration resources.
+
+- [How to Create VPN profiles in System Center Configuration Manager](https://docs.microsoft.com/sccm/protect/deploy-use/create-vpn-profiles)
+- [Configure Windows 10 Client Always On VPN Connections](https://docs.microsoft.com/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-client-vpn-connections)
+- [VPN profile options](https://docs.microsoft.com/en-us/windows/access-protection/vpn/vpn-profile-options)
+
+### Remote Access Server \(RAS\) Gateway resources
+
+Following are RAS Gateway resources.
+
+- [Configure RRAS with a Computer Authentication Certificate](https://technet.microsoft.com/en-us/library/dd458982.aspx)
+- [Troubleshooting IKEv2 VPN Connections](https://technet.microsoft.com/en-us/library/dd941612.aspx)
+- [Configure IKEv2-based Remote Access](https://technet.microsoft.com/en-us/library/ff687731.aspx)
+
+<!-- pashort 3/7/2018: new content from Jason Jones -->
+>[!IMPORTANT]
+>When using Device Tunnel with a Microsoft RAS gateway, you will need to configure the RRAS server to support IKEv2 machine certificate authentication by enabling the Allow machine certificate authentication for IKEv2 authentication method as described [here](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee922682%28v=ws.10%29). Once this setting is enabled, it is strongly recommended that the Set-VpnAuthProtocol PowerShell cmdlet, along with the RootCertificateNameToAccept optional parameter, is used to ensure that RRAS IKEv2 connections are only permitted for VPN client certificates that chain to an explicitly defined internal/private Root Certification Authority. Alternatively, the Trusted Root Certification Authorities store on the RRAS server should be amended to ensure that it does not contain public certification authorities as discussed [here](https://blogs.technet.microsoft.com/rrasblog/2009/06/10/what-type-of-certificate-to-install-on-the-vpn-server/). Similar methods may also need to be considered for other VPN gateways.
