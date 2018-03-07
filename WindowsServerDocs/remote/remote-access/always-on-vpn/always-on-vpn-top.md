@@ -31,7 +31,7 @@ Always On VPN has many benefits over the Windows VPN solutions of the past. The 
 
 -   Compatibility
 
-Because many of the devices that require remote access are personal devices, Always On VPN does not require that a device be domain joined. Always On VPN can provide a single, cohesive solution for remote access for all your connected devices going forward, even personally owned devices. Also, organizations can choose which management platform they prefer for deploying the Always On VPN configuration because the CSP is not vendor-specific.
+Because many of the devices that require remote access are personal devices, Always On VPN does not require that a device be domain joined. Always On VPN provides a single, cohesive solution for remote access for all your connected devices going forward, even personally owned devices. Also, organizations can choose which management platform they prefer for deploying the Always On VPN configuration because the CSP is not vendor-specific.
 
 For more information about the advantages of Always On VPN, see [Always On VPN and DirectAccess Features Comparison](../../remote-access/vpn/vpn-map-da.md).
 
