@@ -39,7 +39,7 @@ For server initiated push cases, like Windows Remote Management (WinRM), Remote 
 ### Sample VPN profileXML
 
 Following is the sample VPN profileXML.
-```PowerShell
+```
 <VPNProfile>  
   <NativeProfile>  
 <Servers>vpn.contoso.com</Servers>  
