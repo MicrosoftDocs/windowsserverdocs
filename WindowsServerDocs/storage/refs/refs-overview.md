@@ -115,6 +115,7 @@ Deploying ReFS on basic disks is best suited for applications that implement the
 | Sparse files | Yes | Yes |
 | Named streams | Yes | Yes |
 1. Available on Windows Server, version 1709 and later.
+
 #### The following features are only available on ReFS:
 
 | Functionality       | ReFS                                        | NTFS |
