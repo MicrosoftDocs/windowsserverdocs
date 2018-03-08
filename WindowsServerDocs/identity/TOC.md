@@ -428,6 +428,20 @@
 #### [Walkthrough: Workplace Join with an iOS Device](ad-fs/operations/Walkthrough--Workplace-Join-with-an-iOS-Device.md)
 #### [Walkthrough: Workplace Join with an Android Device](ad-fs/operations/Walkthrough--Workplace-Join-to-an-Android-device.md)
 
+### AD FS Troubleshooting(ad-fs/troubleshooting/ad-fs-tshoot-overview.md)
+#### Azure (ad-fs/troubleshooting/ad-fs-tshoot-azure.md)
+#### Certificates(ad-fs/troubleshooting/ad-fs-tshoot-certs.md)
+#### Claims issuance(ad-fs/troubleshooting/ad-fs-tshoot-claims-issuance.md)
+#### Claims syntax(ad-fs/troubleshooting/ad-fs-tshoot-claims-rules.md)
+#### DNS(ad-fs/troubleshooting/ad-fs-tshoot-dns.md)
+#### Endpoints(ad-fs/troubleshooting/ad-fs-tshoot-endpoints.md)
+#### Fiddler trace (WS-Fed)(ad-fs/troubleshooting/ad-fs-tshoot-fiddler-ws-fed.md)
+#### Fiddler(ad-fs/troubleshooting/ad-fs-tshoot-fiddler.md)
+#### Initiated SignOn(ad-fs/troubleshooting/ad-fs-tshoot-initiatedsignon.md)
+#### Integrated Windows Auth(ad-fs/troubleshooting/ad-fs-tshoot-iwa.md)
+#### Logging(ad-fs/troubleshooting/ad-fs-tshoot-logging.md)
+#### Loops(ad-fs/troubleshooting/ad-fs-tshoot-loop.md)
+#### SQL(ad-fs/troubleshooting/ad-fs-tshoot-sql.md)
 
 
 
