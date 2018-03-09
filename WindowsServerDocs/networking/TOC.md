@@ -260,7 +260,7 @@
 
 ## [Windows Internet Name Service (WINS)](technologies/wins/wins-top.md)
 
-## [Windows Time Service](windows-time-service/windows-time-service.md)
+## [Windows Time Service](windows-time-service/windows-time-service-top.md)
 ### [Windows Server 2016 Accurate Time](windows-time-service/accurate-time.md)
 ### [Windows Time Service Technical Reference](windows-time-service/windows-time-service-tech-ref.md)
 #### [How the Windows Time Service Works](windows-time-service/How-the-Windows-Time-Service-Works.md)
