@@ -31,7 +31,7 @@ In Windows Server 2016, there are two components of the system that have their o
 
 The table below gives an overview of the Cluster Quorum outcomes per scenario:
 
-| Server nodes | Can survive one server node failure | Can survive one server node failure, then another | Can survive two simultaneous server node failtures |
+| Server nodes | Can survive one server node failure | Can survive one server node failure, then another | Can survive two simultaneous server node failures |
 |--------------|-------------------------------------|---------------------------------------------------|----------------------------------------------------|
 | 2            | 50/50                               | No                                                | No                                                 |
 | 2 + Witness  | Yes                                 | No                                                | No                                                 |
@@ -165,7 +165,7 @@ We just talked about Cluster Quorum, which operates at the cluster level. Now, l
 
 The table below gives an overview of the Pool Quorum outcomes per scenario:
 
-| Server nodes | Can survive one server node failure | Can survive one server node failure, then another | Can survive two simultaneous server node failtures |
+| Server nodes | Can survive one server node failure | Can survive one server node failure, then another | Can survive two simultaneous server node failures |
 |--------------|-------------------------------------|---------------------------------------------------|----------------------------------------------------|
 | 2            | No                                  | No                                                | No                                                 |
 | 2 + Witness  | Yes                                 | No                                                | No                                                 |
