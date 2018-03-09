@@ -8,7 +8,7 @@ manager: brianlic
 ms.date: 02/01/2018
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.technology: networking
+ms.technology: identity-adds
 ---
 
 # Windows Time Service (W32Time)
