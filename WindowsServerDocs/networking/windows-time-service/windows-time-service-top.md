@@ -8,21 +8,28 @@ manager: brianlic
 ms.date: 02/01/2018
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.technology: identity-adds
+ms.technology: networking
 ---
 
-# Windows Time Service 
+# Windows Time Service (W32Time)
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
+The Windows Time service (W32Time) synchronizes the date and time for all computers running in Active Directory Domain Services (AD DS). Time synchronization is critical for the proper operation of many Windows services and line-of-business (LOB) applications. The Windows Time service uses the Network Time Protocol (NTP) to synchronize computer clocks on the network. NTP ensures that an accurate clock value, or timestamp, can be assigned to network validation and resource access requests.
 
+>[!NOTE]
+>In addition to this topic, the following Windows Time service content is available:<ul><li>Windows 2016 Accurate Time</li><li>Windows Time service technical reference</li><li>How the Windows Time service works</li><li>Windows Time service tools and settings</li></ul>
 
-o	Windows Accurate Time
-o	High Accuracy
-o	Support Boundary
-o	Configuration for High Accuracy
-o	Traceability for Compliance
-o	Best Practices
-o	Technical Reference
-o	How the Windows Time Service Works
-o	Windows Time Service Tools and Settings
+<!-- In this guide
+In this guide:
+Windows Accurate Time
+High Accuracy
+Support Boundary
+Configuration for High Accuracy
+Traceability for Compliance
+Best Practices
+Technical Reference
+How the Windows Time Service Works
+Windows Time Service Tools and Settings
+-->
+
