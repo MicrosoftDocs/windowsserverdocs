@@ -91,7 +91,7 @@ Many organizations have a combination of Active Directory and third-party direct
 
 For more information see [Configure AD FS to authenticate users stored in LDAP directories.](../../ad-fs/operations/Configure-AD-FS-to-authenticate-users-stored-in-LDAP-directories.md)  
 
-## Better Sign in experience
+## Better Sign-in experience
 ### Customize sign in experience for AD FS applications  
 We heard from you that the ability to customize the logon experience for each application would be a great usability improvement, especially for organizations who provide sign on for applications that represent multiple different companies or brands.  
 
