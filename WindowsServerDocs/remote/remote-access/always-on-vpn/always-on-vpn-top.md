@@ -15,7 +15,7 @@ ms.date: 3/4/2018
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-What is Always On VPN and why use it instead of DirectAccess? Well, in previous versions of the Windows VPN architecture, platform limitations made it difficult to provide the critical functionality needed to replace DirectAccess (such as automatic connections initiated before users sign in). Always On VPN, however, has mitigated most of those limitations or expanded the VPN functionality beyond the capabilities of DirectAccess. Always On VPN addresses the previous gaps between Windows VPNs and DirectAccess; therefore, Always On VPN is the DirectAccess replacement solution.
+What is Always On VPN and why use it instead of DirectAccess? That’s a really great question! In previous versions of the Windows VPN architecture, platform limitations made it difficult to provide the critical functionality needed to replace DirectAccess (such as automatic connections initiated before users sign in). Always On VPN, however, is the next generation VPN platform for Windows 10 and has expanded the VPN functionality beyond the capabilities of DirectAccess.
 
 ## Benefits of Always On VPN
 
