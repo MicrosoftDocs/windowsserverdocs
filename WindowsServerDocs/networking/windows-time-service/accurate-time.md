@@ -9,7 +9,7 @@ ms.date: 12/21/2016
 ms.topic: article
 ms.prod: windows-server-threshold
 
-ms.technology: identity-adds
+ms.technology: networking
 ---
 
 # Windows Server 2016 Accurate Time
