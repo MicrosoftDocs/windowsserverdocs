@@ -112,7 +112,7 @@ For the evaluation version of Windows Server 2016 Standard, you can also convert
 At any time after installing Windows Server 2016, you can run Setup to repair the installation (sometimes called “repair in place”) or, in certain cases, to convert to a different edition.
 You can run Setup to perform a “repair in place” on any edition of Windows Server 2016; the result will be the same edition you started with.
 
-For Windows Server 2016 Standard, you can convert the system to Windows Server 2016 Datacenter as follows: From an elevated command prompt, determine the current edition name with the command **DISM /online /Get-CurrentEdition**. Make note of the edition ID, an abbreviated form of the edition name. Then run **DISM /online /Set-Edition:\<edition ID\> /ProductKey:XXXXX-XXXXX-XXXXX-XXXXX-XXXXX /AcceptEula**, providing the edition ID and a retail product key. The server will restart twice.
+For Windows Server 2016 Standard, you can convert the system to Windows Server 2016 Datacenter as follows: From an elevated command prompt, determine the current edition name with the command **DISM /online /Get-CurrentEdition**. For Windows Server 2016 Standard this will be `ServerStandard`. Run the command **DISM /online /Get-TargetEditions** to get the ID of the edition you can upgrade to. Make note of this edition ID, an abbreviated form of the edition name. Then run **DISM /online /Set-Edition:\<edition ID\> /ProductKey:XXXXX-XXXXX-XXXXX-XXXXX-XXXXX /AcceptEula**, providing the edition ID of your target and its retail product key. The server will restart twice.
 
 ## Converting a current retail version to a current volume-licensed version
 
