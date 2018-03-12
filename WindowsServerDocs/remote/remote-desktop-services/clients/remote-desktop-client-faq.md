@@ -146,11 +146,11 @@ This feature is not supported at the moment.
 
 ### Why does my browser show a security warning when I try to access the web client?
 
-Either your certificate isn't trusted, or the server name in your remote web client URL doesn't exactly match the name provided by the RDWeb certificate. Let your admin know you're getting a security warning so that they can fix the issue.
+Either your certificate isn't trusted, or the server name in your remote web client URL doesn't exactly match the name provided by the RD Web certificate. Let your admin know you're getting a security warning so that they can fix the issue.
 
 ### Why am I getting an "unsupported browser" error when launching the web client in IE 11?
 
-This is an issue with your browser's settings. To fix this, open up "Compatibility View settings" in your browser, then uncheck the "Display intranet sites in Compatibility view" option's checkbox.
+This is an issue with your browser's settings. To fix this, open up "Compatibility View settings" in your browser, then uncheck the "Display intranet sites in Compatibility View" option's checkbox.
 
 ### Why can't I connect to the web client even though I can see the feed?
 
@@ -163,7 +163,7 @@ If your connection issue is caused by the certificate, close the browser, export
 
 If installing the certificate doesn't solve the connectivity problem, then the issue might be that your RD Gateway machine isn't up to date. Check with your admin to make sure [this update](https://support.microsoft.com/en-us/help/4025334/windows-10-update-kb4025334) has been installed to the machine.
 
-If you're getting a "mismatched certificate" error when you can't connect, ask your admin to check the RD Broker machine's certificate. The error message will show the thumbprint of the expected certificate. Give the thumbprint information to your admin so they can search the RD Broker machine's certmgr for the right certificate. After making sure the certificate hasn't expired, copy the certificate in .cer file format to the RDWeb machine and run the following command on the RDWeb machine with the bracketed value replaced by the certificate's file path:
+If you're getting a "mismatched certificate" error when you can't connect, ask your admin to check the RD Broker machine's certificate. The error message will show the thumbprint of the expected certificate. Give the thumbprint information to your admin so they can search the RD Broker machine's certificate manager for the right certificate. After making sure the certificate hasn't expired, copy the certificate in .cer file format to the RD Web machine and run the following cmdlet on the RDWeb machine with the bracketed value replaced by the certificate's file path:
 
 ```PowerShell
 Import-RDWebClientBrokerCert <cert file path>
