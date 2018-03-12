@@ -2,17 +2,11 @@
 ## [Remote Server Administration Tools](remote-server-administration-tools.md)
 ## [Remote Desktop Services](remote-desktop-services/welcome-to-rds.md)
 ## [Remote Access](remote-access/remote-Access.md)
-<<<<<<< HEAD
 
 ### [Always On VPN](remote-access/always-on-vpn/always-on-vpn-top.md)
-=======
-<!-- 
-### [Always On VPN](remote-access/vpn/always-on-vpn/deploy/always-on-vpn-top.md)
->>>>>>> d9a31a4cef85df62a290dcb35cfcca4df8f5ab15
 #### [Features Comparison of Always On VPN and DirectAccess](remote-access/vpn/vpn-map-da.md)
 #### [Always On VPN Technology Overview](remote-access/always-on-vpn/always-on-vpn-technologies.md)
 #### [VPN Device Tunnels in Always On VPN](remote-access/vpn/vpn-device-tunnel-config.md)
-<<<<<<< HEAD
 #### [ProfileXML Configuration Files Overview](remote-access/always-on-vpn/profilexml-overview.md)
 #### [Step 1: Plan and stage your environment](remote-access/always-on-vpn/always-on-vpn-deploy-planning.md)
 #### [Step 2: Plan your migration](remote-access/da-always-on-vpn-migration/da-always-on-migration-planning.md)
@@ -25,23 +19,6 @@
 #### [Step 9: Migrate from DirectAccess to Always On VPN](remote-access/da-always-on-vpn-migration/da-always-on-migration-deploy.md)
 #### [Troubleshoot Always On VPN](remote-access/always-on-vpn/always-on-vpn-deploy-troubleshooting.md)
 
-=======
-#### [ProfileXML Configuration Files Overview]
-#### [Overview of the Always On VPN Deployment](remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-overview.md)
-#### [Plan and stage your environment](remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-planning.md)
-#### [Deploy Always On VPN Connections](remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-deployment.md)
-##### [Step 1: Configure the Always On VPN Server Infrastructure](remote-access/vpn/always-on-vpn/deploy/vpn-deploy-server-infrastructure.md)
-##### [Step 2: Configure the Remote Access Server for Always On VPN](remote-access/vpn/always-on-vpn/deploy/vpn-deploy-ras.md)
-##### [Step 3:Install and Configure the NPS Server](remote-access/vpn/always-on-vpn/deploy/vpn-deploy-nps.md)
-##### [Step 4: Configure DNS and Firewall Settings](remote-access/vpn/always-on-vpn/deploy/vpn-deploy-dns-firewall.md)
-##### [Step 5: Create the ProfileXML for Always On VPN Connections](remote-access/vpn/always-on-vpn/deploy/vpn-deploy-create-profilexml.md)
-##### [Step 6: Configure Windows 10 Client Always On VPN Connections](remote-access/vpn/always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md)
-#### [Migrate from DirectAccess to Always On VPN](remote-access/da-always-on-vpn-migration/da-always-on-migration-overview.md)
-##### [Plan your migration from DirectAccess to Always On VPN](remote-access/da-always-on-vpn-migration/da-always-on-migration-planning.md)
-##### [Migrate to Always On VPN](remote-access/da-always-on-vpn-migration/da-always-on-migration-deploy.md)
-#### [Troubleshoot Always On VPN](remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting.md)
--->
->>>>>>> d9a31a4cef85df62a290dcb35cfcca4df8f5ab15
 ### [Border Gateway Protocol (BGP)](remote-access/bgp/Border-Gateway-Protocol-BGP.md)
 #### [BGP Windows PowerShell Command Reference](remote-access/bgp/BGP-Windows-powershell-Command-Reference.md)
 
