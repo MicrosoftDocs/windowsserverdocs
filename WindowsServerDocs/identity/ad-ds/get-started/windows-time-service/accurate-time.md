@@ -9,7 +9,7 @@ ms.date: 12/21/2016
 ms.topic: article
 ms.prod: windows-server-threshold
 
-ms.technology: networking
+ms.technology: identity-adds
 ---
 
 # Windows Server 2016 Accurate Time
@@ -18,7 +18,6 @@ ms.technology: networking
 
 ## Introduction
 Time synchronization accuracy in Windows Server 2016 has been improved substantially, while maintaining full backwards NTP compatibility with older Windows versions.  Under reasonable operating conditions you can maintain a 1 ms accuracy with respect to UTC or better for Windows Server 2016 and Windows 10 Anniversary Update domain members.  The following whitepaper discusses these topics as they relate to enabling accurate time: 
-
 
 - Improvements
 - Measurements
@@ -34,7 +33,7 @@ Time synchronization accuracy in Windows Server 2016 has been improved substanti
 The Windows Time service is a component which uses a plug-in model for client and server time synchronization providers.  There are two built-in client providers on Windows, and there are also 3rd party plugins available as well.  One provider uses [NTP (RFC 1305)](https://tools.ietf.org/html/rfc1305)  or [MS-NTP](https://msdn.microsoft.com/en-us/library/cc246877.aspx) to synchronize the local system time to an NTP and/or MS-NTP compliant reference server.  The other provider is for Hyper-V and synchronizes virtual machines (VM) to the Hyper-V host.  When multiple providers exist, Windows will pick the best provider using stratum level first, followed by root delay, root dispersion, and finally time offset.
 
 > [!NOTE] 
-> The windows time provider plugin model is [documented on TechNet](https://msdn.microsoft.com/en-us/library/windows/desktop/ms725475(v=vs.85).aspx).
+> The windows time provider plugin model is [documented on TechNet](https://msdn.microsoft.com/en-us/library/windows/desktop/ms725475%28v=vs.85%29.aspx).
 
 Domain and Standalone configurations work differently.
 
@@ -480,36 +479,3 @@ You can disable the feature with these steps:
 3.	Rebooting the machine makes the setting effective immediately and also causes it to stop collecting any time data from SSL connections.  The latter part has a very small overhead and should not be a perf concern.
 
 4.	To apply this setting in an entire domain, please set the UtilizeSSLTimeData value in W32time group policy setting to 0 and publish the setting.  When the setting is picked up by a Group Policy Client, W32time service is notified and it will stop time monitoring and enforcement using SSL time data. The SSL time data collection will stop when each machine reboots. If your domain has portable slim laptops/tablets and other devices, you may want to exclude such machines from this policy change. These devices will eventually face battery drain and need the Secure Time Seeding feature to bootstrap their time.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-

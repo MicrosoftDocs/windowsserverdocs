@@ -9,13 +9,15 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 
-ms.technology: networking
+ms.technology: identity-adds
 ---
 
 # How the Windows Time Service Works
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
+  
+  
 **In this section**  
   
 -   [Windows Time Service Architecture](#w2k3tr_times_how_rrfo)  
@@ -41,7 +43,7 @@ Although the Windows Time service is not an exact implementation of the Network 
 -   The amount of CPU and network resources available to the Windows Time service  
   
 > [!IMPORTANT]  
-> Prior to Windows Server 2016, the W32Time service was not designed to meet time-sensitive application needs.  However, updates to Windows Server 2016 now allow you to implement a solution for 1ms accuracy in your domain.  See [Windows 2016 Accurate Time](accurate-time.md) and  [Support boundary to configure the Windows Time service for high-accuracy environments](https://go.microsoft.com/fwlink/?LinkID=179459) for more information.  
+> Prior to Windows Server 2016, the W32Time service was not designed to meet time-sensitive application needs.  However, updates to Windows Server 2016 now allow you to implement a solution for 1ms accuracy in your domain.  See [Windows 2016 Accurate Time](Windows-2016-Accurate-Time.md) and  [Support boundary to configure the Windows Time service for high-accuracy environments](https://go.microsoft.com/fwlink/?LinkID=179459) for more information.  
   
 Computers that synchronize their time less frequently, such as computers running Windows XP Home Edition, computers with intermittent network connections, or computers that are not joined to a domain, are configured by default to synchronize with time.windows.com. Because they do not synchronize their clock frequently and because the factors that affect time accuracy may not be known, it is impossible to guarantee time accuracy on computers that have intermittent or no network connections.  
   
@@ -126,7 +128,7 @@ Hardware-based clocks such as GPS or radio clocks are often used as highly accur
   
 Hardware devices, such as a cesium clock or a Global Positioning System (GPS) receiver, provide accurate current time by following a standard to obtain an accurate definition of time. Cesium clocks are extremely stable and are unaffected by factors such as temperature, pressure, or humidity, but are also very expensive. A GPS receiver is much less expensive to operate and is also an accurate reference clock. GPS receivers obtain their time from satellites that obtain their time from a cesium clock. Without the use of an independent time provider, Windows time servers can acquire their time by connecting to an external NTP server, which is connected to a hardware device by means of a telephone or the Internet. Organizations such as the United States Naval Observatory provide NTP servers that are connected to extremely reliable reference clocks.  
   
-Many GPS receivers and other time devices can function as NTP servers on a network. You can configure your AD DS forest to synchronize time from these external hardware devices only if they are also acting as NTP servers on your network. To do so, configure the domain controller functioning as the primary domain controller (PDC) emulator in your forest root to synchronize with the NTP server provided by the GPS device. To do so, see [Configure the Windows Time service on the PDC emulator in the Forest Root Domain](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731191%28v=ws.10%29).  
+Many GPS receivers and other time devices can function as NTP servers on a network. You can configure your AD DS forest to synchronize time from these external hardware devices only if they are also acting as NTP servers on your network. To do so, configure the domain controller functioning as the primary domain controller (PDC) emulator in your forest root to synchronize with the NTP server provided by the GPS device. To do so, see [Configure the Windows Time service on the PDC emulator in the Forest Root Domain](https://go.microsoft.com/fwlink/?LinkId=91969) (https://go.microsoft.com/fwlink/?LinkId=91969).  
   
 ### Simple Network Time Protocol  
 The Simple Network Time Protocol (SNTP) is a simplified time protocol that is intended for servers and clients that do not require the degree of accuracy that NTP provides. SNTP, a more rudimentary version of NTP, is the primary time protocol that is used in Windows 2000. Because the network packet formats of SNTP and NTP are identical, the two protocols are interoperable. The primary difference between the two is that SNTP does not have the error management and complex filtering systems that NTP provides. For more information about the Simple Network Time Protocol, see RFC 1769 in the IETF RFC Database.  
@@ -207,7 +209,7 @@ The following table lists the queries that a domain controller makes to find a t
 |3|Local PDC emulator|In-site|Does not apply.<br /><br />A domain controller does not attempt to synchronize with itself.|  
 |4|Parent domain controller|Out-of-site|Prefers a reliable time source but it can synchronize with a non-reliable time source if that is all that is available.|  
 |5|Local domain controller|Out-of-site|Only synchronizes with a reliable time source.|  
-|6|Local PDC emulator|Out-of-site|Does not apply.<br /><br />A domain controller does not attempt to synchronize with itself.|  
+|6|Local PDC emulator|Out-of-site|Does not apply.<br /><br />A domain controller does not attempt to synchronize with itself.| 
   
 **Note**  
   
@@ -242,7 +244,7 @@ There are certain situations in which you will want to stop a computer from sync
   
 You can also disable synchronization to prevent the generation of errors in the event log. Each time a computer attempts to synchronize with a time source that is unavailable, it generates an error in the Event Log. If a time source is taken off of the network for scheduled maintenance and you do not intend to reconfigure the client to synchronize from another source, you can disable synchronization on the client to prevent it from attempting synchronization while the time server is unavailable.  
   
-It is useful to disable synchronization on the computer that is designated as the root of the synchronization network. This indicates that the root computer trusts its local clock. If the root of the synchronization hierarchy is not set to **NoSync** and if it is unable to synchronize with another time source, clients do not accept the packet that this computer sends out because its time cannot be trusted.  
+It is useful to disable synchronization on the computer that is designated as the root of the synchronization network. This indicates that the root computer trusts its local clock. If the root of the synchronization hierarchy is not set to **NoSync** and if it is unable to synchronize with another time source, clients do not accept the packet that this computer sends out because its time cannot be trusted.
   
 The only time servers that are trusted by clients even if they have not synchronized with another time source are those that have been identified by the client as reliable time servers.  
   
@@ -260,9 +262,6 @@ The Windows Time service communicates on a network to identify reliable time sou
 |SNTP|123|N/A|  
   
 ## See Also  
-[Windows Time Service Technical Reference](https://technet.microsoft.com/library/cc773061.aspx)  
-[Windows Time Service Tools and Settings](Windows-Time-Service-Tools-and-Settings.md)  
-[Microsoft Knowledge Base article 902229](https://go.microsoft.com/fwlink/?LinkId=186066)  
-  
-
-
+[Windows Time Service Technical Reference](https://technet.microsoft.com/library/cc773061.aspx)
+[Windows Time Service Tools and Settings](Windows-Time-Service-Tools-and-Settings.md)
+[Microsoft Knowledge Base article 902229](https://go.microsoft.com/fwlink/?LinkId=186066)
