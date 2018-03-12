@@ -9,7 +9,7 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 
-ms.technology: identity-adds
+ms.technology: networking
 ---
 
 # How the Windows Time Service Works
