@@ -6,7 +6,7 @@ ms.manager: dmoss
 ms.technology: storage-file-systems
 ms.topic: article
 author: gawatu
-ms.date: 12/18/2017
+ms.date: 03/12/2018
 ---
 # Resilient File System (ReFS) overview
 
