@@ -187,9 +187,8 @@
 ####### [Step 2: Configure the Remote Access Server](remote-access/ras/manage-remote-clients/install/Step-2-Configure-the-remote-Access-Server.md)
 ####### [Step 3: Verify the Deployment](remote-access/directaccess/single-server-advanced/Step-3-verify-the-Deployment.md)
 <<<<<<< HEAD
-<!-- 
 =======
-<!-- This is the original structure of the TOC for VPN-->
+<!-- This is the original structure of the TOC for VPN
 >>>>>>> d9a31a4cef85df62a290dcb35cfcca4df8f5ab15
 ### [Virtual Private Networking (VPN)](remote-access/vpn/vpn-top.md)
 #### [Always On VPN and DirectAccess Features Comparison](remote-access/vpn/vpn-map-da.md)
