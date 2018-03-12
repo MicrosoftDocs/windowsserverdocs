@@ -209,7 +209,7 @@ The following table lists the queries that a domain controller makes to find a t
 |3|Local PDC emulator|In-site|Does not apply.<br /><br />A domain controller does not attempt to synchronize with itself.|  
 |4|Parent domain controller|Out-of-site|Prefers a reliable time source but it can synchronize with a non-reliable time source if that is all that is available.|  
 |5|Local domain controller|Out-of-site|Only synchronizes with a reliable time source.|  
-|6|Local PDC emulator|Out-of-site|Does not apply.<br /><br />A domain controller does not attempt to synchronize with itself.|  
+|6|Local PDC emulator|Out-of-site|Does not apply.<br /><br />A domain controller does not attempt to synchronize with itself.| 
   
 **Note**  
   
@@ -244,7 +244,7 @@ There are certain situations in which you will want to stop a computer from sync
   
 You can also disable synchronization to prevent the generation of errors in the event log. Each time a computer attempts to synchronize with a time source that is unavailable, it generates an error in the Event Log. If a time source is taken off of the network for scheduled maintenance and you do not intend to reconfigure the client to synchronize from another source, you can disable synchronization on the client to prevent it from attempting synchronization while the time server is unavailable.  
   
-It is useful to disable synchronization on the computer that is designated as the root of the synchronization network. This indicates that the root computer trusts its local clock. If the root of the synchronization hierarchy is not set to **NoSync** and if it is unable to synchronize with another time source, clients do not accept the packet that this computer sends out because its time cannot be trusted.  
+It is useful to disable synchronization on the computer that is designated as the root of the synchronization network. This indicates that the root computer trusts its local clock. If the root of the synchronization hierarchy is not set to **NoSync** and if it is unable to synchronize with another time source, clients do not accept the packet that this computer sends out because its time cannot be trusted.
   
 The only time servers that are trusted by clients even if they have not synchronized with another time source are those that have been identified by the client as reliable time servers.  
   
@@ -262,9 +262,6 @@ The Windows Time service communicates on a network to identify reliable time sou
 |SNTP|123|N/A|  
   
 ## See Also  
-[Windows Time Service Technical Reference](https://technet.microsoft.com/library/cc773061.aspx)  
-[Windows Time Service Tools and Settings](Windows-Time-Service-Tools-and-Settings.md)  
-[Microsoft Knowledge Base article 902229](https://go.microsoft.com/fwlink/?LinkId=186066)  
-  
-
-
+[Windows Time Service Technical Reference](https://technet.microsoft.com/library/cc773061.aspx)
+[Windows Time Service Tools and Settings](Windows-Time-Service-Tools-and-Settings.md)
+[Microsoft Knowledge Base article 902229](https://go.microsoft.com/fwlink/?LinkId=186066)

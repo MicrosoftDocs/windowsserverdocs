@@ -16,8 +16,6 @@ ms.technology: identity-adds
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-  
-  
 **In this section**  
   
 -   [Windows Time Service Tools](#w2k3tr_times_tools_dyax)  
@@ -31,7 +29,7 @@ ms.technology: identity-adds
 -   [Related Information](#w2k3tr_times_tools_qoep)  
   
 > [!NOTE]  
-> This topic contains information only about tools and settings for Windows Time service (W32Time). If you only want to synchronize time for a domain-joined client computer, see [Configure a client computer for automatic domain time synchronization](https://technet.microsoft.com/en-us/library/cc758905(v=ws.10)). For additional topics about how to configure Windows Time service, see the list of topics in the section [Where to Find Windows Time Service Configuration Information](https://technet.microsoft.com/library/cc773061.aspx).  
+> This topic contains information only about tools and settings for Windows Time service (W32Time). If you only want to synchronize time for a domain-joined client computer, see [Configure a client computer for automatic domain time synchronization](https://technet.microsoft.com/en-us/library/cc758905%28v=ws.1%29)). For additional topics about how to configure Windows Time service, see the list of topics in the section [Where to Find Windows Time Service Configuration Information](https://technet.microsoft.com/library/cc773061.aspx).  
   
 > [!CAUTION]  
 > You should not use the Net time command to configure or set time when the Windows Time service is running.  
@@ -160,8 +158,6 @@ The following registry entries must be added in order to enable W32Time logging:
 |FileLogEntries|All|This entry controls the amount of entries created in the Windows Time log file. The default value is none, which does not log any Windows Time activity. Valid values are 0 to 300. This value does not affect the event log entries normally created by Windows Time|
 |FileLogName|All|This entry controls the location and file name of the Windows Time log. The default value is blank, and should not be changed unless **FileLogEntries** is changed. A valid value is a full path and file name that Windows Time will use to create the log file. This value does not affect the event log entries normally created by Windows Time.  |
 |FileLogSize|All|This entry controls the circular logging behavior of Windows Time log files. When **FileLogEntries** and **FileLogName** are defined, this entry defines the size, in bytes, to allow the log file to reach before overwriting the oldest log entries with new entries. Any positive number is valid, and 3000000 is recommended. This value does not affect the event log entries normally created by Windows Time.  |
-
-
 
 #### <a name="NtpClient"></a>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpClient
 
