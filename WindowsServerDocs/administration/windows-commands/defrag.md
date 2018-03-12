@@ -16,7 +16,7 @@ ms.date: 10/16/2017
 ---
 # defrag
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows 10, Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Locates and consolidates fragmented files on local volumes to improve system performance.
 Membership in the local **Administrators** group, or equivalent, is the minimum required to run this command.

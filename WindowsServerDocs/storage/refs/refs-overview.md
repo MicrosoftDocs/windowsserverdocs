@@ -6,7 +6,7 @@ ms.manager: dmoss
 ms.technology: storage-file-systems
 ms.topic: article
 author: gawatu
-ms.date: 12/18/2017
+ms.date: 03/12/2018
 ---
 # Resilient File System (ReFS) overview
 
@@ -115,6 +115,7 @@ Deploying ReFS on basic disks is best suited for applications that implement the
 | Sparse files | Yes | Yes |
 | Named streams | Yes | Yes |
 1. Available on Windows Server, version 1709 and later.
+
 #### The following features are only available on ReFS:
 
 | Functionality       | ReFS                                        | NTFS |

@@ -5,82 +5,82 @@ ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 02/28/2018
+ms.date: 03/05/2018
 ---
 
 # Delimit the allocation of volumes in Storage Spaces Direct
-> Applies To: Windows Server Insider Preview
+> Applies To: Windows Server Insider Preview, build 17093 and later
 
 Windows Server Insider Preview introduces an option to manually delimit the allocation of volumes in Storage Spaces Direct. Doing so can significantly increase fault tolerance under certain conditions, but imposes some added management considerations and complexity. This topic explains how it works and gives examples in PowerShell.
 
    > [!IMPORTANT]
-   > This feature is new in Windows Server Insider Preview only. It is not available in Windows Server 2016.
+   > This feature is new in Windows Server Insider Preview, build 17093 and later. It is not available in Windows Server 2016. We invite IT pros to join the [Windows Server Insider Program](https://aka.ms/serverinsider) to give us feedback on what we can do to make Windows Server work better for your organization.
 
 ## Prerequisites
 
-### ![supported](media/delimit-volume-allocation/supported.png) Consider using this option if:
+### ![Green checkmark icon.](media/delimit-volume-allocation/supported.png) Consider using this option if:
 
 - Your cluster has six or more servers; and
 - Your cluster uses only [three-way mirror](storage-spaces-fault-tolerance.md#mirroring) resiliency
 
-### ![unsupported](media/delimit-volume-allocation/unsupported.png) Do not use this option if:
+### ![Red X icon.](media/delimit-volume-allocation/unsupported.png) Do not use this option if:
 
 - Your cluster has fewer than six servers; or
 - Your cluster uses [parity](storage-spaces-fault-tolerance.md#parity) or [mirror-accelerated parity](storage-spaces-fault-tolerance.md#mirror-accelerated-parity) resiliency
 
-## Understand: Regular versus delimited allocation
+## Understand
 
-### Regular allocation
+### Review: regular allocation
 
-With regular three-way mirroring, the volume is divided into many small "slabs" that are copied three times and distributed evenly across every drive in every server in the cluster. For more details, read [this Deep Dive blog](https://blogs.technet.microsoft.com/filecab/2016/11/21/deep-dive-pool-in-spaces-direct/).
+With regular three-way mirroring, the volume is divided into many small "slabs" that are copied three times and distributed evenly across every drive in every server in the cluster. For more details, read [this deep dive blog](https://blogs.technet.microsoft.com/filecab/2016/11/21/deep-dive-pool-in-spaces-direct/).
 
-![regular-allocation](media/delimit-volume-allocation/regular-allocation.png)
+![Diagram showing the volume being divided into three stacks of slabs and distributed evenly across every server.](media/delimit-volume-allocation/regular-allocation.png)
 
-This default allocation maximizes parallel reads and writes, yielding better performance, and is appealing in its simplicity: every server is equally busy, every drive is equally full, and all volumes live and die together. Every volume is guaranteed to survive up to two concurrent failures, as [these examples](storage-spaces-fault-tolerance.md#examples) illustrate.
+This default allocation maximizes parallel reads and writes, yielding better performance, and is appealing in its simplicity: every server is equally busy, every drive is equally full, and all volumes stay online or go offline together. Every volume is guaranteed to survive up to two concurrent failures, as [these examples](storage-spaces-fault-tolerance.md#examples) illustrate.
 
-However, with this allocation, no volume can survive three concurrent failures. If three servers fail at once, or if drives in three servers fail at once, every volume becomes inaccessible because at least *some* of its slabs were (with very high probability) allocated to the exact three drives or servers that failed.
+However, with this allocation, volumes can't survive three concurrent failures. If three servers fail at once, or if drives in three servers fail at once, volumes become inaccessible because at least *some* slabs were (with very high probability) allocated to the exact three drives or servers that failed.
 
 In the example below, servers 1, 3, and 5 fail at the same time. Although many slabs have surviving copies, some do not:
 
-![regular-does-not-survive](media/delimit-volume-allocation/regular-does-not-survive.png)
+![Diagram showing three of six servers highlighted in red, and the overall volume is red.](media/delimit-volume-allocation/regular-does-not-survive.png)
 
 The volume is inaccessible until the servers are recovered.
 
-### Delimited allocation
+### New: delimited allocation
 
 With delimited allocation, you specify a subset of servers to use (minimum three for three-way mirror). As before, the volume is divided into slabs that are copied three times – but instead of allocating across every server, **the slabs are allocated only to the subset of servers you specify**.
 
-![delimited-allocation](media/delimit-volume-allocation/delimited-allocation.png)
+![Diagram showing the volume being divided into three stacks of slabs and distributed only to three of six servers.](media/delimit-volume-allocation/delimited-allocation.png)
 
 #### Advantages
 
-With this allocation, the volume is very likely to survive three concurrent failures: in fact, the probability of survival increases from 0% (with regular allocation) to 95% (with delimited allocation)! Intuitively, this is because the volume does not depend on servers 4, 5, or 6 so it is not affected by their failures. Survival probability depends on the number of servers and other factors – for more details, see the [analysis](#analysis-of-survival-probabilities) section. 
+With this allocation, volumes are very likely to survive three concurrent failures: in fact, the probability of survival for each volume increases from 0% (with regular allocation) to 95% (with delimited allocation)! Intuitively, this is because the volume shown does not depend on servers 4, 5, or 6 so it is not affected by their failures. Survival probability depends on the number of servers and other factors – for more details, see [Analysis](#analysis).
 
 In the example (same as above), servers 1, 3, and 5 fail at the same time. Our delimited allocation ensures that server 2 contains a copy of *every* slab, so every slab has a surviving copy, and the volume stays accessible:
 
-![delimited-does-survive](media/delimit-volume-allocation/delimited-does-survive.png)
+![Diagram showing three of six servers highlighted in red, yet the overall volume is green.](media/delimit-volume-allocation/delimited-does-survive.png)
 
 #### Disadvantages
 
 Delimited allocation imposes some added management considerations and complexity:
 
-1. You are responsible for delimiting the allocation of each volume to balance storage utilization across servers and uphold high probability of survival. We recommend delimiting each volume to three servers, and ensuring that every volume's delimitation is unique, meaning it does not share *all* its servers with another volume (sharing *some* is expected). With 6 servers, there are 20 unique combinations; with 8 servers, there are 56 unique combinations; and so on. See the [analysis](#analysis-of-survival-probabilities) section for more details.
+1. The administrator is responsible for delimiting the allocation of each volume to balance storage utilization across servers and uphold high probability of survival. We recommend delimiting each volume to three servers, and ensuring that every volume's delimitation is unique, meaning it does not share *all* its servers with another volume. For more details, see [Analysis](#analysis).
 
-2. When using delimited allocation, we recommend reserving the equivalent of one capacity drive per server, **with no maximum**. This is more than the [published recommendation](plan-volumes.md#choosing-the-size-of-volumes) for regular allocation, which maxes out at four capacity drives total.
+2. With delimited allocation, reserve the equivalent of **one capacity drive per server (with no maximum)**. This is more than the [published recommendation](plan-volumes.md#choosing-the-size-of-volumes) for regular allocation, which maxes out at four capacity drives total.
 
-3. If a server fails and needs to be replaced, as described in [Remove a server and its drives](remove-servers.md#remove-a-server-and-its-drives), you are responsible for changing the delimitation of affected volumes (i.e. adding a new server and removing the failed one – example below).
+3. If a server fails and needs to be replaced, as described in [Remove a server and its drives](remove-servers.md#remove-a-server-and-its-drives), the administrator is responsible for updating the delimitation of affected volumes by adding the new server and removing the failed one – example below.
 
 ## Usage in PowerShell
 
-### Create a volume and delimit its allocation
-
 You can use the `New-Volume` cmdlet to create volumes in Storage Spaces Direct.
 
-For example, to create a regular three-way mirror volume, you would run:
+For example, to create a regular three-way mirror volume:
 
 ```PowerShell
 New-Volume -FriendlyName "MyRegularVolume" -Size 100GB
 ```
+
+### Create a volume and delimit its allocation
 
 To create a three-way mirror volume and delimit its allocation:
 
@@ -93,7 +93,7 @@ To create a three-way mirror volume and delimit its allocation:
    > [!TIP]
    > In Storage Spaces Direct, the term 'Storage Scale Unit' refers to all the raw storage attached to one server, including direct-attached drives and direct-attached external enclosures with drives. In this context, it's like a synonym for 'server'.
 
-2. Then, specify which servers to use with the new `-StorageFaultDomainsToUse` parameter and by indexing into `$Servers`. For example, to delimit the allocation to the first, second, and third servers (indices 0, 1, and 2) only, run:
+2. Specify which servers to use with the new `-StorageFaultDomainsToUse` parameter and by indexing into `$Servers`. For example, to delimit the allocation to the first, second, and third servers (indices 0, 1, and 2), run:
 
     ```PowerShell
     New-Volume -FriendlyName "MyVolume" -Size 100GB -StorageFaultDomainsToUse $Servers[0,1,2]
@@ -101,7 +101,7 @@ To create a three-way mirror volume and delimit its allocation:
 
 ### See a delimited allocation
 
-To see how MyVolume is allocated, the [Appendix](#appendix) provides a helpful script:
+To see how *MyVolume* is allocated, use the `Get-VirtualDiskFootprintBySSU.ps1` script in [Appendix](#appendix):
 
 ```PowerShell
 PS C:\> .\Get-VirtualDiskFootprintBySSU.ps1
@@ -111,7 +111,7 @@ VirtualDiskFriendlyName TotalFootprint Server1 Server2 Server3 Server4 Server5 S
 MyVolume                300 GB         100 GB  100 GB  100 GB  0       0       0      
 ```
 
-Note that only Server1, Server2, and Server3 contains slabs of MyVolume.
+Note that only Server1, Server2, and Server3 contains slabs of *MyVolume*.
 
 ### Change a delimited allocation
 
@@ -119,13 +119,13 @@ Use the new `Add-StorageFaultDomain` and `Remove-StorageFaultDomain` cmdlets to 
 
 For example, to move MyVolume "to the right" by one server:
 
-1. Specify that the fourth server (index 3 in `$Servers`) **can** store slabs of MyVolume:
+1. Specify that the fourth server **can** store slabs of *MyVolume*:
 
     ```PowerShell
     Get-VirtualDisk MyVolume | Add-StorageFaultDomain -StorageFaultDomains $Servers[3]
     ```
 
-2. Specify that the first server (index 0 in `$Servers`) **cannot** store slabs of MyVolume:
+2. Specify that the first server **cannot** store slabs of *MyVolume*:
 
     ```PowerShell
     Get-VirtualDisk MyVolume | Remove-StorageFaultDomain -StorageFaultDomains $Servers[0]
@@ -137,9 +137,11 @@ For example, to move MyVolume "to the right" by one server:
     Get-StoragePool S2D* | Optimize-StoragePool
     ```
 
-![move-gif](media/delimit-volume-allocation/move.gif)
+![Diagram showing the slabs migrate en-masse from servers 1, 2, and 3 to servers 2, 3, and 4.](media/delimit-volume-allocation/move.gif)
 
-Once the rebalance has completed (you can monitor it with `Get-StorageJob`), you can verify that MyVolume has moved by running the `Get-VirtualDiskFootprintBySSU.ps1` script again.
+You can monitor the progress of the rebalance with `Get-StorageJob`.
+
+Once it is complete, verify that *MyVolume* has moved by running `Get-VirtualDiskFootprintBySSU.ps1` again.
 
 ```PowerShell
 PS C:\> .\Get-VirtualDiskFootprintBySSU.ps1
@@ -149,9 +151,9 @@ VirtualDiskFriendlyName TotalFootprint Server1 Server2 Server3 Server4 Server5 S
 MyVolume                300 GB         0       100 GB  100 GB  100 GB  0       0      
 ```
 
-Note that Server1 does not contain slabs of MyVolume anymore – instead, Server04 does.
+Note that Server1 does not contain slabs of *MyVolume* anymore – instead, Server04 does.
 
-## Analysis of survival probabilities
+## Analysis
 
 Coming soon.
 

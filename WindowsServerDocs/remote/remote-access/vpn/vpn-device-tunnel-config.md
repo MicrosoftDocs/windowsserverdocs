@@ -1,5 +1,5 @@
 ---
-title: VPN Device Tunnels in Always On VPN
+title: Configure the VPN Device Tunnel in Windows 10
 description: You can use this topic to learn how to create a VPN device tunnel in Windows 10.
 manager: brianlic
 ms.prod: windows-server-threshold
@@ -7,10 +7,10 @@ ms.date:
 ms.technology: networking-ras
 ms.topic: article
 ms.assetid: 158b7a62-2c52-448b-9467-c00d5018f65b
-ms.author: pashort
-author: shortpatti
+ms.author: jamesmci
+author: maricia
 ---
-# VPN Device Tunnels in Always On VPN
+# Configure VPN Device Tunnels in Windows 10
 
 >Applies To: Windows 10 version 1709
 
@@ -172,6 +172,11 @@ Following are RAS Gateway resources.
 - [Troubleshooting IKEv2 VPN Connections](https://technet.microsoft.com/en-us/library/dd941612.aspx)
 - [Configure IKEv2-based Remote Access](https://technet.microsoft.com/en-us/library/ff687731.aspx)
 
+<<<<<<< HEAD
 <!-- pashort 3/7/2018: new content from Jason Jones -->
 >[!IMPORTANT]
 >When using Device Tunnel with a Microsoft RAS gateway, you will need to configure the RRAS server to support IKEv2 machine certificate authentication by enabling the **Allow machine certificate authentication for IKEv2** authentication method as described [here](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee922682%28v=ws.10%29). Once this setting is enabled, it is strongly recommended that the **Set-VpnAuthProtocol** PowerShell cmdlet, along with the **RootCertificateNameToAccept** optional parameter, is used to ensure that RRAS IKEv2 connections are only permitted for VPN client certificates that chain to an explicitly defined internal/private Root Certification Authority. Alternatively, the **Trusted Root Certification Authorities** store on the RRAS server should be amended to ensure that it does not contain public certification authorities as discussed [here](https://blogs.technet.microsoft.com/rrasblog/2009/06/10/what-type-of-certificate-to-install-on-the-vpn-server/). Similar methods may also need to be considered for other VPN gateways.
+=======
+>[!IMPORTANT]
+>When using Device Tunnel with a Microsoft RAS gateway, you will need to configure the RRAS server to support IKEv2 machine certificate authentication by enabling the **Allow machine certificate authentication for IKEv2** authentication method as described [here](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee922682%28v=ws.10%29). Once this setting is enabled, it is strongly recommended that the **Set-VpnAuthProtocol** PowerShell cmdlet, along with the **RootCertificateNameToAccept** optional parameter, is used to ensure that RRAS IKEv2 connections are only permitted for VPN client certificates that chain to an explicitly defined internal/private Root Certification Authority. Alternatively, the **Trusted Root Certification Authorities** store on the RRAS server should be amended to ensure that it does not contain public certification authorities as discussed [here](https://blogs.technet.microsoft.com/rrasblog/2009/06/10/what-type-of-certificate-to-install-on-the-vpn-server/). Similar methods may also need to be considered for other VPN gateways.
+>>>>>>> d9a31a4cef85df62a290dcb35cfcca4df8f5ab15

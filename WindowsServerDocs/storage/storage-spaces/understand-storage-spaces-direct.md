@@ -24,6 +24,7 @@ ms.localizationpriority: medium
 - [Understanding the cache in Storage Spaces Direct](understand-the-cache.md)
 - [Fault tolerance and storage efficiency in Storage Spaces Direct](storage-spaces-fault-tolerance.md)
 - [Drive symmetry considerations](drive-symmetry-considerations.md)
+- [Understanding quorum in Storage Spaces Direct](understand-quorum.md)
 
 
 ## See also
