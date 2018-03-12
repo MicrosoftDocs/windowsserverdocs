@@ -2,7 +2,7 @@
 ## [Remote Server Administration Tools](remote-server-administration-tools.md)
 ## [Remote Desktop Services](remote-desktop-services/welcome-to-rds.md)
 ## [Remote Access](remote-access/remote-Access.md)
-
+<!-- New Always On VPN structure -->
 ### [Always On VPN](remote-access/always-on-vpn/always-on-vpn-top.md)
 #### [Features Comparison of Always On VPN and DirectAccess](remote-access/vpn/vpn-map-da.md)
 #### [Always On VPN Technology Overview](remote-access/always-on-vpn/always-on-vpn-technologies.md)
