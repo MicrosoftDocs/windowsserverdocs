@@ -186,10 +186,8 @@
 ####### [Step 1: Configure the Remote Access Infrastructure](remote-access/ras/manage-remote-clients/install/Step-1-Configure-the-remote-Access-Infrastructure.md)
 ####### [Step 2: Configure the Remote Access Server](remote-access/ras/manage-remote-clients/install/Step-2-Configure-the-remote-Access-Server.md)
 ####### [Step 3: Verify the Deployment](remote-access/directaccess/single-server-advanced/Step-3-verify-the-Deployment.md)
-<<<<<<< HEAD
-=======
-<!-- This is the original structure of the TOC for VPN
->>>>>>> d9a31a4cef85df62a290dcb35cfcca4df8f5ab15
+
+<!-- This is the original 
 ### [Virtual Private Networking (VPN)](remote-access/vpn/vpn-top.md)
 #### [Always On VPN and DirectAccess Features Comparison](remote-access/vpn/vpn-map-da.md)
 #### [Migrating from DirectAccess to Always On VPN](remote-access/da-always-on-vpn-migration/da-always-on-migration-overview.md)
@@ -207,11 +205,8 @@
 ###### [Configure Windows 10 Client Always On VPN Connections](remote-access/vpn/always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md)
 ##### [Remote Access Always On VPN Advanced Features](remote-access/vpn/always-on-vpn/deploy/always-on-vpn-adv-options.md)
 ##### [Remote Access Always On VPN Troubleshooting](remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting.md)
-<<<<<<< HEAD
 -->
-=======
 
->>>>>>> d9a31a4cef85df62a290dcb35cfcca4df8f5ab15
 ## [Web Application Proxy in Windows Server](remote-access//web-application-proxy/web-application-proxy-windows-server.md)
 ### [Publishing Applications using AD FS Preauthentication](remote-access//web-application-proxy/Publishing-Applications-using-AD-FS-Preauthentication.md)
 ### [Publishing Applications with SharePoint, Exchange and RDG](remote-access//web-application-proxy/Publishing-Applications-with-SharePoint,-Exchange-and-RDG.md)
