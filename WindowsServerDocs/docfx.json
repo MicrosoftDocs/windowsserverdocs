@@ -31,6 +31,9 @@
     "globalMetadata": {
         "uhfHeaderId": "MSDocsHeader-WindowsIT", 
 		"breadcrumb_path": "/windows-server/breadcrumbs/toc.json",
+	    "feedback_system": "GitHub",
+        "feedback_github_repo": "MicrosoftDocs/windowsserverdocs",
+        "feedback_product_url": "https://windowsserver.uservoice.com/forums/295047-general-feedback",
 		"_op_documentIdPathDepotMapping": {
 			"./": {
 			  "depot_name": "WS.WindowsServerDocs"
