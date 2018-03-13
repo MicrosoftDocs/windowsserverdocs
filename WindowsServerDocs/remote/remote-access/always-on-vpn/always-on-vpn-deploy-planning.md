@@ -26,7 +26,7 @@ Microsoft recommends that you review the design and deployment guides for each o
 ### Servers
 |Requirement  |Description  |
 |---------|---------|
-|Active Directory Domain Services (AD DS)     |Contains the user accounts, computer accounts, and account properties. These properties are required by Protected Extensible Authentication Protocol (PEAP) to authenticate user credentials and to evaluate authorization for VPB connection requests.         |
+|Active Directory Domain Services (AD DS)     |Contains the user accounts, computer accounts, and account properties. These properties are required by Protected Extensible Authentication Protocol (PEAP) to authenticate user credentials and to evaluate authorization for VPN connection requests.         |
 |Domain Name System (DNS)     |Hosts the information that enables client computers and servers to resolve IP addresses.         |
 |Active Directory Certificate Services (AD CS)     |Allows you to build a public key infrastructure (PKI) and provide public key cryptography, digital certificates, and digital signature capabilities of your organization.          |
 |Perimeter network with two firewalls   |Allows the traffic necessary for both VPN and RADIUS communications to function correctly.         |
