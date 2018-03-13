@@ -77,7 +77,7 @@ The following table shows which applications are available *locally* on Server C
 | Hyper-V Manager                    | not available  | available                      |
 
 
-For more information about what *is* included in Server Core, see [Roles, Role Services, and Features included in Windows Server - Server Core](server-core-roles-and-services.md). And for informaiton about what *is not* included in Server Core, see [Roles, Role Services, and Features not included in Server Core](server-core-removed-roles.md)
+For more information about what *is* included in Server Core, see [Roles, Role Services, and Features included in Windows Server - Server Core](server-core-roles-and-services.md). And for information about what *is not* included in Server Core, see [Roles, Role Services, and Features not included in Server Core](server-core-removed-roles.md)
 
 ## Get started using Server Core
 Use the following information to install, configure, and manage the Server Core installation option of Windows Server.
