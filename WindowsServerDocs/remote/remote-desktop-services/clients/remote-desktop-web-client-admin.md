@@ -94,19 +94,19 @@ To see a list of all supported cmdlets for the RDWebClientManagement module, run
 
 If a user reports any of the following issues when opening the web client for the first time, the following sections will tell you what to do to fix them.
 
-### What to do if your browser shows a security warning when you try to access the web client
+### What to do if the user's browser shows a security warning when they try to access the web client
 
-The RDWA role might not be using a trusted certificate. If it isn't, export the certificate and install it manually on the client machine to the trusted root store, then relaunch the browser.
+The RDWA role might not be using a trusted certificate. If it isn't, export the certificate and install it manually on the client machine to the trusted root store, then ask the user to relaunch the browser.
 
 If that doesn't work, that means your server name in the web client URL doesn't exactly match the name provided by the RD Web certificate. Make sure your URL uses the FQDN of the machine hosting the RD Web role.
 
-### What to do if you get an "unsupported browser" error when launching the web client in IE 11
+### What to do if the user gets an "unsupported browser" error when launching the web client in IE 11
 
-This is caused by a conflict with your browser settings. To fix this, open up "Compatibility View settings" in your browser, then uncheck the "Display intranet sites in Compatibility view" option's checkbox.
+This is caused by a conflict with the user's browser settings. To fix this, ask the user to open up "Compatibility View settings" in their browser, then uncheck the "Display intranet sites in Compatibility view" option's checkbox.
 
-### What to do if you can't connect to the web client even though you can see the feed
+### What to do if users can't connect to the web client even though they can see the feed
 
-If you can't connect to the web client even though you can see the feed, check the following things:
+If users report that they can't connect to the web client even though they can see the feed, check the following things:
 
 * Is the RD Gateway role using a trusted public certificate?
 * Is the RD Gateway machine up to date?
@@ -115,7 +115,7 @@ To fix the certificate, close the browser, export the certificate and install it
 
 If manually installing the certificate doesn't solve the connectivity problem, then the issue might be that your RD Gateway machine isn't up to date. Make sure that your machine has [this update](https://support.microsoft.com/en-us/help/4025334/windows-10-update-kb4025334) installed.
 
-If you get a "mismatched certificate" error when you try to connect, then you'll need to check the RD Broker machine's certificate. The error message will show the thumbprint of the expected certificate. Search the RD Broker machine's certmgr using that thumbprint to find the right certificate. After making sure the certificate hasn't expired, copy the certificate in .cer file format to the RD Web machine and run the following cmdlet on the RD Web machine with the bracketed value replaced by the certificate's file path:
+If the user gets a "mismatched certificate" error when they try to connect, then you'll need to check the RD Broker machine's certificate. The error message will show the thumbprint of the expected certificate. Search the RD Broker machine's certificate manager using that thumbprint to find the right certificate. After making sure the certificate hasn't expired, copy the certificate in .cer file format to the RD Web machine and run the following cmdlet on the RD Web machine with the bracketed value replaced by the certificate's file path:
 
 ```PowerShell
 Import-RDWebClientBrokerCert <certificate file path>
