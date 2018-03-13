@@ -42,7 +42,7 @@ BPA works by measuring a role's compliance with best practice rules in eight dif
 
 |Severity level|Description|
 |---------|--------|
-|Error|Error results are returned when a role does not satisfy the conditions of a best practice rule, and functionality problems can be expected.|
+|Error|Error results are returned when a rule does not satisfy the conditions of a best practice rule, and functionality problems can be expected.|
 |Information|Information results are returned when a role satisfies the conditions of a best practice rule.|
 |Warning|Warning results are returned if the results of noncompliance can cause problems if changes are not made. The application might be compliant as operating currently, but may not satisfy the conditions of a rule if changes are not made to its configuration or policy settings. For example, a scan of remote Desktop Services might show a warning result if a license server is unavailable to the role, because even if no remote connections are active at the time of the scan, not having the license server prevents new remote connections from obtaining valid client access licenses.|
 
