@@ -21,10 +21,6 @@ The W32Time service is implemented in a dynamic link library called W32Time.dll,
 
 Although originally designed to provide clock synchronization for Kerberos authentication, many current applications use timestamps to ensure transactional consistency, record the time of important events, and other business-critical, time-sensitive information.  These applications benefit from time synchronization between computers that are provided by the Windows Time service.
 
-
-
-
-
 ## Importance of Time Protocols
 Time protocols communicate between two computers to exchange time information and then use that information to synchronize their clocks. With the Windows Time service time protocol, a client requests time information from a server and synchronizes its clock based on the information that is received.
   
