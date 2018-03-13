@@ -14,6 +14,9 @@ author: Heidilohr
 
 The Remote Desktop client lets users access your organization's remote desktop workstation through a compatible internet browser. They'll be able to interact with apps on the remote machine like they would with a local computer no matter where they are, without having to switch to a different desktop machine. Once you set up your Remote Desktop client, all your users will need to get started is the RD Host Client URL, their credentials, and a supported web browser.
 
+>[!NOTE]
+>You may have heard people call this client the HTML5 client. Both names refer to the same client.
+
 ## What you'll need to set up the web client
 
 Before getting started, keep the following things in mind:
