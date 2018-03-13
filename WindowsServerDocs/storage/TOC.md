@@ -61,6 +61,8 @@
 #### [Connect to a Remote Computer](fsrm/connect-to-remote-computer.md)
 #### [Command-Line Tools](fsrm/command-line-tools.md)
 ### [Troubleshooting File Server Resource Manager](fsrm/troubleshooting-file-server-resource-manager.md)
+## Folder Redirection & Roaming User Profiles
+### [Deploying Roaming User Profiles](folder-redirection/deploy-roaming-user-profiles.md)
 ## [ReFS](refs/refs-overview.md)
 ### [Mirror-accelerated parity](refs/mirror-accelerated-parity.md)
 ### [Block cloning](refs/block-cloning.md)
