@@ -22,10 +22,8 @@ This topic describes how to use Windows Server to deploy [Roaming User Profiles]
 
 For a list of recent changes to this topic, see the [Change History]() section of this topic.
 
-
 > [!IMPORTANT]
 > Due to the security changes made in <A href="https://support.microsoft.com/help/3163622/ms16-072-security-update-for-group-policy-june-14%2c-2016">MS16-072</A>, we updated <A href="">Step 4: Optionally create a GPO for Roaming User Profiles</A> of this topic so that Windows can properly apply the Roaming User Profiles policy (and not revert to local policies on affected PCs).
-
 
 ## Prerequisites
 
@@ -55,11 +53,11 @@ Roaming User Profiles has the following software requirements:
     
       - If the file share is clustered, disable continuous availability on the file share to avoid performance issues.
 
-  - To use primary computer support in Roaming User Profiles, there are additional client computer and Active Directory schema requirements. For more information, see [Deploy Primary Computers for Folder Redirection and Roaming User Profiles](jj649076\(v=ws.11\).md).
+  - To use primary computer support in Roaming User Profiles, there are additional client computer and Active Directory schema requirements. For more information, see [Deploy Primary Computers for Folder Redirection and Roaming User Profiles](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj649076(v%3dws.11)).
 
   - The layout of a user's Start menu won't roam on Windows 10 or Windows Server 2016 if they're using more than one PC, Remote Desktop Session Host, or Virtualized Desktop Infrastructure (VDI) server. As a workaround, you can specify a Start layout as described in this topic. Or you can make use of user profile disks, which properly roam Start menu settings when used with Remote Desktop Session Host servers or VDI servers. For more info, see [Easier User Data Management with User Profile Disks in Windows Server 2012](https://blogs.technet.microsoft.com/enterprisemobility/2012/11/13/easier-user-data-management-with-user-profile-disks-in-windows-server-2012/).
 
-###  Considerations when using Roaming User Profiles on multiple versions of Windows
+### Considerations when using Roaming User Profiles on multiple versions of Windows
 
 If you decide to use Roaming User Profiles across multiple versions of Windows, we recommend taking the following actions:
 
@@ -94,11 +92,9 @@ To make these changes, use the following procedure.
     ``` 
     HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\ProfSvc\Parameters\UseProfilePathExtensionVersion  
     ```
-    
 
 > [!WARNING]
 > Incorrectly editing the registry may severely damage your system. Before making changes to the registry, you should back up any valued data on the computer.
-
 
 3.  Restart the computers.
 
@@ -164,7 +160,7 @@ If you do not already have a separate file share for roaming user profiles (inde
 
 9.  Set the permissions as described Table 1 and shown in Figure 1, removing permissions for unlisted groups and accounts, and adding special permissions to the Roaming User Profiles Users and Computers group that you created in Step 1.
     
-    ![Advanced Security Settings window showing permissions as described in Table 1](media\advanced-security-user-profiles.jpeg)
+    ![Advanced Security Settings window showing permissions as described in Table 1](media\advanced-security-user-profiles.jpg)
     
     **Figure 1** Setting the permissions for the roaming user profiles share
 
@@ -268,7 +264,6 @@ If you are deploying Roaming User Profiles to user accounts, use the following p
     To specify a mandatory roaming user profile, specify the path to the NTuser.man file that you created previously, for example, `fs1.corp.contoso.comUser Profiles$default`. For more information, see [Create mandatory user profiles](https://technet.microsoft.com/itpro/windows/manage/mandatory-user-profile).
 
 4.  Click **OK**.
-
 
 > [!NOTE]
 > By default, deployment of all Windows® Runtime-based (Windows Store) apps is allowed when using Roaming User Profiles. However, when using a special profile, apps are not deployed by default. Special profiles are user profiles where changes are discarded after the user signs out:
@@ -588,9 +583,8 @@ The following table summarizes some of the most important changes to this topic.
 ## See Also
 
 [Deploy Folder Redirection, Offline Files, and Roaming User Profiles](https://technet.microsoft.com/en-us/library/JJ649074)  
-[Deploy Primary Computers for Folder Redirection and Roaming User Profiles](jj649076\(v=ws.11\).md)  
+[Deploy Primary Computers for Folder Redirection and Roaming User Profiles](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj649076(v%3dws.11)d)  
 [Implementing User State Management](http://technet.microsoft.com/library/cc784645)  
 [Microsoft’s Support Statement Around Replicated User Profile Data](http://blogs.technet.com/b/askds/archive/2010/09/01/microsoft-s-support-statement-around-replicated-user-profile-data.aspx)  
 [How to Add and Remove Apps](http://go.microsoft.com/fwlink/p/?linkid=231020)  
 [Troubleshooting packaging, deployment, and query of Windows Runtime-based apps](http://msdn.microsoft.com/library/windows/desktop/hh973484.aspx)
-
