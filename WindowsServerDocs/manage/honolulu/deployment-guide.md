@@ -146,10 +146,67 @@ The Uninstall-HonoluluHA.ps1 script uninstalls Honolulu from all the nodes on yo
 
 By default, any user that navigates to the gateway URL has access to the Honolulu service. Only local administrators on the gateway machine have administrator access to the Honolulu service.
 
-Under the "Access" tab in Project Honolulu general settings, administrators can configure gateway access using Active Directory/local groups.
+Under the "Access" tab in Project Honolulu general settings, administrators can configure gateway access using Active Directory/local groups OR Azure Active Directory (AAD). By choosing AAD authentication for the gateway, you can leverage additional security features like conditional access and multi-factor authentication provided by AAD. 
+
+### Active Directory or local machine groups
+
+When you choose Active Directory or local machine groups as your identity provider for gateway access, you can manage gateway user and administrator access from within the Honolulu interface.
 
 Under the "Users" tab, you can control who can access Honolulu as a gateway user. By default, and if no security groups are listed, any user that access the gateway URL has access. Once you add one or more security groups to the users list, access is restricted to the members of those groups.
 
 You can enforce **smartcard authentication** by specifying an additional _required_ group for smartcard-based security groups. Once you have added a smartcard-based security group, a user will only have access to the Honolulu service if they are a member of any security group AND a smartcard group included in the users list.
 
 Under the "Administrators" tab, you can control who can access Honolulu as a gateway administrator. The local administrators group on the machine will always have full administrator access and cannot be removed from the list. By adding security groups, you give members of those groups privileges to change Honolulu gateway settings. The administrators list supports smartcard authentication in the same way as the users list: with the AND condition for a security group and a smartcard group.
+
+### Azure Active Directory
+
+> [!NOTE]
+> AAD authentication is supported in Project Honolulu version 1803, which is only available to Windows Insiders. To get access to this feature, [join the Windows Insider Program](https://insider.windows.com/for-business-getting-started-server/) and download Honolulu from [Windows Server Insider Preview](https://www.microsoft.com/software-download/windowsinsiderpreviewserver).
+
+If you choose Azure Active Directory (AAD) as your identity provider, you will manage user and administrator access from the Azure Portal, rather from within the Honolulu UI.
+
+To set up AAD, you must first [connect your gateway to Azure](#connect-your-gateway-to-azure) (you only need to do this once for your Honolulu gateway). This step creates an AAD application, from which you can manage gateway user and gateway administrator access.
+
+By default, all members of the AAD tenant will have user access to the Honolulu gateway service. Only local administrators on the gateway machine will have administrator access to the Honolulu gateway.
+
+If you want to give specific AAD users or groups gateway user or gateway administrator access to the Honolulu service, you must do the following:
+
+1.	Go to your SME AAD application in the Azure portal. 
+    -	When you click **Change access control** and then select **Azure Active Directory** from the Honolulu Access settings, you can use the hyperlink provided in the UI to access your AAD application in the Azure portal. This hyperlink is also available in the Access settings after you click save and have selected AAD as your access control identity provider.
+    -	You can also find your application in the Azure portal by going to **Azure Active Directory** > **Enterprise applications** > **All applications** and searching **SME** (the AAD app will be named SME-<gateway>). If you don’t get any search results, ensure **Show** is set to **all applications**, **application status** is set to **any** and click Apply, then try your search. Once you’ve found the application, go to **Users and groups**
+2.	In the Properties tab, set **User assignment required** to Yes.
+    Once you’ve done this, only members listed in the Users and groups tab will be able to access the Honolulu gateway.
+3.	In the Users and groups tab, select **Add user**. You must assign a gateway user or gateway administrator role for each user/group added.
+
+Once you save the AAD access control in the “Change access control” pane, the gateway service will restart and you must refresh your browser. You can update user access for the SME AAD application in the Azure portal at any time. 
+
+Users will now be prompted to login using their Azure Active Directory identity when they attempt to access the Honolulu gateway URL. From the Azure tab of Honolulu general settings, users and administrators can view their currently logged in account and as well as sign-out of this AAD account.
+
+#### Conditional access and multi-factor authentication
+
+One of the benefits of using Azure Active Directory as your identity provider for controlling access to the Honolulu gateway is that you can leverage AAD’s powerful security features like conditional access and multi-factor authentication. To set up conditional access, you can follow the [guidance here](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal-get-started).
+
+## Connect your gateway to Azure
+
+To allow the Honolulu gateway to communicate with Azure to leverage Azure Active Directory authentication for gateway access, or to create Azure resources on your behalf (e.g. to protect VMs managed in Honolulu using Azure Site Recovery), you must first connect your Honolulu gateway to Azure. This must only be done once for your Honolulu gateway and is preserved upon updating your gateway to a newer version.
+
+To connect your gateway, you must run the [New-AadApp.ps1 PowerShell script](https://aka.ms/HonoluluAzureConnectScript) available for download (there is also a hyperlink in the Honolulu UI for this download), which creates a web application in Azure AD with the name “SME-<gateway>” and registers the application with the Honolulu gateway. This allows Honolulu to connect to Azure resources like AAD on your behalf. The script can be run from any machine that has access to the Honolulu gateway and to Azure, with the Honolulu gateway URL as the -GatewayEndpoint parameter. For example,
+
+    PS> .\New-AadApp.ps1 -GatewayEndpoint "https://gateway.contoso.com"
+
+If you are NOT using port 443, the GatewayEndpoint parameter should contain the port (i.e. https://myComputer:6516).
+
+If there are multiple tenants associated with your Azure account, you can use the -TenantId parameter to specify the tenant in which you want to create the AAD application and associate with your Honolulu gateway. For example,
+
+    PS> .\New-AadApp.ps1 -GatewayEndpoint "https://gateway.contoso.com" -TenantId "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+
+This script requires two Azure PowerShell modules: AzureRm.Resources and AzureAD. If you do not have these modules installed, execute the following commands in an elevated PowerShell console:
+
+    PS C:>Install-Module AzureRM.Resources
+    PS C:>Install-Module AzureAD
+
+After running the script, you must refresh the browser page from which you are accessing the Honolulu gateway. 
+
+### Other considerations
+
+If you have already configured your gateway for Azure connectivity when setting up Azure Site Recovery and used the New-AsrAadApp.ps1 available in our documentation prior to the 1803 release, you will need to delete your existing AAD application by navigating to the Azure portal > **Azure Active Directory** > **Application registration** > **All applications** and searching “ASR” (the old AAD app will be named "ASR-Honolulu-*gateway*"). Then run the [New-AadApp.ps1 script](https://aka.ms/HonoluluAzureConnectScript) to create the replacement application with the correct permissions.
