@@ -99,7 +99,7 @@ services, and Internet Explorer maintenance. The Group Policy settings that you 
 selected Active Directory system containers — sites, domains, and OUs — you can apply the GPO's settings to the users and computers in those Active Directory
 containers. To manage Group Policy objects across an enterprise, you can use the Group Policy Management Editor Microsoft Management Console (MMC).
 
-## Active Directory Certificate Services (AD CA) Server
+## Active Directory Certificate Services (AD CS) Server
 
 AD CS in Windows Server 2016 provides customizable services for creating and managing the X.509 certificates that are used in software security systems that
 employ public key technologies. Organizations can use AD CS to enhance security by binding the identity of a person, device, or service to a corresponding
