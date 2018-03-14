@@ -147,3 +147,4 @@ In this section, you configure Remote Access VPN to allow IKEv2 VPN connections,
 20. If prompted, click **Close** to restart the server.
 
 For the next Always On VPN deployment steps, see [Install and Configure the NPS Server](vpn-deploy-nps.md).
+
