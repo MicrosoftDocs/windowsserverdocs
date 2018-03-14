@@ -10,7 +10,7 @@ ms.author: pashort
 author: shortpatti
 ms.date: 3/4/2018
 ---
-# STEP 5: Install and Configure the NPS Server
+# STEP 4: Install and Configure the NPS Server
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
@@ -31,7 +31,7 @@ The connection requests that are sent by the VPN server includes performing auth
 
 -   Membership in **Administrators**, or equivalent, is the minimum required to perform these procedures.
 
-## STEP 5.1: Install Network Policy Server
+## STEP 4.1: Install Network Policy Server
 
 >[!TIP] 
 >If you already have one or more NPS servers on your network, you do not need to perform NPS Server installation - instead, you can update the configuration of an existing NPS server. 
@@ -77,7 +77,7 @@ Install NPS by using either Windows PowerShell or the Server Manager Add Roles a
 
 11. Click **Close**.
 
-## STEP 5.2: Configure Network Policy Server
+## STEP 4.2: Configure Network Policy Server
 
 After you install NPS, you must do basic configuration, set a friendly name, the IP address, and a shared secret with the virtual private network (VPN) client. The configuration process includes the following high-level steps:
 
@@ -205,5 +205,4 @@ Before you can configure the Windows 10 client Always On VPN connections and cre
 4.  Restart the NPS Server.
 
 ## Next steps
-
-[STEP 6: Configure DNS and Firewall Settings](vpn-deploy-dns-firewall.md). Each DNS server contains the resource records (RRs) it needs to respond to name resolution queries for the portion of the DNS namespace for which it is authoritative. Your firewalls must allow the traffic that is necessary for both VPN and RADIUS communications to function correctly.
+[STEP 3: Configure authentication templates and enroll certificates](vpn-deploy-auth-certs.md). 

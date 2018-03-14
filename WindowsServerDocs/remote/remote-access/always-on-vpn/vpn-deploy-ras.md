@@ -10,7 +10,7 @@ ms.author: pashort
 author: shortpatti
 ms.date: 3/4/2018
 ---
-# STEP 4: Configure the Remote Access Server for Always On VPN
+# STEP 3: Configure the Remote Access Server for Always On VPN
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
@@ -37,7 +37,7 @@ single tenant RAS Gateway virtual private network (VPN) server that provides man
 
 Membership in **Administrators**, or equivalent, is the minimum required to perform these procedures.
 
-## STEP 4.1: Install Remote Access as a RAS Gateway VPN Server
+## STEP 3.1: Install Remote Access as a RAS Gateway VPN Server
 
 Install the Remote Access role as a single tenant RAS Gateway VPN server. For more information, see [Remote Access](https://docs.microsoft.com/windows-server/remote/remote-access/remote-access).
 
@@ -88,7 +88,7 @@ PowerShell.
 
 14. When the installation is complete, click **Close**.
 
-## STEP 4.2: Configure Remote Access as a VPN Server
+## STEP 3.2: Configure Remote Access as a VPN Server
 
 Configure the Remote Access VPN to allow IKEv2 VPN connections, deny connections from other VPN protocols, and assign a static IP address pool for issuance of IP addresses to connecting authorized VPN clients.
 
@@ -197,5 +197,4 @@ Configure the Remote Access VPN to allow IKEv2 VPN connections, deny connections
 20. If prompted, click **Yes** to confirm restarting the server and click **Close** to restart the server.
 
 ## Next steps
-
-[STEP 5: Install and Configure the NPS Server](vpn-deploy-nps.md). Install Network Policy Server (NPS) and perform configuration for Always On VPN.
+[STEP 4: Install and Configure the NPS Server](vpn-deploy-nps.md). Install Network Policy Server (NPS) and perform configuration for Always On VPN.
