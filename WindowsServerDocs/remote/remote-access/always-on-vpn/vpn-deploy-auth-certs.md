@@ -9,10 +9,10 @@ ms.assetid: d165822d-b65c-40a2-b440-af495ad22f42
 manager: brianlic
 ms.author: pashort
 author: shortpatti
-ms.date: 3/4/2018
+ms.date: 3/14/2018
 ---
 
-# STEP 5: Configure authentication templates and enroll certificates
+# STEP 5: Configure and enroll certificates
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
@@ -32,29 +32,19 @@ By configuring certificate autoenrollment in Group Policy, VPN users automatical
 >You must manually enroll certificates on VPN servers.
 
 1.  On a domain controller, open Group Policy Management.
-
 2.  In the navigation tree, right-click your domain, and click **Create a GPO in this domain, and Link it here**.<br><br>The New GPO dialog box opens.
-
 3.  Type **Autoenrollment Policy** and click **OK**.
-
 4.  In the navigation tree, right-click **Autoenrollment Policy**, and click **Edit**.<br><br>The Group Policy Management Editor opens.
-
 5.  Configure _computer_ certificate autoenrollment by doing the following:
-
     1.  In the navigation pane, click **Computer onfiguration\\Policies\\Windows Settings\\Security Settings\\Public Key Policies**.
-    
     2.  In the details pane, right-click **Certificate Services Client – Auto-Enrollment**, and click **Properties**.<br><br>The Certificate Services Client – Auto-Enrollment Properties dialog box opens.
-    
     3.  In **Configuration Model**, click **Enabled** and select the following:<ul><li>**Renew expired certificates, update pending certificates, and remove revoked certificates**</li><li>**Update certificates that use certificate templates**</li></ul>
-    
     4.  Click **OK** to close the Certificate Services Client - Auto-Enrollment Properties dialog box.
-
 6.  Configure _user_ certificate autoenrollment by doing the following:
     7. In the navigation pane, click **User Configuration\\Policies\\Windows Settings\\Security Settings\\Public Key Policies**.
     8. In the details pane, right-click **Certificate Services Client – Auto-Enrollment**, and click **Properties**.<br><br>The Certificate Services Client – Auto-Enrollment Properties dialog box  opens.
     9. In **Configuration Model**, click **Enabled** and select the following:<ul><li>**Renew expired certificates, update pending certificates, and remove revoked certificates**</li><li>**Update certificates that use certificate templates**</li></ul>
     10. Click **OK**.
-
 7.  Close Group Policy Management.
 
 ## STEP 5.2: Create the Users and Servers Groups
@@ -75,7 +65,6 @@ By using a custom group, if you ever want to revoke a user’s VPN access, you c
     6. Click the **Members** tab and click **Add**.<br><br>The Select Users dialog box opens.
     7. Add all the users who need VPN access and click **OK** to close the Select Users dialog box.
     8. Click **OK** to close the VPN Users Properties dialog box.
-
 3.  Configure the _VPN Servers Group_ by doing the following:
     a. Right-click a container or organizational unit, click **New**, and click **Group**.
     b. In **Group name**, type **VPN Servers**, and click **OK**.
@@ -84,7 +73,6 @@ By using a custom group, if you ever want to revoke a user’s VPN access, you c
     e. Click **Object Types**, select the **Computers** check box, and click **OK**.
     f. In **Enter the object names to select**, type the names of your VPN servers, and click **OK**.
     g. Click **OK** to close the VPN Servers Properties dialog box.
-
 4.  Configure the _NPS Servers Group_ by doing the following:
     a. Right-click a container or organizational unit, click **New**, and click **Group**.
     b. In Group name, type **NPS Servers**, and click **OK**.
@@ -93,7 +81,6 @@ By using a custom group, if you ever want to revoke a user’s VPN access, you c
     e. Click **Object Types**, select the **Computers** check box, and click  **OK**.
     f. In **Enter the object names to select**, type the names of your NPS server, and click **OK**.
     g. Click **OK** to close the NPS Servers Properties dialog box.
-
 5.  Close Active Directory Users and Computers.
 
 ## STEP 5.3: (Optional) Configure VPN for Conditional Access in Azure AD
@@ -117,13 +104,12 @@ In the Azure portal, you can create two certificates to manage the transition wh
     1.  `certutil -dspublish <CACERT> RootCA`
     2.  `certutil -dspublish <CACERT> NtAuthCA`
 4. On the VPN Server, sign in as **Enterprise Administrator**, open **Windows PowerShell (Admin)**, and run the following commands:
-    
     |Command  |Description  |
     |---------|---------|
     |`certutil -dspublish -f VpnCert.cer RootCA`     |Creates two **Microsoft VPN root CA gen 1** containers under the **CN=AIA** and **CN=Certification Authorities** containers, and publishes each root certificate as a value on the _cACertificate_ attribute of both **Microsoft VPN root CA gen 1** containers.         |
     |`certutil -dspublish -f VpnCert.cer NTAuthCA`     |Creates one **CN=NTAuthCertificates** container under the **CN=AIA** and **CN=Certification Authorities** containers, and publishes each root certificate as a value on the _cACertificate_ attribute of the **CN=NTAuthCertificates** container.         |
 
-    These commands publish the root certificate to the **CN=Certification Authorities** and **CN=AIA** containers in the Configuration naming context. Once the CN=Configuration naming context has replicated to all domain controllers in the forest, Windows 10 clients add the root certificate to their trusted root authorities container when Group Policy refreshes. 
+    These commands publish the root certificate to the **CN=Certification Authorities** and **CN=AIA** containers in the Configuration naming context. Once the CN=Configuration naming context has replicated to all domain controllers in the forest, Windows 10 clients add the root certificate to their trusted root authorities container when Group Policy refreshes.<br>
 1. Verify that the root certificates are present and show as trusted:
     a.  On the VPN server's Start menu, type **pkiview.msc** to open the Enterprise PKI dialog. 
     b. Right-click **Enterprise PKI** and select **Manage AD Containers**.
@@ -148,9 +134,7 @@ After you have created the users and servers group, you create one of three auth
 **Procedure:**
 
 1.  On the AD CA, open Certification Authority.
-
 2.  In the navigation pane, right-click **Certificate Templates**, and click **Manage**.<br><br>The Certificate Templates console opens.
-
 3.  Configure the _User Authentication template_ by doing the following:
     4. Right-click **User** and click **Duplicate Template**.<br><br>The Properties of New Template dialog box opens.
     5. Click the **General** tab, in Template display name, type **VPN User Authentication**, and select the **Publish certificate in Active Directory** check box.
@@ -208,19 +192,12 @@ Because you are using Group Policy to autoenroll user certificates, you need onl
 **Procedure:**
 
 1.  Sign in to a domain-joined client computer as a member of the **VPN Users** group.
-
 2.  Open **Windows PowerShell (Admin)**, type `gpupdate /force` and press Enter to reapply every policy, new and old. \@Review: what is best practice? gpupdate /force, gpupdate /sync, or just gpupdate?
-
 3.  On the Start menu, type **certmgr.msc**, and press Enter. <br><br>The Certificates dialog opens.
-
 4.  In the navigation pane, expand **Personal** and click **Certificates**.<br><br>Your certificates appear in the details pane.
-
 5.  Right-click the certificate that has your current domain user name, and click **Open**.<br><br>The Certificate dialog opens.
-
 6.  On the **General** tab, confirm that the date listed under **Valid from** is today’s date.<br><br>If the Valid from date is not today's date, you might have selected the wrong certificate. Therefore, select another certificate before continuing.
-
 7.  Click **OK** to close the Certificate dialog.
-
 8.  Close the Certificates dialog.
 
 ## STEP 5.6: Enroll and validate the VPN server certificates
@@ -230,36 +207,23 @@ Unlike the user certificate, you must manually enroll the VPN server’s certifi
 **Procedure:**
 
 1.  On the VPN server’s Start menu, type **certlm.msc**, and press Enter.
-
 2.  Right-click **Personal**, click **All Tasks**, and click **Request New Certificate** to start the Certificate Enrollment Wizard.
-
 3.  On the Before You Begin page, click **Next**.
-
 4.  On the Select Certificate Enrollment Policy page, click **Next**.
-
 5.  On the Request Certificates page, select the **VPN Server Authentication** check box.
-
 6.  Under the **VPN Server Authentication** check box, click **More information is required** to open the Certificate Properties dialog box, and complete the following steps:
     7. Under **Subject name**, in **Type**, click **Common Name**.
     8. Under **Subject name**, in **Value**, type the name of the external domain clients will use to connect to the VPN (for example, vpn.contoso.com), and click **Add**.
     9. Under **Alternative Name**, in **Type**, click **DNS**.
     10. Under **Alternative Name**, in **Value**, type the name of the external domain clients will use to connect to the VPN (for example, vpn.contoso.com), and click **Add**.
     11. lick **OK**.
-
 7.  Click **Enroll** and click **Finish**.
-
 9.  In the Certificates snap-in, under **Personal**, click **Certificates**.<br><br>Your certificates are listed in the details pane.
-
 10. Right-click the certificate that has your VPN server’s name, and click  **Open**.
-
 11. On the **General** tab, confirm that the date listed under **Valid from** is today’s date.<br><br>If the Valid from date is not today's date, then select another certificate before continuing.
-
 12. On the **Details** tab, click **Enhanced Key Usage**, and verify that **IP security IKE intermediate** and **Server Authentication** are listed.
-
 13. Click **OK** to close the certificate.
-
 14. Close the Certificates snap-in.
-
 15. Restart the VPN server to allow the group memberships to update.
 
 ## STEP 5.7: Validate the NPS certificate
@@ -269,17 +233,11 @@ Like the user certificate, the NPS server automatically enrolls its authenticati
 **Procedure:**
 
 1.  On the NPS server’s Start menu, type **certlm.msc** and press Enter.
-
 3.  In the Certificates snap-in, under **Personal**, click **Certificates**.<br><br>Your certificates are listed in the details pane.
-
 4.  Right-click the certificate that has your NPS server’s name, and click **Open**.
-
 5.  On the **General** tab, confirm that the date listed under **Valid from** is today’s date.<br><br>If the Valid from date is not today's date, then select another certificate before continuing.
-
 6.  Click **OK** to close the certificate.
-
-7.  Close the Certificates snap-in.
-8. Restart the NPS Server.
+7.  Close the Certificates dialog.
 
 
 ## Next steps

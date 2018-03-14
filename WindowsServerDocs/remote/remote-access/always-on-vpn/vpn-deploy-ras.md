@@ -24,11 +24,9 @@ The Remote Access server role includes:
 
 -   Web Application Proxy
 
-RAS allows you to provide network connectivity to remote employees, site-to-site VPN to connect remote office locations over the Internet, and the RAS Gateway,
-which has multitenant and Border Gateway Protocol (BGP) capabilities for Enterprises and Cloud Service Providers (CSPs).
+RAS allows you to provide network connectivity to remote employees, site-to-site VPN to connect remote office locations over the Internet, and the RAS Gateway, which has multitenant and Border Gateway Protocol (BGP) capabilities for Enterprises and Cloud Service Providers (CSPs).
 
-When you install the Remote Access server role service, you are deploying the Remote Access Service Gateway (**RAS Gateway**). You can deploy RAS Gateway as a
-single tenant RAS Gateway virtual private network (VPN) server that provides many advanced features and enhanced functionality.
+When you install the Remote Access server role service, you are deploying the Remote Access Service Gateway (**RAS Gateway**). You can deploy RAS Gateway as a single tenant RAS Gateway virtual private network (VPN) server that provides many advanced features and enhanced functionality.
 
 >[!NOTE] 
 >You can also deploy RAS Gateway as a Multitenant VPN server for use with Software Defined Networking (SDN), or as a DirectAccess server. For more information, see [RAS Gateway](https://docs.microsoft.com/windows-server/remote/remote-access/ras-gateway/ras-gateway), [Software Defined Networking (SDN)](https://docs.microsoft.com/windows-server/networking/sdn/software-defined-networking), and [DirectAccess](https://docs.microsoft.com/windows-server/remote/remote-access/directaccess/directaccess).
@@ -39,52 +37,54 @@ Membership in **Administrators**, or equivalent, is the minimum required to perf
 
 ## STEP 3.1: Install Remote Access as a RAS Gateway VPN Server
 
+>[!IMPORTANT]
+>Install the VPN server on a perimeter network, between the edge firewall and the perimeter firewall.
+
 Install the Remote Access role as a single tenant RAS Gateway VPN server. For more information, see [Remote Access](https://docs.microsoft.com/windows-server/remote/remote-access/remote-access).
 
 ### Windows PowerShell
 
 1.  Run Windows PowerShell as Administrator.
 
-2.  Type the following command:  
+2.  Type the following command:<br><br>
       
-    `Install-WindowsFeature DirectAccess-VPN -IncludeManagementTools`
+    ```Install-WindowsFeature DirectAccess-VPN -IncludeManagementTools```
 
 3.  Press ENTER.
 
-After the installation completes, the following message appears in Windows
-PowerShell.
+After the installation completes, the following message appears in Windows PowerShell.
 
 | Success | Restart Needed | Exit Code | Feature Result                             |
 |---------|----------------|-----------|--------------------------------------------|
-| True    | No             | Success   | {RAS Connection Manager Administration Kit |
+| True    | No             | Success   | RAS Connection Manager Administration Kit |
 
 ### Server Manager
 
 1.  On the VPN server, in Server Manager, click **Manage**, and then click **Add  Roles and Features**.<br><br>The Add Roles and Features Wizard opens.
 
-2.  In **Before you begin**, click **Next**.
+2.  In Before you begin, click **Next**.
 
-3.  In **Select Installation Type**, ensure that **Role-Based or feature-based installation** is selected, and click **Next**.
+3.  In Select Installation Type, ensure that **Role-Based or feature-based installation** is selected and click **Next**.
 
-4.  In **Select destination server**, ensure that **Select a server from the server pool** is selected.
+4.  In Select destination server, ensure that **Select a server from the server pool** is selected.
 
-5.  In **Server Pool**, ensure that the local computer is selected, and click **Next**.
+5.  Under Server Pool, ensure that the local computer is selected, and click **Next**.
 
-6.  In **Select server roles**, in **Roles**, click **Remote Access**, and click **Next**.
+6.  In Server Roles, click **Remote Access** to select it and click **Next**.
 
-7.  In **Select features**, click **Next**.
+7.  In Features, select one or more features to install on the selected server and click **Next**.
 
-8.  In **Remote Access**, click **Next**.
+8.  In Remote Access, click **Next**.
 
-9.  In **Select role service**, in **Role services**, click **DirectAccess and  VPN (RAS)**.<br><br>The Add Roles and Features Wizard dialog box opens.
+9.  Under Role services, click **DirectAccess and  VPN (RAS)** and click **Next**.<br><br>The Add Roles and Features Wizard dialog box opens.
 
 10. Click **Add Features** to close the dialog box, and then click **Next**.
 
-11. In **Web Server Role (IIS)**, click **Next**.
+11. In Web Server Role (IIS), click **Next**.
 
-12. In **Select role services**, click **Next**.
+12. In Select role services, click **Next**.
 
-13. In **Confirm installation selections**, review the choices you've made, and then click **Install**.
+13. In Confirm installation selections, review the your choices, and then click **Install**.\@Reviewer: is there a reason the Restart check box is not being selected?
 
 14. When the installation is complete, click **Close**.
 

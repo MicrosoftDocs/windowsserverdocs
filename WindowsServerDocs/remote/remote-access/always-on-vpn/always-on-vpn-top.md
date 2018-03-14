@@ -130,16 +130,6 @@ Always On VPN requires a specific process to deploy or migrate the Always On VPN
 
 1.  **Plan and stage your environment.** Deploying Always On VPN requires proper planning to determine your deployment phases, which helps identify any issues before they affect the entire organization.
 
-    1.  Prepare the Remote Access Server.
-
-    2.  Plan the Authentication Methods.
-
-    3.  Plan IP Addresses for Remote Clients.
-
-    4.  Prepare the Environment.
-
-    5.  Prepare the Routing and Firewall.
-
 2.  **(Migration step) If you are migrating from DirectAccess, plan the migration to Always On VPN.** Migrating from DirectAccess to Always On VPN requires proper planning to determine your migration phases, which helps identify any issues before they affect the entire organization. The primary goal of the migration is for users to maintain remote connectivity to the office throughout the process. If you perform tasks out of order, a race condition may occur, leaving remote users with no way to access company resources.
 
     >[!NOTE] 
@@ -169,7 +159,6 @@ Always On VPN requires a specific process to deploy or migrate the Always On VPN
 In this deployment scenario, you use a simple DirectAccess deployment scenario as a starting point for the migration this guide presents. You do not need to match this deployment scenario before migrating to Always On VPN, but for many organizations, this simple setup is an accurate representation of their current DirectAccess deployment. The table below provides a list of basic features for this setup.
 
 Many DirectAccess deployment scenarios and options exist, so your implementation is likely to be different from the one described here. If so, refer to [Feature mapping between DirectAccess and Always On VPN](../../remote-access/vpn/vpn-map-da.md) to determine the Always On VPN feature set mapping for your current additions, and then add those features to your configuration. 
-
 
 ### Deployment scenario feature list
 

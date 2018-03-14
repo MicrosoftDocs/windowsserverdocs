@@ -55,8 +55,7 @@ Before you install the Remote Access server role on the VPN server, you must:
 
 ## STEP 1.2: Plan Authentication Methods
 
-Configure the Remote Access VPN server to support Internet Key Exchange Version 2 (IKEv2) connections while also disabling unused protocols, which reduce the
-server’s security footprint.
+Configure the Remote Access VPN server to support Internet Key Exchange Version 2 (IKEv2) connections while also disabling unused protocols, which reduce the server’s security footprint.
 
 IKEv2 protocol is an industry-standard tunneling protocol used by many VPN providers. The primary advantage of IKEv2 is that it tolerates interruptions in the underlying network connection. For example, if the connection is temporarily lost or if a user moves a client computer from one network to another, IKEv2 automatically restores the VPN connection when the network connection is reestablished — all without user intervention.
 
@@ -81,19 +80,6 @@ Configure the VPN server to assign addresses to VPN clients from a static addres
 3.  Ensure that you can edit your public DNS zone.<br><br>To support the VPN infrastructure, you must add DNS records to your public DNS domain. Ensure that you have permissions to edit this zone.
 
 4.  Verify that all VPN users have user accounts in Active Directory User (AD DS).<br><br>Before users can connect to the network with VPN connections, they must have   user accounts in AD DS.
-
-## STEP 1.5: Prepare the Routing and Firewall
-
-The VPN server is installed inside the perimeter network, which partitions the perimeter network into internal and external perimeter networks. You might need to make several routing modifications, depending on your network environment.
-
-1.  (Optional) Configure port forwarding.<br><br>Your edge firewall must open the ports and protocol IDs associated with an IKEv2 VPN and forward them to the VPN server. In most environments, doing so requires you to configure port forwarding. Redirect Universal Datagram Protocol (UDP) ports 500 and 4500 to the VPN server.
-
-2.  Configure routing so that the DNS servers and VPN servers can reach the Internet.<br><br>This deployment uses IKEv2 and Network Address Translation (NAT).
-
-3.  Ensure that the VPN server can reach all the required internal networks and network resources that you want to provide to remote users.<br><br>Any network or resource that is not reachable from the VPN server is also unreachable over VPN connections from remote locations.
-
->[!TIP] 
->In most environments, you can adjust static routes on the edge firewall and the VPN server to allow them to reach this new internal perimeter network. In complex environments, you may need to add static routes to internal routers or adjust internal firewall rules for the VPN server and the block of IP addresses associated with VPN clients.
 
 Next steps
 ----------

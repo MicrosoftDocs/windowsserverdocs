@@ -38,7 +38,7 @@ In this guide’s scenario, you use Protected Extensible Authentication Protocol
 
 -   Make you have the host name or FQDN of the NPS from the server's certificate and the name of the CA that issued the certificate.
 
-## Configure the VPN client by using Windows PowerShell
+## Configure Windows 10 clients with Windows PowerShell
 
 In Windows PowerShell, you deploy VPN profiles to deploy the VPN_Profile.ps1 script to configure the VPNv2 CSP on a Windows 10 client computer.
 
@@ -131,7 +131,7 @@ PSComputerName  : WIN01
 >[!TIP] 
 >If you need to troubleshoot the markup, it is easier to put it in an XML editor than to troubleshoot it in the Windows PowerShell ISE. In either case, start with the simplest version of the profile, and add components back one at a time until the issue occurs again.
 
-## <a name="vpn-deploy-client-sccm"></a>Configure the VPN client using System Center Configuration Manager
+## <a name="vpn-deploy-client-sccm"></a>Configure Windows 10 clients with System Center Configuration Manager
 
 With SCCM, you deploy VPN profiles by using the ProfileXML CSP node. Here, you create a user collection based on that security group's membership.
 
@@ -184,7 +184,7 @@ configuration.
 
 After you create the user group to receive the VPN profile, you create a package and program to deploy the Windows PowerShell configuration.
 
-### Create a package containing the ProfileXML configuration script:
+### Create a package containing the ProfileXML configuration script
 
 1.  Host the **VPN_Profile.ps1** script on a network share that the site server computer account can access.
 
@@ -232,7 +232,7 @@ After you create the user group to receive the VPN profile, you create a package
 
 With the package and program created, you need to deploy it to the **VPN Users** group.
 
-### Deploy the ProfileXML configuration script:
+### Deploy the ProfileXML configuration script
 
 1.  In the Configuration Manager console, open **Software Library\\Application Management\\Packages**.
 
@@ -286,7 +286,7 @@ With the package and program created, you need to deploy it to the **VPN Users**
 
 With the ProfileXML configuration script deployed, verify the configuration of the VPN client.
 
-### Verify configuration of the VPN client:
+### Verify configuration of the VPN client
 
 >[!NOTE] 
 >The VPN_Profile.ps1 script does not work in a Remote Desktop session. Likewise, it does not work in a Hyper-V enhanced session. If you’re testing a Remote Access Always On VPN in virtual machines, disable enhanced session on your client VMs before continuing.
@@ -304,7 +304,7 @@ With the ProfileXML configuration script deployed, verify the configuration of t
 
 3.  Close Control Panel.<br><br>The new VPN profile appears shortly.
 
-## Configure the VPN client using Intune
+## Configure Windows 10 clients with Intune
 
 With Microsoft Intune, you deploy certificates to domain-joined devices using autoenrollment only. Here, you create a group of machines or users to deploy the VPN_Profile.xml script.
 

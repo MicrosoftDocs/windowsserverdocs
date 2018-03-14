@@ -88,10 +88,7 @@ Active Directory Users and Computers is a component of AD DS that contains accou
 Group Policy Management enables directory-based change and configuration management of user and computer settings, including security and user
 information. You use Group Policy to define configurations for groups of users and computers.
 
-With Group Policy, you can specify settings for registry entries, security, software installation, scripts, folder redirection, remote installation
-services, and Internet Explorer maintenance. The Group Policy settings that you create are contained in a Group Policy object (GPO). By associating a GPO with
-selected Active Directory system containers — sites, domains, and OUs — you can apply the GPO's settings to the users and computers in those Active Directory
-containers. To manage Group Policy objects across an enterprise, you can use the Group Policy Management Editor Microsoft Management Console (MMC).
+With Group Policy, you can specify settings for registry entries, security, software installation, scripts, folder redirection, remote installation services, and Internet Explorer maintenance. The Group Policy settings that you create are contained in a Group Policy object (GPO). By associating a GPO with selected Active Directory system containers — sites, domains, and OUs — you can apply the GPO's settings to the users and computers in those Active Directory containers. To manage Group Policy objects across an enterprise, you can use the Group Policy Management Editor Microsoft Management Console (MMC).
 
 ## Active Directory Certificate Services (AD CS) Server
 
@@ -207,22 +204,28 @@ In this guide, you use the ProfileXML VPNv2 CSP node to create the VPN profile t
 ProfileXML, see the ProfileXML Configuration File Overview section. For details about each VPNv2 CSP node, see the [VPNv2 CSP](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/vpnv2-csp).
 
 ## Firewalls
+<!-- this is from the planning section -->
+The VPN server is installed inside the perimeter network, which partitions the perimeter network into internal and external perimeter networks. You might need to make several routing modifications, depending on your network environment. Ensure that your firewalls allow the traffic that is necessary for both VPN and RADIUS communications to function correctly.
 
-Ensure that your firewalls allow the traffic that is necessary for both VPN and RADIUS communications to function correctly.
+1.  (Optional) Configure port forwarding.<br><br>Your edge firewall must open the ports and protocol IDs associated with an IKEv2 VPN and forward them to the VPN server. In most environments, doing so requires you to configure port forwarding. Redirect Universal Datagram Protocol (UDP) ports 500 and 4500 to the VPN server.
+
+2.  Configure routing so that the DNS servers and VPN servers can reach the Internet.<br><br>This deployment uses IKEv2 and Network Address Translation (NAT).
+
+3.  Ensure that the VPN server can reach all the required internal networks and network resources that you want to provide to remote users.<br><br>Any network or resource that is not reachable from the VPN server is also unreachable over VPN connections from remote locations.
+
+>[!TIP] 
+>In most environments, you can adjust static routes on the edge firewall and the VPN server to allow them to reach this new internal perimeter network. In complex environments, you may need to add static routes to internal routers or adjust internal firewall rules for the VPN server and the block of IP addresses associated with VPN clients.
 
 ### RADIUS Traffic Ports on the VPN Server and NPS Server
 
-By default, NPS and VPN listen for RADIUS traffic on ports 1812, 1813, 1645, and 1646 on all installed network adapters. If Windows Firewall with Advanced
-Security is enabled when you install NPS, firewall exceptions for these ports are automatically created during the installation process for both Internet
-Protocol version 6 (IPv6) and IPv4 traffic.
+By default, NPS and VPN listen for RADIUS traffic on ports 1812, 1813, 1645, and 1646 on all installed network adapters. If Windows Firewall with Advanced Security is enabled when you install NPS, firewall exceptions for these ports are automatically created during the installation process for both Internet Protocol version 6 (IPv6) and IPv4 traffic.
 
 >[!IMPORTANT] 
 >If your network access servers are configured to send RADIUS traffic over ports other than these defaults, remove the exceptions created in Windows Firewall with Advanced Security during NPS installation, and create exceptions for the ports that you do use for RADIUS traffic.
 
 ### Use the Same RADIUS Ports for the Internal Perimeter Network Firewall Configuration
 
-If you are using the default RADIUS port configuration on the VPN Server and the NPS Server, ensure that you open the following ports on the Internal Perimeter
-Network Firewall.
+If you are using the default RADIUS port configuration on the VPN Server and the NPS Server, ensure that you open the following ports on the Internal Perimeter Network Firewall.
 
 -   Ports UDP1812, UDP1813, UDP1645, and UDP1646
 

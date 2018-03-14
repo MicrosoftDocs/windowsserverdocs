@@ -42,8 +42,7 @@ Install NPS by using either Windows PowerShell or the Server Manager Add Roles a
 
 1.  Run Windows PowerShell as Administrator.
 
-2.  Type the following command:<br><br>
-    `Install-WindowsFeature NPAS -IncludeManagementTools`
+2.  Type the following command:<br><br>```Install-WindowsFeature NPAS -IncludeManagementTools```
 
 3.  Press ENTER.
 
@@ -190,7 +189,8 @@ Before you can configure the Windows 10 client Always On VPN connections and cre
 6.  Cancel the Virtual Private network (VPN) Connections Properties dialog box.
 
 7.  Close the NPS console.
-8. Restart the NPS server.
+
+1. Restart the NPS server.
 
 >[!NOTE] 
 >If you have multiple NPS servers, complete these steps on each one so that the VPN profile can verify each of them should they be used.
