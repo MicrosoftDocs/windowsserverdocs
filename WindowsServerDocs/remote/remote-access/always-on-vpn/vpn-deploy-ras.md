@@ -28,6 +28,14 @@ RAS allows you to provide network connectivity to remote employees, site-to-site
 
 When you install the Remote Access server role service, you are deploying the Remote Access Service Gateway (**RAS Gateway**). You can deploy RAS Gateway as a single tenant RAS Gateway virtual private network (VPN) server that provides many advanced features and enhanced functionality.
 
+Following are RAS Gateway resources.
+
+-   [Configure RRAS with a Computer Authentication Certificate](https://technet.microsoft.com/en-us/library/dd458982.aspx)
+
+-   [Troubleshooting IKEv2 VPN Connections](https://technet.microsoft.com/en-us/library/dd941612.aspx)
+
+-   [Configure IKEv2-based Remote Access](https://technet.microsoft.com/en-us/library/ff687731.aspx)
+
 >[!NOTE] 
 >You can also deploy RAS Gateway as a Multitenant VPN server for use with Software Defined Networking (SDN), or as a DirectAccess server. For more information, see [RAS Gateway](https://docs.microsoft.com/windows-server/remote/remote-access/ras-gateway/ras-gateway), [Software Defined Networking (SDN)](https://docs.microsoft.com/windows-server/networking/sdn/software-defined-networking), and [DirectAccess](https://docs.microsoft.com/windows-server/remote/remote-access/directaccess/directaccess).
 
@@ -92,7 +100,6 @@ After the installation completes, the following message appears in Windows Power
 
 Configure the Remote Access VPN to allow IKEv2 VPN connections, deny connections from other VPN protocols, and assign a static IP address pool for issuance of IP addresses to connecting authorized VPN clients.
 
-**Procedure:**
 
 1.  On the VPN server, in Server Manager, click the **Notifications** flag.
 

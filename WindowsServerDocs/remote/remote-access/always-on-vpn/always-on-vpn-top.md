@@ -191,14 +191,6 @@ In this deployment scenario, you focus on migrating a simple DirectAccess enviro
 | Triggering | Always on and trusted network detection |
 | Authentication  | Protected Extensible Authentication Protocol-Transport Layer Security (PEAP-TLS) with Trusted Platform Module–protected user certificates |
 
-Following are RAS Gateway resources.
-
--   [Configure RRAS with a Computer Authentication Certificate](https://technet.microsoft.com/en-us/library/dd458982.aspx)
-
--   [Troubleshooting IKEv2 VPN Connections](https://technet.microsoft.com/en-us/library/dd941612.aspx)
-
--   [Configure IKEv2-based Remote Access](https://technet.microsoft.com/en-us/library/ff687731.aspx)
-
 ## What this guide does not provide
 
 This guide does not provide instructions for deploying the following items:
@@ -220,15 +212,15 @@ This guide does not provide instructions for deploying the following items:
 
 ## Next steps 
 
-|If you...  |Then see...  |
+|If you...  |Then...  |
 |---------|---------|
-|Want to know more about DirectAccess and Always On VPN feature comparison     |[Always On VPN and DirectAccess Features Comparison](../../remote-access/vpn/vpn-map-da.md)         |
-|Want to know more about the Always On VPN technologies    |[Always On VPN Technology Overview](always-on-vpn-technologies.md)         |
-|What to know more about VPN Device Tunnels in Always On VPN | [VPN Device Tunnels in Always On VPN](../../remote-access/vpn/vpn-device-tunnel-config.md) |
-|Want to know more about configuring Always On VPN on Windows clients | Windows 10 [VPN technical guide](https://docs.microsoft.com/windows/access-protection/vpn/vpn-guide) |
-|Want to know how to create VPN profiles in System Center Configuration Manager |[How to Create VPN profiles in System Center Configuration Manager](https://docs.microsoft.com/sccm/protect/deploy-use/create-vpn-profiles)    |
-|Want to know more about the options for VPN profiles |[VPN profile options](https://docs.microsoft.com/en-us/windows/access-protection/vpn/vpn-profile-options)   |
-|Are ready to get started planning your Always On VPN deployment     |[STEP 1: Plan and stage your environment](always-on-vpn-deploy-planning.md)         |
+|Want to know more about DirectAccess and Always On VPN feature comparison     |Refer to [Always On VPN and DirectAccess Features Comparison](../../remote-access/vpn/vpn-map-da.md)         |
+|Want to know more about the Always On VPN technologies    |Refer to [Always On VPN Technology Overview](always-on-vpn-technologies.md)         |
+|What to know more about VPN Device Tunnels in Always On VPN |Refer to [VPN Device Tunnels in Always On VPN](../../remote-access/vpn/vpn-device-tunnel-config.md) |
+|Want to know more about configuring Always On VPN on Windows clients | Refer to the Windows 10 [VPN technical guide](https://docs.microsoft.com/windows/access-protection/vpn/vpn-guide) |
+|Want to know how to create VPN profiles in System Center Configuration Manager |Refer to [How to Create VPN profiles in System Center Configuration Manager](https://docs.microsoft.com/sccm/protect/deploy-use/create-vpn-profiles)    |
+|Want to know more about the options for VPN profiles |Refer to [VPN profile options](https://docs.microsoft.com/en-us/windows/access-protection/vpn/vpn-profile-options)   |
+|Are ready to get started      |Skip to [STEP 1: Plan and stage your environment](always-on-vpn-deploy-planning.md)         |
 
 <!-- put a related documents section here with the external docs that are referenced -->
 
