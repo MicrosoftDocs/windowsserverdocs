@@ -36,14 +36,9 @@ When you install the **DirectAccess and VPN \(RAS\)** role service, you are depl
 ## Related topics
 [Always On VPN and DirectAccess Features Comparison](vpn-map-da.md)
 [Configure VPN Device Tunnels in Windows 10](vpn-device-tunnel-config.md)
-<<<<<<< HEAD
 <!-- 
 [Remote Access Always On VPN Deployment Guide for Windows Server 2016 and Windows 10](../always-on-vpn/deploy/always-on-vpn-top.md)
 -->
-=======
-
-[Remote Access Always On VPN Deployment Guide for Windows Server 2016 and Windows 10](always-on-vpn/deploy/always-on-vpn-deploy.md)
->>>>>>> d9a31a4cef85df62a290dcb35cfcca4df8f5ab15
 Windows 10 [VPN technical guide](https://docs.microsoft.com/windows/access-protection/vpn/vpn-guide)
 - [How to Create VPN profiles in System Center Configuration Manager](https://docs.microsoft.com/sccm/protect/deploy-use/create-vpn-profiles)
 - [Configure Windows 10 Client Always On VPN Connections](https://docs.microsoft.com/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-client-vpn-connections)

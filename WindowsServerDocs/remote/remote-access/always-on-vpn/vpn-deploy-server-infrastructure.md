@@ -12,7 +12,7 @@ author: shortpatti
 ms.date: 3/4/2018
 ---
 
-# STEP 3: Configure the Server Infrastructure
+# STEP 3: Configure the Server Infrastructure [this should be renamed to Configure authentication templates and enroll certificates]
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
@@ -100,10 +100,10 @@ In the Azure portal, you can create two certificates to manage the transition wh
 **Procedure**
 1.  Sign in to your [Azure portal](https://portal.azure.com) as a global administrator.
 1.  On the left menu, click **Azure Active Directory**.
-1.  On the **Azure Active Directory** page, in the **Manage** section, click **Conditional access**.
-1.  On the **Conditional access** page, in the **Manage** section, click **VPN connectivity (preview)**.
-1.  On the **VPN connectivity** page, click **New certificate**.
-1.  On the **New** page, perform the following steps:
+1.  On the Azure Active Directory page, in the **Manage** section, click **Conditional access**.
+1.  On the Conditional access page, in the Manage section, click **VPN connectivity (preview)**.
+1.  On the VPN connectivity page, click **New certificate**.
+1.  On the New page, perform the following steps:
     1.  For **Select duration**, select  1 or 2 years.<br><br>You can add up to two certificates to manage transitions when the certificate is about to expire. You can choose which one is the primary (the one used during authentication to sign the certificate for connectivity).
     2.  For **Primary**, select **Yes**.
     3.  Click **Create**.
@@ -118,14 +118,16 @@ In the Azure portal, you can create two certificates to manage the transition wh
     |---------|---------|
     |`certutil -dspublish -f VpnCert.cer RootCA`     |Creates two **Microsoft VPN root CA gen 1** containers under the **CN=AIA** and **CN=Certification Authorities** containers, and publishes each root certificate as a value on the _cACertificate_ attribute of both **Microsoft VPN root CA gen 1** containers.         |
     |`certutil -dspublish -f VpnCert.cer NTAuthCA`     |Creates one **CN=NTAuthCertificates** container under the **CN=AIA** and **CN=Certification Authorities** containers, and publishes each root certificate as a value on the _cACertificate_ attribute of the **CN=NTAuthCertificates** container.         |
-    |`gpupdate /force`     |Expedites adding the root certificates to the Windows server and client computers.         |
+    |`gpupdate /force`     |Expedites adding the root certificates to the Windows server and client computers. \@Reviewer: since this is part of the "Enroll and validate the user certificate" section        |
      
     These commands publish the root certificate to the **CN=Certification Authorities** and **CN=AIA** containers in the Configuration naming context. Once the CN=Configuration naming context has replicated to all domain controllers in the forest, Windows 10 clients add the root certificate to their trusted root authorities container when Group Policy refreshes. 
 1. Verify that the root certificates are present and show as trusted:
-    a.     
-
-
-
+    a.  On the VPN server's Start menu, type **pkiview.msc** to open the Enterprise PKI dialog. 
+    b. Right-click **Enterprise PKI** and select **Manage AD Containers**.
+    c. Verify that each Microsoft VPN root CA gen 1 certificate is present under:
+        - NTAuthCertificates
+        - AIA Container
+        - Certificate Authorities Container
 
 ## STEP 3.4: Create the Authentication templates
 
@@ -215,9 +217,9 @@ Because you are using Group Policy to autoenroll user certificates, you need onl
 
 1.  Sign in to a domain-joined client computer as a member of the **VPN Users** group.
 
-2.  Press Windows key + R, type **gpupdate /force**, and press Enter.
+2.  Open **Windows PowerShell (Admin)**, type **gpupdate /force** and press Enter.
 
-3.  On the Start menu, type **certmgr.msc**, and press Enter. <br><br>The Certificates snap-in opens.
+3.  On the Start menu, type **certmgr.msc**, and press Enter. <br><br>The Certificates dialog opens.
 
 4.  In the navigation pane, expand **Personal** and click **Certificates**.<br><br>Your certificates appear in the details pane.
 
@@ -227,7 +229,7 @@ Because you are using Group Policy to autoenroll user certificates, you need onl
 
 7.  Click **OK** to close the Certificate dialog.
 
-8.  Close the Certificates snap-in.
+8.  Close the Certificates dialog.
 
 ## STEP 3.6: Enroll and validate the VPN server certificates
 
@@ -276,7 +278,7 @@ Like the user certificate, the NPS server automatically enrolls its authenticati
 
 1.  Restart the NPS server.
 
-2.  On the NPS server’s Start menu, type **certlm.msc**, and press Enter.
+2.  On the NPS server’s Start menu, type **certlm.msc** and press Enter.
 
 3.  In the Certificates snap-in, under **Personal**, click **Certificates**.<br><br>Your certificates are listed in the details pane.
 
