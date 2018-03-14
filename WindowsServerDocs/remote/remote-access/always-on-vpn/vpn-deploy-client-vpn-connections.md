@@ -38,7 +38,7 @@ In this guide’s scenario, you use Protected Extensible Authentication Protocol
 
 -   Make you have the host name or FQDN of the NPS from the server's certificate and the name of the CA that issued the certificate.
 
-## Configure Windows 10 clients with Windows PowerShell
+## Configure with Windows PowerShell
 
 In Windows PowerShell, you deploy VPN profiles to deploy the VPN_Profile.ps1 script to configure the VPNv2 CSP on a Windows 10 client computer.
 
@@ -131,7 +131,7 @@ PSComputerName  : WIN01
 >[!TIP] 
 >If you need to troubleshoot the markup, it is easier to put it in an XML editor than to troubleshoot it in the Windows PowerShell ISE. In either case, start with the simplest version of the profile, and add components back one at a time until the issue occurs again.
 
-## <a name="vpn-deploy-client-sccm"></a>Configure Windows 10 clients with System Center Configuration Manager
+## <a name="vpn-deploy-client-sccm"></a>Configure with System Center Configuration Manager
 
 With SCCM, you deploy VPN profiles by using the ProfileXML CSP node. Here, you create a user collection based on that security group's membership.
 
@@ -304,7 +304,7 @@ With the ProfileXML configuration script deployed, verify the configuration of t
 
 3.  Close Control Panel.<br><br>The new VPN profile appears shortly.
 
-## Configure Windows 10 clients with Intune
+## Configure with Intune
 
 With Microsoft Intune, you deploy certificates to domain-joined devices using autoenrollment only. Here, you create a group of machines or users to deploy the VPN_Profile.xml script.
 
