@@ -183,26 +183,17 @@ Before you can configure the Windows 10 client Always On VPN connections and cre
 
     -   **Certificate issued to**
 
-    -   **Issuer**<br><br>You use these values in the upcoming VPN template configuration. For example, if the server’s FQDN is nps01.corp.contoso.com and the host     name is NPS01, the certificate name is based upon the FQDN or DNS name of the server - for example, nps01.corp.contoso.com.
+    -   **Issuer**<br><br>You use these values in the upcoming VPN template configuration. For example, if the server’s FQDN is nps01.corp.contoso.com and the host name is NPS01, the certificate name is based upon the FQDN or DNS name of the server - for example, nps01.corp.contoso.com.
 
 5.  Cancel the Edit Protected EAP Properties dialog box.
 
 6.  Cancel the Virtual Private network (VPN) Connections Properties dialog box.
 
-7.  Close Network Policy Server.
+7.  Close the NPS console.
+8. Restart the NPS server.
 
 >[!NOTE] 
 >If you have multiple NPS servers, complete these steps on each one so that the VPN profile can verify each of them should they be used.
 
-### Autoenroll the NPS Server certificate
-
-1.  Open Windows PowerShell as Administrator.
-
-2.  Type **gpupdate**.
-
-3.  Press ENTER.
-
-4.  Restart the NPS Server.
-
 ## Next steps
-[STEP 3: Configure authentication templates and enroll certificates](vpn-deploy-auth-certs.md). 
+[STEP 5: Configure authentication templates and enroll certificates](vpn-deploy-auth-certs.md).

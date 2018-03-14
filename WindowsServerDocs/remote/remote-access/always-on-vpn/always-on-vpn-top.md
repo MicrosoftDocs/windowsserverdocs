@@ -145,25 +145,11 @@ Always On VPN requires a specific process to deploy or migrate the Always On VPN
     >[!NOTE] 
     >The word *phase* is not intended to indicate that this process is long. Whether you move through each phase in a couple of days or a couple of months, Microsoft recommends that you take advantage of side-by-side migration and use a phased approach.
 
-3.  **Configure the Always On VPN Server Infrastructure.** Configuring the server infrastructure is the first thing you do to deploy Always On VPN.
-
-    a.  AD DS: Enable certificate autoenrollment in Group Policy for both computers and users, create the VPN Users Group, the VPN Servers Group, and the NPS Servers Group, and add members to each group.
-
-    b.  AD CS: Create the User Authentication, VPN Server Authentication, and NPS Server Authentication certificate templates.
-
-    c.  Domain-joined Windows 10 client: Enroll and validate user certificates.
-
 4.  **Configure the Remote Access Server for Always On VPN.** The next step in the Always On VPN deployment process is to install and configure the Remote Access server role on the VPN server.
-
-    a.  Enroll and validate the VPN server certificate.
-
-    b.  Install and configure Remote Access VPN.
 
 5.  **Install and configure the Network Policy Server (NPS).** The next step in the Always On VPN deployment process is to install and configure the Network Policy Server (NPS). The NPS allows you to create and enforce organization-wide network access policies for connection request authentication and authorization.
 
-    a.  Install and configure your organization NPS as a RADIUS server.
-
-    b.  Enroll and validate the NPS certificate.
+3.  **Configure authentication templates and enroll certificates.** Configuring the server infrastructure is the first thing you do to deploy Always On VPN.
 
 6.  **Configure DNS and Firewall settings for Always On VPN.** When remote VPN clients connect, they use the same DNS servers that your internal clients use, which allows them to resolve names in the same manner as the rest of your internal workstations. Ensure that the computer name that external clients use to connect to the VPN server matches the subject alternative name that is defined in the certificates you issue to the VPN server.
 

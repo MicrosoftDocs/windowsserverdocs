@@ -61,13 +61,9 @@ performing authorization and authentication, and sends either an Access-Accept o
 
 ## Active Directory Domain Services (AD DS) Server
 
-AD DS provides a distributed database that stores and manages information about network resources and application-specific data from directory-enabled
-applications. Administrators can use AD DS to organize elements of a network, such as users, computers, and other devices, into a hierarchical containment
-structure. The hierarchical containment structure includes the Active Directory forest, domains in the forest, and organizational units (OUs) in each domain. A
-server that is running AD DS is called a domain controller.
+AD DS provides a distributed database that stores and manages information about network resources and application-specific data from directory-enabled applications. Administrators can use AD DS to organize elements of a network, such as users, computers, and other devices, into a hierarchical containment structure. The hierarchical containment structure includes the Active Directory forest, domains in the forest, and organizational units (OUs) in each domain. A server that is running AD DS is called a domain controller.
 
-AD DS contains the user accounts, computer accounts, and account properties that are required by Protected Extensible Authentication Protocol (PEAP) to
-authenticate user credentials and to evaluate authorization for VPN connection requests.
+AD DS contains the user accounts, computer accounts, and account properties that are required by Protected Extensible Authentication Protocol (PEAP) to authenticate user credentials and to evaluate authorization for VPN connection requests.
 
 The Active Directory Domain Services (AD DS) server is an on-premises Active Directory domain, which hosts on-premises user accounts.
 
@@ -85,9 +81,7 @@ For information about deploying AD DS, see the Windows Server 2016 [Core Network
 
 ### Active Directory Users and Computers
 
-Active Directory Users and Computers is a component of AD DS that contains accounts that represent physical entities, such as a computer, a person, or a
-security group. A security group is a collection of user or computer accounts that administrators can manage as a single unit. User and computer accounts that
-belong to a specific group are referred to as group members.
+Active Directory Users and Computers is a component of AD DS that contains accounts that represent physical entities, such as a computer, a person, or a security group. A security group is a collection of user or computer accounts that administrators can manage as a single unit. User and computer accounts that belong to a specific group are referred to as group members.
 
 ### Group Policy Management
 
@@ -101,17 +95,13 @@ containers. To manage Group Policy objects across an enterprise, you can use the
 
 ## Active Directory Certificate Services (AD CS) Server
 
-AD CS in Windows Server 2016 provides customizable services for creating and managing the X.509 certificates that are used in software security systems that
-employ public key technologies. Organizations can use AD CS to enhance security by binding the identity of a person, device, or service to a corresponding
-public key. AD CS also includes features that allow you to manage certificate enrollment and revocation in a variety of scalable environments.
+AD CS in Windows Server 2016 provides customizable services for creating and managing the X.509 certificates that are used in software security systems that employ public key technologies. Organizations can use AD CS to enhance security by binding the identity of a person, device, or service to a corresponding public key. AD CS also includes features that allow you to manage certificate enrollment and revocation in a variety of scalable environments.
 
 For more information, see [Active Directory Certificate Services Overview](https://technet.microsoft.com/library/hh831740.aspx) and [Public Key Infrastructure Design Guidance](https://social.technet.microsoft.com/wiki/contents/articles/2901.public-key-infrastructure-design-guidance.aspx).
 
-The Certification Authority (CA) Server is a certification authority that is running Active Directory Certificate Services. The VPN configuration requires an
-Active Directory–based public key infrastructure (PKI).
+The Certification Authority (CA) Server is a certification authority that is running Active Directory Certificate Services. The VPN configuration requires an Active Directory–based public key infrastructure (PKI).
 
-The CA enrolls certificates that are used for PEAP client–server authentication. The CA creates certificates based on certificate templates. During completion of
-the steps in this guide, you will configure the following certificate templates on the CA.
+The CA enrolls certificates that are used for PEAP client–server authentication. The CA creates certificates based on certificate templates. During completion of the steps in this guide, you configure the following certificate templates on the CA:
 
 -   The User Authentication certificate template
 
