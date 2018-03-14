@@ -92,7 +92,42 @@ By using a custom group, if you ever want to revoke a user’s VPN access, you c
 
 5.  Close Active Directory Users and Computers.
 
-## STEP 3.3: Create the Authentication templates
+## STEP 3.3: (Optional) Create and deploy root certificates with Azure AD
+Azure AD uses the VPN certificate to sign certificates issued to Windows 10 clients when authenticating to Azure AD for VPN connectivity. The token that the Windows 10 client requests is a certificate that it then presents to the application, which in this case is the VPN server.
+
+In the Azure portal, you can create two certificates to manage the transition when one certificate is about to expire. When you create a certificate, you can choose whether it is the primary certificate, which is used during the authentication to sign the certificate for the connection.
+
+**Procedure**
+1.  Sign in to your [Azure portal](https://portal.azure.com) as a global administrator.
+1.  On the left menu, click **Azure Active Directory**.
+1.  On the **Azure Active Directory** page, in the **Manage** section, click **Conditional access**.
+1.  On the **Conditional access** page, in the **Manage** section, click **VPN connectivity (preview)**.
+1.  On the **VPN connectivity** page, click **New certificate**.
+1.  On the **New** page, perform the following steps:
+    1.  For **Select duration**, select  1 or 2 years.<br><br>You can add up to two certificates to manage transitions when the certificate is about to expire. You can choose which one is the primary (the one used during authentication to sign the certificate for connectivity).
+    2.  For **Primary**, select **Yes**.
+    3.  Click **Create**.
+1.  On the VPN connectivity page, click **Download certificate**.<br><br>The **Download base64 certificate** option is available for some configurations that require base64 certificates for deployment.
+2. On your VPN server, add the downloaded certificate as a *trusted root CA for VPN authentication*.
+3. (Optional) For Windows RRAS-based deployments, on your NPS server, add the root certificate into the *Enterprise NTauth* store by running the following commands:
+    1.  `certutil -dspublish <CACERT> RootCA`
+    2.  `certutil -dspublish <CACERT> NtAuthCA`
+4. On the VPN Server, sign in as **Enterprise Administrator**, open Windows PowerShell as **Administrator**, and run the following commands:
+    
+    |Command  |Description  |
+    |---------|---------|
+    |`certutil -dspublish -f VpnCert.cer RootCA`     |Creates two **Microsoft VPN root CA gen 1** containers under the **CN=AIA** and **CN=Certification Authorities** containers, and publishes each root certificate as a value on the _cACertificate_ attribute of both **Microsoft VPN root CA gen 1** containers.         |
+    |`certutil -dspublish -f VpnCert.cer NTAuthCA`     |Creates one **CN=NTAuthCertificates** container under the **CN=AIA** and **CN=Certification Authorities** containers, and publishes each root certificate as a value on the _cACertificate_ attribute of the **CN=NTAuthCertificates** container.         |
+    |`gpupdate /force`     |Expedites adding the root certificates to the Windows server and client computers.         |
+     
+    These commands publish the root certificate to the **CN=Certification Authorities** and **CN=AIA** containers in the Configuration naming context. Once the CN=Configuration naming context has replicated to all domain controllers in the forest, Windows 10 clients add the root certificate to their trusted root authorities container when Group Policy refreshes. 
+1. Verify that the root certificates are present and show as trusted:
+    a.     
+
+
+
+
+## STEP 3.4: Create the Authentication templates
 
 After you have created the users and servers group, you create one of three authentication templates:
 
@@ -100,8 +135,8 @@ After you have created the users and servers group, you create one of three auth
 
 -   **VPN Server Authentication template**. Adding the IP Security (IPsec) IKE Intermediate application policy allows the server to filter certificates if more than one certificate is available with the Server Authentication extended key usage.
 
->[!IMPORTANT] 
->Because VPN clients access this server from the public Internet, the subject and alternative names are different than the internal server name. As a result, you cannot autoenroll this certificate on VPN servers.
+    >[!IMPORTANT] 
+    >Because VPN clients access this server from the public Internet, the subject and alternative names are different than the internal server name. As a result, you cannot autoenroll this certificate on VPN servers.
 
 -   **NPS Server Authentication template**. A simple copy of the RAS and IAS Server template secured to the NPS Server group that you created earlier in this section. You will configure this certificate for autoenrollment.
 
@@ -139,7 +174,7 @@ After you have created the users and servers group, you create one of three auth
     13. In Group or user names, click **VPN Servers**.
     14. In Permissions for VPN Servers, in the Allow column, select the **Enroll** check box.
     15. In Group or user names, click **RAS and IAS Servers**, and click **Remove**.
-    16. Click the **Subject Name** tab, click Supply in the Request, and click **OK** on the Certificate Templates warning dialog box.\
+    16. Click the **Subject Name** tab, click Supply in the Request, and click **OK** on the Certificate Templates warning dialog box.
     17. Click **OK** to save the VPN Server certificate template.
 
 5.  **Configure VPN Server Authentication template** by doing the following:
@@ -172,7 +207,7 @@ After you have created the users and servers group, you create one of three auth
 
 8.  Close the Certification Authority snap-in.
 
-## STEP 3.4: Enroll and validate the user certificate
+## STEP 3.5: Enroll and validate the user certificate
 
 Because you are using Group Policy to autoenroll user certificates, you need only update the policy, and Windows 10 automatically enrolls the user account for the correct certificate. You can then validate the certificate in the Certificates console.
 
@@ -194,7 +229,7 @@ Because you are using Group Policy to autoenroll user certificates, you need onl
 
 8.  Close the Certificates snap-in.
 
-## STEP 3.5: Enroll and validate the VPN server certificates
+## STEP 3.6: Enroll and validate the VPN server certificates
 
 Unlike the user certificate, you must manually enroll the VPN server’s certificate.
 
@@ -233,7 +268,7 @@ Unlike the user certificate, you must manually enroll the VPN server’s certifi
 
 15. Restart the VPN server to allow the group memberships to update.
 
-## STEP 3.6: Validate the NPS certificate
+## STEP 3.7: Validate the NPS certificate
 
 Like the user certificate, the NPS server automatically enrolls its authentication certificate, so all you need to do is validate it.
 

@@ -4,7 +4,7 @@ description: In previous versions of the Windows VPN architecture, platform limi
 ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
-ms.date: 
+ms.date: 3/13/2018
 ms.assetid: 8fe1c810-4599-4493-b4b8-73fa9aa18535
 manager: brianlic
 ms.author: pashort
@@ -37,7 +37,7 @@ To configure conditional access for VPN connectivity, you need to complete the f
 
 The authentication process happens when a device compliance-enabled VPN connection profile is triggered either manually or automatically.
 
-![Authentication Flow](media/3b94a9d784e50411a148f8d1f3fc3314.png)
+![Authentication Flow](../../media/Always-On-Vpn/ca-auth-flow.png)
 
 Authentication Flow
 
@@ -65,12 +65,13 @@ Microsoft recommends that you review the design and deployment guides for each o
 |---------|---------|
 |Azure Active Directory (AD) | |
 |Azure AD Connect |Syncs user accounts from on-premise to Azure AD. |
-|Active Directory Domain Services (AD DS)     |Contains the user accounts, computer accounts, and account properties. These properties are required by Protected Extensible Authentication Protocol (PEAP) to authenticate user credentials and to evaluate authorization for VPN connection requests.         |
+|Active Directory Domain Services (AD DS)     |Contains the user accounts, computer accounts, and account properties. These properties are required by Protected Extensible Authentication Protocol (PEAP) to authenticate user credentials and to evaluate authorization for VPN connection requests.        |
 |Domain Name System (DNS)     |Hosts the information that enables client computers and servers to resolve IP addresses.         |
 |Active Directory Certificate Services (AD CS)     |Allows you to build a public key infrastructure (PKI) and provide public key cryptography, digital certificates, and digital signature capabilities of your organization.          |
 |Perimeter network with two firewalls   |Allows the traffic necessary for both VPN and RADIUS communications to function correctly.         |
 |Remote Access as a RAS Gateway VPN Server (on\-premise) with two ethernet network adapters and connected to the perimeter network  |Provides centralized administration, configuration, and monitoring of VPN remote access services.         |
 |NPS as a RADIUS server on either a new or existing physical server or VM     |Allows you to create and enforce organization-wide network access policies for connection request authentication and authorization. If you have an existing NPS on your network, you can modify it rather than add a new server.<br><br>Use ports: UDP 1812 and 1813, or UDP ports 1645 and 1646        |
+|Enhanced Key Usage (EKU) | IPSec IKE intermediate (1.3.6.1.5.5.8.2.2)<br>Server Authentication (1.3.6.1.5.5.7.3.1) |
 
 <!-- there's a disconnect in the content -- the above table says that you can use a VM for the VPN server -->
 >[!IMPORTANT]
@@ -81,17 +82,35 @@ The remote client computers must be joined to the Active Directory domain and is
 
 ### VPNv2 profile
 The VPNv2 profile must contain:
-•	An entry of `<DeviceCompliance> true</Enabled>`, which tells the VPN client to request an Azure AD (AAD) Certificate.
-•	Gateway enforcement, or VPN client certificate filtering using the `<TLSExtension>`, which contains `<EKUName>AAD Conditional Access</EKUName>` and `<EKUOID>1.3.6.1.4.1.311.87</EKUOID>`. The Object Identifier (OID) filter tells the VPN client which certificate in the user's store should be used.
-•	The `<TrustedRootCA>5a 89 fe cb 5b 49 a7 0b 1a 52 63 b7 35 ee d7 1c c2 68 be 4b </TrustedRootCA>` entry must contain the Thumbprint of the Root Certificate Authority at the top of the chain of the Server Authentication certificate. Additional root certificates can be added by adding additional `<TrustedRootCA></TrustedRootCA>` entries. If the CA that issued the Server Authentication certificate was an Intermediate authority, this is not the certificate thumbprint to use. It must be the root CA. This should not contain the thumbprint of the cloud root certificates
+- An entry of `<DeviceCompliance> true</Enabled>`, which tells the VPN client to request an Azure AD (AAD) Certificate.
+- Gateway enforcement, or VPN client certificate filtering using the `<TLSExtension>`, which contains `<EKUName>AAD Conditional Access</EKUName>` and `<EKUOID>1.3.6.1.4.1.311.87</EKUOID>`. The Object Identifier (OID) filter tells the VPN client which certificate in the user's store should be used.
+- The `<TrustedRootCA>5a 89 fe cb 5b 49 a7 0b 1a 52 63 b7 35 ee d7 1c c2 68 be 4b </TrustedRootCA>` entry must contain the Thumbprint of the Root Certificate Authority at the top of the chain of the Server Authentication certificate. Additional root certificates can be added by adding additional `<TrustedRootCA></TrustedRootCA>` entries. If the CA that issued the Server Authentication certificate was an Intermediate authority, this is not the certificate thumbprint to use. It must be the root CA. This should not contain the thumbprint of the cloud root certificates
+
+## Tools
+The following tools are an important aspect to the deployment of Conditional Access for Always On VPN:
+
+|Tool  |Description  |
+|---------|---------|
+|certutil.exe     |For this instance, [certutil](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/certutil) deploys the VPN certificate created in Azure AD to the NTAuth store of the on-premise Active Directory.         |
+|MDMDiagnostics logs     |The MDM Diagnostic Information report shows the applied configuration states of your device including Policy CSPSettings, certificates, configuration sources, and resource information.         |
+|Client logs     |         |
+|NPS Server Event logs     |         |
+|AzureAD or MSOnline PowerShell modules, or Azure CLI     |         |
+|LogsMiner / Kusto     |         |
+|Microsoft EMS/Intune or [System Center Configuration Manager (SCCM)](vpn-deploy-client-vpn-connections.md#vpn-deploy-client-sccm)    |         |
+
+## Microsoft Online Directory Synchronization (MSODS) objects and attributes
+The VPN Server cloud application is created when you create the first root certificate in the VPN Connectivity blade. You can view the service principal that was created in your tenant using the `Get-MsolServicePrincipal -SearchString "VPN Server"` cmdlet.
+
+## Deployment and testing
 
 
 ## Next steps
 
-| If you...                                                              | Then see...                                                                                                                                                                   |
-|------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Want to start planning your deployment                                 | [Conditional Access for Always On VPN Planning](ca-for-vpn-planning.md)                                                                                                       |
+| If you...      | Then see...            |
+|----------------|------------------------------------------------|
 | Want to know more about Conditions                                     | [Conditions in Azure Active Directory conditional access](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-conditional-access-conditions)             |
 | Want to know more about Access controls                                | [Access controls in Azure Active Directory conditional access](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-conditional-access-controls)          |
 | Get experience with configuring conditional access                     | [Get started with Role-Based Access Control in the Azure portal](https://docs.microsoft.com/en-us/azure/active-directory/role-based-access-control-what-is)                   |
-| Are ready to configure conditional access policies in your environment | [Best practices for conditional access in Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-conditional-access-best-practices) |
+| Want to know about the best practices for conditional access policies in your environment | [Best practices for conditional access in Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-conditional-access-best-practices) |
+| Are ready to configure conditional access policies in your environment |  |

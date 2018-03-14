@@ -41,7 +41,7 @@ Membership in **Administrators**, or equivalent, is the minimum required to perf
 
 Install the Remote Access role as a single tenant RAS Gateway VPN server. For more information, see [Remote Access](https://docs.microsoft.com/windows-server/remote/remote-access/remote-access).
 
-### Use Windows PowerShell
+### Windows PowerShell
 
 1.  Run Windows PowerShell as Administrator.
 
@@ -58,7 +58,7 @@ PowerShell.
 |---------|----------------|-----------|--------------------------------------------|
 | True    | No             | Success   | {RAS Connection Manager Administration Kit |
 
-### Use Server Manager
+### Server Manager
 
 1.  On the VPN server, in Server Manager, click **Manage**, and then click **Add  Roles and Features**.<br><br>The Add Roles and Features Wizard opens.
 

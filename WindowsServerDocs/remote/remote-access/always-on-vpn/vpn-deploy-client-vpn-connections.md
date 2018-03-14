@@ -131,7 +131,7 @@ PSComputerName  : WIN01
 >[!TIP] 
 >If you need to troubleshoot the markup, it is easier to put it in an XML editor than to troubleshoot it in the Windows PowerShell ISE. In either case, start with the simplest version of the profile, and add components back one at a time until the issue occurs again.
 
-## Configure the VPN client using System Center Configuration Manager
+## <a name="vpn-deploy-client-sccm"></a>Configure the VPN client using System Center Configuration Manager
 
 With SCCM, you deploy VPN profiles by using the ProfileXML CSP node. Here, you create a user collection based on that security group's membership.
 
