@@ -120,13 +120,13 @@ If you are using L2TP or PPTP in your VPN, make sure to set **Send all traffic**
 
 ## Web client
 
-### Which browsers does the web client support?
+### Which browsers can I use?
 
 The web client supports Edge, Internet Explorer 11, and Google Chrome.
 
-### What devices does the web client support?
+### What PCs can I use to access the web client?
 
-The web client supports desktop PCs like Windows, Mac, Linux, or Chromebook.
+The web client supports Windows, Mac, Linux, and Chromebook. Mobile devices are not supported at this time.
 
 ### Can I use the web client in a Remote Desktop deployment without a gateway?
 
@@ -134,19 +134,15 @@ No. The client requires a Remote Desktop gateway to connect. Don't know what tha
 
 ### Does the Remote Desktop web client replace the Remote Desktop web access page?
 
-No. The RD Web Client is hosted at a different URL than the RD Web Access page. You can use either the client or the web access page to view the resource feed in a browser.
+No. The Remote Desktop web client is hosted at a different URL than the Remote Desktop web access page. You can use either the client or the web access page to view the resource feed in a browser.
 
 ### Can I embed the web client in another web page?
 
 This feature is not supported at the moment.
 
-### Can I customize the Remote Desktop web client?
-
-This feature is not supported at the moment.
-
 ### Why does my browser show a security warning when I try to access the web client?
 
-Either your certificate isn't trusted, or the server name in your remote web client URL doesn't exactly match the name provided by the RD Web certificate. Let your admin know you're getting a security warning so that they can fix the issue.
+Either your certificate isn't trusted, or there's a problem with the Remote Desktop infrastructure itself. Let your admin know you're getting a security warning so that they can fix the issue.
 
 ### Why am I getting an "unsupported browser" error when launching the web client in IE 11?
 
@@ -156,14 +152,14 @@ This is an issue with your browser's settings. To fix this, open up "Compatibili
 
 There are two things that might cause this:
 
-- The RD Gateway role isn't using a trusted public certificate.
-- The RD Gateway machine isn't up to date.
+- The certificate you're using isn't trusted.
+- An issue within the Remote Desktop infrastructure itself.
 
-If your connection issue is caused by the certificate, ask your admin for a copy of the certificate file. Close your browser, export the certificate and install it manually on the client machine's trusted root store, then relaunch the browser.
+To fix a certificate issue, ask your admin for a copy of the certificate file. Close your browser, export the certificate and install it manually on the client machine's trusted root store, then relaunch the browser.
 
-If installing the certificate doesn't solve the connectivity problem, then the issue might be that your RD Gateway machine isn't up to date. Check with your admin to make sure [this update](https://support.microsoft.com/en-us/help/4025334/windows-10-update-kb4025334) has been installed to the machine.
+If that didn't solve your problem, then the issue might be with your Remote Desktop infrastructure itself. Let your admin know so that they can fix the problem.
 
-If you're getting a "mismatched certificate" error when you can't connect, ask your admin to check the RD Broker machine's certificate. The error message will show the thumbprint of the expected certificate. Give the thumbprint information to your admin so they can search the RD Broker machine's certificate manager for the right certificate.
+If you're getting a "mismatched certificate" error when you can't connect, tell your admin exactly what you see in your error message. They can use this information to figure out how to fix what's causing the error.
 
 ## Monitors, audio, and mouse
 
