@@ -90,5 +90,3 @@ In this deployment scenario, you focus on migrating a simple DirectAccess enviro
 <!-- Next steps -->
 ## Next steps
 **[Plan your migration](da-always-on-migration-planning.md).** The primary goal of the migration is for users to maintain remote connectivity to the office throughout the process.
-
-<!-- pashort 2/17/2018: put a related documents section here with the external docs that are referenced -->

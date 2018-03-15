@@ -147,7 +147,6 @@
 ####### [Step 1: Configure the Remote Access Infrastructure](remote-access/ras/manage-remote-clients/install/Step-1-Configure-the-remote-Access-Infrastructure.md)
 ####### [Step 2: Configure the Remote Access Server](remote-access/ras/manage-remote-clients/install/Step-2-Configure-the-remote-Access-Server.md)
 ####### [Step 3: Verify the Deployment](remote-access/directaccess/single-server-advanced/Step-3-verify-the-Deployment.md)
-
 ### [Virtual Private Networking (VPN)](remote-access/vpn/vpn-top.md)
 #### [Always On VPN and DirectAccess Features Comparison](remote-access/vpn/vpn-map-da.md)
 #### [Migrating from DirectAccess to Always On VPN](remote-access/da-always-on-vpn-migration/da-always-on-migration-overview.md)

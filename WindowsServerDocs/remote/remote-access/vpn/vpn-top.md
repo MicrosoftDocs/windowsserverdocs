@@ -14,8 +14,6 @@ author: shortpatti
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows 10
 
-
-
 ## RAS Gateway as a Single Tenant VPN Server
 
 In Windows Server 2016, the Remote Access server role is a logical grouping of the following related network access technologies.
@@ -24,7 +22,7 @@ In Windows Server 2016, the Remote Access server role is a logical grouping of t
 - Routing
 - Web Application Proxy
 
-These technologies are the role services of the Remote Access server role. 
+These technologies are the role services of the Remote Access server role.
 
 When you install the Remote Access server role with the Add Roles and Features Wizard or Windows PowerShell, you can install one or more of these three role services.
 
