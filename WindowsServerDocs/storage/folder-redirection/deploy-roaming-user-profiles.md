@@ -1,11 +1,7 @@
 ﻿---
 Title: Deploying Roaming User Profiles
 TOCTitle: Deploying Roaming User Profiles
-ms:assetid: 65840ed4-02af-49fc-a99d-292a4b50dfd4
-ms:mtpsurl: https://technet.microsoft.com/en-us/library/JJ649079(v=WS.11)
-ms:contentKeyID: 49317441
-ms.date: 03/13/2018
-mtps_version: v=WS.11
+ms.date: 03/15/2018
 ms.prod: windows-server-threshold
 ms.technology: storage
 ms.topic: article
@@ -13,14 +9,13 @@ author: JasonGerend
 manager: brianlic
 ms.author: jgerend
 ---
-
 # Deploying Roaming User Profiles
 
-Applies To: Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Vista
+Applies To: Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 This topic describes how to use Windows Server to deploy [Roaming User Profiles](https://technet.microsoft.com/library/hh848267.aspx) to Windows client computers. Roaming User Profiles redirects user profiles to a file share so that users receive the same operating system and application settings on multiple computers.
 
-For a list of recent changes to this topic, see the [Change History]() section of this topic.
+For a list of recent changes to this topic, see the [Change history](#change-history) section of this topic.
 
 > [!IMPORTANT]
 > Due to the security changes made in <A href="https://support.microsoft.com/help/3163622/ms16-072-security-update-for-group-policy-june-14%2c-2016">MS16-072</A>, we updated <A href="">Step 4: Optionally create a GPO for Roaming User Profiles</A> of this topic so that Windows can properly apply the Roaming User Profiles policy (and not revert to local policies on affected PCs).
