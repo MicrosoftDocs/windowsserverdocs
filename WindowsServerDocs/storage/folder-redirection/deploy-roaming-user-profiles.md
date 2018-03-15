@@ -13,7 +13,7 @@ ms.author: jgerend
 
 Applies To: Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
-This topic describes how to use Windows Server to deploy [Roaming User Profiles](https://technet.microsoft.com/library/hh848267.aspx) to Windows client computers. Roaming User Profiles redirects user profiles to a file share so that users receive the same operating system and application settings on multiple computers.
+This topic describes how to use Windows Server to deploy [Roaming User Profiles](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh848267(v%3dws.11)) to Windows client computers. Roaming User Profiles redirects user profiles to a file share so that users receive the same operating system and application settings on multiple computers.
 
 For a list of recent changes to this topic, see the [Change history](#change-history) section of this topic.
 
@@ -370,11 +370,9 @@ To specify a Start layout, do the following:
       - Microsoft.XboxApp\_8wekyb3d8bbwe
       - Microsoft.XboxIdentityProvider\_8wekyb3d8bbwe
       - Microsoft.ZuneMusic\_8wekyb3d8bbwe
-    
 
 > [!NOTE]
 > Uninstalling these apps decreases sign-in times, but you can leave them installed if your deployment needs any of them.
-
 
 ## Step 8: Enable the Roaming User Profiles GPO
 
@@ -382,8 +380,7 @@ If you set up Roaming User Profiles on computers by using Group Policy, or if yo
 
 
 > [!TIP]
-> If you plan to implement primary computer support, do so now, before you enable the GPO. This prevents user data from being copied to non-primary computers before primary computer support is enabled. For the specific policy settings, see <A href="jj649076(v=ws.11).md">Deploy Primary Computers for Folder Redirection and Roaming User Profiles</A>.
-
+> If you plan to implement primary computer support, do so now, before you enable the GPO. This prevents user data from being copied to non-primary computers before primary computer support is enabled. For the specific policy settings, see <A href="https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj649076(v%3dws.11)">Deploy Primary Computers for Folder Redirection and Roaming User Profiles</A>.
 
 #### To enable the Roaming User Profile GPO
 
