@@ -26,7 +26,7 @@ Microsoft recommends that you review the design and deployment guides for each o
 ### Servers
 |Requirement  |Description  |
 |---------|---------|
-|Active Directory Domain Services (AD DS)     |Contains the user accounts, computer accounts, and account properties. These properties are required by Protected Extensible Authentication Protocol (PEAP) to authenticate user credentials and to evaluate authorization for VPB connection requests.         |
+|Active Directory Domain Services (AD DS)     |Contains the user accounts, computer accounts, and account properties. These properties are required by Protected Extensible Authentication Protocol (PEAP) to authenticate user credentials and to evaluate authorization for VPN connection requests.         |
 |Domain Name System (DNS)     |Hosts the information that enables client computers and servers to resolve IP addresses.         |
 |Active Directory Certificate Services (AD CS)     |Allows you to build a public key infrastructure (PKI) and provide public key cryptography, digital certificates, and digital signature capabilities of your organization.          |
 |Perimeter network with two firewalls   |Allows the traffic necessary for both VPN and RADIUS communications to function correctly.         |
@@ -55,8 +55,7 @@ Before you install the Remote Access server role on the VPN server, you must:
 
 ## STEP 1.2: Plan Authentication Methods
 
-Configure the Remote Access VPN server to support Internet Key Exchange Version 2 (IKEv2) connections while also disabling unused protocols, which reduce the
-server’s security footprint.
+Configure the Remote Access VPN server to support Internet Key Exchange Version 2 (IKEv2) connections while also disabling unused protocols, which reduce the server’s security footprint.
 
 IKEv2 protocol is an industry-standard tunneling protocol used by many VPN providers. The primary advantage of IKEv2 is that it tolerates interruptions in the underlying network connection. For example, if the connection is temporarily lost or if a user moves a client computer from one network to another, IKEv2 automatically restores the VPN connection when the network connection is reestablished — all without user intervention.
 
@@ -82,23 +81,10 @@ Configure the VPN server to assign addresses to VPN clients from a static addres
 
 4.  Verify that all VPN users have user accounts in Active Directory User (AD DS).<br><br>Before users can connect to the network with VPN connections, they must have   user accounts in AD DS.
 
-## STEP 1.5: Prepare the Routing and Firewall
-
-The VPN server is installed inside the perimeter network, which partitions the perimeter network into internal and external perimeter networks. You might need to make several routing modifications, depending on your network environment.
-
-1.  (Optional) Configure port forwarding.<br><br>Your edge firewall must open the ports and protocol IDs associated with an IKEv2 VPN and forward them to the VPN server. In most environments, doing so requires you to configure port forwarding. Redirect Universal Datagram Protocol (UDP) ports 500 and 4500 to the VPN server.
-
-2.  Configure routing so that the DNS servers and VPN servers can reach the Internet.<br><br>This deployment uses IKEv2 and Network Address Translation (NAT).
-
-3.  Ensure that the VPN server can reach all the required internal networks and network resources that you want to provide to remote users.<br><br>Any network or resource that is not reachable from the VPN server is also unreachable over VPN connections from remote locations.
-
->[!TIP] 
->In most environments, you can adjust static routes on the edge firewall and the VPN server to allow them to reach this new internal perimeter network. In complex environments, you may need to add static routes to internal routers or adjust internal firewall rules for the VPN server and the block of IP addresses associated with VPN clients.
-
 Next steps
 ----------
 
 | **If you…**                      | **Then …**      |
 |----------------------------------|--------------------------|
-| Are you migrating from DirectAccess  | Refer to [STEP 2: Plan your migration](../da-always-on-vpn-migration/da-always-on-migration-planning.md). The primary goal of the migration is for users to maintain remote connectivity to the office throughout the process.                                                                                    |
-| Are you just deploying Always On VPN | Skip to [STEP 3: Configure the Server Infrastructure](vpn-deploy-server-infrastructure.md). Install and configure the server-side components necessary to support the VPN, including configuring PKI to distribute the certificates used by users, the VPN server, and the NPS server. |
+| Are migrating from DirectAccess  | Refer to [STEP 2: Plan your migration](../da-always-on-vpn-migration/da-always-on-migration-planning.md). The primary goal of the migration is for users to maintain remote connectivity to the office throughout the process.    |
+| Are just deploying Always On VPN | Skip to [STEP 3: Configure the Remote Access Server for Always On VPN](vpn-deploy-ras.md). Install and configure the Remote Access server role on the computer or virtual machine (VM) that you want to use as your VPN server. |

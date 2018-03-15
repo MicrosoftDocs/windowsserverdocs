@@ -16,6 +16,8 @@ ms.date: 3/4/2018
 
 When remote VPN clients connect, they use the same DNS servers that your internal clients use, which allows them to resolve names in the same manner as the rest of your internal workstations. Ensure that the computer name that external clients use to connect to the VPN server matches the subject alternative name that is defined in the certificates you issue to the VPN server.
 
+
+
 ## STEP 6.1: Configure DNS name resolution
 
 The DNS database contains resource records (entries) that resolve name resolution queries sent to the DNS server. Each DNS server contains the resource records (RRs) it needs to respond to name resolution queries for the portion of the DNS namespace for which it is authoritative.

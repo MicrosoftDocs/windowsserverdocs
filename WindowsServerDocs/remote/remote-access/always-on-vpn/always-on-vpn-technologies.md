@@ -61,13 +61,9 @@ performing authorization and authentication, and sends either an Access-Accept o
 
 ## Active Directory Domain Services (AD DS) Server
 
-AD DS provides a distributed database that stores and manages information about network resources and application-specific data from directory-enabled
-applications. Administrators can use AD DS to organize elements of a network, such as users, computers, and other devices, into a hierarchical containment
-structure. The hierarchical containment structure includes the Active Directory forest, domains in the forest, and organizational units (OUs) in each domain. A
-server that is running AD DS is called a domain controller.
+AD DS provides a distributed database that stores and manages information about network resources and application-specific data from directory-enabled applications. Administrators can use AD DS to organize elements of a network, such as users, computers, and other devices, into a hierarchical containment structure. The hierarchical containment structure includes the Active Directory forest, domains in the forest, and organizational units (OUs) in each domain. A server that is running AD DS is called a domain controller.
 
-AD DS contains the user accounts, computer accounts, and account properties that are required by Protected Extensible Authentication Protocol (PEAP) to
-authenticate user credentials and to evaluate authorization for VPN connection requests.
+AD DS contains the user accounts, computer accounts, and account properties that are required by Protected Extensible Authentication Protocol (PEAP) to authenticate user credentials and to evaluate authorization for VPN connection requests.
 
 The Active Directory Domain Services (AD DS) server is an on-premises Active Directory domain, which hosts on-premises user accounts.
 
@@ -85,33 +81,24 @@ For information about deploying AD DS, see the Windows Server 2016 [Core Network
 
 ### Active Directory Users and Computers
 
-Active Directory Users and Computers is a component of AD DS that contains accounts that represent physical entities, such as a computer, a person, or a
-security group. A security group is a collection of user or computer accounts that administrators can manage as a single unit. User and computer accounts that
-belong to a specific group are referred to as group members.
+Active Directory Users and Computers is a component of AD DS that contains accounts that represent physical entities, such as a computer, a person, or a security group. A security group is a collection of user or computer accounts that administrators can manage as a single unit. User and computer accounts that belong to a specific group are referred to as group members.
 
 ### Group Policy Management
 
 Group Policy Management enables directory-based change and configuration management of user and computer settings, including security and user
 information. You use Group Policy to define configurations for groups of users and computers.
 
-With Group Policy, you can specify settings for registry entries, security, software installation, scripts, folder redirection, remote installation
-services, and Internet Explorer maintenance. The Group Policy settings that you create are contained in a Group Policy object (GPO). By associating a GPO with
-selected Active Directory system containers — sites, domains, and OUs — you can apply the GPO's settings to the users and computers in those Active Directory
-containers. To manage Group Policy objects across an enterprise, you can use the Group Policy Management Editor Microsoft Management Console (MMC).
+With Group Policy, you can specify settings for registry entries, security, software installation, scripts, folder redirection, remote installation services, and Internet Explorer maintenance. The Group Policy settings that you create are contained in a Group Policy object (GPO). By associating a GPO with selected Active Directory system containers — sites, domains, and OUs — you can apply the GPO's settings to the users and computers in those Active Directory containers. To manage Group Policy objects across an enterprise, you can use the Group Policy Management Editor Microsoft Management Console (MMC).
 
-## Active Directory Certificate Services (AD CA) Server
+## Active Directory Certificate Services (AD CS) Server
 
-AD CS in Windows Server 2016 provides customizable services for creating and managing the X.509 certificates that are used in software security systems that
-employ public key technologies. Organizations can use AD CS to enhance security by binding the identity of a person, device, or service to a corresponding
-public key. AD CS also includes features that allow you to manage certificate enrollment and revocation in a variety of scalable environments.
+AD CS in Windows Server 2016 provides customizable services for creating and managing the X.509 certificates that are used in software security systems that employ public key technologies. Organizations can use AD CS to enhance security by binding the identity of a person, device, or service to a corresponding public key. AD CS also includes features that allow you to manage certificate enrollment and revocation in a variety of scalable environments.
 
 For more information, see [Active Directory Certificate Services Overview](https://technet.microsoft.com/library/hh831740.aspx) and [Public Key Infrastructure Design Guidance](https://social.technet.microsoft.com/wiki/contents/articles/2901.public-key-infrastructure-design-guidance.aspx).
 
-The Certification Authority (CA) Server is a certification authority that is running Active Directory Certificate Services. The VPN configuration requires an
-Active Directory–based public key infrastructure (PKI).
+The Certification Authority (CA) Server is a certification authority that is running Active Directory Certificate Services. The VPN configuration requires an Active Directory–based public key infrastructure (PKI).
 
-The CA enrolls certificates that are used for PEAP client–server authentication. The CA creates certificates based on certificate templates. During completion of
-the steps in this guide, you will configure the following certificate templates on the CA.
+The CA enrolls certificates that are used for PEAP client–server authentication. The CA creates certificates based on certificate templates. During completion of the steps in this guide, you configure the following certificate templates on the CA:
 
 -   The User Authentication certificate template
 
@@ -217,22 +204,28 @@ In this guide, you use the ProfileXML VPNv2 CSP node to create the VPN profile t
 ProfileXML, see the ProfileXML Configuration File Overview section. For details about each VPNv2 CSP node, see the [VPNv2 CSP](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/vpnv2-csp).
 
 ## Firewalls
+<!-- this is from the planning section -->
+The VPN server is installed inside the perimeter network, which partitions the perimeter network into internal and external perimeter networks. You might need to make several routing modifications, depending on your network environment. Ensure that your firewalls allow the traffic that is necessary for both VPN and RADIUS communications to function correctly.
 
-Ensure that your firewalls allow the traffic that is necessary for both VPN and RADIUS communications to function correctly.
+1.  (Optional) Configure port forwarding.<br><br>Your edge firewall must open the ports and protocol IDs associated with an IKEv2 VPN and forward them to the VPN server. In most environments, doing so requires you to configure port forwarding. Redirect Universal Datagram Protocol (UDP) ports 500 and 4500 to the VPN server.
+
+2.  Configure routing so that the DNS servers and VPN servers can reach the Internet.<br><br>This deployment uses IKEv2 and Network Address Translation (NAT).
+
+3.  Ensure that the VPN server can reach all the required internal networks and network resources that you want to provide to remote users.<br><br>Any network or resource that is not reachable from the VPN server is also unreachable over VPN connections from remote locations.
+
+>[!TIP] 
+>In most environments, you can adjust static routes on the edge firewall and the VPN server to allow them to reach this new internal perimeter network. In complex environments, you may need to add static routes to internal routers or adjust internal firewall rules for the VPN server and the block of IP addresses associated with VPN clients.
 
 ### RADIUS Traffic Ports on the VPN Server and NPS Server
 
-By default, NPS and VPN listen for RADIUS traffic on ports 1812, 1813, 1645, and 1646 on all installed network adapters. If Windows Firewall with Advanced
-Security is enabled when you install NPS, firewall exceptions for these ports are automatically created during the installation process for both Internet
-Protocol version 6 (IPv6) and IPv4 traffic.
+By default, NPS and VPN listen for RADIUS traffic on ports 1812, 1813, 1645, and 1646 on all installed network adapters. If Windows Firewall with Advanced Security is enabled when you install NPS, firewall exceptions for these ports are automatically created during the installation process for both Internet Protocol version 6 (IPv6) and IPv4 traffic.
 
 >[!IMPORTANT] 
 >If your network access servers are configured to send RADIUS traffic over ports other than these defaults, remove the exceptions created in Windows Firewall with Advanced Security during NPS installation, and create exceptions for the ports that you do use for RADIUS traffic.
 
 ### Use the Same RADIUS Ports for the Internal Perimeter Network Firewall Configuration
 
-If you are using the default RADIUS port configuration on the VPN Server and the NPS Server, ensure that you open the following ports on the Internal Perimeter
-Network Firewall.
+If you are using the default RADIUS port configuration on the VPN Server and the NPS Server, ensure that you open the following ports on the Internal Perimeter Network Firewall.
 
 -   Ports UDP1812, UDP1813, UDP1645, and UDP1646
 

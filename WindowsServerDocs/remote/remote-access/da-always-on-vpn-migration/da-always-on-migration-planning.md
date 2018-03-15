@@ -62,5 +62,4 @@ By using user certificates, the Always On VPN client connects automatically, but
 (before user sign-in). The experience is still seamless to the user, but it supports more advanced authentication mechanisms, like Windows Hello for Business.
 
 ## Next steps
-
-[STEP 4: Configure the Remote Access Server for Always On VPN](../always-on-vpn/vpn-deploy-ras.md). Install and configure the Remote Access server role on the computer or virtual machine (VM) that you want to use as your VPN server.
+[STEP 3: Configure the Remote Access Server for Always On VPN](../always-on-vpn/vpn-deploy-ras.md). Install and configure the Remote Access server role on the computer or virtual machine (VM) that you want to use as your VPN server.
