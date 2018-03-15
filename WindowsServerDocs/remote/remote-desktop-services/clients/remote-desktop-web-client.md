@@ -10,8 +10,6 @@ author: Heidilohr
 ---
 # Getting started with the Remote Desktop web client
 
-## What is the Remote Desktop web client?
-
 The Remote Desktop client lets you access your organization's remote desktop workstation through your internet browser. You'll be able to interact with apps on your remote machine like you would with a local computer no matter where you are, without having to switch to a different desktop machine. Once your admin sets up your Remote Desktop group, all you need is your username, domain, password, and a supported web browser, and you're good to go.
 
 >[!NOTE]
