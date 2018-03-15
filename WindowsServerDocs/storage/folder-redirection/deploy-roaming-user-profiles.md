@@ -84,12 +84,12 @@ To make these changes, use the following procedure.
 
 2.  On all computers running Windows 8.1, Windows 8, Windows Server 2012 R2, or Windows Server 2012 on which you will use Roaming User Profiles, use Registry Editor or Group Policy to create the following registry key DWORD Value and set it to `1`. For information about creating registry keys by using Group Policy, see [Configure a Registry Item](http://technet.microsoft.com/library/cc753092.aspx).
     
-    ``` 
+    ```
     HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\ProfSvc\Parameters\UseProfilePathExtensionVersion  
     ```
 
-> [!WARNING]
-> Incorrectly editing the registry may severely damage your system. Before making changes to the registry, you should back up any valued data on the computer.
+    > [!WARNING]
+    > Incorrectly editing the registry may severely damage your system. Before making changes to the registry, you should back up any valued data on the computer.
 
 3.  Restart the computers.
 
@@ -141,11 +141,9 @@ If you do not already have a separate file share for roaming user profiles (inde
 4.  On the **Share Location** page, select the server and volume on which you want to create the share.
 
 5.  On the **Share Name** page, type a name for the share (for example, **User Profiles$**) in the **Share name** box.
-    
 
-> [!TIP]
-> When creating the share, hide the share by putting a <CODE>$</CODE> after the share name. This hides the share from casual browsers.
-
+    > [!TIP]
+    > When creating the share, hide the share by putting a <CODE>$</CODE> after the share name. This hides the share from casual browsers.
 
 6.  On the **Other Settings** page, clear the **Enable continuous availability** checkbox, if present, and optionally select the **Enable access-based enumeration** and **Encrypt data access** checkboxes.
 
@@ -288,11 +286,8 @@ You can use Group Policy to apply Roaming User Profiles to computers running Win
 4.  In the Group Policy Management Editor window, navigate to **Computer Configuration**, then **Policies**, then **Administrative Templates**, then **System**, and then **User Profiles**.
 
 5.  Right-click **Set roaming profile path for all users logging onto this computer** and then click **Edit**.
-    
-
-> [!TIP]
-> A user's home folder, if configured, is the default folder used by some programs such as Windows PowerShell. You can configure an alternative local or network location on a per-user basis by using the <STRONG>Home folder</STRONG> section of the user account properties in AD DS. To configure the home folder location for all users of a computer running Windows 8.1, Windows 8, Windows Server 2012 R2, or Windows Server 2012 in a virtual desktop environment, enable the <STRONG>Set user home folder</STRONG> policy setting, and then specify the file share and drive letter to map (or specify a local folder). Do not use environment variables or ellipses. The user’s alias is appended to the end of the path specified during user sign on.
-
+    > [!TIP]
+    > A user's home folder, if configured, is the default folder used by some programs such as Windows PowerShell. You can configure an alternative local or network location on a per-user basis by using the <STRONG>Home folder</STRONG> section of the user account properties in AD DS. To configure the home folder location for all users of a computer running Windows 8.1, Windows 8, Windows Server 2012 R2, or Windows Server 2012 in a virtual desktop environment, enable the <STRONG>Set user home folder</STRONG> policy setting, and then specify the file share and drive letter to map (or specify a local folder). Do not use environment variables or ellipses. The user’s alias is appended to the end of the path specified during user sign on.
 
 6.  In the **Properties** dialog box, click **Enabled**
 
@@ -318,8 +313,8 @@ To specify a Start layout, do the following:
 3.  Use Group Policy to apply the customized Start layout to the GPO you created for Roaming User Profiles. To do so, see [Use Group Policy to apply a customized Start layout in a domain](https://technet.microsoft.com/itpro/windows/manage/customize-windows-10-start-screens-by-using-group-policy%23bkmk-domaingpodeployment).
 
 4.  Use Group Policy to set the following registry value on your Windows 10 PCs. To do so, see [Configure a Registry Item](https://technet.microsoft.com/library/cc753092.aspx).
-    
-<table>
+
+    <table>
     <thead>
     <tr class="header">
     <th>Action</th>
@@ -352,7 +347,7 @@ To specify a Start layout, do the following:
     <td><strong>Decimal</strong></td>
     </tr>
     </tbody>
-</table>
+    </table>
 
 5.  (Optional) Enable first-time logon optimizations to make signing in faster for users. To do so, see [Apply policies to improve sign-in time](https://technet.microsoft.com/itpro/windows/manage/mandatory-user-profile%23apply-policies-to-improve-sign-in-time).
 
