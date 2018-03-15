@@ -132,8 +132,7 @@ However, if you haven’t restarted the computer since configuring certificate a
 
 **To manually create a single test VPN connection**
 
-1.  Sign in to a domain-joined client computer as a member of the **VPN Users**
-    group.
+1.  Sign in to a domain-joined client computer as a member of the **VPN Users** group.
 
 2.  On the Start menu, type **VPN**, and press Enter.
 
@@ -650,7 +649,7 @@ Listing 2. Successful results from the Get-WmiObject cmdlet
     TrustedNetworkDetection : corp.contoso.com
     PSComputerName  : WIN01
 
-The ProfileXML configuration must be correct in structure, spelling, configuration, and sometimes letter case. If you see something different in structure to Listing 1, the ProfileXML markup likely contains an error. 
+The ProfileXML configuration must be correct in structure, spelling, configuration, and sometimes letter case. If you see something different in structure to Listing 1, the ProfileXML markup likely contains an error.
 
 If you need to troubleshoot the markup, it is easier to put it in an XML editor than to troubleshoot it in the Windows PowerShell ISE. In either case, start with the simplest version of the profile, and add components back one at a time until the issue occurs again.
 

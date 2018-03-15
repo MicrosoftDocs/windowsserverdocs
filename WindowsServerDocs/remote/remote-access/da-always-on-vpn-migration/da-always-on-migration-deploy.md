@@ -70,10 +70,10 @@ As the VPN authentication certificates are issued, and you run the **GetUsersWit
       }
     ```
 
-| If you are using...                 | Then...                                                             |
-|-------------------------------------|---------------------------------------------------------------------|
-| System Center Configuration Manager | Create a user collection based on that security group's membership. |
-| Intune                              | Target the security group directly once it is synchronized.<br>![![Microsoft Intune target user security group](media/b38723b3ffcfacd697b83dd41a177f66.png)](../../media/Always-On-Vpn/b38723b3ffcfacd697b83dd41a177f66.png)  |
+    | If you are using...                 | Then...                                                             |
+    |-------------------------------------|---------------------------------------------------------------------|
+    | System Center Configuration Manager | Create a user collection based on that security group's membership. |
+    | Intune                              | Target the security group directly once it is synchronized.<br>![![Microsoft Intune target user security group](media/b38723b3ffcfacd697b83dd41a177f66.png)](../../media/Always-On-Vpn/b38723b3ffcfacd697b83dd41a177f66.png)  |
 
 2.  Each time you run the **GetUsersWithCert.ps1** configuration script, you must also run an AD DS discovery rule to update the security group membership in SCCM.
 
