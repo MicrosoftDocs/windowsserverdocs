@@ -8,7 +8,7 @@ ms.topic: article
 ms.assetid: eeca4cf7-90f0-485d-843c-76c5885c54b0
 ms.author: pashort
 author: shortpatti
-ms.date: 2/15/2018
+ms.date: 3/15/2018
 ---
 DirectAccess to Always On VPN migration overview
 ================================================
@@ -17,9 +17,11 @@ DirectAccess to Always On VPN migration overview
 
 In previous versions of the Windows VPN architecture, platform limitations made it difficult to provide the critical functionality needed to replace DirectAccess (like automatic connections initiated before users sign in). Always On VPN, however, has mitigated most of those limitations or expanded the VPN functionality beyond the capabilities of DirectAccess. Always On VPN addresses the previous gaps between Windows VPNs and DirectAccess.
 
-The DirectAccess–to–Always On VPN migration process consists of three primary components and high-level processes:
+The DirectAccess–to–Always On VPN migration process consists of four primary components and high-level processes:
 
-1.  **Plan.** Planning for Always On VPN includes identifying target clients for user phase separation as well as infrastructure and functionality planning.
+1.  **[Deploy Always On VPN](../vpn/vpn-top.md)**. Configure the infrastructure required to support Remote Access Always On VPNs in the Windows Server 2016 and later operating systems. Here, you use multiple client-management technologies to deploy Always-On VPN profiles to client computers running the Windows 10 Anniversary Update (version 1607) or later operating system.  
+
+2.  **Plan.** Planning for Always On VPN includes identifying target clients for user phase separation as well as infrastructure and functionality planning.
 
     1.  **Build migration rings.** As in most other system migrations, target client migrations in phases to help identify any issues before they affect the entire organization. The first part of Always On VPN migration is no different.
 
@@ -28,13 +30,13 @@ The DirectAccess–to–Always On VPN migration process consists of three primar
 
     3.  **Review new features of Always On VPN.** Discover new or improved features that Always On VPN offers to improve your configuration.
 
-2.  **Migrate.** Following a specific process to migrate clients helps minimize race conditions that arise from performing migration steps out of order.
+3.  **Migrate.** Following a specific process to migrate clients helps minimize race conditions that arise from performing migration steps out of order.
 
     1.  **Deploy a side-by-side VPN infrastructure.** After you have determined your migration phases and the features you want to include in your deployment, you deploy the VPN infrastructure side by side with the existing DirectAccess infrastructure.
 
     2.  **Deploy certificates and the VPN configuration script.** After the VPN infrastructure is ready, you create and publish the required certificates. When the clients have received the certificates, deploy the VPN_Profile.ps1 configuration script. Alternatively, you can use Intune to configure the VPN client.
 
-3.  **Remove and decommission.** Properly decommission the environment after you have migrated everyone off DirectAccess.
+4.  **Remove and decommission.** Properly decommission the environment after you have migrated everyone off DirectAccess.
 
     1.  **Remove the DirectAccess configuration from the client.** Monitor Microsoft System Center Configuration Manager or Microsoft Intune for successful VPN configuration deployments. Then, use reporting
         to determine device-assignment information and discover which device belongs to each user. As users migrate successfully, you remove their devices from the DirectAccess security group so that you can remove DirectAccess from your environment.
@@ -88,5 +90,3 @@ In this deployment scenario, you focus on migrating a simple DirectAccess enviro
 <!-- Next steps -->
 ## Next steps
 **[Plan your migration](da-always-on-migration-planning.md).** The primary goal of the migration is for users to maintain remote connectivity to the office throughout the process.
-
-<!-- pashort 2/17/2018: put a related documents section here with the external docs that are referenced -->
