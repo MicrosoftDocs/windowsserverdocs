@@ -420,6 +420,21 @@ After Disabling the SR Partnership and removing the Storage Replica, it is expec
 
 You need to use Key or Password of Primary Server’s Data drive to unlock the Secondary Server’s data drive.
 
+## Test Failover does mount when using asynchronous replication
+
+When running Mount-SRDestination to bring a destination volume online as part of the Test Failover feature, it fails with error:
+
+    Mount-SRDestination: Unable to mount SR group <TEST>, detailed reason: The group or resource is not in the correct state to perform the supported operation.
+    At line:1 char:1
+    + Mount-SRDestination -ComputerName SRV1 -Name TEST -TemporaryP . . .
+    + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        + CategoryInfo          : NotSpecified: (MSFT WvrAdminTasks : root/Microsoft/...(MSFT WvrAdminTasks : root/Microsoft/. T_WvrAdminTasks) (Mount-SRDestination], CimException
+        + FullyQua1ifiedErrorId : Windows System Error 5823, Mount-SRDestination.  
+
+If using a synchronous partnership type, test failover works normally.    
+
+This is caused by a known code defect in Windows Server, version 1709. It has been resolved in the next Semi-annual Channel Release of Windows Server. Please contact Microsoft Support to request a backport to Windows Server, version 1709 or wait for the next Windows Server release. 
+
 ## See also  
 - [Storage Replica](storage-replica-overview.md)  
 - [Stretch Cluster Replication Using Shared Storage](stretch-cluster-replication-using-shared-storage.md)  
