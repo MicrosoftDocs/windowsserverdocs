@@ -56,7 +56,7 @@ You will be deploying the VPN infrastructure side by side with the existing Dire
 
 The following image provides a visual reference for the infrastructure changes throughout the DirectAccess-to–Always On VPN migration.
 
-![](../../media/DA-to-AlwaysOnVPN/media/6b64f322f945f837f22a32bf87a228f8.png)
+![](../../media/DA-to-AlwaysOnVPN/6b64f322f945f837f22a32bf87a228f8.png)
 
 Deploy certificates and VPN configuration script to the clients
 ---------------------------------------------------------------
@@ -122,7 +122,7 @@ You must ensure that the **VPN_Profile.ps1** comes _after_ the certificate has b
 
 | If you are using...  | Then... |
 | ---- | ---- |
-| System Center Configuration Manager | Create a user collection based on that security group's membership.<br><br>![](../../media/DA-to-AlwaysOnVPN/media/b38723b3ffcfacd697b83dd41a177f66.png) |
+| System Center Configuration Manager | Create a user collection based on that security group's membership.<br><br>![](../../media/DA-to-AlwaysOnVPN/b38723b3ffcfacd697b83dd41a177f66.png)!|
 | Intune | Simply target the security group directly once it is synchronized. |
 |
     
