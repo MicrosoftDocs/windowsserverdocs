@@ -355,3 +355,4 @@ Unlike the user certificate, you must manually enroll the VPN server’s certifi
 7.  Close the Certificates snap-in.
 
 For the next Always On VPN deployment steps, see [Configure the Remote Access Server for Always On VPN](vpn-deploy-ras.md).
+

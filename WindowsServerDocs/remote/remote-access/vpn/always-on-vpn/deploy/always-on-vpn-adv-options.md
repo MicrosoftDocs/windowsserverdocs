@@ -90,6 +90,4 @@ For more information about TPM key attestation in Windows 10, see [TPM Key Attes
 
 For detailed information about these and other Windows 10 VPN configuration options, see the Windows 10 [VPN technical guide](https://docs.microsoft.com/windows/access-protection/vpn/vpn-guide).
 
-
-
 For the next section in this guide, see [Remote Access Always On VPN Troubleshooting](always-on-vpn-deploy-troubleshooting.md).

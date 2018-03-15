@@ -55,4 +55,3 @@ You can use this topic to complete the following steps.
 
 
 For the next section in this guide, see [Configure the Always On VPN Server Infrastructure](vpn-deploy-server-infrastructure.md).
-
