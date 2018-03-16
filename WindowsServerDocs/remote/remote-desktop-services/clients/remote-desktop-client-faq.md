@@ -146,7 +146,7 @@ Either your certificate isn't trusted, or there's a problem with the Remote Desk
 
 ### Why am I getting an "unsupported browser" error when launching the web client in IE 11?
 
-This is an issue with your browser's settings. To fix this, open up "Compatibility View settings" in your browser, then uncheck the "Display intranet sites in Compatibility View" option's checkbox.
+This is an issue with your browser's settings. To fix this, open "Compatibility View settings" in your browser, then uncheck the "Display intranet sites in Compatibility View" option's checkbox.
 
 ### Why can't I connect to the web client even though I can see the feed?
 

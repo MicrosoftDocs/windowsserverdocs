@@ -1,7 +1,7 @@
 ---
 title: Set up the Remote Desktop web client for your users
 description: Describes how an admin can set up the Remote Desktop web client.
-ms.prod: remote-desktop-modern-infrastructure
+ms.prod: windows-server-threshold
 ms.technology: remote-desktop-services
 ms.author: helohr
 ms.date: 3/1/2018
@@ -101,7 +101,7 @@ If that doesn't work, that means your server name in the web client URL doesn't 
 
 ### What to do if the user gets an "unsupported browser" error when launching the web client in IE 11
 
-This is caused by a conflict with the user's browser settings. To fix this, ask the user to open up "Compatibility View settings" in their browser, then uncheck the "Display intranet sites in Compatibility view" option's checkbox.
+This is caused by a conflict with the user's browser settings. To fix this, ask the user to open up "Compatibility View settings" in their browser, then uncheck the "Display intranet sites in Compatibility View" option's checkbox.
 
 ### What to do if the user can't connect to the web client even though they can see the feed
 
