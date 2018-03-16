@@ -192,7 +192,7 @@ Following are some of the features and capabilities of SLB.
   
 -   SLB includes Internet Protocol version 4 (IPv4) support  
   
--   For site-to-site gateway scenarios, S:B provides NAT functionality to enable all site-to-site connections to utilize a single public IP  
+-   For site-to-site gateway scenarios, SLB provides NAT functionality to enable all site-to-site connections to utilize a single public IP  
   
 -   You can install SLB, including the Host Agent and the MUX, on  Windows Server 2016, Full, Core, and Nano Install.  
   

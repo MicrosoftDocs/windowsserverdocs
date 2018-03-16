@@ -198,5 +198,4 @@ Membership in **Administrators**, or equivalent, is the minimum required to comp
   
 2.  At the Windows PowerShell prompt, type **gpupdate**, and then press ENTER.
 
-
 For the next Always On VPN deployment steps, see [Configure DNS and Firewall Settings for Always On VPN](vpn-deploy-dns-firewall.md).

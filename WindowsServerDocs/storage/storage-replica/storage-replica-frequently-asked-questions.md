@@ -92,7 +92,7 @@ For example, to create a test failover where you are replicating a volume "D:" i
 
  `Mount-SRDestination -Name RG2 -Computername SRV2 -TemporaryPath T:\`
  
-The replicated volume D: is now accessible on SRV2. You can read and write to it normally, copy files off it, or run an online backup that you save elsewhere for safekeeping.
+The replicated volume D: is now accessible on SRV2. You can read and write to it normally, copy files off it, or run an online backup that you save elsewhere for safekeeping, under the D: path. The T: volume will only contain log data.
 
 To remove the test failover snapshot and discard its changes:
 

@@ -31,7 +31,7 @@ The aggressiveness of balancing based on the Memory and CPU heuristics can be co
 |-------------------|----------------|----------|
 | 1 (default) | Low | Move when host is more than 80% loaded |
 | 2 | Medium | Move when host is more than 70% loaded |
-| 3 | High | Move when host is more than 60% loaded | 
+| 3 | High | Average nodes and move when host is more than 5% above average | 
 
 ![Graphic of a PowerShell of configuring the aggressiveness of balancing](media/vm-load-balancing/detailed-VM-load-balancing-1.jpg)
 
