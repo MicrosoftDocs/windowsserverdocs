@@ -35,8 +35,8 @@ To install the web client for the first time, follow these steps:
 
 1. On the RD Broker server, obtain the certificate used for Remote Desktop connections and export it as a .cer file. Copy the .cer file from the RD Broker to the server running the RD Web role.
 1. On the RD Web server:
-    1. Copy the content of **rd-html5-manage.zip** into **%ProgramFiles%\rd-html5-manage**.
-    1. Copy the content of **rd-html5-packages.zip** into **%ProgramFiles%\rd-html5-packages**.
+    * Copy the content of **rd-html5-manage.zip** into **%ProgramFiles%\rd-html5-manage**.
+    * Copy the content of **rd-html5-packages.zip** into **%ProgramFiles%\rd-html5-packages**.
 1. Open an Administrator PowerShell prompt.
 1. First, run this cmdlet:
     ```PowerShell
@@ -103,16 +103,16 @@ If that doesn't work, that means your server name in the web client URL doesn't 
 
 This is caused by a conflict with the user's browser settings. To fix this, ask the user to open up "Compatibility View settings" in their browser, then uncheck the "Display intranet sites in Compatibility view" option's checkbox.
 
-### What to do if users can't connect to the web client even though they can see the feed
+### What to do if the user can't connect to the web client even though they can see the feed
 
-If users report that they can't connect to the web client even though they can see the feed, check the following things:
+If the user reports that they can't connect to the web client even though they can see the feed, check the following things:
 
 * Is the RD Gateway role using a trusted public certificate?
 * Is the RD Gateway server up to date?
 
 To fix the certificate, close the browser, export the certificate and install it manually on the client server's trusted root store, then relaunch the browser.
 
-If manually installing the certificate doesn't solve the connectivity problem, then the issue might be that your RD Gateway server isn't up to date. Make sure that your server has [this update](https://support.microsoft.com/en-us/help/4025334/windows-10-update-kb4025334) installed.
+If manually installing the certificate doesn't solve the connectivity problem, then the issue might be that your RD Gateway server isn't up to date. Make sure that your server has [the KB4025334 update](https://support.microsoft.com/en-us/help/4025334/windows-10-update-kb4025334) installed.
 
 If the user gets a "mismatched certificate" error when they try to connect, then you'll need to check the RD Broker server's certificate. The error message will show the thumbprint of the expected certificate. Search the RD Broker server's certificate manager using that thumbprint to find the right certificate. After making sure the certificate hasn't expired, copy the certificate in .cer file format to the RD Web server and run the following cmdlet on the RD Web server with the bracketed value replaced by the certificate's file path:
 
