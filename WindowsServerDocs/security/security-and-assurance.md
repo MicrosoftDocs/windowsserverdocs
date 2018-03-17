@@ -6,7 +6,7 @@ ms.prod: windows-server-threshold
 ms.technology: techgroup-security
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.date: 5/22/2017
+ms.date: 03/16/2018
 ms.assetid: b886b2fd-3567-4f0a-8aa3-4ba7923d2d21
 author: coreyp-at-msft
 ms.author: coreyp
@@ -15,6 +15,9 @@ ms.localizationpriority: high
 # Security and Assurance in Windows Server 
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+
+>[!TIP]
+> Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/) on docs.microsoft.com. You can also [search this site](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions) for specific information.
 
 <img src="../media/landing-icons/security.png" style='float:left; padding:.5em;' alt="Icon representing a lock"> You can rely on new layers of protection built into the operating system to further safeguard against security breaches. Help block malicious attacks and enhance the security of your virtual machines, applications, and data.
 
