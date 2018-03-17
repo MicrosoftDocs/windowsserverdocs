@@ -7,12 +7,15 @@ ms.topic: article
 author: JasonGerend
 manager: dongill
 ms.author: jgerend
-ms.date: 12/14/2017
+ms.date: 03/16/2018
 ms.localizationpriority: high
 ---
 # Storage in Windows Server
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+
+>[!TIP]
+> Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/) on docs.microsoft.com. You can also [search this site](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions) for specific information.
 
 <img src="../media/landing-icons/storage.png" style='float:left; padding:.5em;' alt="Icon representing a drive"> Storage in Windows Server provides new and improved features for software-defined datacenter (SDDC) customers focusing on virtualized workloads. Windows Server also provides extensive support for enterprise customers using file servers with existing workloads.
 
