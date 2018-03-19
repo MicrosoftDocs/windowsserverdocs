@@ -10,7 +10,7 @@ author: Heidilohr
 ---
 # Access the Remote Desktop web client
 
-The Remote Desktop client lets you access your organization's remote desktop workstation through a compatible internet browser. You'll be able to interact with apps on your remote machine like you would with a local PC no matter where you are, without having to switch to a different desktop PC. Once your admin sets up your Remote Desktop group, all you need are your domain, credentials, and a supported web browser, and you're good to go.
+The Remote Desktop client lets you access your organization's remote desktop workstation through a compatible internet browser. You'll be able to interact with apps on your remote machine like you would with a local PC no matter where you are, without having to switch to a different desktop PC. Once your admin sets up your Remote Desktop group, all you need are your domain, credentials, the URL your admin sent you, and a supported web browser, and you're good to go.
 
 >[!NOTE]
 >You may have heard people call this client the HTML5 client. Both names refer to the same client.
@@ -19,7 +19,7 @@ The Remote Desktop client lets you access your organization's remote desktop wor
 
 * For the web client, you'll need a PC running Windows, Mac, or Linux. Mobile devices are not supported at this time.
 * The client currently supports Edge, IE 11, Google Chrome, and Safari. Firefox support is still in progress.
-* The URL that your admin sent you.
+* The URL your admin sent you.
 
 ## Start using the Remote Desktop client
 
