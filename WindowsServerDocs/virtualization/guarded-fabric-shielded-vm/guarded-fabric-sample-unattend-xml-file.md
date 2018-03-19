@@ -1,5 +1,5 @@
 ---
-title: Shielded VMs - Generate an answer file by using the New-ShieldingDataAnswerFile function
+title: Create OS specialization answer file
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.topic: article
@@ -10,60 +10,70 @@ ms.technology: security-guarded-fabric
 ms.date: 10/14/2016
 ---
 
-# Shielded VMs - Generate an answer file by using the New-ShieldingDataAnswerFile function
+# Create OS specialization answer file
 
 >Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
-As part of the process of configuring shielded VMs, you may need to create a virtual machine (VM) specialization answer file, `unattend.xml`. The **New-ShieldingDataAnswerFile** Windows PowerShell function helps you do this. You can then use the answer file when you're creating shielded VMs from a template by using System Center Virtual Machine Manager (or any other fabric controller).
+In preparation to deploy shielded VMs, you may need to create an operating system specialization answer file. On Windows, this is commonly known as the "unattend.xml" file. The **New-ShieldingDataAnswerFile** Windows PowerShell function helps you do this. You can then use the answer file when you're creating shielded VMs from a template by using System Center Virtual Machine Manager (or any other fabric controller).
 
 For general guidelines for Unattend files for shielded VMs, see [Create an answer file](guarded-fabric-tenant-creates-shielding-data.md#create-an-answer-file).
  
 ## Downloading the New-ShieldingDataAnswerFile function
 
-To download the **New-ShieldingDataAnswerFile** function, go to:
+You can obtain the **New-ShieldingDataAnswerFile** function from the [PowerShell Gallery](https://aka.ms/gftools). If your computer has Internet connectivity, you can install it from PowerShell with the following command:
 
-https://www.powershellgallery.com/packages/GuardedFabricTools
+```powershell
+Install-Module GuardedFabricTools -Repository PSGallery -MinimumVersion 1.0.0
+```
 
 The `unattend.xml` output can be packaged into the shielding data, along with additional artifacts, so that it can be used to create shielded VMs from templates.
 
 The following sections show how you can use the function parameters for an `unattend.xml` file containing various options:
 
-- [Answer file without joining a domain](#answer-file-without-joining-a-domain)
-- [Answer file that includes joining a domain](#answer-file-that-includes-joining-a-domain)
-- [Answer file that uses static IP](#answer-file-that-uses-static-ip)
-- [Answer file that includes a setup script](#answer-file-that-includes-a-setup-script)
-- [Answer file that configures BitLocker to back up the recovery password](#answer-file-that-configures-bitlocker-to-back-up-the-recovery-password)
+- [Basic Windows Answer File](#basic-windows-answer-file)
+- [Windows answer file with domain join](#windows-answer-file-with-domain-join)
+- [Windows answer file with static IPv4 addresses](#windows-answer-file-with-static-ipv4-addresses)
+- [Windows answer file with a custom locale](#windows-answer-file-with-custom-locale)
+- [Basic Linux answer file](#basic-linux-answer-file)
 
 You can also review the [function parameters](#function-parameters), later in this topic.
 
-## Answer file without joining a domain
+## Basic Windows answer file
 
-The following commands create an `unattend.xml` file that does not join a domain at the end of the initialization. Note that the RDP certificate is located at `C:\myRDP.pfx` with the password `RDPPassword1`. This certificate proves that this is your VM when you connect to the VM by using RDP.
-
-```powershell
-$myadminpwd = ConvertTo-SecureString "AdminPassword1" -AsPlainText -Force
-$myRDPCertpwd = ConvertTo-SecureString "RDPPassword1" -AsPlainText -Force
-
-New-ShieldingDataAnswerFile -AdminPassword $myadminpwd -RDPCertificateFilePath C:\myRDP.pfx -RDPCertificatePassword $myRDPCertpwd
-```
-
-## Answer file that includes joining a domain
-
-The following commands create an `unattend.xml` file that joins a domain at the end of the initialization. In this example, the domain to be joined is `contoso.com` and the user name is `CONTOSO\MyUsername`. Note that the RDP certificate is located at `C:\myRDP.pfx` with the password `RDPPassword1`.
+The following commands create a Windows answer file that simply sets the administrator account password and hostname.
+The VM network adapters will use DHCP to obtain IP addresses, and the VM will not be joined to an Active Directory domain.
+When prompted to enter an administrator credential, specify the desired username and password.
+Use "Administrator" for the username if you wish to configure the built-in Administrator account.
 
 ```powershell
-$myadminpwd = ConvertTo-SecureString "AdminPassword1" -AsPlainText -Force
-$mydomainpwd = ConvertTo-SecureString "UserPassword1" -AsPlainText -Force
-$mydomaincreds = New-Object System.Management.Automation.PSCredential("CONTOSO\MyUsername", $mydomainpwd)
-$myRDPCertpwd = ConvertTo-SecureString "RDPPassword1" -AsPlainText -Force
+$adminCred = Get-Credential -Prompt "Local administrator account"
 
-New-ShieldingDataAnswerFile -AdminPassword $myadminpwd -DomainJoin contoso.com -DomainJoinCredential $mydomaincreds -RDPCertificateFilePath C:\myRDP.pfx -RDPCertificatePassword $myRDPCertpwd
+New-ShieldingDataAnswerFile -Path '.\ShieldedVMAnswerFile.xml' -AdminCredentials $adminCred
 ```
-## Answer file that uses static IP
 
-The following commands create an `unattend.xml` file that does not join a domain at the end of the initialization and has a static IP address.
+## Windows answer file with domain join
 
-Virtual Machine Manager provides three components to the static IP address by using an IP pool: IPv4 address, gateway address, and DNS address. If you want any additional fields to be included, such as IPv6 address, you need to manually edit the resultant `unattend.xml` file.
+The following commands create a Windows answer file that joins the shielded VM to an Active Directory domain.
+The VM network adapters will use DHCP to obtain IP addresses.
+
+The first credential prompt will ask for the local administrator account information.
+Use "Administrator" for the username if you wish to configure the built-in Administrator account.
+
+The second credential prompt will ask for credentials that have the right to join the machine to the Active Directory domain.
+
+Be sure to change the value of the "-DomainName" parameter to the FQDN of your Active Directory domain.
+
+```powershell
+$adminCred = Get-Credential -Prompt "Local administrator account"
+$domainCred = Get-Credential -Prompt "Domain join credentials"
+
+New-ShieldingDataAnswerFile -Path '.\ShieldedVMAnswerFile.xml' -AdminCredentials $adminCred -DomainName 'my.contoso.com' -DomainJoinCredentials $domainCred
+```
+## Windows answer file with static IPv4 addresses
+
+The following commands create a Windows answer file that uses static IP addresses provided at deployment time by the fabric manager, such as System Center Virtual Machine Manager.
+
+Virtual Machine Manager provides three components to the static IP address by using an IP pool: IPv4 address, IPv6 address, gateway address, and DNS address. If you want any additional fields to be included or require a custom network configuration, you will need to manually edit the answer file produced by the script.
 
 The following screenshots show the IP pools that you can configure in Virtual Machine Manager. These pools are necessary if you want to use static IP.
 
@@ -79,101 +89,41 @@ You need to configure your network adapter for your virtual machine. The followi
 
 ![Configure hardware to use Static IP](../media/Guarded-Fabric-Shielded-VM/guarded-host-unattend-static-ip-address-pool-network-adapter-settings.png)
 
-Then, you can use the function with the switch `-StaticIP` turned on. The function will fill the `unattend.xml` file with static IP configurations. The parameters `@IPAddr-1@`, `@NextHop-1-1@`, and `@DNSAddr-1-1@` in `unattend.xml` will then be translated to real values that you specified in Virtual Machine Manager.
+Then, you can use the  `-StaticIPPool` parameter to include the static IP elements in the answer file. The parameters `@IPAddr-1@`, `@NextHop-1-1@`, and `@DNSAddr-1-1@` in the answer file will then be replaced with the real values that you specified in Virtual Machine Manager at deployment time.
 
 ```powershell
-New-ShieldingDataAnswerFile -AdminPassword $myadminpwd -RDPCertificateFilePath C:\myRDP.pfx -RDPCertificatePassword $myRDPCertpwd -StaticIP
+$adminCred = Get-Credential -Prompt "Local administrator account"
 
-WARNING: You have enabled StaticIP.
-For this answer file, we expect you to configure the VMM to contain only a single NIC and to have your Static IP Pool setup correctly. You should have configured on VMM to have one DNS server address and IPv4 static IP address. You can modify these values from the answer file if you want to do it manually:
-    @IP4Addr-1@
-    @MACAddr-1@
-    @Prefix-1-1@
-    @NextHop-1-1@
-    @DnsAddr-1-1@
+New-ShieldingDataAnswerFile -Path '.\ShieldedVMAnswerFile.xml' -AdminCredentials $adminCred -StaticIPPool IPv4Address
 ```
 
-## Answer file that includes a setup script
+## Windows answer file with a custom locale
 
-The following commands create an `unattend.xml` file that will run a Windows PowerShell script that must be included in the shielding data file.
+The following commands create a Windows answer file with a custom locale.
+
+When prompted to enter an administrator credential, specify the desired username and password.
+Use "Administrator" for the username if you wish to configure the built-in Administrator account.
 
 ```powershell
-New-ShieldingDataAnswerFile -AdminPassword $myadminpwd -RDPCertificateFilePath C:\myRDP.pfx -RDPCertificatePassword $myRDPCertpwd -SetupScriptFilePath C:\myscript.ps1
+$adminCred = Get-Credential -Prompt "Local administrator account"
+$domainCred = Get-Credential -Prompt "Domain join credentials"
+
+New-ShieldingDataAnswerFile -Path '.\ShieldedVMAnswerFile.xml' -AdminCredentials $adminCred -Locale es-ES
 ```
-The following screenshot shows how to add the script to your shielding data file by using the Shielding Data File Wizard. Open the wizard as described in [Create a shielding data file and add guardians](guarded-fabric-tenant-creates-shielding-data.md#create-a-shielding-data-file-and-add-guardians), and add guardians. In the **Specialization Values** section, click **Add** and select your desired script.
 
-![Shielding Data File Wizard adding the setup script on Specialization Values](../media/Guarded-Fabric-Shielded-VM/guarded-host-unattend-add-script-to-shielding-data-file.png)
+## Basic Linux answer file
 
-Note that the name of the script must be the same as the script that you will include in your shielding data file. The setup process will put the file in `C:\Temp`, and the `unattend.xml` file will invoke your Windows PowerShell script from there. The `unattend.xml` file will append a Windows PowerShell command to start the script onto the `SetupComplete.cmd` file. This command runs after setup is complete.
+Starting with Windows Server version 1709, you can run certain Linux guest OSes in shielded VMs.
+If you are using the System Center Virtual Machine Manager Linux agent to specialize those VMs, the New-ShieldingDataAnswerFile cmdlet can create compatible answer files for it.
 
-> [!NOTE]
-> We recommend that you add the `Start-Transcript` command on your script so that you can see the output of your scripts. This can be useful for debugging. For more information, see [Start-Transcript](https://technet.microsoft.com/library/hh849687.aspx).
-
-## Answer file that configures BitLocker to back up the recovery password
-
-If the VM is domain joined, you can configure BitLocker Drive Encryption to back up the recovery password for a drive that uses BitLocker. To enable this in your `unattend.xml` file, you must pass in the switch `BackupBitLockerKeyProtector` like this:
+In a Linux answer file, you will typically include the root password, root SSH key, and optionally static IP pool information.
+Replace the path to the public half of your SSH key before running the script below.
 
 ```powershell
-New-ShieldingDataAnswerFile -AdminPassword $myadminpwd -DomainJoin contoso.com -DomainJoinCredential $mydomaincreds -RDPCertificateFilePath C:\myRDP.pfx -RDPCertificatePassword $myRDPCertpwd -BackupBitLockerKeyProtector
+$rootPassword = Read-Host -Prompt "Root password" -AsSecureString
+
+New-ShieldingDataAnswerFile -Path '.\ShieldedVMAnswerFile.xml' -RootPassword $rootPassword -RootSshKey '~\.ssh\id_rsa.pub'
 ```
-
-After the setup is complete and you have signed in, you can check the following output file to verify that everything was backed up correctly:
-
-`C:\Windows\Setup\Scripts\BitLockerRecoveryScriptOutput.txt`
-
-Here is an example of what a successful output looks like:
-
-```
-Updating policy...
-Computer Policy update has completed successfully.
-User Policy update has completed successfully.
-WARNING: ACTIONS REQUIRED:
-
-1. Save this numerical recovery password in a secure location away from your computer:
-
-517704-229735-170434-383603-399432-419243-060533-116479
-
-To prevent data loss, save this password immediately. This password helps ensure that you can unlock the encrypted volume.
-
-
-   ComputerName: DJRDP
-
-VolumeType        Mount CapacityGB VolumeStatus    Encryption KeyProtector              AutoUnlockEnabled
-                  Point                            Percentage
------        --- ----- ------    ----- ------              ---------
-OperatingSystem   C:    24.55      FullyEncrypted  100        {Tpm, RecoveryPassword}
-```
-You can also check Event Viewer to see if the key has been successfully backed up. It should look like this:
-
-![Event Viewer to verify the Bitlocker key has been backed up successfully to AD](../media/Guarded-Fabric-Shielded-VM/guarded-host-unattend-event-viewer.png)
-
-The location of BitLocker-API is **Event Viewer (Local) > Applications and Services Logs > Microsoft > Windows > BitLocker-API > Management**.
-
-## Function parameters
-
-You can see all the available parameters by going through the documentation online or by referring to the function like this: 
-
-```powershell
-Get-Help New-ShieldingDataAnswerFile
-```
-
-Here are all the parameters:
-
-| **Parameter** | **Required or optional** | **Description** |
-| -- | -- | -- |
-| -AdminPassword &lt;SecureString&gt; | Required | Specifies the administrator&#39;s password. |
-| -BackupBitLockerKeyProtector | Optional | If the VM is domain joined, specifies whether to back up the KeyProtector recovery password. |
-| -DomainJoin &lt;String&gt; | Optional | Specifies the name of the domain that the VM will join. |
-| -DomainJoinCredential &lt;PSCredential&gt; | Optional (required if DomainJoin) | Specifies the user credential for the domain join. |
-| -DSCConfigurationID &lt;String&gt; | Optional | Specifies the configuration ID of the DSC pull server. |
-| -DSCPullServerURL &lt;String&gt; | Optional | Specifies the name of the DSC pull server to pull from. |
-| -Language &lt;String&gt; | Optional | Sets the language of the operating system. |
-| -Path &lt;String&gt; | Optional (defaults to current path) | Sets the output of the .xml file. |
-| -ProductKey &lt;String&gt; | Optional (defaults to None) | Specifies either None or UserSupplied. None is used for volume license and evaluation, whereas UserSupplied will use Virtual Machine Manager to supply the product key. |
-| -RDPCertificateFilePath &lt;String&gt; | Optional | Specifies the file path of the RDP certificate that will be used to connect to the shielded VM through RDP. |
-| -RDPCertificatePassword &lt;SecureString&gt; | Optional (required if RDPCertificate) | Specifies the password for the RDP certificate. |
-| -SetupScriptFilePath &lt;String&gt; | Optional | Specifies the file path of a Windows PowerShell script that will run on startup of the machine. |
-| -StaticIP | Optional | Sets to static IP and specifies the IP address. |
 
 ## See also
 
