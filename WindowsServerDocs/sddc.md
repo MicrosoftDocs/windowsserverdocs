@@ -13,11 +13,9 @@ manager: dongill
 ms.date: 08/28/2017
 ms.localizationpriority: high
 ---
-
->Applies To: Windows Server 2016
-
 # Windows Server Software-Defined Datacenter
 
+>Applies To: Windows Server 2016
 
 ![](media/sddc/heading.png)
 
