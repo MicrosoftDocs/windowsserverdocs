@@ -50,6 +50,9 @@ The following table shows which virtual machine configuration versions are suppo
 
 |Hyper-V host Windows version|  Supported virtual machine configuration versions|  
 |-|-|  
+|Windows Server, version 1709 | 8.2, 8.1, 8.0, 7.1, 7.0, 6.2, 5.0| 
+|Windows 10 Fall Creators Update | 8.2, 8.1, 8.0, 7.1, 7.0, 6.2, 5.0| 
+|Windows 10 Creators Update | 8.1, 8.0, 7.1, 7.0, 6.2, 5.0| 
 |Windows Server 2016 | 8.0, 7.1, 7.0, 6.2, 5.0| 
 |Windows 10 Anniversary Update |8.0, 7.1, 7.0, 6.2, 5.0|
 |Windows Server 2016 Technical Preview| 7.1, 7.0, 6.2, 5.0|  
