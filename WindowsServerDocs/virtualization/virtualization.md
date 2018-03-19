@@ -8,10 +8,14 @@ ms.topic: article
 author: jamesmci
 ms.author: jamesmci
 ms.localizationpriority: high
+ms.date: 03/16/2018
 ---
 # Virtualization
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016 
+
+>[!TIP]
+> Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/) on docs.microsoft.com. You can also [search this site](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions) for specific information.
 
 <img src="../media/landing-icons/virtualization.png" style='float:left; padding:.5em;' alt="Icon showing a box with spokes"> Virtualization in Windows Server 2016 is one of the foundational technologies required to create your software defined infrastructure. Along with networking and storage, virtualization features deliver the flexibility you need to power workloads for your customers.
 
