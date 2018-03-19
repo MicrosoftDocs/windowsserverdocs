@@ -17,9 +17,7 @@ In this section, you install and configure the server-side components necessary 
 
 ## Configure certificate autoenrollment in Group Policy
 
-You can configure Group Policy on the domain controller so that domain members automatically request user and computer certificates.
-
-This allows VPN users to automatically request and retrieve user certificates that authenticate VPN connections. Likewise, this policy allows NPS servers to automatically request server authentication certificates. (You will manually enroll certificates on VPN servers.)
+Configure Group Policy on the domain controller so that domain members automatically request user and computer certificates. Doing so allows VPN users to automatically request and retrieve user certificates that authenticate VPN connections. Likewise, this policy allows NPS servers to automatically request server authentication certificates. (You will manually enroll certificates on VPN servers.)
 
 **To enable certificate autoenrollment in Group Policy**
 
@@ -61,7 +59,7 @@ This allows VPN users to automatically request and retrieve user certificates th
 
 ## Create the VPN Users, VPN Servers, and NPS Servers Groups
 
-With this step you can add a new Active Directory group that contains the users allowed to use the VPN to connect to your organization network. This group serves two purposes:
+With this step you add a new Active Directory group that contains the users allowed to use the VPN to connect to your organization network. This group serves two purposes:
 
 - It defines which users are allowed to autoenroll for the user certificates the VPN requires.
 
@@ -69,7 +67,7 @@ With this step you can add a new Active Directory group that contains the users 
 
 By using a custom group, if you ever want to revoke a user’s VPN access, you can simply remove that user from the group.
 
-You will also add a group containing VPN servers and another group containing NPS servers. You use these groups to restrict certificate requests to their members.
+You will also add a group containing VPN servers and another group containing NPS servers. You use these groups to restrict certificate requests to their members. 
 
 **To configure the VPN Users group**
 
@@ -110,13 +108,7 @@ You will also add a group containing VPN servers and another group containing NP
 10. Close Active Directory Users and Computers.
 
 ## Create the User Authentication template
-
-You can use this section to configure a custom client–server authentication template. 
-
-This template is required because you want to improve the certificate’s overall security by selecting upgraded compatibility levels and choosing the Microsoft Platform Crypto Provider. Microsoft Platform Crypto Provider lets you use the Trusted Platform Module \(TPM\) on client computers to secure the certificate.
-
->[!NOTE]
->For more information about TPM, see [Trusted Platform Module Technology Overview](https://docs.microsoft.com/windows/device-security/tpm/trusted-platform-module-overview).
+Next, configure a custom client–server authentication template. This template is required because you want to improve the certificate’s overall security by selecting upgraded compatibility levels and choosing the Microsoft Platform Crypto Provider. This last change lets you use the TPM on the client computers to secure the certificate. For an overview of the TPM, see [Trusted Platform Module Technology Overview](https://docs.microsoft.com/windows/device-security/tpm/trusted-platform-module-overview).
 
 **To configure the User Authentication template**
 
@@ -178,14 +170,13 @@ This template is required because you want to improve the certificate’s overal
 
 ## Create the VPN Server Authentication template
 
-With this step you can configure a new Server Authentication template for your VPN server.
-
-Adding the IP Security \(IPsec\) IKE Intermediate application policy allows the server to filter certificates if more than one certificate is available with the Server Authentication extended key usage. 
+Next, you must configure a new Server Authentication template for your VPN server. Adding the IP Security (IPsec) IKE Intermediate application policy allows the server to filter certificates if more than one certificate is available with the Server Authentication extended key usage. 
 
 >[!IMPORTANT]
 >Because VPN clients access this server from the public Internet, the subject and alternative names are different than the internal server name. As a result, you cannot autoenroll this certificate on VPN servers.
 
 **To configure the VPN Server Authentication template**
+The following steps apply to VPN servers that are domain joined. 
 
 1.  On the CA, open Certification Authority.
 
@@ -193,7 +184,7 @@ Adding the IP Security \(IPsec\) IKE Intermediate application policy allows the 
 
 3.  In the Certificate Templates console, right-click **RAS and IAS Server**, and click **Duplicate Template**.
 
-4.  On the Properties of New Template dialog box, on the **General** tab, in **Template display name**, type **VPN Server Authentication**.
+4.  On the Properties of New Template dialog box, on the **General** tab, in **Template display name**, enter a descriptive name for the VPN server, for example, **VPN Server Authentication** or **RADIUS Server**.
 
 5.  On the **Extensions** tab, complete the following steps:
 
@@ -201,7 +192,7 @@ Adding the IP Security \(IPsec\) IKE Intermediate application policy allows the 
 
     2.  On the **Edit Application Policies Extension** dialog box, click **Add**.
 
-    3.  On the **Add Application Policy** dialog box, click **IP security IKE intermediate**, and click **OK**.
+    3.  On the **Add Application Policy** dialog box, click **IP security IKE intermediate**, and click **OK**. Adding IP security IKE intermediate to the EKU helps in scenarios where more than one server authentication certificate exist on the VPN server. When IP security IKE intermediate is present, IPSec only uses the certificate with both EKU options. Without this, IKEv2 authentication could fail with Error 13801: IKE authentication credentials are unacceptable. 
 
     4.  Click **OK** to return to the **Properties of New Template** dialog box.
 
@@ -223,13 +214,17 @@ Adding the IP Security \(IPsec\) IKE Intermediate application policy allows the 
 
     2.  On the **Certificate Templates** warning dialog box, click **OK**.
 
+5. (Conditional Access step) If you are configuring conditional access for VPN connectivity, click the **Request Handling** tab, and click **Allow private key to be exported** to select it.  @Reviewer: what happens if this option is not selected and left unchecked?
+
 8.  Click **OK** to save the VPN Server certificate template.
 
 9.  Close the Certificate Templates console.
 
 10. In the navigation pane of the Certification Authority snap-in, right-click **Certificate Templates**, click **New**, and click **Certificate Template to Issue**.
 
-11. Click **VPN Server Authentication**, and click **OK**.
+11. Restart the Certificate Authority services.
+
+11. Select the VPN server, and click **OK**.
 
 12. Close the Certification Authority snap-in.
 
@@ -308,19 +303,19 @@ Unlike the user certificate, you must manually enroll the VPN server’s certifi
 
 4.  On the Select Certificate Enrollment Policy page, click **Next**.
 
-5.  On the Request Certificates page, select the **VPN Server Authentication** check box.
+5.  On the Request Certificates page, click the check box next to the VPN server to select it.
 
-6.  Under the **VPN Server Authentication** check box, click **More information is required** to open the Certificate Properties dialog box, and complete the following steps:
+6.  Under the VPN server check box, click **More information is required** to open the Certificate Properties dialog box, and complete the following steps:
 
-    1.  Under **Subject name**, in **Type**, click **Common Name**.
+    1.  Click the **Subject** tab, click **Common Name** under **Subject name**, in **Type**.
 
-    2.  Under **Subject name**, in **Value**, type the name of the external domain clients will use to connect to the VPN (e.g., vpn.contoso.com), and click **Add**.
+    2.  Under **Subject name**, in **Value**, enter the name of the external domain clients will use to connect to the VPN (e.g., vpn.contoso.com), and click **Add**.
 
     3.  Under **Alternative Name**, in **Type**, click **DNS**.
 
-    4.  Under **Alternative Name**, in **Value**, type the name of the external domain clients will use to connect to the VPN (e.g., vpn.contoso.com), and click **Add**.
+    4.  Under **Alternative Name**, in **Value**, enter every possible FQDN the server could be addressed by, including IP addresses and NetBIOS names (e.g., vpn.contoso.com). The last name entered in the list of names appear as the Display name in **certlm.msc**. For this reason, it is suggested to add the FQDN or NetBIOS name of the server as the last entry in the SAN instead of an IP address.
 
-    5.  Click **OK**.
+    1.  Click **Add** and click **OK**.
 
 7.  Click **Enroll**.
 

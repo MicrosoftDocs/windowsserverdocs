@@ -40,34 +40,44 @@ NPS is a role service of the Network Policy and Access Services server role.
 
 Membership in **Administrators**, or equivalent, is the minimum required to perform these procedures.
 
-### To install NPS by using Windows PowerShell
+### To install NPS using Windows PowerShell
 
 To perform this procedure by using Windows PowerShell, run Windows PowerShell as Administrator, type the following command, and then press ENTER.
 
 `Install-WindowsFeature NPAS -IncludeManagementTools`
 
-### To install NPS by using Server Manager
+### To install NPS using Server Manager
 
 You can use the following procedure to install NPS using Server Manager.
 
-1.  In Server Manager, click **Manage**, and then click **Add Roles and Features**. The Add Roles and Features Wizard opens.
+1.  In Server Manager, click **Manage**, and click **Add Roles and Features**. The Add Roles and Features Wizard opens.
 
-2.  In **Before You Begin**, click **Next**.
+2.  In Before You Begin, click **Next**.
 
     > [!NOTE]
     > The **Before You Begin** page of the Add Roles and Features Wizard is not displayed if you have previously selected **Skip this page by default** when the Add Roles and Features Wizard was run.
 
-3.  In **Select Installation Type**, ensure that **Role-Based or feature-based installation** is selected, and then click **Next**.
+3.  In Select Installation Type, ensure that **Role-Based or feature-based installation** is selected, and  click **Next**.
 
-4.  In **Select destination server**, ensure that **Select a server from the server pool** is selected. In **Server Pool**, ensure that the local computer is selected. Click **Next**.
+4.  In Select destination server, ensure that **Select a server from the server pool** is selected. 
 
-5.  In **Select Server Roles**, in **Roles**, select **Network Policy and Access Services**. A dialog box opens asking if it should add features that are required for Network Policy and Access Services. Click **Add Features**, and then click **Next**
+5.  In Server Pool, ensure that the local computer is selected and click **Next**.
 
-6.  In **Select features**, click **Next**, and in **Network Policy and Access Services**, review the information that is provided, and then click **Next**.
+5.  In Select Server Roles, in **Roles**, select **Network Policy and Access Services**. A dialog box opens asking if it should add features that are required for Network Policy and Access Services. 
 
-7.  In **Select role services**, click **Network Policy Server**.  In **Add features that are required for Network Policy Server**, click **Add Features**. Click **Next**.
+6. Click **Add Features**, and click **Next**
 
-8.  In **Confirm installation selections**, click **Restart the destination server automatically if required**. When you are prompted to confirm this selection, click **Yes**, and then click **Install**. The Installation progress page displays status during the installation process. When the process completes, the message "Installation succeeded on *ComputerName*" is displayed, where *ComputerName* is the name of the computer upon which you installed Network Policy Server. Click **Close**.
+6.  In Select features, click **Next**, and in Network Policy and Access Services, review the information that is provided, and click **Next**.
+
+7.  In Select role services, click **Network Policy Server**.  
+
+8. In Add features that are required for Network Policy Server, click **Add Features** and, click **Next**.
+
+8.  In Confirm installation selections, click **Restart the destination server automatically if required**. 
+
+9.  When prompted to confirm this selection, click **Yes**, and click **Install**. The Installation progress page displays status during the installation process. When the process completes, the message "Installation succeeded on *ComputerName*" is displayed, where *ComputerName* is the name of the computer upon which you installed Network Policy Server. 
+
+10. Click **Close**.
 
 ## Configure NPS
 
@@ -87,11 +97,9 @@ The following sections provide instructions on completing these tasks.
 
 After you install NPS, you must register the server in Active Directory so that it has permission to access user account information while processing connection requests.
 
-#### To register the NPS Server in Active Directory
-
 1. In Server Manager, click **Tools**, and then click **Network Policy Server**. The NPS console opens.
-2. In the NPS console, right\-click **NPS \(Local\)**, and then click **Register server in Active Directory**. The **Network Policy Server** dialog box opens.
-3. In the **Network Policy Server** dialog box, click **OK** twice.
+2. In the NPS console, right\-click **NPS \(Local\)**, and click **Register server in Active Directory** to select it. The Network Policy Server dialog box opens.
+3. In the Network Policy Server dialog box, click **OK** twice.
 
 For alternate methods of registering NPS, see [Register an NPS Server in an Active Directory Domain](https://docs.microsoft.com/windows-server/networking/technologies/nps/nps-manage-register).
 
@@ -121,16 +129,23 @@ You can use this procedure to configure a new RADIUS client in NPS.
 >[!IMPORTANT]
 >In the previous deployment step using the topic [Configure the Remote Access Server for Always On VPN](vpn-deploy-ras.md), you installed and configured your VPN server. During VPN server configuration, you added a RADIUS shared secret on the VPN server. Now you need to use the same shared secret text string to configure the VPN server as a RADIUS client in NPS. You must use the same text string that you used on the VPN server, or communication between the NPS server and VPN server will fail.
 
-1. On the NPS server, in Server Manager, click **Tools**, and then click **Network Policy Server**. The NPS console opens.
+1. On the NPS server, in the NPS console, double-click **RADIUS Clients and Servers**. 
 
-2. In the NPS console, double-click **RADIUS Clients and Servers**. Right-click **RADIUS Clients**, and then click **New**. The **New RADIUS Client** dialog box opens.
+2. Right-click **RADIUS Clients** and click **New**. The New RADIUS Client dialog box opens.
 
-3. In **New RADIUS Client**, verify that the **Enable this RADIUS client** check box is selected.
+3. Verify that the **Enable this RADIUS client** check box is selected.
 
-4. In **New RADIUS Client**, in **Friendly name**, type a display name for the VPN server. In **Address \(IP or DNS\)**, type the NAS IP address or fully qualified domain name \(FQDN\). If you enter the FQDN, click **Verify** if you want to verify that the name is correct and maps to a valid IP address.
+4. In **Friendly name**, enter a display name for the VPN server. 
 
-5. In **New RADIUS Client**, in **Shared secret**, do the following:
-	- Ensure that **Manual** is selected, and then in **Shared secret**, type the strong text string that you also entered on the VPN server. Retype the shared secret in **Confirm shared secret**.
+5. In **Address \(IP or DNS\)**, enter the NAS IP address or FQDN. If you enter the FQDN, click **Verify** if you want to verify that the name is correct and maps to a valid IP address.
+
+5. In **Shared secret**, do the following:
+    
+    a. Ensure that **Manual** is selected.
+
+    b. Enter the strong text string that you also entered on the VPN server. 
+
+    c. Retype the shared secret in Confirm shared secret.
 
 6. Click **OK**. The VPN Server appears in the list of RADIUS clients that are configured on the NPS server.
 
@@ -142,44 +157,47 @@ On the NPS server, you must define a policy that allows only users in a specific
 
 **To configure the NPS Network Policy on the NPS server**
 
-1.  On the NPS server, in Server Manager, click **Tools**, and then click **Network Policy Server**.
+1.  In the NPS console, in Standard Configuration, ensure that **RADIUS server for Dial\-Up or VPN Connections** is selected.
 
-2.  In **Standard Configuration**, ensure that **RADIUS server for Dial\-Up or VPN Connections** is selected, and then click **Configure VPN or Dial-Up**. The **Configure VPN or Dial-Up** wizard opens.
+2.  Click **Configure VPN or Dial-Up**. The Configure VPN or Dial-Up wizard opens.
 
-3.  In the **Configure VPN or Dial-Up** wizard, in **Select Dial-up or Virtual Private Network Connections Type** page, click **Virtual Private Network (VPN) Connections**, and then click **Next**.
+3.  Click **Virtual Private Network (VPN) Connections**, and click **Next**.
 
-4.  In **Specify Dial-Up or VPN Server**, in RADIUS clients, click the name of the VPN Server that you added in the previous step. For example, if your VPN server NetBIOS name is RAS1, click **RAS1**. Click **Next**.
+4.  In Specify Dial-Up or VPN Server, in RADIUS clients, select the name of the VPN Server that you added in the previous step. For example, if your VPN server NetBIOS name is RAS1, click **RAS1**. 
 
-5.  In **Configure Authentication Methods**, complete the following steps:
+5. Click **Next**.
 
-    a.  Deselect the **Microsoft Encrypted Authentication version 2 (MS-CHAPv2)** check box.
+5.  In Configure Authentication Methods, complete the following steps:
 
-    b.  Select the **Extensible Authentication Protocol** check box.
+    a.  Clear the **Microsoft Encrypted Authentication version 2 (MS-CHAPv2)** check box.
 
-    c.  Click **Type \(based on method of access and network configuration\)**, and then click **Microsoft: Protected EAP \(PEAP\)**.
-	d.  Click **Configure**. The **Edit Protected EAP Properties** dialog box opens.
+    b.  Click the **Extensible Authentication Protocol** check box to select it.
 
-    e.  In **Edit Protected EAP Properties**, click **Remove** to remove the **Secured Password \(EAP-MSCHAP v2\)** EAP type.
+    c.  In Type \(based on method of access and network configuration\), click **Microsoft: Protected EAP \(PEAP\)**, and click **Configure**. The Edit Protected EAP Properties dialog box opens.
 
-    f.  Click **Add**.  The **Add EAP** dialog box opens. In **Add EAP**, click **Smart Card or other certificate**, and then click **OK**.
+    e.  Click **Remove** to remove the Secured Password \(EAP-MSCHAP v2\) EAP type.
 
-    g.  Click **OK** to close **Edit Protected EAP Properties**.
+    f.  Click **Add**.  The Add EAP dialog box opens. 
+
+    g.  Click **Smart Card or other certificate**, and click **OK**.
+
+    g.  Click **OK** to close Edit Protected EAP Properties.
 
 8.  Click **Next**.
 
-9.  In **Specify User Groups**, complete the following steps:
+9.  In Specify User Groups, complete the following steps:
 
-    a.  Click **Add**. The **Select Users, Computers, Service Accounts, or Groups** dialog box opens.
+    a.  Click **Add**. The Select Users, Computers, Service Accounts, or Groups dialog box opens.
 
-    b.  In **Select Users, Computers, Service Accounts, or Groups**, type **VPN Users**, and then click **OK**.
+    b.  Type **VPN Users** and click **OK**.
 
     c.  Click **Next**.
 
-10.  In **Specify IP Filters**, click **Next**.
+10.  In Specify IP Filters, click **Next**.
 
-11.  In **Specify Encryption Settings**, do not make any changes. These settings apply only to Microsoft Point-to-Point Encryption \(MPPE\) connections, which this scenario doesn’t support. Click **Next**.
+11.  In Specify Encryption Settings, click **Next**.  Do not make any changes. These settings apply only to Microsoft Point-to-Point Encryption \(MPPE\) connections, which this scenario doesn’t support. 
 
-12.  In **Specify a Realm Name**, click **Next**.
+12.  In Specify a Realm Name, click **Next**.
 
 13.  Click **Finish** to close the wizard.
 
@@ -194,7 +212,7 @@ Membership in **Administrators**, or equivalent, is the minimum required to comp
   
 ### To refresh Group Policy on the NPS server
   
-1.  On the computer where NPS is installed, open Windows PowerShell.
+1.  On the NPS, open Windows PowerShell.
   
 2.  At the Windows PowerShell prompt, type **gpupdate**, and then press ENTER.
 

@@ -102,13 +102,13 @@ Before creating the template, you first need to note a few NPS server settings. 
 
 1.  On your NPS server, open Network Policy Server.
 
-2.  In the Network Policy Server snap-in, under **Policies**, click **Network Policies**.
+2.  In the NPS console, under Policies, click **Network Policies**.
 
 3.  Right-click **Virtual Private Network \(VPN\) Connections**, and click **Properties**.
 
-4.  On the Virtual Private Network \(VPN\) Connections Properties dialog box, on the **Constraints** tab, click **Authentication Methods**.
+4.  Click the **Constraints** tab, and click **Authentication Methods**.
 
-5.  In **EAP Types**, click **Microsoft: Protected EAP (PEAP)**, and then click **Edit**.
+5.  In EAP Types, click **Microsoft: Protected EAP (PEAP)**, and then click **Edit**.
 
 6.  Record the values for **Certificate issued to** and **Issuer**. You will use these values in the upcoming VPN template configuration. For example, if the server’s FQDN is nps01.corp.contoso.com and the host name is NPS01, the certificate name is based upon the FQDN or DNS name of the server - for example, nps01.corp.contoso.com.
 
@@ -138,48 +138,48 @@ However, if you haven’t restarted the computer since configuring certificate a
 
 3.  In the details pane, click **Add a VPN connection**.
 
-4.  In the **VPN Provider** list, click **Windows (built-in)**.
+4.  In the VPN Provider list, click **Windows (built-in)**.
 
-5.  In **Connection Name**, type **Template**.
+5.  In Connection Name, type **Template**.
 
-6.  In **Server name or address**, type the **external** FQDN of your VPN server \(for example, **vpn.contoso.com**\).
+6.  In Server name or address, type the **external** FQDN of your VPN server \(for example, **vpn.contoso.com**\).
 
 7.  Click **Save**.
 
-8.  Under **Related Settings**, click **Change adapter options**.
+8.  Under Related Settings, click **Change adapter options**.
 
 9.  Right-click **Template**, and click **Properties**.
 
 10. On the **Security** tab, in **Type of VPN**, click **IKEv2**.
 
-11. In **Data encryption**, click **Maximum strength encryption**.
+11. In Data encryption, click **Maximum strength encryption**.
 
 12. Click **Use Extensible Authentication Protocol (EAP)**; then, in **Use Extensible Authentication Protocol (EAP)**, click **Microsoft: Protected EAP (PEAP) (encryption enabled)**.
 
 13. Click **Properties** to open the Protected EAP Properties dialog box, and complete the following steps:
 
-14. In the **Connect to these servers** box, type the name of the NPS server that you retrieved from the NPS server authentication settings earlier in this section (e.g., NPS01).
+    a. In the **Connect to these servers** box, type the name of the NPS server that you retrieved from the NPS server authentication settings earlier in this section (e.g., NPS01).
 
->[!NOTE]
->The server name you type must match the name in the certificate. You recovered this name earlier in this section. If the name does not match, the connection will fail, stating that “The connection was prevented because of a policy configured on your RAS/VPN server.”
+    >[!NOTE]
+    >The server name you type must match the name in the certificate. You recovered this name earlier in this section. If the name does not match, the connection will fail, stating that “The connection was prevented because of a policy configured on your RAS/VPN server.”
 
-1.  Under **Trusted Root Certification Authorities**, select the root CA that issued the NPS server’s certificate (e.g., contoso-CA).
+    b.  Under Trusted Root Certification Authorities, select the root CA that issued the NPS server’s certificate (e.g., contoso-CA).
 
-2.  In **Notifications before connecting**, click **Don’t ask user to authorize new servers or trusted CAs**.
+    c.  In Notifications before connecting, click **Don’t ask user to authorize new servers or trusted CAs**.
 
-3.  In **Select Authentication Method**, click **Smart Card or other certificate**, and click **Configure**.
+    d.  In Select Authentication Method, click **Smart Card or other certificate**, and click **Configure**. The the Smart Card or other Certificate Properties dialog opens.
 
-4.  On the Smart Card or other Certificate Properties dialog box, click **Use a certificate on this computer**.
+    e.  Click **Use a certificate on this computer**.
 
-5.  In the **Connect to these servers** box, type the name of the NPS server you retrieved from the NPS server authentication settings in the previous steps.
+    f.  In the Connect to these servers box, enter the name of the NPS server you retrieved from the NPS server authentication settings in the previous steps.
 
-6.  Under **Trusted Root Certification Authorities**, select the root CA that issued the NPS server’s certificate.
+    g.  Under Trusted Root Certification Authorities, select the root CA that issued the NPS server’s certificate.
 
-7.  Select the **Don’t prompt user to authorize new servers or trusted certification authorities** check box.
+    h.  Select the **Don’t prompt user to authorize new servers or trusted certification authorities** check box.
 
-8.  Click **OK** to close the Smart Card or other Certificate Properties dialog box.
+    i.  Click **OK** to close the Smart Card or other Certificate Properties dialog box.
 
-9.  Click **OK** to close the Protected EAP Properties dialog box.
+    j.  Click **OK** to close the Protected EAP Properties dialog box.
 
 10. Click **OK** to close the Template Properties dialog box.
 
