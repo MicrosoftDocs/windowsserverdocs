@@ -13,6 +13,7 @@ ms.topic: article
 ms.assetid: 0254275a-0a77-40a9-b68a-1029284c03fe
 ms.author: jamesmci
 author: jamesmci
+ms.date: 03/19/2018
 ---
 # What's New in Hyper-V Network Virtualization in Windows Server 2016
 
@@ -55,9 +56,9 @@ HNV implements correct L2 Ethernet headers to ensure interoperability with third
   
 ## See also  
   
--   [Hyper-V Network Virtualization Overview](assetId:///bf1dba9d-1960-4dd2-a5e2-99466a02044b)  
+-   [Hyper-V Network Virtualization Overview](hyperv-network-virtualization-overview-windows-server.md)  
   
--   [Hyper-V Network Virtualization technical details](assetId:///405a1b66-c9ba-49fa-9200-cd1364e92ab1)  
+-   [Hyper-V Network Virtualization technical details](hyperv-network-virtualization-technical-details-windows-server.md)  
   
 -   [Software Defined Networking](../../Software-Defined-Networking--SDN-.md)  
   

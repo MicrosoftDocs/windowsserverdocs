@@ -300,7 +300,9 @@ For instance, if you create a Aggregated policy with a minimum of 300 IOPs and a
 
 However, if you create a Dedicated policy with similar limits and apply it to VHD/VHDx files on 5 different virtual machines, each virtual machine will get at least 300 IOPs and no more than 500 IOPs. If the virtual machines have similar high demand for IOPs and the storage system can keep up, each virtual machine will get about 500 IOPs. .  If one of the virtual machines has multiple VHD/VHDx files with the same MulitInstance policy configured, they will share the limit so that the total IO from the VM from files with that policy will not exceed the limits.  
 
-Hence, if you have a group of VHD/VHDx files that you want to exhibit the same performance characteristics and you don't want the trouble of creating multiple, similar policies, you can use a single Dedicated policy and apply to the files of each virtual machine.  
+Hence, if you have a group of VHD/VHDx files that you want to exhibit the same performance characteristics and you don't want the trouble of creating multiple, similar policies, you can use a single Dedicated policy and apply to the files of each virtual machine.
+
+Keep the number of VHD/VHDx files assigned to a single Aggregated policy to 20 or less.  This policy type was meant to do aggregation with a few VMs on a cluster.
 
 ### Create and apply a Dedicated policy  
 First, use the `New-StorageQosPolicy` cmdlet to create a policy on the Scale-Out File Server as shown in the following example:  
