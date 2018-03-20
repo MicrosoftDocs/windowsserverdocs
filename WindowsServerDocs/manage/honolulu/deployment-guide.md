@@ -210,3 +210,5 @@ After running the script, you must refresh the browser page from which you are a
 ### Other considerations
 
 If you have already configured your gateway for Azure connectivity when setting up Azure Site Recovery and used the New-AsrAadApp.ps1 available in our documentation prior to the 1803 release, you will need to delete your existing AAD application by navigating to the Azure portal > **Azure Active Directory** > **Application registration** > **All applications** and searching “ASR” (the old AAD app will be named "ASR-Honolulu-*gateway*"). Then run the [New-AadApp.ps1 script](https://aka.ms/HonoluluAzureConnectScript) to create the replacement application with the correct permissions.
+
+//HALEY EDIT
