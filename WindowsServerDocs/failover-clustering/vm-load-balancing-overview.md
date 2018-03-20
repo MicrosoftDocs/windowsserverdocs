@@ -15,6 +15,9 @@ ms.date: 09/19/2016
 
 A key consideration for private cloud deployments is the capital expenditure (<abbr title="capital expenditure">CapEx</abbr>) required to go into production. It is very common to add redundancy to private cloud deployments to avoid under-capacity during peak traffic in production, but this increases <abbr title="capital expenditure">CapEx</abbr>. The need for redundancy is driven by unbalanced private clouds where some nodes are hosting more Virtual Machines (<abbr title="virtual machines">VMs</abbr>) and others are underutilized (such as a freshly rebooted server).
 
+<strong>Quick Video Overview</strong><br>(6 minutes)<br>
+> [!VIDEO https://channel9.msdn.com/Blogs/windowsserver/Virtual-Machine-Load-Balancing-in-Windows-Server-2016/player]
+
 ## <a id="what-is-vm-load-balancing"></a>What is Virtual Machine Load Balancing?
 <abbr title="Virtual machine">VM</abbr> Load Balancing is a new in-box feature in Windows Server 2016 that allows you to optimize the utilization of nodes in a Failover Cluster. It identifies over-committed nodes and re-distributes <abbr title="virtual machines">VMs</abbr> from those nodes to under-committed nodes. Some of the salient aspects of this feature are as follows:
 
