@@ -653,7 +653,7 @@ The ProfileXML configuration must be correct in structure, spelling, configurati
 
 If you need to troubleshoot the markup, it is easier to put it in an XML editor than to troubleshoot it in the Windows PowerShell ISE. In either case, start with the simplest version of the profile, and add components back one at a time until the issue occurs again.
 
-## Configure the VPN client by using System Center Configuration Manager
+## <a name="vpn-deploy-client-sccm"></a>Configure the VPN client by using System Center Configuration Manager
 
 In System Center Configuration Manager, you can deploy VPN profiles by using the ProfileXML CSP node, just like you did in Windows PowerShell. Here, you use the VPN_Profile.ps1 Windows PowerShell script that you created in the section [Create the ProfileXML configuration files](#bkmk_ProfileXML).
 

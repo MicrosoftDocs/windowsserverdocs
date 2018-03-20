@@ -26,7 +26,8 @@ via Mobile Device Management (MDM).
 
 The authentication process happens when a device compliance-enabled VPN connection profile is triggered either manually or automatically.
 
-![Authentication Flow](../../media/Always-On-Vpn/ca-auth-flow.png)
+![Authentication Flow](../../../../media/Always-On-Vpn/ca-auth-flow.png)
+
 
 Authentication Flow
 
