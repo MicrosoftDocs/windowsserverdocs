@@ -22,17 +22,6 @@ After a **primary** certificate is created, you must link a conditional access p
 For Always On VPN clients to request a client access token from the VPN server cloud application, you must deploy [VPNv2 profiles](https://docs.microsoft.com/en-us/windows/client-management/mdm/vpnv2-csp#examples). The VPNv2 profiles are based Open Mobile Alliance (OMA) Device Management (DM),
 via Mobile Device Management (MDM).
 
-<!-- 
-To configure conditional access for VPN connectivity, you need to complete the following steps:
-
-1.  Configure your VPN server. This step configures root certificates for VPN authentication with Azure AD.
-
-2.  Configure your VPN client.
-
-3.  Configure your conditional access policy.
-
--->
-
 ## Authentiction flow
 
 The authentication process happens when a device compliance-enabled VPN connection profile is triggered either manually or automatically.
@@ -170,70 +159,6 @@ CertificateAdvertised         :
 CertificateEKUsToAccept       :
 ```
 
-## Remove Weak Authentication Methods
-If Standard VPN is verified to be working correctly, proceed with removing weak authentication protocols and enforcing Certificate Authentication using Protected Extensible Authentication Protocol (PEAP). 
-
->[!IMPORTANT]
->IKEv2 gateway enforcement can be configured in NPS to prevent connections from being allowed from anything but certificates that chain to the 'AAD Conditional Access' root certificate by adding a Vendor Specific setting to the Network Policy. The attribute is 'Allowed-Certificate-OID', and should contain the 'AAD Conditional Access' OID. Doing this will prevent client certificates that do not have the AAD Conditional Access OID from satisfying the request.. Alternatively, customers that happen to be using RRAS as their gateway can implement gateway enforcement against RRAS, if they prefer not to do it in NPS. See Gateway Enforcement in this article. 
-
-**Procedure**
-1. (_Conditional Access step_) If you are implementing conditional access, in the Routing and Remote Access MMC, expand **Policies\\Network Policies**, and do the following:
-
-3.  Right-\click the **Connections to Microsoft Routing and Remote Access Server** network policy and select **Properties**.
-
-4.  Click the **Constraints** tab and do the following:
-
-    a. Under EAP Types, select the **Microsoft Encrypted Authentication version 2 (MS-CHAPv2)** check box and click **Remove**.
-    
-    b. Under EAP Types, click **Add**, select the **Microsoft: Protected EAP \(PEAP\)** check box, and click **OK**.
-
-    c. Select **Microsoft: Protected EAP \(PEAP\)** and click **Move Up** to place it at the top of the order.
-
-    d. Select **Microsoft: Protected EAP \(PEAP\)** again and click **Edit**.
-
-    e. On the Add EAP page, click **Add**.
-
-    f. Select **Smart Card or other certificate**, and click **OK**.
-
-    g. Select **Smart Card or other certificate** and click **Move Up** to place it at the top of the order.
-
-    g.  For everything under Less secure authentication methods, clear all the check boxes, and click **OK**.
-
-8.  (Optional) If you have implemented [Gateway Enforcement](#gateway-enforcement), do the following:
-
-    a. Under Vendor Specific, click **Add**.
-    b. Select the first option of **Allowed-Certificate-OID** and click **Add**.
-    c. Pase the AAD Conditional Access OID as the attribute value and click **OK** twice.
-
-9. Click **Close** and click **Apply**.
-
-## Configure EAP-TLS to Ignore Certificate Revocation List (CRL) Checking
->[!IMPORTANT]
->Failure to implement this registry change will cause IKEv2 connections using cloud certificates with PEAP to fail but IKEv2 connections using Client Auth certificates issued from the on-premises CA will work.
-
-An EAP-TLS client cannot connect unless the NPS server completes a revocation check of the certificate chain (including the root certificate) of the client and verifies that none of the certificates has been revoked. Cloud certificates issued to the user by Azure AD do not have a CRL because they are short lived certificates with a lifetime of one hour. EAP on NPS needs to be configured to ignore the absence of a CRL. By default, IgnoreNoRevocationCheck is set to 0 (disabled) by default. You can add IgnoreNoRevocationCheck and set it to 1 to allow authentication of clients when the certificate does not include CRL distribution points. 
-
-Since the authentication method is EAP-TLS, this registry value is only needed under EAP\13. If other EAP authentication methods are used, then the registry value should be added under those as well. 
-
-**Procedure**
-
-1. Open **regedit.exe** on the NPS server.
-2. Navigate to **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\RasMan\PPP\EAP\13**.
-3. Click **Edit > New** and select **DWORD (32-bit) Value** and type **IgnoreNoRevocationCheck**.
-4. Double-click **IgnoreNoRevocationCheck** and set the Value data to **1**.
-5. Click **OK** and reboot the server. Restarting the RRAS and NPS services will not suffice.
-
-For more information, see [How to Enable or Disable Certificate Revocation Checking (CRL) on Clients](https://technet.microsoft.com/en-us/library/bb680540.aspx).
-
->[!NOTE]
->In secure environments, the TlsVersion registry setting might be needed to specified on the client to negotiate the correct version of TLS. For more information, see [KB3121002](https://support.microsoft.com/en-us/help/3121002/windows-10-devices-can-t-connect-to-an-802-1x-environment).
-
-
-|Registry Path  |EAP Extension  |
-|---------|---------|
-|HKLM\SYSTEM\CurrentControlSet\Services\RasMan\PPP\EAP\13     |EAP-TLS         |
-|HKLM\SYSTEM\CurrentControlSet\Services\RasMan\PPP\EAP\25     |PEAP         |
-|HKLM\SYSTEM\CurrentControlSet\Services\RasMan\PPP\EAP\26     |EAP-MSCHAP v2         |
 
 
 
@@ -246,3 +171,6 @@ For more information, see [How to Enable or Disable Certificate Revocation Check
 | Get experience with configuring conditional access                     | [Get started with Role-Based Access Control in the Azure portal](https://docs.microsoft.com/en-us/azure/active-directory/role-based-access-control-what-is)                   |
 | Want to know about the best practices for conditional access policies in your environment | [Best practices for conditional access in Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-conditional-access-best-practices) |
 | Are ready to configure conditional access policies in your environment |  |
+
+
+https://docs.microsoft.com/en-us/intune/vpn-settings-windows-10#conditional-access

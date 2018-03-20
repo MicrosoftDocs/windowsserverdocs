@@ -804,15 +804,13 @@ With the ProfileXML configuration script deployed, sign in to a Windows 10 clie
 
 **To verify configuration of the VPN client**
 
-1.  In Control Panel, click **Configuration Manager**. **Configuration Manager** is under **System**\\**Security**.
+1.  In Control Panel, under System\\Security, click **Configuration Manager**. 
 
 2.  In the Configuration Manager Properties dialog box, on the **Actions** tab, complete the following steps:
 
-    a.  Click **Machine Policy Retrieval & Evaluation Cycle**, click **Run
-        Now**, and click **OK**.
+    a.  Click **Machine Policy Retrieval & Evaluation Cycle**, click **Run Now**, and click **OK**.
 
-    b.  Click **User Policy Retrieval & Evaluation Cycle**, click **Run Now**,
-        and click **OK**.
+    b.  Click **User Policy Retrieval & Evaluation Cycle**, click **Run Now**, and click **OK**.
 
     c.  Click **OK**.
 

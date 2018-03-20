@@ -224,7 +224,7 @@ The following steps apply to VPN servers that are domain joined.
 
 11. Restart the Certificate Authority services.
 
-11. Select the VPN server, and click **OK**.
+11. Select the **RADIUS server**, and click **OK**.
 
 12. Close the Certification Authority snap-in.
 
