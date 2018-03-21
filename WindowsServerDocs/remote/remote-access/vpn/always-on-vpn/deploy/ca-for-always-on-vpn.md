@@ -28,7 +28,6 @@ The authentication process happens when a device compliance-enabled VPN connecti
 
 ![Authentication Flow](../../../../media/Always-On-Vpn/ca-auth-flow.png)
 
-
 Authentication Flow
 
 1.  Always On VPN containing `<DeviceCompliance> <Enabled>true</Enabled>` in the VPNv2 profile tells the VPN client to retrieve the user's Primary Refresh Token (PRT) by issuing a `gettoken()` API call to Web Account Manager (WAM) (aka: Token Broker) service.
@@ -42,7 +41,7 @@ Authentication Flow
 
 3.  After Azure AD receives a token from Azure AD certificate authority, Azure pushes a short-lived (1-hour) certificate to the user's certificate store (certmgr.msc) via the WAM. The certificated that is short-lived is signed by the root certificate that was marked as Primary in the **VPN connectivity** blade.<br>The WAM returns control over to the VPN client for further connection processing.
 
-4.  The VPN client retrieves the Azure AD-issued certificate from the user's personal Certificate Store by selecting the certificate containing the `<EKUName>AAD Conditional Access</EKUName>` and `<EKUOID>1.3.6.1.4.1.311.87</EKUOID>` values defined in the section of the VPNv2 profile.<br>The VPN client passes this certificate to the VPN server where it is verified to chain correctly to the 'primary' certificate that was downloaded from the 'VPN connectivity' blade and added to the Trusted Root Certificate Store of the on-premises RADIUS (VPN) server and the Windows 10 clients.
+4.  The VPN client retrieves the Azure AD-issued certificate from the user's personal Certificate Store by selecting the certificate containing the **\<EKUName>AAD Conditional Access<\/EKUName>** and **\<EKUOID>1.3.6.1.4.1.311.87<\/EKUOID>** values defined in the section of the VPNv2 profile.<br>The VPN client passes this certificate to the VPN server where it is verified to chain correctly to the **primary** certificate that was downloaded from the 'VPN connectivity' blade and added to the Trusted Root Certificate Store of the on-premises RADIUS (VPN) server and the Windows 10 clients.
 
 ## Features and requirements
 Microsoft recommends that you review the design and deployment guides for each of the technologies that are used in the deployment scenario. These guides help you determine whether this deployment scenario provides the services and configuration you need for your organization's network.
@@ -53,7 +52,6 @@ Microsoft recommends that you review the design and deployment guides for each o
 ### Servers
 |Requirement  |Description  |
 |---------|---------|
-|Azure Active Directory (AD) | |
 |Azure AD Connect |Syncs user accounts from on-premise to Azure AD. |
 |Active Directory Domain Services (AD DS)     |Contains the user accounts, computer accounts, and account properties. These properties are required by Protected Extensible Authentication Protocol (PEAP) to authenticate user credentials and to evaluate authorization for VPN connection requests.        |
 |Domain Name System (DNS)     |Hosts the information that enables client computers and servers to resolve IP addresses.         |
@@ -72,9 +70,9 @@ The remote client computers must be joined to the Active Directory domain and is
 
 ### VPNv2 profile
 The VPNv2 profile must contain:
-- An entry of `<DeviceCompliance> true</Enabled>`, which tells the VPN client to request an Azure AD (AAD) Certificate.
-- Gateway enforcement, or VPN client certificate filtering using the `<TLSExtension>`, which contains `<EKUName>AAD Conditional Access</EKUName>` and `<EKUOID>1.3.6.1.4.1.311.87</EKUOID>`. The Object Identifier (OID) filter tells the VPN client which certificate in the user's store should be used.
-- The `<TrustedRootCA>5a 89 fe cb 5b 49 a7 0b 1a 52 63 b7 35 ee d7 1c c2 68 be 4b </TrustedRootCA>` entry must contain the Thumbprint of the Root Certificate Authority at the top of the chain of the Server Authentication certificate. Additional root certificates can be added by adding additional `<TrustedRootCA></TrustedRootCA>` entries. If the CA that issued the Server Authentication certificate was an Intermediate authority, this is not the certificate thumbprint to use. It must be the root CA. This should not contain the thumbprint of the cloud root certificates
+- An entry of **\<DeviceCompliance> true<\/Enabled>**, which tells the VPN client to request an Azure AD (AAD) Certificate.
+- Gateway enforcement, or VPN client certificate filtering using the **\<TLSExtension>**, which contains **\<EKUName>AAD Conditional Access<\/EKUName>** and **\<EKUOID>1.3.6.1.4.1.311.87<\/EKUOID>**. The Object Identifier (OID) filter tells the VPN client which certificate in the user's store should be used.
+- The **\<TrustedRootCA>5a 89 fe cb 5b 49 a7 0b 1a 52 63 b7 35 ee d7 1c c2 68 be 4b <\/TrustedRootCA>** entry must contain the Thumbprint of the Root Certificate Authority at the top of the chain of the Server Authentication certificate. Additional root certificates can be added by adding additional **\<TrustedRootCA><\/TrustedRootCA>** entries. If the CA that issued the Server Authentication certificate was an Intermediate authority, this is not the certificate thumbprint to use. It must be the root CA. This should not contain the thumbprint of the cloud root certificates
 
 ## Tools
 The following tools are an important aspect to the deployment of Conditional Access for Always On VPN:
@@ -101,10 +99,10 @@ To learn more about this, see [Issue #2: VPN connection is blocked with an 'Oops
 If a customer is using Microsoft Routing and Remote Access (RRAS), they should enable gateway enforcement against RRAS by running the commands below from an elevated PowerShell prompt. If they are using a 3rd party VPN solution, they should enable gateway enforcement there. If this cannot be done, [another option](https://www.csssupportwiki.com/index.php/curated:Azure_AD_Conditional_Access_for_Windows_10_VPN_Deployment_Guide#Remove_weak_authentication_methods_from_Network_Policy_and_Enforce_Protected_EAP_.28PEAP.29) would be to add an OID filter on the 'Settings' tab of the Network Policy in NPS, but this is more of a 'filter' than gateway enforcement. 
 
 Here is what is taking place when gateway enforcement is enabled against RRAS: 
-1. View the currently defined authentication protocols using Get-VpnAuthProtocol.
-2. Add 'Certificate' to list of user authentication protocols that currently exist using the Set-VpnAuthProtocol cmdlet.
+1. View the currently defined authentication protocols using `Get-VpnAuthProtocol`.
+2. Add **Certificate** to list of user authentication protocols that currently exist using the `Set-VpnAuthProtocol` cmdlet.
 3. Populate $RootCACert with the cloud root certificates that are in the server's Trusted Root Certificate Authorities store.
-4. Enable gateway enforcement using Set-VpnAuthProtocol to ensure VPN connections chain to the cloud root certificate added to the RRAS service.
+4. Enable gateway enforcement using `Set-VpnAuthProtocol` to ensure VPN connections chain to the cloud root certificate added to the RRAS service.
 
 ```PowerShell
 PS C:\> Get-VpnAuthProtocol
@@ -174,4 +172,3 @@ CertificateEKUsToAccept       :
 | Are ready to configure conditional access policies in your environment |  |
 
 
-https://docs.microsoft.com/en-us/intune/vpn-settings-windows-10#conditional-access
