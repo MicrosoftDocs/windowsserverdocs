@@ -89,7 +89,7 @@ Defrag's scheduled task runs as a maintenance task and is usually scheduled to r
    - **Traditional defrag** (i.e. moving files to make them reasonably contiguous) and **retrim** is run only once every month
    - If both **traditional defrag** and **retrim** are skipped, **analysis** is not run
       - If user manually ran **traditional defrag** on an SSD, say 3 weeks after the last scheduled task run, then the next scheduled task run will perform **analysis** and **retrim** but skip **traditional defrag** on that SSD.
-    - If **analysis** is skipped, the **Last run** time in **Optimize Drives** dialog will not be updated.  So for SSDs the **Last run** time in **Optimize Drives** dialog can be a month old.
+   - If **analysis** is skipped, the **Last run** time in **Optimize Drives** dialog will not be updated.  So for SSDs the **Last run** time in **Optimize Drives** dialog can be a month old.
 
 
 ## <a name="BKMK_additionalRef"></a>Additional references
