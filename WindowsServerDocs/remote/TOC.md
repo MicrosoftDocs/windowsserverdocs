@@ -153,6 +153,8 @@
 ##### [DirectAccess to Always On VPN Deployment Planning](remote-access/da-always-on-vpn-migration/da-always-on-migration-planning.md)
 ##### [DirectAccess to Always On VPN Deployment](remote-access/da-always-on-vpn-migration/da-always-on-migration-deploy.md) 
 #### [Configure VPN Device Tunnels in Windows 10](remote-access/vpn/vpn-device-tunnel-config.md)
+#### [Conditional Access for Always On VPN](remote-access/vpn/always-on-vpn/deploy/ca-for-always-on-vpn.md)
+##### [Conditional access for VPN connectivity (preview)](remote-access/vpn/always-on-vpn/deploy/ad-ca-vpn-connectivity-windows10.md)
 #### [Remote Access Always On VPN Deployment Guide for Windows Server and Windows 10](remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy.md)
 ##### [Remote Access Always On VPN Deployment Overview](remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-overview.md)
 ##### [Remote Access Always On VPN Deployment Planning](remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-planning.md)
