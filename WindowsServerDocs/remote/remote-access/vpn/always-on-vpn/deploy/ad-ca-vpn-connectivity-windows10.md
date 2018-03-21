@@ -315,25 +315,44 @@ Customers that wish to use AutoVPN with Intune can configure Custom Device Confi
 Everything discussed in this section is the minimum needed to make this work with Conditional Access. It does not cover Split Tunneling, Using WIP, creating custom Intune device configuration profiles to get AutoVPN working, or SSO. 
 
 1.  In the Azure portal, navigate to **Intune**.
+
 2.  Click **Device configuration** and select **Profiles**.
+
 3.  Click **Create Profile**.
+
 4.  In Name, enter a name for the VPN profile.
+
 5.  In Platform, select **Windows 10 or later**.
+
 6.  In Profile type, select **VPN**.
+
 7.  Under Settings, for Conditional Access, set the **Conditional access for this VPN connection** to **Enabled**. Doing this sets `<DevideCompliance\><Enabled\>true<\/Enabled\>` in the VPNv2 profile, which tells the VPN clients to request an Azure AD Certificate. 
+
 8. Under Settings, for Base VPN, verify or set the following settings:
+
     - **Connection name**: Enter a name for this connection. End users see this name when they browse their device for the list of available VPN connections.
+
     - **Servers**: Add one or more VPN servers by clicking **Add**.
+
     - **Description** and **IP Address or FQDN** values must align with the Subject Name in the VPN server's authentication certificate.
+
     - **Default server**: Set to **true** on one of the VPN servers listed. Doing this enables this server as the default server that devices use to establish the connection. Set only one server as the default.
+
     - **Connection type**: Set to **IKEv2**. If you set it to **Automatic**, the VPN client attempts all connection types.
-    - **EAP XML\\TrustedRootCA**: Set the **\<TrustedRootCA>5a 89 fe cb 5b 49 a7 0b 1a 52 63 b7 35 ee d7 1c c2 68 be 4b <\/TrustedRootCA> with the thumbprint of the root certificate authority at the top of the chain of the Server Authentication certificate. Additional root certificates can be added by adding additional **\<TrustedRootCA><\/TrustedRootCA>** entries. If the CA that issued the Server Authentication certificate was an International authority, this is not the certificate thumbprint to use. It must be the root CA. **Do NOT** use the thumbprint of the cloud root certificate. 
+
+    - **EAP XML\\TrustedRootCA**: Set the **\<TrustedRootCA>5a 89 fe cb 5b 49 a7 0b 1a 52 63 b7 35 ee d7 1c c2 68 be 4b <\/TrustedRootCA>** with the thumbprint of the root certificate authority at the top of the chain of the Server Authentication certificate. Additional root certificates can be added by adding additional **\<TrustedRootCA> <\/TrustedRootCA>** entries. If the CA that issued the Server Authentication certificate was an International authority, this is not the certificate thumbprint to use. It must be the root CA. **Do NOT** use the thumbprint of the cloud root certificate. 
+
     - **EAP XML\\TLSExtension**: Must be present and contain **\<EKUName>AAD Conditional Access<\/EKUName>** and **\<EKUOID>1.3.6.1.4.1.311.87<\/EKUOID>**. These values tell the VPN client which certificate in the user's store should be used to perform VPN authentication. This is required when more than one certificate is in the user's store. If EAP/TLS fails, the entire **\<TLSExtension>** can be removed for troubleshooting. However, there must not be any certificates in the user's certificate store other than cloud certificates. 
+
 9.  Click **Create**. @Reviewer: This step is missing from the CSS wiki, and I'm not sure where it goes in this process. Is it after selecting VPN for the Profile type or does it happen in this sequence?
+
 10. In Intune, under Device configuration, select the newly created device configuration profile.  
+
 11. Select **Assignments**, under Include, click **Select groups to include**.
+
     >[!IMPORTANT]
     >Ensure that you have added the users to the Azure AD group that receives this policy on all Windows 10 devices.
+
 12. Select the Azure AD group that receives this policy and click **Save**.
 
 #### Force MDM Policy Sync on the Client
@@ -362,9 +381,9 @@ Customers that do not have management solutions like Intune or SCCM can use the 
 
     |Settings to change  |Description  |
     |---------|---------|
-    |**\<IssuerHash><\/IssuerHash>**    |This instance of \<IssuerHash> must contain no spaces. It contains a semicolon separated list of thumbprints for all root CAs that issued the Server Authentication certificates to the VPN servers, not subordinate/intermediate issuing CA thumbprints. <br><br>All instances of \<IssuerHash> outside of \<Sso> must contain spaces. It contains a semicolon separated list of thumbprints for all root CAs that issued the Server Authentication certificates to the VPN servers, not subordinate/intermediate issuing CA thumbprints.         |
-    |**\<Servers><\/Servers>**           |This must contain a semicolon separated list of names for the VPN Servers. This should include all names that are included in the Subject Alternative Name of the Server Authentication certificates.          |
-    |**\<DnsSuffix><\/DnsSuffix>**      |This must contain the FQDN of the DNS domain **\<DnsSuffix>corp.contoso.com<\/DnsSuffix>**          |
+    |**\<IssuerHash> <\/IssuerHash>**    |This instance of \<IssuerHash> must contain no spaces. It contains a semicolon separated list of thumbprints for all root CAs that issued the Server Authentication certificates to the VPN servers, not subordinate/intermediate issuing CA thumbprints. <br><br>All instances of \<IssuerHash> outside of \<Sso> must contain spaces. It contains a semicolon separated list of thumbprints for all root CAs that issued the Server Authentication certificates to the VPN servers, not subordinate/intermediate issuing CA thumbprints.         |
+    |**\<Servers> <\/Servers>**           |This must contain a semicolon separated list of names for the VPN Servers. This should include all names that are included in the Subject Alternative Name of the Server Authentication certificates.          |
+    |**\<DnsSuffix> <\/DnsSuffix>**      |This must contain the FQDN of the DNS domain **\<DnsSuffix>corp.contoso.com<\/DnsSuffix>**          |
 2. Save the ProfileXML file, for example, _TestVPN_.
 3. Open PowerShell as **Administrator** and run `Set-ExecutionPolicy unrestricted`.
 4. After running the script, test the VPN connection on the client device by verifying it in the Certificate snap-in:
