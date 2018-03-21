@@ -1,3 +1,7 @@
+---
+author: nwashburn-ms
+---
+
 # Project Honolulu
 
 [Introduction text here.]
