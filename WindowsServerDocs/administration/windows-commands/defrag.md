@@ -86,11 +86,14 @@ defrag /C /H /V
 ## <a name="BKMK_scheduledTask"></a>Scheduled task
 Defrag's scheduled task runs as a maintenance task and is usually scheduled to run every week. Administrator can change the frequency using **Optimize Drives** application.
 - When run from the scheduled task, **defrag** has below policy for SSDs:
-   - **Traditional defrag** (i.e. moving files to make them reasonably contiguous) and **retrim** is run only once every month
-   - If both **traditional defrag** and **retrim** are skipped, **analysis** is not run
-      - If user manually ran **traditional defrag** on an SSD, say 3 weeks after the last scheduled task run, then the next scheduled task run will perform **analysis** and **retrim** but skip **traditional defrag** on that SSD.
-    - If **analysis** is skipped, the **Last run** time in **Optimize Drives** dialog will not be updated.  So for SSDs the **Last run** time in **Optimize Drives** dialog can be a month old.
-
+   - **Traditional defrag** (i.e. moving files to make them reasonably contiguous) and **retrim** is run only once every month.
+   - If both **traditional defrag** and **retrim** are skipped, **analysis** is not run.
+      - If user ran **traditional defrag** manually on an SSD, say 3 weeks after the last scheduled task run, then the next scheduled task run will perform **analysis** and **retrim** but skip **traditional defrag** on that SSD.
+   - If **analysis** is skipped, the **Last run** time in **Optimize Drives** will not be updated.  So for SSDs the **Last run** time in **Optimize Drives** can be a month old.
+- This maintenance task might not defrag all the volumes, at times because this task does the following:
+   - Doesn't wake the computer in order to run defrag
+   - Starts only if the computer is on AC power, and stops if the computer switches to battery power
+   - Stops if the computer ceases to be idle
 
 ## <a name="BKMK_additionalRef"></a>Additional references
 -   [chkdsk](chkdsk.md)
