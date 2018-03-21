@@ -21,6 +21,9 @@ The Remote Desktop client lets you access your organization's remote desktop wor
 * The client currently supports Edge, IE 11, Google Chrome, and Safari. Firefox support is still in progress.
 * The URL your admin sent you.
 
+>[!NOTE]
+>The Internet Explorer version of the web client does not have audio at this time.
+
 ## Start using the Remote Desktop client
 
 To sign in to the client, go to the URL your admin sent you. At the sign in page, enter your domain and user name in the format ```DOMAIN\username```, enter your password, and then select **Sign in**.
