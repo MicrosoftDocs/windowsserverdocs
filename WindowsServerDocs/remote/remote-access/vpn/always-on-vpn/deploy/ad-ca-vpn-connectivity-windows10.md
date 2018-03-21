@@ -18,7 +18,7 @@ ms.reviewer: jairoc
 ---
 # Azure Active Directory conditional access for VPN connectivity (preview)
 
-With [Azure Active Directory (Azure AD) conditional access](active-directory-conditional-access-azure-portal.md), you can fine-tune how authorized users access your resources. With Azure AD conditional access for virtual private network (VPN) connectivity, you can help protect your VPN connections.
+With [Azure Active Directory (Azure AD) conditional access](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-conditional-access-azure-portal), you can fine-tune how authorized users access your resources. With Azure AD conditional access for virtual private network (VPN) connectivity, you can help protect your VPN connections.
 
 To configure conditional access for VPN connectivity, you must complete the following steps: 
 
@@ -38,7 +38,7 @@ To configure conditional access for VPN connectivity, you must complete the foll
 
 This topic assumes that you're familiar with the following topics:
 
-- [Conditional access in Azure Active Directory](active-directory-conditional-access-azure-portal.md)
+- [Conditional access in Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-conditional-access-azure-portal)
 - [VPN and conditional access](https://docs.microsoft.com/windows/access-protection/vpn/vpn-conditional-access)
 
 
@@ -68,23 +68,23 @@ To create a VPN certificate:
 
 2. On the left menu, click **Azure Active Directory**. 
 
-    ![Select Azure Active Directory](./media/active-directory-conditional-access-vpn-connectivity-windows10/01.png)
+    ![Select Azure Active Directory](../../../../media/Always-On-Vpn/01.png)
 
 3. On the **Azure Active Directory** page, in the **Manage** section, click **Conditional access**.
 
-    ![Select Conditional access](./media/active-directory-conditional-access-azure-portal-get-started/02.png)
+    ![Select Conditional access](../../../../media/Always-On-Vpn/02.png)
 
 4. On the **Conditional access** page, in the **Manage** section, click **VPN connectivity (preview)**.
 
-    ![Select VPN connectivity](./media/active-directory-conditional-access-vpn-connectivity-windows10/03.png)
+    ![Select VPN connectivity](../../../../media/Always-On-Vpn/03.png)
 
 5. On the **VPN connectivity** page, click **New certificate**.
 
-    ![Select new certificate](./media/active-directory-conditional-access-vpn-connectivity-windows10/04.png)
+    ![Select new certificate](../../../../media/Always-On-Vpn/04.png)
 
 6. On the **New** page, perform the following steps:
 
-    ![Select duration and primary](./media/active-directory-conditional-access-vpn-connectivity-windows10/05.png)
+    ![Select duration and primary](../../../../media/Always-On-Vpn/05.png)
 
     a. For **Select duration**, select either 1 or 2 years. You can add up to two certificates to manage transitions when the certificate is about to
         expire. You can choose which one is the primary (the one used during authentication to sign the certificate for connectivity).
@@ -95,7 +95,7 @@ To create a VPN certificate:
 
 7. On the **VPN connectivity** page, click **Download certificate**. 
    
-    ![Download certificate for conditional access](./media/active-directory-conditional-access-vpn-connectivity-windows10/06.png)
+    ![Download certificate for conditional access](../../../../media/Always-On-Vpn/06.png)
 
     >[!NOTE]
     >The **Download base64 certificate** option is available for some configurations that require base64 certificates for deployment. 
@@ -249,19 +249,19 @@ After a root certificate has been created, the 'VPN connectivity' triggers the c
 
 1. On the **Conditional Access** page, in the toolbar on the top, click **Add**.
 
-    ![Select add on conditional access page](./media/active-directory-conditional-access-vpn-connectivity-windows10/07.png)
+    ![Select add on conditional access page](../../../../media/Always-On-Vpn/07.png)
 
 2. On the **New** page, in the **Name** box, type a name for your policy. For example, type **VPN policy**.
 
-    ![Add name for policy on conditional access page](./media/active-directory-conditional-access-vpn-connectivity-windows10/08.png)
+    ![Add name for policy on conditional access page](../../../../media/Always-On-Vpn/08.png)
 
 5. In the **Assignment** section, click **Users and groups**.
 
-    ![Select users and groups](./media/active-directory-conditional-access-vpn-connectivity-windows10/09.png)
+    ![Select users and groups](../../../../media/Always-On-Vpn/09.png)
 
 6. On the **Users and groups** page, perform the following steps:
 
-    ![Select test user](./media/active-directory-conditional-access-vpn-connectivity-windows10/10.png)
+    ![Select test user](../../../../media/Always-On-Vpn/10.png)
 
     a. Click **Select users and groups**.
 
@@ -273,7 +273,7 @@ After a root certificate has been created, the 'VPN connectivity' triggers the c
 
 7. On the **New** page, perform the following steps:
 
-    ![Select cloud apps](./media/active-directory-conditional-access-vpn-connectivity-windows10/11.png)
+    ![Select cloud apps](../../../../media/Always-On-Vpn/11.png)
 
     a. In the **Assignments** section, click **Cloud apps**.
 
@@ -288,11 +288,11 @@ After a root certificate has been created, the 'VPN connectivity' triggers the c
 
 13. On the **New** page, to open the **Grant** page, in the **Controls** section, click **Grant**.
 
-    ![Select grant](./media/active-directory-conditional-access-azure-portal-get-started/13.png)
+    ![Select grant](../../../../media/Always-On-Vpn/13.png)
 
 14. On the **Grant** page, perform the following steps:
 
-    ![Select require multi-factor authentication](./media/active-directory-conditional-access-azure-portal-get-started/14.png)
+    ![Select require multi-factor authentication](../../../../media/Always-On-Vpn/14.png)
 
     a. Select **Require multi-factor authentication**.
 
@@ -300,7 +300,7 @@ After a root certificate has been created, the 'VPN connectivity' triggers the c
 
 15. On the **New** page, under **Enable policy**, click **On**.
 
-    ![Enable policy](./media/active-directory-conditional-access-azure-portal-get-started/15.png)
+    ![Enable policy](../../../../media/Always-On-Vpn/15.png)
 
 16. On the **New** page, click **Create**.
 
@@ -372,7 +372,7 @@ Customers that do not have management solutions like Intune or SCCM can use the 
     b.  Verify that the **Microsoft VPN root CA gen 1** issues a certificate to the personal certificate store.
 5. Examine the Sign-in logs in the Azure portal and observe the initial sign-in where MFA from the Windows VPN client took place.
 
-    ![](./media/active-directory-conditional-access-vpn-connectivity-windows10/ad-conditional-access.png)
+    ![](../../../../media/Always-On-Vpn/ad-conditional-access.png)
 
 >[!IMPORTANT]
 >If this script is run more than once, make sure to increase the $Version number between each run to update the VPNv2 Profile. Failure to increase the $Version number results in a connection failure warning:  _The modem (or other connecting device) is already in use or is not configured properly_.
