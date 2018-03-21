@@ -177,33 +177,36 @@ If Standard VPN is verified to be working correctly, proceed with removing weak 
 >IKEv2 gateway enforcement can be configured in NPS to prevent connections from being allowed from anything but certificates that chain to the **AAD Conditional Access** root certificate by adding a Vendor Specific setting to the Network Policy. The attribute is _Allowed-Certificate-OID_, and should contain the AAD Conditional Access OID. Doing this will prevent client certificates that do not have the AAD Conditional Access OID from satisfying the request. Alternatively, customers that happen to be using RRAS as their gateway can implement gateway enforcement against RRAS, if they prefer not to do it in NPS. See Gateway Enforcement in this article. 
 
 **Procedure**
+
 1. In the Routing and Remote Access MMC, expand **Policies\\Network Policies**.
 
 3.  Right-\click the **Connections to Microsoft Routing and Remote Access Server** network policy and select **Properties**.
 
 4.  Click the **Constraints** tab and do the following:
 
-    a. Under EAP Types, select the **Microsoft Encrypted Authentication version 2 (MS-CHAPv2)** check box and click **Remove**.
-    
-    b. Under EAP Types, click **Add**, select the **Microsoft: Protected EAP \(PEAP\)** check box, and click **OK**.
+   1. Under EAP Types, select the **Microsoft Encrypted Authentication version 2 (MS-CHAPv2)** check box and click **Remove**.
 
-    c. Select **Microsoft: Protected EAP \(PEAP\)** and click **Move Up** to place it at the top of the order.
+   2. Under EAP Types, click **Add**, select the **Microsoft: Protected EAP \(PEAP\)** check box, and click **OK**.
 
-    d. Select **Microsoft: Protected EAP \(PEAP\)** again and click **Edit**.
+   3. Select **Microsoft: Protected EAP \(PEAP\)** and click **Move Up** to place it at the top of the order.
 
-    e. On the Add EAP page, click **Add**.
+   4. Select **Microsoft: Protected EAP \(PEAP\)** again and click **Edit**.
 
-    f. Select **Smart Card or other certificate**, and click **OK**.
+5. On the Add EAP page, click **Add**.
 
-    g. Select **Smart Card or other certificate** and click **Move Up** to place it at the top of the order.
+6. Select **Smart Card or other certificate**, and click **OK**.
 
-    g.  For everything under Less secure authentication methods, clear all the check boxes, and click **OK**.
+   7. Select **Smart Card or other certificate** and click **Move Up** to place it at the top of the order.
+
+g.  For everything under Less secure authentication methods, clear all the check boxes, and click **OK**.
 
 8.  (Optional) If you have implemented [Gateway Enforcement](#gateway-enforcement), do the following:
 
-    a. Under Vendor Specific, click **Add**.
-    b. Select the first option of **Allowed-Certificate-OID** and click **Add**.
-    c. Paste the AAD Conditional Access OID as the attribute value and click **OK** twice.
+   1. Under Vendor Specific, click **Add**.
+
+   2. Select the first option of **Allowed-Certificate-OID** and click **Add**.
+   
+   3. Paste the AAD Conditional Access OID as the attribute value and click **OK** twice.
 
 9. Click **Close** and click **Apply**.
 
@@ -218,9 +221,13 @@ Since the authentication method is EAP-TLS, this registry value is only needed u
 **Procedure**
 
 1. Open **regedit.exe** on the NPS server.
+
 2. Navigate to **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\RasMan\PPP\EAP\13**.
+
 3. Click **Edit > New** and select **DWORD (32-bit) Value** and type **IgnoreNoRevocationCheck**.
+
 4. Double-click **IgnoreNoRevocationCheck** and set the Value data to **1**.
+
 5. Click **OK** and reboot the server. Restarting the RRAS and NPS services will not suffice.
 
 For more information, see [How to Enable or Disable Certificate Revocation Checking (CRL) on Clients](https://technet.microsoft.com/en-us/library/bb680540.aspx).
@@ -358,13 +365,20 @@ Everything discussed in this section is the minimum needed to make this work wit
 #### Force MDM Policy Sync on the Client
 If the VPN profile does not show up on the client device, under Settings\\Network & Internet\\VPN, you can force MDM policy to sync.
 
-1.  Sign in to a domain-joined client computer as a member of the **VPN Users** group.
-2.  On the Start menu, type **account**, and press Enter.
+1. Sign in to a domain-joined client computer as a member of the **VPN Users** group.
+
+2. On the Start menu, type **account**, and press Enter.
+
 3.  In the left navigation pane, click **Access work or school**.
+
 4.  If you do not see **Connected to <\domain> MDM**, and you want to trigger synchronization manually, do the following:
-    a. Press **Windows key + r**, and enter the following command to enable MDM Enrollment:```ms-device-enrollment:?mode=mdm```
-    b. Enter the username that is logged on to the device that needs the VPN profile. 
+
+    1. Press **Windows key + r**, and enter the following command to enable MDM Enrollment:```ms-device-enrollment:?mode=mdm```
+
+    2. Enter the username that is logged on to the device that needs the VPN profile. 
+
 5.  Under Access work or school, click **Connected to <\domain> MDM** and click **Info**.
+
 6.  Click **Sync** and verify the VPN profile appears under Settings\\Network & Internet\\VPN.
 
 #### Example EAP XML
@@ -384,11 +398,17 @@ Customers that do not have management solutions like Intune or SCCM can use the 
     |**\<IssuerHash> <\/IssuerHash>**    |This instance of \<IssuerHash> must contain no spaces. It contains a semicolon separated list of thumbprints for all root CAs that issued the Server Authentication certificates to the VPN servers, not subordinate/intermediate issuing CA thumbprints. <br><br>All instances of \<IssuerHash> outside of \<Sso> must contain spaces. It contains a semicolon separated list of thumbprints for all root CAs that issued the Server Authentication certificates to the VPN servers, not subordinate/intermediate issuing CA thumbprints.         |
     |**\<Servers> <\/Servers>**           |This must contain a semicolon separated list of names for the VPN Servers. This should include all names that are included in the Subject Alternative Name of the Server Authentication certificates.          |
     |**\<DnsSuffix> <\/DnsSuffix>**      |This must contain the FQDN of the DNS domain **\<DnsSuffix>corp.contoso.com<\/DnsSuffix>**          |
+
 2. Save the ProfileXML file, for example, _TestVPN_.
+
 3. Open PowerShell as **Administrator** and run `Set-ExecutionPolicy unrestricted`.
+
 4. After running the script, test the VPN connection on the client device by verifying it in the Certificate snap-in:
-    a.  On the Start menu, type **certmgr.msc**, and press Enter.
-    b.  Verify that the **Microsoft VPN root CA gen 1** issues a certificate to the personal certificate store.
+
+   1.  On the Start menu, type **certmgr.msc**, and press Enter.
+
+   1.  Verify that the **Microsoft VPN root CA gen 1** issues a certificate to the personal certificate store.
+
 5. Examine the Sign-in logs in the Azure portal and observe the initial sign-in where MFA from the Windows VPN client took place.
 
     ![](../../../../media/Always-On-Vpn/ad-conditional-access.png)
