@@ -1,4 +1,0 @@
----
-author: nwashburn-ms
----
-testing
