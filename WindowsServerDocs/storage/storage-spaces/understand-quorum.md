@@ -84,7 +84,7 @@ However, dynamic quorum prevents this from happening. The *total number of votes
 
 ![Diagram showing four cluster nodes, with nodes failing one at a time, and the number of required votes adjusting after each failure.](media/understand-quorum/dynamic-quorum-step-through.png)
 
-The above scenario applies to a general cluster that doesn't have storage spaces direct enabled. However, when Storage Spaces Direct is enabled, the cluster can only support 2 node failures. This is explained more in the [pool quorum section](#poolQuorum).
+The above scenario applies to a general cluster that doesn't have Storage Spaces Direct enabled. However, when Storage Spaces Direct is enabled, the cluster can only support 2 node failures. This is explained more in the [pool quorum section](#poolQuorum).
 
 ### Examples
 
