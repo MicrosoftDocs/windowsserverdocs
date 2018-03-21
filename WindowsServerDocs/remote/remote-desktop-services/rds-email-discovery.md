@@ -9,13 +9,13 @@ ms.localizationpriority: medium
 ms.topic: article
 author: christianmontoya
 ---
-# Set up email discovery to subscribe to your RDS feed 
+# Set up email discovery to subscribe to your RDS feed
 
 Have you ever had trouble getting your end users connected to their published RDS feed, either because of a single missing character in the feed URL or because they lost the email with the URL? Nearly all Remote Desktop client applications support finding your subscription by entering your email address, making it easier than ever to get your users connected to their RemoteApps and desktops.
 
 Before you set up email discovery, do the following:
 
-- Make sure you have permission to add a TXT record to the domain associated with your email (for example, if your email is user1@contoso.com, your domain would be contoso.com)
+- Make sure you have permission to add a TXT record to the domain associated with your email (for example, if your users have @contoso.com email addresses, you would need permissions for the contoso.com domain)
 - Create an RD Web feed URL (https://\<rdweb-dns-name\>.domain/RDWeb/Feed/webfeed.aspx, such as https://rdweb.contoso.com/RDWeb/Feed/webfeed.aspx)
 
 Now, use these steps to set up email discovery:
