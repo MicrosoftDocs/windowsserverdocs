@@ -15,7 +15,7 @@ Have you ever had trouble getting your end users connected to their published RD
 
 Before you set up email discovery, do the following:
 
-- Make sure you have access to add a TXT record to the domain associated with your email (for example, if your email is user1@contoso.com, your domain would be contoso.com)
+- Make sure you have permission to add a TXT record to the domain associated with your email (for example, if your email is user1@contoso.com, your domain would be contoso.com)
 - Create an RD Web feed URL (https://\<rdweb-dns-name\>.domain/RDWeb/Feed/webfeed.aspx, such as https://rdweb.contoso.com/RDWeb/Feed/webfeed.aspx)
 
 Now, use these steps to set up email discovery:
