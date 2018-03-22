@@ -88,6 +88,14 @@ author: nwashburn-ms
 
 [Video content here.]
 
+[TODO:legacy-content-begin]
+
+## Download the Honolulu Ignite poster
+
+![](../media/honolulu/spacer1.png)<a href="https://github.com/MicrosoftDocs/windowsserverdocs/blob/master/WindowsServerDocs//manage/media/honolulu/SME_Ignite2017_Poster.pdf"><img src="../media/honolulu/poster2.png"></a>
+
+[TODO:legacy-content-end]
+
 # Latest features
 
 [Latest features list here.]

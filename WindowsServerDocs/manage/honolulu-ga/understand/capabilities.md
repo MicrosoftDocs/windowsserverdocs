@@ -14,6 +14,28 @@ author: nwashburn-ms
 - [Azure]
 - [HCI]
 
+[TODO:legacy-content-begin]
+
+# What Windows Server features can Honolulu manage?
+
+Honolulu does not yet completely replace the Microsoft Management Console (MMC). Here are its current capabilities:
+
+-   Displaying resources and resource utilization
+-   Certificate Management
+-   Event Viewer
+-   File Explorer
+-   Firewall Management
+-   Configuring Local Users and Groups
+-   Network Settings
+-   Viewing/Ending Processes and Creating Process Dumps
+-   Registry Editing
+-   Managing Windows Services
+-   Enabling/Disabling Roles & Features
+-   Managing Hyper-V VMs & Virtual Switches
+-   Managing Storage
+-   Managing Windows Update
+
+[TODO:legacy-content-end]
 
 # [Features]
 
