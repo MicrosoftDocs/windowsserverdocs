@@ -118,48 +118,27 @@ Verify that VPN is enabled on your device. You can test your VPN connection by g
 ### How do I configure L2TP or PPTP VPN connections?
 If you are using L2TP or PPTP in your VPN, make sure to set **Send all traffic** to **ON** in the VPN configuration.
 
-## Web client
+## Remote Desktop web client
 
 ### Which browsers can I use?
 
-The web client supports Edge, Internet Explorer 11, and Google Chrome.
+The web client supports Edge, Internet Explorer 11, Mozilla Firefox (v55.0 and later), Safari, and Google Chrome.
 
 ### What PCs can I use to access the web client?
 
-The web client supports Windows, Mac, Linux, and Chromebook. Mobile devices are not supported at this time.
+The web client supports Windows, MacOS, Linux, and ChromeOS. Mobile devices are not supported at this time.
 
 ### Can I use the web client in a Remote Desktop deployment without a gateway?
 
-No. The client requires a Remote Desktop gateway to connect. Don't know what that means? Ask your admin about it.
+No. The client requires a Remote Desktop Gateway to connect. Don't know what that means? Ask your admin about it.
 
-### Does the Remote Desktop web client replace the Remote Desktop web access page?
+### Does the Remote Desktop web client replace the Remote Desktop Web Access page?
 
-No. The Remote Desktop web client is hosted at a different URL than the Remote Desktop web access page. You can use either the client or the web access page to view the resource feed in a browser.
+No. The Remote Desktop web client is hosted at a different URL than the Remote Desktop Web Access page. You can use either the web client or the Web Access page to view the remote resources in a browser.
 
 ### Can I embed the web client in another web page?
 
 This feature is not supported at the moment.
-
-### Why does my browser show a security warning when I try to access the web client?
-
-Either your certificate isn't trusted, or there's a problem with the Remote Desktop infrastructure itself. Let your admin know you're getting a security warning so that they can fix the issue.
-
-### Why am I getting an "unsupported browser" error when launching the web client in IE 11?
-
-This is an issue with your browser's settings. To fix this, open "Compatibility View settings" in your browser, then uncheck the "Display intranet sites in Compatibility View" option's checkbox.
-
-### Why can't I connect to the web client even though I can see the feed?
-
-There are two things that might cause this:
-
-- The certificate you're using isn't trusted.
-- An issue within the Remote Desktop infrastructure itself.
-
-To fix a certificate issue, ask your admin for a copy of the certificate file. Close your browser, export the certificate and install it manually on the client machine's trusted root store, then relaunch the browser.
-
-If that didn't solve your problem, then the issue might be with your Remote Desktop infrastructure itself. Let your admin know so that they can fix the problem.
-
-If you're getting a "mismatched certificate" error when you can't connect, tell your admin exactly what you see in your error message. They can use this information to figure out how to fix what's causing the error.
 
 ## Monitors, audio, and mouse
 
