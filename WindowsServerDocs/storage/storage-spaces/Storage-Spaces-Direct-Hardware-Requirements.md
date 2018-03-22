@@ -35,7 +35,7 @@ In addition, the following requirements apply:
 ## Servers
 
 - Minimum of 2 servers, maximum of 16 servers
-- Recommended that all servers be the same make and model
+- Recommended that all servers be the same manufacturer and model
 
 ## CPU
 
@@ -50,7 +50,7 @@ In addition, the following requirements apply:
 ## Boot
 
 - Any boot device supported by Windows Server, which [now includes SATADOM](https://cloudblogs.microsoft.com/windowsserver/2017/08/30/announcing-support-for-satadom-boot-drives-in-windows-server-2016/)
-- RAID 1 mirror is **not** required, but is supported
+- RAID 1 mirror is **not** required, but is supported for boot
 - Recommended: 200 GB minimum size
 
 ## Networking
