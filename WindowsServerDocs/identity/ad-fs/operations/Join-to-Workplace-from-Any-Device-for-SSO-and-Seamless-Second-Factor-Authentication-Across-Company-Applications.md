@@ -57,7 +57,7 @@ This solution guides takes you through the following walkthrough steps:
 3.  [Walkthrough: Workplace Join with an Android Device](../../ad-fs/operations/walkthrough--workplace-join-to-an-android-device.md)
 
 ## See Also
-[Configure a federation server with Device Registration Service](assetId:///007016d9-b1c9-4ee1-a30f-13865f784c80)
+[Configure a federation server with Device Registration Service](../deployment/configure-a-federation-server-with-device-registration-service.md)
 
 
 

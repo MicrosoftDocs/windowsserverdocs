@@ -4,7 +4,7 @@ description: This topic provides an overview of the Software Defined Networking 
 ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
-ms.date: 
+ms.date: 03/16/2018
 ms.assetid: daaf6b61-5953-4c2d-b6b8-7c885b552646
 manager: brianlic
 ms.author: jamesmci
@@ -14,6 +14,9 @@ ms.localizationpriority: high
 # Networking
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+
+>[!TIP]
+> Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/) on docs.microsoft.com. You can also [search this site](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions) for specific information.
 
 <img src="../media/landing-icons/network.png" style='float:left; padding:.5em;' alt="Icon depicting two networked computers"> Networking is a foundational part of the Software Defined Datacenter \(SDDC\) platform, and Windows Server 2016 provides new and improved Software Defined Networking \(SDN\) technologies to help you move to a fully realized SDDC solution for your organization.
 
