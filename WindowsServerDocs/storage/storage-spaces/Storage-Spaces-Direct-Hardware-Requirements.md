@@ -17,7 +17,7 @@ ms.localizationpriority: medium
 
 This topic describes minimum hardware requirements for Storage Spaces Direct.
 
-For production, Microsoft recommends these [Windows Server Software-Defined](https://microsoft.com/wssd) hardware/software offers from our partners, which includes deployment tools and procedures. They are designed, assembled, and validated against our reference architecture to ensure compatibility and reliability, so you get up and running quickly.Learn more at [https://microsoft.com/wssd](https://microsoft.com/wssd).
+For production, Microsoft recommends these [Windows Server Software-Defined](https://microsoft.com/wssd) hardware/software offers from our partners, which includes deployment tools and procedures. They are designed, assembled, and validated against our reference architecture to ensure compatibility and reliability, so you get up and running quickly. Learn more at [https://microsoft.com/wssd](https://microsoft.com/wssd).
 
 ![logos of our Windows Server Software Defined partners](media/hardware-requirements/wssd-partners.png)
 
@@ -28,9 +28,9 @@ For production, Microsoft recommends these [Windows Server Software-Defined](htt
 
 All systems, components, devices, and drivers must be *Certified for Windows Server 2016* per the [Windows Server Catalog](https://www.windowsservercatalog.com).
 
-The fully configured cluster (servers, networking, and storage) must pass all [cluster validation tests](https://technet.microsoft.com/library/cc732035(v=ws.10).aspx) per the wizard in Failover Cluster Manager or with the `[Test-Cluster](https://docs.microsoft.com/powershell/module/failoverclusters/test-cluster?view=win10-ps)` cmdlet in PowerShell.
+The fully configured cluster (servers, networking, and storage) must pass all [cluster validation tests](https://technet.microsoft.com/library/cc732035(v=ws.10).aspx) per the wizard in Failover Cluster Manager or with the `Test-Cluster` [cmdlet](https://docs.microsoft.com/powershell/module/failoverclusters/test-cluster?view=win10-ps) in PowerShell.
 
-In addition, the following requirements apply.
+In addition, the following requirements apply:
 
 ## Servers
 
@@ -49,7 +49,9 @@ In addition, the following requirements apply.
 
 ## Boot
 
-- Use a separate, dedicated drive or RAID 1 mirror for Windows Server boot (recommended 200 GB minimum size)
+- Any boot device supported by Windows Server, which [now includes SATADOM](https://cloudblogs.microsoft.com/windowsserver/2017/08/30/announcing-support-for-satadom-boot-drives-in-windows-server-2016/)
+- RAID 1 mirror is **not** required, but is supported
+- Recommended: 200 GB minimum size
 
 ## Networking
 
@@ -90,7 +92,7 @@ Drives can be internal to the server or in an external enclosure connected to on
 > [!NOTE]
 > Microsoft has a critical product advisory for Storage Spaces Direct customers using the Intel P3x00 family of NVMe devices (all capacities of the P3500, P3600, P3700). See Knowledge Base article [4052341](https://support.microsoft.com/help/4052341) for more information.
 
-### Minimum number of drives
+### Minimum number of drives (excludes boot drive)
 
 - If there are drives used as cache, there must be at least 2 per server
 - There must be at least 4 capacity (non-cache) drives per server
