@@ -63,7 +63,7 @@ If you are going to manage Microsoft Hyper-V Server, there are some Server roles
 1.  Click **Roles and Features** in the **Tools** menu.
 2.  In **Roles and Features**, find **File and Storage Services**, and check **File and iSCSI Services** and **File Server**:
 
-![](../media/honolulu/c6c30b812d96afcc1edcdb6f52f0e13c.png)
+![](../../media/honolulu/c6c30b812d96afcc1edcdb6f52f0e13c.png)
 
 ### Step 3: Enable Hyper-V Module for PowerShell ##
 
@@ -72,7 +72,7 @@ If you are going to manage Microsoft Hyper-V Server, there are some Server roles
 1.  Click **Roles and Features** in the **Tools** menu.
 2.  In **Roles and Features**, find **Remote Server Administration Tools** and check **Role Administration Tools** and **Hyper-V Module for PowerShell**:
 
-![](../media/honolulu/7ab0999602b7083733525bd0c1ba2747.png)
+![](../../media/honolulu/7ab0999602b7083733525bd0c1ba2747.png)
 
 ## Configure Microsoft Hyper-V Server 2012 R2 for management by Honolulu 
 
@@ -108,7 +108,7 @@ If it is not installed, you can [download WMF 5.1](https://www.microsoft.com/en-
 1.  Click **Roles and Features** in the **Tools** menu.
 2.  In **Roles and Features**, find **File and Storage Services** and check **File and iSCSI Services** and **File Server**:
 
-![](../media/honolulu/c6c30b812d96afcc1edcdb6f52f0e13c.png)
+![](../../media/honolulu/c6c30b812d96afcc1edcdb6f52f0e13c.png)
 
 ### Step 4: Enable Hyper-V Module for PowerShell ##
 
@@ -117,6 +117,6 @@ If it is not installed, you can [download WMF 5.1](https://www.microsoft.com/en-
 1.  Click **Roles and Features** in the **Tools** menu.
 2.  In **Roles and Features**, find **Remote Server Administration Tools** and check **Role Administration Tools** and **Hyper-V Module for PowerShell**:
 
-![](../media/honolulu/7ab0999602b7083733525bd0c1ba2747.png)
+![](../../media/honolulu/7ab0999602b7083733525bd0c1ba2747.png)
 
 [TODO:legacy-content-end]

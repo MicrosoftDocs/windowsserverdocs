@@ -18,15 +18,15 @@ After you have completed the installation of Project Honolulu, you can add serve
 
  1. Click **+ Add** under **All Connections**.
 
-    ![](../media/honolulu/screen1.png)
+    ![](../../media/honolulu/screen1.png)
 
  2. Choose to add a Server, Failover Cluster or Hyper-Converged Cluster connection:
     
-    ![](../media/honolulu/screen2.png)
+    ![](../../media/honolulu/screen2.png)
 
  3. Type the name of the server or cluster to manage and click **Submit**. The server or cluster will be added to your connection list on the overview page.
 
-    ![](../media/honolulu/screen3-add-server.png)
+    ![](../../media/honolulu/screen3-add-server.png)
 
    **-- OR --**  
 
@@ -34,7 +34,7 @@ After you have completed the installation of Project Honolulu, you can add serve
 
  1. On the **Add Server Connection** page, choose the **Import Servers** tab.
 
-    ![](../media/honolulu/screen4-import-servers.png)
+    ![](../../media/honolulu/screen4-import-servers.png)
 
  2. Click **Browse** and select a text file that contains a comma, or new line separated, list of FQDNs for the servers you want to add.
 
@@ -73,11 +73,11 @@ To remove this relationship, use the following command:
 
 Under **All Connections**, select a server from the list and choose **Manage As** to specify the credentials that you will use to authenticate to the managed node:
 
-![](../media/honolulu/manage-as.png)
+![](../../media/honolulu/manage-as.png)
 
 If Honolulu is running in service mode on Windows Server, but you do not have Kerberos delegation configured, you must re-enter your Windows credentials:
 
-![](../media/honolulu/spacer1.png)![](../media/honolulu/credentials-needed.png)
+![](../../media/honolulu/spacer1.png)![](../../media/honolulu/credentials-needed.png)
 
 You may apply the credentials to all connections, which will cache them for that
 specific browser session. If you reload your browser, you must re-enter your

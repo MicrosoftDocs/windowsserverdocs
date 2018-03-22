@@ -15,7 +15,7 @@ author: nwashburn-ms
 Hyper-Converged Infrastructure (HCI) consolidates compute, storage and networking into a single set of servers with a Software-Defined Datacenter solution that virtualizes these components. 
 
 Microsoft provides a complete software-defined
-compute and storage solution with Hyper-V and Storage Spaces Direct in Windows Server and Windows Server 2016, and you can now manage your Windows Server hyper-converged infrastructure using Project Honolulu. [Learn more about Windows Server 2016 Software-Defined Datacenter solutions](../../sddc.md).
+compute and storage solution with Hyper-V and Storage Spaces Direct in Windows Server and Windows Server 2016, and you can now manage your Windows Server hyper-converged infrastructure using Project Honolulu. [Learn more about Windows Server 2016 Software-Defined Datacenter solutions](../../../sddc.md).
 
 Honolulu will support managing hyper-converged infrastructure running future Windows Server releases after RS3. For now, you can use Honolulu to manage HCI running recent releases of [Windows Server Insider Preview](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewserver). Project Honolulu does not currently support HCI running Windows Server RS1.
 

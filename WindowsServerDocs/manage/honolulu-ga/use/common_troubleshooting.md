@@ -92,6 +92,6 @@ If you've successfully connected to the server, but receive error message:
 1. Click **Roles and Features** in the **Tools** menu.
 2. In **Roles and Features** find **Remote Server Administration Tools** and check **Role Administration Tools** and **Hyper-V Module for Windows PowerShell**.
 
-   ![](../media/honolulu/7ab0999602b7083733525bd0c1ba2747.png)
+   ![](../../media/honolulu/7ab0999602b7083733525bd0c1ba2747.png)
 
 [TODO:legacy-content-end]

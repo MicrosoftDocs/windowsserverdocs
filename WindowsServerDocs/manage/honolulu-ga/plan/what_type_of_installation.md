@@ -42,6 +42,6 @@ and that the version is 5.0 or higher.
 
 ## Deployment options
 
-![](../media/honolulu/spacer1.png)![](../media/honolulu/deployment.png)
+![](../../media/honolulu/spacer1.png)![](../../media/honolulu/deployment.png)
 
 [TODO:legacy-content-end]

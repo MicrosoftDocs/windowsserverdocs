@@ -16,7 +16,7 @@ Honolulu is a locally deployed, browser-based, management tool set that enables 
 
 Honolulu is the modern evolution of �in-box" management tools, like Server Manager and MMC. It is complementary to System Center and Operations Management Suite, and is not intended to replace these products and services.
 
-![](../media/honolulu/honolulu-deploy-graphic.png)
+![](../../media/honolulu/honolulu-deploy-graphic.png)
 
 ## How does Honolulu work?
 
@@ -24,10 +24,10 @@ The Honolulu app runs in a web browser. The app manages Windows Server 2016, Win
 
 Publishing the web server to DNS and setting up the corporate firewall can allow you to access Honolulu from the public internet, enabling you to connect to, and manage, your servers from anywhere with Microsoft Edge or Google Chrome (other browsers' compatibility has not been tested).
 
-![](../media/honolulu/spacer1.png)![](../media/honolulu/architecture.png)
+![](../../media/honolulu/spacer1.png)![](../../media/honolulu/architecture.png)
 
 ## What does Honolulu do?
 
-![](../media/honolulu/spacer1.png)![](../media/honolulu/what-does-it-do.png)
+![](../../media/honolulu/spacer1.png)![](../../media/honolulu/what-does-it-do.png)
 
 [TODO:legacy-content-end]
