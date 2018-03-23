@@ -7,3 +7,5 @@ author: nwashburn-ms
 # Download Honolulu SDK
 
 [Content goes here]
+
+Daniel's edit
