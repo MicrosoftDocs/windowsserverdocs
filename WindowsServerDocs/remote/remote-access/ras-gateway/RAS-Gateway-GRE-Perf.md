@@ -7,8 +7,8 @@ ms.date:
 ms.technology: networking-ras
 ms.topic: article
 ms.assetid: c051b2ec-de0f-49d1-82b9-5742b259cd7c
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 
 # RAS Gateway GRE Tunnel Throughput and Performance

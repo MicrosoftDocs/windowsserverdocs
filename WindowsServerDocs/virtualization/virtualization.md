@@ -5,8 +5,8 @@ ms.prod: windows-server-threshold
 manager: brianlic
 ms.technology: compute
 ms.topic: article
-author: jamesmci
-ms.author: jamesmci
+author: shortpatti
+ms.author: pashort
 ms.localizationpriority: high
 ms.date: 03/16/2018
 ---

@@ -6,8 +6,8 @@ ms.technology: networking
 ms.topic: article
 ms.assetid: 5ae1a40b-4f10-4ace-8aaf-13f7ab581f4f
 manager: brianlic
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 
 # Remote Access Always On VPN Deployment Guide for Windows Server and Windows 10

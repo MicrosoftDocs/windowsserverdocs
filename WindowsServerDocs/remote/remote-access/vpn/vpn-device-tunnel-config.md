@@ -7,7 +7,7 @@ ms.date:
 ms.technology: networking-ras
 ms.topic: article
 ms.assetid: 158b7a62-2c52-448b-9467-c00d5018f65b
-ms.author: jamesmci
+ms.author: pashort
 author: maricia
 ---
 # Configure VPN Device Tunnels in Windows 10
