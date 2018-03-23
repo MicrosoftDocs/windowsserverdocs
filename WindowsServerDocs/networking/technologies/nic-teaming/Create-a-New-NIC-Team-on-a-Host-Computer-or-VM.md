@@ -11,8 +11,8 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a4caaa86-5799-4580-8775-03ee213784a3
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 # Create a New NIC Team on a Host Computer or VM
 

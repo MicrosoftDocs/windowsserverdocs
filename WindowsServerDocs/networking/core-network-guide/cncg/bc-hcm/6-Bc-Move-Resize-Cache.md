@@ -6,8 +6,8 @@ ms.prod: windows-server-threshold
 ms.technology: networking-bc
 ms.topic: article
 ms.assetid: bb0eb349-914d-4596-9140-d3aae7597d55
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 
 # Move and Resize the Hosted Cache \(Optional\)

@@ -11,8 +11,8 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2cfe4e40-ec6d-4541-baa9-d772409fe27c
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 # View DNS Zones
 

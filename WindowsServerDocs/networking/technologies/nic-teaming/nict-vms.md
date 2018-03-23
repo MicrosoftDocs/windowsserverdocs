@@ -11,8 +11,8 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5c73a50c-47f3-4470-a77f-fac1a6739942
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 # NIC Teaming in Virtual Machines (VMs)
 

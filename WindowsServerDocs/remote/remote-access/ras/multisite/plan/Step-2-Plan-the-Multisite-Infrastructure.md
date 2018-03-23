@@ -11,8 +11,8 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 64c10107-cb03-41f3-92c6-ac249966f574
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 # Step 2 Plan the Multisite Infrastructure
 

@@ -6,8 +6,8 @@ ms.prod: windows-server-threshold
 ms.technology: networking-bc
 ms.topic: article
 ms.assetid: 9adf420b-5a58-4e59-9906-71bd58f757fd
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 
 # Install the BranchCache Feature and Configure the Hosted Cache Server by Service Connection Point

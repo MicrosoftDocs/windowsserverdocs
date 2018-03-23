@@ -11,7 +11,7 @@ ms.assetid: fc239aec-e719-47ea-92fc-d82a7247c5e9
 author: msjimwu
 ms.author: coreyp
 manager: dongill
-ms.date: 2/1/2018
+ms.date: 3/15/2018
 ---
 
 # Deploy Windows Server Hybrid Cloud Print with Passthrough Authentication
@@ -193,7 +193,19 @@ This guide outlines five (5) installation steps:
     - CloudPrintResourceId = The "App ID URI" of the Web app / API for the print endpoint registered in Step 2.8. You can find this under the Settings -> Properties of the app
     - DiscoveryMaxPrinterLimit = \<a positive integer\>
 
->   Note: If the Enterprise Cloud Print policy group is not available, but the MDM provider supports OMA-URI settings, then you can set the same policies.  Please refer to this <a href="https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-enterprisecloudprint#enterprisecloudprint-cloudprintoauthauthority">article</a> for additional info.
+>   Note: If you are using Microsoft Intune service, you can find these settings under the "Cloud Printer" category.
+
+|Intune Display Name                     |Policy                         |
+|----------------------------------------|-------------------------------|
+|Printer discovery URL                   |CloudPrinterDiscoveryEndpoint  |
+|Printer access authority URL            |CloudPrintOAuthAuthority       |
+|Azure native client app GUID            |CloudPrintOAuthClientId        |
+|Print service resource URI              |CloudPrintResourceId           |
+|Maximum printers to query(Mobile only)  |DiscoveryMaxPrinterLimit       |
+|Printer discovery service resource URI  |MopriaDiscoveryResourceId      |
+
+
+>   Note: If the Cloud Print policy group is not available, but the MDM provider supports OMA-URI settings, then you can set the same policies.  Please refer to this <a href="https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-enterprisecloudprint#enterprisecloudprint-cloudprintoauthauthority">article</a> for additional info.
 
 - OMA-URI
     - `CloudPrintOAuthAuthority = ./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/CloudPrintOAuthAuthority`
@@ -238,12 +250,13 @@ This guide outlines five (5) installation steps:
             - PrintServerEndpoint = https://&lt;services-machine-endpoint&gt;/ecp
             - AzureClientId = Application ID of the registered Native Web App value from above
             - AzureTenantGuid = Directory ID of your Azure AD tenant
+            - DiscoveryResourceId = [Optional] Application ID of the proxied Mopria Discovery Cloud Service
 
         > NOTE: You can enter all of the required parameter values in the command line as well.<br>
 **Publish-CloudPrinter** PowerShell command syntax: <br>
 Publish-CloudPrinter -Printer \<string\> -Manufacturer \<string\> -Model \<string\> -OrgLocation \<string\> -Sddl \<string\> -DiscoveryEndpoint \<string\> -PrintServerEndpoint \<string\> -AzureClientId \<string\> -AzureTenantGuid \<string\> [-DiscoveryResourceId \<string\>] <br>
 Sample command:
-`publish-cloudprinter -Printer EcpPrintTest -Manufacturer Microsoft -Model FilePrinterEcp -OrgLocation '{"attrs": [{"category":"country", "vs":"USA", "depth":0}, {"category":"organization", "vs":"MyCompany", "depth":1}, {"category":"site", "vs":"MyCity, State", "depth":2}, {"category":"building", "vs":"Building 1", "depth":3}, {"category":"floor\_number", "vn":1, "depth":4}, {"category":"room\_name", "vs":"1111", "depth":5}]}' -Sddl "O:BAG:DUD:(A;OICI;FA;;;WD)" -DiscoveryEndpoint https://<services-machine-endpoint>/mcs -PrintServerEndpoint https://<services-machine-endpoint>/ecp -AzureClientId <Native Web App ID> -AzureTenantGuid <Azure AD Directory ID>`
+`publish-cloudprinter -Printer EcpPrintTest -Manufacturer Microsoft -Model FilePrinterEcp -OrgLocation '{"attrs": [{"category":"country", "vs":"USA", "depth":0}, {"category":"organization", "vs":"MyCompany", "depth":1}, {"category":"site", "vs":"MyCity, State", "depth":2}, {"category":"building", "vs":"Building 1", "depth":3}, {"category":"floor\_number", "vn":1, "depth":4}, {"category":"room\_name", "vs":"1111", "depth":5}]}' -Sddl "O:BAG:DUD:(A;OICI;FA;;;WD)" -DiscoveryEndpoint https://<services-machine-endpoint>/mcs -PrintServerEndpoint https://<services-machine-endpoint>/ecp -AzureClientId <Native Web App ID> -AzureTenantGuid <Azure AD Directory ID> -DiscoveryResourceId <Proxied Mopria Discovery Cloud Service App ID>`
 
 
 ## Verifing the deployment

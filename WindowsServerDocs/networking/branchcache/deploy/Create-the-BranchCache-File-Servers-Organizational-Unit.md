@@ -6,8 +6,8 @@ ms.prod: windows-server-threshold
 ms.technology: networking-bc
 ms.topic: get-started-article
 ms.assetid: 2cda192f-6b45-4e6c-88d9-70ca179ddb94
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 # Create the BranchCache File Servers Organizational Unit
 

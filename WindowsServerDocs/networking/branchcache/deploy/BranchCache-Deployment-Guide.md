@@ -6,8 +6,8 @@ ms.prod: windows-server-threshold
 ms.technology: networking-bc
 ms.topic: get-started-article
 ms.assetid: 3830b356-36d3-44f9-a1d7-990ff3e57403
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 # BranchCache Deployment Guide
 

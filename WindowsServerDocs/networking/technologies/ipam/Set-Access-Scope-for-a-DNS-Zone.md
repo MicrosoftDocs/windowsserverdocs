@@ -11,8 +11,8 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6a211dde-80eb-4888-b5bb-4e28fe8dc7df
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 # Set Access Scope for a DNS Zone
 
