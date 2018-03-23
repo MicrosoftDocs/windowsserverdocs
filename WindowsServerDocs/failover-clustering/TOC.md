@@ -6,15 +6,15 @@
 ### [Actions](health-service-actions.md)
 ### [Settings](health-service-settings.md)
 ## [Deploy]
-### [Create a Failover Cluster]
-### [Prestage a cluster in AD DS]
+### [Create a Failover Cluster](create-failover-cluster.md)
+### [Prestage a cluster in AD DS](prestage-cluster-adds.md)
 ## [Manage]
-### [Managing cluster quorum]
+### [Managing cluster quorum](manage-cluster-quorum.md)
 ## [Plan]
-### [Hardware requirements]
-### [Use Cluster Shared Volumes (CSVs)]
+### [Hardware requirements](clustering-requirements.md)
+### [Use Cluster Shared Volumes (CSVs)](failover-cluster-csvs.md)
 ## [Understand]
-### [SOFS overview]
+### [SOFS overview](sofs-overview.md)
 ## [Fault domain awareness](fault-domains.md)
 ## [VM load balancing](vm-load-balancing-overview.md)
 ### [VM load balancing deep-dive](vm-load-balancing-deep-dive.md)
