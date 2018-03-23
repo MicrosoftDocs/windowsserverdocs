@@ -23,6 +23,15 @@ In the Windows Time Service (W32Time) topic, the following content is available:
     - **[How the Windows Time service works](How-the-Windows-Time-Service-Works.md).** Although the Windows Time service is not an exact implementation of the Network Time Protocol (NTP), it uses the complex suite of algorithms that is defined in the NTP specifications to ensure that clocks on computers throughout a network are as accurate as possible.
     - **[Windows Time service tools and settings](Windows-Time-Service-Tools-and-Settings.md).** Most domain member computers have a time client type of NT5DS, which means that they synchronize time from the domain hierarchy. The only typical exception to this is the domain controller that functions as the primary domain controller (PDC) emulator operations master of the forest root domain, which is usually configured to synchronize time with an external time source.
 
+## Related Topics
+For more information about the domain hierarchy and scoring system, see the [“What is Windows Time Service?”](https://blogs.msdn.microsoft.com/w32time/2007/07/07/what-is-windows-time-service/) blog post.
+
+The windows time provider plugin model is [documented on TechNet](https://msdn.microsoft.com/en-us/library/windows/desktop/ms725475%28v=vs.85%29.aspx).
+
+An addendum referenced by the Windows 2016 Accurate Time article can be downloaded [here](http://windocs.blob.core.windows.net/windocs/WindowsTimeSyncAccuracy_Addendum.pdf)
+
+For a quick overview of Windows Time service, take a look at this [high-level overview video](https://aka.ms/WS2016TimeVideo).
+
 <!-- In this guide
 In this guide:
 Windows Accurate Time
