@@ -13,10 +13,9 @@ ms.localizationpriority: medium
 # Disaster recovery with Storage Spaces Direct
 > Applies To: Windows Server 2016
 
-<img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/plan.png" style='float:left; padding:.5em;width:75px' alt="">
+
 This topic provides scenarios on how hyper-converged infrastructure (HCI) can be configured for disaster recovery.
 
-<br><br>
 
 # Disaster Recovery
 
