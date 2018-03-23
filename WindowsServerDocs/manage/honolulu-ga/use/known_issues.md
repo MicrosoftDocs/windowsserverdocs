@@ -40,11 +40,11 @@ If you encounter an issue not described on this page, please [let us know](http:
 
 - If you have installed or uninstalled extensions, you may get an error when trying to uninstall Honolulu. Performing the uninstall again should clear the error. [1709-13502848]
 
-- You may get a **Site cannot be reached** error the first time you load the site when it�s installed on a server. [1709- 13819870]
+- You may get a **Site cannot be reached** error the first time you load the site when it's installed on a server. [1709- 13819870]
 
 - You may encounter a **500 Error** when refreshing pages with very long URLs. [1709-12443710]
 
-- In some tools, your browser�s spell checker may mark certain field values as misspelled. [1709-12425477]
+- In some tools, your browser's spell checker may mark certain field values as misspelled. [1709-12425477]
 
 - In some tools, command buttons may not reflect state changes immediately after being clicked, and the tool UI may not automatically reflect changes to certain properties. You can click **Refresh** to retrieve the latest state from the target server. [1709-11445790]
 
@@ -100,11 +100,11 @@ If it is not installed, you can [download and install WMF 5.1](https://www.micro
 
 ### PowerShell
 
-* Pasting with a single right-click as in the desktop PowerShell console does not work. Instead you will get the browser�s context menu, where you can select paste. Ctrl-V works as well.
+* Pasting with a single right-click as in the desktop PowerShell console does not work. Instead you will get the browser's context menu, where you can select paste. Ctrl-V works as well.
 
 * Ctrl-C to copy does not work, it will always send the Ctrl-C break command to the console. Copy from the right-click context menu works.
 
-* When you make the Honolulu window smaller, the terminal content will reflow, but when you make it larger again, the content may not return to it�s previous state. If things get jumbled, you can try Clear-Host, or disconnect and reconnect using the button above the terminal.
+* When you make the Honolulu window smaller, the terminal content will reflow, but when you make it larger again, the content may not return to it's previous state. If things get jumbled, you can try Clear-Host, or disconnect and reconnect using the button above the terminal.
 
 ### Processes
 
@@ -118,7 +118,7 @@ If it is not installed, you can [download and install WMF 5.1](https://www.micro
 
 ### Remote Desktop
 
-* Remote Desktop tool fails to connect, showing �Session disconnected� popup dialog and the following error:
+* Remote Desktop tool fails to connect, showing "Session disconnected" popup dialog and the following error:
 Unexpected error in RDP Client: disconnect code=UnknownError(46), extended code=<null>, reason=X509_NAME_print_ex failed, (OSSL error: ERR_error_string returned "error:00000000:lib(0):func(0):reason(0)") Thrown in thread 0 at: certificateutils.cpp(152)
 
    This is due to a bug in the Remote Desktop web control when the certificate on the gateway does not have a subject field. We are        planning to fix this in a future update, and for now, use a certificate that has a subject when installing Honolulu.
@@ -128,7 +128,7 @@ Unexpected error in RDP Client: disconnect code=UnknownError(46), extended code=
 
 * To do any copy/paste within the remote session, you can copy as normal (right click + copy or Ctrl+C), but paste requires right click + paste (Ctrl+V does NOT work)
 
-* Opening the web browser�s debugger while a Remote Desktop session is active may cause your computer to crash. Don�t do it.
+* Opening the web browser's debugger while a Remote Desktop session is active may cause your computer to crash. Don't do it.
 
 * You cannot send the following key commands to the remote session
 
@@ -146,7 +146,7 @@ Unexpected error in RDP Client: disconnect code=UnknownError(46), extended code=
 
 * When selecting roles or features with unavailable sources for install, they are skipped. [1709-12946914]
 
-* If you choose not to automatically reboot after role installation, we won�t ask again. [1709-13098852]
+* If you choose not to automatically reboot after role installation, we won't ask again. [1709-13098852]
 
 * If you do choose to automatically reboot, the reboot will occur before the status gets updated to 100%. [1709- 13098852]
 
@@ -180,7 +180,7 @@ The Computer Management solution contains a subset of the tools from the Server 
 
 * If you try to add a Windows PC connection, but the add connection dialog tries to add it as a server, refresh your browser. If the problem persists, clear your browser cache.
 
-* When you try to manage the localhost, you will be prompted to elevate the gateway process. If you click **no** in the User Account Control popup that follows, Honolulu won�t be able to display it again. In this case, exit the gateway process by right-clicking the Project Honolulu icon in the system tray and choosing exit, then relaunch Project Honolulu from the Start Menu.
+* When you try to manage the localhost, you will be prompted to elevate the gateway process. If you click **no** in the User Account Control popup that follows, Honolulu won't be able to display it again. In this case, exit the gateway process by right-clicking the Project Honolulu icon in the system tray and choosing exit, then relaunch Project Honolulu from the Start Menu.
 
 * If you have the RSAT tools installed, the Virtual Machine tool will throw a cluster service error [1711-14598645]
 
@@ -188,13 +188,13 @@ The Computer Management solution contains a subset of the tools from the Server 
   
   * To enable management of the Windows 10 Client, you must issue the command ```Enable-PSRemoting``` from an elevated PowerShell prompt.
 
-  * You may also need to update your firewall to allow connections from outside the local subnet with ```Set-NetFirewallRule -Name WINRM-HTTP-In-TCP �RemoteAddress Any``` For more restrictive networks scenarios, please refer to [this documentation](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/enable-psremoting?view=powershell-5.1).
+  * You may also need to update your firewall to allow connections from outside the local subnet with ```Set-NetFirewallRule -Name WINRM-HTTP-In-TCP -RemoteAddress Any``` For more restrictive networks scenarios, please refer to [this documentation](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/enable-psremoting?view=powershell-5.1).
 
 ## Failover Cluster Manager solution
 
 * When managing a cluster, (either Hyper-Converged or traditional?) you may encounter a **shell was not found** error. If this happens either reload your browser, or navigate away to another tool and back. [1709-13882442]
 
-* An issue can occur when managing a down-level (Windows Server 2012 or 2012 R2) cluster that hasn�t been configured completely. The fix for this issue is to ensure that the Windows feature **RSAT-Clustering-PowerShell** has been installed and enabled on **each member node** of the cluster. To do this with PowerShell, enter the command `Install-WindowsFeature -Name RSAT-Windows-PowerShell` on all the cluster nodes. [1709-12524664]
+* An issue can occur when managing a down-level (Windows Server 2012 or 2012 R2) cluster that hasn't been configured completely. The fix for this issue is to ensure that the Windows feature **RSAT-Clustering-PowerShell** has been installed and enabled on **each member node** of the cluster. To do this with PowerShell, enter the command `Install-WindowsFeature -Name RSAT-Windows-PowerShell` on all the cluster nodes. [1709-12524664]
 
 * The Cluster may need to be added with the entire FQDN to be discovered correctly.
 
@@ -202,6 +202,6 @@ The Computer Management solution contains a subset of the tools from the Server 
 
 ## Hyper-Converged Cluster Manager solution
 
-* Some commands such as **Drives � Update firmware**, **Servers � Remove** and **Volumes � Open** are disabled and currently not supported.
+* Some commands such as **Drives - Update firmware**, **Servers - Remove** and **Volumes - Open** are disabled and currently not supported.
 
 [TODO:legacy-content-end]

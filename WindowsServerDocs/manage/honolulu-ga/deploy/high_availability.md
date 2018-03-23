@@ -20,7 +20,7 @@ You can deploy Project Honolulu in a failover cluster to provide high availabili
 - A Failover Cluster of 2 or more nodes on Windows Server 2016. [Learn more about deploying a Failover Cluster](https://docs.microsoft.com/en-us/windows-server/failover-clustering/failover-clustering-overview).
 - A Cluster Shared Volume (CSV) for Project Honolulu to store persistent data that can be accessed by all the nodes in the cluster. 10 GB will be sufficient for your CSV.
 - High-availability deployment scripts from [Honolulu HA Setup Scripts zipfile](http://aka.ms/HonoluluHASetupScripts). You can download the .zip file containing these scripts to a node on the cluster or to your local machine and then copy the scripts as needed based on the guidance below.
-- Recommended, but optional: a signed certificate .pfx & password. You do not need to have already installed the certificate on to the cluster nodes � the script will do that for you. If you do not supply one, the installation script will generate a self-signed certificate, which expires after 90 days.
+- Recommended, but optional: a signed certificate .pfx & password. You do not need to have already installed the certificate on to the cluster nodes - the script will do that for you. If you do not supply one, the installation script will generate a self-signed certificate, which expires after 90 days.
 
 #### Installation
 1.	Copy the Install-HonoluluHA.ps1 script to a node in your cluster. Download or copy the Project Honolulu .msi to the same node.

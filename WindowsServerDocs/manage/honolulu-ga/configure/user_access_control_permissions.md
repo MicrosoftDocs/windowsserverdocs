@@ -51,17 +51,17 @@ If you want to give specific AAD users or groups gateway user or gateway adminis
 
 1.	Go to your SME AAD application in the Azure portal. 
     -	When you click **Change access control** and then select **Azure Active Directory** from the Honolulu Access settings, you can use the hyperlink provided in the UI to access your AAD application in the Azure portal. This hyperlink is also available in the Access settings after you click save and have selected AAD as your access control identity provider.
-    -	You can also find your application in the Azure portal by going to **Azure Active Directory** > **Enterprise applications** > **All applications** and searching **SME** (the AAD app will be named SME-<gateway>). If you don�t get any search results, ensure **Show** is set to **all applications**, **application status** is set to **any** and click Apply, then try your search. Once you�ve found the application, go to **Users and groups**
+    -	You can also find your application in the Azure portal by going to **Azure Active Directory** > **Enterprise applications** > **All applications** and searching **SME** (the AAD app will be named SME-<gateway>). If you don't get any search results, ensure **Show** is set to **all applications**, **application status** is set to **any** and click Apply, then try your search. Once you've found the application, go to **Users and groups**
 2.	In the Properties tab, set **User assignment required** to Yes.
-    Once you�ve done this, only members listed in the Users and groups tab will be able to access the Honolulu gateway.
+    Once you've done this, only members listed in the Users and groups tab will be able to access the Honolulu gateway.
 3.	In the Users and groups tab, select **Add user**. You must assign a gateway user or gateway administrator role for each user/group added.
 
-Once you save the AAD access control in the �Change access control� pane, the gateway service will restart and you must refresh your browser. You can update user access for the SME AAD application in the Azure portal at any time. 
+Once you save the AAD access control in the "Change access control" pane, the gateway service will restart and you must refresh your browser. You can update user access for the SME AAD application in the Azure portal at any time. 
 
 Users will now be prompted to login using their Azure Active Directory identity when they attempt to access the Honolulu gateway URL. From the Azure tab of Honolulu general settings, users and administrators can view their currently logged in account and as well as sign-out of this AAD account.
 
 #### Conditional access and multi-factor authentication
 
-One of the benefits of using Azure Active Directory as your identity provider for controlling access to the Honolulu gateway is that you can leverage AAD�s powerful security features like conditional access and multi-factor authentication. To set up conditional access, you can follow the [guidance here](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal-get-started).
+One of the benefits of using Azure Active Directory as your identity provider for controlling access to the Honolulu gateway is that you can leverage AAD's powerful security features like conditional access and multi-factor authentication. To set up conditional access, you can follow the [guidance here](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal-get-started).
 
 [TODO:legacy-content-end]

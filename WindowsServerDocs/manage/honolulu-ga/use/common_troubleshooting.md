@@ -26,7 +26,7 @@ To remove the application data, delete the **Server Management Experience** fold
 
 ## Configure TrustedHosts
 
-When installing Project Honolulu, you are given the option to let Honolulu manage the gateway�s TrustedHosts setting. This is required in a workgroup environment, or when using local administrator credentials in a domain. If you choose to forego this setting, you must configure TrustedHosts manually.
+When installing Project Honolulu, you are given the option to let Honolulu manage the gateway's TrustedHosts setting. This is required in a workgroup environment, or when using local administrator credentials in a domain. If you choose to forego this setting, you must configure TrustedHosts manually.
 
 
 > [!NOTE] 
@@ -62,11 +62,11 @@ intend to manage:
 
         Set-Item WSMan:localhost\Client\TrustedHosts -Value '<paste values from text file>'## Credentials ##
 
-Make sure the credentials you are using are a member of the target server�s local administrators group. In some cases, WinRM also requires membership in the Remote Management Users group.
+Make sure the credentials you are using are a member of the target server's local administrators group. In some cases, WinRM also requires membership in the Remote Management Users group.
 
 ## Are you connecting with a local user account?
 
-When entering credentials in the server connection�s **Manage As** dialog box, you can use a local or domain account that is a member of the local administrators group on the target server. However, if you are using a local user account that is not the built-in administrator account, you will need to enable the policy on the target machine by running the following command in PowerShell or at a Command Prompt as Administrator on the target machine:
+When entering credentials in the server connection's **Manage As** dialog box, you can use a local or domain account that is a member of the local administrators group on the target server. However, if you are using a local user account that is not the built-in administrator account, you will need to enable the policy on the target machine by running the following command in PowerShell or at a Command Prompt as Administrator on the target machine:
 
     REG ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v LocalAccountTokenFilterPolicy /t REG_DWORD /d 1
 
@@ -76,10 +76,10 @@ To connect to a workgroup machine that is not on the same subnet as the gateway,
 
 **Windows Server**
 
-    Set-NetFirewallRule -Name WINRM-HTTP-In-TCP-PUBLIC �RemoteAddress Any
+    Set-NetFirewallRule -Name WINRM-HTTP-In-TCP-PUBLIC -RemoteAddress Any
 **Windows 10**
 
-    Set-NetFirewallRule -Name WINRM-HTTP-In-TCP �RemoteAddress Any
+    Set-NetFirewallRule -Name WINRM-HTTP-In-TCP -RemoteAddress Any
 
 ## Hyper-V PowerShell not installed
 
