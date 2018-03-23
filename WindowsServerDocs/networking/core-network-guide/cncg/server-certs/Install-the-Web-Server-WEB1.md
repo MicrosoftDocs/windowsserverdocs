@@ -8,8 +8,8 @@ ms.topic: article
 ms.assetid: f51c9e38-98bb-49c1-9d39-427d07021499
 ms.prod: windows-server-threshold
 ms.technology: networking
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 # Install the Web Server WEB1
 

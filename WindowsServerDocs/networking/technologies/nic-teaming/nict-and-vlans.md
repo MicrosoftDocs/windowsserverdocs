@@ -11,8 +11,8 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a8ca82f6-a543-4430-98b9-06ba383b610d
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 # NIC Teaming and Virtual Local Area Networks (VLANs)
 

@@ -6,8 +6,8 @@ ms.technology: networking
 ms.topic: article
 ms.assetid: cb48315c-0204-4927-aa24-64f6789c2e20
 manager: brianlic
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 
 # Enable vRSS on a Virtual Network Adapter

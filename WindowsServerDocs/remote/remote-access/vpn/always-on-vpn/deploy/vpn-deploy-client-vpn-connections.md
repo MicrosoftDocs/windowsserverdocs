@@ -7,8 +7,8 @@ ms.topic: article
 ms.date: 
 ms.assetid: d165822d-b65c-40a2-b440-af495ad22f42
 manager: brianlic
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 # Configure Windows 10 Client Always On VPN Connections
 

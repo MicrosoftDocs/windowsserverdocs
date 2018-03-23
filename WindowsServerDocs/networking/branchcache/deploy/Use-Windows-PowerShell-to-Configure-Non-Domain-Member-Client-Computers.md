@@ -6,8 +6,8 @@ ms.prod: windows-server-threshold
 ms.technology: networking-bc
 ms.topic: get-started-article
 ms.assetid: 1b511e1a-686d-441f-a1c7-d4d029e1a061
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 # Use Windows PowerShell to Configure Non-Domain Member Client Computers
 
