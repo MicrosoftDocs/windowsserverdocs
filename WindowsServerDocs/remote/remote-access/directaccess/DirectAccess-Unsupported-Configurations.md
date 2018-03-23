@@ -6,8 +6,8 @@ ms.prod: windows-server-threshold
 ms.technology: networking-da
 ms.topic: article
 ms.assetid: 23d05e61-95c3-4e70-aa83-b9a8cae92304
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 # DirectAccess Unsupported Configurations
 

@@ -6,8 +6,8 @@ ms.topic: article
 ms.assetid: c36201de-7eb6-4e38-87da-cf7dd981a442
 ms.prod: windows-server-threshold
 ms.technology: networking
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 # Prepare the CAPolicy.inf File
 
