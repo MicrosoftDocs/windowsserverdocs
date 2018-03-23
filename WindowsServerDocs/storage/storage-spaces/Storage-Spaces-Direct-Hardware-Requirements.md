@@ -17,7 +17,7 @@ ms.localizationpriority: medium
 
 This topic describes minimum hardware requirements for Storage Spaces Direct.
 
-For production, Microsoft recommends these [Windows Server Software-Defined](https://microsoft.com/wssd) hardware/software offers from our partners, which includes deployment tools and procedures. They are designed, assembled, and validated against our reference architecture to ensure compatibility and reliability, so you get up and running quickly. Learn more at [https://microsoft.com/wssd](https://microsoft.com/wssd).
+For production, Microsoft recommends these [Windows Server Software-Defined](https://microsoft.com/wssd) hardware/software offers from our partners, which include deployment tools and procedures. They are designed, assembled, and validated against our reference architecture to ensure compatibility and reliability, so you get up and running quickly. Learn more at [https://microsoft.com/wssd](https://microsoft.com/wssd).
 
 ![logos of our Windows Server Software Defined partners](media/hardware-requirements/wssd-partners.png)
 
@@ -57,14 +57,14 @@ In addition, the following requirements apply:
 
 - Minimum of 1 x 10 Gbps network interface per server
 - Recommended: Two or more NICs for redundancy and performance
-- Recommended: NICS that are remote-direct memory access (RDMA) capable, iWARP or RoCE
+- Recommended: NICs that are remote-direct memory access (RDMA) capable, iWARP or RoCE
 - With 2 servers, direct-connect (switchless) is supported
 
 ## Drives
 
-Storage Spaces Direct works with direct-attached SATA, SAS, or NVMe drives that are physically connected to only one server. For more help choosing drives, see the [Choosing drives](choosing-drives.md) topic.
+Storage Spaces Direct works with direct-attached SATA, SAS, or NVMe drives that are physically attached to just one server each. For more help choosing drives, see the [Choosing drives](choosing-drives.md) topic.
 
-- SATA, SAS, and NVMe (M.2, U.2, and Add-In-Card) are all supported
+- SATA, SAS, and NVMe (M.2, U.2, and Add-In-Card) drives are all supported
 - 512n, 512e, and 4K native drives are all supported
 - Solid-state drives must provide [power-loss protection](https://blogs.technet.microsoft.com/filecab/2016/11/18/dont-do-it-consumer-ssd/)
 - Same number and types of drives in every server – see [Drive symmetry considerations](drive-symmetry-considerations.md)
@@ -77,15 +77,15 @@ Here's how drives can be connected for Storage Spaces Direct:
 2. Direct-attached NVMe drives
 3. SAS host-bus adapter (HBA) with SAS drives
 4. SAS host-bus adapter (HBA) with SATA drives
-5. **NOT SUPPORTED:** RAID controllers or SAN (Fibre Channel, iSCSI, FCoE) storage. Host-bus adapter (HBA) cards must implement simple pass-through mode and we strongly recommend support SCSI Enclosure Services (SES) for slot mapping and identification.
+5. **NOT SUPPORTED:** RAID controller cards or SAN (Fibre Channel, iSCSI, FCoE) storage. Host-bus adapter (HBA) cards must implement simple pass-through mode.
 
 ![diagram of supported drive interconnects](media/hardware-requirements/drive-interconnect-support-1.png)
 
-Drives can be internal to the server or in an external enclosure connected to only one server:
+Drives can be internal to the server, or in an external enclosure that is connected to just one server. Each external enclosure must present a unique identifier (Unique ID), and we strongly recommend SCSI Enclosure Services (SES) for slot mapping and identification.
 
 1. Drives internal to the server
 2. Drives in an external enclosure ("JBOD") connected to one server
-3. **NOT SUPPORTED:** Shared SAS enclosures connected to multiple servers or any form of multi-path IO (MPIO) where drives are accessible by multiple paths. Each external enclosure must present a unique identifier (Unique ID).
+3. **NOT SUPPORTED:** Shared SAS enclosures connected to multiple servers or any form of multi-path IO (MPIO) where drives are accessible by multiple paths.
 
 ![diagram of supported drive interconnects](media/hardware-requirements/drive-interconnect-support-2.png)
 
