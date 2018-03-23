@@ -11,8 +11,8 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d46ede6f-1a21-414d-b8c3-6b5c87344b9d
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 # STEP 4 Install and Configure RSA and EDGE1
 

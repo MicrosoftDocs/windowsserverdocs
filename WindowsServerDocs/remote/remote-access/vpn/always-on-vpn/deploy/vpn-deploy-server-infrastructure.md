@@ -6,8 +6,8 @@ ms.technology: networking
 ms.topic: article
 ms.assetid: 8223117a-96f3-4ae9-96e8-67a3a2b8d462
 manager: brianlic
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 # Configure the Server Infrastructure
 

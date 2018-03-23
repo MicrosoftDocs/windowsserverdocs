@@ -6,8 +6,8 @@ ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
 ms.assetid: f62c6a67-4dda-47f8-8bdf-9b76c37953e6
-ms.author: jamesmci 
-author: jamesmci
+ms.author: pashort 
+author: shortpatti
 ---
 
 # Configure Connection Request Policies

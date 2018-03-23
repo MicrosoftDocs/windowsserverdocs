@@ -6,8 +6,8 @@ ms.prod: windows-server-threshold
 ms.technology: networking-bc
 ms.topic: get-started-article
 ms.assetid: 0f00ae6e-ae1b-41e3-8c50-65226b5b9c9e
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 # Install Content Servers that Use the BranchCache Feature
 

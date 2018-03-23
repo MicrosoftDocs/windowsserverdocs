@@ -6,8 +6,8 @@ ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
 ms.assetid: d9d9e9ac-4859-4522-89ed-a23092c9e12a
-ms.author: jamesmci 
-author: jamesmci
+ms.author: pashort 
+author: shortpatti
 ---
 
 # Configure NPS on a Multihomed Computer

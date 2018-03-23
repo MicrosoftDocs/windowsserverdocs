@@ -10,8 +10,8 @@ ms.technology: networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6d783ff6-7dd5-496c-9ed9-5c36612c6859
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 # Configure Quality of Service (QoS) for a Tenant VM Network Adapter
 

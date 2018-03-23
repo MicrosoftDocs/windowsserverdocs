@@ -6,8 +6,8 @@ ms.topic: article
 ms.assetid: 1ae4384b-f4e4-41e8-bc5f-9ac41953bca4
 ms.prod: windows-server-threshold
 ms.technology: networking
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 # Server Certificate Deployment
 

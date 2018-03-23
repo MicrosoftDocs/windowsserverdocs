@@ -10,8 +10,8 @@ ms.technology: networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 84ac2458-3fcf-4c4f-acfe-6105443dd83f
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 # Understanding Usage of Virtual Networks and VLANs
 

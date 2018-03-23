@@ -6,8 +6,8 @@ ms.prod: windows-server-threshold
 ms.technology: networking-nlb
 ms.topic: article
 ms.assetid: 244a4b48-06e5-4796-8750-a50e4f88ac72
-ms.author: jamesmci 
-author: jamesmci
+ms.author: pashort 
+author: shortpatti
 ---
 # Network Load Balancing
 
