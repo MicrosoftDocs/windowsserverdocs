@@ -78,6 +78,9 @@ For more information about containers, see [Container Networking Overview](https
 
 For more information, see [Guarded fabric and shielded VMs overview](https://docs.microsoft.com/en-us/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms).
 
+**SMBLoris vulnerability**
+An issue, known as “SMBLoris”, which could result in denial of service, has been addressed.
+
 ## Storage
 
 **Storage Replica**: The disaster recovery protection added by Storage Replica in Windows Server 2016 is now expanded to include:
