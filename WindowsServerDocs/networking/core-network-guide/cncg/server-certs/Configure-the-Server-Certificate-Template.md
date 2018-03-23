@@ -6,8 +6,8 @@ ms.topic: article
 ms.assetid: 8ff610e2-43ca-407f-a828-06d9366e02f0
 ms.prod: windows-server-threshold
 ms.technology: networking
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 # Configure the Server Certificate Template
 

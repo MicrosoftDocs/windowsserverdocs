@@ -6,8 +6,8 @@ ms.technology: networking
 ms.topic: article
 ms.assetid: 6896e85e-a05e-44c2-9437-85417bed343d
 manager: brianlic
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 # Install and Configure the NPS Server
 

@@ -6,8 +6,8 @@ ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
 ms.assetid: 29ae0f54-f045-465a-a08e-5867979345f2
-author: jamesmci
-ms.author: jamesmci
+author: shortpatti
+ms.author: pashort
 ---
 # Wireless Access Deployment Overview
 

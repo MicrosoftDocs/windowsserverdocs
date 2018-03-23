@@ -6,8 +6,8 @@ ms.technology: networking
 ms.topic: article
 ms.assetid: ad748de2-d175-47bf-b05f-707dc48692cf
 manager: brianlic
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 
 # Remote Access Always On VPN Deployment
