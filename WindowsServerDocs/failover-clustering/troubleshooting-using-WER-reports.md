@@ -75,7 +75,7 @@ Windows will trigger the collection of a ``` LiveDump ``` when there are known r
 
 ## Gathering WER reports
 
-WER Reports are stored in ``` C:\ProgramData\Microsoft\Windows\WER ```
+WER Reports are stored in ``` %ProgramData%\Microsoft\Windows\WER ```
 
 Inside the folder, the ``` ReportsQueue ``` folder contains reports that are waiting to be uploaded to Watson.
 
@@ -148,7 +148,7 @@ Windows Error Reporting (WER) provides many settings to customize the problem re
 
 ### Physical disk failed to come online
 
-To diagnose this issue, navigate to the physical disk folder:
+To diagnose this issue, navigate to the WER report folder:
 
 ```
 PS C:\Windows\system32> dir C:\ProgramData\Microsoft\Windows\WER\ReportArchive\Critical_PhysicalDisk_b46b8883d892cfa8a26263afca228b17df8133d_00000000_cab_08abc39c
@@ -266,7 +266,7 @@ PS C:\Windows\system32> (Get-ClusterResourceType -Name "Physical Disk").DumpLogQ
 <QueryList><Query Id="0"><Select Path="Microsoft-Windows-Hyper-V-VmSwitch-Diagnostic">*[System[TimeCreated[timediff(@SystemTime) &lt;= 600000]]]</Select></Query></QueryList>
 ```
 
-You can download [Microsoft Message Analyzer from here](https://www.microsoft.com/en-us/download/details.aspx?id=44226). When you load the logs into Message Analyzer, you will see the following providers and messages from the log channels.
+Message Analyzer enables you to capture, display, and analyze protocol messaging traffic. It also lets you trace and assess system events and other messages from Windows components. You can download [Microsoft Message Analyzer from here](https://www.microsoft.com/en-us/download/details.aspx?id=44226). When you load the logs into Message Analyzer, you will see the following providers and messages from the log channels.
 
 ![Loading logs into Message Analyzer](media\troubleshooting-using-WER-reports\loading-logs-into-message-analyzer.png)
 
@@ -281,7 +281,7 @@ To identify why the disk failed, navigate to the events under ``` FailoverCluste
 
 ### Physical disk timed out
 
-To diagnose this issue, navigate to the physical disk folder. The folder contains log files and dump files for ``` RHS ```, ``` clussvc.exe ```, and of the process that hosts the “``` smphost ```” service, as shown below:
+To diagnose this issue, navigate to the WER report folder. The folder contains log files and dump files for ``` RHS ```, ``` clussvc.exe ```, and of the process that hosts the “``` smphost ```” service, as shown below:
 
 ```
 PS C:\Windows\system32> dir C:\ProgramData\Microsoft\Windows\WER\ReportArchive\Critical_PhysicalDisk_64acaf7e4590828ae8a3ac3c8b31da9a789586d4_00000000_cab_1d94712e
