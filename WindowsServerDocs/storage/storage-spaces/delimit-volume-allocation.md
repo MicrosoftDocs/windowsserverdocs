@@ -204,13 +204,11 @@ Conversely, in the extreme case that more than half of servers or drives in the 
 
 ### What about in between?
 
-If three or more failures occur at once but at least half of servers and drives are still up, volumes with delimited allocation may stay online and accessible, depending on which servers have failures.
+If three or more failures occur at once but at least half of servers and drives are still up, volumes with delimited allocation may stay online and accessible, depending on which servers have failures. Let's run the numbers to determine the precise odds.
 
-Let's run the numbers to determine our odds.
+For simplicity, assume volumes are independently and identically distributed (IID) according to the best practices above, and that enough unique combinations are available for every volume’s allocation to be unique. The probability that any given volume survives is also the expected fraction of overall storage that survives by linearity of expectation. 
 
-For simplicity, assume volumes are independently and identically distributed (IID) according the best practices above, and that enough unique combinations are available for every volume’s allocation to be unique. The probability that any given volume survives is also the expected fraction of overall storage that survives by linearity of expectation. 
-
-Given **N** servers of which **F** have failures, a volume allocated to **3** of them goes offline only if all **3** are among the **F** with failures. There are **N choose F** ways for **F** failures to occur, of which **F choose 3** result in the volume going offline and becoming inaccessible. So the probability is:
+Given **N** servers of which **F** have failures, a volume allocated to **3** of them goes offline only if all **3** are among the **F** with failures. There are **N choose F** ways for **F** failures to occur, of which **F choose 3** result in the volume going offline and becoming inaccessible. The probability can be expressed as:
 
 ![P_offline = Fc3 / NcF](media/delimit-volume-allocation/probability-volume-offline.png)
 
@@ -218,7 +216,7 @@ In all other cases, the volume stays online and accessible:
 
 ![P_online = 1 – (Fc3 / NcF)](media/delimit-volume-allocation/probability-volume-online.png)
 
-The following tables evaluate the probability that a volume stays online and accessible (or equivalently, the expected fraction of overall storage that stays online and accessible) for some common cluster sizes and up to 5 failures. **Note that in every case, delimited allocation increases fault tolerance compared to regular allocation.**
+The following tables evaluate the probability that a volume stays online and accessible (or equivalently, the expected fraction of overall storage that stays online and accessible) for some common cluster sizes and up to 5 failures. **Note that delimited allocation increases fault tolerance compared to regular allocation in every case.**
 
 ### With 6 servers
 
