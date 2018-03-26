@@ -5,7 +5,7 @@ ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 03/05/2018
+ms.date: 03/25/2018
 ---
 
 # Delimit the allocation of volumes in Storage Spaces Direct
@@ -66,7 +66,7 @@ Survival probability depends on the number of servers and other factors – see 
 
 Delimited allocation imposes some added management considerations and complexity:
 
-1. The administrator is responsible for delimiting the allocation of each volume to balance storage utilization across servers and uphold high probability of survival. We recommend delimiting each volume to three servers, and ensuring that every volume's delimitation is unique, meaning it does not share *all* its servers with another volume. For more details, see [Analysis](#analysis).
+1. The administrator is responsible for delimiting the allocation of each volume to balance storage utilization across servers and uphold high probability of survival, as described in the [Best practices](#best-practices) section.
 
 2. With delimited allocation, reserve the equivalent of **one capacity drive per server (with no maximum)**. This is more than the [published recommendation](plan-volumes.md#choosing-the-size-of-volumes) for regular allocation, which maxes out at four capacity drives total.
 
@@ -155,9 +155,74 @@ MyVolume                300 GB         0       100 GB  100 GB  100 GB  0       0
 
 Note that Server1 does not contain slabs of *MyVolume* anymore – instead, Server04 does.
 
+## Best practices
+
+Here are best practices for delimited allocation:
+
+1.	Delimit each three-way mirror volume to three servers, not more.
+2.	Balance how much storage is allocated to each server, accounting for volume size.
+3.	Make each volume's allocation unique, meaning it does not share *all* its servers with another volume (some overlap is okay). With N servers, there are "N choose 3" unique combinations – here's what that means for some common cluster sizes:
+
+| Number of servers (N) | Number of unique delimited allocations (N choose 3) |
+|-----------------------|-----------------------------------------------------|
+| 6                     | 20                                                  |
+| 8                     | 56                                                  |
+| 12                    | 220                                                 |
+| 16                    | 560                                                 |
+
+   > [!TIP]
+   > Consider this helpful review of [combinatorics and choose notation](https://betterexplained.com/articles/easy-permutations-and-combinations/).
+
+Here's an example that maximizes fault tolerance – every has a unique delimited allocation:
+
+![unique-allocation](media/delimit-volume-allocation/unique-allocation.png)
+
+Conversely, in the next example, the first three volumes use the same delimited allocation (to servers 1, 2, and 3) and the last three volumes use the same delimited allocation (to servers 4, 5, and 6). This doesn't maximize fault tolerance: if servers 1, 2, and 3 fail, then volumes 1, 2, and 3 would go offline and become inaccessible at the same time.
+
+![non-unique-allocation](media/delimit-volume-allocation/non-unique-allocation.png)
+
 ## Analysis
 
-Coming soon.
+This section derives the mathematical probability that a volume with delimited allocation will survive various failure conditions.
+
+   > [!NOTE]
+   > This section is optional reading. If you're keen to see the math, read on! But if not, don't worry: [Usage in PowerShell](#usage-in-powershell) and [Best practices](#best-practices) is all you need to implement delimited allocation successfully.
+
+### Up to two failures is always okay
+
+Regardless of its allocation, every three-way mirror volume can survive up to two failures at the same time, as [these examples](storage-spaces-fault-tolerance.md#examples) illustrate. If two drives fail, or two servers fail, or one of each, every three-way mirror volume stays online and accessible, even with regular allocation.
+
+### More than half the cluster failing is never okay
+
+Conversely, in the extreme case that more than half of servers or drives in the cluster fail at once, [quorum is lost](understand-quorum.md) and every volume goes offline and becomes inaccessible, regardless of its allocation.
+
+### What about in between?
+
+If three or more failures occur at once but at least half of servers and drives are still up, volumes with delimited allocation may stay online and accessible, depending on which servers have failures.
+
+Let's run the numbers to determine our odds.
+
+For simplicity, assume volumes are independently and identically distributed (IID) according the best practices above, and that enough unique combinations are available for every volume’s allocation to be unique. The probability that any given volume survives is also the expected fraction of overall storage that survives by linearity of expectation. 
+
+Given **N** servers of which **F** have failures, a volume allocated to **3** of them goes offline only if all **3** are among the **F** with failures. There are **N choose F** ways for **F** failures to occur, of which **F choose 3** result in the volume going offline and becoming inaccessible. So the probability is:
+
+Poffline = Fc3 / NcF
+
+In all other cases, the volume stays online and accessible:
+
+Ponline = 1 – (Fc3 / NcF)
+
+The following tables give the probability that a volume stays online and accessible (or equivalently, the expected fraction of overall storage that stays online and accessible) for some common cluster sizes, up to 5 failures.
+
+#### With 6 servers
+
+| Allocation                           | Probability of surviving 1 failure | Probability of surviving 2 failures | Probability of surviving 3 failures | Probability of surviving 4 failures | Probability of surviving 5 failures |
+|--------------------------------------|------------------------------------|-------------------------------------|-------------------------------------|-------------------------------------|-------------------------------------|
+| Regular, spread across all 6 servers | 100%                               | 100%                                | 0%                                  | 0%                                  | 0%                                  |
+| Delimited to 3 servers only          | 100%                               | 100%                                | 95.0%                               | 0%                                  | 0%                                  |
+
+   > [!NOTE]
+   > At 4 or more failures out of 6 total servers, the cluster loses quorum.
 
 ## Frequently asked questions
 
