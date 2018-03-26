@@ -6,7 +6,7 @@
 ### [Actions](health-service-actions.md)
 ### [Settings](health-service-settings.md)
 ## [Deploy]
-### [Create a Failover Cluster](create-failover-cluster.md)
+### [Create a failover cluster](create-failover-cluster.md)
 ### [Prestage a cluster in AD DS](prestage-cluster-adds.md)
 ## [Manage]
 ### [Managing cluster quorum](manage-cluster-quorum.md)

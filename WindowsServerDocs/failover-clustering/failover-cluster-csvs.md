@@ -1,6 +1,6 @@
 ---
 ---
-# Use Cluster Shared Volumes in a Failover Cluster
+# Use Cluster Shared Volumes in a failover cluster
 
  
 
