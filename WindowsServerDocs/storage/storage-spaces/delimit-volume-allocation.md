@@ -189,7 +189,7 @@ Conversely, in the next example, the first three volumes use the same delimited 
 
 ## Analysis
 
-This section derives the mathematical probability that a volume with delimited allocation will survive various failure conditions.
+This section derives the mathematical probability that a volume stays online and accessible (or equivalently, the expected fraction of overall storage that stays online and accessible) as a function of the number of failures and the cluster size.
 
    > [!NOTE]
    > This section is optional reading. If you're keen to see the math, read on! But if not, don't worry: [Usage in PowerShell](#usage-in-powershell) and [Best practices](#best-practices) is all you need to implement delimited allocation successfully.
@@ -218,7 +218,7 @@ In all other cases, the volume stays online and accessible:
 
 ![P_online = 1 – (Fc3 / NcF)](media/delimit-volume-allocation/probability-volume-online.PNG)
 
-The following tables evaluate the probability that a volume stays online and accessible (or equivalently, the expected fraction of overall storage that stays online and accessible) for some common cluster sizes, up to 5 failures.
+The following tables evaluate the probability that a volume stays online and accessible (or equivalently, the expected fraction of overall storage that stays online and accessible) for some common cluster sizes and up to 5 failures. **Note that in every case, delimited allocation increases fault tolerance compared to regular allocation.**
 
 ### With 6 servers
 
