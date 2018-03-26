@@ -206,11 +206,11 @@ For simplicity, assume volumes are independently and identically distributed (II
 
 Given **N** servers of which **F** have failures, a volume allocated to **3** of them goes offline only if all **3** are among the **F** with failures. There are **N choose F** ways for **F** failures to occur, of which **F choose 3** result in the volume going offline and becoming inaccessible. So the probability is:
 
-Poffline = Fc3 / NcF
+![P_offline = Fc3 / NcF](media/delimit-volume-allocation/probability-volume-offline.png)
 
 In all other cases, the volume stays online and accessible:
 
-Ponline = 1 – (Fc3 / NcF)
+![P_online = 1 – (Fc3 / NcF)](media/delimit-volume-allocation/probability-volume-online.png)
 
 The following tables give the probability that a volume stays online and accessible (or equivalently, the expected fraction of overall storage that stays online and accessible) for some common cluster sizes, up to 5 failures.
 
