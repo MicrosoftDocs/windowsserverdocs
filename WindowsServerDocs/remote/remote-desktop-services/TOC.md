@@ -31,6 +31,7 @@
 #### [Upgrade Remote Desktop Virtualization Host servers](upgrade-to-rdvh.md)
 ### [Deploy a Remote Desktop Services infrastructure](rds-deploy-infrastructure.md)
 ### [Create and deploy a Remote Desktop Services collection](rds-create-collection.md)
+### [Set up the Remote Desktop web client for your users](clients/remote-desktop-web-client-admin.md)
 ### [Set up email discovery for your users](rds-email-discovery.md)
 ### [License your Remote Desktop deployment](rds-client-access-license.md)
 #### [Activate the license server](rds-activate-license-server.md)

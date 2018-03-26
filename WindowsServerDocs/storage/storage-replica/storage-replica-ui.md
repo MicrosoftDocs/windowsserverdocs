@@ -4,7 +4,7 @@ description: How to set up and use Project Honolulu to manage Storage Replica fo
 keywords: Storage Replica, Project Honolulu, Server Manager, Windows Server
 author: arduppal
 ms.author: arduppal
-ms.date: 1/29/2017
+ms.date: 3/26/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: storage-replica
@@ -14,7 +14,7 @@ manager: mchad
 
 This topic walks you through using the Project Honolulu browser-based management tool for server-to-server storage replication.<br>
 
-![Project Honolulu in a browser window showing the Storage Replica user interface.](media\Storage-Replica-UI\Honolulu_SR_Partnership_Result.png)
+> [!video https://www.microsoft.com/en-us/videoplayer/embed/3aa09fd4-867b-45e9-953e-064008468c4b?autoplay=false]
 
 Storage Replica is Windows Server technology that enables replication of volumes between servers or clusters for disaster recovery. It also enables you to create stretch failover clusters that span two sites, with all nodes staying in sync. For more information, see [Storage Replica overview](storage-replica-overview.md).
 
