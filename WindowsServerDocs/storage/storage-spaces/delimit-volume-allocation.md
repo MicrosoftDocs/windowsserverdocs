@@ -157,11 +157,17 @@ Note that Server1 does not contain slabs of *MyVolume* anymore – instead, Serv
 
 ## Best practices
 
-Here are best practices for delimited allocation:
+### Choose three servers
 
-1.	Delimit each three-way mirror volume to three servers, not more.
-2.	Balance how much storage is allocated to each server, accounting for volume size.
-3.	Make each volume's allocation unique, meaning it does not share *all* its servers with another volume (some overlap is okay). With N servers, there are "N choose 3" unique combinations – here's what that means for some common cluster sizes:
+Delimit each three-way mirror volume to three servers, not more.
+
+### Balance storage
+
+Balance how much storage is allocated to each server, accounting for volume size.
+
+### Every delimited allocation unique
+
+Make each volume's allocation unique, meaning it does not share *all* its servers with another volume (some overlap is okay). With N servers, there are "N choose 3" unique combinations – here's what that means for some common cluster sizes:
 
 | Number of servers (N) | Number of unique delimited allocations (N choose 3) |
 |-----------------------|-----------------------------------------------------|
@@ -177,7 +183,7 @@ Here's an example that maximizes fault tolerance – every has a unique delimite
 
 ![unique-allocation](media/delimit-volume-allocation/unique-allocation.png)
 
-Conversely, in the next example, the first three volumes use the same delimited allocation (to servers 1, 2, and 3) and the last three volumes use the same delimited allocation (to servers 4, 5, and 6). This doesn't maximize fault tolerance: if servers 1, 2, and 3 fail, then volumes 1, 2, and 3 would go offline and become inaccessible at the same time.
+Conversely, in the next example, the first three volumes use the same delimited allocation (to servers 1, 2, and 3) and the last three volumes use the same delimited allocation (to servers 4, 5, and 6). This doesn't maximize fault tolerance: if three servers fail, **multiple** volumes could go offline and become inaccessible.
 
 ![non-unique-allocation](media/delimit-volume-allocation/non-unique-allocation.png)
 
@@ -206,15 +212,15 @@ For simplicity, assume volumes are independently and identically distributed (II
 
 Given **N** servers of which **F** have failures, a volume allocated to **3** of them goes offline only if all **3** are among the **F** with failures. There are **N choose F** ways for **F** failures to occur, of which **F choose 3** result in the volume going offline and becoming inaccessible. So the probability is:
 
-![P_offline = Fc3 / NcF](media/delimit-volume-allocation/probability-volume-offline.png)
+![P_offline = Fc3 / NcF](media/delimit-volume-allocation/probability-volume-offline.PNG)
 
 In all other cases, the volume stays online and accessible:
 
-![P_online = 1 – (Fc3 / NcF)](media/delimit-volume-allocation/probability-volume-online.png)
+![P_online = 1 – (Fc3 / NcF)](media/delimit-volume-allocation/probability-volume-online.PNG)
 
-The following tables give the probability that a volume stays online and accessible (or equivalently, the expected fraction of overall storage that stays online and accessible) for some common cluster sizes, up to 5 failures.
+The following tables evaluate the probability that a volume stays online and accessible (or equivalently, the expected fraction of overall storage that stays online and accessible) for some common cluster sizes, up to 5 failures.
 
-#### With 6 servers
+### With 6 servers
 
 | Allocation                           | Probability of surviving 1 failure | Probability of surviving 2 failures | Probability of surviving 3 failures | Probability of surviving 4 failures | Probability of surviving 5 failures |
 |--------------------------------------|------------------------------------|-------------------------------------|-------------------------------------|-------------------------------------|-------------------------------------|
@@ -223,6 +229,30 @@ The following tables give the probability that a volume stays online and accessi
 
    > [!NOTE]
    > At 4 or more failures out of 6 total servers, the cluster loses quorum.
+
+### With 8 servers
+
+| Allocation                           | Probability of surviving 1 failure | Probability of surviving 2 failures | Probability of surviving 3 failures | Probability of surviving 4 failures | Probability of surviving 5 failures |
+|--------------------------------------|------------------------------------|-------------------------------------|-------------------------------------|-------------------------------------|-------------------------------------|
+| Regular, spread across all 8 servers | 100%                               | 100%                                | 0%                                  | 0%                                  | 0%                                  |
+| Delimited to 3 servers only          | 100%                               | 100%                                | 98.2%                               | 94.3%                               | 0%                                  |
+
+   > [!NOTE]
+   > At 5 or more failures out of 8 total servers, the cluster loses quorum.
+
+### With 12 servers
+
+| Allocation                            | Probability of surviving 1 failure | Probability of surviving 2 failures | Probability of surviving 3 failures | Probability of surviving 4 failures | Probability of surviving 5 failures |
+|---------------------------------------|------------------------------------|-------------------------------------|-------------------------------------|-------------------------------------|-------------------------------------|
+| Regular, spread across all 12 servers | 100%                               | 100%                                | 0%                                  | 0%                                  | 0%                                  |
+| Delimited to 3 servers only           | 100%                               | 100%                                | 99.5%                               | 99.2%                               | 98.7%                               |
+
+### With 16 servers
+
+| Allocation                            | Probability of surviving 1 failure | Probability of surviving 2 failures | Probability of surviving 3 failures | Probability of surviving 4 failures | Probability of surviving 5 failures |
+|---------------------------------------|------------------------------------|-------------------------------------|-------------------------------------|-------------------------------------|-------------------------------------|
+| Regular, spread across all 16 servers | 100%                               | 100%                                | 0%                                  | 0%                                  | 0%                                  |
+| Delimited to 3 servers only           | 100%                               | 100%                                | 99.8%                               | 99.8%                               | 99.8%                               |
 
 ## Frequently asked questions
 
