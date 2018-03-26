@@ -36,29 +36,31 @@ With regular three-way mirroring, the volume is divided into many small "slabs" 
 
 ![Diagram showing the volume being divided into three stacks of slabs and distributed evenly across every server.](media/delimit-volume-allocation/regular-allocation.png)
 
-This default allocation maximizes parallel reads and writes, yielding better performance, and is appealing in its simplicity: every server is equally busy, every drive is equally full, and all volumes stay online or go offline together. Every volume is guaranteed to survive up to two concurrent failures, as [these examples](storage-spaces-fault-tolerance.md#examples) illustrate.
+This default allocation maximizes parallel reads and writes, leading to better performance, and is appealing in its simplicity: every server is equally busy, every drive is equally full, and all volumes stay online or go offline together. Every volume is guaranteed to survive up to two concurrent failures, as [these examples](storage-spaces-fault-tolerance.md#examples) illustrate.
 
-However, with this allocation, volumes can't survive three concurrent failures. If three servers fail at once, or if drives in three servers fail at once, volumes become inaccessible because at least *some* slabs were (with very high probability) allocated to the exact three drives or servers that failed.
+However, with this allocation, volumes can't survive three concurrent failures. If three servers fail at once, or if drives in three servers fail at once, volumes become inaccessible because at least some slabs were (with very high probability) allocated to the exact three drives or servers that failed.
 
 In the example below, servers 1, 3, and 5 fail at the same time. Although many slabs have surviving copies, some do not:
 
 ![Diagram showing three of six servers highlighted in red, and the overall volume is red.](media/delimit-volume-allocation/regular-does-not-survive.png)
 
-The volume is inaccessible until the servers are recovered.
+The volume goes offline and becomes inaccessible until the servers are recovered.
 
 ### New: delimited allocation
 
-With delimited allocation, you specify a subset of servers to use (minimum three for three-way mirror). As before, the volume is divided into slabs that are copied three times – but instead of allocating across every server, **the slabs are allocated only to the subset of servers you specify**.
+With delimited allocation, you specify a subset of servers to use (minimum three for three-way mirror). The volume is divided into slabs that are copied three times, like before, but instead of allocating across every server, **the slabs are allocated only to the subset of servers you specify**.
 
 ![Diagram showing the volume being divided into three stacks of slabs and distributed only to three of six servers.](media/delimit-volume-allocation/delimited-allocation.png)
 
 #### Advantages
 
-With this allocation, volumes are very likely to survive three concurrent failures: in fact, the probability of survival for each volume increases from 0% (with regular allocation) to 95% (with delimited allocation)! Intuitively, this is because the volume shown does not depend on servers 4, 5, or 6 so it is not affected by their failures. Survival probability depends on the number of servers and other factors – for more details, see [Analysis](#analysis).
+With this allocation, the volume is likely to survive three concurrent failures: in fact, its probability of survival increases from 0% (with regular allocation) to 95% (with delimited allocation) in this case! Intuitively, this is because it does not depend on servers 4, 5, or 6 so it is not affected by their failures.
 
-In the example (same as above), servers 1, 3, and 5 fail at the same time. Our delimited allocation ensures that server 2 contains a copy of *every* slab, so every slab has a surviving copy, and the volume stays accessible:
+In the example from above, servers 1, 3, and 5 fail at the same time. Because delimited allocation ensured that server 2 contains a copy of every slab, every slab has a surviving copy and the volume stays online and accessible:
 
 ![Diagram showing three of six servers highlighted in red, yet the overall volume is green.](media/delimit-volume-allocation/delimited-does-survive.png)
+
+Survival probability depends on the number of servers and other factors – see [Analysis](#analysis) for details.
 
 #### Disadvantages
 
@@ -91,9 +93,9 @@ To create a three-way mirror volume and delimit its allocation:
     ```
 
    > [!TIP]
-   > In Storage Spaces Direct, the term 'Storage Scale Unit' refers to all the raw storage attached to one server, including direct-attached drives and direct-attached external enclosures with drives. In this context, it's like a synonym for 'server'.
+   > In Storage Spaces Direct, the term 'Storage Scale Unit' refers to all the raw storage attached to one server, including direct-attached drives and direct-attached external enclosures with drives. In this context, it's the same as 'server'.
 
-2. Specify which servers to use with the new `-StorageFaultDomainsToUse` parameter and by indexing into `$Servers`. For example, to delimit the allocation to the first, second, and third servers (indices 0, 1, and 2), run:
+2. Specify which servers to use with the new `-StorageFaultDomainsToUse` parameter and by indexing into `$Servers`. For example, to delimit the allocation to the first, second, and third servers (indices 0, 1, and 2):
 
     ```PowerShell
     New-Volume -FriendlyName "MyVolume" -Size 100GB -StorageFaultDomainsToUse $Servers[0,1,2]
@@ -117,7 +119,7 @@ Note that only Server1, Server2, and Server3 contains slabs of *MyVolume*.
 
 Use the new `Add-StorageFaultDomain` and `Remove-StorageFaultDomain` cmdlets to change how the allocation is delimited.
 
-For example, to move MyVolume "to the right" by one server:
+For example, to move *MyVolume* over by one server:
 
 1. Specify that the fourth server **can** store slabs of *MyVolume*:
 
