@@ -5,7 +5,7 @@ ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 03/25/2018
+ms.date: 03/26/2018
 ---
 
 # Delimit the allocation of volumes in Storage Spaces Direct
@@ -226,7 +226,7 @@ The following tables evaluate the probability for some common cluster sizes and 
 | Delimited to 3 servers only          | 100%                               | 100%                                | 95.0%                               | 0%                                  | 0%                                  |
 
    > [!NOTE]
-   > At 4 or more failures out of 6 total servers, the cluster loses quorum.
+   > After more than 3 failures out of 6 total servers, the cluster loses quorum.
 
 ### With 8 servers
 
@@ -236,7 +236,7 @@ The following tables evaluate the probability for some common cluster sizes and 
 | Delimited to 3 servers only          | 100%                               | 100%                                | 98.2%                               | 94.3%                               | 0%                                  |
 
    > [!NOTE]
-   > At 5 or more failures out of 8 total servers, the cluster loses quorum.
+   > After more than 4 failures out of 8 total servers, the cluster loses quorum.
 
 ### With 12 servers
 
