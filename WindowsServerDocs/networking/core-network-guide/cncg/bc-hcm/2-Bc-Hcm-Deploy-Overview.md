@@ -6,8 +6,8 @@ ms.prod: windows-server-threshold
 ms.technology: networking-bc
 ms.topic: article
 ms.assetid: 55686a9c-60dd-47f4-9f1f-fe72c2873a44
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 # BranchCache Hosted Cache Mode Deployment Overview
 

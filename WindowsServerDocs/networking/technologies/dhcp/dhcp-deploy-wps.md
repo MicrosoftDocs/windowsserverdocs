@@ -6,8 +6,8 @@ ms.technology: networking-dhcp
 ms.topic: article
 ms.assetid: 7110ad21-a33e-48d5-bb3c-129982913bc8
 manager: brianlic
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 
 # Deploy DHCP Using Windows PowerShell

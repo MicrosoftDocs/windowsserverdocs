@@ -6,8 +6,8 @@ ms.prod: windows-server-threshold
 ms.technology: networking-dhcp
 ms.topic: get-started-article
 ms.assetid: beb8c188-6fcf-4520-8825-d17f8ee9fb04
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 
 # DHCP Logging Events for DNS Registrations
