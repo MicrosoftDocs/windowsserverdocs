@@ -2,9 +2,9 @@
 author: nwashburn-ms
 ---
 
-<a href="../overview.md">Honolulu</a> > <a href="../overview.md">Use</a> > Manage HCI from Honolulu
+<b><a href="../overview.md">Windows Admin Center</a></b> > <a href="../overview.md">Use</a> > Hyper-Converged Cluster Manager
 
-# Manage HCI from Honolulu
+# Manage Hyper-Converged Clusters with Hyper-Converged Cluster Manager
 
 [Content goes here]
 

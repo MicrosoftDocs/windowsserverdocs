@@ -2,8 +2,8 @@
 author: nwashburn-ms
 ---
 
-<a href="../overview.md">Honolulu</a> > <a href="../overview.md">Use</a> > Manage Servers from Honolulu
+<b><a href="../overview.md">Windows Admin Center</a></b> > <a href="../overview.md">Use</a> > Server Manager
 
-# Manage Servers from Honolulu
+# Manage Servers with Server Manager
 
 [Content goes here]
