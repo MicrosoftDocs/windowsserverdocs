@@ -196,11 +196,11 @@ This section derives the mathematical probability that a volume stays online and
 
 ### Up to two failures is always okay
 
-Regardless of its allocation, every three-way mirror volume can survive up to two failures at the same time, as [these examples](storage-spaces-fault-tolerance.md#examples) illustrate. If two drives fail, or two servers fail, or one of each, every three-way mirror volume stays online and accessible, even with regular allocation.
+Every three-way mirror volume can survive up to two failures at the same time, as [these examples](storage-spaces-fault-tolerance.md#examples) illustrate, regardless of its allocation. If two drives fail, or two servers fail, or one of each, every three-way mirror volume stays online and accessible, even with regular allocation.
 
 ### More than half the cluster failing is never okay
 
-Conversely, in the extreme case that more than half of servers or drives in the cluster fail at once, [quorum is lost](understand-quorum.md) and every volume goes offline and becomes inaccessible, regardless of its allocation.
+Conversely, in the extreme case that more than half of servers or drives in the cluster fail at once, [quorum is lost](understand-quorum.md) and every three-way mirror volume goes offline and becomes inaccessible, regardless of its allocation.
 
 ### What about in between?
 
@@ -208,7 +208,7 @@ If three or more failures occur at once but at least half of servers and drives 
 
 For simplicity, assume volumes are independently and identically distributed (IID) according to the best practices above, and that enough unique combinations are available for every volume’s allocation to be unique. The probability that any given volume survives is also the expected fraction of overall storage that survives by linearity of expectation. 
 
-Given **N** servers of which **F** have failures, a volume allocated to **3** of them goes offline only if all **3** are among the **F** with failures. There are **N choose F** ways for **F** failures to occur, of which **F choose 3** result in the volume going offline and becoming inaccessible. The probability can be expressed as:
+Given **N** servers of which **F** have failures, a volume allocated to **3** of them goes offline if-and-only-if all **3** are among the **F** with failures. There are **N choose F** ways for **F** failures to occur, of which **F choose 3** result in the volume going offline and becoming inaccessible. The probability can be expressed as:
 
 ![P_offline = Fc3 / NcF](media/delimit-volume-allocation/probability-volume-offline.png)
 
@@ -216,7 +216,7 @@ In all other cases, the volume stays online and accessible:
 
 ![P_online = 1 – (Fc3 / NcF)](media/delimit-volume-allocation/probability-volume-online.png)
 
-The following tables evaluate the probability that a volume stays online and accessible (or equivalently, the expected fraction of overall storage that stays online and accessible) for some common cluster sizes and up to 5 failures. **Note that delimited allocation increases fault tolerance compared to regular allocation in every case.**
+The following tables evaluate the probability for some common cluster sizes and up to 5 failures, revealing that delimited allocation increases fault tolerance compared to regular allocation in every case considered.
 
 ### With 6 servers
 
