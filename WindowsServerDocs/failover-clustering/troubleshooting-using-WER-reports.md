@@ -406,15 +406,3 @@ And if you want to get a list of queries to use, run:
 ```
 (Get-ClusterResourceType -Name "Physical Disk").DumpLogQuery
 ```
-
-These are the most common issues that WER reports can help you diagnose. 
-
-Thanks!
-
-Vladimir Petter
-
-Principal Software Engineer Lead
-
-High-Availability & Storage
-
-Microsoft
