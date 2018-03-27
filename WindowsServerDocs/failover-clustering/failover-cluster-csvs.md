@@ -2,10 +2,7 @@
 ---
 # Use Cluster Shared Volumes in a failover cluster
 
- 
-
-
-Applies To: Windows Server 2012 R2, Windows Server 2012
+>Applies to Windows Server 2012 R2 and Windows Server 2012.
 
 Cluster Shared Volumes (CSV) enable multiple nodes in a failover cluster to simultaneously have read-write access to the same LUN (disk) that is provisioned as an NTFS volume. (In Windows Server 2012 R2, the disk can be provisioned as NTFS or Resilient File System (ReFS).) With CSV, clustered roles can fail over quickly from one node to another node without requiring a change in drive ownership, or dismounting and remounting a volume. CSV also help simplify the management of a potentially large number of LUNs in a failover cluster.
 
@@ -13,16 +10,14 @@ CSV provide a general-purpose, clustered file system, which is layered above NTF
 
   - Clustered virtual hard disk (VHD) files for clustered Hyper-V virtual machines
 
-  - Scale-out file shares to store application data for the Scale-Out File Server clustered role. Examples of the application data for this role include Hyper-V virtual machine files and Microsoft SQL Server data. (Be aware that ReFS is not supported for a Scale-Out File Server.) For more information about Scale-Out File Server, see [Scale-Out File Server for Application Data](hh831349\(v=ws.11\).md).
+  - Scale-out file shares to store application data for the Scale-Out File Server clustered role. Examples of the application data for this role include Hyper-V virtual machine files and Microsoft SQL Server data. (Be aware that ReFS is not supported for a Scale-Out File Server.) For more information about Scale-Out File Server, see [Scale-Out File Server for Application Data](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831349(v%3dws.11)>).
 
+>[!NOTE]
+>CSV does not support the Microsoft SQL Server clustered workload in SQL Server 2012 and earlier versions of SQL Server.
 
-> [!NOTE]
-> CSV does not support the Microsoft SQL Server clustered workload in SQL Server 2012 and earlier versions of SQL Server.
+In Windows Server 2012, CSV functionality was significantly enhanced. For example, dependencies on Active Directory Domain Services were removed. Support was added for the functional improvements in **chkdsk**, for interoperability with antivirus and backup applications, and for integration with general storage features such as BitLocker-encrypted volumes and Storage Spaces. For an overview of CSV functionality that was introduced in Windows Server 2012, see [What's New in Failover Clustering in Windows Server 2012 \[redirected\]](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265972(v%3dws.11)>).
 
-
-In Windows Server 2012, CSV functionality was significantly enhanced. For example, dependencies on Active Directory Domain Services were removed. Support was added for the functional improvements in **chkdsk**, for interoperability with antivirus and backup applications, and for integration with general storage features such as BitLocker-encrypted volumes and Storage Spaces. For an overview of CSV functionality that was introduced in Windows Server 2012, see [What's New in Failover Clustering in Windows Server 2012 \[redirected\]](https://technet.microsoft.com/en-us/library/Hh831414).
-
-Windows Server 2012 R2 introduces additional functionality, such as distributed CSV ownership, increased resiliency through availability of the Server service, greater flexibility in the amount of physical memory that you can allocate to CSV cache, better diagnosibility, and enhanced interoperability that includes support for ReFS and deduplication. For more information, see [What's New in Failover Clustering](dn265972\(v=ws.11\).md).
+Windows Server 2012 R2 introduces additional functionality, such as distributed CSV ownership, increased resiliency through availability of the Server service, greater flexibility in the amount of physical memory that you can allocate to CSV cache, better diagnosibility, and enhanced interoperability that includes support for ReFS and deduplication. For more information, see [What's New in Failover Clustering](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265972(v%3dws.11)>).
 
 
 > [!NOTE]
