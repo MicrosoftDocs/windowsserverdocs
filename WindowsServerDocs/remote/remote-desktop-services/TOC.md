@@ -70,5 +70,6 @@
 ### [Get started with Remote Desktop client on Android](clients/remote-desktop-android.md)
 ### [Get started with Remote Desktop client on iOS](clients/remote-desktop-ios.md)
 ### [Get started with Remote Desktop client on Mac](clients/remote-desktop-mac.md)
+### [Access the Remote Desktop web client](clients/remote-desktop-web-client.md)
 ### [Remote Desktop client FAQ](clients/remote-desktop-client-faq.md)
 ### [Remote Desktop URI scheme](clients/remote-desktop-uri.md)
