@@ -19,10 +19,8 @@ In Windows Server 2012, CSV functionality was significantly enhanced. For exampl
 
 Windows Server 2012 R2 introduces additional functionality, such as distributed CSV ownership, increased resiliency through availability of the Server service, greater flexibility in the amount of physical memory that you can allocate to CSV cache, better diagnosibility, and enhanced interoperability that includes support for ReFS and deduplication. For more information, see [What's New in Failover Clustering](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265972(v%3dws.11)>).
 
-
 > [!NOTE]
 > For information about using data deduplication on CSV for Virtual Desktop Infrastructure (VDI) scenarios, see the blog posts <A href="http://blogs.technet.com/b/filecab/archive/2013/07/31/deploying-data-deduplication-for-vdi-storage-in-windows-server-2012-r2.aspx">Deploying Data Deduplication for VDI storage in Windows Server 2012 R2</A> and <A href="http://blogs.technet.com/b/filecab/archive/2013/07/31/extending-data-deduplication-to-new-workloads-in-windows-server-2012-r2.aspx">Extending Data Deduplication to new workloads in Windows Server 2012 R2</A>.
-
 
 **In this topic**
 
