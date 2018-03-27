@@ -1,115 +1,108 @@
 ---
-author: haley-rowland
+author: nwashburn-ms
 ---
 
-# Windows Admin Center (formerly Project Honolulu)
+# Windows Admin Center
 
-## Remote server management for the modern era
-Windows Admin Center is generally available and can be used in production environments. And it's free!
+Welcome to **Windows Admin Center**!  
 
-## [Download now](http://aka.ms/honoluludownload)
-Or, [plan Windows Admin Center for your environment](todo)
+**Windows Admin Center** is an evolution of Windows Server in-box management tools; it’s a single pane of glass, consolidating all aspects of local and remote server management. As a locally deployed, browser-based management experience, an Internet connection and Azure aren’t required.  **Windows Admin Center** supports scenarios where customers need full control of all aspects of their deployment, including private networks which aren’t Internet-connected.
 
-********************
-
-Quick Links: [Documentation](todo) | [Give feedback](todo) | [Recent updates](todo) | [For developers](todo)
-
-********************
-//VIDEO GOES HERE
-
-## Windows Admin Center is a lightweight, browser-based GUI toolset for managing servers, clusters, and hyper-converged infrastructure. It's the evolution of familiar in-box managment tools plus so much more.
-
-<table border="0" cellpadding="0" style="text-align:center;margin:auto" width="200px" align="center">
-        <tr> 
-          <td> <img src="../media/honolulu-ga/legacy-sod.gif"> <br/> Legacy tools  </td>
-		  <td> -->
-		  </td>
-		  <td>
-		  <img src="../media/honolulu-ga/server-overview-tool.gif"> <br/>WAC</td>
-        </tr> 
-</table>
+> ## **Project Honolulu** is now **Windows Admin Center**! View our [launch page here](honolulu.md).
 
 <table>
-	<tr style="border: 0;">
-		<td style="padding: 10px; border: 0; width:100px">
-			<img src=//ADDICON width="100" alt="">
-		</td>
-		<td style="padding: 10px; border: 0;">
-			<b>Simple & lightweight</b> <br/> Familiar tools are streamlined to make management tasks a breeze. Install in under 5 minutes and manage servers in your environment immediately, no target configuration required.
-		</td>
-	</tr>
-    	<tr style="border: 0;">
-		<td style="padding: 10px; border: 0; width:100px">
-			<img src=//ADDICON width="100" alt="">
-		</td>
-		<td style="padding: 10px; border: 0;">
-			<b>Built for the future</b> <br/> Integration with Azure services helps you leverage the power of the hybrid world. Manage Hyper-Converged clusters with powerful yet simple tools.
-		</td>
-	</tr>
-    	<tr style="border: 0;">
-		<td style="padding: 10px; border: 0; width:100px">
-			<img src=//ADDICON width="100" alt="">
-		</td>
-		<td style="padding: 10px; border: 0;">
-			<b>Secure management</b> <br/> Control who can manage servers and get unparalleled insight into the actions administrators perform in your environment.
-		</td>
-	</tr>
+    <tr></tr>
+    <tr>
+        <td style="vertical-align: top;">
+            <h2>Understand</h2>
+            <ul>
+            <li>Get Started 
+            <li><a href="understand/what-is.md">What is <b>Windows Admin Center</b>?</a>
+            <li><a href="understand/capabilities.md">Capabilities</a>
+            <li><a href="understand/faq.md">FAQ</a>
+            <li><a href="understand/case-studies.md">Case studies</a>
+            <li><a href="understand/related-management.md">Related management products</a>
+            <li><a href="understand/videos.md">Videos</a>
+            </ul>
+        </td>
+        <td style="vertical-align: top;">
+            <h2>Plan</h2>
+            <ul>
+            <li><a href="plan/installation-options.md">What type of installation is right for you?</a>
+            <li><a href="plan/user-access-options.md">User access options</a>
+            <li><a href="plan/securing.md">Securing your environment</b></a>
+            <li><a href="plan/making-accessible.md">Making accessible from anywhere</a>
+            <li><a href="plan/high-availability.md">Redundancy with High Availability</a>
+            <li><a href="plan/azure-integration.md">What Azure integration options are there?</a>
+            <br>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td style="vertical-align: top;">
+            <h2>Deploy</h2>
+            <ul>
+            <li><a href="deploy/pre-installation.md">Pre-installation tasks</a>
+            <li><a href="deploy/install.md">Install <b>Windows Admin Center</b></a>
+            <li><a href="deploy/high-availability.md">High Availability</a>
+         </ul>
+        </td>
+        <td style="vertical-align: top;">
+            <h2>Configure</h2>
+            <ul>
+            <li><a href="configure/user-access-control.md">User Access Control and Permissions</a>
+            <li><a href="configure/logging.md">Logging</a>
+            <li><a href="configure/extensions.md">Extensions</a>
+            <li><a href="configure/azure-integration.md">Configuring Azure integration</a>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td style="vertical-align: top;">
+            <h2>Use</h2>
+            <ul>
+            <li><a href="use/launch.md">Launch <b>Windows Admin Center</b></a>
+            <li><a href="use/manage-servers.md">Manage servers</a>
+            <li><a href="use/manage-hyper-converged.md">Manage Hyper-Converged Infrastructure</a>
+            <li><a href="use/manage_failover-clusters.md">Manage Failover Clusters</b></a>
+            <li><a href="use/troubleshooting.md">Common troubleshooting steps</a>
+            <li><a href="use/known-issues.md">Known issues</a>
+            </ul>
+        </td>
+        <td style="vertical-align: top;">
+            <h2>Extend</h2>
+            <ul>
+            <li><a href="extend/how-sdk-works.md">How Extensibility and SDK works</a>
+            <li><a href="extend/use-sdk.md">Download and Install SDK</a>
+            </ul>
+        </td>
+    </tr>
+
 </table>
 
-[Learn more about how Windows Admin Center can improve management of your server envrionment.](overview.md)
+# Get Started
 
-********************
+[Content goes here.]
 
-## See how companies use Windows Admin Center to 
+# Videos
 
-<table align="center" border="0" cellpadding="0">
-	<tr style="border: 0; background-color: lightgrey">
-		<td style="padding: 20px; border: 0;" align="center">
-			<img src=//ADDICON width="100" alt=""> <br/>
-            Case study 1
-		</td>
-		<td style="padding: 10px; border: 0;" align="center">
-			<img src=//ADDICON width="100" alt=""> <br/>
-            Case study 2
-		</td>
-        <td style="padding: 10px; border: 0;" align="center">
-			<img src=//ADDICON width="100" alt=""> <br/>
-            Case study 3
-		</td>
-	</tr>
-</table>
+[Video content here.]
 
-********************
+[TODO:legacy-content-begin]
 
-## Related products
+## Download the Project Honolulu Ignite poster
 
-Project Honolulu is designed for single-instance server or cluster management and no
-[ SCCM ] [ OMS ]
+![](../media/honolulu/spacer1.png)<a href="https://github.com/MicrosoftDocs/windowsserverdocs/blob/master/WindowsServerDocs//manage/media/honolulu/SME_Ignite2017_Poster.pdf"><img src="../media/honolulu/poster2.png"></a>
 
-********************
+[TODO:legacy-content-end]
 
-### [[Product Updates >]](todo)
+# Latest features
 
-********************
-<!-- taken from w3schools -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+[Latest features list here.]
+- Feature 1
+- Feature 2 
+- Feature 3
 
-Follow us:
-<a href="https://twitter.com/servermgmt" class="fa fa-twitter"></a>
-<a href="https://blogs.technet.microsoft.com/servermanagement/" class="fa fa-rss"></a>
-<style>
-.fa {
-  padding: 5px;
-  font-size: 20px;
-  width: 20px;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 2px;
-}
+# Links
 
-.fa:hover {
-    opacity: 0.7;
-}
-</style>
-
-
+[Team blog, twitter, insiders, etc.]
