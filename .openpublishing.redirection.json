@@ -1,6 +1,27 @@
 {
   "redirections": [
     {
+      "source_path": "WindowsServerDocs/identity/ad-ds/get-started/windows-time-service/Windows-Time-Service.md",
+      "redirect_url": "/windows-server/networking/windows-time-service/windows-time-service-top",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/get-started/windows-time-service/accurate-time.md",
+      "redirect_url": "/windows-server/networking/windows-time-service/accurate-time",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/get-started/windows-time-service/How-the-Windows-Time-Service-Works.md",
+      "redirect_url": "/windows-server/networking/windows-time-service/How-the-Windows-Time-Service-Works",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/get-started/windows-time-service/Windows-Time-Service-Tools-and-Settings.md",
+      "redirect_url": "/windows-server/networking/windows-time-service/Windows-Time-Service-Tools-and-Settings",
+      "redirect_document_id": true
+    },
+
+    {
       "source_path": "WindowsServerDocs/identity/ad-ds/Windows-Server-2016-Functional-Levels.md",
       "redirect_url": "/windows-server/identity/ad-ds/active-directory-functional-levels",
       "redirect_document_id": false

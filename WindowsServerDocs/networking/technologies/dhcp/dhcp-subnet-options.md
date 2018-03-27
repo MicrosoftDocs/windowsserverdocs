@@ -6,8 +6,8 @@ ms.prod: windows-server-threshold
 ms.technology: networking-dhcp
 ms.topic: get-started-article
 ms.assetid: ca19e7d1-e445-48fc-8cf5-e4c45f561607
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 
 # DHCP Subnet Selection Options

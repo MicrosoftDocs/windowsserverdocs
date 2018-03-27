@@ -6,8 +6,8 @@ ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
 ms.assetid: 5de80dc0-53be-42b7-8e5b-24d213bf2b25
-ms.author: jamesmci 
-author: jamesmci
+ms.author: pashort 
+author: shortpatti
 ---
 # Network Policy Server Management with Administration Tools
 

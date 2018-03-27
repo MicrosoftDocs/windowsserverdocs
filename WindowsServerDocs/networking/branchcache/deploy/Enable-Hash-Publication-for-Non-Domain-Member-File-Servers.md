@@ -6,8 +6,8 @@ ms.prod: windows-server-threshold
 ms.technology: networking-bc
 ms.topic: get-started-article
 ms.assetid: 11584b73-f9e2-4530-afa5-b8df970e6b24
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 # Enable Hash Publication for Non-Domain Member File Servers
 

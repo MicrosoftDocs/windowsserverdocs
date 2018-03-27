@@ -6,8 +6,8 @@ ms.technology: networking
 ms.topic: article
 ms.assetid: 3c9de3ec-4bbd-4db0-b47a-03507a315383
 manager: brianlic
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 # Remote Access Always On VPN Deployment Planning
 
@@ -61,3 +61,4 @@ In addition, the VPN server is installed inside the perimeter network, which par
 In most environments, you can simply adjust static routes on the edge firewall and the VPN server to allow them to reach this new internal perimeter network. In complex environments, you may need to add static routes to internal routers or adjust internal firewall rules for the VPN server and the block of IP addresses associated with VPN clients.
 
 For the next section in this guide, see [Remote Access Always On VPN Deployment](always-on-vpn-deploy-deployment.md).
+

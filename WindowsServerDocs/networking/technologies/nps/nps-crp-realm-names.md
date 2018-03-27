@@ -6,8 +6,8 @@ ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
 ms.assetid: d011eaad-f72a-4a83-8099-8589c4ee8994
-ms.author: jamesmci 
-author: jamesmci
+ms.author: pashort 
+author: shortpatti
 ---
 
 # Realm Names

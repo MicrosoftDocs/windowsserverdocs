@@ -6,8 +6,8 @@ ms.technology: networking
 ms.topic: article
 ms.assetid: 74c97a14-b957-4568-b48e-8963a674fdb3
 manager: brianlic
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 
 # QoS Policy Frequently Asked Questions

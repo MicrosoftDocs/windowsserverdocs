@@ -7,8 +7,8 @@ ms.topic: article
 ms.date: 
 ms.assetid: d9ad2929-0db8-4483-8a74-fd89ea451d8e
 manager: brianlic
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 # Hyper-V Virtual Switch
 

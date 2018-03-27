@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8e9e5c81-aa61-479e-abaf-64c5e95f90dc
 ms.author: grcusanz
-author: jamesmci
+author: shortpatti
 ---
 
 # Guest Clustering in a Virtual Network

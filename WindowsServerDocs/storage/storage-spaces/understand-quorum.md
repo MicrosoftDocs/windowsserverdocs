@@ -31,7 +31,7 @@ In Windows Server 2016, there are two components of the system that have their o
 
 The table below gives an overview of the Cluster Quorum outcomes per scenario:
 
-| Server nodes | Can survive one server node failure | Can survive one server node failure, then another | Can survive two simultaneous server node failtures |
+| Server nodes | Can survive one server node failure | Can survive one server node failure, then another | Can survive two simultaneous server node failures |
 |--------------|-------------------------------------|---------------------------------------------------|----------------------------------------------------|
 | 2            | 50/50                               | No                                                | No                                                 |
 | 2 + Witness  | Yes                                 | No                                                | No                                                 |
@@ -83,6 +83,8 @@ In this case, the cluster would have gone down if you lost two nodes.
 However, dynamic quorum prevents this from happening. The *total number of votes* required for quorum is now determined based on the number of nodes available. So, with dynamic quorum, the cluster will stay up even if you lose three nodes.
 
 ![Diagram showing four cluster nodes, with nodes failing one at a time, and the number of required votes adjusting after each failure.](media/understand-quorum/dynamic-quorum-step-through.png)
+
+The above scenario applies to a general cluster that doesn't have Storage Spaces Direct enabled. However, when Storage Spaces Direct is enabled, the cluster can only support 2 node failures. This is explained more in the [pool quorum section](#poolQuorum).
 
 ### Examples
 
@@ -159,13 +161,13 @@ Failover Clustering supports three types of Quorum Witnesses:
 - <strong>File Share Witness</strong> – A SMB file share that is configured on a file server running Windows Server. It maintains clustering information in a witness.log file, but doesn't store a copy of the cluster database.
 - <strong>Disk Witness</strong> - A small clustered disk which is in the Cluster Available Storage group. This disk is highly-available and can failover between nodes. It contains a copy of the cluster database.  <strong>*A Disk Witness isn't supported with Storage Spaces Direct*</strong>.
 
-## Pool quorum overview
+## <a id="poolQuorum"></a>Pool quorum overview
 
 We just talked about Cluster Quorum, which operates at the cluster level. Now, let's dive into Pool Quorum, which operates on the pool level (i.e. you can lose nodes and drives and have the pool stay up). Storage pools were designed to be used in both clustered and non-clustered scenarios, which is why they have a different quorum mechanism.
 
 The table below gives an overview of the Pool Quorum outcomes per scenario:
 
-| Server nodes | Can survive one server node failure | Can survive one server node failure, then another | Can survive two simultaneous server node failtures |
+| Server nodes | Can survive one server node failure | Can survive one server node failure, then another | Can survive two simultaneous server node failures |
 |--------------|-------------------------------------|---------------------------------------------------|----------------------------------------------------|
 | 2            | No                                  | No                                                | No                                                 |
 | 2 + Witness  | Yes                                 | No                                                | No                                                 |

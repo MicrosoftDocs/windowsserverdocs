@@ -6,8 +6,8 @@ ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
 ms.assetid: bc22d29c-678c-462d-88b3-1c737dceca75
-ms.author: jamesmci 
-author: jamesmci
+ms.author: pashort 
+author: shortpatti
 ---
 
 # Use Regular Expressions in NPS

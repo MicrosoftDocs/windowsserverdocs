@@ -27,8 +27,6 @@ The section describes feature similarities and difference between DirectAccess a
 3.  **Reviewing the new features of Always On VPN.** Discover new or improved features that Always On VPN offers to improve your configuration.
 
 ## Build migration rings
-
-
 Migration rings are used to divide the Always On VPN client migration effort into multiple phases. By the time you get to the last phase, your process should be well tested and consistent.
 
 This section provides one approach for separating users into migration phases, and then managing those phases. Regardless of the user phase separation method you choose, maintain a single VPN Users group for easier management when the migration is complete.
