@@ -22,6 +22,7 @@ This document contains a list of all of the documentation operations for AD FS f
 - [Access Control Policies in AD FS](../ad-fs/operations/Access-Control-Policies-in-AD-FS.md)
 - [AD FS Prompt login parameter support](../ad-fs/operations/AD-FS-Prompt-Login.md)
 - [AD FS 2016 Single Sign On Settings](../ad-fs/operations/AD-FS-2016-Single-Sign-On-Settings.md)
+- [AD FS Extranet Smart Lockout](../ad-fs/operations/ad-fs-extranet-smart-lockout.md)
 - [AD FS Rapid Restore Tool](../ad-fs/operations/AD-FS-Rapid-Restore-Tool.md)
 - [AD FS support for alternate hostname binding for certificate authentication](../ad-fs/operations/AD-FS-support-for-alternate-hostname-binding-for-certificate-authentication.md)
 - [AD FS user sign-in customization](../ad-fs/operations/AD-FS-user-sign-in-customization.md)

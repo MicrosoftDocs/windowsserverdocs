@@ -12,15 +12,16 @@ ms.technology: identity-adfs
 
 
 
-# Overview
+# Extranet Smart Lockout (ESL) Overview
 As of the March 2018 update for Windows Server 2016, AD FS has a new feature called Extranet Smart Lockout (ESL).  In an era of increased attacks on authentication services, ESL enables AD FS to differentiate between sign-in attempts that look like they're from the valid user and sign-ins from what may be an attacker. As a result, AD FS can lock out attackers while letting valid users continue to use their accounts. This prevents denial-of-service on the user and protects against targeted attacks against known user accounts.
+
 ESL is available for AD FS in Windows Server 2016.  
 
 ## How to install and configure ESL
-Install updates on all nodes in the farm
 First, ensure all Windows Server 2016 AD FS servers are up to date as of the March 2018 Windows Updates.
-Update artifact database permissions
-Extranet smart lockout requires the AD FS service account to have permissions to a new table in the ADFS artifact database.  Grant this permission by executing the following command in a PowerShell command window:
+
+### Update artifact database permissions
+Extranet smart lockout requires the AD FS service account to have permissions to a new table in the AD FS artifact database.  Grant this permission by executing the following command in a PowerShell command window:
 
 ``` powershell
 $cred = Get-Credential
@@ -29,15 +30,19 @@ Update-AdfsArtifactDatabasePermission -Credential $cred
 - Where **$cred** is an account with AD FS administrator permissions.
 
 If you do not have AD FS administrator permissions, you can configure database permissions manually in SQL or WID by running the following command when connected to the AdfsArtifactStore database. These steps should be followed for all nodes in the farm.
+
 ```
 ALTER AUTHORIZATION ON SCHEMA::[ArtifactStore] TO [db_genevaservice]
 ```
 ## Configure ESL
-A new parameter called ExtranetLockoutMode was added support ESL.  It contains 3 values
+A new parameter called **ExtranetLockoutMode** was added to `Set-AdfProperties` to support ESL.  It contains the following 3 values which correspond to the different modes that ESL can run under:
 
 - **ADPasswordCounter** – This is the legacy ADFS “extranet soft lockout” mode which does not differentiate based on location.  This is the default value.
-- **ADFSSmartLockoutLogOnly** – This is Extranet Smart Lockout, but instead of rejecting authentication requests, ADFS will write admin and audit events.
-- **ADFSSmartLockoutEnforce** - This is Extranet Smart Lockout with full support for blocking unfamiliar requests when thresholds are reached.
+
+- **ADFSSmartLockoutLogOnly** – This is Extranet Smart Lockout, but instead of rejecting authentication requests, AD FS will only write admin and audit events.
+
+- **ADFSSmartLockoutEnforce** - This is Extranet Smart 
+Lockout with full support for blocking unfamiliar requests when the thresholds are reached.
 We recommend that you first set the lockout provider to log only by running the following cmdlet:
 
 ``` powershell
@@ -52,13 +57,12 @@ Restart-service adfssrv
 ```
 
 ### Set lockout threshold and observation window
-There are two key settings with ESL: lockout threshold and observation window.
+There are two key parameters that are used with ESL: ExtranetLockoutThreshold and ExtranetObservationWindow.
 
-#### Lockout Threshold
-Each time a password based authentication is successful, AD FS stores the client IP(s) as familiar location(s) in the account activity table. 
 
-- If a password based authentication fails and it is NOT from a familiar location, the failed authentication count is incremented.
-- Once the number of failed password attempts from unfamiliar locations reaches the lockout threshold, if a password based authentication from an unfamiliar location fails the account is locked out.
+- **ExtranetLockoutThreshold** - Each time a password based authentication is successful, AD FS stores the client IP(s) as familiar location(s) in the account activity table. 
+    - If a password based authentication fails and it is NOT from a familiar location, the failed authentication count is incremented.
+    - Once the number of failed password attempts from unfamiliar locations reaches the lockout threshold, if a password based authentication from an unfamiliar location fails the account is locked out.
 
 >[!NOTE]
 > Lockout continues to apply to familiar locations separately from this new unfamiliar lockout counter.
@@ -69,11 +73,10 @@ Example:
 ``` powershell
 Set-AdfsProperties -ExtranetLockoutThreshold 10
 ```
-####  Observation window
-The observation window setting allows an account to automatically unlock after a certain period of time. 
-- Once the account unlocks it allow 1 authentication attempt.  
-- If the authentication succeeds the failed authentication count is reset to 0.  
-- If it fails then the system waits for another observation window before the user is allowed to try again.
+- **ExtranetObservationWindow** - The observation window setting allows an account to automatically unlock after a certain period of time. 
+    - Once the account unlocks it allow 1 authentication attempt.  
+    - If the authentication succeeds the failed authentication count is reset to 0.  
+    - If it fails then the system waits for another observation window before the user is allowed to try again.
 
 The observation window is set using `Set-AdfsProperties`
 Example: 
@@ -242,3 +245,4 @@ When smart lockout is enabled, AD FS will create a new table in the AD FS artifa
 This table is created automatically once the feature is enabled.  The table exists on each node in the farm and is not replicated.  Instead of replicating the data, each node in the farm will communicate with the User Activity master to read and write the results of each password authentication.
 
 ## Next Steps
+- [AD FS Operations](../../ad-fs/ad-fs-operations.md)
