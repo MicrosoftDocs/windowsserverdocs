@@ -14,7 +14,7 @@ author: christianmontoya
 Have you ever had trouble getting your end users connected to their published RDS feed, either because of a single missing character in the feed URL or because they lost the email with the URL? Nearly all Remote Desktop client applications support finding your subscription by entering your email address, making it easier than ever to get your users connected to their RemoteApps and desktops.
 
 >[!IMPORTANT]
->The Universal Remote Desktop client does not support email address subscription at this time.
+>The Microsoft Remote Desktop app in the Microsoft Store does not support email address subscription at this time.
 
 Before you set up email discovery, do the following:
 
