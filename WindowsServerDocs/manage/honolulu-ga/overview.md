@@ -5,7 +5,7 @@ author: haley-rowland
 # Windows Admin Center (formerly Project Honolulu)
 
 ## Remote server management for the modern era
-Windows Admin Center is generally available and can be used in production environments. And it's free!
+Windows Admin Center is generally available and can be deployed in production environments. Plus it's free!
 
 ## [Download now](http://aka.ms/honoluludownload)
 Or, [plan Windows Admin Center for your environment](todo)
@@ -83,12 +83,11 @@ Quick Links: [Documentation](todo) | [Give feedback](todo) | [Recent updates](to
 
 ## Related products
 
-Project Honolulu is designed for single-instance server or cluster management and no
-[ SCCM ] [ OMS ]
+Windows Admin Center is designed for managing a single server or cluster. It is intended to complement and not replace other Microsoft monitoring and management solutions, such as System Center and Operations Management Suite.
 
-********************
+[System Center](https://www.microsoft.com/cloud-platform/system-center) is an on-premises datacenter management solution for deployment, configuration, management, monitoring of your entire datacenter. System Center lets you see the status of all the machines in your environment, while Windows Admin Center lets you drill down into a specific server to manage or troubleshoot it with more granular tools.
 
-### [[Product Updates >]](todo)
+[Operations Management Suite](https://www.microsoft.com/cloud-platform/operations-management-suite) is a collection of management services entirely hosted in Azure that can be used to manage servers both in the cloud and on-premises. Operations Mangament Suite allows you to monitor and analyze resource performance, automate manual processes. Windows Admin Center provides additional tools at the single-server/single-cluster level.
 
 ********************
 <!-- taken from w3schools -->
