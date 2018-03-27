@@ -4,7 +4,8 @@ author: haley-rowland
 
 # Windows Admin Center (formerly Project Honolulu)
 
-## Remote server management for the modern era
+Remote server management for the modern era
+
 Windows Admin Center is generally available and can be deployed in production environments. Plus it's free!
 
 ## [Download now](http://aka.ms/honoluludownload)
@@ -21,11 +22,11 @@ Quick Links: [Documentation](todo) | [Give feedback](todo) | [Recent updates](to
 
 <table border="0" cellpadding="0" style="text-align:center;margin:auto" width="200px" align="center">
         <tr> 
-          <td> <img src="../media/honolulu-ga/legacy-sod.gif"> <br/> Legacy tools  </td>
+          <td> <img src="../media/honolulu-ga/legacy-sod.gif" width="200px">  </td>
 		  <td> -->
 		  </td>
 		  <td>
-		  <img src="../media/honolulu-ga/server-overview-tool.gif"> <br/>WAC</td>
+		  <img src="../media/honolulu-ga/server-overview-tool.gif" width="200px"> </td>
         </tr> 
 </table>
 
@@ -60,10 +61,10 @@ Quick Links: [Documentation](todo) | [Give feedback](todo) | [Recent updates](to
 
 ********************
 
-## See how companies use Windows Admin Center to 
+## See how companies use Windows Admin Center to manage servers and clusters in their environments 
 
 <table align="center" border="0" cellpadding="0">
-	<tr style="border: 0; background-color: lightgrey">
+	<tr style="border: 0">
 		<td style="padding: 20px; border: 0;" align="center">
 			<img src=//ADDICON width="100" alt=""> <br/>
             Case study 1
