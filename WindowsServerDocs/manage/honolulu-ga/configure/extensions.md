@@ -10,7 +10,7 @@ author: daniellee-msft
 
 [TODO:legacy-content-begin]
 
-Windows Admin Center is built as an extensible platform where each connection type and tool is an extension that you can install, uninstall and update individually. You can search for new extensions published by Microsoft and other developers, and install and update them individually without having to update the entire Windows Admin Center installation. You can also use the Extension Manager to configure a separate NuGet feed and distribute extensions for internal usage within your organization.
+Windows Admin Center is built as an extensible platform where each connection type and tool is an extension that you can install, uninstall and update individually. You can search for new extensions published by Microsoft and other developers, and install and update them individually without having to update the entire Windows Admin Center installation. You can also use the Extension Manager to configure a separate NuGet feed and distribute  extensions for internal usage within your organization.
 
 ## Installing an extension ##
 
