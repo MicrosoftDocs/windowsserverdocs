@@ -12,8 +12,8 @@ You need the following hardware to create a failover cluster. To be supported by
     In the network infrastructure that connects your cluster nodes, avoid having single points of failure. For example, you can connect your cluster nodes by multiple, distinct networks. Alternatively, you can connect your cluster nodes with one network that is constructed with teamed network adapters, redundant switches, redundant routers, or similar hardware that removes single points of failure.
     
 
-    > [!NOTE]
-    > If you connect cluster nodes with a single network, the network will pass the redundancy requirement in the Validate a Configuration Wizard. However, the report from the wizard will include a warning that the network should not have single points of failure.
+    >[!NOTE]
+    >If you connect cluster nodes with a single network, the network will pass the redundancy requirement in the Validate a Configuration Wizard. However, the report from the wizard will include a warning that the network should not have single points of failure.
   - **Device controllers or appropriate adapters for the storage**:
     
       - **Serial Attached SCSI or Fibre Channel**: If you are using Serial Attached SCSI or Fibre Channel, in all clustered servers, all elements of the storage stack should be identical. It is required that the multipath I/O (MPIO) software be identical and that the Device Specific Module (DSM) software be identical. It is recommended that the mass-storage device controllers—that is, the host bus adapter (HBA), HBA drivers, and HBA firmware—that are attached to cluster storage be identical. If you use dissimilar HBAs, you should verify with the storage vendor that you are following their supported or recommended configurations.
@@ -57,19 +57,19 @@ When deploying a storage area network (SAN) with a failover cluster, follow thes
 
   - **Consider using multipath I/O software or teamed network adapters**: In a highly available storage fabric, you can deploy failover clusters with multiple host bus adapters by using multipath I/O software or network adapter teaming (also called load balancing and failover, or LBFO). This provides the highest level of redundancy and availability. For Windows Server 2012 R2 or Windows Server 2012, your multipath solution must be based on Microsoft Multipath I/O (MPIO). Your hardware vendor will typically supply an MPIO device-specific module (DSM) for your hardware, although Windows Server includes one or more DSMs as part of the operating system.
     
-    For information about LBFO, see [NIC Teaming Overview](http://go.microsoft.com/fwlink/p/?linkid=245132) in the Windows Server Technical Library.
+    For information about LBFO, see [NIC Teaming Overview](https://docs.microsoft.com/en-us/windows-server/networking/technologies/nic-teaming/nic-teaming) in the Windows Server Technical Library.
     
 
-    > [!IMPORTANT]
-    > Host bus adapters and multipath I/O software can be very version sensitive. If you are implementing a multipath solution for your cluster, work closely with your hardware vendor to choose the correct adapters, firmware, and software for the version of Windows Server that you are running.
+    >[!IMPORTANT]
+    >Host bus adapters and multipath I/O software can be very version sensitive. If you are implementing a multipath solution for your cluster, work closely with your hardware vendor to choose the correct adapters, firmware, and software for the version of Windows Server that you are running.
 
 
-  - **Consider using Storage Spaces**: If you plan to deploy serial attached SCSI (SAS) clustered storage that is configured using Storage Spaces, see [Deploy Clustered Storage Spaces](jj822937\(v=ws.11\).md) for the requirements.
+  - **Consider using Storage Spaces**: If you plan to deploy serial attached SCSI (SAS) clustered storage that is configured using Storage Spaces, see [Deploy Clustered Storage Spaces](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj822937(v%3dws.11)>) for the requirements.
 
 ## See also
 
-  - [Failover Clustering](hh831579\(v=ws.11\).md)
+  - [Failover Clustering](failover-clustering.md)
 
-  - [Storage Spaces](hh831739\(v=ws.11\).md)
+  - [Storage Spaces](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831739(v%3dws.11)>)
 
-  - [Using Guest Clustering for High Availability](dn440540\(v=ws.11\).md)
+  - [Using Guest Clustering for High Availability](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn440540(v%3dws.11)>)
