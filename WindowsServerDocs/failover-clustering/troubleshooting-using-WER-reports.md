@@ -1,7 +1,7 @@
 ---
-title: Troubleshooting a Failover Cluster using WER Reports
+title: Troubleshooting a Failover Cluster using Windows Error Reporting
 description: Troubleshooting a Failover Cluster using WER Reports, with specific details on how to gather reports and diagnose common issues.
-keywords: Failover Cluster,WER Reports,Diagnostics,Cluster
+keywords: Failover Cluster,WER Reports,Diagnostics,Cluster, Windows Error Reporting
 ms.prod: windows-server-threshold
 ms.technology: storage-failover-clustering
 ms.author: adagashe
@@ -12,7 +12,7 @@ author: adagashe
 ms.date: 03/27/2018
 ms.localizationpriority: 
 ---
-# Troubleshooting a Failover Cluster using WER Reports
+# Troubleshooting a Failover Cluster using Windows Error Reporting
 
 > Applies To: Advanced system administrators or Tier 3 support
 
@@ -29,7 +29,7 @@ You could enable additional event channels on each server node in your cluster a
 1. You have to remember to enable the same event channels on every new server node that you add to your cluster.
 2. When diagnosing, it can be tedious to enable specific event channels, reproduce the error, and repeat this process until you root cause.
 
-To avoid these issues, you can enable event channels on cluster startup. The list of enabled event channels on your cluster can be configured using the public property *EnabledEventLogs*. By default, the following event channels are enabled:
+To avoid these issues, you can enable event channels on cluster startup. The list of enabled event channels on your cluster can be configured using the public property **EnabledEventLogs**. By default, the following event channels are enabled:
 
 ```
 PS C:\Windows\system32> (get-cluster).EnabledEventLogs
@@ -39,26 +39,26 @@ Microsoft-Windows-SMBServer/Analytic
 Microsoft-Windows-Kernel-LiveDump/Analytic
 ```
 
-The ```EnabledEventLogs``` property is a multistring, where each string is in the form: ```  channel-name, log-level, keyword-mask ```. The ``` keyword-mask ``` can be a hexadecimal (prefix 0x), octal (prefix 0), or decimal number (no prefix) number. For instance, to add a new event channel to the list and to configure both ```log-level``` and ```keyword-mask```, you can run:
+The **EnabledEventLogs** property is a multistring, where each string is in the form: **channel-name, log-level, keyword-mask**. The **keyword-mask** can be a hexadecimal (prefix 0x), octal (prefix 0), or decimal number (no prefix) number. For instance, to add a new event channel to the list and to configure both **log-level** and **keyword-mask** you can run:
 
 ```
 (get-cluster).EnabledEventLogs += "Microsoft-Windows-WinINet/Analytic,2,321"
 ```
 
-If you want to set the ```log-level```, but keep the ```keyword-mask``` at its default value, you can use either of the following commands:
+If you want to set the **log-level** but keep the **keyword-mask** at its default value, you can use either of the following commands:
 
 ```
 (get-cluster).EnabledEventLogs += "Microsoft-Windows-WinINet/Analytic,2"
 (get-cluster).EnabledEventLogs += "Microsoft-Windows-WinINet/Analytic,2,"
 ```
 
-If you want to keep the ```log-level``` at its default value, but set the ```keyword-mask```, you can run the following command:
+If you want to keep the **log-level** at its default value, but set the **keyword-mask** you can run the following command:
 
 ```
 (get-cluster).EnabledEventLogs += "Microsoft-Windows-WinINet/Analytic,,0xf1"
 ```
 
-If you want to keep both the ```log-level``` and the ```keyword-mask``` at their default values, you can run any of the following commands:
+If you want to keep both the **log-level** and the **keyword-mask** at their default values, you can run any of the following commands:
 
 ```
 (get-cluster).EnabledEventLogs += "Microsoft-Windows-WinINet/Analytic"
@@ -66,7 +66,7 @@ If you want to keep both the ```log-level``` and the ```keyword-mask``` at their
 (get-cluster).EnabledEventLogs += "Microsoft-Windows-WinINet/Analytic,,"
 ```
 
-These event channels will be enabled on every cluster node when the cluster service starts or whenever the ```EnabledEventLogs``` property is changed.
+These event channels will be enabled on every cluster node when the cluster service starts or whenever the **EnabledEventLogs** property is changed.
 
 
 <!--
@@ -77,9 +77,9 @@ Windows will trigger the collection of a ``` LiveDump ``` when there are known r
 
 ## Gathering Logs
 
-After you have enabled event channels, you can use the ``` DumpLogQuery ``` to gather logs. The public resource type property ``` DumpLogQuery ``` is a mutistring value. Each string is an [XPATH query as described here](https://msdn.microsoft.com/en-us/library/windows/desktop/dd996910(v=vs.85).aspx).
+After you have enabled event channels, you can use the **DumpLogQuery** to gather logs. The public resource type property **DumpLogQuery** is a mutistring value. Each string is an [XPATH query as described here](https://msdn.microsoft.com/en-us/library/windows/desktop/dd996910(v=vs.85).aspx).
 
-When troubleshooting, if you need to collect additional event channels, you can a modify the ``` DumpLogQuery ``` property by adding additional queries or modifying the list.
+When troubleshooting, if you need to collect additional event channels, you can a modify the **DumpLogQuery** property by adding additional queries or modifying the list.
 
 To do this, first test your XPATH query using the [get-WinEvent powershell command](https://docs.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.Diagnostics/Get-WinEvent?view=powershell-5.1):
 
@@ -87,7 +87,7 @@ To do this, first test your XPATH query using the [get-WinEvent powershell comma
 get-WinEvent -FilterXML "<QueryList><Query><Select Path='Microsoft-Windows-GroupPolicy/Operational'>*[System[TimeCreated[timediff(@SystemTime) &gt;= 600000]]]</Select></Query></QueryList>"
 ```
 
-Next, append your query to the ``` DumpLogQuery ``` property of the resource:
+Next, append your query to the **DumpLogQuery** property of the resource:
 
 ```
 (Get-ClusterResourceType -Name "Physical Disk".DumpLogQuery += "<QueryList><Query><Select Path='Microsoft-Windows-GroupPolicy/Operational'>*[System[TimeCreated[timediff(@SystemTime) &gt;= 600000]]]</Select></Query></QueryList>"
@@ -98,13 +98,13 @@ And if you want to get a list of queries to use, run:
 (Get-ClusterResourceType -Name "Physical Disk").DumpLogQuery
 ```
 
-## Gathering WER reports
+## Gathering Windows Error Reporting reports
 
-WER Reports are stored in ``` %ProgramData%\Microsoft\Windows\WER ```
+Windows Error Reporting Reports are stored in **%ProgramData%\Microsoft\Windows\WER**
 
-Inside the folder, the ``` ReportsQueue ``` folder contains reports that are waiting to be uploaded to Watson.
+Inside the **WER** folder, the **ReportsQueue** folder contains reports that are waiting to be uploaded to Watson.
 
-```
+```powershell
 PS C:\Windows\system32> dir c:\ProgramData\Microsoft\Windows\WER\ReportQueue
 Volume in drive C is INSTALLTO
 Volume Serial Number is 4031-E397
@@ -135,9 +135,9 @@ Directory of C:\ProgramData\Microsoft\Windows\WER\ReportQueue
               20 Dir(s)  23,291,658,240 bytes free
 ```
 
-Inside the ``` WER ``` folder, the ``` ReportsArchive ``` folder contains reports that have already been uploaded to Watson. Data in these reports is deleted, but the ``` Report.wer ``` file persists.
+Inside the **WER** folder, the **ReportsArchive** folder contains reports that have already been uploaded to Watson. Data in these reports is deleted, but the **Report.wer** file persists.
 
-```
+```powershell
 PS C:\Windows\system32> dir C:\ProgramData\Microsoft\Windows\WER\ReportArchive
 Volume in drive C is INSTALLTO
 Volume Serial Number is 4031-E397
@@ -166,16 +166,16 @@ Response.CabGuid=1701c157-8fe6-4c22-9de6-510c23b1e97c
 ```
 -->
 
-Windows Error Reporting (WER) provides many settings to customize the problem reporting experience. For further information, please refer to the Windows Error Reporting [documentation](https://msdn.microsoft.com/en-us/library/windows/desktop/bb513638(v=vs.85).aspx).
+Windows Error Reporting provides many settings to customize the problem reporting experience. For further information, please refer to the Windows Error Reporting [documentation](https://msdn.microsoft.com/en-us/library/windows/desktop/bb513638(v=vs.85).aspx).
 
 
-## Troubleshooting using WER reports
+## Troubleshooting using Windows Error Reporting reports
 
 ### Physical disk failed to come online
 
 To diagnose this issue, navigate to the WER report folder:
 
-```
+```powershell
 PS C:\Windows\system32> dir C:\ProgramData\Microsoft\Windows\WER\ReportArchive\Critical_PhysicalDisk_b46b8883d892cfa8a26263afca228b17df8133d_00000000_cab_08abc39c
 Volume in drive C is INSTALLTO
 Volume Serial Number is 4031-E397
@@ -229,7 +229,7 @@ Volume Serial Number is 4031-E397
 <date>  <time>            13,340 WERC38D.tmp.txt
 ```
 
-Next, start triaging from the ``` Report.wer ``` file — this will tell you what failed.
+Next, start triaging from the **Report.wer** file — this will tell you what failed.
 
 ```
 EventType=Failover_clustering_resource_error 
@@ -256,9 +256,9 @@ DynamicSig[29].Name=FailureTime
 DynamicSig[29].Value=2017//12//12-22:38:05.485
 ```
 
-Since the resource failed to come online, no dumps were collected, but the WER report did collect logs. If you open all ``` .evtx ``` files using Microsoft Message Analyzer, you will see all of the information that was collected using the following queries through the system channel, application channel, failover cluster diagnostic channels, and a few other generic channels.
+Since the resource failed to come online, no dumps were collected, but the Windows Error Reporting report did collect logs. If you open all **.evtx** files using Microsoft Message Analyzer, you will see all of the information that was collected using the following queries through the system channel, application channel, failover cluster diagnostic channels, and a few other generic channels.
 
-```
+```powershell
 PS C:\Windows\system32> (Get-ClusterResourceType -Name "Physical Disk").DumpLogQuery
 <QueryList><Query Id="0"><Select Path="Microsoft-Windows-Kernel-PnP/Configuration">*[System[TimeCreated[timediff(@SystemTime) &lt;= 600000]]]</Select></Query></QueryList>
 <QueryList><Query Id="0"><Select Path="Microsoft-Windows-ReFS/Operational">*[System[TimeCreated[timediff(@SystemTime) &lt;= 600000]]]</Select></Query></QueryList>
@@ -299,16 +299,16 @@ You can also group by providers to get the following view:
 
 ![Logs grouped by providers](media\troubleshooting-using-WER-reports\logs-grouped-by-providers.png)
 
-To identify why the disk failed, navigate to the events under ``` FailoverClustering/Diagnostic ``` and ``` FailoverClustering/DiagnosticVerbose ```. Then run the following query: ``` EventLog.EventData["LogString"] contains "Cluster Disk 10" ```.  This will give you give you the following output:
+To identify why the disk failed, navigate to the events under **FailoverClustering/Diagnostic** and **FailoverClustering/DiagnosticVerbose**. Then run the following query: **EventLog.EventData["LogString"] contains "Cluster Disk 10"**.  This will give you give you the following output:
 
 ![Output of running log query](media\troubleshooting-using-WER-reports\output-of-running-log-query.png)
 
 
 ### Physical disk timed out
 
-To diagnose this issue, navigate to the WER report folder. The folder contains log files and dump files for ``` RHS ```, ``` clussvc.exe ```, and of the process that hosts the “``` smphost ```” service, as shown below:
+To diagnose this issue, navigate to the WER report folder. The folder contains log files and dump files for **RHS**, **clussvc.exe**, and of the process that hosts the “**smphost**” service, as shown below:
 
-```
+```powershell
 PS C:\Windows\system32> dir C:\ProgramData\Microsoft\Windows\WER\ReportArchive\Critical_PhysicalDisk_64acaf7e4590828ae8a3ac3c8b31da9a789586d4_00000000_cab_1d94712e
 Volume in drive C is INSTALLTO
 Volume Serial Number is 4031-E397
@@ -366,7 +366,7 @@ Volume Serial Number is 4031-E397
 <date>  <time>            13,340 WER7100.tmp.txt
 ```
 
-Next, start triaging from the ``` Report.wer ``` file — this will tell you what call or resource is hanging.
+Next, start triaging from the **Report.wer** file — this will tell you what call or resource is hanging.
 
 ```
 EventType=Failover_clustering_resource_timeout_2
@@ -391,13 +391,13 @@ DynamicSig[29].Name=HangThreadId
 DynamicSig[29].Value=10008
 ```
 
-The list of services and processes that we collect in a dump is controlled by the following property: ``` PS C:\Windows\system32> (Get-ClusterResourceType -Name "Physical Disk").DumpServicesSmphost ```
+The list of services and processes that we collect in a dump is controlled by the following property: **PS C:\Windows\system32> (Get-ClusterResourceType -Name "Physical Disk").DumpServicesSmphost**
 
-To identify why the hang happened, open the dum files. Then run the following query: ``` EventLog.EventData["LogString"] contains "Cluster Disk 10" ```.  This will give you give you the following output:
+To identify why the hang happened, open the dum files. Then run the following query: **EventLog.EventData["LogString"] contains "Cluster Disk 10"**  This will give you give you the following output:
 
 ![Output of running log query 2](media\troubleshooting-using-WER-reports\output-of-running-log-query-2.png)
 
-We can cross-examine this with the thread from the ``` memory.hdmp ``` file:
+We can cross-examine this with the thread from the **memory.hdmp** file:
 
 ```
 # 21  Id: 1d98.2718 Suspend: 0 Teb: 0000000b`f1f7b000 Unfrozen
