@@ -391,7 +391,6 @@
 ##### [Access Control Policies in AD FS for Windows Server 2016](ad-fs/operations/Access-Control-Policies-in-AD-FS.md)
 ##### [Access Control Policies in AD FS for Windows Server 2012 R2](ad-fs/operations/Access-Control-Policies-W2K12.md)
 ##### [Access Control Policies in AD FS 2.0](ad-fs/operations/Access-Control-Policies-in-AD-FS-2.md)
-#### [AD FS Extranet Smart Lockout](ad-fs/operations/ad-fs-extranet-smart-lockout.md)
 #### [AD FS Prompt login parameter support](ad-fs/operations/AD-FS-Prompt-Login.md)
 #### [AD FS 2016 Single Sign On Settings](ad-fs/operations/AD-FS-Single-Sign-On-Settings.md)
 #### [AD FS Rapid Restore Tool](ad-fs/operations/AD-FS-Rapid-Restore-Tool.md)
