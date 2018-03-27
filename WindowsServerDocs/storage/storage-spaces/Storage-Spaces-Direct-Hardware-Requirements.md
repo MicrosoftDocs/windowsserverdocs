@@ -26,7 +26,9 @@ For production, Microsoft recommends these [Windows Server Software-Defined](htt
 
 ## Base requirements
 
-All systems, components, devices, and drivers must be **Certified for Windows Server 2016** per the [Windows Server Catalog](https://www.windowsservercatalog.com). In addition, servers, drives, host bus adapters, and network adapters must have the **Software-Defined Data Center (SDDC) Standard** and/or **Software-Defined Data Center (SDDC) Premium** additional qualifications, as pictured below:
+Systems, components, devices, and drivers must be **Windows Server 2016 Certified** per the [Windows Server Catalog](https://www.windowsservercatalog.com).
+
+In addition, servers, drives, host bus adapters, and network adapters must have the **Software-Defined Data Center (SDDC) Standard** and/or **Software-Defined Data Center (SDDC) Premium** additional qualifications, as pictured below:
 
 ![screenshot of the Windows Server catalog showing the SDDC AQs](media/hardware-requirements/sddc-aqs.png)
 
