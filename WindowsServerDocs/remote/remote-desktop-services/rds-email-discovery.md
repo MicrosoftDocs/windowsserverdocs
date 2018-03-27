@@ -4,7 +4,7 @@ description: Learn how to integrate Azure AD Domain Services into your RDS deplo
 ms.prod: windows-server-threshold
 ms.technology: remote-desktop-services
 ms.author: chrimo
-ms.date: 10/02/2017
+ms.date: 3/27/2018
 ms.localizationpriority: medium
 ms.topic: article
 author: christianmontoya
