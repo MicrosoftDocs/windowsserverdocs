@@ -110,7 +110,7 @@ If that doesn't work, your server name in the web client URL might not match the
 If the user reports that they can't connect with the web client even though they can see the resources listed, check the following things:
 
 * Is the RD Gateway role properly configured to use a trusted public certificate?
-* Does teh RD Gateway server have the required updates installed? Make sure that your server has [the KB4025334 update](https://support.microsoft.com/en-us/help/4025334/windows-10-update-kb4025334) installed.
+* Does the RD Gateway server have the required updates installed? Make sure that your server has [the KB4025334 update](https://support.microsoft.com/en-us/help/4025334/windows-10-update-kb4025334) installed.
 
 If the user gets an "unexpected server authentication certificate was received" error message when they try to connect, then the message will show the certificate's thumbprint. Search the RD Broker server's certificate manager using that thumbprint to find the right certificate. Verify that the certificate is configured to be used for the RD Broker role in the Remote Desktop deployment properties page. After making sure the certificate hasn't expired, copy the certificate in .cer file format to the RD Web Access server and run the following command on the RD Web Access server with the bracketed value replaced by the certificate's file path:
 
