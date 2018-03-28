@@ -7,7 +7,7 @@ ms.manager: dongill
 author: JasonGerend
 ms.author: jgerend  
 ms.technology: storage-failover-clustering
-ms.date: 03/16/2018
+ms.date: 03/27/2018
 ms.localizationpriority: high
 ---
 # Failover Clustering in Windows Server
@@ -68,7 +68,7 @@ Enables easier configuration of multiple network adapters in a cluster.
 * [Deploy Hyper-V over SMB](https://technet.microsoft.com/library/jj134187)
 * [Deploy a Scale-Out File Server](https://technet.microsoft.com/library/hh831359)
 * [iSCSI Target Block Storage, How To](https://technet.microsoft.com/library/hh848268)
-* [Deploy an Active Directory Detached Cluster](https://technet.microsoft.com/library/jj556313.aspx)
+* [Deploy an Active Directory Detached Cluster](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265970\(v%3dws.11\))
 * [Using Guest Clustering for High Availability](https://technet.microsoft.com/library/dn440540.aspx)
 * [Deploy a Guest Cluster using a Shared Virtual Hard Disk](https://technet.microsoft.com/library/dn265980.aspx)
 * [Building Your Cloud Infrastructure: Scenario Overview](https://technet.microsoft.com/library/hh831441.aspx)

@@ -4,7 +4,7 @@ description: Describes how an admin can set up the Remote Desktop web client.
 ms.prod: windows-server-threshold
 ms.technology: remote-desktop-services
 ms.author: helohr
-ms.date: 3/26/2018
+ms.date: 3/27/2018
 ms.topic: article
 author: Heidilohr
 ---
@@ -41,6 +41,9 @@ To install the web client for the first time, follow these steps:
     ```PowerShell
     Install-Module -Name PowerShellGet -Force
     ```
+    
+    >[!IMPORTANT]
+    >You'll need to restart PowerShell before the update can take effect, otherwise the module may not work.
 
 1. Install the Remote Desktop web client management PowerShell module from the PowerShell gallery with this cmdlet:
     ```PowerShell
@@ -59,7 +62,7 @@ To install the web client for the first time, follow these steps:
     
 1. Finally, run this cmdlet to publish the Remote Desktop web client:
     ```PowerShell
-    Publish-RDWebClientPackage -Production -Latest
+    Publish-RDWebClientPackage -Type Production -Latest
     ```
     Make sure you can access the web client at the web client URL with your server name, formatted as <https://server_FQDN/RDWeb/Pages/webclient>. It's important to use the server name that matches the RD Web Access public certificate in the URL (typically the server FQDN).
 1. When you're ready for users to acces the web client, just send them the web client URL you created.
