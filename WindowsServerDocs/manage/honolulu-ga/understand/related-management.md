@@ -2,9 +2,7 @@
 author: nwashburn-ms
 ---
 
-<a href="../overview.md">Honolulu</a> > <a href="../overview.md">Understand</a> > Related management products
-
-# Related management products
+# Windows Admin Center related management products
 
 [System Center](https://www.microsoft.com/cloud-platform/system-center) is an on-premises datacenter management solution for deployment, configuration, management, monitoring of your entire datacenter. System Center lets you see the status of all the machines in your environment, while Windows Admin Center lets you drill down into a specific server to manage or troubleshoot it with more granular tools.
 
