@@ -4,7 +4,7 @@ author: haley-rowland
 
 # Windows Admin Center (formerly Project Honolulu)
 
-<p style="font-size:20px"> The future of remote server management </p>
+The future of remote server management
 
 Windows Admin Center is generally available and can be deployed in production environments. Plus it's free!
 
@@ -20,15 +20,29 @@ Quick Links: [Documentation](overview.md) | [Give feedback](todo) | [Recent upda
 
 ### <a name="What is Windows Admin Center?"></a> Windows Admin Center is a lightweight, browser-based GUI toolset for managing servers, clusters, and hyper-converged infrastructure. It's the evolution of familiar in-box managment tools plus so much more.
 
+| <img src="../media/honolulu-ga/legacy-sod.gif" alt="Video of legacy management tools">  | -->  | <img src="../media/honolulu-ga/server-overview-tool.gif"  alt="Video of Windows Admin Center tools">  |
+|:-:|:-:|:-:|
+
+<!-- 
+
 <table border="0" cellpadding="0" style="text-align:center;margin:auto" width="100%" align="center">
         <tr> 
-          <td cellpadding="5px"> <img src="../media/honolulu-ga/legacy-sod.gif" width="48%" align="center" alt="Video of legacy management tools">  </td>
+          <td cellpadding="5px" width="48%" align="center"> <img src="../media/honolulu-ga/legacy-sod.gif" alt="Video of legacy management tools">  </td>
 		  <td align= "center" vertical-align="center" width="4%"> >
 		  </td>
-		  <td cellpadding="5px">
-		  <img src="../media/honolulu-ga/server-overview-tool.gif" width="48%" align="center" alt="Video of Windows Admin Center tools"> </td>
+		  <td cellpadding="5px" width="48%" align="center">
+		  <img src="../media/honolulu-ga/server-overview-tool.gif"  alt="Video of Windows Admin Center tools"> </td>
         </tr> 
-</table>
+</table> -->
+
+| <img src="../media/honolulu-ga/simple-icon.png" width="100" alt="Icon representing app window">  | <b>Simple & lightweight</b> <br/> Familiar tools are streamlined to make management tasks a breeze. Install in under 5 minutes and manage servers in your environment immediately, no target configuration required.  |
+|:-:|:--|
+| <img src="../media/honolulu-ga/future-icon.png" width="100" alt="Icon representing hybrid cloud">  | <b>Built for the future</b> <br/> Integration with Azure services helps you leverage the power of the hybrid world. Manage Hyper-Converged clusters with powerful yet simple tools.  |
+| <img src="../media/honolulu-ga/secure-icon.png" width="100" alt="Icon representing secure server">  | <b>Secure management</b> <br/> Control who can manage servers and get unparalleled insight into the actions administrators perform in your environment.  |
+
+
+
+<!-- 
 
 <table>
 	<tr style="border: 0;">
@@ -55,13 +69,18 @@ Quick Links: [Documentation](overview.md) | [Give feedback](todo) | [Recent upda
 			<b>Secure management</b> <br/> Control who can manage servers and get unparalleled insight into the actions administrators perform in your environment.
 		</td>
 	</tr>
-</table>
+</table> -->
 
 [Learn more about how Windows Admin Center can improve management of your server envrionment.](overview.md)
 
 ********************
 
 ## See how companies use Windows Admin Center in their production environments 
+
+| <img src=//ADDICON width="100" alt="Company 1 Logo"><br/> Case study 1   |  <img src=//ADDICON width="100" alt="Company 2 Logo"> <br/> Case study 2 | <img src=//ADDICON width="100" alt="Company 3 Logo"> <br/> Case study 3  |
+|:-:|:-:|:-:|
+
+<!-- 
 
 <table align="center" border="0" cellpadding="0">
 	<tr style="border: 0">
@@ -78,7 +97,7 @@ Quick Links: [Documentation](overview.md) | [Give feedback](todo) | [Recent upda
             Case study 3
 		</td>
 	</tr>
-</table>
+</table> -->
 
 ********************
 
