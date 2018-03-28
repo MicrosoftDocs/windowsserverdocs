@@ -14,9 +14,9 @@ ms.localizationpriority:
 ---
 # Troubleshooting a Failover Cluster using Windows Error Reporting
 
-> Applies To: Advanced system administrators or Tier 3 support
+> Applies to: Windows Server 2016, Windows Server
 
-Windows Error Reporting (WER) is a flexible event-based feedback infrastructure designed to gather information about the hardware and software problems that Windows can detect, report the information to Microsoft, and provide users with any available solutions. This [reference](https://docs.microsoft.com/en-us/powershell/module/windowserrorreporting/) provides cmdlet descriptions and syntax for all Windows Error Reporting cmdlets.
+Windows Error Reporting (WER) is a flexible event-based feedback infrastructure designed to help advanced administrators or Tier 3 support gather information about the hardware and software problems that Windows can detect, report the information to Microsoft, and provide users with any available solutions. This [reference](https://docs.microsoft.com/powershell/module/windowserrorreporting/) provides descriptions and syntax for all WindowsErrorReporting cmdlets.
 
 The information on troubleshooting presented below will be helpful for troubleshooting advanced issues that have been escalated and that may require data to be sent to Microsoft for triaging.
 
@@ -31,8 +31,12 @@ You could enable additional event channels on each server node in your cluster a
 
 To avoid these issues, you can enable event channels on cluster startup. The list of enabled event channels on your cluster can be configured using the public property **EnabledEventLogs**. By default, the following event channels are enabled:
 
-```
+```powershell
 PS C:\Windows\system32> (get-cluster).EnabledEventLogs
+```
+
+Here's an example of the output:
+```powershell
 Microsoft-Windows-Hyper-V-VmSwitch-Diagnostic,4,0xFFFFFFFD
 Microsoft-Windows-SMBDirect/Debug,4
 Microsoft-Windows-SMBServer/Analytic
@@ -41,26 +45,26 @@ Microsoft-Windows-Kernel-LiveDump/Analytic
 
 The **EnabledEventLogs** property is a multistring, where each string is in the form: **channel-name, log-level, keyword-mask**. The **keyword-mask** can be a hexadecimal (prefix 0x), octal (prefix 0), or decimal number (no prefix) number. For instance, to add a new event channel to the list and to configure both **log-level** and **keyword-mask** you can run:
 
-```
+```powershell
 (get-cluster).EnabledEventLogs += "Microsoft-Windows-WinINet/Analytic,2,321"
 ```
 
 If you want to set the **log-level** but keep the **keyword-mask** at its default value, you can use either of the following commands:
 
-```
+```powershell
 (get-cluster).EnabledEventLogs += "Microsoft-Windows-WinINet/Analytic,2"
 (get-cluster).EnabledEventLogs += "Microsoft-Windows-WinINet/Analytic,2,"
 ```
 
 If you want to keep the **log-level** at its default value, but set the **keyword-mask** you can run the following command:
 
-```
+```powershell
 (get-cluster).EnabledEventLogs += "Microsoft-Windows-WinINet/Analytic,,0xf1"
 ```
 
 If you want to keep both the **log-level** and the **keyword-mask** at their default values, you can run any of the following commands:
 
-```
+```powershell
 (get-cluster).EnabledEventLogs += "Microsoft-Windows-WinINet/Analytic"
 (get-cluster).EnabledEventLogs += "Microsoft-Windows-WinINet/Analytic,"
 (get-cluster).EnabledEventLogs += "Microsoft-Windows-WinINet/Analytic,,"
@@ -83,18 +87,18 @@ When troubleshooting, if you need to collect additional event channels, you can 
 
 To do this, first test your XPATH query using the [get-WinEvent powershell command](https://docs.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.Diagnostics/Get-WinEvent?view=powershell-5.1):
 
-``` 
+```powershell
 get-WinEvent -FilterXML "<QueryList><Query><Select Path='Microsoft-Windows-GroupPolicy/Operational'>*[System[TimeCreated[timediff(@SystemTime) &gt;= 600000]]]</Select></Query></QueryList>"
 ```
 
 Next, append your query to the **DumpLogQuery** property of the resource:
 
-```
+```powershell
 (Get-ClusterResourceType -Name "Physical Disk".DumpLogQuery += "<QueryList><Query><Select Path='Microsoft-Windows-GroupPolicy/Operational'>*[System[TimeCreated[timediff(@SystemTime) &gt;= 600000]]]</Select></Query></QueryList>"
 ```
 
 And if you want to get a list of queries to use, run:
-```
+```powershell
 (Get-ClusterResourceType -Name "Physical Disk").DumpLogQuery
 ```
 
@@ -106,6 +110,10 @@ Inside the **WER** folder, the **ReportsQueue** folder contains reports that are
 
 ```powershell
 PS C:\Windows\system32> dir c:\ProgramData\Microsoft\Windows\WER\ReportQueue
+```
+
+Here's an example of the output:
+```powershell
 Volume in drive C is INSTALLTO
 Volume Serial Number is 4031-E397
 
@@ -139,6 +147,10 @@ Inside the **WER** folder, the **ReportsArchive** folder contains reports that h
 
 ```powershell
 PS C:\Windows\system32> dir C:\ProgramData\Microsoft\Windows\WER\ReportArchive
+```
+
+Here's an example of the output:
+```powershell
 Volume in drive C is INSTALLTO
 Volume Serial Number is 4031-E397
 
@@ -177,6 +189,10 @@ To diagnose this issue, navigate to the WER report folder:
 
 ```powershell
 PS C:\Windows\system32> dir C:\ProgramData\Microsoft\Windows\WER\ReportArchive\Critical_PhysicalDisk_b46b8883d892cfa8a26263afca228b17df8133d_00000000_cab_08abc39c
+```
+
+Here's an example of the output:
+```powershell
 Volume in drive C is INSTALLTO
 Volume Serial Number is 4031-E397
 
@@ -260,6 +276,10 @@ Since the resource failed to come online, no dumps were collected, but the Windo
 
 ```powershell
 PS C:\Windows\system32> (Get-ClusterResourceType -Name "Physical Disk").DumpLogQuery
+```
+
+Here's an example of the output:
+```powershell
 <QueryList><Query Id="0"><Select Path="Microsoft-Windows-Kernel-PnP/Configuration">*[System[TimeCreated[timediff(@SystemTime) &lt;= 600000]]]</Select></Query></QueryList>
 <QueryList><Query Id="0"><Select Path="Microsoft-Windows-ReFS/Operational">*[System[TimeCreated[timediff(@SystemTime) &lt;= 600000]]]</Select></Query></QueryList>
 <QueryList><Query Id="0"><Select Path="Microsoft-Windows-Ntfs/Operational">*[System[TimeCreated[timediff(@SystemTime) &lt;= 600000]]]</Select></Query></QueryList>
@@ -310,6 +330,10 @@ To diagnose this issue, navigate to the WER report folder. The folder contains l
 
 ```powershell
 PS C:\Windows\system32> dir C:\ProgramData\Microsoft\Windows\WER\ReportArchive\Critical_PhysicalDisk_64acaf7e4590828ae8a3ac3c8b31da9a789586d4_00000000_cab_1d94712e
+```
+
+Here's an example of the output:
+```powershell
 Volume in drive C is INSTALLTO
 Volume Serial Number is 4031-E397
 
