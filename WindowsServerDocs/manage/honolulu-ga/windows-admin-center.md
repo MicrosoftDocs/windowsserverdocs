@@ -33,7 +33,7 @@ Quick Links: [Documentation](overview.md) | [Give feedback](todo) | [Recent upda
 <table>
 	<tr style="border: 0;">
 		<td style="padding: 10px; border: 0; width:100px">
-			<img src=//ADDICON width="100" alt="">
+			<img src="../media/honolulu-ga/simple-icon.png" width="100" alt="Icon representing app window">
 		</td>
 		<td style="padding: 10px; border: 0;">
 			<b>Simple & lightweight</b> <br/> Familiar tools are streamlined to make management tasks a breeze. Install in under 5 minutes and manage servers in your environment immediately, no target configuration required.
@@ -41,7 +41,7 @@ Quick Links: [Documentation](overview.md) | [Give feedback](todo) | [Recent upda
 	</tr>
     	<tr style="border: 0;">
 		<td style="padding: 10px; border: 0; width:100px">
-			<img src=//ADDICON width="100" alt="">
+			<img src="../media/honolulu-ga/future-icon.png" width="100" alt="Icon representing hybrid cloud">
 		</td>
 		<td style="padding: 10px; border: 0;">
 			<b>Built for the future</b> <br/> Integration with Azure services helps you leverage the power of the hybrid world. Manage Hyper-Converged clusters with powerful yet simple tools.
@@ -49,7 +49,7 @@ Quick Links: [Documentation](overview.md) | [Give feedback](todo) | [Recent upda
 	</tr>
     	<tr style="border: 0;">
 		<td style="padding: 10px; border: 0; width:100px">
-			<img src=//ADDICON width="100" alt="">
+			<img src="../media/honolulu-ga/secure-icon.png" width="100" alt="Icon representing secure server">
 		</td>
 		<td style="padding: 10px; border: 0;">
 			<b>Secure management</b> <br/> Control who can manage servers and get unparalleled insight into the actions administrators perform in your environment.
