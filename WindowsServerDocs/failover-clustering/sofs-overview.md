@@ -2,25 +2,15 @@
 ---
 # Scale-Out File Server for Application Data Overview
 
- 
-
-
-Applies To: Windows Server 2012 R2, Windows Server 2012
+>Applies to Windows Server 2012 R2 and Windows Server 2012.
 
 Scale-Out File Server is a feature that is designed to provide scale-out file shares that are continuously available for file-based server application storage. Scale-out file shares provides the ability to share the same folder from multiple nodes of the same cluster. This scenario focuses on how to plan for and deploy Scale-Out File Server.
 
-<table>
-<tbody>
-<tr class="odd">
-<td><img src="images\Dn303418.b93f8edc-baa1-46ad-aed5-99c8690273c0(WS.11).jpeg" /></td>
-<td>Did you know that Microsoft Azure provides similar functionality in the cloud? Learn more about <a href="http://aka.ms/y03tdi">Microsoft Azure storage solutions</a>.<br />
-<br />
-Create a hybrid storage solution in Microsoft Azure:<br />
-- <a href="http://aka.ms/mk36m5">Migrate to Azure Premium Storage</a><br />
-- <a href="http://aka.ms/fuxxdp">Learn about StorSimple hybrid cloud storage</a></td>
-</tr>
-</tbody>
-</table>
+Did you know that Microsoft Azure provides similar functionality in the cloud? Learn more about [Microsoft Azure storage solutions](https://azure.microsoft.com/en-us/services/storage/).
+
+Create a hybrid storage solution in Microsoft Azure:
+- [Migrate to Azure Premium Storage](https://docs.microsoft.com/en-us/azure/storage/common/storage-migration-to-premium-storage)
+- [Learn about StorSimple hybrid cloud storage](https://www.microsoft.com/en-us/cloud-platform)
 
 You can deploy and configure a clustered file server by using either of the following methods:
 

@@ -154,10 +154,8 @@ To use CSV, your nodes must meet the following requirements:
 
 This section lists planning considerations and recommendations for using CSV in a failover cluster running Windows Server 2012 R2 or Windows Server 2012.
 
-
-> [!IMPORTANT]
-> Ask your storage vendor for recommendations about how to configure your specific storage unit for CSV. If the recommendations from the storage vendor differ from information in this topic, use the recommendations from the storage vendor.
-
+>[!IMPORTANT]
+>Ask your storage vendor for recommendations about how to configure your specific storage unit for CSV. If the recommendations from the storage vendor differ from information in this topic, use the recommendations from the storage vendor.
 
 **In this section**
 
@@ -205,7 +203,7 @@ When you plan the storage configuration for a failover cluster that uses CSV, co
 
 The CSV feature is enabled by default in Failover Clustering. To add a disk to CSV, you must add a disk to the **Available Storage** group of the cluster (if it is not already added), and then add the disk to CSV on the cluster. You can use Failover Cluster Manager or the Failover Clusters Windows PowerShell cmdlets to perform these procedures.
 
-#### To add a disk to Available Storage
+#### Add a disk to Available Storage
 
 1.  In Failover Cluster Manager, in the console tree, expand the name of the cluster, and then expand **Storage**.
 
@@ -221,22 +219,20 @@ The following Windows PowerShell cmdlet or cmdlets perform the same function as 
 
 The following example identifies the disks that are ready to be added to the cluster, and then adds them to the **Available Storage** group.
 
-``` 
-Get-ClusterAvailableDisk | Add-ClusterDisk  
+```PowerShell
+Get-ClusterAvailableDisk | Add-ClusterDisk
 ```
 
 #### To add a disk in Available Storage to CSV
 
-1.  In Failover Cluster Manager, in the console tree, expand the name of the cluster, expand **Storage**, and then click **Disks**.
+1. In Failover Cluster Manager, in the console tree, expand the name of the cluster, expand **Storage**, and then click **Disks**.
 
-2.  Select one or more disks that are assigned to **Available Storage**, right-click the selection, and then click **Add to Cluster Shared Volumes**.
+2. Select one or more disks that are assigned to **Available Storage**, right-click the selection, and then click **Add to Cluster Shared Volumes**.
     
     The disks are now assigned to the **Cluster Shared Volume** group in the cluster. The disks are exposed to each cluster node as numbered volumes (mount points) under the %SystemDisk%ClusterStorage folder. The volumes appear in the CSVFS file system.
 
-
-> [!NOTE]
-> You can rename CSV volumes in the %SystemDisk%ClusterStorage folder.
-
+>[!NOTE]
+>You can rename CSV volumes in the %SystemDisk%ClusterStorage folder.
 
 ![](images\Hh831478.eda3e676-68d6-4a56-90af-dd29179cfd9b(WS.11).jpeg)  ****Windows PowerShell equivalent commands****
 
@@ -244,18 +240,16 @@ The following Windows PowerShell cmdlet or cmdlets perform the same function as 
 
 The following example adds *Cluster Disk 1* in **Available Storage** to CSV on the local cluster.
 
-``` 
-Add-ClusterSharedVolume –Name "Cluster Disk 1"  
+```PowerShell
+Add-ClusterSharedVolume –Name "Cluster Disk 1"
 ```
 
 ## Enable the CSV cache for read-intensive workloads (optional)
 
 The CSV cache provides caching at the block level of read-only unbuffered I/O operations by allocating system memory (RAM) as a write-through cache. (Unbuffered I/O operations are not cached by the cache manager.) This can improve performance for applications such as Hyper-V, which conducts unbuffered I/O operations when accessing a VHD. The CSV cache can boost the performance of read requests without caching write requests. Enabling the CSV cache is also useful for Scale-Out File Server scenarios.
 
-
-> [!NOTE]
-> We recommend that you enable the CSV cache for all clustered Hyper-V and Scale-Out File Server deployments.
-
+>[!NOTE]
+>We recommend that you enable the CSV cache for all clustered Hyper-V and Scale-Out File Server deployments.
 
 By default in Windows Server 2012, the CSV cache is disabled. In Windows Server 2012 R2, the CSV cache is enabled by default. However, you must still allocate the size of the block cache to reserve.
 
@@ -293,30 +287,28 @@ You can monitor the CSV cache in Performance Monitor by adding the counters unde
     
       - For Windows Server 2012 R2:
         
-        ``` 
+        ```PowerShell
         (Get-Cluster).BlockCacheSize = 512  
         ```
     
       - For Windows Server 2012:
         
-        ``` 
+        ```PowerShell
         (Get-Cluster).SharedVolumeBlockCacheSizeInMB = 512  
         ```
 
 3.  In Windows Server 2012, to enable the CSV cache on a CSV named *Cluster Disk 1*, type the following:
     
-    ``` 
-    Get-ClusterSharedVolume "Cluster Disk 1" | Set-ClusterParameter CsvEnableBlockCache 1  
+    ```PowerShell
+    Get-ClusterSharedVolume "Cluster Disk 1" | Set-ClusterParameter CsvEnableBlockCache 1
     ```
 
-
 > [!NOTE]
-> <UL>
-<LI>In Windows Server 2012, you can allocate only 20% of the total physical RAM to the CSV cache. In Windows Server 2012 R2, you can allocate up to 80%. Because Scale-Out File Servers are not typically memory constrained, you can accomplish large performance gains by using the extra memory for the CSV cache. 
-<LI>In Windows Server 2012, to avoid resource contention, you should restart each node in the cluster after you modify the memory that is allocated to the CSV cache. In Windows Server 2012 R2, a restart is no longer required. 
-<LI>After you enable or disable CSV cache on an individual disk, for the setting to take effect, you must take the Physical Disk resource offline and bring it back online. (By default, in Windows Server 2012 R2, the CSV cache is enabled.) 
-<LI>For more information about CSV cache that includes information about performance counters, see the blog post <A href="http://blogs.msdn.com/b/clustering/archive/2012/03/22/10286676.aspx">How to Enable CSV Cache</A>. </LI></UL>
-
+>
+  * In Windows Server 2012, you can allocate only 20% of the total physical RAM to the CSV cache. In Windows Server 2012 R2, you can allocate up to 80%. Because Scale-Out File Servers are not typically memory constrained, you can accomplish large performance gains by using the extra memory for the CSV cache.
+  * To avoid resource contention, you should restart each node in the cluster after you modify the memory that is allocated to the CSV cache. In Windows Server 2012 R2, a restart is no longer required.
+  * After you enable or disable CSV cache on an individual disk, for the setting to take effect, you must take the Physical Disk resource offline and bring it back online. (By default, in Windows Server 2012 R2, the CSV cache is enabled.) 
+  * For more information about CSV cache that includes information about performance counters, see the blog post [How to Enable CSV Cache](https://blogs.msdn.microsoft.com/clustering/2013/07/19/how-to-enable-csv-cache/).
 
 ## Back up CSV
 
@@ -334,18 +326,13 @@ You should consider the following factors when you select a backup application a
 
   - You may require administrative credentials when backing up a failover cluster.
 
+>[!IMPORTANT]
+>Be sure to carefully review what data your backup application backs up and restores, which CSV features it supports, and the resource requirements for the application on each cluster node.
 
-> [!IMPORTANT]
-> Be sure to carefully review what data your backup application backs up and restores, which CSV features it supports, and the resource requirements for the application on each cluster node.
-
-
-
-> [!WARNING]
-> If you need to restore the backup data onto a CSV volume, be aware of the capabilities and limitations of the backup application to maintain and restore application-consistent data across the cluster nodes. For example, with some applications, if the CSV is restored on a node that is different from the node where the CSV volume was backed up, you might inadvertently overwrite important data about the application state on the node where the restore is taking place.
-
+>[!WARNING]
+>If you need to restore the backup data onto a CSV volume, be aware of the capabilities and limitations of the backup application to maintain and restore application-consistent data across the cluster nodes. For example, with some applications, if the CSV is restored on a node that is different from the node where the CSV volume was backed up, you might inadvertently overwrite important data about the application state on the node where the restore is taking place.
 
 ## See also
 
-  - [Failover Clustering](hh831579\(v=ws.11\).md)
-
-  - [Deploy Clustered Storage Spaces](jj822937\(v=ws.11\).md)
+- [Failover Clustering](failover-clustering.md)
+- [Deploy Clustered Storage Spaces](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj822937(v%3dws.11)>)
