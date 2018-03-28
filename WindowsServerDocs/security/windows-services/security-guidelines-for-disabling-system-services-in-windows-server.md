@@ -1580,7 +1580,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |	**Service name**	|	SamSs
 |	**Installation**	|	Always installed
 |	**StartType**	|	Automatic
-|	**Recommendation**	| Do
+|	**Recommendation**	| Do not disable
 |	**Comments**	|	
 |||			
 			
