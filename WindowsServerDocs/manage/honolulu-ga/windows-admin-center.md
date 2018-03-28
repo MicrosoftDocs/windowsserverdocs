@@ -4,29 +4,29 @@ author: haley-rowland
 
 # Windows Admin Center (formerly Project Honolulu)
 
-Remote server management for the modern era
+<p style="font-size:20px"> The future of remote server management </p>
 
 Windows Admin Center is generally available and can be deployed in production environments. Plus it's free!
 
-## [Download now](http://aka.ms/honoluludownload)
-Or [plan Windows Admin Center for your environment](todo)
+## [Download from evaluation center](http://aka.ms/honoluludownload)
+Or [plan Windows Admin Center for your environment](/plan/installation-options.md)
 
 ********************
 
-Quick Links: [Documentation](overview.md) | [Give feedback](todo) | [Recent updates](todo) | [For developers](todo)
+Quick Links: [Documentation](overview.md) | [Give feedback](todo) | [Recent updates](todo) | [For developers](/extend/how-sdk-works.md)
 
 ********************
 //VIDEO GOES HERE
 
-## Windows Admin Center is a lightweight, browser-based GUI toolset for managing servers, clusters, and hyper-converged infrastructure. It's the evolution of familiar in-box managment tools plus so much more.
+### <a name="What is Windows Admin Center?"></a> Windows Admin Center is a lightweight, browser-based GUI toolset for managing servers, clusters, and hyper-converged infrastructure. It's the evolution of familiar in-box managment tools plus so much more.
 
-<table border="0" cellpadding="0" style="text-align:center;margin:auto" width="200px" align="center">
+<table border="0" cellpadding="0" style="text-align:center;margin:auto" width="100%" align="center">
         <tr> 
-          <td> <img src="../media/honolulu-ga/legacy-sod.gif" width="400" align="center">  </td>
-		  <td align= "center"> -->
+          <td cellpadding="5px"> <img src="../media/honolulu-ga/legacy-sod.gif" width="48%" align="center" alt="Video of legacy management tools">  </td>
+		  <td align= "center" vertical-align="center" width="4%"> >
 		  </td>
-		  <td>
-		  <img src="../media/honolulu-ga/server-overview-tool.gif" width="400" align="center"> </td>
+		  <td cellpadding="5px">
+		  <img src="../media/honolulu-ga/server-overview-tool.gif" width="48%" align="center" alt="Video of Windows Admin Center tools"> </td>
         </tr> 
 </table>
 
@@ -61,20 +61,20 @@ Quick Links: [Documentation](overview.md) | [Give feedback](todo) | [Recent upda
 
 ********************
 
-## See how companies use Windows Admin Center to manage servers and clusters in their environments 
+## See how companies use Windows Admin Center in their production environments 
 
 <table align="center" border="0" cellpadding="0">
 	<tr style="border: 0">
 		<td style="padding: 20px; border: 0;" align="center">
-			<img src=//ADDICON width="100" alt=""> <br/>
+			<img src=//ADDICON width="100" alt="Company 1 Logo"> <br/>
             Case study 1
 		</td>
 		<td style="padding: 10px; border: 0;" align="center">
-			<img src=//ADDICON width="100" alt=""> <br/>
+			<img src=//ADDICON width="100" alt="Company 2 Logo"> <br/>
             Case study 2
 		</td>
         <td style="padding: 10px; border: 0;" align="center">
-			<img src=//ADDICON width="100" alt=""> <br/>
+			<img src=//ADDICON width="100" alt="Company 3 Logo"> <br/>
             Case study 3
 		</td>
 	</tr>
@@ -84,11 +84,10 @@ Quick Links: [Documentation](overview.md) | [Give feedback](todo) | [Recent upda
 
 ## Related products
 
-Windows Admin Center is designed for managing a single server or cluster. It is intended to complement and not replace other Microsoft monitoring and management solutions, such as System Center and Operations Management Suite.
+Windows Admin Center is designed for managing a single server or cluster. It complements but does not replace existing Microsoft monitoring and management solutions, such as System Center, Operations Management Suite, Intune, or Azure Stack. 
 
-[System Center](https://www.microsoft.com/cloud-platform/system-center) is an on-premises datacenter management solution for deployment, configuration, management, monitoring of your entire datacenter. System Center lets you see the status of all the machines in your environment, while Windows Admin Center lets you drill down into a specific server to manage or troubleshoot it with more granular tools.
+[Learn how Windows Admin Center complements other Microsoft management solutions.](/understand/related-management.md)
 
-[Operations Management Suite](https://www.microsoft.com/cloud-platform/operations-management-suite) is a collection of management services entirely hosted in Azure that can be used to manage servers both in the cloud and on-premises. Operations Mangament Suite allows you to monitor and analyze resource performance, automate manual processes. Windows Admin Center provides additional tools at the single-server/single-cluster level.
 
 ********************
 <!-- taken from w3schools -->
