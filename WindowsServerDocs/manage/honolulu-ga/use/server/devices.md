@@ -2,8 +2,6 @@
 author: nwashburn-ms
 ---
 
-<b><a href="../../overview.md">Windows Admin Center</a></b> > <a href="../../overview.md">Use</a> > <a href="../manage-servers.md">Server Manager</a> > Devices
-
 # Devices
 
 ## Description
@@ -13,6 +11,11 @@ author: nwashburn-ms
 ## Features
 
 The following features are supported in Devices:
+
+- Browse and search devices
+- View device details
+- Disable a device
+- Update driver on a device
 
 ## Proposed Features
 

@@ -2,8 +2,6 @@
 author: nwashburn-ms
 ---
 
-<b><a href="../../overview.md">Windows Admin Center</a></b> > <a href="../../overview.md">Use</a> > <a href="../manage-servers.md">Server Manager</a> > Roles and Features
-
 # Roles and Features
 
 ## Description
@@ -13,6 +11,11 @@ author: nwashburn-ms
 ## Features
 
 The following features are supported in Roles and Features:
+
+- Browse list of roles and features on a server
+- View role or feature details
+- Install a role or feature
+- Remove a role or feature
 
 ## Proposed Features
 

@@ -2,8 +2,6 @@
 author: nwashburn-ms
 ---
 
-<b><a href="../../overview.md">Windows Admin Center</a></b> > <a href="../../overview.md">Use</a> > <a href="../manage-servers.md">Server Manager</a> > Events
-
 # Events
 
 ## Description
@@ -13,6 +11,11 @@ author: nwashburn-ms
 ## Features
 
 The following features are supported in Events:
+
+- Browse and search events
+- View event details
+- Clear events from the log
+- Export events from the log
 
 ## Proposed Features
 

@@ -2,8 +2,6 @@
 author: nwashburn-ms
 ---
 
-<b><a href="../overview.md">Windows Admin Center</a></b> > <a href="../overview.md">Use</a> > Hyper-Converged Cluster Manager
-
 # Manage Hyper-Converged Clusters with Hyper-Converged Cluster Manager
 
 [Content goes here]

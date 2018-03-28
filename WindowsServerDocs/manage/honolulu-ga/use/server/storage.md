@@ -2,8 +2,6 @@
 author: nwashburn-ms
 ---
 
-<b><a href="../../overview.md">Windows Admin Center</a></b> > <a href="../../overview.md">Use</a> > <a href="../manage-servers.md">Server Manager</a> > Storage
-
 # Storage
 
 ## Description
@@ -13,6 +11,18 @@ author: nwashburn-ms
 ## Features
 
 The following features are supported in Storage:
+
+- Browse and search existing disks on a server
+- View disk details
+- Create a volume
+- Initialize a disk
+- Create, attach, and detach a virtual hard disk (VHD)
+- Take a disk offline
+- Format a volume
+- Resize a volume
+- Edit volume properties
+- Delete a volume
+- Install Quota Management
 
 ## Proposed Features
 

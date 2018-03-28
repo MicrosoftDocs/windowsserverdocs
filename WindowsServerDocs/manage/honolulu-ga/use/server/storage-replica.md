@@ -2,8 +2,6 @@
 author: nwashburn-ms
 ---
 
-<b><a href="../../overview.md">Windows Admin Center</a></b> > <a href="../../overview.md">Use</a> > <a href="../manage-servers.md">Server Manager</a> > Storage Replica
-
 # Storage Replica
 
 ## Description
