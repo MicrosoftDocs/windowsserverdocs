@@ -2,8 +2,6 @@
 author: nwashburn-ms
 ---
 
-<b><a href="../../overview.md">Windows Admin Center</a></b> > <a href="../../overview.md">Use</a> > <a href="../manage-failover-clusters.md">Failover Cluster Manager</a> > Overview
-
 # Failover Cluster Manager Overview
 
 ## Description

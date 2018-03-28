@@ -2,8 +2,6 @@
 author: daniellee-msft
 ---
 
-<a href="../overview.md">Windows Admin Center</a> > <a href="../overview.md">Configure</a> > Install and Manage Extensions
-
 # Install and Manage Extensions
 
 [Content goes here]

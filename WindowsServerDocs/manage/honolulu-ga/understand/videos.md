@@ -2,8 +2,6 @@
 author: nwashburn-ms
 ---
 
-<a href="../overview.md">Honolulu</a> > <a href="../overview.md">Understand</a> > Honolulu Videos
-
-# Honolulu Videos
+# Windows Admin Center Videos
 
 [Content goes here]

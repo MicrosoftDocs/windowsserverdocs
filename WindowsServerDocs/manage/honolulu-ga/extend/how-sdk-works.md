@@ -2,8 +2,6 @@
 author: nwashburn-ms
 ---
 
-<a href="../overview.md">Honolulu</a> > <a href="../overview.md">Extend</a> > Honolulu Extensibility and SDK
-
-#  Honolulu Extensibility and SDK
+# How Extensibility and SDK works in Windows Admin Center
 
 [Content goes here]
