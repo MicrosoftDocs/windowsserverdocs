@@ -8,7 +8,7 @@ The future of remote server management
 
 Windows Admin Center is generally available and can be deployed in production environments. Plus it's free!
 
-## [Download from evaluation center](http://aka.ms/honoluludownload)
+### [Download from evaluation center](http://aka.ms/honoluludownload)
 Or [plan Windows Admin Center for your environment](/plan/installation-options.md)
 
 ********************
@@ -34,9 +34,9 @@ Quick Links: [Documentation](overview.md) | [Give feedback](todo) | [Recent upda
 		  <img src="../media/honolulu-ga/server-overview-tool.gif"  alt="Video of Windows Admin Center tools"> </td>
         </tr> 
 </table> -->
-
-| <img src="../media/honolulu-ga/simple-icon.png" width="100" alt="Icon representing app window">  | <b>Simple & lightweight</b> <br/> Familiar tools are streamlined to make management tasks a breeze. Install in under 5 minutes and manage servers in your environment immediately, no target configuration required.  |
+|   |   |
 |:-:|:--|
+| <img src="../media/honolulu-ga/simple-icon.png" width="100" alt="Icon representing app window">  | <b>Simple & lightweight</b> <br/> Familiar tools are streamlined to make management tasks a breeze. Install in under 5 minutes and manage servers in your environment immediately, no target configuration required.  |
 | <img src="../media/honolulu-ga/future-icon.png" width="100" alt="Icon representing hybrid cloud">  | <b>Built for the future</b> <br/> Integration with Azure services helps you leverage the power of the hybrid world. Manage Hyper-Converged clusters with powerful yet simple tools.  |
 | <img src="../media/honolulu-ga/secure-icon.png" width="100" alt="Icon representing secure server">  | <b>Secure management</b> <br/> Control who can manage servers and get unparalleled insight into the actions administrators perform in your environment.  |
 
