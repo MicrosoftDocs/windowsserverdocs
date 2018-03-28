@@ -2,8 +2,6 @@
 author: nwashburn-ms
 ---
 
-<b><a href="../../overview.md">Windows Admin Center</a></b> > <a href="../../overview.md">Use</a> > <a href="../manage-servers.md">Server Manager</a> > Files
-
 # Files
 
 ## Description
@@ -13,6 +11,16 @@ author: nwashburn-ms
 ## Features
 
 The following features are supported in Files:
+
+- Browse filese and folders
+- Search for a file or folder
+- Create a new folder
+- Delete a file or folder
+- Download a file or folder
+- Upload a file or folder
+- Rename a file or folder
+- Extract a zip file
+- View file or folder properties
 
 ## Proposed Features
 

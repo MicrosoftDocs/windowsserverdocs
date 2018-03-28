@@ -2,8 +2,6 @@
 author: nwashburn-ms
 ---
 
-<b><a href="../../overview.md">Windows Admin Center</a></b> > <a href="../../overview.md">Use</a> > <a href="../manage-servers.md">Server Manager</a> > Network
-
 # Network
 
 ## Description
@@ -13,6 +11,10 @@ author: nwashburn-ms
 ## Features
 
 The following features are supported in Network:
+
+- Browse and search existing network adapters
+- View details of a network adapter
+- Edit properties of a network adapter
 
 ## Proposed Features
 

@@ -2,8 +2,6 @@
 author: nwashburn-ms
 ---
 
-<b><a href="../../overview.md">Windows Admin Center</a></b> > <a href="../../overview.md">Use</a> > <a href="../manage-servers.md">Server Manager</a> > Processes
-
 # Processes
 
 ## Description
@@ -13,6 +11,13 @@ author: nwashburn-ms
 ## Features
 
 The following features are supported in Processes:
+
+- Browse and search for running processes
+- View process details
+- Start a process
+- End a process
+- Create a process dump
+- Find process handles
 
 ## Proposed Features
 

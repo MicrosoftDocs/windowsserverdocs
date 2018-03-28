@@ -2,8 +2,6 @@
 author: nwashburn-ms
 ---
 
-<b><a href="../../overview.md">Windows Admin Center</a></b> > <a href="../../overview.md">Use</a> > <a href="../manage-servers.md">Server Manager</a> > Firewall
-
 # Firewall
 
 ## Description
@@ -13,6 +11,16 @@ author: nwashburn-ms
 ## Features
 
 The following features are supported in Firewall:
+
+- View an overview of firewall settings
+- View incoming firewall rules
+- View outgoing firewall rules
+- Search firewall rules
+- View firewall rule details
+- Create a new firewall rule
+- Enable or disable a firewall rule
+- Delete a firewall rule
+- Edit the properties of a firewall rule
 
 ## Proposed Features
 

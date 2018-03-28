@@ -2,8 +2,6 @@
 author: nwashburn-ms
 ---
 
-<b><a href="../../overview.md">Windows Admin Center</a></b> > <a href="../../overview.md">Use</a> > <a href="../manage-servers.md">Server Manager</a> > Overview
-
 # Server Manager Overview
 
 ## Description
@@ -14,6 +12,14 @@ author: nwashburn-ms
 
 The following features are supported in Server Manager Overview:
 
+- View server details
+- View CPU activity
+- View memory activity
+- View network activity
+- Restart server
+- Shutdown server
+- Enable disk metrics on server
+- Edit Computer ID on server
 
 ## Proposed Features
 

@@ -2,8 +2,6 @@
 author: nwashburn-ms
 ---
 
-<b><a href="../../overview.md">Windows Admin Center</a></b> > <a href="../../overview.md">Use</a> > <a href="../manage-servers.md">Server Manager</a> > PowerShell
-
 # PowerShell
 
 ## Description
@@ -13,6 +11,9 @@ author: nwashburn-ms
 ## Features
 
 The following features are supported in PowerShell:
+
+- Create an interactive PowerShell session on the server
+- Disconnect from PowerShell session on the server
 
 ## Proposed Features
 

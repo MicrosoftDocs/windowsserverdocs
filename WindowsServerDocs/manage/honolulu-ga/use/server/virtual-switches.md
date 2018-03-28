@@ -2,8 +2,6 @@
 author: nwashburn-ms
 ---
 
-<b><a href="../../overview.md">Windows Admin Center</a></b> > <a href="../../overview.md">Use</a> > <a href="../manage-servers.md">Server Manager</a> > Virtual Switches
-
 # Virtual Switches
 
 ## Description
@@ -13,6 +11,12 @@ author: nwashburn-ms
 ## Features
 
 The following features are supported in Virtual Switches:
+
+- Browse and search Virtual Switches on a server
+- Create a new Virtual Switch
+- Rename a Virtual Switch
+- Delete an existing Virtual Switch
+- Edit the properties of a Virtual Switch
 
 ## Proposed Features
 

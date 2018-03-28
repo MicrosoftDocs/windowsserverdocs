@@ -2,8 +2,6 @@
 author: nwashburn-ms
 ---
 
-<b><a href="../../overview.md">Windows Admin Center</a></b> > <a href="../../overview.md">Use</a> > <a href="../manage-servers.md">Server Manager</a> > Services
-
 # Services
 
 ## Description
@@ -13,6 +11,12 @@ author: nwashburn-ms
 ## Features
 
 The following features are supported in Services:
+
+- Browse and search services on a server
+- View details of a service
+- Start a service
+- Pause a service
+- Edit the properties of a service
 
 ## Proposed Features
 

@@ -2,8 +2,6 @@
 author: nwashburn-ms
 ---
 
-<b><a href="../../overview.md">Windows Admin Center</a></b> > <a href="../../overview.md">Use</a> > <a href="../manage-servers.md">Server Manager</a> > Remote Desktop
-
 # Remote Desktop
 
 ## Description
@@ -13,6 +11,10 @@ author: nwashburn-ms
 ## Features
 
 The following features are supported in Remote Desktop:
+
+- Start an interactive remote desktop session
+- Disconnect from a remote desktop session
+- Send Ctrl+Alt+Del to a remote desktop session
 
 ## Proposed Features
 
