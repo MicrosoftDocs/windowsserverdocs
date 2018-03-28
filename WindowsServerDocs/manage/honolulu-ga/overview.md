@@ -64,7 +64,7 @@ Welcome to **Windows Admin Center**!
             <li><a href="use/launch.md">Launch <b>Windows Admin Center</b></a>
             <li><a href="use/manage-servers.md">Manage servers</a>
             <li><a href="use/manage-hyper-converged.md">Manage Hyper-Converged Infrastructure</a>
-            <li><a href="use/manage_failover-clusters.md">Manage Failover Clusters</b></a>
+            <li><a href="use/manage_failover-clusters.md">Manage Failover Clusters</a>
             <li><a href="use/troubleshooting.md">Common troubleshooting steps</a>
             <li><a href="use/known-issues.md">Known issues</a>
             </ul>
