@@ -41,6 +41,9 @@ To install the web client for the first time, follow these steps:
     ```PowerShell
     Install-Module -Name PowerShellGet -Force
     ```
+    
+    >[!IMPORTANT]
+    >You'll need to restart PowerShell before the update can take effect, otherwise the module may not work.
 
 1. Install the Remote Desktop web client management PowerShell module from the PowerShell gallery with this cmdlet:
     ```PowerShell
