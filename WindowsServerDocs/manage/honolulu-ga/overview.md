@@ -30,7 +30,7 @@ Welcome to **Windows Admin Center**!
             <ul>
             <li><a href="plan/installation-options.md">What type of installation is right for you?</a>
             <li><a href="plan/user-access-options.md">User access options</a>
-            <li><a href="plan/securing.md">Securing your environment</b></a>
+            <li><a href="plan/securing.md">Securing your environment</a>
             <li><a href="plan/making-accessible.md">Making accessible from anywhere</a>
             <li><a href="plan/high-availability.md">Redundancy with High Availability</a>
             <li><a href="plan/azure-integration.md">What Azure integration options are there?</a>
