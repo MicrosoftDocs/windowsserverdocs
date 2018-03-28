@@ -4,8 +4,6 @@ author: haley-rowland
 
 # Windows Admin Center (formerly Project Honolulu)
 
-The future of remote server management
-
 Windows Admin Center is generally available and can be deployed in production environments. Plus it's free!
 
 ### [Download from evaluation center](http://aka.ms/honoluludownload)
@@ -20,7 +18,7 @@ Quick Links: [Documentation](overview.md) | [Give feedback](todo) | [Recent upda
 
 ### <a name="What is Windows Admin Center?"></a> Windows Admin Center is a lightweight, browser-based GUI toolset for managing servers, clusters, and hyper-converged infrastructure. It's the evolution of familiar in-box managment tools plus so much more.
 
-| <img src="../media/honolulu-ga/legacy-sod.gif" alt="Video of legacy management tools">  | -->  | <img src="../media/honolulu-ga/server-overview-tool.gif"  alt="Video of Windows Admin Center tools">  |
+| <img src="../media/honolulu-ga/legacy-sod.gif" alt="Video of legacy management tools">  | <img src="../media/honolulu-ga/arrow.png" alt="right arrow"> | <img src="../media/honolulu-ga/server-overview-tool.gif"  alt="Video of Windows Admin Center tools">  |
 |:-:|:-:|:-:|
 
 <!-- 
@@ -39,8 +37,6 @@ Quick Links: [Documentation](overview.md) | [Give feedback](todo) | [Recent upda
 | <img src="../media/honolulu-ga/simple-icon.png" width="100" alt="Icon representing app window">  | <b>Simple & lightweight</b> <br/> Familiar tools are streamlined to make management tasks a breeze. Install in under 5 minutes and manage servers in your environment immediately, no target configuration required.  |
 | <img src="../media/honolulu-ga/future-icon.png" width="100" alt="Icon representing hybrid cloud">  | <b>Built for the future</b> <br/> Integration with Azure services helps you leverage the power of the hybrid world. Manage Hyper-Converged clusters with powerful yet simple tools.  |
 | <img src="../media/honolulu-ga/secure-icon.png" width="100" alt="Icon representing secure server">  | <b>Secure management</b> <br/> Control who can manage servers and get unparalleled insight into the actions administrators perform in your environment.  |
-
-
 
 <!-- 
 
@@ -97,9 +93,12 @@ Quick Links: [Documentation](overview.md) | [Give feedback](todo) | [Recent upda
             Case study 3
 		</td>
 	</tr>
-</table> -->
+</table>
 
 ********************
+ -->
+
+
 
 ## Related products
 
@@ -112,7 +111,8 @@ Windows Admin Center is designed for managing a single server or cluster. It com
 <!-- taken from w3schools -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-Follow us:
+Follow us: [Twitter](https://twitter.com/servermgmt) | [Server Mangement Blog](https://blogs.technet.microsoft.com/servermanagement/)
+
 <a href="https://twitter.com/servermgmt" class="fa fa-twitter"></a>
 <a href="https://blogs.technet.microsoft.com/servermanagement/" class="fa fa-rss"></a>
 <style>
