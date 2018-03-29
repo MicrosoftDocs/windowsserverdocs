@@ -27,7 +27,7 @@ After installation is complete, your browser will automatically be refreshed and
 
 **NOTE:** Windows Admin Center does not currently notify you when an update is available for a previously installed extension.
 
-**NOTE:** Windows Admin Center does not currently support upgrade of extensions. You will need to uninstall the previous version and install the newer version yourself.
+**NOTE:** Windows Admin Center does not currently support upgrade of extensions. You will need to uninstall the previous version and install the newer version manually.
 
 ## Installing extensions from a different feed ##
 
@@ -39,7 +39,9 @@ You can configure Windows Admin Center to show extensions from any NuGet feed th
 4. Click **Save**. You may encounter an error that the gateway must run in elevated mode to make this change and then will be presented with a UAC elevation prompt. If you provide consent, WAC will be opened in a new browser tab in elevated mode. Repeat these steps in the elevated session to change the feed.
 5. Click **Close**.
 
-The **Available Extensions** list will show extensions from the new feed or file share.
+The **Available Extensions** list will show extensions from the new feed or file share. 
+
+Since Windows Admin Center currently supports a single feed, you will no longer see extensions from the Windows Admin Center feed if you change the feed URI to a different location. In order to configure to the Windows Admin Center feed again, change the feed URI to be blank and click **Save**.
 
 ## Uninstalling an extension ##
 
