@@ -6,7 +6,7 @@ author: haley-rowland
 
 Windows Admin Center is generally available and can be deployed in production environments. Plus it's free!
 
-### [Download from evaluation center](http://aka.ms/honoluludownload)
+### [Download now](http://aka.ms/honolulucurrent)
 Or [plan Windows Admin Center for your environment](/plan/installation-options.md)
 
 ********************
@@ -24,7 +24,7 @@ Quick links: [Documentation](overview.md) | [Give feedback](todo) | [Recent upda
 
 <table border="0" cellpadding="0" style="text-align:center;margin:auto" width="100%" align="center">
         <tr> 
-          <td cellpadding="5px" width="48%" align="center"> <img src="../media/honolulu-ga/legacy-sod.gif" alt="Video of legacy management tools">  </td>
+          <td cellpadding="5px" width="48%" align="center"> <img src="../media/honolulu-ga/legacy-sod.gif" loop="0" alt="Video of legacy management tools">  </td>
 		  <td align= "center" valign="center" width="4%"> <img src="../media/honolulu-ga/arrow.png" alt="right arrow">
 		  </td>
 		  <td cellpadding="5px" width="48%" align="center">
@@ -116,7 +116,7 @@ Windows Admin Center is designed for managing a single server or cluster. It com
         <td style="padding: 10px; border: 0;" align="center"><a target="_blank" class="mscom-link blogs-follow-link" title="Follow us on Blogs" aria-label="Follow us on Blogs" data-info="Blogs" href="https://blogs.technet.microsoft.com/servermanagement/"><picture><source srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw" media="(min-width:0)"><img srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw" alt="Follow us on Blogs" src="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw"></picture></a>
         </td> -->
 
-Follow us &nbsp; <a target="_blank" class="mscom-link twitter-follow-link" title="Follow us on Twitter" aria-label="Follow us on Twitter" data-info="Twitter" href="https://twitter.com/servermgmt"><picture><source srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOolR" media="(min-width:0)"><img srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOolR" alt="Follow us on Twitter" src="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOolR"></picture></a>&nbsp; <a target="_blank" class="mscom-link blogs-follow-link" title="Follow us on Blogs" aria-label="Follow us on Blogs" data-info="Blogs" href="https://blogs.technet.microsoft.com/servermanagement/"><picture><source srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw" media="(min-width:0)"><img srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw" alt="Follow us on Blogs" src="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw"></picture></a>
+Follow us: &nbsp; <a target="_blank" class="mscom-link twitter-follow-link" title="Follow us on Twitter" aria-label="Follow us on Twitter" data-info="Twitter" href="https://twitter.com/servermgmt"><picture><source srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOolR" media="(min-width:0)"><img srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOolR" alt="Follow us on Twitter" src="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOolR"></picture></a>&nbsp; <a target="_blank" class="mscom-link blogs-follow-link" title="Follow us on Blogs" aria-label="Follow us on Blogs" data-info="Blogs" href="https://blogs.technet.microsoft.com/servermanagement/"><picture><source srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw" media="(min-width:0)"><img srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw" alt="Follow us on Blogs" src="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw"></picture></a>
 
 <!-- 
 <li class=" mr-1"><a target="_blank" class="mscom-link youtube-user-follow-link" title="Follow us on YouTube" aria-label="Follow us on YouTube" data-info="YouTube-User" href="https://www.youtube.com/user/MSCloudOS"><picture><source srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyx" media="(min-width:0)"><img srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyx" alt="Follow us on YouTube" src="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyx"></picture></a></li> -->
