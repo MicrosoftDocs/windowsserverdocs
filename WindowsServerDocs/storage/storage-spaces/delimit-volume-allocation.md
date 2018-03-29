@@ -5,7 +5,7 @@ ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 03/26/2018
+ms.date: 03/29/2018
 ---
 
 # Delimit the allocation of volumes in Storage Spaces Direct
@@ -157,6 +157,8 @@ Note that Server1 does not contain slabs of *MyVolume* anymore – instead, Serv
 
 ## Best practices
 
+Here are the best practices to follow when using delimited volume allocation:
+
 ### Choose three servers
 
 Delimit each three-way mirror volume to three servers, not more.
@@ -167,7 +169,7 @@ Balance how much storage is allocated to each server, accounting for volume size
 
 ### Every delimited allocation unique
 
-Make each volume's allocation unique, meaning it does not share *all* its servers with another volume (some overlap is okay). With N servers, there are "N choose 3" unique combinations – here's what that means for some common cluster sizes:
+To maximize fault tolerance, make each volume's allocation unique, meaning it does not share *all* its servers with another volume (some overlap is okay). With N servers, there are "N choose 3" unique combinations – here's what that means for some common cluster sizes:
 
 | Number of servers (N) | Number of unique delimited allocations (N choose 3) |
 |-----------------------|-----------------------------------------------------|
@@ -179,11 +181,11 @@ Make each volume's allocation unique, meaning it does not share *all* its server
    > [!TIP]
    > Consider this helpful review of [combinatorics and choose notation](https://betterexplained.com/articles/easy-permutations-and-combinations/).
 
-Here's an example that maximizes fault tolerance – every has a unique delimited allocation:
+Here's an example that maximizes fault tolerance – every volume has a unique delimited allocation:
 
 ![unique-allocation](media/delimit-volume-allocation/unique-allocation.png)
 
-Conversely, in the next example, the first three volumes use the same delimited allocation (to servers 1, 2, and 3) and the last three volumes use the same delimited allocation (to servers 4, 5, and 6). This doesn't maximize fault tolerance: if three servers fail, **multiple** volumes could go offline and become inaccessible.
+Conversely, in the next example, the first three volumes use the same delimited allocation (to servers 1, 2, and 3) and the last three volumes use the same delimited allocation (to servers 4, 5, and 6). This doesn't maximize fault tolerance: if three servers fail, multiple volumes could go offline and become inaccessible at once.
 
 ![non-unique-allocation](media/delimit-volume-allocation/non-unique-allocation.png)
 
@@ -208,7 +210,7 @@ If three or more failures occur at once but at least half of servers and drives 
 
 For simplicity, assume volumes are independently and identically distributed (IID) according to the best practices above, and that enough unique combinations are available for every volume’s allocation to be unique. The probability that any given volume survives is also the expected fraction of overall storage that survives by linearity of expectation. 
 
-Given **N** servers of which **F** have failures, a volume allocated to **3** of them goes offline if-and-only-if all **3** are among the **F** with failures. There are **N choose F** ways for **F** failures to occur, of which **F choose 3** result in the volume going offline and becoming inaccessible. The probability can be expressed as:
+Given **N** servers of which **F** have failures, a volume allocated to **3** of them goes offline if-and-only-if all **3** are among the **F** with failures. There are **(N choose F)** ways for **F** failures to occur, of which **(F choose 3)** result in the volume going offline and becoming inaccessible. The probability can be expressed as:
 
 ![P_offline = Fc3 / NcF](media/delimit-volume-allocation/probability-volume-offline.png)
 
@@ -254,13 +256,13 @@ The following tables evaluate the probability for some common cluster sizes and 
 
 ## Frequently asked questions
 
-### Can I use regular and delimited volumes together?
+### Can I delimit some volumes but not others?
 
 Yes. You can choose per-volume whether or not to delimit allocation.
 
 ### Does delimited allocation change how drive replacement works?
 
-No. Drive replacement works the same with delimited allocation as with regular allocation.
+No, it's the same as with regular allocation.
 
 ## See also
 
