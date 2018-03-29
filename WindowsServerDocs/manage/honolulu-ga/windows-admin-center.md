@@ -23,11 +23,11 @@ Quick links: [Documentation](overview.md) | [Give feedback](todo) | [Recent upda
 | <img src="../media/honolulu-ga/legacy-sod.gif" alt="Video of legacy management tools">  | <img src="../media/honolulu-ga/arrow.png" alt="right arrow" align="middle"> | <img src="../media/honolulu-ga/server-overview-tool.gif"  alt="Video of Windows Admin Center tools">  | -->
 
 <table border="0" cellpadding="0" style="text-align:center;margin:auto" width="100%" align="center">
-        <tr> 
-          <td cellpadding="5px" width="48%" align="center"> <img src="../media/honolulu-ga/legacy-sod.gif" loop="0" alt="Video of legacy management tools">  </td>
-		  <td align= "center" valign="center" width="4%"> <img src="../media/honolulu-ga/arrow.png" alt="right arrow">
+        <tr height="300px"> 
+          <td cellpadding="5px" width="48%" align="center" style="vertical-align:middle"> <img src="../media/honolulu-ga/legacy-sod.gif" loop="0" alt="Video of legacy management tools">  </td>
+		  <td align= "center" style="vertical-align:middle" width="4%"> <img src="../media/honolulu-ga/arrow.png" alt="right arrow">
 		  </td>
-		  <td cellpadding="5px" width="48%" align="center">
+		  <td cellpadding="5px" width="48%" align="center" style="vertical-align:middle">
 		  <img src="../media/honolulu-ga/server-overview-tool.gif"  alt="Video of Windows Admin Center tools"> </td>
         </tr> 
 </table>
