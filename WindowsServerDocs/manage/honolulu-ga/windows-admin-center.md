@@ -24,7 +24,7 @@ Quick links: [Documentation](overview.md) | [Give feedback](todo) | [Recent upda
 |:-:|:-:|:-:|
 | <img src="../media/honolulu-ga/legacy-sod.gif" alt="Video of legacy management tools">  | <img src="../media/honolulu-ga/arrow.png" alt="right arrow" align="middle"> | <img src="../media/honolulu-ga/server-overview-tool.gif"  alt="Video of Windows Admin Center tools">  | -->
 
-<table border="0" cellpadding="0" style="text-align:center;margin:auto;width:100%" width="100%">
+<table border="0" cellpadding="0" style="text-align:center;margin:auto;width:100%" width="50%">
         <tr> 
           <td style="vertical-align:middle;width:48%;padding:5px"> <img src="../media/honolulu-ga/legacy-sod.gif" alt="Video of legacy management tools">  </td>
 		  <td style="vertical-align:middle;width:4%;padding:5px" > <img src="../media/honolulu-ga/arrow.png" alt="right arrow">
