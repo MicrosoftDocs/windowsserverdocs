@@ -6,7 +6,7 @@ author: haley-rowland
 
 Windows Admin Center is generally available and can be deployed in production environments. Plus it's free!
 
-### [Download now](http://aka.ms/honolulucurrent)
+## [Download now](http://aka.ms/honolulucurrent)
 Or [plan Windows Admin Center for your environment](/plan/installation-options.md)
 
 ********************
@@ -16,18 +16,18 @@ Quick links: [Documentation](overview.md) | [Give feedback](todo) | [Recent upda
 ********************
 //VIDEO GOES HERE
 
-### <a name="What is Windows Admin Center?"></a> Windows Admin Center is a lightweight, browser-based GUI toolset for managing servers, clusters, and hyper-converged infrastructure. It's the evolution of familiar in-box managment tools plus so much more.
+### Windows Admin Center is a lightweight, browser-based GUI toolset for managing servers, clusters, and hyper-converged infrastructure. It's the evolution of familiar in-box managment tools plus so much more.
 
 <!-- |   |   |   |
 |:-:|:-:|:-:|
 | <img src="../media/honolulu-ga/legacy-sod.gif" alt="Video of legacy management tools">  | <img src="../media/honolulu-ga/arrow.png" alt="right arrow" align="middle"> | <img src="../media/honolulu-ga/server-overview-tool.gif"  alt="Video of Windows Admin Center tools">  | -->
 
-<table border="0" cellpadding="0" style="text-align:center;margin:auto" width="100%" align="center">
-        <tr height="300px"> 
-          <td cellpadding="5px" width="48%" align="center" style="vertical-align:middle"> <img src="../media/honolulu-ga/legacy-sod.gif" loop="0" alt="Video of legacy management tools">  </td>
-		  <td align= "center" style="vertical-align:middle" width="4%"> <img src="../media/honolulu-ga/arrow.png" alt="right arrow">
+<table border="0" cellpadding="0" style="text-align:center;margin:auto;width:100%">
+        <tr> 
+          <td style="vertical-align:middle;width:48%;padding:5px"> <img src="../media/honolulu-ga/legacy-sod.gif" loop="0" alt="Video of legacy management tools">  </td>
+		  <td style="vertical-align:middle;width:4%;padding:5px" > <img src="../media/honolulu-ga/arrow.png" alt="right arrow">
 		  </td>
-		  <td cellpadding="5px" width="48%" align="center" style="vertical-align:middle">
+		  <td style="vertical-align:middle;width:48%;padding:5px">
 		  <img src="../media/honolulu-ga/server-overview-tool.gif"  alt="Video of Windows Admin Center tools"> </td>
         </tr> 
 </table>
