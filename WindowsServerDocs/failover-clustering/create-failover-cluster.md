@@ -46,7 +46,7 @@ Additionally, verify the following account requirements:
 
 You must install the Failover Clustering feature on every server that you want to add as a failover cluster node.
 
-#### To install the Failover Clustering feature
+### Install the Failover Clustering feature
 
 1. Start Server Manager.
 2. On the **Manage** menu, click **Add Roles and Features**.
@@ -73,7 +73,7 @@ Before you create the failover cluster, we strongly recommend that you validate 
 >[!NOTE]
 >You must have at least two nodes to run all tests. If you have only one node, many of the critical storage tests do not run.
 
-#### To run cluster validation tests
+### Run cluster validation tests
 
 1. On a computer that has the Failover Cluster Management Tools installed from the Remote Server Administration Tools, or on a server where you installed the Failover Clustering feature, start Failover Cluster Manager. To do this on a server, start Server Manager, and then on the **Tools** menu, click **Failover Cluster Manager**.
 2. In the **Failover Cluster Manager** pane, under **Management**, click **Validate Configuration**.
@@ -85,7 +85,7 @@ Before you create the failover cluster, we strongly recommend that you validate 
     The Validating page displays the status of the running tests.
 7. On the **Summary** page, do either of the following:
     
-      - If the results indicate that the tests completed successfully and the configuration is suited for clustering, and you want to create the cluster immediately, make sure that the **Create the cluster now using the validated nodes** check box is selected, and then click **Finish**. Then, continue to step 4 of the [Create the failover cluster]() procedure.
+      - If the results indicate that the tests completed successfully and the configuration is suited for clustering, and you want to create the cluster immediately, make sure that the **Create the cluster now using the validated nodes** check box is selected, and then click **Finish**. Then, continue to step 4 of the [Create the failover cluster](#create-the-failover-cluster) procedure.
       - If the results indicate that there were warnings or failures, click **View Report** to view the details and determine which issues must be corrected. Realize that a warning for a particular validation test indicates that this aspect of the failover cluster can be supported, but might not meet the recommended best practices.
         
         >[!NOTE]
@@ -96,9 +96,7 @@ Before you create the failover cluster, we strongly recommend that you validate 
 
 ## Create the failover cluster
 
-To complete this step, make sure that the user account that you log on as meets the requirements that are outlined in the [Verify the prerequisites]() section of this topic.
-
-#### To create the failover cluster
+To complete this step, make sure that the user account that you log on as meets the requirements that are outlined in the [Verify the prerequisites](#verify-the-prerequisites) section of this topic.
 
 1. Start Server Manager.
 2. On the **Tools** menu, click **Failover Cluster Manager**.
@@ -109,8 +107,8 @@ To complete this step, make sure that the user account that you log on as meets 
 5. If the **Select Servers** page appears, in the **Enter name** box, enter the NetBIOS name or the fully qualified domain name of a server that you plan to add as a failover cluster node, and then click **Add**. Repeat this step for each server that you want to add. To add multiple servers at the same time, separate the names by a comma or a semicolon. For example, enter the names in the format *server1.contoso.com; server2.contoso.com*. When you are finished, click **Next**.
     
     >[!NOTE]
-    >If you chose to create the cluster immediately after running validation in the procedure <A href="">Validate the configuration</A>, you will not see the **Select Servers** page. The nodes that were validated are automatically added to the Create Cluster Wizard so that you do not have to enter them again.
-6. If you skipped validation earlier, the **Validation Warning** page appears. We strongly recommend that you run cluster validation. Only clusters that pass all validation tests are supported by Microsoft. To run the validation tests, click **Yes**, and then click **Next**. Complete the Validate a Configuration Wizard as described in the procedure [Validate the configuration]().
+    >If you chose to create the cluster immediately after running validation in the [configuration validating procedure](#validate-the-configuration), you will not see the **Select Servers** page. The nodes that were validated are automatically added to the Create Cluster Wizard so that you do not have to enter them again.
+6. If you skipped validation earlier, the **Validation Warning** page appears. We strongly recommend that you run cluster validation. Only clusters that pass all validation tests are supported by Microsoft. To run the validation tests, click **Yes**, and then click **Next**. Complete the Validate a Configuration Wizard as described in [Validate the configuration](#validate-the-configuration).
 7. On the **Access Point for Administering the Cluster** page, do the following:
     
     1. In the **Cluster Name** box, enter the name that you want to use to administer the cluster. Before you do, review the following information:
@@ -217,9 +215,7 @@ After you create the failover cluster, you can create clustered roles to host cl
 
 ## Create a failover cluster by using Windows PowerShell
 
-![](images\Hh831478.eda3e676-68d6-4a56-90af-dd29179cfd9b(WS.11).jpeg)  ****Windows PowerShell equivalent commands****
-
-The following Windows PowerShell cmdlets perform the same function as the preceding procedures in this topic. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines because of formatting constraints.
+The following Windows PowerShell cmdlets perform the same functions as the preceding procedures in this topic. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines because of formatting constraints.
 
 >[!NOTE]
 >You must use Windows PowerShell to create an Active Directory-detached cluster in Windows Server 2012 R2. For information about the syntax, see [Deploy an Active Directory-Detached Cluster](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/dn265970(v%3dws.11)>).
@@ -237,7 +233,7 @@ Test-Cluster –Node Server1, Server2
 ```
 
 >[!NOTE]
->The **Test-Cluster** cmdlet outputs the results to a log file in the current working directory, for example C:\Users\<username>\AppData\Local\Temp.
+>The **Test-Cluster** cmdlet outputs the results to a log file in the current working directory. For example: C:\Users\<username>\AppData\Local\Temp.
 
 The following example creates a failover cluster that is named *MyCluster* with nodes *Server1* and *Server2*, assigns the static IP address *192.168.1.12*, and adds all eligible storage to the failover cluster.
 
@@ -259,7 +255,7 @@ New-Cluster -Name CN=MyCluster,OU=Cluster,DC=Contoso,DC=com -Node Server1, Serve
 
 For examples of how to add clustered roles, see topics such as [Add-ClusterFileServerRole](http://technet.microsoft.com/library/hh847258.aspx) and [Add-ClusterGenericApplicationRole](http://technet.microsoft.com/library/hh847236.aspx).
 
-## See also
+## More information
 
   - [Failover Clustering](failover-clustering.md)
   - [Deploy a Hyper-V Cluster](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj863389(v%3dws.11)>)
