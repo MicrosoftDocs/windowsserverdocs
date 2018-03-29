@@ -102,21 +102,21 @@ To run through an authoritative restore, the following steps can be accomplished
 
 1.	Run WBADMIN.EXE from an administrative command prompt to get the latest version of backups that you want to install and ensure that System State is one of the components you can restore.
 
-```powershell
-Wbadmin get versions
-```
+    ```powershell
+    Wbadmin get versions
+    ```
 
 2.	Determine if the version backup you have has the cluster registry information in it as a component.  There are a couple items you will need from this command, the version and the application/component for use in Step 3.  For the version, for example, say the backup was done January 3, 2018 at 2:04am and this is the one you need restored.
 
-```powershell
-wbadmin get items -backuptarget:\\backupserver\location
-```
+    ```powershell
+    wbadmin get items -backuptarget:\\backupserver\location
+    ```
 
 3.  Start the authoritative restore to recover only the cluster registry version you need.  
 
-```powershell
-wbadmin start recovery -version:01/03/2018-02:04 -itemtype:app -items:cluster
-```
+    ```powershell
+    wbadmin start recovery -version:01/03/2018-02:04 -itemtype:app -items:cluster
+    ```
 
 Once the restore has taken place, this node must be the one to start the Cluster Service first and form the cluster.  All other nodes would then need to be started and join the cluster.
 
