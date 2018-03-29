@@ -17,7 +17,7 @@ ms.localizationpriority: medium
 This topic provides scenarios on how hyper-converged infrastructure (HCI) can be configured for disaster recovery.
 
 
-# Disaster Recovery
+# Disaster recovery
 
 Numerous companies are running hyper-converged solutions and planning for a disaster gives the ability to remain in or get back to production quickly if a disaster were to occur.  There are several ways to configure HCI for disaster recovery and this document explains the options that are available to you today.
 
@@ -37,7 +37,7 @@ Storage Replica is a block level copy mechanism versus file level; meaning, it d
 
 One important capability of Storage Replica is that it can be run in Azure as well as on-premises.  You can set up on-premises to on-premises, Azure to Azure, or even on-premises to Azure (or vice versa).
 
-In this scenario, there are two separate independent Clusters.  For configuring Storage Replica between HCI, you can follow the steps [here](https://docs.microsoft.com/en-us/windows-server/storage/storage-replica/cluster-to-cluster-storage-replication).  
+In this scenario, there are two separate independent clusters.  For configuring Storage Replica between HCI, you can follow the steps [here](https://docs.microsoft.com/en-us/windows-server/storage/storage-replica/cluster-to-cluster-storage-replication).  
 
 ![Storage Replication diagram](media\storage-spaces-direct-disaster-recovery\Disaster-Recovery-Figure1.png)
 
@@ -45,10 +45,10 @@ The following considerations apply when deploying Storage Replica.
 
 1.	Configuring replication is done outside of Failover Clustering.  
 2.	Choosing the method of replication will be dependent upon your network latency and RPO requirements.  Synchronous replicates the data on low-latency networks with crash consistency to ensure no data loss at a time of failure.  Asynchronous replicates the data over networks with higher latencies, but each site may not have identical copies at a time of failure.  
-3.	In the case of a disaster, failovers between the Clusters are not automatic and need to be orchestrated manually through the Storage Replica PowerShell cmdlets.  In the diagram above, ClusterA is the primary and ClusterB is the secondary.  If ClusterA goes down, you would need to manually set ClusterB as Primary before you can bring the resources up.  Once ClusterA is back up, you would need to make it Secondary.  Once all data has been synced up, make the change and swap the roles back to the way they were originally set.
+3.	In the case of a disaster, failovers between the clusters are not automatic and need to be orchestrated manually through the Storage Replica PowerShell cmdlets.  In the diagram above, ClusterA is the primary and ClusterB is the secondary.  If ClusterA goes down, you would need to manually set ClusterB as Primary before you can bring the resources up.  Once ClusterA is back up, you would need to make it Secondary.  Once all data has been synced up, make the change and swap the roles back to the way they were originally set.
 4.	Since Storage Replica is only replicating the data, a new virtual machine or Scale Out File Server (SOFS) utilizing this data would need to be created inside Failover Cluster Manager on the replica partner.
 
-Storage Replica can be used if you have virtual machines or an SOFS running on your Cluster.  Bringing resources online in the replica HCI can be manual or automated through the use of PowerShell scripting.
+Storage Replica can be used if you have virtual machines or an SOFS running on your cluster.  Bringing resources online in the replica HCI can be manual or automated through the use of PowerShell scripting.
 
 ## Hyper-V Replica
 
@@ -56,7 +56,7 @@ Storage Replica can be used if you have virtual machines or an SOFS running on y
 
 ![Hyper-V Replication diagram](media\storage-spaces-direct-disaster-recovery\Disaster-Recovery-Figure2.png)
 
-With Hyper-V Replica, the replication is taken care of by Hyper-V.  When you first enable a virtual machine for replication, there are three choices for how you wish the initial copy to be sent to the corresponding replica Cluster(s).
+With Hyper-V Replica, the replication is taken care of by Hyper-V.  When you first enable a virtual machine for replication, there are three choices for how you wish the initial copy to be sent to the corresponding replica cluster(s).
 
 1.	Send the initial copy over the network
 2.	Send the initial copy to external media so that it can be copied onto your server manually
@@ -76,25 +76,25 @@ Other considerations you will need are:
 
 When HCI participate in Hyper-V Replica, you must have the [Hyper-V Replica Broker](https://blogs.technet.microsoft.com/virtualization/2012/03/27/why-is-the-hyper-v-replica-broker-required/) resource created in each cluster.  This resource does several things:
 
-1.	Gives you a single namespace for each Cluster for Hyper-V Replica to connect to.
+1.	Gives you a single namespace for each cluster for Hyper-V Replica to connect to.
 2.	Determines which node within that cluster the replica (or extended replica) will reside on when it first receives the copy.
 3.	Keeps track of which node owns the replica (or extended replica) in case the virtual machine moves to another node.  It needs to track this so that when replication takes place, it can send the information to the proper node.
 
-## Backup and Restore
+## Backup and restore
 
-One traditional disaster recovery option that isn't talked about very much but is just as important is the failure of the entire Cluster or a node in the Cluster.  Either option with this scenario makes use of Windows NT Backup.  
+One traditional disaster recovery option that isn't talked about very much but is just as important is the failure of the entire cluster or a node in the cluster.  Either option with this scenario makes use of Windows NT Backup.  
 
-It is always a recommendation to have periodic backups of the hyper-converged infrastructure.  While the Cluster Service is running, if you take a System State Backup, the Cluster registry database would be a part of that backup.  Restoring the Cluster or the database has two different methods (Non-Authoritative and Authoritative).
+It is always a recommendation to have periodic backups of the hyper-converged infrastructure.  While the Cluster Service is running, if you take a System State Backup, the cluster registry database would be a part of that backup.  Restoring the cluster or the database has two different methods (Non-Authoritative and Authoritative).
 
-### Non-Authoritative
+### Non-authoritative
 
-A Non-Authoritative restore can be accomplished using Windows NT Backup and equates to a full restore of just the Cluster node itself.   If you only need to restore a Cluster node (and the Cluster registry database) and all current Cluster information good, you would restore using non-authoritative.  Non-Authoritative restores can be done through the Windows NT Backup interface or the command line WBADMIN.EXE.
+A Non-Authoritative restore can be accomplished using Windows NT Backup and equates to a full restore of just the cluster node itself.   If you only need to restore a cluster node (and the cluster registry database) and all current cluster information good, you would restore using non-authoritative.  Non-Authoritative restores can be done through the Windows NT Backup interface or the command line WBADMIN.EXE.
 
-Once you restore the node, let it join the Cluster.  What will happen is that it will go out to the existing running Cluster and update all of its information with what is currently there.
+Once you restore the node, let it join the cluster.  What will happen is that it will go out to the existing running cluster and update all of its information with what is currently there.
 
 ### Authoritative
 
-An Authoritative restore of the Cluster configuration, on the other hand, takes the cluster configuration back in time. This type of restore should only be accomplished when the Cluster information itself has been lost and needs restored.  For example, someone accidentally deleted a File Server that contained over 1000 shares and you need them back.  Completing an Authoritative restore of the cluster requires that Backup be run from the command line.
+An Authoritative restore of the cluster configuration, on the other hand, takes the cluster configuration back in time. This type of restore should only be accomplished when the cluster information itself has been lost and needs restored.  For example, someone accidentally deleted a File Server that contained over 1000 shares and you need them back.  Completing an Authoritative restore of the cluster requires that Backup be run from the command line.
 
 When an Authoritative restore is initiated on a cluster node, the cluster service is stopped on all other nodes in the cluster view and the cluster configuration is frozen. This is why it is critical that the cluster service on the node on which the restore was executed be started first so the cluster is formed using the new copy of the cluster configuration.
 
@@ -106,19 +106,19 @@ To run through an authoritative restore, the following steps can be accomplished
 Wbadmin get versions
 ```
 
-2.	Determine if the version backup you have has the Cluster Registry information in it as a component.  There are a couple items you will need from this command, the version and the application/component for use in Step 3.  For the version, for example, say the backup was done January 3, 2018 at 2:04am and this is the one you need restored.
+2.	Determine if the version backup you have has the cluster registry information in it as a component.  There are a couple items you will need from this command, the version and the application/component for use in Step 3.  For the version, for example, say the backup was done January 3, 2018 at 2:04am and this is the one you need restored.
 
 ```powershell
 wbadmin get items -backuptarget:\\backupserver\location
 ```
 
-3.  Start the authoritative restore to recover only the Cluster registry version you need.  
+3.  Start the authoritative restore to recover only the cluster registry version you need.  
 
 ```powershell
 wbadmin start recovery -version:01/03/2018-02:04 -itemtype:app -items:cluster
 ```
 
-Once the restore has taken place, this node must be the one to start the Cluster Service first and form the Cluster.  All other nodes would then need to be started and join the Cluster.
+Once the restore has taken place, this node must be the one to start the Cluster Service first and form the cluster.  All other nodes would then need to be started and join the cluster.
 
 ## Summary 
 
