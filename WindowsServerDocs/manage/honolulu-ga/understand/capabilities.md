@@ -2,9 +2,7 @@
 author: nwashburn-ms
 ---
 
-<a href="../overview.md">Honolulu</a> > <a href="../overview.md">Understand</a> > Honolulu Capabilities
-
-# Honolulu Capabilities
+# Windows Admin Center Capabilities
 
 [Content goes here]
 

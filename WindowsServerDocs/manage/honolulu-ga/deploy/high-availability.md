@@ -2,9 +2,7 @@
 author: nwashburn-ms
 ---
 
-<a href="../overview.md">Honolulu</a> > <a href="../overview.md">Deploy</a> > Honolulu High Availability
-
-# Deploy Honolulu High Availability
+# Deploy Windows Admin Center with High Availability
 
 [Content goes here]
 

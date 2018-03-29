@@ -2,9 +2,7 @@
 author: nwashburn-ms
 ---
 
-<a href="../overview.md">Honolulu</a> > <a href="../overview.md">Understand</a> > Honolulu FAQ
-
-# Project Honolulu Frequently Asked Questions
+# Windows Admin Center Frequently Asked Questions
 
 [Content goes here]
 

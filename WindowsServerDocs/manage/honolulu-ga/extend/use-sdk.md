@@ -2,10 +2,6 @@
 author: nwashburn-ms
 ---
 
-<a href="../overview.md">Honolulu</a> > <a href="../overview.md">Extend</a> > Use Honolulu SDK
-
-# Download Honolulu SDK
+# Download and install SDK for Windows Admin Center
 
 [Content goes here]
-
-Daniel's edit

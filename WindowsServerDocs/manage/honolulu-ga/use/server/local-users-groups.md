@@ -2,8 +2,6 @@
 author: nwashburn-ms
 ---
 
-<b><a href="../../overview.md">Windows Admin Center</a></b> > <a href="../../overview.md">Use</a> > <a href="../manage-servers.md">Server Manager</a> > Local Users and Groups
-
 # Local Users and Groups
 
 ## Description
@@ -13,6 +11,13 @@ author: nwashburn-ms
 ## Features
 
 The following features are supported in Local Users and Groups:
+
+- View and search users and groups
+- Create a new user or group
+- Manage a user's group membership
+- Delete a user or group
+- Change a user's password
+- Edit the properties of a user or group
 
 ## Proposed Features
 

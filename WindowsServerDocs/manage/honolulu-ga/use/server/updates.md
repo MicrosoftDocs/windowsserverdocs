@@ -2,8 +2,6 @@
 author: nwashburn-ms
 ---
 
-<b><a href="../../overview.md">Windows Admin Center</a></b> > <a href="../../overview.md">Use</a> > <a href="../manage-servers.md">Server Manager</a> > Updates
-
 # Updates
 
 ## Description
@@ -13,6 +11,11 @@ author: nwashburn-ms
 ## Features
 
 The following features are supported in Updates:
+
+- View available Windows or Microsoft Updates
+- View a list of update history
+- Install Updates
+- Check online for updates from Microsoft Update
 
 ## Proposed Features
 

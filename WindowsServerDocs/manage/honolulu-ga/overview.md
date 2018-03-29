@@ -8,7 +8,7 @@ Welcome to **Windows Admin Center**!
 
 **Windows Admin Center** is an evolution of Windows Server in-box management tools; it’s a single pane of glass, consolidating all aspects of local and remote server management. As a locally deployed, browser-based management experience, an Internet connection and Azure aren’t required.  **Windows Admin Center** supports scenarios where customers need full control of all aspects of their deployment, including private networks which aren’t Internet-connected.
 
-> ## **Project Honolulu** is now **Windows Admin Center**! View our [launch page here](honolulu.md).
+> ## **Project Honolulu** is now **Windows Admin Center**! View our [launch page here](windows-admin-center.md).
 
 <table>
     <tr></tr>
@@ -30,7 +30,7 @@ Welcome to **Windows Admin Center**!
             <ul>
             <li><a href="plan/installation-options.md">What type of installation is right for you?</a>
             <li><a href="plan/user-access-options.md">User access options</a>
-            <li><a href="plan/securing.md">Securing your environment</b></a>
+            <li><a href="plan/securing.md">Securing your environment</a>
             <li><a href="plan/making-accessible.md">Making accessible from anywhere</a>
             <li><a href="plan/high-availability.md">Redundancy with High Availability</a>
             <li><a href="plan/azure-integration.md">What Azure integration options are there?</a>
@@ -64,7 +64,7 @@ Welcome to **Windows Admin Center**!
             <li><a href="use/launch.md">Launch <b>Windows Admin Center</b></a>
             <li><a href="use/manage-servers.md">Manage servers</a>
             <li><a href="use/manage-hyper-converged.md">Manage Hyper-Converged Infrastructure</a>
-            <li><a href="use/manage_failover-clusters.md">Manage Failover Clusters</b></a>
+            <li><a href="use/manage_failover-clusters.md">Manage Failover Clusters</a>
             <li><a href="use/troubleshooting.md">Common troubleshooting steps</a>
             <li><a href="use/known-issues.md">Known issues</a>
             </ul>

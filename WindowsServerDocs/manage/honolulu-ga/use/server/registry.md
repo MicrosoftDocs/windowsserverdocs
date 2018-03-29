@@ -2,8 +2,6 @@
 author: nwashburn-ms
 ---
 
-<b><a href="../../overview.md">Windows Admin Center</a></b> > <a href="../../overview.md">Use</a> > <a href="../manage-servers.md">Server Manager</a> > Registry
-
 # Registry
 
 ## Description
@@ -13,6 +11,10 @@ author: nwashburn-ms
 ## Features
 
 The following features are supported in Registry:
+
+- Browse registry keys and values
+- Add or modify registry values
+- Delete registry values
 
 ## Proposed Features
 

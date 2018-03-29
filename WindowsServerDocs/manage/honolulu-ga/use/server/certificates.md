@@ -2,8 +2,6 @@
 author: nwashburn-ms
 ---
 
-<b><a href="../../overview.md">Windows Admin Center</a></b> > <a href="../../overview.md">Use</a> > <a href="../manage-servers.md">Server Manager</a> > Certificates
-
 # Certificates
 
 ## Description
@@ -13,6 +11,13 @@ author: nwashburn-ms
 ## Features
 
 The following features are supported in Certificates:
+
+- Browse and search existing certificates
+- View certificate details
+- Export certificates
+- Renew certificates
+- Request new certificates
+- Delete certificates
 
 ## Proposed Features
 
