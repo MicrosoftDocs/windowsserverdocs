@@ -15,7 +15,7 @@ Windows Admin Center is generally available and can be deployed in production en
 
 Quick links: [Documentation](overview.md) | [Give feedback](todo) | [Recent updates](todo) | [For developers](/extend/how-sdk-works.md)
 
-********************
+# <a name="Intro to Windows Admin Center"> </a>
 //VIDEO GOES HERE
 
 ### Windows Admin Center is a lightweight, browser-based GUI toolset for managing servers, clusters, and hyper-converged infrastructure. It's the evolution of familiar in-box managment tools plus so much more.
@@ -24,12 +24,12 @@ Quick links: [Documentation](overview.md) | [Give feedback](todo) | [Recent upda
 |:-:|:-:|:-:|
 | <img src="../media/honolulu-ga/legacy-sod.gif" alt="Video of legacy management tools">  | <img src="../media/honolulu-ga/arrow.png" alt="right arrow" align="middle"> | <img src="../media/honolulu-ga/server-overview-tool.gif"  alt="Video of Windows Admin Center tools">  | -->
 
-<table border="0" cellpadding="0" style="text-align:center;margin:auto;width:100%" width="50%">
+<table border="0" cellpadding="0" style="text-align:center;margin:auto;width:100%">
         <tr> 
-          <td style="vertical-align:middle;width:48%;padding:5px"> <img src="../media/honolulu-ga/legacy-sod.gif" alt="Video of legacy management tools">  </td>
+          <td style="vertical-align:middle;width:48%;padding:5px" height="200px"> <img src="../media/honolulu-ga/legacy-sod.gif" alt="Video of legacy management tools">  </td>
 		  <td style="vertical-align:middle;width:4%;padding:5px" > <img src="../media/honolulu-ga/arrow.png" alt="right arrow">
 		  </td>
-		  <td style="vertical-align:middle;width:48%;padding:5px">
+		  <td style="vertical-align:middle;width:48%;padding:5px" height="200px">
 		  <img src="../media/honolulu-ga/server-overview-tool.gif"  alt="Video of Windows Admin Center tools"> </td>
         </tr> 
 </table>
@@ -73,7 +73,7 @@ Quick links: [Documentation](overview.md) | [Give feedback](todo) | [Recent upda
 
 ********************
 
-## See how companies use Windows Admin Center in their production environments 
+## <a name="Case studies"></a> See how companies use Windows Admin Center in their production environments 
 
 | <img src=//ADDICON width="100" alt="Company 1 Logo"><br/> Case study 1   |  <img src=//ADDICON width="100" alt="Company 2 Logo"> <br/> Case study 2 | <img src=//ADDICON width="100" alt="Company 3 Logo"> <br/> Case study 3  |
 |:-:|:-:|:-:|
