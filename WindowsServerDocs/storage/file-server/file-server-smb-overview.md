@@ -2,12 +2,9 @@
 ---
 # Server Message Block Overview
 
- 
+>Applies to Windows Server 2012 R2, Windows Server 2012.
 
-
-Applies To: Windows Server 2012 R2, Windows Server 2012
-
-This topic describes the SMB 3.0 feature in Windows Server® 2012 -- practical uses for the feature, the most significant new or updated functionality in this version compared to previous versions, and the hardware requirements.
+This topic describes the SMB 3.0 feature in Windows Server® 2012—practical uses for the feature, the most significant new or updated functionality in this version compared to previous versions, and the hardware requirements.
 
 ## Feature description
 
@@ -17,15 +14,13 @@ The Server Message Block (SMB) protocol is a network file sharing protocol that 
 
 This section discusses some new practical ways to use the new SMB 3.0 protocol.
 
-**File storage for virtualization (Hyper-V™ over SMB)**. Hyper-V can store virtual machine files, such as configuration, Virtual hard disk (VHD) files, and snapshots, in file shares over the SMB 3.0 protocol. This can be used for both stand-alone file servers and clustered file servers that use Hyper-V together with shared file storage for the cluster.
-
-**Microsoft SQL Server over SMB**. SQL Server can store user database files on SMB file shares. Currently, this is supported with SQL Server 2008 R2 for stand-alone SQL servers. Upcoming versions of SQL Server will add support for clustered SQL servers and system databases.
-
-**Traditional storage for end-user data**. The SMB 3.0 protocol provides enhancements to the Information Worker (or client) workloads. These enhancements include reducing the application latencies experienced by branch office users when accessing data over wide area networks (WAN) and protecting data from eavesdropping attacks.
+* **File storage for virtualization (Hyper-V™ over SMB)**. Hyper-V can store virtual machine files, such as configuration, Virtual hard disk (VHD) files, and snapshots, in file shares over the SMB 3.0 protocol. This can be used for both stand-alone file servers and clustered file servers that use Hyper-V together with shared file storage for the cluster.
+* **Microsoft SQL Server over SMB**. SQL Server can store user database files on SMB file shares. Currently, this is supported with SQL Server 2008 R2 for stand-alone SQL servers. Upcoming versions of SQL Server will add support for clustered SQL servers and system databases.
+* **Traditional storage for end-user data**. The SMB 3.0 protocol provides enhancements to the Information Worker (or client) workloads. These enhancements include reducing the application latencies experienced by branch office users when accessing data over wide area networks (WAN) and protecting data from eavesdropping attacks.
 
 ## New and changed functionality
 
-For information on new and changed functionality in Windows Server 2012 R2, see [What's New in SMB in Windows Server](hh831474\(v=ws.11\).md).
+For information on new and changed functionality in Windows Server 2012 R2, see [What's New in SMB in Windows Server](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831474(v%3dws.11)>).
 
 SMB in Windows Server 2012 includes the new SMB 3.0 protocol and many new improvements which are described in the following table.
 
@@ -96,44 +91,31 @@ SMB in Windows Server 2012 includes the new SMB 3.0 protocol and many new improv
 SMB Transparent Failover has the following requirements:
 
   - A failover cluster running Windows Server 2012 with at least two nodes configured. The cluster must pass the cluster validation tests included in the validation wizard.
-
   - File shares must be created with the Continuous Availability (CA) property, which is the default.
-
   - File shares must be created on CSV volume paths to attain SMB Scale-Out.
-
   - Client computers must be running Windows® 8 or Windows Server 2012, both of which include the updated SMB client that supports continuous availability.
 
-
-> [!NOTE]
-> Note that down-level clients can connect to file shares that have the CA property, but transparent failover will not be supported for these clients.
-
+>[!NOTE]
+>Down-level clients can connect to file shares that have the CA property, but transparent failover will not be supported for these clients.
 
 SMB Multichannel has the following requirements:
 
   - At least two computers running Windows Server 2012 are required. No extra features need to be installed—the technology is on by default.
-
   - For information on recommended network configurations, see the See Also section at the end of this overview topic.
 
 SMB Direct has the following requirements:
 
   - At least two computers running Windows Server 2012 are required. No extra features need to be installed—the technology is on by default.
-
   - Network adapters with RDMA capability are required. Currently, these adapters are available in three different types: iWARP, Infiniband, or RoCE (RDMA over Converged Ethernet).
 
-## See also
+## More information
 
 The following list provides additional resources on the web about SMB and related technologies in Windows Server 2012 R2 and Windows Server 2012.
 
-  - [File and Storage Services Overview](hh831487\(v=ws.11\).md)
-
-  - [Scale-Out File Server for Application Data Overview](hh831349\(v=ws.11\).md)
-
-  - [Deploy Hyper-V over SMB](jj134187\(v=ws.11\).md)
-
-  - [Deploy SMB Multichannel](dn610980\(v=ws.11\).md)
-
-  - [Improve Performance of a File Server with SMB Direct](jj134210\(v=ws.11\).md)
-
-  - [Deploying Fast and Efficient File Servers for Server Applications](hh831723\(v=ws.11\).md)
-
-  - [SMB: Troubleshooting Guide](dn659439\(v=ws.11\).md)
+  - [File and Storage Services Overview](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831487(v%3dws.11)>)
+  - [Scale-Out File Server for Application Data Overview](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831349(v%3dws.11)>)
+  - [Deploy Hyper-V over SMB](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134187(v%3dws.11)>)
+  - [Deploy SMB Multichannel](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn610980(v%3dws.11)>)
+  - [Improve Performance of a File Server with SMB Direct](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134210(v%3dws.11)>)
+  - [Deploying Fast and Efficient File Servers for Server Applications](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831723(v%3dws.11)>)
+  - [SMB: Troubleshooting Guide](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn659439(v%3dws.11)>)
