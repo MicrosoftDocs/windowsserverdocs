@@ -4,10 +4,12 @@ author: haley-rowland
 
 # Windows Admin Center (formerly Project Honolulu)
 
+<img src="../media/honolulu-ga/wac-icon.png" width="100" alt="Icon representing Windows Admin Center" align="center">
+
 Windows Admin Center is generally available and can be deployed in production environments. Plus it's free!
 
 ## [Download now](http://aka.ms/honolulucurrent)
-Or [plan Windows Admin Center for your environment](/plan/installation-options.md)
+<!-- Or [plan Windows Admin Center for your environment](/plan/installation-options.md) -->
 
 ********************
 
@@ -22,9 +24,9 @@ Quick links: [Documentation](overview.md) | [Give feedback](todo) | [Recent upda
 |:-:|:-:|:-:|
 | <img src="../media/honolulu-ga/legacy-sod.gif" alt="Video of legacy management tools">  | <img src="../media/honolulu-ga/arrow.png" alt="right arrow" align="middle"> | <img src="../media/honolulu-ga/server-overview-tool.gif"  alt="Video of Windows Admin Center tools">  | -->
 
-<table border="0" cellpadding="0" style="text-align:center;margin:auto;width:100%">
+<table border="0" cellpadding="0" style="text-align:center;margin:auto;width:100%" width="100%">
         <tr> 
-          <td style="vertical-align:middle;width:48%;padding:5px"> <img src="../media/honolulu-ga/legacy-sod.gif" loop="0" alt="Video of legacy management tools">  </td>
+          <td style="vertical-align:middle;width:48%;padding:5px"> <img src="../media/honolulu-ga/legacy-sod.gif" alt="Video of legacy management tools">  </td>
 		  <td style="vertical-align:middle;width:4%;padding:5px" > <img src="../media/honolulu-ga/arrow.png" alt="right arrow">
 		  </td>
 		  <td style="vertical-align:middle;width:48%;padding:5px">
@@ -67,7 +69,7 @@ Quick links: [Documentation](overview.md) | [Give feedback](todo) | [Recent upda
 	</tr>
 </table> -->
 
-[Learn more about how Windows Admin Center can improve management of your server envrionment.](overview.md)
+[Learn how Windows Admin Center can improve management of your server envrionment.](overview.md)
 
 ********************
 
