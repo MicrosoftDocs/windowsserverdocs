@@ -65,6 +65,9 @@ To install the web client for the first time, follow these steps:
     Publish-RDWebClientPackage -Type Production -Latest
     ```
     Make sure you can access the web client at the web client URL with your server name, formatted as <https://server_FQDN/RDWeb/Pages/webclient>. It's important to use the server name that matches the RD Web Access public certificate in the URL (typically the server FQDN).
+
+    >[!NOTE]
+    >When running the **Publish-RDWebClientPackage** cmdlet, you may see a warning that says per-device CALs are not supported, even if your deployment is configured for per-user CALs. If your deployment uses per-user CALs, you can ignore this warning. We display it to make sure you’re aware of the configuration limitation.
 1. When you're ready for users to acces the web client, just send them the web client URL you created.
 
 ## How to update the Remote Desktop web client
