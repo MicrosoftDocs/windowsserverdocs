@@ -16,9 +16,6 @@ ms.localizationpriority: medium
 
 This topic provides scenarios on how hyper-converged infrastructure (HCI) can be configured for disaster recovery.
 
-
-# Disaster recovery
-
 Numerous companies are running hyper-converged solutions and planning for a disaster gives the ability to remain in or get back to production quickly if a disaster were to occur.  There are several ways to configure HCI for disaster recovery and this document explains the options that are available to you today.
 
 When discussions of restoring availability if disaster occurs revolve around what's known as Recovery Time Objective (RTO).  This is the duration of time targeted where services must be restored to avoid unacceptable consequences to the business.   In some cases, this process can occur automatically with production restored nearly immediately.  In other cases, manual administrator intervention must occur to restore services.
