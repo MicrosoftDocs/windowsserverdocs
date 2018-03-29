@@ -118,7 +118,7 @@ Verify that VPN is enabled on your device. You can test your VPN connection by g
 ### How do I configure L2TP or PPTP VPN connections?
 If you are using L2TP or PPTP in your VPN, make sure to set **Send all traffic** to **ON** in the VPN configuration.
 
-## Remote Desktop web client
+## Web client
 
 [This information relates to pre-released product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.]
 
