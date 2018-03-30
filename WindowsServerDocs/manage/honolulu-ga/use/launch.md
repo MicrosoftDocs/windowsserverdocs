@@ -1,5 +1,12 @@
 ---
+title: Launch Windows Admin Center
+description: "Launch Windows Admin Center"
+ms.technology: Windows Admin Center
+ms.topic: article
 author: nwashburn-ms
+ms.author: niwashbu
+ms.manager: samli
+ms.date: 03/30/2018
 ---
 
 # Launch Windows Admin Center

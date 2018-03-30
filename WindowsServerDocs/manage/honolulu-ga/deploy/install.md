@@ -1,5 +1,12 @@
 ---
+title: Install Windows Admin Center
+description: "Install Windows Admin Center"
+ms.technology: Windows Admin Center
+ms.topic: article
 author: nwashburn-ms
+ms.author: niwashbu
+ms.manager: samli
+ms.date: 03/30/2018
 ---
 
 # Install Windows Admin Center

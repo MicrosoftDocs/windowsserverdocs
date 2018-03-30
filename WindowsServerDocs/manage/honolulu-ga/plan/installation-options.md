@@ -1,5 +1,12 @@
 ---
+title: Windows Admin Center Installation Options
+description: "What type of installation is right for you"
+ms.technology: Windows Admin Center
+ms.topic: article
 author: nwashburn-ms
+ms.author: niwashbu
+ms.manager: samli
+ms.date: 03/30/2018
 ---
 
 # What type of installation is right for you?
