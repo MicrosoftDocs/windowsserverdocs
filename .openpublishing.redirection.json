@@ -153,22 +153,77 @@
     },	
     {
       "source_path": "WindowsServerDocs/storage/whats-new-file-storage-services-windows-server-2016.md",
-      "redirect_url": "/windows-server/storage/whats-new-file-storage-services-windows-server",
+      "redirect_url": "/windows-server/storage/whats-new-in-storage",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/whats-new-file-storage-services-windows-server.md",
+      "redirect_url": "/windows-server/storage/whats-new-in-storage",
       "redirect_document_id": false
     },	
     {
       "source_path": "WindowsServerDocs/storage/software-defined-storage/Health-Service-in-Windows-Server-2016.md",
-      "redirect_url": "/windows-server/storage/software-defined-storage/health-service-in-windows-server",
+      "redirect_url": "/windows-server/failover-clustering/health-service-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/software-defined-storage/Health-Service-in-Windows-Server.md",
+      "redirect_url": "/windows-server/failover-clustering/health-service-overview",
+      "redirect_document_id": false
+    },
+    {	
+      "source_path": "WindowsServerDocs/storage/storage-spaces/plan-storage-spaces-direct.md",
+      "redirect_url": "/windows-server/storage/storage-spaces/storage-spaces-direct-hardware-requirements",
+      "redirect_document_id": false
+    },
+    {	
+      "source_path": "WindowsServerDocs/storage/storage-spaces/understand-storage-spaces-direct.md",
+      "redirect_url": "/windows-server/storage/storage-spaces/understand-the-cache",
+      "redirect_document_id": false
+    },
+    {	
+      "source_path": "WindowsServerDocs/storage/storage-spaces/manage-storage-spaces-direct.md",
+      "redirect_url": "/windows-server/storage/storage-spaces/storage-spaces-direct-overview",
       "redirect_document_id": false
     },
     {	
       "source_path": "WindowsServerDocs/storage/software-defined-storage/hyper-converged-solution-using-storage-spaces-direct-in-windows-server-2016.md",
-      "redirect_url": "/windows-server/storage/software-defined-storage/hyper-converged-solution-using-storage-spaces-direct-in-windows-server",
+      "redirect_url": "/windows-server/storage/storage-spaces/deploy-storage-spaces-direct",
       "redirect_document_id": false
-    },	
+    },
+    {	
+      "source_path": "WindowsServerDocs/storage/software-defined-storage/hyper-converged-solution-using-storage-spaces-direct-in-windows-server.md",
+      "redirect_url": "/windows-server/storage/storage-spaces/deploy-storage-spaces-direct",
+      "redirect_document_id": false
+    },
+    {	
+      "source_path": "WindowsServerDocs/storage/storage-spaces/hyper-converged-solution-using-storage-spaces-direct-in-windows-server.md",
+      "redirect_url": "/windows-server/storage/storage-spaces/deploy-storage-spaces-direct",
+      "redirect_document_id": false
+    },
+    {	
+      "source_path": "WindowsServerDocs/storage/storage-spaces/hyper-converged-solution-using-storage-spaces-direct.md",
+      "redirect_url": "/windows-server/storage/storage-spaces/deploy-storage-spaces-direct",
+      "redirect_document_id": false
+    },
+    {	
+      "source_path": "WindowsServerDocs/storage/software-defined-storage/Storage-Quality-of-Service.md",
+      "redirect_url": "/windows-server/storage/storage-qos/storage-qos-overview",
+      "redirect_document_id": false
+    },
     {
       "source_path": "WindowsServerDocs/storage/storage-replica/storage-replica-windows-server-2016.md",
       "redirect_url": "/windows-server/storage/storage-replica/storage-replica-windows-server",
+      "redirect_document_id": false
+    },	
+    {
+      "source_path": "WindowsServerDocs/storage/storage-replica/storage-replica--frequently-asked-questions.md",
+      "redirect_url": "/windows-server/storage/storage-replica/storage-replica-frequently-asked-questions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/storage-replica/storage-replica--known-issues.md",
+      "redirect_url": "/windows-server/storage/storage-replica/storage-replica-known-issues",
       "redirect_document_id": false
     },		
     {
@@ -179,6 +234,11 @@
     {
       "source_path": "WindowsServerDocs/storage/storage-spaces/hyper-converged-solution-using-storage-spaces-direct-in-windows-server-2016.md",
       "redirect_url": "/windows-server/storage/storage-spaces/hyper-converged-solution-using-storage-spaces-direct-in-windows-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/storage-spaces/choosing-drives-and-resiliency-types.md",
+      "redirect_url": "/windows-server/storage/storage-spaces/choosing-drives",
       "redirect_document_id": false
     },	
     {

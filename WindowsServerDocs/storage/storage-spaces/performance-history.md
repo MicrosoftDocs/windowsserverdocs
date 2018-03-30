@@ -189,15 +189,15 @@ If you have already enabled Storage Spaces Direct, there are two steps:
 
 1. Remove the path to the volume. This prevents the Health Service from collecting new measurements.
 
-```PowerShell
-Get-StorageSubSystem Cluster* | Remove-StorageHealthSetting -Name "System.PerformanceHistory.Path"
-```
+    ```PowerShell
+    Get-StorageSubSystem Cluster* | Remove-StorageHealthSetting -Name "System.PerformanceHistory.Path"
+    ```
 
 2. Delete the volume to delete existing measurements.
 
-```PowerShell
-Remove-VirtualDisk "ClusterPerformanceHistory"
-```
+    ```PowerShell
+    Remove-VirtualDisk "ClusterPerformanceHistory"
+    ```
 
 If you have not yet enabled Storage Spaces Direct, use the `-CollectPerformanceHistory` parameter of the `Enable-ClusterS2D` cmdlet. Set it to `$False`.
 
@@ -240,23 +240,23 @@ To provision the ClusterPerformanceHistory volume again:
 
 1. Confirm the volume is deleted:
 
-```PowerShell
-Remove-VirtualDisk "ClusterPerformanceHistory"
-```
+    ```PowerShell
+    Remove-VirtualDisk "ClusterPerformanceHistory"
+    ```
 
 2.	Remove the path to the volume:
 
-```PowerShell
-Get-StorageSubSystem Cluster* | Remove-StorageHealthSetting -Name "System.PerformanceHistory.Path"
-```
+    ```PowerShell
+    Get-StorageSubSystem Cluster* | Remove-StorageHealthSetting -Name "System.PerformanceHistory.Path"
+    ```
 
 3.	Set `AutoProvision` back to `True`:
 
-```PowerShell
-Get-StorageSubSystem Cluster* | Set-StorageHealthSetting -Name "System.PerformanceHistory.AutoProvision.Enabled" -Value "True"
-```
+    ```PowerShell
+    Get-StorageSubSystem Cluster* | Set-StorageHealthSetting -Name "System.PerformanceHistory.AutoProvision.Enabled" -Value "True"
+    ```
 
-It may take several minutes for the changes to take effect.
+It might take a few minutes for the changes to take effect.
 
 ## See also
 
