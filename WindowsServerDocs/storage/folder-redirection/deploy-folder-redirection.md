@@ -2,18 +2,14 @@
 ---
 # Deploy Folder Redirection with Offline Files
 
- 
-
-
-Applies To: Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2, Windows Vista
+>Applies to Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2, and Windows Vista.
 
 This topic describes how to use Windows Server to deploy Folder Redirection with Offline Files to Windows client computers.
 
-For a list of recent changes to this topic, see [Change history]().
+For a list of recent changes to this topic, see [Change history](#change-history).
 
-
-> [!IMPORTANT]
-> Due to the security changes made in <A href="https://support.microsoft.com/help/3163622/ms16-072-security-update-for-group-policy-june-14%2c-2016">MS16-072</A>, we updated <A href="">Step 3: Create a GPO for Folder Redirection</A> of this topic so that Windows can properly apply the Folder Redirection policy (and not revert redirected folders on affected PCs).
+>[!IMPORTANT]
+>Due to the security changes made in [MS16-072](https://support.microsoft.com/en-us/help/3163622/ms16-072-security-update-for-group-policy-june-14-2016), we updated <A href="">Step 3: Create a GPO for Folder Redirection</A> of this topic so that Windows can properly apply the Folder Redirection policy (and not revert redirected folders on affected PCs).
 
 
 ## Prerequisites
