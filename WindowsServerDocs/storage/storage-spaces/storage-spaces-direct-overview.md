@@ -35,6 +35,7 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter and [Windows
             <strong>Plan</a></strong>
             <ul>
 			  <li><a href="storage-spaces-direct-hardware-requirements.md">Hardware requirements</a></li>
+              <li><a href="csv-cache.md">Using the CSV in-memory read cache</li>
 			  <li><a href="choosing-drives.md">Choose drives</a></li>
 			  <li><a href="plan-volumes.md">Plan volumes</a></li>
               <li><a href="storage-spaces-direct-in-vm.md">Using guest VM clusters</a></li>

@@ -33,6 +33,7 @@ This topic lists new and updated topics in the [Storage](storage.md) documentati
 |New or changed topic|Description|
 |---|---|
 |[Storage Spaces health and operational states](storage-spaces/storage-spaces-states.md)| New topic.|
+|[Using Storage Spaces Direct with the CSV in-memory read cache](storage-spaces/csv-cache.md)| New topic. |
 
 ## January 2018
 

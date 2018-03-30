@@ -82,6 +82,7 @@
 #### [Cluster and pool quorum](storage-spaces/understand-quorum.md)
 ### Plan
 #### [Hardware requirements](storage-spaces/storage-spaces-direct-hardware-requirements.md)
+#### [Using the CSV in-memory read cache](storage-spaces/csv-cache.md)
 #### [Choose drives](storage-spaces/choosing-drives.md)
 #### [Plan volumes](storage-spaces/plan-volumes.md)
 #### [Guest VM clusters](storage-spaces/storage-spaces-direct-in-vm.md)
