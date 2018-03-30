@@ -33,20 +33,153 @@ Once you have deployed and configured your hyper-converged cluster, you can mana
 
 The cluster will be added to your connection list on the overview page.
 
-## Functionality supported in Project Honolulu
-
--   Cluster dashboard visualizing health alerts, storage performance metrics, compute/storage resource consumption and inventory of servers, virtual machines, drives and volumes
-
--   Historical performance charts supporting up to a year of data.
-
--   Drives summary and inventory view and a single drive view with drive properties and commands for blinking the drive indicator light and retiring disk.
-
--   Servers summary and inventory view and a single server view with server properties and commands for pausing a server for maintenance. There is also a command to launch the Project Honolulu standalone server experience to further manage your server.
-
--   Virtual machines summary and inventory view and a single virtual machine view with commands for creating a VM, starting/stopping/resetting/pausing/saving/deleting a VM, move (live migration), changing VM settings, creating and managing checkpoints, connecting to a VM with remote desktop connection, and protecting a VM with Azure Site Recovery.
-
--   Virtual switches list view and commands to create a new virtual switch and change settings for existing switches.
-
--   Volumes summary and inventory view and a single volume view with commands for creating a new volume, resizing/deleting an existing volume and switching a volume to offline.
-
 [TODO:legacy-content-end]
+
+## Tools
+
+Hyper-Converged Cluster Manager comes installed with the following tools by default:
+
+| Tool | Description |
+| ---- | ----------- |
+| [Overview](#Overview) | View hyper-converged cluster details | 
+| [Drives](#Drives) | View and modify drives | 
+| [Servers](#Servers) | View and modify servers | 
+| [Virtual Machines](#VirtualMachines) | View and control virtual machines | 
+| [Virtual Switches](#VirtualSwitches) | View and control virtual switches | 
+| [Volumes](#Volumes) | View and modify volumes | 
+
+# <a id="Overview"></a>Overview
+
+## Description
+
+[Tool description]
+
+## Features
+
+The following features are supported in Hyper-Converged Cluster Manager Overview:
+
+Cluster dashboard visualizing health alerts, storage performance metrics, compute/storage resource consumption and inventory of servers, virtual machines, drives and volumes
+
+Historical performance charts supporting up to a year of data.
+
+## Proposed Features
+
+The following features are either in progress or have been proposed for Hyper-Converged Cluster Manager Overview:
+
+|Feature|Status|Vote on User Voice|
+|-------|------|------------------|
+|Feature 1|In Progress||
+|Feature 2|Investigating|[Vote](todo:url)|
+|Feature 3|Proposed|[Vote](todo:url)|
+
+# <a id="Drives"></a>Drives
+
+## Description
+
+[Tool description]
+
+## Features
+
+The following features are supported in Drives:
+
+Drives summary and inventory view and a single drive view with drive properties and commands for blinking the drive indicator light and retiring disk.
+
+
+## Proposed Features
+
+The following features are either in progress or have been proposed for Drives:
+
+|Feature|Status|Vote on User Voice|
+|-------|------|------------------|
+|Feature 1|In Progress||
+|Feature 2|Investigating|[Vote](todo:url)|
+|Feature 3|Proposed|[Vote](todo:url)|
+
+# <a id="Servers"></a>Servers
+
+## Description
+
+[Tool description]
+
+## Features
+
+The following features are supported in Servers:
+
+Servers summary and inventory view and a single server view with server properties and commands for pausing a server for maintenance. There is also a command to launch the Project Honolulu standalone server experience to further manage your server.
+
+## Proposed Features
+
+The following features are either in progress or have been proposed for Servers:
+
+|Feature|Status|Vote on User Voice|
+|-------|------|------------------|
+|Feature 1|In Progress||
+|Feature 2|Investigating|[Vote](todo:url)|
+|Feature 3|Proposed|[Vote](todo:url)|
+
+# <a id="VirtualMachines"></a>Virtual Machines
+
+## Description
+
+[Tool description]
+
+## Features
+
+The following features are supported in Virtual Machines:
+
+Virtual machines summary and inventory view and a single virtual machine view with commands for creating a VM, starting/stopping/resetting/pausing/saving/deleting a VM, move (live migration), changing VM settings, creating and managing checkpoints, connecting to a VM with remote desktop connection, and protecting a VM with Azure Site Recovery.
+
+## Proposed Features
+
+The following features are either in progress or have been proposed for Virtual Machines:
+
+|Feature|Status|Vote on User Voice|
+|-------|------|------------------|
+|Feature 1|In Progress||
+|Feature 2|Investigating|[Vote](todo:url)|
+|Feature 3|Proposed|[Vote](todo:url)|
+
+# <a id="Virtual Switches"></a>Virtual Switches
+
+## Description
+
+[Tool description]
+
+## Features
+
+The following features are supported in Virtual Switches:
+
+Virtual switches list view and commands to create a new virtual switch and change settings for existing switches.
+
+## Proposed Features
+
+The following features are either in progress or have been proposed for Virtual Switches:
+
+|Feature|Status|Vote on User Voice|
+|-------|------|------------------|
+|Feature 1|In Progress||
+|Feature 2|Investigating|[Vote](todo:url)|
+|Feature 3|Proposed|[Vote](todo:url)|
+
+# <a id="Volumes"></a>Volumes
+
+## Description
+
+[Tool description]
+
+## Features
+
+The following features are supported in Volumes:
+
+Volumes summary and inventory view and a single volume view with commands for creating a new volume, resizing/deleting an existing volume and switching a volume to offline.
+
+## Proposed Features
+
+The following features are either in progress or have been proposed for Volumes:
+
+|Feature|Status|Vote on User Voice|
+|-------|------|------------------|
+|Feature 1|In Progress||
+|Feature 2|Investigating|[Vote](todo:url)|
+|Feature 3|Proposed|[Vote](todo:url)|
+
