@@ -20,11 +20,11 @@ Quick links: [Documentation](overview.md) | [Give feedback](todo) | [Recent upda
 
 ### Windows Admin Center is a lightweight, browser-based GUI toolset for managing servers, clusters, and hyper-converged infrastructure. It's the evolution of familiar in-box managment tools plus so much more.
 
-<!-- |   |   |   |
+|   |   |   |
 |:-:|:-:|:-:|
-| <img src="../media/honolulu-ga/legacy-sod.gif" alt="Video of legacy management tools">  | <img src="../media/honolulu-ga/arrow.png" alt="right arrow" align="middle"> | <img src="../media/honolulu-ga/server-overview-tool.gif"  alt="Video of Windows Admin Center tools">  | -->
+| <img src="../media/honolulu-ga/legacy-sod.gif" alt="Video of legacy management tools">  | <img src="../media/honolulu-ga/arrow.png" alt="right arrow" align="middle"> | <img src="../media/honolulu-ga/server-overview-tool.gif"  alt="Video of Windows Admin Center tools">  |
 
-<table border="0" cellpadding="0" height="200px" style="text-align:center;margin:auto;width:100%">
+<!-- <table border="0" cellpadding="0" height="200px" style="text-align:center;margin:auto;width:100%">
         <tr> 
           <td style="vertical-align:middle;width:48%;padding:5px" height="200px"> <img src="../media/honolulu-ga/legacy-sod.gif" alt="Video of legacy management tools">  </td>
 		  <td style="vertical-align:middle;width:4%;padding:5px" > <img src="../media/honolulu-ga/arrow.png" alt="right arrow">
@@ -32,7 +32,7 @@ Quick links: [Documentation](overview.md) | [Give feedback](todo) | [Recent upda
 		  <td style="vertical-align:middle;width:48%;padding:5px" height="200px">
 		  <img src="../media/honolulu-ga/server-overview-tool.gif"  alt="Video of Windows Admin Center tools"> </td>
         </tr> 
-</table>
+</table> -->
 
 |   |   |
 |:-:|:--|
@@ -118,7 +118,7 @@ Windows Admin Center is designed for managing a single server or cluster. It com
         <td style="padding: 10px; border: 0;" align="center"><a target="_blank" class="mscom-link blogs-follow-link" title="Follow us on Blogs" aria-label="Follow us on Blogs" data-info="Blogs" href="https://blogs.technet.microsoft.com/servermanagement/"><picture><source srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw" media="(min-width:0)"><img srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw" alt="Follow us on Blogs" src="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw"></picture></a>
         </td> -->
 
-Follow us: &nbsp; <a target="_blank" class="mscom-link twitter-follow-link" title="Follow us on Twitter" aria-label="Follow us on Twitter" data-info="Twitter" href="https://twitter.com/servermgmt"><picture><source srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOolR" media="(min-width:0)"><img srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOolR" alt="Follow us on Twitter" src="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOolR"></picture></a>&nbsp; <a target="_blank" class="mscom-link blogs-follow-link" title="Follow us on Blogs" aria-label="Follow us on Blogs" data-info="Blogs" href="https://blogs.technet.microsoft.com/servermanagement/"><picture><source srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw" media="(min-width:0)"><img srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw" alt="Follow us on Blogs" src="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw"></picture></a>
+### Follow us: &nbsp; <a target="_blank" class="mscom-link twitter-follow-link" title="Follow us on Twitter" aria-label="Follow us on Twitter" data-info="Twitter" href="https://twitter.com/servermgmt"><picture><source srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOolR" media="(min-width:0)"><img srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOolR" alt="Follow us on Twitter" src="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOolR"></picture></a>&nbsp; <a target="_blank" class="mscom-link blogs-follow-link" title="Follow us on Blogs" aria-label="Follow us on Blogs" data-info="Blogs" href="https://blogs.technet.microsoft.com/servermanagement/"><picture><source srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw" media="(min-width:0)"><img srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw" alt="Follow us on Blogs" src="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw"></picture></a>
 
 <!-- 
 <li class=" mr-1"><a target="_blank" class="mscom-link youtube-user-follow-link" title="Follow us on YouTube" aria-label="Follow us on YouTube" data-info="YouTube-User" href="https://www.youtube.com/user/MSCloudOS"><picture><source srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyx" media="(min-width:0)"><img srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyx" alt="Follow us on YouTube" src="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyx"></picture></a></li> -->
