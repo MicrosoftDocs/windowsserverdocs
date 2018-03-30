@@ -36,7 +36,7 @@ You can deploy Storage Spaces Direct in the following configurations:
 
 ## Information gathering
 
-The following information will be needed as inputs to configure provision and manage the hyper-converged system, and therefore it will speed up the process and make it easier for you if you have it on hand when you start:  
+The following information will be needed as inputs to configure provision and manage the hyper-converged system, and therefore it will speed up the process and make it easier for you if you have it on hand when you start:
 
 -   **Server Names** You should be familiar with your organization's naming policies for computers, files, paths, and other resources as you'll be provisioning several servers each will need to have a unique server name.
 
