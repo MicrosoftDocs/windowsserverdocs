@@ -190,7 +190,7 @@ See the following table for common management options.
 
 |Tool|Advantages|Disadvantages|
 |---|---|---|
-|[Project Honolulu](../../manage/honolulu/honolulu)|-Powerful and easy to use<br>-Graphical displays for monitoring individual clusters and servers|-Must be installed (it is [pretty easy to install](../../manage/honolulu/deployment-guide) though...)|
+|[Project Honolulu](../../manage/honolulu/honolulu.md)|-Powerful and easy to use<br>-Graphical displays for monitoring individual clusters and servers|-Must be installed (it is [pretty easy to install](../../manage/honolulu/deployment-guide.md) though...)|
 |Windows PowerShell|- Complete control over all aspects of storage<br>- Can automate by writing scripts<br>- Powerful example scripts available|- Better for management than visually monitoring overall storage health<br>- Scripts require development and testing|
 |System Center Virtual Machine Manager (VMM) & Operations Manager|- Easy to use<br>- Graphical displays for monitoring multiple systems<br>- Alerting for common problems<br>- Common tool for managing VMs and storage<br>|- Some tasks require Windows PowerShell<br>- Requires System Center licenses<br>- Might require additional infrastructure if you don't already have System Center or are deploying at a scale that's greater than your existing deployment can handle|
 |Failover Cluster Manager & Server Manager|- Easy to use<br>- Graphical displays for monitoring<br>|- Some tasks require Windows PowerShell<br>- Slow automatic refreshes in Server Manager when working with storage<br>- Performance and usability decreases with large numbers of objects|

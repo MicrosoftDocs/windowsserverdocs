@@ -33,7 +33,7 @@ Storage Replica is a block level copy mechanism versus file level; meaning, it d
 
 One important capability of Storage Replica is that it can be run in Azure as well as on-premises. You can set up on-premises to on-premises, Azure to Azure, or even on-premises to Azure (or vice versa).
 
-In this scenario, there are two separate independent clusters. For configuring Storage Replica between HCI, you can follow the steps in [Cluster-to-cluster storage replication](../storage-replica/cluster-to-cluster-storage-replication).
+In this scenario, there are two separate independent clusters. For configuring Storage Replica between HCI, you can follow the steps in [Cluster-to-cluster storage replication](../storage-replica/cluster-to-cluster-storage-replication.md).
 
 ![Storage Replication diagram](media\storage-spaces-direct-disaster-recovery\Disaster-Recovery-Figure1.png)
 
