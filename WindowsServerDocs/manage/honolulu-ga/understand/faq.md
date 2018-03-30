@@ -1,5 +1,12 @@
 ---
+title: Windows Admin Center Frequently Asked Questions
+description: "Windows Admin Center Frequently Asked Questions"
+ms.technology: Windows Admin Center
+ms.topic: article
 author: nwashburn-ms
+ms.author: niwashbu
+ms.manager: samli
+ms.date: 03/30/2018
 ---
 
 # Windows Admin Center Frequently Asked Questions
