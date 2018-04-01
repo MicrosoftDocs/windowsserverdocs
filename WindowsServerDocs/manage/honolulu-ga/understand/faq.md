@@ -11,23 +11,9 @@ ms.date: 03/30/2018
 
 # Windows Admin Center Frequently Asked Questions
 
-[Content goes here]
+## Q: Is Windows Admin Center a complete replacement for all traditional Microsoft Management Console (MMC) tools?
 
-[TODO:legacy-content-begin]
-
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Microsoft Hyper-V Server 2016, Microsoft Hyper-V Server 2012 R2 and Windows 10
-
-## Q: Is project Honolulu new?
-
-**A:** Honolulu is under development and has not been widely released. As such, we are counting on your help to influence the future of this platform! Send us your [suggestions or feedback](http://aka.ms/HonoluluFeedback).
-
-## Q: Why are you developing Project Honolulu?
-
-**A:** Last year we launched Server management tools, an Azure-hosted service for remotely managing your Windows Servers. Since then, we’ve been hard at work to deliver on the primary customer request collected from our [UserVoice forum](https://windowsserver.uservoice.com/forums/295071-management-tools/suggestions/12288024-make-the-azure-based-management-tools-for-nano-ser) -- to enable an on-premises customer-deployed solution with no Azure or cloud requirement.
-
-## Q: Is Honolulu a complete replacement for all traditional Microsoft Management Console (MMC) tools?
-
-**A:** Although Honolulu can manage many common scenarios, it does not completely replace the MMC. Honolulu has the following capabilities:
+**A:** Although Windows Admin Center can manage many common scenarios, it does not completely replace the MMC. Windows Admin Center has the following capabilities:
 
 -   Displaying resources and resource utilization
 -   Certificate Management
@@ -44,7 +30,7 @@ ms.date: 03/30/2018
 -   Managing Storage
 -   Managing Windows Update
 
-Honolulu does not currently replicate the following RSAT tools:
+Windows Admin Center does not currently replicate the following RSAT tools:
 
 -   AD Directory Administrative Center
 -   AD Domains and Trusts
@@ -71,21 +57,19 @@ Honolulu does not currently replicate the following RSAT tools:
 -   Volume Activation Tools
 -   Windows Server Update Services
 
-## Q: What Microsoft operating systems can Honolulu manage?
+## Q: What Microsoft operating systems can Windows Admin Center manage?
 
-**A:** Honolulu can manage the following operating systems:
+**A:** Windows Admin Center can manage the following operating systems:
 
 -   Windows Server 2016 Standard and Datacenter
 -   Windows Server 2012 and 2012 R2 Standard and Datacenter
 -   Microsoft Hyper-V Server 2016
 -   Microsoft Hyper-V Server 2012 R2
 
-## Q: How much does Honolulu cost?
+## Q: How much does Windows Admin Center cost?
 
-**A:** Honolulu is free of charge. Download it here: https://aka.ms/HonoluluDownload
+**A:** Windows Admin Center is free of charge. Download it here: https://aka.ms/HonoluluDownload
 
-## Q: Can Honolulu be used to manage the free Microsoft Hyper-V Server?
+## Q: Can Windows Admin Center be used to manage the free Microsoft Hyper-V Server?
 
-**A:** Yes. Honolulu can be used to manage Microsoft Hyper-V Server 2016 and Microsoft Hyper-V Server 2012 R2.
-
-[TODO:legacy-content-end]
+**A:** Yes. Windows Admin Center can be used to manage Microsoft Hyper-V Server 2016 and Microsoft Hyper-V Server 2012 R2.

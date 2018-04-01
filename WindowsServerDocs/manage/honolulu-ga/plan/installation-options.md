@@ -11,13 +11,9 @@ ms.date: 03/30/2018
 
 # What type of installation is right for you?
 
-[Content goes here]
-
-[TODO:legacy-content-begin]
-
 ## Supported operating systems
 
-You can *install* Honolulu on the following Windows operating systems:
+You can *install* Windows Admin Center on the following Windows operating systems:
 
 | **Version** | **Installation Mode** |
 |-------------|-----------------------|
@@ -25,11 +21,11 @@ You can *install* Honolulu on the following Windows operating systems:
 |Windows Server, version 1709 | Gateway mode |
 |Windows Server 2016 | Gateway mode |
 
-**Desktop Mode:** Connect to the Honolulu gateway from the same computer on which it's installed (i.e. `http://localhost:[port]`)
+**Desktop Mode:** Connect to the Windows Admin Center gateway from the same computer on which it's installed (i.e. `http://localhost:[port]`)
 
-**Gateway Mode:** Connect to the Honolulu  gateway from a client browser on a different machine (i.e. `https://servername`)
+**Gateway Mode:** Connect to the Windows Admin Center gateway from a client browser on a different machine (i.e. `https://servername`)
 
-You can use Honolulu to *manage* the following Windows operating systems:
+You can use Windows Admin Center to *manage* the following Windows operating systems:
 
 | **Version** | **Managed node** via Server Manager | **Managed cluster** via Failover Cluster Mgr | **Managed HCI cluster** via HC Cluster Mgr (early preview)|
 |-------------------------|---------------|-----|------------------------|
@@ -38,7 +34,7 @@ You can use Honolulu to *manage* the following Windows operating systems:
 | Windows Server 2012 R2  | Yes           | Yes | N/A                    |
 | Windows Server 2012     | Yes            | Yes | N/A                    |
 > [!NOTE]
-> Honolulu requires PowerShell features that are not included in Windows Server 2012 and 2012 R2. If you will manage Windows Server 2012 or 2012 R2 with Honolulu, you will need to install Windows Management Framework (WMF) version 5.0 or higher on those servers.
+> Windows Admin Center requires PowerShell features that are not included in Windows Server 2012 and 2012 R2. If you will manage Windows Server 2012 or 2012 R2 with Windows Admin Center, you will need to install Windows Management Framework (WMF) version 5.0 or higher on those servers.
 
 >Type `$PSVersiontable` in PowerShell to verify that WMF is installed,
 and that the version is 5.0 or higher. 
@@ -48,5 +44,3 @@ and that the version is 5.0 or higher.
 ## Deployment options
 
 ![](../../media/honolulu/spacer1.png)![](../../media/honolulu/deployment.png)
-
-[TODO:legacy-content-end]
