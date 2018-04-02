@@ -36,7 +36,7 @@ PS C:\Windows\system32> (get-cluster).EnabledEventLogs
 ```
 
 Here's an example of the output:
-```powershell
+```
 Microsoft-Windows-Hyper-V-VmSwitch-Diagnostic,4,0xFFFFFFFD
 Microsoft-Windows-SMBDirect/Debug,4
 Microsoft-Windows-SMBServer/Analytic
@@ -81,11 +81,11 @@ Windows will trigger the collection of a ``` LiveDump ``` when there are known r
 
 ## Gathering Logs
 
-After you have enabled event channels, you can use the **DumpLogQuery** to gather logs. The public resource type property **DumpLogQuery** is a mutistring value. Each string is an [XPATH query as described here](https://msdn.microsoft.com/en-us/library/windows/desktop/dd996910(v=vs.85).aspx).
+After you have enabled event channels, you can use the **DumpLogQuery** to gather logs. The public resource type property **DumpLogQuery** is a mutistring value. Each string is an [XPATH query as described here](https://msdn.microsoft.com/library/windows/desktop/dd996910(v=vs.85).aspx).
 
 When troubleshooting, if you need to collect additional event channels, you can a modify the **DumpLogQuery** property by adding additional queries or modifying the list.
 
-To do this, first test your XPATH query using the [get-WinEvent powershell command](https://docs.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.Diagnostics/Get-WinEvent?view=powershell-5.1):
+To do this, first test your XPATH query using the [get-WinEvent powershell command](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Diagnostics/Get-WinEvent?view=powershell-5.1):
 
 ```powershell
 get-WinEvent -FilterXML "<QueryList><Query><Select Path='Microsoft-Windows-GroupPolicy/Operational'>*[System[TimeCreated[timediff(@SystemTime) &gt;= 600000]]]</Select></Query></QueryList>"
@@ -113,7 +113,7 @@ PS C:\Windows\system32> dir c:\ProgramData\Microsoft\Windows\WER\ReportQueue
 ```
 
 Here's an example of the output:
-```powershell
+```
 Volume in drive C is INSTALLTO
 Volume Serial Number is 4031-E397
 
@@ -150,7 +150,7 @@ PS C:\Windows\system32> dir C:\ProgramData\Microsoft\Windows\WER\ReportArchive
 ```
 
 Here's an example of the output:
-```powershell
+```
 Volume in drive C is INSTALLTO
 Volume Serial Number is 4031-E397
 
@@ -178,7 +178,7 @@ Response.CabGuid=1701c157-8fe6-4c22-9de6-510c23b1e97c
 ```
 -->
 
-Windows Error Reporting provides many settings to customize the problem reporting experience. For further information, please refer to the Windows Error Reporting [documentation](https://msdn.microsoft.com/en-us/library/windows/desktop/bb513638(v=vs.85).aspx).
+Windows Error Reporting provides many settings to customize the problem reporting experience. For further information, please refer to the Windows Error Reporting [documentation](https://msdn.microsoft.com/library/windows/desktop/bb513638(v=vs.85).aspx).
 
 
 ## Troubleshooting using Windows Error Reporting reports
@@ -192,7 +192,7 @@ PS C:\Windows\system32> dir C:\ProgramData\Microsoft\Windows\WER\ReportArchive\C
 ```
 
 Here's an example of the output:
-```powershell
+```
 Volume in drive C is INSTALLTO
 Volume Serial Number is 4031-E397
 
@@ -279,7 +279,7 @@ PS C:\Windows\system32> (Get-ClusterResourceType -Name "Physical Disk").DumpLogQ
 ```
 
 Here's an example of the output:
-```powershell
+```
 <QueryList><Query Id="0"><Select Path="Microsoft-Windows-Kernel-PnP/Configuration">*[System[TimeCreated[timediff(@SystemTime) &lt;= 600000]]]</Select></Query></QueryList>
 <QueryList><Query Id="0"><Select Path="Microsoft-Windows-ReFS/Operational">*[System[TimeCreated[timediff(@SystemTime) &lt;= 600000]]]</Select></Query></QueryList>
 <QueryList><Query Id="0"><Select Path="Microsoft-Windows-Ntfs/Operational">*[System[TimeCreated[timediff(@SystemTime) &lt;= 600000]]]</Select></Query></QueryList>
@@ -311,7 +311,7 @@ Here's an example of the output:
 <QueryList><Query Id="0"><Select Path="Microsoft-Windows-Hyper-V-VmSwitch-Diagnostic">*[System[TimeCreated[timediff(@SystemTime) &lt;= 600000]]]</Select></Query></QueryList>
 ```
 
-Message Analyzer enables you to capture, display, and analyze protocol messaging traffic. It also lets you trace and assess system events and other messages from Windows components. You can download [Microsoft Message Analyzer from here](https://www.microsoft.com/en-us/download/details.aspx?id=44226). When you load the logs into Message Analyzer, you will see the following providers and messages from the log channels.
+Message Analyzer enables you to capture, display, and analyze protocol messaging traffic. It also lets you trace and assess system events and other messages from Windows components. You can download [Microsoft Message Analyzer from here](https://www.microsoft.com/download/details.aspx?id=44226). When you load the logs into Message Analyzer, you will see the following providers and messages from the log channels.
 
 ![Loading logs into Message Analyzer](media\troubleshooting-using-WER-reports\loading-logs-into-message-analyzer.png)
 
@@ -333,7 +333,7 @@ PS C:\Windows\system32> dir C:\ProgramData\Microsoft\Windows\WER\ReportArchive\C
 ```
 
 Here's an example of the output:
-```powershell
+```
 Volume in drive C is INSTALLTO
 Volume Serial Number is 4031-E397
 
