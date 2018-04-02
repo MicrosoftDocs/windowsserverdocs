@@ -10,7 +10,7 @@ ms.prod: windows-server-threshold
 ms.technology: storage-spaces
 manager: brianlic
 ---
-# Storage Spaces health and operational states
+# Troubleshoot Storage Spaces health and operational states
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10, Windows 8.1
 
