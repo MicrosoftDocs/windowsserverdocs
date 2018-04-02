@@ -24,23 +24,31 @@ Here's a list of things you should prepare if you are planning on publishing to 
 [TODO]
 
 ### Submit an extension review request to Microsoft ###
-Since the Windows Admin Center extensions platform is still in an early preview phase, we want to work closely with extension developers to help on development issues and help make sure you are delivering a quality product and experience to users. We recommend that you submit an extension review request to Microsoft at least a month before you plan to release your extension publicly to ensure we have sufficient time to review and for you to make any changes to your extension if necessary. Once the extension review is complete and approved, we will publish your extension to the Windows Admin Center feed.
+Since the Windows Admin Center extensions platform is still in an early preview phase, we want to work closely with extension developers to help on development issues and help make sure you are delivering a quality product and experience to users. We recommend that you submit an extension review request to Microsoft at least a month before you plan to release your extension publicly to ensure we have sufficient time to review and for you to make any changes to your extension if necessary. Once the extension review is complete and your extension is approved, we will publish your extension to the Windows Admin Center feed.
 
 To submit an extension review request, enter the following information and send as an email to [wacextensionrequest@microsoft.com](mailto:wacextensionrequest@microsoft.com?subject=Windows%20Admin%20Center%20Extension%20Review%20Request). We will reply to your email within a week.
 
-    ```
-    Windows Admin Center Extension Review Request
-    1. Name and email address of extension owner/developer (up to 3 users). If you will be releasing an extension on behalf of your company, provide your company email address.
-    2. Company name (Only required if you are releasing an extension on behalf of your company):
-    3. Extension name:
-    4. Extension description (early design wireframes, screen mockups or product screenshots are highly recommended):
-    ```
+```
+Windows Admin Center Extension Review Request
+1. Name and email address of extension owner/developer (up to 3 users). If you will be releasing an extension on behalf of your company, provide your company email address.
+2. Company name (Only required if you are releasing an extension on behalf of your company):
+3. Extension name:
+4. Extension description (early design wireframes, screen mockups or product screenshots are highly recommended):
+```
 
 ### Consider releasing as a Preview release ###
-[TODO]
+If you are releasing a preview version of your extension for evaluation purposes, we recommend that you:
+- Append "(Preview)" to the end of your extension's title in the .nuspec file
+- Explain the limitations in your extension's desription in the .nuspec file
+- Add the Preview badge UI in your extension 
+- [TODO] Add link to Preview badge UI example
 
 ### Prepare a project website and end user license agreement ###
-[TODO]
+We recommend that you have a project website including the following:
+- Detailed description of your extension including screenshots or video
+- Email address or website feature to receive feedback or questions
+
+You may also want to include an end user license agreement (EULA) for your extension. Make sure that there are no conflicting terms with the Windows Admin Center SDK EULA. You can provide a URL to your EULA in the .nuspec file as described below. 
 
 ## Preparing your extension for publishing ##
 You may want to send us your extension under development to expedite the review process, and you will need to send us your final extension package for us to approve and publish to the Windows Admin Center feed. Here are the steps for preparing your extension package for review.
@@ -91,6 +99,7 @@ Using the .nuspec file you created above, you will now create the NuGet package 
 2. Run "nuget.exe pack [.nuspec file name]" to create the .nupkg file.
 
 ### 4. Signing your extension NuGet package ###
+Any .dll files included in your extension are required to be signed with a certificate from a trusted Certificate Authority (CA). By default, unsigned .dll files will be blocked from being executed. While Windows Admin Center currently does not verify the signature for the extension NuGet package file, we highly recommend that you sign the package to ensure the integrity of the package, and as we will be implementing package signing validation in Windows Admin Center in the future.
 
 ### 5. Test your extension NuGet package ###
 Test your package on a file share or test feed before publishing, and make sure the properties are displayed correctly in Extension Manager and you can successfully install and uninstall your extension.
