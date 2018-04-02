@@ -85,7 +85,7 @@ After you have enabled event channels, you can use the **DumpLogQuery** to gathe
 
 When troubleshooting, if you need to collect additional event channels, you can a modify the **DumpLogQuery** property by adding additional queries or modifying the list.
 
-To do this, first test your XPATH query using the [get-WinEvent powershell command](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Diagnostics/Get-WinEvent?view=powershell-5.1):
+To do this, first test your XPATH query using the [get-WinEvent](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Diagnostics/Get-WinEvent?view=powershell-5.1) PowerShell cmdlet:
 
 ```powershell
 get-WinEvent -FilterXML "<QueryList><Query><Select Path='Microsoft-Windows-GroupPolicy/Operational'>*[System[TimeCreated[timediff(@SystemTime) &gt;= 600000]]]</Select></Query></QueryList>"
