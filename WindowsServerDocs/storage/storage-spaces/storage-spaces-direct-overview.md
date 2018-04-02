@@ -1,17 +1,17 @@
 ---
-title: Storage Spaces Direct in Windows Server 2016
+title: Storage Spaces Direct overview
 ms.prod: windows-server-threshold
 ms.author: cosdar
 ms.manager: dongill
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 3/6/2018
+ms.date: 3/30/2018
 ms.assetid: 8bd0d09a-0421-40a4-b752-40ecb5350ffd
 description: An overview of Storage Spaces Direct, a feature of Windows Server Enterprise Edition that enables you to cluster servers with internal storage into a software-defined storage solution.
 ms.localizationpriority: medium
 ---
-# Storage Spaces Direct in Windows Server 2016
+# Storage Spaces Direct overview
 
 >Applies to: Windows Server 2016
 
@@ -22,7 +22,7 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter and [Windows
 <table>
     <tr style="border: 0;">
         <td style="padding: 5px; border: 0;">
-            <strong><a href="understand-storage-spaces-direct.md">Understand</a></strong>
+            <strong>Understand</a></strong>
             <ul>
 			  <li>Overview (you are here)</li>
 			  <li><a href="understand-the-cache.md">Understand the cache</a></li>
@@ -32,33 +32,44 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter and [Windows
 		  	</ul>
         </td>
         <td style="padding: 5px; border: 0;">
-            <strong><a href="plan-storage-spaces-direct.md">Plan</a></strong>
+            <strong>Plan</a></strong>
             <ul>
 			  <li><a href="storage-spaces-direct-hardware-requirements.md">Hardware requirements</a></li>
+              <li><a href="csv-cache.md">Using the CSV in-memory read cache</li>
 			  <li><a href="choosing-drives.md">Choose drives</a></li>
 			  <li><a href="plan-volumes.md">Plan volumes</a></li>
-              <li><a href="storage-spaces-direct-in-vm.md">Guest VM clusters</a></li>
+              <li><a href="storage-spaces-direct-in-vm.md">Using guest VM clusters</a></li>
+              <li><a href="storage-spaces-direct-disaster-recovery.md">Disaster recovery</a></li>
 		    </ul>
         </td>
     </tr>
     <tr style="border: 0;">
         <td style="padding: 5px; border: 0;">
-            <strong><a href="deploy-storage-spaces-direct.md">Deploy</a></strong>
+            <strong>Deploy</a></strong>
             <ul>
-			  <li><a href="hyper-converged-solution-using-storage-spaces-direct.md">Deploy Storage Spaces Direct</a></li>
+			  <li><a href="deploy-storage-spaces-direct.md">Deploy Storage Spaces Direct</a></li>
 			  <li><a href="create-volumes.md">Create volumes</a><br><br><br><br></li>
 		    </ul>
         </td>        
         <td style="padding: 5px; border: 0;">
-            <strong><a href="manage-storage-spaces-direct.md">Manage</a></strong>
+            <strong>Manage</a></strong>
             <ul>
 			  <li><a href="add-nodes.md">Add servers or drives</a></li>
 			  <li><a href="maintain-servers.md">Taking a server offline for maintenance</li>
 			  <li><a href="remove-servers.md">Remove servers</a></li>
 			  <li><a href="resize-volumes.md">Extend volumes</a></li>
 			  <li><a href="../update-firmware.md">Update drive firmware</a></li>
+              <li><a href="storage-spaces-states.md">Troubleshoot health and operational states</a></li>
 		    </ul>
         </td>
+    </tr>
+    <tr style="border: 0;">
+         <td style="padding: 5px; border: 0;">
+            <strong>Insider Preview content</a></strong>
+            <ul>
+                <li><a href="performance-history.md">Performance history</a></li>
+                <li><a href="delimit-volume-allocation.md">Delimit the allocation of volumes</a></li>
+            </ul>
     </tr>
     
 </table>
@@ -142,7 +153,7 @@ Storage Spaces Direct was designed for two distinct deployment options:
 
 ### Hyper-Converged
 
-**One cluster for compute and storage.** The hyper-converged deployment option runs Hyper-V virtual machines or SQL Server databases directly on the servers providing the storage, storing their files on the local volumes. This eliminates the need to configure file server access and permissions, and reduces hardware costs for small-to-medium business or remote office/branch office deployments. See [Hyper-converged solution using Storage Spaces Direct](hyper-converged-solution-using-storage-spaces-direct.md).
+**One cluster for compute and storage.** The hyper-converged deployment option runs Hyper-V virtual machines or SQL Server databases directly on the servers providing the storage, storing their files on the local volumes. This eliminates the need to configure file server access and permissions, and reduces hardware costs for small-to-medium business or remote office/branch office deployments. See [Deploy Storage Spaces Direct](deploy-storage-spaces-direct.md).
 
 ![Storage Spaces Direct serves storage to Hyper-V VMs in the same cluster](media/storage-spaces-direct-in-windows-server-2016/hyper-converged-minimal.png)
 
@@ -173,6 +184,19 @@ Here's an overview of the Storage Spaces Direct stack:
 **Cluster Shared Volumes.** The CSV file system unifies all the ReFS volumes into a single namespace accessible through any server, so that to each server, every volume looks and acts like it's mounted locally.
 
 **Scale-Out File Server.** This final layer is necessary in converged deployments only. It provides remote file access using the SMB3 access protocol to clients, such as another cluster running Hyper-V, over the network, effectively turning Storage Spaces Direct into network-attached storage (NAS).
+
+## Tools for managing Storage Spaces Direct
+After you've deployed your storage, some of the management tasks you'll perform include monitoring for failed physical disks or other issues, replacing disks that fail, and updating firmware and drivers.
+See the following table for common management options.
+
+|Tool|Advantages|Disadvantages|
+|---|---|---|
+|[Project Honolulu](../../manage/honolulu/honolulu.md)|-Powerful and easy to use<br>-Graphical displays for monitoring individual clusters and servers|-Must be installed (it is [pretty easy to install](../../manage/honolulu/deployment-guide.md) though...)|
+|Windows PowerShell|- Complete control over all aspects of storage<br>- Can automate by writing scripts<br>- Powerful example scripts available|- Better for management than visually monitoring overall storage health<br>- Scripts require development and testing|
+|System Center Virtual Machine Manager (VMM) & Operations Manager|- Easy to use<br>- Graphical displays for monitoring multiple systems<br>- Alerting for common problems<br>- Common tool for managing VMs and storage<br>|- Some tasks require Windows PowerShell<br>- Requires System Center licenses<br>- Might require additional infrastructure if you don't already have System Center or are deploying at a scale that's greater than your existing deployment can handle|
+|Failover Cluster Manager & Server Manager|- Easy to use<br>- Graphical displays for monitoring<br>|- Some tasks require Windows PowerShell<br>- Slow automatic refreshes in Server Manager when working with storage<br>- Performance and usability decreases with large numbers of objects|
+
+For more info about using VMM with Storage Spaces Direct, see [Manage Storage Spaces Direct in VMM](https://technet.microsoft.com/system-center-docs/vmm/manage/manage-storage-spaces-direct-vmm), and [Manage storage in Storage Spaces Direct in the VMM fabric](https://technet.microsoft.com/system-center-docs/vmm/scenario/storage-spaces-manage).
 
 ## Get started
 

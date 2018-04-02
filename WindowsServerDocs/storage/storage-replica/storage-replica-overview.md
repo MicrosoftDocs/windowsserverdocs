@@ -6,7 +6,7 @@ ms.author: nedpyle
 ms.technology: storage-replica
 ms.topic: get-started-article
 author: nedpyle
-ms.date: 10/11/2017
+ms.date: 3/29/2018
 ms.assetid: e9b18e14-e692-458a-a39f-d5b569ae76c5
 ---
 # Storage Replica overview
@@ -22,7 +22,8 @@ Storage Replica supports synchronous and asynchronous replication:
 
 This guide outlines how your business can benefit from this new functionality and the different replication scenarios that are supported by Storage Replica. It assumes that you have a previous working knowledge of Windows Server, Failover Clustering, File Servers, and Hyper-V, to include basic administration.  
 
-## Why use Storage Replica?  
+## Why use Storage Replica?
+
 Storage Replica offers new disaster recovery and preparedness capabilities in Windows Server 2016 Datacenter Edition. For the first time, Windows Server offers the peace of mind of zero data loss, with the ability to synchronously protect data on different racks, floors, buildings, campuses, counties, and cities. After a disaster strikes, all data will exist elsewhere without any possibility of loss. The same applies *before* a disaster strikes; Storage Replica offers you the ability to switch workloads to safe locations prior to catastrophes when granted a few moments warning - again, with no data loss.  
 
 Storage Replica allows more efficient use of multiple datacenters. By stretching clusters or replicating clusters, workloads can be run in multiple datacenters for quicker data access by local proximity users and applications, as well as better load distribution and use of compute resources. If a disaster takes one datacenter offline, you can move its typical workloads to the other site temporarily.  
@@ -104,7 +105,7 @@ Windows Server 2016 implements the following features in Storage Replica:
 
 *May require additional long haul equipment and cabling.  
 
-## <a name="BKMK_SR3"></a> Storage Replica Prerequisites  
+## <a name="BKMK_SR3"></a> Storage Replica prerequisites  
 
 * Active Directory Domain Services forest.  
 * Storage Spaces with SAS JBODs, Storage Spaces Direct, fibre channel SAN, shared VHDX, iSCSI Target, or local SAS/SCSI/SATA storage. SSD or faster recommended for replication log drives. Microsoft recommends that the log storage be faster than the data storage. Log volumes must never be used for other workloads. 
@@ -114,12 +115,13 @@ Windows Server 2016 implements the following features in Storage Replica:
 
 ##  <a name="BKMK_SR4"> </a> Background  
 This section includes information about high-level industry terms, synchronous and asynchronous replication, and key behaviors.
-### High level industry terms  
+
+### High-level industry terms  
 Disaster Recovery (DR) refers to a contingency plan for recovering from site catastrophes so that the business continues to operate. Data DR means multiple copies of production data in a separate physical location. For example, a stretch cluster, where half the nodes are in one site and half are in another. Disaster Preparedness (DP) refers to a contingency plan for preemptively moving workloads to a different location prior to an oncoming disaster, such as a hurricane.  
 
 Service level agreements (SLAs) define the availability of a business' applications and their tolerance of down time and data loss during planned and unplanned outages. Recovery Time Objective (RTO) defines how long the business can tolerate total inaccessibility of data. Recovery Point Objective (RPO) defines how much data the business can afford to lose.  
 
-### Synchronous Replication  
+### Synchronous replication  
 Synchronous replication guarantees that the application writes data to two locations at once before completion of the IO. This replication is more suitable for mission critical data, as it requires network and storage investments, as well as a risk of degraded application performance.  
 
 When application writes occur on the source data copy, the originating storage does not acknowledge the IO immediately. Instead, those data changes replicate to the remote destination copy and return an acknowledgement. Only then does the application receive the IO acknowledgment. This ensures constant synchronization of the remote site with the source site, in effect extending storage IOs across the network. In the event of a source site failure, applications can failover to the remote site and resume their operations with assurance of zero data loss.  
@@ -128,7 +130,7 @@ When application writes occur on the source data copy, the originating storage d
 |--------|-----------|---------|  
 |**Synchronous**<br /><br />Zero Data Loss<br /><br />RPO|![Diagram showing how Storage Replica writes data in synchronous replication](./media/Storage-Replica-Overview/Storage_SR_SynchronousV2.png)|1.  Application writes data<br />2.  Log data is written and the data is replicated to the remote site<br />3.  Log data is written at the remote site<br />4.  Acknowledgement from the remote site<br />5.  Application write acknowledged<br /><br />t & t1 : Data flushed to the volume, logs always write through|  
 
-### Asynchronous Replication  
+### Asynchronous replication  
 Contrarily, asynchronous replication means that when the application writes data, that data replicates to the remote site without immediate acknowledgment guarantees. This mode allows faster response time to the application as well as a DR solution that works geographically.  
 
 When the application writes data, the replication engine captures the write and immediately acknowledges to the application. The captured data then replicates to the remote location. The remote node processes the copy of the data and lazily acknowledges back to the source copy. Since replication performance is no longer in the application IO path, the remote site's responsiveness and distance are less important factors. There is risk of data loss if the source data is lost and the destination copy of the data was still in buffer without leaving the source.  
@@ -139,7 +141,7 @@ With its higher than zero RPO, asynchronous replication is less suitable for HA 
 |--------|-----------|---------|  
 |**Asynchronous**<br /><br />Near zero data loss<br /><br />(depends on multiple factors)<br /><br />RPO|![Diagram showing how Storage Replica writes data in asynchronous replication](./media/Storage-Replica-Overview/Storage_SR_AsynchronousV2.png)|1.  Application writes data<br />2.  Log data written<br />3.  Application write acknowledged<br />4.  Data replicated to the remote site<br />5.  Log data written at the remote site<br />6.  Acknowledgement from the remote site<br /><br />t & t1 : Data flushed to the volume, logs always write through|  
 
-### Key Evaluation Points and Behaviors  
+### Key evaluation points and behaviors  
 
 -   Network bandwidth and latency with fastest storage. There are physical limitations around synchronous replication. Because Storage Replica implements an IO filtering mechanism using logs and requiring network round trips, synchronous replication is likely make application writes slower. By using low latency, high-bandwidth networks as well as high-throughput disk subsystems for the logs, you will minimize performance overhead.  
 
@@ -174,7 +176,7 @@ Two new features are available in Windows Server, version 1709:
 
 -   The test failover feature. This allows mounting of destination storage in order to validate replication or backup data. For more info, see https://aka.ms/srfaq
 
--   The "Project Honolulu" Server Manager Experience tool now supports managing Storage Replica graphically for server-to-server configurations, with no need to use PowerShell for general deployment, management, failover, and removal operations operations.
+-   The Project Honolulu app now supports [managing Storage Replica graphically](storage-replica-ui.md) for server-to-server configurations, with no need to use PowerShell for general deployment, management, failover, and removal operations operations.
 
 Additionally, Windows Server, version 1709:
 

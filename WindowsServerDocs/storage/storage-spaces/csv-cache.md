@@ -9,9 +9,7 @@ author: eldenchristensen
 ms.date: 02/05/2018
 ms.localizationpriority: medium
 ---
-
-# Storage Spaces Direct in-memory read cache
-
+# Using Storage Spaces Direct with the CSV in-memory read cache
 > Applies To: Windows Server 2016, Windows Server Insider Preview
 
 This topic describes how to use system memory to boost the performance of [Storage Spaces Direct](storage-spaces-direct-overview.md).
