@@ -13,7 +13,7 @@ Previously, administrators could change the target path of the redirected folder
 Optimized move has the following requirements:
 
   - Folder Redirection must be setup. For more information see [Deploy Folder Redirection with Offline Files](deploy-folder-redirection.md).
-  - Client computers must run Windows 8.1, Windows 8, Windows Server 2012 R2, or Windows Server 2012
+  - Client computers must run Windows 8.1, Windows 8, Windows Server 2012 R2, or Windows Server 2012.
 
 ## Step 1: Enable optimized move in Group Policy
 
@@ -36,15 +36,15 @@ When moving the file share that contains users' redirected folders, it is import
 1. Notify users in advance that the server hosting their redirected folders will change and recommend that they perform the following actions:
     
       - Synchronize the contents of their Offline Files cache and resolve any conflicts.
-      - Open an elevated command prompt, type **GpUpdate /Target:User /Force**, and then sign out and sign back in to ensure that the latest Group Policy settings are applied to the client computer
+      - Open an elevated command prompt, enter **GpUpdate /Target:User /Force**, and then sign out and sign back in to ensure that the latest Group Policy settings are applied to the client computer
 
         >[!NOTE]
-        >By default, client computers update Group Policy every 90 minutes, so if you allow sufficient time for client computers to receive updated policy, you do not need to ask users to use GpUpdate.
+        >By default, client computers update Group Policy every 90 minutes, so if you allow sufficient time for client computers to receive updated policy, you do not need to ask users to use **GpUpdate**.
 2. Remove the file share from the server to ensure that no files in the file share are in use. To do so in Server Manager, on the **Shares** page of File and Storage Services, right-click the appropriate file share and then click **Remove**.
     
-    Users will work offline using Offline Files until the move is complete and they receive the updated Folder Redirection settings via Group Policy.
+    Users will work offline using Offline Files until the move is complete and they receive the updated Folder Redirection settings from Group Policy.
 
-3. Using an account with backup privileges, move the contents of the file share to the new location using a method that preserves file timestamps, such as a backup and restore utility. To use the **Robocopy** command, open an elevated command prompt, and then type the following command, where *\<Source\>* is the current location of the file share, and *\<Destination\>* is the new location:
+3. Using an account with backup privileges, move the contents of the file share to the new location using a method that preserves file timestamps, such as a backup and restore utility. To use the **Robocopy** command, open an elevated command prompt, and then type the following command, where ```<Source>``` is the current location of the file share, and ```<Destination>``` is the new location:
     
     ```PowerShell
     Robocopy /B <Source> <Destination> /Copyall /MIR /EFSRAW

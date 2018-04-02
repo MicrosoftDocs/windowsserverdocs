@@ -8,7 +8,7 @@ This document describes how to use the Always Offline mode of Offline Files to p
 
 ## Prerequisites
 
-To enable the Always Offline mode, your environment must meet the following prerequisites.
+To enable Always Offline mode, your environment must meet the following prerequisites.
 
 - An Active Directory Domain Services (AD DS) domain with client computers joined to the domain. There are no forest or domain functional-level requirements or schema requirements.
 - Client computers running Windows 8.1, Windows 8, Windows Server 2012 R2, or Windows Server 2012. (Client computers running earlier versions of Windows might continue to transition to Online mode on very high-speed network connections.)
