@@ -27,10 +27,7 @@ With SMB Multichannel, SMB detects whether a network adapter has the RDMA capabi
 SMB Direct requires the following:
 
   - At least two computers running Windows Server 2012 R2 or Windows Server 2012
-  - One or more network adapters with RDMA capability. Currently, these network adapters are available in three different types: iWARP, Infiniband, or RoCE (RDMA over Converged Ethernet). The following resources provide additional information about each type of RDMA-capable network adapter:
-      - [Deploy SMB Direct with Ethernet (iWARP) Network Adapters](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn583825(v%3dws.11)>)
-      - [Deploy SMB Direct with InfiniBand Network Adapters](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn583823(v%3dws.11)>)
-      - [Deploy SMB Direct with RoCE Network Adapters](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn583822(v%3dws.11)>)
+  - One or more network adapters with RDMA capability.
 
 ### Considerations when using SMB Direct
 
@@ -112,9 +109,5 @@ You can test how the performance is working by using one of the following proced
 
 ## More information
 
-  - [Deploy SMB Direct with InfiniBand Network Adapters](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn583823(v%3dws.11)>)
-  - [Deploy SMB Direct with RoCE Network Adapters](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn583822(v%3dws.11)>)
-  - [Deploy SMB Direct with Ethernet (iWARP) Network Adapters](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn583825(v%3dws.11)>)
-  - [Server Message Block Overview](file-server-smb-overview.md)
   - [Increasing Server, Storage, and Network Availability: Scenario Overview](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831437(v%3dws.11)>)
   - [Deploy Hyper-V over SMB](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134187(v%3dws.11)>)
