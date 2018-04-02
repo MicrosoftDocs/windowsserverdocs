@@ -59,7 +59,7 @@ If you encounter an issue not described on this page, please [let us know](http:
 
 ## WebSocket compatibility when using a proxy service
 
-Remote Desktop, PowerShell, and Events modules in Honolulu utilize the WebSocket protocol, which is often not supported when using a proxy such as Azure AD App Proxy. If you depend on this configuration, please add your vote [here](https://feedback.azure.com/forums/169401-azure-active-directory/suggestions/20213116-support-websocket-protocol-in-azure-ad-application).
+Remote Desktop, PowerShell, and Events modules in Honolulu utilize the WebSocket protocol, which is often not supported when using a proxy service. Check out [Azure AD Application Proxy](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-application-proxy-get-started) for a proxy solution that supports websockets.
 
 ## Support for Windows Server versions before 2016 (2012 & 2012R2)
 
