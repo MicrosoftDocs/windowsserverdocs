@@ -11,7 +11,7 @@ ms.topic: article
 author: haley-rowland
 manager: dongill
 ms.author: elizapo
-ms.date: 08/09/2017
+ms.date: 04/02/2018
 ---
 # Remote Desktop - Allow access to your PC from outside your PC's network
 
@@ -23,7 +23,7 @@ When you connect to your PC by using a Remote Desktop client, you're creating a 
 
 Port forwarding simply maps the port on your router's IP address (your public IP) to the port and IP address of the PC you want to access. 
 
-Specific steps for enabling port forwarding depend on the router you're using, so you'll need to search online for your router's instructions. For a general discussion of the steps, check out [wikiHow to Set Up Port Forwarding on a Router](http://www.wikihow.com/Set-Up-Port-Forwarding-on-a-Router).
+Specific steps for enabling port forwarding depend on the router you're using, so you'll need to search online for your router's instructions. For a general discussion of the steps, check out [wikiHow to Set Up Port Forwarding on a Router](https://www.wikihow.com/Set-Up-Port-Forwarding-on-a-Router).
 
 Before you map the port you'll need the following:
 
@@ -31,7 +31,7 @@ Before you map the port you'll need the following:
 
    ![Operational network configuration](../media/rdclient-operational-network.png)
 
-- Your public IP address (the router's IP). There are many ways to find this - you can search (in Bing or Google) for "my IP" or use a website like https://www.ip-adress.eu/.
+- Your public IP address (the router's IP). There are many ways to find this - you can search (in Bing or Google) for "my IP" or view the [Wi-Fi network properties](https://binged.it/2Gwob34) (for Windows 10).
 - Port number being mapped. In most cases this is 3389 - that's the default port used by Remote Desktop connections.
 - Admin access to your router.  
 
