@@ -66,5 +66,5 @@ See the following table for a listing of registry key names (folder GUIDs) to us
 
 ## More information
 
-* [Folder Redirection, Offline Files, and Roaming User Profiles overview](folder=redirection-rup-overview.md)
+* [Folder Redirection, Offline Files, and Roaming User Profiles overview](folder-redirection-rup-overview.md)
 * [Deploy Folder Redirection with Offline Files](deploy-folder-redirection.md)

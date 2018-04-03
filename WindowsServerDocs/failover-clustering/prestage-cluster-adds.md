@@ -108,7 +108,7 @@ If you prestaged the CNO in AD DS, you can do either of the following to create 
 8. In the **Permission Entry** dialog box, make sure that the **Type** list is set to **Allow**, and the **Applies to** list is set to **This object and all descendant objects**.
 9. Under **Permissions**, select the **Create Computer objects** check box.
     
-    ![Granting the Create Computer objects permission to the CNO](..\media\prestage-cluster-adds\Dn466519.d41eab1a-f36f-432b-a1ae-91df9ee8ec18(WS.11).jpeg)
+    ![Granting the Create Computer objects permission to the CNO](\media\prestage-cluster-adds\Dn466519.d41eab1a-f36f-432b-a1ae-91df9ee8ec18(WS.11).jpeg)
     
     **Figure 3. Granting the Create Computer objects permission to the CNO**
 10. Click **OK** until you return to the Active Directory Users and Computers snap-in.
