@@ -117,7 +117,7 @@
 
 ## [Network Load Balancing](technologies/Network-Load-Balancing.md)
 
-## [Network Offload and Optimization Technologies](technologies/network-offload.md)
+## [High-Performance Availability](technologies/network-offload.md)
 ### [Converged NIC Configuration Guide](technologies/conv-nic/cnic-top.md)
 #### [Converged NIC Configuration with a Single Network Adapter](technologies/conv-nic/cnic-single.md)
 #### [Converged NIC Teamed NIC Configuration](technologies/conv-nic/cnic-datacenter.md)
