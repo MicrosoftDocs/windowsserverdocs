@@ -201,7 +201,9 @@ This section is optional.
 Return to [Contents](#BKMK_Contents)
 
 > [!NOTE]
-> SubjectNameFlags allows the INF file to specify which Subject and SubjectAltName extension fields should be auto-populated by certreq based on the current user or current machine properties: DNS name, UPN, and so on. Using the literal “template�? means the template name flags are used instead. This allows a single INF file to be used in multiple contexts to generate requests with context-specific subject information.</br>> X500NameFlags specifies the flags to be passed directly to CertStrToName API when the Subject INF keys value is converted to an ASN.1 encoded Distinguished Name.
+> SubjectNameFlags allows the INF file to specify which Subject and SubjectAltName extension fields should be auto-populated by certreq based on the current user or current machine properties: DNS name, UPN, and so on. Using the literal "template" means the template name flags are used instead. This allows a single INF file to be used in multiple contexts to generate requests with context-specific subject information.
+>
+> X500NameFlags specifies the flags to be passed directly to CertStrToName API when the Subject INF keys value is converted to an ASN.1 encoded Distinguished Name.
 
 To request a certificate based using certreq -new use the steps from the example below:
 
@@ -218,7 +220,7 @@ KeySpec = 1
 KeyUsage = 0xf0 
 MachineKeySet = TRUE 
 [RequestAttributes]
-CertificateTemplate=�?WebServer�?
+CertificateTemplate="WebServer"
 [Extensions] 
 OID = 1.3.6.1.5.5.7.3.1 
 OID = 1.3.6.1.5.5.7.3.2  

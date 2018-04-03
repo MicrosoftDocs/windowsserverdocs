@@ -26,7 +26,7 @@ Software Storage Bus also implements a fair access algorithm that ensures fair d
 ## Related Topics  
 -   [Storage Spaces Direct in Windows Server 2016](storage-spaces-direct-overview.md)  
 -   [Storage Spaces Direct Hardware Requirements](Storage-Spaces-Direct-Hardware-Requirements.md)  
--   [Hyper-converged solution using Storage Spaces Direct in Windows Server 2016](hyper-converged-solution-using-storage-spaces-direct.md)  
+-   [Deploy Storage Spaces Direct](deploy-storage-spaces-direct.md)  
 -   [Storage Spaces Optimize Pool](Storage-Spaces-Optimize-Pool.md)  
 -   [Storage Spaces Fault Tolerance](Storage-Spaces-Fault-Tolerance.md)  
 

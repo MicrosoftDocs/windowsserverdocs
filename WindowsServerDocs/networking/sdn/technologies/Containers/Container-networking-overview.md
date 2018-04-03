@@ -10,7 +10,7 @@ ms.technology: networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 318659e5-e4a5-4e46-99d6-211dfc46f6b8
-ms.author: jamesmci
+ms.author: pashort
 author: jmesser81
 ---
 # Container Networking Overview

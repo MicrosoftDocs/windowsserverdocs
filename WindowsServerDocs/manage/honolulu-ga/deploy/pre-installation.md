@@ -12,13 +12,9 @@ ms.date: 03/30/2018
 
 # Windows Admin Center Pre-Installation Tasks
 
-[Content goes here]
-
-[TODO:legacy-content-begin]
-
 ## Supported operating systems ##
 
-You can *install* Honolulu on the following Windows operating systems:
+You can *install* Windows Admin Center on the following Windows operating systems:
 
 | **Version** | **Installation Mode** |
 |-------------|-----------------------|
@@ -26,28 +22,28 @@ You can *install* Honolulu on the following Windows operating systems:
 |Windows Server, version 1709 | Gateway mode |
 |Windows Server 2016 | Gateway mode |
 
-**Desktop Mode:** Connect to the Honolulu gateway from the same computer on which it's installed (i.e. `http://localhost:[port]`)
+**Desktop Mode:** Connect to the Windows Admin Center gateway from the same computer on which it's installed (i.e. `http://localhost:[port]`)
 
-**Gateway Mode:** Connect to the Honolulu  gateway from a client browser on a different machine (i.e. `https://servername`)
+**Gateway Mode:** Connect to the Windows Admin Center gateway from a client browser on a different machine (i.e. `https://servername`)
 
 ## Prerequisite: Install WMF version 5.0 or higher on Windows Server 2012 and 2012 R2 ##
 
-Project Honolulu requires PowerShell features that are not included in Windows Server 2012 and 2012 R2. If you will manage Windows Server 2012 or 2012 R2 with Honolulu, you will need to install WMF version 5.0 or higher on those servers. 
+Windows Admin Center requires PowerShell features that are not included in Windows Server 2012 and 2012 R2. If you will manage Windows Server 2012 or 2012 R2 with Windows Admin Center, you will need to install WMF version 5.0 or higher on those servers. 
 
 Type `$PSVersiontable` in PowerShell to verify that WMF is installed,
 and that the version is 5.0 or higher. 
 
 If it is not installed, you can [download and install WMF 5.1](https://www.microsoft.com/en-us/download/details.aspx?id=54616).
 
-# Configure Microsoft Hyper-V Server for management by Project Honolulu
+# Configure Microsoft Hyper-V Server for management by Windows Admin Center
 
 >Applies To: Microsoft Hyper-V Server 2016 and Microsoft Hyper-V Server 2012 R2
 
 If you are going to manage Microsoft Hyper-V Server, there are some Server roles you'll need to enable before you can do so.
 
-## Configure Microsoft Hyper-V Server 2016 for management by Honolulu
+## Configure Microsoft Hyper-V Server 2016
 
-**To manage Microsoft Hyper-V Server 2016 with Honolulu**
+**To manage Microsoft Hyper-V Server 2016 with Windows Admin Center**
 
 1. Enable Remote Management.
 2. Enable File Server Role.
@@ -80,9 +76,9 @@ If you are going to manage Microsoft Hyper-V Server, there are some Server roles
 
 ![](../../media/honolulu/7ab0999602b7083733525bd0c1ba2747.png)
 
-## Configure Microsoft Hyper-V Server 2012 R2 for management by Honolulu 
+## Configure Microsoft Hyper-V Server 2012 R2
 
-**To manage Microsoft Hyper-V Server 2012 R2 with Honolulu**
+**To manage Microsoft Hyper-V Server 2012 R2 with Windows Admin Center**
 
 1. Install Windows Management Framework (WMF) version 5.0 or higher
 2. Enable Remote Management
@@ -91,7 +87,7 @@ If you are going to manage Microsoft Hyper-V Server, there are some Server roles
 
 ### Step 1: Install Windows Management Framework 5.1 ##
 
-Project Honolulu requires PowerShell features that are not included in Microsoft Hyper-V Server 2012 R2. If you  will manage, Microsoft Hyper-V Server 2012 R2 with Honolulu, you will need to install WMF version 5.0 or higher on those servers.
+Windows Admin Center requires PowerShell features that are not included in Microsoft Hyper-V Server 2012 R2. If you  will manage, Microsoft Hyper-V Server 2012 R2 with Windows Admin Center, you will need to install WMF version 5.0 or higher on those servers.
 
 Type `$PSVersiontable` in PowerShell to verify that WMF is installed,
 and that the version is 5.0 or higher. 
@@ -124,5 +120,3 @@ If it is not installed, you can [download WMF 5.1](https://www.microsoft.com/en-
 2.  In **Roles and Features**, find **Remote Server Administration Tools** and check **Role Administration Tools** and **Hyper-V Module for PowerShell**:
 
 ![](../../media/honolulu/7ab0999602b7083733525bd0c1ba2747.png)
-
-[TODO:legacy-content-end]

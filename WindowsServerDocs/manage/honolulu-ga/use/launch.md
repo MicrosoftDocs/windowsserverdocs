@@ -11,13 +11,9 @@ ms.date: 03/30/2018
 
 # Launch Windows Admin Center
 
-[Content goes here]
-
-[TODO:legacy-content-begin]
-
 ## Connecting to managed nodes and clusters ##
 
-After you have completed the installation of Project Honolulu, you can add servers or clusters to manage from the main overview page.
+After you have completed the installation of Windows Admin Center, you can add servers or clusters to manage from the main overview page.
 
  **Add a single server or a cluster as a managed node**
 
@@ -45,27 +41,27 @@ After you have completed the installation of Project Honolulu, you can add serve
 
 ## Authenticate with the managed node ##
 
-Honolulu supports several mechanisms for authenticating with a managed node. Single sign-on is the default.
+Windows Admin Center supports several mechanisms for authenticating with a managed node. Single sign-on is the default.
 
 **Single Sign-on**
 
-You can use your current Windows credentials to authenticate with the managed node. This is the default, and Honolulu attempts the sign-on when you add a server. 
+You can use your current Windows credentials to authenticate with the managed node. This is the default, and Windows Admin Center attempts the sign-on when you add a server. 
 
 **Single sign-on when deployed as a Service on Windows Server**
 
-If you have installed Honolulu on Windows 10, single sign-on needs no additional configuration. 
+If you have installed Windows Admin Center on Windows 10, single sign-on needs no additional configuration. 
 
-However, if you have installed Honolulu on Windows Server, you must have some form of Kerberos delegation enabled in your environment, configured with the gateway machine trusted to delegate to the target node. 
+However, if you have installed Windows Admin Center on Windows Server, you must have some form of Kerberos delegation enabled in your environment, configured with the gateway machine trusted to delegate to the target node. 
 
 To configure [Resource-based constrained delegation](http://windowsitpro.com/security/how-windows-server-2012-eases-pain-kerberos-constrained-delegation-part-1) in your environment, use the following PowerShell code (requires a Windows Server 2012 or higher Domain Controller):
 
-     $gateway = "HonoluluGW"
+     $gateway = "WindowsAdminCenterGW"
      $node = "ManagedNode"
      $gatewayObject = Get-ADComputer -Identity $gateway
      $nodeObject = Get-ADComputer -Identity $node
      Set-ADComputer -Identity $nodeObject -PrincipalsAllowedToDelegateToAccount $gatewayObject
 
-In this example, the Honolulu gateway is installed on server **HonoluluGW**, and the target
+In this example, the Windows Admin Center gateway is installed on server **WindowsAdminCenterGW**, and the target
 node name is **ManagedNode**.
 
 To remove this relationship, use the following command:
@@ -80,7 +76,7 @@ Under **All Connections**, select a server from the list and choose **Manage As*
 
 ![](../../media/honolulu/manage-as.png)
 
-If Honolulu is running in service mode on Windows Server, but you do not have Kerberos delegation configured, you must re-enter your Windows credentials:
+If Windows Admin Center is running in service mode on Windows Server, but you do not have Kerberos delegation configured, you must re-enter your Windows credentials:
 
 ![](../../media/honolulu/spacer1.png)![](../../media/honolulu/credentials-needed.png)
 
@@ -91,5 +87,3 @@ specific browser session. If you reload your browser, you must re-enter your
 **Local Administrator Password Solution (LAPS)**
 
 If your environment uses [LAPS](https://technet.microsoft.com/en-us/mt227395.aspx), you can use LAPS credentials to authenticate with the managed node. **If you test this scenario, please** [provide feedback](http://aka.ms/HonoluluFeedback).
-
-[TODO:legacy-content-end]

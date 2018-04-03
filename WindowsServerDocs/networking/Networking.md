@@ -7,8 +7,8 @@ ms.topic: article
 ms.date: 03/16/2018
 ms.assetid: daaf6b61-5953-4c2d-b6b8-7c885b552646
 manager: brianlic
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ms.localizationpriority: high
 ---
 # Networking

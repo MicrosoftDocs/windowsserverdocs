@@ -12,7 +12,7 @@ ms.assetid: ab2da47d-3aac-44a0-b7fd-bd9561d61553
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/16/2017
+ms.date: 03/27/2018
 ---
 
 # bcdedit
@@ -105,4 +105,4 @@ BCDEdit /Command [<Argument1>] [<Argument2>] ...
 
 ## Examples
 
-For examples of BCDEdit, see the [Windows Hardware Developer Center Web site](https://go.microsoft.com/fwlink/?LinkId=69448).
+For examples of BCDEdit, see the [BCDEdit Options Reference](https://docs.microsoft.com/windows-hardware/drivers/devtest/bcd-boot-options-reference).
