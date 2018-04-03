@@ -4,7 +4,7 @@ author: haley-rowland
 
 # Windows Admin Center (formerly Project Honolulu)
 
-<img src="../media/honolulu-ga/wac-icon.png" width="100" alt="Icon representing Windows Admin Center" align="center">
+<img src="../../media/honolulu-ga/wac-icon.png" width="100" alt="Icon representing Windows Admin Center" align="center">
 
 Windows Admin Center is generally available and can be deployed in production environments. Plus it's free!
 
@@ -13,7 +13,9 @@ Windows Admin Center is generally available and can be deployed in production en
 
 ********************
 
-Quick links: [Documentation](overview.md) | [Give feedback](todo) | [Recent updates](todo) | [For developers](/extend/how-sdk-works.md)
+Quick links: [Documentation](../overview.md) | [Give feedback](todo) | [Recent updates](todo) | [For developers](../extend/how-sdk-works.md)
+
+********************
 
 # <a name="Intro to Windows Admin Center"> </a>
 //VIDEO GOES HERE
@@ -26,18 +28,18 @@ Quick links: [Documentation](overview.md) | [Give feedback](todo) | [Recent upda
 
 <table border="0" cellpadding="0">
         <tr> 
-          <td> <img src="../media/honolulu-ga/legacy-sod.gif" alt="Video of legacy management tools">  </td>
-		  <td > <img src="../media/honolulu-ga/arrow.png" alt="right arrow">
+          <td> <img src="../../media/honolulu-ga/legacy-sod.gif" alt="Video of legacy management tools">  </td>
+		  <td > <img src="../../media/honolulu-ga/arrow.png" alt="right arrow">
 		  </td>
-		  <td> <img src="../media/honolulu-ga/server-overview-tool.gif"  alt="Video of Windows Admin Center tools"> </td>
+		  <td> <img src="../../media/honolulu-ga/server-overview-tool.gif"  alt="Video of Windows Admin Center tools"> </td>
         </tr> 
 </table>
 
 |   |   |
 |:-:|:--|
-| <img src="../media/honolulu-ga/simple-icon.png" width="100" alt="Icon representing app window">  | <b>Simple & lightweight</b> <br/> Familiar tools are streamlined to make management tasks a breeze. Install in under 5 minutes and manage servers in your environment immediately, no target configuration required.  |
-| <img src="../media/honolulu-ga/future-icon.png" width="100" alt="Icon representing hybrid cloud">  | <b>Built for the future</b> <br/> Integration with Azure services helps you leverage the power of the hybrid world. Manage Hyper-Converged clusters with powerful yet simple tools.  |
-| <img src="../media/honolulu-ga/secure-icon.png" width="100" alt="Icon representing secure server">  | <b>Secure management</b> <br/> Control who can manage servers and get unparalleled insight into the actions administrators perform in your environment.  |
+| <img src="../../media/honolulu-ga/simple-icon.png" width="100" alt="Icon representing app window">  | <b>Simple & lightweight</b> <br/> Familiar tools are streamlined to make management tasks a breeze. Install in under 5 minutes and manage servers in your environment immediately, no target configuration required.  |
+| <img src="../../media/honolulu-ga/future-icon.png" width="100" alt="Icon representing hybrid cloud">  | <b>Built for the future</b> <br/> Integration with Azure services helps you leverage the power of the hybrid world. Manage Hyper-Converged clusters with powerful yet simple tools.  |
+| <img src="../../media/honolulu-ga/secure-icon.png" width="100" alt="Icon representing secure server">  | <b>Secure management</b> <br/> Control who can manage servers and get unparalleled insight into the actions administrators perform in your environment.  |
 
 <!-- 
 
@@ -105,7 +107,7 @@ Quick links: [Documentation](overview.md) | [Give feedback](todo) | [Recent upda
 
 Windows Admin Center is designed for managing a single server or cluster. It complements but does not replace existing Microsoft monitoring and management solutions, such as System Center, Operations Management Suite, Intune, or Azure Stack. 
 
-[Learn how Windows Admin Center complements other Microsoft management solutions.](/understand/related-management.md)
+[Learn how Windows Admin Center complements other Microsoft management solutions.](related-management.md)
 
 
 ********************

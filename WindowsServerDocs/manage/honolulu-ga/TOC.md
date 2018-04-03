@@ -1,4 +1,4 @@
-# [Manage with Windows Admin Center](overview.md)
+# [Windows Admin Center](overview.md)
 
 # Understand
 ## [Get Started](understand/windows-admin-center.md)
