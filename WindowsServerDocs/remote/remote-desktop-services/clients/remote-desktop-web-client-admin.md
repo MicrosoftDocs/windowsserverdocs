@@ -18,7 +18,7 @@ The Remote Desktop web client lets users access your organization's Remote Deskt
 >You may have heard people call this client the HTML5 client. Both names refer to the same client.
 
 >[!IMPORTANT]
->The web client does not currently support WAP.
+>The web client does not currently support the [Web Application Proxy](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/web-application-proxy/web-application-proxy-windows-server).
 
 ## What you'll need to set up the web client
 
