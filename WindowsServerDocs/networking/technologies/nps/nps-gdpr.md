@@ -44,7 +44,7 @@ Network Policy and Access Services event log entries are considered duplicative 
 
 If accounting data is not enabled, then records of a user’s NPS authentication attempts can be obtained from the Network Policy and Access Services event log by searching for the `<username>`.
 
-# Delete GDPR data from NPS
+## Delete GDPR data from NPS
 
 If a user asks to be forgotten the following steps help yo to accomplish this task.
 
