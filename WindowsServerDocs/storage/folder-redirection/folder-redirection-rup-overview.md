@@ -9,8 +9,8 @@ This topic discusses the Folder Redirection, Offline Files (client-side caching 
 ## Did you mean…
 
   - [Offline Files and Folder Redirection](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/gg277982(v=ws.10)>) (Windows 7 and Windows Server 2008 R2)
-  - [Work Folders overview](../work-folders-overview.md)
-  - [BranchCache](../BranchCache.md)
+  - [Work Folders overview](/work-folders/work-folders-overview.md)
+  - [BranchCache](/networking/branchcache/BranchCache.md)
 
 ## Technology description
 
