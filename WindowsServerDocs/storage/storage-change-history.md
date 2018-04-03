@@ -7,7 +7,7 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.date: 3/13/2017
+ms.date: 3/30/2018
 description: New and updated topics in the on-premises storage documentation for Windows Server for IT Pros.
 ---
 # Change history for storage topics in Windows Server
@@ -22,9 +22,10 @@ This topic lists new and updated topics in the [Storage](storage.md) documentati
 
 |New or changed topic|Description|
 |---|---|
-|[Deploying Roaming User Profiles](folder-redirection/deploy-roaming-user-profiles.md)|Moved from Previous Versions library and updated.|
+|[Disaster recovery with Storage Spaces Direct](storage-spaces/storage-spaces-direct-disaster-recovery.md)| New topic.|
 |[Understanding Quorum in Storage Spaces Direct](storage-spaces/understand-quorum.md)| New topic.|
-|[Deploying Storage Spaces Direct](storage-spaces/hyper-converged-solution-using-storage-spaces-direct.md)| Heavily revised to include both converged and hyper-converged scenarios.|
+|[Deploying Storage Spaces Direct](storage-spaces/deploy-storage-spaces-direct.md)| Heavily revised to include both converged and hyper-converged scenarios.|
+|[Deploying Roaming User Profiles](folder-redirection/deploy-roaming-user-profiles.md)|Moved from Previous Versions library and updated.|
 |[Storage Replica frequently asked questions](storage-replica/storage-replica-frequently-asked-questions.md)|Added [Is CSV required to replicate in a stretch cluster or between clusters?](storage-replica/storage-replica-frequently-asked-questions.md#FAQ7.5).|
 
 ## February 2018
@@ -32,6 +33,7 @@ This topic lists new and updated topics in the [Storage](storage.md) documentati
 |New or changed topic|Description|
 |---|---|
 |[Storage Spaces health and operational states](storage-spaces/storage-spaces-states.md)| New topic.|
+|[Using Storage Spaces Direct with the CSV in-memory read cache](storage-spaces/csv-cache.md)| New topic. |
 
 ## January 2018
 
@@ -85,7 +87,7 @@ This topic lists new and updated topics in the [Storage](storage.md) documentati
 |---|---|
 |[Planning a Work Folders deployment](work-folders/plan-work-folders.md)|Added info about Azure AD Application Proxy support & updated requirements.|
 |[Work Folders](work-folders/work-folders-overview.md)|Added info about Azure AD Application Proxy support & updated requirements.|
-|[Hyper-converged solution using Storage Spaces Direct](storage-spaces/hyper-converged-solution-using-storage-spaces-direct.md)|Removed Nano Server from supported installation options.|
+|[Deploying Storage Spaces Direct](storage-spaces/deploy-storage-spaces-direct.md)|Removed Nano Server from supported installation options.|
 |[File Server Resource Manager](fsrm/fsrm-overview.md)|New topic for Windows Server 2016.|
 
 ## May 2017
@@ -94,7 +96,7 @@ This topic lists new and updated topics in the [Storage](storage.md) documentati
 |---|---|
 |[Data Deduplication overview](data-deduplication/overview.md) and <br>[Install Data Deduplication](data-deduplication/install-enable.md)|Updated the system requirements to include a newer software update. |
 |[Deploying Work Folders](work-folders/deploy-work-folders.md)|Added info about Azure AD Application Proxy support & updated required steps.|
-|[Hyper-converged solution using Storage Spaces Direct](storage-spaces/hyper-converged-solution-using-storage-spaces-direct.md)|Added step 1.3 with required features and fixed an obsolete parameter in Enable-NetAdapterQos.||[Storage Replica overview](storage-replica/storage-replica-overview.md) (and other Storage Replica topics)|Added recommendation to use fast, exclusive storage for Storage Replica logs.|
+|[Deploying Storage Spaces Direct](storage-spaces/deploy-storage-spaces-direct.md)|Added step 1.3 with required features and fixed an obsolete parameter in Enable-NetAdapterQos.||[Storage Replica overview](storage-replica/storage-replica-overview.md) (and other Storage Replica topics)|Added recommendation to use fast, exclusive storage for Storage Replica logs.|
 |[Storage Replica frequently asked questions](storage-replica/storage-replica-frequently-asked-questions.md)|Added info on how to choose between different replication topologies.|
 |[Storage Spaces Direct hardware requirements](storage-spaces/storage-spaces-direct-hardware-requirements.md)|Changed drive endurance requirements for cache devices.|
 
@@ -107,7 +109,7 @@ This topic lists new and updated topics in the [Storage](storage.md) documentati
 |[Planning a Work Folders deployment](work-folders/plan-work-folders.md)|New topic.|
 |[Deploying Work Folders](work-folders/deploy-work-folders.md)|New topic.|
 |[Deploying Work Folders with AD FS and Web Application Proxy (WAP)](work-folders/deploy-work-folders-adfs-overview.md)|New topic.|
-|[Hyper-converged solution using Storage Spaces Direct](storage-spaces/hyper-converged-solution-using-storage-spaces-direct.md)|Removed a reference to an obsolete software update and fixed a typo in the sample output.|
+|[Deploying Storage Spaces Direct](storage-spaces/deploy-storage-spaces-direct.md)|Removed a reference to an obsolete software update and fixed a typo in the sample output.|
 |[Storage Replica known issues](storage-replica/storage-replica-known-issues.md)|Added new information.|
 
 ## March 2017
@@ -139,4 +141,4 @@ This topic lists new and updated topics in the [Storage](storage.md) documentati
 |[Storage Replica frequently asked questions](storage-replica/storage-replica-frequently-asked-questions.md)|Updated port requirements and clarified how extending replicated volumes works.|
 |[Storage Replica known issues](storage-replica/storage-replica-known-issues.md)|Added info about a fix in the December 9, 2016 Cumulative Update and added info about how to resolve an error when extending a replicated volume.|
 |[Storage Spaces Direct overview](storage-spaces/storage-spaces-direct-overview.md)|Added visually-oriented Understand/Plan/Deploy/Manage section to serve as a learning map for our topics.|
-|[Hyper-converged solution using Storage Spaces Direct](storage-spaces/hyper-converged-solution-using-storage-spaces-direct.md)|Removed some obsolete content and added new links.|
+|[Deploying Storage Spaces Direct](storage-spaces/deploy-storage-spaces-direct.md)|Removed some obsolete content and added new links.|

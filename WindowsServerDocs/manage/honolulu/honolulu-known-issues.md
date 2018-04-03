@@ -59,7 +59,7 @@ If you encounter an issue not described on this page, please [let us know](http:
 
 ## WebSocket compatibility when using a proxy service
 
-Remote Desktop, PowerShell, and Events modules in Honolulu utilize the WebSocket protocol, which is often not supported when using a proxy such as Azure AD App Proxy. If you depend on this configuration, please add your vote [here](https://feedback.azure.com/forums/169401-azure-active-directory/suggestions/20213116-support-websocket-protocol-in-azure-ad-application).
+Remote Desktop, PowerShell, and Events modules in Honolulu utilize the WebSocket protocol, which is often not supported when using a proxy service. Check out [Azure AD Application Proxy](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started) for a proxy solution that supports websockets.
 
 ## Support for Windows Server versions before 2016 (2012 & 2012R2)
 
@@ -71,7 +71,7 @@ Please [submit feedback](http://aka.ms/honolulufeedback) on any issues you encou
 Type `$PSVersiontable` in PowerShell to verify that WMF is installed,
 and that the version is 5.0 or higher. 
 
-If it is not installed, you can [download and install WMF 5.1](https://www.microsoft.com/en-us/download/details.aspx?id=54616).
+If it is not installed, you can [download and install WMF 5.1](https://www.microsoft.com/download/details.aspx?id=54616).
 
 ## Server Manager solution
 
@@ -193,7 +193,7 @@ The Computer Management solution contains a subset of the tools from the Server 
   
   * To enable management of the Windows 10 Client, you must issue the command ```Enable-PSRemoting``` from an elevated PowerShell prompt.
 
-  * You may also need to update your firewall to allow connections from outside the local subnet with ```Set-NetFirewallRule -Name WINRM-HTTP-In-TCP –RemoteAddress Any``` For more restrictive networks scenarios, please refer to [this documentation](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/enable-psremoting?view=powershell-5.1).
+  * You may also need to update your firewall to allow connections from outside the local subnet with ```Set-NetFirewallRule -Name WINRM-HTTP-In-TCP –RemoteAddress Any``` For more restrictive networks scenarios, please refer to [this documentation](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/enable-psremoting?view=powershell-5.1).
 
 ## Failover Cluster Manager solution
 

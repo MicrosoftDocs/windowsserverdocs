@@ -127,7 +127,13 @@ To prevent the new Hyper-V virtual machine resiliency feature from running and t
 
 You can use thin-provisioned storage as one way to speed up initial sync times. Storage Replica queries for and automatically uses thin-provisioned storage, including non-clustered Storage Spaces, Hyper-V dynamic disks, and SAN LUNs.  
 
-You can also use seeded data volumes to reduce bandwidth usage and sometimes time, by ensuring that the destination volume has some subset of data from the primary - via a restored backup, old snapshot, previous replication, copied files, etc. - then using the Seeded option in Failover Cluster Manager or `New-SRPartnership`. If the volume is mostly empty, using seeded sync may reduce time and bandwidth usage.
+You can also use seeded data volumes to reduce bandwidth usage and sometimes time, by ensuring that the destination volume has some subset of data from the primary then using the Seeded option in Failover Cluster Manager or `New-SRPartnership`. If the volume is mostly empty, using seeded sync may reduce time and bandwidth usage. There are multiple ways to seed data, with varying degrees of efficacy:
+
+1. Previous replication - by replicating with normal initial sync locally between nodes containing the disks and volumes, removing replication, shipping the destination disks elsewhere, then adding replication with the seeded option. This is the most effective method as Storage Replica guaranteed a block-copy mirror and the only thing to replicate is delta blocks.
+2. Restored snapshot or restored snapshot-based backup - by restoring a volume-based snapshot onto the destination volume, there should be minimal differences in the block layout. This is the next most effective method as blocks are likely to match thanks to volume snapshots being mirror images.
+3. Copied files - by creating a new volume on the destination that has never been used before and performing a full robocopy /MIR tree copy of the data, there are likely to be block matches. Using Windows File Explorer or copying some portion of the tree will not create many block matches. Copying files manually is the least effective method of seeding.
+
+
 
 ## <a name="FAQ13"></a> Can I delegate users to administer replication?  
 
