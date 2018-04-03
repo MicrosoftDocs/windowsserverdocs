@@ -124,43 +124,8 @@ For additional related information, see the following resources.
 
 |Content type|References|
 |---|---|
-|Product evaluation|[Supporting Information Workers with Reliable File Services and Storage](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831495(v%3dws.11)>)<br>[What's New in Offline Files](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff183315(v=ws.10)>) (Windows 7 and Windows Server 2008 R2)<br>[What's New in Offline Files for Windows Vista](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-vista/cc749449(v=ws.10)>)<br>[Changes to Offline Files in Windows Vista](<https://technet.microsoft.com/en-us/library/2007.11.offline.aspx>)|
+|Product evaluation|[Supporting Information Workers with Reliable File Services and Storage](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831495(v%3dws.11)>)<br>[What's New in Offline Files](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff183315(v=ws.10)>) (Windows 7 and Windows Server 2008 R2)<br>[What's New in Offline Files for Windows Vista](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-vista/cc749449(v=ws.10)>)<br>[Changes to Offline Files in Windows Vista](<https://technet.microsoft.com/en-us/library/2007.11.offline.aspx>) (TechNet Magazine)|
 |Deployment|[Deploy Folder Redirection, Offline Files, and Roaming User Profiles](deploy-folder-redirection.md)<br>[Implementing an End-User Data Centralization Solution: Folder Redirection and Offline Files Technology Validation and Deployment](http://download.microsoft.com/download/3/0/1/3019A3DA-2F41-4F2D-BBC9-A6D24C4C68C4/Implementing%20an%20End-User%20Data%20Centralization%20Solution.docx)<br>[Managing Roaming User Data Deployment Guide](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-vista/cc766489(v=ws.10)>)<br>[Configuring New Offline Files Features for Windows 7 Computers Step-by-Step Guide](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff633429(v=ws.10)>)<br>[Using Folder Redirection](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753996(v=ws.11)>)<br>[Implementing Folder Redirection](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc737434(v=ws.10)>) (Windows Server 2003)|
-|Tools and settings|Primary Computer Windows PowerShell cmdlets (broken link)<br>[Offline files on MSDN](https://msdn.microsoft.com/library/cc296092.aspx)<br>[Offline Files Group Policy Reference](https://msdn.microsoft.com/library/ms878937.aspx) (Windows 2000)|
-|Community resources|File Services and Storage Forum (equivalent msdn link?)<br>[Hey, Scripting Guy! How Can I Work with the Offline Files Feature in Windows?](<https://blogs.technet.microsoft.com/heyscriptingguy/2009/06/02/hey-scripting-guy-how-can-i-enable-and-disable-offline-files/>)<br>[Hey, Scripting Guy! How Can I Enable and Disable Offline Files?](<https://blogs.technet.microsoft.com/heyscriptingguy/2009/06/02/hey-scripting-guy-how-can-i-enable-and-disable-offline-files/>)|
-Related technologies|[Active Directory Domain Services](https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/active-directory-domain-services)<br>File and Storage Services<br>Remote Desktop Services|
-
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Content type</p></th>
-<th><p>References</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p><strong>Product evaluation</strong></p></td>
-<td><p><a href="hh831495(v=ws.11).md">Supporting Information Workers with Reliable File Services and Storage</a> | <a href="http://technet.microsoft.com/library/ff183315.aspx">What's New in Offline Files</a> (Windows 7 and Windows Server 2008 R2) | <a href="http://technet.microsoft.com/library/cc749449.aspx">What's New in Offline Files for Windows Vista</a> | <a href="http://technet.microsoft.com/magazine/2007.11.offline.aspx">Changes to Offline Files in Windows Vista</a> (TechNet Magazine)</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Deployment</strong></p></td>
-<td><p><a href="jj649074(v=ws.11).md">Deploy Folder Redirection, Offline Files, and Roaming User Profiles</a> | <a href="http://go.microsoft.com/fwlink/?linkid=168195">Implementing an End-User Data Centralization Solution: Folder Redirection and Offline Files Technology Validation and Deployment</a> | <a href="http://technet.microsoft.com/library/cc766489.aspx">Managing Roaming User Data Deployment Guide</a> | <a href="http://technet.microsoft.com/library/ff633429.aspx">Configuring New Offline Files Features for Windows 7 Computers Step-by-Step Guide</a> | <a href="http://technet.microsoft.com/library/cc753996.aspx">Using Folder Redirection</a> | <a href="http://technet.microsoft.com/library/cc737434.aspx">Implementing Folder Redirection</a> (Windows Server 2003)</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Tools and settings</strong></p></td>
-<td><p><a href="http://archive.msdn.microsoft.com/primarycomputer">Primary Computer Windows PowerShell cmdlets</a> | <a href="http://msdn.microsoft.com/library/cc296092.aspx">Offline Files on MSDN</a> | <a href="http://msdn.microsoft.com/library/ms878937.aspx">Offline Files Group Policy Reference</a> (Windows 2000)</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Community resources</strong></p></td>
-<td><p><a href="http://social.technet.microsoft.com/forums/windowsserver/home?forum=winserverfiles">File Services and Storage Forum</a> | <a href="http://blogs.technet.com/b/heyscriptingguy/archive/2009/06/02/how-can-i-work-with-the-offline-files-feature-in-windows.aspx">Hey, Scripting Guy! How Can I Work with the Offline Files Feature in Windows?</a> | <a href="http://blogs.technet.com/b/heyscriptingguy/archive/2009/06/03/how-can-i-enable-and-disable-offline-files.aspx">Hey, Scripting Guy! How Can I Enable and Disable Offline Files?</a></p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Related technologies</strong></p></td>
-<td><p><a href="hh831484(v=ws.11).md">Active Directory Domain Services Overview</a> | <a href="hh831487(v=ws.11).md">File and Storage Services Overview</a> | <a href="hh831447(v=ws.11).md">Remote Desktop Services Overview</a></p></td>
-</tr>
-</tbody>
-</table>
+|Tools and settings|[Offline files on MSDN](https://msdn.microsoft.com/library/cc296092.aspx)<br>[Offline Files Group Policy Reference](https://msdn.microsoft.com/library/ms878937.aspx) (Windows 2000)|
+|Community resources|[File Services and Storage Forum](https://social.technet.microsoft.com/forums/windowsserver/home?forum=winserverfiles)<br>[Hey, Scripting Guy! How Can I Work with the Offline Files Feature in Windows?](<https://blogs.technet.microsoft.com/heyscriptingguy/2009/06/02/hey-scripting-guy-how-can-i-enable-and-disable-offline-files/>)<br>[Hey, Scripting Guy! How Can I Enable and Disable Offline Files?](<https://blogs.technet.microsoft.com/heyscriptingguy/2009/06/02/hey-scripting-guy-how-can-i-enable-and-disable-offline-files/>)|
+Related technologies|[Active Directory Domain Services Overview](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831484(v%3dws.11)>)<br>[File and Storage Services Overview](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831487(v%3dws.11)>)<br>[Remote Desktop Services Overview](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831447(v%3dws.11)>)|
