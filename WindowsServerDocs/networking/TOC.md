@@ -170,6 +170,7 @@
 ##### [Unregister an NPS Server from an Active Directory Domain](technologies/nps/nps-manage-unregister.md)
 ##### [Use Regular Expressions in NPS](technologies/nps/nps-crp-reg-expressions.md)
 ##### [Verify Configuration After NPS Server Changes](technologies/nps/nps-manage-verify.md)
+##### [Network Policy Server and GDPR](technologies/nps/nps-gdpr.md)
 #### [Manage NPS Templates](technologies/nps/nps-manage-templates.md)
 
 ## [Network Shell (Netsh)](technologies/netsh/netsh.md)
