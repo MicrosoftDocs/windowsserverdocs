@@ -115,7 +115,7 @@ Folder Redirection, Offline Files, and Roaming User Profiles require an x64-base
 
 To designate primary computers, your environment must meet the following requirements:
 
-  - The Active Directory Domain Services (AD DS) schema must be updated to include Windows Server 2012 schema additions (installing a Windows Server 2012 domain controller automatically updated the schema). For information about updating the AD DS schema, see [Adprep.exe integration](hh472161\(v=ws.11\).md) and [Running Adprep.exe](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd464018(v=ws.10)>).
+  - The Active Directory Domain Services (AD DS) schema must be updated to include Windows Server 2016 schema and conditions. For more information, see [Upgrade Domain Controllers to Windows Server 2016](https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/deploy/upgrade-domain-controllers).
   - Client computers must run Windows 10, Windows 8.1, Windows 8, Windows Server 2012 R2, or Windows Server 2012 and be joined to the Active Directory domain that you are managing.
 
 ## More information
