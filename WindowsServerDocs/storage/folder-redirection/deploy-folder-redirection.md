@@ -69,7 +69,7 @@ If you do not already have a file share for redirected folders, use the followin
 8. Click **Disable inheritance**, and then click **Convert inherited permissions into explicit permission on this object**.
 9. Set the permissions as described Table 1 and shown in Figure 1, removing permissions for unlisted groups and accounts, and adding special permissions to the Folder Redirection Users group that you created in Step 1.
     
-    ![](images\JJ649078.6e9f23c0-4ba6-4442-8b71-b0abad741a15(WS.11).jpeg)
+    ![Setting the permissions for the redirected folders share](\media\deploy-folder-redirection\JJ649078.6e9f23c0-4ba6-4442-8b71-b0abad741a15(WS.11).jpeg)
     
     **Figure 1** Setting the permissions for the redirected folders share
 10. If you chose the **SMB Share - Advanced** profile, on the **Management Properties** page, select the **User Files** Folder Usage value.

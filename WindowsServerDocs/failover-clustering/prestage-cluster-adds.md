@@ -51,7 +51,7 @@ As a best practice, we recommend that you create an OU for the cluster objects. 
     >You must disable the account so that during cluster creation, the cluster creation process can confirm that the account is not currently in use by an existing computer or cluster in the domain.
 
     
-    ![Disabled CNO in the example Clusters OU](..\media\prestage-cluster-adds\Dn466519.71d84b1c-1d03-443f-936b-28e18f07413a(WS.11).jpeg)
+    ![Disabled CNO in the example Clusters OU](\media\prestage-cluster-adds\Dn466519.71d84b1c-1d03-443f-936b-28e18f07413a(WS.11).jpeg)
     
     **Figure 1. Disabled CNO in the example Clusters OU**
 
@@ -69,7 +69,7 @@ Membership in the **Account Operators** group is the minimum required to complet
 4. In the **Select Users, Computers, or Groups** dialog box, specify the user account or group that you want to grant permissions to, and then click **OK**.
 5. Select the user account or group that you just added, and then next to **Full control**, select the **Allow** check box.
     
-    ![Granting Full Control to the user or group that will create the cluster](..\media\prestage-cluster-adds\Dn466519.16813a0b-3dbd-4e85-b6f5-8aee1261e1ba(WS.11).jpeg)
+    ![Granting Full Control to the user or group that will create the cluster](\media\prestage-cluster-adds\Dn466519.16813a0b-3dbd-4e85-b6f5-8aee1261e1ba(WS.11).jpeg)
     
     **Figure 2. Granting Full Control to the user or group that will create the cluster**
 6. Click **OK**.
@@ -77,7 +77,7 @@ Membership in the **Account Operators** group is the minimum required to complet
 After you complete this step, the user who you granted permissions to can create the failover cluster. However, if the CNO is located in an OU, the user cannot create clustered roles that require a client access point until you complete Step 3.
 
 > [!NOTE]
-> If the CNO is in the default Computers container, a cluster administrator can create up to 10 VCOs without any additional configuration. To add more than 10 VCOs, you must explicitly grant the <STRONG>Create Computer objects</STRONG> permission to the CNO for the Computers container.
+> If the CNO is in the default Computers container, a cluster administrator can create up to 10 VCOs without any additional configuration. To add more than 10 VCOs, you must explicitly grant the **Create Computer objects** permission to the CNO for the Computers container.
 
 ## Step 3: Grant the CNO permissions to the OU or prestage VCOs for clustered roles
 
