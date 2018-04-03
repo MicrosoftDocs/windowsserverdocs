@@ -18,7 +18,7 @@ The Remote Desktop web client lets users access your organization's Remote Deskt
 >You may have heard people call this client the HTML5 client. Both names refer to the same client.
 
 >[!IMPORTANT]
->The web client is not compatible with WAP.
+>The web client does not currently support WAP.
 
 ## What you'll need to set up the web client
 
