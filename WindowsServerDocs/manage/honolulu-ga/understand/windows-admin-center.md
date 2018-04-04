@@ -70,7 +70,7 @@ Quick links: [Documentation](../overview.md) | [Give feedback](todo) | [Recent u
 	</tr>
 </table> -->
 
-[Learn how Windows Admin Center can improve management of your server envrionment.](overview.md)
+[Learn how Windows Admin Center can improve management of your server envrionment.](../overview.md)
 
 ********************
 

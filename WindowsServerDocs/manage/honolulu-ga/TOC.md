@@ -25,7 +25,7 @@
 # Configure
 ## [User access control and permissions](configure/user-access-control.md)
 ## [Logging](configure/logging.md)
-## [Using extensions](configure/useing-extensions.md)
+## [Using extensions](configure/using-extensions.md)
 ## [Configuring Azure integration](configure/azure-integration.md)
 
 # Use
@@ -37,7 +37,7 @@
 
 # Extend
 ## [How extensibility and SDK works](extend/how-sdk-works.md)
-## [Download and install SDK](extende/use-sdk.md)
+## [Download and install SDK](extend/use-sdk.md)
 
 
 
