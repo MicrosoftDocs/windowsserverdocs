@@ -10,7 +10,7 @@ ms.author: pashort
 author: shortpatti
 ---
 
-# Network Offload and Optimization Technologies
+# High-Performance Availability
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
