@@ -18,7 +18,7 @@ The Remote Desktop web client lets users access your organization's Remote Deskt
 >You may have heard people call this client the HTML5 client. Both names refer to the same client.
 
 >[!IMPORTANT]
->The web client does not currently support using Azure Application Proxy and does not support Web Application Proxy at all. See [Using RDS with application proxy services](remote-desktop-services/rds-supported-config.md#using-remote-desktop-services-with-application-proxy-services) for details.
+>The web client does not currently support using Azure Application Proxy and does not support Web Application Proxy at all. See [Using RDS with application proxy services](rds-supported-config.md#using-remote-desktop-services-with-application-proxy-services) for details.
 
 ## What you'll need to set up the web client
 
