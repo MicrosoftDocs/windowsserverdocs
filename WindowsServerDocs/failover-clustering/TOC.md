@@ -26,6 +26,6 @@
 ## [Change history for Failover Clustering topics](clustering-change-history.md)
 ## Plan
 ### [Hardware requirements](clustering-requirements.md)
-### [Use Cluster Shared Volumes (CSVs)]
+### [Use Cluster Shared Volumes (CSVs)](failover-cluster-csvs.md)
 ## Understand
 ### [SOFS overview](sofs-overview.md)
