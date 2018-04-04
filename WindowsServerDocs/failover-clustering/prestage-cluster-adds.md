@@ -1,8 +1,17 @@
 ---
+title: Prestage cluster computer objects in Active Directory Domain Services
+description: How to prestage cluster computer objects in Active Directory Domain Services.
+ms.prod: windows-server-threshold 
+ms.topic: article 
+author: JasonGerend 
+ms.author: jgerend 
+ms.technology: storage-failover-clustering 
+ms.date: 4/5/18
+ms.localizationpriority: low
 ---
-# Prestage Cluster Computer Objects in Active Directory Domain Services
+# Prestage cluster computer objects in Active Directory Domain Services
 
->Applies to Windows Server 2012 R2, Windows Server 2012.
+>Applies to Windows Server 2012 R2, Windows Server 2012, and Windows Server 2016.
 
 This topic shows how to prestage cluster computer objects in Active Directory Domain Services (AD DS). You can use this procedure to enable a user or group to create a failover cluster when they do not have permissions to create computer objects in AD DS.
 
@@ -13,20 +22,12 @@ When you create a failover cluster by using the Create Cluster Wizard or by usin
 
 To create the CNO automatically, the user who creates the failover cluster must have the **Create Computer objects** permission to the organizational unit (OU) or the container where the servers that will form the cluster reside. To enable a user or group to create a cluster without having this permission, a user with appropriate permissions in AD DS (typically a domain administrator) can prestage the CNO in AD DS. This also provides the domain administrator more control over the naming convention that is used for the cluster, and control over which OU the cluster objects are created in.
 
-The procedures in this topic show how to do the following:
-
-  - [Step 1: Prestage the CNO in AD DS]()
-
-  - [Step 2: Grant the user permissions to create the cluster]()
-
-  - [Step 3: Grant the CNO permissions to the OU or prestage VCOs for clustered roles]()
-
 ## Step 1: Prestage the CNO in AD DS
 
 Before you begin, make sure that you know the following:
 
-  - The name that you want to assign the cluster
-  - The name of the user account or group to which you want to grant rights to create the cluster
+- The name that you want to assign the cluster
+- The name of the user account or group to which you want to grant rights to create the cluster
 
 As a best practice, we recommend that you create an OU for the cluster objects. If an OU already exists that you want to use, membership in the **Account Operators** group is the minimum required to complete this step. If you need to create an OU for the cluster objects, membership in the **Domain Admins** group, or equivalent, is the minimum required to complete this step.
 
@@ -41,8 +42,9 @@ As a best practice, we recommend that you create an OU for the cluster objects. 
 4. In the **Computer name** box, enter the name that will be used for the failover cluster, and then select **OK**.
     
 
-    > [!NOTE]
-    > This is the cluster name that the user who creates the cluster will specify on the **Access Point for Administering the Cluster** page in the Create Cluster wizard or as the value of the *–Name* parameter for the **New-Cluster** Windows PowerShell cmdlet.
+    >[!NOTE]
+    >This is the cluster name that the user who creates the cluster will specify on the **Access Point for Administering the Cluster** page in the Create Cluster wizard or as the value of the *–Name* parameter for the **New-Cluster** Windows PowerShell cmdlet.
+
 5. As a best practice, right-click the computer account that you just created, select **Properties**, and then select the **Object** tab. On the **Object** tab, select the **Protect object from accidental deletion** check box, and then select **OK**.
 6. Right-click the computer account that you just created, and then select **Disable Account**. Select **Yes** to confirm, and then select **OK**.
     
@@ -50,10 +52,9 @@ As a best practice, we recommend that you create an OU for the cluster objects. 
     >[!NOTE]
     >You must disable the account so that during cluster creation, the cluster creation process can confirm that the account is not currently in use by an existing computer or cluster in the domain.
 
-    
-    ![Disabled CNO in the example Clusters OU](\media\prestage-cluster-adds\Dn466519.71d84b1c-1d03-443f-936b-28e18f07413a(WS.11).jpeg)
-    
-    **Figure 1. Disabled CNO in the example Clusters OU**
+![Disabled CNO in the example Clusters OU](..\Dn466519.71d84b1c-1d03-443f-936b-28e18f07413a(WS.11).jpeg)
+
+**Figure 1. Disabled CNO in the example Clusters OU**
 
 ## Step 2: Grant the user permissions to create the cluster
 
@@ -61,7 +62,7 @@ You must configure permissions so that the user account that will be used to cre
 
 Membership in the **Account Operators** group is the minimum required to complete this step.
 
-#### To grant the user permissions to create the cluster
+Here's how to grant the user permissions to create the cluster:
 
 1. In Active Directory Users and Computers, on the **View** menu, make sure that **Advanced Features** is selected.
 2. Locate and then right-click the CNO, and then select **Properties**.
@@ -85,16 +86,15 @@ When you create a clustered role with a client access point, the cluster creates
 
 If you prestaged the CNO in AD DS, you can do either of the following to create VCOs:
 
-  - Option 1: [To grant the CNO permissions to the OU](). If you use this option, the cluster can automatically create VCOs in AD DS. Therefore, an administrator for the failover cluster can create clustered roles without having to request that you prestage VCOs in AD DS.
-    
+- Option 1: [Grant the CNO permissions to the OU](#grant-the-cno-permissions-to-the-ou). If you use this option, the cluster can automatically create VCOs in AD DS. Therefore, an administrator for the failover cluster can create clustered roles without having to request that you prestage VCOs in AD DS.
 
-    >[!NOTE]
-    >Membership in the **Domain Admins** group, or equivalent, is the minimum required to complete the steps for this option.
-  - Option 2: [To prestage a VCO for a clustered role](). Use this option if it is necessary to prestage accounts for clustered roles because of requirements in your organization. For example, you may want to control the naming convention, or control which clustered roles are created.
-    
+  >[!NOTE]
+  >Membership in the **Domain Admins** group, or equivalent, is the minimum required to complete the steps for this option.
 
-    >[!NOTE]
-    >Membership in the **Account Operators** group is the minimum required to complete the steps for this option.
+- Option 2: [Prestage a VCO for a clustered role](#prestage-a-vco-for-the-clustered-role). Use this option if it is necessary to prestage accounts for clustered roles because of requirements in your organization. For example, you may want to control the naming convention, or control which clustered roles are created.
+    
+  >[!NOTE]
+  >Membership in the **Account Operators** group is the minimum required to complete the steps for this option.
 
 ### Grant the CNO permissions to the OU
 
@@ -108,9 +108,9 @@ If you prestaged the CNO in AD DS, you can do either of the following to create 
 8. In the **Permission Entry** dialog box, make sure that the **Type** list is set to **Allow**, and the **Applies to** list is set to **This object and all descendant objects**.
 9. Under **Permissions**, select the **Create Computer objects** check box.
     
-    ![Granting the Create Computer objects permission to the CNO](\media\prestage-cluster-adds\Dn466519.d41eab1a-f36f-432b-a1ae-91df9ee8ec18(WS.11).jpeg)
+  ![Granting the Create Computer objects permission to the CNO](..\prestage-cluster-adds\Dn466519.d41eab1a-f36f-432b-a1ae-91df9ee8ec18(WS.11).jpeg)
     
-    **Figure 3. Granting the Create Computer objects permission to the CNO**
+  **Figure 3. Granting the Create Computer objects permission to the CNO**
 10. Select **OK** until you return to the Active Directory Users and Computers snap-in.
 
 An administrator on the failover cluster can now create clustered roles with client access points, and bring the resources online.

@@ -1,8 +1,17 @@
 ---
+title: 
+description:
+ms.prod: windows-server-threshold 
+ms.topic: article 
+author: JasonGerend 
+ms.author: jgerend 
+ms.technology: storage-failover-clustering 
+ms.date: 
+ms.localizationpriority: low
 ---
 # Scale-Out File Server for Application Data Overview
 
->Applies to Windows Server 2012 R2 and Windows Server 2012.
+>Applies to: Windows Server 2012 R2, Windows Server 2012, and Windows Server 2016.
 
 Scale-Out File Server is a feature that is designed to provide scale-out file shares that are continuously available for file-based server application storage. Scale-out file shares provides the ability to share the same folder from multiple nodes of the same cluster. This scenario focuses on how to plan for and deploy Scale-Out File Server.
 
@@ -23,28 +32,28 @@ With scale-out file shares, you can share the same folder from multiple nodes of
 
 Key benefits provided by Scale-Out File Server in include:
 
-  - **Active-Active file shares** All cluster nodes can accept and serve SMB client requests. By making the file share content accessible through all cluster nodes simultaneously, SMB 3.0 clusters and clients cooperate to provide transparent failover to alternative cluster nodes during planned maintenance and unplanned failures with service interruption.
-  - **Increased bandwidth** The maximum share bandwidth is the total bandwidth of all file server cluster nodes. Unlike previous versions of Windows Server, the total bandwidth is no longer constrained to the bandwidth of a single cluster node; but rather, the capability of the backing storage system defines the constraints. You can increase the total bandwidth by adding nodes.
-  - **CHKDSK with zero downtime** CHKDSK in Windows Server 2012 is significantly enhanced to dramatically shorten the time a file system is offline for repair. Clustered shared volumes (CSVs) take this one step further by eliminating the offline phase. A CSV File System (CSVFS) can use CHKDSK without impacting applications with open handles on the file system.
-  - **Clustered Shared Volume cache** CSVs in Windows Server 2012 introduces support for a Read cache, which can significantly improve performance in certain scenarios, such as in Virtual Desktop Infrastructure (VDI).
-  - **Simpler management** With Scale-Out File Server, you create the scale-out file servers, and then add the necessary CSVs and file shares. It is no longer necessary to create multiple clustered file servers, each with separate cluster disks, and then develop placement policies to ensure activity on each cluster node.
-  - **Automatic rebalancing of Scale-Out File Server clients** In Windows Server 2012 R2, automatic rebalancing improves scalability and manageability for scale-out file servers. SMB client connections are tracked per file share (instead of per server), and clients are then redirected to the cluster node with the best access to the volume used by the file share. This improves efficiency by reducing redirection traffic between file server nodes. Clients are redirected following an initial connection and when cluster storage is reconfigured.
+  - **Active-Active file shares**. All cluster nodes can accept and serve SMB client requests. By making the file share content accessible through all cluster nodes simultaneously, SMB 3.0 clusters and clients cooperate to provide transparent failover to alternative cluster nodes during planned maintenance and unplanned failures with service interruption.
+  - **Increased bandwidth**. The maximum share bandwidth is the total bandwidth of all file server cluster nodes. Unlike previous versions of Windows Server, the total bandwidth is no longer constrained to the bandwidth of a single cluster node; but rather, the capability of the backing storage system defines the constraints. You can increase the total bandwidth by adding nodes.
+  - **CHKDSK with zero downtime**. CHKDSK in Windows Server 2012 is significantly enhanced to dramatically shorten the time a file system is offline for repair. Clustered shared volumes (CSVs) take this one step further by eliminating the offline phase. A CSV File System (CSVFS) can use CHKDSK without impacting applications with open handles on the file system.
+  - **Clustered Shared Volume cache**. CSVs in Windows Server 2012 introduces support for a Read cache, which can significantly improve performance in certain scenarios, such as in Virtual Desktop Infrastructure (VDI).
+  - **Simpler management**. With Scale-Out File Server, you create the scale-out file servers, and then add the necessary CSVs and file shares. It is no longer necessary to create multiple clustered file servers, each with separate cluster disks, and then develop placement policies to ensure activity on each cluster node.
+  - **Automatic rebalancing of Scale-Out File Server clients**. In Windows Server 2012 R2, automatic rebalancing improves scalability and manageability for scale-out file servers. SMB client connections are tracked per file share (instead of per server), and clients are then redirected to the cluster node with the best access to the volume used by the file share. This improves efficiency by reducing redirection traffic between file server nodes. Clients are redirected following an initial connection and when cluster storage is reconfigured.
 
 ## In this scenario
 
 The following topics are available to help you deploy a Scale-Out File Server:
 
-  - [Plan for Scale-Out File Server](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134258(v%3dws.11)>)
-    
-      - [Step 1: Plan for Storage in Scale-Out File Server](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134181%28v%3dws.11%29>)
-      - [Step 2: Plan for Networking in Scale-Out File Server](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134253%28v%3dws.11%29>)
+- [Plan for Scale-Out File Server](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134258(v%3dws.11)>)
+  
+    - [Step 1: Plan for Storage in Scale-Out File Server](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134181%28v%3dws.11%29>)
+    - [Step 2: Plan for Networking in Scale-Out File Server](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134253%28v%3dws.11%29>)
 
-  - [Deploy Scale-Out File Server](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831359%28v%3dws.11%29>)
-    
-      - [Step 1: Install Prerequisites for Scale-Out File Server](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831478%28v%3dws.11%29>)
-      - [Step 2: Configure Scale-Out File Server](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831718%28v%3dws.11%29>)
-      - [Step 3: Configure Hyper-V to Use Scale-Out File Server](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831463%28v%3dws.11%29>)
-      - [Step 4: Configure Microsoft SQL Server to Use Scale-Out File Server](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831815%28v%3dws.11%29>)
+- [Deploy Scale-Out File Server](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831359%28v%3dws.11%29>)
+  
+    - [Step 1: Install Prerequisites for Scale-Out File Server](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831478%28v%3dws.11%29>)
+    - [Step 2: Configure Scale-Out File Server](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831718%28v%3dws.11%29>)
+    - [Step 3: Configure Hyper-V to Use Scale-Out File Server](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831463%28v%3dws.11%29>)
+    - [Step 4: Configure Microsoft SQL Server to Use Scale-Out File Server](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831815%28v%3dws.11%29>)
 
 ## When to use Scale-Out File Server
 
@@ -221,14 +230,14 @@ The following table lists the capabilities in SMB 3.0, the common Windows file s
 
 Scale-Out File Servers are ideal for server application storage. Some examples of server applications that can store their data on a scale-out file share are listed below:
 
-  - The Internet Information Services (IIS) Web server can store configuration and data for Web sites on a scale-out file share. For more information, see [Shared Configuration](http://www.iis.net/learn/manage/managing-your-configuration-settings/shared-configuration_264).
-  - Hyper-V can store configuration and live virtual disks on a scale-out file share. For more information, see [Deploy Hyper-V over SMB](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134187(v%3dws.11)>).
-  - SQL Server can store live database files on a scale-out file share. For more information, see [Install SQL Server with SMB file share as a storage option](https://docs.microsoft.com/en-us/sql/database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option).
-  - Virtual Machine Manager (VMM) can store a library share (which contains virtual machine templates and related files) on a scale-out file share. However, the library server itself can't be a Scale-Out File Server - it must be on a stand-alone server or a failover cluster that doesn't use the Scale-Out File Server cluster role.
-    
-    If you use a scale-out file share as a library share, you can use only technologies that are compatible with Scale-Out File Server. For example, you can’t use DFS Replication to replicate a library share hosted on a scale-out file share. It's also important that the scale-out file server have the latest software updates installed.
-    
-    To use a scale-out file share as a library share, first add a library server (likely a virtual machine) with a local share or no shares at all. Then when you add a library share, choose a file share that’s hosted on a scale-out file server. This share should be VMM-managed and created exclusively for use by the library server. Also make sure to install the latest updates on the scale-out file server. For more information about adding VMM library servers and library shares, see [Add profiles to the VMM library](https://docs.microsoft.com/en-us/system-center/vmm/library-profiles?view=sc-vmm-1801). For a list of currently available hotfixes for File and Storage Services, see [Microsoft Knowledge Base article 2899011](https://support.microsoft.com/en-us/help/2899011/list-of-currently-available-hotfixes-for-the-file-services-technologie).
+- The Internet Information Services (IIS) Web server can store configuration and data for Web sites on a scale-out file share. For more information, see [Shared Configuration](http://www.iis.net/learn/manage/managing-your-configuration-settings/shared-configuration_264).
+- Hyper-V can store configuration and live virtual disks on a scale-out file share. For more information, see [Deploy Hyper-V over SMB](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134187(v%3dws.11)>).
+- SQL Server can store live database files on a scale-out file share. For more information, see [Install SQL Server with SMB file share as a storage option](https://docs.microsoft.com/en-us/sql/database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option).
+- Virtual Machine Manager (VMM) can store a library share (which contains virtual machine templates and related files) on a scale-out file share. However, the library server itself can't be a Scale-Out File Server - it must be on a stand-alone server or a failover cluster that doesn't use the Scale-Out File Server cluster role.
+
+If you use a scale-out file share as a library share, you can use only technologies that are compatible with Scale-Out File Server. For example, you can’t use DFS Replication to replicate a library share hosted on a scale-out file share. It's also important that the scale-out file server have the latest software updates installed.
+
+To use a scale-out file share as a library share, first add a library server (likely a virtual machine) with a local share or no shares at all. Then when you add a library share, choose a file share that’s hosted on a scale-out file server. This share should be VMM-managed and created exclusively for use by the library server. Also make sure to install the latest updates on the scale-out file server. For more information about adding VMM library servers and library shares, see [Add profiles to the VMM library](https://docs.microsoft.com/en-us/system-center/vmm/library-profiles?view=sc-vmm-1801). For a list of currently available hotfixes for File and Storage Services, see [Microsoft Knowledge Base article 2899011](https://support.microsoft.com/en-us/help/2899011/list-of-currently-available-hotfixes-for-the-file-services-technologie).
 
 >[!NOTE]
 >Some users, such as information workers, have workloads that have a greater impact on performance. For example, operations like opening and closing files, creating new files, and renaming existing files, when performed by multiple users, have an impact on performance. If a file share is enabled with continuous availability, it provides data integrity, but it also affects the overall performance. Continuous availability requires that data writes through to the disk to ensure integrity in the event of a failure of a cluster node in a Scale-Out File Server. Therefore, a user that copies several large files to a file server can expect significantly slower performance on continuously available file share.
@@ -260,9 +269,9 @@ For more information on new and changed functionality for SMB in Windows Server 
 
 ## More information
 
-  - [Software-Defined Storage Design Considerations Guide](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/mt243829(v%3dws.11)>)
-  - [Increasing Server, Storage, and Network Availability](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831437(v%3dws.11)>)
-  - [Deploy Hyper-V over SMB](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134187(v%3dws.11)>)
-  - [Deploying Fast and Efficient File Servers for Server Applications](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831723(v%3dws.11)>)
-  - [To scale out or not to scale out, that is the question](https://blogs.technet.com/b/filecab/archive/2013/12/05/to-scale-out-or-not-to-scale-out-that-is-the-question.aspx) (blog post)
-  - [Folder Redirection, Offline Files, and Roaming User Profiles](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh848267(v%3dws.11)>)
+- [Software-Defined Storage Design Considerations Guide](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/mt243829(v%3dws.11)>)
+- [Increasing Server, Storage, and Network Availability](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831437(v%3dws.11)>)
+- [Deploy Hyper-V over SMB](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134187(v%3dws.11)>)
+- [Deploying Fast and Efficient File Servers for Server Applications](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831723(v%3dws.11)>)
+- [To scale out or not to scale out, that is the question](https://blogs.technet.com/b/filecab/archive/2013/12/05/to-scale-out-or-not-to-scale-out-that-is-the-question.aspx) (blog post)
+- [Folder Redirection, Offline Files, and Roaming User Profiles](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh848267(v%3dws.11)>)

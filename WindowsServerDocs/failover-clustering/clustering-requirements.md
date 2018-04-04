@@ -1,8 +1,17 @@
 ---
+title: Failover clustering hardware requirements and storage options
+description: Hardware requirements and storage options for creating a failover cluster.
+ms.prod: windows-server-threshold 
+ms.topic: article 
+author: JasonGerend 
+ms.author: jgerend 
+ms.technology: storage-failover-clustering 
+ms.date: 4/5/2018
+ms.localizationpriority: low
 ---
-# Failover Clustering Hardware Requirements and Storage Options
+# Failover clustering hardware requirements and storage options
 
-Applies To: Windows Server 2012 R2, Windows Server 2012
+Applies to: Windows Server 2012 R2, Windows Server 2012, Windows Server 2016.
 
 You need the following hardware to create a failover cluster. To be supported by Microsoft, all hardware must be certified for the version of Windows Server that you are running, and the complete failover cluster solution must pass all tests in the Validate a Configuration Wizard. For more information about validating a failover cluster, see [Validate Hardware for a Failover Cluster](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134244(v%3dws.11)>).
 
@@ -14,6 +23,7 @@ You need the following hardware to create a failover cluster. To be supported by
 
     >[!NOTE]
     >If you connect cluster nodes with a single network, the network will pass the redundancy requirement in the Validate a Configuration Wizard. However, the report from the wizard will include a warning that the network should not have single points of failure.
+
   - **Device controllers or appropriate adapters for the storage**:
     
       - **Serial Attached SCSI or Fibre Channel**: If you are using Serial Attached SCSI or Fibre Channel, in all clustered servers, all elements of the storage stack should be identical. It is required that the multipath I/O (MPIO) software be identical and that the Device Specific Module (DSM) software be identical. It is recommended that the mass-storage device controllers—that is, the host bus adapter (HBA), HBA drivers, and HBA firmware—that are attached to cluster storage be identical. If you use dissimilar HBAs, you should verify with the storage vendor that you are following their supported or recommended configurations.
@@ -28,6 +38,7 @@ You need the following hardware to create a failover cluster. To be supported by
 
         >[!NOTE]
         >If you have a disk witness for your quorum configuration, you can format the disk with either NTFS or Resilient File System (ReFS).
+
       - For the partition style of the disk, you can use either master boot record (MBR) or GUID partition table (GPT).
     
     A disk witness is a disk in the cluster storage that is designated to hold a copy of the cluster configuration database. A failover cluster has a disk witness only if this is specified as part of the quorum configuration. For more information, see [Configure and Manage the Quorum in a Windows Server 2012 Failover Cluster](manage-cluster-quorum.md).
@@ -54,6 +65,7 @@ When deploying a storage area network (SAN) with a failover cluster, follow thes
 
     >[!IMPORTANT]
     >Host bus adapters and multipath I/O software can be very version sensitive. If you are implementing a multipath solution for your cluster, work closely with your hardware vendor to choose the correct adapters, firmware, and software for the version of Windows Server that you are running.
+
   - **Consider using Storage Spaces**: If you plan to deploy serial attached SCSI (SAS) clustered storage that is configured using Storage Spaces, see [Deploy Clustered Storage Spaces](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj822937(v%3dws.11)>) for the requirements.
 
 ## More information

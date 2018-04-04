@@ -1,8 +1,17 @@
 ---
+title: Use Cluster Shared Volumes in a failover cluster
+description: How to use Cluster Shared Volumes in a failover cluster.
+ms.prod: windows-server-threshold 
+ms.topic: article 
+author: JasonGerend 
+ms.author: jgerend 
+ms.technology: storage-failover-clustering 
+ms.date: 4/5/18
+ms.localizationpriority: low
 ---
 # Use Cluster Shared Volumes in a failover cluster
 
->Applies to Windows Server 2012 R2 and Windows Server 2012.
+>Applies to: Windows Server 2012 R2, Windows Server 2012, and Windows Server 2016.
 
 Cluster Shared Volumes (CSV) enable multiple nodes in a failover cluster to simultaneously have read-write access to the same LUN (disk) that is provisioned as an NTFS volume. (In Windows Server 2012 R2, the disk can be provisioned as NTFS or Resilient File System (ReFS).) With CSV, clustered roles can fail over quickly from one node to another node without requiring a change in drive ownership, or dismounting and remounting a volume. CSV also help simplify the management of a potentially large number of LUNs in a failover cluster.
 
@@ -131,7 +140,7 @@ When you plan the storage configuration for a failover cluster that uses CSV, co
     
       - One organization is deploying virtual machines that will support a virtual desktop infrastructure (VDI), which is a relatively light workload. The cluster uses high-performance storage. The cluster administrator, after consulting with the storage vendor, decides to place a relatively large number of virtual machines per CSV volume.
       - Another organization is deploying a large number of virtual machines that will support a heavily used database application, which is a heavier workload. The cluster uses lower-performing storage. The cluster administrator, after consulting with the storage vendor, decides to place a relatively small number of virtual machines per CSV volume.
-  - When you plan the storage configuration for a particular virtual machine, consider the disk requirements of the service, application, or role that the virtual machine will support. Understanding these requirements helps you avoid disk contention that can result in poor performance. The storage configuration for the virtual machine should closely resemble the storage configuration that you would use for a physical server that is running the same service, application, or role. For more information, see [Arrangement of LUNs, volumes, and VHD files]() earlier in this topic.
+  - When you plan the storage configuration for a particular virtual machine, consider the disk requirements of the service, application, or role that the virtual machine will support. Understanding these requirements helps you avoid disk contention that can result in poor performance. The storage configuration for the virtual machine should closely resemble the storage configuration that you would use for a physical server that is running the same service, application, or role. For more information, see [Arrangement of LUNs, volumes, and VHD files](#arrangement-of-luns,-volumes,-and-vhd-files) earlier in this topic.
     
     You can also mitigate disk contention by having storage with a large number of independent physical hard disks. Choose your storage hardware accordingly, and consult with your vendor to optimize the performance of your storage.
   - Depending on your cluster workloads and their need for I/O operations, you can consider configuring only a percentage of the virtual machines to access each LUN, while other virtual machines do not have connectivity and are instead dedicated to compute operations.

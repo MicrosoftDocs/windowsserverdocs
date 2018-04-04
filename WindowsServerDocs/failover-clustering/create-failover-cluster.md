@@ -1,8 +1,17 @@
 ---
+title: Create a failover cluster
+description: How to create a failover cluster for Windows Server 2012 R2, Windows Server 2012, and Windows Server 2016.
+ms.prod: windows-server-threshold 
+ms.topic: article 
+author: JasonGerend 
+ms.author: jgerend 
+ms.technology: storage-failover-clustering 
+ms.date: 4/5/2018
+ms.localizationpriority: low
 ---
 # Create a failover cluster
 
->Applies to Windows Server 2012 R2, Windows Server 2012.
+>Applies to: Windows Server 2012 R2, Windows Server 2012, and Windows Server 2016.
 
 This topic shows how to create a failover cluster by using either the Failover Cluster Manager snap-in or Windows PowerShell. The topic covers a typical deployment, where computer objects for the cluster and its associated clustered roles are created in Active Directory Domain Services (AD DS).
 
@@ -13,11 +22,11 @@ This topic shows how to create a failover cluster by using either the Failover C
 
 |Status|Task|Reference|
 |:---:|---|---|
-|☐|Verify the prerequisites|[Verify the prerequisites]()|
-|☐|Install the Failover Clustering feature on every server that you want to add as a cluster node|[Install the Failover Clustering feature]()|
-|☐|Run the Cluster Validation Wizard to validate the configuration|[Validate the configuration]()|
-|☐|Run the Create Cluster Wizard to create the failover cluster|[Create the failover cluster]()|
-|☐|Create clustered roles to host cluster workloads|[Create clustered roles]()|
+|☐|Verify the prerequisites|[Verify the prerequisites](#verify-the-prerequisites)|
+|☐|Install the Failover Clustering feature on every server that you want to add as a cluster node|[Install the Failover Clustering feature](#install-the-failover-clustering-feature)|
+|☐|Run the Cluster Validation Wizard to validate the configuration|[Validate the configuration](#validate-the-configuration)|
+|☐|Run the Create Cluster Wizard to create the failover cluster|[Create the failover cluster](#create-the-failover-cluster)|
+|☐|Create clustered roles to host cluster workloads|[Create clustered roles](#create-clustered-roles)|
 
 ## Verify the prerequisites
 
@@ -27,6 +36,7 @@ Before you begin, verify the following prerequisites:
 
     >[!NOTE]
     >You can use the Failover Clustering feature on all editions of Windows Server 2012 R2 and Windows Server 2012. This includes Server Core installations.
+
 - Review the hardware requirements to make sure that your configuration is supported. For more information, see [Failover Clustering Hardware Requirements and Storage Options](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/jj612869(v%3dws.11)>).
 - If you want to add clustered storage during cluster creation, make sure that all servers can access the storage. (You can also add clustered storage after you create the cluster.)
 - Make sure that all servers that you want to add as cluster nodes are joined to the same Active Directory domain.
@@ -58,8 +68,9 @@ You must install the Failover Clustering feature on every server that you want t
 8. To install the failover cluster management tools, select **Add Features**, and then select **Next**.
 9. On the **Confirm installation selections** page, select **Install**.
     
-    > [!NOTE]
-    > A server restart is not required for the Failover Clustering feature.
+    >[!NOTE]
+    >A server restart is not required for the Failover Clustering feature.
+
 10. When the installation is completed, select **Close**.
 11. Repeat this procedure on every server that you want to add as a failover cluster node.
 
@@ -137,7 +148,7 @@ After you create the failover cluster, you can create clustered roles to host cl
 >[!NOTE]
 >For clustered roles that require a client access point, a virtual computer object (VCO) is created in AD DS. By default, all VCOs for the cluster are created in the same container or OU as the CNO. Realize that after you create a cluster, you can move the CNO to any OU.
 
-#### To create a clustered role
+Here's how to create a clustered role:
 
 1. Use Server Manager or Windows PowerShell to install the role or feature that is required for a clustered role on each failover cluster node. For example, if you want to create a clustered file server, install the File Server role on all cluster nodes.
     

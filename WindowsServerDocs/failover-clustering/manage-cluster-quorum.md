@@ -1,12 +1,21 @@
 ---
+title: Configure and manage the quorum in a Windows Server 2012 and Windows Server 2016 failover cluster
+description: How to 
+ms.prod: windows-server-threshold 
+ms.topic: article 
+author: JasonGerend 
+ms.author: jgerend 
+ms.technology: storage-failover-clustering 
+ms.date: 
+ms.localizationpriority: low
 ---
-# Configure and Manage the Quorum in a Windows Server 2012 Failover Cluster
+# Configure and manage the quorum in a Windows Server 2012  and Windows Server 2016 failover cluster
 
-Applies To: Windows Server 2012
+>Applies to: Windows Server 2012 and Windows Server 2016.
 
 This topic provides background and steps to configure and manage the quorum in a Windows Server 2012 failover cluster.
 
-## Overview of the quorum in a failover cluster
+## What is a quorum for a failover cluster?
 
 The quorum for a cluster is determined by the number of voting elements that must be part of active cluster membership for that cluster to start properly or continue running. By default, every node in the cluster has a single quorum vote. In addition, a quorum witness (when configured) has an additional single quorum vote. You can configure one quorum witness for each cluster. A quorum witness can be a designated disk resource or a file share resource. Each element can cast one “vote” to determine whether the cluster can run. Whether a cluster has quorum to function properly is determined by the majority of the voting elements in the active cluster membership.
 
@@ -216,6 +225,7 @@ Membership in the local **Administrators** group on each clustered server, or eq
 
             >[!NOTE]
             >You can also select **Do not configure a quorum witness** and then complete the wizard. If you have an even number of voting nodes in your cluster, this may not be a recommended configuration.
+
         2. If you select the option to configure a disk witness, on the **Configure Storage Witness** page, select the storage volume that you want to assign as the disk witness, and then complete the wizard.
         3. If you select the option to configure a file share witness, on the **Configure File Share Witness** page, type or browse to a file share that will be used as the witness resource, and then complete the wizard.
     
@@ -226,12 +236,14 @@ Membership in the local **Administrators** group on each clustered server, or eq
 
             >[!NOTE]
             >You can also select **No Nodes**. This is generally not recommended, because it does not allow nodes to participate in quorum voting, and it requires configuring a disk witness. This disk witness becomes the single point of failure for the cluster.
+
         2. On the **Configure Quorum Management** page, you can enable or disable the **Allow cluster to dynamically manage the assignment of node votes** option. Selecting this option generally increases the availability of the cluster. By default the option is enabled, and it is strongly recommended to not disable this option. This option allows the cluster to continue running in failure scenarios that are not possible when this option is disabled.
         3. On the **Select Quorum Witness** page, select an option to configure a disk witness or a file share witness. The wizard indicates the witness selection options that are recommended for your cluster.
             
 
             >[!NOTE]
             >You can also select **Do not configure a quorum witness**, and then complete the wizard. If you have an even number of voting nodes in your cluster, this may not be a recommended configuration.
+
         4. If you select the option to configure a disk witness, on the **Configure Storage Witness** page, select the storage volume that you want to assign as the disk witness, and then complete the wizard.
         5. If you select the option to configure a file share witness, on the **Configure File Share Witness** page, type or browse to a file share that will be used as the witness resource, and then complete the wizard.
 
@@ -300,8 +312,8 @@ Forcing a cluster to start when it does not have quorum may be especially useful
 When a cluster is started in **ForceQuorum** mode, and after it regains sufficient quorum votes, the cluster automatically leaves the forced state, and it behaves normally. Hence, it is not necessary to start the cluster again normally. If the cluster loses a node and it loses quorum, it goes offline again because it is no longer in the forced state. To bring it back online when it does not have quorum requires forcing the cluster to start without quorum.
 
 >[!IMPORTANT]
-> * After a cluster is force started, the administrator is in full control of the cluster.
->* The cluster uses the cluster configuration on the node where the cluster is force started, and replicates it to all other nodes that are available. 
+>* After a cluster is force started, the administrator is in full control of the cluster.
+>* The cluster uses the cluster configuration on the node where the cluster is force started, and replicates it to all other nodes that are available.
 >* If you force the cluster to start without quorum, all quorum configuration settings are ignored while the cluster remains in **ForceQuorum** mode. This includes specific node vote assignments and dynamic quorum management settings.
 
 ### Prevent quorum on remaining cluster nodes
@@ -313,7 +325,7 @@ This becomes necessary when you need to recover your cluster in some multisite d
 >[!IMPORTANT]
 >After a cluster is force started on a node, we recommend that you always start the remaining nodes with the quorum prevented.
 
-#### To recover the cluster by using Failover Cluster Manager
+Here's how to recover the cluster with Failover Cluster Manager:
 
 1. In Failover Cluster Manager, select or specify the cluster you want to recover.
 2. With the cluster selected, under **Actions**, select **Force Cluster Start**.
@@ -391,7 +403,7 @@ The following table summarizes considerations and recommendations for this confi
 </tbody>
 </table>
 
-**Additional considerations**
+#### Additional considerations
 
   - Configuring the file share witness in a separate site is necessary to give each site an equal opportunity to survive. For more information, see [Witness configuration](#witness-configuration) earlier in this topic.
 
