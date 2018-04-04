@@ -43,11 +43,8 @@ In the example below, **[Version]** is the section, **Signature** is the key, an
 Example:
 
 ```PowerShell
-
 [Version]                  #section
-
-`Signature="$Windows NT$"` #key=value
-
+Signature="$Windows NT$" #key=value
 ```
 
 ###  Version
@@ -63,25 +60,17 @@ For each policy defined, there must be a section that defines the settings for t
 If you are going to have descriptive text in the policy statement, then the next three lines of the CAPolicy.inf would look like:
 
 ```
-
 [InternalPolicy]
-
 OID=1.1.1.1.1.1.1
-
 Notice=”Legal policy statement text”
-
 ```
 
 If you are going to use a URL to host the CA policy statement, then next three lines would instead look like:
 
 ```
-
 [InternalPolicy]
-
 OID=1.1.1.1.1.1.2
-
 URL=http://pki.wingtiptoys.com/policies/legalpolicy.asp
-
 ```
 
 In addition:
@@ -95,17 +84,11 @@ In addition:
 An example of multiple notices and URLs in a policy section would look like:
 
 ```
-
 [InternalPolicy]
-
 OID=1.1.1.1.1.1.1
-
 URL=http://pki.wingtiptoys.com/policies/legalpolicy.asp
-
 URL=ftp://ftp.wingtiptoys.com/pki/policies/legalpolicy.asp
-
 Notice=”Legal policy statement text”
-
 ```
 
 ### CRLDistributionPoint
@@ -113,11 +96,8 @@ Notice=”Legal policy statement text”
 You can specify CRL Distribution Points (CDPs) for a root CA certificate in the CAPolicy.inf. After the CA has been installed you can configure the CDP URLs that the CA includes in each certificate issued. The URLs specified in this section of the CAPolicy.inf file are included in the root CA certificate itself.
 
 ```
-
 [CRLDistributionPoint]
-
 URL=http://pki.wingtiptoys.com/cdp/WingtipToysRootCA.crl
-
 ```
 
 Some additional information about this section:
@@ -137,11 +117,8 @@ Some additional information about this section:
 You can specify the authority information access points in the CAPolicy.inf for the root CA certificate.
 
 ```
-
 [AuthorityInformationAccess]
-
 URL=http://pki.wingtiptoys.com/Public/myCA.crt
-
 ```
 
 Some additional notes on the authority information access section:
@@ -164,33 +141,19 @@ from the CAPolicy.inf file. Alternatively, many of these settings can be changed
 An example would look like:
 
 ```
-
 [certsrv_server]
-
 RenewalKeyLength=2048
-
 RenewalValidityPeriod=Years
-
 RenewalValidityPeriodUnits=5
-
 CRLPeriod=Days
-
 CRLPeriodUnits=2
-
 CRLDeltaPeriod=Hours
-
 CRLDeltaPeriodUnits=4
-
 ClockSkewMinutes=20
-
 LoadDefaultTemplates=True
-
 AlternateSignatureAlgorithm=0
-
 ForceUTF8=0
-
 EnableKeyCounting=0
-
 ```
 
 **RenewalKeyLength** sets the key size for renewal only. This is only used when a new key pair is generated during CA certificate renewal. The key size for the initial CA certificate is set when the CA is installed.
@@ -206,15 +169,10 @@ When renewing a CA certificate with a new key pair, the key length can be either
 Each of these settings can be configured after the CA has been installed:
 
 ```
-
 Certutil -setreg CACRLPeriod Weeks
-
 Certutil -setreg CACRLPeriodUnits 1
-
 Certutil -setreg CACRLDeltaPeriod Days
-
 Certutil -setreg CACRLDeltaPeriodUnits 1
-
 ```
 
 Remember to restart Active Directory Certificate Services for any changes to take effect.
@@ -243,8 +201,8 @@ Before you install AD CS, you configure the CAPolicy.inf file with specific sett
 2.  When prompted to create a new file, click **Yes**.
 
 3.  Enter the following as the contents of the file:
-
--   [Version]  
+   ```
+   [Version]  
     Signature="\$Windows NT\$"  
     [PolicyStatementExtension]  
     Policies=InternalPolicy  
@@ -262,7 +220,7 @@ Before you install AD CS, you configure the CAPolicy.inf file with specific sett
     AlternateSignatureAlgorithm=1  
     [CRLDistributionPoint]  
     [AuthorityInformationAccess]
-
+   ```
 1.  Click **File**, and then click **Save As**.
 
 2.  Navigate to the %systemroot% folder.
@@ -284,7 +242,7 @@ Before you install AD CS, you configure the CAPolicy.inf file with specific sett
     >   [!CAUTION]  
     >   Be sure to save the CAPolicy.inf with the inf extension. If you do not specifically type **.inf** at the end of the file name and select the options as described, the file will be saved as a text file and will not be used during CA installation.
 
-1.  Close Notepad.
+6.  Close Notepad.
 
 >   [!IMPORTANT]  
 >   In the CAPolicy.inf, you can see there is a line specifying the URL http://pki.corp.contoso.com/pki/cps.txt. The Internal Policy section of the CAPolicy.inf is just shown as an example of how you would specify the location of a certificate practice statement (CPS). In this guide, you are not instructed to create the certificate practice statement (CPS).
