@@ -61,7 +61,9 @@ This allows VPN users to automatically request and retrieve user certificates th
 
 ## Create the VPN Users, VPN Servers, and NPS Servers Groups
 
-With this step you can add a new Active Directory group that contains the users allowed to use the VPN to connect to your organization network. This group serves two purposes:
+With this step, you can add a new Active Directory (AD) group that contains the users allowed to use the VPN to connect to your organization network. 
+
+This group serves two purposes:
 
 - It defines which users are allowed to autoenroll for the user certificates the VPN requires.
 
@@ -70,6 +72,9 @@ With this step you can add a new Active Directory group that contains the users 
 By using a custom group, if you ever want to revoke a user’s VPN access, you can simply remove that user from the group.
 
 You will also add a group containing VPN servers and another group containing NPS servers. You use these groups to restrict certificate requests to their members.
+
+>[!Note]
+>It is recommended that VPN servers that are placed in the DMA/Perimeter not be domain joined.  However, if you prefer to have the VPN servers domain joined for better manageability (Group Policies, Backup/Monitoring agent, no local users to manager, and so on), then add an AD group to the VPN server certificate template. 
 
 **To configure the VPN Users group**
 
@@ -178,7 +183,7 @@ This template is required because you want to improve the certificate’s overal
 
 ## Create the VPN Server Authentication template
 
-With this step you can configure a new Server Authentication template for your VPN server.
+With this step you can configure a new Server Authentication template for your VPN server. 
 
 Adding the IP Security \(IPsec\) IKE Intermediate application policy allows the server to filter certificates if more than one certificate is available with the Server Authentication extended key usage. 
 
