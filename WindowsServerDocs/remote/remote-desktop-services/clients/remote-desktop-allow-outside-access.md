@@ -11,7 +11,7 @@ ms.topic: article
 author: haley-rowland
 manager: dongill
 ms.author: elizapo
-ms.date: 04/02/2018
+ms.date: 04/04/2018
 ---
 # Remote Desktop - Allow access to your PC from outside your PC's network
 
@@ -42,7 +42,10 @@ After you map the port, you'll be able to connect to your host PC from outside t
 
 The router's IP address can change - your internet service provider (ISP) can assign you a new IP at any time. To avoid running into this issue, consider using Dynamic DNS - this lets you connect to the PC using an easy to remember domain name, instead of the IP address. Your router automatically updates the DDNS service with your new IP address, should it change.
 
+With most routers you can define which source IP or source network can use port mapping. So, if you know you're only going to connect from work, you can add the IP address for your work network - that lets you avoid opening the port to the entire public internet. If the host you're using to connect uses dynamic IP address, set the source restriction to allow access from the whole range of that particular ISP.
+
 You might also consider setting up a [static IP address](/windows-hardware/customize/mobile/mcsf/enable-static-ip) on your PC so the internal IP address doesn't change. If you do that, then the router's port forwarding will always point to the correct IP address.
+
 
 ## Use a VPN
 
