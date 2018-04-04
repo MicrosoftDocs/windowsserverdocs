@@ -43,8 +43,8 @@ In the example below, **[Version]** is the section, **Signature** is the key, an
 Example:
 
 ```PowerShell
-[Version]                  #section
-Signature="$Windows NT$" #key=value
+[Version]                     #section
+Signature="$Windows NT$"      #key=value
 ```
 
 ###  Version
@@ -133,7 +133,7 @@ Some additional notes on the authority information access section:
 
 -   If no URLs are specified – that is, if the **[AuthorityInformationAccess]** section exists in the file but is empty – the CRL Distribution Point extension is omitted from the root CA certificate. Again, this would be the preferred setting in the case of a root CA certificate as there is no authority higher than a root CA that would need to be referenced by a link to its certificate.
 
-### Certsrv_Server
+### certsrv_Server
 
 Another optional section of the CAPolicy.inf is [certsrv_server], which is used to specify renewal key length, the renewal validity period, and the certificate revocation list (CRL) validity period for a CA that is being renewed or installed. None of the keys in this section are required. Many of these settings have default values that are sufficient for most needs and can simply be omitted
 from the CAPolicy.inf file. Alternatively, many of these settings can be changed after the CA has been installed.
@@ -203,7 +203,7 @@ Before you install AD CS, you configure the CAPolicy.inf file with specific sett
 3.  Enter the following as the contents of the file:
    ```
    [Version]  
-    Signature="\$Windows NT\$"  
+    Signature="$Windows NT$"  
     [PolicyStatementExtension]  
     Policies=InternalPolicy  
     [InternalPolicy]  
