@@ -6,7 +6,7 @@
 ### [VM load balancing](vm-load-balancing-overview.md)
 #### [VM load balancing deep-dive](vm-load-balancing-deep-dive.md)
 ## Deploy
-### [Create a Failover Cluster](create-failover-cluster.md)
+### [Create a failover cluster](create-failover-cluster.md)
 ### [Prestage a cluster in AD DS](prestage-cluster-adds.md)
 ### [Deploy a Cloud Witness for a Failover Cluster](deploy-cloud-witness.md)
 ### [Cluster operating system rolling upgrades](cluster-operating-system-rolling-upgrade.md)
@@ -28,4 +28,4 @@
 ### [Hardware requirements](clustering-requirements.md)
 ### [Use Cluster Shared Volumes (CSVs)](failover-cluster-csvs.md)
 ## Understand
-### [SOFS overview](sofs-overview.md)
+### [Scale-Out File Server for application data overview](sofs-overview.md)
