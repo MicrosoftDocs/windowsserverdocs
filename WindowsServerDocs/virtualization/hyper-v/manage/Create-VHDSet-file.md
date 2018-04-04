@@ -14,7 +14,7 @@ ms.reviewer: kathydav
 ---
 
 # Create Hyper-V VHD Set files
-VHD Set files are a new shared Virtual Disk model for guest clusters in Windows Server 2016. VHD Set files support online resizing of shared virtual disks, support Hype-V Replica, and can be included in application-consistent checkpoints. 
+VHD Set files are a new shared Virtual Disk model for guest clusters in Windows Server 2016. VHD Set files support online resizing of shared virtual disks, support Hyper-V Replica, and can be included in application-consistent checkpoints. 
 
 VHD Set files use a new VHD file type, .VHDS. VHD Set files store checkpoint information about the group virtual disk used in guest clusters, in the form of metadata.
 
