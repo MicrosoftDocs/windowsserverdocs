@@ -38,6 +38,10 @@ In this topic, we discuss ... these topics as they relate to enabling accurate t
 > The windows time provider plugin model is [documented on TechNet](https://msdn.microsoft.com/en-us/library/windows/desktop/ms725475%28v=vs.85%29.aspx).
 <!-- -->
 
+
+
+
+
 ## Domain Hierarchy
 Domain and Standalone configurations work differently.
 
@@ -64,18 +68,7 @@ In every case for accurate time, there are three critical factors:
 For battery powered devices, both mobile and portable, you must consider different strategies.  As per our recommendation, keeping accurate time requires the clock to be disciplined once a second, which correlates to the Clock Update Frequency. These settings will consume more battery power than expected and can interfere with power saving modes available in Windows for such devices. Battery powered devices also have certain power modes which stop all applications from running, which interferes with W32time’s ability to discipline the clock and maintain accurate time. Additionally, clocks in mobile devices may not be very accurate to begin with.  Ambient environmental conditions affect clock accuracy and a mobile device can move from one ambient condition to the next which may interfere with its ability to keep time accurately.  Therefore, Microsoft does not recommend that you set up battery powered portable devices with high accuracy settings. 
 
 ## Why is time important?  
-There are many different reasons you might need accurate time.  The typical case for Windows is Kerberos, which requires 5 minutes of accuracy between the client and server.  However, there are many other areas that can be affected by time accuracy including:
 
-
-- Government Regulations like:
-	- 50 ms accuracy for FINRA in the US
-	- 1 ms ESMA (MiFID II) in the EU.
-- Cryptography Algorithms
-- Distributed systems like Cluster/SQL/Exchange and Document DBs
-- Blockchain framework for bitcoin transactions
-- Distributed Logs and Threat Analysis 
-- AD Replication
-- PCI (Payment Card Industry), currently 1 second accuracy
 
 ## Windows Server 2016 Improvements
 ### Windows Time Service and NTP
