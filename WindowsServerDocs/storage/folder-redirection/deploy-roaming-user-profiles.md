@@ -84,15 +84,15 @@ If your environment is not already set up with Roaming User Profiles, the first 
 Here's how to create a security group for Roaming User Profiles:
 
 1. Open Server Manager on a computer with Active Directory Administration Center installed.
-2. On the **Tools** menu, click **Active Directory Administration Center**. Active Directory Administration Center appears.
-3. Right-click the appropriate domain or OU, click **New**, and then click **Group**.
+2. On the **Tools** menu, select **Active Directory Administration Center**. Active Directory Administration Center appears.
+3. Right-click the appropriate domain or OU, select **New**, and then select **Group**.
 4. In the **Create Group** window, in the **Group** section, specify the following settings:
     
       - In **Group name**, type the name of the security group, for example: **Roaming User Profiles Users and Computers**.
-      - In **Group scope**, click **Security**, and then click **Global**.
-5. In the **Members** section, click **Add**. The Select Users, Contacts, Computers, Service Accounts or Groups dialog box appears.
-6. If you want to include computer accounts in the security group, click **Object Types**, select the **Computers** check box and then click **OK**.
-7. Type the names of the users, groups, and/or computers to which you want to deploy Roaming User Profiles, click **OK**, and then click **OK** again.
+      - In **Group scope**, select **Security**, and then select **Global**.
+5. In the **Members** section, select **Add**. The Select Users, Contacts, Computers, Service Accounts or Groups dialog box appears.
+6. If you want to include computer accounts in the security group, select **Object Types**, select the **Computers** check box and then select **OK**.
+7. Type the names of the users, groups, and/or computers to which you want to deploy Roaming User Profiles, select **OK**, and then select **OK** again.
 
 ## Step 3: Create a file share for roaming user profiles
 
@@ -103,17 +103,17 @@ If you do not already have a separate file share for roaming user profiles (inde
 
 Here's how to create a file share on Windows Server:
 
-1. In the Server Manager navigation pane, click **File and Storage Services**, and then click **Shares** to display the Shares page.
-2. In the Shares tile, click **Tasks**, and then click **New Share**. The New Share Wizard appears.
-3. On the **Select Profile** page, click **SMB Share – Quick**. If you have File Server Resource Manager installed and are using folder management properties, instead click **SMB Share - Advanced**.
+1. In the Server Manager navigation pane, select **File and Storage Services**, and then select **Shares** to display the Shares page.
+2. In the Shares tile, select **Tasks**, and then select **New Share**. The New Share Wizard appears.
+3. On the **Select Profile** page, select **SMB Share – Quick**. If you have File Server Resource Manager installed and are using folder management properties, instead select **SMB Share - Advanced**.
 4. On the **Share Location** page, select the server and volume on which you want to create the share.
 5. On the **Share Name** page, type a name for the share (for example, **User Profiles$**) in the **Share name** box.
 
     >[!TIP]
     >When creating the share, hide the share by putting a ```$``` after the share name. This hides the share from casual browsers.
 6. On the **Other Settings** page, clear the **Enable continuous availability** checkbox, if present, and optionally select the **Enable access-based enumeration** and **Encrypt data access** checkboxes.
-7. On the **Permissions** page, click **Customize permissions…**. The Advanced Security Settings dialog box appears.
-8. Click **Disable inheritance**, and then click **Convert inherited permissions into explicit permission on this object**.
+7. On the **Permissions** page, select **Customize permissions…**. The Advanced Security Settings dialog box appears.
+8. Select **Disable inheritance**, and then select **Convert inherited permissions into explicit permission on this object**.
 9. Set the permissions as described in [Required permissions for the file share hosting roaming user profiles](#required-permissions-for-the-file-share-hosting-roaming-user-profiles) and shown in the following screen shot, removing permissions for unlisted groups and accounts, and adding special permissions to the Roaming User Profiles Users and Computers group that you created in Step 1.
     
     ![Advanced Security Settings window showing permissions as described in Table 1](media\advanced-security-user-profiles.jpg)
@@ -121,7 +121,7 @@ Here's how to create a file share on Windows Server:
     **Figure 1** Setting the permissions for the roaming user profiles share
 10. If you chose the **SMB Share - Advanced** profile, on the **Management Properties** page, select the **User Files** Folder Usage value.
 11. If you chose the **SMB Share - Advanced** profile, on the **Quota** page, optionally select a quota to apply to users of the share.
-12. On the **Confirmation** page, click **Create.**
+12. On the **Confirmation** page, select **Create.**
 
 ### Required permissions for the file share hosting roaming user profiles
 
@@ -171,14 +171,14 @@ If you do not already have a GPO created for Roaming User Profiles settings, use
 Here's how to create a GPO for Roaming User Profiles:
 
 1. Open Server Manager on a computer with Group Policy Management installed.
-2. From the **Tools** menu click **Group Policy Management**. Group Policy Management appears.
-3. Right-click the domain or OU in which you want to setup Roaming User Profiles and then click **Create a GPO in this domain, and Link it here**.
-4. In the **New GPO** dialog box, type a name for the GPO (for example, **Roaming User Profile Settings**), and then click **OK**.
+2. From the **Tools** menu select **Group Policy Management**. Group Policy Management appears.
+3. Right-click the domain or OU in which you want to setup Roaming User Profiles, then select **Create a GPO in this domain, and Link it here**.
+4. In the **New GPO** dialog box, type a name for the GPO (for example, **Roaming User Profile Settings**), and then select **OK**.
 5. Right-click the newly created GPO and then clear the **Link Enabled** checkbox. This prevents the GPO from being applied until you finish configuring it.
-6. Select the GPO. In the **Security Filtering** section of the **Scope** tab, select **Authenticated Users**, and then click **Remove** to prevent the GPO from being applied to everyone.
-7. In the **Security Filtering** section, click **Add**.
-8. In the **Select User, Computer, or Group** dialog box, type the name of the security group you created in Step 1 (for example, **Roaming User Profiles Users and Computers**), and then click **OK**.
-9. Click the **Delegation** tab, click **Add**, type **Authenticated Users**, click **OK**, and then click **OK** again to accept the default Read permissions.
+6. Select the GPO. In the **Security Filtering** section of the **Scope** tab, select **Authenticated Users**, and then select **Remove** to prevent the GPO from being applied to everyone.
+7. In the **Security Filtering** section, select **Add**.
+8. In the **Select User, Computer, or Group** dialog box, type the name of the security group you created in Step 1 (for example, **Roaming User Profiles Users and Computers**), and then select **OK**.
+9. Select the **Delegation** tab, select **Add**, type **Authenticated Users**, select **OK**, and then select **OK** again to accept the default Read permissions.
     
     This step is necessary due to security changes made in [MS16-072](https://support.microsoft.com/help/3163622/ms16-072-security-update-for-group-policy-june-14%2c-2016).
 
@@ -195,13 +195,13 @@ If you are deploying Roaming User Profiles to user accounts, use the following p
 Here's how to set up Roaming User Profiles on user accounts:
 
 1. In Active Directory Administration Center, navigate to the **Users** container (or OU) in the appropriate domain.
-2. Select all users to which you want to assign a roaming user profile, right-click the users and then click **Properties**.
+2. Select all users to which you want to assign a roaming user profile, right-click the users and then select **Properties**.
 3. In the **Profile** section, select the **Profile path:** checkbox and then enter the path to the file share where you want to store the user’s roaming user profile, followed by `%username%` (which is automatically replaced with the user name the first time the user signs in). For example:
     
     `\\fs1.corp.contoso.com\User Profiles$\%username%`
     
     To specify a mandatory roaming user profile, specify the path to the NTuser.man file that you created previously, for example, `fs1.corp.contoso.comUser Profiles$default`. For more information, see [Create mandatory user profiles](https://technet.microsoft.com/itpro/windows/manage/mandatory-user-profile).
-4. Click **OK**.
+4. Select **OK**.
 
 >[!NOTE]
 >By default, deployment of all Windows® Runtime-based (Windows Store) apps is allowed when using Roaming User Profiles. However, when using a special profile, apps are not deployed by default. Special profiles are user profiles where changes are discarded after the user signs out:
@@ -221,18 +221,18 @@ Here's how to set up Roaming User Profiles on computers:
 
 1. Open Server Manager on a computer with Group Policy Management installed.
 2. From the **Tools** menu, select **Group Policy Management**. Group Policy Management will appear.
-3. In Group Policy Management, right-click the GPO you created in Step 3 (for example, **Roaming User Profiles Settings**), and then click **Edit**.
+3. In Group Policy Management, right-click the GPO you created in Step 3 (for example, **Roaming User Profiles Settings**), and then select **Edit**.
 4. In the Group Policy Management Editor window, navigate to **Computer Configuration**, then **Policies**, then **Administrative Templates**, then **System**, and then **User Profiles**.
-5. Right-click **Set roaming profile path for all users logging onto this computer** and then click **Edit**.
+5. Right-click **Set roaming profile path for all users logging onto this computer** and then select **Edit**.
     > [!TIP]
     > A user's home folder, if configured, is the default folder used by some programs such as Windows PowerShell. You can configure an alternative local or network location on a per-user basis by using the **Home folder** section of the user account properties in AD DS. To configure the home folder location for all users of a computer running Windows 8.1, Windows 8, Windows Server 2012 R2, or Windows Server 2012 in a virtual desktop environment, enable the **Set user home folder** policy setting, and then specify the file share and drive letter to map (or specify a local folder). Do not use environment variables or ellipses. The user’s alias is appended to the end of the path specified during user sign on.
-6. In the **Properties** dialog box, click **Enabled**
+6. In the **Properties** dialog box, select **Enabled**
 7. In the **Users logging onto this computer should use this roaming profile path** box, enter the path to the file share where you want to store the user’s roaming user profile, followed by `%username%` (which is automatically replaced with the user name the first time the user signs in). For example:
     
     `\\fs1.corp.contoso.com\User Profiles$\%username%`
     
     To specify a mandatory roaming user profile, which is a preconfigured profile to which users cannot make permanent changes (changes are reset when the user signs out), specify the path to the NTuser.man file that you created previously, for example, `\\fs1.corp.contoso.com\User Profiles$\default`. For more information, see [Creating a Mandatory User Profile](http://technet.microsoft.com/library/gg241183).
-8. Click **OK**.
+8. Select **OK**.
 
 ## Step 7: Optionally specify a Start layout for Windows 10 PCs
 
@@ -309,7 +309,7 @@ If you set up Roaming User Profiles on computers by using Group Policy, or if yo
 Here's how to enable the Roaming User Profile GPO:
 
 1. Open Group Policy Management.
-2. Right-click the GPO that you created and then click **Link Enabled**. A checkbox appears next to the menu item.
+2. Right-click the GPO that you created and then select **Link Enabled**. A checkbox appears next to the menu item.
 
 ## Step 9: Test Roaming User Profiles
 
@@ -323,7 +323,7 @@ Here's how to test Roaming User Profiles:
     ```PowerShell
     GpUpdate /Force
     ```
-3. To confirm that the user profile is roaming, open **Control Panel**, click **System and Security**, click **System**, click **Advanced System Settings**, click **Settings** in the User Profiles section and then look for **Roaming** in the **Type** column.
+3. To confirm that the user profile is roaming, open **Control Panel**, select **System and Security**, select **System**, select **Advanced System Settings**, select **Settings** in the User Profiles section and then look for **Roaming** in the **Type** column.
 
 ## Appendix A: Checklist for deploying Roaming User Profiles
 

@@ -27,11 +27,11 @@ To disable Offline Files caching of specific redirected folders, use Group Polic
 ### To disable Offline Files on specific redirected folders
 
 1. Open **Group Policy Management**.
-2. To optionally create a new GPO that specifies which users should have redirected folders excluded from being made available offline, right-click the appropriate domain or organizational unit (OU) and then click **Create a GPO in this domain, and Link it here**.
-3. In the console tree, right-click the GPO for which you want to configure the Folder Redirection settings and then click **Edit**. The Group Policy Management Editor appears.
+2. To optionally create a new GPO that specifies which users should have redirected folders excluded from being made available offline, right-click the appropriate domain or organizational unit (OU) and then select **Create a GPO in this domain, and Link it here**.
+3. In the console tree, right-click the GPO for which you want to configure the Folder Redirection settings and then select **Edit**. The Group Policy Management Editor appears.
 4. In the console tree, under **User Configuration**, expand **Policies**, expand **Administrative Templates**, expand **System**, and expand **Folder Redirection**.
-5. Right-click **Do not automatically make specific redirected folders available offline** and then click **Edit**. The **Do not automatically make specific redirected folders available offline** window appears.
-6. Click **Enabled**. In the **Options** pane select the folders that should not be made available offline by selecting the appropriate check boxes. Click **OK**.
+5. Right-click **Do not automatically make specific redirected folders available offline** and then select **Edit**. The **Do not automatically make specific redirected folders available offline** window appears.
+6. Select **Enabled**. In the **Options** pane select the folders that should not be made available offline by selecting the appropriate check boxes. Select **OK**.
 
 ### Windows PowerShell equivalent commands
 

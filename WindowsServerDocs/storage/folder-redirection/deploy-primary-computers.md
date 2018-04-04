@@ -31,15 +31,15 @@ The first step in deploying primary computers support is designating the primary
 ### To specify the primary computers for users
 
 1. Open Server Manager on a computer with Active Directory Administration Tools installed.
-2. On the **Tools** menu, click **Active Directory Administration Center**. Active Directory Administration Center appears.
+2. On the **Tools** menu, select **Active Directory Administration Center**. Active Directory Administration Center appears.
 3. Navigate to the **Computers** container in the appropriate domain.
-4. Right-click a computer that you want to designate as a primary computer and then click **Properties**.
-5. In the Navigation pane, click **Extensions**.
-6. Click the **Attribute Editor** tab, scroll to **distinguishedName**, click **View**, right-click the value listed, click **Copy**, click **OK**, and then click **Cancel**.
-7. Navigate to the **Users** container in the appropriate domain, right-click the user to which you want to assign the computer, and then click **Properties**.
-8. In the Navigation pane, click **Extensions**.
-9. Click the **Attribute Editor** tab, select **msDs-PrimaryComputer** and then click **Edit**. The Multi-valued String Editor dialog box appears.
-10. Right-click the text box, click **Paste**, click **Add**, click **OK**, and then click **OK** again.
+4. Right-click a computer that you want to designate as a primary computer and then select **Properties**.
+5. In the Navigation pane, select **Extensions**.
+6. Select the **Attribute Editor** tab, scroll to **distinguishedName**, select **View**, right-click the value listed, select **Copy**, select **OK**, and then select **Cancel**.
+7. Navigate to the **Users** container in the appropriate domain, right-click the user to which you want to assign the computer, and then select **Properties**.
+8. In the Navigation pane, select **Extensions**.
+9. Select the **Attribute Editor** tab, select **msDs-PrimaryComputer** and then select **Edit**. The Multi-valued String Editor dialog box appears.
+10. Right-click the text box, select **Paste**, select **Add**, select **OK**, and then select **OK** again.
 
 ## Step 2: Optionally enable primary computers for Folder Redirection in Group Policy
 
@@ -47,13 +47,13 @@ The next step is to optionally configure Group Policy to enable primary computer
 
 ### To enable primary computers for Folder Redirection
 
-1. In Group Policy Management, right-click the GPO you created when doing the initial configuration of Folder Redirection and/or Roaming User Profiles (for example, **Folder Redirection Settings** or **Roaming User Profiles Settings**), and then click **Edit**.
+1. In Group Policy Management, right-click the GPO you created when doing the initial configuration of Folder Redirection and/or Roaming User Profiles (for example, **Folder Redirection Settings** or **Roaming User Profiles Settings**), and then select **Edit**.
 2. To enable primary computers support using computer-based Group Policy, navigate to **Computer Configuration**. For user-based Group Policy, navigate to **User Configuration**.
       - Computer-based Group Policy applies primary computer processing to all computers to which the GPO applies, affecting all users of the computers.
       - User-based Group Policy to applies primary computer processing to all user accounts to which the GPO applies, affecting all computers to which the users sign on.
 3. Under **Computer Configuration** or **User Configuration**, navigate to **Policies**, then **Administrative Templates**, then **System**, then **Folder Redirection**.
-4. Right-click **Redirect folders on primary computers only**, and then click **Edit**.
-5. Click **Enabled**, and then click **OK**.
+4. Right-click **Redirect folders on primary computers only**, and then select **Edit**.
+5. Select **Enabled**, and then select **OK**.
 
 ## Step 3: Optionally enable primary computers for Roaming User Profiles in Group Policy
 
@@ -64,10 +64,10 @@ The next step is to optionally configure Group Policy to enable primary computer
 1. Enable primary computer support for Folder Redirection, if you haven't already.
     
     This keeps documents and other user files out of the user profiles, which helps profiles remain small and sign on times stay fast.
-2. In Group Policy Management, right-click the GPO you created (for example, **Folder Redirection and Roaming User Profiles Settings**), and then click **Edit**.
+2. In Group Policy Management, right-click the GPO you created (for example, **Folder Redirection and Roaming User Profiles Settings**), and then select **Edit**.
 3. Navigate to **Computer Configuration**, then **Policies**, then **Administrative Templates**, then **System**, and then **User Profiles**.
-4. Right-click **Download roaming profiles on primary computers only,** and then click **Edit**.
-5. Click **Enabled**, and then click **OK**.
+4. Right-click **Download roaming profiles on primary computers only,** and then select **Edit**.
+5. Select **Enabled**, and then select **OK**.
 
 ## Step 4: Enable the GPO
 
@@ -76,7 +76,7 @@ Once you have completed configuring Folder Redirection and Roaming User Profiles
 ### To enable the Folder Redirection and/or Roaming User Profiles GPOs
 
 1. Open Group Policy Management
-2. Right-click the GPOs that you created, and then click **Link Enabled**. A checkbox should appear next to the menu item.
+2. Right-click the GPOs that you created, and then select **Link Enabled**. A checkbox should appear next to the menu item.
 
 ## Step 5: Test primary computer function
 
@@ -90,8 +90,8 @@ To test primary computer support, sign in to a primary computer, confirm that th
   Gpupdate /force
   ```
 3. Open File Explorer.
-4. Right-click a redirected folder (for example, the My Documents folder in the Documents library), and then click **Properties**.
-5. Click the **Location** tab, and confirm that the path displays the file share you specified instead of a local path. To confirm that the user profile is roaming, open **Control Panel**, click **System and Security**, click **System**, click **Advanced System Settings**, click **Settings** in the User Profiles section and then look for **Roaming** in the **Type** column.
+4. Right-click a redirected folder (for example, the My Documents folder in the Documents library), and then select **Properties**.
+5. Select the **Location** tab, and confirm that the path displays the file share you specified instead of a local path. To confirm that the user profile is roaming, open **Control Panel**, select **System and Security**, select **System**, select **Advanced System Settings**, select **Settings** in the User Profiles section and then look for **Roaming** in the **Type** column.
 6. Sign in with the same user account to a computer that is not designated as the user’s primary computer.
 7. Repeat steps 2–5, instead looking for local paths and a **Local** profile type.
 

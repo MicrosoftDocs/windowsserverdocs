@@ -205,11 +205,11 @@ Membership in the local **Administrators** group on each clustered server, or eq
 #### Change the quorum configuration in a failover cluster by using Failover Cluster Manager
 
 1. In Failover Cluster Manager, select or specify the cluster that you want to change.
-2. With the cluster selected, under **Actions**, click **More Actions**, and then click **Configure Cluster Quorum Settings**. The Configure Cluster Quorum Wizard appears. Click **Next**.
+2. With the cluster selected, under **Actions**, select **More Actions**, and then select **Configure Cluster Quorum Settings**. The Configure Cluster Quorum Wizard appears. Select **Next**.
 3. On the **Select Quorum Configuration Option** page, select one of the three configuration options and complete the steps for that option. Before you configure the quorum settings, you can review your choices. For more information about the options, see [Overview of the quorum in a failover cluster](#overview-of-the-quorum-in-a-failover-cluster), earlier in this topic.
     
-      - To allow the cluster to automatically reset the quorum settings that are optimal for your current cluster configuration, click **Use typical settings** and then complete the wizard.
-      - To add or change the quorum witness, click **Add or change the quorum witness**, and then complete the following steps. For information and considerations about configuring a quorum witness, see [Witness configuration](#witness-configuration) earlier in this topic.
+      - To allow the cluster to automatically reset the quorum settings that are optimal for your current cluster configuration, select **Use typical settings** and then complete the wizard.
+      - To add or change the quorum witness, select **Add or change the quorum witness**, and then complete the following steps. For information and considerations about configuring a quorum witness, see [Witness configuration](#witness-configuration) earlier in this topic.
         
         1. On the **Select Quorum Witness** page, select an option to configure a disk witness or a file share witness. The wizard indicates the witness selection options that are recommended for your cluster.
             
@@ -219,7 +219,7 @@ Membership in the local **Administrators** group on each clustered server, or eq
         2. If you select the option to configure a disk witness, on the **Configure Storage Witness** page, select the storage volume that you want to assign as the disk witness, and then complete the wizard.
         3. If you select the option to configure a file share witness, on the **Configure File Share Witness** page, type or browse to a file share that will be used as the witness resource, and then complete the wizard.
     
-      - To configure quorum management settings and to add or change the quorum witness, click **Advanced quorum configuration and witness selection**, and then complete the following steps. For information and considerations about the advanced quorum configuration settings, see [Node vote assignment](#node-vote-assignment) and [Dynamic quorum management](#dynamic-quorum-management) earlier in this topic.
+      - To configure quorum management settings and to add or change the quorum witness, select **Advanced quorum configuration and witness selection**, and then complete the following steps. For information and considerations about the advanced quorum configuration settings, see [Node vote assignment](#node-vote-assignment) and [Dynamic quorum management](#dynamic-quorum-management) earlier in this topic.
         
         1. On the **Select Voting Configuration** page, select an option to assign votes to nodes. By default, all nodes are assigned a vote. However, for certain scenarios, you can assign votes only to a subset of the nodes.
             
@@ -235,9 +235,9 @@ Membership in the local **Administrators** group on each clustered server, or eq
         4. If you select the option to configure a disk witness, on the **Configure Storage Witness** page, select the storage volume that you want to assign as the disk witness, and then complete the wizard.
         5. If you select the option to configure a file share witness, on the **Configure File Share Witness** page, type or browse to a file share that will be used as the witness resource, and then complete the wizard.
 
-4. Click **Next**. Confirm your selections on the confirmation page that appears, and then click **Next**.
+4. Select **Next**. Confirm your selections on the confirmation page that appears, and then select **Next**.
 
-After the wizard runs and the **Summary** page appears, if you want to view a report of the tasks that the wizard performed, click **View Report**. The most recent report will remain in the *systemroot***\\Cluster\\Reports** folder with the name **QuorumConfiguration.mht**.
+After the wizard runs and the **Summary** page appears, if you want to view a report of the tasks that the wizard performed, select **View Report**. The most recent report will remain in the *systemroot***\\Cluster\\Reports** folder with the name **QuorumConfiguration.mht**.
 
 >[!NOTE]
 >After you configure the cluster quorum, we recommend that you run the **Validate Quorum Configuration** test to verify the updated quorum settings.
@@ -316,7 +316,7 @@ This becomes necessary when you need to recover your cluster in some multisite d
 #### To recover the cluster by using Failover Cluster Manager
 
 1. In Failover Cluster Manager, select or specify the cluster you want to recover.
-2. With the cluster selected, under **Actions**, click **Force Cluster Start**.
+2. With the cluster selected, under **Actions**, select **Force Cluster Start**.
     
     Failover Cluster Manager force starts the cluster on all nodes that are reachable. The cluster uses the current cluster configuration when starting.
 

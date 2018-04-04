@@ -21,10 +21,10 @@ To optimize the relocation of Folder Redirection data, use Group Policy to enabl
 
 ### To enable optimized moving of redirected folders
 
-1. In Group Policy Management, right-click the GPO you created for Folder Redirection settings (for example, **Folder Redirection and Roaming User Profiles Settings**), and then click **Edit**.
+1. In Group Policy Management, right-click the GPO you created for Folder Redirection settings (for example, **Folder Redirection and Roaming User Profiles Settings**), and then select **Edit**.
 2. Under **User Configuration**, navigate to **Policies**, then **Administrative Templates**, then **System**, then **Folder Redirection**.
-3. Right-click **Enable optimized move of contents in Offline Files cache on Folder Redirection server path change**, and then click **Edit**.
-4. Click **Enabled**, and then click **OK**.
+3. Right-click **Enable optimized move of contents in Offline Files cache on Folder Redirection server path change**, and then select **Edit**.
+4. Select **Enabled**, and then select **OK**.
 
 ## Step 2: Relocate the file share for redirected folders
 
@@ -40,7 +40,7 @@ When moving the file share that contains users' redirected folders, it is import
 
         >[!NOTE]
         >By default, client computers update Group Policy every 90 minutes, so if you allow sufficient time for client computers to receive updated policy, you do not need to ask users to use **GpUpdate**.
-2. Remove the file share from the server to ensure that no files in the file share are in use. To do so in Server Manager, on the **Shares** page of File and Storage Services, right-click the appropriate file share and then click **Remove**.
+2. Remove the file share from the server to ensure that no files in the file share are in use. To do so in Server Manager, on the **Shares** page of File and Storage Services, right-click the appropriate file share, then select **Remove**.
     
     Users will work offline using Offline Files until the move is complete and they receive the updated Folder Redirection settings from Group Policy.
 

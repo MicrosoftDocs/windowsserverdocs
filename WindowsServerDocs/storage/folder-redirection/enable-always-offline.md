@@ -22,15 +22,15 @@ To enable Always Offline mode, use Group Policy to enable the **Configure slow-l
 >Computers running Windows 7, Windows Vista, Windows Server 2008 R2, or Windows Server 2008 might continue to transition to the Online mode if the latency of the network connection drops below one millisecond.
 
 1. Open **Group Policy Management**.
-2. To optionally create a new Group Policy Object (GPO) for Offline Files settings, right-click the appropriate domain or organizational unit (OU), and then click **Create a GPO in this domain, and link it here**.
-3. In the console tree, right-click the GPO for which you want to configure the Offline Files settings and then click **Edit**. The **Group Policy Management Editor** appears.
+2. To optionally create a new Group Policy Object (GPO) for Offline Files settings, right-click the appropriate domain or organizational unit (OU), and then select **Create a GPO in this domain, and link it here**.
+3. In the console tree, right-click the GPO for which you want to configure the Offline Files settings and then select **Edit**. The **Group Policy Management Editor** appears.
 4. In the console tree, under **Computer Configuration**, expand **Policies**, expand **Administrative Templates**, expand **Network**, and expand **Offline Files**.
-5. Right-click **Configure slow-link mode**, and then click **Edit**. The **Configure slow-link mode** window appears.
-6. Click **Enabled**.
-7. In the **Options** box, click **Show**. The **Show Contents window** appears.
+5. Right-click **Configure slow-link mode**, and then select **Edit**. The **Configure slow-link mode** window will appear.
+6. Select **Enabled**.
+7. In the **Options** box, select **Show**. The **Show Contents window** will appear.
 8. In the **Value name** box, specify the file share for which you want to enable Always Offline mode.
 9. To enable Always Offline mode on all file shares, enter **\***.
-10. In the **Value** box, enter **Latency=1** to set the latency threshold to one millisecond, and then click **OK**.
+10. In the **Value** box, enter **Latency=1** to set the latency threshold to one millisecond, and then select **OK**.
 
 >[!NOTE]
 >By default, when in Always Offline mode, Windows synchronizes files in the Offline Files cache in the background every two hours. To change this value, use the **Configure Background Sync** policy setting.

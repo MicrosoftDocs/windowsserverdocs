@@ -12,12 +12,12 @@ The first step in troubleshooting issues with loading and unloading user profile
 
 ### To view User Profile Services events in the Application log
 
-1. Start Event Viewer. To do so, open **Control Panel**, click **System and Security**, and then, in the **Administrative Tools** section, click **View event logs**. The Event Viewer window opens.
+1. Start Event Viewer. To do so, open **Control Panel**, select **System and Security**, and then, in the **Administrative Tools** section, select **View event logs**. The Event Viewer window opens.
 2. In the console tree, first navigate to **Windows Logs**, then **Application**.
-3. In the Actions pane, click **Filter Current Log**. The Filter Current Log dialog box opens.
-4. In the **Event sources** box, select the **User Profiles Service** checkbox, and then click **OK**.
+3. In the Actions pane, select **Filter Current Log**. The Filter Current Log dialog box opens.
+4. In the **Event sources** box, select the **User Profiles Service** checkbox, and then select **OK**.
 5. Review the listing of events, paying particular attention to Error events.
-6. When you find noteworthy events, click the Event Log Online Help link to display additional information and troubleshooting procedures.
+6. When you find noteworthy events, select the Event Log Online Help link to display additional information and troubleshooting procedures.
 7. To perform further troubleshooting, note the date and time of noteworthy events and then examine the Operational log (as described in Step 2) to view details about what the User Profile Service was doing around the time of the Error or Warning events.
 
 >[!NOTE]
@@ -40,11 +40,11 @@ If you require more detail than the Operational log provides, you can enable ana
 
 Here's how to enable and view analytic and debug logs:
 
-1. In the **Actions** pane of Event Viewer, click **View**, and then click **Show Analytic and Debug Logs**.
+1. In the **Actions** pane of Event Viewer, select **View**, and then select **Show Analytic and Debug Logs**.
 2. Navigate to **Applications and Services Logs**, then **Microsoft**, then **Windows**, then **User Profile Service**, and then **Diagnostic**.
-3. Click **Enable Log** and then click **Yes**. This enables the Diagnostic log, which will start logging.
+3. Select **Enable Log** and then select **Yes**. This enables the Diagnostic log, which will start logging.
 4. If you require even more detailed information, see [Step 4: Creating and decoding a trace](#step-4:-creating-and-decoding-a-trace) for more information about how to create a trace log.
-5. When you are finished troubleshooting the issue, navigate to the **Diagnostic** log, click **Disable Log**, click **View** and then clear the **Show Analytic and Debug Logs** checkbox to hide analytic and debug logging.
+5. When you are finished troubleshooting the issue, navigate to the **Diagnostic** log, select **Disable Log**, select **View** and then clear the **Show Analytic and Debug Logs** checkbox to hide analytic and debug logging.
 
 ## Step 4: Creating and decoding a trace
 
@@ -61,7 +61,7 @@ Here's how to create and decode a trace for the User Profile Service:
     logman create trace -n RUP -o <Path>\RUP.etl -ets
     logman update RUP -p {eb7428f5-ab1f-4322-a4cc-1f1a9b2c5e98} 0x7FFFFFFF 0x7 -ets
     ```
-3. From the Start screen, click the user name, and then click **Switch account**, being careful not to log off the administrator. If you are using Remote Desktop, close the Administrator session to establish the user session.
+3. From the Start screen, select the user name, and then select **Switch account**, being careful not to log off the administrator. If you are using Remote Desktop, close the Administrator session to establish the user session.
 4. Reproduce the problem. The procedure to reproduce the problem is typically to sign on as the user experiencing the issue, sign the user off, or both.
 5. After reproducing the problem, sign on as the local administrator again.
 6. From an elevated command prompt run the following command to save the log into an ETL file:

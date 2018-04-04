@@ -40,13 +40,13 @@ If your environment is not already set up with Folder Redirection, the first ste
 #### To create a security group for Folder Redirection
 
 1. Open Server Manager on a computer with Active Directory Administration Center installed.
-2. On the **Tools** menu, click **Active Directory Administration Center**. Active Directory Administration Center appears.
-3. Right-click the appropriate domain or OU, click **New**, and then click **Group**.
+2. On the **Tools** menu, select **Active Directory Administration Center**. Active Directory Administration Center appears.
+3. Right-click the appropriate domain or OU, select **New**, and then select **Group**.
 4. In the **Create Group** window, in the **Group** section, specify the following settings:
       - In **Group name**, type the name of the security group, for example: **Folder Redirection Users**.
-      - In **Group scope**, click **Security**, and then click **Global**.
-5. In the **Members** section, click **Add**. The Select Users, Contacts, Computers, Service Accounts or Groups dialog box appears.
-6. Type the names of the users or groups to which you want to deploy Folder Redirection, click **OK**, and then click **OK** again.
+      - In **Group scope**, select **Security**, and then select **Global**.
+5. In the **Members** section, select **Add**. The Select Users, Contacts, Computers, Service Accounts or Groups dialog box appears.
+6. Type the names of the users or groups to which you want to deploy Folder Redirection, select **OK**, and then select **OK** again.
 
 ## Step 2: Create a file share for redirected folders
 
@@ -57,16 +57,16 @@ If you do not already have a file share for redirected folders, use the followin
 
 #### To create a file share on Windows Server 2012
 
-1. In the Server Manager navigation pane, click **File and Storage Services**, and then click **Shares** to display the Shares page.
-2. In the **Shares** tile, click **Tasks**, and then click **New Share**. The New Share Wizard appears.
-3. On the **Select Profile** page, click **SMB Share – Quick**. If you have File Server Resource Manager installed and are using folder management properties, instead click **SMB Share - Advanced**.
+1. In the Server Manager navigation pane, select **File and Storage Services**, and then select **Shares** to display the Shares page.
+2. In the **Shares** tile, select **Tasks**, and then select **New Share**. The New Share Wizard appears.
+3. On the **Select Profile** page, select **SMB Share – Quick**. If you have File Server Resource Manager installed and are using folder management properties, instead select **SMB Share - Advanced**.
 4. On the **Share Location** page, select the server and volume on which you want to create the share.
 5. On the **Share Name** page, type a name for the share (for example, **Users$**) in the **Share name** box.
     >[!TIP]
-    >When creating the share, hide the share by putting a <CODE>$</CODE> after the share name. This will hide the share from casual browsers.
+    >When creating the share, hide the share by putting a ```$``` after the share name. This will hide the share from casual browsers.
 6. On the **Other Settings** page, clear the Enable continuous availability checkbox, if present, and optionally select the **Enable access-based enumeration** and **Encrypt data access** checkboxes.
-7. On the **Permissions** page, click **Customize permissions…**. The Advanced Security Settings dialog box appears.
-8. Click **Disable inheritance**, and then click **Convert inherited permissions into explicit permission on this object**.
+7. On the **Permissions** page, select **Customize permissions…**. The Advanced Security Settings dialog box appears.
+8. Select **Disable inheritance**, and then select **Convert inherited permissions into explicit permission on this object**.
 9. Set the permissions as described Table 1 and shown in Figure 1, removing permissions for unlisted groups and accounts, and adding special permissions to the Folder Redirection Users group that you created in Step 1.
     
     ![Setting the permissions for the redirected folders share](\media\deploy-folder-redirection\JJ649078.6e9f23c0-4ba6-4442-8b71-b0abad741a15(WS.11).jpeg)
@@ -74,7 +74,7 @@ If you do not already have a file share for redirected folders, use the followin
     **Figure 1** Setting the permissions for the redirected folders share
 10. If you chose the **SMB Share - Advanced** profile, on the **Management Properties** page, select the **User Files** Folder Usage value.
 11. If you chose the **SMB Share - Advanced** profile, on the **Quota** page, optionally select a quota to apply to users of the share.
-12. On the **Confirmation** page, click **Create.**
+12. On the **Confirmation** page, select **Create.**
 
 ### Required permissions for the file share hosting redirected folders
 
@@ -130,14 +130,14 @@ If you do not already have a GPO created for Folder Redirection settings, use th
 #### To create a GPO for Folder Redirection
 
 1. Open Server Manager on a computer with Group Policy Management installed.
-2. From the **Tools** menu click **Group Policy Management**. Group Policy Management appears.
-3. Right-click the domain or OU in which you want to setup Folder Redirection and then click **Create a GPO in this domain, and Link it here**.
-4. In the **New GPO** dialog box, type a name for the GPO (for example, **Folder Redirection Settings**), and then click **OK**.
+2. From the **Tools** menu, select **Group Policy Management**.
+3. Right-click the domain or OU in which you want to setup Folder Redirection, then select **Create a GPO in this domain, and Link it here**.
+4. In the **New GPO** dialog box, type a name for the GPO (for example, **Folder Redirection Settings**), and then select **OK**.
 5. Right-click the newly created GPO and then clear the **Link Enabled** checkbox. This prevents the GPO from being applied until you finish configuring it.
-6. Select the GPO. In the **Security Filtering** section of the **Scope** tab, select **Authenticated Users**, and then click **Remove** to prevent the GPO from being applied to everyone.
-7. In the **Security Filtering** section, click **Add**.
-8. In the **Select User, Computer, or Group** dialog box, type the name of the security group you created in Step 1 (for example, **Folder Redirection Users**), and then click **OK**.
-9. Click the **Delegation** tab, click **Add**, type **Authenticated Users**, click **OK**, and then click **OK** again to accept the default Read permissions.
+6. Select the GPO. In the **Security Filtering** section of the **Scope** tab, select **Authenticated Users**, and then select **Remove** to prevent the GPO from being applied to everyone.
+7. In the **Security Filtering** section, select **Add**.
+8. In the **Select User, Computer, or Group** dialog box, type the name of the security group you created in Step 1 (for example, **Folder Redirection Users**), and then select **OK**.
+9. Select the **Delegation** tab, select **Add**, type **Authenticated Users**, select **OK**, and then select **OK** again to accept the default Read permissions.
     
     This step is necessary due to security changes made in [MS16-072](https://support.microsoft.com/en-us/help/3163622/ms16-072-security-update-for-group-policy-june-14-2016).
 
@@ -154,16 +154,16 @@ After creating a GPO for Folder Redirection settings, edit the Group Policy sett
 
 #### To configure Folder Redirection in Group Policy
 
-1. In Group Policy Management, right-click the GPO you created (for example, **Folder Redirection Settings**), and then click **Edit**.
+1. In Group Policy Management, right-click the GPO you created (for example, **Folder Redirection Settings**), and then select **Edit**.
 2. In the Group Policy Management Editor window, navigate to **User Configuration**, then **Policies**, then **Windows Settings**, and then **Folder Redirection**.
-3. Right-click a folder that you want to redirect (for example, **Documents**), and then click **Properties**.
-4. In the **Properties** dialog box, from the **Setting** box click **Basic - Redirect everyone’s folder to the same location**.
+3. Right-click a folder that you want to redirect (for example, **Documents**), and then select **Properties**.
+4. In the **Properties** dialog box, from the **Setting** box, select **Basic - Redirect everyone’s folder to the same location**.
 
     > [!NOTE]
-    > To apply Folder Redirection to client computers running Windows XP or Windows Server 2003, click the <STRONG>Settings</STRONG> tab and select the <STRONG>Also apply redirection policy to Windows 2000, Windows 2000 Server, Windows XP, and Windows Server 2003 operating systems</STRONG> checkbox.
-5. In the **Target folder location** section, click **Create a folder for each user under the root path** and then in the **Root Path** box, type the path to the file share storing redirected folders, for example: **\\\\fs1.corp.contoso.com\\users$**
-6. Click the **Settings** tab, and in the **Policy Removal** section, optionally click **Redirect the folder back to the local userprofile location when the policy is removed** (this setting can help make Folder Redirection behave more predictably for adminisitrators and users).
-7. Click **OK**, and then click **Yes** in the Warning dialog box.
+    > To apply Folder Redirection to client computers running Windows XP or Windows Server 2003, select the **Settings** tab and select the **Also apply redirection policy to Windows 2000, Windows 2000 Server, Windows XP, and Windows Server 2003 operating systems** checkbox.
+5. In the **Target folder location** section, select **Create a folder for each user under the root path** and then in the **Root Path** box, type the path to the file share storing redirected folders, for example: **\\\\fs1.corp.contoso.com\\users$**
+6. Select the **Settings** tab, and in the **Policy Removal** section, optionally select **Redirect the folder back to the local userprofile location when the policy is removed** (this setting can help make Folder Redirection behave more predictably for adminisitrators and users).
+7. Select **OK**, and then select **Yes** in the Warning dialog box.
 
 ## Step 5: Enable the Folder Redirection GPO
 
@@ -175,7 +175,7 @@ Once you have completed configuring the Folder Redirection Group Policy settings
 #### To enable the Folder Redirection GPO
 
 1. Open Group Policy Management.
-2. Right-click the GPO that you created, and then click **Link Enabled**. A checkbox appears next to the menu item.
+2. Right-click the GPO that you created, and then select **Link Enabled**. A checkbox will appear next to the menu item.
 
 ## Step 6: Test Folder Redirection
 
@@ -188,11 +188,11 @@ To test Folder Redirection, sign in to a computer with a user account configured
 2. If the user has previously signed in to the computer, open an elevated command prompt, and then type the following command to ensure that the latest Group Policy settings are applied to the client computer:
     
     ```PowerShell
-    gpupdate /force  
+    gpupdate /force
     ```
 3. Open File Explorer.
-4. Right-click a redirected folder (for example, the My Documents folder in the Documents library), and then click **Properties**.
-5. Click the **Location** tab, and confirm that the path displays the file share you specified instead of a local path.
+4. Right-click a redirected folder (for example, the My Documents folder in the Documents library), and then select **Properties**.
+5. Select the **Location** tab, and confirm that the path displays the file share you specified instead of a local path.
 
 ## Appendix A: Checklist for deploying Folder Redirection
 

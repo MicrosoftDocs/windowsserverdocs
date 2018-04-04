@@ -31,7 +31,7 @@ Consider the following when you configure the networks that support CSV.
 
   - **Multiple networks and multiple network adapters**. To enable fault tolerance in the event of a network failure, we recommend that multiple cluster networks carry CSV traffic or that you configure teamed network adapters.
     
-    If the cluster nodes are connected to networks that should not be used by the cluster, you should disable them. For example, we recommend that you disable iSCSI networks for cluster use to prevent CSV traffic on those networks. To disable a network, in Failover Cluster Manager, click **Networks**, click the network, click the **Properties** action, and then select **Do not allow cluster network communication on this network**. Alternatively, you can configure the **Role** property of the network by using the [Get-ClusterNetwork](https://docs.microsoft.com/en-us/powershell/module/failoverclusters/get-clusternetwork?view=win10-ps) Windows PowerShell cmdlet.
+    If the cluster nodes are connected to networks that should not be used by the cluster, you should disable them. For example, we recommend that you disable iSCSI networks for cluster use to prevent CSV traffic on those networks. To disable a network, in Failover Cluster Manager, select **Networks**, select the network, select the **Properties** action, and then select **Do not allow cluster network communication on this network**. Alternatively, you can configure the **Role** property of the network by using the [Get-ClusterNetwork](https://docs.microsoft.com/en-us/powershell/module/failoverclusters/get-clusternetwork?view=win10-ps) Windows PowerShell cmdlet.
   - **Network adapter properties**. In the properties for all adapters that carry cluster communication, make sure that the following settings are enabled:
     
       - **Client for Microsoft Networks** and **File and Printer Sharing for Microsoft Networks**. These settings support Server Message Block (SMB) 3.0, which is used by default to carry CSV traffic between nodes. To enable SMB, also ensure that the Server service and the Workstation service are running and that they are configured to start automatically on each cluster node.
@@ -143,8 +143,8 @@ The CSV feature is enabled by default in Failover Clustering. To add a disk to C
 ### Add a disk to Available Storage
 
 1. In Failover Cluster Manager, in the console tree, expand the name of the cluster, and then expand **Storage**.
-2. Right-click **Disks**, and then click **Add Disk**. A list appears showing the disks that can be added for use in a failover cluster.
-3. Select the disk or disks you want to add, and then click **OK**.
+2. Right-click **Disks**, and then select **Add Disk**. A list appears showing the disks that can be added for use in a failover cluster.
+3. Select the disk or disks you want to add, and then select **OK**.
     
     The disks are now assigned to the **Available Storage** group.
 
@@ -160,8 +160,8 @@ Get-ClusterAvailableDisk | Add-ClusterDisk
 
 ### Add a disk in Available Storage to CSV
 
-1. In Failover Cluster Manager, in the console tree, expand the name of the cluster, expand **Storage**, and then click **Disks**.
-2. Select one or more disks that are assigned to **Available Storage**, right-click the selection, and then click **Add to Cluster Shared Volumes**.
+1. In Failover Cluster Manager, in the console tree, expand the name of the cluster, expand **Storage**, and then select **Disks**.
+2. Select one or more disks that are assigned to **Available Storage**, right-click the selection, and then select **Add to Cluster Shared Volumes**.
     
     The disks are now assigned to the **Cluster Shared Volume** group in the cluster. The disks are exposed to each cluster node as numbered volumes (mount points) under the %SystemDisk%ClusterStorage folder. The volumes appear in the CSVFS file system.
 

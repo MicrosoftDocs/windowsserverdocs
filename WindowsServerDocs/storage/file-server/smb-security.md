@@ -46,9 +46,9 @@ You can enable SMB Encryption for the entire file server or only for specific fi
 ### Enable SMB Encryption with Server Manager
 
 1. In Server Manager, open **File and Storage Services**.
-2. Click **Shares** to open the Shares management page.
-3. Right-click the share on which you want to enable SMB Encryption, and then click **Properties**.
-4. On the **Settings** page of the share, click **Encrypt data access**. Remote file access to this share is encrypted.
+2. Select **Shares** to open the Shares management page.
+3. Right-click the share on which you want to enable SMB Encryption, and then select **Properties**.
+4. On the **Settings** page of the share, select **Encrypt data access**. Remote file access to this share is encrypted.
 
 ### Considerations for deploying SMB Encryption
 
