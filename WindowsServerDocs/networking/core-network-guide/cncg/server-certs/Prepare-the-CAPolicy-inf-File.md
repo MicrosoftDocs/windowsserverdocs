@@ -11,8 +11,6 @@ author: shortpatti
 ---
 
 # CAPolicy.inf Syntax
-======================
-
 >   Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 The CAPolicy.inf is a configuration file that defines the extensions, constraints, and other configuration settings that are applied to a root CA certificate and all certificates issued by the root CA. The CAPolicy.inf file must be installed on a host server before the setup routine for the root CA begins. When the security restrictions on a root CA are to be modified, the root certificate must be renewed and an updated CAPolicy.inf file must be installed on the server before the renewal process begins.
