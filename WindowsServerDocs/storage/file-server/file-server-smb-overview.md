@@ -99,32 +99,32 @@ SMB in Windows Server 2012 and Windows Server 2016 includes the new SMB 3.0 prot
 
 SMB Transparent Failover has the following requirements:
 
-- A failover cluster running Windows Server 2012 with at least two nodes configured. The cluster must pass the cluster validation tests included in the validation wizard.
-- File shares must be created with the Continuous Availability (CA) property, which is the default.
-- File shares must be created on CSV volume paths to attain SMB Scale-Out.
-- Client computers must be running Windows® 8 or Windows Server 2012, both of which include the updated SMB client that supports continuous availability.
+* A failover cluster running Windows Server 2012 with at least two nodes configured. The cluster must pass the cluster validation tests included in the validation wizard.
+* File shares must be created with the Continuous Availability (CA) property, which is the default.
+* File shares must be created on CSV volume paths to attain SMB Scale-Out.
+* Client computers must be running Windows® 8 or Windows Server 2012, both of which include the updated SMB client that supports continuous availability.
 
 >[!NOTE]
 >Down-level clients can connect to file shares that have the CA property, but transparent failover will not be supported for these clients.
 
 SMB Multichannel has the following requirements:
 
-- At least two computers running Windows Server 2012 are required. No extra features need to be installed—the technology is on by default.
-- For information on recommended network configurations, see the See Also section at the end of this overview topic.
+* At least two computers running Windows Server 2012 are required. No extra features need to be installed—the technology is on by default.
+* For information on recommended network configurations, see the See Also section at the end of this overview topic.
 
 SMB Direct has the following requirements:
 
-- At least two computers running Windows Server 2012 are required. No extra features need to be installed—the technology is on by default.
-- Network adapters with RDMA capability are required. Currently, these adapters are available in three different types: iWARP, Infiniband, or RoCE (RDMA over Converged Ethernet).
+* At least two computers running Windows Server 2012 are required. No extra features need to be installed—the technology is on by default.
+* Network adapters with RDMA capability are required. Currently, these adapters are available in three different types: iWARP, Infiniband, or RoCE (RDMA over Converged Ethernet).
 
 ## More information
 
 The following list provides additional resources on the web about SMB and related technologies in Windows Server 2012 R2 and Windows Server 2012.
 
-- [File and Storage Services Overview](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831487(v%3dws.11)>)
-- [Scale-Out File Server for Application Data Overview](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831349(v%3dws.11)>)
-- [Deploy Hyper-V over SMB](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134187(v%3dws.11)>)
-- [Deploy SMB Multichannel](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn610980(v%3dws.11)>)
-- [Improve Performance of a File Server with SMB Direct](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134210(v%3dws.11)>)
-- [Deploying Fast and Efficient File Servers for Server Applications](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831723(v%3dws.11)>)
-- [SMB: Troubleshooting Guide](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn659439(v%3dws.11)>)
+* [File and Storage Services Overview](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831487(v%3dws.11)>)
+* [Scale-Out File Server for Application Data Overview](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831349(v%3dws.11)>)
+* [Deploy Hyper-V over SMB](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134187(v%3dws.11)>)
+* [Deploy SMB Multichannel](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn610980(v%3dws.11)>)
+* [Improve Performance of a File Server with SMB Direct](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134210(v%3dws.11)>)
+* [Deploying Fast and Efficient File Servers for Server Applications](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831723(v%3dws.11)>)
+* [SMB: Troubleshooting Guide](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn659439(v%3dws.11)>)
