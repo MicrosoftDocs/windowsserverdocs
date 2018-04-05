@@ -25,7 +25,7 @@ Quick links: [Documentation](../overview.md) | [Give feedback](todo) | [Recent u
 ### Windows Admin Center is a lightweight, browser-based GUI toolset for managing servers, clusters, and hyper-converged infrastructure. It's the evolution of familiar in-box managment tools plus so much more.
 
 
-<img src="../../media/honolulu-ga/legacy-sod.gif" alt="Video of legacy management tools"> <img src="../../media/honolulu-ga/arrow.png" alt="right arrow" align="middle"> <img src="../../media/honolulu-ga/server-overview-tool.gif"  alt="Video of Windows Admin Center tools"> 
+<img src="../../media/honolulu-ga/legacy-sod.gif" width="48%" alt="Video of legacy management tools"> <img src="../../media/honolulu-ga/arrow.png" width="4%" alt="right arrow"> <img src="../../media/honolulu-ga/server-overview-tool.gif" width="48%"  alt="Video of Windows Admin Center tools"> 
 
 <!-- |   |   |   |
 |:-:|:-:|:-:|
