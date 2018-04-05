@@ -13,6 +13,7 @@ author: lizap
 manager: dongill
 ms.author: elizapo
 ms.date: 03/23/2017
+ms.localizationpriority: medium
 ---
 # Get started with Remote Desktop on Android
 
