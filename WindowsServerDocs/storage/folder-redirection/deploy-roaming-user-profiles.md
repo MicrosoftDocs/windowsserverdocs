@@ -11,7 +11,7 @@ ms.author: jgerend
 ---
 # Deploying Roaming User Profiles
 
->Applies to Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, and Windows Server 2008 R2.
+>Applies to: Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, and Windows Server 2008 R2.
 
 This topic describes how to use Windows Server to deploy [Roaming User Profiles](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh848267(v%3dws.11)) to Windows client computers. Roaming User Profiles redirects user profiles to a file share so that users receive the same operating system and application settings on multiple computers.
 
@@ -30,29 +30,29 @@ Roaming User Profiles requires an x64-based or x86-based computer; it isn't supp
 
 Roaming User Profiles has the following software requirements:
 
-  - If you are deploying Roaming User Profiles with Folder Redirection in an environment with existing local user profiles, deploy Folder Redirection before Roaming User Profiles to minimize the size of roaming profiles. After the existing user folders have been successfully redirected, you can deploy Roaming User Profiles.
-  - To administer Roaming User Profiles, you must be signed in as a member of the Domain Administrators security group, the Enterprise Administrators security group, or the Group Policy Creator Owners security group.
-  - Client computers must run Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Vista, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, or Windows Server 2008.
-  - Client computers must be joined to the Active Directory Domain Services (AD DS) that you are managing.
-  - A computer must be available with Group Policy Management and Active Directory Administration Center installed.
-  - A file server must be available to host roaming user profiles.
-    
-      - If the file share uses DFS Namespaces, the DFS folders (links) must have a single target to prevent users from making conflicting edits on different servers.
-      - If the file share uses DFS Replication to replicate the contents with another server, users must be able to access only the source server to prevent users from making conflicting edits on different servers.
-      - If the file share is clustered, disable continuous availability on the file share to avoid performance issues.
-  - To use primary computer support in Roaming User Profiles, there are additional client computer and Active Directory schema requirements. For more information, see [Deploy Primary Computers for Folder Redirection and Roaming User Profiles](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj649076(v%3dws.11)>).
-  - The layout of a user's Start menu won't roam on Windows 10 or Windows Server 2016 if they're using more than one PC, Remote Desktop Session Host, or Virtualized Desktop Infrastructure (VDI) server. As a workaround, you can specify a Start layout as described in this topic. Or you can make use of user profile disks, which properly roam Start menu settings when used with Remote Desktop Session Host servers or VDI servers. For more info, see [Easier User Data Management with User Profile Disks in Windows Server 2012](https://blogs.technet.microsoft.com/enterprisemobility/2012/11/13/easier-user-data-management-with-user-profile-disks-in-windows-server-2012/).
+- If you are deploying Roaming User Profiles with Folder Redirection in an environment with existing local user profiles, deploy Folder Redirection before Roaming User Profiles to minimize the size of roaming profiles. After the existing user folders have been successfully redirected, you can deploy Roaming User Profiles.
+- To administer Roaming User Profiles, you must be signed in as a member of the Domain Administrators security group, the Enterprise Administrators security group, or the Group Policy Creator Owners security group.
+- Client computers must run Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Vista, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, or Windows Server 2008.
+- Client computers must be joined to the Active Directory Domain Services (AD DS) that you are managing.
+- A computer must be available with Group Policy Management and Active Directory Administration Center installed.
+- A file server must be available to host roaming user profiles.
+
+    - If the file share uses DFS Namespaces, the DFS folders (links) must have a single target to prevent users from making conflicting edits on different servers.
+    - If the file share uses DFS Replication to replicate the contents with another server, users must be able to access only the source server to prevent users from making conflicting edits on different servers.
+    - If the file share is clustered, disable continuous availability on the file share to avoid performance issues.
+- To use primary computer support in Roaming User Profiles, there are additional client computer and Active Directory schema requirements. For more information, see [Deploy Primary Computers for Folder Redirection and Roaming User Profiles](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj649076(v%3dws.11)>).
+- The layout of a user's Start menu won't roam on Windows 10 or Windows Server 2016 if they're using more than one PC, Remote Desktop Session Host, or Virtualized Desktop Infrastructure (VDI) server. As a workaround, you can specify a Start layout as described in this topic. Or you can make use of user profile disks, which properly roam Start menu settings when used with Remote Desktop Session Host servers or VDI servers. For more info, see [Easier User Data Management with User Profile Disks in Windows Server 2012](https://blogs.technet.microsoft.com/enterprisemobility/2012/11/13/easier-user-data-management-with-user-profile-disks-in-windows-server-2012/).
 
 ### Considerations when using Roaming User Profiles on multiple versions of Windows
 
 If you decide to use Roaming User Profiles across multiple versions of Windows, we recommend taking the following actions:
 
-  - Configure Windows to maintain separate profile versions for each operating system version. This helps prevent undesirable and unpredictable issues such as profile corruption.
-  - Use Folder Redirection to store user files such as documents and pictures outside of user profiles. This enables the same files to be available to users across operating system versions. It also keeps profiles small and sign-ins quick.
-  - Allocate sufficient storage for Roaming User Profiles. If you support two operating system versions, profiles will double in number (and thus total space consumed) because a separate profile is maintained for each operating system version.
-  - Don't use Roaming User Profiles across computers running Windows Vista/Windows Server 2008 and Windows 7/Windows Server 2008 R2. Roaming between these operating system versions isn't supported due to incompatibilities in their profile versions.
-  - Inform your users that changes made on one operating system version won’t roam to another operating system version.
-  - When moving your environment to a version of Windows that uses a different profile version (such as from Windows 10 to Windows 10, version 1607—see [Appendix B: Profile version reference information](#appendix-b:-profile-version-reference-information) for a list), users receive a new, empty roaming user profile. You can minimize the impact of getting a new profile by using Folder Redirection to redirect common folders. There isn't a supported method of migrating roaming user profiles from one profile version to another.
+- Configure Windows to maintain separate profile versions for each operating system version. This helps prevent undesirable and unpredictable issues such as profile corruption.
+- Use Folder Redirection to store user files such as documents and pictures outside of user profiles. This enables the same files to be available to users across operating system versions. It also keeps profiles small and sign-ins quick.
+- Allocate sufficient storage for Roaming User Profiles. If you support two operating system versions, profiles will double in number (and thus total space consumed) because a separate profile is maintained for each operating system version.
+- Don't use Roaming User Profiles across computers running Windows Vista/Windows Server 2008 and Windows 7/Windows Server 2008 R2. Roaming between these operating system versions isn't supported due to incompatibilities in their profile versions.
+- Inform your users that changes made on one operating system version won’t roam to another operating system version.
+- When moving your environment to a version of Windows that uses a different profile version (such as from Windows 10 to Windows 10, version 1607—see [Appendix B: Profile version reference information](#appendix-b:-profile-version-reference-information) for a list), users receive a new, empty roaming user profile. You can minimize the impact of getting a new profile by using Folder Redirection to redirect common folders. There isn't a supported method of migrating roaming user profiles from one profile version to another.
 
 ## Step 1: Enable the use of separate profile versions
 
@@ -61,12 +61,12 @@ If you are deploying Roaming User Profiles on computers running Windows 8.1, Win
 To make these changes, use the following procedure.
 
 1. Download and install the appropriate software update on all computers on which you’re going to use roaming, mandatory, super-mandatory, or domain default profiles:
-    
-      - Windows 8.1, or Windows Server 2012 R2: install the software update described in article [2887595](http://support.microsoft.com/kb/2887595) in the Microsoft Knowledge Base (when released).
-      - Windows 8 or Windows Server 2012: install the software update described in article [2887239](http://support.microsoft.com/kb/2887239) in the Microsoft Knowledge Base.
+
+    - Windows 8.1, or Windows Server 2012 R2: install the software update described in article [2887595](http://support.microsoft.com/kb/2887595) in the Microsoft Knowledge Base (when released).
+    - Windows 8 or Windows Server 2012: install the software update described in article [2887239](http://support.microsoft.com/kb/2887239) in the Microsoft Knowledge Base.
 2. On all computers running Windows 8.1, Windows 8, Windows Server 2012 R2, or Windows Server 2012 on which you will use Roaming User Profiles, use Registry Editor or Group Policy to create the following registry key DWORD Value and set it to `1`. For information about creating registry keys by using Group Policy, see [Configure a Registry Item](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753092(v=ws.11)>).
-    
-    ```
+
+    ```PowerShell
     HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\ProfSvc\Parameters\UseProfilePathExtensionVersion
     ```
 
@@ -78,8 +78,8 @@ To make these changes, use the following procedure.
 
 If your environment is not already set up with Roaming User Profiles, the first step is to create a security group that contains all users and/or computers to which you want to apply Roaming User Profiles policy settings.
 
-  - Administrators of general-purpose roaming user profiles deployments typically create a security group for users.
-  - Administrators of Remote Desktop Services or virtualized desktop deployments typically use a security group for users and the shared computers.
+- Administrators of general-purpose roaming user profiles deployments typically create a security group for users.
+- Administrators of Remote Desktop Services or virtualized desktop deployments typically use a security group for users and the shared computers.
 
 Here's how to create a security group for Roaming User Profiles:
 
@@ -87,9 +87,9 @@ Here's how to create a security group for Roaming User Profiles:
 2. On the **Tools** menu, select **Active Directory Administration Center**. Active Directory Administration Center appears.
 3. Right-click the appropriate domain or OU, select **New**, and then select **Group**.
 4. In the **Create Group** window, in the **Group** section, specify the following settings:
-    
-      - In **Group name**, type the name of the security group, for example: **Roaming User Profiles Users and Computers**.
-      - In **Group scope**, select **Security**, and then select **Global**.
+
+    - In **Group name**, type the name of the security group, for example: **Roaming User Profiles Users and Computers**.
+    - In **Group scope**, select **Security**, and then select **Global**.
 5. In the **Members** section, select **Add**. The Select Users, Contacts, Computers, Service Accounts or Groups dialog box appears.
 6. If you want to include computer accounts in the security group, select **Object Types**, select the **Computers** check box and then select **OK**.
 7. Type the names of the users, groups, and/or computers to which you want to deploy Roaming User Profiles, select **OK**, and then select **OK** again.
@@ -212,7 +212,7 @@ Here's how to set up Roaming User Profiles on user accounts:
 
 If you are deploying Roaming User Profiles to computers, as is typically done for Remote Desktop Services or virtualized desktop deployments, use the following procedure. If you are deploying Roaming User Profiles to user accounts, instead use the procedure described in [Step 5: Optionally set up Roaming User Profiles on user accounts](#step-5:-optionally-set-up-roaming-user-profiles-on-user-accounts).
 
-You can use Group Policy to apply Roaming User Profiles to computers running Windows 8.1, Windows 8, Windows 7, Windows Vista, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, or Windows Server 2008.
+You can use Group Policy to apply Roaming User Profiles to computers running Windows 8.1, Windows 8, Windows 7, Windows Vista, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, or Windows Server 2008.
 
 >[!NOTE]
 >If you set up Roaming User Profiles on computers by using Group Policy and on user accounts by using Active Directory, the computer-based policy setting takes precedence.
@@ -225,13 +225,13 @@ Here's how to set up Roaming User Profiles on computers:
 4. In the Group Policy Management Editor window, navigate to **Computer Configuration**, then **Policies**, then **Administrative Templates**, then **System**, and then **User Profiles**.
 5. Right-click **Set roaming profile path for all users logging onto this computer** and then select **Edit**.
     > [!TIP]
-    > A user's home folder, if configured, is the default folder used by some programs such as Windows PowerShell. You can configure an alternative local or network location on a per-user basis by using the **Home folder** section of the user account properties in AD DS. To configure the home folder location for all users of a computer running Windows 8.1, Windows 8, Windows Server 2012 R2, or Windows Server 2012 in a virtual desktop environment, enable the **Set user home folder** policy setting, and then specify the file share and drive letter to map (or specify a local folder). Do not use environment variables or ellipses. The user’s alias is appended to the end of the path specified during user sign on.
+    > A user's home folder, if configured, is the default folder used by some programs such as Windows PowerShell. You can configure an alternative local or network location on a per-user basis by using the **Home folder** section of the user account properties in AD DS. To configure the home folder location for all users of a computer running Windows 8.1, Windows 8, Windows Server 2016, Windows Server 2012 R2, or Windows Server 2012 in a virtual desktop environment, enable the **Set user home folder** policy setting, and then specify the file share and drive letter to map (or specify a local folder). Do not use environment variables or ellipses. The user’s alias is appended to the end of the path specified during user sign on.
 6. In the **Properties** dialog box, select **Enabled**
 7. In the **Users logging onto this computer should use this roaming profile path** box, enter the path to the file share where you want to store the user’s roaming user profile, followed by `%username%` (which is automatically replaced with the user name the first time the user signs in). For example:
-    
+
     `\\fs1.corp.contoso.com\User Profiles$\%username%`
-    
-    To specify a mandatory roaming user profile, which is a preconfigured profile to which users cannot make permanent changes (changes are reset when the user signs out), specify the path to the NTuser.man file that you created previously, for example, `\\fs1.corp.contoso.com\User Profiles$\default`. For more information, see [Creating a Mandatory User Profile](http://technet.microsoft.com/library/gg241183).
+
+    To specify a mandatory roaming user profile, which is a preconfigured profile to which users cannot make permanent changes (changes are reset when the user signs out), specify the path to the NTuser.man file that you created previously, for example, `\\fs1.corp.contoso.com\User Profiles$\default`. For more information, see [Creating a Mandatory User Profile](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-7/gg241183(v=ws.10)>).
 8. Select **OK**.
 
 ## Step 7: Optionally specify a Start layout for Windows 10 PCs
@@ -242,7 +242,7 @@ To specify a Start layout, do the following:
 
 1. Update your Windows 10 PCs to Windows 10 version 1607 (also known as the Anniversary Update) or newer, and install the March 14th, 2017 cumulative update ([KB4013429](https://support.microsoft.com/kb/4013429)) or newer.
 2. Create a full or partial Start menu layout XML file. To do so, see [Customize and export Start layout](https://docs.microsoft.com/en-us/windows/configuration/customize-and-export-start-layout).
-    If you specify a *full* Start layout, a user can't customize any part of the Start menu. If you specify a *partial* Start layout, users can customize everything but the locked groups of tiles you specify. However, with a partial Start layout, user customizations to the Start menu won't roam to other PCs.
+    * If you specify a *full* Start layout, a user can't customize any part of the Start menu. If you specify a *partial* Start layout, users can customize everything but the locked groups of tiles you specify. However, with a partial Start layout, user customizations to the Start menu won't roam to other PCs.
 3. Use Group Policy to apply the customized Start layout to the GPO you created for Roaming User Profiles. To do so, see [Use Group Policy to apply a customized Start layout in a domain](https://docs.microsoft.com/en-us/windows/configuration/customize-windows-10-start-screens-by-using-group-policy#bkmk-domaingpodeployment).
 4. Use Group Policy to set the following registry value on your Windows 10 PCs. To do so, see [Configure a Registry Item](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753092(v=ws.11)>).
 
@@ -282,7 +282,7 @@ To specify a Start layout, do the following:
     </table>
 5. (Optional) Enable first-time logon optimizations to make signing in faster for users. To do so, see [Apply policies to improve sign-in time](https://docs.microsoft.com/en-us/windows/client-management/mandatory-user-profile#apply-policies-to-improve-sign-in-time).
 6. (Optional) Further decrease sign-in times by removing unneccesary apps from the Windows 10 base image you use to deploy client PCs. Windows Server 2016 doesn't have any pre-provisioned apps, so you can skip this step on server images.
-    To remove apps, use the [Remove-AppxProvisionedPackage](https://docs.microsoft.com/en-us/powershell/module/dism/remove-appxprovisionedpackage?view=win10-ps) cmdlet in Windows PowerShell to uninstall the following applications. If your PCs are already deployed you can script the removal of these apps using the [Remove-AppxPackage](https://docs.microsoft.com/en-us/powershell/module/appx/remove-appxpackage?view=win10-ps).
+    - To remove apps, use the [Remove-AppxProvisionedPackage](https://docs.microsoft.com/en-us/powershell/module/dism/remove-appxprovisionedpackage?view=win10-ps) cmdlet in Windows PowerShell to uninstall the following applications. If your PCs are already deployed you can script the removal of these apps using the [Remove-AppxPackage](https://docs.microsoft.com/en-us/powershell/module/appx/remove-appxpackage?view=win10-ps).
     
       - Microsoft.windowscommunicationsapps\_8wekyb3d8bbwe
       - Microsoft.BingWeather\_8wekyb3d8bbwe

@@ -1,8 +1,17 @@
 ---
+title: Troubleshoot user profiles with events
+description:How to troubleshoot problems loading and unloading user profiles by using events and trace logs.
+ms.prod: windows-server-threshold 
+ms.topic: article 
+author: JasonGerend 
+ms.author: jgerend 
+ms.technology: storage 
+ms.date: 4/5/18
+ms.localizationpriority: low
 ---
-# Troubleshoot User Profiles with Events
+# Troubleshoot user profiles with events
 
->Applies to Windows 10, Windows 8, Windows 8.1, Windows Server 2012, and Windows Server 2012 R2.
+>Applies to: Windows 10, Windows 8, Windows 8.1, Windows Server 2012, Windows Server 2012 R2, and Windows Server 2016.
 
 This topic discusses how to troubleshoot problems loading and unloading user profiles by using events and trace logs. The following sections describe how to use the three event logs that record user profile information.
 
@@ -10,7 +19,7 @@ This topic discusses how to troubleshoot problems loading and unloading user pro
 
 The first step in troubleshooting issues with loading and unloading user profiles (including roaming user profiles) is to use Event Viewer to examine any Warning and Error events that User Profile Service records in the Application log.
 
-### To view User Profile Services events in the Application log
+Here's how to view User Profile Services events in the Application log:
 
 1. Start Event Viewer. To do so, open **Control Panel**, select **System and Security**, and then, in the **Administrative Tools** section, select **View event logs**. The Event Viewer window opens.
 2. In the console tree, first navigate to **Windows Logs**, then **Application**.

@@ -1,21 +1,30 @@
- ---
 ---
-# Disable Offline Files on Individual Redirected Folders
+title: Disable Offline Files on individual redirected folders
+description: How to disable Offline Files caching on individual folders that are redirected to network shares by using Folder Redirection.
+ms.prod: windows-server-threshold 
+ms.topic: article 
+author: JasonGerend 
+ms.author: jgerend 
+ms.technology: storage 
+ms.date: 4/5/18
+ms.localizationpriority: low
+---
+# Disable Offline Files on individual redirected folders
 
->Applies to Windows 10, Windows 8, Windows 8.1, Windows Server 2012, and Windows Server 2012 R2.
+>Applies to: Windows 10, Windows 8, Windows 8.1, Windows Server 2012, Windows Server 2012 R2, and Windows Server 2016.
 
 This topic describes how to disable Offline Files caching on individual folders that are redirected to network shares by using Folder Redirection. This provides the ability to specify which folders to exclude from caching locally, reducing the Offline Files cache size and time required to synchronize Offline Files.
 
-> [!NOTE]
-> This topic includes sample Windows PowerShell cmdlets that you can use to automate some of the procedures described. For more information, see [Windows PowerShell Basics](https://docs.microsoft.com/en-us/powershell/scripting/getting-started/fundamental/windows-powershell-basics?view=powershell-6).
+>[!NOTE]
+>This topic includes sample Windows PowerShell cmdlets that you can use to automate some of the procedures described. For more information, see [Windows PowerShell Basics](https://docs.microsoft.com/en-us/powershell/scripting/getting-started/fundamental/windows-powershell-basics?view=powershell-6).
 
 ## Prerequisites
 
 To disable Offline Files caching of specific redirected folders, your environment must meet the following prerequisites.
 
-  - An Active Directory Domain Services (AD DS) domain, with client computers joined to the domain. There are no forest or domain functional-level requirements or schema requirements.
-  - Client computers running Windows 8.1, Windows 8, Windows Server 2012 R2, or Windows Server 2012.
-  - A computer with Group Policy Management installed.
+- An Active Directory Domain Services (AD DS) domain, with client computers joined to the domain. There are no forest or domain functional-level requirements or schema requirements.
+- Client computers running Windows 8.1, Windows 8, Windows Server 2012 R2, or Windows Server 2012.
+- A computer with Group Policy Management installed.
 
 ## Disabling Offline Files on individual redirected folders
 
@@ -66,5 +75,5 @@ See the following table for a listing of registry key names (folder GUIDs) to us
 
 ## More information
 
-* [Folder Redirection, Offline Files, and Roaming User Profiles overview](folder-redirection-rup-overview.md)
-* [Deploy Folder Redirection with Offline Files](deploy-folder-redirection.md)
+- [Folder Redirection, Offline Files, and Roaming User Profiles overview](folder-redirection-rup-overview.md)
+- [Deploy Folder Redirection with Offline Files](deploy-folder-redirection.md)

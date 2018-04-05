@@ -1,10 +1,19 @@
 ---
+title: SMB security enhancements
+description: An explanation of the SMB Encryption feature in Windows Server 2012 R2, Windows Server 2012, and Windows Server 2016.
+ms.prod: windows-server-threshold 
+ms.topic: article 
+author: JasonGerend 
+ms.author: jgerend 
+ms.technology: storage 
+ms.date: 4/5/18
+ms.localizationpriority: low
 ---
 # SMB security enhancements
 
->Applies to Windows Server 2012 R2.
+>Applies to Windows Server 2012 R2, Windows Server 2012, and Windows Server 2016.
 
-This topic explains the SMB security enhancements in Windows Server 2012 R2 and Windows Server 2012.
+This topic explains the SMB security enhancements in Windows Server 2012 R2, Windows Server 2012, and Windows Server 2016.
 
 ## SMB Encryption
 

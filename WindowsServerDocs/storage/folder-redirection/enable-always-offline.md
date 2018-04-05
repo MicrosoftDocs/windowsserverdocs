@@ -1,8 +1,17 @@
 ---
+title: Enable Always Offline mode for faster access to files
+description: How to use the Always Offline mode of Offline Files to provide faster access to cached files and redirected folders.
+ms.prod: windows-server-threshold 
+ms.topic: article 
+author: JasonGerend 
+ms.author: jgerend 
+ms.technology: storage 
+ms.date: 4/5/18
+ms.localizationpriority: low
 ---
-# Enable the Always Offline Mode to Provide Faster Access to Files
+# Enable Always Offline mode for faster access to files
 
-Applies To: Windows 10, Windows 8, Windows 8.1, Windows Server 2012, Windows Server 2012 R2
+>Applies to: Windows 10, Windows 8, Windows 8.1, Windows Server 2012, Windows Server 2012 R2, and Windows Server 2016.
 
 This document describes how to use the Always Offline mode of Offline Files to provide faster access to cached files and redirected folders. Always Offline also provides lower bandwidth usage because users are always working offline, even when they are connected through a high-speed network connection.
 
@@ -11,7 +20,7 @@ This document describes how to use the Always Offline mode of Offline Files to p
 To enable Always Offline mode, your environment must meet the following prerequisites.
 
 - An Active Directory Domain Services (AD DS) domain with client computers joined to the domain. There are no forest or domain functional-level requirements or schema requirements.
-- Client computers running Windows 8.1, Windows 8, Windows Server 2012 R2, or Windows Server 2012. (Client computers running earlier versions of Windows might continue to transition to Online mode on very high-speed network connections.)
+- Client computers running Windows 8.1, Windows 8, Windows Server 2016, Windows Server 2012 R2, or Windows Server 2012. (Client computers running earlier versions of Windows might continue to transition to Online mode on very high-speed network connections.)
 - A computer with Group Policy Management installed.
 
 ## Enable Always Offline mode
