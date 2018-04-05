@@ -17,8 +17,10 @@ Quick links: [Documentation](../overview.md) | [Give feedback](todo) | [Recent u
 
 ********************
 
-# <a name="Intro to Windows Admin Center"> </a>
-<iframe src="https://www.youtube.com/embed/CX4vKnisRj8" width="560" height="315" allowfullscreen></iframe>
+<!-- # <a name="Intro to Windows Admin Center"> </a>
+<iframe src="https://www.youtube.com/embed/CX4vKnisRj8" width="560" height="315" allowfullscreen></iframe> -->
+
+<img src="../../media/honolulu-ga/video-placeholder.jpg">
 
 <!-- UPDATE VIDEO -->
 
