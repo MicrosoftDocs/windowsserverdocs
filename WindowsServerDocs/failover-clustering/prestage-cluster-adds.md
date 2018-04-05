@@ -50,7 +50,7 @@ As a best practice, we recommend that you create an OU for the cluster objects. 
   >[!NOTE]
   >You must disable the account so that during cluster creation, the cluster creation process can confirm that the account is not currently in use by an existing computer or cluster in the domain.
 
-![Disabled CNO in the example Clusters OU](../prestage-cluster-adds/disabled-cno-in-the-example-clusters-ou.jpeg)
+![Disabled CNO in the example Clusters OU](media/prestage-cluster-adds/disabled-cno-in-the-example-clusters-ou.jpeg)
 
 **Figure 1. Disabled CNO in the example Clusters OU**
 
