@@ -33,10 +33,10 @@ Quick links: [Documentation](../overview.md) | [Give feedback](todo) | [Recent u
 
 <table border="0" style="padding:0">
         <tr> 
-          <td width="48%"> <img src="../../media/honolulu-ga/legacy-sod.gif" width="260px" alt="Video of legacy management tools">  </td>
-		  <td width="4%"> <img src="../../media/honolulu-ga/arrow.png" width="40px" alt="right arrow">
+          <td width="48%"> <img src="../../media/honolulu-ga/legacy-sod.gif" alt="Video of legacy management tools">  </td>
+		  <td width="4%"> <img src="../../media/honolulu-ga/arrow.png" alt="right arrow">
 		  </td>
-		  <tdwidth="48%"> <img src="../../media/honolulu-ga/server-overview-tool.gif" width="260px"  alt="Video of Windows Admin Center tools"> </td>
+		  <tdwidth="48%"> <img src="../../media/honolulu-ga/server-overview-tool.gif" alt="Video of Windows Admin Center tools"> </td>
         </tr> 
 </table>
 
