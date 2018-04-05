@@ -102,8 +102,7 @@ Before you create the failover cluster, we strongly recommend that you validate 
         >[!NOTE]
         >If you receive a warning for the Validate Storage Spaces Persistent Reservation test, see the blog post [Windows Failover Cluster validation warning indicates your disks don't support the persistent reservations for Storage Spaces](https://blogs.msdn.microsoft.com/clustering/2013/05/24/validate-storage-spaces-persistent-reservation-test-results-with-warning/) for more information.
 
-    
-    For more information about hardware validation tests, see [Validate Hardware for a Failover Cluster](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/jj134244(v%3dws.11)>).
+For more information about hardware validation tests, see [Validate Hardware for a Failover Cluster](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/jj134244(v%3dws.11)>).
 
 ## Create the failover cluster
 
