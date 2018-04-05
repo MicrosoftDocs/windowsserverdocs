@@ -135,7 +135,7 @@ Follow the guidelines for shared VHDs in [Virtual Hard Disk Sharing Overview](ht
 
 A collection with a shared VHD but no associated guest cluster cannot create reference points for the collection (regardless of whether the shared VHD is included in the reference point creation or not). 
 
-## <a name="BKMK_shielded"></a>Virtual machine backup\(new\)
+## Virtual machine backup\(new\)
 
 If you are backing up a single virtual machine (regardless of whether host is clustered or not), you should not use a VM group.  Nor should you use a snapshot collection. VM groups and snapshot collection are meant to be used solely for backing up guest clusters that are using shared vhdx. Instead, you should take a snapshot using the [Hyper-V WMI v2 provider](https://msdn.microsoft.com/en-us/library/windows/desktop/hh850319(v=vs.85).aspx). Likewise, do not use the [Failover Cluster WMI provider](https://msdn.microsoft.com/en-us/library/windows/desktop/mt167750(v=vs.85).aspx).
 
