@@ -1,12 +1,12 @@
 ---
 title: Folder Redirection, Offline Files, and Roaming User Profiles overview
-description:
+description: An overview of Folder Redirection, Offline Files, and Roaming User Profiles technologies.
 ms.prod: windows-server-threshold 
 ms.topic: article 
 author: JasonGerend 
 ms.author: jgerend 
 ms.technology: storage 
-ms.date: 
+ms.date: 4/5/18
 ms.localizationpriority: low
 ---
 # Folder Redirection, Offline Files, and Roaming User Profiles overview
@@ -17,9 +17,9 @@ This topic discusses the Folder Redirection, Offline Files (client-side caching 
 
 ## Did you mean…
 
-  - [Offline Files and Folder Redirection](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/gg277982(v=ws.10)>) (Windows 7 and Windows Server 2008 R2)
-  - [Work Folders overview](/work-folders/work-folders-overview.md)
-  - [BranchCache](/networking/branchcache/BranchCache.md)
+- [Offline Files and Folder Redirection](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/gg277982(v=ws.10)>) (Windows 7 and Windows Server 2008 R2)
+- [Work Folders overview](/work-folders/work-folders-overview.md)
+- [BranchCache](/networking/branchcache/BranchCache.md)
 
 ## Technology description
 
