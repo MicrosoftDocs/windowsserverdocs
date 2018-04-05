@@ -50,7 +50,7 @@ As a best practice, we recommend that you create an OU for the cluster objects. 
   >[!NOTE]
   >You must disable the account so that during cluster creation, the cluster creation process can confirm that the account is not currently in use by an existing computer or cluster in the domain.
 
-![Disabled CNO in the example Clusters OU](media/prestage-cluster-adds/disabled-cno-in-the-example-clusters-ou.jpeg)
+![Disabled CNO in the example Clusters OU](../prestage-cluster-adds/disabled-cno-in-the-example-clusters-ou.jpeg)
 
 **Figure 1. Disabled CNO in the example Clusters OU**
 
@@ -68,7 +68,7 @@ Here's how to grant the user permissions to create the cluster:
 4. In the **Select Users, Computers, or Groups** dialog box, specify the user account or group that you want to grant permissions to, and then select **OK**.
 5. Select the user account or group that you just added, and then next to **Full control**, select the **Allow** check box.
   
-  ![Granting Full Control to the user or group that will create the cluster](../media/prestage-cluster-adds/granting-full-control-to-the-user-create-the-cluster.jpeg)
+  ![Granting Full Control to the user or group that will create the cluster](../prestage-cluster-adds/granting-full-control-to-the-user-create-the-cluster.jpeg)
   
   **Figure 2. Granting Full Control to the user or group that will create the cluster**
 6. Select **OK**.
@@ -106,7 +106,7 @@ If you prestaged the CNO in AD DS, you can do either of the following to create 
 8. In the **Permission Entry** dialog box, make sure that the **Type** list is set to **Allow**, and the **Applies to** list is set to **This object and all descendant objects**.
 9. Under **Permissions**, select the **Create Computer objects** check box.
 
-  ![Granting the Create Computer objects permission to the CNO](../media/prestage-cluster-adds/granting-create-computer-objects-permission-to-the-cno.jpeg)
+  ![Granting the Create Computer objects permission to the CNO](../prestage-cluster-adds/granting-create-computer-objects-permission-to-the-cno.jpeg)
 
   **Figure 3. Granting the Create Computer objects permission to the CNO**
 10. Select **OK** until you return to the Active Directory Users and Computers snap-in.
