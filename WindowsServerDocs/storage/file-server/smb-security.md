@@ -15,8 +15,8 @@ SMB Encryption provides end-to-end encryption of SMB data and protects data from
 
 SMB Encryption should be considered for any scenario in which sensitive data needs to be protected from man-in-the-middle attacks. Possible scenarios include:
 
-  - An information worker’s sensitive data is moved by using the SMB protocol. SMB Encryption offers an end-to-end privacy and integrity assurance between the file server and the client, regardless of the networks traversed, such as wide area network (WAN) connections that are maintained by non-Microsoft providers.
-  - SMB 3.0 enables file servers to provide continuously available storage for server applications, such as SQL Server or Hyper-V. Enabling SMB Encryption provides an opportunity to protect that information from snooping attacks. SMB Encryption is simpler to use than the dedicated hardware solutions that are required for most storage area networks (SANs).
+- An information worker’s sensitive data is moved by using the SMB protocol. SMB Encryption offers an end-to-end privacy and integrity assurance between the file server and the client, regardless of the networks traversed, such as wide area network (WAN) connections that are maintained by non-Microsoft providers.
+- SMB 3.0 enables file servers to provide continuously available storage for server applications, such as SQL Server or Hyper-V. Enabling SMB Encryption provides an opportunity to protect that information from snooping attacks. SMB Encryption is simpler to use than the dedicated hardware solutions that are required for most storage area networks (SANs).
 
 >[!IMPORTANT]
 >You should note that there is a notable performance operating cost with any end-to-end encryption protection when compared to non-encrypted.
@@ -106,6 +106,6 @@ Set-SmbServerConfiguration –EnableSMB1Protocol $false
 
 Here are some additional resources about SMB and related technologies in Windows Server 2012.
 
-  - [Server Message Block](file-server-smb-overview.md)
-  - [File and Storage Services](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831487(v%3dws.11)>)
-  - [Scale-Out File Server for Application Data](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831349(v%3dws.11)>)
+- [Server Message Block](file-server-smb-overview.md)
+- [File and Storage Services](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831487(v%3dws.11)>)
+- [Scale-Out File Server for Application Data](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831349(v%3dws.11)>)
