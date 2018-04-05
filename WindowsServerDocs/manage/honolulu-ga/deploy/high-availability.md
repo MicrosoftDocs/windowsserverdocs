@@ -4,6 +4,8 @@ author: nwashburn-ms
 
 # Deploy Windows Admin Center with High Availability
 
+[link to overview]
+[link back to planning]
 [Content goes here]
 
 [TODO:legacy-content-begin]
