@@ -11,7 +11,7 @@ ms.localizationpriority: low
 ---
 # Prestage cluster computer objects in Active Directory Domain Services
 
->Applies to Windows Server 2012 R2, Windows Server 2012, and Windows Server 2016.
+>Applies to: Windows Server 2012 R2, Windows Server 2012, and Windows Server 2016.
 
 This topic shows how to prestage cluster computer objects in Active Directory Domain Services (AD DS). You can use this procedure to enable a user or group to create a failover cluster when they do not have permissions to create computer objects in AD DS.
 

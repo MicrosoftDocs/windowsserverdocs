@@ -1,15 +1,15 @@
 ---
-title: 
-description:
+title: Scale-Out File Server for application data overview
+description: Overview of the Scale-Out File Server feature for Windows Server 201 R2, Windows Server 2012, and Windows Server 2016.
 ms.prod: windows-server-threshold 
 ms.topic: article 
 author: JasonGerend 
 ms.author: jgerend 
 ms.technology: storage-failover-clustering 
-ms.date: 
+ms.date: 4/5/18
 ms.localizationpriority: low
 ---
-# Scale-Out File Server for Application Data Overview
+# Scale-Out File Server for application data overview
 
 >Applies to: Windows Server 2012 R2, Windows Server 2012, and Windows Server 2016.
 
