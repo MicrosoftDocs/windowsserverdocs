@@ -13,6 +13,7 @@ ms.topic: article
 ms.assetid: 52b9e09f-39e0-41a9-9d3b-4d5f4eacf3e0
 author: christianmontoya
 manager: scottman
+ms.localizationpriority: medium
 ---
 # Welcome to Remote Desktop Services 
 

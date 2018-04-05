@@ -13,6 +13,7 @@ author: lizap
 manager: dongill
 ms.author: elizapo
 ms.date: 03/26/2018
+ms.localizationpriority: medium
 ---
 # Frequently asked questions about the Remote Desktop clients
 

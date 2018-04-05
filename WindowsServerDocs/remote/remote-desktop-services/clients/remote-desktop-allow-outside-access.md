@@ -12,6 +12,7 @@ author: haley-rowland
 manager: dongill
 ms.author: elizapo
 ms.date: 04/04/2018
+ms.localizationpriority: medium
 ---
 # Remote Desktop - Allow access to your PC from outside your PC's network
 

@@ -13,6 +13,7 @@ author: lizap
 manager: dongill
 ms.author: elizapo
 ms.date: 10/03/2017
+ms.localizationpriority: medium
 ---
 # Get started with Remote Desktop on Mac
 

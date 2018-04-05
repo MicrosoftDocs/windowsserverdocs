@@ -13,6 +13,7 @@ author: lizap
 manager: dongill
 ms.author: elizapo
 ms.date: 07/12/2017
+ms.localizationpriority: high
 ---
 # Remote Desktop clients
 
