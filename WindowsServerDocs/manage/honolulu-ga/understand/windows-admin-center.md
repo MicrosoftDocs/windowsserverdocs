@@ -4,9 +4,9 @@ author: haley-rowland
 
 # Windows Admin Center (formerly Project Honolulu)
 
-<img src="../../media/honolulu-ga/wac-icon.png" width="100" alt="Icon representing Windows Admin Center" align="center">
+<img src="../../media/honolulu-ga/wac-icon.png" height="200" alt="Icon representing Windows Admin Center" align="center">
 
-Windows Admin Center is generally available and can be deployed in production environments. Plus it's free!
+Windows Admin Center is generally available and can be deployed in production environments. It comes at no additional cost beyond Windows!
 
 ## [Download now](http://aka.ms/honolulucurrent)
 <!-- Or [plan Windows Admin Center for your environment](/plan/installation-options.md) -->
@@ -18,7 +18,9 @@ Quick links: [Documentation](../overview.md) | [Give feedback](todo) | [Recent u
 ********************
 
 # <a name="Intro to Windows Admin Center"> </a>
-//VIDEO GOES HERE
+<iframe src="https://www.youtube.com/embed/CX4vKnisRj8" width="560" height="315" allowfullscreen></iframe>
+
+<!-- UPDATE VIDEO -->
 
 ### Windows Admin Center is a lightweight, browser-based GUI toolset for managing servers, clusters, and hyper-converged infrastructure. It's the evolution of familiar in-box managment tools plus so much more.
 
