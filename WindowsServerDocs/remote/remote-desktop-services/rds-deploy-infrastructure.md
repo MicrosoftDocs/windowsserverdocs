@@ -12,6 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 author: lizap
 manager: dongill
+ms.localizationpriority: medium
 ---
 # Deploy your Remote Desktop environment
 

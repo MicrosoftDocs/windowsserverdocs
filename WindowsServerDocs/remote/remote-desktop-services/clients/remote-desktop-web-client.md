@@ -7,6 +7,7 @@ ms.author: helohr
 ms.date: 3/26/2018
 ms.topic: article
 author: Heidilohr
+ms.localizationpriority: low
 ---
 # Access the Remote Desktop web client
 
