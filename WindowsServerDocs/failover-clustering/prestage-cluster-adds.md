@@ -40,19 +40,17 @@ As a best practice, we recommend that you create an OU for the cluster objects. 
 2. To create an OU for the cluster computer objects, right-click the domain name or an existing OU, point to **New**, and then select **Organizational Unit**. In the **Name** box, enter the name of the OU, and then select **OK**.
 3. In the console tree, right-click the OU where you want to create the CNO, point to **New**, and then select **Computer**.
 4. In the **Computer name** box, enter the name that will be used for the failover cluster, and then select **OK**.
-    
 
-    >[!NOTE]
-    >This is the cluster name that the user who creates the cluster will specify on the **Access Point for Administering the Cluster** page in the Create Cluster wizard or as the value of the *–Name* parameter for the **New-Cluster** Windows PowerShell cmdlet.
+  >[!NOTE]
+  >This is the cluster name that the user who creates the cluster will specify on the **Access Point for Administering the Cluster** page in the Create Cluster wizard or as the value of the *–Name* parameter for the **New-Cluster** Windows PowerShell cmdlet.
 
 5. As a best practice, right-click the computer account that you just created, select **Properties**, and then select the **Object** tab. On the **Object** tab, select the **Protect object from accidental deletion** check box, and then select **OK**.
 6. Right-click the computer account that you just created, and then select **Disable Account**. Select **Yes** to confirm, and then select **OK**.
-    
 
-    >[!NOTE]
-    >You must disable the account so that during cluster creation, the cluster creation process can confirm that the account is not currently in use by an existing computer or cluster in the domain.
+  >[!NOTE]
+  >You must disable the account so that during cluster creation, the cluster creation process can confirm that the account is not currently in use by an existing computer or cluster in the domain.
 
-![Disabled CNO in the example Clusters OU](../media/prestage-cluster-adds/disabled-cno-in-the-example-clusters-ou.jpeg)
+![Disabled CNO in the example Clusters OU](./media/prestage-cluster-adds/disabled-cno-in-the-example-clusters-ou.jpeg)
 
 **Figure 1. Disabled CNO in the example Clusters OU**
 
@@ -107,9 +105,9 @@ If you prestaged the CNO in AD DS, you can do either of the following to create 
 7. Under **Enter the object names to select**, enter the name of the CNO, select **Check Names**, and then select **OK**. In response to the warning message that says that you are about to add a disabled object, select **OK**.
 8. In the **Permission Entry** dialog box, make sure that the **Type** list is set to **Allow**, and the **Applies to** list is set to **This object and all descendant objects**.
 9. Under **Permissions**, select the **Create Computer objects** check box.
-    
+
   ![Granting the Create Computer objects permission to the CNO](../media/prestage-cluster-adds/granting-create-computer-objects-permission-to-the-cno.jpeg)
-    
+
   **Figure 3. Granting the Create Computer objects permission to the CNO**
 10. Select **OK** until you return to the Active Directory Users and Computers snap-in.
 
@@ -133,4 +131,4 @@ An administrator on the failover cluster can now create the clustered role with 
 
 ## More information
 
-  - [Failover Clustering](failover-clustering.md)
+- [Failover Clustering](failover-clustering.md)
