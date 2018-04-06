@@ -4,7 +4,7 @@ author: daniellee-msft
 
 # Publishing Extensions #
 
-Once you've developed your extension, you will want to publish it and make it available to others to test or use. Depending on your audience and purpose of publishing, there are a few different options for publishing which we'll introduce below along with the steps and requirements for publishing.
+Once you've developed your extension, you can publish it and make it available to others to test or use. Depending on your audience and purpose of publishing, there are a few different options for publishing which we'll introduce below along with the steps and requirements for publishing.
 
 ## Deciding where to publish to ##
 
@@ -17,16 +17,16 @@ You may also create your own NuGet feed to publish your extensions to using one 
 ### Publishing to a file share ###
 To restrict access of your extension to your organization or to a limited group of people, you can use an SMB file share as an extension feed. In this case, the file share and folder permissions will be applied for allowing access to the feed.
 
-## Preparing to publish your extension ##
-Here's a list of things you should prepare if you are planning on publishing to the Windows Admin Center extension feed. You may want to consider some of these even if you are publishing to your own feed or a file share.
+## Preparing to publish your extension to the Windows Admin Center feed ##
+Here's a list of things you should prepare if you are planning on publishing to the Windows Admin Center extension feed. These are not required if you are publishing to your own feed or a file share.
 
 ### Extension development policies and guidelines ###
 [TODO]
 
 ### Submit an extension review request to Microsoft ###
-Since the Windows Admin Center extensions platform is still in preview, we want to work closely with extension developers to help on development issues and help make sure you are delivering a quality product and experience to users. 
+Since the Windows Admin Center extensions platform is still in preview, we’d like to work closely with you to help resolve development issues, and make sure you are able to deliver a quality product and experience to your users.
 
-Before releasing the initial version of your extension, we recommend that you submit an extension review request to Microsoft at least one month before release to ensure we have sufficient time to review and for you to make any changes to your extension if necessary. You will also need to submit a request for releasing updates to your extension. While depending on the scope of change, the turnaround time for update reviews should generally be shorter.
+Before releasing the initial version of your extension, we recommend that you submit an extension review request to Microsoft at least a month before release to ensure we have sufficient time to review and for you to make any changes to your extension if necessary. You will also need to submit a request for releasing updates to your extension. While depending on the scope of change, the turnaround time for update reviews should generally be shorter.
 
 Once the extension review is complete and your extension is approved, we will publish your extension to the Windows Admin Center feed.
 
@@ -58,7 +58,7 @@ You may also want to include an end user license agreement (EULA) for your exten
 [TODO] Add link to SDK EULA
 
 ## Preparing your extension for publishing ##
-You may want to send us your extension under development to expedite the review process, and you will need to send us your final extension package for us to approve and publish to the Windows Admin Center feed. Here are the steps for preparing your extension package for review.
+Send us your extension package for the team here at Microsoft to approve and publish to the Windows Admin Center feed.  You may want to send us your extension while still under development to expedite the review process. Here are the steps for preparing your extension package for review.
 
 ### 1. Build your extension ###
 Run "gulp build" and make sure the build is successful.
@@ -95,7 +95,7 @@ Here's an example .nuspec file and the list of required or recommended propertie
 | Property Name | Required / Recommended | Description |
 | ---- | ---- | ---- |
 | packageType | Required | Use "WindowsAdminCenterExtension" which is the NuGet package type defined for Windows Admin Center extensions. |
-| id | Required | Package identifier that is unique within the feed. See [Choosing a unique package identifier](https://docs.microsoft.com/en-us/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number) for guidance. |
+| id | Required | Unique Package identifier within the feed. See [Choosing a unique package identifier](https://docs.microsoft.com/en-us/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number) for guidance. |
 | title | Required for publishing to the Windows Admin Center feed | Friendly name for the package that is displayed in Windows Admin Center Extension Manager. |
 | version | Required | Extension version. Using [Semantic Versioning (SemVer convention)](http://semver.org/spec/v1.0.0.html) is recommended but not required. |
 | authors | Required | If publishing on behalf of your company, use your company name. |
