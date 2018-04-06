@@ -11,8 +11,8 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 96538cbb-7d6c-4860-9ec7-b1834284ad10
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 # Step 1 Plan an Advanced Single Server Deployment
 

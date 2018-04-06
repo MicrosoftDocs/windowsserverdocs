@@ -27,8 +27,6 @@ The section describes feature similarities and difference between DirectAccess a
 3.  **Reviewing the new features of Always On VPN.** Discover new or improved features that Always On VPN offers to improve your configuration.
 
 ## Build migration rings
-
-
 Migration rings are used to divide the Always On VPN client migration effort into multiple phases. By the time you get to the last phase, your process should be well tested and consistent.
 
 This section provides one approach for separating users into migration phases, and then managing those phases. Regardless of the user phase separation method you choose, maintain a single VPN Users group for easier management when the migration is complete.
@@ -197,3 +195,9 @@ compatibility improvements in Always On VPN:
 | **Platform support** | Always On VPN supports domain-joined, nondomain-joined (workgroup), or Azure AD–joined devices to allow for both enterprise and bring your own device (BYOD) scenarios. Also, Always On VPN is available in all Windows editions. |
 | **Diverse management and deployment mechanisms** | You can use many management and deployment mechanisms to manage VPN settings (called a *VPN profile*), including Windows PowerShell, System Center Configuration Manager, Intune (or third-party mobile device management [MDM] tool), and Windows Configuration Designer. These options simplify the configuration of Always On VPN regardless of the client management tools you use. |
 | **Standardized VPN profile definition** | Always On VPN supports configuration using a standard XML profile (ProfileXML), providing a standard configuration template format that most management and deployment toolsets use. |
+
+<!-- next steps -->
+## Next steps
+**[Migrate from DirectAccess to Always On VPN](da-always-on-migration-deploy.md).** Migrating from DirectAccess to Always On VPN requires a specific process to migrate clients to prevent from occurring.
+
+<!-- related docs section -->

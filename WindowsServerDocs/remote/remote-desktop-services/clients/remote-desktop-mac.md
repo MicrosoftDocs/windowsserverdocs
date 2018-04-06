@@ -13,6 +13,7 @@ author: lizap
 manager: dongill
 ms.author: elizapo
 ms.date: 10/03/2017
+ms.localizationpriority: medium
 ---
 # Get started with Remote Desktop on Mac
 
@@ -113,7 +114,7 @@ To create a new user account:
 3. Enter the following information:
    - **User Name** - The name of the user to save for use with a remote connection. You can enter the user name in any of the following formats: user_name, domain\user_name, or user_name@domain.com.
    - **Password** - The password for the user you specified. Every user account that you want to save to use for remote connections needs to have a password associated with it.
-   -**Friendly Name** - If you are using the same user account with different passwords set a friendly name to disticnt those user accounts.
+   - **Friendly Name** - If you are using the same user account with different passwords, set a friendly name to distinguish those user accounts.
 4. Tap **Save**, and then tap **Settings**.
 
 ## Customize your display resolution

@@ -7,12 +7,15 @@ ms.topic: article
 author: JasonGerend
 manager: dongill
 ms.author: jgerend
-ms.date: 12/14/2017
+ms.date: 04/2/2018
 ms.localizationpriority: high
 ---
 # Storage in Windows Server
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+
+>[!TIP]
+> Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/) on docs.microsoft.com. You can also [search this site](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions) for specific information.
 
 <img src="../media/landing-icons/storage.png" style='float:left; padding:.5em;' alt="Icon representing a drive"> Storage in Windows Server provides new and improved features for software-defined datacenter (SDDC) customers focusing on virtualized workloads. Windows Server also provides extensive support for enterprise customers using file servers with existing workloads.
 
@@ -34,7 +37,9 @@ For an overview of storage technologies included in Windows Server, see the foll
 
 * [Work Folders](work-folders/work-folders-overview.md) - With Work Folders users can store and access work files on personal computers and devices, often referred to as bring-your-own device (BYOD), in addition to corporate PCs. Users gain a convenient location to store work files, and they can access them from anywhere. Organizations maintain control over corporate data by storing the files on centrally managed file servers, and optionally specifying user device policies such as encryption and lock-screen passwords.
 
-* [Offline Files, Folder Redirection, and Roaming User Profiles](https://technet.microsoft.com/library/hh848267(v=ws.11).aspx) - Folder Redirection and Offline Files are used together to redirect the path of local folders (such as the Documents folder) to a network location, while caching the contents locally for increased speed and availability. Roaming User Profiles is used to redirect a user profile to a network location.  
+* [Offline Files and Folder Redirection](https://technet.microsoft.com/library/hh848267(v=ws.11).aspx) - Folder Redirection and Offline Files are used together to redirect the path of local folders (such as the Documents folder) to a network location, while caching the contents locally for increased speed and availability.
+
+* [Roaming User Profiles](folder-redirection/deploy-roaming-user-profiles.md) is used to redirect a user profile to a network location.
 
 * [DFS Namespaces](dfs-namespaces/dfs-overview.md) - Enables you to group shared folders that are located on different servers into one or more logically structured namespaces. Each namespace appears to users as a single shared folder with a series of subfolders. However, the underlying structure of the namespace can consist of numerous file shares that are located on different servers and in multiple sites.
 

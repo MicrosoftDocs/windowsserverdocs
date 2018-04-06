@@ -6,8 +6,8 @@ ms.technology: networking
 ms.topic: article
 ms.assetid: 
 manager: brianlic
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 # Remote Access Always On VPN Advanced Features
 
@@ -89,7 +89,5 @@ A user certificate with a TPM\-attested key provides higher security assurance, 
 For more information about TPM key attestation in Windows 10, see [TPM Key Attestation](https://docs.microsoft.com/windows-server/identity/ad-ds/manage/component-updates/tpm-key-attestation).
 
 For detailed information about these and other Windows 10 VPN configuration options, see the Windows 10 [VPN technical guide](https://docs.microsoft.com/windows/access-protection/vpn/vpn-guide).
-
-
 
 For the next section in this guide, see [Remote Access Always On VPN Troubleshooting](always-on-vpn-deploy-troubleshooting.md).

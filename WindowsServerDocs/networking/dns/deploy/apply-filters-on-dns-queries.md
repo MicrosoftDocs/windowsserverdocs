@@ -6,8 +6,8 @@ ms.prod: windows-server-threshold
 ms.technology: networking-dns
 ms.topic: article
 ms.assetid: b86beeac-b0bb-4373-b462-ad6fa6cbedfa
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 # Use DNS Policy for Applying Filters on DNS Queries
 

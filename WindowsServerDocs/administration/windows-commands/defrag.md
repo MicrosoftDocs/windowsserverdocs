@@ -16,7 +16,7 @@ ms.date: 10/16/2017
 ---
 # defrag
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows 10, Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Locates and consolidates fragmented files on local volumes to improve system performance.
 Membership in the local **Administrators** group, or equivalent, is the minimum required to run this command.
@@ -82,6 +82,18 @@ To defragment all volumes with normal priority and provide verbose output, type:
 ```
 defrag /C /H /V
 ```
+
+## <a name="BKMK_scheduledTask"></a>Scheduled task
+Defrag's scheduled task runs as a maintenance task and is usually scheduled to run every week. Administrator can change the frequency using **Optimize Drives** application.
+- When run from the scheduled task, **defrag** has below policy for SSDs:
+   - **Traditional defrag** (i.e. moving files to make them reasonably contiguous) and **retrim** is run only once every month.
+   - If both **traditional defrag** and **retrim** are skipped, **analysis** is not run.
+      - If user ran **traditional defrag** manually on an SSD, say 3 weeks after the last scheduled task run, then the next scheduled task run will perform **analysis** and **retrim** but skip **traditional defrag** on that SSD.
+   - If **analysis** is skipped, the **Last run** time in **Optimize Drives** will not be updated.  So for SSDs the **Last run** time in **Optimize Drives** can be a month old.
+- This maintenance task might not defrag all the volumes, at times because this task does the following:
+   - Doesn't wake the computer in order to run defrag
+   - Starts only if the computer is on AC power, and stops if the computer switches to battery power
+   - Stops if the computer ceases to be idle
 
 ## <a name="BKMK_additionalRef"></a>Additional references
 -   [chkdsk](chkdsk.md)

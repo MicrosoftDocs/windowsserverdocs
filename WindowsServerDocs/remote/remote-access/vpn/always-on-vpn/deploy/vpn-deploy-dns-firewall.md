@@ -6,8 +6,8 @@ ms.technology: networking
 ms.topic: article
 ms.assetid: d8cf3bae-45bf-4ffa-9205-290d555c59da
 manager: brianlic
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 # Configure DNS and Firewall Settings
 
@@ -17,9 +17,9 @@ You can use this section to configure DNS and Firewall settings.
 
 ## Configure DNS name resolution
 
-When remote VPN clients connect, they use the same DNS servers that your internal clients use, which allows them to resolve names in the same manner as the rest of your internal workstations. 
+When remote VPN clients connect, hey use the same DNS servers that your internal clients use, which allows them to resolve names in the same manner as the rest of your internal workstations. 
 
-Because of this, you must ensure that the computer name that external clients use to connect to the VPN server matches the subject alternative name that is defined in the certificates you issue to the  VPN server. 
+Because of this, you must ensure that the computer name that external clients use to connect to the VPN server matches the subject alternative name that is defined in the certificates you issue to the  VPN server.
 
 To ensure that remote clients can connect to your VPN server, you can create a DNS A (Host) record in your external DNS zone. The A record should use the certificate subject alternative name for the VPN server.
 

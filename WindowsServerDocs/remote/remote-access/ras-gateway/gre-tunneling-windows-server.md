@@ -6,8 +6,8 @@ ms.prod: windows-server-threshold
 ms.technology: networking-ras
 ms.topic: article
 ms.assetid: df2023bf-ba64-481e-b222-6f709edaa5c1
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 # GRE Tunneling in Windows Server 2016
 

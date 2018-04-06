@@ -5,7 +5,7 @@ ms.prod: windows-server-threshold
 ms.service: na
 manager: alant
 ms.technology: server-general
-ms.date: 09/06/2017
+ms.date: 03/16/2018
 ms.topic: article
 author: kaushika-msft
 ms.author: elizapo
@@ -16,6 +16,9 @@ ms.author: elizapo
 Microsoft regularly releases both updates and solutions for Windows Server. To ensure your servers can receive future updates, including security updates, it's important to keep your servers updated. Check out [Windows 10 and Windows Server 2016 update history](https://support.microsoft.com/en-us/help/4000825/windows-10-windows-server-2016-update-history) for a complete list of released updates.
 
 These are the top Microsoft Support solutions for the most common issues experienced when using Windows Server 2016. The links below include links to KB articles, updates, and library articles.
+
+>[!TIP]
+> Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/) on docs.microsoft.com. You can also [search this site](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions) for specific information.
 
 ## Solutions for installing or upgrading Windows Server
 

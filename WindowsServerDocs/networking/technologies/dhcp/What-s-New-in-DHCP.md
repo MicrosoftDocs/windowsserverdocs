@@ -6,8 +6,8 @@ ms.prod: windows-server-threshold
 ms.technology: networking-dhcp
 ms.topic: get-started-article
 ms.assetid: c6f36998-5b64-45d1-b1f0-0f0d6604dbe3
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 # What's New in DHCP
 

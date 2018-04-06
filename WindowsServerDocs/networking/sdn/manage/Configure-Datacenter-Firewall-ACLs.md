@@ -10,8 +10,8 @@ ms.technology: networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 25f18927-a63e-44f3-b02a-81ed51933187
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 # Configure Datacenter Firewall Access Control Lists (ACLs)
 

@@ -6,8 +6,8 @@ ms.technology: networking
 ms.topic: article
 ms.assetid: 5ae1a40b-4f10-4ace-8aaf-13f7ab581f4f
 manager: brianlic
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 
 # Remote Access Always On VPN Deployment Guide for Windows Server and Windows 10
@@ -153,7 +153,7 @@ When you use digital server certificates for authentication between computers on
 
 1. Confidentiality through encryption. 
 2. Integrity through digital signatures. 
-3. Authentication by associating certificate keys with computer, user, or device accounts on a computer network. 
+3. Authentication by associating certificate keys with computer, user, or device accounts on a computer network.
 
 For more information, see [AD CS Step by Step Guide: Two Tier PKI Hierarchy Deployment](https://social.technet.microsoft.com/wiki/contents/articles/15037.ad-cs-step-by-step-guide-two-tier-pki-hierarchy-deployment.aspx).
 
