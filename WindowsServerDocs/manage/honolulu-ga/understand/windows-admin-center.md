@@ -1,12 +1,20 @@
 ---
+title: Windows Admin Center
+description: Windows Admin Center (Project Honolulu)
+ms.technology: manage
+ms.topic: article
 author: haley-rowland
+ms.author: harowl
+ms.date: 04/05/2018
+ms.localizationpriority: low
+ms.prod: windows-server-threshold
 ---
 
 # Windows Admin Center (formerly Project Honolulu)
 
-<img src="../../media/honolulu-ga/wac-icon.png" width="100" alt="Icon representing Windows Admin Center" align="center">
+<img src="../../media/honolulu-ga/wac-icon.png" style='height:200px' alt="Icon representing Windows Admin Center" align="center">
 
-Windows Admin Center is generally available and can be deployed in production environments. Plus it's free!
+Windows Admin Center is generally available and can be deployed in production environments. It comes at no additional cost beyond Windows!
 
 ## [Download now](http://aka.ms/honolulucurrent)
 <!-- Or [plan Windows Admin Center for your environment](/plan/installation-options.md) -->
@@ -17,21 +25,28 @@ Quick links: [Documentation](../overview.md) | [Give feedback](todo) | [Recent u
 
 ********************
 
-# <a name="Intro to Windows Admin Center"> </a>
-//VIDEO GOES HERE
+<!-- # <a name="Intro to Windows Admin Center"> </a>
+<iframe src="https://www.youtube.com/embed/CX4vKnisRj8" width="560" height="315" allowfullscreen></iframe> -->
+
+<img src="../../media/honolulu-ga/video-placeholder.png">
+
+<!-- UPDATE VIDEO -->
 
 ### Windows Admin Center is a lightweight, browser-based GUI toolset for managing servers, clusters, and hyper-converged infrastructure. It's the evolution of familiar in-box managment tools plus so much more.
+
+
+<!-- <img src="../../media/honolulu-ga/legacy-sod.gif" width="48%" alt="Video of legacy management tools"> <img src="../../media/honolulu-ga/arrow.png" width="4%" alt="right arrow"> <img src="../../media/honolulu-ga/server-overview-tool.gif" width="48%"  alt="Video of Windows Admin Center tools">  -->
 
 <!-- |   |   |   |
 |:-:|:-:|:-:|
 | <img src="../media/honolulu-ga/legacy-sod.gif" alt="Video of legacy management tools">  | <img src="../media/honolulu-ga/arrow.png" alt="right arrow" align="middle"> | <img src="../media/honolulu-ga/server-overview-tool.gif"  alt="Video of Windows Admin Center tools">  | -->
 
-<table border="0" cellpadding="0">
+<table border="0" style="padding:0">
         <tr> 
-          <td> <img src="../../media/honolulu-ga/legacy-sod.gif" alt="Video of legacy management tools">  </td>
-		  <td > <img src="../../media/honolulu-ga/arrow.png" alt="right arrow">
+          <td style="width:48%" width="48%"> <img src="../../media/honolulu-ga/legacy-sod.gif" alt="Video of legacy management tools">  </td>
+		  <td style="width:4%" width="4%"> <img src="../../media/honolulu-ga/arrow.png" alt="right arrow">
 		  </td>
-		  <td> <img src="../../media/honolulu-ga/server-overview-tool.gif"  alt="Video of Windows Admin Center tools"> </td>
+		  <td style="width:48%" width="48%"> <img src="../../media/honolulu-ga/server-overview-tool.gif" alt="Video of Windows Admin Center tools"> </td>
         </tr> 
 </table>
 

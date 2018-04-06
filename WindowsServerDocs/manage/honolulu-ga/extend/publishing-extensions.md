@@ -1,10 +1,20 @@
 ---
+title: Publishing Extensions
+description: Publishing Extensions Windows Admin Center (Project Honolulu)
+ms.technology: manage
+ms.topic: article
 author: daniellee-msft
+ms.author: jol
+ms.date: 04/05/2018
+ms.localizationpriority: low
+ms.prod: windows-server-threshold
 ---
 
 # Publishing Extensions #
 
-Once you've developed your extension, you can publish it and make it available to others to test or use. Depending on your audience and purpose of publishing, there are a few different options for publishing which we'll introduce below along with the steps and requirements for publishing.
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
+
+Once you've developed your extension, you will want to publish it and make it available to others to test or use. Depending on your audience and purpose of publishing, there are a few different options for publishing which we'll introduce below along with the steps and requirements for publishing.
 
 ## Deciding where to publish to ##
 

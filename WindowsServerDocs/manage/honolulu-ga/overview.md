@@ -1,21 +1,24 @@
 ---
 title: Windows Admin Center Overview
-description: "Windows Admin Center Overview"
-ms.technology: Windows Admin Center
+description: Overview Windows Admin Center (Project Honolulu)
+ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
-ms.manager: samli
-ms.date: 03/30/2018
+ms.date: 04/05/2018
+ms.localizationpriority: high
+ms.prod: windows-server-threshold
 ---
 
 # Windows Admin Center
+
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
 Welcome to **Windows Admin Center**!  
 
 **Windows Admin Center** is an evolution of Windows Server in-box management tools; it’s a single pane of glass, consolidating all aspects of local and remote server management. As a locally deployed, browser-based management experience, an Internet connection and Azure aren’t required.  **Windows Admin Center** supports scenarios where customers need full control of all aspects of their deployment, including private networks which aren’t Internet-connected.
 
-> ## **Project Honolulu** is now **Windows Admin Center**! View our [launch page here](windows-admin-center.md).
+> ## **Project Honolulu** is now [**Windows Admin Center**!](windows-admin-center.md)
 
 <table>
     <tr></tr>
@@ -24,12 +27,12 @@ Welcome to **Windows Admin Center**!
             <h2>Understand</h2>
             <ul>
             <li>Get Started 
-            <li><a href="understand/what-is.md">What is <b>Windows Admin Center</b>?</a>
-            <li><a href="understand/capabilities.md">Capabilities</a>
-            <li><a href="understand/faq.md">FAQ</a>
-            <li><a href="understand/case-studies.md">Case studies</a>
-            <li><a href="understand/related-management.md">Related management products</a>
-            <li><a href="understand/videos.md">Videos</a>
+            <li><a href="understand/what-is">What is <b>Windows Admin Center</b>?</a>
+            <li><a href="understand/capabilities">Capabilities</a>
+            <li><a href="understand/faq">FAQ</a>
+            <li><a href="understand/case-studies">Case studies</a>
+            <li><a href="understand/related-management">Related management products</a>
+            <li><a href="understand/videos">Videos</a>
             </ul>
         </td>
         <td style="vertical-align: top;">
@@ -57,7 +60,7 @@ Welcome to **Windows Admin Center**!
         <td style="vertical-align: top;">
             <h2>Configure</h2>
             <ul>
-            <li><a href="configure/user-access-control.md">User Access Control and Permissions</a>
+            <li><a href="configure/user-access-control">User Access Control and Permissions</a>
             <li><a href="configure/logging.md">Logging</a>
             <li><a href="configure/extensions.md">Extensions</a>
             <li><a href="configure/azure-integration.md">Configuring Azure integration</a>
