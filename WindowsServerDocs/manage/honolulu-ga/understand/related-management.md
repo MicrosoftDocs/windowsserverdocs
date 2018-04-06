@@ -1,15 +1,18 @@
 ---
 title: Windows Admin Center related management solutions
-description: "How Windows Admin Center compares with and complements other Microsoft monitoring and management solutions/products"
-ms.technology: windows-server-threshold
+description: How Windows Admin Center compares with and complements other Microsoft monitoring and management solutions/products (Project Honolulu)
+ms.technology: manage
 ms.topic: article
 author: haley-rowland
 ms.author: harowl
-ms.manager: samli
-ms.date: 04/12/2018
+ms.date: 04/05/2018
+ms.localizationpriority: low
+ms.prod: windows-server-threshold
 ---
 
 # Related management solutions
+
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
 [Windows Admin Center](windows-admin-center.md) is the evolution of traditional in-box server management tools, for situations where you might have used RDP to connect to a server and troubleshoot or configure a server. It is not intended to replace any of the existing Microsoft management solutions, rather it complements these solutions. 
 

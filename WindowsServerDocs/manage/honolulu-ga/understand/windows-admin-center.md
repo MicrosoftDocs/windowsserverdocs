@@ -1,5 +1,13 @@
 ---
+title: Windows Admin Center
+description: Windows Admin Center (Project Honolulu)
+ms.technology: manage
+ms.topic: article
 author: haley-rowland
+ms.author: harowl
+ms.date: 04/05/2018
+ms.localizationpriority: low
+ms.prod: windows-server-threshold
 ---
 
 # Windows Admin Center (formerly Project Honolulu)

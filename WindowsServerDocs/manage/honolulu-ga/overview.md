@@ -1,18 +1,18 @@
 ---
 title: Windows Admin Center Overview
-description: Windows Admin Center Overview Honolulu
+description: Overview Windows Admin Center (Project Honolulu)
 ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
-ms.date: 04/03/2018
+ms.date: 04/05/2018
 ms.localizationpriority: high
 ms.prod: windows-server-threshold
 ---
 
 # Windows Admin Center
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 and Windows 10
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
 Welcome to **Windows Admin Center**!  
 

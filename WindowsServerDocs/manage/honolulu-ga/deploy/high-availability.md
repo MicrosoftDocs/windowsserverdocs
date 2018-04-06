@@ -1,8 +1,18 @@
 ---
+title: Deploy Windows Admin Center with High Availability
+description: Deploy Windows Admin Center with High Availability (Project Honolulu)
+ms.technology: manage
+ms.topic: article
 author: nwashburn-ms
+ms.author: niwashbu
+ms.date: 04/05/2018
+ms.localizationpriority: low
+ms.prod: windows-server-threshold
 ---
 
 # Deploy Windows Admin Center with High Availability
+
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
 [link to overview]
 [link back to planning]

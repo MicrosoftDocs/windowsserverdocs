@@ -1,15 +1,18 @@
 ---
 title: Windows Admin Center Frequently Asked Questions
-description: "Windows Admin Center Frequently Asked Questions"
-ms.technology: Windows Admin Center
+description: Windows Admin Center Frequently Asked Questions (Project Honolulu)
+ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
-ms.manager: samli
-ms.date: 03/30/2018
+ms.date: 04/05/2018
+ms.localizationpriority: low
+ms.prod: windows-server-threshold
 ---
 
 # Windows Admin Center Frequently Asked Questions
+
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
 ## Q: What is Windows Admin Center?
 

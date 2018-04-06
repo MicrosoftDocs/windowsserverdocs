@@ -1,15 +1,18 @@
 ---
-title: Windows Admin Center Installation Options
-description: "What type of installation is right for you"
-ms.technology: Windows Admin Center
+title: What type of installation is right for you
+description: What type of installation is right for you Windows Admin Center (Project Honolulu)
+ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
-ms.manager: samli
-ms.date: 03/30/2018
+ms.date: 04/05/2018
+ms.localizationpriority: low
+ms.prod: windows-server-threshold
 ---
 
 # What type of installation is right for you?
+
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
 ## Supported operating systems
 
