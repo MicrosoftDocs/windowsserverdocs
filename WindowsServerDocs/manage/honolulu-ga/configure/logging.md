@@ -21,12 +21,12 @@ Logged events include the following information:
 |---------------|----------------------------------------------------------------------------------------------------|
 | PowerShell    | PowerShell script name that was executed on the server, if the action executed a PowerShell script |
 | CIM           | CIM call that was executed on the server, if the action executed a CIM call                        |
-| module        | tool (or module) where the action was executed                                                     |
-| Gateway       | name of the Windows Admin Center gateway machine where the action was executed                     |
-| userOnGateway | user name used to access the Windows Admin Center gateway and execute the action                    |
-| userOnTarget  | user name used to access the target managed server, if different from the userOnGateway (i.e. the user accessed using the server using "Manage as" credentials) |
-| Delegation    | boolean: if the target managed server trusts the gateway and credentials are delegated from the user's client machine             |
-| LAPS          | boolean: if the user accessed the server using [LAPS](https://technet.microsoft.com/mt227395.aspx) credentials                          |
+| Module        | Tool (or module) where the action was executed                                                     |
+| Gateway       | Name of the Windows Admin Center gateway machine where the action was executed                     |
+| UserOnGateway | Username used to access the Windows Admin Center gateway and execute the action                    |
+| UserOnTarget  | Username used to access the target managed server, if different from the userOnGateway (i.e. the user accessed using the server using "Manage as" credentials) |
+| Delegation    | Boolean: if the target managed server trusts the gateway and credentials are delegated from the user's client machine             |
+| LAPS          | Boolean: if the user accessed the server using [LAPS](https://technet.microsoft.com/mt227395.aspx) credentials                          |
 | File          | name of the file uploaded, if the action executed was a file upload                                |
 
 ## Learn about Windows Admin Center gateway usage with event logging
@@ -37,8 +37,8 @@ To help you troubleshoot issues and view metrics on the usage of the gateway, Wi
 | 2        | UI Error                                                                                          | UI         |
 | 4        | UI Warning                                                                                        | UI         |
 | 7        | User action and module open events                                                                | Telemetry  |
-| 8        | Gateway usage (how many registered nodes, gateway status)                                         | Telemetry  |
-| 9        | Gateway usage (how many users on the gateway machine, how many nodes are actively being managed)  | Telemetry  |
+| 8        | Gateway usage (how many nodes have ever been registered to the gateway, gateway status)                                         | Telemetry  |
+| 9        | Gateway usage (how many users using the gateway machine, how many nodes are actively being managed by the gateway)  | Telemetry  |
 
 [Learn more about troubleshooting Windows Admin Center.](../use/troubleshooting.md)
 
