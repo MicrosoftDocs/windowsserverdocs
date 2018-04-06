@@ -92,27 +92,25 @@ Welcome to **Windows Admin Center**!
 
 # Get Started
 
-[Content goes here.]
+Getting started with Windows Admin Center is easy!  To start using Windows Admin Center in your environment in minutes, follow these steps:
 
-# Videos
+### 1. [Download](https://aka.ms/WindowsAdminCenter) Windows Admin Center
+### 2. [Install](deploy/install.md) Windows Admin Center
+### 3. [Launch](use/launch.md) Windows Admin Center
 
-[Video content here.]
-
-[TODO:legacy-content-begin]
-
-## Download the Project Honolulu Ignite poster
-
-![](../media/honolulu/spacer1.png)<a href="https://github.com/MicrosoftDocs/windowsserverdocs/blob/master/WindowsServerDocs//manage/media/honolulu/SME_Ignite2017_Poster.pdf"><img src="../media/honolulu/poster2.png"></a>
-
-[TODO:legacy-content-end]
+Want to get up and running quickly?  All of these steps can be performed on your Windows 10 PC!  Install and use Windows Admin Center on Windows 10, then start managing PCs and servers in your environment immediately.
 
 # Latest features
 
-[Latest features list here.]
-- Feature 1
-- Feature 2 
-- Feature 3
+### Learn about our latest released features:
+
+- Version [1804](https://aka.ms/WindowsAdminCenter) is released as Windows Admin Center and adds security features, role-based access control, and is our first GA release.
+- Version [1803](https://blogs.windows.com/windowsexperience/2018/03/13/announcing-project-honolulu-technical-preview-1803-and-rsat-insider-preview-for-windows-10) added support for AAD access control, detailed logging, resizable content, and a bunch of tool improvements.
+- Version [1802](https://blogs.windows.com/windowsexperience/2017/12/19/announcing-project-honolulu-technical-preview-1712-build-05002) added support for accessibility, localization, high-availability deployments, tagging, Hyper-V host settings, and gateway authentication.
+- Version [1712](https://blogs.windows.com/windowsexperience/2017/12/19/announcing-project-honolulu-technical-preview-1712-build-05002) added more virtual machine features and performance improvements throughout the tools.
+- Version [1711](https://cloudblogs.microsoft.com/windowsserver/2017/12/01/1711-update-to-project-honolulu-technical-preview-is-now-available/) added highly anticipated tools (Remote Desktop, and PowerShell) along with other improvements.
+- Version [1709](https://cloudblogs.microsoft.com/windowsserver/2017/09/22/project-honolulu-technical-preview-is-now-available-for-download/) launched as our first public preview release.
 
 # Links
 
-[Team blog, twitter, insiders, etc.]
+### Follow us: &nbsp; <a target="_blank" class="mscom-link twitter-follow-link" title="Follow us on Twitter" aria-label="Follow us on Twitter" data-info="Twitter" href="https://twitter.com/servermgmt"><picture><source srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOolR" media="(min-width:0)"><img srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOolR" alt="Follow us on Twitter" src="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOolR"></picture></a>&nbsp; <a target="_blank" class="mscom-link blogs-follow-link" title="Follow us on Blogs" aria-label="Follow us on Blogs" data-info="Blogs" href="https://blogs.technet.microsoft.com/servermanagement/"><picture><source srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw" media="(min-width:0)"><img srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw" alt="Follow us on Blogs" src="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw"></picture></a>
