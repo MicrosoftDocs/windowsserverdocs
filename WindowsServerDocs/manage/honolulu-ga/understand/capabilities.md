@@ -24,9 +24,9 @@ ms.prod: windows-server-threshold
 
 [TODO:legacy-content-begin]
 
-# What Windows Server features can Honolulu manage?
+# What Windows Server features can Windows Admin Center manage?
 
-Honolulu does not yet completely replace the Microsoft Management Console (MMC). Here are its current capabilities:
+Windows Admin Center does not yet completely replace the Microsoft Management Console (MMC). Here are its current capabilities:
 
 -   Displaying resources and resource utilization
 -   Certificate Management
