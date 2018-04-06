@@ -11,7 +11,7 @@ ms.localizationpriority: low
 ---
 # SMB security enhancements
 
->Applies to Windows Server 2012 R2, Windows Server 2012, and Windows Server 2016.
+>Applies to: Windows Server 2012 R2, Windows Server 2012, Windows Server 2016
 
 This topic explains the SMB security enhancements in Windows Server 2012 R2, Windows Server 2012, and Windows Server 2016.
 

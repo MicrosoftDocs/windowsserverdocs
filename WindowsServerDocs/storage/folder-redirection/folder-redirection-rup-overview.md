@@ -11,7 +11,7 @@ ms.localizationpriority: low
 ---
 # Folder Redirection, Offline Files, and Roaming User Profiles overview
 
->Applies to: Windows 10, Windows 8, Windows 8.1, Windows Server 2012, Windows Server 2012 R2, and Windows Server 2016.
+>Applies to: Windows 10, Windows 8, Windows 8.1, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016
 
 This topic discusses the Folder Redirection, Offline Files (client-side caching or CSC), and Roaming User Profiles (sometimes known as RUP) technologies, including what’s new in Windows 8 and Windows Server 2012 and where to find additional information.
 

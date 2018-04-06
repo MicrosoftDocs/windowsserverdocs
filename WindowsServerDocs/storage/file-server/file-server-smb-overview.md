@@ -11,7 +11,7 @@ ms.localizationpriority: low
 ---
 # Server Message Block overview
 
->Applies to: Windows Server 2012 R2, Windows Server 2012, and Windows Server 2016.
+>Applies to: Windows Server 2012 R2, Windows Server 2012, Windows Server 2016
 
 This topic describes the SMB 3.0 feature in Windows Server® 2012, Windows Server 2012 R2, and Windows Server 2016—practical uses for the feature, the most significant new or updated functionality in this version compared to previous versions, and the hardware requirements.
 

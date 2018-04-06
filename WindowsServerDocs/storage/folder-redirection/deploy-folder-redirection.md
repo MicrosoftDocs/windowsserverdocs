@@ -11,7 +11,7 @@ ms.localizationpriority: low
 ---
 # Deploy Folder Redirection with Offline Files
 
->Applies to Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, and Windows Vista.
+>Applies to: Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, Windows Vista
 
 This topic describes how to use Windows Server to deploy Folder Redirection with Offline Files to Windows client computers.
 

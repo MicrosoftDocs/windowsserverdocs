@@ -11,7 +11,7 @@ ms.localizationpriority: low
 ---
 # Improve performance of a file server with SMB Direct
 
->Applies to Windows Server 2012 R2, Windows Server 2012, and Windows Server 2016.
+>Applies to: Windows Server 2012 R2, Windows Server 2012, Windows Server 2016
 
 Windows Server 2012 R2, Windows Server 2012, and Windows Server 2016 include a feature called SMB Direct, which supports the use of network adapters that have Remote Direct Memory Access (RDMA) capability. Network adapters that have RDMA can function at full speed with very low latency, while using very little CPU. For workloads such as Hyper-V or Microsoft SQL Server, this enables a remote file server to resemble local storage. SMB Direct includes:
 
