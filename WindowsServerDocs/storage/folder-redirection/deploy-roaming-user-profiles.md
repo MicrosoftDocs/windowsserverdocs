@@ -346,48 +346,15 @@ Each profile has a profile version that corresponds roughly to the version of Wi
 
 The following table lists the location of Roaming User Profiles on various versions of Windows.
 
-<table>
-<thead>
-<tr class="header">
-<th>Operating system version</th>
-<th>Roaming User Profile location</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Windows XP and Windows Server 2003</td>
-<td>\\<em>&lt;servername&gt;</em>\<em>&lt;fileshare&gt;</em>\<em>&lt;username&gt;</em></td>
-</tr>
-<tr class="even">
-<td>Windows Vista and Windows Server 2008</td>
-<td>\\<em>&lt;servername&gt;</em>\<em>&lt;fileshare&gt;</em>\<em>&lt;username&gt;</em>.V2</td>
-</tr>
-<tr class="odd">
-<td>Windows 7 and Windows Server 2008 R2</td>
-<td>\\<em>&lt;servername&gt;</em>\<em>&lt;fileshare&gt;</em>\<em>&lt;username&gt;</em>.V2</td>
-</tr>
-<tr class="even">
-<td>Windows 8 and Windows Server 2012</td>
-<td>\\<em>&lt;servername&gt;</em>\<em>&lt;fileshare&gt;</em>\<em>&lt;username&gt;</em>.V3 (after the software update and registry key are applied)<br />
-<br />
-\\<em>&lt;servername&gt;</em>\<em>&lt;fileshare&gt;</em>\<em>&lt;username&gt;</em>.V2 (before the software update and registry key are applied)</td>
-</tr>
-<tr class="odd">
-<td>Windows 8.1 and Windows Server 2012 R2</td>
-<td>\\&lt;servername&gt;\&lt;fileshare&gt;\&lt;username&gt;.V4 (after the software update and registry key are applied)<br />
-<br />
-\\<em>&lt;servername&gt;</em>\<em>&lt;fileshare&gt;</em>\<em>&lt;username&gt;</em>.V2 (before the software update and registry key are applied)</td>
-</tr>
-<tr class="even">
-<td>Windows 10</td>
-<td>\\&lt;servername&gt;\&lt;fileshare&gt;\&lt;username&gt;.V5</td>
-</tr>
-<tr class="odd">
-<td>Windows 10, version 1703 and version 1607</td>
-<td>\\&lt;servername&gt;\&lt;fileshare&gt;\&lt;username&gt;.V6</td>
-</tr>
-</tbody>
-</table>
+|Operating system version|Roaming User Profile location|
+|---|---|
+|Windows XP and Windows Server 2003|```\\<servername>\<fileshare>\<username>```|
+|Windows Vista and Windows Server 2008|```\\<servername>\<fileshare>\<username>.V2```|
+|Windows 7 and Windows Server 2008 R2|```\\<servername>\<fileshare>\<username>.V2```|
+|Windows 8 and Windows Server 2012|```\\<servername>\<fileshare>\<username>.V3``` (after the software update and registry key are applied)<br>```\\<servername>\<fileshare>\<username>.V2``` (before the software update and registry key are applied)|
+|Windows 8.1 and Windows Server 2012 R2|```\\<servername>\<fileshare>\<username>.V4``` (after the software update and registry key are applied)<br>```\\<servername>\<fileshare>\<username>.V2``` (before the software update and registry key are applied)|
+|Windows 10|```\\<servername>\<fileshare>\<username>.V5```|
+|Windows 10, version 1703 and version 1607|```\\<servername>\<fileshare>\<username>.V6```|
 
 ## Change history
 
@@ -408,9 +375,9 @@ The following table summarizes some of the most important changes to this topic.
 
 ## More information
 
-[Deploy Folder Redirection, Offline Files, and Roaming User Profiles](deploy-folder-redirection.md)
-[Deploy Primary Computers for Folder Redirection and Roaming User Profiles](deploy-primary-computers.md)
-[Implementing User State Management](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc784645(v=ws.10)>)
-[Microsoft’s Support Statement Around Replicated User Profile Data](https://blogs.technet.microsoft.com/askds/2010/09/01/microsofts-support-statement-around-replicated-user-profile-data/)
-[Sideload Apps with DISM](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-8.1-and-8/hh852635(v=win.10)>)
-[Troubleshooting packaging, deployment, and query of Windows Runtime-based apps](https://msdn.microsoft.com/library/windows/desktop/hh973484.aspx)
+- [Deploy Folder Redirection, Offline Files, and Roaming User Profiles](deploy-folder-redirection.md)
+- [Deploy Primary Computers for Folder Redirection and Roaming User Profiles](deploy-primary-computers.md)
+- [Implementing User State Management](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc784645(v=ws.10)>)
+- [Microsoft’s Support Statement Around Replicated User Profile Data](https://blogs.technet.microsoft.com/askds/2010/09/01/microsofts-support-statement-around-replicated-user-profile-data/)
+- [Sideload Apps with DISM](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-8.1-and-8/hh852635(v=win.10)>)
+- [Troubleshooting packaging, deployment, and query of Windows Runtime-based apps](https://msdn.microsoft.com/library/windows/desktop/hh973484.aspx)
