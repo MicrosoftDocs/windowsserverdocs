@@ -42,13 +42,13 @@ Consider the following when you configure the networks that support CSV.
     
     If the cluster nodes are connected to networks that should not be used by the cluster, you should disable them. For example, we recommend that you disable iSCSI networks for cluster use to prevent CSV traffic on those networks. To disable a network, in Failover Cluster Manager, select **Networks**, select the network, select the **Properties** action, and then select **Do not allow cluster network communication on this network**. Alternatively, you can configure the **Role** property of the network by using the [Get-ClusterNetwork](https://docs.microsoft.com/en-us/powershell/module/failoverclusters/get-clusternetwork?view=win10-ps) Windows PowerShell cmdlet.
 - **Network adapter properties**. In the properties for all adapters that carry cluster communication, make sure that the following settings are enabled:
-    
+
   - **Client for Microsoft Networks** and **File and Printer Sharing for Microsoft Networks**. These settings support Server Message Block (SMB) 3.0, which is used by default to carry CSV traffic between nodes. To enable SMB, also ensure that the Server service and the Workstation service are running and that they are configured to start automatically on each cluster node.
 
     >[!NOTE]
     >In Windows Server 2012 R2, there are multiple Server service instances per failover cluster node. There is the default instance that handles incoming traffic from SMB clients that access regular file shares, and a second CSV instance that handles only inter-node CSV traffic. Also, if the Server service on a node becomes unhealthy, CSV ownership automatically transitions to another node.
 
-      SMB 3.0 includes the SMB Multichannel and SMB Direct features, which enable CSV traffic to stream across multiple networks in the cluster and to leverage network adapters that support Remote Direct Memory Access (RDMA). By default, SMB Multichannel is used for CSV traffic. For more information, see [Server Message Block](hh831795\(v=ws.11\).md).
+      SMB 3.0 includes the SMB Multichannel and SMB Direct features, which enable CSV traffic to stream across multiple networks in the cluster and to leverage network adapters that support Remote Direct Memory Access (RDMA). By default, SMB Multichannel is used for CSV traffic. For more information, see [Server Message Block overview](file-server-smb-overview.md).
   - **Microsoft Failover Cluster Virtual Adapter Performance Filter**. This setting improves the ability of nodes to perform I/O redirection when it is required to reach CSV, for example, when a connectivity failure prevents a node from connecting directly to the CSV disk. For more information, see [About I/O synchronization and I/O redirection in CSV communication](#about-i/o-synchronization-and-i/o-redirection-in-csv-communication) later in this topic.
 - **Cluster network prioritization**. We generally recommend that you do not change the cluster-configured preferences for the networks.
 - **IP subnet configuration**. No specific subnet configuration is required for nodes in a network that use CSV. CSV can support multisubnet clusters.
