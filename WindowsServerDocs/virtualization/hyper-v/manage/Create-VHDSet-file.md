@@ -38,7 +38,7 @@ PS c:\>New-VHD -Path c:\base.vhds -SizeBytes 10GB
 
 ## Migrate a shared VHDX file to a VHD Set file
 
-Migrating an existing shared VHDX to a VHDS requires taking the VM offline. This is recommended process, using Windows PowerShell:
+Migrating an existing shared VHDX to a VHDS requires taking the VM offline. This is the recommended process using Windows PowerShell:
 
 1.	Remove the VHDX from the VM. For example, run: 
   ``` PowerShell
