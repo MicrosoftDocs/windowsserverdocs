@@ -13,6 +13,7 @@ author: lizap
 manager: dongill
 ms.author: elizapo
 date: 01/13/2017
+ms.localizationpriority: medium
 ---
 # Get started with Remote Desktop on iOS
 
