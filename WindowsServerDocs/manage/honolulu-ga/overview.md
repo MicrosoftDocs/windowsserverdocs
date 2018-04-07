@@ -18,7 +18,7 @@ Welcome to **Windows Admin Center**!
 
 **Windows Admin Center** is an evolution of Windows Server in-box management tools; it’s a single pane of glass, consolidating all aspects of local and remote server management. As a locally deployed, browser-based management experience, an Internet connection and Azure aren’t required.  **Windows Admin Center** supports scenarios where customers need full control of all aspects of their deployment, including private networks which aren’t Internet-connected.
 
-> ## **Project Honolulu** is now [**Windows Admin Center**!](windows-admin-center.md)
+> ## **Project Honolulu** is now [**Windows Admin Center**!](understand/windows-admin-center.md)
 
 <table>
     <tr></tr>

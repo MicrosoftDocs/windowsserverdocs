@@ -1,7 +1,7 @@
 # [Windows Admin Center](overview.md)
 
 # Understand
-## [Get Started](understand/windows-admin-center.md)
+## [Aloha, Windows Admin Center!](understand/windows-admin-center.md)
 ## [What is Windows Admin Center](understand/what-is.md)
 ## [Capabilities](understand/capabilities.md)
 ## [FAQ](understand/faq.md)
