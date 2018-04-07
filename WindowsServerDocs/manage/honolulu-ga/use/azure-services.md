@@ -1,5 +1,5 @@
 ---
-title: Protect your Hyper-V Virtual Machines with Azure Site Recovery from Windows Admin Center
+title: Protect your Hyper-V Virtual Machines from Windows Admin Center with Azure Site Recovery
 description: Use Windows Admin Center (Project Honolulu) to protect Hyper-V VMs with Azure Site Recovery.
 ms.technology: manage
 ms.topic: article
@@ -9,9 +9,11 @@ ms.date: 04/12/2018
 ms.localizationpriority: low
 ms.prod: windows-server-threshold
 ---
-# Protect your Hyper-V Virtual Machines with Azure Site Recovery from Windows Admin Center
+# Protect your Hyper-V Virtual Machines from Windows Admin Center with Azure Site Recovery
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 and Windows 10
+
+[Learn more about Azure integration with Windows Admin Center.](../plan/azure-integration-options.md)
 
 Windows Admin Center streamlines the process of replicating your virtual machines on your Hyper-V servers or clusters, making it easier to leverage the power of Azure from your own datacenter. To automate setup, you can connect the Windows Admin Center gateway to Azure.
 
