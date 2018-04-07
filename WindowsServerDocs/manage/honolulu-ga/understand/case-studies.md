@@ -21,7 +21,7 @@ ms.prod: windows-server-threshold
 - Convergent Computing
 
 # Ava6
-
+[Create a hyperlink to company page]
 Ava6 is an IT consulting company that specializes in design, evaluation, and integration of IT infrastructure, specifically virtualization, networking, storage, backup, and cloud computing. 
 
 Ava6 uses Windows Server 2016 Core, Hyper-V, Failover Clustering, and S2D. 

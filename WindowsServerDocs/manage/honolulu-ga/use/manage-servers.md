@@ -14,7 +14,7 @@ ms.prod: windows-server-threshold
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-[Server Manager overview]
+Server Manager is a Windows Admin Center solution centered around management of an individual server.
 
 ## Tools
 
@@ -75,7 +75,7 @@ The following features are either in progress or have been proposed for Server M
 
 ## Description
 
-[Tool description]
+**Certificates** allows you to manage certificate stores on a computer or server.
 
 ## Features
 
@@ -102,7 +102,7 @@ The following features are either in progress or have been proposed for Certific
 
 ## Description
 
-[Tool description]
+**Devices** allows you to manage connected devices on a computer or server.
 
 ## Features
 
@@ -127,7 +127,7 @@ The following features are either in progress or have been proposed for Devices:
 
 ## Description
 
-[Tool description]
+**Events** allows you to manage event logs on a computer or server.
 
 ## Features
 
@@ -152,7 +152,7 @@ The following features are either in progress or have been proposed for Events:
 
 ## Description
 
-[Tool description]
+**Files** allows you to manage files and folders on a computer or server.
 
 ## Features
 
@@ -182,7 +182,7 @@ The following features are either in progress or have been proposed for Files:
 
 ## Description
 
-[Tool description]
+**Firewall** allows you to manage firewall settings and rules on a computer or server.
 
 ## Features
 
@@ -212,7 +212,7 @@ The following features are either in progress or have been proposed for Firewall
 
 ## Description
 
-[Tool description]
+**Local Users and Groups** allows you to manage security groups and users that exist locally on a computer or server.
 
 ## Features
 
@@ -239,7 +239,7 @@ The following features are either in progress or have been proposed for Local Us
 
 ## Description
 
-[Tool description]
+**Network** allows you to manage network devices and settigns on a computer or server.
 
 ## Features
 
@@ -263,7 +263,7 @@ The following features are either in progress or have been proposed for Network:
 
 ## Description
 
-[Tool description]
+**PowerShell** allows you to interact with a computer or server via a PowerShell session.
 
 ## Features
 
@@ -286,7 +286,7 @@ The following features are either in progress or have been proposed for PowerShe
 
 ## Description
 
-[Tool description]
+**Processes** allows you to manage running processes on a computer or server.
 
 ## Features
 
@@ -313,7 +313,7 @@ The following features are either in progress or have been proposed for Processe
 
 ## Description
 
-[Tool description]
+**Registry** allows you to manage registry keys and values on a computer or server.
 
 ## Features
 
@@ -337,7 +337,7 @@ The following features are either in progress or have been proposed for Registry
 
 ## Description
 
-[Tool description]
+**Remote Desktop** allows you to interact with a computer or server via an interactive desktop session.
 
 ## Features
 
@@ -361,7 +361,7 @@ The following features are either in progress or have been proposed for Remote D
 
 ## Description
 
-[Tool description]
+**Roles and Features** allows you to manage roles and features on a server.
 
 ## Features
 
@@ -386,7 +386,7 @@ The following features are either in progress or have been proposed for Roles an
 
 ## Description
 
-[Tool description]
+**Services** allows you to manage services on a computer or server.
 
 ## Features
 
@@ -432,7 +432,7 @@ The following features are either in progress or have been proposed for Storage 
 
 ## Description
 
-[Tool description]
+**Storage** allows you to manage storage devices on a computer or server.
 
 ## Features
 
@@ -464,7 +464,7 @@ The following features are either in progress or have been proposed for Storage:
 
 ## Description
 
-[Tool description]
+**Updates** allows you to manage Microsoft and/or Windows Updates on a computer or server.
 
 ## Features
 
@@ -489,7 +489,7 @@ The following features are either in progress or have been proposed for Updates:
 
 ## Description
 
-[Tool description]
+**Virtual Machines** allows you to manage and interact with Hyper-V virtual machines on a computer or server.
 
 ## Features
 
@@ -523,7 +523,7 @@ The following features are either in progress or have been proposed for Virtual 
 
 ## Description
 
-[Tool description]
+**Virtual Switches** allows you to manage Hyper-V virtual switches on a computer or server.
 
 ## Features
 
