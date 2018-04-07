@@ -71,6 +71,8 @@ Windows Admin Center is complementary to and does not replace RSAT (Remote Serve
 
 **A:** Yes, Windows Admin Center can be installed on a Windows 10 computer, running in desktop mode.  Windows Admin Center can also be installed on a server running Windows Server 2016 in service mode, and then accessed via a web browser from a Windows 10 computer.  [Learn more about installation options](..\plan\installation-options.md).
 
+[need W10 1709 for Edge browser usage]
+
 ## Q: Which web browsers are supported by Windows Admin Center?
 **A:** The latest versions of Microsoft Edge and Google Chrome browsers are tested and supported on Windows 10. Other modern web browsers or other platforms are not currently part of our test matrix and are therefore not officially supported.
 
@@ -120,3 +122,7 @@ Windows Admin Center is complementary to and does not replace RSAT (Remote Serve
 ## Q: Where can I learn more about Windows Admin Center, or get more details on the topics above?
 
 **A:** Our launch page: https://aka.ms/WindowsAdminCenter is the best starting point and has links to our newly categorized documentation content, download location, how to provide feedback, reference information, and other resources.
+
+Q: [I'm having an issue with Windows Admin Center, what do I do]
+
+A: [see our troubleshooting section]

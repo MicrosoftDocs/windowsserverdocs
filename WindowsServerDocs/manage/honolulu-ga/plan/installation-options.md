@@ -46,4 +46,27 @@ and that the version is 5.0 or higher.
 
 ## Deployment options
 
-![](../../media/honolulu/spacer1.png)![](../../media/honolulu/deployment.png)
+<table>
+    <tr>
+        <td style="vertical-align: top;">
+            <img src="../../media/honolulu-ga/deployment-options-1.png" width="125" alt="Icon representing app window"> 
+        </td>
+        <td style="vertical-align: top;">
+            <img src="../../media/honolulu-ga/deployment-options-2.png" width="125" alt="Icon representing app window"> 
+        </td>
+        <td style="vertical-align: top;">
+            <img src="../../media/honolulu-ga/deployment-options-3.png" width="160" alt="Icon representing app window"> 
+        </td>
+    </tr>
+    <tr>
+        <td style="vertical-align: top;">
+Install on a local Windows 10 client that has connectivity to the managed servers.  Great for quick start, testing, ad-hoc or small scale scenarios.
+        </td>
+        <td style="vertical-align: top;">
+Install on a designated gateway server and access from any client browser with connectivity to the gateway server.
+        </td>
+        <td style="vertical-align: top;">
+Install directly on a managed server for the purpose of managing itself or a cluster in which it's a member node.
+        </td>
+    </tr>
+</table>

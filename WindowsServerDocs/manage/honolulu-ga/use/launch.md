@@ -14,6 +14,8 @@ ms.prod: windows-server-threshold
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
+[this is from an end-user perspective - starting point]
+[connection list, tagging, etc]
 ## Connecting to managed nodes and clusters ##
 
 After you have completed the installation of Windows Admin Center, you can add servers or clusters to manage from the main overview page.
@@ -52,6 +54,8 @@ You can use your current Windows credentials to authenticate with the managed no
 
 **Single sign-on when deployed as a Service on Windows Server**
 
+[move configure to configure section ]
+
 If you have installed Windows Admin Center on Windows 10, single sign-on needs no additional configuration. 
 
 However, if you have installed Windows Admin Center on Windows Server, you must have some form of Kerberos delegation enabled in your environment, configured with the gateway machine trusted to delegate to the target node. 
@@ -72,6 +76,8 @@ To remove this relationship, use the following command:
     Set-ADComputer -Identity $nodeObject -PrincipalsAllowedToDelegateToAccount $null
 
 **-- OR --**
+
+[stays here]
 
 **Use *Manage As* to Specify credentials**
 
