@@ -57,6 +57,14 @@ Quick links: [Documentation](../overview.md) | [Give feedback](todo) | [Recent u
 | <img src="../../media/honolulu-ga/secure-icon.png" width="100" alt="Icon representing secure server">  | <b>Secure management</b> <br/> Control who can manage servers and get unparalleled insight into the actions administrators perform in your environment.  |
 
 <!-- 
+//VERSION OF TABLE WITH HYPERLINKS
+|   |   |
+|:-:|:--|
+| <img src="../../media/honolulu-ga/simple-icon.png" width="100" alt="Icon representing app window">  | <b>Simple & lightweight</b> <br/> Familiar tools are streamlined to make management tasks a breeze. [Install](../overview.md#get-started) in under 5 minutes and manage servers in your environment immediately, no target configuration required. |
+| <img src="../../media/honolulu-ga/future-icon.png" width="100" alt="Icon representing hybrid cloud">  | <b>Built for the future</b> <br/> [Integration with Azure services](../plan/azure-integration-options.md) helps you leverage the power of the hybrid world. [Manage Hyper-Converged clusters](../use/manage-hyper-converged.md) with powerful yet simple tools.  |
+| <img src="../../media/honolulu-ga/secure-icon.png" width="100" alt="Icon representing secure server">  | <b>Secure management</b> <br/> [Control](../plan/user-access-options.md) who can manage servers and [get unparalleled insight](../configure/logging.md) into the actions administrators perform in your environment. | -->
+
+<!-- 
 
 <table>
 	<tr style="border: 0;">
