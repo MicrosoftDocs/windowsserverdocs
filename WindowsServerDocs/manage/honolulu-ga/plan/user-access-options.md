@@ -14,7 +14,7 @@ ms.prod: windows-server-threshold
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-When deployed as a service on Windows Server, Windows Admin Center provides a centralized point of management for your server envrionment. By controlling access to Windows Admin Center, you can tighten security of your management landscape.
+When deployed as a service on Windows Server, Windows Admin Center provides a centralized point of management for your server envrionment. By controlling access to Windows Admin Center, you can improve the security of your management landscape.
 
 ## Gateway access roles
 
@@ -24,10 +24,10 @@ Windows Admin Center defines two roles for access to the gateway service: gatewa
 
 **Gateway administrators** can configure who gets access as well as how users will authenticate to the gateway. 
 
+[Configure gateway user and adminstrator access in Windows Admin Center.](../configure/user-access-control.md)
+
 > [!NOTE] 
 > Access to the gateway does not imply access to the target servers visible by the gateway. To manage a target server, a user must connect with credentials that have administrative privileges on the target server.
-
-[Configure gateway user and adminstrator access in Windows Admin Center.](../configure/user-access-control.md)
 
 ## Identity provider options
 

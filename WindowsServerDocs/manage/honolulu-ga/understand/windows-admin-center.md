@@ -21,7 +21,7 @@ Windows Admin Center is generally available and can be deployed in production en
 
 ********************
 
-Quick links: [Documentation](../overview.md) | [Give feedback](todo) | [Recent updates](todo) | [For developers](../extend/how-sdk-works.md)
+Quick links: [Documentation](../overview.md) | [Give feedback](https://aka.ms/WindowsAdminCenterFeedback) | [Recent updates](../overview.md#latest-features) | [For developers](../extend/how-sdk-works.md)
 
 ********************
 
@@ -102,41 +102,22 @@ Quick links: [Documentation](../overview.md) | [Give feedback](todo) | [Recent u
 <!-- | <img src=//ADDICON width="100" alt="Company 1 Logo"><br/> Case study 1   |  <img src=//ADDICON width="100" alt="Company 2 Logo"> <br/> Case study 2 | <img src=//ADDICON width="100" alt="Company 3 Logo"> <br/> Case study 3  |
 |:-:|:-:|:-:| -->
 
+|  |
+|--|
+| "[Windows Admin Center] has decreased our time/effort in managing the management system by over 75%." <br/> *- Rand Morimoto, President, Convergent Computing* |
+| "Thanks to [Windows Admin Center], we can manage our customers remotely from HTML5 portal without problem and with the full integration with Azure Active Directory, we are able to increase the security thanks to the Multi-Factor Authentication."<br/> *- Silvio Di Benedetto, Founder and Senior Consultant, Inside Technologies* |
+| “We have been able to deploy [Server Core] SKUs in a more effective way, improving resource efficiency, security and automation while still achieving a good degree of productivity and reducing errors that can happen when relying on scripting only.” <br/> *- Guglielmo Mengora, Founder and CEO, VaiSulWeb* |
+| “With [Windows Admin Center] customers especially in the SMB market now have an easy to use tool to manage their internal infrastructure. This minimizes administrative efforts and saves a lot of time. And the best of it: there are no additional license fees for [Windows Admin Center]!” <br/> *- Helmut Otto, Managing Director, SecureGUARD* |
 
-<table border="0" cellpadding="0">
-	<tr style="border: 0">
-		<td style="padding: 20px; border: 0;" align="center">
-			"[Windows Admin Center] has decreased our time/effort in managing the management system by over 75%." <br/> 
-			-Rand Morimoto, President, Convergent Computing
-		</td>
-		<td style="padding: 10px; border: 0;" align="center">
-			"With the full integration with Azure Active Directory, we are able to increase the security thanks to the Multi-Factor Authentication."<br/>
-            - Silvio Di Benedetto, Founder and Senior Consultant, Inside Technologies
-		</td>
-        <td style="padding: 10px; border: 0;" align="center">
-			“We have been able to deploy [Server Core] SKUs in a more effective way, improving resource efficiency, security and automation while still achieving a good degree of productivity and reducing errors that can happen when relying on scripting only.” <br/>
-            - Guglielmo Mengora, Founder and CEO, VaiSulWeb
-		</td>
-		<td style="padding: 10px; border: 0;" align="center">
-			“With [Windows Admin Center] customers especially in the SMB market now have an easy to use tool to manage their internal infrastructure. This minimizes administrative efforts and saves a lot of time. And the best of it: there are no additional license fees for [Windows Admin Center]!” <br/>
-            - Helmut Otto, Managing Director, SecureGUARD
-		</td>
-	</tr>
-</table>
-
-[Read more about companies are using Windows Admin Center in their productio evironments.](case-studies.md)
+[Read more about companies are using Windows Admin Center in their production evironments.](case-studies.md)
 
 ********************
-
-
-
 
 ## Related products
 
 Windows Admin Center is designed for managing a single server or cluster. It complements but does not replace existing Microsoft monitoring and management solutions, such as Remote Server Administration Tools (RSAT), System Center, Operations Management Suite, Intune, or Azure Stack. 
 
 [Learn how Windows Admin Center complements other Microsoft management solutions.](related-management.md)
-
 
 ********************
 <!-- <table border="0" cellpadding="0">

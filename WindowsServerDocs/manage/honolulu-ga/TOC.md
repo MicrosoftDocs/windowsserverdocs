@@ -14,8 +14,7 @@
 ## [User access options](plan/user-access-options.md)
 ## [Securing your environment](plan/securing.md)
 ## [Accessing the gateway from anywhere](plan/making-accessible.md)
-## [Redundancy with high availability](plan/high-availability.md)
-## [Azure integration options](plan/azure-integration.md)
+## [Azure integration options](plan/azure-integration-options.md)
 
 # Deploy
 ## [Pre-installation tasks](deploy/pre-installation.md)
@@ -32,6 +31,7 @@
 ## [Launch Windows Admin Center](use/launch.md)
 ## [Manage Hyper-Converged Infrastructure](use/manage-hyper-converged.md)
 ## [Manage failover clusters](use/manage-failover-clusters.md)
+## [Protect your Hyper-V VMs with Azure Site Recovery](use/azure-services.md)
 ## [Common troubleshooting steps](use/troubleshooting.md)
 ## [Known issues](use/known-issues.md)
 
