@@ -42,8 +42,7 @@ Welcome to **Windows Admin Center**!
             <li><a href="plan/user-access-options.md">User access options</a>
             <li><a href="plan/securing.md">Securing your environment</a>
             <li><a href="plan/making-accessible.md">Making accessible from anywhere</a>
-            <li><a href="plan/high-availability.md">Redundancy with High Availability</a>
-            <li><a href="plan/azure-integration.md">What Azure integration options are there?</a>
+            <li><a href="plan/azure-integration-options.md">What Azure integration options are there?</a>
             <br>
             </ul>
         </td>
@@ -76,6 +75,7 @@ Welcome to **Windows Admin Center**!
             <li><a href="use/manage-servers.md">Manage servers</a>
             <li><a href="use/manage-hyper-converged.md">Manage Hyper-Converged Infrastructure</a>
             <li><a href="use/manage_failover-clusters.md">Manage Failover Clusters</a>
+            <li><a href="use/azure-services.md">Protect your Hyper-V VMs with Azure Site Recovery</a>
             <li><a href="use/troubleshooting.md">Common troubleshooting steps</a>
             <li><a href="use/known-issues.md">Known issues</a>
             </ul>
