@@ -97,32 +97,37 @@ Quick links: [Documentation](../overview.md) | [Give feedback](todo) | [Recent u
 
 ********************
 
-## <a name="Case studies"></a> See how companies use Windows Admin Center in their production environments 
+## See how customers are benefitting from Windows Admin Center
 
-| <img src=//ADDICON width="100" alt="Company 1 Logo"><br/> Case study 1   |  <img src=//ADDICON width="100" alt="Company 2 Logo"> <br/> Case study 2 | <img src=//ADDICON width="100" alt="Company 3 Logo"> <br/> Case study 3  |
-|:-:|:-:|:-:|
+<!-- | <img src=//ADDICON width="100" alt="Company 1 Logo"><br/> Case study 1   |  <img src=//ADDICON width="100" alt="Company 2 Logo"> <br/> Case study 2 | <img src=//ADDICON width="100" alt="Company 3 Logo"> <br/> Case study 3  |
+|:-:|:-:|:-:| -->
 
-<!-- 
 
-<table align="center" border="0" cellpadding="0">
+<table border="0" cellpadding="0">
 	<tr style="border: 0">
 		<td style="padding: 20px; border: 0;" align="center">
-			<img src=//ADDICON width="100" alt="Company 1 Logo"> <br/>
-            Case study 1
+			"[Windows Admin Center] has decreased our time/effort in managing the management system by over 75%." <br/> 
+			-Rand Morimoto, President, Convergent Computing
 		</td>
 		<td style="padding: 10px; border: 0;" align="center">
-			<img src=//ADDICON width="100" alt="Company 2 Logo"> <br/>
-            Case study 2
+			"With the full integration with Azure Active Directory, we are able to increase the security thanks to the Multi-Factor Authentication."<br/>
+            - Silvio Di Benedetto, Founder and Senior Consultant, Inside Technologies
 		</td>
         <td style="padding: 10px; border: 0;" align="center">
-			<img src=//ADDICON width="100" alt="Company 3 Logo"> <br/>
-            Case study 3
+			“We have been able to deploy [Server Core] SKUs in a more effective way, improving resource efficiency, security and automation while still achieving a good degree of productivity and reducing errors that can happen when relying on scripting only.” <br/>
+            - Guglielmo Mengora, Founder and CEO, VaiSulWeb
+		</td>
+		<td style="padding: 10px; border: 0;" align="center">
+			“With [Windows Admin Center] customers especially in the SMB market now have an easy to use tool to manage their internal infrastructure. This minimizes administrative efforts and saves a lot of time. And the best of it: there are no additional license fees for [Windows Admin Center]!” <br/>
+            - Helmut Otto, Managing Director, SecureGUARD
 		</td>
 	</tr>
 </table>
 
+[Read more about companies are using Windows Admin Center in their productio evironments.](case-studies.md)
+
 ********************
- -->
+
 
 
 

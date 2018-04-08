@@ -53,7 +53,7 @@ and that the version is 5.0 or higher.
             <img src="../../media/honolulu-ga/deployment-options-1.png" width="125" alt="Diagram of Windows 10 desktop installation"> 
         </td>
         <td style="vertical-align: top;">
-            <img src="../../media/honolulu-ga/deployment-options-3.png" width="160" alt="Diagram of managed server installation"> 
+            <img src="../../media/honolulu-ga/deployment-options-3.png" width="125" alt="Diagram of managed server installation"> 
         </td>
         <td style="vertical-align: top;">
             <img src="../../media/honolulu-ga/deployment-options-2.png" width="125" alt="Diagram of desigated gateway server installation"> 
