@@ -12,7 +12,7 @@ ms.prod: windows-server-threshold
 
 # What is Windows Admin Center?
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10
 
 <b>Windows Admin Center</b> is a locally deployed, browser-based, management tool set that enables on-premises administration of Windows Servers with no Azure or cloud dependency. Windows Admin Center gives IT Admins full control over all aspects of their server infrastructure, and is particularly useful for management on private networks that are not connected to the Internet.
 
@@ -28,9 +28,9 @@ Publishing the gateway web server to DNS, and configuring any corresponding corp
 
 ![](../../media/honolulu-ga/spacer1.png)![](../../media/honolulu-ga/architecture.png)
 
-# What does Windows Admin Center do?
+## What does Windows Admin Center do?
 
-## Simplified server management
+<b>Simplified server management</b>
 
 <table>
     <tr>
@@ -43,7 +43,7 @@ Windows Admin Center consolidates your many distinct tools into one clean, simpl
     </tr>
 </table>
 
-## Illuminate your datacenter infrastructure
+<b>Illuminate your datacenter infrastructure</b>
 
 <table>
     <tr>
@@ -56,7 +56,7 @@ With Windows Admin Center, you can connect to all the important parts of your in
     </tr>
 </table>
 
-## The tools you know, reimagined
+<b>The tools you know, reimagined</b>
 
 <table>
     <tr>
@@ -69,8 +69,7 @@ We've constructed Windows Admin Center to provide the core familiar tools you ha
     </tr>
 </table>
 
-
-## Manage your Hyper-converged Infrastructure
+<b>Manage your Hyper-converged Infrastructure</b>
 
 <table>
     <tr>
