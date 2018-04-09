@@ -17,7 +17,7 @@
 ## [Azure integration options](plan/azure-integration-options.md)
 
 # Deploy
-## [Pre-installation tasks](deploy/pre-installation.md)
+## [Prepare your environment](deploy/prepare-environment.md)
 ## [Install](deploy/install.md)
 ## [High availability](deploy/high-availability.md)
 
