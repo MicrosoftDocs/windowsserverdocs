@@ -83,8 +83,8 @@ The remainder of the is document provides the steps for adding a Windows Server 
 
     ![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_10.png)  
 
-> [!NOTE]  
-> If your AD FS servers use SQL for configuration, a new manamgement database has now been created with the name "AdfsConfiguraionV3". 
+    > [!NOTE]  
+    > If your AD FS servers use SQL for configuration, a new manamgement database has now been created with the name "AdfsConfiguraionV3". 
 
 12. Now, if you go to AD FS Management, you will see the new nodes that have been added for AD FS in Windows Server 2016  
 
