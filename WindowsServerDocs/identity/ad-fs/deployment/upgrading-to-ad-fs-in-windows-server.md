@@ -77,7 +77,6 @@ The remainder of the is document provides the steps for adding a Windows Server 
 
 10. Now on the Windows Server 2016 Server open PowerShell and run the following cmdlt: Invoke-AdfsFarmBehaviorLevelRaise  
 
-
     ![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_9.png)  
 
 11. When prompted, type Y.  This will begin raising the level.  Once this completes you have successfully raised the FBL.  
