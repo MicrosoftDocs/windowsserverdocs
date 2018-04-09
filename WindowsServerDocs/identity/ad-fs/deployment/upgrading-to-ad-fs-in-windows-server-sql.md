@@ -77,6 +77,9 @@ To following architectural diagram shows the setup that was used to validate and
 #### Raise the Farm Behavior Level (FBL)
 Prior to this step you need to ensure that forestprep and domainprep have been run on your Active Directory environment and that Active Directory has the Windows Server 2016 schema.  This document started with a Windows 2016 domain controller and did not require running these because they were run when AD was installed.
 
+>[!NOTE]
+>Before starting the process below, ensure Windows Server 2016 is current by running Windows Update from Settings.  Continue this process until no further updates are needed. 
+
 1. Now on the Windows Server 2016 Server open PowerShell and run the following: **$cred = Get-Credential** and hit enter.
 2. Enter credentials that have admin privileges on the SQL Server.
 3. Now in PowerShell, enter the following: **Invoke-AdfsFarmBehaviorLevelRaise -Credential $cred**
