@@ -41,46 +41,46 @@ The remainder of the is document provides the steps for adding a Windows Server 
 
 ##### To upgrade your AD FS farm to Windows Server 2016 Farm Behavior Level  
 
-    1.  Using Server Manager install the Active Directory Federation Services Role on the Windows Server 2016  
+1.  Using Server Manager install the Active Directory Federation Services Role on the Windows Server 2016  
 
-    2.  Using the AD FS Configuration wizard, join the new Windows Server 2016 server to the existing AD FS farm.  
+2.  Using the AD FS Configuration wizard, join the new Windows Server 2016 server to the existing AD FS farm.  
 
     ![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_1.png)  
 
-   3.  On the Windows Server 2016 federation server, open AD FS management.    Note that nothing is showing up as this federation server is not the primary server.  
+3.  On the Windows Server 2016 federation server, open AD FS management.    Note that nothing is showing up as this federation server is not the primary server.  
 
     ![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_3.png)  
 
-    4.  Once the join is complete, on the Windows Server 2016 server, open PowerShell and run the following cmdlt:  Set-AdfsSyncProperties -Role PrimaryComputer  
+4.  Once the join is complete, on the Windows Server 2016 server, open PowerShell and run the following cmdlt:  Set-AdfsSyncProperties -Role PrimaryComputer  
 
     ![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_4.png)  
 
-    5.  On the original AD FS Windows Server 2012 R2 server, open PowerShell and run the following cmdlt:  Set-AdfsSyncProperties -Role SecondaryComputer -PrimaryComputerName {FQDN}  
+5.  On the original AD FS Windows Server 2012 R2 server, open PowerShell and run the following cmdlt:  Set-AdfsSyncProperties -Role SecondaryComputer -PrimaryComputerName {FQDN}  
 
     ![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_5.png)  
 
-    6.  On your Web Application Proxy open PowerShell and run the followoing cmdlt:  Install-WebApplicationProxy -CertificateThumbprint {SSLCert} -fsname fsname -TrustCred $trustcred  
+6.  On your Web Application Proxy open PowerShell and run the followoing cmdlt:  Install-WebApplicationProxy -CertificateThumbprint {SSLCert} -fsname fsname -TrustCred $trustcred  
 
-    7.  Now on the Windows Server 2016 federation server open AD FS Management.  Note that now all of the nodes appear because the primary role has been transferred to this server.  
+7.  Now on the Windows Server 2016 federation server open AD FS Management.  Note that now all of the nodes appear because the primary role has been transferred to this server.  
 
     ![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_6.png)  
 
-    8.  With the Windows Server 2016 installation media, open a command prompt and navigate to support\adprep directory.  Run the following:  adprep /forestprep.  
+8.  With the Windows Server 2016 installation media, open a command prompt and navigate to support\adprep directory.  Run the following:  adprep /forestprep.  
 
     ![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_7.png)  
 
-    9. Once that completes run adprep/domainprep  
+9. Once that completes run adprep/domainprep  
     >[!NOTE]
     >Prior to running the next step, ensure Windows Server 2016 is current by running Windows Update from Settings.  Continue this process until no further updates are needed. 
     
     ![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_8.png)  
 
-    10. Now on the Windows Server 2016 Server open PowerShell and run the following cmdlt: Invoke-AdfsFarmBehaviorLevelRaise  
+10. Now on the Windows Server 2016 Server open PowerShell and run the following cmdlt: Invoke-AdfsFarmBehaviorLevelRaise  
 
 
     ![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_9.png)  
 
-    11. When prompted, type Y.  This will begin raising the level.  Once this completes you have successfully raised the FBL.  
+11. When prompted, type Y.  This will begin raising the level.  Once this completes you have successfully raised the FBL.  
 
     ![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_10.png)  
 
