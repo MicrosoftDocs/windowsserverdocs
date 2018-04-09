@@ -11,7 +11,7 @@ author: adagashe
 ms.date: 03/27/2018
 ms.localizationpriority: 
 ---
-# Troubleshooting a Failover Cluster using Windows Error Reporting
+# Troubleshooting a Failover Cluster using Windows Error Reporting 
 
 > Applies to: Windows Server 2016, Windows Server
 
