@@ -2,7 +2,7 @@
 
 # Understand
 ## [Aloha, Windows Admin Center!](understand/windows-admin-center.md)
-## [What is Windows Admin Center](understand/what-is.md)
+## [What is Windows Admin Center?](understand/what-is.md)
 ## [Capabilities](understand/capabilities.md)
 ## [FAQ](understand/faq.md)
 ## [Case Studies](understand/case-studies.md)
@@ -18,7 +18,7 @@
 
 # Deploy
 ## [Pre-installation tasks](deploy/pre-installation.md)
-## [Intall](deploy/install.md)
+## [Install](deploy/install.md)
 ## [High availability](deploy/high-availability.md)
 
 # Configure
