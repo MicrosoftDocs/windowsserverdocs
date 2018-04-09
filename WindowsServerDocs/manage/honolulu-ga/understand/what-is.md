@@ -30,7 +30,7 @@ Publishing the gateway web server to DNS, and configuring any corresponding corp
 
 ## What does Windows Admin Center do?
 
-<b>Simplified server management</b>
+### Simplified server management
 
 <table>
     <tr>
@@ -43,7 +43,7 @@ Windows Admin Center consolidates your many distinct tools into one clean, simpl
     </tr>
 </table>
 
-<b>Illuminate your datacenter infrastructure</b>
+### Illuminate your datacenter infrastructure
 
 <table>
     <tr>
@@ -56,7 +56,7 @@ With Windows Admin Center, you can connect to all the important parts of your in
     </tr>
 </table>
 
-<b>The tools you know, reimagined</b>
+### The tools you know, reimagined
 
 <table>
     <tr>
@@ -69,7 +69,7 @@ We've constructed Windows Admin Center to provide the core familiar tools you ha
     </tr>
 </table>
 
-<b>Manage your Hyper-converged Infrastructure</b>
+### Manage your Hyper-converged Infrastructure
 
 <table>
     <tr>

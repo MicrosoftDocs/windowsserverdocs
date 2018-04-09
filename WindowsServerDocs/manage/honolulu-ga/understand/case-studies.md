@@ -12,7 +12,7 @@ ms.prod: windows-server-threshold
 
 # Windows Admin Center Case Studies
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10
 
 ## Learn about how our customers have used Windows Admin Center to improve their productivity and reduce costs.
 
@@ -25,7 +25,7 @@ ms.prod: windows-server-threshold
 - [SecureGUARD / COPA-DATA](#SecureGUARD_COPADATA)
 - [VaiSulWeb](#VaiSulWeb)
 
-# <a id="Ava6"></a>Ava6
+## <a id="Ava6"></a>Ava6
 http://www.avassys.com/
 
 Ava6 is an IT consulting company that specializes in design, evaluation, and integration of IT infrastructure, specifically virtualization, networking, storage, backup, and cloud computing. 
@@ -44,7 +44,7 @@ Ava6 has Windows Admin Center deployed as a single instance for VM management.
 
 Ava6’s customers have been impressed with Windows Admin Center, and prefer its management capabilities for Hyper-V and Failover Clustering over other options.  Before Windows Admin Center, driver management was overly complicated on a Core server.  Windows Admin Center has also helped introduce S2D Ava6’s customers, with a similar offering to competitors like Nutanix and VMWare. 
 
-# <a id="Comparex"></a>Comparex
+## <a id="Comparex"></a>Comparex
 
 https://www.comparex-group.com
 
@@ -64,7 +64,7 @@ Comparex is running a server-based Windows Admin Center installation for access 
 
 Windows Admin Center has saved Comparex time in their daily business, to do more and achieve more.  Windows Admin Center has also solved common management challenges with their customers, such as with Hyper-V and Storage Spaces Direct. 
 
-# <a id="ConvergentComputing"></a>Convergent Computing
+## <a id="ConvergentComputing"></a>Convergent Computing
 
 http://www.cco.com/
 
@@ -84,7 +84,7 @@ Convergent Computing uses Windows Admin Center to manage three environments with
 
 Prior to Windows Admin Center, Convergent Computing used a range of tools and technologies to perform management tasks, including System Center and custom scripts.  With the goal of minimizing overhead and effort to manage their servers farms, Convergent Computing found that the “thinner” a management layer got, the more complex it became, so they typically ended up with higher overhead for the sake of simplicity.  With Windows Admin Center, 20+ hours a month that were spent “managing the management system” are saved, a 75% reduction in time and effort, allowing their operations teams to focus on more valuable tasks including security, compliance, capacity planning, and overall systems optimization. 
 
-# <a id="FZIResearchCenter"></a>FZI Research Center
+## <a id="FZIResearchCenter"></a>FZI Research Center
 
 https://www.fzi.de
 
@@ -104,7 +104,7 @@ FZI Research Center has multiple installations of Windows Admin Center, both as 
 
 Windows Admin Center allows FZI Research Center to accelerate the rate they can perform tasks like monthly Windows Updates, connecting to servers via Remote Desktop, and making minor administrative changes quickly.  
 
-# <a id="GVCGroup"></a>GVC Group
+## <a id="GVCGroup"></a>GVC Group
 
 https://gvc-plc.com/
 
@@ -124,7 +124,7 @@ GVC Group has deployed Windows Admin Center in a virtualized environment, with a
 
 GVC Group has seen increased productivity due to less management hops for administrators.  This has reduced their cost due to the downscaling of local terminal servers. 
 
-# <a id="InsideTechnologies"></a>Inside Technologies
+## <a id="InsideTechnologies"></a>Inside Technologies
 
 http://www.insidetechnologies.eu
 
@@ -144,7 +144,7 @@ Windows Admin Center is deployed by Inside Technologies on a single server to ma
 
 Inside Technologies is using Windows Admin Center to manage their customers remotely, and with integration of Azure Activity Directory, with increased security thanks to Multi-Factor Authentication.  The dashboards on Windows Admin Center offer improved visibility into the state of each role on each server, and ease of management down to the finest detail with PowerShell.  Inside Technologies has realized a reduction in time spent to manage servers vs. using different consoles for each server role. 
 
-# <a id="SecureGUARD_COPADATA"></a>SecureGUARD / COPA-DATA
+## <a id="SecureGUARD_COPADATA"></a>SecureGUARD / COPA-DATA
 
 http://www.secureguard.at/
 
@@ -164,7 +164,7 @@ COPA-DATA uses Windows Admin Center to monitor and operate their physical and vi
 
 With Windows Admin Center, COPA-DATA has an easy to use tool to manage their internal infrastructure.  This minimizes administrative efforts and saves a lot of time, without any additional license fees. 
 
-# <a id="VaiSulWeb"></a>VaiSulWeb
+## <a id="VaiSulWeb"></a>VaiSulWeb
 
 http://www.vaisulweb.com/
 
