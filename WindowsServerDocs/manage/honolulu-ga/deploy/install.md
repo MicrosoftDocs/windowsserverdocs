@@ -14,6 +14,19 @@ ms.prod: windows-server-threshold
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
+## Supported operating systems ##
+
+You can *install* Windows Admin Center on the following Windows operating systems:
+
+| **Version** | **Installation Mode** |
+|-------------|-----------------------|
+|Windows 10   | Desktop mode |
+|Windows Server, version 1709 | Gateway mode |
+|Windows Server 2016 | Gateway mode |
+
+**Desktop Mode:** Connect to the Windows Admin Center gateway from the same computer on which it's installed (i.e. `http://localhost:[port]`)
+
+**Gateway Mode:** Connect to the Windows Admin Center gateway from a client browser on a different machine (i.e. `https://servername`)
 
 ## Install on Windows 10
 

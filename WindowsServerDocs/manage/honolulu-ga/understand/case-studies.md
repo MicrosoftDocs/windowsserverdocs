@@ -16,11 +16,16 @@ ms.prod: windows-server-threshold
 
 ## Learn about how our customers have used Windows Admin Center to improve their productivity and reduce costs.
 
-- Ava6
-- Comparex
-- Convergent Computing
+- [Ava6](#Ava6)
+- [Comparex](#Comparex)
+- [Convergent Computing](#ConvergentComputing)
+- [FZI Research Center](#FZIResearchCenter)
+- [GVC Group](#GVCGroup)
+- [Inside Technologies](#InsideTechnologies)
+- [SecureGUARD / COPA-DATA](#SecureGUARD_COPADATA)
+- [VaiSulWeb](#VaiSulWeb)
 
-# Ava6
+# <a id="Ava6"></a>Ava6
 [Create a hyperlink to company page]
 Ava6 is an IT consulting company that specializes in design, evaluation, and integration of IT infrastructure, specifically virtualization, networking, storage, backup, and cloud computing. 
 
@@ -38,7 +43,7 @@ Ava6 has Windows Admin Center deployed as a single instance for VM management.
 
 Ava6’s customers have been impressed with Windows Admin Center, and prefer its management capabilities for Hyper-V and Failover Clustering over other options.  Before Windows Admin Center, driver management was overly complicated on a Core server.  Windows Admin Center has also helped introduce S2D Ava6’s customers, with a similar offering to competitors like Nutanix and VMWare. 
 
-# Comparex
+# <a id="Comparex"></a>Comparex
 
 Comparex is an IT service provider and software license management company that has developed services to support management, leverage software products, and enable productivity optimization.
 
@@ -56,7 +61,7 @@ Comparex is running a server-based Windows Admin Center installation for access 
 
 Windows Admin Center has saved Comparex time in their daily business, to do more and achieve more.  Windows Admin Center has also solved common management challenges with their customers, such as with Hyper-V and Storage Spaces Direct. 
 
-# Convergent Computing
+# <a id="ConvergentComputing"></a>Convergent Computing
 
 Convergent Computing is a technology strategy and implementation firm that helps enterprises plan, implement, migrate, and automate systems to improve business operations. 
 
@@ -74,3 +79,92 @@ Convergent Computing uses Windows Admin Center to manage three environments with
 
 Prior to Windows Admin Center, Convergent Computing used a range of tools and technologies to perform management tasks, including System Center and custom scripts.  With the goal of minimizing overhead and effort to manage their servers farms, Convergent Computing found that the “thinner” a management layer got, the more complex it became, so they typically ended up with higher overhead for the sake of simplicity.  With Windows Admin Center, 20+ hours a month that were spent “managing the management system” are saved, a 75% reduction in time and effort, allowing their operations teams to focus on more valuable tasks including security, compliance, capacity planning, and overall systems optimization. 
 
+# <a id="FZIResearchCenter"></a>FZI Research Center
+
+FZI Research Center for Information Technology is a non-profit institution for applied research in information technology and technology transfer. 
+
+FZI Research Center uses Windows Server 2016, Windows 10, Hyper-V, Storage Spaces Direct, and Failover-Cluster. 
+
+### **The Challenge**
+
+FZI Research Center was looking for a way to manage Hyper-V Server in a Failover Cluster, and a Hyper-Converged Cluster. 
+
+FZI Research Center was looking for a centralized way to administrate systems both inside and outside of their domain, with the ability to switch quickly between each of those systems.  Honolulu enabled them to accomplish those goals, all in one place. 
+
+### **The Solution**
+
+FZI Research Center has multiple installations of Windows Admin Center, both as a server installation connecting all of the infrastructure they manage, as well as installations in desktop mode that their administrators use to manage their own testing servers. 
+
+Windows Admin Center allows FZI Research Center to accelerate the rate they can perform tasks like monthly Windows Updates, connecting to servers via Remote Desktop, and making minor administrative changes quickly.  
+
+# <a id="GVCGroup"></a>GVC Group
+
+GVC Group is an online entertainment provider, with over 15,000 servers operated around the globe. 
+
+GVC Group uses Windows Server 2016 with many roles (Hyper-V, WSFC, AD-DS, Fileserver, among others), as well as System Center products including SCCM and SCOM. 
+
+### **The Challenge**
+
+GVC Group operates in a highly regulated market, with the need to deploy systems to many locations worldwide.  Local requirements sometimes require that management of systems is perform in the same country that the server is operated in.  Windows Admin Center allows GVC group to leverage global resources and still perform management tasks on local systems. 
+
+GVC Group need to deploy servers in many locales and still provide reliable, highly available solutions with minimal effort. 
+
+### **The Solution**
+
+GVC Group has deployed Windows Admin Center in a virtualized environment, with a load balancer, to enable management of servers in remote locations. 
+
+GVC Group has seen increased productivity due to less management hops for administrators.  This has reduced their cost due to the downscaling of local terminal servers. 
+
+# <a id="InsideTechnologies"></a>Inside Technologies
+
+Inside Technologies is a globally-focused IT consulting firm that provides application development, enterprise solutions, and infrastructure services.  They specialize in applying new and unique approaches with Microsoft solutions to meet customer’s needs. 
+
+Inside Technologies uses a wide variety of Windows Server technologies, including Hyper-V and Storage.
+
+### **The Challenge**
+
+Inside Technologies primary needed a way to provide their customers with new tools in an always-connected environment that was integrated with high security, and without the need to use VPN. 
+
+Inside Technologies have customers where uptime is critical, and were looking for a tool that allowed them to manage their servers easily without exposing RDP and without adding complexity with VPN. 
+
+### **The Solution**
+
+Windows Admin Center is deployed by Inside Technologies on a single server to manage all assets in their environment. 
+
+Inside Technologies is using Windows Admin Center to manage their customers remotely, and with integration of Azure Activity Directory, with increased security thanks to Multi-Factor Authentication.  The dashboards on Windows Admin Center offer improved visibility into the state of each role on each server, and ease of management down to the finest detail with PowerShell.  Inside Technologies has realized a reduction in time spent to manage servers vs. using different consoles for each server role. 
+
+# <a id="SecureGUARD_COPADATA"></a>SecureGUARD / COPA-DATA
+
+SecureGUARD GmbH helps companies solve complex IT problems in security and cloud infrastructure with a series of products and custom engineering services. SecureGUARD builds IT security appliances and Microsoft Windows Server based appliances, more recently building rack-level converged appliances for cloud infrastructures. SecureGUARD is a Microsoft Gold Partner in Application Development and Datacenter. 
+ 
+COPA-DATA develops the software solution “Zenon” that allows for end-to-end industrial IoT solutions - from the field level up to the cloud and to mobile devices. COPA-DATA has deployed systems worldwide to companies in the Food & Beverage, Energy & Infrastructure, Automotive and Pharmaceutical sectors. 
+
+### **The Challenge**
+
+COPA-DATA implemented a 4-node hyper converged cluster designed and implemented by SecureGUARD GmbH in late 2017 to host their internal infrastructure and test servers. 
+
+COPA-DATA found itself limited by its old IT infrastructure. Specifically, monitoring and operating their infrastructure with approx. 60 virtual machines became a real challenge for the IT department. 
+
+### **The Solution**
+
+COPA-DATA uses Windows Admin Center to monitor and operate their physical and virtual server infrastructure, all accessible from one browser window. Tasks like provisioning a new virtual machine or viewing performance data of a physical server or VM are now done with a simple mouse click in the Windows Admin Center web interface. 
+
+With Windows Admin Center, COPA-DATA has an easy to use tool to manage their internal infrastructure.  This minimizes administrative efforts and saves a lot of time, without any additional license fees. 
+
+# <a id="VaiSulWeb"></a>VaiSulWeb
+
+VaiSulWeb is a web hosting and IaaS/PaaS services provider that also provides development and integration services. 
+
+VaiSulWeb uses Windows Server 2016 and 2012 R2, with Hyper-V, Failover Clustering, Storage Spaces Direct, File Servers, SQL Server, IIS, and WSL.
+
+### **The Challenge**
+
+VaiSulWeb was looking to leverage the agility and efficiency of Server Core when deploying resources, while maintaining ease of management for those resources.  VaiSulWeb uses a combination of PowerShell automation for simple tasks and UI for more complicated ones. 
+
+VaiSulWeb has gained increased confidence deploying Windows Server Core with the increased ability to manage with Windows Admin Center, plus the ability to extend Windows Admin Center for a customized experience. 
+
+### **The Solution**
+
+VaiSulWeb deploys in a wide variety of scenarios, including failover clustering and hyperconverged.  Windows Admin Center is deployed on both Windows 10 workstations and Windows Servers to manage their assets. 
+
+VaiSulWeb has been able to deploy Windows Server Core more effectively, while improving resource efficiency, security, and automation.  VaiSulWeb has achieved improved productivity and reduced errors versus management with scripts only. 
