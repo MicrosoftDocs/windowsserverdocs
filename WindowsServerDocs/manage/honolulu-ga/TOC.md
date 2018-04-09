@@ -29,6 +29,7 @@
 
 # Use
 ## [Launch Windows Admin Center](use/launch.md)
+## [Manage Servers](use/manage-servers.md)
 ## [Manage Hyper-Converged Infrastructure](use/manage-hyper-converged.md)
 ## [Manage failover clusters](use/manage-failover-clusters.md)
 ## [Protect your Hyper-V VMs with Azure Site Recovery](use/azure-services.md)
