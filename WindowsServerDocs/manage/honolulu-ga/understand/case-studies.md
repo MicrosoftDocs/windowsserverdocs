@@ -14,16 +14,16 @@ ms.prod: windows-server-threshold
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10
 
-## <a id="At a glance"></a>Learn about how our customers have used Windows Admin Center to improve their productivity and reduce costs.
+## <a title="At a glance"></a>Learn about how our customers have used Windows Admin Center to improve their productivity and reduce costs.
 
 - [Ava6](#ava6)
 - [Comparex](#comparex)
 - [Convergent Computing](#convergent-computing)
 - [FZI Research Center](#fzi-research-center)
-- [GVC Group](#GVCGroup)
-- [Inside Technologies](#InsideTechnologies)
-- [SecureGUARD / COPA-DATA](#SecureGUARD_COPADATA)
-- [VaiSulWeb](#VaiSulWeb)
+- [GVC Group](#gvc-group)
+- [Inside Technologies](#inside-technologies)
+- [SecureGUARD / COPA-DATA](#secureguard-copa-data)
+- [VaiSulWeb](#vaisulweb)
 
 ## Ava6
 http://www.avassys.com/
@@ -104,7 +104,7 @@ FZI Research Center has multiple installations of Windows Admin Center, both as 
 
 Windows Admin Center allows FZI Research Center to accelerate the rate they can perform tasks like monthly Windows Updates, connecting to servers via Remote Desktop, and making minor administrative changes quickly.  
 
-## <a id="GVCGroup"></a>GVC Group
+## GVC Group
 
 https://gvc-plc.com/
 
@@ -124,7 +124,7 @@ GVC Group has deployed Windows Admin Center in a virtualized environment, with a
 
 GVC Group has seen increased productivity due to less management hops for administrators.  This has reduced their cost due to the downscaling of local terminal servers. 
 
-## <a id="InsideTechnologies"></a>Inside Technologies
+## Inside Technologies
 
 http://www.insidetechnologies.eu
 
@@ -144,7 +144,7 @@ Windows Admin Center is deployed by Inside Technologies on a single server to ma
 
 Inside Technologies is using Windows Admin Center to manage their customers remotely, and with integration of Azure Activity Directory, with increased security thanks to Multi-Factor Authentication.  The dashboards on Windows Admin Center offer improved visibility into the state of each role on each server, and ease of management down to the finest detail with PowerShell.  Inside Technologies has realized a reduction in time spent to manage servers vs. using different consoles for each server role. 
 
-## <a id="SecureGUARD_COPADATA"></a>SecureGUARD / COPA-DATA
+## SecureGUARD / COPA-DATA
 
 http://www.secureguard.at/
 
@@ -164,7 +164,7 @@ COPA-DATA uses Windows Admin Center to monitor and operate their physical and vi
 
 With Windows Admin Center, COPA-DATA has an easy to use tool to manage their internal infrastructure.  This minimizes administrative efforts and saves a lot of time, without any additional license fees. 
 
-## <a id="VaiSulWeb"></a>VaiSulWeb
+## VaiSulWeb
 
 http://www.vaisulweb.com/
 

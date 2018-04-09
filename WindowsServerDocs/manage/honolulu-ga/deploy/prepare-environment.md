@@ -12,15 +12,15 @@ ms.prod: windows-server-threshold
 
 # Prepare your environment for Windows Admin Center
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10
 
 There are some Server versions that need additional preparation before they are ready to manage with Windows Admin Center:
 
-- [Windows Server 2012 and 2012 R2](#Prepare2012)
-- [Microsoft Hyper-V Server 2016](#PrepareHyperV2016)
-- [Microsoft Hyper-V Server 2012 R2](#PrepareHyperV2012R2)
+- [Windows Server 2012 and 2012 R2](#prepare-windows-server-2012-and-2012-r2)
+- [Microsoft Hyper-V Server 2016](#prepare-microsoft-hyper-v-server-2016)
+- [Microsoft Hyper-V Server 2012 R2](#prepare-microsoft-hyper-v-server-2012-r2)
 
-## <a id="Prepare2012"></a>Prepare Windows Server 2012 and 2012 R2
+## Prepare Windows Server 2012 and 2012 R2
 
 >Applies To: Windows Server 2012 and Windows Server 2012 R2
 
@@ -33,7 +33,7 @@ and that the version is 5.0 or higher.
 
 If it is not installed, you can [download and install WMF 5.1](https://www.microsoft.com/en-us/download/details.aspx?id=54616).
 
-## <a id="PrepareHyperV2016"></a>Prepare Microsoft Hyper-V Server 2016
+## Prepare Microsoft Hyper-V Server 2016
 
 >Applies To: Microsoft Hyper-V Server 2016
 
@@ -74,7 +74,7 @@ To enable Hyper-V Module for PowerShell features:
 
 Microsoft Hyper-V Server 2016 is now ready for management with Windows Admin Center.
 
-## <a id="PrepareHyperV2012R2"></a>Prepare Microsoft Hyper-V Server 2012 R2
+## Prepare Microsoft Hyper-V Server 2012 R2
 
 >Applies To: Microsoft Hyper-V Server 2012 R2
 
