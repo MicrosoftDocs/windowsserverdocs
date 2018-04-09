@@ -14,18 +14,18 @@ ms.prod: windows-server-threshold
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10
 
-## Learn about how our customers have used Windows Admin Center to improve their productivity and reduce costs.
+## <a id="At a glance"></a>Learn about how our customers have used Windows Admin Center to improve their productivity and reduce costs.
 
-- [Ava6](#Ava6)
-- [Comparex](#Comparex)
-- [Convergent Computing](#ConvergentComputing)
-- [FZI Research Center](#FZIResearchCenter)
+- [Ava6](#ava6)
+- [Comparex](#comparex)
+- [Convergent Computing](#convergent-computing)
+- [FZI Research Center](#fzi-research-center)
 - [GVC Group](#GVCGroup)
 - [Inside Technologies](#InsideTechnologies)
 - [SecureGUARD / COPA-DATA](#SecureGUARD_COPADATA)
 - [VaiSulWeb](#VaiSulWeb)
 
-## <a id="Ava6"></a>Ava6
+## Ava6
 http://www.avassys.com/
 
 Ava6 is an IT consulting company that specializes in design, evaluation, and integration of IT infrastructure, specifically virtualization, networking, storage, backup, and cloud computing. 
@@ -44,7 +44,7 @@ Ava6 has Windows Admin Center deployed as a single instance for VM management.
 
 Ava6’s customers have been impressed with Windows Admin Center, and prefer its management capabilities for Hyper-V and Failover Clustering over other options.  Before Windows Admin Center, driver management was overly complicated on a Core server.  Windows Admin Center has also helped introduce S2D Ava6’s customers, with a similar offering to competitors like Nutanix and VMWare. 
 
-## <a id="Comparex"></a>Comparex
+## Comparex
 
 https://www.comparex-group.com
 
@@ -64,7 +64,7 @@ Comparex is running a server-based Windows Admin Center installation for access 
 
 Windows Admin Center has saved Comparex time in their daily business, to do more and achieve more.  Windows Admin Center has also solved common management challenges with their customers, such as with Hyper-V and Storage Spaces Direct. 
 
-## <a id="ConvergentComputing"></a>Convergent Computing
+## Convergent Computing
 
 http://www.cco.com/
 
@@ -84,7 +84,7 @@ Convergent Computing uses Windows Admin Center to manage three environments with
 
 Prior to Windows Admin Center, Convergent Computing used a range of tools and technologies to perform management tasks, including System Center and custom scripts.  With the goal of minimizing overhead and effort to manage their servers farms, Convergent Computing found that the “thinner” a management layer got, the more complex it became, so they typically ended up with higher overhead for the sake of simplicity.  With Windows Admin Center, 20+ hours a month that were spent “managing the management system” are saved, a 75% reduction in time and effort, allowing their operations teams to focus on more valuable tasks including security, compliance, capacity planning, and overall systems optimization. 
 
-## <a id="FZIResearchCenter"></a>FZI Research Center
+## FZI Research Center
 
 https://www.fzi.de
 
