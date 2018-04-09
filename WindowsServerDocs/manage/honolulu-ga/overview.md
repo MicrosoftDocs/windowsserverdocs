@@ -12,7 +12,7 @@ ms.prod: windows-server-threshold
 
 # Windows Admin Center
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10
 
 Welcome to **Windows Admin Center**!  
 
@@ -91,21 +91,21 @@ Welcome to **Windows Admin Center**!
 
 </table>
 
-# Get Started
+## Get Started
 
 Getting started with Windows Admin Center is easy!  To start using Windows Admin Center in your environment in minutes, follow these steps:
 
-### 1. [Download](https://aka.ms/WindowsAdminCenter) Windows Admin Center
-### 2. [Install](deploy/install.md) Windows Admin Center
-### 3. [Launch](use/launch.md) Windows Admin Center
+1. [Download](https://aka.ms/WindowsAdminCenter) Windows Admin Center
+2. [Install](deploy/install.md) Windows Admin Center
+3. [Launch](use/launch.md) Windows Admin Center
 
 [Getting Started Video?]
 
 Want to get up and running quickly?  All of these steps can be performed on your Windows 10 PC!  Install and use Windows Admin Center on Windows 10, then start managing PCs and servers in your environment immediately.
 
-# Latest features
+## Latest features
 
-### Learn about our latest released features:
+Learn about our latest released features:
 
 - Version [1804](https://aka.ms/WindowsAdminCenter) is released as Windows Admin Center and adds security features, role-based access control, and is our first GA release.
 - Version [1803](https://blogs.windows.com/windowsexperience/2018/03/13/announcing-project-honolulu-technical-preview-1803-and-rsat-insider-preview-for-windows-10) added support for AAD access control, detailed logging, resizable content, and a bunch of tool improvements.
@@ -114,6 +114,6 @@ Want to get up and running quickly?  All of these steps can be performed on your
 - Version [1711](https://cloudblogs.microsoft.com/windowsserver/2017/12/01/1711-update-to-project-honolulu-technical-preview-is-now-available/) added highly anticipated tools (Remote Desktop, and PowerShell) along with other improvements.
 - Version [1709](https://cloudblogs.microsoft.com/windowsserver/2017/09/22/project-honolulu-technical-preview-is-now-available-for-download/) launched as our first public preview release.
 
-# Links
+## Links
 
-### Follow us: &nbsp; <a target="_blank" class="mscom-link twitter-follow-link" title="Follow us on Twitter" aria-label="Follow us on Twitter" data-info="Twitter" href="https://twitter.com/servermgmt"><picture><source srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOolR" media="(min-width:0)"><img srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOolR" alt="Follow us on Twitter" src="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOolR"></picture></a>&nbsp; <a target="_blank" class="mscom-link blogs-follow-link" title="Follow us on Blogs" aria-label="Follow us on Blogs" data-info="Blogs" href="https://blogs.technet.microsoft.com/servermanagement/"><picture><source srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw" media="(min-width:0)"><img srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw" alt="Follow us on Blogs" src="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw"></picture></a>
+Follow us: &nbsp; <a target="_blank" class="mscom-link twitter-follow-link" title="Follow us on Twitter" aria-label="Follow us on Twitter" data-info="Twitter" href="https://twitter.com/servermgmt"><picture><source srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOolR" media="(min-width:0)"><img srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOolR" alt="Follow us on Twitter" src="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOolR"></picture></a>&nbsp; <a target="_blank" class="mscom-link blogs-follow-link" title="Follow us on Blogs" aria-label="Follow us on Blogs" data-info="Blogs" href="https://blogs.technet.microsoft.com/servermanagement/"><picture><source srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw" media="(min-width:0)"><img srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw" alt="Follow us on Blogs" src="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw"></picture></a>
