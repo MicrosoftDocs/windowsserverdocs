@@ -26,7 +26,8 @@ ms.prod: windows-server-threshold
 - [VaiSulWeb](#VaiSulWeb)
 
 # <a id="Ava6"></a>Ava6
-[Create a hyperlink to company page]
+http://www.avassys.com/
+
 Ava6 is an IT consulting company that specializes in design, evaluation, and integration of IT infrastructure, specifically virtualization, networking, storage, backup, and cloud computing. 
 
 Ava6 uses Windows Server 2016 Core, Hyper-V, Failover Clustering, and S2D. 
@@ -44,6 +45,8 @@ Ava6 has Windows Admin Center deployed as a single instance for VM management.
 Ava6’s customers have been impressed with Windows Admin Center, and prefer its management capabilities for Hyper-V and Failover Clustering over other options.  Before Windows Admin Center, driver management was overly complicated on a Core server.  Windows Admin Center has also helped introduce S2D Ava6’s customers, with a similar offering to competitors like Nutanix and VMWare. 
 
 # <a id="Comparex"></a>Comparex
+
+https://www.comparex-group.com
 
 Comparex is an IT service provider and software license management company that has developed services to support management, leverage software products, and enable productivity optimization.
 
@@ -63,6 +66,8 @@ Windows Admin Center has saved Comparex time in their daily business, to do more
 
 # <a id="ConvergentComputing"></a>Convergent Computing
 
+http://www.cco.com/
+
 Convergent Computing is a technology strategy and implementation firm that helps enterprises plan, implement, migrate, and automate systems to improve business operations. 
 
 Convergent Computing uses Windows Server 2016 (Nano, Core, Datacenter, Standard, Hyper-V) and Windows Server 2012R2 (Server Core, Datacenter, Standard, and Hyper-V) 
@@ -80,6 +85,8 @@ Convergent Computing uses Windows Admin Center to manage three environments with
 Prior to Windows Admin Center, Convergent Computing used a range of tools and technologies to perform management tasks, including System Center and custom scripts.  With the goal of minimizing overhead and effort to manage their servers farms, Convergent Computing found that the “thinner” a management layer got, the more complex it became, so they typically ended up with higher overhead for the sake of simplicity.  With Windows Admin Center, 20+ hours a month that were spent “managing the management system” are saved, a 75% reduction in time and effort, allowing their operations teams to focus on more valuable tasks including security, compliance, capacity planning, and overall systems optimization. 
 
 # <a id="FZIResearchCenter"></a>FZI Research Center
+
+https://www.fzi.de
 
 FZI Research Center for Information Technology is a non-profit institution for applied research in information technology and technology transfer. 
 
@@ -99,6 +106,8 @@ Windows Admin Center allows FZI Research Center to accelerate the rate they can 
 
 # <a id="GVCGroup"></a>GVC Group
 
+https://gvc-plc.com/
+
 GVC Group is an online entertainment provider, with over 15,000 servers operated around the globe. 
 
 GVC Group uses Windows Server 2016 with many roles (Hyper-V, WSFC, AD-DS, Fileserver, among others), as well as System Center products including SCCM and SCOM. 
@@ -116,6 +125,8 @@ GVC Group has deployed Windows Admin Center in a virtualized environment, with a
 GVC Group has seen increased productivity due to less management hops for administrators.  This has reduced their cost due to the downscaling of local terminal servers. 
 
 # <a id="InsideTechnologies"></a>Inside Technologies
+
+http://www.insidetechnologies.eu
 
 Inside Technologies is a globally-focused IT consulting firm that provides application development, enterprise solutions, and infrastructure services.  They specialize in applying new and unique approaches with Microsoft solutions to meet customer’s needs. 
 
@@ -135,6 +146,8 @@ Inside Technologies is using Windows Admin Center to manage their customers remo
 
 # <a id="SecureGUARD_COPADATA"></a>SecureGUARD / COPA-DATA
 
+http://www.secureguard.at/
+
 SecureGUARD GmbH helps companies solve complex IT problems in security and cloud infrastructure with a series of products and custom engineering services. SecureGUARD builds IT security appliances and Microsoft Windows Server based appliances, more recently building rack-level converged appliances for cloud infrastructures. SecureGUARD is a Microsoft Gold Partner in Application Development and Datacenter. 
  
 COPA-DATA develops the software solution “Zenon” that allows for end-to-end industrial IoT solutions - from the field level up to the cloud and to mobile devices. COPA-DATA has deployed systems worldwide to companies in the Food & Beverage, Energy & Infrastructure, Automotive and Pharmaceutical sectors. 
@@ -152,6 +165,8 @@ COPA-DATA uses Windows Admin Center to monitor and operate their physical and vi
 With Windows Admin Center, COPA-DATA has an easy to use tool to manage their internal infrastructure.  This minimizes administrative efforts and saves a lot of time, without any additional license fees. 
 
 # <a id="VaiSulWeb"></a>VaiSulWeb
+
+http://www.vaisulweb.com/
 
 VaiSulWeb is a web hosting and IaaS/PaaS services provider that also provides development and integration services. 
 
