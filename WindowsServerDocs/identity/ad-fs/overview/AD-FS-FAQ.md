@@ -102,10 +102,12 @@ Use the following guidance with regard to the proxy SSL certificate and the AD F
 ### How can I configure prompt=login behavior for AD FS?
 For information on how to configure prompt=login, see [Active Directory Federation Services prompt=login parameter support](../operations/AD-FS-Prompt-Login.md).
 
-### How can I configure browsers to use Windows Integrated Authentication (WIA) with AD FS
+### How can I configure browsers to use Windows Integrated Authentication (WIA) with AD FS?
 
 For information on how to configure browsers see [Configure browsers to use Windows Integrated Authentication (WIA) with AD FS](../operations/Configure-AD-FS-Browser-WIA.md).
 
+### Can I trun off BrowserSsoEnabled?
+If you don't have Access control policies based on device on ADFS or Windows Hello for Business Certificate enrollment using ADFS; you can turn off BrowserSsoEnabled. BrowserSsoEnabled allows ADFS to collect a PRT(Primary Refresh Token) from client which contains device information. Without that device authentication of ADFS will not work on Windows 10 devices.
 
 ### How long are AD FS tokens valid?
 
