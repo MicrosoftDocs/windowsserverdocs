@@ -123,6 +123,17 @@ Windows Admin Center is complementary to and does not replace RSAT (Remote Serve
 
 **A:** Our launch page: https://aka.ms/WindowsAdminCenter is the best starting point and has links to our newly categorized documentation content, download location, how to provide feedback, reference information, and other resources.
 
-Q: [I'm having an issue with Windows Admin Center, what do I do]
+## Q: What is the version history of Project Honolulu leading up to Windows Admin Center GA?
 
-A: [see our troubleshooting section]
+**A:** Leading up to the Microsoft Ignite conference in September 2017, we announced Project Honolulu Technical Preview, and explained our rationale and our vision.
+
+- Version [1804](https://aka.ms/WindowsAdminCenter) is released as Windows Admin Center and adds security features, role-based access control, and is our first GA release.
+- Version [1803](https://blogs.windows.com/windowsexperience/2018/03/13/announcing-project-honolulu-technical-preview-1803-and-rsat-insider-preview-for-windows-10) added support for AAD access control, detailed logging, resizable content, and a bunch of tool improvements.
+- Version [1802](https://blogs.windows.com/windowsexperience/2017/12/19/announcing-project-honolulu-technical-preview-1712-build-05002) added support for accessibility, localization, high-availability deployments, tagging, Hyper-V host settings, and gateway authentication.
+- Version [1712](https://blogs.windows.com/windowsexperience/2017/12/19/announcing-project-honolulu-technical-preview-1712-build-05002) added more virtual machine features and performance improvements throughout the tools.
+- Version [1711](https://cloudblogs.microsoft.com/windowsserver/2017/12/01/1711-update-to-project-honolulu-technical-preview-is-now-available/) added highly anticipated tools (Remote Desktop, and PowerShell) along with other improvements.
+- Version [1709](https://cloudblogs.microsoft.com/windowsserver/2017/09/22/project-honolulu-technical-preview-is-now-available-for-download/) launched as our first public preview release.
+
+## Q: I'm having an issue with Windows Admin Center, where can get help?
+
+**A:** See our [troubleshooting guide](..\use\troubleshooting.md) and our list of [known issues](..\use\known-issues.md).
