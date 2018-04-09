@@ -51,7 +51,7 @@ Welcome to **Windows Admin Center**!
         <td style="vertical-align: top;">
             <h2>Deploy</h2>
             <ul>
-            <li><a href="deploy/pre-installation.md">Pre-installation tasks</a>
+            <li><a href="deploy/prepare-environment.md">Prepare your environment</a>
             <li><a href="deploy/install.md">Install <b>Windows Admin Center</b></a>
             <li><a href="deploy/high-availability.md">High Availability</a>
          </ul>
