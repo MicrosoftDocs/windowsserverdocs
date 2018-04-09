@@ -60,7 +60,6 @@ Welcome to **Windows Admin Center**!
             <h2>Configure</h2>
             <ul>
             <li><a href="configure/user-access-control">User Access Control and Permissions</a>
-            <li><a href="configure/settings.md">[Gateway admin Settings]</a>
             <li><a href="configure/logging.md">Logging</a>
             <li><a href="configure/extensions.md">Extensions</a>
             <li><a href="configure/azure-integration.md">Configuring Azure integration</a>

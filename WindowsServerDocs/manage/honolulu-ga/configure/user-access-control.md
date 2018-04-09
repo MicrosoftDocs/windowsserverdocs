@@ -12,7 +12,7 @@ ms.prod: windows-server-threshold
 
 # Configure User Access Control and Permissions
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10
 
 > [!NOTE] 
 > Access management only applies when you are running Windows Admin Center as a service on Windows Server.
@@ -74,3 +74,27 @@ Users will now be prompted to login using their Azure Active Directory identity 
 One of the benefits of using Azure Active Directory as your identity provider for controlling access to the Windows Admin Center gateway is that you can leverage Azure AD's powerful security features like conditional access and multi-factor authentication. 
 
 [Learn more about configuring conditional access with Azure Active Directory.](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal-get-started)
+
+
+## Configure for single sign-on
+
+**Single sign-on when deployed as a Service on Windows Server**
+
+If you have installed Windows Admin Center on Windows 10, single sign-on needs no additional configuration. 
+
+However, if you have installed Windows Admin Center on Windows Server, you must have some form of Kerberos delegation enabled in your environment.  This delegation configures the gateway machine as trusted to delegate to the target node. 
+
+To configure [Resource-based constrained delegation](http://windowsitpro.com/security/how-windows-server-2012-eases-pain-kerberos-constrained-delegation-part-1) in your environment, use the following PowerShell code (requires a Windows Server 2012 or higher Domain Controller):
+
+     $gateway = "WindowsAdminCenterGW"
+     $node = "ManagedNode"
+     $gatewayObject = Get-ADComputer -Identity $gateway
+     $nodeObject = Get-ADComputer -Identity $node
+     Set-ADComputer -Identity $nodeObject -PrincipalsAllowedToDelegateToAccount $gatewayObject
+
+In this example, the Windows Admin Center gateway is installed on server **WindowsAdminCenterGW**, and the target
+node name is **ManagedNode**.
+
+To remove this relationship, use the following command:
+
+    Set-ADComputer -Identity $nodeObject -PrincipalsAllowedToDelegateToAccount $null
