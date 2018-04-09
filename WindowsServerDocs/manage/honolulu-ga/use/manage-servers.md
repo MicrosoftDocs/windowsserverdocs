@@ -12,7 +12,7 @@ ms.prod: windows-server-threshold
 
 # Manage Servers with Server Manager
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10
 
 Server Manager is a Windows Admin Center solution centered around management of an individual server.
 
@@ -22,33 +22,33 @@ Server Manager comes installed with the following tools by default:
 
 | Tool | Description |
 | ---- | ----------- |
-| [Overview](#Overview) | View server details and control server state | 
-| [Certificates](#Certificates) | View and modify certificates | 
-| [Devices](#Devices) | View and modify devices | 
-| [Events](#Events) | View events | 
-| [Files](#Files) | Browse files and folders | 
-| [Firewall](#Firewall) | View and modify firewall rules | 
-| [Local Users and Groups](#LocalUsersGroups) | View and modify local users and groups | 
-| [Network](#Network) | View and modify network devices | 
-| [PowerShell](#PowerShell) | Interact with server via PowerShell | 
-| [Processes](#Processes) | View and modify running processes | 
-| [Registry](#Registry) | View and modify registry entries | 
-| [Remote Desktop](#RemoteDesktop) | Interact with server via Remote Desktop | 
-| [Roles and Features](#RolesFeatures) | View and modify roles and features | 
-| [Services](#Services) | View and modify services | 
-| [Storage](#Storage) | View and modify storage devices | 
-| [Storage Replica](#StorageReplica) | View storage replica information | 
-| [Updates](#Updates) | View installed and check for new updates | 
-| [Virtual Machines](#VirtualMachines) | View and control virtual machines | 
-| [Virtual Switches](#VirtualSwitches) | View and control virtual switches | 
+| [Overview](#overview) | View server details and control server state | 
+| [Certificates](#certificates) | View and modify certificates | 
+| [Devices](#devices) | View and modify devices | 
+| [Events](#events) | View events | 
+| [Files](#files) | Browse files and folders | 
+| [Firewall](#firewall) | View and modify firewall rules | 
+| [Local Users and Groups](#local-users-and-groups) | View and modify local users and groups | 
+| [Network](#network) | View and modify network devices | 
+| [PowerShell](#powershell) | Interact with server via PowerShell | 
+| [Processes](#processes) | View and modify running processes | 
+| [Registry](#registry) | View and modify registry entries | 
+| [Remote Desktop](#remote-desktop) | Interact with server via Remote Desktop | 
+| [Roles and Features](#roles-and-features) | View and modify roles and features | 
+| [Services](#services) | View and modify services | 
+| [Storage](#storage) | View and modify storage devices | 
+| [Storage Replica](#storage-replica) | View storage replica information | 
+| [Updates](#updates) | View installed and check for new updates | 
+| [Virtual Machines](#virtual-machines) | View and control virtual machines | 
+| [Virtual Switches](#virtual-switches) | View and control virtual switches | 
 
-# <a id="Overview"></a>Overview
+## Overview
 
-## Description
+### Description
 
 [Tool description]
 
-## Features
+### Features
 
 The following features are supported in Server Manager Overview:
 
@@ -61,7 +61,7 @@ The following features are supported in Server Manager Overview:
 - Enable disk metrics on server
 - Edit Computer ID on server
 
-## Proposed Features
+### Proposed Features
 
 The following features are either in progress or have been proposed for Server Manager Overview:
 
@@ -71,13 +71,13 @@ The following features are either in progress or have been proposed for Server M
 |Feature 2|Investigating|[Vote](todo:url)|
 |Feature 3|Proposed|[Vote](todo:url)|
 
-# <a id="Certificates"></a>Certificates
+## Certificates
 
-## Description
+### Description
 
 **Certificates** allows you to manage certificate stores on a computer or server.
 
-## Features
+### Features
 
 The following features are supported in Certificates:
 
@@ -88,7 +88,7 @@ The following features are supported in Certificates:
 - Request new certificates
 - Delete certificates
 
-## Proposed Features
+### Proposed Features
 
 The following features are either in progress or have been proposed for Certificates:
 
@@ -98,13 +98,13 @@ The following features are either in progress or have been proposed for Certific
 |Feature 2|Investigating|[Vote](todo:url)|
 |Feature 3|Proposed|[Vote](todo:url)|
 
-# <a id="Devices"></a>Devices
+## Devices
 
-## Description
+### Description
 
 **Devices** allows you to manage connected devices on a computer or server.
 
-## Features
+### Features
 
 The following features are supported in Devices:
 
@@ -113,7 +113,7 @@ The following features are supported in Devices:
 - Disable a device
 - Update driver on a device
 
-## Proposed Features
+### Proposed Features
 
 The following features are either in progress or have been proposed for Devices:
 
@@ -123,13 +123,13 @@ The following features are either in progress or have been proposed for Devices:
 |Feature 2|Investigating|[Vote](todo:url)|
 |Feature 3|Proposed|[Vote](todo:url)|
 
-# <a id="Events"></a>Events
+## Events
 
-## Description
+### Description
 
 **Events** allows you to manage event logs on a computer or server.
 
-## Features
+### Features
 
 The following features are supported in Events:
 
@@ -138,7 +138,7 @@ The following features are supported in Events:
 - Clear events from the log
 - Export events from the log
 
-## Proposed Features
+### Proposed Features
 
 The following features are either in progress or have been proposed for Events:
 
@@ -148,13 +148,13 @@ The following features are either in progress or have been proposed for Events:
 |Feature 2|Investigating|[Vote](todo:url)|
 |Feature 3|Proposed|[Vote](todo:url)|
 
-# <a id="Files"></a>Files
+## Files
 
-## Description
+### Description
 
 **Files** allows you to manage files and folders on a computer or server.
 
-## Features
+### Features
 
 The following features are supported in Files:
 
@@ -168,7 +168,7 @@ The following features are supported in Files:
 - Extract a zip file
 - View file or folder properties
 
-## Proposed Features
+### Proposed Features
 
 The following features are either in progress or have been proposed for Files:
 
@@ -178,13 +178,13 @@ The following features are either in progress or have been proposed for Files:
 |Feature 2|Investigating|[Vote](todo:url)|
 |Feature 3|Proposed|[Vote](todo:url)|
 
-# <a id="Firewall"></a>Firewall
+## Firewall
 
-## Description
+### Description
 
 **Firewall** allows you to manage firewall settings and rules on a computer or server.
 
-## Features
+### Features
 
 The following features are supported in Firewall:
 
@@ -198,7 +198,7 @@ The following features are supported in Firewall:
 - Delete a firewall rule
 - Edit the properties of a firewall rule
 
-## Proposed Features
+### Proposed Features
 
 The following features are either in progress or have been proposed for Firewall:
 
@@ -208,13 +208,13 @@ The following features are either in progress or have been proposed for Firewall
 |Feature 2|Investigating|[Vote](todo:url)|
 |Feature 3|Proposed|[Vote](todo:url)|
 
-# <a id="LocalUsersGroups"></a>Local Users and Groups
+## Local Users and Groups
 
-## Description
+### Description
 
 **Local Users and Groups** allows you to manage security groups and users that exist locally on a computer or server.
 
-## Features
+### Features
 
 The following features are supported in Local Users and Groups:
 
@@ -225,7 +225,7 @@ The following features are supported in Local Users and Groups:
 - Change a user's password
 - Edit the properties of a user or group
 
-## Proposed Features
+### Proposed Features
 
 The following features are either in progress or have been proposed for Local Users and Groups:
 
@@ -235,13 +235,13 @@ The following features are either in progress or have been proposed for Local Us
 |Feature 2|Investigating|[Vote](todo:url)|
 |Feature 3|Proposed|[Vote](todo:url)|
 
-# <a id="Network"></a>Network
+## Network
 
-## Description
+### Description
 
 **Network** allows you to manage network devices and settigns on a computer or server.
 
-## Features
+### Features
 
 The following features are supported in Network:
 
@@ -249,7 +249,7 @@ The following features are supported in Network:
 - View details of a network adapter
 - Edit properties of a network adapter
 
-## Proposed Features
+### Proposed Features
 
 The following features are either in progress or have been proposed for Network:
 
@@ -259,20 +259,20 @@ The following features are either in progress or have been proposed for Network:
 |Feature 2|Investigating|[Vote](todo:url)|
 |Feature 3|Proposed|[Vote](todo:url)|
 
-# <a id="PowerShell"></a>PowerShell
+## PowerShell
 
-## Description
+### Description
 
 **PowerShell** allows you to interact with a computer or server via a PowerShell session.
 
-## Features
+### Features
 
 The following features are supported in PowerShell:
 
 - Create an interactive PowerShell session on the server
 - Disconnect from PowerShell session on the server
 
-## Proposed Features
+### Proposed Features
 
 The following features are either in progress or have been proposed for PowerShell:
 
@@ -282,13 +282,13 @@ The following features are either in progress or have been proposed for PowerShe
 |Feature 2|Investigating|[Vote](todo:url)|
 |Feature 3|Proposed|[Vote](todo:url)|
 
-# <a id="Processes"></a>Processes
+## Processes
 
-## Description
+### Description
 
 **Processes** allows you to manage running processes on a computer or server.
 
-## Features
+### Features
 
 The following features are supported in Processes:
 
@@ -299,7 +299,7 @@ The following features are supported in Processes:
 - Create a process dump
 - Find process handles
 
-## Proposed Features
+### Proposed Features
 
 The following features are either in progress or have been proposed for Processes:
 
@@ -309,13 +309,13 @@ The following features are either in progress or have been proposed for Processe
 |Feature 2|Investigating|[Vote](todo:url)|
 |Feature 3|Proposed|[Vote](todo:url)|
 
-# <a id="Registry"></a>Registry
+## Registry
 
-## Description
+### Description
 
 **Registry** allows you to manage registry keys and values on a computer or server.
 
-## Features
+### Features
 
 The following features are supported in Registry:
 
@@ -323,7 +323,7 @@ The following features are supported in Registry:
 - Add or modify registry values
 - Delete registry values
 
-## Proposed Features
+### Proposed Features
 
 The following features are either in progress or have been proposed for Registry:
 
@@ -333,13 +333,13 @@ The following features are either in progress or have been proposed for Registry
 |Feature 2|Investigating|[Vote](todo:url)|
 |Feature 3|Proposed|[Vote](todo:url)|
 
-# <a id="RemoteDesktop"></a>Remote Desktop
+## Remote Desktop
 
-## Description
+### Description
 
 **Remote Desktop** allows you to interact with a computer or server via an interactive desktop session.
 
-## Features
+### Features
 
 The following features are supported in Remote Desktop:
 
@@ -347,7 +347,7 @@ The following features are supported in Remote Desktop:
 - Disconnect from a remote desktop session
 - Send Ctrl+Alt+Del to a remote desktop session
 
-## Proposed Features
+### Proposed Features
 
 The following features are either in progress or have been proposed for Remote Desktop:
 
@@ -357,13 +357,13 @@ The following features are either in progress or have been proposed for Remote D
 |Feature 2|Investigating|[Vote](todo:url)|
 |Feature 3|Proposed|[Vote](todo:url)|
 
-# <a id="RolesFeatures"></a>Roles and Features
+## Roles and Features
 
-## Description
+### Description
 
 **Roles and Features** allows you to manage roles and features on a server.
 
-## Features
+### Features
 
 The following features are supported in Roles and Features:
 
@@ -372,7 +372,7 @@ The following features are supported in Roles and Features:
 - Install a role or feature
 - Remove a role or feature
 
-## Proposed Features
+### Proposed Features
 
 The following features are either in progress or have been proposed for Roles and Features:
 
@@ -382,13 +382,13 @@ The following features are either in progress or have been proposed for Roles an
 |Feature 2|Investigating|[Vote](todo:url)|
 |Feature 3|Proposed|[Vote](todo:url)|
 
-# <a id="Services"></a>Services
+## Services
 
-## Description
+### Description
 
 **Services** allows you to manage services on a computer or server.
 
-## Features
+### Features
 
 The following features are supported in Services:
 
@@ -398,7 +398,7 @@ The following features are supported in Services:
 - Pause a service
 - Edit the properties of a service
 
-## Proposed Features
+### Proposed Features
 
 The following features are either in progress or have been proposed for Services:
 
@@ -408,17 +408,17 @@ The following features are either in progress or have been proposed for Services
 |Feature 2|Investigating|[Vote](todo:url)|
 |Feature 3|Proposed|[Vote](todo:url)|
 
-# <a id="StorageReplica"></a>Storage Replica
+## Storage Replica
 
-## Description
+### Description
 
 [Tool description]
 
-## Features
+### Features
 
 The following features are supported in Storage Replica:
 
-## Proposed Features
+### Proposed Features
 
 The following features are either in progress or have been proposed for Storage Replica:
 
@@ -428,13 +428,13 @@ The following features are either in progress or have been proposed for Storage 
 |Feature 2|Investigating|[Vote](todo:url)|
 |Feature 3|Proposed|[Vote](todo:url)|
 
-# <a id="Storage"></a>Storage
+## Storage
 
-## Description
+### Description
 
 **Storage** allows you to manage storage devices on a computer or server.
 
-## Features
+### Features
 
 The following features are supported in Storage:
 
@@ -450,7 +450,7 @@ The following features are supported in Storage:
 - Delete a volume
 - Install Quota Management
 
-## Proposed Features
+### Proposed Features
 
 The following features are either in progress or have been proposed for Storage:
 
@@ -460,13 +460,13 @@ The following features are either in progress or have been proposed for Storage:
 |Feature 2|Investigating|[Vote](todo:url)|
 |Feature 3|Proposed|[Vote](todo:url)|
 
-# <a id="Updates"></a>Updates
+## Updates
 
-## Description
+### Description
 
 **Updates** allows you to manage Microsoft and/or Windows Updates on a computer or server.
 
-## Features
+### Features
 
 The following features are supported in Updates:
 
@@ -475,7 +475,7 @@ The following features are supported in Updates:
 - Install Updates
 - Check online for updates from Microsoft Update
 
-## Proposed Features
+### Proposed Features
 
 The following features are either in progress or have been proposed for Updates:
 
@@ -485,13 +485,13 @@ The following features are either in progress or have been proposed for Updates:
 |Feature 2|Investigating|[Vote](todo:url)|
 |Feature 3|Proposed|[Vote](todo:url)|
 
-# <a id="VirtualMachines"></a>Virtual Machines
+## Virtual Machines
 
-## Description
+### Description
 
 **Virtual Machines** allows you to manage and interact with Hyper-V virtual machines on a computer or server.
 
-## Features
+### Features
 
 The following features are supported in Virtual Machines:
 
@@ -509,7 +509,7 @@ The following features are supported in Virtual Machines:
 - Create a new checkpoint for a Virtual Machine
 - Edit the properties of a Virtual Machine
 
-## Proposed Features
+### Proposed Features
 
 The following features are either in progress or have been proposed for Virtual Machines:
 
@@ -519,13 +519,13 @@ The following features are either in progress or have been proposed for Virtual 
 |Feature 2|Investigating|[Vote](todo:url)|
 |Feature 3|Proposed|[Vote](todo:url)|
 
-# <a id="VirtualSwitches"></a>Virtual Switches
+## Virtual Switches
 
-## Description
+### Description
 
 **Virtual Switches** allows you to manage Hyper-V virtual switches on a computer or server.
 
-## Features
+### Features
 
 The following features are supported in Virtual Switches:
 
@@ -535,7 +535,7 @@ The following features are supported in Virtual Switches:
 - Delete an existing Virtual Switch
 - Edit the properties of a Virtual Switch
 
-## Proposed Features
+### Proposed Features
 
 The following features are either in progress or have been proposed for Virtual Switches:
 
