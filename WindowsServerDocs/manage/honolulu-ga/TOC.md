@@ -2,7 +2,7 @@
 
 # Understand
 ## [Aloha, Windows Admin Center!](understand/windows-admin-center.md)
-## [What is Windows Admin Center](understand/what-is.md)
+## [What is Windows Admin Center?](understand/what-is.md)
 ## [Capabilities](understand/capabilities.md)
 ## [FAQ](understand/faq.md)
 ## [Case Studies](understand/case-studies.md)
@@ -17,8 +17,8 @@
 ## [Azure integration options](plan/azure-integration-options.md)
 
 # Deploy
-## [Pre-installation tasks](deploy/pre-installation.md)
-## [Intall](deploy/install.md)
+## [Prepare your environment](deploy/prepare-environment.md)
+## [Install](deploy/install.md)
 ## [High availability](deploy/high-availability.md)
 
 # Configure
@@ -29,6 +29,7 @@
 
 # Use
 ## [Launch Windows Admin Center](use/launch.md)
+## [Manage Servers](use/manage-servers.md)
 ## [Manage Hyper-Converged Infrastructure](use/manage-hyper-converged.md)
 ## [Manage failover clusters](use/manage-failover-clusters.md)
 ## [Protect your Hyper-V VMs with Azure Site Recovery](use/azure-services.md)

@@ -15,7 +15,7 @@ ms.topic: article-type-from-white-list
 
 This topic describes the general approach to writing user interface (UI) text for the Windows Admin Center, as well as some specific conventions and approaches we're taking.
 
-Windows Admin Center and any extensions should follow [Microsoft's voice principles](https://docs.microsoft.com/style-guide/brand-voice-above-all-simple-human) so that the experience is easy to use and friendly. This style guide builds on these voice principles as well as the [Microsoft Writing Style Guide](https://docs.microsoft.com/en-us/style-guide/welcome/), so make sure to check out both of those resources for info on such things as [accessibility](https://docs.microsoft.com/en-us/style-guide/accessibility/accessibility-guidelines-requirements), [acronyms](https://docs.microsoft.com/en-us/style-guide/acronyms), [please](https://docs.microsoft.com/en-us/style-guide/a-z-word-list-term-collections/p/please), [sorry](https://docs.microsoft.com/en-us/style-guide/a-z-word-list-term-collections/s/sorry), and [word choice](https://docs.microsoft.com/en-us/style-guide/word-choice/).
+Windows Admin Center and any extensions should follow [Microsoft's voice principles](https://docs.microsoft.com/style-guide/brand-voice-above-all-simple-human) so that the experience is easy to use and friendly. This style guide builds on these voice principles as well as the [Microsoft Writing Style Guide](https://docs.microsoft.com/en-us/style-guide/welcome/), so make sure to check out both of those resources for info on such things as [accessibility](https://docs.microsoft.com/en-us/style-guide/accessibility/accessibility-guidelines-requirements), [acronyms](https://docs.microsoft.com/en-us/style-guide/acronyms), and [word choice](https://docs.microsoft.com/en-us/style-guide/word-choice/) such as [please](https://docs.microsoft.com/en-us/style-guide/a-z-word-list-term-collections/p/please), and [sorry](https://docs.microsoft.com/en-us/style-guide/a-z-word-list-term-collections/s/sorry).
 
 ## Capitalization
 
@@ -45,7 +45,7 @@ However, Windows Admin Center is making a few exceptions:
 - Use an "Are you sure?" message only if the consequence of the action is dire or potentially expensive; otherwise, it's an annoying interruption. For example, taking important resources offline, deleting data, or signing up for a paid service would warrant a confirmation message, while creating a local VM or folder wouldn't.
 - Be specific about the consequences, if known.
 - Use [Yes] or [No] buttons if it's important for customers to understand the consequences before making a decision, even though this isn't as specific as we usually like to be. [Yes] [No] makes customers read the message.
-- If it's really important customers pay attention before doing something - such as deleting all their critical data - use an extra control for confirmation, such as a checkbox.
+- If it's really important customers pay attention before doing something - such as deleting all their critical data - use an extra control for confirmation, such as a checkbox or a textbox asking the user to type the volume name or similar.
 
 ## Empty pages (first-run experiences)
 
@@ -91,15 +91,13 @@ When you need the customer to perform another action to experience full value (s
 - If you can, allow the option to do it later, and then remind them to do it later.
 - If you take them out of their experience, provide a way to switch back quickly and easily.
 
-
-
 ## Status messages
 
 Status messages consist of pop-up (toast) messages and notifications.
 
 |String type         | Notes                               |
 |------------        |-------------------------------------|
-|Toast               |Sentence case with ending punctuation - ideally with an object variable so users can understand what object the message applies to in case they've navigated elsewhere|
+|Toast               |Sentence case with ending punctuation - ideally with an object variable so users can understand what object the message applies to in case they've navigated away from the object|
 |Notification heading|Sentence case w/out ending punctuation (it's a heading) - ideally with an object variable|
 |Notification details|Full sentences, ideally with a link to the UI that displays the object|
 

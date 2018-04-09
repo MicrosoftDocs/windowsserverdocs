@@ -51,20 +51,20 @@ Hyper-Converged Cluster Manager comes installed with the following tools by defa
 
 | Tool | Description |
 | ---- | ----------- |
-| [Overview](#Overview) | View hyper-converged cluster details | 
-| [Drives](#Drives) | View and modify drives | 
-| [Servers](#Servers) | View and modify servers | 
-| [Virtual Machines](#VirtualMachines) | View and control virtual machines | 
-| [Virtual Switches](#VirtualSwitches) | View and control virtual switches | 
-| [Volumes](#Volumes) | View and modify volumes | 
+| [Overview](#overview) | View hyper-converged cluster details | 
+| [Drives](#drives) | View and modify drives | 
+| [Servers](#servers) | View and modify servers | 
+| [Virtual Machines](#virtual-machines) | View and control virtual machines | 
+| [Virtual Switches](#virtual-switches) | View and control virtual switches | 
+| [Volumes](#volumes) | View and modify volumes | 
 
-# <a id="Overview"></a>Overview
+## Overview
 
-## Description
+### Description
 
 [Tool description]
 
-## Features
+### Features
 
 The following features are supported in Hyper-Converged Cluster Manager Overview:
 
@@ -72,7 +72,7 @@ Cluster dashboard visualizing health alerts, storage performance metrics, comput
 
 Historical performance charts supporting up to a year of data.
 
-## Proposed Features
+### Proposed Features
 
 The following features are either in progress or have been proposed for Hyper-Converged Cluster Manager Overview:
 
@@ -82,20 +82,20 @@ The following features are either in progress or have been proposed for Hyper-Co
 |Feature 2|Investigating|[Vote](todo:url)|
 |Feature 3|Proposed|[Vote](todo:url)|
 
-# <a id="Drives"></a>Drives
+## Drives
 
-## Description
+### Description
 
 [Tool description]
 
-## Features
+### Features
 
 The following features are supported in Drives:
 
 Drives summary and inventory view and a single drive view with drive properties and commands for blinking the drive indicator light and retiring disk.
 
 
-## Proposed Features
+### Proposed Features
 
 The following features are either in progress or have been proposed for Drives:
 
@@ -105,19 +105,19 @@ The following features are either in progress or have been proposed for Drives:
 |Feature 2|Investigating|[Vote](todo:url)|
 |Feature 3|Proposed|[Vote](todo:url)|
 
-# <a id="Servers"></a>Servers
+## Servers
 
-## Description
+### Description
 
 [Tool description]
 
-## Features
+### Features
 
 The following features are supported in Servers:
 
 Servers summary and inventory view and a single server view with server properties and commands for pausing a server for maintenance. There is also a command to launch the Project Honolulu standalone server experience to further manage your server.
 
-## Proposed Features
+### Proposed Features
 
 The following features are either in progress or have been proposed for Servers:
 
@@ -127,19 +127,19 @@ The following features are either in progress or have been proposed for Servers:
 |Feature 2|Investigating|[Vote](todo:url)|
 |Feature 3|Proposed|[Vote](todo:url)|
 
-# <a id="VirtualMachines"></a>Virtual Machines
+## Virtual Machines
 
-## Description
+### Description
 
 [Tool description]
 
-## Features
+### Features
 
 The following features are supported in Virtual Machines:
 
 Virtual machines summary and inventory view and a single virtual machine view with commands for creating a VM, starting/stopping/resetting/pausing/saving/deleting a VM, move (live migration), changing VM settings, creating and managing checkpoints, connecting to a VM with remote desktop connection, and protecting a VM with Azure Site Recovery.
 
-## Proposed Features
+### Proposed Features
 
 The following features are either in progress or have been proposed for Virtual Machines:
 
@@ -149,19 +149,19 @@ The following features are either in progress or have been proposed for Virtual 
 |Feature 2|Investigating|[Vote](todo:url)|
 |Feature 3|Proposed|[Vote](todo:url)|
 
-# <a id="Virtual Switches"></a>Virtual Switches
+## Virtual Switches
 
-## Description
+### Description
 
 [Tool description]
 
-## Features
+### Features
 
 The following features are supported in Virtual Switches:
 
 Virtual switches list view and commands to create a new virtual switch and change settings for existing switches.
 
-## Proposed Features
+### Proposed Features
 
 The following features are either in progress or have been proposed for Virtual Switches:
 
@@ -171,19 +171,19 @@ The following features are either in progress or have been proposed for Virtual 
 |Feature 2|Investigating|[Vote](todo:url)|
 |Feature 3|Proposed|[Vote](todo:url)|
 
-# <a id="Volumes"></a>Volumes
+## Volumes
 
-## Description
+### Description
 
 [Tool description]
 
-## Features
+### Features
 
 The following features are supported in Volumes:
 
 Volumes summary and inventory view and a single volume view with commands for creating a new volume, resizing/deleting an existing volume and switching a volume to offline.
 
-## Proposed Features
+### Proposed Features
 
 The following features are either in progress or have been proposed for Volumes:
 
