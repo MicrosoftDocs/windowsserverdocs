@@ -30,7 +30,7 @@ Quick links: [Documentation](../overview.md) | [Give feedback](https://aka.ms/Wi
 
 <!-- UPDATE VIDEO -->
 
-<font size=+1> Windows Admin Center is a lightweight, browser-based GUI toolset for managing servers, clusters, and hyper-converged infrastructure. It's the evolution of familiar in-box managment tools plus so much more. </font>
+<font size+=1> Windows Admin Center is a lightweight, browser-based GUI toolset for managing servers, clusters, and hyper-converged infrastructure. It's the evolution of familiar in-box managment tools plus so much more. </font>
 
 
 <img src="../../media/honolulu-ga/legacy-to-new.gif" alt="Video of legacy management tools transformed to new Windows Admin Center tools">
@@ -52,9 +52,9 @@ Quick links: [Documentation](../overview.md) | [Give feedback](https://aka.ms/Wi
 
 |   |   |
 |:-:|:--|
-| <img src="../../media/honolulu-ga/simple-icon.png" width="100" alt="Icon representing app window">  | <font size=+1><b> Simple & lightweight</b> <br/> Familiar tools are streamlined to make management tasks a breeze. Install in under 5 minutes and manage servers in your environment immediately, no target configuration required. </font> |
-| <img src="../../media/honolulu-ga/future-icon.png" width="100" alt="Icon representing hybrid cloud">  | <font size=+1><b>Built for the future</b> <br/> Integration with Azure services helps you leverage the power of the hybrid world. Manage Hyper-Converged clusters with powerful yet simple tools. </font>  |
-| <img src="../../media/honolulu-ga/secure-icon.png" width="100" alt="Icon representing secure server">  | <font size=+1><b>Secure management</b> <br/> Control who can manage servers and get unparalleled insight into the actions administrators perform in your environment. </font>  |
+| <img src="../../media/honolulu-ga/simple-icon.png" width="100" alt="Icon representing app window">  | <font size+=1><b> Simple & lightweight</b> <br/> Familiar tools are streamlined to make management tasks a breeze. Install in under 5 minutes and manage servers in your environment immediately, no target configuration required. </font> |
+| <img src="../../media/honolulu-ga/future-icon.png" width="100" alt="Icon representing hybrid cloud">  | <font size+=1><b>Built for the future</b> <br/> Integration with Azure services helps you leverage the power of the hybrid world. Manage Hyper-Converged clusters with powerful yet simple tools. </font>  |
+| <img src="../../media/honolulu-ga/secure-icon.png" width="100" alt="Icon representing secure server">  | <font size+=1><b>Secure management</b> <br/> Control who can manage servers and get unparalleled insight into the actions administrators perform in your environment. </font>  |
 
 <!-- 
 //VERSION OF TABLE WITH HYPERLINKS
@@ -104,7 +104,7 @@ Quick links: [Documentation](../overview.md) | [Give feedback](https://aka.ms/Wi
 
 |  |
 |--|
-| "[Windows Admin Center] has decreased our time/effort in managing the management system by over 75%." <br/> *- Rand Morimoto, President, Convergent Computing* |
+| "[Windows Admin Center] has decreased our time/effort in managing the management system by over 75%." <br/> <font color="grey">*- Rand Morimoto, President, Convergent Computing* </font>|
 | "Thanks to [Windows Admin Center], we can manage our customers remotely from HTML5 portal without problem and with the full integration with Azure Active Directory, we are able to increase the security thanks to the Multi-Factor Authentication."<br/> <font color="grey"> *- Silvio Di Benedetto, Founder and Senior Consultant, Inside Technologies* </font>|
 | “We have been able to deploy [Server Core] SKUs in a more effective way, improving resource efficiency, security and automation while still achieving a good degree of productivity and reducing errors that can happen when relying on scripting only.” <br/> <font color="grey">*- Guglielmo Mengora, Founder and CEO, VaiSulWeb* </font>|
 | “With [Windows Admin Center] customers especially in the SMB market now have an easy to use tool to manage their internal infrastructure. This minimizes administrative efforts and saves a lot of time. And the best of it: there are no additional license fees for [Windows Admin Center]!” <br/><font color="grey"> *- Helmut Otto, Managing Director, SecureGUARD* </font>|
