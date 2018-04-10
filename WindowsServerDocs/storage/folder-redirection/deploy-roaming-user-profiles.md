@@ -571,12 +571,12 @@ Here are some ways to work around Start menu layouts getting reset after an in-p
     > [!NOTE] 
     > Importing a StartLayout modifies the Default User profile. All user profiles created after the import has occurred will get the imported Start-Layout.
  
- 2.	IT Admins can opt to manage Start’s Layout with Group Policy. Using Group Policy provides a centralized management solution to apply a standardized Start Layout to users. There are 2 modes to modes to using Group Policy for Start management. Full Lockdown and Partial Lockdown. The full lockdown scenario prevents the user from making any changes to Start’s layout. The partial lockdown scenario allows user to make changes to a specific are of Start. For more info, see [Customize and export Start layout](https://docs.microsoft.com/windows/configuration/customize-and-export-start-layout).
+ - IT Admins can opt to manage Start’s Layout with Group Policy. Using Group Policy provides a centralized management solution to apply a standardized Start Layout to users. There are 2 modes to modes to using Group Policy for Start management. Full Lockdown and Partial Lockdown. The full lockdown scenario prevents the user from making any changes to Start’s layout. The partial lockdown scenario allows user to make changes to a specific are of Start. For more info, see [Customize and export Start layout](https://docs.microsoft.com/windows/configuration/customize-and-export-start-layout).
         
     > [!NOTE]
     > User made changes in the partial lockdown scenario will still be lost during upgrade.
 
- 3.	Let the Start layout reset occur and allow end users to reconfigure Start. A notification email or other notification can be sent to end users to expect their Start layouts to be reset after the OS upgrade to minimized impact. 
+ -	Let the Start layout reset occur and allow end users to reconfigure Start. A notification email or other notification can be sent to end users to expect their Start layouts to be reset after the OS upgrade to minimized impact. 
 
 # Change history
 
