@@ -68,7 +68,7 @@ You may also want to include an end user license agreement (EULA) for your exten
 [TODO] Add link to SDK EULA
 
 ## Preparing your extension for publishing ##
-Send us your extension package for the team here at Microsoft to approve and publish to the Windows Admin Center feed.  You may want to send us your extension while still under development to expedite the review process. Here are the steps for preparing your extension package for review.
+Send us your extension package for the team here at Microsoft to approve and publish to the Windows Admin Center feed. Here are the steps for preparing your extension package for review.
 
 ### 1. Build your extension ###
 Run "gulp build" and make sure the build is successful.
