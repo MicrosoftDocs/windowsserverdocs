@@ -30,7 +30,7 @@ Quick links: [Documentation](../overview.md) | [Give feedback](https://aka.ms/Wi
 
 <!-- UPDATE VIDEO -->
 
-<font size+=1> Windows Admin Center is a lightweight, browser-based GUI toolset for managing servers, clusters, and hyper-converged infrastructure. It's the evolution of familiar in-box managment tools plus so much more. </font>
+<font size=4> Windows Admin Center is a lightweight, browser-based GUI toolset for managing servers, clusters, and hyper-converged infrastructure. It's the evolution of familiar in-box managment tools plus so much more. </font>
 
 
 <img src="../../media/honolulu-ga/legacy-to-new.gif" alt="Video of legacy management tools transformed to new Windows Admin Center tools">
@@ -52,9 +52,9 @@ Quick links: [Documentation](../overview.md) | [Give feedback](https://aka.ms/Wi
 
 |   |   |
 |:-:|:--|
-| <img src="../../media/honolulu-ga/simple-icon.png" width="100" alt="Icon representing app window">  | <font size+=1><b> Simple & lightweight</b> <br/> Familiar tools are streamlined to make management tasks a breeze. Install in under 5 minutes and manage servers in your environment immediately, no target configuration required. </font> |
-| <img src="../../media/honolulu-ga/future-icon.png" width="100" alt="Icon representing hybrid cloud">  | <font size+=1><b>Built for the future</b> <br/> Integration with Azure services helps you leverage the power of the hybrid world. Manage Hyper-Converged clusters with powerful yet simple tools. </font>  |
-| <img src="../../media/honolulu-ga/secure-icon.png" width="100" alt="Icon representing secure server">  | <font size+=1><b>Secure management</b> <br/> Control who can manage servers and get unparalleled insight into the actions administrators perform in your environment. </font>  |
+| <img src="../../media/honolulu-ga/simple-icon.png" width="100" alt="Icon representing app window">  | <font size=3><b> Simple & lightweight</b> <br/> Familiar tools are streamlined to make management tasks a breeze. Install in under 5 minutes and manage servers in your environment immediately, no target configuration required. </font> |
+| <img src="../../media/honolulu-ga/future-icon.png" width="100" alt="Icon representing hybrid cloud">  | <font size=3><b>Built for the future</b> <br/> Integration with Azure services helps you leverage the power of the hybrid world. Manage Hyper-Converged clusters with powerful yet simple tools. </font>  |
+| <img src="../../media/honolulu-ga/secure-icon.png" width="100" alt="Icon representing secure server">  | <font size=3><b>Secure management</b> <br/> Control who can manage servers and get unparalleled insight into the actions administrators perform in your environment. </font>  |
 
 <!-- 
 //VERSION OF TABLE WITH HYPERLINKS
