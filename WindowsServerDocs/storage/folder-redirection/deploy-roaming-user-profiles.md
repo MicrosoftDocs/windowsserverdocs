@@ -24,7 +24,8 @@ For a list of recent changes to this topic, see the [Change history](#change-his
 >  User customizations to Start is lost after an OS in-place upgrade in the following configuration:
 > - Users are configured for a roaming profile
 > - Users are allowed to make changes to Start
->As a result, the Start menu is reset to the default of the new OS version after the OS in-place upgrade. For workarounds, see [Appendix C: Working around reset Start menu layouts after upgrades](#appendix-c-workaround).
+>
+> As a result, the Start menu is reset to the default of the new OS version after the OS in-place upgrade. For workarounds, see [Appendix C: Working around reset Start menu layouts after upgrades](#appendix-c-workaround).
 
 
 ## Prerequisites
