@@ -21,10 +21,10 @@ For a list of recent changes to this topic, see the [Change history](#change-his
 > Due to the security changes made in <A href="https://support.microsoft.com/help/3163622/ms16-072-security-update-for-group-policy-june-14%2c-2016">MS16-072</A>, we updated <A href="">Step 4: Optionally create a GPO for Roaming User Profiles</A> of this topic so that Windows can properly apply the Roaming User Profiles policy (and not revert to local policies on affected PCs).
 
 > [!IMPORTANT]
->  User customizations to Start will be lost after an OS in-place upgrade in the following configuration:
+>  User customizations to Start is lost after an OS in-place upgrade in the following configuration:
 > - Users are configured for a roaming profile
 > - Users are allowed to make changes to Start
->  The result after the OS in-place upgrade is that the Start menu is reset to the default of the new OS version. For workarounds, see [Appendix C: Working around reset Start menu layouts after upgrades](#appendix-c-workaround).
+>As a result, the Start menu is reset to the default of the new OS version after the OS in-place upgrade. For workarounds, see [Appendix C: Working around reset Start menu layouts after upgrades](#appendix-c-workaround).
 
 
 ## Prerequisites
