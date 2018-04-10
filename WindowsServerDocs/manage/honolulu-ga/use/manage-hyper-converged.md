@@ -3,193 +3,151 @@ title: Manage Hyper-Converged Clusters with Hyper-Converged Cluster Manager
 description: Manage Hyper-Converged Clusters with Hyper-Converged Cluster Manager Windows Admin Center (Project Honolulu)
 ms.technology: manage
 ms.topic: article
-author: nwashburn-ms
-ms.author: niwashbu
-ms.date: 04/05/2018
+author: daniellee-msft
+ms.author: jol
+ms.date: 04/10/2018
 ms.localizationpriority: low
 ms.prod: windows-server-threshold
 ---
 
 # Manage Hyper-Converged Clusters with Hyper-Converged Cluster Manager
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
-
-[Content goes here]
-
-[TODO:legacy-content-begin]
+>Applies To: Windows Server 2019
 
 ## What is Hyper-Converged Infrastructure?
 
-Hyper-Converged Infrastructure (HCI) consolidates compute, storage and networking into a single set of servers with a Software-Defined Datacenter solution that virtualizes these components. 
-
-Microsoft provides a complete software-defined
-compute and storage solution with Hyper-V and Storage Spaces Direct in Windows Server and Windows Server 2016, and you can now manage your Windows Server hyper-converged infrastructure using Project Honolulu. [Learn more about Windows Server 2016 Software-Defined Datacenter solutions](../../../sddc.md).
-
-Honolulu will support managing hyper-converged infrastructure running future Windows Server releases after RS3. For now, you can use Honolulu to manage HCI running recent releases of [Windows Server Insider Preview](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewserver). Project Honolulu does not currently support HCI running Windows Server RS1.
-
-## How to deploy and configure a hyper-converged cluster
-
-For production environments, we recommend acquiring a [Windows Server Software-Defined hardware/software offering](https://www.microsoft.com/en-us/cloud-platform/software-defined-datacenter) (WSSD), which includes production deployment tools and procedures. To evaluate the Windows Server 2016 hyper-converged solution, you can also use Hyper-V virtual machines. [Learn more about deploying and configuring hyper-converged infrastructure with Windows Server 2016](https://docs.microsoft.com/en-us/windows-server/storage/storage-spaces/hyper-converged-solution-using-storage-spaces-direct).
-
-## How to manage a hyper-converged cluster with Honolulu
-
-Once you have deployed and configured your hyper-converged cluster, you can manage it using Honolulu.
-
-**Connect to a hyper-converged cluster**
-
-1.  Click **+ Add** under **All Connections**. 
-2.  Choose to add a Hyper-Converged Cluster Connection.
-3.  Type the name of the hyper-converged cluster to manage and  then click **Submit**. 
-
-The cluster will be added to your connection list on the overview page.
-
-[TODO:legacy-content-end]
-
-## Tools
-
-Hyper-Converged Cluster Manager comes installed with the following tools by default:
-
-| Tool | Description |
-| ---- | ----------- |
-| [Overview](#overview) | View hyper-converged cluster details | 
-| [Drives](#drives) | View and modify drives | 
-| [Servers](#servers) | View and modify servers | 
-| [Virtual Machines](#virtual-machines) | View and control virtual machines | 
-| [Virtual Switches](#virtual-switches) | View and control virtual switches | 
-| [Volumes](#volumes) | View and modify volumes | 
-
-## Overview
-
-### Description
-
-[Tool description]
-
-### Features
-
-The following features are supported in Hyper-Converged Cluster Manager Overview:
-
-Cluster dashboard visualizing health alerts, storage performance metrics, compute/storage resource consumption and inventory of servers, virtual machines, drives and volumes
-
-Historical performance charts supporting up to a year of data.
-
-### Proposed Features
-
-The following features are either in progress or have been proposed for Hyper-Converged Cluster Manager Overview:
-
-|Feature|Status|Vote on User Voice|
-|-------|------|------------------|
-|Feature 1|In Progress||
-|Feature 2|Investigating|[Vote](todo:url)|
-|Feature 3|Proposed|[Vote](todo:url)|
-
-## Drives
-
-### Description
-
-[Tool description]
-
-### Features
-
-The following features are supported in Drives:
-
-Drives summary and inventory view and a single drive view with drive properties and commands for blinking the drive indicator light and retiring disk.
-
-
-### Proposed Features
-
-The following features are either in progress or have been proposed for Drives:
-
-|Feature|Status|Vote on User Voice|
-|-------|------|------------------|
-|Feature 1|In Progress||
-|Feature 2|Investigating|[Vote](todo:url)|
-|Feature 3|Proposed|[Vote](todo:url)|
-
-## Servers
-
-### Description
-
-[Tool description]
-
-### Features
-
-The following features are supported in Servers:
-
-Servers summary and inventory view and a single server view with server properties and commands for pausing a server for maintenance. There is also a command to launch the Project Honolulu standalone server experience to further manage your server.
-
-### Proposed Features
-
-The following features are either in progress or have been proposed for Servers:
-
-|Feature|Status|Vote on User Voice|
-|-------|------|------------------|
-|Feature 1|In Progress||
-|Feature 2|Investigating|[Vote](todo:url)|
-|Feature 3|Proposed|[Vote](todo:url)|
-
-## Virtual Machines
-
-### Description
-
-[Tool description]
-
-### Features
-
-The following features are supported in Virtual Machines:
-
-Virtual machines summary and inventory view and a single virtual machine view with commands for creating a VM, starting/stopping/resetting/pausing/saving/deleting a VM, move (live migration), changing VM settings, creating and managing checkpoints, connecting to a VM with remote desktop connection, and protecting a VM with Azure Site Recovery.
-
-### Proposed Features
-
-The following features are either in progress or have been proposed for Virtual Machines:
-
-|Feature|Status|Vote on User Voice|
-|-------|------|------------------|
-|Feature 1|In Progress||
-|Feature 2|Investigating|[Vote](todo:url)|
-|Feature 3|Proposed|[Vote](todo:url)|
-
-## Virtual Switches
-
-### Description
-
-[Tool description]
-
-### Features
-
-The following features are supported in Virtual Switches:
-
-Virtual switches list view and commands to create a new virtual switch and change settings for existing switches.
-
-### Proposed Features
-
-The following features are either in progress or have been proposed for Virtual Switches:
-
-|Feature|Status|Vote on User Voice|
-|-------|------|------------------|
-|Feature 1|In Progress||
-|Feature 2|Investigating|[Vote](todo:url)|
-|Feature 3|Proposed|[Vote](todo:url)|
-
-## Volumes
-
-### Description
-
-[Tool description]
-
-### Features
-
-The following features are supported in Volumes:
-
-Volumes summary and inventory view and a single volume view with commands for creating a new volume, resizing/deleting an existing volume and switching a volume to offline.
-
-### Proposed Features
-
-The following features are either in progress or have been proposed for Volumes:
-
-|Feature|Status|Vote on User Voice|
-|-------|------|------------------|
-|Feature 1|In Progress||
-|Feature 2|Investigating|[Vote](todo:url)|
-|Feature 3|Proposed|[Vote](todo:url)|
-
+Hyper-Converged Infrastructure consolidates software-defined compute, storage, and networking into one cluster to provide high-performance, cost-effective, and easily scalable virtualization. This capability was introduced in Windows Server 2016 with [Storage Spaces Direct](https://docs.microsoft.com/windows-server/storage/storage-spaces/storage-spaces-direct-overview) and [Hyper-V](https://docs.microsoft.com/windows-server/virtualization/hyper-v/hyper-v-on-windows-server).
+
+**Tip!** Looking to acquire Hyper-Converged Infrastructure? Microsoft recommends these [Windows Server Software-Defined](https://microsoft.com/wssd) solutions from our partners. They are designed, assembled, and validated against our reference architecture to ensure compatibility and reliability, so you get up and running quickly.
+
+## Managing Hyper-Converged Infrastructure with Windows Admin Center ##
+
+You can manage Windows Server Hyper-Converged Infrastructure using [Windows Admin Center](../understand/what-is.md), the next generation management tool for Windows Server which is the successor to traditional “in-box” tools like Server Manager. It’s free and can be installed and used without an Internet connection. Windows Admin Center currently supports managing Hyper-Converged Infrastructure running a preview build of Windows Server 2019.
+
+**Video: Get started with Hyper-Converged Infrastructure in Windows Admin Center**
+[TODO]
+
+## Key features ##
+Highlights of Windows Admin Center for Hyper-Converged Infrastructure include:
+- **Unified “single pane of glass” for compute, storage, and networking.** View your virtual machines, host servers, volumes, drives, and more within one purpose-built, consistent, interconnected experience.
+- **Create and manage Storage Spaces and Hyper-V virtual machines.** Radically simple workflows to create, open, resize, and delete volumes; and create, start, connect to, and move virtual machines; and much more.
+- **Powerful cluster-wide monitoring.** The dashboard graphs memory and CPU usage, storage capacity, IOPS, throughput, and latency in real-time, across every server in the cluster, with clear alerts when something’s not right.
+
+Windows Admin Center for Hyper-Converged Infrastructure is being actively developed by Microsoft. It receives frequent updates that improve existing features and add new features. Here’s what’s new in recent months:
+- Video: What's new with HCI in Windows Admin Center v1804 (April)
+- Video: What's new with HCI in Windows Admin Center v1803 (March)
+[TODO]
+
+## Before you start ##
+To manage your cluster as Hyper-Converged Infrastructure in Windows Admin Center, it needs to be running a preview build of Windows Server 2019 and have Hyper-V and Storage Spaces Direct enabled. [Download the latest preview build of Windows Server 2019.](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewserver)
+
+**Note!** Windows Admin Center also provides a general-purpose management experience for any cluster supporting any workload, available for Windows Server 2012 R2 and later. If this sounds like a better fit, when you add your cluster to Windows Admin Center, select [**Failover Cluster**](manage-failover-clusters.md) instead of **Hyper-Converged Cluster**.
+
+## Get started ##
+Once your Hyper-Converged Infrastructure is deployed, you can manage it using Windows Admin Center.
+
+### Install Windows Admin Center ###
+If you haven’t already, download and install Windows Admin Center. The fastest way to get up and running is to install it on your Windows 10 computer and manage your servers remotely. This takes less than five minutes. [Download the installer (.msi)](http://aka.ms/honolulucurrent) now or [learn more about other installation options](/deploy/install.md).
+
+### Add Hyper-Converged Cluster ###
+To add your cluster to Windows Admin Center:
+1.	Click **+ Add** under All Connections. 
+2.	Choose to add a **Hyper-Converged Cluster Connection**.
+3.	Type the name of the cluster and, if prompted, the credentials to use.
+4.	Click **Add** to finish.
+
+The cluster will be added to your connections list. Click it to launch the Dashboard.
+
+## Things to try ##
+If you’re just getting started, here are some exercises to familiarize yourself with Windows Admin Center for Hyper-Converged Infrastructure. Please exercise good judgement and be careful with production environments.
+
+### Create a new virtual machine ###
+Follow these steps or watch the video below:
+1. Click the **Virtual Machines** tool from the left side navigation pane.
+2. At the top of the Virtual Machines tool, choose the **Inventory** tab, then click **New** to create a new virtual machine.
+3. Enter the virtual machine name and choose between generation 1 and 2 virtual machines.
+4. Uou can then choose which host to initially create the virtual machine on or use the recommended host.
+5. Choose a path for the virtual machine files. Choose a volume from the dropdown list or click **Browse** to choose a folder using the folder picker. The virtual machine configuration files and virtual hard disk file will be saved in a single folder under the \Hyper-V\\[virtual machine name] path of the selected volume or path.
+6. Choose the number of virtual processors, whether you want nested virtualization enabled, configure memory settings, network adapters, virtual hard disks and choose whether you want to install an operating system from an .iso image file or from the network.
+7. Click **Create** to create the virtual machine.
+8. Once the virtual machine is created and appears in the virtual machine list, you can start the virtual machine.
+9. Once the virtual machine is started, you can connect to the virtual machine's console via VMConnect to install the operating system. Select the virtual machine from the list, click **More** > **Connect** to download the .rdp file. Open the .rdp file in the Remote Desktop Connection app. Since this is connecting to the virtual machine's console, you will need to enter the Hyper-V host's admin credentials.
+
+**Video: Create and connect to a Hyper-V virtual machine**
+[TODO]
+
+[Learn more about virtual machine management with Windows Admin Center](manage-virtual-machines.md)
+
+### Pause and safely restart a server ###
+Follow these steps or watch the video below:
+1.	From the **Dashboard**, select **Servers** from the navigation on the left side or by clicking the **VIEW SERVERS >**  link on the tile in the lower right corner of the Dashboard.
+2.	At the top, switch from **Summary** to the **Inventory** tab.
+3.	Select a server by clicking its name to open the **Server** detail page.
+4.	Click **Pause server for maintenance**. If it’s safe to proceed, this will move virtual machines to other servers in the cluster. The server will have status Draining while this happens. If you want, you can watch the virtual machines move on the **Virtual machines > Inventory** page, where their host server is shown clearly in the grid. When all virtual machines have moved, the server status will be **Paused**.
+5.	Click **Manage server** to access all the per-server management tools in Windows Admin Center.
+6.	Click **Restart**, then **Yes**. You’ll be kicked back to the connections list.
+7.	Back on the **Dashboard**, the server is colored red while it’s down.
+8.	Once it’s back up, navigate again the **Server** page and click **Resume server from maintenance** to set the server status back to simply Up. In time, virtual machines will move back – no user action is required.
+
+This short video demonstrates the steps above:
+**Video: Pause and safely restart a server**
+[TODO]
+
+### Create and open a Storage Spaces Direct volume ###
+Follow these steps or watch the video below:
+1.	From the **Dashboard**, select **Volumes** from the navigation on the left side or by clicking the **VIEW VOLUMES >** link on the tile in the lower right corner of the Dashboard.
+2.	At the top, switch from **Summary** to the **Inventory** tab.
+3.	Click **Create** to open the action pane.
+4.	Input the parameters for your new volume, such as its name, resiliency type, and size. You will notice the experience is radically streamlined compared to traditional Server Manager.
+5.	Click **Create** to start provisioning the volume. Notifications in the upper right corner give progress and let you know when the volume has been created successfully (or if something went wrong).
+6.	When the volume appears in the grid, click its name to open the **Volume** detail page. On this page, you can clearly see volume properties, like its filesystem, resiliency type, and storage capacity bar.
+7.	Click **Open** to access the Files tool in Windows Admin Center.
+8.	Navigate to the volume – for example, to C:\ClusterStorage\Volume1. From here, you can conveniently browse, modify, add (upload), or delete files and folders within the volume.
+
+This short video demonstrates the steps above:
+**Video: Create and open a Storage Spaces Direct volume**
+[TODO]
+
+### Replace a failed drive ###
+Follow these steps or watch the video below:
+1.	When a drive fails, an alert appears in the upper left **Alerts** area of the **Dashboard**.
+2.	You can also select **Drives** from the navigation on the left side or click the **VIEW DRIVES >** link on the tile in the lower right corner to browse drives and see their status for yourself. In the **Inventory** tab, the grid supports sorting, grouping, and keyword search.
+3.	From the **Dashboard**, click the alert to see details, like the drive’s physical location.
+4.	To learn more, click the **Go to drive** shortcut to the **Drive** detail page.
+5.	If your hardware supports it, you can click **Turn light on/off** to control the drive’s indicator light.
+6.	Storage Spaces Direct automatically retires and evacuates failed drives. When this has happened, the drive status is Retired, and its storage capacity bar is empty.
+7.	Remove the failed drive and insert its replacement.
+8.	In **Drives > Inventory**, the new drive will appear. In time, the alert will clear, volumes will repair back to OK status, and storage will rebalance onto the new drive – no user action is required.
+
+This short video demonstrates the steps above:
+**Video: Replace a failed drive**
+[TODO]
+
+## Feedback ##
+It’s all about your feedback! The most important benefit of frequent updates is to hear what’s working and what needs to be improved. Here are some ways to let us know what you’re thinking:
+- [Submit and vote for feature requests on UserVoice](https://aka.ms/WindowsAdminCenterFeedback)
+- [Join the Windows Admin Center forum on Microsoft Tech Community](https://techcommunity.microsoft.com/t5/Windows-Server-Management/bd-p/WindowsServerManagement)
+- Tweet to `@servermgmt`
+
+## Frequently asked questions ##
+### Can I use Windows Admin Center to manage Storage Spaces Direct for other use cases (not hyper-converged), such as converged Scale-Out File Server (SoFS) or Microsoft SQL Server? ###
+Windows Admin Center for Hyper-Converged Infrastructure does not provide management or monitoring options specifically for other use cases of Storage Spaces Direct – for example, it can’t create file shares. However, the Dashboard and core features, such as creating volumes or replacing drives, work for any Storage Spaces Direct cluster.
+
+### What’s the difference between a Failover Cluster and a Hyper-Converged Cluster? ###
+In general, the term “hyper-converged” refers to running Hyper-V and Storage Spaces Direct on the same clustered servers to virtualize compute and storage resources. In the context of Windows Admin Center, when you click **+ Add** from the connections list, you can choose between adding a Failover Cluster connection or a Hyper-Converged Cluster connection:
+The Failover Cluster connection is the successor to the Failover Cluster Manager desktop app. It provides a familiar, general-purpose management experience for any cluster supporting any workload, including Microsoft SQL Server. It is available for Windows Server 2012 R2 and later.
+The Hyper-Converged Cluster connection is an all-new experience tailored for Storage Spaces Direct and Hyper-V. It features the Dashboard and emphasizes charts and alerts for monitoring. It is currently available for preview builds of Windows Server 2019.
+
+### How much does Windows Admin Center cost? ###
+It’s free.
+
+### Does Windows Admin Center require System Center? ###
+No.
+
+### Does it require an Internet connection? ###
+No. Although Windows Admin Center offers powerful and convenient integration with the Microsoft Azure cloud, the core management and monitoring experience for Hyper-Converged Infrastructure is completely on-premises. It can be installed and used without an Internet connection.
+
+### See also: ###
+- [Windows Admin Center](../understand/windows-admin-center.md)
+- [Storage Spaces Direct](https://docs.microsoft.com/windows-server/storage/storage-spaces/storage-spaces-direct-overview)
+- [Hyper-V](https://docs.microsoft.com/windows-server/virtualization/hyper-v/hyper-v-on-windows-server)
