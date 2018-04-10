@@ -12,8 +12,6 @@ ms.prod: windows-server-threshold
 
 # Windows Admin Center (formerly Project Honolulu)
 
-<img src="../../media/honolulu-ga/wac-icon.png" style='height:200px' alt="Icon representing Windows Admin Center" align="center">
-
 Windows Admin Center is generally available and can be deployed in production environments. It comes at no additional cost beyond Windows!
 
 ## [Download now](http://aka.ms/honolulucurrent)
@@ -32,15 +30,17 @@ Quick links: [Documentation](../overview.md) | [Give feedback](https://aka.ms/Wi
 
 <!-- UPDATE VIDEO -->
 
-### Windows Admin Center is a lightweight, browser-based GUI toolset for managing servers, clusters, and hyper-converged infrastructure. It's the evolution of familiar in-box managment tools plus so much more.
+<font size=+1> Windows Admin Center is a lightweight, browser-based GUI toolset for managing servers, clusters, and hyper-converged infrastructure. It's the evolution of familiar in-box managment tools plus so much more. </font>
 
+
+<img src="../../media/honolulu-ga/legacy-to-new.gif" alt="Video of legacy management tools transformed to new Windows Admin Center tools">
 
 <!-- <img src="../../media/honolulu-ga/legacy-sod.gif" width="48%" alt="Video of legacy management tools"> <img src="../../media/honolulu-ga/arrow.png" width="4%" alt="right arrow"> <img src="../../media/honolulu-ga/server-overview-tool.gif" width="48%"  alt="Video of Windows Admin Center tools">  -->
 
 <!-- |   |   |   |
 |:-:|:-:|:-:|
 | <img src="../media/honolulu-ga/legacy-sod.gif" alt="Video of legacy management tools">  | <img src="../media/honolulu-ga/arrow.png" alt="right arrow" align="middle"> | <img src="../media/honolulu-ga/server-overview-tool.gif"  alt="Video of Windows Admin Center tools">  | -->
-
+<!-- 
 <table border="0" style="padding:0">
         <tr> 
           <td style="width:48%" width="48%"> <img src="../../media/honolulu-ga/legacy-sod.gif" alt="Video of legacy management tools">  </td>
@@ -48,13 +48,13 @@ Quick links: [Documentation](../overview.md) | [Give feedback](https://aka.ms/Wi
 		  </td>
 		  <td style="width:48%" width="48%"> <img src="../../media/honolulu-ga/server-overview-tool.gif" alt="Video of Windows Admin Center tools"> </td>
         </tr> 
-</table>
+</table> -->
 
 |   |   |
 |:-:|:--|
-| <img src="../../media/honolulu-ga/simple-icon.png" width="100" alt="Icon representing app window">  | <b>Simple & lightweight</b> <br/> Familiar tools are streamlined to make management tasks a breeze. Install in under 5 minutes and manage servers in your environment immediately, no target configuration required.  |
-| <img src="../../media/honolulu-ga/future-icon.png" width="100" alt="Icon representing hybrid cloud">  | <b>Built for the future</b> <br/> Integration with Azure services helps you leverage the power of the hybrid world. Manage Hyper-Converged clusters with powerful yet simple tools.  |
-| <img src="../../media/honolulu-ga/secure-icon.png" width="100" alt="Icon representing secure server">  | <b>Secure management</b> <br/> Control who can manage servers and get unparalleled insight into the actions administrators perform in your environment.  |
+| <img src="../../media/honolulu-ga/simple-icon.png" width="100" alt="Icon representing app window">  | <font size=+1><b> Simple & lightweight</b> <br/> Familiar tools are streamlined to make management tasks a breeze. Install in under 5 minutes and manage servers in your environment immediately, no target configuration required. </font> |
+| <img src="../../media/honolulu-ga/future-icon.png" width="100" alt="Icon representing hybrid cloud">  | <font size=+1><b>Built for the future</b> <br/> Integration with Azure services helps you leverage the power of the hybrid world. Manage Hyper-Converged clusters with powerful yet simple tools. </font>  |
+| <img src="../../media/honolulu-ga/secure-icon.png" width="100" alt="Icon representing secure server">  | <font size=+1><b>Secure management</b> <br/> Control who can manage servers and get unparalleled insight into the actions administrators perform in your environment. </font>  |
 
 <!-- 
 //VERSION OF TABLE WITH HYPERLINKS
@@ -105,9 +105,9 @@ Quick links: [Documentation](../overview.md) | [Give feedback](https://aka.ms/Wi
 |  |
 |--|
 | "[Windows Admin Center] has decreased our time/effort in managing the management system by over 75%." <br/> *- Rand Morimoto, President, Convergent Computing* |
-| "Thanks to [Windows Admin Center], we can manage our customers remotely from HTML5 portal without problem and with the full integration with Azure Active Directory, we are able to increase the security thanks to the Multi-Factor Authentication."<br/> *- Silvio Di Benedetto, Founder and Senior Consultant, Inside Technologies* |
-| “We have been able to deploy [Server Core] SKUs in a more effective way, improving resource efficiency, security and automation while still achieving a good degree of productivity and reducing errors that can happen when relying on scripting only.” <br/> *- Guglielmo Mengora, Founder and CEO, VaiSulWeb* |
-| “With [Windows Admin Center] customers especially in the SMB market now have an easy to use tool to manage their internal infrastructure. This minimizes administrative efforts and saves a lot of time. And the best of it: there are no additional license fees for [Windows Admin Center]!” <br/> *- Helmut Otto, Managing Director, SecureGUARD* |
+| "Thanks to [Windows Admin Center], we can manage our customers remotely from HTML5 portal without problem and with the full integration with Azure Active Directory, we are able to increase the security thanks to the Multi-Factor Authentication."<br/> <font color="grey"> *- Silvio Di Benedetto, Founder and Senior Consultant, Inside Technologies* </font>|
+| “We have been able to deploy [Server Core] SKUs in a more effective way, improving resource efficiency, security and automation while still achieving a good degree of productivity and reducing errors that can happen when relying on scripting only.” <br/> <font color="grey">*- Guglielmo Mengora, Founder and CEO, VaiSulWeb* </font>|
+| “With [Windows Admin Center] customers especially in the SMB market now have an easy to use tool to manage their internal infrastructure. This minimizes administrative efforts and saves a lot of time. And the best of it: there are no additional license fees for [Windows Admin Center]!” <br/><font color="grey"> *- Helmut Otto, Managing Director, SecureGUARD* </font>|
 
 [Read more about companies are using Windows Admin Center in their production evironments.](case-studies.md)
 
@@ -128,7 +128,7 @@ Windows Admin Center is designed for managing a single server or cluster. It com
         <td style="padding: 10px; border: 0;" align="center"><a target="_blank" class="mscom-link blogs-follow-link" title="Follow us on Blogs" aria-label="Follow us on Blogs" data-info="Blogs" href="https://blogs.technet.microsoft.com/servermanagement/"><picture><source srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw" media="(min-width:0)"><img srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw" alt="Follow us on Blogs" src="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw"></picture></a>
         </td> -->
 
-### Follow us: &nbsp; <a target="_blank" class="mscom-link twitter-follow-link" title="Follow us on Twitter" aria-label="Follow us on Twitter" data-info="Twitter" href="https://twitter.com/servermgmt"><picture><source srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOolR" media="(min-width:0)"><img srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOolR" alt="Follow us on Twitter" src="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOolR"></picture></a>&nbsp; <a target="_blank" class="mscom-link blogs-follow-link" title="Follow us on Blogs" aria-label="Follow us on Blogs" data-info="Blogs" href="https://blogs.technet.microsoft.com/servermanagement/"><picture><source srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw" media="(min-width:0)"><img srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw" alt="Follow us on Blogs" src="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw"></picture></a>
+## Follow us: &nbsp; <a target="_blank" class="mscom-link twitter-follow-link" title="Follow us on Twitter" aria-label="Follow us on Twitter" data-info="Twitter" href="https://twitter.com/servermgmt"><picture><source srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOolR" media="(min-width:0)"><img srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOolR" alt="Follow us on Twitter" src="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOolR"></picture></a>&nbsp; <a target="_blank" class="mscom-link blogs-follow-link" title="Follow us on Blogs" aria-label="Follow us on Blogs" data-info="Blogs" href="https://blogs.technet.microsoft.com/servermanagement/"><picture><source srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw" media="(min-width:0)"><img srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw" alt="Follow us on Blogs" src="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw"></picture></a>
 
 <!-- 
 <li class=" mr-1"><a target="_blank" class="mscom-link youtube-user-follow-link" title="Follow us on YouTube" aria-label="Follow us on YouTube" data-info="YouTube-User" href="https://www.youtube.com/user/MSCloudOS"><picture><source srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyx" media="(min-width:0)"><img srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyx" alt="Follow us on YouTube" src="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyx"></picture></a></li> -->

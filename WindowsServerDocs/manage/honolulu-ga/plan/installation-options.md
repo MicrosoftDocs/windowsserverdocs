@@ -49,16 +49,16 @@ and that the version is 5.0 or higher.
 
 <table>
     <tr>
-        <td style="vertical-align: top;">
+        <td style="vertical-align: top; align: center">
             <img src="../../media/honolulu-ga/deployment-options-1.png" height="250" alt="Diagram of Windows 10 desktop installation"> 
         </td>
-        <td style="vertical-align: top;">
+        <td style="vertical-align: top; align: center">
             <img src="../../media/honolulu-ga/deployment-options-3.png" height="250" alt="Diagram of managed server installation"> 
         </td>
-        <td style="vertical-align: top;">
+        <td style="vertical-align: top; align: center">
             <img src="../../media/honolulu-ga/deployment-options-2.png" height="250" alt="Diagram of desigated gateway server installation"> 
         </td>
-        <td style="vertical-align: top;">
+        <td style="vertical-align: top; align: center">
             <img src="../../media/honolulu-ga/deployment-options-4.png" height="250" alt="Diagram of high availability deployment"> 
         </td>
     </tr>

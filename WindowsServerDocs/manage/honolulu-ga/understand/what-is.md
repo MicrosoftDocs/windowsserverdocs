@@ -12,7 +12,7 @@ ms.prod: windows-server-threshold
 
 # What is Windows Admin Center?
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
 <b>Windows Admin Center</b> is a locally deployed, browser-based, management tool set that enables on-premises administration of Windows Servers with no Azure or cloud dependency. Windows Admin Center gives IT Admins full control over all aspects of their server infrastructure, and is particularly useful for management on private networks that are not connected to the Internet.
 
@@ -30,7 +30,13 @@ Publishing the gateway web server to DNS, and configuring any corresponding corp
 
 ## What does Windows Admin Center do?
 
-### Simplified server management
+|   |   |
+|:-:|:--|
+| <img src="../../media/honolulu-ga/simple-icon.png" width="100" alt="Icon representing app window">  | <b>Simple & lightweight</b> <br/> Familiar tools are streamlined to make management tasks a breeze. [Install](../overview.md#get-started) in under 5 minutes and manage servers in your environment immediately, no target configuration required. |
+| <img src="../../media/honolulu-ga/future-icon.png" width="100" alt="Icon representing hybrid cloud">  | <b>Built for the future</b> <br/> [Integration with Azure services](../plan/azure-integration-options.md) helps you leverage the power of the hybrid world. [Manage Hyper-Converged clusters](../use/manage-hyper-converged.md) with powerful yet simple tools.  |
+| <img src="../../media/honolulu-ga/secure-icon.png" width="100" alt="Icon representing secure server">  | <b>Secure management</b> <br/> [Control](../plan/user-access-options.md) who can manage servers and [get unparalleled insight](../configure/logging.md) into the actions administrators perform in your environment. |
+
+<!-- ## Simplified server management
 
 <table>
     <tr>
@@ -43,7 +49,7 @@ Windows Admin Center consolidates your many distinct tools into one clean, simpl
     </tr>
 </table>
 
-### Illuminate your datacenter infrastructure
+## Illuminate your datacenter infrastructure
 
 <table>
     <tr>
@@ -56,7 +62,7 @@ With Windows Admin Center, you can connect to all the important parts of your in
     </tr>
 </table>
 
-### The tools you know, reimagined
+## The tools you know, reimagined
 
 <table>
     <tr>
@@ -69,7 +75,8 @@ We've constructed Windows Admin Center to provide the core familiar tools you ha
     </tr>
 </table>
 
-### Manage your Hyper-converged Infrastructure
+
+## Manage your Hyper-converged Infrastructure
 
 <table>
     <tr>
@@ -80,5 +87,5 @@ We've constructed Windows Admin Center to provide the core familiar tools you ha
 Windows Admin Center's radically simplified, powerful GUI enables you to configure and manage your hyper-converged clusters.  You can see cluster-wide alerts and get an easy look at the inventory and health of the compute and storage resources of your cluster.
         </td>
     </tr>
-</table>
+</table> -->
 
