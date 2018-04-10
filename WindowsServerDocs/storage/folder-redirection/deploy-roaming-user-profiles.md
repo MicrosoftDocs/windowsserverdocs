@@ -561,14 +561,15 @@ The following table lists the location of Roaming User Profiles on various versi
 
 ## <a id="appendix-c-workaround"></a>Appendix C: Working around reset Start menu layouts after upgrades
 
- 1.	If only one user ever uses the device and the IT Admin uses a managed OS deployment strategy such as SCCM they can do the following:  
-    
-    a.	Export the Start layout before the upgrade with Export-Startlayout
+Here are some ways to work around Start menu layouts getting reset after an in-place upgrade:
 
-    b.	After OOBE but before the user logs on run Import-StartLayout 
+ - If only one user ever uses the device and the IT Admin uses a managed OS deployment strategy such as SCCM they can do the following:
+    
+    1. Export the Start menu layout with Export-Startlayout before the upgrade 
+    2. Import the Start menu layout with Import-StartLayout after OOBE but before the user signs in  
  
     > [!NOTE] 
-    > This will preserve the user’s Start layout. However take note that importing a StartLayout modifies the Default User profile. All user profiles created after the import has occurred will get the imported Start-Layout.
+    > Importing a StartLayout modifies the Default User profile. All user profiles created after the import has occurred will get the imported Start-Layout.
  
  2.	IT Admins can opt to manage Start’s Layout with Group Policy. Using Group Policy provides a centralized management solution to apply a standardized Start Layout to users. There are 2 modes to modes to using Group Policy for Start management. Full Lockdown and Partial Lockdown. The full lockdown scenario prevents the user from making any changes to Start’s layout. The partial lockdown scenario allows user to make changes to a specific are of Start. For more info, see [Customize and export Start layout](https://docs.microsoft.com/windows/configuration/customize-and-export-start-layout).
         
