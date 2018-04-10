@@ -563,7 +563,8 @@ The following table lists the location of Roaming User Profiles on various versi
 
  1.	If only one user ever uses the device and the IT Admin uses a managed OS deployment strategy such as SCCM they can do the following:  
     
-    a.	Export the Start layout before the upgrade with Export-Startlayout 
+    a.	Export the Start layout before the upgrade with Export-Startlayout
+
     b.	After OOBE but before the user logs on run Import-StartLayout 
  
     > [!NOTE] 
