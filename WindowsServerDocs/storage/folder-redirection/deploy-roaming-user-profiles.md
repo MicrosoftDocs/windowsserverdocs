@@ -1,7 +1,7 @@
 ﻿---
 Title: Deploying Roaming User Profiles
 TOCTitle: Deploying Roaming User Profiles
-ms.date: 03/15/2018
+ms.date: 04/10/2018
 ms.prod: windows-server-threshold
 ms.technology: storage
 ms.topic: article
@@ -19,21 +19,12 @@ For a list of recent changes to this topic, see the [Change history](#change-his
 
 > [!IMPORTANT]
 > Due to the security changes made in <A href="https://support.microsoft.com/help/3163622/ms16-072-security-update-for-group-policy-june-14%2c-2016">MS16-072</A>, we updated <A href="">Step 4: Optionally create a GPO for Roaming User Profiles</A> of this topic so that Windows can properly apply the Roaming User Profiles policy (and not revert to local policies on affected PCs).
-  [!Important Upgrade Information]
-  Users customizations to Start will be lost after an OS in-place upgrade in the following configuration:
-  - Users are configured for a roaming profile
-  - Users are allowed to make changes to Start
-The result after the OS in-place upgrade is that the Start menu is reset to the default of the new OS version
-Workarounds
- 1.	If only one user ever uses the device and the IT Admin uses a managed OS deployment strategy such as SCCM they can do the following:  
-    a.	Export the Start layout before the upgrade with Export-Startlayout 
-    b.	After OOBE but before the user logs on run Import-StartLayout 
-Note: This will preserve the user’s Start layout. However take note that importing a StartLayout modifies the Default User profile. All user profiles created after the import has occurred will get the imported Start-Layout.
- 2.	IT Admins can opt to manage Start’s Layout with Group Policy. Using Group Policy provides a centralized management solution to apply a standardized Start Layout to users. There are 2 modes to modes to using Group Policy for Start management. Full Lockdown and Partial Lockdown. The full lockdown scenario prevents the user from making any changes to Start’s layout. The partial lockdown scenario allows user to make changes to a specific are of Start. 
-        See: https://docs.microsoft.com/en-us/windows/configuration/customize-and-export-start-layout
-        Note: User made changes in the partial lockdown scenario will still be lost during upgrade.
- 3.	Let the Start layout reset occur and allow end users to reconfigure Start. A notification email or other notification can be sent to end users to expect their Start layouts to be reset after the OS upgrade to minimized impact. 
 
+> [!IMPORTANT]
+>  User customizations to Start will be lost after an OS in-place upgrade in the following configuration:
+> - Users are configured for a roaming profile
+> - Users are allowed to make changes to Start
+>  The result after the OS in-place upgrade is that the Start menu is reset to the default of the new OS version. For workarounds, see [Appendix C: Working around reset Start menu layouts after upgrades](#appendix-c-workaround).
 
 
 ## Prerequisites
@@ -567,12 +558,26 @@ The following table lists the location of Roaming User Profiles on various versi
 </tbody>
 </table>
 
-## Change history
+## <a id="appendix-c-workaround"></a>Appendix C: Working around reset Start menu layouts after upgrades
+
+
+ 1.	If only one user ever uses the device and the IT Admin uses a managed OS deployment strategy such as SCCM they can do the following:  
+    a.	Export the Start layout before the upgrade with Export-Startlayout 
+    b.	After OOBE but before the user logs on run Import-StartLayout 
+    > [!NOTE] 
+    > This will preserve the user’s Start layout. However take note that importing a StartLayout modifies the Default User profile. All user profiles created after the import has occurred will get the imported Start-Layout.
+ 2.	IT Admins can opt to manage Start’s Layout with Group Policy. Using Group Policy provides a centralized management solution to apply a standardized Start Layout to users. There are 2 modes to modes to using Group Policy for Start management. Full Lockdown and Partial Lockdown. The full lockdown scenario prevents the user from making any changes to Start’s layout. The partial lockdown scenario allows user to make changes to a specific are of Start. 
+        See: https://docs.microsoft.com/en-us/windows/configuration/customize-and-export-start-layout
+        Note: User made changes in the partial lockdown scenario will still be lost during upgrade.
+ 3.	Let the Start layout reset occur and allow end users to reconfigure Start. A notification email or other notification can be sent to end users to expect their Start layouts to be reset after the OS upgrade to minimized impact. 
+
+# Change history
 
 The following table summarizes some of the most important changes to this topic.
 
 |Date|Description |Reason|
 |--- |---         |---   |
+|April 10th, 2018|Added discussion of when user customizations to Start are lost after an OS in-place upgrade|Callout known issue.|
 |March 13th, 2018 |Updated for Windows Server 2016 | Moved out of Previous Versions library and updated for current version of Windows Server.|
 |April 13th, 2017|Added profile information for Windows 10, version 1703, and clarified how roaming profile versions work when upgrading operating systems - see <a href="">Considerations when using Roaming User Profiles on multiple versions of Windows</a>.|Customer feedback.|
 |March 14th, 2017|Added optional step for <a href="">specifying a mandatory Start layout for Windows 10 PCs</a>.|Feature changes in latest Windows update.|
