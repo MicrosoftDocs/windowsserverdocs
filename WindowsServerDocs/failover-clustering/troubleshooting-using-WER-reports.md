@@ -7,7 +7,7 @@ ms.technology: storage-failover-clustering
 ms.author: vpetter
 ms.technology: storage-failover-clustering
 ms.topic: article
-author: adagashe
+author: vpetter
 ms.date: 03/27/2018
 ms.localizationpriority: 
 ---
