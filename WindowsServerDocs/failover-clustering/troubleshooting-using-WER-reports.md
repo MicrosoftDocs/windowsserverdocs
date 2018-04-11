@@ -4,15 +4,14 @@ description: Troubleshooting a Failover Cluster using WER Reports, with specific
 keywords: Failover Cluster,WER Reports,Diagnostics,Cluster, Windows Error Reporting
 ms.prod: windows-server-threshold
 ms.technology: storage-failover-clustering
-ms.author: adagashe
-ms.manager: eldenc
+ms.author: vpetter
 ms.technology: storage-failover-clustering
 ms.topic: article
-author: adagashe
+author: vpetter
 ms.date: 03/27/2018
 ms.localizationpriority: 
 ---
-# Troubleshooting a Failover Cluster using Windows Error Reporting
+# Troubleshooting a Failover Cluster using Windows Error Reporting 
 
 > Applies to: Windows Server 2016, Windows Server
 
