@@ -8133,48 +8133,98 @@
     },
     {
       "source_path": "WindowsServerDocs/administration/honolulu/deployment-guide.md",
-      "redirect_url": "/windows-server/manage/honolulu/deployment-guide",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/manage/windows-admin-center/overview",
+      "redirect_document_id": false
 },
 {
   "source_path": "WindowsServerDocs/administration/honolulu/honolulu.md",
-  "redirect_url": "/windows-server/manage/honolulu/honolulu",
-  "redirect_document_id": true
+  "redirect_url": "/windows-server/manage/windows-admin-center/overview",
+  "redirect_document_id": false
 },
 {
   "source_path": "WindowsServerDocs/administration/honolulu/honolulu-and-asr.md",
-  "redirect_url": "/windows-server/manage/honolulu/honolulu-and-asr",
-  "redirect_document_id": true
+  "redirect_url": "/windows-server/manage/windows-admin-center/overview",
+  "redirect_document_id": false
 },
 {
   "source_path": "WindowsServerDocs/administration/honolulu/honolulu-faq.md",
-  "redirect_url": "/windows-server/manage/honolulu/honolulu-faq",
-  "redirect_document_id": true
+  "redirect_url": "/windows-server/manage/windows-admin-center/overview",
+  "redirect_document_id": false
 },
 {
   "source_path": "WindowsServerDocs/administration/honolulu/honolulu-known-issues.md",
-  "redirect_url": "/windows-server/manage/honolulu/honolulu-known-issues",
-  "redirect_document_id": true
+  "redirect_url": "/windows-server/manage/windows-admin-center/overview",
+  "redirect_document_id": false
 },
 {
   "source_path": "WindowsServerDocs/administration/honolulu/honolulu-manage.md",
-  "redirect_url": "/windows-server/manage/honolulu/honolulu-manage",
-  "redirect_document_id": true
+  "redirect_url": "/windows-server/manage/windows-admin-center/overview",
+  "redirect_document_id": false
 },
 {
   "source_path": "WindowsServerDocs/administration/honolulu/honolulu-manage-hci.md",
-  "redirect_url": "/windows-server/manage/honolulu/honolulu-manage-hci",
-  "redirect_document_id": true
+  "redirect_url": "/windows-server/manage/windows-admin-center/overview",
+  "redirect_document_id": false
 },
 {
   "source_path": "WindowsServerDocs/administration/honolulu/honolulu-standalone-hyper-v.md",
-  "redirect_url": "/windows-server/manage/honolulu/honolulu-standalone-hyper-v",
-  "redirect_document_id": true
+  "redirect_url": "/windows-server/manage/windows-admin-center/overview",
+  "redirect_document_id": false
 },
 {
   "source_path": "WindowsServerDocs/administration/honolulu/honolulu-troubleshoot.md",
-  "redirect_url": "/windows-server/manage/honolulu/honolulu-troubleshoot",
-  "redirect_document_id": true
+  "redirect_url": "/windows-server/manage/windows-admin-center/overview",
+  "redirect_document_id": false
+},
+{
+  "source_path": "WindowsServerDocs/manage/honolulu/deployment-guide.md",
+  "redirect_url": "/windows-server/manage/windows-admin-center/overview",
+  "redirect_document_id": false
+},
+{
+  "source_path": "WindowsServerDocs/manage/honolulu/honolulu.md",
+  "redirect_url": "/windows-server/manage/windows-admin-center/overview",
+  "redirect_document_id": false
+},
+{
+  "source_path": "WindowsServerDocs/manage/honolulu/honolulu-and-asr.md",
+  "redirect_url": "/windows-server/manage/windows-admin-center/overview",
+  "redirect_document_id": false
+},
+{
+  "source_path": "WindowsServerDocs/manage/honolulu/honolulu-faq.md",
+  "redirect_url": "/windows-server/manage/windows-admin-center/overview",
+  "redirect_document_id": false
+},
+{
+  "source_path": "WindowsServerDocs/manage/honolulu/honolulu-known-issues.md",
+  "redirect_url": "/windows-server/manage/windows-admin-center/overview",
+  "redirect_document_id": false
+},
+{
+  "source_path": "WindowsServerDocs/manage/honolulu/honolulu-manage.md",
+  "redirect_url": "/windows-server/manage/windows-admin-center/overview",
+  "redirect_document_id": false
+},
+{
+  "source_path": "WindowsServerDocs/manage/honolulu/honolulu-manage-azure-vms.md",
+  "redirect_url": "/windows-server/manage/windows-admin-center/overview",
+  "redirect_document_id": false
+},
+{
+  "source_path": "WindowsServerDocs/manage/honolulu/honolulu-manage-hci.md",
+  "redirect_url": "/windows-server/manage/windows-admin-center/overview",
+  "redirect_document_id": false
+},
+{
+  "source_path": "WindowsServerDocs/manage/honolulu/honolulu-standalone-hyper-v.md",
+  "redirect_url": "/windows-server/manage/windows-admin-center/overview",
+  "redirect_document_id": false
+},
+{
+  "source_path": "WindowsServerDocs/manage/honolulu/honolulu-troubleshoot.md",
+  "redirect_url": "/windows-server/manage/windows-admin-center/overview",
+  "redirect_document_id": false
 }
   ]
 }
