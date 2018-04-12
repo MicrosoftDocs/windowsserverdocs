@@ -31,6 +31,7 @@ You can deploy Windows Admin Center in a failover cluster to provide high availa
 2. Run the Install-WindowsAdminCenterHA.ps1 script with the following parameters:
     - `-clusterStorage`: the local path of the Cluster Shared Volume to store Windows Admin Center data.
     - `-clientAccessPoint`: choose a name that you will use to access Windows Admin Center. For example, if you run the script with the parameter `-clientAccessPoint contosoWindowsAdminCenter`, you will access the Windows Admin Center service by visiting `https://contosoWindowsAdminCenter.<domain>.com`
+    - `staticAddress`: Optional. One or more static addresses for the cluster generic service.
     - `-msiPath`: The path for the Windows Admin Center .msi file.
     - `-certPath`: Optional. The path for a certificate .pfx file.
     - `-certPassword`: Optional. A SecureString password for the certificate .pfx provided in `-certPath`
