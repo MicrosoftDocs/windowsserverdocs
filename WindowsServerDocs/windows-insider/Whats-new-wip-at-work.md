@@ -209,16 +209,15 @@ network activity trending up or down? The cluster is pushing 1,000,000
 IOPS – is that my new record?* Previously, you'd need external tooling
 to answer these questions. No more!
 
-Beginning in build 17090, beautiful new charts in [Project
-Honolulu](https://docs.microsoft.com/en-us/windows-server/manage/honolulu/honolulu-manage-hci)
+Beginning in build 17090, beautiful new charts in [Windows Admin Center](../manage/windows-admin-center/use/manage-hyper-converged.md)
 (and new PowerShell cmdlets, for those so inclined) empower you to
 answer these questions. There's nothing to install, configure, or
 start—it's built-in and always-on. Learn more at
 <https://aka.ms/clusterperformancehistory>.
 
-![alt text](images/Hyper-Converged-in-Honolulu.png "Honolulu")
+![alt text](images/Hyper-Converged-in-Honolulu.png "Windows Admin Center")
 
-*Caption: New charts in Project Honolulu, powered by built-in cluster
+*Caption: New charts in Windows Admin Center, powered by built-in cluster
 performance history.*
 
 
