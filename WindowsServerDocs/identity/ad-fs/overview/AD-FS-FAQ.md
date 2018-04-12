@@ -43,6 +43,12 @@ HTTP/2 support was added in Windows Server 2016, but HTTP/2 can't be used for cl
 ### Is using Windows 2016 WAP Servers to publish the AD FS farm to the internet without upgrading the back-end AD FS farm supported?
 Yes, this configuration is supported, however no new AD FS 2016 features would be supported in this configuration.  This configuration is meant to be temporary during the migration phase from AD FS 2012 R2 to AD FS 2016 and should not be deployed for long periods of time.
 
+### Is it possible to deploy AD FS for Office 365 without publishing a proxy to Office 365?
+Yes, this is supported. However, as a side effect
+
+1. You will need to manually manage updating token signing certificates because Azure AD will not be able to access the federation metadata. For more information on manually updating token signing certificate read [Renew federation certificates for Office 365 and Azure Active Directory](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-o365-certs)
+2. You will not be able to leverage legacy auth flows (e.g. ExO proxy auth flow)
+
 ## Design
 
 ### What third party multi-factor authentication providers are available for AD FS? 

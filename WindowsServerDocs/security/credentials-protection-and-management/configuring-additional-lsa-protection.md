@@ -29,7 +29,7 @@ For an LSA plug-in or driver to successfully load as a protected process, it mus
 
     Protected mode requires that any plug-in that is loaded into the LSA is digitally signed with a Microsoft signature. Therefore, any plug-ins that are unsigned or are not signed with a Microsoft signature will fail to load in LSA. Examples of these plug-ins are smart card drivers, cryptographic plug-ins, and password filters.
 
-    LSA plug-ins that are drivers, such as smart card drivers, need to be signed by using the WHQL Certification. For more information, see [WHQL Release Signature (Windows Drivers)](https://msdn.microsoft.com/library/windows/hardware/ff553976%28v=vs.85%29.aspx).
+    LSA plug-ins that are drivers, such as smart card drivers, need to be signed by using the WHQL Certification. For more information, see [WHQL Release Signature](https://msdn.microsoft.com/library/windows/hardware/ff553976%28v=vs.85%29.aspx).
 
     LSA plug-ins that do not have a WHQL Certification process, must be signed by using the [file signing service for LSA](https://go.microsoft.com/fwlink/?LinkId=392590).
 
@@ -50,6 +50,12 @@ Use the following list to thoroughly test that LSA protection is enabled before 
 -   Ensure that all of the correctly signed plug-ins can successfully load into LSA and that they perform as expected.
 
 -   Use the audit logs to identify LSA plug-ins and drivers that fail to run as a protected process.
+
+#### Limitations introduced with enabled LSA protection
+
+If LSA protection is enabled, you cannot debug a custom LSA plugin.
+You can’t attach a debugger to LSASS when it’s a protected process.
+In general, there is no supported way to debug a running protected process.
 
 ## How to identify LSA plug-ins and drivers that fail to run as a protected process
 The events described in this section are located in the Operational log under Applications and Services Logs\Microsoft\Windows\CodeIntegrity. They can help you identify LSA plug-ins and drivers that are failing to load due to signing reasons. To manage these events, you can use the **wevtutil** command-line tool. For information about this tool, see [Wevtutil](../../administration/windows-commands/Wevtutil.md).
