@@ -26,4 +26,4 @@ For your end-users connecting to their desktops and applications, the experience
 - Correctly authenticate and get connected to their resource!
 
 For more details on the configuration process, check out [Integrate your Remote Desktop Gateway infrastructure using the Network Policy Server (NPS) extension and Azure AD
-](https://docs.microsoft.com/en-us/azure/multi-factor-authentication/nps-extension-remote-desktop-gateway).
+](https://docs.microsoft.com/azure/multi-factor-authentication/nps-extension-remote-desktop-gateway).
