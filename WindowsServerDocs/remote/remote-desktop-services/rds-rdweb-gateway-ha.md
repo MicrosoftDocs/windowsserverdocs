@@ -66,14 +66,19 @@ Set up a server to act as an additional RD Web and RD Gateway - this can be eith
     4.  In the left pane of IIS Manager, expand the **Server (e.g. Contoso-WebGw1) > Sites > Default Web Site**, and then click **RDWeb**.  
     5.  Right-click **Machine Key**, and then click **Open Feature**.
     6.  On the Machine Key page, in the **Actions** pane, select **Generate Keys**, and then click **Apply**.
-    7.  Copy the validation key (you can right-click the key and then click **Copy**.)  
-    8.  Minimize the RD Connection window to this RD Web server.  
-    9.  Repeat steps 2 through 5 for the second RD Web Access server, ending on the feature view of **Machine Key**. 
-    10. For the Validation Key, clear **Automatically generate at runtime**, and then paste the key you copied in step g.   
-    11. Click **Apply**.  
-    12. Minimize the RD Connection window to the second RD Web Access server, and then maximize the RD Connection window to the first RD Web Access server.  
-    13. Repeat steps 7-11 to copy over the Decryption Key.
-    14. When validation keys and decryption keys are identical on both RD Web Access servers, sign out of all RD Connection windows.  
+    7.  Copy the validation key (you can right-click the key and then click **Copy**.)
+    8.  In IIS Manager, under **Default Web Site**, select **Feed**, **FeedLogon** and **Pages** in turn.
+    9. For each:
+        1.  Right-click **Machine Key**, and then click **Open Feature**.
+        2.  For the Validation Key, clear **Automatically generate at runtime**, and then paste the key you copied in step 7.
+    10.  Minimize the RD Connection window to this RD Web server.  
+    11.  Repeat steps 2 through 5 for the second RD Web Access server, ending on the feature view of **Machine Key**.
+    12. For the Validation Key, clear **Automatically generate at runtime**, and then paste the key you copied in step 7.
+    13. Click **Apply**.
+    14. Complete this process for the **RDWeb**, **Feed**, **FeedLogon** and **Pages** pages.
+    15. Minimize the RD Connection window to the second RD Web Access server, and then maximize the RD Connection window to the first RD Web Access server.  
+    16. Repeat steps 7-14 to copy over the Decryption Key.
+    17. When validation keys and decryption keys are identical on both RD Web Access servers for the **RDWeb**, **Feed**, **FeedLogon** and **Pages** pages, sign out of all RD Connection windows.
 
 ## Step 3: Configure load balancing for the RD Web and RD Gateway servers
 
