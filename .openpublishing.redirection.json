@@ -1,6 +1,16 @@
 {
   "redirections": [
     {
+      "source_path": "WindowsServerDocs/windows-insider/Whats-new-wip-at-work.md",
+      "redirect_url": "https://docs.microsoft.com/en-us/windows-insider/at-work/whats-new-wip-at-work",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/windows-insider/index.md",
+      "redirect_url": "https://docs.microsoft.com/en-us/windows-insider/at-work/",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "WindowsServerDocs/identity/ad-ds/get-started/windows-time-service/Windows-Time-Service.md",
       "redirect_url": "/windows-server/networking/windows-time-service/windows-time-service-top",
       "redirect_document_id": true
