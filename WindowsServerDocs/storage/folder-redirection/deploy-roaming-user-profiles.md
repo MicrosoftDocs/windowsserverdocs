@@ -1,7 +1,7 @@
 ﻿---
 Title: Deploying Roaming User Profiles
 TOCTitle: Deploying Roaming User Profiles
-ms.date: 03/15/2018
+ms.date: 04/10/2018
 ms.prod: windows-server-threshold
 ms.technology: storage
 ms.topic: article
@@ -19,6 +19,14 @@ For a list of recent changes to this topic, see the [Change history](#change-his
 
 >[!IMPORTANT]
 >Due to the security changes made in [MS16-072](https://support.microsoft.com/help/3163622/ms16-072-security-update-for-group-policy-june-14%2c-2016), we updated [Step 4: Optionally create a GPO for Roaming User Profiles](#step-4:-optionally-create-a-gpo-for-roaming-user-profiles) in this topic so that Windows can properly apply the Roaming User Profiles policy (and not revert to local policies on affected PCs).
+
+> [!IMPORTANT]
+>  User customizations to Start is lost after an OS in-place upgrade in the following configuration:
+> - Users are configured for a roaming profile
+> - Users are allowed to make changes to Start
+>
+> As a result, the Start menu is reset to the default of the new OS version after the OS in-place upgrade. For workarounds, see [Appendix C: Working around reset Start menu layouts after upgrades](#appendix-c-workaround).
+
 
 ## Prerequisites
 
@@ -356,12 +364,37 @@ The following table lists the location of Roaming User Profiles on various versi
 |Windows 10|```\\<servername>\<fileshare>\<username>.V5```|
 |Windows 10, version 1703 and version 1607|```\\<servername>\<fileshare>\<username>.V6```|
 
-## Change history
+## <a id="appendix-c-workaround"></a>Appendix C: Working around reset Start menu layouts after upgrades
+
+Here are some ways to work around Start menu layouts getting reset after an in-place upgrade:
+
+ - If only one user ever uses the device and the IT Admin uses a managed OS deployment strategy such as SCCM they can do the following:
+    
+    1. Export the Start menu layout with Export-Startlayout before the upgrade 
+    2. Import the Start menu layout with Import-StartLayout after OOBE but before the user signs in  
+ 
+    > [!NOTE] 
+    > Importing a StartLayout modifies the Default User profile. All user profiles created after the import has occurred will get the imported Start-Layout.
+ 
+ - IT Admins can opt to manage Start’s Layout with Group Policy. Using Group Policy provides a centralized management solution to apply a standardized Start Layout to users. There are 2 modes to modes to using Group Policy for Start management. Full Lockdown and Partial Lockdown. The full lockdown scenario prevents the user from making any changes to Start’s layout. The partial lockdown scenario allows user to make changes to a specific area of Start. For more info, see [Customize and export Start layout](https://docs.microsoft.com/windows/configuration/customize-and-export-start-layout).
+        
+    > [!NOTE]
+    > User made changes in the partial lockdown scenario will still be lost during upgrade.
+
+ -	Let the Start layout reset occur and allow end users to reconfigure Start. A notification email or other notification can be sent to end users to expect their Start layouts to be reset after the OS upgrade to minimized impact. 
+
+# Change history
 
 The following table summarizes some of the most important changes to this topic.
 
+<<<<<<< HEAD
 |Date|Description|Reason|
 |---|---|---|
+=======
+|Date|Description |Reason|
+|--- |---         |---   |
+|April 10th, 2018|Added discussion of when user customizations to Start are lost after an OS in-place upgrade|Callout known issue.|
+>>>>>>> master
 |March 13th, 2018 |Updated for Windows Server 2016 | Moved out of Previous Versions library and updated for current version of Windows Server.|
 |April 13th, 2017|Added profile information for Windows 10, version 1703, and clarified how roaming profile versions work when upgrading operating systems—see [Considerations when using Roaming User Profiles on multiple versions of Windows](#considerations-when-using-roaming-user-profiles-on-multiple-versions-of-windows).|Customer feedback.|
 |March 14th, 2017|Added optional step for specifying a mandatory Start layout for Windows 10 PCs in [Appendix A: Checklist for deploying Roaming User Profiles](#appendix-a:-checklist-for-displaying-roaming-user-profiles).|Feature changes in latest Windows update.|

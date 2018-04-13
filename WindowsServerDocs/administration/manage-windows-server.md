@@ -23,7 +23,7 @@ The tools you use to manage Windows Server instances depend, in large amount, on
 
 Use the following table to determine which tools to use when.
 
-| I am   | Install & run Project Honolulu | Run Server Manager on Windows Server | Run Server Manager in RSAT on Windows 10 |
+| I am   | Install & run Windows Admin Center | Run Server Manager on Windows Server | Run Server Manager in RSAT on Windows 10 |
 |--------|----------------------|--------------------------------------|------------------------------------------|
 | Sitting at a Windows 10 PC | X  |                                      | X                                        |
 | Sitting at a Windows Server system running the desktop experience | X | X | X |
@@ -33,8 +33,11 @@ Use the following table to determine which tools to use when.
 
 In addition to the tools mentioned below, you can also use [Remote Desktop Services](../remote/remote-desktop-services/welcome-to-rds.md) to access on-premises, remote, and virtual servers. Then you can use Server Manager to perform management tasks.
 
-### Manage on-premises systems, remote systems, and systems without UI with Microsoft Project Honolulu
-[Microsoft Project Honolulu](../manage/honolulu/honolulu.md) is a browser-based management app that enables on-premises administration of Windows Servers with no Azure or cloud dependency. Project Honolulu gives you full control over all aspects of your server infrastructure and is particularly useful for management on private networks that are not connected to the Internet. You can install Project Honolulu on Windows 10, on a gateway server, or directly on the Windows Server system that you want to manage.
+### Manage on-premises systems, remote systems, and systems without UI with Windows Admin Center
+[Windows Admin Center](../manage/windows-admin-center/overview.md) is a browser-based management app that enables on-premises administration of Windows Servers with no Azure or cloud dependency. Windows Admin Center gives you full control over all aspects of your server infrastructure and is particularly useful for management on private networks that are not connected to the Internet. You can install Windows Admin Center on Windows 10, on a gateway server, or directly on the Windows Server system that you want to manage.
+
+>[!NOTE]
+>Windows Admin Center is the official name of what we used to call "Project Honolulu."
 
 ### Manage on-premises systems with Server Manager
 [Server Manager](server-manager/server-manager.md) is a management console included in the full installation of Windows Server. (It is not available for installs that don't have UI - Server Core doesn't include Server Manager.) Use Server Manager to install and remove server roles, add and remove remote servers, start and stop services, and view data gathered about your environment.

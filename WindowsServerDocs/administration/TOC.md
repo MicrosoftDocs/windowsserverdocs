@@ -1,18 +1,9 @@
 # [Manage Windows Server](manage-windows-server.md)
+## [Use Windows Admin Center to manage your environment (New!)](../manage/windows-admin-center/overview.md)
 ## Manage Windows Server systems and environments
 ### [Manage Windows Server Hybrid Cloud Print](hybrid-cloud-print/hybrid-cloud-print-overview.md)
 #### [Deploy Windows Server Hybrid Cloud Print with Pre-Authentication](hybrid-cloud-print/hybrid-cloud-print-deploy.md)
 #### [Deploy Windows Server Hybrid Cloud Print with Passthrough Auth](hybrid-cloud-print/hybrid-cloud-print-deploy-passthrough.md)
-### [Manage on-premises systems with Microsoft Project Honolulu](../manage/honolulu/honolulu.md)
-#### [Deploy Project Honolulu Gateway](../manage/honolulu/deployment-guide.md)
-#### [Manage Windows Server with Project Honolulu](../manage/honolulu/honolulu-manage.md) 
-##### [Manage Hyper-Converged Infrastructure with Project Honolulu](../manage/honolulu/honolulu-manage-hci.md)
-##### [Configure Windows Server standalone Hyper-V Server for management by Project Honolulu](../manage/honolulu/honolulu-standalone-hyper-v.md) 
-##### [Protect your Honolulu-managed Hyper-V Virtual Machines with Azure Site Recovery](../manage/honolulu/honolulu-and-asr.md) 
-##### [Manage Azure IaaS Virtual Machines with Honolulu](../manage/honolulu/honolulu-manage-azure-vms.md)
-#### [Troubleshoot Project Honolulu](../manage/honolulu/honolulu-troubleshoot.md) 
-##### [Project Honolulu known issues](../manage/honolulu/honolulu-known-issues.md)
-#### [Project Honolulu FAQ](../manage/honolulu/honolulu-faq.md)
 ### [What is the Server Core installation option?](server-core/what-is-server-core.md)
 #### [What's included in the Server Core installation option?](server-core/server-core-roles-and-services.md)
 #### [Basic administration tasks in Server Core](server-core/server-core-administer.md)
@@ -70,10 +61,11 @@
 ## Automate Windows Server management
 ### [Windows PowerShell scripting](/powershell/scripting/powershell-scripting?view=powershell-5.1)
 ### [Windows Commands](windows-commands/windows-commands.md)
+<!--
 #### [A-Z list](windows-commands/a-z-list.md)
 #### [Command-Line Syntax Key](windows-commands/command-line-syntax-key.md)
 #### [Commands by Server Role](windows-commands/commands-by-server-role.md)
 ##### [Print Command Reference](windows-commands/print-command-reference.md)
 ##### [Services for Network File System Command Reference](windows-commands/services-for-network-file-system-command-reference.md)
 ##### [Remote Desktop Services (Terminal Services) Command Reference](windows-commands/remote-desktop-services-terminal-services-command-reference.md)
-##### [Windows Server Backup Command Reference](windows-commands/windows-server-backup-command-reference.md)
+##### [Windows Server Backup Command Reference](windows-commands/windows-server-backup-command-reference.md) -->
