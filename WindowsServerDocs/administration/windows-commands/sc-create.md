@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # Sc create
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Creates a subkey and entries for a service in the registry and in the Service Control Manager database.
 

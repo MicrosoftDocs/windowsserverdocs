@@ -5,7 +5,6 @@
 ### [Services for Network File System Command Reference](services-for-network-file-system-command-reference.md)
 ### [Remote Desktop Services (Terminal Services) Command Reference](remote-desktop-services-terminal-services-command-reference.md)
 ### [Windows Server Backup Command Reference](windows-server-backup-command-reference.md)
-## [A-Z list](a-z-list.md)
 ### [append](append.md)
 ### [arp](arp.md)
 ### [assoc](assoc.md)
