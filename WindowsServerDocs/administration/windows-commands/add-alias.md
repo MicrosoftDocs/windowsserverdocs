@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # add alias
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Adds aliases to the alias environment. If used without parameters, **add alias** displays help at the command prompt.
 

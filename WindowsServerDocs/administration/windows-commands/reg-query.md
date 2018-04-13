@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # reg query
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Returns a list of the next tier of subkeys and entries that are located under a specified subkey in the registry.
 

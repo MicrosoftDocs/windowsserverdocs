@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # Simulate restore
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Tests writer involvement in restore sessions on the computer without issuing **PreRestore** or **PostRestore** events to writers.
 

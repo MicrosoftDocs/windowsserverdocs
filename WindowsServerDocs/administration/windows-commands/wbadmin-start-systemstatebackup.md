@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # wbadmin start systemstatebackup
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Creates a system state backup of the local computer and stores it on the location specified.
 

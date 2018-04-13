@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # bitsadmin nowrap
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Truncates any line of output text extending beyond the rightmost edge of the command window.
 
