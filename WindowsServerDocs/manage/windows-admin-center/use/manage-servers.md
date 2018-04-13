@@ -521,4 +521,4 @@ The following features have been proposed for Virtual Switches:
 |-------|
 |[[Virtual Switch] Allow Add, Edit, Remove of Management OS vNICs](https://windowsserver.uservoice.com/forums/295071/suggestions/31776181)|
 |[[Virtual Switch] Show More Information for Physical Adapter Selection](https://windowsserver.uservoice.com/forums/295071/suggestions/31776094)
-|[**See all or propose new feature**](https://windowsserver.uservoice.com/forums/295071/filters/top?category_id=319162&query=%5BVirtual%20Switches%5D)
+|[**See all or propose new feature**](https://windowsserver.uservoice.com/forums/295071/filters/top?category_id=319162&query=%5BVirtual%20Switch%5D)
