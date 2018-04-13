@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # ksetup:setrealm
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Sets the name of a Kerberos realm. For examples of how this command can be used, see [Examples](#BKMK_Examples).
 

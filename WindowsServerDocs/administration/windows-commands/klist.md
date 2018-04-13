@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # klist
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Displays a list of currently cached Kerberos tickets. This information applies to Windows Server 2012. For examples of how this command can be used, see [Examples](#BKMK_Examples).
 

@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # wbadmin
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Enables you to back up and restore your operating system, volumes, files, folders, and applications from a command prompt.
 
