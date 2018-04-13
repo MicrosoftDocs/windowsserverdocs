@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # fc
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Compares two files or sets of files and displays the differences between them.
 

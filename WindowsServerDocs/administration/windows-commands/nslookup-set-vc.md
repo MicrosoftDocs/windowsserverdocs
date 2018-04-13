@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # nslookup set vc
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Specifies to use or not use a virtual circuit when sending requests to the server.
 

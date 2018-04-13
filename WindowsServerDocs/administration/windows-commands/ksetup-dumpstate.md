@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # ksetup:dumpstate
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Displays the current state of realm settings for all realms that are defined on the computer. For examples of how this command can be used, see [Examples](#BKMK_Examples).
 

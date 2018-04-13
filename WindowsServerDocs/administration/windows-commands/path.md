@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # path
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Sets the command path in the PATH environment variable (the set of directories used to search for executable files). If used without parameters, **path** displays the current command path.
 

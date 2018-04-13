@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # bitsadmin setnotifycmdline
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Sets the command-line command that will run when the job finishes transferring data or when a job enters a state..
 

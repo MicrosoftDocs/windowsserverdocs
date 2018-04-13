@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # bitsadmin setpeercachingflags
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Sets flags that determine if the files of the job can be cached and served to peers and if the job can download content from peers.
 

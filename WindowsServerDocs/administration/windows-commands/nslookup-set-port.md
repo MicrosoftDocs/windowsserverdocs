@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # nslookup set port
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Changes the default TCP/UDP Domain Name System (DNS) name server port to the value specified.
 
