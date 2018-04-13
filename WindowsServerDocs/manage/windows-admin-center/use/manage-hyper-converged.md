@@ -51,7 +51,7 @@ Once your Hyper-Converged Infrastructure is deployed, you can manage it using Wi
 
 ### Install Windows Admin Center
 
-If you haven’t already, download and install Windows Admin Center. The fastest way to get up and running is to install it on your Windows 10 computer and manage your servers remotely. This takes less than five minutes. [Download now](https://aka.ms/wacdownload) or [learn more about other installation options](/deploy/install.md).
+If you haven’t already, download and install Windows Admin Center. The fastest way to get up and running is to install it on your Windows 10 computer and manage your servers remotely. This takes less than five minutes. [Download now](https://aka.ms/wacdownload) or [learn more about other installation options](../deploy/install.md).
 
 ### Add Hyper-Converged Cluster
 
