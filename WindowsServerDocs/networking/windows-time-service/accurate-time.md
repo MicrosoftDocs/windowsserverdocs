@@ -1,10 +1,10 @@
 ---
 ms.assetid: 72a90d00-56ee-48a9-9fae-64cbad29556c
 title: Windows 2016 Accurate Time
-description:
+description: Time synchronization accuracy in Windows Server 2016 has been improved substantially, while maintaining full backwards NTP compatibility with older Windows versions.
 author: shortpatti
 ms.author: pashort
-manager: brianlic
+manager: alanth
 ms.date: 3/12/2018
 ms.topic: article
 ms.prod: windows-server-threshold
@@ -30,17 +30,12 @@ In this topic, we discuss ... these topics as they relate to enabling accurate t
 - Best Practices
 
 >[!IMPORTANT]
-> An addendum referenced by the Windows 2016 Accurate Time article can be downloaded [here](http://windocs.blob.core.windows.net/windocs/WindowsTimeSyncAccuracy_Addendum.pdf).  This document provides more details about our testing and measurement methodologies.
+>An addendum referenced by the Windows 2016 Accurate Time article can be downloaded [here](http://windocs.blob.core.windows.net/windocs/WindowsTimeSyncAccuracy_Addendum.pdf).  This document provides more details about our testing and measurement methodologies.
 
 
 
-> [!NOTE] 
-> The windows time provider plugin model is [documented on TechNet](https://msdn.microsoft.com/en-us/library/windows/desktop/ms725475%28v=vs.85%29.aspx).
-<!-- -->
-
-
-
-
+>[!NOTE] 
+>The windows time provider plugin model is [documented on TechNet](https://msdn.microsoft.com/en-us/library/windows/desktop/ms725475%28v=vs.85%29.aspx).
 
 ## Domain Hierarchy
 Domain and Standalone configurations work differently.
@@ -475,36 +470,3 @@ You can disable the feature with these steps:
 3.	Rebooting the machine makes the setting effective immediately and also causes it to stop collecting any time data from SSL connections.  The latter part has a very small overhead and should not be a perf concern.
 
 4.	To apply this setting in an entire domain, please set the UtilizeSSLTimeData value in W32time group policy setting to 0 and publish the setting.  When the setting is picked up by a Group Policy Client, W32time service is notified and it will stop time monitoring and enforcement using SSL time data. The SSL time data collection will stop when each machine reboots. If your domain has portable slim laptops/tablets and other devices, you may want to exclude such machines from this policy change. These devices will eventually face battery drain and need the Secure Time Seeding feature to bootstrap their time.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
