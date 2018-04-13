@@ -7,7 +7,7 @@ ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 4/2/2018
+ms.date: 4/12/2018
 ms.localizationpriority: medium
 ---
 # Planning volumes in Storage Spaces Direct
@@ -31,7 +31,7 @@ All volumes are accessible by all servers in the cluster at the same time. Once 
 
 ## Choosing how many volumes to create
 
-We recommend making the number of volumes a multiple of the number of servers in your cluster. For example, if you have 4 servers, you will experience more consistent performance with 8 total volumes than with 7 or 9. This allows the cluster to distribute volume "ownership" (one server handles metadata orchestration for each volume) evenly among servers.
+We recommend making the number of volumes a multiple of the number of servers in your cluster. For example, if you have 4 servers, you will experience more consistent performance with 4 total volumes than with 3 or 5. This allows the cluster to distribute volume "ownership" (one server handles metadata orchestration for each volume) evenly among servers.
 
 We recommend limiting the total number of volumes to 32 per cluster.
 
@@ -101,7 +101,7 @@ Workloads that write in large, sequential passes, such as archival or backup tar
 The resulting storage efficiency depends on the proportions you choose. See [this demo](https://www.youtube.com/watch?v=-LK2ViRGbWs&t=36m55s) for some examples.
 
    >[!TIP]
-   > Volumes with different resiliency types can coexist in the same cluster.
+   > If you observe an abrupt decrease in write performance partway through data injestion, it may indicate that the mirror portion is not large enough or that mirror-accelerated parity isn't well suited for your use case. As an example, if write performance decreases from 400 MB/s to 40 MB/s, consider expanding the mirror portion or switching to three-way mirror.
 
 ### About deployments with NVMe, SSD, and HDD
 
