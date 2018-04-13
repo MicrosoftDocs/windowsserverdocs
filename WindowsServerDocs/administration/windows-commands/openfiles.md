@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # openfiles
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Enables an administrator to query, display, or disconnect files and directories that have been opened on a system. Also enables or disables the system Maintain Objects List global flag.
 
