@@ -15,14 +15,6 @@ ms.author: billmath
 
 >Applies To: Windows Server 2016
 
->[!IMPORTANT]
->Some Windows Server 2016 AD FS features (such as Device Authentication and OAuth Discovery) can fail to work if the following conditions apply:
->
->1.  One or more WS 2016 AD FS servers have been added to a WS 2012 R2 AD FS server farm that has had [KB4041685](https://support.microsoft.com/help/4041685/windows-81-update-kb4041685) installed. 
->2. The server farm has been upgraded to WS 2016 Farm Behavior Level.
->3.  [KB4088787](https://support.microsoft.com/help/4088787/windows-10-update-kb4088787) has been installed on the WS 2016 AD FS farm.
->
->If you believe you have been impacted by this issue, please contact [Microsoft Support](https://support.microsoft.com)
 
 ## Moving from a Windows Server 2012 R2 AD FS farm to a Windows Server 2016 AD FS farm  
 The following document will describe how to upgrade your AD FS Windows Server 2012 R2 farm to AD FS in Windows Server 2016 when you are using a WID database.  
