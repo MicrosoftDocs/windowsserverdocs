@@ -1,5 +1,5 @@
 ---
-title: break_1
+title: break
 description: "Windows Commands topic for **break_1** - Sets or clears extended CTRL+C checking on MS-DOS systems. If used without parameters, **break** displays the current setting. "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -15,9 +15,9 @@ manager: dongill
 ms.date: 10/16/2017
 ---
 
-# break_1
+# break
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Sets or clears extended CTRL+C checking on MS-DOS systems. If used without parameters, **break** displays the current setting.
 

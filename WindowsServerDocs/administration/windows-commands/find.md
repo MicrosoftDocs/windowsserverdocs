@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # find
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Searches for a string of text in a file or files, and displays lines of text that contain the specified string.
 

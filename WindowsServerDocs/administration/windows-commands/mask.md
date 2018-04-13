@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # mask
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Removes hardware shadow copies that were imported by using the **import** command.
 

@@ -33,4 +33,4 @@ nlbmgr [/help] [/noping] [/hostlist <filename>] [/autorefresh <interval>]
 |/?|Displays help at the command prompt.|
 ## additional references
 -   [Command-Line Syntax Key](command-line-syntax-key.md)
--   [Command-Line Reference_1](command-line-reference_1.md)
+
