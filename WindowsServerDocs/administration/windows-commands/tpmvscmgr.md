@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # tpmvscmgr
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 The Tpmvscmgr command-line tool allows users with Administrative credentials to create and delete TPM virtual smart cards on a computer. For examples of how this command can be used, see [Examples](#BKMK_Examples).
 

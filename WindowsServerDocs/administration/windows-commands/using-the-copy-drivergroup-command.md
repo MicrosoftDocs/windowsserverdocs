@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # Using the copy-DriverGroup Command
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Duplicates an existing driver group on the server including the filters, driver packages, and enabled/disabled status.
 
