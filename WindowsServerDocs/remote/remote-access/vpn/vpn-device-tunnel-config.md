@@ -14,7 +14,7 @@ author: maricia
 
 >Applies To: Windows 10 version 1709
 
-Always On VPN gives you the ability to create a dedicated VPN profile for device or machine. Alays On VPN connections include two types of tunnels: 
+Always On VPN gives you the ability to create a dedicated VPN profile for device or machine. Always On VPN connections include two types of tunnels: 
 * _Device tunnel_ connects to specified VPN servers before users log on to the device. Device tunnel is used for pre-logon connectivity scenarios and device management purposes.
 * _User tunnel_  connects only after a user logs on to the device. User tunnel allows users to access organization resources through VPN servers.
 
