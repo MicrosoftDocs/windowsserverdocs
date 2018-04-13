@@ -27,7 +27,6 @@ For a list of recent changes to this topic, see the [Change history](#change-his
 >
 > As a result, the Start menu is reset to the default of the new OS version after the OS in-place upgrade. For workarounds, see [Appendix C: Working around reset Start menu layouts after upgrades](#appendix-c-workaround).
 
-
 ## Prerequisites
 
 ### Hardware requirements
@@ -387,14 +386,9 @@ Here are some ways to work around Start menu layouts getting reset after an in-p
 
 The following table summarizes some of the most important changes to this topic.
 
-<<<<<<< HEAD
-|Date|Description|Reason|
-|---|---|---|
-=======
 |Date|Description |Reason|
 |--- |---         |---   |
 |April 10th, 2018|Added discussion of when user customizations to Start are lost after an OS in-place upgrade|Callout known issue.|
->>>>>>> master
 |March 13th, 2018 |Updated for Windows Server 2016 | Moved out of Previous Versions library and updated for current version of Windows Server.|
 |April 13th, 2017|Added profile information for Windows 10, version 1703, and clarified how roaming profile versions work when upgrading operating systems—see [Considerations when using Roaming User Profiles on multiple versions of Windows](#considerations-when-using-roaming-user-profiles-on-multiple-versions-of-windows).|Customer feedback.|
 |March 14th, 2017|Added optional step for specifying a mandatory Start layout for Windows 10 PCs in [Appendix A: Checklist for deploying Roaming User Profiles](#appendix-a:-checklist-for-displaying-roaming-user-profiles).|Feature changes in latest Windows update.|
