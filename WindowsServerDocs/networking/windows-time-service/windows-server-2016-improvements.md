@@ -1,6 +1,6 @@
 ---
 ms.assetid: e34622ff-b2d0-4f81-8d00-dacd5d6c215e
-title: Windows Server 2016 Improvements
+title: Time Accuracy Improvements for Windows Server 2016
 description: Time synchronization accuracy in Windows Server 2016 has been improved substantially, while maintaining full backwards NTP compatibility with older Windows versions. 
 author: shortpatti
 ms.author: pashort
@@ -11,7 +11,7 @@ ms.prod: windows-server-threshold
 ms.technology: networking
 ---
 
-# Windows Server 2016 Improvements
+# Time Accuracy Improvements for Windows Server 2016
 
 >Applies To: Windows Server 2016
 

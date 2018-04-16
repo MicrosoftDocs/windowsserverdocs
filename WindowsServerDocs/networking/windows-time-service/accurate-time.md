@@ -1,6 +1,6 @@
 ---
 ms.assetid: 72a90d00-56ee-48a9-9fae-64cbad29556c
-title: Windows 2016 Accurate Time
+title: Accurate Time for Windows Server 2016
 description: Time synchronization accuracy in Windows Server 2016 has been improved substantially, while maintaining full backwards NTP compatibility with older Windows versions.
 author: shortpatti
 ms.author: pashort
@@ -11,7 +11,7 @@ ms.prod: windows-server-threshold
 ms.technology: networking
 ---
 
-# Windows Server 2016 Accurate Time
+# Accurate Time for Windows Server 2016
 
 >Applies To: Windows Server 2016
 
@@ -162,7 +162,7 @@ The test results shown below are a subset of measurements we made in one of the 
 ### Topology
 For comparison, we tested both a Windows Server 2012R2 and Windows Server 2016 based topology.  Both topologies consist of two physical Hyper-V host machines that reference a Windows Server 2016 machine with GPS clock hardware installed.  Each host runs 3 domain joined windows guests, which are arranged according to the following topology.  The lines represent the time hierarchy, and the protocol/transport that is used.
 
-![Windows Time](../media/Windows-Time-Service/Windows-2016-Accurate-Time/topology1.png)
+![Windows Time](media/Windows-Time-Service/Windows-2016-Accurate-Time/topology1.png)
 
 ![Windows Time](../media/Windows-2016-Accurate-Time/topology2.png)
 
