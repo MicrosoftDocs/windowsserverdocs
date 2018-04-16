@@ -37,14 +37,17 @@ To enable the new web theme use the following procedure:
 >You need to ensure that idpinitiatedsignon has been enabled.  It is not enabled by default.  To enable idpinitiatedsignon use the following PowerShell command:  `Set-AdfsProperties –EnableIdpInitiatedSignonPage $True`
 
 ## Image Recommendations
-The following are the size recommendations for the background image and the logo image:
+Enabling the centered UI enables you to use the same images for background and logo that you might already have for [Azure Active Directory company branding](active-directory/customize-branding.md). Generally, the same recommendations for size, ratio, and format do apply.
 
 ### Logo
-- size 24px height, 256px max width
-- Do not add any padding around the logo within the asset.  Ensure that the asset background is transparent.
+Description | Constraints | Recommendations
+------- | ------- | ----------
+The logo is displayed on top of the login panel. | Transparent JPG or PNG<br>Max height: 36 px<br>Max width: 245 px | Use your organization’s logo here.<br>Use a transparent image. Don’t assume that the background will be white.<br>Do not add padding around your logo in the image or your logo will look disproportionately small.
 
 ### Background
-- size 1024 x 1080 pixels with a file size of no greater than 200KB.  You should use the highest resolution possible with aspect ratio 16:9/16:10 that keeps the image size under the restriction.
+Description | Constraints | Recommendations
+------- | ------- | ----------
+This option appears in the background of the sign-in page, is anchored to the center of the viewable space, and scales and crops to fill the browser window.	<br>On narrow screens such as mobile phones, this image is not shown.<br>A black mask with 0.55 opacity is applied over this image when the page is loaded. | JPG or PNG<br>Image dimensions: 1920x1080 px<br>File size: &lt; 300 KB | <br>Use images where there isn't a strong subject focus. The opaque sign-in form appears over the center of this image and can cover any part of the image, depending on the size of the browser window.<br>Keep the file size small to ensure quick load times.
 
 ## Next Steps
 - [AD FS Customization in Windows Server 2016](AD-FS-Customization-in-Windows-Server-2016.md)
