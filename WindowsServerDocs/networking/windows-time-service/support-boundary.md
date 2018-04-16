@@ -5,8 +5,8 @@ title: Windows Time Service support boundary for high-accuracy environments
 # Windows Time Service support boundary for high-accuracy environments 
 
 This article describes the support boundary for the Windows Time (W32Time) service in environments that require highly accurate and stable system time.
-
-### High Accuracy Matrix
+<!-- 
+## High Accuracy Matrix
 
 This matrix summarizes the *minimum* requirements as outlined in this document.
 For more explanation see the section on **[High Accuracy Requirements](#high-accuracy-requirements)**:
@@ -17,6 +17,7 @@ For more explanation see the section on **[High Accuracy Requirements](#high-acc
 | 1 Second        | Windows 10 1607 Server 2016 RS1+ | 100ms          |             |             |                      | Once per hour   |
 | 50 Milliseconds | Windows 10 1607 Server 2016 RS1+ | 5ms            | 6           | 5           | 90%                  | Once per minute |
 | 1 Millisecond   | Windows 10 1607 Server 2016 RS1+ | 0.1ms          | 4           | 3           | 80%                  | Once per second |
+-->
 
 ## High Accuracy support for Windows 8.1 and 2012 R2 (or Prior)
 
