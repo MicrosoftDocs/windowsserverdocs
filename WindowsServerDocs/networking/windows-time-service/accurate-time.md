@@ -162,7 +162,9 @@ The test results shown below are a subset of measurements we made in one of the 
 ### Topology
 For comparison, we tested both a Windows Server 2012R2 and Windows Server 2016 based topology.  Both topologies consist of two physical Hyper-V host machines that reference a Windows Server 2016 machine with GPS clock hardware installed.  Each host runs 3 domain joined windows guests, which are arranged according to the following topology.  The lines represent the time hierarchy, and the protocol/transport that is used.
 
-![Windows Time](media/Windows-Time-Service/Windows-2016-Accurate-Time/topology1.png)
+![Windows Time](../media/Windows-Time-Service/Windows-2016-Accurate-Time/topology1.png)
+
+![Windows Time](networking/media/Windows-Time-Service/Windows-2016-Accurate-Time/topology1.png)
 
 ![Windows Time](../media/Windows-2016-Accurate-Time/topology2.png)
 
