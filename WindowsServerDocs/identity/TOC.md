@@ -37,7 +37,6 @@
 ###### [Virtualized Domain Controller additional Resources](ad-ds/reference/virtual-dc/Virtualized-Domain-Controller-additional-Resources.md)
 ##### [Virtualized Domain Controller Cloning Test Guidance for Application Vendors](ad-ds/reference/virtual-dc/Virtualized-Domain-Controller-Cloning-Test-Guidance-for-Application-Vendors.md)
 ##### [Support for using Hyper-V Replica for virtualized domain controllers](ad-ds/get-started/virtual-dc/Support-for-using-Hyper-V-Replica-for-virtualized-domain-controllers.md)
-
 #### [Windows Server Functional Levels](ad-ds/active-directory-functional-levels.md)
 ### [AD DS Design and Planning](ad-ds/plan/AD-DS-Design-and-Planning.md)
 #### [Understanding AD DS Design](ad-ds/plan/Understanding-AD-DS-Design.md)
