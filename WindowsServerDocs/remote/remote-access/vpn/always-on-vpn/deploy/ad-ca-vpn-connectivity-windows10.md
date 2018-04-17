@@ -1,6 +1,6 @@
 ---
 title: Azure Active Directory conditional access for VPN connectivity (preview)| Microsoft Docs
-description: 'Learn how Azure Active Directory conditional access for VPN connectivity works. '
+description: 'With Azure AD conditional access for virtual private network (VPN) connectivity, you can help protect your VPN connections.'
 services: active-directory
 documentationcenter: ''
 author: shortpatti
@@ -14,24 +14,29 @@ ms.topic: article
 ms.date: 03/19/2018
 ms.author: pashort
 ms.reviewer: jairoc
-
 ---
+
 # Azure Active Directory conditional access for VPN connectivity (preview)
 
 With [Azure Active Directory (Azure AD) conditional access](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-conditional-access-azure-portal), you can fine-tune how authorized users access your resources. With Azure AD conditional access for virtual private network (VPN) connectivity, you can help protect your VPN connections.
 
 To configure conditional access for VPN connectivity, you must complete the following steps: 
 
-1. Create Root Certificates for VPN Authentication with Azure AD.
-2. Create a Server Authentication Certificate that supports IKEv2.
-3. Request a Server Authentication Certificate for IKEv2.
-4. Configure Routing and Remote Access and Network Policy Server.
-5. Verify that the Standard VPN works.
-6. Remove Weak Authentication Methods.
-7. Configure EAP-TLS to Ignore Certificate Revocation List (CRL) Checking.
-8. Configure your Conditional Access Policy.
-9. Create OMA-DM based VPNv2 Profiles to Windows 10 Devices
-10. Configure your VPN Client.
+1.	[Install Remote Access as a RAS Gateway VPN Server](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-ras#install-remote-access-as-a-ras-gateway-vpn-server)
+2.	[Configure Remote Access as a VPN Server](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-ras#configure-remote-access-as-a-vpn-server)
+3.	[Install Network Policy Service (NPS)](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-nps#install-network-policy-server)
+4.	[Configure Network Policy Service](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-nps#configure-network-policy-for-vpn-connections)
+5.	[Verify that the Standard VPN works]()
+6.	[Create a Custom Server Authentication Template that Supports IKEv2](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-server-infrastructure#create-the-vpn-server-authentication-template)
+7.	[Request a Server Authentication Certificate for IKEv2](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-server-infrastructure#enroll-and-validate-the-server-certificates)
+8.	[Remove Weak Authentication Methods]()
+9.	[Configure EAP-TLS to Ignore Certificate Revocation List (CRL) Checking]()
+10.	[Create Root Certificates for VPN Authentication with Azure AD]()
+11.	[Configure your Conditional Access Policy]()
+12.	[Deploy Conditional Access Root Certificates to On-Premises AD]() (steps 7-11 from this page)
+13.	[Create OMA-DM based VPNv2 Profiles to Windows 10 Devices]()
+14. [Configure VPNv2 Profiles on your Clients]
+
 
 
 ## Before you begin
@@ -134,7 +139,7 @@ To create a VPN certificate:
 
 ## Step 2: [Create a Customer Server Authentication Template that Supports IKEv2](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-server-infrastructure#create-the-vpn-server-authentication-template)
 
-With this step, you can configure a new Server Authentication template for your VPN server.
+In this step, you can configure a new Server Authentication template for your VPN server.
 
 Adding the IP Security (IPsec) IKE Intermediate application policy allows the server to filter certificates if more than one certificate is available with the Server Authentication extended key usage. 
 
@@ -180,9 +185,9 @@ If Standard VPN is verified to be working correctly, proceed with removing weak 
 
 1. In the Routing and Remote Access MMC, expand **Policies\\Network Policies**.
 
-3.  Right-\click the **Connections to Microsoft Routing and Remote Access Server** network policy and select **Properties**.
+2.  Right-\click the **Connections to Microsoft Routing and Remote Access Server** network policy and select **Properties**.
 
-4.  Click the **Constraints** tab and do the following:
+3.  Click the **Constraints** tab and do the following:
 
    1. Under EAP Types, select the **Microsoft Encrypted Authentication version 2 (MS-CHAPv2)** check box and click **Remove**.
 
@@ -192,15 +197,15 @@ If Standard VPN is verified to be working correctly, proceed with removing weak 
 
    4. Select **Microsoft: Protected EAP \(PEAP\)** again and click **Edit**.
 
-5. On the Add EAP page, click **Add**.
+4. On the Add EAP page, click **Add**.
 
-6. Select **Smart Card or other certificate**, and click **OK**.
+5. Select **Smart Card or other certificate**, and click **OK**.
 
-   7. Select **Smart Card or other certificate** and click **Move Up** to place it at the top of the order.
+6. Select **Smart Card or other certificate** and click **Move Up** to place it at the top of the order.
 
-g.  For everything under Less secure authentication methods, clear all the check boxes, and click **OK**.
+7. For everything under Less secure authentication methods, clear all the check boxes, and click **OK**.
 
-8.  (Optional) If you have implemented [Gateway Enforcement](#gateway-enforcement), do the following:
+8. (Optional) If you have implemented [Gateway Enforcement](#gateway-enforcement), do the following:
 
    1. Under Vendor Specific, click **Add**.
 
@@ -395,10 +400,13 @@ Customers that do not have management solutions like Intune or SCCM can use the 
 
     |Settings to change  |Description  |
     |---------|---------|
-    |**\<IssuerHash> <\/IssuerHash>**    |This instance of \<IssuerHash> must contain no spaces. It contains a semicolon separated list of thumbprints for all root CAs that issued the Server Authentication certificates to the VPN servers, not subordinate/intermediate issuing CA thumbprints. <br><br>All instances of \<IssuerHash> outside of \<Sso> must contain spaces. It contains a semicolon separated list of thumbprints for all root CAs that issued the Server Authentication certificates to the VPN servers, not subordinate/intermediate issuing CA thumbprints.         |
-    |**\<Servers> <\/Servers>**           |This must contain a semicolon separated list of names for the VPN Servers. This should include all names that are included in the Subject Alternative Name of the Server Authentication certificates.          |
-    |**\<DnsSuffix> <\/DnsSuffix>**      |This must contain the FQDN of the DNS domain **\<DnsSuffix>corp.contoso.com<\/DnsSuffix>**          |
-
+    |$Version = 201710170002|Increase the version number each time this is run on a client |
+    |\<DnsSuffix>corp._AD domain name_.info<\/DnsSuffix>|This must contain the FQDN of the DNS domain, for example,  **\<DnsSuffix>corp.contoso.com<\/DnsSuffix>**.  |
+    |\<IssuerHash>_thumbprint of root CA_<\/IssuerHash>|This instance of \<IssuerHash> must contain no spaces, for example, **\<IssuerHash>‎5a89fecb5b49a70b1a5263b735eed71cc268be4b<\/IssuerHash>**.<br><br> It contains a semicolon separated list of thumbprints for all root CAs that issued the Server Authentication certificates to the VPN servers, not subordinate/intermediate issuing CA thumbprints. <br><br>All instances of \<IssuerHash> outside of \<Sso> must contain spaces. It contains a semicolon separated list of thumbprints for all root CAs that issued the Server Authentication certificates to the VPN servers, not subordinate/intermediate issuing CA thumbprints.  |
+    |\<Servers>deWS2012R2VPN.corp._RRAS server_.info;deWS2012R2VPN<\/Servers>|This must contain a semicolon separated list of names for the VPN Servers, for example, **\<Servers>deWS2012R2VPN.corp.contoso.info;deWS2012R2VPN<\/Servers>**. This should include all names that are included in the Subject Alternative Name of the Server Authentication certificates.|
+    |\<TrustedNetworkDetection>corp._AD domain name_.info<\/TrustedNetworkDetection>|Example: **\<TrustedNetworkDetection>corp.contoso.info<\/TrustedNetworkDetection>** |
+    |\<TrustedRootCA>_thumbprint of root CA_<\/TrustedRootCA>|Example: **\<TrustedRootCA>5a 89 fe cb 5b 49 a7 0b 1a 52 63 b7 35 ee d7 1c c2 68 be 4b <\/TrustedRootCA>**|
+    
 2. Save the ProfileXML file, for example, _TestVPN_.
 
 3. Open PowerShell as **Administrator** and run `Set-ExecutionPolicy unrestricted`.
@@ -415,6 +423,8 @@ Customers that do not have management solutions like Intune or SCCM can use the 
 
 >[!IMPORTANT]
 >If this script is run more than once, make sure to increase the $Version number between each run to update the VPNv2 Profile. Failure to increase the $Version number results in a connection failure warning:  _The modem (or other connecting device) is already in use or is not configured properly_.
+
+
 
 
 ```PowerShell
