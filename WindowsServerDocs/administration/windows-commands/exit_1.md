@@ -1,5 +1,5 @@
 ---
-title: exit_1
+title: exit
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -15,9 +15,9 @@ manager: dongill
 ms.date: 10/16/2017
 ---
 
-# exit_1
+# exit
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Exits DiskShadow.
 

@@ -279,15 +279,15 @@ Virtual Machine Manager is part of the System Center suite, used to configure, m
 
 ![](media/sddc/learn.png)**[Learn more about System Center VMM](https://docs.microsoft.com/en-us/system-center/vmm/)**
 
-### Microsoft Project Honolulu ###
+### Windows Admin Center ###
 
 ![](media/sddc/management-line.png)
 
-Honolulu is a locally deployed, browser-based, management tool set that enables on-premises administration of Windows Servers with no Azure or cloud dependency. Honolulu gives IT Admins full control over all aspects of their Server infrastructure, and is particularly useful for management on private networks that are not connected to the Internet.
+Windows Admin Center is a locally deployed, browser-based, management tool set that enables on-premises administration of Windows Servers with no Azure or cloud dependency. Windows Admin Center gives IT Admins full control over all aspects of their Server infrastructure, and is particularly useful for management on private networks that are not connected to the Internet.
 
 ![](media/sddc/spacer1.png)![](media/sddc/honolulu.png)
 
-Publishing the web server to DNS and setting up the corporate firewall can allow you to access Honolulu from the public internet, enabling you to connect to, and manage, your servers from anywhere with Microsoft Edge or Google Chrome.
+Publishing the web server to DNS and setting up the corporate firewall can allow you to access Windows Admin Center from the public internet, enabling you to connect to, and manage, your servers from anywhere with Microsoft Edge or Google Chrome.
 
-![](media/sddc/learn.png)**[Learn more about Microsoft Project Honolulu](https://docs.microsoft.com/en-us/windows-server/manage/honolulu/honolulu)**
+![](media/sddc/learn.png)**[Learn more about Microsoft Project Windows Admin Center](manage/windows-admin-center/overview.md)**
 

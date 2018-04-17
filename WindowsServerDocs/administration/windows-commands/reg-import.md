@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # reg import
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Copies the contents of a file that contains exported registry subkeys, entries, and values into the registry of the local computer.
 

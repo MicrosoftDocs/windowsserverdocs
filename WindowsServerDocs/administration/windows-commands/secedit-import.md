@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # secedit:import
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Imports security settings stored in an inf file previously exported from the database configured with security templates. For examples of how this command can be used, see [Examples](#BKMK_Examples).
 

@@ -7,7 +7,7 @@ ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: eldenchristensen
-ms.date: 03/27/2018
+ms.date: 04/12/2018
 ms.localizationpriority: medium
 ---
 
@@ -26,7 +26,7 @@ For production, Microsoft recommends these [Windows Server Software-Defined](htt
 
 ## Base requirements
 
-Systems, components, devices, and drivers must be **Windows Server 2016 Certified** per the [Windows Server Catalog](https://www.windowsservercatalog.com). In addition, servers, drives, host bus adapters, and network adapters should have the **Software-Defined Data Center (SDDC) Standard** and/or **Software-Defined Data Center (SDDC) Premium** additional qualifications (AQs), as pictured below. There are over 1,000 components with the SDDC AQs.
+Systems, components, devices, and drivers must be **Windows Server 2016 Certified** per the [Windows Server Catalog](https://www.windowsservercatalog.com). In addition, we recommend that servers, drives, host bus adapters, and network adapters have the **Software-Defined Data Center (SDDC) Standard** and/or **Software-Defined Data Center (SDDC) Premium** additional qualifications (AQs), as pictured below. There are over 1,000 components with the SDDC AQs.
 
 ![screenshot of the Windows Server catalog showing the SDDC AQs](media/hardware-requirements/sddc-aqs.png)
 
@@ -83,7 +83,7 @@ Here's how drives can be connected for Storage Spaces Direct:
 
 ![diagram of supported drive interconnects](media/hardware-requirements/drive-interconnect-support-1.png)
 
-Drives can be internal to the server, or in an external enclosure that is connected to just one server. Each external enclosure must present a unique identifier (Unique ID), and we strongly recommend SCSI Enclosure Services (SES) for slot mapping and identification.
+Drives can be internal to the server, or in an external enclosure that is connected to just one server. SCSI Enclosure Services (SES) is required for slot mapping and identification. Each external enclosure must present a unique identifier (Unique ID).
 
 1. Drives internal to the server
 2. Drives in an external enclosure ("JBOD") connected to one server

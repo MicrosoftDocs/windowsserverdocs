@@ -1,5 +1,5 @@
 ---
-title: title_1
+title: title
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -16,9 +16,9 @@ manager: dongill
 ms.date: 10/16/2017
 ---
 
-# title_1
+# title
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Creates a title for the Command Prompt window.
 

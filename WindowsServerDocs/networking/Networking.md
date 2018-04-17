@@ -117,7 +117,7 @@ IP Address Management \(IPAM\) is an integrated suite of tools to enable end-to-
 
 Network Load Balancing \(NLB\) distributes traffic across several servers using the TCP/IP networking protocol. For non-SDN deployments, NLB ensures that stateless applications, such as Web servers running Internet Information Services \(IIS\), are scalable by adding more servers as the load increases.
 
-### [Network Offload and Optimization Technologies](technologies/network-offload.md)
+### [High-Performance Networking](technologies/network-offload.md)
 
 Network offload and optimization technologies in Windows Server 2016 include Software Only (SO) features and technologies, Software and Hardware (SH) integrated features and technologies, and Hardware Only (HO) features and technologies.
 
