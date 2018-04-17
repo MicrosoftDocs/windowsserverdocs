@@ -4,11 +4,11 @@ title: Windows Time Service
 description:
 author: shortpatti
 ms.author: pashort
-manager: brianlic
+manager: alanth
 ms.date: 02/01/2018
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.technology: identity-adds
+ms.technology: networking
 ---
 
 # Windows Time Service (W32Time)

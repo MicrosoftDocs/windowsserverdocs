@@ -1,5 +1,14 @@
 ---
+ms.assetid: 
 title: Windows Time Service support boundary for high-accuracy environments
+description: This article describes the support boundary for the Windows Time (W32Time) service in environments that require highly accurate and stable system time. 
+author: shortpatti
+ms.author: dacuo
+manager: alanth
+ms.date: 4/16/2018
+ms.topic: article
+ms.prod: windows-server-threshold
+ms.technology: networking
 ---
 
 # Windows Time Service support boundary for high-accuracy environments 
