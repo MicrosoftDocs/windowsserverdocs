@@ -13,7 +13,7 @@ ms.technology: networking
 
 # Time Accuracy Improvements for Windows Server 2016
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server 2016 testing
 
 Time synchronization accuracy in Windows Server 2016 has been improved substantially, while maintaining full backwards NTP compatibility with older Windows versions.  Under reasonable operating conditions you can maintain a 1 ms accuracy with respect to UTC or better for Windows Server 2016 and Windows 10 Anniversary Update domain members.
 
