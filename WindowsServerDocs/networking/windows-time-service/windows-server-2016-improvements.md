@@ -423,3 +423,11 @@ You can disable the feature with these steps:
 3.	Rebooting the machine makes the setting effective immediately and also causes it to stop collecting any time data from SSL connections.  The latter part has a very small overhead and should not be a perf concern.
 
 4.	To apply this setting in an entire domain, please set the UtilizeSSLTimeData value in W32time group policy setting to 0 and publish the setting.  When the setting is picked up by a Group Policy Client, W32time service is notified and it will stop time monitoring and enforcement using SSL time data. The SSL time data collection will stop when each machine reboots. If your domain has portable slim laptops/tablets and other devices, you may want to exclude such machines from this policy change. These devices will eventually face battery drain and need the Secure Time Seeding feature to bootstrap their time.
+
+
+
+|Column1  |Column2  |
+|---------|---------|
+|Row1     |         |
+|Row2     |         |
+|Row3     |         |
