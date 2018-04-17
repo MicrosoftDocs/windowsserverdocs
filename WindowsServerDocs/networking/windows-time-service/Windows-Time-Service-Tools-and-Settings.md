@@ -16,10 +16,6 @@ ms.technology: networking
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-<<<<<<< HEAD:WindowsServerDocs/identity/ad-ds/get-started/windows-time-service/Windows-Time-Service-Tools-and-Settings.md
-=======
-
->>>>>>> 03ecc04e866bbec87b90934fb461a0a0a42771c3:WindowsServerDocs/networking/windows-time-service/Windows-Time-Service-Tools-and-Settings.md
 **In this section**  
   
 -   [Windows Time Service Tools](#w2k3tr_times_tools_dyax)  
@@ -33,11 +29,7 @@ ms.technology: networking
 -   [Related Information](#w2k3tr_times_tools_qoep)  
   
 > [!NOTE]  
-<<<<<<< HEAD:WindowsServerDocs/identity/ad-ds/get-started/windows-time-service/Windows-Time-Service-Tools-and-Settings.md
-> This topic contains information only about tools and settings for Windows Time service (W32Time). If you only want to synchronize time for a domain-joined client computer, see [Configure a client computer for automatic domain time synchronization](https://technet.microsoft.com/en-us/library/cc758905%28v=ws.1%29)). For additional topics about how to configure Windows Time service, see the list of topics in the section [Where to Find Windows Time Service Configuration Information](https://technet.microsoft.com/library/cc773061.aspx).  
-=======
 > This topic contains information only about tools and settings for Windows Time service (W32Time). If you only want to synchronize time for a domain-joined client computer, see [Configure a client computer for automatic domain time synchronization](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc816884%28v%3dws.10%29). For additional topics about how to configure Windows Time service, see the list of topics in the section [Where to Find Windows Time Service Configuration Information](https://technet.microsoft.com/library/cc773061.aspx).  
->>>>>>> 03ecc04e866bbec87b90934fb461a0a0a42771c3:WindowsServerDocs/networking/windows-time-service/Windows-Time-Service-Tools-and-Settings.md
   
 > [!CAUTION]  
 > You should not use the Net time command to configure or set time when the Windows Time service is running.  

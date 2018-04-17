@@ -22,12 +22,8 @@ The Windows Time service is a component that uses a plug-in model for client and
 >[!NOTE]
 >For a quick overview of Windows Time service, take a look at this [high-level overview video](https://aka.ms/WS2016TimeVideo).
 
-<<<<<<< HEAD:WindowsServerDocs/identity/ad-ds/get-started/windows-time-service/accurate-time.md
-=======
-<!-- Not sure what to do with the following -->
 In this topic, we discuss ... these topics as they relate to enabling accurate time: 
 
->>>>>>> 03ecc04e866bbec87b90934fb461a0a0a42771c3:WindowsServerDocs/networking/windows-time-service/accurate-time.md
 - Improvements
 - Measurements
 - Best Practices
@@ -39,10 +35,7 @@ In this topic, we discuss ... these topics as they relate to enabling accurate t
 
 > [!NOTE] 
 > The windows time provider plugin model is [documented on TechNet](https://msdn.microsoft.com/en-us/library/windows/desktop/ms725475%28v=vs.85%29.aspx).
-<<<<<<< HEAD:WindowsServerDocs/identity/ad-ds/get-started/windows-time-service/accurate-time.md
-=======
 <!-- -->
->>>>>>> 03ecc04e866bbec87b90934fb461a0a0a42771c3:WindowsServerDocs/networking/windows-time-service/accurate-time.md
 
 
 
