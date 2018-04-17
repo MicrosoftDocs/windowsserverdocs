@@ -5,9 +5,9 @@ ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
 ms.assetid: 8223117a-96f3-4ae9-96e8-67a3a2b8d462
-manager: brianlic
-ms.author: jamesmci
-author: jamesmci
+manager: alanth
+ms.author: pashort
+author: shortpatti
 ---
 # Configure the Server Infrastructure
 
@@ -59,7 +59,9 @@ Configure Group Policy on the domain controller so that domain members automatic
 
 ## Create the VPN Users, VPN Servers, and NPS Servers Groups
 
-With this step you add a new Active Directory group that contains the users allowed to use the VPN to connect to your organization network. This group serves two purposes:
+With this step, you can add a new Active Directory (AD) group that contains the users allowed to use the VPN to connect to your organization network. 
+
+This group serves two purposes:
 
 - It defines which users are allowed to autoenroll for the user certificates the VPN requires.
 
@@ -68,6 +70,9 @@ With this step you add a new Active Directory group that contains the users allo
 By using a custom group, if you ever want to revoke a user’s VPN access, you can simply remove that user from the group.
 
 You will also add a group containing VPN servers and another group containing NPS servers. You use these groups to restrict certificate requests to their members. 
+
+>[!Note]
+>It is recommended that VPN servers that are placed in the DMA/Perimeter not be domain joined.  However, if you prefer to have the VPN servers domain joined for better manageability (Group Policies, Backup/Monitoring agent, no local users to manager, and so on), then add an AD group to the VPN server certificate template. 
 
 **To configure the VPN Users group**
 
@@ -170,7 +175,9 @@ Next, configure a custom client–server authentication template. This template 
 
 ## Create the VPN Server Authentication template
 
-Next, you must configure a new Server Authentication template for your VPN server. Adding the IP Security (IPsec) IKE Intermediate application policy allows the server to filter certificates if more than one certificate is available with the Server Authentication extended key usage. 
+With this step you can configure a new Server Authentication template for your VPN server. 
+
+Adding the IP Security \(IPsec\) IKE Intermediate application policy allows the server to filter certificates if more than one certificate is available with the Server Authentication extended key usage. 
 
 >[!IMPORTANT]
 >Because VPN clients access this server from the public Internet, the subject and alternative names are different than the internal server name. As a result, you cannot autoenroll this certificate on VPN servers.

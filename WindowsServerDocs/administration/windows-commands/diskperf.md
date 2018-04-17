@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # diskperf
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 In Windows 2000, physical and logical disk performance counters are not enabled by default.
 

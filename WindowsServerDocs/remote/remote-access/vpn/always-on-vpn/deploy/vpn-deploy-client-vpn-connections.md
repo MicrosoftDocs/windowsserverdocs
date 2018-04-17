@@ -7,8 +7,8 @@ ms.topic: article
 ms.date: 
 ms.assetid: d165822d-b65c-40a2-b440-af495ad22f42
 manager: brianlic
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 # Configure Windows 10 Client Always On VPN Connections
 
@@ -423,7 +423,10 @@ You can use this script on the Windows 10 desktop or in System Center Configurat
 
 Most examples use the Set-WmiInstance Windows PowerShell cmdlet to insert ProfileXML into a new instance of the MDM_VPNv2_01 WMI class. 
 
-However, this will not work in System Center Configuration Manager because you cannot run the package in the end users’ context. Therefore, this script uses the Common Information Model to create a WMI session in the user’s context, and then it creates a new instance of the MDM_VPNv2_01 WMI class in that session. This WMI class uses the WMI-to-CSP bridge to configure the VPNv2 CSP. Therefore, by adding the class instance, you configure the CSP.
+However, this will not work in System Center Configuration Manager because you cannot run the package in the end users’ context. Therefore, this script uses the Common Information Model to create a WMI session in the user’s context, and then it creates a new instance of the MDM_VPNv2_01 WMI class in that session. This WMI class uses the WMI-to-CSP bridge to configure the VPNv2 CSP. Therefore, by adding the class instance, you configure the CSP. 
+
+>[!IMPORTANT]
+>WMI-to-CSP bridge requires local admin rights, by design. To deploy per user VPN profiles you should be using SCCM or MDM.
 
 >[!NOTE]
 >The script VPN_Profile.ps1 uses the current user’s SID to identify the user’s context. Because no SID is available in a Remote Desktop session, the script will not work in a Remote Desktop session. Likewise, it will not work in a Hyper-V enhanced session. If you’re testing a Remote Access Always On VPN in virtual machines, disable enhanced session on your client VMs before running this script.

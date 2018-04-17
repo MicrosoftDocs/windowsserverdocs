@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # bitsadmin cache and deleteurl
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Deletes all cache entries for the given URL.
 

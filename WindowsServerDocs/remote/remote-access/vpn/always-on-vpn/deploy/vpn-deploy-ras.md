@@ -6,8 +6,8 @@ ms.technology: networking
 ms.topic: article
 ms.assetid: 7607a9b7-c9a4-4c4d-8a62-2d4c422e2a1f
 manager: brianlic
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 # Configure the Remote Access Server for Always On VPN
 

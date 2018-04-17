@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # wbadmin get versions
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Lists details about the available backups that are stored on the local computer or another computer. When this subcommand is used without parameters, it lists all backups of the local computer, even if those backups are not available. The details provided for a backup include the backup time, the backup storage location, the version identifier (needed for the **wbadmin get items** subcommand and to perform recoveries), and the type of recoveries you can perform.
 

@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # endlocal
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Ends localization of environment changes in a batch file, and restores environment variables to their values before the corresponding **setlocal** command was run.
 

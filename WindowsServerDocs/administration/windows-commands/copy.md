@@ -18,7 +18,7 @@ ms.date: 10/16/2017
 
 # copy
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Copies one or more files from one location to another.
 

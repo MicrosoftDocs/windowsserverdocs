@@ -6,8 +6,8 @@ ms.technology: networking
 ms.topic: article
 ms.assetid: 
 manager: brianlic
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 # Remote Access Always On VPN Advanced Features
 

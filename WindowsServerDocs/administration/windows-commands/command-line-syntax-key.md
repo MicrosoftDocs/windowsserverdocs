@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # Command-Line Syntax Key
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 The following table describes the notation used to indicate command-line syntax.
 

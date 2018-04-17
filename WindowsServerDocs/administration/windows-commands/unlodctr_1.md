@@ -1,5 +1,5 @@
 ---
-title: unlodctr_1
+title: unlodctr
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ---
-# unlodctr_1
+# unlodctr
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -39,4 +39,4 @@ unlodctr SMTPSVC
 ```  
 ## additional references  
 -   [Command-Line Syntax Key](command-line-syntax-key.md)  
--   [Command-Line Reference_1](command-line-reference_1.md)  
+  

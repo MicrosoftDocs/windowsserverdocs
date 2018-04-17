@@ -5,8 +5,8 @@ ms.prod: windows-server-threshold
 manager: brianlic
 ms.technology: compute
 ms.topic: article
-author: jamesmci
-ms.author: jamesmci
+author: shortpatti
+ms.author: pashort
 ms.localizationpriority: high
 ms.date: 03/16/2018
 ---
@@ -54,7 +54,7 @@ Hyper-V is available in some versions of Windows 10, Windows 8.1, and Windows 8.
 
 Hyper-V on Windows is geared toward development and test activities and gives you a quick and easy way to run different operating systems without deploying more hardware.
 
-For more information, see [Hyper-V on Windows 10](https://msdn.microsoft.com/virtualization/hyperv_on_windows/windows_welcome).
+For more information, see [Hyper-V on Windows 10](https://docs.microsoft.com/virtualization/hyper-v-on-windows).
 
 ### Microsoft Hyper-V Server 2016
 
@@ -76,7 +76,7 @@ In addition, Hyper-V Virtual Switch provides policy enforcement for security, is
 
 Following are links to documentation for other Microsoft Windows virtualization technologies.
 
-### [Windows Containers](https://msdn.microsoft.com/virtualization/windowscontainers)
+### [Windows Containers](https://docs.microsoft.com/virtualization/windowscontainers)
 
 You can use Windows Server and Hyper-V containers to provide standardized runtime environments for development, test, and production teams.
 
@@ -86,4 +86,4 @@ Windows Server Containers achieve isolation through namespace and process isolat
 
 Hyper-V Containers encapsulate each container in a light\-weight virtual machine.
 
-For more information, see [Windows Containers Documentation](https://msdn.microsoft.com/virtualization/windowscontainers) on the Microsoft Developer Network \(MSDN\).
+For more information, see [Windows Containers Documentation](https://docs.microsoft.com/virtualization/windowscontainers) on the Microsoft Docs.

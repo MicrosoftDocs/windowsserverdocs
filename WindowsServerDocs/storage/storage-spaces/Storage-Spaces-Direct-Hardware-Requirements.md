@@ -7,69 +7,94 @@ ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: eldenchristensen
-ms.date: 01/18/2018
+ms.date: 04/12/2018
 ms.localizationpriority: medium
 ---
+
 # Storage Spaces Direct hardware requirements
 
->Applies to: Windows Server 2016
+> Applies to: Windows Server 2016, Windows Server Insider Preview
 
 This topic describes minimum hardware requirements for Storage Spaces Direct.
 
-For production environments we recommend acquiring a [Windows Server Software-Defined](https://microsoft.com/wssd) hardware/software offering, which includes production deployment tools and procedures. These offerings are designed, assembled, and validated to meet Microsoft's requirements for private cloud environments, helping ensure reliable operation. Windows Server Software-Defined offerings are available through our partners' websites. Learn more at [https://microsoft.com/wssd](https://microsoft.com/wssd).
+For production, Microsoft recommends these [Windows Server Software-Defined](https://microsoft.com/wssd) hardware/software offers from our partners, which include deployment tools and procedures. They are designed, assembled, and validated against our reference architecture to ensure compatibility and reliability, so you get up and running quickly. Learn more at [https://microsoft.com/wssd](https://microsoft.com/wssd).
 
-If you would like to evaluate Storage Spaces Direct without investing in hardware, you can use Hyper-V virtual machines, as described in [Using Storage Spaces Direct in guest virtual machine clusters](storage-spaces-direct-in-vm.md).
+![logos of our Windows Server Software Defined partners](media/hardware-requirements/wssd-partners.png)
 
-## Basic requirements
+   > [!TIP]
+   > Want to evaluate Storage Spaces Direct but don't have hardware? Use Hyper-V or Azure virtual machines as described in [Using Storage Spaces Direct in guest virtual machine clusters](storage-spaces-direct-in-vm.md).
 
-All systems, components, devices, and drivers must be "Certified for Windows Server 2016" per the [Windows Server Catalog](https://www.windowsservercatalog.com).
+## Base requirements
 
-The fully configured cluster (servers, networking, and storage) must pass all [cluster validation tests](https://technet.microsoft.com/library/cc732035(v=ws.10).aspx) per the wizard in the Failover Cluster snap-in or with the **Test-Cluster** cmdlet in PowerShell.
+Systems, components, devices, and drivers must be **Windows Server 2016 Certified** per the [Windows Server Catalog](https://www.windowsservercatalog.com). In addition, we recommend that servers, drives, host bus adapters, and network adapters have the **Software-Defined Data Center (SDDC) Standard** and/or **Software-Defined Data Center (SDDC) Premium** additional qualifications (AQs), as pictured below. There are over 1,000 components with the SDDC AQs.
 
-In addition, the following requirements apply.
+![screenshot of the Windows Server catalog showing the SDDC AQs](media/hardware-requirements/sddc-aqs.png)
 
-## Additional requirements for Storage Spaces Direct
+The fully configured cluster (servers, networking, and storage) must pass all [cluster validation tests](https://technet.microsoft.com/library/cc732035(v=ws.10).aspx) per the wizard in Failover Cluster Manager or with the `Test-Cluster` [cmdlet](https://docs.microsoft.com/powershell/module/failoverclusters/test-cluster?view=win10-ps) in PowerShell.
 
-### Servers
+In addition, the following requirements apply:
+
+## Servers
 
 - Minimum of 2 servers, maximum of 16 servers
-- Recommended that all servers be the same make and model
+- Recommended that all servers be the same manufacturer and model
 
-### CPU
+## CPU
 
-- Minimum of Intel Nehalem or later compatible processor, or AMD EPYC or later compatible processor
+- Intel Nehalem or later compatible processor; or
+- AMD EPYC or later compatible processor
 
-### Memory
+## Memory
 
-- 4 GB of RAM per terabyte (TB) of cache drive capacity on each server, to store Storage Spaces Direct metadata.   
-Note that RAM sizes use base-2 numbering (where 1 GB = 1,024 MB), while drives are advertised using base-10 numbering (where 1 TB = 1,000 GB). For example, if each server has 2 x 1.6 TB (advertised capacity) cache drives, you should keep 2 x 1.6 x 4096 MB = 13,107 MB (12.8 GB) of memory available for Storage Spaces Direct internal use.
-- Any memory used by Windows Server, VMs, and other apps or workloads.
+- Memory for Windows Server, VMs, and other apps or workloads; plus
+- 4 GB of RAM per terabyte (TB) of cache drive capacity on each server, for Storage Spaces Direct metadata
 
-### Networking
+## Boot
 
-- Minimum of 10 Gbps network interface for intra-cluster communication
-- Recommended: Two NICs for redundancy and performance
-- Recommended: NICS that are remote-direct memory access (RDMA) capable, iWARP or RoCE
+- Any boot device supported by Windows Server, which [now includes SATADOM](https://cloudblogs.microsoft.com/windowsserver/2017/08/30/announcing-support-for-satadom-boot-drives-in-windows-server-2016/)
+- RAID 1 mirror is **not** required, but is supported for boot
+- Recommended: 200 GB minimum size
+
+## Networking
+
+- Minimum of 1 x 10 Gbps network interface per server
+- Recommended: Two or more NICs for redundancy and performance
+- Recommended: NICs that are remote-direct memory access (RDMA) capable, iWARP or RoCE
 - With 2 servers, direct-connect (switchless) is supported
 
-### Drives
+## Drives
 
-For more help choosing drives, see the [Choosing drives](choosing-drives.md) topic.
+Storage Spaces Direct works with direct-attached SATA, SAS, or NVMe drives that are physically attached to just one server each. For more help choosing drives, see the [Choosing drives](choosing-drives.md) topic.
 
-- Use local-attached SATA, SAS, or NVMe drives
-- Every drive must be physically connected to only one server
-- Every server in the cluster should have the same types of drives and the same number of each type. We recommend using drives of the same model, size, and firmware version whenever possible. To learn more, see [Drive symmetry considerations for Storage Spaces Direct](drive-symmetry-considerations.md).
-- SSDs must be "enterprise-grade" meaning they provide [power-loss protection](https://blogs.technet.microsoft.com/filecab/2016/11/18/dont-do-it-consumer-ssd/)
-- Recommended: Cache drives should have high write endurance: at least 3 drive-writes-per-day (DWPD) or at least 4 terabytes written (TBW) per day. To learn more, see [Understanding drive writes per day (DWPD), terabytes written (TBW), and the minimum recommended for Storage Spaces Direct](https://blogs.technet.microsoft.com/filecab/2017/08/11/understanding-dwpd-tbw/).
-- Recommended: Add capacity drives in multiples of the number of NVMe or SSD cache devices
-- Drives can be 512n, 512e, or 4K native
-- Use a separate, dedicated drive or RAID 1 mirror for Windows Server boot (recommended 200 GB minimum size)
-- **Not supported:** Multi-path IO (MPIO) or physically connecting drives via multiple paths
+- SATA, SAS, and NVMe (M.2, U.2, and Add-In-Card) drives are all supported
+- 512n, 512e, and 4K native drives are all supported
+- Solid-state drives must provide [power-loss protection](https://blogs.technet.microsoft.com/filecab/2016/11/18/dont-do-it-consumer-ssd/)
+- Same number and types of drives in every server – see [Drive symmetry considerations](drive-symmetry-considerations.md)
+- Recommended: Number of capacity drives is a whole multiple of the number of cache drives
+- Recommended: Cache drives should have high write endurance: at least 3 drive-writes-per-day (DWPD) or at least 4 terabytes written (TBW) per day – see [Understanding drive writes per day (DWPD), terabytes written (TBW), and the minimum recommended for Storage Spaces Direct](https://blogs.technet.microsoft.com/filecab/2017/08/11/understanding-dwpd-tbw/)
+
+Here's how drives can be connected for Storage Spaces Direct:
+
+1. Direct-attached SATA drives
+2. Direct-attached NVMe drives
+3. SAS host-bus adapter (HBA) with SAS drives
+4. SAS host-bus adapter (HBA) with SATA drives
+5. **NOT SUPPORTED:** RAID controller cards or SAN (Fibre Channel, iSCSI, FCoE) storage. Host-bus adapter (HBA) cards must implement simple pass-through mode.
+
+![diagram of supported drive interconnects](media/hardware-requirements/drive-interconnect-support-1.png)
+
+Drives can be internal to the server, or in an external enclosure that is connected to just one server. SCSI Enclosure Services (SES) is required for slot mapping and identification. Each external enclosure must present a unique identifier (Unique ID).
+
+1. Drives internal to the server
+2. Drives in an external enclosure ("JBOD") connected to one server
+3. **NOT SUPPORTED:** Shared SAS enclosures connected to multiple servers or any form of multi-path IO (MPIO) where drives are accessible by multiple paths.
+
+![diagram of supported drive interconnects](media/hardware-requirements/drive-interconnect-support-2.png)
 
 > [!NOTE]
 > Microsoft has a critical product advisory for Storage Spaces Direct customers using the Intel P3x00 family of NVMe devices (all capacities of the P3500, P3600, P3700). See Knowledge Base article [4052341](https://support.microsoft.com/help/4052341) for more information.
 
-#### Minimum number of drives
+### Minimum number of drives (excludes boot drive)
 
 - If there are drives used as cache, there must be at least 2 per server
 - There must be at least 4 capacity (non-cache) drives per server
@@ -84,15 +109,9 @@ For more help choosing drives, see the [Choosing drives](choosing-drives.md) top
 | NVMe + SSD + HDD      | 2 NVMe + 4 Others       |
 
    >[!NOTE]
-   >  This table provides the minimum number of drives required for bare-metal deployments. If you're deploying Storage Spaces Direct using virtual machines and virtualized storage, such as in Microsoft Azure, see [Using Storage Spaces Direct in guest virtual machine clusters](storage-spaces-direct-in-vm.md).
+   > This table provides the minimum for hardware deployments. If you're deploying with virtual machines and virtualized storage, such as in Microsoft Azure, see [Using Storage Spaces Direct in guest virtual machine clusters](storage-spaces-direct-in-vm.md).
 
-#### Maximum
+### Maximum capacity
 
-- Maximum of 1 petabyte (1,000 TB) of raw capacity per storage pool
-
-### Host-bus adapter (HBA)
-
-- Simple pass-through SAS HBA for both SAS and SATA drives
-- SCSI Enclosure Services (SES) for SAS and SATA drives
-- Any direct-attached storage enclosures must present Unique ID
-- **Not Supported:** RAID HBA controllers or SAN (Fibre Channel, iSCSI, FCoE) devices
+- Recommended: Maximum 100 terabytes (TB) raw storage capacity per server
+- Maximum 1 petabyte (1,000 TB) raw capacity in the storage pool

@@ -13,6 +13,7 @@ author: lizap
 manager: dongill
 ms.author: elizapo
 ms.date: 01/25/2017
+ms.localizationpriority: medium
 ---
 # Remote Desktop - Allow access to your PC
 

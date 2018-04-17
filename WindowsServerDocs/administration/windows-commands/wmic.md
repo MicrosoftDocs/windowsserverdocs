@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # wmic
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Displays WMI information inside an interactive command shell.
 

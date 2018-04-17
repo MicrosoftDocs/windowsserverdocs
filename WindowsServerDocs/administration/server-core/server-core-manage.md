@@ -13,7 +13,7 @@ ms.date: 10/17/2017
 > Applies to: Windows Server (Semi-Annual Channel) and Windows Server 2016
 
 You can manage a Server Core server in the following ways:
-- Using the [Project Honolulu management portal](../../manage/honolulu/honolulu.md)
+- Using [Windows Admin Center](../../manage/windows-admin-center/overview.md)
 - Using [Remote Server Administration Tools](../../remote/remote-server-administration-tools.md) running on Windows 10
 - Locally and remotely using Windows PowerShell
 - Remotely using [Server Manager](../server-manager/server-manager.md)
@@ -33,8 +33,8 @@ There are some important limitations and tips to keep in mind when you work with
 - **Control.exe** won't run on its own. You must run it with either **Timedate.cpl** or **Intl.cpl**.
 - **Winver.exe** isn't available in Server Core. To obtain version information use **Systeminfo.exe**.
 
-## Managing Server Core with Microsoft Project Honolulu
-[Microsoft Project Honolulu](../../manage/honolulu/honolulu.md) is a browser-based management app that enables on-premises administration of Windows Servers with no Azure or cloud dependency. Project Honolulu gives you full control over all aspects of your server infrastructure and is particularly useful for management on private networks that are not connected to the Internet. You can install Project Honolulu on Windows 10, on a gateway server, or on an installation of Windows Server with Desktop Experience, and then connect to the Server Core system that you want to manage.
+## Managing Server Core with Windows Admin Center
+[Windows Admin Center](../../manage/windows-admin-center/overview.md) is a browser-based management app that enables on-premises administration of Windows Servers with no Azure or cloud dependency. Windows Admin Center gives you full control over all aspects of your server infrastructure and is particularly useful for management on private networks that are not connected to the Internet. You can install Windows Admin Center on Windows 10, on a gateway server, or on an installation of Windows Server with Desktop Experience, and then connect to the Server Core system that you want to manage.
 
 ## Managing Server Core remotely with Server Manager
 
