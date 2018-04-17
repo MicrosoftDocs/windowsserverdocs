@@ -12,7 +12,7 @@ ms.date: 10/17/2017
 
 >Applies To: Windows Server (Semi-Annual Channel) and Windows Server 2016
 
-Because Server Core doesn't have a UI, you need to use Windows PowerShell cmdlets, command line tools, or remote tools to perform basic administration tasks. The following sections outline the PowerShell cmdlets and commands used for basic tasks. You can also use [Microsoft Project Honolulu](../../manage/honolulu/honolulu.md), a unified management portal currently in public preview, to administer your installation. 
+Because Server Core doesn't have a UI, you need to use Windows PowerShell cmdlets, command line tools, or remote tools to perform basic administration tasks. The following sections outline the PowerShell cmdlets and commands used for basic tasks. You can also use [Windows Admin Center](../../manage/windows-admin-center/overview.md), a unified management portal currently in public preview, to administer your installation. 
 
 ## Administrative tasks using PowerShell cmdlets
 Use the following information to perform basic administrative tasks with Windows PowerShell cmdlets.

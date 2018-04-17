@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # time
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Displays or sets the system time. If used without parameters, **time** displays the current system time and prompts you to enter a new time.
 

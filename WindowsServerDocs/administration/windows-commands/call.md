@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # call
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Calls one batch program from another without stopping the parent batch program. The **call** command accepts labels as the target of the call.
 

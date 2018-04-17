@@ -13,6 +13,7 @@ author: lizap
 manager: dongill
 ms.author: elizapo
 ms.date: 03/22/2017
+ms.localizationpriority: medium
 ---
 
 # Remote Desktop client - supported configuration

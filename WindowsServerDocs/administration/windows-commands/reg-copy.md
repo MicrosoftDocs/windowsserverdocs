@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # reg copy
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Copies a registry entry to a specified location on the local or remote computer.
 

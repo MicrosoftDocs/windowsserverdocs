@@ -14,7 +14,7 @@ ms.reviewer: kathydav
 ---
 
 # Create Hyper-V VHD Set files
-VHD Set files are a new shared Virtual Disk model for guest clusters in Windows Server 2016. VHD Set files support online resizing of shared virtual disks, support Hype-V Replica, and can be included in application-consistent checkpoints. 
+VHD Set files are a new shared Virtual Disk model for guest clusters in Windows Server 2016. VHD Set files support online resizing of shared virtual disks, support Hyper-V Replica, and can be included in application-consistent checkpoints. 
 
 VHD Set files use a new VHD file type, .VHDS. VHD Set files store checkpoint information about the group virtual disk used in guest clusters, in the form of metadata.
 
@@ -38,7 +38,7 @@ PS c:\>New-VHD -Path c:\base.vhds -SizeBytes 10GB
 
 ## Migrate a shared VHDX file to a VHD Set file
 
-Migrating an existing shared VHDX to a VHDS requires taking the VM offline. This is recommended process, using Windows PowerShell:
+Migrating an existing shared VHDX to a VHDS requires taking the VM offline. This is the recommended process using Windows PowerShell:
 
 1.	Remove the VHDX from the VM. For example, run: 
   ``` PowerShell
