@@ -19,17 +19,28 @@ Windows Admin Center supports several optional features that integrate with Azur
 
 ## Connect your gateway to Azure
 
+> [!NOTE]
+> The New-AadApp.ps1 script was updated 4/17 to include a `-Credential` parameter. If you were previously seeing errors, please [download the script](https://aka.ms/WACAzureConnectScript) and run it again.
+
 To allow the Windows Admin Center gateway to communicate with Azure to leverage Azure Active Directory authentication for gateway access, or to create Azure resources on your behalf (for example, to protect VMs managed in Windows Admin Center using Azure Site Recovery), you must first connect your Windows Admin Center gateway to Azure. You only need to do this once for your Windows Admin Center gateway - the setting is preserved when you update your gateway to a newer version.
 
-To connect your gateway, you must run the [New-AadApp.ps1 PowerShell script](https://aka.ms/WACAzureConnectScript) (there is also a hyperlink in the Windows Admin Center UI for this download, which is visible wherever you try to use an Azure integration feature for the first time), which creates a web application in Azure AD with the name "SME-*gateway*" and registers the application with the Windows Admin Center gateway. This allows Windows Admin Center to connect to Azure resources like Azure AD on your behalf. You can run the script from any computer that has access to the Windows Admin Center gateway and to Azure, with the Windows Admin Center gateway URL as the -GatewayEndpoint parameter. For example,
+To connect your gateway, you must run the [New-AadApp.ps1 PowerShell script](https://aka.ms/WACAzureConnectScript) (there is also a hyperlink in the Windows Admin Center UI for this download, which is visible wherever you try to use an Azure integration feature for the first time), which creates a web application in Azure AD with the name "SME-*gateway*" and registers the application with the Windows Admin Center gateway. This allows Windows Admin Center to connect to Azure resources like Azure AD on your behalf. You can run the script from any computer that has access to the Windows Admin Center gateway and to Azure, with the Windows Admin Center gateway URL as the `-GatewayEndpoint` parameter. For example,
 
 ```powershell
     PS> .\New-AadApp.ps1 -GatewayEndpoint "https://gateway.contoso.com"
 ```
 
-If you are NOT using port 443, the GatewayEndpoint parameter should contain the port (for example, https://myComputer:6516).
+If you are NOT using port 443, the `-GatewayEndpoint` parameter should contain the port (for example, https://myComputer:6516).
 
-If you have multiple tenants associated with your Azure account, you can use the -TenantId parameter to specify the tenant in which you want to create the Azure AD application and associate with your Windows Admin Center gateway. For example,
+Unless the computer where you run the script has administrative privilege on the computer where Windows Admin Center is installed, you will need to include the `-Credential` parameter to specify a username and password with access to the computer where Windows Admin Center is installed. The `-Credential` parameter takes a PSCredential, which you can create by using the cmdlet Get-Credential. Alternatively, you can pass in a username for `-Credential` and you will be prompted to provide a password. For example,
+
+```powershell
+    PS> $cred = Get-Credential
+    PS> .\New-AadApp.ps1 -GatewayEndpoint "https://gateway.contoso.com" -Credential $cred
+```
+
+
+If you have multiple tenants associated with your Azure account, you can use the `-TenantId` parameter to specify the tenant in which you want to create the Azure AD application and associate with your Windows Admin Center gateway. For example,
 
 ```powershell
     PS> .\New-AadApp.ps1 -GatewayEndpoint "https://gateway.contoso.com" -TenantId "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
