@@ -61,9 +61,9 @@ To achieve 1s accuracy for a specific target machine when compared to a highly a
 -   The target system must run Windows 10 version 1607, Windows Server 2016 version 1607 or newer.
 
 -   The target system must synchronize time exclusively from an NTP hierarchy of time servers running on Windows Server 2016 version 1607 or later, culminating in the highly accurate, Windows compatible NTP time source.
-
+<!-- 
 -   All systems in the NTP hierarchy mentioned above must be configured as documented in the [Configuring Systems for High Accuracy](configuring-systems-for-high-accuracy.md) documentation.
-
+-->
 -   The cumulative one-way network latency between the target and source must not exceed 100ms. The cumulative network delay is measured by adding the individual one-way delays between pairs of NTP client-server nodes in the hierarchy starting with the target and ending at the source. For more information, please review the high accuracy time sync document.
 
 ### Target Accuracy: 50 Milliseconds
