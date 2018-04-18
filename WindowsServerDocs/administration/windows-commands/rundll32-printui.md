@@ -121,6 +121,6 @@ To view the properties of a printer, printer3, type:
 rundll32 printui.dll printUIEntry /p /n\\printer3  
 ```  
 ## additional references  
--   [Command-Line Reference_1](command-line-reference_1.md)  
+  
 -   [rundll32](rundll32.md)  
 -   [print Command Reference](print-command-reference.md)  

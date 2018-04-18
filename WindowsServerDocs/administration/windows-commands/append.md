@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # append
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Allows programs to open data files in specified directories as if they were in the current directory. If used without parameters, **append** displays the appended directory list.
 

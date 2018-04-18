@@ -18,7 +18,7 @@ ms.date: 10/16/2017
 
 # msdt
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Invokes a troubleshooting pack at the command line or as part of an automated script, and enables additional options without user input.
 

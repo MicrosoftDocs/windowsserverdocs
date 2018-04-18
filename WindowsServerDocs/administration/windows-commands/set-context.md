@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # Set contex
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Sets the context for shadow copy creation. If used without parameters, **set context** displays help at the command prompt.
 

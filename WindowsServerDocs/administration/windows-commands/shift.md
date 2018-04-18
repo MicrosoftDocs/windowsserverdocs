@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # shift
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Changes the position of batch parameters in a batch file.
 

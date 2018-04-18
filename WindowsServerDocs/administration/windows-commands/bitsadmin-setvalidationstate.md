@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # bitsadmin setvalidationstate
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Sets the content validation state of the given file within the job.
 

@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # for
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Runs a specified command for each file in a set of files.
 
