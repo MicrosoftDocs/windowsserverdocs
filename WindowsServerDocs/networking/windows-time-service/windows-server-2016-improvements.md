@@ -115,9 +115,7 @@ For comparison, we tested both a Windows Server 2012R2 and Windows Server 2016 b
 
 ![Windows Time](../media/Windows-Time-Service/Windows-2016-Accurate-Time/topology1.png)
 
-![Windows Time](networking/media/Windows-Time-Service/Windows-2016-Accurate-Time/topology1.png)
-
-![Windows Time](../media/Windows-2016-Accurate-Time/topology2.png)
+![Windows Time](../media/Windows-Time-Service/Windows-2016-Accurate-Time/topology2.png)
 
 ### Graphical Results Overview
 The following two graphs represent the time accuracy for two specific members in a domain based on the topology above.  Each graph displays both the Windows Server 2012R2 and 2016 results overlaid, which demonstrates the improvements visually.  The accuracy was measure from with-in the guest machine compared to the host.  The graphical data represents a subset of the entire set of tests we’ve done and shows the best case and worst case scenarios.  
