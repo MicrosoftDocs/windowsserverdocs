@@ -22,7 +22,6 @@ The Windows Time service is a component that uses a plug-in model for client and
 >[!NOTE]
 >For a quick overview of Windows Time service, take a look at this [high-level overview video](https://aka.ms/WS2016TimeVideo).
 
-<!-- Not sure what to do with the following -->
 In this topic, we discuss ... these topics as they relate to enabling accurate time: 
 
 - Improvements
@@ -61,6 +60,3 @@ In every case for accurate time, there are three critical factors:
 
 
 For battery powered devices, both mobile and portable, you must consider different strategies.  As per our recommendation, keeping accurate time requires the clock to be disciplined once a second, which correlates to the Clock Update Frequency. These settings will consume more battery power than expected and can interfere with power saving modes available in Windows for such devices. Battery powered devices also have certain power modes which stop all applications from running, which interferes with W32time’s ability to discipline the clock and maintain accurate time. Additionally, clocks in mobile devices may not be very accurate to begin with.  Ambient environmental conditions affect clock accuracy and a mobile device can move from one ambient condition to the next which may interfere with its ability to keep time accurately.  Therefore, Microsoft does not recommend that you set up battery powered portable devices with high accuracy settings. 
-
-## Why is time important?  
-

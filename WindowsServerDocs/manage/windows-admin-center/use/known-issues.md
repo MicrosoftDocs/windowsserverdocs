@@ -22,7 +22,7 @@ If you encounter an issue not described on this page, please [let us know](http:
 
 ## Signature verification failed
 
-- If you install Windows Admin Center on a machine that has never been online to receive updates, the application may crash with **Signature verification failed** errors in the event log. After taking updates, the issue will be resolved.
+- If you install Windows Admin Center on a machine that has never been online, the application may crash with **Signature verification failed** errors in the event log. Connecting the machine to the internet will resolve the error. After the error is resolved, the connection may be removed and Windows Admin Center will launch succesfully offline.
 
 ## Installer
 

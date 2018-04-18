@@ -37,7 +37,7 @@ To enable the new web theme use the following procedure:
 >You need to ensure that idpinitiatedsignon has been enabled.  It is not enabled by default.  To enable idpinitiatedsignon use the following PowerShell command:  `Set-AdfsProperties –EnableIdpInitiatedSignonPage $True`
 
 ## Image Recommendations
-Enabling the centered UI enables you to use the same images for background and logo that you might already have for [Azure Active Directory company branding](active-directory/customize-branding.md). Generally, the same recommendations for size, ratio, and format do apply.
+Enabling the centered UI enables you to use the same images for background and logo that you might already have for Azure Active Directory company branding. Generally, the same recommendations for size, ratio, and format do apply.
 
 ### Logo
 Description | Constraints | Recommendations
