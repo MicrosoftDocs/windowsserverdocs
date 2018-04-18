@@ -41,7 +41,11 @@
 			}
 		}
 	},
-    "fileMetadata": {},
+    "fileMetadata": {
+      "feedback_product_url": {
+        "manage/windows-admin-center/**/.md": "http://aka.ms/wacfeedback" 
+      }
+    },
     "template": [
       null
     ],
