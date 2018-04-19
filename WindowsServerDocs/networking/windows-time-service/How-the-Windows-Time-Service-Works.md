@@ -27,7 +27,7 @@ ms.technology: networking
 -   [Network Ports Used by Windows Time Service](#w2k3tr_times_how_ydum)  
   
 > [!NOTE]  
-> This topic explains only how the Windows Time service (W32Time) works. For information about how to configure Windows Time service, see the list of topics in the section [Where to Find Windows Time Service Configuration Information](https://technet.microsoft.com/library/cc773061.aspx).  
+> This topic explains only how the Windows Time service (W32Time) works. For information about how to configure Windows Time service, see the list of topics in the [Where to find Windows Time service configuration-related information](windows-time-service-tech-ref.md#where-to-find-windows-time-service-configuration-related-information) section.
   
 > [!NOTE]  
 > In Windows Server 2003 and Microsoft Windows 2000 Server, the directory service is named Active Directory directory service. In  Windows Server 2008  and later versions, the directory service is named Active Directory Domain Services (AD DS). The rest of this topic refers to AD DS, but the information is also applicable to Active Directory.  
@@ -41,7 +41,7 @@ Although the Windows Time service is not an exact implementation of the Network 
 -   The amount of CPU and network resources available to the Windows Time service  
   
 > [!IMPORTANT]  
-> Prior to Windows Server 2016, the W32Time service was not designed to meet time-sensitive application needs.  However, updates to Windows Server 2016 now allow you to implement a solution for 1ms accuracy in your domain.  See [Windows 2016 Accurate Time](accurate-time.md) and  [Support boundary to configure the Windows Time service for high-accuracy environments](https://go.microsoft.com/fwlink/?LinkID=179459) for more information.  
+> Prior to Windows Server 2016, the W32Time service was not designed to meet time-sensitive application needs.  However, updates to Windows Server 2016 now allow you to implement a solution for 1ms accuracy in your domain.  See [Windows 2016 Accurate Time](accurate-time.md) and  [Support boundary to configure the Windows Time service for high-accuracy environments](support-boundary.md) for more information.  
   
 Computers that synchronize their time less frequently or are not joined to a domain are configured, by default, to synchronize with time.windows.com.  Therefore, it is impossible to guarantee time accuracy on computers that have intermittent or no network connections.  
   
@@ -68,7 +68,7 @@ The following figure shows the architecture of the Windows Time service.
   
 **Windows Time Service Architecture**  
   
-![Windows Time](media/How-the-Windows-Time-Service-Works/trnt_sec_arcc.gif)  
+![Windows Time](../media/Windows-Time-Service/How-the-Windows-Time-Service-Works/trnt_sec_arcc.gif)
   
 The Service Control Manager is responsible for starting and stopping the Windows Time service. The Windows Time Service Manager is responsible for initiating the action of the NTP time providers included with the operating system. The Windows Time Service Manager controls all functions of the Windows Time service and the coalescing of all time samples. In addition to providing information about the current system state, such as the current time source or the last time the system clock was updated, the Windows Time Service Manager is also responsible for creating events in the event log.  
   
@@ -168,7 +168,7 @@ Synchronization that is based on a domain hierarchy uses the AD DS domain hierar
   
 **Time Synchronization in an AD DS Hierarchy**  
   
-![Windows Time](media/How-the-Windows-Time-Service-Works/trnt_ntw_adhc.gif)  
+![Windows Time](../media/Windows-Time-Service/How-the-Windows-Time-Service-Works/trnt_ntw_adhc.gif)
   
 #### Reliable Time Source Configuration  
 A computer that is configured to be a reliable time source is identified as the root of the time service. The root of the time service is the authoritative server for the domain and typically is configured to retrieve time from an external NTP server or hardware device. A time server can be configured as a reliable time source to optimize how time is transferred throughout the domain hierarchy. If a domain controller is configured to be a reliable time source, Net Logon service announces that domain controller as a reliable time source when it logs on to the network. When other domain controllers look for a time source to synchronize with, they choose a reliable source first if one is available.  
@@ -260,6 +260,6 @@ The Windows Time service communicates on a network to identify reliable time sou
 |SNTP|123|N/A|  
   
 ## See Also  
-[Windows Time Service Technical Reference](https://technet.microsoft.com/library/cc773061.aspx)
+[Windows Time Service Technical Reference](windows-time-service-tech-ref.md)
 [Windows Time Service Tools and Settings](Windows-Time-Service-Tools-and-Settings.md)
 [Microsoft Knowledge Base article 902229](https://go.microsoft.com/fwlink/?LinkId=186066)
