@@ -50,7 +50,7 @@ This guide does **not** discuss configuring the Windows Time service. There are 
   
 -   To configure the Windows Time service on a domain controller acting as the forest root PDC emulator that is also running in a virtual computer, follow the same instructions for a physical computer as described in [Configure the Windows Time service on the PDC emulator in the Forest Root Domain](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731191%28v=ws.10%29).  
   
--   To configure the Windows Time service on a member server running as a virtual computer, use the domain time hierarchy as described in ([Configure a client computer for automatic domain time synchronization](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc816884%28v%3dws.10%29)).
+-   To configure the Windows Time service on a member server running as a virtual computer, use the domain time hierarchy as described in [Configure a client computer for automatic domain time synchronization](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc816884%28v%3dws.10%29).
 
 
 > [!IMPORTANT]  
