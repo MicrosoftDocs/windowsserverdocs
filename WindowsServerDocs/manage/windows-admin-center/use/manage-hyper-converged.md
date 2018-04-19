@@ -36,12 +36,12 @@ Highlights of Windows Admin Center for Hyper-Converged Infrastructure include:
 
 Windows Admin Center for Hyper-Converged Infrastructure is being actively developed by Microsoft. It receives frequent updates that improve existing features and add new features. Here’s what’s new in recent months:
 
-- Video: [What's new with HCI in Windows Admin Center v1804](TODO) (April)
+- Video: [What's new with HCI in Windows Admin Center v1804](https://www.youtube.com/watch?v=7kZxrYGTgTA) (April)
 - Video: [What's new with HCI in Windows Admin Center v1803](https://www.youtube.com/watch?v=CX4vKnisRj8) (March)
 
 ## Before you start
 
-To manage your cluster as Hyper-Converged Infrastructure in Windows Admin Center, it needs to be running Windows Server 2016 or a preview build of Windows Server 2019, and have Hyper-V and Storage Spaces Direct enabled. 
+To manage your cluster as Hyper-Converged Infrastructure in Windows Admin Center, it needs to be running Windows Server 2016 or a preview build of Windows Server 2019, and have Hyper-V and Storage Spaces Direct enabled.
 
 ### Prepare your Windows Server 2016 cluster for Windows Admin Center
 
@@ -51,11 +51,11 @@ Windows Admin Center for Hyper-Converged Infrastructure depends on management AP
 2. Run the following PowerShell cmdlet as Administrator on the cluster:
 
 ```powershell
-    PS> Add-ClusterResourceType -Name "SDDC Management" -dll "$env:SystemRoot\Cluster\sddcres.dll" -DisplayName "SDDC Management"
+    Add-ClusterResourceType -Name "SDDC Management" -dll "$env:SystemRoot\Cluster\sddcres.dll" -DisplayName "SDDC Management"
 ```
 
 > [!Tip]
-> You only need to run the cmdlet once, on any server in the cluster. You can run it locally in Windows PowerShell or use Credential Security Service Provider (CredSSP) to run it remotely. Depending on your configuration, you may not be able to run this cmdlet from within Windows Admin Center
+> You only need to run the cmdlet once, on any server in the cluster. You can run it locally in Windows PowerShell or use Credential Security Service Provider (CredSSP) to run it remotely. Depending on your configuration, you may not be able to run this cmdlet from within Windows Admin Center.
 
 ### Prepare your Windows Server 2019 cluster for Windows Admin Center
 
@@ -101,7 +101,7 @@ If you’re just getting started, here are some exercises to familiarize yoursel
 8. Once the virtual machine is created and appears in the virtual machine list, you can start the virtual machine.
 9. Once the virtual machine is started, you can connect to the virtual machine's console via VMConnect to install the operating system. Select the virtual machine from the list, click **More** > **Connect** to download the .rdp file. Open the .rdp file in the Remote Desktop Connection app. Since this is connecting to the virtual machine's console, you will need to enter the Hyper-V host's admin credentials.
 
-[Learn more about virtual machine management with Windows Admin Center](manage-virtual-machines.md)
+[Learn more about virtual machine management with Windows Admin Center](manage-virtual-machines.md).
 
 ### Pause and safely restart a server
 
@@ -143,6 +143,51 @@ It’s all about your feedback! The most important benefit of frequent updates i
 - [Submit and vote for feature requests on UserVoice](https://windowsserver.uservoice.com/forums/295071/category/319162?query=%5Bhci%5D)
 - [Join the Windows Admin Center forum on Microsoft Tech Community](https://techcommunity.microsoft.com/t5/Windows-Server-Management/bd-p/WindowsServerManagement)
 - Tweet to `@servermgmt`
+
+## 6 tutorials in under 6 minutes
+
+If you’re just getting started, here are some quick Storage Spaces Direct tutorials to help you learn how Windows Admin Center for Hyper-Converged Infrastructure is organized and works. These videos were recorded with Windows Admin Center version 1804 and an Insider Preview build of Windows Server 2019.
+<ul>
+               <li>(0:37) <a href="https://youtu.be/o66etKq70N8">How to create a three-way mirror volume</a></li>
+               <li>(1:17) <a href="https://youtu.be/R72QHudqWpE">How to create a mirror-accelerated parity volume</a></li>
+               <li>(1:02) <a href="https://youtu.be/j59z7ulohs4">How to open a volume and add files</a></li>
+               <li>(0:51) <a href="https://youtu.be/PRibTacyKko">How to turn on deduplication and compression</a></li>
+               <li>(0:47) <a href="https://youtu.be/hqyBzipBoTI">How to expand a volume</a></li>
+               <li>(0:26) <a href="https://youtu.be/DbjF8r2F6Jo">How to delete a volume</a></li>
+</ul>
+
+<table>
+    <tr style="border: 0;">
+        <td style="padding: 5px; border: 0;">
+            <strong>Create volume, three-way mirror</strong>
+            <iframe width="375" height="210" src="https://www.youtube.com/embed/o66etKq70N8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
+        </td>
+        <td style="padding: 5px; border: 0;">
+            <strong>Create volume, mirror-accelerated parity</strong>
+            <iframe width="375" height="210" src="https://www.youtube.com/embed/R72QHudqWpE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
+        </td>
+    </tr>
+    <tr style="border: 0;">
+        <td style="padding: 5px; border: 0;">
+            <strong>Open volume and add files</strong>
+            <iframe width="375" height="210" src="https://www.youtube.com/embed/j59z7ulohs4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
+        </td>
+        <td style="padding: 5px; border: 0;">
+            <strong>Turn on deduplication and compression</strong>
+            <iframe width="375" height="210" src="https://www.youtube.com/embed/PRibTacyKko" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
+        </td>
+    </tr>
+    <tr style="border: 0;">
+        <td style="padding: 5px; border: 0;">
+            <strong>Expand volume</strong>
+            <iframe width="375" height="210" src="https://www.youtube.com/embed/hqyBzipBoTI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
+        </td>
+        <td style="padding: 5px; border: 0;">
+            <strong>Delete volume</strong>
+            <iframe width="375" height="210" src="https://www.youtube.com/embed/DbjF8r2F6Jo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
+        </td>
+    </tr>
+</table>
 
 ## Frequently asked questions
 
