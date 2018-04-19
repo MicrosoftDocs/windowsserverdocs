@@ -432,7 +432,6 @@
 ### [AD FS Troubleshooting](ad-fs/troubleshooting/ad-fs-tshoot-overview.md)
 #### [Azure](ad-fs/troubleshooting/ad-fs-tshoot-azure.md)
 #### [Certificates](ad-fs/troubleshooting/ad-fs-tshoot-certs.md)
-#### [Claims issuance](ad-fs/troubleshooting/ad-fs-tshoot-claims-issuance.md)
 #### [Claims syntax](ad-fs/troubleshooting/ad-fs-tshoot-claims-rules.md)
 #### [DNS](ad-fs/troubleshooting/ad-fs-tshoot-dns.md)
 #### [Endpoints](ad-fs/troubleshooting/ad-fs-tshoot-endpoints.md)
