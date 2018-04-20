@@ -35,7 +35,7 @@ To configure conditional access for VPN connectivity, you must complete the foll
 11.	[Configure your Conditional Access Policy](#config-ca-policy)
 12.	[Deploy Conditional Access Root Certificates to On-Premises AD](#deploy-ca-root-certs-on-prem) 
 13.	[Create OMA-DM based VPNv2 Profiles to Windows 10 Devices](#create-oma-dm-based-vpnv2)
-14. [Configure VPNv2 Profiles on your Clients]
+14. Configure VPNv2 Profiles on your Clients
 
 
 
