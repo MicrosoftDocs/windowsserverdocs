@@ -5,7 +5,7 @@ ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
-ms.date: 04/05/2018
+ms.date: 04/18/2018
 ms.localizationpriority: low
 ms.prod: windows-server-threshold
 ---
@@ -20,7 +20,7 @@ ms.prod: windows-server-threshold
 
 ## Selecting a client certificate
 
-After you install Windows Admin Center on Windows 10, you will be prompted to select a certificate on first launch.
+The first time you open Windows Admin Center on Windows 10, make sure to select the *Windows Admin Center Client* certificate (otherwise you'll get an HTTP 403 error saying "can't get to this page").
 
 In Microsoft Edge, when you are prompted with this dialog:
  
