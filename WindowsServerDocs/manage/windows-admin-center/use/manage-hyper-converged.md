@@ -13,7 +13,7 @@ ms.prod: windows-server-threshold
 
 >Applies To: Windows Server 2019, Windows Server 2016
 
-## What is Hyper-Converged Infrastructure?
+## What is Hyper-Converged Infrastructure
 
 Hyper-Converged Infrastructure consolidates software-defined compute, storage, and networking into one cluster to provide high-performance, cost-effective, and easily scalable virtualization. This capability was introduced in Windows Server 2016 with [Storage Spaces Direct](https://docs.microsoft.com/windows-server/storage/storage-spaces/storage-spaces-direct-overview) and [Hyper-V](https://docs.microsoft.com/windows-server/virtualization/hyper-v/hyper-v-on-windows-server).
 
