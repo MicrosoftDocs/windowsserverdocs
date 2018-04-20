@@ -1,6 +1,6 @@
 ---
-title: Manage Hyper-Converged Clusters with Windows Admin Center
-description: Manage Hyper-Converged Clusters with Windows Admin Center (Project Honolulu)
+title: Manage Hyper-Converged Infrastructure with Windows Admin Center
+description: Manage Hyper-Converged Infrastructure with Windows Admin Center (Project Honolulu)
 ms.technology: manage
 ms.topic: article
 author: daniellee-msft
@@ -9,7 +9,7 @@ ms.date: 04/20/2018
 ms.localizationpriority: low
 ms.prod: windows-server-threshold
 ---
-# Manage Hyper-Converged Clusters with Windows Admin Center
+# Manage Hyper-Converged Infrastructure with Windows Admin Center
 
 >Applies To: Windows Server 2019, Windows Server 2016
 
@@ -131,58 +131,10 @@ Although Windows Admin Center offers powerful and convenient integration with th
 
 ## Things to try
 
-If you’re just getting started, here are some exercises to familiarize yourself with Windows Admin Center for Hyper-Converged Infrastructure. Please exercise good judgement and be careful with production environments.
+If you’re just getting started, here are some quick tutorials to help you learn how Windows Admin Center for Hyper-Converged Infrastructure is organized and works. Please exercise good judgement and be careful with production environments. These videos were recorded with Windows Admin Center version 1804 and an Insider Preview build of Windows Server 2019.
 
-### Create a new virtual machine
+### Manage Storage Spaces Direct volumes
 
-1. Click the **Virtual Machines** tool from the left side navigation pane.
-2. At the top of the Virtual Machines tool, choose the **Inventory** tab, then click **New** to create a new virtual machine.
-3. Enter the virtual machine name and choose between generation 1 and 2 virtual machines.
-4. Uou can then choose which host to initially create the virtual machine on or use the recommended host.
-5. Choose a path for the virtual machine files. Choose a volume from the dropdown list or click **Browse** to choose a folder using the folder picker. The virtual machine configuration files and virtual hard disk file will be saved in a single folder under the `\Hyper-V\[virtual machine name]` path of the selected volume or path.
-6. Choose the number of virtual processors, whether you want nested virtualization enabled, configure memory settings, network adapters, virtual hard disks and choose whether you want to install an operating system from an .iso image file or from the network.
-7. Click **Create** to create the virtual machine.
-8. Once the virtual machine is created and appears in the virtual machine list, you can start the virtual machine.
-9. Once the virtual machine is started, you can connect to the virtual machine's console via VMConnect to install the operating system. Select the virtual machine from the list, click **More** > **Connect** to download the .rdp file. Open the .rdp file in the Remote Desktop Connection app. Since this is connecting to the virtual machine's console, you will need to enter the Hyper-V host's admin credentials.
-
-[Learn more about virtual machine management with Windows Admin Center](manage-virtual-machines.md).
-
-### Pause and safely restart a server
-
-1. From the **Dashboard**, select **Servers** from the navigation on the left side or by clicking the **VIEW SERVERS >**  link on the tile in the lower right corner of the Dashboard.
-2. At the top, switch from **Summary** to the **Inventory** tab.
-3. Select a server by clicking its name to open the **Server** detail page.
-4. Click **Pause server for maintenance**. If it’s safe to proceed, this will move virtual machines to other servers in the cluster. The server will have status Draining while this happens. If you want, you can watch the virtual machines move on the **Virtual machines > Inventory** page, where their host server is shown clearly in the grid. When all virtual machines have moved, the server status will be **Paused**.
-5. Click **Manage server** to access all the per-server management tools in Windows Admin Center.
-6. Click **Restart**, then **Yes**. You’ll be kicked back to the connections list.
-7. Back on the **Dashboard**, the server is colored red while it’s down.
-8. Once it’s back up, navigate again the **Server** page and click **Resume server from maintenance** to set the server status back to simply Up. In time, virtual machines will move back – no user action is required.
-
-### Create and open a Storage Spaces Direct volume
-
-1. From the **Dashboard**, select **Volumes** from the navigation on the left side or by clicking the **VIEW VOLUMES >** link on the tile in the lower right corner of the Dashboard.
-2. At the top, switch from **Summary** to the **Inventory** tab.
-3. Click **Create** to open the action pane.
-4. Input the parameters for your new volume, such as its name, resiliency type, and size. You will notice the experience is radically streamlined compared to traditional Server Manager.
-5. Click **Create** to start provisioning the volume. Notifications in the upper right corner give progress and let you know when the volume has been created successfully (or if something went wrong).
-6. When the volume appears in the grid, click its name to open the **Volume** detail page. On this page, you can clearly see volume properties, like its filesystem, resiliency type, and storage capacity bar.
-7. Click **Open** to access the Files tool in Windows Admin Center.
-8. Navigate to the volume – for example, to C:\ClusterStorage\Volume1. From here, you can conveniently browse, modify, add (upload), or delete files and folders within the volume.
-
-### Replace a failed drive
-
-1. When a drive fails, an alert appears in the upper left **Alerts** area of the **Dashboard**.
-2. You can also select **Drives** from the navigation on the left side or click the **VIEW DRIVES >** link on the tile in the lower right corner to browse drives and see their status for yourself. In the **Inventory** tab, the grid supports sorting, grouping, and keyword search.
-3. From the **Dashboard**, click the alert to see details, like the drive’s physical location.
-4. To learn more, click the **Go to drive** shortcut to the **Drive** detail page.
-5. If your hardware supports it, you can click **Turn light on/off** to control the drive’s indicator light.
-6. Storage Spaces Direct automatically retires and evacuates failed drives. When this has happened, the drive status is Retired, and its storage capacity bar is empty.
-7. Remove the failed drive and insert its replacement.
-8. In **Drives > Inventory**, the new drive will appear. In time, the alert will clear, volumes will repair back to OK status, and storage will rebalance onto the new drive – no user action is required.
-
-## 6 tutorials in under 6 minutes
-
-If you’re just getting started, here are some quick Storage Spaces Direct tutorials to help you learn how Windows Admin Center for Hyper-Converged Infrastructure is organized and works. These videos were recorded with Windows Admin Center version 1804 and an Insider Preview build of Windows Server 2019.
 <ul>
                <li>(0:37) <a href="https://youtu.be/o66etKq70N8">How to create a three-way mirror volume</a></li>
                <li>(1:17) <a href="https://youtu.be/R72QHudqWpE">How to create a mirror-accelerated parity volume</a></li>
@@ -224,6 +176,42 @@ If you’re just getting started, here are some quick Storage Spaces Direct tuto
         </td>
     </tr>
 </table>
+
+### Create a new virtual machine
+
+1. Click the **Virtual Machines** tool from the left side navigation pane.
+2. At the top of the Virtual Machines tool, choose the **Inventory** tab, then click **New** to create a new virtual machine.
+3. Enter the virtual machine name and choose between generation 1 and 2 virtual machines.
+4. Uou can then choose which host to initially create the virtual machine on or use the recommended host.
+5. Choose a path for the virtual machine files. Choose a volume from the dropdown list or click **Browse** to choose a folder using the folder picker. The virtual machine configuration files and virtual hard disk file will be saved in a single folder under the `\Hyper-V\[virtual machine name]` path of the selected volume or path.
+6. Choose the number of virtual processors, whether you want nested virtualization enabled, configure memory settings, network adapters, virtual hard disks and choose whether you want to install an operating system from an .iso image file or from the network.
+7. Click **Create** to create the virtual machine.
+8. Once the virtual machine is created and appears in the virtual machine list, you can start the virtual machine.
+9. Once the virtual machine is started, you can connect to the virtual machine's console via VMConnect to install the operating system. Select the virtual machine from the list, click **More** > **Connect** to download the .rdp file. Open the .rdp file in the Remote Desktop Connection app. Since this is connecting to the virtual machine's console, you will need to enter the Hyper-V host's admin credentials.
+
+[Learn more about virtual machine management with Windows Admin Center](manage-virtual-machines.md).
+
+### Pause and safely restart a server
+
+1. From the **Dashboard**, select **Servers** from the navigation on the left side or by clicking the **VIEW SERVERS >**  link on the tile in the lower right corner of the Dashboard.
+2. At the top, switch from **Summary** to the **Inventory** tab.
+3. Select a server by clicking its name to open the **Server** detail page.
+4. Click **Pause server for maintenance**. If it’s safe to proceed, this will move virtual machines to other servers in the cluster. The server will have status Draining while this happens. If you want, you can watch the virtual machines move on the **Virtual machines > Inventory** page, where their host server is shown clearly in the grid. When all virtual machines have moved, the server status will be **Paused**.
+5. Click **Manage server** to access all the per-server management tools in Windows Admin Center.
+6. Click **Restart**, then **Yes**. You’ll be kicked back to the connections list.
+7. Back on the **Dashboard**, the server is colored red while it’s down.
+8. Once it’s back up, navigate again the **Server** page and click **Resume server from maintenance** to set the server status back to simply Up. In time, virtual machines will move back – no user action is required.
+
+### Replace a failed drive
+
+1. When a drive fails, an alert appears in the upper left **Alerts** area of the **Dashboard**.
+2. You can also select **Drives** from the navigation on the left side or click the **VIEW DRIVES >** link on the tile in the lower right corner to browse drives and see their status for yourself. In the **Inventory** tab, the grid supports sorting, grouping, and keyword search.
+3. From the **Dashboard**, click the alert to see details, like the drive’s physical location.
+4. To learn more, click the **Go to drive** shortcut to the **Drive** detail page.
+5. If your hardware supports it, you can click **Turn light on/off** to control the drive’s indicator light.
+6. Storage Spaces Direct automatically retires and evacuates failed drives. When this has happened, the drive status is Retired, and its storage capacity bar is empty.
+7. Remove the failed drive and insert its replacement.
+8. In **Drives > Inventory**, the new drive will appear. In time, the alert will clear, volumes will repair back to OK status, and storage will rebalance onto the new drive – no user action is required.
 
 ### See also
 
