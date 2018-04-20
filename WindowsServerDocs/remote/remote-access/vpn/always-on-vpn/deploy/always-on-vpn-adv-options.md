@@ -5,9 +5,10 @@ ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
 ms.assetid: 
-manager: brianlic
+manager: elizapo
 ms.author: pashort
 author: shortpatti
+ms.date: 4/20/2018
 ---
 # Remote Access Always On VPN Advanced Features
 

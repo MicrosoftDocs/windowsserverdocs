@@ -3,16 +3,16 @@ title: Azure Active Directory conditional access for VPN connectivity (preview)|
 description: 'With Azure AD conditional access for virtual private network (VPN) connectivity, you can help protect your VPN connections.'
 services: active-directory
 documentationcenter: ''
-author: shortpatti
-manager: brianlic
 ms.assetid: 51a1ee61-3ffe-4f65-b8de-ff21903e1e74
 ms.service: active-directory
 ms.workload: identity
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.topic: article
-ms.date: 03/19/2018
+ms.date: 04/23/2018
 ms.author: pashort
+author: shortpatti
+manager: elizapo
 ms.reviewer: jairoc
 ---
 
@@ -26,15 +26,15 @@ To configure conditional access for VPN connectivity, you must complete the foll
 2.	[Configure Remote Access as a VPN Server](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-ras#configure-remote-access-as-a-vpn-server)
 3.	[Install Network Policy Service (NPS)](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-nps#install-network-policy-server)
 4.	[Configure Network Policy Service](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-nps#configure-network-policy-for-vpn-connections)
-5.	[Verify that the Standard VPN works]()
+5.	[Verify that the Standard VPN works](#verify-it-works) 
 6.	[Create a Custom Server Authentication Template that Supports IKEv2](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-server-infrastructure#create-the-vpn-server-authentication-template)
 7.	[Request a Server Authentication Certificate for IKEv2](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-server-infrastructure#enroll-and-validate-the-server-certificates)
-8.	[Remove Weak Authentication Methods]()
-9.	[Configure EAP-TLS to Ignore Certificate Revocation List (CRL) Checking]()
-10.	[Create Root Certificates for VPN Authentication with Azure AD]()
-11.	[Configure your Conditional Access Policy]()
-12.	[Deploy Conditional Access Root Certificates to On-Premises AD]() (steps 7-11 from this page)
-13.	[Create OMA-DM based VPNv2 Profiles to Windows 10 Devices]()
+8.	[Remove Weak Authentication Methods](#remove-weak-auth-methods)
+9.	[Configure EAP-TLS to Ignore Certificate Revocation List (CRL) Checking](#config-eap-tls-crl)
+10.	[Create Root Certificates for VPN Authentication with Azure AD](#create-root-ca-for-vpn-auth)
+11.	[Configure your Conditional Access Policy](#config-ca-policy)
+12.	[Deploy Conditional Access Root Certificates to On-Premises AD](#deploy-ca-root-certs-on-prem) 
+13.	[Create OMA-DM based VPNv2 Profiles to Windows 10 Devices](#create-oma-dm-based-vpnv2)
 14. [Configure VPNv2 Profiles on your Clients]
 
 
@@ -55,100 +55,15 @@ To gain insights on how Microsoft implements this feature, see [Enhancing remote
 To configure Azure Active Directory conditional access for VPN connectivity, you need to have a VPN server configured.  For more information, see the [Always On VPN Deployment Guide](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy).
 
 
-## Step 1: Create Root Certificates for VPN Authentication with Azure AD 
 
-This step configures root certificates for VPN authentication with Azure AD. To configure conditional access for VPN connectivity, you need to:
 
-1. Create a VPN certificate in the Azure portal (you can create more than one certificate).
-2. Download the VPN certificate.
-2. Deploy the certificate to your VPN server.
+## [Step 2: Configure Remote Access as a VPN Server](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-ras#configure-remote-access-as-a-vpn-server)
 
-Azure AD uses the VPN certificate to sign certificates issued to Windows 10 clients when authenticating to Azure AD for VPN connectivity. The certificate marked as **Primary** is the Issuer that Azure AD uses. The token that the Windows 10 client requests are a certificate that it then presents to the application, which in this case is the VPN server.
+## [Step 3: Install Network Policy Service (NPS)](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-nps#install-network-policy-server)
 
-In the Azure portal, you can create two certificates to manage the transition when one certificate is about to expire. When you create a certificate, you can choose whether it is the primary certificate, which is used during the authentication to sign the certificate for the connection.
+## [Step 4: Configure Network Policy Service](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-nps#configure-network-policy-for-vpn-connections)
 
-To create a VPN certificate:
-
-1. Sign in to your [Azure portal](https://portal.azure.com) as a global administrator.
-
-2. On the left menu, click **Azure Active Directory**. 
-
-    ![Select Azure Active Directory](../../../../media/Always-On-Vpn/01.png)
-
-3. On the **Azure Active Directory** page, in the **Manage** section, click **Conditional access**.
-
-    ![Select Conditional access](../../../../media/Always-On-Vpn/02.png)
-
-4. On the **Conditional access** page, in the **Manage** section, click **VPN connectivity (preview)**.
-
-    ![Select VPN connectivity](../../../../media/Always-On-Vpn/03.png)
-
-5. On the **VPN connectivity** page, click **New certificate**.
-
-    ![Select new certificate](../../../../media/Always-On-Vpn/04.png)
-
-6. On the **New** page, perform the following steps:
-
-    ![Select duration and primary](../../../../media/Always-On-Vpn/05.png)
-
-    a. For **Select duration**, select either 1 or 2 years. You can add up to two certificates to manage transitions when the certificate is about to
-        expire. You can choose which one is the primary (the one used during authentication to sign the certificate for connectivity).
-
-    b. For **Primary**, select **Yes**.
-
-    c. Click **Create**.
-
-7. On the **VPN connectivity** page, click **Download certificate**. 
-   
-    ![Download certificate for conditional access](../../../../media/Always-On-Vpn/06.png)
-
-    >[!NOTE]
-    >The **Download base64 certificate** option is available for some configurations that require base64 certificates for deployment. 
-
-8. On your VPN server, add the downloaded certificate as a *trusted root CA for VPN authentication*.
-
-9. (Optional) For Windows RRAS-based deployments, on your NPS server, add the root certificate into the *Enterprise NTauth* store by running the following commands:
-
-    1.  `certutil -dspublish <CACERT> RootCA`
-
-    2.  `certutil -dspublish <CACERT> NtAuthCA`
-
-10. On the VPN Server, sign in as **Enterprise Administrator**, open Windows PowerShell as **Administrator**, and run the following commands to import the root certificates to the VPN server and VPN clients:
-
-    |Command  |Description  |  
-    |---------|-------------| 
-    |`certutil -dspublish -f VpnCert.cer RootCA`     |Creates two **Microsoft VPN root CA gen 1** containers under the **CN=AIA** and **CN=Certification Authorities** containers, and publishes each root certificate as a value on the _cACertificate_ attribute of both **Microsoft VPN root CA gen 1** containers.|  
-    |`certutil -dspublish -f VpnCert.cer NTAuthCA`   |Creates one **CN=NTAuthCertificates** container under the **CN=AIA** and **CN=Certification Authorities** containers, and publishes each root certificate as a value on the _cACertificate_ attribute of the **CN=NTAuthCertificates** container. |  
-    |`gpupdate /force`     |Expedites adding the root certificates to the Windows server and client computers.  |
-    
-    These commands publish the root certificate to the **CN=Certification Authorities** and **CN=AIA** containers in the Configuration naming context. Once the CN=Configuration naming context has replicated to all domain controllers in the forest, Windows 10 clients add the root certificate to their trusted root authorities container when Group Policy refreshes.
-
-11.  Verify that the root certificates are present and show as trusted:
-
-    1.  On the VPN server, in the Start menu, type **pkiview.msc** to open the Enterprise PKI dialog.
-
-    2.  Right-click **Enterprise PKI** and select **Manage AD Containers**.
-
-    3.  Verify that each Microsoft VPN root CA gen 1 certificate is present under:
-
-        -   NTAuthCertificates
-
-        -   AIA Container
-
-        -   Certificate Authorities Container
-
-## Step 2: [Create a Customer Server Authentication Template that Supports IKEv2](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-server-infrastructure#create-the-vpn-server-authentication-template)
-
-In this step, you can configure a new Server Authentication template for your VPN server.
-
-Adding the IP Security (IPsec) IKE Intermediate application policy allows the server to filter certificates if more than one certificate is available with the Server Authentication extended key usage. 
-
-## Step 3: [Request a Server Authentication Certificate for IKEv2](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-server-infrastructure#enroll-and-validate-the-server-certificates)
-
-## [Step 4: Configure Routing and Remote Access and Network Policy Server](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-ras#configure-remote-access-as-a-vpn-server)
-In this step, you configure Remote Access VPN to allow IKEv2 VPN connections, deny connections from other VPN protocols, and assign a static IP address pool for the issuance of IP addresses to connecting authorized VPN clients.
-
-## Step 5: Verify that the Standard VPN works
+## Step 5: <a name="verify-it-works"></a>Verify that the Standard VPN works
 In this step, configure the template VPN profile on a domain-joined client computer. The type of user account you use (that is, standard user or administrator) for this part of the process does not matter.
 
 1.  Sign in to a domain-joined client computer as a member of the **VPN Users** group.
@@ -175,7 +90,16 @@ In this step, configure the template VPN profile on a domain-joined client compu
 
 12. In the Setting window, click the VPN connection you just added and click **Connect**.
 
-## Step 6: Remove Weak Authentication Methods
+
+## [Step 6: Create a Custome Server Authentication Template that Supports IKEv2](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-server-infrastructure#create-the-vpn-server-authentication-template)
+
+In this step, you can configure a new Server Authentication template for your VPN server.
+
+Adding the IP Security (IPsec) IKE Intermediate application policy allows the server to filter certificates if more than one certificate is available with the Server Authentication extended key usage. 
+
+## [Step 7: Request a Server Authentication Certificate for IKEv2](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-server-infrastructure#enroll-and-validate-the-server-certificates)
+
+## <a name="remove-weak-auth-methods"></a>Step 8: Remove Weak Authentication Methods
 If Standard VPN is verified to be working correctly, proceed with removing weak authentication protocols and enforcing Certificate Authentication using Protected Extensible Authentication Protocol (PEAP). 
 
 >[!IMPORTANT]
@@ -214,8 +138,8 @@ If Standard VPN is verified to be working correctly, proceed with removing weak 
    3. Paste the AAD Conditional Access OID as the attribute value and click **OK** twice.
 
 9. Click **Close** and click **Apply**.
-
-## Step 7: Configure EAP-TLS to Ignore Certificate Revocation List (CRL) Checking
+ 
+## <a name="config-eap-tls-crl"></a>Step 9: Configure EAP-TLS to Ignore Certificate Revocation List (CRL) Checking
 >[!IMPORTANT]
 >Failure to implement this registry change will cause IKEv2 connections using cloud certificates with PEAP to fail, but IKEv2 connections using Client Auth certificates issued from the on-premises CA will work.
 
@@ -247,8 +171,50 @@ For more information, see [How to Enable or Disable Certificate Revocation Check
 |HKLM\SYSTEM\CurrentControlSet\Services\RasMan\PPP\EAP\25     |PEAP         |
 |HKLM\SYSTEM\CurrentControlSet\Services\RasMan\PPP\EAP\26     |EAP-MSCHAP v2         |
 
+## <a name="create-root-ca-for-vpn-auth"></a>Step 10: Create Root Certificates for VPN Authentication with Azure AD 
 
-## Step 8: Configure your Conditional Access Policy
+This step configures root certificates for VPN authentication with Azure AD. To configure conditional access for VPN connectivity, you need to:
+
+1. Create a VPN certificate in the Azure portal (you can create more than one certificate).
+2. Download the VPN certificate.
+2. Deploy the certificate to your VPN server.
+
+Azure AD uses the VPN certificate to sign certificates issued to Windows 10 clients when authenticating to Azure AD for VPN connectivity. The certificate marked as **Primary** is the Issuer that Azure AD uses. The token that the Windows 10 client requests are a certificate that it then presents to the application, which in this case is the VPN server.
+
+In the Azure portal, you can create two certificates to manage the transition when one certificate is about to expire. When you create a certificate, you can choose whether it is the primary certificate, which is used during the authentication to sign the certificate for the connection.
+
+**To create a VPN certificate:**
+
+1. Sign in to your [Azure portal](https://portal.azure.com) as a global administrator.
+
+2. On the left menu, click **Azure Active Directory**. 
+
+    ![Select Azure Active Directory](../../../../media/Always-On-Vpn/01.png)
+
+3. On the **Azure Active Directory** page, in the **Manage** section, click **Conditional access**.
+
+    ![Select Conditional access](../../../../media/Always-On-Vpn/02.png)
+
+4. On the **Conditional access** page, in the **Manage** section, click **VPN connectivity (preview)**.
+
+    ![Select VPN connectivity](../../../../media/Always-On-Vpn/03.png)
+
+5. On the **VPN connectivity** page, click **New certificate**.
+
+    ![Select new certificate](../../../../media/Always-On-Vpn/04.png)
+
+6. On the **New** page, perform the following steps:
+
+    ![Select duration and primary](../../../../media/Always-On-Vpn/05.png)
+
+    a. For **Select duration**, select either 1 or 2 years. You can add up to two certificates to manage transitions when the certificate is about to
+        expire. You can choose which one is the primary (the one used during authentication to sign the certificate for connectivity).
+
+    b. For **Primary**, select **Yes**.
+
+    c. Click **Create**.
+
+## <a name="config-ca-policy"></a>Step 11: Configure your Conditional Access Policy
 
 This section provides you with instructions for configuring your conditional access policy for VPN connectivity.
 
@@ -297,7 +263,6 @@ After a root certificate has been created, the 'VPN connectivity' triggers the c
 
     e. Click **Select**.
 
-
 13. On the **New** page, to open the **Grant** page, in the **Controls** section, click **Grant**.
 
     ![Select grant](../../../../media/Always-On-Vpn/13.png)
@@ -316,7 +281,51 @@ After a root certificate has been created, the 'VPN connectivity' triggers the c
 
 16. On the **New** page, click **Create**.
 
-## Step 9: Create OMA-DM based VPNv2 Profiles to Windows 10 devices
+
+
+## <a name="deploy-ca-root-certs-on-prem"></a>Step 12: Deploy Conditional Access Root Certificates to On-Premises AD
+
+1. On the **VPN connectivity** page, click **Download certificate**. 
+   
+    ![Download certificate for conditional access](../../../../media/Always-On-Vpn/06.png)
+
+    >[!NOTE]
+    >The **Download base64 certificate** option is available for some configurations that require base64 certificates for deployment. 
+
+2. On your VPN server, add the downloaded certificate as a *trusted root CA for VPN authentication*.
+
+3. (Optional) For Windows RRAS-based deployments, on your NPS server, add the root certificate into the *Enterprise NTauth* store by running the following commands:
+
+    1.  `certutil -dspublish <CACERT> RootCA`
+
+    2.  `certutil -dspublish <CACERT> NtAuthCA`
+
+4. On the VPN Server, sign in as **Enterprise Administrator**, open Windows PowerShell as **Administrator**, and run the following commands to import the root certificates to the VPN server and VPN clients:
+
+    |Command  |Description  |  
+    |---------|-------------| 
+    |`certutil -dspublish -f VpnCert.cer RootCA`     |Creates two **Microsoft VPN root CA gen 1** containers under the **CN=AIA** and **CN=Certification Authorities** containers, and publishes each root certificate as a value on the _cACertificate_ attribute of both **Microsoft VPN root CA gen 1** containers.|  
+    |`certutil -dspublish -f VpnCert.cer NTAuthCA`   |Creates one **CN=NTAuthCertificates** container under the **CN=AIA** and **CN=Certification Authorities** containers, and publishes each root certificate as a value on the _cACertificate_ attribute of the **CN=NTAuthCertificates** container. |  
+    |`gpupdate /force`     |Expedites adding the root certificates to the Windows server and client computers.  |
+    
+    These commands publish the root certificate to the **CN=Certification Authorities** and **CN=AIA** containers in the Configuration naming context. Once the CN=Configuration naming context has replicated to all domain controllers in the forest, Windows 10 clients add the root certificate to their trusted root authorities container when Group Policy refreshes.
+
+5.  Verify that the root certificates are present and show as trusted:
+
+    1.  On the VPN server, in the Start menu, type **pkiview.msc** to open the Enterprise PKI dialog.
+
+    2.  Right-click **Enterprise PKI** and select **Manage AD Containers**.
+
+    3.  Verify that each Microsoft VPN root CA gen 1 certificate is present under:
+
+        -   NTAuthCertificates
+
+        -   AIA Container
+
+        -   Certificate Authorities Container
+
+
+## <a name="create-oma-dm-based-vpnv2"></a>Step 9: Create OMA-DM based VPNv2 Profiles to Windows 10 devices
 In this step, you can use one of two methods. The first method is a managed deployment using Intune to deploy a VPN Device Configuration policy, which does not have an option for AutoVPN. The second method can be used for unmanaged environments using a PowerShell script that leverages the Common Information Model, which creates a WMI session in the user’s context. From this context, it then creates a new instance of the MDM_VPNv2_01 WMI class. 
 
 VPNv2 profiles can also be created via SCCM, Intune or with a PowerShell Script using [VPNv2 CSP settings](https://docs.microsoft.com/en-us/windows/client-management/mdm/vpnv2-csp). 
@@ -338,7 +347,7 @@ Everything discussed in this section is the minimum needed to make this work wit
 
 6.  In Profile type, select **VPN**.
 
-7.  Under Settings, for Conditional Access, set the **Conditional access for this VPN connection** to **Enabled**. Doing this sets `<DevideCompliance\><Enabled\>true<\/Enabled\>` in the VPNv2 profile, which tells the VPN clients to request an Azure AD Certificate. 
+7.  Under Settings, for Conditional Access, set the **Conditional access for this VPN connection** to **Enabled**. Doing this sets `<DevideCompliance><Enabled>true</Enabled>` in the VPNv2 profile, which tells the VPN clients to request an Azure AD Certificate. 
 
 8. Under Settings, for Base VPN, verify or set the following settings:
 
@@ -356,7 +365,7 @@ Everything discussed in this section is the minimum needed to make this work wit
 
     - **EAP XML\\TLSExtension**: Must be present and contain **\<EKUName>AAD Conditional Access<\/EKUName>** and **\<EKUOID>1.3.6.1.4.1.311.87<\/EKUOID>**. These values tell the VPN client which certificate in the user's store should be used to perform VPN authentication. This is required when more than one certificate is in the user's store. If EAP/TLS fails, the entire **\<TLSExtension>** can be removed for troubleshooting. However, there must not be any certificates in the user's certificate store other than cloud certificates. 
 
-9.  Click **Create**. @Reviewer: This step is missing from the CSS wiki, and I'm not sure where it goes in this process. Is it after selecting VPN for the Profile type or does it happen in this sequence?
+9.  Click **Create**. 
 
 10. In Intune, under Device configuration, select the newly created device configuration profile.  
 
@@ -393,321 +402,8 @@ The EAP XML sample below contains the minimum settings need to make this work wi
 <EapHostConfig xmlns="http://www.microsoft.com/provisioning/EapHostConfig"><EapMethod><Type xmlns="http://www.microsoft.com/provisioning/EapCommon">25</Type><VendorId xmlns="http://www.microsoft.com/provisioning/EapCommon">0</VendorId><VendorType xmlns="http://www.microsoft.com/provisioning/EapCommon">0</VendorType><AuthorId xmlns="http://www.microsoft.com/provisioning/EapCommon">0</AuthorId></EapMethod><Config xmlns="http://www.microsoft.com/provisioning/EapHostConfig"><Eap xmlns="http://www.microsoft.com/provisioning/BaseEapConnectionPropertiesV1"><Type>25</Type><EapType xmlns="http://www.microsoft.com/provisioning/MsPeapConnectionPropertiesV1"><ServerValidation><DisableUserPromptForServerValidation>true</DisableUserPromptForServerValidation><ServerNames></ServerNames></ServerValidation><FastReconnect>true</FastReconnect><InnerEapOptional>false</InnerEapOptional><Eap xmlns="http://www.microsoft.com/provisioning/BaseEapConnectionPropertiesV1"><Type>13</Type><EapType xmlns="http://www.microsoft.com/provisioning/EapTlsConnectionPropertiesV1"><CredentialsSource><CertificateStore><SimpleCertSelection>true</SimpleCertSelection></CertificateStore></CredentialsSource><ServerValidation><DisableUserPromptForServerValidation>true</DisableUserPromptForServerValidation><ServerNames></ServerNames><TrustedRootCA>5a 89 fe cb 5b 49 a7 0b 1a 52 63 b7 35 ee d7 1c c2 68 be 4b </TrustedRootCA></ServerValidation><DifferentUsername>false</DifferentUsername><PerformServerValidation xmlns="http://www.microsoft.com/provisioning/EapTlsConnectionPropertiesV2">true</PerformServerValidation><AcceptServerName xmlns="http://www.microsoft.com/provisioning/EapTlsConnectionPropertiesV2">false</AcceptServerName><TLSExtensions xmlns="http://www.microsoft.com/provisioning/EapTlsConnectionPropertiesV2"><FilteringInfo xmlns="http://www.microsoft.com/provisioning/EapTlsConnectionPropertiesV3"><EKUMapping><EKUMap><EKUName>AAD Conditional Access</EKUName><EKUOID>1.3.6.1.4.1.311.87</EKUOID></EKUMap></EKUMapping><ClientAuthEKUList Enabled="true"><EKUMapInList><EKUName>AAD Conditional Access</EKUName></EKUMapInList></ClientAuthEKUList></FilteringInfo></TLSExtensions></EapType></Eap><EnableQuarantineChecks>false</EnableQuarantineChecks><RequireCryptoBinding>false</RequireCryptoBinding><PeapExtensions><PerformServerValidation xmlns="http://www.microsoft.com/provisioning/MsPeapConnectionPropertiesV2">false</PerformServerValidation><AcceptServerName xmlns="http://www.microsoft.com/provisioning/MsPeapConnectionPropertiesV2">false</AcceptServerName></PeapExtensions></EapType></Eap></Config></EapHostConfig>
 ```
 
-### Unmanaged Deployment using Windows PowerShell
-Customers that do not have management solutions like Intune or SCCM can use the script method outlined here. This method requires a configuration file. 
 
-1. Change the following settings in the ProfileXML file (see full script below):
-
-    |Settings to change  |Description  |
-    |---------|---------|
-    |$Version = 201710170002|Increase the version number each time this is run on a client |
-    |\<DnsSuffix>corp._AD domain name_.info<\/DnsSuffix>|This must contain the FQDN of the DNS domain, for example,  **\<DnsSuffix>corp.contoso.com<\/DnsSuffix>**.  |
-    |\<IssuerHash>_thumbprint of root CA_<\/IssuerHash>|This instance of \<IssuerHash> must contain no spaces, for example, **\<IssuerHash>‎5a89fecb5b49a70b1a5263b735eed71cc268be4b<\/IssuerHash>**.<br><br> It contains a semicolon separated list of thumbprints for all root CAs that issued the Server Authentication certificates to the VPN servers, not subordinate/intermediate issuing CA thumbprints. <br><br>All instances of \<IssuerHash> outside of \<Sso> must contain spaces. It contains a semicolon separated list of thumbprints for all root CAs that issued the Server Authentication certificates to the VPN servers, not subordinate/intermediate issuing CA thumbprints.  |
-    |\<Servers>deWS2012R2VPN.corp._RRAS server_.info;deWS2012R2VPN<\/Servers>|This must contain a semicolon separated list of names for the VPN Servers, for example, **\<Servers>deWS2012R2VPN.corp.contoso.info;deWS2012R2VPN<\/Servers>**. This should include all names that are included in the Subject Alternative Name of the Server Authentication certificates.|
-    |\<TrustedNetworkDetection>corp._AD domain name_.info<\/TrustedNetworkDetection>|Example: **\<TrustedNetworkDetection>corp.contoso.info<\/TrustedNetworkDetection>** |
-    |\<TrustedRootCA>_thumbprint of root CA_<\/TrustedRootCA>|Example: **\<TrustedRootCA>5a 89 fe cb 5b 49 a7 0b 1a 52 63 b7 35 ee d7 1c c2 68 be 4b <\/TrustedRootCA>**|
-    
-2. Save the ProfileXML file, for example, _TestVPN_.
-
-3. Open PowerShell as **Administrator** and run `Set-ExecutionPolicy unrestricted`.
-
-4. After running the script, test the VPN connection on the client device by verifying it in the Certificate snap-in:
-
-   1.  On the Start menu, type **certmgr.msc**, and press Enter.
-
-   1.  Verify that the **Microsoft VPN root CA gen 1** issues a certificate to the personal certificate store.
-
-5. Examine the Sign-in logs in the Azure portal and observe the initial sign-in where MFA from the Windows VPN client took place.
-
-    ![](../../../../media/Always-On-Vpn/ad-conditional-access.png)
-
->[!IMPORTANT]
->If this script is run more than once, make sure to increase the $Version number between each run to update the VPNv2 Profile. Failure to increase the $Version number results in a connection failure warning:  _The modem (or other connecting device) is already in use or is not configured properly_.
-
-
-
-
-```PowerShell
-$ProfileName = 'TestVPN'
-$ProfileNameEscaped = $ProfileName -replace ' ', '%20'
-
-$Version = 201710170002
-
-$ProfileXML = '<VPNProfile>
-  <RememberCredentials>true</RememberCredentials>
-  <AlwaysOn>true</AlwaysOn>
-  <DnsSuffix>corp.deverett.info</DnsSuffix>
-  <TrustedNetworkDetection>corp.deverett.info</TrustedNetworkDetection>
-  <DeviceCompliance>
-    <Enabled>true</Enabled>
-    <Sso>
-      <Enabled>false</Enabled>
-      <Eku>1.3.6.1.5.5.7.3.2</Eku>
-      <IssuerHash>‎5a89fecb5b49a70b1a5263b735eed71cc268be4b</IssuerHash>
-    </Sso>
-  </DeviceCompliance>
-  <NativeProfile>
-    <Servers>deWS2012R2VPN.corp.deverett.info;deWS2012R2VPN</Servers>
-    <RoutingPolicyType>SplitTunnel</RoutingPolicyType>
-    <Authentication>
-      <UserMethod>Eap</UserMethod>
-      <MachineMethod>Eap</MachineMethod>
-      <Eap>
-        <Configuration>
-          <EapHostConfig xmlns="http://www.microsoft.com/provisioning/EapHostConfig">
-            <EapMethod>
-              <Type xmlns="http://www.microsoft.com/provisioning/EapCommon">25</Type>
-              <VendorId xmlns="http://www.microsoft.com/provisioning/EapCommon">0</VendorId>
-              <VendorType xmlns="http://www.microsoft.com/provisioning/EapCommon">0</VendorType>
-              <AuthorId xmlns="http://www.microsoft.com/provisioning/EapCommon">0</AuthorId>
-            </EapMethod>
-            <Config xmlns="http://www.microsoft.com/provisioning/EapHostConfig">
-              <Eap xmlns="http://www.microsoft.com/provisioning/BaseEapConnectionPropertiesV1">
-                <Type>25</Type>
-                <EapType xmlns="http://www.microsoft.com/provisioning/MsPeapConnectionPropertiesV1">
-                  <ServerValidation>
-                    <DisableUserPromptForServerValidation>true</DisableUserPromptForServerValidation>
-                    <ServerNames></ServerNames>
-                    <TrustedRootCA>5a 89 fe cb 5b 49 a7 0b 1a 52 63 b7 35 ee d7 1c c2 68 be 4b </TrustedRootCA>
-                  </ServerValidation>
-                  <FastReconnect>true</FastReconnect>
-                  <InnerEapOptional>false</InnerEapOptional>
-                  <Eap xmlns="http://www.microsoft.com/provisioning/BaseEapConnectionPropertiesV1">
-                    <Type>13</Type>
-                    <EapType xmlns="http://www.microsoft.com/provisioning/EapTlsConnectionPropertiesV1">
-                      <CredentialsSource>
-                        <CertificateStore>
-                          <SimpleCertSelection>true</SimpleCertSelection>
-                        </CertificateStore>
-                      </CredentialsSource>
-                      <ServerValidation>
-                        <DisableUserPromptForServerValidation>true</DisableUserPromptForServerValidation>
-                        <ServerNames></ServerNames>
-                        <TrustedRootCA>5a 89 fe cb 5b 49 a7 0b 1a 52 63 b7 35 ee d7 1c c2 68 be 4b </TrustedRootCA>
-                      </ServerValidation>
-                      <DifferentUsername>false</DifferentUsername>
-                      <PerformServerValidation xmlns="http://www.microsoft.com/provisioning/EapTlsConnectionPropertiesV2">true</PerformServerValidation>
-                      <AcceptServerName xmlns="http://www.microsoft.com/provisioning/EapTlsConnectionPropertiesV2">false</AcceptServerName>
-                      <TLSExtensions xmlns="http://www.microsoft.com/provisioning/EapTlsConnectionPropertiesV2">
-                        <FilteringInfo xmlns="http://www.microsoft.com/provisioning/EapTlsConnectionPropertiesV3">
-                          <EKUMapping>
-                            <EKUMap>
-                              <EKUName>AAD Conditional Access</EKUName>
-                              <EKUOID>1.3.6.1.4.1.311.87</EKUOID>
-                            </EKUMap>
-                          </EKUMapping>
-                          <ClientAuthEKUList Enabled="true">
-                            <EKUMapInList>
-                              <EKUName>AAD Conditional Access</EKUName>
-                            </EKUMapInList>
-                          </ClientAuthEKUList>
-                        </FilteringInfo>
-                      </TLSExtensions>
-                    </EapType>
-                  </Eap>
-                  <EnableQuarantineChecks>false</EnableQuarantineChecks>
-                  <RequireCryptoBinding>true</RequireCryptoBinding>
-                  <PeapExtensions>
-                    <PerformServerValidation xmlns="http://www.microsoft.com/provisioning/MsPeapConnectionPropertiesV2">true</PerformServerValidation>
-                    <AcceptServerName xmlns="http://www.microsoft.com/provisioning/MsPeapConnectionPropertiesV2">false</AcceptServerName>
-                  </PeapExtensions>
-                </EapType>
-              </Eap>
-            </Config>
-          </EapHostConfig>
-        </Configuration>
-      </Eap>
-    </Authentication>
-  </NativeProfile>
-  <Route>
-    <Address>10.0.0.0</Address>
-    <PrefixSize>8</PrefixSize>
-    <Metric>1</Metric>
-  </Route>
-</VPNProfile>'
-
-###########################
-###########################
-###########################
-$EventLogName = 'TestVPN Setup'
-$EventSourceName = "$ProfileName  " + "$Version"
-New-Eventlog -LogName "$EventLogName" -Source "$EventSourceName" -ErrorAction SilentlyContinue
-$Message = 'Start.'
-Write-EventLog -LogName "$EventLogName" -Source "$EventSourceName" -Message "$Message"  -Id 100 -Category 0 -EntryType Information
-Write-Host "$Message"
-
-
-###########################
-# Identify OS build number
-###########################
-try
-{
-    $OsInfo = Get-WmiObject -class Win32_OperatingSystem
-    $OsBuild = $OsInfo.BuildNumber
-    if ($OsBuild -lt '14332')
-    {
-        $Message = "$ProfileName is not available.  OS build must be at least 14332."
-        Write-EventLog -LogName "$EventLogName" -Source "$EventSourceName" -Message "$Message" -Id 202 -Category 0 -EntryType Warning
-        Write-Host "$Message"
-        exit
-    } else {
-        $Message = "$ProfileName is available.  OS build is at least 14332."
-        Write-EventLog -LogName "$EventLogName" -Source "$EventSourceName" -Message "$Message" -Id 200 -Category 0 -EntryType Information
-        Write-Host "$Message"
-    }
-}
-catch [Exception]
-{
-    $Message = "Unable to obtain OS build number: $_"
-    Write-EventLog -LogName "$EventLogName" -Source -Source "$EventSourceName" -Message "$Message" -Id 201 -Category 0 -EntryType Error
-    Write-Host "$Message"
-    exit
-}
-
-
-###########################
-###########################
-###########################
-$ProfileXML = $ProfileXML -replace '<', '&lt;'
-$ProfileXML = $ProfileXML -replace '>', '&gt;'
-$ProfileXML = $ProfileXML -replace '"', '&quot;'
-
-$nodeCSPURI = './Vendor/MSFT/VPNv2'
-$namespaceName = "root\cimv2\mdm\dmmap"
-$className = "MDM_VPNv2_01"
-
-###########################
-# Get user SID
-###########################
-try 
-{
-    $SidValue = (whoami /user)[6].Split()[1]
-
-    $Message = "User SID is $SidValue."
-    Write-EventLog -LogName "$EventLogName" -Source "$EventSourceName" -Message "$Message" -Id 300 -Category 0 -EntryType Information
-    Write-Host "$Message"
-}
-catch [Exception]
-{
-    $Message = "Unable to get user SID. User may be logged on over Remote Desktop: $_"
-    Write-EventLog -LogName "$EventLogName" -Source "$EventSourceName" -Message "$Message" -Id 302 -Category 0 -EntryType Warning
-    Write-Host "$Message"
-    exit
-}
-
-$session = New-CimSession
-$options = New-Object Microsoft.Management.Infrastructure.Options.CimOperationOptions
-$options.SetCustomOption('PolicyPlatformContext_PrincipalContext_Type', 'PolicyPlatform_UserContext', $false)
-$options.SetCustomOption('PolicyPlatformContext_PrincipalContext_Id', "$SidValue", $false)
-
-###########################
-# Verify current VPN profile version
-###########################
-$MsitAutoVpnVersionPath = "hklm:\software\MicrosoftIT\$ProfileName\" + $SidValue
-$MsitAutoVpnVersion = (Get-ItemProperty -Path "$MsitAutoVpnVersionPath" -ErrorAction SilentlyContinue).MsitAutoVpnVersion
-
-if ($Version -le $MsitAutoVpnVersion)
-{
-    $existingInstances = $session.EnumerateInstances($namespaceName, $className, $options)
-    foreach ($existingInstance in $existingInstances)
-    {
-        $InstanceId = $existingInstance.InstanceID
-        if ("$InstanceId" -like "$ProfileNameEscaped")
-        {
-            $Message = "User already has latest version of $ProfileName profile."
-            Write-EventLog -LogName "$EventLogName" -Source "$EventSourceName" -Message "$Message" -Id 410 -Category 0 -EntryType Information
-            Write-Host "$Message"
-            exit
-        }
-    }
-} 
-$Message = "$ProfileName profile either does not exist or is out-of-date."
-Write-EventLog -LogName "$EventLogName" -Source "$EventSourceName" -Message "$Message" -Id 400 -Category 0 -EntryType Information
-Write-Host "$Message"
-
-###########################
-# Delete old VPN profile
-###########################
-try
-{
-    $deleteInstances = $session.EnumerateInstances($namespaceName, $className, $options)
-    foreach ($deleteInstance in $deleteInstances)
-    {
-        $InstanceId = $deleteInstance.InstanceID
-        if ("$InstanceId" -eq "$ProfileNameEscaped")
-        {
-            $session.DeleteInstance($namespaceName, $deleteInstance, $options)
-            $Message = "Removed $ProfileName profile $InstanceId"
-            Write-EventLog -LogName "$EventLogName" -Source "$EventSourceName" -Message "$Message" -Id 500 -Category 0 -EntryType Information
-            Write-Host "$Message"
-        } else {
-            $Message = "Ignoring existing VPN profile $InstanceId"
-            Write-EventLog -LogName "$EventLogName" -Source "$EventSourceName" -Message "$Message" -Id 510 -Category 0 -EntryType Information
-            Write-Host "$Message"
-        }
-    }
-}
-catch [Exception]
-{
-    $Message = "Unable to remove existing outdated instance(s) of $ProfileName profile: $_"
-    Write-EventLog -LogName "$EventLogName" -Source "$EventSourceName" -Message "$Message" -Id 501 -Category 0 -EntryType Error
-    Write-Host "$Message"
-    exit
-}
-
-###########################
-# Create new VPN profile
-###########################
-try
-{
-    $newInstance = New-Object Microsoft.Management.Infrastructure.CimInstance $className, $namespaceName
-    $property = [Microsoft.Management.Infrastructure.CimProperty]::Create("ParentID", "$nodeCSPURI", 'String', 'Key')
-    $newInstance.CimInstanceProperties.Add($property)
-    $property = [Microsoft.Management.Infrastructure.CimProperty]::Create("InstanceID", "$ProfileNameEscaped", 'String', 'Key')
-    $newInstance.CimInstanceProperties.Add($property)
-    $property = [Microsoft.Management.Infrastructure.CimProperty]::Create("ProfileXML", "$ProfileXML", 'String', 'Property')
-    $newInstance.CimInstanceProperties.Add($property)
-
-    $session.CreateInstance($namespaceName, $newInstance, $options)
-    $Message = "Created $ProfileName profile."
-    Write-EventLog -LogName "$EventLogName" -Source "$EventSourceName" -Message "$Message" -Id 600 -Category 0 -EntryType Information
-    Write-Host "$Message"
-}
-catch [Exception]
-{
-    $Message = "Unable to create $ProfileName profile: $_"
-    Write-EventLog -LogName "$EventLogName" -Source "$EventSourceName" -Message "$Message" -Id 601 -Category 0 -EntryType Error
-    Write-Host "$Message"
-    exit
-}
-
-###########################
-# Update profile version number
-###########################
-try
-{
-    New-Item -Path "$MsitAutoVpnVersionPath" -Force
-    Set-ItemProperty -Path "$MsitAutoVpnVersionPath" -Name 'MsitAutoVpnVersion' -Value $Version
-    $Message = "Updated $ProfileName version."
-    Write-EventLog -LogName "$EventLogName" -Source "$EventSourceName" -Message "$Message" -Id 700 -Category 0 -EntryType Information
-    Write-Host "$Message"
-}
-catch [Exception]
-{
-    $Message = "Unable to update $ProfileName version: $_"
-    Write-EventLog -LogName "$EventLogName" -Source "$EventSourceName" -Message "$Message" -Id 701 -Category 0 -EntryType Error
-    Write-Host "$Message"
-    exit
-}
-
-
-$Message = "Complete."
-Write-EventLog -LogName "$EventLogName" -Source "$EventSourceName" -Message "$Message" -Id 800 -Category 0 -EntryType Information
-Write-Host "$Message"
-```
-
-## Step 10: Configure your VPN Client 
-@Reviewer: The link below doesn't seem to give much information on what to do to configure the VPN client; it seems more conceptual than procedural. Also, if there is a procedural step, it is only Intune.
+## Step 10: Configure VPNv2 Profiles on your Clients 
 
 In this step, you configure your VPN client connectivity profile as outlined in [VPN and conditional access](https://docs.microsoft.com/windows/access-protection/vpn/vpn-conditional-access).
 

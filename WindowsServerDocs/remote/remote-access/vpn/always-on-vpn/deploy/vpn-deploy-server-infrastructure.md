@@ -316,13 +316,15 @@ Unlike the user certificate, you must manually enroll the VPN server’s certifi
 
     1.  Click the **Subject** tab, click **Common Name** under **Subject name**, in **Type**.
 
-    2.  Under **Subject name**, in **Value**, enter the name of the external domain clients will use to connect to the VPN (e.g., vpn.contoso.com), and click **Add**.
+    2.  Under **Subject name**, in **Value**, enter the name of the external domain clients use to connect to the VPN, for example, vpn.contoso.com, and click **Add**.
 
     3.  Under **Alternative Name**, in **Type**, click **DNS**.
 
-    4.  Under **Alternative Name**, in **Value**, enter every possible FQDN the server could be addressed by, including IP addresses and NetBIOS names (e.g., vpn.contoso.com). The last name entered in the list of names appear as the Display name in **certlm.msc**. For this reason, it is suggested to add the FQDN or NetBIOS name of the server as the last entry in the SAN instead of an IP address.
+    4.  Under **Alternative Name**, in **Value**, enter all of the server names clients use to connect to the VPN, for example, vpn.contoso.com, vpn, 132.64.86.2. 
 
-    1.  Click **Add** and click **OK**.
+    5.  Click **Add** after entering each name.
+    
+    6.  Click **OK** when finished.
 
 7.  Click **Enroll**.
 
