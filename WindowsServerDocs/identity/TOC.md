@@ -32,6 +32,7 @@
 ##### [Virtualized Domain Controller Technical Reference (Level 300)](ad-ds/deploy/virtual-dc/Virtualized-Domain-Controller-Technical-Reference--Level-300-.md)
 ###### [Virtualized Domain Controller Architecture](ad-ds/get-started/virtual-dc/Virtualized-Domain-Controller-Architecture.md)
 ###### [Virtualized Domain Controller Deployment and Configuration](ad-ds/get-started/virtual-dc/Virtualized-Domain-Controller-Deployment-and-Configuration.md)
+###### [Virtualized Domain Controllers using Hyper-V](ad-ds/get-started/virtual-dc/virtualized-domain-controllers-hyper-v.md)
 ###### [Virtualized Domain Controller Troubleshooting](ad-ds/manage/virtual-dc/Virtualized-Domain-Controller-Troubleshooting.md)
 ###### [Virtualized Domain Controller Technical Reference appendix](ad-ds/reference/virtual-dc/Virtualized-Domain-Controller-Technical-Reference-appendix.md)
 ###### [Virtualized Domain Controller additional Resources](ad-ds/reference/virtual-dc/Virtualized-Domain-Controller-additional-Resources.md)
