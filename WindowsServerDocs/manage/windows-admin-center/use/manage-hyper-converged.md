@@ -59,7 +59,6 @@ Windows Admin Center for Hyper-Converged Infrastructure depends on management AP
 
 > [!Tip]
 > You only need to run the cmdlet once, on any server in the cluster. You can run it locally in Windows PowerShell or use Credential Security Service Provider (CredSSP) to run it remotely. Depending on your configuration, you may not be able to run this cmdlet from within Windows Admin Center.
-
 ### Prepare your Windows Server 2019 cluster for Windows Admin Center
 
 If your cluster runs an Insider Preview build of Windows Server 2019, the steps above are not necessary. Just add the cluster to Windows Admin Center as described in the next section and you're good to go! [Download the latest preview build of Windows Server 2019](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewserver).
@@ -85,14 +84,6 @@ The cluster will be added to your connections list. Click it to launch the Dashb
 
 ![Add hyper-converged cluster connection](../media/manage-hyper-converged/add-hyper-converged-cluster-connection.gif)
 
-## Feedback
-
-It’s all about your feedback! The most important benefit of frequent updates is to hear what’s working and what needs to be improved. Here are some ways to let us know what you’re thinking:
-
-- [Submit and vote for feature requests on UserVoice](https://windowsserver.uservoice.com/forums/295071/category/319162?query=%5Bhci%5D)
-- [Join the Windows Admin Center forum on Microsoft Tech Community](https://techcommunity.microsoft.com/t5/Windows-Server-Management/bd-p/WindowsServerManagement)
-- Tweet to `@servermgmt`
-
 ## Frequently asked questions
 
 ### Are there differences between managing Windows Server 2016 and Windows Server 2019 Insider Preview?
@@ -107,17 +98,19 @@ Windows Admin Center for Hyper-Converged Infrastructure does not provide managem
 
 In general, the term "hyper-converged" refers to running Hyper-V and Storage Spaces Direct on the same clustered servers to virtualize compute and storage resources. In the context of Windows Admin Center, when you click **+ Add** from the connections list, you can choose between adding a **Failover Cluster connection** or a **Hyper-Converged Cluster connection**:
 
-The **Failover Cluster connection** is the successor to the Failover Cluster Manager desktop app. It provides a familiar, general-purpose management experience for any cluster supporting any workload, including Microsoft SQL Server. It is available for Windows Server 2012 and later.
+- The **Failover Cluster connection** is the successor to the Failover Cluster Manager desktop app. It provides a familiar, general-purpose management experience for any cluster supporting any workload, including Microsoft SQL Server. It is available for Windows Server 2012 and later.
 
-The **Hyper-Converged Cluster connection** is an all-new experience tailored for Storage Spaces Direct and Hyper-V. It features the Dashboard and emphasizes charts and alerts for monitoring. It is available for Windows Server 2016 and preview builds of Windows Server 2019.
+- The **Hyper-Converged Cluster connection** is an all-new experience tailored for Storage Spaces Direct and Hyper-V. It features the Dashboard and emphasizes charts and alerts for monitoring. It is available for Windows Server 2016 and preview builds of Windows Server 2019.
 
 ### Why do I need the latest cumulative update for Windows Server 2016?
 
-Windows Admin Center for Hyper-Converged Infrastructure depends on management APIs developed since Windows Server 2016 was released. These APIs are added in the [2018-04 Cumulative Update for Windows Server 2016 (KB4093120)](https://support.microsoft.com/en-us/help/4093120), available as of April 2018.
+Windows Admin Center for Hyper-Converged Infrastructure depends on management APIs developed since Windows Server 2016 was released. These APIs are added in the [2018-04 Cumulative Update for Windows Server 2016 (KB4093120)](https://support.microsoft.com/en-us/help/4093120), available as of April 17th 2018.
 
 ### How much does it cost to use Windows Admin Center?
 
-Windows Admin Center has no additional cost beyond Windows. You can use Windows Admin Center (available as a separate download) with valid licenses of Windows Server or Windows 10 at no additional cost - it’s licensed under a Windows Supplemental EULA.
+Windows Admin Center has no additional cost beyond Windows.
+
+You can use Windows Admin Center (available as a separate download) with valid licenses of Windows Server or Windows 10 at no additional cost - it's licensed under a Windows Supplemental EULA.
 
 ### Does Windows Admin Center require System Center?
 
@@ -212,6 +205,14 @@ If you’re just getting started, here are some quick tutorials to help you lear
 6. Storage Spaces Direct automatically retires and evacuates failed drives. When this has happened, the drive status is Retired, and its storage capacity bar is empty.
 7. Remove the failed drive and insert its replacement.
 8. In **Drives > Inventory**, the new drive will appear. In time, the alert will clear, volumes will repair back to OK status, and storage will rebalance onto the new drive – no user action is required.
+
+## Feedback
+
+It’s all about your feedback! The most important benefit of frequent updates is to hear what’s working and what needs to be improved. Here are some ways to let us know what you’re thinking:
+
+- [Submit and vote for feature requests on UserVoice](https://windowsserver.uservoice.com/forums/295071/category/319162?query=%5Bhci%5D)
+- [Join the Windows Admin Center forum on Microsoft Tech Community](https://techcommunity.microsoft.com/t5/Windows-Server-Management/bd-p/WindowsServerManagement)
+- Tweet to `@servermgmt`
 
 ### See also
 
