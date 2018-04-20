@@ -35,7 +35,7 @@ To configure conditional access for VPN connectivity, you must complete the foll
 11.	[Configure your Conditional Access Policy](#config-ca-policy)
 12.	[Deploy Conditional Access Root Certificates to On-Premises AD](#deploy-ca-root-certs-on-prem) 
 13.	[Create OMA-DM based VPNv2 Profiles to Windows 10 Devices](#create-oma-dm-based-vpnv2)
-14. Configure VPNv2 Profiles on your Clients
+14. [Configure VPNv2 Profiles on your Clients](#config-vpnv2-profiles-on-client)
 
 
 
@@ -342,7 +342,7 @@ After a root certificate has been created, the 'VPN connectivity' triggers the c
         -   Certificate Authorities Container
 
 
-## <a name="create-oma-dm-based-vpnv2"></a>Step 9: Create OMA-DM based VPNv2 Profiles to Windows 10 devices
+## <a name="create-oma-dm-based-vpnv2"></a>Step 13: Create OMA-DM based VPNv2 Profiles to Windows 10 devices
 In this step, you can use one of two methods. The first method is a managed deployment using Intune to deploy a VPN Device Configuration policy, which does not have an option for AutoVPN. The second method can be used for unmanaged environments using a PowerShell script that leverages the Common Information Model, which creates a WMI session in the user’s context. From this context, it then creates a new instance of the MDM_VPNv2_01 WMI class. 
 
 VPNv2 profiles can also be created via SCCM, Intune or with a PowerShell Script using [VPNv2 CSP settings](https://docs.microsoft.com/en-us/windows/client-management/mdm/vpnv2-csp). 
@@ -420,7 +420,7 @@ The EAP XML sample below contains the minimum settings need to make this work wi
 ```
 
 
-## Step 10: Configure VPNv2 Profiles on your Clients 
+## <a name="config-vpnv2-profiles-on-client"></a>Step 14: Configure VPNv2 Profiles on your Clients 
 
 In this step, you configure your VPN client connectivity profile as outlined in [VPN and conditional access](https://docs.microsoft.com/windows/access-protection/vpn/vpn-conditional-access).
 

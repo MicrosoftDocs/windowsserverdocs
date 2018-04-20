@@ -93,6 +93,6 @@ The VPN Server cloud application is created when you create the first root certi
 | Want to know more about Access controls                                | [Access controls in Azure Active Directory conditional access](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-conditional-access-controls)          |
 | Get experience with configuring conditional access                     | [Get started with Role-Based Access Control in the Azure portal](https://docs.microsoft.com/en-us/azure/active-directory/role-based-access-control-what-is)                   |
 | Want to know about the best practices for conditional access policies in your environment | [Best practices for conditional access in Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-conditional-access-best-practices) |
-| Are ready to configure conditional access policies in your environment | [Install Remote Access as a RAS Gateway VPN Server](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-ras#install-remote-access-as-a-ras-gateway-vpn-server)  |
+| Are ready to configure conditional access policies in your environment | [Install Remote Access as a RAS Gateway VPN Server](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-ras#install-remote-access-as-a-ras-gateway-vpn-server) for the first step in the process.  |
 
 
