@@ -28,7 +28,7 @@
 ### [Manage servers](use/manage-servers.md)
 ### [Manage hyper-converged infrastructure](use/manage-hyper-converged.md)
 ### [Manage failover clusters](use/manage-failover-clusters.md)
-### [Manage Hyper-V Virtual Machines](use/manage-virtual-machines.md)
+### [Manage Hyper-V virtual machines](use/manage-virtual-machines.md)
 ### [Protect your Hyper-V VMs with Azure Site Recovery](use/azure-services.md)
 ### [Common troubleshooting steps](use/troubleshooting.md)
 ### [Logging](use/logging.md)
