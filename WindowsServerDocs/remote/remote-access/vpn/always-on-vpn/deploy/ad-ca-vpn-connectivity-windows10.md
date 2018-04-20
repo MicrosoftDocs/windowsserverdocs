@@ -55,13 +55,28 @@ To gain insights on how Microsoft implements this feature, see [Enhancing remote
 To configure Azure Active Directory conditional access for VPN connectivity, you need to have a VPN server configured.  For more information, see the [Always On VPN Deployment Guide](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy).
 
 
+## [Step 1: Install Remote Access as a RAS Gateway VPN Server](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-ras#install-remote-access-as-a-ras-gateway-vpn-server)
 
+In this step, you install the Remote Access role as a single tenant RAS Gateway VPN server.
 
 ## [Step 2: Configure Remote Access as a VPN Server](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-ras#configure-remote-access-as-a-vpn-server)
 
+In this step, you configure Remote Access VPN to allow IKEv2 VPN connections, deny connections from other VPN protocols, and assign a static IP address pool for issuance of IP addresses to connecting authorized VPN clients.
+
 ## [Step 3: Install Network Policy Service (NPS)](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-nps#install-network-policy-server)
 
+In this step, you install Network Policy Server (NPS) by using either Windows PowerShell or the Server Manager Add Roles and Features Wizard.
+
 ## [Step 4: Configure Network Policy Service](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-nps#configure-network-policy-for-vpn-connections)
+
+In this step, you configure NPS to handle all authentication, authorization, and accounting duties for connection requests that it receives from the VPN server.
+
+To configure NPS, you must perform the following tasks:
+- Register the NPS Server in Active Directory
+- Configure RADIUS Accounting for your NPS Server
+- Add the VPN Server as a RADIUS Client in NPS
+- Configure Network Policy in NPS
+- Autoenroll the NPS Server certificate
 
 ## Step 5: <a name="verify-it-works"></a>Verify that the Standard VPN works
 In this step, configure the template VPN profile on a domain-joined client computer. The type of user account you use (that is, standard user or administrator) for this part of the process does not matter.
@@ -93,11 +108,13 @@ In this step, configure the template VPN profile on a domain-joined client compu
 
 ## [Step 6: Create a Custome Server Authentication Template that Supports IKEv2](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-server-infrastructure#create-the-vpn-server-authentication-template)
 
-In this step, you can configure a new Server Authentication template for your VPN server.
+In this step, you configure a new Server Authentication template for your VPN server.
 
 Adding the IP Security (IPsec) IKE Intermediate application policy allows the server to filter certificates if more than one certificate is available with the Server Authentication extended key usage. 
 
 ## [Step 7: Request a Server Authentication Certificate for IKEv2](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-server-infrastructure#enroll-and-validate-the-server-certificates)
+
+In this step, you manually enroll the VPN server's certificate. 
 
 ## <a name="remove-weak-auth-methods"></a>Step 8: Remove Weak Authentication Methods
 If Standard VPN is verified to be working correctly, proceed with removing weak authentication protocols and enforcing Certificate Authentication using Protected Extensible Authentication Protocol (PEAP). 
@@ -173,7 +190,7 @@ For more information, see [How to Enable or Disable Certificate Revocation Check
 
 ## <a name="create-root-ca-for-vpn-auth"></a>Step 10: Create Root Certificates for VPN Authentication with Azure AD 
 
-This step configures root certificates for VPN authentication with Azure AD. To configure conditional access for VPN connectivity, you need to:
+In this step, you configure root certificates for VPN authentication with Azure AD. To configure conditional access for VPN connectivity, you need to:
 
 1. Create a VPN certificate in the Azure portal (you can create more than one certificate).
 2. Download the VPN certificate.
@@ -216,7 +233,7 @@ In the Azure portal, you can create two certificates to manage the transition wh
 
 ## <a name="config-ca-policy"></a>Step 11: Configure your Conditional Access Policy
 
-This section provides you with instructions for configuring your conditional access policy for VPN connectivity.
+In this step, you configure the conditional access policy for VPN connectivity. 
 
 After a root certificate has been created, the 'VPN connectivity' triggers the creation of the 'VPN Server' cloud application in the customer's tenant. Create a Conditional Access policy that is assigned to VPN users and set the **Cloud app** to **VPN Server**: 
 
