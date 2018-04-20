@@ -3,7 +3,7 @@ title: Storage Spaces Direct Data Collection Tools
 description: Understanding Storage Spaces Direct Data Collection Tools, with specific examples of how to run and use them.
 keywords: Storage Spaces,Data Collection,Troubleshooting,event channels,Get-SDDCDiagnosticInfo
 ms.assetid: 
-ms.prod: 
+ms.prod: windows-server-threshold
 ms.author: adagashe
 ms.technology: storage-spaces
 ms.topic: article
@@ -13,7 +13,7 @@ ms.localizationpriority:
 ---
 # Data Collection with Storage Spaces Direct
 
-> Applies to: Windows Server
+> Applies to: Windows Server 2016 and Windows Server 2019
 
 There are various diagnostic tools that can be used to collect the data needed to troubleshoot Storage Spaces Direct and Failover Cluster. In this article, we will focus on Get-SDDCDiagnosticInfo - a one touch tool that will gather all relevant information to help you diagnose your cluster. The health summary report is a great start to understanding the status of your system to start diagnosing an issue.
 
