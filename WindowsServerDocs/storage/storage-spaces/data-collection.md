@@ -15,9 +15,9 @@ ms.localizationpriority:
 
 > Applies to: Windows Server
 
-There are various diagnostic tools that can be used to collect the data needed to troubleshoot Storage Spaces Direct and Failover Cluster. In this article, we will focus on Get-SDDCDiagnosticInfo - a one touch tool that will gather all relevant information to help you diagnose your cluster.
+There are various diagnostic tools that can be used to collect the data needed to troubleshoot Storage Spaces Direct and Failover Cluster. In this article, we will focus on Get-SDDCDiagnosticInfo - a one touch tool that will gather all relevant information to help you diagnose your cluster. The health summary report is a great start to understanding the status of your system to start diagnosing an issue.
 
-The information on troubleshooting presented below will be helpful for troubleshooting advanced issues that have been escalated and that may require data to be sent to Microsoft for triaging.
+Given that the logs and other information that Get-SDDCDiagnosticInfo are dense, the information on troubleshooting presented below will be helpful for troubleshooting advanced issues that have been escalated and that may require data to be sent to Microsoft for triaging.
 
 ## Enabling event channels
 
