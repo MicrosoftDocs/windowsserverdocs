@@ -47,7 +47,7 @@ As such, the **default configuration** is geared to satisfy the same requirement
 >
 > Time accuracy entails the end-to-end distribution of accurate time from the authoritative time source to the end device.  Anything that adds assymetry in measurements along this path will negatively influence accuracy will affect the accuracy achievable on your devices.
 >
->For this reason, we have documented the [Windows Time Service support boundary for high-accuracy environments](support-boundary.md) outlining the environmental requirements that must also be satisfied to reach high accuracy targets.
+>For this reason, we have documented the [Support boundary to configure the Windows Time service for high-accuracy environments](support-boundary.md) outlining the environmental requirements that must also be satisfied to reach high accuracy targets.
 
 ### Operating System Requirements
 
@@ -78,7 +78,7 @@ The Windows Time service (W32Time) must run continuously.  To do this, configure
 
 #### Cumulative one-way network latency
 
-Measurement uncertainty and "noise" creeps in as network latency increases.  As such, it is imperative that a network latency be within a reasonable boundary.  The specific requirements are dependent on your target accuracy and are outlined in the [Windows Time Service support boundary for high-accuracy environments](support-boundary.md) article.
+Measurement uncertainty and "noise" creeps in as network latency increases.  As such, it is imperative that a network latency be within a reasonable boundary.  The specific requirements are dependent on your target accuracy and are outlined in the [Support boundary to configure the Windows Time service for high-accuracy environments](support-boundary.md) article.
 
 To calculate the cumulative one-way network latency, add the individual one-way delays between pairs of NTP client-server nodes in the time topology, starting with the target and ending at the high-accuracy stratum 1 time source.
 
@@ -119,7 +119,7 @@ net start w32time
 
 ## Calculating Cumulative One-Way Network Latency
 
-The cumulative one-way network latency between the target and source must be controlled.  Please review the [Windows Time Service support boundary for high-accuracy environments](support-boundary.md), which outlines the specific requirements based on your accuracy target.
+The cumulative one-way network latency between the target and source must be controlled.  Please review the [Support boundary to configure the Windows Time service for high-accuracy environments](support-boundary.md), which outlines the specific requirements based on your accuracy target.
 
 The cumulative network delay is measured by adding the individual one-way delays between pairs of NTP client-server nodes in the hierarchy starting with the target and ending at the source.
 

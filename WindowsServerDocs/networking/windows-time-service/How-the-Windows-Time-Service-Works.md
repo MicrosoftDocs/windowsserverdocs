@@ -41,7 +41,7 @@ Although the Windows Time service is not an exact implementation of the Network 
 -   The amount of CPU and network resources available to the Windows Time service  
   
 > [!IMPORTANT]  
-> Prior to Windows Server 2016, the W32Time service was not designed to meet time-sensitive application needs.  However, updates to Windows Server 2016 now allow you to implement a solution for 1ms accuracy in your domain.  See [Windows 2016 Accurate Time](accurate-time.md) and  [Windows Time Service support boundary for high-accuracy environments](support-boundary.md) for more information.  
+> Prior to Windows Server 2016, the W32Time service was not designed to meet time-sensitive application needs.  However, updates to Windows Server 2016 now allow you to implement a solution for 1ms accuracy in your domain.  See [Windows 2016 Accurate Time](accurate-time.md) and  [Support boundary to configure the Windows Time service for high-accuracy environments](support-boundary.md) for more information.  
   
 Computers that synchronize their time less frequently or are not joined to a domain are configured, by default, to synchronize with time.windows.com.  Therefore, it is impossible to guarantee time accuracy on computers that have intermittent or no network connections.  
   
