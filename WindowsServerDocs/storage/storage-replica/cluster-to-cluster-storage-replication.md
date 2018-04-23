@@ -102,7 +102,7 @@ Many of these requirements can be determined by using the `Test-SRTopology` cmdl
     > -   All log disks must have the same sector sizes.  
     > -   The log volumes should use flash-based storage, such as SSD.  Microsoft recommends that the log storage be faster than the data storage. Log volumes must never be used for other workloads.
     > -   The data disks can use HDD, SSD, or a tiered combination and can use either mirrored or parity spaces or RAID 1 or 10, or RAID 5 or RAID 50.  
-    > -   The log volume must be at least 9GB by default and may be larger or smaller based on log requirements.
+    > -   The log volume must be at least 8GB by default and may be larger or smaller based on log requirements.
     > -   When using Storage Spaces Direct (S2D) with an NVME or SSD cache, you see a greater than expected increase in latency when configuring Storage Replica replication between S2D clusters. The change in latency is proprtionally much higher than you see when using NVME and SSD in a performance + capacity configuration and no HDD tier nor capacity tier.
 
 This issue occurs due to architectural limitations within SR's log mechanism combined with the extremely low latency of NVME when compared to slower media. When using the S2D cache, all IO of SR logs, along with all recent read/write IO of applications, will occur in the cache and never on the performance or capacity tiers. This means that all SR activity happens on the same speed media - this configuration is not supported not recommended (see https://aka.ms/srfaq for log recommendations). 
