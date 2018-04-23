@@ -76,7 +76,8 @@ The additional requirements to achieve 50ms accuracy for a specific target syste
 
 -   The target system must be no further than stratum 5 from a highly accurate time source
 
-        Note: Run "w32tm /query /status" from the command line to see the stratum.
+    >[!Note]
+    >Run "w32tm /query /status" from the command line to see the stratum.
 
 -   The target system must be within 6 or less network hops from the highly accurate time source
 
@@ -94,7 +95,8 @@ The additional requirements to achieve 1 ms accuracy for a specific target syste
 
 -   The target system must be no further than stratum 4 from a highly accurate time source
 
-        Note: Run "w32tm /query /status" from the command line to see the stratum
+    >[!Note]
+    >Run "w32tm /query /status" from the command line to see the stratum
 
 -   The target system must be within 4 or less network hops from the highly accurate time source
 
