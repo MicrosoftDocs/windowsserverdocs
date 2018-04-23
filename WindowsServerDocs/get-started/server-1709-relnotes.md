@@ -5,7 +5,7 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.date: 10/19/2017
+ms.date: 04/23/2018
 ms.technology: server-general
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -35,4 +35,4 @@ The Semi-Annual Channel of Windows Server is focused on containers and applicati
 
 Storage Spaces Direct was introduced in Windows Server 2016 and is the foundation for our hyper-converged platform. We have been thrilled by the positive adoption of the Microsoft hyper-converged platform and we are committed to our customers.
 
-We have been listening to customer feedback and working to deliver the [next set of innovations](https://blogs.technet.microsoft.com/windowsserver/2017/09/07/sneak-peek-2-windows-server-version-1709-hyper-converged-infrastructure/) for our hyper-converged platform. These features are available today in [Windows Insiders](https://insider.windows.com/en-us/for-business/) builds, and we would love for you to try them and share your feedback! For customers looking for a validated hyper-converged solution, we recommend the [Windows Server Software Defined](http://microsoft.com/wssd) program.
+We've been listening to your feedback and are working to deliver the [next set of innovations](https://blogs.technet.microsoft.com/windowsserver/2017/09/07/sneak-peek-2-windows-server-version-1709-hyper-converged-infrastructure/) for our hyper-converged platform. These features are available today in [Windows Insiders](https://insider.windows.com/for-business/) builds, and we would love for you to try them and share your feedback. For customers looking for a validated hyper-converged solution, we recommend the [Windows Server Software Defined](http://microsoft.com/wssd) program.
