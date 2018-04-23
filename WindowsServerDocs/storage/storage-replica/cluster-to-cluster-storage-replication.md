@@ -279,7 +279,7 @@ Now you will set up cluster-to-cluster replication using Windows PowerShell. You
        ```PowerShell
          while($true) {  
          $v = (Get-SRGroup -Name "Replication 2").replicas | Select-Object numofbytesremaining  
-         [System.Console]::Write("Number of bytes remaining: {0}`r", $v.numofbytesremaining)  
+         [System.Console]::Write("Number of bytes remaining: {0}`n", $v.numofbytesremaining)  
          Start-Sleep -s 5  
         }
         ```
