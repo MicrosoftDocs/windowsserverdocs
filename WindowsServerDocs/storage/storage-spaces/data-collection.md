@@ -13,11 +13,13 @@ ms.localizationpriority:
 ---
 # Data Collection with Storage Spaces Direct
 
-> Applies to: Windows Server 2016 and Windows Server 2019
+> Applies to: Windows Server 2016
 
-There are various diagnostic tools that can be used to collect the data needed to troubleshoot Storage Spaces Direct and Failover Cluster. In this article, we will focus on Get-SDDCDiagnosticInfo - a one touch tool that will gather all relevant information to help you diagnose your cluster. The health summary report is a great start to understanding the status of your system to start diagnosing an issue.
+There are various diagnostic tools that can be used to collect the data needed to troubleshoot Storage Spaces Direct and Failover Cluster. In this article, we will focus on **Get-SDDCDiagnosticInfo** - a one touch tool that will gather all relevant information to help you diagnose your cluster.
 
-Given that the logs and other information that Get-SDDCDiagnosticInfo are dense, the information on troubleshooting presented below will be helpful for troubleshooting advanced issues that have been escalated and that may require data to be sent to Microsoft for triaging.
+<!-- The health summary report is a great start to understanding the status of your system to start diagnosing an issue. -->
+
+Given that the logs and other information that **Get-SDDCDiagnosticInfo** are dense, the information on troubleshooting presented below will be helpful for troubleshooting advanced issues that have been escalated and that may require data to be sent to Microsoft for triaging.
 
 ## Enabling event channels
 
@@ -25,7 +27,7 @@ When Windows Server is installed, many event channels are enabled by default. Bu
 
 You could enable additional event channels on each server node in your cluster as needed; however, this approach presents two problems:
 
-1. You have to remember to enable the same event channels on every new server node that you add to your cluster.
+1. You need to remember to enable the same event channels on every new server node that you add to your cluster.
 2. When diagnosing, it can be tedious to enable specific event channels, reproduce the error, and repeat this process until you root cause.
 
 To avoid these issues, you can enable event channels on cluster startup. The list of enabled event channels on your cluster can be configured using the public property **EnabledEventLogs**. By default, the following event channels are enabled:
@@ -42,7 +44,7 @@ Microsoft-Windows-SMBServer/Analytic
 Microsoft-Windows-Kernel-LiveDump/Analytic
 ```
 
-The **EnabledEventLogs** property is a multistring, where each string is in the form: **channel-name, log-level, keyword-mask**. The **keyword-mask** can be a hexadecimal (prefix 0x), octal (prefix 0), or decimal number (no prefix) number. For instance, to add a new event channel to the list and to configure both **log-level** and **keyword-mask** you can run:
+The **EnabledEventLogs** property is a multistring, where each string is in the form: **channel-name, log-level, keyword-mask**. The **keyword-mask** can be a hexadecimal (prefix 0x), octal (prefix 0), or decimal number (no prefix) number that each event contains (so you can filter by it). For instance, to add a new event channel to the list and to configure both **log-level** and **keyword-mask** you can run:
 
 ```powershell
 (get-cluster).EnabledEventLogs += "Microsoft-Windows-WinINet/Analytic,2,321"
@@ -80,13 +82,13 @@ Windows will trigger the collection of a ``` LiveDump ``` when there are known r
 
 ## Installing Get-SDDCDiagnosticInfo
 
-**The Get-SDDCDiagnosticInfo** PowerShell cmdlet (a.k.a. Get-PCStorageDiagnosticInfo, previously known as Test-StorageHealth) can be used to gather logs for and perform health checks for Failover Clustering (Cluster, Resources, Networks, Nodes), Storage Spaces (Physical Disks, Enclosures, Virtual Disks), Cluster Shared Volumes, SMB File Shares, and Deduplication. 
+The **Get-SDDCDiagnosticInfo** PowerShell cmdlet (a.k.a. **Get-PCStorageDiagnosticInfo**, previously known as **Test-StorageHealth**) can be used to gather logs for and perform health checks for Failover Clustering (Cluster, Resources, Networks, Nodes), Storage Spaces (Physical Disks, Enclosures, Virtual Disks), Cluster Shared Volumes, SMB File Shares, and Deduplication. 
 
 There are two methods of installing the script, both of which are outlines below.
 
-### Github 
+### GitHub 
 
-The [GitHub Repo](https://github.com/PowerShell/PrivateCloud.DiagnosticInfo/) is the most up-to-date version of the module, since we are continually iterating here. To install the module from GitHub, download the latest module from the [archive](https://github.com/PowerShell/PrivateCloud.DiagnosticInfo/archive/master.zip) and extract the PrivateCloud.DiagnosticInfo directory to the correct powershell modules path pointed by ```$env:PSModulePath```
+The [GitHub Repo](https://github.com/PowerShell/PrivateCloud.DiagnosticInfo/) is the most up-to-date version of the module, since we are continually iterating here. To install the module from GitHub, download the latest module from the [archive](https://github.com/PowerShell/PrivateCloud.DiagnosticInfo/archive/master.zip) and extract the PrivateCloud.DiagnosticInfo directory to the correct PowerShell modules path pointed by ```$env:PSModulePath```
 
 ``` PowerShell
 # Allowing Tls12 and Tls11 -- e.g. github now requires Tls12
@@ -101,13 +103,13 @@ Get-Command -Module PrivateCloud.DiagnosticInfo
 Get-Help Get-SDDCDiagnosticInfo
 ``` 
 
-If you need to get this module on a offline cluster, download the zip, move it to your target server node, and install the module.
+If you need to get this module on an offline cluster, download the zip, move it to your target server node, and install the module.
 
 ### PowerShell Gallery 
 
 The [PowerShell Gallery](https://www.powershellgallery.com/packages/PrivateCloud.DiagnosticInfo) is a snapshot of the GitHub Repo. Note that installing items from the PowerShell Gallery requires the latest version of the PowerShellGet module, which is available in Windows 10, in Windows Management Framework (WMF) 5.0, or in the MSI-based installer (for PowerShell 3 and 4).
 
-You can install the module by running following command in PowerShell with administrator priviledges:
+You can install the module by running following command in PowerShell with administrator privileges:
 
 ``` PowerShell
 Install-Module PrivateCloud.DiagnosticInfo -Verbose
@@ -128,7 +130,7 @@ After you have enabled event channels and completed the installation process, yo
 3. Reports of storage performance with IOPS and latency per volume
 4. Event logs from all cluster nodes and a summary error report
 
-Assume that your storage cluster has the name "*CLUS01*".
+Assume that your storage cluster has the name *"CLUS01".*
 
 To execute against a remote storage cluster:
 ``` PowerShell
@@ -163,9 +165,9 @@ The following are the files included in the zipped output of Get-SDDCDiagnosticI
 The health summary report is saved as:
 - 0_CloudHealthSummary.log
 
-This file is generated after parsing all of the data collected and is meant to provide a quick summary of your system. It contains:
+This file is generated after parsing all the data collected and is meant to provide a quick summary of your system. It contains:
 1. System information
-2. Storage health overview (number of nodes up, resources online, cluster shared volumes online, unhealthy componenents, etc.)
+2. Storage health overview (number of nodes up, resources online, cluster shared volumes online, unhealthy components, etc.)
 3. Details on unhealthy components (cluster resources that are offline, failed, or online pending)
 4. Firmware and driver information
 5. Pool, physical disk, and volume details
@@ -173,127 +175,9 @@ This file is generated after parsing all of the data collected and is meant to p
 
 This report is being continually updated to include more useful information. For the latest information, see the [GitHub README](https://github.com/PowerShell/PrivateCloud.DiagnosticInfo/edit/master/README.md).
 
-### XML
-- GetAllErrors.XML
-- GetAssociations.XML
-- GetCluster.XML
-- GetClusterGroup.XML
-- GetClusterNetwork.XML
-- GetClusterNode.XML
-- GetClusterResource.XML
-- GetClusterSharedVolume.XML
-- GetDedupVolume.XML
-- GetNetAdapter_NodeName.FQDN.XML
-- GetParameters.XML
-- GetPhysicalDisk.XML
-- GetReliabilityCounter.XML
-- GetSmbOpenFile.XML
-- GetSmbServerNetworkInterface_NodeName.FQDN.XML
-- GetSmbWitness.XML
-- GetStorageEnclosure.XML
-- GetStorageNodeView.XML
-- GetStoragePool.XML
-- GetVirtualDisk.XML
-- GetVolume.XML
-- NonHealthyVDs.XML
-- NodeName_GetDrivers.XML
+### XMLfiles and Logs
 
-### Cluster and Health logs
-- NodeName.FQDN_cluster.log
-- NodeName.FQDN_health.log
-
-### System Information (MSInfo32)
-- NodeName.FQDN_SystemInfo.TXT
-
-### Event Logs (unfiltered)
-- NodeName_UnfilteredEvent_Application.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-BranchCacheSMB-Operational.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-CloudStorageWizard-Operational.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-DiskDiagnostic-Operational.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-DiskDiagnosticDataCollector-Operational.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-DiskDiagnosticResolver-Operational.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-FailoverClustering-ClusBflt-Management.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-FailoverClustering-ClusBflt-Operational.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-FailoverClustering-Clusport-Operational.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-FailoverClustering-CsvFs-Operational.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-FailoverClustering-Diagnostic.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-FailoverClustering-DiagnosticVerbose.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-FailoverClustering-Manager-Admin.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-FailoverClustering-Manager-Diagnostic.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-FailoverClustering-Manager-Tracing.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-FailoverClustering-NetFt-Operational.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-FailoverClustering-Operational.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-FailoverClustering-WMIProvider-Admin.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-Hyper-V-Compute-Admin.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-Hyper-V-Compute-Operational.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-Hyper-V-Config-Admin.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-Hyper-V-Config-Operational.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-Hyper-V-Guest-Drivers-Admin.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-Hyper-V-Guest-Drivers-Operational.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-Hyper-V-High-Availability-Admin.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-Hyper-V-Hypervisor-Admin.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-Hyper-V-Hypervisor-Operational.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-Hyper-V-Shared-VHDX-Operational.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-Hyper-V-Shared-VHDX-Reservation.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-Hyper-V-StorageVSP-Admin.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-Hyper-V-VID-Admin.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-Hyper-V-VMMS-Admin.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-Hyper-V-VMMS-Networking.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-Hyper-V-VMMS-Operational.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-Hyper-V-VMMS-Storage.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-Hyper-V-VmSwitch-Operational.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-Hyper-V-Worker-Admin.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-Kernel-ApphelpCache-Operational.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-Kernel-Boot-Operational.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-Kernel-EventTracing-Admin.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-Kernel-IO-Operational.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-Kernel-PnP-Configuration.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-Kernel-Power-Thermal-Operational.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-Kernel-ShimEngine-Operational.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-Kernel-StoreMgr-Operational.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-Kernel-WDI-Operational.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-Kernel-WHEA-Errors.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-Kernel-WHEA-Operational.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-Ntfs-Operational.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-Ntfs-WHC.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-ResumeKeyFilter-Operational.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-ScmDisk0101-Operational.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-SmbClient-Connectivity.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-SMBClient-Operational.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-SmbClient-Security.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-SMBDirect-Admin.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-SMBServer-Audit.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-SMBServer-Connectivity.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-SMBServer-Operational.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-SMBServer-Security.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-SMBWitnessClient-Admin.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-SMBWitnessClient-Informational.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-SMBWitnessServer-Admin.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-Storage-ATAPort-Admin.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-Storage-ATAPort-Operational.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-Storage-ClassPnP-Admin.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-Storage-ClassPnP-Operational.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-Storage-Disk-Admin.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-Storage-Disk-Operational.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-Storage-Storport-Admin.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-Storage-Storport-Operational.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-Storage-Tiering-Admin.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-StorageManagement-Operational.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-StorageSpaces-Driver-Diagnostic.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-StorageSpaces-Driver-Operational.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-StorageSpaces-ManagementAgent-WHC.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-StorageSpaces-SpaceManager-Diagnostic.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-StorageSpaces-SpaceManager-Operational.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-TerminalServices-PnPDevices-Admin.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-TerminalServices-PnPDevices-Operational.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-UserPnp-ActionCenter.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-UserPnp-DeviceInstall.EVTX
-- NodeName_UnfilteredEvent_Microsoft-Windows-VHDMP-Operational.EVTX
-- NodeName_UnfilteredEvent_System.EVTX
-
-### Storage Diagnostics
-- OperationalLog.evtx
-- OperationalLog_0.MTA
+The script runs various log gathering scripts and saves the output as xml files. We collect cluster and health logs, system information (MSInfo32), unfiltered event logs (failover clustering, dis diagnostics, hyper-v, storage spaces, and more), and storage diagnostics information (operational logs). For the latest information on what information is collected, see the [GitHub README (what we collect)](https://github.com/PowerShell/PrivateCloud.DiagnosticInfo/blob/master/README.md#what-does-the-cmdlet-output-include).
 
 ## What to expect next?
 A lot of improvements and new cmdlets to analyze SDDC system health.
