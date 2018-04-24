@@ -24,6 +24,9 @@ The in-memory read cache is most effective for read-intensive workloads, such as
 
 You can use up to 80% of total physical memory for the CSV in-memory read cache.
 
+> [!NOTE]
+> The configured CSV in-memory read cache is allocated on a per volume basis on each host. If the default CSV in-memory read cache size value is 1 GB and the host owns 4 volumes, 4 GB in total will be allocated on the host.  
+
   > [!TIP]
   >  For hyper-converged deployments, where compute and storage run on the same servers, be careful to leave enough memory for your virtual machines. For converged Scale-Out File Server (SoFS) deployments, with less contention for memory, this doesn't apply.
 
