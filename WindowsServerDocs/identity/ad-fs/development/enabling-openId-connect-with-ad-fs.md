@@ -62,13 +62,13 @@ The following section describes how to configure the application group in AD FS 
   
     ![AD FS OpenID](media/Enabling-OpenId-Connect-with-AD-FS-2016/AD_FS_OpenID_4.PNG)  
   
-11. On the **Configure Web API** screen, enter the following for **Identifier** - **https://contoso.com/WebApp**.  Click **Add**. Click **Next**.  
-  
-    ![AD FS OpenID](media/Enabling-OpenId-Connect-with-AD-FS-2016/AD_FS_OpenID_7.PNG)  
-  
-12. On the **Choose Access Control Policy** screen, select **Permit everyone** and click **Next**.  
+11. On the **Choose Access Control Policy** screen, select **Permit everyone** and click **Next**.  
   
     ![AD FS OpenID](media/Enabling-OpenId-Connect-with-AD-FS-2016/AD_FS_Confidential_7.PNG)  
+    
+12. On the **Configure Web API** screen, enter the following for **Identifier** - **https://contoso.com/WebApp**.  Click **Add**. Click **Next**.  
+  
+    ![AD FS OpenID](media/Enabling-OpenId-Connect-with-AD-FS-2016/AD_FS_OpenID_7.PNG)  
   
 13. On the **Configure Application Permissions** screen,  make sure **openid** is selected and click **Next**.  
   

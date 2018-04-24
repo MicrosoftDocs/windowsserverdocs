@@ -103,33 +103,9 @@ Windows Admin Center can be installed on Windows 10 Fall Anniversary Update (170
 
 The Windows Admin Center SDK will soon launch in public preview. As a platform, growing our ecosystem and enabling partner extensibility has been a key priority since the beginning. We’ve been working with early-adopter partners to refine the extension development experience in a private preview of our SDK. Look for a public preview SDK release announcement in the coming weeks, and if you’re going to the Microsoft Build conference in May, be sure to stop by our booth.  [Read more about the Windows Admin Center SDK](..\extend\how-sdk-works.md).
 
-## What is the state of the Hyper-Converged Cluster Manager UI, or why is it marked as Preview?
+## Can I manage Hyper-Converged Infrastructure with Windows Admin Center?
 
-The hyper-converged cluster manager solution in Windows Admin Center is a production-ready preview and we will continue to enhance and complete key scenarios (in compute, storage, networking, and clustering) to align with the launch of Windows Server 2019 later this year.  For more information, [read more about managing hyper-converged infrastructure](..\use\manage-hyper-converged.md).
-
-## Will the Hyper-Converged Cluster Manager UI support Windows Server 2016?
-
-One of our top user requests is to add support for managing hyper-converged clusters on Windows Server 2016. This will take the form of a Windows Update package for Windows Server 2016 which will be published in the [catalog](https://support.microsoft.com/en-us/help/4000825) when it is available. Look for another announcement on availability in the coming weeks.
-
-## When managing Hyper-Converged Infrastructure, are there differences between managing Windows Server 2016 and Windows Server Insider Preview?
-
-Yes. Windows Admin Center for Hyper-Converged Infrastructure receives frequent updates that improve the experience for both Windows Server 2016 and Windows Server Insider Preview. However, certain new features are only available for Insider Preview – for example, the toggle switch for de-duplication and compression.
-
-## Can I use Windows Admin Center to manage Storage Spaces Direct for other use cases (not hyper-converged), such as converged Scale-Out File Server (SoFS) or Microsoft SQL Server?
-
-Windows Admin Center for Hyper-Converged Infrastructure does not provide management or monitoring options specifically for other use cases of Storage Spaces Direct – for example, it can’t create file shares. However, the Dashboard and core features, such as creating volumes or replacing drives, work for any Storage Spaces Direct cluster.
-
-## What’s the difference between a Failover Cluster and a Hyper-Converged Cluster?
-
-In general, the term “hyper-converged” refers to running Hyper-V and Storage Spaces Direct on the same clustered servers to virtualize compute and storage resources. In the context of Windows Admin Center, when you click + Add from the connections list, you can choose between adding a Failover Cluster connection or a Hyper-Converged Cluster connection:
-
-* The Failover Cluster connection is the successor to the Failover Cluster Manager desktop app. It provides a familiar, general-purpose management experience for any cluster supporting any workload, including Microsoft SQL Server. It is available for Windows Server 2012 R2 and later.
-
-* The Hyper-Converged Cluster connection is an all-new experience tailored for Storage Spaces Direct and Hyper-V. It features the Dashboard and emphasizes charts and alerts for monitoring. It is available for Windows Server 2016 and Windows Server Insider Preview.
-
-## When managing Hyper-Converged Infrastructure, why do I need the latest cumulative update for Windows Server 2016?
-
-Windows Admin Center for Hyper-Converged Infrastructure depends on management APIs developed since Windows Server 2016 was released. These APIs are available as of April 2018.
+Yes. Windows Admin Center supports the management of hyper-converged clusters running Windows Server 2016 or Windows Server 2019 Insider Preview builds. The hyper-converged cluster manager solution in Windows Admin Center is a production-ready preview and we will continue to enhance and complete key scenarios (in compute, storage, networking, and clustering) to align with the launch of Windows Server 2019 later this year.  For more information, [read more about managing hyper-converged infrastructure](..\use\manage-hyper-converged.md).
 
 ## Does Windows Admin Center require System Center?
 

@@ -91,6 +91,7 @@
 #### [Deploy Storage Spaces Direct](storage-spaces/deploy-storage-spaces-direct.md)
 #### [Create volumes](storage-spaces/create-volumes.md)
 ### Manage
+#### [Manage with Windows Admin Center](../manage/windows-admin-center/use/manage-hyper-converged.md)
 #### [Add servers or drives](storage-spaces/add-nodes.md)
 #### [Taking a server offline for maintenance](storage-spaces/maintain-servers.md)
 #### [Remove servers](storage-spaces/remove-servers.md)

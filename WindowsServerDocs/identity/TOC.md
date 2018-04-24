@@ -32,12 +32,12 @@
 ##### [Virtualized Domain Controller Technical Reference (Level 300)](ad-ds/deploy/virtual-dc/Virtualized-Domain-Controller-Technical-Reference--Level-300-.md)
 ###### [Virtualized Domain Controller Architecture](ad-ds/get-started/virtual-dc/Virtualized-Domain-Controller-Architecture.md)
 ###### [Virtualized Domain Controller Deployment and Configuration](ad-ds/get-started/virtual-dc/Virtualized-Domain-Controller-Deployment-and-Configuration.md)
+###### [Virtualized Domain Controllers using Hyper-V](ad-ds/get-started/virtual-dc/virtualized-domain-controllers-hyper-v.md)
 ###### [Virtualized Domain Controller Troubleshooting](ad-ds/manage/virtual-dc/Virtualized-Domain-Controller-Troubleshooting.md)
 ###### [Virtualized Domain Controller Technical Reference appendix](ad-ds/reference/virtual-dc/Virtualized-Domain-Controller-Technical-Reference-appendix.md)
 ###### [Virtualized Domain Controller additional Resources](ad-ds/reference/virtual-dc/Virtualized-Domain-Controller-additional-Resources.md)
 ##### [Virtualized Domain Controller Cloning Test Guidance for Application Vendors](ad-ds/reference/virtual-dc/Virtualized-Domain-Controller-Cloning-Test-Guidance-for-Application-Vendors.md)
 ##### [Support for using Hyper-V Replica for virtualized domain controllers](ad-ds/get-started/virtual-dc/Support-for-using-Hyper-V-Replica-for-virtualized-domain-controllers.md)
-
 #### [Windows Server Functional Levels](ad-ds/active-directory-functional-levels.md)
 ### [AD DS Design and Planning](ad-ds/plan/AD-DS-Design-and-Planning.md)
 #### [Understanding AD DS Design](ad-ds/plan/Understanding-AD-DS-Design.md)

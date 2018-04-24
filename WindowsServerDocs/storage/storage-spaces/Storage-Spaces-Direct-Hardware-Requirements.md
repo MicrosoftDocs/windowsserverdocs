@@ -7,7 +7,7 @@ ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: eldenchristensen
-ms.date: 04/10/2018
+ms.date: 04/12/2018
 ms.localizationpriority: medium
 ---
 
@@ -83,7 +83,7 @@ Here's how drives can be connected for Storage Spaces Direct:
 
 ![diagram of supported drive interconnects](media/hardware-requirements/drive-interconnect-support-1.png)
 
-Drives can be internal to the server, or in an external enclosure that is connected to just one server. Each external enclosure must present a unique identifier (Unique ID), and we strongly recommend SCSI Enclosure Services (SES) for slot mapping and identification.
+Drives can be internal to the server, or in an external enclosure that is connected to just one server. SCSI Enclosure Services (SES) is required for slot mapping and identification. Each external enclosure must present a unique identifier (Unique ID).
 
 1. Drives internal to the server
 2. Drives in an external enclosure ("JBOD") connected to one server
