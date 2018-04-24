@@ -54,6 +54,7 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter and [Windows
         <td style="padding: 5px; border: 0;">
             <strong>Manage</a></strong>
             <ul>
+              <li><a href="../../manage/windows-admin-center/use/manage-hyper-converged.md">Manage with Windows Admin Center</a></li>
 			  <li><a href="add-nodes.md">Add servers or drives</a></li>
 			  <li><a href="maintain-servers.md">Taking a server offline for maintenance</li>
 			  <li><a href="remove-servers.md">Remove servers</a></li>
