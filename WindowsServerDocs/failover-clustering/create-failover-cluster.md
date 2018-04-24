@@ -138,7 +138,7 @@ To complete this step, make sure that the user account that you log on as meets 
     
     Realize that it may take some time for the cluster name to successfully replicate in DNS. After successful DNS registration and replication, if you select **All Servers** in Server Manager, the cluster name should be listed as a server with a **Manageability** status of **Online**.
 
-After the cluster is created, you can do things such as verify cluster quorum configuration, and optionally, create Cluster Shared Volumes (CSV). For more information, see [Configure and Manage the Quorum in a Windows Server 2012 Failover Cluster](manage-cluster-quorum.md) and [Use Cluster Shared Volumes in a failover cluster](failover-cluster-csvs.md).
+After the cluster is created, you can do things such as verify cluster quorum configuration, and optionally, create Cluster Shared Volumes (CSV). For more information, see [Understanding Quorum in Storage Spaces Direct](../storage/storage-spaces/understand-quorum.md) and [Use Cluster Shared Volumes in a failover cluster](failover-cluster-csvs.md).
 
 ## Create clustered roles
 

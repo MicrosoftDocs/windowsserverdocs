@@ -11,7 +11,6 @@
 ### [Deploy a Cloud Witness for a Failover Cluster](deploy-cloud-witness.md)
 ### [Cluster operating system rolling upgrades](cluster-operating-system-rolling-upgrade.md)
 ## Manage
-### [Managing cluster quorum](manage-cluster-quorum.md)
 ### [Cluster-Aware Updating](cluster-aware-updating.md)
 #### [Requirements and best practices](cluster-aware-updating-requirements.md)
 #### [Advanced options](cluster-aware-updating-options.md)

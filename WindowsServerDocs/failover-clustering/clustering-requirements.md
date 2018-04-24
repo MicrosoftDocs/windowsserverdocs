@@ -39,7 +39,7 @@ You need the following hardware to create a failover cluster. To be supported by
 
   - For the partition style of the disk, you can use either master boot record (MBR) or GUID partition table (GPT).
 
-    A disk witness is a disk in the cluster storage that is designated to hold a copy of the cluster configuration database. A failover cluster has a disk witness only if this is specified as part of the quorum configuration. For more information, see [Configure and Manage the Quorum in a Windows Server 2012 Failover Cluster](manage-cluster-quorum.md).
+    A disk witness is a disk in the cluster storage that is designated to hold a copy of the cluster configuration database. A failover cluster has a disk witness only if this is specified as part of the quorum configuration. For more information, see [Understanding Quorum in Storage Spaces Direct](../storage/storage-spaces/understand-quorum.md).
 
 ## Hardware requirements for Hyper-V
 
