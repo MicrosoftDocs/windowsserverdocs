@@ -2,11 +2,11 @@
 title: Resilient File System (ReFS) overview
 ms.prod: windows-server-threshold
 ms.author: gawatu
-ms.manager: dmoss
+ms.manager: mchad
 ms.technology: storage-file-systems
 ms.topic: article
 author: gawatu
-ms.date: 03/12/2018
+ms.date: 04/24/2018
 ---
 # Resilient File System (ReFS) overview
 
@@ -75,12 +75,9 @@ Deploying ReFS on Storage Spaces Direct is recommended for virtualized workloads
 
 ### Storage Spaces
 
-- Integrity-streams, online repair, and alternate data copies enable ReFS and Storage Spaces to jointly to detect and correct storage controller and storage media corruptions within both metadata and data.
+- Integrity-streams, online repair, and alternate data copies enable ReFS and [Storage Spaces](../storage-spaces/overview.md) to jointly to detect and correct storage controller and storage media corruptions within both metadata and data.
 - Storage Spaces deployments can also utilize block-cloning and the scalability offered in ReFS.
 - Deploying ReFS on Storage Spaces with shared SAS enclosures is suitable for hosting archival data and storing user documents.
-
-
-
 
 >[!NOTE]
 > Storage Spaces supports local non-removable direct-attached via BusTypes SATA, SAS, NVME, or attached via HBA (aka RAID controller in pass-through mode).
