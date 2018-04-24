@@ -76,7 +76,7 @@ As you can see from the above, there are two conditions when **badPwdCount** wil
 For more information, see [Configuring Account Lockout](https://blogs.technet.microsoft.com/secguide/2014/08/13/configuring-account-lockout/). 
 
 ## Known Issues
-There is a known issue where the AD user account cannot authentication with AD FS because the **badPwdCount** attribute is not replicated to the domain controller that ADFS is querying. See [2971171](https://support.microsoft.com/help/2971171/adfs-authentication-issue-for-active-directory-users-when-extranet-loc) for more details. You can find all AD FS QFEs that have been released so far [here](../deployment/updates-for-active-directory-federation-services-ad-fs.md).
+There is a known issue where the AD user account cannot authenticate with AD FS because the **badPwdCount** attribute is not replicated to the domain controller that ADFS is querying. See [2971171](https://support.microsoft.com/help/2971171/adfs-authentication-issue-for-active-directory-users-when-extranet-loc) for more details. You can find all AD FS QFEs that have been released so far [here](../deployment/updates-for-active-directory-federation-services-ad-fs.md).
 
 ## Key points to remember
 - The Extranet Lockout feature only works for the **extranet scenario** where the authentication requests come through the Web Application Proxy
