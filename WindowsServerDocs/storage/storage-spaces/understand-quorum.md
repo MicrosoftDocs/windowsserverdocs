@@ -12,7 +12,7 @@ author: adagashe
 ms.date: 02/23/2018
 ms.localizationpriority: 
 ---
-# Understanding Quorum
+# Understanding Cluster and Pool Quorum
 
 >Applies To: Windows Server 2016
 
