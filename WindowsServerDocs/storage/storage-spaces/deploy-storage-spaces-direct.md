@@ -7,7 +7,7 @@ ms.technology: storage-spaces
 ms.topic: get-started-article
 ms.assetid: 20fee213-8ba5-4cd3-87a6-e77359e82bc0
 author: stevenek
-ms.date: 3/5/2017
+ms.date: 4/24/2018
 description: Deploy software-defined storage with Storage Spaces Direct and Windows Server in either a hyper-converged solution - where the cluster hosts the storage and virtual machines - or a converged (also known as disaggregated) solution where workloads run on a different cluster. 
 ms.localizationpriority: medium
 ---
@@ -157,7 +157,7 @@ If you later need to remove some features, update the *$Roles* variable and repl
 
 ## Step 2: Configure the network
 
-There are a number of ways to setup networking with Storage Spaces Direct. For details, see [RDMA configuration guidelines for Windows Server 2016 and Windows Server](https://gallery.technet.microsoft.com/RDMA-configuration-425bcdf2). 
+There are a number of ways to setup networking with Storage Spaces Direct. For details, see [RDMA configuration guidelines for Windows Server 2016 and Windows Server](https://github.com/Microsoft/SDN/blob/master/Diagnostics/S2D%20WS2016_ConvergedNIC_Configuration.docx). 
 
 If you're testing Storage Spaces Direct inside of virtual machines, skip this section. RDMA is not available for networking inside a virtual machine.
 
