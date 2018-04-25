@@ -98,7 +98,7 @@ This measurement can be obtained using the inbox w32tm.exe tool.  To do this:
 
 3. Perform the calculation from time server a against the source.
  
-4. Next, add the average RoundTripDelay measured in the previous step and divide by 2 to obtain the cumulative network delay between target and source.3. 
+4. Next, add the average RoundTripDelay measured in the previous step and divide by 2 to obtain the cumulative network delay between target and source.
 
 #### Registry Settings
 
@@ -111,7 +111,7 @@ Configures the smallest interval in log2 seconds allowed for system polling.
 |Setting    | 6        |
 |Outcome | The minimum polling interval is now 64 seconds. |
 
-The following command signals Windows Time to puck up the updated settings:
+The following command signals Windows Time to pick up the updated settings:
 
 ```
 w32tm /config /update
@@ -127,7 +127,7 @@ Configures the largest interval in log2 seconds allowed for system polling.
 |Setting    | 6        |
 |Outcome | The maximum polling interval is now 64 seconds.  |
 
-The following command signals Windows Time to puck up the updated settings:
+The following command signals Windows Time to pick up the updated settings:
 
 ```
 w32tm /config /update
@@ -142,7 +142,7 @@ The number of clock ticks between phase correction adjustments.
 |Setting    | 100        |
 |Outcome | The number of clock ticks between phase correction adjustments is now 100 ticks. |
 
-The following command signals Windows Time to puck up the updated settings:
+The following command signals Windows Time to pick up the updated settings:
 
 ```
 w32tm /config /update
@@ -157,7 +157,7 @@ Configures the poll interval in seconds when the SpecialInterval 0x1 flag is ena
 |Setting    | 64        |
 |Outcome | The poll interval is now 64 seconds. |
 
-The following command restarts Windows Time to puck up the updated settings:
+The following command restarts Windows Time to pick up the updated settings:
 
 ```
 net stop w32time
