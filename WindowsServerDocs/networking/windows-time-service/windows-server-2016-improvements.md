@@ -1,22 +1,3 @@
----
-ms.assetid: e34622ff-b2d0-4f81-8d00-dacd5d6c215e
-title: Time Accuracy Improvements for Windows Server 2016
-description: Time synchronization accuracy in Windows Server 2016 has been improved substantially, while maintaining full backwards NTP compatibility with older Windows versions. 
-author: shortpatti
-ms.author: pashort
-manager: alanth
-ms.date: 02/01/2018
-ms.topic: article
-ms.prod: windows-server-threshold
-ms.technology: networking
----
-
-# Time Accuracy Improvements for Windows Server 2016
-
->Applies To: Windows Server 2016
-
-Time synchronization accuracy in Windows Server 2016 has been improved substantially, while maintaining full backwards NTP compatibility with older Windows versions.  Under reasonable operating conditions you can maintain a 1 ms accuracy with respect to UTC or better for Windows Server 2016 and Windows 10 Anniversary Update domain members.
-
 ## Windows Time Service and NTP
 Windows Server 2016 has improved the algorithms it uses to correct time and condition the local clock to synchronize with UTC.  NTP uses 4 values to calculate the time offset, based on the timestamps of the client request/response and server request/response.  However, networks are noisy, and there can be spikes in the data from NTP due to network congestion and other factors that affect network latency.  Windows 2016 algorithms average out this noise using a number of different techniques which results in a stable and accurate clock.  Additionally, the source we use for accurate time references an improved API which gives us better resolution.  With these improvements we are able to achieve 1 ms accuracy with regards to UTC across a domain.
 
