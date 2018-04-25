@@ -115,7 +115,12 @@ This is what it looks like if you turn both keys on:
 ![Remote Desktop - The performance monitor with both keys on](.\media\rds-user-input-delay-with-two-counters.png)
 
 ## Using the new counters with non-Microsoft tools
+
 Monitoring tools can consume this counter by using the [Perfmon API](https://msdn.microsoft.com/library/windows/desktop/aa371903.aspx).
+
+## Download Windows Server Insider software
+
+Registered Insiders can navigate directly to the [Windows Server Insider Preview download page](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewserver) to get the latest Insider software downloads.  To learn how to register as an Insider, see [Getting started with Server](https://insider.windows.com/en-us/for-business-getting-started-server/).
 
 ## Share your feedback
 
