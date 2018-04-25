@@ -113,9 +113,7 @@ Configures the smallest interval in log2 seconds allowed for system polling.
 
 The following command signals Windows Time to pick up the updated settings:
 
-```
-w32tm /config /update
-```
+`w32tm /config /update`
 
 
 # [MaxPollInterval](#tab/MaxPollInterval)
