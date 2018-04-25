@@ -20,7 +20,7 @@ The following guidance will help you configure your systems to achieve high accu
 - System configuration 
 
 > [!WARNING]
-> **Prior Operating Systems Accuracy Goals**<br>>
+> **Prior Operating Systems Accuracy Goals**<br>
 >Windows Server 2012 R2 and below can not meet the same high accuracy objectives. These operating systems are not supported for high accuracy.
 >
 >In these versions, the Windows Time service satisfied the following requirements:
