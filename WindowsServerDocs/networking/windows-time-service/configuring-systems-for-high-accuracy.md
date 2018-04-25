@@ -42,7 +42,7 @@ As such, the **default configuration** is intended to satisfy the same requireme
 ## How to Configure Systems for High Accuracy
 
 >[!IMPORTANT]
->**Note Regarding Supportability of Highly Accurate Systems**<br>>
+>**Note Regarding Supportability of Highly Accurate Systems**<br>
 > Time accuracy entails the end-to-end distribution of accurate time from the authoritative time source to the end device.  Anything that adds assymetry in measurements along this path will negatively influence accuracy will affect the accuracy achievable on your devices.
 >
 >For this reason, we have documented the [Support boundary to configure the Windows Time service for high-accuracy environments](support-boundary.md) outlining the environmental requirements that must also be satisfied to reach high accuracy targets.
@@ -129,9 +129,7 @@ Configures the largest interval in log2 seconds allowed for system polling.
 
 The following command signals Windows Time to pick up the updated settings:
 
-```
-w32tm /config /update
-```
+`w32tm /config /update`
 
 # [UpdateInterval](#tab/UpdateInterval)
 The number of clock ticks between phase correction adjustments.
@@ -144,9 +142,7 @@ The number of clock ticks between phase correction adjustments.
 
 The following command signals Windows Time to pick up the updated settings:
 
-```
-w32tm /config /update
-```
+`w32tm /config /update`
 
 # [SpecialPollInterval](#tab/SpecialPollInterval)
 Configures the poll interval in seconds when the SpecialInterval 0x1 flag is enabled.
@@ -159,10 +155,8 @@ Configures the poll interval in seconds when the SpecialInterval 0x1 flag is ena
 
 The following command restarts Windows Time to pick up the updated settings:
 
-```
-net stop w32time
-net start w32time
-```
+`net stop w32time`
+'net start w32time`
 
 # [FrequencyCorrectRate](#tab/FrequencyCorrectRate)
 
