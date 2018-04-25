@@ -14,7 +14,8 @@ ms.technology: identity-adfs
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2
 
-Personal data is any information relating to an identified or identifiable person.  There is no distinction between a person's private, public, or work roles.  Microsoft products and services are available today to help you meet the privacy requirements. Read more about Microsoft Privacy policy at [Trust Center](https://www.microsoft.com/trustcenter).
+>[!Note] 
+>If you’re interested in viewing or deleting personal data, please see the [Azure Data Subject Requests for the GDPR](https://docs.microsoft.com/microsoft-365/compliance/gdpr-dsr-azure) article. If you’re looking for general info about GDPR, see the [GDPR section of the Service Trust Center](https://www.microsoft.com/en-us/TrustCenter/Privacy/gdpr/default.aspx).
 
 ## AD FS Event Logs
 An AD FS server stores the following data that contains user privacy information:
