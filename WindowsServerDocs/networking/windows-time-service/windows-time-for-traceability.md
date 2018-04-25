@@ -15,7 +15,7 @@ ms.technology: networking
 
 ## Introduction
 
-Regulations in many sectors require systems to be traceable to UTC.  This means that a system's offset can be attested with respect to UTC.  To enable regulatory compliance scenarios, Windows 10 and Server 2016 provides new event logs to provide a picture from the perspective of the Operating System to form an understanding of the actions taken on the system clock.  These event logs are generated continuously for W32time service and can be examined or archived for later analysis.
+Regulations in many sectors require systems to be traceable to UTC.  This means that a system's offset can be attested with respect to UTC.  To enable regulatory compliance scenarios, Windows 10 and Server 2016 provides new event logs to provide a picture from the perspective of the Operating System to form an understanding of the actions taken on the system clock.  These event logs are generated continuously for Windows Time service and can be examined or archived for later analysis.
 
 These new events enable the following questions to be answered:
 
@@ -25,15 +25,19 @@ These new events enable the following questions to be answered:
 
 ## Availability
 
-These improvements are included on Windows 10 and Server 2016 in version 1709 (Redstone 3).
+These improvements are included in Windows 10 version 1703 and Windows Server 2016 version 1709 or later.
 
 ## Configuration
 
 No configuration is required to realize this feature.  These event logs are enabled by default and can be found in the event viewer under the **Applications and Services Log\Microsoft\Windows\Time-Service\Operational** channel.
 
+
 ## List of Event Logs
 
 The following section outlines the events logged for use in traceability scenarios.
+
+<!-- use tabs like the group policies -->
+
 
 ### Service Start
 
@@ -51,6 +55,7 @@ This event is logged when the Windows Time Service (W32Time) is started and logs
 * Throttling Mechanism: None. This event fires every time the service starts.
 
 #### Example Text
+<!-- figure out how to incorporate example-->
 
 ```
 W32time service has started at 2018-02-27T04:25:17.156Z (UTC), System Tick Count 3132937.
@@ -116,17 +121,3 @@ This information can also be queried using the following commands
 ```
 w32tm.exe /query /peers
 ```
-
-
-
-
-
-
-
-
-# NEED TO ADD AUDIT LOG CONFIGS OR ADD SECTION ON CONFIGURING AUDIT LOGS TO CAPTURE WHO STOPPED THE SERVICE ETC...
-
-gRAB sEcurity EventID 4616
-Who stopped the service
-who changed the clock - ref previous event
-Who changed configuration - GPO, actual user
