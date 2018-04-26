@@ -1,11 +1,10 @@
 ---
 ms.assetid: e34622ff-b2d0-4f81-8d00-dacd5d6c215e
 title: Windows Time Service Technical Reference
-description: The W32Time service provides network clock synchronization for computers without the need for extensive configuration.
+description: The W32Time service provides network clock synchronization for computers without the need for extensive configuration. The W32Time service is essential to the successful operation of Kerberos V5 authentication and, therefore, to AD DS-based authentication.
 author: shortpatti
-ms.author: pashort
-manager: ''
-ms.date: 04/19/2018
+ms.author: dacuo
+ms.date: 4/16/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: networking
@@ -54,7 +53,7 @@ This guide does **not** discuss configuring the Windows Time service. There are 
 
 
 > [!IMPORTANT]  
-> Prior to Windows Server 2016, the W32Time service was not designed to meet time-sensitive application needs.  However, updates to Windows Server 2016 now allow you to implement a solution for 1ms accuracy in your domain.  See [Windows 2016 Accurate Time](accurate-time.md) and  [Support boundary to configure the Windows Time service for high-accuracy environments](support-boundary.md) for more information.
+> Prior to Windows Server 2016, the W32Time service was not designed to meet time-sensitive application needs.  However, updates to Windows Server 2016 now allow you to implement a solution for 1ms accuracy in your domain.  For more information about, see  [Windows 2016 Accurate Time](accurate-time.md) and [Support boundary to configure the Windows Time service for high-accuracy environments](support-boundary.md) for more information.
 
 ## Related topics
 - [Windows 2016 Accurate Time](accurate-time.md)
