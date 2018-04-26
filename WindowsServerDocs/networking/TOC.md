@@ -118,6 +118,7 @@
 ## [Network Load Balancing](technologies/Network-Load-Balancing.md)
 
 ## [High-Performance Networking](technologies/network-offload.md)
+## [Remote Direct Memory Access (RDMA)](technologies/rdma/remote-direct-memory-access.md)
 ### [Converged NIC Configuration Guide](technologies/conv-nic/cnic-top.md)
 #### [Converged NIC Configuration with a Single Network Adapter](technologies/conv-nic/cnic-single.md)
 #### [Converged NIC Teamed NIC Configuration](technologies/conv-nic/cnic-datacenter.md)
@@ -126,6 +127,8 @@
 ### [Data Center Bridging (DCB)](technologies/dcb/dcb-top.md)
 #### [Install Data Center Bridging (DCB) in Windows Server or Windows Client](technologies/dcb/dcb-install.md)
 #### [Manage Data Center Bridging (DCB)](technologies/dcb/dcb-manage.md)
+
+## [Network Offload and Optimization Technologies](technologies/network-offload-optimization-technologies.md)
 ### [Virtual Receive Side Scaling (vRSS)](technologies/vrss/vrss-top.md)
 #### [Plan the Use of vRSS](technologies/vrss/vrss-plan.md)
 #### [Enable vRSS on a Virtual Network Adapter](technologies/vrss/vrss-enable.md)
