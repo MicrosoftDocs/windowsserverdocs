@@ -10,7 +10,6 @@ ms.author: pashort
 author: shortpatti
 ms.date: 4/6/2018 
 ---
-<!-- rename file to high-performance-networking and redir for network-offload.md -->
 
 # High-Performance Networking
 
