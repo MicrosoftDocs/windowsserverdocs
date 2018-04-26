@@ -37,7 +37,121 @@ No configuration is required to realize this feature.  These event logs are enab
 The following section outlines the events logged for use in traceability scenarios.
 
 <!-- use tabs like the group policies -->
+# [257](#tab/257)
+This event is logged when the Windows Time Service (W32Time) is started and logs information about the current time, current tick count, runtime configuration, time providers, and current clock rate.
 
+|||
+|---|---|
+|Event desciption |Service Start |
+|Details | |
+|Data logged |<ul><li>Current Time in UTC</li><li>Current Tick Count</li><li>W32Time Configuration</li><li>Time Provider Configuration</li><li>Clock Rate</li></ul> |
+|Throttling mechanism  |None. This event fires every time the service starts. |
+
+**Example:**
+```
+W32time service has started at 2018-02-27T04:25:17.156Z (UTC), System Tick Count 3132937.
+```
+
+**Command:**
+
+This information can also be queried using the following commands
+
+*W32Time and Time Provider configuration*
+```
+w32tm.exe /query /configuration
+```
+
+*Clock Rate*
+```
+w32tm.exe /query /status /verbose
+```
+
+
+# [258](#tab/258)
+
+|||
+|---|---|
+|Event desciption | |
+|Details | |
+|Data logged | |
+|Throttling mechanism  | |
+
+# [259](#tab/259)
+
+|||
+|---|---|
+|Event desciption | |
+|Details | |
+|Data logged | |
+|Throttling mechanism  | |
+
+# [260](#tab/260)
+
+|||
+|---|---|
+|Event desciption | |
+|Details | |
+|Data logged | |
+|Throttling mechanism  | |
+
+# [261](#tab/261)
+
+|||
+|---|---|
+|Event desciption | |
+|Details | |
+|Data logged | |
+|Throttling mechanism  | |
+
+# [262](#tab/262)
+
+|||
+|---|---|
+|Event desciption | |
+|Details | |
+|Data logged | |
+|Throttling mechanism  | |
+
+# [263](#tab/263)
+
+|||
+|---|---|
+|Event desciption | |
+|Details | |
+|Data logged | |
+|Throttling mechanism  | |
+
+
+# [264](#tab/264)
+
+|||
+|---|---|
+|Event desciption | |
+|Details | |
+|Data logged | |
+|Throttling mechanism  | |
+
+
+# [265](#tab/265)
+
+|||
+|---|---|
+|Event desciption | |
+|Details | |
+|Data logged | |
+|Throttling mechanism  | |
+
+# [266](#tab/266)
+
+|||
+|---|---|
+|Event desciption | |
+|Details | |
+|Data logged | |
+|Throttling mechanism  | |
+
+
+---
 
 ### Service Start
 
