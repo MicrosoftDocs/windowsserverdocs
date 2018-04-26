@@ -1,5 +1,5 @@
 ---
-title: Understanding Quorum
+title: Understanding cluster and pool quorum
 description: Understanding Cluster and Pool Quorum, with specific examples to go over the intricacies.
 keywords: Storage Spaces Direct,Quorum,Witness,S2D,Cluster Quorum,Pool Quorum,Cluster,Pool
 ms.assetid: 
@@ -12,7 +12,7 @@ author: adagashe
 ms.date: 02/23/2018
 ms.localizationpriority: 
 ---
-# Understanding Cluster and Pool Quorum
+# Understanding cluster and pool quorum
 
 >Applies To: Windows Server 2016
 

@@ -6,7 +6,7 @@ ms.manager: dongill
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 3/30/2018
+ms.date: 4/26/2018
 ms.assetid: 8bd0d09a-0421-40a4-b752-40ecb5350ffd
 description: An overview of Storage Spaces Direct, a feature of Windows Server Enterprise Edition that enables you to cluster servers with internal storage into a software-defined storage solution.
 ms.localizationpriority: medium
@@ -15,9 +15,11 @@ ms.localizationpriority: medium
 
 >Applies to: Windows Server 2016
 
-Storage Spaces Direct uses industry-standard servers with local-attached drives to create highly available, highly scalable software-defined storage at a fraction of the cost of traditional SAN or NAS arrays. Its converged or hyper-converged architecture radically simplifies procurement and deployment, while features like caching, storage tiers, and erasure coding, together with the latest hardware innovation like RDMA networking and NVMe drives, deliver unrivaled efficiency and performance.
+Storage Spaces Direct uses industry-standard servers with local-attached drives to create highly available, highly scalable software-defined storage at a fraction of the cost of traditional SAN or NAS arrays. Its converged or hyper-converged architecture radically simplifies procurement and deployment, while features such as caching, storage tiers, and erasure coding, together with the latest hardware innovations such as RDMA networking and NVMe drives, deliver unrivaled efficiency and performance.
 
-Storage Spaces Direct is included in Windows Server 2016 Datacenter and [Windows Server Insider Preview Builds](https://insider.windows.com/en-us/for-business-getting-started-server/).
+Storage Spaces Direct is included in Windows Server 2016 Datacenter and [Windows Server Insider Preview Builds](https://insider.windows.com/en-us/for-business-getting-started-server/). 
+
+For other applications of Storage Spaces, such as Shared SAS clusters and stand-alone servers, see [Storage Spaces overview](overview.md).
 
 <table>
     <tr style="border: 0;">
@@ -60,11 +62,16 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter and [Windows
 			  <li><a href="remove-servers.md">Remove servers</a></li>
 			  <li><a href="resize-volumes.md">Extend volumes</a></li>
 			  <li><a href="../update-firmware.md">Update drive firmware</a></li>
-              <li><a href="storage-spaces-states.md">Troubleshoot health and operational states</a></li>
 		    </ul>
         </td>
     </tr>
     <tr style="border: 0;">
+         <td style="padding: 5px; border: 0;">
+            <strong>Troubleshooting</a></strong>
+            <ul>
+              <li><a href="storage-spaces-states.md">Troubleshoot health and operational states</a></li>
+              <li><a href="data-collection.md">Collect diagnostic data with Storage Spaces Direct</a></li>
+            </ul>
          <td style="padding: 5px; border: 0;">
             <strong>Insider Preview content</a></strong>
             <ul>
@@ -72,7 +79,6 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter and [Windows
                 <li><a href="delimit-volume-allocation.md">Delimit the allocation of volumes</a></li>
             </ul>
     </tr>
-    
 </table>
 
 ## Videos
