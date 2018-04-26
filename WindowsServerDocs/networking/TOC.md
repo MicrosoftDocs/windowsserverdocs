@@ -89,6 +89,23 @@
 #### [DHCP Logging Events for DNS Record Registrations](technologies/dhcp/dhcp-dns-events.md)
 ### [Deploy DHCP Using Windows PowerShell](technologies/dhcp/dhcp-deploy-wps.md)
 
+## [High-Performance Networking](technologies/network-offload.md)
+### [Converged NIC Configuration Guide](technologies/conv-nic/cnic-top.md)
+#### [Converged NIC Configuration with a Single Network Adapter](technologies/conv-nic/cnic-single.md)
+#### [Converged NIC Teamed NIC Configuration](technologies/conv-nic/cnic-datacenter.md)
+#### [Physical Switch Configuration for Converged NIC](technologies/conv-nic/cnic-app-switch-config.md)
+#### [Troubleshooting Converged NIC Configurations](technologies/conv-nic/cnic-app-troubleshoot.md)
+### [Data Center Bridging (DCB)](technologies/dcb/dcb-top.md)
+#### [Install Data Center Bridging (DCB) in Windows Server or Windows Client](technologies/dcb/dcb-install.md)
+#### [Manage Data Center Bridging (DCB)](technologies/dcb/dcb-manage.md)
+### [Virtual Receive Side Scaling (vRSS)](technologies/vrss/vrss-top.md)
+#### [Plan the Use of vRSS](technologies/vrss/vrss-plan.md)
+#### [Enable vRSS on a Virtual Network Adapter](technologies/vrss/vrss-enable.md)
+#### [Manage vRSS](technologies/vrss/vrss-manage.md)
+#### [vRSS Frequently Asked Questions](technologies/vrss/vrss-faq.md)
+#### [Windows PowerShell Commands for RSS and vRSS](technologies/vrss/vrss-wps.md)
+
+
 ## [Hyper-V Virtual Switch](technologies/vswitch-stub.md)
 
 ## [IP Address Management (IPAM)](technologies/ipam/ipam-top.md)
@@ -117,21 +134,7 @@
 
 ## [Network Load Balancing](technologies/Network-Load-Balancing.md)
 
-## [High-Performance Networking](technologies/network-offload.md)
-### [Converged NIC Configuration Guide](technologies/conv-nic/cnic-top.md)
-#### [Converged NIC Configuration with a Single Network Adapter](technologies/conv-nic/cnic-single.md)
-#### [Converged NIC Teamed NIC Configuration](technologies/conv-nic/cnic-datacenter.md)
-#### [Physical Switch Configuration for Converged NIC](technologies/conv-nic/cnic-app-switch-config.md)
-#### [Troubleshooting Converged NIC Configurations](technologies/conv-nic/cnic-app-troubleshoot.md)
-### [Data Center Bridging (DCB)](technologies/dcb/dcb-top.md)
-#### [Install Data Center Bridging (DCB) in Windows Server or Windows Client](technologies/dcb/dcb-install.md)
-#### [Manage Data Center Bridging (DCB)](technologies/dcb/dcb-manage.md)
-### [Virtual Receive Side Scaling (vRSS)](technologies/vrss/vrss-top.md)
-#### [Plan the Use of vRSS](technologies/vrss/vrss-plan.md)
-#### [Enable vRSS on a Virtual Network Adapter](technologies/vrss/vrss-enable.md)
-#### [Manage vRSS](technologies/vrss/vrss-manage.md)
-#### [vRSS Frequently Asked Questions](technologies/vrss/vrss-faq.md)
-#### [Windows PowerShell Commands for RSS and vRSS](technologies/vrss/vrss-wps.md)
+
 
 ## [Network Policy Server (NPS)](technologies/nps/nps-top.md)
 ### [Network Policy Server Best Practices](technologies/nps/nps-best-practices.md)
