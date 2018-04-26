@@ -2,10 +2,10 @@
 ms.assetid: d1953097-63ea-4a0e-b860-2f3b7c175c41
 title: How the Windows Time Service Works
 description:
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+author: shortpatti
+ms.author: pashort
+manager: alanth
+ms.date: 4/16/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 
@@ -27,7 +27,7 @@ ms.technology: networking
 -   [Network Ports Used by Windows Time Service](#w2k3tr_times_how_ydum)  
   
 > [!NOTE]  
-> This topic explains only how the Windows Time service (W32Time) works. For information about how to configure Windows Time service, see the list of topics in the [Where to find Windows Time service configuration-related information](windows-time-service-tech-ref.md#where-to-find-windows-time-service-configuration-related-information) section.
+> This topic explains only how the Windows Time service (W32Time) works. For information about how to configure Windows Time service, see [Configuring Systems for High Accuracy](configuring-systems-for-high-accuracy.md).
   
 > [!NOTE]  
 > In Windows Server 2003 and Microsoft Windows 2000 Server, the directory service is named Active Directory directory service. In  Windows Server 2008  and later versions, the directory service is named Active Directory Domain Services (AD DS). The rest of this topic refers to AD DS, but the information is also applicable to Active Directory.  
@@ -167,7 +167,6 @@ Each of these synchronization types is discussed in the following section.
 Synchronization that is based on a domain hierarchy uses the AD DS domain hierarchy to find a reliable source with which to synchronize time. Based on domain hierarchy, the Windows Time service determines the accuracy of each time server. In a Windows Server 2003 forest, the computer that holds the primary domain controller (PDC) emulator operations master role, located in the forest root domain, holds the position of best time source, unless another reliable time source has been configured. The following figure illustrates a path of time synchronization between computers in a domain hierarchy.  
   
 **Time Synchronization in an AD DS Hierarchy**  
-  
 ![Windows Time](../media/Windows-Time-Service/How-the-Windows-Time-Service-Works/trnt_ntw_adhc.gif)
   
 #### Reliable Time Source Configuration  
