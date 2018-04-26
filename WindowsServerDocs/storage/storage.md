@@ -37,7 +37,7 @@ For an overview of storage technologies included in Windows Server, see the foll
 
 * [Work Folders](work-folders/work-folders-overview.md) - With Work Folders users can store and access work files on personal computers and devices, often referred to as bring-your-own device (BYOD), in addition to corporate PCs. Users gain a convenient location to store work files, and they can access them from anywhere. Organizations maintain control over corporate data by storing the files on centrally managed file servers, and optionally specifying user device policies such as encryption and lock-screen passwords.
 
-* [Offline Files and Folder Redirection](folder-redirection-rup-overview.md) - Folder Redirection and Offline Files are used together to redirect the path of local folders (such as the Documents folder) to a network location, while caching the contents locally for increased speed and availability.
+* [Offline Files and Folder Redirection](folder-redirection/folder-redirection-rup-overview.md) - Folder Redirection and Offline Files are used together to redirect the path of local folders (such as the Documents folder) to a network location, while caching the contents locally for increased speed and availability.
 
 * [Roaming User Profiles](folder-redirection/deploy-roaming-user-profiles.md) is used to redirect a user profile to a network location.
 

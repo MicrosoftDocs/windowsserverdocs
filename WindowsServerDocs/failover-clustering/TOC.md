@@ -2,7 +2,7 @@
 ## [What's New in Failover Clustering](whats-new-in-failover-clustering.md)
 ## Understand
 ### [Scale-Out File Server for application data](sofs-overview.md)
-### [Cluster and pool quorum](storage-spaces/understand-quorum.md)
+### [Cluster and pool quorum](../storage/storage-spaces/understand-quorum.md)
 ### [Fault domain awareness](fault-domains.md)
 ### [Simplified SMB Multichannel and multi-NIC cluster networks](smb-multichannel.md)
 ### [VM load balancing](vm-load-balancing-overview.md)
