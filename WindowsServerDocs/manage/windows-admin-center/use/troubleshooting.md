@@ -171,7 +171,7 @@ intend to manage:
 
 <a id="filebug"></a>
 
-## Still not working, or you issue is not captured here?
+## Still not working, or is your issue is not captured here?
 
 Go to Event Viewer > Application and Services > Microsoft-ServerManagementExperience and look for any errors or warnings.
 
