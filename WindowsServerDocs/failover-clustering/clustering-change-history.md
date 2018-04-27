@@ -5,9 +5,9 @@ ms.prod: windows-server-threshold
 ms.technology: storage-failover-clustering
 ms.topic: article
 author: JasonGerend
-manager: dongill
+manager: elizapo
 ms.author: jgerend
-ms.date: 4/2/2018
+ms.date: 4/26/2018
 description: New and updated topics in the Failover Clustering documentation for Windows Server 2016
 ---
 # Change history for Failover Clustering topics in Windows Server 2016
@@ -19,9 +19,13 @@ This topic lists new and updated topics in the [Failover Clustering](failover-cl
 > If you're looking for update history for Windows Server 2016, see [Windows 10 and Windows Server 2016 update history](https://support.microsoft.com/help/4000825/windows-10-and-windows-server-2016-update-history).
 
 ## April 2018
+
 |New or changed topic|Description|
 |---|---|
 |[Troubleshooting a Failover Cluster using Windows Error Reporting](troubleshooting-using-WER-reports.md)| New topic. |
+|[Scale-Out File Server for application data](sofs-overview.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library.|
+|[Hardware requirements](clustering-requirements.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library.|
+|[Use Cluster Shared Volumes (CSVs)](failover-cluster-csvs.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library.|
 
 ## June 2017
 
