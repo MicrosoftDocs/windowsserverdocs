@@ -18,7 +18,7 @@ If you encounter an issue not described on this page, please [let us know](http:
 
 ## **Insider preview** Windows 10 & Window Server 2019 (RS5)
 
-- Windows Admin Center cannot be installed on a Windows 10 or Windows Server 2019 insider build (greater than build number 176XX.) This is caused by a regression that will be fixed in an upcoming Windows Insider build. 
+- Windows Admin Center cannot be installed on a Windows 10 or Windows Server 2019 insider build (greater than build number 17134.xxx.) This is caused by a regression that will be fixed in an upcoming Windows Insider build. 
 
 ## Signature verification failed
 
