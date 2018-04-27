@@ -49,7 +49,7 @@ ms.prod: windows-server-threshold
 
 * Make sure you are using either Microsoft Edge or Google Chrome as your web browser.
 
-* Did you select the correct certificate on [first launch?](launch)
+* Did you select the correct certificate on [first launch?](launch.md)
 
   * Try opening your browser in a private session - if that works, you'll need to clear your cache.
 
@@ -60,7 +60,7 @@ ms.prod: windows-server-threshold
 ### If you've installed Windows Admin Center as a **Gateway on Windows Server**
 * [Check the Windows version](#winvercompat) of the client and server.
 * Make sure you are using either Microsoft Edge or Google Chrome as your web browser.
-* Is the server disconnected from the internet? If yes, this is a [known issue](./known-issues#signature-verification-failed) that will be fixed in the next update. For now, connecting the server to the internet will resolve this problem. 
+* Is the server disconnected from the internet? If yes, this is a [known issue](known-issues.md#signature-verification-failed) that will be fixed in the next update. For now, connecting the server to the internet will resolve this problem. 
 
 * On the server, open Task Manager > Services and make sure "ServerManagementGateway" or "Windows Admin Center" is running.
 ![](../media/Service-TaskMan.PNG)
@@ -90,7 +90,7 @@ Test-NetConnection -Port <port> -ComputerName <gateway> -InformationLevel Detail
 
 * If you are using Windows 10 version 1703 or below, Windows Admin Center is not supported on your version of Microsoft Edge. Either upgrade to a recent version of Windows 10 or use Chrome.
 
-* If you are using an insider preview version of Windows 10 or Server with a build version greater than 17134.xxxx, Windows Admin Center has a [known incompatibility.](./known-issues#insider-preview-windows-10--window-server-2019-rs5)
+* If you are using an insider preview version of Windows 10 or Server with a build version greater than 17134.xxxx, Windows Admin Center has a [known incompatibility.](known-issues.md#insider-preview-windows-10--window-server-2019-rs5)
 
 [[back to top]](#toc)
 
