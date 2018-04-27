@@ -82,3 +82,7 @@ msiexec /i <WindowsAdminCenterInstallerName>.msi /qn /L*v log.txt SME_PORT=<port
 
 > [!WARNING] 
 > Don't invoke `msiexec` from PowerShell using dot-slash relative path notation (like,  `.\<WindowsAdminCenterInstallerName>.msi`). That notation isn't supported, the installation will fail. Remove the `.\` prefix or specify the full path to the MSI.
+
+## Update Windows Admin Center 
+
+If you already have a previous version Windows Admin Center (or Project 'Honolulu' Technical Preview) The installer will detect and preserve your previous settings. 
