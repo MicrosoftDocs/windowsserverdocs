@@ -30,7 +30,7 @@ By using Workplace Join, information workers can join their personal devices wit
 ### <a name="BKMK_DRS"></a>Azure Active Directory Device Registration service
 Workplace Join is made possible by the Azure Active Directory Device Registration service. When a device is joined by Workplace Join, the service provisions a device object in Azure Active Directory and then sets a key on the local device that is used to represent the device identity. This device identity can then be used with access control rules for applications that are hosted in the cloud and on-premises.
 
-For more information about enabling Azure Active Directory Device registration service, see [Azure Active Directory Device Registration Service Overview](https://msdn.microsoft.com/6a14cb1f-a058-4453-8ede-d9f4a66a7073.aspx).
+For more details, see [Introduction to device management in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/device-management-introduction).
 
 ### Workplace Join as a seamless second factor authentication
 Companies can manage the risk that is related to information access and drive governance and compliance while granting consumer devices access to corporate resources. Workplace Join on devices provides the following capabilities to administrators:
