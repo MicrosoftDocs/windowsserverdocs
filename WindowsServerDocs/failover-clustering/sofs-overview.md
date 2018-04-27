@@ -6,7 +6,7 @@ ms.topic: article
 author: JasonGerend 
 ms.author: jgerend 
 ms.technology: storage-failover-clustering 
-ms.date: 4/26/18
+ms.date: 04/26/18
 ms.localizationpriority: low
 ---
 # Scale-Out File Server for application data overview

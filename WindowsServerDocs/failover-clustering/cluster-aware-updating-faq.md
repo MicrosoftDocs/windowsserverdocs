@@ -6,7 +6,7 @@ ms.prod: windows-server-threshold
 manager: dongill
 ms.author: jgerend
 author: JasonGerend
-ms.date: 4/28/2017
+ms.date: 04/28/2017
 description: Answers to frequently asked questions about Cluster-Aware Updating in Windows Server.
 ---
 # Cluster-Aware Updating: Frequently Asked Questions
