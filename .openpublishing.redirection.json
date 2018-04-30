@@ -1,11 +1,6 @@
 {
   "redirections": [
     {
-      "source_path": "https://support.microsoft.com/en-us/help/939322/support-boundary-to-configure-the-windows-time-service-for-high-accura",
-      "redirect_url": "/windows-server/networking/windows-time-service/support-boundary",
-      "redirect_document_id": true
-    },
-    {
       "source_path": "WindowsServerDocs/identity/ad-ds/get-started/windows-time-service/Windows-Time-Service.md",
       "redirect_url": "/windows-server/networking/windows-time-service/windows-time-service-top",
       "redirect_document_id": true
