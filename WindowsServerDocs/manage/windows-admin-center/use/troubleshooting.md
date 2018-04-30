@@ -5,37 +5,131 @@ ms.technology: manage
 ms.topic: article
 author: jwwool
 ms.author: jeffrew
-ms.date: 04/12/2018
+ms.date: 04/25/2018
 ms.localizationpriority: low
 ms.prod: windows-server-threshold
 ---
 
-# Windows Admin Center Common Troubleshooting Steps
+# Troubleshooting Windows Admin Center
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10
+> [!Important]
+> This guide will help you diagnose and resolve issues that are preventing you from using Windows Admin Center. If you are having an issue with a specific tool, please check to see if you are experiencing a [known issue.](http://aka.ms/wacknownissues)
 
-This article describes common Windows Admin Center configuration issues and how to fix them.
+<a id="toc"></a>
 
-Before troubleshooting, check to see if you are experiencing a [known issue.](known-issues.md)
+## Quick links
 
-## Verify Connectivity
+* I get a **This site/page can't be reached** error in my web browser (select your deployment type)
+    * [I have Windows Admin Center installed as an App on Windows 10](#whitescreenw10)
+    * [I have Windows Admin Center installed as an Gateway on Windows Server](#whitescreenws)
+    * [I have Windows Admin Center installed as an Gateway on an Azure VM](#whitescreenzvm)
 
-If possible, log on to the gateway machine locally and try to ```Enter-PSSession <target machine>``` in PowerShell. Windows Admin Center is mostly remote PowerShell under the hood so if ```Enter-PSSession``` fails, Windows Admin Center will not work.
+* [Windows Admin Center home page loads, but I'm stuck on the Add Connection pane](#winvercompat)
 
-## Clear your browser cache
+* [I get the message: "Error while loading the module. Rpc: Expired retries 'Ping'."](#winvercompat)
 
-You may sometimes need to clear your browser cache if you find that portions of the interface are not responding.
+* [I can connect to some servers, but not others](#connectionissues)
 
-## Delete data from previous install
+* [I'm using Windows Admin Center in a **workgroup**](#workgroup)
 
-If you have previously installed Windows Admin Center on as a gateway on Windows Server (not Windows 10), you may need to delete the application data if the service fails to start, or if your connection list appears corrupted. 
+* [My issue is not listed here, or the steps on this page did not resolve my issue.](#filebug)
 
-To remove the application data, delete the **Server Management Experience** folder under **C:\\Windows\\ServiceProfiles\\NetworkService\\AppData\\Roaming\\Microsoft**
+## I get a **This site/page can't be reached** error in my web browser
 
-> [!WARNING]
-> This will delete all users connection lists and gateway settings that you have modified.
+<a id="whitescreenw10"></a>
 
-## Configure TrustedHosts
+### If you've installed Windows Admin Center as an **App on Windows 10**
+
+* Check to make sure Windows Admin Center is running. Look for the Windows Admin Center icon ![](../media/trayIcon.PNG) in the System tray or **SME Desktop Executable**/**SmeDesktop.exe** in Task Manager. If not, launch **Windows Admin Center** from the Start Menu.
+
+> [!NOTE] 
+> After rebooting, you must launch Windows Admin Center from the Start Menu.  
+
+* [Check the Windows version](#winvercompat)
+
+* Make sure you are using either Microsoft Edge or Google Chrome as your web browser.
+
+* Did you select the correct certificate on [first launch?](launch.md)
+
+  * Try opening your browser in a private session - if that works, you'll need to clear your cache.
+
+[[back to top]](#toc)
+
+<a id="whitescreenws"></a>
+
+### If you've installed Windows Admin Center as a **Gateway on Windows Server**
+* [Check the Windows version](#winvercompat) of the client and server.
+* Make sure you are using either Microsoft Edge or Google Chrome as your web browser.
+* Is the server disconnected from the internet? If yes, this is a [known issue](known-issues.md#signature-verification-failed) that will be fixed in the next update. For now, connecting the server to the internet will resolve this problem. 
+
+* On the server, open Task Manager > Services and make sure "ServerManagementGateway" or "Windows Admin Center" is running.
+![](../media/Service-TaskMan.PNG)
+
+* Test the network connection to the Gateway (replace \<values> with the information from your deployment)
+```powershell
+Test-NetConnection -Port <port> -ComputerName <gateway> -InformationLevel Detailed
+```
+
+[[back to top]](#toc)
+
+<a id="whitescreenazvm"></a>  
+
+### If you've installed Windows Admin Center in an Azure Windows Server VM
+
+* [Check the Windows version](#winvercompat)
+* Did you add an inbound port rule for HTTPS? 
+* [Learn more about installing Windows Admin Center in an Azure VM](https://docs.microsoft.com/en-us/windows-server/manage/windows-admin-center/configure/azure-integration#use-a-windows-admin-center-gateway-deployed-in-azure)
+
+[[back to top]](#toc)
+
+<a id="winvercompat"></a>
+
+## Check the Windows version
+
+* Open the run dialog (Windows Key + R) and launch ```winver```.
+
+* If you are using Windows 10 version 1703 or below, Windows Admin Center is not supported on your version of Microsoft Edge. Either upgrade to a recent version of Windows 10 or use Chrome.
+
+* If you are using an insider preview version of Windows 10 or Server with a build version greater than 17134.xxxx, Windows Admin Center has a [known incompatibility.](known-issues.md#insider-preview-windows-10--window-server-2019-rs5)
+
+[[back to top]](#toc)
+
+<a id="connectionissues"></a> 
+
+## I can connect to some servers, but not others
+* Log on to the gateway machine locally and try to ```Enter-PSSession <machine name>``` in PowerShell, replacing \<machine name> with the name of the Machine you are trying to manage in Windows Admin Center. 
+
+* If your environment uses a workgroup instead of a domain, see [using Windows Admin Center in a workgroup](#workgroup).
+
+* **Using local administrator accounts:** If you are using a local user account that is not the built-in administrator account, you will need to enable the policy on the target machine by running the following command in PowerShell or at a Command Prompt as Administrator on the target machine:
+
+    REG ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v LocalAccountTokenFilterPolicy /t REG_DWORD /d 1
+
+[[back to top]](#toc)
+
+<a id="workgroup"></a>
+
+## Using Windows Admin Center in a workgroup 
+
+### What account are you using?
+Make sure the credentials you are using are a member of the target server's local administrators group. In some cases, WinRM also requires membership in the Remote Management Users group. If you are using a local user account that is **not the built-in administrator account**, you will need to enable the policy on the target machine by running the following command in PowerShell or at a Command Prompt as Administrator on the target machine:
+
+```
+REG ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v LocalAccountTokenFilterPolicy /t REG_DWORD /d 1
+```
+### Are you connecting to a workgroup machine on a different subnet?
+
+To connect to a workgroup machine that is not on the same subnet as the gateway, make sure the firewall port for WinRM (TCP 5985) allows inbound traffic on the target machine. You can run the following command in PowerShell or at a Command Prompt as Administrator on the target machine to create this firewall rule:
+
+- **Windows Server**
+
+        Set-NetFirewallRule -Name WINRM-HTTP-In-TCP-PUBLIC -RemoteAddress Any
+
+- **Windows 10**
+
+       Set-NetFirewallRule -Name WINRM-HTTP-In-TCP -RemoteAddress Any
+
+### Configure TrustedHosts
 
 When installing Windows Admin Center, you are given the option to let Windows Admin Center manage the gateway's TrustedHosts setting. This is required in a workgroup environment, or when using local administrator credentials in a domain. If you choose to forego this setting, you must configure TrustedHosts manually.
 
@@ -73,33 +167,31 @@ intend to manage:
 
         Set-Item WSMan:localhost\Client\TrustedHosts -Value '<paste values from text file>'## Credentials ##
 
-Make sure the credentials you are using are a member of the target server's local administrators group. In some cases, WinRM also requires membership in the Remote Management Users group.
+[[back to top]](#toc)
 
-## Are you connecting with a local user account?
+<a id="filebug"></a>
 
-When entering credentials in the server connection's **Manage As** dialog box, you can use a local or domain account that is a member of the local administrators group on the target server. However, if you are using a local user account that is not the built-in administrator account, you will need to enable the policy on the target machine by running the following command in PowerShell or at a Command Prompt as Administrator on the target machine:
+## Still not working, or is your issue is not captured here?
 
-    REG ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v LocalAccountTokenFilterPolicy /t REG_DWORD /d 1
+Go to Event Viewer > Application and Services > Microsoft-ServerManagementExperience and look for any errors or warnings.
 
-## Are you connecting to a workgroup machine on a different subnet?
+File a bug on our [UserVoice](https://windowsserver.uservoice.com/forums/295071/category/319162?query=%5BBug%5D) that describes your issue.
 
-To connect to a workgroup machine that is not on the same subnet as the gateway, make sure the firewall port for WinRM (TCP 5985) allows inbound traffic on the target machine. You can run the following command in PowerShell or at a Command Prompt as Administrator on the target machine to create this firewall rule:
+Please include any errors or warning you find in the event log, as well as the following information: 
 
-- **Windows Server**
+* Platform where Windows Admin Center is **installed** (Windows 10 or Windows Server):
+    * If installed on Server, are you using:
+        * A self-signed certificate created by the installer?
+        * Your own certificate?
+            * If you are using your own certificate, does the subject name match the machine?
+            * If you are using your own certificate, does it specify an alternate subject name?
+* Did you install with the default port setting?
+    * If not, which port did you specify?
+* Is the machine where Windows Admin Center is **installed** joined to a domain?
+* Windows [version](#winvercompat) where Windows Admin Center is **installed**:
+* Is the machine that you are **trying to manage** joined to a domain?
+* Windows [version](#winvercompat) of the machine that you are **trying to manage**:
+* What browser are you using?
+    * If you are using Google Chrome, what is the version? (Help > About Google Chrome)
 
-        Set-NetFirewallRule -Name WINRM-HTTP-In-TCP-PUBLIC -RemoteAddress Any
-
-- **Windows 10**
-
-       Set-NetFirewallRule -Name WINRM-HTTP-In-TCP -RemoteAddress Any
-
-## Hyper-V PowerShell not installed
-
-If you've successfully connected to the server with the Hyper-V role, but the *Virtual Machines* tool does not appear, make sure that the Hyper-V Module for Windows PowerShell is installed.
-
-**Enable Hyper-V PowerShell features**
-
-1. Click **Roles and Features** in the **Tools** menu.
-2. In **Roles and Features** find **Remote Server Administration Tools** and check **Role Administration Tools** and **Hyper-V Module for Windows PowerShell**.
-
-![](../media/hyperv-powershell.png)
+[[back to top]](#toc)

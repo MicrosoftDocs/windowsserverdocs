@@ -7,7 +7,7 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.date: 3/30/2018
+ms.date: 4/26/2018
 description: New and updated topics in the on-premises storage documentation for Windows Server for IT Pros.
 ---
 # Change history for storage topics in Windows Server
@@ -17,6 +17,17 @@ description: New and updated topics in the on-premises storage documentation for
 This topic lists new and updated topics in the [Storage](storage.md) documentation for Windows Server.
 
 > If you're looking for update history for Windows Server, see [Windows 10 and Windows Server 2016 update history](https://support.microsoft.com/help/4000825/windows-10-and-windows-server-2016-update-history).
+
+## April 2018
+
+|New or changed topic|Description|
+|---|---|
+|[Collect data in Storage Spaces Direct](storage-spaces/data-collection.md)| New topic.|
+|[Storage Spaces overview](storage-spaces/overview.md)|New topic.|
+|[Folder Redirection, Offline Files, and Roaming User Profiles overview](folder-redirection/folder-redirection-rup-overview.md)|Migrated multiple topics from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library.|
+|[File sharing using the SMB 3 protocol](file-server/file-server-smb-overview.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library.|
+|[Improve performance of a file server with SMB Direct](file-server/smb-direct.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library.|
+|[SMB security enhancements](file-server/smb-security.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library.|
 
 ## March 2018
 

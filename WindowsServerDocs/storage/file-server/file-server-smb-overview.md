@@ -1,15 +1,15 @@
 ---
-title: Server Message Block overview
-description: An overview of the SMB 3.0 Server Message Block protocol feature for Windows Server 2012 R2, Windows Server 2012, and Windows Server 2016.
+title: Overview of file sharing using the SMB 3 protocol in Windows Server
+description: An overview of using the SMB 3 protocol for file shares and file serving with Windows Server.
 ms.prod: windows-server-threshold 
 ms.topic: article 
 author: JasonGerend 
 ms.author: jgerend 
 ms.technology: storage 
-ms.date: 4/5/18
+ms.date: 04/05/2018
 ms.localizationpriority: low
 ---
-# Server Message Block overview
+# Overview of file sharing using the SMB 3 protocol in Windows Server
 
 >Applies to: Windows Server 2012 R2, Windows Server 2012, Windows Server 2016
 
