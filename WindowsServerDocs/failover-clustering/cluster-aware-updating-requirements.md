@@ -7,7 +7,7 @@ ms.manager: dongill
 author: JasonGerend
 ms.author: jgerend
 ms.technology: storage-failover-clustering
-ms.date: 4/28/2017
+ms.date: 04/28/2017
 description: Requirements for using Cluster-Aware Updating to install updates on clusters running Windows Server.
 ---
 # Cluster-Aware Updating requirements and best practices

@@ -1,12 +1,12 @@
 ﻿---
 Title: Deploying Roaming User Profiles
 TOCTitle: Deploying Roaming User Profiles
-ms.date: 04/10/2018
 ms.prod: windows-server-threshold
 ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
+ms.date: 04/10/2018
 ms.author: jgerend
 ---
 # Deploying Roaming User Profiles

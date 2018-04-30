@@ -6,20 +6,14 @@ ms.topic: article
 author: JasonGerend 
 ms.author: jgerend 
 ms.technology: storage 
-ms.date: 4/5/18
+ms.date: 04/05/2018
 ms.localizationpriority: low
 ---
 # Folder Redirection, Offline Files, and Roaming User Profiles overview
 
 >Applies to: Windows 10, Windows 8, Windows 8.1, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016
 
-This topic discusses the Folder Redirection, Offline Files (client-side caching or CSC), and Roaming User Profiles (sometimes known as RUP) technologies, including what’s new in Windows 8 and Windows Server 2012 and where to find additional information.
-
-## Did you mean…
-
-- [Offline Files and Folder Redirection](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/gg277982(v=ws.10)>) (Windows 7 and Windows Server 2008 R2)
-- [Work Folders overview](/work-folders/work-folders-overview.md)
-- [BranchCache](/networking/branchcache/BranchCache.md)
+This topic discusses the Folder Redirection, Offline Files (client-side caching or CSC), and Roaming User Profiles (sometimes known as RUP) technologies, including what’s new and where to find additional information.
 
 ## Technology description
 
@@ -54,7 +48,7 @@ The following table describes some of the major changes in Folder Redirection, O
 
 ## Always Offline mode
 
-In Windows 8, Windows Server 2012, and Windows Server 2016, administrators can configure the experience for users of Offline Files to always work offline, even when they are connected through a high-speed network connection. Windows updates files in the Offline Files cache by synchronizing hourly in the background, by default.
+Starting with Windows 8 and Windows Server 2012, administrators can configure the experience for users of Offline Files to always work offline, even when they are connected through a high-speed network connection. Windows updates files in the Offline Files cache by synchronizing hourly in the background, by default.
 
 ### What value does Always Offline mode add?
 
@@ -67,7 +61,7 @@ The Always Offline mode provides the following benefits:
 
 Prior to Windows 8, Windows Server 2012, users would transition between the Online and Offline modes, depending on network availability and conditions, even when the Slow-Link mode (also known as the Slow Connection mode) was enabled and set to a 1 millisecond latency threshold.
 
-With Always Offline mode, computers running Windows 8, Windows Server 2012, and Windows Server 2016 never transition to Online mode when the **Configure slow-link mode** Group Policy setting is configured and the **Latency** threshold parameter is set to 1 millisecond. Changes are synced in the background every 120 minutes, by default, but synchronization is configurable by using the **Configure Background Sync** Group Policy setting.
+With Always Offline mode, computers never transition to Online mode when the **Configure slow-link mode** Group Policy setting is configured and the **Latency** threshold parameter is set to 1 millisecond. Changes are synced in the background every 120 minutes, by default, but synchronization is configurable by using the **Configure Background Sync** Group Policy setting.
 
 For more information, see [Enable the Always Offline Mode to Provide Faster Access to Files](enable-always-offline.md).
 
@@ -86,13 +80,13 @@ Cost-aware synchronization helps users avoid unexpectedly high data usage costs 
 
 Prior to Windows 8 and Windows Server 2012, users who wanted to minimize fees while using Offline Files on metered network connections had to track their data usage by using tools from the mobile network provider. The users could then manually switch to Offline mode when they were roaming, near their bandwidth limit, or over their limit.
 
-In Windows 8 and Windows Server 2012, Windows automatically tracks roaming and bandwidth usage limits while on metered connections. When the user is roaming, near their bandwidth limit, or over their limit, Windows switches to Offline mode and prevents all synchronization. Users can still manually initiate synchronization, and administrators can override cost-aware synchronization for specific users, such as executives.
+With cost-aware sync, Windows automatically tracks roaming and bandwidth usage limits while on metered connections. When the user is roaming, near their bandwidth limit, or over their limit, Windows switches to Offline mode and prevents all synchronization. Users can still manually initiate synchronization, and administrators can override cost-aware synchronization for specific users, such as executives.
 
-For more information, see [Enable Background File Synchronization on Metered Networks](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj127408(v%3dws.11)>).
+For more information, see [Enable Background File Synchronization on Metered Networks](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj127408(v%3dws.11)).
 
 ## Primary computers for Folder Redirection and Roaming User Profiles
 
-In Windows Server 2012 and Windows Server 2016, you can designate a set of computers, known as primary computers, for each domain user, which enables you to control which computers use Folder Redirection, Roaming User Profiles, or both. Designating primary computers is a simple and powerful method to associate user data and settings with particular computers or devices, simplify administrator oversight, improve data security, and help protect user profiles from corruption.
+You can now designate a set of computers, known as primary computers, for each domain user, which enables you to control which computers use Folder Redirection, Roaming User Profiles, or both. Designating primary computers is a simple and powerful method to associate user data and settings with particular computers or devices, simplify administrator oversight, improve data security, and help protect user profiles from corruption.
 
 ### What value do primary computers add?
 
@@ -122,8 +116,8 @@ Folder Redirection, Offline Files, and Roaming User Profiles require an x64-base
 
 To designate primary computers, your environment must meet the following requirements:
 
-- The Active Directory Domain Services (AD DS) schema must be updated to include Windows Server 2016 schema and conditions. For more information, see [Upgrade Domain Controllers to Windows Server 2016](https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/deploy/upgrade-domain-controllers).
-- Client computers must run Windows 10, Windows 8.1, Windows 8, Windows Server 2012 R2, or Windows Server 2012 and be joined to the Active Directory domain that you are managing.
+- The Active Directory Domain Services (AD DS) schema must be updated to include Windows Server 2012 schema and conditions (installing a Windows Server 2012 or later domain controller automatically updates the schema). For more information about upgrading the AD DS schema, see [Upgrade Domain Controllers to Windows Server 2016](../../identity/ad-ds/deploy/upgrade-domain-controllers.md).
+- Client computers must run Windows 10, Windows 8.1, Windows 8, Windows Server 2016, Windows Server 2012 R2, or Windows Server 2012 and be joined to the Active Directory domain that you are managing.
 
 ## More information
 

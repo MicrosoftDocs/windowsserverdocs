@@ -6,7 +6,7 @@ ms.prod: windows-server-threshold
 manager: dongill
 ms.author: jgerend
 author: JasonGerend
-ms.date: 6/7/2017
+ms.date: 06/07/2017
 description: How to configure advanced options and updating run profiles for Cluster-Aware Updating (CAU)
 ---
 # Cluster-Aware Updating advanced options and updating run profiles

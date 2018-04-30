@@ -24,6 +24,7 @@ You can use the Remote Desktop client for Android to work with Windows apps and 
 Use the following information to get started. Be sure to check out the [FAQ](remote-desktop-client-faq.md) if you have any questions.
 
 > [!NOTE]
+> - Curious about the new releases for the Android client? Check out [What's new for Remote Desktop on Android?](android-whatsnew.md)
 > You can run the client on Android 4.1 and newer devices as well as on Chromebooks with ChromeOS 53 installed. Learn more about Android applications on Chrome [here](https://sites.google.com/a/chromium.org/dev/chromium-os/chrome-os-systems-supporting-android-apps).
 
 ## Get the RD client and start using it
