@@ -6,7 +6,7 @@ ms.topic: article
 author: JasonGerend 
 ms.author: jgerend 
 ms.technology: storage-failover-clustering 
-ms.date: 4/26/2018
+ms.date: 04/26/2018
 ms.localizationpriority: low
 ---
 # Failover clustering hardware requirements and storage options
