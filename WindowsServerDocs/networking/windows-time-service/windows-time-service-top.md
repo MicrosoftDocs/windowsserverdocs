@@ -4,8 +4,8 @@ title: Windows Time Service
 description:
 author: shortpatti
 ms.author: pashort
-manager: alanth
-ms.date: 02/01/2018
+manager: elizapo
+ms.date: 04/30/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: networking
