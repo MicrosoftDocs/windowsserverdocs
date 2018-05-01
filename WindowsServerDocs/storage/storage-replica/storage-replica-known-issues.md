@@ -433,7 +433,7 @@ When running Mount-SRDestination to bring a destination volume online as part of
 
 If using a synchronous partnership type, test failover works normally.    
 
-This is caused by a known code defect in Windows Server, version 1709. It has been resolved in the next Semi-annual Channel Release of Windows Server and in Windows Server 2019 Insider Preview builds. Please contact Microsoft Support to request a backport to Windows Server, use version Windows Server version 1709, or wait for the Windows Server 2019 release. 
+This is caused by a known code defect in Windows Server, version 1709. It has been resolved in the next Semi-annual Channel Release of Windows Server and in Windows Server 2019 Insider Preview builds. Please contact Microsoft Support to request a backport to Windows Server, use Windows Server version 1709, or wait for the Windows Server 2019 release. 
 
 ## See also  
 - [Storage Replica](storage-replica-overview.md)  
