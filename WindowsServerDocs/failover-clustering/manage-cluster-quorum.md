@@ -17,7 +17,7 @@ This topic provides background and steps to configure and manage the quorum in a
 
 ## Understanding quorum
 
-The quorum for a cluster is determined by the number of voting elements that must be part of active cluster membership for that cluster to start properly or continue running. For a more detailed explaination, see the [understanding cluster and pool quorum doc](understand-quorum.md).
+The quorum for a cluster is determined by the number of voting elements that must be part of active cluster membership for that cluster to start properly or continue running. For a more detailed explaination, see the [understanding cluster and pool quorum doc](../storage/storage-spaces/understand-quorum.md).
 
 ## Quorum configuration options
 
@@ -148,11 +148,11 @@ The vote assignment for all cluster nodes can be verified by using the **Validat
 
 ### Dynamic quorum management
 
-In Windows Server 2012, as an advanced quorum configuration option, you can choose to enable dynamic quorum management by cluster. For more details on how dynamic quorum works, see [this explanation](understand-quorum.md#dynamic-quorum-behavior).
+In Windows Server 2012, as an advanced quorum configuration option, you can choose to enable dynamic quorum management by cluster. For more details on how dynamic quorum works, see [this explanation](../storage/storage-spaces/understand-quorum.md#dynamic-quorum-behavior).
 
 With dynamic quorum management, it is also possible for a cluster to run on the last surviving cluster node. By dynamically adjusting the quorum majority requirement, the cluster can sustain sequential node shutdowns to a single node.
 
-The cluster-assigned dynamic vote of a node can be verified with the **DynamicWeight** common property of the cluster node by using the [Get-ClusterNode](https://docs.microsoft.com/en-us/powershell/module/failoverclusters/get-clusternode?view=win10-ps) Windows PowerShell cmdlet. A value of 0 indicates that the node does not have a quorum vote. A value of 1 indicates that the node has a quorum vote.
+The cluster-assigned dynamic vote of a node can be verified with the **DynamicWeight** common property of the cluster node by using the [Get-ClusterNode](https://docs.microsoft.com/powershell/module/failoverclusters/get-clusternode?view=win10-ps) Windows PowerShell cmdlet. A value of 0 indicates that the node does not have a quorum vote. A value of 1 indicates that the node has a quorum vote.
 
 The vote assignment for all cluster nodes can be verified by using the **Validate Cluster Quorum** validation test.
 
@@ -161,11 +161,11 @@ The vote assignment for all cluster nodes can be verified by using the **Validat
 - Dynamic quorum management does not allow the cluster to sustain a simultaneous failure of a majority of voting members. To continue running, the cluster must always have a quorum majority at the time of a node shutdown or failure.
 
 - If you have explicitly removed the vote of a node, the cluster cannot dynamically add or remove that vote.
-- When Storage Spaces Direct is enabled, the cluster can only support two node failures. This is explained more in the [pool quorum section](understand-quorum.md#poolQuorum)
+- When Storage Spaces Direct is enabled, the cluster can only support two node failures. This is explained more in the [pool quorum section](../storage/storage-spaces/understand-quorum.md#poolQuorum)
 
 ## General recommendations for quorum configuration
 
-The cluster software automatically configures the quorum for a new cluster, based on the number of nodes configured and the availability of shared storage. This is usually the most appropriate quorum configuration for that cluster. However, it is a good idea to review the quorum configuration after the cluster is created, before placing the cluster into production. To view the detailed cluster quorum configuration, you can you use the Validate a Configuration Wizard, or the [Test-Cluster](https://docs.microsoft.com/en-us/powershell/module/failoverclusters/test-cluster?view=win10-ps) Windows PowerShell cmdlet, to run the **Validate Quorum Configuration** test. In Failover Cluster Manager, the basic quorum configuration is displayed in the summary information for the selected cluster, or you can review the information about quorum resources that returns when you run the [Get-ClusterQuorum](https://docs.microsoft.com/en-us/powershell/module/failoverclusters/get-clusterquorum?view=win10-ps) Windows PowerShell cmdlet.
+The cluster software automatically configures the quorum for a new cluster, based on the number of nodes configured and the availability of shared storage. This is usually the most appropriate quorum configuration for that cluster. However, it is a good idea to review the quorum configuration after the cluster is created, before placing the cluster into production. To view the detailed cluster quorum configuration, you can you use the Validate a Configuration Wizard, or the [Test-Cluster](https://docs.microsoft.com/powershell/module/failoverclusters/test-cluster?view=win10-ps) Windows PowerShell cmdlet, to run the **Validate Quorum Configuration** test. In Failover Cluster Manager, the basic quorum configuration is displayed in the summary information for the selected cluster, or you can review the information about quorum resources that returns when you run the [Get-ClusterQuorum](https://docs.microsoft.com/powershell/module/failoverclusters/get-clusterquorum?view=win10-ps) Windows PowerShell cmdlet.
 
 At any time, you can run the **Validate Quorum Configuration** test to validate that the quorum configuration is optimal for your cluster. The test output indicates if a change to the quorum configuration is recommended and the settings that are optimal. If a change is recommended, you can use the Configure Cluster Quorum Wizard to apply the recommended settings.
 
@@ -176,7 +176,7 @@ After the cluster is in production, do not change the quorum configuration unles
 - A long-term node or witness failure
 - Recovering a cluster in a multisite disaster recovery scenario
 
-For more information about validating a failover cluster, see [Validate Hardware for a Failover Cluster](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134244(v%3dws.11)>).
+For more information about validating a failover cluster, see [Validate Hardware for a Failover Cluster](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134244(v%3dws.11)>).
 
 ## Configure the cluster quorum
 
@@ -234,7 +234,7 @@ After the wizard runs and the **Summary** page appears, if you want to view a re
 
 ### Windows PowerShell equivalent commands
 
-The following examples show how to use the [Set-ClusterQuorum](https://docs.microsoft.com/en-us/powershell/module/failoverclusters/set-clusterquorum?view=win10-ps) cmdlet and other Windows PowerShell cmdlets to configure the cluster quorum.
+The following examples show how to use the [Set-ClusterQuorum](https://docs.microsoft.com/powershell/module/failoverclusters/set-clusterquorum?view=win10-ps) cmdlet and other Windows PowerShell cmdlets to configure the cluster quorum.
 
 The following example changes the quorum configuration on cluster *CONTOSO-FC1* to a simple node majority configuration with no quorum witness.
 
@@ -433,5 +433,5 @@ The following table summarizes considerations and recommendations for this confi
 ## More information
 
 * [Failover Clustering](failover-clustering.md)
-* [Failover Clusters Windows PowerShell cmdlets](https://docs.microsoft.com/en-us/powershell/module/failoverclusters/?view=win10-ps)
+* [Failover Clusters Windows PowerShell cmdlets](https://docs.microsoft.com/powershell/module/failoverclusters/?view=win10-ps)
 * [Understanding Cluster and Pool Quorum](understand.quourm.md)
