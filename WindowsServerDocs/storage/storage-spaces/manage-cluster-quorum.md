@@ -6,7 +6,7 @@ ms.topic: article
 author: JasonGerend 
 ms.author: jgerend 
 ms.technology: storage-failover-clustering 
-ms.date: 
+ms.date: 05/01/2018
 ms.localizationpriority: low
 ---
 # Configure and manage quorum

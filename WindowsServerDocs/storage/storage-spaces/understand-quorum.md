@@ -9,7 +9,7 @@ ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: adagashe
-ms.date: 02/23/2018
+ms.date: 02/23/2018 
 ms.localizationpriority: 
 ---
 # Understanding Cluster and Pool Quorum
