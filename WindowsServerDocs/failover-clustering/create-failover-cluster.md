@@ -6,7 +6,7 @@ ms.topic: article
 author: JasonGerend 
 ms.author: jgerend 
 ms.technology: storage-failover-clustering 
-ms.date: 4/5/2018
+ms.date: 04/25/2018
 ms.localizationpriority: low
 ---
 # Create a failover cluster

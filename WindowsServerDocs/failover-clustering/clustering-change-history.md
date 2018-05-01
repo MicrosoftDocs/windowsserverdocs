@@ -7,7 +7,7 @@ ms.topic: article
 author: JasonGerend
 manager: elizapo
 ms.author: jgerend
-ms.date: 4/26/2018
+ms.date: 04/26/2018
 description: New and updated topics in the Failover Clustering documentation for Windows Server 2016
 ---
 # Change history for Failover Clustering topics in Windows Server 2016
@@ -26,6 +26,9 @@ This topic lists new and updated topics in the [Failover Clustering](failover-cl
 |[Scale-Out File Server for application data](sofs-overview.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library.|
 |[Hardware requirements](clustering-requirements.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library.|
 |[Use Cluster Shared Volumes (CSVs)](failover-cluster-csvs.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library.|
+|[Create a failover cluster](create-failover-cluster.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library.|
+|[Prestage a cluster in AD DS](prestage-cluster-adds.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library.|
+|[Deploy a Cloud Witness for a Failover Cluster](deploy-cloud-witness.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library.|
 
 ## June 2017
 

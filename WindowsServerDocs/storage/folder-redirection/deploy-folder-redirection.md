@@ -6,7 +6,7 @@ ms.topic: article
 author: JasonGerend 
 ms.author: jgerend 
 ms.technology: storage 
-ms.date: 4/5/18
+ms.date: 04/05/2018
 ms.localizationpriority: low
 ---
 # Deploy Folder Redirection with Offline Files

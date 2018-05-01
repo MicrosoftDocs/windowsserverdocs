@@ -7,7 +7,7 @@ ms.manager: dongill
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 11/6/2017
+ms.date: 11/06/2017
 description: How to add servers or drives to a Storage Spaces Direct cluster
 ms.localizationpriority: medium
 ---
