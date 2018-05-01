@@ -1,18 +1,18 @@
 ---
 ms.assetid: d282bb4e-38a0-4c7c-83d8-f6ea89278057
-title: Enabling OpenId Connect with AD FS 2016
+title: Build a web application using OpenID Connect with AD FS 2016
 description:
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: mtillman
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 
 ms.technology: identity-adfs
 ---
 
-# Enabling OpenId Connect with AD FS 2016
+# Build a web application using OpenID Connect with AD FS 2016
 
 >Applies To: Windows Server 2016
 
@@ -62,13 +62,13 @@ The following section describes how to configure the application group in AD FS 
   
     ![AD FS OpenID](media/Enabling-OpenId-Connect-with-AD-FS-2016/AD_FS_OpenID_4.PNG)  
   
-11. On the **Configure Web API** screen, enter the following for **Identifier** - **https://contoso.com/WebApp**.  Click **Add**. Click **Next**.  
-  
-    ![AD FS OpenID](media/Enabling-OpenId-Connect-with-AD-FS-2016/AD_FS_OpenID_7.PNG)  
-  
-12. On the **Choose Access Control Policy** screen, select **Permit everyone** and click **Next**.  
+11. On the **Choose Access Control Policy** screen, select **Permit everyone** and click **Next**.  
   
     ![AD FS OpenID](media/Enabling-OpenId-Connect-with-AD-FS-2016/AD_FS_Confidential_7.PNG)  
+    
+12. On the **Configure Web API** screen, enter the following for **Identifier** - **https://contoso.com/WebApp**.  Click **Add**. Click **Next**.  
+  
+    ![AD FS OpenID](media/Enabling-OpenId-Connect-with-AD-FS-2016/AD_FS_OpenID_7.PNG)  
   
 13. On the **Configure Application Permissions** screen,  make sure **openid** is selected and click **Next**.  
   
@@ -164,5 +164,6 @@ Once this is successful you should see that you are now signed in.
   
 ![AD FS OpenID](media/Enabling-OpenId-Connect-with-AD-FS-2016/AD_FS_OpenID_14.PNG)  
   
-
+## Next Steps
+[AD FS Development](../../ad-fs/AD-FS-Development.md)  
 

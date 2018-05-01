@@ -6,8 +6,8 @@ ms.technology: networking
 ms.topic: article
 ms.assetid: 7607a9b7-c9a4-4c4d-8a62-2d4c422e2a1f
 manager: brianlic
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 # Configure the Remote Access Server for Always On VPN
 
@@ -147,3 +147,4 @@ In this section, you configure Remote Access VPN to allow IKEv2 VPN connections,
 20. If prompted, click **Close** to restart the server.
 
 For the next Always On VPN deployment steps, see [Install and Configure the NPS Server](vpn-deploy-nps.md).
+

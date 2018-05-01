@@ -10,8 +10,8 @@ ms.technology: networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 97abf182-4725-4026-801c-122db96964ed
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 # Software Load Balancing \(SLB\) for SDN
 
@@ -192,7 +192,7 @@ Following are some of the features and capabilities of SLB.
   
 -   SLB includes Internet Protocol version 4 (IPv4) support  
   
--   For site-to-site gateway scenarios, S:B provides NAT functionality to enable all site-to-site connections to utilize a single public IP  
+-   For site-to-site gateway scenarios, SLB provides NAT functionality to enable all site-to-site connections to utilize a single public IP  
   
 -   You can install SLB, including the Host Agent and the MUX, on  Windows Server 2016, Full, Core, and Nano Install.  
   

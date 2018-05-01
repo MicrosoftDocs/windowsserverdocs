@@ -4,16 +4,19 @@ description: This topic provides an overview of the Software Defined Networking 
 ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
-ms.date: 
+ms.date: 03/16/2018
 ms.assetid: daaf6b61-5953-4c2d-b6b8-7c885b552646
 manager: brianlic
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ms.localizationpriority: high
 ---
 # Networking
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+
+>[!TIP]
+> Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/) on docs.microsoft.com. You can also [search this site](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions) for specific information.
 
 <img src="../media/landing-icons/network.png" style='float:left; padding:.5em;' alt="Icon depicting two networked computers"> Networking is a foundational part of the Software Defined Datacenter \(SDDC\) platform, and Windows Server 2016 provides new and improved Software Defined Networking \(SDN\) technologies to help you move to a fully realized SDDC solution for your organization.
 
@@ -114,7 +117,7 @@ IP Address Management \(IPAM\) is an integrated suite of tools to enable end-to-
 
 Network Load Balancing \(NLB\) distributes traffic across several servers using the TCP/IP networking protocol. For non-SDN deployments, NLB ensures that stateless applications, such as Web servers running Internet Information Services \(IIS\), are scalable by adding more servers as the load increases.
 
-### [Network Offload and Optimization Technologies](technologies/network-offload.md)
+### [High-Performance Networking](technologies/network-offload.md)
 
 Network offload and optimization technologies in Windows Server 2016 include Software Only (SO) features and technologies, Software and Hardware (SH) integrated features and technologies, and Hardware Only (HO) features and technologies.
 

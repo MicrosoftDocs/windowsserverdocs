@@ -13,6 +13,7 @@ author: lizap
 manager: dongill
 ms.author: elizapo
 ms.date: 11/02/2016
+ms.localizationpriority: low
 ---
 # Remote Desktop client Universal Resource Identifier (URI) scheme support
 

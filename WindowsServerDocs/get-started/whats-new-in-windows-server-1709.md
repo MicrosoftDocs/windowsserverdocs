@@ -14,9 +14,9 @@ ms.localizationpriority: high
 
 >Applies To: Windows Server (Semi-Annual Channel)
 
-<img src="../media/landing-icons/new.png" style='float:left; padding:.5em;' alt="Icon showing a newspaper">The content in this section describes what's new and changed in Windows Server, version 1709. The new features and changes listed here are the ones most likely to have the greatest impact as you work with this release. Also see [Windows Server, version 1709](https://blogs.technet.microsoft.com/windowsserver/2017/08/24/sneak-peek-1-windows-server-version-1709/).
+<img src="../media/landing-icons/new.png" style='float:left; padding:.5em;' alt="Icon showing a newspaper">&nbsp;The content in this section describes what's new and changed in Windows Server, version 1709. The new features and changes listed here are the ones most likely to have the greatest impact as you work with this release. Also see [Windows Server, version 1709](https://blogs.technet.microsoft.com/windowsserver/2017/08/24/sneak-peek-1-windows-server-version-1709/).
    
-<br>
+
 ## New cadence of releases
 
 Starting with this release, you have two options for receiving Windows Server feature updates:
@@ -56,7 +56,7 @@ For more information about containers, see [Container Networking Overview](https
 
 **Server Core as a container** (and infrastructure) host, provides better flexibility, density and performance for existing applications under a modernization process and brands new apps developed already using the cloud model.
 
-**VM Load Balancing** is also improved with OS and Application awareness, ensuring optimal load balancing and application performance.
+**VM Start Ordering** is also improved with OS and Application awareness, bringing enhanced triggers for when a VM is considered started before starting the next.
 
 **Storage-class memory support for VMs** enables NTFS-formatted direct access volumes to be created on non-volatile DIMMs and exposed to Hyper-V VMs. This enables Hyper-V VMs to leverage the low-latency performance benefits of storage-class memory devices.
 
@@ -77,6 +77,9 @@ For more information about containers, see [Container Networking Overview](https
 **Linux as a shielded VM** is now supported.
 
 For more information, see [Guarded fabric and shielded VMs overview](https://docs.microsoft.com/en-us/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms).
+
+**SMBLoris vulnerability**
+An issue, known as “SMBLoris”, which could result in denial of service, has been addressed.
 
 ## Storage
 

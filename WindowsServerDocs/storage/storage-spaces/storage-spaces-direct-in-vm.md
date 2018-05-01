@@ -42,7 +42,7 @@ The following considerations apply when deploying Storage Spaces Direct in a vir
 
     -   Hyper-V – Configure AntiAffinityClassNames on the VMs to separate the VMs across nodes
 
-    -   VMware – Configure VM-VM Anti-Affinity rule by Creating a DRS Rule of type ‘Separate Virtual Machines” to separate the VMs across ESX hosts
+    -   VMware – Configure VM-VM Anti-Affinity rule by Creating a DRS Rule of type ‘Separate Virtual Machines” to separate the VMs across ESX hosts. Disks presented for use with Storage Spaces Direct should use the Paravirtual SCSI (PVSCSI) adapter. For PVSCSI support with Windows Server, consult https://kb.vmware.com/s/article/1010398.
 
 -   Leverage low latency / high performance storage - Azure Premium Storage managed disks are required
 
@@ -66,9 +66,9 @@ The following considerations apply when deploying Storage Spaces Direct in a vir
 
     `HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\spaceport\\Parameters\\HwTimeout`
 
-    `dword: 00002710`
+    `dword: 00007530`
 
-    The decimal equivalent is 30000, which is 30 seconds. Note that the default value is 1770 Hexadecimal, or 6000 Decimal, which is 6 seconds.
+    The decimal equivalent of Hexadecimal 7530 is 30000, which is 30 seconds. Note that the default value is 1770 Hexadecimal, or 6000 Decimal, which is 6 seconds.
 
 ## See also
 

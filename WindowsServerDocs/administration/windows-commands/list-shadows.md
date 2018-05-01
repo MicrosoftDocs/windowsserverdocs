@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # list shadows
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Lists persistent and existing non-persistent shadow copies that are on the system.
 

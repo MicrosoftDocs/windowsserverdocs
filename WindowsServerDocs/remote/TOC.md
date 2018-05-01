@@ -2,6 +2,7 @@
 ## [Remote Server Administration Tools](remote-server-administration-tools.md)
 ## [Remote Desktop Services](remote-desktop-services/welcome-to-rds.md)
 ## [Remote Access](remote-access/remote-Access.md)
+
 ### [Border Gateway Protocol (BGP)](remote-access/bgp/Border-Gateway-Protocol-BGP.md)
 #### [BGP Windows PowerShell Command Reference](remote-access/bgp/BGP-Windows-powershell-Command-Reference.md)
 
@@ -80,9 +81,11 @@
 ###### [Step 1: Configure the DirectAccess Infrastructure](remote-access/directaccess/add-to-existing-vpn/step-1-configure-da-inf-davpn.md)
 ###### [Step 2: Configure the DirectAccess-VPN Server](remote-access/directaccess/add-to-existing-vpn/step-2-configure-server-davpn.md)
 ###### [Step 3: Verify the Deployment](remote-access/directaccess/add-to-existing-vpn/step-3-verify-davpn.md)
+
 ### [RAS Gateway](remote-access/ras-gateway/RAS-Gateway.md)
 #### [GRE Tunneling in Windows Server](remote-access/ras-gateway/gre-tunneling-windows-server.md)
 #### [RAS Gateway GRE Tunnel Throughput and Performance](remote-access/ras-gateway/RAS-Gateway-GRE-Perf.md)
+
 ### [Remote Access Server Role Documentation](remote-access/ras/remote-Access-Server-Role-Documentation.md)
 #### [Deploy Remote Access in an Enterprise](remote-access/ras/Deploy-remote-Access-in-an-Enterprise.md)
 ##### [Deploy Remote Access in a Cluster](remote-access/ras/cluster/Deploy-remote-Access-In-Cluster.md)
@@ -148,7 +151,7 @@
 #### [Always On VPN and DirectAccess Features Comparison](remote-access/vpn/vpn-map-da.md)
 #### [Migrating from DirectAccess to Always On VPN](remote-access/da-always-on-vpn-migration/da-always-on-migration-overview.md)
 ##### [DirectAccess to Always On VPN Deployment Planning](remote-access/da-always-on-vpn-migration/da-always-on-migration-planning.md)
-##### [DirectAccess to Always On VPN Deployment](remote-access/da-always-on-vpn-migration/da-always-on-migration-deploy.md)
+##### [DirectAccess to Always On VPN Deployment](remote-access/da-always-on-vpn-migration/da-always-on-migration-deploy.md) 
 #### [Configure VPN Device Tunnels in Windows 10](remote-access/vpn/vpn-device-tunnel-config.md)
 #### [Remote Access Always On VPN Deployment Guide for Windows Server and Windows 10](remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy.md)
 ##### [Remote Access Always On VPN Deployment Overview](remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-overview.md)
@@ -161,6 +164,7 @@
 ###### [Configure Windows 10 Client Always On VPN Connections](remote-access/vpn/always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md)
 ##### [Remote Access Always On VPN Advanced Features](remote-access/vpn/always-on-vpn/deploy/always-on-vpn-adv-options.md)
 ##### [Remote Access Always On VPN Troubleshooting](remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting.md)
+
 ## [Web Application Proxy in Windows Server](remote-access//web-application-proxy/web-application-proxy-windows-server.md)
 ### [Publishing Applications using AD FS Preauthentication](remote-access//web-application-proxy/Publishing-Applications-using-AD-FS-Preauthentication.md)
 ### [Publishing Applications with SharePoint, Exchange and RDG](remote-access//web-application-proxy/Publishing-Applications-with-SharePoint,-Exchange-and-RDG.md)

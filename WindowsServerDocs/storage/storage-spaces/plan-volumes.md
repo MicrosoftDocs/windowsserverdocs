@@ -7,7 +7,7 @@ ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 12/19/2017
+ms.date: 4/12/2018
 ms.localizationpriority: medium
 ---
 # Planning volumes in Storage Spaces Direct
@@ -31,7 +31,7 @@ All volumes are accessible by all servers in the cluster at the same time. Once 
 
 ## Choosing how many volumes to create
 
-We recommend making the number of volumes a multiple of the number of servers in your cluster. For example, if you have 4 servers, you will experience more consistent performance with 8 total volumes than with 7 or 9. This allows the cluster to distribute volume "ownership" (one server handles metadata orchestration for each volume) evenly among servers.
+We recommend making the number of volumes a multiple of the number of servers in your cluster. For example, if you have 4 servers, you will experience more consistent performance with 4 total volumes than with 3 or 5. This allows the cluster to distribute volume "ownership" (one server handles metadata orchestration for each volume) evenly among servers.
 
 We recommend limiting the total number of volumes to 32 per cluster.
 
@@ -81,7 +81,7 @@ Which resiliency type to use depends on the needs of your workload. Here's a tab
 |--------------------|--------------------------------|--------------------------------|--------------------------
 | **Mirror**         | ![Storage efficiency showing 33%](media\plan-volumes\3-way-mirror-storage-efficiency.png)<br>Three-way mirror: 33% <br>Two-way-mirror: 50%     |![Performance showing 100%](media\plan-volumes\three-way-mirror-perf.png)<br> Highest performance  | Virtualized workloads<br> Databases<br>Other high performance workloads |
 | **Mirror-accelerated parity** |![Storage efficiency showing around 50%](media\plan-volumes\mirror-accelerated-parity-storage-efficiency.png)<br> Depends on proportion of mirror and parity | ![Performance showing around 20%](media\plan-volumes\mirror-accelerated-parity-perf.png)<br>Much slower than mirror, but up to twice as fast as dual-parity<br> Best for large sequential writes and reads | Archival and backup<br> Virtualized desktop infrastructure     |
-| **Dual-parity**               | ![Storage efficiency showing around 80%](media\plan-volumes\dual-parity-storage-efficiency.png)<br>4 servers: 50% <br>8 servers: 80% | ![Performance showing around 10%](media\plan-volumes\dual-parity-perf.png)<br>Highest I/O latency & CPU usage on writes<br> Best for large sequential writes and reads | Archival and backup<br> Virtualized desktop infrastructure  |
+| **Dual-parity**               | ![Storage efficiency showing around 80%](media\plan-volumes\dual-parity-storage-efficiency.png)<br>4 servers: 50% <br>16 servers: up to 80% | ![Performance showing around 10%](media\plan-volumes\dual-parity-perf.png)<br>Highest I/O latency & CPU usage on writes<br> Best for large sequential writes and reads | Archival and backup<br> Virtualized desktop infrastructure  |
 
 #### When performance matters most
 
@@ -101,7 +101,7 @@ Workloads that write in large, sequential passes, such as archival or backup tar
 The resulting storage efficiency depends on the proportions you choose. See [this demo](https://www.youtube.com/watch?v=-LK2ViRGbWs&t=36m55s) for some examples.
 
    >[!TIP]
-   > Volumes with different resiliency types can coexist in the same cluster.
+   > If you observe an abrupt decrease in write performance partway through data injestion, it may indicate that the mirror portion is not large enough or that mirror-accelerated parity isn't well suited for your use case. As an example, if write performance decreases from 400 MB/s to 40 MB/s, consider expanding the mirror portion or switching to three-way mirror.
 
 ### About deployments with NVMe, SSD, and HDD
 

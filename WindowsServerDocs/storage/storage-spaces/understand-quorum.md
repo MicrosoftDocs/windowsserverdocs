@@ -1,5 +1,5 @@
 ---
-title: Understanding Quorum
+title: Understanding cluster and pool quorum
 description: Understanding Cluster and Pool Quorum, with specific examples to go over the intricacies.
 keywords: Storage Spaces Direct,Quorum,Witness,S2D,Cluster Quorum,Pool Quorum,Cluster,Pool
 ms.assetid: 
@@ -12,7 +12,7 @@ author: adagashe
 ms.date: 02/23/2018 
 ms.localizationpriority: 
 ---
-# Understanding Cluster and Pool Quorum
+# Understanding cluster and pool quorum
 
 >Applies To: Windows Server 2016
 
@@ -31,7 +31,7 @@ In Windows Server 2016, there are two components of the system that have their o
 
 The table below gives an overview of the Cluster Quorum outcomes per scenario:
 
-| Server nodes | Can survive one server node failure | Can survive one server node failure, then another | Can survive two simultaneous server node failtures |
+| Server nodes | Can survive one server node failure | Can survive one server node failure, then another | Can survive two simultaneous server node failures |
 |--------------|-------------------------------------|---------------------------------------------------|----------------------------------------------------|
 | 2            | 50/50                               | No                                                | No                                                 |
 | 2 + Witness  | Yes                                 | No                                                | No                                                 |
@@ -167,7 +167,7 @@ We just talked about Cluster Quorum, which operates at the cluster level. Now, l
 
 The table below gives an overview of the Pool Quorum outcomes per scenario:
 
-| Server nodes | Can survive one server node failure | Can survive one server node failure, then another | Can survive two simultaneous server node failtures |
+| Server nodes | Can survive one server node failure | Can survive one server node failure, then another | Can survive two simultaneous server node failures |
 |--------------|-------------------------------------|---------------------------------------------------|----------------------------------------------------|
 | 2            | No                                  | No                                                | No                                                 |
 | 2 + Witness  | Yes                                 | No                                                | No                                                 |
@@ -221,6 +221,9 @@ Each of the 24 drives has one vote and node two also has one vote (since it's th
 > - Ensure that each node in your cluster is symmetrical (each node has the same number of drives)
 > - Enable three-way mirror or dual parity so that you can tolerate a node failures and keep the virtual disks online. See our [volume guidance page](https://docs.microsoft.com/en-us/windows-server/storage/storage-spaces/plan-volumes) for more details.
 > - If more than two nodes are down, or two nodes and a disk on another node are down, volumes may not have access to all three copies of their data, and therefore be taken offline and be unavailable. It’s recommended to bring the servers back or replace the disks quickly to ensure the most resiliency for all the data in the volume.
+<<<<<<< HEAD
 
 ## More information
 For additional information on how to configure and manage quorum, see documentation on [configure and manage quorum](manage-cluster-quorum.md).
+=======
+>>>>>>> 0c93154c0a326ff5298380d49b37122dc160b3f3

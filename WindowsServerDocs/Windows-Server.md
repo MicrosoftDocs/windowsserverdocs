@@ -64,7 +64,7 @@ This library provides info for IT pros to evaluate, plan, deploy, secure, and ma
     </td>
     <td valign="bottom" style="width:20%; border:0;"><br>
       <a href="/windows-server/storage/storage">
-        ![Storage icon](media/landing-icons/storage.png)
+l        ![Storage icon](media/landing-icons/storage.png)
       <br/>Storage</a>
     </td>
    <td valign="bottom" style="width:20%; border:0;"><br/>
@@ -84,7 +84,7 @@ This library provides info for IT pros to evaluate, plan, deploy, secure, and ma
 
 Windows Server, version 1709 is the first release in the new Semi-Annual Channel. Semi-Annual Channel releases such as this one are ideal for customers who are moving at a “cloud cadence," such as those on rapid development cycles or hosters keeping up with the latest Hyper-V investments. 
 
-Windows Server, version 1709 runs in Server Core mode. That means there is no local console or graphical user interface, so you manage it remotely. However, it offers great advantages such as smaller hardware requirements and much smaller attack surface. If you're new to working with Server Core, [Manage a Server Core server](administration/server-core/server-core-manage.md) will help you get used to this environment. [Manage Windows Server](administration/manage-windows-server.md) shows you the various options for managing servers remotely.
+Windows Server, version 1709 runs in Server Core model. That means there is no local console or graphical user interface, so you manage it remotely. However, it offers great advantages such as smaller hardware requirements and much smaller attack surface. If you're new to working with Server Core, [Manage a Server Core server](administration/server-core/server-core-manage.md) will help you get used to this environment. [Manage Windows Server](administration/manage-windows-server.md) shows you the various options for managing servers remotely.
 
 Check out [What's New in Windows Server version 1709](get-started/whats-new-in-windows-server-1709.md) for more information about the new features and functionality added in Windows Server, version 1709.
 

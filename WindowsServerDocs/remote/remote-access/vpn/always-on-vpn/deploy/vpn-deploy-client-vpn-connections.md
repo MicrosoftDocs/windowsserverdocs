@@ -7,8 +7,8 @@ ms.topic: article
 ms.date: 
 ms.assetid: d165822d-b65c-40a2-b440-af495ad22f42
 manager: brianlic
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 # Configure Windows 10 Client Always On VPN Connections
 
@@ -132,8 +132,7 @@ However, if you haven’t restarted the computer since configuring certificate a
 
 **To manually create a single test VPN connection**
 
-1.  Sign in to a domain-joined client computer as a member of the **VPN Users**
-    group.
+1.  Sign in to a domain-joined client computer as a member of the **VPN Users** group.
 
 2.  On the Start menu, type **VPN**, and press Enter.
 
@@ -424,7 +423,10 @@ You can use this script on the Windows 10 desktop or in System Center Configurat
 
 Most examples use the Set-WmiInstance Windows PowerShell cmdlet to insert ProfileXML into a new instance of the MDM_VPNv2_01 WMI class. 
 
-However, this will not work in System Center Configuration Manager because you cannot run the package in the end users’ context. Therefore, this script uses the Common Information Model to create a WMI session in the user’s context, and then it creates a new instance of the MDM_VPNv2_01 WMI class in that session. This WMI class uses the WMI-to-CSP bridge to configure the VPNv2 CSP. Therefore, by adding the class instance, you configure the CSP.
+However, this will not work in System Center Configuration Manager because you cannot run the package in the end users’ context. Therefore, this script uses the Common Information Model to create a WMI session in the user’s context, and then it creates a new instance of the MDM_VPNv2_01 WMI class in that session. This WMI class uses the WMI-to-CSP bridge to configure the VPNv2 CSP. Therefore, by adding the class instance, you configure the CSP. 
+
+>[!IMPORTANT]
+>WMI-to-CSP bridge requires local admin rights, by design. To deploy per user VPN profiles you should be using SCCM or MDM.
 
 >[!NOTE]
 >The script VPN_Profile.ps1 uses the current user’s SID to identify the user’s context. Because no SID is available in a Remote Desktop session, the script will not work in a Remote Desktop session. Likewise, it will not work in a Hyper-V enhanced session. If you’re testing a Remote Access Always On VPN in virtual machines, disable enhanced session on your client VMs before running this script.
@@ -650,7 +652,7 @@ Listing 2. Successful results from the Get-WmiObject cmdlet
     TrustedNetworkDetection : corp.contoso.com
     PSComputerName  : WIN01
 
-The ProfileXML configuration must be correct in structure, spelling, configuration, and sometimes letter case. If you see something different in structure to Listing 1, the ProfileXML markup likely contains an error. 
+The ProfileXML configuration must be correct in structure, spelling, configuration, and sometimes letter case. If you see something different in structure to Listing 1, the ProfileXML markup likely contains an error.
 
 If you need to troubleshoot the markup, it is easier to put it in an XML editor than to troubleshoot it in the Windows PowerShell ISE. In either case, start with the simplest version of the profile, and add components back one at a time until the issue occurs again.
 
@@ -886,7 +888,7 @@ After creating the VPN Users group, create the VPN configuration policy with whi
 
 	e.  Click **Browse**, and open VPN_Profile.xml, which you created in the section [Create the ProfileXML configuration files](#bkmk_ProfileXML). The following illustration depicts the completed **OMA-URI** setting for Contoso.
 
-	![Completed OMA-URI setting](../../../../media/Always-On-Vpn/Vpn-Settings.jpg)
+    ![Completed OMA-URI setting](../../../../media/Always-On-Vpn/Vpn-Settings.jpg)
 
 6.  Click **OK** to add the setting to the configuration policy.
 

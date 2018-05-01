@@ -6,7 +6,7 @@ ms.mktglfcycl: manage
 ms.sitesec: library
 author: lizap
 ms.localizationpriority: medium
-ms.date: 10/17/2017
+ms.date: 02/20/2018
 ---
 # What is the Server Core installation option in Windows Server?
 
@@ -27,7 +27,7 @@ When you finish installing Server Core on a system and sign in for the first tim
 - Microsoft-Windows-Server-Gui-RSAT-Package
 - Microsoft-Windows-Cortana-PAL-Desktop-Package
 
-In other words, there is **no desktop** in Server Core, by design. While maintaining the capabilities required to support traditional business applications and role-based workloads, Server Core does not have a traditional desktop interface. Instead, Server Core is designed to be managed remotely through the command line, PowerShell, or a GUI tool (like [RSAT](../../remote/remote-server-administration-tools.md) or the [Project Honolulu management portal](../../manage/honolulu/honolulu.md)).
+In other words, there is **no desktop** in Server Core, by design. While maintaining the capabilities required to support traditional business applications and role-based workloads, Server Core does not have a traditional desktop interface. Instead, Server Core is designed to be managed remotely through the command line, PowerShell, or a GUI tool (like [RSAT](../../remote/remote-server-administration-tools.md) or [Windows Admin Center](../../manage/windows-admin-center/overview.md)).
 
 In addition to no UI, Server Core also differs from the Server with Desktop Experience in the following ways:
 
@@ -77,13 +77,14 @@ The following table shows which applications are available *locally* on Server C
 | Hyper-V Manager                    | not available  | available                      |
 
 
-For more information about what's not included in Server Core, see [Roles, Role Services, and Features not in Windows Server - Server Core](server-core-removed-roles.md)
+For more information about what *is* included in Server Core, see [Roles, Role Services, and Features included in Windows Server - Server Core](server-core-roles-and-services.md). And for information about what *is not* included in Server Core, see [Roles, Role Services, and Features not included in Server Core](server-core-removed-roles.md)
 
 ## Get started using Server Core
 Use the following information to install, configure, and manage the Server Core installation option of Windows Server.
 
 Server Core installation: 
-- [Roles, Role Services, and Features not in Windows Server - Server Core](server-core-removed-roles.md)
+- [Roles, Role Services, and Features included in Server Core](server-core-roles-and-services.md)
+- [Roles, Role Services, and Features not in Server Core](server-core-removed-roles.md)
 - [Install the Server Core installation option](../../get-started/getting-started-with-server-core.md)
 - [Configure Server Core with the SConfig tool](../../get-started/sconfig-on-ws2016.md)
 

@@ -5,7 +5,7 @@ description: Requirements for installing Active Directory Federation Services.
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.date: 02/13/2018
+ms.date: 03/06/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
@@ -109,7 +109,7 @@ If you are using SQL Server for your AD FS configuration database, size the SQL 
   
 -   For extranet access, you must deploy the Web Application Proxy role service \- part of the Remote Access server role. 
 
--   Third party proxies must support the [MS-ADFSPIP protocol](https://msdn.microsoft.com/en-us/library/dn392811.aspx) to be supported as an AD FS proxy.
+-   Third party proxies must support the [MS-ADFSPIP protocol](https://msdn.microsoft.com/en-us/library/dn392811.aspx) to be supported as an AD FS proxy.  For a list of 3rd party vendors see the [FAQ](AD-FS-FAQ.md#what-third-party-proxies-are-available-for-ad-fs-that-support-ms-adfspip).
 
 -   AD FS 2016 requires Web Application Proxy servers on Windows Server 2016.  A downlevel proxy cannot be configured for an AD FS 2016 farm running at the 2016 farm behavior level.
   

@@ -26,10 +26,10 @@ Before starting the migration process from DirectAccess to Always On VPN, be sur
 
 Migrating from DirectAccess to Always On VPN requires a specific process to migrate clients, which helps minimize race conditions that arise from performing migration steps out of order. At a high level, the deployment process consists of these four primary steps:
 
-1.  **Deploy a side-by-side VPN infrastructure.** After you have determined your migration phases and the features you want to include in your deployment, you will deploy the VPN infrastructure side by side with the existing DirectAccess infrastructure.
+1.  **Deploy a side-by-side VPN infrastructure.** After you have determined your migration phases and the features you want to include in your deployment, you will deploy the VPN infrastructure side by side with the existing DirectAccess infrastructure. For instructions on deploying the VPN infrastructure, refer to the [Always On VPN Deployment Guide)](../vpn/vpn-top.md).
 
 2.  **Deploy certificates and VPN configuration script to the clients.** After the VPN infrastructure is ready, you will create and publish the required certificates to the client. When the clients have received the certificates, you will deploy the VPN_Profile.ps1 configuration script. Alternatively, you can use Intune to configure the VPN client. Use Microsoft System Center Configuration Manager or Microsoft Intune to monitor for successful VPN configuration deployments.
-
+<!-- maybe put the "remove and decommission" information in a separate markdown document -->
 3.  **Remove devices from the DirectAccess security group.** As users migrate successfully, you will remove their devices from the DirectAccess security group before you remove DirectAccess from your environment. Use Microsoft System Center Configuration Manager or Microsoft Intune to determine device-assignment information and discover which device belongs to each user.
 
 4.  **Decommission the DirectAccess infrastructure.** After you have successfully migrated all clients to Always On VPN, you will remove DirectAccess from your environment.
@@ -56,7 +56,7 @@ You will be deploying the VPN infrastructure side by side with the existing Dire
 
 The following image provides a visual reference for the infrastructure changes throughout the DirectAccess-to–Always On VPN migration.
 
-![](media/6b64f322f945f837f22a32bf87a228f8.png)
+![](../../media/DA-to-AlwaysOnVPN/6b64f322f945f837f22a32bf87a228f8.png)
 
 Deploy certificates and VPN configuration script to the clients
 ---------------------------------------------------------------
@@ -122,7 +122,7 @@ You must ensure that the **VPN_Profile.ps1** comes _after_ the certificate has b
 
 | If you are using...  | Then... |
 | ---- | ---- |
-| System Center Configuration Manager | Create a user collection based on that security group's membership.<br><br>![](media/b38723b3ffcfacd697b83dd41a177f66.png) |
+| System Center Configuration Manager | Create a user collection based on that security group's membership.<br><br>![](../../media/DA-to-AlwaysOnVPN/b38723b3ffcfacd697b83dd41a177f66.png)!|
 | Intune | Simply target the security group directly once it is synchronized. |
 |
     
@@ -133,11 +133,11 @@ For additional information about using System Center Configuration Manager or In
 >[!NOTE] 
 >Incorporating these migration-specific tasks is a critical difference between a simple Always On VPN deployment and migration from DirectAccess to Always On VPN. Be sure to properly define the collection to target the security group rather than using the method in the deployment guide.
 
+<!-- pashort 2/17/2018: think about moving the "remove and decommission" information to a separate markdown document -->
 Remove devices from the DirectAccess security group
 ---------------------------------------------------
 
-As users receive the authentication certificate and  **VPN_Profile.ps1** configuration script, you see corresponding successful VPN configuration script deployments in either System Center Configuration Manager or Intune. After each
-deployment, remove that user's device from the DirectAccess security group so that you can later remove DirectAccess. Both Intune and System Center Configuration Manager contains user device assignment information to help you determine each user's device.
+As users receive the authentication certificate and the **VPN_Profile.ps1** configuration script, you see corresponding successful VPN configuration script deployments in either System Center Configuration Manager or Intune. After each deployment, remove that user's device from the DirectAccess security group so that you can later remove DirectAccess. Both Intune and System Center Configuration Manager contains user device assignment information to help you determine each user's device.
 
 >[!NOTE] 
 >If you are applying DirectAccess GPOs through organizational units (OUs) rather than computer groups, move the user's computer object out of the OU.
@@ -149,9 +149,9 @@ When you have finished migrating all your DirectAccess clients to Always On VPN,
 
 1.  **Remove the configuration settings.** Remove the GPOs and the Remote Access Group policy settings Remote Access created by opening the Remote Access Management console and selecting Remove Configuration Settings, as shown in the image below. If you remove the group before you remove the configuration, you will likely get errors.
 
-    ![](media/dbdc3d80e8dc1b8665f7b15d7d2ee1f6.png)
+    ![](../../media/DA-to-AlwaysOnVPN/dbdc3d80e8dc1b8665f7b15d7d2ee1f6.png)
 
-1.  **Remove the DirectAccess security group.** When you have completed the process in this guide, the DirectAccess security group should be empty. As the deployment of Always On VPN continues, people should be removed from this group (as mentioned in the Migration process overview and Windows client migration sections). **Do not** remove the security group if still contains members. If you do, you risk leaving employees without remote access from their device.
+1.  **Remove the DirectAccess security group.** When you have completed the process in this guide, the DirectAccess security group should be empty. As the deployment of Always On VPN continues, remove devices for each user from the DirectAccess security group so that you can remove DirectAccess from your environment. **Do not** remove the security group if it still contains members. If you do remove the security group with members in it, you risk leaving employees without remote access from their devices.
 
 2.  **Clean up DNS.** Be sure to remove any records from your internal DNS server and public DNS server related to DirectAccess, for example, DA.contoso.com, DAGateway.contoso.com.
 

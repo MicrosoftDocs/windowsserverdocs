@@ -6,8 +6,8 @@ ms.technology: networking
 ms.topic: article
 ms.assetid: 6896e85e-a05e-44c2-9437-85417bed343d
 manager: brianlic
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 # Install and Configure the NPS Server
 
@@ -197,6 +197,5 @@ Membership in **Administrators**, or equivalent, is the minimum required to comp
 1.  On the computer where NPS is installed, open Windows PowerShell.
   
 2.  At the Windows PowerShell prompt, type **gpupdate**, and then press ENTER.
-
 
 For the next Always On VPN deployment steps, see [Configure DNS and Firewall Settings for Always On VPN](vpn-deploy-dns-firewall.md).

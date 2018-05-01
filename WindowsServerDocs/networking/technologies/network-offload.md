@@ -1,16 +1,18 @@
 ---
-title: Network Offload and Optimization Technologies
+title: High-Performance Networking
 description: This topic provides an overview of the Offload and Optimization Technologies in Windows Server 2016, and includes links to additional guidance about these technologies.
 manager: brianlic
 ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
 ms.assetid: 0cafb1cc-5798-42f5-89b6-3ffe7ac024ba
-ms.author: jamesmci 
-author: jamesmci
+ms.author: pashort 
+author: shortpatti
+ms.date: 4/6/2018 
 ---
+<!-- rename file to high-performance-networking and redir for network-offload.md -->
 
-# Network Offload and Optimization Technologies
+# High-Performance Networking
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 

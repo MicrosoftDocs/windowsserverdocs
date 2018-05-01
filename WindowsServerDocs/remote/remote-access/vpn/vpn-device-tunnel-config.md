@@ -7,41 +7,28 @@ ms.date:
 ms.technology: networking-ras
 ms.topic: article
 ms.assetid: 158b7a62-2c52-448b-9467-c00d5018f65b
-ms.author: jamesmci
+ms.author: pashort
 author: maricia
 ---
 # Configure VPN Device Tunnels in Windows 10
 
 >Applies To: Windows 10 version 1709
 
-You can use this topic to learn how to create and configure a Virtual Private Network \(VPN\) device tunnel for VPN connections in Windows 10.
+Always On VPN gives you the ability to create a dedicated VPN profile for device or machine. Always On VPN connections include two types of tunnels: 
+* _Device tunnel_ connects to specified VPN servers before users log on to the device. Device tunnel is used for pre-logon connectivity scenarios and device management purposes.
+* _User tunnel_  connects only after a user logs on to the device. User tunnel allows users to access organization resources through VPN servers.
 
-Windows 10 VPN connections include two types of tunnels.
+Unlike User Tunnel, which only connects after a user logs on to the device or machine, Device Tunnel allows the VPN to establish connectivity before user sign-in. Additionally, Device Tunnel provides feature parity with the Infrastructure Tunnel concept of DirectAccess.
 
-- **Device tunnel**. This tunnel connects to specified VPN servers before users log on to the device. Device tunnel is used for pre-logon connectivity scenarios and device management purposes.
-- **User tunnel**. This tunnel connects only after a user logs on to the device. User tunnel allows users to access organization resources through VPN servers.
+You can use traffic filters to control which corporate resources as available through the Device Tunnel and when machine certificate authentication is employed. Both Device Tunnel and User Tunnel operate independently with their VPN profiles, can be connected at the same time, and can use different authentication methods and other VPN configuration settings as appropriate.
 
-## Device Tunnel Features
+## Device Tunnel Features and Requirements
 
-Following are device tunnel features.
+![Device Tunnel Features and Requirements](../../media/device-tunnel-feature-and-requirements.png)
 
-1. Device tunnel is always connected - as long as there is network connectivity and the computer is not in a low power state
-2. Device tunnel connects to your organization VPN servers before user logon
-3. Device tunnel can coexist with one active user tunnel
-4. Device tunnel is hidden from the user and not visible through the UI
+## VPN Device Tunnel Configuration
 
-## Requirements for the Device Tunnel
-Following are requirements for the device tunnel.
-
-- The device must be a domain joined computer
-- The device must be running Windows 10 Enterprise or Education version 1709 or later
-- The tunnel is only configurable for the Windows built\-in VPN solution
-- The tunnel is established using IKEv2 with computer certificate authentication
-- Only one device tunnel can be configured on a device
-
-## Configure the VPN Device Tunnel
-
-The sample profile XML below provides good guidance for pre-logon scenarios where only client initiated pulls are required over the device tunnel.  Traffic filters are leveraged to restrict the device tunnel to management traffic only.  This configuration works well for Windows Update, typical Group Policy (GP) and System Center Configuration Manager (SCCM) update scenarios, as well as pre-logon VPN connectivity for first logon without cached credentials, or password reset scenarios. 
+The sample profile XML below provides good guidance for scenarios where only client initiated pulls are required over the device tunnel.  Traffic filters are leveraged to restrict the device tunnel to management traffic only.  This configuration works well for Windows Update, typical Group Policy (GP) and System Center Configuration Manager (SCCM) update scenarios, as well as VPN connectivity for first logon without cached credentials, or password reset scenarios. 
 
 On the other hand, for server initiated push cases, like Windows Remote Management (WinRM), Remote GPUpdate, and remote SCCM update scenarios – inbound traffic on the device tunnel has to be allowed, so traffic filters cannot be used.  This limitation is going to be removed in future releases.
 
@@ -98,7 +85,7 @@ For more information, see [Using PowerShell scripting with the WMI Bridge Provid
 
 To verify that you have successfully deployed a device profile, run the following Windows PowerShell command.
 
-    Get-VpnConnection -AllUserConnection
+    `Get-VpnConnection -AllUserConnection`
 
 The output displays a list of the device\-wide VPN profiles that are deployed on the device.
 
@@ -176,3 +163,7 @@ Following are RAS Gateway resources.
 - [Configure RRAS with a Computer Authentication Certificate](https://technet.microsoft.com/en-us/library/dd458982.aspx)
 - [Troubleshooting IKEv2 VPN Connections](https://technet.microsoft.com/en-us/library/dd941612.aspx)
 - [Configure IKEv2-based Remote Access](https://technet.microsoft.com/en-us/library/ff687731.aspx)
+
+>[!IMPORTANT]
+>When using Device Tunnel with a Microsoft RAS gateway, you will need to configure the RRAS server to support IKEv2 machine certificate authentication by enabling the **Allow machine certificate authentication for IKEv2** authentication method as described [here](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee922682%28v=ws.10%29). Once this setting is enabled, it is strongly recommended that the **Set-VpnAuthProtocol** PowerShell cmdlet, along with the **RootCertificateNameToAccept** optional parameter, is used to ensure that RRAS IKEv2 connections are only permitted for VPN client certificates that chain to an explicitly defined internal/private Root Certification Authority. Alternatively, the **Trusted Root Certification Authorities** store on the RRAS server should be amended to ensure that it does not contain public certification authorities as discussed [here](https://blogs.technet.microsoft.com/rrasblog/2009/06/10/what-type-of-certificate-to-install-on-the-vpn-server/). Similar methods may also need to be considered for other VPN gateways.
+

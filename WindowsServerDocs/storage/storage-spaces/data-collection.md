@@ -1,5 +1,5 @@
 ---
-title: Storage Spaces Direct Data Collection Tools
+title: Collect diagnostic data with Storage Spaces Direct
 description: Understanding Storage Spaces Direct Data Collection Tools, with specific examples of how to run and use them.
 keywords: Storage Spaces,Data Collection,Troubleshooting,event channels,Get-SDDCDiagnosticInfo
 ms.assetid: 
@@ -11,7 +11,7 @@ author: adagashe
 ms.date: 04/18/2018
 ms.localizationpriority: 
 ---
-# Data Collection with Storage Spaces Direct
+# Collect diagnostic data with Storage Spaces Direct
 
 > Applies to: Windows Server 2016
 

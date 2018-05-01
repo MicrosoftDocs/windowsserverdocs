@@ -22,7 +22,7 @@ Performance history is a new feature that gives [Storage Spaces Direct](storage-
 
 Performance history is collected by default. You do not need to install, configure, or start anything. An external database is not required. An Internet connection is not required. System Center is not required.
 
-To see your cluster's performance history, use [Project Honolulu (Technical Preview)](https://docs.microsoft.com/windows-server/manage/honolulu/honolulu), the next-generation in-box management tool for Windows Server, or the new `Get-ClusterPerformanceHistory` cmdlet. See [Usage in PowerShell](#usage-in-powershell) for details.
+To see your cluster's performance history, use [Windows Admin Center](../../manage/windows-admin-center/overview.md), the next-generation in-box management tool for Windows Server, or the new `Get-ClusterPerformanceHistory` cmdlet. See [Usage in PowerShell](#usage-in-powershell) for details.
 
 ## How it works
 
@@ -32,7 +32,7 @@ To see your cluster's performance history, use [Project Honolulu (Technical Prev
 
 2. The Health Service automatically discovers relevant objects, such as virtual machines, anywhere in the cluster and begins streaming their performance counters. The counters are aggregated, synchronized, and inserted into the database. Streaming runs continuously and is optimized for minimal system impact.
 
-3. You can see performance history in Project Honolulu (Technical Preview) or in PowerShell. Performance history is stored for up to one year, with diminishing granularity. Queries are served directly from the database for consistent, snappy performance and to minimize system impact.
+3. You can see performance history in Windows Admin Center or in PowerShell. Performance history is stored for up to one year, with diminishing granularity. Queries are served directly from the database for consistent, snappy performance and to minimize system impact.
 
 ## What's collected
 
@@ -76,9 +76,9 @@ See [Performance history for clusters](performance-history-for-clusters.md).
 
 Performance history is stored for up to one year, with diminishing granularity. For the most recent hour, measurements are available every ten seconds. Thereafter, they are intelligently merged (by averaging or summing, as appropriate) into less granular series that span more time. For the most recent day, measurements are available every five minutes; for the most recent week, every fifteen minutes; and so on.
 
-In Project Honolulu, you can select the timeframe in the upper-right above the chart.
+In Windows Admin Center, you can select the timeframe in the upper-right above the chart.
 
-![Timeframes in Honolulu](media/performance-history/timeframes-in-honolulu.png)
+![Timeframes in Windows Admin Center](media/performance-history/timeframes-in-honolulu.png)
 
 In PowerShell, use the `-TimeFrame` parameter.
 
@@ -189,15 +189,15 @@ If you have already enabled Storage Spaces Direct, there are two steps:
 
 1. Remove the path to the volume. This prevents the Health Service from collecting new measurements.
 
-```PowerShell
-Get-StorageSubSystem Cluster* | Remove-StorageHealthSetting -Name "System.PerformanceHistory.Path"
-```
+    ```PowerShell
+    Get-StorageSubSystem Cluster* | Remove-StorageHealthSetting -Name "System.PerformanceHistory.Path"
+    ```
 
 2. Delete the volume to delete existing measurements.
 
-```PowerShell
-Remove-VirtualDisk "ClusterPerformanceHistory"
-```
+    ```PowerShell
+    Remove-VirtualDisk "ClusterPerformanceHistory"
+    ```
 
 If you have not yet enabled Storage Spaces Direct, use the `-CollectPerformanceHistory` parameter of the `Enable-ClusterS2D` cmdlet. Set it to `$False`.
 
@@ -240,23 +240,23 @@ To provision the ClusterPerformanceHistory volume again:
 
 1. Confirm the volume is deleted:
 
-```PowerShell
-Remove-VirtualDisk "ClusterPerformanceHistory"
-```
+    ```PowerShell
+    Remove-VirtualDisk "ClusterPerformanceHistory"
+    ```
 
 2.	Remove the path to the volume:
 
-```PowerShell
-Get-StorageSubSystem Cluster* | Remove-StorageHealthSetting -Name "System.PerformanceHistory.Path"
-```
+    ```PowerShell
+    Get-StorageSubSystem Cluster* | Remove-StorageHealthSetting -Name "System.PerformanceHistory.Path"
+    ```
 
 3.	Set `AutoProvision` back to `True`:
 
-```PowerShell
-Get-StorageSubSystem Cluster* | Set-StorageHealthSetting -Name "System.PerformanceHistory.AutoProvision.Enabled" -Value "True"
-```
+    ```PowerShell
+    Get-StorageSubSystem Cluster* | Set-StorageHealthSetting -Name "System.PerformanceHistory.AutoProvision.Enabled" -Value "True"
+    ```
 
-It may take several minutes for the changes to take effect.
+It might take a few minutes for the changes to take effect.
 
 ## See also
 

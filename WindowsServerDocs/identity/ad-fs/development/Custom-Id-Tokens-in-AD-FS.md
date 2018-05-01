@@ -1,17 +1,17 @@
 ---
-title: Custom ID Tokens in AD FS 2016
+title: Customize claims to be emitted in id_token when using OpenID Connect or OAuth with AD FS 2016
 description: A technical overview of the custom id token conecpts in AD FS 2016
 author: anandyadavmsft
 ms.author: billmath
-manager: femila
-ms.date: 01/04/2018
+manager: mtillman
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.reviewer: anandy
 ms.technology: identity-adfs
 ---
 
-# Custom ID Tokens in AD FS
+# Customize claims to be emitted in id_token when using OpenID Connect or OAuth with AD FS 2016
 
 ## Overview
 The article [here](enabling-openId-connect-with-ad-fs.md) shows how to build an app that uses AD FS for OpenID Connect sign on. However, by default there are only a fixed set of claims available in the id_token. AD FS 2016 has the capability to customize the id_token in OpenID Connect scenarios.
@@ -115,3 +115,6 @@ For example, in a .NET MVC sample app, open one of the controller files and ente
 >**https&#58;//sts.contoso.com/adfs/oauth2/authorize?response_type=id_token&scope=openid&redirect_uri=https&#58;//myportal/auth&nonce=b3ceb943fc756d927777&client_id=6db3ec2a-075a-4c72-9b22-ca7ab60cb4e7&state=42c2c156aef47e8d0870&resource=https&#58;//customidrp1/**
 >
 >If the resource parameter is not in the request you may recieve an error or a token without any custom claims.
+
+## Next Steps
+[AD FS Development](../../ad-fs/AD-FS-Development.md)  

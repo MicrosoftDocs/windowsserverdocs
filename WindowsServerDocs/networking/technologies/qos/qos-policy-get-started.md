@@ -6,8 +6,8 @@ ms.technology: networking
 ms.topic: article
 ms.assetid: a37398a4-fe46-464f-8a33-829ef3c6db55
 manager: brianlic
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 
 # Getting Started with QoS Policy

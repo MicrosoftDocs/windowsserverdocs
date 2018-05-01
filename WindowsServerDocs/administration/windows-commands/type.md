@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # type
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Displays the contents of a text file. Use the **type** command to view a text file without modifying it.
 
