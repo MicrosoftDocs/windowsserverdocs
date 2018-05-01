@@ -1,6 +1,6 @@
 ---
-title: Network Policy Server (NPS) and GDPR
-description: This topic provides information about General Data Protection Regulation (GDPR)and Network Policy Server in Windows Server 2016.
+title: Network Policy Server user data collection
+description: What information is used to help authenticate users by Network Policy Server in Windows Server 2016.
 author: MicrosoftGuyJFlo
 manager: mtillman
 ms.author: joflore
@@ -10,15 +10,15 @@ ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
 ms.assetid: 
-ms.date: 04/03/2018
+ms.date: 05/01/2018
 
 ---
-# Network Policy Server and GDPR
+# Network Policy Server user data collection
 
-In May 2018, a European privacy law, the [General Data Protection Regulation (GDPR)](https://ec.europa.eu/info/law/law-topic/data-protection_en), is due to take effect. The GDPR imposes new rules on companies, government agencies, non-profits, and other organizations that offer goods and services to people in the European Union (EU), or that collect and analyze data tied to EU residents. The GDPR applies no matter where you are located.
-Microsoft products and services are available today to help you meet the GDPR requirements. Read more about Microsoft Privacy policy in the [Trust Center](https://www.microsoft.com/trustcenter).
+This document explains how to find user information collected by the Network Policy Server (NPS) in the event you would like to remove it.
 
-This document explains how to find information that Network Policy Server (NPS) may leave behind and delete it if a user asks to be forgotten.
+>[!Note] 
+>If you’re interested in viewing or deleting personal data, please see the [Azure Data Subject Requests for the GDPR](https://docs.microsoft.com/microsoft-365/compliance/gdpr-dsr-azure) article. If you’re looking for general info about GDPR, see the [GDPR section of the Service Trust Center](https://www.microsoft.com/en-us/TrustCenter/Privacy/gdpr/default.aspx).
 
 ## Information Collected by NPS
 
@@ -32,7 +32,7 @@ This document explains how to find information that Network Policy Server (NPS) 
 - Authentication Type
 - Numerous other fields concerning the RADIUS protocol
 
-## Gather GDPR data from NPS
+## Gather data from NPS
 
 If accounting data is enabled and configured, then records of a user’s NPS authentication attempts can be obtained from SQL Server or the log files depending on the configuration. 
 
@@ -44,7 +44,7 @@ Network Policy and Access Services event log entries are considered duplicative 
 
 If accounting data is not enabled, then records of a user’s NPS authentication attempts can be obtained from the Network Policy and Access Services event log by searching for the `<username>`.
 
-## Delete GDPR data from NPS
+## Delete data from NPS
 
 If a user asks to be forgotten the following steps help yo to accomplish this task.
 
