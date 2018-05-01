@@ -89,8 +89,7 @@ After you have enabled event channels and completed the installation process, yo
 
 1. Reports on storage health, plus details on unhealthy components
 2. Reports of storage capacity by pool, volume and deduplicated volume
-3. Reports of storage performance with IOPS and latency per volume
-4. Event logs from all cluster nodes and a summary error report
+3. Event logs from all cluster nodes and a summary error report
 
 Assume that your storage cluster has the name *"CLUS01".*
 
@@ -132,8 +131,6 @@ This report is being continually updated to include more useful information. For
 The script runs various log gathering scripts and saves the output as xml files. We collect cluster and health logs, system information (MSInfo32), unfiltered event logs (failover clustering, dis diagnostics, hyper-v, storage spaces, and more), and storage diagnostics information (operational logs). For the latest information on what information is collected, see the [GitHub README (what we collect)](https://github.com/PowerShell/PrivateCloud.DiagnosticInfo/blob/master/README.md#what-does-the-cmdlet-output-include).
 
 ## Enabling event channels
-
-> 
 
 When Windows Server is installed, many event channels are enabled by default. But sometimes when diagnosing an issue, we want to be able to enable some of these event channels since it will help in triaging and diagnosing system issues.
 
