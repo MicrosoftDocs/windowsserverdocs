@@ -21,6 +21,115 @@ There are various diagnostic tools that can be used to collect the data needed t
 
 Given that the logs and other information that **Get-SDDCDiagnosticInfo** are dense, the information on troubleshooting presented below will be helpful for troubleshooting advanced issues that have been escalated and that may require data to be sent to Microsoft for triaging.
 
+<!--
+## Collecting live dumps
+
+Windows will trigger the collection of a ``` LiveDump ``` when there are known resources that are hanging in kernel calls. ``` RHS ``` will trigger ```LiveDump``` collection if both the resource type and cluster ``` DumpPolicy ``` are set to 1. For physical disk it is set out of the box
+-->
+
+## Installing Get-SDDCDiagnosticInfo
+
+The **Get-SDDCDiagnosticInfo** PowerShell cmdlet (a.k.a. **Get-PCStorageDiagnosticInfo**, previously known as **Test-StorageHealth**) can be used to gather logs for and perform health checks for Failover Clustering (Cluster, Resources, Networks, Nodes), Storage Spaces (Physical Disks, Enclosures, Virtual Disks), Cluster Shared Volumes, SMB File Shares, and Deduplication. 
+
+There are two methods of installing the script, both of which are outlines below.
+
+### PowerShell Gallery 
+
+The [PowerShell Gallery](https://www.powershellgallery.com/packages/PrivateCloud.DiagnosticInfo) is a snapshot of the GitHub Repo. Note that installing items from the PowerShell Gallery requires the latest version of the PowerShellGet module, which is available in Windows 10, in Windows Management Framework (WMF) 5.0, or in the MSI-based installer (for PowerShell 3 and 4).
+
+You can install the module by running following command in PowerShell with administrator privileges:
+
+``` PowerShell
+Install-PackageProvider NuGet -Force
+Install-Module PrivateCloud.DiagnosticInfo -Force
+Import-Module PrivateCloud.DiagnosticInfo -Force
+```
+
+To update the module, run the following command in PowerShell:
+
+``` PowerShell
+Update-Module PrivateCloud.DiagnosticInfo
+```
+
+### GitHub 
+
+The [GitHub Repo](https://github.com/PowerShell/PrivateCloud.DiagnosticInfo/) is the most up-to-date version of the module, since we are continually iterating here. To install the module from GitHub, download the latest module from the [archive](https://github.com/PowerShell/PrivateCloud.DiagnosticInfo/archive/master.zip) and extract the PrivateCloud.DiagnosticInfo directory to the correct PowerShell modules path pointed by ```$env:PSModulePath```
+
+``` PowerShell
+# Allowing Tls12 and Tls11 -- e.g. github now requires Tls12
+# If this is not set, the Invoke-WebRequest fails with "The request was aborted: Could not create SSL/TLS secure channel."
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+$module = 'PrivateCloud.DiagnosticInfo'
+Invoke-WebRequest -Uri https://github.com/PowerShell/$module/archive/master.zip -OutFile $env:TEMP\master.zip
+Expand-Archive -Path $env:TEMP\master.zip -DestinationPath $env:TEMP -Force
+if (Test-Path $env:SystemRoot\System32\WindowsPowerShell\v1.0\Modules\$module) {
+    rm -Recurse $env:SystemRoot\System32\WindowsPowerShell\v1.0\Modules\$module -ErrorAction Stop
+    Remove-Module $module -ErrorAction SilentlyContinue
+} else {
+    Import-Module $module -ErrorAction SilentlyContinue
+} 
+if (-not ($m = Get-Module $module -ErrorAction SilentlyContinue)) {
+    $md = "$env:ProgramFiles\WindowsPowerShell\Modules"
+} else {
+    $md = (gi $m.ModuleBase -ErrorAction SilentlyContinue).PsParentPath
+    Remove-Module $module -ErrorAction SilentlyContinue
+    rm -Recurse $m.ModuleBase -ErrorAction Stop
+}
+cp -Recurse $env:TEMP\$module-master\$module $md -Force -ErrorAction Stop
+rm -Recurse $env:TEMP\$module-master,$env:TEMP\master.zip
+Import-Module $module -Force
+
+``` 
+
+If you need to get this module on an offline cluster, download the zip, move it to your target server node, and install the module.
+
+## Gathering Logs
+
+After you have enabled event channels and completed the installation process, you can use the Get-SDDCDiagnosticInfo PowerShell cmdlet in the module to get:
+
+1. Reports on storage health, plus details on unhealthy components
+2. Reports of storage capacity by pool, volume and deduplicated volume
+3. Event logs from all cluster nodes and a summary error report
+
+Assume that your storage cluster has the name *"CLUS01".*
+
+To execute against a remote storage cluster:
+``` PowerShell
+Get-SDDCDiagnosticInfo -ClusterName CLUS01
+```
+
+To execute locally on clustered storage node:
+``` PowerShell
+Get-SDDCDiagnosticInfo
+```
+
+To save results to a specified folder:
+``` PowerShell
+Get-SDDCDiagnosticInfo -WriteToPath D:\Folder 
+```
+
+## Get-SDDCDiagnosticInfo output
+
+The following are the files included in the zipped output of Get-SDDCDiagnosticInfo.
+
+### Health Summary Report
+The health summary report is saved as:
+- 0_CloudHealthSummary.log
+
+This file is generated after parsing all the data collected and is meant to provide a quick summary of your system. It contains:
+1. System information
+2. Storage health overview (number of nodes up, resources online, cluster shared volumes online, unhealthy components, etc.)
+3. Details on unhealthy components (cluster resources that are offline, failed, or online pending)
+4. Firmware and driver information
+5. Pool, physical disk, and volume details
+6. Storage Performance (performance counters are collected)
+
+This report is being continually updated to include more useful information. For the latest information, see the [GitHub README](https://github.com/PowerShell/PrivateCloud.DiagnosticInfo/edit/master/README.md).
+
+### Logs and XMLfiles
+
+The script runs various log gathering scripts and saves the output as xml files. We collect cluster and health logs, system information (MSInfo32), unfiltered event logs (failover clustering, dis diagnostics, hyper-v, storage spaces, and more), and storage diagnostics information (operational logs). For the latest information on what information is collected, see the [GitHub README (what we collect)](https://github.com/PowerShell/PrivateCloud.DiagnosticInfo/blob/master/README.md#what-does-the-cmdlet-output-include).
+
 ## Enabling event channels
 
 When Windows Server is installed, many event channels are enabled by default. But sometimes when diagnosing an issue, we want to be able to enable some of these event channels since it will help in triaging and diagnosing system issues.
@@ -72,112 +181,6 @@ If you want to keep both the **log-level** and the **keyword-mask** at their def
 ```
 
 These event channels will be enabled on every cluster node when the cluster service starts or whenever the **EnabledEventLogs** property is changed.
-
-
-<!--
-## Collecting live dumps
-
-Windows will trigger the collection of a ``` LiveDump ``` when there are known resources that are hanging in kernel calls. ``` RHS ``` will trigger ```LiveDump``` collection if both the resource type and cluster ``` DumpPolicy ``` are set to 1. For physical disk it is set out of the box
--->
-
-## Installing Get-SDDCDiagnosticInfo
-
-The **Get-SDDCDiagnosticInfo** PowerShell cmdlet (a.k.a. **Get-PCStorageDiagnosticInfo**, previously known as **Test-StorageHealth**) can be used to gather logs for and perform health checks for Failover Clustering (Cluster, Resources, Networks, Nodes), Storage Spaces (Physical Disks, Enclosures, Virtual Disks), Cluster Shared Volumes, SMB File Shares, and Deduplication. 
-
-There are two methods of installing the script, both of which are outlines below.
-
-### GitHub 
-
-The [GitHub Repo](https://github.com/PowerShell/PrivateCloud.DiagnosticInfo/) is the most up-to-date version of the module, since we are continually iterating here. To install the module from GitHub, download the latest module from the [archive](https://github.com/PowerShell/PrivateCloud.DiagnosticInfo/archive/master.zip) and extract the PrivateCloud.DiagnosticInfo directory to the correct PowerShell modules path pointed by ```$env:PSModulePath```
-
-``` PowerShell
-# Allowing Tls12 and Tls11 -- e.g. github now requires Tls12
-# If this is not set, the Invoke-WebRequest fails with "The request was aborted: Could not create SSL/TLS secure channel."
-[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12 -bor [Net.SecurityProtocolType]::Tls11
-
-Invoke-WebRequest -Uri "https://github.com/PowerShell/PrivateCloud.DiagnosticInfo/archive/master.zip" -outfile "$env:TEMP\master.zip" -Verbose
-Expand-Archive -Path "$env:TEMP\master.zip" -DestinationPath "$env:TEMP" -Force -Verbose
-Copy-Item -Recurse -Path "$env:TEMP\PrivateCloud.DiagnosticInfo-master\PrivateCloud.DiagnosticInfo" -Destination "$env:SystemRoot\System32\WindowsPowerShell\v1.0\Modules\" -Force -Verbose
-Import-Module PrivateCloud.DiagnosticInfo -Verbose
-Get-Command -Module PrivateCloud.DiagnosticInfo
-Get-Help Get-SDDCDiagnosticInfo
-``` 
-
-If you need to get this module on an offline cluster, download the zip, move it to your target server node, and install the module.
-
-### PowerShell Gallery 
-
-The [PowerShell Gallery](https://www.powershellgallery.com/packages/PrivateCloud.DiagnosticInfo) is a snapshot of the GitHub Repo. Note that installing items from the PowerShell Gallery requires the latest version of the PowerShellGet module, which is available in Windows 10, in Windows Management Framework (WMF) 5.0, or in the MSI-based installer (for PowerShell 3 and 4).
-
-You can install the module by running following command in PowerShell with administrator privileges:
-
-``` PowerShell
-Install-Module PrivateCloud.DiagnosticInfo -Verbose
-```
-
-To update the module, run the following command in PowerShell:
-
-``` PowerShell
-Update-Module PrivateCloud.DiagnosticInfo -Verbose
-```
-
-## Gathering Logs
-
-After you have enabled event channels and completed the installation process, you can use the Get-SDDCDiagnosticInfo PowerShell cmdlet in the module to get:
-
-1. Reports on storage health, plus details on unhealthy components
-2. Reports of storage capacity by pool, volume and deduplicated volume
-3. Reports of storage performance with IOPS and latency per volume
-4. Event logs from all cluster nodes and a summary error report
-
-Assume that your storage cluster has the name *"CLUS01".*
-
-To execute against a remote storage cluster:
-``` PowerShell
-Get-SDDCDiagnosticInfo -ClusterName CLUS01 -Verbose
-```
-
-To execute locally on clustered storage node:
-``` PowerShell
-Get-SDDCDiagnosticInfo -Verbose
-```
-
-To save results to a specified folder:
-``` PowerShell
-Get-SDDCDiagnosticInfo -WriteToPath D:\Folder 
-```
-
-To review results previously save to a folder:
-``` PowerShell
-Get-SDDCDiagnosticInfo -ReadFromPath D:\Folder 
-```
-
-To exclude events from data collection:
-``` PowerShell
-Get-SDDCDiagnosticInfo -IncludeEvents:$false
-```
-
-## Get-SDDCDiagnosticInfo output
-
-The following are the files included in the zipped output of Get-SDDCDiagnosticInfo.
-
-### Health Summary Report
-The health summary report is saved as:
-- 0_CloudHealthSummary.log
-
-This file is generated after parsing all the data collected and is meant to provide a quick summary of your system. It contains:
-1. System information
-2. Storage health overview (number of nodes up, resources online, cluster shared volumes online, unhealthy components, etc.)
-3. Details on unhealthy components (cluster resources that are offline, failed, or online pending)
-4. Firmware and driver information
-5. Pool, physical disk, and volume details
-6. Storage Performance (performance counters are collected)
-
-This report is being continually updated to include more useful information. For the latest information, see the [GitHub README](https://github.com/PowerShell/PrivateCloud.DiagnosticInfo/edit/master/README.md).
-
-### XMLfiles and Logs
-
-The script runs various log gathering scripts and saves the output as xml files. We collect cluster and health logs, system information (MSInfo32), unfiltered event logs (failover clustering, dis diagnostics, hyper-v, storage spaces, and more), and storage diagnostics information (operational logs). For the latest information on what information is collected, see the [GitHub README (what we collect)](https://github.com/PowerShell/PrivateCloud.DiagnosticInfo/blob/master/README.md#what-does-the-cmdlet-output-include).
 
 ## What to expect next?
 A lot of improvements and new cmdlets to analyze SDDC system health.
