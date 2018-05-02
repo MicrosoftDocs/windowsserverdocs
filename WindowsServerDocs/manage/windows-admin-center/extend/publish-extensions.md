@@ -33,9 +33,9 @@ To restrict access of your extension to your organization or to a limited group 
 
 Make sure you read and consider the following development topics:
 
-- [UI and design style guide](ui-text-style-guide.md)
-- [Control your tool's visibility](dynamic-tool-display.md)
-- [Strings and localization](strings-localization.md)
+- [UI and design style guide](guides/ui-text-style-guide.md)
+- [Control your tool's visibility](guides/dynamic-tool-display.md)
+- [Strings and localization](guides/strings-localization.md)
 
 ### Consider releasing as a Preview release
 
