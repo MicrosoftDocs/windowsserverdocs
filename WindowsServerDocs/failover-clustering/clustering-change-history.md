@@ -7,7 +7,7 @@ ms.topic: article
 author: JasonGerend
 manager: elizapo
 ms.author: jgerend
-ms.date: 04/26/2018
+ms.date: 05/02/2018
 description: New and updated topics in the Failover Clustering documentation for Windows Server 2016
 ---
 # Change history for Failover Clustering topics in Windows Server 2016
@@ -17,6 +17,11 @@ description: New and updated topics in the Failover Clustering documentation for
 This topic lists new and updated topics in the [Failover Clustering](failover-clustering-overview.md) documentation for Windows Server 2016.
 
 > If you're looking for update history for Windows Server 2016, see [Windows 10 and Windows Server 2016 update history](https://support.microsoft.com/help/4000825/windows-10-and-windows-server-2016-update-history).
+
+## May 2018
+|New or changed topic|Description|
+|---|---|
+|[Configure and manage quorum](manage-cluster-quorum.md) | Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library. |
 
 ## April 2018
 
