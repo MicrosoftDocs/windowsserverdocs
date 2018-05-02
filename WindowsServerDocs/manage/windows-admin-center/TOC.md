@@ -35,4 +35,17 @@
 ### [Known issues](use/known-issues.md)
 
 ## Extend
-### [Extensibility and SDK](extend/how-sdk-works.md)
+### [Overview of extensions](extend/extensibility-overview.md)
+### [Understanding extensions](extend/understand-extensions.md)
+### [Develop an extension](extend/developing-extensions.md)
+#### [Prepare your development environment](extend/prepare-development-environment.md)
+#### [Develop a tool extension](extend/develop-tool.md)
+#### [Develop a solution extension](extend/develop-solution.md)
+#### [Develop a gateway plugin](extend/develop-gateway-plugin.md)
+### [Guides](extend/guides.md)
+#### [UI and design style guide](extend/guides/ui-text-style-guide.md)
+#### [Control your tool's visibility](extend/guides/dynamic-tool-display.md)
+#### [Strings and localization](extend/guides/strings-localization.md)
+#### [Using PowerShell in your extension](extend/guides/powershell.md)
+#### [CSS icon guide](extend/guides/cssicons.md)
+### [Publishing extensions](extend/publish-extensions.md)
