@@ -434,4 +434,4 @@ The following table summarizes considerations and recommendations for this confi
 
 * [Failover Clustering](failover-clustering.md)
 * [Failover Clusters Windows PowerShell cmdlets](https://docs.microsoft.com/powershell/module/failoverclusters/?view=win10-ps)
-* [Understanding Cluster and Pool Quorum](understand.quourm.md)
+* [Understanding Cluster and Pool Quorum](../storage/storage-spaces/understand-quorum.md)

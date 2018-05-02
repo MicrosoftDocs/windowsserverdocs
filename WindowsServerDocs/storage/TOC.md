@@ -99,7 +99,7 @@
 ### Deploy
 #### [Deploy Storage Spaces Direct](storage-spaces/deploy-storage-spaces-direct.md)
 #### [Create volumes](storage-spaces/create-volumes.md)
-#### [Configure quorum](../../failover-clustering/manage-cluster-quorum.md)
+#### [Configure quorum](../failover-clustering/manage-cluster-quorum.md)
 ### Manage
 #### [Manage with Windows Admin Center](../manage/windows-admin-center/use/manage-hyper-converged.md)
 #### [Add servers or drives](storage-spaces/add-nodes.md)
