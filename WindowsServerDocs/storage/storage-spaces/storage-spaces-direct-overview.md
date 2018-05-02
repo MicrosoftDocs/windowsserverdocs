@@ -50,7 +50,8 @@ For other applications of Storage Spaces, such as Shared SAS clusters and stand-
             <strong>Deploy</a></strong>
             <ul>
 			  <li><a href="deploy-storage-spaces-direct.md">Deploy Storage Spaces Direct</a></li>
-			  <li><a href="create-volumes.md">Create volumes</a><br><br><br><br></li>
+			  <li><a href="create-volumes.md">Create volumes</a></li>
+              <li><a href="../../failover-clustering/manage-cluster-quorum.md">Configure quorum</a><br><br><br></li>
 		    </ul>
         </td>        
         <td style="padding: 5px; border: 0;">

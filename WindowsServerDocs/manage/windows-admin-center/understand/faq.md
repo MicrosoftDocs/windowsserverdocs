@@ -101,7 +101,7 @@ Windows Admin Center can be installed on Windows 10 Fall Anniversary Update (170
 
 ## What about extensibility and 3rd-party support?
 
-The Windows Admin Center SDK will soon launch in public preview. As a platform, growing our ecosystem and enabling partner extensibility has been a key priority since the beginning. We’ve been working with early-adopter partners to refine the extension development experience in a private preview of our SDK. Look for a public preview SDK release announcement in the coming weeks, and if you’re going to the Microsoft Build conference in May, be sure to stop by our booth.  [Read more about the Windows Admin Center SDK](..\extend\how-sdk-works.md).
+The Windows Admin Center SDK is available in public preview. As a platform, growing our ecosystem and enabling partner extensibility has been a key priority since the beginning. We’ve been working with early-adopter partners to refine the extension development experience of our SDK. If you’re going to the Microsoft Build conference in May, be sure to stop by our booth.  [Read more about the Windows Admin Center SDK](..\extend\extensibility-overview.md).
 
 ## Can I manage Hyper-Converged Infrastructure with Windows Admin Center?
 
