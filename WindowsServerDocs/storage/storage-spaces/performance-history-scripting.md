@@ -10,7 +10,7 @@ Keywords: Storage Spaces Direct
 ms.localizationpriority: medium
 ---
 
-# Answer the hard questions with PowerShell and Storage Spaces Direct performance history
+# Use Storage Spaces Direct performance history and PowerShell to answer key monitoring questions
 
 > Applies To: Windows Server Insider Preview build 
 
