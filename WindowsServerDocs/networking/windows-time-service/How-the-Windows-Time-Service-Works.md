@@ -4,11 +4,9 @@ title: How the Windows Time Service Works
 description:
 author: shortpatti
 ms.author: pashort
-manager: alanth
-ms.date: 4/16/2018
+ms.date: 05/03/2018
 ms.topic: article
 ms.prod: windows-server-threshold
-
 ms.technology: networking
 ---
 

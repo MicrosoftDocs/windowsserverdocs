@@ -4,7 +4,7 @@ title: Accurate Time for Windows Server 2016
 description: Time synchronization accuracy in Windows Server 2016 has been improved substantially, while maintaining full backwards NTP compatibility with older Windows versions.
 author: shortpatti
 ms.author: dacuo
-ms.date: 4/26/2018
+ms.date: 05/03/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: networking

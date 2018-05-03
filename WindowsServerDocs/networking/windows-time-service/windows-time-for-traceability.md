@@ -5,7 +5,7 @@ description: Regulations in many sectors require systems to be traceable to UTC.
 author: shortpatti
 ms.author: dacuo
 manager: elizapo
-ms.date: 4/16/2018
+ms.date: 05/03/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: networking
