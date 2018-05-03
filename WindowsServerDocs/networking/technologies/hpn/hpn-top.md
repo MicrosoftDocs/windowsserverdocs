@@ -35,7 +35,7 @@ Following are details on the SO, SH, and HO features and technologies that are a
 
 ## Software Only (SO) features and technologies
 
-The following SO features and technologies are available in Windows Server 2016 and are documented in the **Network Offload and Optimization Technologies** guide.
+The following SO features and technologies are available in Windows Server 2016 and are documented in the [Network Offload and Optimization Technologies](network-offload-and-optimization-technologies.md) guide.
 
 - **Access Control Lists \(ACLs\)**. Access Control Lists are a Hyper-V and Software Defined Networking \(SDN\) version 1 \(v1\) feature for managing security for a VM.
 - **Extended ACLs**. Hyper-V Virtual Switch extended ACLs enable you to configure the Hyper-V Virtual Switch Extended Port Access Control Lists to provide firewall protection and enforce security policies for the tenant Virtual Machines \(VMs\) in datacenters. For information about Extended Port Access Control Lists in this library, see [Create Security Policies with Extended Port Access Control Lists](https://docs.microsoft.com/windows-server/virtualization/hyper-v-virtual-switch/Create-Security-Policies-with-Extended-Port-Access-Control-Lists).
@@ -49,7 +49,7 @@ The following SO features and technologies are available in Windows Server 2016 
 
 ## Software and Hardware (SH) integrated features and technologies
 
-The following SH features and technologies are available in Windows Server 2016 and are documented in the **Network Offload and Optimization Technologies** guide.
+The following SH features and technologies are available in Windows Server 2016 and are documented in the [Network Offload and Optimization Technologies](network-offload-and-optimization-technologies.md) guide.
 
 - **Converged NIC**. Converged NIC is a technology that allows virtual NICs in the Hyper-V host to expose RDMA services to host processes. In Windows Server 2016, separate NICs are no longer required for RDMA. The Converged NIC feature allows the Virtual NICs in the Host partition (vNICs) to expose RDMA to the host partition and share the bandwidth of the NICs between the RDMA traffic and the VM and other TCP/UDP traffic in a fair and manageable manner.
 
@@ -87,7 +87,7 @@ The following SH features and technologies are available in Windows Server 2016 
 
 ## Hardware Only (HO) features and technologies
 
-The following HO features and technologies are available in Windows Server 2016 and are documented in the **Network Offload and Optimization Technologies** guide.
+The following HO features and technologies are available in Windows Server 2016 and are documented in the [Network Offload and Optimization Technologies](network-offload-and-optimization-technologies.md) guide.
 
 - **Address Checksum Offload**. Address checksum offloads are a NIC feature that offloads the calculation of address checksums (IP, TCP, UDP) to the NIC hardware for both send and receive.
 
