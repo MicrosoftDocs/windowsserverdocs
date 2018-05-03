@@ -147,6 +147,9 @@ Grant-SRAccess -ComputerName az2az3 -Cluster SRAZC1
     a.	Volume location:- c:\ClusterStorage\DataDisk2
     b.	Log location:- g:
 3.	Run the command
+
 ```PowerShell
+
 New-SRPartnership -SourceComputerName SRAZC1 -SourceRGName rg01 -SourceVolumeName c:\ClusterStorage\DataDisk1 -SourceLogVolumeName  g: -DestinationComputerName SRAZC2 -DestinationRGName rg02 -DestinationVolumeName c:\ClusterStorage\DataDisk2 -DestinationLogVolumeName  g:
+
 ```
