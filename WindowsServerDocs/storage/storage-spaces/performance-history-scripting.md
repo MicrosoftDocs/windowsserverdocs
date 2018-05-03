@@ -40,7 +40,7 @@ This sample uses the `ClusterNode.Cpu.Usage` series from the `LastWeek` timefram
 
 In the screenshot below, we see that *Server-02* had an unexplained spike last week:
 
-![Screenshot of PowerShell](media/Show-CpuMinMaxAvg.png)
+![Screenshot of PowerShell](media/performance-history/Show-CpuMinMaxAvg.png)
 
 ### How it works
 
@@ -99,7 +99,7 @@ This sample uses the `PhysicalDisk.Latency.Average` series from the `LastHour` t
 
 In the screenshot below, we see there are no outliers:
 
-![Screenshot of PowerShell](media/Show-LatencyOutlierHDD.png)
+![Screenshot of PowerShell](media/performance-history/Show-LatencyOutlierHDD.png)
 
 ### How it works
 
@@ -206,7 +206,7 @@ Performance history can answer questions about *right now*, too. New measurement
 
 In the screenshot below, we see the Top 10 virtual machines by storage activity:
 
-![Screenshot of PowerShell](media/Show-TopIopsVMs.png)
+![Screenshot of PowerShell](media/performance-history/Show-TopIopsVMs.png)
 
 ### How it works
 
@@ -257,7 +257,7 @@ This sample uses the `NetAdapter.Bytes.Total` series from the `LastDay` timefram
 
 In the screenshot below, we see that one *Fabrikam NX-4 Pro #2* is working much harder than the others:
 
-![Screenshot of PowerShell](media/Show-NetworkSaturation.png)
+![Screenshot of PowerShell](media/performance-history/Show-NetworkSaturation.png)
 
 ### How it works
 
@@ -326,7 +326,7 @@ To look at macro trends, performance history is retained for up to 1 year. This 
 
 In the screenshot below, we see that one *Backup* volume is adding about 15 GB per day:
 
-![Screenshot of PowerShell](media/Show-StorageTrend.png)
+![Screenshot of PowerShell](media/performance-history/Show-StorageTrend.png)
 
 At this rate, it will reach its capacity in another 42 days.
 
@@ -442,7 +442,7 @@ This sample uses the `VM.Memory.Assigned` series from the `LastMonth` timeframe 
 
 In the screenshot below, we see the Top 10 virtual machines by memory usage last month:
 
-![Screenshot of PowerShell](media/Show-TopMemoryVMs.png)
+![Screenshot of PowerShell](media/performance-history/Show-TopMemoryVMs.png)
 
 ### How it works
 
