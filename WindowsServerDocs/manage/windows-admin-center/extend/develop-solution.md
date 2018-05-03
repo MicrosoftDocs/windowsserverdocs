@@ -461,6 +461,6 @@ export class AddExampleComponent implements OnInit {
 
 Check out these examples available on our [GitHub site](https://github.com/Microsoft/windows-admin-center-sdk/):
 
-* [Developer Tools](https://github.com/Microsoft/windows-admin-center-sdk/windows-admin-center-developer-tools) is a sample extension containing a rich collection of sample functionality and tool examples that you can browse and use in your own extension. Developer Tools is a fully functioning extension that can be side-loaded into Windows Admin Center in Developer Mode.
+* [Developer Tools](https://github.com/Microsoft/windows-admin-center-sdk/tree/master/windows-admin-center-developer-tools) is a sample extension containing a rich collection of sample functionality and tool examples that you can browse and use in your own extension. Developer Tools is a fully functioning extension that can be side-loaded into Windows Admin Center in Developer Mode.
 
-* [Solution Example](https://github.com/Microsoft/windows-admin-center-sdk/solution-example) is a sample extension configured as a solution extension. Use this as a guide in building your own solution extension.
+* [Solution Example](https://github.com/Microsoft/windows-admin-center-sdk/tree/master/solution-example) is a sample extension configured as a solution extension. Use this as a guide in building your own solution extension.

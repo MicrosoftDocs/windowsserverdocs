@@ -21,17 +21,15 @@ Windows Admin Center supports three types of extensions - tool extensions, solut
 
 ## Development step-by-step
 
-- [Prepare your environment](prepare-development-environment.md) for development
-- Learn more about developing a [tool extension](develop-tool.md)
-- Learn more about developing a [solution extension](develop-solution.md)
-- Learn how to create a [gateway plugin](develop-gateway-plugin.md)
+- [Prepare](prepare-development-environment.md) your development environment
+- Create a [tool](develop-tool.md) extension
+- Create a [solution](develop-solution.md) extension
+- Create a [gateway plugin](develop-gateway-plugin.md)
+- Learn more with our [guides](guides.md)
 
-## More resources
+## Code examples
 
-Here are some additional topics you may be interested in:
+Check out our code examples on GitHub:
 
-- [Control your tool's visibility](guides/dynamic-tool-display.md)
-- [Strings and localization](guides/strings-localization.md)
-- [Using PowerShell in your extension](guides/powershell.md)
-- [CSS icon guide](guides/cssicons.md)
-
+- [Windows Admin Center SDK](https://github.com/Microsoft/windows-admin-center-sdk)
+- [Windows Admin Center Extension Template](https://github.com/Microsoft/windows-admin-center-extension-template)

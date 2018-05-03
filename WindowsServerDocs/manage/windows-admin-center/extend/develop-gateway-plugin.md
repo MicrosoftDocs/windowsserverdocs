@@ -19,6 +19,9 @@ The gateway service exposes REST APIs for the UI to call and relays commands and
 > [!NOTE]
 > Not familiar with the different extension types? Learn more about the [extensibility architecture and extension types](understand-extensions.md).
 
+> [!IMPORTANT]
+> The Windows Admin Center SDK is in public preview.  **The gateway plugin functionality described in this document is still under active development, and is subject to change.**
+
 ## Prepare your development environment
 
 Follow these step-by-step directions to [prepare](prepare-development-environment.md) your development environment, [clone](prepare-development-environment.md#clone-extension-template) the extension template, and prepare the extension template [for use](prepare-development-environment.md#prepare-extension-template-for-use).
@@ -47,4 +50,8 @@ The process to publish a gateway plugin will be available in the future. At this
 
 If you haven't already, follow these [step-by-step directions](developing-extensions.md) to create a new, empty project from the extension template. 
 
-Next, we will modify this project to make a call to the gateway plugin that was created in the previous steps.
+Next, modify your to project make a call to the gateway plugin that was created in the previous steps.
+
+[Example code](https://github.com/Microsoft/windows-admin-center-sdk/tree/master/windows-admin-center-developer-tools/src/app/hello/dll-example) for calling a gateway plugin can be found in our [Developer Tools](https://github.com/Microsoft/windows-admin-center-sdk/tree/master/windows-admin-center-developer-tools) example on GitHub.  Developer Tools is a sample extension containing a rich collection of sample functionality and tool examples that you can browse and use in your own extension. 
+
+
