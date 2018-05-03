@@ -4,7 +4,7 @@ title: Accurate Time for Windows Server 2016
 description: Time synchronization accuracy in Windows Server 2016 has been improved substantially, while maintaining full backwards NTP compatibility with older Windows versions.
 author: shortpatti
 ms.author: dacuo
-ms.date: 4/26/2018
+ms.date: 05/03/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: networking
@@ -12,7 +12,7 @@ ms.technology: networking
 
 # Accurate Time for Windows Server 2016
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10 version 1607 or later
 
 The Windows Time service is a component that uses a plug-in model for client and server time synchronization providers.  There are two built-in client providers on Windows, and there are third-party plug-ins available. One provider uses [NTP (RFC 1305)](https://tools.ietf.org/html/rfc1305) or [MS-NTP](https://msdn.microsoft.com/en-us/library/cc246877.aspx) to synchronize the local system time to an NTP and/or MS-NTP compliant reference server. The other provider is for Hyper-V and synchronizes virtual machines (VM) to the Hyper-V host.  When multiple providers exist, Windows will pick the best provider using stratum level first, followed by root delay, root dispersion, and finally time offset.
 

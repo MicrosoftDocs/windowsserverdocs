@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "WindowsServerDocs/networking/technologies/network-offload.md",
+      "redirect_url": "/windows-server/networking/technologies/hpn/hpn-top",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "WindowsServerDocs/identity/ad-ds/get-started/windows-time-service/Windows-Time-Service.md",
       "redirect_url": "/windows-server/networking/windows-time-service/windows-time-service-top",
       "redirect_document_id": true

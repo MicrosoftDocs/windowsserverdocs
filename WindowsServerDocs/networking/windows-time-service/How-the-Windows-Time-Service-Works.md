@@ -4,17 +4,15 @@ title: How the Windows Time Service Works
 description:
 author: shortpatti
 ms.author: pashort
-manager: alanth
-ms.date: 4/16/2018
+ms.date: 05/03/2018
 ms.topic: article
 ms.prod: windows-server-threshold
-
 ms.technology: networking
 ---
 
 # How the Windows Time Service Works
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10 version 1607 or later
 
 **In this section**  
   
