@@ -1,11 +1,11 @@
 ---
 ms.assetid: e34622ff-b2d0-4f81-8d00-dacd5d6c215e
-title: Windows Time Service
+title: Windows Time Service Technical Reference
 description:
 author: shortpatti
 ms.author: pashort
-manager: alanth
-ms.date: 02/01/2018
+manager: elizapo
+ms.date: 05/02/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: networking
@@ -13,10 +13,9 @@ ms.technology: networking
 
 # Windows Time Service
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
- 
-  
-## <a name="w2k3tr_times_intro"></a>Windows Time Service Technical Reference  
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10 version 1607 or later
+
+
 **In this guide**  
   
 * Where to find Windows Time Service Configuration Information  
@@ -31,7 +30,7 @@ ms.technology: networking
 The Windows Time service, also known as W32Time, synchronizes the date and time for all computers running in an AD DS domain. Time synchronization is critical for the proper operation of many Windows services and line-of-business applications. The Windows Time service uses the Network Time Protocol (NTP) to synchronize computer clocks on the network so that an accurate clock value, or time stamp, can be assigned to network validation and resource access requests. The service integrates NTP and time providers, making it a reliable and scalable time service for enterprise administrators.
   
 > [!IMPORTANT]  
-> Prior to Windows Server 2016, the W32Time service was not designed to meet time-sensitive application needs.  However, updates to Windows Server 2016 now allow you to implement a solution for 1ms accuracy in your domain.  See [Windows 2016 Accurate Time](accurate-time.md) and  [Support boundary to configure the Windows Time service for high-accuracy environments](https://go.microsoft.com/fwlink/?LinkID=179459) for more information.  
+> Prior to Windows Server 2016, the W32Time service was not designed to meet time-sensitive application needs.  However, updates to Windows Server 2016 now allow you to implement a solution for 1ms accuracy in your domain.  See [Windows 2016 Accurate Time](accurate-time.md) and  [Support boundary to configure the Windows Time service for high-accuracy environments](support-boundary.md) for more information.  
   
 ## <a name="BKMK_Config"></a>Where to Find Windows Time Service Configuration Information  
 This guide does **not** discuss configuring the Windows Time service. There are several different topics on Microsoft TechNet and in the Microsoft Knowledge Base that do explain procedures for configuring the Windows Time service. If you require configuration information, the following topics should help you locate the appropriate information.  
@@ -47,7 +46,7 @@ This guide does **not** discuss configuring the Windows Time service. There are 
 -   To configure the Windows Time service on any domain member client or server, or even domain controllers that are not configured as the forest root PDC emulator, see [Configure a client computer for automatic domain time synchronization](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc816884%28v%3dws.10%29).  
   
     > [!WARNING]  
-    > Some applications may require their computers to have high-accuracy time services. If that is the case, you may choose to configure a manual time source, but be aware that the Windows Time service was not designed to function as a highly accurate time source. Ensure that you are aware of the support limitations for high-accuracy time environments as described in Microsoft Knowledge Base article 939322, [Support boundary to configure the Windows Time service for high-accuracy environments](https://go.microsoft.com/fwlink/?LinkID=179459).  
+    > Some applications may require their computers to have high-accuracy time services. If that is the case, you may choose to configure a manual time source, but be aware that the Windows Time service was not designed to function as a highly accurate time source. Ensure that you are aware of the support limitations for high-accuracy time environments as described in Microsoft Knowledge Base article 939322, [Support boundary to configure the Windows Time service for high-accuracy environments](support-boundary.md).  
   
 -   To configure the Windows Time service on any Windows-based client or server computers that are configured as workgroup members instead of domain members see [Configure a manual time source for a selected client computer](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc816656%28v%3dws.10%29).  
   

@@ -13,6 +13,8 @@ ms.technology: networking
 
 # Support boundary to configure the Windows Time service for high-accuracy environments
 
+>Applies To: Windows Server 2016 version 1607 or later, and Windows 10 version 1607 or later
+
 This article describes the support boundaries for the Windows Time service (W32Time) in environments that require highly accurate and stable system time.
 <!-- 
 ## High Accuracy Matrix
@@ -60,7 +62,7 @@ To achieve 1s accuracy for a specific target machine when compared to a highly a
 
 -   The target system must run Windows 10 version 1607, Windows Server 2016 version 1607 or newer.
 
--   The target system must synchronize time exclusively from an NTP hierarchy of time servers running on Windows Server 2016 version 1607 or later, culminating in the highly accurate, Windows compatible NTP time source.
+-   The target system must synchronize time from an NTP hierarchy of time servers, culminating in a highly accurate, Windows compatible NTP time source.
 
 -   All systems in the NTP hierarchy mentioned above must be configured as documented in the [Configuring Systems for High Accuracy](configuring-systems-for-high-accuracy.md) documentation.
 
