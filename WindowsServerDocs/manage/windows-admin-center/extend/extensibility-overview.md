@@ -33,6 +33,7 @@ See the topics below to learn more about the SDK and get started:
 
 - [Understand how extensions work](understand-extensions.md)
 - [Develop an extension](developing-extensions.md)
+- [Guides](guides.md)
 - [Publish your extension](publish-extensions.md)
 
 ## Partner Spotlight

@@ -55,6 +55,9 @@ npm install tslint@5.7.0 -g
 
 Navigate to the extension template on [GitHub](https://github.com/Microsoft/windows-admin-center-extension-template) and clone the template to your local development environment.
 
+> [!NOTE]
+> The **[Windows Admin Center SDK](https://github.com/Microsoft/windows-admin-center-sdk)** is also available on GitHub, and contains a rich collection of sample functionality and tool examples that you can browse and use in your own extension.  Developer Tools is a fully functioning extension that can be side-loaded into Windows Admin Center in Developer Mode.
+
 ## Prepare extension template for use
 
 ### Update placeholder values
@@ -64,6 +67,7 @@ The first step after you have cloned the extension template project is to update
 Replace the entire placeholder value with your value. For example, replace ```{!company-name}``` with ```contoso-inc```, removing these characters: ```{! } ```
 
 #### Affected files
+
 The following files will be affected:
 
 * \package.json
@@ -91,7 +95,6 @@ In later steps, these newly created files will be affected:
 | ```{!product-display-name}``` | Your product's display name | ```Manage Foo Works (TM)``` |
 | ```{!product-about}``` | Text for about dialog | ```Manage Foo Works``` |
 | ```{!product-about-description}``` | Text for about dialog description | ```Contoso Inc's Manage Foo Works, contact foo@contoso.inc for more info.``` |
-
 
 ### Rename project folder
 
@@ -141,13 +144,12 @@ Use the same module name that you used in the step [Update placeholder values](#
 
 * Browse to the module folder that was created by  ``` ng generate ``` in the previous step.
 
-* Create a new file ```{!module-name}.routing.ts```, following this naming convention:  
+* Create a new file ```{!module-name}.routing.ts```, following this naming convention:
 
     | Value | Explanation | Example filename |
     | ----- | ----------- | ------- |
     | ```{!module-name}``` | Your module name (lower case, spaces replaced with dashes) | ```manage-foo-works-portal.routing.ts``` |
 
-    
 * Add this content to the file just created:
 
     ``` ts
@@ -200,6 +202,7 @@ Use the same module name that you used in the step [Update placeholder values](#
         component: {!ModuleChildName}Component
     }
     ```
+
 #### Add content to new module file
 
 Open file ```{!module-name}.module.ts```, found with the following naming convention:
@@ -213,7 +216,7 @@ Open file ```{!module-name}.module.ts```, found with the following naming conven
     ``` ts
     import { Routing } from './{!module-name}.routing';
     ```
-       
+
 * Replace values in the content just added with your desired values:
 
     | Value | Explanation | Example |
@@ -225,8 +228,8 @@ Open file ```{!module-name}.module.ts```, found with the following naming conven
     | Original value | New value |
     | -------------- | --------- |
     | ```imports: [ CommonModule ]``` | ```imports: [ CommonModule, Routing ]``` |
-        
-- Make sure ```import``` statements are alphabetized by source.
+
+* Make sure ```import``` statements are alphabetized by source.
 
 #### Add content to new component file
 
@@ -252,25 +255,25 @@ Open file ```{!module-name}.component.ts```, found with the following naming con
 
 Build and side load the extension template to make sure your modifications were successful. To build the extension, open a command window, change directory to the unpacked source directory "cd C:\<your root>\msft-sme-developer-tools", and then you're ready to build.
 
-*	Build and serve with gulp:
+* Build and serve with gulp:
 
     ```
     gulp build
     gulp serve -p 4201
     ```
-    
+
 Note that you need to choose a port that is currently free. Make sure you do not attempt to use the port that Windows Admin Center is running on.
 
 Your project can be side loaded into a local instance of Windows Admin Center for testing by attaching the locally served project into Windows Admin Center.
 
-*	Launch Windows Admin Center in a web browser 
-*	Open the debugger (F12)
-*	Open the Console and type the following command:
+* Launch Windows Admin Center in a web browser
+* Open the debugger (F12)
+* Open the Console and type the following command:
 
     ```
     MsftSme.sideLoad("http://localhost:4201")
     ```
-    
+
 *	Refresh the web browser
 
 Your project will now be visible in the Tools list with (side loaded) next to the name.
@@ -279,16 +282,7 @@ Your project will now be visible in the Tools list with (side loaded) next to th
 
 Now that your environment is prepared, you are ready to start customizing content in your project.
 
-- Learn more about developing a [tool extension](develop-tool.md)
-- Learn more about developing a [solution extension](develop-solution.md)
-- Learn how to create a [gateway plugin](develop-gateway-plugin.md)
-
-## More resources
-
-Here are some additional topics you may be interested in:
-
-- [Control your tool's visibility](guides/dynamic-tool-display.md)
-- [Strings and localization](guides/strings-localization.md)
-- [Using PowerShell in your extension](guides/powershell.md)
-- [CSS icon guide](guides/cssicons.md)
-
+* Learn more about developing a [tool extension](develop-tool.md)
+* Learn more about developing a [solution extension](develop-solution.md)
+* Learn how to create a [gateway plugin](develop-gateway-plugin.md)
+* Check out our development [guides](guides.md)
