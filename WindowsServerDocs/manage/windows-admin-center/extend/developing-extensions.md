@@ -30,7 +30,6 @@ Windows Admin Center supports three types of extensions - tool extensions, solut
 
 Here are some additional topics you may be interested in:
 
-- [UI and design style guide](guides/ui-text-style-guide.md)
 - [Control your tool's visibility](guides/dynamic-tool-display.md)
 - [Strings and localization](guides/strings-localization.md)
 - [Using PowerShell in your extension](guides/powershell.md)

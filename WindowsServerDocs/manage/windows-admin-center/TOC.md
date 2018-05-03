@@ -43,7 +43,6 @@
 #### [Develop a solution extension](extend/develop-solution.md)
 #### [Develop a gateway plugin](extend/develop-gateway-plugin.md)
 ### [Guides](extend/guides.md)
-#### [UI and design style guide](extend/guides/ui-text-style-guide.md)
 #### [Control your tool's visibility](extend/guides/dynamic-tool-display.md)
 #### [Strings and localization](extend/guides/strings-localization.md)
 #### [Using PowerShell in your extension](extend/guides/powershell.md)
