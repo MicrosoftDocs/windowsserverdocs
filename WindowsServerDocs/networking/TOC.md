@@ -104,7 +104,7 @@
 #### [Enable vRSS on a Virtual Network Adapter](technologies/vrss/vrss-enable.md)
 #### [Manage vRSS](technologies/vrss/vrss-manage.md)
 #### [vRSS Frequently Asked Questions](technologies/vrss/vrss-faq.md)
-#### [Windows PowerShell Commands for RSS and vRSS](technologies/vrss/vrss-wps.md)
+**#### [Windows PowerShell Commands for RSS and vRSS](technologies/vrss/vrss-wps.md)
 
 
 ## [Hyper-V Virtual Switch](technologies/vswitch-stub.md)
