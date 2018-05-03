@@ -25,9 +25,7 @@ In Windows Server 2019, [Storage Spaces Direct](storage-spaces-direct-overview.m
 
 The `Get-ClusterPerf` cmdlet is deliberately scripting-friendly. It accepts objects from cmdlets like `Get-VM` or `Get-PhysicalDisk` by the pipeline to handle association, and you can pipe its output into utility cmdlets like `Sort-Object`, `Where-Object`, and `Measure-Object` to quickly build powerful queries.
 
-**This topic presents 6 sample scripts, with explanations, that answer the 6 questions above.**
-
-They are provided as free starter code for you to copy and reuse.
+**This topic provides and explains 6 sample scripts that answer the 6 questions above.** They present patterns you can apply to find peaks, find averages, plot trend lines, run outlier detection, and more, across a variety of data and timeframes. They are provided as free starter code for you to copy, extend, and reuse.
 
    > [!NOTE]
    > For brevity, the sample scripts omit things like error handling that you might expect of high-quality PowerShell code. They are intended primarily for inspiration and education rather than production use.
@@ -324,7 +322,7 @@ To look at macro trends, performance history is retained for up to 1 year. This 
 
 ### Screenshot
 
-In the screenshot below, we see that one *Backup* volume is adding about 15 GB per day:
+In the screenshot below, we see the *Backup* volume is adding about 15 GB per day:
 
 ![Screenshot of PowerShell](media/performance-history/Show-StorageTrend.png)
 
@@ -406,7 +404,6 @@ $Output = $CSV | ForEach-Object {
         $SSXY = ($XY | Measure-Object -Sum).Sum - $N * $MeanX * $MeanY
         $A = ($SSXY / $SSXX)
         $B = ($MeanY - $A * $MeanX)
-
         $RawTrend = -$A # Flip to get daily increase in Used (vs decrease in Remaining)
         $Trend = Format-Trend $RawTrend
 
@@ -436,7 +433,7 @@ $Output | Format-Table
 
 ## Sample 6: Memory hog, you can run but you can't hide
 
-This sample uses the `VM.Memory.Assigned` series from the `LastMonth` timeframe to identify the virtual machines consuming the most memory. Because performance history is collected and stored centrally, for the whole cluster, this works regardless of how often VMs move between hosts – there is no "tearing" and no need to stitch together measurements from different machines.
+Because performance history is collected and stored centrally for the whole cluster, you never need to stitch together data from different machines, no matter how many times VMs move between hosts. This sample uses the `VM.Memory.Assigned` series from the `LastMonth` timeframe to identify the virtual machines consuming the most memory over the last 35 days.
 
 ### Screenshot
 
@@ -479,7 +476,7 @@ $Output = Invoke-Command (Get-ClusterNode) {
 $Output | Sort-Object AvgMemoryUsage | Select-Object -First 10 | Format-Table PsComputerName, VM, AvgMemoryUsage
 ```
 
-That's it! Hopefully these samples inspire you and help you get started. With Storage Spaces Direct performance history and the powerful, scripting-friendly `Get-ClusterPerf` cmdlet, you are empowered to ask – and answer! – the hard questions as you manage and monitor your Windows Server 2019 infrastructure.
+That's it! Hopefully these samples inspire you and help you get started. With Storage Spaces Direct performance history and the powerful, scripting-friendly `Get-ClusterPerf` cmdlet, you are empowered to ask – and answer! – complex questions as you manage and monitor your Windows Server 2019 infrastructure.
 
 ## See also
 
