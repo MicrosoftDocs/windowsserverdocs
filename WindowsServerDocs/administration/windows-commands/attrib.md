@@ -31,18 +31,21 @@ attrib [{+|-}r] [{+|-}a] [{+|-}s] [{+|-}h] [{+|-}i] [<Drive>:][<Path>][<FileName
 
 ## Parameters
 
+
 |Parameter|Description|
 |---------|-----------|
-|{+|-}r|Sets (**+**) or clears (**-**) the Read-only file attribute.|
-|{+|-}a|Sets (**+**) or clears (**-**) the Archive file attribute.|
-|{+|-}s|Sets (**+**) or clears (**-**) the System file attribute.|
-|{+|-}h|Sets (**+**) or clears (**-**) the Hidden file attribute.|
-|{+|-}i|Sets (**+**) or clears (**-**) the Not Content Indexed file attribute.|
-|[\<Drive>:][<Path>][<FileName>]|Specifies the location and name of the directory, file, or group of files for which you want to display or change attributes. You can use the **?** and **&#42;** wildcard characters in the *FileName* parameter to display or change the attributes for a group of files.|
-|/s|Applies **attrib** and any command-line options to matching files in the current directory and all of its subdirectories.|
-|/d|Applies **attrib** and any command-line options to directories.|
-|/l|Applies **attrib** and any command-line options to the Symbolic Link, rather than the target of the Symbolic Link.|
-|/?|Displays help at the command prompt.|
+|\{+\|-\}r |Sets (**+**) or clears (**-**) the Read-only file attribute.|
+|\{+\|-\}a  |Sets (**+**) or clears (**-**) the Archive file attribute.|
+|\{+\|-\}s |Sets (**+**) or clears (**-**) the System file attribute.|
+|\{+\|-\}h |Sets (**+**) or clears (**-**) the Hidden file attribute.|
+|\{+\|-\}i |Sets (**+**) or clears (**-**) the Not Content Indexed file attribute.|
+|[\<Drive>:][<Path>][<FileName>] |Specifies the location and name of the directory, file, or group of files for which you want to display or change attributes. You can use the **?** and **&#42;** wildcard characters in the *FileName* parameter to display or change the attributes for a group of files.|
+|/s |Applies **attrib** and any command-line options to matching files in the current directory and all of its subdirectories.|
+|/d |Applies **attrib** and any command-line options to directories.|
+|/l |Applies **attrib** and any command-line options to the Symbolic Link, rather than the target of the Symbolic Link.|
+|/? |Displays help at the command prompt.|
+
+
 
 ## Remarks
 
