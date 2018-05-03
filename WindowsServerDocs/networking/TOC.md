@@ -89,7 +89,7 @@
 #### [DHCP Logging Events for DNS Record Registrations](technologies/dhcp/dhcp-dns-events.md)
 ### [Deploy DHCP Using Windows PowerShell](technologies/dhcp/dhcp-deploy-wps.md)
 
-## [High-Performance Networking](technologies/network-offload.md)
+## [High-Performance Networking (HPN)](technologies/hpn/hpn-top.md)
 ### [Converged NIC Configuration Guide](technologies/conv-nic/cnic-top.md)
 #### [Converged NIC Configuration with a Single Network Adapter](technologies/conv-nic/cnic-single.md)
 #### [Converged NIC Teamed NIC Configuration](technologies/conv-nic/cnic-datacenter.md)
@@ -98,6 +98,7 @@
 ### [Data Center Bridging (DCB)](technologies/dcb/dcb-top.md)
 #### [Install Data Center Bridging (DCB) in Windows Server or Windows Client](technologies/dcb/dcb-install.md)
 #### [Manage Data Center Bridging (DCB)](technologies/dcb/dcb-manage.md)
+
 ### [Virtual Receive Side Scaling (vRSS)](technologies/vrss/vrss-top.md)
 #### [Plan the Use of vRSS](technologies/vrss/vrss-plan.md)
 #### [Enable vRSS on a Virtual Network Adapter](technologies/vrss/vrss-enable.md)
@@ -267,7 +268,8 @@
 ### [Accurate Time for Windows Server 2016](windows-time-service/accurate-time.md)
 ### [Support boundary to configure the Windows Time service for high-accuracy environments](windows-time-service/support-boundary.md)
 ### [Configuring Systems for High Accuracy](windows-time-service/configuring-systems-for-high-accuracy.md)
+### [Windows Time for Traceability](windows-time-service/windows-time-for-traceability.md)
 ### [Windows Time Service Technical Reference](windows-time-service/windows-time-service-tech-ref.md)
 #### [How the Windows Time Service Works](windows-time-service/How-the-Windows-Time-Service-Works.md)
 #### [Windows Time Service Tools and Settings](windows-time-service/Windows-Time-Service-Tools-and-Settings.md)
-#### [Windows Time for Traceability](windows-time-service/windows-time-for-traceability.md)
+
