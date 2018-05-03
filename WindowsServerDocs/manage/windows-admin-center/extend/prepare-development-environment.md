@@ -282,7 +282,16 @@ Your project will now be visible in the Tools list with (side loaded) next to th
 
 Now that your environment is prepared, you are ready to start customizing content in your project.
 
-* Learn more about developing a [tool extension](develop-tool.md)
-* Learn more about developing a [solution extension](develop-solution.md)
-* Learn how to create a [gateway plugin](develop-gateway-plugin.md)
-* Check out our development [guides](guides.md)
+- Learn more about developing a [tool extension](develop-tool.md)
+- Learn more about developing a [solution extension](develop-solution.md)
+- Learn how to create a [gateway plugin](develop-gateway-plugin.md)
+
+## More resources
+
+Here are some additional topics you may be interested in:
+
+- [Control your tool's visibility](guides/dynamic-tool-display.md)
+- [Strings and localization](guides/strings-localization.md)
+- [Using PowerShell in your extension](guides/powershell.md)
+- [CSS icon guide](guides/cssicons.md)
+
