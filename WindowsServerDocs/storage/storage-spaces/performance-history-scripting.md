@@ -255,7 +255,7 @@ This sample uses the `NetAdapter.Bytes.Total` series from the `LastDay` timefram
 
 ### Screenshot
 
-In the screenshot below, we see that one *Fabrikam NX-4 Pro #2* is working much harder than the others:
+In the screenshot below, we see that one *Fabrikam NX-4 Pro #2* peaked in the last day:
 
 ![Screenshot of PowerShell](media/performance-history/Show-NetworkSaturation.png)
 
