@@ -1,6 +1,6 @@
 ---
 title: Windows Admin Center
-description: Windows Admin Center (Project Honolulu)
+description: Learn how to manage Windows and Windows Server with a new browser-based app, Windows Admin Center (formerly Project Honolulu)
 ms.technology: manage
 ms.topic: article
 author: haley-rowland
@@ -10,7 +10,7 @@ ms.localizationpriority: low
 ms.prod: windows-server-threshold
 ---
 
-# Windows Admin Center (formerly Project Honolulu)
+# Hello, Windows Admin Center!
 
 Windows Admin Center is a locally deployed, browser-based app for managing servers, clusters, hyper-converged infrastructure, and Windows 10 PCs. It comes at no additional cost beyond Windows and is ready to use in production.
 
