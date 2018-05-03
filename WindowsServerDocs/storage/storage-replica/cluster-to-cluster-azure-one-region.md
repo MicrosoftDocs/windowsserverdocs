@@ -18,6 +18,7 @@ Below diagram-1 showcases 2 node Storage Spaces Direct (S2D) cluster within the 
 Through out this documentation I will be using the resource names as shown in the diagram-1
 
 Diagram-1
+![The architecture diagram showcasing C2C SR in Azure withing same region.](media\Cluster-to-cluster-azure-one-region\architecture.png)
 
 Go to your azure portal:
 ### Step 1: Create a "Resource group".
