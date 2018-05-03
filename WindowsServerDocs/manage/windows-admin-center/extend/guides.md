@@ -17,7 +17,6 @@ ms.prod: windows-server-threshold
 ## Guides
 Here are some guides for developing with the Windows Admin Center SDK:
 
-- **[UI and design style guide](guides/ui-text-style-guide.md)**
 - **[Control your tool's visibility](guides/dynamic-tool-display.md)**
 - **[Strings and localization](guides/strings-localization.md)**
 - **[Using PowerShell in your extension](guides/powershell.md)**
