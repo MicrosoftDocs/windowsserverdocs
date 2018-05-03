@@ -48,3 +48,7 @@
 #### [Using PowerShell in your extension](extend/guides/powershell.md)
 #### [CSS icon guide](extend/guides/cssicons.md)
 ### [Publishing extensions](extend/publish-extensions.md)
+### Case Studies
+#### [DataON](extend/case-studies/dataon.md)
+#### [Fujitsu](extend/case-studies/fujitsu.md)
+#### [Squared Up](extend/case-studies/squared-up.md)
