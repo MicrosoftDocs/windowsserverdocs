@@ -22,9 +22,10 @@ You can create a bootable USB flash drive to use to deploy  Windows Server Essen
   
  For additional scenarios in which you may want to create or use a bootable USB flash drive, see the following topics:  
   
--   [Restore a full system from an existing client computer backup](https://technet.microsoft.com/library/jj713539.aspx#BKMK_CreateBootable)  
+-   <a href="https://smarttechnicalworld.com/how-to-bypass-windows-10-password/">Reset Windows 10 Password With Windows 10 Bootable USB</a> 
   
--   [Restore or repair your server running Windows Server Essentials](https://technet.microsoft.com/library/jj593197.aspx#BKMK_Restore_2)  
+-   <a href="https://smarttechnicalworld.com/protect-pendrive-from-virus/">Protect Windows Bootable USB Drive</a>
+-   <a href="https://smarttechnicalworld.com/how-to-make-a-bootable-usb/">Make Bootable USB for All OS</a>
   
 ### To create a bootable USB flash drive  
   
