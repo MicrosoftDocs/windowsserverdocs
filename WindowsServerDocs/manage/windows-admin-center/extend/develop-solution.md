@@ -5,7 +5,7 @@ ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
-ms.date: 05/02/2018
+ms.date: 05/03/2018
 ms.localizationpriority: low
 ms.prod: windows-server-threshold
 ---
@@ -23,9 +23,9 @@ If you plan on building management GUI for a new type of connection such as netw
 
 Follow these steps to create a solution extension:
 
-- Prepare your development environment
-    - Clone the extension template
-    - Prepare the extension template to use as your project
+- [Prepare](prepare-development-environment.md) your development environment
+    - [Clone](prepare-development-environment.md#clone-extension-template) the extension template 
+    - [Prepare](prepare-development-environment.md#prepare-extension-template-for-use) the extension template to use as your project
 - Modify the project into a solution extension
 - Create a connection provider
 - Add your content to the project

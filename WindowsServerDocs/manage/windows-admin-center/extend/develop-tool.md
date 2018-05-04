@@ -5,7 +5,7 @@ ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
-ms.date: 05/02/2018
+ms.date: 05/03/2018
 ms.localizationpriority: low
 ms.prod: windows-server-threshold
 ---
@@ -18,17 +18,15 @@ A tool extension is the primary way that users interact with Windows Admin Cente
 
 When a tool extension is loaded, it can execute WMI calls or PowerShell scripts on a target server or cluster and display information in the UI or execute commands based on user input. Tool extensions define which solutions it should be displayed for, resulting in a different set of tools for each solution.
 
-Note
-Not familiar with the different extension types? Learn more about the extensibility architecture and extension types.
-
 > [!NOTE]
 > Not familiar with the different extension types? Learn more about the [extensibility architecture and extension types](understand-extensions.md).
 
 ## Follow these steps to create a tool extension
 
 - [Prepare](prepare-development-environment.md) your development environment
-    - [Clone](prepare-development-environment.md#clone-extension-template) the extension template and prepare it [for use](prepare-development-environment.md#prepare-extension-template-for-use)
-- Add your content to the project created from the extension template
+    - [Clone](prepare-development-environment.md#clone-extension-template) the extension template 
+    - [Prepare](prepare-development-environment.md#prepare-extension-template-for-use) the extension template to use as your project
+- Add your content to the project
 
 ## Example projects
 
