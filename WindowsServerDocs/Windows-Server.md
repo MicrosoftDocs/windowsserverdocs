@@ -2,12 +2,12 @@
 title: Windows Server
 description: Get started with Windows Server
 ms.prod: windows-server-threshold
-ms.date: 01/17/2018
+ms.date: 04/24/2018
 ms.technology: server-general
 ms.topic: article
 author: jaimeo
 ms.author: jaimeo
-manager: dongill
+manager: elizapo
 ms.localizationpriority: high
 ---
 # Windows Server technical content library
@@ -80,17 +80,17 @@ l        ![Storage icon](media/landing-icons/storage.png)
 > To experience first-hand new features and functionality available in Windows Server 2016, you can download an evaluation version by visiting [Windows Server Evaluations](https://www.microsoft.com/evalcenter/evaluate-windows-server-2016). 
 
 
-## Windows Server, version 1709
+## Windows Server, version 1803
 
-Windows Server, version 1709 is the first release in the new Semi-Annual Channel. Semi-Annual Channel releases such as this one are ideal for customers who are moving at a “cloud cadence," such as those on rapid development cycles or hosters keeping up with the latest Hyper-V investments. 
+Windows Server, version 1803 is the next release in the new Semi-Annual Channel. Semi-Annual Channel releases such as this one are ideal for customers who are moving at a “cloud cadence," such as those on rapid development cycles or hosters keeping up with the latest Hyper-V investments. 
 
-Windows Server, version 1709 runs in Server Core model. That means there is no local console or graphical user interface, so you manage it remotely. However, it offers great advantages such as smaller hardware requirements and much smaller attack surface. If you're new to working with Server Core, [Manage a Server Core server](administration/server-core/server-core-manage.md) will help you get used to this environment. [Manage Windows Server](administration/manage-windows-server.md) shows you the various options for managing servers remotely.
+**Windows Server, version 1803 runs in Server Core mode.** That means there is no local console or graphical user interface, so you manage it remotely. However, it offers great advantages such as smaller hardware requirements and much smaller attack surface. If you're new to working with Server Core, [Manage a Server Core server](administration/server-core/server-core-manage.md) will help you get used to this environment. [Manage Windows Server](administration/manage-windows-server.md) shows you the various options for managing servers remotely.
 
 Check out [What's New in Windows Server version 1709](get-started/whats-new-in-windows-server-1709.md) for more information about the new features and functionality added in Windows Server, version 1709.
 
 ## Windows Server editions
 
-Windows Server, version 1709, is available in Standard and Datacenter editions, while Windows Server 2016 is available in Standard, Datacenter, and Essentials editions. Windows Server Datacenter includes unlimited virtualization rights plus new features to build a software-defined datacenter. Windows Server Standard offers enterprise-class features with limited virtualization rights. Windows Server 2016 Essentials is an ideal cloud-connected first server. It has its own [extensive documentation](https://go.microsoft.com/fwlink/?LinkID=827171)—the content here focuses on Standard and Datacenter editions. The following table briefly summarizes the key differences between Standard and Datacenter editions:
+Windows Server, version 1803, is available in Standard and Datacenter editions, while Windows Server 2016 is available in Standard, Datacenter, and Essentials editions. Windows Server Datacenter includes unlimited virtualization rights plus new features to build a software-defined datacenter. Windows Server Standard offers enterprise-class features with limited virtualization rights. Windows Server 2016 Essentials is an ideal cloud-connected first server. It has its own [extensive documentation](https://go.microsoft.com/fwlink/?LinkID=827171)—the content here focuses on Standard and Datacenter editions. The following table briefly summarizes the key differences between Standard and Datacenter editions:
 
 |Feature|Datacenter|Standard|  
 |-------------------|----------|-----------------------|  
@@ -111,7 +111,7 @@ Both Standard and Datacenter editions offer two installation options:
 - **Server Core:** reduces the space required on disk, the potential attack surface, and especially the servicing requirements. This is the **recommended** option unless you have a particular need for additional user interface elements and graphical management tools.
 - **Server with Desktop Experience:** installs the standard user interface and all tools, including client experience features that required a separate installation in Windows Server 2012 R2. Server roles and features are installed with Server Manager or by other methods.
 
-If you are installing Windows Server, version 1709, Server Core is your only installation option, while Windows Server 2016 offers both the Server Core and Server with Desktop Experience installation options.
+If you are installing Windows Server, version 1803, Server Core is your only installation option, while Windows Server 2016 offers both the Server Core and Server with Desktop Experience installation options.
 
 >[!Note]
 > Unlike some previous releases of Windows Server, you cannot convert between Server Core and Server with Desktop Experience after installation. For example, if you install Server Core and later decide to user Server with Desktop Experience, you should do a fresh installation (and vice versa).
