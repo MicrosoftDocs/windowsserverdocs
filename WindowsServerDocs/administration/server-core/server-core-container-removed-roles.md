@@ -15,7 +15,7 @@ ms.date: 05/07/2018
 In Windows Server, version 1803, we've [reduced the overall size of the Server Core container image to **1.58 GB**](https://blogs.technet.microsoft.com/virtualization/2018/01/22/a-smaller-windows-server-core-container-with-better-application-compatibility/). The way we've done this is by optimizing the architecture and removing things you don't need in a [Server Core container](https://docs.microsoft.com/virtualization/windowscontainers/about/). Some were things that didn't work in containers, some were roles and features no one's been using. 
 
 > [!IMPORTANT]
-> We removed these from the Server Core **container** image, not [Server Core itself](../administration/server-core/server-core-roles-and-services.md). 
+> We removed these from the Server Core **container** image, not [Server Core itself](server-core-roles-and-services.md). 
 
 Here's the complete list of features and roles removed from the Server Core container image:
 

@@ -45,7 +45,7 @@ To get a comprehensive view of the key facts about Windows Server, version 1803,
 - What hardware is needed to run it? See [System requirements](system-requirements.md); the system requirements for this release are the same as for Windows Server 2016.
 - What new features and functionality have been added? See [What's New in Windows Server version 1803](whats-new-in-windows-server-1803.md)
 - What has been removed? See [Features Removed or Planned for Replacement starting with Windows Server, version 1803](windows-server-1803-removed-features.md)
-- What issues unique to this release need to be worked around? See [Release notes--Important issues in Windows Server, version 1803](server-1803-release-notes.md.md)
+- What issues unique to this release need to be worked around? See [Release notes--Important issues in Windows Server, version 1803](server-1803-release-notes.md)
 
 
 ## Where to obtain Windows Server, version 1803
