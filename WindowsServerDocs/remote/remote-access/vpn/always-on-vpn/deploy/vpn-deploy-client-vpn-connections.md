@@ -69,7 +69,7 @@ ProfileXML elements:
 
 ProfileXML elements:
 
-    <AlwaysOn>true</AlwaysOn>
+    <AlwaysOn>True</AlwaysOn>
     <TrustedNetworkDetection>corp.contoso.com</TrustedNetworkDetection>
 
 
@@ -288,7 +288,7 @@ The following example commands get EAP settings from the template profile.
     </Authentication>
     <RoutingPolicyType>SplitTunnel</RoutingPolicyType>
       </NativeProfile>
-     <AlwaysOn>true</AlwaysOn>
+     <AlwaysOn>True</AlwaysOn>
      <RememberCredentials>true</RememberCredentials>
      <TrustedNetworkDetection>' + $TrustedNetwork + '</TrustedNetworkDetection>
       <DomainNameInformation>
@@ -467,7 +467,7 @@ The following example script includes all of the code examples from previous sec
     </Authentication>
     <RoutingPolicyType>SplitTunnel</RoutingPolicyType>
       </NativeProfile>
-    <AlwaysOn>true</AlwaysOn>
+    <AlwaysOn>True</AlwaysOn>
     <RememberCredentials>true</RememberCredentials>
     <TrustedNetworkDetection>' + $TrustedNetwork + '</TrustedNetworkDetection>
       <DomainNameInformation>
