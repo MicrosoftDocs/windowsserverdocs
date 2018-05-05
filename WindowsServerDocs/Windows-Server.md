@@ -2,7 +2,7 @@
 title: Windows Server
 description: Get started with Windows Server
 ms.prod: windows-server-threshold
-ms.date: 04/24/2018
+ms.date: 05/07/2018
 ms.technology: server-general
 ms.topic: article
 author: jaimeo
@@ -17,16 +17,17 @@ This library provides info for IT pros to evaluate, plan, deploy, secure, and ma
 >[!TIP]
 > Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/) on docs.microsoft.com. You can also [search this site](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions) for specific information.
 
+<!-- *commenting out video until 1803 video available*
 **What's new in Windows Server? Check out our latest mechanics video:**
 <br>
 <iframe src="https://www.youtube.com/embed/yea9OXRZ8xg" width="640" height="360" allowfullscreen></iframe>
-
+-->
 
 <br>
 <table border="0" width="100%" align='center'>
   <tr style="text-align:center;">
     <td valign="bottom" style="width:20%; border:0;">
-      <a href="/windows-server/get-started/whats-new-in-windows-server-1709">
+      <a href="/windows-server/get-started/whats-new-in-windows-server-1803">
         ![](media/landing-icons/new.png)</br>What's New?</a>    
     </td>
     <td valign="bottom" style="width:20%; border:0;">
@@ -77,7 +78,7 @@ l        ![Storage icon](media/landing-icons/storage.png)
 <br/>
 
 > [!Note] 
-> To experience first-hand new features and functionality available in Windows Server 2016, you can download an evaluation version by visiting [Windows Server Evaluations](https://www.microsoft.com/evalcenter/evaluate-windows-server-2016). 
+> To experience first-hand new features and functionality available in Windows Server, you can download an evaluation version by visiting [Windows Server Evaluations](https://www.microsoft.com/evalcenter/evaluate-windows-server-2016). 
 
 
 ## Windows Server, version 1803
