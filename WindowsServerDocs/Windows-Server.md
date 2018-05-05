@@ -28,50 +28,40 @@ This library provides info for IT pros to evaluate, plan, deploy, secure, and ma
   <tr style="text-align:center;">
     <td valign="bottom" style="width:20%; border:0;">
       <a href="/windows-server/get-started/whats-new-in-windows-server-1803">
-        ![](media/landing-icons/new.png)</br>What's New?</a>    
-    </td>
+        ![](media/landing-icons/new.png)</br>What's new?</a></td>
     <td valign="bottom" style="width:20%; border:0;">
-      <a href="/windows-server/get-started/server-basics">
-        ![](media/landing-icons/getstarted.png)</br>Get Started</a>
-    </td>
+      <a href="/windows-server/get-started/get-started-with-1803">
+        ![](media/landing-icons/getstarted.png)</br>Get started</a></td>
     <td valign="bottom" style="width:20%; border:0;">
       <a href="/windows-server/administration/manage-windows-server">
-        ![](media/landing-icons/manage.png)</br>Manage</a>
-    </td>
+        ![](media/landing-icons/manage.png)</br>Manage</a></td>
     <td valign="bottom" style="width:20%; border:0;">
       <a href="/windows-server/failover-clustering/failover-clustering-overview">
-        ![](media/landing-icons/cluster.png)</br>Failover Clustering</a>
-    </td>
+        ![](media/landing-icons/cluster.png)</br>Failover clustering</a></td>
     <td valign="bottom" style="width:20%; border:0;"><br/>
       <a href="/windows-server/identity/identity-and-access">
-        ![Identity icon](media/landing-icons/identity.png)<br/>Identity and Access</a>
-    </td>
+        ![Identity icon](media/landing-icons/identity.png)<br/>Identity and access</a></td>
   </tr>
   <tr style="text-align:center;">
     <td valign="bottom" style="width:20%; border:0;"><br/>
       <a href="/windows-server/networking/networking">
         ![Network icon](media/landing-icons/network.png)
-        <br/>Networking</a>
-    </td>
+        <br/>Networking</a></td>
     <td valign="bottom" style="width:20%; border:0;"><br/>
       <a href="/windows-server/remote/index">
         ![Remote icon](media/landing-icons/remote.png)
-        <br/>Remote Access</a>
-    </td>
+        <br/>Remote access</a></td>
     <td valign="bottom" style="width:20%; border:0;"><br/>
       <a href="/windows-server/security/security-and-assurance">
         ![Security icon](media/landing-icons/security.png)
-      <br/>Security and Assurance</a>
-    </td>
+      <br/>Security and assurance</a></td>
     <td valign="bottom" style="width:20%; border:0;"><br>
       <a href="/windows-server/storage/storage">
 l        ![Storage icon](media/landing-icons/storage.png)
-      <br/>Storage</a>
-    </td>
+      <br/>Storage</a></td>
    <td valign="bottom" style="width:20%; border:0;"><br/>
       <a href="/windows-server/virtualization/virtualization">
-        ![Virtualization icon](media/landing-icons/virtualization.png)<br/>Virtualization</a>
-    </td>
+        ![Virtualization icon](media/landing-icons/virtualization.png)<br/>Virtualization</a></td>
       </tr>
 </table>
 
