@@ -77,7 +77,7 @@ Below is the powershell commands for our example
 
 ### Step 8: Create Load Balancer for each cluster.
 As shown in the diagram-1
-1. [Create](https://ms.portal.azure.com/#create/Microsoft.LoadBalancer-ARM) Standard SKU Load Balancer for each cluster (azlbr1,azlbr2). Provide the Cluster IP address as private IP address for the load balancer.
+1. [Create](https://ms.portal.azure.com/#create/Microsoft.LoadBalancer-ARM) internal Standard SKU Load Balancer for each cluster (azlbr1,azlbr2). Provide the Cluster IP address as static private IP address for the load balancer.
     a. azlbr1 => Frontend IP: 10.3.0.100
     b. azlbr2 => Frontend IP: 10.3.0.101
 2. Create Backend Pool for each load balancer. Add the associated cluster nodes.
