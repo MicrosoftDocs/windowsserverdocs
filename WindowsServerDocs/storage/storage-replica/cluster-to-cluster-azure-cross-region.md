@@ -13,7 +13,7 @@ manager: mchad
 # Cluster to Cluster Storage Replica cross region in Azure
 For documentation purpose I will be using 2 node cluster. Please understand the feature is not restricted to 2 node cluster.
 
-Below diagram-1 showcases 2 node Storage Spaces Direct (S2D) cluster cross region in azure which can communicate to each other and are in same domain.
+Below diagram-1 showcases 2 node Storage Spaces Direct cluster cross region in azure which can communicate to each other and are in same domain.
 
 Through out this documentation I will be using the resource names as shown in the diagram-1
 
@@ -22,11 +22,11 @@ Diagram-1
 
 Go to your azure portal:
 ### Step 1: Create two "Resource group".
-Create resource groups in two different regions. 
+[Create](https://ms.portal.azure.com/#create/Microsoft.ResourceGroup) resource groups in two different regions. 
 For example SR-AZ2AZ in West US 2 and SR-AZCROSS in West Central US, as shown in diagram-1.
 
 ### Step 2: Create two "Availability set" one in each resource group for each cluster.
-Create the two availability set in the resource group (SR-AZ2AZ) created above.
+[Create](https://ms.portal.azure.com/#create/Microsoft.AvailabilitySet-ARM) the two availability set in the resource group (SR-AZ2AZ) created above.
 1. Availability set (az2azAS1)
 2. Availability set (azcross-AS)
 
@@ -34,18 +34,18 @@ You can choose to create a 3rd availability set for your domain controller or ad
 
 ### Step 3: Create two "Virtual network".
 For example, as shown in diagram-1
-1. Create virtual network (az2az-Vnet) in the 1st resource group (SR-AZ2AZ), having one subnet and one Gateway subnet.
-2. Create virtual network (azcross-VNET) in the 2nd resource group (SR-AZCROSS), having one subnet and one Gateway subnet.
+1. [Create](https://ms.portal.azure.com/#create/Microsoft.VirtualNetwork-ARM) virtual network (az2az-Vnet) in the 1st resource group (SR-AZ2AZ), having one subnet and one Gateway subnet.
+2. [Create](https://ms.portal.azure.com/#create/Microsoft.VirtualNetwork-ARM) virtual network (azcross-VNET) in the 2nd resource group (SR-AZCROSS), having one subnet and one Gateway subnet.
 
 ### Step 4: Create two "Network security group".
 For example, as shown in diagram-1
-1. Create network security group (az2az-NSG) in 1st resource group (SR-AZ2AZ).
-2. Create network security group (azcross-NSG) in 2nd resource group (SR-AZCROSS).  
+1. [Create](https://ms.portal.azure.com/#create/Microsoft.NetworkSecurityGroup-ARM) network security group (az2az-NSG) in 1st resource group (SR-AZ2AZ).
+2. [Create](https://ms.portal.azure.com/#create/Microsoft.NetworkSecurityGroup-ARM) network security group (azcross-NSG) in 2nd resource group (SR-AZCROSS).  
 
 And add one Inbound security rule for RDP:3389 to both Network Security Group. You can choose to remove this rule once you finish your setup.
 
 ### Step 5: Create Windows Server "Virtual machines".
-Create the virtual machines in the previously created Resource groups.
+[Create](https://ms.portal.azure.com/#create/Microsoft.WindowsServer2016Datacenter-ARM) the virtual machines in the previously created Resource groups.
 
 1. Domain Controller (az2azDC). If you are adding this to the availability set created for the two cluster, assign it a Standard public IP address during VM creation.
     a. Install Active Directory Domain Service.
@@ -84,7 +84,7 @@ Below is the powershell commands for our example
 
 ### Step 8: Create Load Balancer for each cluster.
 As shown in the diagram-1
-1. Create Standard SKU Load Balancer for each cluster (azlbr1,azlbazcross). Provide the Cluster IP address as private IP address for the load balancer.
+1. [Create](https://ms.portal.azure.com/#create/Microsoft.LoadBalancer-ARM) Standard SKU Load Balancer for each cluster (azlbr1,azlbazcross). Provide the Cluster IP address as private IP address for the load balancer.
     a. azlbr1 => Frontend IP: 10.3.0.100
     b. azlbazcross => Frontend IP: 10.0.0.10
 2. Create Backend Pool for each load balancer. Add the associated cluster nodes.
@@ -93,8 +93,10 @@ As shown in the diagram-1
 
 ### Step 9: Create "Virtual network gateway" for Vnet-to-Vnet connectivity
 As shown in the diagram-1
-1. Create 1st Virtual network gateway(az2az-VNetGateway) in 1st resource group (SR-AZ2AZ)
-2. Create 2nd Virtual network gateway(azcross-VNetGateway) in 2nd resource group (SR-AZCROSS)
+1. [Create](https://ms.portal.azure.com/#create/Microsoft.VirtualNetworkGateway-ARM) 1st Virtual network gateway(az2az-VNetGateway) in 1st resource group (SR-AZ2AZ)
+    a. Gateway Type = VPN, and VPN type = Route-based
+2. [Create](https://ms.portal.azure.com/#create/Microsoft.VirtualNetworkGateway-ARM) 2nd Virtual network gateway(azcross-VNetGateway) in 2nd resource group (SR-AZCROSS)
+    a. Gateway Type = VPN, and VPN type = Route-based
 3. Create Vnet-to-Vnet connection from 1st Virtual network gateway to 2nd Virtual network gateway. Provide a shared key
 4. Create Vnet-to-Vnet connection from 2nd Virtual network gateway to 1st Virtual network gateway. Provide the same shared key as step 3
 
@@ -140,7 +142,7 @@ Get-Cluster -Name SRAZCross (ran from az2az1)
 ```
 
 ### Step 13: Create cloud witness for both the clusters.
-1. Create 2 storage accounts (az2azcw,azcrosssa) in azure one for each cluster in each resource group (SR-AZ2AZ, SR-AZCROSS)
+1. [Create](https://ms.portal.azure.com/#create/Microsoft.StorageAccount-ARM) 2 storage accounts (az2azcw,azcrosssa) in azure one for each cluster in each resource group (SR-AZ2AZ, SR-AZCROSS)
 2. Copy the storage account name and key from "access keys"
 3. Create the cloud witness from “failover cluster manager” and use the above account name and key to create it.
 

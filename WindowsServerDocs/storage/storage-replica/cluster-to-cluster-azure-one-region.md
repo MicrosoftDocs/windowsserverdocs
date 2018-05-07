@@ -13,7 +13,7 @@ manager: mchad
 # Cluster to Cluster Storage Replica within same region in Azure
 For documentation purpose I will be using 2 node cluster. Please understand the feature is not restricted to 2 node cluster.
 
-Below diagram-1 showcases 2 node Storage Spaces Direct (S2D) cluster within the same region in azure which can communicate to each other and are in same domain.
+Below diagram-1 showcases 2 node Storage Spaces Direct cluster within the same region in azure which can communicate to each other and are in same domain.
 
 Through out this documentation I will be using the resource names as shown in the diagram-1
 
@@ -22,23 +22,23 @@ Diagram-1
 
 Go to your azure portal:
 ### Step 1: Create a "Resource group".
-As shown in diagram-1, create resource group in a region (SR-AZ2AZ in West US 2). 
+As shown in diagram-1, [create](https://ms.portal.azure.com/#create/Microsoft.ResourceGroup) resource group in a region (SR-AZ2AZ in West US 2). 
 
 ### Step 2: Create two "Availability set" one for each cluster.
-Create the two availability set in the resource group (SR-AZ2AZ) created above.
+[Create](https://ms.portal.azure.com/#create/Microsoft.AvailabilitySet-ARM) the two availability set in the resource group (SR-AZ2AZ) created above.
 1. Availability set (az2azAS1)
 2. Availability set (az2azAS2)
 
 You can choose to create a 3rd availability set for your domain controller or add the domain controller in one of the two availability set.
 
 ### Step 3: Create a "Virtual network".
-Create a virtual network (az2az-Vnet) in the previously created resource group (SR-AZ2AZ), having atleast one subnet.
+[Create](https://ms.portal.azure.com/#create/Microsoft.VirtualNetwork-ARM) a virtual network (az2az-Vnet) in the previously created resource group (SR-AZ2AZ), having atleast one subnet.
 
 ### Step 4: Create a "Network security group".
-Create a network security group (az2az-NSG). And add one Inbound security rule for RDP:3389. You can choose to remove this rule once you finish your setup.
+[Create](https://ms.portal.azure.com/#create/Microsoft.NetworkSecurityGroup-ARM) a network security group (az2az-NSG). And add one Inbound security rule for RDP:3389. You can choose to remove this rule once you finish your setup.
 
 ### Step 5: Create Windows Server "Virtual machines".
-Create the virtual machines in the previously created Resource group (SR-AZ2AZ). And use the previously created Virtual network (az2az-Vnet) and Network security group (az2az-NSG).
+[Create](https://ms.portal.azure.com/#create/Microsoft.WindowsServer2016Datacenter-ARM) the virtual machines in the previously created Resource group (SR-AZ2AZ). And use the previously created Virtual network (az2az-Vnet) and Network security group (az2az-NSG).
 
 1. Domain Controller (az2azDC). If you are adding this to the availability set created for the two cluster, assign it a Standard public IP address during VM creation.
     a. Install Active Directory Domain Service.
@@ -77,7 +77,7 @@ Below is the powershell commands for our example
 
 ### Step 8: Create Load Balancer for each cluster.
 As shown in the diagram-1
-1. Create Standard SKU Load Balancer for each cluster (azlbr1,azlbr2). Provide the Cluster IP address as private IP address for the load balancer.
+1. [Create](https://ms.portal.azure.com/#create/Microsoft.LoadBalancer-ARM) Standard SKU Load Balancer for each cluster (azlbr1,azlbr2). Provide the Cluster IP address as private IP address for the load balancer.
     a. azlbr1 => Frontend IP: 10.3.0.100
     b. azlbr2 => Frontend IP: 10.3.0.101
 2. Create Backend Pool for each load balancer. Add the associated cluster nodes.
@@ -126,7 +126,7 @@ Get-Cluster -Name SRAZC2 (ran from az2az1)
 ```
 
 ### Step 12: Create cloud witness for both the clusters.
-1. Create 2 storage accounts (az2azcw,az2azcw2) in azure one for each cluster in same resource group (SR-AZ2AZ)
+1. [Create](https://ms.portal.azure.com/#create/Microsoft.StorageAccount-ARM) 2 storage accounts (az2azcw,az2azcw2) in azure one for each cluster in same resource group (SR-AZ2AZ)
 2. Copy the storage account name and key from "access keys"
 3. Create the cloud witness from “failover cluster manager” and use the above account name and key to create it.
 
