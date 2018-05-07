@@ -1,16 +1,16 @@
 ---
-title: Preparing your development environment
+title: Prepare your development environment
 description: Preparing your development environment Windows Admin Center SDK (Project Honolulu)
 ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
-ms.date: 05/02/2018
+ms.date: 05/03/2018
 ms.localizationpriority: low
 ms.prod: windows-server-threshold
 ---
 
-# Preparing your development environment
+# Prepare your development environment
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10
 
@@ -282,16 +282,7 @@ Your project will now be visible in the Tools list with (side loaded) next to th
 
 Now that your environment is prepared, you are ready to start customizing content in your project.
 
-- Learn more about developing a [tool extension](develop-tool.md)
-- Learn more about developing a [solution extension](develop-solution.md)
-- Learn how to create a [gateway plugin](develop-gateway-plugin.md)
-
-## More resources
-
-Here are some additional topics you may be interested in:
-
-- [Control your tool's visibility](guides/dynamic-tool-display.md)
-- [Strings and localization](guides/strings-localization.md)
-- [Using PowerShell in your extension](guides/powershell.md)
-- [CSS icon guide](guides/cssicons.md)
-
+- Create a [tool](develop-tool.md) extension
+- Create a [solution](develop-solution.md) extension
+- Create a [gateway plugin](develop-gateway-plugin.md)
+- Learn more with our [guides](guides.md)

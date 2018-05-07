@@ -6,7 +6,7 @@ ms.mktglfcycl: manage
 ms.sitesec: library
 author: jaimeo
 ms.localizationpriority: high
-ms.date: 11/07/2017
+ms.date: 05/02/2018
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 9cf87597-b15d-4f43-8aa1-91e60367f011
@@ -15,14 +15,10 @@ ms.assetid: 9cf87597-b15d-4f43-8aa1-91e60367f011
 
 >Applies To: Windows Server (Semi-Annual Channel)
 
-The Windows Server release model is offering a new option in order to align with similar release and servicing models for [Windows 10](https://docs.microsoft.com/windows/deployment/update/waas-overview) and [Office 365 ProPlus](https://support.office.com/article/Overview-of-the-upcoming-changes-to-Office-365-ProPlus-update-management-78b33779-9356-4cdf-9d2c-08350ef05cca?ui=en-US&rs=en-US&ad=US). If you've been working with Windows 10 or Office 365 ProPlus, these improvements might already be familiar to you.
+The Windows Server release model offers a new option in order to align with similar release and servicing models for [Windows 10](https://docs.microsoft.com/windows/deployment/update/waas-overview) and [Office 365 ProPlus](https://support.office.com/article/Overview-of-the-upcoming-changes-to-Office-365-ProPlus-update-management-78b33779-9356-4cdf-9d2c-08350ef05cca?ui=en-US&rs=en-US&ad=US). If you've been working with Windows 10 or Office 365 ProPlus, these improvements might already be familiar to you.
 
-**There will be two primary release channels available to Windows Server customers, the Long-Term Servicing Channel, and the new Semi-Annual Channel.** You can keep servers on the Long-Term Servicing Channel (LTSC), move them to the new Semi-Annual Channel, or have some servers on either track, depending on what works best for your needs.
+**There are two primary release channels available to Windows Server customers, the Long-Term Servicing Channel and the Semi-Annual Channel.** You can keep servers on the Long-Term Servicing Channel (LTSC), move them to the Semi-Annual Channel, or have some servers on either track, depending on what works best for your needs.
 
-Click the following Microsoft Mechanics video for an overview of the updated release model, particularly the Semi-Annual Channel.
-
-
-[![YouTube video of Michael Niehouse explaining how the Semi-Annual Channel works](media/SAC_vid_crop.jpg)](https://youtu.be/qSAsiM01GOU) 
 
 ## Long-Term Servicing Channel (LTSC)
 This is the release model you’re already familiar with (formerly called the “Long-Term Servicing *Branch*”) where a new major version of Windows Server is released every 2-3 years. Users are entitled to 5 years of mainstream support and 5 years of extended support. This channel is appropriate for systems that require a longer servicing option and functional stability. Deployments of Windows Server 2016 and earlier versions of Windows Server will not be affected by the new Semi-Annual Channel releases. The Long-Term Servicing Channel will continue to receive security and non-security updates, but it will not receive the new features and functionality.
@@ -40,27 +36,28 @@ Most of the features introduced in the Semi-Annual Channel will be rolled up int
 The Semi-Annual Channel will be available to volume-licensed customers with [Software Assurance](https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-default.aspx), as well as via the Azure Marketplace or other cloud/hosting service providers and loyalty programs such as Visual Studio Subscriptions.
 
 > [!Note]  
-> **The first Semi-Annual Channel release is Windows Server, version 1709**. If you want to put servers in this channel, you should install Windows Server, version 1709, which can be installed in Server Core mode or as Nano Server run in a container. See [Introducing Windows Server, version 1709](get-started-with-1709.md) to learn how to obtain and activate Windows Server, version 1709. In-place upgrades from Windows Server 2016 to Windows Server, version 1709 are not supported because they are in **different release channels**. Windows Server, version 1709 is not an update to Windows Server 2016 – it is the first Windows Server release in this new Semi-Annual Channel.
+> **The current Semi-Annual Channel release is Windows Server, version 1803**. If you want to put servers in this channel, you should install Windows Server, version 1803, which can be installed in Server Core mode or as Nano Server run in a container. See [Introducing Windows Server, version 1803](get-started-with-1803.md) to learn how to obtain and activate Windows Server, version 1803. In-place upgrades from Windows Server 2016 to Windows Server, version 1803 are not supported because they are in **different release channels**. Windows Server, version 1803 is not an update to Windows Server 2016 – it is the next Windows Server release in the Semi-Annual Channel.
 
 
 
-In this new model, Windows Server releases are identified by the year and month of release: for example, in 2017, a release in the 9th month (September) would be identified as **version 1709**. Fresh releases of Windows Server in the Semi-Annual Channel will occur twice each year. The support lifecycle for each release is 18 months.
+In this model, Windows Server releases are identified by the year and month of release: for example, in 2017, a release in the 9th month (September) would be identified as **version 1709**. Fresh releases of Windows Server in the Semi-Annual Channel will occur twice each year. The support lifecycle for each release is 18 months.
 
 ## Should you keep servers on the LTSC or move them to the Semi-Annual Channel?
 These are the key differences to take into account:
 
 - Do you need to innovate rapidly? Do you need early access to the newest Windows Server features? Do you need to support fast-cadence hybrid applications, dev-ops, and Hyper-V fabrics? If so, you should consider **joining the Semi-Annual Channel** by installing [Windows Server, version 1709](get-started-with-1709.md). As described in this topic, you will receive new versions twice a year, with 18 months of mainstream production support per release. You get it through volume licensing, Azure, or Visual Studio Subscription Services. Currently, releases in the Semi-Annual Channel require volume licensing and Software Assurance if you intend to run the product in production.
-- Do you need stability and predictability? Do you need to run virtual machines and traditional workloads on physical servers? If so, you should consider **keeping those servers on the Long-Term Servicing Channel**. The current LTSC release is [Windows Server 2016](server-basics.md). As described in this topic, you'll have access to new versions every 2-3 years, with 5 years of mainstream support followed by 5 years of extended support per release. LTSC releases are available through all release mechanisms. Releases in the LTSC are available to anyone regardless of the licensing model they are using.
+- Do you need stability and predictability? Do you need to run virtual machines and traditional workloads on physical servers? If so, you should consider **keeping those servers on the Long-Term Servicing Channel**. The current LTSC release is [Windows Server 2016](server-basics.md). As described in this topic, you'll have access to new versions every 2-3 years, with 5 years of mainstream support followed by 5 years of extended support per release. LTSC releases are available through all release mechanisms. Releases in the LTSC are available to anyone regardless of the licensing model they are using. 
 
-## Release channels and installation options
+The following table summarizes the key differences between the channels, starting with Windows Server, version 1803:
 
-The available release channels are different for each Windows Server installation option:
-
-| Installation option | Semi-Annual Channel (Windows Server) | Long-Term Servicing Channel (Windows Server 2016) |
+|  | Long-Term Servicing Channel (Windows Server 2016) |Semi-Annual Channel (Windows Server) |
 | ------------------- | ------------------------------------ | ------------------------------------------------- |
-| Nano Server         | Yes (as a container OS)              | Yes (as a container OS)                            |
-| Server Core         | Yes                                  | Yes                                               |
-| Server with Desktop Experience | No                                   | Yes                                               |
+|Recommended scenarios | General purpose file servers, Microsoft and non-Microsoft workloads, traditional apps, infrastructure roles, software-defined Datacenter, and hyper-converged infrastructure | Containerized applications, container hosts, and application scenarios benefiting from faster innovation |
+| New releases | Every 2–3 years |Every 6 months |
+| Support |5 years of mainstream support, plus 5 years of extended support | 18 months |
+| Editions | All available Windows Server editions | Standard and Datacenter editions |
+| Who can use | All customers through all channels | Software Assurance and cloud customers only |
+| Installation options | Server Core and Server with Desktop Experience | Server Core for container host and image and Nano Server container image |                |
 
 
 ## Device compatibility
