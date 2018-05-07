@@ -1,7 +1,7 @@
 ---
 title: Cluster to Cluster Storage Replica within same region in Azure
 description: Cluster to Cluster Storage Replication within same region in Azure
-keywords: Storage Replica, Server Manager, Windows Server, Windows Admin Center
+keywords: Storage Replica, Server Manager, Windows Server, Azure, Cluster, same region
 author: arduppal
 ms.author: arduppal
 ms.date: 5/03/2017
@@ -46,18 +46,18 @@ Create the virtual machines in the previously created Resource group (SR-AZ2AZ).
     c. User with administrator previleges (contosoadmin)
 2. Create two Virtual Machines (az2az1, az2az2) in 1st availability set (az2azAS1). Assign Standard Public IP address to each virtual machine during the creation itself
     a. Add atleast 2 managed disks to each machine
-3. Create two Virtual Machines (az2az3, az2az4) in 1st availability set (az2azAS2). Assign Standard Public IP address to each virtual machine during the creation itself
+    b. Install "Failover Clustering" and "Storage Replica" feature
+3. Create two Virtual Machines (az2az3, az2az4) in 2nd availability set (az2azAS2). Assign Standard Public IP address to each virtual machine during the creation itself
     a. Add atleast 2 managed disks to each machine
+    b. Install "Failover Clustering" and "Storage Replica" feature
 
-### Step 6: In all 4 nodes install "Failover Clustering" and "Storage Replica" feature.
-
-### Step 7: Connect all the nodes to the domain and provide Administrator previleges to the previously created user.
+### Step 6: Connect all the nodes to the domain and provide Administrator previleges to the previously created user.
 - Change the DNS Server of virtual network to domain controller private ip address.
     - In our example, the domain controller az2azDC has private ip address (10.3.0.8). In the Virtual Network (az2az-Vnet) change DNS Server 10.3.0.8.
 
-- Connect all the nodes to "Contoso.com" and provide administrator previleges to "contosoadmin".
+- In our example connect all the nodes to "Contoso.com" and provide administrator previleges to "contosoadmin".
  
-### Step 8: Create clusters.
+### Step 7: Create clusters.
 
 1. Create the clusters (SRAZC1, SRAZC2). 
 Below is the powershell commands for our example
@@ -75,8 +75,8 @@ Below is the powershell commands for our example
 
 3. For each cluster create virtual disk and volume. One for data and another for log.
 
-### Step 9: Create Load Balancer for each cluster.
-As show in the diagram-1
+### Step 8: Create Load Balancer for each cluster.
+As shown in the diagram-1
 1. Create Standard SKU Load Balancer for each cluster (azlbr1,azlbr2). Provide the Cluster IP address as private IP address for the load balancer.
     a. azlbr1 => Frontend IP: 10.3.0.100
     b. azlbr2 => Frontend IP: 10.3.0.101
@@ -84,13 +84,13 @@ As show in the diagram-1
 3. Create Health Probe: port 59999
 4. Create Load Balance Rule: Allow HA ports, with enabled Floating IP.
 
-### Step 10: On each cluster node, open ports 59999 (Health Probe).
+### Step 9: On each cluster node, open ports 59999 (Health Probe).
 Run the below command on each node
 ```PowerShell
 netsh advfirewall firewall add rule name=PROBEPORT dir=in protocol=tcp action=allow localport=59999 remoteip=any profile=any 
 ```
 
-### Step 11: Instruct the cluster to listen for Health Probe messages on Port 59999 and respond from the node that currently owns this resource.
+### Step 10: Instruct the cluster to listen for Health Probe messages on Port 59999 and respond from the node that currently owns this resource.
 
 Run it once from any one node of the cluster, for each cluster.
 Make sure to change the "ILBIP" according to your configuration values.
@@ -114,7 +114,7 @@ $ILBIP = "10.3.0.101" # IP Address in Internal Load Balancer (ILB) - The static 
 Get-ClusterResource $IPResourceName | Set-ClusterParameter -Multiple @{"Address"="$ILBIP";"ProbePort"=$ProbePort;"SubnetMask"="255.255.255.255";"Network"="$ClusterNetworkName";”ProbeFailureThreshold”=5;"EnableDhcp"=0}  
 ```
 
-### Step 12: Make sure both cluster can connect / communicate with each other.
+### Step 11: Make sure both cluster can connect / communicate with each other.
 Either use "Connect to Cluster" feature in Failover cluster manager to connect to the other cluster or check other cluster responds from one of the nodes of current cluster.
 
 For our example:
@@ -125,12 +125,12 @@ Get-Cluster -Name SRAZC1 (ran from az2az3)
 Get-Cluster -Name SRAZC2 (ran from az2az1)
 ```
 
-### Step 13: Create cloud witness for both the clusters.
+### Step 12: Create cloud witness for both the clusters.
 1. Create 2 storage accounts (az2azcw,az2azcw2) in azure one for each cluster in same resource group (SR-AZ2AZ)
 2. Copy the storage account name and key from "access keys"
 3. Create the cloud witness from “failover cluster manager” and use the above account name and key to create it.
 
-### Step 14: Grant SR-Access of one cluster to other cluster in both direction.
+### Step 13: Grant SR-Access of one cluster to other cluster in both direction.
 For our example:
 ```PowerShell
 Grant-SRAccess -ComputerName az2az1 -Cluster SRAZC2
@@ -139,7 +139,7 @@ Grant-SRAccess -ComputerName az2az1 -Cluster SRAZC2
 Grant-SRAccess -ComputerName az2az3 -Cluster SRAZC1
 ```
 
-### Step 15: Create Partnership.
+### Step 14: Create Partnership.
 1.	For cluster SRAZC1
     a.	Volume location:-  c:\ClusterStorage\DataDisk1
     b.	log location :- g:
