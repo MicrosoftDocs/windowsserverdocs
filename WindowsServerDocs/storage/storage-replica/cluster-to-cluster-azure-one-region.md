@@ -140,13 +140,13 @@ Grant-SRAccess -ComputerName az2az3 -Cluster SRAZC1
 ```
 
 ### Step 14: Create Partnership.
-1.	For cluster SRAZC1
-    a.	Volume location:-  c:\ClusterStorage\DataDisk1
-    b.	log location :- g:
-2.	For cluster SRAZC2
-    a.	Volume location:- c:\ClusterStorage\DataDisk2
-    b.	Log location:- g:
-3.	Run the command
+1. For cluster SRAZC1. 
+    a. Volume location:- c:\ClusterStorage\DataDisk1
+    b. Log location:- g:
+2. For cluster SRAZC2
+    a. Volume location:- c:\ClusterStorage\DataDisk2
+    b. Log location:- g:
+3. Run the command
 
 ```PowerShell
 
