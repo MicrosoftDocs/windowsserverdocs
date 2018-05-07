@@ -77,7 +77,7 @@ Windows Server, version 1803 is the next release in the new Semi-Annual Channel.
 
 **Windows Server, version 1803 runs in Server Core mode.** That means there is no local console or graphical user interface, so you manage it remotely. However, it offers great advantages such as smaller hardware requirements and much smaller attack surface. If you're new to working with Server Core, [Manage a Server Core server](administration/server-core/server-core-manage.md) will help you get used to this environment. [Manage Windows Server](administration/manage-windows-server.md) shows you the various options for managing servers remotely.
 
-Check out [What's New in Windows Server version 1709](get-started/whats-new-in-windows-server-1709.md) for more information about the new features and functionality added in Windows Server, version 1709.
+Check out [What's New in Windows Server version 1803](get-started/whats-new-in-windows-server-1803.md) for more information about the new features and functionality added in Windows Server, version 1803.
 
 ## Windows Server editions
 
