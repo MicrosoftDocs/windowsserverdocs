@@ -19,6 +19,7 @@
 ## [Windows Server 2016 Role Upgrade and Migration](Server-Role-Upgradeability-Table.md)
 ## [Windows Server 2016 Application Compatibility Table](Server-Application-compatibility.md)
 ## Features Removed or Planned for Replacement in Windows Server Releases
+### [Features removed or planned for replacement starting with Windows Server, version 1803](windows-server-1803-removed-features.md)
 ### [Features removed or planned for replacement starting with Windows Server, version 1709](Removed-Features-1709.md)
 ### [Features Removed or Deprecated in Windows Server 2016](Deprecated-Features.md)
 ## [Windows Server 2016 Edition Comparison](2016-Edition-Comparison.md)
