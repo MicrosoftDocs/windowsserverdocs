@@ -63,6 +63,7 @@ And add one Inbound security rule for RDP:3389 to both Network Security Group. Y
     - In our example, the domain controller az2azDC has private ip address (10.3.0.8). In the Virtual Network (az2az-Vnet and azcross-VNET) change DNS Server 10.3.0.8
 
 - In our example connect all the nodes to "Contoso.com" and provide administrator previleges to "contosoadmin".
+    - And login as contosoadmin from all the nodes
  
 ### Step 7: Create clusters.
 
