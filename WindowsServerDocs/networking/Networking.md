@@ -4,9 +4,9 @@ description: This topic provides an overview of the Software Defined Networking 
 ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
-ms.date: 03/16/2018
+ms.date: 05/08/2018
 ms.assetid: daaf6b61-5953-4c2d-b6b8-7c885b552646
-manager: brianlic
+manager: elizapo
 ms.author: pashort
 author: shortpatti
 ms.localizationpriority: high
