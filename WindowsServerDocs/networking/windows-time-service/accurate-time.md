@@ -3,9 +3,8 @@ ms.assetid: 72a90d00-56ee-48a9-9fae-64cbad29556c
 title: Accurate Time for Windows Server 2016
 description: Time synchronization accuracy in Windows Server 2016 has been improved substantially, while maintaining full backwards NTP compatibility with older Windows versions.
 author: shortpatti
-ms.author: pashort
-manager: alanth
-ms.date: 3/12/2018
+ms.author: dacuo
+ms.date: 05/03/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: networking
@@ -13,7 +12,7 @@ ms.technology: networking
 
 # Accurate Time for Windows Server 2016
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10 version 1607 or later
 
 The Windows Time service is a component that uses a plug-in model for client and server time synchronization providers.  There are two built-in client providers on Windows, and there are third-party plug-ins available. One provider uses [NTP (RFC 1305)](https://tools.ietf.org/html/rfc1305) or [MS-NTP](https://msdn.microsoft.com/en-us/library/cc246877.aspx) to synchronize the local system time to an NTP and/or MS-NTP compliant reference server. The other provider is for Hyper-V and synchronizes virtual machines (VM) to the Hyper-V host.  When multiple providers exist, Windows will pick the best provider using stratum level first, followed by root delay, root dispersion, and finally time offset.
 
@@ -60,5 +59,20 @@ In every case for accurate time, there are three critical factors:
 
 For battery powered devices, both mobile and portable, you must consider different strategies.  As per our recommendation, keeping accurate time requires the clock to be disciplined once a second, which correlates to the Clock Update Frequency. These settings will consume more battery power than expected and can interfere with power saving modes available in Windows for such devices. Battery powered devices also have certain power modes which stop all applications from running, which interferes with W32time’s ability to discipline the clock and maintain accurate time. Additionally, clocks in mobile devices may not be very accurate to begin with.  Ambient environmental conditions affect clock accuracy and a mobile device can move from one ambient condition to the next which may interfere with its ability to keep time accurately.  Therefore, Microsoft does not recommend that you set up battery powered portable devices with high accuracy settings. 
 
+## Why is time important?  
+There are many different reasons you might need accurate time.  The typical case for Windows is Kerberos, which requires 5 minutes of accuracy between the client and server.  However, there are many other areas that can be affected by time accuracy including:
 
 
+- Government Regulations like:
+	- 50 ms accuracy for FINRA in the US
+	- 1 ms ESMA (MiFID II) in the EU.
+- Cryptography Algorithms
+- Distributed systems like Cluster/SQL/Exchange and Document DBs
+- Blockchain framework for bitcoin transactions
+- Distributed Logs and Threat Analysis 
+- AD Replication
+- PCI (Payment Card Industry), currently 1 second accuracy
+
+
+
+[!INCLUDE [windows-server-2016-improvements](windows-server-2016-improvements.md)]

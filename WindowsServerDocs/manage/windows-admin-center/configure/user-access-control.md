@@ -150,7 +150,7 @@ If you're running the Windows Admin Center gateway in service mode on Windows Se
 Be sure to update the gateway address with the correct one for your environment.
 
 ```powershell
-$WindowsAdminCenterGateway = 'https://windowsadmincenter.contoso.com:6516'
+$WindowsAdminCenterGateway = 'https://windowsadmincenter.contoso.com'
 Invoke-RestMethod -Uri "$WindowsAdminCenterGateway/api/nodes/all/features/jea/endpoint/export" -Method POST -UseDefaultCredentials -OutFile "~\Desktop\WindowsAdminCenter_RBAC.zip"
 ```
 

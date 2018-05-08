@@ -40,20 +40,20 @@ You can override default Features on Demand behavior by doing any of the followi
 
 This topic contains the following sections.
 
--   [create a feature file or side-by-side store](#BKMK_store)
+-   [Create a feature file or side-by-side store](#BKMK_store)
 
 -   [Methods of removing feature files](#BKMK_methods)
 
--   [remove feature files by using Uninstall-WindowsFeature](#BKMK_remove)
+-   [Remove feature files by using Uninstall-WindowsFeature](#BKMK_remove)
 
-## <a name="BKMK_store"></a>create a feature file or side-by-side store
+## <a name="BKMK_store"></a>Create a feature file or side-by-side store
 This section describes how to set up a remote feature file shared folder (also called a side-by-side store) that stores the files required to install roles, role services, and features on servers that run  Windows Server 2012 R2  or  Windows Server 2012 . After you have set up a feature store, you can install roles, role services, and features on servers that are running those operating systems, and specify the feature store as the location of installation source files.
 
 #### To create a feature file store
 
-1.  create a shared folder on a server on your network. For example, *\\\network\share\sxs*.
+1.  Create a shared folder on a server on your network. For example, *\\\network\share\sxs*.
 
-2.  verify that you have the correct permissions assigned to the feature store. The source path or file share must grant **Read** permissions either to the **Everyone** group (not recommended for security reasons), or to the computer accounts (*DOMAIN*\\*SERverNAME*$) of servers on which you plan to install features by using this feature store; granting user account access is not sufficient.
+2.  Verify that you have the correct permissions assigned to the feature store. The source path or file share must grant **Read** permissions either to the **Everyone** group (not recommended for security reasons), or to the computer accounts (*DOMAIN*\\*SERverNAME*$) of servers on which you plan to install features by using this feature store; granting user account access is not sufficient.
 
     You can access file sharing and permissions settings by doing either of the following on the Windows desktop.
 
@@ -64,7 +64,7 @@ This section describes how to set up a remote feature file shared folder (also c
     > [!NOTE]
     > Servers that are in workgroups cannot access external file shares, even if the computer account for the workgroup server has **Read** permissions on the external share. Alternate source locations that work for workgroup servers include installation media, Windows Update, and VHD or WIM files that are stored on the local workgroup server.
 
-3.  copy the **Sources\SxS** folder from your Windows Server installation media to the shared folder that you created in step 1.
+3.  Copy the **Sources\SxS** folder from your Windows Server installation media to the shared folder that you created in step 1.
 
 ## <a name="BKMK_methods"></a>Methods of removing feature files
 Two methods are available for removing feature files from Windows Server in a Features on Demand configuration.
@@ -73,7 +73,7 @@ Two methods are available for removing feature files from Windows Server in a Fe
 
 -   Deployment Image Servicing and Management (DISM) commands let you create custom WIM files that conserve disk space by omitting feature files that are either not needed, or can be obtained from other, remote sources. For more information about using DISM to prepare custom images, see [How to Enable or Disable Windows Features](https://technet.microsoft.com/library/hh824822.aspx).
 
-## <a name="BKMK_remove"></a>remove feature files by using Uninstall-WindowsFeature
+## <a name="BKMK_remove"></a>Remove feature files by using Uninstall-WindowsFeature
 You can use the Uninstall-WindowsFeature cmdlet both to uninstall roles, role services, and features from servers and offline VHDs that are running  Windows Server 2012 R2  or  Windows Server 2012 , and to delete feature files. You can both uninstall and delete the same roles, role services, and features in the same command if desired.
 
 > [!IMPORTANT]
@@ -92,7 +92,7 @@ You can use the Uninstall-WindowsFeature cmdlet both to uninstall roles, role se
 
     -   On a server that is running the Server Core installation option, type **PowerShell** into a command prompt, and then press **Enter**.
 
-2.  type the following, and then press **Enter**.
+2.  Type the following, and then press **Enter**.
 
     ```
     Uninstall-WindowsFeature -Name <feature_name> -computerName <computer_name> -remove

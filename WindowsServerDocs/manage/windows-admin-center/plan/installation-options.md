@@ -5,7 +5,7 @@ ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
-ms.date: 04/05/2018
+ms.date: 04/23/2018
 ms.localizationpriority: low
 ms.prod: windows-server-threshold
 ---
@@ -37,7 +37,7 @@ You can use Windows Admin Center to manage the following Windows operating syste
 | Windows 10 Fall Creators Update (1709) or newer | Yes (via Computer Management) | N/A | N/A |
 | Windows Server 2019 (insider builds) | Yes | Yes | Yes |
 | Windows Server, version 1709 | Yes | Yes | No |
-| Windows Server 2016 | Yes | Yes | Coming soon |
+| Windows Server 2016 | Yes | Yes | Yes, with [latest cumulative update](../use/manage-hyper-converged.md#prepare-your-windows-server-2016-cluster-for-windows-admin-center) |
 | Windows Server 2012 R2 | Yes | Yes | N/A |
 | Windows Server 2012 | Yes | Yes | N/A |
 

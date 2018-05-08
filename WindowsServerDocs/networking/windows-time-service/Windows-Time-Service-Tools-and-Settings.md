@@ -2,19 +2,17 @@
 ms.assetid: 6086947f-f9ef-4e18-9f07-6c7c81d7002c
 title: Windows Time Service Tools and Settings
 description:
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+author: shortpatti
+ms.author: pashort
+manager: alanth
+ms.date: 04/17/2018
 ms.topic: article
 ms.prod: windows-server-threshold
-
 ms.technology: networking
 ---
 
 # Windows Time Service Tools and Settings
-
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10 version 1607 or later
 
 **In this section**  
   

@@ -60,7 +60,7 @@ Windows Admin Center offers the best experience for [managing hyper-converged cl
 
 ### **Extensibility**
 
-Windows Admin Center was built with extensibility in mind from the beginning, with the ability for Microsoft and 3rd party developers to build tools and solutions beyond the current  offerings. Microsoft will be offering an [SDK](../extend/how-sdk-works.md) in the near future to enable developers to build their own tools for Windows Admin Center.
+Windows Admin Center was built with extensibility in mind from the beginning, with the ability for Microsoft and 3rd party developers to build tools and solutions beyond the current  offerings. Microsoft offers an [SDK](../extend/extensibility-overview.md) that enables developers to build their own tools for Windows Admin Center.
 
 > [!Tip]
 > Ready to install Windows Admin Center? [Download now](https://aka.ms/WACDownload)

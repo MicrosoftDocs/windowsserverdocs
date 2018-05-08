@@ -2,11 +2,11 @@
 title: Resilient File System (ReFS) overview
 ms.prod: windows-server-threshold
 ms.author: gawatu
-ms.manager: dmoss
+ms.manager: mchad
 ms.technology: storage-file-systems
 ms.topic: article
 author: gawatu
-ms.date: 03/12/2018
+ms.date: 04/24/2018
 ---
 # Resilient File System (ReFS) overview
 
@@ -63,7 +63,7 @@ Microsoft has developed NTFS specifically for general-purpose use with a wide ra
 
 >[!NOTE]
 > All ReFS supported configurations must use [Windows Server Catalog](https://www.WindowsServerCatalog.com) certified hardware and meet application requirements. 
-
+features 
 ### Storage Spaces Direct
 
 
@@ -75,12 +75,9 @@ Deploying ReFS on Storage Spaces Direct is recommended for virtualized workloads
 
 ### Storage Spaces
 
-- Integrity-streams, online repair, and alternate data copies enable ReFS and Storage Spaces to jointly to detect and correct storage controller and storage media corruptions within both metadata and data.
+- Integrity-streams, online repair, and alternate data copies enable ReFS and [Storage Spaces](../storage-spaces/overview.md) to jointly to detect and correct storage controller and storage media corruptions within both metadata and data.
 - Storage Spaces deployments can also utilize block-cloning and the scalability offered in ReFS.
 - Deploying ReFS on Storage Spaces with shared SAS enclosures is suitable for hosting archival data and storing user documents.
-
-
-
 
 >[!NOTE]
 > Storage Spaces supports local non-removable direct-attached via BusTypes SATA, SAS, NVME, or attached via HBA (aka RAID controller in pass-through mode).
@@ -100,7 +97,7 @@ Deploying ReFS as a backup target is best suited for applications and hardware t
 - Applications that introduce their own resiliency and availability software solutions can leverage integrity-streams, block-cloning, and the ability to scale and support large data sets.
 
 >[!NOTE]
-> Backup targets include the above supported configurations. Please contact application and storage array vendors for support details on Fiber Channel and iSCSI SANs.  
+> Backup targets include the above supported configurations. Please contact application and storage array vendors for support details on Fiber Channel and iSCSI SANs. For SANs, if features such as thin provisioning, TRIM/UNMAP, or Offloaded Data Transfer (ODX) are required, NTFS must be used.   
 
 ## Feature comparison
 
@@ -135,7 +132,11 @@ Deploying ReFS as a backup target is best suited for applications and hardware t
 | Oplocks | Yes | Yes |
 | Sparse files | Yes | Yes |
 | Named streams | Yes | Yes |
+| Thin Provisioning | Yes<sup>2</sup> | Yes |
+| Offloaded Data Transfer (ODX) | No | Yes |
+| Trim/Unmap | Yes<sup>2</sup> | Yes |
 1. Available on Windows Server, version 1709 and later.
+2. Storage Spaces only
 
 #### The following features are only available on ReFS:
 
@@ -160,7 +161,7 @@ Deploying ReFS as a backup target is best suited for applications and hardware t
 | Bootable | No | Yes |
 | Page file support | No | Yes |
 | Supported on removable media | No | Yes |
-| NTFS storage tiers | No | Yes |
+
 
 ## See also
 

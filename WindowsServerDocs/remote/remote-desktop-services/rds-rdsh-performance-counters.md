@@ -13,11 +13,11 @@ ms.localizationpriority: low
 ---
 # Use performance counters to diagnose app performance problems on Remote Desktop Session Hosts
 
-One of the most difficult problems to diagnose is poor application performance - the applications are running slow or don't respond. Traditionally, you start your diagnosis by collecting CPU, memory, disk input/output, and other metrics and then use tools like Windows Performance Analyzer to try to figure out what's causing the problem. Unfortunately in most situations this data doesn't help you identify the root cause because resource consumption counters have frequent and large variations. This makes it hard to read the data and correlate it with the reported issue. To help you more quickly solve your app performance problems, we've added some new performance counters (available through the [Windows Insider Program](https://insider.windows.com)) that measure user input flows.  
+One of the most difficult problems to diagnose is poor application performance—the applications are running slow or don't respond. Traditionally, you start your diagnosis by collecting CPU, memory, disk input/output, and other metrics and then use tools like Windows Performance Analyzer to try to figure out what's causing the problem. Unfortunately in most situations this data doesn't help you identify the root cause because resource consumption counters have frequent and large variations. This makes it hard to read the data and correlate it with the reported issue. To help you more quickly solve your app performance problems, we've added some new performance counters (available [to download](#download-windows-server-insider-software) through the [Windows Insider Program](https://insider.windows.com)) that measure user input flows.
 
-The User Input Delay counter can help you quickly identify the root cause for bad end user RDP experiences. This counter measures how long any user input (such as mouse or keyboard usage) stays in the queue before it is picked up by a process, and the counter works in both local and remote sessions. 
+The User Input Delay counter can help you quickly identify the root cause for bad end user RDP experiences. This counter measures how long any user input (such as mouse or keyboard usage) stays in the queue before it is picked up by a process, and the counter works in both local and remote sessions.
 
-The following image shows a rough representation of user input flow from client to application. 
+The following image shows a rough representation of user input flow from client to application.
 
 ![Remote Desktop - User input flows from the users Remote Desktop client to the application](.\media\rds-user-input.png)
 
@@ -25,7 +25,7 @@ The User Input Delay counter measures the max delta (within an interval of time)
 
 ![Remote Desktop - User input Delay performance counter flow](.\media\rds-user-input-delay.png)
 
-One important detail of this counter is that it reports the maximum user input delay within a configurable interval. This is the longest time it takes for an input to reach the application, which can impact the speed of important and visible actions like typing. 
+One important detail of this counter is that it reports the maximum user input delay within a configurable interval. This is the longest time it takes for an input to reach the application, which can impact the speed of important and visible actions like typing.
 
 For example, in the following table, the user input delay would be reported as 1,000 ms within this interval. The counter reports the slowest user input delay in the interval because the user’s perception of "slow" is determined by the slowest input time (the maximum) they experience, not the average speed of all total inputs.
 
@@ -61,7 +61,7 @@ The counter starts reporting user input delay as soon as you add it. Note that t
 
 ![Remote Desktop - An example of activity for the User Input Delay per process in the Performance Monitor](.\media\rds-sample-user-input-delay-perfmon.png)
 
-Next, let’s look at the **User Input Delay per Session**. There are instances for each session ID, and their counters show the user input delay of any process within the specified session. In addition, there are two instances called "Max" (the maximum user input delay across all sessions) and "Average" (the average acorss all sessions). 
+Next, let’s look at the **User Input Delay per Session**. There are instances for each session ID, and their counters show the user input delay of any process within the specified session. In addition, there are two instances called "Max" (the maximum user input delay across all sessions) and "Average" (the average acorss all sessions).
 
 This table shows a visual example of these instances. (You can get the same information in Perfmon by switching to the Report graph type.)
 
@@ -77,7 +77,7 @@ This table shows a visual example of these instances. (You can get the same info
 
 ## Counters used in an overloaded system
 
-Now let's look at what you'll see in the report if performance for an app is degraded. The following graph shows readings for users working remotely in Microsoft Word. In this case, the RDSH server performance degrades over time as more users log in. 
+Now let's look at what you'll see in the report if performance for an app is degraded. The following graph shows readings for users working remotely in Microsoft Word. In this case, the RDSH server performance degrades over time as more users log in.
 
 ![Remote Desktop - An example performance graph for the RDSH server running Microsoft Word](.\media\rds-user-input-perf-graph.png)
 
@@ -88,7 +88,7 @@ Here's how to read the graph's lines:
 - The green line is the maximum user input delay across all sessions.
 - The blue line (displayed as black in this graph) represents average user input delay across all sessions.
 
-You’ll notice that there's a correlation between CPU spikes and user input delay — as the CPU gets more usage, the user input delay increases. Also, as more users get added to the system, CPU usage gets closer to 100%, leading to more frequent user input delay spikes. While this counter is very useful in cases where the server runs out of resources, you can also use it to track user input delay related to a specific application. 
+You’ll notice that there's a correlation between CPU spikes and user input delay—as the CPU gets more usage, the user input delay increases. Also, as more users get added to the system, CPU usage gets closer to 100%, leading to more frequent user input delay spikes. While this counter is very useful in cases where the server runs out of resources, you can also use it to track user input delay related to a specific application.
 
 ## Configuration Options
 
@@ -115,7 +115,12 @@ This is what it looks like if you turn both keys on:
 ![Remote Desktop - The performance monitor with both keys on](.\media\rds-user-input-delay-with-two-counters.png)
 
 ## Using the new counters with non-Microsoft tools
+
 Monitoring tools can consume this counter by using the [Perfmon API](https://msdn.microsoft.com/library/windows/desktop/aa371903.aspx).
+
+## Download Windows Server Insider software
+
+Registered Insiders can navigate directly to the [Windows Server Insider Preview download page](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewserver) to get the latest Insider software downloads.  To learn how to register as an Insider, see [Getting started with Server](https://insider.windows.com/en-us/for-business-getting-started-server/).
 
 ## Share your feedback
 

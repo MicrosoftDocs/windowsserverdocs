@@ -1,11 +1,18 @@
 # [Failover Clustering](failover-clustering-overview.md)
 ## [What's New in Failover Clustering](whats-new-in-failover-clustering.md)
 ## Understand
+### [Scale-Out File Server for application data](sofs-overview.md)
+### [Cluster and pool quorum](../storage/storage-spaces/understand-quorum.md)
 ### [Fault domain awareness](fault-domains.md)
 ### [Simplified SMB Multichannel and multi-NIC cluster networks](smb-multichannel.md)
 ### [VM load balancing](vm-load-balancing-overview.md)
-#### [VM load balancing deep-dive](vm-load-balancing-deep-dive.md)
+### [VM load balancing deep-dive](vm-load-balancing-deep-dive.md)
+## Plan
+### [Hardware requirements](clustering-requirements.md)
+### [Use Cluster Shared Volumes (CSVs)](failover-cluster-csvs.md)
 ## Deploy
+### [Create a failover cluster](create-failover-cluster.md)
+### [Prestage a cluster in AD DS](prestage-cluster-adds.md)
 ### [Deploy a Cloud Witness for a Failover Cluster](deploy-cloud-witness.md)
 ### [Cluster operating system rolling upgrades](cluster-operating-system-rolling-upgrade.md)
 ## Manage
@@ -19,5 +26,6 @@
 #### [Faults](health-service-faults.md)
 #### [Actions](health-service-actions.md)
 #### [Settings](health-service-settings.md)
+### [Configure and manage quorum](manage-cluster-quorum.md)
 ### [Troubleshooting using Windows Error Reporting](troubleshooting-using-WER-reports.md)
 ## [Change history for Failover Clustering topics](clustering-change-history.md)

@@ -7,7 +7,7 @@ ms.author: jgerend
 ms.technology: storage-failover-clustering
 ms.topic: article
 author: JasonGerend
-ms.date: 10/2/2017
+ms.date: 04/25/2018
 description: How to use Microsoft Azure to host the witness for a Windows Server Failover Cluster in the cloud - aka how to deploy a Cloud Witness.
 ---
 # Deploy a Cloud Witness for a Failover Cluster
