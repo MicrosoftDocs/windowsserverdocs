@@ -21,7 +21,6 @@
 ###### [Install and Configure the NPS Server](remote-access/vpn/always-on-vpn/deploy/vpn-deploy-nps.md)
 ###### [Configure DNS and Firewall Settings](remote-access/vpn/always-on-vpn/deploy/vpn-deploy-dns-firewall.md)
 ###### [Configure Windows 10 Client Always On VPN Connections](remote-access/vpn/always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md)
-###### [Conditional Access for Always On VPN](remote-access/vpn/always-on-vpn/deploy/ca-for-always-on-vpn.md)
 #### [Always On VPN Troubleshooting](remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting.md)
 
 
@@ -166,9 +165,11 @@
 ####### [Step 1: Configure the Remote Access Infrastructure](remote-access/ras/manage-remote-clients/install/Step-1-Configure-the-remote-Access-Infrastructure.md)
 ####### [Step 2: Configure the Remote Access Server](remote-access/ras/manage-remote-clients/install/Step-2-Configure-the-remote-Access-Server.md)
 ####### [Step 3: Verify the Deployment](remote-access/directaccess/single-server-advanced/Step-3-verify-the-Deployment.md)
+
+
 ### [Virtual Private Networking (VPN)](remote-access/vpn/vpn-top.md)
-
-
+#### [Configure VPN Device Tunnels in Windows 10](remote-access/vpn/vpn-device-tunnel-config.md)
+####[Azure Active Directory conditional access for VPN connectivity](remote-access/vpn/ad-ca-vpn-connectivity-windows10.md)
 
 ## [Web Application Proxy in Windows Server](remote-access//web-application-proxy/web-application-proxy-windows-server.md)
 ### [Publishing Applications using AD FS Preauthentication](remote-access//web-application-proxy/Publishing-Applications-using-AD-FS-Preauthentication.md)

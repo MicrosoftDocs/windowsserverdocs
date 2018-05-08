@@ -9,26 +9,26 @@ ms.workload: identity
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.topic: article
-ms.date: 04/23/2018
+ms.date: 05/09/2018
 ms.author: pashort
 author: shortpatti
 manager: elizapo
 ms.reviewer: jairoc
 ---
 
-# Azure Active Directory conditional access for VPN connectivity (preview)
+# Azure Active Directory conditional access for VPN connectivity
 
 With [Azure Active Directory (Azure AD) conditional access](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-conditional-access-azure-portal), you can fine-tune how authorized users access your resources. With Azure AD conditional access for virtual private network (VPN) connectivity, you can help protect your VPN connections.
 
 To configure conditional access for VPN connectivity, you must complete the following steps: 
 
 1.	[Install Remote Access as a RAS Gateway VPN Server](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-ras#install-remote-access-as-a-ras-gateway-vpn-server)
-2.	[Configure Remote Access as a VPN Server](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-ras#configure-remote-access-as-a-vpn-server)
-3.	[Install Network Policy Service (NPS)](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-nps#install-network-policy-server)
-4.	[Configure Network Policy Service](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-nps#configure-network-policy-for-vpn-connections)
-5.	[Verify that the Standard VPN works](#verify-it-works) 
-6.	[Create a Custom Server Authentication Template that Supports IKEv2](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-server-infrastructure#create-the-vpn-server-authentication-template)
-7.	[Request a Server Authentication Certificate for IKEv2](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-server-infrastructure#enroll-and-validate-the-server-certificates)
+2.	[Install Network Policy Service (NPS)](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-nps#install-network-policy-server)
+3.	[Configure Network Policy Service](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-nps#configure-network-policy-for-vpn-connections)
+4.	[Verify that the Standard VPN works](#verify-it-works) 
+5.	[Create a Custom Server Authentication Template that Supports IKEv2](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-server-infrastructure#create-the-vpn-server-authentication-template)
+5.	[Request a Server Authentication Certificate for IKEv2](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-server-infrastructure#enroll-and-validate-the-server-certificates)
+7.	[Configure Remote Access as a VPN Server](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-ras#configure-remote-access-as-a-vpn-server)
 8.	[Remove Weak Authentication Methods](#remove-weak-auth-methods)
 9.	[Configure EAP-TLS to Ignore Certificate Revocation List (CRL) Checking](#config-eap-tls-crl)
 10.	[Create Root Certificates for VPN Authentication with Azure AD](#create-root-ca-for-vpn-auth)
@@ -52,7 +52,7 @@ To gain insights on how Microsoft implements this feature, see [Enhancing remote
 
 ## Prerequisites
 
-To configure Azure Active Directory conditional access for VPN connectivity, you need to have a VPN server configured.  For more information, see the [Always On VPN Deployment Guide](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy).
+To configure Azure Active Directory conditional access for VPN connectivity, you need to have a VPN server configured.  
 
 
 ## [Step 1: Install Remote Access as a RAS Gateway VPN Server](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-ras#install-remote-access-as-a-ras-gateway-vpn-server)
@@ -97,7 +97,7 @@ In this step, configure the template VPN profile on a domain-joined client compu
 
 8. In Type of sign-in info, select **User name and password**.
 
-9. In User name (optional), enter the user name.
+9. In **User name (optional)**, enter the user name.
 
 10. In Password, enter the user's password.
 
@@ -200,29 +200,29 @@ Azure AD uses the VPN certificate to sign certificates issued to Windows 10 clie
 
 In the Azure portal, you can create two certificates to manage the transition when one certificate is about to expire. When you create a certificate, you can choose whether it is the primary certificate, which is used during the authentication to sign the certificate for the connection.
 
-**To create a VPN certificate:**
+**Procedure:**
 
 1. Sign in to your [Azure portal](https://portal.azure.com) as a global administrator.
 
 2. On the left menu, click **Azure Active Directory**. 
 
-    ![Select Azure Active Directory](../../../../media/Always-On-Vpn/01.png)
+    ![Select Azure Active Directory](../../media/Always-On-Vpn/01.png)
 
 3. On the **Azure Active Directory** page, in the **Manage** section, click **Conditional access**.
 
-    ![Select Conditional access](../../../../media/Always-On-Vpn/02.png)
+    ![Select Conditional access](../../media/Always-On-Vpn/02.png)
 
 4. On the **Conditional access** page, in the **Manage** section, click **VPN connectivity (preview)**.
 
-    ![Select VPN connectivity](../../../../media/Always-On-Vpn/03.png)
+    ![Select VPN connectivity](../../media/Always-On-Vpn/03.png)
 
 5. On the **VPN connectivity** page, click **New certificate**.
 
-    ![Select new certificate](../../../../media/Always-On-Vpn/04.png)
+    ![Select new certificate](../../media/Always-On-Vpn/04.png)
 
 6. On the **New** page, perform the following steps:
 
-    ![Select duration and primary](../../../../media/Always-On-Vpn/05.png)
+    ![Select duration and primary](../../media/Always-On-Vpn/05.png)
 
     a. For **Select duration**, select either 1 or 2 years. You can add up to two certificates to manage transitions when the certificate is about to
         expire. You can choose which one is the primary (the one used during authentication to sign the certificate for connectivity).
@@ -241,22 +241,23 @@ After a root certificate has been created, the 'VPN connectivity' triggers the c
 - **Cloud App**: VPN Server
 - **Grant (access control)**: 'Require multi-factor authentication'. Other controls can be used if desired.
 
+**Procedure:**
 
 1. On the **Conditional Access** page, in the toolbar on the top, click **Add**.
 
-    ![Select add on conditional access page](../../../../media/Always-On-Vpn/07.png)
+    ![Select add on conditional access page](../../media/Always-On-Vpn/07.png)
 
 2. On the **New** page, in the **Name** box, type a name for your policy. For example, type **VPN policy**.
 
-    ![Add name for policy on conditional access page](../../../../media/Always-On-Vpn/08.png)
+    ![Add name for policy on conditional access page](../../media/Always-On-Vpn/08.png)
 
 5. In the **Assignment** section, click **Users and groups**.
 
-    ![Select users and groups](../../../../media/Always-On-Vpn/09.png)
+    ![Select users and groups](../../media/Always-On-Vpn/09.png)
 
 6. On the **Users and groups** page, perform the following steps:
 
-    ![Select test user](../../../../media/Always-On-Vpn/10.png)
+    ![Select test user](../../media/Always-On-Vpn/10.png)
 
     a. Click **Select users and groups**.
 
@@ -268,7 +269,7 @@ After a root certificate has been created, the 'VPN connectivity' triggers the c
 
 7. On the **New** page, perform the following steps:
 
-    ![Select cloud apps](../../../../media/Always-On-Vpn/11.png)
+    ![Select cloud apps](../../media/Always-On-Vpn/11.png)
 
     a. In the **Assignments** section, click **Cloud apps**.
 
@@ -282,11 +283,11 @@ After a root certificate has been created, the 'VPN connectivity' triggers the c
 
 13. On the **New** page, to open the **Grant** page, in the **Controls** section, click **Grant**.
 
-    ![Select grant](../../../../media/Always-On-Vpn/13.png)
+    ![Select grant](../../media/Always-On-Vpn/13.png)
 
 14. On the **Grant** page, perform the following steps:
 
-    ![Select require multi-factor authentication](../../../../media/Always-On-Vpn/14.png)
+    ![Select require multi-factor authentication](../../media/Always-On-Vpn/14.png)
 
     a. Select **Require multi-factor authentication**.
 
@@ -294,7 +295,7 @@ After a root certificate has been created, the 'VPN connectivity' triggers the c
 
 15. On the **New** page, under **Enable policy**, click **On**.
 
-    ![Enable policy](../../../../media/Always-On-Vpn/15.png)
+    ![Enable policy](../../media/Always-On-Vpn/15.png)
 
 16. On the **New** page, click **Create**.
 
@@ -304,7 +305,7 @@ After a root certificate has been created, the 'VPN connectivity' triggers the c
 
 1. On the **VPN connectivity** page, click **Download certificate**. 
    
-    ![Download certificate for conditional access](../../../../media/Always-On-Vpn/06.png)
+    ![Download certificate for conditional access](../../media/Always-On-Vpn/06.png)
 
     >[!NOTE]
     >The **Download base64 certificate** option is available for some configurations that require base64 certificates for deployment. 
@@ -424,8 +425,4 @@ The EAP XML sample below contains the minimum settings need to make this work wi
 
 In this step, you configure your VPN client connectivity profile as outlined in [VPN and conditional access](https://docs.microsoft.com/windows/access-protection/vpn/vpn-conditional-access).
 
-
-## Next steps
-
-To gain insights into how Microsoft implements this feature, see [Enhancing remote access in Windows 10 with an automatic VPN profile](https://www.microsoft.com/itshowcase/Article/Content/894/Enhancing-remote-access-in-Windows-10-with-an-automatic-VPN-profile).    
 
