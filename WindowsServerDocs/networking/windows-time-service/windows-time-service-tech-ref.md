@@ -4,14 +4,14 @@ title: Windows Time Service Technical Reference
 description: The W32Time service provides network clock synchronization for computers without the need for extensive configuration. The W32Time service is essential to the successful operation of Kerberos V5 authentication and, therefore, to AD DS-based authentication.
 author: shortpatti
 ms.author: dacuo
-ms.date: 4/16/2018
+ms.date: 05/08/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: networking
 ---
 
 # Windows Time Service Technical Reference
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10 version 1607 or later
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10 or later
 
 The W32Time service provides network clock synchronization for computers without the need for extensive configuration. The W32Time service is essential to the successful operation of Kerberos V5 authentication and, therefore, to AD DS-based authentication. Any Kerberos-aware application, including most security services, relies on time synchronization between the computers that are participating in the authentication request. AD DS domain controllers must also have synchronized clocks to help to ensure accurate data replication.
 

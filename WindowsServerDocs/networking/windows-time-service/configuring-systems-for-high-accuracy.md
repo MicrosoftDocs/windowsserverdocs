@@ -4,14 +4,14 @@ title: Configuring Systems for High Accuracy
 description: Time synchronization in Windows 10 and Windows Server 2016 has been substantially improved.  Under reasonable operating conditions, systems can be configured to maintain 1ms (millisecond) accuracy or better (with respect to UTC).
 author: shortpatti
 ms.author: dacuo
-ms.date: 4/26/2018
+ms.date: 05/08/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: networking
 ---
 
 # Configuring Systems for High Accuracy
->Applies To: Windows Server 2016 version 1607 or later, and Windows 10 version 1607 or later
+>Applies To: Windows Server 2016, and Windows 10 or later
 
 Time synchronization in Windows 10 and Windows Server 2016 has been substantially improved.  Under reasonable operating conditions, systems can be configured to maintain 1ms (millisecond) accuracy or better (with respect to UTC).
 
@@ -33,7 +33,7 @@ The following guidance will help you configure your systems to achieve high accu
 
 ## Windows 10 and Windows Server 2016 Default Configuration
 
-While we support accuracy up to 1ms on Windows 10 version 1607 (Anniversary Update) or Windows Server 2016 version 1607 or later, the majority of customers do not require highly accurate time.
+While we support accuracy up to 1ms on Windows 10 or Windows Server 2016, the majority of customers do not require highly accurate time.
 
 As such, the **default configuration** is intended to satisfy the same requirements as prior operating systems which are to:
 
@@ -50,9 +50,9 @@ As such, the **default configuration** is intended to satisfy the same requireme
 
 ### Operating System Requirements
 
-High accuracy configurations require Windows 10 version 1607 (Anniversary Update) or Windows Server 2016 version 1607 or later.  All Windows devices in the time topology must meet this requirement including higher stratum Windows time servers, and in virtualized scenarios, the Hyper-V Hosts that run the time-sensitive virtual machines. All of these devices must be at least Windows 10 version 1607 (Anniversary Update) or Windows Server 2016, version 1607 or later.
+High accuracy configurations require Windows 10 or Windows Server 2016.  All Windows devices in the time topology must meet this requirement including higher stratum Windows time servers, and in virtualized scenarios, the Hyper-V Hosts that run the time-sensitive virtual machines. All of these devices must be at least Windows 10 or Windows Server 2016.
 
-In the illustration shown below, the virtual machines requiring high accuracy are running Windows 10 version 1607 (Anniversary Update) or Windows Server 2016 version 1607 or later.  Likewise, the Hyper-V Host on which the virtual machines reside, and the upstream Windows time server must also run Windows Server 2016 version 1607 or later.
+In the illustration shown below, the virtual machines requiring high accuracy are running Windows 10 or Windows Server 2016.  Likewise, the Hyper-V Host on which the virtual machines reside, and the upstream Windows time server must also run Windows Server 2016.
 
 ![Time Topology - 1607](../media/Windows-Time-Service/Configuring-Systems-for-High-Accuracy/Topology2016.png)
 

@@ -4,15 +4,15 @@ title: Windows Time Service Tools and Settings
 description:
 author: shortpatti
 ms.author: pashort
-manager: alanth
-ms.date: 04/17/2018
+manager: elizapo
+ms.date: 05/08/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: networking
 ---
 
 # Windows Time Service Tools and Settings
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10 version 1607 or later
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10 or later
 
 **In this section**  
   
