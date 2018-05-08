@@ -32,7 +32,7 @@ For more explanation see the section on **[High Accuracy Requirements](#high-acc
 
 ## High Accuracy support for Windows 8.1 and 2012 R2 (or Prior)
 
-Earlier versions of Windows (Prior to Windows 10 1607 or Server 2016 1607) cannot guarantee highly accurate time. The Windows Time service on these systems:
+Earlier versions of Windows (Prior to Windows 10 1607 or Windows Server 2016 1607) cannot guarantee highly accurate time. The Windows Time service on these systems:
 
 -   Provided the necessary time accuracy to satisfy Kerberos version 5 authentication requirements
 
@@ -40,7 +40,7 @@ Earlier versions of Windows (Prior to Windows 10 1607 or Server 2016 1607) canno
 
 Tighter accuracy requirements were outside of the design specification of the Windows Time Service on these operating systems and is not supported.
 
-## Windows 10 and Server 2016
+## Windows 10 and Windows Server 2016
 
 Time accuracy in Windows 10 and Windows Server 2016 has been substantially improved, while maintaining full backwards NTP compatibility with older Windows versions. Under the right operating conditions, systems running Windows 10 or Windows Server 2016 and newer releases can deliver 1 second, 50ms (milliseconds), or 1ms accuracy.
 
