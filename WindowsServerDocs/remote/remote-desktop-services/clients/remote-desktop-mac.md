@@ -31,7 +31,7 @@ Follow these steps to get started with Remote Desktop on your Mac:
 
 1. Download the Microsoft Remote Desktop client from the [Mac App Store](https://itunes.apple.com/us/app/microsoft-remote-desktop/id1295203466?mt=12).
 2. [Set up your PC to accept remote connections](remote-desktop-client-faq.md#how-do-i-set-up-a-pc-for-remote-desktop). (If you skip this step, you can't connect to your PC.)
-3. Add a Remote Desktop connection or a remote resource. You use a connection to connect to a directly to a Windows PC and a remote resource to use a RemoteApp program, session-based desktop, or a virtual desktop published on-premises using RemoteApp and Desktop Connections. This feature is typically available in corporate environments.
+3. Add a Remote Desktop connection or a remote resource. You use a connection to connect directly to a Windows PC and a remote resource to use a RemoteApp program, session-based desktop, or a virtual desktop published on-premises using RemoteApp and Desktop Connections. This feature is typically available in corporate environments.
 
 ## What about the Mac beta client?
 We're testing new features on our preview channel on HockeyApp. Want to check it out? Go to [Microsoft Remote Desktop for Mac](https://go.microsoft.com/fwlink/?LinkID=619698) and click **Download**. You don't need to create an account or sign into HockeyApp to download the beta client.
