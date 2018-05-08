@@ -5,7 +5,7 @@ ms.technology: manage
 ms.topic: article
 author: daniellee-msft
 ms.author: jol
-ms.date: 04/20/2018
+ms.date: 05/04/2018
 ms.localizationpriority: low
 ms.prod: windows-server-threshold
 ---
@@ -59,6 +59,10 @@ Windows Admin Center for Hyper-Converged Infrastructure depends on management AP
 
 > [!Tip]
 > You only need to run the cmdlet once, on any server in the cluster. You can run it locally in Windows PowerShell or use Credential Security Service Provider (CredSSP) to run it remotely. Depending on your configuration, you may not be able to run this cmdlet from within Windows Admin Center.
+
+> [!Important]
+> For deployments in non-English locales, there is a known issue in version 1804 of Windows Admin Center that prevents the Dashboard from loading (first time only). The workaround is to run `Add-ClusterResource -Name 'SDDC Management' -Group 'Cluster Group' -ResourceType 'SDDC Management'` replacing *'Cluster Group'* with the localized name, for example, *'Group du cluster'* in French. This issue will be addressed in the next update. 
+
 ### Prepare your Windows Server 2019 cluster for Windows Admin Center
 
 If your cluster runs an Insider Preview build of Windows Server 2019, the steps above are not necessary. Just add the cluster to Windows Admin Center as described in the next section and you're good to go! [Download the latest preview build of Windows Server 2019](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewserver).

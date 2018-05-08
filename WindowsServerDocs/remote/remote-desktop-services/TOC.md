@@ -68,6 +68,8 @@
 ### [Supported PCs](clients/remote-desktop-supported-config.md)
 ### [Grant Remote Desktop access to your PC](clients/remote-desktop-allow-access.md)
 ### [Grant access to your PC from outside your network](clients/remote-desktop-allow-outside-access.md)
+### [Get started with Remote Desktop client on Windows](clients/windows.md)
+### [What's new in the Windows client?](clients/windows-whatsnew.md)
 ### [Get started with Remote Desktop client on Android](clients/remote-desktop-android.md)
 ### [What's new in the Android client?](clients/android-whatsnew.md)
 ### [Get started with Remote Desktop client on iOS](clients/remote-desktop-ios.md)

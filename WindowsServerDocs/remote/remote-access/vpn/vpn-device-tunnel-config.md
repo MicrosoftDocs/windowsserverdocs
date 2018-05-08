@@ -62,7 +62,7 @@ Following is the sample VPN profileXML.
 <RemoteAddressRanges>10.10.0.2, 10.10.0.3</RemoteAddressRanges>  
   </TrafficFilter>
 <!-- need to specify always on = true --> 
-  <AlwaysOn>True</AlwaysOn> 
+  <AlwaysOn>true</AlwaysOn> 
 <!-- new node to specify that this is a device tunnel -->  
  <DeviceTunnel>true</DeviceTunnel>
 <!--new node to register client IP address in DNS to enable manage out -->
