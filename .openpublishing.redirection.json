@@ -2,9 +2,6 @@
   "redirections": [
     {
       "source_path": "WindowsServerDocs/networking/technologies/network-offload.md",
-<<<<<<< HEAD
-      "redirect_url": "/windows-server/networking/technologies/hpn/hpn-top",
-=======
       "redirect_url": "/windows-server/networking/technologies/hpn/hpn-top"
     },
     {  
@@ -15,7 +12,6 @@
     {
       "source_path": "WindowsServerDocs/windows-insider/index.md",
       "redirect_url": "https://docs.microsoft.com/windows-insider/at-work/",
->>>>>>> aa03f8d8bf239ad8fcce6810ad8846bb33550453
       "redirect_document_id": true
     },
     {
