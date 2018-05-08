@@ -2,7 +2,7 @@
 title: "Create a Bootable USB Flash Drive"
 description: "Describes how to use Windows Server Essentials"
 ms.custom: na
-ms.date: 10/03/2016
+ms.date: 05/04/2018
 ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
@@ -22,9 +22,9 @@ You can create a bootable USB flash drive to use to deploy  Windows Server Essen
   
  For additional scenarios in which you may want to create or use a bootable USB flash drive, see the following topics:  
   
--   [Restore a full system from an existing client computer backup](https://technet.microsoft.com/library/jj713539.aspx#BKMK_CreateBootable)  
+-   [Restore a full system from an existing client computer backup](../manage/restore-a-full-system-from-an-existing-client-computer-backup.md)  
   
--   [Restore or repair your server running Windows Server Essentials](https://technet.microsoft.com/library/jj593197.aspx#BKMK_Restore_2)  
+-   [Restore or repair your server running Windows Server Essentials](../manage/restore-or-repair-your-server-running-windows-server-essentials.md)  
   
 ### To create a bootable USB flash drive  
   

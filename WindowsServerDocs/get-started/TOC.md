@@ -1,7 +1,8 @@
 # Get Started
 ## [Get Started with Windows Server 2016](Server-Basics.md)
-## [Introducing Windows Server, version 1709](get-started-with-1709.md)
+## [Introducing Windows Server, version 1803](get-started-with-1803.md)
 ## [What's New in Windows Server](whats-new-in-windows-server.md)
+### [What's New in Windows Server, version 1803](whats-new-in-windows-server-1803.md)
 ### [What's New in Windows Server, version 1709](whats-new-in-windows-server-1709.md)
 ### [What's New in Windows Server 2016](whats-new-in-windows-server-2016.md)
 #### [What's New in the Windows Console in Windows Server 2016](whats-new-in-console.md)
@@ -10,6 +11,7 @@
 ## [Migration of Windows Server Roles and Features](Migrate-Roles-and-Features.md)
 ## [Windows Server 2016 System Requirements](System-Requirements.md)
 ## Release Notes: Known Issues in Windows Server
+### [Release Notes: Important Issues in Windows Server, version 1803](server-1803-release-notes.md)
 ### [Release Notes: Important Issues in Windows Server, version 1709](server-1709-relnotes.md)
 ### [Release Notes: Important Issues in Windows Server 2016](Windows-Server-2016-GA-Release-Notes.md)
 ## [Recommendations for moving to Windows Server 2016](Recommendations-moving-to-Server2016.md)
@@ -17,6 +19,7 @@
 ## [Windows Server 2016 Role Upgrade and Migration](Server-Role-Upgradeability-Table.md)
 ## [Windows Server 2016 Application Compatibility Table](Server-Application-compatibility.md)
 ## Features Removed or Planned for Replacement in Windows Server Releases
+### [Features removed or planned for replacement starting with Windows Server, version 1803](windows-server-1803-removed-features.md)
 ### [Features removed or planned for replacement starting with Windows Server, version 1709](Removed-Features-1709.md)
 ### [Features Removed or Deprecated in Windows Server 2016](Deprecated-Features.md)
 ## [Windows Server 2016 Edition Comparison](2016-Edition-Comparison.md)

@@ -80,7 +80,11 @@ Welcome to Windows Admin Center!
         <td style="vertical-align: top;">
             <h2>Extend</h2>
             <ul>
-            <li><a href="extend/how-sdk-works.md">Extensibility and SDK</a>
+            <li><a href="extend/extensibility-overview.md">Overview of extensions</a>
+            <li><a href="extend/understand-extensions.md">Understanding extensions</a>
+            <li><a href="extend/developing-extensions.md">Develop an extension</a>
+            <li><a href="extend/publish-extensions.md">Guides</a>
+            <li><a href="extend/publish-extensions.md">Publishing extensions</a>
             </ul>
         </td>
     </tr>
