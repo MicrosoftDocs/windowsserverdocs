@@ -6,7 +6,7 @@ ms.manager: brianlic
 ms.technology: storage
 ms.topic: article
 author: jasongerend
-ms.date: 7/7/2017
+ms.date: 5/9/2018
 description: File Server Resource Manager (FSRM)is a tool that enables you to manage and classify data on a Windows Server file server.
 ---
 # File Server Resource Manager (FSRM) overview
@@ -25,6 +25,23 @@ File Server Resource Manager (FSRM) is a role service in Windows Server that ena
   
 -   **Storage reports** Storage reports are used to help you identify trends in disk usage and how your data is classified. You can also monitor a selected group of users for attempts to save unauthorized files.  
   
+-   **Turn off USN Journal Usage for the entire server or disable USN Journal for some but not all volumes** Two new Regkey keys have been added to support both scenarios in Windows Server 2016, version 1803.  Please take the following steps:  
+
+    1. Stop the SRMSVC service
+    2. Delete USN for volumes  using fsutil utility using command: “fsutil usn deletejournal /d <VolumeName>”  (Ex: fsutil usn deletejournal /d c:)
+    3. Make regkey changes as described below: 
+       To skip USN journal creation for the entire server, set this registry key value to 1
+       Regkey Name: SkipUSNCreationForSystem (DWORD)
+       Full Path: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SrmSvc\Settings
+
+       To skip USN creation for certain specified volumes, Use a new regkey to specify volume paths (comma separated)
+       Regkey Name: SkipUSNCreationForVolumes (REG_MULTI_SZ): This will contain the volume paths
+       Full Path: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SrmSvc\Settings
+       
+       User can obtain volume paths using fsutil utility using command: "fsutil volume list". Volume Path comparison is case-insensitive.
+
+    4. Start SRMSVC service
+    
  The features included with File Server Resource Manager can be configured and managed by using the File Server Resource Manager Microsoft Management Console (MMC) or by using Windows PowerShell.  
   
 > [!IMPORTANT]

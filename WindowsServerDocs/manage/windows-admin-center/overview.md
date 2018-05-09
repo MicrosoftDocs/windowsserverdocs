@@ -105,6 +105,7 @@ You can get Windows Admin Center up and running in your environment in minutes:
 
 Learn about our latest released features:
 
+- Version 1804.25 - Maintenance update to support users installing Windows Admin Center in [completely offline environments](./use/known-issues.md#signature-verification-failed).
 - Version [1804](https://aka.ms/WindowsAdminCenter) - Project Honolulu becomes Windows Admin Center and adds security features and role-based access control. Our first GA release.
 - Version [1803](https://blogs.windows.com/windowsexperience/2018/03/13/announcing-project-honolulu-technical-preview-1803-and-rsat-insider-preview-for-windows-10) added support for Azure AD access control, detailed logging, resizable content, and a bunch of tool improvements.
 - Version [1802](https://blogs.windows.com/windowsexperience/2018/02/13/announcing-windows-server-insider-preview-build-17093-project-honolulu-technical-preview-1802) added support for accessibility, localization, high-availability deployments, tagging, Hyper-V host settings, and gateway authentication.

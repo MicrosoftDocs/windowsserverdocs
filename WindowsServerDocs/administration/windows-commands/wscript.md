@@ -32,15 +32,15 @@ wscript [<scriptname>] [/b] [/d] [/e:<engine>] [{/h:cscript|/h:wscript}] [/i] [/
 |Parameter|Description|
 |---------|-----------|
 |scriptname|Specifies the path and file name of the script file.|
-|/b|Specifies batch mode, which does not display alerts, scripting errors, or input prompts. This is the opposite of /i.|
+|/b|Specifies batch mode, which does not display alerts, scripting errors, or input prompts. This is the opposite of **/i**.|
 |/d|Starts the debugger.|
 |/e|Specifies the engine that is used to run the script.|
 |/h:cscript|Registers **cscript.exe** as the default script host for running scripts.|
-|/h:wscript|Default. Registers **wscript.exe** as the default script host for running scripts.|
+|/h:wscript|Registers **wscript.exe** as the default script host for running scripts. This is the default when the **/h** option is omitted.|
 |/i|Specifies interactive mode, which displays alerts, scripting errors, and input prompts.</br>This is the default and the opposite of **/b**.|
 |/job:\<identifier>|Runs the job identified by *identifier* in a **.wsf** script file.|
 |/logo|Specifies that the Windows Script Host banner is displayed in the console before the script runs.</br>This is the default and the opposite of **/nologo**.|
-|/nologo|Specifies that the Windows Script Host banner is not displayed before the script runs. This is the opposite of /logo.|
+|/nologo|Specifies that the Windows Script Host banner is not displayed before the script runs. This is the opposite of **/logo**.|
 |/s|Saves the current command prompt options for the current user.|
 |/t:\<number>|Specifies the maximum time the script can run (in seconds). You can specify up to 32,767 seconds.</br>The default is no time limit.|
 |/x|Starts the script in the debugger.|
