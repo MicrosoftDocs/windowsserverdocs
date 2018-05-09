@@ -98,11 +98,8 @@ You will also add a group containing VPN servers and another group containing
 NPS servers. You use these groups to restrict certificate requests to their
 members.
 
->   [!Note] We recommend VPN servers that reside in the DMA/Perimeter not be
->   domain-joined. However, if you prefer to have the VPN servers domain-joined
->   for better manageability (Group Policies, Backup/Monitoring agent, no local
->   users to manage, and so on), then add an AD group to the VPN server
->   certificate template.
+>[!NOTE] 
+>We recommend VPN servers that reside in the DMA/Perimeter not be domain-joined. However, if you prefer to have the VPN servers domain-joined for better manageability (Group Policies, Backup/Monitoring agent, no local users to manage, and so on), then add an AD group to the VPN server certificate template.
 
 **To configure the VPN Users group**
 
@@ -240,10 +237,8 @@ Adding the IP Security (IPsec) IKE Intermediate application policy allows the
 server to filter certificates if more than one certificate is available with the
 Server Authentication extended key usage.
 
->   [!IMPORTANT] Because VPN clients access this server from the public
->   Internet, the subject and alternative names are different than the internal
->   server name. As a result, you cannot autoenroll this certificate on VPN
->   servers.
+>[!IMPORTANT] 
+>Because VPN clients access this server from the public Internet, the subject and alternative names are different than the internal server name. As a result, you cannot autoenroll this certificate on VPN servers.
 
 **To configure the VPN Server Authentication template,** The following steps
 apply to VPN servers that are domain joined.
@@ -403,8 +398,8 @@ used for the user certificate. Like the user certificate, the NPS server will
 automatically enroll its authentication certificate, so all you need to do is
 validate it.
 
->   [!NOTE] You might need to restart the VPN and NPS servers to allow them to
->   update their group memberships before you can complete these steps.
+>[!NOTE] 
+>You might need to restart the VPN and NPS servers to allow them to update their group memberships before you can complete these steps.
 
 **To enroll and validate the VPN server certificate**
 

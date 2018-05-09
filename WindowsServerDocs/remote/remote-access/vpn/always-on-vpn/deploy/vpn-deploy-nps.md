@@ -39,14 +39,8 @@ Windows PowerShell or the Server Manager Add Roles and Features Wizard.
 
 NPS is a role service of the Network Policy and Access Services server role.
 
->   [!NOTE] By default, NPS listens for RADIUS traffic on ports 1812, 1813,
->   1645, and 1646 on all installed network adapters. When you install NPS, and
->   you enable Windows Firewall with Advanced Security, firewall exceptions for
->   these ports get created automatically for both IPv4 and IPv6 traffic. If
->   your network access servers are configured to send RADIUS traffic over ports
->   other than these defaults, remove the exceptions created in Windows Firewall
->   with Advanced Security during NPS installation, and create exceptions for
->   the ports that you do use for RADIUS traffic.
+>[!NOTE] 
+>By default, NPS listens for RADIUS traffic on ports 1812, 1813, 1645, and 1646 on all installed network adapters. When you install NPS, and  you enable Windows Firewall with Advanced Security, firewall exceptions for these ports get created automatically for both IPv4 and IPv6  traffic. If your network access servers are configured to send RADIUS traffic over ports other than these defaults, remove the exceptions created in Windows Firewall with Advanced Security during NPS installation, and create exceptions for the ports that you do use for RADIUS traffic.
 
 **Administrative Credentials**
 
@@ -176,22 +170,15 @@ Add the VPN Server as a RADIUS Client
 
 You can use this section to configure the VPN server as a RADIUS Client in NPS.
 
->   [!NOTE] When you add a new network access server (VPN server, wireless
->   access point, authenticating switch, or dial-up server) to your network, you
->   must add the server as a RADIUS client in NPS so that NPS is aware of and
->   can communicate with the network access server.
+>[!NOTE] 
+>When you add a new network access server (VPN server, wireless access point, authenticating switch, or dial-up server) to your network, you must add the server as a RADIUS client in NPS so that NPS is aware of and can communicate with the network access server.
 
 #### To add the VPN Server as a RADIUS client in NPS
 
 You can use this procedure to configure a new RADIUS client in NPS.
 
->   [!IMPORTANT] In the previous deployment step using the topic [Configure the
->   Remote Access Server for Always On VPN](vpn-deploy-ras.md), you installed
->   and configured your VPN server. During VPN server configuration, you added a
->   RADIUS shared secret on the VPN server. Now you need to use the same shared
->   secret text string to configure the VPN server as a RADIUS client in NPS.
->   You must use the same text string that you used on the VPN server, or
->   communication between the NPS server and VPN server will fail.
+>[!IMPORTANT] 
+>In the previous deployment step using the topic [Configure the Remote Access Server for Always On VPN](vpn-deploy-ras.md), you installed and configured your VPN server. During VPN server configuration, you added a RADIUS shared secret on the VPN server. Now you need to use the same shared secret text string to configure the VPN server as a RADIUS client in NPS. You must use the same text string that you used on the VPN server, or communication between the NPS server and VPN server will fail.
 
 1.  On the NPS server, in the NPS console, double-click **RADIUS Clients and
     Servers**.
