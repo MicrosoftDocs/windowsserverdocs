@@ -13,7 +13,7 @@ ms.technology: networking
 
 # Support boundary to configure the Windows Time service for high-accuracy environments
 
->Applies To: Windows Server 2016, and Windows 10 or later
+>Applies To: Windows Server 2016, and Windows 10 version 1607 or later
 
 This article describes the support boundaries for the Windows Time service (W32Time) in environments that require highly accurate and stable system time.
 <!-- 
