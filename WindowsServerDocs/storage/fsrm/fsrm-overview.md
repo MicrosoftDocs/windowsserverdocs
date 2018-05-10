@@ -25,8 +25,8 @@ File Server Resource Manager (FSRM) is a role service in Windows Server that ena
   
 -   **Storage reports** Storage reports are used to help you identify trends in disk usage and how your data is classified. You can also monitor a selected group of users for attempts to save unauthorized files.  
   
--   **Turn off change journals on all volumes** Starting with Windows Server 2106, version 1803, you can now prevent the File Server Resource Manager service from creating a change journal (also known as a USN journal) on all volumes when the service starts. This can conserve a little bit of space on each volume, but will disable real-time file classification. 
-- To prevent File Server Resource Manager from creating a change journal on all volumes when the service starts, use the following steps:
+-   **Turn off change journals on all volumes** Starting with Windows Server 2106, version 1803, you can now prevent the File Server Resource Manager service from creating a change journal (also known as a USN journal) on all volumes when the service starts. This can conserve a little bit of space on each volume, but will disable real-time file classification.
+<br>To prevent File Server Resource Manager from creating a change journal on all volumes when the service starts, use the following steps:
 
     1. Stop the SRMSVC service.
     2. Delete the USN journal for volumes by using the fsutil command: 
@@ -40,7 +40,7 @@ File Server Resource Manager (FSRM) is a role service in Windows Server that ena
     3. Edit the registry to skip USN journal creation for the entire server, or just specific volumes:
 
         - To skip USN journal creation for the entire server, set this registry key value to **1**:<br>Key name: `SkipUSNCreationForSystem` (DWORD)<br>Full path: **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SrmSvc\Settings**
-        - To skip USN creation for specific volumes, use a new regkey to specify volume paths (comma separated):<br>Key name: `SkipUSNCreationForVolumes <volume 1, volume 2>` For example: **SkipUSNCreationForVolumes d:,e:**<br>Full path: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SrmSvc\Settings<br>Users can obtain volume paths using `fsutil volume list` command. Volume path comparisons aren't sensitive to case.
+        - To skip USN creation for specific volumes, use a new regkey to specify volume paths (comma separated):<br>Key name: `SkipUSNCreationForVolumes <volume 1, volume 2>` For example: **SkipUSNCreationForVolumes d:,e:**<br>Full path: **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SrmSvc\Settings**<br><br>You can use the `fsutil volume list` command to find the volume path. Volume path comparisons aren't case-sensitive.
 
     4. Start the SRMSVC service.
     
