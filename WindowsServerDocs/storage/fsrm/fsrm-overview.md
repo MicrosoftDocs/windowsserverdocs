@@ -40,7 +40,7 @@ File Server Resource Manager (FSRM) is a role service in Windows Server that ena
     3. Edit the registry to skip USN journal creation for the entire server, or just specific volumes:
 
         - To skip USN journal creation for the entire server, set this registry key value to **1**:<br>Key name: `SkipUSNCreationForSystem` (DWORD)<br>Full path: **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SrmSvc\Settings**
-        - To skip USN creation for specific volumes, use a new regkey to specify volume paths (comma separated):<br>Key name: `SkipUSNCreationForVolumes <volume 1, volume 2>` For example: **SkipUSNCreationForVolumes d:,e:**<br>Full path: **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SrmSvc\Settings**<br><br>You can use the `fsutil volume list` command to find the volume path. Volume path comparisons aren't case-sensitive.
+        - To skip USN creation for specific volumes, use a new regkey to specify volume paths (comma separated):<br>Key name: `SkipUSNCreationForVolumes <volume 1>, <volume 2>` For example: **SkipUSNCreationForVolumes d:,e:**<br>Full path: **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SrmSvc\Settings**<br><br>You can use the `fsutil volume list` command to find the volume path. Volume path comparisons aren't case-sensitive.
 
     4. Start the SRMSVC service.
     
