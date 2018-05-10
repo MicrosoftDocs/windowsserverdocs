@@ -6,8 +6,8 @@ ms.manager: brianlic
 ms.technology: storage
 ms.topic: article
 author: jasongerend
-ms.date: 5/9/2018
-description: File Server Resource Manager (FSRM)is a tool that enables you to manage and classify data on a Windows Server file server.
+ms.date: 5/10/2018
+description: File Server Resource Manager (FSRM) is a tool that enables you to manage and classify data on a Windows Server file server.
 ---
 # File Server Resource Manager (FSRM) overview
 
@@ -25,22 +25,24 @@ File Server Resource Manager (FSRM) is a role service in Windows Server that ena
   
 -   **Storage reports** Storage reports are used to help you identify trends in disk usage and how your data is classified. You can also monitor a selected group of users for attempts to save unauthorized files.  
   
--   **Turn off USN Journal Usage for the entire server or disable USN Journal for some but not all volumes** Two new Regkey keys have been added to support both scenarios in Windows Server 2016, version 1803.  Please take the following steps:  
+-   **Turn off change journals on all volumes** Starting with Windows Server 2106, version 1803, you can now prevent the File Server Resource Manager service from creating a change journal (also known as a USN journal) on all volumes when the service starts. This can conserve a little bit of space on each volume, but will disable real-time file classification.
+<br>To prevent File Server Resource Manager from creating a change journal on all volumes when the service starts, use the following steps:
 
-    1. Stop the SRMSVC service
-    2. Delete USN for volumes  using fsutil utility using command: “fsutil usn deletejournal /d <VolumeName>”  (Ex: fsutil usn deletejournal /d c:)
-    3. Make regkey changes as described below: 
-       To skip USN journal creation for the entire server, set this registry key value to 1
-       Regkey Name: SkipUSNCreationForSystem (DWORD)
-       Full Path: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SrmSvc\Settings
+    1. Stop the SRMSVC service.
+    2. Delete the USN journal for volumes by using the fsutil command: 
 
-       To skip USN creation for certain specified volumes, Use a new regkey to specify volume paths (comma separated)
-       Regkey Name: SkipUSNCreationForVolumes (REG_MULTI_SZ): This will contain the volume paths
-       Full Path: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SrmSvc\Settings
-       
-       User can obtain volume paths using fsutil utility using command: "fsutil volume list". Volume Path comparison is case-insensitive.
+      ```
+      fsutil usn deletejournal /d <VolumeName>
+      ```
 
-    4. Start SRMSVC service
+      For example: `fsutil usn deletejournal /d c:`
+
+    3. Edit the registry to skip USN journal creation for the entire server, or just specific volumes:
+
+        - To skip USN journal creation for the entire server, set this registry key value to **1**:<br>Key name: `SkipUSNCreationForSystem` (DWORD)<br>Full path: **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SrmSvc\Settings**
+        - To skip USN creation for specific volumes, use a new regkey to specify volume paths (comma separated):<br>Key name: `SkipUSNCreationForVolumes <volume 1>, <volume 2>` For example: **SkipUSNCreationForVolumes d:,e:**<br>Full path: **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SrmSvc\Settings**<br><br>You can use the `fsutil volume list` command to find the volume path. Volume path comparisons aren't case-sensitive.
+
+    4. Start the SRMSVC service.
     
  The features included with File Server Resource Manager can be configured and managed by using the File Server Resource Manager Microsoft Management Console (MMC) or by using Windows PowerShell.  
   
