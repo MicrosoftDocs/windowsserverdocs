@@ -7,7 +7,7 @@ ms.localizationpriority: high
 ms.sitesec: library
 author: lizap
 ms.author: elizapo
-ms.date: 05/07/2018
+ms.date: 05/10/2018
 ---
 # Features removed or planned for replacement starting with Windows Server, version 1803
 
@@ -43,7 +43,7 @@ If you have feedback about the proposed replacement of any of these features, yo
 |-----------|---------------------|
 |Business Scanning, also called Distributed Scan Management (DSM)|The [Scan Management functionality](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd759124\(v%3dws.11\)) was introduced in Windows Server 2008 R2 and enabled secure scanning and the management of scanners in an enterprise. We're no longer investing in this feature, and there are no devices available that support it.|
 |IPv4/6 Transition Technologies (6to4, ISATAP, and Direct Tunnels)|6to4 has been disabled by default since Windows 10, version 1607 (the Anniversary Update), ISATAP has been disabled by default since Windows 10, version 1703 (the Creators Update), and Direct Tunnels has always been disabled by default. Please use native IPv6 support instead.|
-|[MultiPoint Services](../remote/multipoint-services/multipoint-services.md)|We're no longer developing the MultiPoint Services role as part of Windows Server. MultiPoint Connector services are available through [Feature on Demand](https://docs.microsoft.com/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities) for both Windows Server and Windows 10. You can use [Remote Desktop Services](../remote/remote-desktop-services/welcome-to-rds.md), in particular the Remote Desktop Services Session Host, to provide RDP connectivity. |
+|[MultiPoint Services](../remote/multipoint-services/multipoint-services.md)|We're no longer developing the MultiPoint Services role as part of Windows Server. MultiPoint Connector services are available as features for both Windows Server and Windows 10. You can use [Remote Desktop Services](../remote/remote-desktop-services/welcome-to-rds.md), in particular the Remote Desktop Services Session Host, to provide RDP connectivity. |
 |[Offline symbol packages](https://docs.microsoft.com/windows-hardware/drivers/debugger/debugger-download-symbols) (Debug symbol MSIs)|We're no longer making the symbol packages available as a downloadable MSI. Instead, the [Microsoft Symbol Server is moving to be an Azure-based symbol store](https://blogs.msdn.microsoft.com/windbg/2017/10/18/update-on-microsofts-symbol-server/). If you need the Windows symbols, connect to the Microsoft Symbol Server to cache your symbols locally or use a manifest file with SymChk.exe on a computer with internet access.|
 |[RemoteFX vGPU](../remote/remote-desktop-services/rds-remotefx-vgpu.md)|We're developing new graphics acceleration options for virtualized environments. You can also use [Discrete Device Assignment (DDA)](../virtualization/hyper-v/plan/plan-for-deploying-devices-using-discrete-device-assignment.md) as an alternative.|
 |[Software Restriction Policies](../identity/software-restriction-policies/software-restriction-policies.md) in Group Policy|Instead of using the Software Restriction Policies through Group Policy, you can use [AppLocker](https://docs.microsoft.com/windows/security/threat-protection/applocker/applocker-overview) or [Windows Defender Application Control](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control) to control which apps users can access and what code can run in the kernel.|
