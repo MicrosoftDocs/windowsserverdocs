@@ -47,11 +47,18 @@ To configure your AD FS farm to authenticate users from an LDAP directory, you c
     > [!NOTE]
     > It is recommended that you create a new connection object for each LDAP server you want to connect to. AD FS can connect to multiple replica LDAP servers and automatically fail over in case a specific LDAP server is down. For such a case, you can create one AdfsLdapServerConnection for each of these replica LDAP servers and then add the array of connection objects using the -**LdapServerConnection** parameter of the **Add-AdfsLocalClaimsProviderTrust** cmdlet.
 
-    **NOTE:** Your attempt to use Get-Credential and type in a DN and password to be used to bind to an LDAP instance might result in a failure because the of the user interface requirement for specific input formats, for example,  domain\username or user@domain.tld. You can instead use the ConvertTo-SecureString cmdlet as follows (the example below assumes uid=admin,ou=system as the DN of the credentials to be used to bind to the LDAP instance):
+    **NOTE:** Your attempt to use Get-Credential and type in a DN and password to be used to bind to an LDAP instance might result in a failure because the of the user interface requirement for specific input formats, for example,  domain\username or user@domain.tld. You can instead use the method as follows (the example below assumes uid=admin,ou=system as the DN of the credentials to be used to bind to the LDAP instance):
 
     ```
-    $ldapuser = ConvertTo-SecureString -string "uid=admin,ou=system" -asplaintext -force
-    $DirectoryCred = Get-Credential -username $ldapuser -Message "Enter the credentials to bind to the LDAP instance:"
+    # Enter the username as a string variable
+$ldapuser = "uid=admin,ou=system" 
+
+# store the password as a secure string
+$ldappass = ConvertTo-SecureString -String "secret" -AsPlainText -Force
+
+#Now create creds as follows
+$DirectoryCred = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $ldapuser, $ldappass
+
     ```
 
     Then enter the password for the uid=admin and complete the rest of the steps.
