@@ -92,7 +92,7 @@ To prevent File Server Resource Manager from creating a change journal on all vo
         ```
 
         > [!NOTE] 
-        > Registry Editor might tell you that it removed empty strings, displaying this warning that you can safely disregard: `Data of type REG_MULTI_SZ cannot contain empty strings. Registry Editor will remove all empty strings found.`
+        > Registry Editor might tell you that it removed empty strings, displaying this warning that you can safely disregard: *Data of type REG_MULTI_SZ cannot contain empty strings. Registry Editor will remove all empty strings found.*
 
 7. Start the SRMSVC service. For example, in a PowerShell session enter `Start-Service SrmSvc`.
 
