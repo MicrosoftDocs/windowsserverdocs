@@ -87,6 +87,9 @@ To prevent File Server Resource Manager from creating a change journal on all vo
         \\?\Volume{8d3c9e8a-0000-0000-0000-100000000000}\
         \\?\Volume{8d3c9e8a-0000-0000-0000-501f00000000}\
         ```
+        > [!NOTE] 
+        > Registry Editor might tell you that it removed empty strings, displaying this warning that you can safely disregard: `Data of type REG_MULTI_SZ cannot contain empty strings. Registry Editor will remove all empty strings found.`
+
 7. Start the SRMSVC service. For example, in a PowerShell session enter `Start-Service SrmSvc`
 
 For older new features, see [What's New in File Server Resource Manager](https://technet.microsoft.com/library/dn383587.aspx).
