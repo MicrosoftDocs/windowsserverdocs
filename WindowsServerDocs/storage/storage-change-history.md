@@ -7,7 +7,7 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.date: 4/26/2018
+ms.date: 05/09/2018
 description: New and updated topics in the on-premises storage documentation for Windows Server for IT Pros.
 ---
 # Change history for storage topics in Windows Server
@@ -17,6 +17,12 @@ description: New and updated topics in the on-premises storage documentation for
 This topic lists new and updated topics in the [Storage](storage.md) documentation for Windows Server.
 
 > If you're looking for update history for Windows Server, see [Windows 10 and Windows Server 2016 update history](https://support.microsoft.com/help/4000825/windows-10-and-windows-server-2016-update-history).
+
+## May 2018
+
+|New or changed topic|Description|
+|---|---|
+|[File Server Resource Manager overview](fsrm/fsrm-overview.md)| Added info about a new registry setting in Windows Server 2016, version 1803.|
 
 ## April 2018
 
