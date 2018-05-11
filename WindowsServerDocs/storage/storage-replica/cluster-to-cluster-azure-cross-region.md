@@ -28,7 +28,7 @@ For example, **SR-AZ2AZ** in **West US 2** and **SR-AZCROSS** in **West Central 
     - Availability set (**az2azAS1**)
     - Availability set (**azcross-AS**)
 
-You can choose to create a 3rd availability set for your domain controller or add the domain controller in one of the two availability set.
+   You can choose to create a 3rd availability set for your domain controller or add the domain controller in one of the two availability set.
 
 2. Create two Virtual networks
     - Create the [virtual network](https://ms.portal.azure.com/#create/Microsoft.VirtualNetwork-ARM)  (**az2az-Vnet**) in the first resource group (**SR-AZ2AZ**), having one subnet and one Gateway subnet.
@@ -36,9 +36,9 @@ You can choose to create a 3rd availability set for your domain controller or ad
 
 3. Create two Network security groups
     - Create the [network security group](https://ms.portal.azure.com/#create/Microsoft.NetworkSecurityGroup-ARM) (**az2az-NSG**) in the first resource group (**SR-AZ2AZ**).
-    - Create the network security group (**azcross-NSG**) in the second resource group (**SR-AZCROSS**).
+    - Create the network security group (**azcross-NSG**) in the second resource group (**SR-AZCROSS**). 
 
-Add one Inbound security rule for RDP:3389 to both Network Security Groups. You can choose to remove this rule once you finish your setup.
+   Add one Inbound security rule for RDP:3389 to both Network Security Groups. You can choose to remove this rule once you finish your setup.
 
 4. Create Windows Server [virtual machines](https://ms.portal.azure.com/#create/Microsoft.WindowsServer2016Datacenter-ARM) in the previously created Resource groups.
 
@@ -46,9 +46,11 @@ Add one Inbound security rule for RDP:3389 to both Network Security Groups. You 
     - Install Active Directory Domain Service.
     - Create a domain (contoso.com)
     - Create a user with administrator privileges (contosoadmin)
+
 6. Create two virtual machines (**az2az1**, **az2az2**) in the resource group (**SR-AZ2AZ**) using virtual network (**az2az-Vnet**) and network security group (**az2az-NSG**) in availability set (**az2azAS1**). Assign a standard public IP address to each virtual machine during the creation itself.
     - Add at-least two managed disks to each machine
     - Install Failover Clustering and the Storage Replica feature
+
 7. Create two virtual machines (**azcross1**, **azcross2**) in the resource group (**SR-AZCROSS**) using virtual network (**azcross-VNET**) and network security group (**azcross-NSG**) in availability set (**azcross-AS**). Assign standard Public IP address to each virtual machine during the creation itself
     - Add at least two managed disks to each machine
     - Install Failover Clustering and the Storage Replica feature
@@ -63,21 +65,20 @@ In the example, connect all the nodes to "contoso.com" and provide administrator
  
 ## Set up clusters
 
-1. Create the clusters (**SRAZC1**, **SRAZCross**).<br>
-Below is the PowerShell commands for the example
-```
-PowerShell New-Cluster -Name SRAZC1 -Node az2az1,az2az2 – StaticAddress 10.3.0.100
-```
-```
-PowerShell New-Cluster -Name SRAZCross -Node azcross1,azcross2 – StaticAddress 10.0.0.10
-```
+1. Create the clusters (**SRAZC1**, **SRAZCross**). 
+   Below is the PowerShell commands for the example
 
-- For each cluster
-```
-PowerShell Enable-clusterS2D
-```
+   ```powershell
+   PowerShell New-Cluster -Name SRAZC1 -Node az2az1,az2az2 – StaticAddress 10.3.0.100
+   PowerShell New-Cluster -Name SRAZCross -Node azcross1,azcross2 – StaticAddress 10.0.0.10
+   ```
 
-For each cluster create virtual disk and volume. One for the data and another for the log.
+   - For each cluster
+   ```
+   PowerShell Enable-clusterS2D
+   ```
+
+   For each cluster create virtual disk and volume. One for the data and another for the log.
 
 2. Create an internal Standard SKU [Load Balancer](https://ms.portal.azure.com/#create/Microsoft.LoadBalancer-ARM) for each cluster (**azlbr1**, **azlbazcross**).
 - Provide the Cluster IP address as static private IP address for the load balancer.
