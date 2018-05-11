@@ -49,9 +49,11 @@ The features included with File Server Resource Manager can be configured and ma
 
 ## <a name="whats-new"></a>What's new - turn off change journals on all volumes
 
-Starting with Windows Server 2106, version 1803, you can now prevent the File Server Resource Manager service from creating a change journal (also known as a USN journal) on all volumes when the service starts. This can conserve a little bit of space on each volume, but will disable real-time file classification.
+Starting with Windows Server, version 1803, you can now prevent the File Server Resource Manager service from creating a change journal (also known as a USN journal) on all volumes when the service starts. This can conserve a little bit of space on each volume, but will disable real-time file classification.
 
-To prevent File Server Resource Manager from creating a change journal on all volumes when the service starts, use the following steps:
+For older new features, see [What's New in File Server Resource Manager](https://technet.microsoft.com/library/dn383587.aspx).
+
+To prevent File Server Resource Manager from creating a change journal on all volumes when the service starts, use the following steps. 
 
 1. Stop the SRMSVC service. For example, open a PowerShell session as an administrator and enter `Stop-Service SrmSvc`.
 2. Delete the USN journal for the volumes you want to conserve space on by using the fsutil command: 
@@ -62,7 +64,7 @@ To prevent File Server Resource Manager from creating a change journal on all vo
     For example: `fsutil usn deletejournal /d c:`
 
 3. Open Registry Editor, for example, by typing `regedit` in the same PowerShell session.
-4. Navigate to the following key **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SrmSvc\Settings**
+4. Navigate to the following key: **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SrmSvc\Settings**
 5. To optionally skip change journal creation for the entire server:
     1. Right-click the **Settings** key and then select **New** > **DWORD (32-bit) Value**. 
     1. Name the value `SkipUSNCreationForSystem`.
@@ -83,16 +85,18 @@ To prevent File Server Resource Manager from creating a change journal on all vo
     2. Back in Registry Editor, right-click the **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SrmSvc\Settings** key and then select **New** > **Multi-String Value**.
     3. Name the value `SkipUSNCreationForVolumes`.
     4. Enter the path of each volume on which you skip creating a change journal, placing each path on a separate line. For example:
+
         ```
         \\?\Volume{8d3c9e8a-0000-0000-0000-100000000000}\
         \\?\Volume{8d3c9e8a-0000-0000-0000-501f00000000}\
         ```
+
         > [!NOTE] 
         > Registry Editor might tell you that it removed empty strings, displaying this warning that you can safely disregard: `Data of type REG_MULTI_SZ cannot contain empty strings. Registry Editor will remove all empty strings found.`
 
-7. Start the SRMSVC service. For example, in a PowerShell session enter `Start-Service SrmSvc`
+7. Start the SRMSVC service. For example, in a PowerShell session enter `Start-Service SrmSvc`.
 
-For older new features, see [What's New in File Server Resource Manager](https://technet.microsoft.com/library/dn383587.aspx).
+
 
 ## See also
 
