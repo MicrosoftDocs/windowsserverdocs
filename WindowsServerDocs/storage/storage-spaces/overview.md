@@ -6,11 +6,11 @@ ms.manager: elizapo
 ms.technology: storage-file-systems
 ms.topic: article
 author: jasongerend
-ms.date: 04/24/2018
+ms.date: 05/14/2018
 ---
 # Storage Spaces overview
 
-Storage Spaces is a series of technologies in Windows and Windows Server that enables you to help protect your data from drive failures and extend storage over time as you add drives. You can use Storage Spaces to group two or more drives together in a storage pool and then use capacity from that pool to create virtual drives called storage spaces. These storage spaces typically store extra copies of your data so if one of your drives fails, you still have an intact copy of your data. If you run low on capacity, just add more drives to the storage pool.
+Storage Spaces is a series of technologies in Windows and Windows Server that help protect your data from drive failures and enable you to extend storage over time as you add drives. You can use Storage Spaces to group two or more drives together in a storage pool and then use capacity from that pool to create virtual drives called storage spaces. These storage spaces typically store extra copies of your data so if one of your drives fails, you still have an intact copy of your data. If you run low on capacity, just add more drives to the storage pool.
 
 There are four major ways to use Storage Spaces:
 
