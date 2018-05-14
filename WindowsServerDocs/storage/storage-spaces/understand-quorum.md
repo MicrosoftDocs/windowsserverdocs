@@ -158,8 +158,8 @@ Now that we understand how quorum works, let's look at the types of quorum witne
 Failover Clustering supports three types of Quorum Witnesses:
 
 - <strong>[Cloud Witness](../../failover-clustering\deploy-cloud-witness.md)</strong> - Blob storage in Azure accessible by all nodes of the cluster. It maintains clustering information in a witness.log file, but doesn't store a copy of the cluster database.
-- <strong>[File Share Witness](../../failover-clustering/manage-cluster-quorum.md)</strong> – A SMB file share that is configured on a file server running Windows Server. It maintains clustering information in a witness.log file, but doesn't store a copy of the cluster database.
-- <strong>[Disk Witness](../../failover-clustering/manage-cluster-quorum.md)</strong> - A small clustered disk which is in the Cluster Available Storage group. This disk is highly-available and can failover between nodes. It contains a copy of the cluster database.  <strong>*A Disk Witness isn't supported with Storage Spaces Direct*</strong>.
+- <strong>File Share Witness</strong> – A SMB file share that is configured on a file server running Windows Server. It maintains clustering information in a witness.log file, but doesn't store a copy of the cluster database.
+- <strong>Disk Witness</strong> - A small clustered disk which is in the Cluster Available Storage group. This disk is highly-available and can failover between nodes. It contains a copy of the cluster database.  <strong>*A Disk Witness isn't supported with Storage Spaces Direct*</strong>.
 
 ## <a id="poolQuorum"></a>Pool quorum overview
 
