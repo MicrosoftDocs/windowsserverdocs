@@ -36,12 +36,12 @@ bdehdcfg [–driveinfo <DriveLetter>] [-target {default|unallocated|<DriveLetter
 
 |Parameter|Description|
 |---------|-----------|
-|[Bdehdcfg: driveinfo](bdehdcfg-driveinfo.md)|Displays the drive letter, the total size, the maximum free space, and the partition characteristics of the partitions on the drive specified. Only valid partitions are listed. Unallocated space is not listed if four primary or extended partitions already exist.|
-|[Bdehdcfg: target](bdehdcfg-target.md)|Defines which portion of a drive to use as the system drive and makes the portion active.|
-|[Bdehdcfg: newdriveletter](bdehdcfg-newdriveletter.md)|Assigns a new drive letter to the portion of a drive used as the system drive.|
-|[Bdehdcfg: size](bdehdcfg-size.md)|Determines the size of the system partition when a new system drive is being created.|
-|[Bdehdcfg: quiet](bdehdcfg-quiet.md)|Prevents the display of all actions and errors in the command-line interface and directs Bdehdcfg to use the "Yes" answer to any Yes/No prompts that may occur during subsequent drive preparation.|
-|[Bdehdcfg: restart](bdehdcfg-restart.md)|Directs the computer to restart after the drive preparation has finished.|
+|[Bdehdcfg -driveinfo](bdehdcfg-driveinfo.md)|Displays the drive letter, the total size, the maximum free space, and the partition characteristics of the partitions on the drive specified. Only valid partitions are listed. Unallocated space is not listed if four primary or extended partitions already exist.|
+|[Bdehdcfg -target](bdehdcfg-target.md)|Defines which portion of a drive to use as the system drive and makes the portion active.|
+|[Bdehdcfg -newdriveletter](bdehdcfg-newdriveletter.md)|Assigns a new drive letter to the portion of a drive used as the system drive.|
+|[Bdehdcfg -size](bdehdcfg-size.md)|Determines the size of the system partition when a new system drive is being created.|
+|[Bdehdcfg -quiet](bdehdcfg-quiet.md)|Prevents the display of all actions and errors in the command-line interface and directs Bdehdcfg to use the "Yes" answer to any Yes/No prompts that may occur during subsequent drive preparation.|
+|[Bdehdcfg -restart](bdehdcfg-restart.md)|Directs the computer to restart after the drive preparation has finished.|
 |/?|Displays Help at the command prompt.|
 
 ## <a name="BKMK_Examples"></a>Examples
