@@ -69,16 +69,23 @@ Below is the PowerShell commands for our example
     Enable-clusterS2D
 ```
 
-> [!IMPORTANT]
+> [!NOTE]
 > For each cluster create virtual disk and volume. One for the data and another for the log.
 
-## Create load balancer
-Create an internal Standard SKU [Load Balancer](https://ms.portal.azure.com/#create/Microsoft.LoadBalancer-ARM) for each cluster (**azlbr1**,**azlbr2**) and provide the Cluster IP address as static private IP address for the load balancer.
-   1. azlbr1 => Frontend IP: 10.3.0.100 (Pick up an unused IP address from the Virtual network (**az2az-Vnet**) subnet)
-   2. azlbr2 => Frontend IP: 10.3.0.101 (Pick up an unused IP address from the Virtual network (**az2az-Vnet**) subnet)
-   3. Create Backend Pool for each load balancer. Add the associated cluster nodes.
-   4. Create Health Probe: port 59999
-   5. Create Load Balance Rule: Allow HA ports, with enabled Floating IP.
+## Create load balancers
+Create an internal Standard SKU [Load Balancer](https://ms.portal.azure.com/#create/Microsoft.LoadBalancer-ARM) for each cluster (**azlbr1**,**azlbr2**).
+
+Provide the Cluster IP address as static private IP address for the load balancer.
+- azlbr1 => Frontend IP: 10.3.0.100 (Pick up an unused IP address from the Virtual network (**az2az-Vnet**) subnet)
+- Create Backend Pool for each load balancer. Add the associated cluster nodes.
+- Create Health Probe: port 59999
+- Create Load Balance Rule: Allow HA ports, with enabled Floating IP.
+
+Provide the Cluster IP address as static private IP address for the load balancer.
+- azlbr2 => Frontend IP: 10.3.0.101 (Pick up an unused IP address from the Virtual network (**az2az-Vnet**) subnet)
+- Create Backend Pool for each load balancer. Add the associated cluster nodes.
+- Create Health Probe: port 59999
+- Create Load Balance Rule: Allow HA ports, with enabled Floating IP.
 
 ## Open port 59999 (Health Probe)
 On each cluster node, open port 59999 (Health Probe)
@@ -90,7 +97,7 @@ netsh advfirewall firewall add rule name=PROBEPORT dir=in protocol=tcp action=al
 ```
 
 ## Instruct the cluster to listen for Health Probe messages
-Instruct the cluster to listen for Health Probe messages on Port 59999 and respond from the node that currently owns this resource
+Instruct the cluster to listen for Health Probe messages on Port 59999 and respond from the node that currently owns this resource.
 Run it once from any one node of the cluster, for each cluster. 
 
 
@@ -138,7 +145,7 @@ Grant-SRAccess -ComputerName az2az1 -Cluster SRAZC2
 Grant-SRAccess -ComputerName az2az3 -Cluster SRAZC1
 ```
 
-Create Partnership
+## Create Partnership
 
     - For cluster **SRAZC1**.
         - Volume location:- c:\ClusterStorage\DataDisk1

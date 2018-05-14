@@ -23,9 +23,7 @@ In the Azure portal, create [resource groups](https://ms.portal.azure.com/#creat
 For example, **SR-AZ2AZ** in **West US 2** and **SR-AZCROSS** in **West Central US**, as shown above.
 
 ## Create availability sets
-Create two Availability sets, one in each resource group for each cluster
-
-   Make the two [availability sets](https://ms.portal.azure.com/#create/Microsoft.AvailabilitySet-ARM)
+Create two [availability sets](https://ms.portal.azure.com/#create/Microsoft.AvailabilitySet-ARM), one in each resource group for each cluster
     - Availability set (**az2azAS1**) in (**SR-AZ2AZ**)
     - Availability set (**azcross-AS**) in (**SR-AZCROSS**)
 
@@ -78,7 +76,7 @@ New-Cluster -Name SRAZCross -Node azcross1,azcross2 – StaticAddress 10.0.0.10
 ```powershell
 Enable-clusterS2D
 ```
-> [!IMPORTANT]
+> [!NOTE]
 > For each cluster create virtual disk and volume. One for the data and another for the log.
 
 ## Create load balancers
@@ -107,7 +105,7 @@ Create [Virtual network gateway](https://ms.portal.azure.com/#create/Microsoft.V
 
 - Create a Vnet-to-Vnet connection from first Virtual network gateway to second Virtual network gateway. Provide a shared key
 
-- Create a Vnet-to-Vnet connection from second Virtual network gateway to first Virtual network gateway.
+- Create a Vnet-to-Vnet connection from second Virtual network gateway to first Virtual network gateway. Provide the same shared key as provided in the step above. 
 
 ## Open port 59999 (Health Probe)
 On each cluster node, open port 59999 (Health Probe)
@@ -119,7 +117,8 @@ netsh advfirewall firewall add rule name=PROBEPORT dir=in protocol=tcp action=al
 ```
 
 ## Instruct the cluster to listen for Health Probe messages
-Instruct the cluster to listen for Health Probe messages on Port 59999 and respond from the node that currently owns this resource
+Instruct the cluster to listen for Health Probe messages on Port 59999 and respond from the node that currently owns this resource.
+
 Run it once from any one node of the cluster, for each cluster. 
     
 
@@ -155,7 +154,7 @@ Get-Cluster -Name SRAZCross (ran from az2az1)
 ```
 
 ## Create cloud witness for both the clusters
-   - Create 2 [storage accounts](https://ms.portal.azure.com/#create/Microsoft.StorageAccount-ARM) (**az2azcw**,**azcrosssa**) in Azure, one for each cluster in each resource group (**SR-AZ2AZ**, **SR-AZCROSS**)
+Create 2 [storage accounts](https://ms.portal.azure.com/#create/Microsoft.StorageAccount-ARM) (**az2azcw**,**azcrosssa**) in Azure, one for each cluster in each resource group (**SR-AZ2AZ**, **SR-AZCROSS**)
    - Copy the storage account name and key from "access keys"
    - Create the cloud witness from “failover cluster manager” and use the above account name and key to create it.
 
