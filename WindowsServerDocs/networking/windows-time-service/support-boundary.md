@@ -5,7 +5,7 @@ description: This article describes the support boundary for the Windows Time (W
 author: shortpatti
 ms.author: dacuo
 manager: elizapo
-ms.date: 05/08/2018
+ms.date: 05/14/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: networking
@@ -16,19 +16,7 @@ ms.technology: networking
 >Applies To: Windows Server 2016, and Windows 10 version 1607 or later
 
 This article describes the support boundaries for the Windows Time service (W32Time) in environments that require highly accurate and stable system time.
-<!-- 
-## High Accuracy Matrix
 
-This matrix summarizes the *minimum* requirements as outlined in this document.
-For more explanation see the section on **[High Accuracy Requirements](#high-accuracy-requirements)**:
-
-| Accuracy        | Operating                        | Network        | Network     | Max.        | Avg. CPU Utilization | Sync. Frequency |
-| Target          | System                           | Latency        | Hops        | Stratum     |                      |                 |
-|-----------------|----------------------------------|----------------|-------------|-------------|----------------------|-----------------|
-| 1 Second        | Windows 10 1607 Server 2016 RS1+ | 100ms          |             |             |                      | Once per hour   |
-| 50 Milliseconds | Windows 10 1607 Server 2016 RS1+ | 5ms            | 6           | 5           | 90%                  | Once per minute |
-| 1 Millisecond   | Windows 10 1607 Server 2016 RS1+ | 0.1ms          | 4           | 3           | 80%                  | Once per second |
--->
 
 ## High Accuracy support for Windows 8.1 and 2012 R2 (or Prior)
 
@@ -79,7 +67,7 @@ The additional requirements to achieve 50ms accuracy for a specific target syste
 -   The target system must be no further than stratum 5 from a highly accurate time source
 
     >[!Note]
-    >Run "w32tm /query /status" from the command line to see the stratum.
+    >Run `w32tm /query /status` from the command line to see the stratum.
 
 -   The target system must be within 6 or less network hops from the highly accurate time source
 
@@ -98,7 +86,7 @@ The additional requirements to achieve 1 ms accuracy for a specific target syste
 -   The target system must be no further than stratum 5 from a highly accurate time source
 
     >[!Note]
-    >Run `w32tm /query /status1 from the command line to see the stratum
+    >Run `w32tm /query /status1` from the command line to see the stratum
 
 -   The target system must be within 4 or less network hops from the highly accurate time source
 
