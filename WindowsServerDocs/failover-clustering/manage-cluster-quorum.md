@@ -21,7 +21,7 @@ The quorum for a cluster is determined by the number of voting elements that mus
 
 ## Quorum configuration options
 
-The quorum model in Windows Server is flexible. If you need to modify the quorum configuration for your cluster, you can use the Configure Cluster Quorum Wizard or the Failover Clusters Windows PowerShell cmdlets. For steps and considerations to configure the quorum, see [configure the cluster quorum](#configure-the-cluster-quorum) later in this topic.
+The quorum model in Windows Server is flexible. If you need to modify the quorum configuration for your cluster, you can use the Configure Cluster Quorum Wizard or the Failover Clusters Windows PowerShell cmdlets. For steps and considerations to configure the quorum, see [Configure the cluster quorum](#configure-the-cluster-quorum) later in this topic.
 
 The following table lists the three quorum configuration options that are available in the Configure Cluster Quorum Wizard.
 
@@ -127,14 +127,6 @@ The following are additional considerations for a file server that hosts the fil
 - The file server must be on a site that is separate from the cluster workload. This allows equal opportunity for any cluster site to survive if site-to-site network communication is lost. If the file server is on the same site, that site becomes the primary site, and it is the only site that can reach the file share.<br />
 - The file server can run on a virtual machine if the virtual machine is not hosted on the same cluster that uses the file share witness.<br />
 - For high availability, the file server can be configured on a separate failover cluster.</td>
-</tr>
-<tr class="odd">
-<td><a href="deploy-cloud-witness.md">Cloud witness</a></td>
-<td>- Blob storage in Azure<br />
-- Accessible by all nodes of the cluster<br />
-- Maintains clustering information in a witness.log file <br />
-- Doesn't store a copy of the cluster database</td>
-<td>- See <a href="deploy-cloud-witness.md">deploy a cloud witness for a failover cluster</a> for requirements and configuration details</td>
 </tr>
 </tbody>
 </table>

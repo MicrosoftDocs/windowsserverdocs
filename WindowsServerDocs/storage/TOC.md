@@ -80,6 +80,8 @@
 ### [Stretch Cluster Replication using Shared Storage](storage-replica/stretch-cluster-replication-using-shared-storage.md)
 ### [Server to server storage replication](storage-replica/server-to-server-storage-replication.md)
 ### [Cluster to cluster storage replication](storage-replica/cluster-to-cluster-storage-replication.md)
+### [Cluster to Cluster Storage Replica cross region in Azure](storage-replica/cluster-to-cluster-azure-cross-region.md)
+### [Cluster to Cluster Storage Replica within the same region in Azure](storage-replica/cluster-to-cluster-azure-one-region.md)
 ### [Storage Replica: known issues](storage-replica/storage-replica-known-issues.md)
 ### [Storage Replica: Frequently Asked Questions](storage-replica/storage-replica-frequently-asked-questions.md)
 ### [Using Storage Replica with Windows Admin Center](storage-replica/storage-replica-ui.md)
