@@ -17,61 +17,56 @@ You can configure Cluster to Cluster Storage Replicas for cross-region applicati
 > [!IMPORTANT]
 > All referenced examples are specific to the illustration above.
 
-## Set up your infrastructure
+## Create resource group
 In the Azure portal, create [resource groups](https://ms.portal.azure.com/#create/Microsoft.ResourceGroup)  in two different regions.
 
 For example, **SR-AZ2AZ** in **West US 2** and **SR-AZCROSS** in **West Central US**, as shown above.
 
-1. Create two Availability sets, one in each resource group for each cluster
+## Create availability sets
+Create two Availability sets, one in each resource group for each cluster
 
-     Make the two [availability sets](https://ms.portal.azure.com/#create/Microsoft.AvailabilitySet-ARM) in the resource group (**SR-AZ2AZ**) created above.
-    - Availability set (**az2azAS1**)
-    - Availability set (**azcross-AS**)
+   Make the two [availability sets](https://ms.portal.azure.com/#create/Microsoft.AvailabilitySet-ARM)
+    - Availability set (**az2azAS1**) in (**SR-AZ2AZ**)
+    - Availability set (**azcross-AS**) in (**SR-AZCROSS**)
 
-   You can choose to create a 3rd availability set for your domain controller or add the domain controller in one of the two availability set.
-
-2. Create two Virtual networks
+## Create two Virtual networks
    - Create the [virtual network](https://ms.portal.azure.com/#create/Microsoft.VirtualNetwork-ARM)  (**az2az-Vnet**) in the first resource group (**SR-AZ2AZ**), having one subnet and one Gateway subnet.
-   - Create the virtual network (**azcross-VNET**) in the second resource group (**SR-AZCROSS**), having one subnet and one Gateway subnet.
+   - Create the [virtual network](https://ms.portal.azure.com/#create/Microsoft.VirtualNetwork-ARM)  (**azcross-VNET**) in the second resource group (**SR-AZCROSS**), having one subnet and one Gateway subnet.
 
-3. Create two Network security groups
-    - Create the [network security group](https://ms.portal.azure.com/#create/Microsoft.NetworkSecurityGroup-ARM) (**az2az-NSG**) in the first resource group (**SR-AZ2AZ**).
-    - Create the network security group (**azcross-NSG**) in the second resource group (**SR-AZCROSS**). 
+## Create two Network security groups
+- Create the [network security group](https://ms.portal.azure.com/#create/Microsoft.NetworkSecurityGroup-ARM) (**az2az-NSG**) in the first resource group (**SR-AZ2AZ**).
+- Create the [network security group](https://ms.portal.azure.com/#create/Microsoft.NetworkSecurityGroup-ARM)  (**azcross-NSG**) in the second resource group (**SR-AZCROSS**). 
 
    Add one Inbound security rule for RDP:3389 to both Network Security Groups. You can choose to remove this rule once you finish your setup.
 
-4. Create Windows Server [virtual machines](https://ms.portal.azure.com/#create/Microsoft.WindowsServer2016Datacenter-ARM) in the previously created Resource groups.
+## Create Windows server 
+Create Windows Server [virtual machines](https://ms.portal.azure.com/#create/Microsoft.WindowsServer2016Datacenter-ARM) in the previously created resource groups.
 
-5. Domain Controller (**az2azDC**). If you are adding this to the availability set created for the two clusters, assign it a Standard public IP address during VM creation.
+Domain Controller (**az2azDC**). You can choose to create a 3rd availability set for your domain controller or add the domain controller in one of the two availability set. If you are adding this to the availability set created for the two clusters, assign it a Standard public IP address during VM creation.
    - Install Active Directory Domain Service.
    - Create a domain (contoso.com)
    - Create a user with administrator privileges (contosoadmin)
-6. Create two virtual machines (**az2az1**, **az2az2**) in the resource group (**SR-AZ2AZ**) using virtual network (**az2az-Vnet**) and network security group (**az2az-NSG**) in availability set (**az2azAS1**). Assign a standard public IP address to each virtual machine during the creation itself.
+
+Create two virtual machines (**az2az1**, **az2az2**) in the resource group (**SR-AZ2AZ**) using virtual network (**az2az-Vnet**) and network security group (**az2az-NSG**) in availability set (**az2azAS1**). Assign a standard public IP address to each virtual machine during the creation itself.
    - Add at-least two managed disks to each machine
    - Install Failover Clustering and the Storage Replica feature
-    - Install Active Directory Domain Service.
-    - Create a domain (contoso.com)
-    - Create a user with administrator privileges (contosoadmin)
 
-6. Create two virtual machines (**az2az1**, **az2az2**) in the resource group (**SR-AZ2AZ**) using virtual network (**az2az-Vnet**) and network security group (**az2az-NSG**) in availability set (**az2azAS1**). Assign a standard public IP address to each virtual machine during the creation itself.
-    - Add at-least two managed disks to each machine
-    - Install Failover Clustering and the Storage Replica feature
-
-7. Create two virtual machines (**azcross1**, **azcross2**) in the resource group (**SR-AZCROSS**) using virtual network (**azcross-VNET**) and network security group (**azcross-NSG**) in availability set (**azcross-AS**). Assign standard Public IP address to each virtual machine during the creation itself
+Create two virtual machines (**azcross1**, **azcross2**) in the resource group (**SR-AZCROSS**) using virtual network (**azcross-VNET**) and network security group (**azcross-NSG**) in availability set (**azcross-AS**). Assign standard Public IP address to each virtual machine during the creation itself
    - Add at least two managed disks to each machine
    - Install Failover Clustering and the Storage Replica feature
 
-8. Connect all the nodes to the domain and provide administrator privileges to the previously created user.
+Connect all the nodes to the domain and provide administrator privileges to the previously created user.
 
-9. Change the DNS Server of the virtual network to domain controller private IP address.
+Change the DNS Server of the virtual network to domain controller private IP address.
     - In the example, the domain controller **az2azDC** has private IP address (10.3.0.8). In the Virtual Network (**az2az-Vnet** and **azcross-VNET**) change DNS Server 10.3.0.8
 
 In the example, connect all the nodes to "contoso.com" and provide administrator privileges to "contosoadmin".
    - Login as contosoadmin from all the nodes
  
-## Set up clusters
+## Create clusters
 
-1. Create the clusters (**SRAZC1**, **SRAZCross**).<br>
+Create the clusters (**SRAZC1**, **SRAZCross**).
+
 Below is the PowerShell commands for the example
 ```powershell
 New-Cluster -Name SRAZC1 -Node az2az1,az2az2 – StaticAddress 10.3.0.100
@@ -79,56 +74,57 @@ New-Cluster -Name SRAZC1 -Node az2az1,az2az2 – StaticAddress 10.3.0.100
 ```powershell
 New-Cluster -Name SRAZCross -Node azcross1,azcross2 – StaticAddress 10.0.0.10
 ```
-Now enable storage spaces direct
+## Enable storage spaces direct
 ```powershell
 Enable-clusterS2D
 ```
-1. Create the clusters (**SRAZC1**, **SRAZCross**). 
-   Below is the PowerShell commands for the example
+> [!IMPORTANT]
+> For each cluster create virtual disk and volume. One for the data and another for the log.
 
-   ```powershell
-   PowerShell New-Cluster -Name SRAZC1 -Node az2az1,az2az2 – StaticAddress 10.3.0.100
-   PowerShell New-Cluster -Name SRAZCross -Node azcross1,azcross2 – StaticAddress 10.0.0.10
-   ```
-
-   - For each cluster
-   ```
-   PowerShell Enable-clusterS2D
-   ```
-
-   For each cluster create virtual disk and volume. One for the data and another for the log.
-
-## Load balancer
+## Create load balancers
 Create an internal Standard SKU [Load Balancer](https://ms.portal.azure.com/#create/Microsoft.LoadBalancer-ARM) for each cluster (**azlbr1**, **azlbazcross**).
-- Provide the Cluster IP address as static private IP address for the load balancer.
-   - azlbr1 => Frontend IP: 10.3.0.100 (Pick up an unused IP address from the Virtual network (**az2az-Vnet**) subnet)
-   - azlbazcross => Frontend IP: 10.0.0.10 (Pick up an unused IP address from the Virtual network (**azcross-VNET**) subnet)
-1. Create Backend Pool for each load balancer. Add the associated cluster nodes.
-2. Create Health Probe: port 59999
-3. Create Load Balance Rule: Allow HA ports, with enabled Floating IP.
 
-6. Create [Virtual network gateway](https://ms.portal.azure.com/#create/Microsoft.VirtualNetworkGateway-ARM) for Vnet-to-Vnet connectivity
-7. Create the first virtual network gateway (**az2az-VNetGateway**) in the first resource group (**SR-AZ2AZ**)
-   - Gateway Type = VPN, and VPN type = Route-based
-8. Create the second Virtual network gateway (**azcross-VNetGateway**) in the second resource group (**SR-AZCROSS**)
-   - Gateway Type = VPN, and VPN type = Route-based
-9. Create a Vnet-to-Vnet connection from first Virtual network gateway to second Virtual network gateway. Provide a shared key
-10. Create a Vnet-to-Vnet connection from second Virtual network gateway to first Virtual network gateway.
+Provide the Cluster IP address as static private IP address for the load balancer.
+- azlbr1 => Frontend IP: 10.3.0.100 (Pick up an unused IP address from the Virtual network (**az2az-Vnet**) subnet)
+- Create Backend Pool for each load balancer. Add the associated cluster nodes.
+- Create Health Probe: port 59999
+- Create Load Balance Rule: Allow HA ports, with enabled Floating IP.
 
-11. On each cluster node, open port 59999 (Health Probe)
+Provide the Cluster IP address as static private IP address for the load balancer.
+- azlbazcross => Frontend IP: 10.0.0.10 (Pick up an unused IP address from the Virtual network (**azcross-VNET**) subnet)
+- Create Backend Pool for each load balancer. Add the associated cluster nodes.
+- Create Health Probe: port 59999
+- Create Load Balance Rule: Allow HA ports, with enabled Floating IP.
 
-    Run the following command on each node:
+## Create a virtual network gateway
+Create [Virtual network gateway](https://ms.portal.azure.com/#create/Microsoft.VirtualNetworkGateway-ARM) for Vnet-to-Vnet connectivity
+
+- Create the first virtual network gateway (**az2az-VNetGateway**) in the first resource group (**SR-AZ2AZ**)
+    - Gateway Type = VPN, and VPN type = Route-based
+
+- Create the second Virtual network gateway (**azcross-VNetGateway**) in the second resource group (**SR-AZCROSS**)
+    - Gateway Type = VPN, and VPN type = Route-based
+
+- Create a Vnet-to-Vnet connection from first Virtual network gateway to second Virtual network gateway. Provide a shared key
+
+- Create a Vnet-to-Vnet connection from second Virtual network gateway to first Virtual network gateway.
+
+## Open port 59999 (Health Probe)
+On each cluster node, open port 59999 (Health Probe)
+
+Run the following command on each node:
+
 ```powershell
 netsh advfirewall firewall add rule name=PROBEPORT dir=in protocol=tcp action=allow localport=59999 remoteip=any profile=any 
 ```
 
-12. Instruct the cluster to listen for Health Probe messages on Port 59999 and respond from the node that currently owns this resource
+## Instruct the cluster to listen for Health Probe messages
+Instruct the cluster to listen for Health Probe messages on Port 59999 and respond from the node that currently owns this resource
+Run it once from any one node of the cluster, for each cluster. 
+    
 
-    Run it once from any one node of the cluster, for each cluster.
-    Make sure to change the "ILBIP" according to your configuration values.
+In our example Make sure to change the "ILBIP" according to your configuration values. Run the following command from any one node **az2az1**/**az2az2**
 
-For the example we've been using,
-run the following command from any one node **az2az1**/**az2az2**
 ```PowerShell
 $ClusterNetworkName = "Cluster Network 1" # Cluster network name (Use Get-ClusterNetwork on Windows Server 2012 or higher to find the name. And use Get-ClusterResource to find the IPResourceName).
 $IPResourceName = "Cluster IP Address" # IP Address cluster resource name.
@@ -137,7 +133,7 @@ $ILBIP = "10.3.0.100" # IP Address in Internal Load Balancer (ILB) - The static 
 Get-ClusterResource $IPResourceName | Set-ClusterParameter -Multiple @{"Address"="$ILBIP";"ProbePort"=$ProbePort;"SubnetMask"="255.255.255.255";"Network"="$ClusterNetworkName";”ProbeFailureThreshold”=5;"EnableDhcp"=0}  
 ```
 
-Run the following command from any one node **az2az3**/**az2az4**
+Run the following command from any one node **azcross1**/**azcross2**
 ```PowerShell
 $ClusterNetworkName = "Cluster Network 1" # Cluster network name (Use Get-ClusterNetwork on Windows Server 2012 or higher to find the name. And use Get-ClusterResource to find the IPResourceName).
 $IPResourceName = "Cluster IP Address" # IP Address cluster resource name.
@@ -146,9 +142,9 @@ $ILBIP = "10.0.0.10" # IP Address in Internal Load Balancer (ILB) - The static I
 Get-ClusterResource $IPResourceName | Set-ClusterParameter -Multiple @{"Address"="$ILBIP";"ProbePort"=$ProbePort;"SubnetMask"="255.255.255.255";"Network"="$ClusterNetworkName";”ProbeFailureThreshold”=5;"EnableDhcp"=0}  
 ```
 
-13. Make sure both clusters can connect / communicate with each other.
+Make sure both clusters can connect / communicate with each other.
 
-    Either use "Connect to Cluster" feature in Failover cluster manager to connect to the other cluster or check other cluster responds from one of the nodes of the current cluster.
+Either use "Connect to Cluster" feature in Failover cluster manager to connect to the other cluster or check other cluster responds from one of the nodes of the current cluster.
 
 From the example we've been using:
 ```powershell
@@ -158,13 +154,13 @@ Get-Cluster -Name SRAZC1 (ran from azcross1)
 Get-Cluster -Name SRAZCross (ran from az2az1)
 ```
 
-14. Create cloud witness for both the clusters
+## Create cloud witness for both the clusters
    - Create 2 [storage accounts](https://ms.portal.azure.com/#create/Microsoft.StorageAccount-ARM) (**az2azcw**,**azcrosssa**) in Azure, one for each cluster in each resource group (**SR-AZ2AZ**, **SR-AZCROSS**)
    - Copy the storage account name and key from "access keys"
    - Create the cloud witness from “failover cluster manager” and use the above account name and key to create it.
 
 ## Configure cluster-to-cluster Storage Replica
-1. Grant SR-Access from one cluster to another cluster in both direction
+Grant SR-Access from one cluster to another cluster in both direction
 
 From our example:
 ```powershell
@@ -174,11 +170,11 @@ Grant-SRAccess -ComputerName az2az1 -Cluster SRAZCross
 Grant-SRAccess -ComputerName azcross1 -Cluster SRAZC1
 ```
 
-2. Create Partnership
+## Create Partnership
    - For cluster **SRAZC1**
       - Volume location:- c:\ClusterStorage\DataDisk1
       - Log location:- g:
-   - For cluster SRAZCross
+   - For cluster **SRAZCross**
       - Volume location:- c:\ClusterStorage\DataDiskCross
       - Log location:- g:
 
