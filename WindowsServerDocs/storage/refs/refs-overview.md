@@ -6,7 +6,7 @@ ms.manager: mchad
 ms.technology: storage-file-systems
 ms.topic: article
 author: gawatu
-ms.date: 04/24/2018
+ms.date: 05/09/2018
 ---
 # Resilient File System (ReFS) overview
 
@@ -62,10 +62,9 @@ ReFS is designed to support extremely large data sets--millions of terabytes--wi
 Microsoft has developed NTFS specifically for general-purpose use with a wide range of configurations and workloads, however for customers specially requiring the availability, resiliency, and/or scale that ReFS provides, Microsoft supports ReFS for use under the following configurations and scenarios. 
 
 >[!NOTE]
-> All ReFS supported configurations must use [Windows Server Catalog](https://www.WindowsServerCatalog.com) certified hardware and meet application requirements. 
-features 
-### Storage Spaces Direct
+> All ReFS supported configurations must use [Windows Server Catalog](https://www.WindowsServerCatalog.com) certified hardware and meet application requirements.
 
+### Storage Spaces Direct
 
 Deploying ReFS on Storage Spaces Direct is recommended for virtualized workloads or network-attached storage: 
 - Mirror-accelerated parity and [the cache in Storage Spaces Direct](../storage-spaces/understand-the-cache.md) deliver high performance and capacity-efficient storage. 

@@ -2,10 +2,10 @@
 ms.assetid: 85ca191c-0cc7-4453-a72c-42060ddf2ea2
 title: Executive Summary
 description:
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+author: MicrosoftGuyJFlo
+ms.author: joflore
+manager: mtillman
+ms.date: 05/08/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 
@@ -168,8 +168,8 @@ The following table provides a summary of the recommendations provided in this d
 Practices are listed in approximate order of priority, that is., lower numbers indicate higher priority. Where applicable, best practices are identified as preventative or detective in nature. All of these recommendations should be thoroughly tested and modified as needed for your organization's characteristics and requirements.  
   
   
-|-|-|-|-|  
 ||**Best Practice**|**Tactical or Strategic**|**Preventative or Detective**|  
+|-|-|-|-|  
 |1|Patch applications.|Tactical|Preventative|  
 |2|Patch operating systems.|Tactical|Preventative|  
 |3|Deploy and promptly update antivirus and antimalware software across all systems and monitor for attempts to remove or disable it.|Tactical|Both|  
