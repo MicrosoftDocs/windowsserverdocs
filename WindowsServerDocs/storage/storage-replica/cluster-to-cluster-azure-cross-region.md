@@ -168,10 +168,10 @@ Get-Cluster -Name SRAZCross (ran from az2az1)
 
 From our example:
 ```powershell
-PowerShell Grant-SRAccess -ComputerName az2az1 -Cluster SRAZCross
+Grant-SRAccess -ComputerName az2az1 -Cluster SRAZCross
 ```
 ```powershell
-PowerShell Grant-SRAccess -ComputerName azcross1 -Cluster SRAZC1
+Grant-SRAccess -ComputerName azcross1 -Cluster SRAZC1
 ```
 
 2. Create Partnership
