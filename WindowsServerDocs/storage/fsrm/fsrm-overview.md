@@ -6,7 +6,7 @@ ms.manager: brianlic
 ms.technology: storage
 ms.topic: article
 author: jasongerend
-ms.date: 5/11/2018
+ms.date: 5/14/2018
 description: File Server Resource Manager (FSRM) is a tool that enables you to manage and classify data on a Windows Server file server.
 ---
 # File Server Resource Manager (FSRM) overview
@@ -47,13 +47,13 @@ The features included with File Server Resource Manager can be configured and ma
   
 -   Schedule a report that runs every Sunday night at midnight that generates a list of the most recently accessed files from the previous two days. This can help you determine the weekend storage activity and plan your server downtime accordingly.  
 
-## <a name="whats-new"></a>What's new - turn off change journals on all volumes
+## <a name="whats-new"></a>What's new - prevent FSRM from creating change journals
 
-Starting with Windows Server, version 1803, you can now prevent the File Server Resource Manager service from creating a change journal (also known as a USN journal) on all volumes when the service starts. This can conserve a little bit of space on each volume, but will disable real-time file classification.
+Starting with Windows Server, version 1803, you can now prevent the File Server Resource Manager service from creating a change journal (also known as a USN journal) on volumes when the service starts. This can conserve a little bit of space on each volume, but will disable real-time file classification.
 
 For older new features, see [What's New in File Server Resource Manager](https://technet.microsoft.com/library/dn383587.aspx).
 
-To prevent File Server Resource Manager from creating a change journal on all volumes when the service starts, use the following steps. 
+To prevent File Server Resource Manager from creating a change journal on some or all volumes when the service starts, use the following steps: 
 
 1. Stop the SRMSVC service. For example, open a PowerShell session as an administrator and enter `Stop-Service SrmSvc`.
 2. Delete the USN journal for the volumes you want to conserve space on by using the fsutil command: 
@@ -65,7 +65,7 @@ To prevent File Server Resource Manager from creating a change journal on all vo
 
 3. Open Registry Editor, for example, by typing `regedit` in the same PowerShell session.
 4. Navigate to the following key: **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SrmSvc\Settings**
-5. To optionally skip change journal creation for the entire server:
+5. To optionally skip change journal creation for the entire server (skip this step if you want to disable it only on specific volumes):
     1. Right-click the **Settings** key and then select **New** > **DWORD (32-bit) Value**. 
     1. Name the value `SkipUSNCreationForSystem`.
     1. Set the value to  **1** (in hexidecimal).
