@@ -96,6 +96,9 @@ In later steps, these newly created files will be affected:
 | ```{!product-about}``` | Text for about dialog | ```Manage Foo Works``` |
 | ```{!product-about-description}``` | Text for about dialog description | ```Contoso Inc's Manage Foo Works, contact foo@contoso.inc for more info.``` |
 
+> [!NOTE] 
+> Make note of your replaced values for reference in the following steps.
+
 ### Rename project folder
 
 Rename parent folder ```\windows-admin-center-extension-template``` to your desired name.
