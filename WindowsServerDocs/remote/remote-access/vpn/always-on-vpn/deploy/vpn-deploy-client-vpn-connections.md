@@ -2,11 +2,11 @@
 title: Configure Windows 10 Client Always On VPN Connections
 description: This topic provides detailed instructions for deploying Always On VPN in Windows Server 2016.
 ms.prod: windows-server-threshold
-ms.technology: networking
+ms.technology: networking-ras
 ms.topic: article
-ms.date: 
+ms.date: 05/15/2018
 ms.assetid: d165822d-b65c-40a2-b440-af495ad22f42
-manager: brianlic
+manager: elizapo
 ms.author: pashort
 author: shortpatti
 ---
@@ -915,4 +915,10 @@ To test the configuration policy, sign in to a Windows 10 client computer as th
 After synchronization, you should see the VPN profile available on the computer.
 
 ## Next steps
-For the next section in this guide, see [Remote Access Always On VPN Advanced Features](always-on-vpn-adv-options.md).
+
+|If you want to...  |Then see...  |
+|---------|---------|
+|Learn more about the advanced features     |[Remote Access Always On VPN Advanced Features](always-on-vpn-adv-options.md)         |
+|Configure EAP-TLS to ignore  |         |
+
+

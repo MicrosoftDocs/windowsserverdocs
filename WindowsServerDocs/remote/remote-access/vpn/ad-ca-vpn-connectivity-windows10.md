@@ -1,7 +1,9 @@
 ---
-title: Azure Active Directory conditional access for VPN connectivity (preview)| Microsoft Docs
+title: Conditional access for VPN connectivity using Azure AD
 description: 'With Azure AD conditional access for virtual private network (VPN) connectivity, you can help protect your VPN connections.'
 services: active-directory
+ms.prod: windows-server-threshold
+ms.technology: networking-ras
 documentationcenter: ''
 ms.assetid: 51a1ee61-3ffe-4f65-b8de-ff21903e1e74
 ms.service: active-directory
@@ -16,7 +18,7 @@ manager: elizapo
 ms.reviewer: jairoc
 ---
 
-# Azure Active Directory conditional access for VPN connectivity
+# Conditional access for VPN connectivity using Azure AD
 
 With [Azure Active Directory (Azure AD) conditional access](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-conditional-access-azure-portal), you can fine-tune how authorized users access your resources. With Azure AD conditional access for virtual private network (VPN) connectivity, you can help protect your VPN connections.
 
