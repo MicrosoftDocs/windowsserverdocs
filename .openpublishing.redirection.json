@@ -1,8 +1,15 @@
 {
   "redirections": [
+    
+    {
+      "source_path": "https://docs.microsoft.com/en-us/azure/active-directory/active-directory-conditional-access-vpn-connectivity-windows10.md",
+      "redirect_url": "/windows-server/remote/remote-access/vpn/ad-ca-vpn-connectivity-windows10",
+      "redirect_document_id": true
+    },
     {
       "source_path": "WindowsServerDocs/networking/technologies/network-offload.md",
-      "redirect_url": "/windows-server/networking/technologies/hpn/hpn-top"
+      "redirect_url": "/windows-server/networking/technologies/hpn/hpn-top",
+      "redirect_document_id": true
     },
     {  
       "source_path": "WindowsServerDocs/windows-insider/Whats-new-wip-at-work.md",
