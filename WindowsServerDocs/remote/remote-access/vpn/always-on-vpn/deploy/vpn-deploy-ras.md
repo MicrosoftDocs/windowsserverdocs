@@ -138,7 +138,8 @@ clients.
 
     7.  In **Confirm new secret**, type the same text string, and click **OK**.
 
-    >[!IMPORTANT] Save this text string. When you configure the NPS Server on your Organization/Corporate network, you will add this VPN Server as a RADIUS Client. During that configuration, you will use this same shared secret so that the NPS and VPN Servers can communicate.
+    >[!IMPORTANT] 
+    >Save this text string. When you configure the NPS Server on your Organization/Corporate network, you will add this VPN Server as a RADIUS Client. During that configuration, you will use this same shared secret so that the NPS and VPN Servers can communicate.
 
 1.  In **Add RADIUS Server**, review the default settings for:
 
