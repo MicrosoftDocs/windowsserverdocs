@@ -9,7 +9,7 @@ ms.workload: identity
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.topic: article
-ms.date: 05/09/2018
+ms.date: 05/15/2018
 ms.author: pashort
 author: shortpatti
 manager: elizapo
@@ -54,22 +54,17 @@ To gain insights on how Microsoft implements this feature, see [Enhancing remote
 
 To configure Azure Active Directory conditional access for VPN connectivity, you need to have a VPN server configured.  
 
+## [Step 1: Configure the Always On VPN infrastructure](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-server-infrastructure)
 
-## [Step 1: Install Remote Access as a RAS Gateway VPN Server](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-ras#install-remote-access-as-a-ras-gateway-vpn-server)
+In this step, you install and configure the server-side components necessary to support the VPN, including configuring PKI to distribute the certificates used by users, the VPN server, and the NPS server; configuring RRAS to support IKEv2 connections; and configuring the NPS server to perform authorization for the VPN connections.
 
-In this step, you install the Remote Access role as a single tenant RAS Gateway VPN server.
-
-## [Step 2: Configure Remote Access as a VPN Server](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-ras#configure-remote-access-as-a-vpn-server)
+## [Step 2: Configure the Remote Access Server for Always On VPN](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-ras)
 
 In this step, you configure Remote Access VPN to allow IKEv2 VPN connections, deny connections from other VPN protocols, and assign a static IP address pool for issuance of IP addresses to connecting authorized VPN clients.
 
-## [Step 3: Install Network Policy Service (NPS)](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-nps#install-network-policy-server)
+## [Step 3: Install and configure the NPS server](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-nps)
 
-In this step, you install Network Policy Server (NPS) by using either Windows PowerShell or the Server Manager Add Roles and Features Wizard.
-
-## [Step 4: Configure Network Policy Service](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-nps#configure-network-policy-for-vpn-connections)
-
-In this step, you configure NPS to handle all authentication, authorization, and accounting duties for connection requests that it receives from the VPN server.
+In this step, you install Network Policy Server (NPS) by using either Windows PowerShell or the Server Manager Add Roles and Features Wizard.  You also configure NPS to handle all authentication, authorization, and accounting duties for connection requests that it receives from the VPN server.
 
 To configure NPS, you must perform the following tasks:
 - Register the NPS Server in Active Directory
@@ -78,85 +73,18 @@ To configure NPS, you must perform the following tasks:
 - Configure Network Policy in NPS
 - Autoenroll the NPS Server certificate
 
-## Step 5: <a name="verify-it-works"></a>Verify that the Standard VPN works
-In this step, configure the template VPN profile on a domain-joined client computer. The type of user account you use (that is, standard user or administrator) for this part of the process does not matter.
+## [Step 4: Configure DNS and Firewall settings](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-dns-firewall)
 
-1.  Sign in to a domain-joined client computer as a member of the **VPN Users** group.
+In this step, you configure DNS and Firewall settings. When remote VPN clients connect, they use the same DNS servers that your internal clients use, which allows them to resolve names in the same manner as the rest of your internal workstations. 
 
-2.  On the Start menu, type **VPN**, and press Enter.
+## [Step 5: Configure Windows 10 client Always On VPN connections](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-client-vpn-connections)
 
-3.  In the details pane, click **Add a VPN connection**.
+In this step, you configure the Windows 10 client computers to communicate with that infrastructure with a VPN connection. You can use several technologies to configure Windows 10 VPN clients, including Windows PowerShell, System Center Configuration Manager, and Intune. All three require an XML VPN profile to configure the appropriate VPN settings. 
 
-4.  In the VPN Provider list, click **Windows (built-in)**.
-
-5.  In Connection Name, enter the name of the VPN profile.
-
-6.  In Server name or address, enter the **external** FQDN of your VPN server \(for example, **vpn.contoso.com**\).
-
-7. In VPN type, select **Automatic**.
-
-8. In Type of sign-in info, select **User name and password**.
-
-9. In **User name (optional)**, enter the user name.
-
-10. In Password, enter the user's password.
-
-11. Click **Save**.
-
-12. In the Setting window, click the VPN connection you just added and click **Connect**.
+## [Step 6: Remote Access Always On VPN advanced features](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-adv-options)
 
 
-## [Step 6: Create a Custome Server Authentication Template that Supports IKEv2](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-server-infrastructure#create-the-vpn-server-authentication-template)
-
-In this step, you configure a new Server Authentication template for your VPN server.
-
-Adding the IP Security (IPsec) IKE Intermediate application policy allows the server to filter certificates if more than one certificate is available with the Server Authentication extended key usage. 
-
-## [Step 7: Request a Server Authentication Certificate for IKEv2](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-server-infrastructure#enroll-and-validate-the-server-certificates)
-
-In this step, you manually enroll the VPN server's certificate. 
-
-## <a name="remove-weak-auth-methods"></a>Step 8: Remove Weak Authentication Methods
-If Standard VPN is verified to be working correctly, proceed with removing weak authentication protocols and enforcing Certificate Authentication using Protected Extensible Authentication Protocol (PEAP). 
-
->[!IMPORTANT]
->IKEv2 gateway enforcement can be configured in NPS to prevent connections from being allowed from anything but certificates that chain to the **AAD Conditional Access** root certificate by adding a Vendor Specific setting to the Network Policy. The attribute is _Allowed-Certificate-OID_, and should contain the AAD Conditional Access OID. Doing this will prevent client certificates that do not have the AAD Conditional Access OID from satisfying the request. Alternatively, customers that happen to be using RRAS as their gateway can implement gateway enforcement against RRAS, if they prefer not to do it in NPS. See Gateway Enforcement in this article. 
-
-**Procedure**
-
-1. In the Routing and Remote Access MMC, expand **Policies\\Network Policies**.
-
-2.  Right-\click the **Connections to Microsoft Routing and Remote Access Server** network policy and select **Properties**.
-
-3.  Click the **Constraints** tab and do the following:
-
-   1. Under EAP Types, select the **Microsoft Encrypted Authentication version 2 (MS-CHAPv2)** check box and click **Remove**.
-
-   2. Under EAP Types, click **Add**, select the **Microsoft: Protected EAP \(PEAP\)** check box, and click **OK**.
-
-   3. Select **Microsoft: Protected EAP \(PEAP\)** and click **Move Up** to place it at the top of the order.
-
-   4. Select **Microsoft: Protected EAP \(PEAP\)** again and click **Edit**.
-
-4. On the Add EAP page, click **Add**.
-
-5. Select **Smart Card or other certificate**, and click **OK**.
-
-6. Select **Smart Card or other certificate** and click **Move Up** to place it at the top of the order.
-
-7. For everything under Less secure authentication methods, clear all the check boxes, and click **OK**.
-
-8. (Optional) If you have implemented [Gateway Enforcement](#gateway-enforcement), do the following:
-
-   1. Under Vendor Specific, click **Add**.
-
-   2. Select the first option of **Allowed-Certificate-OID** and click **Add**.
-   
-   3. Paste the AAD Conditional Access OID as the attribute value and click **OK** twice.
-
-9. Click **Close** and click **Apply**.
- 
-## <a name="config-eap-tls-crl"></a>Step 9: Configure EAP-TLS to Ignore Certificate Revocation List (CRL) Checking
+## Step 7: Configure EAP-TLS to ingore Certificate Revocation List (CRL) checking
 
 >[!IMPORTANT]
 >Failure to implement this registry change will cause IKEv2 connections using cloud certificates with PEAP to fail, but IKEv2 connections using Client Auth certificates issued from the on-premises CA will work.
@@ -189,7 +117,7 @@ For more information, see [How to Enable or Disable Certificate Revocation Check
 |HKLM\SYSTEM\CurrentControlSet\Services\RasMan\PPP\EAP\25     |PEAP         |
 |HKLM\SYSTEM\CurrentControlSet\Services\RasMan\PPP\EAP\26     |EAP-MSCHAP v2         |
 
-## <a name="create-root-ca-for-vpn-auth"></a>Step 10: Create Root Certificates for VPN Authentication with Azure AD 
+## Step 8: Create root certificates for VPN authentication with Azure AD
 
 In this step, you configure root certificates for VPN authentication with Azure AD. To configure conditional access for VPN connectivity, you need to:
 
@@ -232,7 +160,7 @@ In the Azure portal, you can create two certificates to manage the transition wh
 
     c. Click **Create**.
 
-## <a name="config-ca-policy"></a>Step 11: Configure your Conditional Access Policy
+## Step 9: Configure your Conditional Access policy
 
 In this step, you configure the conditional access policy for VPN connectivity. 
 
@@ -300,9 +228,7 @@ After a root certificate has been created, the 'VPN connectivity' triggers the c
 
 16. On the **New** page, click **Create**.
 
-
-
-## <a name="deploy-ca-root-certs-on-prem"></a>Step 12: Deploy Conditional Access Root Certificates to On-Premises AD
+## Step 10: Deploy Conditional Access root certificates to on-premise AD
 
 1. On the **VPN connectivity** page, click **Download certificate**. 
    
@@ -343,8 +269,8 @@ After a root certificate has been created, the 'VPN connectivity' triggers the c
 
         -   Certificate Authorities Container
 
+## Step 11: Create OMA-DM based VPNv2 Profiles to Windows 10 devices
 
-## <a name="create-oma-dm-based-vpnv2"></a>Step 13: Create OMA-DM based VPNv2 Profiles to Windows 10 devices
 In this step, you can use one of two methods. The first method is a managed deployment using Intune to deploy a VPN Device Configuration policy. The second method can be used for unmanaged environments using a PowerShell script that leverages the Common Information Model, which creates a WMI session in the user’s context. From this context, it then creates a new instance of the MDM_VPNv2_01 WMI class. 
 
 VPNv2 profiles can also be created via SCCM, Intune or with a PowerShell Script using [VPNv2 CSP settings](https://docs.microsoft.com/en-us/windows/client-management/mdm/vpnv2-csp). 
@@ -369,9 +295,9 @@ Everything discussed in this section is the minimum needed to make this work wit
 
 6.  In Profile type, select **VPN**.
 
-8. Under Settings, for **Base VPN**, verify or set the following settings:
+7. Under Settings, for **Base VPN**, verify or set the following settings:
 
-    ![Conditional Access](../../media/Always-On-Vpn/step13-substep8.png)
+    ![Conditional Access](../../media/Always-On-Vpn/create-profile-vpn-base-vpn.png)
 
     - **Connection name**: Enter a name for this connection. End users see this name when they browse their device for the list of available VPN connections.
 
@@ -391,7 +317,10 @@ Everything discussed in this section is the minimum needed to make this work wit
 
     - **EAP XML\\TLSExtension**: Must be present and contain **\<EKUName>AAD Conditional Access<\/EKUName>** and **\<EKUOID>1.3.6.1.4.1.311.87<\/EKUOID>**. These values tell the VPN client which certificate in the user's store should be used to perform VPN authentication. This is required when more than one certificate is in the user's store.  
 
-7.  Under Settings, for Conditional Access, select the **Conditional access for this VPN connection** to **Enabled**. Doing this sets `<DevideCompliance><Enabled>true</Enabled>` in the VPNv2 profile, which tells the VPN clients to request an Azure AD Certificate. 
+8.  Under Settings, for Conditional Access, select the **Conditional access for this VPN connection** to **Enabled**. Doing this sets `<DevideCompliance><Enabled>true</Enabled>` in the VPNv2 profile, which tells the VPN clients to request an Azure AD Certificate. 
+
+
+    ![Conditional Access](../../media/Always-On-Vpn/step13-substep8.png)
 
     **Example EAP XML**<br>
     The EAP XML sample below contains the minimum settings need to make this work with IKEv2. 

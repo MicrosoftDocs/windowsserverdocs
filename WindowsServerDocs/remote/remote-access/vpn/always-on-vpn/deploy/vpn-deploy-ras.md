@@ -3,11 +3,9 @@ title: Configure the Remote Access Server for Always On VPN
 author: shortpatti
 ---
 
-Configure the Remote Access Server for Always On VPN
-====================================================
+# Configure the Remote Access Server for Always On VPN
 
->   Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016,
->   Windows Server 2012 R2, Windows 10
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
 RRAS is designed to perform well as both a router and a remote access server;
 therefore, it supports a wide array of features. For the purposes of this guide,
@@ -36,19 +34,16 @@ The steps in this section allow you to complete the following items.
 2.  On the Remote Access server, you can configure Remote Access as a RAS
     Gateway VPN server.
 
-Install Remote Access as a RAS Gateway VPN Server
--------------------------------------------------
+## Install Remote Access as a RAS Gateway VPN Server
 
 You can use this section to install the Remote Access role as a single tenant
 RAS Gateway VPN server.
 
-For more information, see [Remote
-Access](https://docs.microsoft.com/windows-server/remote/remote-access/remote-access).
+For more information, see [Remote Access](https://docs.microsoft.com/windows-server/remote/remote-access/remote-access).
 
 **Administrative Credentials**
 
-Membership in **Administrators**, or equivalent, is the minimum required to
-perform these procedures.
+Membership in **Administrators**, or equivalent, is the minimum required to perform these procedures.
 
 ### Install the Remote Access role by using Windows PowerShell
 
@@ -66,22 +61,17 @@ PowerShell.
 
 ### Install the Remote Access role by using Server Manager
 
-You can use the following procedure to install the Remote Access role using
-Server Manager.
+You can use the following procedure to install the Remote Access role using Server Manager.
 
-1.  On the VPN server, in Server Manager, click **Manage**, and then click **Add
-    Roles and Features**. The Add Roles and Features Wizard opens.
+1.  On the VPN server, in Server Manager, click **Manage**, and then click **Add Roles and Features**. The Add Roles and Features Wizard opens.
 
 2.  On the Before you begin page, click **Next**.
 
-3.  On the Select Installation Type page, ensure that **Role-Based or
-    feature-based installation** is selected, and then click **Next**.
+3.  On the Select Installation Type page, ensure that **Role-Based or feature-based installation** is selected, and then click **Next**.
 
-4.  On the Select destination server page, ensure that **Select a server from
-    the server pool** is selected.
+4.  On the Select destination server page, ensure that **Select a server from the server pool** is selected.
 
-5.  Under Server Pool, ensure that the local computer is selected, and click
-    **Next**.
+5.  Under Server Pool, ensure that the local computer is selected, and click **Next**.
 
 6.  On the Select server roles page, in **Roles**, click **Remote Access**, and
     then **Next**.
@@ -90,23 +80,19 @@ Server Manager.
 
 8.  On the Remote Access page, click **Next**.
 
-9.  On the Select role service page, in **Role services**, click **DirectAccess
-    and VPN (RAS)**. The **Add Roles and Features Wizard** dialog box open.
+9.  On the Select role service page, in **Role services**, click **DirectAccess and VPN (RAS)**. The **Add Roles and Features Wizard** dialog box open.
 
-10. On the Add Roles and Features dialog, click **Add Features**, and click
-    **Next**.
+10. On the Add Roles and Features dialog, click **Add Features**, and click **Next**.
 
 11. On the Web Server Role (IIS) page, click **Next**.
 
 12. On the Select role services page, click **Next**.
 
-13. On the Confirm installation selections page, review your choices and click
-    **Install**.
+13. On the Confirm installation selections page, review your choices and click **Install**.
 
 14. When the installation is complete, click **Close**.
 
-Configure Remote Access as a VPN Server
----------------------------------------
+## Configure Remote Access as a VPN Server
 
 In this section, you can configure Remote Access VPN to allow IKEv2 VPN
 connections, deny connections from other VPN protocols, and assign a static IP
@@ -115,70 +101,44 @@ clients.
 
 1.  On the VPN server, in Server Manager, click the **Notifications** flag.
 
-2.  In the **Tasks** menu, click **Open the Getting Started Wizard**.  
-      
-    The Configure Remote Access wizard opens. \>[!NOTE] \>The Configure Remote
-    Access wizard might open behind Server Manager. If you think the wizard is
-    taking too long to open, move or minimize Server Manager to find out whether
-    the wizard is behind it. If not, wait for the wizard to initialize.
+2.  In the **Tasks** menu, click **Open the Getting Started Wizard**.<p>The Configure Remote Access wizard opens. 
 
-3.  Click **Deploy VPN only**.  
-      
-    The Routing and Remote Access Microsoft Management Console (MMC) opens.
+    >[!NOTE] 
+    >The Configure Remote Access wizard might open behind Server Manager. If you think the wizard is taking too long to open, move or minimize Server Manager to find out whether the wizard is behind it. If not, wait for the wizard to initialize.
 
-4.  Right-click the VPN server, and click **Configure and Enable Routing and
-    Remote Access**.  
-      
-    The Routing and Remote Access Server Setup Wizard opens.
+3.  Click **Deploy VPN only**.<p>The Routing and Remote Access Microsoft Management Console (MMC) opens.
 
-5.  In the Welcome to the Routing and Remote Access Server Setup Wizard, click
-    **Next**.
+4.  Right-click the VPN server, and click **Configure and Enable Routing and Remote Access**.<p>The Routing and Remote Access Server Setup Wizard opens.
 
-6.  In **Configuration**, click **Custom Configuration**, and then click
-    **Next**.
+5.  In the Welcome to the Routing and Remote Access Server Setup Wizard, click **Next**.
 
-7.  In **Custom Configuration**, click **VPN access**, and then click **Next**.  
-      
-    The Completing the Routing and Remote Access Server Setup Wizard opens.
+6.  In **Configuration**, click **Custom Configuration**, and then click **Next**.
 
-8.  Click **Finish** to close the wizard, and click **OK** to close the Routing
-    and Remote Access dialog box.
+7.  In **Custom Configuration**, click **VPN access**, and then click **Next**.<p>The Completing the Routing and Remote Access Server Setup Wizard opens.
+
+8.  Click **Finish** to close the wizard, and click **OK** to close the Routing and Remote Access dialog box.
 
 9.  Click **Start service** to start Remote Access.
 
-10. In the Remote Access MMC, right-click the VPN server, and click
-    **Properties**.
+10. In the Remote Access MMC, right-click the VPN server, and click **Properties**.
 
 11. In Properties, click the **Security** tab and do the following:
 
     1.  Click **Authentication provider** and click **RADIUS Authentication**.
 
-    2.  Click **Configure**.  
-          
-        The RADIUS Authentication dialog box opens.
+    2.  Click **Configure**.<p>The RADIUS Authentication dialog box opens.
 
-    3.  Click **Add**.  
-          
-        The Add RADIUS Server dialog box opens.
+    3.  Click **Add**.<p>The Add RADIUS Server dialog box opens.
 
-    4.  In **Server name**, type the Fully Qualified Domain Name (FQDN) of the
-        NPS server on your Organization/Corporate network.  
-          
-        For example, if the NetBIOS name of your NPS server is NPS1 and your
-        domain name is corp.contoso.com, type **NPS1.corp.contoso.com**.
+    4.  In **Server name**, type the Fully Qualified Domain Name (FQDN) of the NPS server on your Organization/Corporate network.<p>For example, if the NetBIOS name of your NPS server is NPS1 and your domain name is corp.contoso.com, type **NPS1.corp.contoso.com**.
 
-    5.  In **Shared secret**, click **Change**.  
-          
-        The Change Secret dialog box opens.
+    5.  In **Shared secret**, click **Change**.<p>The Change Secret dialog box opens.
 
     6.  In **New secret**, type a text string.
 
     7.  In **Confirm new secret**, type the same text string, and click **OK**.
 
--   [!IMPORTANT] Save this text string. When you configure the NPS Server on
-    your Organization/Corporate network, you will add this VPN Server as a
-    RADIUS Client. During that configuration, you will use this same shared
-    secret so that the NPS and VPN Servers can communicate.
+    >[!IMPORTANT] Save this text string. When you configure the NPS Server on your Organization/Corporate network, you will add this VPN Server as a RADIUS Client. During that configuration, you will use this same shared secret so that the NPS and VPN Servers can communicate.
 
 1.  In **Add RADIUS Server**, review the default settings for:
 
@@ -188,13 +148,7 @@ clients.
 
     -   **Port**
 
-2.  If necessary, change the values to match the requirements for your
-    environment and click **OK**.  
-      
-    A NAS is a device that provides some level of access to a larger network. A
-    NAS using a RADIUS infrastructure is also a RADIUS client, sending
-    connection requests and accounting messages to a RADIUS server for
-    authentication, authorization, and accounting.
+2.  If necessary, change the values to match the requirements for your environment and click **OK**.<p>A NAS is a device that provides some level of access to a larger network. A NAS using a RADIUS infrastructure is also a RADIUS client, sending connection requests and accounting messages to a RADIUS server for authentication, authorization, and accounting.
 
 3.  Review the setting for **Accounting provider**.
 
@@ -207,83 +161,53 @@ clients.
 
     1.  Click **Static address pool**.
 
-    2.  Click **Add** to configure an IP address pool.  
-          
-        The static address pool should contain addresses from the internal
-        perimeter network. These addresses are on the internal-facing network
-        connection on the VPN server, not the corporate network.
+    2.  Click **Add** to configure an IP address pool.<p>The static address pool should contain addresses from the internal perimeter network. These addresses are on the internal-facing network connection on the VPN server, not the corporate network.
 
-    3.  In **Start IP address**, type the starting IP address in the range you
-        want to assign to VPN clients.
+    3.  In **Start IP address**, type the starting IP address in the range you want to assign to VPN clients.
 
-    4.  In **End IP address**, type the ending IP address in the range you want
-        to assign to VPN clients, or in **Number of addresses**, type the number
-        of the address you want to make available.
+    4.  In **End IP address**, type the ending IP address in the range you want to assign to VPN clients, or in **Number of addresses**, type the number of the address you want to make available.
 
--   [!NOTE] If you’re using DHCP for this subnet, ensure that you configure a
-    corresponding address exclusion on your DHCP servers.
+    >[!NOTE] 
+    >If you’re using DHCP for this subnet, ensure that you configure a corresponding address exclusion on your DHCP servers.
 
-    1.  (Optional) If you are using DHCP, click **Adapter**, and in the list of
-        results, click the Ethernet adapter connected to your internal perimeter
-        network.
+    1.  (Optional) If you are using DHCP, click **Adapter**, and in the list of results, click the Ethernet adapter connected to your internal perimeter network.
 
-1.  *If you are setting up conditional access*, from the **Certificate**
-    drop-down list, under SSL Certificate Binding, select the VPN server
-    authentication.
+1.  *If you are setting up conditional access*, from the **Certificate** drop-down list, under SSL Certificate Binding, select the VPN server authentication.
 
-2.  *If you are setting up conditional access*, in the Routing and Remote Access
-    MMC, expand **Policies\\Network Policies** and do the following:
+2.  *If you are setting up conditional access*, in the Routing and Remote Access MMC, expand **Policies\\Network Policies** and do the following: 
 
-    1.  Right-the **Connections to Microsoft Routing and Remote Access Server**
-        network policy and select **Properties**.
+    1.  Right-the **Connections to Microsoft Routing and Remote Access Server** network policy and select **Properties**.
 
-    2.  Select the **Grant access. Grant access if the connection request
-        matches this policy** option.
+    2.  Select the **Grant access. Grant access if the connection request matches this policy** option.
 
-    3.  Under Type of network access server, select **Remote Access Server
-        (VPN-Dial up)** from the drop-down.
+    3.  Under Type of network access server, select **Remote Access Server (VPN-Dial up)** from the drop-down.
 
-3.  In the Routing and Remote Access MMC, right-click **Ports,** and then click
-    **Properties**.  
-      
-    The Ports Properties dialog box opens.
+3.  In the Routing and Remote Access MMC, right-click **Ports,** and then click **Properties**. <p>The Ports Properties dialog box opens.
 
-4.  Click **WAN Miniport (SSTP)** and click **Configure**.  
-      
-    The Configure Device - WAN Miniport (SSTP) dialog box opens.
+4.  Click **WAN Miniport (SSTP)** and click **Configure**.<p>The Configure Device - WAN Miniport (SSTP) dialog box opens.
 
-    1.  Clear the **Remote access connections (inbound only)** and **Demand-dial
-        routing connections (inbound and outbound)** checkboxes.
+    1.  Clear the **Remote access connections (inbound only)** and **Demand-dial routing connections (inbound and outbound)** checkboxes.
 
     2.  Click **OK**.
 
-5.  Click **WAN Miniport (L2TP)** and click **Configure**.  
-      
-    The Configure Device - WAN Miniport (IKEv2) dialog box opens.
+5.  Click **WAN Miniport (L2TP)** and click **Configure**.<p>The Configure Device - WAN Miniport (IKEv2) dialog box opens.
 
-    1.  In **Maximum ports**, type the number of ports to match the maximum
-        number of simultaneous VPN connections that you want to support.
+    1.  In **Maximum ports**, type the number of ports to match the maximum number of simultaneous VPN connections that you want to support.
 
     2.  Click **OK**.
 
-6.  Click **WAN Miniport (PPTP)** and click **Configure**.  
-      
-    The Configure Device - WAN Miniport (IKEv2) dialog box opens.
+6.  Click **WAN Miniport (PPTP)** and click **Configure**.<p>The Configure Device - WAN Miniport (IKEv2) dialog box opens.
 
-    1.  In **Maximum ports**, type the number of ports to match the maximum
-        number of simultaneous VPN connections that you want to support.
+    1.  In **Maximum ports**, type the number of ports to match the maximum number of simultaneous VPN connections that you want to support.
 
     2.  Click **OK**.
 
-    3.  In **Maximum ports**, type the number of ports to match the maximum
-        number of simultaneous VPN connections that you want to support.
+    3.  In **Maximum ports**, type the number of ports to match the maximum number of simultaneous VPN connections that you want to support.
 
     4.  Click **OK**.
 
-7.  If prompted, click **Yes** to confirm restarting the server and click
-    **Close** to restart the server.
+7.  If prompted, click **Yes** to confirm restarting the server and click **Close** to restart the server.
 
-Next steps
-----------
+## Next steps
 
 Install and Configure the NPS Server

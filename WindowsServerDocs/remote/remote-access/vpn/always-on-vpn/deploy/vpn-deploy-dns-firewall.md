@@ -5,9 +5,10 @@ ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
 ms.assetid: d8cf3bae-45bf-4ffa-9205-290d555c59da
-manager: brianlic
+manager: elizapo
 ms.author: pashort
 author: shortpatti
+ms.date: 05/15/2018
 ---
 # Configure DNS and Firewall Settings
 
@@ -17,7 +18,7 @@ You can use this section to configure DNS and Firewall settings.
 
 ## Configure DNS name resolution
 
-When remote VPN clients connect, hey use the same DNS servers that your internal clients use, which allows them to resolve names in the same manner as the rest of your internal workstations. 
+When remote VPN clients connect, they use the same DNS servers that your internal clients use, which allows them to resolve names in the same manner as the rest of your internal workstations. 
 
 Because of this, you must ensure that the computer name that external clients use to connect to the VPN server matches the subject alternative name that is defined in the certificates you issue to the  VPN server.
 
@@ -69,6 +70,8 @@ If you are using the default RADIUS port configuration on the VPN Server and the
 - Ports UDP1812, UDP1813, UDP1645, and UDP1646
 
 If you are not using the default RADIUS ports in your NPS deployment, you must configure the firewall to allow RADIUS traffic on the ports that you are using.
+
+## Next steps
 
 For more information, see [Configure Firewalls for RADIUS Traffic](https://docs.microsoft.com/windows-server/networking/technologies/nps/nps-firewalls-configure).
 
