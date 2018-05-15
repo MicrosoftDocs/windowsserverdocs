@@ -20,24 +20,6 @@ ms.reviewer: jairoc
 
 With [Azure Active Directory (Azure AD) conditional access](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-conditional-access-azure-portal), you can fine-tune how authorized users access your resources. With Azure AD conditional access for virtual private network (VPN) connectivity, you can help protect your VPN connections.
 
-To configure conditional access for VPN connectivity, you must complete the following steps: 
-
-1.	[Install Remote Access as a RAS Gateway VPN Server](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-ras#install-remote-access-as-a-ras-gateway-vpn-server)
-2.	[Install Network Policy Service (NPS)](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-nps#install-network-policy-server)
-3.	[Configure Network Policy Service](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-nps#configure-network-policy-for-vpn-connections)
-4.	[Verify that the Standard VPN works](#verify-it-works) 
-5.	[Create a Custom Server Authentication Template that Supports IKEv2](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-server-infrastructure#create-the-vpn-server-authentication-template)
-5.	[Request a Server Authentication Certificate for IKEv2](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-server-infrastructure#enroll-and-validate-the-server-certificates)
-7.	[Configure Remote Access as a VPN Server](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-ras#configure-remote-access-as-a-vpn-server)
-8.	[Remove Weak Authentication Methods](#remove-weak-auth-methods)
-9.	[Configure EAP-TLS to Ignore Certificate Revocation List (CRL) Checking](#config-eap-tls-crl)
-10.	[Create Root Certificates for VPN Authentication with Azure AD](#create-root-ca-for-vpn-auth)
-11.	[Configure your Conditional Access Policy](#config-ca-policy)
-12.	[Deploy Conditional Access Root Certificates to On-Premises AD](#deploy-ca-root-certs-on-prem) 
-13.	[Create OMA-DM based VPNv2 Profiles to Windows 10 Devices](#create-oma-dm-based-vpnv2)
-14. [Configure VPNv2 Profiles on your Clients](#config-vpnv2-profiles-on-client)
-
-
 
 ## Before you begin
 
