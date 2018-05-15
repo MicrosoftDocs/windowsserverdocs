@@ -211,4 +211,4 @@ clients.
 
 ## Next steps
 
-Install and Configure the NPS Server
+[Install and Configure the NPS Server](vpn-deploy-nps.md)
