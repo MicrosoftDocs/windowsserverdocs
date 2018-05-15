@@ -914,4 +914,5 @@ To test the configuration policy, sign in to a Windows 10 client computer as th
 
 After synchronization, you should see the VPN profile available on the computer.
 
+## Next steps
 For the next section in this guide, see [Remote Access Always On VPN Advanced Features](always-on-vpn-adv-options.md).

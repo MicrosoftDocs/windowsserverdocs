@@ -65,8 +65,10 @@ In this step, you configure the Windows 10 client computers to communicate with
 
 ## [Step 6: Remote Access Always On VPN advanced features](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-adv-options)
 
+Beyond the deployment scenario provided in this guide, you can add other advanced VPN features to improve the security and availability of your VPN connection. For example, such components can help ensure that the connecting client is healthy before allowing a connection.
 
-## Step 7: Configure EAP-TLS to ingore Certificate Revocation List (CRL) checking
+
+## Step 7: Configure EAP-TLS to ignore Certificate Revocation List (CRL) checking
 
 >[!IMPORTANT]
 >Failure to implement this registry change will cause IKEv2 connections using cloud certificates with PEAP to fail, but IKEv2 connections using Client Auth certificates issued from the on-premises CA will work.
@@ -340,8 +342,7 @@ If the VPN profile does not show up on the client device, under Settings\\Networ
 6.  Click **Sync** and verify the VPN profile appears under Settings\\Network & Internet\\VPN.
 
 
-
-## <a name="config-vpnv2-profiles-on-client"></a>Step 14: Configure VPNv2 Profiles on your Clients 
+## <a name="config-vpnv2-profiles-on-client"></a>Step 12: Configure VPNv2 Profiles on your Clients 
 
 In this step, you configure your VPN client connectivity profile as outlined in [VPN and conditional access](https://docs.microsoft.com/windows/access-protection/vpn/vpn-conditional-access).
 
