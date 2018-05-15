@@ -23,31 +23,31 @@ This sub-topic of [Performance history for Storage Spaces Direct](performance-hi
 
 These series are collected for every eligible server:
 
-| Series                    | Unit    |
-|---------------------------|---------|
-| `node.cpu.usage`          | percent |
-| `node.cpu.usage.guest`    | percent |
-| `node.cpu.usage.host`     | percent |
-| `node.memory.total`       | bytes   |
-| `node.memory.available`   | bytes   |
-| `node.memory.usage`       | bytes   |
-| `node.memory.usage.guest` | bytes   |
-| `node.memory.usage.host`  | bytes   |
+| Series                           | Unit    |
+|----------------------------------|---------|
+| `clusternode.cpu.usage`          | percent |
+| `clusternode.cpu.usage.guest`    | percent |
+| `clusternode.cpu.usage.host`     | percent |
+| `clusternode.memory.total`       | bytes   |
+| `clusternode.memory.available`   | bytes   |
+| `clusternode.memory.usage`       | bytes   |
+| `clusternode.memory.usage.guest` | bytes   |
+| `clusternode.memory.usage.host`  | bytes   |
 
 In addition, drive series such as `physicaldisk.size.total` are aggregated for all eligible drives attached to the server, and network adapter series such as `networkadapter.bytes.total` are aggregated for all eligible network adapters attached to the server.
 
 ## How to interpret
 
-| Series                    | How to interpret                                                      |
-|---------------------------|-----------------------------------------------------------------------|
-| `node.cpu.usage`          | Percentage of processor time that is not idle.                        |
-| `node.cpu.usage.guest`    | Percentage of processor time used for guest (virtual machine) demand. |
-| `node.cpu.usage.host`     | Percentage of processor time used for host demand.                    |
-| `node.memory.total`       | The total physical memory of the server.                              |
-| `node.memory.available`   | The available memory of the server.                                   |
-| `node.memory.usage`       | The allocated (not available) memory of the server.                   |
-| `node.memory.usage.guest` | The memory allocated to guest (virtual machine) demand.               |
-| `node.memory.usage.host`  | The memory allocated to host demand.                                  |
+| Series                           | How to interpret                                                      |
+|----------------------------------|-----------------------------------------------------------------------|
+| `clusternode.cpu.usage`          | Percentage of processor time that is not idle.                        |
+| `clusternode.cpu.usage.guest`    | Percentage of processor time used for guest (virtual machine) demand. |
+| `clusternode.cpu.usage.host`     | Percentage of processor time used for host demand.                    |
+| `clusternode.memory.total`       | The total physical memory of the server.                              |
+| `clusternode.memory.available`   | The available memory of the server.                                   |
+| `clusternode.memory.usage`       | The allocated (not available) memory of the server.                   |
+| `clusternode.memory.usage.guest` | The memory allocated to guest (virtual machine) demand.               |
+| `clusternode.memory.usage.host`  | The memory allocated to host demand.                                  |
 
 ## Where they come from
 
@@ -55,30 +55,30 @@ The `cpu.*` series are collected from different performance counters depending o
 
 If Hyper-V is enabled:
 
-| Series                    | Source counter |
-|---------------------------|----------------|
-| `node.cpu.usage`          | `Hyper-V Hypervisor Logical Processor` > `_Total` > `% Total Run Time`      |
-| `node.cpu.usage.guest`    | `Hyper-V Hypervisor Virtual Processor` > `_Total` > `% Total Run Time`      |
-| `node.cpu.usage.host`     | `Hyper-V Hypervisor Root Virtual Processor` > `_Total` > `% Total Run Time` |
+| Series                           | Source counter |
+|----------------------------------|----------------|
+| `clusternode.cpu.usage`          | `Hyper-V Hypervisor Logical Processor` > `_Total` > `% Total Run Time`      |
+| `clusternode.cpu.usage.guest`    | `Hyper-V Hypervisor Virtual Processor` > `_Total` > `% Total Run Time`      |
+| `clusternode.cpu.usage.host`     | `Hyper-V Hypervisor Root Virtual Processor` > `_Total` > `% Total Run Time` |
 
 Using the `% Total Run Time` counters ensures that performance history attributes all usage.
 
 If Hyper-V is NOT enabled:
 
-| Series                    | Source counter |
-|---------------------------|----------------|
-| `node.cpu.usage`          | `Processor` > `_Total` > `% Processor Time` |
-| `node.cpu.usage.guest`    | *zero* |
-| `node.cpu.usage.host`     | *same as total usage* |
+| Series                           | Source counter |
+|----------------------------------|----------------|
+| `clusternode.cpu.usage`          | `Processor` > `_Total` > `% Processor Time` |
+| `clusternode.cpu.usage.guest`    | *zero* |
+| `clusternode.cpu.usage.host`     | *same as total usage* |
 
-Notwithstanding imperfect synchronization, `node.cpu.usage` is always `node.cpu.usage.host` plus `node.cpu.usage.guest`.
+Notwithstanding imperfect synchronization, `clusternode.cpu.usage` is always `clusternode.cpu.usage.host` plus `clusternode.cpu.usage.guest`.
 
-With the same caveat, `node.cpu.usage.guest` is always the sum of `virtualmachine.cpu.usage` for all virtual machines on the host server.
+With the same caveat, `clusternode.cpu.usage.guest` is always the sum of `vm.cpu.usage` for all virtual machines on the host server.
 
 The `memory.*` series are (COMING SOON).
 
   > [!NOTE]
-  > Counters are measured over the entire interval, not sampled. For example, if the server is idle for 9 seconds but spikes to 100% CPU in the 10th second, its `node.cpu.usage` will be recorded as 10% on average during this 10-second interval. This ensures its performance history captures all activity and is robust to noise.
+  > Counters are measured over the entire interval, not sampled. For example, if the server is idle for 9 seconds but spikes to 100% CPU in the 10th second, its `clusternode.cpu.usage` will be recorded as 10% on average during this 10-second interval. This ensures its performance history captures all activity and is robust to noise.
 
 ## Usage in PowerShell
 
