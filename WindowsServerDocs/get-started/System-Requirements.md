@@ -122,3 +122,8 @@ The following items are not strictly required, but are necessary for certain fea
 ## Installation of Nano Server  
 For detailed steps to install Windows Server 2016 as a Nano Server, see [Install Nano Server](Getting-Started-with-Nano-Server.md).
 
+## Additional Resources
+- [Windows Processor Requirements](https://docs.microsoft.com/en-us/windows-hardware/design/minimum/windows-processor-requirements)
+- [Comparison of Standard and Datacenter editions of Windows Server 2016](https://docs.microsoft.com/en-us/windows-server/get-started/2016-edition-comparison)
+- [Windows 10 Systems Requirements ](https://www.microsoft.com/en-in/windows/windows-10-specifications#system-specifications)
+- [Download the Windows Server 2016 licensing datasheet](http://download.microsoft.com/download/7/2/9/7290EA05-DC56-4BED-9400-138C5701F174/WS2016LicensingDatasheet.pdf)
