@@ -23,7 +23,7 @@ In Windows Server 2019, [Storage Spaces Direct](storage-spaces-direct-overview.m
 5. When will this volume run out of free space?
 6. In the past month, which VMs used the most memory?
 
-The `Get-ClusterPerf` cmdlet was built for scripting. It accepts input from cmdlets like `Get-VM` or `Get-PhysicalDisk` by the pipeline to handle association, and you can pipe its output into utility cmdlets like `Sort-Object`, `Where-Object`, and `Measure-Object` to quickly compose powerful queries.
+The `Get-ClusterPerf` cmdlet is built for scripting. It accepts input from cmdlets like `Get-VM` or `Get-PhysicalDisk` by the pipeline to handle association, and you can pipe its output into utility cmdlets like `Sort-Object`, `Where-Object`, and `Measure-Object` to quickly compose powerful queries.
 
 **This topic provides and explains 6 sample scripts that answer the 6 questions above.** They present patterns you can apply to find peaks, find averages, plot trend lines, run outlier detection, and more, across a variety of data and timeframes. They are provided as free starter code for you to copy, extend, and reuse.
 
