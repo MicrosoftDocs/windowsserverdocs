@@ -10,11 +10,11 @@ Keywords: Storage Spaces Direct
 ms.localizationpriority: medium
 ---
 
-# Use Storage Spaces Direct performance history and PowerShell to answer key monitoring questions
+# Scripting with PowerShell and Storage Spaces Direct performance history
 
-> Applies To: Windows Server Insider Preview build 
+> Applies To: Windows Server Insider Preview build 17666 and later
 
-In Windows Server 2019, [Storage Spaces Direct](storage-spaces-direct-overview.md) records and stores extensive [performance history](performance-history.md) for virtual machines, servers, drives, volumes, network adapters, and more. By design, performance history is easy to query and process in PowerShell, so you are empowered to ask and answer questions like:
+In Windows Server 2019, [Storage Spaces Direct](storage-spaces-direct-overview.md) records and stores extensive [performance history](performance-history.md) for virtual machines, servers, drives, volumes, network adapters, and more. Performance history is easy to query and process in PowerShell so you can quickly go from *raw data* to *actual answers* to questions like:
 
 1. Were there any CPU spikes last week?
 2. Is any physical disk exhibiting abnormal latency?
@@ -23,7 +23,7 @@ In Windows Server 2019, [Storage Spaces Direct](storage-spaces-direct-overview.m
 5. When will this volume run out of free space?
 6. In the past month, which VMs used the most memory?
 
-The `Get-ClusterPerf` cmdlet is deliberately scripting-friendly. It accepts objects from cmdlets like `Get-VM` or `Get-PhysicalDisk` by the pipeline to handle association, and you can pipe its output into utility cmdlets like `Sort-Object`, `Where-Object`, and `Measure-Object` to quickly build powerful queries.
+The `Get-ClusterPerf` cmdlet was built for scripting. It accepts input from cmdlets like `Get-VM` or `Get-PhysicalDisk` by the pipeline to handle association, and you can pipe its output into utility cmdlets like `Sort-Object`, `Where-Object`, and `Measure-Object` to quickly compose powerful queries.
 
 **This topic provides and explains 6 sample scripts that answer the 6 questions above.** They present patterns you can apply to find peaks, find averages, plot trend lines, run outlier detection, and more, across a variety of data and timeframes. They are provided as free starter code for you to copy, extend, and reuse.
 
@@ -42,7 +42,7 @@ In the screenshot below, we see that *Server-02* had an unexplained spike last w
 
 ### How it works
 
-The output from `Get-ClusterPerf` pipes nicely into the built-in `Measure-Object` cmdlet, just specify the `Value` property. With its `-Maximum`, `-Minimum`, and `-Average` flags, `Measure-Object` gives us the first three columns almost for free. To do the quartile analysis, we can pipe to `Where-Object` and count how many values were `-Gt` (greater than) 25, 50, or 75. The last step is to beautify with `Format-Hours` and `Format-Percent` helper functions – certainly optional.
+The output from `Get-ClusterPerf` pipes nicely into the built-in `Measure-Object` cmdlet, we just specify the `Value` property. With its `-Maximum`, `-Minimum`, and `-Average` flags, `Measure-Object` gives us the first three columns almost for free. To do the quartile analysis, we can pipe to `Where-Object` and count how many values were `-Gt` (greater than) 25, 50, or 75. The last step is to beautify with `Format-Hours` and `Format-Percent` helper functions – certainly optional.
 
 ### Script
 
@@ -236,15 +236,16 @@ $Output = Invoke-Command (Get-ClusterNode) {
         $IopsRead  = $_ | Get-ClusterPerf -VMSeriesName "VHD.Iops.Read"
         $IopsWrite = $_ | Get-ClusterPerf -VMSeriesName "VHD.Iops.Write"
         [PsCustomObject]@{
-            "VM"        = $_.Name
+            "VM" = $_.Name
             "IopsTotal" = Format-Iops $IopsTotal
             "IopsRead"  = Format-Iops $IopsRead
             "IopsWrite" = Format-Iops $IopsWrite
+            "RawIopsTotal" = $IopsTotal # For sorting...
         }
     }
 }
 
-$Output | Sort-Object TotalIOPS | Select-Object -First 10 | Format-Table PsComputerName, VM, IopsTotal, IopsRead, IopsWrite
+$Output | Sort-Object RawIopsTotal | Select-Object -First 10 | Format-Table PsComputerName, VM, IopsTotal, IopsRead, IopsWrite
 ```
 
 ## Sample 4: As they say, "25-gig is the new 10-gig"
@@ -283,21 +284,24 @@ $Output = Invoke-Command (Get-ClusterNode) {
 
     Get-NetAdapter | ForEach-Object {
 
-        $Data = $_ | Get-ClusterPerf -NetAdapterSeriesName "NetAdapter.Bytes.Total" -TimeFrame "LastDay"
+        $Inbound = $_ | Get-ClusterPerf -NetAdapterSeriesName "NetAdapter.Bytes.Inbound" -TimeFrame "LastDay"
+        $Outbound = $_ | Get-ClusterPerf -NetAdapterSeriesName "NetAdapter.Bytes.Outbound" -TimeFrame "LastDay"
 
-        If ($Data) {
+        If ($Inbound -Or $Outbound) {
 
             $InterfaceDescription = $_.InterfaceDescription
             $LinkSpeed = $_.LinkSpeed
     
-            $Measure = $Data | Measure-Object -Property Value -Average -Maximum
-            $Avg = $Measure.Average * 8 # Multiply to bits/sec
-            $Max = $Measure.Maximum * 8 # Multiply to bits/sec
+            $MeasureInbound = $Inbound | Measure-Object -Property Value -Maximum
+            $MaxInbound = $MeasureInbound.Maximum * 8 # Multiply to bits/sec
+    
+            $MeasureOutbound = $Outbound | Measure-Object -Property Value -Maximum
+            $MaxOutbound = $MeasureOutbound.Maximum * 8 # Multiply to bits/sec
     
             $Saturated = $False
     
             # Speed property is Int, e.g. 10000000000
-            If ($Max -Gt (0.90 * $_.Speed)) {
+            If (($MaxInbound -Gt (0.90 * $_.Speed)) -Or ($MaxOutbound -Gt (0.90 * $_.Speed))) {
                 $Saturated = $True
                 Write-Warning "In the last day, adapter '$InterfaceDescription' on server '$Env:ComputerName' exceeded 90% of its '$LinkSpeed' theoretical maximum bandwidth. In general, network saturation leads to higher latency and diminished reliability. Not good!"
             }
@@ -305,15 +309,15 @@ $Output = Invoke-Command (Get-ClusterNode) {
             [PsCustomObject]@{
                 "NetAdapter"  = $InterfaceDescription
                 "LinkSpeed"   = $LinkSpeed
-                "AvgObserved" = Format-BitsPerSec $Avg
-                "MaxObserved" = Format-BitsPerSec $Max
+                "MaxInbound"  = Format-BitsPerSec $MaxInbound
+                "MaxOutbound" = Format-BitsPerSec $MaxOutbound
                 "Saturated"   = $Saturated
             }
         }
     }
 }
 
-$Output | Sort-Object PsComputerName, InterfaceDescription | Format-Table PsComputerName, NetAdapter, LinkSpeed, AvgObserved, MaxObserved, Saturated
+$Output | Sort-Object PsComputerName, InterfaceDescription | Format-Table PsComputerName, NetAdapter, LinkSpeed, MaxInbound, MaxOutbound, Saturated
 ```
 
 ## Sample 5: Make storage trendy again!
@@ -468,12 +472,13 @@ $Output = Invoke-Command (Get-ClusterNode) {
             [PsCustomObject]@{
                 "VM" = $_.Name
                 "AvgMemoryUsage" = Format-Bytes $AvgMemoryUsage
+                "RawAvgMemoryUsage" = $AvgMemoryUsage # For sorting...
             }
         }
     }
 }
 
-$Output | Sort-Object AvgMemoryUsage | Select-Object -First 10 | Format-Table PsComputerName, VM, AvgMemoryUsage
+$Output | Sort-Object RawAvgMemoryUsage | Select-Object -First 10 | Format-Table PsComputerName, VM, AvgMemoryUsage
 ```
 
 That's it! Hopefully these samples inspire you and help you get started. With Storage Spaces Direct performance history and the powerful, scripting-friendly `Get-ClusterPerf` cmdlet, you are empowered to ask – and answer! – complex questions as you manage and monitor your Windows Server 2019 infrastructure.
