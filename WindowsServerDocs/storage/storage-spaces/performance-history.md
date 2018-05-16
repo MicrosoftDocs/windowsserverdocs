@@ -26,21 +26,23 @@ To see your cluster's performance history graphically, use [Windows Admin Center
 
 ## What's collected
 
-Performance history is collected for 7 types of objects: drives, network adapters, servers, virtual machines, virtual hard disk files, volumes, and the overall cluster.
+Performance history is collected for 7 types of objects:
 
 ![Types of objects](media/performance-history/types-of-object.png)
 
-Each type of object has many series – for example, `ClusterNode.Cpu.Usage` is collected for each server. For the complete list of series for each object type, including their units, how to interpret them, and where they come from, refer to the detailed sub-topics linked below:
+Each type of object has many series – for example, `ClusterNode.Cpu.Usage` is collected for each server.
 
-| Object             | Series                                                                                  |
-|--------------------|-----------------------------------------------------------------------------------------|
-| Drives             | [Performance history for drives](performance-history-for-drives.md)                     |
-| Network adapters   | [Performance history for network adapters](performance-history-for-network-adapters.md) |
-| Servers            | [Performance history for servers](performance-history-for-servers.md)                   |
-| Virtual hard disks | [Performance history for virtual hard disks](performance-history-for-vhds.md)           |
-| Virtual machines   | [Performance history for virtual machines](performance-history-for-vms.md)              |
-| Volumes            | [Performance history for volumes](performance-history-for-volumes.md)                   |
-| Clusters           | [Performance history for clusters](performance-history-for-clusters.md)                 |
+For the complete list of series for each object type, including their units, how to interpret them, and where they come from, refer to the detailed sub-topics linked below:
+
+| Object             | Series                                                                               |
+|--------------------|--------------------------------------------------------------------------------------|
+| Drives             | [What's collected for drives](performance-history-for-drives.md)                     |
+| Network adapters   | [What's collected for network adapters](performance-history-for-network-adapters.md) |
+| Servers            | [What's collected for servers](performance-history-for-servers.md)                   |
+| Virtual hard disks | [What's collected for virtual hard disks](performance-history-for-vhds.md)           |
+| Virtual machines   | [What's collected for virtual machines](performance-history-for-vms.md)              |
+| Volumes            | [What's collected for volumes](performance-history-for-volumes.md)                   |
+| Clusters           | [What's collected for clusters](performance-history-for-clusters.md)                 |
 
 Many series are aggregated across peer objects to their parent: for example, `NetAdapter.Bytes.Inbound` is collected for each network adapter separately and aggregated to the overall server; likewise `ClusterNode.Cpu.Usage` is aggregated to the overall cluster; and so on.
 
@@ -103,15 +105,15 @@ If you don't specify, performance history for the overall cluster is returned.
 
 You can specify the series you want with these parameters:
 
-| Parameter                 | Values                                                                                  |
-|---------------------------|-----------------------------------------------------------------------------------------|
-| `-PhysicalDiskSeriesName` | [Performance history for drives](performance-history-for-drives.md)                     |
-| `-NetAdapterSeriesName`   | [Performance history for network adapters](performance-history-for-network-adapters.md) |
-| `-ClusterNodeSeriesName`  | [Performance history for servers](performance-history-for-servers.md)                   |
-| `-VHDSeriesName`          | [Performance history for virtual hard disks](performance-history-for-vhds.md)           |
-| `-VMSeriesName`           | [Performance history for virtual machines](performance-history-for-vms.md)              |
-| `-VolumeSeriesName`       | [Performance history for volumes](performance-history-for-volumes.md)                   |
-| `-ClusterSeriesName`      | [Performance history for clusters](performance-history-for-clusters.md)                 |
+| Parameter                 | Example                      | List                                                                                 |
+|---------------------------|------------------------------|--------------------------------------------------------------------------------------|
+| `-PhysicalDiskSeriesName` | `PhysicalDisk.Latency.Write` | [What's collected for drives](performance-history-for-drives.md)                     |
+| `-NetAdapterSeriesName`   | `NetAdapter.Bytes.Outbound`  | [What's collected for network adapters](performance-history-for-network-adapters.md) |
+| `-ClusterNodeSeriesName`  | `ClusterNode.Cpu.Usage`      | [What's collected for servers](performance-history-for-servers.md)                   |
+| `-VHDSeriesName`          | `Vhd.Size.Current`           | [What's collected for virtual hard disks](performance-history-for-vhds.md)           |
+| `-VMSeriesName`           | `Vm.Memory.Assigned`         | [What's collected for virtual machines](performance-history-for-vms.md)              |
+| `-VolumeSeriesName`       | `Volume.Iops.Read`           | [What's collected for volumes](performance-history-for-volumes.md)                   |
+| `-ClusterSeriesName`      | `PhysicalDisk.Size.Total`    | [What's collected for clusters](performance-history-for-clusters.md)                 |
 
    > [!TIP]
    > Use tab-completion to discover available series.
