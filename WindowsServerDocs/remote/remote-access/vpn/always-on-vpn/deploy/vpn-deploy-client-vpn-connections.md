@@ -16,9 +16,7 @@ author: shortpatti
 
 After setting up the server infrastructure, you must configure the Windows 10 client computers to communicate with that infrastructure with a VPN connection. 
 
-You can use several technologies to configure Windows 10 VPN clients, including Windows PowerShell, System Center Configuration Manager, and Intune. 
-
-All three require an XML VPN profile to configure the appropriate VPN settings. 
+You can use several technologies to configure Windows 10 VPN clients, including Windows PowerShell, System Center Configuration Manager, and Intune.  All three require an XML VPN profile to configure the appropriate VPN settings. 
 
 The following section describes ProfileXML options, schema, and configuration. 
 
@@ -823,78 +821,37 @@ You should see the new VPN profile shortly.
 
 ## Configure the VPN client by using Intune
 
-To use Intune to deploy Windows 10 Remote Access Always On VPN profiles, you can configure the ProfileXML CSP node by using the VPN profile you created in the section [Create the ProfileXML configuration files](#bkmk_ProfileXML).
-
-In this example, you use the profile stored in VPN_Profile.xml.
+To use Intune to deploy Windows 10 Remote Access Always On VPN profiles, you can configure the ProfileXML CSP node by using the VPN profile you created in the section [Create the ProfileXML configuration files](#bkmk_ProfileXML), or you can use the base EAP XML sample provided below.
 
 >[!NOTE]
->
->- Client computers and users appear in Intune after you have configured Azure Active Directory Connect and enrolled the devices in Intune. This guide doesn’t explain how to enroll devices in Intune. For details on how to manage devices with Intune, see [Enroll your Windows 10 device in Intune](https://docs.microsoft.com/intune-user-help/enroll-your-w10-device-access-work-or-school).
->- This guide describes how to deliver certificates to domain-joined devices by using autoenrollment only. For information about using Intune to deliver certificates to devices, see [How to configure certificates in Microsoft Intune](https://docs.microsoft.com/intune/certificates-configure).
+>Intune now uses Azure AD groups. If Azure AD Connect synced the VPN Users group from on-premises to Azure AD, then there is no need for this step.
 
-### Create a VPN Users group for managed users or devices
-
-To deploy a Windows 10 Remote Access Always On VPN profile, start by creating a group that contains the managed users or devices that should receive the VPN profile.
-
-**Create a group that contains the managed users or devices**
-
-1.  Sign in to <https://manage.microsoft.com> as an Intune administrator.
-
-2.  In the Intune Admin Console, click **GROUPS**, and click **Groups**.
-
-3.  Click **Access your groups in the new Azure portal by clicking here**. You now manage Intune groups in the Azure Portal. For this reason, you’ll be redirected to the Azure Portal when you click the **Create Groups** link.
-
-4.  In the Azure Portal, near the top of the page, click **New group**.
-
-5.  In **Name**, type **VPN Users**.
-
-6.  In **Membership type**, click **Assigned**. In this example, you’re assigning individual users to the **VPN Users** group. Alternatively, you could create a dynamic rule to include users based on a query result.
-
-7.  Click **Members**, and complete the following steps:
-	a.	In **Select**, begin typing the name of a user you want to add to the group.
-	b.	In the list, select the check box next to that user’s full name.
-	c.	Repeat the previous two steps for each person you want to add to the group.
-	d.	Click **Select**.
-
-2.  Click **Create** to create the group.
-
-3.  Close the Azure Portal.
-
-### Create the Always On VPN configuration policy
-
-After creating the VPN Users group, create the VPN configuration policy with which to configure the Windows 10 client computers for the users you added to the group. You will copy the contents of the VPN_Profile.xml file that you created in the section “Create the ProfileXML configuration files” into the policy’s value.
+Once users are assigned to the VPN Users group, create the VPN device configuration policy with which to configure the Windows 10 client computers for the users you added to the group. You can copy the contents of the VPN_Profile.xml file that you created in the section “Create the ProfileXML configuration files” into the policy’s EAP Xml window.  Since the Intune template provides VPN parameters, the only portion of the VPN_Profile.xml that needs to be copied starts with \<EapHostConfig> xmlns and ends with \</EapHostConfig>.
 
 **To create the Always On VPN configuration policy**
 
-1.  In the Intune Admin Console, click **POLICY**, and click **Configuration Policies**.
+1.  In the Intune Admin Console, click **Device configuration**, and click **Profiles**.
 
-2.  In the Policies workspace, click **Add** to start the Create a New Policy Wizard.
+2. Click **+Create profile** to start the Create profile Wizard.
 
-3.  On the Select a template for the new policy page, under **Windows**, click **Custom Configuration (Windows 10 Desktop and Mobile and later)**, and then click **Create Policy**. You will notice a configuration policy called VPN Profile (Windows 10 Desktop and Mobile and later). This configuration policy doesn’t provide the ability to configure the Always On setting. To configure Always On triggering, you must configure the ProfileXML node of the VPNv2 CSP by using the OMA-URI in the Custom Configuration (Windows 10 Desktop and Mobile and later) configuration policy.
+3. Enter a **Name** for the VPN profile.
 
-4.  In **Name**, type **Contoso Always On VPN Profile**.
+4. Under **Platform**, select **Windows 10 or later**, and then choose **VPN** from the Profile type drop-down.
 
-5.  In the **OMA-URI Settings** section, click **Add** to open the Add or edit OMA-URI Setting dialog box, and complete the following steps:
+5. Click the **Base VPN** tab and enter the name of the VPN connection as it appears on the client to the right of Connection name.
 
-    a.  In **Setting name**, type **Windows 10 Always On VPN**.
+6. Enter a **Description** of the VPN server, then enter the **IP Address or FQDN** of the VPN server. <p>If this is the default VPN server, select True and then click Add.
 
-    b.  In **Setting description**, type **ProfileXML Settings for Always On VPN**.
+7. Under **Connection type**, select **IKEv2** from the drop-down to expose additional options.
 
-    c.  In **Data type**, click **String (XML)**.
+8. Select **Enable** to the right of **Always On** and paste the following string in the EAP Xml window:
 
-    d.  In **OMA-URI**, type **./User/Vendor/MSFT/VPNv2/ContosoVPN/ProfileXML**. **ContosoVPN** is the profile name and is visible to the user in **Settings**. Change this name to the profile name you want users to see. If the name contains spaces, escape each space with %20. (e.g., Contoso VPN would be Contoso%20VPN).
-
-	e.  Click **Browse**, and open VPN_Profile.xml, which you created in the section [Create the ProfileXML configuration files](#bkmk_ProfileXML). The following illustration depicts the completed **OMA-URI** setting for Contoso.
-
-    ![Completed OMA-URI setting](../../../../media/Always-On-Vpn/Vpn-Settings.jpg)
-
-6.  Click **OK** to add the setting to the configuration policy.
-
-7.  Click **Save Policy** to save the configuration policy.
-
-8.  On the Deploy Policy dialog box, click **Yes**.
-
-9.  Click the **VPN Users** group, click **Add**, and click **OK**.
+    ```
+    <EapHostConfig xmlns="http://www.microsoft.com/provisioning/EapHostConfig"><EapMethod><Type xmlns="http://www.microsoft.com/provisioning/EapCommon">25</Type><VendorId xmlns="http://www.microsoft.com/provisioning/EapCommon">0</VendorId><VendorType xmlns="http://www.microsoft.com/provisioning/EapCommon">0</VendorType><AuthorId xmlns="http://www.microsoft.com/provisioning/EapCommon">0</AuthorId></EapMethod><Config xmlns="http://www.microsoft.com/provisioning/EapHostConfig"><Eap xmlns="http://www.microsoft.com/provisioning/BaseEapConnectionPropertiesV1"><Type>25</Type><EapType xmlns="http://www.microsoft.com/provisioning/MsPeapConnectionPropertiesV1"><ServerValidation><DisableUserPromptForServerValidation>false</DisableUserPromptForServerValidation><ServerNames></ServerNames></ServerValidation><FastReconnect>true</FastReconnect><InnerEapOptional>false</InnerEapOptional><Eap xmlns="http://www.microsoft.com/provisioning/BaseEapConnectionPropertiesV1"><Type>13</Type><EapType xmlns="http://www.microsoft.com/provisioning/EapTlsConnectionPropertiesV1"><CredentialsSource><CertificateStore><SimpleCertSelection>true</SimpleCertSelection></CertificateStore></CredentialsSource><ServerValidation><DisableUserPromptForServerValidation>true</DisableUserPromptForServerValidation><ServerNames></ServerNames><TrustedRootCA>5a 89 fe cb 5b 49 a7 0b 1a 52 63 b7 35 ee d7 1c c2 68 be 4b </TrustedRootCA></ServerValidation><DifferentUsername>false</DifferentUsername><PerformServerValidation xmlns="http://www.microsoft.com/provisioning/EapTlsConnectionPropertiesV2">true</PerformServerValidation><AcceptServerName xmlns="http://www.microsoft.com/provisioning/EapTlsConnectionPropertiesV2">true</AcceptServerName></EapType></Eap><EnableQuarantineChecks>false</EnableQuarantineChecks><RequireCryptoBinding>false</RequireCryptoBinding><PeapExtensions><PerformServerValidation xmlns="http://www.microsoft.com/provisioning/MsPeapConnectionPropertiesV2">true</PerformServerValidation><AcceptServerName xmlns="http://www.microsoft.com/provisioning/MsPeapConnectionPropertiesV2">true</AcceptServerName></PeapExtensions></EapType></Eap></Config></EapHostConfig>
+    ```
+9. Replace the root certificate authority in the sample with the certificate of your on-premises root certificate authority.
+  
+    \</ServerNames>\<TrustedRootCA>5a 89 fe cb 5b 49 a7 0b 1a 52 63 b7 35 ee d7 1c c2 68 be 4b \</TrustedRootCA>\</ServerValidation>
 
 ### Sync with Intune
 
@@ -919,6 +876,6 @@ After synchronization, you should see the VPN profile available on the computer.
 |If you want to...  |Then see...  |
 |---------|---------|
 |Learn more about the advanced features     |[Remote Access Always On VPN Advanced Features](always-on-vpn-adv-options.md)         |
-|Configure EAP-TLS to ignore  |         |
+|Continue with the VPN deployment process   |[Configure EAP-TLS to ignore Certificate Revocation List (CRL) checking](../../vpn-config-eap-tls-to-ignore-crl-checking.md)    |
 
 
