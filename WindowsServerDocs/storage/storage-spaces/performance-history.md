@@ -68,7 +68,7 @@ Here are the available timeframes:
 
 ## Usage in PowerShell
 
-Use the `Get-ClusterPerformanceHistory` cmdlet to query and process performance history in PowerShell. See the published [sample scripts](performance-history-scripting.md) for starter code to find peak values, calculate averages, plot trend lines, run outlier detection, and more.
+Use the `Get-ClusterPerformanceHistory` cmdlet to query and process performance history in PowerShell.
 
 ```PowerShell
 Get-ClusterPerformanceHistory
@@ -84,6 +84,8 @@ Get the CPU usage of virtual machine *MyVM* for the last hour:
 ```PowerShell
 Get-VM "MyVM" | Get-ClusterPerf -VMSeriesName "VM.Cpu.Usage" -TimeFrame LastHour
 ```
+
+For more advanced examples, see the published [sample scripts](performance-history-scripting.md) that provide starter code to find peak values, calculate averages, plot trend lines, run outlier detection, and more.
 
 ### Specify the object
 
