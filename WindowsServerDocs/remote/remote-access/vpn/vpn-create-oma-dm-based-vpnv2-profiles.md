@@ -18,11 +18,12 @@ manager: elizapo
 ms.reviewer: jairoc
 ---
 
-
-
-# Create OMA-DM based VPNv2 Profiles to Windows 10 devices
+# Step 6.5. Create OMA-DM based VPNv2 Profiles to Windows 10 devices
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
+
+&#171; Previous: [Step 6.4. Deploy conditional access root certificates to on-premises AD](vpn-deploy-cond-access-root-cert-to-on-premise-ad.md)<br>
+&#187; Next: [Step 6.6. Configure VPNv2 Profiles](https://docs.microsoft.com/windows/access-protection/vpn/vpn-conditional-access)
 
 You can use one of two methods to create OMA-DM based VPNv2 profiles. The first method is a managed deployment using Intune to deploy a VPN Device Configuration policy. The second method can be used for unmanaged environments using a PowerShell script that leverages the Common Information Model, which creates a WMI session in the user’s context. From this context, it then creates a new instance of the MDM_VPNv2_01 WMI class. 
 
@@ -111,4 +112,9 @@ If the VPN profile does not show up on the client device, under Settings\\Networ
 6.  Click **Sync** and verify the VPN profile appears under Settings\\Network & Internet\\VPN.
 
 ## Next step
-[Configure VPNv2 Profiles on your Clients](https://docs.microsoft.com/windows/access-protection/vpn/vpn-conditional-access)
+[Step 6.6. Configure VPNv2 Profiles](https://docs.microsoft.com/windows/access-protection/vpn/vpn-conditional-access): The VPN client is now able to integrate with the cloud-based Conditional Access Platform to provide a device compliance option for remote clients. In this step, you configure the VPNv2 profiles with **\<DeviceCompliance> \<Enabled>true\</Enabled>**. 
+
+## Related topics
+- [VPNv2 CSP settings](https://docs.microsoft.com/en-us/windows/client-management/mdm/vpnv2-csp)
+- [Configure Windows 10 Client Always On VPN Connections](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-client-vpn-connections)
+- [Configure the VPN client by using Intune](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-client-vpn-connections#configure-the-vpn-client-by-using-intune)

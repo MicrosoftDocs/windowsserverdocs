@@ -13,7 +13,7 @@ author: shortpatti
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-[&#171; Previous: Remote Access Always On VPN Deployment Overview](always-on-vpn-deploy-overview.md)
+[&#171; Previous: Remote Access Always On VPN Deployment Overview](always-on-vpn-deploy-overview.md)<br>
 [&#187; Next: Remote Access Always On VPN Deployment](always-on-vpn-deploy-deployment.md)
 
 You can use the following steps to plan for your Always On VPN deployment.

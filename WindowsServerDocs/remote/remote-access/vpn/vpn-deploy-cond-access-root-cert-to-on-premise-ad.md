@@ -11,7 +11,7 @@ ms.workload: identity
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.topic: article
-ms.date: 05/15/2018
+ms.date: 05/18/2018
 ms.author: pashort
 author: shortpatti
 manager: elizapo
@@ -19,11 +19,12 @@ ms.reviewer: jairoc
 ---
 
 
-# Deploy Conditional Access root certificates to on-premise AD
+# Step 6.4. Deploy Conditional Access root certificates to on-premise AD
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-
+[&#171; Previous: Step 6.3. Configure the Conditional Access policy](vpn-config-conditional-access-policy.md)<br>
+[&#187; Next: Step 6.5. Create OMA-DM based VPNv2 Profiles to Windows 10 devices](vpn-create-oma-dm-based-vpnv2-profiles.md)
 
 1. On the **VPN connectivity** page, click **Download certificate**. 
    
@@ -65,5 +66,4 @@ ms.reviewer: jairoc
         -   Certificate Authorities Container
 
 ## Next step
-
-[Create OMA-DM based VPNv2 Profiles to Windows 10 devices](vpn-create-oma-dm-based-vpnv2-profiles.md)
+[Step 6.5. Create OMA-DM based VPNv2 Profiles to Windows 10 devices](vpn-create-oma-dm-based-vpnv2-profiles.md): In this step, you create OMA-DM VPNv2 profiles one of two ways. The first method is a managed deployment using Intune to deploy a VPN Device Configuration policy. The second method can be used for unmanaged environments using a PowerShell script that leverages the Common Information Model, which creates a WMI session in the user’s context. From this context, it then creates a new instance of the MDM_VPNv2_01 WMI class. 

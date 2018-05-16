@@ -11,7 +11,7 @@ ms.workload: identity
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.topic: article
-ms.date: 05/15/2018
+ms.date: 05/18/2018
 ms.author: pashort
 author: shortpatti
 manager: elizapo
@@ -19,9 +19,12 @@ ms.reviewer: jairoc
 ---
 
 
-# Configure the Conditional Access policy
+# Step 6.3. Configure the Conditional Access policy
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
+
+[&#171; Previous: Step 6.2. Create root certificates for VPN authentication with Azure AD](vpn-create-root-cert-for-vpn-auth-azure-ad.md)<br>
+[&#187; Next: Step 6.4. Deploy conditional access root certificates to on-premises AD](vpn-deploy-cond-access-root-cert-to-on-premise-ad.md)
 
 In this step, you configure the conditional access policy for VPN connectivity. 
 
@@ -92,4 +95,4 @@ After a root certificate has been created, the 'VPN connectivity' triggers the c
 
 ## Next step
 
-[Deploy Conditional Access root certificates to on-premise AD](vpn-deploy-cond-access-root-cert-to-on-premise-ad.md)
+[Step 6.4. Deploy conditional access root certificates to on-premises AD](vpn-deploy-cond-access-root-cert-to-on-premise-ad.md): In this step, you deploy a trusted root certificate for VPN authentication to your on-premises AD.

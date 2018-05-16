@@ -88,7 +88,20 @@ For more information about this and other triggering options, see [VPN auto-trig
 
 ### VPN conditional access
 
-Conditional access and device compliance can require managed devices to meet standards before they can connect to the VPN.
+Conditional access and device compliance can require managed devices to meet standards before they can connect to the VPN. 
+
+One of the advanced features for VPN conditional access allows you to restrict the VPN connections to only those where the client authentication certificate contains the ‘AAD Conditional Access’ OID of '1.3.6.1.4.1.311.87'. 
+
+To restrict the VPN connections, you need to:
+
+1.	On the NPS server, open the Network Policy Server snap-in. 
+2.	Expand Policies > Network Policies
+3.	Right-click the ‘Virtual Private Network (VPN) Connections' Network Policy and select Properties. 
+4.	Select the Settings tab.
+5.	Select the 'Vendor Specific' and click Add.
+6.	Select the 'Allowed-Certificate-OID' option and then click Add.
+7.	Paste the AAD Conditional Access OID of 1.3.6.1.4.1.311.87 as the attribute value, and then click OK, OK, Close, and Apply.<p>Now when VPN clients attempt to connect using any certificate other than the short-lived cloud certificate, the connection will fail.
+
 
 For more information about conditional access, see [VPN and conditional access](https://docs.microsoft.com/windows/access-protection/vpn/vpn-conditional-access).
 
