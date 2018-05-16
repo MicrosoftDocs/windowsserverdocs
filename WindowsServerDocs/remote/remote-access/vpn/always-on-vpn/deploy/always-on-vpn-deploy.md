@@ -14,12 +14,15 @@ author: shortpatti
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
+&#174; Previous:  
+Next: &#175;
+
 You can use this guide to deploy Always On Virtual Private Network \(VPN\) connections for remote employees by using Remote Access in Windows Server 2016 and Always On VPN profiles for Windows 10 client computers.
 
 >[!IMPORTANT]
 >This guide is designed for deploying Always On VPN with the Remote Access server role on an on\-premises organization network. Do not attempt to deploy Remote Access on a virtual machine \(VM\) in Microsoft Azure. Using Remote Access in Microsoft Azure is not supported, including both Remote Access VPN and DirectAccess. For more information, see [Microsoft server software support for Microsoft Azure virtual machines](https://support.microsoft.com/help/2721672/microsoft-server-software-support-for-microsoft-azure-virtual-machines).
 
-This guide contains the following sections.
+This guide contains the following:
 
 - [About this guide](#bkmk_about)
 
@@ -29,15 +32,15 @@ This guide contains the following sections.
 
 - [Technology overviews](#bkmk_technology)
 
-- [Remote Access Always On VPN Deployment Overview](always-on-vpn-deploy-overview.md)
+- [Always On VPN Deployment Overview](always-on-vpn-deploy-overview.md)
 
-- [Remote Access Always On VPN Deployment Planning](always-on-vpn-deploy-planning.md)
+- [Always On VPN Advanced Features](always-on-vpn-adv-options.md)
 
-- [Remote Access Always On VPN Deployment](always-on-vpn-deploy-deployment.md)
+- [Always On VPN Deployment Planning](always-on-vpn-deploy-planning.md)
 
-- [Remote Access Always On VPN Advanced Features](always-on-vpn-adv-options.md)
+- [Always On VPN Deployment](always-on-vpn-deploy-deployment.md)
 
-- [Remote Access Always On VPN Troubleshooting](always-on-vpn-deploy-troubleshooting.md)
+- [Always On VPN Troubleshooting](always-on-vpn-deploy-troubleshooting.md)
 
 ## <a name="bkmk_about"></a>About this guide
 

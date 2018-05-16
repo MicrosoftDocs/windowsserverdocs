@@ -31,8 +31,8 @@ You are familiar with the following topics:
 - [VPN and conditional access](https://docs.microsoft.com/windows/access-protection/vpn/vpn-conditional-access)
 
 To configure Azure Active Directory conditional access for VPN connectivity, you need to have the following configured:
-* RRAS, NPS, and VPN server  
-* [VPN Profile to use Azure AD Conditional Access](deploy/vpn-deploy-client-vpn-connections.md#optional-configure-the-vpn-profile-to-use-azure-ad-conditional-access)
+- RRAS, NPS, and VPN server  
+- [VPN Profile to use Azure AD Conditional Access](always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md#optional-configure-the-vpn-profile-to-use-azure-ad-conditional-access)
 
 ## [Step 6.1. Configure EAP-TLS to ignore Certificate Revocation List (CRL) checking](vpn-config-eap-tls-to-ignore-crl-checking.md)
 

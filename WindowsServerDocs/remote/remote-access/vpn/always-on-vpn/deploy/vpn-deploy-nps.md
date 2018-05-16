@@ -17,11 +17,9 @@ author: shortpatti
 &#174; Previous: [Configure the Remote Access Server for Always On VPN](vpn-deploy-ras.md)<br>
 Next: [Configure DNS and Firewall Settings](vpn-deploy-dns-firewall.md) &#175;
 
-You can use this section to install Network Policy Server (NPS) and perform configuration for Always On VPN.
+In this step, you install Network Policy Server (NPS) and perform configuration for Always On VPN. NPS server processing of connection requests that are sent by the VPN server includes performing authorization - to verify that the user has permission to connect; performing authentication - to verify the user's identity, and performing accounting - to log the aspects of the connection request that you chose when you configured RADIUS accounting in NPS.
 
-NPS server processing of connection requests that are sent by the VPN server includes performing authorization - to verify that the user has permission to connect; performing authentication - to verify the user's identity, and performing accounting - to log the aspects of the connection request that you chose when you configured RADIUS accounting in NPS.
-
-The steps in this section allow you to complete the following items.
+The steps in this section allow you to complete the following items:
 
 1.  On the computer or VM that planned for the NPS server, and installed on your organization or corporate network, you can install NPS.
 
@@ -33,9 +31,7 @@ The steps in this section allow you to complete the following items.
 
 ## Install Network Policy Server
 
-You can use this section to install Network Policy Server (NPS) by using either Windows PowerShell or the Server Manager Add Roles and Features Wizard.
-
-NPS is a role service of the Network Policy and Access Services server role.
+In this procedure, you install Network Policy Server (NPS) by using either Windows PowerShell or the Server Manager Add Roles and Features Wizard. NPS is a role service of the Network Policy and Access Services server role.
 
 >[!NOTE] 
 >By default, NPS listens for RADIUS traffic on ports 1812, 1813, 1645, and 1646 on all installed network adapters. When you install NPS, and  you enable Windows Firewall with Advanced Security, firewall exceptions for these ports get created automatically for both IPv4 and IPv6  traffic. If your network access servers are configured to send RADIUS traffic over ports other than these defaults, remove the exceptions created in Windows Firewall with Advanced Security during NPS installation, and create exceptions for the ports that you do use for RADIUS traffic.
@@ -44,13 +40,13 @@ NPS is a role service of the Network Policy and Access Services server role.
 
 Membership in **Administrators**, or equivalent, is the minimum required to perform these procedures.
 
-### To install NPS using Windows PowerShell
+### Use Windows PowerShell
 
 To perform this procedure by using Windows PowerShell, run Windows PowerShell as Administrator, type the following command, and then press ENTER.
 
 `Install-WindowsFeature NPAS -IncludeManagementTools`
 
-### To install NPS using Server Manager
+### Use Server Manager
 
 You can use the following procedure to install NPS using Server Manager.
 
@@ -85,23 +81,9 @@ You can use the following procedure to install NPS using Server Manager.
 
 ## Configure NPS
 
-NPS handles all authentication, authorization, and accounting duties for connection request it receives from the VPN server.
+In this procedure, after installing NPS, you configure NPS handles all authentication, authorization, and accounting duties for connection request it receives from the VPN server.
 
-To configure NPS, you must perform the following tasks.
-
--   Register the NPS Server in Active Directory
-
--   Configure RADIUS Accounting for your NPS Server
-
--   Add the VPN Server as a RADIUS Client in NPS
-
--   Configure Network Policy in NPS
-
--   Autoenroll the NPS Server certificate
-
-The following sections provide instructions on completing these tasks.
-
-## Register the NPS Server in Active Directory
+### Register the NPS Server in Active Directory
 
 After you install NPS, you must register the server in Active Directory so that it has permission to access user account information while processing connection
 requests.
@@ -114,7 +96,7 @@ requests.
 
 For alternate methods of registering NPS, see [Register an NPS Server in an Active Directory Domain](https://docs.microsoft.com/windows-server/networking/technologies/nps/nps-manage-register).
 
-## Configure Network Policy Server Accounting
+### Configure Network Policy Server Accounting
 
 There are three types of logging for Network Policy Server (NPS):
 
@@ -126,16 +108,14 @@ There are three types of logging for Network Policy Server (NPS):
 
 To learn how to configure NPS Accounting, see [Configure Network Policy Server Accounting](https://docs.microsoft.com/windows-server/networking/technologies/nps/nps-accounting-configure).
 
-## Add the VPN Server as a RADIUS Client
+### Add the VPN Server as a RADIUS Client
 
-You can use this section to configure the VPN server as a RADIUS Client in NPS.
+In this procedure, you configure the VPN server as a RADIUS Client in NPS.
 
 >[!NOTE] 
 >When you add a new network access server (VPN server, wireless access point, authenticating switch, or dial-up server) to your network, you must add the server as a RADIUS client in NPS so that NPS is aware of and can communicate with the network access server.
 
-#### To add the VPN Server as a RADIUS client in NPS
-
-You can use this procedure to configure a new RADIUS client in NPS.
+**Procedure:**
 
 >[!IMPORTANT] 
 >In the previous deployment step using the topic [Configure the Remote Access Server for Always On VPN](vpn-deploy-ras.md), you installed and configured your VPN server. During VPN server configuration, you added a RADIUS shared secret on the VPN server. Now you need to use the same shared secret text string to configure the VPN server as a RADIUS client in NPS. You must use the same text string that you used on the VPN server, or communication between the NPS server and VPN server will fail.
