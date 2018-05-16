@@ -20,19 +20,15 @@ Performance history is a new feature that gives [Storage Spaces Direct](storage-
 
 ## Get started
 
-Performance history is collected by default. You do not need to install, configure, or start anything. An external database is not required. An Internet connection is not required. System Center is not required.
+Performance history is collected by default. You do not need to install, configure, or start anything. An Internet connection is not required, System Center is not required, and an external database is not required.
 
-To see your cluster's performance history graphically, use [Windows Admin Center](../../manage/windows-admin-center/overview.md), the next-generation in-box management tool for Windows Server. To query and process it programmatically, use the new `Get-ClusterPerformanceHistory` cmdlet. See [Usage in PowerShell](#usage-in-powershell) and the published [sample scripts](performance-history-scripting.md) to get started.
+To see your cluster's performance history graphically, use [Windows Admin Center](../../manage/windows-admin-center/overview.md), the next-generation in-box management tool for Windows Server. To query and process it programmatically, use the new `Get-ClusterPerformanceHistory` cmdlet – see [Usage in PowerShell](#usage-in-powershell) below.
 
 ## What's collected
-
-### Objects
 
 Performance history is collected for 7 types of objects: drives, network adapters, servers, virtual machines, virtual hard disk files, volumes, and the overall cluster. In many cases, history is aggregated across peer objects to their parent: for example, `NetAdapter.Bytes.Inbound` is collected for each network adapter separately, and also aggregated to the overall server; likewise, `ClusterNode.Cpu.Usage` is collected for each server separately, and also aggregated to the overall cluster; and so on.
 
 ![Types of objects](media/performance-history/types-of-object.png)
-
-### Series
 
 #### Drives
 
@@ -46,11 +42,11 @@ See [Performance history for network adapters](performance-history-for-network-a
 
 See [Performance history for servers](performance-history-for-servers.md).
 
-#### Virtual hard disks
+#### Virtual hard disk (VHD) files
 
 See [Performance history for virtual hard disks](performance-history-for-vhds.md).
 
-#### Virtual machines
+#### Virtual machines (VM)
 
 See [Performance history for virtual machines](performance-history-for-vms.md).
 
@@ -62,7 +58,7 @@ See [Performance history for volumes](performance-history-for-volumes.md).
 
 See [Performance history for clusters](performance-history-for-clusters.md).
 
-### Timeframes
+## Timeframes
 
 Performance history is stored for up to one year, with diminishing granularity. For the most recent hour, measurements are available every ten seconds. Thereafter, they are intelligently merged (by averaging or summing, as appropriate) into less granular series that span more time. For the most recent day, measurements are available every five minutes; for the most recent week, every fifteen minutes; and so on.
 
@@ -84,7 +80,7 @@ Here are the available timeframes:
 
 ## Usage in PowerShell
 
-See performance history in PowerShell with the `Get-ClusterPerformanceHistory` cmdlet.
+Use the `Get-ClusterPerformanceHistory` cmdlet to query and process performance history in PowerShell. See the published [sample scripts](performance-history-scripting.md) for starter code to find peak values, calculate averages, plot trend lines, run outlier detection, and more.
 
 ```PowerShell
 Get-ClusterPerformanceHistory
@@ -93,19 +89,27 @@ Get-ClusterPerformanceHistory
    > [!TIP]
    > Use the **Get-ClusterPerf** alias to save some keystrokes.
 
+### Example
+
+Get the CPU usage of virtual machine *MyVM* for the last hour:
+
+```PowerShell
+Get-VM "MyVM" | Get-ClusterPerf -VMSeriesName "VM.Cpu.Usage" -TimeFrame LastHour
+```
+
 ### Specify the object
 
-You can specify an object you want by the pipeline. This works with 7 types of objects:
+You can specify the object you want by the pipeline. This works with 7 types of objects:
 
 | Object from pipeline | Example     |
 |----------------------|-------------|
-| `Get-PhysicalDisk`   | [Example](performance-history-for-drives.md#usage-in-powershell)           |
-| `Get-NetAdapter`     | [Example](performance-history-for-network-adapters.md#usage-in-powershell) |
-| `Get-ClusterNode`    | [Example](performance-history-for-servers.md#usage-in-powershell)          |
-| `Get-VHD`            | [Example](performance-history-for-vhds.md#usage-in-powershell)             |
-| `Get-VM`             | [Example](performance-history-for-vms.md#usage-in-powershell)              |
-| `Get-Volume`         | [Example](performance-history-for-volumes.md#usage-in-powershell)          |
-| `Get-Cluster`        | [Example](performance-history-for-clusters.md#usage-in-powershell)         |
+| `Get-PhysicalDisk`   | `Get-PhysicalDisk -SerialNumber <SerialNumber> | Get-ClusterPerf` |
+| `Get-NetAdapter`     |  |
+| `Get-ClusterNode`    |  |
+| `Get-VHD`            |  |
+| `Get-VM`             |  |
+| `Get-Volume`         |  |
+| `Get-Cluster`        |  |
 
 If you don't specify, performance history for the overall cluster is returned.
 
@@ -116,15 +120,15 @@ If you don't specify, performance history for the overall cluster is returned.
 
 You can specify the series you want with these parameters, which support tab-completion for discoverability:
 
-| Parameter                 |
-|---------------------------|
-| `-PhysicalDiskSeriesName` |
-| `-NetAdapterSeriesName`   |
-| `-ClusterNodeSeriesName`  |
-| `-VHDSeriesName`          |
-| `-VMSeriesName`           |
-| `-VolumeSeriesName`       |
-| `-ClusterSeriesName`      |
+| Parameter                 | Values                                                                                      |
+|---------------------------|---------------------------------------------------------------------------------------------|
+| `-PhysicalDiskSeriesName` | See [Performance history for drives](performance-history-for-drives.md)                     |
+| `-NetAdapterSeriesName`   | See [Performance history for network adapters](performance-history-for-network-adapters.md) |
+| `-ClusterNodeSeriesName`  | See [Performance history for servers](performance-history-for-servers.md)                   |
+| `-VHDSeriesName`          | See [Performance history for virtual hard disks](performance-history-for-vhds.md)           |
+| `-VMSeriesName`           | See [Performance history for virtual machines](performance-history-for-vms.md)              |
+| `-VolumeSeriesName`       | See [Performance history for volumes](performance-history-for-volumes.md)                   |
+| `-ClusterSeriesName`      | See [Performance history for clusters](performance-history-for-clusters.md)                 |
 
 If you don't specify, every series available for the specified object is returned.
 
@@ -133,20 +137,6 @@ If you don't specify, every series available for the specified object is returne
 You can specify the timeframe of history you want with the `-TimeFrame` parameter.
 
 If you don't specify, the `MostRecent` measurement is returned.
-
-### Example
-
-To write the CPU usage of virtual machine *MyVM* for the last hour to the PowerShell console:
-
-```PowerShell
-Get-VM "MyVM" | Get-ClusterPerf -VMSeriesName "VM.Cpu.Usage" -TimeFrame LastHour
-```
-
-To save the series of measurements to an output file:
-
-```PowerShell
-Get-VM "MyVM" | Get-ClusterPerf -VMSeriesName "VM.Cpu.Usage" -TimeFrame LastHour >> file.txt
-```
 
 ## How it works
 
