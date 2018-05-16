@@ -906,8 +906,13 @@ To test the configuration policy, sign in to a Windows 10 client computer as th
 
 After synchronization, you should see the VPN profile available on the computer.
 
-## Next step
-[Step 6. (Optional) Configure conditional access for VPN connectivity using Azure AD](../../ad-ca-vpn-connectivity-windows10.md): In this optional step, you can fine-tune how authorized VPN users access your resources using [Azure Active Directory (Azure AD) conditional access](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-conditional-access-azure-portal). With Azure AD conditional access for virtual private network (VPN) connectivity, you can help protect the VPN connections. Conditional Access is a policy-based evaluation engine that lets you create access rules for any Azure Active Directory (Azure AD) connected application. 
+## Next steps
+
+
+|If you want to...  |Then see...  |
+|---------|---------|
+|Fine-tune how authorized VPN users access your resources    |[Step 6. (Optional) Configure conditional access for VPN connectivity using Azure AD](../../ad-ca-vpn-connectivity-windows10.md)<p>In this step, you can fine-tune how authorized VPN users access your resources using [Azure Active Directory (Azure AD) conditional access](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-conditional-access-azure-portal). With Azure AD conditional access for virtual private network (VPN) connectivity, you can help protect the VPN connections. Conditional Access is a policy-based evaluation engine that lets you create access rules for any Azure Active Directory (Azure AD) connected application.         |
+|Migrate from DirectAccess to Always On VPN  |[Deployment scenario feature list](../../../da-always-on-vpn-migration/da-always-on-migration-overview.md)<p>This topic provides an high-level overview of the migration process, including what to plan for before the migration and the two different deployment scenarios.       |
 
 ## Related topics
 - [Learn more about the advanced features](always-on-vpn-adv-options.md): Beyond the deployment scenario provided in this guide, you can add other advanced VPN features to improve the security and availability of your VPN connection. For example, such components can help ensure that the connecting client is healthy before allowing a connection.
