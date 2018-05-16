@@ -64,13 +64,22 @@ In this step, you configure the Windows 10 client computers to communicate with
 
 In this optional step, you can fine-tune how authorized VPN users access your resources. With Azure AD conditional access for virtual private network (VPN) connectivity, you can help protect the VPN connections. Conditional Access is a policy-based evaluation engine that lets you create access rules for any Azure Active Directory (Azure AD) connected application. For more details, see [Azure Active Directory (Azure AD) conditional access](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-conditional-access-azure-portal).
 
+## Next step
+[Step 1. Configure the Always On VPN Server Infrastructure](vpn-deploy-server-infrastructure.md): In this step, you install and configure the server-side components necessary to support the VPN, including configuring PKI to distribute the certificates used by users, the VPN server, and the NPS server; configuring RRAS to support IKEv2 connections; and configuring the NPS server to perform authorization for the VPN connections.
+
 ## Related topics
-- [Remote Access](https://docs.microsoft.com/windows-server/remote/remote-access/remote-access)
-- [Windows 10 VPN Technical Guide](https://docs.microsoft.com/windows/access-protection/vpn/vpn-guide)
-- [Core Network Guide](https://docs.microsoft.com/windows-server/networking/core-network-guide/core-network-guide)
-- [Domain Name System (DNS)](https://docs.microsoft.com/windows-server/networking/dns/dns-top)
-- [Active Directory Certificate Services Overview](https://technet.microsoft.com/library/hh831740.aspx)
-- [Public Key Infrastructure Design Guidance](https://social.technet.microsoft.com/wiki/contents/articles/2901.public-key-infrastructure-design-guidance.aspx)
-- [Certificate Templates](https://technet.microsoft.com/library/cc730705.aspx)
-- [AD CS Step by Step Guide: Two Tier PKI Hierarchy Deployment](https://social.technet.microsoft.com/wiki/contents/articles/15037.ad-cs-step-by-step-guide-two-tier-pki-hierarchy-deployment.aspx)
-- [Network Policy Server (NPS)](https://docs.microsoft.com/windows-server/networking/technologies/nps/nps-top)
+- [Remote Access](https://docs.microsoft.com/windows-server/remote/remote-access/remote-access): This topic provides an overview of the Remote Access server role in Windows Server 2016.
+
+- [Windows 10 VPN Technical Guide](https://docs.microsoft.com/windows/access-protection/vpn/vpn-guide): This guide walks you through the decisions you will make for Windows 10 clients in your enterprise VPN solution and how to configure your deployment. This guide references the VPNv2 Configuration Service Provider (CSP) and provides mobile device management (MDM) configuration instructions using Microsoft Intune and the VPN Profile template for Windows 10.
+
+- [Core Network Guide](https://docs.microsoft.com/windows-server/networking/core-network-guide/core-network-guide): This guide provides instructions on how to plan and deploy the core components required for a fully functioning network and a new Active Directory domain in a new forest.
+
+- [Domain Name System (DNS)](https://docs.microsoft.com/windows-server/networking/dns/dns-top): This topic provides an overview of Domain Name Systems (DNS). In Windows Server 2016, DNS is a server role that you can install by using Server Manager or Windows PowerShell commands. If you are installing a new Active Directory forest and domain, DNS is automatically installed with Active Directory as the Global Catalogue server for the forest and domain. 
+
+- [Active Directory Certificate Services Overview](https://technet.microsoft.com/library/hh831740.aspx): This document provides an overview of Active Directory Certificate Services (AD CS) in Windows Server® 2012. AD CS is the Server Role that allows you to build a public key infrastructure (PKI) and provide public key cryptography, digital certificates, and digital signature capabilities for your organization.
+
+- [Public Key Infrastructure Design Guidance](https://social.technet.microsoft.com/wiki/contents/articles/2901.public-key-infrastructure-design-guidance.aspx):  This wiki provides guidance on designing Public Key Infrastructures (PKIs). Before you configure a PKI and certification authority (CA) hierarchy, you should be aware of your organization's security policy and certificate practice statement (CPS).
+
+- [AD CS Step by Step Guide: Two Tier PKI Hierarchy Deployment](https://social.technet.microsoft.com/wiki/contents/articles/15037.ad-cs-step-by-step-guide-two-tier-pki-hierarchy-deployment.aspx): This step-by-step guide describes the steps needed to set up a basic configuration of Active Directory® Certificate Services (AD CS) in a lab environment. AD CS in Windows Server® 2008 R2 provides customizable services for creating and managing public key certificates used in software security systems employing public key technologies.
+
+- [Network Policy Server (NPS)](https://docs.microsoft.com/windows-server/networking/technologies/nps/nps-top): This topic provides an overview of Network Policy Server in Windows Server 2016. Network Policy Server (NPS) allows you to create and enforce organization-wide network access policies for connection request authentication and authorization. 
