@@ -1,6 +1,6 @@
 ---
 title: Configure your Conditional Access policy
-description: 'After a root certificate has been created, the 'VPN connectivity' triggers the creation of the 'VPN Server' cloud application in the customer's tenant.'
+description: After a root certificate has been created, the 'VPN connectivity' triggers the creation of the 'VPN Server' cloud application in the customer's tenant.
 services: active-directory
 ms.prod: windows-server-threshold
 ms.technology: networking-ras
