@@ -103,13 +103,13 @@ You can specify the object you want by the pipeline. This works with 7 types of 
 
 | Object from pipeline | Example     |
 |----------------------|-------------|
-| `Get-PhysicalDisk`   | `Get-PhysicalDisk -SerialNumber <SerialNumber> | Get-ClusterPerf` |
-| `Get-NetAdapter`     |  |
-| `Get-ClusterNode`    |  |
-| `Get-VHD`            |  |
-| `Get-VM`             |  |
-| `Get-Volume`         |  |
-| `Get-Cluster`        |  |
+| `Get-PhysicalDisk`   | [Example](performance-history-for-drives.md#usage-in-powershell)           |
+| `Get-NetAdapter`     | [Example](performance-history-for-network-adapters.md#usage-in-powershell) |
+| `Get-ClusterNode`    | [Example](performance-history-for-servers.md#usage-in-powershell)          |
+| `Get-VHD`            | [Example](performance-history-for-vhds.md#usage-in-powershell)             |
+| `Get-VM`             | [Example](performance-history-for-vms.md#usage-in-powershell)              |
+| `Get-Volume`         | [Example](performance-history-for-volumes.md#usage-in-powershell)          |
+| `Get-Cluster`        | [Example](performance-history-for-clusters.md#usage-in-powershell)         |
 
 If you don't specify, performance history for the overall cluster is returned.
 
