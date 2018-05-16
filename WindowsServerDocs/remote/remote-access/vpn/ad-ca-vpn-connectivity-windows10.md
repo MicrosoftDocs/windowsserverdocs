@@ -76,8 +76,6 @@ Beyond the deployment scenario provided in this guide, you can add other advance
 
 
 
-## <a name="config-vpnv2-profiles-on-client"></a>Step 12: Configure VPNv2 Profiles on your Clients 
-
-In this step, you configure your VPN client connectivity profile as outlined in [VPN and conditional access](https://docs.microsoft.com/windows/access-protection/vpn/vpn-conditional-access).
+## <a name="config-vpnv2-profiles-on-client"></a>Step 12: 
 
 

@@ -21,6 +21,10 @@ ms.reviewer: jairoc
 
 # Deploy Conditional Access root certificates to on-premise AD
 
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
+
+
+
 1. On the **VPN connectivity** page, click **Download certificate**. 
    
     ![Download certificate for conditional access](../../media/Always-On-Vpn/06.png)
@@ -62,3 +66,4 @@ ms.reviewer: jairoc
 
 ## Next step
 
+[Create OMA-DM based VPNv2 Profiles to Windows 10 devices](vpn-create-oma-dm-based-vpnv2-profiles.md)

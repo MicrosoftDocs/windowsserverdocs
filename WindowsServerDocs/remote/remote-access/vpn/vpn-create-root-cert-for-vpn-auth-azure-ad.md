@@ -21,6 +21,8 @@ ms.reviewer: jairoc
 
 # Create root certificates for VPN authentication with Azure AD
 
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
+
 In this step, you configure root certificates for VPN authentication with Azure AD. To configure conditional access for VPN connectivity, you need to:
 
 1. Create a VPN certificate in the Azure portal (you can create more than one certificate).
@@ -64,3 +66,4 @@ In the Azure portal, you can create two certificates to manage the transition wh
 
 ## Next steps
 
+[Configure the Conditional Access policy](vpn-config-conditional-access-policy.md)

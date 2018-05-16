@@ -1,5 +1,5 @@
 ---
-title: Configure your Conditional Access policy
+title: Configure the Conditional Access policy
 description: After a root certificate has been created, the 'VPN connectivity' triggers the creation of the 'VPN Server' cloud application in the customer's tenant.
 services: active-directory
 ms.prod: windows-server-threshold
@@ -19,7 +19,9 @@ ms.reviewer: jairoc
 ---
 
 
-# Configure your Conditional Access policy
+# Configure the Conditional Access policy
+
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
 In this step, you configure the conditional access policy for VPN connectivity. 
 

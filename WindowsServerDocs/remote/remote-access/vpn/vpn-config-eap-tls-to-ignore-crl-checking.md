@@ -20,6 +20,8 @@ ms.reviewer: jairoc
 
 # Configure EAP-TLS to ignore Certificate Revocation List (CRL) checking
 
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
+
 >[!IMPORTANT]
 >Failure to implement this registry change will cause IKEv2 connections using cloud certificates with PEAP to fail, but IKEv2 connections using Client Auth certificates issued from the on-premises CA will work.
 
