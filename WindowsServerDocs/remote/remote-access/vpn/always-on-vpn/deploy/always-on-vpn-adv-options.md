@@ -18,13 +18,12 @@ ms.reviewer: jairoc
 
 # Remote Access Always On VPN Advanced Features
 
-
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-Beyond the deployment scenario provided in this guide, you can add other
-advanced VPN features to improve the security and availability of your VPN
-connection. For example, such components can help ensure that the connecting
-client is healthy before allowing a connection.
+&#174; Previous: [Remote Access Always On VPN Deployment Guide for Windows Server and Windows 10](always-on-vpn-deploy.md)<br>
+Next: [Feature Comparison of Always On VPN and DirectAccess](../../vpn-map-da.md) &#175;
+
+Beyond the deployment scenario provided in this guide, you can add other advanced VPN features to improve the security and availability of your VPN connection. For example, such components can help ensure that the connecting client is healthy before allowing a connection.
 
 The following list includes some of these additional options.
 
@@ -35,21 +34,15 @@ Following are additional options for high availability.
 
 ### Server resilience and load balancing
 
-In environments that require high availability or support large numbers of
-requests, you can increase the performance and resiliency of Remote Access by
-using load balancing between multiple servers that are running Network Policy
-Server (NPS) and enabling Remote Access server clustering.
+In environments that require high availability or support large numbers of requests, you can increase the performance and resiliency of Remote Access by using load balancing between multiple servers that are running Network Policy Server (NPS) and enabling Remote Access server clustering.
 
 For more information, see [NPS Proxy Server Load Balancing](../../../../../networking/technologies/nps/nps-manage-proxy-lb.md).
 
-For more information about deploying Remote Access with load-balanced clusters,
-see [Deploy Remote Access in a Cluster](https://docs.microsoft.com/windows-server/remote/remote-access/ras/cluster/deploy-remote-access-in-cluster).
+For more information about deploying Remote Access with load-balanced clusters, see [Deploy Remote Access in a Cluster](https://docs.microsoft.com/windows-server/remote/remote-access/ras/cluster/deploy-remote-access-in-cluster).
 
 ### Geographic site resilience
 
-For IP-based geolocation, you can use Global Traffic Manager with DNS in Windows
-Server 2016. For more robust geographic load balancing, you can use Global
-Server Load Balancing solutions, such as Microsoft Azure Traffic Manager.
+For IP-based geolocation, you can use Global Traffic Manager with DNS in Windows Server 2016. For more robust geographic load balancing, you can use Global Server Load Balancing solutions, such as Microsoft Azure Traffic Manager.
 
 For more information, see [Overview of Traffic Manager](https://docs.microsoft.com/azure/traffic-manager/traffic-manager-overview)
 and [Microsoft Azure Traffic Manager](https://azure.microsoft.com/en-us/services/traffic-manager).

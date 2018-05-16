@@ -1,31 +1,33 @@
 ---
 title: Remote Access
 description: This topic provides an overview of the Remote Access server role in Windows Server 2016.
-manager: brianlic
+manager: elizapo
 ms.prod: windows-server-threshold
 ms.technology: networking-ras
 ms.topic: article
 ms.assetid: eeca4cf7-90f0-485d-843c-76c5885c54b0
 ms.author: pashort
 author: shortpatti
+ms.date: 05/18/2018
 ---
+
 # Remote Access
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-This topic provides an overview of the Remote Access server role in Windows Server 2016.
+Next: [Always On VPN Deployment Guide](vpn/always-on-vpn/deploy/always-on-vpn-deploy.md) &#175;
 
-> [!NOTE]
-> In addition to this topic, the following RAS documentation is available.
->   
-> - [Border Gateway Protocol &#40;BGP&#41;](bgp/Border-Gateway-Protocol-BGP.md)
-> - [DirectAccess](directaccess/DirectAccess.md)
-> - [RAS Gateway](ras-gateway/RAS-Gateway.md) 
-> - [Remote Access Server Role Documentation](ras/Remote-Access-Server-Role-Documentation.md)
-> - [RAS Gateway for SDN](../../networking/sdn/technologies/network-function-virtualization/RAS-Gateway-for-SDN.md)
-> - [Virtual Private Networking (VPN)](vpn/vpn-top.md)
-> 
-> For more information about other networking technologies, see [Networking in Windows Server 2016](https://docs.microsoft.com/windows-server/networking/networking).
+This topic provides an overview of the Remote Access server role in Windows Server 2016, and covers the following:
+
+- [Always On VPN Deployment Guide](vpn/always-on-vpn/deploy/always-on-vpn-deploy.md)
+- [Border Gateway Protocol &#40;BGP&#41;](bgp/Border-Gateway-Protocol-BGP.md)
+- [DirectAccess](directaccess/DirectAccess.md)
+- [RAS Gateway](ras-gateway/RAS-Gateway.md) 
+- [Remote Access Server Role Documentation](ras/Remote-Access-Server-Role-Documentation.md)
+- [RAS Gateway for SDN](../../networking/sdn/technologies/network-function-virtualization/RAS-Gateway-for-SDN.md)
+- [Virtual Private Networking (VPN)](vpn/vpn-top.md)
+ 
+For more information about other networking technologies, see [Networking in Windows Server 2016](https://docs.microsoft.com/windows-server/networking/networking).
 
 The Remote Access server role is a logical grouping of the following related network access technologies.
 
