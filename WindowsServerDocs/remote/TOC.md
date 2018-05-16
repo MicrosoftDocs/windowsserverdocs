@@ -21,7 +21,12 @@
 ###### [Install and Configure the NPS Server](remote-access/vpn/always-on-vpn/deploy/vpn-deploy-nps.md)
 ###### [Configure DNS and Firewall Settings](remote-access/vpn/always-on-vpn/deploy/vpn-deploy-dns-firewall.md)
 ###### [Configure Windows 10 Client Always On VPN Connections](remote-access/vpn/always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md)
-#### [Always On VPN Troubleshooting](remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting.md)
+###### [Configure EAP-TLS to ignore Certificate Revocation List (CRL) checking](remote-access/vpn/vpn-config-eap-tls-to-ignore-crl-checking.md)
+###### [Create root certificates for VPN authentication with Azure AD](remote-access/vpn/vpn-create-root-cert-for-vpn-auth-azure-ad.md)
+###### [Configure the Conditional Access policy](remote-access/vpn/vpn-config-conditional-access-policy.md)
+###### [Deploy Conditional Access root certificates to on-premise AD](remote-access/vpn/vpn-deploy-cond-access-root-cert-to-on-premise-ad.md)
+###### [Create OMA-DM based VPNv2 Profiles to Windows 10 devices](remote-access/vpn/vpn-create-oma-dm-based-vpnv2-profiles.md)
+#### [Troubleshooting Always On VPN](remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting.md)
 
 
 ### [DirectAccess](remote-access/directaccess/directAccess.md)
@@ -169,7 +174,7 @@
 
 ### [Virtual Private Networking (VPN)](remote-access/vpn/vpn-top.md)
 #### [Configure VPN Device Tunnels in Windows 10](remote-access/vpn/vpn-device-tunnel-config.md)
-####[Azure Active Directory conditional access for VPN connectivity](remote-access/vpn/ad-ca-vpn-connectivity-windows10.md)
+
 
 ## [Web Application Proxy in Windows Server](remote-access//web-application-proxy/web-application-proxy-windows-server.md)
 ### [Publishing Applications using AD FS Preauthentication](remote-access//web-application-proxy/Publishing-Applications-using-AD-FS-Preauthentication.md)
