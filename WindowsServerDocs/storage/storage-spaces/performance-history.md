@@ -95,7 +95,7 @@ You can specify the object you want by the pipeline. This works with 7 types of 
 | `Get-VHD`            | <code>Get-VHD "C:\ClusterStorage\MyVolume\MyVHD.vhdx" &#124; Get-ClusterPerf</code> |
 | `Get-VM`             | <code>Get-VM "MyVM" &#124; Get-ClusterPerf</code>                                   |
 | `Get-Volume`         | <code>Get-Volume -FriendlyName "MyVolume"  &#124; Get-ClusterPerf</code>            |
-| `Get-Cluster`        | Get-Cluster "MyCluster" &#124; Get-ClusterPerf</code>                               |
+| `Get-Cluster`        | <code>Get-Cluster "MyCluster" &#124; Get-ClusterPerf</code>                         |
 
 If you don't specify, performance history for the overall cluster is returned.
 
