@@ -908,6 +908,12 @@ To test the configuration policy, sign in to a Windows 10 client computer as th
 
 After synchronization, you should see the VPN profile available on the computer.
 
-## Next steps
-- [Configure conditional access for VPN connectivity using Azure AD](../../ad-ca-vpn-connectivity-windows10.md)
-- [Learn more about the advanced features](always-on-vpn-adv-options.md)
+## Next step
+[Configure conditional access for VPN connectivity using Azure AD](../../ad-ca-vpn-connectivity-windows10.md): In this optional step, you can fine-tune how authorized VPN users access your resources using [Azure Active Directory (Azure AD) conditional access](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-conditional-access-azure-portal). With Azure AD conditional access for virtual private network (VPN) connectivity, you can help protect the VPN connections. Conditional Access is a policy-based evaluation engine that lets you create access rules for any Azure Active Directory (Azure AD) connected application. 
+
+
+
+## Related topics
+- [Learn more about the advanced features](always-on-vpn-adv-options.md): 
+- [ProfileXML XSD](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/vpnv2-profile-xsd): 
+- [EAP configuration](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/eap-configuration): 

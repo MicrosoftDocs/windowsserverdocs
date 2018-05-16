@@ -148,4 +148,5 @@ To protect against this possibility, you can configure the NPS server to ignore 
 
 For more information, see [Configure NPS to Ignore User Account Dial-in Properties](https://docs.microsoft.com/en-us/windows-server/networking/technologies/nps/nps-np-configure#configure-nps-to-ignore-user-account-dial-in-properties).
 
-For the next section in this guide, see [Remote Access Always On VPN Deployment Planning](always-on-vpn-deploy-planning.md).
+## Next step
+[Remote Access Always On VPN Deployment Planning](always-on-vpn-deploy-planning.md): 

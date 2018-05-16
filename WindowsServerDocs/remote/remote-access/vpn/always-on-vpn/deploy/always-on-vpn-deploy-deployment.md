@@ -15,8 +15,8 @@ author: shortpatti
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-&#0171; _Previous:_ [Remote Access Always On VPN Deployment Planning](always-on-vpn-deploy-planning.md)<br>
-&#0187; _Next:_ [Step 1. Configure the Server Infrastructure](vpn-deploy-server-infrastructure.md)
+[&#0171; Previous: Remote Access Always On VPN Deployment Planning](always-on-vpn-deploy-planning.md)<br>
+[&#0187; Next: Step 1. Configure the Server Infrastructure](vpn-deploy-server-infrastructure.md)
 
 You can deploy Always On VPN connections for remote Windows 10 client computers that are domain-joined.  You can also configure conditional access for VPN connectivity using Azure Active Directory. For more details, see [Conditional access for VPN connectivity using Azure AD](../../ad-ca-vpn-connectivity-windows10.md).
 
@@ -68,7 +68,9 @@ In this optional step, you can fine-tune how authorized VPN users access your re
 
 
 
-[Azure Active Directory (Azure AD) conditional access](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-conditional-access-azure-portal)
-[Conditional access for VPN connectivity using Azure AD](../../ad-ca-vpn-connectivity-windows10.md)
+
+- [Azure Active Directory (Azure AD) conditional access](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-conditional-access-azure-portal): Security is a top concern for organizations using the cloud. A key aspect of cloud security is identity and access when it comes to managing your cloud resources. In a mobile-first, cloud-first world, users can access your organization's resources using a variety of devices and apps from anywhere. 
+
+- [Conditional access for VPN connectivity using Azure AD](../../ad-ca-vpn-connectivity-windows10.md): In this optional step, you can fine-tune how authorized VPN users access your resources using [Azure Active Directory (Azure AD) conditional access](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-conditional-access-azure-portal). With Azure AD conditional access for virtual private network (VPN) connectivity, you can help protect the VPN connections. Conditional Access is a policy-based evaluation engine that lets you create access rules for any Azure Active Directory (Azure AD) connected application. 
 
 

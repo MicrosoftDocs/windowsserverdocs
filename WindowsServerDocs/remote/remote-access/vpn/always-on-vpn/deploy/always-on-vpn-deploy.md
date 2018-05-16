@@ -14,10 +14,8 @@ author: shortpatti
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-&#0171; Previous: [Remote Access](../../../Remote-Access.md)<br>
-Next: [Feature Comparison of Always On VPN and DirectAccess](../../vpn-map-da.md) &#0187;
-
-
+[&#171; Previous: Remote Access](../../../Remote-Access.md)<br>
+[&#187; Next: Feature Comparison of Always On VPN and DirectAccess](../../vpn-map-da.md)
 
 You can use this guide to deploy Always On Virtual Private Network \(VPN\) connections for remote employees by using Remote Access in Windows Server 2016 and Always On VPN profiles for Windows 10 client computers.
 
@@ -47,9 +45,6 @@ This guide contains the following:
 ## <a name="bkmk_about"></a>About this guide
 
 This guide is designed for network and system administrators who want to manage remote computers that connect automatically to the organization network with VPN whenever the user logs on to the device, changes networks, or simply turns on the display. This type of automatically connecting VPN is called an *Always On VPN* - because the VPN connection appears to be a persistent connection.
-
->[!NOTE]
->This guide is available for download in Word format at [TechNet Gallery](https://gallery.technet.microsoft.com/Always-On-VPN-Deployment-e681bc7d).
 
 This guide provides instructions on deploying Remote Access as a single tenant VPN RAS Gateway for point\-to\-site VPN connections that allow your remote employees to connect to your organization network with Always On VPN connections.
 
@@ -170,6 +165,7 @@ You also configure network policies that NPS uses to authorize connection reques
 
 For more information, see [Network Policy Server (NPS)](https://docs.microsoft.com/windows-server/networking/technologies/nps/nps-top).
 
-For the next section in this guide, see [Remote Access Always On VPN Deployment Overview](always-on-vpn-deploy-overview.md).
+## Next step
+[Remote Access Always On VPN Deployment Overview](always-on-vpn-deploy-overview.md). :
 
 
