@@ -13,18 +13,21 @@ author: shortpatti
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
+[&#171; Previous: Remote Access Always On VPN Deployment Overview](always-on-vpn-deploy-overview.md)
+[&#187; Next: Remote Access Always On VPN Deployment](always-on-vpn-deploy-deployment.md)
+
 You can use the following steps to plan for your Always On VPN deployment.
 
 ## Prepare the Remote Access Server
 
-Before you install the Remote Access server role on the computer you're planning on using as a VPN server, perform the following tasks.
+Before you install the Remote Access server role on the computer you're planning on using as a VPN server, perform the following tasks. 
 
 - **Ensure VPN server software and hardware configuration is correct**. You must install Windows Server 2016 on the computer that you plan to use as a Remote Access VPN server. This server must have two physical network adapters installed, one to connect to the external perimeter network, and one to connect to the internal perimeter network.
 
 - **Identify which network adapter connects to the Internet and which network adapter connects to your private network**. You must configure the Internet facing network adapter with a public IP address, while the adapter facing the Intranet can use an IP address from the local network.
 
->[!NOTE]
->If you prefer not to use a public IP address on your perimeter network, you can configure the Edge Firewall with a public IP address, and then configure the firewall to forward VPN connection requests to the VPN server.
+    >[!NOTE]
+    >If you prefer not to use a public IP address on your perimeter network, you can configure the Edge Firewall with a public IP address, and then configure the firewall to forward VPN connection requests to the VPN server.
 
 - **Connect the VPN server to the network**. Install the VPN server on a perimeter network, between the edge firewall and the perimeter firewall.
 
@@ -61,5 +64,4 @@ In addition, the VPN server is installed inside the perimeter network, which par
 In most environments, you can simply adjust static routes on the edge firewall and the VPN server to allow them to reach this new internal perimeter network. In complex environments, you may need to add static routes to internal routers or adjust internal firewall rules for the VPN server and the block of IP addresses associated with VPN clients.
 
 ## Next step
-[Remote Access Always On VPN Deployment](always-on-vpn-deploy-deployment.md): 
-
+[Remote Access Always On VPN Deployment](always-on-vpn-deploy-deployment.md): You can deploy Always On VPN connections for remote Windows 10 client computers that are domain-joined. You can also configure conditional access for VPN connectivity using Azure Active Directory. 

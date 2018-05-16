@@ -5,7 +5,8 @@ ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
 ms.assetid: 5ae1a40b-4f10-4ace-8aaf-13f7ab581f4f
-manager: brianlic
+manager: elizapo
+ms.date: 05/18/2018
 ms.author: pashort
 author: shortpatti
 ---
@@ -15,7 +16,7 @@ author: shortpatti
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
 [&#171; Previous: Remote Access](../../../Remote-Access.md)<br>
-[&#187; Next: Feature Comparison of Always On VPN and DirectAccess](../../vpn-map-da.md)
+[&#187; Next: Review the feature comparison of Always On VPN and DirectAccess](../../vpn-map-da.md)
 
 You can use this guide to deploy Always On Virtual Private Network \(VPN\) connections for remote employees by using Remote Access in Windows Server 2016 and Always On VPN profiles for Windows 10 client computers.
 
@@ -166,6 +167,16 @@ You also configure network policies that NPS uses to authorize connection reques
 For more information, see [Network Policy Server (NPS)](https://docs.microsoft.com/windows-server/networking/technologies/nps/nps-top).
 
 ## Next step
-[Remote Access Always On VPN Deployment Overview](always-on-vpn-deploy-overview.md). :
+[Feature Comparison of Always On VPN and DirectAccess](../../vpn-map-da.md): Learn about how Always On VPN has mitigated most of those limitations or expanded the VPN functionality beyond the capabilities of DirectAccess.
 
-
+## Related topics
+- [Microsoft server software support for Microsoft Azure virtual machines](https://support.microsoft.com/help/2721672/microsoft-server-software-support-for-microsoft-azure-virtual-machines)
+- [Remote Access](https://docs.microsoft.com/windows-server/remote/remote-access/remote-access)
+- [Windows 10 VPN Technical Guide](https://docs.microsoft.com/windows/access-protection/vpn/vpn-guide)
+- [Core Network Guide](https://docs.microsoft.com/windows-server/networking/core-network-guide/core-network-guide)
+- [Domain Name System (DNS)](https://docs.microsoft.com/windows-server/networking/dns/dns-top)
+- [Active Directory Certificate Services Overview](https://technet.microsoft.com/library/hh831740.aspx)
+- [Public Key Infrastructure Design Guidance](https://social.technet.microsoft.com/wiki/contents/articles/2901.public-key-infrastructure-design-guidance.aspx)
+- [Certificate Templates](https://technet.microsoft.com/library/cc730705.aspx)
+- [AD CS Step by Step Guide: Two Tier PKI Hierarchy Deployment](https://social.technet.microsoft.com/wiki/contents/articles/15037.ad-cs-step-by-step-guide-two-tier-pki-hierarchy-deployment.aspx)
+- [Network Policy Server (NPS)](https://docs.microsoft.com/windows-server/networking/technologies/nps/nps-top)

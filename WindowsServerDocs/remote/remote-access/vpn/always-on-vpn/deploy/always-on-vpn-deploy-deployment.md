@@ -65,12 +65,12 @@ In this step, you configure the Windows 10 client computers to communicate with
 In this optional step, you can fine-tune how authorized VPN users access your resources. With Azure AD conditional access for virtual private network (VPN) connectivity, you can help protect the VPN connections. Conditional Access is a policy-based evaluation engine that lets you create access rules for any Azure Active Directory (Azure AD) connected application. For more details, see [Azure Active Directory (Azure AD) conditional access](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-conditional-access-azure-portal).
 
 ## Related topics
-
-
-
-
-- [Azure Active Directory (Azure AD) conditional access](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-conditional-access-azure-portal): Security is a top concern for organizations using the cloud. A key aspect of cloud security is identity and access when it comes to managing your cloud resources. In a mobile-first, cloud-first world, users can access your organization's resources using a variety of devices and apps from anywhere. 
-
-- [Conditional access for VPN connectivity using Azure AD](../../ad-ca-vpn-connectivity-windows10.md): In this optional step, you can fine-tune how authorized VPN users access your resources using [Azure Active Directory (Azure AD) conditional access](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-conditional-access-azure-portal). With Azure AD conditional access for virtual private network (VPN) connectivity, you can help protect the VPN connections. Conditional Access is a policy-based evaluation engine that lets you create access rules for any Azure Active Directory (Azure AD) connected application. 
-
-
+- [Remote Access](https://docs.microsoft.com/windows-server/remote/remote-access/remote-access)
+- [Windows 10 VPN Technical Guide](https://docs.microsoft.com/windows/access-protection/vpn/vpn-guide)
+- [Core Network Guide](https://docs.microsoft.com/windows-server/networking/core-network-guide/core-network-guide)
+- [Domain Name System (DNS)](https://docs.microsoft.com/windows-server/networking/dns/dns-top)
+- [Active Directory Certificate Services Overview](https://technet.microsoft.com/library/hh831740.aspx)
+- [Public Key Infrastructure Design Guidance](https://social.technet.microsoft.com/wiki/contents/articles/2901.public-key-infrastructure-design-guidance.aspx)
+- [Certificate Templates](https://technet.microsoft.com/library/cc730705.aspx)
+- [AD CS Step by Step Guide: Two Tier PKI Hierarchy Deployment](https://social.technet.microsoft.com/wiki/contents/articles/15037.ad-cs-step-by-step-guide-two-tier-pki-hierarchy-deployment.aspx)
+- [Network Policy Server (NPS)](https://docs.microsoft.com/windows-server/networking/technologies/nps/nps-top)

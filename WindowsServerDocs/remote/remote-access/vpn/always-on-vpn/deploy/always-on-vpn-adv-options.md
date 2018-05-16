@@ -20,15 +20,14 @@ ms.reviewer: jairoc
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-&#174; Previous: [Remote Access Always On VPN Deployment Guide for Windows Server and Windows 10](always-on-vpn-deploy.md)<br>
-Next: [Feature Comparison of Always On VPN and DirectAccess](../../vpn-map-da.md) &#175;
+[&#171; Previous: Feature Comparison of Always On VPN and DirectAccess](../../vpn-map-da.md)<br>
+[&#187; Next: Remote Access Always On VPN Deployment Overview](always-on-vpn-deploy-overview.md)
 
 Beyond the deployment scenario provided in this guide, you can add other advanced VPN features to improve the security and availability of your VPN connection. For example, such components can help ensure that the connecting client is healthy before allowing a connection.
 
 The following list includes some of these additional options.
 
 ## High Availability
-
 
 Following are additional options for high availability.
 
@@ -54,17 +53,11 @@ Following are additional options for authentication.
 
 ### Windows Hello for Business.
 
-In Windows 10, Windows Hello for Business replaces passwords with strong
-two-factor authentication on PCs and mobile devices. This authentication
-consists of a new type of user credential that is tied to a device and uses a
-biometric or Personal Identification Number (PIN).
+In Windows 10, Windows Hello for Business replaces passwords with strong two-factor authentication on PCs and mobile devices. This authentication consists of a new type of user credential that is tied to a device and uses a biometric or Personal Identification Number (PIN).
 
-The Windows 10 VPN client is compatible with Windows Hello for Business. After
-the user logs in with a gesture, the VPN connection uses the Windows Hello for
-Business certificate for certificate-based authentication.
+The Windows 10 VPN client is compatible with Windows Hello for Business. After the user logs in with a gesture, the VPN connection uses the Windows Hello for Business certificate for certificate-based authentication.
 
-For more information about Windows Hello for Business with the Windows 10 VPN
-client, see the following topics.
+For more information about Windows Hello for Business with the Windows 10 VPN client, see the following topics.
 
 -   [Windows Hello for Business](https://docs.microsoft.com/windows/access-protection/hello-for-business/hello-identity-verification)
 
@@ -72,8 +65,7 @@ client, see the following topics.
 
 ### Azure Multifactor Authentication (MFA).
 
-Azure MFA has cloud and on-premises versions that you can integrate with the
-Windows VPN authentication mechanism.
+Azure MFA has cloud and on-premises versions that you can integrate with the Windows VPN authentication mechanism.
 
 For more information about how this mechanism works, see [Integrate RADIUS authentication with Azure Multi-Factor Authentication Server](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication-get-started-server-radius).
 
@@ -84,22 +76,19 @@ Following are additional options for advanced features.
 
 ### Traffic filtering
 
-If you need to enforce which applications VPN clients can access, you can enable
-VPN Traffic Filters.
+If you need to enforce which applications VPN clients can access, you can enable VPN Traffic Filters.
 
 For more information, see [VPN security features](https://docs.microsoft.com/windows/access-protection/vpn/vpn-security-features).
 
 ### App-triggered VPN
 
-You can configure VPN profiles to connect automatically when certain
-applications or types of applications start.
+You can configure VPN profiles to connect automatically when certain applications or types of applications start.
 
 For more information about this and other triggering options, see [VPN auto-triggered profile options](https://docs.microsoft.com/windows/access-protection/vpn/vpn-auto-trigger-profile).
 
 ### VPN conditional access
 
-Conditional access and device compliance can require managed devices to meet
-standards before they can connect to the VPN.
+Conditional access and device compliance can require managed devices to meet standards before they can connect to the VPN.
 
 For more information about conditional access, see [VPN and conditional access](https://docs.microsoft.com/windows/access-protection/vpn/vpn-conditional-access).
 
@@ -110,13 +99,23 @@ Following are additional options for protection.
 
 ### Trusted Platform Module (TPM) Key Attestation
 
-A user certificate with a TPM-attested key provides higher security assurance,
-backed up by non-exportability, anti-hammering, and isolation of keys provided
+A user certificate with a TPM-attested key provides higher security assurance, backed up by non-exportability, anti-hammering, and isolation of keys provided
 by the TPM.
 
 For more information about TPM key attestation in Windows 10, see [TPM Key Attestation](https://docs.microsoft.com/windows-server/identity/ad-ds/manage/component-updates/tpm-key-attestation).
 
-## Next steps
-For detailed information about these and other Windows 10 VPN configuration options, see the Windows 10 [VPN technical guide](https://docs.microsoft.com/windows/access-protection/vpn/vpn-guide).
+## Next step
+[Remote Access Always On VPN Deployment Overview](always-on-vpn-deploy-overview.md): You deploy Always On Virtual Private Network \(VPN\) connections for remote computers that are running Windows 10. In this topic, you learn about the VPN connection process, servers to configure, ProfileXML VPNv2 CSP node, and other tecnologies to deploy Alwasy On VPN.
 
-For the next section in this guide, see [Remote Access Always On VPN Troubleshooting](always-on-vpn-deploy-troubleshooting.md).
+## Related topics
+- [NPS Proxy Server Load Balancing](../../../../../networking/technologies/nps/nps-manage-proxy-lb.md)
+- [Deploy Remote Access in a Cluster](https://docs.microsoft.com/windows-server/remote/remote-access/ras/cluster/deploy-remote-access-in-cluster)
+- [Overview of Traffic Manager](https://docs.microsoft.com/azure/traffic-manager/traffic-manager-overview)
+- [Microsoft Azure Traffic Manager](https://azure.microsoft.com/en-us/services/traffic-manager)
+- [Windows Hello for Business](https://docs.microsoft.com/windows/access-protection/hello-for-business/hello-identity-verification)
+- [Enabling Remote Access with Windows Hello for Business in Windows 10](https://msdn.microsoft.com/library/mt728163.aspx)
+- [Integrate RADIUS authentication with Azure Multi-Factor Authentication Server](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication-get-started-server-radius)
+- [VPN security features](https://docs.microsoft.com/windows/access-protection/vpn/vpn-security-features)
+- [VPN auto-triggered profile options](https://docs.microsoft.com/windows/access-protection/vpn/vpn-auto-trigger-profile)
+- [VPN and conditional access](https://docs.microsoft.com/windows/access-protection/vpn/vpn-conditional-access)
+- [TPM Key Attestation](https://docs.microsoft.com/windows-server/identity/ad-ds/manage/component-updates/tpm-key-attestation)

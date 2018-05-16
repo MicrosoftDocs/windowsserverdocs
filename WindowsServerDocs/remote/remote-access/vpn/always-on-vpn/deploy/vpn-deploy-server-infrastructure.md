@@ -1,14 +1,22 @@
 ---
-title: Configure the Always On VPN Server Infrastructure
+title: Configure the Server Infrastructure
+description: In this step, you install and configure the server-side components necessary to support the VPN, including configuring PKI to distribute the certificates used by users, the VPN server, and the NPS server; configuring RRAS to support IKEv2 connections; and configuring the NPS server to perform authorization for the VPN connections. 
+ms.prod: windows-server-threshold
+ms.technology: networking
+ms.topic: article
+ms.assetid: 
+manager: elizapo
+ms.author: pashort
 author: shortpatti
+ms.date: 05/18/2018
 ---
 
 # Step 1. Configure the Server Infrastructure
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-&#174; Previous: [Remote Access Always On VPN Deployment Planning](always-on-vpn-deploy-planning.md)<br>
-Next: [Configure the Remote Access Server for Always On VPN](vpn-deploy-ras.md) &#175;
+[&#171; Previous: Remote Access Always On VPN Deployment Planning](always-on-vpn-deploy-planning.md)<br>
+[&#187; Next: Step 2. Configure the Remote Access Server for Always On VPN](vpn-deploy-ras.md)
 
 In this step, you install and configure the server-side components necessary to support the VPN, including configuring PKI to distribute the certificates used by users, the VPN server, and the NPS server; configuring RRAS to support IKEv2 connections; and configuring the NPS server to perform authorization for the VPN connections.
 
@@ -356,3 +364,6 @@ Unlike the user certificate, you must manually enroll the VPN server’s certifi
 
 ## Next step
 [Configure the Remote Access Server for Always On VPN](vpn-deploy-ras.md): In this step, you configure Remote Access VPN to allow IKEv2 VPN connections, deny connections from other VPN protocols, and assign a static IP address pool for issuance of IP addresses to connecting authorized VPN clients.
+
+## Related topics
+[Trusted Platform Module Technology Overview](https://docs.microsoft.com/windows/device-security/tpm/trusted-platform-module-overview)

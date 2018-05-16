@@ -10,12 +10,12 @@ ms.author: pashort
 author: shortpatti
 ms.date: 05/18/2018
 ---
-# Configure DNS and Firewall Settings
+# Step 4. Configure DNS and Firewall Settings
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-[&#171; Previous: To install NPS using Windows PowerShell](vpn-deploy-nps.md)<br>
-[&#187; Next: Configure Windows 10 Client Always On VPN Connections](vpn-deploy-client-vpn-connections.md)
+[&#171; Previous: Step 3. Install and Configure the NPS Server](vpn-deploy-nps.md)<br>
+[&#187; Next: Step 5. Configure Windows 10 Client Always On VPN Connections](vpn-deploy-client-vpn-connections.md)
 
 In this step, you configure DNS and Firewall settings for VPN connectivity.
 
@@ -75,11 +75,11 @@ If you are using the default RADIUS port configuration on the VPN Server and the
 If you are not using the default RADIUS ports in your NPS deployment, you must configure the firewall to allow RADIUS traffic on the ports that you are using. For more details, see [Configure Firewalls for RADIUS Traffic](https://docs.microsoft.com/windows-server/networking/technologies/nps/nps-firewalls-configure).
 
 ## Next step
-[Configure Windows 10 Client Always On VPN Connections](vpn-deploy-client-vpn-connections.md): In this step, you configure the Windows 10 client computers to communicate with that infrastructure with a VPN connection. You can use several technologies to configure Windows 10 VPN clients, including Windows PowerShell, System Center Configuration Manager, and Intune. All three require an XML VPN profile to configure the appropriate VPN settings. 
+[Step 5. Configure Windows 10 Client Always On VPN Connections](vpn-deploy-client-vpn-connections.md): In this step, you configure the Windows 10 client computers to communicate with that infrastructure with a VPN connection. You can use several technologies to configure Windows 10 VPN clients, including Windows PowerShell, System Center Configuration Manager, and Intune. All three require an XML VPN profile to configure the appropriate VPN settings. 
 
 ## Related topics
-[Remote Access Always On VPN Deployment Overview](always-on-vpn-deploy-overview.md)
-[Configure Firewalls for RADIUS Traffic](https://docs.microsoft.com/windows-server/networking/technologies/nps/nps-firewalls-configure)
-[Network Policy Server (NPS)](https://docs.microsoft.com/windows-server/networking/technologies/nps/nps-top)
+- [Remote Access Always On VPN Deployment Overview](always-on-vpn-deploy-overview.md)
+- [Configure Firewalls for RADIUS Traffic](https://docs.microsoft.com/windows-server/networking/technologies/nps/nps-firewalls-configure)
+- [Network Policy Server (NPS)](https://docs.microsoft.com/windows-server/networking/technologies/nps/nps-top)
 
 ---

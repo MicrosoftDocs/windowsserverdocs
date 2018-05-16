@@ -8,14 +8,15 @@ ms.assetid:
 manager: elizapo
 ms.author: pashort
 author: shortpatti
+ms.date: 05/18/2018
 ---
 
-# Configure the Remote Access Server for Always On VPN
+# Step 2. Configure the Remote Access Server for Always On VPN
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-&#174; Previous: [Configure the Server Infrastructure](vpn-deploy-server-infrastructure.md)<br>
-Next: [Install and Configure the NPS Server](vpn-deploy-nps.md) &#175;
+[&#171; Previous: Step 1. Configure the Server Infrastructure](vpn-deploy-server-infrastructure.md)<br>
+[&#187; Next: Step 3. Install and Configure the NPS Server](vpn-deploy-nps.md)
 
 RRAS is designed to perform well as both a router and a remote access server; therefore, it supports a wide array of features. For the purposes of this guide, you require only a small subset of these features: support for IKEv2 VPN connections and LAN routing.
 
@@ -31,9 +32,7 @@ The steps in this section allow you to complete the following items.
 
 ## Install Remote Access as a RAS Gateway VPN Server
 
-You can use this section to install the Remote Access role as a single tenant RAS Gateway VPN server.
-
-For more information, see [Remote Access](https://docs.microsoft.com/windows-server/remote/remote-access/remote-access).
+You can use this section to install the Remote Access role as a single tenant RAS Gateway VPN server. For more details, see [Remote Access](https://docs.microsoft.com/windows-server/remote/remote-access/remote-access).
 
 **Administrative Credentials**
 
@@ -200,3 +199,6 @@ In this section, you can configure Remote Access VPN to allow IKEv2 VPN connecti
 
 ## Next step
 [Install and Configure the NPS Server](vpn-deploy-nps.md): In this step, you install Network Policy Server (NPS) by using either Windows PowerShell or the Server Manager Add Roles and Features Wizard. You also configure NPS to handle all authentication, authorization, and accounting duties for connection requests that it receives from the VPN server.
+
+## Related topics
+[Remote Access](https://docs.microsoft.com/windows-server/remote/remote-access/remote-access).

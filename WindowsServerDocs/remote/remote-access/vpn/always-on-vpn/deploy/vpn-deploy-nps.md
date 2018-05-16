@@ -8,14 +8,15 @@ ms.assetid:
 manager: elizapo
 ms.author: pashort
 author: shortpatti
+ms.date: 05/18/2018
 ---
 
-# Install and Configure the NPS Server
+# Step 3. Install and Configure the NPS Server
 
 >   Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-&#174; Previous: [Configure the Remote Access Server for Always On VPN](vpn-deploy-ras.md)<br>
-Next: [Configure DNS and Firewall Settings](vpn-deploy-dns-firewall.md) &#175;
+[&#171; Previous: Step 2. Configure the Remote Access Server for Always On VPN](vpn-deploy-ras.md)<br>
+[&#187; Next: Step 4. Configure DNS and Firewall Settings](vpn-deploy-dns-firewall.md)
 
 In this step, you install Network Policy Server (NPS) and perform configuration for Always On VPN. NPS server processing of connection requests that are sent by the VPN server includes performing authorization - to verify that the user has permission to connect; performing authentication - to verify the user's identity, and performing accounting - to log the aspects of the connection request that you chose when you configured RADIUS accounting in NPS.
 
@@ -209,3 +210,7 @@ Membership in **Administrators**, or equivalent, is the minimum required to comp
 
 ## Next step
 [Configure DNS and Firewall Settings for Always On VPN](vpn-deploy-dns-firewall.md): In this step, you install Network Policy Server (NPS) by using either Windows PowerShell or the Server Manager Add Roles and Features Wizard. You also configure NPS to handle all authentication, authorization, and accounting duties for connection requests that it receives from the VPN server.
+
+## Related topics
+- [Register an NPS Server in an Active Directory Domain](https://docs.microsoft.com/windows-server/networking/technologies/nps/nps-manage-register)
+- [Configure Network Policy Server Accounting](https://docs.microsoft.com/windows-server/networking/technologies/nps/nps-accounting-configure)
