@@ -1,29 +1,4 @@
 # [Remote](index.md)
-## [Remote Server Administration Tools](remote-server-administration-tools.md)
-## [Remote Desktop Services](remote-desktop-services/welcome-to-rds.md)
-## [Remote Access](remote-access/remote-Access.md)
-
-### [Border Gateway Protocol (BGP)](remote-access/bgp/Border-Gateway-Protocol-BGP.md)
-#### [BGP Windows PowerShell Command Reference](remote-access/bgp/BGP-Windows-powershell-Command-Reference.md)
-
-### [Always On VPN](remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy.md)
-#### [Always On VPN and DirectAccess Features Comparison](remote-access/vpn/vpn-map-da.md)
-#### [Always On VPN Advanced Features](remote-access/vpn/always-on-vpn/deploy/always-on-vpn-adv-options.md)
-#### [Deployment Overview of Always On VPN](remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-overview.md)
-##### [Plan the Always On VPN Deployment](remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-planning.md)
-##### [Deploy Always On VPN](remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-deployment.md)
-###### [Configure the Always On VPN Server Infrastructure](remote-access/vpn/always-on-vpn/deploy/vpn-deploy-server-infrastructure.md)
-###### [Configure the Remote Access Server for Always On VPN](remote-access/vpn/always-on-vpn/deploy/vpn-deploy-ras.md)
-###### [Install and Configure the NPS Server](remote-access/vpn/always-on-vpn/deploy/vpn-deploy-nps.md)
-###### [Configure DNS and Firewall Settings](remote-access/vpn/always-on-vpn/deploy/vpn-deploy-dns-firewall.md)
-###### [Configure Windows 10 Client Always On VPN Connections](remote-access/vpn/always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md)
-###### [Conditional access for VPN connectivity using Azure AD](remote-access/vpn/ad-ca-vpn-connectivity-windows10.md)
-#### [Migrating from DirectAccess to Always On VPN](remote-access/da-always-on-vpn-migration/da-always-on-migration-overview.md)
-##### [Plan the DirectAccess to Always On VPN Migration](remote-access/da-always-on-vpn-migration/da-always-on-migration-planning.md)
-##### [Migrate DirectAccess to Always On VPN](remote-access/da-always-on-vpn-migration/da-always-on-migration-deploy.md)
-#### [Troubleshooting Always On VPN](remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting.md)
-
-
 ## [MultiPoint Services](multipoint-services/MultiPoint-Services.md)
 ### [Planning a MultiPoint Services Deployment](multipoint-services/Planning-a-MultiPoint-Services-Deployment.md)
 #### [Introducing MultiPoint Services](multipoint-services/Introducing-MultiPoint-services.md)
@@ -127,6 +102,34 @@
 #### [Manage MultiPoint Systems Using MultiPoint Dashboard](multipoint-services/Manage-MultiPoint-Systems-Using-MultiPoint-Dashboard.md)
 ##### [Restart or Shut Down](multipoint-services/Restart-or-Shut-Down.md)
 ##### [Remap selected MultiPoint Systems](multipoint-services/remap-selected-MultiPoint-Systems.md)
+
+
+## [Remote Server Administration Tools](remote-server-administration-tools.md)
+## [Remote Desktop Services](remote-desktop-services/welcome-to-rds.md)
+## [Remote Access](remote-access/remote-Access.md)
+
+### [Border Gateway Protocol (BGP)](remote-access/bgp/Border-Gateway-Protocol-BGP.md)
+#### [BGP Windows PowerShell Command Reference](remote-access/bgp/BGP-Windows-powershell-Command-Reference.md)
+
+### [Always On VPN](remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy.md)
+#### [Always On VPN and DirectAccess Features Comparison](remote-access/vpn/vpn-map-da.md)
+#### [Always On VPN Advanced Features](remote-access/vpn/always-on-vpn/deploy/always-on-vpn-adv-options.md)
+#### [Deployment Overview of Always On VPN](remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-overview.md)
+##### [Plan the Always On VPN Deployment](remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-planning.md)
+##### [Deploy Always On VPN](remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-deployment.md)
+###### [Configure the Always On VPN Server Infrastructure](remote-access/vpn/always-on-vpn/deploy/vpn-deploy-server-infrastructure.md)
+###### [Configure the Remote Access Server for Always On VPN](remote-access/vpn/always-on-vpn/deploy/vpn-deploy-ras.md)
+###### [Install and Configure the NPS Server](remote-access/vpn/always-on-vpn/deploy/vpn-deploy-nps.md)
+###### [Configure DNS and Firewall Settings](remote-access/vpn/always-on-vpn/deploy/vpn-deploy-dns-firewall.md)
+###### [Configure Windows 10 Client Always On VPN Connections](remote-access/vpn/always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md)
+###### [Conditional access for VPN connectivity using Azure AD](remote-access/vpn/ad-ca-vpn-connectivity-windows10.md)
+#### [Migrating from DirectAccess to Always On VPN](remote-access/da-always-on-vpn-migration/da-always-on-migration-overview.md)
+##### [Plan the DirectAccess to Always On VPN Migration](remote-access/da-always-on-vpn-migration/da-always-on-migration-planning.md)
+##### [Migrate DirectAccess to Always On VPN](remote-access/da-always-on-vpn-migration/da-always-on-migration-deploy.md)
+#### [Troubleshooting Always On VPN](remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting.md)
+
+
+
 
 ### [RAS Gateway](remote-access/ras-gateway/RAS-Gateway.md)
 #### [GRE Tunneling in Windows Server](remote-access/ras-gateway/gre-tunneling-windows-server.md)
