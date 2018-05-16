@@ -5,24 +5,24 @@ ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 02/09/2018
+ms.date: 05/15/2018
 Keywords: Storage Spaces Direct
 ms.localizationpriority: medium
 ---
 # Performance history for Storage Spaces Direct
 
-> Applies To: Windows Server Insider Preview build 17093 and later
+> Applies To: Windows Server Insider Preview build 17666 and later
 
 Performance history is a new feature that gives [Storage Spaces Direct](storage-spaces-direct-overview.md) administrators easy access to historical compute, memory, network, and storage measurements across host servers, drives, volumes, virtual machines, and more. Performance history is collected automatically and stored on the cluster for up to one year.
 
    > [!IMPORTANT]
-   > This feature is new in Windows Server Insider Preview build 17093 and later. It is not available in Windows Server 2016.
+   > This feature is new in Windows Server Insider Preview. It is not available in Windows Server 2016.
 
 ## Get started
 
 Performance history is collected by default. You do not need to install, configure, or start anything. An external database is not required. An Internet connection is not required. System Center is not required.
 
-To see your cluster's performance history, use [Windows Admin Center](../../manage/windows-admin-center/overview.md), the next-generation in-box management tool for Windows Server, or the new `Get-ClusterPerformanceHistory` cmdlet. See [Usage in PowerShell](#usage-in-powershell) for details.
+To see your cluster's performance history graphically, use [Windows Admin Center](../../manage/windows-admin-center/overview.md), the next-generation in-box management tool for Windows Server. To query and process it programmatically, use the new `Get-ClusterPerformanceHistory` cmdlet. See [Usage in PowerShell](#usage-in-powershell) and the published [sample scripts](performance-history-scripting.md) to get started.
 
 ## How it works
 
@@ -38,7 +38,7 @@ To see your cluster's performance history, use [Windows Admin Center](../../mana
 
 ### Objects
 
-Performance history is collected for 7 types of objects: drives, network adapters, servers, virtual machines, virtual hard disk files, volumes, and the overall cluster. In many cases, history is aggregated across peer objects to their parent: for example, `networkadapter.bytes.inbound` is collected for each network adapter separately, and also aggregated to the overall server; likewise, `node.cpu.usage` is collected for each server separately, and also aggregated to the overall cluster; and so on.
+Performance history is collected for 7 types of objects: drives, network adapters, servers, virtual machines, virtual hard disk files, volumes, and the overall cluster. In many cases, history is aggregated across peer objects to their parent: for example, `NetAdapter.Bytes.Inbound` is collected for each network adapter separately, and also aggregated to the overall server; likewise, `ClusterNode.Cpu.Usage` is collected for each server separately, and also aggregated to the overall cluster; and so on.
 
 ![Types of objects](media/performance-history/types-of-object.png)
 
@@ -126,15 +126,15 @@ If you don't specify, performance history for the overall cluster is returned.
 
 You can specify the series you want with these parameters, which support tab-completion for discoverability:
 
-| Parameter                     |
-|-------------------------------|
-| `-PhysicalDiskSeriesName`     |
-| `-NetworkAdapterSeriesName`   |
-| `-ClusterNodeSeriesName`      |
-| `-VHDSeriesName`              |
-| `-VirtualMachineSeriesName`   |
-| `-VolumeSeriesName`           |
-| `-ClusterSeriesName`          |
+| Parameter                 |
+|---------------------------|
+| `-PhysicalDiskSeriesName` |
+| `-NetAdapterSeriesName`   |
+| `-ClusterNodeSeriesName`  |
+| `-VHDSeriesName`          |
+| `-VMSeriesName`           |
+| `-VolumeSeriesName`       |
+| `-ClusterSeriesName`      |
 
 If you don't specify, every series available for the specified object is returned.
 
@@ -146,23 +146,16 @@ If you don't specify, the `MostRecent` measurement is returned.
 
 ### Example
 
-To get the CPU usage of the virtual machine named *MyVM* for the last hour:
+To write the CPU usage of virtual machine *MyVM* for the last hour to the PowerShell console:
 
 ```PowerShell
-Get-VM "MyVM" | Get-ClusterPerf -TimeFrame LastHour -VirtualMachineSeriesName "VirtualMachine.Cpu.Usage"
-```
-
-To print the series of measurements to the PowerShell console:
-
-```PowerShell
-$Measurements = Get-VM "MyVM" | Get-ClusterPerf -TimeFrame LastHour -VirtualMachineSeriesName "VirtualMachine.Cpu.Usage"
-($Measurements).Group
+Get-VM "MyVM" | Get-ClusterPerf -VMSeriesName "VM.Cpu.Usage" -TimeFrame LastHour
 ```
 
 To save the series of measurements to an output file:
 
 ```PowerShell
-($Measurements).Group >> file.txt
+Get-VM "MyVM" | Get-ClusterPerf -VMSeriesName "VM.Cpu.Usage" -TimeFrame LastHour >> file.txt
 ```
 
 ## Frequently asked questions
@@ -181,82 +174,30 @@ The Health Service, which collects measurements and inserts them into the databa
 
 ### How are missing measurements handled?
 
-When measurements are merged into less granular series that span more time, as described in [Timeframes](#Timeframes), periods of missing data are excluded. For example, if the server was down for 30 minutes, then running at 50% CPU for the next 30 minutes, the `node.cpu.usage` average for the hour will be recorded as 50%.
+When measurements are merged into less granular series that span more time, as described in [Timeframes](#Timeframes), periods of missing data are excluded. For example, if the server was down for 30 minutes, then running at 50% CPU for the next 30 minutes, the `ClusterNode.Cpu.Usage` average for the hour will be recorded as 50%.
 
 ### How do I disable this feature?
 
-If you have already enabled Storage Spaces Direct, there are two steps:
-
-1. Remove the path to the volume. This prevents the Health Service from collecting new measurements.
-
-    ```PowerShell
-    Get-StorageSubSystem Cluster* | Remove-StorageHealthSetting -Name "System.PerformanceHistory.Path"
-    ```
-
-2. Delete the volume to delete existing measurements.
-
-    ```PowerShell
-    Remove-VirtualDisk "ClusterPerformanceHistory"
-    ```
-
-If you have not yet enabled Storage Spaces Direct, use the `-CollectPerformanceHistory` parameter of the `Enable-ClusterS2D` cmdlet. Set it to `$False`.
+If you have not enabled Storage Spaces Direct yet, use the `-CollectPerformanceHistory` parameter of the `Enable-ClusterS2D` cmdlet. Set it to `$False`.
 
 ```PowerShell
 Enable-ClusterS2D -CollectPerformanceHistory $False
 ```
 
+If you have already enabled Storage Spaces Direct, an upcoming Insider Preview build will provide a cmdlet to stop the Health Service from collecting new measurements and delete existing measurements.
+
 ## Troubleshooting
 
 ### The cmdlet doesn't work
 
-An error message like "*The term 'Get-ClusterPerf' is not recognized as the name of a cmdlet*" means the feature is not available or installed. Verify that you have Windows Server Insider Preview build 17093 or later and that you're running Storage Spaces Direct.
+An error message like "*The term 'Get-ClusterPerf' is not recognized as the name of a cmdlet*" means the feature is not available or installed. Verify that you have Windows Server Insider Preview or later and that you're running Storage Spaces Direct.
 
    > [!NOTE]
    > This feature is not available on Windows Server 2016 or earlier. 
 
-### The cmdlet works but does nothing
-
-If the cmdlet doesn't return the latest measurement (within the last ten seconds), performance history collection may have lapsed or stopped. Collection is managed by the *Health* cluster resource. Verify that it is present and Online:
-
-```PowerShell
-Get-ClusterResource Health
-```
-
-If the cluster resource is stopped, start it:
-
-```PowerShell
-Start-ClusterResource Health
-```
-
-Measurements are stored on the volume name ClusterPerformanceHistory. Verify that it is present and OK:
-
-```PowerShell
-Get-Volume -FriendlyName "ClusterPerformanceHistory"
-```
-
 ### The volume is deleted or missing
 
-To provision the ClusterPerformanceHistory volume again:
-
-1. Confirm the volume is deleted:
-
-    ```PowerShell
-    Remove-VirtualDisk "ClusterPerformanceHistory"
-    ```
-
-2.	Remove the path to the volume:
-
-    ```PowerShell
-    Get-StorageSubSystem Cluster* | Remove-StorageHealthSetting -Name "System.PerformanceHistory.Path"
-    ```
-
-3.	Set `AutoProvision` back to `True`:
-
-    ```PowerShell
-    Get-StorageSubSystem Cluster* | Set-StorageHealthSetting -Name "System.PerformanceHistory.AutoProvision.Enabled" -Value "True"
-    ```
-
-It might take a few minutes for the changes to take effect.
+An upcoming Insider Preview build will provide a cmdlet to reprovision and start collecting new measurements.
 
 ## See also
 
