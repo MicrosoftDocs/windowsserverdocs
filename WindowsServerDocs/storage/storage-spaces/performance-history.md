@@ -89,13 +89,13 @@ You can specify the object you want by the pipeline. This works with 7 types of 
 
 | Object from pipeline | Example     |
 |----------------------|-------------|
-| `Get-PhysicalDisk`   | <code>Get-PhysicalDisk -SerialNumber XYZ123 &#124; Get-ClusterPerf</code>  |
-| `Get-NetAdapter`     | [Example](performance-history-for-network-adapters.md#usage-in-powershell) |
-| `Get-ClusterNode`    | [Example](performance-history-for-servers.md#usage-in-powershell)          |
-| `Get-VHD`            | [Example](performance-history-for-vhds.md#usage-in-powershell)             |
-| `Get-VM`             | [Example](performance-history-for-vms.md#usage-in-powershell)              |
-| `Get-Volume`         | [Example](performance-history-for-volumes.md#usage-in-powershell)          |
-| `Get-Cluster`        | [Example](performance-history-for-clusters.md#usage-in-powershell)         |
+| `Get-PhysicalDisk`   | <code>Get-PhysicalDisk -SerialNumber "XYZ456" &#124; Get-ClusterPerf</code>         |
+| `Get-NetAdapter`     | <code>Get-NetAdapter "Ethernet" &#124; Get-ClusterPerf</code>                       |
+| `Get-ClusterNode`    | <code>Get-ClusterNode "Server123" &#124; Get-ClusterPerf</code>                     |
+| `Get-VHD`            | <code>Get-VHD "C:\ClusterStorage\MyVolume\MyVHD.vhdx" &#124; Get-ClusterPerf</code> |
+| `Get-VM`             | <code>Get-VM "MyVM" &#124; Get-ClusterPerf</code>                                   |
+| `Get-Volume`         | <code>Get-Volume -FriendlyName "MyVolume"  &#124; Get-ClusterPerf</code>            |
+| `Get-Cluster`        | Get-Cluster "MyCluster" &#124; Get-ClusterPerf</code>                               |
 
 If you don't specify, performance history for the overall cluster is returned.
 
@@ -121,6 +121,9 @@ If you don't specify, every series available for the specified object is returne
 ### Specify the timeframe
 
 You can specify the timeframe of history you want with the `-TimeFrame` parameter.
+
+   > [!TIP]
+   > Use tab-completion to discover available timeframes.
 
 If you don't specify, the `MostRecent` measurement is returned.
 
