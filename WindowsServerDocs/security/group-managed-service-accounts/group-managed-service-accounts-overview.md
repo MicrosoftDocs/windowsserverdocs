@@ -22,7 +22,7 @@ This topic for the IT professional introduces the group Managed Service Account 
 
 
 ## <a name="BKMK_OVER"></a>Feature description
-The Standalone Managed Service Account (sMSA) is a managed domain accounts that provides automatic password management, simplified service principal name (SPN) management and the ability to delegate the management to other administrators. This type of managed service account (MSA) was introduced in Windows Server 2008 R2 and Windows 7.
+A standalone Managed Service Account (sMSA) is a managed domain account that provides automatic password management, simplified service principal name (SPN) management and the ability to delegate the management to other administrators. This type of managed service account (MSA) was introduced in Windows Server 2008 R2 and Windows 7.
 
 The group Managed Service Account (gMSA) provides the same functionality within the domain but also extends that functionality over multiple servers. When connecting to a service hosted on a server farm, such as Network Load Balanced solution, the authentication protocols supporting mutual authentication require that all instances of the services use the same principal. When a gMSA is used as service principals, the Windows operating system manages the password for the account instead of relying on the administrator to manage the password.
 
