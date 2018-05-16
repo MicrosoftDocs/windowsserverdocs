@@ -14,7 +14,10 @@ ms.date: 05/15/2018
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-You can use this section to configure DNS and Firewall settings.
+&#174; Previous: [To install NPS using Windows PowerShell](vpn-deploy-nps.md)<br>
+Next: [Configure Windows 10 Client Always On VPN Connections](vpn-deploy-client-vpn-connections.md) &#175;
+
+In this step, you configure DNS and Firewall settings for VPN connectivity.
 
 ## Configure DNS name resolution
 
