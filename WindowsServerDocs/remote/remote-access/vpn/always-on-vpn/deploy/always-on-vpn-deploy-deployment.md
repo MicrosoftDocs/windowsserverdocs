@@ -15,8 +15,8 @@ author: shortpatti
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-&#174; Previous: [Remote Access Always On VPN Deployment Planning](always-on-vpn-deploy-planning.md)<br>
-Next: [Step 1. Configure the Server Infrastructure](vpn-deploy-server-infrastructure.md) &#175;
+&#0171; _Previous:_ [Remote Access Always On VPN Deployment Planning](always-on-vpn-deploy-planning.md)<br>
+&#0187; _Next:_ [Step 1. Configure the Server Infrastructure](vpn-deploy-server-infrastructure.md)
 
 You can deploy Always On VPN connections for remote Windows 10 client computers that are domain-joined.  You can also configure conditional access for VPN connectivity using Azure Active Directory. For more details, see [Conditional access for VPN connectivity using Azure AD](../../ad-ca-vpn-connectivity-windows10.md).
 
@@ -60,8 +60,15 @@ In this step, you configure DNS and Firewall settings. When remote VPN clients c
 
 In this step, you configure the Windows 10 client computers to communicate with that infrastructure with a VPN connection. You can use several technologies to configure Windows 10 VPN clients, including Windows PowerShell, System Center Configuration Manager, and Intune. All three require an XML VPN profile to configure the appropriate VPN settings. 
 
-## (Optional) [Step 6. Conditional access for VPN connectivity using Azure AD](../../ad-ca-vpn-connectivity-windows10.md) 
+## [Step 6. (Optional) Conditional access for VPN connectivity using Azure AD](../../ad-ca-vpn-connectivity-windows10.md) 
 
 In this optional step, you can fine-tune how authorized VPN users access your resources. With Azure AD conditional access for virtual private network (VPN) connectivity, you can help protect the VPN connections. Conditional Access is a policy-based evaluation engine that lets you create access rules for any Azure Active Directory (Azure AD) connected application. For more details, see [Azure Active Directory (Azure AD) conditional access](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-conditional-access-azure-portal).
 
 ## Related topics
+
+
+
+[Azure Active Directory (Azure AD) conditional access](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-conditional-access-azure-portal)
+[Conditional access for VPN connectivity using Azure AD](../../ad-ca-vpn-connectivity-windows10.md)
+
+
