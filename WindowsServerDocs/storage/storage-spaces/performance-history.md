@@ -5,7 +5,7 @@ ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 05/15/2018
+ms.date: 05/17/2018
 Keywords: Storage Spaces Direct
 ms.localizationpriority: medium
 ---
@@ -23,16 +23,6 @@ Performance history is a new feature that gives [Storage Spaces Direct](storage-
 Performance history is collected by default. You do not need to install, configure, or start anything. An external database is not required. An Internet connection is not required. System Center is not required.
 
 To see your cluster's performance history graphically, use [Windows Admin Center](../../manage/windows-admin-center/overview.md), the next-generation in-box management tool for Windows Server. To query and process it programmatically, use the new `Get-ClusterPerformanceHistory` cmdlet. See [Usage in PowerShell](#usage-in-powershell) and the published [sample scripts](performance-history-scripting.md) to get started.
-
-## How it works
-
-![How it works](media/performance-history/how-it-works.png)
-
-1. When Storage Spaces Direct is enabled, the [Health Service](../../failover-clustering/health-service-overview.md) creates an approximately 10 GB three-way mirror volume named ClusterPerformanceHistory and provisions an instance of the Extensible Storage Engine (also known as Microsoft JET) there. This lightweight database stores the performance history.
-
-2. The Health Service automatically discovers relevant objects, such as virtual machines, anywhere in the cluster and begins streaming their performance counters. The counters are aggregated, synchronized, and inserted into the database. Streaming runs continuously and is optimized for minimal system impact.
-
-3. You can see performance history in Windows Admin Center or in PowerShell. Performance history is stored for up to one year, with diminishing granularity. Queries are served directly from the database for consistent, snappy performance and to minimize system impact.
 
 ## What's collected
 
@@ -157,6 +147,16 @@ To save the series of measurements to an output file:
 ```PowerShell
 Get-VM "MyVM" | Get-ClusterPerf -VMSeriesName "VM.Cpu.Usage" -TimeFrame LastHour >> file.txt
 ```
+
+## How it works
+
+![How it works](media/performance-history/how-it-works.png)
+
+1. When Storage Spaces Direct is enabled, the [Health Service](../../failover-clustering/health-service-overview.md) creates an approximately 10 GB three-way mirror volume named ClusterPerformanceHistory and provisions an instance of the Extensible Storage Engine (also known as Microsoft JET) there. This lightweight database stores the performance history.
+
+2. The Health Service automatically discovers relevant objects, such as virtual machines, anywhere in the cluster and begins streaming their performance counters. The counters are aggregated, synchronized, and inserted into the database. Streaming runs continuously and is optimized for minimal system impact.
+
+3. You can see performance history in Windows Admin Center or in PowerShell. Performance history is stored for up to one year, with diminishing granularity. Queries are served directly from the database for consistent, snappy performance and to minimize system impact.
 
 ## Frequently asked questions
 
