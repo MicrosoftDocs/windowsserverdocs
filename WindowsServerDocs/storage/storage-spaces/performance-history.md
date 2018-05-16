@@ -107,15 +107,17 @@ If you don't specify, performance history for the overall cluster is returned.
 
 You can specify the series you want with these parameters:
 
-| Parameter                 | Example                      | List                                                                                 |
-|---------------------------|------------------------------|--------------------------------------------------------------------------------------|
-| `-PhysicalDiskSeriesName` | `PhysicalDisk.Latency.Write` | [What's collected for drives](performance-history-for-drives.md)                     |
-| `-NetAdapterSeriesName`   | `NetAdapter.Bytes.Outbound`  | [What's collected for network adapters](performance-history-for-network-adapters.md) |
-| `-ClusterNodeSeriesName`  | `ClusterNode.Cpu.Usage`      | [What's collected for servers](performance-history-for-servers.md)                   |
-| `-VHDSeriesName`          | `Vhd.Size.Current`           | [What's collected for virtual hard disks](performance-history-for-vhds.md)           |
-| `-VMSeriesName`           | `Vm.Memory.Assigned`         | [What's collected for virtual machines](performance-history-for-vms.md)              |
-| `-VolumeSeriesName`       | `Volume.Iops.Read`           | [What's collected for volumes](performance-history-for-volumes.md)                   |
-| `-ClusterSeriesName`      | `PhysicalDisk.Size.Total`    | [What's collected for clusters](performance-history-for-clusters.md)                 |
+
+| Parameter                 | Example                       | List                                                                                 |
+|---------------------------|-------------------------------|--------------------------------------------------------------------------------------|
+| `-PhysicalDiskSeriesName` | `"PhysicalDisk.Iops.Read"`    | [What's collected for drives](performance-history-for-drives.md)                     |
+| `-NetAdapterSeriesName`   | `"NetAdapter.Bytes.Outbound"` | [What's collected for network adapters](performance-history-for-network-adapters.md) |
+| `-ClusterNodeSeriesName`  | `"ClusterNode.Cpu.Usage"`     | [What's collected for servers](performance-history-for-servers.md)                   |
+| `-VHDSeriesName`          | `"Vhd.Size.Current"`          | [What's collected for virtual hard disks](performance-history-for-vhds.md)           |
+| `-VMSeriesName`           | `"Vm.Memory.Assigned"`        | [What's collected for virtual machines](performance-history-for-vms.md)              |
+| `-VolumeSeriesName`       | `"Volume.Latency.Write"`      | [What's collected for volumes](performance-history-for-volumes.md)                   |
+| `-ClusterSeriesName`      | `"PhysicalDisk.Size.Total"`   | [What's collected for clusters](performance-history-for-clusters.md)                 |
+
 
    > [!TIP]
    > Use tab-completion to discover available series.
@@ -157,7 +159,7 @@ The Health Service, which collects measurements and inserts them into the databa
 
 ### How are missing measurements handled?
 
-When measurements are merged into less granular series that span more time, as described in [Timeframes](#Timeframes), periods of missing data are excluded. For example, if the server was down for 30 minutes, then running at 50% CPU for the next 30 minutes, the `ClusterNode.Cpu.Usage` average for the hour will be recorded correctly as 50%, not 25%.
+When measurements are merged into less granular series that span more time, as described in [Timeframes](#Timeframes), periods of missing data are excluded. For example, if the server was down for 30 minutes, then running at 50% CPU for the next 30 minutes, the `ClusterNode.Cpu.Usage` average for the hour will be recorded correctly as 50% (not 25%).
 
 ### How do I disable this feature?
 
