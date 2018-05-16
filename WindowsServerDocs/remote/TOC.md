@@ -9,9 +9,6 @@
 ### [Always On VPN](remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy.md)
 #### [Always On VPN and DirectAccess Features Comparison](remote-access/vpn/vpn-map-da.md)
 #### [Always On VPN Advanced Features](remote-access/vpn/always-on-vpn/deploy/always-on-vpn-adv-options.md)
-#### [Migrating from DirectAccess to Always On VPN](remote-access/da-always-on-vpn-migration/da-always-on-migration-overview.md)
-##### [Plan the DirectAccess to Always On VPN Migration](remote-access/da-always-on-vpn-migration/da-always-on-migration-planning.md)
-##### [Migrate DirectAccess to Always On VPN](remote-access/da-always-on-vpn-migration/da-always-on-migration-deploy.md) 
 #### [Deployment Overview of Always On VPN](remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-overview.md)
 ##### [Plan the Always On VPN Deployment](remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-planning.md)
 ##### [Deploy Always On VPN](remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-deployment.md)
@@ -22,6 +19,9 @@
 ###### [Configure DNS and Firewall Settings](remote-access/vpn/always-on-vpn/deploy/vpn-deploy-dns-firewall.md)
 ###### [Configure Windows 10 Client Always On VPN Connections](remote-access/vpn/always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md)
 ###### [Conditional access for VPN connectivity using Azure AD](remote-access/vpn/ad-ca-vpn-connectivity-windows10.md)
+#### [Migrating from DirectAccess to Always On VPN](remote-access/da-always-on-vpn-migration/da-always-on-migration-overview.md)
+##### [Plan the DirectAccess to Always On VPN Migration](remote-access/da-always-on-vpn-migration/da-always-on-migration-planning.md)
+##### [Migrate DirectAccess to Always On VPN](remote-access/da-always-on-vpn-migration/da-always-on-migration-deploy.md)
 #### [Troubleshooting Always On VPN](remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting.md)
 
 
