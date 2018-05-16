@@ -14,8 +14,10 @@ author: shortpatti
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-&#174; Previous:  
-Next: &#175;
+&#0171; Previous: [Remote Access](../../../Remote-Access.md)<br>
+Next: [Feature Comparison of Always On VPN and DirectAccess](../../vpn-map-da.md) &#0187;
+
+
 
 You can use this guide to deploy Always On Virtual Private Network \(VPN\) connections for remote employees by using Remote Access in Windows Server 2016 and Always On VPN profiles for Windows 10 client computers.
 

@@ -24,9 +24,6 @@
 #### [Troubleshooting Always On VPN](remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting.md)
 
 
-
-
-
 ## [MultiPoint Services](multipoint-services/MultiPoint-Services.md)
 ### [Planning a MultiPoint Services Deployment](multipoint-services/Planning-a-MultiPoint-Services-Deployment.md)
 #### [Introducing MultiPoint Services](multipoint-services/Introducing-MultiPoint-services.md)
