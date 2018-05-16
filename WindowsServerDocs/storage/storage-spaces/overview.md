@@ -1,4 +1,4 @@
----
+help---
 title: Storage Spaces overview
 ms.prod: windows-server-threshold
 ms.author: jgerend
@@ -10,7 +10,7 @@ ms.date: 05/15/2018
 ---
 # Storage Spaces overview
 
-Storage Spaces is a technology in Windows and Windows Server that can protect your data from drive failures. It is conceptually similar to RAID, implemented in software. You can use Storage Spaces to group three or more drives together into a storage pool and then use capacity from that pool to create Storage Spaces. These typically store extra copies of your data so if one of your drives fails, you still have an intact copy of your data. If you run low on capacity, just add more drives to the storage pool.
+Storage Spaces is a technology in Windows and Windows Server that can help protect your data from drive failures. It is conceptually similar to RAID, implemented in software. You can use Storage Spaces to group three or more drives together into a storage pool and then use capacity from that pool to create Storage Spaces. These typically store extra copies of your data so if one of your drives fails, you still have an intact copy of your data. If you run low on capacity, just add more drives to the storage pool.
 
 There are four major ways to use Storage Spaces:
 
