@@ -3,28 +3,18 @@ title: Configure the Always On VPN Server Infrastructure
 author: shortpatti
 ---
 
-# Configure the Server Infrastructure
-
+# Step 1. Configure the Server Infrastructure
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-In this section, you install and configure the server-side components necessary
-to support the VPN, including configuring PKI to distribute the certificates
-used by users, the VPN server, and the NPS server; configuring RRAS to support
-IKEv2 connections; and configuring the NPS server to perform authorization for
-the VPN connections.
+&#174; Previous: [Remote Access Always On VPN Deployment Planning](always-on-vpn-deploy-planning.md)<br>
+Next: [Configure the Remote Access Server for Always On VPN](vpn-deploy-ras.md) &#175;
+
+In this step, you install and configure the server-side components necessary to support the VPN, including configuring PKI to distribute the certificates used by users, the VPN server, and the NPS server; configuring RRAS to support IKEv2 connections; and configuring the NPS server to perform authorization for the VPN connections.
 
 ## Configure certificate autoenrollment in Group Policy
+In this procedure, you configure Group Policy on the domain controller so that domain members automatically request user and computer certificates. Doing so allows VPN users to request and retrieve user certificates that authenticate VPN connections automatically. Likewise, this policy allows NPS servers to request server authentication certificates automatically. (You will manually enroll certificates on VPN servers.)
 
-
-Configure Group Policy on the domain controller so that domain members
-automatically request user and computer certificates. Doing so allows VPN users
-to request and retrieve user certificates that authenticate VPN connections
-automatically. Likewise, this policy allows NPS servers to request server
-authentication certificates automatically. (You will manually enroll
-certificates on VPN servers.)
-
-**To enable certificate autoenrollment in Group Policy**
 
 1.  On a domain controller, open Group Policy Management.
 
@@ -64,27 +54,22 @@ certificates on VPN servers.)
 
 ## Create the VPN Users, VPN Servers, and NPS Servers Groups
 
-With this step, you can add a new Active Directory (AD) group that contains the
-users allowed to use the VPN to connect to your organization network.
+In this procedure, you can add a new Active Directory (AD) group that contains the users allowed to use the VPN to connect to your organization network.
 
 This group serves two purposes:
 
--   It defines which users are allowed to autoenroll for the user certificates
-    the VPN requires.
+-   It defines which users are allowed to autoenroll for the user certificates the VPN requires.
 
 -   It defines which users the NPS authorizes for VPN access.
 
-By using a custom group, if you ever want to revoke a user’s VPN access, you can
-simply remove that user from the group.
+By using a custom group, if you ever want to revoke a user’s VPN access, you can simply remove that user from the group.
 
-You will also add a group containing VPN servers and another group containing
-NPS servers. You use these groups to restrict certificate requests to their
-members.
+You also add a group containing VPN servers and another group containing NPS servers. You use these groups to restrict certificate requests to their members.
 
 >[!NOTE] 
 >We recommend VPN servers that reside in the DMA/Perimeter not be domain-joined. However, if you prefer to have the VPN servers domain-joined for better manageability (Group Policies, Backup/Monitoring agent, no local users to manage, and so on), then add an AD group to the VPN server certificate template.
 
-**To configure the VPN Users group**
+### Configure the VPN Users group
 
 1.  On a domain controller, open Active Directory Users and Computers.
 
@@ -100,7 +85,7 @@ members.
 
 7.  Close Active Directory Users and Computers.
 
-**To configure the VPN Servers and NPS Servers groups**
+### Configure the VPN Servers and NPS Servers groups
 
 1.  On a domain controller, open Active Directory Users and Computers.
 
@@ -124,9 +109,9 @@ members.
 
 ## Create the User Authentication template
 
-Next, configure a custom client-server authentication template. This template is required because you want to improve the certificate’s overall security by selecting upgraded compatibility levels and choosing the Microsoft Platform Crypto Provider. This last change lets you use the TPM on the client computers to secure the certificate. For an overview of the TPM, see [Trusted Platform Module Technology Overview](https://docs.microsoft.com/windows/device-security/tpm/trusted-platform-module-overview).
+In this procedure, you configure a custom client-server authentication template. This template is required because you want to improve the certificate’s overall security by selecting upgraded compatibility levels and choosing the Microsoft Platform Crypto Provider. This last change lets you use the TPM on the client computers to secure the certificate. For an overview of the TPM, see [Trusted Platform Module Technology Overview](https://docs.microsoft.com/windows/device-security/tpm/trusted-platform-module-overview).
 
-**To configure the User Authentication template**
+**Procedure:**
 
 1.  On the CA, open Certification Authority.
 
@@ -186,14 +171,12 @@ Next, configure a custom client-server authentication template. This template is
 
 ## Create the VPN Server Authentication template
 
-With this step, you can configure a new Server Authentication template for your VPN server.
-
-Adding the IP Security (IPsec) IKE Intermediate application policy allows the server to filter certificates if more than one certificate is available with the Server Authentication extended key usage.
+In this procedure, you can configure a new Server Authentication template for your VPN server. Adding the IP Security (IPsec) IKE Intermediate application policy allows the server to filter certificates if more than one certificate is available with the Server Authentication extended key usage.
 
 >[!IMPORTANT] 
 >Because VPN clients access this server from the public Internet, the subject and alternative names are different than the internal server name. As a result, you cannot autoenroll this certificate on VPN servers.
 
-**To configure the VPN Server Authentication template** 
+**Procedure:** 
 
 >[!IMPORTANT]
 >The following steps apply to VPN servers that are domain joined.
@@ -212,7 +195,7 @@ Adding the IP Security (IPsec) IKE Intermediate application policy allows the se
 
     2.  In the **Edit Application Policies Extension** dialog box, click **Add**.
 
-    3.  On the **Add Application Policy** dialog box, click **IP security IKE intermediate**, and click **OK**. Adding IP security IKE intermediate to the EKU helps in scenarios where more than one server authentication certificate exists on the VPN server. When IP security IKE intermediate is present, IPSec only uses the certificate with both EKU options. Without this, IKEv2 authentication could fail with Error 13801: IKE authentication credentials are unacceptable.
+    3.  On the **Add Application Policy** dialog box, click **IP security IKE intermediate**, and click **OK**.<p>Adding IP security IKE intermediate to the EKU helps in scenarios where more than one server authentication certificate exists on the VPN server. When IP security IKE intermediate is present, IPSec only uses the certificate with both EKU options. Without this, IKEv2 authentication could fail with Error 13801: IKE authentication credentials are unacceptable.
 
     4.  Click **OK** to return to the **Properties of New Template** dialog box.
 
@@ -250,14 +233,11 @@ Adding the IP Security (IPsec) IKE Intermediate application policy allows the se
 
 ## Create the NPS Server Authentication template
 
-The third and last certificate template to create is the NPS Server
-Authentication template. The NPS Server Authentication template is a simple copy
-of the RAS and IAS Server template secured to the NPS Server group that you
-created earlier in this section.
+The third and last certificate template to create is the NPS Server Authentication template. The NPS Server Authentication template is a simple copy of the RAS and IAS Server template secured to the NPS Server group that you created earlier in this section. 
 
 You will configure this certificate for autoenrollment.
 
-**To configure the NPS Server Authentication template**
+**Procedure:**
 
 1.  On the CA, open Certification Authority.
 
@@ -291,12 +271,9 @@ You will configure this certificate for autoenrollment.
 
 ## Enroll and validate the user certificate
 
-Because you’re using Group Policy to autoenroll user certificates, you need only
-update the policy, and Windows 10 will automatically enroll the user account for
-the correct certificate. You can then validate the certificate in the
-Certificates console.
+Because you’re using Group Policy to autoenroll user certificates, you need only update the policy, and Windows 10 will automatically enroll the user account for the correct certificate. You can then validate the certificate in the Certificates console.
 
-**To enroll and validate the user certificate**
+**Procedure:**
 
 1.  Sign in to a domain-joined client computer as a member of the **VPN Users** group.
 
@@ -319,7 +296,7 @@ Unlike the user certificate, you must manually enroll the VPN server’s certifi
 >[!NOTE] 
 >You might need to restart the VPN and NPS servers to allow them to update their group memberships before you can complete these steps.
 
-**To enroll and validate the VPN server certificate**
+### Enroll and validate the VPN server certificate
 
 1.  On the VPN server’s Start menu, type **certlm.msc**, and press Enter.
 
@@ -361,7 +338,7 @@ Unlike the user certificate, you must manually enroll the VPN server’s certifi
 
 14. Close the Certificates snap-in.
 
-**To validate the NPS server certificate**
+### Validate the NPS server certificate
 
 1.  Restart the NPS server.
 
@@ -377,4 +354,5 @@ Unlike the user certificate, you must manually enroll the VPN server’s certifi
 
 7.  Close the Certificates snap-in.
 
-For the next Always On VPN deployment steps, see [Configure the Remote Access Server for Always On VPN](vpn-deploy-ras.md).
+## Next step
+[Configure the Remote Access Server for Always On VPN](vpn-deploy-ras.md): In this step, you configure Remote Access VPN to allow IKEv2 VPN connections, deny connections from other VPN protocols, and assign a static IP address pool for issuance of IP addresses to connecting authorized VPN clients.

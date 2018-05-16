@@ -14,37 +14,24 @@ author: shortpatti
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-RRAS is designed to perform well as both a router and a remote access server;
-therefore, it supports a wide array of features. For the purposes of this guide,
-you require only a small subset of these features: support for IKEv2 VPN
-connections and LAN routing.
+&#174; Previous: [Configure the Server Infrastructure](vpn-deploy-server-infrastructure.md)<br>
+Next: [Install and Configure the NPS Server](vpn-deploy-nps.md) &#175;
 
-IKEv2 is a VPN tunneling protocol described in Internet Engineering Task Force
-Request for Comments 7296. The primary advantage of IKEv2 is that it tolerates
-interruptions in the underlying network connection. For example, if the
-connection is temporarily lost or if a user moves a client computer from one
-network to another, IKEv2 automatically restores the VPN connection when the
-network connection is reestablished—all without user intervention.
+RRAS is designed to perform well as both a router and a remote access server; therefore, it supports a wide array of features. For the purposes of this guide, you require only a small subset of these features: support for IKEv2 VPN connections and LAN routing.
 
-You can configure the RRAS server to support IKEv2 connections while disabling
-unused protocols, which reduces the server’s security footprint. Additionally,
-you can configure the server to assign addresses to VPN clients from a static
-address pool. You can feasibly assign addresses from either a pool or a DHCP
-server; however, using a DHCP server adds complexity to the design and delivers
-minimal benefits.
+IKEv2 is a VPN tunneling protocol described in Internet Engineering Task Force Request for Comments 7296. The primary advantage of IKEv2 is that it tolerates interruptions in the underlying network connection. For example, if the connection is temporarily lost or if a user moves a client computer from one network to another, IKEv2 automatically restores the VPN connection when the network connection is reestablished—all without user intervention.
+
+You can configure the RRAS server to support IKEv2 connections while disabling unused protocols, which reduces the server’s security footprint. Additionally, you can configure the server to assign addresses to VPN clients from a static address pool. You can feasibly assign addresses from either a pool or a DHCP server; however, using a DHCP server adds complexity to the design and delivers minimal benefits.
 
 The steps in this section allow you to complete the following items.
 
-1.  On the computer or VM that is planned as the VPN server, and that is
-    installed on your perimeter network, you can install Remote Access.
+1.  On the computer or VM that is planned as the VPN server, and that is installed on your perimeter network, you can install Remote Access.
 
-2.  On the Remote Access server, you can configure Remote Access as a RAS
-    Gateway VPN server.
+2.  On the Remote Access server, you can configure Remote Access as a RAS Gateway VPN server.
 
 ## Install Remote Access as a RAS Gateway VPN Server
 
-You can use this section to install the Remote Access role as a single tenant
-RAS Gateway VPN server.
+You can use this section to install the Remote Access role as a single tenant RAS Gateway VPN server.
 
 For more information, see [Remote Access](https://docs.microsoft.com/windows-server/remote/remote-access/remote-access).
 
@@ -54,13 +41,11 @@ Membership in **Administrators**, or equivalent, is the minimum required to perf
 
 ### Install the Remote Access role by using Windows PowerShell
 
-To perform this procedure by using Windows PowerShell, run Windows PowerShell as
-Administrator, type the following command, and then press ENTER.
+To perform this procedure by using Windows PowerShell, run Windows PowerShell as Administrator, type the following command, and then press ENTER.
 
 `Install-WindowsFeature DirectAccess-VPN -IncludeManagementTools`
 
-After installation completes, the following message appears in Windows
-PowerShell.
+After installation completes, the following message appears in Windows PowerShell.
 
 | Success | Restart Needed | Exit Code | Feature Result                             |
 |---------|----------------|-----------|--------------------------------------------|
@@ -101,10 +86,7 @@ You can use the following procedure to install the Remote Access role using Serv
 
 ## Configure Remote Access as a VPN Server
 
-In this section, you can configure Remote Access VPN to allow IKEv2 VPN
-connections, deny connections from other VPN protocols, and assign a static IP
-address pool for the issuance of IP addresses to connecting authorized VPN
-clients.
+In this section, you can configure Remote Access VPN to allow IKEv2 VPN connections, deny connections from other VPN protocols, and assign a static IP address pool for the issuance of IP addresses to connecting authorized VPN clients.
 
 1.  On the VPN server, in Server Manager, click the **Notifications** flag.
 
@@ -216,6 +198,5 @@ clients.
 
 7.  If prompted, click **Yes** to confirm restarting the server and click **Close** to restart the server.
 
-## Next steps
-
-[Install and Configure the NPS Server](vpn-deploy-nps.md)
+## Next step
+[Install and Configure the NPS Server](vpn-deploy-nps.md): In this step, you install Network Policy Server (NPS) by using either Windows PowerShell or the Server Manager Add Roles and Features Wizard. You also configure NPS to handle all authentication, authorization, and accounting duties for connection requests that it receives from the VPN server.

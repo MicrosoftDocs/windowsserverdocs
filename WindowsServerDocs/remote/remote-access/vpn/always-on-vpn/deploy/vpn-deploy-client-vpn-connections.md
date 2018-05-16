@@ -909,8 +909,5 @@ To test the configuration policy, sign in to a Windows 10 client computer as th
 After synchronization, you should see the VPN profile available on the computer.
 
 ## Next steps
-
-|If you want to...  |Then see...  |
-|---------|---------|
-|Configure conditional access for VPN connectivity   |[Step 1. Configure EAP-TLS to ignore Certificate Revocation List (CRL) checking](../../vpn-config-eap-tls-to-ignore-crl-checking.md)    |
-|Learn more about the advanced features     |[Remote Access Always On VPN Advanced Features](always-on-vpn-adv-options.md)         |
+- [Configure conditional access for VPN connectivity using Azure AD](../../ad-ca-vpn-connectivity-windows10.md)
+- [Learn more about the advanced features](always-on-vpn-adv-options.md)
