@@ -30,33 +30,15 @@ Performance history is collected for 7 types of objects: drives, network adapter
 
 ![Types of objects](media/performance-history/types-of-object.png)
 
-#### Drives
-
-See [Performance history for drives](performance-history-for-drives.md).
-
-#### Network adapters
-
-See [Performance history for network adapters](performance-history-for-network-adapters.md).
-
-#### Servers
-
-See [Performance history for servers](performance-history-for-servers.md).
-
-#### Virtual hard disk (VHD) files
-
-See [Performance history for virtual hard disks](performance-history-for-vhds.md).
-
-#### Virtual machines (VM)
-
-See [Performance history for virtual machines](performance-history-for-vms.md).
-
-#### Volumes
-
-See [Performance history for volumes](performance-history-for-volumes.md).
-
-#### Clusters
-
-See [Performance history for clusters](performance-history-for-clusters.md).
+| Object             | Series                                                                                  |
+|--------------------|-----------------------------------------------------------------------------------------|
+| Drives             | [Performance history for drives](performance-history-for-drives.md)                     |
+| Network adapters   | [Performance history for network adapters](performance-history-for-network-adapters.md) |
+| Servers            | [Performance history for servers](performance-history-for-servers.md)                   |
+| Virtual hard disks | [Performance history for virtual hard disks](performance-history-for-vhds.md)           |
+| Virtual machines   | [Performance history for virtual machines](performance-history-for-vms.md)              |
+| Volumes            | [Performance history for volumes](performance-history-for-volumes.md)                   |
+| Clusters           | [Performance history for clusters](performance-history-for-clusters.md)                 |
 
 ## Timeframes
 
@@ -164,11 +146,11 @@ The Health Service, which collects measurements and inserts them into the databa
 
 ### How are missing measurements handled?
 
-When measurements are merged into less granular series that span more time, as described in [Timeframes](#Timeframes), periods of missing data are excluded. For example, if the server was down for 30 minutes, then running at 50% CPU for the next 30 minutes, the `ClusterNode.Cpu.Usage` average for the hour will be recorded as 50%.
+When measurements are merged into less granular series that span more time, as described in [Timeframes](#Timeframes), periods of missing data are excluded. For example, if the server was down for 30 minutes, then running at 50% CPU for the next 30 minutes, the `ClusterNode.Cpu.Usage` average for the hour will be recorded correctly as 50%, not 25%.
 
 ### How do I disable this feature?
 
-If you have not enabled Storage Spaces Direct yet, use the `-CollectPerformanceHistory` parameter of the `Enable-ClusterS2D` cmdlet. Set it to `$False`.
+Set the `-CollectPerformanceHistory` parameter to `$False` when you run `Enable-ClusterS2D`.
 
 ```PowerShell
 Enable-ClusterS2D -CollectPerformanceHistory $False
