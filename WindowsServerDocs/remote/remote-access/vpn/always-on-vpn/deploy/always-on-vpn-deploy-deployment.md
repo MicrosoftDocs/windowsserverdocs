@@ -47,6 +47,9 @@ You can use this topic to complete the following steps.
 
 - Configure DNS, Internal Perimeter Network Firewall, and Edge Firewall settings.
 
+## 
+
+
 ## [Configure Windows 10 Client Always On VPN Connections](vpn-deploy-client-vpn-connections.md)
 
 You can use this topic to complete the following steps.
