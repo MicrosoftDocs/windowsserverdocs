@@ -184,10 +184,10 @@ In this procedure, you can configure a new Server Authentication template for yo
 >[!IMPORTANT] 
 >Because VPN clients access this server from the public Internet, the subject and alternative names are different than the internal server name. As a result, you cannot autoenroll this certificate on VPN servers.
 
-**Procedure:** 
+**Prerequisites:**
+Domain-joined VPN servers
 
->[!IMPORTANT]
->The following steps apply to VPN servers that are domain joined.
+**Procedure:** 
 
 1.  On the CA, open Certification Authority.
 
@@ -363,7 +363,7 @@ Unlike the user certificate, you must manually enroll the VPN server’s certifi
 7.  Close the Certificates snap-in.
 
 ## Next step
-[Configure the Remote Access Server for Always On VPN](vpn-deploy-ras.md): In this step, you configure Remote Access VPN to allow IKEv2 VPN connections, deny connections from other VPN protocols, and assign a static IP address pool for issuance of IP addresses to connecting authorized VPN clients.
+[Step 2. Configure the Remote Access Server for Always On VPN](vpn-deploy-ras.md): In this step, you configure Remote Access VPN to allow IKEv2 VPN connections, deny connections from other VPN protocols, and assign a static IP address pool for issuance of IP addresses to connecting authorized VPN clients.
 
 ## Related topics
 [Trusted Platform Module Technology Overview](https://docs.microsoft.com/windows/device-security/tpm/trusted-platform-module-overview)

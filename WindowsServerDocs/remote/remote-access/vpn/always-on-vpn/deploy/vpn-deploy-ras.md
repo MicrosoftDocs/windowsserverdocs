@@ -161,9 +161,9 @@ In this section, you can configure Remote Access VPN to allow IKEv2 VPN connecti
 
     1.  (Optional) If you are using DHCP, click **Adapter**, and in the list of results, click the Ethernet adapter connected to your internal perimeter network.
 
-1.  *If you are setting up conditional access*, from the **Certificate** drop-down list, under SSL Certificate Binding, select the VPN server authentication.
+1.  (Optional) *If you are configuring conditional access for VPN connectivity*, from the **Certificate** drop-down list, under SSL Certificate Binding, select the VPN server authentication.
 
-2.  *If you are setting up conditional access*, in the Routing and Remote Access MMC, expand **Policies\\Network Policies** and do the following: 
+2.  (Optional) *If you are configuring conditional access for VPN connectivity*, in the Routing and Remote Access MMC, expand **Policies\\Network Policies** and do the following: 
 
     1.  Right-the **Connections to Microsoft Routing and Remote Access Server** network policy and select **Properties**.
 
@@ -198,7 +198,7 @@ In this section, you can configure Remote Access VPN to allow IKEv2 VPN connecti
 7.  If prompted, click **Yes** to confirm restarting the server and click **Close** to restart the server.
 
 ## Next step
-[Install and Configure the NPS Server](vpn-deploy-nps.md): In this step, you install Network Policy Server (NPS) by using either Windows PowerShell or the Server Manager Add Roles and Features Wizard. You also configure NPS to handle all authentication, authorization, and accounting duties for connection requests that it receives from the VPN server.
+[Step 3. Install and Configure the NPS Server](vpn-deploy-nps.md): In this step, you install Network Policy Server (NPS) by using either Windows PowerShell or the Server Manager Add Roles and Features Wizard. You also configure NPS to handle all authentication, authorization, and accounting duties for connection requests that it receives from the VPN server.
 
 ## Related topics
-[Remote Access](https://docs.microsoft.com/windows-server/remote/remote-access/remote-access).
+[Remote Access](https://docs.microsoft.com/windows-server/remote/remote-access/remote-access)

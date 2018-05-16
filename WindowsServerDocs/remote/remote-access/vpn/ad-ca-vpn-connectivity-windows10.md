@@ -13,7 +13,7 @@ ms.date: 05/18/2018
 
 # Step 6. (Optional) Conditional access for VPN connectivity using Azure AD
 
-[&#171; Previous: Configure Windows 10 Client Always On VPN Connections](always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md)<br>
+[&#171; Previous: Step 5. Configure Windows 10 Client Always On VPN Connections](always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md)<br>
 [&#187; Next: Step 6.1. Configure EAP-TLS to ignore Certificate Revocation List (CRL) checking](vpn-config-eap-tls-to-ignore-crl-checking.md)
 
 In this optional step, you can fine-tune how authorized VPN users access your resources using [Azure Active Directory (Azure AD) conditional access](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-conditional-access-azure-portal). With Azure AD conditional access for virtual private network (VPN) connectivity, you can help protect the VPN connections. Conditional Access is a policy-based evaluation engine that lets you create access rules for any Azure Active Directory (Azure AD) connected application. 
@@ -25,7 +25,10 @@ You are familiar with the following topics:
 - [VPN and conditional access](https://docs.microsoft.com/windows/access-protection/vpn/vpn-conditional-access)
 
 To configure Azure Active Directory conditional access for VPN connectivity, you need to have the following configured:
-- RRAS, NPS, and VPN server  
+- [Server Infrastructure](always-on-vpn/deploy/vpn-deploy-server-infrastructure.md)
+- [Remote Access Server for Always On VPN](always-on-vpn/deploy/vpn-deploy-ras.md)
+- [Network Policy Server](always-on-vpn/deploy/vpn-deploy-nps.md)
+- [DNS and Firewall Settings](always-on-vpn/deploy/vpn-deploy-dns-firewall.md)
 - [VPN Profile to use Azure AD Conditional Access](always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md#optional-configure-the-vpn-profile-to-use-azure-ad-conditional-access)
 
 ## [Step 6.1. Configure EAP-TLS to ignore Certificate Revocation List (CRL) checking](vpn-config-eap-tls-to-ignore-crl-checking.md)
@@ -76,5 +79,7 @@ The VPN client is now able to integrate with the cloud-based Conditional Access 
 ## Related topics
  
 - [Enhancing remote access in Windows 10 with an automatic VPN profile](https://www.microsoft.com/itshowcase/Article/Content/894/Enhancing-remote-access-in-Windows-10-with-an-automatic-VPN-profile): Learn how Microsoft implements Conditional Access for VPN connectivity. VPN profiles contain all the information a device requires to connect to the corporate network, including the authentication methods that are supported and the VPN server that the device should connect to. Changes in Windows 10 Anniversary Update, including Conditional Access and single sign-on, made it possible for us to create our Always-On VPN connection profile. We created the connection profile for domain-joined and Microsoft Intune–managed devices using System Center Configuration Manager console. 
+
 - [Conditional access in Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-conditional-access-azure-portal): Security is a top concern for organizations using the cloud. A key aspect of cloud security is identity and access when it comes to managing your cloud resources. In a mobile-first, cloud-first world, users can access your organization's resources using a variety of devices and apps from anywhere. As a result of this, just focusing on who can access a resource is not sufficient anymore. In order to master the balance between security and productivity, IT professionals also need to factor how a resource is being accessed into an access control decision.
+
 - [VPN and conditional access](https://docs.microsoft.com/windows/access-protection/vpn/vpn-conditional-access): The VPN client is now able to integrate with the cloud-based Conditional Access Platform to provide a device compliance option for remote clients. Conditional Access is a policy-based evaluation engine that lets you create access rules for any Azure Active Directory (Azure AD) connected application. 
