@@ -49,16 +49,13 @@ To configure NPS, you must perform the following tasks:
 - Configure Network Policy in NPS
 - Autoenroll the NPS Server certificate
 
-
 ## [Step 4. Configure DNS and Firewall Settings for Always On VPN](vpn-deploy-dns-firewall.md)
 
 In this step, you configure DNS and Firewall settings. When remote VPN clients connect, they use the same DNS servers that your internal clients use, which allows them to resolve names in the same manner as the rest of your internal workstations. 
 
-
 ## [Step 5. Configure Windows 10 Client Always On VPN Connections](vpn-deploy-client-vpn-connections.md)
 
 In this step, you configure the Windows 10 client computers to communicate with that infrastructure with a VPN connection. You can use several technologies to configure Windows 10 VPN clients, including Windows PowerShell, System Center Configuration Manager, and Intune. All three require an XML VPN profile to configure the appropriate VPN settings. 
-
 
 ## (Optional) Step 6. Conditional access for VPN connectivity using Azure AD 
 
@@ -84,7 +81,7 @@ Since the authentication method is EAP-TLS, this registry value is only needed u
 In this step, you can add IgnoreNoRevocationCheck and set it to allow authentication of clients when the certificate does not include CRL distribution points. 
 
 
-## Step 6.2. [Create root certificates for VPN authentication with Azure AD](../../vpn-create-root-cert-for-vpn-auth-azure-ad.md)
+### Step 6.2. [Create root certificates for VPN authentication with Azure AD](../../vpn-create-root-cert-for-vpn-auth-azure-ad.md)
 
 In this step, you configure root certificates for VPN authentication with Azure AD. 
 
@@ -93,7 +90,7 @@ To configure conditional access for VPN connectivity, you need to:
 2. Download the VPN certificate.
 3. Deploy the certificate to your VPN server.
 
-## Step 6.3. [Configure the Conditional Access policy](../../vpn-config-conditional-access-policy.md)
+### Step 6.3. [Configure the Conditional Access policy](../../vpn-config-conditional-access-policy.md)
 
 In this step, you configure the conditional access policy for VPN connectivity, which triggers the creation of the VPN Server cloud application in the customer's tenant. 
 
@@ -102,17 +99,17 @@ To configure the conditional access policy, you need to:
 - Set the Cloud app to **VPN Server**.
 - Set the Grant (access control) to **Require multi-factor authentication**.  Other controls can be used if desired.
 
-## Step 6.4. [Deploy conditional access root certificates to on-premises AD](../../vpn-deploy-cond-access-root-cert-to-on-premise-ad.md)
+### Step 6.4. [Deploy conditional access root certificates to on-premises AD](../../vpn-deploy-cond-access-root-cert-to-on-premise-ad.md)
 
 
 
 
-## Step 6.5. [Create OMA-DM based VPNv2 Profiles to Windows 10 devices](../../vpn-create-oma-dm-based-vpnv2-profiles.md)
+### Step 6.5. [Create OMA-DM based VPNv2 Profiles to Windows 10 devices](../../vpn-create-oma-dm-based-vpnv2-profiles.md)
 
 
 
 
-## Step 6.6 [Configure VPNv2 Profiles](https://docs.microsoft.com/windows/access-protection/vpn/vpn-conditional-access)
+### Step 6.6 [Configure VPNv2 Profiles](https://docs.microsoft.com/windows/access-protection/vpn/vpn-conditional-access)
 
 
 
