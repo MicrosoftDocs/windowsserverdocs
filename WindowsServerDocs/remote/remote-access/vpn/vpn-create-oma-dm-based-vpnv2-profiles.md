@@ -37,17 +37,13 @@ Everything discussed in this section is the minimum needed to make this work wit
 Everything discussed in this section is the minimum needed to make this work with Conditional Access. It does not cover Split Tunneling, Using WIP, creating custom Intune device configuration profiles to get AutoVPN working, or SSO.  Integrate the settings below into the VPN profile you created earlier under [Configure Windows 10 Client Always On VPN Connections](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-client-vpn-connections).  In this example, we are integrating them into the [Configure the VPN client by using Intune](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-client-vpn-connections#configure-the-vpn-client-by-using-intune) policy.
 
 
-1.  In the Azure portal, navigate to **Intune**.
+1.  In the Intune Admin Console, click **Device configuration**, and click **Profiles**.
 
-2.  Click **Device configuration** and select **Profiles**.
+2. Click **Create profile** to start the Create profile Wizard.
 
-3.  Click **Create Profile**.
+3. Enter a **Name** for the VPN profile.
 
-4.  In Name, enter a name for the VPN profile.
-
-5.  In Platform, select **Windows 10 or later**.
-
-6.  In Profile type, select **VPN**.
+4. Under **Platform**, select **Windows 10 or later**, and then choose **VPN** from the Profile type drop-down.
 
 7. Under Settings, for **Base VPN**, verify or set the following settings:
 

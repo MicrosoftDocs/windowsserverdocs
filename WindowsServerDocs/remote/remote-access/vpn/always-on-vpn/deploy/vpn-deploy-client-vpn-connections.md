@@ -831,11 +831,11 @@ Once users are assigned to the VPN Users group, create the VPN device configurat
 
 1.  In the Intune Admin Console, click **Device configuration**, and click **Profiles**.
 
-2. Click **+Create profile** to start the Create profile Wizard.
+2. Click **Create profile** to start the Create profile Wizard.
 
 3. Enter a **Name** for the VPN profile.
 
-4. Under **Platform**, select **Windows 10 or later**, and then choose **VPN** from the Profile type drop-down.
+4. Under **Platform**, select **Windows 10 or later**, and then choose **VPN** from the Profile type drop-down. <!-- work in the instructions for custom vpn profiles -->
 
 5. Click the **Base VPN** tab and enter the name of the VPN connection as it appears on the client to the right of Connection name.
 
