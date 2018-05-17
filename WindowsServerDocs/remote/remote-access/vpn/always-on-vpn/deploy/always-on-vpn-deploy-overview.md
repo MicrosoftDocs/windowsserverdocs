@@ -17,7 +17,7 @@ author: shortpatti
 &#171; Previous: [Remote Access Always On VPN Advanced Features](always-on-vpn-adv-options.md)<br>
 &#187; Next: [Remote Access Always On VPN Deployment Planning](always-on-vpn-deploy-planning.md)
 
-You deploy Always On Virtual Private Network \(VPN\) connections for remote computers that are running Windows 10. In this topic, you learn about the VPN connection process, servers to configure, ProfileXML VPNv2 CSP node, and other tecnologies to deploy Alwasy On VPN.
+You deploy Always On Virtual Private Network \(VPN\) connections for remote computers that are running Windows 10. In this topic, you learn about the VPN connection process, servers to configure, ProfileXML VPNv2 CSP node, and other technologies to deploy Always On VPN.
 
 For this deployment, you must install a new Remote Access server that is running Windows Server 2016, as well as modify some of your existing infrastructure for the deployment.
 
