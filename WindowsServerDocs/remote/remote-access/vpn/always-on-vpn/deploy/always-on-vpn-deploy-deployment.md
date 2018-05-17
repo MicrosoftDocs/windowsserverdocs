@@ -29,9 +29,9 @@ You can deploy Always On VPN connections for remote Windows 10 client computers 
 In this step, you install and configure the server-side components necessary to support the VPN, including configuring PKI to distribute the certificates used by users, the VPN server, and the NPS server; configuring RRAS to support IKEv2 connections; and configuring the NPS server to perform authorization for the VPN connections.
 
 To configure the server infrastructure, you must perform the following tasks:
-- On a server configured with Active Directory Domain Services: Enable certificate autoenrollment in Group Policy for both computers and users, create the VPN Users Group, the VPN Servers Group, and the NPS Servers Group, and add members to each group.
-- On an Active Directory Certificate Server CA: Create the User Authentication, VPN Server Authentication, and NPS Server Authentication certificate templates.
-- On domain-joined Windows 10 clients: Enroll and validate user certificates.
+- **On a server configured with Active Directory Domain Services:** Enable certificate autoenrollment in Group Policy for both computers and users, create the VPN Users Group, the VPN Servers Group, and the NPS Servers Group, and add members to each group.
+- **On an Active Directory Certificate Server CA:** Create the User Authentication, VPN Server Authentication, and NPS Server Authentication certificate templates.
+- **On domain-joined Windows 10 clients:** Enroll and validate user certificates.
 
 ## [Step 2. Configure the Remote Access Server for Always On VPN](vpn-deploy-ras.md)
 
