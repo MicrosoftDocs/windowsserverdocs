@@ -4,7 +4,7 @@ description: Describes how to sign in to the Remote Desktop web client.
 ms.prod: windows-server-threshold
 ms.technology: remote-desktop-services
 ms.author: helohr
-ms.date: 3/26/2018
+ms.date: 05/18/2018
 ms.topic: article
 author: Heidilohr
 ms.localizationpriority: low
@@ -36,6 +36,9 @@ After you sign in, the client will take you to the **All Resources** tab, which 
 To start using an app or desktop, select the item you want to use, enter the same user name and password you used to sign in to the web client when prompted, and then select **Submit**. You might also be shown a consent dialog for redirecting the clipboard and printer. You can choose to not redirect either of these, or select **OK** to use the default settings. Wait for the web client to establish the connection, and then start using the resource as you would normally.
 
 When you're finished, you can end your session by either selecting the **Sign Out** button in the toolbar at the top of your screen or closing the browser window.
+
+>[!NOTE]
+>The web client will ask you for your credentials every time you open an app. Just use the same user name and password that you used to sign in to the web client to access the app.
 
 ## Printing from the Remote Desktop web client
 
