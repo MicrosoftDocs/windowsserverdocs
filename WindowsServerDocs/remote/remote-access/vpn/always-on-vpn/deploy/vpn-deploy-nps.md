@@ -211,6 +211,8 @@ Membership in **Administrators**, or equivalent, is the minimum required to comp
 ## Next step
 [Step 4. Configure DNS and Firewall Settings for Always On VPN](vpn-deploy-dns-firewall.md): In this step, you install Network Policy Server (NPS) by using either Windows PowerShell or the Server Manager Add Roles and Features Wizard. You also configure NPS to handle all authentication, authorization, and accounting duties for connection requests that it receives from the VPN server.
 
+---
+
 ## Related topics
 - [Configure Network Policy Server Accounting](https://docs.microsoft.com/windows-server/networking/technologies/nps/nps-accounting-configure): This topic provides you with an overview of the three types of logging for Network Policy Server (NPS) and using the Accounting Configuration wizard. By using the Accounting Configuration wizard, you can configure four accounting settings: **SQL logging only**, **Text logging only**, **Parallel logging**, and **SQL logging with backup**.
 

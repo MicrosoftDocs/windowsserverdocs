@@ -200,6 +200,8 @@ In this section, you can configure Remote Access VPN to allow IKEv2 VPN connecti
 ## Next step
 [Step 3. Install and Configure the NPS Server](vpn-deploy-nps.md): In this step, you install Network Policy Server (NPS) by using either Windows PowerShell or the Server Manager Add Roles and Features Wizard. You also configure NPS to handle all authentication, authorization, and accounting duties for connection requests that it receives from the VPN server.
 
+---
+
 ## Related topics
 [Remote Access](https://docs.microsoft.com/windows-server/remote/remote-access/remote-access): This topic provides an overview of the Remote Access server role in Windows Server 2016.
 

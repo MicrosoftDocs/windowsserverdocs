@@ -169,6 +169,8 @@ For more information, see [Network Policy Server (NPS)](https://docs.microsoft.c
 ## Next step
 [Feature Comparison of Always On VPN and DirectAccess](../../vpn-map-da.md): Learn about how Always On VPN has mitigated most of those limitations or expanded the VPN functionality beyond the capabilities of DirectAccess.
 
+---
+
 ## Related topics
 - [Microsoft server software support for Microsoft Azure virtual machines](https://support.microsoft.com/help/2721672/microsoft-server-software-support-for-microsoft-azure-virtual-machines): This article discusses the support policy for running Microsoft server software in the Microsoft Azure virtual machine environment (infrastructure-as-a-service).
 

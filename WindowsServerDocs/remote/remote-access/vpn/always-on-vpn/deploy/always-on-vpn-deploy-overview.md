@@ -153,6 +153,8 @@ For more information, see [Configure NPS to Ignore User Account Dial-in Properti
 ## Next step
 [Remote Access Always On VPN Deployment Planning](always-on-vpn-deploy-planning.md): Before you install the Remote Access server role on the computer you're planning to use as a VPN server, you must ensure that the VPN server software and hardware configuration is correct.  You must also identify which network adapter connects to the Internet and which network adapter connects to your private network. Additionally, the VPN server must be installed on a perimeter network, between the edge firewall and the perimeter firewall. 
 
+---
+
 ## Related topics
 - [VPNv2 CSP](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/vpnv2-csp):  This topic provides you with an overview of VPNv2 CSP. The VPNv2 configuration service provider allows the mobile device management (MDM) server to configure the VPN profile of the device.
 

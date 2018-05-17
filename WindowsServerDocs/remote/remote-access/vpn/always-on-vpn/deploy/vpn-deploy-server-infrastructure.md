@@ -365,6 +365,8 @@ Unlike the user certificate, you must manually enroll the VPN server’s certifi
 ## Next step
 [Step 2. Configure the Remote Access Server for Always On VPN](vpn-deploy-ras.md): In this step, you configure Remote Access VPN to allow IKEv2 VPN connections, deny connections from other VPN protocols, and assign a static IP address pool for issuance of IP addresses to connecting authorized VPN clients.
 
+---
+
 ## Related topics
 [Trusted Platform Module Technology Overview](https://docs.microsoft.com/windows/device-security/tpm/trusted-platform-module-overview): This topic describes the Trusted Platform Module (TPM) and how Windows uses it for access control and authentication. Trusted Platform Module (TPM) technology is designed to provide hardware-based, security-related functions. 
 

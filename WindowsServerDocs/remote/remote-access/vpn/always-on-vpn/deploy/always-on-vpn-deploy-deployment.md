@@ -67,6 +67,8 @@ In this optional step, you can fine-tune how authorized VPN users access your re
 ## Next step
 [Step 1. Configure the Always On VPN Server Infrastructure](vpn-deploy-server-infrastructure.md): In this step, you install and configure the server-side components necessary to support the VPN, including configuring PKI to distribute the certificates used by users, the VPN server, and the NPS server; configuring RRAS to support IKEv2 connections; and configuring the NPS server to perform authorization for the VPN connections.
 
+---
+
 ## Related topics
 - [Remote Access](https://docs.microsoft.com/windows-server/remote/remote-access/remote-access): This topic provides an overview of the Remote Access server role in Windows Server 2016.
 
