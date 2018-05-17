@@ -120,7 +120,7 @@ You can specify the series you want with these parameters:
 
 
    > [!TIP]
-   > Use tab-completion to discover available series.
+   > Use tab completion to discover available series.
 
 If you don't specify, every series available for the specified object is returned.
 
@@ -129,7 +129,7 @@ If you don't specify, every series available for the specified object is returne
 You can specify the timeframe of history you want with the `-TimeFrame` parameter.
 
    > [!TIP]
-   > Use tab-completion to discover available timeframes.
+   > Use tab completion to discover available timeframes.
 
 If you don't specify, the `MostRecent` measurement is returned.
 
