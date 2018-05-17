@@ -71,10 +71,7 @@ Everything discussed in this section is the minimum needed to make this work wit
 
     - **EAP XML\\TLSExtension**: Must be present and contain **\<EKUName>AAD Conditional Access<\/EKUName>** and **\<EKUOID>1.3.6.1.4.1.311.87<\/EKUOID>**. These values tell the VPN client which certificate in the user's store should be used to perform VPN authentication. This is required when more than one certificate is in the user's store.  
 
-8.  Under Settings, for Conditional Access, select the **Conditional access for this VPN connection** to **Enabled**. Doing this sets `<DevideCompliance><Enabled>true</Enabled>` in the VPNv2 profile, which tells the VPN clients to request an Azure AD Certificate. 
-
-
-    ![Conditional Access](../../media/Always-On-Vpn/step13-substep8.png)
+8.  Under Settings, for Conditional Access, select the **Conditional access for this VPN connection** to **Enabled**.<p>Doing this sets `<DevideCompliance><Enabled>true</Enabled>` in the VPNv2 profile, which tells the VPN clients to request an Azure AD Certificate.<p>![Conditional Access](../../media/Always-On-Vpn/step13-substep8.png)
 
 
     **Example EAP XML**<br>
