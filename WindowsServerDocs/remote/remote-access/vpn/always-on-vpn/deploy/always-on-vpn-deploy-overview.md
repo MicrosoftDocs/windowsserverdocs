@@ -154,5 +154,6 @@ For more information, see [Configure NPS to Ignore User Account Dial-in Properti
 [Remote Access Always On VPN Deployment Planning](always-on-vpn-deploy-planning.md): Before you install the Remote Access server role on the computer you're planning to use as a VPN server, you must ensure that the VPN server software and hardware configuration is correct.  You must also identify which network adapter connects to the Internet and which network adapter connects to your private network. Additionally, the VPN server must be installed on a perimeter network, between the edge firewall and the perimeter firewall. 
 
 ## Related topics
-- [VPNv2 CSP](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/vpnv2-csp)
-- [Configure Firewalls for RADIUS Traffic](https://docs.microsoft.com/windows-server/networking/technologies/nps/nps-firewalls-configure)
+- [VPNv2 CSP](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/vpnv2-csp):  This topic provides you with an overview of VPNv2 CSP. The VPNv2 configuration service provider allows the mobile device management (MDM) server to configure the VPN profile of the device.
+
+- [Configure Firewalls for RADIUS Traffic](https://docs.microsoft.com/windows-server/networking/technologies/nps/nps-firewalls-configure): This topic provides you details to configure firewalls for RADIUS traffic. Firewalls can be configured to allow or block types of IP traffic to and from the computer or device on which the firewall is running. If firewalls are not properly configured to allow RADIUS traffic between RADIUS clients, RADIUS proxies, and RADIUS servers, network access authentication can fail, preventing users from accessing network resources.  
