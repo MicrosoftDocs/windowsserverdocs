@@ -77,3 +77,5 @@ Each item in this section is a use case scenario or commonly used DirectAccess f
 
 ## Next step
 [Remote Access Always On VPN Advanced Features](always-on-vpn/deploy/always-on-vpn-adv-options.md): Beyond the deployment scenario provided in this guide, you can add other advanced VPN features to improve the security and availability of your VPN connection. For example, such components can help ensure that the connecting client is healthy before allowing a connection.
+
+---

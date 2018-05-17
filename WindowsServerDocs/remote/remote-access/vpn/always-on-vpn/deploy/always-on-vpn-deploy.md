@@ -187,3 +187,5 @@ For more information, see [Network Policy Server (NPS)](https://docs.microsoft.c
 - [AD CS Step by Step Guide: Two Tier PKI Hierarchy Deployment](https://social.technet.microsoft.com/wiki/contents/articles/15037.ad-cs-step-by-step-guide-two-tier-pki-hierarchy-deployment.aspx): This step-by-step guide describes the steps needed to set up a basic configuration of Active Directory® Certificate Services (AD CS) in a lab environment. AD CS in Windows Server® 2008 R2 provides customizable services for creating and managing public key certificates used in software security systems employing public key technologies.
 
 - [Network Policy Server (NPS)](https://docs.microsoft.com/windows-server/networking/technologies/nps/nps-top): This topic provides an overview of Network Policy Server in Windows Server 2016. Network Policy Server (NPS) allows you to create and enforce organization-wide network access policies for connection request authentication and authorization. 
+
+---

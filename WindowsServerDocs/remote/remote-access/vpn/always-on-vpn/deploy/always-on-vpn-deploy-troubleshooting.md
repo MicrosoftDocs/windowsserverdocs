@@ -116,3 +116,5 @@ By default, these logs are in comma-separated values format, but they don’t in
 If you paste this heading row as the first line of the log file, then import the file into Microsoft Excel, the columns will be properly labeled.
 
 The NPS logs can be helpful in diagnosing policy-related issues. For more information about NPS logs, see [Interpret NPS Database Format Log Files](https://technet.microsoft.com/library/cc771748.aspx).
+
+---

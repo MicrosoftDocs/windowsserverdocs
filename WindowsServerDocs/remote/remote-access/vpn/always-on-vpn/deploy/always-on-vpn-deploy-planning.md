@@ -65,3 +65,5 @@ In most environments, you can simply adjust static routes on the edge firewall a
 
 ## Next step
 [Remote Access Always On VPN Deployment](always-on-vpn-deploy-deployment.md): You can deploy Always On VPN connections for remote Windows 10 client computers that are domain-joined. You can also configure conditional access for VPN connectivity using Azure Active Directory. 
+
+---

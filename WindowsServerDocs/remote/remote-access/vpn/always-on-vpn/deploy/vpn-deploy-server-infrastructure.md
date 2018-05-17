@@ -367,3 +367,5 @@ Unlike the user certificate, you must manually enroll the VPN server’s certifi
 
 ## Related topics
 [Trusted Platform Module Technology Overview](https://docs.microsoft.com/windows/device-security/tpm/trusted-platform-module-overview): This topic describes the Trusted Platform Module (TPM) and how Windows uses it for access control and authentication. Trusted Platform Module (TPM) technology is designed to provide hardware-based, security-related functions. 
+
+---

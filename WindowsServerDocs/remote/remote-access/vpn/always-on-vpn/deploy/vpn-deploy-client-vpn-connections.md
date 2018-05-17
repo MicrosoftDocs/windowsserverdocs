@@ -12,10 +12,12 @@ author: shortpatti
 ---
 # Step 5. Configure Windows 10 Client Always On VPN Connections
 
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
+
+
 [&#171; Previous: Step 4. Configure DNS and Firewall Settings](vpn-deploy-dns-firewall.md)<br>
 [&#187; Next: Step 6. (Optional) Conditional access for VPN connectivity using Azure AD](../../ad-ca-vpn-connectivity-windows10.md)
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
 After setting up the server infrastructure, you must configure the Windows 10 client computers to communicate with that infrastructure with a VPN connection. You can use several technologies to configure Windows 10 VPN clients, including Windows PowerShell, System Center Configuration Manager, and Intune.  All three require an XML VPN profile to configure the appropriate VPN settings. 
 
@@ -911,8 +913,8 @@ After synchronization, you should see the VPN profile available on the computer.
 
 |If you want to...  |Then see...  |
 |---------|---------|
-|Fine-tune how authorized VPN users access your resources    |[Step 6. (Optional) Configure conditional access for VPN connectivity using Azure AD](../../ad-ca-vpn-connectivity-windows10.md)<p>In this step, you can fine-tune how authorized VPN users access your resources using [Azure Active Directory (Azure AD) conditional access](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-conditional-access-azure-portal). With Azure AD conditional access for virtual private network (VPN) connectivity, you can help protect the VPN connections. Conditional Access is a policy-based evaluation engine that lets you create access rules for any Azure Active Directory (Azure AD) connected application.         |
-|Migrate from DirectAccess to Always On VPN  |[Deployment scenario feature list](../../../da-always-on-vpn-migration/da-always-on-migration-overview.md)<p>This topic provides an high-level overview of the migration process, including what to plan for before the migration and the two different deployment scenarios.       |
+|Fine-tune how authorized VPN users access your resources    |[Step 6. (Optional) Configure conditional access for VPN connectivity using Azure AD](../../ad-ca-vpn-connectivity-windows10.md): In this step, you can fine-tune how authorized VPN users access your resources using [Azure Active Directory (Azure AD) conditional access](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-conditional-access-azure-portal). With Azure AD conditional access for virtual private network (VPN) connectivity, you can help protect the VPN connections. Conditional Access is a policy-based evaluation engine that lets you create access rules for any Azure Active Directory (Azure AD) connected application.         |
+|Migrate from DirectAccess to Always On VPN  |[DirectAccess to Always On VPN migration overview](../../../da-always-on-vpn-migration/da-always-on-migration-overview.md): This topic provides an high-level overview of the migration process, including what to plan for before the migration and the two different deployment scenarios.       |
 
 ## Related topics
 - [Learn more about the advanced features](always-on-vpn-adv-options.md): Beyond the deployment scenario provided in this guide, you can add other advanced VPN features to improve the security and availability of your VPN connection. For example, such components can help ensure that the connecting client is healthy before allowing a connection.
@@ -920,3 +922,5 @@ After synchronization, you should see the VPN profile available on the computer.
 - [ProfileXML XSD](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/vpnv2-profile-xsd): This topic provides the XSD for the VPN profile syntax and examples.
 
 - [EAP configuration](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/eap-configuration): The topic provides a step-by-step guide for creating an Extensible Authentication Protocol (EAP) configuration XML for the VPN profile and information about EAP certificate filtering in Windows 10.
+
+---
