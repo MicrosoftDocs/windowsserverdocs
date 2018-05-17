@@ -71,17 +71,13 @@ To deploy the trusted root certificate, you need to:
 In this step, you create OMA-DM VPNv2 profiles one of two ways. The first method is a managed deployment using Intune to deploy a VPN Device Configuration policy. The second method can be used for unmanaged environments using a PowerShell script that leverages the Common Information Model, which creates a WMI session in the user’s context. From this context, it then creates a new instance of the MDM_VPNv2_01 WMI class. 
 
 
-## [Step 6.6. Configure VPNv2 Profiles](https://docs.microsoft.com/windows/access-protection/vpn/vpn-conditional-access)
-
-The VPN client is now able to integrate with the cloud-based Conditional Access Platform to provide a device compliance option for remote clients. In this step, you configure the VPNv2 profiles with **\<DeviceCompliance> \<Enabled>true\</Enabled>**. 
-
-
 ## Next step
 [Step 6.1. Configure EAP-TLS to ignore Certificate Revocation List (CRL) checking](vpn-config-eap-tls-to-ignore-crl-checking.md): In this step, you can add **IgnoreNoRevocationCheck** and set it to allow authentication of clients when the certificate does not include CRL distribution points. By default, IgnoreNoRevocationCheck is set to 0 (disabled).
 
 ---
 
 ## Related topics
+- [Configure VPNv2 Profiles](https://docs.microsoft.com/windows/access-protection/vpn/vpn-conditional-access): The VPN client is now able to integrate with the cloud-based Conditional Access Platform to provide a device compliance option for remote clients. In this step, you configure the VPNv2 profiles with **\<DeviceCompliance> \<Enabled>true\</Enabled>**. 
  
 - [Enhancing remote access in Windows 10 with an automatic VPN profile](https://www.microsoft.com/itshowcase/Article/Content/894/Enhancing-remote-access-in-Windows-10-with-an-automatic-VPN-profile): Learn how Microsoft implements Conditional Access for VPN connectivity. VPN profiles contain all the information a device requires to connect to the corporate network, including the authentication methods that are supported and the VPN server that the device should connect to. Changes in Windows 10 Anniversary Update, including Conditional Access and single sign-on, made it possible for us to create our Always-On VPN connection profile. We created the connection profile for domain-joined and Microsoft Intune–managed devices using System Center Configuration Manager console. 
 

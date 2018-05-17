@@ -128,7 +128,6 @@
 ####### [Step 6.3. Configure the Conditional Access policy](remote-access/vpn/vpn-config-conditional-access-policy.md)
 ####### [Step 6.4. Deploy Conditional Access root certificates to on-premise AD](remote-access/vpn/vpn-deploy-cond-access-root-cert-to-on-premise-ad.md)
 ####### [Step 6.5. Create OMA-DM based VPNv2 Profiles to Windows 10 devices](remote-access/vpn/vpn-create-oma-dm-based-vpnv2-profiles.md)
-####### [Step 6.6. Configure VPNv2 Profiles](https://docs.microsoft.com/windows/access-protection/vpn/vpn-conditional-access)
 #### [Migrating from DirectAccess to Always On VPN](remote-access/da-always-on-vpn-migration/da-always-on-migration-overview.md)
 ##### [Plan the DirectAccess to Always On VPN Migration](remote-access/da-always-on-vpn-migration/da-always-on-migration-planning.md)
 ##### [Migrate DirectAccess to Always On VPN](remote-access/da-always-on-vpn-migration/da-always-on-migration-deploy.md)
@@ -205,6 +204,17 @@
 
 ### [Virtual Private Networking (VPN)](remote-access/vpn/vpn-top.md)
 #### [VPN Device Tunnels in Windows 10](remote-access/vpn/vpn-device-tunnel-config.md)
+#### [VPN connection types](https://docs.microsoft.com/en-us/windows/security/identity-protection/vpn/vpn-connection-type)
+#### [VPN routing decisions](https://docs.microsoft.com/en-us/windows/security/identity-protection/vpn/vpn-routing)
+#### [VPN authentication options](https://docs.microsoft.com/en-us/windows/security/identity-protection/vpn/vpn-authentication)
+#### [VPN and conditional access](https://docs.microsoft.com/windows/access-protection/vpn/vpn-conditional-access)
+#### [VPN name resolution](https://docs.microsoft.com/en-us/windows/security/identity-protection/vpn/vpn-name-resolution)
+#### [VPN auto-triggered profile options](https://docs.microsoft.com/en-us/windows/security/identity-protection/vpn/vpn-auto-trigger-profile)
+#### [VPN security features](https://docs.microsoft.com/en-us/windows/security/identity-protection/vpn/vpn-security-features)
+#### [VPN profile options](https://docs.microsoft.com/en-us/windows/security/identity-protection/vpn/vpn-profile-options)
+#### [How to configure Diffie Hellman protocol over IKEv2 VPN connections](https://docs.microsoft.com/en-us/windows/security/identity-protection/vpn/how-to-configure-diffie-hellman-protocol-over-ikev2-vpn-connections)
+#### [How to use single sign on (SSO) over VPN and Wi-Fi connections](https://docs.microsoft.com/en-us/windows/security/identity-protection/vpn/how-to-use-single-sign-on-sso-over-vpn-and-wi-fi-connections)
+
 
 #### [DirectAccess](remote-access/directaccess/directAccess.md)
 ##### [DirectAccess Deployment paths in Windows Server](remote-access/directaccess/directAccess-Deployment-paths-in-Windows-Server.md)
