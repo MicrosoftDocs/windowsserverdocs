@@ -61,3 +61,4 @@ For more information, see [How to Enable or Disable Certificate Revocation Check
 ## Next step
 
 [Step 6.2. Create root certificates for VPN authentication with Azure AD](vpn-create-root-cert-for-vpn-auth-azure-ad.md): In this step, you configure root certificates for VPN authentication with Azure AD. 
+

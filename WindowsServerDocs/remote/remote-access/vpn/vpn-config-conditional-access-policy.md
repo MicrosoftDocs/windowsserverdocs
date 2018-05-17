@@ -94,5 +94,4 @@ After a root certificate has been created, the 'VPN connectivity' triggers the c
 
 
 ## Next step
-
 [Step 6.4. Deploy conditional access root certificates to on-premises AD](vpn-deploy-cond-access-root-cert-to-on-premise-ad.md): In this step, you deploy a trusted root certificate for VPN authentication to your on-premises AD.
