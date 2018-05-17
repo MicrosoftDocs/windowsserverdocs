@@ -121,14 +121,20 @@ For more information about TPM key attestation in Windows 10, see [TPM Key Attes
 [Remote Access Always On VPN Deployment Overview](always-on-vpn-deploy-overview.md): You deploy Always On Virtual Private Network \(VPN\) connections for remote computers that are running Windows 10. In this topic, you learn about the VPN connection process, servers to configure, ProfileXML VPNv2 CSP node, and other tecnologies to deploy Alwasy On VPN.
 
 ## Related topics
-- [NPS Proxy Server Load Balancing](../../../../../networking/technologies/nps/nps-manage-proxy-lb.md)
-- [Deploy Remote Access in a Cluster](https://docs.microsoft.com/windows-server/remote/remote-access/ras/cluster/deploy-remote-access-in-cluster)
-- [Overview of Traffic Manager](https://docs.microsoft.com/azure/traffic-manager/traffic-manager-overview)
-- [Microsoft Azure Traffic Manager](https://azure.microsoft.com/en-us/services/traffic-manager)
-- [Windows Hello for Business](https://docs.microsoft.com/windows/access-protection/hello-for-business/hello-identity-verification)
-- [Enabling Remote Access with Windows Hello for Business in Windows 10](https://msdn.microsoft.com/library/mt728163.aspx)
-- [Integrate RADIUS authentication with Azure Multi-Factor Authentication Server](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication-get-started-server-radius)
-- [VPN security features](https://docs.microsoft.com/windows/access-protection/vpn/vpn-security-features)
-- [VPN auto-triggered profile options](https://docs.microsoft.com/windows/access-protection/vpn/vpn-auto-trigger-profile)
-- [VPN and conditional access](https://docs.microsoft.com/windows/access-protection/vpn/vpn-conditional-access)
-- [TPM Key Attestation](https://docs.microsoft.com/windows-server/identity/ad-ds/manage/component-updates/tpm-key-attestation)
+- [NPS Proxy Server Load Balancing](../../../../../networking/technologies/nps/nps-manage-proxy-lb.md): Remote Authentication Dial-In User Service (RADIUS) clients, which are network access servers such as virtual private network (VPN) servers and wireless access points, create connection requests and send them to RADIUS servers such as NPS. In some cases, an NPS server might receive too many connection requests at one time, resulting in degraded performance or an overload.
+
+- [Overview of Traffic Manager](https://docs.microsoft.com/azure/traffic-manager/traffic-manager-overview): This topic provides an overview of Azure Traffic Manager, which allows you to control the distribution of user traffic for service endpoints. Traffic Manager uses the Domain Name System (DNS) to direct client requests to the most appropriate endpoint based on a traffic-routing method and the health of the endpoints. 
+
+- [Windows Hello for Business](https://docs.microsoft.com/windows/access-protection/hello-for-business/hello-identity-verification): This topic provides the prerequisites, such as cloud only deployments and hybrid deployments.  This topic also lists frequently asked questions about Windows Hellow for Business.
+
+- [Technical case study: Enabling Remote Access with Windows Hello for Business in Windows 10](https://msdn.microsoft.com/library/mt728163.aspx): In this technical case study you learn how Microsoft implements remote access with Windows Hello for Business.  Windows Hello for Business is a private/public key or certificate-based authentication approach for organizations and consumers that goes beyond passwords. This form of authentication relies on key pair credentials that can replace passwords and are resistant to breaches, thefts, and phishing. With Windows Hello, biometric authentication and recognition is easy with a face or fingerprint. PCs with fingerprint readers are ready to use Windows Hello.
+
+- [Integrate RADIUS authentication with Azure Multi-Factor Authentication Server](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication-get-started-server-radius): This topic walks you through adding and configuring a RADIUS client authentication with Azure Multi-Factor Authentication Server. RADIUS is a standard protocol to accept authentication requests and to process those requests. The Azure Multi-Factor Authentication Server can act as a RADIUS server. Insert it between your RADIUS client (VPN appliance) and your authentication target to add two-step verification. Your authentication target could be Active Directory, an LDAP directory, or another RADIUS server. For Azure Multi-Factor Authentication (MFA) to function, you must configure the Azure MFA Server so that it can communicate with both the client servers and the authentication target. The Azure MFA Server accepts requests from a RADIUS client, validates credentials against the authentication target, adds Azure Multi-Factor Authentication, and sends a response back to the RADIUS client. The authentication request only succeeds if both the primary authentication and the Azure Multi-Factor Authentication succeed.
+
+- [VPN security features](https://docs.microsoft.com/windows/access-protection/vpn/vpn-security-features): This topic provides you VPN security guidelines for LockDown VPN, Windows Information Protection (WIP) integration with VPN, and traffic filters. 
+
+- [VPN auto-triggered profile options](https://docs.microsoft.com/windows/access-protection/vpn/vpn-auto-trigger-profile): This topic provides you VPN auto-triggered profile options, such as app trigger, name-based trigger, and Always On.
+
+- [VPN and conditional access](https://docs.microsoft.com/windows/access-protection/vpn/vpn-conditional-access): This topic provides you an overview of cloud-based Conditional Access Platform to provide a device compliance option for remote clients. Conditional Access is a policy-based evaluation engine that lets you create access rules for any Azure Active Directory (Azure AD) connected application. 
+
+- [TPM Key Attestation](https://docs.microsoft.com/windows-server/identity/ad-ds/manage/component-updates/tpm-key-attestation): This topic provides you an overview of Trusted Platform Module (TPM) and steps to deploy TPM key attestation. You can also find troubleshooting information and steps to resolve issues. 
