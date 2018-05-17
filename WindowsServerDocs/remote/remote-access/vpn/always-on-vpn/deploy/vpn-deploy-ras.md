@@ -129,7 +129,7 @@ In this section, you can configure Remote Access VPN to allow IKEv2 VPN connecti
     >[!IMPORTANT] 
     >Save this text string. When you configure the NPS Server on your Organization/Corporate network, you will add this VPN Server as a RADIUS Client. During that configuration, you will use this same shared secret so that the NPS and VPN Servers can communicate.
 
-1.  In **Add RADIUS Server**, review the default settings for:
+12.  In **Add RADIUS Server**, review the default settings for:
 
     -   **Time-out**
 
@@ -137,16 +137,16 @@ In this section, you can configure Remote Access VPN to allow IKEv2 VPN connecti
 
     -   **Port**
 
-2.  If necessary, change the values to match the requirements for your environment and click **OK**.<p>A NAS is a device that provides some level of access to a larger network. A NAS using a RADIUS infrastructure is also a RADIUS client, sending connection requests and accounting messages to a RADIUS server for authentication, authorization, and accounting.
+13.  If necessary, change the values to match the requirements for your environment and click **OK**.<p>A NAS is a device that provides some level of access to a larger network. A NAS using a RADIUS infrastructure is also a RADIUS client, sending connection requests and accounting messages to a RADIUS server for authentication, authorization, and accounting.
 
-3.  Review the setting for **Accounting provider**.
+14.  Review the setting for **Accounting provider**.
 
-| If you want the...                                        | Then…                                                                                                          |
-|-----------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Remote Access activity logged on the Remote Access server | Make sure that **Windows Accounting** is selected.                                                             |
-| NPS to perform accounting services for VPN                | Change **Accounting provider** to **RADIUS Accounting** and then configure the NPS as the accounting provider. |
+    | If you want the...  | Then…             |
+    |---------------------|-------------------|
+    | Remote Access activity logged on the Remote Access server | Make sure that **Windows Accounting** is selected.      |
+    | NPS to perform accounting services for VPN   | Change **Accounting provider** to **RADIUS Accounting** and then configure the NPS as the accounting provider. |
 
-4.  Click the **IPv4** tab and do the following:
+15.  Click the **IPv4** tab and do the following:
 
     1.  Click **Static address pool**.
 
@@ -161,9 +161,9 @@ In this section, you can configure Remote Access VPN to allow IKEv2 VPN connecti
 
     1.  (Optional) If you are using DHCP, click **Adapter**, and in the list of results, click the Ethernet adapter connected to your internal perimeter network.
 
-1.  (Optional) *If you are configuring conditional access for VPN connectivity*, from the **Certificate** drop-down list, under SSL Certificate Binding, select the VPN server authentication.
+16.  (Optional) *If you are configuring conditional access for VPN connectivity*, from the **Certificate** drop-down list, under SSL Certificate Binding, select the VPN server authentication.
 
-2.  (Optional) *If you are configuring conditional access for VPN connectivity*, in the Routing and Remote Access MMC, expand **Policies\\Network Policies** and do the following: 
+17.  (Optional) *If you are configuring conditional access for VPN connectivity*, in the Routing and Remote Access MMC, expand **Policies\\Network Policies** and do the following: 
 
     1.  Right-the **Connections to Microsoft Routing and Remote Access Server** network policy and select **Properties**.
 
