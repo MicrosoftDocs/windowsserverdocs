@@ -9,14 +9,14 @@ ms.technology: security-tls-ssl
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: de510bb0-a9f6-4bbe-8f8a-8dd7473bbae8
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
-ms.date: 10/12/2016
+author: justinha
+ms.author: justinha
+manager: brianlic-msft
+ms.date: 05/16/2018
 ---
 # Transport Layer Security protocol
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows 10
 
 This topic for the IT professional describes how the Transport Layer Security (TLS) protocol works and provides links to the IETF RFCs for TLS 1.0, TLS 1.1, and TLS 1.2.
 

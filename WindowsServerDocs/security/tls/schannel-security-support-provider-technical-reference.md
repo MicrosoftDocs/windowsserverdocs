@@ -12,11 +12,11 @@ ms.assetid: 5bf9c4a5-cdc1-49eb-bf9a-8bf987410b63
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 05/16/2018
 ---
 # Schannel Security Support Provider Technical Reference
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows 10
 
 This reference for IT professionals contains information about the Transport Layer Security (TLS) protocol, the Secure Sockets Layer (SSL) protocol, and the Datagram Transport Layer Security (DTLS) protocol as implemented by the Schannel Security Support Provider (SSP).
 
