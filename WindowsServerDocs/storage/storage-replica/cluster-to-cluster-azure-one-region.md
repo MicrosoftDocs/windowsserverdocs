@@ -147,12 +147,12 @@ Grant-SRAccess -ComputerName az2az3 -Cluster SRAZC1
 
 ## Create Partnership
 
-    - For cluster **SRAZC1**.
-        - Volume location:- c:\ClusterStorage\DataDisk1
-        - Log location:- g:
-    - For cluster **SRAZC2**
-        - Volume location:- c:\ClusterStorage\DataDisk2
-        - Log location:- g:
+- For cluster **SRAZC1**.
+   - Volume location:- c:\ClusterStorage\DataDisk1
+   - Log location:- g:
+- For cluster **SRAZC2**
+    - Volume location:- c:\ClusterStorage\DataDisk2
+    - Log location:- g:
 
     Run the following command:
 
