@@ -39,7 +39,7 @@ tftp [-i] [<Host>] [{get | put}] <Source> [<Destination>]
 ## <a name="BKMK_Examples"></a>Examples  
 copy the file **boot.img** from the remote computer **Host1**.  
 ```  
-tftp  i Host1 get boot.img  
+tftp  -i Host1 get boot.img  
 ```  
 ## additional references  
 -   [Command-Line Syntax Key](command-line-syntax-key.md)  
