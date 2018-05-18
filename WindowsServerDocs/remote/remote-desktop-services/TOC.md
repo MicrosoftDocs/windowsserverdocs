@@ -76,5 +76,6 @@
 ### [Get started with Remote Desktop client on Mac](clients/remote-desktop-mac.md)
 ### [What's new in the MacOS client?](clients/mac-whatsnew.md)
 ### [Access the Remote Desktop web client](clients/remote-desktop-web-client.md)
+### [What's new in the web client?](clients/web-client-whatsnew.md)
 ### [Remote Desktop client FAQ](clients/remote-desktop-client-faq.md)
 ### [Remote Desktop URI scheme](clients/remote-desktop-uri.md)
