@@ -15,7 +15,7 @@ ms.date: 05/15/2018
 ms.author: pashort
 author: shortpatti
 manager: elizapo
-ms.reviewer: jairoc
+ms.reviewer: deverette
 ---
 
 # Step 6.5. Create OMA-DM based VPNv2 Profiles to Windows 10 devices

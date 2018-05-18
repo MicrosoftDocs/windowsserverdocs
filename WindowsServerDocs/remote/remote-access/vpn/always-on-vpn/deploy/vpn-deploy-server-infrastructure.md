@@ -9,6 +9,7 @@ manager: elizapo
 ms.author: pashort
 author: shortpatti
 ms.date: 05/18/2018
+ms.reviewer: deverette
 ---
 
 # Step 1. Configure the Server Infrastructure

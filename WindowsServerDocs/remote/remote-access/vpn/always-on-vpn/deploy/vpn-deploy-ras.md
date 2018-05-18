@@ -9,6 +9,7 @@ manager: elizapo
 ms.author: pashort
 author: shortpatti
 ms.date: 05/18/2018
+ms.reviewer: deverette
 ---
 
 # Step 2. Configure the Remote Access Server for Always On VPN

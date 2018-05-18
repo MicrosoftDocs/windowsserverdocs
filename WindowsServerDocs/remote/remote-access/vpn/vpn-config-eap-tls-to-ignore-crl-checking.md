@@ -15,7 +15,7 @@ ms.date: 05/15/2018
 ms.author: pashort
 author: shortpatti
 manager: elizapo
-ms.reviewer: jairoc
+ms.reviewer: deverette
 ---
 
 # Step 6.1. Configure EAP-TLS to ignore Certificate Revocation List (CRL) checking

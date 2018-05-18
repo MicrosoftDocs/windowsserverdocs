@@ -9,6 +9,7 @@ manager: elizapo
 ms.author: pashort
 author: shortpatti
 ms.date: 05/18/2018
+ms.reviewer: deverette
 ---
 
 # Step 6. (Optional) Conditional access for VPN connectivity using Azure AD
@@ -29,7 +30,7 @@ To configure Azure Active Directory conditional access for VPN connectivity, you
 - [Remote Access Server for Always On VPN](always-on-vpn/deploy/vpn-deploy-ras.md)
 - [Network Policy Server](always-on-vpn/deploy/vpn-deploy-nps.md)
 - [DNS and Firewall Settings](always-on-vpn/deploy/vpn-deploy-dns-firewall.md)
-- [VPN Profile to use Azure AD Conditional Access](always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md#optional-configure-the-vpn-profile-to-use-azure-ad-conditional-access)
+- [Windows 10 Client Always On VPN Connections](always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md)
 
 ## [Step 6.1. Configure EAP-TLS to ignore Certificate Revocation List (CRL) checking](vpn-config-eap-tls-to-ignore-crl-checking.md)
 

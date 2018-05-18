@@ -15,7 +15,7 @@ ms.date: 05/15/2018
 ms.author: pashort
 author: shortpatti
 manager: elizapo
-ms.reviewer: jairoc
+ms.reviewer: deverette
 ---
 
 
