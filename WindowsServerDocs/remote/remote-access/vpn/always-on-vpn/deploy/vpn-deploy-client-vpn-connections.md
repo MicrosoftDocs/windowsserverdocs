@@ -829,11 +829,11 @@ Once users are assigned to the VPN Users group, create the VPN device configurat
 
 ### Create the Always On VPN configuration policy
 
-1.	Sign into the Azure portal.
+1.	Sign into the [Azure portal](https://portal.azure.com/).
 
 2.	Go to **Intune** > **Device Configuration** > **Profiles**.
 
-3.	Click **Create Profile**.
+3.	Click **Create Profile** to start the Create profile Wizard.
 
 4.	Enter a **Name** for the VPN profile and (optionally) a description.
 
@@ -842,86 +842,44 @@ Once users are assigned to the VPN Users group, create the VPN device configurat
     >[!TIP]
     >If you are creating a custom VPN profileXML, see [Apply ProfileXML using Intune](https://docs.microsoft.com/en-us/windows/security/identity-protection/vpn/vpn-profile-options#apply-profilexml-using-intune) for the instructions.
 
-6. Under the **Base VPN** tab, enter the name of the VPN connection as it appears on the client to the right of Connection name.
+6. Under the **Base VPN** tab, verify or set the following settings:
 
-7. Enter a **Description** of the VPN server, then enter the **IP Address or FQDN** of the VPN server. <p>If this is the default VPN server, select True and then click Add.
+   - **Connection name:** Enter the name of the VPN connection as it appears on the client computer in the **VPN** tab under **Settings**, for example _Contoso AutoVPN_.  Users see this name when they browse their device for the list of available VPN connections.
 
-8. Under **Connection type**, select **IKEv2** from the drop-down to expose additional options.
+   - **Servers:** Add one or more VPN servers by clicking **Add.**
 
-9. Select **Enable** to the right of **Always On**.
+   - **Description** and **IP Address or FQDN:** Enter the description and IP Address or FQDN of the VPN server. These values must align with the Subject Name in the VPN server's authentication certificate. 
 
-10. Copy the following XML string to a text editor:
+   - **Default server:** If this is the default VPN server, set to **True**. Doing this enables this server as the default server that devices use to establish the connection. Set only one server as the default.
 
-    >[!Important]
-    >Do not use the sample thumbprint in the \<TrustedRootCA>\</TrustedRootCA> section below.  The TrustedRootCA must be the certificate thumbprint of you on-premises root certificate authority. Not the cloud root certificate and not the intermediate issuing CA certificate thumbprint.
+   - **Connection type:** Set to **IKEv2**. If you set it to Automatic, the VPN client attempts all connections types. 
+
+   - **Always On:** Set to **Enable** to connect to the VPN automatically at the sign-in and stay connected until the user manually disconnects.
+
+    - **Remember credentials at each logon**:  Boolean value (true or false) for caching credentials. If set to true, credentials are cached whenever possible.
+
+7. Copy the following XML string to a text editor:
 
     ```XML
     <EapHostConfig xmlns="http://www.microsoft.com/provisioning/EapHostConfig"><EapMethod><Type xmlns="http://www.microsoft.com/provisioning/EapCommon">25</Type><VendorId xmlns="http://www.microsoft.com/provisioning/EapCommon">0</VendorId><VendorType xmlns="http://www.microsoft.com/provisioning/EapCommon">0</VendorType><AuthorId xmlns="http://www.microsoft.com/provisioning/EapCommon">0</AuthorId></EapMethod><Config xmlns="http://www.microsoft.com/provisioning/EapHostConfig"><Eap xmlns="http://www.microsoft.com/provisioning/BaseEapConnectionPropertiesV1"><Type>25</Type><EapType xmlns="http://www.microsoft.com/provisioning/MsPeapConnectionPropertiesV1"><ServerValidation><DisableUserPromptForServerValidation>true</DisableUserPromptForServerValidation><ServerNames>NPS.contoso.com</ServerNames><TrustedRootCA>5a 89 fe cb 5b 49 a7 0b 1a 52 63 b7 35 ee d7 1c c2 68 be 4b </TrustedRootCA></ServerValidation><FastReconnect>true</FastReconnect><InnerEapOptional>false</InnerEapOptional><Eap xmlns="http://www.microsoft.com/provisioning/BaseEapConnectionPropertiesV1"><Type>13</Type><EapType xmlns="http://www.microsoft.com/provisioning/EapTlsConnectionPropertiesV1"><CredentialsSource><CertificateStore><SimpleCertSelection>true</SimpleCertSelection></CertificateStore></CredentialsSource><ServerValidation><DisableUserPromptForServerValidation>true</DisableUserPromptForServerValidation><ServerNames>NPS.contoso.com</ServerNames><TrustedRootCA>5a 89 fe cb 5b 49 a7 0b 1a 52 63 b7 35 ee d7 1c c2 68 be 4b </TrustedRootCA></ServerValidation><DifferentUsername>false</DifferentUsername><PerformServerValidation xmlns="http://www.microsoft.com/provisioning/EapTlsConnectionPropertiesV2">true</PerformServerValidation><AcceptServerName xmlns="http://www.microsoft.com/provisioning/EapTlsConnectionPropertiesV2">true</AcceptServerName></EapType></Eap><EnableQuarantineChecks>false</EnableQuarantineChecks><RequireCryptoBinding>false</RequireCryptoBinding><PeapExtensions><PerformServerValidation xmlns="http://www.microsoft.com/provisioning/MsPeapConnectionPropertiesV2">true</PerformServerValidation><AcceptServerName xmlns="http://www.microsoft.com/provisioning/MsPeapConnectionPropertiesV2">true</AcceptServerName></PeapExtensions></EapType></Eap></Config></EapHostConfig>
     ```
-9.  Replace the **TrustedRootCA** in the sample with the certificate thumbprint of your on-premises root certificate authority.<p>*If you are configuring conditional access for VPN connectivity*, replace in both places.
+
+9.  Replace the **\<TrustedRootCA>5a 89 fe cb 5b 49 a7 0b 1a 52 63 b7 35 ee d7 1c c2 68 be 4b<\/TrustedRootCA>** in the sample with the certificate thumbprint of your on-premises root certificate authority in both places.
   
     >[!Important]
-    >Do not use the cloud root certificate or intermediate issuing CA certificate thumbprint.
+    >Do not use the sample thumbprint in the \<TrustedRootCA>\</TrustedRootCA> section below.  The TrustedRootCA must be the certificate thumbprint of you on-premises root certificate authority. Not the cloud root certificate and not the intermediate issuing CA certificate thumbprint.
 
-    `\</ServerNames>\<TrustedRootCA>5a 89 fe cb 5b 49 a7 0b 1a 52 63 b7 35 ee d7 1c c2 68 be 4b \</TrustedRootCA>\</ServerValidation>`
-
-10. Replace the **ServerName** with the name of the NPS server.<p>*If you are configuring conditional access for VPN connectivity*, replace in both places. 
-
-    `\<ServerNames>NPS.contoso.com\</ServerNames>`
-
-11. Make sure that **DisableUserPromptForServerValidation** is set to **true**.
+10. Replace the **\<ServerNames>NPS.contoso.com\</ServerNames>** with the name of the NPS server in both places. 
 
 12. Copy the revised XML sting and paste into the **EAP Xml** box under the Base VPN tab and click **OK**.
 
-12. Next, verify the VPN connection.
+13. **Next step**: 
 
-## Verify the VPN connection:
-    
-1. Sign in to a domain-joined client computer as a member of the **VPN Users** group.
+    |If you want to...  |Then see...  |
+    |---------|---------|
+    |Configure Conditional Access for VPN     |[Step 6. (Optional) Conditional access for VPN connectivity using Azure AD](../../ad-ca-vpn-connectivity-windows10.md)         |
+    |Learn more the advanced VPN features  |[Advanced VPN Features](always-on-vpn-adv-options.md#advanced-vpn-features)         |
 
-2. On the Start menu, type **VPN**, and press Enter.
-
-3. In the details pane, click **Add a VPN connection**.
-
-4. In the VPN Provider list, click **Windows (built-in)**.
-
-5. In Connection Name, enter the name of the VPN profile.
-
-6. In Server name or address, enter the **external** FQDN of your VPN server \(for example, **vpn.contoso.com**\).
-
-7. In VPN type, select **Automatic**.
-
-8. In Type of sign-in info, select **User name and password**.
-
-9. Enter the user's logon credentials.
-
-10. Click **Save**, and in the Setting window, click the VPN connection you just added and click **Connect**.
-    
-
-### (Optional) Configure the VPN Profile to use Azure AD Conditional Access
-
-After verifying that the VPN using on-premises certificates works properly, you can add the Conditional Access for VPN layer.
-
-1. In the Intune portal, click **Properties** > **Settings** > **Conditional Access**.
-    
-2. Under the **Base VPN** tab, extend **EAP Xml** to include a filter that gives the VPN client the logic it needs to retrieve the AAD Conditional Access certificate from the user's certificate store instead of leaving it to chance and using the first certificate discovered.
-
-    >[!NOTE]
-    >Without this, the VPN client could retrieve the user certificate issued from the on-premise certificate authority, resulting in a failed VPN connection.
-
-    ![Intune portal](../../../../media/Always-On-Vpn/intune-eap-xml.png)
-
-3. Locate the section that ends with **\</AcceptServerName>\</EapType>** and insert the following string between these two values to provide the VPN client with the logic to select the AAD Conditional Access Certificate:
-
-    ```XML
-    <TLSExtensions xmlns="http://www.microsoft.com/provisioning/EapTlsConnectionPropertiesV2"><FilteringInfo xmlns="http://www.microsoft.com/provisioning/EapTlsConnectionPropertiesV3"><EKUMapping><EKUMap><EKUName>AAD Conditional Access</EKUName><EKUOID>1.3.6.1.4.1.311.87</EKUOID></EKUMap></EKUMapping><ClientAuthEKUList Enabled="true"><EKUMapInList><EKUName>AAD Conditional Access</EKUName></EKUMapInList></ClientAuthEKUList></FilteringInfo></TLSExtensions>
-    ```
-
-4. Toogle **Conditional access for this VPN connection** to **Enabled**.<p>Enabling this setting changes the **\<DeviceCompliance>\<Enabled>true\</Enabled>** setting in the VPNv2 Profile XML.<p>This tells the VPN client to call Azure AD to get a token. When the Conditional Access policy targeting '**VPN Server**' as the '**Cloud app**' has been satisfied, Azure AD issues a token in the form of a short-lived certificate that is placed into the user's certificate store.
-
-    ![Conditional Access for Always On VPN - Properties](../../../../media/Always-On-Vpn/vpn-conditional-access-azure-ad.png)
-
-5. Click **OK**.
 
 ### Sync the Always On VPN configuration policy with Intune
 
