@@ -824,9 +824,10 @@ You should see the new VPN profile shortly.
 To use Intune to deploy Windows 10 Remote Access Always On VPN profiles, you can configure the ProfileXML CSP node by using the VPN profile you created in the section [Create the ProfileXML configuration files](#bkmk_ProfileXML), or you can use the base EAP XML sample provided below.
 
 >[!NOTE]
->Intune now uses Azure AD groups. If Azure AD Connect synced the VPN Users group from on-premises to Azure AD, then there is no need for this step.
+>Intune now uses Azure AD groups. If Azure AD Connect synced the VPN Users group from on-premises to Azure AD and users have been assigned to the VPN Users group you are ready to proceed.
 
-Once users are assigned to the VPN Users group, create the VPN device configuration policy with which to configure the Windows 10 client computers for the users you added to the group. You can copy the contents of the VPN_Profile.xml file that you created in the section “Create the ProfileXML configuration files” into the policy’s EAP Xml window.  Since the Intune template provides VPN parameters, the only portion of the VPN_Profile.xml that needs to be copied starts with \<EapHostConfig> xmlns and ends with \</EapHostConfig>.
+Create the VPN device configuration policy with which to configure the Windows 10 client computers for the users you added to the group. You can copy the contents of the VPN_Profile.xml file that you created in the section “Create the ProfileXML configuration files” into the policy’s EAP Xml window. Since the Intune template provides VPN parameters, the only portion of the VPN_Profile.xml that needs to be copied starts with \<EapHostConfig> xmlns and ends with \</EapHostConfig>.
+
 
 ### Create the Always On VPN configuration policy
 
@@ -872,14 +873,9 @@ Once users are assigned to the VPN Users group, create the VPN device configurat
 
 10. Replace the **\<ServerNames>NPS.contoso.com\</ServerNames>** with the name of the NPS server in both places. 
 
-12. Copy the revised XML sting and paste into the **EAP Xml** box under the Base VPN tab and click **OK**.
+11. Copy the revised XML string and paste into the **EAP Xml** box under the Base VPN tab and click **OK**.<p>An Always On VPN Device Configuration policy using EAP is created in Intune.
 
-13. **Next step**: 
-
-    |If you want to...  |Then see...  |
-    |---------|---------|
-    |Configure Conditional Access for VPN     |[Step 6. (Optional) Conditional access for VPN connectivity using Azure AD](../../ad-ca-vpn-connectivity-windows10.md)         |
-    |Learn more the advanced VPN features  |[Advanced VPN Features](always-on-vpn-adv-options.md#advanced-vpn-features)         |
+12. **Next step:** Continue to the next section to Sync the Always On VPN configuration policy with Intune.
 
 
 ### Sync the Always On VPN configuration policy with Intune
@@ -898,10 +894,13 @@ To test the configuration policy, sign in to a Windows 10 client computer as th
 
 After synchronization, you should see the VPN profile available on the computer.
 
+
 ## Next steps
 |If you want to...  |Then see...  |
 |---------|---------|
-|Fine-tune how authorized VPN users access your resources    |[Step 6. (Optional) Configure conditional access for VPN connectivity using Azure AD](../../ad-ca-vpn-connectivity-windows10.md): In this step, you can fine-tune how authorized VPN users access your resources using [Azure Active Directory (Azure AD) conditional access](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-conditional-access-azure-portal). With Azure AD conditional access for virtual private network (VPN) connectivity, you can help protect the VPN connections. Conditional Access is a policy-based evaluation engine that lets you create access rules for any Azure Active Directory (Azure AD) connected application.         |
+
+|Configure Conditional Access for VPN    |[Step 6. (Optional) Configure conditional access for VPN connectivity using Azure AD](../../ad-ca-vpn-connectivity-windows10.md): In this step, you can fine-tune how authorized VPN users access your resources using [Azure Active Directory (Azure AD) conditional access](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-conditional-access-azure-portal). With Azure AD conditional access for virtual private network (VPN) connectivity, you can help protect the VPN connections. Conditional Access is a policy-based evaluation engine that lets you create access rules for any Azure Active Directory (Azure AD) connected application.         |
+|Learn more the advanced VPN features  |[Advanced VPN Features](always-on-vpn-adv-options.md#advanced-vpn-features): This page provides guidance on how to enable VPN Traffic Filters, how to configure Automatic VPN connections using App-Triggers, and how to configure NPS to only allow VPN Connections from clients using certificates issued by Azure AD.        |
 |Migrate from DirectAccess to Always On VPN  |[DirectAccess to Always On VPN migration overview](../../../da-always-on-vpn-migration/da-always-on-migration-overview.md): This topic provides an high-level overview of the migration process, including what to plan for before the migration and the two different deployment scenarios.       |
 
 ---
