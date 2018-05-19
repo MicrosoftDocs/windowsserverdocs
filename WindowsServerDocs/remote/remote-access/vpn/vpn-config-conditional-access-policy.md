@@ -28,13 +28,15 @@ ms.reviewer: deverette
 
 In this step, you configure the conditional access policy for VPN connectivity. 
 
-After a root certificate has been created, the 'VPN connectivity' triggers the creation of the 'VPN Server' cloud application in the customer's tenant. Create a Conditional Access policy that is assigned to VPN users and set the **Cloud app** to **VPN Server**: 
+When the first root certificate is created in the 'VPN connectivity' blade, it automatically creates a 'VPN Server' cloud application in the tenant. Create a Conditional Access policy that is assigned to VPN users group and scope the **Cloud app** to **VPN Server**: 
 
-- **Users**: All Users
+- **Users**: VPN Users
 - **Cloud App**: VPN Server
 - **Grant (access control)**: 'Require multi-factor authentication'. Other controls can be used if desired.
 
 **Procedure:**
+This step covers creation of the most basic Conditional Access policy.  If desired, additional Conditions and Controls can be used.
+
 
 1. On the **Conditional Access** page, in the toolbar on the top, click **Add**.
 
@@ -48,7 +50,7 @@ After a root certificate has been created, the 'VPN connectivity' triggers the c
 
     ![Select users and groups](../../media/Always-On-Vpn/09.png)
 
-6. On the **Users and groups** page, perform the following steps:
+4. On the **Users and groups** page, perform the following steps:
 
     ![Select test user](../../media/Always-On-Vpn/10.png)
 
@@ -56,7 +58,7 @@ After a root certificate has been created, the 'VPN connectivity' triggers the c
 
     b. Click **Select**.
 
-    c. On the **Select** page, select your test user, and then click **Select**.
+    c. On the **Select** page, select the **VPN users** group, and then click **Select**.
 
     d. On the **Users and groups** page, click **Done**.
 

@@ -875,8 +875,6 @@ Create the VPN device configuration policy with which to configure the Windows 1
 
 11. Copy the revised XML string and paste into the **EAP Xml** box under the Base VPN tab and click **OK**.<p>An Always On VPN Device Configuration policy using EAP is created in Intune.
 
-12. **Next step:** Continue to the next section to Sync the Always On VPN configuration policy with Intune.
-
 
 ### Sync the Always On VPN configuration policy with Intune
 
@@ -899,7 +897,7 @@ After synchronization, you should see the VPN profile available on the computer.
 |If you want to...  |Then see...  |
 |---------|---------|
 |Configure Conditional Access for VPN    |[Step 6. (Optional) Configure conditional access for VPN connectivity using Azure AD](../../ad-ca-vpn-connectivity-windows10.md): In this step, you can fine-tune how authorized VPN users access your resources using [Azure Active Directory (Azure AD) conditional access](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-conditional-access-azure-portal). With Azure AD conditional access for virtual private network (VPN) connectivity, you can help protect the VPN connections. Conditional Access is a policy-based evaluation engine that lets you create access rules for any Azure Active Directory (Azure AD) connected application.         |
-|Learn more the advanced VPN features  |[Advanced VPN Features](always-on-vpn-adv-options.md#advanced-vpn-features): This page provides guidance on how to enable VPN Traffic Filters, how to configure Automatic VPN connections using App-Triggers, and how to configure NPS to only allow VPN Connections from clients using certificates issued by Azure AD.        |
+|Learn more about the advanced VPN features  |[Advanced VPN Features](always-on-vpn-adv-options.md#advanced-vpn-features): This page provides guidance on how to enable VPN Traffic Filters, how to configure Automatic VPN connections using App-Triggers, and how to configure NPS to only allow VPN Connections from clients using certificates issued by Azure AD.        |
 |Migrate from DirectAccess to Always On VPN  |[DirectAccess to Always On VPN migration overview](../../../da-always-on-vpn-migration/da-always-on-migration-overview.md): This topic provides an high-level overview of the migration process, including what to plan for before the migration and the two different deployment scenarios.       |
 
 ---

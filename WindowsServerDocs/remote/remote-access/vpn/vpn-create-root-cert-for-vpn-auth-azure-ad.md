@@ -26,13 +26,13 @@ ms.reviewer: deverette
 [&#171; Previous: Step 6.1. Configure EAP-TLS to ignore Certificate Revocation List (CRL) checking](vpn-config-eap-tls-to-ignore-crl-checking.md)<br>
 [&#187; Next: Step 6.3. Configure the Conditional Access policy](vpn-config-conditional-access-policy.md)
 
-In this step, you configure root certificates for VPN authentication with Azure AD. To configure conditional access for VPN connectivity, you need to:
+In this step, you configure root certificates for VPN authentication with Azure AD, which automatically creates a Cloud app called VPN server in the tenant. To configure conditional access for VPN connectivity, you need to:
 
 1. Create a VPN certificate in the Azure portal (you can create more than one certificate).
 2. Download the VPN certificate.
 2. Deploy the certificate to your VPN server.
 
-Azure AD uses the VPN certificate to sign certificates issued to Windows 10 clients when authenticating to Azure AD for VPN connectivity. The certificate marked as **Primary** is the Issuer that Azure AD uses. The token that the Windows 10 client requests are a certificate that it then presents to the application, which in this case is the VPN server.
+When a user attempts a VPN connection, the VPN client makes a call into the Web Account Manager (WAM) on the Windows 10 client. WAM makes a call to the VPN Server cloud app. When the Conditions and Controls in the Conditional Access policy are satisfied, Azure AD issues a token in the form of a short-lived (1-hour0) certificate to the WAM. The WAM places the certificate in the user's certificate store and passes off control to the VPN client.  The VPN client then send the certificate issues by Azure AD to the VPN for credential validation.  Azure AD uses the certificate that is marked as **Primary** in the VPN connectivity blade as the Issuer. is issued by Azure AD is a short-lived certificate which the VPN client presents to the VPN server.
 
 In the Azure portal, you can create two certificates to manage the transition when one certificate is about to expire. When you create a certificate, you can choose whether it is the primary certificate, which is used during the authentication to sign the certificate for the connection.
 
@@ -68,6 +68,6 @@ In the Azure portal, you can create two certificates to manage the transition wh
     c. Click **Create**.
 
 ## Next steps
-[Step 6.3. Configure the Conditional Access policy](vpn-config-conditional-access-policy.md): In this step, you configure the conditional access policy for VPN connectivity, which triggers the creation of the VPN Server cloud application in the customer's tenant. 
+[Step 6.3. Configure the Conditional Access policy](vpn-config-conditional-access-policy.md): In this step, you configure the conditional access policy for VPN connectivity. 
 
 ---

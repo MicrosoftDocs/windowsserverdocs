@@ -30,11 +30,8 @@ You can use one of two methods to create OMA-DM based VPNv2 profiles. The first 
 VPNv2 profiles can also be created via SCCM, Intune or with a PowerShell Script using [VPNv2 CSP settings](https://docs.microsoft.com/en-us/windows/client-management/mdm/vpnv2-csp). 
 
 ## Managed Deployment using Intune
-If you want to use AutoVPN with Intune, you can configure Custom Device Configuration Profiles in Microsoft Intune. 
 
-Everything discussed in this section is the minimum needed to make this work with Conditional Access. It does not cover Split Tunneling, Using WIP, creating custom Intune device configuration profiles to get AutoVPN working, or SSO. 
-
-Everything discussed in this section is the minimum needed to make this work with Conditional Access. It does not cover Split Tunneling, Using WIP, creating custom Intune device configuration profiles to get AutoVPN working, or SSO.  Integrate the settings below into the VPN profile you created earlier under [Configure Windows 10 Client Always On VPN Connections](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-client-vpn-connections).  In this example, we are integrating them into the [Configure the VPN client by using Intune](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-client-vpn-connections#configure-the-vpn-client-by-using-intune) policy.
+Everything discussed in this section is the minimum needed to make this work with Conditional Access. It does not cover Split Tunneling, Using WIP, creating custom Intune device configuration profiles to get AutoVPN working, or SSO. Integrate the settings below into the VPN profile you created earlier under [Configure Windows 10 Client Always On VPN Connections](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-client-vpn-connections).  In this example, we are integrating them into the [Configure the VPN client by using Intune](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-client-vpn-connections#configure-the-vpn-client-by-using-intune) policy.
 
 **Prerequisite:**<p>
 You have configured the Windows 10 client computers to communicate with a VPN connection.  
@@ -44,7 +41,7 @@ You have configured the Windows 10 client computers to communicate with a VPN c
 
 1. In the Azure portal, click **Intune** > **Properties** > **Settings** > **Conditional Access**.
     
-2. Under the **Base VPN** tab, extend **EAP Xml** to include a filter that gives the VPN client the logic it needs to retrieve the AAD Conditional Access certificate from the user's certificate store instead of leaving it to chance and using the first certificate discovered.
+2. Under the **Base VPN** tab, extend **EAP Xml** to include a filter that gives the VPN client the logic it needs to retrieve the AAD Conditional Access certificate from the user's certificate store instead of leaving it to chance allowing it to use the first certificate discovered.
 
     >[!NOTE]
     >Without this, the VPN client could retrieve the user certificate issued from the on-premise certificate authority, resulting in a failed VPN connection.
@@ -63,12 +60,9 @@ You have configured the Windows 10 client computers to communicate with a VPN c
 
 5. Click **OK**.
 
-11. Select **Assignments**, under Include, click **Select groups to include**.
+6. Select **Assignments**, under Include, click **Select groups to include**.
 
-    >[!IMPORTANT]
-    >Ensure that you have added the users to the Azure AD group that receives this policy on all Windows 10 devices.
-
-12. Select the **VPN Users** group that receives this policy and click **Save**.
+7. Select the **VPN Users** group that receives this policy and click **Save**.
 
     ![CAP for Auto VPN Users - Assignments](../../media/Always-On-Vpn/cap-for-auto-vpn-users-assignments.png)
 
@@ -87,7 +81,13 @@ If the VPN profile does not show up on the client device, under Settings\\Networ
 
 
 ## Next step
-You are done configuring the VPN profile to use Azer AD conditional access. However, if you want to learn more about how conditional access works with VPNs, see [VPN and conditional access](https://docs.microsoft.com/windows/access-protection/vpn/vpn-conditional-access).
+You are done configuring the VPN profile to use Azure AD conditional access. 
+
+|If you want to...  |Then see...  |
+|---------|---------|
+|Learn more about how conditional access works with VPNs  |[VPN and conditional access](https://docs.microsoft.com/windows/access-protection/vpn/vpn-conditional-access): This page provides more information about how conditional access works with VPNs.      |
+|Learn more about the advanced VPN features  |[Advanced VPN Features](always-on-vpn-adv-options.md#advanced-vpn-features): This page provides guidance on how to enable VPN Traffic Filters, how to configure Automatic VPN connections using App-Triggers, and how to configure NPS to only allow VPN Connections from clients using certificates issued by Azure AD.        |
+
 
 ---
 
