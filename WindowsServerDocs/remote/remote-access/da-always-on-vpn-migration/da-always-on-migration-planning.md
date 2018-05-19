@@ -198,8 +198,8 @@ compatibility improvements in Always On VPN:
 | **Diverse management and deployment mechanisms** | You can use many management and deployment mechanisms to manage VPN settings (called a *VPN profile*), including Windows PowerShell, System Center Configuration Manager, Intune (or third-party mobile device management [MDM] tool), and Windows Configuration Designer. These options simplify the configuration of Always On VPN regardless of the client management tools you use. |
 | **Standardized VPN profile definition** | Always On VPN supports configuration using a standard XML profile (ProfileXML), providing a standard configuration template format that most management and deployment toolsets use. |
 
-<!-- next steps -->
-## Next steps
+
+## Next step
 **[Migrate from DirectAccess to Always On VPN](da-always-on-migration-deploy.md).** Migrating from DirectAccess to Always On VPN requires a specific process to migrate clients to prevent from occurring.
 
-<!-- related docs section -->
+---

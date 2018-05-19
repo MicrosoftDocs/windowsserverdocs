@@ -26,17 +26,10 @@ IKEv2 is a VPN tunneling protocol described in Internet Engineering Task Force R
 You can configure the RRAS server to support IKEv2 connections while disabling unused protocols, which reduces the server’s security footprint. Additionally, you can configure the server to assign addresses to VPN clients from a static address pool. You can feasibly assign addresses from either a pool or a DHCP server; however, using a DHCP server adds complexity to the design and delivers minimal benefits.
 
 
-
-The VPN Server is a new physical server or virtual machine (VM) that you must install to complete the steps in this guide.
-
-In the process of completing the steps in this guide, you must perform the following actions with the VPN Server.
-•	Install two Ethernet network adapters in the physical server. If you are installing the VPN server on a VM, you must create two External virtual switches, one for each physical network adapter; and then create two virtual network adapters for the VM, with each network adapter connected to one virtual switch.
-•	Install the server on your perimeter network between your edge and internal firewalls, with one network adapter connected to the External Perimeter Network, and one network adapter connected to the Internal Perimeter Network.
-•	Install and configure Remote Access as a single tenant VPN RAS Gateway for point-to-site VPN connections from remote computers.
-•	Configure Remote Access as a RADIUS Client so that it can send connection requests to the organization NPS server for processing.
-•	Enroll and validate the VPN server certificate from your certification authority (CA).
-
-
+>[!Important]
+>It is important to:
+>•	Install two Ethernet network adapters in the physical server. If you are installing the VPN server on a VM, you must create two External virtual switches, one for each physical network adapter; and then create two virtual network adapters for the VM, with each network adapter connected to one virtual switch.
+>•	Install the server on your perimeter network between your edge and internal firewalls, with one network adapter connected to the External Perimeter Network, and one network adapter connected to the Internal Perimeter Network.
 
 
 **Procedure:**
@@ -214,10 +207,5 @@ In this section, you can configure Remote Access VPN to allow IKEv2 VPN connecti
 
 ## Next step
 [Step 3. Install and Configure the NPS Server](vpn-deploy-nps.md): In this step, you install Network Policy Server (NPS) by using either Windows PowerShell or the Server Manager Add Roles and Features Wizard. You also configure NPS to handle all authentication, authorization, and accounting duties for connection requests that it receives from the VPN server.
-
----
-
-## Related topics
-[Remote Access](https://docs.microsoft.com/windows-server/remote/remote-access/remote-access): This topic provides an overview of the Remote Access server role in Windows Server 2016.
 
 ---

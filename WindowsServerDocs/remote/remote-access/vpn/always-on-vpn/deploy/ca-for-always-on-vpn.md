@@ -84,7 +84,7 @@ The following tools are an important aspect to the deployment of Conditional Acc
 The VPN Server cloud application is created when you create the first root certificate in the VPN Connectivity blade. You can view the service principal that was created in your tenant using the `Get-MsolServicePrincipal -SearchString "VPN Server"` cmdlet.
 
 
-## Next steps
+## Next step
 
 | If you...      | Then see...            |
 |----------------|------------------------------------------------|

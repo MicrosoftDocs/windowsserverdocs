@@ -67,7 +67,7 @@ In the Azure portal, you can create two certificates to manage the transition wh
 
     c. Click **Create**.
 
-## Next steps
+## Next step
 [Step 6.3. Configure the Conditional Access policy](vpn-config-conditional-access-policy.md): In this step, you configure the conditional access policy for VPN connectivity. 
 
 ---

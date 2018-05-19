@@ -86,6 +86,8 @@ In this deployment scenario, you focus on migrating a simple DirectAccess enviro
 | Triggering | Always on and trusted network detection |
 | Authentication  | Protected Extensible Authentication Protocol-Transport Layer Security (PEAP-TLS) with Trusted Platform Module–protected user certificates |
 
-## Next steps
+## Next step
 
 **[Plan your migration](da-always-on-migration-planning.md).** The primary goal of the migration is for users to maintain remote connectivity to the office throughout the process.
+
+---
