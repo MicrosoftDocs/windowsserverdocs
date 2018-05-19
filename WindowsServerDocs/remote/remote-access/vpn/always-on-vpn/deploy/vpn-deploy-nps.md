@@ -8,7 +8,7 @@ ms.assetid:
 manager: elizapo
 ms.author: pashort
 author: shortpatti
-ms.date: 05/18/2018
+ms.date: 05/21/2018
 ---
 
 # Step 3. Install and Configure the NPS Server

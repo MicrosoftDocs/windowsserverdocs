@@ -4,7 +4,7 @@ description: This topic provides detailed instructions for deploying Always On V
 ms.prod: windows-server-threshold
 ms.technology: networking-ras
 ms.topic: article
-ms.date: 05/18/2018
+ms.date: 05/21/2018
 ms.assetid: d165822d-b65c-40a2-b440-af495ad22f42
 manager: elizapo
 ms.author: pashort

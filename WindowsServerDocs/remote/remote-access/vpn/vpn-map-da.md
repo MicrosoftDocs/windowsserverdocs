@@ -4,7 +4,7 @@ description: In previous versions of the Windows VPN architecture, platform limi
 ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
-ms.date: 05/18/2018
+ms.date: 05/21/2018
 ms.assetid: 8fe1c810-4599-4493-b4b8-73fa9aa18535
 manager: elizapo
 ms.author: pashort

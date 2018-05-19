@@ -8,7 +8,7 @@ ms.assetid: d8cf3bae-45bf-4ffa-9205-290d555c59da
 manager: elizapo
 ms.author: pashort
 author: shortpatti
-ms.date: 05/18/2018
+ms.date: 05/21/2018
 ---
 # Step 4. Configure DNS and Firewall Settings
 
