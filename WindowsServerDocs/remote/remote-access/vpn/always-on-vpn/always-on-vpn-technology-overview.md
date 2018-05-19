@@ -160,37 +160,12 @@ Ensure that your firewalls allow the traffic that is necessary for both VPN and 
 
 For more information, see [Configure Firewalls for RADIUS Traffic](https://docs.microsoft.com/windows-server/networking/technologies/nps/nps-firewalls-configure).
 
-## VPNv2 CSP Nodes
-
-Configuration Service Providers (CSPs) are interfaces that expose various management capabilities within the Windows client; conceptually, CSPs work similar to how Group Policy works.
-
-Each CSP has configuration nodes that represent individual settings. Also like Group Policy settings, you can tie CSP settings to registry keys, files, permissions, and so on.
-
-Similar to how you use the Group Policy Management Editor to configure Group Policy objects (GPOs), you configure CSP nodes by using a mobile device management (MDM) solution such as Microsoft Intune.
-
-MDM products like Intune offer a user-friendly configuration option that configures the CSP in the operating system.
-
-![Mobile Device Management to CSP configuration](../../../media/Always-On-Vpn/Vpn-Mdm.jpg)
-
-However, you can’t configure some CSP nodes directly through a user interface (UI) like the Intune Admin Console.
-
-In these cases, you must configure the Open Mobile Alliance Uniform Resource Identifier (OMA-URI) settings manually. You configure OMA-URIs by using the OMA Device Management protocol (OMA-DM), a universal device management specification that most modern Apple, Android, and Windows devices support. As long as they adhere to the OMA-DM specification, all MDM products should interact with these operating systems in the same way.
-
-Windows 10 offers many CSPs, but this guide focuses on using the VPNv2 CSP to configure the VPN client.
-
-The VPNv2 CSP allows configuration of each VPN profile setting in Windows 10 through a unique CSP node.
-
-Also contained in the VPNv2 CSP is a node called *ProfileXML*, which allows you to configure all the settings in one node rather than individually.
-
-In this guide, you use the ProfileXML VPNv2 CSP node to create the VPN profile that is delivered to Windows 10 client computers.
-
-For more information about ProfileXML, see the section “ProfileXML overview” later in this guide. For details about each VPNv2 CSP node, see the [VPNv2 CSP](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/vpnv2-csp).
-
-### Windows 10 VPN Clients
+## Windows 10 VPN Clients
 
 In addition to the server components, ensure that the client computers you configure to use VPN are running Windows 10 Anniversary Update (version 1607). The Windows 10 VPN clients must be domain-joined to your Active Directory domain.
 
-The Windows 10 VPN client is highly configurable and offers many options. To better illustrate the specific features this scenario uses, Table 1 identifies the VPN feature categories and specific configurations that this guide references. You’ll configure the individual settings for these features by using the VPNv2 configuration service provider (CSP) discussed later in this guide.
+
+The Windows 10 VPN client is highly configurable and offers many options. To better illustrate the specific features this scenario uses, Table 1 identifies the VPN feature categories and specific configurations that this guide references. You’ll configure the individual settings for these features by using the VPNv2 configuration service provider (CSP) discussed later in this guide. 
 
 Table 1. VPN Features and Configurations Discussed in This Guide
 
@@ -205,7 +180,16 @@ Table 1. VPN Features and Configurations Discussed in This Guide
 >[!NOTE] 
 >PEAP-TLS and TPM are "Protected Extensible Authentication Protocol with Transport Layer Security" and "Trusted Platform Module," respectively.
 
-For detailed feature descriptions and a full list of the VPN capabilities in Windows 10, see the [Windows 10 VPN Technical Guide](https://docs.microsoft.com/windows/access-protection/vpn/vpn-guide).
+### VPNv2 CSP Nodes
+
+In this guide, you use the ProfileXML VPNv2 CSP node to create the VPN profile that is delivered to Windows 10 client computers. Configuration Service Providers (CSPs) are interfaces that expose various management capabilities within the Windows client; conceptually, CSPs work similar to how Group Policy works. Each CSP has configuration nodes that represent individual settings. Also like Group Policy settings, you can tie CSP settings to registry keys, files, permissions, and so on. Similar to how you use the Group Policy Management Editor to configure Group Policy objects (GPOs), you configure CSP nodes by using a mobile device management (MDM) solution such as Microsoft Intune. MDM products like Intune offer a user-friendly configuration option that configures the CSP in the operating system.
+
+![Mobile Device Management to CSP configuration](../../../media/Always-On-Vpn/Vpn-Mdm.jpg)
+
+However, you can’t configure some CSP nodes directly through a user interface (UI) like the Intune Admin Console. In these cases, you must configure the Open Mobile Alliance Uniform Resource Identifier (OMA-URI) settings manually. You configure OMA-URIs by using the OMA Device Management protocol (OMA-DM), a universal device management specification that most modern Apple, Android, and Windows devices support. As long as they adhere to the OMA-DM specification, all MDM products should interact with these operating systems in the same way.
+
+Windows 10 offers many CSPs, but this guide focuses on using the VPNv2 CSP to configure the VPN client. The VPNv2 CSP allows configuration of each VPN profile setting in Windows 10 through a unique CSP node. Also contained in the VPNv2 CSP is a node called *ProfileXML*, which allows you to configure all the settings in one node rather than individually. For more information about ProfileXML, see the section “ProfileXML overview” later in this guide. For details about each VPNv2 CSP node, see the [VPNv2 CSP](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/vpnv2-csp).
+
 
 ## Next step
 [Learn more about the advanced VPN features](deploy/always-on-vpn-adv-options.md): This page provides guidance on how to enable VPN Traffic Filters, how to configure Automatic VPN connections using App-Triggers, and how to configure NPS to only allow VPN Connections from clients using certificates issued by Azure AD.
