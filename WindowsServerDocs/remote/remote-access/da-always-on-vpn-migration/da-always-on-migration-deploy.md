@@ -13,8 +13,9 @@ ms.date: 2/15/2018
 
 # DirectAccess to Always On VPN migration deployment
 
-
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows 10
+
+[&#171; Previous: Plan the DirectAccess to Always On VPN migration](da-always-on-migration-planning.md)<br>
 
 Before starting the migration process from DirectAccess to Always On VPN, be sure you have done the following:
 
@@ -37,8 +38,7 @@ Migrating from DirectAccess to Always On VPN requires a specific process to migr
 >[!IMPORTANT] 
 >This section is NOT a step-by-step deployment guide for Always On VPN but rather is intended to complement [Remote Access Always On VPN Deployment Guide for Windows Server and Windows 10](https://docs.microsoft.com/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy) and provide migration-specific deployment guidance.
 
-Deploy a side-by-side VPN infrastructure
-----------------------------------------
+## Deploy a side-by-side VPN infrastructure
 
 You will be deploying the VPN infrastructure side by side with the existing DirectAccess infrastructure, so follow the instructions in [Remote Access Always On VPN Deployment Guide for Windows Server and Windows 10](https://docs.microsoft.com/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy) to install and configure the Always On VPN infrastructure. Side-by-side deployment consists of the following high-level tasks:
 
@@ -58,8 +58,8 @@ The following image provides a visual reference for the infrastructure changes t
 
 ![](../../media/DA-to-AlwaysOnVPN/6b64f322f945f837f22a32bf87a228f8.png)
 
-Deploy certificates and VPN configuration script to the clients
----------------------------------------------------------------
+## Deploy certificates and VPN configuration script to the clients
+
 
 You can find the bulk of the VPN client configuration documentation in [Remote Access Always On VPN Deployment Guide for Windows Server and Windows 10](https://docs.microsoft.com/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy). Although most steps in this section reference the Always On VPN deployment guide, two additional steps are needed to complete the migration from DirectAccess to Always On VPN successfully. 
 
@@ -141,8 +141,7 @@ As users receive the authentication certificate and the **VPN_Profile.ps1** conf
 >[!NOTE] 
 >If you are applying DirectAccess GPOs through organizational units (OUs) rather than computer groups, move the user's computer object out of the OU.
 
-Decommission the DirectAccess infrastructure
---------------------------------------------
+## Decommission the DirectAccess infrastructure
 
 When you have finished migrating all your DirectAccess clients to Always On VPN, you can decommission the DirectAccess infrastructure and remove the DirectAccess settings from Group Policy. Microsoft recommends performing the following steps to remove DirectAccess from your environment gracefully:
 
