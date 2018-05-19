@@ -23,7 +23,10 @@ In this section you learn how to deploy Always On VPN connections for remote Win
 
 This workflow illustrates the workflow process for the different scenarios when deploying Always On VPN. 
 
-<img src="../media/Always-On-Vpn/always-on-vpn-deployment-workflow.png" alt="Full-sized view of the Always On VPN deployment workflow" width="200" />
+<img src="./remote//media/Always-On-Vpn/always-on-vpn-deployment-workflow.png" alt="Full-sized view of the Always On VPN deployment workflow" width="200" />
+
+
+
 
 >[!IMPORTANT]
 >For this deployment, it is not a requirement that your infrastructure servers, such as computers running Active Directory Domain Services, Active Directory Certificate Services, and Network Policy Server, are running Windows Server 2016. You can use earlier versions of Windows Server, such as Windows Server 2012 R2, for the infrastructure servers and for the server that is running Remote Access.
