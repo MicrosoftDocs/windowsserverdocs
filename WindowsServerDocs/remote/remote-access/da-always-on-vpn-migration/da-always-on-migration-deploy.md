@@ -133,9 +133,8 @@ For additional information about using System Center Configuration Manager or In
 >[!NOTE] 
 >Incorporating these migration-specific tasks is a critical difference between a simple Always On VPN deployment and migration from DirectAccess to Always On VPN. Be sure to properly define the collection to target the security group rather than using the method in the deployment guide.
 
-<!-- pashort 2/17/2018: think about moving the "remove and decommission" information to a separate markdown document -->
-Remove devices from the DirectAccess security group
----------------------------------------------------
+
+## Remove devices from the DirectAccess security group
 
 As users receive the authentication certificate and the **VPN_Profile.ps1** configuration script, you see corresponding successful VPN configuration script deployments in either System Center Configuration Manager or Intune. After each deployment, remove that user's device from the DirectAccess security group so that you can later remove DirectAccess. Both Intune and System Center Configuration Manager contains user device assignment information to help you determine each user's device.
 
