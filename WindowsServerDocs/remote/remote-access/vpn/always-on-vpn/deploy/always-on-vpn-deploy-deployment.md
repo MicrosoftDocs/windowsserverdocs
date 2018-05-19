@@ -21,7 +21,7 @@ author: shortpatti
 
 In this section you learn how to deploy Always On VPN connections for remote Windows 10 client computers that are domain-joined. You can also learn how to configure conditional access for VPN connectivity using Azure Active Directory. For more details about conditional access using Azure AD, see [Conditional access for VPN connectivity using Azure AD](../../ad-ca-vpn-connectivity-windows10.md).
 
-<a href="../../../../media/Always-On-Vpn/always-on-vpn-deployment-workflow-.png" alt="Full-sized view of the Always On VPN deployment workflow" target="_blank">![thumbnail](../../../media/Always-On-Vpn/always-on-vpn-deployment-workflow-sm.png)
+<a href="../../../../media/Always-On-Vpn/always-on-vpn-deployment-workflow.png" alt="Full-sized view of the Always On VPN deployment workflow" target="_blank">![thumbnail](../../../../media/Always-On-Vpn/always-on-vpn-deployment-workflow-sm.png)
 </a> 
 
 >[!IMPORTANT]
