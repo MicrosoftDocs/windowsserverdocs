@@ -112,8 +112,8 @@
 #### [BGP Windows PowerShell Command Reference](remote-access/bgp/BGP-Windows-powershell-Command-Reference.md)
 
 ### [Always On VPN](remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy.md)
-#### [Technology Overview](remote-access/vpn/always-on-vpn/always-on-vpn-technology-overview.md)
-#### [Advanced Features](remote-access/vpn/always-on-vpn/deploy/always-on-vpn-adv-options.md)
+#### [Technology Overview of Always On VPN](remote-access/vpn/always-on-vpn/always-on-vpn-technology-overview.md)
+#### [Advanced Features of Always On VPN](remote-access/vpn/always-on-vpn/deploy/always-on-vpn-adv-options.md)
 #### [Always On VPN and DirectAccess Features Comparison](remote-access/vpn/vpn-map-da.md)
 #### [Plan the Always On VPN Deployment](remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-planning.md)
 #### [Deploy Always On VPN](remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-deployment.md)
