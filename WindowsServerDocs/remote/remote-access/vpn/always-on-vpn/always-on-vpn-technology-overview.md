@@ -32,10 +32,24 @@ The following illustration shows the infrastructure that is required to deploy A
 
 ![Always On VPN Infrastructure](../../../../media/Always-On-Vpn/Ao-Vpn-Overview.jpg)
 
+The connection process depicted in this illustration is comprised of the following steps.
+
+1. Using public DNS servers, the Windows 10 VPN client performs a name resolution query for the IP address of the VPN gateway.
+
+2. Using the IP address returned by DNS, the VPN client sends a connection request to the VPN gateway.
+
+3. The VPN gateway is also configured as a Remote Authentication Dial In User Service \(RADIUS\) Client; the VPN RADIUS Client sends the connection request to the organization/corporate NPS server for connection request processing.
+
+4. The NPS server processes the connection request, including performing authorization and authentication, and determines whether to allow or deny the connection request.
+
+5. The NPS server forwards an Access-Accept or Access-Deny response to the VPN gateway.
+
+6. The connection is initiated or terminated based on the response that the VPN server received from the NPS server.
+
+For more information on each infrastructure component depicted in the illustration above, see the following sections.
 
 >[!NOTE]
 >If you already have some of these technologies deployed on your network, you can use the instructions in this guide to perform additional configuration of the technologies for this deployment purpose.
-
 
 ## Remote Access as a RAS Gateway VPN Server
 
