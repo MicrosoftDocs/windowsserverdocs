@@ -5,7 +5,7 @@ ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
 ms.assetid: 3c9de3ec-4bbd-4db0-b47a-03507a315383
-manager: brianlic
+manager: elizap
 ms.author: pashort
 author: shortpatti
 ms.date: 05/21/2018
@@ -14,8 +14,9 @@ ms.date: 05/21/2018
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-[&#171; **Previous:** Remote Access Always On VPN Deployment Overview](always-on-vpn-deploy-overview.md)<br>
-[&#187; **Next:** Remote Access Always On VPN Deployment](always-on-vpn-deploy-deployment.md)
+
+[&#171; **Previous:** Learn about the feature comparison between Always On VPN and DirectAccess](../../vpn-map-da.md)<br>
+[&#187; **Next:** Deploy Always On VPN](always-on-vpn-deploy-deployment.md)
 
 You can use the following steps to plan for your Always On VPN deployment.
 
@@ -65,6 +66,6 @@ In addition, the VPN server is installed inside the perimeter network, which par
 In most environments, you can simply adjust static routes on the edge firewall and the VPN server to allow them to reach this new internal perimeter network. In complex environments, you may need to add static routes to internal routers or adjust internal firewall rules for the VPN server and the block of IP addresses associated with VPN clients.
 
 ## Next step
-[Remote Access Always On VPN Deployment](always-on-vpn-deploy-deployment.md): Learn how to deploy Always On VPN connections for remote Windows 10 client computers that are domain-joined. You can also learn how to configure conditional access for VPN connectivity using Azure Active Directory. 
+[Deploy Always On VPN](always-on-vpn-deploy-deployment.md): Learn how to deploy Always On VPN connections for remote Windows 10 client computers that are domain-joined. You can also learn how to configure conditional access for VPN connectivity using Azure Active Directory. 
 
 ---

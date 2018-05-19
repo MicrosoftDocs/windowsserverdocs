@@ -25,7 +25,21 @@ IKEv2 is a VPN tunneling protocol described in Internet Engineering Task Force R
 
 You can configure the RRAS server to support IKEv2 connections while disabling unused protocols, which reduces the server’s security footprint. Additionally, you can configure the server to assign addresses to VPN clients from a static address pool. You can feasibly assign addresses from either a pool or a DHCP server; however, using a DHCP server adds complexity to the design and delivers minimal benefits.
 
-The steps in this section allow you to complete the following items.
+
+
+The VPN Server is a new physical server or virtual machine (VM) that you must install to complete the steps in this guide.
+
+In the process of completing the steps in this guide, you must perform the following actions with the VPN Server.
+•	Install two Ethernet network adapters in the physical server. If you are installing the VPN server on a VM, you must create two External virtual switches, one for each physical network adapter; and then create two virtual network adapters for the VM, with each network adapter connected to one virtual switch.
+•	Install the server on your perimeter network between your edge and internal firewalls, with one network adapter connected to the External Perimeter Network, and one network adapter connected to the Internal Perimeter Network.
+•	Install and configure Remote Access as a single tenant VPN RAS Gateway for point-to-site VPN connections from remote computers.
+•	Configure Remote Access as a RADIUS Client so that it can send connection requests to the organization NPS server for processing.
+•	Enroll and validate the VPN server certificate from your certification authority (CA).
+
+
+
+
+**Procedure:**
 
 1.  On the computer or VM that is planned as the VPN server, and that is installed on your perimeter network, you can install Remote Access.
 

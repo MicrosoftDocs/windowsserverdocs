@@ -15,8 +15,9 @@ author: shortpatti
 
 >Applies To: Windows Server \(Semi-Annual Channel\), Windows Server 2016, Windows 10
 
-[&#171; **Previous:** Remote Access Always On VPN Deployment Guide for Windows Server and Windows 10](always-on-vpn/deploy/always-on-vpn-deploy.md)<br>
-[&#187; **Next:** Remote Access Always On VPN Advanced Features](always-on-vpn/deploy/always-on-vpn-adv-options.md)
+[&#171; **Previous:** Learn more about the advanced VPN features](deploy/always-on-vpn-adv-options.md)<br>
+[&#187; **Next:** Plan the Always On VPN deployment](always-on-vpn/deploy/always-on-vpn-deploy-planning.md)
+
 
 In previous versions of the Windows VPN architecture, platform limitations made it difficult to provide the critical functionality needed to replace DirectAccess (like automatic connections initiated before users sign in). Always On VPN, however, has mitigated most of those limitations or expanded the VPN functionality beyond the capabilities of DirectAccess. Always On VPN addresses the previous gaps between Windows VPNs and DirectAccess; therefore, Always On VPN is the DirectAccess replacement solution.
 
@@ -76,6 +77,6 @@ Each item in this section is a use case scenario or commonly used DirectAccess f
 | Deployment of client and server configuration settings through Group Policy. | Always On VPN does not require devices to be domain joined, so there are no dedicated Group Policy settings to configure it. Instead, you can configure clients by using Windows PowerShell, System Center Configuration Manager, Intune (or a third-party MDM provider), or Windows Configuration Designer. Also, because there's no dependency on a Microsoft VPN gateway, you must configure and manage server settings independent of the Always On VPN. |
 
 ## Next step
-[Remote Access Always On VPN Advanced Features](always-on-vpn/deploy/always-on-vpn-adv-options.md): Beyond the deployment scenario provided in this guide, you can add other advanced VPN features to improve the security and availability of your VPN connection. For example, such components can help ensure that the connecting client is healthy before allowing a connection.
+[Plan the Always On VPN deployment](always-on-vpn/deploy/always-on-vpn-deploy-planning.md): Before you install the Remote Access server role on the computer you're planning on using as a VPN server, perform the following tasks.
 
 ---

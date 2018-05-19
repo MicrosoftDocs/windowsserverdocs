@@ -20,8 +20,8 @@ ms.reviewer: deverette
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-[&#171; **Previous:** Feature Comparison of Always On VPN and DirectAccess](../../vpn-map-da.md)<br>
-[&#187; **Next:** Remote Access Always On VPN Deployment Overview](always-on-vpn-deploy-overview.md)
+[&#171; **Previous:** Learn about the Always On VPN Technology](../always-on-vpn-technology-overview.md)<br>
+[&#187; **Next:** Learn about the feature comparison between Always On VPN and DirectAccess](../../vpn-map-da.md)
 
 Beyond the deployment scenario provided in this guide, you can add other advanced VPN features to improve the security and availability of your VPN connection. For example, such components can help ensure that the connecting client is healthy before allowing a connection.
 
@@ -118,7 +118,10 @@ by the TPM.
 For more information about TPM key attestation in Windows 10, see [TPM Key Attestation](https://docs.microsoft.com/windows-server/identity/ad-ds/manage/component-updates/tpm-key-attestation).
 
 ## Next step
-[Remote Access Always On VPN Deployment Overview](always-on-vpn-deploy-overview.md): You deploy Always On Virtual Private Network \(VPN\) connections for remote computers that are running Windows 10. In this topic, you learn about the VPN connection process, servers to configure, ProfileXML VPNv2 CSP node, and other technologies to deploy Always On VPN.
+[Learn about the feature comparison between Always On VPN and DirectAccess](../../vpn-map-da.md): In previous versions of the Windows VPN architecture, platform limitations made it difficult to provide the critical functionality needed to replace DirectAccess (like automatic connections initiated before users sign in). Always On VPN, however, has mitigated most of those limitations or expanded the VPN functionality beyond the capabilities of DirectAccess.
+
+
+
 
 ---
 
