@@ -11,8 +11,8 @@ author: shortpatti
 ms.date: 2/15/2018
 ---
 
-DirectAccess to Always On VPN migration deployment
-==================================================
+# DirectAccess to Always On VPN migration deployment
+
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows 10
 
