@@ -86,7 +86,7 @@ You are done configuring the VPN profile to use Azure AD conditional access.
 |If you want to...  |Then see...  |
 |---------|---------|
 |Learn more about how conditional access works with VPNs  |[VPN and conditional access](https://docs.microsoft.com/windows/access-protection/vpn/vpn-conditional-access): This page provides more information about how conditional access works with VPNs.      |
-|Learn more about the advanced VPN features  |[Advanced VPN Features](always-on-vpn-adv-options.md#advanced-vpn-features): This page provides guidance on how to enable VPN Traffic Filters, how to configure Automatic VPN connections using App-Triggers, and how to configure NPS to only allow VPN Connections from clients using certificates issued by Azure AD.        |
+|Learn more about the advanced VPN features  |[Advanced VPN Features](always-on-vpn/deploy/always-on-vpn-adv-options.md#advanced-vpn-features): This page provides guidance on how to enable VPN Traffic Filters, how to configure Automatic VPN connections using App-Triggers, and how to configure NPS to only allow VPN Connections from clients using certificates issued by Azure AD.        |
 
 
 ---
