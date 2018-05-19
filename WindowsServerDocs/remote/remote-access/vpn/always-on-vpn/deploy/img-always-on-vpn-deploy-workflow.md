@@ -9,3 +9,5 @@ ms.date: 05/21/2018
 &#171; Return to: [Remote Access Always On VPN Deployment](always-on-vpn-deploy-deployment.md)<br>
 
 ![Full-sized view of the Always On VPN deployment workflow](../../../../media/Always-On-Vpn/always-on-vpn-deployment-workflow.png)
+
+<img src="http://docs.microsoft.com/en-us/windows-server/remote/media/Always-On-Vpn/always-on-vpn-deployment-workflow.png" width="200" height="200" />
