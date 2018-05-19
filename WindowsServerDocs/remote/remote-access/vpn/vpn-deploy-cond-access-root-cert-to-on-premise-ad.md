@@ -23,8 +23,8 @@ ms.reviewer: deverette
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-[&#171; Previous: Step 6.3. Configure the Conditional Access policy](vpn-config-conditional-access-policy.md)<br>
-[&#187; Next: Step 6.5. Create OMA-DM based VPNv2 Profiles to Windows 10 devices](vpn-create-oma-dm-based-vpnv2-profiles.md)
+[&#171; **Previous:** Step 6.3. Configure the Conditional Access policy](vpn-config-conditional-access-policy.md)<br>
+[&#187; **Next:** Step 6.5. Create OMA-DM based VPNv2 Profiles to Windows 10 devices](vpn-create-oma-dm-based-vpnv2-profiles.md)
 
 1. On the **VPN connectivity** page, click **Download certificate**. 
    

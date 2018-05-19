@@ -14,8 +14,8 @@ ms.date: 05/21/2018
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-[&#171; Previous: Step 3. Install and Configure the NPS Server](vpn-deploy-nps.md)<br>
-[&#187; Next: Step 5. Configure Windows 10 Client Always On VPN Connections](vpn-deploy-client-vpn-connections.md)
+[&#171; **Previous:** Step 3. Install and Configure the NPS Server](vpn-deploy-nps.md)<br>
+[&#187; **Next:** Step 5. Configure Windows 10 Client Always On VPN Connections](vpn-deploy-client-vpn-connections.md)
 
 In this step, you configure DNS and Firewall settings for VPN connectivity.
 
