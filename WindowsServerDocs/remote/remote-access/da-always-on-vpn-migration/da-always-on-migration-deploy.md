@@ -26,10 +26,10 @@ Before starting the migration process from DirectAccess to Always On VPN, be sur
 
 Migrating from DirectAccess to Always On VPN requires a specific process to migrate clients, which helps minimize race conditions that arise from performing migration steps out of order. At a high level, the deployment process consists of these four primary steps:
 
-1.  **Deploy a side-by-side VPN infrastructure.** After you have determined your migration phases and the features you want to include in your deployment, you will deploy the VPN infrastructure side by side with the existing DirectAccess infrastructure. For instructions on deploying the VPN infrastructure, refer to the [Always On VPN Deployment Guide)](../vpn/vpn-top.md).
+1.  **Deploy a side-by-side VPN infrastructure.** After you have determined your migration phases and the features you want to include in your deployment, you will deploy the VPN infrastructure side by side with the existing DirectAccess infrastructure. For instructions on deploying the VPN infrastructure, [Remote Access Always On VPN Deployment](../vpn/always-on-vpn/deploy/always-on-vpn-deploy-deployment.md).
 
 2.  **Deploy certificates and VPN configuration script to the clients.** After the VPN infrastructure is ready, you will create and publish the required certificates to the client. When the clients have received the certificates, you will deploy the VPN_Profile.ps1 configuration script. Alternatively, you can use Intune to configure the VPN client. Use Microsoft System Center Configuration Manager or Microsoft Intune to monitor for successful VPN configuration deployments.
-<!-- maybe put the "remove and decommission" information in a separate markdown document -->
+
 3.  **Remove devices from the DirectAccess security group.** As users migrate successfully, you will remove their devices from the DirectAccess security group before you remove DirectAccess from your environment. Use Microsoft System Center Configuration Manager or Microsoft Intune to determine device-assignment information and discover which device belongs to each user.
 
 4.  **Decommission the DirectAccess infrastructure.** After you have successfully migrated all clients to Always On VPN, you will remove DirectAccess from your environment.
@@ -68,7 +68,7 @@ You must ensure that the **VPN_Profile.ps1** comes _after_ the certificate has b
 >[!NOTE] 
 >Microsoft recommends that you test this process before performing it on any of your user migration rings.
 
-1.  **Create and publish the VPN certificate, and enable the auto-enrollment Group Policy object (GPO).** For traditional,  certificate-based Windows 10 VPN deployments, a certificate is issued to either the device or the user so that it can authenticate the connection. When the new authentication certificate is created and published for auto-enrollment, you must create and deploy a GPO with the auto-enrollment setting configured to the VPN Users group. For the steps to configure certificates and auto-enrollment, see [Remote Access Always On VPN Deployment Guide for Windows Server and Windows 10](https://docs.microsoft.com/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy).
+1.  **Create and publish the VPN certificate, and enable the auto-enrollment Group Policy object (GPO).** For traditional,  certificate-based Windows 10 VPN deployments, a certificate is issued to either the device or the user so that it can authenticate the connection. When the new authentication certificate is created and published for auto-enrollment, you must create and deploy a GPO with the auto-enrollment setting configured to the VPN Users group. For the steps to configure certificates and auto-enrollment, see .
 
 2.  **Add users to the VPN Users group.** Add whichever users you migrate to the VPN Users group. Those users stay in that security group after you have migrated them so that they can receive any certificate updates in the future. Continue to add users to this group until you have moved every user from DirectAccess to Always On VPN.
 
