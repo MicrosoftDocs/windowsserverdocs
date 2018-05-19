@@ -15,8 +15,8 @@ author: shortpatti
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-[&#171; **Previous:** Remote Access](../../../Remote-Access.md)<br>
-[&#187; **Next:** Review the Always On VPN technology](../always-on-vpn-technology-overview.md)
+&#171;  [**Previous:** Remote Access](../../../Remote-Access.md)<br>
+&#187; [ **Next:** Review the Always On VPN technology](../always-on-vpn-technology-overview.md)
 
 Always On VPN has many benefits over the Windows VPN solutions of the past. Key improvements in integration, security, connectivity,  networking control, and compatibility align Always On VPN with Microsoft's cloud-first, mobile-first vision.
 

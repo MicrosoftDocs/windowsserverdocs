@@ -15,8 +15,8 @@ author: shortpatti
 
 >Applies To: Windows Server \(Semi-Annual Channel\), Windows Server 2016, Windows 10
 
-[&#171; **Previous:** Learn more about the advanced VPN features](always-on-vpn/deploy/always-on-vpn-adv-options.md)<br>
-[&#187; **Next:** Plan the Always On VPN deployment](always-on-vpn/deploy/always-on-vpn-deploy-planning.md)
+&#171;  [**Previous:** Learn more about the advanced VPN features](always-on-vpn/deploy/always-on-vpn-adv-options.md)<br>
+&#187; [ **Next:** Plan the Always On VPN deployment](always-on-vpn/deploy/always-on-vpn-deploy-planning.md)
 
 In previous versions of the Windows VPN architecture, platform limitations made it difficult to provide the critical functionality needed to replace DirectAccess (like automatic connections initiated before users sign in). Always On VPN, however, has mitigated most of those limitations or expanded the VPN functionality beyond the capabilities of DirectAccess. Always On VPN addresses the previous gaps between Windows VPNs and DirectAccess; therefore, Always On VPN is the DirectAccess replacement solution.
 

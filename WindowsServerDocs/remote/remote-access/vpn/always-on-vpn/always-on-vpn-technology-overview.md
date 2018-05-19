@@ -22,8 +22,8 @@ ms.reviewer: deverette
 # Always On VPN Technology Overview
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-[&#171; **Previous:** Always On VPN Deployment Guide for Windows Server and Windows 10](deploy/always-on-vpn-deploy.md)<br>
-[&#187; **Next:** Learn more about the advanced VPN features](deploy/always-on-vpn-adv-options.md)
+&#171;  [**Previous:** Always On VPN Deployment Guide for Windows Server and Windows 10](deploy/always-on-vpn-deploy.md)<br>
+&#187; [ **Next:** Learn more about the advanced VPN features](deploy/always-on-vpn-adv-options.md)
 
 
 For this deployment, you must install a new Remote Access server that is running Windows Server 2016, as well as modify some of your existing infrastructure for the deployment.
@@ -32,7 +32,7 @@ The following illustration shows the infrastructure that is required to deploy A
 
 ![Always On VPN Infrastructure](../../../media/Always-On-Vpn/Ao-Vpn-Overview.jpg)
 
-The connection process depicted in this illustration is comprised of the following steps.
+The connection process depicted in this illustration is comprised of the following steps:
 
 1. Using public DNS servers, the Windows 10 VPN client performs a name resolution query for the IP address of the VPN gateway.
 

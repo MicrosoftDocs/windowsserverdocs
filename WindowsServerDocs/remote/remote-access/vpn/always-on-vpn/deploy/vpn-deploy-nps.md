@@ -15,8 +15,8 @@ ms.date: 05/21/2018
 
 >   Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-[&#171; **Previous:** Step 2. Configure the Remote Access Server for Always On VPN](vpn-deploy-ras.md)<br>
-[&#187; **Next:** Step 4. Configure DNS and Firewall Settings](vpn-deploy-dns-firewall.md)
+&#171;  [**Previous:** Step 2. Configure the Remote Access Server for Always On VPN](vpn-deploy-ras.md)<br>
+&#187; [ **Next:** Step 4. Configure DNS and Firewall Settings](vpn-deploy-dns-firewall.md)
 
 In this step, you install Network Policy Server (NPS) and perform configuration for Always On VPN. NPS server processing of connection requests that are sent by the VPN server includes performing authorization - to verify that the user has permission to connect; performing authentication - to verify the user's identity, and performing accounting - to log the aspects of the connection request that you chose when you configured RADIUS accounting in NPS.
 

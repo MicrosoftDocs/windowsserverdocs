@@ -16,8 +16,8 @@ ms.reviewer: deverette
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-[&#171; **Previous:** Step 1. Configure the Server Infrastructure](vpn-deploy-server-infrastructure.md)<br>
-[&#187; **Next:** Step 3. Install and Configure the NPS Server](vpn-deploy-nps.md)
+&#171;  [**Previous:** Step 1. Configure the Server Infrastructure](vpn-deploy-server-infrastructure.md)<br>
+&#187; [ **Next:** Step 3. Install and Configure the NPS Server](vpn-deploy-nps.md)
 
 RRAS is designed to perform well as both a router and a remote access server; therefore, it supports a wide array of features. For the purposes of this guide, you require only a small subset of these features: support for IKEv2 VPN connections and LAN routing.
 
