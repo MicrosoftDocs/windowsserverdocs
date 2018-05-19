@@ -16,8 +16,8 @@ ms.reviewer: deverette
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
 
-[&#171; Previous: Step 4. Configure DNS and Firewall Settings](vpn-deploy-dns-firewall.md)<br>
-[&#187; Next: Step 6. (Optional) Conditional access for VPN connectivity using Azure AD](../../ad-ca-vpn-connectivity-windows10.md)
+[&#171; **Previous:** Step 4. Configure DNS and Firewall Settings](vpn-deploy-dns-firewall.md)<br>
+[&#187; **Next:** Step 6. (Optional) Conditional access for VPN connectivity using Azure AD](../../ad-ca-vpn-connectivity-windows10.md)
 
 
 After setting up the server infrastructure, you must configure the Windows 10 client computers to communicate with that infrastructure with a VPN connection. You can use several technologies to configure Windows 10 VPN clients, including Windows PowerShell, System Center Configuration Manager, and Intune.  All three require an XML VPN profile to configure the appropriate VPN settings. 

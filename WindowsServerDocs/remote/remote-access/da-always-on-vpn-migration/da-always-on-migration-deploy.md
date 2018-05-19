@@ -15,7 +15,7 @@ ms.date: 2/15/2018
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows 10
 
-[&#171; Previous: Plan the DirectAccess to Always On VPN migration](da-always-on-migration-planning.md)<br>
+[&#171; **Previous:** Plan the DirectAccess to Always On VPN migration](da-always-on-migration-planning.md)<br>
 
 Before starting the migration process from DirectAccess to Always On VPN, be sure you have done the following:
 

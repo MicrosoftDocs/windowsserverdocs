@@ -20,8 +20,8 @@ ms.reviewer: deverette
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-[&#171; Previous: Feature Comparison of Always On VPN and DirectAccess](../../vpn-map-da.md)<br>
-[&#187; Next: Remote Access Always On VPN Deployment Overview](always-on-vpn-deploy-overview.md)
+[&#171; **Previous:** Feature Comparison of Always On VPN and DirectAccess](../../vpn-map-da.md)<br>
+[&#187; **Next:** Remote Access Always On VPN Deployment Overview](always-on-vpn-deploy-overview.md)
 
 Beyond the deployment scenario provided in this guide, you can add other advanced VPN features to improve the security and availability of your VPN connection. For example, such components can help ensure that the connecting client is healthy before allowing a connection.
 

@@ -6,7 +6,7 @@ ms.author: pashort
 ms.date: 05/21/2018
 ---
 
-&#171; Return to: [Remote Access Always On VPN Deployment](always-on-vpn-deploy-deployment.md)<br>
+[&#171; **Return to:** Remote Access Always On VPN Deployment](always-on-vpn-deploy-deployment.md)<br>
 
 ![Full-sized view of the Always On VPN deployment workflow](../../../../media/Always-On-Vpn/always-on-vpn-deployment-workflow.png)
 
