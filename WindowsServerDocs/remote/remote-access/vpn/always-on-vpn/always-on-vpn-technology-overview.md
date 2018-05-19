@@ -22,8 +22,8 @@ ms.reviewer: deverette
 # Always On VPN Technology Overview
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-&#171; Previous: [Always On VPN Deployment Guide for Windows Server and Windows 10](deploy/always-on-vpn-deploy.md)<br>
-&#187; Next: [Learn more about the advanced VPN features](deploy/always-on-vpn-adv-options.md)
+[&#171; **Previous:** Always On VPN Deployment Guide for Windows Server and Windows 10](deploy/always-on-vpn-deploy.md)<br>
+[&#187; **Next:** Learn more about the advanced VPN features](deploy/always-on-vpn-adv-options.md)
 
 When performing the steps in this guide, you must install and configure the following technologies in Windows Server 2016.
 
