@@ -25,11 +25,17 @@ ms.reviewer: deverette
 [&#171; **Previous:** Always On VPN Deployment Guide for Windows Server and Windows 10](deploy/always-on-vpn-deploy.md)<br>
 [&#187; **Next:** Learn more about the advanced VPN features](deploy/always-on-vpn-adv-options.md)
 
-When performing the steps in this guide, you must install and configure the following technologies in Windows Server 2016.
 
-If you already have some of these technologies deployed on your network, you can use the instructions in this guide to perform additional configuration of the technologies for this deployment purpose.
+For this deployment, you must install a new Remote Access server that is running Windows Server 2016, as well as modify some of your existing infrastructure for the deployment.
 
-Following are brief overviews of these technologies and links to additional documentation.
+The following illustration shows the infrastructure that is required to deploy Always On VPN.
+
+![Always On VPN Infrastructure](../../../../media/Always-On-Vpn/Ao-Vpn-Overview.jpg)
+
+
+>[!NOTE]
+>If you already have some of these technologies deployed on your network, you can use the instructions in this guide to perform additional configuration of the technologies for this deployment purpose.
+
 
 ## Remote Access as a RAS Gateway VPN Server
 
@@ -41,8 +47,6 @@ By using RAS Gateway, you can deploy VPN connections to provide end users with r
 can access external resources, such as the Internet. Also, RAS Gateway supports Border Gateway Protocol (BGP), which provides dynamic routing services when your remote office locations also have edge gateways that support BGP.
 
 You can manage Remote Access Service (RAS) Gateways by using Windows PowerShell commands and the Remote Access Microsoft Management Console (MMC).
-
-![Always On VPN Infrastructure](../../../media/Always-On-Vpn/Ao-Vpn-Overview.jpg)
 
 ## Network Policy Server (NPS)
 
