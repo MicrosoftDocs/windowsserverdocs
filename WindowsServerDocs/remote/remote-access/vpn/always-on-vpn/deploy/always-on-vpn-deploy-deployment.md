@@ -23,7 +23,7 @@ In this section you learn how to deploy Always On VPN connections for remote Win
 
 The following workflow illustrates the workflow process for the different scenarios when deploying Always On VPN. 
 
-<a href="../../../../media/Always-On-Vpn/always-on-vpn-deployment-workflow-.png" alt="Full-sized view of the Always On VPN deployment workflow">![thumbnail](../../../../media/Always-On-Vpn/always-on-vpn-deployment-workflow-sm.png)
+<a href="../../../../media/Always-On-Vpn/always-on-vpn-deployment-workflow-.png" alt="Full-sized view of the Always On VPN deployment workflow" target="_blank">![thumbnail](../../../../media/Always-On-Vpn/always-on-vpn-deployment-workflow-sm.png)
 </a>
 
 >[!IMPORTANT]
