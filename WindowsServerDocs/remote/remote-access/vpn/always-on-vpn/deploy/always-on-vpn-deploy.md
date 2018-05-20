@@ -25,6 +25,8 @@ Because many of the devices that require remote access are personal devices, Alw
 
 ## <a name="bkmk_about"></a>About this guide
 
+The instructions in this guide describe how to deploy Remote Access as a single tenant VPN RAS Gateway for point\-to\-site VPN connections, using any of the four scenarios, for remote client computers that are running Windows 10. You also find in this guide instructions for modifying some of your existing infrastructure for the deployment. Also throughout this guide, you find links to help you learn more about the VPN connection process, servers to configure, ProfileXML VPNv2 CSP node, and other technologies to deploy Always On VPN.
+
 In this guide, you find instructions for the four Always On VPN deployment scenarios:
 
 |Scenario | Description |
@@ -35,8 +37,6 @@ In this guide, you find instructions for the four Always On VPN deployment scena
 |Migrate from DirectAccess, deploy Always On VPN, and configure conditional access using Azure AD:  |In this scenario, you migrate from DirectAccess and deploy Always On VPN with conditional access using Azure AD.  |
 
 For more details about the scenarios presented, see [Deploy Always On VPN](always-on-vpn-deploy-deployment.md).
-
-The instructions in this guide describe how to deploy Remote Access as a single tenant VPN RAS Gateway for point\-to\-site VPN connections, using any of the four scenarios, for remote client computers that are running Windows 10. You also find in this guide instructions for modifying some of your existing infrastructure for the deployment. Also throughout this guide, you find links to help you learn more about the VPN connection process, servers to configure, ProfileXML VPNv2 CSP node, and other technologies to deploy Always On VPN.
 
 ## <a name="bkmk_prerequisites"></a>Prerequisites for using this guide
 
