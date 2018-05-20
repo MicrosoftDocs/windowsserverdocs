@@ -24,7 +24,7 @@ Because many of the devices that require remote access are personal devices, Alw
 
 ## <a name="bkmk_about"></a>About this guide
 
-This guide is designed for deploying Always On VPN with the Remote Access server role on an on\-premises organization network. This guide provides instructions on how to deploy Remote Access as a single tenant VPN RAS Gateway for point\-to\-site VPN connections for remote client computers that are running Windows 10. This guide also provides instructions for modifying some of your existing infrastructure for the deployment. You also learn about the VPN connection process, servers to configure, ProfileXML VPNv2 CSP node, and other technologies to deploy Always On VPN.
+This guide provides instructions on how to deploy Remote Access as a single tenant VPN RAS Gateway for point\-to\-site VPN connections for remote client computers that are running Windows 10. This guide also provides instructions for modifying some of your existing infrastructure for the deployment. Throughout this guide, you find links to help you learn more about the VPN connection process, servers to configure, ProfileXML VPNv2 CSP node, and other technologies to deploy Always On VPN.
 
 >[!Important]
 >Do not attempt to deploy Remote Access on a virtual machine \(VM\) in Microsoft Azure. Using Remote Access in Microsoft Azure is not supported, including both Remote Access VPN and DirectAccess. For more information, see [Microsoft server software support for Microsoft Azure virtual machines](https://support.microsoft.com/help/2721672/microsoft-server-software-support-for-microsoft-azure-virtual-machines).
@@ -32,8 +32,6 @@ This guide is designed for deploying Always On VPN with the Remote Access server
 
 
 ## <a name="bkmk_prerequisites"></a>Prerequisites for using this guide
-
-This guide provides instructions on how to deploy Remote Access Always On VPN connections for remote client computers that are running Windows 10. Following are the prerequisites for performing the procedures in this guide.
 
 It is recommended that you review the design and deployment guides for each of the technologies that are used in this deployment scenario. These guides can help you determine whether this deployment scenario provides the services and configuration that you need for your organization's network. For more information, see [Always On VPN Technology Overview](../always-on-vpn-technology-overview.md).
 
