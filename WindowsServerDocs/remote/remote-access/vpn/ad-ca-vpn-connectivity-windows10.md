@@ -2,7 +2,7 @@
 title: Conditional access for VPN connectivity using Azure AD
 description: In this optional step, you can fine-tune how authorized VPN users access your resources using Azure Active Directory (Azure AD) conditional access.
 ms.prod: windows-server-threshold
-ms.technology: networking
+ms.technology: networking-ras
 ms.topic: article
 ms.assetid: 
 manager: elizapo

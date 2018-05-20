@@ -2,7 +2,7 @@
 title: Remote Access Always On VPN Deployment Overview
 description: This topic provides an overview of Always On VPN deployment in Windows Server 2016.
 ms.prod: windows-server-threshold
-ms.technology: networking
+ms.technology: networking-ras
 ms.topic: article
 ms.assetid: d33e6bd2-ca2e-448a-bce9-a43d4cb20766
 manager: elizapo

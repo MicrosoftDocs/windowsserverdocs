@@ -1,13 +1,9 @@
 ---
 title: Remote Access Always On VPN Advanced Features
-description: 'With Azure AD conditional access for virtual private network (VPN) connectivity, you can help protect your VPN connections.'
-services: active-directory
-documentationcenter: ''
+description: 'Beyond the deployment scenario provided in this guide, you can add other advanced VPN features to improve the security and availability of your VPN connection.'
 ms.assetid: 51a1ee61-3ffe-4f65-b8de-ff21903e1e74
-ms.service: active-directory
-ms.workload: identity
-ms.tgt_pltfrm: na
-ms.devlang: na
+ms.prod: windows-server-threshold
+ms.technology: networking-ras
 ms.topic: article
 ms.date: 05/21/2018
 ms.author: pashort

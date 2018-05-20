@@ -1,15 +1,8 @@
 ---
 title: Always On VPN Technology Overview
 description: 'This page provies a brief overview of the Always On VPN technologies with links to detailed documents. '
-
 ms.prod: windows-server-threshold
 ms.technology: networking-ras
-documentationcenter: ''
-ms.assetid: 
-ms.service: active-directory
-ms.workload: identity
-ms.tgt_pltfrm: na
-ms.devlang: na
 ms.topic: article
 ms.date: 05/21/2018
 ms.author: pashort

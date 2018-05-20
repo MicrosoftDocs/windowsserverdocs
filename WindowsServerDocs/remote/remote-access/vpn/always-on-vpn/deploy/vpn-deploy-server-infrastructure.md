@@ -2,7 +2,7 @@
 title: Configure the Server Infrastructure
 description: In this step, you install and configure the server-side components necessary to support the VPN, including configuring PKI to distribute the certificates used by users, the VPN server, and the NPS server; configuring RRAS to support IKEv2 connections; and configuring the NPS server to perform authorization for the VPN connections. 
 ms.prod: windows-server-threshold
-ms.technology: networking
+ms.technology: networking-ras
 ms.topic: article
 ms.assetid: 
 manager: elizapo
