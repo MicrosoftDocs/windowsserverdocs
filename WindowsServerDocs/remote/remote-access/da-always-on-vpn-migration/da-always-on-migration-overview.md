@@ -21,7 +21,10 @@ In previous versions of the Windows VPN architecture, platform limitations made 
 
 The DirectAccess–to–Always On VPN migration process consists of four primary components and high-level processes:
 
-1.  **[Deply Access Always On VPN](../vpn/always-on-vpn/deploy/always-on-vpn-deploy-deployment.md)**. Configure the infrastructure required to support Remote Access Always On VPNs in the Windows Server 2016 and later operating systems. Here, you use multiple client-management technologies to deploy Always-On VPN profiles to client computers running the Windows 10 Anniversary Update (version 1607) or later operating systems.  
+>[!TIP]
+>If you have already deployed Always On VPN, skip to step 2 to start planning your migration phases.
+
+1.  **[Deply Always On VPN](../vpn/always-on-vpn/deploy/always-on-vpn-deploy-deployment.md)**. Configure the infrastructure required to support Remote Access Always On VPNs in the Windows Server 2016 and later operating systems. Here, you use multiple client-management technologies to deploy Always-On VPN profiles to client computers running the Windows 10 Anniversary Update (version 1607) or later operating systems.  
 
 2.  **Plan.** Planning for Always On VPN includes identifying target clients for user phase separation as well as infrastructure and functionality planning.
 
