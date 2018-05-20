@@ -40,7 +40,7 @@ This guide provides instructions on how to deploy Remote Access Always On VPN co
 
 - You must have an Active Directory domain infrastructure, including one or more Domain Name System \(DNS\) servers.
 - You must have a Public Key Infrastructure \(PKI\) and Active Directory Certificate Services \(AD CS\).
-- You must have a perimeter network that includes two firewalls. For more information, see [Remote Access Always On VPN Deployment Overview](always-on-vpn-deploy-overview.md)
+- You must have a perimeter network that includes two firewalls. For more information, see [Always On VPN Technology Overview](../always-on-vpn-technology-overview.md).
 - Remote client computers must be joined to the Active Directory domain.
 - Remote client computers must be running the Windows 10 Anniversary Update \(version 1607\) or later operating system.
 - You must be prepared to deploy one new physical server or virtual machine \(VM\) on your perimeter network, upon which you will install Remote Access. This server must have two physical Ethernet network adapters.
@@ -63,9 +63,10 @@ This guide does not provide instructions for deploying the following items.
 |If you want to...  |Then see...  |
 |---------|---------|
 |Learn more about the Always On VPN technology     |[Always On VPN Technology Overview](../always-on-vpn-technology-overview.md): This page provies a brief overview of the Always On VPN technologies with links to detailed documents.         |
-|Learn more about the Always On VPN advanced features  |[Advance VPN features](deploy/always-on-vpn-adv-options.md): This page provides guidance on how to enable VPN Traffic Filters, how to configure Automatic VPN connections using App-Triggers, and how to configure NPS to only allow VPN Connections from clients using certificates issued by Azure AD.         |
+|Learn more about the Always On VPN advanced features  |[Advance VPN features](always-on-vpn-adv-options.md): This page provides guidance on how to enable VPN Traffic Filters, how to configure Automatic VPN connections using App-Triggers, and how to configure NPS to only allow VPN Connections from clients using certificates issued by Azure AD.         |
 |Learn about the feature comparison between Always On VPN and DirectAccess    |[Feature Comparison of Always On VPN and DirectAccess](../../vpn-map-da.md): In previous versions of the Windows VPN architecture, platform limitations made it difficult to provide the critical functionality needed to replace DirectAccess (like automatic connections initiated before users sign in). Always On VPN, however, has mitigated most of those limitations or expanded the VPN functionality beyond the capabilities of DirectAccess.         |
-|Start planning your deployment |[Plan the Always On VPN deployment](deploy/always-on-vpn-deploy-planning.md): Before you install the Remote Access server role on the computer you're planning on using as a VPN server, perform the following tasks. After proper planning, you can deploy Always On VPN, and optionally configure conditional access for VPN connectivity using Azure AD.  |
+|Start planning your deployment |[Plan the Always On VPN deployment](always-on-vpn-deploy-planning.md): Before you install the Remote Access server role on the computer you're planning on using as a VPN server, perform the following tasks. After proper planning, you can deploy Always On VPN, and optionally configure conditional access for VPN connectivity using Azure AD.  |
 
 ---
 
+[Remote Access Always On VPN Advanced Features](always-on-vpn-adv-options.md)
