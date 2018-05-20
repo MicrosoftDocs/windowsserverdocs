@@ -38,8 +38,6 @@ For more details about the scenarios presented, see [Deploy Always On VPN](alway
 
 ## <a name="bkmk_prerequisites"></a>Prerequisites for using this guide
 
-It is recommended that you review the design and deployment guides for each of the technologies that are used in this deployment scenario. These guides can help you determine whether this deployment scenario provides the services and configuration that you need for your organization's network. For more information, see [Always On VPN Technology Overview](../always-on-vpn-technology-overview.md).
-
 To deploy Always On VPN successfully, the remote client computers must be joiened to the Active Directory domain and running the Windows 10 Anniversary Update \(version 1607\) or later operating system.  Additionally, you must have:
 - An Active Directory domain infrastructure, including one or more Domain Name System \(DNS\) servers.
 - A Public Key Infrastructure \(PKI\) and Active Directory Certificate Services \(AD CS\).
@@ -47,6 +45,8 @@ To deploy Always On VPN successfully, the remote client computers must be joiene
 - Prepared to deploy one new physical server or virtual machine \(VM\) on your perimeter network, upon which you will install Remote Access. This server must have two physical Ethernet network adapters.
 - Prepared to install NPS as a RADIUS server on a server or VM. You can install NPS on a new physical server or on a new VM. If you already have NPS servers on your network, you can modify an existing NPS server configuration rather than adding a new server.
 - Read the planning section of this guide to ensure that you are prepared for this deployment before you perform the deployment.
+
+It is recommended that you review the design and deployment guides for each of the technologies that are used in this deployment scenario. These guides can help you determine whether this deployment scenario provides the services and configuration that you need for your organization's network. For more information, see [Always On VPN Technology Overview](../always-on-vpn-technology-overview.md).
 
 >[!IMPORTANT]
 >For this deployment, it is not a requirement that your infrastructure servers, such as computers running Active Directory Domain Services, Active Directory Certificate Services, and Network Policy Server, are running Windows Server 2016. You can use earlier versions of Windows Server, such as Windows Server 2012 R2, for the infrastructure servers and for the server that is running Remote Access.
