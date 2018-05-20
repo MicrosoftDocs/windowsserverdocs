@@ -38,6 +38,9 @@ To configure the server infrastructure, you must perform the following tasks:
 - **On an Active Directory Certificate Server CA:** Create the User Authentication, VPN Server Authentication, and NPS Server Authentication certificate templates.
 - **On domain-joined Windows 10 clients:** Enroll and validate user certificates.
 
+>[!IMPORTANT]
+>If you are migrating from DirectAccess, make sure you see [DirectAccess to Always On VPN migration overview](../../../da-always-on-vpn-migration/da-always-on-migration-overview.md) and [Plan the DirectAccess to Always On VPN migration](../../../da-always-on-vpn-migration/da-always-on-migration-planning.md) before continuing.
+
 ## [Step 2. Configure the Remote Access Server for Always On VPN](vpn-deploy-ras.md)
 
 In this step, you configure Remote Access VPN to allow IKEv2 VPN connections, deny connections from other VPN protocols, and assign a static IP address pool for issuance of IP addresses to connecting authorized VPN clients.
@@ -68,8 +71,8 @@ In this step, you configure the Windows 10 client computers to communicate with
 ## [Step 6. (Optional) Configure conditional access for VPN connectivity](../../ad-ca-vpn-connectivity-windows10.md) 
 In this optional step, you can fine-tune how authorized VPN users access your resources. With Azure AD conditional access for virtual private network (VPN) connectivity, you can help protect the VPN connections. Conditional Access is a policy-based evaluation engine that lets you create access rules for any Azure Active Directory (Azure AD) connected application. For more details, see [Azure Active Directory (Azure AD) conditional access](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-conditional-access-azure-portal).
 
-## [Step 7. (Optional) DirectAccess to Always On VPN migration overview](../../../da-always-on-vpn-migration/da-always-on-migration-overview.md)
-In this optional step, you learn how Aways On VPN mitigated most limitations or expanded the VPN functionality beyond the capabilities of DirectAccess. You also plan your migration phases, which helps identify any issues before they affect the entire organization. After you deploy Always On VPN and plan your migration phases, you remove user devices from the DirectAccess security group so that you can later remove DirectAccess. Both Intune and System Center Configuration Manager contains user device assignment information to help you determine each user's device.  When you have finished migrating all your DirectAccess clients to Always On VPN, you can decommission the DirectAccess infrastructure and remove the DirectAccess settings from Group Policy.
+## [Step 7. (Optional) Remove user devices from DirectAccess and decommission the DirectAccess infrastructure](../../../da-always-on-vpn-migration/da-always-on-migration-deploy.md)
+In this optional step, you remove user devices from the DirectAccess security group so that you can later remove DirectAccess. Both Intune and System Center Configuration Manager contains user device assignment information to help you determine each user's device.  When you have finished migrating all your DirectAccess clients to Always On VPN, you can decommission the DirectAccess infrastructure and remove the DirectAccess settings from Group Policy. 
 
 
 ## Next step
