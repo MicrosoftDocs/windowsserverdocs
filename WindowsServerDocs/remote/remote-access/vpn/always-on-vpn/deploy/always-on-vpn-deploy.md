@@ -68,5 +68,3 @@ This guide does not provide instructions for deploying the following items.
 |Start planning your deployment |[Plan the Always On VPN deployment](always-on-vpn-deploy-planning.md): Before you install the Remote Access server role on the computer you're planning on using as a VPN server, perform the following tasks. After proper planning, you can deploy Always On VPN, and optionally configure conditional access for VPN connectivity using Azure AD.  |
 
 ---
-
-[Remote Access Always On VPN Advanced Features](always-on-vpn-adv-options.md)
