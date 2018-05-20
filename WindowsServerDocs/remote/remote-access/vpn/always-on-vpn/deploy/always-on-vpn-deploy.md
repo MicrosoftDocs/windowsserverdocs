@@ -29,12 +29,10 @@ The instructions in this guide describe how to deploy Remote Access as a single 
 
 In this guide, you find instructions for the four Always On VPN deployment scenarios:
 
-|Scenario | Description |
-|---------|---------------|
-|Deploy Always On VPN: |In this scenario, you deploy Always On VPN only. |
-|Deploy Always On VPN with conditional access using Azure AD: |In this scenario, you deploy Always On VPN with conditional access using Azure AD.  |
-|Migrate from DirectAccess and deploy Always On VPN:  |In this scenario, you migrate from DirectAccess and deploy Always On VPN only.  |
-|Migrate from DirectAccess, deploy Always On VPN, and configure conditional access using Azure AD:  |In this scenario, you migrate from DirectAccess and deploy Always On VPN with conditional access using Azure AD.  |
+1. Deploy Always On VPN: In this scenario, you deploy Always On VPN only.
+2. Deploy Always On VPN with conditional access using Azure AD: In this scenario, you deploy Always On VPN with conditional access using Azure AD.
+3. Migrate from DirectAccess and deploy Always On VPN: In this scenario, you migrate from DirectAccess and deploy Always On VPN only.
+4. Migrate from DirectAccess, deploy Always On VPN, and configure conditional access using Azure AD: In this scenario, you migrate from DirectAccess and deploy Always On VPN with conditional access using Azure AD.
 
 For more details about the scenarios presented, see [Deploy Always On VPN](always-on-vpn-deploy-deployment.md).
 
