@@ -40,7 +40,7 @@ To ensure that remote clients can connect to your VPN server, you can create a D
 
 ## Configure the Edge Firewall
 
-The Edge Firewall separates the External Perimeter Network from the Public Internet. For a visual representation of this separation, see the illustration in the topic [Remote Access Always On VPN Deployment Overview](always-on-vpn-deploy-overview.md).
+The Edge Firewall separates the External Perimeter Network from the Public Internet. For a visual representation of this separation, see the illustration in the topic [Always On VPN Technology Overview](../always-on-vpn-technology-overview.md).
 
 Your Edge Firewall must allow and forward specific ports to your VPN server. If you use Network Address Translation \(NAT\) on your edge firewall, you might need to enable port forwarding for User Datagram Protocol \(UDP\) ports 500 and 4500. You should forward these ports to the IP address that is assigned to the external interface of your VPN server.
 
@@ -52,7 +52,7 @@ For information on how to make these configuration changes, see your firewall do
 
 ## Configure the Internal Perimeter Network Firewall
 
-The Internal Perimeter Network Firewall separates the Organization/Corporate Network from the Internal Perimeter Network. For a visual representation of this separation, see the illustration in the topic [Remote Access Always On VPN Deployment Overview](always-on-vpn-deploy-overview.md).
+The Internal Perimeter Network Firewall separates the Organization/Corporate Network from the Internal Perimeter Network. For a visual representation of this separation, see the illustration in the topic [Always On VPN Technology Overview](../always-on-vpn-technology-overview.md).
 
 Because the Remote Access VPN server on the perimeter network is configured as a Remote Authentication Dial In User Service \(RADIUS\) Client and sends RADIUS traffic to the Network Policy Server \(NPS\) on the Organization/Corporate network - and also receives RADIUS traffic from the NPS Server - you must configure the firewall to allow RADIUS traffic to flow in both directions.
 
