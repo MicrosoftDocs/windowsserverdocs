@@ -57,12 +57,12 @@ It is recommended that you review the design and deployment guides for each of t
 
 This guide does not provide instructions for deploying the following items.
 
-- Active Directory Domain Services \(AD DS\)
+- Active Directory Domain Services \(AD DS\).
 - Active Directory Certificate Services \(AD CS\) and a Public Key Infrastructure \(PKI\).
 - Dynamic Host Configuration Protocol \(DHCP\) automatic IP address assignment to computers and other devices that are configured as DHCP clients. 
 - Network hardware, such as Ethernet cabling, firewalls, switches, and hubs.
 - Additional network resources, such as application and file servers, that remote users can access over an Always On VPN connection.
-- Internet connectivity
+- Internet connectivity or Conditional Access for Internet connectivity using Azure AD.
 
 ## Next step
 |If you want to...  |Then see...  |
