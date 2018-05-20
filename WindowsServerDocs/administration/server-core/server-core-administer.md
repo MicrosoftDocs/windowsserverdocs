@@ -31,7 +31,7 @@ To set a static IP address, do the following:
 3. Run the following cmdlet to set the static IP address:
 
    ```powershell
-   New-NetIPaddress -InterfaceIndex 12 -IPAddress -192.0.2.2 -PrefixLength 24 -DefaultGateway -192.0.2.1
+   New-NetIPaddress -InterfaceIndex 12 -IPAddress 192.0.2.2 -PrefixLength 24 -DefaultGateway 192.0.2.1
    ```
 
    where:
