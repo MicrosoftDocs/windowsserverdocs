@@ -76,6 +76,6 @@ Each item in this section is a use case scenario or commonly used DirectAccess f
 | Deployment of client and server configuration settings through Group Policy. | Always On VPN does not require devices to be domain joined, so there are no dedicated Group Policy settings to configure it. Instead, you can configure clients by using Windows PowerShell, System Center Configuration Manager, Intune (or a third-party MDM provider), or Windows Configuration Designer. Also, because there's no dependency on a Microsoft VPN gateway, you must configure and manage server settings independent of the Always On VPN. |
 
 ## Next step
-[Plan the Always On VPN deployment](always-on-vpn/deploy/always-on-vpn-deploy-planning.md): Before you install the Remote Access server role on the computer you're planning on using as a VPN server, perform the following tasks.
+[Start planning your Always On VPN deployment](always-on-vpn/deploy/always-on-vpn-deploy-planning.md): Before you install the Remote Access server role on the computer you're planning on using as a VPN server, perform the following tasks. After proper planning, you can deploy Always On VPN, and optionally configure conditional access for VPN connectivity using Azure AD.
 
 ---
