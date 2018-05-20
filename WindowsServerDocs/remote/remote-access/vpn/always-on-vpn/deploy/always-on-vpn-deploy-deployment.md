@@ -21,7 +21,7 @@ author: shortpatti
 
 In this section you deploy Always On VPN connections for remote Windows 10 client computers that are domain-joined. You learn how to configure conditional access for VPN connectivity using Azure Active Directory. For more details about conditional access using Azure AD, see [Conditional access for VPN connectivity using Azure AD](../../ad-ca-vpn-connectivity-windows10.md). 
 
-Additionally, if you are migrating from DirectAccess to Always On VPN, you must properly plan the migration to determine your migration phases. Planning for the migration helps identify any issues before they affect the entire organization. The primary goal of the migration is for users to maintain remote connectivity to the office throughout the process. For more details, see [DirectAccess to Always On VPN migration overview](../../../da-always-on-vpn-migration/da-always-on-migration-overview.md).
+Additionally, if you are **migrating from DirectAccess to Always On VPN**, you must properly plan the migration to determine your migration phases. Planning for the migration helps identify any issues before they affect the entire organization. The primary goal of the migration is for users to maintain remote connectivity to the office throughout the process. For more details, see [DirectAccess to Always On VPN migration overview](../../../da-always-on-vpn-migration/da-always-on-migration-overview.md).
 
 The following diagram illustrates the workflow process for the different scenarios when deploying Always On VPN. Click image to enlarge.
 
