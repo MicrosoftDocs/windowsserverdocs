@@ -29,28 +29,24 @@ In this guide, you find instructions for the three Always On VPN deployment scen
 - Deploy Always On VPN with conditional access for VPN connectivity using Azure AD
 - Migrate from DirectAccess to Always On VPN
 
-This guide provides instructions on how to deploy Remote Access as a single tenant VPN RAS Gateway for point\-to\-site VPN connections for remote client computers that are running Windows 10. This guide also provides instructions for modifying some of your existing infrastructure for the deployment. Also throughout this guide, you find links to help you learn more about the VPN connection process, servers to configure, ProfileXML VPNv2 CSP node, and other technologies to deploy Always On VPN.
-
->[!Important]
->Do not attempt to deploy Remote Access on a virtual machine \(VM\) in Microsoft Azure. Using Remote Access in Microsoft Azure is not supported, including both Remote Access VPN and DirectAccess. For more information, see [Microsoft server software support for Microsoft Azure virtual machines](https://support.microsoft.com/help/2721672/microsoft-server-software-support-for-microsoft-azure-virtual-machines).
-
+The instructions in this guide describe how to deploy Remote Access as a single tenant VPN RAS Gateway for point\-to\-site VPN connections for remote client computers that are running Windows 10. You also find in this guide instructions for modifying some of your existing infrastructure for the deployment. Also throughout this guide, you find links to help you learn more about the VPN connection process, servers to configure, ProfileXML VPNv2 CSP node, and other technologies to deploy Always On VPN.
 
 ## <a name="bkmk_prerequisites"></a>Prerequisites for using this guide
 
 It is recommended that you review the design and deployment guides for each of the technologies that are used in this deployment scenario. These guides can help you determine whether this deployment scenario provides the services and configuration that you need for your organization's network. For more information, see [Always On VPN Technology Overview](../always-on-vpn-technology-overview.md).
 
+To deploy Always On VPN successfully, the remote client computers must be joiened to the Active Directory domain and running the Windows 10 Anniversary Update \(version 1607\) or later operating system.  Additionally, you must have:
+- An Active Directory domain infrastructure, including one or more Domain Name System \(DNS\) servers.
+- A Public Key Infrastructure \(PKI\) and Active Directory Certificate Services \(AD CS\).
+- A perimeter network that includes two firewalls. For more information, see [Always On VPN Technology Overview](../always-on-vpn-technology-overview.md).
+- Prepared to deploy one new physical server or virtual machine \(VM\) on your perimeter network, upon which you will install Remote Access. This server must have two physical Ethernet network adapters.
+- Prepared to install NPS as a RADIUS server on a server or VM. You can install NPS on a new physical server or on a new VM. If you already have NPS servers on your network, you can modify an existing NPS server configuration rather than adding a new server.
+- Read the planning section of this guide to ensure that you are prepared for this deployment before you perform the deployment.
+
 >[!IMPORTANT]
 >For this deployment, it is not a requirement that your infrastructure servers, such as computers running Active Directory Domain Services, Active Directory Certificate Services, and Network Policy Server, are running Windows Server 2016. You can use earlier versions of Windows Server, such as Windows Server 2012 R2, for the infrastructure servers and for the server that is running Remote Access.
-
-- You must have an Active Directory domain infrastructure, including one or more Domain Name System \(DNS\) servers.
-- You must have a Public Key Infrastructure \(PKI\) and Active Directory Certificate Services \(AD CS\).
-- You must have a perimeter network that includes two firewalls. For more information, see [Always On VPN Technology Overview](../always-on-vpn-technology-overview.md).
-- Remote client computers must be joined to the Active Directory domain.
-- Remote client computers must be running the Windows 10 Anniversary Update \(version 1607\) or later operating system.
-- You must be prepared to deploy one new physical server or virtual machine \(VM\) on your perimeter network, upon which you will install Remote Access. This server must have two physical Ethernet network adapters.
-- You must be prepared to install NPS as a RADIUS server on a server or VM. You can install NPS on a new physical server or on a new VM. If you already have NPS servers on your network, you can modify an existing NPS server configuration rather than adding a new server.
-- You must read the planning section of this guide to ensure that you are prepared for this deployment before you perform the deployment.
-- You must perform the steps in this guide in the order in which they are presented.
+>
+>Do not attempt to deploy Remote Access on a virtual machine \(VM\) in Microsoft Azure. Using Remote Access in Microsoft Azure is not supported, including both Remote Access VPN and DirectAccess. For more information, see [Microsoft server software support for Microsoft Azure virtual machines](https://support.microsoft.com/help/2721672/microsoft-server-software-support-for-microsoft-azure-virtual-machines).
 
 ## <a name="bkmk_not"></a>What this guide does not provide
 
