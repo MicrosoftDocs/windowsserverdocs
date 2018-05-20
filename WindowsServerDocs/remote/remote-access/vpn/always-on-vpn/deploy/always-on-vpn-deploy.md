@@ -30,9 +30,9 @@ The instructions in this guide describe how to deploy Remote Access as a single 
 In this guide, you find instructions for the following four Always On VPN deployment scenarios:
 
 1. Deploy Always On VPN only.
-2. Deploy Always On VPN with conditional access using Azure AD.
+2. Deploy Always On VPN with conditional access for VPN connectivity using Azure AD.
 3. Deploy Always On VPN and migrate from DirectAccess.
-4. Deploy Always On VPN with conditional access using Azure AD and migrate from DirectAccess.
+4. Deploy Always On VPN with conditional access for VPN connectivity using Azure AD and migrate from DirectAccess.
 
 For more details about the scenarios presented, see [Deploy Always On VPN](always-on-vpn-deploy-deployment.md).
 
