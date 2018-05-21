@@ -46,7 +46,7 @@ To deploy Always On VPN successfully, the remote client computers must be joiene
 - Physical server or virtual machine \(VPN\) on your perimeter network with two physical Ethernet network adapters to install Remote Access.
 - Physical server, existing or new, to install Network Policy Server \(NPS\). If you already have NPS servers on your network, you can modify an existing NPS server configuration rather than adding a new server.
 
-It is recommended that you review the design and deployment guides for each of the technologies that are used in this deployment scenario. These guides can help you determine whether this deployment scenario provides the services and configuration that you need for your organization's network. For more information, see [Always On VPN Technology Overview](../always-on-vpn-technology-overview.md).
+It is recommended that you review the design and deployment guides for each of the technologies that are used in the deployment scenarios. These guides can help you determine whether the deployment scenarios provide the services and configuration that you need for your organization's network. For more information, see [Always On VPN Technology Overview](../always-on-vpn-technology-overview.md).
 
 >[!IMPORTANT]
 >For this deployment, it is not a requirement that your infrastructure servers, such as computers running Active Directory Domain Services, Active Directory Certificate Services, and Network Policy Server, are running Windows Server 2016. You can use earlier versions of Windows Server, such as Windows Server 2012 R2, for the infrastructure servers and for the server that is running Remote Access.
