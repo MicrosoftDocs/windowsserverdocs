@@ -173,38 +173,7 @@ Here are a few points about networking and Storage Spaces Direct:
 
 The following steps are done on a management system that is the same version as the servers being configured. The following steps should NOT be run remotely using a PowerShell session, but instead run in a local PowerShell session on the management system, with administrative permissions.
 
-### Step 3.1: Run cluster validation
-
-In this step, you'll run the cluster validation tool to ensure that the server nodes are configured correctly to create a cluster using Storage Spaces Direct. When cluster validation (Test-Cluster) is run before the cluster is created, it runs the tests that verify that the configuration appears suitable to successfully function as a failover cluster. The example directly below uses the "-Include" parameter, and then the specific categories of tests are specified. This ensures that the Storage Spaces Direct specific tests are included in the validation.
-
-Use the following PowerShell command to validate a set of servers for use as a Storage Spaces Direct cluster.
-
-```PowerShell
-Test-Cluster –Node <MachineName1, MachineName2, MachineName3, MachineName4> –Include "Storage Spaces Direct", "Inventory", "Network", "System Configuration"
-```
-
-### Step 3.2: Create a cluster
-
-In this step, you'll create a cluster with the nodes that you have validated for cluster creation in the preceding step using the following PowerShell cmdlet.
-
-When creating the cluster, you'll get a warning that states - "There were issues while creating the clustered role that may prevent it from starting. For more information, view the report file below." You can safely ignore this warning. It's due to no disks being available for the cluster quorum. Its recommended that a file share witness or cloud witness is configured after creating the cluster.
-
-> [!Note]
-> If the servers are using static IP addresses, modify the following command to reflect the static IP address by adding the following parameter and specifying the IP address:–StaticAddress &lt;X.X.X.X&gt;.
-> In the following command the ClusterName placeholder should be replaced with a netbios name that is unique and 15 characters or less.
-> ```PowerShell
-> New-Cluster –Name <ClusterName> –Node <MachineName1,MachineName2,MachineName3,MachineName4> –NoStorage
-> ```
-
-After the cluster is created, it can take time for DNS entry for the cluster name to be replicated. The time is dependent on the environment and DNS replication configuration. If resolving the cluster isn't successful, in most cases you can be successful with using the machine name of a node that is an active member of the cluster may be used instead of the cluster name.
-
-### Step 3.3: Configure a cluster witness
-
-It is recommended that you configure a witness for the cluster, so that a three or more node system can withstand two nodes failing or being offline. A two-node deployment requires a cluster witness, otherwise either node going offline will cause the other to become unavailable as well. With these systems, you can use a file share as a witness, or use cloud witness. For more info, see [Deploy a Cloud Witness for a Failover Cluster](../../failover-clustering/deploy-cloud-witness.md).
-
-For more information about configuring a file share witness, see [*Configuring a File Share Witness on a Scale-Out File Server*](https://blogs.msdn.microsoft.com/clustering/2014/03/31/configuring-a-file-share-witness-on-a-scale-out-file-server/).
-
-### Step 3.4: Clean disks
+### Step 3.1: Clean disks
 
 The disks intended to be used for Storage Spaces Direct need to be empty and without partitions or other data. If a disk has partitions or other data, it will not be included in the Storage Spaces Direct system.
 
@@ -216,35 +185,23 @@ You can skip this step if the disks have already been cleaned or verified to be 
 > Ensure that there is no data on any of the disks of the cluster before running this set of commands. It will remove any data on the disks that are not being use by the operating system.
 
 ```PowerShell
-icm (Get-Cluster -Name <cluster or node name> | Get-ClusterNode) {
+$Servers = <list of servers>
 
-Update-StorageProviderCache
-
-Get-StoragePool | ? IsPrimordial -eq $false | Set-StoragePool -IsReadOnly:$false -ErrorAction SilentlyContinue
-
-Get-StoragePool | ? IsPrimordial -eq $false | Get-VirtualDisk | Remove-VirtualDisk -Confirm:$false -ErrorAction SilentlyContinue
-
-Get-StoragePool | ? IsPrimordial -eq $false | Remove-StoragePool -Confirm:$false -ErrorAction SilentlyContinue
-
-Get-PhysicalDisk | Reset-PhysicalDisk -ErrorAction SilentlyContinue
-
-Get-Disk | ? Number -ne $null | ? IsBoot -ne $true | ? IsSystem -ne $true | ? PartitionStyle -ne RAW | % {
-
-$_ | Set-Disk -isoffline:$false
-
-$_ | Set-Disk -isreadonly:$false
-
-$_ | Clear-Disk -RemoveData -RemoveOEM -Confirm:$false
-
-$_ | Set-Disk -isreadonly:$true
-
-$_ | Set-Disk -isoffline:$true
-
-}
-
-Get-Disk |? Number -ne $null |? IsBoot -ne $true |? IsSystem -ne $true |? PartitionStyle -eq RAW | Group -NoElement -Property FriendlyName
-
-} | Sort -Property PsComputerName,Count
+Invoke-Command ($Servers) {
+    Update-StorageProviderCache
+    Get-StoragePool | ? IsPrimordial -eq $false | Set-StoragePool -IsReadOnly:$false -ErrorAction SilentlyContinue
+    Get-StoragePool | ? IsPrimordial -eq $false | Get-VirtualDisk | Remove-VirtualDisk -Confirm:$false -ErrorAction SilentlyContinue
+    Get-StoragePool | ? IsPrimordial -eq $false | Remove-StoragePool -Confirm:$false -ErrorAction SilentlyContinue
+    Get-PhysicalDisk | Reset-PhysicalDisk -ErrorAction SilentlyContinue
+    Get-Disk | ? Number -ne $null | ? IsBoot -ne $true | ? IsSystem -ne $true | ? PartitionStyle -ne RAW | % {
+        $_ | Set-Disk -isoffline:$false
+        $_ | Set-Disk -isreadonly:$false
+        $_ | Clear-Disk -RemoveData -RemoveOEM -Confirm:$false
+        $_ | Set-Disk -isreadonly:$true
+        $_ | Set-Disk -isoffline:$true
+    }
+    Get-Disk | Where Number -Ne $Null | Where IsBoot -Ne $True | Where IsSystem -Ne $True | Where PartitionStyle -Eq RAW | Group -NoElement -Property FriendlyName
+} | Sort -Property PsComputerName, Count
 ```
 
 The output from this script will look similar to the following. The **Count** is the number of disks with that name per cluster node (PSComputerName):
@@ -261,6 +218,37 @@ Count Name                          PSComputerName
 4     ATA SSDSC2BA800G4n            StorageClusterNode4
 10    ATA ST4000NM0033              StorageClusterNode4
 ```
+
+### Step 3.2: Run cluster validation
+
+In this step, you'll run the cluster validation tool to ensure that the server nodes are configured correctly to create a cluster using Storage Spaces Direct. When cluster validation (Test-Cluster) is run before the cluster is created, it runs the tests that verify that the configuration appears suitable to successfully function as a failover cluster. The example directly below uses the "-Include" parameter, and then the specific categories of tests are specified. This ensures that the Storage Spaces Direct specific tests are included in the validation.
+
+Use the following PowerShell command to validate a set of servers for use as a Storage Spaces Direct cluster.
+
+```PowerShell
+Test-Cluster –Node <MachineName1, MachineName2, MachineName3, MachineName4> –Include "Storage Spaces Direct", "Inventory", "Network", "System Configuration"
+```
+
+### Step 3.3: Create a cluster
+
+In this step, you'll create a cluster with the nodes that you have validated for cluster creation in the preceding step using the following PowerShell cmdlet.
+
+When creating the cluster, you'll get a warning that states - "There were issues while creating the clustered role that may prevent it from starting. For more information, view the report file below." You can safely ignore this warning. It's due to no disks being available for the cluster quorum. Its recommended that a file share witness or cloud witness is configured after creating the cluster.
+
+> [!Note]
+> If the servers are using static IP addresses, modify the following command to reflect the static IP address by adding the following parameter and specifying the IP address:–StaticAddress &lt;X.X.X.X&gt;.
+> In the following command the ClusterName placeholder should be replaced with a netbios name that is unique and 15 characters or less.
+> ```PowerShell
+> New-Cluster –Name <ClusterName> –Node <MachineName1,MachineName2,MachineName3,MachineName4> –NoStorage
+> ```
+
+After the cluster is created, it can take time for DNS entry for the cluster name to be replicated. The time is dependent on the environment and DNS replication configuration. If resolving the cluster isn't successful, in most cases you can be successful with using the machine name of a node that is an active member of the cluster may be used instead of the cluster name.
+
+### Step 3.4: Configure a cluster witness
+
+It is recommended that you configure a witness for the cluster, so that a three or more node system can withstand two nodes failing or being offline. A two-node deployment requires a cluster witness, otherwise either node going offline will cause the other to become unavailable as well. With these systems, you can use a file share as a witness, or use cloud witness. For more info, see [Deploy a Cloud Witness for a Failover Cluster](../../failover-clustering/deploy-cloud-witness.md).
+
+For more information about configuring a file share witness, see [*Configuring a File Share Witness on a Scale-Out File Server*](https://blogs.msdn.microsoft.com/clustering/2014/03/31/configuring-a-file-share-witness-on-a-scale-out-file-server/).
 
 ### Step 3.5: Enable Storage Spaces Direct
 
