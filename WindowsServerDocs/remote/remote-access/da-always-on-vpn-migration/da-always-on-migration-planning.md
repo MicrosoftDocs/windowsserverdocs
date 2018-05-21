@@ -1,20 +1,22 @@
 ---
 title: Remote Access Always On VPN migration planning
 description: Migrating from DirectAccess to Always On VPN requires proper planning to determine your migration phases, which helps identify any issues before they affect the entire organization. 
-manager: brianlic
+manager: elizapo
 ms.prod: windows-server
 ms.technology: networking-ras
 ms.topic: article
 ms.assetid: eeca4cf7-90f0-485d-843c-76c5885c54b0
 ms.author: pashort
 author: shortpatti
-ms.date: 2/15/2018
+ms.date: 05/21/2018
 ---
 
-DirectAccess to Always On VPN migration planning
-================================================
+# Plan the DirectAccess to Always On VPN migration
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows 10
+
+&#171; [**Previous:** DirectAccess to Always On VPN migration overview](da-always-on-migration-overview.md)<br>
+&#187; [**Next:** DirectAccess to Always On VPN migration deployment](da-always-on-migration-deploy.md)
 
 Migrating from DirectAccess to Always On VPN requires proper planning to determine your migration phases, which helps identify any issues before they affect the entire organization. The primary goal of the migration is for users to maintain remote connectivity to the office throughout the process. If you perform tasks out of order, a race condition may occur, leaving remote users with no way to access company resources. Therefore, Microsoft recommends performing a planned, side-by-side migration from DirectAccess to Always On VPN. For details, see the [Always On VPN migration deployment](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/da-always-on-vpn-migration/da-always-on-migration-deploy) section.
 
@@ -196,8 +198,8 @@ compatibility improvements in Always On VPN:
 | **Diverse management and deployment mechanisms** | You can use many management and deployment mechanisms to manage VPN settings (called a *VPN profile*), including Windows PowerShell, System Center Configuration Manager, Intune (or third-party mobile device management [MDM] tool), and Windows Configuration Designer. These options simplify the configuration of Always On VPN regardless of the client management tools you use. |
 | **Standardized VPN profile definition** | Always On VPN supports configuration using a standard XML profile (ProfileXML), providing a standard configuration template format that most management and deployment toolsets use. |
 
-<!-- next steps -->
-## Next steps
+
+## Next step
 **[Migrate from DirectAccess to Always On VPN](da-always-on-migration-deploy.md).** Migrating from DirectAccess to Always On VPN requires a specific process to migrate clients to prevent from occurring.
 
-<!-- related docs section -->
+---

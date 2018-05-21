@@ -1,31 +1,30 @@
 ---
 title: Remote Access
 description: This topic provides an overview of the Remote Access server role in Windows Server 2016.
-manager: brianlic
+manager: elizapo
 ms.prod: windows-server-threshold
 ms.technology: networking-ras
 ms.topic: article
 ms.assetid: eeca4cf7-90f0-485d-843c-76c5885c54b0
 ms.author: pashort
 author: shortpatti
+ms.date: 05/18/2018
 ---
+
 # Remote Access
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-This topic provides an overview of the Remote Access server role in Windows Server 2016.
+The Remote Access guide provides you with an overview of the Remote Access server role in Windows Server 2016, and covers the following subjects:
 
-> [!NOTE]
-> In addition to this topic, the following RAS documentation is available.
->   
-> - [Border Gateway Protocol &#40;BGP&#41;](bgp/Border-Gateway-Protocol-BGP.md)
-> - [DirectAccess](directaccess/DirectAccess.md)
-> - [RAS Gateway](ras-gateway/RAS-Gateway.md) 
-> - [Remote Access Server Role Documentation](ras/Remote-Access-Server-Role-Documentation.md)
-> - [RAS Gateway for SDN](../../networking/sdn/technologies/network-function-virtualization/RAS-Gateway-for-SDN.md)
-> - [Virtual Private Networking (VPN)](vpn/vpn-top.md)
-> 
-> For more information about other networking technologies, see [Networking in Windows Server 2016](https://docs.microsoft.com/windows-server/networking/networking).
+- [Always On VPN Deployment Guide](vpn/always-on-vpn/deploy/always-on-vpn-deploy.md)
+- [Border Gateway Protocol &#40;BGP&#41;](bgp/Border-Gateway-Protocol-BGP.md)
+- [RAS Gateway](ras-gateway/RAS-Gateway.md) 
+- [Remote Access Server Role Documentation](ras/Remote-Access-Server-Role-Documentation.md)
+- [RAS Gateway for SDN](../../networking/sdn/technologies/network-function-virtualization/RAS-Gateway-for-SDN.md)
+- [Virtual Private Networking (VPN)](vpn/vpn-top.md)
+ 
+For more information about other networking technologies, see [Networking in Windows Server 2016](https://docs.microsoft.com/windows-server/networking/networking).
 
 The Remote Access server role is a logical grouping of the following related network access technologies.
 
@@ -51,7 +50,7 @@ When you install the **DirectAccess and VPN \(RAS\)** role service, you are depl
 >[!IMPORTANT]
 > The RAS Gateway with multitenant capabilities is also available in  Windows Server 2012 R2.
 
-- **DirectAccess**. DirectAccess enables remote users to securely access shared resources, intranet Web sites, and applications on an internal network without connecting to a VPN. DirectAccess establishes bi-directional connectivity with an internal network every time a DirectAccess-enabled computer is connected to the Internet. Users never have to think about connecting to the internal network, and IT administrators can manage remote computers outside the office, even when the computers are not connected via VPN.
+- **Always On VPN**. Always On VPN enables remote users to securely access shared resources, intranet Web sites, and applications on an internal network without connecting to a VPN. DirectAccess establishes bi-directional connectivity with an internal network every time a DirectAccess-enabled computer is connected to the Internet. Users never have to think about connecting to the internal network, and IT administrators can manage remote computers outside the office, even when the computers are not connected via VPN.
 
 For more information, see [RAS Gateway](ras-gateway/RAS-Gateway.md) and [Border Gateway Protocol (BGP)](bgp/Border-Gateway-Protocol-BGP.md).
 

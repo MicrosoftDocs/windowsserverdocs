@@ -1,19 +1,23 @@
 ---
-title: Remote Access Always On VPN Deployment Overview
+title: Overview of the Always On VPN Deployment
 description: This topic provides an overview of Always On VPN deployment in Windows Server 2016.
 ms.prod: windows-server-threshold
-ms.technology: networking
+ms.technology: networking-ras
 ms.topic: article
 ms.assetid: d33e6bd2-ca2e-448a-bce9-a43d4cb20766
-manager: brianlic
+manager: elizapo
+ms.date: 05/21/2018
 ms.author: pashort
 author: shortpatti
 ---
-# Remote Access Always On VPN Deployment Overview
+# Overview of the Always On VPN Deployment
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-You can use this guide to deploy Always On Virtual Private Network \(VPN\) connections for remote computers that are running Windows 10. 
+&#171;  [**Previous:** Remote Access Always On VPN Advanced Features](always-on-vpn-adv-options.md)<br>
+&#187; [ **Next:** Remote Access Always On VPN Deployment Planning](always-on-vpn-deploy-planning.md)
+
+You deploy Always On Virtual Private Network \(VPN\) connections for remote computers that are running Windows 10. In this topic, you learn about the VPN connection process, servers to configure, ProfileXML VPNv2 CSP node, and other technologies to deploy Always On VPN.
 
 For this deployment, you must install a new Remote Access server that is running Windows Server 2016, as well as modify some of your existing infrastructure for the deployment.
 
@@ -53,9 +57,7 @@ In the process of completing the steps in this guide, you must perform the follo
 
 ## NPS Server
 
-The NPS Server is installed on your organization/corporate network. 
-
-You must configure this NPS server as a RADIUS server that receives connection requests from the VPN server. The NPS server processes the connection requests, performing authorization and authentication, and sends either an Access\-Accept or Access\-Reject message to the VPN Server.
+The NPS Server is installed on your organization/corporate network. You must configure this NPS server as a RADIUS server that receives connection requests from the VPN server. The NPS server processes the connection requests, performing authorization and authentication, and sends either an Access\-Accept or Access\-Reject message to the VPN Server.
 
 ## AD DS Server
 
@@ -148,4 +150,14 @@ To protect against this possibility, you can configure the NPS server to ignore 
 
 For more information, see [Configure NPS to Ignore User Account Dial-in Properties](https://docs.microsoft.com/en-us/windows-server/networking/technologies/nps/nps-np-configure#configure-nps-to-ignore-user-account-dial-in-properties).
 
-For the next section in this guide, see [Remote Access Always On VPN Deployment Planning](always-on-vpn-deploy-planning.md).
+## Next step
+[Remote Access Always On VPN Deployment Planning](always-on-vpn-deploy-planning.md): Before you install the Remote Access server role on the computer you're planning to use as a VPN server, you must ensure that the VPN server software and hardware configuration is correct.  You must also identify which network adapter connects to the Internet and which network adapter connects to your private network. Additionally, the VPN server must be installed on a perimeter network, between the edge firewall and the perimeter firewall. 
+
+---
+
+## Related topics
+- [VPNv2 CSP](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/vpnv2-csp):  This topic provides you with an overview of VPNv2 CSP. The VPNv2 configuration service provider allows the mobile device management (MDM) server to configure the VPN profile of the device.
+
+- [Configure Firewalls for RADIUS Traffic](https://docs.microsoft.com/windows-server/networking/technologies/nps/nps-firewalls-configure): This topic provides you details to configure firewalls for RADIUS traffic. Firewalls can be configured to allow or block types of IP traffic to and from the computer or device on which the firewall is running. If firewalls are not properly configured to allow RADIUS traffic between RADIUS clients, RADIUS proxies, and RADIUS servers, network access authentication can fail, preventing users from accessing network resources.  
+
+---

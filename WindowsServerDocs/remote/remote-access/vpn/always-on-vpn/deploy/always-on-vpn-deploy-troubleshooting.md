@@ -1,15 +1,16 @@
 ---
-title: Remote Access Always On VPN Troubleshooting
+title: Troubleshoot Always On VPN
 description: This topic provides instructions for verifying and troubleshooting Always On VPN deployment in Windows Server 2016.
 ms.prod: windows-server-threshold
-ms.technology: networking
+ms.technology: networking-ras
 ms.topic: article
 ms.assetid: 4d08164e-3cc8-44e5-a319-9671e1ac294a
-manager: brianlic
+manager: elizapo
+ms.date: 05/21/2018
 ms.author: pashort
 author: shortpatti
 ---
-# Remote Access Always On VPN Troubleshooting
+# Troubleshoot Always On VPN 
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
@@ -116,4 +117,4 @@ If you paste this heading row as the first line of the log file, then import the
 
 The NPS logs can be helpful in diagnosing policy-related issues. For more information about NPS logs, see [Interpret NPS Database Format Log Files](https://technet.microsoft.com/library/cc771748.aspx).
 
-For the top section of this guide, see [Remote Access Always On VPN Deployment Guide for Windows Server 2016 and Windows 10](always-on-vpn-deploy.md).
+---
