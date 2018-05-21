@@ -56,7 +56,6 @@
 ### [Microsoft Server Performance Advisor](server-performance-advisor/microsoft-server-performance-advisor.md)
 #### [Server Performance Advisor User's Guide](server-performance-advisor/server-performance-advisor-users-guide.md)
 #### [Server Performance Advisor Pack Development Guide](server-performance-advisor/server-performance-advisor-pack-development-guide.md)
-#### [Server Performance Advisor Pack for Tiered Storage Spaces](server-performance-advisor/server-performance-advisor-pack-for-tiered-storage-spaces.md)
 
 ## Automate Windows Server management
 ### [Windows PowerShell scripting](/powershell/scripting/powershell-scripting?view=powershell-5.1)

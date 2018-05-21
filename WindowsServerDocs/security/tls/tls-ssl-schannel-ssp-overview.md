@@ -12,11 +12,11 @@ ms.assetid: 1b7b0432-1bef-4912-8c9a-8989d47a4da9
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 05/16/2018
 ---
 # TLS - SSL (Schannel SSP) Overview
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows 10
 
 This topic for the IT professional introduces the TLS/SSL implementation in Windows using the Schannel Security Service Provider (SSP) by describing practical applications, changes in Microsoft's implementation, and software requirements, plus additional resources for Windows Server 2012 and Windows 8.
 

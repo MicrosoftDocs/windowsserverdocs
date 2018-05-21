@@ -82,9 +82,6 @@ Once the server has completed draining, it will show as **Paused** in Failover C
 
 You can now safely restart or shut it down, just like you would normally (for example, by using the Restart-Computer or Stop-Computer PowerShell cmdlets).
 
-   > [!NOTE]
-   > While the server is paused, storage IO does not flow to its drives. This means that although all your volumes remain online and accessible, they will show as **Incomplete** in Failover Cluster Manager or PowerShell. This is expected.
-
 ```PowerShell
 Get-VirtualDisk 
 
@@ -95,7 +92,7 @@ MyVolume2    Mirror                Incomplete        Warning      True          
 MyVolume3    Mirror                Incomplete        Warning      True           1 TB
 ```
 
-This is normal and should not cause concern. All your volumes remain online and accessible.
+Incomplete or Degraded Operational Status is normal when nodes are shutting down or starting/stopping the cluster service on a node and should not cause concern. All your volumes remain online and accessible.
 
 ## Resuming the server
 

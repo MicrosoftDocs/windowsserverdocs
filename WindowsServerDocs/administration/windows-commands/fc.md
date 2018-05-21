@@ -51,6 +51,8 @@ fc /b [<Drive1:>][<Path1>]<FileName1> [<Drive2:>][<Path2>]<FileName2>
 
 ## Remarks
 
+-   This command is implemeted by c:\WINDOWS\fc.exe. You can use this command within PowerShell, but be sure to spell out the full executable (fc.exe) since 'fc' is an alias for Format-Custom.
+
 -   Reporting differences between files for an ASCII comparison
 
     When you use **fc** for an ASCII comparison, **fc** displays the differences between two files in the following order:  

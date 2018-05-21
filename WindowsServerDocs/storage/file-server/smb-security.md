@@ -116,5 +116,5 @@ Set-SmbServerConfiguration –EnableSMB1Protocol $false
 Here are some additional resources about SMB and related technologies in Windows Server 2012.
 
 - [Server Message Block](file-server-smb-overview.md)
-- [File and Storage Services](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831487(v%3dws.11)>)
-- [Scale-Out File Server for Application Data](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831349(v%3dws.11)>)
+- [File and Storage Services](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831487(v%3dws.11)>)
+- [Scale-Out File Server for Application Data](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831349(v%3dws.11)>)

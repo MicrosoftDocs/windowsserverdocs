@@ -69,6 +69,7 @@ In this example, NPS acts as both a RADIUS server and as a RADIUS proxy for each
 
 Connection request policy conditions are one or more RADIUS attributes that are compared to the attributes of the incoming RADIUS Access-Request message. If there are multiple conditions, then all of the conditions in the connection request message and in the connection request policy must match in order for the policy to be enforced by NPS.
 
+
 Following are the available condition attributes that you can configure in connection request policies.
 
 ### Connection Properties attribute group
@@ -101,7 +102,7 @@ The Machine Identity attribute group contains the Machine Identity attribute. By
 
 The RADIUS Client Properties attribute group contains the following attributes.
 
-- **Calling Station ID**. Used to designate the phone number used by the caller (the access client). This attribute is a character string. You can use pattern-matching syntax to specify area codes.
+- **Calling Station ID**. Used to designate the phone number used by the caller (the access client). This attribute is a character string. You can use pattern-matching syntax to specify area codes.  In 802.1x authentications the MAC Address is typically populated and can be matched from the client.  This field is typically used for Mac Address Bypass scenarios when the connection request policy is configured for 'Accept users without validating credentials'.  
 - **Client Friendly Name**. Used to designate the name of the RADIUS client computer that is requesting authentication. This attribute is a character string. You can use pattern-matching syntax to specify client names.
 - **Client IPv4 Address**. Used to designate the IPv4 address of the network access server (the RADIUS client). This attribute is a character string. You can use pattern-matching syntax to specify IP networks.
 - **Client IPv6 Address**. Used to designate the IPv6 address of the network access server (the RADIUS client). This attribute is a character string. You can use pattern-matching syntax to specify IP networks.

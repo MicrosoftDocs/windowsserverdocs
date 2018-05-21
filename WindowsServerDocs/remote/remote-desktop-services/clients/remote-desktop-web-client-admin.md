@@ -4,7 +4,7 @@ description: Describes how an admin can set up the Remote Desktop web client.
 ms.prod: windows-server-threshold
 ms.technology: remote-desktop-services
 ms.author: helohr
-ms.date: 4/4/2018
+ms.date: 05/18/2018
 ms.topic: article
 author: Heidilohr
 ms.localizationpriority: low
@@ -73,6 +73,9 @@ To install the web client for the first time, follow these steps:
     >[!NOTE]
     >When running the **Publish-RDWebClientPackage** cmdlet, you may see a warning that says per-device CALs are not supported, even if your deployment is configured for per-user CALs. If your deployment uses per-user CALs, you can ignore this warning. We display it to make sure you’re aware of the configuration limitation.
 1. When you're ready for users to acces the web client, just send them the web client URL you created.
+
+>[!NOTE]
+>The web client does not support single sign-on at this time. Users will have to reenter the credentials they used to sign in to the client every time they open an app.
 
 ## How to update the Remote Desktop web client
 

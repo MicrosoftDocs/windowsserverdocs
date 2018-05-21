@@ -4,7 +4,7 @@ description: Describes how to sign in to the Remote Desktop web client.
 ms.prod: windows-server-threshold
 ms.technology: remote-desktop-services
 ms.author: helohr
-ms.date: 3/26/2018
+ms.date: 05/18/2018
 ms.topic: article
 author: Heidilohr
 ms.localizationpriority: low
@@ -14,6 +14,9 @@ ms.localizationpriority: low
 [This information relates to pre-released product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.]
 
 The Remote Desktop web client lets you use a compatible web browser to access your organization's remote resources (apps and desktops) published to you by your admin. You'll be able to interact with the remote apps and desktops like you would with a local PC no matter where you are, without having to switch to a different desktop PC. Once your admin sets up your remote resources, all you need are your domain, user name, password, the URL your admin sent you, and a supported web browser, and you're good to go.
+
+>[!Note]
+> - Curious about the new releases for the web client? Check out [What's new for Remote Desktop web client?](web-client-whatsnew.md)
 
 ## What you'll need to use the web client
 
@@ -36,6 +39,9 @@ After you sign in, the client will take you to the **All Resources** tab, which 
 To start using an app or desktop, select the item you want to use, enter the same user name and password you used to sign in to the web client when prompted, and then select **Submit**. You might also be shown a consent dialog for redirecting the clipboard and printer. You can choose to not redirect either of these, or select **OK** to use the default settings. Wait for the web client to establish the connection, and then start using the resource as you would normally.
 
 When you're finished, you can end your session by either selecting the **Sign Out** button in the toolbar at the top of your screen or closing the browser window.
+
+>[!NOTE]
+>The web client will ask you for your credentials every time you open an app. Just use the same user name and password that you used to sign in to the web client to access the app.
 
 ## Printing from the Remote Desktop web client
 
