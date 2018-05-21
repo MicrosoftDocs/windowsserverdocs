@@ -1,5 +1,5 @@
 ---
-title: Remote Access Always On VPN Deployment Planning
+title: Play the Always On VPN Deployment
 description: This topic provides planning instructions for deploying Always On VPN in Windows Server 2016.
 ms.prod: windows-server-threshold
 ms.technology: networking-ras
@@ -10,7 +10,7 @@ ms.author: pashort
 author: shortpatti
 ms.date: 05/21/2018
 ---
-# Remote Access Always On VPN Deployment Planning
+# Plan the Always On VPN Deployment
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
