@@ -49,7 +49,7 @@ import-module 'C:\Program Files (x86)\ADFS Rapid Recreation Tool\ADFSRapidRecrea
 ```
 
 >[!NOTE] 
->If you are using the Windows Integrated Database (WID), then this tool needs to be run on the primary AD FS server.  You can use the `Get-SyncProperties` PowerShell cmdlet to determine whether or not the server you are on is the primary server.
+>If you are using the Windows Integrated Database (WID), then this tool needs to be run on the primary AD FS server.  You can use the `Get-AdfsSyncProperties` PowerShell cmdlet to determine whether or not the server you are on is the primary server.
 
 ### System requirements
 
