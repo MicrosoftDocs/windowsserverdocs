@@ -888,7 +888,7 @@ To test the configuration policy, sign in to a Windows 10 client computer as th
 
 4.  Click **Sync** to force an Intune policy evaluation and retrieval.
 
-5.  Close Settings.<p>After synchronization, you should see the VPN profile available on the computer.
+5.  Close Settings.<p>After synchronization, you see the VPN profile available on the computer.
 
 You are done deploying Always On VPN.  For other features you can deploy, see the Next step section below.
 
