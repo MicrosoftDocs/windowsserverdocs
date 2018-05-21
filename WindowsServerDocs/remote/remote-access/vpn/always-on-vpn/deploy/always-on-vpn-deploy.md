@@ -36,6 +36,17 @@ The instructions in this guide describe how to deploy Remote Access as a single 
 
 For more details about the scenarios presented, see [Deploy Always On VPN](always-on-vpn-deploy-deployment.md).
 
+## <a name="bkmk_not"></a>What this guide does not provide
+
+This guide does not provide instructions for deploying the following items.
+
+- Active Directory Domain Services \(AD DS\).
+- Active Directory Certificate Services \(AD CS\) and a Public Key Infrastructure \(PKI\).
+- Dynamic Host Configuration Protocol \(DHCP\) automatic IP address assignment to computers and other devices that are configured as DHCP clients. 
+- Network hardware, such as Ethernet cabling, firewalls, switches, and hubs.
+- Additional network resources, such as application and file servers, that remote users can access over an Always On VPN connection.
+- Internet connectivity or Conditional Access for Internet connectivity using Azure AD.
+
 ## <a name="bkmk_prerequisites"></a>Prerequisites for using this guide
 
 To deploy Always On VPN successfully, the remote client computers must be joiened to the Active Directory domain and running the Windows 10 Anniversary Update \(version 1607\) or later operating system.  Additionally, you must have:
@@ -53,16 +64,7 @@ It is recommended that you review the design and deployment guides for each of t
 >
 >Do not attempt to deploy Remote Access on a virtual machine \(VM\) in Microsoft Azure. Using Remote Access in Microsoft Azure is not supported, including both Remote Access VPN and DirectAccess. For more information, see [Microsoft server software support for Microsoft Azure virtual machines](https://support.microsoft.com/help/2721672/microsoft-server-software-support-for-microsoft-azure-virtual-machines).
 
-## <a name="bkmk_not"></a>What this guide does not provide
 
-This guide does not provide instructions for deploying the following items.
-
-- Active Directory Domain Services \(AD DS\).
-- Active Directory Certificate Services \(AD CS\) and a Public Key Infrastructure \(PKI\).
-- Dynamic Host Configuration Protocol \(DHCP\) automatic IP address assignment to computers and other devices that are configured as DHCP clients. 
-- Network hardware, such as Ethernet cabling, firewalls, switches, and hubs.
-- Additional network resources, such as application and file servers, that remote users can access over an Always On VPN connection.
-- Internet connectivity or Conditional Access for Internet connectivity using Azure AD.
 
 ## Next step
 |If you want to...  |Then see...  |
