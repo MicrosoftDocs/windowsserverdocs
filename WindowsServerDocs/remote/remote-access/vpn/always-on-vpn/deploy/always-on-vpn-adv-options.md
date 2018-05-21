@@ -1,5 +1,5 @@
 ---
-title: Remote Access Always On VPN Advanced Features
+title: Advanced Features of Always On VPN
 description: 'Beyond the deployment scenario provided in this guide, you can add other advanced VPN features to improve the security and availability of your VPN connection.'
 ms.assetid: 51a1ee61-3ffe-4f65-b8de-ff21903e1e74
 ms.prod: windows-server-threshold
@@ -12,7 +12,7 @@ manager: elizapo
 ms.reviewer: deverette
 ---
 
-# Remote Access Always On VPN Advanced Features
+# Advanced Features of Always On VPN
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 

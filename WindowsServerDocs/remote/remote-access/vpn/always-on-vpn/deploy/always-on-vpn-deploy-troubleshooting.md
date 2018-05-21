@@ -1,5 +1,5 @@
 ---
-title: Remote Access Always On VPN Troubleshooting
+title: Troubleshoot Always On VPN
 description: This topic provides instructions for verifying and troubleshooting Always On VPN deployment in Windows Server 2016.
 ms.prod: windows-server-threshold
 ms.technology: networking-ras
@@ -10,7 +10,7 @@ ms.date: 05/21/2018
 ms.author: pashort
 author: shortpatti
 ---
-# Remote Access Always On VPN Troubleshooting
+# Troubleshoot Always On VPN 
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
