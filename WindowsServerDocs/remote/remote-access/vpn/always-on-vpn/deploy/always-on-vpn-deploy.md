@@ -40,9 +40,9 @@ To deploy Always On VPN successfully, the remote client computers must be joiene
 - An Active Directory domain infrastructure, including one or more Domain Name System \(DNS\) servers.
 - A Public Key Infrastructure \(PKI\) and Active Directory Certificate Services \(AD CS\).
 - A perimeter network that includes two firewalls. For more information, see [Always On VPN Technology Overview](../always-on-vpn-technology-overview.md).
-- Prepared to deploy one new physical server or virtual machine \(VM\) on your perimeter network, upon which you will install Remote Access. This server must have two physical Ethernet network adapters.
-- Prepared to install NPS as a RADIUS server on a server or VM. You can install NPS on a new physical server or on a new VM. If you already have NPS servers on your network, you can modify an existing NPS server configuration rather than adding a new server.
 - Read the planning section of this guide to ensure that you are prepared for this deployment before you perform the deployment.
+- Physical server or virtual machine \(VPN\) on your perimeter network with two physical Ethernet network adapters to install Remote Access.
+- Physical server, existing or new, to install Network Policy Server \(NPS\). If you already have NPS servers on your network, you can modify an existing NPS server configuration rather than adding a new server.
 
 It is recommended that you review the design and deployment guides for each of the technologies that are used in this deployment scenario. These guides can help you determine whether this deployment scenario provides the services and configuration that you need for your organization's network. For more information, see [Always On VPN Technology Overview](../always-on-vpn-technology-overview.md).
 
