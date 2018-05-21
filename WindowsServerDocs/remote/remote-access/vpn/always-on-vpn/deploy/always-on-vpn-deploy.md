@@ -18,9 +18,9 @@ author: shortpatti
 &#171;  [**Previous:** Remote Access](../../../Remote-Access.md)<br>
 &#187; [ **Next:** Review the Always On VPN technology](../always-on-vpn-technology-overview.md)
 
-Always On VPN provides a single, cohesive solution for remote access for all your connected devices going forward, even personally owned devices. Also, you can choose which management platform they prefer for deploying the Always On VPN configuration because the CSP is not vendor specific. 
-
 Always On VPN has many benefits over the Windows VPN solutions of the past. Key improvements in integration, security, connectivity, networking control, and compatibility align Always On VPN with Microsoft's cloud-first, mobile-first vision. For details on the improved functionality, see [Improved functionality](../../vpn-map-da.md#improved-functionality). 
+
+Always On VPN provides a single, cohesive solution for remote access for all your connected devices going forward, even personally owned devices. Also, you can choose which management platform they prefer for deploying the Always On VPN configuration because the CSP is not vendor specific. 
 
 
 ## <a name="bkmk_about"></a>About this guide
