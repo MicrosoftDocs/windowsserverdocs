@@ -4,9 +4,9 @@ description: In previous versions of the Windows VPN architecture, platform limi
 ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
-ms.date: 
+ms.date: 05/21/2018
 ms.assetid: 8fe1c810-4599-4493-b4b8-73fa9aa18535
-manager: brianlic
+manager: elizapo
 ms.author: pashort
 author: shortpatti
 ---
@@ -14,6 +14,9 @@ author: shortpatti
 # Feature Comparison of Always On VPN and DirectAccess
 
 >Applies To: Windows Server \(Semi-Annual Channel\), Windows Server 2016, Windows 10
+
+&#171;  [**Previous:** Learn more about the advanced VPN features](always-on-vpn/deploy/always-on-vpn-adv-options.md)<br>
+&#187; [ **Next:** Plan the Always On VPN deployment](always-on-vpn/deploy/always-on-vpn-deploy-planning.md)
 
 In previous versions of the Windows VPN architecture, platform limitations made it difficult to provide the critical functionality needed to replace DirectAccess (like automatic connections initiated before users sign in). Always On VPN, however, has mitigated most of those limitations or expanded the VPN functionality beyond the capabilities of DirectAccess. Always On VPN addresses the previous gaps between Windows VPNs and DirectAccess; therefore, Always On VPN is the DirectAccess replacement solution.
 
@@ -69,6 +72,10 @@ Each item in this section is a use case scenario or commonly used DirectAccess f
 
 | DirectAccess functionality | Always On VPN equivalent |
 | ---- | ---- |
-| Use of multisite to provide multiple remote access entry points and geo-redundancy. | <!-- pashort 2/15/2018: eventually re-write this column for the two; let's make some sense out of these to prevent user confusion --> No native multisite-equivalent feature exists in Always On VPN without the use of third-party networking equipment or services such as Azure Traffic Manager or a third-party global server load balancer. However, users can manually select an appropriate VPN endpoint if you define multiple entries in the VPN profile. Third-Party UWP VPN plug-ins may support similar features for connecting to the nearest or most appropriate server VPN endpoint, but this varies by provider. |
+| Use of multisite to provide multiple remote access entry points and geo-redundancy. | No native multisite-equivalent feature exists in Always On VPN without the use of third-party networking equipment or services such as Azure Traffic Manager or a third-party global server load balancer. However, users can manually select an appropriate VPN endpoint if you define multiple entries in the VPN profile. Third-Party UWP VPN plug-ins may support similar features for connecting to the nearest or most appropriate server VPN endpoint, but this varies by provider. |
 | Deployment of client and server configuration settings through Group Policy. | Always On VPN does not require devices to be domain joined, so there are no dedicated Group Policy settings to configure it. Instead, you can configure clients by using Windows PowerShell, System Center Configuration Manager, Intune (or a third-party MDM provider), or Windows Configuration Designer. Also, because there's no dependency on a Microsoft VPN gateway, you must configure and manage server settings independent of the Always On VPN. |
 
+## Next step
+[Start planning your Always On VPN deployment](always-on-vpn/deploy/always-on-vpn-deploy-planning.md): Before you install the Remote Access server role on the computer you're planning on using as a VPN server, perform the following tasks. After proper planning, you can deploy Always On VPN, and optionally configure conditional access for VPN connectivity using Azure AD.
+
+---

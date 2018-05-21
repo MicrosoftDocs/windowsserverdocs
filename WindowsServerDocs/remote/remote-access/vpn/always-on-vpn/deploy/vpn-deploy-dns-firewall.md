@@ -2,22 +2,26 @@
 title: Configure DNS and Firewall Settings
 description: This topic provides detailed instructions for deploying Always On VPN in Windows Server 2016.
 ms.prod: windows-server-threshold
-ms.technology: networking
+ms.technology: networking-ras
 ms.topic: article
 ms.assetid: d8cf3bae-45bf-4ffa-9205-290d555c59da
-manager: brianlic
+manager: elizapo
 ms.author: pashort
 author: shortpatti
+ms.date: 05/21/2018
 ---
-# Configure DNS and Firewall Settings
+# Step 4. Configure DNS and Firewall Settings
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-You can use this section to configure DNS and Firewall settings.
+&#171;  [**Previous:** Step 3. Install and Configure the NPS Server](vpn-deploy-nps.md)<br>
+&#187; [ **Next:** Step 5. Configure Windows 10 Client Always On VPN Connections](vpn-deploy-client-vpn-connections.md)
+
+In this step, you configure DNS and Firewall settings for VPN connectivity.
 
 ## Configure DNS name resolution
 
-When remote VPN clients connect, hey use the same DNS servers that your internal clients use, which allows them to resolve names in the same manner as the rest of your internal workstations. 
+When remote VPN clients connect, they use the same DNS servers that your internal clients use, which allows them to resolve names in the same manner as the rest of your internal workstations. 
 
 Because of this, you must ensure that the computer name that external clients use to connect to the VPN server matches the subject alternative name that is defined in the certificates you issue to the  VPN server.
 
@@ -36,7 +40,7 @@ To ensure that remote clients can connect to your VPN server, you can create a D
 
 ## Configure the Edge Firewall
 
-The Edge Firewall separates the External Perimeter Network from the Public Internet. For a visual representation of this separation, see the illustration in the topic [Remote Access Always On VPN Deployment Overview](always-on-vpn-deploy-overview.md).
+The Edge Firewall separates the External Perimeter Network from the Public Internet. For a visual representation of this separation, see the illustration in the topic [Always On VPN Technology Overview](../always-on-vpn-technology-overview.md).
 
 Your Edge Firewall must allow and forward specific ports to your VPN server. If you use Network Address Translation \(NAT\) on your edge firewall, you might need to enable port forwarding for User Datagram Protocol \(UDP\) ports 500 and 4500. You should forward these ports to the IP address that is assigned to the external interface of your VPN server.
 
@@ -48,7 +52,7 @@ For information on how to make these configuration changes, see your firewall do
 
 ## Configure the Internal Perimeter Network Firewall
 
-The Internal Perimeter Network Firewall separates the Organization/Corporate Network from the Internal Perimeter Network. For a visual representation of this separation, see the illustration in the topic [Remote Access Always On VPN Deployment Overview](always-on-vpn-deploy-overview.md).
+The Internal Perimeter Network Firewall separates the Organization/Corporate Network from the Internal Perimeter Network. For a visual representation of this separation, see the illustration in the topic [Always On VPN Technology Overview](../always-on-vpn-technology-overview.md).
 
 Because the Remote Access VPN server on the perimeter network is configured as a Remote Authentication Dial In User Service \(RADIUS\) Client and sends RADIUS traffic to the Network Policy Server \(NPS\) on the Organization/Corporate network - and also receives RADIUS traffic from the NPS Server - you must configure the firewall to allow RADIUS traffic to flow in both directions.
 
@@ -68,8 +72,9 @@ If you are using the default RADIUS port configuration on the VPN Server and the
 
 - Ports UDP1812, UDP1813, UDP1645, and UDP1646
 
-If you are not using the default RADIUS ports in your NPS deployment, you must configure the firewall to allow RADIUS traffic on the ports that you are using.
+If you are not using the default RADIUS ports in your NPS deployment, you must configure the firewall to allow RADIUS traffic on the ports that you are using. For more details, see [Configure Firewalls for RADIUS Traffic](https://docs.microsoft.com/windows-server/networking/technologies/nps/nps-firewalls-configure).
 
-For more information, see [Configure Firewalls for RADIUS Traffic](https://docs.microsoft.com/windows-server/networking/technologies/nps/nps-firewalls-configure).
+## Next step
+[Step 5. Configure Windows 10 Client Always On VPN Connections](vpn-deploy-client-vpn-connections.md): In this step, you configure the Windows 10 client computers to communicate with that infrastructure with a VPN connection. You can use several technologies to configure Windows 10 VPN clients, including Windows PowerShell, System Center Configuration Manager, and Intune. All three require an XML VPN profile to configure the appropriate VPN settings. 
 
-For the next Always On VPN deployment steps, see [Configure Windows 10 Client Always On VPN Connections](vpn-deploy-client-vpn-connections.md).
+---
