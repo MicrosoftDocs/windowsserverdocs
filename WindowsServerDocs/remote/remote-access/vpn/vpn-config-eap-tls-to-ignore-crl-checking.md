@@ -26,7 +26,7 @@ ms.reviewer: deverette
 &#187; [ **Next:** Step 6.2. Create root certificates for VPN authentication with Azure AD](vpn-create-root-cert-for-vpn-auth-azure-ad.md)
 
 >[!IMPORTANT]
->Failure to implement this registry change will cause IKEv2 connections using cloud certificates with PEAP to fail, but IKEv2 connections using Client Auth certificates issued from the on-premises CA will work.
+>Failure to implement this registry change will cause IKEv2 connections using cloud certificates with PEAP to fail, but IKEv2 connections using Client Auth certificates issued from the on-premises CA would continue to work.
 
 In this step, you can add **IgnoreNoRevocationCheck** and set it to allow authentication of clients when the certificate does not include CRL distribution points. By default, IgnoreNoRevocationCheck is set to 0 (disabled).
 
@@ -57,6 +57,6 @@ For more information, see [How to Enable or Disable Certificate Revocation Check
 
 ## Next step
 
-[Step 6.2. Create root certificates for VPN authentication with Azure AD](vpn-create-root-cert-for-vpn-auth-azure-ad.md): In this step, you configure root certificates for VPN authentication with Azure AD, which automatically creates a VPN server cloud app in the tenant. 
+[Step 6.2. Create root certificates for VPN authentication with Azure AD](vpn-create-root-cert-for-vpn-auth-azure-ad.md): In this step, you configure conditional access root certificates for VPN authentication with Azure AD, which automatically creates a VPN Server cloud app in the tenant. 
 
 ---

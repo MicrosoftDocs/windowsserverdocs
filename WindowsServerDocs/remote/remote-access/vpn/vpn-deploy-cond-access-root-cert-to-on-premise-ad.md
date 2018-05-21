@@ -23,6 +23,8 @@ ms.reviewer: deverette
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
+In this step, you deploy the conditional access root certificate as trusted root certificate for VPN authentication to your on-premises AD.
+
 &#171;  [**Previous:** Step 6.3. Configure the Conditional Access policy](vpn-config-conditional-access-policy.md)<br>
 &#187; [ **Next:** Step 6.5. Create OMA-DM based VPNv2 Profiles to Windows 10 devices](vpn-create-oma-dm-based-vpnv2-profiles.md)
 
@@ -33,7 +35,7 @@ ms.reviewer: deverette
     >[!NOTE]
     >The **Download base64 certificate** option is available for some configurations that require base64 certificates for deployment. 
 
-3. Logon to a domain-joined computer with Enterprise Admin rights and run these commands from an Administrator command prompt to add the cloud root certificate(s) into the *Enterprise NTauth* store:
+2. Logon to a domain-joined computer with Enterprise Admin rights and run these commands from an Administrator command prompt to add the cloud root certificate(s) into the *Enterprise NTauth* store:
 
     >[!NOTE]
     >For environments where the VPN server is not joined to the Active Directory domain, the cloud root certificates must be added to the _Trusted Root Certification Authorities_ store manually.
@@ -44,7 +46,7 @@ ms.reviewer: deverette
     |`certutil -dspublish -f VpnCert.cer NTAuthCA`   |Creates one **CN=NTAuthCertificates** container under the **CN=AIA** and **CN=Certification Authorities** containers, and publishes each root certificate as a value on the _cACertificate_ attribute of the **CN=NTAuthCertificates** container. |  
     |`gpupdate /force`     |Expedites adding the root certificates to the Windows server and client computers.  |
 
-5.  Verify that the root certificates are present and show as trusted:
+3.  Verify that the root certificates are present in the Enterprise NTauth store and show as trusted:
 
     a.  Logon to a server with Enterprise Admin rights that has the **Certificate Authority Management Tools** installed.
 
@@ -66,6 +68,6 @@ ms.reviewer: deverette
         -   Certificate Authorities Container
 
 ## Next step
-[Step 6.5. Create OMA-DM based VPNv2 Profiles to Windows 10 devices](vpn-create-oma-dm-based-vpnv2-profiles.md): In this step, you create OMA-DM VPNv2 profiles one of two ways. The first method is a managed deployment using Intune to deploy a VPN Device Configuration policy. The second method can be used for unmanaged environments using a PowerShell script that leverages the Common Information Model, which creates a WMI session in the user’s context. From this context, it then creates a new instance of the MDM_VPNv2_01 WMI class. 
+[Step 6.5. Create OMA-DM based VPNv2 Profiles to Windows 10 devices](vpn-create-oma-dm-based-vpnv2-profiles.md): IIn this step, you can create OMA-DM based VPNv2 profiles using Intune to deploy a VPN Device Configuration policy. If you want to SCCM or PowerShell Dcript to create VPNv2 profiles, see [VPNv2 CSP settings](https://docs.microsoft.com/en-us/windows/client-management/mdm/vpnv2-csp) for more details.
 
 ---

@@ -26,9 +26,9 @@ ms.reviewer: deverette
 &#171;  [**Previous:** Step 6.2. Create root certificates for VPN authentication with Azure AD](vpn-create-root-cert-for-vpn-auth-azure-ad.md)<br>
 &#187; [ **Next:** Step 6.4. Deploy conditional access root certificates to on-premises AD](vpn-deploy-cond-access-root-cert-to-on-premise-ad.md)
 
-In this step, you configure the conditional access policy for VPN connectivity. 
+In this step, you configure the conditional access policy for VPN connectivity. When the first root certificate is created in the 'VPN connectivity' blade, it automatically creates a 'VPN Server' cloud application in the tenant. 
 
-When the first root certificate is created in the 'VPN connectivity' blade, it automatically creates a 'VPN Server' cloud application in the tenant. Create a Conditional Access policy that is assigned to VPN users group and scope the **Cloud app** to **VPN Server**: 
+Create a Conditional Access policy that is assigned to VPN users group and scope the **Cloud app** to **VPN Server**: 
 
 - **Users**: VPN Users
 - **Cloud App**: VPN Server
@@ -46,7 +46,7 @@ This step covers creation of the most basic Conditional Access policy.  If desi
 
     ![Add name for policy on conditional access page](../../media/Always-On-Vpn/08.png)
 
-5. In the **Assignment** section, click **Users and groups**.
+3. In the **Assignment** section, click **Users and groups**.
 
     ![Select users and groups](../../media/Always-On-Vpn/09.png)
 
@@ -62,19 +62,15 @@ This step covers creation of the most basic Conditional Access policy.  If desi
 
     d. On the **Users and groups** page, click **Done**.
 
-7. On the **New** page, perform the following steps:
+5. On the **New** page, perform the following steps:
 
     ![Select cloud apps](../../media/Always-On-Vpn/11.png)
 
     a. In the **Assignments** section, click **Cloud apps**.
 
-    b. On the **Cloud apps** page, click **Select apps**, and then click **Select**.
-
-    c. On the **Select** page, in the **Applications** box, type **vpn**.
+    b. On the **Cloud apps** page, click **Select apps**.
 
     d. Select **VPN Server**.
-
-    e. Click **Select**.
 
 13. On the **New** page, to open the **Grant** page, in the **Controls** section, click **Grant**.
 
@@ -96,6 +92,6 @@ This step covers creation of the most basic Conditional Access policy.  If desi
 
 
 ## Next step
-[Step 6.4. Deploy conditional access root certificates to on-premises AD](vpn-deploy-cond-access-root-cert-to-on-premise-ad.md): In this step, you deploy a trusted root certificate for VPN authentication to your on-premises AD.
+[Step 6.4. Deploy conditional access root certificates to on-premises AD](vpn-deploy-cond-access-root-cert-to-on-premise-ad.md): In this step, you deploy the conditional access root certificate as trusted root certificate for VPN authentication to your on-premises AD.
 
 ---
