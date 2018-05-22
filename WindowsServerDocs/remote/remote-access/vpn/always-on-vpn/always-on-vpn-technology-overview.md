@@ -15,7 +15,7 @@ ms.reviewer: deverette
 # Always On VPN Technology Overview
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-&#171;  [**Previous:** Always On VPN Deployment Guide for Windows Server and Windows 10](deploy/always-on-vpn-deploy.md)<br>
+&#171;  [**Previous:** Always On VPN Deployment for Windows Server and Windows 10](deploy/always-on-vpn-deploy.md)<br>
 &#187; [ **Next:** Learn more about the advanced VPN features](deploy/always-on-vpn-adv-options.md)
 
 
@@ -42,11 +42,11 @@ The connection process depicted in this illustration is comprised of the followi
 For more information on each infrastructure component depicted in the illustration above, see the following sections.
 
 >[!NOTE]
->If you already have some of these technologies deployed on your network, you can use the instructions in this guide to perform additional configuration of the technologies for this deployment purpose.
+>If you already have some of these technologies deployed on your network, you can use the instructions in this deployment guidance to perform additional configuration of the technologies for this deployment purpose.
 
 ## Remote Access as a RAS Gateway VPN Server
 
-In Windows Server 2016, the Remote Access server role is designed to perform well as both a router and a remote access server; therefore, it supports a wide array of features. For this guide, you require only a small subset of these features: support for IKEv2 VPN connections and LAN routing.
+In Windows Server 2016, the Remote Access server role is designed to perform well as both a router and a remote access server; therefore, it supports a wide array of features. For this deployment guidance, you require only a small subset of these features: support for IKEv2 VPN connections and LAN routing.
 
 IKEv2 is a VPN tunneling protocol described in Internet Engineering Task Force Request for Comments 7296. The primary advantage of IKEv2 is that it tolerates interruptions in the underlying network connection. For example, if the connection is temporarily lost or if a user moves a client computer from one network to another, IKEv2 automatically restores the VPN connection when the network connection is reestablished—all without user intervention.
 
@@ -69,7 +69,7 @@ AD DS provides a distributed database that stores and manages information about 
 
 AD DS contains the user accounts, computer accounts, and account properties that are required by Protected Extensible Authentication Protocol (PEAP) to authenticate user credentials and to evaluate authorization for VPN connection requests. For information about deploying AD DS, see the Windows Server 2016 [Core Network Guide](https://docs.microsoft.com/windows-server/networking/core-network-guide/core-network-guide).
 
-During completion of the steps in this guide, you will configure the following items on the domain controller.
+During completion of the steps in this deployment, you will configure the following items on the domain controller.
 
 -   Enable certificate autoenrollment in Group Policy for computers and users
 
@@ -100,7 +100,7 @@ The Certification Authority (CA) Server is a certification authority that is run
 
 Organizations can use AD CS to enhance security by binding the identity of a person, device, or service to a corresponding public key. AD CS also includes features that allow you to manage certificate enrollment and revocation in a variety of scalable environments. For more information, see [Active Directory Certificate Services Overview](https://technet.microsoft.com/library/hh831740.aspx) and [Public Key Infrastructure Design Guidance](https://social.technet.microsoft.com/wiki/contents/articles/2901.public-key-infrastructure-design-guidance.aspx).
 
-During completion of the steps in this guide, you will configure the following certificate templates on the CA.
+During completion of the deployment, you will configure the following certificate templates on the CA.
 
 -   The User Authentication certificate template
 
@@ -126,7 +126,7 @@ For more information, see [Certificate Templates](https://technet.microsoft.com/
 
 ### Digital Server Certificates
 
-This guide provides instructions for using Active Directory Certificate Services (AD CS) to both enroll and automatically enroll certificates to Remote Access and NPS infrastructure servers. AD CS allows you to build a public key infrastructure (PKI) and provide public key cryptography, digital certificates, and digital signature capabilities for your organization.
+This deployment guidance provides instructions for using Active Directory Certificate Services (AD CS) to both enroll and automatically enroll certificates to Remote Access and NPS infrastructure servers. AD CS allows you to build a public key infrastructure (PKI) and provide public key cryptography, digital certificates, and digital signature capabilities for your organization.
 
 When you use digital server certificates for authentication between computers on your network, the certificates provide:
 
@@ -145,7 +145,7 @@ Both internal and external Domain Name System (DNS) zones are required, which as
 Learn more about [Domain Name System (DNS)](https://docs.microsoft.com/windows-server/networking/dns/dns-top) or [deploying AD DS with DNS](https://docs.microsoft.com/windows-server/networking/core-network-guide/core-network-guide).
 
 >[!NOTE] 
->Other DNS designs, such as split-brain DNS (using the same domain name internally and externally in separate DNS zones) or unrelated internal and external domains (e.g., contoso.local and contoso.com) are also possible, but the configuration for these environments is beyond the scope of this guide.
+>Other DNS designs, such as split-brain DNS (using the same domain name internally and externally in separate DNS zones) or unrelated internal and external domains (e.g., contoso.local and contoso.com) are also possible, but the configuration for these environments is beyond the scope of this deployment.
 
 ## Firewalls
 
@@ -158,9 +158,9 @@ For more information, see [Configure Firewalls for RADIUS Traffic](https://docs.
 In addition to the server components, ensure that the client computers you configure to use VPN are running Windows 10 Anniversary Update (version 1607). The Windows 10 VPN clients must be domain-joined to your Active Directory domain.
 
 
-The Windows 10 VPN client is highly configurable and offers many options. To better illustrate the specific features this scenario uses, Table 1 identifies the VPN feature categories and specific configurations that this guide references. You’ll configure the individual settings for these features by using the VPNv2 configuration service provider (CSP) discussed later in this guide. 
+The Windows 10 VPN client is highly configurable and offers many options. To better illustrate the specific features this scenario uses, Table 1 identifies the VPN feature categories and specific configurations that this deployment references. You’ll configure the individual settings for these features by using the VPNv2 configuration service provider (CSP) discussed later in this deployment. 
 
-Table 1. VPN Features and Configurations Discussed in This Guide
+Table 1. VPN Features and Configurations Discussed in This Deployment
 
 | **VPN feature** | **Deployment scenario configuration**         |
 |-----------------|-----------------------------------------------|
@@ -175,13 +175,13 @@ Table 1. VPN Features and Configurations Discussed in This Guide
 
 ### VPNv2 CSP Nodes
 
-In this guide, you use the ProfileXML VPNv2 CSP node to create the VPN profile that is delivered to Windows 10 client computers. Configuration Service Providers (CSPs) are interfaces that expose various management capabilities within the Windows client; conceptually, CSPs work similar to how Group Policy works. Each CSP has configuration nodes that represent individual settings. Also like Group Policy settings, you can tie CSP settings to registry keys, files, permissions, and so on. Similar to how you use the Group Policy Management Editor to configure Group Policy objects (GPOs), you configure CSP nodes by using a mobile device management (MDM) solution such as Microsoft Intune. MDM products like Intune offer a user-friendly configuration option that configures the CSP in the operating system.
+In this deployment, you use the ProfileXML VPNv2 CSP node to create the VPN profile that is delivered to Windows 10 client computers. Configuration Service Providers (CSPs) are interfaces that expose various management capabilities within the Windows client; conceptually, CSPs work similar to how Group Policy works. Each CSP has configuration nodes that represent individual settings. Also like Group Policy settings, you can tie CSP settings to registry keys, files, permissions, and so on. Similar to how you use the Group Policy Management Editor to configure Group Policy objects (GPOs), you configure CSP nodes by using a mobile device management (MDM) solution such as Microsoft Intune. MDM products like Intune offer a user-friendly configuration option that configures the CSP in the operating system.
 
 ![Mobile Device Management to CSP configuration](../../../media/Always-On-Vpn/Vpn-Mdm.jpg)
 
 However, you can’t configure some CSP nodes directly through a user interface (UI) like the Intune Admin Console. In these cases, you must configure the Open Mobile Alliance Uniform Resource Identifier (OMA-URI) settings manually. You configure OMA-URIs by using the OMA Device Management protocol (OMA-DM), a universal device management specification that most modern Apple, Android, and Windows devices support. As long as they adhere to the OMA-DM specification, all MDM products should interact with these operating systems in the same way.
 
-Windows 10 offers many CSPs, but this guide focuses on using the VPNv2 CSP to configure the VPN client. The VPNv2 CSP allows configuration of each VPN profile setting in Windows 10 through a unique CSP node. Also contained in the VPNv2 CSP is a node called *ProfileXML*, which allows you to configure all the settings in one node rather than individually. For more information about ProfileXML, see the section “ProfileXML overview” later in this guide. For details about each VPNv2 CSP node, see the [VPNv2 CSP](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/vpnv2-csp).
+Windows 10 offers many CSPs, but this deployment focuses on using the VPNv2 CSP to configure the VPN client. The VPNv2 CSP allows configuration of each VPN profile setting in Windows 10 through a unique CSP node. Also contained in the VPNv2 CSP is a node called *ProfileXML*, which allows you to configure all the settings in one node rather than individually. For more information about ProfileXML, see the section “ProfileXML overview” later in this deployment. For details about each VPNv2 CSP node, see the [VPNv2 CSP](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/vpnv2-csp).
 
 
 

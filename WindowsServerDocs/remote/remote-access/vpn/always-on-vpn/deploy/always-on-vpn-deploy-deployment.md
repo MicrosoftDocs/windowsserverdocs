@@ -15,7 +15,7 @@ author: shortpatti
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-&#0171; [ **Previous:** Remote Access Always On VPN Deployment Planning](always-on-vpn-deploy-planning.md)<br>
+&#0171; [ **Previous:** Plan the Always On VPN Deployment](always-on-vpn-deploy-planning.md)<br>
 &#0187; [ **Next:** Step 1. Configure the Server Infrastructure](vpn-deploy-server-infrastructure.md)
 
 
@@ -24,7 +24,9 @@ In this section, you deploy Always On VPN connections for remote domain-joined W
 Additionally, if you want to **migrate from DirectAccess to Always On VPN**, you must properly plan the migration to determine your migration phases. Planning for the migration helps identify any issues before they affect the entire organization. The primary goal of the migration is for users to maintain remote connectivity to the office throughout the process. For more details, see [DirectAccess to Always On VPN migration overview](../../../da-always-on-vpn-migration/da-always-on-migration-overview.md).
 
 
-The following diagram illustrates the workflow process for the different scenarios when deploying Always On VPN. Click image to enlarge.
+The following diagram illustrates the workflow process for the different scenarios when deploying Always On VPN. 
+
+_Click image to enlarge_.
 
 <a href="../../../../media/Always-On-Vpn/always-on-vpn-deployment-workflow.png" alt="Full-sized view of the Always On VPN deployment workflow" target="_blank">![thumbnail](../../../../media/Always-On-Vpn/always-on-vpn-deployment-workflow-sm.png)
 </a> 
