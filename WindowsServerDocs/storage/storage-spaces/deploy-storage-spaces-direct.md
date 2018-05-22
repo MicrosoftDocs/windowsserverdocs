@@ -245,27 +245,6 @@ We recommend using the `New-Volume` cmdlet as it provides the fastest and most s
 
 For more information, check out [Creating volumes in Storage Spaces Direct](create-volumes.md).
 
-### Step 3.7: Enable the CSV cache
-
-You can optionally enable the cluster shared volume (CSV) cache to use system memory (RAM) as a write-through block-level cache of read operations that aren't already cached by the Windows cache manager. This can improve performance for applications such as Hyper-V. The CSV cache can boost the performance of read requests and is also useful for Scale-Out File Server scenarios.
-
-Enabling the CSV cache reduces the amount of memory available to run VMs on a hyper-converged cluster, so you'll have to balance storage performance with memory available to VHDs. 10 GB of memory per node in a two-node cluster is a common CSV cache size, with 20 GB per node common for a four-node cluster. When scaling to larger clusters, consider adding 5 GB of CSV cache per node for each additional node you add to the cluster, again, balancing this against available memory for the operating system and VMs.
-
-To set the size of the CSV cache, open a PowerShell session on the management system with an account that has administrator permissions on the storage cluster, and then use this script, changing the `$ClusterName` and `$CSVCacheSize` variables as appropriate (this example sets a 10 GB CSV cache):
-
-```PowerShell
-$ClusterName = "StorageSpacesDirect1"
-$CSVCacheSize = 10240 #Size in MB
-
-Write-Output "Setting the CSV cache..."
-(Get-Cluster $ClusterName).BlockCacheSize = $CSVCacheSize
-
-$CSVCurrentCacheSize = (Get-Cluster $ClusterName).BlockCacheSize
-Write-Output "$ClusterName CSV cache size: $CSVCurrentCacheSize MB"
-```
-
-For more info, see [How to Enable CSV Cache](https://blogs.msdn.microsoft.com/clustering/2013/07/19/how-to-enable-csv-cache/).
-
 ### Step 3.7: Deploy virtual machines for hyper-converged deployments
 
 If you're deploying a hyper-converged cluster, the last step is to provision virtual machines on the Storage Spaces Direct cluster.
