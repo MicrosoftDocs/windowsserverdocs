@@ -19,7 +19,7 @@ ms.reviewer: deverette
 &#171;  [**Previous:** Step 1. Configure the Server Infrastructure](vpn-deploy-server-infrastructure.md)<br>
 &#187; [ **Next:** Step 3. Install and Configure the NPS Server](vpn-deploy-nps.md)
 
-RRAS is designed to perform well as both a router and a remote access server; therefore, it supports a wide array of features. For the purposes of this guide, you require only a small subset of these features: support for IKEv2 VPN connections and LAN routing.
+RRAS is designed to perform well as both a router and a remote access server; therefore, it supports a wide array of features. For the purposes of this deployment, you require only a small subset of these features: support for IKEv2 VPN connections and LAN routing.
 
 IKEv2 is a VPN tunneling protocol described in Internet Engineering Task Force Request for Comments 7296. The primary advantage of IKEv2 is that it tolerates interruptions in the underlying network connection. For example, if the connection is temporarily lost or if a user moves a client computer from one network to another, IKEv2 automatically restores the VPN connection when the network connection is reestablished—all without user intervention.
 
@@ -48,15 +48,17 @@ Membership in **Administrators**, or equivalent, is the minimum required to perf
 
 ### Install the Remote Access role by using Windows PowerShell
 
-To perform this procedure by using Windows PowerShell, run Windows PowerShell as Administrator, type the following command, and then press ENTER.
+1. Open Windows PowerShell as **Administrator**.
 
-`Install-WindowsFeature DirectAccess-VPN -IncludeManagementTools`
+2. Type the following command and press **ENTER**:
 
-After installation completes, the following message appears in Windows PowerShell.
+   `Install-WindowsFeature DirectAccess-VPN -IncludeManagementTools`
 
-| Success | Restart Needed | Exit Code | Feature Result                             |
-|---------|----------------|-----------|--------------------------------------------|
-| True    | No             | Success   | {RAS Connection Manager Administration Kit |
+   After installation completes, the following message appears in Windows PowerShell.
+    
+   | Success | Restart Needed | Exit Code | Feature Result                             |
+   |---------|----------------|-----------|--------------------------------------------|
+   | True    | No             | Success   | {RAS Connection Manager Administration Kit |
 
 ### Install the Remote Access role by using Server Manager
 
@@ -147,7 +149,7 @@ In this section, you can configure Remote Access VPN to allow IKEv2 VPN connecti
 
 13.  If necessary, change the values to match the requirements for your environment and click **OK**.<p>A NAS is a device that provides some level of access to a larger network. A NAS using a RADIUS infrastructure is also a RADIUS client, sending connection requests and accounting messages to a RADIUS server for authentication, authorization, and accounting.
 
-14.  Review the setting for **Accounting provider**.
+14.  Review the setting for **Accounting provider**:
 
     | If you want the...  | Then…             |
     |---------------------|-------------------|
@@ -167,9 +169,10 @@ In this section, you can configure Remote Access VPN to allow IKEv2 VPN connecti
     >[!NOTE] 
     >If you’re using DHCP for this subnet, ensure that you configure a corresponding address exclusion on your DHCP servers.
 
-    1.  (Optional) If you are using DHCP, click **Adapter**, and in the list of results, click the Ethernet adapter connected to your internal perimeter network.
 
-16.  (Optional) *If you are configuring conditional access for VPN connectivity*, from the **Certificate** drop-down list, under SSL Certificate Binding, select the VPN server authentication.
+    5.  (Optional) If you are using DHCP, click **Adapter**, and in the list of results, click the Ethernet adapter connected to your internal perimeter network.
+
+16.  (Optional) *If you are configuring conditional access for VPN connectivity*, from the **Certificate** drop-down list, under **SSL Certificate Binding**, select the VPN server authentication.
 
 17.  (Optional) *If you are configuring conditional access for VPN connectivity*, in the Routing and Remote Access MMC, expand **Policies\\Network Policies** and do the following: 
 
@@ -181,19 +184,19 @@ In this section, you can configure Remote Access VPN to allow IKEv2 VPN connecti
 
 3.  In the Routing and Remote Access MMC, right-click **Ports,** and then click **Properties**. <p>The Ports Properties dialog box opens.
 
-4.  Click **WAN Miniport (SSTP)** and click **Configure**.<p>The Configure Device - WAN Miniport (SSTP) dialog box opens.
+4.  Click **WAN Miniport (SSTP)** and click **Configure**. The Configure Device - WAN Miniport (SSTP) dialog box opens.
 
     1.  Clear the **Remote access connections (inbound only)** and **Demand-dial routing connections (inbound and outbound)** checkboxes.
 
     2.  Click **OK**.
 
-5.  Click **WAN Miniport (L2TP)** and click **Configure**.<p>The Configure Device - WAN Miniport (IKEv2) dialog box opens.
+5.  Click **WAN Miniport (L2TP)** and click **Configure**. The Configure Device - WAN Miniport (IKEv2) dialog box opens.
 
     1.  In **Maximum ports**, type the number of ports to match the maximum number of simultaneous VPN connections that you want to support.
 
     2.  Click **OK**.
 
-6.  Click **WAN Miniport (PPTP)** and click **Configure**.<p>The Configure Device - WAN Miniport (IKEv2) dialog box opens.
+6.  Click **WAN Miniport (PPTP)** and click **Configure**. The Configure Device - WAN Miniport (IKEv2) dialog box opens.
 
     1.  In **Maximum ports**, type the number of ports to match the maximum number of simultaneous VPN connections that you want to support.
 
