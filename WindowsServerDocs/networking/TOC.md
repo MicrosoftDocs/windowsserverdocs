@@ -103,6 +103,7 @@
 ##### [Manage Data Center Bridging (DCB)](technologies/dcb/dcb-manage.md)
 
 ### [Network Offload and Optimization Technologies]
+#### [Feature and Compatibility]
 #### [Virtual Receive Side Scaling (vRSS)](technologies/vrss/vrss-top.md)
 ##### [Plan the Use of vRSS](technologies/vrss/vrss-plan.md)
 ##### [Enable vRSS on a Virtual Network Adapter](technologies/vrss/vrss-enable.md)
