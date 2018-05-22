@@ -46,7 +46,7 @@ If accounting data is not enabled, then records of a user’s NPS authentication
 
 ## Delete data from NPS
 
-If a user asks to be forgotten the following steps help yo to accomplish this task.
+If a user asks to be forgotten the following steps help you to accomplish this task.
 
 - Delete all Network Policy and Access Services event logs older than 30 days.
 - Delete all accounting data log files older than 30 days.
