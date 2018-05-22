@@ -83,7 +83,7 @@ PS:\>Install-AdfsFarm -CertificateThumbprint 270D041785C579D75C1C981DA0F9C36ECFD
 ```
 
 # Script for preparing AD
-The following PowerShell script can be used to accomplish the examples above
+The following PowerShell script can be used to accomplish the examples above.
 
 ```
 #[CmdletBinding()] 
@@ -102,7 +102,7 @@ if ($userNameSplit.Length -ne 2)
 push-location ad:
 
 # The OU Name is a randomly generated Guid
-[string]$guid = (New-Guid).Guid
+[string]$guid = [Guid]::NewGuid()
 write-host ("OU Name" + $guid)
 
 $ouName = $guid
