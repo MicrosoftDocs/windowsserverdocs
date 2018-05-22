@@ -7,75 +7,55 @@ ms.technology: storage-spaces
 ms.topic: get-started-article
 ms.assetid: 20fee213-8ba5-4cd3-87a6-e77359e82bc0
 author: stevenek
-ms.date: 4/24/2018
-description: Deploy software-defined storage with Storage Spaces Direct and Windows Server in either a hyper-converged solution - where the cluster hosts the storage and virtual machines - or a converged (also known as disaggregated) solution where workloads run on a different cluster. 
+ms.date: 5/21/2018
+description: Step-by-step instructions to deploy software-defined storage with Storage Spaces Direct in Windows Server as either hyper-converged infrastructure or converged (also known as disaggregated) infrastructure. 
 ms.localizationpriority: medium
 ---
+
 # Deploying Storage Spaces Direct
 
->Applies to: Windows Server 2016
+> Applies to: Windows Server 2016
 
-This topic provides instructions for how to deploy [Storage Spaces Direct](storage-spaces-direct-overview.md) to provide software-defined storage for your workloads. It describes both hyper-converged solutions where the cluster hosts the storage and virtual machines as well as a converged (also known as disaggregated) solution where workloads run on a different cluster. Storage Spaces Direct runs on Windows Server 2016 Datacenter Edition.
+This topic presents step-by-step instructions to deploy [Storage Spaces Direct](storage-spaces-direct-overview.md).
 
-Note that for production environments we recommend acquiring a [Windows Server Software-Defined](https://microsoft.com/wssd) hardware/software offering, which includes production deployment tools and procedures. These offerings are designed, assembled, and validated to meet Microsoft's requirements for private cloud environments, helping ensure reliable operation.
+> [!Tip]
+> Looking to acquire Hyper-Converged Infrastructure? Microsoft recommends these [Windows Server Software-Defined](https://microsoft.com/wssd) solutions from our partners. They are designed, assembled, and validated against our reference architecture to ensure compatibility and reliability, so you get up and running quickly.
 
-To evaluate Storage Spaces Direct without investing in hardware, you can use Hyper-V virtual machines, as described in [Using Storage Spaces Direct in guest virtual machine clusters](storage-spaces-direct-in-vm.md).
+> [!Tip]
+> You can use Hyper-V virtual machines, including in Microsoft Azure, to [evaluate Storage Spaces Direct without hardware](storage-spaces-direct-in-vm.md). You may also want to review the handy [Windows Server 2016 rapid lab deployment scripts](https://aka.ms/ws2016lab), which we use for training purposes.
 
-Before deploying Storage Spaces Direct, we recommend reviewing the [Storage Spaces Direct hardware requirements](Storage-Spaces-Direct-Hardware-Requirements.md) and skimming this document to familiarize yourself with the overall approach, and to get a sense for the important notes associated with some steps. You also might want to review the extensive and handy [Windows Server 2016 rapid lab deployment scripts](https://aka.ms/ws2016lab), which we use for training purposes.
+## Before you start
 
-## Converged and hyper-converged solutions
+Review the [Storage Spaces Direct hardware requirements](Storage-Spaces-Direct-Hardware-Requirements.md) and skim this document to familiarize yourself with the overall approach and important notes associated with some steps.
 
-You can deploy Storage Spaces Direct in the following configurations:
+Gather the following information:
 
-- **Converged (disaggregated)** - Workloads run in a separate cluster from the Storage Spaces Direct cluster. Files for the workloads are stored on file shares hosted by the Storage Spaces Direct cluster and accessed across the network. This allows you to scale your workload cluster(s) separately from your storage but does increase the number of clusters involved.
-- **Hyper-converged** - Hyper-V VMs run directly on the Storage Spaces Direct cluster that hosts the storage, as shown in Figure 1. Virtual machine files are stored on local CSVs. This allows for scaling Hyper-V compute clusters together with the storage it is using, reducing the number of clusters required.
+- **Deployment option.** Storage Spaces Direct supports [two deployment options: hyper-converged and converged](storage-spaces-direct-overview.md#deployment-options), also known as disaggregated. Familiarize yourself with the advantages of each to decide which is right for you. Steps 1-3 below apply to both deployment options. Step 4 is only needed for converged deployment.
 
-   ![A hyper-converged cluster with virtual machines hosted by the Storage Spaces Direct cluster](media/Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016/StorageSpacesDirectHyperconverged.png)
+- **Server names.** Get familiar with your organization's naming policies for computers, files, paths, and other resources. You'll need to provision several servers, each with unique names.
 
-   **FIGURE 1:** Storage Spaces Direct in a hyper-converged deployment with virtual machines running directly on the storage cluster
+- **Domain name.** Get familiar with your organization's policies for domain naming and domain joining.  You'll be joining the servers to your domain, and you'll need to specify the domain name. 
 
-## Information gathering
+- **RDMA networking.** There are two types of RDMA protocols: iWarp and RoCE. Note which one your network adapters use, and if RoCE, also note the version (v1 or v2). For RoCE, also note the model of your top-of-rack switch.
 
-The following information will be needed as inputs to configure provision and manage the hyper-converged system, and therefore it will speed up the process and make it easier for you if you have it on hand when you start:
-
--   **Server Names** You should be familiar with your organization's naming policies for computers, files, paths, and other resources as you'll be provisioning several servers each will need to have a unique server name.
-
--   **Domain name** You'll be joining computers to your domain, and you'll need to specify the domain name. It would be good to familiarize with your internal domain naming and domain joining policies.  
-
--   **For RDMA configurations:**  
-
-    -   Top of Rack switch make/model (required when using RoCE v2 NICs)
-
-    -   Network adapter make/model
-
-        There are 2 types of RDMA protocols, note which type your RDMA adapter is (iWarp or RoCE - also note RoCE version).
-
-    -   VLAN ID to be used for the 2 network interfaces used by the management OS on the hyper-converged hosts. You should be able to obtain this from your network administrator.  
-
-## Installation options
-
-You can use Windows Server 2016 Datacenter Edition with the Server Core, or Server with Desktop Experience installation options.
-
-This guide focuses on deploying using the Server Core installation option. However, the steps in the "Configure the Network" and "Configure Storage Spaces Direct" sections are identical whether you are using Server with Desktop Experience or Server Core installations.
+- **VLAN ID.** Note the VLAN ID to be used for management OS network adapters on the servers, if any. You should be able to obtain this from your network administrator.
 
 ## Management system
 
-For the purposes of this document, the machine that has the management tools to locally or remotely manage the cluster is referred to as the management system. The management system machine has the following requirements:  
+This guide focuses on deploying using the Server Core installation option from a separate management system, which must have:
 
-- Running Windows Server 2016 with the same updates as the servers it's managing, and also joined to the same domain or a fully trusted domain.
-
+- Windows Server 2016 with the same updates as the servers it's managing
+- Network connectivity to the servers it's managing
+- Joined to the same domain or a fully trusted domain
 - Remote Server Administration Tools (RSAT) and PowerShell modules for Hyper-V and Failover Clustering. RSAT tools and PowerShell modules are available on Windows Server and can be installed without installing other features. You can also install the [Remote Server Administration Tools](https://www.microsoft.com/download/details.aspx?id=45520) on a Windows 10 management PC.
 
-- Management system can be run inside of a virtual machine or on a physical machine.  
+## Step 1: Install Windows Server
 
-- Requires network connectivity to the servers it's managing.
+Storage Spaces Direct requires Windows Server 2016 Datacenter Edition.
 
-## Step 1: Deploy Windows Server
+You can use the Server Core installation option, or Server with Desktop Experience.
 
-When you install Windows Server using the Setup wizard, you may be able to choose between Windows Server and Windows Server (Server with Desktop Experience). The Server with Desktop Experience option is the equivalent of the Full installation option available in Windows Server 2012 R2 with the Desktop Experience feature installed. If you don't make a choice in the Setup wizard, Windows Server is installed with the Server Core installation option. The Server Core option reduces the space required on disk, the potential attack surface, and especially the servicing requirements, so we recommend that you choose the Server Core installation unless you have a particular need for the additional user interface elements and graphical management tools that are included in the Server with Desktop Experience option.
-
-For more information about these two installation options, see [Installation Options for Windows Server 2016](../../get-started/Windows-Server-2016.md).
-For detailed information about deploying Windows Server in Server Core mode, see [Install Server Core](../../get-started/Getting-Started-with-Server-Core.md).
+When you install Windows Server using the Setup wizard, you can choose between *Windows Server* (referring to Server Core) and *Windows Server (Server with Desktop Experience)*, which is the equivalent of the *Full* installation option available in Windows Server 2012 R2. If you don't choose, you'll get the Server Core installation option. For more information, see [Installation Options for Windows Server 2016](../../get-started/Windows-Server-2016.md).
 
 ### Step 1.1: Connecting to the cluster nodes
 
