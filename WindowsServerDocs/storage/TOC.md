@@ -93,6 +93,7 @@
 ### [Using Storage Replica with Windows Admin Center](storage-replica/storage-replica-ui.md)
 ## [Storage Spaces](storage-spaces/overview.md)
 ### [Deploy Storage Spaces on a stand-alone server](storage-spaces/deploy-standalone-storage-spaces.md)
+### [Health and operational states](storage-spaces/storage-spaces-states.md)
 ## [Storage Spaces Direct](storage-spaces/storage-spaces-direct-overview.md)
 ### Understand
 #### [Understand the cache](storage-spaces/understand-the-cache.md)
