@@ -68,7 +68,7 @@ Look for events from source RasClient. All error messages return the error code 
 
 -   **Possible cause.** This error typically occurs when no machine certificate or root machine certificate is present on the VPN server.
 
--   **Possible solution.** Ensure that the certificates outlined in this guide are installed on both the client computer and the VPN server.
+-   **Possible solution.** Ensure that the certificates outlined in this deployment are installed on both the client computer and the VPN server.
 
 ## Error code: 13801
 

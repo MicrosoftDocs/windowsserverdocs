@@ -16,7 +16,7 @@ ms.reviewer: deverette
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-&#171;  [**Previous:** Remote Access Always On VPN Deployment Planning](always-on-vpn-deploy-planning.md)<br>
+&#171;  [**Previous:** Plan the Always On VPN Deployment](always-on-vpn-deploy-planning.md)<br>
 &#187; [ **Next:** Step 2. Configure the Remote Access Server for Always On VPN](vpn-deploy-ras.md)
 
 In this step, you install and configure the server-side components necessary to support the VPN, including configuring PKI to distribute the certificates used by users, the VPN server, and the NPS server; configuring RRAS to support IKEv2 connections; and configuring the NPS server to perform authorization for the VPN connections.
@@ -185,7 +185,7 @@ In this procedure, you can configure a new Server Authentication template for yo
 >[!IMPORTANT] 
 >Because VPN clients access this server from the public Internet, the subject and alternative names are different than the internal server name. As a result, you cannot autoenroll this certificate on VPN servers.
 
-**Prerequisites:**
+**Prerequisites:**<p>
 Domain-joined VPN servers
 
 **Procedure:** 
