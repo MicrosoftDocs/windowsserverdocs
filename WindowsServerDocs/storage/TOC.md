@@ -106,7 +106,6 @@
 #### [Disaster recovery](storage-spaces/storage-spaces-direct-disaster-recovery.md)
 ### Deploy
 #### [Deploy Storage Spaces Direct](storage-spaces/deploy-storage-spaces-direct.md)
-#### [Deploy Storage Spaces on a stand-alone server](storage-spaces/deploy-standalone-storage-spaces.md)
 #### [Create volumes](storage-spaces/create-volumes.md)
 #### [Configure quorum](../failover-clustering/manage-cluster-quorum.md)
 ### Manage
@@ -123,6 +122,7 @@
 #### [Performance history](storage-spaces/performance-history.md)
 #### [Delimit the allocation of volumes](storage-spaces/delimit-volume-allocation.md)
 ### [Storage Spaces](storage-spaces/overview.md)
+#### [Deploy Storage Spaces on a stand-alone server](storage-spaces/deploy-standalone-storage-spaces.md)
 ## [Work Folders](work-folders/work-folders-overview.md)
 ### [Designing a Work Folders Implementation](work-folders/plan-work-folders.md)
 ### [Deploying Work Folders](work-folders/deploy-work-folders.md)
