@@ -12,7 +12,7 @@ ms.assetid: d4c6e8e9-fcb3-4a4a-9d04-2d8c367b6354
 author: coreyp-at-msft
 ms.author: coreyp
 manager: lizapo
-ms.date: 10/16/2017
+ms.date: 05/21/2018
 ---
 
 # robocopy
@@ -69,7 +69,7 @@ robocopy <Source> <Destination> [<File>[ ...]] [<Options>]
 |/rh:hhmm-hhmm|Specifies run times when new copies may be started.|
 |/pf|Checks run times on a per-file (not per-pass) basis.|
 |/ipg:n|Specifies the inter-packet gap to free bandwidth on slow lines.|
-|/sl|Copies the symbolic link instead of the target.|
+|/sl|Follows the symbolic link and copies the target.|
 
 > [!IMPORTANT]
 > When using the **/SECFIX** copy option, specify the type of security information you want to copy by also using one of these additional copy options:</br>> -   **/COPYALL**</br>> -   **/COPY:O**</br>> -   **/COPY:S**</br>> -   **/COPY:U**</br>> -   **/SEC**
