@@ -31,7 +31,7 @@ In this step, you learn about the ProfileXML options and schema, and how to crea
 
 ProfileXML is a URI node within the VPNv2 CSP. Rather than configuring each VPNv2 CSP node individually—such as triggers, route lists, and authentication protocols—use this node to configure a Windows 10 VPN client by delivering all the settings as a single XML block to a single CSP node. The ProfileXML schema matches the schema of the VPNv2 CSP nodes almost identically, but some terms are slightly different.
 
-You use ProfileXML in all the delivery methods this guide describes, including Windows PowerShell, System Center Configuration Manager, and Intune. There are two ways to configure the ProfileXML VPNv2 CSP node in this guide:
+You use ProfileXML in all the delivery methods this deployment describes, including Windows PowerShell, System Center Configuration Manager, and Intune. There are two ways to configure the ProfileXML VPNv2 CSP node in this deployment:
 
 - **OMA-DM**. One way is to use an MDM provider capable of using OMA-DM, as discussed earlier in the section “VPNv2 CSP nodes.” Using this method, you can easily insert the VPN profile configuration XML markup into the ProfileXML CSP node. This is the method you’ll use to configure the Remote Access Always On VPN client by using Intune.
 
@@ -90,9 +90,9 @@ For more information about EAP settings, see [EAP configuration](https://msdn.mi
 
 ## <a name="bkmk_profile"></a>Manually create a template connection profile
 
-In this guide’s scenario, you use Protected Extensible Authentication Protocol \(PEAP\) to secure communication between the client and the server. Unlike a simple user name and password, this connection requires a unique EAPConfiguration section in the VPN profile to work. 
+In this step, you use Protected Extensible Authentication Protocol \(PEAP\) to secure communication between the client and the server. Unlike a simple user name and password, this connection requires a unique EAPConfiguration section in the VPN profile to work. 
 
-Rather than describing how to create the XML markup for that section from scratch, you can use the Windows user interface to create a template VPN profile, and then use Windows PowerShell to consume the EAPConfiguration portion from that template to create the final ProfileXML that you will deploy later in the guide.
+Rather than describing how to create the XML markup for that section from scratch, you can use the Windows user interface to create a template VPN profile, and then use Windows PowerShell to consume the EAPConfiguration portion from that template to create the final ProfileXML that you will deploy later in the deployment.
 
 ### Record NPS certificate settings
 
