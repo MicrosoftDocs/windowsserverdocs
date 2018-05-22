@@ -32,7 +32,7 @@ In this step, you can create OMA-DM based VPNv2 profiles using Intune to deploy 
 Everything discussed in this section is the minimum needed to make VPN work with Conditional Access. It does not cover Split Tunneling, Using WIP, creating custom Intune device configuration profiles to get AutoVPN working, or SSO. Integrate the settings below into the VPN profile you created earlier under [Configure Windows 10 Client Always On VPN Connections](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-client-vpn-connections).  In this example, we are integrating them into the [Configure the VPN client by using Intune](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-client-vpn-connections#configure-the-vpn-client-by-using-intune) policy.
 
 **Prerequisite:**<p>
-Windows 10 client computer has already been configured to communicate with a VPN connection using Intune.   
+Windows 10 client computer has already been configured with a VPN connection using Intune.   
 
 
 **Procedure:**
