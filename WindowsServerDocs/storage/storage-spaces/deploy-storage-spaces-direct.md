@@ -1,5 +1,5 @@
 ---
-title: Deploying Storage Spaces Direct
+title: Deploy Storage Spaces Direct
 ms.prod: windows-server-threshold
 manager: eldenc
 ms.author: stevenek
@@ -12,7 +12,7 @@ description: Step-by-step instructions to deploy software-defined storage with S
 ms.localizationpriority: medium
 ---
 
-# Deploying Storage Spaces Direct
+# Deploy Storage Spaces Direct
 
 > Applies to: Windows Server 2016
 
@@ -40,30 +40,26 @@ Gather the following information:
 
 - **VLAN ID.** Note the VLAN ID to be used for management OS network adapters on the servers, if any. You should be able to obtain this from your network administrator.
 
-## Management system
+## Step 1: Deploy Windows Server
 
-This guide focuses on deploying using the Server Core installation option from a separate management system, which must have:
+### Step 1.1: Install the operating system
+
+The first step is to install Windows Server on every server that will be in the cluster. Storage Spaces Direct requires Windows Server 2016 Datacenter Edition. You can use the Server Core installation option, or Server with Desktop Experience.
+
+When you install Windows Server using the Setup wizard, you can choose between *Windows Server* (referring to Server Core) and *Windows Server (Server with Desktop Experience)*, which is the equivalent of the *Full* installation option available in Windows Server 2012 R2. If you don't choose, you'll get the Server Core installation option. For more information, see [Installation Options for Windows Server 2016](../../get-started/Windows-Server-2016.md).
+
+### Step 1.2: Connect to the servers
+
+This guide focuses the Server Core installation option and deploying/managing remotely from a separate management system, which must have:
 
 - Windows Server 2016 with the same updates as the servers it's managing
 - Network connectivity to the servers it's managing
 - Joined to the same domain or a fully trusted domain
 - Remote Server Administration Tools (RSAT) and PowerShell modules for Hyper-V and Failover Clustering. RSAT tools and PowerShell modules are available on Windows Server and can be installed without installing other features. You can also install the [Remote Server Administration Tools](https://www.microsoft.com/download/details.aspx?id=45520) on a Windows 10 management PC.
 
-## Step 1: Install Windows Server
+On the Management system install the Failover Cluster and Hyper-V management tools. This can be done through Server Manager using the **Add Roles and Features** wizard. On the **Features** page, select **Remote Server Administration Tools**, and then select the tools to install.
 
-Storage Spaces Direct requires Windows Server 2016 Datacenter Edition.
-
-You can use the Server Core installation option, or Server with Desktop Experience.
-
-When you install Windows Server using the Setup wizard, you can choose between *Windows Server* (referring to Server Core) and *Windows Server (Server with Desktop Experience)*, which is the equivalent of the *Full* installation option available in Windows Server 2012 R2. If you don't choose, you'll get the Server Core installation option. For more information, see [Installation Options for Windows Server 2016](../../get-started/Windows-Server-2016.md).
-
-### Step 1.1: Connecting to the cluster nodes
-
-You'll need a management system that has Windows Server with the same updates to manage and configuration as the cluster nodes. If it's a Server with Desktop Experience deployment, you can manage it from a remote machine or by logging into one of the cluster nodes. You may also use a Windows 10 client machine that has the latest updates installed, and the client Remote Server Administration Tools (RSAT) for Windows Server tools installed.
-
-1. On the Management system install the Failover Cluster and Hyper-V management tools. This can be done through Server Manager using the **Add Roles and Features** wizard. On the **Features** page, select **Remote Server Administration Tools**, and then select the tools to install.
-
-2. Enter the PS session and use either the server name or the IP address of the node you want to connect to. You'll be prompted for a password after you execute this command, enter the administrator password you specified when setting up Windows.
+Enter the PS session and use either the server name or the IP address of the node you want to connect to. You'll be prompted for a password after you execute this command, enter the administrator password you specified when setting up Windows.
 
    ```PowerShell
    Enter-PSSession -ComputerName <myComputerName> -Credential LocalHost\Administrator
@@ -91,83 +87,76 @@ You'll need a management system that has Windows Server with the same updates to
     >   
     >  To empty the list, type `Clear-Item WSMAN:\Localhost\Client\TrustedHost`.  
 
-### Step 1.2: Joining a domain and adding domain accounts
+### Step 1.3: Join the domain and add domain accounts
 
-So far this guide has had you deploying and configuring individual nodes with the local administrator account &lt;ComputerName&gt;\\Administrator.
+So far you've configured the individual servers with the local administrator account, `<ComputerName>\Administrator`.
 
-Managing a Storage Spaces Direct cluster often requires using an Active Directory Domain Services domain account that is in the Administrators group on each node. You'll also want to join all the nodes to a domain.
+To manage Storage Spaces Direct, you'll need to join the servers to a domain and use an Active Directory Domain Services domain account that is in the Administrators group on every server.
 
-From the management system, perform the following steps:
+From the management system, open a PowerShell console with Administrator privileges. Use `Enter-PSSession` to connect to each server and  run the following cmdlet, substituting your own computer name, domain name, and domain credentials:
 
-1. On the management system, open a PowerShell console with Administrator privileges.
-2. Use Enter-PSSession to connect to each node and then run the following command to add a node to the appropriate domain, substituting your own computer name, domain name, and domain credentials:
+```PowerShell  
+Add-Computer -NewName "Server01" -DomainName "contoso.com" -Credential "CONTOSO\User" -Restart -Force  
+```
 
-    ```PowerShell  
-    Add-Computer -NewName "FSNode01" -DomainName "contoso.com" -Credential "CONTOSO\GAppel" -Restart -Force  
-    ``` 
-3. If your storage administrator account isn't a member of the Domain Admins group, add your storage administrator account to the local Administrators group on each node - or better yet, add the group you use for storage administrators.  You can use the following command (or write a Windows PowerShell function to do so - see [Use PowerShell to Add Domain Users to a Local Group](http://blogs.technet.com/b/heyscriptingguy/archive/2010/08/19/use-powershell-to-add-domain-users-to-a-local-group.aspx) for more info):
+If your storage administrator account isn't a member of the Domain Admins group, add your storage administrator account to the local Administrators group on each node - or better yet, add the group you use for storage administrators. You can use the following command (or write a Windows PowerShell function to do so - see [Use PowerShell to Add Domain Users to a Local Group](http://blogs.technet.com/b/heyscriptingguy/archive/2010/08/19/use-powershell-to-add-domain-users-to-a-local-group.aspx) for more info):
 
-    ```
-    Net localgroup Administrators <Domain\Account> /add
-    ```
+```
+Net localgroup Administrators <Domain\Account> /add
+```
 
-### Step 1.3: Install server roles and features
+### Step 1.4: Install roles and features
 
-The next step is to [install the server roles and features](../../administration/server-manager/install-or-uninstall-roles-role-services-or-features.md) on all of the nodes:
-* Failover Clustering
-* Hyper-V
-* File Server (if you want to host any file shares, such as for a converged deployment)
-* Data-Center-Bridging (if you're using RoCEv2 instead of iWARP network adapters)
-* RSAT-Clustering-PowerShell
-* Hyper-V-PowerShell
+The next step is to [install some server roles and features](../../administration/server-manager/install-or-uninstall-roles-role-services-or-features.md) on every server:
 
-To do so, use the Install-WindowsFeature cmdlet. Here's an example PowerShell script you can use to install the roles and features on all members - just change the *Servers* and *ServerRoles* variables to fit your deployment:
+- Failover Clustering
+- Hyper-V
+- File Server (if you want to host any file shares, such as for a converged deployment)
+- Data-Center-Bridging (if you're using RoCEv2 instead of iWARP network adapters)
+- RSAT-Clustering-PowerShell
+- Hyper-V-PowerShell
+
+Use the `Install-WindowsFeature` cmdlet as shown, substituting your server names:
 
 ```PowerShell
 # Fill in these variables with your values
-$Servers = "storage-node01","storage-node02","storage-node03","storage-node04"
-$ServerRoles = "Data-Center-Bridging","Failover-Clustering","Hyper-V","RSAT-Clustering-PowerShell","Hyper-V-PowerShell","FS-FileServer"
+$ServerList = "Server01", "Server02", "Server03", "Server04"
+$FeatureList = "Hyper-V", "Failover-Clustering", "Data-Center-Bridging", "RSAT-Clustering-PowerShell", "Hyper-V-PowerShell", "FS-FileServer"
 
-foreach ($server in $servers){
-    Install-WindowsFeature –Computername $server –Name $ServerRoles
+Invoke-Command ($ServerList) {
+    Install-WindowsFeature $FeatureList
 }
 ```
 
-If you later need to remove some features, update the *$Roles* variable and replace *Install-WindowsFeature* with *Remove-WindowsFeature*.
-
 ## Step 2: Configure the network
 
-There are a number of ways to setup networking with Storage Spaces Direct. For details, see [RDMA configuration guidelines for Windows Server 2016 and Windows Server](https://github.com/Microsoft/SDN/blob/master/Diagnostics/S2D%20WS2016_ConvergedNIC_Configuration.docx). 
+If you're deploying Storage Spaces Direct inside virtual machines, skip this section.
 
-If you're testing Storage Spaces Direct inside of virtual machines, skip this section. RDMA is not available for networking inside a virtual machine.
+Storage Spaces Direct requires high-bandwidth, low-latency networking between servers in the cluster. At least 10 GbE networking is required and remote direct memory access (RDMA) is recommended. You can use either iWARP or RoCE as long as it has the Windows Server 2016 logo, but iWARP is usually easier to set up.
 
-Here are a few points about networking and Storage Spaces Direct:
+> [!Important]
+> Depending on your networking equipment, and especially with RoCE v2, some configuration of the top-of-rack switch may be required. Correct switch configuration is important to ensure reliability and performance of Storage Spaces Direct.
 
-- Storage Spaces Direct requires high bandwidth and low latency network connections between nodes. This network connectivity is important for both system performance and reliability. We recommend using at least two 10 Gb connections between the nodes, preferably with RDMA to increase throughput and reduce the CPU usage for network traffic.
+Windows Server 2016 introduces switch-embedded teaming (SET) within the Hyper-V virtual switch. This allows the same physical NIC ports to be used for all network traffic while using RDMA, reducing the number of physical NIC ports required. Switch-embedded teaming is recommended for Storage Spaces Direct.
 
-- There are two common versions of RDMA network adapters - RoCE and iWARP. You can use either with Storage Spaces Direct as long as it has the Windows Server 2016 logo, but iWARP usually requires less configuration. Top of Rack switches and server configurations vary depending on the network adapters and switches. Configuring the server and switch correctly is important to ensure reliability and performance of Storage Spaces Direct.
-
-- Windows Server 2016 also introduces a new virtual switch that has network teaming built in called Switch Embedded Teaming (SET). This virtual switch allows the same physical NIC ports to be used for all network traffic while using RDMA. This reduces the number of physical NIC ports that would otherwise be required and allows managing the networking through the Software Defined Network features of Windows Server.
+For instructions to set up networking for Storage Spaces Direct, see see [Windows Server 2016 Converged NIC and Guest RDMA Deployment Guide](https://github.com/Microsoft/SDN/blob/master/Diagnostics/S2D%20WS2016_ConvergedNIC_Configuration.docx).
 
 ## Step 3: Configure Storage Spaces Direct
 
 The following steps are done on a management system that is the same version as the servers being configured. The following steps should NOT be run remotely using a PowerShell session, but instead run in a local PowerShell session on the management system, with administrative permissions.
 
-### Step 3.1: Clean disks
+### Step 3.1: Clean drives
 
-The disks intended to be used for Storage Spaces Direct need to be empty and without partitions or other data. If a disk has partitions or other data, it will not be included in the Storage Spaces Direct system.
-
-On the management system, open a PowerShell ISE window with Administrator privileges, and then create and run the following script, replacing the *&lt;ClusterName&gt;* variable with the appropriate cluster name. Running this script will help identify the disks on each node that are detected to be able to be used for Storage Spaces Direct, and removes all data and partitions from those disks.
-
-You can skip this step if the disks have already been cleaned or verified to be without partitions.
+Before you enable Storage Spaces Direct, ensure your drives are empty: no old partitions or other data. Run the following script, substituting your computer names, to remove all any old partitions or other data.
 
 > [!Warning]
-> Ensure that there is no data on any of the disks of the cluster before running this set of commands. It will remove any data on the disks that are not being use by the operating system.
+> This script will permanently remove any data on any drives other than the operating system boot drive!
 
 ```PowerShell
-$Servers = <list of servers>
+# Fill in these variables with your values
+$ServerList = "Server01", "Server02", "Server03", "Server04"
 
-Invoke-Command ($Servers) {
+Invoke-Command ($ServerList) {
     Update-StorageProviderCache
     Get-StoragePool | ? IsPrimordial -eq $false | Set-StoragePool -IsReadOnly:$false -ErrorAction SilentlyContinue
     Get-StoragePool | ? IsPrimordial -eq $false | Get-VirtualDisk | Remove-VirtualDisk -Confirm:$false -ErrorAction SilentlyContinue
@@ -184,24 +173,24 @@ Invoke-Command ($Servers) {
 } | Sort -Property PsComputerName, Count
 ```
 
-The output from this script will look similar to the following. The **Count** is the number of disks with that name per cluster node (PSComputerName):
+The output will look like this, where **Count** is the number of drives of each model in each server:
 
 ```
 Count Name                          PSComputerName
 ----- ----                          --------------
-4     ATA SSDSC2BA800G4n            StorageClusterNode1
-10    ATA ST4000NM0033              StorageClusterNode1
-4     ATA SSDSC2BA800G4n            StorageClusterNode2
-10    ATA ST4000NM0033              StorageClusterNode2
-4     ATA SSDSC2BA800G4n            StorageClusterNode3
-10    ATA ST4000NM0033              StorageClusterNode3
-4     ATA SSDSC2BA800G4n            StorageClusterNode4
-10    ATA ST4000NM0033              StorageClusterNode4
+4     ATA SSDSC2BA800G4n            Server01
+10    ATA ST4000NM0033              Server01
+4     ATA SSDSC2BA800G4n            Server02
+10    ATA ST4000NM0033              Server02
+4     ATA SSDSC2BA800G4n            Server03
+10    ATA ST4000NM0033              Server03
+4     ATA SSDSC2BA800G4n            Server04
+10    ATA ST4000NM0033              Server04
 ```
 
 ### Step 3.2: Run cluster validation
 
-In this step, you'll run the cluster validation tool to ensure that the server nodes are configured correctly to create a cluster using Storage Spaces Direct. When cluster validation (Test-Cluster) is run before the cluster is created, it runs the tests that verify that the configuration appears suitable to successfully function as a failover cluster. The example directly below uses the "-Include" parameter, and then the specific categories of tests are specified. This ensures that the Storage Spaces Direct specific tests are included in the validation.
+In this step, you'll run the cluster validation tool to ensure that the server nodes are configured correctly to create a cluster using Storage Spaces Direct. When cluster validation (`Test-Cluster`) is run before the cluster is created, it runs the tests that verify that the configuration appears suitable to successfully function as a failover cluster. The example directly below uses the `-Include` parameter, and then the specific categories of tests are specified. This ensures that the Storage Spaces Direct specific tests are included in the validation.
 
 Use the following PowerShell command to validate a set of servers for use as a Storage Spaces Direct cluster.
 
@@ -232,7 +221,7 @@ For more information about configuring a file share witness, see [*Configuring a
 
 ### Step 3.5: Enable Storage Spaces Direct
 
-After creating the cluster, use the Enable-ClusterStorageSpacesDirect PowerShell cmdlet, which will put the storage system into the Storage Spaces Direct mode and do the following automatically:
+After creating the cluster, use the `Enable-ClusterStorageSpacesDirect` PowerShell cmdlet, which will put the storage system into the Storage Spaces Direct mode and do the following automatically:
 
 -   **Create a pool:** Creates a single large pool that has a name like "S2D on Cluster1".
 
@@ -252,7 +241,7 @@ When this command is finished, which may take several minutes, the system will b
 
 ### Step 3.6: Create volumes
 
-We recommend using the **New-Volume** cmdlet as it provides the fastest and most straightforward experience. This single cmdlet automatically creates the virtual disk, partitions and formats it, creates the volume with matching name, and adds it to cluster shared volumes – all in one easy step.
+We recommend using the `New-Volume` cmdlet as it provides the fastest and most straightforward experience. This single cmdlet automatically creates the virtual disk, partitions and formats it, creates the volume with matching name, and adds it to cluster shared volumes – all in one easy step.
 
 For more information, check out [Creating volumes in Storage Spaces Direct](create-volumes.md).
 
