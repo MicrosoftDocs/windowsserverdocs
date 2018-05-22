@@ -91,6 +91,9 @@
 ### [Storage Replica: known issues](storage-replica/storage-replica-known-issues.md)
 ### [Storage Replica: Frequently Asked Questions](storage-replica/storage-replica-frequently-asked-questions.md)
 ### [Using Storage Replica with Windows Admin Center](storage-replica/storage-replica-ui.md)
+## [Storage Spaces](storage-spaces/overview.md)
+### [Deploy Storage Spaces on a stand-alone server](storage-spaces/deploy-standalone-storage-spaces.md)
+### [Health and operational states](storage-spaces/storage-spaces-states.md)
 ## [Storage Spaces Direct](storage-spaces/storage-spaces-direct-overview.md)
 ### Understand
 #### [Understand the cache](storage-spaces/understand-the-cache.md)
@@ -106,7 +109,6 @@
 #### [Disaster recovery](storage-spaces/storage-spaces-direct-disaster-recovery.md)
 ### Deploy
 #### [Deploy Storage Spaces Direct](storage-spaces/deploy-storage-spaces-direct.md)
-#### [Deploy Storage Spaces on a stand-alone server](storage-spaces/deploy-standalone-storage-spaces.md)
 #### [Create volumes](storage-spaces/create-volumes.md)
 #### [Configure quorum](../failover-clustering/manage-cluster-quorum.md)
 ### Manage
@@ -122,7 +124,6 @@
 ### Insider Preview
 #### [Performance history](storage-spaces/performance-history.md)
 #### [Delimit the allocation of volumes](storage-spaces/delimit-volume-allocation.md)
-### [Storage Spaces](storage-spaces/overview.md)
 ## [Work Folders](work-folders/work-folders-overview.md)
 ### [Designing a Work Folders Implementation](work-folders/plan-work-folders.md)
 ### [Deploying Work Folders](work-folders/deploy-work-folders.md)
