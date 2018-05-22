@@ -11,7 +11,7 @@ ms.assetid: c703d07c-8227-4e86-94a6-8ef390f94cdc
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/16/2017
+ms.date: 05/22/2018
 ms.prod: windows-server-threshold
 ---
 # Windows Commands
@@ -595,6 +595,7 @@ To find information about a specific command, in the following A-Z menu, click t
 -   [verifier](verifier.md)
 -   [verify](verify_1.md)
 -   [vol](vol.md)
+-   [vssadmin](vssadmin.md)- 
 
 ### <a name="bkmk_w"></a>W
 -   [waitfor](waitfor.md)
