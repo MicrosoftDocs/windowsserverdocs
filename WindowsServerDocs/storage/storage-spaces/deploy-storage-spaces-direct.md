@@ -75,17 +75,15 @@ Enter the PS session and use either the server name or the IP address of the nod
    ```
 
     > [!TIP]
-    >  If you're using a management computer that's not joined to the same domain as your file server cluster, you might get the following error when you try to connect to the nodes by using Windows PowerShell.  
+    > If you're deploying remotely from a management system, you might get an error like *WinRM cannot process the request.* To fix this, use Windows PowerShell to add each server to the Trusted Hosts list on your management computer:  
     >   
-    >  `Connecting to remote server <Node1> failed with the following error message : WinRM cannot process the request. The following error with errorcode 0x80090311 occurred while using Kerberos authentication: There are currently no logon servers available to service the logon request.`  
+    > `Set-Item WSMAN:\Localhost\Client\TrustedHosts -Value Server01 -Force`
+    >  
+    > Note: the trusted hosts list supports wildcards, like `Server*`.
+    >
+    > To view your Trusted Hosts list, type `Get-Item WSMAN:\Localhost\Client\TrustedHosts`.  
     >   
-    >  To fix this, use Windows PowerShell to add each node to the Trusted Hosts list on your management computer. Here's how (if your nodes all share a common prefix, you can use a wildcard, as shown below):  
-    >   
-    >  `Set-Item WSMAN:\Localhost\Client\TrustedHosts -Value Node* -Force`  
-    >   
-    >  To view your Trusted Hosts list, type `Get-Item WSMAN:\Localhost\Client\TrustedHosts`.  
-    >   
-    >  To empty the list, type `Clear-Item WSMAN:\Localhost\Client\TrustedHost`.  
+    > To empty the list, type `Clear-Item WSMAN:\Localhost\Client\TrustedHost`.  
 
 ### Step 1.3: Join the domain and add domain accounts
 
