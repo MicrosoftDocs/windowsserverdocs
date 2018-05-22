@@ -16,7 +16,7 @@ ms.localizationpriority: medium
 
 > Applies to: Windows Server 2016
 
-This topic presents step-by-step instructions to deploy [Storage Spaces Direct](storage-spaces-direct-overview.md).
+This topic provides step-by-step instructions to deploy [Storage Spaces Direct](storage-spaces-direct-overview.md).
 
 > [!Tip]
 > Looking to acquire Hyper-Converged Infrastructure? Microsoft recommends these [Windows Server Software-Defined](https://microsoft.com/wssd) solutions from our partners. They are designed, assembled, and validated against our reference architecture to ensure compatibility and reliability, so you get up and running quickly.
@@ -188,7 +188,7 @@ Count Name                          PSComputerName
 10    ATA ST4000NM0033              Server04
 ```
 
-### Step 3.2: Run cluster validation
+### Step 3.2: Validate cluster
 
 In this step, you'll run the cluster validation tool to ensure that the server nodes are configured correctly to create a cluster using Storage Spaces Direct. When cluster validation (`Test-Cluster`) is run before the cluster is created, it runs the tests that verify that the configuration appears suitable to successfully function as a failover cluster. The example directly below uses the `-Include` parameter, and then the specific categories of tests are specified. This ensures that the Storage Spaces Direct specific tests are included in the validation.
 
@@ -198,7 +198,7 @@ Use the following PowerShell command to validate a set of servers for use as a S
 Test-Cluster –Node <MachineName1, MachineName2, MachineName3, MachineName4> –Include "Storage Spaces Direct", "Inventory", "Network", "System Configuration"
 ```
 
-### Step 3.3: Create a cluster
+### Step 3.3: Create cluster
 
 In this step, you'll create a cluster with the nodes that you have validated for cluster creation in the preceding step using the following PowerShell cmdlet.
 
@@ -213,7 +213,7 @@ When creating the cluster, you'll get a warning that states - "There were issues
 
 After the cluster is created, it can take time for DNS entry for the cluster name to be replicated. The time is dependent on the environment and DNS replication configuration. If resolving the cluster isn't successful, in most cases you can be successful with using the machine name of a node that is an active member of the cluster may be used instead of the cluster name.
 
-### Step 3.4: Configure a cluster witness
+### Step 3.4: Configure cluster witness
 
 It is recommended that you configure a witness for the cluster, so that a three or more node system can withstand two nodes failing or being offline. A two-node deployment requires a cluster witness, otherwise either node going offline will cause the other to become unavailable as well. With these systems, you can use a file share as a witness, or use cloud witness. For more info, see [Deploy a Cloud Witness for a Failover Cluster](../../failover-clustering/deploy-cloud-witness.md).
 
