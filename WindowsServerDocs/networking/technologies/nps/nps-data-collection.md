@@ -43,11 +43,3 @@ If accounting data is configured for a log file, then search the log file for th
 Network Policy and Access Services event log entries are considered duplicative to the accounting data and don’t need to be collected.
 
 If accounting data is not enabled, then records of a user’s NPS authentication attempts can be obtained from the Network Policy and Access Services event log by searching for the `<username>`.
-
-## Delete data from NPS
-
-If a user asks to be forgotten the following steps help you to accomplish this task.
-
-- Delete all Network Policy and Access Services event logs older than 30 days.
-- Delete all accounting data log files older than 30 days.
-- Delete all accounting data SQL Server records older than 30 days or delete records WHERE User_Name = `'<username>'` if you prefer to keep more than 30 days of accounting data.
