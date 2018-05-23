@@ -36,8 +36,7 @@ No configuration is required to realize this feature.  These event logs are enab
 
 The following section outlines the events logged for use in traceability scenarios.
 
-<!-- use tabs like the group policies -->
-# [Service Start](#tab/257Service Start)
+### Service Start
 This event is logged when the Windows Time Service (W32Time) is started and logs information about the current time, current tick count, runtime configuration, time providers, and current clock rate.
 
 |||
@@ -62,8 +61,9 @@ This information can also be queried using the following commands
 *Clock Rate*
 `w32tm.exe /query /status /verbose`
 
+---
 
-# [Service Stop](#tab/258Service Stop)
+### Service Stop
 This event is logged when the Windows Time Service (W32Time) is stopping and logs information about the current time and tick count.
 
 |||
@@ -78,8 +78,9 @@ This event is logged when the Windows Time Service (W32Time) is stopping and log
 **Example text:**
 `W32time service is stopping at 2018-03-01T05:42:13.944Z (UTC), System Tick Count 6370250.`
 
+---
 
-# [NTP Status](#tab/259NTP Status)
+### NTP Status
 This event periodically logs its current list of time sources and its chosen time source.  In addition, it logs the current tick count.  This event does not fire each time a time source changes.  Other events listed later in this document provide this functionality.
 
 |||
@@ -104,7 +105,9 @@ This information can also be queried using the following commands
 *Identify Peers*
 `w32tm.exe /query /peers`
 
-# [Service Status](#tab/260Service Status)
+---
+
+### Service Status
 
 |||
 |---|---|
@@ -114,7 +117,9 @@ This information can also be queried using the following commands
 |Details |W32time periodically logs its configuration and status. This is the equivalent of calling:<br><br>`w32tm /query /configuration /verbose`<br>OR<br>`w32tm /query /status /verbose` |
 |Throttling mechanism  |Logged once every 8 hours. |
 
-# [System Time Set](#tab/261System Time Set)
+---
+
+### System Time Set
 This logs each instance when System Time is modified using SetSystemTime API.
 
 |||
@@ -124,7 +129,9 @@ This logs each instance when System Time is modified using SetSystemTime API.
 |Event description |System Time is set |
 |Throttling mechanism  |None.<br><br>This should happen rarely on systems with reasonable time synchronization, and we want to log it each time it occurs. We ignore TimeJumpAuditOffset setting while logging this event since that setting was meant to throttle events in the Windows System event log. |
 
-# [Frequency Adjustment](#tab/262Frequency Adjustment)
+---
+
+### Frequency Adjustment
 
 |||
 |---|---|
@@ -134,7 +141,9 @@ This logs each instance when System Time is modified using SetSystemTime API.
 |Details |System clock frequency is constantly modified by W32time when the clock is in close synchronization. We want to capture “reasonably significant” adjustments made to the clock frequency without overrunning the event log. |
 |Throttling mechanism  |All clock adjustments below TimeAdjustmentAuditThreshold (min = 128 part per million, default = 800 part per million) are not logged.<br><br>2 PPM change in clock frequency with current granularity yields 120 µsec/sec change in clock accuracy.<br><br>On a synchronized system, the majority of the adjustments are below this level. If you want finer tracking, this setting can be adjusted down or you can use PerfCounters, or you can do both. |
 
-# [Loaded Providers](#tab/263Loaded Providers)
+---
+
+### Loaded Providers
 
 |||
 |---|---|
@@ -144,8 +153,9 @@ This logs each instance when System Time is modified using SetSystemTime API.
 |Details |Re-reading W32time settings can cause certain critical settings to be modified in-memory, which can affect the overall accuracy of the time synchronization.<br><br>W32time logs each occurrence when rereading its settings which gives the potential impact on time synchronization. |
 |Throttling mechanism  |None.<br><br>This event occurs only when an admin or GP update changes the time providers and then triggers W32time. We want to record each instance of change of settings. |
 
+---
 
-# [Time Source](#tab/264Time Source)
+### Time Source
 
 |||
 |---|---|
@@ -155,9 +165,9 @@ This logs each instance when System Time is modified using SetSystemTime API.
 |Details |NTP Client records an event with the current state of the time servers/peers when a time server/peer changes state (**Pending ->Sync**, **Sync -> unreachable**, or other transitions) |
 |Throttling mechanism  |Max frequency – only once every 5 minutes to protect the log from transient issues and bad provider implementation. |
 
+---
 
-
-# [Stratum Change](#tab/265Stratum Change)
+### Stratum Change
 
 |||
 |---|---|
@@ -167,7 +177,9 @@ This logs each instance when System Time is modified using SetSystemTime API.
 |Details |W32time Time Source and Stratum Number are important factors in time traceability and any changes to these must be logged. If W32time has no source of time and you have not configured as a reliable time source, then it will stop advertising as a time server, and by-design respond to requests with some invalid parameters. This event is critical to track the state changes in an NTP topology. |
 |Throttling mechanism  |None. |
 
-# [Resynchronization Requested](#tab/266Resynchronization Requested)
+---
+
+### Resynchronization Requested
 
 |||
 |---|---|

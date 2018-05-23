@@ -1,6 +1,6 @@
 ---
-title: Always On VPN Deployment Guide for Windows Server and Windows 10
-description: You can use this guide to deploy Always On Virtual Private Network (VPN) connections for remote employees by using Remote Access in Windows Server 2016 or later and Always On VPN profiles for Windows 10 client computers.
+title: Always On VPN Deployment for Windows Server and Windows 10
+description: You can use this deployment to deploy Always On Virtual Private Network (VPN) connections for remote employees by using Remote Access in Windows Server 2016 or later and Always On VPN profiles for Windows 10 client computers.
 ms.prod: windows-server-threshold
 ms.technology: networking-ras
 ms.topic: article
@@ -11,7 +11,7 @@ ms.author: pashort
 author: shortpatti
 ---
 
-# Always On VPN Deployment Guide for Windows Server and Windows 10
+# Always On VPN Deployment for Windows Server and Windows 10
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
@@ -23,9 +23,9 @@ Always On VPN has many benefits over the Windows VPN solutions of the past. Key 
 Always On VPN provides a single, cohesive solution for remote access for all your connected devices going forward, even personally owned devices. Also, you can choose which management platform they prefer for deploying the Always On VPN configuration because the CSP is not vendor specific. 
 
 
-## <a name="bkmk_about"></a>About this guide
+## <a name="bkmk_about"></a>About this deployment
 
-The instructions in this guide describe how to deploy Remote Access as a single tenant VPN RAS Gateway for point\-to\-site VPN connections, using any of the four scenarios mentioned below, for remote client computers that are running Windows 10. You also find in this guide instructions for modifying some of your existing infrastructure for the deployment. Also throughout this guide, you find links to help you learn more about the VPN connection process, servers to configure, ProfileXML VPNv2 CSP node, and other technologies to deploy Always On VPN.
+The instructions in this deployment describe how to deploy Remote Access as a single tenant VPN RAS Gateway for point\-to\-site VPN connections, using any of the four scenarios mentioned below, for remote client computers that are running Windows 10. You also find in this deployment instructions for modifying some of your existing infrastructure for the deployment. Also throughout this deployment, you find links to help you learn more about the VPN connection process, servers to configure, ProfileXML VPNv2 CSP node, and other technologies to deploy Always On VPN.
 
 **Always On VPN deployment scenarios:**
 
@@ -36,9 +36,9 @@ The instructions in this guide describe how to deploy Remote Access as a single 
 
 For more details about the scenarios presented, see [Deploy Always On VPN](always-on-vpn-deploy-deployment.md).
 
-## <a name="bkmk_not"></a>What this guide does not provide
+## <a name="bkmk_not"></a>What is not provide in this deployment
 
-This guide does not provide instructions for deploying the following items.
+This deployment does not provide instructions for deploying the following items.
 
 - Active Directory Domain Services \(AD DS\).
 - Active Directory Certificate Services \(AD CS\) and a Public Key Infrastructure \(PKI\).
@@ -47,7 +47,7 @@ This guide does not provide instructions for deploying the following items.
 - Additional network resources, such as application and file servers, that remote users can access over an Always On VPN connection.
 - Internet connectivity or Conditional Access for Internet connectivity using Azure AD.
 
-## <a name="bkmk_prerequisites"></a>Prerequisites for using this guide
+## <a name="bkmk_prerequisites"></a>Deployment rerequisites
 
 To deploy Always On VPN successfully, the remote client computers must be joiened to the Active Directory domain and running the Windows 10 Anniversary Update \(version 1607\) or later operating system.  Additionally, you must have:
 - An Active Directory domain infrastructure, including one or more Domain Name System \(DNS\) servers.
