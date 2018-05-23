@@ -190,21 +190,24 @@ In this section, you can configure Remote Access VPN to allow IKEv2 VPN connecti
 
     2.  Click **OK**.
 
-5.  Click **WAN Miniport (L2TP)** and click **Configure**. The Configure Device - WAN Miniport (IKEv2) dialog box opens.
+5.  Click **WAN Miniport (L2TP)** and click **Configure**. The Configure Device - WAN Miniport (L2TP) dialog box opens.
 
     1.  In **Maximum ports**, type the number of ports to match the maximum number of simultaneous VPN connections that you want to support.
 
     2.  Click **OK**.
 
-6.  Click **WAN Miniport (PPTP)** and click **Configure**. The Configure Device - WAN Miniport (IKEv2) dialog box opens.
+6.  Click **WAN Miniport (PPTP)** and click **Configure**. The Configure Device - WAN Miniport (PPTP) dialog box opens.
 
     1.  In **Maximum ports**, type the number of ports to match the maximum number of simultaneous VPN connections that you want to support.
 
     2.  Click **OK**.
 
-    3.  In **Maximum ports**, type the number of ports to match the maximum number of simultaneous VPN connections that you want to support.
 
-    4.  Click **OK**.
+5. Click **WAN Miniport (IKEv2)** and click **Configure**. The Configure Device - WAN Miniport (IKEv2) dialog box opens. 
+
+    1.  In **Maximum ports**, type the number of ports to match the maximum number of simultaneous VPN connections that you want to support.
+
+    2.  Click **OK**.
 
 7.  If prompted, click **Yes** to confirm restarting the server and click **Close** to restart the server.
 
