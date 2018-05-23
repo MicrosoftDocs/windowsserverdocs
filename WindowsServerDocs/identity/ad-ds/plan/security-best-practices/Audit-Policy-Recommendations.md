@@ -30,6 +30,8 @@ The following baseline audit policy settings are recommended for normal security
 ## Recommended Audit Policies by Operating System  
 This section contains tables that list the audit setting recommendations that apply to the following operating systems:  
 
+-   Windows Server 2016 
+
 -   Windows Server 2012  
 
 -   Windows Server 2012 R2  
@@ -131,7 +133,7 @@ These tables contain the Windows default setting, the baseline recommendations, 
 |Audit Security System Extension||||  
 |Audit System Integrity||||  
 
-**Windows Server 2012, Windows Server 2008 R2, and Windows Server 2008 Audit Settings Recommendations**  
+**Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, and Windows Server 2008 Audit Settings Recommendations**  
 
 |Audit Policy Category or Subcategory|Windows Default<br /><br />Success    Failure|Baseline Recommendation<br /><br />Success    Failure|Stronger Recommendation<br /><br />Success    Failure|  
 |----------------------------------------|------------------------------------------|--------------------------------------------------|--------------------------------------------------|  
