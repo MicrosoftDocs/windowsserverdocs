@@ -32,13 +32,13 @@ Watch the videos below for a complete walk-through of the process.
 5. Create Windows Server [virtual machines](https://ms.portal.azure.com/#create/Microsoft.WindowsServer2016Datacenter-ARM) in the previously created Resource group (**SR-AZ2AZ**). Use the previously created virtual network (**az2az-Vnet**) and network security group (**az2az-NSG**). 
 
 Domain Controller (**az2azDC**). You can choose to create a third availability set for your domain controller or add the domain controller in one of the two availability sets. If you are adding this to the availability set created for the two clusters, assign it a Standard public IP address during VM creation. 
-- Install Active Directory Domain Service.
+   - Install Active Directory Domain Service.
       - Create a domain (Contoso.com)
       - Create a user with administrator privileges (contosoadmin) 
-- Create two virtual machines (**az2az1**, **az2az2**) in the first availability set (**az2azAS1**). Assign a standard Public IP address to each virtual machine during the creation itself.
+   - Create two virtual machines (**az2az1**, **az2az2**) in the first availability set (**az2azAS1**). Assign a standard Public IP address to each virtual machine during the creation itself.
       - Add at-least 2 managed disks to each machine
       - Install Failover Clustering and Storage Replica feature
-- Create two virtual machines (**az2az3**, **az2az4**) in the second availability set (**az2azAS2**). Assign standard Public IP address to each virtual machine during the creation itself. 
+   - Create two virtual machines (**az2az3**, **az2az4**) in the second availability set (**az2azAS2**). Assign standard Public IP address to each virtual machine during the creation itself. 
       - Add at-least 2 managed disks to each machine. 
       - Install Failover Clustering and Storage Replica feature. 
 
@@ -46,7 +46,7 @@ Domain Controller (**az2azDC**). You can choose to create a third availability s
 
 9. Change the DNS Server of the virtual network to domain controller private IP address. 
    - In our example, the domain controller **az2azDC** has private IP address (10.3.0.8). In the Virtual Network (**az2az-Vnet**) change DNS Server 10.3.0.8. Connect all the nodes to "Contoso.com" and provide administrator privileges to "contosoadmin".
-   - Login as contosoadmin from all the nodes 
+   - Login as contosoadmin from all the nodes. 
  
 
 10. Create the clusters (**SRAZC1**, **SRAZC2**). 
