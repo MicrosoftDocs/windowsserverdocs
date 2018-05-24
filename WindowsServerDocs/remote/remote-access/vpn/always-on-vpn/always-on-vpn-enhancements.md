@@ -15,8 +15,8 @@ ms.date: 05/25/2018
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows 10
 
-&#171; [**Previous:** Learn about the Always On VPN Enhancements](../vpn/always-on-vpn/always-on-vpn-enhancements.md)<br>
-&#187; [**Next:** Learn about the Always On VPN technology](../vpn/always-on-vpn/always-on-vpn-technology-overview.md)
+&#171; [**Previous:** Learn about the feature comparison between Always On VPN and DirectAccess](../vpn-map-da.md)<br>
+&#187; [**Next:** Learn about the Always On VPN technology](always-on-vpn-technology-overview.md)
 
 Always On VPN has many benefits over the Windows VPN solutions of the past. Key improvements in integration, security, connectivity, networking control, and compatibility align Always On VPN with Microsoft's cloud-first, mobile-first vision.
 
