@@ -1,0 +1,1 @@
+**Decommission DirectAccess.** After you have successfully migrated all clients to Always On VPN, you remove DirectAccess from your environment. For further details about each step in the process, see the [Always On VPN migration deployment](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/da-always-on-vpn-migration/da-always-on-migration-deploy) section.

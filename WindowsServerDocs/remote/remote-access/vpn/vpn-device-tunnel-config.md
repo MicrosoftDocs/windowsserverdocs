@@ -3,7 +3,7 @@ title: Configure the VPN Device Tunnel in Windows 10
 description: You can use this topic to learn how to create a VPN device tunnel in Windows 10.
 manager: elizapo
 ms.prod: windows-server-threshold
-ms.date: 05/21/2018
+ms.date: 05/25/2018
 ms.technology: networking-ras
 ms.topic: article
 ms.assetid: 158b7a62-2c52-448b-9467-c00d5018f65b

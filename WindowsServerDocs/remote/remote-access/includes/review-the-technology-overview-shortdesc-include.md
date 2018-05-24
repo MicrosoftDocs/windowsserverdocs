@@ -1,0 +1,1 @@
+**[Learn about the Always On VPN technology](../vpn/always-on-vpn/always-on-vpn-technology-overview.md).** For this deployment, you must install a new Remote Access server that is running Windows Server 2016, as well as modify some of your existing infrastructure for the deployment.

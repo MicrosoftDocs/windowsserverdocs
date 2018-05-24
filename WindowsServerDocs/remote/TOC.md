@@ -112,12 +112,12 @@
 #### [BGP Windows PowerShell Command Reference](remote-access/bgp/BGP-Windows-powershell-Command-Reference.md)
 
 ### [Always On VPN](remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy.md)
+#### [Features Comparison Between Always On VPN and DirectAccess](remote-access/vpn/vpn-map-da.md)
+#### [Always On VPN enhancements](remote-access/vpn/always-on-vpn/always-on-vpn-enhancements.md)
 #### [Technology Overview of Always On VPN](remote-access/vpn/always-on-vpn/always-on-vpn-technology-overview.md)
 #### [Advanced Features of Always On VPN](remote-access/vpn/always-on-vpn/deploy/always-on-vpn-adv-options.md)
-#### [Features Comparison Between Always On VPN and DirectAccess](remote-access/vpn/vpn-map-da.md)
 #### [Plan the Always On VPN Deployment](remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-planning.md)
 #### [Deploy Always On VPN](remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-deployment.md)
-
 ##### [Step 1. Configure the Always On VPN Server Infrastructure](remote-access/vpn/always-on-vpn/deploy/vpn-deploy-server-infrastructure.md)
 ##### [Step 2. Configure the Remote Access Server for Always On VPN](remote-access/vpn/always-on-vpn/deploy/vpn-deploy-ras.md)
 ##### [Step 3. Install and Configure the NPS Server](remote-access/vpn/always-on-vpn/deploy/vpn-deploy-nps.md)
