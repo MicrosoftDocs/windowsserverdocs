@@ -26,22 +26,14 @@ The Remote Access guide provides you with an overview of the Remote Access serve
  
 For more information about other networking technologies, see [Networking in Windows Server 2016](https://docs.microsoft.com/windows-server/networking/networking).
 
-The Remote Access server role is a logical grouping of the following related network access technologies.
-
-- [Remote Access Service (RAS)](#bkmk_da)
-
-- [Routing](#bkmk_rras)
-  
-- [Web Application Proxy](#bkmk_proxy)
-  
-These technologies are the *role services* of the Remote Access server role. When you install the Remote Access server role with the **Add Roles and Features Wizard** or Windows PowerShell, you can install one or more of these three role services.
+The Remote Access server role is a logical grouping of these related network access technologies: [Remote Access Service (RAS)](#bkmk_da), [Routing](#bkmk_rras), and [Web Application Proxy](#bkmk_proxy). These technologies are the *role services* of the Remote Access server role. When you install the Remote Access server role with the **Add Roles and Features Wizard** or Windows PowerShell, you can install one or more of these three role services.
 
 >[!IMPORTANT]
 >Do not attempt to deploy Remote Access on a virtual machine \(VM\) in Microsoft Azure. Using Remote Access in Microsoft Azure is not supported. You cannot use Remote Access in an Azure VM to deploy VPN, DirectAccess, or any other Remote Access feature in Windows Server 2016 or earlier versions of Windows Server. For more information, see [Microsoft server software support for Microsoft Azure virtual machines](https://support.microsoft.com/en-us/help/2721672/microsoft-server-software-support-for-microsoft-azure-virtual-machines).
 
 ## <a name="bkmk_da"></a>Remote Access Service \(RAS\) - RAS Gateway
 
-When you install the **DirectAccess and VPN \(RAS\)** role service, you are deploying the Remote Access Service Gateway \(**RAS Gateway**\). You can deploy the RAS Gateway a single tenant RAS Gateway virtual private network \(VPN\) server, a multitenant RAS Gateway VPN server, and as a DirectAccess server.
+When you install the **Always On VPN** and **VPN \(RAS\)** role service, you are deploying the Remote Access Service Gateway \(**RAS Gateway**\). You can deploy the RAS Gateway a single tenant RAS Gateway virtual private network \(VPN\) server, a multitenant RAS Gateway VPN server, and as a DirectAccess server.
 
 - **RAS Gateway - Single Tenant**. By using RAS Gateway, you can deploy VPN connections to provide end users with remote access to your organization's network and resources. If your clients are running Windows 10, you can deploy Always On VPN, which maintains a persistent connection between clients and your organization network whenever remote computers are connected to the Internet. With RAS Gateway, you can also create a site-to-site VPN connection between two servers at different locations, such as between your primary office and a branch office, and use Network Address Translation \(NAT\) so that users inside the network can access external resources, such as the Internet. In addition, RAS Gateway supports Border Gateway Protocol (BGP), which provides dynamic routing services when your remote office locations also have edge gateways that support BGP.
 
@@ -77,3 +69,4 @@ Install-RemoteAccess -VpnType SstpProxy
 For more information, see [Web Application Proxy](https://technet.microsoft.com/windows-server-docs/identity/web-application-proxy/web-application-proxy-windows-server).
 
 
+---
