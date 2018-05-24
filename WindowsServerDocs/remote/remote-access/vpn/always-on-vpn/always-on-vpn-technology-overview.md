@@ -43,6 +43,21 @@ For more information on each infrastructure component depicted in the illustrati
 >[!NOTE]
 >If you already have some of these technologies deployed on your network, you can use the instructions in this deployment guidance to perform additional configuration of the technologies for this deployment purpose.
 
+## Domain Name System (DNS)
+
+Both internal and external Domain Name System (DNS) zones are required, which assumes that the internal zone is a delegated subdomain of the external zone (e.g., corp.contoso.com and contoso.com).
+
+Learn more about [Domain Name System (DNS)](https://docs.microsoft.com/windows-server/networking/dns/dns-top) or [deploying AD DS with DNS](https://docs.microsoft.com/windows-server/networking/core-network-guide/core-network-guide).
+
+>[!NOTE] 
+>Other DNS designs, such as split-brain DNS (using the same domain name internally and externally in separate DNS zones) or unrelated internal and external domains (e.g., contoso.local and contoso.com) are also possible, but the configuration for these environments is beyond the scope of this deployment.
+
+## Firewalls
+
+Ensure that your firewalls allow the traffic that is necessary for both VPN and RADIUS communications to function correctly.
+
+For more information, see [Configure Firewalls for RADIUS Traffic](https://docs.microsoft.com/windows-server/networking/technologies/nps/nps-firewalls-configure).
+
 ## Remote Access as a RAS Gateway VPN Server
 
 In Windows Server 2016, the Remote Access server role is designed to perform well as both a router and a remote access server; therefore, it supports a wide array of features. For this deployment guidance, you require only a small subset of these features: support for IKEv2 VPN connections and LAN routing.
@@ -54,6 +69,8 @@ can access external resources, such as the Internet. Also, RAS Gateway supports 
 
 You can manage Remote Access Service (RAS) Gateways by using Windows PowerShell commands and the Remote Access Microsoft Management Console (MMC).
 
+
+
 ## Network Policy Server (NPS)
 
 NPS allows you to create and enforce organization-wide network access policies for connection request authentication and authorization. When you use NPS as a Remote Authentication Dial-In User Service (RADIUS) server, you configure network access servers, such as VPN servers, as RADIUS clients in NPS.
@@ -62,36 +79,6 @@ You also configure network policies that NPS uses to authorize connection reques
 
 For more information, see [Network Policy Server (NPS)](https://docs.microsoft.com/windows-server/networking/technologies/nps/nps-top).
 
-## Active Directory Domain Services (AD DS)
-
-AD DS provides a distributed database that stores and manages information about network resources and application-specific data from directory-enabled applications. Administrators can use AD DS to organize elements of a network, such as users, computers, and other devices, into a hierarchical containment structure. The hierarchical containment structure includes the Active Directory forest, domains in the forest, and organizational units (OUs) in each domain. A server that is running AD DS is called a domain controller.
-
-AD DS contains the user accounts, computer accounts, and account properties that are required by Protected Extensible Authentication Protocol (PEAP) to authenticate user credentials and to evaluate authorization for VPN connection requests. For information about deploying AD DS, see the Windows Server 2016 [Core Network Guide](https://docs.microsoft.com/windows-server/networking/core-network-guide/core-network-guide).
-
-During completion of the steps in this deployment, you will configure the following items on the domain controller.
-
--   Enable certificate autoenrollment in Group Policy for computers and users
-
--   Create the VPN Users Group
-
--   Create the VPN Servers Group
-
--   Create the NPS Servers Group
-
-### Active Directory Users and Computers
-
-Active Directory Users and Computers is a component of AD DS that contains accounts that represent physical entities, such as a computer, a person, or a security group. A security group is a collection of user or computer accounts that administrators can manage as a single unit. User and computer accounts that belong to a particular group are referred to as group members.
-
-User accounts in Active Directory Users and Computers have dial-in properties that NPS evaluates during the authorization process - unless the **Network Access Permission** property of the user account is set to **Control access through NPS Network Policy**. This is the default setting for all user accounts. In some cases, however, this setting might have a different configuration that blocks the user from connecting using VPN. To protect against this possibility, you can configure the NPS server to ignore user account dial-in properties.
-
-For more information, see [Configure NPS to Ignore User Account Dial-in Properties](https://docs.microsoft.com/en-us/windows-server/networking/technologies/nps/nps-np-configure#configure-nps-to-ignore-user-account-dial-in-properties).
-
-### Group Policy Management
-
-Group Policy Management enables directory-based change and configuration management of user and computer settings, including security and user information. You use Group Policy to define configurations for groups of users and computers.
-
-With Group Policy, you can specify settings for registry entries, security, software installation, scripts, folder redirection, remote installation services, and Internet Explorer maintenance. The Group Policy settings that you create are contained in a Group Policy object (GPO). By associating a GPO with selected Active Directory system containers — sites, domains, and OUs — you can apply the GPO's settings to the users and computers in those Active Directory containers. To manage Group Policy objects across an enterprise, you can use the
-Group Policy Management Editor Microsoft Management Console (MMC).
 
 ## Active Directory Certificate Services
 
@@ -137,20 +124,37 @@ When you use digital server certificates for authentication between computers on
 
 For more information, see [AD CS Step by Step Guide: Two Tier PKI Hierarchy Deployment](https://social.technet.microsoft.com/wiki/contents/articles/15037.ad-cs-step-by-step-guide-two-tier-pki-hierarchy-deployment.aspx).
 
-## Domain Name System (DNS)
+## Active Directory Domain Services (AD DS)
 
-Both internal and external Domain Name System (DNS) zones are required, which assumes that the internal zone is a delegated subdomain of the external zone (e.g., corp.contoso.com and contoso.com).
+AD DS provides a distributed database that stores and manages information about network resources and application-specific data from directory-enabled applications. Administrators can use AD DS to organize elements of a network, such as users, computers, and other devices, into a hierarchical containment structure. The hierarchical containment structure includes the Active Directory forest, domains in the forest, and organizational units (OUs) in each domain. A server that is running AD DS is called a domain controller.
 
-Learn more about [Domain Name System (DNS)](https://docs.microsoft.com/windows-server/networking/dns/dns-top) or [deploying AD DS with DNS](https://docs.microsoft.com/windows-server/networking/core-network-guide/core-network-guide).
+AD DS contains the user accounts, computer accounts, and account properties that are required by Protected Extensible Authentication Protocol (PEAP) to authenticate user credentials and to evaluate authorization for VPN connection requests. For information about deploying AD DS, see the Windows Server 2016 [Core Network Guide](https://docs.microsoft.com/windows-server/networking/core-network-guide/core-network-guide).
 
->[!NOTE] 
->Other DNS designs, such as split-brain DNS (using the same domain name internally and externally in separate DNS zones) or unrelated internal and external domains (e.g., contoso.local and contoso.com) are also possible, but the configuration for these environments is beyond the scope of this deployment.
+During completion of the steps in this deployment, you will configure the following items on the domain controller.
 
-## Firewalls
+-   Enable certificate autoenrollment in Group Policy for computers and users
 
-Ensure that your firewalls allow the traffic that is necessary for both VPN and RADIUS communications to function correctly.
+-   Create the VPN Users Group
 
-For more information, see [Configure Firewalls for RADIUS Traffic](https://docs.microsoft.com/windows-server/networking/technologies/nps/nps-firewalls-configure).
+-   Create the VPN Servers Group
+
+-   Create the NPS Servers Group
+
+### Active Directory Users and Computers
+
+Active Directory Users and Computers is a component of AD DS that contains accounts that represent physical entities, such as a computer, a person, or a security group. A security group is a collection of user or computer accounts that administrators can manage as a single unit. User and computer accounts that belong to a particular group are referred to as group members.
+
+User accounts in Active Directory Users and Computers have dial-in properties that NPS evaluates during the authorization process - unless the **Network Access Permission** property of the user account is set to **Control access through NPS Network Policy**. This is the default setting for all user accounts. In some cases, however, this setting might have a different configuration that blocks the user from connecting using VPN. To protect against this possibility, you can configure the NPS server to ignore user account dial-in properties.
+
+For more information, see [Configure NPS to Ignore User Account Dial-in Properties](https://docs.microsoft.com/en-us/windows-server/networking/technologies/nps/nps-np-configure#configure-nps-to-ignore-user-account-dial-in-properties).
+
+### Group Policy Management
+
+Group Policy Management enables directory-based change and configuration management of user and computer settings, including security and user information. You use Group Policy to define configurations for groups of users and computers.
+
+With Group Policy, you can specify settings for registry entries, security, software installation, scripts, folder redirection, remote installation services, and Internet Explorer maintenance. The Group Policy settings that you create are contained in a Group Policy object (GPO). By associating a GPO with selected Active Directory system containers — sites, domains, and OUs — you can apply the GPO's settings to the users and computers in those Active Directory containers. To manage Group Policy objects across an enterprise, you can use the
+Group Policy Management Editor Microsoft Management Console (MMC).
+
 
 ## Windows 10 VPN Clients
 
