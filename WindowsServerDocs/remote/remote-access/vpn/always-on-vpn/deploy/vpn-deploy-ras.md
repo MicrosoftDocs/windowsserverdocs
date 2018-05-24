@@ -34,9 +34,9 @@ You can configure the RRAS server to support IKEv2 connections while disabling u
 
 **Procedure:**
 
-1.  On the computer or VM that is planned as the VPN server, and that is installed on your perimeter network, you can install Remote Access.
+1.  On the computer or VM that is planned as the VPN server, and that is installed on your perimeter network, you install Remote Access.
 
-2.  On the Remote Access server, you can configure Remote Access as a RAS Gateway VPN server.
+2.  On the Remote Access server, you configure Remote Access as a RAS Gateway VPN server.
 
 ## Install Remote Access as a RAS Gateway VPN Server
 
