@@ -12,7 +12,7 @@ ms.assetid: 785a18cf-a5d0-4bc2-95e4-9ef53ee8f65a
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.date: 03/26/2018
+ms.date: 05/22/2018
 ms.localizationpriority: medium
 ---
 # Frequently asked questions about the Remote Desktop clients
@@ -48,18 +48,22 @@ Otherwise, if you prefer to do things manually, read on.
 
 For Windows 10, do the following:
 
-1. Open the Settings app, and then click **System.**
-2. Search for "remote" and then click **Allow remote access to your computer**.
-3. In the System Properties, on the Remote tab, under **Remote Desktop**, select **Allow remote connections to this computer**.
-4. Click **Select Users**.
-5. Make sure your user name has access, and then click **OK**.
+1. On the device you want to connect to, open **Settings**.
+2. Select **System** and then **Remote Desktop**.
+3. Use the slider to enable Remote Desktop.
+4. In general, it's best to keep the PC awake and discoverable to facilitate connections. Click **Show settings** to go to the power settings for your PC, where you can change this setting.
+   > [!NOTE]
+   > You can’t connect to a PC that's asleep or hibernating, so make sure the settings for sleep and hibernation on the remote PC are set to **Never**. (Hibernation isn't available on all PCs.)
+
+
+Make note of the name of this PC under **How to connect to this PC**. You'll need this to configure the clients.
+
+You can grant permission for specific users to access this PC - to do that, click **Select users that can remotely access this PC**.
+Members of the Administrators group automatically have access.
 
 For Windows 8.1, follow the instructions to allow remote connections in [Connect to another desktop using Remote Desktop Connections](https://support.microsoft.com/en-us/help/17463/windows-7-connect-to-another-computer-remote-desktop-connection#1TC=windows-8).
 
-> [!NOTE]
-> You can’t connect to a PC that's asleep or hibernating, so make sure the settings for sleep and hibernation on the remote PC are set to **Never** (hibernation isn't available on all PCs.).
 
-When you want to connect to a PC, you need the full name. You can find this information in the **System** settings.
 
 ## Connection, gateway, and networks
 
