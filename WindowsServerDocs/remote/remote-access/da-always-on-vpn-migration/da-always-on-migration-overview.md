@@ -32,7 +32,7 @@ The DirectAccess–to–Always On VPN migration process consists of three primar
 
     4.  [!INCLUDE [review-the-technology-overview-shortdesc-include](../includes/review-the-technology-overview-shortdesc-include.md)]
 
-2.  **[Migrate to Always On VPN](../vpn/always-on-vpn/deploy/always-on-vpn-deploy-deployment.md).**  After you have determined your migration phases and the features you want to include in your deployment, you deploy the Always On VPN infrastructure side-by-side with the existing DirectAccess infrastructure. In this step, you also create and publish the required certificates. When the clients have received the certificates, deploy the VPN_Profile.ps1 configuration script. Alternatively, you can use Intune to configure the VPN client.
+2.  **Deploy a side-by-side VPN infrastructure, create and publish certificates and configuration to the clients.**  After you have determined your migration phases and the features you want to include in your deployment, you deploy the Always On VPN infrastructure side-by-side with the existing DirectAccess infrastructure. In this step, you also create and publish the required certificates. When the clients have received the certificates, deploy the VPN_Profile.ps1 configuration script. Alternatively, you can use Intune to configure the VPN client.
 
 3.  **Remove and decommission.** Properly decommission the environment after you have migrated everyone off DirectAccess.
 
