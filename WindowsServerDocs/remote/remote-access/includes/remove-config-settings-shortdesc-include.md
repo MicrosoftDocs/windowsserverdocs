@@ -1,0 +1,1 @@
+**Remove the configuration settings.** Remove the GPOs and the Remote Access Group policy settings Remote Access created by opening the Remote Access Management console and selecting Remove Configuration Settings, as shown in the image below. If you remove the group before you remove the configuration, you will likely get errors.
