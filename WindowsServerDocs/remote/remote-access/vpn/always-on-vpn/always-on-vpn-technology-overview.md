@@ -4,7 +4,7 @@ description: 'This page provies a brief overview of the Always On VPN technologi
 ms.prod: windows-server-threshold
 ms.technology: networking-ras
 ms.topic: article
-ms.date: 05/21/2018
+ms.date: 05/25/2018
 ms.author: pashort
 author: shortpatti
 manager: elizapo
@@ -15,9 +15,8 @@ ms.reviewer: deverette
 # Always On VPN Technology Overview
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-&#171;  [**Previous:** Always On VPN Deployment for Windows Server and Windows 10](deploy/always-on-vpn-deploy.md)<br>
-&#187; [ **Next:** Learn more about the advanced VPN features](deploy/always-on-vpn-adv-options.md)
-
+&#171;  [**Previous:** Learn more about the Always On VPN enhancements](always-on-vpn-enhancements.md)<br>
+&#187;  [**Next:** Learn about deploying Always On VPN](deploy/always-on-vpn-deploy.md)
 
 For this deployment, you must install a new Remote Access server that is running Windows Server 2016, as well as modify some of your existing infrastructure for the deployment.
 
@@ -188,9 +187,11 @@ Windows 10 offers many CSPs, but this deployment focuses on using the VPNv2 CSP 
 ## Next step
 |If you want to...  |Then see...  |
 |---------|---------|
-|Learn more about the Always On VPN advanced features  |[Advance VPN features](deploy/always-on-vpn-adv-options.md): This page provides guidance on how to enable VPN Traffic Filters, how to configure Automatic VPN connections using App-Triggers, and how to configure NPS to only allow VPN Connections from clients using certificates issued by Azure AD.         |
-|Learn about the feature comparison between Always On VPN and DirectAccess    |[Feature Comparison of Always On VPN and DirectAccess](../vpn-map-da.md): In previous versions of the Windows VPN architecture, platform limitations made it difficult to provide the critical functionality needed to replace DirectAccess (like automatic connections initiated before users sign in). Always On VPN, however, has mitigated most of those limitations or expanded the VPN functionality beyond the capabilities of DirectAccess.         |
+|Learn about the Always On VPN advanced features  |[Advance VPN features](deploy/always-on-vpn-adv-options.md): This page provides guidance on how to enable VPN Traffic Filters, how to configure Automatic VPN connections using App-Triggers, and how to configure NPS to only allow VPN Connections from clients using certificates issued by Azure AD.         |
+|Migrate from DirectAccess to Always On VPN |[DirectAccess to Always On VPN migration overview](../../da-always-on-vpn-migration/da-always-on-migration-overview.md): In previous versions of the Windows VPN architecture, platform limitations made it difficult to provide the critical functionality needed to replace DirectAccess (like automatic connections initiated before users sign in). Always On VPN, however, has mitigated most of those limitations or expanded the VPN functionality beyond the capabilities of DirectAccess. |
+|Learn about deploying Always On VPN |[Always On VPN Deployment for Windows Server and Windows 10](deploy/always-on-vpn-deploy.md):  Always On VPN has many benefits over the Windows VPN solutions of the past. Key improvements in integration, security, connectivity, networking control, and compatibility align Always On VPN with Microsoft's cloud-first, mobile-first vision. |
 |Start planning your deployment |[Plan the Always On VPN deployment](deploy/always-on-vpn-deploy-planning.md): Before you install the Remote Access server role on the computer you're planning on using as a VPN server, perform the following tasks. After proper planning, you can deploy Always On VPN, and optionally configure conditional access for VPN connectivity using Azure AD.  |
+
 
 ---
 

@@ -8,7 +8,7 @@ ms.topic: article
 ms.assetid: eeca4cf7-90f0-485d-843c-76c5885c54b0
 ms.author: pashort
 author: shortpatti
-ms.date: 05/21/2018
+ms.date: 05/25/2018
 ---
 
 # DirectAccess to Always On VPN migration overview
@@ -21,32 +21,26 @@ In previous versions of the Windows VPN architecture, platform limitations made 
 
 The DirectAccess–to–Always On VPN migration process consists of four primary components and high-level processes:
 
->[!TIP]
->If you have already deployed Always On VPN, skip to step 2 to start planning your migration phases.
 
-1.  **[Deply Always On VPN](../vpn/always-on-vpn/deploy/always-on-vpn-deploy-deployment.md)**. Configure the infrastructure required to support Remote Access Always On VPNs in the Windows Server 2016 and later operating systems. Here, you use multiple client-management technologies to deploy Always-On VPN profiles to client computers running the Windows 10 Anniversary Update (version 1607) or later operating systems.  
+1.  **Plan the Always On VPN migration.** Planning helps identify target clients for user phase separation as well as infrastructure and functionality.
 
-2.  **Plan.** Planning for Always On VPN includes identifying target clients for user phase separation as well as infrastructure and functionality planning.
+    1.  [!INCLUDE [build-migration-rings-shortdesc-include](../includes/build-migration-rings-shortdesc-include.md)]
 
-    1.  **Build migration rings.** As in most other system migrations, target client migrations in phases to help identify any issues before they affect the entire organization. The first part of Always On VPN migration is no different.
+    2.  [!INCLUDE [review-feature-mapping-shortdesc-include](../includes/review-feature-mapping-shortdesc-include.md)] 
 
-    2.  **Review the feature mapping between DirectAccess and Always On VPN.**
-        Similar to DirectAccess, Always On VPN has many security, connectivity, authentication, and other options.
+    3.  [!INCLUDE [review-the-enhancements-shortdesc-include](../includes/review-the-enhancements-shortdesc-include.md)] 
 
-    3.  **Review new features of Always On VPN.** Discover new or improved features that Always On VPN offers to improve your configuration.
+    4.  [!INCLUDE [review-the-technology-overview-shortdesc-include](../includes/review-the-technology-overview-shortdesc-include.md)]
 
-3.  **Migrate.** Following a specific process to migrate clients helps minimize race conditions that arise from performing migration steps out of order.
+2.  **Deploy a side-by-side VPN infrastructure.** After you have determined your migration phases and the features you want to include in your deployment, you will deploy the VPN infrastructure side by side with the existing DirectAccess infrastructure.  
 
-    1.  **Deploy a side-by-side VPN infrastructure.** After you have determined your migration phases and the features you want to include in your deployment, you deploy the VPN infrastructure side by side with the existing DirectAccess infrastructure.
-
-    2.  **Deploy certificates and the VPN configuration script.** After the VPN infrastructure is ready, you create and publish the required certificates. When the clients have received the certificates, deploy the VPN_Profile.ps1 configuration script. Alternatively, you can use Intune to configure the VPN client.
+3.  **Deploy certificates and configuration to the clients.**  Once the VPN infrastructure is ready, you create and publish the required certificates to the client. When the clients have received the certificates, you deploy the VPN_Profile.ps1 configuration script. Alternatively, you can use Intune to configure the VPN client. Use Microsoft System Center Configuration Manager or Microsoft Intune to monitor for successful VPN configuration deployments.
 
 4.  **Remove and decommission.** Properly decommission the environment after you have migrated everyone off DirectAccess.
 
-    1.  **Remove the DirectAccess configuration from the client.** Monitor Microsoft System Center Configuration Manager or Microsoft Intune for successful VPN configuration deployments. Then, use reporting
-        to determine device-assignment information and discover which device belongs to each user. As users migrate successfully, you remove their devices from the DirectAccess security group so that you can remove DirectAccess from your environment.
+    1.  [!INCLUDE [remove-da-from-client-shortdesc-include](../includes/remove-da-from-client-shortdesc-include.md)]
 
-    2.  **Decommission DirectAccess.** After you have successfully migrated all clients to Always On VPN, you remove DirectAccess from your environment. For further details about each step in the process, see the [Always On VPN migration deployment](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/da-always-on-vpn-migration/da-always-on-migration-deploy) section.
+    2.  [!INCLUDE [decommission-da-shortdesc-include](../includes/decommission-da-shortdesc-include.md)]
 
 
 ## DirectAccess deployment scenario
@@ -84,6 +78,9 @@ In this deployment scenario, you focus on migrating a simple DirectAccess enviro
 | VPN feature | Deployment scenario configuration |
 |-----|-----|
 | Connection type | Native Internet Key Exchange version 2 (IKEv2) |
+| Network adapters   | 2        |
+| User authentication  | Active Directory credentials            |
+| Use computer certificates        | Yes                          |
 | Routing | Split Tunneling |
 | Name resolution | Domain name information list and Domain Name System (DNS) suffix |
 | Triggering | Always on and trusted network detection |

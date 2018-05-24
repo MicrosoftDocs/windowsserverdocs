@@ -4,7 +4,7 @@ description: This topic provides detailed instructions for deploying Always On V
 ms.prod: windows-server-threshold
 ms.technology: networking-ras
 ms.topic: article
-ms.date: 05/21/2018
+ms.date: 05/25/2018
 ms.assetid: d165822d-b65c-40a2-b440-af495ad22f42
 manager: elizapo
 ms.author: pashort
@@ -37,7 +37,7 @@ You use ProfileXML in all the delivery methods this deployment describes, includ
 
 - **Windows Management Instrumentation (WMI)-to-CSP bridge**. The second method of configuring the ProfileXML CSP node is to use the WMI-to-CSP bridge—a WMI class called **MDM_VPNv2_01**—that can access the VPNv2 CSP and therefore the ProfileXML node. When you create a new instance of that WMI  class, WMI uses the CSP to create the VPN profile. This is the method you use to configure the Remote Access Always On VPN client by using Windows PowerShell and System Center Configuration Manager.
 
-Even though these configuration methods differ, both require a properly formatted XML VPN profile. To use the ProfileXML VPNv2 CSP setting, you construct XML by using the ProfileXML schema to configure the tags necessary for the simple deployment scenario. For more details, see [ProfileXML XSD](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/vpnv2-profile-xsd).
+Even though these configuration methods differ, both require a properly formatted XML VPN profile. To use the ProfileXML VPNv2 CSP setting, you construct XML by using the ProfileXML schema to configure the tags necessary for the simple deployment scenario. For more information, see [ProfileXML XSD](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/vpnv2-profile-xsd).
 
 In the section “Infrastructure requirements,” Table 1 provided an overview of the individual settings for the VPN client. Below is each of those required settings and its corresponding ProfileXML tag. You configure each setting in a specific tag within the ProfileXML schema, and not all of them are found under the native profile. For additional tag placement, see the ProfileXML schema.
 
@@ -94,7 +94,7 @@ For more information about EAP settings, see [EAP configuration](https://msdn.mi
 
 In this step, you use Protected Extensible Authentication Protocol \(PEAP\) to secure communication between the client and the server. Unlike a simple user name and password, this connection requires a unique EAPConfiguration section in the VPN profile to work. 
 
-Rather than describing how to create the XML markup for that section from scratch, you can use the Windows user interface to create a template VPN profile, and then use Windows PowerShell to consume the EAPConfiguration portion from that template to create the final ProfileXML that you will deploy later in the deployment.
+Rather than describing how to create the XML markup for that section from scratch, you can use the Windows user interface to create a template VPN profile. After creating the template VPN profile, you can use Windows PowerShell to consume the EAPConfiguration portion from that template to create the final ProfileXML that you will deploy later in the deployment.
 
 ### Record NPS certificate settings
 
@@ -125,7 +125,7 @@ Before creating the template, you first need to note a few NPS server settings. 
 
 ### Configure the template VPN profile on a domain\-joined client computer
 
-Now that you have the necessary information, configure the template VPN profile on a domain-joined client computer. The type of user account you use \(i.e., standard user or administrator\) for this part of the process does not matter. 
+Now that you have the necessary information, configure the template VPN profile on a domain-joined client computer. The type of user account you use \(that is, standard user or administrator\) for this part of the process does not matter. 
 
 However, if you haven’t restarted the computer since configuring certificate autoenrollment, do so before configuring the template VPN connection to ensure you have a usable certificate enrolled on it.
 
@@ -160,16 +160,16 @@ However, if you haven’t restarted the computer since configuring certificate a
 
 13. Click **Properties** to open the Protected EAP Properties dialog box, and complete the following steps:
 
-    a. In the **Connect to these servers** box, type the name of the NPS server that you retrieved from the NPS server authentication settings earlier in this section (e.g., NPS01).
+    a. In the **Connect to these servers** box, type the name of the NPS server that you retrieved from the NPS server authentication settings earlier in this section (for example, NPS01).
 
     >[!NOTE]
     >The server name you type must match the name in the certificate. You recovered this name earlier in this section. If the name does not match, the connection will fail, stating that “The connection was prevented because of a policy configured on your RAS/VPN server.”
 
-    b.  Under Trusted Root Certification Authorities, select the root CA that issued the NPS server’s certificate (e.g., contoso-CA).
+    b.  Under Trusted Root Certification Authorities, select the root CA that issued the NPS server’s certificate (for example, contoso-CA).
 
     c.  In Notifications before connecting, click **Don’t ask user to authorize new servers or trusted CAs**.
 
-    d.  In Select Authentication Method, click **Smart Card or other certificate**, and click **Configure**. The the Smart Card or other Certificate Properties dialog opens.
+    d.  In Select Authentication Method, click **Smart Card or other certificate**, and click **Configure**. The Smart Card or other Certificate Properties dialog opens.
 
     e.  Click **Use a certificate on this computer**.
 
@@ -234,17 +234,17 @@ You must configure the following parameters.
 
 **$Servers**. Public or routable IP address or DNS name for the VPN gateway. It can point to the external IP of a gateway or a virtual IP for a server farm. Examples, 208.147.66.130 or vpn.contoso.com.
 
-**$DnsSuffix**. Specifies one or more comma separated DNS suffixes. The first in the list
-is also used as the primary connection specific DNS suffix for the VPN Interface. The entire list will also be added into the SuffixSearchList.
+**$DnsSuffix**. Specifies one or more commas separated DNS suffixes. The first in the list
+is also used as the primary connection-specific DNS suffix for the VPN Interface. The entire list will also be added into the SuffixSearchList.
 
 **$DomainName**. Used to indicate the namespace to which the policy applies. When a Name query is issued, the DNS client compares the name in the query to all of the namespaces under DomainNameInformationList to find a match. This parameter can be one of the following types:
 
 - FQDN - Fully qualified domain name
-- Suffix - A domain suffix that will be appended to the shortname query for DNS resolution. To specify a suffix, prepend a . to the DNS suffix.
+- Suffix - A domain suffix that will be appended to the shortname query for DNS resolution. To specify a suffix, prepend a period \(.) to the DNS suffix.
 
-**$DNSServers**. List of comma separated DNS Server IP addresses to use for the namespace.
+**$DNSServers**. List of comma-separated DNS Server IP addresses to use for the namespace.
 
-**$TrustedNetwork**. Comma separated string to identify the trusted network. VPN will not connect automatically when the user is on their corporate wireless network where protected resources are directly accessible to the device.
+**$TrustedNetwork**. Comma-separated string to identify the trusted network. VPN does not connect automatically when the user is on their corporate wireless network where protected resources are directly accessible to the device.
 
 Following are example values for parameters used in the commands below. Ensure that you change these values for your environment.
 
@@ -716,7 +716,7 @@ After you create the user group to receive the VPN profile, you can create a pac
 
     b. Select the **This package contains source files** check box, and click **Browse**.
 
-    c. In the Set Source Folder dialog box, click **Browse**, select the file share containing VPN_Profile.ps1, and click **OK**.<p>Make sure you select a network path, not a local path. In other words, the path should be something like *\\fileserver\\vpnscript*, not *c:\\vpnscript.*.
+    c. In the Set Source Folder dialog box, click **Browse**, select the file share containing VPN_Profile.ps1, and click **OK**.<p>Make sure you select a network path, not a local path. In other words, the path should be something like *\\fileserver\\vpnscript*, not *c:\\vpnscript*.
 
 1.  Click **Next**.
 
