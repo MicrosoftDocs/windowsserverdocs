@@ -158,19 +158,15 @@ In this section, you can configure Remote Access VPN to allow IKEv2 VPN connecti
 
 15.  Click the **IPv4** tab and do the following:
 
-    1.  Click **Static address pool**.
+    a.  Click **Static address pool**.
 
-    2.  Click **Add** to configure an IP address pool.<p>The static address pool should contain addresses from the internal perimeter network. These addresses are on the internal-facing network connection on the VPN server, not the corporate network.
+    b.  Click **Add** to configure an IP address pool.<p>The static address pool should contain addresses from the internal perimeter network. These addresses are on the internal-facing network connection on the VPN server, not the corporate network.
 
-    3.  In **Start IP address**, type the starting IP address in the range you want to assign to VPN clients.
+    c.  In **Start IP address**, type the starting IP address in the range you want to assign to VPN clients.
 
-    4.  In **End IP address**, type the ending IP address in the range you want to assign to VPN clients, or in **Number of addresses**, type the number of the address you want to make available.
+    d.  In **End IP address**, type the ending IP address in the range you want to assign to VPN clients, or in **Number of addresses**, type the number of the address you want to make available. If you’re using DHCP for this subnet, ensure that you configure a corresponding address exclusion on your DHCP servers.
 
-    >[!NOTE] 
-    >If you’re using DHCP for this subnet, ensure that you configure a corresponding address exclusion on your DHCP servers.
-
-
-    5.  (Optional) If you are using DHCP, click **Adapter**, and in the list of results, click the Ethernet adapter connected to your internal perimeter network.
+    e.  (Optional) If you are using DHCP, click **Adapter**, and in the list of results, click the Ethernet adapter connected to your internal perimeter network.
 
 16.  (Optional) *If you are configuring conditional access for VPN connectivity*, from the **Certificate** drop-down list, under **SSL Certificate Binding**, select the VPN server authentication.
 
