@@ -5,8 +5,8 @@ ms.technology: extend
 ms.topic: article
 author: daniellee-msft
 ms.author: jol
-ms.date: 05/02/2018
-ms.localizationpriority: low
+ms.date: 05/23/2018
+ms.localizationpriority: high
 ms.prod: windows-server-threshold
 ---
 # Extensions for Windows Admin Center

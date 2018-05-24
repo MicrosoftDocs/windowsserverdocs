@@ -86,7 +86,7 @@ For other applications of Storage Spaces, such as Shared SAS clusters and stand-
 
 **Quick Video Overview (5 minutes)**
 
-<iframe src="https://www.youtube.com/embed/raeUiNtMk0E" width="560" height="315" allowfullscreen></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/raeUiNtMk0E" width="560" height="315" allowfullscreen></iframe>
 
 **Storage Spaces Direct at Microsoft Ignite 2017 (1 hour)**
 

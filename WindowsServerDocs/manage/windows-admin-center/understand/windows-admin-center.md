@@ -6,8 +6,8 @@ ms.topic: landing-page
 layout: LandingPage
 author: haley-rowland
 ms.author: harowl
-ms.date: 04/12/2018
-ms.localizationpriority: low
+ms.date: 05/23/2018
+ms.localizationpriority: high
 ms.prod: windows-server-threshold
 ---
 
