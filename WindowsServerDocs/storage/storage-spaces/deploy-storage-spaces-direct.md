@@ -7,7 +7,7 @@ ms.technology: storage-spaces
 ms.topic: get-started-article
 ms.assetid: 20fee213-8ba5-4cd3-87a6-e77359e82bc0
 author: stevenek
-ms.date: 5/23/2018
+ms.date: 5/24/2018
 description: Step-by-step instructions to deploy software-defined storage with Storage Spaces Direct in Windows Server as either hyper-converged infrastructure or converged (also known as disaggregated) infrastructure. 
 ms.localizationpriority: medium
 ---
@@ -242,7 +242,28 @@ We recommend using the `New-Volume` cmdlet as it provides the fastest and most s
 
 For more information, check out [Creating volumes in Storage Spaces Direct](create-volumes.md).
 
-### Step 3.7: Deploy virtual machines for hyper-converged deployments
+### Step 3.7: Optionally enable the CSV cache
+
+You can optionally enable the cluster shared volume (CSV) cache to use system memory (RAM) as a write-through block-level cache of read operations that aren't already cached by the Windows cache manager. This can improve performance for applications such as Hyper-V. The CSV cache can boost the performance of read requests and is also useful for Scale-Out File Server scenarios.
+
+Enabling the CSV cache reduces the amount of memory available to run VMs on a hyper-converged cluster, so you'll have to balance storage performance with memory available to VHDs.
+
+To set the size of the CSV cache, open a PowerShell session on the management system with an account that has administrator permissions on the storage cluster, and then use this script, changing the `$ClusterName` and `$CSVCacheSize` variables as appropriate (this example sets a 2 GB CSV cache per server):
+
+```PowerShell
+$ClusterName = "StorageSpacesDirect1"
+$CSVCacheSize = 2048 #Size in MB
+
+Write-Output "Setting the CSV cache..."
+(Get-Cluster $ClusterName).BlockCacheSize = $CSVCacheSize
+
+$CSVCurrentCacheSize = (Get-Cluster $ClusterName).BlockCacheSize
+Write-Output "$ClusterName CSV cache size: $CSVCurrentCacheSize MB"
+```
+
+For more info, see [Using the CSV in-memory read cache](csv-cache.md).
+
+### Step 3.8: Deploy virtual machines for hyper-converged deployments
 
 If you're deploying a hyper-converged cluster, the last step is to provision virtual machines on the Storage Spaces Direct cluster.
 
