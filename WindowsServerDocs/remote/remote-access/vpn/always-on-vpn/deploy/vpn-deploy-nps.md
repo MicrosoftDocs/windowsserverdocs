@@ -82,12 +82,13 @@ You can use the following procedure to install NPS using Server Manager.
 
 ## Configure NPS
 
-In this procedure, after installing NPS, you configure NPS handles all authentication, authorization, and accounting duties for connection request it receives from the VPN server.
+After installing NPS, you configure NPS to handle all authentication, authorization, and accounting duties for connection request it receives from the VPN server.
 
 ### Register the NPS Server in Active Directory
 
-After you install NPS, you must register the server in Active Directory so that it has permission to access user account information while processing connection
-requests.
+In this procedure, you register the server in Active Directory so that it has permission to access user account information while processing connection requests.
+
+**Procedure:**
 
 1.  In Server Manager, click **Tools**, and then click **Network Policy Server**. The NPS console opens.
 
@@ -99,7 +100,7 @@ For alternate methods of registering NPS, see [Register an NPS Server in an Acti
 
 ### Configure Network Policy Server Accounting
 
-There are three types of logging for Network Policy Server (NPS):
+You can configure Network Policy Accounting using one of three types of logging for Network Policy Server (NPS):
 
 -   **Event logging**. Used primarily for auditing and troubleshooting connection attempts. You can configure NPS event logging by obtaining the NPS server properties in the NPS console.
 
@@ -107,19 +108,16 @@ There are three types of logging for Network Policy Server (NPS):
 
 -   **Logging user authentication and accounting requests to a Microsoft SQL Server XML-compliant database**. Used to allow multiple servers running NPS to have one data source. Also provides the advantages of using a relational database. You can configure SQL Server logging by using the Accounting Configuration wizard.
 
-To learn how to configure NPS Accounting, see [Configure Network Policy Server Accounting](https://docs.microsoft.com/windows-server/networking/technologies/nps/nps-accounting-configure).
+To configure NPS Accounting, see [Configure Network Policy Server Accounting](https://docs.microsoft.com/windows-server/networking/technologies/nps/nps-accounting-configure).
 
 ### Add the VPN Server as a RADIUS Client
 
-In this procedure, you configure the VPN server as a RADIUS Client in NPS.
+In the [Configure the Remote Access Server for Always On VPN](vpn-deploy-ras.md) section, you installed and configured your VPN server. During VPN server configuration, you added a RADIUS shared secret on the VPN server. Now you need to use the same shared secret text string to configure the VPN server as a RADIUS client in NPS. You must use the same text string that you used on the VPN server, or communication between the NPS server and VPN server fails.
 
 >[!NOTE] 
 >When you add a new network access server (VPN server, wireless access point, authenticating switch, or dial-up server) to your network, you must add the server as a RADIUS client in NPS so that NPS is aware of and can communicate with the network access server.
 
 **Procedure:**
-
->[!IMPORTANT] 
->In the previous deployment step using the topic [Configure the Remote Access Server for Always On VPN](vpn-deploy-ras.md), you installed and configured your VPN server. During VPN server configuration, you added a RADIUS shared secret on the VPN server. Now you need to use the same shared secret text string to configure the VPN server as a RADIUS client in NPS. You must use the same text string that you used on the VPN server, or communication between the NPS server and VPN server will fail.
 
 1.  On the NPS server, in the NPS console, double-click **RADIUS Clients and Servers**.
 
@@ -143,11 +141,9 @@ In this procedure, you configure the VPN server as a RADIUS Client in NPS.
 
 ## Configure Network Policy for VPN Connections
 
-You can use this procedure to configure NPS as a RADIUS server on your organization network.
+In this procedure you NPS as a RADIUS server on your organization network. On the NPS server, you must define a policy that allows only users in a specific group to access the Organization/Corporate network through the VPN Server - and then only when using a valid user certificate in a PEAP authentication request.
 
-On the NPS server, you must define a policy that allows only users in a specific group to access the Organization/Corporate network through the VPN Server - and then only when using a valid user certificate in a PEAP authentication request.
-
-**To configure the NPS Network Policy on the NPS server**
+**Procedure:**
 
 1.  In the NPS console, in Standard Configuration, ensure that **RADIUS server for Dial-Up or VPN Connections** is selected.
 
@@ -195,14 +191,14 @@ On the NPS server, you must define a policy that allows only users in a specific
 
 ## Autoenroll the NPS Server Certificate
 
-You can use this procedure to refresh Group Policy on the local NPS server manually. When Group Policy refreshes, if certificate autoenrollment is configured and functioning correctly, the local computer is auto-enrolled a certificate by the certification authority (CA).
+In this procedure, you refresh Group Policy on the local NPS server manually. When Group Policy refreshes, if certificate autoenrollment is configured and functioning correctly, the local computer is auto-enrolled a certificate by the certification authority (CA).
 
 >[!NOTE]  
 >Group Policy refreshed automatically when you restart the domain member computer, or when a user logs on to a domain member computer. Also, Group Policy periodically refreshes. By default, this periodic refresh happens every 90 minutes with a randomized offset of up to 30 minutes.
 
 Membership in **Administrators**, or equivalent, is the minimum required to complete this procedure.
 
-### To refresh Group Policy on the NPS server
+**Procedure:**
 
 1.  On the NPS, open Windows PowerShell.
 
