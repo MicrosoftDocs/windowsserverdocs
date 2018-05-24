@@ -106,10 +106,7 @@ RAS Gateway includes the following capabilities.
 -   **Dynamic routing with Border Gateway Protocol (BGP)**. BGP reduces the need for manual route configuration on routers because it is a dynamic routing protocol, and automatically learns routes between sites that are connected by using site-to-site VPN connections. If your organization has multiple sites that are connected by using BGP-enabled routers such as RAS Gateway, BGP allows the routers to automatically calculate and use valid routes to each other in the event of network disruption or failure. For more information, see [RFC 4271](https://tools.ietf.org/html/rfc4271).  
   
 -   **Network Address Translation (NAT)**. Network address translation (NAT) allows you to share a connection to the public Internet through a single interface with a single public IP address. The computers on the private network use private, non-routable addresses. NAT maps the private addresses to the public address. This RAS Gateway feature allows organization employees with single tenant deployments to access Internet resources from behind the gateway. For CSPs, this feature allows applications that are running on tenant VMs to access the Internet. For example, a tenant VM that is configured as a Web server can contact external financial resources to process credit card transactions.  
-  
--   **DirectAccess server**. DirectAccess is a feature that allows employee connectivity to organization network resources without the need for traditional Virtual Private Network (VPN) connections. With DirectAccess, client computers are always connected to your organization - there is no need for remote users to start and stop connections, as is required with VPN connections. In addition, your IT administrators can manage DirectAccess client computers whenever they are running and Internet connected.  
 
--  **Always On VPN**. 
   
 ## <a name="bkmk_deploy"></a>RAS Gateway Deployment Scenarios  
 Following are the recommended deployment scenarios for RAS Gateway.  
