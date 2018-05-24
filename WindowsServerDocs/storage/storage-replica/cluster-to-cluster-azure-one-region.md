@@ -20,35 +20,25 @@ You can configure Cluster to Cluster Storage Replicas within the same region in 
 > [!IMPORTANT]
 > All referenced examples are specific to the illustration above.
 
-## Resource group
+<!-- The headings are the problem, and what we'd discussed removing yesterday - you can't have the headings. And you don't need them. The text in the heading IS the step. -->
 1. Create a [resource group](https://ms.portal.azure.com/#create/Microsoft.ResourceGroup) in the Azure portal in a region (**SR-AZ2AZ** in **West US 2**). 
-
-## Availability set
 2. Create two [availability sets](https://ms.portal.azure.com/#create/Microsoft.AvailabilitySet-ARM) in the resource group (**SR-AZ2AZ**) created above, one for each cluster. 
    - Availability set (**az2azAS1**)
    - Availability set (**az2azAS2**)
-
-## Virtual network
 3. Create a [virtual network](https://ms.portal.azure.com/#create/Microsoft.VirtualNetwork-ARM) (**az2az-Vnet**) in the previously created resource group (**SR-AZ2AZ**), having at-least one subnet. 
-
-## Network security group
 4. Create a [network security group](https://ms.portal.azure.com/#create/Microsoft.NetworkSecurityGroup-ARM) (**az2az-NSG**), and add one Inbound security rule for RDP:3389. You can choose to remove this rule once you finish your setup. 
-
-## Windows servers
 5. Create Windows Server [virtual machines](https://ms.portal.azure.com/#create/Microsoft.WindowsServer2016Datacenter-ARM) in the previously created Resource group (**SR-AZ2AZ**). Use the previously created virtual network (**az2az-Vnet**) and network security group (**az2az-NSG**). 
 
-   Domain Controller (**az2azDC**). You can choose to create a third availability set for your domain controller or add the domain controller in one of the two availability sets. If you are adding this to the availability set created for the two clusters, assign it a Standard public IP address during VM creation. 
-   - Install Active Directory Domain Service.
-   - Create a domain (Contoso.com)
-   - Create a user with administrator privileges (contosoadmin) 
-
-6. Create two virtual machines (**az2az1**, **az2az2**) in the first availability set (**az2azAS1**). Assign a standard Public IP address to each virtual machine during the creation itself. 
-   - Add at-least 2 managed disks to each machine
-   - Install Failover Clustering and Storage Replica feature
-
-7. Create two virtual machines (**az2az3**, **az2az4**) in the second availability set (**az2azAS2**). Assign standard Public IP address to each virtual machine during the creation itself.
-   - Add at-least 2 managed disks to each machine
-   - Install Failover Clustering and Storage Replica feature
+   1.  Domain Controller (**az2azDC**). You can choose to create a third availability set for your domain controller or add the domain controller in one of the two availability sets. If you are adding this to the availability set created for the two clusters, assign it a Standard public IP address during VM creation. 
+      - Install Active Directory Domain Service.
+      - Create a domain (Contoso.com)
+      - Create a user with administrator privileges (contosoadmin) 
+   2. Create two virtual machines (**az2az1**, **az2az2**) in the first availability set (**az2azAS1**). Assign a standard Public IP address to each virtual machine during the creation itself. 
+      - Add at-least 2 managed disks to each machine
+      - Install Failover Clustering and Storage Replica feature
+   3. Create two virtual machines (**az2az3**, **az2az4**) in the second availability set (**az2azAS2**). Assign standard Public IP address to each virtual machine during the creation itself.
+      - Add at-least 2 managed disks to each machine
+      - Install Failover Clustering and Storage Replica feature
 
 8. Connect all the nodes to the domain and provide Administrator privileges to the previously created user.
 
