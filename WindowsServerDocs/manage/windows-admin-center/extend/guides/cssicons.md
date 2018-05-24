@@ -1,16 +1,16 @@
 ---
-title: Current list of icons in Windows Admin Center SDK
+title: Current list of icons in Windows Admin Center
 description: Current list of icons in Windows Admin Center SDK (Project Honolulu)
 ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
-ms.date: 05/02/2018
-ms.localizationpriority: low
+ms.date: 05/23/2018
+ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---
 
-# Current list of icons in Windows Admin Center SDK
+# Current list of icons in Windows Admin Center
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10
 

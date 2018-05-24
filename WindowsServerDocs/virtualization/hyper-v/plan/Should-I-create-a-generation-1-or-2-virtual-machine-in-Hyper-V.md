@@ -20,8 +20,6 @@ Your choice to create a generation 1 or generation 2 virtual machine depends on 
 
 -   The VHD you want to boot from is not [UEFI-compatible](https://technet.microsoft.com/library/hh824898.aspx).  
 
--   You [plan to move your virtual machine to Azure](https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-questions/).  
-
 -   Generation 2 doesn't support the operating system you want to run on the virtual machine.  
 
 -   Generation 2 doesn't support the boot method you want to use.  
