@@ -8,7 +8,7 @@ ms.assetid:
 manager: elizapo
 ms.author: pashort
 author: shortpatti
-ms.date: 05/21/2018
+ms.date: 05/25/2018
 ms.reviewer: deverette
 ---
 
@@ -28,15 +28,15 @@ You can configure the RRAS server to support IKEv2 connections while disabling u
 
 >[!Important]
 >It is important to:
->•	Install two Ethernet network adapters in the physical server. If you are installing the VPN server on a VM, you must create two External virtual switches, one for each physical network adapter; and then create two virtual network adapters for the VM, with each network adapter connected to one virtual switch.
->•	Install the server on your perimeter network between your edge and internal firewalls, with one network adapter connected to the External Perimeter Network, and one network adapter connected to the Internal Perimeter Network.
-
+>- Install two Ethernet network adapters in the physical server. If you are installing the VPN server on a VM, you must create two External virtual switches, one for each physical network adapter; and then create two virtual network adapters for the VM, with each network adapter connected to one virtual switch.
+>
+>- Install the server on your perimeter network between your edge and internal firewalls, with one network adapter connected to the External Perimeter Network, and one network adapter connected to the Internal Perimeter Network.
 
 **Procedure:**
 
-1.  On the computer or VM that is planned as the VPN server, and that is installed on your perimeter network, you can install Remote Access.
+1.  On the computer or VM that is planned as the VPN server, and that is installed on your perimeter network, you install Remote Access.
 
-2.  On the Remote Access server, you can configure Remote Access as a RAS Gateway VPN server.
+2.  On the Remote Access server, you configure Remote Access as a RAS Gateway VPN server.
 
 ## Install Remote Access as a RAS Gateway VPN Server
 
@@ -190,7 +190,7 @@ In this section, you can configure Remote Access VPN to allow IKEv2 VPN connecti
 
     2.  Click **OK**.
 
-5.  Click **WAN Miniport (L2TP)** and click **Configure**. The Configure Device - WAN Miniport (IKEv2) dialog box opens.
+5.  Click **WAN Miniport (L2TP)** and click **Configure**. The Configure Device - WAN Miniport (L2TP) dialog box opens.
 
     1.  In **Maximum ports**, type the number of ports to match the maximum number of simultaneous VPN connections that you want to support.
 
@@ -203,6 +203,9 @@ In this section, you can configure Remote Access VPN to allow IKEv2 VPN connecti
     2.  Click **OK**.
     
 7. Click **WAN Miniport (IKEv2)** and click **Configure**. The Configure Device - WAN Miniport (IKEv2) dialog box opens.
+
+
+5. Click **WAN Miniport (IKEv2)** and click **Configure**. The Configure Device - WAN Miniport (IKEv2) dialog box opens. 
 
     1.  In **Maximum ports**, type the number of ports to match the maximum number of simultaneous VPN connections that you want to support.
 
