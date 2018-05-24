@@ -4,7 +4,7 @@ description: In previous versions of the Windows VPN architecture, platform limi
 ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
-ms.date: 05/21/2018
+ms.date: 05/25/2018
 ms.assetid: 8fe1c810-4599-4493-b4b8-73fa9aa18535
 manager: elizapo
 ms.author: pashort
@@ -15,8 +15,8 @@ author: shortpatti
 
 >Applies To: Windows Server \(Semi-Annual Channel\), Windows Server 2016, Windows 10
 
-&#171;  [**Previous:** Learn more about the advanced VPN features](always-on-vpn/deploy/always-on-vpn-adv-options.md)<br>
-&#187; [ **Next:** Plan the Always On VPN deployment](always-on-vpn/deploy/always-on-vpn-deploy-planning.md)
+&#171;  [**Previous:** Always On VPN Deployment for Windows Server and Windows 10](always-on-vpn/deploy/always-on-vpn-deploy.md)<br>
+&#187; [ **Next:** Learn about the Always On VPN Enhancements](../vpn/always-on-vpn/always-on-vpn-enhancements.md)
 
 In previous versions of the Windows VPN architecture, platform limitations made it difficult to provide the critical functionality needed to replace DirectAccess (like automatic connections initiated before users sign in). Always On VPN, however, has mitigated most of those limitations or expanded the VPN functionality beyond the capabilities of DirectAccess. Always On VPN addresses the previous gaps between Windows VPNs and DirectAccess; therefore, Always On VPN is the DirectAccess replacement solution.
 
@@ -76,6 +76,8 @@ Each item in this section is a use case scenario or commonly used DirectAccess f
 | Deployment of client and server configuration settings through Group Policy. | Always On VPN does not require devices to be domain joined, so there are no dedicated Group Policy settings to configure it. Instead, you can configure clients by using Windows PowerShell, System Center Configuration Manager, Intune (or a third-party MDM provider), or Windows Configuration Designer. Also, because there's no dependency on a Microsoft VPN gateway, you must configure and manage server settings independent of the Always On VPN. |
 
 ## Next step
-[Start planning your Always On VPN deployment](always-on-vpn/deploy/always-on-vpn-deploy-planning.md): Before you install the Remote Access server role on the computer you're planning on using as a VPN server, perform the following tasks. After proper planning, you can deploy Always On VPN, and optionally configure conditional access for VPN connectivity using Azure AD.
+[Learn about the Always On VPN Enhancements](../vpn/always-on-vpn/always-on-vpn-enhancements.md). Migrating from DirectAccess to Always On VPN requires a specific process to migrate clients to prevent from occurring.
+
+
 
 ---

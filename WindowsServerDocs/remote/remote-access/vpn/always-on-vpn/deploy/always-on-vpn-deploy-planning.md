@@ -8,15 +8,15 @@ ms.assetid: 3c9de3ec-4bbd-4db0-b47a-03507a315383
 manager: elizap
 ms.author: pashort
 author: shortpatti
-ms.date: 05/21/2018
+ms.date: 05/25/2018
 ---
 # Plan the Always On VPN Deployment
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
 
-&#171;  [**Previous:** Learn about the feature comparison between Always On VPN and DirectAccess](../../vpn-map-da.md)<br>
-&#187; [ **Next:** Deploy Always On VPN](always-on-vpn-deploy-deployment.md)
+&#171;  [**Previous:** Learn about the Always On VPN technology](../always-on-vpn-technology-overview.md)<br>
+&#187;  [**Next:** Deploy Always On VPN](always-on-vpn-deploy-deployment.md)
 
 You can use the following steps to plan for your Always On VPN deployment.
 
