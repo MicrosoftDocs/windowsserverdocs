@@ -5,8 +5,8 @@ ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
-ms.date: 05/03/2018
-ms.localizationpriority: low
+ms.date: 05/23/2018
+ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---
 
