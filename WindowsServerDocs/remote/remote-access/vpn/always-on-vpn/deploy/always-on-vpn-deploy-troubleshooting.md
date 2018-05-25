@@ -50,9 +50,9 @@ Look for events from source RasClient. All error messages return the error code 
 
 ### Error code: 809
 
--   **Error description.**  Is caused by blocked UDP 500 or 4500 ports on the VPN server or the firewall.  The network connection between your computer and the VPN server could not be established because the remote server is not responding. This could be because one of the network devices \(e.g., firewalls, NAT, routers\) between your computer and the remote server is not configured to allow VPN connections. Please contact your administrator or your service provider to determine which device may be causing the problem.
+-   **Error description.**  The network connection between your computer and the VPN server could not be established because the remote server is not responding. This could be because one of the network devices \(e.g., firewalls, NAT, routers\) between your computer and the remote server is not configured to allow VPN connections. Please contact your administrator or your service provider to determine which device may be causing the problem.
 
--   **Possible cause.** This error typically occurs when a firewall between the client and the server blocks the ports that the VPN tunnel uses.
+-   **Possible cause.** This error is caused by blocked UDP 500 or 4500 ports on the VPN server or the firewall.
 
 -   **Possible solution.** Ensure that UDP ports 500 and 4500 are allowed through all firewalls between the client and the RRAS server.	
 	
@@ -118,7 +118,9 @@ NPS creates and stores the NPS accounting logs. By default, these are stored in 
 
 By default, these logs are in comma-separated values format, but they don’t include a heading row. The heading row is:
 
+    ```
     ComputerName,ServiceName,Record-Date,Record-Time,Packet-Type,User-Name,Fully-Qualified-Distinguished-Name,Called-Station-ID,Calling-Station-ID,Callback-Number,Framed-IP-Address,NAS-Identifier,NAS-IP-Address,NAS-Port,Client-Vendor,Client-IP-Address,Client-Friendly-Name,Event-Timestamp,Port-Limit,NAS-Port-Type,Connect-Info,Framed-Protocol,Service-Type,Authentication-Type,Policy-Name,Reason-Code,Class,Session-Timeout,Idle-Timeout,Termination-Action,EAP-Friendly-Name,Acct-Status-Type,Acct-Delay-Time,Acct-Input-Octets,Acct-Output-Octets,Acct-Session-Id,Acct-Authentic,Acct-Session-Time,Acct-Input-Packets,Acct-Output-Packets,Acct-Terminate-Cause,Acct-Multi-Ssn-ID,Acct-Link-Count,Acct-Interim-Interval,Tunnel-Type,Tunnel-Medium-Type,Tunnel-Client-Endpt,Tunnel-Server-Endpt,Acct-Tunnel-Conn,Tunnel-Pvt-Group-ID,Tunnel-Assignment-ID,Tunnel-Preference,MS-Acct-Auth-Type,MS-Acct-EAP-Type,MS-RAS-Version,MS-RAS-Vendor,MS-CHAP-Error,MS-CHAP-Domain,MS-MPPE-Encryption-Types,MS-MPPE-Encryption-Policy,Proxy-Policy-Name,Provider-Type,Provider-Name,Remote-Server-Address,MS-RAS-Client-Name,MS-RAS-Client-Version
+    ```
 
 If you paste this heading row as the first line of the log file, then import the file into Microsoft Excel, the columns will be properly labeled.
 
