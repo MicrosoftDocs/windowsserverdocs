@@ -47,7 +47,7 @@ For more information on each infrastructure component depicted in the illustrati
 
 Both internal and external Domain Name System (DNS) zones are required, which assumes that the internal zone is a delegated subdomain of the external zone (e.g., corp.contoso.com and contoso.com).
 
-Learn more about [Domain Name System (DNS)](../../../../networking/dns/dns-top.md) or [Core Network Guide](../../../../networking/core-network-guide/core-network-guide).
+Learn more about [Domain Name System (DNS)](../../../../networking/dns/dns-top.md) or [Core Network Guide](../../../../networking/core-network-guide/core-network-guide.md).
 
 >[!NOTE] 
 >Other DNS designs, such as split-brain DNS (using the same domain name internally and externally in separate DNS zones) or unrelated internal and external domains (e.g., contoso.local and contoso.com) are also possible, but the configuration for these environments is beyond the scope of this deployment.
