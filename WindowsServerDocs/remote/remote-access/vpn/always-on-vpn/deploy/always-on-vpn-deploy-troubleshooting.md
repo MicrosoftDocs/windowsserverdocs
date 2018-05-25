@@ -232,15 +232,13 @@ A small misconfiguration can cause the client connection to fail and can be chal
         RememberCredentials     : False
         TrustedNetworkDetection :
         PSComputerName          : DERS2
-        
-        
-        
+
         PS C:\>
         ```
 
     3. To determine if there are valid certificates in the user's certificate store, run the **Certutil** command:
 
-       ```Command
+       ```
        C:\>certutil -store -user My
 
         My "Personal"
@@ -258,7 +256,6 @@ A small misconfiguration can cause the client connection to fail and can be chal
           Simple container name: te-User-c7bcc4bd-0498-4411-af44-da2257f54387
           Provider = Microsoft Enhanced Cryptographic Provider v1.0
         Encryption test passed
-        
         
         ================ Certificate 1 ================
         Serial Number: 367fbdd7e6e4103dec9b91f93959ac56
