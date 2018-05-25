@@ -89,7 +89,7 @@ In this procedure, you register the server in Active Directory so that it has pe
 
 3.  In the Network Policy Server dialog box, click **OK** twice.
 
-For alternate methods of registering NPS, see [Register an NPS Server in an Active Directory Domain](https://docs.microsoft.com/windows-server/networking/technologies/nps/nps-manage-register).
+For alternate methods of registering NPS, see [Register an NPS Server in an Active Directory Domain](../../../../../networking/technologies/nps/nps-manage-register.md).
 
 ### Configure Network Policy Server Accounting
 
@@ -101,7 +101,7 @@ In this procedure, configure Network Policy Server Accounting using one of the f
 
 -   **Logging user authentication and accounting requests to a Microsoft SQL Server XML-compliant database**. Used to allow multiple servers running NPS to have one data source. Also provides the advantages of using a relational database. You can configure SQL Server logging by using the Accounting Configuration wizard.
 
-To configure Network Policy Server Accounting, see [Configure Network Policy Server Accounting](https://docs.microsoft.com/windows-server/networking/technologies/nps/nps-accounting-configure).
+To configure Network Policy Server Accounting, see [Configure Network Policy Server Accounting](../../../../../networking/technologies/nps/nps-accounting-configure.md).
 
 ### Add the VPN Server as a RADIUS Client
 

@@ -57,7 +57,7 @@ The Internal Perimeter Network Firewall separates the Organization/Corporate Net
 Because the Remote Access VPN server on the perimeter network is configured as a Remote Authentication Dial In User Service \(RADIUS\) Client and sends RADIUS traffic to the Network Policy Server \(NPS\) on the Organization/Corporate network - and also receives RADIUS traffic from the NPS Server - you must configure the firewall to allow RADIUS traffic to flow in both directions.
 
 >[!NOTE]
->The NPS server on the Organization/Corporate network functions as a RADIUS Server for the VPN Server, which is a RADIUS Client. For more information about the RADIUS infrastructure, see [Network Policy Server (NPS)](https://docs.microsoft.com/windows-server/networking/technologies/nps/nps-top).
+>The NPS server on the Organization/Corporate network functions as a RADIUS Server for the VPN Server, which is a RADIUS Client. For more information about the RADIUS infrastructure, see [Network Policy Server (NPS)](../../../../../networking/technologies/nps/nps-top.md).
 
 ### RADIUS Traffic Ports on the VPN Server and NPS Server
 
@@ -72,7 +72,7 @@ If you are using the default RADIUS port configuration on the VPN Server and the
 
 - Ports UDP1812, UDP1813, UDP1645, and UDP1646
 
-If you are not using the default RADIUS ports in your NPS deployment, you must configure the firewall to allow RADIUS traffic on the ports that you are using. For more details, see [Configure Firewalls for RADIUS Traffic](https://docs.microsoft.com/windows-server/networking/technologies/nps/nps-firewalls-configure).
+If you are not using the default RADIUS ports in your NPS deployment, you must configure the firewall to allow RADIUS traffic on the ports that you are using. For more details, see [Configure Firewalls for RADIUS Traffic](../../../../../networking/technologies/nps/nps-firewalls-configure.md).
 
 ## Next step
 [Step 5. Configure Windows 10 Client Always On VPN Connections](vpn-deploy-client-vpn-connections.md): In this step, you configure the Windows 10 client computers to communicate with that infrastructure with a VPN connection. You can use several technologies to configure Windows 10 VPN clients, including Windows PowerShell, System Center Configuration Manager, and Intune. All three require an XML VPN profile to configure the appropriate VPN settings. 

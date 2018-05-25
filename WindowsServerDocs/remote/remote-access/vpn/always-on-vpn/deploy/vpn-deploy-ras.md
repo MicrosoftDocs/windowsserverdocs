@@ -40,7 +40,7 @@ You can configure the RRAS server to support IKEv2 connections while disabling u
 
 ## Install Remote Access as a RAS Gateway VPN Server
 
-You can use this section to install the Remote Access role as a single tenant RAS Gateway VPN server. For more details, see [Remote Access](https://docs.microsoft.com/windows-server/remote/remote-access/remote-access).
+You can use this section to install the Remote Access role as a single tenant RAS Gateway VPN server. For more details, see [Remote Access](../../../Remote-Access.md).
 
 **Administrative Credentials**
 
@@ -182,7 +182,7 @@ In this section, you can configure Remote Access VPN to allow IKEv2 VPN connecti
 
 4.  Click **WAN Miniport (SSTP)** and click **Configure**. The Configure Device - WAN Miniport (SSTP) dialog box opens.
 
-    1.  Clear the **Remote access connections (inbound only)** and **Demand-dial routing connections (inbound and outbound)** checkboxes.
+    1.  Clear the **Remote access connections (inbound only)** and **Demand-dial routing connections (inbound and outbound)** check boxes.
 
     2.  Click **OK**.
 

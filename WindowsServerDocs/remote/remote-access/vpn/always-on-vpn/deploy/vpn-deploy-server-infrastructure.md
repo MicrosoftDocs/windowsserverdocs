@@ -164,9 +164,9 @@ In this procedure, you configure a custom client-server authentication template.
 
     2.  Click **Requests must use one of the following providers**.
 
-    3.  Select the **Microsoft Platform Crypto Provider** checkbox.
+    3.  Select the **Microsoft Platform Crypto Provider** check box.
 
-9.  On the **Subject Name** tab, if you don’t have an email address listed on all user accounts, clear the **Include e-mail name in subject name** and **E-mail name** checkboxes.
+9.  On the **Subject Name** tab, if you don’t have an email address listed on all user accounts, clear the **Include e-mail name in subject name** and **E-mail name** check boxes.
 
 10. Click **OK** to save the VPN User Authentication certificate template.
 
@@ -315,7 +315,7 @@ Unlike the user certificate, you must manually enroll the VPN server’s certifi
 
 4.  On the Select Certificate Enrollment Policy page, click **Next**.
 
-5.  On the Request Certificates page, click the checkbox next to the VPN server to select it.
+5.  On the Request Certificates page, click the check box next to the VPN server to select it.
 
 6.  Under the VPN server check box, click **More information is required** to open the Certificate Properties dialog box and complete the following steps:
 
