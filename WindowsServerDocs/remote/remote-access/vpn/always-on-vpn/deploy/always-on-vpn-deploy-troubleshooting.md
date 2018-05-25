@@ -156,9 +156,9 @@ A small misconfiguration can cause the client connection to fail and can be chal
 
 ## Azure AD Conditional Access connection issues
 
-### VPN connection is blocked
+### Oops - You can't get to this yet
 
--   **Error description.** When the Conditional Access policy is not satisfied, blocking the VPN connection showing an  _Oops - You can't get to this yet_ message, but connects after the users clicks **X** to close the message.  Clicking **OK** causes another authentication attempt, which ends in another Oops message. These events are recorded in the AAD Operational Event log of the client. 
+-   **Error description.** When the Conditional Access policy is not satisfied, blocking the VPN connection, but connects after the user clicks **X** to close the message.  Clicking **OK** causes another authentication attempt, which ends in another _Oops_ message. These events are recorded in the AAD Operational Event log of the client. 
 
 -   **Possible cause.** 
 
@@ -281,7 +281,18 @@ A small misconfiguration can cause the client connection to fail and can be chal
 
    4. If a valid Client Authentication certificate exists in the user's Personal store, the connection fails (as it should) after the user clicks the **X** and  if the **\<TLSExtensions>**, **\<EKUName>**, and **\<EKUOID>** sections exist and contain the correct information.<p>The _A certificate could not be found that can be used with the Extensible Authenticate Protocol._ error message appears.
 
+### Unable to delete the certificate from the VPN connectivity blade
 
+-   **Error description.** Certificates on the VPN connectivity blade cannot be deleted.
+
+-   **Possible cause.** The certificate is set to **Primary**.
+
+-   **Possible solution.** 
+
+    1. In the VPN connectivity blade, select the certificate.
+    2. Under **Primary**, select **No** and click **Save**.
+    3. In the VPN connectivity blade, select the certificate again.
+    4. Click **Delete**.
 
 
 ---
