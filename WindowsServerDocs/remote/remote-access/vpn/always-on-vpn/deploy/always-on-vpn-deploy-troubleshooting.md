@@ -175,8 +175,7 @@ A small misconfiguration can cause the client connection to fail and can be chal
 
         ```PowerShell
         PS C:\> Get-WmiObject -Class MDM_VPNv2_01 -Namespace root\cimv2\mdm\dmmap
-        
-        
+
         __GENUS                 : 2
         __CLASS                 : MDM_VPNv2_01
         __SUPERCLASS            :
