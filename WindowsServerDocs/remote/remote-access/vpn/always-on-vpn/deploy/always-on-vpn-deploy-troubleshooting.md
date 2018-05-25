@@ -170,10 +170,9 @@ A small misconfiguration can cause the client connection to fail and can be chal
 
 -   **Possible solution.** To escape this loop, do the following:
 
-    1. In Windows PowerShell, run the Get-WmiObject cmdlet to dump the VPN profile configuration. 
+    1. In Windows PowerShell, run the **Get-WmiObject** cmdlet to dump the VPN profile configuration. 
     2. Verify that the **\<TLSExtensions>**, **\<EKUName>**, and **\<EKUOID>** sections exist and shows the correct name and OID. 
-
-        ```PowerShell
+        ```
         PS C:\> Get-WmiObject -Class MDM_VPNv2_01 -Namespace root\cimv2\mdm\dmmap
 
         __GENUS                 : 2
