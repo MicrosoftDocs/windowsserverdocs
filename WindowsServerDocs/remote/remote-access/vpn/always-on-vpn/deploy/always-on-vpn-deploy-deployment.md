@@ -15,7 +15,7 @@ author: shortpatti
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-&#0171; [ **Previous:** Plan the Always On VPN Deployment](always-on-vpn-deploy-planning.md)<br>
+&#0171; [ **Previous:** Start planning the Always On VPN deployment](always-on-vpn-deploy-planning.md)<br>
 &#0187; [ **Next:** Step 1. Configure the Server Infrastructure](vpn-deploy-server-infrastructure.md)
 
 In this section, you deploy Always On VPN connections for remote domain-joined Windows 10 client computers. If you want to **configure conditional access** to fine-tune how authorized VPN users access your resources, see [Conditional access for VPN connectivity using Azure AD](../../ad-ca-vpn-connectivity-windows10.md). To learn more about conditional access for VPN connectivity using Azure AD, see [Azure AD) conditional access](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-conditional-access-azure-portal). 
