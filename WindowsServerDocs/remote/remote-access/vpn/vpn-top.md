@@ -27,7 +27,7 @@ These technologies are the role services of the Remote Access server role.
 
 When you install the Remote Access server role with the Add Roles and Features Wizard or Windows PowerShell, you can install one or more of these three role services.
 
-When you install the **Always On VPN** and **VPN \(RAS\)** role service, you are deploying the Remote Access Service Gateway \(**RAS Gateway**\). You can deploy RAS Gateway as a single tenant RAS Gateway virtual private network \(VPN\) server that provides many advanced features and enhanced functionality.
+When you install the **DirectAccess and VPN (RAS)** role service, you are deploying the Remote Access Service Gateway \(**RAS Gateway**\). You can deploy RAS Gateway as a single tenant RAS Gateway virtual private network \(VPN\) server that provides many advanced features and enhanced functionality.
 
 >[!NOTE]
 >You can also deploy RAS Gateway as a Multitenant VPN server for use with Software Defined Networking \(SDN\), or as a DirectAccess server. For more information, see [RAS Gateway](https://docs.microsoft.com/windows-server/remote/remote-access/ras-gateway/ras-gateway), [Software Defined Networking (SDN)](https://docs.microsoft.com/windows-server/networking/sdn/software-defined-networking), and [DirectAccess](https://docs.microsoft.com/windows-server/remote/remote-access/directaccess/directaccess).
