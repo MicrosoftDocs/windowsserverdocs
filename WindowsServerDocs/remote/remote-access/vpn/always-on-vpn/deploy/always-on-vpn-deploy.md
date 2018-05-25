@@ -23,6 +23,7 @@ Always On VPN has many benefits over the Windows VPN solutions of the past. Key 
 Always On VPN provides a single, cohesive solution for remote access for all your connected devices going forward, even personally owned devices. Also, you can choose which management platform they prefer for deploying the Always On VPN configuration because the CSP is not vendor specific. 
 
 
+
 ## <a name="bkmk_about"></a>About this deployment
 
 The instructions provided walk you through deploying Remote Access as a single tenant VPN RAS Gateway for point\-to\-site VPN connections, using any of the four scenarios mentioned below, for remote client computers that are running Windows 10. You also find instructions for modifying some of your existing infrastructure for the deployment. Also throughout this deployment, you find links to help you learn more about the VPN connection process, servers to configure, ProfileXML VPNv2 CSP node, and other technologies to deploy Always On VPN.
@@ -49,6 +50,7 @@ This deployment does not provide instructions for deploying the following items.
 
 ## <a name="bkmk_prerequisites"></a>Deployment rerequisites
 
+
 To deploy Always On VPN successfully, the remote client computers must be joiened to the Active Directory domain and running the Windows 10 Anniversary Update \(version 1607\) or later operating system.  Additionally, you must have:
 - An Active Directory domain infrastructure, including one or more Domain Name System \(DNS\) servers.
 - A Public Key Infrastructure \(PKI\) and Active Directory Certificate Services \(AD CS\).
@@ -56,6 +58,7 @@ To deploy Always On VPN successfully, the remote client computers must be joiene
 - Read the planning section of this guide to ensure that you are prepared for this deployment before you perform the deployment.
 - Physical server or virtual machine \(VPN\) on your perimeter network with two physical Ethernet network adapters to install Remote Access.
 - Physical server, existing or new, to install Network Policy Server \(NPS\). If you already have NPS servers on your network, you can modify an existing NPS server configuration rather than adding a new server.
+- Membership in **Administrators**, or equivalent, is the minimum required.
 
 It is recommended that you review the design and deployment guides for each of the technologies that are used in the deployment scenarios. These guides can help you determine whether the deployment scenarios provide the services and configuration that you need for your organization's network. For more information, see [Always On VPN Technology Overview](../always-on-vpn-technology-overview.md).
 
@@ -63,7 +66,6 @@ It is recommended that you review the design and deployment guides for each of t
 >For this deployment, it is not a requirement that your infrastructure servers, such as computers running Active Directory Domain Services, Active Directory Certificate Services, and Network Policy Server, are running Windows Server 2016. You can use earlier versions of Windows Server, such as Windows Server 2012 R2, for the infrastructure servers and for the server that is running Remote Access.
 >
 >Do not attempt to deploy Remote Access on a virtual machine \(VM\) in Microsoft Azure. Using Remote Access in Microsoft Azure is not supported, including both Remote Access VPN and DirectAccess. For more information, see [Microsoft server software support for Microsoft Azure virtual machines](https://support.microsoft.com/help/2721672/microsoft-server-software-support-for-microsoft-azure-virtual-machines).
-
 
 
 ## Next step
