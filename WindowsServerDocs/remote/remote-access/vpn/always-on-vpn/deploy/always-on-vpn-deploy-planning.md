@@ -15,7 +15,7 @@ ms.date: 05/25/2018
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
 
-&#171;  [**Previous:** Learn about the Always On VPN technology](../always-on-vpn-technology-overview.md)<br>
+&#171;  [**Previous:** Learn about the Always On VPN advanced features](deploy/always-on-vpn-adv-options.md)<br>
 &#187;  [**Next:** Start deploying Always On VPN](always-on-vpn-deploy-deployment.md)
 
 You can use the following steps to plan for your Always On VPN deployment.
