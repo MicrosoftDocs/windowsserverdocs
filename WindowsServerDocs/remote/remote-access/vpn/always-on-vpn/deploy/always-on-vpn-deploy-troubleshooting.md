@@ -232,8 +232,6 @@ A small misconfiguration can cause the client connection to fail and can be chal
         RememberCredentials     : False
         TrustedNetworkDetection :
         PSComputerName          : DERS2
-
-        PS C:\>
         ```
 
     3. To determine if there are valid certificates in the user's certificate store, run the **Certutil** command:
