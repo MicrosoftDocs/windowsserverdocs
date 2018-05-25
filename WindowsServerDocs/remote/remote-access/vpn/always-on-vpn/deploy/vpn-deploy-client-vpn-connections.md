@@ -20,9 +20,9 @@ ms.reviewer: deverette
 &#187; [ **Next:** Step 6. (Optional) Conditional access for VPN connectivity using Azure AD](../../ad-ca-vpn-connectivity-windows10.md)
 
 
-After setting up the server infrastructure, you must configure the Windows 10 client computers to communicate with that infrastructure with a VPN connection. You can use several technologies to configure Windows 10 VPN clients, including Windows PowerShell, System Center Configuration Manager, and Intune.  All three require an XML VPN profile to configure the appropriate VPN settings. 
+Now that you have set up the server infrastructure, you must configure the Windows 10 client computers to communicate with that infrastructure with a VPN connection. In this step, you learn about the ProfileXML options and schema, create the ProfileXML VPN, and deploy Always On VPN to Windows 10 client computers. 
 
-In this step, you learn about the ProfileXML options and schema, and how to create the ProfileXML VPN. 
+You can configure the Always On VPN client through PowerShell, SCCM, or Intune. All three require an XML VPN profile to configure the appropriate VPN settings. Automating PowerShell enrollment for organizations without SCCM or Intune is possible.
 
 >[!NOTE]
 >Group Policy does not include administrative templates to configure the Windows 10 Remote Access Always On VPN client, however you can use logon scripts.

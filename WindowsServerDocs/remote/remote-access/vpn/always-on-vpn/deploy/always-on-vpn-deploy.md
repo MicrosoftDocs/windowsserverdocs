@@ -20,8 +20,9 @@ author: shortpatti
 
 Always On VPN has many benefits over the Windows VPN solutions of the past. Key improvements in integration, security, connectivity, networking control, and compatibility align Always On VPN with Microsoft's cloud-first, mobile-first vision. For details on the improved functionality, see [Always On VPN Advanced Features](../../vpn-map-da.md#improved-functionality). 
 
-Always On VPN provides a single, cohesive solution for remote access for all your connected devices going forward, even personally owned devices. Also, you can choose which management platform they prefer for deploying the Always On VPN configuration because the CSP is not vendor specific. 
+Always On VPN provides a single, cohesive solution for remote access for all your connected devices going forward, even personally owned devices. Also, you can choose which management platform they prefer for deploying the Always On VPN configuration because the CSP is not vendor specific.
 
+You most likely have the technologies deployed that you can use for the Always On VPN deployment.  Other than your DC/DNS servers, the Always On VPN deployment requires an NPS (RADIUS) server, a CA server, and a Remote Access (Routing/VPN) server. Once the infrastructure is set up, you must enroll clients and then connect the clients to your on-premises securely through several network changes. 
 
 
 ## <a name="bkmk_about"></a>About this deployment
@@ -39,7 +40,7 @@ For more details about the scenarios presented, see [Deploy Always On VPN](alway
 
 ## <a name="bkmk_not"></a>What is not provide in this deployment
 
-This deployment does not provide instructions for deploying the following items.
+This deployment does not provide instructions for deploying the following items:
 
 - Active Directory Domain Services \(AD DS\).
 - Active Directory Certificate Services \(AD CS\) and a Public Key Infrastructure \(PKI\).
@@ -48,15 +49,15 @@ This deployment does not provide instructions for deploying the following items.
 - Additional network resources, such as application and file servers, that remote users can access over an Always On VPN connection.
 - Internet connectivity or Conditional Access for Internet connectivity using Azure AD.
 
-## <a name="bkmk_prerequisites"></a>Deployment rerequisites
+## <a name="bkmk_prerequisites"></a>Deployment prerequisites
 
 
-To deploy Always On VPN successfully, the remote client computers must be joiened to the Active Directory domain and running the Windows 10 Anniversary Update \(version 1607\) or later operating system.  Additionally, you must have:
+To deploy Always On VPN successfully, the remote client computers must be joined to the Active Directory domain and running the Windows 10 Anniversary Update \(version 1607\) or later operating system.  Additionally, you must have:
 - An Active Directory domain infrastructure, including one or more Domain Name System \(DNS\) servers.
 - A Public Key Infrastructure \(PKI\) and Active Directory Certificate Services \(AD CS\).
 - A perimeter network that includes two firewalls. For more information, see [Always On VPN Technology Overview](../always-on-vpn-technology-overview.md).
 - Read the planning section of this guide to ensure that you are prepared for this deployment before you perform the deployment.
-- Physical server or virtual machine \(VPN\) on your perimeter network with two physical Ethernet network adapters to install Remote Access.
+- Physical server or virtual machine \(VM\) on your perimeter network with two physical Ethernet network adapters to install Remote Access. VMs require virtual LAN (VLAN) for the host. 
 - Physical server, existing or new, to install Network Policy Server \(NPS\). If you already have NPS servers on your network, you can modify an existing NPS server configuration rather than adding a new server.
 - Membership in **Administrators**, or equivalent, is the minimum required.
 
