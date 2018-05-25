@@ -28,7 +28,7 @@ Before you install the Remote Access server role on the computer you're planning
 
 - **Identify which network adapter connects to the Internet and which network adapter connects to your private network**. You must configure the Internet facing network adapter with a public IP address, while the adapter facing the Intranet can use an IP address from the local network.
 
-    >[!NOTE]
+    >[!TIP]
     >If you prefer not to use a public IP address on your perimeter network, you can configure the Edge Firewall with a public IP address, and then configure the firewall to forward VPN connection requests to the VPN server.
 
 - **Connect the VPN server to the network**. Install the VPN server on a perimeter network, between the edge firewall and the perimeter firewall.
@@ -37,7 +37,8 @@ Before you install the Remote Access server role on the computer you're planning
 
 IKEv2 is a VPN tunneling protocol described in Internet Engineering Task Force Request for Comments 7296. The primary advantage of IKEv2 is that it tolerates interruptions in the underlying network connection. For example, if the connection is temporarily lost or if a user moves a client computer from one network to another, IKEv2 automatically restores the VPN connection when the network connection is reestablished — all without user intervention.
 
-You can configure the Remote Access VPN server to support IKEv2 connections while also disabling unused protocols, which reduces the server’s security footprint. 
+>[!TIP]
+>You can configure the Remote Access VPN server to support IKEv2 connections while also disabling unused protocols, which reduces the server’s security footprint. 
 
 ## Plan IP Addresses for Remote Clients
 
@@ -59,7 +60,7 @@ The following steps provide instructions on how to make minor adjustments to the
 
 In addition, the VPN server is installed inside the perimeter network, which partitions the perimeter network into internal and external perimeter networks. Because of this, you might need to make several routing modifications, depending on your network environment.
 
-- **Configure port forwarding \(optional\)**. Your edge firewall must open the ports and protocol IDs associated with an IKEv2 VPN and forward them to the VPN server. In most environments, doing so requires you to configure port forwarding. Redirect Universal Datagram Protocol (UDP) ports 500 and 4500 to the VPN server.
+- **\(Optional\) Configure port forwarding.** Your edge firewall must open the ports and protocol IDs associated with an IKEv2 VPN and forward them to the VPN server. In most environments, doing so requires you to configure port forwarding. Redirect Universal Datagram Protocol (UDP) ports 500 and 4500 to the VPN server.
 
 - **Configure routing so that the DNS servers and VPN servers can reach the Internet**. This deployment uses IKEv2 and Network Address Translation \(NAT\). Ensure that the VPN server can reach all of the required internal networks and network resources that you want to provide to remote users. Any network or resource that is not reachable from the VPN server will also be unreachable over VPN connections from remote locations.
 

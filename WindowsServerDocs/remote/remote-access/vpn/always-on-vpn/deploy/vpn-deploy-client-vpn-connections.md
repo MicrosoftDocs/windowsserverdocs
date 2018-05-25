@@ -20,9 +20,9 @@ ms.reviewer: deverette
 &#187; [ **Next:** Step 6. (Optional) Conditional access for VPN connectivity using Azure AD](../../ad-ca-vpn-connectivity-windows10.md)
 
 
-After setting up the server infrastructure, you must configure the Windows 10 client computers to communicate with that infrastructure with a VPN connection. You can use several technologies to configure Windows 10 VPN clients, including Windows PowerShell, System Center Configuration Manager, and Intune.  All three require an XML VPN profile to configure the appropriate VPN settings. 
+Now that you have set up the server infrastructure, you must configure the Windows 10 client computers to communicate with that infrastructure with a VPN connection. In this step, you learn about the ProfileXML options and schema, create the ProfileXML VPN, and deploy Always On VPN to Windows 10 client computers. 
 
-In this step, you learn about the ProfileXML options and schema, and how to create the ProfileXML VPN. 
+You can configure the Always On VPN client through PowerShell, SCCM, or Intune. All three require an XML VPN profile to configure the appropriate VPN settings. Automating PowerShell enrollment for organizations without SCCM or Intune is possible.
 
 >[!NOTE]
 >Group Policy does not include administrative templates to configure the Windows 10 Remote Access Always On VPN client, however you can use logon scripts.
@@ -39,7 +39,7 @@ You use ProfileXML in all the delivery methods this deployment describes, includ
 
 Even though these configuration methods differ, both require a properly formatted XML VPN profile. To use the ProfileXML VPNv2 CSP setting, you construct XML by using the ProfileXML schema to configure the tags necessary for the simple deployment scenario. For more information, see [ProfileXML XSD](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/vpnv2-profile-xsd).
 
-In the section “Infrastructure requirements,” Table 1 provided an overview of the individual settings for the VPN client. Below is each of those required settings and its corresponding ProfileXML tag. You configure each setting in a specific tag within the ProfileXML schema, and not all of them are found under the native profile. For additional tag placement, see the ProfileXML schema.
+Below is each of the required settings and its corresponding ProfileXML tag. You configure each setting in a specific tag within the ProfileXML schema, and not all of them are found under the native profile. For additional tag placement, see the ProfileXML schema.
 
 [!INCLUDE [important-lower-case-true-include](../../../includes/important-lower-case-true-include.md)]
 
@@ -211,7 +211,7 @@ The Windows PowerShell script in Listing 1 creates two files on the desktop, bot
 
 2. Paste Listing 1 in to Windows PowerShell integrated scripting environment \(ISE\), and customize the parameters described in the comments. These are $Template, $ProfileName, $Servers, $DnsSuffix, $DomainName, $TrustedNetwork, and $DNSServers. A full description of each setting is in the comments.
 
-3.  Run the script to generate VPN_Profile.xml and VPN_Profile.ps1 on the desktop.
+3.  Run the script to generate **VPN_Profile.xml** and **VPN_Profile.ps1** on the desktop.
 
 #### Listing 1. Understanding MakeProfile.ps1
 
@@ -219,14 +219,14 @@ This section explains the example code that you can use to gain an understanding
 
 After you assemble a script from this example code and run the script, the script generates two files: VPN_Profile.xml and VPN_Profile.ps1. Use VPN_Profile.xml to configure ProfileXML in OMA-DM compliant MDM services, such as Microsoft Intune.
 
-You can use the script VPN_Profile.ps1 to configure ProfileXML by using Windows PowerShell on the Windows 10 desktop or in System Center Configuration Manager.
+Use the **VPN_Profile.ps1** script in Windows PowerShell or System Center Configuration Manager to configure ProfileXML on the Windows 10 desktop.
 
 >[!NOTE]
 >To view the full example script, see the section [MakeProfile.ps1 Full Script](#bkmk_fullscript).
 
 #### Parameters
 
-You must configure the following parameters.
+You must configure the following parameters:
 
 **$Template**. The name of the template from which to retrieve the EAP configuration.
 
@@ -259,7 +259,7 @@ Following are example values for parameters used in the commands below. Ensure t
 
 ### Prepare and create the profile XML
 
-The following example commands get EAP settings from the template profile.
+The following example commands get EAP settings from the template profile:
 
 
     $Connection = Get-VpnConnection -Name $TemplateName
@@ -304,7 +304,7 @@ The following example commands get EAP settings from the template profile.
 
 ### Output VPN_Profile.xml for Intune
 
-You can use the following example command to save the profile XML file.
+You can use the following example command to save the profile XML file:
 
     $ProfileXML | Out-File -FilePath ($env:USERPROFILE + '\desktop\VPN_Profile.xml')
 

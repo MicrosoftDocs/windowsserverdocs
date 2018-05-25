@@ -7,11 +7,10 @@ ms.technology: storage-spaces
 ms.topic: get-started-article
 ms.assetid: 20fee213-8ba5-4cd3-87a6-e77359e82bc0
 author: stevenek
-ms.date: 5/21/2018
+ms.date: 5/24/2018
 description: Step-by-step instructions to deploy software-defined storage with Storage Spaces Direct in Windows Server as either hyper-converged infrastructure or converged (also known as disaggregated) infrastructure. 
 ms.localizationpriority: medium
 ---
-
 # Deploy Storage Spaces Direct
 
 > Applies to: Windows Server 2016
@@ -74,16 +73,16 @@ Enter the PS session and use either the server name or the IP address of the nod
    Enter-PSSession -ComputerName $myServer1 -Credential $user
    ```
 
-    > [!TIP]
-    > If you're deploying remotely from a management system, you might get an error like *WinRM cannot process the request.* To fix this, use Windows PowerShell to add each server to the Trusted Hosts list on your management computer:  
-    >   
-    > `Set-Item WSMAN:\Localhost\Client\TrustedHosts -Value Server01 -Force`
-    >  
-    > Note: the trusted hosts list supports wildcards, like `Server*`.
-    >
-    > To view your Trusted Hosts list, type `Get-Item WSMAN:\Localhost\Client\TrustedHosts`.  
-    >   
-    > To empty the list, type `Clear-Item WSMAN:\Localhost\Client\TrustedHost`.  
+> [!TIP]
+> If you're deploying remotely from a management system, you might get an error like *WinRM cannot process the request.* To fix this, use Windows PowerShell to add each server to the Trusted Hosts list on your management computer:  
+>   
+> `Set-Item WSMAN:\Localhost\Client\TrustedHosts -Value Server01 -Force`
+>  
+> Note: the trusted hosts list supports wildcards, like `Server*`.
+>
+> To view your Trusted Hosts list, type `Get-Item WSMAN:\Localhost\Client\TrustedHosts`.  
+>   
+> To empty the list, type `Clear-Item WSMAN:\Localhost\Client\TrustedHost`.  
 
 ### Step 1.3: Join the domain and add domain accounts
 
@@ -186,7 +185,7 @@ Count Name                          PSComputerName
 10    ATA ST4000NM0033              Server04
 ```
 
-### Step 3.2: Validate cluster
+### Step 3.2: Validate the cluster
 
 In this step, you'll run the cluster validation tool to ensure that the server nodes are configured correctly to create a cluster using Storage Spaces Direct. When cluster validation (`Test-Cluster`) is run before the cluster is created, it runs the tests that verify that the configuration appears suitable to successfully function as a failover cluster. The example directly below uses the `-Include` parameter, and then the specific categories of tests are specified. This ensures that the Storage Spaces Direct specific tests are included in the validation.
 
@@ -196,7 +195,7 @@ Use the following PowerShell command to validate a set of servers for use as a S
 Test-Cluster –Node <MachineName1, MachineName2, MachineName3, MachineName4> –Include "Storage Spaces Direct", "Inventory", "Network", "System Configuration"
 ```
 
-### Step 3.3: Create cluster
+### Step 3.3: Create the cluster
 
 In this step, you'll create a cluster with the nodes that you have validated for cluster creation in the preceding step using the following PowerShell cmdlet.
 
@@ -211,7 +210,7 @@ When creating the cluster, you'll get a warning that states - "There were issues
 
 After the cluster is created, it can take time for DNS entry for the cluster name to be replicated. The time is dependent on the environment and DNS replication configuration. If resolving the cluster isn't successful, in most cases you can be successful with using the machine name of a node that is an active member of the cluster may be used instead of the cluster name.
 
-### Step 3.4: Configure cluster witness
+### Step 3.4: Configure a cluster witness
 
 It is recommended that you configure a witness for the cluster, so that a three or more node system can withstand two nodes failing or being offline. A two-node deployment requires a cluster witness, otherwise either node going offline will cause the other to become unavailable as well. With these systems, you can use a file share as a witness, or use cloud witness. For more info, see [Deploy a Cloud Witness for a Failover Cluster](../../failover-clustering/deploy-cloud-witness.md).
 
@@ -243,7 +242,28 @@ We recommend using the `New-Volume` cmdlet as it provides the fastest and most s
 
 For more information, check out [Creating volumes in Storage Spaces Direct](create-volumes.md).
 
-### Step 3.7: Deploy virtual machines for hyper-converged deployments
+### Step 3.7: Optionally enable the CSV cache
+
+You can optionally enable the cluster shared volume (CSV) cache to use system memory (RAM) as a write-through block-level cache of read operations that aren't already cached by the Windows cache manager. This can improve performance for applications such as Hyper-V. The CSV cache can boost the performance of read requests and is also useful for Scale-Out File Server scenarios.
+
+Enabling the CSV cache reduces the amount of memory available to run VMs on a hyper-converged cluster, so you'll have to balance storage performance with memory available to VHDs.
+
+To set the size of the CSV cache, open a PowerShell session on the management system with an account that has administrator permissions on the storage cluster, and then use this script, changing the `$ClusterName` and `$CSVCacheSize` variables as appropriate (this example sets a 2 GB CSV cache per server):
+
+```PowerShell
+$ClusterName = "StorageSpacesDirect1"
+$CSVCacheSize = 2048 #Size in MB
+
+Write-Output "Setting the CSV cache..."
+(Get-Cluster $ClusterName).BlockCacheSize = $CSVCacheSize
+
+$CSVCurrentCacheSize = (Get-Cluster $ClusterName).BlockCacheSize
+Write-Output "$ClusterName CSV cache size: $CSVCurrentCacheSize MB"
+```
+
+For more info, see [Using the CSV in-memory read cache](csv-cache.md).
+
+### Step 3.8: Deploy virtual machines for hyper-converged deployments
 
 If you're deploying a hyper-converged cluster, the last step is to provision virtual machines on the Storage Spaces Direct cluster.
 
