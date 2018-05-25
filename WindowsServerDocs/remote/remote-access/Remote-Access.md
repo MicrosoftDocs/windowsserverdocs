@@ -42,7 +42,7 @@ When you install the **Always On VPN** and **VPN \(RAS\)** role service, you are
 >[!IMPORTANT]
 > The RAS Gateway with multitenant capabilities is also available in  Windows Server 2012 R2.
 
-- **Always On VPN**. Always On VPN enables remote users to securely access shared resources, intranet Web sites, and applications on an internal network without connecting to a VPN. DirectAccess establishes bi-directional connectivity with an internal network every time a DirectAccess-enabled computer is connected to the Internet. Users never have to think about connecting to the internal network, and IT administrators can manage remote computers outside the office, even when the computers are not connected via VPN.
+- **Always On VPN**. Always On VPN enables remote users to securely access shared resources, intranet Web sites, and applications on an internal network without connecting to a VPN. 
 
 For more information, see [RAS Gateway](ras-gateway/RAS-Gateway.md) and [Border Gateway Protocol (BGP)](bgp/Border-Gateway-Protocol-BGP.md).
 
