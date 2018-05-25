@@ -163,7 +163,7 @@ In addition to the server components, ensure that the client computers you confi
 
 The Windows 10 VPN client is highly configurable and offers many options. To better illustrate the specific features this scenario uses, Table 1 identifies the VPN feature categories and specific configurations that this deployment references. You’ll configure the individual settings for these features by using the VPNv2 configuration service provider (CSP) discussed later in this deployment. 
 
-Table 1. VPN Features and Configurations Discussed in This Deployment
+Table 1. VPN Features and Configurations Discussed in this Deployment
 
 | **VPN feature** | **Deployment scenario configuration**         |
 |-----------------|-----------------------------------------------|
