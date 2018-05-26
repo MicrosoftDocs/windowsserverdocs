@@ -108,9 +108,6 @@
 ## [Remote Desktop Services](remote-desktop-services/welcome-to-rds.md)
 ## [Remote Access](remote-access/remote-Access.md)
 
-### [Border Gateway Protocol (BGP)](remote-access/bgp/Border-Gateway-Protocol-BGP.md)
-#### [BGP Windows PowerShell Command Reference](remote-access/bgp/BGP-Windows-powershell-Command-Reference.md)
-
 ### [Always On VPN](remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy.md)
 #### [Features Comparison Between Always On VPN and DirectAccess](remote-access/vpn/vpn-map-da.md)
 #### [Always On VPN enhancements](remote-access/vpn/always-on-vpn/always-on-vpn-enhancements.md)
@@ -135,7 +132,8 @@
 #### [Troubleshooting Always On VPN](remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting.md)
 
 
-
+### [Border Gateway Protocol (BGP)](remote-access/bgp/Border-Gateway-Protocol-BGP.md)
+#### [BGP Windows PowerShell Command Reference](remote-access/bgp/BGP-Windows-powershell-Command-Reference.md)
 
 ### [RAS Gateway](remote-access/ras-gateway/RAS-Gateway.md)
 #### [GRE Tunneling in Windows Server](remote-access/ras-gateway/gre-tunneling-windows-server.md)
