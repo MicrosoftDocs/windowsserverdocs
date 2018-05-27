@@ -23,9 +23,10 @@ In this step, you configure DNS and Firewall settings for VPN connectivity.
 
 When remote VPN clients connect, they use the same DNS servers that your internal clients use, which allows them to resolve names in the same manner as the rest of your internal workstations. 
 
-Because of this, you must ensure that the computer name that external clients use to connect to the VPN server matches the subject alternative name that is defined in the certificates you issue to the  VPN server.
+Because of this, you must ensure that the computer name that external clients use to connect to the VPN server matches the subject alternative name defined in certificates issued to the VPN server.
 
 To ensure that remote clients can connect to your VPN server, you can create a DNS A (Host) record in your external DNS zone. The A record should use the certificate subject alternative name for the VPN server.
+
 
 ### To add a host \(A or AAAA\) resource record to a zone
 
@@ -34,8 +35,8 @@ To ensure that remote clients can connect to your VPN server, you can create a D
 3. In the details pane, in **Name**, double\-click **Forward Lookup Zones** to expand the view.
 4. In **Forward Lookup Zones** details, right\-click the forward lookup zone to which you want to add a record, and then click **New Host \(A or AAAA\)**. The **New Host** dialog box opens.
 5. In **New Host**, in **Name**, type the certificate subject alternative name for the VPN server.
-6. In IP address, type the IP address for the VPN server. You can type the address in IP version 4 (IPv4) format to add a host \(A\) resource record; or IP version 6 \(IPv6\) format to add a host \(AAAA\) resource record.
-7. If you created a reverse lookup zone for a range of IP addresses that includes the IP address that you typed, you can select the **Create associated pointer \(PTR\) record** check box to create an additional pointer \(PTR\) resource record in a reverse zone for this host, based on the information that you entered in **Name** and **IP address**.
+6. In IP address, type the IP address for the VPN server. You can type the address in IP version 4 (IPv4) format to add a host \(A\) resource record, or IP version 6 \(IPv6\) format to add a host \(AAAA\) resource record.
+7. 7.	If you created a reverse lookup zone for a range of IP addresses, including the IP address that you typed, then select the **Create associated pointer (PTR) record** check box.  Selecting this option creates an additional pointer \(PTR\) resource record in a reverse zone for this host, based on the information you entered in **Name** and **IP address**.
 8. Click **Add Host**.
 
 ## Configure the Edge Firewall
@@ -61,7 +62,7 @@ Because the Remote Access VPN server on the perimeter network is configured as a
 
 ### RADIUS Traffic Ports on the VPN Server and NPS Server
 
-By default, NPS and VPN listen for RADIUS traffic on ports 1812, 1813, 1645, and 1646 on all installed network adapters. If Windows Firewall with Advanced Security is enabled when you install NPS, firewall exceptions for these ports are automatically created during the installation process for both Internet Protocol version 6 \(IPv6\) and IPv4 traffic. 
+By default, NPS and VPN listen for RADIUS traffic on ports 1812, 1813, 1645, and 1646 on all installed network adapters. If you enable Windows Firewall with Advanced Security when installing NPS, firewall exceptions for these ports get created automatically during the installation process for both IPv6 and IPv4 traffic.
 
 >[!IMPORTANT]
 >If your network access servers are configured to send RADIUS traffic over ports other than these defaults, remove the exceptions created in Windows Firewall with Advanced Security during NPS installation, and create exceptions for the ports that you do use for RADIUS traffic.

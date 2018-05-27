@@ -19,7 +19,7 @@ author: shortpatti
 &#187; [**Next:** Learn about the feature comparison between Always On VPN and DirectAccess](../../vpn-map-da.md)
 
 
-Always On VPN provides a single, cohesive solution for remote access for all your connected devices going forward, even personally owned devices. With Always On VPN, the connection type does not have to be exclusively user or device but can be a combination of both. For example, you could enable device authentication for remote device management, and then enable user authentication for connectivity to internal company sites and services.
+Always On VPN provides a single, cohesive solution for remote access for all your connected devices, even personally owned devices. With Always On VPN, the connection type does not have to be exclusively user or device but can be a combination of both. For example, you could enable device authentication for remote device management, and then enable user authentication for connectivity to internal company sites and services.
 
 Always On VPN has many benefits over the Windows VPN solutions of the past. The following key improvements align Always On VPN with Microsoft’s cloud-first, mobile-first vision:
 
@@ -45,10 +45,10 @@ The instructions provided walk you through deploying Remote Access as a single t
 3. Deploy Always On VPN and migrate from DirectAccess.
 4. Deploy Always On VPN with conditional access for VPN connectivity using Azure AD and migrate from DirectAccess.
 
-For more details and a workflow of the scenarios presented, see [Deploy Always On VPN](always-on-vpn-deploy-deployment.md).
+For more details and workflow of the scenarios presented, see [Deploy Always On VPN](always-on-vpn-deploy-deployment.md).
 
 ## <a name="bkmk_prerequisites"></a>Deployment prerequisites
-You most likely have the technologies deployed that you can use for the Always On VPN deployment. Other than your DC/DNS servers, the Always On VPN deployment requires an NPS (RADIUS) server, a Certification Authority (CA) server, and a Remote Access (Routing/VPN) server. Once the infrastructure is set up, you must enroll clients and then connect the clients to your on-premises securely through several network changes.
+You most likely have the technologies deployed that you can use to deploy Always On VPN. Other than your DC/DNS servers, the Always On VPN deployment requires an NPS (RADIUS) server, a Certification Authority (CA) server, and a Remote Access (Routing/VPN) server. Once the infrastructure is set up, you must enroll clients and then connect the clients to your on-premises securely through several network changes.
 
 - Active Directory domain infrastructure, including one or more Domain Name System (DNS) servers. Both internal and external Domain Name System (DNS) zones are required, which assumes that the internal zone is a delegated subdomain of the external zone (e.g., corp.contoso.com and contoso.com).
 - Active Directory-based public key infrastructure (PKI) and Active Directory Certificate Services (AD CS).
