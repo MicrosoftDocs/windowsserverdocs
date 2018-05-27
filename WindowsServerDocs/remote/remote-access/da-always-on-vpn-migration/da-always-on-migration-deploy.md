@@ -8,7 +8,7 @@ ms.topic: article
 ms.assetid: eeca4cf7-90f0-485d-843c-76c5885c54b0
 ms.author: pashort
 author: shortpatti
-ms.date: 05/25/2018
+ms.date: 05/28/2018
 ---
 
 # DirectAccess to Always On VPN migration deployment
@@ -27,7 +27,7 @@ Migrating from DirectAccess to Always On VPN requires a specific process to migr
 
 4.  [!INCLUDE [decommission-da-shortdesc-include](../includes/decommission-da-shortdesc-include.md)]
 
-Before starting the migration process from DirectAccess to Always On VPN, be sure you have planned for the migration.  If you have not planned your migration, see [!INCLUDE [da-always-on-migration-planning](da-always-on-migration-planning.md)].
+Before starting the migration process from DirectAccess to Always On VPN, be sure you have planned for the migration.  If you have not planned your migration, see [Plan the DirectAccess to Always On VPN migration](da-always-on-migration-planning.md).
 
 >[!TIP] 
 >This section is NOT a step-by-step deployment guide for Always On VPN but rather is intended to complement [Always On VPN Deployment for Windows Server and Windows 10](../vpn/always-on-vpn/deploy/always-on-vpn-deploy.md) and provide migration-specific deployment guidance.
@@ -56,7 +56,7 @@ The following image provides a visual reference for the infrastructure changes t
 
 ## Deploy certificates and VPN configuration script to the clients
 
-You can find the bulk of the VPN client configuration documentation in [Deploy Always On VPN](../vpn/always-on-vpn/deploy/always-on-vpn-deploy-deployment.md) section. Although most steps in this section reference the Always On VPN deployment, two additional steps are needed to complete the migration from DirectAccess to Always On VPN successfully. 
+Although the bulk of the VPN client configuration in the [Deploy Always On VPN](../vpn/always-on-vpn/deploy/always-on-vpn-deploy-deployment.md) section, two additional steps are needed to complete the migration from DirectAccess to Always On VPN successfully. 
 
 You must ensure that the **VPN_Profile.ps1** comes _after_ the certificate has been issued so that the VPN client does not attempt to connect without it. To do that, you execute a script that adds only those users who have enrolled in the certificate to your VPN Deployment Ready group, which you use to deploy the Always On VPN configuration.
 
