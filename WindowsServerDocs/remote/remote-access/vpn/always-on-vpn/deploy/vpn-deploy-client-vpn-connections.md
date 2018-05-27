@@ -32,9 +32,9 @@ ProfileXML is a URI node within the VPNv2 CSP. Rather than configuring each VPNv
 
 You use ProfileXML in all the delivery methods this deployment describes, including Windows PowerShell, System Center Configuration Manager, and Intune. There are two ways to configure the ProfileXML VPNv2 CSP node in this deployment:
 
-- **OMA-DM**. One way is to use an MDM provider capable of using OMA-DM, as discussed earlier in the section [VPNv2 CSP nodes](../always-on-vpn-technology-overview.md#vpnv2-csp-nodes). Using this method, you can easily insert the VPN profile configuration XML markup into the ProfileXML CSP node. You will use this to configure the Remote Access Always On VPN client by using Intune.
+- **OMA-DM**. One way is to use an MDM provider using OMA-DM, as discussed earlier in the section [VPNv2 CSP nodes](../always-on-vpn-technology-overview.md#vpnv2-csp-nodes). Using this method, you can easily insert the VPN profile configuration XML markup into the ProfileXML CSP node when using Intune.
 
-- **Windows Management Instrumentation (WMI)-to-CSP bridge**. The second method of configuring the ProfileXML CSP node is to use the WMI-to-CSP bridge—a WMI class called **MDM_VPNv2_01**—that can access the VPNv2 CSP and therefore the ProfileXML node. When you create a new instance of that WMI  class, WMI uses the CSP to create the VPN profile. You will use this method to configure the Remote Access Always On VPN client by using Windows PowerShell and System Center Configuration Manager.
+- **Windows Management Instrumentation (WMI)-to-CSP bridge**. The second method of configuring the ProfileXML CSP node is to use the WMI-to-CSP bridge—a WMI class called **MDM_VPNv2_01**—that can access the VPNv2 CSP and the ProfileXML node. When you create a new instance of that WMI  class, WMI uses the CSP to create the VPN profile when using Windows PowerShell and System Center Configuration Manager.
 
 Even though these configuration methods differ, both require a properly formatted XML VPN profile. To use the ProfileXML VPNv2 CSP setting, you construct XML by using the ProfileXML schema to configure the tags necessary for the simple deployment scenario. For more information, see [ProfileXML XSD](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/vpnv2-profile-xsd).
 
@@ -93,11 +93,11 @@ For more information about EAP settings, see [EAP configuration](https://msdn.mi
 
 In this step, you use Protected Extensible Authentication Protocol \(PEAP\) to secure communication between the client and the server. Unlike a simple user name and password, this connection requires a unique EAPConfiguration section in the VPN profile to work. 
 
-Rather than describing how to create the XML markup for that section from scratch, you can use the Windows user interface to create a template VPN profile. After creating the template VPN profile, you can use Windows PowerShell to consume the EAPConfiguration portion from that template to create the final ProfileXML that you deploy later in the deployment.
+Instead of describing how to create the XML markup from scratch, you use Settings in Windows to create a template VPN profile. After creating the template VPN profile, you use Windows PowerShell to consume the EAPConfiguration portion from that template to create the final ProfileXML that you deploy later in the deployment.
 
 ### Record NPS certificate settings
 
-Before creating the template, you first need to note a few NPS server settings. You need the hostname or fully qualified domain name (FQDN) of the NPS server from the server’s certificate and the name of the CA that issued the certificate.
+Before creating the template, take note the hostname or fully qualified domain name (FQDN) of the NPS server from the server’s certificate and the name of the CA that issued the certificate.
 
 **Procedure:**
 
@@ -225,7 +225,7 @@ Use the **VPN_Profile.ps1** script in Windows PowerShell or System Center Config
 
 #### Parameters
 
-You must configure the following parameters:
+Configure the following parameters:
 
 **$Template**. The name of the template from which to retrieve the EAP configuration.
 
@@ -703,7 +703,7 @@ After you create the user group to receive the VPN profile, you can create a pac
 
 1.  Host the script VPN_Profile.ps1 on a network share that the site server computer account can access.
 
-2.  In the Configuration Manager console, open Software Library\\Application Management\\Packages.
+2.  In the Configuration Manager console, open **Software Library\\Application Management\\Packages**.
 
 3.  On the **Home** ribbon, in the **Create** group, click **Create Package** to start the Create Package and Program Wizard.
 

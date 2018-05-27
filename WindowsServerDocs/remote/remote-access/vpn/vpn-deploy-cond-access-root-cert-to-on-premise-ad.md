@@ -35,7 +35,7 @@ In this step, you deploy the conditional access root certificate as trusted root
     >[!NOTE]
     >The **Download base64 certificate** option is available for some configurations that require base64 certificates for deployment. 
 
-2. Logon to a domain-joined computer with Enterprise Admin rights and run these commands from an Administrator command prompt to add the cloud root certificate(s) into the *Enterprise NTauth* store:
+2. Log on to a domain-joined computer with Enterprise Admin rights and run these commands from an Administrator command prompt to add the cloud root certificate(s) into the *Enterprise NTauth* store:
 
     >[!NOTE]
     >For environments where the VPN server is not joined to the Active Directory domain, the cloud root certificates must be added to the _Trusted Root Certification Authorities_ store manually.
@@ -48,7 +48,7 @@ In this step, you deploy the conditional access root certificate as trusted root
 
 3.  Verify that the root certificates are present in the Enterprise NTauth store and show as trusted:
 
-    a.  Logon to a server with Enterprise Admin rights that has the **Certificate Authority Management Tools** installed.
+    a.  Log on to a server with Enterprise Admin rights that has the **Certificate Authority Management Tools** installed.
 
     >[!NOTE]
     >By default the **Certificate Authority Management Tools** are installed Certificate Authority servers. They can be installed on other members servers as part of the **Role Administration Tools** in Server Manager.
@@ -68,6 +68,6 @@ In this step, you deploy the conditional access root certificate as trusted root
         -   Certificate Authorities Container
 
 ## Next step
-[Step 6.5. Create OMA-DM based VPNv2 Profiles to Windows 10 devices](vpn-create-oma-dm-based-vpnv2-profiles.md): In this step, you can create OMA-DM based VPNv2 profiles using Intune to deploy a VPN Device Configuration policy. If you want to SCCM or PowerShell Dcript to create VPNv2 profiles, see [VPNv2 CSP settings](https://docs.microsoft.com/en-us/windows/client-management/mdm/vpnv2-csp) for more details.
+[Step 6.5. Create OMA-DM based VPNv2 Profiles to Windows 10 devices](vpn-create-oma-dm-based-vpnv2-profiles.md): In this step, you can create OMA-DM based VPNv2 profiles using Intune to deploy a VPN Device Configuration policy. If you want to SCCM or PowerShell Script to create VPNv2 profiles, see [VPNv2 CSP settings](https://docs.microsoft.com/en-us/windows/client-management/mdm/vpnv2-csp) for more details.
 
 ---

@@ -36,7 +36,7 @@ When a user attempts a VPN connection, the VPN client makes a call into the Web 
 
 The VPN client then sends the certificate issues by Azure AD to the VPN for credential validation.  Azure AD uses the certificate that is marked as **Primary** in the VPN connectivity blade as the Issuer. 
 
-In the Azure portal, you can create two certificates to manage the transition when one certificate is about to expire. When you create a certificate, you can choose whether it is the primary certificate, which is used during the authentication to sign the certificate for the connection.
+In the Azure portal, you create two certificates to manage the transition when one certificate is about to expire. When you create a certificate, you choose whether it is the primary certificate, which is used during the authentication to sign the certificate for the connection.
 
 **Procedure:**
 

@@ -1,6 +1,6 @@
 ---
 title: Configure the Server Infrastructure
-description: In this step, you install and configure the server-side components necessary to support the VPN, including configuring PKI to distribute the certificates used by users, the VPN server, and the NPS server; configuring RRAS to support IKEv2 connections; and configuring the NPS server to perform authorization for the VPN connections. 
+description: In this step, you install and configure the server-side components necessary to support the VPN. The server-side components include configuring PKI to distribute the certificates used by users, the VPN server, and the NPS server.  
 ms.prod: windows-server-threshold
 ms.technology: networking-ras
 ms.topic: article
@@ -19,15 +19,17 @@ ms.reviewer: deverette
 &#171;  [**Previous:** Plan the Always On VPN Deployment](always-on-vpn-deploy-planning.md)<br>
 &#187; [ **Next:** Step 2. Configure the Remote Access Server for Always On VPN](vpn-deploy-ras.md)
 
-In this step, you install and configure the server-side components necessary to support the VPN, including configuring PKI to distribute the certificates used by users, the VPN server, and the NPS server; configuring RRAS to support IKEv2 connections; and configuring the NPS server to perform authorization for the VPN connections.
+In this step, you install and configure the server-side components necessary to support the VPN. The server-side components include configuring PKI to distribute the certificates used by users, the VPN server, and the NPS server.  You also configure RRAS to support IKEv2 connections and the NPS server to perform authorization for the VPN connections.
 
 ## Configure certificate autoenrollment in Group Policy
-In this procedure, you configure Group Policy on the domain controller so that domain members automatically request user and computer certificates. Doing so allows VPN users to request and retrieve user certificates that authenticate VPN connections automatically. Likewise, this policy allows NPS servers to request server authentication certificates automatically. (You will manually enroll certificates on VPN servers.)
+In this procedure, you configure Group Policy on the domain controller so that domain members automatically request user and computer certificates. Doing so allows VPN users to request and retrieve user certificates that authenticate VPN connections automatically. Likewise, this policy allows NPS servers to request server authentication certificates automatically. 
+
+You manually enroll certificates on VPN servers.
 
 
 1.  On a domain controller, open Group Policy Management.
 
-2.  In the navigation pane, right-click your domain (e.g., corp.contoso.com), and click **Create a GPO in this domain, and Link it here**.
+2.  In the navigation pane, right-click your domain (for example, corp.contoso.com), and click **Create a GPO in this domain, and Link it here**.
 
 3.  On the New GPO dialog box, type **Autoenrollment Policy**, and click **OK**.
 
@@ -71,7 +73,7 @@ This group serves two purposes:
 
 -   It defines which users the NPS authorizes for VPN access.
 
-By using a custom group, if you ever want to revoke a user’s VPN access, you can simply remove that user from the group.
+By using a custom group, if you ever want to revoke a user’s VPN access, you can remove that user from the group.
 
 You also add a group containing VPN servers and another group containing NPS servers. You use these groups to restrict certificate requests to their members.
 

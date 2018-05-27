@@ -18,7 +18,11 @@ ms.date: 05/25/2018
 &#171;  [**Previous:** Step 2. Configure the Remote Access Server for Always On VPN](vpn-deploy-ras.md)<br>
 &#187; [ **Next:** Step 4. Configure DNS and Firewall Settings](vpn-deploy-dns-firewall.md)
 
-In this step, you install Network Policy Server (NPS) and perform configuration for Always On VPN. NPS server processing of connection requests that are sent by the VPN server includes performing authorization - to verify that the user has permission to connect; performing authentication - to verify the user's identity, and performing accounting - to log the aspects of the connection request that you chose when you configured RADIUS accounting in NPS.
+In this step, you install Network Policy Server (NPS) for processing of connection requests that are sent by the VPN server:
+
+- Perform authorization to verify that the user has permission to connect.
+- Performing authentication to verify the user's identity.
+- Performing accounting to log the aspects of the connection request that you chose when you configured RADIUS accounting in NPS.
 
 The steps in this section allow you to complete the following items:
 
@@ -107,7 +111,7 @@ To configure Network Policy Server Accounting, see [Configure Network Policy Ser
 
 In the [Configure the Remote Access Server for Always On VPN](vpn-deploy-ras.md) section, you installed and configured your VPN server. During VPN server configuration, you added a RADIUS shared secret on the VPN server. 
 
-In this procedure, you use the same shared secret text string to configure the VPN server as a RADIUS client in NPS. You must use the same text string that you used on the VPN server, or communication between the NPS server and VPN server fails.
+In this procedure, you use the same shared secret text string to configure the VPN server as a RADIUS client in NPS. Use the same text string that you used on the VPN server, or communication between the NPS server and VPN server fails.
 
 >[!IMPORTANT] 
 >When you add a new network access server (VPN server, wireless access point, authenticating switch, or dial-up server) to your network, you must add the server as a RADIUS client in NPS so that NPS is aware of and can communicate with the network access server.
@@ -124,7 +128,7 @@ In this procedure, you use the same shared secret text string to configure the V
 
 5.  In **Address (IP or DNS)**, enter the NAS IP address or FQDN.<p>If you enter the FQDN, click **Verify** if you want to verify that the name is correct and maps to a valid IP address.
 
-6.  In **Shared secret**, do the following:
+6.  In **Shared secret**, do:
 
     1.  Ensure that **Manual** is selected.
 

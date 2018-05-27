@@ -36,14 +36,14 @@ To ensure that remote clients can connect to your VPN server, you can create a D
 4. In **Forward Lookup Zones** details, right\-click the forward lookup zone to which you want to add a record, and then click **New Host \(A or AAAA\)**. The **New Host** dialog box opens.
 5. In **New Host**, in **Name**, type the certificate subject alternative name for the VPN server.
 6. In IP address, type the IP address for the VPN server. You can type the address in IP version 4 (IPv4) format to add a host \(A\) resource record, or IP version 6 \(IPv6\) format to add a host \(AAAA\) resource record.
-7. 7.	If you created a reverse lookup zone for a range of IP addresses, including the IP address that you typed, then select the **Create associated pointer (PTR) record** check box.  Selecting this option creates an additional pointer \(PTR\) resource record in a reverse zone for this host, based on the information you entered in **Name** and **IP address**.
+7. If you created a reverse lookup zone for a range of IP addresses, including the IP address that you typed, then select the **Create associated pointer (PTR) record** check box.  Selecting this option creates an additional pointer \(PTR\) resource record in a reverse zone for this host, based on the information you entered in **Name** and **IP address**.
 8. Click **Add Host**.
 
 ## Configure the Edge Firewall
 
 The Edge Firewall separates the External Perimeter Network from the Public Internet. For a visual representation of this separation, see the illustration in the topic [Always On VPN Technology Overview](../always-on-vpn-technology-overview.md).
 
-Your Edge Firewall must allow and forward specific ports to your VPN server. If you use Network Address Translation \(NAT\) on your edge firewall, you might need to enable port forwarding for User Datagram Protocol \(UDP\) ports 500 and 4500. You should forward these ports to the IP address that is assigned to the external interface of your VPN server.
+Your Edge Firewall must allow and forward specific ports to your VPN server. If you use Network Address Translation \(NAT\) on your edge firewall, you might need to enable port forwarding for User Datagram Protocol \(UDP\) ports 500 and 4500. Forward these ports to the IP address that is assigned to the external interface of your VPN server.
 
 If you’re routing traffic inbound and performing NAT at or behind the VPN server, then you must open your firewall rules to allow ports 500 and 4500 inbound to the external IP address applied to the public interface on the VPN server.
 
@@ -57,7 +57,7 @@ The Internal Perimeter Network Firewall separates the Organization/Corporate Net
 
 In this deployment, the Remote Access VPN server on the perimeter network is configured as a RADIUS client.  The VPN server sends RADIUS traffic to the NPS on the corporate network and also receives RADIUS traffic from the NPS.
 
-You must configure the firewall to allow RADIUS traffic to flow in both directions.
+Configure the firewall to allow RADIUS traffic to flow in both directions.
 
 
 >[!NOTE]
@@ -72,11 +72,11 @@ By default, NPS and VPN listen for RADIUS traffic on ports 1812, 1813, 1645, and
 
 ### Use the Same RADIUS Ports for the Internal Perimeter Network Firewall Configuration
 
-If you are using the default RADIUS port configuration on the VPN Server and the NPS Server, ensure that you open the following ports on the Internal Perimeter Network Firewall.
+If you use the default RADIUS port configuration on the VPN Server and the NPS Server, make sure that you open the following ports on the Internal Perimeter Network Firewall:
 
 - Ports UDP1812, UDP1813, UDP1645, and UDP1646
 
-If you are not using the default RADIUS ports in your NPS deployment, you must configure the firewall to allow RADIUS traffic on the ports that you are using. For more details, see [Configure Firewalls for RADIUS Traffic](../../../../../networking/technologies/nps/nps-firewalls-configure.md).
+If you are not using the default RADIUS ports in your NPS deployment, you must configure the firewall to allow RADIUS traffic on the ports that you are using. For more information, see [Configure Firewalls for RADIUS Traffic](../../../../../networking/technologies/nps/nps-firewalls-configure.md).
 
 ## Next step
 [Step 5. Configure Windows 10 Client Always On VPN Connections](vpn-deploy-client-vpn-connections.md): In this step, you configure the Windows 10 client computers to communicate with that infrastructure with a VPN connection. You can use several technologies to configure Windows 10 VPN clients, including Windows PowerShell, System Center Configuration Manager, and Intune. All three require an XML VPN profile to configure the appropriate VPN settings. 

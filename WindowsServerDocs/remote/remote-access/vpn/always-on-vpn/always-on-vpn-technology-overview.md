@@ -45,7 +45,7 @@ For more information on each infrastructure component depicted in the illustrati
 
 ## Domain Name System (DNS)
 
-Both internal and external Domain Name System (DNS) zones are required, which assumes that the internal zone is a delegated subdomain of the external zone (e.g., corp.contoso.com and contoso.com).
+Both internal and external Domain Name System (DNS) zones are required, which assumes that the internal zone is a delegated subdomain of the external zone (for example, corp.contoso.com and contoso.com).
 
 Learn more about [Domain Name System (DNS)](../../../../networking/dns/dns-top.md) or [Core Network Guide](../../../../networking/core-network-guide/core-network-guide.md).
 
@@ -54,7 +54,7 @@ Learn more about [Domain Name System (DNS)](../../../../networking/dns/dns-top.m
 
 ## Firewalls
 
-Ensure that your firewalls allow the traffic that is necessary for both VPN and RADIUS communications to function correctly.
+Make sure that your firewalls allow the traffic that is necessary for both VPN and RADIUS communications to function correctly.
 
 For more information, see [Configure Firewalls for RADIUS Traffic](../../../../networking/technologies/nps/nps-firewalls-configure.md).
 
@@ -64,8 +64,7 @@ In Windows Server 2016, the Remote Access server role is designed to perform wel
 
 IKEv2 is a VPN tunneling protocol described in Internet Engineering Task Force Request for Comments 7296. The primary advantage of IKEv2 is that it tolerates interruptions in the underlying network connection. For example, if the connection is temporarily lost or if a user moves a client computer from one network to another, IKEv2 automatically restores the VPN connection when the network connection is reestablished—all without user intervention.
 
-By using RAS Gateway, you can deploy VPN connections to provide end users with remote access to your organization's network and resources. Deploying Always On VPN maintains a persistent connection between clients and your organization network whenever remote computers are connected to the Internet. With RAS Gateway, you can also create a site-to-site VPN connection between two servers at different locations, such as between your primary office and a branch office, and use Network Address Translation \(NAT\) so that users inside the network
-can access external resources, such as the Internet. Also, RAS Gateway supports Border Gateway Protocol (BGP), which provides dynamic routing services when your remote office locations also have edge gateways that support BGP.
+By using RAS Gateway, you can deploy VPN connections to provide end users with remote access to your organization's network and resources. Deploying Always On VPN maintains a persistent connection between clients and your organization network whenever remote computers are connected to the Internet. With RAS Gateway, you can also create a site-to-site VPN connection between two servers at different locations, such as between your primary office and a branch office, and use Network Address Translation \(NAT\) so that users inside the network can access external resources, such as the Internet. Also, RAS Gateway supports Border Gateway Protocol (BGP), which provides dynamic routing services when your remote office locations also have edge gateways that support BGP.
 
 You can manage Remote Access Service (RAS) Gateways by using Windows PowerShell commands and the Remote Access Microsoft Management Console (MMC).
 
