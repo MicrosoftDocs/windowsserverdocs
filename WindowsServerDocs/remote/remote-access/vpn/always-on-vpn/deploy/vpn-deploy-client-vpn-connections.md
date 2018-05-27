@@ -1,6 +1,6 @@
 ---
 title: Configure Windows 10 Client Always On VPN Connections
-description: This topic provides detailed instructions for deploying Always On VPN in Windows Server 2016.
+description: In this step, you learn about the ProfileXML options and schema, and configure the Windows 10 client computers to communicate with that infrastructure with a VPN connection.
 ms.prod: windows-server-threshold
 ms.technology: networking-ras
 ms.topic: article
@@ -19,8 +19,7 @@ ms.reviewer: deverette
 &#171;  [**Previous:** Step 4. Configure DNS and Firewall Settings](vpn-deploy-dns-firewall.md)<br>
 &#187; [ **Next:** Step 6. (Optional) Conditional access for VPN connectivity using Azure AD](../../ad-ca-vpn-connectivity-windows10.md)
 
-
-Now that you have set up the server infrastructure, you must configure the Windows 10 client computers to communicate with that infrastructure with a VPN connection. In this step, you learn about the ProfileXML options and schema, create the ProfileXML VPN, and deploy Always On VPN to Windows 10 client computers. 
+In this step, you learn about the ProfileXML options and schema, and configure the Windows 10 client computers to communicate with that infrastructure with a VPN connection. 
 
 You can configure the Always On VPN client through PowerShell, SCCM, or Intune. All three require an XML VPN profile to configure the appropriate VPN settings. Automating PowerShell enrollment for organizations without SCCM or Intune is possible.
 
@@ -110,9 +109,9 @@ Before creating the template, you first need to note a few NPS server settings. 
 
 4.  Click the **Constraints** tab, and click **Authentication Methods**.
 
-5.  In EAP Types, click **Microsoft: Protected EAP (PEAP)**, and then click **Edit**.
+5.  In EAP Types, click **Microsoft: Protected EAP (PEAP)**, and click **Edit**.
 
-6.  Record the values for **Certificate issued to** and **Issuer**.<br>You use these values in the upcoming VPN template configuration. For example, if the server’s FQDN is nps01.corp.contoso.com and the hostname is NPS01, the certificate name is based upon the FQDN or DNS name of the server - for example, nps01.corp.contoso.com.
+6.  Record the values for **Certificate issued to** and **Issuer**.<p>You use these values in the upcoming VPN template configuration. For example, if the server’s FQDN is nps01.corp.contoso.com and the hostname is NPS01, the certificate name is based upon the FQDN or DNS name of the server - for example, nps01.corp.contoso.com.
 
 7.  Cancel the Edit Protected EAP Properties dialog box.
 
@@ -578,9 +577,7 @@ After running VPN_Profile.ps1 to configure the VPN profile, you can verify at an
 
     Get-WmiObject -Namespace root\cimv2\mdm\dmmap -Class MDM_VPNv2_01
 
-Successful results look similar to Listing 2.
-
-Listing 2. Successful results from the Get-WmiObject cmdlet
+**Successful results from the Get-WmiObject cmdlet**
 
 
     __GENUS : 2
@@ -788,7 +785,7 @@ With the package and program created, you need to deploy it to the **VPN Users**
 
     a.  Click **New** to open the Assignment Schedule dialog box.
 
-    b.  Click **Assign immediately after this event**, and then click **OK**.
+    b.  Click **Assign immediately after this event**, and click **OK**.
 
     c.  Click **Next**.
 
@@ -809,9 +806,9 @@ With the ProfileXML configuration script deployed, sign in to a Windows 10 clien
 
 ### Verify the configuration of the VPN client
 
-1.  In Control Panel, under System\\Security, click **Configuration Manager**. 
+1.  In Control Panel, under **System\\Security**, click **Configuration Manager**. 
 
-2.  In the Configuration Manager Properties dialog box, on the **Actions** tab, complete the following steps:
+2.  In the Configuration Manager Properties dialog, on the **Actions** tab, complete the following steps:
 
     a.  Click **Machine Policy Retrieval & Evaluation Cycle**, click **Run Now**, and click **OK**.
 
@@ -843,14 +840,14 @@ Create the VPN device configuration policy to configure the Windows 10 client co
 
 4.	Enter a **Name** for the VPN profile and (optionally) a description.
 
-5.   Under **Platform**, select **Windows 10 or later**, and then choose **VPN** from the Profile type drop-down.
+5.   Under **Platform**, select **Windows 10 or later**, and choose **VPN** from the Profile type drop-down.
 
      >[!TIP]
      >If you are creating a custom VPN profileXML, see [Apply ProfileXML using Intune](https://docs.microsoft.com/en-us/windows/security/identity-protection/vpn/vpn-profile-options#apply-profilexml-using-intune) for the instructions.
 
 6. Under the **Base VPN** tab, verify or set the following settings:
 
-    - **Connection name:** Enter the name of the VPN connection as it appears on the client computer in the **VPN** tab under **Settings**, for example _Contoso AutoVPN_.  
+    - **Connection name:** Enter the name of the VPN connection as it appears on the client computer in the **VPN** tab under **Settings**, for example, _Contoso AutoVPN_.  
     
     - **Servers:** Add one or more VPN servers by clicking **Add.**
     
@@ -898,7 +895,7 @@ To test the configuration policy, sign in to a Windows 10 client computer as th
 5.  Close Settings. After synchronization, you see the VPN profile available on the computer.
 
 ## Next step
-You are done deploying Always On VPN.  For other features you can configure, see the table below:
+You are done deploying Always On VPN.  For other features that you can configure, see the table below:
 
 |If you want to...  |Then see...  |
 |---------|---------|

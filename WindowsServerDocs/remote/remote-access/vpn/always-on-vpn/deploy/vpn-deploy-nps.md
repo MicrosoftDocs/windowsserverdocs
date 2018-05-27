@@ -31,7 +31,7 @@ The steps in this section allow you to complete the following items:
 
 ## Install Network Policy Server
 
-In this procedure, you install Network Policy Server (NPS) by using either Windows PowerShell or the Server Manager Add Roles and Features Wizard. NPS is a role service of the Network Policy and Access Services server role.
+In this procedure, you install NPS by using either Windows PowerShell or the Server Manager Add Roles and Features Wizard. NPS is a role service of the Network Policy and Access Services server role.
 
 >[!TIP] 
 >By default, NPS listens for RADIUS traffic on ports 1812, 1813, 1645, and 1646 on all installed network adapters. When you install NPS, and  you enable Windows Firewall with Advanced Security, firewall exceptions for these ports get created automatically for both IPv4 and IPv6  traffic. If your network access servers are configured to send RADIUS traffic over ports other than these defaults, remove the exceptions created in Windows Firewall with Advanced Security during NPS installation, and create exceptions for the ports that you do use for RADIUS traffic.
@@ -134,9 +134,9 @@ In this procedure, you use the same shared secret text string to configure the V
 
 7.  Click **OK**. The VPN Server appears in the list of RADIUS clients configured on the NPS server.
 
-## Configure Network Policy for VPN Connections
+## Configure NPS as a RADIUS for VPN Connections
 
-In this procedure, you configure NPS as a RADIUS server on your organization network. On the NPS server, you must define a policy that allows only users in a specific group to access the Organization/Corporate network through the VPN Server - and then only when using a valid user certificate in a PEAP authentication request.
+In this procedure, you configure NPS as a RADIUS server on your organization network. On the NPS, you must define a policy that allows only users in a specific group to access the Organization/Corporate network through the VPN Server - and then only when using a valid user certificate in a PEAP authentication request.
 
 **Procedure:**
 

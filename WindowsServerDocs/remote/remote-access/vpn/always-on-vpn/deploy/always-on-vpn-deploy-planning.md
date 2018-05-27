@@ -63,9 +63,9 @@ Install the VPN server inside the perimeter network, which partitions the perime
 
 - **\(Optional\) Configure port forwarding.** Your edge firewall must open the ports and protocol IDs associated with an IKEv2 VPN and forward them to the VPN server. In most environments, doing so requires you to configure port forwarding. Redirect Universal Datagram Protocol (UDP) ports 500 and 4500 to the VPN server.
 
-- **Configure routing so that the DNS servers and VPN servers can reach the Internet**. This deployment uses IKEv2 and Network Address Translation \(NAT\). Ensure that the VPN server can reach all of the required internal networks and network resources that you want to provide to remote users. Any network or resource that is not reachable from the VPN server will also be unreachable over VPN connections from remote locations.
+- **Configure routing so that the DNS servers and VPN servers can reach the Internet**. This deployment uses IKEv2 and Network Address Translation \(NAT\). Ensure that the VPN server can reach all of the required internal networks and network resources that you want to provide to remote users. Any network or resource that is not reachable from the VPN server is unreachable over VPN connections from remote locations.
 
-In most environments, you can adjust static routes on the edge firewall and the VPN server to allow them to reach this new internal perimeter network. In complex environments, you may need to add static routes to internal routers or adjust internal firewall rules for the VPN server and the block of IP addresses associated with VPN clients.
+In most environments, you can adjust static routes on the edge firewall and the VPN server to allow them to reach this new internal perimeter network. In complex environments, however, you may need to add static routes to internal routers or adjust internal firewall rules for the VPN server and the block of IP addresses associated with VPN clients.
 
 ## Next step
 [Start deploying Always On VPN](always-on-vpn-deploy-deployment.md): Learn how to deploy Always On VPN connections for remote Windows 10 client computers that are domain-joined. You can also learn how to configure conditional access for VPN connectivity using Azure Active Directory. 

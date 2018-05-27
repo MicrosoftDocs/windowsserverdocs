@@ -55,7 +55,10 @@ For information on how to make these configuration changes, see your firewall do
 
 The Internal Perimeter Network Firewall separates the Organization/Corporate Network from the Internal Perimeter Network. For a visual representation of this separation, see the illustration in the topic [Always On VPN Technology Overview](../always-on-vpn-technology-overview.md).
 
-Because the Remote Access VPN server on the perimeter network is configured as a Remote Authentication Dial In User Service \(RADIUS\) Client and sends RADIUS traffic to the Network Policy Server \(NPS\) on the Organization/Corporate network - and also receives RADIUS traffic from the NPS Server - you must configure the firewall to allow RADIUS traffic to flow in both directions.
+In this deployment, the Remote Access VPN server on the perimeter network is configured as a RADIUS client.  The VPN server sends RADIUS traffic to the NPS on the corporate network and also receives RADIUS traffic from the NPS.
+
+You must configure the firewall to allow RADIUS traffic to flow in both directions.
+
 
 >[!NOTE]
 >The NPS server on the Organization/Corporate network functions as a RADIUS Server for the VPN Server, which is a RADIUS Client. For more information about the RADIUS infrastructure, see [Network Policy Server (NPS)](../../../../../networking/technologies/nps/nps-top.md).
