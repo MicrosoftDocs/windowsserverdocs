@@ -57,7 +57,7 @@ You can configure the VPN server to assign addresses to VPN clients from a stati
 
 - **Verify that all VPN users have user accounts in Active Directory User \(AD DS\)**. Before users can connect to the network with VPN connections, they must have user accounts in AD DS.
 
-## Routing and Firewall Preparations
+## Prepare Routing and Firewall 
 
 In addition, the VPN server is installed inside the perimeter network, which partitions the perimeter network into internal and external perimeter networks. Because of this, you might need to make several routing modifications, depending on your network environment.
 
