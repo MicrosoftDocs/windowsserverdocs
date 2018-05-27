@@ -18,7 +18,22 @@ ms.date: 05/25/2018
 &#171; [**Previous:** Learn about the feature comparison between Always On VPN and DirectAccess](../vpn-map-da.md)<br>
 &#187; [**Next:** Learn about the Always On VPN technology](always-on-vpn-technology-overview.md)
 
-Always On VPN has many benefits over the Windows VPN solutions of the past. Key improvements in integration, security, connectivity, networking control, and compatibility align Always On VPN with Microsoft's cloud-first, mobile-first vision.
+Always On VPN has improved integration with the Windows operating system and third-party solutions to provide a robust platform for countless advanced connection scenarios. 
+
+VPNs create a pinhole connection in your network firewall. Securing that connection is important, especially when that connection is active most of the time. Always On VPN has new, advanced security capabilities to restrict the type of traffic, which applications can use the VPN connection, and which authentication methods you can use to initiate the connection.
+
+Windows 10 has improved connectivity options over previous versions of the Windows operating system. When comparing DirectAccess to Always On VPN in the past, this is where DirectAccess often stood out. Until Always On VPN in Windows 10, the ability to create a persistent connection through either user or device authentication was not possible. Now, using the Always On feature with or without Device Tunnel, you can easily configure a persistent connection by using user or device authentication.
+
+With Always On VPN, the connection type does not have to be exclusively user or device but can be a combination of both. For example, you could enable device authentication for remote device management, and then enable user authentication for connectivity to internal company sites and services.
+
+Microsoft added advanced networking capabilities to Always On VPN to allow administrators to specify routing policies at a more granular level—even down to the individual application—which is perfect for line-of-business (LOB) apps that require special remote access. Always On VPN is also fully compatible with both Internet Protocol version 4 (IPv4) and version 6 (IPv6). Unlike DirectAccess, there is no specific dependency on IPv6. 
+
+You can deploy and manage Always On VPN in several ways, which gives Always On VPN several advantages over other VPN client software that may require advanced software packaging and deployment, end-user involvement in the configuration, or simply lack features like Always On or Device Tunnel. As long as the standard protocols and authentication mechanisms work with the additional gateways, you can use the features of Always On VPN without having to set up a Always On VPN server infrastructure. 
+
+
+
+
+
 
 Because many of the devices that require remote access are personal devices, Always On VPN does not require that a device be domain joined. When you migrate domain-joined devices that use DirectAccess, Always On VPN can provide a single, cohesive solution for remote access for all your connected devices going forward, even personally owned devices. Also, organizations can choose which management platform they prefer for deploying the Always On VPN configuration because the CSP is not vendor specific.
 
@@ -26,7 +41,7 @@ For additional details about the advantages of Always On VPN, see [Feature Compa
 
 ## Platform integration
 
-Always On VPN has improved integration with the Windows operating system and third-party solutions to provide a robust platform for countless advanced connection scenarios. Microsoft has introduced or improved the following integration capabilities in Always On VPN:
+Microsoft has introduced or improved the following integration capabilities in Always On VPN:
 
 | Key improvement | Description |
 | ---- | ---- |
@@ -40,7 +55,7 @@ Always On VPN has improved integration with the Windows operating system and thi
 
 ## Security
 
-VPNs create a pinhole connection in your network firewall. Securing that connection is important, especially when that connection is active most of the time. Always On VPN has new, advanced security capabilities to restrict the type of traffic, which applications can use the VPN connection, and which authentication methods you can use to initiate the connection. The primary improvements in security are in the following areas:
+The primary improvements in security are in the following areas:
 
 | Key improvement | Description |
 | ---- | ---- |
@@ -54,9 +69,7 @@ VPNs create a pinhole connection in your network firewall. Securing that connect
 
 ##<a name="vpn-connectivity"></a> VPN connectivity
 
-Windows 10 has improved connectivity options over previous versions of the Windows operating system. When comparing DirectAccess to Always On VPN in the past, this is where DirectAccess often stood out. Until Always On VPN in Windows 10, the ability to create a persistent connection through either user or device authentication was not possible. Now, using the Always On feature with or without Device Tunnel, you can easily configure a persistent connection by using user or device authentication.
-
-With Always On VPN, the connection type does not have to be exclusively user or device but can be a combination of both. For example, you could enable device authentication for remote device management, and then enable user authentication for connectivity to internal company sites and services. The following are the primary improvements in Always On VPN connectivity:
+The following are the primary improvements in Always On VPN connectivity:
 
 | Key improvement | Description |
 | ---- | ---- |
@@ -70,7 +83,7 @@ With Always On VPN, the connection type does not have to be exclusively user or 
 
 ## Networking
 
-Microsoft added advanced networking capabilities to Always On VPN to allow administrators to specify routing policies at a more granular level—even down to the individual application—which is perfect for line-of-business (LOB) apps that require special remote access. Always On VPN is also fully compatible with both Internet Protocol version 4 (IPv4) and version 6 (IPv6). Unlike DirectAccess, there is no specific dependency on IPv6. The following are some of the networking improvements in Always On VPN:
+The following are some of the networking improvements in Always On VPN:
 
 | Key improvement | Description |
 | ---- | ---- |
@@ -81,9 +94,7 @@ Microsoft added advanced networking capabilities to Always On VPN to allow admin
 ---
 
 ## Configuration and compatibility
-
-You can deploy and manage Always On VPN in several ways, which gives Always On VPN several advantages over other VPN client software that may require advanced software packaging and deployment, end-user involvement in the configuration, or simply lack features like Always On or Device Tunnel. As long as the standard protocols and authentication mechanisms work with the additional gateways, you can use the features of Always On VPN without having to set up a Always On VPN server infrastructure. The following are some of the configuration and
-compatibility improvements in Always On VPN:
+The following are some of the configuration and compatibility improvements in Always On VPN:
 
 | Key improvement | Description |
 | ---- | ---- |
