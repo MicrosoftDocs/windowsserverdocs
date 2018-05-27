@@ -30,11 +30,11 @@ Migrating from DirectAccess to Always On VPN requires a specific process to migr
 Before starting the migration process from DirectAccess to Always On VPN, be sure you have planned for the migration.  If you have not planned your migration, see [!INCLUDE [da-always-on-migration-planning](da-always-on-migration-planning.md)].
 
 >[!TIP] 
->This section is NOT a step-by-step deployment guide for Always On VPN but rather is intended to complement [Always On VPN Deployment Guide for Windows Server and Windows 10](https://docs.microsoft.com/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy) and provide migration-specific deployment guidance.
+>This section is NOT a step-by-step deployment guide for Always On VPN but rather is intended to complement [Always On VPN Deployment for Windows Server and Windows 10](../vpn/always-on-vpn/deploy/always-on-vpn-deploy.md) and provide migration-specific deployment guidance.
 
 ## Deploy a side-by-side VPN infrastructure
 
-You deploy the VPN infrastructure side by side with the existing DirectAccess infrastructure.  For step-by-step details, see [Always On VPN Deployment Guide for Windows Server and Windows 10](https://docs.microsoft.com/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy) to install and configure the Always On VPN infrastructure. 
+You deploy the VPN infrastructure side by side with the existing DirectAccess infrastructure.  For step-by-step details, see [Always On VPN Deployment for Windows Server and Windows 10](../vpn/always-on-vpn/deploy/always-on-vpn-deploy.md) to install and configure the Always On VPN infrastructure. 
 
 Side-by-side deployment consists of the following high-level tasks:
 
@@ -56,7 +56,7 @@ The following image provides a visual reference for the infrastructure changes t
 
 ## Deploy certificates and VPN configuration script to the clients
 
-You can find the bulk of the VPN client configuration documentation in [Deploy Always On VPN](https://docs.microsoft.com/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-deployment) section. Although most steps in this section reference the Always On VPN deployment, two additional steps are needed to complete the migration from DirectAccess to Always On VPN successfully. 
+You can find the bulk of the VPN client configuration documentation in [Deploy Always On VPN](../vpn/always-on-vpn/deploy/always-on-vpn-deploy-deployment.md) section. Although most steps in this section reference the Always On VPN deployment, two additional steps are needed to complete the migration from DirectAccess to Always On VPN successfully. 
 
 You must ensure that the **VPN_Profile.ps1** comes _after_ the certificate has been issued so that the VPN client does not attempt to connect without it. To do that, you execute a script that adds only those users who have enrolled in the certificate to your VPN Deployment Ready group, which you use to deploy the Always On VPN configuration.
 
@@ -123,7 +123,7 @@ You must ensure that the **VPN_Profile.ps1** comes _after_ the certificate has b
     
 Each time you run the **GetUsersWithCert.ps1** configuration script, you must also run an AD DS discovery rule to update the security group membership in System Center Configuration Manager. Also, ensure that the membership update for the deployment collection frequently occurs enough (aligned with the script and discovery rule).
 
-For additional information about using System Center Configuration Manager or Intune to deploy Always On VPN to Windows clients, see [Remote Access Always On VPN Deployment Guide for Windows Server and Windows 10](https://docs.microsoft.com/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy). Be sure, however, to incorporate these migration-specific tasks.
+For additional information about using System Center Configuration Manager or Intune to deploy Always On VPN to Windows clients, see [Always On VPN Deployment for Windows Server and Windows 10](../vpn/always-on-vpn/deploy/always-on-vpn-deploy.md). Be sure, however, to incorporate these migration-specific tasks.
 
 >[!NOTE] 
 >Incorporating these migration-specific tasks is a critical difference between a simple Always On VPN deployment and migration from DirectAccess to Always On VPN. Be sure to properly define the collection to target the security group rather than using the method in the deployment guide.
