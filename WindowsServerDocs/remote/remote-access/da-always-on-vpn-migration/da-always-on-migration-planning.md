@@ -55,23 +55,7 @@ This section provides one approach for separating users into migration phases, a
 
 -   **Gradually increase user counts.** Most typical migration scenarios start with members of the IT organization and then move to business users followed by leadership and other high-impact users. Each migration phase typically involves progressively more people. For example, the first phase may include ten users, and the final group may include 5,000 users. To simplify the deployment, create a single VPN Users security group, and add users to it as their phase arrives. In this way, you end up with a single VPN Users group to which you can add members in the future.
 
-## Standard configuration considerations
-
-Always ON VPN has many configuration options. When migrating from DirectAccess to Always On VPN, however, consider starting with  configuration options that are comparable to what you have, and then expand from there. However you choose your VPN configuration, though, include the following information:
-
--   **Connection type.** Connection protocol selection is important and ultimately goes hand in hand with the type of authentication you will use. For details about the tunneling protocols available, see [VPN connection types](https://docs.microsoft.com/windows/access-protection/vpn/vpn-connection-type).
-
--   **Routing.** In this context, routing rules determine whether users can use other network routes while connected to the VPN.
-
-    -   _Split tunneling_ allows simultaneous access to other networks, such as the Internet.
-
-    -   _Force tunneling_ requires all traffic to go exclusively through the VPN and does not allow simultaneous access to other networks.
-
--   **Triggering.** _Triggering_ determines how and when a VPN connection is initiated (for example, when an app opens, when the device is turned on, manually by the user). For triggering options, see the [VPN connectivity](#vpn-connectivity).
-
--   **Device or user authentication.** DirectAccess uses machine certificates to enable devices to initiate the remote connection. This approach results in persistent remote network connectivity, with no user action required. Always On VPN can also use device certificates and device-initiated connection through a feature called [Device Tunnel](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/vpn-device-tunnel-config). That connection can be initiated automatically and is persistent, resembling a DirectAccess infrastructure tunnel connection.
-
-By using user certificates, the Always On VPN client connects automatically, but it does so at the user level (after user sign-in) instead of at the device level (before user sign-in). The experience is still seamless to the user, but it supports more advanced authentication mechanisms, like Windows Hello for Business.
+[!INCLUDE [always-on-vpn-standard-config-considerations-include](../includes/always-on-vpn-standard-config-considerations-include.md)]
 
 
 ## Next step
