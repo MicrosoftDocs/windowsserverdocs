@@ -25,7 +25,7 @@ Always On VPN has many benefits over the Windows VPN solutions of the past. The 
 
 - **Integration:** Always On VPN has improved integration with the Windows operating system and third-party solutions to provide a robust platform for countless advanced connection scenarios.
 - **Security:** Always On VPN has new, advanced security capabilities to restrict the type of traffic, which applications can use the VPN connection, and which authentication methods you can use to initiate the connection. When the connection is active most of the time, it is especially important to secure the connection.
-- **Connectivity:** Always On VPN, with or without Device Tunnel, a persistent connection can be configured by using user or device authentication. Before Always On VPN, the ability to create a persistent connection through either user or device authentication was not possible. 
+- **Connectivity:** Always On VPN, with or without Device Tunnel, creates a persistent connection by using either user or device authentication. Before Always On VPN, the ability to create a persistent connection through either user or device authentication was not possible. 
 - **Networking control:** Always On VPN allows administrators to specify routing policies at a more granular level—even down to the individual application—which is perfect for line-of-business (LOB) apps that require special remote access.  Always On VPN is also fully compatible with both Internet Protocol version 4 (IPv4) and version 6 (IPv6). Unlike DirectAccess, there is no specific dependency on IPv6.
 - **Configuration and compatibility:** Always On VPN can be deployed and managed several ways, which gives Always On VPN several advantages over the other VPN client software. As long as the standard protocols and authentication mechanisms work with the additional gateways, you can use the features of Always On VPN without having to set up a Always On VPN server infrastructure.
 
@@ -66,7 +66,7 @@ You most likely have the technologies deployed that you can use for the Always O
 - Physical server, existing or new, to install Network Policy Server (NPS). If you already have NPS servers on your network, you can modify an existing NPS server configuration rather than add a new server.
 - Remote Access as a RAS Gateway VPN server with a small subset of features supporting IKEv2 VPN connections and LAN routing.
 - Perimeter network that includes two firewalls.  Ensure that your firewalls allow the traffic that is necessary for both VPN and RADIUS communications to function properly. For more information, see Always On VPN Technology Overview.
-- Physical server or virtual machine (VM) on your perimeter network with two physical Ethernet network adapters to install Remote Access. VMs require virtual LAN (VLAN) for the host. 
+- Physical server or virtual machine (VM) on your perimeter network with two physical Ethernet network adapters to install Remote Access as a RAS Gateway VPN server. VMs require virtual LAN (VLAN) for the host. 
 - Membership in Administrators, or equivalent, is the minimum required.
 - Read the planning section of this guide to ensure that you are prepared for this deployment before you perform the deployment.
 - Review the design and deployment guides for each of the technologies used. These guides can help you determine whether the deployment scenarios provide the services and configuration that you need for your organization's network. For more information, see Always On VPN Technology Overview.
