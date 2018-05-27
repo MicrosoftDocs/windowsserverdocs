@@ -786,11 +786,11 @@ With the package and program created, you need to deploy it to the **VPN Users**
 
 8.  On the Scheduling page, complete the following steps:
 
-    1.  Click **New** to open the Assignment Schedule dialog box.
+    a.  Click **New** to open the Assignment Schedule dialog box.
 
-    2.  Click **Assign immediately after this event**, and then click **OK**.
+    b.  Click **Assign immediately after this event**, and then click **OK**.
 
-    3.  Click **Next**.
+    c.  Click **Next**.
 
 9.  On the User Experience page, complete the following steps:
 
@@ -845,8 +845,8 @@ Create the VPN device configuration policy with which to configure the Windows 1
 
 5.   Under **Platform**, select **Windows 10 or later**, and then choose **VPN** from the Profile type drop-down.
 
-    >[!TIP]
-    >If you are creating a custom VPN profileXML, see [Apply ProfileXML using Intune](https://docs.microsoft.com/en-us/windows/security/identity-protection/vpn/vpn-profile-options#apply-profilexml-using-intune) for the instructions.
+     >[!TIP]
+     >If you are creating a custom VPN profileXML, see [Apply ProfileXML using Intune](https://docs.microsoft.com/en-us/windows/security/identity-protection/vpn/vpn-profile-options#apply-profilexml-using-intune) for the instructions.
 
 6. Under the **Base VPN** tab, verify or set the following settings:
 
@@ -864,10 +864,11 @@ Create the VPN device configuration policy with which to configure the Windows 1
     
     - **Remember credentials at each logon**:  Boolean value (true or false) for caching credentials. If set to true, credentials are cached whenever possible.
 
-7. Copy the following XML string to a text editor:
+7.  Copy the following XML string to a text editor:
  
     [!INCLUDE [important-lower-case-true-include](../../../includes/important-lower-case-true-include.md)]
 
+    
     ```XML
     <EapHostConfig xmlns="http://www.microsoft.com/provisioning/EapHostConfig"><EapMethod><Type xmlns="http://www.microsoft.com/provisioning/EapCommon">25</Type><VendorId xmlns="http://www.microsoft.com/provisioning/EapCommon">0</VendorId><VendorType xmlns="http://www.microsoft.com/provisioning/EapCommon">0</VendorType><AuthorId xmlns="http://www.microsoft.com/provisioning/EapCommon">0</AuthorId></EapMethod><Config xmlns="http://www.microsoft.com/provisioning/EapHostConfig"><Eap xmlns="http://www.microsoft.com/provisioning/BaseEapConnectionPropertiesV1"><Type>25</Type><EapType xmlns="http://www.microsoft.com/provisioning/MsPeapConnectionPropertiesV1"><ServerValidation><DisableUserPromptForServerValidation>true</DisableUserPromptForServerValidation><ServerNames>NPS.contoso.com</ServerNames><TrustedRootCA>5a 89 fe cb 5b 49 a7 0b 1a 52 63 b7 35 ee d7 1c c2 68 be 4b </TrustedRootCA></ServerValidation><FastReconnect>true</FastReconnect><InnerEapOptional>false</InnerEapOptional><Eap xmlns="http://www.microsoft.com/provisioning/BaseEapConnectionPropertiesV1"><Type>13</Type><EapType xmlns="http://www.microsoft.com/provisioning/EapTlsConnectionPropertiesV1"><CredentialsSource><CertificateStore><SimpleCertSelection>true</SimpleCertSelection></CertificateStore></CredentialsSource><ServerValidation><DisableUserPromptForServerValidation>true</DisableUserPromptForServerValidation><ServerNames>NPS.contoso.com</ServerNames><TrustedRootCA>5a 89 fe cb 5b 49 a7 0b 1a 52 63 b7 35 ee d7 1c c2 68 be 4b </TrustedRootCA></ServerValidation><DifferentUsername>false</DifferentUsername><PerformServerValidation xmlns="http://www.microsoft.com/provisioning/EapTlsConnectionPropertiesV2">true</PerformServerValidation><AcceptServerName xmlns="http://www.microsoft.com/provisioning/EapTlsConnectionPropertiesV2">true</AcceptServerName></EapType></Eap><EnableQuarantineChecks>false</EnableQuarantineChecks><RequireCryptoBinding>false</RequireCryptoBinding><PeapExtensions><PerformServerValidation xmlns="http://www.microsoft.com/provisioning/MsPeapConnectionPropertiesV2">true</PerformServerValidation><AcceptServerName xmlns="http://www.microsoft.com/provisioning/MsPeapConnectionPropertiesV2">true</AcceptServerName></PeapExtensions></EapType></Eap></Config></EapHostConfig>
     ```
