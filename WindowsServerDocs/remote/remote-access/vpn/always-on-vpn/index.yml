@@ -40,7 +40,7 @@ sections:
 
     style: cards
 
-    className: cardsA
+    className: cardsM
 
     columns: 3
 
@@ -52,9 +52,9 @@ sections:
 
       image:
 
-        src: https://docs.microsoft.com/media/common/i_learn-about.svg
+        src: https://docs.microsoft.com/media/illustrations/biztalk-developer-documentation-1.svg
 
-      title: Learn about Always On VPN
+      title: Always On VPN deployment
 
     - href: \windows\privacy\configure-windows-diagnostic-data-in-your-organization
 
@@ -64,7 +64,7 @@ sections:
 
         src: https://docs.microsoft.com/media/common/i_filter.svg
 
-      title: Configure Windows diagnostic data
+      title: Feature comparison between DirectAccess and Always On VPN
 
     - href: \windows\privacy\diagnostic-data-viewer-overview
 
