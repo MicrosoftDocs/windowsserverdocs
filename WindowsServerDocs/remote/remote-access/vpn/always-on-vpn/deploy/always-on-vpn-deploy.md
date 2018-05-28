@@ -47,26 +47,7 @@ The instructions provided walk you through deploying Remote Access as a single t
 
 For more information and workflow of the scenarios presented, see [Deploy Always On VPN](always-on-vpn-deploy-deployment.md).
 
-## <a name="bkmk_prerequisites"></a>Deployment prerequisites
-You most likely have the technologies deployed that you can use to deploy Always On VPN. Other than your DC/DNS servers, the Always On VPN deployment requires an NPS (RADIUS) server, a Certification Authority (CA) server, and a Remote Access (Routing/VPN) server. Once the infrastructure is set up, you must enroll clients and then connect the clients to your on-premises securely through several network changes.
 
-- Active Directory domain infrastructure, including one or more Domain Name System (DNS) servers. Both internal and external Domain Name System (DNS) zones are required, which assumes that the internal zone is a delegated subdomain of the external zone (for example, corp.contoso.com and contoso.com).
-- Active Directory-based public key infrastructure (PKI) and Active Directory Certificate Services (AD CS).
-- Physical server, either existing or new, to install Network Policy Server (NPS). If you already have NPS servers on your network, you can modify an existing NPS server configuration rather than add a new server.
-- Remote Access as a RAS Gateway VPN server with a small subset of features supporting IKEv2 VPN connections and LAN routing.
-- Perimeter network that includes two firewalls.  Ensure that your firewalls allow the traffic that is necessary for both VPN and RADIUS communications to function properly. For more information, see [Always On VPN Technology Overview](../always-on-vpn-technology-overview.md).
-- Physical server or virtual machine (VM) on your perimeter network with two physical Ethernet network adapters to install Remote Access as a RAS Gateway VPN server. VMs require virtual LAN (VLAN) for the host. 
-- Membership in Administrators, or equivalent, is the minimum required.
-- Read the planning section of this guide to ensure that you are prepared for this deployment before you perform the deployment.
-- Review the design and deployment guides for each of the technologies used. These guides can help you determine whether the deployment scenarios provide the services and configuration that you need for your organization's network. For more information, see [Always On VPN Technology Overview](../always-on-vpn-technology-overview.md).
-- Remote client computers must be joined to the Active Directory domain and running the Windows 10 Anniversary Update (version 1607) or later operating system.
-- Management platform of your choice for deploying the Always On VPN configuration because the CSP is not vendor-specific.
-
-
->[!IMPORTANT]
->For this deployment, it is not a requirement that your infrastructure servers, such as computers running Active Directory Domain Services, Active Directory Certificate Services, and Network Policy Server, are running Windows Server 2016. You can use earlier versions of Windows Server, such as Windows Server 2012 R2, for the infrastructure servers and for the server that is running Remote Access.
->
->Do not attempt to deploy Remote Access on a virtual machine \(VM\) in Microsoft Azure. Using Remote Access in Microsoft Azure is not supported, including both Remote Access VPN and DirectAccess. For more information, see [Microsoft server software support for Microsoft Azure virtual machines](https://support.microsoft.com/help/2721672/microsoft-server-software-support-for-microsoft-azure-virtual-machines).
 
 
 ## <a name="bkmk_not"></a>What is not provided in this deployment
