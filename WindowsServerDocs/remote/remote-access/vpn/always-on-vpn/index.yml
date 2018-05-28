@@ -203,9 +203,14 @@ sections:
 
     - title: Additional resources 
 
-      html: <p><a class="barLink" href="https://docs.microsoft.com/windows/access-protection/vpn/vpn-security-features">VPN security features</a></p>
+      html: <p><a class="barLink" href="https://docs.microsoft.com/windows/access-protection/vpn/vpn-guide">Windows 10 VPN Technical Guide</a></p>
+        
+            <p><a class="barLink" href="https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/vpnv2-csp">VPNv2 CSP</a></p>
 
-            <p><a class="barLink" href="https://docs.microsoft.com/windows/access-protection/vpn/vpn-auto-trigger-profile">VPN auto-triggered profile options</a></p>
+            <p><a class="barLink" href="https://technet.microsoft.com/library/hh831740.aspx">Active Directory Certificate Services Overview</a></p>
 
-            <p><a class="barLink" href="https://docs.microsoft.com/windows/access-protection/vpn/vpn-conditional-access">VPN and conditional access</a></p>
-      
+            <p><a class="barLink" href="https://technet.microsoft.com/library/cc730705.aspx">Certificate Templates</a></p>
+       
+            <p><a class="barLink" href="https://social.technet.microsoft.com/wiki/contents/articles/2901.public-key-infrastructure-design-guidance.aspx">Public Key Infrastructure Design Guidance</a></p>
+
+            <p><a class="barLink" href="https://social.technet.microsoft.com/wiki/contents/articles/15037.ad-cs-step-by-step-guide-two-tier-pki-hierarchy-deployment.aspx">AD CS Step by Step Guide - Two Tier PKI Hierarchy Deployment</a></p>
