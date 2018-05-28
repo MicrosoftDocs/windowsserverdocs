@@ -118,7 +118,7 @@ sections:
 
     - href: \windows-server\remote\remote-access\vpn\always-on-vpn\deploy\always-on-vpn-deploy-deployment
 
-      html: <p>Learn how to deploy Always On VPN connections for remote domain-joined Windows 10 client computers.</p>
+      html: <p>Learn about the workflow to deploy VPN connections for remote domain-joined Windows 10 client computers.</p>
 
       image:
 
@@ -128,7 +128,7 @@ sections:
 
     - href: \windows-server\remote\remote-access\vpn\always-on-vpn\deploy\always-on-vpn-deploy-prereqs
 
-      html: <p>Other than your DC/DNS servers, the Always On VPN deployment requires an NPS (RADIUS) server, a Certification Authority (CA) server, and a Remote Access (Routing/VPN) server.</p>
+      html: <p>Other than your DC/DNS servers, the deployment requires an NPS (RADIUS) server, a Certification Authority (CA) server, and a Remote Access (Routing/VPN) server.</p>
 
       image:
 
@@ -158,7 +158,7 @@ sections:
 
     - href: \windows-server\remote\remote-access\vpn\always-on-vpn\deploy\vpn-deploy-server-infrastructure
     
-      html: <p>Start deploying Always On VPN.</p>
+      html: <p>Start setting up and configuring the VPN infrastructure.</p>
 
       image:
 
@@ -188,15 +188,15 @@ sections:
 
     - title: Troubleshoot Always On VPN
 
-      html: <p><a class="barLink" href="/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting#error-codes">Error codes</a></p>
-
-            <p><a class="barLink" href="/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting#logs">Log files</a></p>
-
-            <p><a class="barLink" href="/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting#vpnprofileps1-script-issues">VPN_Profile.ps1 script issues</a></p>
+      html: <p><a class="barLink" href="/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting#vpnprofileps1-script-issues">VPN_Profile.ps1 script issues</a></p>
 
             <p><a class="barLink" href="/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting#always-on-vpn-client-connection-issues">Always On VPN client connection issues</a></p>
 
             <p><a class="barLink" href="/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting#azure-ad-conditional-access-connection-issues">Azure AD Conditional Access connection issues</a></p>
+
+            <p><a class="barLink" href="/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting#error-codes">Error codes</a></p>
+
+            <p><a class="barLink" href="/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting#logs">Log files</a></p>
 
     - title: Additional resources 
 
