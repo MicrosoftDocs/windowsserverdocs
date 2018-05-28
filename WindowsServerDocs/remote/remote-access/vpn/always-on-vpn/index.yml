@@ -42,7 +42,7 @@ sections:
 
     style: cards
 
-    className: cardsD
+    className: cardsC
 
     columns: 3
 
@@ -110,7 +110,7 @@ sections:
 
     style: cards
 
-    className: cardsD
+    className: cardsC
 
     columns: 3
 
@@ -152,7 +152,7 @@ sections:
 
       image:
 
-        src: https://docs.microsoft.com/media/common/i_tasks.svg
+        src: https://docs.microsoft.com/media/common/i_guidelines.svg
       
       title: Plan the Always On VPN deployment 
 
