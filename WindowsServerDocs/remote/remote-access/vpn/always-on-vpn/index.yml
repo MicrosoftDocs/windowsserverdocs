@@ -28,6 +28,8 @@ metadata:
 
 sections:
 
+- title: Learn about... 
+
 - items:
 
   - type: markdown
@@ -48,35 +50,35 @@ sections:
 
     - href: \windows-server\remote\remote-access\vpn\always-on-vpn\deploy\always-on-vpn-deploy
 
-      html: <p>Learn about deploying Remote Access as a single tenant VPN RAS Gateway for point-to-site VPN connections for remote computers running Windows 10.</p>
+      html: <p>Learn about the benefits of deploying Always On VPN.</p>
 
       image:
 
-        src: https://docs.microsoft.com/media/illustrations/biztalk-developer-documentation-1.svg
+        src: https://docs.microsoft.com/media/common/i_article.svg
 
-      title: Always On VPN deployment
+      title: Always On VPN
 
-    - href: \windows\privacy\configure-windows-diagnostic-data-in-your-organization
+    - href: \windows-server\remote\remote-access\vpn\vpn-map-da
 
-      html: <p>Make informed decisions about how you can configure diagnostic data in your organization</p>
+      html: <p>Learn how Always On VPN has mitigated most of the limitations or expanded the VPN functionality beyond the capabilities of DirectAccess.</p>
 
       image:
 
-        src: https://docs.microsoft.com/media/common/i_filter.svg
+        src: https://docs.microsoft.com/media/common/i_reference.svg
 
       title: Feature comparison between DirectAccess and Always On VPN
 
-    - href: \windows\privacy\diagnostic-data-viewer-overview
+    - href: \windows-server\remote\remote-access\vpn\always-on-vpn\always-on-vpn-enhancements
 
-      html: <p>Review the Windows diagnostic data sent to Microsoft by device in your organization</p>
+      html: <p>Key improvements in integration, security, connectivity, networking control, and compatibility align Always On VPN with Microsoft's cloud-first, mobile-first vision.</p>
 
       image:
 
-        src: https://docs.microsoft.com/media/common/i_investigate.svg
+        src: https://docs.microsoft.com/media/common/i_whats-new.svg
 
-      title: View Windows diagnostic data
+      title: Enhancements
 
-- title: Understand Windows diagnostic data in Windows 10 
+- title: Get started... 
 
   items:
 
