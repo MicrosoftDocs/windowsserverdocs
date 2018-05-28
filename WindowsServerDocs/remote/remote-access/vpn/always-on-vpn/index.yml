@@ -48,7 +48,7 @@ sections:
 
     - href: \always-on-vpn\deploy\always-on-vpn-deploy
 
-      html: <p>Learn about GDPR and how Microsoft helps you get started towards compliance</p>
+      html: <p>Learn about deploying Remote Access as a single tenant VPN RAS Gateway for point-to-site VPN connections for remote computers running Windows 10.</p>
 
       image:
 
