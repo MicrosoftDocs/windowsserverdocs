@@ -166,7 +166,7 @@ sections:
       
       title: Deploy the VPN infrastructure
 
-    - href: \windows-server\remote\remote-access\vpn\always-on-vpn\ad-ca-vpn-connectivity-windows10
+    - href: \windows-server\remote\remote-access\vpn\ad-ca-vpn-connectivity-windows10
     
       html: <p>Fine-tune how VPN users access your resources using Azure Active Directory (Azure AD) conditional access.</p>
 
