@@ -54,7 +54,7 @@ sections:
 
       image:
 
-        src: https://docs.microsoft.com/media/common/i_article.svg
+        src: https://docs.microsoft.com/media/common/i_quick-start.svg
 
       title: What is Always On VPN?
 
@@ -64,7 +64,7 @@ sections:
 
       image:
 
-        src: https://docs.microsoft.com/media/common/i_reference.svg
+        src: https://docs.microsoft.com/media/common/i_article.svg
 
       title: DirectAccess and Always On VPN feature comparison
 
@@ -84,7 +84,7 @@ sections:
 
       image:
 
-        src: https://docs.microsoft.com/media/common/i_whats-new.svg
+        src: https://docs.microsoft.com/media/common/i_article.svg
 
       title: Technology overview
 
@@ -94,7 +94,7 @@ sections:
 
       image:
 
-        src: https://docs.microsoft.com/media/common/i_whats-new.svg
+        src: https://docs.microsoft.com/media/common/i_advanced.svg
 
       title: Extend Always On VPN with advanced features            
 
@@ -122,7 +122,7 @@ sections:
 
       image:
 
-        src: https://docs.microsoft.com/media/common/i_get-started.svg
+        src: https://docs.microsoft.com/media/common/i_architecture.svg
       
       title: Deployment workflow
 
@@ -132,7 +132,7 @@ sections:
 
       image:
 
-        src: https://docs.microsoft.com/media/common/i_sharepoint-list.svg
+        src: https://docs.microsoft.com/media/common/i_get-started.svg
       
       title: Deployment prerequisites
 
@@ -208,6 +208,6 @@ sections:
 
             <p><a class="barLink" href="https://technet.microsoft.com/library/cc730705.aspx">Certificate Templates</a></p>
        
-            <p><a class="barLink" href="https://social.technet.microsoft.com/wiki/contents/articles/2901.public-key-infrastructure-design-guidance.aspx">Public Key Infrastructure Design Guidance</a></p>
+            <p><a class="barLink" href="https://social.technet.microsoft.com/wiki/contents/articles/2901.public-key-infrastructure-design-guidance.aspx">Public Key Infrastructure Design Guidance</a></p><br>
 
             <p><a class="barLink" href="https://social.technet.microsoft.com/wiki/contents/articles/15037.ad-cs-step-by-step-guide-two-tier-pki-hierarchy-deployment.aspx">AD CS Step by Step Guide - Two Tier PKI Hierarchy Deployment</a></p>
