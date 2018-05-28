@@ -18,11 +18,6 @@ If your Always On VPN setup is failing to connect clients to your internal netwo
 
 You can troubleshoot connection issues in several ways. For client-side issues and general troubleshooting, the application logs on client computers are invaluable. For authentication-specific issues, the NPS log on the NPS server can help you determine the source of the problem.
 
-## Application logs
-
-The application logs on client computers record most of the higher-level details of VPN connection events.
-
-Look for events from source RasClient. All error messages return the error code at the end of the message. Some of the more common error codes are detailed below, but a full list is available in [Routing and Remote Access Error Codes](https://msdn.microsoft.com/library/windows/desktop/bb530704.aspx).
 
 ## Error codes
 
@@ -112,6 +107,14 @@ Generally, the VPN client machine is joined to the Active Directory–based doma
 -   **Possible cause.** This error may occur if the appropriate trusted root CA certificate is not installed in the Trusted Root Certification Authorities store on the client computer.
 
 -   **Possible solution.** Make sure that the root certificate is installed on the client computer in the Trusted Root Certification Authorities store.
+
+## Logs
+
+### Application logs
+
+The application logs on client computers record most of the higher-level details of VPN connection events.
+
+Look for events from source RasClient. All error messages return the error code at the end of the message. Some of the more common error codes are detailed below, but a full list is available in [Routing and Remote Access Error Codes](https://msdn.microsoft.com/library/windows/desktop/bb530704.aspx).
 
 ## NPS logs
 NPS creates and stores the NPS accounting logs. By default, these are stored in %SYSTEMROOT%\\System32\\Logfiles\\ in a file named IN*XXXX.*txt, where *XXXX* is the date the file was created.
