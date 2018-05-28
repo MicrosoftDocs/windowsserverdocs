@@ -12,6 +12,8 @@ metadata:
 
   description: Learn about the features, technology, and deployment of Always On VPN.
 
+  text: Always On VPN provides a single, cohesive solution for remote access for all your connected devices, even personally owned devices. With Always On VPN, the connection type does not have to be exclusively user or device but can be a combination of both. For example, you could enable device authentication for remote device management, and then enable user authentication for connectivity to internal company sites and services.
+
   keywords: Windows 10, Windows Server, Windows Server 2016, remote access, VPN
 
   ms.localizationpriority: high
@@ -42,7 +44,7 @@ sections:
 
     style: cards
 
-    className: cardsA
+    className: cardsM
 
     columns: 3
 
@@ -110,7 +112,7 @@ sections:
 
     style: cards
 
-    className: cardsA
+    className: cardsM
 
     columns: 3
 
