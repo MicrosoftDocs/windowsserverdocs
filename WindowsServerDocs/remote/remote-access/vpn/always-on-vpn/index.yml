@@ -42,7 +42,7 @@ sections:
 
     style: cards
 
-    className: cardsC
+    className: cardsA
 
     columns: 3
 
@@ -110,7 +110,7 @@ sections:
 
     style: cards
 
-    className: cardsC
+    className: cardsA
 
     columns: 3
 
@@ -118,7 +118,7 @@ sections:
 
     - href: \windows-server\remote\remote-access\vpn\always-on-vpn\deploy\always-on-vpn-deploy-deployment
 
-      html: <p></p>
+      html: <p>Learn how to deploy Always On VPN connections for remote domain-joined Windows 10 client computers.</p>
 
       image:
 
@@ -128,7 +128,7 @@ sections:
 
     - href: \windows-server\remote\remote-access\vpn\always-on-vpn\deploy\always-on-vpn-deploy-prereqs
 
-      html: <p></p>
+      html: <p>Other than your DC/DNS servers, the Always On VPN deployment requires an NPS (RADIUS) server, a Certification Authority (CA) server, and a Remote Access (Routing/VPN) server.</p>
 
       image:
 
@@ -138,7 +138,7 @@ sections:
 
     - href: \windows-server\remote\remote-access\da-always-on-vpn-migration\da-always-on-migration-overview
     
-      html: <p>Learn how Always On VPN has expanded the VPN functionality beyond the capabilities of DirectAccess.</p>
+      html: <p>Learn how Always On VPN has expanded the VPN functionality beyond the capabilities of DirectAccess and migrate to Always On VPN.</p>
 
       image:
 
