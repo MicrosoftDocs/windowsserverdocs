@@ -11,11 +11,11 @@ ms.author: pashort
 author: shortpatti
 ---
 
-# Always On VPN Deployment prerequisites
+# Always On VPN deployment prerequisites
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-&#171; [**Previous:** Learn about the advanced Features of Always On VPN](always-on-vpn-adv-options.md)<br>
+&#171; [**Previous:** Review the Always On VPN workflow scenarios](always-on-vpn-deploy-deployment.md)<br>
 &#187; [**Next:** 1. Migrate from DirectAccess to Always On VPN](../../../da-always-on-vpn-migration/da-always-on-migration-overview.md)<br>
         -OR-<br>
 &#187; [**Next:** 2. Start planning your Always On VPN deployment](always-on-vpn-deploy-planning.md)

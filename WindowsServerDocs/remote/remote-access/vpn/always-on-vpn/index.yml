@@ -116,35 +116,65 @@ sections:
 
     items:
 
-    - href: \windows-server\remote\remote-access\vpn\always-on-vpn\deploy\always-on-vpn-deploy-prereqs
+    - href: \windows-server\remote\remote-access\vpn\always-on-vpn\deploy\always-on-vpn-deploy-deployment
 
-      html: <p>Learn more about basic Windows diagnostic data events and fields collected</p>
-
-      image:
-
-        src: https://docs.microsoft.com/media/common/i_extend.svg
-      
-      title: Basic level events and fields
-
-    - href: \windows\privacy\enhanced-diagnostic-data-windows-analytics-events-and-fields
-
-      html: <p>Learn more about Windows diagnostic data events and fields used by Windows Analytics</p>  
-
-      image:
-
-        src: https://docs.microsoft.com/media/common/i_delivery.svg
-      
-      title: Enhanced level events and fields
-
-    - href: \windows\privacy\windows-diagnostic-data
-    
-      html: <p>Learn more about all Windows diagnostic data collected</p>
+      html: <p></p>
 
       image:
 
         src: https://docs.microsoft.com/media/common/i_get-started.svg
       
-      title: Full level data categories
+      title: Deployment workflow
+
+    - href: \windows-server\remote\remote-access\vpn\always-on-vpn\deploy\always-on-vpn-deploy-prereqs
+
+      html: <p></p>
+
+      image:
+
+        src: https://docs.microsoft.com/media/common/i_sharepoint-list.svg
+      
+      title: Deployment prerequisites
+
+    - href: \windows-server\remote\remote-access\da-always-on-vpn-migration\da-always-on-migration-overview
+    
+      html: <p>Learn how Always On VPN has expanded the VPN functionality beyond the capabilities of DirectAccess.</p>
+
+      image:
+
+        src: https://docs.microsoft.com/media/common/i_upgrade.svg
+      
+      title: Migrate from DirectAccess
+
+    - href: \windows-server\remote\remote-access\vpn\always-on-vpn\deploy\always-on-vpn-deploy-planning
+    
+      html: <p>Start planning the remote access VPN connectivity deployment.</p>
+
+      image:
+
+        src: https://docs.microsoft.com/media/common/i_tasks.svg
+      
+      title: Plan the Always On VPN deployment 
+
+    - href: \windows-server\remote\remote-access\vpn\always-on-vpn\deploy\vpn-deploy-server-infrastructure
+    
+      html: <p>Start deploying Always On VPN.</p>
+
+      image:
+
+        src: https://docs.microsoft.com/media/common/i_setup.svg
+      
+      title: Deploy the VPN infrastructure
+
+    - href: \windows-server\remote\remote-access\vpn\always-on-vpn\ad-ca-vpn-connectivity-windows10
+    
+      html: <p>Fine-tune how VPN users access your resources using Azure Active Directory (Azure AD) conditional access.</p>
+
+      image:
+
+        src: https://docs.microsoft.com/media/common/i_setup.svg
+      
+      title: Configure conditional access
 
 - items:
 

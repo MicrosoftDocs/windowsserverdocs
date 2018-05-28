@@ -19,12 +19,12 @@ ms.reviewer: deverette
 ---
 
 
-# Step 6.2. Create conditional access root certificates for VPN authentication with Azure AD
+# Step 7.2. Create conditional access root certificates for VPN authentication with Azure AD
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-&#171;  [**Previous:** Step 6.1. Configure EAP-TLS to ignore Certificate Revocation List (CRL) checking](vpn-config-eap-tls-to-ignore-crl-checking.md)<br>
-&#187; [ **Next:** Step 6.3. Configure the Conditional Access policy](vpn-config-conditional-access-policy.md)
+&#171;  [**Previous:** Step 7.1. Configure EAP-TLS to ignore Certificate Revocation List (CRL) checking](vpn-config-eap-tls-to-ignore-crl-checking.md)<br>
+&#187; [ **Next:** Step 7.3. Configure the Conditional Access policy](vpn-config-conditional-access-policy.md)
 
 In this step, you configure conditional access root certificates for VPN authentication with Azure AD, which automatically creates a Cloud app called VPN Server in the tenant. To configure conditional access for VPN connectivity, you need to:
 
@@ -69,6 +69,6 @@ In the Azure portal, you create two certificates to manage the transition when o
     c. Click **Create**.
 
 ## Next step
-[Step 6.3. Configure the Conditional Access policy](vpn-config-conditional-access-policy.md): In this step, you configure the conditional access policy for VPN connectivity. 
+[Step 7.3. Configure the Conditional Access policy](vpn-config-conditional-access-policy.md): In this step, you configure the conditional access policy for VPN connectivity. 
 
 ---

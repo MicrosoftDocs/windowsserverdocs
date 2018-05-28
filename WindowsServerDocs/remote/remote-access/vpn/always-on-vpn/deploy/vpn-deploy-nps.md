@@ -11,12 +11,12 @@ author: shortpatti
 ms.date: 05/25/2018
 ---
 
-# Step 3. Install and Configure the NPS Server
+# Step 4. Install and Configure the NPS Server
 
 >   Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-&#171;  [**Previous:** Step 2. Configure the Remote Access Server for Always On VPN](vpn-deploy-ras.md)<br>
-&#187; [ **Next:** Step 4. Configure DNS and Firewall Settings](vpn-deploy-dns-firewall.md)
+&#171;  [**Previous:** Step 3. Configure the Remote Access Server for Always On VPN](vpn-deploy-ras.md)<br>
+&#187; [ **Next:** Step 5. Configure DNS and Firewall Settings](vpn-deploy-dns-firewall.md)
 
 In this step, you install Network Policy Server (NPS) for processing of connection requests that are sent by the VPN server:
 
@@ -204,7 +204,7 @@ Membership in **Administrators**, or equivalent, is the minimum required to comp
 2.  At the Windows PowerShell prompt, type **gpupdate**, and then press ENTER.
 
 ## Next step
-[Step 4. Configure DNS and Firewall Settings for Always On VPN](vpn-deploy-dns-firewall.md): In this step, you install Network Policy Server (NPS) by using either Windows PowerShell or the Server Manager Add Roles and Features Wizard. You also configure NPS to handle all authentication, authorization, and accounting duties for connection requests that it receives from the VPN server.
+[Step 5. Configure DNS and Firewall Settings for Always On VPN](vpn-deploy-dns-firewall.md): In this step, you install Network Policy Server (NPS) by using either Windows PowerShell or the Server Manager Add Roles and Features Wizard. You also configure NPS to handle all authentication, authorization, and accounting duties for connection requests that it receives from the VPN server.
 
 ---
 

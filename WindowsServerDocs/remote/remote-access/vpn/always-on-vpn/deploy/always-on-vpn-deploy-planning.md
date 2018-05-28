@@ -10,13 +10,13 @@ ms.author: pashort
 author: shortpatti
 ms.date: 05/25/2018
 ---
-# Plan the Always On VPN Deployment
+# Step 1. Plan the Always On VPN Deployment
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
 
 &#171;  [**Previous:** Learn about the Always On VPN advanced features](always-on-vpn-adv-options.md)<br>
-&#187;  [**Next:** Start deploying Always On VPN](always-on-vpn-deploy-deployment.md)
+&#187;  [**Next:** Step 2. Configure the Server Infrastructure](vpn-deploy-server-infrastructure.md)
 
 In this section, you start to plan and prepare your Always On VPN deployment.
 
@@ -68,6 +68,6 @@ Install the VPN server inside the perimeter network, which partitions the perime
 In most environments, to reach the new internal perimeter network, adjust static routes on the edge firewall and the VPN server. In more complex environments, however, you may need to add static routes to internal routers or adjust internal firewall rules for the VPN server and the block of IP addresses associated with VPN clients.
 
 ## Next step
-[Start deploying Always On VPN](always-on-vpn-deploy-deployment.md): Learn how to deploy Always On VPN connections for remote Windows 10 client computers that are domain-joined. You can also learn how to configure conditional access for VPN connectivity using Azure Active Directory. 
+[Step 2. Configure the Server Infrastructure](vpn-deploy-server-infrastructure.md): In this step, you install and configure the server-side components necessary to support the VPN. The server-side components include configuring PKI to distribute the certificates used by users, the VPN server, and the NPS server. 
 
 ---
