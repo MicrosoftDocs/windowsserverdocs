@@ -40,7 +40,7 @@ sections:
 
     style: cards
 
-    className: cardsM
+    className: cardsA
 
     columns: 3
 
