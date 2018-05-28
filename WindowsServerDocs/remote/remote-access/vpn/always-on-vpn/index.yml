@@ -46,7 +46,7 @@ sections:
 
     items:
 
-    - href: \WindowsServerDocs\remote\remote-access\vpn\always-on-vpn\deploy\always-on-vpn-deploy
+    - href: \always-on-vpn\deploy\always-on-vpn-deploy
 
       html: <p>Learn about GDPR and how Microsoft helps you get started towards compliance</p>
 
