@@ -36,7 +36,7 @@ sections:
 
   - type: markdown
 
-    text: Learn about the technologies used, enhancements, and advanced features for remote client computers that are running Windows 10. The instructions provided walk you through deploying Remote Access as a single tenant VPN RAS Gateway for point-to-site VPN connections, using any of the four scenarios mentioned below, for remote client computers that are running Windows 10. You also find instructions for modifying some of your existing infrastructure for the deployment. Also throughout this deployment, you find links to help you learn more about the VPN connection process, servers to configure, ProfileXML VPNv2 CSP node, and other technologies to deploy Always On VPN.
+    text: Get ready to deploy Remote Access as a single tenant VPN RAS Gateway for point-to-site VPN connections, using any of the four scenarios mentioned below, for remote client computers that are running Windows 10. 
 
 - items:
 
@@ -96,7 +96,7 @@ sections:
 
   - type: paragraph
 
-    text: 'Get ready to deploy Remote Access as a single tenant VPN RAS Gateway for point-to-site VPN connections, using any of the four scenarios mentioned below, for remote client computers that are running Windows 10.'
+    text: 'Deploy Always On VPN connections for domain-joined Windows 10 client computers. You can also migrate from DirectAccess to Always On VPN and configure conditional access using Azure AD.'
 
   - type: list
 
@@ -118,9 +118,9 @@ sections:
       
       title: Deployment workflow
 
-    - href: \windows-server\remote\remote-access\vpn\always-on-vpn\deploy\always-on-vpn-deploy-prereqs
+    - href: \windows-server\remote\remote-access\vpn\always-on-vpn\deploy\always-on-vpn-deploy
 
-      html: <p>Other than your DC/DNS servers, the deployment requires an NPS (RADIUS) server, a Certification Authority (CA) server, and a Remote Access (Routing/VPN) server.</p>
+      html: <p>The deployment requires an NPS (RADIUS) server, a Certification Authority (CA) server, and a Remote Access (Routing/VPN) server.</p>
 
       image:
 
@@ -130,7 +130,7 @@ sections:
 
     - href: \windows-server\remote\remote-access\da-always-on-vpn-migration\da-always-on-migration-overview
     
-      html: <p>Learn how Always On VPN has expanded the VPN functionality beyond the capabilities of DirectAccess and migrate to Always On VPN.</p>
+      html: <p>Learn how Always On VPN has expanded the VPN functionality beyond the capabilities of DirectAccess.</p>
 
       image:
 
@@ -186,7 +186,7 @@ sections:
 
             <p><a class="barLink" href="/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting#azure-ad-conditional-access-connection-issues">Azure AD Conditional Access connection issues</a></p>
 
-            <p><a class="barLink" href="/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting#error-codes">Error codes</a></p>
+            <p><a class="barLink" href="/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting#error-codes">Error codes</a></p><br>
 
             <p><a class="barLink" href="/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting#logs">Log files</a></p>
 
