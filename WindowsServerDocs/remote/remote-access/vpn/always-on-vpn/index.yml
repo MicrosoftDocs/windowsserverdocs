@@ -52,7 +52,7 @@ sections:
 
     - href: \windows-server\remote\remote-access\vpn\always-on-vpn\deploy\always-on-vpn-deploy
 
-      html: <p>The deployment requires an NPS (RADIUS) server, a Certification Authority (CA) server, and a Remote Access (Routing/VPN) server.</p>
+      html: <p>Learn about the Always On VPN deployment and where to get started.</p>
 
       image:
 
