@@ -92,7 +92,7 @@ sections:
 
     - href: \windows-server\remote\remote-access\vpn\always-on-vpn\deploy\always-on-vpn-adv-options
 
-      html: <p>Learn about the advanced VPN features you can added to improve the security and availability of your VPN connection.</p>
+      html: <p>Learn about the advanced VPN features you can add to improve the security and availability of your VPN connection.</p>
 
       image:
 
@@ -126,7 +126,7 @@ sections:
 
         src: https://docs.microsoft.com/media/common/i_architecture.svg
       
-      title: Workflow and scenarios
+      title: Deployment workflow and scenarios
 
     - href: \windows-server\remote\remote-access\da-always-on-vpn-migration\da-always-on-migration-overview
     
