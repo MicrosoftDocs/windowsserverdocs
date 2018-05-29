@@ -36,7 +36,7 @@ sections:
 
   - type: markdown
 
-    text: Get ready to deploy Remote Access as a single tenant VPN RAS Gateway for point-to-site VPN connections, using any of the four scenarios mentioned below, for remote client computers that are running Windows 10.
+    text: Learn about the technologies used, enhancements, and advanced features for remote client computers that are running Windows 10. The instructions provided walk you through deploying Remote Access as a single tenant VPN RAS Gateway for point-to-site VPN connections, using any of the four scenarios mentioned below, for remote client computers that are running Windows 10. You also find instructions for modifying some of your existing infrastructure for the deployment. Also throughout this deployment, you find links to help you learn more about the VPN connection process, servers to configure, ProfileXML VPNv2 CSP node, and other technologies to deploy Always On VPN.
 
 - items:
 
@@ -44,15 +44,15 @@ sections:
 
     style: cards
 
-    className: cardsM
+    className: cardsE
 
-    columns: 3
+    columns: 2
 
     items:
 
     - href: \windows-server\remote\remote-access\vpn\always-on-vpn\deploy\always-on-vpn-deploy
 
-      html: <p>Learn about the benefits of deploying Always On VPN.</p>
+      html: <p>Learn more about Always On VPN.</p>
 
       image:
 
@@ -62,7 +62,7 @@ sections:
 
     - href: \windows-server\remote\remote-access\vpn\vpn-map-da
 
-      html: <p>Learn how Always On VPN has mitigated most of the limitations or expanded the VPN functionality beyond the capabilities of DirectAccess.</p>
+      html: <p>Learn how Always On VPN has expanded the VPN functionality beyond the capabilities of DirectAccess.</p>
 
       image:
 
@@ -82,7 +82,7 @@ sections:
 
     - href: \windows-server\remote\remote-access\vpn\always-on-vpn\always-on-vpn-technology-overview
 
-      html: <p>Learch about the technologies used to deploy Always On VPN.</p>
+      html: <p>Learch about the technologies used in the Always On VPN deployment.</p>
 
       image:
 
@@ -92,7 +92,7 @@ sections:
 
     - href: \windows-server\remote\remote-access\vpn\always-on-vpn\deploy\always-on-vpn-adv-options
 
-      html: <p>Beyond the deployment scenarios provided, you can add other advanced VPN features to improve the security and availability of your VPN connection.</p>
+      html: <p>You can add advanced VPN features to improve the security and availability of your VPN connection.</p>
 
       image:
 
@@ -112,9 +112,9 @@ sections:
 
     style: cards
 
-    className: cardsM
+    className: cardsE
 
-    columns: 3
+    columns: 2
 
     items:
 
