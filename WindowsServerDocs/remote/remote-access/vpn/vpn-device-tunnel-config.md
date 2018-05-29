@@ -1,5 +1,5 @@
 ---
-title: Configure the VPN Device Tunnel in Windows 10
+title: Configure the VPN device tunnel in Windows 10
 description: You can use this topic to learn how to create a VPN device tunnel in Windows 10.
 manager: elizapo
 ms.prod: windows-server-threshold
@@ -10,7 +10,7 @@ ms.assetid: 158b7a62-2c52-448b-9467-c00d5018f65b
 ms.author: pashort
 author: shortpatti
 ---
-# Configure VPN Device Tunnels in Windows 10
+# Configure VPN device tunnels in Windows 10
 
 >Applies To: Windows 10 version 1709
 
@@ -20,7 +20,7 @@ Always On VPN gives you the ability to create a dedicated VPN profile for device
 
 Unlike User Tunnel, which only connects after a user logs on to the device or machine, Device Tunnel allows the VPN to establish connectivity before user sign-in. Additionally, Device Tunnel provides feature parity with the Infrastructure Tunnel concept of DirectAccess.
 
-You can use traffic filters to control which corporate resources as available through the Device Tunnel and when machine certificate authentication is employed. Both Device Tunnel and User Tunnel operate independently with their VPN profiles, can be connected at the same time, and can use different authentication methods and other VPN configuration settings as appropriate.
+You use traffic filters to control which corporate resources as available through the Device Tunnel and when machine certificate authentication is employed. Both Device and User tunnels operate independently with their VPN profiles, can be connected at the same time, and can use different authentication methods and other VPN configuration settings as appropriate.
 
 ## Device Tunnel Features and Requirements
 
@@ -30,7 +30,7 @@ You can use traffic filters to control which corporate resources as available th
 
 The sample profile XML below provides good guidance for scenarios where only client initiated pulls are required over the device tunnel.  Traffic filters are leveraged to restrict the device tunnel to management traffic only.  This configuration works well for Windows Update, typical Group Policy (GP) and System Center Configuration Manager (SCCM) update scenarios, as well as VPN connectivity for first logon without cached credentials, or password reset scenarios. 
 
-On the other hand, for server initiated push cases, like Windows Remote Management (WinRM), Remote GPUpdate, and remote SCCM update scenarios – inbound traffic on the device tunnel has to be allowed, so traffic filters cannot be used.  This limitation is going to be removed in future releases.
+For server initiated push cases, like Windows Remote Management (WinRM), Remote GPUpdate, and remote SCCM update scenarios – inbound traffic on the device tunnel has to be allowed, so traffic filters cannot be used.  This limitation is going to be removed in future releases.
 
 ### Sample VPN profileXML
 
@@ -79,11 +79,11 @@ Depending on the needs of each particular deployment scenario, another VPN featu
 
 ## Deployment and Testing
 
-You can configure device tunnels by using a Windows PowerShell script and using the Windows Management Instrumentation \(WMI\) bridge. The following article provides guidelines on how to deploy a per device `(.\Device)` vs. a per user `(.\User)` profile. You must deploy the device profile in the local system context. 
+You can configure device tunnels by using a Windows PowerShell script and using the Windows Management Instrumentation \(WMI\) bridge. The following article provides guidelines on how to deploy a per device `(.\Device)` vs. a per user `(.\User)` profile. You deploy the device profile in the local system context. 
 
 For more information, see [Using PowerShell scripting with the WMI Bridge Provider](https://docs.microsoft.com/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider).
 
-To verify that you have successfully deployed a device profile, run the following Windows PowerShell command.
+Run the following Windows PowerShell command to verify that you have successfully deployed a device profile:
 
     `Get-VpnConnection -AllUserConnection`
 
@@ -153,7 +153,7 @@ Following are additional resources to assist with your VPN deployment.
 These are VPN client configuration resources.
 
 - [How to Create VPN profiles in System Center Configuration Manager](https://docs.microsoft.com/sccm/protect/deploy-use/create-vpn-profiles)
-- [Configure Windows 10 Client Always On VPN Connections](https://docs.microsoft.com/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-client-vpn-connections)
+- [Configure Windows 10 Client Always On VPN Connections](always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md)
 - [VPN profile options](https://docs.microsoft.com/en-us/windows/access-protection/vpn/vpn-profile-options)
 
 ### Remote Access Server \(RAS\) Gateway resources

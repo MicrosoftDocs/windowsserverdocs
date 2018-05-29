@@ -47,7 +47,7 @@ Before you begin deploying this scenario, review this list for important require
 ## In this scenario  
 The cluster deployment scenario includes a number of steps:  
 
-1.  [Deploy a Single DirectAccess Server with Advanced Settings](../../directaccess/single-server-advanced/Deploy-a-Single-DirectAccess-Server-with-Advanced-Settings.md). A single Remote Access server with advanced settings must be deployed before setting up a cluster deployment.  
+1.  [Deploy an Always on VPN server with Advanced options](../../vpn/always-on-vpn/deploy/always-on-vpn-adv-options.md). A single Remote Access server with advanced settings must be deployed before setting up a cluster deployment.  
 
 2.  [Plan a Remote Access Cluster Deployment](plan/Plan-a-Remote-Access-Cluster-Deployment.md). To build a cluster from a single server deployment a number of additional steps are required, including preparing certificates for the cluster deployment.  
 
