@@ -126,7 +126,7 @@ sections:
 
         src: https://docs.microsoft.com/media/common/i_architecture.svg
       
-      title: Deployment workflow
+      title: Workflow and scenarios
 
     - href: \windows-server\remote\remote-access\da-always-on-vpn-migration\da-always-on-migration-overview
     
