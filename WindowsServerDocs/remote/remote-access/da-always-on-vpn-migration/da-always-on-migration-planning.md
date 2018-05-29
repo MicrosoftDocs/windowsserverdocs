@@ -15,8 +15,8 @@ ms.date: 05/29/2018
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows 10
 
-&#171; [**Previous:** DirectAccess to Always On VPN migration overview](da-always-on-migration-overview.md)<br>
-&#187; [**Next:** Migrate to Always On VPN and Decommission DirectAccess](da-always-on-migration-deploy.md)
+&#171; [**Previous:** Overview of the DirectAccess to Always On VPN migration](da-always-on-migration-overview.md)<br>
+&#187; [**Next:** Migrate to Always On VPN and decommission DirectAccess](da-always-on-migration-deploy.md)
 
 
 Migrating from DirectAccess to Always On VPN requires proper planning to determine your migration phases, which helps identify any issues before they affect the entire organization. The primary goal of the migration is for users to maintain remote connectivity to the office throughout the process. If you perform tasks out of order, a race condition may occur, leaving remote users with no way to access company resources. Therefore, Microsoft recommends performing a planned, side-by-side migration from DirectAccess to Always On VPN. For details, see the [Always On VPN migration deployment](da-always-on-migration-deploy.md) section.
@@ -62,7 +62,7 @@ This section provides one approach for separating users into migration phases, a
 
 |If you want to...  |Then see...  |
 |---------|---------|
-|Start migrating to Always On VPN     |[Migrate to Always On VPN and Decommission DirectAccess](da-always-on-migration-deploy.md). Migrating from DirectAccess to Always On VPN requires a specific process to migrate clients, which helps minimize race conditions that arise from performing migration steps out of order.         |
+|Start migrating to Always On VPN     |[Migrate to Always On VPN and decommission DirectAccess](da-always-on-migration-deploy.md). Migrating from DirectAccess to Always On VPN requires a specific process to migrate clients, which helps minimize race conditions that arise from performing migration steps out of order.         |
 |Learn about the features of both Always On VPN and DirectAccess    |[Feature Comparison of Always On VPN and DirectAccess](../vpn/vpn-map-da.md). In previous versions of the Windows VPN architecture, platform limitations made it difficult to provide the critical functionality needed to replace DirectAccess (like automatic connections initiated before users sign in). Always On VPN, however, has mitigated most of those limitations or expanded the VPN functionality beyond the capabilities of DirectAccess.         |
 
 

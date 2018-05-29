@@ -15,7 +15,7 @@ ms.date: 05/29/2018
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows 10
 
-&#187; [**Next:** DirectAccess to Always On VPN migration planning](da-always-on-migration-planning.md)
+&#187; [**Next:** Plan the DirectAccess to Always On VPN migration](da-always-on-migration-planning.md)
 
 In previous versions of the Windows VPN architecture, platform limitations made it difficult to provide the critical functionality needed to replace DirectAccess (like automatic connections initiated before users sign in). Always On VPN, however, has mitigated most of those limitations or expanded the VPN functionality beyond the capabilities of DirectAccess. Always On VPN addresses the previous gaps between Windows VPNs and DirectAccess.
 
@@ -88,6 +88,6 @@ In this deployment scenario, you focus on migrating a simple DirectAccess enviro
 
 ## Next step
 
-[Plan your migration](da-always-on-migration-planning.md). The primary goal of the migration is for users to maintain remote connectivity to the office throughout the process.
+[Plan the DirectAccess to Always On VPN migration](da-always-on-migration-planning.md). The primary goal of the migration is for users to maintain remote connectivity to the office throughout the process.
 
 ---
