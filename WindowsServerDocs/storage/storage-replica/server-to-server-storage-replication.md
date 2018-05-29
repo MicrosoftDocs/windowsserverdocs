@@ -7,7 +7,7 @@ ms.author: nedpyle
 ms.technology: storage-replica
 ms.topic: get-started-article
 author: nedpyle
-ms.date: 05/29/2018
+ms.date: 05/30/2018
 ms.assetid: 61881b52-ee6a-4c8e-85d3-702ab8a2bd8c
 ---
 # Server to Server Storage Replication
@@ -192,7 +192,7 @@ If you're using Windows Admin Center to manage Storage Replica, use the followin
 3. Select **Storage Replica** from Tools panel.
 4. Select **New** to create a new partnership.
 5. Provide the details of the partnership, and then select **Create**. <br>
-![The New Partnership screen showing partnership details, such as an 8 GB log size.](media\Storage-Replica-UI\Honolulu_SR_CReate_Partnership.png)
+![The New Partnership screen showing partnership details, such as an 8 GB log size.](media\Storage-Replica-UI\Honolulu_SR_Create_Partnership.png)
 
 > [!NOTE]
 > Removing the partnership from Storage Replica in Windows Admin Center doesn’t remove the replication group name.
@@ -402,7 +402,7 @@ The process is, at a high level:
 1.  Install Windows Server 2016 on two servers and configure your storage. This could mean upgrading an existing set of servers or cleanly installing.  
 2.  Ensure that any data you want to replicate exists on one or more data volumes and not on the C: drive.   
 a.  You can also seed the data on the other server to save time, using a backup or file copies, as well as use thin provisioned storage. Making the metadata-like security match perfectly is unnecessary, unlike DFS Replication.  
-3.  Share the data on your source server and make it accessible through a DFS Namespace. This is important, to ensure that users can still access it if the server name changes to one in a disaster site.  
+3.  Share the data on your source server and make it accessible through a DFS namespace. This is important, to ensure that users can still access it if the server name changes to one in a disaster site.  
 a.  You can create matching shares on the destination server, which will be unavailable during normal operations,   
 b.  Don't add the destination server to the DFS Namespaces namespace, or if you do, ensure that all its folder targets are disabled.  
 4.  Enable Storage Replica replication and complete initial sync. Replication can be either synchronous or asynchronous.   
@@ -411,7 +411,7 @@ b.  We strongly recommend enabling Volume Shadow Copies and periodically taking 
 5.  Operate normally until there is a disaster.  
 6.  Switch the destination server to be the new source, which surfaces its replicated volumes to users.  
 7.  If using synchronous replication, no data restore will be necessary unless the user was using an application that was writing data without transaction protection (this is irrespective of replication) during loss of the source server. If using asynchronous replication, the need for a VSS snapshot mount is higher but consider using VSS in all circumstances for application consistent snapshots.  
-8.  Add the server and its shares as a DFS Namespace folder target.   
+8.  Add the server and its shares as a DFS Namespaces folder target.   
 9.  Users can then access their data.  
 
  > [!NOTE]

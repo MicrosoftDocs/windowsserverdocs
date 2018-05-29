@@ -7,7 +7,7 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.date: 05/22/2018
+ms.date: 05/30/2018
 description: New and updated topics in the on-premises storage documentation for Windows Server for IT Pros.
 ---
 # Change history for storage topics in Windows Server
@@ -29,6 +29,7 @@ This topic lists new and updated topics in the [Storage](storage.md) documentati
 |[Use Robocopy to Preseed Files for DFS Replication](dfs-replication/preseed-dfsr-with-robocopy.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library.|
 |[Vssadmin - Previous Versions command line tool](..\administration\windows-commands\vssadmin.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library.|
 |[File Server Resource Manager overview](fsrm/fsrm-overview.md)| Added info about a new registry setting in Windows Server 2016, version 1803.|
+|[Server-to-server storage replication](storage-replica/server-to-server-storage-replication.md)|Added info on using Windows Admin Center.|
 |[Storage Replica known issues](storage-replica/storage-replica-known-issues.md)|Added new information.|
 
 ## April 2018
