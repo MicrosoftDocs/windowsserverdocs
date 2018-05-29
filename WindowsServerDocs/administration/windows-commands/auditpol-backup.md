@@ -34,7 +34,7 @@ for backup operations for the per-user policy and system policy, you must have W
 ## <a name="BKMK_examples"></a>Examples
 To back up per-user audit policy settings for all users, system audit policy settings, and all auditing options into a CSV-formatted text file named auditpolicy.csv, type:
 ```
-auditpol /backup /file:C\auditpolicy.csv 
+auditpol /backup /file:C:\auditpolicy.csv 
 ```
 > [!NOTE]
 > if no drive is specified, the current directory is used.
