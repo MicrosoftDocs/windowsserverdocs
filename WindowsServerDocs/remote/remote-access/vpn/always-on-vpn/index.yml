@@ -50,16 +50,6 @@ sections:
 
     items:
 
-    - href: \windows-server\remote\remote-access\vpn\always-on-vpn\deploy\always-on-vpn-deploy
-
-      html: <p>Learn more about Always On VPN.</p>
-
-      image:
-
-        src: https://docs.microsoft.com/media/common/i_quick-start.svg
-
-      title: What is Always On VPN?
-
     - href: \windows-server\remote\remote-access\vpn\vpn-map-da
 
       html: <p>Learn how Always On VPN has expanded the VPN functionality beyond the capabilities of DirectAccess.</p>
