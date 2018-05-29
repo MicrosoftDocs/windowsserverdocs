@@ -46,9 +46,19 @@ sections:
 
     className: cardsE
 
-    columns: 2
+    columns: 3
 
     items:
+
+    - href: \windows-server\remote\remote-access\vpn\always-on-vpn\deploy\always-on-vpn-deploy
+
+      html: <p>The deployment requires an NPS (RADIUS) server, a Certification Authority (CA) server, and a Remote Access (Routing/VPN) server.</p>
+
+      image:
+
+        src: https://docs.microsoft.com/media/common/i_get-started.svg
+      
+      title: 
 
     - href: \windows-server\remote\remote-access\vpn\vpn-map-da
 
@@ -56,7 +66,7 @@ sections:
 
       image:
 
-        src: https://docs.microsoft.com/media/common/i_article.svg
+        src: https://docs.microsoft.com/media/common/i_quick-start.svg
 
       title: DirectAccess and Always On VPN feature comparison
 
@@ -76,7 +86,7 @@ sections:
 
       image:
 
-        src: https://docs.microsoft.com/media/common/i_article.svg
+        src: https://docs.microsoft.com/media/common/i_overview.svg
 
       title: Technology overview
 
@@ -104,7 +114,7 @@ sections:
 
     className: cardsE
 
-    columns: 2
+    columns: 3
 
     items:
 
@@ -117,16 +127,6 @@ sections:
         src: https://docs.microsoft.com/media/common/i_architecture.svg
       
       title: Deployment workflow
-
-    - href: \windows-server\remote\remote-access\vpn\always-on-vpn\deploy\always-on-vpn-deploy
-
-      html: <p>The deployment requires an NPS (RADIUS) server, a Certification Authority (CA) server, and a Remote Access (Routing/VPN) server.</p>
-
-      image:
-
-        src: https://docs.microsoft.com/media/common/i_get-started.svg
-      
-      title: Deployment prerequisites
 
     - href: \windows-server\remote\remote-access\da-always-on-vpn-migration\da-always-on-migration-overview
     
