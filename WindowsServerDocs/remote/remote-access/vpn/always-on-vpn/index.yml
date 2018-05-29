@@ -120,7 +120,7 @@ sections:
 
     - href: \windows-server\remote\remote-access\vpn\always-on-vpn\deploy\always-on-vpn-deploy-deployment
 
-      html: <p>Discover the high-level steps to deploy VPN connections.</p>
+      html: <p>Discover what's needed to deploy VPN connections.</p>
 
       image:
 
