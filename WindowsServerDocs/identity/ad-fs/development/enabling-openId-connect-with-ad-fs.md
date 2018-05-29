@@ -36,7 +36,7 @@ The following section describes how to configure the application group in AD FS 
   
 1.  In AD FS Management, right-click on Application Groups and select **Add Application Group**.  
   
-2.  On the Application Group Wizard, for the name enter **ADFSSSO** and under **Standalone applications**select the **Server application or Website** template.  Click **Next**.  
+2.  On the Application Group Wizard, for the name enter **ADFSSSO** and under **Standalone applications** select the **Server application or Website** template.  Click **Next**.  
   
     ![AD FS OpenID](media/Enabling-OpenId-Connect-with-AD-FS-2016/AD_FS_OpenID_1.PNG)  
   
