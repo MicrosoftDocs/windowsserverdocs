@@ -92,7 +92,7 @@ sections:
 
     - href: \windows-server\remote\remote-access\vpn\always-on-vpn\deploy\always-on-vpn-adv-options
 
-      html: <p>You can add advanced VPN features to improve the security and availability of your VPN connection.</p>
+      html: <p>Learn about the advanced VPN features you can added to improve the security and availability of your VPN connection.</p>
 
       image:
 
@@ -120,7 +120,7 @@ sections:
 
     - href: \windows-server\remote\remote-access\vpn\always-on-vpn\deploy\always-on-vpn-deploy-deployment
 
-      html: <p>Learn about the workflow for deploying VPN connections.</p>
+      html: <p>Discover the high-level steps to deploy VPN connections.</p>
 
       image:
 
@@ -130,7 +130,7 @@ sections:
 
     - href: \windows-server\remote\remote-access\da-always-on-vpn-migration\da-always-on-migration-overview
     
-      html: <p>Learn how Always On VPN has expanded the VPN functionality beyond the capabilities of DirectAccess.</p>
+      html: <p>Start planning the migration from DirectAccess to Always On VPN.</p>
 
       image:
 
@@ -140,7 +140,7 @@ sections:
 
     - href: \windows-server\remote\remote-access\vpn\always-on-vpn\deploy\always-on-vpn-deploy-planning
     
-      html: <p>Start planning the remote access VPN connectivity deployment.</p>
+      html: <p>Start planning and preparing your Always On VPN deployment.</p>
 
       image:
 
