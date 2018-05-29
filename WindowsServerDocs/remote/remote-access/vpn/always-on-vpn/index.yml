@@ -110,7 +110,7 @@ sections:
 
     - href: \windows-server\remote\remote-access\vpn\always-on-vpn\deploy\always-on-vpn-deploy-deployment
 
-      html: <p>Learn about the workflow to deploy VPN connections for remote domain-joined Windows 10 client computers.</p>
+      html: <p>Learn about the workflow for deploying VPN connections.</p>
 
       image:
 
@@ -160,7 +160,7 @@ sections:
 
     - href: \windows-server\remote\remote-access\vpn\ad-ca-vpn-connectivity-windows10
     
-      html: <p>Fine-tune how VPN users access your resources using Azure Active Directory (Azure AD) conditional access.</p>
+      html: <p>Fine-tune how VPN users access your resources using Azure AD conditional access.</p>
 
       image:
 
