@@ -51,6 +51,7 @@ The following table lists each supported code page and its country/region or lan
 |865|Nordic|
 |866|Russian|
 |869|Modern Greek|
+|936|Chinese|
 
 ## Remarks
 

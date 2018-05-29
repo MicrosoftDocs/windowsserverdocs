@@ -1,8 +1,23 @@
 {
   "redirections": [
+
+    {  "source_path": "WindowsServerDocs/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-overview.md",
+      "redirect_url": "/windows-server/remote-access/vpn/always-on-vpn/always-on-vpn-technology-overview",
+      "redirect_document_id": true
+    },
     {
       "source_path": "WindowsServerDocs/networking/technologies/network-offload.md",
-      "redirect_url": "/windows-server/networking/technologies/high-performance-networking",
+      "redirect_url": "/windows-server/networking/technologies/hpn/hpn-top",
+      "redirect_document_id": true
+    },
+    {  
+      "source_path": "WindowsServerDocs/windows-insider/Whats-new-wip-at-work.md",
+      "redirect_url": "https://docs.microsoft.com/windows-insider/at-work/whats-new-wip-at-work",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/windows-insider/index.md",
+      "redirect_url": "https://docs.microsoft.com/windows-insider/at-work/",
       "redirect_document_id": true
     },
     {

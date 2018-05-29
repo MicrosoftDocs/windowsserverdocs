@@ -5,8 +5,8 @@ ms.technology: manage
 ms.topic: article
 author: daniellee-msft
 ms.author: jol
-ms.date: 04/05/2018
-ms.localizationpriority: low
+ms.date: 05/23/2018
+ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---
 # Install and Manage Extensions
@@ -56,4 +56,4 @@ You can uninstall any extensions you have previously installed, or even uninstal
 
 After uninstall is complete, your browser will automatically be refreshed and Windows Admin Center will be reloaded with the extension removed. If you uninstalled a tool that was pre-installed as part of Windows Admin Center, the tool will be available for reinstallation in the **Available Extensions** tab.
 
-[Learn more about building an extension with the Windows Admin Center SDK](../extend/how-sdk-works.md).
+[Learn more about building an extension with the Windows Admin Center SDK](../extend/extensibility-overview.md).

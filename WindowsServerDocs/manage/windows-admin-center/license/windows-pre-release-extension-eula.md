@@ -5,8 +5,8 @@ ms.technology: manage
 ms.topic: reference
 author: daniellee-msft
 ms.author: jol
-ms.date: 04/11/2018
-ms.localizationpriority: low
+ms.date: 05/23/2018
+ms.localizationpriority: high
 ms.prod: windows-server-threshold
 ---
 ## MICROSOFT SOFTWARE LICENSE TERMS - PRE-RELEASE EXTENSIONS FOR MICROSOFT WINDOWS ADMIN CENTER

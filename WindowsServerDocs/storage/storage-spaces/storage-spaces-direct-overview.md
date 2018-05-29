@@ -6,7 +6,7 @@ ms.manager: dongill
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 3/30/2018
+ms.date: 5/22/2018
 ms.assetid: 8bd0d09a-0421-40a4-b752-40ecb5350ffd
 description: An overview of Storage Spaces Direct, a feature of Windows Server Enterprise Edition that enables you to cluster servers with internal storage into a software-defined storage solution.
 ms.localizationpriority: medium
@@ -15,9 +15,11 @@ ms.localizationpriority: medium
 
 >Applies to: Windows Server 2016
 
-Storage Spaces Direct uses industry-standard servers with local-attached drives to create highly available, highly scalable software-defined storage at a fraction of the cost of traditional SAN or NAS arrays. Its converged or hyper-converged architecture radically simplifies procurement and deployment, while features like caching, storage tiers, and erasure coding, together with the latest hardware innovation like RDMA networking and NVMe drives, deliver unrivaled efficiency and performance.
+Storage Spaces Direct uses industry-standard servers with local-attached drives to create highly available, highly scalable software-defined storage at a fraction of the cost of traditional SAN or NAS arrays. Its converged or hyper-converged architecture radically simplifies procurement and deployment, while features such as caching, storage tiers, and erasure coding, together with the latest hardware innovations such as RDMA networking and NVMe drives, deliver unrivaled efficiency and performance.
 
-Storage Spaces Direct is included in Windows Server 2016 Datacenter and [Windows Server Insider Preview Builds](https://insider.windows.com/en-us/for-business-getting-started-server/).
+Storage Spaces Direct is included in Windows Server 2016 Datacenter and [Windows Server Insider Preview Builds](https://insider.windows.com/en-us/for-business-getting-started-server/). 
+
+For other applications of Storage Spaces, such as Shared SAS clusters and stand-alone servers, see [Storage Spaces overview](overview.md). If you're looking for info about using Storage Spaces on a Windows 10 PC, see [Storage Spaces in Windows 10](https://support.microsoft.com/help/12438/windows-10-storage-spaces).
 
 <table>
     <tr style="border: 0;">
@@ -48,7 +50,8 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter and [Windows
             <strong>Deploy</a></strong>
             <ul>
 			  <li><a href="deploy-storage-spaces-direct.md">Deploy Storage Spaces Direct</a></li>
-			  <li><a href="create-volumes.md">Create volumes</a><br><br><br><br></li>
+			  <li><a href="create-volumes.md">Create volumes</a></li>
+              <li><a href="../../failover-clustering/manage-cluster-quorum.md">Configure quorum</a><br><br><br></li>
 		    </ul>
         </td>        
         <td style="padding: 5px; border: 0;">
@@ -60,11 +63,16 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter and [Windows
 			  <li><a href="remove-servers.md">Remove servers</a></li>
 			  <li><a href="resize-volumes.md">Extend volumes</a></li>
 			  <li><a href="../update-firmware.md">Update drive firmware</a></li>
-              <li><a href="storage-spaces-states.md">Troubleshoot health and operational states</a></li>
 		    </ul>
         </td>
     </tr>
     <tr style="border: 0;">
+         <td style="padding: 5px; border: 0;">
+            <strong>Troubleshooting</a></strong>
+            <ul>
+              <li><a href="storage-spaces-states.md">Troubleshoot health and operational states</a></li>
+              <li><a href="data-collection.md">Collect diagnostic data with Storage Spaces Direct</a></li>
+            </ul>
          <td style="padding: 5px; border: 0;">
             <strong>Insider Preview content</a></strong>
             <ul>
@@ -72,14 +80,13 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter and [Windows
                 <li><a href="delimit-volume-allocation.md">Delimit the allocation of volumes</a></li>
             </ul>
     </tr>
-    
 </table>
 
 ## Videos
 
 **Quick Video Overview (5 minutes)**
 
-<iframe src="https://www.youtube.com/embed/raeUiNtMk0E" width="560" height="315" allowfullscreen></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/raeUiNtMk0E" width="560" height="315" allowfullscreen></iframe>
 
 **Storage Spaces Direct at Microsoft Ignite 2017 (1 hour)**
 

@@ -89,27 +89,28 @@
 #### [DHCP Logging Events for DNS Record Registrations](technologies/dhcp/dhcp-dns-events.md)
 ### [Deploy DHCP Using Windows PowerShell](technologies/dhcp/dhcp-deploy-wps.md)
 
-## [High-Performance Networking](technologies/network-offload.md)
+## [High-Performance Networking (HPN)](technologies/hpn/hpn-top.md)
 
-### [Remote Direct Memory Access]
-#### [Converged NIC Configuration Guide](technologies/conv-nic/cnic-top.md)
-##### [Converged NIC Configuration with a Single Network Adapter](technologies/conv-nic/cnic-single.md)
-##### [Converged NIC Teamed NIC Configuration](technologies/conv-nic/cnic-datacenter.md)
-##### [Physical Switch Configuration for Converged NIC](technologies/conv-nic/cnic-app-switch-config.md)
-##### [Troubleshooting Converged NIC Configurations](technologies/conv-nic/cnic-app-troubleshoot.md)
+### [Network Offload and Optimization Technologies](technologies/hpn/network-offload-and-optimization-technologies.md)
+#### [Feature Compatibility]()
 
-#### [Data Center Bridging (DCB)](technologies/dcb/dcb-top.md)
-##### [Install Data Center Bridging (DCB) in Windows Server or Windows Client](technologies/dcb/dcb-install.md)
-##### [Manage Data Center Bridging (DCB)](technologies/dcb/dcb-manage.md)
 
-### [Network Offload and Optimization Technologies]
-#### [Feature and Compatibility]
-#### [Virtual Receive Side Scaling (vRSS)](technologies/vrss/vrss-top.md)
-##### [Plan the Use of vRSS](technologies/vrss/vrss-plan.md)
-##### [Enable vRSS on a Virtual Network Adapter](technologies/vrss/vrss-enable.md)
-##### [Manage vRSS](technologies/vrss/vrss-manage.md)
-##### [vRSS Frequently Asked Questions](technologies/vrss/vrss-faq.md)
-##### [Windows PowerShell Commands for RSS and vRSS](technologies/vrss/vrss-wps.md)
+### [Converged NIC Configuration Guide](technologies/conv-nic/cnic-top.md)
+#### [Converged NIC Configuration with a Single Network Adapter](technologies/conv-nic/cnic-single.md)
+#### [Converged NIC Teamed NIC Configuration](technologies/conv-nic/cnic-datacenter.md)
+#### [Physical Switch Configuration for Converged NIC](technologies/conv-nic/cnic-app-switch-config.md)
+#### [Troubleshooting Converged NIC Configurations](technologies/conv-nic/cnic-app-troubleshoot.md)
+
+### [Data Center Bridging (DCB)](technologies/dcb/dcb-top.md)
+#### [Install Data Center Bridging (DCB) in Windows Server or Windows Client](technologies/dcb/dcb-install.md)
+#### [Manage Data Center Bridging (DCB)](technologies/dcb/dcb-manage.md)
+
+### [Virtual Receive Side Scaling (vRSS)](technologies/vrss/vrss-top.md)
+#### [Plan the Use of vRSS](technologies/vrss/vrss-plan.md)
+#### [Enable vRSS on a Virtual Network Adapter](technologies/vrss/vrss-enable.md)
+#### [Manage vRSS](technologies/vrss/vrss-manage.md)
+#### [vRSS Frequently Asked Questions](technologies/vrss/vrss-faq.md)
+#### [Windows PowerShell Commands for RSS and vRSS](technologies/vrss/vrss-wps.md)
 
 
 ## [Hyper-V Virtual Switch](technologies/vswitch-stub.md)
@@ -140,6 +141,11 @@
 
 ## [Network Load Balancing](technologies/Network-Load-Balancing.md)
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 1f46ae5f5ef58300d1584b27f08e831eed98d620
 ## [Network Policy Server (NPS)](technologies/nps/nps-top.md)
 ### [Network Policy Server Best Practices](technologies/nps/nps-best-practices.md)
 ### [Getting Started with Network Policy Server](technologies/nps/nps-getstart-top.md)
@@ -177,6 +183,7 @@
 ##### [Unregister an NPS Server from an Active Directory Domain](technologies/nps/nps-manage-unregister.md)
 ##### [Use Regular Expressions in NPS](technologies/nps/nps-crp-reg-expressions.md)
 ##### [Verify Configuration After NPS Server Changes](technologies/nps/nps-manage-verify.md)
+##### [Network Policy Server data collection](technologies/nps/nps-data-collection.md)
 #### [Manage NPS Templates](technologies/nps/nps-manage-templates.md)
 
 ## [Network Shell (Netsh)](technologies/netsh/netsh.md)
@@ -272,7 +279,8 @@
 ### [Accurate Time for Windows Server 2016](windows-time-service/accurate-time.md)
 ### [Support boundary to configure the Windows Time service for high-accuracy environments](windows-time-service/support-boundary.md)
 ### [Configuring Systems for High Accuracy](windows-time-service/configuring-systems-for-high-accuracy.md)
+### [Windows Time for Traceability](windows-time-service/windows-time-for-traceability.md)
 ### [Windows Time Service Technical Reference](windows-time-service/windows-time-service-tech-ref.md)
 #### [How the Windows Time Service Works](windows-time-service/How-the-Windows-Time-Service-Works.md)
 #### [Windows Time Service Tools and Settings](windows-time-service/Windows-Time-Service-Tools-and-Settings.md)
-#### [Windows Time for Traceability](windows-time-service/windows-time-for-traceability.md)
+

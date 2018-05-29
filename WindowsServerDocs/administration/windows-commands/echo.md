@@ -34,7 +34,7 @@ echo [on | off]
 
 |Parameter|Description|
 |---------|-----------|
-|[on | off]|Turns on or off the command echoing feature. Command echoing is on by default.|
+|[on \| off]|Turns on or off the command echoing feature. Command echoing is on by default.|
 |\<Message>|Specifies the text to display on the screen.|
 |/?|Displays help at the command prompt.|
 

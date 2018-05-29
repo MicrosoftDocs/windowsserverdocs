@@ -6,7 +6,7 @@ ms.topic: article
 author: JasonGerend 
 ms.author: jgerend 
 ms.technology: storage 
-ms.date: 4/5/18
+ms.date: 04/05/2018
 ms.localizationpriority: low
 ---
 # Deploy Folder Redirection with Offline Files
@@ -40,7 +40,7 @@ Folder Redirection has the following software requirements:
     - When using a clustered file share, disable continuous availability on the file share to avoid performance issues with Folder Redirection and Offline Files. Additionally, Offline Files might not transition to offline mode for 3-6 minutes after a user loses access to a continuously available file share, which could frustrate users who aren’t yet using the Always Offline mode of Offline Files.
 
 >[!NOTE]
->To use new features in Folder Redirection, there are additional client computer and Active Directory schema requirements. For more information, see [Folder Redirection, Offline Files, and Roaming User Profiles](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj649074(v%3dws.11)>).
+>To use new features in Folder Redirection, there are additional client computer and Active Directory schema requirements. For more information, see [Folder Redirection, Offline Files, and Roaming User Profiles](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj649074(v%3dws.11)>).
 
 ## Step 1: Create a folder redirection security group
 
@@ -148,10 +148,10 @@ Here's how to create a GPO for Folder Redirection:
 8. In the **Select User, Computer, or Group** dialog box, type the name of the security group you created in Step 1 (for example, **Folder Redirection Users**), and then select **OK**.
 9. Select the **Delegation** tab, select **Add**, type **Authenticated Users**, select **OK**, and then select **OK** again to accept the default Read permissions.
     
-    This step is necessary due to security changes made in [MS16-072](https://support.microsoft.com/en-us/help/3163622/ms16-072-security-update-for-group-policy-june-14-2016).
+    This step is necessary due to security changes made in [MS16-072](https://support.microsoft.com/help/3163622/ms16-072-security-update-for-group-policy-june-14-2016).
 
 >[!IMPORTANT]
->Due to the security changes made in [MS16-072](https://support.microsoft.com/en-us/help/3163622/ms16-072-security-update-for-group-policy-june-14-2016), you now must give the Authenticated Users group delegated Read permissions to the Folder Redirection GPO - otherwise the GPO won't get applied to users, or if it's already applied, the GPO is removed, redirecting folders back to the local PC. For more info, see [Deploying Group Policy Security Update MS16-072](https://blogs.technet.microsoft.com/askds/2016/06/22/deploying-group-policy-security-update-ms16-072-kb3163622/).
+>Due to the security changes made in [MS16-072](https://support.microsoft.com/help/3163622/ms16-072-security-update-for-group-policy-june-14-2016), you now must give the Authenticated Users group delegated Read permissions to the Folder Redirection GPO - otherwise the GPO won't get applied to users, or if it's already applied, the GPO is removed, redirecting folders back to the local PC. For more info, see [Deploying Group Policy Security Update MS16-072](https://blogs.technet.microsoft.com/askds/2016/06/22/deploying-group-policy-security-update-ms16-072-kb3163622/).
 
 ## Step 4: Configure folder redirection with Offline Files
 
@@ -159,7 +159,7 @@ After creating a GPO for Folder Redirection settings, edit the Group Policy sett
 
 >[!NOTE]
 >Offline Files is enabled by default for redirected folders on Windows client computers, and disabled on computers running Windows Server, unless changed by the user. To use Group Policy to control whether Offline Files is enabled, use the **Allow or disallow use of the Offline Files feature** policy setting.
-> For information about some of the other Offline Files Group Policy settings, see [Enable Advanced Offline Files Functionality](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn270369(v%3dws.11)>), and [Configuring Group Policy for Offline Files](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc759721(v%3dws.10)>).
+> For information about some of the other Offline Files Group Policy settings, see [Enable Advanced Offline Files Functionality](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn270369(v%3dws.11)>), and [Configuring Group Policy for Offline Files](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc759721(v%3dws.10)>).
 
 Here's how to configure Folder Redirection in Group Policy:
 
@@ -225,9 +225,9 @@ The following table summarizes some of the most important changes to this topic.
 
 ## More information
 
-* [Deploy Folder Redirection, Offline Files, and Roaming User Profiles](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj649074(v%3dws.11)>)
+* [Deploy Folder Redirection, Offline Files, and Roaming User Profiles](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj649074(v%3dws.11)>)
 * [Deploy Primary Computers for Folder Redirection and Roaming User Profiles](deploy-primary-computers.md)
-* [Enable Advanced Offline Files Functionality](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn270369(v%3dws.11)>)
+* [Enable Advanced Offline Files Functionality](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn270369(v%3dws.11)>)
 * [Microsoft’s Support Statement Around Replicated User Profile Data](https://blogs.technet.microsoft.com/askds/2010/09/01/microsofts-support-statement-around-replicated-user-profile-data/)
-* [Sideload Apps with DISM](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-8.1-and-8/hh852635(v=win.10)>)
+* [Sideload Apps with DISM](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh852635(v=win.10)>)
 * [Troubleshooting packaging, deployment, and query of Windows Runtime-based apps](https://msdn.microsoft.com/library/windows/desktop/hh973484.aspx)

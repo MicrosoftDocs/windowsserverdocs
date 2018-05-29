@@ -91,9 +91,6 @@ Drives can be internal to the server, or in an external enclosure that is connec
 
 ![diagram of supported drive interconnects](media/hardware-requirements/drive-interconnect-support-2.png)
 
-> [!NOTE]
-> Microsoft has a critical product advisory for Storage Spaces Direct customers using the Intel P3x00 family of NVMe devices (all capacities of the P3500, P3600, P3700). See Knowledge Base article [4052341](https://support.microsoft.com/help/4052341) for more information.
-
 ### Minimum number of drives (excludes boot drive)
 
 - If there are drives used as cache, there must be at least 2 per server

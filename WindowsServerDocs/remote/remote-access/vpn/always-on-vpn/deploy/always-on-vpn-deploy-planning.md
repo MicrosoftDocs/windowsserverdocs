@@ -1,30 +1,35 @@
 ---
-title: Remote Access Always On VPN Deployment Planning
+title: Play the Always On VPN Deployment
 description: This topic provides planning instructions for deploying Always On VPN in Windows Server 2016.
 ms.prod: windows-server-threshold
-ms.technology: networking
+ms.technology: networking-ras
 ms.topic: article
 ms.assetid: 3c9de3ec-4bbd-4db0-b47a-03507a315383
-manager: brianlic
+manager: elizap
 ms.author: pashort
 author: shortpatti
+ms.date: 05/25/2018
 ---
-# Remote Access Always On VPN Deployment Planning
+# Plan the Always On VPN Deployment
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
+
+
+&#171;  [**Previous:** Learn about the Always On VPN advanced features](always-on-vpn-adv-options.md)<br>
+&#187;  [**Next:** Start deploying Always On VPN](always-on-vpn-deploy-deployment.md)
 
 You can use the following steps to plan for your Always On VPN deployment.
 
 ## Prepare the Remote Access Server
 
-Before you install the Remote Access server role on the computer you're planning on using as a VPN server, perform the following tasks.
+Before you install the Remote Access server role on the computer you're planning on using as a VPN server, perform the following tasks. 
 
 - **Ensure VPN server software and hardware configuration is correct**. You must install Windows Server 2016 on the computer that you plan to use as a Remote Access VPN server. This server must have two physical network adapters installed, one to connect to the external perimeter network, and one to connect to the internal perimeter network.
 
 - **Identify which network adapter connects to the Internet and which network adapter connects to your private network**. You must configure the Internet facing network adapter with a public IP address, while the adapter facing the Intranet can use an IP address from the local network.
 
->[!NOTE]
->If you prefer not to use a public IP address on your perimeter network, you can configure the Edge Firewall with a public IP address, and then configure the firewall to forward VPN connection requests to the VPN server.
+    >[!TIP]
+    >If you prefer not to use a public IP address on your perimeter network, you can configure the Edge Firewall with a public IP address, and then configure the firewall to forward VPN connection requests to the VPN server.
 
 - **Connect the VPN server to the network**. Install the VPN server on a perimeter network, between the edge firewall and the perimeter firewall.
 
@@ -32,7 +37,8 @@ Before you install the Remote Access server role on the computer you're planning
 
 IKEv2 is a VPN tunneling protocol described in Internet Engineering Task Force Request for Comments 7296. The primary advantage of IKEv2 is that it tolerates interruptions in the underlying network connection. For example, if the connection is temporarily lost or if a user moves a client computer from one network to another, IKEv2 automatically restores the VPN connection when the network connection is reestablished — all without user intervention.
 
-You can configure the Remote Access VPN server to support IKEv2 connections while also disabling unused protocols, which reduces the server’s security footprint. 
+>[!TIP]
+>You can configure the Remote Access VPN server to support IKEv2 connections while also disabling unused protocols, which reduces the server’s security footprint. 
 
 ## Plan IP Addresses for Remote Clients
 
@@ -54,11 +60,13 @@ The following steps provide instructions on how to make minor adjustments to the
 
 In addition, the VPN server is installed inside the perimeter network, which partitions the perimeter network into internal and external perimeter networks. Because of this, you might need to make several routing modifications, depending on your network environment.
 
-- **Configure port forwarding \(optional\)**. Your edge firewall must open the ports and protocol IDs associated with an IKEv2 VPN and forward them to the VPN server. In most environments, doing so requires you to configure port forwarding. Redirect Universal Datagram Protocol (UDP) ports 500 and 4500 to the VPN server.
+- **\(Optional\) Configure port forwarding.** Your edge firewall must open the ports and protocol IDs associated with an IKEv2 VPN and forward them to the VPN server. In most environments, doing so requires you to configure port forwarding. Redirect Universal Datagram Protocol (UDP) ports 500 and 4500 to the VPN server.
 
 - **Configure routing so that the DNS servers and VPN servers can reach the Internet**. This deployment uses IKEv2 and Network Address Translation \(NAT\). Ensure that the VPN server can reach all of the required internal networks and network resources that you want to provide to remote users. Any network or resource that is not reachable from the VPN server will also be unreachable over VPN connections from remote locations.
 
 In most environments, you can simply adjust static routes on the edge firewall and the VPN server to allow them to reach this new internal perimeter network. In complex environments, you may need to add static routes to internal routers or adjust internal firewall rules for the VPN server and the block of IP addresses associated with VPN clients.
 
-For the next section in this guide, see [Remote Access Always On VPN Deployment](always-on-vpn-deploy-deployment.md).
+## Next step
+[Start deploying Always On VPN](always-on-vpn-deploy-deployment.md): Learn how to deploy Always On VPN connections for remote Windows 10 client computers that are domain-joined. You can also learn how to configure conditional access for VPN connectivity using Azure Active Directory. 
 
+---

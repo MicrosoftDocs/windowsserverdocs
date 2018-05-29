@@ -7,7 +7,7 @@ ms.manager: dongill
 author: JasonGerend
 ms.author: jgerend
 ms.technology: storage-failover-clustering
-ms.date: 3/23/2017
+ms.date: 03/23/2017
 description: Cluster-Aware Updating (CAU) automates software update installation on clusters running Windows Server.
 ms.assetid: 3c2993b4-aa81-452b-a5c3-3724ad95d892
 ---

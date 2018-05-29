@@ -21,6 +21,10 @@ ms.date: 10/16/2017
 
 Allows programs to open data files in specified directories as if they were in the current directory. If used without parameters, **append** displays the appended directory list.
 
+> [!NOTE]
+> This command not supported in Windows 10.
+>
+
 For examples of how to use this command, see [Examples](#BKMK_examples).
 
 ## Syntax

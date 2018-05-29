@@ -1,170 +1,83 @@
 ---
-title: Remote Access Always On VPN Deployment Guide for Windows Server and Windows 10
-description: You can use this guide to deploy Always On Virtual Private Network (VPN) connections for remote employees by using Remote Access in Windows Server 2016 or later and Always On VPN profiles for Windows 10 client computers.
+title: Always On VPN Deployment for Windows Server and Windows 10
+description: You can use this deployment to deploy Always On Virtual Private Network (VPN) connections for remote employees by using Remote Access in Windows Server 2016 or later and Always On VPN profiles for Windows 10 client computers.
 ms.prod: windows-server-threshold
-ms.technology: networking
+ms.technology: networking-ras
 ms.topic: article
 ms.assetid: 5ae1a40b-4f10-4ace-8aaf-13f7ab581f4f
-manager: brianlic
+manager: elizapo
+ms.date: 05/25/2018
 ms.author: pashort
 author: shortpatti
 ---
 
-# Remote Access Always On VPN Deployment Guide for Windows Server and Windows 10
+# Always On VPN Deployment for Windows Server and Windows 10
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-You can use this guide to deploy Always On Virtual Private Network \(VPN\) connections for remote employees by using Remote Access in Windows Server 2016 and Always On VPN profiles for Windows 10 client computers.
+&#171;  [**Previous:** Remote Access](../../../Remote-Access.md)<br>
+&#187; [**Next:** Learn about the feature comparison between Always On VPN and DirectAccess](../../vpn-map-da.md)
 
->[!IMPORTANT]
->This guide is designed for deploying Always On VPN with the Remote Access server role on an on\-premises organization network. Do not attempt to deploy Remote Access on a virtual machine \(VM\) in Microsoft Azure. Using Remote Access in Microsoft Azure is not supported, including both Remote Access VPN and DirectAccess. For more information, see [Microsoft server software support for Microsoft Azure virtual machines](https://support.microsoft.com/help/2721672/microsoft-server-software-support-for-microsoft-azure-virtual-machines).
+Always On VPN has many benefits over the Windows VPN solutions of the past. Key improvements in integration, security, connectivity, networking control, and compatibility align Always On VPN with Microsoft's cloud-first, mobile-first vision. For details on the improved functionality, see [Always On VPN Advanced Features](../../vpn-map-da.md#improved-functionality). 
 
-This guide contains the following sections.
+Always On VPN provides a single, cohesive solution for remote access for all your connected devices going forward, even personally owned devices. Also, you can choose which management platform they prefer for deploying the Always On VPN configuration because the CSP is not vendor specific.
 
-- [About this guide](#bkmk_about)
+You most likely have the technologies deployed that you can use for the Always On VPN deployment.  Other than your DC/DNS servers, the Always On VPN deployment requires an NPS (RADIUS) server, a CA server, and a Remote Access (Routing/VPN) server. Once the infrastructure is set up, you must enroll clients and then connect the clients to your on-premises securely through several network changes. 
 
-- [Prerequisites for using this guide](#bkmk_prerequisites)
 
-- [What this guide does not provide](#bkmk_not)
+## <a name="bkmk_about"></a>About this deployment
 
-- [Technology overviews](#bkmk_technology)
+The instructions provided walk you through deploying Remote Access as a single tenant VPN RAS Gateway for point\-to\-site VPN connections, using any of the four scenarios mentioned below, for remote client computers that are running Windows 10. You also find instructions for modifying some of your existing infrastructure for the deployment. Also throughout this deployment, you find links to help you learn more about the VPN connection process, servers to configure, ProfileXML VPNv2 CSP node, and other technologies to deploy Always On VPN.
 
-- [Remote Access Always On VPN Deployment Overview](always-on-vpn-deploy-overview.md)
+**Always On VPN deployment scenarios:**
 
-- [Remote Access Always On VPN Deployment Planning](always-on-vpn-deploy-planning.md)
+1. Deploy Always On VPN only.
+2. Deploy Always On VPN with conditional access for VPN connectivity using Azure AD.
+3. Deploy Always On VPN and migrate from DirectAccess.
+4. Deploy Always On VPN with conditional access for VPN connectivity using Azure AD and migrate from DirectAccess.
 
-- [Remote Access Always On VPN Deployment](always-on-vpn-deploy-deployment.md)
+For more details about the scenarios presented, see [Deploy Always On VPN](always-on-vpn-deploy-deployment.md).
 
-- [Remote Access Always On VPN Advanced Features](always-on-vpn-adv-options.md)
+## <a name="bkmk_not"></a>What is not provide in this deployment
 
-- [Remote Access Always On VPN Troubleshooting](always-on-vpn-deploy-troubleshooting.md)
+This deployment does not provide instructions for deploying the following items:
 
-## <a name="bkmk_about"></a>About this guide
-
-This guide is designed for network and system administrators who want to manage remote computers that connect automatically to the organization network with VPN whenever the user logs on to the device, changes networks, or simply turns on the display. This type of automatically connecting VPN is called an *Always On VPN* - because the VPN connection appears to be a persistent connection.
-
->[!NOTE]
->This guide is available for download in Word format at [TechNet Gallery](https://gallery.technet.microsoft.com/Always-On-VPN-Deployment-e681bc7d).
-
-This guide provides instructions on deploying Remote Access as a single tenant VPN RAS Gateway for point\-to\-site VPN connections that allow your remote employees to connect to your organization network with Always On VPN connections.
-
-It is recommended that you review the design and deployment guides for each of the technologies that are used in this deployment scenario. These guides can help you determine whether this deployment scenario provides the services and configuration that you need for your organization's network. For more information, see [Technology overviews](#bkmk_technology).
-
-## <a name="bkmk_prerequisites"></a>Prerequisites for using this guide
-
-This guide provides instructions on how to deploy Remote Access Always On VPN connections for remote client computers that are running Windows 10. Following are the prerequisites for performing the procedures in this guide.
-
->[!IMPORTANT]
->For this deployment, it is not a requirement that your infrastructure servers, such as computers running Active Directory Domain Services, Active Directory Certificate Services, and Network Policy Server, are running Windows Server 2016. You can use earlier versions of Windows Server, such as Windows Server 2012 R2, for the infrastructure servers and for the server that is running Remote Access.
-
-- You must have an Active Directory domain infrastructure, including one or more Domain Name System \(DNS\) servers.
-- You must have a Public Key Infrastructure \(PKI\) and Active Directory Certificate Services \(AD CS\).
-- You must have a perimeter network that includes two firewalls. For more information, see [Remote Access Always On VPN Deployment Overview](always-on-vpn-deploy-overview.md)
-- Remote client computers must be joined to the Active Directory domain.
-- Remote client computers must be running the Windows 10 Anniversary Update \(version 1607\) or later operating system.
-- You must be prepared to deploy one new physical server or virtual machine \(VM\) on your perimeter network, upon which you will install Remote Access. This server must have two physical Ethernet network adapters.
-- You must be prepared to install NPS as a RADIUS server on a server or VM. You can install NPS on a new physical server or on a new VM. If you already have NPS servers on your network, you can modify an existing NPS server configuration rather than adding a new server.
-- You must read the planning section of this guide to ensure that you are prepared for this deployment before you perform the deployment.
-- You must perform the steps in this guide in the order in which they are presented.
-
-## <a name="bkmk_not"></a>What this guide does not provide
-
-This guide does not provide instructions for deploying the following items.
-
-- Active Directory Domain Services \(AD DS\)
+- Active Directory Domain Services \(AD DS\).
 - Active Directory Certificate Services \(AD CS\) and a Public Key Infrastructure \(PKI\).
 - Dynamic Host Configuration Protocol \(DHCP\) automatic IP address assignment to computers and other devices that are configured as DHCP clients. 
 - Network hardware, such as Ethernet cabling, firewalls, switches, and hubs.
 - Additional network resources, such as application and file servers, that remote users can access over an Always On VPN connection.
-- Internet connectivity
+- Internet connectivity or Conditional Access for Internet connectivity using Azure AD.
 
-## <a name="bkmk_technology"></a>Technology Overviews
-
-When performing the steps in this guide, you must install and configure the following technologies in Windows Server 2016.
-
-If you already have some of these technologies deployed on your network, you can use the instructions in this guide to perform additional configuration of the technologies for this deployment purpose.
-
-Following are brief overviews of these technologies and links to additional documentation.
-
-### Remote Access
-
-In Windows Server 2016, the Remote Access server role is a multifaceted gateway and router that provides centralized administration, configuration, and monitoring of Virtual Private Network \(VPN\) remote access services. 
-
-You can manage Remote Access Service \(RAS\) Gateways by using Windows PowerShell commands and the Remote Access Microsoft Management Console \(MMC\). 
-
-For more information, see [Remote Access](https://docs.microsoft.com/windows-server/remote/remote-access/remote-access).
-
-#### Windows 10 VPN Clients
-
-Remote client computers must be running the Windows 10 Anniversary Update \(version 1607\) or later operating system, and must be joined to your Active Directory domain.
-
-For detailed feature descriptions and a full list of the VPN capabilities in Windows 10, see the [Windows 10 VPN Technical Guide](https://docs.microsoft.com/windows/access-protection/vpn/vpn-guide).
-
-### Active Directory Domain Services \(AD DS\)
-
-AD DS provides a distributed database that stores and manages information about network resources and application-specific data from directory-enabled applications. Administrators can use AD DS to organize elements of a network, such as users, computers, and other devices, into a hierarchical containment structure. The hierarchical containment structure includes the Active Directory forest, domains in the forest, and organizational units \(OUs\) in each domain. A server that is running AD DS is called a domain controller. 
-
-AD DS contains the user accounts, computer accounts, and account properties that are required by Protected Extensible Authentication Protocol \(PEAP\) to authenticate user credentials and to evaluate authorization for VPN connection requests.
-
-For information about deploying AD DS, see the Windows Server 2016 [Core Network Guide](https://docs.microsoft.com/windows-server/networking/core-network-guide/core-network-guide).
-
-#### Active Directory Users and Computers
-
-Active Directory Users and Computers is a component of AD DS that contains accounts that represent physical entities, such as a computer, a person, or a security group. A security group is a collection of user or computer accounts that administrators can manage as a single unit. User and computer accounts that belong to a particular group are referred to as group members. 
-
-#### Group Policy Management
-
-Group Policy Management enables directory-based change and configuration management of user and computer settings, including security and user information. You use Group Policy to define configurations for groups of users and computers. 
-
-With Group Policy, you can specify settings for registry entries, security, software installation, scripts, folder redirection, remote installation services, and Internet Explorer maintenance. The Group Policy settings that you create are contained in a Group Policy object \(GPO\). By associating a GPO with selected Active Directory system containers — sites, domains, and OUs — you can apply the GPO's settings to the users and computers in those Active Directory containers. To manage Group Policy objects across an enterprise, you can use the Group Policy Management Editor Microsoft Management Console \(MMC\). 
-
-### Domain Name System \(DNS\)
-
-DNS is a name resolution protocol for TCP/IP networks, such as the Internet or an organization network. A DNS server hosts the information that enables client computers and services to resolve easily recognized, alphanumeric DNS names to the IP addresses that computers use to communicate with each other.
-
-For more overview information about DNS, see [Domain Name System (DNS)](https://docs.microsoft.com/windows-server/networking/dns/dns-top).
-
-For information about deploying AD DS with DNS, see the Windows Server 2016 [Core Network Guide](https://docs.microsoft.com/windows-server/networking/core-network-guide/core-network-guide).
-
-### Active Directory Certificate Services
-
-AD CS in Windows Server 2016 provides customizable services for creating and managing the X.509 certificates that are used in software security systems that employ public key technologies. Organizations can use AD CS to enhance security by binding the identity of a person, device, or service to a corresponding public key. AD CS also includes features that allow you to manage certificate enrollment and revocation in a variety of scalable environments.
-
-For more information, see [Active Directory Certificate Services Overview](https://technet.microsoft.com/library/hh831740.aspx) and [Public Key Infrastructure Design Guidance](https://social.technet.microsoft.com/wiki/contents/articles/2901.public-key-infrastructure-design-guidance.aspx). 
-
-#### Certificate Templates
-
-Certificate templates can greatly simplify the task of administering a certification authority \(CA\) by allowing you to issue certificates that are preconfigured for selected tasks. The Certificate Templates MMC snap-in allows you to perform the following tasks.
-
-- View properties for each certificate template.
-- Copy and modify certificate templates.
-- Control which users and computers can read templates and enroll for certificates.
-- Perform other administrative tasks relating to certificate templates.
-
-Certificate templates are an integral part of an enterprise certification authority (CA). They are an important element of the certificate policy for an environment, which is the set of rules and formats for certificate enrollment, use, and management.
-
-For more information, see [Certificate Templates](https://technet.microsoft.com/library/cc730705.aspx).
-
-#### Digital Server Certificates
-
-This guide provides instructions for using Active Directory Certificate Services (AD CS) to both enroll and automatically enroll certificates to Remote Access and NPS infrastructure servers. AD CS allows you to build a public key infrastructure \(PKI\) and provide public key cryptography, digital certificates, and digital signature capabilities for your organization.  
-
-When you use digital server certificates for authentication between computers on your network, the certificates provide:
-
-1. Confidentiality through encryption. 
-2. Integrity through digital signatures. 
-3. Authentication by associating certificate keys with computer, user, or device accounts on a computer network.
-
-For more information, see [AD CS Step by Step Guide: Two Tier PKI Hierarchy Deployment](https://social.technet.microsoft.com/wiki/contents/articles/15037.ad-cs-step-by-step-guide-two-tier-pki-hierarchy-deployment.aspx).
-
-### Network Policy Server (NPS)
-
-NPS allows you to create and enforce organization-wide network access policies for connection request authentication and authorization. When you use NPS as a Remote Authentication Dial-In User Service \(RADIUS\) server, you configure network access servers, such as VPN servers, as RADIUS clients in NPS. 
-
-You also configure network policies that NPS uses to authorize connection requests, and you can configure RADIUS accounting so that NPS logs accounting information to log files on the local hard disk or in a Microsoft SQL Server database. 
-
-For more information, see [Network Policy Server (NPS)](https://docs.microsoft.com/windows-server/networking/technologies/nps/nps-top).
-
-For the next section in this guide, see [Remote Access Always On VPN Deployment Overview](always-on-vpn-deploy-overview.md).
+## <a name="bkmk_prerequisites"></a>Deployment prerequisites
 
 
+To deploy Always On VPN successfully, the remote client computers must be joined to the Active Directory domain and running the Windows 10 Anniversary Update \(version 1607\) or later operating system.  Additionally, you must have:
+- An Active Directory domain infrastructure, including one or more Domain Name System \(DNS\) servers.
+- A Public Key Infrastructure \(PKI\) and Active Directory Certificate Services \(AD CS\).
+- A perimeter network that includes two firewalls. For more information, see [Always On VPN Technology Overview](../always-on-vpn-technology-overview.md).
+- Read the planning section of this guide to ensure that you are prepared for this deployment before you perform the deployment.
+- Physical server or virtual machine \(VM\) on your perimeter network with two physical Ethernet network adapters to install Remote Access. VMs require virtual LAN (VLAN) for the host. 
+- Physical server, existing or new, to install Network Policy Server \(NPS\). If you already have NPS servers on your network, you can modify an existing NPS server configuration rather than adding a new server.
+- Membership in **Administrators**, or equivalent, is the minimum required.
+
+It is recommended that you review the design and deployment guides for each of the technologies that are used in the deployment scenarios. These guides can help you determine whether the deployment scenarios provide the services and configuration that you need for your organization's network. For more information, see [Always On VPN Technology Overview](../always-on-vpn-technology-overview.md).
+
+>[!IMPORTANT]
+>For this deployment, it is not a requirement that your infrastructure servers, such as computers running Active Directory Domain Services, Active Directory Certificate Services, and Network Policy Server, are running Windows Server 2016. You can use earlier versions of Windows Server, such as Windows Server 2012 R2, for the infrastructure servers and for the server that is running Remote Access.
+>
+>Do not attempt to deploy Remote Access on a virtual machine \(VM\) in Microsoft Azure. Using Remote Access in Microsoft Azure is not supported, including both Remote Access VPN and DirectAccess. For more information, see [Microsoft server software support for Microsoft Azure virtual machines](https://support.microsoft.com/help/2721672/microsoft-server-software-support-for-microsoft-azure-virtual-machines).
+
+
+## Next step
+|If you want to...  |Then see...  |
+|---------|---------|
+|Learn about the feature comparison between Always On VPN and DirectAccess    |[Feature Comparison of Always On VPN and DirectAccess](../../vpn-map-da.md): In previous versions of the Windows VPN architecture, platform limitations made it difficult to provide the critical functionality needed to replace DirectAccess (like automatic connections initiated before users sign in). Always On VPN, however, has mitigated most of those limitations or expanded the VPN functionality beyond the capabilities of DirectAccess.         |
+|Learn about the Always On VPN feature enhancements |[Always On VPN enhancements](../always-on-vpn-enhancements.md): Discover new or improved features that Always On VPN offers to improve your configuration. |
+|Learn more about the Always On VPN technology     |[Always On VPN Technology Overview](../always-on-vpn-technology-overview.md): This page provides a brief overview of the Always On VPN technologies with links to detailed documents.         |
+|Learn more about the Always On VPN advanced features  |[Advanced VPN features](always-on-vpn-adv-options.md): This page provides guidance on how to enable VPN Traffic Filters, how to configure Automatic VPN connections using App-Triggers, and how to configure NPS to only allow VPN Connections from clients using certificates issued by Azure AD.         |
+|Migrate from DirectAccess to Always On VPN  |[DirectAccess to Always On VPN migration planning](../../../da-always-on-vpn-migration/da-always-on-migration-planning.md): If you are migrating from DirectAccess to Always On VPN, you must properly plan your migration phases before deploying Always On VPN.  Planning your migration phases helps identify any issues before they affect the entire organization. The primary goal of the migration is for users to maintain remote connectivity to the office throughout the process. If you perform tasks out of order, a race condition may occur, leaving remote users with no way to access company resources.         |
+|Start planning your Always On VPN deployment |[Plan the Always On VPN deployment](always-on-vpn-deploy-planning.md): Before you install the Remote Access server role on the computer you're planning on using as a VPN server, perform the following tasks. After proper planning, you can deploy Always On VPN, and optionally configure conditional access for VPN connectivity using Azure AD.  |
+
+
+---

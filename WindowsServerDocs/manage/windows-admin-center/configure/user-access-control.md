@@ -5,8 +5,8 @@ ms.technology: manage
 ms.topic: article
 author: haley-rowland
 ms.author: harowl
-ms.date: 04/12/2018
-ms.localizationpriority: low
+ms.date: 05/23/2018
+ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---
 
@@ -150,7 +150,7 @@ If you're running the Windows Admin Center gateway in service mode on Windows Se
 Be sure to update the gateway address with the correct one for your environment.
 
 ```powershell
-$WindowsAdminCenterGateway = 'https://windowsadmincenter.contoso.com:6516'
+$WindowsAdminCenterGateway = 'https://windowsadmincenter.contoso.com'
 Invoke-RestMethod -Uri "$WindowsAdminCenterGateway/api/nodes/all/features/jea/endpoint/export" -Method POST -UseDefaultCredentials -OutFile "~\Desktop\WindowsAdminCenter_RBAC.zip"
 ```
 

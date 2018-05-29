@@ -5,8 +5,8 @@ ms.technology: manage
 ms.topic: article
 author: daniellee-msft
 ms.author: jol
-ms.date: 04/20/2018
-ms.localizationpriority: low
+ms.date: 05/23/2018
+ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---
 # Manage Hyper-Converged Infrastructure with Windows Admin Center
@@ -36,8 +36,8 @@ Highlights of Windows Admin Center for Hyper-Converged Infrastructure include:
 
 Windows Admin Center for Hyper-Converged Infrastructure is being actively developed by Microsoft. It receives frequent updates that improve existing features and add new features. Here’s what’s new in recent months:
 
-- Video: [What's new with HCI in Windows Admin Center v1804](https://www.youtube.com/watch?v=7kZxrYGTgTA) (April)
-- Video: [What's new with HCI in Windows Admin Center v1803](https://www.youtube.com/watch?v=CX4vKnisRj8) (March)
+- Video: [What's new with HCI in Windows Admin Center v1804](https://www.youtube-nocookie.com/watch?v=7kZxrYGTgTA) (April)
+- Video: [What's new with HCI in Windows Admin Center v1803](https://www.youtube-nocookie.com/watch?v=CX4vKnisRj8) (March)
 
 ## Before you start
 
@@ -59,6 +59,10 @@ Windows Admin Center for Hyper-Converged Infrastructure depends on management AP
 
 > [!Tip]
 > You only need to run the cmdlet once, on any server in the cluster. You can run it locally in Windows PowerShell or use Credential Security Service Provider (CredSSP) to run it remotely. Depending on your configuration, you may not be able to run this cmdlet from within Windows Admin Center.
+
+> [!Important]
+> For deployments in non-English locales, there is a known issue in version 1804 of Windows Admin Center that prevents the Dashboard from loading (first time only). The workaround is to run `Add-ClusterResource -Name 'SDDC Management' -Group 'Cluster Group' -ResourceType 'SDDC Management'` replacing *'Cluster Group'* with the localized name, for example, *'Group du cluster'* in French. This issue will be addressed in the next update. 
+
 ### Prepare your Windows Server 2019 cluster for Windows Admin Center
 
 If your cluster runs an Insider Preview build of Windows Server 2019, the steps above are not necessary. Just add the cluster to Windows Admin Center as described in the next section and you're good to go! [Download the latest preview build of Windows Server 2019](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewserver).
@@ -141,31 +145,31 @@ If you’re just getting started, here are some quick tutorials to help you lear
     <tr style="border: 0;">
         <td style="padding: 5px; border: 0;">
             <strong>Create volume, three-way mirror</strong>
-            <iframe width="375" height="210" src="https://www.youtube.com/embed/o66etKq70N8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
+            <iframe width="375" height="210" src="https://www.youtube-nocookie.com/embed/o66etKq70N8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
         </td>
         <td style="padding: 5px; border: 0;">
             <strong>Create volume, mirror-accelerated parity</strong>
-            <iframe width="375" height="210" src="https://www.youtube.com/embed/R72QHudqWpE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
+            <iframe width="375" height="210" src="https://www.youtube-nocookie.com/embed/R72QHudqWpE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
         </td>
     </tr>
     <tr style="border: 0;">
         <td style="padding: 5px; border: 0;">
             <strong>Open volume and add files</strong>
-            <iframe width="375" height="210" src="https://www.youtube.com/embed/j59z7ulohs4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
+            <iframe width="375" height="210" src="https://www.youtube-nocookie.com/embed/j59z7ulohs4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
         </td>
         <td style="padding: 5px; border: 0;">
             <strong>Turn on deduplication and compression</strong>
-            <iframe width="375" height="210" src="https://www.youtube.com/embed/PRibTacyKko" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
+            <iframe width="375" height="210" src="https://www.youtube-nocookie.com/embed/PRibTacyKko" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
         </td>
     </tr>
     <tr style="border: 0;">
         <td style="padding: 5px; border: 0;">
             <strong>Expand volume</strong>
-            <iframe width="375" height="210" src="https://www.youtube.com/embed/hqyBzipBoTI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
+            <iframe width="375" height="210" src="https://www.youtube-nocookie.com/embed/hqyBzipBoTI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
         </td>
         <td style="padding: 5px; border: 0;">
             <strong>Delete volume</strong>
-            <iframe width="375" height="210" src="https://www.youtube.com/embed/DbjF8r2F6Jo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
+            <iframe width="375" height="210" src="https://www.youtube-nocookie.com/embed/DbjF8r2F6Jo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
         </td>
     </tr>
 </table>

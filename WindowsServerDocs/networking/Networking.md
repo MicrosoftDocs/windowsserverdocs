@@ -4,9 +4,9 @@ description: This topic provides an overview of the Software Defined Networking 
 ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
-ms.date: 03/16/2018
+ms.date: 05/08/2018
 ms.assetid: daaf6b61-5953-4c2d-b6b8-7c885b552646
-manager: brianlic
+manager: elizapo
 ms.author: pashort
 author: shortpatti
 ms.localizationpriority: high
@@ -117,7 +117,7 @@ IP Address Management \(IPAM\) is an integrated suite of tools to enable end-to-
 
 Network Load Balancing \(NLB\) distributes traffic across several servers using the TCP/IP networking protocol. For non-SDN deployments, NLB ensures that stateless applications, such as Web servers running Internet Information Services \(IIS\), are scalable by adding more servers as the load increases.
 
-### [High-Performance Networking](technologies/network-offload.md)
+### [High-Performance Networking](technologies/hpn/hpn-top.md)
 
 Network offload and optimization technologies in Windows Server 2016 include Software Only (SO) features and technologies, Software and Hardware (SH) integrated features and technologies, and Hardware Only (HO) features and technologies.
 

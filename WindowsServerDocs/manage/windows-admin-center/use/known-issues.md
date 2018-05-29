@@ -5,8 +5,8 @@ ms.technology: manage
 ms.topic: article
 author: jwwool
 ms.author: jeffrew
-ms.date: 04/12/2018
-ms.localizationpriority: low
+ms.date: 05/23/2018
+ms.localizationpriority: high
 ms.prod: windows-server-threshold
 ---
 
@@ -18,11 +18,11 @@ If you encounter an issue not described on this page, please [let us know](http:
 
 ## **Insider preview** Windows 10 & Window Server 2019 (RS5)
 
-- Windows Admin Center cannot be installed on a Windows 10 or Windows Server 2019 insider build (greater than build number 176XX.) This is caused by a regression that will be fixed in an upcoming Windows Insider build. 
+- Windows Admin Center cannot be installed on a Windows 10 or Windows Server 2019 insider build (greater than build number 17134.xxx.) This is caused by a regression that will be fixed in an upcoming Windows Insider build. 
 
 ## Signature verification failed
 
-- If you install Windows Admin Center on a machine that has never been online, the application may crash with **Signature verification failed** errors in the event log. Connecting the machine to the internet will resolve the error. After the error is resolved, the connection may be removed and Windows Admin Center will launch succesfully offline.
+- If you install Windows Admin Center on a machine that has never been online, the application may crash with **Signature verification failed** errors in the event log. Connecting the machine to the internet will resolve the error. After the error is resolved, the connection may be removed and Windows Admin Center will launch successfully offline. [Fixed in version [1804.25](http://aka.ms/wacdownload)]
 
 ## Installer
 

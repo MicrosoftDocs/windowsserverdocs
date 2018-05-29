@@ -7,7 +7,7 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.date: 3/30/2018
+ms.date: 05/22/2018
 description: New and updated topics in the on-premises storage documentation for Windows Server for IT Pros.
 ---
 # Change history for storage topics in Windows Server
@@ -17,6 +17,30 @@ description: New and updated topics in the on-premises storage documentation for
 This topic lists new and updated topics in the [Storage](storage.md) documentation for Windows Server.
 
 > If you're looking for update history for Windows Server, see [Windows 10 and Windows Server 2016 update history](https://support.microsoft.com/help/4000825/windows-10-and-windows-server-2016-update-history).
+
+## May 2018
+
+|New or changed topic|Description|
+|---|---|
+|[NFS overview](nfs/nfs-overview.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library.|
+|[Deploy NFS](nfs/deploy-nfs.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library.|
+|[Deploy Storage Spaces on a stand-alone server](storage-spaces/deploy-standalone-storage-spaces.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library.|
+|[NTFS Overview](file-server/ntfs-overview.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library.|
+|[Use Robocopy to Preseed Files for DFS Replication](dfs-replication/preseed-dfsr-with-robocopy.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library.|
+|[Vssadmin - Previous Versions command line tool](..\administration\windows-commands\vssadmin.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library.|
+|[File Server Resource Manager overview](fsrm/fsrm-overview.md)| Added info about a new registry setting in Windows Server 2016, version 1803.|
+|[Storage Replica known issues](storage-replica/storage-replica-known-issues.md)|Added new information.|
+
+## April 2018
+
+|New or changed topic|Description|
+|---|---|
+|[Collect data in Storage Spaces Direct](storage-spaces/data-collection.md)| New topic.|
+|[Storage Spaces overview](storage-spaces/overview.md)|New topic.|
+|[Folder Redirection, Offline Files, and Roaming User Profiles overview](folder-redirection/folder-redirection-rup-overview.md)|Migrated multiple topics from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library.|
+|[File sharing using the SMB 3 protocol](file-server/file-server-smb-overview.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library.|
+|[Improve performance of a file server with SMB Direct](file-server/smb-direct.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library.|
+|[SMB security enhancements](file-server/smb-security.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library.|
 
 ## March 2018
 

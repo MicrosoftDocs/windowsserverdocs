@@ -1,15 +1,15 @@
 ---
-title: Server Message Block overview
-description: An overview of the SMB 3.0 Server Message Block protocol feature for Windows Server 2012 R2, Windows Server 2012, and Windows Server 2016.
+title: Overview of file sharing using the SMB 3 protocol in Windows Server
+description: An overview of using the SMB 3 protocol for file shares and file serving with Windows Server.
 ms.prod: windows-server-threshold 
 ms.topic: article 
 author: JasonGerend 
 ms.author: jgerend 
 ms.technology: storage 
-ms.date: 4/5/18
+ms.date: 04/05/2018
 ms.localizationpriority: low
 ---
-# Server Message Block overview
+# Overview of file sharing using the SMB 3 protocol in Windows Server
 
 >Applies to: Windows Server 2012 R2, Windows Server 2012, Windows Server 2016
 
@@ -29,7 +29,7 @@ This section discusses some new practical ways to use the new SMB 3.0 protocol.
 
 ## New and changed functionality
 
-For information on new and changed functionality in Windows Server 2012 R2, see [What's New in SMB in Windows Server](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831474(v%3dws.11)>).
+For information on new and changed functionality in Windows Server 2012 R2, see [What's New in SMB in Windows Server](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831474(v%3dws.11)>).
 
 SMB in Windows Server 2012 and Windows Server 2016 includes the new SMB 3.0 protocol and many new improvements which are described in the following table.
 
@@ -121,10 +121,10 @@ SMB Direct has the following requirements:
 
 The following list provides additional resources on the web about SMB and related technologies in Windows Server 2012 R2, Windows Server 2012, and Windows Server 2016.
 
-* [File and Storage Services Overview](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831487(v%3dws.11)>)
-* [Scale-Out File Server for Application Data Overview](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831349(v%3dws.11)>)
-* [Deploy Hyper-V over SMB](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134187(v%3dws.11)>)
-* [Deploy SMB Multichannel](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn610980(v%3dws.11)>)
+* [File and Storage Services Overview](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831487(v%3dws.11)>)
+* [Scale-Out File Server for Application Data Overview](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831349(v%3dws.11)>)
+* [Deploy Hyper-V over SMB](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134187(v%3dws.11)>)
+* [Deploy SMB Multichannel](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn610980(v%3dws.11)>)
 * [Improve Performance of a File Server with SMB Direct](smb-direct.md)
-* [Deploying Fast and Efficient File Servers for Server Applications](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831723(v%3dws.11)>)
-* [SMB: Troubleshooting Guide](<https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn659439(v%3dws.11)>)
+* [Deploying Fast and Efficient File Servers for Server Applications](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831723(v%3dws.11)>)
+* [SMB: Troubleshooting Guide](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn659439(v%3dws.11)>)
