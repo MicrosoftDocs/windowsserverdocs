@@ -1,6 +1,6 @@
 ---
 title: Configure the Server Infrastructure
-description: In this step, you install and configure the server-side components necessary to support the VPN, including configuring PKI to distribute the certificates used by users, the VPN server, and the NPS server; configuring RRAS to support IKEv2 connections; and configuring the NPS server to perform authorization for the VPN connections. 
+description: In this step, you install and configure the server-side components necessary to support the VPN. The server-side components include configuring PKI to distribute the certificates used by users, the VPN server, and the NPS server.  
 ms.prod: windows-server-threshold
 ms.technology: networking-ras
 ms.topic: article
@@ -8,26 +8,28 @@ ms.assetid:
 manager: elizapo
 ms.author: pashort
 author: shortpatti
-ms.date: 05/25/2018
+ms.date: 05/29/2018
 ms.reviewer: deverette
 ---
 
-# Step 1. Configure the Server Infrastructure
+# Step 2. Configure the server infrastructure
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-&#171;  [**Previous:** Plan the Always On VPN Deployment](always-on-vpn-deploy-planning.md)<br>
-&#187; [ **Next:** Step 2. Configure the Remote Access Server for Always On VPN](vpn-deploy-ras.md)
+&#171;  [**Previous:** Step 1. Plan the Always On VPN Deployment](always-on-vpn-deploy-planning.md)<br>
+&#187; [ **Next:** Step 3. Configure the Remote Access Server for Always On VPN](vpn-deploy-ras.md)
 
-In this step, you install and configure the server-side components necessary to support the VPN, including configuring PKI to distribute the certificates used by users, the VPN server, and the NPS server; configuring RRAS to support IKEv2 connections; and configuring the NPS server to perform authorization for the VPN connections.
+In this step, you install and configure the server-side components necessary to support the VPN. The server-side components include configuring PKI to distribute the certificates used by users, the VPN server, and the NPS server.  You also configure RRAS to support IKEv2 connections and the NPS server to perform authorization for the VPN connections.
 
 ## Configure certificate autoenrollment in Group Policy
-In this procedure, you configure Group Policy on the domain controller so that domain members automatically request user and computer certificates. Doing so allows VPN users to request and retrieve user certificates that authenticate VPN connections automatically. Likewise, this policy allows NPS servers to request server authentication certificates automatically. (You will manually enroll certificates on VPN servers.)
+In this procedure, you configure Group Policy on the domain controller so that domain members automatically request user and computer certificates. Doing so allows VPN users to request and retrieve user certificates that authenticate VPN connections automatically. Likewise, this policy allows NPS servers to request server authentication certificates automatically. 
+
+You manually enroll certificates on VPN servers.
 
 
 1.  On a domain controller, open Group Policy Management.
 
-2.  In the navigation pane, right-click your domain (e.g., corp.contoso.com), and click **Create a GPO in this domain, and Link it here**.
+2.  In the navigation pane, right-click your domain (for example, corp.contoso.com), and click **Create a GPO in this domain, and Link it here**.
 
 3.  On the New GPO dialog box, type **Autoenrollment Policy**, and click **OK**.
 
@@ -71,7 +73,7 @@ This group serves two purposes:
 
 -   It defines which users the NPS authorizes for VPN access.
 
-By using a custom group, if you ever want to revoke a user’s VPN access, you can simply remove that user from the group.
+By using a custom group, if you ever want to revoke a user’s VPN access, you can remove that user from the group.
 
 You also add a group containing VPN servers and another group containing NPS servers. You use these groups to restrict certificate requests to their members.
 
@@ -164,9 +166,9 @@ In this procedure, you configure a custom client-server authentication template.
 
     2.  Click **Requests must use one of the following providers**.
 
-    3.  Select the **Microsoft Platform Crypto Provider** checkbox.
+    3.  Select the **Microsoft Platform Crypto Provider** check box.
 
-9.  On the **Subject Name** tab, if you don’t have an email address listed on all user accounts, clear the **Include e-mail name in subject name** and **E-mail name** checkboxes.
+9.  On the **Subject Name** tab, if you don’t have an email address listed on all user accounts, clear the **Include e-mail name in subject name** and **E-mail name** check boxes.
 
 10. Click **OK** to save the VPN User Authentication certificate template.
 
@@ -315,7 +317,7 @@ Unlike the user certificate, you must manually enroll the VPN server’s certifi
 
 4.  On the Select Certificate Enrollment Policy page, click **Next**.
 
-5.  On the Request Certificates page, click the checkbox next to the VPN server to select it.
+5.  On the Request Certificates page, click the check box next to the VPN server to select it.
 
 6.  Under the VPN server check box, click **More information is required** to open the Certificate Properties dialog box and complete the following steps:
 
@@ -364,6 +366,6 @@ Unlike the user certificate, you must manually enroll the VPN server’s certifi
 7.  Close the Certificates snap-in.
 
 ## Next step
-[Step 2. Configure the Remote Access Server for Always On VPN](vpn-deploy-ras.md): In this step, you configure Remote Access VPN to allow IKEv2 VPN connections, deny connections from other VPN protocols, and assign a static IP address pool for issuance of IP addresses to connecting authorized VPN clients.
+[Step 3. Configure the Remote Access Server for Always On VPN](vpn-deploy-ras.md): In this step, you configure Remote Access VPN to allow IKEv2 VPN connections, deny connections from other VPN protocols, and assign a static IP address pool for issuance of IP addresses to connecting authorized VPN clients.
 
 ---

@@ -4,7 +4,7 @@ description: In previous versions of the Windows VPN architecture, platform limi
 ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
-ms.date: 05/25/2018
+ms.date: 05/29/2018
 ms.assetid: 8fe1c810-4599-4493-b4b8-73fa9aa18535
 manager: elizapo
 ms.author: pashort
@@ -75,8 +75,16 @@ Each item in this section is a use case scenario or commonly used DirectAccess f
 | Use of multisite to provide multiple remote access entry points and geo-redundancy. | No native multisite-equivalent feature exists in Always On VPN without the use of third-party networking equipment or services such as Azure Traffic Manager or a third-party global server load balancer. However, users can manually select an appropriate VPN endpoint if you define multiple entries in the VPN profile. Third-Party UWP VPN plug-ins may support similar features for connecting to the nearest or most appropriate server VPN endpoint, but this varies by provider. |
 | Deployment of client and server configuration settings through Group Policy. | Always On VPN does not require devices to be domain joined, so there are no dedicated Group Policy settings to configure it. Instead, you can configure clients by using Windows PowerShell, System Center Configuration Manager, Intune (or a third-party MDM provider), or Windows Configuration Designer. Also, because there's no dependency on a Microsoft VPN gateway, you must configure and manage server settings independent of the Always On VPN. |
 
+
+
 ## Next step
-[Learn about the Always On VPN Enhancements](../vpn/always-on-vpn/always-on-vpn-enhancements.md). Migrating from DirectAccess to Always On VPN requires a specific process to migrate clients to prevent from occurring.
+|If you want to...  |Then see...  |
+|---------|---------|
+|Learn about the Always On VPN feature enhancements |[Always On VPN enhancements](always-on-vpn/always-on-vpn-enhancements.md): Discover new or improved features that Always On VPN offers to improve your configuration. |
+|Learn more about the Always On VPN technology     |[Always On VPN Technology Overview](always-on-vpn/always-on-vpn-technology-overview.md): This page provides a brief overview of the Always On VPN technologies with links to detailed documents.         |
+|Learn more about the Always On VPN advanced features  |[Advanced Features of Always On VPN](always-on-vpn/deploy/always-on-vpn-adv-options.md): This page provides guidance on how to enable VPN Traffic Filters, how to configure Automatic VPN connections using App-Triggers, and how to configure NPS to only allow VPN Connections from clients using certificates issued by Azure AD.         |
+|Migrate from DirectAccess to Always On VPN  |[DirectAccess to Always On VPN migration overview](../da-always-on-vpn-migration/da-always-on-migration-overview.md): If you are migrating from DirectAccess to Always On VPN, you must properly plan your migration phases before deploying Always On VPN.  Planning your migration phases helps identify any issues before they affect the entire organization. The primary goal of the migration is for users to maintain remote connectivity to the office throughout the process. If you perform tasks out of order, a race condition may occur, leaving remote users with no way to access company resources.         |
+|Start planning your Always On VPN deployment |[Plan the Always On VPN deployment](always-on-vpn/deploy/always-on-vpn-deploy-planning.md): Before you install the Remote Access server role on the computer you're planning on using as a VPN server, perform the following tasks. After proper planning, you can deploy Always On VPN, and optionally configure conditional access for VPN connectivity using Azure AD.  |
 
 
 

@@ -6,7 +6,7 @@ ms.technology: networking-ras
 ms.topic: article
 ms.assetid: 4d08164e-3cc8-44e5-a319-9671e1ac294a
 manager: elizapo
-ms.date: 05/25/2018
+ms.date: 05/29/2018
 ms.author: pashort
 author: shortpatti
 ---
@@ -18,11 +18,6 @@ If your Always On VPN setup is failing to connect clients to your internal netwo
 
 You can troubleshoot connection issues in several ways. For client-side issues and general troubleshooting, the application logs on client computers are invaluable. For authentication-specific issues, the NPS log on the NPS server can help you determine the source of the problem.
 
-## Application logs
-
-The application logs on client computers record most of the higher-level details of VPN connection events.
-
-Look for events from source RasClient. All error messages return the error code at the end of the message. Some of the more common error codes are detailed below, but a full list is available in [Routing and Remote Access Error Codes](https://msdn.microsoft.com/library/windows/desktop/bb530704.aspx).
 
 ## Error codes
 
@@ -113,6 +108,14 @@ Generally, the VPN client machine is joined to the Active Directory–based doma
 
 -   **Possible solution.** Make sure that the root certificate is installed on the client computer in the Trusted Root Certification Authorities store.
 
+## Logs
+
+### Application logs
+
+The application logs on client computers record most of the higher-level details of VPN connection events.
+
+Look for events from source RasClient. All error messages return the error code at the end of the message. Some of the more common error codes are detailed below, but a full list is available in [Routing and Remote Access Error Codes](https://msdn.microsoft.com/library/windows/desktop/bb530704.aspx).
+
 ## NPS logs
 NPS creates and stores the NPS accounting logs. By default, these are stored in %SYSTEMROOT%\\System32\\Logfiles\\ in a file named IN*XXXX.*txt, where *XXXX* is the date the file was created.
 
@@ -149,7 +152,7 @@ A small misconfiguration can cause the client connection to fail and can be chal
 
 5. Are UDP 500 and 4500 open from the client to the VPN server’s external interface? Check the client firewall, server firewall, and any hardware firewalls. IPSEC uses Port 500, so make sure that you do not have IPEC disabled or blocked anywhere.
 
-7. Is certificate validation failing? Verify the NPS server has a Server Authentication certificate that can service IKE requests. Make sure that you have the correct VPN server IP specified as an NPS client. Make sure that you are authenticating with PEAP, and the Protected EAP properties should only allow authentication with a certificate. You can check the NPS event logs for authentication failures. For more details, see [Install and Configure the NPS Server](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-nps).
+7. Is certificate validation failing? Verify the NPS server has a Server Authentication certificate that can service IKE requests. Make sure that you have the correct VPN server IP specified as an NPS client. Make sure that you are authenticating with PEAP, and the Protected EAP properties should only allow authentication with a certificate. You can check the NPS event logs for authentication failures. For more details, see [Install and Configure the NPS Server](vpn-deploy-nps.md)
 
 8. Are you connecting but do not have Internet/local network access? Check your DHCP/VPN server IP pools for configuration issues.
 
