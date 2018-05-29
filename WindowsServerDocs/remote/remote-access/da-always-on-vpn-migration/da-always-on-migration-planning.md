@@ -8,7 +8,7 @@ ms.topic: article
 ms.assetid: eeca4cf7-90f0-485d-843c-76c5885c54b0
 ms.author: pashort
 author: shortpatti
-ms.date: 05/25/2018
+ms.date: 05/29/2018
 ---
 
 # Plan the DirectAccess to Always On VPN migration
@@ -63,7 +63,7 @@ This section provides one approach for separating users into migration phases, a
 |If you want to...  |Then see...  |
 |---------|---------|
 |Start migrating to Always On VPN     |[Migrate to Always On VPN and Decommission DirectAccess](da-always-on-migration-deploy.md). Migrating from DirectAccess to Always On VPN requires a specific process to migrate clients, which helps minimize race conditions that arise from performing migration steps out of order.         |
-|Learn about the features of both Always On VPN and DireceAccess    |[Feature Comparison of Always On VPN and DirectAccess](../vpn/vpn-map-da.md). In previous versions of the Windows VPN architecture, platform limitations made it difficult to provide the critical functionality needed to replace DirectAccess (like automatic connections initiated before users sign in). Always On VPN, however, has mitigated most of those limitations or expanded the VPN functionality beyond the capabilities of DirectAccess.         |
+|Learn about the features of both Always On VPN and DirectAccess    |[Feature Comparison of Always On VPN and DirectAccess](../vpn/vpn-map-da.md). In previous versions of the Windows VPN architecture, platform limitations made it difficult to provide the critical functionality needed to replace DirectAccess (like automatic connections initiated before users sign in). Always On VPN, however, has mitigated most of those limitations or expanded the VPN functionality beyond the capabilities of DirectAccess.         |
 
 
 

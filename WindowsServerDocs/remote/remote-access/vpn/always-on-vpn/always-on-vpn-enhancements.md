@@ -8,7 +8,7 @@ ms.topic: article
 ms.assetid: 
 ms.author: pashort
 author: shortpatti
-ms.date: 05/25/2018
+ms.date: 05/29/2018
 ---
 
 # Always On VPN enhancements

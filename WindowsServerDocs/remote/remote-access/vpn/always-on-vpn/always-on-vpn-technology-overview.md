@@ -4,7 +4,7 @@ description: 'This page provies a brief overview of the Always On VPN technologi
 ms.prod: windows-server-threshold
 ms.technology: networking-ras
 ms.topic: article
-ms.date: 05/25/2018
+ms.date: 05/29/2018
 ms.author: pashort
 author: shortpatti
 manager: elizapo
@@ -12,7 +12,7 @@ ms.reviewer: deverette
 ---
 
 
-# Always On VPN Technology Overview
+# Always On VPN technology overview
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
 &#171;  [**Previous:** Learn about the Always On VPN enhancements](always-on-vpn-enhancements.md)<br>

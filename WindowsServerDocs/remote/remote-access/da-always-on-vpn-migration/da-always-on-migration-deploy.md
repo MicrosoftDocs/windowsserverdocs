@@ -1,5 +1,5 @@
 ---
-title: Remote Access Always On VPN migration deployment
+title: Migration from DirectAccess to Always On VPN
 description: Migrating from DirectAccess to Always On VPN requires a specific process to migrate clients, which helps minimize race conditions that arise from performing migration steps out of order.
 manager: elizapo
 ms.prod: windows-server
@@ -8,10 +8,10 @@ ms.topic: article
 ms.assetid: eeca4cf7-90f0-485d-843c-76c5885c54b0
 ms.author: pashort
 author: shortpatti
-ms.date: 05/28/2018
+ms.date: 05/29/2018
 ---
 
-# DirectAccess to Always On VPN migration deployment
+# Migrate to Always On VPN and decommission DirectAccess
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows 10
 

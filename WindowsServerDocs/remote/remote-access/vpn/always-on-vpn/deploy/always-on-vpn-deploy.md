@@ -6,12 +6,12 @@ ms.technology: networking-ras
 ms.topic: article
 ms.assetid: 5ae1a40b-4f10-4ace-8aaf-13f7ab581f4f
 manager: elizapo
-ms.date: 05/25/2018
+ms.date: 05/29/2018
 ms.author: pashort
 author: shortpatti
 ---
 
-# Always On VPN Deployment for Windows Server and Windows 10
+# Always On VPN deployment for Windows Server and Windows 10
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 

@@ -8,9 +8,9 @@ ms.assetid: d8cf3bae-45bf-4ffa-9205-290d555c59da
 manager: elizapo
 ms.author: pashort
 author: shortpatti
-ms.date: 05/25/2018
+ms.date: 05/29/2018
 ---
-# Step 5. Configure DNS and Firewall Settings
+# Step 5. Configure DNS and firewall settings
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 

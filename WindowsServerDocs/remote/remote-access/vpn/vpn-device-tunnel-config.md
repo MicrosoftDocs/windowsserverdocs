@@ -1,5 +1,5 @@
 ---
-title: Configure the VPN Device Tunnel in Windows 10
+title: Configure the VPN device tunnel in Windows 10
 description: You can use this topic to learn how to create a VPN device tunnel in Windows 10.
 manager: elizapo
 ms.prod: windows-server-threshold
@@ -10,7 +10,7 @@ ms.assetid: 158b7a62-2c52-448b-9467-c00d5018f65b
 ms.author: pashort
 author: shortpatti
 ---
-# Configure VPN Device Tunnels in Windows 10
+# Configure VPN device tunnels in Windows 10
 
 >Applies To: Windows 10 version 1709
 

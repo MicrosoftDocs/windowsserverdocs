@@ -18,7 +18,7 @@ manager: elizapo
 ms.reviewer: deverette
 ---
 
-# Step 7.5. Create OMA-DM based VPNv2 Profiles to Windows 10 devices
+# Step 7.5. Create OMA-DM based VPNv2 profiles to Windows 10 devices
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 

@@ -1,6 +1,6 @@
 ## Standard configuration considerations
 
-Always ON VPN has many configuration options. However you choose your VPN configuration, though, include the following information:
+Always On VPN has many configuration options. However you choose your VPN configuration, though, include the following information:
 
 -   **Connection type.** Connection protocol selection is important and ultimately goes hand in hand with the type of authentication you will use. For details about the tunneling protocols available, see [VPN connection types](https://docs.microsoft.com/windows/access-protection/vpn/vpn-connection-type).
 

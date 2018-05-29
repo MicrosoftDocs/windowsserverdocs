@@ -8,11 +8,11 @@ ms.assetid:
 manager: elizapo
 ms.author: pashort
 author: shortpatti
-ms.date: 05/25/2018
+ms.date: 05/29/2018
 ms.reviewer: deverette
 ---
 
-# Step 2. Configure the Server Infrastructure
+# Step 2. Configure the server infrastructure
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 

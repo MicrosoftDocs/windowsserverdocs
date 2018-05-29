@@ -4,14 +4,14 @@ description: In this step, you learn about the ProfileXML options and schema, an
 ms.prod: windows-server-threshold
 ms.technology: networking-ras
 ms.topic: article
-ms.date: 05/25/2018
+ms.date: 05/29/2018
 ms.assetid: d165822d-b65c-40a2-b440-af495ad22f42
 manager: elizapo
 ms.author: pashort
 author: shortpatti
 ms.reviewer: deverette
 ---
-# Step 6. Configure Windows 10 Client Always On VPN Connections
+# Step 6. Configure Windows 10 client Always On VPN connections
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
