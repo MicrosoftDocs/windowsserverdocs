@@ -141,11 +141,8 @@
 
 ## [Network Load Balancing](technologies/Network-Load-Balancing.md)
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 1f46ae5f5ef58300d1584b27f08e831eed98d620
 ## [Network Policy Server (NPS)](technologies/nps/nps-top.md)
 ### [Network Policy Server Best Practices](technologies/nps/nps-best-practices.md)
 ### [Getting Started with Network Policy Server](technologies/nps/nps-getstart-top.md)
