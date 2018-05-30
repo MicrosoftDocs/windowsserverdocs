@@ -272,6 +272,11 @@
       "redirect_document_id": false
     },		
     {
+      "source_path": "WindowsServerDocs/storage/storage-replica/storage-replica-ui.md",
+      "redirect_url": "/windows-server/storage/storage-replica/server-to-server-storage-replication",
+      "redirect_document_id": false
+    },	
+    {
       "source_path":  "WindowsServerDocs/storage/storage-spaces/fault-domains-windows-server-2016.md",
       "redirect_url":  "/windows-server/storage/storage-spaces/fault-domains-windows-server",
       "redirect_document_id": false
