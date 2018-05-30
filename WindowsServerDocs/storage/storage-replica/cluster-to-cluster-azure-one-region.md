@@ -13,6 +13,12 @@ manager: mchad
 # Cluster to Cluster Storage Replica within the same region in Azure
 You can configure Cluster to Cluster Storage Replicas within the same region in Azure. In the examples below, we use a two-node cluster, but Cluster to Cluster storage replica isn’t restricted to a two-node cluster. The illustration below is a two-node Storage Space Direct cluster that can communicate with each other, are in the same domain, and within the same region.
 
+Watch the videos below for a complete walk-through of the process.
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE26f2Y]
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE269Pq]
+
 ![The architecture diagram showcasing Cluster-to-cluster Storage Replica in Azure within same region.](media\Cluster-to-cluster-azure-one-region\architecture.png)
 > [!IMPORTANT]
 > All referenced examples are specific to the illustration above.
