@@ -90,7 +90,6 @@
 ### [Cluster to Cluster Storage Replica within the same region in Azure](storage-replica/cluster-to-cluster-azure-one-region.md)
 ### [Storage Replica: known issues](storage-replica/storage-replica-known-issues.md)
 ### [Storage Replica: Frequently Asked Questions](storage-replica/storage-replica-frequently-asked-questions.md)
-### [Using Storage Replica with Windows Admin Center](storage-replica/storage-replica-ui.md)
 ## [Storage Spaces](storage-spaces/overview.md)
 ### [Deploy Storage Spaces on a stand-alone server](storage-spaces/deploy-standalone-storage-spaces.md)
 ### [Health and operational states](storage-spaces/storage-spaces-states.md)
