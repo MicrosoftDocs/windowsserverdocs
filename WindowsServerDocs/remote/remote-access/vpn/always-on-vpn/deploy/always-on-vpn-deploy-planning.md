@@ -1,5 +1,5 @@
 ---
-title: Play the Always On VPN Deployment
+title: Plan the Always On VPN Deployment
 description: This topic provides planning instructions for deploying Always On VPN in Windows Server 2016.
 ms.prod: windows-server-threshold
 ms.technology: networking-ras
