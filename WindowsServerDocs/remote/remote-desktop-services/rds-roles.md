@@ -13,6 +13,8 @@ manager: elizapo
 
 >Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
+This article describes the roles within a Remote Desktop Services environment.
+
 ## Remote Desktop Session Host
 
 The Remote Desktop Session Host (RD Session Host) component provides a tenant's users with session-based desktops and RemoteApp programs. The desktops and applications can be accessed over the internet from any device running a capable remote desktop connection client.
