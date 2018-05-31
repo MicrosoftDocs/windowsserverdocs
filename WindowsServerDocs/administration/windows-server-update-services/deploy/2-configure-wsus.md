@@ -52,11 +52,11 @@ if there is a corporate firewall between WSUS and the Internet, you might have t
 
 -   https://windowsupdate.microsoft.com
 
--   https://*.windowsupdate.microsoft.com
+-   http://*.windowsupdate.microsoft.com
 
 -   https://*.windowsupdate.microsoft.com
 
--   https://*.update.microsoft.com
+-   http://*.update.microsoft.com
 
 -   https://*.update.microsoft.com
 
@@ -70,9 +70,9 @@ if there is a corporate firewall between WSUS and the Internet, you might have t
 
 -   http://wustat.windows.com
 
--   https://ntservicepack.microsoft.com
+-   http://ntservicepack.microsoft.com
 
--   https://go.microsoft.com
+-   http://go.microsoft.com
 
 > [!IMPORTANT]
 > For a scenario in which WSUS is failing to obtain updates due firewall configurations, see [article 885819](https://support.microsoft.com/kb/885819) in the Microsoft Knowledge Base.
