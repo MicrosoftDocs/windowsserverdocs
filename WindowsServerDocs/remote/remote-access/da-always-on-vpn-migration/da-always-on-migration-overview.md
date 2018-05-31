@@ -17,7 +17,7 @@ ms.date: 05/29/2018
 
 &#187; [**Next:** Plan the DirectAccess to Always On VPN migration](da-always-on-migration-planning.md)
 
-In previous versions of the Windows VPN architecture, platform limitations made it difficult to provide the critical functionality needed to replace DirectAccess (like automatic connections initiated before users sign in). Always On VPN, however, has mitigated most of those limitations or expanded the VPN functionality beyond the capabilities of DirectAccess. Always On VPN addresses the previous gaps between Windows VPNs and DirectAccess.
+In previous versions of the Windows VPN architecture, platform limitations made it difficult to provide the critical functionality needed to replace DirectAccess, such as automatic connections initiated before users sign in. Always On VPN, however, has mitigated most of those limitations or expanded the VPN functionality beyond the capabilities of DirectAccess. Always On VPN addresses the previous gaps between Windows VPNs and DirectAccess.
 
 The DirectAccess–to–Always On VPN migration process consists of four primary components and high-level processes:
 
@@ -32,7 +32,7 @@ The DirectAccess–to–Always On VPN migration process consists of four primary
 
     4.  [!INCLUDE [review-the-technology-overview-shortdesc-include](../includes/review-the-technology-overview-shortdesc-include.md)]
 
-2.  **Deploy a side-by-side VPN infrastructure.** After you have determined your migration phases and the features you want to include in your deployment, you will deploy the VPN infrastructure side by side with the existing DirectAccess infrastructure.  
+2.  **Deploy a side-by-side VPN infrastructure.** After you have determined your migration phases and the features you want to include in your deployment, you deploy the Always On VPN infrastructure side by side with the existing DirectAccess infrastructure.  
 
 3.  **Deploy certificates and configuration to the clients.**  Once the VPN infrastructure is ready, you create and publish the required certificates to the client. When the clients have received the certificates, you deploy the VPN_Profile.ps1 configuration script. Alternatively, you can use Intune to configure the VPN client. Use Microsoft System Center Configuration Manager or Microsoft Intune to monitor for successful VPN configuration deployments.
 
