@@ -19,7 +19,7 @@ You can use Storage Replica to configure two servers to sync data so that each h
 To manage Storage Replica you can use [Windows Admin Center](../../manage/windows-admin-center/overview.md) or PowerShell.
 
 Here's an overview video of using Storage Replica in Windows Admin Center.
-> [!video https://www.microsoft.com/en-us/videoplayer/embed/3aa09fd4-867b-45e9-953e-064008468c4b?autoplay=false]
+> [!video https://www.microsoft.com/videoplayer/embed/3aa09fd4-867b-45e9-953e-064008468c4b?autoplay=false]
 
 
 ## Prerequisites  
@@ -65,7 +65,7 @@ This walkthrough uses the following environment as an example:
 ## Step 1: Install and configure Windows Admin Center on your PC
 
 If you're using Windows Admin Center to manage Storage Replica, use the following steps to prep your PC to manage Storage Replica.
-1. Download and install [Windows Admin Center](https://www.microsoft.com/evalcenter/evaluate-windows-server-honolulu).
+1. Download and install [Windows Admin Center](../../manage/windows-admin-center/overview.md).
 2. Download and install the [Remote Server Administration Tools](https://www.microsoft.com/download/details.aspx?id=45520).
 3. Open a PowerShell session as administrator by selecting the **Start** button, typing **PowerShell**, right-clicking **Windows PowerShell,** and then selecting **Run as administrator**.
 4. Enter the following command to enable the WS-Management protocol on the local computer and set up the default configuration for remote management on the client.
