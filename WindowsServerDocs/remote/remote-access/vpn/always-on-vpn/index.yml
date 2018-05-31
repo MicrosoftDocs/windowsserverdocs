@@ -150,7 +150,7 @@ sections:
 
     - href: \windows-server\remote\remote-access\vpn\always-on-vpn\deploy\vpn-deploy-server-infrastructure
     
-      html: <p>Start setting up and configuring the VPN infrastructure.</p>
+      html: <p>Start setting up and configuring the VPN infrastructure along with the Windows 10 client VPN connectivity.</p>
 
       image:
 

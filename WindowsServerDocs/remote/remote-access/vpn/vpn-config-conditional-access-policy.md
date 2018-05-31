@@ -19,7 +19,7 @@ ms.reviewer: deverette
 ---
 
 
-# Step 7.3. Configure the Conditional Access policy
+# Step 7.3. Configure the conditional access policy
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
