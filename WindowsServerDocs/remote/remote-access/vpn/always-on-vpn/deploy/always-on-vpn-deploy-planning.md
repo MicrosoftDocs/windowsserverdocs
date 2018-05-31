@@ -1,5 +1,5 @@
 ---
-title: Play the Always On VPN Deployment
+title: Plan the Always On VPN Deployment
 description: This topic provides planning instructions for deploying Always On VPN in Windows Server 2016.
 ms.prod: windows-server-threshold
 ms.technology: networking-ras
@@ -18,8 +18,6 @@ ms.date: 05/29/2018
 &#171;  [**Previous:** Learn about the workflow for deploying Always On VP](always-on-vpn-deploy-deployment.md)<br>
 &#187;  [**Next:** Step 2. Configure the Server Infrastructure](vpn-deploy-server-infrastructure.md)
 
-learn N connections for remote domain-joined Windows 10 client computers
-
 In this step, you start to plan and prepare your Always On VPN deployment. Before you install the Remote Access server role on the computer you're planning on using as a VPN server, perform the following tasks. After proper planning, you can deploy Always On VPN, and optionally configure conditional access for VPN connectivity using Azure AD. 
 
 [!INCLUDE [always-on-vpn-standard-config-considerations-include](../../../includes/always-on-vpn-standard-config-considerations-include.md)]
@@ -27,7 +25,7 @@ In this step, you start to plan and prepare your Always On VPN deployment. Befor
 
 ## Prepare the Remote Access Server
 
-To prepare the Remote Access Server role, you must do the following tasks on the computer you're planning to use as a VPN server: 
+You must do the following on the computer used as a VPN server: 
 
 - **Make sure the VPN server software and hardware configuration is correct**. Install Windows Server 2016 on the computer that you plan to use as a Remote Access VPN server. This server must have two physical network adapters installed, one to connect to the external perimeter network, and one to connect to the internal perimeter network.
 
