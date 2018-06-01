@@ -7,7 +7,7 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 description: New and updated topics in the on-premises storage documentation for Windows Server for IT Pros.
 ---
 # Change history for storage topics in Windows Server
@@ -18,6 +18,11 @@ This topic lists new and updated topics in the [Storage](storage.md) documentati
 
 > If you're looking for update history for Windows Server, see [Windows 10 and Windows Server 2016 update history](https://support.microsoft.com/help/4000825/windows-10-and-windows-server-2016-update-history).
 
+## June 2018
+
+|New or changed topic|Description|
+|---|---|
+|[Server-to-server storage replication](storage-replica/server-to-server-storage-replication.md)|Added info on using Azure VMs, including ExpressRoute.|
 ## May 2018
 
 |New or changed topic|Description|

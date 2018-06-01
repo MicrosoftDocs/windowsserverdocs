@@ -7,7 +7,7 @@ ms.author: nedpyle
 ms.technology: storage-replica
 ms.topic: get-started-article
 author: nedpyle
-ms.date: 06/01/2018
+ms.date: 06/04/2018
 ms.assetid: 61881b52-ee6a-4c8e-85d3-702ab8a2bd8c
 ---
 # Server-to-server storage replication with Storage Replica
@@ -177,9 +177,11 @@ If you're using Windows Admin Center to manage Storage Replica, use the followin
       >
       > `Diskspd.exe -c1g -d600 -W5 -C5 -b8k -t2 -o2 -r -w5 -i100 d:\test` 
 
-10. Examine the **TestSrTopologyReport.html** report to ensure that you meet the Storage Replica requirements.  
+10. Examine the **TestSrTopologyReport.html** report shown in Figure 2 to ensure that you meet the Storage Replica requirements.  
 
-    ![Screen showing the topology report](media/Server-to-Server-Storage-Replication/SRTestSRTopologyReport.png)  
+    ![Screen showing the topology report](media/Server-to-Server-Storage-Replication/SRTestSRTopologyReport.png)
+
+    **Figure 2: Storage replication topology report**
 
 ## Step 3: Set up server-to-server replication
 ### Using Windows Admin Center
@@ -188,14 +190,13 @@ If you're using Windows Admin Center to manage Storage Replica, use the followin
     1. Select the **Add** button.
     2. Select **Add server connection**.
     3. Type the name of the server and then select **Submit**.
-
-   ![The Add Server Connection screen showing entering the name of a Storage Replica server.](media\Storage-Replica-UI\Honolulu_Add_Connection.png)
-
 2. On the **All Connections** page, select the source server.
 3. Select **Storage Replica** from Tools panel.
 4. Select **New** to create a new partnership.
 5. Provide the details of the partnership, and then select **Create**. <br>
 ![The New Partnership screen showing partnership details, such as an 8 GB log size.](media\Storage-Replica-UI\Honolulu_SR_Create_Partnership.png)
+
+    **Figure 3: Creating a new partnership**
 
 > [!NOTE]
 > Removing the partnership from Storage Replica in Windows Admin Center doesn’t remove the replication group name.
@@ -422,14 +423,21 @@ b.  We strongly recommend enabling Volume Shadow Copies and periodically taking 
 
 ## <a name="add-azure-vm-expressroute"></a>Adding an Azure VM connected to your network via ExpressRoute
 
-1. [Create an ExpressRoute in the Azure portal](https://docs.microsoft.com/azure/expressroute/expressroute-howto-circuit-portal-resource-manager).<br>To get the subscription ID to use when creating the ExpressRoute, in the Azure Portal, navigate to **All services > General > Subscriptions**.<br><br> After the ExpressRoute is approved, a resource group is added to the subscription - navigate to **Resource groups** to view it.
+1. [Create an ExpressRoute in the Azure portal](https://docs.microsoft.com/azure/expressroute/expressroute-howto-circuit-portal-resource-manager).<br>After the ExpressRoute is approved, a resource group is added to the subscription - navigate to **Resource groups** to view this new group. Take note of the resource group name.
+![Azure portal showing the resource group added with the ExpressRoute](media/Server-to-Server-Storage-Replication/express-route-resource-group.png)
+    **Figure 4: The resources associated with an ExpressRoute**
 1. [Create a new resource group](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-portal).
-1. [Add a network security group](https://docs.microsoft.com/azure/virtual-network/virtual-networks-create-nsg-arm-pportal), using the subscription ID with the ExpressRoute, and the resource group you just created.
-1. Add any inbound and outbound security rules you need to the network security group. For example, you might want to allow Remote Desktop access to the VM.
-1. [Create an Azure VM](https://docs.microsoft.com/azure/virtual-machines/windows/quick-create-portal), with the following settings:
+1. [Add a network security group](https://docs.microsoft.com/azure/virtual-network/virtual-networks-create-nsg-arm-pportal). When creating it, select the subscription ID associated with the ExpressRoute you created, and select the resource group you just created as well.
+<br><br>Add any inbound and outbound security rules you need to the network security group. <br>For example, you might want to allow Remote Desktop access to the VM.
+1. Navigate to **Resource groups**, select the resource group added during the ExpressRoute creation, and then take note of the virtual network name - you'll need in the next step.
+1. [Create an Azure VM](https://docs.microsoft.com/azure/virtual-machines/windows/quick-create-portal) with the following settings (shown in Figure 5):
     - **Public IP address**: None
-    - **Network security group (firewall)**: Select the virtual network provided by the ExpressRoute you created.
-6. After the VM is created, see [Step 2: Provision operating system, features, roles, storage, and network](#provision-os).
+    - **Virtual network**: Select the virtual network you took note of from the resource group added with the ExpressRoute.
+    - **Network security group (firewall)**: Select the network security group you created previously.
+
+    ![Create virtual machine showing ExpressRoute network settings](media/Server-to-Server-Storage-Replication/azure-vm-express-route.png)
+    **Figure 5: Creating a VM while selecting ExpressRoute network settings**
+1. After the VM is created, see [Step 2: Provision operating system, features, roles, storage, and network](#provision-os).
 
 
 ## Related Topics  
@@ -437,8 +445,5 @@ b.  We strongly recommend enabling Volume Shadow Copies and periodically taking 
 - [Stretch Cluster Replication Using Shared Storage](stretch-cluster-replication-using-shared-storage.md)  
 - [Cluster to Cluster Storage Replication](cluster-to-cluster-storage-replication.md)
 - [Storage Replica: Known Issues](storage-replica-known-issues.md)  
-- [Storage Replica: Frequently Asked Questions](storage-replica-frequently-asked-questions.md)  
-
-## See Also  
-- [Windows Server 2016](../../get-started/windows-server-2016.md)  
+- [Storage Replica: Frequently Asked Questions](storage-replica-frequently-asked-questions.md)
 - [Storage Spaces Direct in Windows Server 2016](../storage-spaces/storage-spaces-direct-overview.md)  
