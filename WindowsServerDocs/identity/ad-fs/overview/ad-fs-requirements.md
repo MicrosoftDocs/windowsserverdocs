@@ -64,7 +64,7 @@ By default, AD FS configures the SSL certificate provided upon initial configura
 - Use the same certificate as you use for SSL.  
 
 ### Token Signing Certificate
-This certificate is used sign issued tokens to relying parties, so relying party applications must recognize the certificate and it's associated key as known and trusted. When the token signing certificate changes, such as when it expires and you configure a new certificate, all relying parties must be updated.
+This certificate is used to sign issued tokens to relying parties, so relying party applications must recognize the certificate and it's associated key as known and trusted. When the token signing certificate changes, such as when it expires and you configure a new certificate, all relying parties must be updated.
 
 **Recommendation:**
 Use the AD FS default, internally generated, self-signed token signing certificates.  

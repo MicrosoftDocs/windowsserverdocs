@@ -4,7 +4,7 @@ description: 'This page provies a brief overview of the Always On VPN technologi
 ms.prod: windows-server-threshold
 ms.technology: networking-ras
 ms.topic: article
-ms.date: 05/21/2018
+ms.date: 05/29/2018
 ms.author: pashort
 author: shortpatti
 manager: elizapo
@@ -12,12 +12,11 @@ ms.reviewer: deverette
 ---
 
 
-# Always On VPN Technology Overview
+# Always On VPN technology overview
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-&#171;  [**Previous:** Always On VPN Deployment for Windows Server and Windows 10](deploy/always-on-vpn-deploy.md)<br>
-&#187; [ **Next:** Learn more about the advanced VPN features](deploy/always-on-vpn-adv-options.md)
-
+&#171;  [**Previous:** Learn about the Always On VPN enhancements](always-on-vpn-enhancements.md)<br>
+&#187;  [**Next:** Learn about the advanced features of Always On VPN](deploy/always-on-vpn-adv-options.md)
 
 For this deployment, you must install a new Remote Access server that is running Windows Server 2016, as well as modify some of your existing infrastructure for the deployment.
 
@@ -44,16 +43,32 @@ For more information on each infrastructure component depicted in the illustrati
 >[!NOTE]
 >If you already have some of these technologies deployed on your network, you can use the instructions in this deployment guidance to perform additional configuration of the technologies for this deployment purpose.
 
+## Domain Name System (DNS)
+
+Both internal and external Domain Name System (DNS) zones are required, which assumes that the internal zone is a delegated subdomain of the external zone (for example, corp.contoso.com and contoso.com).
+
+Learn more about [Domain Name System (DNS)](../../../../networking/dns/dns-top.md) or [Core Network Guide](../../../../networking/core-network-guide/core-network-guide.md).
+
+>[!NOTE] 
+>Other DNS designs, such as split-brain DNS (using the same domain name internally and externally in separate DNS zones) or unrelated internal and external domains (e.g., contoso.local and contoso.com) are also possible, but the configuration for these environments is beyond the scope of this deployment.
+
+## Firewalls
+
+Make sure that your firewalls allow the traffic that is necessary for both VPN and RADIUS communications to function correctly.
+
+For more information, see [Configure Firewalls for RADIUS Traffic](../../../../networking/technologies/nps/nps-firewalls-configure.md).
+
 ## Remote Access as a RAS Gateway VPN Server
 
 In Windows Server 2016, the Remote Access server role is designed to perform well as both a router and a remote access server; therefore, it supports a wide array of features. For this deployment guidance, you require only a small subset of these features: support for IKEv2 VPN connections and LAN routing.
 
 IKEv2 is a VPN tunneling protocol described in Internet Engineering Task Force Request for Comments 7296. The primary advantage of IKEv2 is that it tolerates interruptions in the underlying network connection. For example, if the connection is temporarily lost or if a user moves a client computer from one network to another, IKEv2 automatically restores the VPN connection when the network connection is reestablished—all without user intervention.
 
-By using RAS Gateway, you can deploy VPN connections to provide end users with remote access to your organization's network and resources. Deploying Always On VPN maintains a persistent connection between clients and your organization network whenever remote computers are connected to the Internet. With RAS Gateway, you can also create a site-to-site VPN connection between two servers at different locations, such as between your primary office and a branch office, and use Network Address Translation \\(NAT\\) so that users inside the network
-can access external resources, such as the Internet. Also, RAS Gateway supports Border Gateway Protocol (BGP), which provides dynamic routing services when your remote office locations also have edge gateways that support BGP.
+By using RAS Gateway, you can deploy VPN connections to provide end users with remote access to your organization's network and resources. Deploying Always On VPN maintains a persistent connection between clients and your organization network whenever remote computers are connected to the Internet. With RAS Gateway, you can also create a site-to-site VPN connection between two servers at different locations, such as between your primary office and a branch office, and use Network Address Translation \(NAT\) so that users inside the network can access external resources, such as the Internet. Also, RAS Gateway supports Border Gateway Protocol (BGP), which provides dynamic routing services when your remote office locations also have edge gateways that support BGP.
 
 You can manage Remote Access Service (RAS) Gateways by using Windows PowerShell commands and the Remote Access Microsoft Management Console (MMC).
+
+
 
 ## Network Policy Server (NPS)
 
@@ -61,38 +76,8 @@ NPS allows you to create and enforce organization-wide network access policies f
 
 You also configure network policies that NPS uses to authorize connection requests, and you can configure RADIUS accounting so that NPS logs accounting information to log files on the local hard disk or in a Microsoft SQL Server database.
 
-For more information, see [Network Policy Server (NPS)](https://docs.microsoft.com/windows-server/networking/technologies/nps/nps-top).
+For more information, see [Network Policy Server (NPS)](../../../../networking/technologies/nps/nps-top.md).
 
-## Active Directory Domain Services (AD DS)
-
-AD DS provides a distributed database that stores and manages information about network resources and application-specific data from directory-enabled applications. Administrators can use AD DS to organize elements of a network, such as users, computers, and other devices, into a hierarchical containment structure. The hierarchical containment structure includes the Active Directory forest, domains in the forest, and organizational units (OUs) in each domain. A server that is running AD DS is called a domain controller.
-
-AD DS contains the user accounts, computer accounts, and account properties that are required by Protected Extensible Authentication Protocol (PEAP) to authenticate user credentials and to evaluate authorization for VPN connection requests. For information about deploying AD DS, see the Windows Server 2016 [Core Network Guide](https://docs.microsoft.com/windows-server/networking/core-network-guide/core-network-guide).
-
-During completion of the steps in this deployment, you will configure the following items on the domain controller.
-
--   Enable certificate autoenrollment in Group Policy for computers and users
-
--   Create the VPN Users Group
-
--   Create the VPN Servers Group
-
--   Create the NPS Servers Group
-
-### Active Directory Users and Computers
-
-Active Directory Users and Computers is a component of AD DS that contains accounts that represent physical entities, such as a computer, a person, or a security group. A security group is a collection of user or computer accounts that administrators can manage as a single unit. User and computer accounts that belong to a particular group are referred to as group members.
-
-User accounts in Active Directory Users and Computers have dial-in properties that NPS evaluates during the authorization process - unless the **Network Access Permission** property of the user account is set to **Control access through NPS Network Policy**. This is the default setting for all user accounts. In some cases, however, this setting might have a different configuration that blocks the user from connecting using VPN. To protect against this possibility, you can configure the NPS server to ignore user account dial-in properties.
-
-For more information, see [Configure NPS to Ignore User Account Dial-in Properties](https://docs.microsoft.com/en-us/windows-server/networking/technologies/nps/nps-np-configure#configure-nps-to-ignore-user-account-dial-in-properties).
-
-### Group Policy Management
-
-Group Policy Management enables directory-based change and configuration management of user and computer settings, including security and user information. You use Group Policy to define configurations for groups of users and computers.
-
-With Group Policy, you can specify settings for registry entries, security, software installation, scripts, folder redirection, remote installation services, and Internet Explorer maintenance. The Group Policy settings that you create are contained in a Group Policy object (GPO). By associating a GPO with selected Active Directory system containers — sites, domains, and OUs — you can apply the GPO's settings to the users and computers in those Active Directory containers. To manage Group Policy objects across an enterprise, you can use the
-Group Policy Management Editor Microsoft Management Console (MMC).
 
 ## Active Directory Certificate Services
 
@@ -138,20 +123,41 @@ When you use digital server certificates for authentication between computers on
 
 For more information, see [AD CS Step by Step Guide: Two Tier PKI Hierarchy Deployment](https://social.technet.microsoft.com/wiki/contents/articles/15037.ad-cs-step-by-step-guide-two-tier-pki-hierarchy-deployment.aspx).
 
-## Domain Name System (DNS)
+## Active Directory Domain Services (AD DS)
 
-Both internal and external Domain Name System (DNS) zones are required, which assumes that the internal zone is a delegated subdomain of the external zone (e.g., corp.contoso.com and contoso.com).
+AD DS provides a distributed database that stores and manages information about network resources and application-specific data from directory-enabled applications. Administrators can use AD DS to organize elements of a network, such as users, computers, and other devices, into a hierarchical containment structure. The hierarchical containment structure includes the Active Directory forest, domains in the forest, and organizational units (OUs) in each domain. A server that is running AD DS is called a domain controller.
 
-Learn more about [Domain Name System (DNS)](https://docs.microsoft.com/windows-server/networking/dns/dns-top) or [deploying AD DS with DNS](https://docs.microsoft.com/windows-server/networking/core-network-guide/core-network-guide).
+AD DS contains the user accounts, computer accounts, and account properties that are required by Protected Extensible Authentication Protocol (PEAP) to authenticate user credentials and to evaluate authorization for VPN connection requests. For information about deploying AD DS, see the Windows Server 2016 [Core Network Guide](../../../../networking/core-network-guide/Core-Network-Guide.md).
 
->[!NOTE] 
->Other DNS designs, such as split-brain DNS (using the same domain name internally and externally in separate DNS zones) or unrelated internal and external domains (e.g., contoso.local and contoso.com) are also possible, but the configuration for these environments is beyond the scope of this deployment.
 
-## Firewalls
 
-Ensure that your firewalls allow the traffic that is necessary for both VPN and RADIUS communications to function correctly.
+During completion of the steps in this deployment, you will configure the following items on the domain controller.
 
-For more information, see [Configure Firewalls for RADIUS Traffic](https://docs.microsoft.com/windows-server/networking/technologies/nps/nps-firewalls-configure).
+-   Enable certificate autoenrollment in Group Policy for computers and users
+
+-   Create the VPN Users Group
+
+-   Create the VPN Servers Group
+
+-   Create the NPS Servers Group
+
+### Active Directory Users and Computers
+
+Active Directory Users and Computers is a component of AD DS that contains accounts that represent physical entities, such as a computer, a person, or a security group. A security group is a collection of user or computer accounts that administrators can manage as a single unit. User and computer accounts that belong to a particular group are referred to as group members.
+
+User accounts in Active Directory Users and Computers have dial-in properties that NPS evaluates during the authorization process - unless the **Network Access Permission** property of the user account is set to **Control access through NPS Network Policy**. This is the default setting for all user accounts. In some cases, however, this setting might have a different configuration that blocks the user from connecting using VPN. To protect against this possibility, you can configure the NPS server to ignore user account dial-in properties.
+
+For more information, see [Configure NPS to Ignore User Account Dial-in Properties](../../../../networking/technologies/nps/nps-np-configure.md#configure-nps-to-ignore-user-account-dial-in-properties).
+
+
+
+### Group Policy Management
+
+Group Policy Management enables directory-based change and configuration management of user and computer settings, including security and user information. You use Group Policy to define configurations for groups of users and computers.
+
+With Group Policy, you can specify settings for registry entries, security, software installation, scripts, folder redirection, remote installation services, and Internet Explorer maintenance. The Group Policy settings that you create are contained in a Group Policy object (GPO). By associating a GPO with selected Active Directory system containers — sites, domains, and OUs — you can apply the GPO's settings to the users and computers in those Active Directory containers. To manage Group Policy objects across an enterprise, you can use the
+Group Policy Management Editor Microsoft Management Console (MMC).
+
 
 ## Windows 10 VPN Clients
 
@@ -160,7 +166,7 @@ In addition to the server components, ensure that the client computers you confi
 
 The Windows 10 VPN client is highly configurable and offers many options. To better illustrate the specific features this scenario uses, Table 1 identifies the VPN feature categories and specific configurations that this deployment references. You’ll configure the individual settings for these features by using the VPNv2 configuration service provider (CSP) discussed later in this deployment. 
 
-Table 1. VPN Features and Configurations Discussed in This Deployment
+Table 1. VPN Features and Configurations Discussed in this Deployment
 
 | **VPN feature** | **Deployment scenario configuration**         |
 |-----------------|-----------------------------------------------|
@@ -188,22 +194,23 @@ Windows 10 offers many CSPs, but this deployment focuses on using the VPNv2 CSP 
 ## Next step
 |If you want to...  |Then see...  |
 |---------|---------|
-|Learn more about the Always On VPN advanced features  |[Advance VPN features](deploy/always-on-vpn-adv-options.md): This page provides guidance on how to enable VPN Traffic Filters, how to configure Automatic VPN connections using App-Triggers, and how to configure NPS to only allow VPN Connections from clients using certificates issued by Azure AD.         |
-|Learn about the feature comparison between Always On VPN and DirectAccess    |[Feature Comparison of Always On VPN and DirectAccess](../vpn-map-da.md): In previous versions of the Windows VPN architecture, platform limitations made it difficult to provide the critical functionality needed to replace DirectAccess (like automatic connections initiated before users sign in). Always On VPN, however, has mitigated most of those limitations or expanded the VPN functionality beyond the capabilities of DirectAccess.         |
-|Start planning your deployment |[Plan the Always On VPN deployment](deploy/always-on-vpn-deploy-planning.md): Before you install the Remote Access server role on the computer you're planning on using as a VPN server, perform the following tasks. After proper planning, you can deploy Always On VPN, and optionally configure conditional access for VPN connectivity using Azure AD.  |
+|Learn about the Always On VPN advanced features  |[Advance VPN features](deploy/always-on-vpn-adv-options.md): This page provides guidance on how to enable VPN Traffic Filters, how to configure Automatic VPN connections using App-Triggers, and how to configure NPS to only allow VPN Connections from clients using certificates issued by Azure AD.         |
+|Migrate from DirectAccess to Always On VPN |[DirectAccess to Always On VPN migration overview](../../da-always-on-vpn-migration/da-always-on-migration-overview.md): In previous versions of the Windows VPN architecture, platform limitations made it difficult to provide the critical functionality needed to replace DirectAccess (like automatic connections initiated before users sign in). Always On VPN, however, has mitigated most of those limitations or expanded the VPN functionality beyond the capabilities of DirectAccess. |
+|Get started with your deployment |[Plan the Always On VPN deployment](deploy/always-on-vpn-deploy-deployment.md): Before you install the Remote Access server role on the computer you're planning on using as a VPN server. After proper planning, you can deploy Always On VPN, and optionally configure conditional access for VPN connectivity using Azure AD.  |
+
 
 ---
 
 ## Related topics
 - [Microsoft server software support for Microsoft Azure virtual machines](https://support.microsoft.com/help/2721672/microsoft-server-software-support-for-microsoft-azure-virtual-machines): This article discusses the support policy for running Microsoft server software in the Microsoft Azure virtual machine environment (infrastructure-as-a-service).
 
-- [Remote Access](https://docs.microsoft.com/windows-server/remote/remote-access/remote-access): This topic provides an overview of the Remote Access server role in Windows Server 2016.
+- [Remote Access](../../Remote-Access.md): This topic provides an overview of the Remote Access server role in Windows Server 2016.
 
 - [Windows 10 VPN Technical Guide](https://docs.microsoft.com/windows/access-protection/vpn/vpn-guide): This guide walks you through the decisions you will make for Windows 10 clients in your enterprise VPN solution and how to configure your deployment. This guide references the VPNv2 Configuration Service Provider (CSP) and provides mobile device management (MDM) configuration instructions using Microsoft Intune and the VPN Profile template for Windows 10.
 
-- [Core Network Guide](https://docs.microsoft.com/windows-server/networking/core-network-guide/core-network-guide): This guide provides instructions on how to plan and deploy the core components required for a fully functioning network and a new Active Directory domain in a new forest.
+- [Core Network Guide](../../../../networking/core-network-guide/Core-Network-Guide.md): This guide provides instructions on how to plan and deploy the core components required for a fully functioning network and a new Active Directory domain in a new forest.
 
-- [Domain Name System (DNS)](https://docs.microsoft.com/windows-server/networking/dns/dns-top): This topic provides an overview of Domain Name Systems (DNS). In Windows Server 2016, DNS is a server role that you can install by using Server Manager or Windows PowerShell commands. If you are installing a new Active Directory forest and domain, DNS is automatically installed with Active Directory as the Global Catalogue server for the forest and domain. 
+- [Domain Name System (DNS)](../../../../networking/dns/dns-top.md): This topic provides an overview of Domain Name Systems (DNS). In Windows Server 2016, DNS is a server role that you can install by using Server Manager or Windows PowerShell commands. If you are installing a new Active Directory forest and domain, DNS is automatically installed with Active Directory as the Global Catalogue server for the forest and domain. 
 
 - [Active Directory Certificate Services Overview](https://technet.microsoft.com/library/hh831740.aspx): This document provides an overview of Active Directory Certificate Services (AD CS) in Windows Server® 2012. AD CS is the Server Role that allows you to build a public key infrastructure (PKI) and provide public key cryptography, digital certificates, and digital signature capabilities for your organization.
 
@@ -211,6 +218,6 @@ Windows 10 offers many CSPs, but this deployment focuses on using the VPNv2 CSP 
 
 - [AD CS Step by Step Guide: Two Tier PKI Hierarchy Deployment](https://social.technet.microsoft.com/wiki/contents/articles/15037.ad-cs-step-by-step-guide-two-tier-pki-hierarchy-deployment.aspx): This step-by-step guide describes the steps needed to set up a basic configuration of Active Directory® Certificate Services (AD CS) in a lab environment. AD CS in Windows Server® 2008 R2 provides customizable services for creating and managing public key certificates used in software security systems employing public key technologies.
 
-- [Network Policy Server (NPS)](https://docs.microsoft.com/windows-server/networking/technologies/nps/nps-top): This topic provides an overview of Network Policy Server in Windows Server 2016. Network Policy Server (NPS) allows you to create and enforce organization-wide network access policies for connection request authentication and authorization. 
+- [Network Policy Server (NPS)](../../../../networking/technologies/nps/nps-top.md): This topic provides an overview of Network Policy Server in Windows Server 2016. Network Policy Server (NPS) allows you to create and enforce organization-wide network access policies for connection request authentication and authorization. 
 
 ---

@@ -8,16 +8,16 @@ ms.assetid:
 manager: elizapo
 ms.author: pashort
 author: shortpatti
-ms.date: 05/21/2018
+ms.date: 05/25/2018
 ms.reviewer: deverette
 ---
 
-# Step 6. (Optional) Conditional access for VPN connectivity using Azure AD
+# Step 7. (Optional) Conditional access for VPN connectivity using Azure AD
 
-&#171;  [**Previous:** Step 5. Configure Windows 10 Client Always On VPN Connections](always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md)<br>
-&#187; [ **Next:** Step 6.1. Configure EAP-TLS to ignore Certificate Revocation List (CRL) checking](vpn-config-eap-tls-to-ignore-crl-checking.md)
+&#171;  [**Previous:** Step 6. Configure Windows 10 Client Always On VPN Connections](always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md)<br>
+&#187; [ **Next:** Step 7.1. Configure EAP-TLS to ignore Certificate Revocation List (CRL) checking](vpn-config-eap-tls-to-ignore-crl-checking.md)
 
-In this optional step, you can fine-tune how authorized VPN users access your resources using [Azure Active Directory (Azure AD) conditional access](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-conditional-access-azure-portal). With Azure AD conditional access for virtual private network (VPN) connectivity, you can help protect the VPN connections. Conditional Access is a policy-based evaluation engine that lets you create access rules for any Azure Active Directory (Azure AD) connected application. 
+In this optional step, you can fine-tune how VPN users access your resources using [Azure Active Directory (Azure AD) conditional access](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-conditional-access-azure-portal). With Azure AD conditional access for virtual private network (VPN) connectivity, you can help protect the VPN connections. Conditional Access is a policy-based evaluation engine that lets you create access rules for any Azure Active Directory (Azure AD) connected application. 
 
 ## Prerequisites
 
@@ -32,14 +32,14 @@ To configure Azure Active Directory conditional access for VPN connectivity, you
 - [DNS and Firewall Settings](always-on-vpn/deploy/vpn-deploy-dns-firewall.md)
 - [Windows 10 Client Always On VPN Connections](always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md)
 
-## [Step 6.1. Configure EAP-TLS to ignore Certificate Revocation List (CRL) checking](vpn-config-eap-tls-to-ignore-crl-checking.md)
+## [Step 7.1. Configure EAP-TLS to ignore Certificate Revocation List (CRL) checking](vpn-config-eap-tls-to-ignore-crl-checking.md)
 
 In this step, you can add **IgnoreNoRevocationCheck** and set it to allow authentication of clients when the certificate does not include CRL distribution points. By default, IgnoreNoRevocationCheck is set to 0 (disabled).
 
 An EAP-TLS client cannot connect unless the NPS server completes a revocation check of the certificate chain (including the root certificate). Cloud certificates issued to the user by Azure AD do not have a CRL because they are short-lived certificates with a lifetime of one hour. EAP on NPS needs to be configured to ignore the absence of a CRL. Since the authentication method is EAP-TLS, this registry value is only needed under **EAP\13**. If other EAP authentication methods are used, then the registry value should be added under those as well. 
 
 
-## [Step 6.2. Create root certificates for VPN authentication with Azure AD](vpn-create-root-cert-for-vpn-auth-azure-ad.md)
+## [Step 7.2. Create root certificates for VPN authentication with Azure AD](vpn-create-root-cert-for-vpn-auth-azure-ad.md)
 
 In this step, you configure root certificates for VPN authentication with Azure AD, which automatically creates a VPN server cloud app in the tenant.  
 
@@ -48,16 +48,16 @@ To configure conditional access for VPN connectivity, you need to:
 2. Download the VPN certificate.
 3. Deploy the certificate to your VPN server.
 
-## [Step 6.3. Configure the Conditional Access policy](vpn-config-conditional-access-policy.md)
+## [Step 7.3. Configure the Conditional Access policy](vpn-config-conditional-access-policy.md)
 
 In this step, you configure the conditional access policy for VPN connectivity. 
 
 To configure the conditional access policy, you need to:
 - Create a Conditional Access policy that is assigned to VPN users.
 - Set the Cloud app to **VPN Server**.
-- Set the Grant (access control) to **Require multi-factor authentication**.  Other controls can be used if desired.
+- Set the Grant (access control) to **Require multi-factor authentication**.  You can use other controls as necessary.
 
-## [Step 6.4. Deploy conditional access root certificates to on-premises AD](vpn-deploy-cond-access-root-cert-to-on-premise-ad.md)
+## [Step 7.4. Deploy conditional access root certificates to on-premises AD](vpn-deploy-cond-access-root-cert-to-on-premise-ad.md)
 
 In this step, you deploy a trusted root certificate for VPN authentication to your on-premises AD.
 
@@ -67,13 +67,13 @@ To deploy the trusted root certificate, you need to:
 - Verify that the certificates are present and show as trusted.
 
 
-## [Step 6.5. Create OMA-DM based VPNv2 Profiles to Windows 10 devices](vpn-create-oma-dm-based-vpnv2-profiles.md)
+## [Step 7.5. Create OMA-DM based VPNv2 Profiles to Windows 10 devices](vpn-create-oma-dm-based-vpnv2-profiles.md)
 
-In this step, you create OMA-DM VPNv2 profiles one of two ways. The first method is a managed deployment using Intune to deploy a VPN Device Configuration policy. The second method can be used for unmanaged environments using a PowerShell script that leverages the Common Information Model, which creates a WMI session in the user’s context. From this context, it then creates a new instance of the MDM_VPNv2_01 WMI class. 
+In this step, you can create OMA-DM based VPNv2 profiles using Intune to deploy a VPN Device Configuration policy. If you want to use SCCM or PowerShell Script to create VPNv2 profiles, see [VPNv2 CSP settings](https://docs.microsoft.com/en-us/windows/client-management/mdm/vpnv2-csp) for more details. 
 
 
 ## Next step
-[Step 6.1. Configure EAP-TLS to ignore Certificate Revocation List (CRL) checking](vpn-config-eap-tls-to-ignore-crl-checking.md): In this step, you must add **IgnoreNoRevocationCheck** and set it to allow authentication of clients when the certificate does not include CRL distribution points. By default, IgnoreNoRevocationCheck is set to 0 (disabled).
+[Step 7.1. Configure EAP-TLS to ignore Certificate Revocation List (CRL) checking](vpn-config-eap-tls-to-ignore-crl-checking.md): In this step, you must add **IgnoreNoRevocationCheck** and set it to allow authentication of clients when the certificate does not include CRL distribution points. By default, IgnoreNoRevocationCheck is set to 0 (disabled).
 
 ---
 

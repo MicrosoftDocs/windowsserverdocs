@@ -1,8 +1,8 @@
 ---
-title: Overview of the Always On VPN Deployment
+title: Remote Access Always On VPN Deployment Overview
 description: This topic provides an overview of Always On VPN deployment in Windows Server 2016.
 ms.prod: windows-server-threshold
-ms.technology: networking-ras
+ms.technology: networking
 ms.topic: article
 ms.assetid: d33e6bd2-ca2e-448a-bce9-a43d4cb20766
 manager: elizapo
@@ -10,7 +10,7 @@ ms.date: 05/21/2018
 ms.author: pashort
 author: shortpatti
 ---
-# Overview of the Always On VPN Deployment
+# Remote Access Always On VPN Deployment Overview
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
@@ -45,9 +45,9 @@ For more information on each infrastructure component depicted in the illustrati
 
 ## VPN Server
 
-The VPN Server is a new physical server or virtual machine \(VM\) that you must install to complete the steps provided in this deployment. 
+The VPN Server is a new physical server or virtual machine \(VM\) that you must install to complete the steps in this guide. 
 
-In the process of completing the steps, you must perform the following actions with the VPN Server:
+In the process of completing the steps in this guide, you must perform the following actions with the VPN Server.
 
 - Install two Ethernet network adapters in the physical server. If you are installing the VPN server on a VM, you must create two External virtual switches, one for each physical network adapter; and then create two virtual network adapters for the VM, with each network adapter connected to one virtual switch.
 - Install the server on your perimeter network between your edge and internal firewalls, with one network adapter connected to the External Perimeter Network, and one network adapter connected to the Internal Perimeter Network.
@@ -63,7 +63,7 @@ The NPS Server is installed on your organization/corporate network. You must con
 
 The Active Directory Domain Services \(AD DS\) server is an on\-premises Active Directory domain, which hosts on\-premises user accounts.
 
-During completion of the steps, you will configure the following items on the domain controller.
+During completion of the steps in this guide, you will configure the following items on the domain controller.
 
 - Enable certificate autoenrollment in Group Policy for computers and users
 - Create the VPN Users Group
@@ -74,7 +74,7 @@ During completion of the steps, you will configure the following items on the do
 
 The Certification Authority \(CA\) Server is a certification authority that is running Active Directory Certificate Services. The VPN configuration requires an Active Directory–based public key infrastructure \(PKI\). 
 
-The CA enrolls certificates that are used for PEAP client–server authentication. The CA creates certificates based on certificate templates. During completion of the steps, you will configure the following certificate templates on the CA.
+The CA enrolls certificates that are used for PEAP client–server authentication. The CA creates certificates based on certificate templates. During completion of the steps in this guide, you will configure the following certificate templates on the CA.
 
 - The User Authentication certificate template
 - The VPN Server Authentication certificate template
@@ -85,15 +85,15 @@ The CA enrolls certificates that are used for PEAP client–server authenticatio
 Both internal and external Domain Name System \(DNS\) zones are required, which assumes that the internal zone is a delegated subdomain of the external zone \(e.g., corp.contoso.com and contoso.com\). 
 
 >[!NOTE]
->Other DNS designs, such as split-brain DNS \(using the same domain name internally and externally in separate DNS zones\) or unrelated internal and external domains \(e.g., contoso.local and contoso.com\) are also possible, but the configuration for these environments is beyond the scope of this deployment.
+>Other DNS designs, such as split-brain DNS \(using the same domain name internally and externally in separate DNS zones\) or unrelated internal and external domains \(e.g., contoso.local and contoso.com\) are also possible, but the configuration for these environments is beyond the scope of this guide.
 
 ## Windows 10 VPN Client
 
 In addition to the server components, ensure that the client computers you configure to use VPN are running Windows 10 Anniversary Update (version 1607) or later.
 
-The Windows 10 VPN client is highly configurable and offers many options. To better illustrate the specific features this scenario uses, Table 1 identifies the VPN feature categories and specific configurations that this deployment references. You’ll configure the individual settings for these features by using the VPNv2 configuration service provider (CSP) discussed later in this deployment.
+The Windows 10 VPN client is highly configurable and offers many options. To better illustrate the specific features this scenario uses, Table 1 identifies the VPN feature categories and specific configurations that this guide references. You’ll configure the individual settings for these features by using the VPNv2 configuration service provider (CSP) discussed later in this guide.
 
-Table 1. VPN Features and Configurations Discussed in This Deployment
+Table 1. VPN Features and Configurations Discussed in This Guide
 
 | **VPN feature** | **Deployment scenario configuration** |
 |-----------------|---------------------------------------|
@@ -122,15 +122,15 @@ However, you can’t configure some CSP nodes directly through a user interface 
 
 In these cases, you must configure the Open Mobile Alliance Uniform Resource Identifier \(OMA\-URI\) settings manually. You configure OMA\-URIs by using the OMA Device Management protocol \(OMA\-DM\), a universal device management specification that most modern Apple, Android, and Windows devices support. As long as they adhere to the OMA\-DM specification, all MDM products should interact with these operating systems in the same way.
 
-Windows 10 offers many CSPs, but this deployment focuses on using the VPNv2 CSP to configure the VPN client. 
+Windows 10 offers many CSPs, but this guide focuses on using the VPNv2 CSP to configure the VPN client. 
 
 The VPNv2 CSP allows configuration of each VPN profile setting in Windows 10 through a unique CSP node. 
 
 Also contained in the VPNv2 CSP is a node called *ProfileXML*, which allows you to configure all the settings in one node rather than individually. 
 
-In this deployment, you use the ProfileXML VPNv2 CSP node to create the VPN profile that is delivered to Windows 10 client computers.
+In this guide, you use the ProfileXML VPNv2 CSP node to create the VPN profile that is delivered to Windows 10 client computers.
 
-For more information about ProfileXML, see the section “ProfileXML overview” later in this deployment. For details about each VPNv2 CSP node, see the [VPNv2 CSP](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/vpnv2-csp).
+For more information about ProfileXML, see the section “ProfileXML overview” later in this guide. For details about each VPNv2 CSP node, see the [VPNv2 CSP](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/vpnv2-csp).
 
 ## Firewalls
 

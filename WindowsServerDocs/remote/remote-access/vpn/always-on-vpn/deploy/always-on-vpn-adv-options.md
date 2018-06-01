@@ -5,19 +5,19 @@ ms.assetid: 51a1ee61-3ffe-4f65-b8de-ff21903e1e74
 ms.prod: windows-server-threshold
 ms.technology: networking-ras
 ms.topic: article
-ms.date: 05/21/2018
+ms.date: 05/29/2018
 ms.author: pashort
 author: shortpatti
 manager: elizapo
 ms.reviewer: deverette
 ---
 
-# Advanced Features of Always On VPN
+# Advanced features of Always On VPN
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
 &#171;  [**Previous:** Learn about the Always On VPN Technology](../always-on-vpn-technology-overview.md)<br>
-&#187; [ **Next:** Learn about the feature comparison between Always On VPN and DirectAccess](../../vpn-map-da.md)
+&#187; [ **Next:** Start planning the Always On VPN deployment](always-on-vpn-deploy-planning.md)
 
 Beyond the deployment scenarios provided, you can add other advanced VPN features to improve the security and availability of your VPN connection. For example, such components can help ensure that the connecting client is healthy before allowing a connection.
 
@@ -69,10 +69,7 @@ A user certificate with a TPM-attested key provides higher security assurance, b
 For more information about TPM key attestation in Windows 10, see [TPM Key Attestation](https://docs.microsoft.com/windows-server/identity/ad-ds/manage/component-updates/tpm-key-attestation).
 
 ## Next step
-|If you want to...  |Then see...  |
-|---------|---------|
-|Learn about the feature comparison between Always On VPN and DirectAccess    |[Feature Comparison of Always On VPN and DirectAccess](../../vpn-map-da.md): In previous versions of the Windows VPN architecture, platform limitations made it difficult to provide the critical functionality needed to replace DirectAccess (like automatic connections initiated before users sign in). Always On VPN, however, has mitigated most of those limitations or expanded the VPN functionality beyond the capabilities of DirectAccess.         |
-|Start planning your deployment |[Plan the Always On VPN deployment](always-on-vpn-deploy-planning.md): Before you install the Remote Access server role on the computer you're planning on using as a VPN server, perform the following tasks. After proper planning, you can deploy Always On VPN, and optionally configure conditional access for VPN connectivity using Azure AD.  |
+[Start planning the Always On VPN deployment](always-on-vpn-deploy-planning.md): Before you install the Remote Access server role on the computer you're planning on using as a VPN server, perform the following tasks. After proper planning, you can deploy Always On VPN, and optionally configure conditional access for VPN connectivity using Azure AD.  
 
 ---
 

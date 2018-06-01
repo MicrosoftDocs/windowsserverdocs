@@ -11,26 +11,26 @@ ms.workload: identity
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.topic: article
-ms.date: 05/21/2018
+ms.date: 05/25/2018
 ms.author: pashort
 author: shortpatti
 manager: elizapo
 ms.reviewer: deverette
 ---
 
-# Step 6.1. Configure EAP-TLS to ignore Certificate Revocation List (CRL) checking
+# Step 7.1. Configure EAP-TLS to ignore Certificate Revocation List (CRL) checking
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-&#171;  [**Previous:** Step 6. (Optional) Conditional access for VPN connectivity using Azure AD](ad-ca-vpn-connectivity-windows10.md)<br>
-&#187; [ **Next:** Step 6.2. Create root certificates for VPN authentication with Azure AD](vpn-create-root-cert-for-vpn-auth-azure-ad.md)
+&#171;  [**Previous:** Step 7. (Optional) Conditional access for VPN connectivity using Azure AD](ad-ca-vpn-connectivity-windows10.md)<br>
+&#187; [ **Next:** Step 7.2. Create root certificates for VPN authentication with Azure AD](vpn-create-root-cert-for-vpn-auth-azure-ad.md)
 
 >[!IMPORTANT]
 >Failure to implement this registry change will cause IKEv2 connections using cloud certificates with PEAP to fail, but IKEv2 connections using Client Auth certificates issued from the on-premises CA would continue to work.
 
 In this step, you can add **IgnoreNoRevocationCheck** and set it to allow authentication of clients when the certificate does not include CRL distribution points. By default, IgnoreNoRevocationCheck is set to 0 (disabled).
 
-An EAP-TLS client cannot connect unless the NPS server completes a revocation check of the certificate chain (including the root certificate). Cloud certificates issued to the user by Azure AD do not have a CRL because they are short-lived certificates with a lifetime of one hour. EAP on NPS needs to be configured to ignore the absence of a CRL. By default, IgnoreNoRevocationCheck is set to 0 (disabled). You must add IgnoreNoRevocationCheck and set it to 1 to allow authentication of clients when the certificate does not include CRL distribution points. 
+An EAP-TLS client cannot connect unless the NPS server completes a revocation check of the certificate chain (including the root certificate). Cloud certificates issued to the user by Azure AD do not have a CRL because they are short-lived certificates with a lifetime of one hour. EAP on NPS needs to be configured to ignore the absence of a CRL. By default, IgnoreNoRevocationCheck is set to 0 (disabled). Add IgnoreNoRevocationCheck and set it to 1 to allow authentication of clients when the certificate does not include CRL distribution points. 
 
 Since the authentication method is EAP-TLS, this registry value is only needed under EAP\13. If other EAP authentication methods are used, then the registry value should be added under those as well. 
 
@@ -44,7 +44,7 @@ Since the authentication method is EAP-TLS, this registry value is only needed u
 
 4. Double-click **IgnoreNoRevocationCheck** and set the Value data to **1**.
 
-5. Click **OK** and reboot the server. Restarting the RRAS and NPS services will not suffice.
+5. Click **OK** and reboot the server. Restarting the RRAS and NPS services does not suffice.
 
 For more information, see [How to Enable or Disable Certificate Revocation Checking (CRL) on Clients](https://technet.microsoft.com/en-us/library/bb680540.aspx).
 
@@ -57,6 +57,6 @@ For more information, see [How to Enable or Disable Certificate Revocation Check
 
 ## Next step
 
-[Step 6.2. Create root certificates for VPN authentication with Azure AD](vpn-create-root-cert-for-vpn-auth-azure-ad.md): In this step, you configure conditional access root certificates for VPN authentication with Azure AD, which automatically creates a VPN Server cloud app in the tenant. 
+[Step 7.2. Create root certificates for VPN authentication with Azure AD](vpn-create-root-cert-for-vpn-auth-azure-ad.md): In this step, you configure conditional access root certificates for VPN authentication with Azure AD, which automatically creates a VPN Server cloud app in the tenant. 
 
 ---
