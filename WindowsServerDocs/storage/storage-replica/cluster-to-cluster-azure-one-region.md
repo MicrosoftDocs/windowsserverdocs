@@ -62,11 +62,11 @@ Below is the PowerShell commands for our example
         
 ```PowerShell
     Enable-clusterS2D
-```  
-    
+```
+   
 > [!NOTE]
-> For each cluster create virtual disk and volume. One for the data and another for the log.  
-    
+> For each cluster create virtual disk and volume. One for the data and another for the log.
+   
 11. Create an internal Standard SKU [Load Balancer](https://ms.portal.azure.com/#create/Microsoft.LoadBalancer-ARM) for each cluster (**azlbr1**,**azlbr2**). 
    
    Provide the Cluster IP address as static private IP address for the load balancer.
@@ -79,14 +79,15 @@ Below is the PowerShell commands for our example
    - azlbr2 => Frontend IP: 10.3.0.101 (Pick up an unused IP address from the Virtual network (**az2az-Vnet**) subnet)
    - Create Backend Pool for each load balancer. Add the associated cluster nodes.
    - Create Health Probe: port 59999
-   - Create Load Balance Rule: Allow HA ports, with enabled Floating IP. 
-    
+   - Create Load Balance Rule: Allow HA ports, with enabled Floating IP.
+   
 12. On each cluster node, open port 59999 (Health Probe). 
-
+   
     Run the following command on each node:
 ```PowerShell
 netsh advfirewall firewall add rule name=PROBEPORT dir=in protocol=tcp action=allow localport=59999 remoteip=any profile=any 
-```     
+```
+   
 13. Instruct the cluster to listen for Health Probe messages on Port 59999 and respond from the node that currently owns this resource. 
 Run it once from any one node of the cluster, for each cluster. 
     
