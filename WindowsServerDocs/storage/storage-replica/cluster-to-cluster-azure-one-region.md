@@ -65,10 +65,10 @@ Below is the PowerShell commands for our example
 ```  
     
 > [!NOTE]
-> For each cluster create virtual disk and volume. One for the data and another for the log. 
+> For each cluster create virtual disk and volume. One for the data and another for the log.
     
 11. Create an internal Standard SKU [Load Balancer](https://ms.portal.azure.com/#create/Microsoft.LoadBalancer-ARM) for each cluster (**azlbr1**,**azlbr2**). 
-
+   
    Provide the Cluster IP address as static private IP address for the load balancer.
    - azlbr1 => Frontend IP: 10.3.0.100 (Pick up an unused IP address from the Virtual network (**az2az-Vnet**) subnet)
    - Create Backend Pool for each load balancer. Add the associated cluster nodes.
@@ -84,24 +84,20 @@ Below is the PowerShell commands for our example
 12. On each cluster node, open port 59999 (Health Probe). 
 
     Run the following command on each node:
-        
 ```PowerShell
 netsh advfirewall firewall add rule name=PROBEPORT dir=in protocol=tcp action=allow localport=59999 remoteip=any profile=any 
-```
-        
+```     
 13. Instruct the cluster to listen for Health Probe messages on Port 59999 and respond from the node that currently owns this resource. 
 Run it once from any one node of the cluster, for each cluster. 
     
     In our example, make sure to change the "ILBIP" according to your configuration values. Run the following command from any one node **az2az1**/**az2az2**: 
-        
 ```PowerShell
 $ClusterNetworkName = "Cluster Network 1" # Cluster network name (Use Get-ClusterNetwork on Windows Server 2012 or higher to find the name. And use Get-ClusterResource to find the IPResourceName).
 $IPResourceName = "Cluster IP Address" # IP Address cluster resource name.
 $ILBIP = "10.3.0.100" # IP Address in Internal Load Balancer (ILB) - The static IP address for the load balancer configured in the Azure portal.
 [int]$ProbePort = 59999
 Get-ClusterResource $IPResourceName | Set-ClusterParameter -Multiple @{"Address"="$ILBIP";"ProbePort"=$ProbePort;"SubnetMask"="255.255.255.255";"Network"="$ClusterNetworkName";”ProbeFailureThreshold”=5;"EnableDhcp"=0}  
-```
-   
+```  
 14. Run the following command from any one node **az2az3**/**az2az4**. 
 ```PowerShell
 $ClusterNetworkName = "Cluster Network 1" # Cluster network name (Use Get-ClusterNetwork on Windows Server 2012 or higher to find the name. And use Get-ClusterResource to find the IPResourceName).
@@ -109,38 +105,35 @@ $IPResourceName = "Cluster IP Address" # IP Address cluster resource name.
 $ILBIP = "10.3.0.101" # IP Address in Internal Load Balancer (ILB) - The static IP address for the load balancer configured in the Azure portal.
 [int]$ProbePort = 59999
 Get-ClusterResource $IPResourceName | Set-ClusterParameter -Multiple @{"Address"="$ILBIP";"ProbePort"=$ProbePort;"SubnetMask"="255.255.255.255";"Network"="$ClusterNetworkName";”ProbeFailureThreshold”=5;"EnableDhcp"=0}  
-```
+```   
+   Make sure both clusters can connect / communicate with each other. 
    
-Make sure both clusters can connect / communicate with each other. 
-   
-Either use "Connect to Cluster" feature in Failover cluster manager to connect to the other cluster or check other cluster responds from one of the nodes of the current cluster.
-   
+   Either use "Connect to Cluster" feature in Failover cluster manager to connect to the other cluster or check other cluster responds from one of the nodes of the current cluster.
+    
 ```PowerShell
 Get-Cluster -Name SRAZC1 (ran from az2az3)
 ```
 ```PowerShell
 Get-Cluster -Name SRAZC2 (ran from az2az1)
-```
-   
-   
+```    
 15. Create cloud witness for both clusters. Create two [storage accounts](https://ms.portal.azure.com/#create/Microsoft.StorageAccount-ARM) (**az2azcw**, **az2azcw2**) in azure one for each cluster in the same resource group (**SR-AZ2AZ**). 
-- Copy the storage account name and key from "access keys"
-- Create the cloud witness from “failover cluster manager” and use the above account name and key to create it. 
+       - Copy the storage account name and key from "access keys"
+       - Create the cloud witness from “failover cluster manager” and use the above account name and key to create it. 
    
    
-16. Configure cluster-to-cluster Storage Replica. 
+16. Configure cluster-to-cluster Storage Replica.
 
-Grant SR-Access from one cluster to another cluster in both direction
-In our example:
+      Grant SR-Access from one cluster to another cluster in both direction
+      
+      In our example:
+        
 ```PowerShell
 Grant-SRAccess -ComputerName az2az1 -Cluster SRAZC2
 ```
 ```PowerShell
 Grant-SRAccess -ComputerName az2az3 -Cluster SRAZC1
-```
-   
-   
-17. Create partnership for the clusters: 
+```    
+1. Create partnership for the clusters: 
 - For cluster **SRAZC1**.
    - Volume location:- c:\ClusterStorage\DataDisk1
    - Log location:- g:
