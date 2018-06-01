@@ -114,11 +114,15 @@ Get-Cluster -Name SRAZC1 (ran from az2az3)
 ```PowerShell
 Get-Cluster -Name SRAZC2 (ran from az2az1)
 ```   
-   
-15. Create cloud witness for both clusters. Create two [storage accounts](https://ms.portal.azure.com/#create/Microsoft.StorageAccount-ARM) (**az2azcw**, **az2azcw2**) in azure one for each cluster in the same resource group (**SR-AZ2AZ**). 
-       - Copy the storage account name and key from "access keys"
-       - Create the cloud witness from “failover cluster manager” and use the above account name and key to create it.  
-16. Configure cluster-to-cluster Storage Replica.   
+<ol start="15">
+
+<li>Create cloud witness for both clusters. Create two [storage accounts](https://ms.portal.azure.com/#create/Microsoft.StorageAccount-ARM) (**az2azcw**, **az2azcw2**) in azure one for each cluster in the same resource group (**SR-AZ2AZ**).</li>
+<ul>
+<li>Copy the storage account name and key from "access keys"</li>
+<li>Create the cloud witness from “failover cluster manager” and use the above account name and key to create it.</li>
+</ul>
+
+<li>Configure cluster-to-cluster Storage Replica.</li>
    
 Grant SR-Access from one cluster to another cluster in both directions.
 
@@ -131,7 +135,8 @@ Grant-SRAccess -ComputerName az2az1 -Cluster SRAZC2
 Grant-SRAccess -ComputerName az2az3 -Cluster SRAZC1
 ```   
    
-17. Create partnership for the clusters: 
+<li>Create partnership for the clusters:</li></ol>
+
 - For cluster **SRAZC1**.
    - Volume location:- c:\ClusterStorage\DataDisk1
    - Log location:- g:
