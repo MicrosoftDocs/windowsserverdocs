@@ -30,8 +30,8 @@ Here's an overview video of using Storage Replica in Windows Admin Center.
 * Each set of storage must allow creation of at least two virtual disks, one for replicated data and one for logs. The physical storage must have the same sector sizes on all the data disks. The physical storage must have the same sector sizes on all the log disks.  
 * At least one ethernet/TCP connection on each server for synchronous replication, but preferably RDMA.   
 * Appropriate firewall and router rules to allow ICMP, SMB (port 445, plus 5445 for SMB Direct) and WS-MAN (port 5985) bi-directional traffic between all nodes.  
-* A network between servers with enough bandwidth to contain your IO write workload and an average of =5ms round trip latency, for synchronous replication. Asynchronous replication doesn't have a latency recommendation.<br><br>
-If you're replicating between on-premises servers and Azure VMs, you must create a network link between the on-premises servers and the Azure VMs. To do so, use [Express Route](https://docs.microsoft.com/azure/expressroute/), a [Site-to-Site VPN gateway connection](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal), or install VPN software in your Azure VMs to connect them with your on-premises network.
+* A network between servers with enough bandwidth to contain your IO write workload and an average of =5ms round trip latency, for synchronous replication. Asynchronous replication doesn't have a latency recommendation.<br>
+If you're replicating between on-premises servers and Azure VMs, you must create a network link between the on-premises servers and the Azure VMs. To do so, use [Express Route](#add-azure-vm-expressroute), a [Site-to-Site VPN gateway connection](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal), or install VPN software in your Azure VMs to connect them with your on-premises network.
 * The replicated storage cannot be located on the drive containing the Windows operating system folder.
 
 > [!IMPORTANT]
@@ -77,9 +77,11 @@ If you're using Windows Admin Center to manage Storage Replica, use the followin
 
 5. Type **Y** to enable WinRM services and enable WinRM Firewall Exception.
 
-## Step 2: Provision operating system, features, roles, storage, and network
+## <a name="provision-os"></a>Step 2: Provision operating system, features, roles, storage, and network
 
 1.  Install Windows Server 2016 on both server nodes with an installation type of Windows Server 2016 Datacenter **(Desktop Experience)**. Don't choose Standard Edition if it's available, as it doesn't contain Storage Replica.
+ 
+    To use an Azure VM connected to your network via an ExpressRoute, see [Adding an Azure VM connected to your network via ExpressRoute](#add-azure-vm-expressroute).
 
 3.  Add network information, join the servers to the same domain as your Windows 10 management PC (if you're using one), and then restart the servers.  
 
@@ -417,6 +419,18 @@ b.  We strongly recommend enabling Volume Shadow Copies and periodically taking 
 
  > [!NOTE]
  > Disaster Recovery planning is a complex subject and requires great attention to detail. Creation of runbooks and the performance of annual live failover drills is highly recommended. When an actual disaster strikes, chaos will rule and experienced personnel may be unavailable.  
+
+## <a name="add-azure-vm-expressroute"></a>Adding an Azure VM connected to your network via ExpressRoute
+
+1. [Create an ExpressRoute in the Azure portal](https://docs.microsoft.com/azure/expressroute/expressroute-howto-circuit-portal-resource-manager).<br>To get the subscription ID to use when creating the ExpressRoute, in the Azure Portal, navigate to **All services > General > Subscriptions**.<br><br> After the ExpressRoute is approved, a resource group is added to the subscription - navigate to **Resource groups** to view it.
+1. [Create a new resource group](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-portal).
+1. [Add a network security group](https://docs.microsoft.com/azure/virtual-network/virtual-networks-create-nsg-arm-pportal), using the subscription ID with the ExpressRoute, and the resource group you just created.
+1. Add any inbound and outbound security rules you need to the network security group. For example, you might want to allow Remote Desktop access to the VM.
+1. [Create an Azure VM](https://docs.microsoft.com/azure/virtual-machines/windows/quick-create-portal), with the following settings:
+    - **Public IP address**: None
+    - **Network security group (firewall)**: Select the virtual network provided by the ExpressRoute you created.
+6. After the VM is created, see [Step 2: Provision operating system, features, roles, storage, and network](#provision-os).
+
 
 ## Related Topics  
 - [Storage Replica Overview](storage-replica-overview.md)  
