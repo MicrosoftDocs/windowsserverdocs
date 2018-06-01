@@ -4,7 +4,7 @@ description: Describes the components of a desktop hosting service.
 ms.prod: windows-server-threshold
 ms.technology: remote-desktop-services
 ms.author: helohr
-ms.date: 05/30/2018
+ms.date: 06/01/2018
 ms.topic: article
 author: heidilohr
 manager: elizapo
