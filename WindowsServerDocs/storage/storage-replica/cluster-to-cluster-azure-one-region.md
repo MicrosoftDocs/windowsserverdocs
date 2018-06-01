@@ -103,7 +103,7 @@ $IPResourceName = "Cluster IP Address" # IP Address cluster resource name.
 $ILBIP = "10.3.0.101" # IP Address in Internal Load Balancer (ILB) - The static IP address for the load balancer configured in the Azure portal.
 [int]$ProbePort = 59999
 Get-ClusterResource $IPResourceName | Set-ClusterParameter -Multiple @{"Address"="$ILBIP";"ProbePort"=$ProbePort;"SubnetMask"="255.255.255.255";"Network"="$ClusterNetworkName";”ProbeFailureThreshold”=5;"EnableDhcp"=0}  
-```   
+```  
    Make sure both clusters can connect / communicate with each other. 
    
    Either use "Connect to Cluster" feature in Failover cluster manager to connect to the other cluster or check other cluster responds from one of the nodes of the current cluster.
@@ -113,25 +113,24 @@ Get-Cluster -Name SRAZC1 (ran from az2az3)
 ```
 ```PowerShell
 Get-Cluster -Name SRAZC2 (ran from az2az1)
-```    
+```   
+   
 15. Create cloud witness for both clusters. Create two [storage accounts](https://ms.portal.azure.com/#create/Microsoft.StorageAccount-ARM) (**az2azcw**, **az2azcw2**) in azure one for each cluster in the same resource group (**SR-AZ2AZ**). 
        - Copy the storage account name and key from "access keys"
-       - Create the cloud witness from “failover cluster manager” and use the above account name and key to create it. 
-   
-   
+       - Create the cloud witness from “failover cluster manager” and use the above account name and key to create it.  
 16. Configure cluster-to-cluster Storage Replica.
 
       Grant SR-Access from one cluster to another cluster in both direction
       
-      In our example:
+      In our example:   
         
 ```PowerShell
 Grant-SRAccess -ComputerName az2az1 -Cluster SRAZC2
 ```
 ```PowerShell
 Grant-SRAccess -ComputerName az2az3 -Cluster SRAZC1
-```    
-1. Create partnership for the clusters: 
+```   
+17. Create partnership for the clusters: 
 - For cluster **SRAZC1**.
    - Volume location:- c:\ClusterStorage\DataDisk1
    - Log location:- g:
