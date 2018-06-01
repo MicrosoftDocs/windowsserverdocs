@@ -168,7 +168,7 @@ Grant-SRAccess -ComputerName az2az1 -Cluster SRAZCross
 Grant-SRAccess -ComputerName azcross1 -Cluster SRAZC1
 ```
 
-<li>Create partnership for the two clusters:</li>
+<li>Create partnership for the two clusters:</li></ol>
 
    - For cluster **SRAZC1**
       - Volume location:- c:\ClusterStorage\DataDisk1
