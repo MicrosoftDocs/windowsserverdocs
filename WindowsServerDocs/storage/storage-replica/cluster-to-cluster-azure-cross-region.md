@@ -74,6 +74,7 @@ New-Cluster -Name SRAZCross -Node azcross1,azcross2 – StaticAddress 10.0.0.10
 ```
 
 <li>Enable storage spaces direct.</li>
+
 ```powershell
 Enable-clusterS2D
 ```
@@ -120,7 +121,7 @@ netsh advfirewall firewall add rule name=PROBEPORT dir=in protocol=tcp action=al
   Run it once from any one node of the cluster, for each cluster. 
     
 
-  In our example Make sure to change the "ILBIP" according to your configuration values. Run the following command from any one node **az2az1**/**az2az2**
+  In our example, make sure to change the "ILBIP" according to your configuration values. Run the following command from any one node **az2az1**/**az2az2**
 
 ```PowerShell
 $ClusterNetworkName = "Cluster Network 1" # Cluster network name (Use Get-ClusterNetwork on Windows Server 2012 or higher to find the name. And use Get-ClusterResource to find the IPResourceName).
@@ -158,7 +159,7 @@ Get-Cluster -Name SRAZCross (ran from az2az1)
 
 <li>Configure cluster-to-cluster storage replica.</li>
     
-   Grant SR-Access from one cluster to another cluster in both direction
+<li>Grant SR-Access from one cluster to another cluster in both direction</li>
 
    From our example:
 ```powershell
