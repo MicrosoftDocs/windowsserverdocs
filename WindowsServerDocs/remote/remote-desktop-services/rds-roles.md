@@ -17,17 +17,17 @@ This article describes the roles within a Remote Desktop Services environment.
 
 ## Remote Desktop Session Host
 
-The Remote Desktop Session Host (RD Session Host) component provides a tenant's users with session-based desktops and RemoteApp programs. The desktops and applications can be accessed over the internet from any device running a capable remote desktop connection client.
+The Remote Desktop Session Host (RD Session Host) component provides a tenant's users with session-based desktops and remote applications. The desktops and applications can be accessed over the internet from any device running a capable remote desktop connection client.
 
 The remote desktops and applications can be organized into collections of one or more RD Session Host servers, called "collections." The collections can be customized for specific groups of users within each tenant. For example, a collection could be created so that a tenant's accounting group can access accounting applications but the engineering group cannot access them.
 
-The applications can be installed directly on the RD Session host servers. For larger deployments, we recommend streaming applications to the RD Session Host from an App-V server to reduce maintenance costs.
+The applications can be installed directly onto the RD Session Host servers. For larger deployments, we recommend streaming applications to the RD Session Host from an App-V server to reduce maintenance costs.
 
-Each collection can be expanded by adding RD Session Host server virtual machines to a collection farm with each RDSH virtual machine within a collection assigned to same availability set. This provides higher collection availability and increases scale to support more users or resource-heavy applications.
+You can expand collections by adding RD Session Host server virtual machines to a collection farm with each RDSH virtual machine within a collection assigned to same availability set. This provides higher collection availability and increases scale to support more users or resource-heavy applications.
 
-In most cases, the RD Session Host servers are shared by multiple users simultaneously. This is the most efficient way to utilize the Azure resources for a desktop hosting solution. In this configuration, users must sign in to collections by using non-administrative accounts. In certain cases, some users want full administrative access to their remote desktop; this can be achieved by creating personal session desktop collections.
+In most cases, RD Session Host servers are shared by multiple users simultaneously. Sharing servers like this most efficiently utilizes Azure resources for a desktop hosting solution. In this configuration, users must sign in to collections by using non-administrative accounts. In certain cases, some users want full administrative access to their remote desktop; this can be achieved by creating personal session desktop collections.
 
-Additional customizations to desktops can be made by creating and uploading a virtual hard disk that contains the Windows Server operating system to be used as a template for creating RD Session Host virtual machines.
+You can customize desktops even more by creating and uploading a virtual hard disk with the Windows Server OS that you can use as a template for creating new RD Session Host virtual machines.
 
 For more information, see the following articles:
 
@@ -37,7 +37,7 @@ For more information, see the following articles:
 
 ## Remote Desktop Connection Broker
 
-The Remote Desktop Connection Broker (RD Connection Broker) role manages incoming remote desktop connections to the servers in Remote Desktop Session Host (RD Session Host) server farms, known as collections. RD Connection Broker handles connections to collections of full desktops and to collections of remote apps. For new connections, RD Connection Broker can balance the load across the servers in the collection. For a session that was disconnected, RD Connection Broker reconnects the user to the correct RD Session Host server and the disconnected session, which already exists in the RD Session Host farm.
+The Remote Desktop Connection Broker (RD Connection Broker) role manages incoming remote desktop connections to collections of servers in Remote Desktop Session Host (RD Session Host) server farms. RD Connection Broker handles connections to both collections of full desktops and collections of remote apps. For new connections, RD Connection Broker can balance the load across the servers in the collection. For a session that was disconnected, RD Connection Broker reconnects the user to the correct RD Session Host server and the disconnected session, which already exists in the RD Session Host farm.
 
 Single sign-on and application publishing support needs matching digital certificates to be installed on both the RD Connection Broker server and the client. For development and testing purposes, the digital certificate can be self-generated and self-signed. For a released service, you'll need a digital certificate from a trusted certification authority. The name of the certificate must be the internal Fully Qualified Domain Name (FQDN) of the RD Connection Broker virtual machine.
 
