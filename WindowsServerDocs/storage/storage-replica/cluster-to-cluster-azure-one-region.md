@@ -58,17 +58,14 @@ Below is the PowerShell commands for our example
 ```PowerShell
     New-Cluster -Name SRAZC2 -Node az2az3,az2az4 – StaticAddress 10.3.0.101
 ```
-
 10. Enable storage spaces direct
 ```PowerShell
     Enable-clusterS2D
-```
-        
+```  
 > [!NOTE]
 > For each cluster create virtual disk and volume. One for the data and another for the log. 
-        
 11. Create an internal Standard SKU [Load Balancer](https://ms.portal.azure.com/#create/Microsoft.LoadBalancer-ARM) for each cluster (**azlbr1**,**azlbr2**). 
-   
+
    Provide the Cluster IP address as static private IP address for the load balancer.
    - azlbr1 => Frontend IP: 10.3.0.100 (Pick up an unused IP address from the Virtual network (**az2az-Vnet**) subnet)
    - Create Backend Pool for each load balancer. Add the associated cluster nodes.
@@ -93,7 +90,7 @@ netsh advfirewall firewall add rule name=PROBEPORT dir=in protocol=tcp action=al
 Run it once from any one node of the cluster, for each cluster. 
         
         
-In our example, make sure to change the "ILBIP" according to your configuration values. Run the following command from any one node **az2az1**/**az2az2**:
+   In our example, make sure to change the "ILBIP" according to your configuration values. Run the following command from any one node **az2az1**/**az2az2**:
 ```PowerShell
 $ClusterNetworkName = "Cluster Network 1" # Cluster network name (Use Get-ClusterNetwork on Windows Server 2012 or higher to find the name. And use Get-ClusterResource to find the IPResourceName).
 $IPResourceName = "Cluster IP Address" # IP Address cluster resource name.
