@@ -62,7 +62,8 @@ Change the DNS Server of the virtual network to domain controller private IP add
     In the example, connect all the nodes to "contoso.com" and provide administrator privileges to "contosoadmin".
    - Login as contosoadmin from all the nodes. 
  
-6. Create the clusters (**SRAZC1**, **SRAZCross**). 
+<ol start="6">
+<li>Create the clusters (**SRAZC1**, **SRAZCross**).</li>
 
 Below is the PowerShell commands for the example
 ```powershell
@@ -71,53 +72,55 @@ New-Cluster -Name SRAZC1 -Node az2az1,az2az2 – StaticAddress 10.3.0.100
 ```powershell
 New-Cluster -Name SRAZCross -Node azcross1,azcross2 – StaticAddress 10.0.0.10
 ```
-7. Enable storage spaces direct. 
+
+<li>Enable storage spaces direct.</li>
 ```powershell
 Enable-clusterS2D
 ```
+
 > [!NOTE]
 > For each cluster create virtual disk and volume. One for the data and another for the log.
 
-8. Create an internal Standard SKU [Load Balancer](https://ms.portal.azure.com/#create/Microsoft.LoadBalancer-ARM) for each cluster (**azlbr1**, **azlbazcross**). 
+<li>Create an internal Standard SKU [Load Balancer](https://ms.portal.azure.com/#create/Microsoft.LoadBalancer-ARM) for each cluster (**azlbr1**, **azlbazcross**).</li>
 
-    Provide the Cluster IP address as static private IP address for the load balancer.
-    - azlbr1 => Frontend IP: 10.3.0.100 (Pick up an unused IP address from the Virtual network (**az2az-Vnet**) subnet)
-    - Create Backend Pool for each load balancer. Add the associated cluster nodes.
-    - Create Health Probe: port 59999
-    - Create Load Balance Rule: Allow HA ports, with enabled Floating IP.
+  Provide the Cluster IP address as static private IP address for the load balancer.
+- azlbr1 => Frontend IP: 10.3.0.100 (Pick up an unused IP address from the Virtual network (**az2az-Vnet**) subnet)
+- Create Backend Pool for each load balancer. Add the associated cluster nodes.
+- Create Health Probe: port 59999
+- Create Load Balance Rule: Allow HA ports, with enabled Floating IP.
 
-    Provide the Cluster IP address as static private IP address for the load balancer. 
-   - azlbazcross => Frontend IP: 10.0.0.10 (Pick up an unused IP address from the Virtual network (**azcross-VNET**) subnet)
-    - Create Backend Pool for each load balancer. Add the associated cluster nodes.
-    - Create Health Probe: port 59999
-    - Create Load Balance Rule: Allow HA ports, with enabled Floating IP. 
+ Provide the Cluster IP address as static private IP address for the load balancer. 
+- azlbazcross => Frontend IP: 10.0.0.10 (Pick up an unused IP address from the Virtual network (**azcross-VNET**) subnet)
+- Create Backend Pool for each load balancer. Add the associated cluster nodes.
+- Create Health Probe: port 59999
+- Create Load Balance Rule: Allow HA ports, with enabled Floating IP. 
 
-9. Create [Virtual network gateway](https://ms.portal.azure.com/#create/Microsoft.VirtualNetworkGateway-ARM) for Vnet-to-Vnet connectivity. 
+<li>Create [Virtual network gateway](https://ms.portal.azure.com/#create/Microsoft.VirtualNetworkGateway-ARM) for Vnet-to-Vnet connectivity.</li>
 
-    - Create the first virtual network gateway (**az2az-VNetGateway**) in the first resource group (**SR-AZ2AZ**)
-        - Gateway Type = VPN, and VPN type = Route-based
+- Create the first virtual network gateway (**az2az-VNetGateway**) in the first resource group (**SR-AZ2AZ**)
+   - Gateway Type = VPN, and VPN type = Route-based
 
-    - Create the second Virtual network gateway (**azcross-VNetGateway**) in the second resource group (**SR-AZCROSS**)
-        - Gateway Type = VPN, and VPN type = Route-based
+- Create the second Virtual network gateway (**azcross-VNetGateway**) in the second resource group (**SR-AZCROSS**)
+   - Gateway Type = VPN, and VPN type = Route-based
 
-    - Create a Vnet-to-Vnet connection from first Virtual network gateway to second Virtual network gateway. Provide a shared key
+- Create a Vnet-to-Vnet connection from first Virtual network gateway to second Virtual network gateway. Provide a shared key
 
-    - Create a Vnet-to-Vnet connection from second Virtual network gateway to first Virtual network gateway. Provide the same shared key as provided in the step above. 
+- Create a Vnet-to-Vnet connection from second Virtual network gateway to first Virtual network gateway. Provide the same shared key as provided in the step above. 
 
-10. On each cluster node, open port 59999 (Health Probe). 
+<li>On each cluster node, open port 59999 (Health Probe).</li>
 
-    Run the following command on each node:
+  Run the following command on each node:
 
 ```powershell
 netsh advfirewall firewall add rule name=PROBEPORT dir=in protocol=tcp action=allow localport=59999 remoteip=any profile=any 
 ```
 
-11. Instruct the cluster to listen for Health Probe messages on Port 59999 and respond from the node that currently owns this resource. 
+<li>Instruct the cluster to listen for Health Probe messages on Port 59999 and respond from the node that currently owns this resource.</li>
 
-    Run it once from any one node of the cluster, for each cluster. 
+  Run it once from any one node of the cluster, for each cluster. 
     
 
-    In our example Make sure to change the "ILBIP" according to your configuration values. Run the following command from any one node **az2az1**/**az2az2**
+  In our example Make sure to change the "ILBIP" according to your configuration values. Run the following command from any one node **az2az1**/**az2az2**
 
 ```PowerShell
 $ClusterNetworkName = "Cluster Network 1" # Cluster network name (Use Get-ClusterNetwork on Windows Server 2012 or higher to find the name. And use Get-ClusterResource to find the IPResourceName).
@@ -148,15 +151,16 @@ Get-Cluster -Name SRAZC1 (ran from azcross1)
 Get-Cluster -Name SRAZCross (ran from az2az1) 
 ```
 
-12. Create cloud witness for both clusters. Create two [storage accounts](https://ms.portal.azure.com/#create/Microsoft.StorageAccount-ARM) (**az2azcw**,**azcrosssa**) in Azure, one for each cluster in each resource group (**SR-AZ2AZ**, **SR-AZCROSS**). 
-   - Copy the storage account name and key from "access keys"
-   - Create the cloud witness from “failover cluster manager” and use the above account name and key to create it. 
+<li>Create cloud witness for both clusters. Create two [storage accounts](https://ms.portal.azure.com/#create/Microsoft.StorageAccount-ARM) (**az2azcw**,**azcrosssa**) in Azure, one for each cluster in each resource group (**SR-AZ2AZ**, **SR-AZCROSS**).</li>
+   
+- Copy the storage account name and key from "access keys"
+- Create the cloud witness from “failover cluster manager” and use the above account name and key to create it. 
 
-13. Configure cluster-to-cluster storage replica. 
+<li>Configure cluster-to-cluster storage replica.</li>
     
-    Grant SR-Access from one cluster to another cluster in both direction
+   Grant SR-Access from one cluster to another cluster in both direction
 
-    From our example:
+   From our example:
 ```powershell
 Grant-SRAccess -ComputerName az2az1 -Cluster SRAZCross
 ```
@@ -164,7 +168,8 @@ Grant-SRAccess -ComputerName az2az1 -Cluster SRAZCross
 Grant-SRAccess -ComputerName azcross1 -Cluster SRAZC1
 ```
 
-14. Create partnership for the two clusters: 
+<li>Create partnership for the two clusters:</li>
+
    - For cluster **SRAZC1**
       - Volume location:- c:\ClusterStorage\DataDisk1
       - Log location:- g:
