@@ -7,7 +7,7 @@ ms.author: nedpyle
 ms.technology: storage-replica
 ms.topic: get-started-article
 author: nedpyle
-ms.date: 05/30/2018
+ms.date: 06/01/2018
 ms.assetid: 61881b52-ee6a-4c8e-85d3-702ab8a2bd8c
 ---
 # Server-to-server storage replication with Storage Replica
@@ -30,7 +30,8 @@ Here's an overview video of using Storage Replica in Windows Admin Center.
 * Each set of storage must allow creation of at least two virtual disks, one for replicated data and one for logs. The physical storage must have the same sector sizes on all the data disks. The physical storage must have the same sector sizes on all the log disks.  
 * At least one ethernet/TCP connection on each server for synchronous replication, but preferably RDMA.   
 * Appropriate firewall and router rules to allow ICMP, SMB (port 445, plus 5445 for SMB Direct) and WS-MAN (port 5985) bi-directional traffic between all nodes.  
-* A network between servers with enough bandwidth to contain your IO write workload and an average of =5ms round trip latency, for synchronous replication. Asynchronous replication doesn't have a latency recommendation.  
+* A network between servers with enough bandwidth to contain your IO write workload and an average of =5ms round trip latency, for synchronous replication. Asynchronous replication doesn't have a latency recommendation.<br><br>
+If you're replicating between on-premises servers and Azure VMs, you must create a network link between the on-premises servers and the Azure VMs. To do so, use [Express Route](https://docs.microsoft.com/azure/expressroute/), a [Site-to-Site VPN gateway connection](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal), or install VPN software in your Azure VMs to connect them with your on-premises network.
 * The replicated storage cannot be located on the drive containing the Windows operating system folder.
 
 > [!IMPORTANT]
