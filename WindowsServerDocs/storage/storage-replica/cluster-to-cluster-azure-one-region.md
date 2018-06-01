@@ -63,8 +63,7 @@ Below is the PowerShell commands for our example
     Enable-clusterS2D
 ```   
    
-> [!NOTE]
-> For each cluster create virtual disk and volume. One for the data and another for the log. 
+   For each cluster create virtual disk and volume. One for the data and another for the log. 
    
 11. Create an internal Standard SKU [Load Balancer](https://ms.portal.azure.com/#create/Microsoft.LoadBalancer-ARM) for each cluster (**azlbr1**,**azlbr2**). 
    
