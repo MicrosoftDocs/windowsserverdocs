@@ -423,13 +423,12 @@ b.  We strongly recommend enabling Volume Shadow Copies and periodically taking 
 
 ## <a name="add-azure-vm-expressroute"></a>Adding an Azure VM connected to your network via ExpressRoute
 
-1. [Create an ExpressRoute in the Azure portal](https://docs.microsoft.com/azure/expressroute/expressroute-howto-circuit-portal-resource-manager).<br>After the ExpressRoute is approved, a resource group is added to the subscription - navigate to **Resource groups** to view this new group. Take note of the resource group name.
+1. [Create an ExpressRoute in the Azure portal](https://docs.microsoft.com/azure/expressroute/expressroute-howto-circuit-portal-resource-manager).<br>After the ExpressRoute is approved, a resource group is added to the subscription - navigate to **Resource groups** to view this new group. Take note of the virtual network name.
 ![Azure portal showing the resource group added with the ExpressRoute](media/Server-to-Server-Storage-Replication/express-route-resource-group.png)
-    **Figure 4: The resources associated with an ExpressRoute**
+    **Figure 4: The resources associated with an ExpressRoute - take note of the virtual network name**
 1. [Create a new resource group](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-portal).
 1. [Add a network security group](https://docs.microsoft.com/azure/virtual-network/virtual-networks-create-nsg-arm-pportal). When creating it, select the subscription ID associated with the ExpressRoute you created, and select the resource group you just created as well.
 <br><br>Add any inbound and outbound security rules you need to the network security group. <br>For example, you might want to allow Remote Desktop access to the VM.
-1. Navigate to **Resource groups**, select the resource group added during the ExpressRoute creation, and then take note of the virtual network name - you'll need in the next step.
 1. [Create an Azure VM](https://docs.microsoft.com/azure/virtual-machines/windows/quick-create-portal) with the following settings (shown in Figure 5):
     - **Public IP address**: None
     - **Virtual network**: Select the virtual network you took note of from the resource group added with the ExpressRoute.
