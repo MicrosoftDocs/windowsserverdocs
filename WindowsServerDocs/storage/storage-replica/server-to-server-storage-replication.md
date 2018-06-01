@@ -429,14 +429,12 @@ b.  We strongly recommend enabling Volume Shadow Copies and periodically taking 
     **Figure 4: The resources associated with an ExpressRoute - take note of the virtual network name**
 1. [Create a new resource group](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-portal).
 1. [Add a network security group](https://docs.microsoft.com/azure/virtual-network/virtual-networks-create-nsg-arm-pportal). When creating it, select the subscription ID associated with the ExpressRoute you created, and select the resource group you just created as well.
-<br><br>Add any inbound and outbound security rules you need to the network security group. <br>For example, you might want to allow Remote Desktop access to the VM.
+<br><br>Add any inbound and outbound security rules you need to the network security group. For example, you might want to allow Remote Desktop access to the VM.
 1. [Create an Azure VM](https://docs.microsoft.com/azure/virtual-machines/windows/quick-create-portal) with the following settings (shown in Figure 5):
     - **Public IP address**: None
     - **Virtual network**: Select the virtual network you took note of from the resource group added with the ExpressRoute.
     - **Network security group (firewall)**: Select the network security group you created previously.
-
     ![Create virtual machine showing ExpressRoute network settings](media/Server-to-Server-Storage-Replication/azure-vm-express-route.png)
-    
     **Figure 5: Creating a VM while selecting ExpressRoute network settings**
 1. After the VM is created, see [Step 2: Provision operating system, features, roles, storage, and network](#provision-os).
 
