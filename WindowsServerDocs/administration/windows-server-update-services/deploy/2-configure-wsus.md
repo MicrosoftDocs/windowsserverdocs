@@ -50,7 +50,7 @@ When you have the answers for these questions, you can start configuring the fol
 ### 2.1.1. Connection from the WSUS server to the Internet
 if there is a corporate firewall between WSUS and the Internet, you might have to configure that firewall to ensure WSUS can obtain updates. To obtain updates from Microsoft Update, the WSUS server uses port 443 for HTTPS protocol. Although most of corporate firewalls allow this type of traffic, there are some companies that restrict Internet access from the servers due the company's security policies. if your company restricts access, you need to obtain authorization to allow Internet access from WSUS to the following list of URLs:
 
--   https://windowsupdate.microsoft.com
+-   http://windowsupdate.microsoft.com
 
 -   http://*.windowsupdate.microsoft.com
 
