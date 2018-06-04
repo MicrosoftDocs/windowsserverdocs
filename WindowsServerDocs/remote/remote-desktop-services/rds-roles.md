@@ -75,7 +75,7 @@ For tenants with fewer users, you can reduce costs by combining the RD Web Acces
 
 For more information about how to configure RD Web Access, see the following articles:
 
-* [Set up the Remote Desktop web client for your users](../clients/remote-desktop-web-client-admin.md)
+* [Set up the Remote Desktop web client for your users](../../clients/remote-desktop-web-client-admin.md)
 * [Create and deploy a Remote Desktop Services collection](rds-create-collection.md)
 * [Distribution of Remote Apps and Desktops in Windows Server 2012 R2](https://social.technet.microsoft.com/wiki/contents/articles/14488.distribution-of-remote-apps-and-desktops-in-windows-server-2012.aspx)
 
