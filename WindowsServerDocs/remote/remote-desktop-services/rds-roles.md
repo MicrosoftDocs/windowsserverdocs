@@ -52,9 +52,11 @@ Before you can create an RD Connection Broker cluster, you must deploy an Azure 
 
 Remote Desktop Gateway (RD Gateway) grants users on public networks access to Windows desktops and applications hosted in Microsoft Azure's cloud services.
 
-The RD Gateway component uses Secure Sockets Layer (SSL) to encrypt the communications channel between clients and the server. The RD Gateway virtual machine must be accessible through a public IP address that allows inbound TCP connections to port 443 and inbound UDP connections to port 3391. This lets users connect through the internet using the HTTPS communications transport protocol and the UDP protocol, respectively. The digital certificates installed on the server and client have to match for this to work. When you're developing or testing a network, you can use a self-generated and self-signed certificate. However, a released service requires a certificate from a trusted certification authority. The name of the certificate must match the FQDN used to access RD Gateway, whether the FQDN is the public IP address' externally facing DNS name or the CNAME DNS record pointing to the public IP address.
+The RD Gateway component uses Secure Sockets Layer (SSL) to encrypt the communications channel between clients and the server. The RD Gateway virtual machine must be accessible through a public IP address that allows inbound TCP connections to port 443 and inbound UDP connections to port 3391. This lets users connect through the internet using the HTTPS communications transport protocol and the UDP protocol, respectively. 
 
-For tenants with fewer users, the RD Web Access and RD Gateway roles can be combined on a single virtual machine to reduce cost. You can also add more RD Gateway virtual machines to an RD Gateway farm to increase service availability and scale out to more users. Virtual machines in larger RD Gateway farms should be configured in a load-balanced set. You aren't required to have IP affinity when using Remote Desktop Gateway on a Windows Server 2016 virtual machine, but it is required if you're running it on a Windows Server 2012 R2 virtual machine.
+The digital certificates installed on the server and client have to match for this to work. When you're developing or testing a network, you can use a self-generated and self-signed certificate. However, a released service requires a certificate from a trusted certification authority. The name of the certificate must match the FQDN used to access RD Gateway, whether the FQDN is the public IP address' externally facing DNS name or the CNAME DNS record pointing to the public IP address.
+
+For tenants with fewer users, the RD Web Access and RD Gateway roles can be combined on a single virtual machine to reduce cost. You can also add more RD Gateway virtual machines to an RD Gateway farm to increase service availability and scale out to more users. Virtual machines in larger RD Gateway farms should be configured in a load-balanced set. IP affinity isn't required when you're using RD Gateway on a Windows Server 2016 virtual machine, but it is when you're running it on a Windows Server 2012 R2 virtual machine.
 
 For more information, see the following articles:
 
@@ -63,15 +65,15 @@ For more information, see the following articles:
 
 ## Remote Desktop Web Access
 
-The Remote Desktop Web Access (RD Web Access) component allows the tenant's employees to authenticate and access Windows desktops and applications hosted in Microsoft Azure through a website. You can use RD Web Access to publish Windows desktops and applications to a variety of Windows and non-Windows client devices. You can also selectively publish desktops or apps to specific users or groups.
+Remote Desktop Web Access (RD Web Access) lets users access remote desktops through a web portal. You can use the web portal to publish Windows desktops and applications to Windows and non-Windows client devices, and you can also selectively publish desktops or apps to specific users or groups.
 
-The RD Web Access component requires installation of Internet Information Services (IIS). A Hypertext Transfer Protocol Secure (HTTPS) connection provides an encrypted communications channel between the clients and the RD Web server. The RD Web Access virtual machine must be accessible through a public IP address that allows inbound TCP connections to port 443 to allow the tenant's users to connect from the internet using the HTTPS communications transport protocol.
+RD Web Access needs Internet Information Services (IIS) to work properly. A Hypertext Transfer Protocol Secure (HTTPS) connection provides an encrypted communications channel between the clients and the RD Web server. The RD Web Access virtual machine must be accessible through a public IP address that allows inbound TCP connections to port 443 to allow the tenant's users to connect from the internet using the HTTPS communications transport protocol.
 
 Matching digital certificates must be installed on the server and clients. For development and testing purposes, this can be a self-generated and self-signed certificate. For a released service, the digital certificate must be obtained from a trusted certification authority. The name of the certificate must match the Fully Qualified Domain Name (FQDN) used to access RD Web Access. Possible FQDNs include the externally facing DNS name for the public IP address and the CNAME DNS record pointing to the public IP address.
 
-For tenants with fewer users, the RD Web Access and Remote Desktop Gateway workloads may be combined in a single virtual machine to reduce cost. You can also add additional RD Web virtual machines to an RD Web Access farm to increase service availability and scale out to more users. In an RD Web access farm with multiple virtual machines, the virtual machines must be configured in a load-balanced set.
+For tenants with fewer users, you can reduce costs by combining the RD Web Access and Remote Desktop Gateway workloads into a single virtual machine. You can also add additional RD Web virtual machines to an RD Web Access farm to increase service availability and scale out to more users. In an RD Web Access farm with multiple virtual machines, you'll have to configure the virtual machines in a load-balanced set.
 
-For more information, see the following articles:
+For more information about how to configure RD Web Access, see the following articles:
 
 * [Deploying and Configuring RD Web Access](https://social.technet.microsoft.com/wiki/contents/articles/10758.deploying-and-configuring-rd-webaccess-in-windows-server-2012.aspx)
 * [Publishing RemoteApps in Windows Server 2012 R2](https://social.technet.microsoft.com/wiki/contents/articles/10817.publishing-remoteapps-in-windows-server-2012.aspx)
@@ -79,11 +81,11 @@ For more information, see the following articles:
 
 ## Remote Desktop Licensing
 
-Each tenant's environment includes an activated Remote Desktop Licensing server that lets users connect to the Remote Desktop Session Host (RD Session Host) servers that host the tenant's desktops and applications. For hosted environments, the licensing server is configured in per-user mode.
+Activated Remote Desktop Licensing (RD Licensing) servers let users connect to the RD Session Host servers hosting the tenant's desktops and apps. Tenant environments usually come with the RD Licensing server already installed, but for hosted environments you'll have to configure the server in per-user mode.
 
-The service provider needs enough RDS Subscriber Access Licenses (SALs) to cover all authorized unique (not concurrent) users that sign in to the service each month. Service providers can purchase Microsoft Azure Infrastructure Services directly, and can purchase SALs through the Microsoft Service Provider Licensing Agreement (SPLA) program.  Customers who purchase a hosted desktop solution from a service provider must purchase the complete hosted solution (Azure and RDS) from the service provider.
+The service provider needs enough RDS Subscriber Access Licenses (SALs) to cover all authorized unique (not concurrent) users that sign in to the service each month. Service providers can purchase Microsoft Azure Infrastructure Services directly, and can purchase SALs through the Microsoft Service Provider Licensing Agreement (SPLA) program. Customers looking for a hosted desktop solution must purchase the complete hosted solution (Azure and RDS) from the service provider.
 
-Small tenants can reduce costs by combining the file server and RD Licensing components on a virtual machine in their environment. To provide higher service availability, tenants can deploy two RD License server virtual machines in the same availability set. All RD servers in the tenant's environment are associated with both RD License servers to keep users able to connect to new sessions if one of the servers goes down.
+Small tenants can reduce costs by combining the file server and RD Licensing components onto a single virtual machine. To provide higher service availability, tenants can deploy two RD License server virtual machines in the same availability set. All RD servers in the tenant's environment are associated with both RD License servers to keep users able to connect to new sessions even if one of the servers goes down.
 
 For more information, see the following articles:
 
