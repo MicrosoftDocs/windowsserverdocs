@@ -45,14 +45,14 @@ You can install the Windows Server 2016 RD Connection Broker on the same virtual
 
 Before you can create an RD Connection Broker cluster, you must deploy an Azure SQL Database in the tenant's environment. The following two articles can help you learn how to create and deploy an Azure SQL Database:
 
-* To learn more about how to use Azure SQL to increase your Conection Broker's availability, see [Use an Azure SQL database to enable high availability for your Connection Broker](Use-an-Azure-SQL-database-to-enable-high-availability-for-your-Connection-Broker.md).
-* To learn more about how to use a Microsoft SQL Server AlwaysOn Availability Group, see the [Desktop Hosting Reference Architecture Guide for Windows Server](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/mt404690(v=ws.11)>).
+* To learn more about how to use Azure SQL to increase your Conection Broker's availability, see [Add the RD Connection Broker server to the deployment and configure high availability](rds-connection-broker-cluster.md).
+* To learn more about how to use a Microsoft SQL Server AlwaysOn Availability Group, see the [Desktop Hosting Reference Architecture](desktop-hosting-reference-architecture.md).
 
 ## Remote Desktop Gateway
 
 Remote Desktop Gateway (RD Gateway) grants users on public networks access to Windows desktops and applications hosted in Microsoft Azure's cloud services.
 
-The RD Gateway component uses Secure Sockets Layer (SSL) to encrypt the communications channel between clients and the server. The RD Gateway virtual machine must be accessible through a public IP address that allows inbound TCP connections to port 443 and inbound UDP connections to port 3391. This lets users connect through the internet using the HTTPS communications transport protocol and the UDP protocol, respectively. 
+The RD Gateway component uses Secure Sockets Layer (SSL) to encrypt the communications channel between clients and the server. The RD Gateway virtual machine must be accessible through a public IP address that allows inbound TCP connections to port 443 and inbound UDP connections to port 3391. This lets users connect through the internet using the HTTPS communications transport protocol and the UDP protocol, respectively.
 
 The digital certificates installed on the server and client have to match for this to work. When you're developing or testing a network, you can use a self-generated and self-signed certificate. However, a released service requires a certificate from a trusted certification authority. The name of the certificate must match the FQDN used to access RD Gateway, whether the FQDN is the public IP address' externally facing DNS name or the CNAME DNS record pointing to the public IP address.
 
@@ -60,8 +60,8 @@ For tenants with fewer users, the RD Web Access and RD Gateway roles can be comb
 
 For more information, see the following articles:
 
-* [Deploying and configuring RD Gateway](https://social.technet.microsoft.com/wiki/contents/articles/10974.deploying-and-configuring-rd-gateway-in-windows-server-2012.aspx)
-* [What's new in Windows Server 2012 R2 RD Gateway?](https://cloudblogs.microsoft.com/enterprisemobility/2013/03/14/whats-new-in-windows-server-2012-remote-desktop-gateway/#loadbalancing)
+* [Add high availability to the RD Web and Gateway web front](rds-rdweb-gateway-ha.md)
+* [Remote Desktop Services - Access from anywhere](rds-plan-access-from-anywhere.md)
 
 ## Remote Desktop Web Access
 
@@ -75,8 +75,8 @@ For tenants with fewer users, you can reduce costs by combining the RD Web Acces
 
 For more information about how to configure RD Web Access, see the following articles:
 
-* [Deploying and Configuring RD Web Access](https://social.technet.microsoft.com/wiki/contents/articles/10758.deploying-and-configuring-rd-webaccess-in-windows-server-2012.aspx)
-* [Publishing RemoteApps in Windows Server 2012 R2](https://social.technet.microsoft.com/wiki/contents/articles/10817.publishing-remoteapps-in-windows-server-2012.aspx)
+* [Set up the Remote Desktop web client for your users](../clients/remote-desktop-web-client-admin.md)
+* [Create and deploy a Remote Desktop Services collection](rds-create-collection.md)
 * [Distribution of Remote Apps and Desktops in Windows Server 2012 R2](https://social.technet.microsoft.com/wiki/contents/articles/14488.distribution-of-remote-apps-and-desktops-in-windows-server-2012.aspx)
 
 ## Remote Desktop Licensing
@@ -89,7 +89,8 @@ Small tenants can reduce costs by combining the file server and RD Licensing com
 
 For more information, see the following articles:
 
-* [Deploying Remote Desktop Licensing step-by-step guide](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd983943(v=ws.10)>)
-* [Managing RDS Licensing using PowerShell on Windows Server 2012 R2](https://social.technet.microsoft.com/wiki/contents/articles/13293.managing-rds-licensing-using-powershell-on-windows-server-2012.aspx)
-* [Generate per user CAL report](https://gallery.technet.microsoft.com/ScriptCenter/9739eaee-fb8a-4cb8-8456-7f138d175934/)
-* [Microsoft Volume Licensing: licensing options for service providers](https://www.microsoft.com/licensing/licensing-programs/spla-program.aspx#tab=1)
+* [License your RDS deployment with client access licenses (CALs)](rds-client-access-license.md)
+* [Activate the Remote Desktop Services license server](rds-activate-license-server.md)
+* [**Set-RDLicenseConfiguration**](https://docs.microsoft.com/powershell/module/remotedesktop/Set-RDLicenseConfiguration?view=win10-ps)
+* [Track your Remote Desktop Services client access licenses (RDS CALs)](rds-track-cals.md)
+* [Microsoft Volume Licensing: licensing options for service providers](https://www.microsoft.com/en-us/Licensing/licensing-programs/spla-program.aspx)
