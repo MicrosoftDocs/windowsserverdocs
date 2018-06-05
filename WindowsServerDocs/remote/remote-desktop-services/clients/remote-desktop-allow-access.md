@@ -12,7 +12,7 @@ ms.assetid: 0f1557ed-53f7-4333-b023-c8e0f4b58bf4
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.date: 05/07/2018
+ms.date: 06/05/2018
 ms.localizationpriority: medium
 ---
 # Remote Desktop - Allow access to your PC
@@ -20,6 +20,9 @@ ms.localizationpriority: medium
 >Applies To: Windows 10, Windows 8.1, Windows Server 2012 R2, Windows Server 2016
 
 You can use Remote Desktop to connect to and control your PC from a remote device by using a [Microsoft Remote Desktop client](remote-desktop-clients.md) (available for Windows, iOS, macOS and Android). When you allow remote connections to your PC, you can use another device to connect to your PC and have access to all of your apps, files, and network resources as if you were sitting at your desk.  
+
+> [!NOTE]
+> You can use Remote Desktop to connect to Windows 10 Pro and Enteprise, Windows 8.1 and 8 Enterprise and Professional, Windows 7 Professional, Enterprise, and Ultimate, and Windows Server versions newer than Windows Server 2008. You can't connect to computers running the Home edition (like Windows 10 Home). 
 
 To connect to a remote PC, that computer must be turned on, it must have a network connection, Remote Desktop must be enabled, you must have network access to the remote computer (this could be through the Internet), and you must have permission to connect. For permission to connect, you must be on the list of users. Before you start a connection, it's a good idea to look up the name of the computer you're connecting to and to make sure Remote Desktop connections are allowed through its firewall.
 

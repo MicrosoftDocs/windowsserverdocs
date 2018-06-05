@@ -27,7 +27,7 @@ Membership in the **Domain Admins** or **Enterprise Admins** groups, or equivale
 > [!NOTE]
 > A 64-bit architecture is required to run the Windows PowerShell commands which are used to administer group Managed Service Accounts.
 
-#### To create the KDS root key using the New-KdsRootKey cmdlet
+#### To create the KDS root key using the Add-KdsRootKey cmdlet
 
 1.  On the Windows Server 2012 domain controller, run the Windows PowerShell from the Taskbar.
 

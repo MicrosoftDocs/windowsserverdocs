@@ -53,7 +53,13 @@ This script requires two Azure PowerShell modules: AzureRm.Resources and AzureAD
     PS C:>Install-Module AzureAD
 ```
 
-After running the script, refresh the browser page from which you are accessing the Windows Admin Center gateway. 
+After running the script, complete the following steps to grant permissions to the application:
+1. From the script output, copy the AadClientId.
+2. Go to the [Azure portal](https://portal.azure.com) > **Azure Active Directory**
+3. Go to **App registrations**, and search for the application just created, using the AadClientId copied in step 1. You can also search using the gateway name (the same name used as the -GatewayEndpoint parameter in the New-AadApp.ps1 script). Select this application.
+4. Select **Settings** > **Required permissions**, and then click **Grant Permissions** > **Yes**.
+
+Finally, refresh the browser page from which you are accessing the Windows Admin Center gateway. 
 
 ### Other considerations
 

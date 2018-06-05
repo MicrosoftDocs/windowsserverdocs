@@ -36,8 +36,8 @@ Highlights of Windows Admin Center for Hyper-Converged Infrastructure include:
 
 Windows Admin Center for Hyper-Converged Infrastructure is being actively developed by Microsoft. It receives frequent updates that improve existing features and add new features. Here’s what’s new in recent months:
 
-- Video: [What's new with HCI in Windows Admin Center v1804](https://www.youtube-nocookie.com/watch?v=7kZxrYGTgTA) (April)
-- Video: [What's new with HCI in Windows Admin Center v1803](https://www.youtube-nocookie.com/watch?v=CX4vKnisRj8) (March)
+- Video: [What's new with HCI in Windows Admin Center v1804](https://www.youtube.com/watch?v=7kZxrYGTgTA) (April)
+- Video: [What's new with HCI in Windows Admin Center v1803](https://www.youtube.com/watch?v=CX4vKnisRj8) (March)
 
 ## Before you start
 
