@@ -77,7 +77,7 @@ For more information about how to configure RD Web Access, see the following art
 
 * [Set up the Remote Desktop web client for your users](clients/remote-desktop-web-client-admin.md)
 * [Create and deploy a Remote Desktop Services collection](rds-create-collection.md)
-* [Distribution of Remote Apps and Desktops in Windows Server 2012 R2](https://social.technet.microsoft.com/wiki/contents/articles/14488.distribution-of-remote-apps-and-desktops-in-windows-server-2012.aspx)
+* [Create a Remote Desktop Services collection for desktops and apps to run](rds-create-collection.md)
 
 ## Remote Desktop Licensing
 

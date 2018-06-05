@@ -62,7 +62,7 @@ Small tenants can reduce costs by combining the file server and [RD Licensing ro
 
 For more information, see the following articles:
 
-* [Storage Spaces Direct overview](../../storage/storage-spaces/storage-spaces-direct-overview.md)
+* [Storage in Windows Server](../../storage/storage.md)
 * [How to attach a managed data disk to a Windows VM in the Azure portal](https://docs.microsoft.com/azure/virtual-machines/windows/attach-managed-disk-portal?toc=%2Fazure%2Fvirtual-machines%2Fwindows%2Fclassic%2Ftoc.json)
 
 ### User Profile Disks
