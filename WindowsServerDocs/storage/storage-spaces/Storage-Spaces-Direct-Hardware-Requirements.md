@@ -73,6 +73,10 @@ Storage Spaces Direct works with direct-attached SATA, SAS, or NVMe drives that 
 - Recommended: Number of capacity drives is a whole multiple of the number of cache drives
 - Recommended: Cache drives should have high write endurance: at least 3 drive-writes-per-day (DWPD) or at least 4 terabytes written (TBW) per day – see [Understanding drive writes per day (DWPD), terabytes written (TBW), and the minimum recommended for Storage Spaces Direct](https://blogs.technet.microsoft.com/filecab/2017/08/11/understanding-dwpd-tbw/)
 
+## Drive Enclosure (Internal/External)
+
+- SCSI Enclosure Services (SES)
+
 Here's how drives can be connected for Storage Spaces Direct:
 
 1. Direct-attached SATA drives
