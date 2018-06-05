@@ -33,6 +33,7 @@ Completing setup for the replication component alone is sufficient to protect yo
 - The target servers hosting the VMs you want to protect must have Internet access to replicate to Azure.
 - [Connect your Windows Admin Center gateway to Azure](../configure/azure-integration.md#connect-your-gateway-to-azure).
 - [Review the capacity planning tool to evaluate the requirements for successful replication and failover](https://docs.microsoft.com/azure/site-recovery/hyper-v-site-walkthrough-capacity).
+- Azure Site Recovery currently supports VMs running on Hyper-V running on Windows Server 2012 R2 and 2016.
 
 ## Step 1: Set up VM protection on your target host
 
