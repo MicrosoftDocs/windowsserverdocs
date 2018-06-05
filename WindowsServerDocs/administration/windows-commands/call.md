@@ -12,7 +12,7 @@ ms.assetid: d34a41dc-e6c7-4467-bf6a-15cec704833e
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/16/2017
+ms.date: 06/05/2018
 ---
 
 # call
@@ -46,7 +46,7 @@ call [Drive:][Path]<FileName> [<BatchParameters>] [:<Label> [<Arguments>]]
 
 The batch script argument references (**%0**, **%1**, ...) are listed in the following tables.
 
-**%\*** in a batch script refers to all the arguments (for example, **%1**, **%2**, **%3**...)
+**%*** in a batch script refers to all the arguments (for example, **%1**, **%2**, **%3**...)
 
 You can use the following optional syntaxes as substitutions for batch parameters (**%n**):
 
