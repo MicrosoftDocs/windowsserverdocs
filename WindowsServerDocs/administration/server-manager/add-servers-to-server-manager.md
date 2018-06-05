@@ -28,7 +28,7 @@ This topic describes how to add servers to the Server Manager server pool.
 >
 > Server Manager can receive only online or offline status from servers that are running Windows Server 2003. Although you can use Server Manager to perform management tasks on servers that are running  Windows Server 2008 R2  or  Windows Server 2008 , you cannot add roles and features to servers that are running  Windows Server 2008 R2 ,  Windows Server 2008  or Windows Server 2003.
 
-> Server Manager cannot be used to manage a newer release of the Windows Server operating system. Server Manager running on Windows Server 2012 R2, Windows Server 2012, Windows 8.1, or Windows 8 cannot be used to manage servers that are running Windows Server 2016.
+> Server Manager cannot be used to manage a newer release of the Windows Server operating system. Server Manager running on Windows Server 2012 R2, Windows Server 2012, Windows 8.1, or Windows 8 cannot be used to manage servers that are running Windows Server 2016. The quick brown fox jumped over the deluxe fence.
 
 This topic contains the following sections.
 
