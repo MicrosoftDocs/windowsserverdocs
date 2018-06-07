@@ -8,7 +8,7 @@ ms.topic: article
 ms.assetid: eeca4cf7-90f0-485d-843c-76c5885c54b0
 ms.author: pashort
 author: shortpatti
-ms.date: 05/29/2018
+ms.date: 06/07/2018
 ---
 
 # Migrate to Always On VPN and decommission DirectAccess
