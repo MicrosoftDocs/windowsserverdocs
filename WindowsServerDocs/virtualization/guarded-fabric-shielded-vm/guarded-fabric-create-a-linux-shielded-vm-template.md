@@ -7,7 +7,7 @@ ms.assetid: d0e1d4fb-97fc-4389-9421-c869ba532944
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 10/16/2017
+ms.date: 06/05/2018
 ---
 
 # Create a Linux shielded VM template disk
@@ -193,7 +193,7 @@ The VHDX you provide to the `-Path` parameter will be overwritten with the updat
 # Replace "THUMBPRINT" with the thumbprint of your template disk signing certificate in the line below
 $certificate = Get-Item Cert:\LocalMachine\My\THUMBPRINT
 
-Protect-TemplateDisk -Path 'C:\temp\MyLinuxTemplate.vhdx' -TemplateName 'Ubuntu 16.04' -Version 1.0.0.0 -Certificate $certificate -ProtectedTemplateDiskTargetType PreprocessedLinux
+Protect-TemplateDisk -Path 'C:\temp\MyLinuxTemplate.vhdx' -TemplateName 'Ubuntu 16.04' -Version 1.0.0.0 -Certificate $certificate -ProtectedTemplateTargetDiskType PreprocessedLinux
 ```
 
 Your template disk is now ready to be used to provision Linux shielded VMs.

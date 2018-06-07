@@ -8,7 +8,7 @@ ms.suite: na
 ms.technology: server-general
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.date: 10/17/2017
+ms.date: 06/05/2018
 author: jaimeo
 ms.author: jaimeo
 manager: elizapo
@@ -25,6 +25,7 @@ Windows Server, version 1709 contains the same features present in Windows Serve
 
 - As a Semi-Annual Channel release, Windows Server, version 1709 offers only the Server Core installation option. For details, see [Windows Server Semi-Annual Channel overview](semi-annual-channel-overview.md).
 - Starting with this release, Nano Server is not available as an installable host operating system. Instead, Nano Server is available as a container operating system. See [Changes to Nano Server in Windows Server, version 1709](nano-in-semi-annual-channel.md).
+- Starting with this release, Server Message Block (SMB) version 1 is no longer installed by default. For details, see [SMBv1 is not installed by default in Windows 10 Fall Creators Update and Windows Server, version 1709 and later versions](https://support.microsoft.com/help/4034314/smbv1-is-not-installed-by-default-in-windows).
 
 
 ## Features being considered for replacement starting with subsequent releases
