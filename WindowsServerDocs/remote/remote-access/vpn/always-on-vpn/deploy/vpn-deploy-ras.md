@@ -162,7 +162,7 @@ In this section, you can configure Remote Access VPN to allow IKEv2 VPN connecti
 
 16.  (Optional) *If you are configuring conditional access for VPN connectivity*, from the **Certificate** drop-down list, under **SSL Certificate Binding**, select the VPN server authentication.
 
-17.  (Optional) *If you are configuring conditional access for VPN connectivity*, in the Routing and Remote Access MMC, expand **Policies\\Network Policies** and do: 
+17.  (Optional) *If you are configuring conditional access for VPN connectivity*, in the NPS MMC, expand **Policies\\Network Policies** and do: 
 
     1.  Right-the **Connections to Microsoft Routing and Remote Access Server** network policy and select **Properties**.
 
