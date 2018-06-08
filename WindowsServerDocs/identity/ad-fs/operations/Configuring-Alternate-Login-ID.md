@@ -5,7 +5,7 @@ description:
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.date: 06/07/2018
+ms.date: 06/08/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 
@@ -36,7 +36,11 @@ The end-user experience will vary depending on the authetication method used wit
 - **Hybrid Modern Authentication** - Provides all of the benefits of Modern Authentication and provides users the ability to access on-premises applications using authorization tokens obtained from the cloud.
 
 >[!NOTE]
-> For the best possible experience, Microsoft highly recommends Hybrid Modern Authentication.
+>The term **Modern Authentication**, in this document, means that you have modern authentication turned on for Exchange Online and Skype for Business Online.
+>
+>The term **Hybrid Modern Authentication (HMA)** means that you have modern authentication enabled for your on-premisis servers. 
+>
+> For the best possible experience, Microsoft highly recommends **Hybrid Modern Authentication**.
 
 
 
