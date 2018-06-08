@@ -8,7 +8,7 @@ ms.topic: article
 ms.assetid: eeca4cf7-90f0-485d-843c-76c5885c54b0
 ms.author: pashort
 author: shortpatti
-ms.date: 05/29/2018
+ms.date: 06/07/2018
 ---
 
 # Migrate to Always On VPN and decommission DirectAccess
@@ -63,9 +63,9 @@ You must ensure that the **VPN_Profile.ps1** comes _after_ the certificate has b
 >[!NOTE] 
 >Microsoft recommends that you test this process before performing it on any of your user migration rings.
 
-1.  **Create and publish the VPN certificate, and enable the auto-enrollment Group Policy object (GPO).** For traditional,  certificate-based Windows 10 VPN deployments, a certificate is issued to either the device or the user so that it can authenticate the connection. When the new authentication certificate is created and published for auto-enrollment, you must create and deploy a GPO with the auto-enrollment setting configured to the VPN Users group. For the steps to configure certificates and auto-enrollment, see .
+1.  **Create and publish the VPN certificate, and enable the auto-enrollment Group Policy object (GPO).** For traditional,  certificate-based Windows 10 VPN deployments, a certificate is issued to either the device or the user so that it can authenticate the connection. When the new authentication certificate is created and published for auto-enrollment, you must create and deploy a GPO with the auto-enrollment setting configured to the VPN Users group. For the steps to configure certificates and auto-enrollment, see [Configure the server infrastructure](../vpn/always-on-vpn/deploy/vpn-deploy-server-infrastructure.md).
 
-2.  **Add users to the VPN Users group.** Add whichever users you migrate to the VPN Users group. Those users stay in that security group after you have migrated them so that they can receive any certificate updates in the future. Continue to add users to this group until you have moved every user from DirectAccess to Always On VPN.
+2.  **Add users to the VPN Users group.** Add whichever users you migrate to the VPN Users group. Those users stay in that security group after you have migrated them so that they can receive any certificate updates in the future. Continue to add users to this group until you have moved every user from DirectAccess to Always On VPN. 
 
 3.  **Identify users who have received a VPN authentication certificate.** You are migrating from DirectAccess, so you will need to add a method for identifying when a client has received the required certificate and is ready to receive the VPN configuration information. Run the **GetUsersWithCert.ps1** script to add users who are currently issued nonrevoked certificates originating from the specified template name to a specified AD DS security group. For example, after running the **GetUsersWithCert.ps1** script, any user issued a valid  certificate from the VPN Authentication Certificate template is added to the VPN Deployment Ready group.
 
