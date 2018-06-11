@@ -37,7 +37,7 @@ Here are some of the Hyper-V tasks you can do in Windows Admin Center:
 ![Virtual Machines Summary screen](../media/manage-virtual-machines/virtual-machines-summary.png)
 
 1. Click the **Virtual Machines** tool from the left side navigation pane.
-2. There are two tabs at the top of the **Virtual Machines** tool, the **Summary** tab and tne **Inventory** tab. The **Summary** tab provides a holistic view of Hyper-V host resources and performance for the current server or entire cluster, including the following:
+2. There are two tabs at the top of the **Virtual Machines** tool, the **Summary** tab and the **Inventory** tab. The **Summary** tab provides a holistic view of Hyper-V host resources and performance for the current server or entire cluster, including the following:
     - The number of VMs grouped by state - running, off, paused and saved
     - Recent health alerts or Hyper-V event log events (Alerts are only available for hyper-converged clusters running Windows Server 2016 or later)
     - CPU and memory usage with host vs guest breakdown

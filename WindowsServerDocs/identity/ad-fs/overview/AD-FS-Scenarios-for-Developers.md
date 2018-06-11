@@ -210,7 +210,7 @@ claims
 4.  The web application then either consumes the access_token part of the above response (in the case in which the web app itself hosts the resource), or otherwise sends it as the Authorization header in the HTTP request to the web API.  
   
 #### Single sign on behavior  
-While the access token will still be valid for 1 hour (by default) in the client's cache, you may think that the second request will work as in the native client scenario above - that a new request will not trigger any traffic to AD FS as the access token will automatically be fetched from the cache by ADAL.  However, it is possible that the web app can sends distinct authorization and token requests, the former via distinct URL link, as in our sample.  
+While the access token will still be valid for 1 hour (by default) in the client's cache, you may think that the second request will work as in the native client scenario above - that a new request will not trigger any traffic to AD FS as the access token will automatically be fetched from the cache by ADAL.  However, it is possible that the web app can send distinct authorization and token requests, the former via distinct URL link, as in our sample.  
   
 In this case, it is the AD FS browser SSO cookie that enables AD FS to issue a new authorization code without prompting the user for credentials. The web app then calls to AD FS to exchange the new authorization code for a new access token.  The user is not prompted for credentials.  
   

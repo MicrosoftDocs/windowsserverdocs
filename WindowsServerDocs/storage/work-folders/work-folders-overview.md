@@ -5,9 +5,9 @@ ms.prod: windows-server-threshold
 ms.technology: storage-work-folders
 ms.topic: article
 author: JasonGerend
-manager: dongill
+manager: elizapo
 ms.author: jgerend
-ms.date: 4/5/2017
+ms.date: 6/11/2017
 description: An overview of Work Folders - a server role in Windows Server that provides a consistent way for users to access work files from PCs and devices.
 ---
 # Work Folders overview
@@ -16,12 +16,13 @@ description: An overview of Work Folders - a server role in Windows Server that 
 
 This topic discusses Work Folders, a role service for file servers running Windows Server that provides a consistent way for users to access their work files from their PCs and devices.  
   
-If you're looking to download or use Work Folders on Windows Server 2012 R2, Windows 10, or Windows 7, see the following:
+If you're looking to download or use Work Folders on Windows 10, Windows 7, or an Android or iOS device, see the following:
 
--   [Work Folders for Windows Server 2012 R2](https://technet.microsoft.com/library/dn265974(v=ws.11).aspx)
 -   [Work Folders for Windows 10](https://support.microsoft.com/help/12370/windows-10-work-folders)
 -   [Work Folders for Windows 7 (64 bit download)](https://www.microsoft.com/download/details.aspx?id=42558)
 -   [Work Folders for Windows 7 (32 bit download)](https://www.microsoft.com/download/details.aspx?id=42559)
+- [Work Folders for iOS](https://itunes.apple.com/app/work-folders/id950878067)
+- [Work Folders for Android](https://play.google.com/store/apps/details?id=com.microsoft.workfolders)
 
 ##  <a name="BKMK_OVER"></a> Role description  
  With Work Folders users can store and access work files on personal computers and devices, often referred to as bring-your-own device (BYOD), in addition to corporate PCs. Users gain a convenient location to store work files, and they can access them from anywhere. Organizations maintain control over corporate data by storing the files on centrally managed file servers, and optionally specifying user device policies such as encryption and lock-screen passwords.  
