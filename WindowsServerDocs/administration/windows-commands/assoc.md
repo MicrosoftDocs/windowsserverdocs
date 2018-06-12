@@ -21,6 +21,10 @@ ms.date: 10/16/2017
 
 Displays or modifies file name extension associations. If used without parameters, **assoc** displays a list of all the current file name extension associations.
 
+> [!NOTE]
+> This command is only supported within CMD.EXE and is not available from PowerShell.
+>
+
 For examples of how to use this command, see [Examples](#BKMK_examples).
 
 ## Syntax
