@@ -88,63 +88,64 @@ netsh advfirewall firewall add rule name=PROBEPORT dir=in protocol=tcp action=al
 13. Instruct the cluster to listen for Health Probe messages on Port 59999 and respond from the node that currently owns this resource. 
 Run it once from any one node of the cluster, for each cluster. 
     
-    In our example, make sure to change the "ILBIP" according to your configuration values. Run the following command from any one node **az2az1**/**az2az2**: 
-```PowerShell
-$ClusterNetworkName = "Cluster Network 1" # Cluster network name (Use Get-ClusterNetwork on Windows Server 2012 or higher to find the name. And use Get-ClusterResource to find the IPResourceName).
-$IPResourceName = "Cluster IP Address" # IP Address cluster resource name.
-$ILBIP = "10.3.0.100" # IP Address in Internal Load Balancer (ILB) - The static IP address for the load balancer configured in the Azure portal.
-[int]$ProbePort = 59999
-Get-ClusterResource $IPResourceName | Set-ClusterParameter -Multiple @{"Address"="$ILBIP";"ProbePort"=$ProbePort;"SubnetMask"="255.255.255.255";"Network"="$ClusterNetworkName";”ProbeFailureThreshold”=5;"EnableDhcp"=0}  
-```  
+    In our example, make sure to change the "ILBIP" according to your configuration values. Run the following command from any one node **az2az1**/**az2az2**:
+
+    ```PowerShell
+     $ClusterNetworkName = "Cluster Network 1" # Cluster network name (Use Get-ClusterNetwork on Windows Server 2012 or higher to find the name. And use Get-ClusterResource to find the IPResourceName).
+     $IPResourceName = "Cluster IP Address" # IP Address cluster resource name.
+     $ILBIP = "10.3.0.100" # IP Address in Internal Load Balancer (ILB) - The static IP address for the load balancer configured in the Azure portal.
+     [int]$ProbePort = 59999
+     Get-ClusterResource $IPResourceName | Set-ClusterParameter -Multiple @{"Address"="$ILBIP";"ProbePort"=$ProbePort;"SubnetMask"="255.255.255.255";"Network"="$ClusterNetworkName";”ProbeFailureThreshold”=5;"EnableDhcp"=0}
+    ```
+
 14. Run the following command from any one node **az2az3**/**az2az4**. 
-```PowerShell
-$ClusterNetworkName = "Cluster Network 1" # Cluster network name (Use Get-ClusterNetwork on Windows Server 2012 or higher to find the name. And use Get-ClusterResource to find the IPResourceName).
-$IPResourceName = "Cluster IP Address" # IP Address cluster resource name.
-$ILBIP = "10.3.0.101" # IP Address in Internal Load Balancer (ILB) - The static IP address for the load balancer configured in the Azure portal.
-[int]$ProbePort = 59999
-Get-ClusterResource $IPResourceName | Set-ClusterParameter -Multiple @{"Address"="$ILBIP";"ProbePort"=$ProbePort;"SubnetMask"="255.255.255.255";"Network"="$ClusterNetworkName";”ProbeFailureThreshold”=5;"EnableDhcp"=0}  
-```   
-Make sure both clusters can connect / communicate with each other. 
 
-Either use "Connect to Cluster" feature in Failover cluster manager to connect to the other cluster or check other cluster responds from one of the nodes of the current cluster.  
+    ```PowerShell
+    $ClusterNetworkName = "Cluster Network 1" # Cluster network name (Use Get-ClusterNetwork on Windows Server 2012 or higher to find the name. And use Get-ClusterResource to find the IPResourceName).
+    $IPResourceName = "Cluster IP Address" # IP Address cluster resource name.
+    $ILBIP = "10.3.0.101" # IP Address in Internal Load Balancer (ILB) - The static IP address for the load balancer configured in the Azure portal.
+    [int]$ProbePort = 59999
+    Get-ClusterResource $IPResourceName | Set-ClusterParameter -Multiple @{"Address"="$ILBIP";"ProbePort"=$ProbePort;"SubnetMask"="255.255.255.255";"Network"="$ClusterNetworkName";”ProbeFailureThreshold”=5;"EnableDhcp"=0}  
+    ```   
+   Make sure both clusters can connect / communicate with each other. 
+
+   Either use "Connect to Cluster" feature in Failover cluster manager to connect to the other cluster or check other cluster responds from one of the nodes of the current cluster.  
    
-```PowerShell
-Get-Cluster -Name SRAZC1 (ran from az2az3)
-```
-```PowerShell
-Get-Cluster -Name SRAZC2 (ran from az2az1)
-```   
-<ol start="15">
+   ```PowerShell
+     Get-Cluster -Name SRAZC1 (ran from az2az3)
+   ```
+   ```PowerShell
+     Get-Cluster -Name SRAZC2 (ran from az2az1)
+   ```   
 
-<li>Create cloud witness for both clusters. Create two [storage accounts](https://ms.portal.azure.com/#create/Microsoft.StorageAccount-ARM) (**az2azcw**, **az2azcw2**) in azure one for each cluster in the same resource group (**SR-AZ2AZ**).</li>
-<ul>
-<li>Copy the storage account name and key from "access keys"</li>
-<li>Create the cloud witness from “failover cluster manager” and use the above account name and key to create it.</li>
-</ul>
+15. Create cloud witness for both clusters. Create two [storage accounts](https://ms.portal.azure.com/#create/Microsoft.StorageAccount-ARM) (**az2azcw**, **az2azcw2**) in azure one for each cluster in the same resource group (**SR-AZ2AZ**).
 
-<li>Configure cluster-to-cluster Storage Replica.</li>
+    - Copy the storage account name and key from "access keys"
+    - Create the cloud witness from “failover cluster manager” and use the above account name and key to create it.
+
+16. Configure cluster-to-cluster Storage Replica.
    
-Grant SR-Access from one cluster to another cluster in both directions.
+   Grant SR-Access from one cluster to another cluster in both directions.
 
-In our example:
+   In our example:
 
-```PowerShell
-Grant-SRAccess -ComputerName az2az1 -Cluster SRAZC2
-```
-```PowerShell
-Grant-SRAccess -ComputerName az2az3 -Cluster SRAZC1
-```   
+   ```PowerShell
+      Grant-SRAccess -ComputerName az2az1 -Cluster SRAZC2
+   ```
+   ```PowerShell
+      Grant-SRAccess -ComputerName az2az3 -Cluster SRAZC1
+   ```   
    
-<li>Create partnership for the clusters:</li></ol>
+17. Create partnership for the clusters:</ol>
 
-- For cluster **SRAZC1**.
+ - For cluster **SRAZC1**.
    - Volume location:- c:\ClusterStorage\DataDisk1
    - Log location:- g:
-- For cluster **SRAZC2**
+ - For cluster **SRAZC2**
     - Volume location:- c:\ClusterStorage\DataDisk2
     - Log location:- g:
 
-    Run the following command:
+Run the following command:
 
 ```PowerShell
 
