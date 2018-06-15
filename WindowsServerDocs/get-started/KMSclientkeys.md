@@ -6,7 +6,7 @@ ms.mktglfcycl: manage
 ms.sitesec: library
 author: jaimeo
 ms.localizationpriority: high
-ms.date: 10/30/2017
+ms.date: 06/15/2018
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 
@@ -44,6 +44,31 @@ prompt on the client, type **slmgr /ipk \<setup key\>** and then press **Enter**
 
 >   If you are running Windows Server 2008 R2 or Windows 7, be on the lookout
 >   for an update to support using those as KMS hosts for Windows 10 clients.
+
+## Windows Server, version 1803
+
+| Operating system edition       | KMS Client Setup Key          |
+|--------------------------------|-------------------------------|
+| Windows Server Datacenter | TXN8-JFHJM-4WC78-MPCBR-9W4KR  | 
+| Windows Server Standard   | 2HXDN-KRXHB-GPYC7-YCKFJ-7FVDG  |
+
+## Windows 10, version 1803
+
+| Operating system edition          | KMS Client Setup Key          |
+|-----------------------------------|-------------------------------|
+| Windows 10 Education | NW6C2-QMPVW-D7KKK-3GKT6-VCFB2 |
+| Windows 10 Education N | 2WH4N-8QGBV-H22JP-CT43Q-MDWWJ |
+| Windows 10 Enterprise	| NPPR9-FWDCX-D2C8J-H872K-2YT43 |
+| Windows 10 Enterprise G | YYVX9-NTFWV-6MDM3-9PT4T-4M68B |
+| Windows 10 Enterprise G N | 44RPN-FTY23-9VTTB-MP9BX-T84FV |
+| Windows 10 Enterprise N | DPH2V-TTNVB-4X9Q3-TJR4H-KHJW4 |
+| Windows 10 Professional | W269N-WFGWX-YVC9B-4J6C9-T83GX |
+| Windows 10 Professional Education | 6TP4R-GNPTD-KYYHQ-7B7DP-J447Y |
+| Windows 10 Professional Education N | YVWGF-BXNMC-HTQYQ-CPQ99-66QFC |
+| Windows 10 Professional N | MH37W-N47XK-V7XM9-C7227-GCQG9 |
+| Windows 10 Professional Workstation | NRG8B-VKK3Q-CXVCJ-9G2XF-6Q84J |
+| Windows 10 Professional Workstation N | 9FNHH-K3HBT-3W4TD-6383H-6XYWF |
+
 
 ## Windows Server, version 1709
 
