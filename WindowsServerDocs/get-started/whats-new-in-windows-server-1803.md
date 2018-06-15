@@ -105,5 +105,5 @@ Install-WindowsFeature -Name WDS
 
 ## See also
 
-[Windows Server release information](https://docs.microsoft.com/en-us/windows-server/get-started/windows-server-release-info)<br>
-[What's new in Windows 10, version 1803 IT Pro content](https://docs.microsoft.com/en-us/windows/whats-new/whats-new-windows-10-version-1803)
+[Windows Server release information](https://docs.microsoft.com/windows-server/get-started/windows-server-release-info)<br>
+[What's new in Windows 10, version 1803 IT Pro content](https://docs.microsoft.com/windows/whats-new/whats-new-windows-10-version-1803)
