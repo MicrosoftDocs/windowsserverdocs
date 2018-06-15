@@ -38,7 +38,7 @@ For customers and software vendor partners looking for more information on Windo
 |Biztalk Server 2016|	Yes|	[Microsoft BizTalk Server](https://www.microsoft.com/en-us/cloud-platform/biztalk)|
 |Host Integration Server 2016|	Yes|	[What's New in HIS 2016](https://msdn.microsoft.com/library/mt670807.aspx)|
 |Visual Studio Team Foundation Server 2017|	Yes|	[Team Foundation Server 2017](https://www.visualstudio.com/news/releasenotes/tfs2017-relnotes)| 
-|Skype for Business Server 2015|	No|	[Server requirements for Skype for Business Server 2015](https://technet.microsoft.com/library/dn951388.aspx)|
+|Skype for Business Server 2015|	Yes|	[How to install Skype for Business Server 2015 on Windows Server 2016](https://support.microsoft.com/en-gb/help/4015888/how-to-install-skype-for-business-server-2015-on-windows-server-2016)|
 |Office Online Server|   Yes|  [Plan Office Online Server](https://technet.microsoft.com/en-us/library/jj219435(v=office.16).aspx)|
 
 
