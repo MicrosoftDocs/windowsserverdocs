@@ -45,6 +45,20 @@ prompt on the client, type **slmgr /ipk \<setup key\>** and then press **Enter**
 >   If you are running Windows Server 2008 R2 or Windows 7, be on the lookout
 >   for an update to support using those as KMS hosts for Windows 10 clients.
 
+## Windows Server, version 1803
+
+| Operating system edition       | KMS Client Setup Key          |
+|--------------------------------|-------------------------------|
+| Windows Server Datacenter | TXN8-JFHJM-4WC78-MPCBR-9W4KR  | 
+| Windows Server Standard   | 2HXDN-KRXHB-GPYC7-YCKFJ-7FVDG  |
+
+## Windows 10, version 1803
+
+| Operating system edition          | KMS Client Setup Key          |
+|-----------------------------------|-------------------------------|
+| Windows 10  | <Needs information> |
+
+
 ## Windows Server, version 1709
 
 | Operating system edition       | KMS Client Setup Key          |
