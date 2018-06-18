@@ -39,7 +39,7 @@ System Insights runs on any Windows Server 2019 instance. It runs on both host a
 ### Install System Insights
 
 >[!IMPORTANT]
->[System Insights collects and stores up to a year's worth of data locally. If you would like to retain your data when upgrading your operating system to the latest build, **make sure you use In-Place Upgrade**.]
+>System Insights collects and stores up to a year's worth of data locally. If you would like to retain your data when upgrading your operating system to the latest build, **make sure you use In-Place Upgrade**.
 
 #### Install the feature
 You can install System Insights directly through Server Manager by adding the **System-Insights** feature, or by using PowerShell:
@@ -59,7 +59,7 @@ If you have a previous System Insights extension installed, make sure to uninsta
 
 ## Feedback
 >[!IMPORTANT]
->[Before reporting any bugs, please ensure you're running the latest build. Visit [this page](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewserver) to get the latest Windows Server 2019 Preview build, and download the latest System Insights extension for Windows Admin Center [using the extension manager](https://docs.microsoft.com/en-us/windows-server/manage/windows-admin-center/configure/using-extensions).]
+>Before reporting any bugs, please ensure you're running the latest build. Visit [this page](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewserver) to get the latest Windows Server 2019 Preview build, and download the latest System Insights extension for Windows Admin Center [using the extension manager](https://docs.microsoft.com/en-us/windows-server/manage/windows-admin-center/configure/using-extensions).
 
 We'd love to hear your feedback to help us improve this feature. You can use the following channels to submit feedback:
 - **Feedback Hub**: Use the Feedback Hub tool in Windows 10 to file a bug or feedback. When doing so, please specify:

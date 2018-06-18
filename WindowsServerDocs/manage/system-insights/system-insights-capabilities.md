@@ -26,7 +26,7 @@ This topic also describes the data sources, prediction timelines, and prediction
 A System Insights capability is a machine learning or statistics model that analyzes system data to help give you increased insight into the functioning of your deployment. System Insights introduces an initial set of default capabilities, as well as allows you to add new capabilities dynamically, without needing to update the operating system. 
 
 >[!NOTE]
->[Detailed documentation explaining how to create and add new capabilities will be available soon, and the [System Insights management](system-insights-management.md) provides more high-level information about this functionality.]
+>Detailed documentation explaining how to create and add new capabilities will be available soon, and the [System Insights management](system-insights-management.md) provides more high-level information about this functionality.
 
 Additionally, each capability runs locally on each Windows Server instance, helping administrators proactively detect and address problematic issues in their deployments. 
 Capabilities run locally on each server instance, and they can be managed individually, allowing you to seamlessly leverage these capabilities to detect and address problematic issues in your deployments.
@@ -56,7 +56,7 @@ Each capability analyzes past historical data to predict future usage, and **all
 The default capabilities use a forecasting model to predict future usage, and for each prediction, the model is trained locally on your machine's data. This model is designed to help detect longer term trends, and retraining on each Windows Server instance enables the capability to adapt to the specific behavior and nuances of each machine's usage.
 
 >[!NOTE]
->Determining what type of model to use required testing many models using a dataset containing tens of thousands of machines. After analyzing and tweaking these models, we decided to use an auto-regressive forecasting model, as it produces highly-accurate and visually intuitive predictions while not requiring too much time to train. This model, however, requires three weeks of training data, so each capability uses a basic linear trend until three weeks of data are available.]
+>Determining what type of model to use required testing many models using a dataset containing tens of thousands of machines. After analyzing and tweaking these models, we decided to use an auto-regressive forecasting model, as it produces highly-accurate and visually intuitive predictions while not requiring too much time to train. This model, however, requires three weeks of training data, so each capability uses a basic linear trend until three weeks of data are available.
 
 ### Forecasting timelines
 The default capabilities forecast a certain number of days into the future based on the number of days for which data has been collected. The following table shows the prediction timelines of these capabilities:
@@ -91,7 +91,7 @@ All System Insights capabilities must output a status associated with each predi
 - **None**: There isn’t enough data to make a prediction. This could be due to a lack of data or because no data has been reported recently.
 
 >[!NOTE]
->[If a capability forecasts on multiple instances - such as multiple volumes or network adapters - the status reflects the most severe status across all instances. Individual statuses for each volume or network adapter are visible in Windows Admin Center or within the data contained in the output of each capability. For instructions on how to parse the JSON output of the default capabilities, visit [this blog](https://aka.ms/systeminsightsmitigationscripts). 
+>If a capability forecasts on multiple instances - such as multiple volumes or network adapters - the status reflects the most severe status across all instances. Individual statuses for each volume or network adapter are visible in Windows Admin Center or within the data contained in the output of each capability. For instructions on how to parse the JSON output of the default capabilities, visit [this blog](https://aka.ms/systeminsightsmitigationscripts). 
 
 
 ## See also

@@ -51,10 +51,10 @@ Invoke-InsightsCapability -Name "CPU capacity forecasting"
 ```
 
 >[!TIP]
->[Though the performance impact of invoking the default capabilities is relatively modest compared to other machine learning models, it's recommended to schedule predictions during machine downtime, as running a capability can be an expensive operation.]
+>Though the performance impact of invoking the default capabilities is relatively modest compared to other machine learning models, it's recommended to schedule predictions during machine downtime, as running a capability can be an expensive operation.
 
 ### Retrieving capability results
-Once a capability has been invoked, the most recent results are visible using **Get-InsightsCapability** or **Get-InsightsCapabilityResult**. These cmdlets output the most recent **Status** and **Status Description** of each capability, which describe the result of each prediction. The **Status** and **Status Description** fields are further described in the [System Insights capability page](system-insights-capability.md). 
+Once a capability has been invoked, the most recent results are visible using **Get-InsightsCapability** or **Get-InsightsCapabilityResult**. These cmdlets output the most recent **Status** and **Status Description** of each capability, which describe the result of each prediction. The **Status** and **Status Description** fields are further described in the [System Insights capability page](system-insights-capabilities.md). 
 
 Additionally, you can use the **Get-InsightsCapabilityResult** cmdlet to view the last 30 prediction results and to retrieve the data associated with the prediction: 
 
@@ -74,7 +74,7 @@ The System Insights extension automatically shows the prediction history and par
 In addition to on-demand predictions, you can configure periodic predictions for each capability so that the specified capability is automatically invoked on a predefined schedule. Use the **Get-InsightsCapabilitySchedule** cmdlet to see capability schedules: 
 
 >[!TIP]
->[Use the pipeline operator in PowerShell to see information for all capabilities returned by the **Get-InsightsCapability** cmdlet.]
+>Use the pipeline operator in PowerShell to see information for all capabilities returned by the **Get-InsightsCapability** cmdlet.
 
 ```PowerShell
 Get-InsightsCapability | Get-InsightsCapabilitySchedule
@@ -96,7 +96,7 @@ Set-InsightsCapabilitySchedule -Name "Total storage consumption forecasting" -Ho
 Set-InsightsCapabilitySchedule -Name "Volume consumption forecasting" -Minute -MinutesInterval 30 
 ```
 >[!TIP]
->[Because the default capabilities analyze daily data, it's recommended to use daily schedules for these capabilities. Learn more about the default capabilities [here](system-insights-capabilities.md).]
+>Because the default capabilities analyze daily data, it's recommended to use daily schedules for these capabilities. Learn more about the default capabilities [here](system-insights-capabilities.md).
 
 You can also use Windows Admin Center to view and set schedules for each capability by clicking **Settings**. The current schedule is shown on the **Schedule** tab, and you can use the GUI tools to create a new schedule:
 
@@ -118,7 +118,7 @@ Get-InsightsCapability | Get-InsightsCapabilityAction
 You can create new actions or delete existing actions using the **Set-InsightsCapabilityAction** and **Remove-InsightsCapabilityAction** cmdlets. Each action is run using credentials that are specified in the **ActionCredential** parameter.
 
 >[!NOTE]
->[In the initial System Insights release, you must specify remediation scripts outside of user directories. This will be fixed in an upcoming release.]
+>In the initial System Insights release, you must specify remediation scripts outside of user directories. This will be fixed in an upcoming release.
 
 ```PowerShell
 $Cred = Get-Credential
@@ -144,7 +144,7 @@ Creating the default capabilities and the associated management interfaces requi
 By exposing the existing data collection and management infrastructure, System Insights allows you to add your own capabilities that help you address the scenarios you care about.
 
 >[!NOTE]
->[Detailed developer documentation and sample capabilities will be available soon.]
+>Detailed developer documentation and sample capabilities will be available soon.
 
 ## See also
 - [System Insights overview](system-insights-overview.md)
