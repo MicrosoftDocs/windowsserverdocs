@@ -150,5 +150,5 @@ By exposing the existing data collection and management infrastructure, System I
 
 ## See also
 - [System Insights overview](system-insights-overview.md)
-- [System Insights management](system-insights-management.md)
+- [System Insights capabilities](system-insights-capabilities.md)
 - [System Insights FAQ](system-insights-faq.md)
