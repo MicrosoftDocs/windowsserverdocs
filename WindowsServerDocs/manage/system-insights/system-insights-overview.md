@@ -47,9 +47,9 @@ You can install System Insights directly through Server Manager by adding the **
 ```PowerShell
 Add-WindowsFeature System-Insights -IncludeManagementTools
 ```
-You can also use the System Insights extension within Windows Admin Center. After installing the System Insights extension, you can click to enable System Insights:
+You can also use the System Insights extension within Windows Admin Center to add System Insights. After installing the System Insights extension, click to enable System Insights:
 
-<img src="media/day-0-page.png" alt="Day 0 experience for System Insights extension.">
+![Day 0 experience for System Insights extension.](media/day-0-page.png)
 
 #### Install the Windows Admin Center extension
 
@@ -57,7 +57,7 @@ Download the latest System Insights extension [using the Windows Admin Center ex
 
 If you have a previous System Insights extension installed, make sure to uninstall it and install the latest extension.
 
-## Feedback
+## Provide feedback
 >[!IMPORTANT]
 >Before reporting any bugs, please ensure you're running the latest build. Visit [this page](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewserver) to get the latest Windows Server 2019 Preview build, and download the latest System Insights extension for Windows Admin Center [using the extension manager](https://docs.microsoft.com/en-us/windows-server/manage/windows-admin-center/configure/using-extensions).
 
@@ -66,7 +66,7 @@ We'd love to hear your feedback to help us improve this feature. You can use the
     - **Category**: Server 
     - **Subcategory**: ""
 - **UserVoice**: Submit feature requests through our [UserVoice page](https://windowsserver.uservoice.com/forums/295056-storage). Share with your colleagues to upvote items that are important to you.
-- **Email**: If you'd like to submit your feedback privately to the feature team, you can send an email to system-insights-feed@microsoft.com. Please keep in mind that we still may request you to use Feedback Hub or UserVoice.
+- **Email**: If you'd like to submit your feedback privately to the feature team, send an email to system-insights-feed@microsoft.com. Please keep in mind that we still may request you to use Feedback Hub or UserVoice.
 
 ## See also
 To learn more about System Insights, use the resources below:

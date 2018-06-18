@@ -28,7 +28,7 @@ To get started, you can list all of the available capabilities using the **Get-I
 ```PowerShell
 Get-InsightsCapability
 ``` 
-All of the available capabilities will also be visible in the home page of System Insights:
+These capabilities are also visible in System Insights extension:
 
 ![Overview page of System Insights listing available capabilities](media/overview-page.png)
 
@@ -95,7 +95,7 @@ Set-InsightsCapabilitySchedule -Name "Networking capacity forecasting" -Daily -D
 Set-InsightsCapabilitySchedule -Name "Total storage consumption forecasting" -Hourly -HoursInterval 2 -DaysOfWeek Monday, Wednesday, Friday
 Set-InsightsCapabilitySchedule -Name "Volume consumption forecasting" -Minute -MinutesInterval 30 
 ```
->[!TIP]
+>[!NOTE]
 >Because the default capabilities analyze daily data, it's recommended to use daily schedules for these capabilities. Learn more about the default capabilities [here](system-insights-capabilities.md).
 
 You can also use Windows Admin Center to view and set schedules for each capability by clicking **Settings**. The current schedule is shown on the **Schedule** tab, and you can use the GUI tools to create a new schedule:
@@ -128,7 +128,7 @@ Set-InsightsCapabilityAction -Name "CPU capacity forecasting" -Type Critical -Ac
 Remove-InsightsCapabilityAction -Name "CPU capacity forecasting" -Type Warning
 ```
 
-You can also use Windows Admin Center to set remediation actions by using **Actions** tab within the **Settings** page:
+You can also use Windows Admin Center to set remediation actions by using the **Actions** tab within the **Settings** page:
 
 ![Settings page where user can specify remediation actions](media/actions-page.png)
 

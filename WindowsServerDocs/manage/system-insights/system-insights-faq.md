@@ -27,7 +27,7 @@ OMS can key off the events created by System Insights, as System Insights output
 
 ## How does System Insights relate to Windows ML?
 
-Windows ML is a platform that enables developers to import and score pre-trained ML models on Windows devices. These models benefit from hardware acceleration, and they can be scored locally. 
+[Windows ML](https://docs.microsoft.com/windows/uwp/machine-learning/) is a platform that enables developers to import and score pre-trained machine learning models on Windows devices. These models benefit from hardware acceleration, and they can be scored locally. 
 
 System Insights is a feature in Windows Server 2019 that offers local predictive capabilities together with a complete management experience, including PowerShell and Windows Admin Center integration. **The models behind these System Insights capabilities can leverage Windows ML** to benefit from hardware acceleration and the ability to import models in the [Open Neural Network Exchange (ONNX)](https://onnx.ai/) format. 
 
