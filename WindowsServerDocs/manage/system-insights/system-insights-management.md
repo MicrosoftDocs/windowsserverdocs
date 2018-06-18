@@ -1,6 +1,6 @@
 ---
-title: System Insights Management
-description: "System Insights Management"
+title: Managing System Insights
+description: "Managing System Insights"
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na

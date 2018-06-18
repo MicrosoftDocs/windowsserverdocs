@@ -1,6 +1,6 @@
 ---
-title: System Insights Overview
-description: "System Insights Overview"
+title: System Insights overview
+description: "System Insights overview"
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na

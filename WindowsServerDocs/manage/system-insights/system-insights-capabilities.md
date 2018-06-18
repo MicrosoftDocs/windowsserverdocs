@@ -1,6 +1,6 @@
 ---
 title: System Insights capabilities
-description: "System Insights Capabilities"
+description: "System Insights capabilities"
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
