@@ -60,6 +60,14 @@
 ## Automate Windows Server management
 ### [Windows PowerShell scripting](/powershell/scripting/powershell-scripting?view=powershell-5.1)
 ### [Windows Commands](windows-commands/windows-commands.md)
+
+## Insider Preview
+### System Insights
+#### [System Insights overview](system-insights\system-insights-overview.md)
+#### [System Insights management](system-insights\system-insights-management.md)
+#### [System Insights capabilities](system-insights\system-insights-capabilities.md)
+#### [System Insights FAQ](system-insights\system-insights-faq.md)
+
 <!--
 #### [A-Z list](windows-commands/a-z-list.md)
 #### [Command-Line Syntax Key](windows-commands/command-line-syntax-key.md)
