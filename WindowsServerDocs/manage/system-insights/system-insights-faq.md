@@ -48,5 +48,5 @@ Each default capability is relatively inexpensive to run. Each capability will t
 ## See also
 
 - [System Insights overview](system-insights-overview.md)
-- [System Insights management](system-insights-management.md)
 - [System Insights capabilities](system-insights-capabilities.md)
+- [Managing System Insights](managing-system-insights.md)

@@ -64,7 +64,7 @@
 ## Insider Preview
 ### System Insights
 #### [System Insights overview](..\manage\system-insights\system-insights-overview.md)
-#### [System Insights management](..\manage\system-insights\system-insights-management.md)
+#### [System Insights management](..\manage\system-insights\managing-system-insights.md)
 #### [System Insights capabilities](..\manage\system-insights\system-insights-capabilities.md)
 #### [System Insights FAQ](..\manage\system-insights\system-insights-faq.md)
 

@@ -70,6 +70,6 @@ We'd love to hear your feedback to help us improve this feature. You can use the
 
 ## See also
 To learn more about System Insights, use the resources below:
-- [System Insights management](system-insights-management.md)
+- [Managing System Insights](managing-system-insights.md)
 - [System Insights capabilities](system-insights-capabilities.md)
 - [System Insights FAQ](system-insights-faq.md)
