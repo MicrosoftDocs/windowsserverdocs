@@ -46,7 +46,7 @@ On the **Administrators** tab you can control who can access Windows Admin Cente
 
 If your organization uses Azure Active Directory (Azure AD), you can choose to add an additional layer of security to Windows Admin Center by requiring Azure AD authentication to access the gateway. In order to access Windows Admin Center, users must also be a member of the local Users group on the gateway server (even if Azure AD authentication is used). When you use Azure AD, you'll manage user and administrator access permissions from the Azure Portal, rather than from within the Windows Admin Center UI.
 
-[To set up Azure AD authentication, you must first connect your gateway to Azure](azure-integration.md#connect-your-gateway-to-azure) (you only need to do this once for your Windows Admin Center gateway). This step creates an Azure AD application from which you can manage gateway user and gateway administrator access.
+[To set up Azure AD authentication, you must first register your gateway with Azure](azure-integration.md#register-your-gateway-with-azure) (you only need to do this once for your Windows Admin Center gateway). This step creates an Azure AD application from which you can manage gateway user and gateway administrator access.
 
 By default, all members of the Azure AD tenant have user access to the Windows Admin Center gateway service. Only local administrators on the gateway machine have administrator access to the Windows Admin Center gateway. Note that the rights of local administrators on the gateway machine cannot be restricted - local admins can do anything regardless of whether Azure AD is used for authentication.
 
