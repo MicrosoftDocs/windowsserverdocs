@@ -33,10 +33,9 @@ Windows Admin Center defines two roles for access to the gateway service: gatewa
 
 Gateway administrators can choose either of the following:
 
- - Active Directory/local machine groups
- - Azure Active Directory as the identity provider for Windows Admin Center
- 
-[Configure the identity provider used in Windows Admin Center.](../configure/user-access-control.md#choose-the-identity-provider)
+ - [Active Directory/local machine groups](../configure/user-access-control.md#active-directory-or-local-machine-groups)
+ - [Azure Active Directory as the identity provider for Windows Admin Center](../configure/user-access-control.md#azure-active-directory)
+
 
 ### Smartcard authentication
 
