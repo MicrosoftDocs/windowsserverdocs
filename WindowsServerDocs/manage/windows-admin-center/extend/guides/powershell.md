@@ -5,14 +5,14 @@ ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
-ms.date: 05/23/2018
+ms.date: 06/18/2018
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---
 
 # Using PowerShell in your extension #
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10
+>Applies To: Windows Admin Center, Windows Admin Center Preview
 
 Let’s go more in-depth into the Windows Admin Center Extensions SDK - let's talk about adding PowerShell commands to your extension.
 

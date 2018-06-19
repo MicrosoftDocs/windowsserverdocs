@@ -5,18 +5,18 @@ ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
-ms.date: 05/23/2018
+ms.date: 06/18/2018
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---
 
 # Launch Windows Admin Center
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10
+>Applies To: Windows Admin Center, Windows Admin Center Preview
 
 > [!Tip]
 > New to Windows Admin Center?
-> [Learn more about Windows Admin Center](../understand/windows-admin-center.md) or [Download now](https://aka.ms/wacdownload).
+> [Learn more about Windows Admin Center](../understand/windows-admin-center.md) or [Download now](https://aka.ms/windowsadmincenter).
 
 ## Selecting a client certificate
 
@@ -96,32 +96,29 @@ specific browser session. If you reload your browser, you must re-enter your
 
 If your environment uses [LAPS](https://technet.microsoft.com/en-us/mt227395.aspx), you can use LAPS credentials to authenticate with the managed node. **If you use this scenario, please** [provide feedback](http://aka.ms/WACFeedback).
 
-## Using Tags with server connections ##
+## Using tags to organize your connections ##
 
 You can use tags to identify and filter related servers in your connection list.  This allows you to see a subset of your servers in the connection list.  This is especially useful if you have many connections.
 
-## Add or remove a tag
+## Edit tags
 
-* Select a server in the Server Connections list
-* Under **Server Connections**, click **Edit Tags**
+* Select a server or multiple servers in the All Connections list
+* Under **All Connections**, click **Edit Tags**
 
 ![](../media/launch/tags-5.png)
 
-The **Edit Connection Tags** dialog allows you to add or remove tags from your server connection.
+The **Edit Connection Tags** pane allows you to modify, add, or remove tags from your selected connection(s):
 
-To add a new tag to a server connection:
+* To add a new tag to your selected connection(s), select **Add tag** and enter the tag name you would like to use.
 
-* Start entering a tag by clicking **Add Tags** under **Tags to Add**
-* Add entries for one or more tags you would like to add
-* Click **Save**
+* To tag the selected connections with an existing tag name, check the box next to the tag name you wish to apply.
 
-To remove an existing tag from a server connection:
+* To remove a tag from all selected connections, uncheck the box next to the tag you wish to remove.
 
-* Start entering a tag by clicking **Add Tags** under **Tags to Remove**
-* Add entries for one or more tags you would like to remove
-* Click **Save**
+* If a tag is applied to a subset of the selected connections, the check box is shown in an intermediate state. You can click the box to check it and apply the tag to all selected connections, or click again to uncheck it and remove the tag from all selected connections.
 
-![](../media/launch/tags-4.png)
+![](../media/launch/tags-4.png) 
+<!-- media will need updating -->
 
 ## Filter connections by tag
 
@@ -131,3 +128,6 @@ Once tags have been added to one or more server connections, you can view the ta
 
 ![](../media/launch/tags-2.png)
 
+## View PowerShell scripts used in Windows Admin Center
+
+Once you've connected to a server, cluster, or PC, you can look at the PowerShell scripts that power the UI actions available in Windows Admin Center. From within a tool, click the PowerShell icon in the top application bar. Select a command of interest from the dropdown to navigate to the corresponding PowerShell script.

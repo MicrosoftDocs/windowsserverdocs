@@ -19,6 +19,7 @@
 ### [High availability](deploy/high-availability.md)
 
 ## Configure
+### [Windows Admin Center settings](configure/settings.md)
 ### [User access control and permissions](configure/user-access-control.md)
 ### [Using extensions](configure/using-extensions.md)
 ### [Configure Azure integration](configure/azure-integration.md)

@@ -5,12 +5,14 @@ ms.technology: manage
 ms.topic: article
 author: jwwool
 ms.author: jeffrew
-ms.date: 05/23/2018
+ms.date: 06/18/2018
 ms.localizationpriority: high
 ms.prod: windows-server-threshold
 ---
 
 # Troubleshooting Windows Admin Center
+
+>Applies To: Windows Admin Center, Windows Admin Center Preview
 
 > [!Important]
 > This guide will help you diagnose and resolve issues that are preventing you from using Windows Admin Center. If you are having an issue with a specific tool, please check to see if you are experiencing a [known issue.](http://aka.ms/wacknownissues)
@@ -90,7 +92,7 @@ Test-NetConnection -Port <port> -ComputerName <gateway> -InformationLevel Detail
 
 * If you are using Windows 10 version 1703 or below, Windows Admin Center is not supported on your version of Microsoft Edge. Either upgrade to a recent version of Windows 10 or use Chrome.
 
-* If you are using an insider preview version of Windows 10 or Server with a build version greater than 17134.xxxx, Windows Admin Center has a [known incompatibility.](known-issues.md#insider-preview-windows-10--window-server-2019-rs5)
+* If you are using an insider preview version of Windows 10 or Server with a build version greater than 17134.xxxx, Windows Admin Center has a [known incompatibility.](known-issues.md#previous-insider-preview-builds-of-windows-10--window-server-2019-rs5)
 
 [[back to top]](#toc)
 

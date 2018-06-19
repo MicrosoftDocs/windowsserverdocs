@@ -5,14 +5,14 @@ ms.technology: manage
 ms.topic: article
 author: haley-rowland
 ms.author: harowl
-ms.date: 05/23/2018
+ms.date: 06/18/2018
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---
 
 # User access options with Windows Admin Center
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10
+>Applies To: Windows Admin Center, Windows Admin Center Preview
 
 When deployed as a service on Windows Server, Windows Admin Center provides a centralized point of management for your server environment. By controlling access to Windows Admin Center, you can improve the security of your management landscape.
 
@@ -44,7 +44,7 @@ When using Active Directory or local machine groups as the identity provider, yo
 
 ### Conditional access and multi-factor authentication
 
-By choosing Azure AD authentication for the gateway, you can leverage additional security features like conditional access and multi-factor authentication provided by Azure AD. [Learn more about configuring conditional access with Azure Active Directory.](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal-get-started)
+By requiring Azure AD authentication for the gateway, you can leverage additional security features like conditional access and multi-factor authentication provided by Azure AD. [Learn more about configuring conditional access with Azure Active Directory.](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal-get-started)
 
 ## Role-based access control
 

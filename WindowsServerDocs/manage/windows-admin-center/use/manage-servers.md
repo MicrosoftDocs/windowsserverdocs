@@ -5,17 +5,17 @@ ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
-ms.date: 05/23/2018
+ms.date: 06/18/2018
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---
 # Manage Servers with Windows Admin Center
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10
+>Applies To: Windows Admin Center, Windows Admin Center Preview
 
 > [!Tip]
 > New to Windows Admin Center?
-> [Learn more about Windows Admin Center](../understand/windows-admin-center.md) or [Download now](https://aka.ms/WACDownload).
+> [Learn more about Windows Admin Center](../understand/windows-admin-center.md) or [Download now](https://aka.ms/windowsadmincenter).
 
 ## Managing Windows Server machines
 
@@ -56,6 +56,7 @@ The following tools are available for server connections:
 | [Registry](#registry) | View and modify registry entries | 
 | [Remote Desktop](#remote-desktop) | Interact with server via Remote Desktop | 
 | [Roles and Features](#roles-and-features) | View and modify roles and features | 
+| [Scheduled Tasks](#scheduled-tasks) | View and modify scheduled tasks |
 | [Services](#services) | View and modify services | 
 | [Storage](#storage) | View and modify storage devices | 
 | [Storage Replica](https://docs.microsoft.com/en-us/windows-server/storage/storage-replica/storage-replica-ui) | Use Storage Replica to manage server-to-server storage replication | 
@@ -410,6 +411,27 @@ The following features have been proposed for Roles and Features:
 |[[Roles & Features] Improvements on the Roles & Features module](https://windowsserver.uservoice.com/forums/295071/suggestions/31598326)|
 |[[Roles and Features] Filter](https://windowsserver.uservoice.com/forums/295071/suggestions/31702240)
 |[**See all or propose new feature**](https://windowsserver.uservoice.com/forums/295071/filters/top?category_id=319162&query=%5BRoles%20and%20Features%5D)
+
+## Scheduled Tasks
+
+> [!IMPORTANT]
+> This feature is only available in Windows Admin Center Preview. [How do I get this version?](http://aka.ms/windowsadmincenter)
+
+**Scheduled Tasks** allows you to manage scheduled tasks on a computer or server.
+
+### Features
+
+The following features are supported in Scheduled Tasks:
+
+- Browse the task scheduler library
+- Edit scheduled tasks
+- Enable & Disable scheduled tasks
+- Start & Stop scheduled tasks
+- Create scheduled tasks
+
+> [!NOTE]
+This tool is still in preview. The supported task triggers are daily, once, at logon, and at startup.
+You are limited to creating and editing only 1 trigger per task.
 
 ## Services
 
