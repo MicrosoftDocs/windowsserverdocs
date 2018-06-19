@@ -1,7 +1,7 @@
 ---
 title: Change a Master Boot Record (MBR) into a GUID partition table (GPT) disk
 description: Describes how to change a Master boot record (MBR) into a GUID partition table (GPT) disk
-ms.date: 10/12/2017
+ms.date: 06/19/2018
 ms.prod: windows-server-threshold 
 ms.technology: storage 
 ms.topic: article 
@@ -17,21 +17,18 @@ ms.author: jgerend
 Master Boot Record (MBR) disks use the standard BIOS partition table. GUID Partition Table (GPT) disks use Unified Extensible Firmware Interface (UEFI). One advantage of GPT disks is that you can have more than four partitions on each disk. GPT is also required for disks larger than two terabytes (TB).
 
 You can change a disk from MBR to GPT partition style as long as the disk contains no partitions or volumes.
-You cannot use the GPT partition style on removable media, or on cluster disks that are connected to shared SCSI or Fibre Channel buses that are used by the Cluster service.
+You cannot use the GPT partition style on removable media.
 
 > [!NOTE]
-> Before you convert disks, close any programs that are running on those disks.
+> Before you convert a disk, backup any data on it and close any programs that are accessing the disk.
 
-## Changing an MBR disk into a GPT disk
-
--   [Using the Windows interface](#BKMK_WINUI)
--   [Using a command line](#BKMK_CMD)
 
 > [!NOTE]
 > You must be a member of the **Backup Operators** or **Administrators** group, at minimum, to complete these steps.
 
 <a id="BKMK_WINUI"></a>
-#### To change an MBR disk into a GPT disk using the Windows interface
+
+## Converting using the Windows interface
 
 1.  Back up or move the data on the basic MBR disk you want to convert into a GPT disk.
 
@@ -40,7 +37,10 @@ You cannot use the GPT partition style on removable media, or on cluster disks t
 3.  Right-click the MBR disk that you want to change into a GPT disk, and then click **Convert to GPT Disk**.
 
 <a id="BKMK_CMD"></a>
-#### To change an MBR disk into a GPT disk using a command line
+
+## Converting using a command line
+
+Use the following steps to convert an empty MBR disk to a GPT disk. There's also a MBR2GPT.EXE tool that you can use, but it's a little complicated - see [Convert MBR partition to GPT](https://docs.microsoft.com/windows/deployment/mbr-to-gpt) for more details.
 
 1.  Back up or move the data on the basic MBR disk you want to convert into a GPT disk.
 
@@ -54,8 +54,8 @@ You cannot use the GPT partition style on removable media, or on cluster disks t
 
 6.  At the **DISKPART** prompt, type `clean`.
 
-> [!NOTE]
-> Running the **clean** command will delete all partitions or volumes on the disk.
+    > [!NOTE]
+    > Running the **clean** command will delete all partitions or volumes on the disk.
 
 7.  At the **DISKPART** prompt, type `convert gpt`.
 
