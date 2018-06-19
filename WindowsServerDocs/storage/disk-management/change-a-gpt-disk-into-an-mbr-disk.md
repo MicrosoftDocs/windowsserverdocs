@@ -25,7 +25,7 @@ You can change a disk from a GPT to an MBR partition style as long as the disk i
 
 <a id="BKMK_WINUI"></a>
 
-## Using the Windows interface
+## Converting using the Windows interface
 
 1.  Back up or move all volumes on the basic GPT disk you want to convert into an MBR disk.
 
@@ -35,7 +35,7 @@ You can change a disk from a GPT to an MBR partition style as long as the disk i
 
 <a id="BKMK_CMD"></a>
 
-## Using a command line
+## Converting using a command line
 
 1.  Back up or move all volumes on the basic GPT disk you want to convert into an MBR disk.
 
