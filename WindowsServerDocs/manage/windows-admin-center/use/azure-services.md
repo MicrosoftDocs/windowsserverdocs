@@ -5,13 +5,13 @@ ms.technology: manage
 ms.topic: article
 author: haley-rowland
 ms.author: harowl
-ms.date: 05/23/2018
+ms.date: 06/18/2018
 ms.localizationpriority: high
 ms.prod: windows-server-threshold
 ---
 # Protect your Hyper-V Virtual Machines from Windows Admin Center with Azure Site Recovery
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, and Windows 10
+>Applies To: Windows Admin Center, Windows Admin Center Preview
 
 [Learn more about Azure integration with Windows Admin Center.](../plan/azure-integration-options.md)
 
@@ -31,7 +31,7 @@ Completing setup for the replication component alone is sufficient to protect yo
 ## Prerequisites and planning
 
 - The target servers hosting the VMs you want to protect must have Internet access to replicate to Azure.
-- [Connect your Windows Admin Center gateway to Azure](../configure/azure-integration.md#connect-your-gateway-to-azure).
+- [Connect your Windows Admin Center gateway to Azure](../configure/azure-integration.md#register-your-gateway-with-azure).
 - [Review the capacity planning tool to evaluate the requirements for successful replication and failover](https://docs.microsoft.com/azure/site-recovery/hyper-v-site-walkthrough-capacity).
 - Azure Site Recovery currently supports VMs running on Hyper-V running on Windows Server 2012 R2 and 2016.
 

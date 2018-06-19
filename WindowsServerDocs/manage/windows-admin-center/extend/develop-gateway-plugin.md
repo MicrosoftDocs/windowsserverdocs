@@ -5,14 +5,14 @@ ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
-ms.date: 05/23/2018
+ms.date: 06/18/2018
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---
 
 # Develop a gateway plugin
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10
+>Applies To: Windows Admin Center, Windows Admin Center Preview
 
 The gateway service exposes REST APIs for the UI to call and relays commands and scripts to be executed on the target. The gateway service can be extended by gateway plugins that support different protocols. Windows Admin Center is pre-packaged with two gateway plugins, one for executing PowerShell scripts and the other for WMI commands. If you need to communicate with the target through a protocol other than PowerShell or WMI, such as REST, you can build a gateway plugin for this. Gateway plugins will be loaded into a separate AppDomain from the existing gateway process, but use the same level of elevation for rights.
 

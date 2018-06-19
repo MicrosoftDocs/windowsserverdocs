@@ -5,14 +5,14 @@ ms.technology: manage
 ms.topic: article
 author: jasongerend
 ms.author: jgerend
-ms.date: 05/23/2018
+ms.date: 06/18/2018
 ms.localizationpriority: high
 ms.prod: windows-server-threshold
 ---
 
 # Windows Admin Center UI text and design style guide
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10
+>Applies To: Windows Admin Center, Windows Admin Center Preview
 
 This topic describes the general approach to writing user interface (UI) text for the Windows Admin Center, as well as some specific conventions and approaches we're taking.
 

@@ -5,13 +5,13 @@ ms.technology: extend
 ms.topic: article
 author: daniellee-msft
 ms.author: jol
-ms.date: 05/23/2018
+ms.date: 06/18/2018
 ms.localizationpriority: high
 ms.prod: windows-server-threshold
 ---
 # Extensions for Windows Admin Center
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
+>Applies To: Windows Admin Center, Windows Admin Center Preview
 
 Windows Admin Center is built as an extensible platform to enable partners and developers to leverage existing capabilities within Windows Admin Center, seamlessly integrate with other IT administration products and solutions, and provide additional value to customers. Each solution and tool in Windows Admin Center is built as an extension using the same extensibility features available to partners and developers, so you can build powerful tools just like the ones available in Windows Admin Center today.
 

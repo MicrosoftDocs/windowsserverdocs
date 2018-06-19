@@ -5,14 +5,14 @@ ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
-ms.date: 05/23/2018
+ms.date: 06/18/2018
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---
 
 # Develop a solution extension
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10
+>Applies To: Windows Admin Center, Windows Admin Center Preview
 
 Solution extensions primarily define a type of connection. Windows Admin Center includes four types of solution extensions by default, one each for Windows Server connections, Windows PC connections, failover cluster connections and hyper-converged cluster connections. When you click on a connection in the Windows Admin Center home screen, the solution extension for the connection's type is loaded and will attempt to connect to the target connection. If the connection is successful, the solution extension's UI will load and display the tool extensions for the solution in the left navigation pane.
 

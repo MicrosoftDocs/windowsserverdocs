@@ -5,13 +5,13 @@ ms.technology: extend
 ms.topic: article
 author: daniellee-msft
 ms.author: jol
-ms.date: 05/23/2018
+ms.date: 06/18/2018
 ms.localizationpriority: high
 ms.prod: windows-server-threshold
 ---
 # Understanding Windows Admin Center Extensions
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
+>Applies To: Windows Admin Center, Windows Admin Center Preview
 
 In case you’re not yet familiar with how Windows Admin Center works, let’s start with the high-level architecture. Windows Admin Center is comprised of two main components:
 

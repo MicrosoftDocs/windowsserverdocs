@@ -47,7 +47,7 @@ icacls <Directory> [/substitute <SidOld> <SidNew> [...]] [/restore <ACLfile> [/c
 |[/reset [/t] [/c] [/l] [/q]]|Replaces ACLs with default inherited ACLs for all matching files.|
 |[/grant[:r] \<Sid>:<Perm>[...]]|Grants specified user access rights. Permissions replace previously granted explicit permissions.</br>Without **:r**, permissions are added to any previously granted explicit permissions.|
 |[/deny \<Sid>:<Perm>[...]]|Explicitly denies specified user access rights. An explicit deny ACE is added for the stated permissions and the same permissions in any explicit grant are removed.|
-|[/remove[:g|:d]] \<Sid>[...]] [/t] [/c] [/l] [/q]|Removes all occurrences of the specified SID from the DACL.</br>**:g** removes all occurrences of granted rights to the specified SID.</br>**:d** removes all occurrences of denied rights to the specified SID.|
+|[/remove[:g\|:d]] \<Sid>[...]] [/t] [/c] [/l] [/q]|Removes all occurrences of the specified SID from the DACL.</br>**:g** removes all occurrences of granted rights to the specified SID.</br>**:d** removes all occurrences of denied rights to the specified SID.|
 |[/setintegritylevel [(CI)(OI)]\<Level>:<Policy>[...]]|Explicitly adds an integrity ACE to all matching files. *Level* is specified as:</br>-   **L**[ow]</br>-   **M**[edium]</br>-   **H**[igh]</br>Inheritance options for the integrity ACE may precede the level and are applied only to directories.|
 |[/substitute \<SidOld> <SidNew> [...]]|Replaces an existing SID (*SidOld*) with a new SID (*SidNew*). Requires the *Directory* parameter.|
 |/restore \<ACLfile> [/c] [/l] [/q]|Applies stored DACLs from *ACLfile* to files in the specified directory. Requires the *Directory* parameter.|
