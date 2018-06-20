@@ -7,7 +7,7 @@ author: JasonGerend
 ms.author: jgerend 
 ms.technology: storage-failover-clustering 
 ms.date: 04/25/2018
-ms.localizationpriority: low
+ms.localizationpriority: medium
 ---
 # Prestage cluster computer objects in Active Directory Domain Services
 

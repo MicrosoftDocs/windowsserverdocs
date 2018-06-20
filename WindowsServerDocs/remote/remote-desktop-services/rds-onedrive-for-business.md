@@ -6,7 +6,7 @@ ms.technology: remote-desktop-services
 ms.mktglfcycl: manage
 ms.sitesec: library
 author: lizap
-ms.localizationpriority: low
+ms.localizationpriority: medium
 ms.date: 02/23/2018
 ---
 # OneDrive for Business and VDI environments 

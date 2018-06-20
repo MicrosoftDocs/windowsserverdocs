@@ -7,7 +7,7 @@ author: JasonGerend
 ms.author: jgerend 
 ms.technology: storage-spaces
 ms.date: 05/18/2018
-ms.localizationpriority: low
+ms.localizationpriority: medium
 ---
 # Deploy Storage Spaces on a stand-alone server
 

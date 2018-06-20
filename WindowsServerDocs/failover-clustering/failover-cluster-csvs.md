@@ -7,7 +7,7 @@ author: JasonGerend
 ms.author: jgerend 
 ms.technology: storage-failover-clustering 
 ms.date: 04/05/2018
-ms.localizationpriority: low
+ms.localizationpriority: medium
 ---
 # Use Cluster Shared Volumes in a failover cluster
 
