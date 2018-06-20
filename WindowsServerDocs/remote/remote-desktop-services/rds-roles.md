@@ -21,7 +21,7 @@ The Remote Desktop Session Host (RD Session Host) holds the session-based apps a
 
 You can organize desktops and apps into one or more RD Session Host servers, called "collections." You can customize these collections for specific groups of users within each tenant. For example, you can create a collection where a specific user group can access specific apps, but anyone outside of the group you designated won't be able to access those apps.
 
-For small deployments, you can install applications directly onto the RD Session Host servers. For larger deployments, we recommend streaming applications to the RD Session Host from an App-V server to reduce maintenance costs.
+For small deployments, you can install applications directly onto the RD Session Host servers. For larger deployments, we recommend building a base image and provisioning virtual machines from that image.
 
 You can expand collections by adding RD Session Host server virtual machines to a collection farm with each RDSH virtual machine within a collection assigned to same availability set. This provides higher collection availability and increases scale to support more users or resource-heavy applications.
 
@@ -31,9 +31,9 @@ You can customize desktops even more by creating and uploading a virtual hard di
 
 For more information, see the following articles:
 
-* [Easier user data management with user profile disks in Windows Server 2012](https://cloudblogs.microsoft.com/enterprisemobility/2012/11/13/easier-user-data-management-with-user-profile-disks-in-windows-server-2012/)
-* [Getting started with App-V 5.0](https://docs.microsoft.com/microsoft-desktop-optimization-pack/appv-v5/getting-started-with-app-v-50--rtm)
+* [Remote Desktop Services - Secure data storage](rds-plan-secure-data-storage.md)
 * [Upload a generalized VHD and use it to create new VMs in Azure](https://docs.microsoft.com/azure/virtual-machines/windows/upload-generalized-managed?toc=%2Fazure%2Fvirtual-machines%2Fwindows%2Ftoc.json)
+* [Update RDSH collection (ARM template)](https://azure.microsoft.com/resources/templates/rds-update-rdsh-collection/)
 
 ## Remote Desktop Connection Broker
 
@@ -43,10 +43,11 @@ You'll need to install matching digital certificates on both the RD Connection B
 
 You can install the Windows Server 2016 RD Connection Broker on the same virtual machine as AD DS to reduce cost. If you need to scale out to more users, you can also add additional RD Connection Broker virtual machines in the same availability set to create an RD Connection Broker cluster.
 
-Before you can create an RD Connection Broker cluster, you must deploy an Azure SQL Database in the tenant's environment. The following two articles can help you learn how to create and deploy an Azure SQL Database:
+Before you can create an RD Connection Broker cluster, you must either deploy an Azure SQL Database in the tenant's environment or creat an SQL Server AlwaysOn Availability Group. The following two articles can help you learn how to create these:
 
 * To learn more about how to use Azure SQL to increase your Conection Broker's availability, see [Add the RD Connection Broker server to the deployment and configure high availability](rds-connection-broker-cluster.md).
 * To learn more about how to use a Microsoft SQL Server AlwaysOn Availability Group, see the [Desktop Hosting Reference Architecture](desktop-hosting-reference-architecture.md).
+* To learn more about creating an SQL Serve AlwaysOn Availability Group, see [Creation and configuration of availability groups (SQL Server)](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server?view=sql-server-2017).
 
 ## Remote Desktop Gateway
 
@@ -62,10 +63,11 @@ For more information, see the following articles:
 
 * [Add high availability to the RD Web and Gateway web front](rds-rdweb-gateway-ha.md)
 * [Remote Desktop Services - Access from anywhere](rds-plan-access-from-anywhere.md)
+* [Remote Desktop Services - Multi-factor authentication](rds-plan-mfa.md)
 
 ## Remote Desktop Web Access
 
-Remote Desktop Web Access (RD Web Access) lets users access remote desktops through a web portal. You can use the web portal to publish Windows desktops and applications to Windows and non-Windows client devices, and you can also selectively publish desktops or apps to specific users or groups.
+Remote Desktop Web Access (RD Web Access) lets users access desktops and applications through a web portal and launches them through the device’s native Microsoft Remote Desktop client application. You can use the web portal to publish Windows desktops and applications to Windows and non-Windows client devices, and you can also selectively publish desktops or apps to specific users or groups.
 
 RD Web Access needs Internet Information Services (IIS) to work properly. A Hypertext Transfer Protocol Secure (HTTPS) connection provides an encrypted communications channel between the clients and the RD Web server. The RD Web Access virtual machine must be accessible through a public IP address that allows inbound TCP connections to port 443 to allow the tenant's users to connect from the internet using the HTTPS communications transport protocol.
 
@@ -91,6 +93,5 @@ For more information, see the following articles:
 
 * [License your RDS deployment with client access licenses (CALs)](rds-client-access-license.md)
 * [Activate the Remote Desktop Services license server](rds-activate-license-server.md)
-* [**Set-RDLicenseConfiguration**](https://docs.microsoft.com/powershell/module/remotedesktop/Set-RDLicenseConfiguration?view=win10-ps)
 * [Track your Remote Desktop Services client access licenses (RDS CALs)](rds-track-cals.md)
 * [Microsoft Volume Licensing: licensing options for service providers](https://www.microsoft.com/en-us/Licensing/licensing-programs/spla-program.aspx)
