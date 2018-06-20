@@ -53,6 +53,9 @@ and that the version is 5.1 or higher.
 
 >If WMF is not installed, you can [download WMF 5.1](https://www.microsoft.com/en-us/download/details.aspx?id=54616).
 
+> [!NOTE]
+> Windows Admin Center does not function propertly using the default browser Internet Explorer. If you open the Admin Center using IE, you see just a blank screen. You need to use either Microsoft Edge or Google's Chrome to use the Admin Center at present.
+
 ## Deployment options
 
 <table>
