@@ -53,7 +53,7 @@ Invoke-InsightsCapability -Name "CPU capacity forecasting"
 ```
 
 >[!TIP]
->Though the performance impact of invoking the default capabilities is relatively modest compared to other machine learning models, it's recommended to schedule predictions during machine downtime, as running a capability can be an expensive operation.
+>To make sure invoking a capability doesn't conflict with critical operations on your machine, consider scheduling predictions during off-business hours.
 
 ## Retrieving capability results
 Once a capability has been invoked, the most recent results are visible using **Get-InsightsCapability** or **Get-InsightsCapabilityResult**. These cmdlets output the most recent **Status** and **Status Description** of each capability, which describe the result of each prediction. The **Status** and **Status Description** fields are further described in the [System Insights capability page](system-insights-capabilities.md). 
