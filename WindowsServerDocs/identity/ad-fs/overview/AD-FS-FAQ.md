@@ -84,6 +84,27 @@ You can enable and disable SSL 2.0 and 3.0 and TLS versions 1.0, 1.1, and 1.2 us
 
 To ensure your AD FS and WAP servers negotiate only TLS cipher suites that support ATP, you can disable all cipher suites that are not in the [list of ATP compliant cipher suites](https://developer.apple.com/library/prerelease/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW57).  To do this, use the [Windows TLS PowerShell cmdlets](https://technet.microsoft.com/itpro/powershell/windows/tls/index). 
 
+## Developer
+
+### When generating an id_token with ADFS for a user authenticated against AD, how is the “sub” claim generated in the id_token?
+The value of “sub” claim is the hash of client ID + anchor claim value.
+
+### What is the lifetime of the refresh token/access token when the user logs in via a remote claims provider trust over WS-Fed/SAML-P? 
+The lifetime of refresh token will be the lifetime of the token that ADFS got from remote claims provider trust. The lifetime of the access token will be the token lifetime of the relying party for which access token is being issued.
+
+### I need to return profile and email scopes as well in addition to the OpenId scope. Can I obtain additional information using scopes? How to do it in AD FS?
+You can use customized id_token to add relevant information in the id_token itself. For more, read here.
+
+### How to issue json blobs inside JWT tokens?
+A special ValueType("http://www.w3.org/2001/XMLSchema#json" ) and escape character(\x22) for this was added in AD FS 2016. Please the sample below for the issuance rule and also the final output from the access token.
+
+Sample issuance rule:
+
+	=> issue(Type = "array_in_json", ValueType = "http://www.w3.org/2001/XMLSchema#json", Value = "{\x22Items\x22:[{\x22Name\x22:\x22Apple\x22,\x22Price\x22:12.3},{\x22Name\x22:\x22Grape\x22,\x22Price\x22:3.21}],\x22Date\x22:\x2221/11/2010\x22}");
+
+Claim issued in Access token:
+
+	"array_in_json":{"Items":[{"Name":"Apple","Price":12.3},{"Name":"Grape","Price":3.21}],"Date":"21/11/2010"}
 
 ## Operations
 
@@ -195,3 +216,37 @@ AD FS does not support HEAD requests.  Applications should not be using HEAD req
 
 ### Why am I not seeing a refresh token when I am logging in with a remote IdP?
 A refresh token is not issued if the token issued by IdP has a validty of less than 1 hour. To ensure a refresh token is issued, increase the validity of token issued by the IdP to more than 1 hour.
+
+### Do we have any way to change RP token encryption algorithm?
+By default the RP token encryption is set to AES256 and it cannot be changed to any other value.
+
+### On a mixed-mode farm, I get error when trying to set the new SSL certificate using Set-AdfsSslCertificate -Thumbprint. How can I update the SSL certificate in a mixed mode AD FS farm?
+On WAP servers you can still use Set-WebApplicationProxySslCertificate. On the ADFS servers, you need to use netsh. Follow the steps as given below:
+
+1. Select subset of ADFS 2016 servers for maintenance (e.g. remove from load balancer)
+2. On the servers selected in #1, import the new certificate via MMC
+3. Delete the existing certificates
+
+    a. netsh http delete sslcert hostnameport=fs.contoso.com:443
+    b. netsh http delete sslcert hostnameport=localhost:443
+    c. netsh http delete sslcert hostnameport=fs.contoso.com:49443
+
+4.  Add the new cert
+
+    a. netsh http add sslcert hostnameport=fs.contoso.com:443 certhash=CERTTHUMBPRINT appid={5d89a20c-beab-4389-9447-324788eb944a} certstorename=MY sslctlstorename=AdfsTrustedDevices
+    
+    b. netsh http add sslcert hostnameport=localhost:443 certhash=CERTTHUMBPRINT appid={5d89a20c-beab-4389-9447-324788eb944a} certstorename=MY sslctlstorename=AdfsTrustedDevices
+    
+    c. netsh http add sslcert hostnameport=fs.contoso.com:49443 certhash=CERTTHUMBPRINT appid={5d89a20c-beab-4389-9447-324788eb944a} certstorename=MY sslctlstorename=AdfsTrustedDevices
+
+5. Restart ADFS service on the selected server
+6. Remove subset of WAP servers for maintenance
+7. On the selected WAP servers, import the new certificate via MMC
+8. Set the new cert on WAP using cmdlet
+
+    a. Set-WebApplicationProxySslCertificate -Thumbprint " CERTTHUMBPRINT"
+
+9. Restart service on the selected WAP servers
+10. Put the selected WAP and AD FS servers back in production environment. 
+    
+Perform the update on the rest of AD FS and WAP servers in similar fashion. 
