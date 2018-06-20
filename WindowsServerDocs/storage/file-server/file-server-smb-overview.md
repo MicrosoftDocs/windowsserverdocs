@@ -7,7 +7,7 @@ author: JasonGerend
 ms.author: jgerend 
 ms.technology: storage 
 ms.date: 04/05/2018
-ms.localizationpriority: low
+ms.localizationpriority: medium
 ---
 # Overview of file sharing using the SMB 3 protocol in Windows Server
 
