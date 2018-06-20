@@ -43,7 +43,7 @@ Note that by default, System Insights storage and volume capacity forecasting pr
 
 ## How expensive is it to run the default capabilities?
 
-Each default capability is relatively inexpensive to run. Each capability will take longer to run as you collect more data, but they typically should complete in a just a few seconds. 
+Each default capability is inexpensive to run. Each capability will take longer to run as you collect more data, but they typically should complete in a just a few seconds. 
 
 ## See also
 

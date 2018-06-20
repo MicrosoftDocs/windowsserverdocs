@@ -20,7 +20,7 @@ After you configure a computer with the prerequisite applications and certificat
   
 Membership in **Administrators**, or equivalent, on the local computer is the minimum required to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](https://go.microsoft.com/fwlink/?LinkId=83477).   
   
-### To install the Federation Service Proxy role service  
+### To install the Federation Service Proxy role service using the Server Manager
   
 1.  On the **Start** screen, type**Server Manager**, and then press ENTER.  
   
@@ -32,24 +32,27 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
   
 5.  On the **Select destination server** page, click **Select a server from the server pool**, verify that the target computer is highlighted, and then click **Next**.  
   
-6.  On the **Select server roles** page, click **Active Directory Federation Services**, and then click next.  
+6.  On the **Select server roles** page, click **Remote Access**, and then click next.  
   
     > [!NOTE]  
     > If you are prompted to install additional .NET Framework or Windows Process Activation Service features, click **Add Features** to install them.  
   
-7.  On the **Select features** page, verify that the features are set, and then click **Next**.  
-  
-8.  On the **Active Directory Federation Service \(AD FS\)** page, click **Next**.  
-  
-9. On the **Select role services** page, select the **Federation Service Proxy** check box, and then click **Next**.  
-  
-10. On the **Web Server Role \(IIS\)** page, click **Next**.  
-  
-11. On the **Select role services** page, click **Next**.  
-  
-12. After you verify the information on the **Confirm installation selections** page, select the **Restart the destination server automatically if required** check box, and then click **Install**.  
+7. On the **Select role services** page, select the **Federation Service Proxy** check box, and then click **Next**.  
+
+8. After you verify the information on the **Confirm installation selections** page, select the **Restart the destination server automatically if required** check box, and then click **Install**.  
   
 13. On the **Installation progress** page, verify that everything installed correctly, and then click **Close**.  
+
+### To install the Federation Service Proxy role service using PowerShell
+
+1. Open Windows PowerShell (Run as Administrator)
+
+2. Type the following command and press **Enter**:
+
+        Install-WindowsFeature Web-Application-Proxy -IncludeManagementTools
+
+
+
   
 ## Additional references  
 [Checklist: Setting Up a Federation Server](Checklist--Setting-Up-a-Federation-Server.md)  
