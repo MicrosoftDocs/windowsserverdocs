@@ -201,6 +201,7 @@ Here are some additional tips about using generation 2 virtual machines.
 - We don't support or recommend that you create a VHDX file that is bootable to both generation 1 and generation 2 virtual machines.  
 - The virtual machine generation is a property of the virtual machine, not a property of the virtual hard disk. So you can't tell if a VHDX file was created by a generation 1 or a generation 2 virtual machine.  
 - A VHDX file created with a generation 2 virtual machine can be attached to the IDE controller or the SCSI controller of a generation 1 virtual machine. However, if this is a bootable VHDX file, the generation 1 virtual machine won't boot.
+OS vhd or vhdx created in generation 1 vms can not be run as os disk in generation 2 vms.
 
 ### Use IPv6 instead of IPv4
 By default, generation 2 virtual machines use IPv4. To use IPv6 instead, run the [Set-VMFirmware](https://technet.microsoft.com/library/dn464287.aspx) Windows PowerShell cmdlet. For example, the following command sets the preferred protocol to IPv6 for a virtual machine named TestVM:  
