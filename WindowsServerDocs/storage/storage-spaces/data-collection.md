@@ -108,6 +108,40 @@ To save results to a specified folder:
 Get-SDDCDiagnosticInfo -WriteToPath D:\Folder 
 ```
 
+Here is an example of how this looks on a real cluster:
+``` PowerShell
+New-Item -Name SDDCDiagTemp -Path d:\ -ItemType Directory -Force
+Get-SddcDiagnosticInfo -ClusterName S2D-Cluster -WriteToPath d:\SDDCDiagTemp
+```
+As you can see, script will also do validation of current cluster state
+
+![data collection powershell screenshot](/media/data-collection/CollectData.png)
+
+As you can see, all data are being written to SDDCDiagTemp folder
+
+![](/media/data-collection/CollectDataFolder.png)
+
+After script will finish, it will create ZIP in your users directory
+
+![](/media/data-collection/CollectDataResult.png)
+
+Let's generate a report into a text file
+
+```PowerShell
+#find the latest diagnostic zip in UserProfile
+    $DiagZip=(get-childitem $env:USERPROFILE | where Name -like HealthTest*.zip)
+    $LatestDiagPath=($DiagZip | sort lastwritetime | select -First 1).FullName
+#expand to temp directory
+    New-Item -Name SDDCDiagTemp -Path d:\ -ItemType Directory -Force
+    Expand-Archive -Path $LatestDiagPath -DestinationPath D:\SDDCDiagTemp -Force
+#generate report and save to text file
+    $report=Show-SddcDiagnosticReport -Path D:\SDDCDiagTemp
+    $report | out-file d:\SDDCReport.txt
+    
+```
+
+For reference, here is a link to the [sample report](https://github.com/Microsoft/WSLab/blob/dev/Scenarios/S2D%20Tools/Get-SDDCDiagnosticInfo/SDDCReport.txt) and [sample zip](https://github.com/Microsoft/WSLab/blob/dev/Scenarios/S2D%20Tools/Get-SDDCDiagnosticInfo/HealthTest-S2D-Cluster-20180522-1546.ZIP).
+
 ## Get-SDDCDiagnosticInfo output
 
 The following are the files included in the zipped output of Get-SDDCDiagnosticInfo.
