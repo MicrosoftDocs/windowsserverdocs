@@ -21,13 +21,22 @@ This article will tell you more about the desktop hosting service's components.
 
 ## Tenant environment
 
+As described in [Remote Desktop service roles](rds-roles.md), each role plays a distinct part in the tenant envrionment.
+
 The provider's desktop hosting service is implemented as a set of isolated tenant environments. Each tenant's environment consists of a storage container, a set of virtual machines, and a combination of Azure services, all communicating over an isolated virtual network. Each virtual machine contains one or more of the components that make up the tenant's hosted desktop environment. The following subsections describe the components that make up each tenant's hosted desktop environment.
 
-## Azure Active Directory Domain Services
+## Active Directory Domain Services
 
-The tenant's network includes Azure Active Directory Domain Services (AD DS) for the tenant's forest and domain. Using Azure AD DS allows the tenant to manage groups and users in their Azure AD tenant, with all changes syncing back to the domain on a recurring basis.
+The tenant's network includes Active Directory Domain Services (AD DS) for the tenant's forest and domain. Using AD DS allows the tenant to manage groups and users in their AD tenant, with all changes syncing back to the domain on a recurring basis.
 
 The tenant's forest does not require any trust relationship with the provider's management forest. A domain administrator account may be set up in the tenant's domain to allow the provider's technical personnel to perform administrative tasks in the tenant's environment (such as monitoring system status and applying software updates) and to assist with troubleshooting and configuration.
+
+There are multiple ways to deploy AD DS:
+
+1. Enable Azure Active Directory Domain Services in the tenant’s virtual networking environment. This will create a managed AD DS instance for the tenant based on the users and groups that exist in Azure AD.
+2. Set up a stand-alone AD DS server in the tenant’s virtual networking environment. This gives you all of the full control of the AD DS instance, running on virtual machines.
+3. Create a site-to-site VPN connection to an AD DS server located on the tenant’s premises. This allows the tenant to connect to their existing AD DS instance and reduce duplication of users, groups, organizational units, etc.
+
 
 Some alternatives to deploying Azure AD DS are:
 
@@ -40,17 +49,18 @@ For more information, see the following articles:
 * [Desktop Hosting Reference Architecture Guide for Windows Server 2012 R2](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal)
 * [Create a site-to-site connection in the Azure portal](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal)
 
-## Azure SQL Database
+## SQL Database
 
-Hosters can use Azure SQL Database to extend their Remote Desktop Services deployment without deploying or maintaining a full SQL Server Always-On cluster. The Azure SQL Database is used by the Remote Desktop Connection Broker to store deployment information, such as the mapping of current users' connections to end-host servers. Like other Azure services, Azure SQL DB follows a consumption model, ideal for any size deployment.
+A highly-available SQL database is used by the Remote Desktop Connection Broker to store deployment information, such as the mapping of current users’ connections to the host servers.
 
-For information, see [What is the Azure SQL Database service?](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview)
+Hosters can use SQL Database to extend their Remote Desktop Services deployment without deploying or maintaining a full SQL Server Always-On cluster. The SQL Database is used by the Remote Desktop Connection Broker to store deployment information, such as the mapping of current users' connections to end-host servers. Like other Azure services, SQL DB follows a consumption model, ideal for any size deployment.
 
-## Azure Active Directory Application Proxy
+There are multiple ways to deploy an SQL database:
 
-Azure Active Directory (AD) Application Proxy is a service provided in paid SKUs of Azure AD that allow users to connect to internal applications through Azure's own reverse-proxy service. This allows the RD Web and RD Gateway endpoints to be hidden inside of the virtual network, eliminating the need to be exposed to the internet by a public IP address. Hosters can use Azure AD Application Proxy to condense the number of virtual machines in the tenant's environment while still maintaining a full deployment. Azure AD Application Proxy also enables many of the benefits that Azure AD provides, such as conditional access and multi-factor authentication.
+1. Create an Azure SQL Database in the tenant’s environment: This provides the functionality of a redundant SQL database without having to manage the servers themselves.
+2. Create an SQL Server AlwaysOn cluster.
 
-For more information, see [Get started with Application Proxy and install the connector](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-enable).
+For more information, see [What is the Azure SQL Database service?](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview)
 
 ## File server
 
