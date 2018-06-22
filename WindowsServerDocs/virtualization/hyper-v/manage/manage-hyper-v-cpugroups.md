@@ -26,7 +26,8 @@ This article describes Hyper-V resource and isolation controls for virtual machi
 
 CPU groups are managed through the Hyper-V Host Compute Service, or HCS. A great description of the HCS, its genesis, links to the HCS APIs, and more is available on the Microsoft Virtualization team’s blog in the posting [Introducing the Host Compute Service (HCS)](https://blogs.technet.microsoft.com/virtualization/2017/01/27/introducing-the-host-compute-service-hcs/).
 
->[!NOTE] Only the HCS may be used to create and manage CPU groups; the Hyper-V Manager applet, WMI and PowerShell management interfaces don’t support CPU groups.
+>[!NOTE] 
+>Only the HCS may be used to create and manage CPU groups; the Hyper-V Manager applet, WMI and PowerShell management interfaces don’t support CPU groups.
 
 Microsoft provides a command line utility, cpugroups.exe, on the [Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=865968) which uses the HCS interface to manage CPU groups.  This utility can also display the CPU topology of a host.
 
@@ -109,15 +110,16 @@ This can be accomplished using a combination of the “minroot” configuration,
 The virtualization host can be configured to restrict the host partition to specific LPs, with one or more CPU groups affinitized to the remaining LPs.
 In this manner, the root and guest partitions can run on dedicated CPU resources, and completely isolated, with no CPU sharing.
 
-For more information about the "minroot" configuration, see [Hyper-V Host CPU Resource Management](https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/manage/manage-hyper-v-minroot-2016).
+For more information about the "minroot" configuration, see [Hyper-V Host CPU Resource Management](https://docs.microsoft.com/windows-server/virtualization/hyper-v/manage/manage-hyper-v-minroot-2016).
 
 ## Using the CpuGroups Tool
 
 Let’s look at some examples of how to use the CpuGroups tool.
 
->[!NOTE] Command line parameters for the CpuGroups tool are passed using only spaces as delimiters. No ‘/’ or ‘-‘ characters should proceed the desired command line switch.
+>[!NOTE] 
+>Command line parameters for the CpuGroups tool are passed using only spaces as delimiters. No ‘/’ or ‘-‘ characters should proceed the desired command line switch.
 
-### Discovering the CPU Toplogy
+### Discovering the CPU Topology
 
 Executing CpuGroups with the GetCpuTopology returns information about the current system, as shown below, including the LP Index, the NUMA node to which the LP belongs, the Package and Core IDs, and the ROOT VP index.
 
