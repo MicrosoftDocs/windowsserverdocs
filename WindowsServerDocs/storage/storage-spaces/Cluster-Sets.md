@@ -27,7 +27,7 @@ Cluster Sets technology is developed to meet specific customer requests operatin
 - Benefit from [Azure-like Fault Domains and Availability Sets](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/manage-availability) across clusters in initial virtual machine placement and subsequent virtual machine migration
 - Mix-and-match different generations of CPU hardware into the same Cluster Set fabric, even while keeping individual fault domains homogenous for maximum efficiency.  Please note that the recommendation of same hardware is still present within each individual Cluster as well as the entire Cluster Set.
 
-From a high level view, thsi is what Cluster Sets can look like.
+From a high level view, this is what Cluster Sets can look like.
 
 ![Cluster Sets Solution View](media\Cluster-Sets-Overview\Cluster-Sets-Solution-View.png)
 
