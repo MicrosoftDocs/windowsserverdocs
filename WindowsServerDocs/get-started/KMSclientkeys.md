@@ -6,7 +6,7 @@ ms.mktglfcycl: manage
 ms.sitesec: library
 author: jaimeo
 ms.localizationpriority: high
-ms.date: 06/15/2018
+ms.date: 06/25/2018
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 
@@ -49,8 +49,8 @@ prompt on the client, type **slmgr /ipk \<setup key\>** and then press **Enter**
 
 | Operating system edition       | KMS Client Setup Key          |
 |--------------------------------|-------------------------------|
-| Windows Server Datacenter | TXN8-JFHJM-4WC78-MPCBR-9W4KR  | 
-| Windows Server Standard   | 2HXDN-KRXHB-GPYC7-YCKFJ-7FVDG  |
+| Windows Server Datacenter | 2HXDN-KRXHB-GPYC7-YCKFJ-7FVDG  | 
+| Windows Server Standard   | PTXN8-JFHJM-4WC78-MPCBR-9W4KR  |
 
 ## Windows 10, version 1803
 
