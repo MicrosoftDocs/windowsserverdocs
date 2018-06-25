@@ -5,7 +5,7 @@ ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: johnmarlin-msft
-ms.date: 06/08/2018
+ms.date: 06/25/2018
 description: This article describes the Cluster Sets scenario
 ms.localizationpriority: medium
 ---
@@ -13,7 +13,7 @@ ms.localizationpriority: medium
 # Cluster Sets
 > Applies To: Windows Server Insider Preview build 17650 and later
 
-“Cluster Sets” is the new cloud scale-out technology in this Preview release that increases cluster node count in a single Software Defined Data Center (SDDC) cloud by orders of magnitude. A Cluster Set is a loosely-coupled grouping of multiple Failover Clusters: compute, storage or hyper-converged. Cluster Sets technology enables virtual machine fluidity across member clusters within a Cluster Set and a unified storage namespace across the Cluster Set in support of virtual machine fluidity. 
+Cluster Sets is the new cloud scale-out technology in this preview release that increases cluster node count in a single Software Defined Data Center (SDDC) cloud by orders of magnitude. A Cluster Set is a loosely-coupled grouping of multiple Failover Clusters: compute, storage or hyper-converged. Cluster Sets technology enables virtual machine fluidity across member clusters within a Cluster Set and a unified storage namespace across the Cluster Set in support of virtual machine fluidity. 
 
 While preserving existing Failover Cluster management experiences on member clusters, a Cluster Set instance additionally offers key use cases around lifecycle management of a Cluster Set at the aggregate. This Windows Server Preview Scenario Evaluation Guide provides you the necessary background information along with step-by-step instructions to evaluate Cluster Sets technology using PowerShell. 
 
@@ -24,7 +24,7 @@ Cluster Sets technology is developed to meet specific customer requests operatin
 - Significantly increase the supported SDDC cloud scale for running highly avaialble virtual machines by combining multiple smaller clusters into a single large fabric, even while keeping the software fault boundary to a single cluster
 - Manage entire Failover Cluster lifecycle including onboarding and retiring clusters, without impacting tenant virtual machine availability, via fluidly migrating virtual machines across this large fabric
 - Easily change the compute-to-storage ratio in your hyper-converged I
-- Benefit from [Azure-like Fault Domains and Availability Sets](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/manage-availability) across clusters in initial virtual machine placement and subsequent virtual machine migration
+- Benefit from [Azure-like Fault Domains and Availability Sets](https://docs.microsoft.com/azure/virtual-machines/windows/manage-availability) across clusters in initial virtual machine placement and subsequent virtual machine migration
 - Mix-and-match different generations of CPU hardware into the same Cluster Set fabric, even while keeping individual fault domains homogenous for maximum efficiency.  Please note that the recommendation of same hardware is still present within each individual Cluster as well as the entire Cluster Set.
 
 From a high level view, this is what Cluster Sets can look like.
