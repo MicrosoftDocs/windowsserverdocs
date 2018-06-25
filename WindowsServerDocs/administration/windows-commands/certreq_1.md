@@ -1,5 +1,5 @@
-﻿---
-title: certreq_1
+---
+title: certreq
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -15,9 +15,9 @@ manager: dongill
 ms.date: 10/16/2017
 ---
 
-# certreq_1
+# certreq
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Certreq can be used to request certificates from a certification authority (CA), to retrieve a response to a previous request from a CA, to create a new request from an .inf file, to accept and install a response to a request, to construct a cross-certification or qualified subordination request from an existing CA certificate or request, and to sign a cross-certification or qualified subordination request.
 
@@ -201,7 +201,9 @@ This section is optional.
 Return to [Contents](#BKMK_Contents)
 
 > [!NOTE]
-> SubjectNameFlags allows the INF file to specify which Subject and SubjectAltName extension fields should be auto-populated by certreq based on the current user or current machine properties: DNS name, UPN, and so on. Using the literal “template�? means the template name flags are used instead. This allows a single INF file to be used in multiple contexts to generate requests with context-specific subject information.</br>> X500NameFlags specifies the flags to be passed directly to CertStrToName API when the Subject INF keys value is converted to an ASN.1 encoded Distinguished Name.
+> SubjectNameFlags allows the INF file to specify which Subject and SubjectAltName extension fields should be auto-populated by certreq based on the current user or current machine properties: DNS name, UPN, and so on. Using the literal "template" means the template name flags are used instead. This allows a single INF file to be used in multiple contexts to generate requests with context-specific subject information.
+>
+> X500NameFlags specifies the flags to be passed directly to CertStrToName API when the Subject INF keys value is converted to an ASN.1 encoded Distinguished Name.
 
 To request a certificate based using certreq -new use the steps from the example below:
 
@@ -218,7 +220,7 @@ KeySpec = 1
 KeyUsage = 0xf0 
 MachineKeySet = TRUE 
 [RequestAttributes]
-CertificateTemplate=�?WebServer�?
+CertificateTemplate="WebServer"
 [Extensions] 
 OID = 1.3.6.1.5.5.7.3.1 
 OID = 1.3.6.1.5.5.7.3.2  

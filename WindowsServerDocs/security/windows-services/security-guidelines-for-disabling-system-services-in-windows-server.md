@@ -63,7 +63,7 @@ For all system services listed in this document, the two tables that follow offe
 |---|---|
 |**Service description**|	The service's description, from sc.exe qdescription.|
 |**Name** |Key (internal) name of the service|
-|**Installation** |Always installed: Service is on Server Core and Server with Desktop Experience  <br /> Only on Datacenter Edition: Service is on Server 2016 with Desktop Experience, but is ***not*** on Server Core |
+|**Installation** |Always installed: Service is on Server Core and Server with Desktop Experience  <br /> Only with Desktop Experience: Service is on Windows Server 2016 with Desktop Experience, but is ***not*** on Server Core |
 |**StartType**	|Service start type on Windows Server 2016|
 |**Recommendation**	|Microsoft recommendation/advice about disabling this service on Windows Server 2016 in a typical, well-managed enterprise deployment and where the server is not being used as an end-user desktop replacement.|
 |**Comments** |Additional explanation|
@@ -91,7 +91,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|
 |	**Service description**	|	Provides User Account Control validation for the installation of ActiveX controls from the Internet and enables management of ActiveX control installation based on Group Policy settings. This service is started on demand and if disabled the installation of ActiveX controls will behave according to default browser settings.	|
 |	**Service name**	|	AxInstSV	|
-|	**Installation**	|	Only on Datacenter Edition	|
+|	**Installation**	|	Only with Desktop Experience	|
 |	**StartType**	|	Manual	|
 |	**Recommendation**	|	OK to disable	|
 |	**Comments**	|	OK to disable if feature not needed	|
@@ -104,7 +104,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|
 |	**Service description**	|	Routes AllJoyn messages for the local AllJoyn clients. If this service is stopped the AllJoyn clients that do not have their own bundled routers will be unable to run.	|
 |	**Service name**	|	AJRouter	|
-|	**Installation**	|	Only on Datacenter Edition	|
+|	**Installation**	|	Only with Desktop Experience	|
 |	**StartType**	|	Manual	|
 |	**Recommendation**	| No guidance		|
 |	**Comments**	|		|
@@ -117,7 +117,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|
 **Service description**	|	Gets apps ready for use the first time a user signs in to this PC and when adding new apps.
 **Service name**	|	AppReadiness
-**Installation**	|	Only on Datacenter Edition
+**Installation**	|	Only with Desktop Experience
 **StartType**	|	Manual
 **Recommendation**	|	Do not disable
 **Comments**	|	
@@ -143,7 +143,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|	
 |	**Service description**	|	Facilitates the running of interactive applications with additional administrative privileges.  If this service is stopped, users will be unable to launch applications with the additional administrative privileges they may require to perform desired user tasks.
 |	**Service name**	|	Appinfo
-|	**Installation**	|	Only on Datacenter Edition
+|	**Installation**	|	Only with Desktop Experience
 |	**StartType**	|	Manual
 |	**Recommendation**	| No guidance	
 |	**Comments**	|	Supports UAC same-desktop elevation
@@ -156,7 +156,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|			
 |	**Service description**	|	Provides support for third-party protocol plug-ins for Internet Connection Sharing
 |	**Service name**	|	ALG
-|	**Installation**	|	Only on Datacenter Edition
+|	**Installation**	|	Only with Desktop Experience
 |	**StartType**	|	Manual
 |	**Recommendation**	|No guidance	
 |	**Comments**	|	
@@ -195,7 +195,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|			
 |	**Service description**	|	Automatically sets the system time zone.
 |	**Service name**	|	tzautoupdate
-|	**Installation**	|	Only on Datacenter Edition
+|	**Installation**	|	Only with Desktop Experience
 |	**StartType**	|	Disabled
 |	**Recommendation**	|	Already disabled
 |	**Comments**	|	
@@ -222,7 +222,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|	
 |	**Service description**	|	Windows infrastructure service that controls which background tasks can run on the system.
 |	**Service name**	|	BrokerInfrastructure
-|	**Installation**	|	Only on Datacenter Edition
+|	**Installation**	|	Only with Desktop Experience
 |	**StartType**	|	Automatic
 |	**Recommendation**	| No guidance	
 |	**Comments**	|	
@@ -248,7 +248,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|	
 |	**Service description**	|	The Bluetooth service supports discovery and association of remote Bluetooth devices.  Stopping or disabling this service may cause already installed Bluetooth devices to fail to operate properly and prevent new devices from being discovered or associated.
 |	**Service name**	|	bthserv
-|	**Installation**	|	Only on Datacenter Edition
+|	**Installation**	|	Only with Desktop Experience
 |	**StartType**	|	Manual
 |	**Recommendation**	|	OK to disable
 |	**Comments**	|	OK to disable if not used. Another disabling mechanism: https://technet.microsoft.com/en-us/library/dd252791.aspx
@@ -262,7 +262,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|	
 |	**Service description**	|	This user service is used for Connected Devices Platform scenarios
 |	**Service name**	|	CDPUserSvc
-|	**Installation**	|	Only on Datacenter Edition
+|	**Installation**	|	Only with Desktop Experience
 |	**StartType**	|	Automatic
 |	**Recommendation**	|	OK to disable
 |	**Comments**	|	User service template
@@ -354,7 +354,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|		
 |	**Service description**	|	This service is used for Connected Devices and Universal Glass scenarios
 |	**Service name**	|	CDPSvc
-|	**Installation**	|	Only on Datacenter Edition
+|	**Installation**	|	Only with Desktop Experience
 |	**StartType**	|	Automatic
 |	**Recommendation**	| No guidance	
 |	**Comments**	|	
@@ -380,7 +380,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|		
 |	**Service description**	|	Indexes contact data for fast contact searching. If you stop or disable this service, contacts might be missing from your search results.
 |	**Service name**	|	PimIndexMaintenanceSvc
-|	**Installation**	|	Only on Datacenter Edition
+|	**Installation**	|	Only with Desktop Experience
 |	**StartType**	|	Manual
 |	**Recommendation**	|	OK to disable
 |	**Comments**	|	User service template
@@ -432,7 +432,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|		
 |	**Service description**	|	Provides data brokering between applications.
 |	**Service name**	|	DsSvc
-|	**Installation**	|	Only on Datacenter Edition
+|	**Installation**	|	Only with Desktop Experience
 |	**StartType**	|	Manual
 |	**Recommendation**	| No guidance	
 |	**Comments**	|	
@@ -445,7 +445,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|		
 |	**Service description**	|	The DCP (Data Collection and Publishing) service supports first-party apps to upload data to cloud.
 |	**Service name**	|	DcpSvc
-|	**Installation**	|	Only on Datacenter Edition
+|	**Installation**	|	Only with Desktop Experience
 |	**StartType**	|	Manual
 |	**Recommendation**	| No guidance	
 |	**Comments**	|	
@@ -471,7 +471,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|		
 |	**Service description**	|	Enables pairing between the system and wired or wireless devices.
 |	**Service name**	|	DeviceAssociationService
-|	**Installation**	|	Only on Datacenter Edition
+|	**Installation**	|	Only with Desktop Experience
 |	**StartType**	|	Manual
 |	**Recommendation**	| No guidance	
 |	**Comments**	|	
@@ -497,7 +497,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|		
 |	**Service description**	|	Performs Device Enrollment Activities for Device Management
 |	**Service name**	|	DmEnrollmentSvc
-|	**Installation**	|	Only on Datacenter Edition
+|	**Installation**	|	Only with Desktop Experience
 |	**StartType**	|	Manual
 |	**Recommendation**	| No guidance	
 |	**Comments**	|	
@@ -510,7 +510,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|		
 |	**Service description**	|	Enables the detection, download and installation of device-related software. If this service is disabled, devices may be configured with outdated software, and may not work correctly.
 |	**Service name**	|	DsmSvc
-|	**Installation**	|	Only on Datacenter Edition
+|	**Installation**	|	Only with Desktop Experience
 |	**StartType**	|	Manual
 |	**Recommendation**	| No guidance	
 |	**Comments**	|	
@@ -523,7 +523,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|			
 |	**Service description**	|	Enables apps to discover devices with a backgroud task
 |	**Service name**	|	DevQueryBroker
-|	**Installation**	|	Only on Datacenter Edition
+|	**Installation**	|	Only with Desktop Experience
 |	**StartType**	|	Manual
 |	**Recommendation**	| No guidance	
 |	**Comments**	|	
@@ -588,7 +588,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|	
 |	**Service description**	|	Maintains links between NTFS files within a computer or across computers in a network.
 |	**Service name**	|	TrkWks
-|	**Installation**	|	Only on Datacenter Edition
+|	**Installation**	|	Only with Desktop Experience
 |	**StartType**	|	Automatic
 |	**Recommendation**	| No guidance	
 |	**Comments**	|	
@@ -614,7 +614,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|		
 |	**Service description**	|	WAP Push Message Routing Service
 |	**Service name**	|	dmwappushservice
-|	**Installation**	|	Only on Datacenter Edition
+|	**Installation**	|	Only with Desktop Experience
 |	**StartType**	|	Manual
 |	**Recommendation**	|	OK to disable
 |	**Comments**	|	Service required on client devices for Intune, MDM and similar management technologies, and for Unified Write Filter. Not needed for Server.
@@ -640,7 +640,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|	
 |	**Service description**	|	Windows service for application access to downloaded maps. This service is started on-demand by application accessing downloaded maps. Disabling this service will prevent apps from accessing maps.
 |	**Service name**	|	MapsBroker
-|	**Installation**	|	Only on Datacenter Edition
+|	**Installation**	|	Only with Desktop Experience
 |	**StartType**	|	Automatic
 |	**Recommendation**	|	OK to disable
 |	**Comments**	|	Disabling breaks apps that rely on the service; OK to disable if apps not relying on it
@@ -653,7 +653,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|		
 |	**Service description**	|	The Embedded Mode service enables scenarios related to Background Applications.  Disabling this service will prevent Background Applications from being activated.
 |	**Service name**	|	embeddedmode
-|	**Installation**	|	Only on Datacenter Edition
+|	**Installation**	|	Only with Desktop Experience
 |	**StartType**	|	Manual
 |	**Recommendation**	| No guidance	
 |	**Comments**	|	
@@ -679,7 +679,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|		
 |	**Service description**	|	Enables enterprise application management.
 |	**Service name**	|	EntAppSvc
-|	**Installation**	|	Only on Datacenter Edition
+|	**Installation**	|	Only with Desktop Experience
 |	**StartType**	|	Manual
 |	**Recommendation**	| No guidance	
 |	**Comments**	|	
@@ -718,7 +718,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|		
 |	**Service description**	|	Publishes this computer and resources attached to this computer so they can be discovered over the network.  If this service is stopped, network resources will no longer be published and they will not be discovered by other computers on the network.
 |	**Service name**	|	FDResPub
-|	**Installation**	|	Only on Datacenter Edition
+|	**Installation**	|	Only with Desktop Experience
 |	**StartType**	|	Manual
 |	**Recommendation**	| No guidance	
 |	**Comments**	|	
@@ -731,7 +731,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|		
 |	**Service description**	|	This service monitors the current location of the system and manages geofences (a geographical location with associated events).  If you turn off this service, applications will be unable to use or receive notifications for geolocation or geofences.
 |	**Service name**	|	lfsvc
-|	**Installation**	|	Only on Datacenter Edition
+|	**Installation**	|	Only with Desktop Experience
 |	**StartType**	|	Manual
 |	**Recommendation**	|	OK to disable
 |	**Comments**	|	Disabling breaks apps that rely on the service; OK to disable if apps not relying on it
@@ -901,7 +901,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|	
 |	**Service description**	|	Enables user notification of user input for interactive services, which enables access to dialogs created by interactive services when they appear. If this service is stopped, notifications of new interactive service dialogs will no longer function and there might not be access to interactive service dialogs. If this service is disabled, both notifications of and access to new interactive service dialogs will no longer function.
 |	**Service name**	|	UI0Detect
-|	**Installation**	|	Only on Datacenter Edition
+|	**Installation**	|	Only with Desktop Experience
 |	**StartType**	|	Manual
 |	**Recommendation**	| No guidance	
 |	**Comments**	|	
@@ -1019,7 +1019,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|		
 |	**Service description**	|	Enables user sign-in through Microsoft account identity services. If this service is stopped, users will not be able to log on to the computer with their Microsoft account.
 |	**Service name**	|	wlidsvc
-|	**Installation**	|	Only on Datacenter Edition
+|	**Installation**	|	Only with Desktop Experience
 |	**StartType**	|	Manual
 |	**Recommendation**	|	OK to disable
 |	**Comments**	|	Microsoft Accounts are N/A on Windows Server
@@ -1032,7 +1032,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|		
 |	**Service description**	|	Manages App-V users and virtual applications
 |	**Service name**	|	AppVClient
-|	**Installation**	|	Only on Datacenter Edition
+|	**Installation**	|	Only with Desktop Experience
 |	**StartType**	|	Disabled
 |	**Recommendation**	|	Already disabled
 |	**Comments**	|	
@@ -1058,7 +1058,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|	
 |	**Service description**	|	Provides process isolation for cryptographic keys used to authenticate to a user's associated identity providers. If this service is disabled, all uses and management of these keys will not be available, which includes machine logon and single-sign on for apps and websites. This service starts and stops automatically. It is recommended that you do not reconfigure this service.
 |	**Service name**	|	NgcSvc
-|	**Installation**	|	Only on Datacenter Edition
+|	**Installation**	|	Only with Desktop Experience
 |	**StartType**	|	Manual
 |	**Recommendation**	|	OK to disable
 |	**Comments**	|	Needed for PIN/Hello logons, which aren't supported on Server
@@ -1071,7 +1071,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|		
 |	**Service description**	|	Manages local user identity keys used to authenticate user to identity providers as well as TPM virtual smart cards. If this service is disabled, local user identity keys and TPM virtual smart cards will not be accessible. It is recommended that you do not reconfigure this service.
 |	**Service name**	|	NgcCtnrSvc
-|	**Installation**	|	Only on Datacenter Edition
+|	**Installation**	|	Only with Desktop Experience
 |	**StartType**	|	Manual
 |	**Recommendation**	|	OK to disable
 |	**Comments**	|	
@@ -1136,7 +1136,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|		
 |	**Service description**	|	Brokers connections that allow Microsoft Store Apps to receive notifications from the internet.
 |	**Service name**	|	NcbService
-|	**Installation**	|	Only on Datacenter Edition
+|	**Installation**	|	Only with Desktop Experience
 |	**StartType**	|	Manual
 |	**Recommendation**	|	OK to disable
 |	**Comments**	|	
@@ -1149,7 +1149,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|	
 |	**Service description**	|	Manages objects in the Network and Dial-Up Connections folder, in which you can view both local area network and remote connections.
 |	**Service name**	|	Netman
-|	**Installation**	|	Only on Datacenter Edition
+|	**Installation**	|	Only with Desktop Experience
 |	**StartType**	|	Manual
 |	**Recommendation**	| No guidance	
 |	**Comments**	|	
@@ -1227,7 +1227,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|		
 |	**Service description**	|	The Offline Files service performs maintenance activities on the Offline Files cache, responds to user logon and logoff events, implements the internals of the public API, and dispatches interesting events to those interested in Offline Files activities and changes in cache state.
 |	**Service name**	|	CscService
-|	**Installation**	|	Only on Datacenter Edition
+|	**Installation**	|	Only with Desktop Experience
 |	**StartType**	|	Disabled
 |	**Recommendation**	|	Already disabled
 |	**Comments**	|	
@@ -1279,7 +1279,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|	
 |	**Service description**	|	Manages the telephony state on the device
 |	**Service name**	|	PhoneSvc
-|	**Installation**	|	Only on Datacenter Edition
+|	**Installation**	|	Only with Desktop Experience
 |	**StartType**	|	Manual
 |	**Recommendation**	|	OK to disable
 |	**Comments**	|	Used by modern VoIP apps
@@ -1305,7 +1305,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|		
 |	**Service description**	|	Enforces group policy for removable mass-storage devices. Enables applications such as Windows Media Player and Image Import Wizard to transfer and synchronize content using removable mass-storage devices.
 |	**Service name**	|	WPDBusEnum
-|	**Installation**	|	Only on Datacenter Edition
+|	**Installation**	|	Only with Desktop Experience
 |	**StartType**	|	Manual
 |	**Recommendation**	| No guidance	
 |	**Comments**	|	
@@ -1357,7 +1357,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|	
 |	**Service description**	|	This service provides support for viewing, sending and deletion of system-level problem reports for the Problem Reports and Solutions control panel.
 |	**Service name**	|	wercplsupport
-|	**Installation**	|	Only on Datacenter Edition
+|	**Installation**	|	Only with Desktop Experience
 |	**StartType**	|	Manual
 |	**Recommendation**	| No guidance	
 |	**Comments**	|	
@@ -1370,7 +1370,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|		
 |	**Service description**	|	This service provides support for the Program Compatibility Assistant (PCA).  PCA monitors programs installed and run by the user and detects known compatibility problems. If this service is stopped, PCA will not function properly.
 |	**Service name**	|	PcaSvc
-|	**Installation**	|	Only on Datacenter Edition
+|	**Installation**	|	Only with Desktop Experience
 |	**StartType**	|	Automatic
 |	**Recommendation**	|	OK to disable
 |	**Comments**	|	
@@ -1383,7 +1383,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|	
 |	**Service description**	|	Quality Windows Audio Video Experience (qWave) is a networking platform for Audio Video (AV) streaming applications on IP home networks. qWave enhances AV streaming performance and reliability by ensuring network quality-of-service (QoS) for AV applications. It provides mechanisms for admission control, run time monitoring and enforcement, application feedback, and traffic prioritization.
 |	**Service name**	|	QWAVE
-|	**Installation**	|	Only on Datacenter Edition
+|	**Installation**	|	Only with Desktop Experience
 |	**StartType**	|	Manual
 |	**Recommendation**	|	OK to disable
 |	**Comments**	|	Client-side QoS service
@@ -1396,7 +1396,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|	
 |	**Service description**	|	Radio Management and Airplane Mode Service
 |	**Service name**	|	RmSvc
-|	**Installation**	|	Only on Datacenter Edition
+|	**Installation**	|	Only with Desktop Experience
 |	**StartType**	|	Manual
 |	**Recommendation**	|	OK to disable
 |	**Comments**	|	
@@ -1409,7 +1409,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|	
 |	**Service description**	|	Creates a connection to a remote network whenever a program references a remote DNS or NetBIOS name or address.
 |	**Service name**	|	RasAuto
-|	**Installation**	|	Only on Datacenter Edition
+|	**Installation**	|	Only with Desktop Experience
 |	**StartType**	|	Manual
 |	**Recommendation**	| No guidance	
 |	**Comments**	|	
@@ -1487,7 +1487,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|	
 |	**Service description**	|	In Windows 2003 and earlier versions of Windows, the Remote Procedure Call (RPC) Locator service manages the RPC name service database. In Windows Vista and later versions of Windows, this service does not provide any functionality and is present for application compatibility.	|
 |	**Service name**	|	RpcLocator	|
-|	**Installation**	|	Only on Datacenter Edition	|
+|	**Installation**	|	Only with Desktop Experience	|
 |	**StartType**	|	Manual	|
 |	**Recommendation**	| No guidance	|
 |	**Comments**	|		|
@@ -1580,7 +1580,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |	**Service name**	|	SamSs
 |	**Installation**	|	Always installed
 |	**StartType**	|	Automatic
-|	**Recommendation**	| Do
+|	**Recommendation**	| Do not disable
 |	**Comments**	|	
 |||			
 			
@@ -1591,7 +1591,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|	
 |	**Service description**	|	Delivers data from a variety of sensors
 |	**Service name**	|	SensorDataService
-|	**Installation**	|	Only on Datacenter Edition
+|	**Installation**	|	Only with Desktop Experience
 |	**StartType**	|	Manual
 |	**Recommendation**	|	OK to disable
 |	**Comments**	|	
@@ -1604,7 +1604,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|		
 |	**Service description**	|	Monitors various sensors in order to expose data and adapt to system and user state.  If this service is stopped or disabled, the display brightness will not adapt to lighting conditions. Stopping this service may affect other system functionality and features as well.
 |	**Service name**	|	SensrSvc
-|	**Installation**	|	Only on Datacenter Edition
+|	**Installation**	|	Only with Desktop Experience
 |	**StartType**	|	Manual
 |	**Recommendation**	|	OK to disable
 |	**Comments**	|	
@@ -1617,7 +1617,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|		
 |	**Service description**	|	A service for sensors that manages different sensors' functionality. Manages Simple Device Orientation (SDO) and History for sensors. Loads the SDO sensor that reports device orientation changes.  If this service is stopped or disabled, the SDO sensor will not be loaded and so auto-rotation will not occur. History collection from Sensors will also be stopped.
 |	**Service name**	|	SensorService
-|	**Installation**	|	Only on Datacenter Edition
+|	**Installation**	|	Only with Desktop Experience
 |	**StartType**	|	Manual
 |	**Recommendation**	|	OK to disable
 |	**Comments**	|	
@@ -1643,7 +1643,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|		
 |	**Service description**	|	Provides notifications for AutoPlay hardware events.
 |	**Service name**	|	ShellHWDetection
-|	**Installation**	|	Only on Datacenter Edition
+|	**Installation**	|	Only with Desktop Experience
 |	**StartType**	|	Automatic
 |	**Recommendation**	|	OK to disable
 |	**Comments**	|	
@@ -1747,7 +1747,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|	
 |	**Service description**	|	Discovers networked devices and services that use the SSDP discovery protocol, such as UPnP devices. Also announces SSDP devices and services running on the local computer. If this service is stopped, SSDP-based devices will not be discovered. If this service is disabled, any services that explicitly depend on it will fail to start.
 |	**Service name**	|	SSDPSRV
-|	**Installation**	|	Only on Datacenter Edition
+|	**Installation**	|	Only with Desktop Experience
 |	**StartType**	|	Manual
 |	**Recommendation**	|	OK to disable
 |	**Comments**	|	
@@ -1773,7 +1773,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|	
 |	**Service description**	|	Launches applications associated with still image acquisition events.
 |	**Service name**	|	WiaRpc
-|	**Installation**	|	Only on Datacenter Edition
+|	**Installation**	|	Only with Desktop Experience
 |	**StartType**	|	Manual
 |	**Recommendation**	|	OK to disable
 |	**Comments**	|	
@@ -1786,7 +1786,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|		
 |	**Service description**	|	Provides enabling services for storage settings and external storage expansion
 |	**Service name**	|	StorSvc
-|	**Installation**	|	Only on Datacenter Edition
+|	**Installation**	|	Only with Desktop Experience
 |	**StartType**	|	Manual
 |	**Recommendation**	| No guidance	
 |	**Comments**	|	
@@ -1825,7 +1825,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|		
 |	**Service description**	|	This service synchronizes mail, contacts, calendar and various other user data. Mail and other applications dependent on this functionality will not work properly when this service is not running.
 |	**Service name**	|	OneSyncSvc
-|	**Installation**	|	Only on Datacenter Edition
+|	**Installation**	|	Only with Desktop Experience
 |	**StartType**	|	Automatic
 |	**Recommendation**	|	OK to disable
 |	**Comments**	|	User service template
@@ -1890,7 +1890,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|		
 |	**Service description**	|	Provides Telephony API (TAPI) support for programs that control telephony devices on the local computer and, through the LAN, on servers that are also running the service.
 |	**Service name**	|	TapiSrv
-|	**Installation**	|	Only on Datacenter Edition
+|	**Installation**	|	Only with Desktop Experience
 |	**StartType**	|	Manual
 |	**Recommendation**	|	Do not disable
 |	**Comments**	|	Disabling breaks RRAS
@@ -1903,7 +1903,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|
 |	**Service description**	|	Provides user experience theme management.
 |	**Service name**	|	Themes
-|	**Installation**	|	Only on Datacenter Edition
+|	**Installation**	|	Only with Desktop Experience
 |	**StartType**	|	Automatic
 |	**Recommendation**	|	Do not disable
 |	**Comments**	|	Can't set accessibility themes when this service is disabled
@@ -1916,7 +1916,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|	
 |	**Service description**	|	Tile Server for tile updates.
 |	**Service name**	|	tiledatamodelsvc
-|	**Installation**	|	Only on Datacenter Edition
+|	**Installation**	|	Only with Desktop Experience
 |	**StartType**	|	Automatic
 |	**Recommendation**	|	Do not disable
 |	**Comments**	|	Start menu breaks if this service is disabled
@@ -1942,7 +1942,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|	
 |	**Service description**	|	Enables Touch Keyboard and Handwriting Panel pen and ink functionality
 |	**Service name**	|	TabletInputService
-|	**Installation**	|	Only on Datacenter Edition
+|	**Installation**	|	Only with Desktop Experience
 |	**StartType**	|	Manual
 |	**Recommendation**	|	OK to disable
 |	**Comments**	|	
@@ -1968,7 +1968,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|	
 |	**Service description**	|	Allows UPnP devices to be hosted on this computer. If this service is stopped, any hosted UPnP devices will stop functioning and no additional hosted devices can be added. If this service is disabled, any services that explicitly depend on it will fail to start.
 |	**Service name**	|	upnphost
-|	**Installation**	|	Only on Datacenter Edition
+|	**Installation**	|	Only with Desktop Experience
 |	**StartType**	|	Manual
 |	**Recommendation**	|	OK to disable
 |	**Comments**	|	
@@ -1994,7 +1994,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|	
 |	**Service description**	|	Provides apps access to structured user data, including contact info, calendars, messages, and other content. If you stop or disable this service, apps that use this data might not work correctly.
 |	**Service name**	|	UserDataSvc
-|	**Installation**	|	Only on Datacenter Edition
+|	**Installation**	|	Only with Desktop Experience
 |	**StartType**	|	Manual
 |	**Recommendation**	|	OK to disable
 |	**Comments**	|	User service template
@@ -2007,7 +2007,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|		
 |	**Service description**	|	Handles storage of structured user data, including contact info, calendars, messages, and other content. If you stop or disable this service, apps that use this data might not work correctly.
 |	**Service name**	|	UnistoreSvc
-|	**Installation**	|	Only on Datacenter Edition
+|	**Installation**	|	Only with Desktop Experience
 |	**StartType**	|	Manual
 |	**Recommendation**	|	OK to disable
 |	**Comments**	|	User service template
@@ -2020,7 +2020,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|		
 |	**Service description**	|	Provides support for application and OS settings roaming
 |	**Service name**	|	UevAgentService
-|	**Installation**	|	Only on Datacenter Edition
+|	**Installation**	|	Only with Desktop Experience
 |	**StartType**	|	Disabled
 |	**Recommendation**	|	Already disabled
 |	**Comments**	|	
@@ -2085,7 +2085,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|	
 |	**Service description**	|	Hosts objects used by clients of the wallet
 |	**Service name**	|	WalletService
-|	**Installation**	|	Only on Datacenter Edition
+|	**Installation**	|	Only with Desktop Experience
 |	**StartType**	|	Manual
 |	**Recommendation**	|	OK to disable
 |	**Comments**	|	
@@ -2098,7 +2098,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|		
 |	**Service description**	|	Manages audio for Windows-based programs.  If this service is stopped, audio devices and effects will not function properly.  If this service is disabled, any services that explicitly depend on it will fail to start
 |	**Service name**	|	Audiosrv
-|	**Installation**	|	Only on Datacenter Edition
+|	**Installation**	|	Only with Desktop Experience
 |	**StartType**	|	Manual
 |	**Recommendation**	|	OK to disable
 |	**Comments**	|	
@@ -2111,7 +2111,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|
 |	**Service description**	|	Manages audio devices for the Windows Audio service.  If this service is stopped, audio devices and effects will not function properly.  If this service is disabled, any services that explicitly depend on it will fail to start
 |	**Service name**	|	AudioEndpointBuilder
-|	**Installation**	|	Only on Datacenter Edition
+|	**Installation**	|	Only with Desktop Experience
 |	**StartType**	|	Manual
 |	**Recommendation**	|	OK to disable
 |	**Comments**	|	
@@ -2124,7 +2124,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|	
 |	**Service description**	|	The Windows biometric service gives client applications the ability to capture, compare, manipulate, and store biometric data without gaining direct access to any biometric hardware or samples. The service is hosted in a privileged SVCHOST process.
 |	**Service name**	|	WbioSrvc
-|	**Installation**	|	Only on Datacenter Edition
+|	**Installation**	|	Only with Desktop Experience
 |	**StartType**	|	Manual
 |	**Recommendation**	| No guidance	
 |	**Comments**	|	
@@ -2137,7 +2137,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|		
 |	**Service description**	|	Enables multiple clients to access video frames from camera devices.
 |	**Service name**	|	FrameServer
-|	**Installation**	|	Only on Datacenter Edition
+|	**Installation**	|	Only with Desktop Experience
 |	**StartType**	|	Manual
 |	**Recommendation**	|	OK to disable
 |	**Comments**	|	
@@ -2150,7 +2150,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|	
 |	**Service description**	|	Makes automatic connect/disconnect decisions based on the network connectivity options currently available to the PC and enables management of network connectivity based on Group Policy settings.
 |	**Service name**	|	Wcmsvc
-|	**Installation**	|	Only on Datacenter Edition
+|	**Installation**	|	Only with Desktop Experience
 |	**StartType**	|	Automatic
 |	**Recommendation**	| No guidance	
 |	**Comments**	|	
@@ -2202,7 +2202,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|	
 |	**Service description**	|	Windows Encryption Provider Host Service brokers encryption related functionalities from third-party Encryption Providers to processes that need to evaluate and apply EAS policies. Stopping this will compromise EAS compliancy checks that have been established by the connected Mail Accounts
 |	**Service name**	|	WEPHOSTSVC
-|	**Installation**	|	Only on Datacenter Edition
+|	**Installation**	|	Only with Desktop Experience
 |	**StartType**	|	Manual
 |	**Recommendation**	| No guidance	
 |	**Comments**	|	
@@ -2280,7 +2280,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|	
 |	**Service description**	|	Provides image acquisition services for scanners and cameras
 |	**Service name**	|	stisvc
-|	**Installation**	|	Only on Datacenter Edition
+|	**Installation**	|	Only with Desktop Experience
 |	**StartType**	|	Manual
 |	**Recommendation**	|	OK to disable
 |	**Comments**	|	
@@ -2319,7 +2319,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|	
 |	**Service description**	|	Provides infrastructure support for the Microsoft Store.  This service is started on demand and if disabled then content acquired through the Microsoft Store will not function properly.
 |	**Service name**	|	LicenseManager
-|	**Installation**	|	Only on Datacenter Edition
+|	**Installation**	|	Only with Desktop Experience
 |	**StartType**	|	Manual
 |	**Recommendation**	| No guidance	
 |	**Comments**	|	
@@ -2345,7 +2345,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|		
 |	**Service description**	|	Provides the ability to share a cellular data connection with another device.
 |	**Service name**	|	icssvc
-|	**Installation**	|	Only on Datacenter Edition
+|	**Installation**	|	Only with Desktop Experience
 |	**StartType**	|	Manual
 |	**Recommendation**	|	OK to disable
 |	**Comments**	|	
@@ -2371,7 +2371,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|
 |	**Service description**	|	This service runs in session 0 and hosts the notification platform and connection provider which handles the connection between the device and WNS server.
 |	**Service name**	|	WpnService
-|	**Installation**	|	Only on Datacenter Edition
+|	**Installation**	|	Only with Desktop Experience
 |	**StartType**	|	Automatic
 |	**Recommendation**	|	OK to disable
 |	**Comments**	|	Needed for live tiles and other features
@@ -2384,7 +2384,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|	
 |	**Service description**	|	This service hosts Windows notification platform which provides support for local and push notifications. Supported notifications are tile, toast and raw.
 |	**Service name**	|	WpnUserService
-|	**Installation**	|	Only on Datacenter Edition
+|	**Installation**	|	Only with Desktop Experience
 |	**StartType**	|	Manual
 |	**Recommendation**	|	OK to disable
 |	**Comments**	|	User service template
@@ -2410,7 +2410,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|		
 |	**Service description**	|	Provides content indexing, property caching, and search results for files, e-mail, and other content.
 |	**Service name**	|	WSearch
-|	**Installation**	|	Only on Datacenter Edition
+|	**Installation**	|	Only with Desktop Experience
 |	**StartType**	|	Disabled
 |	**Recommendation**	|	Already disabled
 |	**Comments**	|	
@@ -2462,7 +2462,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|		
 |	**Service description**	|	The Wired AutoConfig (DOT3SVC) service is responsible for performing IEEE 802.1X authentication on Ethernet interfaces. If your current wired network deployment enforces 802.1X authentication, the DOT3SVC service should be configured to run for establishing Layer 2 connectivity and/or providing access to network resources. Wired networks that do not enforce 802.1X authentication are unaffected by the DOT3SVC service.
 |	**Service name**	|	dot3svc
-|	**Installation**	|	Only on Datacenter Edition
+|	**Installation**	|	Only with Desktop Experience
 |	**StartType**	|	Manual
 |	**Recommendation**	| No guidance	
 |	**Comments**	|	
@@ -2501,7 +2501,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|	
 |	**Service description**	|	Provides authentication and authorization services for interacting with Xbox Live. If this service is stopped, some applications may not operate correctly.
 |	**Service name**	|	XblAuthManager
-|	**Installation**	|	Only on Datacenter Edition
+|	**Installation**	|	Only with Desktop Experience
 |	**StartType**	|	Manual
 |	**Recommendation**	|	Should be disabled
 |	**Comments**	|	
@@ -2514,7 +2514,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 |---|---|	
 |	**Service description**	|	This service syncs save data for Xbox Live save enabled games.  If this service is stopped, game save data will not upload to or download from Xbox Live.
 |	**Service name**	|	XblGameSave
-|	**Installation**	|	Only on Datacenter Edition
+|	**Installation**	|	Only with Desktop Experience
 |	**StartType**	|	Manual
 |	**Recommendation**	|	Should be disabled
 |	**Comments**	|	This service syncs save data for Xbox Live save enabled games.  If this service is stopped, game save data will not upload to or download from Xbox Live.

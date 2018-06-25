@@ -6,8 +6,8 @@ ms.prod: windows-server-threshold
 ms.technology: networking-hv-switch
 ms.topic: article
 ms.assetid: 398440ac-5988-41ce-b91e-eab343a255d3
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 # Hyper-V Virtual Switch
 

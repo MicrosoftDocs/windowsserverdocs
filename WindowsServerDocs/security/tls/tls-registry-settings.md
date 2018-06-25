@@ -11,12 +11,12 @@ ms.topic: article
 author: justinha
 ms.author: justinha
 manager: brianlic-msft
-ms.date: 08/07/2017
+ms.date: 05/16/2018
 ---
 
 # Transport Layer Security (TLS) registry settings
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2008 R2, Windows Server 2008, Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Vista
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows 10
 
 This reference topic for the IT professional contains supported registry setting information for the Windows implementation of the Transport Layer Security (TLS) protocol and the Secure Sockets Layer (SSL) protocol through the Schannel Security Support Provider (SSP). 
 The registry subkeys and entries covered in this topic help you administer and troubleshoot the Schannel SSP, specifically the TLS and SSL protocols. 
@@ -87,7 +87,7 @@ Default client cache time
 This entry controls Federal Information Processing (FIPS) compliance. 
 The default is 0.
 
-Applicable versions: As designated in the **Applies To** list that is at the beginning of this topic. 
+Applicable versions: All versions beginning with Windows Server 2008 and Windows Vista. 
 
 Registry path: HKLM SYSTEM\CurrentControlSet\Control\LSA
 
@@ -109,7 +109,7 @@ This registry entry specifies the cache size.
 This entry does not exist in the registry by default. 
 The default value is 100. 
 
-Applicable versions: As designated in the **Applies To** list that is at the beginning of this topic.
+Applicable versions: All versions beginning with Windows Server 2008 and Windows Vista.
 
 Registry path: HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL
 
@@ -124,7 +124,7 @@ This cache is kept for performance reasons, so that the system does not continue
 This entry does not exist in the registry by default. 
 The default value is 10 minutes.
 
-Applicable versions: As designated in the **Applies To** list that is at the beginning of this topic.
+Applicable versions: All versions beginning with Windows Server 2008 and Windows Vista.
 
 Registry path: HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL
 
@@ -182,7 +182,7 @@ Each session-cache element typically requires 2 to 4 KB of memory.
 This entry does not exist in the registry by default. 
 The default value is 20,000 elements. 
 
-Applicable versions: As designated in the **Applies To** list that is at the beginning of this topic.
+Applicable versions: All versions beginning with Windows Server 2008 and Windows Vista.
 
 Registry path: HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL
 
@@ -239,7 +239,7 @@ Default Send Trusted Issuer List behavior
 | Windows Server 2012 and Windows 8 and later | FALSE |
 | Windows Server 2008 R2 and Windows 7 and earlier | TRUE |
 
-Applicable versions: As designated in the **Applies To** list that is at the beginning of this topic.
+Applicable versions: All versions beginning with Windows Server 2008 and Windows Vista.
 
 Registry path: HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL
 
@@ -251,7 +251,7 @@ Increasing ServerCacheTime above the default values causes Lsass.exe to consume 
 Each session cache element typically requires 2 to 4 KB of memory. 
 This entry does not exist in the registry by default. 
 
-Applicable versions: As designated in the **Applies To** list that is at the beginning of this topic.
+Applicable versions: All versions beginning with Windows Server 2008 and Windows Vista.
 
 Registry path: HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL
 

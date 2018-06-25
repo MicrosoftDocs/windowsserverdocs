@@ -45,7 +45,7 @@ With the Server Core option, the standard user interface (the Desktop Experience
 
 **Install, configure, uninstall server roles locally:** at a command prompt with Windows PowerShell.
 
-**Install, configure, uninstall server roles remotely from a Windows client computer (or server with Desktop installed:** with Server Manager, Remote Server Administration Tools (RSAT), Windows PowerShell, or Project Honolulu.
+**Install, configure, uninstall server roles remotely from a Windows client computer (or server with Desktop installed:** with Server Manager, Remote Server Administration Tools (RSAT), Windows PowerShell, or Windows Admin Center.
 
 >[!NOTE]
 >

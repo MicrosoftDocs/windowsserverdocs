@@ -2,20 +2,17 @@
 ms.assetid: 6086947f-f9ef-4e18-9f07-6c7c81d7002c
 title: Windows Time Service Tools and Settings
 description:
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+author: shortpatti
+ms.author: pashort
+manager: elizapo
+ms.date: 05/22/2018
 ms.topic: article
 ms.prod: windows-server-threshold
-
 ms.technology: networking
 ---
 
 # Windows Time Service Tools and Settings
-
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10 or later
 
 **In this section**  
   
@@ -75,7 +72,8 @@ The following tables describe the parameters that are used with W32tm.exe.
 |w32tm /dumpreg<br /><br />[/subkey:<key>]<br /><br />[/computer:<target>]|Display the values associated with a given registry key.<br /><br />The default key is HKLM\System\CurrentControlSet\Services\W32Time<br /><br />(the root key for the time service).<br /><br />subkey:<key> - displays the values associated with subkey <key> of the default key.<br /><br />computer:<target> - queries registry settings for computer <target>|  
 |w32tm /query [/computer:<target>] {/source &#124; /configuration &#124; /peers &#124; /status} [/verbose]|This parameter was first made available in the Windows Time client versions of Windows Vista, and  Windows Server 2008 .<br /><br />Display a computer's Windows Time service information.<br /><br />**computer:<target>** - Query the information of **<target>**. If not specified, the default value is the local computer.<br /><br />**Source** - Display the time source.<br /><br />**Configuration** - Display the configuration of run time and where the setting comes from. In verbose mode, display the undefined or unused setting too.<br /><br />**peers** - Display a list of peers and their status.<br /><br />**status** - Display Windows Time service status.<br /><br />**verbose** - Set the verbose mode to display more information.|  
 |w32tm /debug {/disable &#124; {/enable /file:<name> /size:<bytes> /entries:<value> [/truncate]}}|This parameter was first made available in the Windows Time client versions of Windows Vista, and  Windows Server 2008 .<br /><br />Enable or disable the local computer Windows Time service private log.<br /><br />**disable** - Disable the private log.<br /><br />**enable** - Enable the private log.<br /><br />-   **file:<name>** - Specify the absolute file name.<br />-   **size:<bytes>** - Specify the maximum size for circular logging.<br />-   **entries:<value>** - Contains a list of flags, specified by number and separated by commas, that specify the types of information that should be logged. Valid numbers are 0 to 300. A range of numbers is valid, in addition to single numbers, such as 0-100,103,106. Value 0-300 is for logging all information.<br /><br />**truncate** - Truncate the file if it exists.|  
-  
+
+---  
 For more information about **W32tm.exe**, see Help and Support Center in Windows XP, Windows Vista,  Windows 7 , Windows Server 2003, Windows Server 2003 R2,  Windows Server 2008 , and  Windows Server 2008 R2.  
   
 ## <a name="w2k3tr_times_tools_uhlp"></a>Windows Time Service Registry Entries  
@@ -90,7 +88,7 @@ When possible, use Group Policy or other Windows tools, such as Microsoft Manage
   
 Many registry entries for the Windows Time service are the same as the Group Policy setting of the same name. The Group Policy settings correspond to the registry entries of the same name located in:  
   
->**HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\\**
+>**HKLM\SYSTEM\CurrentControlSet\Services\W32Time\\**
 
   
 There are several registry keys at this registry location. The Windows Time settings are stored in values across all of these keys:
@@ -99,11 +97,21 @@ There are several registry keys at this registry location. The Windows Time sett
 * [NtpClient](#NtpClient)
 * [NtpServer](#NtpServer)
   
-> [!NOTE]  
-> Many of the values in the W32Time section of the registry are used internally by W32Time to store information. These values should not be manually changed at any time. Do not modify any of the settings in this section unless you are familiar with the setting and are certain that the new value will work as expected. The following registry entries are located under:
 
->>**HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\\**  
-  
+Many of the values in the W32Time section of the registry are used internally by W32Time to store information. These values should not be manually changed at any time. Do not modify any of the settings in this section unless you are familiar with the setting and are certain that the new value will work as expected. The following registry entries are located under:
+
+**HKLM\SYSTEM\CurrentControlSet\Services\W32Time\\**  
+
+When you create a policy, the settings are configured in the following location, which does not take precedence over the next location:
+
+**HKLM/SOFTWARE/Policies/Microsoft/Windows/W32time**
+
+The W32time key is created with the policy.  When you remove the policy, then this key is also removed.
+
+The other default location:
+
+**HKLM/SYSTEM/CurrentControlSet/Services/W32time**
+
 Some of the parameters are stored in clock ticks in the registry and some are in seconds. To convert the time from clock ticks to seconds:  
   
 -   1 minute = 60 sec  
@@ -117,7 +125,7 @@ For example, 5 minutes would become 5*60\*1000\*10000 = 3000000000 clock ticks.
 All versions include Windows 7, Windows 8, Windows 10, Windows Server 2008 , and  Windows Server 2008 R2, Windows Server 2012, Windows Server 2012R2, Windows Server 2016.  Some entries are only availalbe on newer Windows versions.
 
 
-#### <a name="Parameters"></a>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters
+#### <a name="Parameters"></a>HKLM\SYSTEM\CurrentControlSet\Services\W32Time\Parameters
 
 |Registry Entry|Version|Description|
 |------------------------------------|---------------|----------------------------|
@@ -126,8 +134,8 @@ All versions include Windows 7, Windows 8, Windows 10, Windows Server 2008 , and
 |ServiceDll|All|This entry is maintained by W32Time. It contains reserved data that is used by the Windows operating system, and any changes to this setting can cause unpredictable results. The default location for this DLL on both domain members and stand-alone clients and servers is %windir%\System32\W32Time.dll.  |
 |ServiceMain|All|This entry is maintained by W32Time. It contains reserved data that is used by the Windows operating system, and any changes to this setting can cause unpredictable results. The default value on domain members is SvchostEntry_W32Time. The default value on stand-alone clients and servers is SvchostEntry_W32Time.  "|
 |Type|All|This entry Indicates which peers to accept synchronization from:  <ul><li>**NoSync**. The time service does not synchronize with other sources.</li><li>**NTP.** The time service synchronizes from the servers specified in the **NtpServer**. registry entry.</li><li>**NT5DS**. The time service synchronizes from the domain hierarchy.  </li><li>**AllSync**. The time service uses all the available synchronization mechanisms.  </li></ul>The default value on domain members is **NT5DS**. The default value on stand-alone clients and servers is **NTP**.   |
-
-#### <a name="Configuration"></a>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Config
+---
+#### <a name="Configuration"></a>HKLM\SYSTEM\CurrentControlSet\Services\W32Time\Config
 
 |Registry Entry|Version|Description|
 |------------------------------------|---------------|----------------------------|
@@ -151,7 +159,7 @@ All versions include Windows 7, Windows 8, Windows 10, Windows Server 2008 , and
 |TimeJumpAuditOffset|All|An unsigned integer that indicates the time jump audit threshold, in seconds. If the time service adjusts the local clock by setting the clock directly, and the time correction is more than this value, then the time service logs an audit event.|
 |UpdateInterval|All|This entry specifies the number of clock ticks between phase correction adjustments. The default value for domain controllers is 100. The default value for domain members is 30,000. The default value for stand-alone clients and servers is 360,000.  <br /><br />**NOTE**: Zero is an invalid value for the UpdateInterval registry entry. On computers running Windows Server 2003, Windows Server 2003 R2,  Windows Server 2008 , and  Windows Server 2008 R2 , if the value is set to 0 the Windows Time service automatically changes it to 1.<br /><br />The following three registry entries are not a part of the W32Time default configuration but can be added to the registry to obtain increased logging capabilities. The information logged to the System Event log can be modified by changing value for the EventLogFlags setting in the Group Policy Object Editor. By default, the time service creates a log in Event Viewer every time that it switches to a new time source.<br /><br />**WARNING**: Some of the preset values that are configured in the System Administrative template file (System.adm) for the Group Policy object (GPO) settings are different from the corresponding default registry entries. If you plan to use a GPO to configure any Windows Time setting, be sure that you review [Preset values for the Windows Time service Group Policy settings are different from the corresponding Windows Time service registry entries in Windows Server 2003](https://go.microsoft.com/fwlink/?LinkId=186066). This issue applies to  Windows Server 2008 R2,  Windows Server 2008, Windows Server 2003 R2, and Windows Server 2003. |
 |UtilizeSslTimeData|Post Windows 10 build 1511|Entry of 1 indicates that the W32Time will use multiple SSL timestamps to Seed a clock that is grossly inaccurate.|
-
+---
 The following registry entries must be added in order to enable W32Time logging:  
 
 |Registry Entry|Version|Description|
@@ -160,9 +168,9 @@ The following registry entries must be added in order to enable W32Time logging:
 |FileLogName|All|This entry controls the location and file name of the Windows Time log. The default value is blank, and should not be changed unless **FileLogEntries** is changed. A valid value is a full path and file name that Windows Time will use to create the log file. This value does not affect the event log entries normally created by Windows Time.  |
 |FileLogSize|All|This entry controls the circular logging behavior of Windows Time log files. When **FileLogEntries** and **FileLogName** are defined, this entry defines the size, in bytes, to allow the log file to reach before overwriting the oldest log entries with new entries. Any positive number is valid, and 3000000 is recommended. This value does not affect the event log entries normally created by Windows Time.  |
 
+---
 
-
-#### <a name="NtpClient"></a>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpClient
+#### <a name="NtpClient"></a>HKLM\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpClient
 
 |Registry Entry|Version|Description|
 |------------------------------------|---------------|----------------------------|
@@ -179,7 +187,9 @@ The following registry entries must be added in order to enable W32Time logging:
 |SpecialPollInterval|All|This entry specifies the special poll interval in seconds for manual peers. When the SpecialInterval 0x1 flag is enabled, W32Time uses this poll interval instead of a poll interval determine by the operating system. The default value on domain members is 3,600. The default value on stand-alone clients and servers is 604,800.<br/><br/>New for build 1702, SpecialPollInterval is contained by the MinPollInterval and MaxPollInterval Config registry values.|
 |SpecialPollTimeRemaining|All|This entry is maintained by W32Time. It contains reserved data that is used by the Windows operating system. It specifies the time in seconds before W32Time will resynchronize after the computer has restarted. Any changes to this setting can cause unpredictable results. The default value on both domain members and on stand-alone clients and servers is left blank.  |
 
-#### <a name="NtpServer"></a> HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpServer
+---
+
+#### <a name="NtpServer"></a> HKLM\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpServer
 
 |Registry Entry|Version|Description|
 |------------------------------------|---------------|----------------------------|
@@ -187,6 +197,8 @@ The following registry entries must be added in order to enable W32Time logging:
 |DllName|All|This entry specifies the location of the DLL for the time provider.<br /><br />The default location for this DLL on both domain members and stand-alone clients and servers is %windir%\System32\W32Time.dll.  |
 |Enabled|All|This entry indicates if the NtpServer provider is enabled in the current Time Service. <ul><li>Yes 1</li><li>No 0</li></ul>The default value on domain members is 1. The default value on stand-alone clients and servers is 1.  |
 |InputProvider|All|This entry indicates if the NtpServer provider is enabled.  <ul><li>Yes 1  </li><li>No 0 </li></ul>The default value on domain members is 1. The default value on stand-alone clients and servers is 1.  |
+
+---
 
 #### <a name="MaxAllowedPhaseOffset"></a>MaxAllowedPhaseOffset information
 In order for W32Time to set the computer clock gradually, the offset must be less than the MaxAllowedPhaseOffset value and satisfy the following equation at the same time:  

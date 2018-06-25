@@ -1,13 +1,14 @@
 ---
 title: Network Policy Server (NPS)
 description: This topic provides an overview of Network Policy Server in Windows Server 2016, and includes links to additional guidance about NPS.
-manager: brianlic
+manager: elizapo
 ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
 ms.assetid: 9c7a67e0-0953-479c-8736-ccb356230bde
-ms.author: jamesmci 
-author: jamesmci
+ms.author: pashort 
+author: shortpatti
+ms.date: 06/20/2018
 ---
 
 # Network Policy Server (NPS)
@@ -23,7 +24,7 @@ You can use this topic for an overview of Network Policy Server in Windows Serve
 > - [Plan Network Policy Server](nps-plan-top.md)
 > - [Deploy Network Policy Server](nps-deploy.md)
 > - [Manage Network Policy Server](nps-manage-top.md)
-> - [Network Policy Server (NPS) Cmdlets](https://technet.microsoft.com/library/jj872739.aspx) for Windows Server 2016 and Windows 10
+> - [Network Policy Server (NPS) Cmdlets in Windows PowerShell](https://technet.microsoft.com/library/jj872739.aspx) for Windows Server 2016 and Windows 10
 > - [Network Policy Server (NPS) Cmdlets in Windows PowerShell](https://technet.microsoft.com/library/jj872739.aspx) for Windows Server 2012 R2 and Windows 8.1
 > - [NPS Cmdlets in Windows PowerShell](https://technet.microsoft.com/library/jj872739.aspx) for Windows Server 2012 and Windows 8
 
@@ -47,13 +48,10 @@ You can configure NPS with any combination of these features. For example, you c
 
 NPS provides different functionality depending on the edition of Windows Server that you install.
 
-### Windows Server 2016 Datacenter Edition
+### Windows Server 2016 Standard/Datacenter Edition
 
-With NPS in Windows Server 2016 Datacenter, you can configure an unlimited number of RADIUS clients and remote RADIUS server groups. In addition, you can configure RADIUS clients by specifying an IP address range.
+With NPS in Windows Server 2016 Standard or Datacenter, you can configure an unlimited number of RADIUS clients and remote RADIUS server groups. In addition, you can configure RADIUS clients by specifying an IP address range.
 
-### Windows Server 2016 Standard Edition
-
-With NPS in Windows Server 2016 Standard, you can configure a maximum of 50 RADIUS clients and a maximum of 2 remote RADIUS server groups. You can define a RADIUS client by using a fully qualified domain name or an IP address, but you cannot define groups of RADIUS clients by specifying an IP address range. If the fully qualified domain name of a RADIUS client resolves to multiple IP addresses, the NPS server uses the first IP address returned in the Domain Name System (DNS) query.
 
 The following sections provide more detailed information about NPS as a RADIUS server and proxy.
 

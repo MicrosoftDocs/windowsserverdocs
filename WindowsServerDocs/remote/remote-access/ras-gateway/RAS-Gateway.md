@@ -1,52 +1,29 @@
 ---
 title: RAS Gateway
 description: This topic, which is intended for Information Technology (IT) professionals, provides overview information about RAS Gateway, including RAS Gateway deployment modes and features in Windows Server 2016.
-manager: brianlic
+manager: elizapo
 ms.prod: windows-server-threshold
 ms.technology: networking-ras
 ms.topic: article
 ms.assetid: acaa46b7-09b1-4707-9562-116df8db17eb
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
+ms.date: 05/23/2018
 ---
 # RAS Gateway
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
-This topic, which is intended for Information Technology (IT) professionals, provides overview information about RAS Gateway, including RAS Gateway deployment modes and features.  
-  
-> [!NOTE]  
-> In addition to this topic, the following RAS Gateway content is available.  
->   
-> - [RAS Gateway High Availability](../../../networking/sdn/technologies/network-function-virtualization/RAS-Gateway-High-Availability.md)  
-> - [GRE Tunneling in Windows Server](gre-tunneling-windows-server.md)
-> - [RAS Gateway GRE Tunnel Throughput and Performance](RAS-Gateway-GRE-Perf.md)
-  
-This topic contains the following sections.  
-  
--   [RAS Gateway](#bkmk_rras)  
-  
--   [RAS Gateway Deployment Modes](#bkmk_modes)  
-  
--   [Clustering RAS Gateway for high availability](#bkmk_clustering)  
-  
--   [RAS Gateway Features](#bkmk_features)  
-  
--   [RAS Gateway Deployment Scenarios](#bkmk_deploy)  
-  
--   [RAS Gateway Management Tools](#bkmk_manage)  
-  
-## <a name="bkmk_rras"></a>RAS Gateway  
 RAS Gateway is a software router and gateway that you can use in either single tenant mode or multitenant mode.  
   
-Single tenant mode allows organizations of any size to deploy the gateway as an exterior, or Internet-facing edge virtual private network (VPN) and DirectAccess server. In single tenant mode, you can deploy RAS Gateway on a physical server or virtual machine (VM) running  Windows Server 2016.  
+- **Single tenant** mode allows organizations of any size to deploy the gateway as an exterior, or Internet-facing edge virtual private network (VPN) and DirectAccess server. In single tenant mode, you can deploy RAS Gateway on a physical server or virtual machine (VM) running  Windows Server 2016.  
   
-Multitenant mode allows Cloud Service Providers (CSPs) and Enterprises to use RAS Gateway to enable datacenter and cloud network traffic routing between virtual and physical networks, including the Internet. For multitenant mode, it is recommended that you deploy RAS Gateway on VMs that are running  Windows Server 2016.  
+- **Multitenant mode** allows Cloud Service Providers (CSPs) and Enterprises to use RAS Gateway to enable datacenter and cloud network traffic routing between virtual and physical networks, including the Internet. For multitenant mode, it is recommended that you deploy RAS Gateway on VMs that are running  Windows Server 2016.  
   
 > [!NOTE]  
 > RAS Gateway supports IPv4 and IPv6, including IPv4 and IPv6 forwarding. When you configure RAS Gateway with Network Address Translation (NAT), only NAT44 is supported.  
   
-**Who will be interested in RAS Gateway?**  
+## Who will be interested in RAS Gateway?
   
 If you are a system administrator, network architect, or other IT professional, RAS Gateway might interest you under one or more of the following circumstances:  
   
@@ -61,6 +38,24 @@ If you are a system administrator, network architect, or other IT professional, 
 -   You want to provide your organization's employees with remote access to your organization network.  
   
 -   You want to connect offices at different physical locations across the Internet.  
+ 
+This topic, which is intended for Information Technology (IT) professionals, provides overview information about RAS Gateway, including RAS Gateway deployment modes and features. 
+  
+This topic contains the following sections.  
+  
+  
+-   [RAS Gateway Deployment Modes](#bkmk_modes)  
+  
+-   [Clustering RAS Gateway for high availability](#bkmk_clustering)  
+  
+-   [RAS Gateway Features](#bkmk_features)  
+  
+-   [RAS Gateway Deployment Scenarios](#bkmk_deploy)  
+  
+-   [RAS Gateway Management Tools](#bkmk_manage)  
+  
+
+
   
 ## <a name="bkmk_modes"></a>RAS Gateway Deployment Modes  
 RAS Gateway includes the following deployment modes.  
@@ -111,8 +106,7 @@ RAS Gateway includes the following capabilities.
 -   **Dynamic routing with Border Gateway Protocol (BGP)**. BGP reduces the need for manual route configuration on routers because it is a dynamic routing protocol, and automatically learns routes between sites that are connected by using site-to-site VPN connections. If your organization has multiple sites that are connected by using BGP-enabled routers such as RAS Gateway, BGP allows the routers to automatically calculate and use valid routes to each other in the event of network disruption or failure. For more information, see [RFC 4271](https://tools.ietf.org/html/rfc4271).  
   
 -   **Network Address Translation (NAT)**. Network address translation (NAT) allows you to share a connection to the public Internet through a single interface with a single public IP address. The computers on the private network use private, non-routable addresses. NAT maps the private addresses to the public address. This RAS Gateway feature allows organization employees with single tenant deployments to access Internet resources from behind the gateway. For CSPs, this feature allows applications that are running on tenant VMs to access the Internet. For example, a tenant VM that is configured as a Web server can contact external financial resources to process credit card transactions.  
-  
--   **DirectAccess server**. DirectAccess is a feature that allows employee connectivity to organization network resources without the need for traditional Virtual Private Network (VPN) connections. With DirectAccess, client computers are always connected to your organization - there is no need for remote users to start and stop connections, as is required with VPN connections. In addition, your IT administrators can manage DirectAccess client computers whenever they are running and Internet connected.  
+
   
 ## <a name="bkmk_deploy"></a>RAS Gateway Deployment Scenarios  
 Following are the recommended deployment scenarios for RAS Gateway.  
@@ -128,5 +122,7 @@ Following are the management tools for RAS Gateway.
   
 -   In System Center 2012 R2 Virtual Machine Manager (VMM), the RAS Gateway is named Windows Server Gateway. A limited set of Border Gateway Protocol (BGP) configuration options are available in the VMM software interface, including **Local BGP IP Address** and **Autonomous System Numbers (ASN)**, **List of BGP Peer IP Addresses**, and **ASN values**. You can, however, use Remote Access Windows PowerShell BGP commands to configure all other features of Windows Server Gateway. For more information, see  [Virtual Machine Manager (VMM)](https://technet.microsoft.com/system-center-docs/vmm/vmm) and [Remote Access Cmdlets](https://technet.microsoft.com/library/hh918399.aspx) for  Windows Server 2016 and Windows 10.  
   
-
-
+## Related topics
+- [RAS Gateway High Availability](../../../networking/sdn/technologies/network-function-virtualization/RAS-Gateway-High-Availability.md)  
+- [GRE Tunneling in Windows Server](gre-tunneling-windows-server.md)
+- [RAS Gateway GRE Tunnel Throughput and Performance](RAS-Gateway-GRE-Perf.md)

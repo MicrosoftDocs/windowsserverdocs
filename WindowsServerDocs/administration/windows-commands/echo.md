@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # echo
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Displays messages or turns on or off the command echoing feature. If used without parameters, **echo** displays the current echo setting.
 
@@ -34,7 +34,7 @@ echo [on | off]
 
 |Parameter|Description|
 |---------|-----------|
-|[on | off]|Turns on or off the command echoing feature. Command echoing is on by default.|
+|[on \| off]|Turns on or off the command echoing feature. Command echoing is on by default.|
 |\<Message>|Specifies the text to display on the screen.|
 |/?|Displays help at the command prompt.|
 

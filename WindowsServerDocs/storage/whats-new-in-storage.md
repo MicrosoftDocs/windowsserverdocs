@@ -137,8 +137,7 @@ ReFS introduces the following improvements:
 
 * ReFS implements new storage tiers functionality, helping deliver faster performance and increased storage capacity. This new functionality enables:
     * Multiple resiliency types on the same virtual disk (using mirroring in the performance tier and parity in the capacity tier, for example).
-    * Increased responsiveness to drifting working sets. 
-    * Support for SMR (Shingled Magnetic Recording) media. 
+    * Increased responsiveness to drifting working sets.  
 * The introduction of block cloning substantially improves the performance of VM operations, such as .vhdx checkpoint merge operations.
 * The new ReFS scan tool enables the recovery of leaked storage and helps salvage data from critical corruptions. 
 

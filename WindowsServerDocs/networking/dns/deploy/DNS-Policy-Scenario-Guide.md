@@ -6,8 +6,8 @@ ms.prod: windows-server-threshold
 ms.technology: networking-dns
 ms.topic: article
 ms.assetid: 50fdb08a-bbd8-4107-954a-6699672110ff
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 # DNS Policy Scenario Guide
 

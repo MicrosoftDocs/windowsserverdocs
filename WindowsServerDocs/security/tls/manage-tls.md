@@ -11,10 +11,12 @@ ms.topic: article
 author: justinha
 ms.author: justinha
 manager: brianlic-msft
-ms.date: 06/05/2017
+ms.date: 05/16/2018
 ---
 
 # Manage Transport Layer Security (TLS)
+
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows 10
 
 ## Configuring TLS Cipher Suite Order
 
@@ -66,7 +68,7 @@ Beginning with Windows 10 & Windows Server 2016, ECC curve order can be configur
 
 ### Managing Windows ECC curves using CertUtil
 
-Beginning with Windows 10 and Windows Server 2016, Windows provides elliptic curve parameter management though the command line utility certuil.exe. 
+Beginning with Windows 10 and Windows Server 2016, Windows provides elliptic curve parameter management through the command line utility certutil.exe. 
 Elliptic curve parameters are stored in the bcryptprimitives.dll. Using certutil.exe, administrators can add and remove curve parameters to and from Windows, respectively. Certutil.exe stores the curve parameters securely in the registry. 
 Windows can begin using the curve parameters by the name associated with the curve.    
 

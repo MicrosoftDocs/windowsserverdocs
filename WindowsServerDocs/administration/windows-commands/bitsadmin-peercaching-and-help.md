@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # bitsadmin peercaching and help
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Displays the command-line usage for the **PeerCaching** commands.
 

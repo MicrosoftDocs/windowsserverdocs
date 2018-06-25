@@ -51,7 +51,7 @@ The following table outlines the differences between the two types of CALs:
 
 When you use the Per Device model, a temporary license is issued the first time a device connects to the RD Session Host. The second time that device connects, as long as the license server is activated and there are available CALs, the license server issues a permanent RDS Per Device CAL.
 
-When you use the Per User model, licensing is not enforced and each user is granted a license to connect to an RD Session Host from any number of devices. The license server issues licenses from the available CAL pool or the Over-Used CAL pool - it’s your responsibility to ensure that all of your users have a valid license and zero Over-Used CALs - otherwise, you're in violiation of the Remote Destkop Services license terms. 
+When you use the Per User model, licensing is not enforced and each user is granted a license to connect to an RD Session Host from any number of devices. The license server issues licenses from the available CAL pool or the Over-Used CAL pool - it’s your responsibility to ensure that all of your users have a valid license and zero Over-Used CALs - otherwise, you're in violation of the Remote Desktop Services license terms. 
 
 To ensure you are in compliance with the Remote Destkop Services license terms, track the number of RDS Per User CALs used in your organization and be sure to have a enough Per User CALs installed on the license server for all of your users.
 

@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # reg unload
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Removes a section of the registry that was loaded using the **reg load** operation.
 

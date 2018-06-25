@@ -1,5 +1,5 @@
 ---
-title: add_1
+title: add
 description: "Windows Commands topic for **add_1** - adds volumes to the set of volumes that are to be shadow copied, or adds aliases to the alias environment."
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -16,9 +16,8 @@ manager: dongill
 ms.date: 10/16/2017
 ---
 
-# add_1
+# add
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Adds volumes to the set of volumes that are to be shadow copied, or adds aliases to the alias environment. If used without subcommands, **add** lists the current volumes and aliases.
 

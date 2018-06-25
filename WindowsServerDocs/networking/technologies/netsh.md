@@ -5,8 +5,8 @@ ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
 manager: brianlic
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 
 # Network Shell \(Netsh\)

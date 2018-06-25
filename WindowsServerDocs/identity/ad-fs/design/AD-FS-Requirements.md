@@ -327,9 +327,9 @@ The following table provides additional cryptography support information on the 
 ||||  
 |-|-|-|  
 |**Algorithm**|**Key lengths**|**Protocols\/Applications\/Comments**|  
-|TripleDES – Default 192 \(Supported 192 – 256\) \- [http:\/\/www.w3.org\/2001\/04\/xmlenc\#tripledes\-cbc](http://www.w3.org/2001/04/xmlenc)|>\= 192|Supported algorithm for Encrypting the security token.|  
-|AES128 \- http:\/\/www.w3.org\/2001\/04\/xmlenc\#aes128\-cbc|128|Supported algorithm for Encrypting the security token.|  
-|AES192 \- http:\/\/www.w3.org\/2001\/04\/xmlenc\#aes192\-cbc|192|Supported algorithm for Encrypting the security token.|  
+|TripleDES – Default 192 \(Supported 192 – 256\) \- [http:\/\/www.w3.org\/2001\/04\/xmlenc\#tripledes\-cbc](http://www.w3.org/2001/04/xmlenc)|>\= 192|Supported algorithm for Decrypting the security token. Encrypting the security token with this algorithm is not supported.|  
+|AES128 \- http:\/\/www.w3.org\/2001\/04\/xmlenc\#aes128\-cbc|128|Supported algorithm for Decrypting the security token. Encrypting the security token with this algorithm is not supported.|  
+|AES192 \- http:\/\/www.w3.org\/2001\/04\/xmlenc\#aes192\-cbc|192|Supported algorithm for Decrypting the security token. Encrypting the security token with this algorithm is not supported.|  
 |AES256 \- [http:\/\/www.w3.org\/2001\/04\/xmlenc\#aes256\-cbc](http://www.w3.org/2001/04/xmlenc)|256|**Default**. Supported algorithm for Encrypting the security token.|  
 |TripleDESKeyWrap \- http:\/\/www.w3.org\/2001\/04\/xmlenc\#kw\-tripledes|All Key sizes supported by .NET 4.0\+|Supported algorithm for Encrypting the symmetric key that encrypts a security token.|  
 |AES128KeyWrap \- [http:\/\/www.w3.org\/2001\/04\/xmlenc\#kw\-aes128](http://www.w3.org/2001/04/xmlenc)|128|Supported algorithm for Encrypting the symmetric key that encrypts the security token.|  

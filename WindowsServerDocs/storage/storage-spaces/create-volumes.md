@@ -7,7 +7,7 @@ ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 1/11/2017
+ms.date: 01/11/2017
 ms.localizationpriority: medium
 ---
 

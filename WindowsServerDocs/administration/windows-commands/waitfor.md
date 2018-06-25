@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # waitfor
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Sends or waits for a signal on a system. **Waitfor** is used to synchronize computers across a network.
 

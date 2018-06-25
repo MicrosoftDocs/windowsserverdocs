@@ -47,4 +47,4 @@ echo All text files deleted in the %1 directory
 ## additional references
 -   [pushd](pushd.md)
 -   [Command-Line Syntax Key](command-line-syntax-key.md)
--   [Command-Line Reference_1](command-line-reference_1.md)
+

@@ -6,7 +6,7 @@ ms.prod: windows-server-threshold
 ms.technology: networking-hv-switch
 ms.topic: get-started-article
 ms.assetid: 378213f5-2d59-4c9b-9607-1fc83f8072f1
-ms.author: jamesmci
+ms.author: pashort
 author: grcusanz
 ---
 # Configure Encryption for a Virtual Subnet

@@ -1,5 +1,5 @@
 ---
-title: verify_1
+title: verify
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -16,9 +16,9 @@ manager: dongill
 ms.date: 10/16/2017
 ---
 
-# verify_1
+# verify
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Tells **cmd** whether to verify that your files are written correctly to a disk. If used without parameters, **verify** displays the current setting.
 

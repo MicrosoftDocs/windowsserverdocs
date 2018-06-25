@@ -4,7 +4,7 @@ title: Upgrading to AD FS in Windows Server 2016
 description:
 author: billmath
 manager: femila
-ms.date: 05/31/2017
+ms.date: 04/09/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
@@ -70,7 +70,9 @@ The remainder of the is document provides the steps for adding a Windows Server 
     ![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_7.png)  
 
 9. Once that completes run adprep/domainprep  
-
+    >[!NOTE]
+    >Prior to running the next step, ensure Windows Server 2016 is current by running Windows Update from Settings.  Continue this process until no further updates are needed. 
+    
     ![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_8.png)  
 
 10. Now on the Windows Server 2016 Server open PowerShell and run the following cmdlt: Invoke-AdfsFarmBehaviorLevelRaise  
@@ -81,8 +83,8 @@ The remainder of the is document provides the steps for adding a Windows Server 
 
     ![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_10.png)  
 
-> [!NOTE]  
-> If your AD FS servers use SQL for configuration, a new manamgement database has now been created with the name "AdfsConfiguraionV3". 
+    > [!NOTE]  
+    > If your AD FS servers use SQL for configuration, a new manamgement database has now been created with the name "AdfsConfiguraionV3". 
 
 12. Now, if you go to AD FS Management, you will see the new nodes that have been added for AD FS in Windows Server 2016  
 

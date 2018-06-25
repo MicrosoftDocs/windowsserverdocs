@@ -11,8 +11,8 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 35d68abb-6914-42e0-91e8-803933cf785e
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 # Step 2 Prepare Cluster Servers
 
@@ -40,7 +40,7 @@ To configure a Remote Access cluster, you must configure the server topology, IP
 ## <a name="BKMK_Install"></a>2.2 Install the Remote Access role  
 To configure a Remote Access cluster, you must install the Remote Access role on every server that will form a part of the cluster.  
   
-### To install the Remote Access role on DirectAccess servers  
+### To install the Remote Access role on Always On VPN servers  
   
 1.  On the DirectAccess server, in the Server Manager console, in the **Dashboard**, click **Add roles and features**.  
   

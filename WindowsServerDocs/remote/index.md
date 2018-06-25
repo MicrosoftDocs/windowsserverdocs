@@ -6,12 +6,15 @@ ms.technology: manage-rsat
 ms.topic: get-started-article
 author: coreyp-at-msft
 ms.author: coreyp
-manager: lizapo
-ms.date: 03/17/2017
+manager: elizapo
+ms.date: 03/16/2018
 ms.localizationpriority: high
 ---
 
 # Remote access and server management
+
+>[!TIP]
+> Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/) on docs.microsoft.com. You can also [search this site](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions) for specific information.
 
 ## [Remote Desktop Services](remote-desktop-services/welcome-to-rds.md)
 Remote Desktop Services enables users to access Windows-based programs that are installed on a Remote Desktop Session Host (RD Session Host) server, or to access the full Windows desktop. With Remote Desktop Services, users can access an RD Session Host server from within a corporate network or from the Internet.

@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # ren
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Renames files or directories. This command is the same as the **rename** command.
 

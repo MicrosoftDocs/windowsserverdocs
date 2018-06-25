@@ -12,7 +12,8 @@ ms.assetid: 7afc65f8-3158-49c9-9d48-4dab1c69afba
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.date: 10/03/2017
+ms.date: 04/17/2018
+ms.localizationpriority: medium
 ---
 # Get started with Remote Desktop on Mac
 
@@ -21,6 +22,7 @@ ms.date: 10/03/2017
 You can use the Remote Desktop client for Mac to work with Windows apps, resources, and desktops from your Mac computer. Use the following information to get started - and check out the [FAQ](remote-desktop-client-faq.md) if you have questions.
 
 >[!Note]
+> - Curious about the new releases for the macOS client? Check out [What's new for Remote Desktop on Mac?](mac-whatsnew.md)
 > - The Mac client runs on computers running macOS 10.10 and newer.
 > - The information in this article applies primarily to the full version of the Mac client - the version available in the Mac AppStore. Test-drive new features by downloading our preview app here:  [beta client release notes](https://go.microsoft.com/fwlink/?LinkID=619698&clcid=0x409).
 
@@ -29,7 +31,7 @@ Follow these steps to get started with Remote Desktop on your Mac:
 
 1. Download the Microsoft Remote Desktop client from the [Mac App Store](https://itunes.apple.com/us/app/microsoft-remote-desktop/id1295203466?mt=12).
 2. [Set up your PC to accept remote connections](remote-desktop-client-faq.md#how-do-i-set-up-a-pc-for-remote-desktop). (If you skip this step, you can't connect to your PC.)
-3. Add a Remote Desktop connection or a remote resource. You use a connection to connect to a directly to a Windows PC and a remote resource to use a RemoteApp program, session-based desktop, or a virtual desktop published on-premises using RemoteApp and Desktop Connections. This feature is typically available in corporate environments.
+3. Add a Remote Desktop connection or a remote resource. You use a connection to connect directly to a Windows PC and a remote resource to use a RemoteApp program, session-based desktop, or a virtual desktop published on-premises using RemoteApp and Desktop Connections. This feature is typically available in corporate environments.
 
 ## What about the Mac beta client?
 We're testing new features on our preview channel on HockeyApp. Want to check it out? Go to [Microsoft Remote Desktop for Mac](https://go.microsoft.com/fwlink/?LinkID=619698) and click **Download**. You don't need to create an account or sign into HockeyApp to download the beta client.
@@ -113,7 +115,7 @@ To create a new user account:
 3. Enter the following information:
    - **User Name** - The name of the user to save for use with a remote connection. You can enter the user name in any of the following formats: user_name, domain\user_name, or user_name@domain.com.
    - **Password** - The password for the user you specified. Every user account that you want to save to use for remote connections needs to have a password associated with it.
-   -**Friendly Name** - If you are using the same user account with different passwords set a friendly name to disticnt those user accounts.
+   - **Friendly Name** - If you are using the same user account with different passwords, set a friendly name to distinguish those user accounts.
 4. Tap **Save**, and then tap **Settings**.
 
 ## Customize your display resolution

@@ -7,12 +7,15 @@ ms.manager: dongill
 author: JasonGerend
 ms.author: jgerend  
 ms.technology: storage-failover-clustering
-ms.date: 10/11/2016
+ms.date: 05/22/2018
 ms.localizationpriority: high
 ---
 # Failover Clustering in Windows Server
 
 > Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+
+>[!TIP]
+> Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/) on docs.microsoft.com. You can also [search this site](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions) for specific information.
 
 <img src="../media/landing-icons/cluster.png" style='float:left; padding:.5em;' alt="Icon indicating a group of computers"> Failover clustering - a Windows Server feature that enables you to group multiple servers together into a fault-tolerant cluster - provides new and improved features for software-defined datacenter customers and many other workloads running clusters on physical hardware or in virtual machines.
 
@@ -52,28 +55,25 @@ Enables easier configuration of multiple network adapters in a cluster.
 
 ## Planning
 
-* [Failover Clustering Hardware Requirements and Storage Options](https://technet.microsoft.com/library/jj612869.aspx)
-* [Validate Hardware for Failover Clustering](https://technet.microsoft.com/library/jj134244.aspx)
-* [Network Recommendations for a Hyper-V Cluster](https://technet.microsoft.com/library/dn550728.aspx)
+* [Failover Clustering Hardware Requirements and Storage Options](clustering-requirements.md)
+* [Use Cluster Shared Volumes (CSVs)](failover-cluster-csvs.md)
 
 ## Deployment
 
-* [Installing the Failover Clustering Feature and Tools](https://go.microsoft.com/fwlink/p/?LinkId=253342)
-* [Validate Hardware for a Failover Cluster](https://technet.microsoft.com/library/jj134244.aspx)
-* [Prestage Cluster Computer Objects in Active Directory Domain Services](https://technet.microsoft.com/library/dn466519.aspx)
-* [Creating a Failover Cluster](http://blogs.msdn.com/b/clustering/archive/2012/05/01/10299698.aspx)
+* [Prestage Cluster Computer Objects in Active Directory Domain Services](prestage-cluster-adds.md)
+* [Creating a Failover Cluster](create-failover-cluster.md)
 * [Deploy Hyper-V over SMB](https://technet.microsoft.com/library/jj134187)
 * [Deploy a Scale-Out File Server](https://technet.microsoft.com/library/hh831359)
 * [iSCSI Target Block Storage, How To](https://technet.microsoft.com/library/hh848268)
-* [Deploy an Active Directory Detached Cluster](https://technet.microsoft.com/library/jj556313.aspx)
+* [Deploy an Active Directory Detached Cluster](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265970\(v%3dws.11\))
 * [Using Guest Clustering for High Availability](https://technet.microsoft.com/library/dn440540.aspx)
 * [Deploy a Guest Cluster using a Shared Virtual Hard Disk](https://technet.microsoft.com/library/dn265980.aspx)
-* [Building Your Cloud Infrastructure: Scenario Overview](https://technet.microsoft.com/library/hh831441.aspx)
 
 ## Operations
-* [Configure and Manage the Quorum in a Failover Cluster](https://technet.microsoft.com/library/jj612870.aspx)
+
+* [Configure and Manage the Quorum in a Failover Cluster](manage-cluster-quorum.md)
 * [Use Cluster Shared Volumes in a Failover Cluster](https://technet.microsoft.com/library/jj612868.aspx)
-* [Cluster-Aware Updating Overview](https://technet.microsoft.com/library/hh831694.aspx)
+* [Cluster-Aware Updating Overview](cluster-aware-updating.md)
 * [Windows IT Pro Support](https://www.microsoft.com/itpro/windows/support)
 
 ## Tools and settings

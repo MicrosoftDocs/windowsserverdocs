@@ -27,11 +27,11 @@ tftp [-i] [<Host>] [{get | put}] <Source> [<Destination>]
 |Parameter|Description|  
 |-------|--------|  
 |-i|Specifies binary image transfer mode (also called octet mode). In binary image mode, the file is transferred in one-byte units. Use this mode when transferring binary files. If **-i** is omitted, the file is transferred in ASCII mode. This is the default transfer mode. This mode converts the end-of-line (EOL) characters to an appropriate format for the specified computer. Use this mode when transferring text files. If a file transfer is successful, the data transfer rate is displayed.|  
-|<Host>|Specifies the local or remote computer.|  
+|\<Host\>|Specifies the local or remote computer.|  
 |put|Transfers the file *Source* on the local computer to the file *Destination* on the remote computer. Because the tftp protocol does not support user authentication, the user must be logged onto the remote computer, and the files must be writable on the remote computer.|  
 |get|Transfers the file *Destination* on the remote computer to the file *Source* on the local computer.|  
-|<Source>|Specifies the file to transfer.|  
-|<Destination>|Specifies where to transfer the file.|  
+|\<Source\>|Specifies the file to transfer.|  
+|\<Destination\>|Specifies where to transfer the file.|  
 ## remarks  
 -   You can install the tftp client using the add Features Wizard.  
 -   The tftp protocol does not support any authentication or encryption mechanism, and as such can introduce a security risk when present. Installing the tftp client is not recommended for systems connected to the Internet.  
@@ -39,7 +39,7 @@ tftp [-i] [<Host>] [{get | put}] <Source> [<Destination>]
 ## <a name="BKMK_Examples"></a>Examples  
 copy the file **boot.img** from the remote computer **Host1**.  
 ```  
-tftp  i Host1 get boot.img  
+tftp  -i Host1 get boot.img  
 ```  
 ## additional references  
 -   [Command-Line Syntax Key](command-line-syntax-key.md)  

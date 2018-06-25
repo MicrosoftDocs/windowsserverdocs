@@ -33,17 +33,17 @@ There are more options than ever before to help you and your customers take adva
 
 - Try out the latest operating system with your application by downloading the evaluation version of [Windows Server](https://www.microsoft.com/evalcenter/evaluate-windows-server-2016) for testing on your premises. Once testing is complete and quality confirmed, you can perform a simple license conversion with a retail license key (requires restarting).
 
-- [Microsoft Azure](https://microsoft.azure.com) can also be used on a trial basis for testing to ensure your custom application will work on the latest server operating system. Once testing is complete and quality confirmed, [migrate to the latest Windows Server version](https://technet.microsoft.com/windowsserver/dn527667#upgrade) on your premises. 
+- [Microsoft Azure](https://azure.microsoft.com) can also be used on a trial basis for testing to ensure your custom application will work on the latest server operating system. Once testing is complete and quality confirmed, [migrate to the latest Windows Server version](https://docs.microsoft.com/windows-server/get-started/installation-and-upgrade#upgrade) on your premises. 
 
 - Or alternatively, once testing is complete and quality confirmed, [Microsoft Azure](https://azure.microsoft.com) can be used as the permanent location for your custom application or service. This allows the old server to remain available until you are ready to switch over to the new server in Azure.
 
     - If you already have Software Assurance for Windows Server, save money by deploying with the [Azure Hybrid Use Benefit](https://azure.microsoft.com/pricing/hybrid-use-benefit/). 
 
-- In most cases, [Microsoft Azure](https://microsoft.azure.com) can be used to host the same application on the older version of Windows Server that it is running on today. Migrate the application and workload to a virtual machine with the operating system of your choice by using [Azure Marketplace](https://azure.microsoft.com/marketplace/) images.
+- In most cases, [Microsoft Azure](https://azure.microsoft.com) can be used to host the same application on the older version of Windows Server that it is running on today. Migrate the application and workload to a virtual machine with the operating system of your choice by using [Azure Marketplace](https://azure.microsoft.com/marketplace/) images.
 
     - If you already have Software Assurance for Windows Server, save money by deploying with the [Azure Hybrid Use Benefit](https://azure.microsoft.com/pricing/hybrid-use-benefit/). 
 
-- The [Software Assurance](https://www.microsoft.com/Licensing/licensing-programs/software-assurance-default.aspx) program for Windows Server provides new version rights benefits. Along with a list of other benefits, servers with Software Assurance can be upgraded to the latest version of Window Server when the time is right, without having to purchase a new license. 
+- The [Software Assurance](https://www.microsoft.com/en-us/Licensing/licensing-programs/software-assurance-default.aspx) program for Windows Server provides new version rights benefits. Along with a list of other benefits, servers with Software Assurance can be upgraded to the latest version of Window Server when the time is right, without having to purchase a new license. 
 
 ## Additional resources
 

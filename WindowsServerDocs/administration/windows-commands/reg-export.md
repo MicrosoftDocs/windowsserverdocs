@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # reg export
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Copies the specified subkeys, entries, and values of the local computer into a file for transfer to other servers.
 

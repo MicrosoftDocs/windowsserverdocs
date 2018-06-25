@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # bitsadmin replaceremoteprefix
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 All files in the job whose remote URL begins with *OldPrefix* are changed to use *NewPrefix*.
 

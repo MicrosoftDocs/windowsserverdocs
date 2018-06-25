@@ -32,12 +32,12 @@
 ##### [Virtualized Domain Controller Technical Reference (Level 300)](ad-ds/deploy/virtual-dc/Virtualized-Domain-Controller-Technical-Reference--Level-300-.md)
 ###### [Virtualized Domain Controller Architecture](ad-ds/get-started/virtual-dc/Virtualized-Domain-Controller-Architecture.md)
 ###### [Virtualized Domain Controller Deployment and Configuration](ad-ds/get-started/virtual-dc/Virtualized-Domain-Controller-Deployment-and-Configuration.md)
+###### [Virtualized Domain Controllers using Hyper-V](ad-ds/get-started/virtual-dc/virtualized-domain-controllers-hyper-v.md)
 ###### [Virtualized Domain Controller Troubleshooting](ad-ds/manage/virtual-dc/Virtualized-Domain-Controller-Troubleshooting.md)
 ###### [Virtualized Domain Controller Technical Reference appendix](ad-ds/reference/virtual-dc/Virtualized-Domain-Controller-Technical-Reference-appendix.md)
 ###### [Virtualized Domain Controller additional Resources](ad-ds/reference/virtual-dc/Virtualized-Domain-Controller-additional-Resources.md)
 ##### [Virtualized Domain Controller Cloning Test Guidance for Application Vendors](ad-ds/reference/virtual-dc/Virtualized-Domain-Controller-Cloning-Test-Guidance-for-Application-Vendors.md)
 ##### [Support for using Hyper-V Replica for virtualized domain controllers](ad-ds/get-started/virtual-dc/Support-for-using-Hyper-V-Replica-for-virtualized-domain-controllers.md)
-
 #### [Windows Server Functional Levels](ad-ds/active-directory-functional-levels.md)
 ### [AD DS Design and Planning](ad-ds/plan/AD-DS-Design-and-Planning.md)
 #### [Understanding AD DS Design](ad-ds/plan/Understanding-AD-DS-Design.md)
@@ -413,6 +413,7 @@
 #### [Create a Non-Claims Aware Relying Party Trust](ad-fs/operations/create-a-Non-Claims-Aware-Relying-Party-Trust.md)
 #### [Create a Relying Party Trust](ad-fs/operations/create-a-Relying-Party-Trust.md) 
 #### [Device Authentication Controls in AD FS](ad-fs/operations/device-authentication-controls-in-AD-FS.md)
+#### [User privacy and AD FS](ad-fs/operations/GDPR-and-AD-FS-Compliance.md)
 #### [Improved interoperability with SAML 2.0](ad-fs/operations/Improved-interoperability-with-SAML-2.0.md)
 #### [Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across company Applications](ad-fs/operations/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-company-Applications.md)
 #### [Manage Risk with additional Multi-Factor Authentication for Sensitive Applications](ad-fs/operations/Manage-Risk-with-additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
@@ -428,6 +429,19 @@
 #### [Walkthrough: Workplace Join with an iOS Device](ad-fs/operations/Walkthrough--Workplace-Join-with-an-iOS-Device.md)
 #### [Walkthrough: Workplace Join with an Android Device](ad-fs/operations/Walkthrough--Workplace-Join-to-an-Android-device.md)
 
+### [AD FS Troubleshooting](ad-fs/troubleshooting/ad-fs-tshoot-overview.md)
+#### [Azure](ad-fs/troubleshooting/ad-fs-tshoot-azure.md)
+#### [Certificates](ad-fs/troubleshooting/ad-fs-tshoot-certs.md)
+#### [Claims syntax](ad-fs/troubleshooting/ad-fs-tshoot-claims-rules.md)
+#### [DNS](ad-fs/troubleshooting/ad-fs-tshoot-dns.md)
+#### [Endpoints](ad-fs/troubleshooting/ad-fs-tshoot-endpoints.md)
+#### [Fiddler trace(WS-Fed)](ad-fs/troubleshooting/ad-fs-tshoot-fiddler-ws-fed.md)
+#### [Fiddler](ad-fs/troubleshooting/ad-fs-tshoot-fiddler.md)
+#### [Initiated SignOn](ad-fs/troubleshooting/ad-fs-tshoot-initiatedsignon.md)
+#### [Integrated Windows Auth](ad-fs/troubleshooting/ad-fs-tshoot-iwa.md)
+#### [Logging](ad-fs/troubleshooting/ad-fs-tshoot-logging.md)
+#### [Loops](ad-fs/troubleshooting/ad-fs-tshoot-loop.md)
+#### [SQL](ad-fs/troubleshooting/ad-fs-tshoot-sql.md)
 
 
 

@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # takeown
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Enables an administrator to recover access to a file that previously was denied, by making the administrator the owner of the file.
 

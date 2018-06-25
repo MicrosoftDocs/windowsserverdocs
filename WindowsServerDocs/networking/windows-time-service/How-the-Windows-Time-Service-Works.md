@@ -2,19 +2,18 @@
 ms.assetid: d1953097-63ea-4a0e-b860-2f3b7c175c41
 title: How the Windows Time Service Works
 description:
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+author: shortpatti
+ms.author: pashort
+manager: elizapo
+ms.date: 05/08/2018
 ms.topic: article
 ms.prod: windows-server-threshold
-
 ms.technology: networking
 ---
 
 # How the Windows Time Service Works
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10 or later
 
 **In this section**  
   
@@ -27,7 +26,7 @@ ms.technology: networking
 -   [Network Ports Used by Windows Time Service](#w2k3tr_times_how_ydum)  
   
 > [!NOTE]  
-> This topic explains only how the Windows Time service (W32Time) works. For information about how to configure Windows Time service, see the list of topics in the section [Where to Find Windows Time Service Configuration Information](https://technet.microsoft.com/library/cc773061.aspx).  
+> This topic explains only how the Windows Time service (W32Time) works. For information about how to configure Windows Time service, see [Configuring Systems for High Accuracy](configuring-systems-for-high-accuracy.md).
   
 > [!NOTE]  
 > In Windows Server 2003 and Microsoft Windows 2000 Server, the directory service is named Active Directory directory service. In  Windows Server 2008  and later versions, the directory service is named Active Directory Domain Services (AD DS). The rest of this topic refers to AD DS, but the information is also applicable to Active Directory.  
@@ -41,13 +40,13 @@ Although the Windows Time service is not an exact implementation of the Network 
 -   The amount of CPU and network resources available to the Windows Time service  
   
 > [!IMPORTANT]  
-> Prior to Windows Server 2016, the W32Time service was not designed to meet time-sensitive application needs.  However, updates to Windows Server 2016 now allow you to implement a solution for 1ms accuracy in your domain.  See [Windows 2016 Accurate Time](accurate-time.md) and  [Support boundary to configure the Windows Time service for high-accuracy environments](https://go.microsoft.com/fwlink/?LinkID=179459) for more information.  
+> Prior to Windows Server 2016, the W32Time service was not designed to meet time-sensitive application needs.  However, updates to Windows Server 2016 now allow you to implement a solution for 1ms accuracy in your domain.  See [Windows 2016 Accurate Time](accurate-time.md) and  [Support boundary to configure the Windows Time service for high-accuracy environments](support-boundary.md) for more information.  
   
-Computers that synchronize their time less frequently, such as computers running Windows XP Home Edition, computers with intermittent network connections, or computers that are not joined to a domain, are configured by default to synchronize with time.windows.com. Because they do not synchronize their clock frequently and because the factors that affect time accuracy may not be known, it is impossible to guarantee time accuracy on computers that have intermittent or no network connections.  
+Computers that synchronize their time less frequently or are not joined to a domain are configured, by default, to synchronize with time.windows.com.  Therefore, it is impossible to guarantee time accuracy on computers that have intermittent or no network connections.  
   
 An AD DS forest has a predetermined time synchronization hierarchy. The Windows Time service synchronizes time between computers within the hierarchy, with the most accurate reference clocks at the top. If more than one time source is configured on a computer, Windows Time uses NTP algorithms to select the best time source from the configured sources based on the computer's ability to synchronize with that time source. The Windows Time service does not support network synchronization from broadcast or multicast peers. For more information about these NTP features, see RFC 1305 in the IETF RFC Database.  
   
-Every computer that is running the Windows Time service uses the service to maintain the most accurate time. In most cases, it is not necessary to configure the Windows Time service. Computers that are members of a domain act as a time client by default. In addition, the Windows Time service can be configured to request time from a designated reference time source, and can also be configured to provide time to clients.  
+Every computer that is running the Windows Time service uses the service to maintain the most accurate time. Computers that are members of a domain act as a time client by default, therefore, in most cases it is not necessary to configure the Windows Time Service. However, the Windows Time Service can be configured to request time from a designated reference time source, and can also provide time to clients.
   
 The degree to which a computer's time is accurate is called a stratum. The most accurate time source on a network (such as a hardware clock) occupies the lowest stratum level, or stratum one. This accurate time source is called a reference clock. An NTP server that acquires its time directly from a reference clock occupies a stratum that is one level higher than that of the reference clock. Resources that acquire time from the NTP server are two steps away from the reference clock, and therefore occupy a stratum that is two higher than the most accurate time source, and so on. As a computer's stratum number increases, the time on its system clock may become less accurate. Therefore, the stratum level of any computer is an indicator of how closely that computer is synchronized with the most accurate time source.  
   
@@ -68,7 +67,7 @@ The following figure shows the architecture of the Windows Time service.
   
 **Windows Time Service Architecture**  
   
-![Windows Time](media/How-the-Windows-Time-Service-Works/trnt_sec_arcc.gif)  
+![Windows Time](../media/Windows-Time-Service/How-the-Windows-Time-Service-Works/trnt_sec_arcc.gif)
   
 The Service Control Manager is responsible for starting and stopping the Windows Time service. The Windows Time Service Manager is responsible for initiating the action of the NTP time providers included with the operating system. The Windows Time Service Manager controls all functions of the Windows Time service and the coalescing of all time samples. In addition to providing information about the current system state, such as the current time source or the last time the system clock was updated, the Windows Time Service Manager is also responsible for creating events in the event log.  
   
@@ -167,8 +166,7 @@ Each of these synchronization types is discussed in the following section.
 Synchronization that is based on a domain hierarchy uses the AD DS domain hierarchy to find a reliable source with which to synchronize time. Based on domain hierarchy, the Windows Time service determines the accuracy of each time server. In a Windows Server 2003 forest, the computer that holds the primary domain controller (PDC) emulator operations master role, located in the forest root domain, holds the position of best time source, unless another reliable time source has been configured. The following figure illustrates a path of time synchronization between computers in a domain hierarchy.  
   
 **Time Synchronization in an AD DS Hierarchy**  
-  
-![Windows Time](media/How-the-Windows-Time-Service-Works/trnt_ntw_adhc.gif)  
+![Windows Time](../media/Windows-Time-Service/How-the-Windows-Time-Service-Works/trnt_ntw_adhc.gif)
   
 #### Reliable Time Source Configuration  
 A computer that is configured to be a reliable time source is identified as the root of the time service. The root of the time service is the authoritative server for the domain and typically is configured to retrieve time from an external NTP server or hardware device. A time server can be configured as a reliable time source to optimize how time is transferred throughout the domain hierarchy. If a domain controller is configured to be a reliable time source, Net Logon service announces that domain controller as a reliable time source when it logs on to the network. When other domain controllers look for a time source to synchronize with, they choose a reliable source first if one is available.  
@@ -207,7 +205,7 @@ The following table lists the queries that a domain controller makes to find a t
 |3|Local PDC emulator|In-site|Does not apply.<br /><br />A domain controller does not attempt to synchronize with itself.|  
 |4|Parent domain controller|Out-of-site|Prefers a reliable time source but it can synchronize with a non-reliable time source if that is all that is available.|  
 |5|Local domain controller|Out-of-site|Only synchronizes with a reliable time source.|  
-|6|Local PDC emulator|Out-of-site|Does not apply.<br /><br />A domain controller does not attempt to synchronize with itself.|  
+|6|Local PDC emulator|Out-of-site|Does not apply.<br /><br />A domain controller does not attempt to synchronize with itself.| 
   
 **Note**  
   
@@ -242,7 +240,7 @@ There are certain situations in which you will want to stop a computer from sync
   
 You can also disable synchronization to prevent the generation of errors in the event log. Each time a computer attempts to synchronize with a time source that is unavailable, it generates an error in the Event Log. If a time source is taken off of the network for scheduled maintenance and you do not intend to reconfigure the client to synchronize from another source, you can disable synchronization on the client to prevent it from attempting synchronization while the time server is unavailable.  
   
-It is useful to disable synchronization on the computer that is designated as the root of the synchronization network. This indicates that the root computer trusts its local clock. If the root of the synchronization hierarchy is not set to **NoSync** and if it is unable to synchronize with another time source, clients do not accept the packet that this computer sends out because its time cannot be trusted.  
+It is useful to disable synchronization on the computer that is designated as the root of the synchronization network. This indicates that the root computer trusts its local clock. If the root of the synchronization hierarchy is not set to **NoSync** and if it is unable to synchronize with another time source, clients do not accept the packet that this computer sends out because its time cannot be trusted.
   
 The only time servers that are trusted by clients even if they have not synchronized with another time source are those that have been identified by the client as reliable time servers.  
   
@@ -260,9 +258,6 @@ The Windows Time service communicates on a network to identify reliable time sou
 |SNTP|123|N/A|  
   
 ## See Also  
-[Windows Time Service Technical Reference](https://technet.microsoft.com/library/cc773061.aspx)  
-[Windows Time Service Tools and Settings](Windows-Time-Service-Tools-and-Settings.md)  
-[Microsoft Knowledge Base article 902229](https://go.microsoft.com/fwlink/?LinkId=186066)  
-  
-
-
+[Windows Time Service Technical Reference](windows-time-service-tech-ref.md)
+[Windows Time Service Tools and Settings](Windows-Time-Service-Tools-and-Settings.md)
+[Microsoft Knowledge Base article 902229](https://go.microsoft.com/fwlink/?LinkId=186066)

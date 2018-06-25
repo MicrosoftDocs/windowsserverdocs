@@ -1,7 +1,7 @@
 ---
 title: Introduction to SDN In Windows Server Datacenter
 ms.prod: windows-server-threshold
-ms.author: jamesmci
+ms.author: pashort
 ms.manager: brianlic
 ms.technology: networking-sdn
 ms.topic: article

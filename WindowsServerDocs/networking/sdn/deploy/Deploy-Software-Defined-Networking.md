@@ -6,8 +6,8 @@ ms.prod: windows-server-threshold
 ms.technology: networking-sdn
 ms.topic: article
 ms.assetid: eeaef968-a4f7-45fd-a242-90edfff963f8
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 # Deploy SDN
 

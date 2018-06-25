@@ -18,7 +18,7 @@ ms.date: 10/16/2017
 
 # bitsadmin getnoprogresstimeout
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Retrieves the length of time, in seconds, that the service tries to transfer the file after a transient error occurs.
 

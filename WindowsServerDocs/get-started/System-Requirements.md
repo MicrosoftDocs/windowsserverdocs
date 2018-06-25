@@ -115,10 +115,15 @@ The following items are not strictly required, but are necessary for certain fea
 > A Trusted Platform Module (TPM) chip is not strictly required to install this release, though it is necessary in order to use certain features such as BitLocker Drive Encryption. If your computer uses TPM, it must meet these requirements:  
 >  
 >- Hardware-based TPMs must implement version 2.0 of the TPM specification.  
->- TPMs that implement version 2.0 must have an EK certificate that is >either pre-provisioned to the TPM by the hardware vendor or be capable of >being retrieved by the device during the first boot.  
->- TPMs that implement version 2.0 must ship with SHA-256 PCR banks and >implement PCRs 0 through 23 for SHA-256. It is acceptable to ship TPMs >with a single switchable PCR bank that can be used for both SHA-1 and >SHA-256 measurements.  
+>- TPMs that implement version 2.0 must have an EK certificate that is either pre-provisioned to the TPM by the hardware vendor or be capable of being retrieved by the device during the first boot.  
+>- TPMs that implement version 2.0 must ship with SHA-256 PCR banks and implement PCRs 0 through 23 for SHA-256. It is acceptable to ship TPMs with a single switchable PCR bank that can be used for both SHA-1 and SHA-256 measurements.  
 >- A UEFI option to turn off the TPM is not a requirement.  
 
 ## Installation of Nano Server  
 For detailed steps to install Windows Server 2016 as a Nano Server, see [Install Nano Server](Getting-Started-with-Nano-Server.md).
 
+## Additional Resources
+- [Windows Processor Requirements](https://docs.microsoft.com/windows-hardware/design/minimum/windows-processor-requirements)
+- [Comparison of Standard and Datacenter editions of Windows Server 2016](https://docs.microsoft.com/windows-server/get-started/2016-edition-comparison)
+- [Windows 10 System Requirements ](https://www.microsoft.com/windows/windows-10-specifications#system-specifications)
+- [Download the Windows Server 2016 licensing datasheet](http://download.microsoft.com/download/7/2/9/7290EA05-DC56-4BED-9400-138C5701F174/WS2016LicensingDatasheet.pdf)

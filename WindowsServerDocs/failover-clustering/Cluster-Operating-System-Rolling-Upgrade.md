@@ -6,7 +6,7 @@ ms.topic: get-started-article
 ms.assetid: 6e102c1f-df26-4eaa-bc7a-d0d55d3b82d5
 author: jasongerend
 ms.author: jgerend
-ms.date: 10/17/2017
+ms.date: 03/27/2018
 ---
 # Cluster operating system rolling upgrade
 
@@ -100,32 +100,32 @@ Cluster OS Rolling upgrade includes the following steps:
     1. Cluster OS Rolling Upgrade requires removing one node at a time from the cluster. Check if you have sufficient capacity on the cluster to maintain HA SLAs when one of the cluster nodes is removed from the cluster for an operating system upgrade. In other words, do you require the capability to failover workloads to another node when one node is removed from the cluster during  the process of Cluster OS Rolling Upgrade? Does the cluster have the capacity to run the required workloads when one node is removed from the cluster for Cluster OS Rolling Upgrade?  
     2. For Hyper-V workloads, check that all Windows Server 2016 Hyper-V hosts have CPU support Second-Level Address Table (SLAT). Only SLAT-capable machines can use the Hyper-V role in Windows Server 2016.  
     3. Check that any workload backups have completed, and consider backing-up the cluster. Stop backup operations while adding nodes to the cluster.  
-    4. Check that all cluster nodes are online /running/up using the [`Get-ClusterNode`](https://technet.microsoft.com/library/ee460990.aspx) cmdlet (see Figure 7).  
+    4. Check that all cluster nodes are online /running/up using the [`Get-ClusterNode`](https://docs.microsoft.com/powershell/module/failoverclusters/Get-ClusterNode?view=win10-ps) cmdlet (see Figure 7).  
 
         ![Screencap showing the results of running the Get-ClusterNode cmdlet](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_GetClusterNode.png)  
         **Figure 7: Determining node status using Get-ClusterNode cmdlet**  
 
-    5. If you are running Cluster Aware Updates (CAU), verify if CAU is currently running by using the **Cluster-Aware Updating** UI, or the [`Get-CauRun`](https://technet.microsoft.com/library/hh847230.aspx) cmdlet (see Figure 8). Stop CAU using the [`Disable-CauClusterRole`](https://technet.microsoft.com/library/hh847219.aspx) cmdlet (see Figure 9) to prevent any nodes from being paused and drained by CAU during the Cluster OS Rolling Upgrade process.  
+    5. If you are running Cluster Aware Updates (CAU), verify if CAU is currently running by using the **Cluster-Aware Updating** UI, or the [`Get-CauRun`](https://docs.microsoft.com/powershell/module/clusterawareupdating/Get-CauRun?view=win10-ps) cmdlet (see Figure 8). Stop CAU using the [`Disable-CauClusterRole`](https://docs.microsoft.com/powershell/module/clusterawareupdating/Disable-CauClusterRole?view=win10-ps) cmdlet (see Figure 9) to prevent any nodes from being paused and drained by CAU during the Cluster OS Rolling Upgrade process.  
 
         ![Screencap showing the output of the Get-CauRun cmdlet](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_GetCAU.png)  
-        **Figure 8: Using the [`Get-CauRun`](https://technet.microsoft.com/library/hh847230.aspx) cmdlet to determine if Cluster Aware Updates is running on the cluster**  
+        **Figure 8: Using the [`Get-CauRun`](https://docs.microsoft.com/powershell/module/clusterawareupdating/Get-CauRun?view=win10-ps) cmdlet to determine if Cluster Aware Updates is running on the cluster**  
 
         ![Screencap showing the output of the Disable-CauClusterRole cmdlet](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_DisableCAU.png)  
-        **Figure 9: Disabling the Cluster Aware Updates role using the [`Disable-CauClusterRole`](https://technet.microsoft.com/library/hh847219.aspx) cmdlet**  
+        **Figure 9: Disabling the Cluster Aware Updates role using the [`Disable-CauClusterRole`](https://docs.microsoft.com/powershell/module/clusterawareupdating/Disable-CauClusterRole?view=win10-ps) cmdlet**  
 
 2. For each node in the cluster, complete the following:  
-    1. Using Cluster Manager UI, select a node and use the **Pause | Drain** menu option to drain the node (see Figure 10) or use the [`Suspend-ClusterNode`](https://technet.microsoft.com/library/ee461051.aspx) cmdlet (see Figure 11).  
+    1. Using Cluster Manager UI, select a node and use the **Pause | Drain** menu option to drain the node (see Figure 10) or use the [`Suspend-ClusterNode`](https://docs.microsoft.com/powershell/module/failoverclusters/Suspend-ClusterNode?view=win10-ps) cmdlet (see Figure 11).  
 
         ![Screencap showing how to drain roles with the Cluster Manager UI](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_FCM_DrainRoles.png)  
         **Figure 10: Draining roles from a node using Failover Cluster Manager**  
 
         ![Screencap showing the output of the Suspend-ClusterNode cmdlet](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_SuspendNode.png)  
-        **Figure 11: Draining roles from a node using the [`Suspend-ClusterNode`](https://technet.microsoft.com/library/ee461051.aspx) cmdlet**  
+        **Figure 11: Draining roles from a node using the [`Suspend-ClusterNode`](https://docs.microsoft.com/powershell/module/failoverclusters/Suspend-ClusterNode?view=win10-ps) cmdlet**  
 
-    2.  Using Cluster Manager UI, **Evict** the paused node from cluster, or use the [`Remove-ClusterNode`](https://technet.microsoft.com/library/ee461001.aspx) cmdlet.  
+    2.  Using Cluster Manager UI, **Evict** the paused node from cluster, or use the [`Remove-ClusterNode`](https://docs.microsoft.com/powershell/module/failoverclusters/Remove-ClusterNode?view=win10-ps) cmdlet.  
 
         ![Screencap showing the output of the Remove-ClusterNode cmdlet](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_RemoveNode.png)  
-        **Figure 12: Remove a node from the cluster using [`Remove-ClusterNode`](https://technet.microsoft.com/library/ee461001.aspx) cmdlet**  
+        **Figure 12: Remove a node from the cluster using [`Remove-ClusterNode`](https://docs.microsoft.com/powershell/module/failoverclusters/Remove-ClusterNode?view=win10-ps) cmdlet**  
 
     3.  Reformat the system drive and perform a "clean operating system install" of Windows Server 2016 on the node using the **Custom: Install Windows only (advanced)** installation (See Figure 13) option in setup.exe. Avoid selecting the **Upgrade: Install Windows and keep files, settings, and applications** option since Cluster OS Rolling Upgrade doesn't encourage in-place upgrade.  
 
@@ -161,10 +161,10 @@ Cluster OS Rolling upgrade includes the following steps:
         ![Screencap showing the select cluster dialog](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_AddNode.png)  
         **Figure 15: Adding a node to the cluster using Failover Cluster Manager**  
 
-    13. Use either the Failover Cluster Manager UI or the [`Add-ClusterNode`](https://technet.microsoft.com/library/ee461047.aspx) cmdlet (see Figure 16) to add the node to the cluster.  
+    13. Use either the Failover Cluster Manager UI or the [`Add-ClusterNode`](https://docs.microsoft.com/powershell/module/failoverclusters/Add-ClusterNode?view=win10-ps) cmdlet (see Figure 16) to add the node to the cluster.  
 
         ![Screencap showing the output of the Add-ClusterNode cmdlet](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_AddNode3.png)  
-        **Figure 16: Adding a node to the cluster using [`Add-ClusterNode`](https://technet.microsoft.com/library/ee461047.aspx) cmdlet**  
+        **Figure 16: Adding a node to the cluster using [`Add-ClusterNode`](https://docs.microsoft.com/powershell/module/failoverclusters/Add-ClusterNode?view=win10-ps) cmdlet**  
 
         > [!NOTE]  
         > When the first Windows Server 2016 node joins the cluster, the cluster enters "Mixed-OS" mode, and the cluster core resources are moved to the Windows Server 2016 node. A "Mixed-OS" mode cluster is a fully functional cluster where the new nodes run in a compatibility mode with the old nodes. "Mixed-OS" mode is a transitory mode for the cluster. It is not intended to be permanent and customers are expected to update all nodes of their cluster within four weeks.  
@@ -172,42 +172,42 @@ Cluster OS Rolling upgrade includes the following steps:
     14. After the Windows Server 2016 node is successfully added to the cluster, you can (optionally) move some of the cluster workload to the newly added node in order to rebalance the workload across the cluster as follows:
 
         ![Screencap showing the output of the Move-ClusterVirtualMachineRole cmdlet](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_MoveVMRole.png)  
-        **Figure 17: Moving a cluster workload (cluster VM role) using [`Move-ClusterVirtualMachineRole`](https://technet.microsoft.com/library/ee461041.aspx) cmdlet**  
+        **Figure 17: Moving a cluster workload (cluster VM role) using [`Move-ClusterVirtualMachineRole`](https://docs.microsoft.com/powershell/module/failoverclusters/Move-ClusterVirtualMachineRole?view=win10-ps) cmdlet**  
 
-        1. Use **Live Migration** from the Failover Cluster Manager for virtual machines or the [`Move-ClusterVirtualMachineRole`](https://technet.microsoft.com/library/ee461041.aspx) cmdlet (see Figure 17) to perform a live migration of the virtual machines.  
+        1. Use **Live Migration** from the Failover Cluster Manager for virtual machines or the [`Move-ClusterVirtualMachineRole`](https://docs.microsoft.com/powershell/module/failoverclusters/Move-ClusterVirtualMachineRole?view=win10-ps) cmdlet (see Figure 17) to perform a live migration of the virtual machines.  
 
             ```PowerShell
             Move-ClusterVirtualMachineRole -Name VM1 -Node robhind-host3  
             ```  
 
-        2. Use **Move** from the Failover Cluster Manager or the [`Move-ClusterGroup`](https://technet.microsoft.com/library/ee461002.aspx) cmdlet for other cluster workloads.  
+        2. Use **Move** from the Failover Cluster Manager or the [`Move-ClusterGroup`](https://docs.microsoft.com/powershell/module/failoverclusters/Move-ClusterGroup?view=win10-ps) cmdlet for other cluster workloads.  
 
 3. When every node has been upgraded to Windows Server 2016 and added back to the cluster, or when any remaining Windows Server 2012 R2 nodes have been evicted, do the following:  
 
     > [!IMPORTANT]  
     > -   After you update the cluster functional level, you cannot go back to Windows Server 2012 R2 functional level and Windows Server 2012 R2 nodes cannot be added to the cluster.
-    > -   Until the [`Update-ClusterFunctionalLevel`](https://technet.microsoft.com/library/mt589702.aspx) cmdlet is run, the process is fully reversible and Windows Server 2012 R2 nodes can be added to this cluster and Windows Server 2016 nodes can be removed.  
-    > -   After the [`Update-ClusterFunctionalLevel`](https://technet.microsoft.com/library/mt589702.aspx) cmdlet is run, new features will be available.  
+    > -   Until the [`Update-ClusterFunctionalLevel`](https://docs.microsoft.com/powershell/module/failoverclusters/Update-ClusterFunctionalLevel?view=win10-ps) cmdlet is run, the process is fully reversible and Windows Server 2012 R2 nodes can be added to this cluster and Windows Server 2016 nodes can be removed.  
+    > -   After the [`Update-ClusterFunctionalLevel`](https://docs.microsoft.com/powershell/module/failoverclusters/Update-ClusterFunctionalLevel?view=win10-ps) cmdlet is run, new features will be available.  
 
-    1.  Using the Failover Cluster Manager UI or the [`Get-ClusterGroup`](https://technet.microsoft.com/library/ee461017.aspx) cmdlet, check that all cluster roles are running on the cluster as expected. In the following example, Available Storage is not being used, instead CSV is used, hence, Available Storage displays an **Offline** status (see Figure 18).  
+    1.  Using the Failover Cluster Manager UI or the [`Get-ClusterGroup`](https://docs.microsoft.com/powershell/module/failoverclusters/Get-ClusterGroup?view=win10-ps) cmdlet, check that all cluster roles are running on the cluster as expected. In the following example, Available Storage is not being used, instead CSV is used, hence, Available Storage displays an **Offline** status (see Figure 18).  
 
         ![Screencap showing the output of the Get-ClusterGroup cmdlet](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_GetClusterGroup.png)  
-        **Figure 18: Verifying that all cluster groups (cluster roles) are running using the [`Get-ClusterGroup`](https://technet.microsoft.com/library/ee461017.aspx) cmdlet**  
+        **Figure 18: Verifying that all cluster groups (cluster roles) are running using the [`Get-ClusterGroup`](https://docs.microsoft.com/powershell/module/failoverclusters/Get-ClusterGroup?view=win10-ps) cmdlet**  
 
-    2.  Check that all cluster nodes are online and running using the [`Get-ClusterNode`](https://technet.microsoft.com/library/ee460990.aspx) cmdlet.  
+    2.  Check that all cluster nodes are online and running using the [`Get-ClusterNode`](https://docs.microsoft.com/powershell/module/failoverclusters/Get-ClusterNode?view=win10-ps) cmdlet.  
     3.  Run the [`Update-ClusterFunctionalLevel`](https://technet.microsoft.com/library/mt589702.aspx) cmdlet - no errors should be returned (see Figure 19).  
 
         ![Screencap showing the output of the Update-ClusterFunctionalLevel cmdlet](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_SelectFunctionalLevel.png)  
         **Figure 19: Updating the functional level of a cluster using PowerShell**  
 
-    4.  After the [`Update-ClusterFunctionalLevel`](https://technet.microsoft.com/library/mt589702.aspx) cmdlet is run, new features are available.  
+    4.  After the [`Update-ClusterFunctionalLevel`](https://docs.microsoft.com/powershell/module/failoverclusters/Update-ClusterFunctionalLevel?view=win10-ps) cmdlet is run, new features are available.  
 
 4. Windows Server 2016 - resume normal cluster updates and backups:  
 
-    1. If you were previously running CAU, restart it using the CAU UI or use the [`Enable-CauClusterRole`](https://technet.microsoft.com/library/hh847229.aspx) cmdlet (see Figure 20).  
+    1. If you were previously running CAU, restart it using the CAU UI or use the [`Enable-CauClusterRole`](https://docs.microsoft.com/powershell/module/clusterawareupdating/Enable-CauClusterRole?view=win10-ps) cmdlet (see Figure 20).  
 
         ![Screencap showing the output of the Enable-CauClusterRole](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_EnableCAUClusterRole.png)  
-        **Figure 20: Enable Cluster Aware Updates role using the [`Enable-CauClusterRole`](https://technet.microsoft.com/library/hh847229.aspx) cmdlet**  
+        **Figure 20: Enable Cluster Aware Updates role using the [`Enable-CauClusterRole`](https://docs.microsoft.com/powershell/module/clusterawareupdating/Enable-CauClusterRole?view=win10-ps) cmdlet**  
 
     2. Resume backup operations.  
 
@@ -215,17 +215,17 @@ Cluster OS Rolling upgrade includes the following steps:
 
     1. After the cluster has been upgraded to Windows Server 2016 functional level, many workloads like Hyper-V VMs will have new capabilities. For a list of new Hyper-V capabilities. see [Migrate and upgrade virtual machines](https://msdn.microsoft.com/virtualization/hyperv_on_windows/user_guide/migrating_vms)  
 
-    2. On each Hyper-V host node in the cluster, use the [`Get-VMHostSupportedVersion`](https://technet.microsoft.com/library/mt653838.aspx) cmdlet to view the Hyper-V VM configuration versions that are supported by the host.  
+    2. On each Hyper-V host node in the cluster, use the [`Get-VMHostSupportedVersion`](https://docs.microsoft.com/powershell/module/hyper-v/Get-VMHostSupportedVersion?view=win10-ps) cmdlet to view the Hyper-V VM configuration versions that are supported by the host.  
 
         ![Screencap showing the output of the Get-VMHostSupportedVersion cmdlet](media/Cluster-Operating-System-Rolling-Upgrade/Clustering_GetVMHostSupportVersion.png)  
         **Figure 21: Viewing the Hyper-V VM configuration versions supported by the host**  
 
-   3.  On each Hyper-V host node in the cluster, Hyper-V VM configuration versions can be upgraded by scheduling a brief maintenance window with users, backing up, turning off virtual machines, and running the [`Update-VMVersion`](https://technet.microsoft.com/library/mt484146.aspx) cmdlet (see Figure 22). This will update the virtual machine version, and enable new Hyper-V features, eliminating the need for future Hyper-V Integration Component (IC) updates. This cmdlet can be run from the Hyper-V node that is hosting the VM, or the `-ComputerName` parameter can be used to update the VM Version remotely. In this example, here we upgrade the configuration version of VM1 from 5.0 to 7.0 to take advantage of many new Hyper-V features associated with this VM configuration version such as Production Checkpoints (Application Consistent backups), and binary VM configuration file.  
+   3.  On each Hyper-V host node in the cluster, Hyper-V VM configuration versions can be upgraded by scheduling a brief maintenance window with users, backing up, turning off virtual machines, and running the [`Update-VMVersion`](https://docs.microsoft.com/powershell/module/hyper-v/Update-VMVersion?view=win10-ps) cmdlet (see Figure 22). This will update the virtual machine version, and enable new Hyper-V features, eliminating the need for future Hyper-V Integration Component (IC) updates. This cmdlet can be run from the Hyper-V node that is hosting the VM, or the `-ComputerName` parameter can be used to update the VM Version remotely. In this example, here we upgrade the configuration version of VM1 from 5.0 to 7.0 to take advantage of many new Hyper-V features associated with this VM configuration version such as Production Checkpoints (Application Consistent backups), and binary VM configuration file.  
 
         ![Screencap showing the Update-VMVersion cmdlet in action](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_StopVM.png)  
         **Figure 22: Upgrading a VM version using the Update-VMVersion PowerShell cmdlet**  
 
-4.  Storage pools can be upgraded using the [Update-StoragePool](https://technet.microsoft.com/itpro/powershell/windows/storage/update-storagepool) PowerShell cmdlet - this is an online operation.  
+4.  Storage pools can be upgraded using the [Update-StoragePool](https://docs.microsoft.com/powershell/module/storage/Update-StoragePool?view=win10-ps) PowerShell cmdlet - this is an online operation.  
 
 Although we are targeting Private Cloud scenarios, specifically Hyper-V and Scale-out File Server clusters, which can be upgraded without downtime, the Cluster OS Rolling Upgrade process can be used for any cluster role.  
 
@@ -247,8 +247,8 @@ Although we are targeting Private Cloud scenarios, specifically Hyper-V and Scal
 **Does the Windows Server 2012 R2 cluster need to have all the software updates installed before starting the Cluster OS Rolling Upgrade process?**  
     Yes, before starting the Cluster OS Rolling Upgrade process, verify that all cluster nodes are updated with the latest software updates.  
 
-**Can I run the [`Update-ClusterFunctionalLevel`](https://technet.microsoft.com/library/mt589702.aspx) cmdlet while nodes are Off or Paused?**  
-    No. All cluster nodes must be on and in active membership for the [`Update-ClusterFunctionalLevel`](https://technet.microsoft.com/library/mt589702.aspx) cmdlet to work.  
+**Can I run the [`Update-ClusterFunctionalLevel`](https://docs.microsoft.com/powershell/module/failoverclusters/Update-ClusterFunctionalLevel?view=win10-ps) cmdlet while nodes are Off or Paused?**  
+    No. All cluster nodes must be on and in active membership for the [`Update-ClusterFunctionalLevel`](https://docs.microsoft.com/powershell/module/failoverclusters/Update-ClusterFunctionalLevel?view=win10-ps) cmdlet to work.  
 
 **Does Cluster OS Rolling Upgrade work for any cluster workload? Does it work for SQL Server?**  
     Yes, Cluster OS Rolling Upgrade works for any cluster workload. However, it is only zero-downtime for Hyper-V and Scale-out File Server clusters. Most other workloads incur some downtime (typically a couple of minutes) when they failover, and failover is required at least once during the Cluster OS Rolling Upgrade process.  
@@ -259,8 +259,8 @@ Although we are targeting Private Cloud scenarios, specifically Hyper-V and Scal
 **For a large cluster that has extra workload and failover capacity, can I upgrade multiple nodes simultaneously?**  
     Yes. When one node is removed from the cluster to upgrade the OS, the cluster will have one less node for failover, hence will have a reduced failover capacity. For large clusters with enough workload and failover capacity, multiple nodes can be upgraded simultaneously. You can temporarily add  cluster nodes to the cluster to provide improved workload and failover capacity during the Cluster OS Rolling Upgrade process.  
 
-**What if I discover an issue in my cluster after [`Update-ClusterFunctionalLevel`](https://technet.microsoft.com/library/mt589702.aspx) has been run successfully?**  
-    If you have backed-up the cluster database with a System State backup before running [`Update-ClusterFunctionalLevel`](https://technet.microsoft.com/library/mt589702.aspx), you should be able to perform an Authoritative restore on a Windows Server 2012 R2 cluster node and restore the original cluster database and configuration.  
+**What if I discover an issue in my cluster after [`Update-ClusterFunctionalLevel`](https://docs.microsoft.com/powershell/module/failoverclusters/Update-ClusterFunctionalLevel?view=win10-ps) has been run successfully?**  
+    If you have backed-up the cluster database with a System State backup before running [`Update-ClusterFunctionalLevel`](https://docs.microsoft.com/powershell/module/failoverclusters/Update-ClusterFunctionalLevel?view=win10-ps), you should be able to perform an Authoritative restore on a Windows Server 2012 R2 cluster node and restore the original cluster database and configuration.  
 
 **Can I use in-place upgrade for each node instead of using clean-OS install by reformatting the system drive?**  
     We do not encourage the use of in-place upgrade of Windows Server, but we are aware that it works in some cases where default drivers are used. Please carefully read all warning messages displayed during in-place upgrade of a cluster node.  

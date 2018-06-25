@@ -6,8 +6,8 @@ ms.technology: networking
 ms.prod: windows-server-threshold
 ms.topic: article
 ms.assetid: d57af0bd-9301-4f62-9888-f528cd10451d
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 
 # Core Network Companion Guides

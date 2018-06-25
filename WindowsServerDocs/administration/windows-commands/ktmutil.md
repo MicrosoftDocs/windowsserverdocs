@@ -18,7 +18,7 @@ ms.date: 10/16/2017
 
 # ktmutil
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Starts the Kernel Transaction Manager utility. If used without parameters, **ktmutil** displays available subcommands.
 

@@ -6,8 +6,8 @@ ms.prod: windows-server-threshold
 ms.technology: networking-dhcp
 ms.topic: article
 ms.assetid: 0ff29ef3-c458-4432-9065-e50a7de5b4b9
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 # Dynamic Host Configuration Protocol (DHCP)
 

@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # attrib
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Displays, sets, or removes attributes assigned to files or directories. If used without parameters, **attrib** displays attributes of all files in the current directory.
 
@@ -33,11 +33,11 @@ attrib [{+|-}r] [{+|-}a] [{+|-}s] [{+|-}h] [{+|-}i] [<Drive>:][<Path>][<FileName
 
 |Parameter|Description|
 |---------|-----------|
-|{+|-}r|Sets (**+**) or clears (**-**) the Read-only file attribute.|
-|{+|-}a|Sets (**+**) or clears (**-**) the Archive file attribute.|
-|{+|-}s|Sets (**+**) or clears (**-**) the System file attribute.|
-|{+|-}h|Sets (**+**) or clears (**-**) the Hidden file attribute.|
-|{+|-}i|Sets (**+**) or clears (**-**) the Not Content Indexed file attribute.|
+|{+\|-}r|Sets (**+**) or clears (**-**) the Read-only file attribute.|
+|{+\|-}a|Sets (**+**) or clears (**-**) the Archive file attribute.|
+|{+\|-}s|Sets (**+**) or clears (**-**) the System file attribute.|
+|{+\|-}h|Sets (**+**) or clears (**-**) the Hidden file attribute.|
+|{+\|-}i|Sets (**+**) or clears (**-**) the Not Content Indexed file attribute.|
 |[\<Drive>:][<Path>][<FileName>]|Specifies the location and name of the directory, file, or group of files for which you want to display or change attributes. You can use the **?** and **&#42;** wildcard characters in the *FileName* parameter to display or change the attributes for a group of files.|
 |/s|Applies **attrib** and any command-line options to matching files in the current directory and all of its subdirectories.|
 |/d|Applies **attrib** and any command-line options to directories.|
