@@ -27,21 +27,15 @@ The provider's desktop hosting service is implemented as a set of isolated tenan
 
 ## Active Directory Domain Services
 
-The tenant's network includes Active Directory Domain Services (AD DS) for the tenant's forest and domain. Using AD DS allows the tenant to manage groups and users in their AD tenant, with all changes syncing back to the domain on a recurring basis.
+Active Directory Domain Services (AD DS) provides the domain and forest information, such that the tenant’s users can sign in to the desktops and applications to carry out their workloads. This also enables you to set up or connect to required file shares and databases that may be required for Windows applications.
 
 The tenant's forest does not require any trust relationship with the provider's management forest. A domain administrator account may be set up in the tenant's domain to allow the provider's technical personnel to perform administrative tasks in the tenant's environment (such as monitoring system status and applying software updates) and to assist with troubleshooting and configuration.
 
 There are multiple ways to deploy AD DS:
 
 1. Enable Azure Active Directory Domain Services in the tenant’s virtual networking environment. This will create a managed AD DS instance for the tenant based on the users and groups that exist in Azure AD.
-2. Set up a stand-alone AD DS server in the tenant’s virtual networking environment. This gives you all of the full control of the AD DS instance, running on virtual machines.
-3. Create a site-to-site VPN connection to an AD DS server located on the tenant’s premises. This allows the tenant to connect to their existing AD DS instance and reduce duplication of users, groups, organizational units, etc.
-
-
-Some alternatives to deploying Azure AD DS are:
-
-1. The hosting provider sets up a stand-alone AD DS server in the tenant's virtual networking environment.
-2. Creating a site-to-site VPN connection to an AD DS server located on the tenant's premises.
+2. Set up a stand-alone AD DS server in the tenant’s virtual networking environment. This gives you all of the full control of the AD DS instance running on virtual machines.
+3. Create a site-to-site VPN connection to an AD DS server located on the tenant’s premises. This allows the tenant to connect to their existing AD DS instance and reduce duplication of users, groups, organizational units, and so on.
 
 For more information, see the following articles:
 
@@ -53,14 +47,16 @@ For more information, see the following articles:
 
 A highly-available SQL database is used by the Remote Desktop Connection Broker to store deployment information, such as the mapping of current users’ connections to the host servers.
 
-Hosters can use SQL Database to extend their Remote Desktop Services deployment without deploying or maintaining a full SQL Server Always-On cluster. The SQL Database is used by the Remote Desktop Connection Broker to store deployment information, such as the mapping of current users' connections to end-host servers. Like other Azure services, SQL DB follows a consumption model, ideal for any size deployment.
-
 There are multiple ways to deploy an SQL database:
 
-1. Create an Azure SQL Database in the tenant’s environment: This provides the functionality of a redundant SQL database without having to manage the servers themselves.
-2. Create an SQL Server AlwaysOn cluster.
+1. Create an Azure SQL Database in the tenant's environment. This provides you with the functionality of a redundant SQL database without you having to manage the servers themselves. This also allows you to pay for what you consume, instead of investing in infrastructure.
+2. Create an SQL Server AlwaysOn cluster. This allows you to leverage existing SQL Server infrastructure and gives you complete control over the SQL Server instances.
 
-For more information, see [What is the Azure SQL Database service?](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview)
+For more information about how to set up a highly-available SQL database infrastructure, see the following articles:
+
+* [What is the Azure SQL Database service?](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview)
+* [Creation and configuration of availability groups (SQL Server)](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server?view=sql-server-2017).
+* [Add the RD Connection Broker server to the deployment and configure high availability](rds-connection-broker-cluster.md).
 
 ## File server
 
