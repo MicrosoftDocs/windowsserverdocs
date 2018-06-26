@@ -74,6 +74,7 @@
 ### [Get started with Remote Desktop client on Android](clients/remote-desktop-android.md)
 ### [What's new in the Android client?](clients/android-whatsnew.md)
 ### [Get started with Remote Desktop client on iOS](clients/remote-desktop-ios.md)
+### [What's new in the iOS client?](clients/ios-whatsnew.md)
 ### [Get started with Remote Desktop client on Mac](clients/remote-desktop-mac.md)
 ### [What's new in the MacOS client?](clients/mac-whatsnew.md)
 ### [Access the Remote Desktop web client](clients/remote-desktop-web-client.md)
