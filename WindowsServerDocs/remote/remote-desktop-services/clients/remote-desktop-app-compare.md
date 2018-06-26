@@ -12,7 +12,7 @@ ms.assetid: 12efe858-6b76-4e08-9f72-b9603aceb0fc
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.date: 07/12/2017
+ms.date: 06/22/2018
 ms.localizationpriority: medium
 ---
 
@@ -50,16 +50,16 @@ When you enable USB port redirection, any USB devices attached to the USB port a
 
 
 
-| Redirection         | Remote Desktop Connection | Universal   | Android | iOS         | macOS                                    | Web client |
-|---------------------|---------------------------|-------------|---------|-------------|------------------------------------------|------------|
-| Cameras             | X                         |             |         |             |                                          |            |
-| Clipboard           | X                         | text, image | text    | text, image | X                                        | text       |
-| Local drive/storage | X                         |             | X       |             | x                                        |            |
-| Location            | X                         |             |         |             |                                          |            |
-| Microphones         | X                         |X            |         |             | X                                        |            |
-| Printers            | X                         |             |         |             | X (CUPS only)                            | PDF print  |
-| Scanners            | X                         |             |         |             |                                          |            |
-| Smart Cards         | X                         |             |         |             | X (Windows authentication not supported) |            |
-| Speakers            | X                         | X           | X       | X           | X                                        | X          |
+| Redirection         | Remote Desktop Connection | Universal   | Android | iOS         | macOS                                    | Web client    |
+|---------------------|---------------------------|-------------|---------|-------------|------------------------------------------|---------------|
+| Cameras             | X                         |             |         |             |                                          |               |
+| Clipboard           | X                         | text, image | text    | text, image | X                                        | text          |
+| Local drive/storage | X                         |             | X       |             | x                                        |               |
+| Location            | X                         |             |         |             |                                          |               |
+| Microphones         | X                         |X            |         |             | X                                        |               |
+| Printers            | X                         |             |         |             | X (CUPS only)                            | PDF print     |
+| Scanners            | X                         |             |         |             |                                          |               |
+| Smart Cards         | X                         |             |         |             | X (Windows authentication not supported) |               |
+| Speakers            | X                         | X           | X       | X           | X                                        | X (except IE) |
 
 *For printer redirection - the macOS app supports the Publisher Imagesetter printer driver by default. They do not support redirecting native printer drivers.
