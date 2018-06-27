@@ -66,7 +66,7 @@
 #### [Management](..\manage\system-insights\managing-system-insights.md)
 #### [Capabilities](..\manage\system-insights\system-insights-capabilities.md)
 #### [FAQ](..\manage\system-insights\system-insights-faq.md)
-#### [Known issues](..\manage\system-insights-known-issues.md)
+#### [Known issues](..\manage\system-insights\system-insights-known-issues.md)
 
 <!--
 #### [A-Z list](windows-commands/a-z-list.md)
