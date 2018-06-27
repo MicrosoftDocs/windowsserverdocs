@@ -24,7 +24,7 @@ Membership in both the **Enterprise Admins** and the root domain's **Domain Admi
 3. In **Available snap-ins**, scroll down to and double-click **Group Policy Management Editor**. The **Select Group Policy Object** dialog box opens.
 
      > [!IMPORTANT]
-     > Ensure that you select **Group Policy Management Editor** and not **Group Policy Management**. If you select **Group Policy Management**, your configuration using these instructions will fail and a server certificate will not be autoenrolled to your NPS servers.
+     > Ensure that you select **Group Policy Management Editor** and not **Group Policy Management**. If you select **Group Policy Management**, your configuration using these instructions will fail and a server certificate will not be autoenrolled to your NPSs.
 
 4. In **Group Policy Object**, click **Browse**. The **Browse for a Group Policy Object** dialog box opens.
 5. In **Domains, OUs, and linked Group Policy Objects,** click **Default Domain Policy**, and then click **OK**.
@@ -45,7 +45,7 @@ Membership in both the **Enterprise Admins** and the root domain's **Domain Admi
 3. In **Available snap-ins**, scroll down to and double-click **Group Policy Management Editor**. The **Select Group Policy Object** dialog box opens.
 
      > [!IMPORTANT]
-     > Ensure that you select **Group Policy Management Editor** and not **Group Policy Management**. If you select **Group Policy Management**, your configuration using these instructions will fail and a server certificate will not be autoenrolled to your NPS servers.
+     > Ensure that you select **Group Policy Management Editor** and not **Group Policy Management**. If you select **Group Policy Management**, your configuration using these instructions will fail and a server certificate will not be autoenrolled to your NPSs.
 
 4. In **Group Policy Object**, click **Browse**. The **Browse for a Group Policy Object** dialog box opens.
 5. In **Domains, OUs, and linked Group Policy Objects,** click **Default Domain Policy**, and then click **OK**.

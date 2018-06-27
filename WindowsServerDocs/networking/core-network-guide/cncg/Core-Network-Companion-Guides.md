@@ -37,7 +37,7 @@ For instructions on how to deploy server certificates, see [Deploy Server Certif
 
 This companion guide explains how to build upon the core network by providing instructions about how to deploy Institute of Electrical and Electronics Engineers \(IEEE\) 802.1X\-authenticated IEEE 802.11 wireless access using Protected Extensible Authentication Protocol\–Microsoft Challenge Handshake Authentication Protocol version 2 \(PEAP\-MS\-CHAP v2\).
 
-The authentication method PEAP\-MS\-CHAP v2 requires that authenticating servers running Network Policy Server \(NPS\) present wireless clients with a server certificate to prove the NPS server identity to the client, however user authentication is not performed by using a certificate - instead, users provide their domain user name and password.
+The authentication method PEAP\-MS\-CHAP v2 requires that authenticating servers running Network Policy Server \(NPS\) present wireless clients with a server certificate to prove the NPS identity to the client, however user authentication is not performed by using a certificate - instead, users provide their domain user name and password.
 
 Because PEAP\-MS\-CHAP v2 requires that users provide password-based credentials rather than a certificate during the authentication process, it is typically easier and less expensive to deploy than EAP\-TLS or PEAP\-TLS.
 
