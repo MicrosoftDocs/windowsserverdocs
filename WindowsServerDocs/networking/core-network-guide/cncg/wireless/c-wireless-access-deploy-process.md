@@ -44,7 +44,7 @@ To configure domain\-member computers using the settings in the wireless network
 
 You can also force Group Policy to refresh while logged on to a computer by running the command **gpupdate** at the command prompt.
 
-## Stage 4 – NPS server configuration
+## Stage 4 – NPS configuration
 
 Use a configuration wizard in NPS to add wireless access points as RADIUS clients, and to create the network policies that NPS uses when processing connection requests.
 

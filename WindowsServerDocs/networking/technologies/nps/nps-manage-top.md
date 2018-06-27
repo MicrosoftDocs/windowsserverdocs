@@ -32,6 +32,6 @@ This section contains the following topics.
 - [Configure RADIUS Clients](nps-radius-clients-configure.md)
 - [Configure Remote RADIUS Server Groups](nps-crp-rrsg-configure.md)
 - [Manage Certificates Used with NPS](nps-manage-certificates.md)
-- [Manage NPS Servers](nps-manage-servers.md)
+- [Manage NPSs](nps-manage-servers.md)
 - [Manage NPS Templates](nps-manage-templates.md)
 

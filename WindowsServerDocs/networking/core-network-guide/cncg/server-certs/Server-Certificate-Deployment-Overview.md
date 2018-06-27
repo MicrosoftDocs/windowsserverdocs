@@ -76,7 +76,7 @@ After you configure the certificate template on the CA, you can configure the de
 You must create an alias (CNAME) resource record for the Web server to ensure that other computers can find the server, as well as the AIA and the CRL that are stored on the server. In addition, using an alias CNAME resource record provides flexibility so that you can use the Web server for other purposes, such as hosting Web and FTP sites.  
   
 ### <a name="bkmk_nps1"></a>NPS1 running the Network Policy Server role service of the Network Policy and Access Services server role  
-The NPS server is installed when you perform the tasks in the Windows Server 2016 Core Network Guide, so before you perform the tasks in this guide, you should already have one or more NPS servers installed on your network.  
+The NPS is installed when you perform the tasks in the Windows Server 2016 Core Network Guide, so before you perform the tasks in this guide, you should already have one or more NPSs installed on your network.  
   
 #### Group Policy applied and certificate enrolled to servers  
 After you have configured the certificate template and autoenrollment, you can refresh Group Policy on all target servers. At this time, the servers enroll the server certificate from CA1.  
