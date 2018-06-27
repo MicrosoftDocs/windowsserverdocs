@@ -25,7 +25,7 @@ This topic describes the known issues in System Insights that impact the latest 
 
 ## Known issues
 
-### If you upgrade from Windows Server Insider Preview build 17692 to a newer Insider Preview build, System Insights encounters errors when parsing or visualing the prediction results. 
+#### If you upgrade from Windows Server Insider Preview build 17692 to a newer Insider Preview build, System Insights encounters errors when parsing or visualing the prediction results. 
 If you'd like to use In-Place Upgrade and retain your historical usage data, you can run the script below to resolve this issue. You can also clean install the newer build to fix this issue.
 
 ```PowerShell
