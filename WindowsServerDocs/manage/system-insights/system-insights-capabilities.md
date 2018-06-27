@@ -98,3 +98,4 @@ All System Insights capabilities must output a status associated with each predi
 - [Managing System Insights](managing-system-insights.md)
 - [System Insights overview](system-insights-overview.md)
 - [System Insights FAQ](system-insights-faq.md)
+- [System Insights known issues](system-insights-known-issues.md)
