@@ -20,13 +20,13 @@ All certificates that are used for network access authentication with Extensible
 
 ## Minimum server certificate requirements
 
-With PEAP\-MS\-CHAP v2, PEAP\-TLS, or EAP\-TLS as the authentication method, the NPS server must use a server certificate that meets the minimum server certificate requirements. 
+With PEAP\-MS\-CHAP v2, PEAP\-TLS, or EAP\-TLS as the authentication method, the NPS must use a server certificate that meets the minimum server certificate requirements. 
 
 Client computers can be configured to validate server certificates by using the **Validate server certificate** option on the client computer or in Group Policy. 
 
 The client computer accepts the authentication attempt of the server when the server certificate meets the following requirements:
 
-- The Subject name contains a value. If you issue a certificate to your server running Network Policy Server (NPS) that has a blank Subject name, the certificate is not available to authenticate your NPS server. To configure the certificate template with a Subject name:
+- The Subject name contains a value. If you issue a certificate to your server running Network Policy Server (NPS) that has a blank Subject name, the certificate is not available to authenticate your NPS. To configure the certificate template with a Subject name:
 
 	1. Open Certificate Templates.
 	2. In the details pane, right-click the certificate template that you want to change, and then click **Properties** .
@@ -35,7 +35,7 @@ The client computer accepts the authentication attempt of the server when the se
 
 - The computer certificate on the server chains to a trusted root certification authority (CA) and does not fail any of the checks that are performed by CryptoAPI and that are specified in the remote access policy or network policy.
 
-- The computer certificate for the NPS server or VPN server is configured with the Server Authentication purpose in Extended Key Usage (EKU) extensions. (The object identifier for Server Authentication is 1.3.6.1.5.5.7.3.1.)
+- The computer certificate for the NPS or VPN server is configured with the Server Authentication purpose in Extended Key Usage (EKU) extensions. (The object identifier for Server Authentication is 1.3.6.1.5.5.7.3.1.)
 
 - The server certificate is configured with a required algorithm value of **RSA**. To configure the required cryptography setting:
 
@@ -50,7 +50,7 @@ The client computer accepts the authentication attempt of the server when the se
 	3. Click the **Subject Name** tab, and then click **Build from this Active Directory information**.
 	4. In **Include this information in alternate subject name**, select **DNS name**.
 
-When using PEAP and EAP-TLS, NPS servers display a list of all installed certificates in the computer certificate store, with the following exceptions:
+When using PEAP and EAP-TLS, NPSs display a list of all installed certificates in the computer certificate store, with the following exceptions:
 
 - Certificates that do not contain the Server Authentication purpose in EKU extensions are not displayed.
 
