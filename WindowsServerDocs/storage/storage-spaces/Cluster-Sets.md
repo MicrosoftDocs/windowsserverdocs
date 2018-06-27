@@ -314,7 +314,7 @@ For example, the command to remove the CLUSTER1 cluster from cluster sets would 
 **Answer:** No.  You can mix Storage Spaces Direct with traditional clusters.
 
 **Question:** Can I manage my Cluster Set via System Center Virtual Machine Manager? <br>
-**Answer:** System Center Virtual Machine Manager does not currently support Cluster sets  **Question:** Can Windows Server 2012 R2 or 2016 clusters co-exist in the same cluster set? <br>
+**Answer:** System Center Virtual Machine Manager does not currently support Cluster sets <br><br> **Question:** Can Windows Server 2012 R2 or 2016 clusters co-exist in the same cluster set? <br>
 **Question:** Can I migrate workloads off Windows Server 2012 R2 or 2016 clusters by simply having those clusters join the same Cluster Set? <br>
 **Answer:** Cluster sets is a new technology being introduced in Windows Server Preview builds, so as such, does not exist in previous releases. Down-level OS-based clusters cannot join a cluster set. However, Cluster Operating System rolling upgrades technology should provide the migration functionality that you are looking for by upgrading these clusters to Windows Server 2019.
 
