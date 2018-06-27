@@ -27,7 +27,7 @@ In another example, if the User-Name RADIUS attribute contains the user name use
 
 You can use realm names configured in connection request policies while designing and deploying your RADIUS infrastructure to ensure that connection requests are routed from RADIUS clients, also called network access servers, to RADIUS servers that can authenticate and authorize the connection request.
 
-When NPS is configured as a RADIUS server with the default connection request policy, NPS processes connection requests for the domain in which the NPS server is a member and for trusted domains.
+When NPS is configured as a RADIUS server with the default connection request policy, NPS processes connection requests for the domain in which the NPS is a member and for trusted domains.
 
 To configure NPS to act as a RADIUS proxy and forward connection requests to untrusted domains, you must create a new connection request policy. In the new connection request policy, you must configure the User Name attribute with the realm name that will be contained in the User-Name attribute of connection requests that you want to forward. You must also configure the connection request policy with a remote RADIUS server group. The connection request policy allows NPS to calculate which connection requests to forward to the remote RADIUS server group based on the realm portion of the User-Name attribute.
 
@@ -43,7 +43,7 @@ In addition, if you create a custom dialing package with the Connection Manager 
 
 During the authentication process, after users type their password-based credentials, the user name is passed from the access client to the network access server. The network access server constructs a connection request and includes the realm name within the User-Name RADIUS attribute in the Access-Request message that is sent to the RADIUS proxy or server.
 
-If the RADIUS server is an NPS server, the Access-Request message is evaluated against the set of configured connection request policies. Conditions on the connection request policy can include the specification of the contents of the User-Name attribute.
+If the RADIUS server is an NPS, the Access-Request message is evaluated against the set of configured connection request policies. Conditions on the connection request policy can include the specification of the contents of the User-Name attribute.
 
 You can configure a set of connection request policies that are specific to the realm name within the User-Name attribute of incoming messages. This allows you to create routing rules that forward RADIUS messages with a specific realm name to a specific set of RADIUS servers when NPS is used as a RADIUS proxy.
 
@@ -61,13 +61,13 @@ You can configure attribute manipulation rules for the User-Name attribute to ch
 
 After the User-Name attribute is modified according to the attribute manipulation rules that you configure, additional settings of the first matching connection request policy are used to determine whether:
 
-- The NPS server processes the Access-Request message locally (when NPS is being used as a RADIUS server).
+- The NPS processes the Access-Request message locally (when NPS is being used as a RADIUS server).
 
-- The NPS server forwards the message to another RADIUS server (when NPS is being used as a RADIUS proxy).
+- The NPS forwards the message to another RADIUS server (when NPS is being used as a RADIUS proxy).
 
 ## Configuring the the NPS-supplied domain name
 
-When the user name does not contain a domain name, NPS supplies one. By default, the NPS-supplied domain name is the domain of which the NPS server is a member. You can specify the NPS-supplied domain name through the following registry setting:
+When the user name does not contain a domain name, NPS supplies one. By default, the NPS-supplied domain name is the domain of which the NPS is a member. You can specify the NPS-supplied domain name through the following registry setting:
 
     
     HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\RasMan\PPP\ControlProtocols\BuiltIn\DefaultDomain

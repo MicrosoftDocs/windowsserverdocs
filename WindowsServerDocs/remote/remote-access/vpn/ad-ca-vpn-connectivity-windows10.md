@@ -53,18 +53,18 @@ To configure conditional access for VPN connectivity, you need to:
 In this step, you configure the conditional access policy for VPN connectivity. 
 
 To configure the conditional access policy, you need to:
-- Create a Conditional Access policy that is assigned to VPN users.
-- Set the Cloud app to **VPN Server**.
-- Set the Grant (access control) to **Require multi-factor authentication**.  You can use other controls as necessary.
+1. Create a Conditional Access policy that is assigned to VPN users.
+2. Set the Cloud app to **VPN Server**.
+3. Set the Grant (access control) to **Require multi-factor authentication**.  You can use other controls as necessary.
 
 ## [Step 7.4. Deploy conditional access root certificates to on-premises AD](vpn-deploy-cond-access-root-cert-to-on-premise-ad.md)
 
 In this step, you deploy a trusted root certificate for VPN authentication to your on-premises AD.
 
 To deploy the trusted root certificate, you need to:
-- Add the downloaded certificate as a *trusted root CA for VPN authentication*.
-- Import the root certificate to the VPN server and VPN client.
-- Verify that the certificates are present and show as trusted.
+1. Add the downloaded certificate as a *trusted root CA for VPN authentication*.
+2. Import the root certificate to the VPN server and VPN client.
+3. Verify that the certificates are present and show as trusted.
 
 
 ## [Step 7.5. Create OMA-DM based VPNv2 Profiles to Windows 10 devices](vpn-create-oma-dm-based-vpnv2-profiles.md)
