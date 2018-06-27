@@ -1,12 +1,12 @@
 ---
 title: Cluster Sets
-prod: windows-server-threshold
+ms.prod: windows-server-threshold
 ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: johnmarlin-msft
 ms.date: 06/25/2018
-description: This article describes the Cluster setsnario
+description: This article describes the Cluster sets scenario
 ms.localizationpriority: medium
 ---
 
@@ -24,12 +24,12 @@ Cluster sets technology is developed to meet specific customer requests operatin
 - Significantly increase the supported SDDC cloud scale for running highly avaialble virtual machines by combining multiple smaller clusters into a single large fabric, even while keeping the software fault boundary to a single cluster
 - Manage entire Failover Cluster lifecycle including onboarding and retiring clusters, without impacting tenant virtual machine availability, via fluidly migrating virtual machines across this large fabric
 - Easily change the compute-to-storage ratio in your hyper-converged I
-- Benefit from [Azure-like Fault Domains and Availability setstps://docs.microsoft.com/azure/virtual-machines/windows/manage-availability) across clusters in initial virtual machine placement and subsequent virtual machine migration
-- Mix-and-match different generations of CPU hardware into the same Cluster Set fabric, even while keeping individual fault domains homogenous for maximum efficiency.  Please note that the recommendation of same hardware is still present within each individual cluster as well as the entire cluster set.
+- Benefit from [Azure-like Fault Domains and Availability sets](htttps://docs.microsoft.com/azure/virtual-machines/windows/manage-availability) across clusters in initial virtual machine placement and subsequent virtual machine migration
+- Mix-and-match different generations of CPU hardware into the same cluster set fabric, even while keeping individual fault domains homogenous for maximum efficiency.  Please note that the recommendation of same hardware is still present within each individual cluster as well as the entire cluster set.
 
 From a high level view, this is what cluster sets can look like.
 
-![Cluster setsution View](media\Cluster-setsrview\Cluster-setsution-View.png)
+![Cluster sets solution View](media\Cluster-sets-Overview\Cluster-sets-solution-View.png)
 
 The following provides a quick summary of each of the elements in the above image:
 
@@ -39,7 +39,7 @@ Management cluster in a cluster set is a Failover Cluster that hosts the highly-
 
 **Member cluster**
 
-A member cluster in a cluster set is typically a traditional hyper-converged cluster running virtual machine and Storage Spaces Direct workloads. Multiple member clusters participate in a single cluster set deployment, forming the larger SDDC cloud fabric. Member clusters differ from a management cluster in two key aspects: member clusters participate in fault domain and availability set constructs, and member clusters are also sized to host virtual machine and Storage Spaces Direct workloads. Cluster set virtual machines that move across cluster boundaries in a Cluster set must not be hosted on the management cluster for this reason.
+A member cluster in a cluster set is typically a traditional hyper-converged cluster running virtual machine and Storage Spaces Direct workloads. Multiple member clusters participate in a single cluster set deployment, forming the larger SDDC cloud fabric. Member clusters differ from a management cluster in two key aspects: member clusters participate in fault domain and availability set constructs, and member clusters are also sized to host virtual machine and Storage Spaces Direct workloads. Cluster set virtual machines that move across cluster boundaries in a cluster set must not be hosted on the management cluster for this reason.
 
 **Cluster set namespace referral SOFS**
 
@@ -63,16 +63,16 @@ An availability set helps the administrator configure desired redundancy of clus
 
 ## Why use cluster sets
 
-Cluster setsvides the benefit of scale without sacrificing resiliency.  
+Cluster sets provides the benefit of scale without sacrificing resiliency.  
 
-Cluster setsows for clustering multiple clusters together to create a large fabric, while each cluster remains independent for resiliency.  For example, you have a several 4-node HCI clusters running virtual machines.  Each cluster provides the resiliency needed for itself.  If the storage or memory starts to fill up, scaling up is your next step.  With scaling up, there are some options and considerations.
+Cluster sets allows for clustering multiple clusters together to create a large fabric, while each cluster remains independent for resiliency.  For example, you have a several 4-node HCI clusters running virtual machines.  Each cluster provides the resiliency needed for itself.  If the storage or memory starts to fill up, scaling up is your next step.  With scaling up, there are some options and considerations.
 
 1. Add more storage to the current cluster.  With Storage Spaces Direct, this may be tricky as the exact same model/firmware drives may not be available.  The consideration of rebuild times also need to be taken into account.
 2. Add more memory.  What if you are maxed out on the memory the machines can handle?  What if all available memory slots are full?
 3. Add additional compute nodes with drives into the current cluster.  This takes us back to Option 1 needing to be considered.
 4. Purchase a whole new cluster
 
-This is where cluster csets provides the benefit of scaling.  If I add my clusters into a cluster set, I can take advantage of storage or memory that may be available on another cluster without any additional purchases.  From a resiliency perspective, adding additional nodes to a Storage Spaces Direct is not going to provide additional votes for quorum.  As mentioned [here](https://docs.microsoft.com/en-us/windows-server/storage/storage-spaces/drive-symmetry-considerations), a Storage Spaces Direct Cluster can survive the loss of 2 nodes before going down.  If you have a 4-node HCI cluster, 3 nodes go down will take the entire cluster down.  If you have an 8-node cluster, 3 nodes go down will take the entire cluster down.  With Cluster setst has two 4-node HCI clusters in the set, 2 nodes in one HCI go down and 1 node in the other HCI go down, both clusters remain up.  Is it better to create one large 16-node Storage Spaces Direct cluster or break it down into four 4-node clusters and use cluster sets?  Having four 4-node clusters with cluster sets gives the same scale, but better resiliency in that multiple compute nodes can go down (unexpectedly or for maintenance) and production remains.
+This is where cluster sets provides the benefit of scaling.  If I add my clusters into a cluster set, I can take advantage of storage or memory that may be available on another cluster without any additional purchases.  From a resiliency perspective, adding additional nodes to a Storage Spaces Direct is not going to provide additional votes for quorum.  As mentioned [here](https://docs.microsoft.com/windows-server/storage/storage-spaces/drive-symmetry-considerations), a Storage Spaces Direct Cluster can survive the loss of 2 nodes before going down.  If you have a 4-node HCI cluster, 3 nodes go down will take the entire cluster down.  If you have an 8-node cluster, 3 nodes go down will take the entire cluster down.  With Cluster sets that has two 4-node HCI clusters in the set, 2 nodes in one HCI go down and 1 node in the other HCI go down, both clusters remain up.  Is it better to create one large 16-node Storage Spaces Direct cluster or break it down into four 4-node clusters and use cluster sets?  Having four 4-node clusters with cluster sets gives the same scale, but better resiliency in that multiple compute nodes can go down (unexpectedly or for maintenance) and production remains.
 
 ## Considerations for deploying cluster sets
 
