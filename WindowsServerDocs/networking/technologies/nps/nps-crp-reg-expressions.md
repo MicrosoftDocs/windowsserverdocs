@@ -70,7 +70,7 @@ The following examples describe the use of the pattern-matching syntax to manipu
 
 **To remove the realm portion of the User Name attribute**
 
-In an outsourced dial-up scenario in which an Internet service provider \(ISP\) routes connection requests to an organization NPS server, the ISP RADIUS proxy might require a realm name to route the authentication request. However, the NPS server might not recognize the realm name portion of the user name. Therefore, the realm name must be removed by the ISP RADIUS proxy before it is forwarded to the organization NPS server.
+In an outsourced dial-up scenario in which an Internet service provider \(ISP\) routes connection requests to an organization NPS, the ISP RADIUS proxy might require a realm name to route the authentication request. However, the NPS might not recognize the realm name portion of the user name. Therefore, the realm name must be removed by the ISP RADIUS proxy before it is forwarded to the organization NPS.
 
 - Find: @microsoft\.com
 
