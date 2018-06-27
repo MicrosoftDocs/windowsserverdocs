@@ -24,13 +24,13 @@ This topic describes the known issues in System Insights that impact the latest 
 >Before reporting any bugs, please ensure you're running the latest build. Visit [this page](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewserver) to get the latest Windows Server 2019 Preview build, and download the latest System Insights extension for Windows Admin Center [using the extension manager](https://docs.microsoft.com/en-us/windows-server/manage/windows-admin-center/configure/using-extensions).
 
 ## Known issues
+
 ### If you upgrade from Windows Server Insider Preview build 17692 to a newer Insider Preview build, System Insights encounters errors when parsing or visualing the prediction results. 
-To fix this issue, you can clean install the newer build. If, however, you'd like to use In-Place Upgrade and retain your historical usage data, you can run the script below to resolve this issue. 
+If you'd like to use In-Place Upgrade and retain your historical usage data, you can run the script below to resolve this issue. You can also clean install the newer build to fix this issue.
 
 ```PowerShell
 <#
 This script stops the Insights service and removes previous System Insights configuration information. 
-
 Once the System Insights service is restarted, it will recreate the database that stores the configuration information, which addresses any issues with In-Place Upgrade from Windows Server Insider Preview build 17692. 
 #>
 $InsightsDBPath = "$env:ProgramData\Microsoft\Windows\SystemInsights\DB"
