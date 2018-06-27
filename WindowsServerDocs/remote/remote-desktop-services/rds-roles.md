@@ -25,7 +25,7 @@ For small deployments, you can install applications directly onto the RD Session
 
 You can expand collections by adding RD Session Host server virtual machines to a collection farm with each RDSH virtual machine within a collection assigned to same availability set. This provides higher collection availability and increases scale to support more users or resource-heavy applications.
 
-In most cases, multiple users share the same RD Session Host server, which most efficiently utilizes Azure resources for a desktop hosting solution. In this configuration, users must sign in to collections by using non-administrative accounts. You can also give some users full administrative access to their remote desktop by creating personal session desktop collections.
+In most cases, multiple users share the same RD Session Host server, which most efficiently utilizes Azure resources for a desktop hosting solution. In this configuration, users must sign in to collections with non-administrative accounts. You can also give some users full administrative access to their remote desktop by creating personal session desktop collections.
 
 You can customize desktops even more by creating and uploading a virtual hard disk with the Windows Server OS that you can use as a template for creating new RD Session Host virtual machines.
 
