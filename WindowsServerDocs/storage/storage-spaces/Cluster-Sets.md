@@ -55,7 +55,7 @@ In a Cluster Set deployment, the CS-Master interacts with a new cluster resource
 
 **Fault domain**
 
-A fault domain is the grouping of software and hardware artifacts that the administrator determines could fail together when a failure does occur.  While an administrator could designate one or more clusters together as a fault domain, each node could participate asin a fault domain in an availability set. Cluster sets by design leaves the decision of fault domain boundary determination to the administrator who is well-versed with data center topology considerations – e.g. PDU, networking – that member clusters share. 
+A fault domain is the grouping of software and hardware artifacts that the administrator determines could fail together when a failure does occur.  While an administrator could designate one or more clusters together as a fault domain, each node could participate in a fault domain in an availability set. Cluster sets by design leaves the decision of fault domain boundary determination to the administrator who is well-versed with data center topology considerations – e.g. PDU, networking – that member clusters share. 
 
 **Availability set**
 
