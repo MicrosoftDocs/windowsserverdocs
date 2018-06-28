@@ -10,7 +10,7 @@ ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ---
 
-# Banned IP addresses
+# AD FS and banned IP addresses
 
 >Applies To: Windows Server 2016
 
