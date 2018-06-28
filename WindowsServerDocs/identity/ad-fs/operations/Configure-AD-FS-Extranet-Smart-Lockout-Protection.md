@@ -24,7 +24,7 @@ ESL is only available for AD FS in Windows Server 2016.
 
 ## Advantages of Extranet Smart Lockout in AD FS 2016
 Extranet soft lockout in AD FS 2012 R2 provided the following key advantages:
-- Protects your user accounts from **brute force attacks** in which an attacker tries to guess a user's password by continuously sending authentication requests and from **password spray attacks** where attackers attempt to use common passwords with many different accounts
+- Protects your user accounts from **brute force attacks** in which an attacker tries to guess a user's password by continuously sending authentication requests.
 - Protects your user accounts from **Active Directory account lockout** from malicious authentication requests with wrong passwords. In this case, although the user account will be locked out for extranet access, the user can still login to AD from the corporate network. This is known as a **soft lockout**.
 
 Extranet Smart Lockout builds on the advantages of extranet soft lockout by adding the following:
