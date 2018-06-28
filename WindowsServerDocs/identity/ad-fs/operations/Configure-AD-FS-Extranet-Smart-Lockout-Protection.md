@@ -18,7 +18,7 @@ ms.technology: identity-adfs
 
 In AD FS on Windows Server 2012 R2, we introduced a security feature called **Extranet Soft Lockout**.  With this feature, AD FS stops authenticating users from the extranet for a period of time.  This prevents your user accounts from being locked out in Active Directory. In addition to protecting your users from an AD account lockout, AD FS extranet lockout also protects against brute force password guessing attacks.
 
-In June 2018, AD FS on Windows Server 2016 introduced **Extranet Smart Lockout (ESL)**.  ESL enables AD FS to differentiate between sign-in attempts that look like they're from the valid user and sign-ins from what may be an attacker. As a result, AD FS can lock out attackers while letting valid users continue to use their accounts. This prevents denial-of-service on the user and protects against targeted attacks such as "password-spray" attacks.  
+In June 2018, AD FS on Windows Server 2016 introduced **Extranet Smart Lockout (ESL)**.  ESL enables AD FS to differentiate between sign-in attempts that look like they're from the valid user and sign-ins from what may be an attacker. As a result, AD FS can lock out attackers while letting valid users continue to use their accounts. This prevents denial-of-service on the user and protects against targeted attacks.  
 ESL is only available for AD FS in Windows Server 2016. 
 
 > [!NOTE]
@@ -75,6 +75,9 @@ A new AD FS property called ExtranetLockoutMode has been added to control smart 
 
 ### Lockout Threshold and Observation Window
 Smart lockout uses the same two AD FS properties for observation window and lockout threshold as soft lockout: ExtranetObservationWindow and ExtranetLockoutThreshold.
+
+> [!NOTE]
+> The lockout threshold applies to both familiar and unknown locations.
 
 - **ExtranetLockoutThreshold &lt;Integer&gt;** this defines the maximum number of bad password attempts. Once the threshold is reached, in ADFSSmartLockoutEnforce mode AD FS will reject requests from the extranet until the  observation window has passed.  In ADFSSmartLockoutLogOnly mode, AD FS will write log entries only.  
 - **ExtranetObservationWindow &lt;TimeSpan&gt;** this determines for how long username and password requests from unfamiliar locations will be locked out. AD FS will start to perform username and password authentication again when the window is passed.
@@ -324,7 +327,7 @@ Set-ADFSAccountActivity
 Update the account activity for a user account.  This can be used to add new familiar locations or erase state for any account
 
 ``` powershell
-Set-ADFSAccountActivity user@upnsuffix.com -FamiliarLocation “1.2.3.4”
+Set-ADFSAccountActivity user@upnsuffix.com -AdditionalFamiliarIps “1.2.3.4”
 ```
 `Reset-ADFSAccountLockout`
 
