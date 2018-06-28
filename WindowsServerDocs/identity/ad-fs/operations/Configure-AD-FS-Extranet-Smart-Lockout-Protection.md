@@ -1,5 +1,4 @@
 ---
-ms.assetid: 777aab65-c9c7-4dc9-a807-9ab73fac87b8
 title: Configure AD FS Extranet Lockout Protection
 description:
 author: billmath
@@ -8,7 +7,6 @@ manager: mtillman
 ms.date: 06/28/2018
 ms.topic: article
 ms.prod: windows-server-threshold
-
 ms.technology: identity-adfs
 ---
 
@@ -392,46 +390,6 @@ XML: <?xml version="1.0" encoding="utf-16"?>
 </AuditBase>
 
 ```
-
-## Banned IP addresses
-In addition to the extranet smart lockout capabilities, the AD FS June 2018 update enables you to configure a set of IP addresses globally in AD FS, so that requests coming from those IP addresses, or that have those IP addresses in the **x-forwarded-for** or **x-ms-forwarded-client-ip** headers, will be blocked by AD FS.
-
-##### Adding banned IPs
-To add banned IPs to the global list, use the below Powershell cmdlet:
-
-``` powershell
-PS C:\ >Set-AdfsProperties -AddBannedIps "1.2.3.4", "::3", "1.2.3.4/16"
-```
-
-Allowed formats
-
-1.	IPv4
-2.	IPv6
-3.	CIDR format with IPv4 or v6
-4.	IP range with IPv4 or v6 ( i.e. 1.2.3.4-1.2.3.6 )
-
-#### Removing banned IPs
-To remove banned IPs from the global list, use the below Powershell cmdlet:
-
-``` powershell
-PS C:\ >Set-AdfsProperties -RemoveBannedIps "1.2.3.4"
-```
-
-#### Read banned IPs
-To read the current set of banned IP addresses, use the below Powershell cmdlet:
-
-``` powershell
-PS C:\ >Get-AdfsProperties 
-```
-
-Example output:
-
-```
-BannedIpList                   : {1.2.3.4, ::3,1.2.3.4/16}
-```
-
-
-
 ## Additional references  
 [Best practices for securing Active Directory Federation Services](../../ad-fs/deployment/best-practices-securing-ad-fs.md)
 

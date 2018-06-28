@@ -30,6 +30,7 @@ This document contains a list of all of the documentation operations for AD FS f
 - [Configure AD FS 2016 and Azure MFA](../ad-fs/operations/Configure-AD-FS-2016-and-Azure-MFA.md)
 - [Configure AD FS Extranet Soft Lockout Protection](../ad-fs/operations/Configure-AD-FS-Extranet-Soft-Lockout-Protection.md)
 - [Configure AD FS Extranet Smart Lockout Protection](../ad-fs/operations/Configure-AD-FS-Extranet-Smart-Lockout-Protection.md)
+- [Configure AD FS Extranet Banned IPs](../ad-fs/operations/Configure-AD-FS-Banned-IP.md)
 - [Configure AD FS for User Certificate Authentication](../ad-fs/operations/Configure-User-Certificate-Authentication.md)
 - [Configure AD FS to authenticate users stored in LDAP directories](../ad-fs/operations/Configure-AD-FS-to-authenticate-users-stored-in-LDAP-directories.md)
 - [Configure AD FS to Send Password Expiry Claims](../ad-fs/operations/Configure-AD-FS-to-Send-Password-Expiry-Claims.md)
