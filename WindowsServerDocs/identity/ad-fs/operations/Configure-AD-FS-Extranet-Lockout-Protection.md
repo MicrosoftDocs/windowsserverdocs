@@ -5,7 +5,7 @@ description:
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.date: 06/06/2018
+ms.date: 06/28/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 
@@ -14,29 +14,27 @@ ms.technology: identity-adfs
 
 # AD FS Extranet Lockout and Extranet Smart Lockout
 
-# Overview
-
 >Applies To: Windows Server 2016, Windows Server 2012 R2
 
-In AD FS on Windows Server 2012 R2, we introduced a security feature called **Extranet Lockout**.  With this feature, AD FS will "stop" authenticating the "malicious" user account from outside for a period of time.  This prevents your user accounts from being locked out in Active Directory.  In addition to protecting your users from an AD account lockout, AD FS extranet lockout also protects against brute force password guessing attacks.
+In AD FS on Windows Server 2012 R2, we introduced a security feature called **Extranet Soft Lockout**.  With this feature, AD FS stops authenticating users from the extranet for a period of time.  This prevents your user accounts from being locked out in Active Directory. In addition to protecting your users from an AD account lockout, AD FS extranet lockout also protects against brute force password guessing attacks.
 
 In June 2018, AD FS on Windows Server 2016 introduced **Extranet Smart Lockout (ESL)**.  ESL enables AD FS to differentiate between sign-in attempts that look like they're from the valid user and sign-ins from what may be an attacker. As a result, AD FS can lock out attackers while letting valid users continue to use their accounts. This prevents denial-of-service on the user and protects against targeted attacks such as "password-spray" attacks.  
 ESL is only available for AD FS in Windows Server 2016. 
 
 > [!NOTE]
-> This feature only works for the **extranet scenario** where the authentication requests come through the Web Application Proxy and only applies to **username and password authentication**.
+> This feature only works for the **extranet scenario** where authentication requests come through the Web Application Proxy and only applies to **username and password authentication**.
 
-## Advantages of Extranet Lockout
-Extranet lockout provides the following key advantages:
-- It protects your user accounts from **brute force attacks** where an attacker tries to guess a user's password by continuously sending authentication requests. In this case, AD FS will lock out the malicious user account for extranet access
-- It protects your user accounts from **malicious account lockout** where an attacker wants to lock out a user account by sending authentication requests with wrong passwords. In this case, although the user account will be locked out by AD FS for extranet access, the actual user account in AD is not locked out and the user can still access corporate resources within the organization. This is known as a **soft lockout**.
+## Advantages of Extranet Smart Lockout in AD FS 2016
+Extranet soft lockout in AD FS 2012 R2 provided the following key advantages:
+- Protects your user accounts from **brute force attacks** in which an attacker tries to guess a user's password by continuously sending authentication requests and from **password spray attacks** where attackers attempt to use common passwords with many different accounts
+- Protects your user accounts from **Active Directory account lockout** from malicious authentication requests with wrong passwords. In this case, although the user account will be locked out for extranet access, the user can still login to AD from the corporate network. This is known as a **soft lockout**.
 
-## Advantages of Extranet Smart Lockout
-- takes advantage of all of the features of extranet lockout and extends these to the cloud.  Azure AD tenants that use AD FS will be able to use ESL natively in AD FS in Windows Server 2016
-- has a log only mode so that you can log all of the activity without disabling any accounts
+Extranet Smart Lockout builds on the advantages of extranet soft lockout by adding the following:
+- Protects your users from experiencing **extranet account lockout** from malicious authentication requests.  Smart lockout will prevent potentially malicious requests from unfamiliar locations while allowing the real user to sign on from the extranet from familiar locations (locations from which the user has successfully logged in before).
+- Has a log only mode so that the system can learn good and potentially malicious signon activity without disabling any accounts
 
-## Pre-requisites for Extranet Smart Lockout
-The following pre-requisites are required ESL with AD FS.
+## Pre-requisites for Extranet Smart Lockout in AD FS 2016
+The following pre-requisites are required for ESL with AD FS 2016.
 
 ### Install updates on all nodes in the farm
 First, ensure all Windows Server 2016 AD FS servers are up to date as of the June 2018 Windows Updates and that the AD FS 2016 farm is running at the 2016 farm behavior level.
@@ -53,62 +51,59 @@ Where `$cred` is an account with AD FS administrator permissions (AD FS administ
 >In a multiple server farm that uses the WID database, the above cmdlet requires that Windows Remote management be enabled on every AD FS server
 
 If you do not have AD FS administrator permissions, you can configure database permissions manually in SQL or WID by running the following command when connected to the AdfsArtifactStore database.
+```
 sp_addrolemember 'db_owner', 'db_genevaservice'
-
+```
 ### Ensure AD FS Security Audit Logging is enabled
 This feature makes use of Security Audit logs, so auditing must be enabled in AD FS as well as the local policy on all AD FS servers.
 
 
-## How it Works
-There are 3 settings in AD FS that both Extranet Lockout and Extranet Smart Lockout need configured to enable this feature: 
-- **EnableExtranetLockout &lt;Boolean&gt;** set this Boolean value to be True if you want to enable Extranet Lockout.
-- **ExtranetLockoutThreshold &lt;Integer&gt;** this defines the maximum number of bad password attempts. Once the threshold is reached, AD FS will immediately rejects the requests from extranet without attempting to contact the domain controller for authentication, no matter whether password is good or bad, until the extranet observation window is passed. This means the value of **badPwdCount** attribute of an AD account will not increase while the account is soft-locked out.
-- **ExtranetObservationWindow &lt;TimeSpan&gt;** this determines for how long the user account will be soft-locked out. AD FS will start to perform username and password authentication again when the window is passed. AD FS uses the AD attribute badPasswordTime as the reference for determining whether the extranet observation window has passed or not. The window has passed if current time > badPasswordTime + ExtranetObservationWindow.
+## Lockout Settings
+Extranet smart lockout consists of a set of new capabilities governed by new and existing AD FS properties.
 
+### Extranet Lockout Enabled
+Extranet smart lockout uses the same AD FS property that previously was used just to control “soft” extranet lockout.  The property is called ExtranetLockoutEnabled and can be viewed via Get-AdfsProperties.
 
-
-
-> [!NOTE]
-> AD FS extranet lockout functions independently from the AD lockout policies. However, we strongly recommend that you set the **ExtranetLockoutThreshold** parameter value to a value that is less than the AD account lockout threshold. Failing to do so would result in AD FS being unable to protect accounts from being locked out in Active Directory. 
-
-An example of enabling the Extranet Lockout feature with a maximum of 15 number of bad password attempts and 30 mins soft-lockout duration is as follows:
-
-```powershell
-Set-AdfsProperties -EnableExtranetLockout $true -ExtranetLockoutThreshold 15 -ExtranetObservationWindow (new-timespan -Minutes 30)
-```
-
-These settings will apply to all domains that the AD FS service can authenticate. The way that it works is that when AD FS receives an authentication request, it will access the Primary Domain Controller (PDC) through an LDAP call and perform a lookup for the **badPwdCount** attribute for the user on the PDC. If AD FS finds the value of **badPwdCount** >= ExtranetLockoutThreshold setting and the time defined in the Extranet Observation Window has not passed yet, AD FS will reject the request immediately, which means no matter whether the user enters a good or bad password from extranet, the logon will fail because AD FS does not send the credentials to AD. AD FS does not maintain any state with regard to **badPwdCount** or locked out user accounts. AD FS uses AD for all state tracking. 
-
-> [!warning]
-> When AD FS Extranet lockout on Server 2012 R2 is enabled all authentication requests through the WAP are validated by AD FS on the PDC. When the PDC is unavailable, users will be unable to authenticate from the extranet.
-
-Server 2016 offers an the following additional parameters that allows AD FS to fallback to another domain controller when the PDC is unavailable and enable extranet smart lockout.
-
-- **ExtranetLockoutRequirePDC &lt;Boolean&gt;** - When enabled: extranet lockout requires a primary domain controller (PDC). When disabled: extranet lockout will fallback to another domain controller in case the PDC is unavailable.
-
-    You can use the following Windows PowerShell command to configure the AD FS extranet lockout on Server 2016:
-
-    ```powershell
-    Set-AdfsProperties -EnableExtranetLockout $true -ExtranetLockoutThreshold 15 -ExtranetObservationWindow (new-timespan -Minutes 30) -ExtranetLockoutRequirePDC $false
-    ```
-### New for Extranet Smart Lockout 
-- **ExtranetLockoutMode** was added to `Set-AdfProperties` to support ESL.  If you are using the basic extranet lockout protection, then you do not need to use this parameter.  If you have not installed the lasted update for Windows Server 2016 as of March 2018, this parameter will not be available.  It contains the following 3 values which correspond to the different modes that ESL can run under:
+### Extranet Smart Lockout Mode
+A new AD FS property called ExtranetLockoutMode has been added to control smart vs “soft” lockout behavior.  It can be set via Set-AdfsProperties and contains 3 values:
 
     - **ADPasswordCounter** – This is the legacy ADFS “extranet soft lockout” mode which does not differentiate based on location.  This is the default value.
 
     - **ADFSSmartLockoutLogOnly** – This is Extranet Smart Lockout, but instead of rejecting authentication requests, AD FS will only write admin and audit events.
 
-    - **ADFSSmartLockoutEnforce** - This is Extranet Smart 
-Lockout with full support for blocking unfamiliar requests when the thresholds are reached.
+    - **ADFSSmartLockoutEnforce** - This is Extranet Smart Lockout with full support for blocking unfamiliar requests when the thresholds are reached.
 
-#### Set Lockout Mode
-We recommend that you first set the lockout provider to log only by running the following cmdlet:
+### Lockout Threshold and Observation Window
+Smart lockout uses the same two AD FS properties for observation window and lockout threshold as soft lockout: ExtranetObservationWindow and ExtranetLockoutThreshold.
+
+- **ExtranetLockoutThreshold &lt;Integer&gt;** this defines the maximum number of bad password attempts. Once the threshold is reached, in ADFSSmartLockoutEnforce mode AD FS will reject requests from the extranet until the  observation window has passed.  In ADFSSmartLockoutLogOnly mode, AD FS will write log entries only.  
+- **ExtranetObservationWindow &lt;TimeSpan&gt;** this determines for how long username and password requests from unfamiliar locations will be locked out. AD FS will start to perform username and password authentication again when the window is passed.
+
+> [!NOTE]
+> AD FS extranet lockout functions independently from the AD lockout policies. We recommend that you set the **ExtranetLockoutThreshold** parameter value to a value that is less than the AD account lockout threshold. Failing to do so would result in AD FS being unable to protect accounts from being locked out in Active Directory. 
+
+### Primary Domain Controller Requirement
+AD FS 2016 offers a parameter that allows fallback to another domain controller when the PDC is unavailable.
+
+- **ExtranetLockoutRequirePDC &lt;Boolean&gt;** When enabled, extranet lockout requires a primary domain controller (PDC). When disabled, extranet lockout will fallback to another domain controller in case the PDC is unavailable.
+
+   The following example shows the cmdlet to enable lockout with the PDC requirement disabled:
+
+    ```powershell
+    Set-AdfsProperties -EnableExtranetLockout $true -ExtranetLockoutThreshold 15 -ExtranetObservationWindow (new-timespan -Minutes 30) -ExtranetLockoutRequirePDC $false
+    ```
+
+## Configuring AD FS 2016 with Smart Lockout
+
+### Set Lockout Mode to Log Only
+We recommend that you first set the lockout behavior to log only by running the following cmdlet:
 
  ```powershell
 PS C:\>Set-AdfsProperties -ExtranetLockoutMode AdfsSmartlockoutLogOnly
  ```
 
-In this mode, AD FS populates users familiar location information and writes security audit events, but does not block any requests due to lockout.  This mode is used to validate that smart lockout is running and to enable AD FS to “learn” familiar locations for users before enabling “enforce” mode.
+In this mode, AD FS populates users familiar location information and writes security audit events, but does not block any requests.  This mode is used to validate that smart lockout is running and to enable AD FS to “learn” familiar locations for users before enabling “enforce” mode.
+As AD FS learns, it stores login activity per user (whether in log only mode or enforce mode). 
 
 >[!NOTE]
 >Configuring `ExtranetLockoutMode` to `AdfsSmartlockoutLogOnly` will cause the legacy AD FS “extranet soft lockout” behavior to no longer be in effect, even if the `EnableExtranetLockout` property is set to True.  This means that users who exceed lockout thresholds from familiar or unfamiliar IP addresses will not be locked out.  This is intended to be a temporary state so that the system can learn login behavior prior to re-introducing lockout enforcement with the new smart lockout behavior.
@@ -118,16 +113,14 @@ For the new mode to take effect, restart the AD FS service on all nodes in the f
   ``` powershell
 PS C:\>Restart-service adfssrv
   ```
-#### Enable lockout
 Once the mode is configured, you can enable smart lockout using the `EnableExtranetLockout` parameter
 
-Example: Enable lockout
 
 ``` powershell
 PS C:\>Set-AdfsProperties -EnableExtranetLockout $true
 ```
 
-This property is used to disable lockout as well.
+Note that you can use the same cmdlet to disable lockout
 
 Example: Disable lockout
 
@@ -135,11 +128,12 @@ Example: Disable lockout
 PS C:\>Set-AdfsProperties -EnableExtranetLockout $false
 ```
 
-#### Observe Audit Events
+### Observing Audit Events
 AD FS will write extranet lockout events to the security audit log:
 -	When a user is locked out (reaches the lockout threshold for unsuccessful login attempts)
 -	When AD FS receives a login attempt for a user who is already in lockout state
-While in log only mode, check the security audit log for lockout events.  Consider generating some lockouts with a test user account and find the corresponding events.  For any events found, you can check the user state using the Get-ADFSAccountActivity cmdlet to determine if the lockout occurred from familiar or unfamiliar IP addresses, and to double check the list of familiar IP addresses for that user.
+
+While in log only mode, you can check the security audit log for lockout events.  For any events found, you can check the user state using the Get-ADFSAccountActivity cmdlet to determine if the lockout occurred from familiar or unfamiliar IP addresses, and to double check the list of familiar IP addresses for that user.
 
 Example event:
 ```
@@ -242,10 +236,8 @@ Event Xml:
 </Event>
 ```
 
-#### Observe User Account Activity
-When smart lockout is enabled, AD FS learns and stores login activity per user (whether in log only mode or enforce mode). AD FS provides powershell cmdlets to view and manage user account activity data.  
-
-To read the current account activity for a user account.  Use the cmdlet below
+### Observing User Activity
+AD FS provides powershell cmdlets to view and manage user account activity data.  To read the current account activity for a user account.  Use the cmdlet below
 
 ``` powershell
 PS C:\>Get-ADFSAccountActivity user@contoso.com
@@ -266,6 +258,7 @@ FamiliarIps            : {}
 The current activity output contains the following data:
 
 **Identifier**: this is the username
+
 **BadPwdCountFamiliar**: this is the current count of incorrect password login attempts from IP addresses that were on the list of “FamiliarIps” at the time of the attempt
 
 **BadPwdCountUnknown**: this is the current count of incorrect password login attempts from IP addresses that were not on the list of “FamiliarIps” at the time of the attempt
@@ -280,7 +273,7 @@ The current activity output contains the following data:
 FamiliarIps: this is the current list of familiar IP addresses for the user
 
 #### Adjust threshold and window
-Once you have been running in log only mode for a sufficient amount of time for AD FS to learn login locations and to observe any lockout activity, you may wish to adjust the threshold or observation window from the default settings.  This is done using `Set-AdfsProperties` as in the examples below:
+Once you have been running in log only mode for a sufficient amount of time for AD FS to learn login locations, you may wish to adjust the threshold or observation window from the default settings.  This is done using `Set-AdfsProperties` as in the examples below:
 
 The observation window is set using `ExtranetObservationWindow`:
 
@@ -300,7 +293,7 @@ Example:
 PS C:\>Set-AdfsProperties -ExtranetLockoutThreshold 10
 ```
 
-#### Enable enforce mode
+### Enable enforce mode
 Once you have been running in log only mode for sufficient time for AD FS to learn login locations and to observe any lockout activity, and once you are comfortable with the lockout threshold and observation window, smart lockout can be moved to “enforce” mode using the PSH cmdlet below:
 
 ``` powershell
@@ -313,38 +306,6 @@ For the new mode to take effect, restart the AD FS service on all nodes in the f
 PS C:\>Restart-service adfssrv
 ```
 
-
-## Working with the Active Directory Lockout Policy
-The Extranet Lockout feature in AD FS works independently from the AD lockout policy. However, you do need to make sure the settings for the Extranet Lockout is properly configured so that it can serve its security purpose with the AD lockout policy.
-Let's take a look at AD lockout policy first. There are three settings regarding lockout policy in AD:
-- **Account Lockout Threshold**: this setting is similar to the ExtranetLockoutThreshold setting in AD FS. It determines the number of failed logon attempts that will cause a user account to be locked out. In order to protect your user accounts from a malicious account lockout attack, you want to set the value of ExtranetLockoutThreshold in AD FS &lt; the Account Lockout Threshold value in AD
-- **Account Lockout Duration**: this setting determines for how long a user account is locked out. This setting does not matter much in this conversation as Extranet Lockout should always happen before AD lockout happens if configured properly
-- **Reset Account Lockout Counter After**: this setting determines how much time must elapse from user's last logon failure before **badPwdCount** is reset to 0. In order for Extranet Lockout feature in AD FS to work well with AD lockout policy, you want to make sure the value of ExtranetObservationWindow in AD FS &gt; the Reset Account Lockout Counter After value in AD. The examples below will explain why.  
-
-Let's take a look at two examples and see how **badPwdCount** changes over time based on different settings and states. Let's assume in both examples **Account Lockout Threshold** = 4 and **ExtranetLockoutThreshold** = 2. The **red** arrow represents bad password attempt, the **green** arrow represents a good password attempt. In example #1, **ExtranetObservationWindow** &gt; **Reset Account Lockout Counter After**. In example #2, **ExtranetObservationWindow** &lt; **Reset Account Lockout Counter After**. 
-
-### Example 1
-![Example1](media/Configure-AD-FS-Extranet-Lockout-Protection/one.png)
-
-### Example 2
-![Example1](media/Configure-AD-FS-Extranet-Lockout-Protection/two.png)
-
-As you can see from the above, there are two conditions when **badPwdCount** will be reset to 0. One is when there is a successful logon. The other is when it is time to reset this counter as defined in **Reset Account Lockout Counter After** setting. When **Reset Account Lockout Counter After** &lt; **ExtranetObservationWindow**, an account does not have any risk of being locked out by AD. However, if **Reset Account Lockout Counter After** &gt; **ExtranetObservationWindow**, there is a chance that an account may be locked out by AD but in a "delayed fashion". It may take a while to get an account locked out by AD depending on your configuration as AD FS will only allow one bad password attempt during its observation window until **badPwdCount** reaches **Account Lockout Threshold**.
-
-For more information, see [Configuring Account Lockout](https://blogs.technet.microsoft.com/secguide/2014/08/13/configuring-account-lockout/). 
-
-## Known Issues
-There is a known issue where the AD user account cannot authentication with AD FS because the **badPwdCount** attribute is not replicated to the domain controller that ADFS is querying. See [2971171](https://support.microsoft.com/help/2971171/adfs-authentication-issue-for-active-directory-users-when-extranet-loc) for more details. You can find all AD FS QFEs that have been released so far [here](../deployment/updates-for-active-directory-federation-services-ad-fs.md).
-
-## Key points to remember
-- The Extranet Lockout feature only works for the **extranet scenario** where the authentication requests come through the Web Application Proxy
-- The Extranet Lockout feature only applies to **username & password authentication**
-- AD FS does not keep any track of **badPwdCount** or users that are soft-locked out. AD FS uses AD for all state tracking
-- AD FS performs a lookup for the **badPwdCount** attribute through LDAP call for the user on the PDC for every authentication attempt  
-- AD FS older than 2016 will fail if it cannot access the PDC. AD FS 2016 introduced improvements that will allow AD FS to fall back to other domain controllers in case of the PDC is not available. 
-- AD FS will allow authentication requests from extranet if badPwdCount < ExtranetLockoutThreshold 
-- If **badPwdCount** >= **ExtranetLockoutThreshold** AND **badPasswordTime** + **ExtranetObservationWindow** < Current time, AD FS will reject authentication requests from extranet
-- To avoid malicious account lockout, you should make sure **ExtranetLockoutThreshold** < **Account Lockout Threshold** AND **ExtranetObservationWindow** > **Reset Account Lockout Counter**
 
 ## Manage User Account Activity
 AD FS provides 3 cmdlets to manage user account activity data.  These cmdlets automatically connect to the node in the farm which holds the master role (though this behavior can be overridden by passing the -Server parameter)
@@ -429,7 +390,7 @@ XML: <?xml version="1.0" encoding="utf-16"?>
 
 ```
 
-### Banned IP addresses
+## Banned IP addresses
 In addition to the extranet smart lockout capabilities, the AD FS June 2018 update enables you to configure a set of IP addresses globally in AD FS, so that requests coming from those IP addresses, or that have those IP addresses in the **x-forwarded-for** or **x-ms-forwarded-client-ip** headers, will be blocked by AD FS.
 
 ##### Adding banned IPs
@@ -465,52 +426,6 @@ Example output:
 ```
 BannedIpList                   : {1.2.3.4, ::3,1.2.3.4/16}
 ```
-
-## Uninstall ESL
-SQL farms can uninstall the patch using the Settings app with no issues.
-
-WID farms must follow a set of steps due to the updated WID database verification binary.
-
-1.	Run uninstall psh script which stops the service and drops the account activity table
-
-```
-Stop-Service adfssrv -ErrorAction Stop 
-
-$doc = new-object Xml
-$doc.Load("$env:windir\ADFS\Microsoft.IdentityServer.Servicehost.exe.config")
-$connString = $doc.configuration.'microsoft.identityServer.service'.policystore.connectionString
-
-if ( -not $connString -like "*##wid*" )
-{
-    Write-Error "SQL installs do not require DB updates, skipping DB table drop"
-}
-else
-{
-	$connString = "Data Source=np:\\.\pipe\microsoft##wid\tsql\query;Initial Catalog=AdfsArtifactStore;Integrated Security=True"
-	stop-service adfssrv
-	$cli = new-object System.Data.SqlClient.SqlConnection
-	$cli.ConnectionString = $connString
-	$cli.Open()
-	try
-	{    
-        $cmd = new-object System.Data.SqlClient.SqlCommand
-        $cmd.CommandText = "IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[ArtifactStore].[AccountActivity]') AND type in (N'U')) DROP TABLE [ArtifactStore].[AccountActivity]"
-        $cmd.Connection = $cli
-        $cmd.ExecuteNonQuery() 
-    }
-    finally
-    {
-        $cli.CLose()
-    }
-
-	write-warning "Finish removing the patch using the Settings app and then restart the complete to complete the uninstall"
-} 
-
-```
-
-2.	Uninstall patch using settings app
-3.	Restart machine
-
 
 
 
