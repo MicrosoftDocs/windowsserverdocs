@@ -12,7 +12,7 @@ ms.technology: identity-adfs
 
 # AD FS Extranet Lockout and Extranet Smart Lockout
 
->Applies To: Windows Server 2016, Windows Server 2012 R2
+>Applies To: Windows Server 2016
 
 In AD FS on Windows Server 2012 R2, we introduced a security feature called **Extranet Soft Lockout**.  With this feature, AD FS stops authenticating users from the extranet for a period of time.  This prevents your user accounts from being locked out in Active Directory. In addition to protecting your users from an AD account lockout, AD FS extranet lockout also protects against brute force password guessing attacks.
 
