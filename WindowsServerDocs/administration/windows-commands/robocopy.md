@@ -1,6 +1,6 @@
 ---
 title: robocopy
-description: "Windows Commands topic for **** - "
+description: Learn how to use the robocopy command in Windows and Windows Server to copy files
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -12,7 +12,7 @@ ms.assetid: d4c6e8e9-fcb3-4a4a-9d04-2d8c367b6354
 author: coreyp-at-msft
 ms.author: coreyp
 manager: lizapo
-ms.date: 05/21/2018
+ms.date: 06/18/2018
 ---
 
 # robocopy
@@ -43,13 +43,13 @@ robocopy <Source> <Destination> [<File>[ ...]] [<Options>]
 |/s|Copies subdirectories. Note that this option excludes empty directories.|
 |/e|Copies subdirectories. Note that this option includes empty directories. For additional information, see [Remarks](#BKMK_remarks).|
 |/lev:\<N>|Copies only the top *N* levels of the source directory tree.|
-|/z|Copies files in Restart mode.|
+|/z|Copies files in restartable mode.|
 |/b|Copies files in Backup mode.|
-|/zb|Uses Restart mode. If access is denied, this option uses Backup mode.|
+|/zb|Uses restartable mode. If access is denied, this option uses Backup mode.|
 |/efsraw|Copies all encrypted files in EFS RAW mode.|
 |/copy:\<CopyFlags>|Specifies the file properties to be copied. The following are the valid values for this option:</br>**D** Data</br>**A** Attributes</br>**T** Time stamps</br>**S** NTFS access control list (ACL)</br>**O** Owner information</br>**U** Auditing information</br>The default value for **CopyFlags** is **DAT** (data, attributes, and time stamps).|
-|/dcopy:T|Copies directory time stamps.|
-|/sec|Copies files with security (equivalent to **/copy:DAT**).|
+|/dcopy:\<copyflags\>|Defines what to copy for directories. Default is DA. Options are D = data, A = attributes, and T = timestamps.|
+|/sec|Copies files with security (equivalent to **/copy:DATS**).|
 |/copyall|Copies all file information (equivalent to **/copy:DATSOU**).|
 |/nocopy|Copies no file information (useful with **/purge**).|
 |/secfix|Fixes file security on all files, even skipped ones.|
@@ -84,7 +84,7 @@ robocopy <Source> <Destination> [<File>[ ...]] [<Options>]
 |/xa:[RASHCNETO]|Excludes files for which any of the specified attributes are set.|
 |/xf \<FileName>[ ...]|Excludes files that match the specified names or paths. Note that *FileName* can include wildcard characters (**&#42;** and **?**).|
 |/xd \<Directory>[ ...]|Excludes directories that match the specified names and paths.|
-|/xct|Excludes changed files.|
+|/xc|Excludes changed files.|
 |/xn|Excludes newer files.|
 |/xo|Excludes older files.|
 |/xx|Excludes extra files and directories.|

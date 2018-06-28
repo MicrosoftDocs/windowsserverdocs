@@ -7,7 +7,7 @@ author: JasonGerend
 ms.author: jgerend 
 ms.technology: storage-failover-clustering 
 ms.date: 04/25/2018
-ms.localizationpriority: low
+ms.localizationpriority: medium
 ---
 # Create a failover cluster
 
@@ -37,11 +37,7 @@ Before you begin, verify the following prerequisites:
     >[!NOTE]
     >You can use the Failover Clustering feature on all editions of Windows Server 2012 R2 and Windows Server 2012. This includes Server Core installations.
 
-<<<<<<< HEAD
-- Review the hardware requirements to make sure that your configuration is supported. For more information, see [Failover Clustering Hardware Requirements and Storage Options](<https://docs.microsoft.com/previous-versions/windows/it-pro/jj612869(v%3dws.11)>).
-=======
 - Review the hardware requirements to make sure that your configuration is supported. For more information, see [Failover Clustering Hardware Requirements and Storage Options](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265970(v=ws.11)>).
->>>>>>> master
 - If you want to add clustered storage during cluster creation, make sure that all servers can access the storage. (You can also add clustered storage after you create the cluster.)
 - Make sure that all servers that you want to add as cluster nodes are joined to the same Active Directory domain.
 - (Optional) Create an organizational unit (OU) and move the computer accounts for the servers that you want to add as cluster nodes into the OU. As a best practice, we recommend that you place failover clusters in their own OU in AD DS. This can help you better control which Group Policy settings or security template settings affect the cluster nodes. By isolating clusters in their own OU, it also helps prevent against accidental deletion of cluster computer objects.

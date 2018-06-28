@@ -7,7 +7,7 @@ author: JasonGerend
 ms.author: jgerend 
 ms.technology: storage 
 ms.date: 04/05/2018
-ms.localizationpriority: low
+ms.localizationpriority: medium
 ---
 # Disable Offline Files on individual redirected folders
 

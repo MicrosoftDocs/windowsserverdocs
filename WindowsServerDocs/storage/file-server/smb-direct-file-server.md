@@ -6,7 +6,7 @@ author: JasonGerend
 ms.author: jgerend 
 ms.technology: storage 
 ms.date: 05/04/2018
-ms.localizationpriority: low
+ms.localizationpriority: medium
 ---
 # Improve performance of a file server with SMB Direct
 

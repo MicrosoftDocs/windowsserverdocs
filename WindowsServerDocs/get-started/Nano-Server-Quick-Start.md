@@ -10,7 +10,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 author: jaimeo
 ms.author: jaimeo
-ms.localizationpriority: low
+ms.localizationpriority: medium
 ---
 # Nano Server Quick Start
 

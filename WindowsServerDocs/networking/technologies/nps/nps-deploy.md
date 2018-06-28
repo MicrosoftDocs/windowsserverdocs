@@ -24,9 +24,9 @@ You can use this topic for information about deploying Network Policy Server.
 
 The Windows Server 2016 Core Network Guide includes a section on planning and installing Network Policy Server \(NPS\), and the technologies presented in the guide serve as prerequisites for deploying NPS in an Active Directory domain. For more information, see the section "Deploy NPS1" in the Windows Server 2016 [Core Network Guide](https://technet.microsoft.com/windows-server-docs/networking/core-network-guide/core-network-guide#BKMK_deployNPS1).
 
-## Deploy NPS Server Certificates for VPN and 802.1X Access
+## Deploy NPS Certificates for VPN and 802.1X Access
 
-If you want to deploy authentication methods like Extensible Authentication Protocol \(EAP\) and Protected EAP that require the use of server certificates on your NPS server, you can deploy NPS server certificates with the guide [Deploy Server Certificates for 802.1X Wired and Wireless Deployments](https://technet.microsoft.com/windows-server-docs/networking/core-network-guide/cncg/server-certs/deploy-server-certificates-for-802.1x-wired-and-wireless-deployments).
+If you want to deploy authentication methods like Extensible Authentication Protocol \(EAP\) and Protected EAP that require the use of server certificates on your NPS, you can deploy NPS certificates with the guide [Deploy Server Certificates for 802.1X Wired and Wireless Deployments](https://technet.microsoft.com/windows-server-docs/networking/core-network-guide/cncg/server-certs/deploy-server-certificates-for-802.1x-wired-and-wireless-deployments).
 
 ## Deploy NPS for 802.1X Wireless Access
 
