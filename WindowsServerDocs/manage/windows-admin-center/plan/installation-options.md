@@ -29,6 +29,10 @@ You can install Windows Admin Center on the following Windows operating systems:
 
 **Gateway service:** Connect to the Windows Admin Center gateway from a client browser on a different machine (i.e. `https://servername`) 
 
+> [!IMPORTANT]
+> You can't use Internet Explorer to manage Windows Admin Center - instead you need to use a [supported browser](../understand/faq.md#which-web-browsers-are-supported-by-windows-admin-center
+).  If you are installing Windows Admin Center on Windows Server, we recommend managing by connecting remotely with Windows 10 and Edge.  Alternatively, you can manage locally on Windows Server if you have installed a supported browser.
+
 ## Supported operating systems: Management
 
 You can use Windows Admin Center to manage the following Windows operating systems:
