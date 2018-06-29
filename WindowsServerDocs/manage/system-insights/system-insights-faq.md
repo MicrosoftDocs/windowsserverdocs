@@ -50,3 +50,4 @@ Each default capability is inexpensive to run. Each capability will take longer 
 - [System Insights overview](system-insights-overview.md)
 - [System Insights capabilities](system-insights-capabilities.md)
 - [Managing System Insights](managing-system-insights.md)
+- [System Insights known issues](system-insights-known-issues.md)

@@ -106,7 +106,7 @@ Using DFS Namespaces on a virtual machine in Microsoft Azure has been tested; ho
 
 - You can’t cluster stand-alone namespaces in Azure virtual machines.
 
-- You can host domain-based namespaces in Azure virtual machines, including environments with Azure Active Directory, though a single namespace can’t encompass both on premise namespace servers and namespace servers hosted in Azure VMs, even when using Active Directory Federation Services.
+- You can host domain-based namespaces in Azure virtual machines, including environments with Azure Active Directory, though a single namespace can’t encompass both on-premises namespace servers and namespace servers hosted in Azure VMs, even when using Active Directory Federation Services.
 
 To learn about how to get started with Azure virtual machines, see [Azure virtual machines documentation](https://docs.microsoft.com/azure/virtual-machines/).
 
