@@ -230,7 +230,7 @@ So for example, an existing cluster is added and it has pre-configured virtual m
 
 In this example, CLUSTER3 was added to the cluster set using Add-ClusterSetMember with the Infrastructure Scale-Out File Server as SOFS-CLUSTER3.  To move the virtual machine configuration and storage, the command is:
 
-        Move-virtual machineStorage -DestinationStoragePath \\SOFS-CLUSTER3\Volume1 -Name MYvirtual machine
+        Move-VMStorage -DestinationStoragePath \\SOFS-CLUSTER3\Volume1 -Name "MYvirtual machine"
 
 Once it completes, you will receive a warning:
 
