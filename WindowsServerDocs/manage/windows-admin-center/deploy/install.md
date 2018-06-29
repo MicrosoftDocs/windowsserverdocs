@@ -32,6 +32,10 @@ You can install Windows Admin Center on the following Windows operating systems:
 
 **Gateway Mode:** Connect to the Windows Admin Center gateway from a client browser on a different machine (for example, `https://servername`)
 
+> [!IMPORTANT]
+> You can't use Internet Explorer to manage Windows Admin Center - instead you need to use a [supported browser](../understand/faq.md#which-web-browsers-are-supported-by-windows-admin-center
+).  If you are installing Windows Admin Center on Windows Server, we recommend managing by connecting remotely with Windows 10 and Edge.  Alternatively, you can manage locally on Windows Server if you have installed a supported browser.
+
 ## Install on Windows 10
 
 When you install Windows Admin Center on Windows 10, it uses port 6516 by default, but you have the option to specify a different port. You can also create a desktop shortcut and let Windows Admin Center manage your TrustedHosts.
@@ -40,9 +44,6 @@ When you install Windows Admin Center on Windows 10, it uses port 6516 by defaul
 > Modifying TrustedHosts is required in a workgroup environment, or when using local administrator credentials in a domain. If you choose to forego this setting, you must [configure TrustedHosts manually](../use/troubleshooting.md#configure-trustedhosts).
 
 When you start Windows Admin Center from the **Start** menu, it opens in your default browser.
-
-> [!IMPORTANT]
-> Internet Explorer is not supported. If Internet Explorer is your default browser, copy the URL from Internet Explorer and paste it into Microsoft Edge.
 
 When you start Windows Admin Center for the first time, you'll see an icon in the notification area of your desktop. Right-click this icon and choose **Open** to open the tool in your default browser, or choose **Exit** to quit the background process.
 
