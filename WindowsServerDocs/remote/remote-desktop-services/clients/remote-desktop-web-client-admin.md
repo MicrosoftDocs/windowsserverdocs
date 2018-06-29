@@ -4,7 +4,7 @@ description: Describes how an admin can set up the Remote Desktop web client.
 ms.prod: windows-server-threshold
 ms.technology: remote-desktop-services
 ms.author: helohr
-ms.date: 05/18/2018
+ms.date: 06/29/2018
 ms.topic: article
 author: Heidilohr
 ms.localizationpriority: medium
@@ -25,9 +25,9 @@ The Remote Desktop web client lets users access your organization's Remote Deskt
 
 Before getting started, keep the following things in mind:
 
-* Make sure your [Remote Desktop deployment](https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds-deploy-infrastructure) has an RD Gateway, an RD Connection Broker, and RD Web Access running on Windows Server 2016.
-* Make sure your deployment is configured for [per-user client access licenses](https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds-client-access-license) (CALs) instead of per-device, otherwise all licenses will be consumed.
-* Install the [Windows 10 KB4025334 update](https://support.microsoft.com/en-us/help/4025334/windows-10-update-kb4025334) on the RD Gateway.
+* Make sure your [Remote Desktop deployment](../rds-deploy-infrastructure.md) has an RD Gateway, an RD Connection Broker, and RD Web Access running on Windows Server 2016 or 2019.
+* Make sure your deployment is configured for [per-user client access licenses](../rds-client-access-license.md) (CALs) instead of per-device, otherwise all licenses will be consumed.
+* Install the [Windows 10 KB4025334 update](https://support.microsoft.com/en-us/help/4025334/windows-10-update-kb4025334) on the RD Gateway. Later cumulative updates may already contains this KB.
 * Make sure public trusted certificates are configured for the RD Gateway and RD Web Access roles.
 * Make sure that any computers your users will connect to are running one of the following OS versions:
     * Windows 7 SP1 or later
@@ -59,7 +59,7 @@ To install the web client for the first time, follow these steps:
     Install-RDWebClientPackage
     ```
     
-1. After that, run this cmdlet with the bracketed value replaced with path of the .cer file that you copied from the RD Broker:
+1. Next, run this cmdlet with the bracketed value replaced with path of the .cer file that you copied from the RD Broker:
     ```PowerShell
     Import-RDWebClientBrokerCert <.cer file path>
     ```
@@ -73,6 +73,12 @@ To install the web client for the first time, follow these steps:
     >[!NOTE]
     >When running the **Publish-RDWebClientPackage** cmdlet, you may see a warning that says per-device CALs are not supported, even if your deployment is configured for per-user CALs. If your deployment uses per-user CALs, you can ignore this warning. We display it to make sure you’re aware of the configuration limitation.
 1. When you're ready for users to acces the web client, just send them the web client URL you created.
+
+>[!NOTE]
+>To see a list of all supported cmdlets for the RDWebClientManagement module, run the following cmdlet in PowerShell:
+>```PowerShell
+>Get-Command -Module RDWebClientManagement
+>```
 
 >[!NOTE]
 >The web client does not support single sign-on at this time. Users will have to reenter the credentials they used to sign in to the client every time they open an app.
@@ -99,12 +105,21 @@ When a new version of the Remote Desktop web client is available, follow these s
 
     This will replace the client for all users when they relaunch the web page.
 
-To see a list of all supported cmdlets for the RDWebClientManagement module, run the following cmdlet in PowerShell:
+## How to uninstall the Remote Desktop web client
 
-```PowerShell
-Get-Command -Module RDWebClientManagement
-```
+To remove all traces of the web client, follow these steps:
+1. On the RD Web Access server, open an elevated PowerShell prompt.
+2. Unpublish the Test and Production clients, uninstall all local packages and remove the web client settings:
+   
+   ```PowerShell
+   Uninstall-RDWebClient
+   ```
 
+3. Uninstall the Remote Desktop web client management PowerShell module:
+
+   ```PowerShell
+   Uninstall-Module -Name RDWebClientManagement
+   ```
 ## Troubleshooting
 
 If a user reports any of the following issues when opening the web client for the first time, the following sections will tell you what to do to fix them.
