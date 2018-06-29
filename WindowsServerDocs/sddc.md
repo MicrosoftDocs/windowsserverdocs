@@ -258,7 +258,7 @@ Windows PowerShell Desired State Configuration is a configuration management pla
 DSC supports  “continuous deployments,” so you can deploy configurations over and over without breaking anything.
 
 -  DSC configurations only apply settings that have changed from the original for faster deployments.
--  DSC can be used on-premise, in a public, or in a private Cloud environment.
+-  DSC can be used on-premises, in a public, or in a private Cloud environment.
 -  You can integrate DSC with any Microsoft or non-Microsoft solution as long as you can execute a PowerShell script on the target system.
 
 ![](media/sddc/learn.png)**[Learn more about PowerShell DSC](https://docs.microsoft.com/en-us/powershell/dsc/overview)**
