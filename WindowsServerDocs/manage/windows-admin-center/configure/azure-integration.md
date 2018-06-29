@@ -24,7 +24,16 @@ Windows Admin Center supports several optional features that integrate with Azur
 
 To allow the Windows Admin Center gateway to communicate with Azure to leverage Azure Active Directory authentication for gateway access, or to create Azure resources on your behalf (for example, to protect VMs managed in Windows Admin Center using Azure Site Recovery), you must first register your Windows Admin Center gateway with Azure. You only need to do this once for your Windows Admin Center gateway - the setting is preserved when you update your gateway to a newer version.
 
-To connect your gateway, you must run the [New-AadApp.ps1 PowerShell script](https://aka.ms/WACAzureConnectScript) (there is also a hyperlink in the Windows Admin Center UI for this download, which is visible wherever you try to use an Azure integration feature for the first time), which creates a web application in Azure AD with the name "SME-*gateway*" and registers the application with the Windows Admin Center gateway. This allows Windows Admin Center to connect to Azure resources like Azure AD on your behalf. You can run the script from any computer that has access to the Windows Admin Center gateway and to Azure, with the Windows Admin Center gateway URL as the `-GatewayEndpoint` parameter. For example,
+To connect your gateway, you must run the [New-AadApp.ps1 PowerShell script](https://aka.ms/WACAzureConnectScript) (there is also a hyperlink in the Windows Admin Center UI for this download, which is visible wherever you try to use an Azure integration feature for the first time), which creates a web application in Azure AD with the name "WindowsAdminCenter-*gateway*" (previous versions of the script create an app with the name "SME-*gateway*") and registers the application with the Windows Admin Center gateway. This allows Windows Admin Center to connect to Azure resources like Azure AD on your behalf. You can run the script from any computer that has access to the Windows Admin Center gateway and to Azure, with the Windows Admin Center gateway URL as the `-GatewayEndpoint` parameter. 
+
+This script requires two Azure PowerShell modules: AzureRm.Resources and AzureAD. If you don't have them installed, run the following commands in an elevated PowerShell console:
+
+```powershell
+    PS C:>Install-Module AzureRM.Resources
+    PS C:>Install-Module AzureAD
+```
+
+Once you have the prerequisite modules installed, you can run the script. For example,
 
 ```powershell
     PS> .\New-AadApp.ps1 -GatewayEndpoint "https://gateway.contoso.com"
@@ -44,13 +53,6 @@ If you have multiple tenants associated with your Azure account, you can use the
 
 ```powershell
     PS> .\New-AadApp.ps1 -GatewayEndpoint "https://gateway.contoso.com" -TenantId "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
-```
-
-This script requires two Azure PowerShell modules: AzureRm.Resources and AzureAD. If you don't have them installed, run the following commands in an elevated PowerShell console:
-
-```powershell
-    PS C:>Install-Module AzureRM.Resources
-    PS C:>Install-Module AzureAD
 ```
 
 After running the script, complete the following steps to grant permissions to the application:
