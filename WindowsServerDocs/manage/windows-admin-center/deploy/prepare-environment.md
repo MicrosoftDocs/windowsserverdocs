@@ -41,14 +41,12 @@ If it is not installed, you can [download and install WMF 5.1](https://www.micro
 
 Windows Admin Center requires PowerShell features that are not included by default in Windows Server 2008 R2. To manage Windows Server 2008 R2 with Windows Admin Center, you will need to install WMF version 5.1 or higher on those servers. 
 
-Windows Server 2008 R2 has PowerShell version 2.0 by default. To update from 2.0, you must:
-1. [Install .NET Framework 4.5.2 or later](https://docs.microsoft.com/en-us/dotnet/framework/install/on-windows-7) before updating Powershell.
-2. [Install Windows Management Framework (WMF) 3.0](https://www.microsoft.com/en-us/download/details.aspx?id=34595), restart server if required.
-3. [Install Windows Management Framework (WMF) 4.0](https://www.microsoft.com/en-us/download/details.aspx?id=40855), restart server if required.
-4. [Install Windows Management Framework (WMF) 5.1](https://www.microsoft.com/en-us/download/details.aspx?id=54616), restart server if required.
+Ensure that [.NET Framework 4.5.2 or later](https://docs.microsoft.com/en-us/dotnet/framework/install/on-windows-7) is already installed on your computer.
 
 Type `$PSVersiontable` in PowerShell to verify that WMF is installed,
 and that the version is 5.1 or higher.
+
+If it is not installed, you can [download and install WMF 5.1](https://www.microsoft.com/en-us/download/details.aspx?id=54616).
 
 Run `Enable-PSRemoting –force` in a PowerShell console to enable Powershell remote connection. 
 
