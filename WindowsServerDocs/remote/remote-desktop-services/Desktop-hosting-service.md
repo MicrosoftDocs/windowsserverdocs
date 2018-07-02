@@ -49,7 +49,7 @@ A highly-available SQL database is used by the Remote Desktop Connection Broker 
 
 There are multiple ways to deploy an SQL database:
 
-1. Create an Azure SQL Database in the tenant's environment. This provides you with the functionality of a redundant SQL database without you having to manage the servers themselves. This also allows you to pay for what you consume, instead of investing in infrastructure.
+1. Create an Azure SQL Database in the tenant's environment. This provides you with the functionality of a redundant SQL database without you having to manage the servers themselves. This also allows you to pay for what you consume instead of investing in infrastructure.
 2. Create an SQL Server AlwaysOn cluster. This allows you to leverage existing SQL Server infrastructure and gives you complete control over the SQL Server instances.
 
 For more information about how to set up a highly-available SQL database infrastructure, see the following articles:
