@@ -53,7 +53,7 @@ To deploy Remote Access, you must install the Remote Access role on a server in 
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
 ```  
-Install-WindowsFeature RemoteAccess -IncludeManagementTools  
+Install-WindowsFeature RemoteAccess-IncludeManagementTools  
 ```  
   
 ## Configure DirectAccess with the Getting Started Wizard  
