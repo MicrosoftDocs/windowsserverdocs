@@ -43,7 +43,7 @@ For more information, see the following articles:
 * [Desktop Hosting Reference Architecture Guide for Windows Server 2012 R2](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal)
 * [Create a site-to-site connection in the Azure portal](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal)
 
-## SQL Database
+## SQL database
 
 A highly-available SQL database is used by the Remote Desktop Connection Broker to store deployment information, such as the mapping of current users’ connections to the host servers.
 
