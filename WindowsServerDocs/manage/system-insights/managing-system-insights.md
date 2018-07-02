@@ -1,14 +1,9 @@
 ---
 title: Managing System Insights
-description: "Managing System Insights"
-ms.custom: na
+description: System Insights brings local predictive analytics capabilities to Windows Server. These predictive capabilities, each backed by a machine-learning model, locally analyze Windows Server system data, such as performance counters and events, providing  predictions that help you reduce the operational expenses associated with reactively managing your Windows Server instances.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: system-insights
-ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 
 author: gawatu
 ms.author: gawatu
 manager: mallikarjun.chadalapaka
