@@ -167,7 +167,7 @@ If you are using a static IP Address scheme, you must include *-StaticAddress x.
 
 10. Configure the cross-cluster virtual machine live migration authentication type to Kerberos on each node in the Cluster Set.
 
-        foreach($h in $hosts){ Set-virtual machineHost -VirtualMachineMigrationAuthenticationType Kerberos -ComputerName $h }
+        foreach($h in $hosts){ Set-VMHost -VirtualMachineMigrationAuthenticationType Kerberos -ComputerName $h }
 
 11. Add the management cluster to the local administrators group on each node in the cluster set.
 
@@ -192,14 +192,14 @@ The below commands will both identify the optimal cluster and deploy the virtual
         # Identify the optimal node to create a new virtual machine
         $memoryinMB=4096
         $vpcount = 1
-        $targetnode = Get-ClusterSetOptimalNodeForVM -CimSession CSMASTER -VMMemory $memoryinMB -VMVirtualCoreCount $vpcount -virtual machineCpuReservation 10
+        $targetnode = Get-ClusterSetOptimalNodeForVM -CimSession CSMASTER -VMMemory $memoryinMB -VMVirtualCoreCount $vpcount -VMCpuReservation 10
         $secure_string_pwd = convertto-securestring "<password>" -asplaintext -force
         $cred = new-object -typename System.Management.Automation.PSCredential ("<domain\account>",$secure_string_pwd)
 
         # Deploy the virtual machine on the optimal node
         Invoke-Command -ComputerName $targetnode.name -scriptblock { param([String]$storagepath); New-VM CSVM1 -MemoryStartupBytes 3072MB -path $storagepath -NewVHDPath CSVM.vhdx -NewVHDSizeBytes 4194304 } -ArgumentList @("\\SOFS-CLUSTER1\VOLUME1") -Credential $cred | Out-Null
-        Start-virtual machine CSVM1 -ComputerName $targetnode.name | Out-Null
-        Get-virtual machine CSVM1 -ComputerName $targetnode.name | fl State, ComputerName
+        Start-VM CSVM1 -ComputerName $targetnode.name | Out-Null
+        Get-VM CSVM1 -ComputerName $targetnode.name | fl State, ComputerName
 
 When it completes, you will be given the information about the virtual machine and where it was placed.  In the above example, it would show as:
 
@@ -293,11 +293,11 @@ When creating new virtual machines, you would then need to use the -Availability
         $memoryinMB=4096
         $vpcount = 1
         $av = Get-ClusterSetAvailabilitySet -Name CSMASTER-AS -CimSession CSMASTER
-        $targetnode = Get-ClusterSetOptimalNodeForVM -CimSession CSMASTER -VMMemory $memoryinMB -VMVirtualCoreCount $vpcount -virtual machineCpuReservation 10 -AvailabilitySet $av
+        $targetnode = Get-ClusterSetOptimalNodeForVM -CimSession CSMASTER -VMMemory $memoryinMB -VMVirtualCoreCount $vpcount -VMCpuReservation 10 -AvailabilitySet $av
         $secure_string_pwd = convertto-securestring "<password>" -asplaintext -force
         $cred = new-object -typename System.Management.Automation.PSCredential ("<domain\account>",$secure_string_pwd)
 
-Removing a cluster from cluster sets due to various life cycles. There are times when a cluster needs to be removed from a cluster set. As a best practice, all cluster set virtual machines should be moved out of the cluster. This can be accomplished using the **Move-ClusterSetvirtualMachine** and **Move-VMStorage** commands.
+Removing a cluster from cluster sets due to various life cycles. There are times when a cluster needs to be removed from a cluster set. As a best practice, all cluster set virtual machines should be moved out of the cluster. This can be accomplished using the **Move-ClusterSetVM** and **Move-VMStorage** commands.
 
 However, if the virtual machines will not be moved as well, cluster sets runs a series of actions to provide an intuitive outcome to the administrator.  When the cluster is removed from the set, all remaining cluster set virtual machines hosted on the cluster being removed will simply become highly available virtual machines bound to that cluster, assuming they have access to their storage.  Cluster sets will also automatically update its inventory by:
 
