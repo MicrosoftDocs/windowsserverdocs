@@ -97,9 +97,13 @@ The following core best practices are common to all AD FS installations where yo
   
     -   If you revise the path to the log file, be sure to specify an absolute path for the log file location, which should be outside of the Web host virtual root (vroot) public directory to prevent it from being accessed by an external party using a Web browser.  
 
--   **AD FS Extranet Lockout Protection**  
+-   **AD FS Extranet Soft Lockout and AD FS Extranet Smart Lockout Protection**  
 	
-	In case of an attack in the form of authentication requests with invalid(bad) passwords that come through the Web Application Proxy, AD FS extranet lockout enables you to protect your users from an AD FS account lockout. In addition to protecting your users from an AD FS account lockout, AD FS extranet lockout also protects against brute force password guessing attacks.  For more information see [AD FS Extranet Lockout Protection](../../ad-fs/operations/Configure-AD-FS-Extranet-Lockout-Protection.md).  
+	In case of an attack in the form of authentication requests with invalid(bad) passwords that come through the Web Application Proxy, AD FS extranet lockout enables you to protect your users from an AD FS account lockout. In addition to protecting your users from an AD FS account lockout, AD FS extranet lockout also protects against brute force password guessing attacks.  
+    
+    For Extranet Soft Lockout for AD FS on Windows Server 2012 R2 see [AD FS Extranet Soft Lockout Protection](../../ad-fs/operations/Configure-AD-FS-Extranet-Soft-Lockout-Protection.md).  
+
+	 For Extranet Smart Lockout for AD FS on Windows Server 2016 see [AD FS Extranet Smart Lockout Protection](../../ad-fs/operations/Configure-AD-FS-Extranet-Smart-Lockout-Protection.md).  
   
 ## SQL Server–specific security best practices for AD FS  
 The following security best practices are specific to the use of Microsoft SQL Server® or Windows Internal Database (WID) when these database technologies are used to manage data in AD FS design and deployment.  

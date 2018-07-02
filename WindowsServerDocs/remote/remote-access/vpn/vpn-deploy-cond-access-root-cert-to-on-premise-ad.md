@@ -1,5 +1,5 @@
 ---
-title: Deploy Conditional Access root certificates to on-premise AD
+title: Deploy Conditional Access root certificates to on-premises AD
 description: ''
 services: active-directory
 ms.prod: windows-server-threshold
@@ -19,7 +19,7 @@ ms.reviewer: deverette
 ---
 
 
-# Step 7.4. Deploy conditional access root certificates to on-premise AD
+# Step 7.4. Deploy conditional access root certificates to on-premises AD
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
