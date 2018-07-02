@@ -43,7 +43,9 @@ You'll need to install matching digital certificates on both the RD Connection B
 
 You can install the Windows Server 2016 RD Connection Broker on the same virtual machine as AD DS to reduce cost. If you need to scale out to more users, you can also add additional RD Connection Broker virtual machines in the same availability set to create an RD Connection Broker cluster.
 
-Before you can create an RD Connection Broker cluster, you must either deploy an Azure SQL Database in the tenant's environment or create an SQL Server AlwaysOn Availability Group. For more information, see the following articles:
+Before you can create an RD Connection Broker cluster, you must either deploy an Azure SQL Database in the tenant's environment or create an SQL Server AlwaysOn Availability Group.
+
+For more information, see the following articles:
 
 * [Add the RD Connection Broker server to the deployment and configure high availability](rds-connection-broker-cluster.md)
 * [Desktop hosting service: SQL database](desktop-hosting-service.md#sql-database)
