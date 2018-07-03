@@ -4,7 +4,7 @@ description: Describes the components of a desktop hosting service.
 ms.prod: windows-server-threshold
 ms.technology: remote-desktop-services
 ms.author: helohr
-ms.date: 06/01/2018
+ms.date: 07/03/2018
 ms.topic: article
 author: heidilohr
 manager: elizapo
@@ -48,7 +48,7 @@ Before you can create an RD Connection Broker cluster, you must either deploy an
 For more information, see the following articles:
 
 * [Add the RD Connection Broker server to the deployment and configure high availability](rds-connection-broker-cluster.md)
-* [Desktop hosting service: SQL database](desktop-hosting-service.md#sql-database)
+* [SQL database](desktop-hosting-service.md#sql-database) in Desktop hosting service.
 
 ## Remote Desktop Gateway
 
