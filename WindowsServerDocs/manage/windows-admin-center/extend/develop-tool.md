@@ -24,8 +24,7 @@ When a tool extension is loaded, it can execute WMI calls or PowerShell scripts 
 ## Follow these steps to create a tool extension
 
 - [Prepare](prepare-development-environment.md) your development environment
-    - [Clone](prepare-development-environment.md#clone-extension-template) the extension template 
-    - [Prepare](prepare-development-environment.md#prepare-extension-template-for-use) the extension template to use as your project
+    - [Create](prepare-development-environment.md#create-new-extension-with-the-windows-admin-center-cli) an extension with the Windows Admin Center CLI
 - Add your content to the project
 
 ## Example projects
