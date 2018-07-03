@@ -23,9 +23,8 @@ The following sections describe Azure Infrastructure Services.
 ## Azure portal
 
 After the provider creates an Azure subscription, the Azure portal can be used to manually create each tenant's environment. This process can also be automated using PowerShell scripts.  
-  
-Additional information:  
-[Microsoft Azure](https://www.azure.microsoft.com)  
+
+For more information, visit he [Microsoft Azure](https://www.azure.microsoft.com) website.
   
 ## Azure Load Balancer
 
@@ -42,7 +41,7 @@ This Azure Desktop Hosting Reference Architecture Guide is designed to provide a
 - The RD Web Access site URL, name, and certificates must be unique and recognizable to each tenant to prevent spoofing attacks.  
 - During the normal operation of the desktop hosting service, all public IP addresses should be deleted for all virtual machines except the RD Web and RD Gateway virtual machine that lets users securely connect to the tenant's desktop hosting cloud service. Public IP addresses may be temporarily added when necessary for management tasks, but they should always be deleted afterwards.  
   
-See the following articles for more information:
+For more information, see the following articles:
 
 - [Security and protection](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831778(v=ws.11))  
 - [Security best practices for IIS 8](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj635855(v=ws.11))  
@@ -58,7 +57,7 @@ It's important to consider the constraints of Microsoft Azure Infrastructure Ser
 - The physical computer resources in the Azure data center are virtualized by using Hyper-V. Hyper-V hosts are not configured in host clusters, so the availability of the virtual machines is dependent on the availability of the individual servers used in the Azure infrastructure. To provide higher availability, multiple instances of each role service virtual machine can be created in an availability set, then guest clustering can be implemented within the virtual machines.  
 - In a typical storage configuration, a service provider will have a single storage account with multiple containers (for example, one for each tenant), and multiple disks within each container. However, there is a limit to the total storage and performance that can be achieved for a single storage account. For service providers that support large numbers of tenants or tenants with high storage capacity or performance requirements, the service provider may need to create multiple storage accounts.  
   
-See the following articles for more information:
+For more information, see the following articles:
 
 - [Sizes for Cloud Services](https://docs.microsoft.com/azure/cloud-services/cloud-services-sizes-specs)  
 - [Microsoft Azure virtual machine pricing details](https://azure.microsoft.com/pricing/details/virtual-machines/)  
