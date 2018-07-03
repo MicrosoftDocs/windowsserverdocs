@@ -5,13 +5,13 @@ ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 05/17/2018
+ms.date: 07/03/2018
 Keywords: Storage Spaces Direct
 ms.localizationpriority: medium
 ---
 # Performance history for Storage Spaces Direct
 
-> Applies To: Windows Server Insider Preview build 17666 and later
+> Applies To: Windows Server Insider Preview build 17692 and later
 
 Performance history is a new feature that gives [Storage Spaces Direct](storage-spaces-direct-overview.md) administrators easy access to historical compute, memory, network, and storage measurements across host servers, drives, volumes, virtual machines, and more. Performance history is collected automatically and stored on the cluster for up to one year.
 
@@ -175,14 +175,24 @@ If you have already enabled Storage Spaces Direct, an upcoming Insider Preview b
 
 ### The cmdlet doesn't work
 
-An error message like "*The term 'Get-ClusterPerf' is not recognized as the name of a cmdlet*" means the feature is not available or installed. Verify that you have Windows Server Insider Preview or later and that you're running Storage Spaces Direct.
+An error message like "*The term 'Get-ClusterPerf' is not recognized as the name of a cmdlet*" means the feature is not available or installed. Verify that you have Windows Server Insider Preview build 17692 or later, that you've installed Failover Clustering, and that you're running Storage Spaces Direct.
 
    > [!NOTE]
-   > This feature is not available on Windows Server 2016 or earlier. 
+   > This feature is not available on Windows Server 2016 or earlier.
 
-### The volume is deleted or missing
+### No data available 
 
-An upcoming Insider Preview build will provide a cmdlet to reprovision and start collecting new measurements.
+![No data available](media/performance-history/no-data-available.png)
+
+Charts in Windows Admin Center for Hyper-Converged Infrastructure are powered by performance history. Here's how to troubleshoot a chart that shows "*No data available*" as pictured above:
+
+1. Refresh the page, or wait for the next background refresh (up to 30 seconds).
+
+2. If the object was recently added or created, it may take up to 15 minutes to be discovered.
+
+3. Certain special objects are excluded from performance history. For example, volumes that don't use the Cluster Shared Volume (CSV) filesystem are excluded. Detailed requirements are listed on sub-topics for each object type, such as [What's collected for volumes](performance-history-for-volumes.md). Make sure the object you're looking at is included in performance history.
+
+4. If the problem persists, open PowerShell as Administrator and try running the `Get-ClusterPerf` cmdlet. The cmdlet includes troubleshooting logic to identify common problems, such as if the ClusterPerformanceHistory volume is missing, and provides remediation instructions.
 
 ## See also
 
