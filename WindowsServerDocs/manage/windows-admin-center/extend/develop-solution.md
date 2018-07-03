@@ -24,15 +24,14 @@ If you plan on building management GUI for a new type of connection such as netw
 Follow these steps to create a solution extension:
 
 - [Prepare](prepare-development-environment.md) your development environment
-    - [Clone](prepare-development-environment.md#clone-extension-template) the extension template 
-    - [Prepare](prepare-development-environment.md#prepare-extension-template-for-use) the extension template to use as your project
+    - [Create](prepare-development-environment.md#create-new-extension-with-the-windows-admin-center-cli) an extension with the Windows Admin Center CLI
 - Modify the project into a solution extension
 - Create a connection provider
 - Add your content to the project
 
 ## Prepare your development environment
 
-Follow these step-by-step directions to [prepare](prepare-development-environment.md) your development environment, [clone](prepare-development-environment.md#clone-extension-template) the extension template, and prepare the extension template [for use](prepare-development-environment.md#prepare-extension-template-for-use).
+Follow these step-by-step directions to [prepare](prepare-development-environment.md) your development environment and [create](prepare-development-environment.md#create-new-extension-with-the-windows-admin-center-cli) an extension with the Windows Admin Center CLI.
  
 ## Modify the project into a solution extension
 
