@@ -63,17 +63,17 @@ libraries for use with Windows Server.
 1. APPLICABLE LAW. If you acquired the software in the United States, Washington law applies to interpretation of and claims for breach of this agreement, and the laws of the state where you live apply to all other claims. If you acquired the software in any other country, its laws apply.
 1. CONSUMER RIGHTS; REGIONAL VARIATIONS. This agreement describes certain legal rights. You may have other rights, including consumer rights, under the laws of your state or country. Separate and apart from your relationship with Microsoft, you may also have rights with respect to the party from which you acquired the software. This agreement does not change those other rights if the laws of your state or country do not permit it to do so. For example, if you acquired the software in one of the below regions, or mandatory country law applies, then the following provisions apply to you:
 
-    a.  Australia. You have statutory guarantees under the Australian Consumer Law
+    a.  **Australia**. You have statutory guarantees under the Australian Consumer Law
         and nothing in this agreement is intended to affect those rights.
     
-    b.  Canada. If you acquired this software in Canada, you may stop receiving
+    b.  **Canada**. If you acquired this software in Canada, you may stop receiving
         updates by turning off the automatic update feature, disconnecting your
         device from the Internet (if and when you re-connect to the Internet,
         however, the software will resume checking for and installing updates), or
         uninstalling the software. The product documentation, if any, may also
         specify how to turn off updates for your specific device or software.
     
-    c.  Germany and Austria.
+    c.  **Germany and Austria**.
     
     **(i) Warranty**. The software will perform substantially as described in any Microsoft materials that accompany it. However, Microsoft gives no contractual guarantee in relation to the software.
     
