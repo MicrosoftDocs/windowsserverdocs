@@ -163,13 +163,33 @@ When measurements are merged into less granular series that span more time, as d
 
 ### How do I disable this feature?
 
-Set the `-CollectPerformanceHistory` parameter to `$False` when you run `Enable-ClusterS2D`.
+To stop collecting performance history, run this cmdlet as Administrator in PowerShell:
+
+```PowerShell
+Stop-ClusterPerformanceHistory
+```
+
+To delete existing measurements, use the `-DeleteHistory` flag:
+
+```PowerShell
+Stop-ClusterPerformanceHistory -DeleteHistory
+```
+
+During initial deployment, you can prevent performance history for ever starting by setting the `-CollectPerformanceHistory` parameter of the `Enable-ClusterS2D` cmdlet to `$False`:
 
 ```PowerShell
 Enable-ClusterS2D -CollectPerformanceHistory $False
 ```
 
-If you have already enabled Storage Spaces Direct, an upcoming Insider Preview build will provide a cmdlet to stop the Health Service from collecting new measurements and delete existing measurements.
+### How do I enable this feature?
+
+Unless you `Stop-ClusterPerformanceHistory` or set `-CollectPerformanceHistory $False`, performance history is enabled by default.
+
+To re-enable it, run this cmdlet as Administrator in PowerShell:
+
+```PowerShell
+Start-ClusterPerformanceHistory
+```
 
 ## Troubleshooting
 
