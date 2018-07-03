@@ -209,7 +209,7 @@ If a chart shows "*No data available*" as pictured, here's how to troubleshoot:
 
 2. Wait for the object to be discovered. If it was newly added or created, allow up to 15 minutes.
 
-3. Certain special objects are excluded from performance history. See the fine print on the sub-topic for the object type – for example, volumes that don't use the Cluster Shared Volume (CSV) filesystem are excluded, as documented on [Performance history for volumes](performance-history-for-volumes.md).
+3. Certain special objects are excluded from performance history – for example, volumes that don't use the Cluster Shared Volume (CSV) filesystem. Check the sub-topic for the object type, like [Performance history for volumes](performance-history-for-volumes.md), for the fine print.
 
 4. If the problem persists, open PowerShell as Administrator and run the `Get-ClusterPerf` cmdlet. The cmdlet includes troubleshooting logic to identify common problems, such as if the ClusterPerformanceHistory volume is missing, and provides remediation instructions.
 
