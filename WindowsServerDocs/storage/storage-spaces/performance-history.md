@@ -175,7 +175,8 @@ To delete existing measurements, use the `-DeleteHistory` flag:
 Stop-ClusterPerformanceHistory -DeleteHistory
 ```
 
-During initial deployment, you can prevent performance history for ever starting by setting the `-CollectPerformanceHistory` parameter of the `Enable-ClusterS2D` cmdlet to `$False`:
+   > [!TIP]
+   > During initial deployment, you can prevent performance history for starting with the `-CollectPerformanceHistory` parameter of `Enable-ClusterS2D`. For example, `Enable-ClusterS2D -CollectPerformanceHistory $False`.
 
 ```PowerShell
 Enable-ClusterS2D -CollectPerformanceHistory $False
@@ -183,7 +184,7 @@ Enable-ClusterS2D -CollectPerformanceHistory $False
 
 ### How do I enable this feature?
 
-Unless you `Stop-ClusterPerformanceHistory` or set `-CollectPerformanceHistory $False`, performance history is enabled by default.
+Unless you `Stop-ClusterPerformanceHistory`, performance history is enabled by default.
 
 To re-enable it, run this cmdlet as Administrator in PowerShell:
 
@@ -202,9 +203,11 @@ An error message like "*The term 'Get-ClusterPerf' is not recognized as the name
 
 ### No data available 
 
+Charts in Windows Admin Center for Hyper-Converged Infrastructure are powered by performance history.
+
 ![No data available](media/performance-history/no-data-available.png)
 
-Charts in Windows Admin Center for Hyper-Converged Infrastructure are powered by performance history. Here's how to troubleshoot a chart that shows "*No data available*" as pictured above:
+If a chart shows "*No data available*" as pictured, here's how to troubleshoot:
 
 1. Refresh the page, or wait for the next background refresh (up to 30 seconds).
 
