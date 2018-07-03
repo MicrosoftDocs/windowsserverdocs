@@ -24,7 +24,7 @@ The following sections describe Azure Infrastructure Services.
 
 After the provider creates an Azure subscription, the Azure portal can be used to manually create each tenant's environment. This process can also be automated using PowerShell scripts.  
 
-For more information, visit he [Microsoft Azure](https://www.azure.microsoft.com) website.
+For more information, visit the [Microsoft Azure](https://www.azure.microsoft.com) website.
   
 ## Azure Load Balancer
 
