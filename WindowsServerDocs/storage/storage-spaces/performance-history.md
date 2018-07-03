@@ -163,7 +163,7 @@ When measurements are merged into less granular series that span more time, as d
 
 ### How do I disable this feature?
 
-To stop collecting performance history, run this cmdlet as Administrator in PowerShell:
+To stop collecting performance history, run this PowerShell cmdlet as Administrator:
 
 ```PowerShell
 Stop-ClusterPerformanceHistory
@@ -176,17 +176,13 @@ Stop-ClusterPerformanceHistory -DeleteHistory
 ```
 
    > [!TIP]
-   > During initial deployment, you can prevent performance history for starting with the `-CollectPerformanceHistory` parameter of `Enable-ClusterS2D`. For example, `Enable-ClusterS2D -CollectPerformanceHistory $False`.
-
-```PowerShell
-Enable-ClusterS2D -CollectPerformanceHistory $False
-```
+   > During initial deployment, you can prevent performance history from starting by setting the `-CollectPerformanceHistory` parameter of `Enable-ClusterS2D` to `$False`.
 
 ### How do I enable this feature?
 
 Unless you `Stop-ClusterPerformanceHistory`, performance history is enabled by default.
 
-To re-enable it, run this cmdlet as Administrator in PowerShell:
+To re-enable it, run this PowerShell cmdlet as Administrator:
 
 ```PowerShell
 Start-ClusterPerformanceHistory
@@ -203,7 +199,7 @@ An error message like "*The term 'Get-ClusterPerf' is not recognized as the name
 
 ### No data available 
 
-Charts in Windows Admin Center for Hyper-Converged Infrastructure are powered by performance history.
+Many charts in Windows Admin Center are powered by performance history.
 
 ![No data available](media/performance-history/no-data-available.png)
 
