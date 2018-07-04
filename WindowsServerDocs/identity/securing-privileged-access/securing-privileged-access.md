@@ -19,7 +19,7 @@ ms.date: 10/12/2016
 
 Securing privileged access is a critical first step to establishing security assurances for business assets in a modern organization. The security of most or all business assets in an organization depends on the integrity of the privileged accounts that administer and manage IT systems. Cyber-attackers are targeting these accounts and other elements of privileged access to rapidly gain access to targeted data and systems using credential theft attacks like [Pass-the-Hash and Pass-the-Ticket](https://www.microsoft.com/pth).
 
-Protecting administrative access against determined adversaries require you to take a complete and thoughtful approach to isolate these systems from risks. This figure depicts the three stages of recommendations for separating and protecting administration in this roadmap:
+Protecting administrative access against determined adversaries requires you to take a complete and thoughtful approach to isolate these systems from risks. This figure depicts the three stages of recommendations for separating and protecting administration in this roadmap:
 
 ![Diagram of the three stages of recommendations for separating and protecting administration in this roadmap](../media/securing-privileged-access/PAW_LP_Fig1.JPG)
 
@@ -64,7 +64,7 @@ Because the adversary can gain control of privileged access using a variety of m
 ![Table showing attack and defense columns](../media/securing-privileged-access/PAW_LP_Fig5.JPG)
 
 ## Security privileged access roadmap
-The roadmap is designed to maximize the use of technologies that you may already be deployed, take advantage of key current and upcoming security technologies, and integrate any 3rd party security tools you may already have deployed.
+The roadmap is designed to maximize the use of technologies that you already have deployed, take advantage of key current and upcoming security technologies, and integrate any 3rd party security tools you may already have deployed.
 
 The roadmap of Microsoft recommendations is broken into 3 stages:
 
@@ -142,7 +142,7 @@ Prior to installing ATA, you should ensure you have a process in place to handle
 
 -   For more information on engaging Microsoft services to assist with preparing your IR process for ATA generated events and deploying ATA, contact your Microsoft representative by accessing [this page](https://www.microsoft.com/en-us/microsoftservices/campaigns/cybersecurity-protection.aspx).
 
--   Access [this page](https://www.microsoft.com/en-us/microsoftservices/campaigns/cybersecurity-protection.aspx) for more information on engaging Microsoft services to assist with investigating and recovering from an incident
+-   Access [this page](https://www.microsoft.com/en-us/microsoftservices/campaigns/cybersecurity-protection.aspx) for more information on engaging Microsoft services to assist with investigating and recovering from an incident.
 
 -   To Implement ATA, follow the deployment guide available [here](http://aka.ms/ata).
 
@@ -165,13 +165,13 @@ To increase the assurance level and usability of administrator authentication, y
 
 To provide the strongest protection for Active Directory administrators, set up an environment that has no security dependencies on your production Active Directory and is isolated from attacks from all but the most trusted systems in your production environment. For more information on the ESAE architecture visit [this page](http://aka.ms/esae).
 
-**4. Code Integrity Policy for DCs (Server 2016)**
+**4. Windows Defender Device Guard for DCs (Server 2016)**
 
-To limit the risk of unauthorized programs on your domain controllers from adversary attack operations and inadvertent administrative errors, configure Windows Server 2016 Code Integrity for kernel (drivers) and user mode (applications) to only allow authorized executables to run on the machine.
+To limit the risk of unauthorized programs on your domain controllers from adversary attack operations and inadvertent administrative errors, configure Windows Defender Device Guard virtualization-based security for kernel (also known as Hypervisor Code Integrity, HVCI) and Windows Defender Application Control policies (also known as Configurable Code Integrity, Configurable CI) for applications to only allow authorized executables to run on the machine. For more information on Windows Defender Device Guard visit [this page](https://docs.microsoft.com/en-us/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control).
 
 **5. Shielded VMs for virtual DCs (Server 2016 Hyper-V Fabric)**
 
-To protect virtualized domain controllers from attack vectors that exploit a virtual machine's inherent loss of physical security, use this new Server 2016 Hyper-V capability to help prevent the theft of Active Directory secrets from Virtual DCs. Using this solution, you can encrypt Generation 2 VMs to protect the VM data against inspection, theft, and tampering by storage and network administrators as well as harden the access to the VM against Hyper-V host administrators attacks.
+To protect virtualized domain controllers from attack vectors that exploit a virtual machine's inherent loss of physical security, use this new Server 2016 Hyper-V capability to help prevent the theft of Active Directory secrets from Virtual DCs. Using this solution, you can encrypt Generation 2 VMs to protect the VM data against inspection, theft, and tampering by storage and network administrators as well as harden the access to the VM against Hyper-V host administrators attacks. For more information on Shielded VMs visit [this page](https://docs.microsoft.com/en-us/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms).
 
 ## Am I done?
 Completing this roadmap will gain you strong privileged access protections for the attacks that are currently known and available to adversaries today. Unfortunately, security threats will constantly evolve and shift, so we recommend you view security as an ongoing process focused on raising the cost and reducing the success rate of adversaries targeting your environment.
