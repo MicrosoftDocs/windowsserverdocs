@@ -6,13 +6,13 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
-ms.author: elizapo
-ms.date: 07/03/2018
+ms.author: helohr
+ms.date: 07/06/2018
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0f402ae3-5391-4c7d-afea-2c5c9044de46
-author: lizap
-manager: dongill
+author: heidilohr
+manager: elizapo
 ---
 # Azure services and considerations for desktop hosting
 

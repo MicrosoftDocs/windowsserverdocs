@@ -6,12 +6,12 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
-ms.author: elizapo
-ms.date: 07/03/2018
+ms.author: helohr
+ms.date: 07/06/2018
 ms.tgt_pltfrm: na
 ms.topic: article
-author: lizap
-manager: dongill
+author: heidilohr
+manager: elizapo
 ---
 # Desktop hosting service
 
