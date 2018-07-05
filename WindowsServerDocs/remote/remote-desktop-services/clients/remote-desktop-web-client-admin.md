@@ -4,7 +4,7 @@ description: Describes how an admin can set up the Remote Desktop web client.
 ms.prod: windows-server-threshold
 ms.technology: remote-desktop-services
 ms.author: helohr
-ms.date: 06/29/2018
+ms.date: 07/05/2018
 ms.topic: article
 author: Heidilohr
 ms.localizationpriority: medium
@@ -68,7 +68,7 @@ To install the web client for the first time, follow these steps:
     ```PowerShell
     Publish-RDWebClientPackage -Type Production -Latest
     ```
-    Make sure you can access the web client at the web client URL with your server name, formatted as <https://server_FQDN/RDWeb/Pages/webclient>. It's important to use the server name that matches the RD Web Access public certificate in the URL (typically the server FQDN).
+    Make sure you can access the web client at the web client URL with your server name, formatted as <https://server_FQDN/RDWeb/webclient/index.html>. It's important to use the server name that matches the RD Web Access public certificate in the URL (typically the server FQDN).
 
     >[!NOTE]
     >When running the **Publish-RDWebClientPackage** cmdlet, you may see a warning that says per-device CALs are not supported, even if your deployment is configured for per-user CALs. If your deployment uses per-user CALs, you can ignore this warning. We display it to make sure you’re aware of the configuration limitation.
@@ -79,9 +79,6 @@ To install the web client for the first time, follow these steps:
 >```PowerShell
 >Get-Command -Module RDWebClientManagement
 >```
-
->[!NOTE]
->The web client does not support single sign-on at this time. Users will have to reenter the credentials they used to sign in to the client every time they open an app.
 
 ## How to update the Remote Desktop web client
 
@@ -97,7 +94,7 @@ When a new version of the Remote Desktop web client is available, follow these s
     Publish-RDWebClientPackage -Type Test -Latest
     ```
 
-    The client should appear on the test URL that corresponds to your web client URL (for example, <https://server_FQDN/RDWeb/Pages/webclient-test>).
+    The client should appear on the test URL that corresponds to your web client URL (for example, <https://server_FQDN/RDWeb/webclient-test/index.html>).
 3. Publish the client for users by running the following cmdlet:
     ```PowerShell
     Publish-RDWebClientPackage -Type Production -Latest
