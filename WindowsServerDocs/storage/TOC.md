@@ -33,7 +33,6 @@
 ## [File Server and SMB](file-server/file-server-smb-overview.md)
 ### [SMB Direct](file-server/smb-direct.md)
 ### [SMB security enhancements](file-server/smb-security.md)
-### [Improve performance of a file server with SMB Direct](file-server/smb-direct-file-server.md)
 ### [Network File System overview](nfs/nfs-overview.md)
 ### [Deploy Network File System](nfs/deploy-nfs.md)
 ### [NTFS overview](file-server/ntfs-overview.md)
