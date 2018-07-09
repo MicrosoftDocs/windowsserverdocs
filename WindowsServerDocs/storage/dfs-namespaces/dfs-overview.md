@@ -59,7 +59,7 @@ The following table describes additional factors to consider when choosing serve
 
 DFS Namespaces and DFS Replication are a part of the File and Storage Services role. The management tools for DFS (DFS Management, the DFS Namespaces module for Windows PowerShell, and command-line tools) are installed separately as part of the Remote Server Administration Tools.
 
-Install DFS Namespaces by using either Server Manager or PowerShell, as described in the next sections.
+Install DFS Namespaces by using [Windows Admin Center](../../manage/windows-admin-center/understand/windows-admin-center.md), Server Manager, or PowerShell, as described in the next sections.
 
 ### To install DFS by using Server Manager
 
