@@ -5,13 +5,13 @@ ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 05/17/2018
+ms.date: 07/03/2018
 Keywords: Storage Spaces Direct
 ms.localizationpriority: medium
 ---
 # Performance history for Storage Spaces Direct
 
-> Applies To: Windows Server Insider Preview build 17666 and later
+> Applies To: Windows Server Insider Preview build 17692 and later
 
 Performance history is a new feature that gives [Storage Spaces Direct](storage-spaces-direct-overview.md) administrators easy access to historical compute, memory, network, and storage measurements across host servers, drives, volumes, virtual machines, and more. Performance history is collected automatically and stored on the cluster for up to one year.
 
@@ -163,26 +163,55 @@ When measurements are merged into less granular series that span more time, as d
 
 ### How do I disable this feature?
 
-Set the `-CollectPerformanceHistory` parameter to `$False` when you run `Enable-ClusterS2D`.
+To stop collecting performance history, run this PowerShell cmdlet as Administrator:
 
 ```PowerShell
-Enable-ClusterS2D -CollectPerformanceHistory $False
+Stop-ClusterPerformanceHistory
 ```
 
-If you have already enabled Storage Spaces Direct, an upcoming Insider Preview build will provide a cmdlet to stop the Health Service from collecting new measurements and delete existing measurements.
+To delete existing measurements, use the `-DeleteHistory` flag:
+
+```PowerShell
+Stop-ClusterPerformanceHistory -DeleteHistory
+```
+
+   > [!TIP]
+   > During initial deployment, you can prevent performance history from starting by setting the `-CollectPerformanceHistory` parameter of `Enable-ClusterS2D` to `$False`.
+
+### How do I enable this feature?
+
+Unless you `Stop-ClusterPerformanceHistory`, performance history is enabled by default.
+
+To re-enable it, run this PowerShell cmdlet as Administrator:
+
+```PowerShell
+Start-ClusterPerformanceHistory
+```
 
 ## Troubleshooting
 
 ### The cmdlet doesn't work
 
-An error message like "*The term 'Get-ClusterPerf' is not recognized as the name of a cmdlet*" means the feature is not available or installed. Verify that you have Windows Server Insider Preview or later and that you're running Storage Spaces Direct.
+An error message like "*The term 'Get-ClusterPerf' is not recognized as the name of a cmdlet*" means the feature is not available or installed. Verify that you have Windows Server Insider Preview build 17692 or later, that you've installed Failover Clustering, and that you're running Storage Spaces Direct.
 
    > [!NOTE]
-   > This feature is not available on Windows Server 2016 or earlier. 
+   > This feature is not available on Windows Server 2016 or earlier.
 
-### The volume is deleted or missing
+### No data available 
 
-An upcoming Insider Preview build will provide a cmdlet to reprovision and start collecting new measurements.
+Many charts in Windows Admin Center are powered by performance history.
+
+![No data available](media/performance-history/no-data-available.png)
+
+If a chart shows "*No data available*" as pictured, here's how to troubleshoot:
+
+1. Refresh the page, or wait for the next background refresh (up to 30 seconds).
+
+2. Wait for the object to be discovered. If it was newly added or created, allow up to 15 minutes.
+
+3. Certain special objects are excluded from performance history – for example, volumes that don't use the Cluster Shared Volume (CSV) filesystem. Check the sub-topic for the object type, like [Performance history for volumes](performance-history-for-volumes.md), for the fine print.
+
+4. If the problem persists, open PowerShell as Administrator and run the `Get-ClusterPerf` cmdlet. The cmdlet includes troubleshooting logic to identify common problems, such as if the ClusterPerformanceHistory volume is missing, and provides remediation instructions.
 
 ## See also
 

@@ -5,7 +5,7 @@ ms.technology: manage
 ms.topic: article
 author: daniellee-msft
 ms.author: jol
-ms.date: 06/18/2018
+ms.date: 07/02/2018
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---
@@ -40,8 +40,10 @@ Highlights of Windows Admin Center for Hyper-Converged Infrastructure include:
 
 Windows Admin Center for Hyper-Converged Infrastructure is being actively developed by Microsoft. It receives frequent updates that improve existing features and add new features. Here’s what’s new in recent months:
 
-- Video: [What's new with HCI in Windows Admin Center v1804](https://www.youtube.com/watch?v=7kZxrYGTgTA) (April)
-- Video: [What's new with HCI in Windows Admin Center v1803](https://www.youtube.com/watch?v=CX4vKnisRj8) (March)
+- Video: [What's new with HCI in Windows Admin Center 1806](https://www.youtube.com/watch?v=w_4BFdbpmMc) (June)
+- *No video for May – after General Availability, we bought the team a pizza and told them to get some sleep*
+- Video: [What's new with HCI in Windows Admin Center 1804](https://www.youtube.com/watch?v=7kZxrYGTgTA) (April)
+- Video: [What's new with HCI in Windows Admin Center 1803](https://www.youtube.com/watch?v=CX4vKnisRj8) (March)
 
 ## Before you start
 

@@ -125,7 +125,7 @@
 ###### [Step 7.1. Configure EAP-TLS to ignore Certificate Revocation List (CRL) checking](remote-access/vpn/vpn-config-eap-tls-to-ignore-crl-checking.md)
 ###### [Step 7.2. Create root certificates for VPN authentication with Azure AD](remote-access/vpn/vpn-create-root-cert-for-vpn-auth-azure-ad.md)
 ###### [Step 7.3. Configure the Conditional Access policy](remote-access/vpn/vpn-config-conditional-access-policy.md)
-###### [Step 7.4. Deploy Conditional Access root certificates to on-premise AD](remote-access/vpn/vpn-deploy-cond-access-root-cert-to-on-premise-ad.md)
+###### [Step 7.4. Deploy Conditional Access root certificates to on-premises AD](remote-access/vpn/vpn-deploy-cond-access-root-cert-to-on-premise-ad.md)
 ###### [Step 7.5. Create OMA-DM based VPNv2 Profiles to Windows 10 devices](remote-access/vpn/vpn-create-oma-dm-based-vpnv2-profiles.md)
 #### [Overview of the DirectAccess to Always On VPN migration](remote-access/da-always-on-vpn-migration/da-always-on-migration-overview.md)
 ##### [Plan the DirectAccess to Always On VPN migration](remote-access/da-always-on-vpn-migration/da-always-on-migration-planning.md)

@@ -27,13 +27,12 @@
 #### [Optimize Namespace Polling](dfs-namespaces/optimize-namespace-polling.md)
 #### [Enable Access-based Enumeration on a Namespace](dfs-namespaces/enable-access-based-enumeration-on-a-namespace.md)
 #### [Using Inherited Permissions with Access-based Enumeration](dfs-namespaces/using-inherited-permissions-with-access-based-enumeration.md)
-## DFS replication
+## DFS Replication
 ### [Use robocopy to preseed files for DFS replication](dfs-replication/preseed-dfsr-with-robocopy.md)
 ## [Disk Management](disk-management/overview-of-disk-management.md)
 ## [File Server and SMB](file-server/file-server-smb-overview.md)
 ### [SMB Direct](file-server/smb-direct.md)
 ### [SMB security enhancements](file-server/smb-security.md)
-### [Improve performance of a file server with SMB Direct](file-server/smb-direct-file-server.md)
 ### [Network File System overview](nfs/nfs-overview.md)
 ### [Deploy Network File System](nfs/deploy-nfs.md)
 ### [NTFS overview](file-server/ntfs-overview.md)
@@ -121,6 +120,7 @@
 #### [Health and operational states](storage-spaces/storage-spaces-states.md)
 #### [Collect data](storage-spaces/data-collection.md)
 ### Insider Preview
+#### [Cluster sets](storage-spaces/cluster-sets.md)
 #### [Performance history](storage-spaces/performance-history.md)
 ##### [Drives](storage-spaces/performance-history-for-drives.md)
 ##### [Network adapters](storage-spaces/performance-history-for-network-adapters.md)
