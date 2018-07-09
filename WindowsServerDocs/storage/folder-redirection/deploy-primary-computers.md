@@ -6,7 +6,7 @@ ms.topic: article
 author: JasonGerend 
 ms.author: jgerend 
 ms.technology: storage 
-ms.date: 04/05/2018
+ms.date: 07/09/2018
 ms.localizationpriority: medium
 ---
 # Deploy primary computers for Folder Redirection and Roaming User Profiles
@@ -28,7 +28,7 @@ Primary computer support has the following requirements:
 - Client computers must run Windows 8.1, Windows 8, Windows Server 2012 R2, or Windows Server 2012.
 
 >[!TIP]
->Although primary computer support requires Folder Redirection and/or Roaming User Profiles, if you are deploying these technologies for the first time, it is best to set up primary computer support before enabling the GPOs that configure Folder Redirection and Roaming User Profiles. This prevents user data from being copied to non-primary computers before primary computer support is enabled. For configuration information, see [Deploy Folder Redirection, Offline Files, and Roaming User Profiles](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj649074(v%3dws.11)>) and [Deploy Roaming User Profiles](deploy-roaming-user-profiles.md).
+>Although primary computer support requires Folder Redirection and/or Roaming User Profiles, if you are deploying these technologies for the first time, it is best to set up primary computer support before enabling the GPOs that configure Folder Redirection and Roaming User Profiles. This prevents user data from being copied to non-primary computers before primary computer support is enabled. For configuration information, see [Deploy Folder Redirection](deploy-folder-redirection.md) and [Deploy Roaming User Profiles](deploy-roaming-user-profiles.md).
 
 ## Step 1: Designate primary computers for users
 
@@ -94,9 +94,9 @@ Here's how to test primary computer functionality:
 
 1. Sign in to a designated primary computer with a user account for which you have enabled Folder Redirection and/or Roaming User Profiles.
 2. If the user account has signed on to the computer previously, open a Windows PowerShell session or Command Prompt window as an administrator, type the following command and then sign off when prompted to ensure that the latest Group Policy settings are applied to the client computer:
-  ```PowerShell
-  Gpupdate /force
-  ```
+    ```PowerShell
+    Gpupdate /force
+    ```
 3. Open File Explorer.
 4. Right-click a redirected folder (for example, the My Documents folder in the Documents library), and then select **Properties**.
 5. Select the **Location** tab, and confirm that the path displays the file share you specified instead of a local path. To confirm that the user profile is roaming, open **Control Panel**, select **System and Security**, select **System**, select **Advanced System Settings**, select **Settings** in the User Profiles section and then look for **Roaming** in the **Type** column.
