@@ -66,7 +66,7 @@ Get-InsightsCapabilityResult -Name "CPU capacity forecasting" -History
 
 # Use the Output field to locate and then show the results of "CPU capacity forecasting."
 $Output = Get-Content (Get-InsightsCapabilityResult -Name "CPU capacity forecasting").Output | ConvertFrom-Json
-$Output.PredictionResults
+$Output.ForecastingResults
 ```
 The System Insights extension automatically shows the prediction history and parses the results of the JSON result, giving you an intuitive, high-fidelity graph of each forecast:
 
