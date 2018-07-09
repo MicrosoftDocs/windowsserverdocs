@@ -6,7 +6,7 @@ ms.topic: article
 author: JasonGerend 
 ms.author: jgerend 
 ms.technology: storage 
-ms.date: 04/05/2018
+ms.date: 07/09/2018
 ms.localizationpriority: medium
 ---
 # SMB security enhancements
@@ -116,5 +116,5 @@ Set-SmbServerConfiguration –EnableSMB1Protocol $false
 Here are some additional resources about SMB and related technologies in Windows Server 2012.
 
 - [Server Message Block](file-server-smb-overview.md)
-- [File and Storage Services](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831487(v%3dws.11)>)
-- [Scale-Out File Server for Application Data](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831349(v%3dws.11)>)
+- [Storage in Windows Server](../storage.md)
+- [Scale-Out File Server for Application Data](../../failover-clustering/sofs-overview.md)
