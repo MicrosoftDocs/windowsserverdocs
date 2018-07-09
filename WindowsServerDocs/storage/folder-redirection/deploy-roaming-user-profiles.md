@@ -6,14 +6,14 @@ ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
-ms.date: 04/10/2018
+ms.date: 07/09/2018
 ms.author: jgerend
 ---
 # Deploying Roaming User Profiles
 
 >Applies to: Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
-This topic describes how to use Windows Server to deploy [Roaming User Profiles](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh848267(v%3dws.11)) to Windows client computers. Roaming User Profiles redirects user profiles to a file share so that users receive the same operating system and application settings on multiple computers.
+This topic describes how to use Windows Server to deploy [Roaming User Profiles](folder-redirection-rup-overview.md) to Windows client computers. Roaming User Profiles redirects user profiles to a file share so that users receive the same operating system and application settings on multiple computers.
 
 For a list of recent changes to this topic, see the [Change history](#change-history) section of this topic.
 
@@ -47,7 +47,7 @@ Roaming User Profiles has the following software requirements:
     - If the file share uses DFS Namespaces, the DFS folders (links) must have a single target to prevent users from making conflicting edits on different servers.
     - If the file share uses DFS Replication to replicate the contents with another server, users must be able to access only the source server to prevent users from making conflicting edits on different servers.
     - If the file share is clustered, disable continuous availability on the file share to avoid performance issues.
-- To use primary computer support in Roaming User Profiles, there are additional client computer and Active Directory schema requirements. For more information, see [Deploy Primary Computers for Folder Redirection and Roaming User Profiles](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj649076(v%3dws.11)>).
+- To use primary computer support in Roaming User Profiles, there are additional client computer and Active Directory schema requirements. For more information, see [Deploy Primary Computers for Folder Redirection and Roaming User Profiles](deploy-primary-computers.md).
 - The layout of a user's Start menu won't roam on Windows 10 or Windows Server 2016 if they're using more than one PC, Remote Desktop Session Host, or Virtualized Desktop Infrastructure (VDI) server. As a workaround, you can specify a Start layout as described in this topic. Or you can make use of user profile disks, which properly roam Start menu settings when used with Remote Desktop Session Host servers or VDI servers. For more info, see [Easier User Data Management with User Profile Disks in Windows Server 2012](https://blogs.technet.microsoft.com/enterprisemobility/2012/11/13/easier-user-data-management-with-user-profile-disks-in-windows-server-2012/).
 
 ### Considerations when using Roaming User Profiles on multiple versions of Windows
@@ -207,7 +207,7 @@ Here's how to set up Roaming User Profiles on user accounts:
     
     `\\fs1.corp.contoso.com\User Profiles$\%username%`
     
-    To specify a mandatory roaming user profile, specify the path to the NTuser.man file that you created previously, for example, `fs1.corp.contoso.comUser Profiles$default`. For more information, see [Create mandatory user profiles](https://technet.microsoft.com/itpro/windows/manage/mandatory-user-profile).
+    To specify a mandatory roaming user profile, specify the path to the NTuser.man file that you created previously, for example, `fs1.corp.contoso.comUser Profiles$default`. For more information, see [Create mandatory user profiles](https://docs.microsoft.com/windows/client-management/mandatory-user-profile).
 4. Select **OK**.
 
 >[!NOTE]
@@ -238,7 +238,7 @@ Here's how to set up Roaming User Profiles on computers:
 
     `\\fs1.corp.contoso.com\User Profiles$\%username%`
 
-    To specify a mandatory roaming user profile, which is a preconfigured profile to which users cannot make permanent changes (changes are reset when the user signs out), specify the path to the NTuser.man file that you created previously, for example, `\\fs1.corp.contoso.com\User Profiles$\default`. For more information, see [Creating a Mandatory User Profile](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/gg241183(v=ws.10)>).
+    To specify a mandatory roaming user profile, which is a preconfigured profile to which users cannot make permanent changes (changes are reset when the user signs out), specify the path to the NTuser.man file that you created previously, for example, `\\fs1.corp.contoso.com\User Profiles$\default`. For more information, see [Creating a Mandatory User Profile](https://docs.microsoft.com/windows/client-management/mandatory-user-profile).
 8. Select **OK**.
 
 ## Step 7: Optionally specify a Start layout for Windows 10 PCs
@@ -311,7 +311,7 @@ To specify a Start layout, do the following:
 If you set up Roaming User Profiles on computers by using Group Policy, or if you customized other Roaming User Profiles settings by using Group Policy, the next step is to enable the GPO, permitting it to be applied to affected users.
 
 >[!TIP]
->If you plan to implement primary computer support, do so now, before you enable the GPO. This prevents user data from being copied to non-primary computers before primary computer support is enabled. For the specific policy settings, see [Deploy Primary Computers for Folder Redirection and Roaming User Profiles](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj649076(v%3dws.11)>).
+>If you plan to implement primary computer support, do so now, before you enable the GPO. This prevents user data from being copied to non-primary computers before primary computer support is enabled. For the specific policy settings, see [Deploy Primary Computers for Folder Redirection and Roaming User Profiles](deploy-primary-computers.md).
 
 Here's how to enable the Roaming User Profile GPO:
 
