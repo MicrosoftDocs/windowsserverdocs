@@ -41,7 +41,7 @@ gpresult [/s <compUTER> [/u <USERNAME> [/p [<PASSWOrd>]]]] [/user [<TARGETDOMAIN
 |/v|Displays verbose policy information. This includes detailed settings that were applied with a precedence of 1.|
 |/z|Displays all available information about Group Policy. This includes detailed settings that were applied with a precedence of 1 and higher.|
 |/?|Displays help at the command prompt.|
-## remarks
+## Remarks
 -   Group Policy is the primary administrative tool for defining and controlling how programs, network resources, and the operating system operate for users and computers in an organization. In an active directory environment, Group Policy is applied to users or computers based on their membership in sites, domains, or organizational units.
 -   Because you can apply overlapping policy settings to any computer or user, the Group Policy feature generates a resulting set of policy settings when the user logs on. **gpresult** displays the resulting set of policy settings that were enforced on the computer for the specified user when the user logged on.
 -   Because **/v** and **/z** produce lots of information, it is useful to redirect output to a text file (for example, **gpresult/z >policy.txt**).

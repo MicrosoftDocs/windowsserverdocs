@@ -1,6 +1,6 @@
 ---
 title: subst
-description: "Windows Commands topic for **** - "
+description: Learn how to associate a path with a drive letter.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -35,7 +35,7 @@ subst <Drive1>: /d
 |Parameter|Description|
 |---------|-----------|
 |\<Drive1>:|Specifies the virtual drive to which you want to assign a path.|
-|[\<Drive2>:]<Path>|Specifies the physical drive and path that you want to assign to a virtual drive.|
+|[\<Drive2>:]\<Path>|Specifies the physical drive and path that you want to assign to a virtual drive.|
 |/d|Deletes a substituted (virtual) drive.|
 |/?|Displays help at the command prompt.|
 

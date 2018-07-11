@@ -29,7 +29,7 @@ auditpol /clear [/y]
 |-------|--------|
 |/y|Suppresses the prompt to confirm if all audit policy settings should be cleared.|
 |/?|Displays help at the command prompt.|
-## remarks
+## Remarks
 for clear operations for the per-user policy and system policy, you must have Write or Full Control permission on that object set in the security descriptor. You can also perform the clear operation by possessing the **Manage auditing and security log** (SeSecurityPrivilege) user right. However, this right allows additional access that is not necessary to perform the clear operation.
 ## <a name="BKMK_examples"></a>Examples
 To delete the per-user audit policy for all users, reset (disable) the system audit policy for all subcategories, and set all the audit policy settings to disabled, at a confirmation prompt, type:

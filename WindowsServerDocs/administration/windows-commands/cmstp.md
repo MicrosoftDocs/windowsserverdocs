@@ -42,7 +42,7 @@ cmstp.exe [/nf] [/ni] [/ns] [/s] [/su] [/u]  [Drive:][path]ServiceProfileFileNam
 |/au|Specifies that the service profile should be installed for all users. This parameter is only valid for computers running Windows Server 2003, Windows 2000, or Windows XP.|
 |/u|Specifies that the service profile should be uninstalled.|
 |/?|Displays help at the command prompt.|
-## remarks
+## Remarks
 **/s** is the only parameter that you can use in combination with **/u**.
 Syntax 1 is the typical syntax used in a custom installation application. To use this syntax, you must run **cmstp** from the directory that contains the <ServiceProfileFileName>.exe file.
 ## <a name="BKMK_Examples"></a>Examples

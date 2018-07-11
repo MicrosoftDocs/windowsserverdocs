@@ -1,6 +1,6 @@
 ---
 title: path
-description: "Windows Commands topic for **** - "
+description: Learn how to set the PATH environment variable.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

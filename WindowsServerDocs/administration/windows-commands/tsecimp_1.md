@@ -38,7 +38,7 @@ tsecimp /d
 |/d|Displays a list of installed telephony providers. For each telephony provider, the associated line devices are listed, as well as the addresses and users associated with each line device.|
 |/?|Displays help at the command prompt.|
 
-### Remarks
+## Remarks
 
 -   The XML file from which you want to import assignment information must follow the structure described below.  
     -   **UserList** element
@@ -61,6 +61,8 @@ tsecimp /d
         Each **Line** element specifies a line device. You must identify each line device by adding either an **Address** element or a **PermanentID** element under the **Line** element.
 
         For each **Line** element, you can set the **Remove** attribute. If you set this attribute, the user is no longer assigned that line device. If this attribute is not set, the user gains access to that line device. No error is given if the line device is not available to the user.
+
+## Examples
 -   The following sample XML code segments illustrate correct usage of the elements defined above.  
     -   The following code removes all line devices assigned to User1.  
         ```

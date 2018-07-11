@@ -65,7 +65,7 @@ You can run the following commands in the diskshadow command interpreter or thro
 |[revert](revert.md)|reverts a volume back to a specified shadow copy.|  
 |[exit_1](exit_1.md)|exits diskshadow.|  
   
-## remarks  
+## Remarks  
   
 -   at a minimum, only **add** and **create** are necessary to create a shadow copy. However, this will forfeit the context and option settings, will be a copy backup, and will only create a shadow copy with no backup execution script.  
   

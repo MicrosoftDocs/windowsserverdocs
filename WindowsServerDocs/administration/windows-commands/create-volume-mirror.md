@@ -40,7 +40,7 @@ create volume mirror [size=<n>] disk=<n>,<n>[,<n>,...] [align=<n>] [noerr] [noer
 |align\=<n>|Aligns all volume extents to the closest alignment boundary. This parameter is typically used with hardware RAID logical unit number \(LUN\) arrays to improve performance. *n* is the number of kilobytes \(KB\) from the beginning of the disk to the closest alignment boundary.|  
 |noerr|Used for scripting only. When an error is encountered, DiskPart continues to process commands as if the error did not occur. Without this parameter, an error causes DiskPart to exit with an error.|  
   
-## remarks  
+## Remarks  
   
 -   After you create the volume, the focus automatically shifts to the new volume.  
   

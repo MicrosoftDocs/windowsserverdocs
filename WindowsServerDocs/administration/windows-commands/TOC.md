@@ -462,7 +462,6 @@
 ### [winnt32](winnt32.md)
 ### [winpop](winpop.md)
 ### [winrs](winrs.md)
-### [wlbs](wlbs_1.md)
 ### [wmic](wmic.md)
 ### [wscript](wscript.md)
 ### [xcopy](xcopy.md)
