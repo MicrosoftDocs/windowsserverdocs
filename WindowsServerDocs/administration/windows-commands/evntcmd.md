@@ -31,7 +31,7 @@ evntcmd [/s <computerName>] [/v <verbosityLevel>] [/n] <FileName>
 |/n|Specifies that the SNMP service should not be restarted if this computer receives trap configuration changes.|  
 |<FileName>|Specifies, by name, the configuration file that contains information about the translation of events to traps and trap destinations you want to configure.|  
 |/?|Displays help at the command prompt.|  
-## remarks  
+## Remarks  
 -   if you want to configure traps but not trap destinations, you can create a valid configuration file by using Event to Trap Translator, which is a graphical utility. If you have the SNMP service installed, you can start Event to Trap Translator by typing **evntwin** at a command prompt. After you have defined the traps you want, click Export to create a file suitable for use with **evntcmd**. You can use Event to Trap Translator to easily create a configuration file and then use the configuration file with **evntcmd** at the command prompt to quickly configure traps on multiple computers.  
 -   The syntax for configuring a trap is as follows:  
     **#pragma add***<EventLogFile> <EventSource> <EventID> [<Count> [<Period>]]*  

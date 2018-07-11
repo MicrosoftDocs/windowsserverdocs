@@ -30,7 +30,7 @@ ls [<Option>] <DNSDomain> [{[>] <FileName>|[>>] <FileName>}]
 |<DNSDomain>|Specifies the DNS domain for which you want information.|
 |<FileName>|Specifies a file name in which to save the output. You can use the greater than (>) and double greater than (>>) characters to redirect the output in the usual manner.|
 |{help &#124; ?}|Displays a short summary of **nslookup** subcommands.|
-## remarks
+## Remarks
 -   The default output contains computer names and their IP addresses. When output is directed to a file, hash marks are printed for every 50 records received from the server
 ## additional references
 [Command-Line Syntax Key](command-line-syntax-key.md)

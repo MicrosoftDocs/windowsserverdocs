@@ -40,7 +40,7 @@ set id={ <byte> | <GUID> } [override] [noerr]
 |override|forces the file system on the volume to dismount before changing the partition type. When you run the **Set id** command, DiskPart attempts to lock and dismount the file system on the volume. If **override** is not specified, and the call to lock the file system fails \(for example, because there is an open handle\), the operation will fail. When **override** is specified, DiskPart forces the dismount even if the call to lock the file system fails, and any open handles to the volume will become invalid.<br /><br />This command is only available for Windows 7 and Windows Server 2008 R2.|  
 |noerr|Used for scripting only. When an error is encountered, DiskPart continues to process commands as if the error did not occur. Without this parameter, an error causes DiskPart to exit with an error code.|  
   
-## remarks  
+## Remarks  
   
 -   Other than the limitations previously mentioned, DiskPart does not check the validity of the value that you specify \(except to ensure that it is a byte in hexadecimal form or a GUID\).  
   

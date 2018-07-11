@@ -27,7 +27,7 @@ quote <Argument>[ ]
 |Parameter|Description|  
 |-------|--------|  
 |<Argument>|Specifies the argument to send to the ftp server.|  
-## remarks  
+## Remarks  
 The **quote** command is identical to the **literal** command.  
 ## <a name="BKMK_Examples"></a>Examples  
 Send a **quit** command to the remote ftp server.  

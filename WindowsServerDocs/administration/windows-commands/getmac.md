@@ -33,7 +33,7 @@ getmac[.exe][/s <computer> [/u <Domain\<User> [/p <Password>]]][/fo {TABLE | lis
 |/nh|Suppresses column header in output. Valid when the **/fo** parameter is set to **TABLE** or **CSV**.|
 |/v|Specifies that the output display verbose information.|
 |/?||
-## remarks
+## Remarks
 **getmac** can be useful either when you want to enter the MAC address into a network analyzer or when you need to know what protocols are currently in use on each network adapter in a computer.
 ## <a name="BKMK_Examples"></a>Examples
 The following examples show how you can use the **getmac** command:

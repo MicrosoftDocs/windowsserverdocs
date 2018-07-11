@@ -78,7 +78,7 @@ nslookup /view <FileName>
 |[nslookup set type](nslookup-set-type.md)|changes the resource record type for the query.|
 |[nslookup set vc](nslookup-set-vc.md)|Specifies to use or not use a virtual circuit when sending requests to the server.|
 |[nslookup view](nslookup-view.md)|sorts and lists the output of the previous **ls** subcommand or commands.|
-## remarks
+## Remarks
 -   if *computerTofind* is an IP address and the query is for an A or PTR resource record type, the name of the computer is returned. If *computerTofind* is a name and does not have a trailing period, the default DNS domain name is appended to the name. This behavior depends on the state of the following **set** subcommands: **domain**, **srchlist**, **defname**, and **search**.
 -   if you type a hyphen (-) instead of *computerTofind*, the command prompt changes to **nslookup** interactive mode.
 -   The command-line length must be less than 256 characters.
