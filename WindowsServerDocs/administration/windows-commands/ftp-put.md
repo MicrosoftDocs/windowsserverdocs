@@ -28,7 +28,7 @@ put <LocalFile> [<remoteFile>]
 |-------|--------|  
 |<LocalFile>|Specifies the local file to copy.|  
 |[<remoteFile>]|Specifies the name to use on the remote computer.|  
-## remarks  
+## Remarks  
 -   The **put** command is identical to the **send** command.  
 -   if *remoteFile* is not specified, the file is given the *LocalFile* name.  
 ## <a name="BKMK_Examples"></a>Examples  

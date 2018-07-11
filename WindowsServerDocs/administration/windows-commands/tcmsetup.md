@@ -1,6 +1,6 @@
 ---
 title: tcmsetup
-description: "Windows Commands topic for **** - "
+description: Learn how to set up and disable the TAPI client.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -41,7 +41,7 @@ tcmsetup  [/q] /c /d
 |/d|Clears the list of remote servers. Disables the TAPI client by preventing it from using the TAPI service providers that are on the remote servers.|
 |/?|Displays help at the command prompt.|
 
-### Remarks
+## Remarks
 
 -   To perform this procedure, you must be a member of the Administrators group on the local computer, or you must have been delegated the appropriate authority. If the computer is joined to a domain, members of the Domain Admins group might be able to perform this procedure. As a security best practice, consider using **Run as** to perform this procedure.
 -   In order for TAPI to function correctly, you must run **tcmsetup** to specify the remote servers that will be used by TAPI clients.

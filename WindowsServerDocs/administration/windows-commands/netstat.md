@@ -38,7 +38,7 @@ netstat [-a] [-e] [-n] [-o] [-p <Protocol>] [-r] [-s] [<Interval>]
 |<Interval>|Redisplays the selected information every *Interval* seconds. Press CTRL+C to stop the redisplay. If this parameter is omitted, **netstat** prints the selected information only once.|
 |/?|Displays help at the command prompt.|
 
-## remarks
+## Remarks
 -   Parameters used with this command must be prefixed with a hyphen (**-**) rather than a slash (**/**).
 -   **netstat** provides statistics for the following:
     -   Proto

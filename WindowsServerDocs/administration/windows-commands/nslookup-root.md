@@ -27,7 +27,7 @@ root
 |Parameter|Description|
 |-------|--------|
 |{help &#124; ?}|Displays a short summary of **nslookup** subcommands.|
-## remarks
+## Remarks
 -   Currently, the ns.nic.ddn.mil name server is used. This command is a synonym for lserver ns.nic.ddn.mil. You can change the name of the root server with the **set root** command.
 ## additional references
 [Command-Line Syntax Key](command-line-syntax-key.md)

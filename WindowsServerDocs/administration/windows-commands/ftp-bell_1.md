@@ -25,7 +25,7 @@ bell
 ```  
 ### Parameters  
 none  
-## remarks  
+## Remarks  
 By default, bell is off.  
 ## <a name="BKMK_Examples"></a>Examples  
 Toggle an audible sound to occur after each file transfer command is completed.  

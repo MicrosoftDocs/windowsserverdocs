@@ -40,7 +40,7 @@ dfsdiag /TestDCs [/Domain:<Domain name>]
 |-------|--------|  
 |\/Domain:<Domain name>|Domain that you want to check.|  
   
-## remarks  
+## Remarks  
 \/Domain is an optional parameter. The default value is the local domain that the local host is joined to.  
   
 ## <a name="BKMK_Examples"></a>Examples  

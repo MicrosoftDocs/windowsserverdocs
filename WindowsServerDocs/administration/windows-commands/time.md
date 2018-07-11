@@ -1,6 +1,6 @@
 ---
 title: time
-description: "Windows Commands topic for **** - "
+description: Learn how to set and display the system time.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -33,7 +33,7 @@ time [/t | [<HH>[:<MM>[:<SS>]] [am|pm]]]
 
 |Parameter|Description|
 |---------|-----------|
-|\<HH>[:<MM>[:<SS>[.<NN>]]] [am|pm]|Sets the system time to the new time specified, where *HH* is in hours (required), *MM* is in minutes, and *SS* is in seconds. *NN* can be used to specify hundredths of a second. If **am** or **pm** is not specified, **time** uses the 24-hour format by default.|
+|\<HH>[:\<MM>[:\<SS>[.\<NN>]]] [am\|pm]|Sets the system time to the new time specified, where *HH* is in hours (required), *MM* is in minutes, and *SS* is in seconds. *NN* can be used to specify hundredths of a second. If **am** or **pm** is not specified, **time** uses the 24-hour format by default.|
 |/t|Displays the current time without prompting you for a new time.|
 |/?|Displays help at the command prompt.|
 

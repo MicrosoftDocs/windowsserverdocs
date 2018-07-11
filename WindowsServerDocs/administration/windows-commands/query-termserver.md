@@ -18,10 +18,10 @@ ms.date: 10/16/2017
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Displays a list of all remote Desktop Session Host (rd Session Host) servers on the network.
+Displays a list of all Remote Desktop Session Host (rd Session Host) servers on the network.
 for examples of how to use this command, see [Examples](#BKMK_examples).
 > [!NOTE]
-> In Windows Server 2008 R2, Terminal Services was renamed remote Desktop Services. To find out what's new in the latest version, see [What s New in remote Desktop Services in Windows Server 2012](https://technet.microsoft.com/library/hh831527) in the Windows Server TechNet Library.
+> In Windows Server 2008 R2, Terminal Services was renamed Remote Desktop Services. To find out what's new in the latest version, see [What s New in Remote Desktop Services in Windows Server 2012](https://technet.microsoft.com/library/hh831527) in the Windows Server TechNet Library.
 ## Syntax
 ```
 query termserver [<ServerName>] [/domain:<Domain>] [/address] [/continue]
@@ -34,7 +34,7 @@ query termserver [<ServerName>] [/domain:<Domain>] [/address] [/continue]
 |/address|Displays the network and node addresses for each server.|
 |/continue|Prevents pausing after each screen of information is displayed.|
 |/?|Displays help at the command prompt.|
-## remarks
+## Remarks
 -   **query termserver** searches the network for all attached rd Session Host servers and returns the following information:
     -   The name of the server
     -   The network (and node address if the /address option is used)
@@ -58,4 +58,4 @@ query termserver [<ServerName>] [/domain:<Domain>] [/address] [/continue]
 #### additional references
 [Command-Line Syntax Key](command-line-syntax-key.md)
 [query](query.md)
-[remote Desktop Services &#40;Terminal Services&#41; Command Reference](remote-desktop-services-terminal-services-command-reference.md)
+[Remote Desktop Services &#40;Terminal Services&#41; Command Reference](remote-desktop-services-terminal-services-command-reference.md)

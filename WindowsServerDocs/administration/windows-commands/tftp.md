@@ -1,6 +1,6 @@
 ---
 title: tftp
-description: "Windows Commands topic for **** - "
+description: Transfer files to and from a remote computer.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -19,10 +19,12 @@ ms.date: 10/16/2017
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Transfers files to and from a remote computer, typically a computer running UNIX, that is running the Trivial File Transfer Protocol (tftp) service or daemon. tftp is typically used by embedded devices or systems that retrieve firmware, configuration information, or a system image during the boot process from a tftp server.   
+
 ## Syntax  
 ```  
 tftp [-i] [<Host>] [{get | put}] <Source> [<Destination>]  
 ```  
+
 ### Parameters  
 |Parameter|Description|  
 |-------|--------|  
@@ -32,14 +34,17 @@ tftp [-i] [<Host>] [{get | put}] <Source> [<Destination>]
 |get|Transfers the file *Destination* on the remote computer to the file *Source* on the local computer.|  
 |\<Source\>|Specifies the file to transfer.|  
 |\<Destination\>|Specifies where to transfer the file.|  
-## remarks  
+
+## Remarks  
 -   You can install the tftp client using the add Features Wizard.  
 -   The tftp protocol does not support any authentication or encryption mechanism, and as such can introduce a security risk when present. Installing the tftp client is not recommended for systems connected to the Internet.  
 -   The tftp client is optional software, and marked as deprecated on Windows Vista and later versions of the Windows operating system. A tftp server service is no longer provided by Microsoft for security reasons.  
+
 ## <a name="BKMK_Examples"></a>Examples  
-copy the file **boot.img** from the remote computer **Host1**.  
+Copy the file **boot.img** from the remote computer **Host1**.  
 ```  
 tftp  -i Host1 get boot.img  
 ```  
-## additional references  
+
+## Additional references  
 -   [Command-Line Syntax Key](command-line-syntax-key.md)  
