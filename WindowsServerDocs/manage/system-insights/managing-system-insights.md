@@ -65,8 +65,9 @@ Additionally, you can use the **Get-InsightsCapabilityResult** cmdlet to view th
 Get-InsightsCapabilityResult -Name "CPU capacity forecasting" -History
 
 # Use the Output field to locate and then show the results of "CPU capacity forecasting."
-$Output = Get-Content (Get-InsightsCapabilityResult -Name "CPU capacity forecasting").Output | ConvertFrom-Json
-$Output.PredictionResults
+# Specify the encoding as UTF8, so that Get-Content correctly parses non-English characters.
+$Output = Get-Content (Get-InsightsCapabilityResult -Name "CPU capacity forecasting").Output -Encoding UTF8 | ConvertFrom-Json
+$Output.ForecastingResults
 ```
 The System Insights extension automatically shows the prediction history and parses the results of the JSON result, giving you an intuitive, high-fidelity graph of each forecast:
 
@@ -152,3 +153,4 @@ By exposing the existing data collection and management infrastructure, System I
 - [System Insights overview](system-insights-overview.md)
 - [System Insights capabilities](system-insights-capabilities.md)
 - [System Insights FAQ](system-insights-faq.md)
+- [System Insights known issues](system-insights-known-issues.md)

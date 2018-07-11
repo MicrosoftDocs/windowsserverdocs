@@ -28,7 +28,7 @@ bitsadmin /Suspend <Job>
 |Parameter|Description|
 |-------|--------|
 |Job|The job's display name or GUID|
-## remarks
+## Remarks
 To restart the job, use the [bitsadmin resume](bitsadmin-resume.md) command.
 ## <a name="BKMK_examples"></a>Examples
 The following example suspends the job named *myDownloadJob*.

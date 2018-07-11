@@ -29,7 +29,7 @@ expand vdisk maximum=<n>
 |Parameter|Description|
 |-------|--------|
 |maximum=<n>|Specifies the new size for the VHD in megabytes (MB).|
-## remarks
+## Remarks
 -   A VHD must be selected and detached for this operation to succeed. Use the **select vdisk** command to select a volume and shift the focus to it.
 ## <a name="BKMK_Examples"></a>Examples
 To expand the selected VHD to 20 GB, type:

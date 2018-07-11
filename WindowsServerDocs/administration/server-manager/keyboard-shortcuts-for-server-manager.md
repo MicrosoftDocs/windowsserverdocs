@@ -79,7 +79,7 @@ Commands that do not have their own keyboard shortcuts or access keys are access
 |Last checked for updates|**Alt+S**|
 |remote management|**Alt+R**|
 |Windows Firewall|**Alt+F**|
-|remote Desktop|**Alt+K**|
+|Remote Desktop|**Alt+K**|
 |Windows Error Reporting|**Alt+G**|
 |NIC Teaming|**Alt+T**|
 |Customer Experience Improvement Program|**Alt+X**|

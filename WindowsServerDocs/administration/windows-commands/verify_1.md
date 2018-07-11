@@ -34,7 +34,7 @@ verify [on | off]
 
 |Parameter|Description|
 |---------|-----------|
-|[on | off]|Switches the **verify** setting on or off.|
+|[on \| off]|Switches the **verify** setting on or off.|
 |/?|Displays help at the command prompt.|
 
 ## <a name="BKMK_examples"></a>Examples

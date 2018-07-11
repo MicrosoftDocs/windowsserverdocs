@@ -28,4 +28,6 @@
 #### [Settings](health-service-settings.md)
 ### [Configure and manage quorum](manage-cluster-quorum.md)
 ### [Troubleshooting using Windows Error Reporting](troubleshooting-using-WER-reports.md)
+## Insider Preview
+### [Cluster sets](../storage/storage-spaces/cluster-sets.md)
 ## [Change history for Failover Clustering topics](clustering-change-history.md)

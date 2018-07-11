@@ -167,7 +167,7 @@ If you are using a static IP Address scheme, you must include *-StaticAddress x.
 
 10. Configure the cross-cluster virtual machine live migration authentication type to Kerberos on each node in the Cluster Set.
 
-        foreach($h in $hosts){ Set-virtual machineHost -VirtualMachineMigrationAuthenticationType Kerberos -ComputerName $h }
+        foreach($h in $hosts){ Set-VMHost -VirtualMachineMigrationAuthenticationType Kerberos -ComputerName $h }
 
 11. Add the management cluster to the local administrators group on each node in the cluster set.
 
@@ -192,14 +192,14 @@ The below commands will both identify the optimal cluster and deploy the virtual
         # Identify the optimal node to create a new virtual machine
         $memoryinMB=4096
         $vpcount = 1
-        $targetnode = Get-ClusterSetOptimalNodeForvirtual machine -CimSession CSMASTER -virtual machineMemory $memoryinMB -virtual machineVirtualCoreCount $vpcount -virtual machineCpuReservation 10
+        $targetnode = Get-ClusterSetOptimalNodeForVM -CimSession CSMASTER -VMMemory $memoryinMB -VMVirtualCoreCount $vpcount -VMCpuReservation 10
         $secure_string_pwd = convertto-securestring "<password>" -asplaintext -force
         $cred = new-object -typename System.Management.Automation.PSCredential ("<domain\account>",$secure_string_pwd)
 
         # Deploy the virtual machine on the optimal node
-        Invoke-Command -ComputerName $targetnode.name -scriptblock { param([String]$storagepath); New-virtual machine CSvirtual machine1 -MemoryStartupBytes 3072MB -path $storagepath -NewVHDPath CSvirtual machine.vhdx -NewVHDSizeBytes 4194304 } -ArgumentList @("\\SOFS-CLUSTER1\VOLUME1") -Credential $cred | Out-Null
-        Start-virtual machine CSvirtual machine1 -ComputerName $targetnode.name | Out-Null
-        Get-virtual machine CSvirtual machine1 -ComputerName $targetnode.name | fl State, ComputerName
+        Invoke-Command -ComputerName $targetnode.name -scriptblock { param([String]$storagepath); New-VM CSVM1 -MemoryStartupBytes 3072MB -path $storagepath -NewVHDPath CSVM.vhdx -NewVHDSizeBytes 4194304 } -ArgumentList @("\\SOFS-CLUSTER1\VOLUME1") -Credential $cred | Out-Null
+        Start-VM CSVM1 -ComputerName $targetnode.name | Out-Null
+        Get-VM CSVM1 -ComputerName $targetnode.name | fl State, ComputerName
 
 When it completes, you will be given the information about the virtual machine and where it was placed.  In the above example, it would show as:
 
@@ -208,29 +208,29 @@ When it completes, you will be given the information about the virtual machine a
 
 If you were to not have enough memory, cpu, or disk space to add the virtual machine, you will receive the error:
 
-      Get-ClusterSetOptimalNodeForvirtual machine : A cluster node is not available for this operation.  
+      Get-ClusterSetOptimalNodeForVM : A cluster node is not available for this operation.  
 
 Once the virtual machine has been created, it will be dosplayed in Hyper-V manager on the specific node specified.  To add it as a cluster set virtual machine and into the cluster, the command is below.  
 
-        Register-ClusterSetvirtual machine -CimSession CSMASTER -MemberName $targetnode.Member -virtual machineName CSvirtual machine1
+        Register-ClusterSetVM -CimSession CSMASTER -MemberName $targetnode.Member -VMName CSVM1
 
 When it completes, the output will be:
 
-         Id  virtual machineName  State  MemberName  PSComputerName
+         Id  VMName  State  MemberName  PSComputerName
          --  ------  -----  ----------  --------------
-          1  CSvirtual machine1      On  CLUSTER1    CSMASTER
+          1  CSVM1      On  CLUSTER1    CSMASTER
 
 If you have added a cluster with existing virtual machines, the virtual machines will alos need to be registered with Cluster setso register all the virtual machines at once, the command to use is:
 
-        Get-ClusterSetMember -name CLUSTER3 -CimSession CSMASTER | Register-ClusterSetvirtual machine -RegisterAll -CimSession CSMASTER
+        Get-ClusterSetMember -name CLUSTER3 -CimSession CSMASTER | Register-ClusterSetVM -RegisterAll -CimSession CSMASTER
 
 However, the process is not complete as the path to the virtual machine needs to be added to the cluster set namespace.
 
-So for example, an existing cluster is added and it has pre-configured virtual machines the reside on the local Cluster Shared Volume (CSV), the path for the VHDX would be something similar to "C:\ClusterStorage\Volume1\MYvirtual machine\Virtual Hard Disks\MYvirtual machine.vhdx.  A storage migration would need to be accomplished as CSV paths are by design local to a single member cluster. Thus, will not be accessible to the virtual machine once they are live migrated across member clusters. 
+So for example, an existing cluster is added and it has pre-configured virtual machines the reside on the local Cluster Shared Volume (CSV), the path for the VHDX would be something similar to "C:\ClusterStorage\Volume1\MYVM\Virtual Hard Disks\MYVM.vhdx.  A storage migration would need to be accomplished as CSV paths are by design local to a single member cluster. Thus, will not be accessible to the virtual machine once they are live migrated across member clusters. 
 
 In this example, CLUSTER3 was added to the cluster set using Add-ClusterSetMember with the Infrastructure Scale-Out File Server as SOFS-CLUSTER3.  To move the virtual machine configuration and storage, the command is:
 
-        Move-virtual machineStorage -DestinationStoragePath \\SOFS-CLUSTER3\Volume1 -Name MYvirtual machine
+        Move-VMStorage -DestinationStoragePath \\SOFS-CLUSTER3\Volume1 -Name MYVM
 
 Once it completes, you will receive a warning:
 
@@ -249,7 +249,7 @@ Live migrating a virtual machine between different cluster set clusters is not t
 
 With Cluster sets these steps are not necessary and only one command is needed.  For example, I want to move a Cluster Set virtual machine from CLUSTER1 to CLUSTER3.  The single command would be:
 
-        Move-ClusterSetvirtual machine -CimSession CSMASTER -virtual machineName CSvirtual machine1 -ClusterName CLUSTER3
+        Move-ClusterSetVM -CimSession CSMASTER -VMName CSVM1 -ClusterName CLUSTER3
 
 Please note that this does not move the virtual machine storage or configuration files.  This is not necessary as the path to the virtual machine remains as \\SOFS-CLUSTER1\VOLUME1.  Once a virtual machine has been registered with cluster sets has the Infrastructure File Server share path, the drives and virtual machine do not require being on the same machine as the virtual machine.
 
@@ -293,11 +293,11 @@ When creating new virtual machines, you would then need to use the -Availability
         $memoryinMB=4096
         $vpcount = 1
         $av = Get-ClusterSetAvailabilitySet -Name CSMASTER-AS -CimSession CSMASTER
-        $targetnode = Get-ClusterSetOptimalNodeForvirtual machine -CimSession CSMASTER -virtual machineMemory $memoryinMB -virtual machineVirtualCoreCount $vpcount -virtual machineCpuReservation 10 -AvailabilitySet $av
+        $targetnode = Get-ClusterSetOptimalNodeForVM -CimSession CSMASTER -VMMemory $memoryinMB -VMVirtualCoreCount $vpcount -VMCpuReservation 10 -AvailabilitySet $av
         $secure_string_pwd = convertto-securestring "<password>" -asplaintext -force
         $cred = new-object -typename System.Management.Automation.PSCredential ("<domain\account>",$secure_string_pwd)
 
-Removing a cluster from cluster sets due to various life cycles. There are times when a cluster needs to be removed from a cluster set. As a best practice, all cluster set virtual machines should be moved out of the cluster. This can be accomplished using the **Move-ClusterSetvirtualMachine** and **Move-VMStorage** commands.
+Removing a cluster from cluster sets due to various life cycles. There are times when a cluster needs to be removed from a cluster set. As a best practice, all cluster set virtual machines should be moved out of the cluster. This can be accomplished using the **Move-ClusterSetVM** and **Move-VMStorage** commands.
 
 However, if the virtual machines will not be moved as well, cluster sets runs a series of actions to provide an intuitive outcome to the administrator.  When the cluster is removed from the set, all remaining cluster set virtual machines hosted on the cluster being removed will simply become highly available virtual machines bound to that cluster, assuming they have access to their storage.  Cluster sets will also automatically update its inventory by:
 

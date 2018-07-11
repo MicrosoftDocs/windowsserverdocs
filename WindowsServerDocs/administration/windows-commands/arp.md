@@ -32,7 +32,7 @@ arp [/a [<Inetaddr>] [/n <ifaceaddr>]] [/g [<Inetaddr>] [-n <ifaceaddr>]] [/d <I
 |[/d <Inetaddr> [<ifaceaddr>]|deletes an entry with a specific IP address, where *Inetaddr* is the IP address.<br /><br />To delete an entry in a table for a specific interface, use the *ifaceaddr* parameter where *ifaceaddr* is the IP address assigned to the interface.<br /><br />To delete all entries, use the asterisk (\*) wildcard character in place of *Inetaddr*.|
 |/s <Inetaddr> <Etheraddr> [<ifaceaddr>]|adds a static entry to the arp cache that resolves the IP address *Inetaddr* to the physical address *Etheraddr*.<br /><br />To add a static arp cache entry to the table for a specific interface, use the *ifaceaddr* parameter where *ifaceaddr* is an IP address assigned to the interface.|
 |/?|Displays help at the command prompt.|
-## remarks
+## Remarks
 -   The IP addresses for *Inetaddr* and *ifaceaddr* are expressed in dotted decimal notation.
 -   The physical address for *Etheraddr* consists of six bytes expressed in hexadecimal notation and separated by hyphens (for example, 00-AA-00-4F-2A-9C).
 -   Entries added with the **/s** parameter are static and do not time out of the arp cache. The entries are removed if the TCP/IP protocol is stopped and started. To create permanent static arp cache entries, place the appropriate **arp** commands in a batch file and use Scheduled Tasks to run the batch file at startup.

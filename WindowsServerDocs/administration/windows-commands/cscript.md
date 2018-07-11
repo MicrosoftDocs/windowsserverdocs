@@ -42,7 +42,7 @@ cscript <Scriptname.extension> [/B] [/D] [/E:<Engine>] [{/H:cscript|/H:wscript}]
 |/X|starts the script in the debugger.|
 |/?|Displays available command parameters and provides help for using them. This is the same as typing **cscript.exe** with no parameters and no script.|
 |ScriptArguments|Specifies the arguments passed to the script. Each script argument must be preceded by a slash (**/**).|
-### remarks
+### Remarks
 -   Performing this task does not require you to have administrative credentials. Therefore, as a security best practice, consider performing this task as a user without administrative credentials.
 -   To open a command prompt, on the **start** screen, type **cmd**, and then click **command prompt**.
 -   Each parameter is optional; however, you cannot specify script arguments without specifying a script. If you do not specify a script or any script arguments, cscript.exe displays the cscript.exe syntax and the valid host options.

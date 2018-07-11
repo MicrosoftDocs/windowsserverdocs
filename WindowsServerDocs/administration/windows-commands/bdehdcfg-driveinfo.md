@@ -27,7 +27,7 @@ bdehdcfg -driveinfo <DriveLetter>
 |Parameter|Description|
 |-------|--------|
 |<DriveLetter>|Specifies a drive letter followed by a colon.|
-## remarks
+## Remarks
 The command is informational only and makes no modifications to the drive.
 ## <a name="BKMK_Examples"></a>Example
 The following example will display the drive information for drive C.
