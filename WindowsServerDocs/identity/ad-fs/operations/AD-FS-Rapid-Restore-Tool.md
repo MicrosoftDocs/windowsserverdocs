@@ -5,7 +5,7 @@ description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 02/20/2018
+ms.date: 07/11/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 
@@ -218,3 +218,18 @@ Every time a backup or restore is performed a log file is created. These can be 
 
 >[!NOTE]
 > When performing a restore a PostRestore_Instructions file might be created containing an overview of the additional authentication providers, attribute stores and local claims provider trusts to be installed manually before starting the AD FS service.
+
+## Version Release History
+
+### 1.0.18.0
+Release: July 2018
+
+**Fixed issues:**
+
+   - Bug fix: handle service account passwords that have special characters in them (ie, ‘&’)
+   - Bug fix: restoration fails because Microsoft.IdentityServer.Servicehost.exe.config is being used by another process
+
+
+### 1.0.0.0
+Released: xxx
+Initial release of AD FS Rapid Restore Tool
