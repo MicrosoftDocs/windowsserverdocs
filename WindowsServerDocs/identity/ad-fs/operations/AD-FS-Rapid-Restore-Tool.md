@@ -231,6 +231,6 @@ Release: July 2018
 
 
 ### 1.0.0.0
-Released: February 2018
+Released: October 2016
 
 Initial release of AD FS Rapid Restore Tool
