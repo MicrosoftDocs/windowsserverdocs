@@ -31,7 +31,7 @@ bootcfg /query [/s <computer> [/u <Domain>\<User> /p <Password>]]
 |/u <Domain>\\<User>|Runs the command with the account permissions of the user specified by <User>or <Domain>\\<User>. The default is the permissions of the current logged on user on the computer issuing the command.|
 |/p <Password>|Specifies the password of the user account that is specified in the **/u** parameter.|
 |/?|Displays help at the command prompt.|
-##### remarks
+##### Remarks
 -   The following is a sample of **bootcfg /query** output:
     ```
     Boot Loader Settings

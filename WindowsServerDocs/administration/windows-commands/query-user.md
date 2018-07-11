@@ -18,10 +18,10 @@ ms.date: 10/16/2017
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Displays information about user sessions on a remote Desktop Session Host (rd Session Host) server.
+Displays information about user sessions on a Remote Desktop Session Host (rd Session Host) server.
 for examples of how to use this command, see [Examples](#BKMK_examples).
 > [!NOTE]
-> In Windows Server 2008 R2, Terminal Services was renamed remote Desktop Services. To find out what's new in the latest version, see [What s New in remote Desktop Services in Windows Server 2012](https://technet.microsoft.com/library/hh831527) in the Windows Server TechNet Library.
+> In Windows Server 2008 R2, Terminal Services was renamed Remote Desktop Services. To find out what's new in the latest version, see [What s New in Remote Desktop Services in Windows Server 2012](https://technet.microsoft.com/library/hh831527) in the Windows Server TechNet Library.
 ## Syntax
 ```
 query user [<UserName> | <SessionName> | <SessionID>] [/server:<ServerName>]
@@ -34,7 +34,7 @@ query user [<UserName> | <SessionName> | <SessionID>] [/server:<ServerName>]
 |<SessionID>|Specifies the ID of the session that you want to query.|
 |/server:<ServerName>|Specifies the rd Session Host server that you want to query. Otherwise, the current rd Session Host server is used.|
 |/?|Displays help at the command prompt.|
-## remarks
+## Remarks
 -   You can use this command to find out if a specific user is logged on to a specific rd Session Host server. **query user** returns the following information:
     -   The name of the user
     -   The name of the session on the rd Session Host server
@@ -58,4 +58,4 @@ query user [<UserName> | <SessionName> | <SessionID>] [/server:<ServerName>]
 #### additional references
 [Command-Line Syntax Key](command-line-syntax-key.md)
 [query](query.md)
-[remote Desktop Services &#40;Terminal Services&#41; Command Reference](remote-desktop-services-terminal-services-command-reference.md)
+[Remote Desktop Services &#40;Terminal Services&#41; Command Reference](remote-desktop-services-terminal-services-command-reference.md)

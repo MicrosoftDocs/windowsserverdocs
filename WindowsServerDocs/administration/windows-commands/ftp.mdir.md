@@ -28,7 +28,7 @@ mdir <remoteFile>[ ] <LocalFile>
 |-------|--------|  
 |<remoteFile>|Specifies the directory or file for which you want to see a listing.|  
 |<LocalFile>|Specifies a local file to store the listing. This parameter is required.|  
-## remarks  
+## Remarks  
 -   You can use **mdir** to specify multiple files.  
 -   Specifying *remoteFile*  
     type a hyphen (**-**) to use the current working directory on the remote computer.  

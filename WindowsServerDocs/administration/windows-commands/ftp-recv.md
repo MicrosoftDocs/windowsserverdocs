@@ -28,7 +28,7 @@ recv <remoteFile> [<LocalFile>]
 |-------|--------|  
 |<remoteFile>|Specifies the remote file to copy.|  
 |[<LocalFile>]|Specifies the name to use on the local computer.|  
-## remarks  
+## Remarks  
 -   The **recv** command is identical to the **get** command.  
 -   if *LocalFile* is not specified, the file is given the *remoteFile* name.  
 ## <a name="BKMK_Examples"></a>Examples  

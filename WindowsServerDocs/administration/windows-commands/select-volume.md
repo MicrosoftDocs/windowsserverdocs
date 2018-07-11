@@ -35,7 +35,7 @@ select volume={<n>|<d>}
 |<n>|The number of the volume to receive the focus. You can view the numbers for all volumes on the disk currently selected by using the **list volume** command in DiskPart.|  
 |<d>|The drive letter or mount point path of the volume to receive the focus.|  
   
-## remarks  
+## Remarks  
   
 -   if no volume is specified, this command displays the volume that currently has the focus in the selected disk.  
   

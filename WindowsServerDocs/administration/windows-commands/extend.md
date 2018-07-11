@@ -38,7 +38,7 @@ extend filesystem [noerr]
 |filesystem|extends the file system of the volume with focus. For use only on disks where the file system was not extended with the volume.|  
 |noerr|for scripting only. When an error is encountered, DiskPart continues to process commands as if the error did not occur. Without this parameter, an error causes DiskPart to exit with an error code.|  
   
-## remarks  
+## Remarks  
   
 -   On basic disks, the free space must be on the same disk as the volume or partition with focus. It must also immediately follow the volume or partition with focus \(that is, it must start at the next sector offset\).  
   

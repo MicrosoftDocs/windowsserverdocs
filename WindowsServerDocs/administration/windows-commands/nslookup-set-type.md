@@ -47,7 +47,7 @@ Specifies a DNS resource record type. The default resource record type is A. The
 |WKS|Describes a well-known service.|
 {help | ?}
 Displays a short summary of **nslookup** subcommands
-## remarks
+## Remarks
 -   The **set type** command performs the same function as the **set querytype** command.
 -   for more information about resource record types, see Request for Comment (Rfc) 1035.
 ## additional references

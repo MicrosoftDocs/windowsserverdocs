@@ -58,7 +58,7 @@ logman create trace <[-n] <name>> [options]
 |-bs <value>|Specifies the Event Trace Session buffer size in kb.|  
 |-nb <min max>|Specifies the number of Event Trace Session buffers.|  
 |-mode <globalsequence&#124;localsequence&#124;pagedmemory>|Specifies the event trace session logger mode.<br /><br />**Globalsequence** specifies that the event tracer add a sequence number to every event it receives irrespective of which trace session received the event.<br /><br />**Localsequence** specifies that the event tracer add sequence numbers for events received at a specific trace session. When the **localsequence** option is used, duplicate sequence numbers can exist across all sessions but will be unique within each trace session.<br /><br />**Pagedmemory** specifies that the event tracer use paged memory rather than the default non-paged memory pool for its internal buffer allocations.|  
-## remarks  
+## Remarks  
 Where [-] is listed, an extra - negates the option.  
 ## <a name="BKMK_examples"></a>Examples  
 The following example creates an event trace data collector called trace_log using no fewer than 16 and no more than 256 buffers, each buffer 64kb in size, and outputs the results to the location c:\logfile.  

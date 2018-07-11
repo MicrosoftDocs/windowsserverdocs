@@ -36,7 +36,7 @@ bootcfg /debug {ON | OFF | edit}[/s <computer> [/u <Domain>\<User> /p <Password>
 |/baud {9600&#124; 19200&#124; 38400&#124; 57600&#124; 115200}|Specifies the baud rate to be used for debugging. Do not use the **/baud** parameter if debugging is being disabled.|
 |/id <OSEntryLineNum>|Specifies the operating system entry line number in the [operating systems] section of the Boot.ini file to which the debugging options are added. The first line after the [operating systems] section header is 1.|
 |/?|Displays help at the command prompt.|
-##### remarks
+##### Remarks
 -   if 1394 port debugging is required, use [bootcfg dbg1394](bootcfg-dbg1394.md).
 ## <a name="BKMK_examples"></a>Examples
 The following examples show how you can use the **bootcfg /debug**command:
