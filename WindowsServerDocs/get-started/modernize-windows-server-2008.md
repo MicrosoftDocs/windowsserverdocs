@@ -7,15 +7,13 @@ ms.sitesec: library
 author: mikeblodge
 ms.author: mikeblodge
 ms.localizationpriority: high
-ms.date: 07/11/2018
+ms.date: 07/12/2018
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.localizationpriority: high
 ---
 
 # Upgrade Windows Server 2008 and Windows Server 2008 R2
-
-![WS08 end of support banner](media/WS08-EoS-banner.jpg)
 
 Extended support for Windows Server 2008 and Windows Server 2008 R2 is ending on January 14, 2020. There are two modernization paths available: On-premises upgrade, or migration by rehosting in Azure. **If you rehost in Azure, you can migrate your existing Server images free of charge.**
 
