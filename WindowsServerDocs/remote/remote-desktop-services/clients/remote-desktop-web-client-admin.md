@@ -34,15 +34,16 @@ Before getting started, keep the following things in mind:
 Your users will see better performance connecting to Windows Server 2016 (or later) and Windows 10 (version 1611 or later).
 
 >[!IMPORTANT]
->If you used the web client during the preview period and installed a version prior to 1.0.0, you must first uninstall the old client before moving to the new version. If you receive an error that "The web client was installed using an older version of RDWebClientManagement and must first be removed before deploying the new version.", follow the steps below:
->- Open an elevated PowerShell prompt.
->- Uninstall the new module using Uninstall-Module RDWebClientManagement.
->- Close and reopen the elevated PowerShell prompt.
->- Install the old module using Install-Module RDWebClientManagement -RequiredVersion **old version**.
->- Uninstall the old web client with Uninstall-RDWebClient.
->- Uninstall the old module using Uninstall-Module RDWebClientManagement.
->- Close and reopen the elevated PowerShell prompt.
->- Proceed with the normal installation steps below.
+>If you used the web client during the preview period and installed a version prior to 1.0.0, you must first uninstall the old client before moving to the new version. If you receive an error that says "The web client was installed using an older version of RDWebClientManagement and must first be removed before deploying the new version," follow these steps:
+>
+>1. Open an elevated PowerShell prompt.
+>2. Uninstall the new module using **Uninstall-Module RDWebClientManagement**.
+>3. Close and reopen the elevated PowerShell prompt.
+>4. Install the old module using **Install-Module RDWebClientManagement -RequiredVersion \<old version>.**
+>5. Uninstall the old web client with **Uninstall-RDWebClient**.
+>6. Uninstall the old module using **Uninstall-Module RDWebClientManagement**.
+>7. Close and reopen the elevated PowerShell prompt.
+>8. Proceed with the normal installation steps below.
 
 ## How to publish the Remote Desktop web client
 
