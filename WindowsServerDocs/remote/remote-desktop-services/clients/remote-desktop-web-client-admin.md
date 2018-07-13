@@ -43,7 +43,7 @@ Your users will see better performance connecting to Windows Server 2016 (or lat
 >5. Uninstall the old web client with **Uninstall-RDWebClient**.
 >6. Uninstall the old module using **Uninstall-Module RDWebClientManagement**.
 >7. Close and reopen the elevated PowerShell prompt.
->8. Proceed with the normal installation steps below.
+>8. Proceed with the normal installation steps as follows.
 
 ## How to publish the Remote Desktop web client
 
