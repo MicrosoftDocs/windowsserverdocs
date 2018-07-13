@@ -129,7 +129,7 @@ The following REG\_DWORD registry settings can affect the performance of SMB fil
 -   **AsynchronousCredits**
 
     ``` 
-    HKLM\System\CurrentControlSet\Services\LanmanServer\Parameters\MaxThreadsPerQueue
+    HKLM\System\CurrentControlSet\Services\LanmanServer\Parameters\AsynchronousCredits
     ```
 
     The default is 512. This parameter limits the number of concurrent asynchronous SMB commands that are allowed on a single connection. Some cases (such as when there is a front-end server with a back-end IIS server) require a large amount of concurrency (for file change notification requests, in particular). The value of this entry can be increased to support these cases.
