@@ -23,6 +23,8 @@ Extended support for Windows Server 2008 and Windows Server 2008 R2 is ending on
 ## On-premises upgrade
 If you need to keep your servers on-premises, and you are running Windows Server 2008 or Windows Server 2008 R2, you will need to [upgrade to Windows Server 2012/2012 R2](installation-and-upgrade.md#upgrading-to-windows-server-2012-r2) before you can [upgrade to Windows Server 2016](installation-and-upgrade.md#upgrading-to-windows-server-2016). As you upgrade, you still have the option to migrate to Azure by rehosting.
 
+See [Upgrading from Windows Server 2008 R2 or Windows Server 2008](installation-and-upgrade.md#upgrading-from-windows-server-2008-r2-or-windows-server-2008), for more information about your on-premises upgrade options.
+
 
 ## Migrate to Azure
 You can migrate your on-premises Windows Server 2008 and Windows Server 2008 R2 servers to Azure, where you can continue to run them on virtual machines. In Azure you’ll stay compliant, become more secure, and add cloud innovation to your work. The benefits of migrating to Azure include:
