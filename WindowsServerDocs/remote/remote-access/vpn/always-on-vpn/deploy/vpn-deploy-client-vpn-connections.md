@@ -873,9 +873,9 @@ Create the VPN device configuration policy to configure the Windows 10 client co
 8.  Replace the **\<TrustedRootCA>5a 89 fe cb 5b 49 a7 0b 1a 52 63 b7 35 ee d7 1c c2 68 be 4b<\/TrustedRootCA>** in the sample with the certificate thumbprint of your on-premises root certificate authority in both places.
   
     >[!Important]
-    >Do not use the sample thumbprint in the \<TrustedRootCA>\</TrustedRootCA> section below.  The TrustedRootCA must be the certificate thumbprint of the on-premises root certificate authority that issued the server-authentication certificate for RRAS and NPS servers. Not the cloud root certificate and not the intermediate issuing CA certificate thumbprint.
+    >Do not use the sample thumbprint in the \<TrustedRootCA>\</TrustedRootCA> section below.  The TrustedRootCA must be the certificate thumbprint of the on-premises root certificate authority that issued the server-authentication certificate for RRAS and NPS servers. **This must not be the cloud root certificate, nor the intermediate issuing CA certificate thumbprint**.
 
-10. Replace the **\<ServerNames>NPS.contoso.com\</ServerNames>** with the name of the NPS server in both places. 
+10. Replace the **\<ServerNames>NPS.contoso.com\</ServerNames>** in the sample XML with the FQDN of the domain-joined NPS where authentication takes place. 
 
 11. Copy the revised XML string and paste into the **EAP Xml** box under the Base VPN tab and click **OK**.<p>An Always On VPN Device Configuration policy using EAP is created in Intune.
 
