@@ -27,7 +27,7 @@ clean [all]
 |Parameter|Description|
 |-------|--------|
 |all|Specifies that each and every sector on the disk is set to zero, which completely deletes all data contained on the disk.|
-## remarks
+## Remarks
 -   On master boot record (MBR) disks, only the MBR partitioning information and hidden sector information are overwritten.
 -   On GUID Partition Table (gpt) disks, the gpt partitioning information, including the Protective MBR, is overwritten. There is no hidden sector information.
 -   A disk must be selected for this operation to succeed. Use the **select disk** command to select a disk and shift the focus to it.

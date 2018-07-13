@@ -88,7 +88,7 @@ There are two types of parameters: base parameters and modification parameters. 
 |/Mq[message]|Displays a confirmation message to the user before committing the changes specified in the command line.|  
 |/W[flags]|Specifies any parameters or options for the add printer wizard, the add printer Driver Wizard, and the Network printer Installation Wizard.<br /><br />**r**: Enables the wizards to be restarted from the last page.|  
 |/G[flags]|Specifies global parameters and options that you want to use.<br /><br />**w**: Suppresses setup driver warnings to the user.|  
-## remarks  
+## Remarks  
 -   The **PrintUIEntry** keyword is case sensitive, and you must enter the syntax for this command with the exact capitalization shown in the examples in this topic.  
 -   See [Examples](#BKMK_Examples) in this document for the syntax for some common tasks. For more examples, at a command prompt type: **rundll32 printui.dll,PrintUIEntry /?**  
 ## <a name="BKMK_Examples"></a>Examples  

@@ -44,7 +44,7 @@ auditpol /set
 |/option|Sets the audit policy for the CrashOnAuditFail, FullprivilegeAuditing, AuditBaseObjects, or AuditBasedirectories options.|
 |/sd|Sets the security descriptor used to delegate access to the audit policy. The security descriptor must be specified by using the Security Descriptor Definition Language (SDDL). The security descriptor must have a discretionary access control list (DACL).|
 |/?|Displays help at the command prompt.|
-## remarks
+## Remarks
 for all set operations for the per-user policy and system policy, you must have Write or Full Control permission on that object set in the security descriptor. You can also perform set operations by possessing the **Manage auditing and security log** (SeSecurityPrivilege) user right. However, this right allows additional access that is not necessary to perform the set operation.
 ## <a name="BKMK_examples"></a>Examples
 ### Examples for the per-user audit policy

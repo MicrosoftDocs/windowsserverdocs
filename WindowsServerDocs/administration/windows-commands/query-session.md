@@ -18,11 +18,11 @@ ms.date: 10/16/2017
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Displays information about sessions on a remote Desktop Session Host (rd Session Host) server.
+Displays information about sessions on a Remote Desktop Session Host (rd Session Host) server.
 The list includes information not only about active sessions but also about other sessions that the server runs.
 for examples of how to use this command, see [Examples](#BKMK_examples).
 > [!NOTE]
-> In Windows Server 2008 R2, Terminal Services was renamed remote Desktop Services. To find out what's new in the latest version, see [What s New in remote Desktop Services in Windows Server 2012](https://technet.microsoft.com/library/hh831527) in the Windows Server TechNet Library.
+> In Windows Server 2008 R2, Terminal Services was renamed Remote Desktop Services. To find out what's new in the latest version, see [What s New in Remote Desktop Services in Windows Server 2012](https://technet.microsoft.com/library/hh831527) in the Windows Server TechNet Library.
 ## Syntax
 ```
 query session [<SessionName> | <UserName> | <SessionID>] [/server:<ServerName>] [/mode] [/flow] [/connect] [/counter]
@@ -39,7 +39,7 @@ query session [<SessionName> | <UserName> | <SessionID>] [/server:<ServerName>] 
 |/connect|Displays current connect settings.|
 |/counter|Displays current counters information, including the total number of sessions created, disconnected, and reconnected.|
 |/?|Displays help at the command prompt.|
-## remarks
+## Remarks
 -   A user can always query the session to which the user is currently logged on. To query other sessions, the user must have query Information special access permission.
 -   if you do not specify a session by using <*SessionName*>, <*UserName*>, or <*SessionID*>, **query session** displays information about all active sessions in the system.
 -   When **query session** returns information, a greater than (>) symbol is displayed before the current session. Following is sample output for **query session**:
@@ -65,4 +65,4 @@ query session [<SessionName> | <UserName> | <SessionID>] [/server:<ServerName>] 
 #### additional references
 [Command-Line Syntax Key](command-line-syntax-key.md)
 [query](query.md)
-[remote Desktop Services &#40;Terminal Services&#41; Command Reference](remote-desktop-services-terminal-services-command-reference.md)
+[Remote Desktop Services &#40;Terminal Services&#41; Command Reference](remote-desktop-services-terminal-services-command-reference.md)

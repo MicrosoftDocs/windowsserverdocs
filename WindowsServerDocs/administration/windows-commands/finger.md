@@ -30,7 +30,7 @@ finger [-l] [<User>] [@<Host>] [...]
 |<User>|Specifies the user about which you want information. If you omit the *User* parameter, **finger** displays information about all users on the specified computer.|
 |@<Host>|Specifies the remote computer running the finger service where you are looking for user information. You can specify a computer name or IP address.|
 |/?|Displays help at the command prompt.|
-## remarks
+## Remarks
 Multiple User@Host parameters can be specified.
 You must prefix **finger** parameters with a hyphen (-) rather than a slash (/).
 This command is available only if the Internet Protocol (TCP/IP) protocol is installed as a component in the properties of a network adapter in Network Connections.

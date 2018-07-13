@@ -38,7 +38,7 @@ cacls <filename> [/t] [/m] [/l] [/s[:sddl]] [/e] [/c] [/g user:<perm>] [/r user 
 |[/p user:<perm> [...]|replace specified user's access rights.<br /><br />Valid values for permission:<br /><br />-   n - none<br />-   r - read<br />-   w - write<br />-   c - change (write)<br />-   f - full control|  
 |[/d user [...]|Deny specified user access.|  
 |/?|Displays help at the command prompt.|  
-## remarks  
+## Remarks  
 -   This command has been deprecated. Please use [icacls](icacls.md) instead.  
 -   Use the following table to interpret the results:  
     |Output|Access control entry (ACE) applies to|  

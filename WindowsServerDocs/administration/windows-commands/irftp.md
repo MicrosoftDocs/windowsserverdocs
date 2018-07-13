@@ -32,7 +32,7 @@ irftp [<Drive>:\] [[<path>] <FileName>] [/h][/s]
 |/h|Specifies hidden mode. When hidden mode is used, the files are sent without displaying the Wireless Link dialog box.|  
 |/s|Opens the Wireless Link dialog box, so that you can select the file or set of files that you want to send without using the command line to specify the drive, path, and file names.|  
 
-## remarks  
+## Remarks  
 -   Before using this command, verify that the devices that you want to communicate over an infrared link have infrared functionality enabled and working correctly, and that an infrared link is established between the devices.  
 -   Used without parameters or used with **/s**, **irftp** opens the **Wireless Link** dialog box, where you can select the files that you want to send without using the command line.  
 

@@ -51,7 +51,7 @@ logman create counter <[-n] <name>> [options]
 |-cf <filename>|Specifies the file listing performance counters to collect. The file should contain one performance counter name per line.|  
 |-c <path [path [ ]]>|Specifies performance counter(s) to collect.|  
 |-sc <value>|Specifies the maximum number of samples to collect with a performance counter data collector.|  
-## remarks  
+## Remarks  
 Where [-] is listed, an extra - negates the option.  
 ## <a name="BKMK_examples"></a>Examples  
 The following command creates a counter called perf_log using the % Processor time counter from the Processor(_Total) counter category.  

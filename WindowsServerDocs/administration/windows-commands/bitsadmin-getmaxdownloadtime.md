@@ -32,7 +32,7 @@ bitsadmin /GetMaxDownloadtime <Job>
 |-------|--------|
 |Job|The job's display name or GUID|
 
-## remarks
+## Remarks
 
 -   N\/A
 

@@ -40,7 +40,7 @@ attributes volume [{set | clear}] [{hidden | readonly | nodefaultdriveletter | s
 |shadowcopy|Specifies that the volume is a shadow copy volume.|  
 |noerr|for scripting only. When an error is encountered, DiskPart continues to process commands as if the error did not occur. Without this parameter, an error causes DiskPart to exit with an error code.|  
   
-## remarks  
+## Remarks  
   
 -   On basic master boot record \(MBR\) disks, the **hidden**, **readonly**, and **nodefaultdriveletter** parameters apply to all volumes on the disk.  
   

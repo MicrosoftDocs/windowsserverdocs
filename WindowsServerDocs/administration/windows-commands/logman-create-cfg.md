@@ -52,7 +52,7 @@ logman create cfg <[-n] <name>> [options]
 |-reg <path [path [...]]>|Specifies registry value(s) to collect.|  
 |-mgt <query [query [...]]>|Specifies WMI object(s) to collect using SQL query language.|  
 |-ftc <path [path [...]]>|Specifies the full path to the file(s) to collect.|  
-## remarks  
+## Remarks  
 Where [-] is listed, an extra - negates the option.  
 ## <a name="BKMK_examples"></a>Examples  
 The following command creates a configuration data collector called cfg_log using the registry key HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\Currentverion\\.  

@@ -27,7 +27,7 @@ bitsadmin /Wrap Job
 |Parameter|Description|
 |-------|--------|
 |Job|The job's display name or GUID|
-## remarks
+## Remarks
 Specify before other commands. By default, all commands, except the [bitsadmin monitor](bitsadmin-monitor.md) command, wrap the output.
 ## <a name="BKMK_examples"></a>Examples
 The following example retrieves information for the job named *myDownloadJob* and wraps the output.

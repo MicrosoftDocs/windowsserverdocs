@@ -59,7 +59,7 @@ In a single session in the add Roles and Features Wizard, you can install roles,
   
 3.  On the **Before you begin** page, verify that your destination server and network environment are prepared for the role and feature you want to install. Click **Next**.  
   
-4.  On the **Select installation type** page, select **Role-based or feature-based installation** to install all parts of roles or features on a single server, or **Remote Desktop Services installation** to install either a virtual machine-based desktop infrastructure or a session-based desktop infrastructure for remote Desktop Services. The **Remote Desktop Services installation** option distributes logical parts of the remote Desktop Services role across different servers as needed by administrators. Click **Next**.  
+4.  On the **Select installation type** page, select **Role-based or feature-based installation** to install all parts of roles or features on a single server, or **Remote Desktop Services installation** to install either a virtual machine-based desktop infrastructure or a session-based desktop infrastructure for Remote Desktop Services. The **Remote Desktop Services installation** option distributes logical parts of the Remote Desktop Services role across different servers as needed by administrators. Click **Next**.  
   
 5.  On the **Select destination server** page, select a server from the server pool, or select an offline VHD. To select an offline VHD as your destination server, first select the server on which to mount the VHD, and then select the VHD file. For information about how to add servers to your server pool, see [add Servers to Server Manager](add-servers-to-server-manager.md). After you have selected the destination server, click **Next**.  
   

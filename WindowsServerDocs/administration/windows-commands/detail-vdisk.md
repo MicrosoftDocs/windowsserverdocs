@@ -26,7 +26,7 @@ Displays the properties of the selected virtual hard disk \(VHD\).
 detail vdisk  
 ```  
   
-## remarks  
+## Remarks  
   
 -   A VHD must be selected for this operation to succeed. Use the **select vdisk** command to select a vdisk and shift the focus to it.  
   

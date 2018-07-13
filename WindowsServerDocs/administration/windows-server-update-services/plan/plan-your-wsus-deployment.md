@@ -130,7 +130,7 @@ You can install the WSUS role on a computer that is separate from the database s
 
 1.  The database server cannot be configured as a domain controller.
 
-2.  The WSUS server cannot run remote Desktop Services.
+2.  The WSUS server cannot run Remote Desktop Services.
 
 3.  The database server must be in the same active directory domain as the WSUS server, or it must have a trust relationship with the active directory domain of the WSUS server.
 

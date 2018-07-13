@@ -43,7 +43,7 @@ command </parameter> </param2>
 |[dfsutil Cache](dfsutil-cache.md)|Displays or flushes the client cache.|
 |[dfsutil oldcli](dfsutil-oldcli.md)|Use the dfsutil \/oldcli command to use of the original dfsutil syntax.|
 
-## remarks <optional section>
+## Remarks <optional section>
 if you specify an object \(such as a namespace server\) at the end of a command, most commands will display information about the object without requiring further parameters or commands. For example, when using the dfsutil Root command, you can append a namespace root to the command to view information about the root.
 
 ## <a name="BKMK_Examples"></a>Examples

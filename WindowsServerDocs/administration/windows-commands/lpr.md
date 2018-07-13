@@ -36,7 +36,7 @@ lpr [-S <ServerName>] -P <printerName> [-C <BannerContent>] [-J <JobName>] [-o |
 |-x|Specifies that the **lpr** command must be compatible with the Sun Microsystems operating system (referred to as SunOS) for releases up to and including 4.1.4_u1.|  
 |<FileName>|Specifies (by name) the file to be printed. Required.|  
 |/?|Displays help at the command prompt.|  
-## remarks  
+## Remarks  
 -   To find the name of the printer, open the printers folder.  
 -   The **-S**, **-P**, **-C**, and **-J** parameters are case sensitive and must be typed in upper-case letters.  
 ## <a name="BKMK_examples"></a>Examples  

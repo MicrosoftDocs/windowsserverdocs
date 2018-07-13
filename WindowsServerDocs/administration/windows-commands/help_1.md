@@ -34,7 +34,7 @@ help [<command>]
 |-------|--------|  
 |<command>|Specifies the command for which to display detailed help information.|  
   
-## remarks  
+## Remarks  
   
 -   if no command is specified, **help** will display all possible commands.  
   
