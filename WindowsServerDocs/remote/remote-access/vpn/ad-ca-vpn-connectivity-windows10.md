@@ -8,7 +8,7 @@ ms.assetid:
 manager: elizapo
 ms.author: pashort
 author: shortpatti
-ms.date: 05/25/2018
+ms.date: 07/13/2018
 ms.reviewer: deverette
 ---
 
@@ -37,6 +37,8 @@ To configure Azure Active Directory conditional access for VPN connectivity, you
 In this step, you can add **IgnoreNoRevocationCheck** and set it to allow authentication of clients when the certificate does not include CRL distribution points. By default, IgnoreNoRevocationCheck is set to 0 (disabled).
 
 An EAP-TLS client cannot connect unless the NPS server completes a revocation check of the certificate chain (including the root certificate). Cloud certificates issued to the user by Azure AD do not have a CRL because they are short-lived certificates with a lifetime of one hour. EAP on NPS needs to be configured to ignore the absence of a CRL. Since the authentication method is EAP-TLS, this registry value is only needed under **EAP\13**. If other EAP authentication methods are used, then the registry value should be added under those as well. 
+
+
 
 
 ## [Step 7.2. Create root certificates for VPN authentication with Azure AD](vpn-create-root-cert-for-vpn-auth-azure-ad.md)
