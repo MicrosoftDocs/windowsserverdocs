@@ -106,6 +106,7 @@ You can get Windows Admin Center up and running in your environment in minutes:
 
 Learn about our latest released features:
 
+- Version [1807](https://aka.ms/WACPreview1807-InsiderBlog) - added a streamlined Azure connect experience, improvements to VM inventory page, file sharing functionality, Azure update management integration, and more. 
 - Version [1806](https://aka.ms/WACPreview1806-InsiderBlog) - added support for viewing our scripts, WS 2008 R2 connections, SDN, scheduled tasks, and many other improvements.
 - Version 1804.25 - Maintenance update to support users installing Windows Admin Center in [completely offline environments](./use/known-issues.md#signature-verification-failed).
 - Version [1804](https://cloudblogs.microsoft.com/windowsserver/2018/04/12/announcing-windows-admin-center-our-reimagined-management-experience/) - Project Honolulu becomes Windows Admin Center and adds security features and role-based access control. Our first GA release.
