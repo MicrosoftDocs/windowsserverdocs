@@ -80,4 +80,24 @@ You can uninstall any extensions you have previously installed, or even uninstal
 
 After uninstall is complete, your browser will automatically be refreshed and Windows Admin Center will be reloaded with the extension removed. If you uninstalled a tool that was pre-installed as part of Windows Admin Center, the tool will be available for reinstallation in the **Available Extensions** tab.
 
-[Learn more about building an extension with the Windows Admin Center SDK](../extend/extensibility-overview.md).
+## Installing extensions on a computer without internet connectivity
+
+If Windows Admin Center is installed on a computer that isn't connected to the internet or is behind a proxy, it may not be able to access and install the extensions from the Windows Admin Center feed. You can download extension packages manually and configure Windows Admin Center to retrieve packages from a file share or local drive.
+
+1. On another computer that has internet connectivity, open a web browser and navigate to the following URL: [https://msft-sme.myget.org/feed/Packages/windows-admin-center-feed](https://msft-sme.myget.org/feed/Packages/windows-admin-center-feed) 
+
+    You may need to create an account on msft-sme.myget.org and login to view the extension packages.
+
+2. Click on the name of the package you want to install to view the package details page.
+3. Click on the **Download** link in the right-side pane of the package details page and download the .nupkg file for the extension.
+4. Repeat steps 2 and 3 for all the packages you want to download.
+5. Copy the package files to a file share that can be accessed from the computer Windows Admin Center is installed on, or to the local disk of the computer.
+6. Depending on your version of Windows Admin Center, follow the instructions below to add the file share or local folder location as an additional feed. 
+
+    [Installing extensions from a different feed - Windows Admin Center Preview](#installing-extensions-from-a-different-feed---windows-admin-center-preview) 
+
+    [Installing extensions from a different feed - Windows Admin Center](#installing-extensions-from-a-different-feed---windows-admin-center)
+
+    You may need to remove the default feed (https://aka.ms/sme-extension-feed) before adding the new feed.
+
+###[Learn more about building an extension with the Windows Admin Center SDK](../extend/extensibility-overview.md).

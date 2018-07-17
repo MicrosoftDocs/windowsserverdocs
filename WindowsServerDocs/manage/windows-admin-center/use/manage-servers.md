@@ -193,6 +193,8 @@ The following features are supported in Files:
 - Rename a file or folder
 - Extract a zip file
 - View file or folder properties
+- Add, edit, or remove file shares
+- Modify user and group permissions on file shares
 
 ### Proposed Features
 
