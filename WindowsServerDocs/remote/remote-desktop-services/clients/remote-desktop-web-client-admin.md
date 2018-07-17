@@ -4,16 +4,14 @@ description: Describes how an admin can set up the Remote Desktop web client.
 ms.prod: windows-server-threshold
 ms.technology: remote-desktop-services
 ms.author: helohr
-ms.date: 07/05/2018
+ms.date: 07/16/2018
 ms.topic: article
 author: Heidilohr
 ms.localizationpriority: medium
 ---
 # Set up the Remote Desktop web client for your users
 
-[This information relates to pre-released product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.]
-
-The Remote Desktop web client lets users access your organization's Remote Desktop infrastructure through a compatible web browser. They'll be able to interact with remote apps or desktops like they would with a local PC no matter where they are. Once you set up your Remote Desktop web client, all that your users will need to get started is the URL where they can access the client, their credentials, and a supported web browser.
+The Remote Desktop web client lets users access your organization's Remote Desktop infrastructure through a compatible web browser. They'll be able to interact with remote apps or desktops like they would with a local PC no matter where they are. Once you set up your Remote Desktop web client, all your users need to get started is the URL where they can access the client, their credentials, and a supported web browser.
 
 >[!NOTE]
 >You may have heard people call this client the HTML5 client. Both names refer to the same client.
@@ -30,10 +28,22 @@ Before getting started, keep the following things in mind:
 * Install the [Windows 10 KB4025334 update](https://support.microsoft.com/en-us/help/4025334/windows-10-update-kb4025334) on the RD Gateway. Later cumulative updates may already contains this KB.
 * Make sure public trusted certificates are configured for the RD Gateway and RD Web Access roles.
 * Make sure that any computers your users will connect to are running one of the following OS versions:
-    * Windows 7 SP1 or later
+    * Windows 10
     * Windows Server 2008R2 or later
 
 Your users will see better performance connecting to Windows Server 2016 (or later) and Windows 10 (version 1611 or later).
+
+>[!IMPORTANT]
+>If you used the web client during the preview period and installed a version prior to 1.0.0, you must first uninstall the old client before moving to the new version. If you receive an error that says "The web client was installed using an older version of RDWebClientManagement and must first be removed before deploying the new version," follow these steps:
+>
+>1. Open an elevated PowerShell prompt.
+>2. Uninstall the new module using **Uninstall-Module RDWebClientManagement**.
+>3. Close and reopen the elevated PowerShell prompt.
+>4. Install the old module using **Install-Module RDWebClientManagement -RequiredVersion \<old version>.**
+>5. Uninstall the old web client with **Uninstall-RDWebClient**.
+>6. Uninstall the old module using **Uninstall-Module RDWebClientManagement**.
+>7. Close and reopen the elevated PowerShell prompt.
+>8. Proceed with the normal installation steps as follows.
 
 ## How to publish the Remote Desktop web client
 
@@ -41,7 +51,7 @@ To install the web client for the first time, follow these steps:
 
 1. On the RD Connection Broker server, obtain the certificate used for Remote Desktop connections and export it as a .cer file. Copy the .cer file from the RD Connection Broker to the server running the RD Web role.
 1. On the RD Web Access server, open an elevated PowerShell prompt.
-1. Update the PowerShellGet module. The version of PowerShellGet that comes with Windows Server 2016 will not be able to install the web client management module. To update PowerShellGet, run the following command:
+1. On Windows Server 2016, update the PowerShellGet module since the inbox version doesn't support installing the web client management module. To update PowerShellGet, run the following command:
     ```PowerShell
     Install-Module -Name PowerShellGet -Force
     ```
@@ -59,7 +69,7 @@ To install the web client for the first time, follow these steps:
     Install-RDWebClientPackage
     ```
     
-1. Next, run this cmdlet with the bracketed value replaced with path of the .cer file that you copied from the RD Broker:
+1. Next, run this cmdlet with the bracketed value replaced with the path of the .cer file that you copied from the RD Broker:
     ```PowerShell
     Import-RDWebClientBrokerCert <.cer file path>
     ```
