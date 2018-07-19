@@ -116,7 +116,7 @@ Quick reference table of supported upgrade paths from older Windows Server retai
 |If you are running:|You can upgrade to these editions:|
 |--------------------------|--------------------------|
 |Windows Server 2008 Standard with SP2 or Windows Server 2008 Enterprise with SP2|Windows Server 2012 Standard, Windows Server 2012 Datacenter|
-|Windows Server 2008 Datacenter with SP2||Windows Server 2012 Datacenter|
+|Windows Server 2008 Datacenter with SP2|Windows Server 2012 Datacenter|
 |Windows Web Server 2008|Windows Server 2012 Standard|
 |Windows Server 2008 R2 Standard with SP1 or Windows Server 2008 R2 Enterprise with SP1|Windows Server 2012 Standard, Windows Server 2012 Datacenter|
 |Windows Server 2008 R2 Datacenter with SP1|Windows Server 2012 Datacenter|
