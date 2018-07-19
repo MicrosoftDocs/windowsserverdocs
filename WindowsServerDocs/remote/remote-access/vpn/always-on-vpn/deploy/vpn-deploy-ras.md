@@ -34,7 +34,7 @@ Configure the RRAS server to support IKEv2 connections while disabling unused pr
 
 
 >[!Warning]
->Before you get started, make sure to enable IPv6 on the VPN server.
+>Before you get started, make sure to enable IPv6 on the VPN server. Otherwise, a connection cannot be established and an error message displays.
 
 ## Install Remote Access as a RAS Gateway VPN Server
 
