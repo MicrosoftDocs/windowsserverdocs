@@ -8,7 +8,7 @@ ms.assetid:
 manager: elizapo
 ms.author: pashort
 author: shortpatti
-ms.date: 05/29/2018
+ms.date: 07/19/2018
 ms.reviewer: deverette
 ---
 
@@ -32,6 +32,9 @@ Configure the RRAS server to support IKEv2 connections while disabling unused pr
 >
 >- Install the server on your perimeter network between your edge and internal firewalls, with one network adapter connected to the External Perimeter Network, and one network adapter connected to the Internal Perimeter Network.
 
+
+>[!Warning]
+>Before you get started, make sure to enable IPv6 on the VPN server.
 
 ## Install Remote Access as a RAS Gateway VPN Server
 
@@ -114,87 +117,87 @@ In this section, you can configure Remote Access VPN to allow IKEv2 VPN connecti
 
 11. In Properties, click the **Security** tab and do:
 
-    1.  Click **Authentication provider** and click **RADIUS Authentication**.
-
-    2.  Click **Configure**.<p>The RADIUS Authentication dialog box opens.
-
-    3.  Click **Add**.<p>The Add RADIUS Server dialog box opens.
-
-    4.  In **Server name**, type the Fully Qualified Domain Name (FQDN) of the NPS server on your Organization/Corporate network.<p>For example, if the NetBIOS name of your NPS server is NPS1 and your domain name is corp.contoso.com, type **NPS1.corp.contoso.com**.
-
-    5.  In **Shared secret**, click **Change**.<p>The Change Secret dialog box opens.
-
-    6.  In **New secret**, type a text string.
-
-    7.  In **Confirm new secret**, type the same text string, and click **OK**.
+    a. Click **Authentication provider** and click **RADIUS Authentication**.
+    
+    b. Click **Configure**.<p>The RADIUS Authentication dialog box opens.
+    
+    c. Click **Add**.<p>The Add RADIUS Server dialog box opens.
+    
+    d. In **Server name**, type the Fully Qualified Domain Name (FQDN) of the NPS server on your Organization/Corporate network.<p>For example, if the NetBIOS name of your NPS server is NPS1 and your domain name is corp.contoso.com, type **NPS1.corp.contoso.com**.
+    
+    e. In **Shared secret**, click **Change**.<p>The Change Secret dialog box opens.
+    
+    f. In **New secret**, type a text string.
+    
+    g. In **Confirm new secret**, type the same text string, and click **OK**.
 
     >[!IMPORTANT] 
     >Save this text string. When you configure the NPS Server on your Organization/Corporate network, you will add this VPN Server as a RADIUS Client. During that configuration, you will use this same shared secret so that the NPS and VPN Servers can communicate.
 
-12.  In **Add RADIUS Server**, review the default settings for:
+12. In **Add RADIUS Server**, review the default settings for:
 
-    -   **Time-out**
+    - **Time-out**
+    
+    - **Initial score**
+    
+    - **Port**
 
-    -   **Initial score**
+13. If necessary, change the values to match the requirements for your environment and click **OK**.<p>A NAS is a device that provides some level of access to a larger network. A NAS using a RADIUS infrastructure is also a RADIUS client, sending connection requests and accounting messages to a RADIUS server for authentication, authorization, and accounting.
 
-    -   **Port**
-
-13.  If necessary, change the values to match the requirements for your environment and click **OK**.<p>A NAS is a device that provides some level of access to a larger network. A NAS using a RADIUS infrastructure is also a RADIUS client, sending connection requests and accounting messages to a RADIUS server for authentication, authorization, and accounting.
-
-14.  Review the setting for **Accounting provider**:
+14. Review the setting for **Accounting provider**:
 
     | If you want the...  | Then…             |
     |---------------------|-------------------|
     | Remote Access activity logged on the Remote Access server | Make sure that **Windows Accounting** is selected.      |
     | NPS to perform accounting services for VPN   | Change **Accounting provider** to **RADIUS Accounting** and then configure the NPS as the accounting provider. |
 
-15.  Click the **IPv4** tab and do:
+15. Click the **IPv4** tab and do:
 
-    a.  Click **Static address pool**.
+    a. Click **Static address pool**.
+    
+    b. Click **Add** to configure an IP address pool.<p>The static address pool should contain addresses from the internal perimeter network. These addresses are on the internal-facing network connection on the VPN server, not the corporate network.
+    
+    c. In **Start IP address**, type the starting IP address in the range you want to assign to VPN clients.
+    
+    d. In **End IP address**, type the ending IP address in the range you want to assign to VPN clients, or in **Number of addresses**, type the number of the address you want to make available. If you’re using DHCP for this subnet, ensure that you configure a corresponding address exclusion on your DHCP servers.
+    
+    e. (Optional) If you are using DHCP, click **Adapter**, and in the list of results, click the Ethernet adapter connected to your internal perimeter network.
 
-    b.  Click **Add** to configure an IP address pool.<p>The static address pool should contain addresses from the internal perimeter network. These addresses are on the internal-facing network connection on the VPN server, not the corporate network.
+16. (Optional) *If you are configuring conditional access for VPN connectivity*, from the **Certificate** drop-down list, under **SSL Certificate Binding**, select the VPN server authentication.
 
-    c.  In **Start IP address**, type the starting IP address in the range you want to assign to VPN clients.
+17. (Optional) *If you are configuring conditional access for VPN connectivity*, in the NPS MMC, expand **Policies\\Network Policies** and do: 
 
-    d.  In **End IP address**, type the ending IP address in the range you want to assign to VPN clients, or in **Number of addresses**, type the number of the address you want to make available. If you’re using DHCP for this subnet, ensure that you configure a corresponding address exclusion on your DHCP servers.
-
-    e.  (Optional) If you are using DHCP, click **Adapter**, and in the list of results, click the Ethernet adapter connected to your internal perimeter network.
-
-16.  (Optional) *If you are configuring conditional access for VPN connectivity*, from the **Certificate** drop-down list, under **SSL Certificate Binding**, select the VPN server authentication.
-
-17.  (Optional) *If you are configuring conditional access for VPN connectivity*, in the NPS MMC, expand **Policies\\Network Policies** and do: 
-
-    1.  Right-the **Connections to Microsoft Routing and Remote Access Server** network policy and select **Properties**.
-
-    2.  Select the **Grant access. Grant access if the connection request matches this policy** option.
-
-    3.  Under Type of network access server, select **Remote Access Server (VPN-Dial up)** from the drop-down.
+    a. Right-the **Connections to Microsoft Routing and Remote Access Server** network policy and select **Properties**.
+    
+    b. Select the **Grant access. Grant access if the connection request matches this policy** option.
+    
+    c. Under Type of network access server, select **Remote Access Server (VPN-Dial up)** from the drop-down.
 
 3.  In the Routing and Remote Access MMC, right-click **Ports,** and then click **Properties**. <p>The Ports Properties dialog box opens.
 
 4.  Click **WAN Miniport (SSTP)** and click **Configure**. The Configure Device - WAN Miniport (SSTP) dialog box opens.
 
-    1.  Clear the **Remote access connections (inbound only)** and **Demand-dial routing connections (inbound and outbound)** check boxes.
-
-    2.  Click **OK**.
+    a. Clear the **Remote access connections (inbound only)** and **Demand-dial routing connections (inbound and outbound)** check boxes.
+    
+    b. Click **OK**.
 
 5.  Click **WAN Miniport (L2TP)** and click **Configure**. The Configure Device - WAN Miniport (L2TP) dialog box opens.
 
-    1.  In **Maximum ports**, type the number of ports to match the maximum number of simultaneous VPN connections that you want to support.
-
-    2.  Click **OK**.
+    a. In **Maximum ports**, type the number of ports to match the maximum number of simultaneous VPN connections that you want to support.
+    
+    b. Click **OK**.
 
 6.  Click **WAN Miniport (PPTP)** and click **Configure**. The Configure Device - WAN Miniport (PPTP) dialog box opens.
 
-    1.  In **Maximum ports**, type the number of ports to match the maximum number of simultaneous VPN connections that you want to support.
-
-    2.  Click **OK**.
+    a. In **Maximum ports**, type the number of ports to match the maximum number of simultaneous VPN connections that you want to support.
+    
+    b. Click **OK**.
     
 7. Click **WAN Miniport (IKEv2)** and click **Configure**. The Configure Device - WAN Miniport (IKEv2) dialog box opens.
 
-    1.  In **Maximum ports**, type the number of ports to match the maximum number of simultaneous VPN connections that you want to support.
-
-    2.  Click **OK**.
+    a. In **Maximum ports**, type the number of ports to match the maximum number of simultaneous VPN connections that you want to support.
+    
+    b. Click **OK**.
 
 7.  If prompted, click **Yes** to confirm restarting the server and click **Close** to restart the server.
 
