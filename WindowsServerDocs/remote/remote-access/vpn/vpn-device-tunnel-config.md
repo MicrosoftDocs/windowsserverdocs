@@ -1,9 +1,9 @@
 ---
 title: Configure the VPN device tunnel in Windows 10
-description: You can use this topic to learn how to create a VPN device tunnel in Windows 10.
+description: Learn how to create a VPN device tunnel in Windows 10.
 manager: elizapo
 ms.prod: windows-server-threshold
-ms.date: 05/25/2018
+ms.date: 06/29/2018
 ms.technology: networking-ras
 ms.topic: article
 ms.assetid: 158b7a62-2c52-448b-9467-c00d5018f65b
@@ -15,12 +15,13 @@ author: shortpatti
 >Applies To: Windows 10 version 1709
 
 Always On VPN gives you the ability to create a dedicated VPN profile for device or machine. Always On VPN connections include two types of tunnels: 
-* _Device tunnel_ connects to specified VPN servers before users log on to the device. Device tunnel is used for pre-logon connectivity scenarios and device management purposes.
-* _User tunnel_  connects only after a user logs on to the device. User tunnel allows users to access organization resources through VPN servers.
+* _Device tunnel_ connects to specified VPN servers before users log on to the device. Pre-login connectivity scenarios and device management purposes use device tunnel.
+* _User tunnel_ connects only after a user logs on to the device. User tunnel allows users to access organization resources through VPN servers.
 
-Unlike User Tunnel, which only connects after a user logs on to the device or machine, Device Tunnel allows the VPN to establish connectivity before user sign-in. Additionally, Device Tunnel provides feature parity with the Infrastructure Tunnel concept of DirectAccess.
+Unlike _user tunnel_, which only connects after a user logs on to the device or machine, _device tunnel_ allows the VPN to establish connectivity before the user logs on. Additionally, _device tunnel_ provides feature parity with the infrastructure tunnel concept of DirectAccess.
 
-You use traffic filters to control which corporate resources as available through the Device Tunnel and when machine certificate authentication is employed. Both Device and User tunnels operate independently with their VPN profiles, can be connected at the same time, and can use different authentication methods and other VPN configuration settings as appropriate.
+Use traffic filters to control the availability of the corporate resources through the _device tunnel_ and when employing machine certificate authentication. Both _device tunnel_ and _user tunnel_ operate independently with their VPN profiles, can be connected at the same time, and can use different authentication methods and other VPN configuration settings as appropriate.
+
 
 ## Device Tunnel Features and Requirements
 
@@ -30,7 +31,16 @@ You use traffic filters to control which corporate resources as available throug
 
 The sample profile XML below provides good guidance for scenarios where only client initiated pulls are required over the device tunnel.  Traffic filters are leveraged to restrict the device tunnel to management traffic only.  This configuration works well for Windows Update, typical Group Policy (GP) and System Center Configuration Manager (SCCM) update scenarios, as well as VPN connectivity for first logon without cached credentials, or password reset scenarios. 
 
-For server initiated push cases, like Windows Remote Management (WinRM), Remote GPUpdate, and remote SCCM update scenarios – inbound traffic on the device tunnel has to be allowed, so traffic filters cannot be used.  This limitation is going to be removed in future releases.
+For server initiated push cases, like Windows Remote Management (WinRM), Remote GPUpdate, and remote SCCM update scenarios – you must allow inbound traffic on the device tunnel, so traffic filters cannot be used.  This limitation is going to be removed in future releases.
+
+
+### Configure VPN device tunnels using PowerShell
+
+
+
+### Configure VPN device tunnels using ??? 
+
+
 
 ### Sample VPN profileXML
 
@@ -88,6 +98,7 @@ Run the following Windows PowerShell command to verify that you have successfull
     `Get-VpnConnection -AllUserConnection`
 
 The output displays a list of the device\-wide VPN profiles that are deployed on the device.
+
 
 ### Example Windows PowerShell Script
 
