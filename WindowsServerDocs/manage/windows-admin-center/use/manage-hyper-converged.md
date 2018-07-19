@@ -5,7 +5,7 @@ ms.technology: manage
 ms.topic: article
 author: daniellee-msft
 ms.author: jol
-ms.date: 07/02/2018
+ms.date: 07/16/2018
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---
@@ -56,7 +56,7 @@ To manage your cluster as Hyper-Converged Infrastructure in Windows Admin Center
 
 Windows Admin Center for Hyper-Converged Infrastructure depends on management APIs added after Windows Server 2016 was released. Before you can manage your Windows Server 2016 cluster with Windows Admin Center, you’ll need to perform these two steps:
 
-1. Verify that every server in the cluster has installed the [2018-04 Cumulative Update for Windows Server 2016 (KB4093120)](https://support.microsoft.com/en-us/help/4093120) or later. To download and install this update, go to **Settings** > **Update & Security** > **Windows Update** and select **Check online for updates from Microsoft Update**.
+1. Verify that every server in the cluster has installed the [2018-05 Cumulative Update for Windows Server 2016 (KB4103723)](https://support.microsoft.com/help/4103723/windows-10-update-kb4103723) or later. To download and install this update, go to **Settings** > **Update & Security** > **Windows Update** and select **Check online for updates from Microsoft Update**.
 2. Run the following PowerShell cmdlet as Administrator on the cluster:
 
 ```powershell
@@ -155,7 +155,7 @@ In general, the term "hyper-converged" refers to running Hyper-V and Storage Spa
 
 ### Why do I need the latest cumulative update for Windows Server 2016?
 
-Windows Admin Center for Hyper-Converged Infrastructure depends on management APIs developed since Windows Server 2016 was released. These APIs are added in the [2018-04 Cumulative Update for Windows Server 2016 (KB4093120)](https://support.microsoft.com/en-us/help/4093120), available as of April 17th 2018.
+Windows Admin Center for Hyper-Converged Infrastructure depends on management APIs developed since Windows Server 2016 was released. These APIs are added in the [2018-05 Cumulative Update for Windows Server 2016 (KB4103723)](https://support.microsoft.com/help/4103723/windows-10-update-kb4103723), available as of May 8, 2018.
 
 ### How much does it cost to use Windows Admin Center?
 
