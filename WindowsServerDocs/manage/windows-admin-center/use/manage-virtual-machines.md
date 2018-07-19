@@ -129,6 +129,7 @@ Virtual machine management in Windows Admin Center is actively under development
 
 |Feature Request|
 |-------|
+|[Support operations on multiple virtual machines](https://windowsserver.uservoice.com/forums/295071-management-tools/suggestions/31637638--ux-virtual-machines-add-checkboxes-to-select-m) - **Now supported in Windows Admin Center Preview 1807**|
 |[Import/Export virtual machines](https://windowsserver.uservoice.com/forums/295071-management-tools/suggestions/31481971--virtual-machines-import-export-vms)|
 |[Sort virtual machines in folders](https://windowsserver.uservoice.com/forums/295071-management-tools/suggestions/31494712--virtual-machines-ability-to-sort-vm-into-folder)|
 |[Support additional virtual machine settings](https://windowsserver.uservoice.com/forums/295071-management-tools/suggestions/31915264--virtual-machines-expose-all-configurable-setting)|

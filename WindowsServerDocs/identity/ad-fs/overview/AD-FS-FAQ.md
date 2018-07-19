@@ -192,7 +192,7 @@ This group is only created when a Windows 2016 Domain Controller with the FSMO P
 5.	The Select User, Computer, Service Account, or Group dialog box appears.  In the Enter the object name to select text box, type Key Admin Group.  Click OK.
 6.	In the Applies to list box, select **Descendant User objects**.
 7.	Using the scroll bar, scroll to the bottom of the page and **click** Clear all.
-8.	In the **Properties** section, select **Read msDS-KeyCredentialLink** and **Write msDS-KeyCrendentialLink**.
+8.	In the **Properties** section, select **Read msDS-KeyCredentialLink** and **Write msDS-KeyCredentialLink**.
 
 ### Why does modern authentication from Android devices fail if the server does not send all the intermediate certificates in the chain with the SSL cert?
 

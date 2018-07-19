@@ -21,9 +21,9 @@ You can install Windows Admin Center on the following Windows operating systems:
 | **Version** | **Installation Type** |
 |-------------|-----------------------|
 |Windows 10 Fall Creators Update (1709) or newer | Desktop mode |
-|Windows Server, version 1709 | Gateway mode |
+|Windows Server 2019 (Insider Preview) | Gateway mode |
+|Windows Server Semi-Annual Channel | Gateway mode |
 |Windows Server 2016 | Gateway mode |
-|Windows Server 2019 (insider builds) | Gateway mode |
 
 **Desktop installation:** Connect to the Windows Admin Center gateway from the same computer on which it's installed (i.e. `https://localhost:[port]`)
 
@@ -40,8 +40,8 @@ You can use Windows Admin Center to manage the following Windows operating syste
 | **Version** | **Managed node** via Server Manager | **Managed cluster** via Failover Cluster Mgr | **Managed HCI cluster** via HCI Cluster Mgr (preview)|
 |-------------------------|---------------|-----|------------------------|
 | Windows 10 Fall Creators Update (1709) or newer | Yes (via Computer Management) | N/A | N/A |
-| Windows Server 2019 (insider builds) | Yes | Yes | Yes |
-| Windows Server, version 1709 | Yes | Yes | No |
+| Windows Server 2019 (Insider Preview) | Yes | Yes | Yes |
+| Windows Server Semi-Annual Channel | Yes | Yes | No |
 | Windows Server 2016 | Yes | Yes | Yes, with [latest cumulative update](../use/manage-hyper-converged.md#prepare-your-windows-server-2016-cluster-for-windows-admin-center) |
 | Windows Server 2012 R2 | Yes | Yes | N/A |
 | Windows Server 2012 | Yes | Yes | N/A |

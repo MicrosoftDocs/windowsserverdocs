@@ -100,7 +100,7 @@ If your environment uses [LAPS](https://technet.microsoft.com/en-us/mt227395.asp
 
 You can use tags to identify and filter related servers in your connection list.  This allows you to see a subset of your servers in the connection list.  This is especially useful if you have many connections.
 
-## Edit tags
+### Edit tags - Windows Admin Center Preview
 
 * Select a server or multiple servers in the All Connections list
 * Under **All Connections**, click **Edit Tags**
@@ -117,10 +117,42 @@ The **Edit Connection Tags** pane allows you to modify, add, or remove tags from
 
 * If a tag is applied to a subset of the selected connections, the check box is shown in an intermediate state. You can click the box to check it and apply the tag to all selected connections, or click again to uncheck it and remove the tag from all selected connections.
 
-![](../media/launch/tags-4.png) 
-<!-- media will need updating -->
+![](../media/launch/tags-6.png)
 
-## Filter connections by tag
+### Edit tags - Windows Admin Center
+
+* Select a server in the Server Connections list
+* Under **Server Connections**, click **Edit Tags**
+
+![](../media/launch/tags-5.png)
+
+The **Edit Connection Tags** dialog allows you to add or remove tags from your server connection.
+
+To add a new tag to a server connection:
+
+* Start entering a tag by clicking **Add Tags** under **Tags to Add**
+* Add entries for one or more tags you would like to add
+* Click **Save**
+
+To remove an existing tag from a server connection:
+
+* Start entering a tag by clicking **Add Tags** under **Tags to Remove**
+* Add entries for one or more tags you would like to remove
+* Click **Save**
+
+![](../media/launch/tags-4.png) 
+
+### Filter connections by tag - Windows Admin Center Preview
+
+Once tags have been added to one or more server connections, you can view the tags on the connection list, and filter the connection list by tags.
+
+* To filter by a tag, select the filter icon next to the search box.
+![](../media/launch/tags-7.png)
+* You can select "or", "and", or "not" to modify the filter behavior of the selected tags.
+![](../media/launch/tags-8.png)
+
+
+### Filter connections by tag - Windows Admin Center
 
 Once tags have been added to one or more server connections, you can view the tags on the connection list, and filter the connection list by tags.
 
@@ -129,5 +161,8 @@ Once tags have been added to one or more server connections, you can view the ta
 ![](../media/launch/tags-2.png)
 
 ## View PowerShell scripts used in Windows Admin Center
+>Applies to: Windows Admin Center
 
 Once you've connected to a server, cluster, or PC, you can look at the PowerShell scripts that power the UI actions available in Windows Admin Center. From within a tool, click the PowerShell icon in the top application bar. Select a command of interest from the dropdown to navigate to the corresponding PowerShell script.
+
+![](../media/launch/showscript.png)
