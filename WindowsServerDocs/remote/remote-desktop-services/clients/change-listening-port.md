@@ -13,11 +13,11 @@ ms.author: elizapo
 ms.date: 07/19/2018
 ms.localizationpriority: medium
 ---
-# Change the listening port for Remote Desktop on your PC
+# Change the listening port for Remote Desktop on your computer
 
->Applies to: Windows 10, Windows 8.1, Windows 8
+>Applies to: Windows 10, Windows 8.1, Windows 8, Windows Server 2016, Windows Server 2012 R2, Windows Server 2008 R2
 
-When you connect to a PC through the Remote Desktop client, the Remote Desktop feature on your PC "hears" the connection request through a defined listening port (3389 by default). You can change that listening port on Windows PCs by modifying the registry.
+When you connect to a computer (either a Windows client or Windows Server) through the Remote Desktop client, the Remote Desktop feature on your computer "hears" the connection request through a defined listening port (3389 by default). You can change that listening port on Windows computers by modifying the registry.
 
 1. Start the registry editor. (Type regedit in the Search box.)
 2. Navigate to the following registry subkey:
