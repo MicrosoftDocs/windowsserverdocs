@@ -76,9 +76,11 @@ There are many tools with which IT pros can service Windows Server. Each option 
 You’ve likely already chosen to use at least one of these options based on your resources, staff, and expertise. You can continue using the same process for Semi-Annual Channel Releases: for example, if you already use System Center Configuration Manager to manage updates, you can continue to use it. Similarly, if you are using WSUS, you can continue to use that.
 
 ## Obtain preview releases through the Windows Insider Program
-For many IT pros and application developers, gaining access to new functionality early--before they’re released--can be both intriguing and valuable. Testing the early builds of Windows Server helps both Microsoft and its customers because of the opportunity to discover possible issues before release. It also gives customers a unique opportunity to directly influence the functionality in the product. Microsoft depends on receiving feedback throughout the development process so that adjustments may be made as quickly as possible. Early testing and feedback is essential to the rapid release model.
+Testing the early builds of Windows Server helps both Microsoft and its customers because of the opportunity to discover possible issues before release. It also gives customers a unique opportunity to directly influence the functionality in the product. 
 
-For more information about how to get involved with the Windows Insider Program, see [Windows Insider Program for Server docs](https://docs.microsoft.com/en-us/windows-insider/at-work/)
+Microsoft depends on receiving feedback throughout the development process so that adjustments may be made as quickly as possible. Early testing and feedback is essential to the rapid release model.
+
+For more information about how to get involved with the Windows Insider Program, see the [Windows Insider Program for Server docs](https://docs.microsoft.com/en-us/windows-insider/at-work/).
 # Related topics
 [Changes to Nano Server in Windows Server Semi-Annual Channel](nano-in-semi-annual-channel.md)
 
