@@ -1,13 +1,14 @@
 ---
 title: Copy the CA Certificate and CRL to the Virtual Directory
 description: This topic is part of the guide Deploy Server Certificates for 802.1X Wired and Wireless Deployments
-manager: brianlic
+manager: elizapo
 ms.topic: article
 ms.assetid: a1b5fa23-9cb1-4c32-916f-2d75f48b42c7
 ms.prod: windows-server-threshold
 ms.technology: networking
 ms.author: pashort
 author: shortpatti
+ms.date: 07/19/2018
 ---
 # Copy the CA Certificate and CRL to the Virtual Directory
 
@@ -30,13 +31,16 @@ To perform this procedure you must be a member of **Domain Admins**.
   
 2.  To verify that your CDP and AIA extension locations are correctly configured, type `pkiview.msc`, and then press ENTER. The pkiview Enterprise PKI MMC opens.  
   
-3.  Click your CA name. For example, if your CA name is corp-CA1-CA, click **corp-CA1-CA**. In the details pane, verify that the **Status** value for the **CA Certificate**, **AIA Location #1**, and **CDP Location #1** are all **OK**.  
+3.  In the left pane, click your CA name.<p>For example, if your CA name is corp-CA1-CA, click **corp-CA1-CA**. 
+
+4. In the Status column of the results pane, verify that the values for the following shows **OK**:
+
+    - **CA Certificate**
+    - **AIA Location #1**
+    - **CDP Location #1**   
   
-The following illustration depicts the pkiview results pane with a status of OK for all items.  
   
-![adcs_pkiviewmedia/adcs_pkiview.png)  
-  
-> [!IMPORTANT]  
+> [!TIP]  
 > If **Status** for any item is not **OK**, do the following:  
 > -   Open the share on your Web server to verify that the certificate and certificate revocation list files were successfully copied to the share. If they were not successfully copied to the share, modify your copy commands with the correct file source and share destination and run the commands again.  
 > -   Verify that you have entered the correct locations for the CDP and AIA on the CA Extensions tab. Ensure that there are no extra spaces or other characters in the locations that you have provided.  
