@@ -221,6 +221,13 @@ Every time a backup or restore is performed a log file is created. These can be 
 
 ## Version Release History
 
+### Version: 1.0.72.0
+Release: July 2018
+
+**Fixed issues:**
+
+   - Bug fix: Fixed the .MSI installer to support in-place upgrades 
+
 ### 1.0.18.0
 Release: July 2018
 

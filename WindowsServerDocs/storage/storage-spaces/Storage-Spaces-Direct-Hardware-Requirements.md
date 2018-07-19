@@ -57,10 +57,13 @@ In addition, the following requirements apply:
 
 ## Networking
 
-- Minimum of 1 x 10 Gbps network interface per server
-- Recommended: Two or more NICs for redundancy and performance
-- Recommended: NICs that are remote-direct memory access (RDMA) capable, iWARP or RoCE
-- With 2 servers, direct-connect (switchless) is supported
+Minimum (for small scale 2-3 node)
+- 10 Gbps network interface
+- Direct-connect (switchless) is supported with full mesh connectivity
+Recommendeded (for high performance, at scale, or deployments of 4+ nodes)
+- NICs that are remote-direct memory access (RDMA) capable, iWARP (recommended) or RoCE
+- Two or more NICs for redundancy and performance
+- 25 Gbps network interface
 
 ## Drives
 
