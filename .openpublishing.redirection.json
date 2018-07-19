@@ -1,8 +1,8 @@
 {
   "redirections": [
     {
-      "source_path": "WindowsServerDocs/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-overview.md",
-      "redirect_url": "/windows-server/remote-access/vpn/always-on-vpn/always-on-vpn-technology-overview",
+      "source_path": "WindowsServerDocs/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-overview.md",
+      "redirect_url": "/windows-server/remote/remote-access/vpn/always-on-vpn/always-on-vpn-technology-overview",
       "redirect_document_id": true
     },
     {
@@ -8250,6 +8250,11 @@
   "source_path": "WindowsServerDocs/manage/honolulu/honolulu-troubleshoot.md",
   "redirect_url": "/windows-server/manage/windows-admin-center/overview",
   "redirect_document_id": false
+},
+{
+  "source_path": "WindowsServerDocs/administration/kernel-soft-reboot.md",
+  "redirect_url": "/windows-server/windows-server",
+  "redirect_document_id": true
 }
   ]
 }

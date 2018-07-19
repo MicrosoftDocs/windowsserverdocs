@@ -58,7 +58,7 @@ You can view or change the following settings in the **Properties** tile on the 
 |Domain (or Workgroup, if the server is not joined to a domain)|Displays the domain or workgroup of which the server is a member. Opens the **System Properties** dialog box, which lets you change the server's name, domain membership, and other system settings such as user profiles.|
 |Windows Firewall|Displays Windows Firewall status for the local server. Opens **Control Panel\System and Security\Windows Firewall**. For more information about configuring Windows Firewall, see [Windows Firewall with Advanced Security and IPsec](https://go.microsoft.com/fwlink/?LinkId=253465).|
 |remote management|Displays Server Manager and Windows PowerShell remote management status. Opens the **Configure remote Management** dialog box. For more information about remote management, see [Configure remote Management in Server Manager](configure-remote-management-in-server-manager.md).|
-|remote Desktop|Shows whether users can connect to the server remotely by using remote Desktop sessions. Opens the **remote** tab of the **System Properties** dialog box.|
+|Remote Desktop|Shows whether users can connect to the server remotely by using Remote Desktop sessions. Opens the **remote** tab of the **System Properties** dialog box.|
 |NIC Teaming|Shows whether the local server is participating in NIC teaming. Opens the **NIC Teaming** dialog box, and lets you join the local server to a NIC team if desired. For more information about NIC Teaming, see the [NIC Teaming white paper](https://go.microsoft.com/fwlink/?LinkID=253449).|
 |Ethernet|Displays the networking status of the server. Opens **Control Panel\Network and Internet\Network Connections**.|
 |Operating system version|This read-only field displays the version number of the Windows operating system that the local server is running.|
@@ -95,7 +95,7 @@ Refresh applies globally to data from all servers that you have added to the Ser
 
 When servers that are in a cluster are added to Server Manager, whether they are physical computers or virtual machines, the first refresh of data can fail, or display data only for the host server for clustered objects. Subsequent refreshes show accurate data for physical or virtual servers in a server cluster.
 
-Data that is displayed in role home pages in Server Manager for remote Desktop Services, IP address Management, and File and Storage Services does not refresh automatically. Refresh data that is displayed in these pages manually, by pressing **F5** or clicking **Refresh** in the Server Manager console heading while you are on those pages.
+Data that is displayed in role home pages in Server Manager for Remote Desktop Services, IP address Management, and File and Storage Services does not refresh automatically. Refresh data that is displayed in these pages manually, by pressing **F5** or clicking **Refresh** in the Server Manager console heading while you are on those pages.
 
 ### add or remove roles or features
 The commands that open the add Roles and Features Wizard and remove Roles and Features Wizard, and let you add or remove roles, role services, and features to servers in your server pool, are in the **Manage** menu of the Server Manager console, and the **Tasks** menu of the **Roles and Features** tile on role or group pages. For detailed information about how to add or remove roles or features, see [Install or Uninstall Roles, Role Services, or Features](install-or-uninstall-roles-role-services-or-features.md).
@@ -159,7 +159,7 @@ In Windows Server 2016, the following roles and feature have management tools th
 
 -   **File and Storage Services.** File and Storage Services pages include custom tiles and commands for managing volumes, shares, iSCSI virtual disks, and storage pools. When you open the File and Storage Services role home page in Server Manager, a retracting pane opens that displays custom management pages for File and Storage Services. For more information about deploying and managing File and Storage Services, see [File and Storage Services](https://go.microsoft.com/fwlink/p/?LinkId=241530).
 
--   **remote Desktop Services.** remote Desktop Services pages include custom tiles and commands for managing sessions, licenses, gateways, and virtual desktops. For more information about deploying and managing remote Desktop Services, see [remote Desktop Services (rdS)](https://go.microsoft.com/fwlink/p/?LinkId=241532).
+-   **Remote Desktop Services.** Remote Desktop Services pages include custom tiles and commands for managing sessions, licenses, gateways, and virtual desktops. For more information about deploying and managing Remote Desktop Services, see [Remote Desktop Services (rdS)](https://go.microsoft.com/fwlink/p/?LinkId=241532).
 
 -   **IP address Management (IPAM).** The IPAM role page includes a custom **Welcome** tile containing links to common IPAM configuration and management tasks, including a wizard for provisioning an IPAM server. The IPAM home page also includes tiles for viewing the managed network, configuration summary, and scheduled tasks.
 
@@ -175,7 +175,7 @@ In Windows Server 2016, the following roles and feature have management tools th
 [create and Manage Server Groups](create-and-manage-server-groups.md)
 [View and Configure Performance, Event, and Service Data](view-and-configure-performance-event-and-service-data.md)
 [File and Storage Services](https://go.microsoft.com/fwlink/p/?LinkId=241530)
-[remote Desktop Services (rdS)](https://go.microsoft.com/fwlink/p/?LinkId=241532)
+[Remote Desktop Services (rdS)](https://go.microsoft.com/fwlink/p/?LinkId=241532)
 [IP address Management (IPAM)](https://go.microsoft.com/fwlink/p/?LinkId=241533)
 
 

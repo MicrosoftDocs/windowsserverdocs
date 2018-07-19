@@ -28,7 +28,7 @@ set root=<RootServer>
 |-------|--------|
 |<RootServer>|Specifies the new name for the root server. The default value is ns.nic.ddn.mil.|
 |{help &#124; ?}|Displays a short summary of **nslookup** subcommands.|
-## remarks
+## Remarks
 -   The **set root** subcommand affects the **root** subcommand.
 ## additional references
 [Command-Line Syntax Key](command-line-syntax-key.md)

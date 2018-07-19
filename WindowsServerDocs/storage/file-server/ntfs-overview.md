@@ -6,8 +6,8 @@ ms.topic: article
 author: JasonGerend 
 ms.author: jgerend 
 ms.technology: storage 
-ms.date: 05/18/2018
-ms.localizationpriority: low
+ms.date: 07/09/2018
+ms.localizationpriority: medium
 ---
 # NTFS overview
 
@@ -15,7 +15,7 @@ ms.localizationpriority: low
 
 NTFS—the primary file system for recent versions of Windows and Windows Server—provides a full set of features including security descriptors, encryption, disk quotas, and rich metadata, and can be used with Cluster Shared Volumes (CSV) to provide continuously available volumes that can be accessed simultaneously from multiple nodes of a failover cluster.
 
-To learn more about new and changed functionality in NTFS in Windows Server 2012 R2, see [What's New in NTFS](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn466520(v%3dws.11)). For additional feature information, see the [Additional information](#additional-information) section of this topic. To learn more about the newer Resilient File System (ReFS), see [Resilient File System (ReFS) overview](https://docs.microsoft.com/windows-server/storage/refs/refs-overview).
+To learn more about new and changed functionality in NTFS in Windows Server 2012 R2, see [What's New in NTFS](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn466520(v%3dws.11)). For additional feature information, see the [Additional information](#additional-information) section of this topic. To learn more about the newer Resilient File System (ReFS), see [Resilient File System (ReFS) overview](../refs/refs-overview.md).
 
 ## Practical applications
 
@@ -91,4 +91,4 @@ If the space on a volume is limited, NTFS provides the following ways to work wi
 |---|---|
 |Evaluation|- [What's New in NTFS](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn466520(v%3dws.11)) (Windows Server 2012 R2)<br>- [What's New in NTFS](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff383236(v=ws.10)) (Windows Server 2008 R2, Windows 7)<br>- [NTFS Health and Chkdsk](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831536(v%3dws.11))<br>- [Self-Healing NTFS](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771388(v=ws.10)) (introduced in Windows Server 2008)<br>- [Transactional NTFS](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc730726(v%3dws.10)) (introduced in Windows Server 2008)|
 |Community resources|- [Windows Storage Team Blog](https://blogs.msdn.microsoft.com/san/)|
-|Related technologies|- [File and Storage Services overview](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831487(v%3dws.11))<br>- [Use Cluster Shared Volumes in a Failover Cluster](../../failover-clustering/failover-cluster-csvs.md)<br>- The [Cluster Shared Volumes](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831630(v%3dws.11)#cluster-shared-volumes>) and [Storage Design](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831630(v%3dws.11)#storage-design>) sections of [Designing Your Cloud Infrastructure](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831630(v%3dws.11)) <br>- [Storage Spaces](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831739(v%3dws.11))<br>- [Resilient File System (ReFS) overview](https://docs.microsoft.com/windows-server/storage/refs/refs-overview)<br>- [DFS Namespaces and DFS Replication](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj127250(v%3dws.11))|
+|Related technologies|- [Storage in Windows Server](../storage.md)<br>- [Use Cluster Shared Volumes in a Failover Cluster](../../failover-clustering/failover-cluster-csvs.md)<br>- The [Cluster Shared Volumes](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831630(v%3dws.11)#cluster-shared-volumes>) and [Storage Design](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831630(v%3dws.11)#storage-design>) sections of [Designing Your Cloud Infrastructure](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831630(v%3dws.11)) <br>- [Storage Spaces](../storage-spaces/overview.md)<br>- [Resilient File System (ReFS) overview](../refs/refs-overview.md)

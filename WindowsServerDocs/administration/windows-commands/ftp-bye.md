@@ -25,7 +25,7 @@ bye
 ```  
 ### Parameters  
 none  
-## remarks  
+## Remarks  
 **Bye** and **quit** both end the ftp session with the remote computer and exits.  
 ## <a name="BKMK_Examples"></a>Examples  
 End the ftp session with the remote computer and exit.  

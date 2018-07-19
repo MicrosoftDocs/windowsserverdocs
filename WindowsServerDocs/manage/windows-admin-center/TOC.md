@@ -19,6 +19,7 @@
 ### [High availability](deploy/high-availability.md)
 
 ## Configure
+### [Windows Admin Center settings](configure/settings.md)
 ### [User access control and permissions](configure/user-access-control.md)
 ### [Using extensions](configure/using-extensions.md)
 ### [Configure Azure integration](configure/azure-integration.md)
@@ -29,7 +30,9 @@
 ### [Manage hyper-converged infrastructure](use/manage-hyper-converged.md)
 ### [Manage failover clusters](use/manage-failover-clusters.md)
 ### [Manage Hyper-V virtual machines](use/manage-virtual-machines.md)
-### [Protect your Hyper-V VMs with Azure Site Recovery](use/azure-services.md)
+### [Configure Azure services](use/azure-services.md)
+#### [Protect your Hyper-V VMs with Azure Site Recovery](use/azure-site-recovery.md)
+#### [Update your servers with Azure Update Management](use/azure-update-management.md)
 ### [Common troubleshooting steps](use/troubleshooting.md)
 ### [Logging](use/logging.md)
 ### [Known issues](use/known-issues.md)

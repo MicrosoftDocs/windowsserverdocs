@@ -8,7 +8,7 @@ ms.assetid:
 manager: elizapo
 ms.author: pashort
 author: shortpatti
-ms.date: 05/25/2018
+ms.date: 07/13/2018
 ms.reviewer: deverette
 ---
 
@@ -39,6 +39,8 @@ In this step, you can add **IgnoreNoRevocationCheck** and set it to allow authen
 An EAP-TLS client cannot connect unless the NPS server completes a revocation check of the certificate chain (including the root certificate). Cloud certificates issued to the user by Azure AD do not have a CRL because they are short-lived certificates with a lifetime of one hour. EAP on NPS needs to be configured to ignore the absence of a CRL. Since the authentication method is EAP-TLS, this registry value is only needed under **EAP\13**. If other EAP authentication methods are used, then the registry value should be added under those as well. 
 
 
+
+
 ## [Step 7.2. Create root certificates for VPN authentication with Azure AD](vpn-create-root-cert-for-vpn-auth-azure-ad.md)
 
 In this step, you configure root certificates for VPN authentication with Azure AD, which automatically creates a VPN server cloud app in the tenant.  
@@ -53,18 +55,18 @@ To configure conditional access for VPN connectivity, you need to:
 In this step, you configure the conditional access policy for VPN connectivity. 
 
 To configure the conditional access policy, you need to:
-- Create a Conditional Access policy that is assigned to VPN users.
-- Set the Cloud app to **VPN Server**.
-- Set the Grant (access control) to **Require multi-factor authentication**.  You can use other controls as necessary.
+1. Create a Conditional Access policy that is assigned to VPN users.
+2. Set the Cloud app to **VPN Server**.
+3. Set the Grant (access control) to **Require multi-factor authentication**.  You can use other controls as necessary.
 
 ## [Step 7.4. Deploy conditional access root certificates to on-premises AD](vpn-deploy-cond-access-root-cert-to-on-premise-ad.md)
 
 In this step, you deploy a trusted root certificate for VPN authentication to your on-premises AD.
 
 To deploy the trusted root certificate, you need to:
-- Add the downloaded certificate as a *trusted root CA for VPN authentication*.
-- Import the root certificate to the VPN server and VPN client.
-- Verify that the certificates are present and show as trusted.
+1. Add the downloaded certificate as a *trusted root CA for VPN authentication*.
+2. Import the root certificate to the VPN server and VPN client.
+3. Verify that the certificates are present and show as trusted.
 
 
 ## [Step 7.5. Create OMA-DM based VPNv2 Profiles to Windows 10 devices](vpn-create-oma-dm-based-vpnv2-profiles.md)

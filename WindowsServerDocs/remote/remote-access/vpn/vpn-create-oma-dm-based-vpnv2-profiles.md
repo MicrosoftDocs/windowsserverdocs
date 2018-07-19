@@ -11,7 +11,7 @@ ms.workload: identity
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.topic: article
-ms.date: 05/25/2018
+ms.date: 07/13/2018
 ms.author: pashort
 author: shortpatti
 manager: elizapo
@@ -37,12 +37,12 @@ Windows 10 client computer has already been configured with a VPN connection usi
 
 **Procedure:**
 
-1. In the Azure portal, click **Intune** > **Device Configuration** > **Profiles** and select the VPN profile you created earlier under [Configure Windows 10 Client Always On VPN Connections](always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md#create-the-vpn-profile).
+1. In the Azure portal, click **Intune** > **Device Configuration** > **Profiles** and select the VPN profile you created earlier in [Configure the VPN client by using Intune](always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md#configure-the-vpn-client-by-using-intune).
     
 2. In the policy editor, select **Properties** > **Settings** > **Base VPN**. Extend the existing **EAP Xml** to include a filter that gives the VPN client the logic it needs to retrieve the AAD Conditional Access certificate from the user's certificate store instead of leaving it to chance allowing it to use the first certificate discovered.
 
     >[!NOTE]
-    >Without this, the VPN client could retrieve the user certificate issued from the on-premise certificate authority, resulting in a failed VPN connection.
+    >Without this, the VPN client could retrieve the user certificate issued from the on-premises certificate authority, resulting in a failed VPN connection.
 
     ![Intune portal](../../media/Always-On-Vpn/intune-eap-xml.png)
 

@@ -2,7 +2,7 @@
 title: Windows Server
 description: Get started with Windows Server
 ms.prod: windows-server-threshold
-ms.date: 05/07/2018
+ms.date: 07/12/2018
 ms.technology: server-general
 ms.topic: article
 author: jaimeo
@@ -12,10 +12,14 @@ ms.localizationpriority: high
 ---
 # Windows Server technical content library
 
+
 This library provides info for IT pros to evaluate, plan, deploy, secure, and manage Windows Server.
 
->[!TIP]
-> Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/) on docs.microsoft.com. You can also [search this site](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions) for specific information.
+[![WS08 end of support banner](get-started/media/WS08-EoS-banner.jpg)](get-started/modernize-windows-server-2008.md)
+
+>[!IMPORTANT]
+> Extended support for Windows Server 2008 R2 and Windows Server 2008 ends in January 2020. [Learn about your upgrade options](get-started/modernize-windows-server-2008.md), including a new Azure solution.
+
 
 <!-- *commenting out video until 1803 video available*
 **What's new in Windows Server? Check out our latest mechanics video:**
@@ -78,6 +82,10 @@ Windows Server, version 1803 is the next release in the new Semi-Annual Channel.
 **Windows Server, version 1803 runs in Server Core mode.** That means there is no local console or graphical user interface, so you manage it remotely. However, it offers great advantages such as smaller hardware requirements and much smaller attack surface. If you're new to working with Server Core, [Manage a Server Core server](administration/server-core/server-core-manage.md) will help you get used to this environment. [Manage Windows Server](administration/manage-windows-server.md) shows you the various options for managing servers remotely.
 
 Check out [What's New in Windows Server version 1803](get-started/whats-new-in-windows-server-1803.md) for more information about the new features and functionality added in Windows Server, version 1803.
+
+## Other versions of Windows Server
+
+Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/) on docs.microsoft.com. You can also [search this site](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions) for specific information.
 
 ## Windows Server editions
 

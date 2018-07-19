@@ -30,7 +30,7 @@ auditpol /restore /file:<filename>
 |-------|--------|
 |/file|Specifies the file from which the audit policy should be restored. The file must have been created by using the /backup option or must be syntactically consistent with the CSV file format used by the /backup option.|
 |/?|Displays help at the command prompt.|
-## remarks
+## Remarks
 for restore operations for the per-user policy and system policy, you must have Write or Full Control permission on that object set in the security descriptor. You can also perform the restore operation by possessing the **Manage auditing and security log** (SeSecurityPrivilege) user right. SeSecurityPrivilege is useful when restoring the security descriptor in the event of an inadvertent error or malicious attack.
 ## <a name="BKMK_examples"></a>Examples
 To restore system audit policy settings, per-user audit policy settings for all users, and all auditing options from a file named auditpolicy.csv that was created by using the /backup command, type:

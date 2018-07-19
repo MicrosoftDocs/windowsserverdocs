@@ -5,11 +5,13 @@ ms.technology: manage
 ms.topic: article
 author: daniellee-msft
 ms.author: jol
-ms.date: 05/23/2018
+ms.date: 06/18/2018
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---
 # Managing Virtual Machines with Windows Admin Center
+
+>Applies To: Windows Admin Center, Windows Admin Center Preview
 
 The Virtual Machines tool is available in [Server](manage-servers.md), [Failover Cluster](manage-failover-clusters.md) or [Hyper-Converged Cluster](manage-hyper-converged.md) connections if the Hyper-V role is enabled on the server or cluster. You can use the Virtual Machines tool to manage Hyper-V hosts running Windows Server 2012 or later, either installed with Desktop Experience or as Server Core. Hyper-V Server 2012 and 2016 are also supported.
 
@@ -37,7 +39,7 @@ Here are some of the Hyper-V tasks you can do in Windows Admin Center:
 ![Virtual Machines Summary screen](../media/manage-virtual-machines/virtual-machines-summary.png)
 
 1. Click the **Virtual Machines** tool from the left side navigation pane.
-2. There are two tabs at the top of the **Virtual Machines** tool, the **Summary** tab and tne **Inventory** tab. The **Summary** tab provides a holistic view of Hyper-V host resources and performance for the current server or entire cluster, including the following:
+2. There are two tabs at the top of the **Virtual Machines** tool, the **Summary** tab and the **Inventory** tab. The **Summary** tab provides a holistic view of Hyper-V host resources and performance for the current server or entire cluster, including the following:
     - The number of VMs grouped by state - running, off, paused and saved
     - Recent health alerts or Hyper-V event log events (Alerts are only available for hyper-converged clusters running Windows Server 2016 or later)
     - CPU and memory usage with host vs guest breakdown
@@ -127,6 +129,7 @@ Virtual machine management in Windows Admin Center is actively under development
 
 |Feature Request|
 |-------|
+|[Support operations on multiple virtual machines](https://windowsserver.uservoice.com/forums/295071-management-tools/suggestions/31637638--ux-virtual-machines-add-checkboxes-to-select-m) - **Now supported in Windows Admin Center Preview 1807**|
 |[Import/Export virtual machines](https://windowsserver.uservoice.com/forums/295071-management-tools/suggestions/31481971--virtual-machines-import-export-vms)|
 |[Sort virtual machines in folders](https://windowsserver.uservoice.com/forums/295071-management-tools/suggestions/31494712--virtual-machines-ability-to-sort-vm-into-folder)|
 |[Support additional virtual machine settings](https://windowsserver.uservoice.com/forums/295071-management-tools/suggestions/31915264--virtual-machines-expose-all-configurable-setting)|

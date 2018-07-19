@@ -6,8 +6,8 @@ ms.topic: article
 author: JasonGerend 
 ms.author: jgerend 
 ms.technology: storage 
-ms.date: 04/05/2018
-ms.localizationpriority: low
+ms.date: 07/09/2018
+ms.localizationpriority: medium
 ---
 # Deploy Folder Redirection with Offline Files
 
@@ -40,7 +40,7 @@ Folder Redirection has the following software requirements:
     - When using a clustered file share, disable continuous availability on the file share to avoid performance issues with Folder Redirection and Offline Files. Additionally, Offline Files might not transition to offline mode for 3-6 minutes after a user loses access to a continuously available file share, which could frustrate users who aren’t yet using the Always Offline mode of Offline Files.
 
 >[!NOTE]
->To use new features in Folder Redirection, there are additional client computer and Active Directory schema requirements. For more information, see [Folder Redirection, Offline Files, and Roaming User Profiles](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj649074(v%3dws.11)>).
+>Some newer features in Folder Redirection have additional client computer and Active Directory schema requirements. For more info, see [Deploy primary computers](deploy-primary-computers.md), [Disable Offline Files on folders](disable-offline-files-on-folders.md), [Enable Always Offline mode](enable-always-offline.md), and [Enable optimized folder moving](enable-optimized-moving.md).
 
 ## Step 1: Create a folder redirection security group
 
@@ -225,9 +225,9 @@ The following table summarizes some of the most important changes to this topic.
 
 ## More information
 
-* [Deploy Folder Redirection, Offline Files, and Roaming User Profiles](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj649074(v%3dws.11)>)
+* [Folder Redirection, Offline Files, and Roaming User Profiles](folder-redirection-rup-overview.md)
 * [Deploy Primary Computers for Folder Redirection and Roaming User Profiles](deploy-primary-computers.md)
-* [Enable Advanced Offline Files Functionality](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn270369(v%3dws.11)>)
+* [Enable Advanced Offline Files Functionality](enable-always-offline.md)
 * [Microsoft’s Support Statement Around Replicated User Profile Data](https://blogs.technet.microsoft.com/askds/2010/09/01/microsofts-support-statement-around-replicated-user-profile-data/)
 * [Sideload Apps with DISM](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh852635(v=win.10)>)
 * [Troubleshooting packaging, deployment, and query of Windows Runtime-based apps](https://msdn.microsoft.com/library/windows/desktop/hh973484.aspx)

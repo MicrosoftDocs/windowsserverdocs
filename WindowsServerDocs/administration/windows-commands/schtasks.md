@@ -221,7 +221,8 @@ The format for *EndDate* varies with the locale selected for the local computer 
 
 The valid date formats are listed in the following table. Use the format most similar to the format selected for **Short date** in **Regional and Language Options** in **Control Panel** on the local computer.
 
-|-----|-----|
+|Value|Description|
+|-----|-----------|
 |\<MM>/<DD>/<YYYY>|Use for month-first formats, such as **English (United States)** and **Spanish (Panama)**.|
 |\<DD>/<MM>/<YYYY>|Use for day-first formats, such as **Bulgarian** and **Dutch (Netherlands)**.|
 |\<YYYY>/<MM>/<DD>|Use for year-first formats, such as **Swedish** and **French (Canada)**.|

@@ -5,14 +5,14 @@ ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
-ms.date: 05/23/2018
+ms.date: 06/18/2018
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---
 
 # Develop a solution extension
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10
+>Applies To: Windows Admin Center, Windows Admin Center Preview
 
 Solution extensions primarily define a type of connection. Windows Admin Center includes four types of solution extensions by default, one each for Windows Server connections, Windows PC connections, failover cluster connections and hyper-converged cluster connections. When you click on a connection in the Windows Admin Center home screen, the solution extension for the connection's type is loaded and will attempt to connect to the target connection. If the connection is successful, the solution extension's UI will load and display the tool extensions for the solution in the left navigation pane.
 
@@ -24,15 +24,14 @@ If you plan on building management GUI for a new type of connection such as netw
 Follow these steps to create a solution extension:
 
 - [Prepare](prepare-development-environment.md) your development environment
-    - [Clone](prepare-development-environment.md#clone-extension-template) the extension template 
-    - [Prepare](prepare-development-environment.md#prepare-extension-template-for-use) the extension template to use as your project
+    - [Create](prepare-development-environment.md#create-new-extension-with-the-windows-admin-center-cli) an extension with the Windows Admin Center CLI
 - Modify the project into a solution extension
 - Create a connection provider
 - Add your content to the project
 
 ## Prepare your development environment
 
-Follow these step-by-step directions to [prepare](prepare-development-environment.md) your development environment, [clone](prepare-development-environment.md#clone-extension-template) the extension template, and prepare the extension template [for use](prepare-development-environment.md#prepare-extension-template-for-use).
+Follow these step-by-step directions to [prepare](prepare-development-environment.md) your development environment and [create](prepare-development-environment.md#create-new-extension-with-the-windows-admin-center-cli) an extension with the Windows Admin Center CLI.
  
 ## Modify the project into a solution extension
 

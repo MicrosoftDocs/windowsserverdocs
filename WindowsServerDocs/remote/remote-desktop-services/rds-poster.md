@@ -13,7 +13,7 @@ ms.date: 09/22/2017
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a8c6d5fa-399b-4823-8f10-affec1bbfe65
-ms.localizationpriority: low
+ms.localizationpriority: medium
 ---
 # Remote Desktop Services - planning poster
 

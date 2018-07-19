@@ -28,7 +28,7 @@ mls <remoteFile>[ ] <LocalFile>
 |-------|--------|  
 |<remoteFile>|Specifies the file for which you want to see a listing.|  
 |<LocalFile>|Specifies a local file in which to store the listing.|  
-## remarks  
+## Remarks  
 -   Specifying *remoteFiles*  
     type a hyphen (**-**) to use the current working directory on the remote computer.  
 -   Specifying *LocalFile*  

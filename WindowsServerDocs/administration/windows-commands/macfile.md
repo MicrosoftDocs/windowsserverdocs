@@ -61,7 +61,7 @@ macfile directory[/server:\\<computerName>] /path:<directory> [/owner:<OwnerName
 -   /?
     Displays help at the command prompt.
     
-### remarks
+### Remarks
 -   if the information that you supply contains spaces or special characters, use quotation marks around the text (for example, **"***computer Name***"**).
 -   Use **macfiledirectory** to make an existing directory in a Macintosh-accessible volume available to Macintosh users. The **macfiledirectory** command does not create directories. Use File Manager, the command prompt, or the **macintosh new folder** command to create a directory in a Macintosh-accessible volume before you use the **macfile directory** command.
 ### <a name="BKMK_Examples"></a>Examples
@@ -88,7 +88,7 @@ macfile forkize[/server:\\<computerName>] [/creator:<CreatorName>] [/type:<typeN
 |/targetfile:<Filepath>|Required. Specifies the location of the file that is created by joining a data fork and a resource fork, or specifies the location of the file whose type or creator you are changing. The file must be on the specified server.|
 |/?|Displays help at the command prompt.|
 
-### remarks
+### Remarks
 -   if the information that you supply contains spaces or special characters, use quotation marks around the text (for example, **"***computer Name***"**).
 
 ### Examples
@@ -115,7 +115,7 @@ macfile server [/server:\\<computerName>] [/maxsessions:{Number | unlimited}] [/
 |/loginmessage:<Message>|changes the message Macintosh users see when logging on to the File Server for Macintosh server. The maximum number of characters for the logon message is 199. If omitted, the **loginmessage** message for the server remains unchanged. To remove an existing logon message, include the **/loginmessage** parameter, but leave the *Message* variable blank.|
 |/?|Displays help at the command prompt.|
 
-### remarks
+### Remarks
 -   if the information that you supply contains spaces or special characters, use quotation marks around the text (for example, **"***computer Name***"**).
 
 ### Examples
@@ -145,7 +145,7 @@ macfile volume /remove[/server:\\<computerName>] /name:<volumeName>
 |/remove|Required when you are removing a Macintosh-accesible volume. removes the specified volume.|
 |/?|Displays help at the command prompt.|
 
-### remarks
+### Remarks
 -   if the information that you supply contains spaces or special characters, use quotation marks around the text (for example, **"***computer Name***"**).
 
 ### Examples

@@ -25,7 +25,7 @@ Reduces the physical size of a dynamically expanding virtual hard disk (VHD) fil
 ```
 compact vdisk
 ```
-## remarks
+## Remarks
 -   A dynamically expanding VHD must be selected for this operation to succeed. Use the **select vdisk** command to select a VHD and shift the focus to it.
 -   You can only compact dynamically expanding VHDs that are detached or attached as read-only.
 ## <a name="BKMK_Examples"></a>Examples

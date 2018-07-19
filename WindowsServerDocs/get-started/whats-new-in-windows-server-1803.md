@@ -86,7 +86,6 @@ With the release of Windows Server, version 1803 more features will be available
 - An issue where services running in containers did not receive shutdown notification has been fixed.
     - Specifically, the notification is changed to CTRL_SHUTDOWN_EVENT for both Server Core and Nano Server container based images. In addition, it extends the notification in Server Core container based images to affect all process running in the container, including sending service shutdown notifications to services running in the container.
 - An incompatibility of docker pull & docker load with the policy setting that determines whether BitLocker protection is required for fixed data drives to be writable (FDVDenyWriteAccess) has been fixed. 
-- Directories on a container host can now be bind mounted to a local file system in a container.
 
 ## Storage
 
@@ -106,5 +105,5 @@ Install-WindowsFeature -Name WDS
 
 ## See also
 
-[Windows Server release information](https://docs.microsoft.com/en-us/windows-server/get-started/windows-server-release-info)<br>
-[What's new in Windows 10, version 1803 IT Pro content](https://docs.microsoft.com/en-us/windows/whats-new/whats-new-windows-10-version-1803)
+[Windows Server release information](https://docs.microsoft.com/windows-server/get-started/windows-server-release-info)<br>
+[What's new in Windows 10, version 1803 IT Pro content](https://docs.microsoft.com/windows/whats-new/whats-new-windows-10-version-1803)

@@ -9,7 +9,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 author: lizap
 manager: elizapo
-ms.localizationpriority: low
+ms.localizationpriority: medium
 ---
 # Use performance counters to diagnose app performance problems on Remote Desktop Session Hosts
 

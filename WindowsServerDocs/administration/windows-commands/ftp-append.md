@@ -28,7 +28,7 @@ append <LocalFile> [remoteFile]
 |-------|--------|  
 |<LocalFile>|Specifies the local file to add.|  
 |[remoteFile]|Specifies the file on the remote computer to which <LocalFile> is added.|  
-## remarks  
+## Remarks  
 if *remoteFile* is omitted, the *LocalFile* name is used in place of the remote file name.  
 ## <a name="BKMK_Examples"></a>Examples  
 append file1.txt to file2.txt on the remote computer.  

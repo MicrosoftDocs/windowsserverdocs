@@ -8,6 +8,8 @@
 #### [What's New in the Windows Console in Windows Server 2016](whats-new-in-console.md)
 ## [Windows Server Semi-Annual Channel Overview](semi-annual-channel-overview.md)
 ## [Installation and Upgrade of Windows Server Releases](Installation-and-Upgrade.md)
+## [Upgrade Windows Server 2008 and Windows Server 2008 R2](modernize-windows-server-2008.md)
+### [Upload a Windows Server 2008/2008 R2 specialized image to Azure](uploading-specialized-WS08-image-to-azure.md)
 ## [Migration of Windows Server Roles and Features](Migrate-Roles-and-Features.md)
 ## [Windows Server 2016 System Requirements](System-Requirements.md)
 ## Release Notes: Known Issues in Windows Server

@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 
 
-Reads Deployed Printer Connection settings from Group Policy, and deploys/removes printer connections as needed.
+Reads Deployed Printer Connection settings from Group Policy and deploys/removes printer connections as needed.
 
 ## Syntax
 

@@ -33,7 +33,7 @@ type [<Drive>:][<Path>]<FileName>
 
 |Parameter|Description|
 |---------|-----------|
-|[\<Drive>:][<Path>]<FileName>|Specifies the location and name of the file or files that you want to view. Separate multiple file names with spaces.|
+|[\<Drive>:][\<Path>]\<FileName>|Specifies the location and name of the file or files that you want to view. Separate multiple file names with spaces.|
 |/?|Displays help at the command prompt.|
 
 ## Remarks

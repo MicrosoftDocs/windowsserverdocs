@@ -37,7 +37,7 @@ set [bsasdel] [crlf] [delasbs] [escape <Char>] [localecho] [logfile <FileName>] 
 |ntlm|Turns on NTLM authentication.|  
 |term {ansi &#124; vt100 &#124; vt52 &#124; vtnt}|Sets the terminal type.|  
 |?|Displays help for this command.|  
-## remarks  
+## Remarks  
 1.  You can use the **unset** command to turn off an option that was previously set.  
 2.  On non-English versions of telnet, the **codeset** <option> is available. **Codeset** <option> sets the current code set to an option, which can be any one of the following: **shift JIS**, **Japanese EUC**, **JIS Kanji**, **JIS Kanji (78)**, **DEC Kanji**, **NEC Kanji**. You should set the same code set on the remote computer.  
 ## <a name="BKMK_Examples"></a>Examples  

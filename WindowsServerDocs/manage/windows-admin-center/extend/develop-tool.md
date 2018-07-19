@@ -5,14 +5,14 @@ ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
-ms.date: 05/23/2018
+ms.date: 06/18/2018
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---
 
 # Develop a tool extension
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10
+>Applies To: Windows Admin Center, Windows Admin Center Preview
 
 A tool extension is the primary way that users interact with Windows Admin Center to manage a connection, such as a server or cluster. When you click on a connection in the Windows Admin Center home screen and connect, you will then be presented with a list of tools in the left navigation pane. When you click on a tool, the tool extension is loaded and displayed in the right pane.
 
@@ -24,8 +24,7 @@ When a tool extension is loaded, it can execute WMI calls or PowerShell scripts 
 ## Follow these steps to create a tool extension
 
 - [Prepare](prepare-development-environment.md) your development environment
-    - [Clone](prepare-development-environment.md#clone-extension-template) the extension template 
-    - [Prepare](prepare-development-environment.md#prepare-extension-template-for-use) the extension template to use as your project
+    - [Create](prepare-development-environment.md#create-new-extension-with-the-windows-admin-center-cli) an extension with the Windows Admin Center CLI
 - Add your content to the project
 
 ## Example projects

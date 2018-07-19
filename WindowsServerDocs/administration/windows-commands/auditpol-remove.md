@@ -31,7 +31,7 @@ auditpol /remove [/user[:<username>|<{SID}>]]
 |/user|Specifies the security identifier (SID) or user name for the user for whom the per-user audit policy is to be deleted.|
 |/allusers|removes the per-user audit policy for all users.|
 |/?|Displays help at the command prompt.|
-## remarks
+## Remarks
 for remove operations for the per-user policy, you must have Write or Full Control permission on that object set in the security descriptor. You can also perform remove operations by possessing the **Manage auditing and security log** (SeSecurityPrivilege) user right. However, this right allows additional access that is not necessary to perform the remove operation.
 ## <a name="BKMK_examples"></a>Examples
 To remove the per-user audit policy for user mikedan by name, type:

@@ -8,7 +8,7 @@ ms.assetid: 3c9de3ec-4bbd-4db0-b47a-03507a315383
 manager: elizap
 ms.author: pashort
 author: shortpatti
-ms.date: 05/29/2018
+ms.date: 06/11/2018
 ---
 # Step 1. Plan the Always On VPN deployment
 

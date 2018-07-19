@@ -42,7 +42,7 @@ nbtstat [/a <remoteName>] [/A <IPaddress>] [/c] [/n] [/r] [/R] [/RR] [/s] [/S] [
 |<Interval>|Redisplays selected statistics, pausing the number of seconds specified in *Interval* between each display. Press CTRL+C to stop redisplaying statistics. If this parameter is omitted, **nbtstat** prints the current configuration information only once.|
 |/?|Displays help at the command prompt.|
 
-## remarks
+## Remarks
 
 -   **nbtstat** command-line parameters are case-sensitive.
 
