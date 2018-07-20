@@ -100,7 +100,7 @@ The following table summarizes the differences between encryption-supported and 
 |Vtpm               | Yes, required but configurable        | Yes, required and enforced    |
 |Encrypt VM state and live migration traffic | Yes, required but configurable |  Yes, required and enforced  |
 |Integration components | Configurable by fabric admin      | Certain integration components blocked (e.g. data exchange, PowerShell Direct) |
-|Virtual Machine Connection (Console), HID devices (e.g. keyboard, mouse) | On, cannot be disabled | Disabled (cannot be enabled) |
+|Virtual Machine Connection (Console), HID devices (e.g. keyboard, mouse) | On, cannot be disabled | Enabled on hosts beginning with Windows Server version 1803; Disabled on earlier hosts |
 |COM/Serial ports   | Supported                             | Disabled (cannot be enabled) |
 |Attach a debugger (to the VM process)<sup>1</sup>| Supported          | Disabled (cannot be enabled) |
 
