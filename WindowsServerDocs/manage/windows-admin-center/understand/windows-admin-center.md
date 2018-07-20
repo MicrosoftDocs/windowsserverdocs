@@ -64,7 +64,7 @@ Quick links: [Documentation](../overview.md) | [Give feedback](https://aka.ms/WA
 
 ## Related products
 
-Windows Admin Center is designed for managing a single server or cluster. It complements but does not replace existing Microsoft monitoring and management solutions, such as Remote Server Administration Tools (RSAT), System Center, Operations Management Suite, Intune, or Azure Stack. 
+Windows Admin Center is designed for managing a single server or cluster. It complements but does not replace existing Microsoft monitoring and management solutions, such as Remote Server Administration Tools (RSAT), System Center, Intune, or Azure Stack. 
 
 [Learn how Windows Admin Center complements other Microsoft management solutions.](related-management.md)
 
