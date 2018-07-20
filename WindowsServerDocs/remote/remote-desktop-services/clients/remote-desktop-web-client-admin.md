@@ -4,7 +4,7 @@ description: Describes how an admin can set up the Remote Desktop web client.
 ms.prod: windows-server-threshold
 ms.technology: remote-desktop-services
 ms.author: helohr
-ms.date: 07/16/2018
+ms.date: 07/20/2018
 ms.topic: article
 author: Heidilohr
 ms.localizationpriority: medium
@@ -149,3 +149,7 @@ If the user gets an "unexpected server authentication certificate was received" 
 ```PowerShell
 Import-RDWebClientBrokerCert <certificate file path>
 ```
+
+## Get help with the web client
+
+If you've encountered an issue that can’t be solved by the information in this article, you can get help with the web client by emailing the address on the web client's About page.
