@@ -210,7 +210,7 @@ If you were to not have enough memory, cpu, or disk space to add the virtual mac
 
       Get-ClusterSetOptimalNodeForVM : A cluster node is not available for this operation.  
 
-Once the virtual machine has been created, it will be dosplayed in Hyper-V manager on the specific node specified.  To add it as a cluster set virtual machine and into the cluster, the command is below.  
+Once the virtual machine has been created, it will be displayed in Hyper-V manager on the specific node specified.  To add it as a cluster set virtual machine and into the cluster, the command is below.  
 
         Register-ClusterSetVM -CimSession CSMASTER -MemberName $targetnode.Member -VMName CSVM1
 
