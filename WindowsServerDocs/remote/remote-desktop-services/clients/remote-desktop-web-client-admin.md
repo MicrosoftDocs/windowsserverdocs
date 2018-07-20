@@ -4,7 +4,7 @@ description: Describes how an admin can set up the Remote Desktop web client.
 ms.prod: windows-server-threshold
 ms.technology: remote-desktop-services
 ms.author: helohr
-ms.date: 07/16/2018
+ms.date: 07/20/2018
 ms.topic: article
 author: Heidilohr
 ms.localizationpriority: medium
