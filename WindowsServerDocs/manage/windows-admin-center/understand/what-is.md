@@ -16,7 +16,7 @@ ms.prod: windows-server-threshold
 
 Windows Admin Center is a new, locally-deployed, browser-based management tool set that lets you manage your Windows Servers with no Azure or cloud dependency. Windows Admin Center gives you full control over all aspects of your server infrastructure and is particularly useful for managing servers on private networks that are not connected to the Internet.
 
-Windows Admin Center is the modern evolution of "in-box" management tools, like Server Manager and MMC. It complements System Center and Operations Management Suite - it's not a replacement.
+Windows Admin Center is the modern evolution of "in-box" management tools, like Server Manager and MMC. It complements System Center - it's not a replacement.
 
 ![](../media/wac-deploy-graphic.png)
 
@@ -40,7 +40,7 @@ Windows Admin Center is the evolution of long-standing, well known management pl
 
 ### **Complements existing solutions** 
 
-Windows Admin Center works with solutions like System Center and Azure Operations Management Suite, adding to their capabilities to perform detailed, single-machine management tasks.
+Windows Admin Center works with solutions like System Center and Azure management and security, adding to their capabilities to perform detailed, single-machine management tasks.
 
 ### **Manage from anywhere**
 
