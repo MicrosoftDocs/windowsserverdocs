@@ -12,7 +12,7 @@ ms.date: 06/05/2018
 
 # Create a Linux shielded VM template disk
 
-> Applies To: Windows Server (Semi-Annual Channel)
+> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2019
 
 This topic explains how to prepare a template disk for Linux shielded VMs that can be used to instantiate one or more tenant VMs.
 
@@ -187,7 +187,7 @@ The VHDX you provide to the `-Path` parameter will be overwritten with the updat
 
 > [!IMPORTANT]
 > The Remote Server Administration Tools available on Windows Server 2016 or Windows 10 cannot be used to prepare a Linux shielded VM template disk.
-> Only use the [Protect-TemplateDisk](https://docs.microsoft.com/en-us/powershell/module/shieldedvmtemplate/protect-templatedisk?view=win10-ps) cmdlet available on Windows Server, version 1709 to prepare a Linux shielded VM template disk.
+> Only use the [Protect-TemplateDisk](https://docs.microsoft.com/en-us/powershell/module/shieldedvmtemplate/protect-templatedisk?view=win10-ps) cmdlet available on Windows Server, version 1709 or the Remote Server Administration Tools available on Windows Server 2019 to prepare a Linux shielded VM template disk.
 
 ```powershell
 # Replace "THUMBPRINT" with the thumbprint of your template disk signing certificate in the line below
