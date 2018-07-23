@@ -32,7 +32,7 @@ The following feature distribution map indicates the features that are present i
 |**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_core)**|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|
 |Windows Server 2016 Accurate Time|2016||||
 |**[Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Networking)**|
-|Jumbo frames|2016, 2012 R2, 2012, 2008 R2||&#10004;&#10004;|&#10004;|
+|Jumbo frames|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|
 |VLAN tagging and trunking|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|
 |Live Migration|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|
 |Static IP Injection|2016, 2012 R2, 2012|||
@@ -42,7 +42,7 @@ The following feature distribution map indicates the features that are present i
 |**[Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Storage)**|
 |VHDX resize|2016, 2012 R2|&#10004; Note 1|&#10004; Note 1|&#10004; Note 1|
 |Virtual Fibre Channel|2016, 2012 R2|||
-|Live virtual machine backup|2016, 2012 R2| Note 4,5|&#10004;&#10004; Note 4,5|&#10004; Note 4|
+|Live virtual machine backup|2016, 2012 R2|&#10004; Note 4,5|&#10004; Note 4,5|&#10004; Note 4|
 |TRIM support|2016, 2012 R2|||
 |SCSI WWN|2016, 2012 R2|||
 |**[Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Memory)**|
