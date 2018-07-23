@@ -73,6 +73,11 @@ You can use the audit mode to identify LSA plug-ins and drivers that will fail t
 
 Analyze the results of event 3065 and event 3066.
 
+You need to enable logging for this verification in the eventlog for CAPI2 in Event Viewer: Microsoft-Windows-CAPI2/Operational
+In the Properties of the Eventlog, check the "Enable Logging" box and click OK.
+
+After this, you may see these events:
+
 -   **Event 3065**: This event records that a code integrity check determined that a process (usually lsass.exe) attempted to load a particular driver that did not meet the security requirements for Shared Sections. However, due to the system policy that is set, the image was allowed to load.
 
 -   **Event 3066**: This event records that a code integrity check determined that a process (usually lsass.exe) attempted to load a particular driver that did not meet the Microsoft signing level requirements. However, due to the system policy that is set, the image was allowed to load.
@@ -117,6 +122,11 @@ To opt-in for additional LSA protection on multiple computers, you can use the R
 You can use the event log to identify LSA plug-ins and drivers that failed to load in LSA Protection mode. When the LSA protected process is enabled, the system generates event logs that identify all of the plug-ins and drivers that failed to load under LSA.
 
 Analyze the results of Event 3033 and Event 3063.
+
+You need to enable logging for this verification in the eventlog for CAPI2 in Event Viewer: Microsoft-Windows-CAPI2/Operational
+In the Properties of the Eventlog, check the "Enable Logging" box and click OK.
+
+After this, you may see these events:
 
 -   **Event 3033**: This event records that a code integrity check determined that a process (usually lsass.exe) attempted to load a driver that did not meet the Microsoft signing level requirements.
 
