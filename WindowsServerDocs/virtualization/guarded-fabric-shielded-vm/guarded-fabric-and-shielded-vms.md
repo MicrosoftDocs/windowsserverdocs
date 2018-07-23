@@ -39,7 +39,6 @@ The HGS supports different attestation modes for a guarded fabric:
 
 - TPM-trusted attestation (hardware-based)
 - Host key attestation (based on asymmetric key pairs)
-- Admin-trusted attestation (Active Directory based, deprecated in Windows Server 2019)
 
 TPM-trusted attestation is recommended because it offers stronger assurances, as explained in the following table, but it requires that your Hyper-V hosts have TPM 2.0. If you currently do not have TPM 2.0 or any TPM, you can use host key attestation. If you decide to move to TPM-trusted attestation when you acquire new hardware, you can switch the attestation mode on the Host Guardian Service with little or no interruption to your fabric.
 
@@ -47,7 +46,8 @@ TPM-trusted attestation is recommended because it offers stronger assurances, as
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |**TPM-trusted attestation:** Offers the strongest possible protections but also requires more configuration steps. Host hardware and firmware must include TPM 2.0 and UEFI 2.3.1 with Secure Boot enabled. | Guarded hosts are approved based on their TPM identity, Measured Boot sequence, and code integrity policies to ensure they only run approved code.| 
 | **Host key attestation:** Intended to support existing host hardware where TPM 2.0 is not available. Requires fewer configuration steps and is compatible with commonplace server hardware. | Guarded hosts are approved based on possession of the key. | 
-| **Admin-trusted attestation:** This mode is deprectaed beginning with Windows Server 2019. Use host key attestation instead. | Guarded hosts are approved based on membership in a designated Active Directory Domain Services (AD DS) security group.|
+
+Another mode named **Admin-trusted attestation** is deprecated beginning with Windows Server 2019. This mode was based on guarded host membership in a designated Active Directory Domain Services (AD DS) security group. Host key attestation provides similar assurance and is easier to set up. 
 
 ## Assurances provided by the Host Guardian Service
 
@@ -124,11 +124,11 @@ Both shielded VMs and encryption-supported VMs continue to support commonplace f
 
     **TPM-trusted attestation**: Hyper-V host sends information that includes:
 
-    - TPM-identifying information (its endorsement key)
-    - Information about processes that were started during the most recent boot sequence (the TCG log)
-    - Information about the Code Integrity (CI) policy that was applied on the host. 
+       - TPM-identifying information (its endorsement key)
+       - Information about processes that were started during the most recent boot sequence (the TCG log)
+       - Information about the Code Integrity (CI) policy that was applied on the host. 
 
-    Attestation happens when the host starts and every 8 hours thereafter. If for some reason a host doesn't have an attestation certificate when a VM tries to start, this also triggers attestation.
+       Attestation happens when the host starts and every 8 hours thereafter. If for some reason a host doesn't have an attestation certificate when a VM tries to start, this also triggers attestation.
 
     **Host key attestation**: Hyper-V host sends the public half of the key pair. HGS validates the host key is registered. 
     
