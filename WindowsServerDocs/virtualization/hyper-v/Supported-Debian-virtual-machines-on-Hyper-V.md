@@ -26,42 +26,42 @@ The following feature distribution map indicates the features that are present i
 
 * (*blank*) - Feature not available
 
-|**Feature**|**Windows Server operating system version**|**8.0-8.8 (jessie)**|**7.0-7.11 (wheezy)**|
+|**Feature**|**Windows Server operating system version**|**9.0-9.5 (stretch)**|**8.0-8.8 (jessie)**|**7.0-7.11 (wheezy)**|
 |-|-|-|-|
-|**Availability**||Built in|Built in (Note 6)|
-|**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_core)**|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|
-|Windows Server 2016 Accurate Time|2016|||
+|**Availability**||Built in|Built in|Built in (Note 6)|
+|**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_core)**|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|
+|Windows Server 2016 Accurate Time|2016||||
 |**[Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Networking)**|
-|Jumbo frames|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|
-|VLAN tagging and trunking|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|
-|Live Migration|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|
+|Jumbo frames|2016, 2012 R2, 2012, 2008 R2||&#10004;&#10004;|&#10004;|
+|VLAN tagging and trunking|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|
+|Live Migration|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|
 |Static IP Injection|2016, 2012 R2, 2012|||
 |vRSS|2016, 2012 R2|||
 |TCP Segmentation and Checksum Offloads|2016, 2012 R2, 2012, 2008 R2|||
 |SR-IOV|2016|||
 |**[Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Storage)**|
-|VHDX resize|2016, 2012 R2|&#10004; Note 1|&#10004; Note 1|
+|VHDX resize|2016, 2012 R2|&#10004; Note 1|&#10004; Note 1|&#10004; Note 1|
 |Virtual Fibre Channel|2016, 2012 R2|||
-|Live virtual machine backup|2016, 2012 R2|&#10004; Note 4,5|&#10004; Note 4|
+|Live virtual machine backup|2016, 2012 R2| Note 4,5|&#10004;&#10004; Note 4,5|&#10004; Note 4|
 |TRIM support|2016, 2012 R2|||
 |SCSI WWN|2016, 2012 R2|||
 |**[Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Memory)**|
-|PAE Kernel Support|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|
-|Configuration of MMIO gap|2016, 2012 R2|&#10004;|&#10004;|
+|PAE Kernel Support|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|
+|Configuration of MMIO gap|2016, 2012 R2|&#10004;|&#10004;|&#10004;|
 |Dynamic Memory - Hot-Add|2016, 2012 R2, 2012|||
 |Dynamic Memory - Ballooning|2016, 2012 R2, 2012|||
 |Runtime Memory Resize|2016|||
 |**[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Video)**|
-|Hyper-V-specificvideo device|2016, 2012 R2, 2012, 2008 R2|&#10004;||
+|Hyper-V-specific video device|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;||
 |**[Miscellaneous](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Misc)**|
-|Key-Value Pair|2016, 2012 R2, 2012, 2008 R2|&#10004; Note 4||
+|Key-Value Pair|2016, 2012 R2, 2012, 2008 R2|&#10004; Note 4|&#10004; Note 4||
 |Non-Maskable Interrupt|2016, 2012 R2|&#10004;|&#10004;|
 |File copy from host to guest|2016, 2012 R2|&#10004; Note 4||
 |lsvmbus command|2016, 2012 R2, 2012, 2008 R2|||
 |Hyper-V Sockets|2016|||
 |PCI Passthrough/DDA|2016|||
 |**[Generation 2 virtual machines](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_gen2)**|
-|Boot using UEFI|2016, 2012 R2|&#10004; Note 7||
+|Boot using UEFI|2016, 2012 R2|&#10004; Note 7|&#10004; Note 7||
 |Secure boot|2016|||
 
 ## <a name="BKMK_notes"></a>Notes
