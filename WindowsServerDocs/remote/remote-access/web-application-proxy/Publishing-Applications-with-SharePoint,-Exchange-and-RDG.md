@@ -159,11 +159,8 @@ If you want to restrict access to your Remote Access Gateway and add pre-authent
   
 ## <a name="BKMK_Links"></a>See also  
   
--   [Planning to Publish Applications Using Web Application Proxy](assetId:///a0d4c023-e75b-4140-b0aa-0fdb7f28a59d)  
+-   [Planning to Publish Applications Using Web Application Proxy](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn383650(v=ws.11))  
   
--   [Troubleshooting Web Application Proxy](https://technet.microsoft.com/library/dn770156.aspx)  
+-   [Troubleshooting Web Application Proxy](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn770156(v=ws.11))  
   
--   [Web Application Proxy Walkthrough Guide](assetId:///ad72afff-bbb0-4c37-b4d8-2f68f790db70)  
-  
-
-
+-   [Web Application Proxy Walkthrough Guide](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn280944(v=ws.11))  

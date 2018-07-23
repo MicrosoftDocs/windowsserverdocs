@@ -143,8 +143,6 @@
 
 
 #### [Best Practices for Securing Active Directory](ad-ds/plan/security-best-practices/Best-Practices-for-Securing-active-directory.md)
-##### [Foreword](https://technet.microsoft.com/library/dn487451.aspx)
-##### [Acknowledgements](https://technet.microsoft.com/library/dn487445.aspx)
 ##### [Executive Summary](ad-ds/manage/component-updates/executive-Summary.md)
 ##### [Introduction](ad-ds/manage/component-updates/Introduction.md)
 ##### [Avenues to compromise](ad-ds/plan/security-best-practices/Avenues-to-compromise.md)
