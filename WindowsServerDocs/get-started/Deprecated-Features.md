@@ -47,7 +47,7 @@ The Security Configuration Wizard is removed. Instead, features are secured by d
 The opt-in components that manage participation in the Customer Experience Improvement Program have been removed. 
 
 ### Windows Update
-The `wuauclt.exe /detectnow` command has been removed and is no longer supported. To trigger a scan for updates, do either of the following:
+The **wuauclt.exe /detectnow** command has been removed and is no longer supported. To trigger a scan for updates, do either of the following:
 
 - Run these PowerShell commands:
     ````powershell
@@ -66,9 +66,9 @@ The following features and functionalities are deprecated starting with this rel
 
 ### Configuration tools  
 
--   `Scregedit.exe` is deprecated. If you have scripts that depend on Scregedit.exe, adjust them to use Reg.exe or Windows PowerShell methods.  
+-   **Scregedit.exe** is deprecated. If you have scripts that depend on Scregedit.exe, adjust them to use Reg.exe or Windows PowerShell methods.  
 
--   `Sconfig.exe` is deprecated. Use Windows PowerShell instead.  
+-   **Sconfig.exe** is deprecated. Use Windows PowerShell instead.  
 
 ### NetCfg custom APIs  
 Installation of PrintProvider, NetClient, and ISDN using NetCfg custom APIs is deprecated.  
