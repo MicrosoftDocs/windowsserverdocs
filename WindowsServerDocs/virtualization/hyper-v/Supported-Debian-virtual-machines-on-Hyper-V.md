@@ -27,7 +27,7 @@ The following feature distribution map indicates the features that are present i
 * (*blank*) - Feature not available
 
 |**Feature**|**Windows Server operating system version**|**9.0-9.5 (stretch)**|**8.0-8.8 (jessie)**|**7.0-7.11 (wheezy)**|
-|-|-|-|-|
+|-|-|-|-|-|
 |**Availability**||Built in|Built in|Built in (Note 6)|
 |**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_core)**|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|
 |Windows Server 2016 Accurate Time|2016||||
