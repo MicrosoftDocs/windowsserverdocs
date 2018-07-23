@@ -261,7 +261,7 @@ Use the Windows PowerShell cmdlet, **Confirm-CAEndorsementKeyInfo**, to verify t
     1.  **Extract the EKCert from the client computer:** The EKCert can be extracted from a client computer via **Get-TpmEndorsementKeyInfo**. From an elevated command prompt, run the following:  
   
         ```  
-        PS C:>\$a= Get- TpmEndorsementKeyInfo  
+        PS C:>\$a= Get-TpmEndorsementKeyInfo  
         PS C:>\$a.manufacturerCertificates|Export-Certificate c:\myEkcert.cer  
         ```  
   

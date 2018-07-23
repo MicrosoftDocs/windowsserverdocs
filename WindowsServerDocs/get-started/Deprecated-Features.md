@@ -47,28 +47,28 @@ The Security Configuration Wizard is removed. Instead, features are secured by d
 The opt-in components that manage participation in the Customer Experience Improvement Program have been removed. 
 
 ### Windows Update
-The *wuauclt.exe /detectnow* command has been removed and is no longer supported. To trigger a scan for updates, do either of the following:
+The **wuauclt.exe /detectnow** command has been removed and is no longer supported. To trigger a scan for updates, do either of the following:
 
 - Run these PowerShell commands:
-
-`$AutoUpdates = New-Object -ComObject "Microsoft.Update.AutoUpdate"`
-
-`$AutoUpdates.DetectNow()` 
+    ````powershell
+    $AutoUpdates = New-Object -ComObject "Microsoft.Update.AutoUpdate"`
+    $AutoUpdates.DetectNow()` 
+    ````
 
 - Alternately, use this VBScript:
-
-**Set automaticUpdates = CreateObject("Microsoft.Update.AutoUpdate")**
-
-**automaticUpdates.DetectNow()**
+    ````vb
+    Set automaticUpdates = CreateObject("Microsoft.Update.AutoUpdate")
+    automaticUpdates.DetectNow()
+    ````
 
 ## Features deprecated starting with Windows Server 2016 
 The following features and functionalities are deprecated starting with this release. Eventually, they will be completely removed from the product, but they are still available in this release, sometimes with certain functionality removed. You should begin planning now to employ alternate methods for any applications, code, or usage that depend on these features.  
 
 ### Configuration tools  
 
--   Scregedit.exe is deprecated. If you have scripts that depend on Scregedit.exe, adjust them to use Reg.exe or Windows PowerShell methods.  
+-   **Scregedit.exe** is deprecated. If you have scripts that depend on Scregedit.exe, adjust them to use Reg.exe or Windows PowerShell methods.  
 
--   Sconfig.exe is deprecated. Use Windows PowerShell instead.  
+-   **Sconfig.exe** is deprecated. Use Windows PowerShell instead.  
 
 ### NetCfg custom APIs  
 Installation of PrintProvider, NetClient, and ISDN using NetCfg custom APIs is deprecated.  
@@ -77,6 +77,4 @@ Installation of PrintProvider, NetClient, and ISDN using NetCfg custom APIs is d
 WinRM.vbs is deprecated. Instead, use functionality in the WinRM provider of Windows PowerShell.  
 
 ### SMB  
-SMB 2+ over NetBT is deprecated. Instead, implement SMB over TCP or RDMA.  
-
-2.0  
+SMB 2+ over NetBT is deprecated. Instead, implement SMB over TCP or RDMA. 
