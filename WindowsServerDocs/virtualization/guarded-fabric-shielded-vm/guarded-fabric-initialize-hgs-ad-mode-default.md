@@ -6,7 +6,7 @@ ms.topic: article
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 08/28/2017
+ms.date: 07/23/2018
 ---
 
 # Initialize the HGS cluster using AD mode in a new dedicated forest (default)
@@ -16,6 +16,9 @@ ms.date: 08/28/2017
 >[!div class="step-by-step"]
 [« Install HGS in a new forest](guarded-fabric-install-hgs-default.md)
 [Configure fabric DNS »](guarded-fabric-configuring-fabric-dns-ad.md)
+
+>[!IMPORTANT]
+>AD mode is deprecated beginning with Windows Server 2019. You can configure [host key attestation](guarded-fabric-initialize-hgs-key-mode-default.md) instead. 
 
 1.  [!INCLUDE [Initialize HGS](../../../includes/guarded-fabric-initialize-hgs-default-step-one.md)] 
 2.  [!INCLUDE [Obtain certificates for HGS](../../../includes/guarded-fabric-initialize-hgs-default-step-two.md)]

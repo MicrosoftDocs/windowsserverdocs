@@ -17,6 +17,9 @@ ms.date: 08/28/2017
 [« Install HGS in a new forest](guarded-fabric-install-hgs-in-a-bastion-forest.md)
 [Configure fabric DNS »](guarded-fabric-configuring-fabric-dns-ad.md)
 
+>[!IMPORTANT]
+>AD mode is deprecated beginning with Windows Server 2019. You can configure [host key attestation](guarded-fabric-initialize-hgs-key-mode-bastion.md) instead. 
+
 Active Directory Domain Services will be installed on the machine, but should remain unconfigured.
 
 [!INCLUDE [Obtain certificates for HGS](../../../includes/guarded-fabric-initialize-hgs-default-step-two.md)] 

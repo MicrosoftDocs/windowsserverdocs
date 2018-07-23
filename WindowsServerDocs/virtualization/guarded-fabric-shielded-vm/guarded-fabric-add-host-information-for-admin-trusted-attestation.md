@@ -14,6 +14,9 @@ ms.date: 03/02/2017
 
 # Authorize Hyper-V hosts using Admin-trusted attestation
 
+>[!IMPORTANT]
+>Admin-trusted attestation is deprecated beginning with Windows Server 2019. You can configure [host key attestation](guarded-fabric-initialize-hgs-key-mode.md) instead. 
+
 To authorize a guarded host in AD mode: 
 
 1. In the fabric domain, add the Hyper-V hosts to a security group.

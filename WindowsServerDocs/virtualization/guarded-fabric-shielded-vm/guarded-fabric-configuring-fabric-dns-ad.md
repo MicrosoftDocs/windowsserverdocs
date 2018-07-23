@@ -7,12 +7,16 @@ ms.assetid: 074b6d09-f16e-49bf-b88a-377139d35067
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 10/14/2016
+ms.date: 07/23/2018
 ---
 
 >[!div class="step-by-step"]
 [« Initialize HGS](guarded-fabric-initialize-hgs-ad-mode.md)
 [Configure HGS DNS and a one-way trust »](guarded-fabric-configure-dns-forwarding-and-trust.md)
+
+>[!IMPORTANT]
+>AD mode is deprecated beginning with Windows Server 2019. You can configure [host key attestation](guarded-fabric-initialize-hgs-key-mode.md) instead. 
+
 
 [!INCLUDE [Configure fabric DNS](../../../includes/guarded-fabric-configure-fabric-dns.md)] 
 

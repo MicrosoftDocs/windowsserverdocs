@@ -47,7 +47,7 @@ TPM-trusted attestation is recommended because it offers stronger assurances, as
 |**TPM-trusted attestation:** Offers the strongest possible protections but also requires more configuration steps. Host hardware and firmware must include TPM 2.0 and UEFI 2.3.1 with Secure Boot enabled. | Guarded hosts are approved based on their TPM identity, Measured Boot sequence, and code integrity policies to ensure they only run approved code.| 
 | **Host key attestation:** Intended to support existing host hardware where TPM 2.0 is not available. Requires fewer configuration steps and is compatible with commonplace server hardware. | Guarded hosts are approved based on possession of the key. | 
 
-Another mode named **Admin-trusted attestation** is deprecated beginning with Windows Server 2019. This mode was based on guarded host membership in a designated Active Directory Domain Services (AD DS) security group. Host key attestation provides similar assurance and is easier to set up. 
+Another mode named **Admin-trusted attestation** is deprecated beginning with Windows Server 2019. This mode was based on guarded host membership in a designated Active Directory Domain Services (AD DS) security group. Host key attestation provide similar host identification and is easier to set up. 
 
 ## Assurances provided by the Host Guardian Service
 
