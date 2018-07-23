@@ -18,7 +18,7 @@ ms.date: 08/28/2017
 [Configure fabric DNS »](guarded-fabric-configuring-fabric-dns-ad.md)
 
 >[!IMPORTANT]
->AD mode is deprecated beginning with Windows Server 2019. You can configure [host key attestation](guarded-fabric-initialize-hgs-key-mode-bastion.md) instead. 
+>Admin-trusted attestation (AD mode) is deprecated beginning with Windows Server 2019. For environments where TPM attestation is not possible, configure [host key attestation](guarded-fabric-initialize-hgs-key-mode-bastion.md). Host key attestation provides similar assurance to AD mode and is simpler to set up. 
 
 Active Directory Domain Services will be installed on the machine, but should remain unconfigured.
 

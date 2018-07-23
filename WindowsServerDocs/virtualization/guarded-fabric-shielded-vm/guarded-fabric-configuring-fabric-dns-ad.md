@@ -15,7 +15,7 @@ ms.date: 07/23/2018
 [Configure HGS DNS and a one-way trust »](guarded-fabric-configure-dns-forwarding-and-trust.md)
 
 >[!IMPORTANT]
->AD mode is deprecated beginning with Windows Server 2019. You can configure [host key attestation](guarded-fabric-initialize-hgs-key-mode.md) instead. 
+>AD mode is deprecated beginning with Windows Server 2019. For environments where TPM attestation is not possible, configure [host key attestation](guarded-fabric-initialize-hgs-key-mode.md). Host key attestation provides similar assurance to AD mode and is simpler to set up. 
 
 
 [!INCLUDE [Configure fabric DNS](../../../includes/guarded-fabric-configure-fabric-dns.md)] 
