@@ -56,7 +56,7 @@ The following feature distribution map indicates the features that are present i
 |**[Miscellaneous](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Misc)**|
 |Key-Value Pair|2016, 2012 R2, 2012, 2008 R2|&#10004; Note 4|&#10004; Note 4||
 |Non-Maskable Interrupt|2016, 2012 R2|&#10004;|&#10004;|
-|File copy from host to guest|2016, 2012 R2|&#10004; Note 4||
+|File copy from host to guest|2016, 2012 R2|&#10004; Note 4|&#10004; Note 4||
 |lsvmbus command|2016, 2012 R2, 2012, 2008 R2|||
 |Hyper-V Sockets|2016|||
 |PCI Passthrough/DDA|2016|||
