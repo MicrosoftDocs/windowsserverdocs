@@ -25,6 +25,8 @@ If you need to keep your servers on-premises, and you are running Windows Server
 
 See [Upgrading from Windows Server 2008 R2 or Windows Server 2008](installation-and-upgrade.md#upgrading-from-windows-server-2008-r2-or-windows-server-2008), for more information about your on-premises upgrade options.
 
+If you are running Windows Server 2003, you will need to [upgrade to Windows Server 2008](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff972408(v%3dws.10)). See [upgrade paths for Windows Server 2008](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd979563(v=ws.10)) for more information about your on-premises upgrade options.
+
 
 ## Migrate to Azure
 You can migrate your on-premises Windows Server 2008 and Windows Server 2008 R2 servers to Azure, where you can continue to run them on virtual machines. In Azure you’ll stay compliant, become more secure, and add cloud innovation to your work. The benefits of migrating to Azure include:
