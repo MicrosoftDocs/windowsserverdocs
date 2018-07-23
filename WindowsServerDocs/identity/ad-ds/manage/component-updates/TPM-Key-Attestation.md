@@ -261,8 +261,8 @@ Use the Windows PowerShell cmdlet, **Confirm-CAEndorsementKeyInfo**, to verify t
     1.  **Extract the EKCert from the client computer:** The EKCert can be extracted from a client computer via **Get-TpmEndorsementKeyInfo**. From an elevated command prompt, run the following:  
   
         ```  
-        PS C:>\$a= Get-TpmEndorsementKeyInfo  
-        PS C:>\$a.manufacturerCertificates|Export-Certificate c:\myEkcert.cer  
+        PS C:>\$a=Get-TpmEndorsementKeyInfo
+        PS C:>\$a.manufacturerCertificates|Export-Certificate -filepath c:\myEkcert.cer
         ```  
   
     2.  **Verify trust on an KCert on a CA computer:** Copy the extracted EKCert (EkCert.cer) to the CA (for example, via email or xcopy). As an example, if you copy the certificate file the "c:\diagnose" folder on the CA server, run the following to finish verification:  
@@ -274,6 +274,3 @@ Use the Windows PowerShell cmdlet, **Confirm-CAEndorsementKeyInfo**, to verify t
 ## See Also  
 [Trusted Platform Module Technology Overview](https://technet.microsoft.com/library/jj131725.aspx)  
 [External Resource: Trusted Platform Module](http://www.cs.unh.edu/~it666/reading_list/Hardware/tpm_fundamentals.pdf)  
-  
-
-
