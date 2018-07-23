@@ -42,7 +42,7 @@ ms.technology: identity-adfs
      When you run this command in the child domain, use the following command syntax:  
   
     ```  
-    netdom trust child domain name /domain:parent domain name /resetOneSide /password:password /userO:administrator /passwordO:*  
+    netdom trust child domain name /domain:parent domain name /resetOneSide /passwordT:password /userO:administrator /passwordO:*  
     ```  
   
     > [!NOTE]
