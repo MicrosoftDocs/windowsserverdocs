@@ -197,9 +197,7 @@ Here's an overview of the Storage Spaces Direct stack:
 
 Organizations of all sizes, from small businesses deploying just two nodes, to large enterprises and governments deploying hundreds of nodes, depend on Storage Spaces Direct for their critical applications and infrastructure. There are [over 10,000 clusters](https://blogs.technet.microsoft.com/filecab/2018/03/27/storage-spaces-direct-momentum/) worldwide running Storage Spaces Direct.
 
-https://blogs.technet.microsoft.com/filecab/2018/03/27/storage-spaces-direct-momentum/
-
-Click any logo to read the full case study, produced our partners.
+Click any logo to read the full story, produced by one of our partners.
 
 <style>
     .customer-logo {
