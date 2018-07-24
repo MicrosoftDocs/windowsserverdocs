@@ -242,7 +242,7 @@ AND does it satisfy the above equation?
   
 Is 2,400,000,000 / (30000*1) < 156000/2  
   
-Is 100,000 < 78,000  
+Is 80,000 < 78,000  
   
 NO/FALSE  
 ```  

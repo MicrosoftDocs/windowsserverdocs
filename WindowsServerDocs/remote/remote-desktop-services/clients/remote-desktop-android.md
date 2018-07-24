@@ -12,7 +12,7 @@ ms.assetid: 64f038e1-40ec-4c67-938b-72edea49e5d8
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.date: 03/23/2017
+ms.date: 07/24/2018
 ms.localizationpriority: medium
 ---
 # Get started with Remote Desktop on Android
@@ -61,6 +61,9 @@ To create a Remote Desktop connection:
 Need to edit these settings? Tap the overflow menu (**...**) next to the name of the desktop, and then tap **edit**.
 
 Want to delete the connection? Again, tap the overflow menu (**...**), and then tap **remove**.
+
+>[!TIP]
+> If you get error 0xf07 about a bad password ("We couldn't connect to the remote PC because the password associated with the user account has expired"), change your password and try again.
 
 ### Add a remote resource
 Remote resources are RemoteApp programs, session-based desktops, and virtual desktops published using RemoteApp and Desktop Connections.

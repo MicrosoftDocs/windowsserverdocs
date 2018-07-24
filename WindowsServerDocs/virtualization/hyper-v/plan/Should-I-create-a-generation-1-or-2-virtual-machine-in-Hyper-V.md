@@ -50,6 +50,7 @@ The following table shows which 64-bit versions of Windows you can use as a gues
 
 |64-bit versions of Windows|Generation 1|Generation 2|  
 |-------------------------------|----------------|----------------|  
+| Windows Server 2016 |&#10004;|&#10004;|  
 | Windows Server 2012 R2 |&#10004;|&#10004;|  
 | Windows Server 2012 |&#10004;|&#10004;|  
 |Windows Server 2008 R2|&#10004;| &#10006;|  
