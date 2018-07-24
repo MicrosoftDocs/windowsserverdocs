@@ -24,6 +24,8 @@ A fabric administrator needs to confirm that Hyper-V hosts can run as guarded ho
 
         Install-WindowsFeature Hyper-V, HostGuardian -IncludeManagementTools -Restart
 
+2.  Make sure the Hyper-V host can resolve the HGS DNS name and has network connectivity to reach port 80 (or 443 if you set up HTTPS) on the HGS server.
+
 2.  Configure the host's Key Protection and Attestation URLs:
 
     - **Through Windows PowerShell**: You can configure the Key Protection and Attestation URLs by executing the following command in an elevated Windows PowerShell console. For &lt;FQDN&gt;, use the Fully Qualified Domain Name (FQDN) of your HGS cluster (for example, hgs.relecloud.com, or ask the HGS administrator to run the **Get-HgsServer** cmdlet on the HGS server to retrieve the URLs).

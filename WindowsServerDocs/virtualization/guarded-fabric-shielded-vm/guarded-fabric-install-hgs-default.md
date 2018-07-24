@@ -43,7 +43,8 @@ You may provide any domain name of your choosing to the `-HgsDomainName` paramet
 ## Next steps
 
 - For the next steps to set up TPM-based attestation, see [Initialize the HGS cluster using TPM mode in a new dedicated forest (default)](guarded-fabric-initialize-hgs-tpm-mode-default.md).
-- For the next steps to set up Admin-based attestation, see [Initialize the HGS cluster using AD mode in a new dedicated forest (default)](guarded-fabric-initialize-hgs-ad-mode-default.md).
+- For the next steps to set up host key attestation, see [Initialize the HGS cluster using key mode in a new dedicated forest (default)](guarded-fabric-initialize-hgs-key-mode-default.md).
+- For the next steps to set up Admin-based attestation (deprecated in Windows Server 2019), see [Initialize the HGS cluster using AD mode in a new dedicated forest (default)](guarded-fabric-initialize-hgs-ad-mode-default.md).
 
 
 

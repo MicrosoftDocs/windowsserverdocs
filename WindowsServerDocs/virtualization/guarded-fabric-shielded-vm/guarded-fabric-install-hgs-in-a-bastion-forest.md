@@ -119,8 +119,8 @@ Set-Acl -Path $vcoPath -AclObject $acl
 
 ## Security baseline exceptions
 
-If you are deploying HGS into a highly locked down environment, certain group policies may prevent HGS from operating normally.
-Check your group policy objects for the following settings and follow the guidance if you are affected:
+If you are deploying HGS into a highly locked down environment, certain Group Policy settings may prevent HGS from operating normally.
+Check your Group Policy objects for the following settings and follow the guidance if you are affected:
 
 ### Network Logon
 
@@ -145,5 +145,6 @@ Check your group policy objects for the following settings and follow the guidan
 ## Next steps
 
 - For the next steps to set up TPM-based attestation, see [Initialize the HGS cluster using TPM mode in an existing bastion forest](guarded-fabric-initialize-hgs-tpm-mode-bastion.md).
-- For the next steps to set up Admin-based attestation, see [Initialize the HGS cluster using AD mode in an existing bastion forest](guarded-fabric-initialize-hgs-ad-mode-bastion.md).
+- For the next steps to set up host key attestation, see [Initialize the HGS cluster using key mode in an existing bastion forest](guarded-fabric-initialize-hgs-key-mode-bastion.md).
+- For the next steps to set up Admin-based attestation (deprecated in Windows Server 2019), see [Initialize the HGS cluster using AD mode in an existing bastion forest](guarded-fabric-initialize-hgs-ad-mode-bastion.md).
 

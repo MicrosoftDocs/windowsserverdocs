@@ -22,6 +22,7 @@ When you initialize HGS, you specify the mode that HGS will use to measure the h
 The following topics cover deployment steps for each mode:
 
 - [TPM-trusted attestation (TPM mode)](guarded-fabric-initialize-hgs-tpm-mode.md)
+- [Host key attestation (Key mode)](guarded-fabric-initialize-hgs-key-mode.md)
 - [Admin-trusted attestation (AD mode)](guarded-fabric-initialize-hgs-ad-mode.md)
 
-You should perform these steps on a physical server with Windows Server 2016 installed.
+You should perform these steps on a physical server.

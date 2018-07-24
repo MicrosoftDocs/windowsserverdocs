@@ -1,5 +1,5 @@
 ---
-title: Initialize the HGS cluster using AD mode in a bastion forest 
+title: Initialize the HGS cluster using key mode in a bastion forest 
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.topic: article
@@ -9,16 +9,13 @@ ms.technology: security-guarded-fabric
 ms.date: 08/28/2017
 ---
 
-# Initialize the HGS cluster using AD mode in an existing bastion forest
+# Initialize the HGS cluster using key mode in an existing bastion forest
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2019
 
 >[!div class="step-by-step"]
 [« Install HGS in a new forest](guarded-fabric-install-hgs-in-a-bastion-forest.md)
-[Configure fabric DNS »](guarded-fabric-configuring-fabric-dns-ad.md)
-
->[!IMPORTANT]
->Admin-trusted attestation (AD mode) is deprecated beginning with Windows Server 2019. For environments where TPM attestation is not possible, configure [host key attestation](guarded-fabric-initialize-hgs-key-mode-bastion.md). Host key attestation provides similar assurance to AD mode and is simpler to set up. 
+[Create host key »](guarded-fabric-create-host-key.md)
 
 Active Directory Domain Services will be installed on the machine, but should remain unconfigured.
 
@@ -38,7 +35,7 @@ $encryptionCertPass = Read-Host -AsSecureString -Prompt "Encryption certificate 
 
 Install-ADServiceAccount -Identity 'HGSgMSA'
 
-Initialize-HgsServer -UseExistingDomain -ServiceAccount 'HGSgMSA' -JeaReviewersGroup 'HgsJeaReviewers' -JeaAdministratorsGroup 'HgsJeaAdmins' -HgsServiceName 'HgsService' -ClusterName 'HgsCluster' -SigningCertificatePath '.\signCert.pfx' -SigningCertificatePassword $signPass -EncryptionCertificatePath '.\encCert.pfx' -EncryptionCertificatePassword $encryptionCertPass -TrustActiveDirectory
+Initialize-HgsServer -UseExistingDomain -ServiceAccount 'HGSgMSA' -JeaReviewersGroup 'HgsJeaReviewers' -JeaAdministratorsGroup 'HgsJeaAdmins' -HgsServiceName 'HgsService' -ClusterName 'HgsCluster' -SigningCertificatePath '.\signCert.pfx' -SigningCertificatePassword $signPass -EncryptionCertificatePath '.\encCert.pfx' -EncryptionCertificatePassword $encryptionCertPass -TrustHostKey
 ```
 
 If you are using certificates installed on the local machine (such as HSM-backed certificates and non-exportable certificates), use the `-SigningCertificateThumbprint` and `-EncryptionCertificateThumbprint` parameters instead.

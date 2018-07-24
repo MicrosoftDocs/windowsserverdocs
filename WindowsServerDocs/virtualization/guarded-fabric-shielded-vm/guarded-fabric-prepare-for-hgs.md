@@ -26,11 +26,11 @@ This topic covers HGS prerequisites and initial steps to prepare for the HGS dep
 
     If you want to run HGS as a three-node physical cluster (for availability), you must have three physical servers. (As a best practice for clustering, the three servers should have very similar hardware.)
   
--   **Operating system**: Windows Server 2016, Standard or Datacenter edition.
+-   **Operating system**: Windows Server 2019 or Windows Server 2016, Standard or Datacenter edition.
 
 -   **Server Roles**: Host Guardian Service and supporting server roles.
 
--   **Configuration permissions/privileges for the fabric (host) domain**: You will need to configure DNS forwarding between the fabric (host) domain and the HGS domain. If you are using Admin-trusted attestation (AD mode), you will need to configure an Active Directory trust between the fabric domain and the HGS domain. 
+-   **Configuration permissions/privileges for the fabric (host) domain**: You will need to configure DNS forwarding between the fabric (host) domain and the HGS domain. 
     
 ## Supported upgrade scenarios
 

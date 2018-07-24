@@ -1,24 +1,21 @@
 ---
-title: Initialize the HGS cluster using AD mode in a new dedicated forest (default)
+title: Initialize the HGS cluster using key mode in a new dedicated forest (default)
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.topic: article
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 07/23/2018
+ms.date: 08/28/2017
 ---
 
-# Initialize the HGS cluster using AD mode in a new dedicated forest (default)
+# Initialize the HGS cluster using key mode in a new dedicated forest (default)
 
 >Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 >[!div class="step-by-step"]
 [« Install HGS in a new forest](guarded-fabric-install-hgs-default.md)
-[Configure fabric DNS »](guarded-fabric-configuring-fabric-dns-ad.md)
-
->[!IMPORTANT]
->Admin-trusted attestation (AD mode) is deprecated beginning with Windows Server 2019. For environments where TPM attestation is not possible, configure [host key attestation](guarded-fabric-initialize-hgs-key-mode-default.md). Host key attestation provides similar assurance to AD mode and is simpler to set up. 
+[Create host key »](guarded-fabric-create-host-key.md)
 
 1.  [!INCLUDE [Initialize HGS](../../../includes/guarded-fabric-initialize-hgs-default-step-one.md)] 
 2.  [!INCLUDE [Obtain certificates for HGS](../../../includes/guarded-fabric-initialize-hgs-default-step-two.md)]
@@ -31,13 +28,13 @@ ms.date: 07/23/2018
         $signingCertPass = Read-Host -AsSecureString -Prompt "Signing certificate password"
         $encryptionCertPass = Read-Host -AsSecureString -Prompt "Encryption certificate password"
 
-        Initialize-HgsServer -HgsServiceName 'MyHgsDNN' -SigningCertificatePath '.\signCert.pfx' -SigningCertificatePassword $signingCertPass -EncryptionCertificatePath '.\encCert.pfx' -EncryptionCertificatePassword $encryptionCertPass -TrustActiveDirectory
+        Initialize-HgsServer -HgsServiceName 'MyHgsDNN' -SigningCertificatePath '.\signCert.pfx' -SigningCertificatePassword $signingCertPass -EncryptionCertificatePath '.\encCert.pfx' -EncryptionCertificatePassword $encryptionCertPass -TrustHostkey
         ```
 
     -   If you are using non-exportable certificates that are installed in the local certificate store, run the following command. If you do not know the thumbprints of your certificates, you can list available certificates by running `Get-ChildItem Cert:\LocalMachine\My`.
 
         ```powershell
-        Initialize-HgsServer -HgsServiceName 'MyHgsDNN' -SigningCertificateThumbprint '1A2B3C4D5E6F...' -EncryptionCertificateThumbprint '0F9E8D7C6B5A...' --TrustActiveDirectory
+        Initialize-HgsServer -HgsServiceName 'MyHgsDNN' -SigningCertificateThumbprint '1A2B3C4D5E6F...' -EncryptionCertificateThumbprint '0F9E8D7C6B5A...' --TrustHostKey
         ```
 
 4.  [!INCLUDE [Initialize HGS](../../../includes/guarded-fabric-initialize-hgs-default-step-four.md)]  
