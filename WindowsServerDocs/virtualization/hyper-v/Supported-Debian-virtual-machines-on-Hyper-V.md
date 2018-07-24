@@ -48,9 +48,9 @@ The following feature distribution map indicates the features that are present i
 |**[Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Memory)**|
 |PAE Kernel Support|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|
 |Configuration of MMIO gap|2016, 2012 R2|&#10004;|&#10004;|&#10004;|
-|Dynamic Memory - Hot-Add|2016, 2012 R2, 2012|||
-|Dynamic Memory - Ballooning|2016, 2012 R2, 2012|||
-|Runtime Memory Resize|2016|||
+|Dynamic Memory - Hot-Add|2016, 2012 R2, 2012|&#10004;|||
+|Dynamic Memory - Ballooning|2016, 2012 R2, 2012|&#10004;|||
+|Runtime Memory Resize|2016|&#10004;|||
 |**[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Video)**|
 |Hyper-V-specific video device|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;||
 |**[Miscellaneous](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Misc)**|
@@ -58,8 +58,8 @@ The following feature distribution map indicates the features that are present i
 |Non-Maskable Interrupt|2016, 2012 R2|&#10004;|&#10004;|
 |File copy from host to guest|2016, 2012 R2|&#10004; Note 4|&#10004; Note 4||
 |lsvmbus command|2016, 2012 R2, 2012, 2008 R2|||
-|Hyper-V Sockets|2016|||
-|PCI Passthrough/DDA|2016|||
+|Hyper-V Sockets|2016|&#10004;|||
+|PCI Passthrough/DDA|2016|&#10004; Note 8|||
 |**[Generation 2 virtual machines](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_gen2)**|
 |Boot using UEFI|2016, 2012 R2|&#10004; Note 7|&#10004; Note 7||
 |Secure boot|2016|||
