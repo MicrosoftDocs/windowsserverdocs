@@ -30,7 +30,7 @@ The following feature distribution map indicates the features that are present i
 |-|-|-|-|-|
 |**Availability**||Built in|Built in|Built in (Note 6)|
 |**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_core)**|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|
-|Windows Server 2016 Accurate Time|2016||&#10004;||
+|Windows Server 2016 Accurate Time|2016|&#10004;|||
 |**[Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Networking)**|
 |Jumbo frames|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|
 |VLAN tagging and trunking|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|
