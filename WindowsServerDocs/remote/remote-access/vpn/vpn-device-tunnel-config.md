@@ -3,7 +3,7 @@ title: Configure the VPN device tunnel in Windows 10
 description: Learn how to create a VPN device tunnel in Windows 10.
 manager: elizapo
 ms.prod: windows-server-threshold
-ms.date: 06/29/2018
+ms.date: 07/19/2018
 ms.technology: networking-ras
 ms.topic: article
 ms.assetid: 158b7a62-2c52-448b-9467-c00d5018f65b
@@ -23,7 +23,14 @@ Unlike _user tunnel_, which only connects after a user logs on to the device or 
 Use traffic filters to control the availability of the corporate resources through the _device tunnel_ and when employing machine certificate authentication. Both _device tunnel_ and _user tunnel_ operate independently with their VPN profiles, can be connected at the same time, and can use different authentication methods and other VPN configuration settings as appropriate.
 
 
-## Device Tunnel Features and Requirements
+## Device Tunnel Requirements and Features
+You must enable machine certificate authentication for VPN connections and define a root certification authority for authenticating incoming VPN connections. 
+
+```syntax
+$VPNRootCertAuthority = “Common Name of trusted root certification authority”
+$RootCACert = (Get-ChildItem -Path cert:LocalMachine\root | Where-Object {$_.Subject -Like “*$VPNRootCertAuthority*” })
+Set-VpnAuthProtocol -UserAuthProtocolAccepted Certificate, EAP -RootCertificateNameToAccept $RootCACert -PassThru
+```
 
 ![Device Tunnel Features and Requirements](../../media/device-tunnel-feature-and-requirements.png)
 
@@ -32,14 +39,6 @@ Use traffic filters to control the availability of the corporate resources throu
 The sample profile XML below provides good guidance for scenarios where only client initiated pulls are required over the device tunnel.  Traffic filters are leveraged to restrict the device tunnel to management traffic only.  This configuration works well for Windows Update, typical Group Policy (GP) and System Center Configuration Manager (SCCM) update scenarios, as well as VPN connectivity for first logon without cached credentials, or password reset scenarios. 
 
 For server initiated push cases, like Windows Remote Management (WinRM), Remote GPUpdate, and remote SCCM update scenarios – you must allow inbound traffic on the device tunnel, so traffic filters cannot be used.  This limitation is going to be removed in future releases.
-
-
-### Configure VPN device tunnels using PowerShell
-
-
-
-### Configure VPN device tunnels using ??? 
-
 
 
 ### Sample VPN profileXML
@@ -89,9 +88,9 @@ Depending on the needs of each particular deployment scenario, another VPN featu
 
 ## Deployment and Testing
 
-You can configure device tunnels by using a Windows PowerShell script and using the Windows Management Instrumentation \(WMI\) bridge. The following article provides guidelines on how to deploy a per device `(.\Device)` vs. a per user `(.\User)` profile. You deploy the device profile in the local system context. 
+You can configure device tunnels by using a Windows PowerShell script and using the Windows Management Instrumentation \(WMI\) bridge. The Always On VPN device tunnel must be configured in the context of the **LOCAL SYSTEM** account. To accomplish this, it will be necessary to use [PsExec](https://docs.microsoft.com/en-us/sysinternals/downloads/psexec), one of the [PsTools](https://docs.microsoft.com/en-us/sysinternals/downloads/pstools) included in the [Sysinternals](https://docs.microsoft.com/en-us/sysinternals/) suite of utilities.
 
-For more information, see [Using PowerShell scripting with the WMI Bridge Provider](https://docs.microsoft.com/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider).
+For guidelines on how to deploy a per device `(.\Device)` vs. a per user `(.\User)` profile, see [Using PowerShell scripting with the WMI Bridge Provider](https://docs.microsoft.com/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider). 
 
 Run the following Windows PowerShell command to verify that you have successfully deployed a device profile:
 
