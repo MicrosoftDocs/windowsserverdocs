@@ -29,7 +29,7 @@ To perform this procedure, you must be a member of Domain Admins.
   
 3.  Click the **Extensions** tab. Ensure that **Select extension** is set to **CRL Distribution Point (CDP)**, and in the **Specify locations from which users can obtain a certificate revocation list (CRL)**, do the following:  
   
-    1.  Select the entry `file://\\<ServerDNSName>/CertEnroll/<CaName><CRLNameSuffix><DeltaCRLAllowed>.crl`, and then click **Remove**. In **Confirm removal**, click **Yes**.  
+    1.  Select the entry `file://\\<ServerDNSName>\CertEnroll\<CaName><CRLNameSuffix><DeltaCRLAllowed>.crl`, and then click **Remove**. In **Confirm removal**, click **Yes**.  
   
     2.  Select the entry `http://<ServerDNSName>/CertEnroll/<CaName><CRLNameSuffix><DeltaCRLAllowed>.crl`, and then click **Remove**. In **Confirm removal**, click **Yes**.  
   
@@ -47,7 +47,7 @@ To perform this procedure, you must be a member of Domain Admins.
   
 7.  In **Specify locations from which users can obtain a certificate revocation list (CRL)**, click **Add**. The **Add Location** dialog box opens.  
   
-8.  In **Add Location**, in **Location**, type `file://\\pki.corp.contoso.com/pki/<CaName><CRLNameSuffix><DeltaCRLAllowed>.crl`, and then click **OK**. This returns you to the CA properties dialog box.  
+8.  In **Add Location**, in **Location**, type `file://\\pki.corp.contoso.com\pki\<CaName><CRLNameSuffix><DeltaCRLAllowed>.crl`, and then click **OK**. This returns you to the CA properties dialog box.  
   
 9. On the **Extensions** tab, select the following check boxes:  
   
@@ -61,7 +61,7 @@ To perform this procedure, you must be a member of Domain Admins.
   
     2.  Select the entry `http://<ServerDNSName>/CertEnroll/<ServerDNSName><CaName><CertificateName>.crt`, and then click **Remove**. In **Confirm removal**, click **Yes**.  
   
-    3.  Select the entry `file://\\<ServerDNSName>/CertEnroll/<ServerDNSName><CaName><CertificateName>.crt`, and then click **Remove**. In **Confirm removal**, click **Yes**.  
+    3.  Select the entry `file://\\<ServerDNSName>\CertEnroll\<ServerDNSName><CaName><CertificateName>.crt`, and then click **Remove**. In **Confirm removal**, click **Yes**.  
   
 11. In **Specify locations from which users can obtain a certificate revocation list (CRL)**, click **Add**. The **Add Location** dialog box opens.  
   
