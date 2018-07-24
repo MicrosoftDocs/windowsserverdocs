@@ -23,7 +23,7 @@ Use the following steps to migrate the WSUS database (SUSDB) from a Windows Inte
 - SQL Server Management Studio
 - WSUS with WID role installed
 - IIS (This is normally included when you install WSUS through Server Manager). It is not already installed, it will need to be.
-## To migrate the WSUS database
+## Migrating the WSUS database
 ### Stop the IIS and WSUS services on the WSUS server
 From PowerShell (elevated), run:
 ```powershell
