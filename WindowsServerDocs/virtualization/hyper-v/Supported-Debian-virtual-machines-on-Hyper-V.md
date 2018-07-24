@@ -26,11 +26,11 @@ The following feature distribution map indicates the features that are present i
 
 * (*blank*) - Feature not available
 
-|**Feature**|**Windows Server operating system version**|**9.0-9.5 (stretch)**|**8.0-8.8 (jessie)**|**7.0-7.11 (wheezy)**|
+|**Feature**|**Windows Server operating system version**|**9.0-9.5 (stretch)**|**8.0-8.11 (jessie)**|**7.0-7.11 (wheezy)**|
 |-|-|-|-|-|
 |**Availability**||Built in|Built in|Built in (Note 6)|
 |**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_core)**|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|
-|Windows Server 2016 Accurate Time|2016||||
+|Windows Server 2016 Accurate Time|2016||&#10004;||
 |**[Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Networking)**|
 |Jumbo frames|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|
 |VLAN tagging and trunking|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|
@@ -78,12 +78,13 @@ The following feature distribution map indicates the features that are present i
 
 6. While Debian 7.x is out of support and uses an older kernel, the kernel included in [Debian backports](https://wiki.debian.org/Backports) for Debian 7.x has improved Hyper-V capabilities.
 
-7. OnWindows Server 2012 R2 Generation 2 virtual machines have secure boot enabled by default and some Linux virtual machines will not boot unless the secure boot option is disabled. You can disable secure boot in the **Firmware** section of the settings for the virtual machine in **Hyper-V Manager** or you can disable it using Powershell:
+7. On Windows Server 2012 R2 Generation 2 virtual machines have secure boot enabled by default and some Linux virtual machines will not boot unless the secure boot option is disabled. You can disable secure boot in the **Firmware** section of the settings for the virtual machine in **Hyper-V Manager** or you can disable it using Powershell:
 
    ```Powershell
    Set-VMFirmware -VMName "VMname" -EnableSecureBoot Off
 
    ```
+8. The latest upstream kernel capabilities are only available by using the kernel included [Debian backports](https://wiki.debian.org/Backports).
 
 See Also
 
