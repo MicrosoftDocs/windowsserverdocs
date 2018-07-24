@@ -27,7 +27,7 @@ The Server Core installation option includes the following server roles.
 | Active Directory Domain Services                | AD-Domain-Services             | N                     |
 | Active Directory Federation Services            | ADFS-Federation                | N                     |
 | Active Directory Lightweight Directory Services | ADLDS                          | N                     |
-| Active Direcotry Rights Management Services     | ADRMS                          | N                     |
+| Active Directory Rights Management Services     | ADRMS                          | N                     |
 | Device Health Attestation                       | DeviceHealthAttestationService | N                     |
 | DHCP Server                                     | DHCP                           | N                     |
 | DNS Server                                      | DNS                            | N                     |

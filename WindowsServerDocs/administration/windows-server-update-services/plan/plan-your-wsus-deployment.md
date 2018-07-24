@@ -9,7 +9,7 @@ ms.assetid: 35865398-b011-447a-b781-1c52bc0c9e3a
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 01/31/2018
+ms.date: 05/24/2018
 ---
 # Plan your WSUS deployment
 
@@ -95,7 +95,7 @@ Be aware that configuring client computers (including servers) to update by usin
     > [!NOTE]
     > Configuring a Features on Demand installation source does not involve WSUS. For information on how to configure Features, see [Configure Features on Demand in Windows Server](https://technet.microsoft.com/library/jj127275.aspx).
 
-3. Enterprise devices running Windows 10, version 1709, cannot install any Features on Demand directly from WSUS. To install Features on Demand, [create a feature file (side-by-side store)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj127275%28v=ws.11%29#create-a-feature-file-or-side-by-side-store) or obtain the Feature on Demand package from one of the following sources:
+3. Enterprise devices running Windows 10, version 1709 or version 1803, cannot install any Features on Demand directly from WSUS. To install Features on Demand, [create a feature file (side-by-side store)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj127275%28v=ws.11%29#create-a-feature-file-or-side-by-side-store) or obtain the Feature on Demand package from one of the following sources:
     - [Volume Licensing Service Center](https://www.microsoft.com/licensing/servicecenter) (VLSC) - VL access is required
     - OEM Portal - OEM access is required
     - MSDN Download - MSDN subscription is required
@@ -130,7 +130,7 @@ You can install the WSUS role on a computer that is separate from the database s
 
 1.  The database server cannot be configured as a domain controller.
 
-2.  The WSUS server cannot run remote Desktop Services.
+2.  The WSUS server cannot run Remote Desktop Services.
 
 3.  The database server must be in the same active directory domain as the WSUS server, or it must have a trust relationship with the active directory domain of the WSUS server.
 

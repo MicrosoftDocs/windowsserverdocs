@@ -5,19 +5,19 @@ ms.technology: manage
 ms.topic: article
 author: haley-rowland
 ms.author: harowl
-ms.date: 04/12/2018
-ms.localizationpriority: low
+ms.date: 06/18/2018
+ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---
 
 # What Azure integration options are there with Windows Admin Center?
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10
+>Applies To: Windows Admin Center, Windows Admin Center Preview
 
 Windows Admin center was built with the cloud in mind - that means Azure integration is built in to help you leverage Azure resources from your servers, whether they're on-premises or in the cloud. Although Windows Admin Center has no Azure dependencies or requirements and doesn't require internet connectivity for deployment, you can optionally add integration with the Azure services described below.
 
 ## Azure Active Directory authentication
-When you use [Azure Active Directory (Azure AD)](https://azure.microsoft.com/services/active-directory/) as your identity provider for Windows Admin Center gateway access, you restrict access to the gateway service based on Azure AD identities. Azure AD integration also lets you take advantage of Azure AD’s security features like conditional access and multi-factor authentication.
+You can add an additional layer of security to Windows Admin Center by requiring users to authenticate using [Azure Active Directory (Azure AD)](https://azure.microsoft.com/services/active-directory/) identities to access the gateway. Azure AD authentication also lets you take advantage of Azure AD’s security features like conditional access and multi-factor authentication.
 
 [Learn how to configure Azure AD authentication for Windows Admin Center.](../configure/user-access-control.md#azure-active-directory)  
 

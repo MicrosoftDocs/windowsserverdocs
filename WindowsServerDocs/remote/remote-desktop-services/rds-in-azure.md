@@ -59,12 +59,11 @@ You can use Azure Resource Manager templates to deploy RDS in Azure. This is esp
 Use these steps to create your small-footprint RDS deployment with an Azure RDS template: 
 
 1. Pick your Azure Quickstart template:
-   1. Go to the [Azure Quickstart Templates](https://azure.microsoft.com/resources/templates/) site.
-   2. Type "RDS" in the search box, and press Enter.
-   3. Choose the template that matches what you are trying to do. Make sure you meet any prerequisites for that specific template. (For example, if you are want to use a custom image for your VMs, make sure you have already uploaded that image to an Azure storage account.)
-   4. Click **Deploy to Azure**.
-   5. You'll need to provide some details (like admin user name, AD domain name) in the Azure portal. This varies based on the template you choose.
-   6. Click **Purchase**.
+   1. Go to the [RDS Azure Quickstart Templates](https://aka.ms/rdautomation) site.
+   2. Choose the template that matches what you are trying to do. Make sure you meet any prerequisites for that specific template. (For example, if you are want to use a custom image for your VMs, make sure you have already uploaded that image to an Azure storage account.)
+   3. Click **Deploy to Azure**.
+   4. You'll need to provide some details (like admin user name, AD domain name) in the Azure portal. This varies based on the template you choose.
+   5. Click **Purchase**.
 2. Connect to your deployment. 
    1. Download and run [this PowerShell script](https://gallery.technet.microsoft.com/Azure-Resource-Manager-4ea7e328) on your test device to install any certificates needed to connect to the RDS deployment. 
    

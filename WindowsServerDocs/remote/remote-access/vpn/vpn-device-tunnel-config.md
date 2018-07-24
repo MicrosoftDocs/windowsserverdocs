@@ -1,26 +1,27 @@
 ---
-title: Configure the VPN Device Tunnel in Windows 10
-description: You can use this topic to learn how to create a VPN device tunnel in Windows 10.
-manager: brianlic
+title: Configure the VPN device tunnel in Windows 10
+description: Learn how to create a VPN device tunnel in Windows 10.
+manager: elizapo
 ms.prod: windows-server-threshold
-ms.date: 
+ms.date: 06/29/2018
 ms.technology: networking-ras
 ms.topic: article
 ms.assetid: 158b7a62-2c52-448b-9467-c00d5018f65b
 ms.author: pashort
-author: maricia
+author: shortpatti
 ---
-# Configure VPN Device Tunnels in Windows 10
+# Configure VPN device tunnels in Windows 10
 
 >Applies To: Windows 10 version 1709
 
-Always On VPN gives you the ability to create a dedicated VPN profile for device or machine. Alays On VPN connections include two types of tunnels: 
-* _Device tunnel_ connects to specified VPN servers before users log on to the device. Device tunnel is used for pre-logon connectivity scenarios and device management purposes.
-* _User tunnel_  connects only after a user logs on to the device. User tunnel allows users to access organization resources through VPN servers.
+Always On VPN gives you the ability to create a dedicated VPN profile for device or machine. Always On VPN connections include two types of tunnels: 
+* _Device tunnel_ connects to specified VPN servers before users log on to the device. Pre-login connectivity scenarios and device management purposes use device tunnel.
+* _User tunnel_ connects only after a user logs on to the device. User tunnel allows users to access organization resources through VPN servers.
 
-Unlike User Tunnel, which only connects after a user logs on to the device or machine, Device Tunnel allows the VPN to establish connectivity before user sign-in. Additionally, Device Tunnel provides feature parity with the Infrastructure Tunnel concept of DirectAccess.
+Unlike _user tunnel_, which only connects after a user logs on to the device or machine, _device tunnel_ allows the VPN to establish connectivity before the user logs on. Additionally, _device tunnel_ provides feature parity with the infrastructure tunnel concept of DirectAccess.
 
-You can use traffic filters to control which corporate resources as available through the Device Tunnel and when machine certificate authentication is employed. Both Device Tunnel and User Tunnel operate independently with their VPN profiles, can be connected at the same time, and can use different authentication methods and other VPN configuration settings as appropriate.
+Use traffic filters to control the availability of the corporate resources through the _device tunnel_ and when employing machine certificate authentication. Both _device tunnel_ and _user tunnel_ operate independently with their VPN profiles, can be connected at the same time, and can use different authentication methods and other VPN configuration settings as appropriate.
+
 
 ## Device Tunnel Features and Requirements
 
@@ -30,7 +31,16 @@ You can use traffic filters to control which corporate resources as available th
 
 The sample profile XML below provides good guidance for scenarios where only client initiated pulls are required over the device tunnel.  Traffic filters are leveraged to restrict the device tunnel to management traffic only.  This configuration works well for Windows Update, typical Group Policy (GP) and System Center Configuration Manager (SCCM) update scenarios, as well as VPN connectivity for first logon without cached credentials, or password reset scenarios. 
 
-On the other hand, for server initiated push cases, like Windows Remote Management (WinRM), Remote GPUpdate, and remote SCCM update scenarios – inbound traffic on the device tunnel has to be allowed, so traffic filters cannot be used.  This limitation is going to be removed in future releases.
+For server initiated push cases, like Windows Remote Management (WinRM), Remote GPUpdate, and remote SCCM update scenarios – you must allow inbound traffic on the device tunnel, so traffic filters cannot be used.  This limitation is going to be removed in future releases.
+
+
+### Configure VPN device tunnels using PowerShell
+
+
+
+### Configure VPN device tunnels using ??? 
+
+
 
 ### Sample VPN profileXML
 
@@ -79,15 +89,16 @@ Depending on the needs of each particular deployment scenario, another VPN featu
 
 ## Deployment and Testing
 
-You can configure device tunnels by using a Windows PowerShell script and using the Windows Management Instrumentation \(WMI\) bridge. The following article provides guidelines on how to deploy a per device `(.\Device)` vs. a per user `(.\User)` profile. You must deploy the device profile in the local system context. 
+You can configure device tunnels by using a Windows PowerShell script and using the Windows Management Instrumentation \(WMI\) bridge. The following article provides guidelines on how to deploy a per device `(.\Device)` vs. a per user `(.\User)` profile. You deploy the device profile in the local system context. 
 
 For more information, see [Using PowerShell scripting with the WMI Bridge Provider](https://docs.microsoft.com/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider).
 
-To verify that you have successfully deployed a device profile, run the following Windows PowerShell command.
+Run the following Windows PowerShell command to verify that you have successfully deployed a device profile:
 
     `Get-VpnConnection -AllUserConnection`
 
 The output displays a list of the device\-wide VPN profiles that are deployed on the device.
+
 
 ### Example Windows PowerShell Script
 
@@ -153,7 +164,7 @@ Following are additional resources to assist with your VPN deployment.
 These are VPN client configuration resources.
 
 - [How to Create VPN profiles in System Center Configuration Manager](https://docs.microsoft.com/sccm/protect/deploy-use/create-vpn-profiles)
-- [Configure Windows 10 Client Always On VPN Connections](https://docs.microsoft.com/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-client-vpn-connections)
+- [Configure Windows 10 Client Always On VPN Connections](always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md)
 - [VPN profile options](https://docs.microsoft.com/en-us/windows/access-protection/vpn/vpn-profile-options)
 
 ### Remote Access Server \(RAS\) Gateway resources
@@ -167,3 +178,4 @@ Following are RAS Gateway resources.
 >[!IMPORTANT]
 >When using Device Tunnel with a Microsoft RAS gateway, you will need to configure the RRAS server to support IKEv2 machine certificate authentication by enabling the **Allow machine certificate authentication for IKEv2** authentication method as described [here](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee922682%28v=ws.10%29). Once this setting is enabled, it is strongly recommended that the **Set-VpnAuthProtocol** PowerShell cmdlet, along with the **RootCertificateNameToAccept** optional parameter, is used to ensure that RRAS IKEv2 connections are only permitted for VPN client certificates that chain to an explicitly defined internal/private Root Certification Authority. Alternatively, the **Trusted Root Certification Authorities** store on the RRAS server should be amended to ensure that it does not contain public certification authorities as discussed [here](https://blogs.technet.microsoft.com/rrasblog/2009/06/10/what-type-of-certificate-to-install-on-the-vpn-server/). Similar methods may also need to be considered for other VPN gateways.
 
+---

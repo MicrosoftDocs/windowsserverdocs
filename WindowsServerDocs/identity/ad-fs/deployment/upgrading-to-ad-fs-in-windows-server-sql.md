@@ -2,8 +2,8 @@
 title: Upgrading to AD FS in Windows Server 2016 with SQL Server
 description:
 author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: mtillman
+ms.date: 04/11/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.assetid: 70f279bf-aea1-4f4f-9ab3-e9157233e267

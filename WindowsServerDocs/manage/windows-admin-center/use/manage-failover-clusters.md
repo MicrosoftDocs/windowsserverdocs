@@ -5,17 +5,17 @@ ms.technology: manage
 ms.topic: article
 author: daniellee-msft
 ms.author: jol
-ms.date: 04/11/2018
-ms.localizationpriority: low
+ms.date: 06/18/2018
+ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---
 # Manage Failover Clusters with Windows Admin Center
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Admin Center, Windows Admin Center Preview
 
 > [!Tip]
 > New to Windows Admin Center?
-> [Learn more about Windows Admin Center](../understand/windows-admin-center.md) or [Download now](https://aka.ms/wacdownload).
+> [Learn more about Windows Admin Center](../understand/windows-admin-center.md) or [Download now](https://aka.ms/windowsadmincenter).
 
 ## Managing failover clusters
 [Failover clustering](https://docs.microsoft.com/en-us/windows-server/failover-clustering/failover-clustering-overview) is a Windows Server feature that enables you to group multiple servers together into a fault-tolerant cluster to increase availability and scalability of applications and services such as Scale-Out File Server, Hyper-V and Microsoft SQL Server.

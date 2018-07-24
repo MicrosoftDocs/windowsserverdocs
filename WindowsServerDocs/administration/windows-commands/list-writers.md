@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # list writers
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Lists writers that are on the system. If used without parameters, **list** displays the output for **list metadata** by default.
 

@@ -34,7 +34,7 @@ select partition=<n>
 |-------|--------|  
 |partition\=<n>|The number of the partition to receive the focus. You can view the numbers for all partitions on the disk currently selected by using the **list partition** command in DiskPart.|  
   
-## remarks  
+## Remarks  
   
 -   Before you can select a partition you must first select a disk using the **select disk** command.  
   

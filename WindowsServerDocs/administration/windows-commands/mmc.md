@@ -31,7 +31,7 @@ mmc <path>\<filename>.msc [/a] [/64] [/32]
 |/64|Opens the 64-bit version of **mmc** (mmc64). Use this option only if you are running a Microsoft 64-bit operating system and want to use a 64-bit snap-in.|
 |/32|Opens the 32-bit version of **mmc** (mmc32). When running a Microsoft 64-bit operating system, you can run 32-bit snap-ins by opening mmc with this command-line option when you have 32-bit only snap-ins.|
 |/?|Displays help at the command prompt.|
-## remarks
+## Remarks
 -   Using the <path>**\\**<filename>**.msc** command-line option
     You can use environment variables to create command lines or shortcuts that do not depend on the explicit location of console files. For instance, if the path to a console file is in the system folder (for example, **mmc c:\winnt\system32\console_name.msc**), you can use the expandable data string **%systemroot%** to specify the location (**mmc%systemroot%\system32\console_name.msc**). This may be useful if you are delegating tasks to people in your organization who are working on different computers.
 -   Using the **/a** command-line option
@@ -40,4 +40,4 @@ mmc <path>\<filename>.msc [/a] [/64] [/32]
 -   You can use the command line to create shortcuts for opening **mmc** and saved consoles. A command-line command works with the **Run** command on the **start** menu, in any command-prompt window, in shortcuts, or in any batch file or program that calls the command.
 ## additional references
 -   [Command-Line Syntax Key](command-line-syntax-key.md)
--   [Command-Line Reference_1](command-line-reference_1.md)
+

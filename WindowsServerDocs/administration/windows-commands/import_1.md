@@ -1,5 +1,5 @@
 ---
-title: import_1
+title: import
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -15,9 +15,9 @@ manager: dongill
 ms.date: 10/16/2017
 ---
 
-# import_1
+# import
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Imports a foreign disk group into the disk group of the local computer.
 

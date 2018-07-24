@@ -18,7 +18,7 @@ ms.date: 10/16/2017
 
 # shutdown
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Enables you to shut down or restart local or remote computers one at a time.
 

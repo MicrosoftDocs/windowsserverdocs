@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # type
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Displays the contents of a text file. Use the **type** command to view a text file without modifying it.
 
@@ -33,7 +33,7 @@ type [<Drive>:][<Path>]<FileName>
 
 |Parameter|Description|
 |---------|-----------|
-|[\<Drive>:][<Path>]<FileName>|Specifies the location and name of the file or files that you want to view. Separate multiple file names with spaces.|
+|[\<Drive>:][\<Path>]\<FileName>|Specifies the location and name of the file or files that you want to view. Separate multiple file names with spaces.|
 |/?|Displays help at the command prompt.|
 
 ## Remarks

@@ -5,14 +5,14 @@ ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
-ms.date: 04/12/2018
+ms.date: 06/18/2018
 ms.localizationpriority: high
 ms.prod: windows-server-threshold
 ---
 
 # Windows Admin Center 
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10
+>Applies To: Windows Admin Center, Windows Admin Center Preview
 
 Welcome to Windows Admin Center!
 
@@ -56,6 +56,7 @@ Welcome to Windows Admin Center!
         <td style="vertical-align: top;">
             <h2>Configure</h2>
             <ul>
+            <li><a href="configure/settings.md">Windows Admin Center settings</a>
             <li><a href="configure/user-access-control.md">User access control and permissions</a>
             <li><a href="configure/using-extensions.md">Extensions</a>
             <li><a href="configure/azure-integration.md">Integrate with Azure</a>
@@ -80,7 +81,11 @@ Welcome to Windows Admin Center!
         <td style="vertical-align: top;">
             <h2>Extend</h2>
             <ul>
-            <li><a href="extend/how-sdk-works.md">Extensibility and SDK</a>
+            <li><a href="extend/extensibility-overview.md">Overview of extensions</a>
+            <li><a href="extend/understand-extensions.md">Understanding extensions</a>
+            <li><a href="extend/developing-extensions.md">Develop an extension</a>
+            <li><a href="extend/publish-extensions.md">Guides</a>
+            <li><a href="extend/publish-extensions.md">Publishing extensions</a>
             </ul>
         </td>
     </tr>
@@ -93,7 +98,7 @@ Welcome to Windows Admin Center!
 
 You can get Windows Admin Center up and running in your environment in minutes:
 
-1. [Download Windows Admin Center](https://aka.ms/WACDownload)
+1. [Download Windows Admin Center](https://aka.ms/windowsadmincenter)
 2. [Install Windows Admin Center](deploy/install.md)
 3. [Launch Windows Admin Center](use/launch.md)
 
@@ -101,7 +106,10 @@ You can get Windows Admin Center up and running in your environment in minutes:
 
 Learn about our latest released features:
 
-- Version [1804](https://aka.ms/WindowsAdminCenter) - Project Honolulu becomes Windows Admin Center and adds security features and role-based access control. Our first GA release.
+- Version [1807](https://aka.ms/WACPreview1807-InsiderBlog) - added a streamlined Azure connect experience, improvements to VM inventory page, file sharing functionality, Azure update management integration, and more. 
+- Version [1806](https://aka.ms/WACPreview1806-InsiderBlog) - added support for viewing our scripts, WS 2008 R2 connections, SDN, scheduled tasks, and many other improvements.
+- Version 1804.25 - Maintenance update to support users installing Windows Admin Center in [completely offline environments](./use/known-issues.md#signature-verification-failed).
+- Version [1804](https://cloudblogs.microsoft.com/windowsserver/2018/04/12/announcing-windows-admin-center-our-reimagined-management-experience/) - Project Honolulu becomes Windows Admin Center and adds security features and role-based access control. Our first GA release.
 - Version [1803](https://blogs.windows.com/windowsexperience/2018/03/13/announcing-project-honolulu-technical-preview-1803-and-rsat-insider-preview-for-windows-10) added support for Azure AD access control, detailed logging, resizable content, and a bunch of tool improvements.
 - Version [1802](https://blogs.windows.com/windowsexperience/2018/02/13/announcing-windows-server-insider-preview-build-17093-project-honolulu-technical-preview-1802) added support for accessibility, localization, high-availability deployments, tagging, Hyper-V host settings, and gateway authentication.
 - Version [1712](https://blogs.windows.com/windowsexperience/2017/12/19/announcing-project-honolulu-technical-preview-1712-build-05002) added more virtual machine features and performance improvements throughout the tools.

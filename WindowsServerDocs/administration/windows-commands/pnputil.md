@@ -1,6 +1,6 @@
 ---
 title: pnputil
-description: "Windows Commands topic for **** - "
+description: Learn how to manage the driver store with the pnputil.exe utility.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -12,12 +12,10 @@ ms.assetid: fab686b8-09d3-4f6c-afa2-630e6036f44c
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/16/2017
+ms.date: 07/11/2018
 ---
 
 # pnputil
-
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Pnputil.exe is a command line utility that you can use to manage the driver store. You can use Pnputil to add driver packages, remove driver packages, and list driver packages that are in the store.
 
@@ -38,7 +36,6 @@ pnputil.exe [-f | -i] [ -? | -a | -d | -e ] <INF name>
 |-i|Specifies to install the identified INF file. Cannot be used in conjunction with  the **-f** parameter.|
 |/?|Displays help at the command prompt.|
 
-## Remarks
 
 ## Examples
 
@@ -49,7 +46,7 @@ pnputil.exe [-f | -i] [ -? | -a | -d | -e ] <INF name>
 -   pnputil.exe -d oem0.inf  Deletes the specified.
 -   pnputil.exe -f -d oem0.inf  Forces the deletion of the specified INF file.
 
-#### Additional references
+## Additional references
 
 [Command-Line Syntax Key](command-line-syntax-key.md)
 

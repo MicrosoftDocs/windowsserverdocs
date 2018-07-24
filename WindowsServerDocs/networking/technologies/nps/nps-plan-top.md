@@ -14,7 +14,7 @@ author: shortpatti
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
-This topic provides links to information about planning NPS server and proxy deployments.
+This topic provides links to information about planning NPS and proxy deployments.
 
 >[!NOTE]
 >For additional Network Policy Server documentation, you can use the following library sections. 

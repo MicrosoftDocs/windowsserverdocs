@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # wbadmin delete catalog
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Deletes the backup catalog that is stored on the local computer. Use this command when the backup catalog has been corrupted and you cannot restore it using **wbadmin restore catalog**.
 

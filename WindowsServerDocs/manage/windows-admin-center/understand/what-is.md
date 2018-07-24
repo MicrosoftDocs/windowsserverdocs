@@ -5,24 +5,24 @@ ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
-ms.date: 04/05/2018
-ms.localizationpriority: low
+ms.date: 06/18/2018
+ms.localizationpriority: high
 ms.prod: windows-server-threshold
 ---
 
 # What is Windows Admin Center?
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10
+>Applies To: Windows Admin Center, Windows Admin Center Preview
 
 Windows Admin Center is a new, locally-deployed, browser-based management tool set that lets you manage your Windows Servers with no Azure or cloud dependency. Windows Admin Center gives you full control over all aspects of your server infrastructure and is particularly useful for managing servers on private networks that are not connected to the Internet.
 
-Windows Admin Center is the modern evolution of "in-box" management tools, like Server Manager and MMC. It complements System Center and Operations Management Suite - it's not a replacement.
+Windows Admin Center is the modern evolution of "in-box" management tools, like Server Manager and MMC. It complements System Center - it's not a replacement.
 
 ![](../media/wac-deploy-graphic.png)
 
 ## How does Windows Admin Center work?
 
-Windows Admin Center runs in a web browser and manages Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10, and more through the **Windows Admin Center gateway** installed on Windows Server 2016 or Windows 10. The gateway manages servers by using Remote PowerShell and WMI over WinRM. The gateway is included with Windows Admin Center in a single lightweight .msi package that you can [download](https://aka.ms/WACDownload).
+Windows Admin Center runs in a web browser and manages Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows 10, and more through the **Windows Admin Center gateway** installed on Windows Server 2016 or Windows 10. The gateway manages servers by using Remote PowerShell and WMI over WinRM. The gateway is included with Windows Admin Center in a single lightweight .msi package that you can [download](https://aka.ms/windowsadmincenter).
 
 The Windows Admin Center gateway, when published to DNS and given access through corresponding corporate firewalls, lets you securely connect to, and manage, your servers from anywhere with Microsoft Edge or Google Chrome.
 
@@ -40,7 +40,7 @@ Windows Admin Center is the evolution of long-standing, well known management pl
 
 ### **Complements existing solutions** 
 
-Windows Admin Center works with solutions like System Center and Azure Operations Management Suite, adding to their capabilities to perform detailed, single-machine management tasks.
+Windows Admin Center works with solutions like System Center and Azure management and security, adding to their capabilities to perform detailed, single-machine management tasks.
 
 ### **Manage from anywhere**
 
@@ -52,7 +52,7 @@ Windows Admin Center has many enhancements that make your management platform [m
 
 ### **Azure integration**
 
-Windows Admin Center has many points of [integration with Azure services](../plan/azure-integration-options.md), including Azure Activity Directory, Azure Backup, Azure Site Recovery, and more.
+Windows Admin Center has many points of [integration with Azure services](../plan/azure-integration-options.md), including Azure Active Directory, Azure Backup, Azure Site Recovery, and more.
 
 ### **Manage hyper-converged clusters**
 
@@ -60,7 +60,7 @@ Windows Admin Center offers the best experience for [managing hyper-converged cl
 
 ### **Extensibility**
 
-Windows Admin Center was built with extensibility in mind from the beginning, with the ability for Microsoft and 3rd party developers to build tools and solutions beyond the current  offerings. Microsoft will be offering an [SDK](../extend/how-sdk-works.md) in the near future to enable developers to build their own tools for Windows Admin Center.
+Windows Admin Center was built with extensibility in mind from the beginning, with the ability for Microsoft and 3rd party developers to build tools and solutions beyond the current  offerings. Microsoft offers an [SDK](../extend/extensibility-overview.md) that enables developers to build their own tools for Windows Admin Center.
 
 > [!Tip]
-> Ready to install Windows Admin Center? [Download now](https://aka.ms/WACDownload)
+> Ready to install Windows Admin Center? [Download now](https://aka.ms/windowsadmincenter)

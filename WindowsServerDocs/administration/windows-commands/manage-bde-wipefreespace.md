@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # manage-bde: WipeFreeSpace
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Wipes the free space on the volume removing any data fragments that may have existed in the space. Running this command on a volume that was encrypted using the â€œUsed Space Onlyâ€? encryption method provides the same level of protection as the â€œFull Volume Encryptionâ€? encryption method. For examples of how this command can be used, see [Examples](#BKMK_Examples).
 

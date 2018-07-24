@@ -56,11 +56,18 @@
 ### [Microsoft Server Performance Advisor](server-performance-advisor/microsoft-server-performance-advisor.md)
 #### [Server Performance Advisor User's Guide](server-performance-advisor/server-performance-advisor-users-guide.md)
 #### [Server Performance Advisor Pack Development Guide](server-performance-advisor/server-performance-advisor-pack-development-guide.md)
-#### [Server Performance Advisor Pack for Tiered Storage Spaces](server-performance-advisor/server-performance-advisor-pack-for-tiered-storage-spaces.md)
 
 ## Automate Windows Server management
 ### [Windows PowerShell scripting](/powershell/scripting/powershell-scripting?view=powershell-5.1)
 ### [Windows Commands](windows-commands/windows-commands.md)
+
+## Insider Preview
+### [System Insights overview](..\manage\system-insights\system-insights-overview.md)
+#### [Management](..\manage\system-insights\managing-system-insights.md)
+#### [Capabilities](..\manage\system-insights\system-insights-capabilities.md)
+#### [FAQ](..\manage\system-insights\system-insights-faq.md)
+#### [Known issues](..\manage\system-insights\system-insights-known-issues.md)
+
 <!--
 #### [A-Z list](windows-commands/a-z-list.md)
 #### [Command-Line Syntax Key](windows-commands/command-line-syntax-key.md)

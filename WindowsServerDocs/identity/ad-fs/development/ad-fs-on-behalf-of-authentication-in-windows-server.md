@@ -16,7 +16,7 @@ ms.technology: identity-adfs
 
 >Applies To: Windows Server 2016
 
-This walkthrough provides instruction for implementing an on-behalf-of (OBO) authentication using AD FS in Windows Server 2016 TP5.  o learn more about OBO authentication please read [AD FS Scenarios for Developers](../../ad-fs/overview/AD-FS-Scenarios-for-Developers.md)
+This walkthrough provides instruction for implementing an on-behalf-of (OBO) authentication using AD FS in Windows Server 2016 TP5. To learn more about OBO authentication please read [AD FS Scenarios for Developers](../../ad-fs/overview/AD-FS-Scenarios-for-Developers.md)
 
 >WARNING: The example that you can build here is for educational purposes only. These instructions are for the simplest, most minimal implementation possible to expose the required elements of the model. The example may not include all aspects of error handling and other relate functionality and focuses ONLY on getting a successful OBO authentication.
 
@@ -24,13 +24,13 @@ This walkthrough provides instruction for implementing an on-behalf-of (OBO) aut
 
 In this sample we will be creating an authentication flow where a client will be accessing a middle-tier Web Service and the web service will then act on behalf of the authenticated client to get an access token.
 
-![AD FS OBO](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO28.PNG)
+![AD FS OBO](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO28.png)
 
 Below is the authentication flow that the sample will achieve
-1. Client authenticates to AD FS authorization end point and requests a authorization code
+1. Client authenticates to AD FS authorization end point and requests an authorization code
 2. Authorization endpoint returns authentication code to client
 3. Client uses authentication code and presents it to the AD FS token endpoint to request access token for Middle Tier Web Service as WebAPI
-4. AD FS returns the access token to Mid Tier Web Service. For additional functionality, Middle Tier Service needs to access to the Backend WebAPI
+4. AD FS returns the access token to Mid Tier Web Service. For additional functionality, Middle Tier Service needs access to the Backend WebAPI
 5. Client uses the access token to use Middle Tier service.
 6. Middle Tier service provides the access token to the AD FS token end point and requests access token for Backend WebAPI on-behalf-of the authenticated user
 7. AD FS returns access token for backend WebAPI to Middle Tier Service actiing as client
@@ -418,7 +418,7 @@ Copy and paste the code below in ToDoListController.cs and replace the code for 
             retry = false;
             try
             {
-                result = authContext.AcquireToken(OBOWebAPIBase, clientCred, userAssertion);
+                result = await authContext.AcquireTokenAsync(...);
                 accessToken = result.AccessToken;
             }
             catch (AdalException ex)

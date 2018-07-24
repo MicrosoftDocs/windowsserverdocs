@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # autochk
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Runs when the computer is started and prior to Windows Server® 2008 R2 starting to verify the logical integrity of a file system.
 

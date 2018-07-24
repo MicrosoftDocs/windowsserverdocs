@@ -5,18 +5,18 @@ ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
-ms.date: 04/05/2018
-ms.localizationpriority: low
+ms.date: 06/18/2018
+ms.localizationpriority: high
 ms.prod: windows-server-threshold
 ---
 
 # Install Windows Admin Center
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10
+>Applies To: Windows Admin Center, Windows Admin Center Preview
 
 > [!Tip]
 > New to Windows Admin Center?
-> [Learn more about Windows Admin Center](../understand/windows-admin-center.md) or [Download now](https://aka.ms/wacdownload).
+> [Learn more about Windows Admin Center](../understand/windows-admin-center.md) or [Download now](https://aka.ms/windowsadmincenter).
 
 ## Supported operating systems ##
 
@@ -32,6 +32,10 @@ You can install Windows Admin Center on the following Windows operating systems:
 
 **Gateway Mode:** Connect to the Windows Admin Center gateway from a client browser on a different machine (for example, `https://servername`)
 
+> [!IMPORTANT]
+> You can't use Internet Explorer to manage Windows Admin Center - instead you need to use a [supported browser](../understand/faq.md#which-web-browsers-are-supported-by-windows-admin-center
+).  If you are installing Windows Admin Center on Windows Server, we recommend managing by connecting remotely with Windows 10 and Edge.  Alternatively, you can manage locally on Windows Server if you have installed a supported browser.
+
 ## Install on Windows 10
 
 When you install Windows Admin Center on Windows 10, it uses port 6516 by default, but you have the option to specify a different port. You can also create a desktop shortcut and let Windows Admin Center manage your TrustedHosts.
@@ -41,15 +45,11 @@ When you install Windows Admin Center on Windows 10, it uses port 6516 by defaul
 
 When you start Windows Admin Center from the **Start** menu, it opens in your default browser.
 
-> [!IMPORTANT]
-> Internet Explorer is not supported. If Internet Explorer is your default browser, copy the URL from Internet Explorer and paste it into Microsoft Edge.
-
 When you start Windows Admin Center for the first time, you'll see an icon in the notification area of your desktop. Right-click this icon and choose **Open** to open the tool in your default browser, or choose **Exit** to quit the background process.
 
-## Install on Windows Server 2016
+## Install on Windows Server with desktop experience
 
-<!-- I think this section only applies to Windows Server 2016, since 1709 and 1803 don't have/won't have anything but server core. -->
-On Windows Server 2016, Windows Admin Center is installed as a network service. You must specify the port that the service listens on, and it requires a certificate for HTTPS. The installer can create a self-signed certificate for testing, or you can provide the thumbprint of a certificate already installed on the computer. If you use the generated certificate, it will match the DNS name of the server. If you use your own certificate, make sure to specify the name provided in the certificate. You are also given the choice to create a desktop shortcut and let Windows Admin Center manage your TrustedHosts.
+On Windows Server, Windows Admin Center is installed as a network service. You must specify the port that the service listens on, and it requires a certificate for HTTPS. The installer can create a self-signed certificate for testing, or you can provide the thumbprint of a certificate already installed on the computer. If you use the generated certificate, it will match the DNS name of the server. If you use your own certificate, make sure to specify the name provided in the certificate. You are also given the choice to create a desktop shortcut and let Windows Admin Center manage your TrustedHosts.
 
 > [!NOTE]
 > Modifying TrustedHosts is required in a workgroup environment, or when using local administrator credentials in a domain. If you choose to forego this setting, you must [configure TrustedHosts manually](../use/troubleshooting.md#configure-trustedhosts)
@@ -82,3 +82,7 @@ msiexec /i <WindowsAdminCenterInstallerName>.msi /qn /L*v log.txt SME_PORT=<port
 
 > [!WARNING] 
 > Don't invoke `msiexec` from PowerShell using dot-slash relative path notation (like,  `.\<WindowsAdminCenterInstallerName>.msi`). That notation isn't supported, the installation will fail. Remove the `.\` prefix or specify the full path to the MSI.
+
+## Update Windows Admin Center 
+
+If you already have a previous version Windows Admin Center (or Project 'Honolulu' Technical Preview) The installer will detect and preserve your previous settings. 

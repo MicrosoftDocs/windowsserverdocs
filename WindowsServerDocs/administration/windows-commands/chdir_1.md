@@ -1,5 +1,5 @@
 ---
-title: chdir_1
+title: chdir
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ---
-# chdir_1
+# chdir
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -22,4 +22,4 @@ This command is the same as the **cd** command.
 See [cd](cd.md) for syntax and parameters.  
 ## additional references  
 -   [Command-Line Syntax Key](command-line-syntax-key.md)  
--   [Command-Line Reference_1](command-line-reference_1.md)  
+  

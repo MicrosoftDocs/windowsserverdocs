@@ -28,7 +28,7 @@ server <DNSDomain>
 |-------|--------|
 |<DNSDomain>|Required. Specifies the new DNS domain for the default server.|
 |{help &#124; ?}|Displays a short summary of **nslookup** subcommands.|
-## remarks
+## Remarks
 -   The **server** command uses the current default server to look up the information about the specified DNS domain. This is in contrast to the **lserver** command, which uses the initial server.
 ## additional references
 [Command-Line Syntax Key](command-line-syntax-key.md)

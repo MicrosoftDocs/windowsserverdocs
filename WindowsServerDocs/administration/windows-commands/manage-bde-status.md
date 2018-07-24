@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # manage-bde: status
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Provides the following information about all drives on the computer; whether or not they are BitLocker-protected:
 -   Size

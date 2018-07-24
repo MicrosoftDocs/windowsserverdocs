@@ -25,7 +25,7 @@ glob
 ```  
 ### Parameters  
 none  
-## remarks  
+## Remarks  
 -   By default, globbing is on.  
 -   Globbing permits the use of the asterisk (*) and question mark (?) as wildcard characters in local file or path names.  
 ## <a name="BKMK_Examples"></a>Examples  

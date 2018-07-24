@@ -6,16 +6,17 @@ ms.author: nedpyle
 ms.technology: storage-replica
 ms.topic: get-started-article
 author: nedpyle
-ms.date: 10/25/2017
+ms.date: 05/2/2018
 ms.assetid: ceddb0fa-e800-42b6-b4c6-c06eb1d4bc55
 ---
 # Known issues with Storage Replica
 
 >Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
-This section discusses known issues with Storage Replica in Windows Server 2016 and Windows Server, version 1709.  
+This topic discusses known issues with Storage Replica in Windows Server 2016 and Windows Server, version 1709.
 
-## After removing replication, disks are offline and you cannot configure replication again  
+## After removing replication, disks are offline and you cannot configure replication again
+
 In Windows Server 2016, you may be unable to provision replication on a volume that was previously replicated or may find un-mountable volumes. This may occur when some error condition prevents removal of replication or when you reinstall the operating system on a computer that was previously replicating data.  
 
 To fix, you must clear the hidden Storage Replica partition off the disks and return them to a writeable state using the `Clear-SRMetadata` cmdlet.  
@@ -364,7 +365,7 @@ This issue occurs due to architectural limitations within Storage Replica's log 
 
 When using Storage Spaces Direct with HDDs, you cannot disable or avoid the cache. As a workaround, if using just SSD and NVME, you can configure just performance and capacity tiers. If using that configuration, and by placing the SR logs on the performance tier only with the data volumes they service being on the capacity tier only, you will avoid the high latency issue described above. The same could be done with a mix of faster and slower SSDs and no NVME.
 
-This workaround is of course not ideal and some customers may not be able to make use of it. The Storage Replica team is working on optimizations and an updated log mechanism for the future to reduce these artifical bottlenecks. There is no ETA for this, but when available to TAP customers for testing, this FAQ will be updated. 
+This workaround is of course not ideal and some customers may not be able to make use of it. The Storage Replica team is working on optimizations and an updated log mechanism for the future to reduce these artifical bottlenecks. This v1.1 log first became available in Windows Server 2019 Insiders Preview build 17639 and is available in all subsequent previews. For more information and downloads, review the [release notes](https://blogs.windows.com/windowsexperience/2018/04/10/announcing-windows-server-2019-insider-preview-build-17639/#9FF7EtL3oG1pxstv.97) and [Windows Server Storage team blog post](https://blogs.technet.microsoft.com/filecab/2018/04/24/storage-replica-updates-in-windows-server-2019-insider-preview-build-17650/).  
 
 ## Error "Could not find file" when running Test-SRTopology between two clusters
 
@@ -406,7 +407,7 @@ When running Test-SRTopology between two clusters and their CSV paths, it fails 
         + CategoryInfo          : ObjectNotFound: (:) [Test-SRTopology], Exception
         + FullyQualifiedErrorId : TestSRTopologyFailure,Microsoft.FileServices.SR.Powershell.TestSRTopologyCommand
 
-When specifying the source node CSV as the source volume, you must select the node that owns the CSV. You can either move the CSV to the specified node or change the node name you specified in `-SourceComputerName`. This error will receive an improved message in the next version of Windows Server. 
+When specifying the source node CSV as the source volume, you must select the node that owns the CSV. You can either move the CSV to the specified node or change the node name you specified in `-SourceComputerName`. This error received an improved message in the Windows Server 2019 Insider Preview. 
 
 ## Unable to access Data Drive in Storage Replica after unexpected reboot when Bitlocker enabled
 
@@ -420,7 +421,7 @@ After Disabling the SR Partnership and removing the Storage Replica, it is expec
 
 You need to use Key or Password of Primary Server’s Data drive to unlock the Secondary Server’s data drive.
 
-## Test Failover does mount when using asynchronous replication
+## Test Failover does not mount when using asynchronous replication
 
 When running Mount-SRDestination to bring a destination volume online as part of the Test Failover feature, it fails with error:
 
@@ -433,7 +434,7 @@ When running Mount-SRDestination to bring a destination volume online as part of
 
 If using a synchronous partnership type, test failover works normally.    
 
-This is caused by a known code defect in Windows Server, version 1709. It has been resolved in the next Semi-annual Channel Release of Windows Server. Please contact Microsoft Support to request a backport to Windows Server, version 1709 or wait for the next Windows Server release. 
+This is caused by a known code defect in Windows Server, version 1709. It has been resolved in the next Semi-annual Channel Release of Windows Server and in Windows Server 2019 Insider Preview builds. Please contact Microsoft Support to request a backport to Windows Server, use Windows Server version 1709, or wait for the Windows Server 2019 release. 
 
 ## See also  
 - [Storage Replica](storage-replica-overview.md)  

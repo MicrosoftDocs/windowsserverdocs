@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # wecutil
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Enables you to create and manage subscriptions to events that are forwarded from remote computers, which support WS-Management protocol. For examples of how to use this command, see [Examples](#BKMK_examples).
 
@@ -38,20 +38,20 @@ wecutil  [{es | enum-subscription}]
 
 |Parameter|Description|
 |---------|-----------|
-|{es | enum-subscription}|Displays the names of all remote event subscriptions that exist.|
-|{gs | get-subscription} \<Subid> [/f:<Format>] [/uni:<Unicode>]|Displays remote subscription configuration information. \<Subid> is a string that uniquely identifies a subscription. <Subid> is the same as the string that was specified in the <SubscriptionId> tag of the XML configuration file, which was used to create the subscription.|
-|{gr | get-subscriptionruntimestatus} \<Subid> [<Eventsource> …]|Displays the runtime status of a subscription. \<Subid> is a string that uniquely identifies a subscription. <Subid> is the same as the string that was specified in the <SubscriptionId> tag of the XML configuration file, which was used to create the subscription. <Eventsource> is a string that identifies a computer that serves as a source of events. <Eventsource> should be a fully qualified domain name, a NetBIOS name, or an IP address.|
-|{ss | set-subscription} \<Subid> [/e:[<Subenabled>]] [/esa:<Address>] [/ese:[<Srcenabled>]] [/aes] [/res] [/un:<Username>] [/up:<Password>] [/d:<Desc>] [/uri:<Uri>] [/cm:<Configmode>] [/ex:<Expires>] [/q:<Query>] [/dia:<Dialect>] [/tn:<Transportname>] [/tp:<Transportport>]  [/dm:<Deliverymode>] [/dmi:<Deliverymax>] [/dmlt:<Deliverytime>] [/hi:<Heartbeat>] [/cf:<Content>] [/l:<Locale>] [/ree:[<Readexist>]] [/lf:<Logfile>] [/pn:<Publishername>] [/essp:<Enableport>] [/hn:<Hostname>] [/ct:<Type>]</br>or</br>{ss | set-subscription /c:\<Configfile> [/cun:<Comusername> /cup:<Compassword>]|Changes the subscription configuration. You can specify the subscription ID and the appropriate options to change subscription parameters, or you can specify an XML configuration file to change subscription parameters.|
-|{cs | create-subscription} \<Configfile> [/cun:<Username> /cup:<Password>]|Creates a remote subscription. \<Configfile> specifies the path to the XML file that contains the subscription configuration. The path can be absolute or relative to the current directory.|
-|{ds | delete-subscription} \<Subid>|Deletes a subscription and unsubscribes from all event sources that deliver events into the event log for the subscription. Any events already received and logged are not deleted. \<Subid> is a string that uniquely identifies a subscription. <Subid> is the same as the string that was specified in the <SubscriptionId> tag of the XML configuration file, which was used to create the subscription.|
-|{rs | retry-subscription} \<Subid> [<Eventsource>…]|Retries to establish a connection and send a remote subscription request to an inactive subscription. Attempts to reactivate all event sources or specified event sources. Disabled sources are not retried. \<Subid> is a string that uniquely identifies a subscription. <Subid> is the same as the string that was specified in the <SubscriptionId> tag of the XML configuration file, which was used to create the subscription. <Eventsource> is a string that identifies a computer that serves as a source of events. <Eventsource> should be a fully qualified domain name, a NetBIOS name, or an IP address.|
-|{qc | quick-config} [/q:[\<Quiet>]]|Configures the Windows Event Collector service to ensure a subscription can be created and sustained through reboots. This includes the following steps:</br>1.  Enable the ForwardedEvents channel if it is disabled.</br>2.  Set the Windows Event Collector service to delay start.</br>3.  Start the Windows Event Collector service if it is not running.|
+|{es \| enum-subscription}|Displays the names of all remote event subscriptions that exist.|
+|{gs \| get-subscription} \<Subid> [/f:\<Format>] [/uni:\<Unicode>]|Displays remote subscription configuration information. \<Subid> is a string that uniquely identifies a subscription. \<Subid> is the same as the string that was specified in the \<SubscriptionId> tag of the XML configuration file, which was used to create the subscription.|
+|{gr \| get-subscriptionruntimestatus} \<Subid> [\<Eventsource> …]|Displays the runtime status of a subscription. \<Subid> is a string that uniquely identifies a subscription. \<Subid> is the same as the string that was specified in the \<SubscriptionId> tag of the XML configuration file, which was used to create the subscription. \<Eventsource> is a string that identifies a computer that serves as a source of events. \<Eventsource> should be a fully qualified domain name, a NetBIOS name, or an IP address.|
+|{ss \| set-subscription} \<Subid> [/e:[\<Subenabled>]] [/esa:\<Address>] [/ese:[\<Srcenabled>]] [/aes] [/res] [/un:\<Username>] [/up:\<Password>] [/d:\<Desc>] [/uri:\<Uri>] [/cm:\<Configmode>] [/ex:\<Expires>] [/q:\<Query>] [/dia:\<Dialect>] [/tn:\<Transportname>] [/tp:\<Transportport>]  [/dm:\<Deliverymode>] [/dmi:\<Deliverymax>] [/dmlt:\<Deliverytime>] [/hi:\<Heartbeat>] [/cf:\<Content>] [/l:\<Locale>] [/ree:[\<Readexist>]] [/lf:\<Logfile>] [/pn:\<Publishername>] [/essp:\<Enableport>] [/hn:\<Hostname>] [/ct:\<Type>]</br>or</br>{ss \| set-subscription /c:\<Configfile> [/cun:\<Comusername> /cup:\<Compassword>]|Changes the subscription configuration. You can specify the subscription ID and the appropriate options to change subscription parameters, or you can specify an XML configuration file to change subscription parameters.|
+|{cs \| create-subscription} \<Configfile> [/cun:\<Username> /cup:\<Password>]|Creates a remote subscription. \<Configfile> specifies the path to the XML file that contains the subscription configuration. The path can be absolute or relative to the current directory.|
+|{ds \| delete-subscription} \<Subid>|Deletes a subscription and unsubscribes from all event sources that deliver events into the event log for the subscription. Any events already received and logged are not deleted. \<Subid> is a string that uniquely identifies a subscription. \<Subid> is the same as the string that was specified in the \<SubscriptionId> tag of the XML configuration file, which was used to create the subscription.|
+|{rs \| retry-subscription} \<Subid> [\<Eventsource>…]|Retries to establish a connection and send a remote subscription request to an inactive subscription. Attempts to reactivate all event sources or specified event sources. Disabled sources are not retried. \<Subid> is a string that uniquely identifies a subscription. \<Subid> is the same as the string that was specified in the \<SubscriptionId> tag of the XML configuration file, which was used to create the subscription. \<Eventsource> is a string that identifies a computer that serves as a source of events. \<Eventsource> should be a fully qualified domain name, a NetBIOS name, or an IP address.|
+|{qc \| quick-config} [/q:[\<Quiet>]]|Configures the Windows Event Collector service to ensure a subscription can be created and sustained through reboots. This includes the following steps:</br>1.  Enable the ForwardedEvents channel if it is disabled.</br>2.  Set the Windows Event Collector service to delay start.</br>3.  Start the Windows Event Collector service if it is not running.|
 
 ## Options
 
 |Option|Description|
 |------|-----------|
-|/f:\<Format>|Specifies the format of the information that is displayed. \<Format> can be XML or Terse. If <Format> is XML, the output is displayed in XML format. If <Format> is Terse, the output is displayed in name-value pairs. The default is Terse.|
+|/f:\<Format>|Specifies the format of the information that is displayed. \<Format> can be XML or Terse. If <Format> is XML, the output is displayed in XML format. If \<Format> is Terse, the output is displayed in name-value pairs. The default is Terse.|
 |/c:\<Configfile>|Specifies the path to the XML file that contains a subscription configuration. The path can be absolute or relative to the current directory. This option can only be used with the **/cun** and **/cup** options and is mutually exclusive with all other options.|
 |/e:[\<Subenabled>]|Enables or disables a subscription. \<Subenabled> can be true or false. The default value of this option is true.|
 |/esa:\<Address>|Specifies the address of an event source. \<Address> is a string that contains a fully qualified domain name, a NetBIOS name, or an IP address, which identifies a computer that serves as a source of events. This option should be used with the **/ese**, **/aes**, **/res**, or **/un** and **/up** options.|
@@ -88,6 +88,7 @@ wecutil  [{es | enum-subscription}]
 
 > [!IMPORTANT]
 > If you receive the message, “The RPC server is unavailable�? when you try to run wecutil, you need to start the Windows Event Collector service (wecsvc). To start wecsvc, at an elevated command prompt type net start wecsvc.
+
 -   The following example shows the contents of a configuration file:  
     ```
     <Subscription xmlns="https://schemas.microsoft.com/2006/03/windows/events/subscription">

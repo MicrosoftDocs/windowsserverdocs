@@ -1,7 +1,7 @@
 ---
 title: Change a GUID Partition Table (GPT) disk into a Master Boot Record (MBR) disk
 description: Describes how to change a GUID Partition Table (GPT) disk to an Master Boot Record (MBR) partition style disk.
-ms.date: 10/12/2017
+ms.date: 06/19/2018
 ms.prod: windows-server-threshold 
 ms.technology: storage 
 ms.topic: article 
@@ -18,19 +18,14 @@ Master Boot Record (MBR) disks use the standard BIOS partition table. GUID Parti
 You can change a disk from a GPT to an MBR partition style as long as the disk is empty and contains no volumes.
 
 > [!NOTE]
-> Before you convert disks, close any programs that are running on those disks.
-
-Changing a GPT disk into an MBR disk
--------------------------------------------------------
-
--   [Using the Windows interface](#BKMK_WINUI)
--   [Using a command line](#BKMK_CMD)
+> Before you convert a disk, backup any data on it and close any programs that are accessing the disk.
 
 > [!NOTE]
 > You must be a member of the **Backup Operators** or **Administrators** group, at minimum, to complete these steps.
 
- <a id="BKMK_WINUI"></a>
-#### To change a GPT disk into an MBR disk using the Windows interface:
+<a id="BKMK_WINUI"></a>
+
+## Converting using the Windows interface
 
 1.  Back up or move all volumes on the basic GPT disk you want to convert into an MBR disk.
 
@@ -38,8 +33,9 @@ Changing a GPT disk into an MBR disk
 
 3.  Right-click the GPT disk that you want to change into an MBR disk, and then click **Convert to MBR disk**.
 
- <a id="BKMK_CMD"></a>
-#### To change a GPT disk into an MBR disk using a command line
+<a id="BKMK_CMD"></a>
+
+## Converting using a command line
 
 1.  Back up or move all volumes on the basic GPT disk you want to convert into an MBR disk.
 
@@ -53,8 +49,8 @@ Changing a GPT disk into an MBR disk
 
 6.  At the **DISKPART** prompt, type `clean`.
 
-> [!IMPORTANT]
-> Running the **clean** command will delete all partitions or volumes on the disk.
+    > [!IMPORTANT]
+    > Running the **clean** command will delete all partitions or volumes on the disk.
 
 7.  At the **DISKPART** prompt, type `convert mbr`.
 

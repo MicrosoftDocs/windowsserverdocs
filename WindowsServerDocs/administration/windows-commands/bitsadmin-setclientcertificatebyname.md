@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # bitsadmin setclientcertificatebyname
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Specifies the subject name of the client certificate to use for client authentication in an HTTPS (SSL) request.
 

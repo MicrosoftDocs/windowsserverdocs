@@ -5,14 +5,14 @@ ms.technology: manage
 ms.topic: article
 author: haley-rowland
 ms.author: harowl
-ms.date: 04/12/2018
-ms.localizationpriority: low
+ms.date: 06/18/2018
+ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---
 
 # Windows Admin Center and related management solutions from Microsoft
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10
+>Applies To: Windows Admin Center, Windows Admin Center Preview
 
 [Windows Admin Center](windows-admin-center.md) is the evolution of traditional in-box server management tools for situations where you might have used Remote Desktop (RDP) to connect to a server for troubleshooting or configuration. It's not intended to replace other existing Microsoft management solutions; rather it complements these solutions, as described below.
 
@@ -23,10 +23,6 @@ ms.prod: windows-server-threshold
 ## System Center
 
 [System Center](https://www.microsoft.com/cloud-platform/system-center) is an on-premises data center management solution for deployment, configuration, management, monitoring your entire data center. System Center lets you see the status of all the systems in your environment, while Windows Admin Center lets you drill down into a specific server to manage or troubleshoot it with more granular tools.
-
-## Operations Management Suite
-
-[Operations Management Suite](https://www.microsoft.com/cloud-platform/operations-management-suite) is a collection of management services entirely hosted in Azure that that you can use to manage servers both in the cloud and on-premises. Operations Management Suite lets you monitor and analyze resource performance, as well as automate manual processes. Windows Admin Center is a customer-deployed solution that provides additional tools at the single-server/single-cluster level and complements the multi-system cloud-hosted capabilities of Operations Management Suite.
 
 ## Intune
 

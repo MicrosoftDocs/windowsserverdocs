@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # diskcomp
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Compares the contents of two floppy disks. If used without parameters, **diskcomp** uses the current drive to compare both disks.For examples of how to use this command, see [Examples](#BKMK_examples).
 

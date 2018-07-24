@@ -30,7 +30,7 @@ atmadm [/c][/a][/s]
 |/a|Displays the registered atM network service access point (NSAP) address for each adapter installed in this computer.|
 |/s|Displays statistics for monitoring the status of active atM connections.|
 |/?|Displays help at the command prompt.|
-## remarks
+## Remarks
 -   The **atmadm /c** command produces output similar to the following:
     ```
     Windows atM call Manager Statistics

@@ -29,7 +29,7 @@ Set srchlist=<DomainName>[/...]
 |-------|--------|
 |<DomainName>|Specifies new names for the default DNS domain and search list. The default domain name value is based on the host name. You can specify a maximum of six names separated by slashes (/).|
 |{help &#124; ?}|Displays a short summary of **nslookup** subcommands.|
-## remarks
+## Remarks
 -   The **set srchlist**command overrides the default DNS domain name and search list of the **set domain** command. Use the **set all** command to display the list.
 ## <a name="BKMK_examples"></a>Examples
 The following example sets the DNS domain to mfg.widgets.com and the search list to the three names:

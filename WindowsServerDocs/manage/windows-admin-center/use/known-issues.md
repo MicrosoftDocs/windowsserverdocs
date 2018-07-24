@@ -5,24 +5,24 @@ ms.technology: manage
 ms.topic: article
 author: jwwool
 ms.author: jeffrew
-ms.date: 04/12/2018
-ms.localizationpriority: low
+ms.date: 06/18/2018
+ms.localizationpriority: high
 ms.prod: windows-server-threshold
 ---
 
 # Windows Admin Center Known Issues 
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10
+>Applies To: Windows Admin Center, Windows Admin Center Preview
 
 If you encounter an issue not described on this page, please [let us know](http://aka.ms/WACfeedback).
 
-## **Insider preview** Windows 10 & Window Server 2019 (RS5)
+## Previous Insider preview builds of Windows 10 & Window Server 2019 (RS5)
 
-- Windows Admin Center cannot be installed on a Windows 10 or Windows Server 2019 insider build (greater than build number 176XX.) This is caused by a regression that will be fixed in an upcoming Windows Insider build. 
+- There was a bug in approximate build numbers 17134-17673 which caused the installation of Windows Admin Center to fail. 
 
 ## Signature verification failed
 
-- If you install Windows Admin Center on a machine that has never been online to receive updates, the application may crash with **Signature verification failed** errors in the event log. After taking updates, the issue will be resolved.
+- If you install Windows Admin Center on a machine that has never been online, the application may crash with **Signature verification failed** errors in the event log. Connecting the machine to the internet will resolve the error. After the error is resolved, the connection may be removed and Windows Admin Center will launch successfully offline. [Fixed in Windows Admin Center version [1804.25](https://aka.ms/windowsadmincenter)]
 
 ## Installer
 
@@ -62,11 +62,9 @@ If you encounter an issue not described on this page, please [let us know](http:
 
 ### Google Chrome
 
-When using Windows Admin Center in a **workgroup** (non-domain) environment, Chrome has the following issues:
+-	Chrome has a [bug](https://bugs.chromium.org/p/chromium/issues/detail?id=423609) regarding the websockets protocol and NTLM authentication. This effects the following tools: Events, PowerShell, Remote Desktop.
 
--	The websockets protocol does not work due to [this bug](https://bugs.chromium.org/p/chromium/issues/detail?id=423609). This effects the following tools: Events, PowerShell, Remote Desktop.
-
--	Chrome may pop-up multiple credential prompts, especially during the add connection experience. 
+-	Chrome may pop-up multiple credential prompts, especially during the add connection experience in a **workgroup** (non-domain) environment. 
 
 ### Mozilla Firefox
 Windows Admin Center is not tested with Mozilla Firefox, but most functionality should work. 
@@ -75,7 +73,7 @@ Windows Admin Center is not tested with Mozilla Firefox, but most functionality 
 
 ## <a id="websockets"></a>WebSocket compatibility when using a proxy service
 
-Remote Desktop, PowerShell, and Events modules in Windows Admin Center utilize the WebSocket protocol, which is often not supported when using a proxy service. Check out [Azure AD Application Proxy](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started) for a proxy solution that supports websockets.
+Remote Desktop, PowerShell, and Events modules in Windows Admin Center utilize the WebSocket protocol, which is often not supported when using a proxy service. Websocket support in Azure AD Application Proxy compatibility is in [preview](https://blogs.technet.microsoft.com/applicationproxyblog/2018/03/28/limited-websocket-support-now-in-public-preview/) and looking for feedback on compatibility.
 
 ## Support for Windows Server versions before 2016 (2012 & 2012 R2)
 

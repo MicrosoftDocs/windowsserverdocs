@@ -20,8 +20,6 @@ Your choice to create a generation 1 or generation 2 virtual machine depends on 
 
 -   The VHD you want to boot from is not [UEFI-compatible](https://technet.microsoft.com/library/hh824898.aspx).  
 
--   You [plan to move your virtual machine to Azure](https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-questions/).  
-
 -   Generation 2 doesn't support the operating system you want to run on the virtual machine.  
 
 -   Generation 2 doesn't support the boot method you want to use.  
@@ -52,6 +50,7 @@ The following table shows which 64-bit versions of Windows you can use as a gues
 
 |64-bit versions of Windows|Generation 1|Generation 2|  
 |-------------------------------|----------------|----------------|  
+| Windows Server 2016 |&#10004;|&#10004;|  
 | Windows Server 2012 R2 |&#10004;|&#10004;|  
 | Windows Server 2012 |&#10004;|&#10004;|  
 |Windows Server 2008 R2|&#10004;| &#10006;|  

@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # pushd
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Stores the current directory for use by the **popd** command, and then changes to the specified directory.
 

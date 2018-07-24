@@ -1,5 +1,5 @@
 ---
-title: cacls_1
+title: cacls
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ---
-# cacls_1
+# cacls
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -38,7 +38,7 @@ cacls <filename> [/t] [/m] [/l] [/s[:sddl]] [/e] [/c] [/g user:<perm>] [/r user 
 |[/p user:<perm> [...]|replace specified user's access rights.<br /><br />Valid values for permission:<br /><br />-   n - none<br />-   r - read<br />-   w - write<br />-   c - change (write)<br />-   f - full control|  
 |[/d user [...]|Deny specified user access.|  
 |/?|Displays help at the command prompt.|  
-## remarks  
+## Remarks  
 -   This command has been deprecated. Please use [icacls](icacls.md) instead.  
 -   Use the following table to interpret the results:  
     |Output|Access control entry (ACE) applies to|  
@@ -54,6 +54,5 @@ cacls <filename> [/t] [/m] [/l] [/s[:sddl]] [/e] [/c] [/g user:<perm>] [/r user 
 -   You can use wildcards (**?** and **\***) to specify multiple files.  
 -   You can specify more than one user.  
 ## additional references  
--   [Command-Line Syntax Key](command-line-syntax-key.md)  
--   [Command-Line Reference_1](command-line-reference_1.md)  
+-   [Command-Line Syntax Key](command-line-syntax-key.md)   
 -   [icacls](icacls.md)  

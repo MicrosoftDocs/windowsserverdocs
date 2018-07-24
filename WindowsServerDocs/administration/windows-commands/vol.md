@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # vol
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Displays the disk volume label and serial number, if they exist.  If used without parameters, **vol** displays information for the current drive.
 

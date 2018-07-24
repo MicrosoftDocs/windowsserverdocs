@@ -5,14 +5,14 @@ ms.technology: manage
 ms.topic: article
 author: haley-rowland
 ms.author: harowl
-ms.date: 04/12/2018
-ms.localizationpriority: low
+ms.date: 06/18/2018
+ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---
 
 # Use event logging in Windows Admin Center to gain insight into management activities and track gateway usage
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10
+>Applies To: Windows Admin Center, Windows Admin Center Preview
 
 Windows Admin Center writes event logs to let you see the management activities being performed on the servers in your environment, as well as to help you troubleshoot any Windows Admin Center issues.
 

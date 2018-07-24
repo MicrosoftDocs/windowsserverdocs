@@ -42,13 +42,13 @@ Using this guide and Windows Server 2016 Datacenter Edition, you can deploy stor
 
 **FIGURE 1: Storage replication in a stretch cluster using Storage Replica**  
 
-**Cluster to Cluster** allows replication between two separate clusters, where one cluster synchronously or asynchronously replicates with another cluster. This scenario can utilize Storage Spaces Direct, Storage Spaces with shared SAS storage, SAN and iSCSI-attached LUNs. It is managed with PowerShell and requires manual intervention for failover. Support for Azure Site Recovery of this scenario is scheduled.
+**Cluster to Cluster** allows replication between two separate clusters, where one cluster synchronously or asynchronously replicates with another cluster. This scenario can utilize Storage Spaces Direct, Storage Spaces with shared SAS storage, SAN and iSCSI-attached LUNs. It is managed with Windows Admin Center and PowerShell, and requires manual intervention for failover. 
 
 ![Diagram showing a cluster in Los Angeles using Storage Replica to replicate its storage with a different cluster in Las Vegas](./media/Storage-Replica-Overview/Storage_SR_ClustertoCluster.png)  
 
 **FIGURE 2: Cluster-to-cluster storage replication using Storage Replica**  
 
-**Server to server** allows synchronous and asynchronous replication between two standalone servers, using Storage Spaces with shared SAS storage, SAN and iSCSI-attached LUNs, and local drives. It is managed with PowerShell and the Server Manager Tool, and requires manual intervention for failover.  
+**Server to server** allows synchronous and asynchronous replication between two standalone servers, using Storage Spaces with shared SAS storage, SAN and iSCSI-attached LUNs, and local drives. It is managed with Windows Admin Center and PowerShell, and requires manual intervention for failover.  
 
 ![Diagram showing a server in Building 5 replicating with a server in Building 9](./media/Storage-Replica-Overview/Storage_SR_ServertoServer.png)  
 
@@ -61,7 +61,7 @@ Using this guide and Windows Server 2016 Datacenter Edition, you can deploy stor
 
 * **Zero data loss, block-level replication**. With synchronous replication, there is no possibility of data loss. With block-level replication, there is no possibility of file locking.  
 
-* **Simple deployment and management**. Storage Replica has a design mandate for ease of use. Creation of a replication partnership between two servers requires only a single PowerShell command. Deployment of stretch clusters uses intuitive wizard in the familiar Failover Cluster Manager tool.   
+* **Simple deployment and management**. Storage Replica has a design mandate for ease of use. Creation of a replication partnership between two servers can utilize the Windows Admin Center. Deployment of stretch clusters uses intuitive wizard in the familiar Failover Cluster Manager tool.   
 
 * **Guest and host**. All capabilities of Storage Replica are exposed in both virtualized guest and host-based deployments. This means guests can replicate their data volumes even if running on non-Windows virtualization platforms or in public clouds, as long as using Windows Server 2016 Datacenter Edition in the guest.  
 
@@ -176,7 +176,7 @@ Two new features are available in Windows Server, version 1709:
 
 -   The test failover feature. This allows mounting of destination storage in order to validate replication or backup data. For more info, see https://aka.ms/srfaq
 
--   The Project Honolulu app now supports [managing Storage Replica graphically](storage-replica-ui.md) for server-to-server configurations, with no need to use PowerShell for general deployment, management, failover, and removal operations operations.
+-   The Windows Admin Center now supports [managing Storage Replica graphically](storage-replica-ui.md) for server-to-server configurations, with no need to use PowerShell for general deployment, management, failover, and removal operations operations.
 
 Additionally, Windows Server, version 1709:
 

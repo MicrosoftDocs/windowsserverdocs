@@ -35,7 +35,7 @@ cmdkey [{/add:<TargetName>|/generic:<TargetName>}] {/smartcard|/user:<UserName> 
 |/delete{:<TargetName> &#124; /ras}|deletes a user name and password from the list. If *TargetName* is specified, that entry will be deleted. If /ras is specified, the stored remote access entry will be deleted.|
 |/list:<TargetName>|Displays the list of stored user names and credentials. If *TargetName* is not specified, all stored user names and credentials will be listed.|
 |/?|Displays help at the command prompt.|
-## remarks
+## Remarks
 -   if more than one smart card is found on the system when the /smartcard command-line option is used, **cmdkey** will display information about all available smart cards and then prompt the user to specify which one to use.
 -   Passwords will not be displayed once they are stored.
 ## <a name="BKMK_examples"></a>Examples

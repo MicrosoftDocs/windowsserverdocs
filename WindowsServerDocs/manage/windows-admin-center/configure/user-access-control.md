@@ -5,14 +5,14 @@ ms.technology: manage
 ms.topic: article
 author: haley-rowland
 ms.author: harowl
-ms.date: 04/12/2018
-ms.localizationpriority: low
+ms.date: 06/18/2018
+ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---
 
 # Configure User Access Control and Permissions
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10
+>Applies To: Windows Admin Center, Windows Admin Center Preview
 
 > [!NOTE] 
 > Access management only applies when you are running Windows Admin Center as a service on Windows Server.
@@ -28,17 +28,11 @@ There are two roles for access to the Windows Admin Center gateway service:
 **Gateway administrators** can configure who gets access as well as how users authenticate to the gateway. Only gateway administrators can view and configure the Access settings in Windows Admin Center. Local administrators on the gateway machine are always administrators of the Windows Admin Center gateway service.
 
 > [!NOTE] 
-> Access to the gateway doesn't imply access to managed servers visible by the gateway. To manage a target server, the connecting user must use credentials (either through their passed-through Windows credential or through credentials provided in the Windows Admin Center session using the **Manage as** action) that have administrative access to that target server.
-
-## Choose the identity provider
-
-By default, any user that navigates to the gateway URL has access to the Windows Admin Center service. Only local administrators on the gateway computer have administrator access to the Windows Admin Center service.
-
-Gateway administrators can choose which identity provider to use for gateway access in the Window Admin Center general settings, on the **Access** tab. Windows Admin Center supports using either Active Directory/local groups or Azure Active Directory (Azure AD). By choosing Azure AD authentication for the gateway, you can leverage additional security features like conditional access and multi-factor authentication provided by Azure AD. 
+> Access to the gateway doesn't imply access to managed servers visible by the gateway. To manage a target server, the connecting user must use credentials (either through their passed-through Windows credential or through credentials provided in the Windows Admin Center session using the **Manage as** action) that have administrative access to that target server. 
 
 ## Active Directory or local machine groups
 
-When you choose Active Directory or local machine groups as your identity provider for gateway access, you can manage gateway user and administrator access from within the Windows Admin Center interface.
+By default, Active Directory or local machine groups are used to control gateway access. You can manage gateway user and administrator access from within the Windows Admin Center interface.
 
 On the **Users** tab you can control who can access Windows Admin Center as a gateway user. By default, and if you don't specify a security group, any user that accesses the gateway URL has access. Once you add one or more security groups to the users list, access is restricted to the members of those groups.
 
@@ -50,11 +44,11 @@ On the **Administrators** tab you can control who can access Windows Admin Cente
 
 ## Azure Active Directory
 
-If you choose Azure Active Directory (Azure AD) as your identity provider, you'll manage user and administrator access from the Azure Portal, rather from within the Windows Admin Center UI.
+If your organization uses Azure Active Directory (Azure AD), you can choose to add an additional layer of security to Windows Admin Center by requiring Azure AD authentication to access the gateway. In order to access Windows Admin Center, users must also be a member of the local Users group on the gateway server (even if Azure AD authentication is used). When you use Azure AD, you'll manage user and administrator access permissions from the Azure Portal, rather than from within the Windows Admin Center UI.
 
-[To set up Azure AD, you must first connect your gateway to Azure](azure-integration.md#connect-your-gateway-to-azure) (you only need to do this once for your Windows Admin Center gateway). This step creates an Azure AD application from which you can manage gateway user and gateway administrator access.
+[To set up Azure AD authentication, you must first register your gateway with Azure](azure-integration.md#register-your-gateway-with-azure) (you only need to do this once for your Windows Admin Center gateway). This step creates an Azure AD application from which you can manage gateway user and gateway administrator access.
 
-By default, all members of the Azure AD tenant have user access to the Windows Admin Center gateway service. Only local administrators on the gateway machine have administrator access to the Windows Admin Center gateway.
+By default, all members of the Azure AD tenant have user access to the Windows Admin Center gateway service. Only local administrators on the gateway machine have administrator access to the Windows Admin Center gateway. Note that the rights of local administrators on the gateway machine cannot be restricted - local admins can do anything regardless of whether Azure AD is used for authentication.
 
 If you want to give specific Azure AD users or groups gateway user or gateway administrator access to the Windows Admin Center service, you must do the following:
 
@@ -67,11 +61,13 @@ If you want to give specific Azure AD users or groups gateway user or gateway ad
 
 Once you save the Azure AD access control in the **Change access control** pane, the gateway service restarts and you must refresh your browser. You can update user access for the SME Azure AD application in the Azure portal at any time. 
 
-Users will be prompted to sign in using their Azure Active Directory identity when they attempt to access the Windows Admin Center gateway URL. On the **Azure** tab of Windows Admin Center general settings, users and administrators can view their currently logged-in account and as well as sign-out of this Azure AD account.
+Users will be prompted to sign in using their Azure Active Directory identity when they attempt to access the Windows Admin Center gateway URL. Remember that users must also be a member of the local Users on the gateway server to access Windows Admin Center. 
+
+Using the **Azure** tab of Windows Admin Center general settings, users and administrators can view their currently logged-in account and as well as sign-out of this Azure AD account.
 
 ### Conditional access and multi-factor authentication
 
-One of the benefits of using Azure AD as your identity provider to control access to the Windows Admin Center gateway is that you can leverage Azure AD's powerful security features like conditional access and multi-factor authentication. 
+One of the benefits of using Azure AD as an additional layer of security to control access to the Windows Admin Center gateway is that you can leverage Azure AD's powerful security features like conditional access and multi-factor authentication. 
 
 [Learn more about configuring conditional access with Azure Active Directory.](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal-get-started)
 
@@ -115,7 +111,7 @@ Setting up RBAC consists of 2 steps: enabling support on the target computer(s) 
 The single machine deployment model is ideal for simple environments with only a few computers to manage.
 Configuring a machine with support for role-based access control will result in the following changes:
 -   PowerShell modules with functions required by Windows Admin Center will be installed on your system drive, under `C:\Program Files\WindowsPowerShell\Modules`. All modules will start with **Microsoft.Sme**
--   Desired State Configuration will run a one-time configuration to configure a Just Enough Administration endpoint on the machine, named **Mirosoft.Sme.PowerShell**. This endpoint defines the 3 roles used by Windows Admin Center and will run as a temporary local administrator when a user connects to it.
+-   Desired State Configuration will run a one-time configuration to configure a Just Enough Administration endpoint on the machine, named **Microsoft.Sme.PowerShell**. This endpoint defines the 3 roles used by Windows Admin Center and will run as a temporary local administrator when a user connects to it.
 -   3 new local groups will be created to control which users are assigned access to which roles:
     -   Windows Admin Center Administrators
     -   Windows Admin Center Hyper-V Administrators
@@ -150,7 +146,7 @@ If you're running the Windows Admin Center gateway in service mode on Windows Se
 Be sure to update the gateway address with the correct one for your environment.
 
 ```powershell
-$WindowsAdminCenterGateway = 'https://windowsadmincenter.contoso.com:6516'
+$WindowsAdminCenterGateway = 'https://windowsadmincenter.contoso.com'
 Invoke-RestMethod -Uri "$WindowsAdminCenterGateway/api/nodes/all/features/jea/endpoint/export" -Method POST -UseDefaultCredentials -OutFile "~\Desktop\WindowsAdminCenter_RBAC.zip"
 ```
 

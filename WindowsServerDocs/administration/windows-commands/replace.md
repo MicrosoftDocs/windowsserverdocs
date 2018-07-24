@@ -1,6 +1,6 @@
 ---
 title: replace
-description: "Windows Commands topic for **** - "
+description: Learn how to use the replace command to replace files.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -12,12 +12,12 @@ ms.assetid: 6143661e-d90f-4812-b265-6669b567dd1f
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/16/2017
+ms.date: 07/11/2018
 ---
 
 # replace
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Replaces files. If used with the **/a** option, **replace** adds new files to a directory instead of replacing existing files.
 
@@ -34,8 +34,8 @@ replace [<Drive1>:][<Path1>]<FileName> [<Drive2>:][<Path2>] [/p] [/r] [/s] [/w] 
 
 |Parameter|Description|
 |---------|-----------|
-|[\<Drive1>:][<Path1>]<FileName>|Specifies the location and name of the source file or set of files. *FileName* is required, and can include wildcard characters (**&#42;** and **?**).|
-|[\<Drive2>:][<Path2>]|Specifies the location of the destination file. You cannot specify a file name for files you replace. If you do not specify a drive or path, **replace** uses the current drive and directory as the destination.|
+|[\<Drive1>:][\<Path1>]\<FileName>|Specifies the location and name of the source file or set of files. *FileName* is required, and can include wildcard characters (**&#42;** and **?**).|
+|[\<Drive2>:][\<Path2>]|Specifies the location of the destination file. You cannot specify a file name for files you replace. If you do not specify a drive or path, **replace** uses the current drive and directory as the destination.|
 |/a|Adds new files to the destination directory instead of replacing existing files. You cannot use this command-line option with the **/s** or **/u** command-line option.|
 |/p|Prompts you for confirmation before replacing a destination file or adding a source file.|
 |/r|Replaces Read-only and unprotected files. If you attempt to replace a Read-only file, but you do not specify **/r**, an error results and stops the replacement operation.|

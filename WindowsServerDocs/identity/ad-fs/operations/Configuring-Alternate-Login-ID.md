@@ -4,8 +4,8 @@ title: Configuring Alternate Login ID
 description:
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 12/04/2017
+manager: mtillman
+ms.date: 06/27/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 

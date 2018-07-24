@@ -41,7 +41,7 @@ auditpol /get
 |/option|Retrieves the existing policy for the CrashOnAuditFail, FullprivilegeAuditing, AuditBaseObjects, or AuditBasedirectories options.|
 |/r|Displays the output in report format, comma-separated value (CSV).|
 |/?|Displays help at the command prompt.|
-## remarks
+## Remarks
 All categories and subcategories can be specified by the GUID or name enclosed by quotation marks. Users can be specified by SID or name.
 for all get operations for the per-user policy and system policy, you must have Read permission on that object set in the security descriptor. You can also perform get operations by possessing the **Manage auditing and security log** (SeSecurityPrivilege) user right. However, this right allows additional access that is not necessary to perform the get operation.
 ## <a name="BKMK_examples"></a>Examples

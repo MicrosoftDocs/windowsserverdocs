@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # reg load
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Writes saved subkeys and entries into a different subkey in the registry. Intended for use with temporary files that are used for troubleshooting or editing registry entries.
 

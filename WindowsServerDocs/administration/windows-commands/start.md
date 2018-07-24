@@ -18,7 +18,7 @@ ms.date: 10/16/2017
 
 # start
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Starts a separate Command Prompt window to run a specified program or command.
 

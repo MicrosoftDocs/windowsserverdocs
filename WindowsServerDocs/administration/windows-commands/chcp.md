@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # chcp
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Changes the active console code page. If used without parameters, **chcp** displays the number of the active console code page.
 
@@ -51,6 +51,7 @@ The following table lists each supported code page and its country/region or lan
 |865|Nordic|
 |866|Russian|
 |869|Modern Greek|
+|936|Chinese|
 
 ## Remarks
 

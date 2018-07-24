@@ -5,20 +5,33 @@ ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
-ms.date: 04/05/2018
-ms.localizationpriority: low
+ms.date: 06/18/2018
+ms.localizationpriority: high
 ms.prod: windows-server-threshold
 ---
 
 # Windows Admin Center Frequently Asked Questions
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10
+>Applies To: Windows Admin Center, Windows Admin Center Preview
 
 Here are answers to the most commonly asked questions about Windows Admin Center.
 
 ## What is Windows Admin Center?
 
 Windows Admin Center is a lightweight, browser-based GUI platform and toolset for IT Admins to manage Windows Server and Windows 10. It's the evolution of familiar in-box administrative tools, such as Server Manager and Microsoft Management Console (MMC) into a modernized, simplified, integrated, and secure experience.
+
+## What is Windows Admin Center Preview, which version is right for me?
+
+There are two versions of Windows Admin Center available for download:
+
+**Windows Admin Center Preview**
+-  For IT admins who want the latest and greatest features on a regular cadence, this version is for you. Windows Admin Center Preview 1806 is the first post-GA preview release, and our intent is to provide subsequent update releases every month or so. The core platform continues to be production-ready and the license provides production use rights. However, note that you will see the introduction of new tools and capabilities which are clearly marked as PREVIEW and are suitable for evaluation and testing.
+- To get the latest Preview release, registered Insiders may download Windows Admin Center Preview directly from the [Windows Server Insider Preview download page](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewserver), under the Additional Downloads dropdown. If you have not yet registered as an Insider, see [Getting Started with Windows Server](https://insider.windows.com/en-us/for-business-getting-started-server/) on the Windows Insiders for Business portal.
+
+**Windows Admin Center** 
+
+- For IT admins who are not able to update frequently or who want more validation time for the releases they use in production, this version is for you. Our current GA release is Windows Admin Center 1804.25. Later this year, several months’ worth of preview releases will culminate in another GA release once new functionality receives broader validation coverage.
+- To get the latest GA release, [download here](https://aka.ms/WACDownload).
 
 ## Why was "Windows Admin Center" chosen as the final name for "Project Honolulu"?
 
@@ -34,7 +47,7 @@ Windows Admin Center has no additional cost beyond Windows. You can use Windows 
 
 ## What versions of Windows Server can I manage with Windows Admin Center?
 
-Windows Admin Center will be optimized for Windows Server 2019 and enable key themes in the upcoming Windows Server 2019 release: hybrid cloud scenarios and hyper-converged infrastructure management in particular. Although Windows Admin Center will work best with Windows Server 2019, it supports managing a variety of versions that customers already use: Windows Server 2012 and newer.
+Windows Admin Center will be optimized for Windows Server 2019 and enable key themes in the upcoming Windows Server 2019 release: hybrid cloud scenarios and hyper-converged infrastructure management in particular. Although Windows Admin Center will work best with Windows Server 2019, it supports managing a variety of versions that customers already use: Windows Server 2012 and newer. There is also limited functionality support for managing Windows Server 2008 R2 in Windows Admin Center Preview.
 
 ## Is Windows Admin Center a complete replacement for all traditional in-box and RSAT tools?
 
@@ -77,7 +90,7 @@ Yes, Windows Admin Center can be installed on Windows 10 (version 1709 or later)
 
 ## Are there any plans for Windows Admin Center to manage Windows Server 2008 R2 or earlier?
 
-We are investigating due to customer demand, but there is currently no locked plan to deliver, and support would be minimal at best. Windows Admin Center relies on PowerShell capabilities and platform technologies that don’t exist in Windows Server 2008 R2 and earlier, making full support infeasible. Furthermore, Windows Server 2008/2008 R2 are approaching end of support in January 2020 so Microsoft recommends customers move to Azure or upgrade to Windows Server 2016.
+Windows Admin Center Preview now supports limited functionality to manage Windows Server 2008 R2. Windows Admin Center relies on PowerShell capabilities and platform technologies that don’t exist in Windows Server 2008 R2 and earlier, making full support infeasible.  Windows Server 2008/2008 R2 are approaching end of support in January 2020 so Microsoft recommends customers move to Azure or upgrade to Windows Server 2016.
 
 ## Are there any plans for Windows Admin Center to manage Linux connections?
 
@@ -97,39 +110,15 @@ Windows Admin Center does not require internet access and does not require Micro
 
 ## Are there any other dependencies or prerequisites?
 
-Windows Admin Center can be installed on Windows 10 Fall Anniversary Update (1709) or newer, or Windows Server 2016 or newer. To manage Windows Server 2012 or 2012 R2, installation of Windows Management Framework 5.1 is required on those servers. There are no other dependencies. IIS is not required, agents are not required, SQL Server is not required.
+Windows Admin Center can be installed on Windows 10 Fall Anniversary Update (1709) or newer, or Windows Server 2016 or newer. To manage Windows Server 2008 R2, 2012, or 2012 R2, installation of Windows Management Framework 5.1 is required on those servers. There are no other dependencies. IIS is not required, agents are not required, SQL Server is not required.
 
 ## What about extensibility and 3rd-party support?
 
-The Windows Admin Center SDK will soon launch in public preview. As a platform, growing our ecosystem and enabling partner extensibility has been a key priority since the beginning. We’ve been working with early-adopter partners to refine the extension development experience in a private preview of our SDK. Look for a public preview SDK release announcement in the coming weeks, and if you’re going to the Microsoft Build conference in May, be sure to stop by our booth.  [Read more about the Windows Admin Center SDK](..\extend\how-sdk-works.md).
+The Windows Admin Center SDK is available in public preview. As a platform, growing our ecosystem and enabling partner extensibility has been a key priority since the beginning. We’ve been working with early-adopter partners to refine the extension development experience of our SDK. If you’re going to the Microsoft Build conference in May, be sure to stop by our booth.  [Read more about the Windows Admin Center SDK](..\extend\extensibility-overview.md).
 
-## What is the state of the Hyper-Converged Cluster Manager UI, or why is it marked as Preview?
+## Can I manage Hyper-Converged Infrastructure with Windows Admin Center?
 
-The hyper-converged cluster manager solution in Windows Admin Center is a production-ready preview and we will continue to enhance and complete key scenarios (in compute, storage, networking, and clustering) to align with the launch of Windows Server 2019 later this year.  For more information, [read more about managing hyper-converged infrastructure](..\use\manage-hyper-converged.md).
-
-## Will the Hyper-Converged Cluster Manager UI support Windows Server 2016?
-
-One of our top user requests is to add support for managing hyper-converged clusters on Windows Server 2016. This will take the form of a Windows Update package for Windows Server 2016 which will be published in the [catalog](https://support.microsoft.com/en-us/help/4000825) when it is available. Look for another announcement on availability in the coming weeks.
-
-## When managing Hyper-Converged Infrastructure, are there differences between managing Windows Server 2016 and Windows Server Insider Preview?
-
-Yes. Windows Admin Center for Hyper-Converged Infrastructure receives frequent updates that improve the experience for both Windows Server 2016 and Windows Server Insider Preview. However, certain new features are only available for Insider Preview – for example, the toggle switch for de-duplication and compression.
-
-## Can I use Windows Admin Center to manage Storage Spaces Direct for other use cases (not hyper-converged), such as converged Scale-Out File Server (SoFS) or Microsoft SQL Server?
-
-Windows Admin Center for Hyper-Converged Infrastructure does not provide management or monitoring options specifically for other use cases of Storage Spaces Direct – for example, it can’t create file shares. However, the Dashboard and core features, such as creating volumes or replacing drives, work for any Storage Spaces Direct cluster.
-
-## What’s the difference between a Failover Cluster and a Hyper-Converged Cluster?
-
-In general, the term “hyper-converged” refers to running Hyper-V and Storage Spaces Direct on the same clustered servers to virtualize compute and storage resources. In the context of Windows Admin Center, when you click + Add from the connections list, you can choose between adding a Failover Cluster connection or a Hyper-Converged Cluster connection:
-
-* The Failover Cluster connection is the successor to the Failover Cluster Manager desktop app. It provides a familiar, general-purpose management experience for any cluster supporting any workload, including Microsoft SQL Server. It is available for Windows Server 2012 R2 and later.
-
-* The Hyper-Converged Cluster connection is an all-new experience tailored for Storage Spaces Direct and Hyper-V. It features the Dashboard and emphasizes charts and alerts for monitoring. It is available for Windows Server 2016 and Windows Server Insider Preview.
-
-## When managing Hyper-Converged Infrastructure, why do I need the latest cumulative update for Windows Server 2016?
-
-Windows Admin Center for Hyper-Converged Infrastructure depends on management APIs developed since Windows Server 2016 was released. These APIs are available as of April 2018.
+Yes. Windows Admin Center supports the management of hyper-converged clusters running Windows Server 2016 or Windows Server 2019 Insider Preview builds. The hyper-converged cluster manager solution in Windows Admin Center is a production-ready preview and we will continue to enhance and complete key scenarios (in compute, storage, networking, and clustering) to align with the launch of Windows Server 2019 later this year.  For more information, [read more about managing hyper-converged infrastructure](..\use\manage-hyper-converged.md).
 
 ## Does Windows Admin Center require System Center?
 

@@ -31,6 +31,7 @@ Below is an alphabetical list of Microsoft and third-party providers with MFA of
 ||||
 |-|-|-|
 |**Provider**|**Offering**|**Link to learn more**|
+|Duo Security|Duo MFA Adapter for AD FS|[Duo Authentication for AD FS](https://duo.com/docs/adfs)|
 |Gemalto|Gemalto Identity & Security Services|[http://www.gemalto.com/identity](http://www.gemalto.com/identity)|
 |inWebo Technologies|inWebo Enterprise Authentication service|[inWebo Enterprise Authentication](http://www.inwebo.com)|
 |Login People|Login People MFA API connector for AD FS 2012 R2 (public beta)|[https://www.loginpeople.com](https://www.loginpeople.com)|

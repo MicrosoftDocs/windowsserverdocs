@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # bitsadmin rawreturn
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Returns data suitable for parsing.
 

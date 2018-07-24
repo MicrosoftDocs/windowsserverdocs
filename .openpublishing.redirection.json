@@ -1,6 +1,26 @@
 {
   "redirections": [
     {
+      "source_path": "WindowsServerDocs/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-overview.md",
+      "redirect_url": "/windows-server/remote/remote-access/vpn/always-on-vpn/always-on-vpn-technology-overview",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/network-offload.md",
+      "redirect_url": "/windows-server/networking/technologies/hpn/hpn-top",
+      "redirect_document_id": true
+    },
+    {  
+      "source_path": "WindowsServerDocs/windows-insider/Whats-new-wip-at-work.md",
+      "redirect_url": "https://docs.microsoft.com/windows-insider/at-work/whats-new-wip-at-work",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/windows-insider/index.md",
+      "redirect_url": "https://docs.microsoft.com/windows-insider/at-work/",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "WindowsServerDocs/identity/ad-ds/get-started/windows-time-service/Windows-Time-Service.md",
       "redirect_url": "/windows-server/networking/windows-time-service/windows-time-service-top",
       "redirect_document_id": true
@@ -251,6 +271,11 @@
       "redirect_url": "/windows-server/storage/storage-replica/storage-replica-known-issues",
       "redirect_document_id": false
     },		
+    {
+      "source_path": "WindowsServerDocs/storage/storage-replica/storage-replica-ui.md",
+      "redirect_url": "/windows-server/storage/storage-replica/server-to-server-storage-replication",
+      "redirect_document_id": false
+    },	
     {
       "source_path":  "WindowsServerDocs/storage/storage-spaces/fault-domains-windows-server-2016.md",
       "redirect_url":  "/windows-server/storage/storage-spaces/fault-domains-windows-server",
@@ -8225,6 +8250,11 @@
   "source_path": "WindowsServerDocs/manage/honolulu/honolulu-troubleshoot.md",
   "redirect_url": "/windows-server/manage/windows-admin-center/overview",
   "redirect_document_id": false
+},
+{
+  "source_path": "WindowsServerDocs/administration/kernel-soft-reboot.md",
+  "redirect_url": "/windows-server/windows-server",
+  "redirect_document_id": true
 }
   ]
 }

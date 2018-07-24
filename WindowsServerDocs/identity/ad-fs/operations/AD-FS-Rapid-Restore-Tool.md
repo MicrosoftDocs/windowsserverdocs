@@ -5,7 +5,7 @@ description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 02/20/2018
+ms.date: 07/11/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 
@@ -49,7 +49,7 @@ import-module 'C:\Program Files (x86)\ADFS Rapid Recreation Tool\ADFSRapidRecrea
 ```
 
 >[!NOTE] 
->If you are using the Windows Integrated Database (WID), then this tool needs to be run on the primary AD FS server.  You can use the `Get-SyncProperties` PowerShell cmdlet to determine whether or not the server you are on is the primary server.
+>If you are using the Windows Integrated Database (WID), then this tool needs to be run on the primary AD FS server.  You can use the `Get-AdfsSyncProperties` PowerShell cmdlet to determine whether or not the server you are on is the primary server.
 
 ### System requirements
 
@@ -218,3 +218,26 @@ Every time a backup or restore is performed a log file is created. These can be 
 
 >[!NOTE]
 > When performing a restore a PostRestore_Instructions file might be created containing an overview of the additional authentication providers, attribute stores and local claims provider trusts to be installed manually before starting the AD FS service.
+
+## Version Release History
+
+### Version: 1.0.72.0
+Release: July 2018
+
+**Fixed issues:**
+
+   - Bug fix: Fixed the .MSI installer to support in-place upgrades 
+
+### 1.0.18.0
+Release: July 2018
+
+**Fixed issues:**
+
+   - Bug fix: handle service account passwords that have special characters in them (ie, ‘&’)
+   - Bug fix: restoration fails because Microsoft.IdentityServer.Servicehost.exe.config is being used by another process
+
+
+### 1.0.0.0
+Released: October 2016
+
+Initial release of AD FS Rapid Restore Tool

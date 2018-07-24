@@ -5,16 +5,16 @@ ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
-ms.date: 04/05/2018
-ms.localizationpriority: low
+ms.date: 06/18/2018
+ms.localizationpriority: high
 ms.prod: windows-server-threshold
 ---
 
 # Windows Admin Center Case Studies
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10
+>Applies To: Windows Admin Center, Windows Admin Center Preview
 
-## <a title="At a glance"></a>Learn about how our customers have used Windows Admin Center to improve their productivity and reduce costs.
+## Learn about how our customers have used Windows Admin Center to improve their productivity and reduce costs.
 
 - [Ava6](#ava6)
 - [Comparex](#comparex)
@@ -22,7 +22,7 @@ ms.prod: windows-server-threshold
 - [FZI Research Center for Information Technology](#fzi-research-center-for-information-technology)
 - [GVC Group](#gvc-group)
 - [Inside Technologies](#inside-technologies)
-- [SecureGUARD / COPA-DATA](#secureguard-/-copa-data)
+- [SecureGUARD / COPA-DATA](#secureguard-copa-data)
 - [VaiSulWeb](#vaisulweb)
 
 ## Ava6
@@ -133,7 +133,7 @@ Windows Admin Center is deployed by Inside Technologies on a single server to ma
 
 Inside Technologies is using Windows Admin Center to manage their customers remotely, and with integration of Azure Activity Directory, with increased security thanks to Multi-Factor Authentication.  The dashboards on Windows Admin Center offer improved visibility into the state of each role on each server, and ease of management down to the finest detail with PowerShell.  Inside Technologies has realized a reduction in time spent to manage servers vs. using different consoles for each server role.
 
-## SecureGUARD / COPA-DATA
+## <a id="secureguard-copa-data"></a>SecureGUARD / COPA-DATA
 
 [SecureGUARD GmbH](http://www.secureguard.at/) helps companies solve complex IT problems in security and cloud infrastructure with a series of products and custom engineering services. SecureGUARD builds IT security appliances and Microsoft Windows Server based appliances, more recently building rack-level converged appliances for cloud infrastructures. SecureGUARD is a Microsoft Gold Partner in Application Development and Datacenter.
  
