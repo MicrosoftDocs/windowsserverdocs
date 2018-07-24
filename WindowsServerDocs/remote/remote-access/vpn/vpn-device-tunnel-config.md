@@ -3,7 +3,7 @@ title: Configure the VPN device tunnel in Windows 10
 description: Learn how to create a VPN device tunnel in Windows 10.
 manager: elizapo
 ms.prod: windows-server-threshold
-ms.date: 06/29/2018
+ms.date: 07/19/2018
 ms.technology: networking-ras
 ms.topic: article
 ms.assetid: 158b7a62-2c52-448b-9467-c00d5018f65b
@@ -22,16 +22,15 @@ Unlike _user tunnel_, which only connects after a user logs on to the device or 
 
 Use traffic filters to control the availability of the corporate resources through the _device tunnel_ and when employing machine certificate authentication. Both _device tunnel_ and _user tunnel_ operate independently with their VPN profiles, can be connected at the same time, and can use different authentication methods and other VPN configuration settings as appropriate.
 
->[!Note]
->You must enable machine certificate authentication for VPN connections and define a root certification authority for authenticating incoming VPN connections. 
->
->```syntax
->$VPNRootCertAuthority = “Common Name of trusted root certification authority”
->$RootCACert = (Get-ChildItem -Path cert:LocalMachine\root | Where-Object {$_.Subject -Like “*$VPNRootCertAuthority*” })
->Set-VpnAuthProtocol -UserAuthProtocolAccepted Certificate, EAP -RootCertificateNameToAccept $RootCACert -PassThru
->```
 
-## Device Tunnel Features and Requirements
+## Device Tunnel Requirements and Features
+You must enable machine certificate authentication for VPN connections and define a root certification authority for authenticating incoming VPN connections. 
+
+```syntax
+$VPNRootCertAuthority = “Common Name of trusted root certification authority”
+$RootCACert = (Get-ChildItem -Path cert:LocalMachine\root | Where-Object {$_.Subject -Like “*$VPNRootCertAuthority*” })
+Set-VpnAuthProtocol -UserAuthProtocolAccepted Certificate, EAP -RootCertificateNameToAccept $RootCACert -PassThru
+```
 
 ![Device Tunnel Features and Requirements](../../media/device-tunnel-feature-and-requirements.png)
 
