@@ -18,7 +18,7 @@ ms.date: 07/23/2018
 [« Review prerequisites](guarded-fabric-guarded-host-prerequisites.md)
 [Confirm attestation »](guarded-fabric-confirm-hosts-can-attest-successfully.md)
 
-TPM mode uses a TPM identifier (also called a platform identifier or endorsement key \[EKpub\]) to begin determining whether a particular host is authorized as "guarded." This mode of attestation uses secure boot and code integrity measurements to ensure that a given Hyper-V host is in a healthy state and is running only trusted code. In order for attestation to understand what is and is not healthy, you must capture the following artifacts:
+TPM mode uses a TPM identifier (also called a platform identifier or endorsement key \[EKpub\]) to begin determining whether a particular host is authorized as "guarded." This mode of attestation uses Secure Boot and code integrity measurements to ensure that a given Hyper-V host is in a healthy state and is running only trusted code. In order for attestation to understand what is and is not healthy, you must capture the following artifacts:
 
 1.  TPM identifier (EKpub)
 
@@ -36,11 +36,9 @@ We recommend that you capture the baseline and CI policy from a "reference host"
 
 ## Versioned attestation policies
 
-Windows Server 2019 includes a new version of attestation (v2 attestation) that affect how hosts are registered with HGS. The difference between v2 and v1 attestation in Windows Server 2016 is that v2 supports using different identity keys on the host (the virtual secure mode signing key instead of the encryption key). V1 attestation also allowed TPM endorsement keys to be added to HGS even if the TPM didn't have a manufacturer's certificate, whereas v2 attestation requires the certificate be present. 
+Windows Server 2019 introduces a new method for attestation, called v2 attestation, where a TPM certificate must be present in order to add the EKPub to HGS. The v1 attestation method used in Windows Server 2016 allowed you to override this safety check by specifying the `-Force` flag when you run `Add-HgsAttestationTpmHost` or other TPM attestation cmdlets to capture the artifacts. Beginning with Windows Serer 2019, you can allow a TPM without a certificate by specifying the `-PolicyVersion v1` flag when you run `Add-HgsAttestationTpmHost`.
 
-When you run `Add-HgsAttestationTpmHost` or other attestation cmdlets to capture the artifacts on Windows Server 2019, v2 attestation is used by default. You can specify v1 attestation be used instaed by adding the `-PolicyVersion v1` parameter. 
-
-A host can only attest if all of the artifacts (EKPub + TPM baseline + CI policy) use the same policy version. V2 attestation is tried first. If that fails, v1 attesation is used. 
+A host can only attest if all artifacts (EKPub + TPM baseline + CI Policy) use the same version of attestation. V2 attestation is tried first, and if that fails, v1 attestation is used.
 
 ## Capture the TPM identifier (platform identifier or EKpub) for each host
 
@@ -65,7 +63,7 @@ A host can only attest if all of the artifacts (EKPub + TPM baseline + CI policy
     > If you encounter an error when adding a TPM identifier regarding an untrusted Endorsement Key Certificate (EKCert), ensure that the [trusted TPM root certificates have been added](guarded-fabric-install-trusted-tpm-root-certificates.md) to the HGS node.
     > Additionally, some TPM vendors do not use EKCerts.
     > You can check if an EKCert is missing by opening the XML file in an editor such as Notepad and checking for an error message indicating no EKCert was found.
-    > If this is the case, and you trust that the TPM in your machine is authentic, you can use the `-PolicyVersion v1` parameter in Windows Server 2019 or the `-Force` parameter in Windows Server 2016 to override this safety check and add the host identifier to HGS.
+    > If this is the case, and you trust that the TPM in your machine is authentic, you can use the `-PolicyVersion v1` parameter beginning with Windows Server 2019, or the `-Force` parameter in Windows Server 2016, to add the host identifier to HGS.
 
 ## Create and apply a code integrity policy
 
