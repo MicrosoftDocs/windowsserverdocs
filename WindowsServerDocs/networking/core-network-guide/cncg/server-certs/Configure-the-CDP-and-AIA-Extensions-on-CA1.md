@@ -69,7 +69,7 @@ To perform this procedure, you must be a member of Domain Admins.
   
 13. On the **Extensions** tab, select **Include in the AIA of issued certificates**.  
   
-14. In **Add Location**, in **Location**, type `file://\\pki.corp.contoso.com/pki/<ServerDNSName><CaName><CertificateName>.crt`, and then click **OK**. This returns you to the CA properties dialog box.  
+14. In **Add Location**, in **Location**, type `file://\\pki.corp.contoso.com\pki\<ServerDNSName><CaName><CertificateName>.crt`, and then click **OK**. This returns you to the CA properties dialog box.  
   
     > [!IMPORTANT]  
     > Ensure that **Include in the AIA extension of issued certificates** is not selected.  
