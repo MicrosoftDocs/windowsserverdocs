@@ -256,7 +256,7 @@ You will configure this certificate for autoenrollment.
 
 2.  In the navigation pane, right-click **Certificate Templates**, and click **Manage**.
 
-3.  In the Certificate Templates console, right-click **RAS and IAS Server**, and click **Duplicate Template**.
+3.  In the Certificate Templates console, right-click **RAS and IAS Server**, and select **Duplicate Template**.
 
 4.  On the Properties of New Template dialog box, on the **General** tab, in **Template display name**, type **NPS Server Authentication**.
 

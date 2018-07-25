@@ -24,10 +24,6 @@ ms.prod: windows-server-threshold
 
 [System Center](https://www.microsoft.com/cloud-platform/system-center) is an on-premises data center management solution for deployment, configuration, management, monitoring your entire data center. System Center lets you see the status of all the systems in your environment, while Windows Admin Center lets you drill down into a specific server to manage or troubleshoot it with more granular tools.
 
-## Operations Management Suite
-
-[Operations Management Suite](https://www.microsoft.com/cloud-platform/operations-management-suite) is a collection of management services entirely hosted in Azure that that you can use to manage servers both in the cloud and on-premises. Operations Management Suite lets you monitor and analyze resource performance, as well as automate manual processes. Windows Admin Center is a customer-deployed solution that provides additional tools at the single-server/single-cluster level and complements the multi-system cloud-hosted capabilities of Operations Management Suite.
-
 ## Intune
 
 [Intune](https://www.microsoft.com/cloud-platform/microsoft-intune) is a cloud-based enterprise mobility management service that lets you manage iOS, Android, Windows, and macOS devices, based on a set of policies. Intune focuses on enabling you to secure company information by controlling how your workforce accesses and shares information. In contrast, Windows Admin Center is not policy-driven, but enables ad-hoc management of Windows 10 and Windows Server systems, using remote PowerShell and WMI over WinRM.
