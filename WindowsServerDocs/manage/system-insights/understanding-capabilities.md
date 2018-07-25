@@ -26,7 +26,7 @@ This topic also describes the data sources, prediction timelines, and prediction
 A System Insights capability is a machine learning or statistics model that analyzes system data to help give you increased insight into the functioning of your deployment. System Insights introduces an initial set of default capabilities, as well as allows you to add new capabilities dynamically, without needing to update the operating system. 
 
 >[!NOTE]
->Detailed documentation explaining how to create, add, and update capabilities is available [here](adding-and-developing-capabilities), and [the managing capabilities document](managing-system-insights.md) provides more high-level information about this functionality.
+>Detailed documentation explaining how to create, add, and update capabilities is available [here](adding-and-developing-capabilities.md), and [the managing capabilities document](managing-capabilities.md) provides more high-level information about this functionality.
 
 Additionally, each capability runs locally on each Windows Server instance, helping administrators proactively detect and address problematic issues in their deployments. 
 Capabilities run locally on each server instance, and they can be managed individually, allowing you to seamlessly leverage these capabilities to detect and address problematic issues in your deployments.
