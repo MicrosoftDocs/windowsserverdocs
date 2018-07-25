@@ -59,7 +59,8 @@ In addition, the following requirements apply:
 
 Minimum (for small scale 2-3 node)
 - 10 Gbps network interface
-- Direct-connect (switchless) is supported with full mesh connectivity
+- Direct-connect (switchless) is supported with 2-nodes
+
 Recommendeded (for high performance, at scale, or deployments of 4+ nodes)
 - NICs that are remote-direct memory access (RDMA) capable, iWARP (recommended) or RoCE
 - Two or more NICs for redundancy and performance
