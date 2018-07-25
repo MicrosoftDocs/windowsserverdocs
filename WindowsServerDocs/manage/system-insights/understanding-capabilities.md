@@ -1,6 +1,6 @@
 ---
-title: System Insights capabilities
-description: "System Insights capabilities"
+title: Understanding capabilities
+description: "Understanding capabilities"
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -14,7 +14,7 @@ ms.author: gawatu
 manager: mallikarjun.chadalapaka
 ms.date: 6/05/2018
 ---
-# System Insights capabilities
+# Understanding capabilities
 
 >Applies To: Windows Server Insider Preview build 17692 and later
 
@@ -95,7 +95,8 @@ All System Insights capabilities must output a status associated with each predi
 
 
 ## See also
-- [Managing System Insights](managing-system-insights.md)
-- [System Insights overview](system-insights-overview.md)
+- [Overview](overview.md)
+- [Managing capabilities](managing-capabilities.md)
+- [Adding and developing capabilities](adding-and-developing-capabilities.md)
 - [System Insights FAQ](system-insights-faq.md)
 - [System Insights known issues](system-insights-known-issues.md)
