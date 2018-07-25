@@ -26,7 +26,7 @@ This topic also describes the data sources, prediction timelines, and prediction
 A System Insights capability is a machine learning or statistics model that analyzes system data to help give you increased insight into the functioning of your deployment. System Insights introduces an initial set of default capabilities, as well as allows you to add new capabilities dynamically, without needing to update the operating system. 
 
 >[!NOTE]
->Detailed documentation explaining how to create and update capabilities will be available soon, and the [System Insights management](managing-system-insights.md) provides more high-level information about this functionality.
+>Detailed documentation explaining how to create, add, and update capabilities is available [here](adding-and-developing-capabilities), and [the managing capabilities document](managing-system-insights.md) provides more high-level information about this functionality.
 
 Additionally, each capability runs locally on each Windows Server instance, helping administrators proactively detect and address problematic issues in their deployments. 
 Capabilities run locally on each server instance, and they can be managed individually, allowing you to seamlessly leverage these capabilities to detect and address problematic issues in your deployments.
@@ -40,7 +40,7 @@ When a capability is invoked, it provides an output to help explain the result o
 - **Error** - An unknown problem caused the capability to fail. 
 - **None** - No prediction was made. This could be due to a lack of data or any other capability-specific reason for not making a prediction. 
 
-Additionally, any capability-specific data contained in the result will be placed in a user-accessible JSON file, which [can be found using PowerShell](managing-system-insights.md). 
+Additionally, any capability-specific data contained in the result will be placed in a user-accessible JSON file, which [can be found using PowerShell](https://docs.microsoft.com/windows-server/manage/system-insights/managing-capabilities#retrieving-capability-results). 
 
 ## Default capabilities
 In Windows Server 2019, System Insights introduces four default capabilities focused on capacity forecasting:
@@ -95,8 +95,9 @@ All System Insights capabilities must output a status associated with each predi
 
 
 ## See also
-- [Overview](overview.md)
+To learn more about System Insights, use the following resources:
+
+- [System Insights overview](overview.md)
 - [Managing capabilities](managing-capabilities.md)
 - [Adding and developing capabilities](adding-and-developing-capabilities.md)
-- [System Insights FAQ](system-insights-faq.md)
-- [System Insights known issues](system-insights-known-issues.md)
+- [System Insights FAQ](faq.md)

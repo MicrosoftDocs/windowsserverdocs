@@ -1,6 +1,6 @@
 ---
-title: Choosing data to collect 
-description: "Choosing data to collect"
+title: System Insights data sources 
+description: "System Insights data sources"
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -15,7 +15,8 @@ manager: mallikarjun.chadalapaka
 ms.date: 7/23/2018
 ---
 
-# Choosing data to collect
+# System Insights data sources
+
 System Insights introduces extensible, local data collection functionality. When writing a new capability, you can specify existing or new data sources to collect and analyze. 
 
 This topic describes the data sources that you can choose when registering a new capability.
@@ -81,8 +82,10 @@ Each series has an aggregation type assocated it. For the performance counter da
 | Network | Average |
 
 ## See also
+To learn more about System Insights, use the following resources:
 
-- [System Insights overview](system-insights-overview.md)
-- [System Insights capabilities](system-insights-capabilities.md)
-- [Managing System Insights](managing-system-insights.md)
-- [System Insights known issues](system-insights-known-issues.md)
+- [System Insights overview](overview.md)
+- [Understanding capabilities](understanding-capabilities.md)
+- [Managing capabilities](managing-capabilities.md)
+- [Adding and developing capabilities](adding-and-developing-capabilities.md)
+- [System Insights FAQ](faq.md)

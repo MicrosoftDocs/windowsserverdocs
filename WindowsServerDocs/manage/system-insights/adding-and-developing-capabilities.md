@@ -19,28 +19,31 @@ ms.date: 7/23/2018
 
 >Applies To: Windows Server Insider Preview build 17692 and later
 
-System Insights enables you to add or create new predictive capabilities that can integrate with and extend the existing System Insights infrastructure. Any new capability can:
+System Insights enables you add new predictive capabilities to System Insights, without requiring any OS updates. This enables developers, including Microsoft and third parties, to create and deliver new capabilities mid-release to address the scenarios you care about. 
 
-- **Specify custom system data to collect and analyze.** This data can be any performance counter or ETW event, which will be collected, persisted locally, and returned to the capability for analysis when the capability is invoked. 
-- **Leverage the existing System Insights Windows Admin Center and PowerShell management planes.** Not only will new capabilities be discoverable in System Insights, they also benefit from custom schedules and remediation actions.
+Any new capability can integrate with and extend the existing System Insights infrastructure:
 
->[!IMPORTANT]
->Adding a new capability doesn't require any OS changes. **This means you can create or download new capabilities outside of Windows Server releases.** This functionality not only allows us to ship you new capabilities mid-release, but it also means you can create new capabilities that address the scenarios important to you.
+- New capabilities can **specify any performance counter or ETW event**, which will be collected, persisted locally, and returned to the capability for analysis when the capability is invoked.  
+- New capabilities can **leverage the existing Windows Admin Center and PowerShell management planes**. Not only will new capabilities be discoverable in System Insights, they also benefit from custom schedules and remediation actions. 
 
 ## Manage new capabilities
 - [Learn](add-remove-update-capabilities.md) how to add, remove, and update capabilities using PowerShell. 
 
 ## Develop a capability
 Use the following resources to help you get started writing your own custom capabilities:
-- [Learn](choosing-data-to-collect.md) about the data sources you can collect.
+- [Learn](data-sources.md) about the data sources you can collect.
 - [Download](https://www.nuget.org/packages/Microsoft.WindowsServer.SystemInsights/) the System Insights NuGet package, which contains the classes and interfaces you need to write a capability.
 - Visit the API documentation to learn about the System Insights classes and interfaces. 
 - [Use](https://microsoft.visualstudio.com/DefaultCollection/OS.Samples/_git/collections.classic) the System Insights sample capability to help you get started. This shows you how to register a capability, specify the data sources to collect, and start analyzing system data.
 
-## See also
+>[!NOTE]
+>This is prerelease functionality. It's subject to change, as we add new functionality and incorporate feedback.
 
-- [System Insights overview](system-insights-overview.md)
-- [System Insights capabilities](system-insights-capabilities.md)
-- [Managing System Insights](managing-system-insights.md)
-- [System Insights FAQ](system-insights-faq.md)
-- [System Insights known issues](system-insights-known-issues.md)
+## See also
+To learn more about System Insights, use the following resources:
+
+- [System Insights overview](overview.md)
+- [Understanding capabilities](understanding-capabilities.md)
+- [Managing capabilities](managing-capabilities.md)
+- [Adding, removing, and updating capabilities](add-remove-update-capabilities.md)
+- [System Insights FAQ](faq.md)

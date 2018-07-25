@@ -1,6 +1,6 @@
 ---
-title: Managing System Insights
-description: "Managing System Insights"
+title: Managing capabilities
+description: "Managing capabilities"
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -14,7 +14,7 @@ ms.author: gawatu
 manager: mallikarjun.chadalapaka
 ms.date: 6/05/2018
 ---
-# Managing System Insights
+# Managing capabilities
 
 >Applies To: Windows Server Insider Preview build 17692 and later
 
@@ -55,7 +55,7 @@ Invoke-InsightsCapability -Name "CPU capacity forecasting"
 >To make sure invoking a capability doesn't conflict with critical operations on your machine, consider scheduling predictions during off-business hours.
 
 ## Retrieving capability results
-Once a capability has been invoked, the most recent results are visible using **Get-InsightsCapability** or **Get-InsightsCapabilityResult**. These cmdlets output the most recent **Status** and **Status Description** of each capability, which describe the result of each prediction. The **Status** and **Status Description** fields are further described in the [System Insights capability page](system-insights-capabilities.md). 
+Once a capability has been invoked, the most recent results are visible using **Get-InsightsCapability** or **Get-InsightsCapabilityResult**. These cmdlets output the most recent **Status** and **Status Description** of each capability, which describe the result of each prediction. The **Status** and **Status Description** fields are further described in the [understanding capabilities document](understanding-capabilities.md). 
 
 Additionally, you can use the **Get-InsightsCapabilityResult** cmdlet to view the last 30 prediction results and to retrieve the data associated with the prediction: 
 
@@ -98,7 +98,7 @@ Set-InsightsCapabilitySchedule -Name "Total storage consumption forecasting" -Ho
 Set-InsightsCapabilitySchedule -Name "Volume consumption forecasting" -Minute -MinutesInterval 30 
 ```
 >[!NOTE]
->Because the default capabilities analyze daily data, it's recommended to use daily schedules for these capabilities. Learn more about the default capabilities [here](system-insights-capabilities.md).
+>Because the default capabilities analyze daily data, it's recommended to use daily schedules for these capabilities. Learn more about the default capabilities [here](understanding-capabilities.md).
 
 You can also use Windows Admin Center to view and set schedules for each capability by clicking **Settings**. The current schedule is shown on the **Schedule** tab, and you can use the GUI tools to create a new schedule:
 
@@ -149,7 +149,9 @@ By exposing the existing data collection and management infrastructure, System I
 >Detailed developer documentation and sample capabilities will be available soon.
 
 ## See also
-- [System Insights overview](system-insights-overview.md)
-- [System Insights capabilities](system-insights-capabilities.md)
-- [System Insights FAQ](system-insights-faq.md)
-- [System Insights known issues](system-insights-known-issues.md)
+To learn more about System Insights, use the following resources:
+
+- [System Insights overview](overview.md)
+- [Understanding capabilities](understanding-capabilities.md)
+- [Adding and developing capabilities](adding-and-developing-capabilities.md)
+- [System Insights FAQ](faq.md)
