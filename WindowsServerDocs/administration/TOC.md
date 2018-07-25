@@ -67,10 +67,9 @@
 #### [Managing capabilities](..\manage\system-insights\managing-capabilities.md)
 #### [Adding and developing capabilities](..\manage\system-insights\adding-and-developing-capabilities.md)
 ##### [Adding, removing, and updating capabilities](..\manage\system-insights\add-remove-update-capabilities)
-##### [Choosing capability data sources](..\manage\system-insights\choosing-data-to-collect.md)
-##### [FAQ](..\manage\system-insights\faq.md)
-##### [Known issues](..\manage\system-insights\known-issues.md)
-#### Create a capability
+##### [Choosing capability data sources](..\manage\system-insights\data-sources.md)
+#### [FAQ](..\manage\system-insights\faq.md)
+#### [Known issues](..\manage\system-insights\known-issues.md)
 
 
 <!--
