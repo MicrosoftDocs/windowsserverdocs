@@ -3,7 +3,7 @@ title: Understanding and using Hyper-V hypervisor scheduler types
 description: Provides information for Hyper-V host administrators on the use of Hyper-V's scheduler modes
 author: allenma
 ms.author: allenma
-ms.date: 04/26/2018
+ms.date: 07/17/2018
 ms.topic: article
 ms.prod: windows-server-hyper-v
 ms.technology: virtualization
@@ -12,12 +12,18 @@ ms.assetid: 6cb13f84-cb50-4e60-a685-54f67c9146be
 ---
 # Understanding and using Hyper-V hypervisor scheduler types
 
-Applies To: Windows 10, Windows Server 2016
+Applies To:
 
-This article describes new modes of virtual processor scheduling logic introduced in Windows Server 2016.  These modes, or scheduler types, determine how the Hyper-V hypervisor allocates and manages work across guest virtual processors.  A Hyper-V host administrator can select a hypervisor scheduler types that is best suited for the guest virtual machines (VMs) and configure the VMs to take advantage of the scheduling logic.
+* Windows 10
+* Windows Server 2016
+* Windows Server, version 1709
+* Windows Server, version 1803
+* Windows Server 2019
+
+This article describes new modes of virtual processor scheduling logic first introduced in Windows Server 2016.  These modes, or scheduler types, determine how the Hyper-V hypervisor allocates and manages work across guest virtual processors.  A Hyper-V host administrator can select a hypervisor scheduler types that is best suited for the guest virtual machines (VMs) and configure the VMs to take advantage of the scheduling logic.
 
 >[!NOTE]
->Updates are required to use the hypervisor scheduler features described in this document. For details, refer to Required updates.
+>Updates are required to use the hypervisor scheduler features described in this document. For details, refer to Required Updates.
 
 ## Background
 
@@ -75,14 +81,14 @@ The overall result of the core scheduler is that:
 
 The core scheduler is optional and must be explicitly enabled by the Hyper-V host administrator.
 
-If the hypervisor is configured to use the core scheduler type but the SMT capability is disabled or not present on the virtualization host, then the hypervisor will use the classic scheduler behavior.
+If the hypervisor is configured to use the core scheduler type but the SMT capability is disabled or not present on the virtualization host, then the hypervisor will use the classic scheduler behavior, regardless of the hypervisor scheduler type setting.
 
 ## Enabling SMT in guest virtual machines
 
 Once the virtualization host’s hypervisor is configured to use the core scheduler type, guest virtual machines may be configured to utilize SMT if desired. Exposing the fact that VPs are hyperthreaded to a guest virtual machine allows the scheduler in the guest operating system and workloads running in the VM to detect and utilize the SMT topology in their own work scheduling. The SMT processor topology is not shown to a guest virtual machine by default and must be explicitly enabled by the Hyper-V host administrator.
 
 PowerShell must be used enable SMT in a guest virtual machine; there is no user interface provided in the Hyper-V Manager UI.
-To enable SMT in a guest virtual machine, open a PowerShell windows with sufficient permissions, and type:
+To enable SMT in a guest virtual machine, open a PowerShell window with sufficient permissions, and type:
 
 ``` powershell
 Set-VMProcessor -VMName <VMName> -HwThreadCountPerCore 2
@@ -119,12 +125,12 @@ Windows Server 2016 and Windows Server 2019 1804 Hyper-V use the classic hypervi
 >[!NOTE]
 >The following updates are required to use the hypervisor scheduler features described in this document.
 
-| Version | Release  |Update Required |
-|--------------------|------|---------:|
-|Windows Server 2016 | 1607 | TBD |
-|Windows Server 2016 | 1703 | TBD |
-|Windows Server 2016 | 1709 | TBD |
-|Windows Server 2019 | 1804 | None |
+| Version | Release  | Update Required | KB Article |
+|--------------------|------|---------|-------------:|
+|Windows Server 2016 | 1607 | 2018.07 C | KB4338822 |
+|Windows Server 2016 | 1703 | 2018.07 C | KB4338827 |
+|Windows Server 2016 | 1709 | 2018.07 C | KB4338817 |
+|Windows Server 2019 | 1804 | None | None |
 
 ## Selecting the hypervisor scheduler type on Windows Server
 
@@ -144,26 +150,30 @@ Where `type` is one of:
 
 * Core
 
-The system must be rebooted for this change to take effect. Any changes to the hypervisor scheduler type require a reboot.
+The system must be rebooted for any changes to the hypervisor scheduler type to take effect.
 
 >[!NOTE]
 >The hypervisor root scheduler is not supported on Windows Server Hyper-V at this time.  Hyper-V administrators should not attempt to configure the root scheduler for use with server virtualization scenarios.
 
 ## How to determine the current scheduler type
 
-You can determine the current hypervisor scheduler type in use by examining the Event Log for hypervisor launch event ID 2, which reports the hypervisor scheduler type configured at hypervisor launch. Hypervisor launch events can be obtained from the Windows Event Viewer, or via PowerShell.
+You can determine the current hypervisor scheduler type in use by examining the Windows Sysem Event Log for the most recent hypervisor launch event ID 2, which reports the hypervisor scheduler type configured at hypervisor launch. Hypervisor launch events can be obtained from the Windows Event Viewer, or via PowerShell.
+
+Hypervisor launch event ID 2 denotes the hypervisor scheduler type, where:
+
+    1 = Classic scheduler, SMT disabled
+
+    2 = Classic scheduler
+
+    3 = Core scheduler
+
+    4 = Root scheduler
 
 ![Screen shot showing hypervisor launch event ID 2 details](media/Hyper-V-CoreScheduler-EventID2-Details.png)
 
-Event ID denotes the hypervisor scheduler type, where:
-    1 = Classic scheduler SMT disabled
-    2 = Classic scheduler
-    3 = Core scheduler
-    4 = Root scheduler
-
 ![Screen shot showing Event Viewer displaying hypervisor launch event ID 2](media/Hyper-V-CoreScheduler-EventViewer.png)
 
-### Viewing the Hyper-V hypervisor scheduler type launch event using PowerShell
+### Querying the Hyper-V hypervisor scheduler type launch event using PowerShell
 
 To query for hypervisor event ID 2 using PowerShell, enter the following commands from a PowerShell prompt.
 
