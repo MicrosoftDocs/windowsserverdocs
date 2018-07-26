@@ -8,7 +8,7 @@ ms.prod: windows-server-threshold
 ms.technology: networking
 ms.author: pashort
 author: shortpatti
-ms.date: 07/10/2018
+ms.date: 07/26/2018
 ---
 # Configure the CDP and AIA Extensions on CA1
 
@@ -59,13 +59,13 @@ To perform this procedure, you must be a member of Domain Admins.
   
     1.  Select the entry that starts with the path `ldap:///CN=<CATruncatedName>,CN=AIA,CN=Public Key Services`, and then click **Remove**. In **Confirm removal**, click **Yes**.  
   
-    2.  Select the entry `http://<ServerDNSName>/CertEnroll/<ServerDNSName><CaName><CertificateName>.crt`, and then click **Remove**. In **Confirm removal**, click **Yes**.  
+    2.  Select the entry `http://<ServerDNSName>/CertEnroll/<ServerDNSName>_<CaName><CertificateName>.crt`, and then click **Remove**. In **Confirm removal**, click **Yes**.  
   
     3.  Select the entry `file://\\<ServerDNSName>\CertEnroll\<ServerDNSName><CaName><CertificateName>.crt`, and then click **Remove**. In **Confirm removal**, click **Yes**.  
   
 11. In **Specify locations from which users can obtain a certificate revocation list (CRL)**, click **Add**. The **Add Location** dialog box opens.  
   
-12. In **Add Location**, in **Location**, type `http://pki.corp.contoso.com/pki/<ServerDNSName><CaName><CertificateName>.crt`, and then click **OK**. This returns you to the CA properties dialog box.  
+12. In **Add Location**, in **Location**, type `http://pki.corp.contoso.com/pki/<ServerDNSName>_<CaName><CertificateName>.crt`, and then click **OK**. This returns you to the CA properties dialog box.  
   
 13. On the **Extensions** tab, select **Include in the AIA of issued certificates**.  
   
