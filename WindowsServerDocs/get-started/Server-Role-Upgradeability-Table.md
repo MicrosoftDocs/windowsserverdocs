@@ -19,7 +19,7 @@ ms.localizationpriority: medium
 
 >Applies To: Windows Server 2016
 
-The grid on this page explains your server role upgrade and migration options specifically for moving to Windows Server 2016. For individual role migration guides, visit [Migrating Roles and Features in Windows Server](https://technet.microsoft.com/windowsserver/jj554790.aspx). For more information about installation and upgrades, see [Windows Server Installation, Upgrade, and Migration](https://technet.microsoft.com/windowsserver/dn458795).
+The grid on this page explains your server role upgrade and migration options specifically for moving to Windows Server 2016. For individual role migration guides, visit [Migrating Roles and Features in Windows Server](https://docs.microsoft.com/windows-server/get-started/migrate-roles-and-features). For more information about installation and upgrades, see [Windows Server Installation, Upgrade, and Migration](https://docs.microsoft.com/windows-server/get-started/installation-and-upgrade).
 
 |Server Role|Upgradeable from Windows Server 2012 R2?|Upgradeable from Windows Server 2012?|Migration Supported?|Can migration be completed without downtime?|  
 |-------------------|----------|--------------|--------------|----------|  

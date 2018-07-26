@@ -37,11 +37,17 @@ The client computer accepts the authentication attempt of the server when the se
 
 - The computer certificate for the NPS or VPN server is configured with the Server Authentication purpose in Extended Key Usage (EKU) extensions. (The object identifier for Server Authentication is 1.3.6.1.5.5.7.3.1.)
 
-- The server certificate is configured with a required algorithm value of **RSA**. To configure the required cryptography setting:
+- Configure the server certificate with the required cryptography setting:
 
-	1. Open Certificate Templates.
-	2. In the details pane, right-click the certificate template that you want to change, and then click **Properties**.
-	3. Click the **Cryptography** tab. In **Algorithm name**, click **RSA** . Ensure that **Minimum key size** is set to **2048**.
+    1. Open Certificate Templates.
+    2. In the details pane, right-click the certificate template that you want to change, and then click **Properties**.
+    3. Click the **Cryptography** tab and make sure to configure the following:
+       - **Provider Category:** Key Storage Provider
+       - **Algorithm Name:** RSA
+       - **Providers:** Microsoft Platform Crypto Provider
+       - **Minimum key size:** 2048
+       - **Hash Algorithm:** SHA2
+    4. Click **Next**.
 
 - The Subject Alternative Name (SubjectAltName) extension, if used, must contain the DNS name of the server. To configure the certificate template with the Domain Name System (DNS) name of the enrolling server: 
 

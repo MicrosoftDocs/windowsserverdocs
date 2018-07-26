@@ -1357,8 +1357,18 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "WindowsServerDocs/compute/remote-desktop-services/rds-office-vdi-rdsh.md",
-      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-office-vdi-rdsh",
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/rds-office-vdi-rdsh.md",
+      "redirect_url": "/deployoffice/rds-office-vdi-rdsh",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/rds-outlook-data-fslogix.md",
+      "redirect_url": "/deployoffice/rds-outlook-search",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/rds-onedrive-for-business.md",
+      "redirect_url": "/deployoffice/rds-onedrive-business-vdi",
       "redirect_document_id": true
     },
     {

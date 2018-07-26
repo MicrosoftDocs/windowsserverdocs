@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: 1099f21d-5f07-475a-92dd-ad08bc155da1
 author: haley-rowland
 ms.author: harowl
-ms.date: 06/24/2017
+ms.date: 07/17/2018
 manager: scottman
 ---
 # Deploy a two-node Storage Spaces Direct scale-out file server for UPD storage in Azure
@@ -50,11 +50,11 @@ Use the following steps to create a domain controller (we called ours "my-dc" be
    - Type of storage account: General purpose
    - Performance tier: Premium
    - Replication option: LRS
-4. Set up an Active Directory forest by doing one of the following: 
-   1.  Deploy using an Azure quickstart template:
+4. Set up an Active Directory forest by either using a quickstart template or deploying the forest manually. 
+   - Deploy using an Azure quickstart template:
       - [Create an Azure VM with a new AD forest](https://azure.microsoft.com/documentation/templates/active-directory-new-domain/)
       - [Create a new AD domain with 2 domain controllers](https://azure.microsoft.com/documentation/templates/active-directory-new-domain-ha-2-dc/) (for high availability)
-   2. Manually [deploy the forest](https://azure.microsoft.com/documentation/articles/active-directory-new-forest-virtual-machine/) with the following configurations:
+   - Manually [deploy the forest](https://azure.microsoft.com/documentation/articles/active-directory-new-forest-virtual-machine/) with the following configurations:
       - Create the virtual network in the same resource group as the storage account.
       - Recommended size: DS2 (increase the size if the domain controller will host more domain objects)
       - Use an automatically generated VNet.

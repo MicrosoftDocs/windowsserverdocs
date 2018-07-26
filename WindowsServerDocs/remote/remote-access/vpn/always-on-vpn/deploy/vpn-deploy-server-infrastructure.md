@@ -206,6 +206,8 @@ Domain-joined VPN servers
 
     2.  In the **Edit Application Policies Extension** dialog box, click **Add**.
 
+<!-- 7/19/2018: github issue #1000; need to ask Jason Jones about this in order to resolve; Is it required for the Always On VPN to have the Encrypting File System (1.3.6.1.4.1.311.10.3.4) and Secure Email (1.3.6.1.5.5.7.3.4) EKU in it? As documented to duplicate the User Template, this would be the case. -->
+
     3.  On the **Add Application Policy** dialog box, click **IP security IKE intermediate**, and click **OK**.<p>Adding IP security IKE intermediate to the EKU helps in scenarios where more than one server authentication certificate exists on the VPN server. When IP security IKE intermediate is present, IPSec only uses the certificate with both EKU options. Without this, IKEv2 authentication could fail with Error 13801: IKE authentication credentials are unacceptable.
 
     4.  Click **OK** to return to the **Properties of New Template** dialog box.
@@ -254,7 +256,7 @@ You will configure this certificate for autoenrollment.
 
 2.  In the navigation pane, right-click **Certificate Templates**, and click **Manage**.
 
-3.  In the Certificate Templates console, right-click **RAS and IAS Server**, and click **Duplicate Template**.
+3.  In the Certificate Templates console, right-click **RAS and IAS Server**, and select **Duplicate Template**.
 
 4.  On the Properties of New Template dialog box, on the **General** tab, in **Template display name**, type **NPS Server Authentication**.
 
