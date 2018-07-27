@@ -127,6 +127,7 @@ To remove all traces of the web client, follow these steps:
    ```PowerShell
    Uninstall-Module -Name RDWebClientManagement
    ```
+
 ## Troubleshooting
 
 If a user reports any of the following issues when opening the web client for the first time, the following sections will tell you what to do to fix them.
@@ -149,6 +150,10 @@ If the user gets an "unexpected server authentication certificate was received" 
 ```PowerShell
 Import-RDWebClientBrokerCert <certificate file path>
 ```
+
+### How to open the console log
+
+If the issue can't be solved by the previous sections, you can try to diagnose the source of the problem yourself by watching the console log. To open the log, go to **Developer tools** in your web browser. You can also open the log with the **F12** key.
 
 ## Get help with the web client
 
