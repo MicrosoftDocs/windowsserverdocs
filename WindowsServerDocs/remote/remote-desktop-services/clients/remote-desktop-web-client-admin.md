@@ -4,7 +4,7 @@ description: Describes how an admin can set up the Remote Desktop web client.
 ms.prod: windows-server-threshold
 ms.technology: remote-desktop-services
 ms.author: helohr
-ms.date: 07/20/2018
+ms.date: 07/26/2018
 ms.topic: article
 author: Heidilohr
 ms.localizationpriority: medium
@@ -14,7 +14,7 @@ ms.localizationpriority: medium
 The Remote Desktop web client lets users access your organization's Remote Desktop infrastructure through a compatible web browser. They'll be able to interact with remote apps or desktops like they would with a local PC no matter where they are. Once you set up your Remote Desktop web client, all your users need to get started is the URL where they can access the client, their credentials, and a supported web browser.
 
 >[!NOTE]
->You may have heard people call this client the HTML5 client. Both names refer to the same client.
+>You can [email us](mailto:rdwbclnt@microsoft.com) to report issues with the web client. You may also request or vote for new features on our [suggestion box](https://aka.ms/rdwebfbk).
 
 >[!IMPORTANT]
 >The web client does not currently support using Azure Application Proxy and does not support Web Application Proxy at all. See [Using RDS with application proxy services](../rds-supported-config.md#using-remote-desktop-services-with-application-proxy-services) for details.
