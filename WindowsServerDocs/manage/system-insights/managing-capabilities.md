@@ -135,19 +135,6 @@ You can also use Windows Admin Center to set remediation actions by using the **
 ![Settings page where user can specify remediation actions](media/actions-page.png)
 
 
-## Adding a new capability
-In addition to the four default capabilities, System Insights also has an extensible platform that allows you to add new capabilities anytime using the **Add-InsightsCapability** cmdlet. 
-
-Creating the default capabilities and the associated management interfaces required implementing new, valuable infrastructure in Windows Server, including local data collection and the capability management functionality described above. System Insights exposes this functionality directly to new capabilities, enabling these capabilities to:
-
-- **Specify custom performance counters to collect and analyze.** This data can be any performance counter or ETW event, which will be collected, persisted locally, and returned to the capability for analysis when the capability is invoked. 
-- **Leverage the existing System Insights PowerShell and Windows Admin Center management planes.** This includes using the custom scheduling and remediation actions functionality described above.
-
-By exposing the existing data collection and management infrastructure, System Insights allows you to add your own capabilities that help you address the scenarios you care about.
-
->[!NOTE]
->Detailed developer documentation and sample capabilities will be available soon.
-
 ## See also
 To learn more about System Insights, use the following resources:
 
