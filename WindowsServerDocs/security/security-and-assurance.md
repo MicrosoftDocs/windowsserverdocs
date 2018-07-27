@@ -6,7 +6,7 @@ ms.prod: windows-server-threshold
 ms.technology: techgroup-security
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.date: 03/16/2018
+ms.date: 07/27/2018
 ms.assetid: b886b2fd-3567-4f0a-8aa3-4ba7923d2d21
 author: coreyp-at-msft
 ms.author: coreyp
@@ -22,8 +22,8 @@ ms.localizationpriority: high
 <img src="../media/landing-icons/security.png" style='float:left; padding:.5em;' alt="Icon representing a lock"> You can rely on new layers of protection built into the operating system to further safeguard against security breaches. Help block malicious attacks and enhance the security of your virtual machines, applications, and data.
 
 
-### [Windows Server 2016 Security Blog Post](https://blogs.technet.microsoft.com/windowsserver/2016/04/25/ten-reasons-youll-love-windows-server-2016-8-security/)
-This blog post from the Windows Server security team highlights many of the improvements in Windows Servers 2016 that increase security for hosting and hybrid cloud environments.
+### [Windows Server Security Blog Post](https://blogs.technet.microsoft.com/windowsserver/2016/04/25/ten-reasons-youll-love-windows-server-2016-8-security/)
+This blog post from the Windows Server security team highlights many of the improvements in Windows Server that increase security for hosting and hybrid cloud environments.
 
 ### [Datacenter and Private Cloud Security Blog](https://blogs.technet.microsoft.com/datacentersecurity/)
 This is the central blog site for technical content from the Microsoft Datacenter and Private Cloud Security team.                                    
@@ -40,7 +40,7 @@ This Ignite session addresses persistent threats, insider breaches, organized cy
 ## Secure virtualization with Shielded VMs
 
 ### [Shielded VM in Channel 9](http://channel9.msdn.com/Shows/Mechanics/Introduction-to-Shielded-Virtual-Machines-in-Windows-Server-2016)
-A walkthrough of Shielded VM technology and benefits                           
+A walkthrough of Shielded VM technology and benefits.                           
 
 ### [Shielded VM Demo](https://www.youtube.com/watch?v=xip5Qtk-7d8)
 This 4-minute video describes the value of shielded VMs and the differences between a shielded VM and a non-shielded VM.                                   
@@ -50,22 +50,22 @@ This video walkthrough shows how the Host Guardian Service enables shielded virt
 
 ### [Harden the Fabric: Protecting Tenant Secrets in Hyper-V (Ignite Video)](http://channel9.msdn.com/events/ignite/2015/brk3457)
 
-This Ignite presentation discusses enhancements in Hyper-V, Virtual Machine Manager, and a new Guardian Server role to enable shielded VMs.                
+This Ignite presentation discusses enhancements in Hyper-V, Virtual Machine Manager, and a new Host Guardian Server role to enable shielded VMs.                
 
-### [Guarded Fabric Deployment Guide](https://go.microsoft.com/fwlink/?LinkId=708624)
+### [Guarded Fabric Deployment Guide](https://docs.microsoft.com/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-deploying-hgs-overview)
 This guide provides installation and validation information for Windows Server and System Center Virtual Machine Manager for Guarded Fabric Hosts and Shielded VMs.
 
-### [Shielded VM and Guarded Fabric Operations Guide](https://go.microsoft.com/fwlink/?LinkId=708320)
-This guide provides best practices and recommendations for how to configure your Shielded VM environment, including information specific to Guarded Hosts and tenants.
+### [Shielded VM and Guarded Fabric in Branch Offices](https://docs.microsoft.com/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-manage-branch-office)
+This guide provides best practices for running shielded virtual machines in branch offices and other remote scenarios where Hyper-V hosts may have periods of time with limited connectivity to HGS.
 
-### [Shielded VM and Guarded Fabric Troubleshooting Guide](https://go.microsoft.com/fwlink/?LinkId=708321)
+### [Shielded VM and Guarded Fabric Troubleshooting Guide](https://docs.microsoft.com/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-overview)
 This guide provides information about how to resolve issues you may encounter in your Shielded VM environment.
 
 ### [Shielded VM Article](http://windowsitpro.com/hyper-v/super-secure-hyper-v-environments-shielded-vms-2016)
 This white paper provides an overview of how shielded VMs provide increased overall security to prevent tampering.                                         
 
 ## Privileged Access Management
-### [Securing Privileged Access](https://technet.microsoft.com/en-us/windows-server-docs/security/securing-privileged-access/securing-privileged-access)
+### [Securing Privileged Access](https://technet.microsoft.com/windows-server-docs/security/securing-privileged-access/securing-privileged-access)
 A road-map for how you can secure your privileged access. This road-map is built based on the combined expertise of the server security team, Microsoft IT, Azure team and the Microsoft Consulting Services                           
 
 ### [Just in Time Administration with Microsoft Identity Manager](https://technet.microsoft.com/library/mt150258.aspx)
@@ -78,29 +78,32 @@ This Ignite presentation covers Microsoft's strategy and investments in Windows 
 This document shares the vision and technical details of Just Enough Administration, a PowerShell toolkit designed to help organizations reduce risk by restricting operators to the only access required to perform specific tasks.
 
 ### [Just Enough Administration demo video](https://www.youtube.com/watch?v=xnBrbkY9P20)
-Just Enough Administration demo walk through                                                                                                                  
+Just Enough Administration demo walkthrough.                                                                                                                  
 ## Credential Protection
 
-### [Protect derived domain credentials with Credential Guard](https://technet.microsoft.com/itpro/windows/keep-secure/credential-guard)
+### [Protect derived domain credentials with Credential Guard](https://docs.microsoft.com/windows/security/identity-protection/credential-guard/credential-guard)
 Credential Guard uses virtualization-based security to isolate secrets so that only privileged system software can access them. Unauthorized access to these secrets can lead to credential theft attacks, such as Pass-the-Hash or Pass-The-Ticket. Credential Guard prevents these attacks by protecting NTLM password hashes and Kerberos Ticket Granting Tickets.
 
-### [Protect Remote Desktop credentials with Remote Credential Guard](https://technet.microsoft.com/itpro/windows/keep-secure/remote-credential-guard)
+### [Protect Remote Desktop credentials with Remote Credential Guard](https://docs.microsoft.com/windows/security/identity-protection/remote-credential-guard)
 Remote Credential Guard helps you protect your credentials over a Remote Desktop connection by redirecting the Kerberos requests back to the device that's requesting the connection. It also provides single sign on experiences for Remote Desktop sessions.                                                                                                        |
 ### [Credential Guard demo video](https://www.youtube.com/watch?v=eUpKOGSl7yk)
-This 5-minute video demos Credential Guard and Remote Credential Guard         
+This 5-minute video demos Credential Guard and Remote Credential Guard.         
 
 ## Hardening the OS and applications
-### [Device Guard Deployment Guide](https://technet.microsoft.com/itpro/windows/keep-secure/device-guard-deployment-guide)
-Device Guard is a combination of enterprise-related hardware and software security features that, when configured together, will lock a device down so that it can only run trusted applications that you define in your code integrity.
+### [Windows Defender Application Control (WDAC) Deployment Guide](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control)
+WDAC is configurable code integrity (CI) policy that helps enterprises control what applications run in their environmemnt and carries no specific hardware or software requirements other than running Windows 10.
 
 ### [Device Guard demo video](https://www.youtube.com/watch?v=F-pTkesjkhI)
-This 7-minute video presents Device Guard and its usage on Windows Server 2016
+Device Guard is a combination of WDAC and Hypervisor-protected code integrity (HVCI). This 7-minute video presents Device Guard and its usage on Windows Server.
 
-### [Control Flow Guard](https://msdn.microsoft.com/en-us/library/windows/desktop/mt637065(v=vs.85).aspx)
+### [Transport Layer Security Registry Settings](https://docs.microsoft.com/windows-server/security/tls/tls-registry-settings)
+Supported registry setting information for the Windows implementation of the Transport Layer Security (TLS) protocol and the Secure Sockets Layer (SSL) protocol.
+
+### [Control Flow Guard](https://docs.microsoft.com/windows/desktop/SecBP/control-flow-guard)
 Control Flow Guard provides built-in protection against some classes of memory corruption attacks.
 
 ### [Windows Defender](https://technet.microsoft.com/en-us/windows-server-docs/security/windows-defender/windows-defender-overview-windows-server)
-Windows Defender provides active detection capabilities to block known malware. Windows Defender is turned on by default and is optimized to support the various server roles in Windows Server 2016.
+Windows Defender provides active detection capabilities to block known malware. Windows Defender is turned on by default and is optimized to support the various server roles in Windows Server.
 
 ##Detecting and Responding to Threats
 ### [Security Threat Analysis Using Microsoft Operations Management Suite](https://channel9.msdn.com/events/ignite/2015/brk3464)
