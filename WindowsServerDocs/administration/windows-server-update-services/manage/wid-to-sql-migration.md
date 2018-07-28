@@ -79,7 +79,7 @@ From PowerShell (elevated), run:
     ![image5](images/image5.png)
 
 > [!TIP]
-> This is also able to be done using Transact-Sql.  Please see the [SQL documentation for attaching a database](sql-docs/docs/relational-databases/databases/attach-a-database.md) for its instructions.
+> This is also able to be done using Transact-Sql.  Please see the [SQL documentation for attaching a database](MicrosoftDocs/sql-docs/docs/relational-databases/databases/attach-a-database.md) for its instructions.
 >
 > Example (using paths from previous example):
 > ```sql
