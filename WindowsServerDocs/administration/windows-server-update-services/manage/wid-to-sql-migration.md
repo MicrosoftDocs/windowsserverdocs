@@ -79,7 +79,7 @@ From PowerShell (elevated), run:
     ![image5](images/image5.png)
 
 > [!TIP]
-> This is also able to be done using Transact-Sql.  Please see the [SQL documentation for attaching a database](../MicrosoftDocs/sql-docs/docs/relational-databases/databases/attach-a-database.md) for its instructions.
+> This is also able to be done using Transact-Sql.  Please see the [SQL documentation for attaching a database](https://docs.microsoft.com/en-us/sql/relational-databases/databases/attach-a-database) for its instructions.
 >
 > Example (using paths from previous example):
 > ```sql
@@ -192,3 +192,4 @@ Uninstall-WindowsFeature -Name 'Windows-Internal-Database'
 ```
 
 After the WID role is removed, verify that the following registry key is present: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Update Services\Server\Setup\Installed Role Services\UpdateServices-Database**
+
