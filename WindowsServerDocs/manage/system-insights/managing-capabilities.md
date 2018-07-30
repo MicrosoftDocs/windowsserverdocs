@@ -1,6 +1,6 @@
 ---
-title: Managing System Insights
-description: "Managing System Insights"
+title: Managing capabilities
+description: "System Insights exposes a variety of settings that can be configured for each capability, and these settings can be tuned to address the specific needs of your deployment. This topic describes how to manage the various settings for each capability through Windows Admin Center or PowerShell, providing basic PowerShell examples and Windows Admin Center screenshots to demonstrate how to adjust these settings."
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -14,12 +14,11 @@ ms.author: gawatu
 manager: mallikarjun.chadalapaka
 ms.date: 6/05/2018
 ---
-# Managing System Insights
+# Managing capabilities
 
 >Applies To: Windows Server Insider Preview build 17692 and later
 
 In Windows Server 2019, System Insights exposes a variety of settings that can be configured for each capability, and these settings can be tuned to address the specific needs of your deployment. This topic describes how to manage the various settings for each capability through Windows Admin Center or PowerShell, providing basic PowerShell examples and Windows Admin Center screenshots to demonstrate how to adjust these settings. 
-
 
 Though this section provides PowerShell examples, you can use the [System Insights PowerShell documentation](https://aka.ms/systeminsightspowershell) to see all of the cmdlets, parameters, and parameter sets within System Insights. 
 
@@ -56,7 +55,7 @@ Invoke-InsightsCapability -Name "CPU capacity forecasting"
 >To make sure invoking a capability doesn't conflict with critical operations on your machine, consider scheduling predictions during off-business hours.
 
 ## Retrieving capability results
-Once a capability has been invoked, the most recent results are visible using **Get-InsightsCapability** or **Get-InsightsCapabilityResult**. These cmdlets output the most recent **Status** and **Status Description** of each capability, which describe the result of each prediction. The **Status** and **Status Description** fields are further described in the [System Insights capability page](system-insights-capabilities.md). 
+Once a capability has been invoked, the most recent results are visible using **Get-InsightsCapability** or **Get-InsightsCapabilityResult**. These cmdlets output the most recent **Status** and **Status Description** of each capability, which describe the result of each prediction. The **Status** and **Status Description** fields are further described in the [understanding capabilities document](understanding-capabilities.md). 
 
 Additionally, you can use the **Get-InsightsCapabilityResult** cmdlet to view the last 30 prediction results and to retrieve the data associated with the prediction: 
 
@@ -99,7 +98,7 @@ Set-InsightsCapabilitySchedule -Name "Total storage consumption forecasting" -Ho
 Set-InsightsCapabilitySchedule -Name "Volume consumption forecasting" -Minute -MinutesInterval 30 
 ```
 >[!NOTE]
->Because the default capabilities analyze daily data, it's recommended to use daily schedules for these capabilities. Learn more about the default capabilities [here](system-insights-capabilities.md).
+>Because the default capabilities analyze daily data, it's recommended to use daily schedules for these capabilities. Learn more about the default capabilities [here](understanding-capabilities.md).
 
 You can also use Windows Admin Center to view and set schedules for each capability by clicking **Settings**. The current schedule is shown on the **Schedule** tab, and you can use the GUI tools to create a new schedule:
 
@@ -136,21 +135,10 @@ You can also use Windows Admin Center to set remediation actions by using the **
 ![Settings page where user can specify remediation actions](media/actions-page.png)
 
 
-## Adding a new capability
-In addition to the four default capabilities, System Insights also has an extensible platform that allows you to add new capabilities anytime using the **Add-InsightsCapability** cmdlet. 
-
-Creating the default capabilities and the associated management interfaces required implementing new, valuable infrastructure in Windows Server, including local data collection and the capability management functionality described above. System Insights exposes this functionality directly to new capabilities, enabling these capabilities to:
-
-- **Specify custom performance counters to collect and analyze.** This data can be any performance counter or ETW event, which will be collected, persisted locally, and returned to the capability for analysis when the capability is invoked. 
-- **Leverage the existing System Insights PowerShell and Windows Admin Center management planes.** This includes using the custom scheduling and remediation actions functionality described above.
-
-By exposing the existing data collection and management infrastructure, System Insights allows you to add your own capabilities that help you address the scenarios you care about.
-
->[!NOTE]
->Detailed developer documentation and sample capabilities will be available soon.
-
 ## See also
-- [System Insights overview](system-insights-overview.md)
-- [System Insights capabilities](system-insights-capabilities.md)
-- [System Insights FAQ](system-insights-faq.md)
-- [System Insights known issues](system-insights-known-issues.md)
+To learn more about System Insights, use the following resources:
+
+- [System Insights overview](overview.md)
+- [Understanding capabilities](understanding-capabilities.md)
+- [Adding and developing capabilities](adding-and-developing-capabilities.md)
+- [System Insights FAQ](faq.md)
