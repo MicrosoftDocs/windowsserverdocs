@@ -16,7 +16,7 @@ ms.date: 02/06/2018
 
 # Plan for Hyper-V security in Windows Server
 
->Applies To: Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019
+>Applies To: Windows Server 2016, Microsoft Hyper-V Server 2016
 
 Secure the Hyper-V host operating system, the virtual machines, configuration files, and virtual machine data. Use the following list of recommended practices as a checklist to help you secure your Hyper-V environment.
 
