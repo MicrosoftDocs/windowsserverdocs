@@ -33,7 +33,7 @@ Any new capability can integrate with and extend the existing System Insights in
 Use the following resources to help you get started writing your own custom capabilities:
 - [Learn](data-sources.md) about the data sources you can collect.
 - [Download](https://www.nuget.org/packages/Microsoft.WindowsServer.SystemInsights/) the System Insights NuGet package, which contains the classes and interfaces you need to write a capability.
-- [Visit](https://docs.microsoft.com/dotnet/api/microsoft.systeminsights.capability?view=systeminsights-preview-1.0) the API documentation to learn about the System Insights classes and interfaces. 
+- [Visit](https://aka.ms/systeminsights-api) the API documentation to learn about the System Insights classes and interfaces. 
 - [Use](https://microsoft.visualstudio.com/DefaultCollection/OS.Samples/_git/collections.classic?path=%2FSamples%2FSystemInsights&version=GBmaster) the System Insights sample capability to help you get started. This shows you how to register a capability, specify the data sources to collect, and start analyzing system data.
 
 >[!NOTE]
