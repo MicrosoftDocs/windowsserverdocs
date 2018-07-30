@@ -19,9 +19,7 @@ ms.date: 7/23/2018
 
 >Applies To: Windows Server Insider Preview build 17723 and later
 
-System Insights introduces extensible, local data collection functionality. When writing a new capability, you can specify existing or new data sources to collect and analyze. 
-
-This topic describes the data sources that you can choose when registering a new capability.
+System Insights introduces extensible, local data collection functionality. When writing a new capability, you can specify existing or new data sources to collect and analyze. This topic describes the data sources that you can choose when registering a new capability.
 
 ## Data sources
 When writing a new capability, you must identify the specific data sources to collect for each capability. The data sources that you specify will be collected and persisted directly on your machine, and you can choose from three types of data sources:

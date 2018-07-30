@@ -12,7 +12,7 @@ ms.assetid:
 author: gawatu
 ms.author: gawatu
 manager: mallikarjun.chadalapaka
-ms.date: 7/23/2018
+ms.date: 7/31/2018
 ---
 
 # Adding and developing new capabilities

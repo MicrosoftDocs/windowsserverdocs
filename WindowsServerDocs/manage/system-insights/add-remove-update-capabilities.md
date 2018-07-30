@@ -12,7 +12,7 @@ ms.assetid:
 author: gawatu
 ms.author: gawatu
 manager: mallikarjun.chadalapaka
-ms.date: 7/23/2018
+ms.date: 7/31/2018
 ---
 
 # Adding, removing, and updating capabilities
@@ -47,14 +47,15 @@ You can also remove capabilities in System Insights using the **Remove-InsightsC
 ```PowerShell
 Remove-InsightsCapability -Name "Sample capability" 
 ```
+>[!NOTE]
+>The default forecasting capabilities can't be removed.
 
 Removing a capability permanently deletes the capability and all associated information, including the schedule, any remediation actions, and past prediction results. 
 
 >[!TIP]
 >Consider disabling a capability rather than removing it if you are worried about permanently deleting all information associated with the capability. 
 
->[!NOTE]
->The default forecasting capabilities can't be removed. 
+ 
 
 ## See also
 To learn more about System Insights, use the following resources:
