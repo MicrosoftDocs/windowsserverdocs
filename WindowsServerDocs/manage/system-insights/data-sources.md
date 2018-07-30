@@ -17,6 +17,8 @@ ms.date: 7/23/2018
 
 # System Insights data sources
 
+>Applies To: Windows Server Insider Preview build 17723 and later
+
 System Insights introduces extensible, local data collection functionality. When writing a new capability, you can specify existing or new data sources to collect and analyze. 
 
 This topic describes the data sources that you can choose when registering a new capability.
@@ -41,7 +43,7 @@ When writing a new capability, you must identify the specific data sources to co
             - *Properties*: UniqueId, Drive Letter, File System Label, Size
             - *Data*: Used Size
         - **Network**:
-            - *Properties*: Guid, Name, Max Speed
+            - *Properties*: InterfaceGuid, InterfaceDescription, Speed
             - *Data*: Bytes Received/sec, Bytes Sent/sec, Bytes Total/sec
         - **CPU**: 
             - *Properties*: -
