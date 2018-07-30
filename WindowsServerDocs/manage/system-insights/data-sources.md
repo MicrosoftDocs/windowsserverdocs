@@ -22,38 +22,32 @@ System Insights introduces extensible, local data collection functionality. When
 This topic describes the data sources that you can choose when registering a new capability.
 
 ## Data sources
-When writing a new capability, you identify the specific data sources to collect. The data sources that you specify will be collected and persisted directly on your machine, and you can choose from three types of data sources:
+When writing a new capability, you must identify the specific data sources to collect for each capability. The data sources that you specify will be collected and persisted directly on your machine, and you can choose from three types of data sources:
 
-#### Performance counters
-Specify the counter path, name, and instances, and System Insights collects the relevant data reported by these performance counters. 
 
-#### System events
-Specify the channel name and event ID, and System Insights will record how many times that event has occurred.
+- **Performance counters**: 
+    - Specify the counter path, name, and instances, and System Insights collects the relevant data reported by these performance counters. 
 
-#### Well-known series
-System Insights collects some basic information on your machine for a few well-defined objects. These series are used for the default capabilities, but they can also be used by any custom capability. These series collect the following information:
+- **System events**:
+    - Specify the channel name and event ID, and System Insights will record how many times that event has occurred.
 
-- **PhysicalDisk**:
-    - Guid
-    - Size
-- **Volume**:
-    - UniqueId
-    - DriveLetter
-    - FileSystemLabel
-    - TotalSize
-    - UsedSize
-    - FreeSize
-- **Network**: 
-    - Guid
-    - Name
-    - MaxSpeed
-    - Bytes Recieved/sec
-    - Bytes Sent/sec
-    - Bytes Total/sec
-- **CPU**:
-    - \Processor(_Total)\\% Processor Time
+- **Well-known series**
+    - System Insights collects some basic information on your machine for a few, well-defined resources. These series are used for the default capabilities, but they can also be used by any custom capability. These collect the following information:
 
-Choose one of these four well-known series, and System Insights will return all data collected by those series. 
+        - **PhysicalDisk**:
+            - *Properties*: Guid
+            - *Data*: Size
+        - **Volume**:
+            - *Properties*: UniqueId, Drive Letter, File System Label, Size
+            - **Data**: Used Size
+        - **Network**:
+            - *Properties*: Guid, Name, Max Speed
+            - *Data*: Bytes Received/sec, Bytes Sent/sec, Bytes Total/sec
+        - **CPU**: 
+            - *Properties*: -
+            - *Data*: \Processor(_Total)\\% Processor Time
+
+    - Choose one of these four well-known series, and System Insights will return all data collected by those series. 
 
 
 ## Retention timelines and collection intervals
@@ -70,7 +64,7 @@ The three data sources above have different retention timelines and collection i
 
 
 #### Aggregation types
-Each series has an aggregation type assocated it. For the performance counter data, you can specify the aggregation type: 
+Each series has an aggregation type assocated it. For the performance counter data, you can specify multiple different aggregation types: 
 
 | Data source | Aggregation types |
 | --------------- | --------------- |
