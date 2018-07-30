@@ -129,7 +129,7 @@ The following links provide more information about using Cluster-Aware Updating.
   
 -   [How CAU Plug\-ins Work](cluster-aware-updating-plug-ins.md)  
   
--   [Cluster\-Aware Updating Cmdlets in Windows PowerShell](https://go.microsoft.com/fwlink/p/?LinkId=237675)  
+-   [Cluster\-Aware Updating Cmdlets in Windows PowerShell](https://docs.microsoft.com/en-us/powershell/module/clusterawareupdating/?view=win10-ps&viewFallbackFrom=winserverr2-ps)  
   
 -   [Cluster\-Aware Updating Plug\-in Reference](https://msdn.microsoft.com/library/hh418084.aspx)  
   
