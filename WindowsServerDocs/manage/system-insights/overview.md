@@ -1,6 +1,6 @@
 ---
 title: System Insights overview
-description: "System Insights overview"
+description: "System Insights is a new feature that introduces predictive analytics natively to Windows Server. These predictive capabilities locally analyze Windows Server system data, such as performance counters or ETW events, helping IT administrators proactively detect and address problematic behavior in their deployments."
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na

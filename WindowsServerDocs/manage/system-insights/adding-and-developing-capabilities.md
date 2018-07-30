@@ -1,6 +1,6 @@
 ---
 title: Adding and developing capabilities
-description: "Adding and developing capabilities"
+description: "System Insights enables you to add new predictive capabilities to System Insights, without requiring any OS updates. This enables developers, including Microsoft and third parties, to create and deliver new capabilities mid-release to address the scenarios you care about. New capabilities can specify custom data to collect and analyze, and they also integrate with the existing System Insights management planes."
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -19,11 +19,11 @@ ms.date: 7/31/2018
 
 >Applies To: Windows Server Insider Preview build 17723 and later
 
-System Insights enables you add new predictive capabilities to System Insights, without requiring any OS updates. This enables developers, including Microsoft and third parties, to create and deliver new capabilities mid-release to address the scenarios you care about. 
+System Insights enables you to add new predictive capabilities to System Insights, without requiring any OS updates. This enables developers, including Microsoft and third parties, to create and deliver new capabilities mid-release to address the scenarios you care about. 
 
 Any new capability can integrate with and extend the existing System Insights infrastructure:
 
-- New capabilities can **specify any performance counter or ETW event**, which will be collected, persisted locally, and returned to the capability for analysis when the capability is invoked.  
+- New capabilities can **specify any performance counter or system event**, which will be collected, persisted locally, and returned to the capability for analysis when the capability is invoked.  
 - New capabilities can **leverage the existing Windows Admin Center and PowerShell management planes**. Not only will new capabilities be discoverable in System Insights, they also benefit from custom schedules and remediation actions. 
 
 ## Manage new capabilities
