@@ -63,7 +63,7 @@ The data sources above have different retention timelines and collection interva
 Because each series record only one data point for each collection interval, each series has an aggregation type assocated it. The table below describes the data source and the corresponding aggregation type:
 
 >[!NOTE]
->[For performance counters, you can specify multiple different aggregation types.]
+>For performance counters, you can specify multiple different aggregation types.
 
 | Data source | Aggregation types |
 | --------------- | --------------- |
