@@ -55,8 +55,6 @@ Removing a capability permanently deletes the capability and all associated info
 >[!TIP]
 >Consider disabling a capability rather than removing it if you are worried about permanently deleting all information associated with the capability. 
 
- 
-
 ## See also
 To learn more about System Insights, use the following resources:
 

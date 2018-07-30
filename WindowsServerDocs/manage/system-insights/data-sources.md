@@ -19,11 +19,10 @@ ms.date: 7/31/2018
 
 >Applies To: Windows Server Insider Preview build 17723 and later
 
-System Insights introduces extensible, local data collection functionality. When writing a new capability, you can specify existing or new data sources to collect and analyze. This topic describes the data sources that you can choose when registering a new capability.
+System Insights introduces extensible data collection functionality. When writing a new capability, you can specify existing or new data sources to collect locally and analyze. This topic describes the data sources that you can choose when registering a new capability.
 
 ## Data sources
 When writing a new capability, you must identify the specific data sources to collect for each capability. The data sources that you specify will be collected and persisted directly on your machine, and you can choose from three types of data sources:
-
 
 - **Performance counters**: 
     - Specify the counter path, name, and instances, and System Insights collects the relevant data reported by these performance counters. 
@@ -34,37 +33,37 @@ When writing a new capability, you must identify the specific data sources to co
 - **Well-known series**
     - System Insights collects some basic information on your machine for a few, well-defined resources. These series are used for the default capabilities, but they can also be used by any custom capability. These collect the following information:
 
-        - **PhysicalDisk**:
+        - **Disk**: 
             - *Properties*: Guid
             - *Data*: Size
         - **Volume**:
-            - *Properties*: UniqueId, Drive Letter, File System Label, Size
+            - *Properties*: UniqueId, DriveLetter, FileSystemLabel, Size
             - *Data*: Used Size
-        - **Network**:
+        - **Network Adapter**:
             - *Properties*: InterfaceGuid, InterfaceDescription, Speed
             - *Data*: Bytes Received/sec, Bytes Sent/sec, Bytes Total/sec
         - **CPU**: 
             - *Properties*: -
-            - *Data*: \Processor(_Total)\\% Processor Time
+            - *Data*: % Processor Time
 
-    - Choose one of these four well-known series, and System Insights will return all data collected by those series. 
+    - Specify a well-known series, and System Insights will return the data collected by that series. 
 
 
 ## Retention timelines and collection intervals
-The three data sources above have different retention timelines and collection intervals. The table below reveals how long and how often each data source is collected:
+The data sources above have different retention timelines and collection intervals. The table below reveals how long and how often each data source is collected:
 
 | Data source | Retention timeline | Collection interval |
 | --------------- | --------------- | ----------- |
 | Performance counters | 3 months | 15 minutes |
 | System events | 3 months | 15 minutes |
-| Disk well-known series | 1 year | Hourly |
-| Volume well-known series | 1 year | Hourly |
-| Network well-known series | 1 year | Hourly |
-| CPU well-known series | 1 year | Hourly |
+| Well-known series | 1 year | 1 hour |
 
 
-#### Aggregation types
-Each series has an aggregation type assocated it. For the performance counter data, you can specify multiple different aggregation types: 
+### Aggregation types
+Because each series record only one data point for each collection interval, each series has an aggregation type assocated it. The table below describes the data source and the corresponding aggregation type:
+
+>[!NOTE]
+>[For performance counters, you can specify multiple different aggregation types.]
 
 | Data source | Aggregation types |
 | --------------- | --------------- |
