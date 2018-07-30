@@ -39,7 +39,7 @@ When writing a new capability, you must identify the specific data sources to co
             - *Data*: Size
         - **Volume**:
             - *Properties*: UniqueId, Drive Letter, File System Label, Size
-            - **Data**: Used Size
+            - *Data*: Used Size
         - **Network**:
             - *Properties*: Guid, Name, Max Speed
             - *Data*: Bytes Received/sec, Bytes Sent/sec, Bytes Total/sec
