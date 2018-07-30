@@ -12,7 +12,7 @@ ms.prod: windows-server-threshold
 ms.technology: identity-adds
 ---
 
-# Appendix L: Event logs
+# Appendix L: Events
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
