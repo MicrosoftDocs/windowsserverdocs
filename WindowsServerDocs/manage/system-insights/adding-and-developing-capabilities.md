@@ -34,7 +34,7 @@ Use the following resources to help you get started writing your own custom capa
 - [Learn](data-sources.md) about the data sources you can collect.
 - [Download](https://www.nuget.org/packages/Microsoft.WindowsServer.SystemInsights/) the System Insights NuGet package, which contains the classes and interfaces you need to write a capability.
 - Visit the API documentation to learn about the System Insights classes and interfaces. 
-- [Use](https://microsoft.visualstudio.com/DefaultCollection/OS.Samples/_git/collections.classic) the System Insights sample capability to help you get started. This shows you how to register a capability, specify the data sources to collect, and start analyzing system data.
+- [Use](https://microsoft.visualstudio.com/DefaultCollection/OS.Samples/_git/collections.classic?path=%2FSamples%2FSystemInsights&version=GBmaster) the System Insights sample capability to help you get started. This shows you how to register a capability, specify the data sources to collect, and start analyzing system data.
 
 >[!NOTE]
 >This is prerelease functionality. It's subject to change, as we add new functionality and incorporate feedback.
