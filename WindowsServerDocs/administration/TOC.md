@@ -62,11 +62,15 @@
 ### [Windows Commands](windows-commands/windows-commands.md)
 
 ## Insider Preview
-### [System Insights overview](..\manage\system-insights\system-insights-overview.md)
-#### [Management](..\manage\system-insights\managing-system-insights.md)
-#### [Capabilities](..\manage\system-insights\system-insights-capabilities.md)
-#### [FAQ](..\manage\system-insights\system-insights-faq.md)
-#### [Known issues](..\manage\system-insights\system-insights-known-issues.md)
+### [System Insights](..\manage\system-insights\overview.md)
+#### [Understanding capabilities](..\manage\system-insights\understanding-capabilities.md)
+#### [Managing capabilities](..\manage\system-insights\managing-capabilities.md)
+#### [Adding and developing capabilities](..\manage\system-insights\adding-and-developing-capabilities.md)
+##### [Adding, removing, and updating capabilities](..\manage\system-insights\add-remove-update-capabilities.md)
+##### [Choosing capability data sources](..\manage\system-insights\data-sources.md)
+#### [FAQ](..\manage\system-insights\faq.md)
+#### [Known issues](..\manage\system-insights\known-issues.md)
+
 
 <!--
 #### [A-Z list](windows-commands/a-z-list.md)
