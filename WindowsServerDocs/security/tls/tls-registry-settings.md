@@ -269,7 +269,7 @@ Registry path: HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\
 To enable the SSL 2.0 protocol, create an **Enabled** entry in the appropriate subkey. 
 This entry does not exist in the registry by default. 
 After you have created the entry, change the DWORD value to 1. 
-To disable the protocol, change the DWORD value to 0.
+To disable the protocol, change the DWORD value to 0.  
 
 SSL 2.0 subkey table
 
@@ -277,7 +277,7 @@ SSL 2.0 subkey table
 |--------|-------------|
 | Client | Controls the use of SSL 2.0 on the SSL client. |
 | Server | Controls the use of SSL 2.0 on the SSL server. |
-| DisabledByDefault | Flag to disable SSL 2.0 by default. |
+| DisabledByDefault | Flag to disable SSL 2.0 by default. If an SSPI app requests to use SSL 2.0, it will be negotiated. |
 
 ## SSL 3.0
 
@@ -299,7 +299,7 @@ SSL 3.0 subkey table
 |--------|-------------|
 | Client | Controls the use of SSL 3.0 on the SSL client. |
 | Server | Controls the use of SSL 3.0 on the SSL server. |
-| DisabledByDefault | Flag to disable SSL 3.0 by default. |
+| DisabledByDefault | Flag to disable SSL 3.0 by default. If an SSPI app requests to use SSL 3.0, it will be negotiated.|
 
 ## TLS 1.0
 
@@ -320,7 +320,7 @@ TLS 1.0 subkey table
 |--------|-------------|
 | Client | Controls the use of TLS 1.0 on the TLS client. |
 | Server | Controls the use of TLS 1.0 on the TLS server. |
-| DisabledByDefault | Flag to disable TLS 1.0 by default. |
+| DisabledByDefault | Flag to disable TLS 1.0 by default. If an SSPI app requests to use TLS 1.0, it will be negotiated.|
 
 ## TLS 1.1
 
@@ -345,7 +345,7 @@ TLS 1.1 subkey table
 |--------|-------------|
 | Client | Controls the use of TLS 1.1 on the TLS client. |
 | Server | Controls the use of TLS 1.1 on the TLS server. |
-| DisabledByDefault | Flag to disable TLS 1.1 by default. |
+| DisabledByDefault | Flag to disable TLS 1.1 by default. If an SSPI app requests to use TLS 1.1, it will be negotiated. |
 
 ## TLS 1.2
 
@@ -370,7 +370,7 @@ TLS 1.2 subkey table
 |--------|-------------|
 | Client | Controls the use of TLS 1.2 on the TLS client. |
 | Server | Controls the use of TLS 1.2 on the TLS server. |
-| DisabledByDefault | Flag to disable TLS 1.2 by default. |
+| DisabledByDefault | Flag to disable TLS 1.2 by default. If an SSPI app requests to use TLS 1.2, it will be negotiated.|
 
 ## DTLS 1.0
 
@@ -391,7 +391,7 @@ DTLS 1.0 subkey table
 |--------|-------------|
 | Client | Controls the use of DTLS 1.0 on the DTLS client. |
 | Server | Controls the use of DTLS 1.0 on the DTLS server. |
-| DisabledByDefault | Flag to disable DTLS 1.0 by default. |
+| DisabledByDefault | Flag to disable DTLS 1.0 by default. If an SSPI app requests to use DTLS 1.0, it will be negotiated.|
 
 ## DTLS 1.2
 
@@ -412,5 +412,5 @@ DTLS 1.2 subkey table
 |--------|-------------|
 | Client | Controls the use of DTLS 1.2 on the DTLS client. |
 | Server | Controls the use of DTLS 1.2 on the DTLS server. |
-| DisabledByDefault | Flag to disable DTLS 1.2 by default. |
+| DisabledByDefault | Flag to disable DTLS 1.2 by default. If an SSPI app requests to use DTLS 1.2, it will be negotiated.|
 
