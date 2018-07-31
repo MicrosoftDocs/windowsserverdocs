@@ -34,10 +34,11 @@ To run the [Diagnostics Analyzer](https://aka.ms/adfsdiagnosticsanalyzer), you m
 ### Setup using PowerShell gallery
 
 If the AD FS server has internet connectivity, it is recommended to install the diagnostics module directly from the PowerShell gallery using the PowerShell commands given below.
-
+ 
+   ```powershell 
     Install-Module -Name ADFSDiagnostics -force
     Import-Module ADFSDiagnostics -force
-
+   ```
 ### Setup manually by cloning the repository
 
 The diagnostics module can be installed manually from GitHub directly. Follow the instructions below for cloning the repository and installing the diagnostics module on the AD FS server.
@@ -53,11 +54,15 @@ The diagnostics module can be installed manually from GitHub directly. Follow th
 
 A single command can be used to conveniently execute the diagnostics tests across all the AD FS servers in the farm. The PowerShell module will use remote PS sessions to execute the diagnostics tests across different servers in the farm.
 
+```powershell
     Export-AdfsDiagnosticsFile [-adfsServers <list of servers>]
+```
 
 In a Server 2016 AD FS farm, the command will read the list of AD FS servers from AD FS configuration. The diagnostics tests are then attempted against each server in the list. If the list of AD FS servers is not available (example 2012R2), then the tests are run against the local machine. To specify a list of servers against which the tests are to be executed, use the **adfsServers** argument to provide a list of servers. An example is provided below
 
+```powershell
     Export-AdfsDiagnosticsFile -adfsServers @("sts1.contoso.com", "sts2.contoso.com", "sts3.contoso.com")
+```
 
 The result is a JSON file which is created in the same directory where the command was run. The name of the file is ADFSDiagnosticsFile-\<timestamp\>. An example file name is ADFSDiagnosticsFile-20180716124030.
 
