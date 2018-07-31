@@ -431,7 +431,7 @@
 #### [Walkthrough: Workplace Join with an Android Device](ad-fs/operations/Walkthrough--Workplace-Join-to-an-Android-device.md)
 
 ### [AD FS Troubleshooting](ad-fs/troubleshooting/ad-fs-tshoot-overview.md)
-#### [AD FS Diagnostics Analyzer](ad-fs/troubleshooting/ad-fs-diagonostics-analyzer.md)
+#### [AD FS Help Diagnostics Analyzer](ad-fs/troubleshooting/ad-fs-diagonostics-analyzer.md)
 #### [Azure](ad-fs/troubleshooting/ad-fs-tshoot-azure.md)
 #### [Certificates](ad-fs/troubleshooting/ad-fs-tshoot-certs.md)
 #### [Claims syntax](ad-fs/troubleshooting/ad-fs-tshoot-claims-rules.md)
