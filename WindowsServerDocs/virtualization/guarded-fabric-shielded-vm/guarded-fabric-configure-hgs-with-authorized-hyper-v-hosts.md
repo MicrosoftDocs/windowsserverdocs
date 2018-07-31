@@ -26,8 +26,8 @@ The topics in this section describe the steps that a fabric administrator takes 
 3. [Confirm guarded hosts can attest](guarded-fabric-confirm-hosts-can-attest-successfully.md)
 
 **For host key attestation**:
-1. [Create a host key](guarded-fabric-create-a-host-key.md#create-a-host-key): Tells how to set up a DNS forwarder from the fabric domain to the HGS domain.
-2. [Add the host key to the attestation service](guarded-fabric-create-a-host-key.md#add-the-host-key-to-the-attestation-service): Tells how to set up an Active Directory security group in the fabric domain, add guarded hosts as members of that group, and provide that group identifier to the HGS administrator. 
+1. [Create a host key](guarded-fabric-create-host-key.md#create-a-host-key): Tells how to set up a DNS forwarder from the fabric domain to the HGS domain.
+2. [Add the host key to the attestation service](guarded-fabric-create-host-key.md#add-the-host-key-to-the-attestation-service): Tells how to set up an Active Directory security group in the fabric domain, add guarded hosts as members of that group, and provide that group identifier to the HGS administrator. 
 3. [Confirm guarded hosts can attest](guarded-fabric-confirm-hosts-can-attest-successfully.md)
 
 
