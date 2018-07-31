@@ -20,8 +20,10 @@ ms.date: 07/20/2018
 
 This topic covers how to prepare Hyper-V hosts to become guarded hosts using host key attestation (Key mode). You'll create a host key pair (or use an existing certificate) and add the public half of the key to HGS.
 
+## Create a host key
+
 2.	Install Windows Server 2019 on your Hyper-V host machine.
-3.	Install the Hyper-V and Host Guardian Hyper-V Support features
+3.	Install the Hyper-V and Host Guardian Hyper-V Support features:
 
     ```powershell
     Install-WindowsFeature Hyper-V, HostGuardian -IncludeManagementTools -Restart
@@ -46,7 +48,7 @@ This topic covers how to prepare Hyper-V hosts to become guarded hosts using hos
     Get-HgsClientHostKey -Path "C:\temp\$env:hostname-HostKey.cer"
     ```
 
-6.	Copy the .cer file to your HGS server
+6.	Copy the .cer file to your HGS server.
 
 ## Add the host key to the attestation service
 

@@ -77,7 +77,7 @@ Code integrity policies can be configured to enforce the policy, blocking any so
 Starting with Windows Server version 1709, sample code integrity policies are included with Windows at C:\Windows\schemas\CodeIntegrity\ExamplePolicies. Two policies are recommended for Windows Server:
 
 - **AllowMicrosoft**: Allows all files signed by Microsoft. THis policy is recommended for server applications such as SQL or Exchange, or if the server is monitored by agents published by Microsoft.
-- **DefaultWindows**: Allows only files that shipped in Windows and doesn't permit other pplications released by Microsoft, such as Office. This policy is recommended for servers that run only built-in server roles and features such as Hyper-V. 
+- **DefaultWindows_Enforced**: Allows only files that shipped in Windows and doesn't permit other applications released by Microsoft, such as Office. This policy is recommended for servers that run only built-in server roles and features such as Hyper-V. 
 
 If you use the [New-CIPolicy](https://technet.microsoft.com/library/mt634473.aspx) cmdlet to generate your own code integrity policy, you will need to decide the rule levels to use. 
 For Server Core, we recommend a primary level of **FilePublisher** with fallback to **Hash**. 
