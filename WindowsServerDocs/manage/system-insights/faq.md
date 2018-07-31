@@ -46,8 +46,9 @@ Note that by default, System Insights storage and volume capacity forecasting pr
 Each default capability is inexpensive to run. Each capability will take longer to run as you collect more data, but they typically should complete in a just a few seconds. 
 
 ## See also
+To learn more about System Insights, use the following resources:
 
-- [System Insights overview](system-insights-overview.md)
-- [System Insights capabilities](system-insights-capabilities.md)
-- [Managing System Insights](managing-system-insights.md)
-- [System Insights known issues](system-insights-known-issues.md)
+- [System Insights overview](overview.md)
+- [Understanding capabilities](understanding-capabilities.md)
+- [Managing capabilities](managing-capabilities.md)
+- [Adding and developing capabilities](adding-and-developing-capabilities.md)
