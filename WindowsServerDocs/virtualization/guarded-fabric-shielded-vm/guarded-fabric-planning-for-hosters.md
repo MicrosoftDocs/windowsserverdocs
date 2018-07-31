@@ -7,7 +7,7 @@ ms.assetid: 854defc8-99f8-4573-82c0-f484e0785859
 manager: dongill
 author: nirb-ms
 ms.technology: security-guarded-fabric
-ms.date: 07/23/2018
+ms.date: 07/31/2018
 ---
 
 # Guarded Fabric and Shielded VM Planning Guide for Hosters
@@ -55,7 +55,7 @@ Deploy the Host Guardian Service (HGS) in a highly secure environment, whether t
 
 | Area | Details |
 |------|---------|
-| Recommended installation | <ul><li>Three node cluster for high availability</li><li>Physical machines with a TPM (both 1.2 and 2.0 are supported)</li><li>Windows Server 2016 Server Core </li><li>Network line of sight to the fabric allowing HTTPS</li><li>HTTPS certificate for access validation</li></ul> |
+| Installation requirements | <ul><li>One server (three-node cluster recommended for high availability)</li><li>Server can be either virtual or physical (physical machines with TPM 2.0 recommended; TPM 1.2 also supported)</li><li>Server Core installation of Windows Server 2016 or later</li><li>Network line of sight to the fabric allowing HTTPS</li><li>HTTP certificate for access validation (HTTPS recommemnded)</li></ul> |
 | Sizing | Each mid-size (8 core/4 GB) HGS server node can handle 1,000 Hyper-V hosts |
 | Management | Designate specific people who will manage HGS. They should be separate from fabric administrators. For comparison, HGS clusters can be thought of in the same manner as a Certificate Authority (CA) in terms of administrative isolation, physical deployment and overall level of security sensitivity. |
 | Host Guardian Service Active Directory | By default, HGS installs its own internal Active Directory for management. This is a self-contained, self-managed forest and is the recommended configuration to help isolate HGS from your fabric.<br><br>If you already have a highly privileged Active Directory forest that you use for isolation, you can use that forest instead of the HGS default forest. It is important that HGS is not joined to a domain in the same forest as the Hyper-V hosts or your fabric management tools. Doing so could allow a fabric admin to gain control over HGS. |
