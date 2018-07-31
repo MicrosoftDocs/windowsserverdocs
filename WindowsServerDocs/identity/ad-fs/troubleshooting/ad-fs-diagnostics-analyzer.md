@@ -13,11 +13,11 @@ ms.technology: identity-adfs
 
 # AD FS Help Diagnostics Analyzer
 
-AD FS has numerous settings that support the wide variety of functionality it provides for authentication and application development. During troubleshooting, it is recommended to ensure that all of the AD FS settings are correctly configured. Doing a manual check of these settings can sometimes be time consuming. AD FS Help Diagnostics Analyzer can help perform the basic checks using AD FS diagnostics PowerShell module. After performing the checks, AD FS Help provides the [Diagnostics Analyzer](https://aka.ms/adfsdiagnosticsanalyzer) to help you easily visualize the results and offer remediation steps.
+AD FS has numerous settings that support the wide variety of functionality it provides for authentication and application development. During troubleshooting, it is recommended to ensure that all of the AD FS settings are correctly configured. Doing a manual check of these settings can sometimes be time consuming. AD FS Help Diagnostics Analyzer can help perform the basic checks using the ADFSToolbox PowerShell module. After performing the checks, AD FS Help provides the [Diagnostics Analyzer](https://aka.ms/adfsdiagnosticsanalyzer) to help you easily visualize the results and offer remediation steps.
 
 The complete operation takes 3 simple steps:
 
-1. Setup the diagnostics module on the primary AD FS server or WAP server
+1. Setup the ADFSToolbox module on the primary AD FS server or WAP server
 2. Execute the diagnostics and upload the file to AD FS Help
 3. View diagnostics analysis and resolve any issues
 
@@ -25,30 +25,31 @@ Go to [AD FS Help Diagnostics Analyzer (https://aka.ms/adfsdiagnosticsanalyzer)]
 
 ![AD FS diagnostics analyzer tool on AD FS Help](media/ad-fs-diagonostics-analyzer/home.png)
 
-## Step 1: Setup the diagnostics module on AD FS server
+## Step 1: Setup the ADFSToolbox module on AD FS server
 
-To run the [Diagnostics Analyzer](https://aka.ms/adfsdiagnosticsanalyzer), you must install the ADFSDiagnostics PowerShell module. If the AD FS server has connectivity to the internet, you can install the ADFSDiagnostics module directly from the PowerShell gallery. In case of no connectivity to the internet, clone the GitHub repository for manual installation. 
+To run the [Diagnostics Analyzer](https://aka.ms/adfsdiagnosticsanalyzer), you must install the ADFSToolbox PowerShell module. If the AD FS server has connectivity to the internet, you can install the ADFSToolbox module directly from the PowerShell gallery. In case of no connectivity to the internet, clone the GitHub repository for manual installation. 
 
 ![AD FS diagnostics analyzer - setup](media/ad-fs-diagonostics-analyzer/step1.png)
 
 ### Setup using PowerShell gallery
 
-If the AD FS server has internet connectivity, it is recommended to install the diagnostics module directly from the PowerShell gallery using the PowerShell commands given below.
+If the AD FS server has internet connectivity, it is recommended to install the ADFSToolbox module directly from the PowerShell gallery using the PowerShell commands given below.
  
    ```powershell 
-    Install-Module -Name ADFSDiagnostics -force
-    Import-Module ADFSDiagnostics -force
+    Install-Module -Name ADFSToolbox -force
+    Import-Module ADFSToolbox -force
    ```
 ### Setup manually by cloning the repository
 
-The diagnostics module can be installed manually from GitHub directly. Follow the instructions below for cloning the repository and installing the diagnostics module on the AD FS server.
+The ADFSToolbox module can be installed manually from GitHub directly. Follow the instructions below for cloning the repository and installing the ADFSToolbox module on the AD FS server.
 
-1. Download the [repository](https://github.com/Microsoft/adfsManagementTools/zipball/master)
-2. Unzip the download and copy ADFSDiagnostics folder to C:\Program Files\WindowsPowerShell\Modules\
-3. Import the PowerShell Module
-4. In an elevated PowerShell window, run the following:
+1. Download the [repository](https://github.com/Microsoft/adfsToolbox/archive/master.zip)
+2. Unzip the downloaded file and copy the adfsToolbox-master folder to %SYSTEMDRIVE%\\Program Files\\WindowsPowerShell\\Modules\\.
+3. Import the PowerShell Module. In an elevated PowerShell window, run the following:
  
-    Import-Module ADFSDiagnostics
+   ```powershell 
+    Import-Module ADFSToolbox -Force
+   ```
 
 ## Step 2: Execute the diagnostics and upload the file to AD FS Help
 
