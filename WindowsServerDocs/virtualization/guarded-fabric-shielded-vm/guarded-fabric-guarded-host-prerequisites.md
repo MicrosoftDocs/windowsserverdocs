@@ -6,7 +6,7 @@ ms.topic: article
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 08/28/2017
+ms.date: 08/01/2018
 ---
 
 # Prerequisites for guarded hosts
@@ -56,7 +56,7 @@ Guarded hosts using host key attestation must meet the following prerequisites:
 
 The host can be joined to either a domain or a workgroup. 
 
-**Next step:** [Create a key pair](guarded-fabric-admin-trusted-attestation-creating-a-security-group.md)
+**Next step:** [Create a key pair](guarded-fabric-create-host-key.md)
 
 ## Admin-trusted attestation
 
@@ -69,8 +69,8 @@ Hyper-V hosts must meet the following prerequisites for AD mode:
 
 -   **Operating system**: Windows Server 2016 Datacenter edition
 
-   > [!IMPORTANT]
-   > Install the [latest cumulative update](https://support.microsoft.com/help/4000825/windows-10-and-windows-server-2016-update-history).
+    > [!IMPORTANT]
+    > Install the [latest cumulative update](https://support.microsoft.com/help/4000825/windows-10-and-windows-server-2016-update-history).
 
 -   **Role and features**: Hyper-V role and the Host Guardian Hyper-V Support feature, which is only available in Windows Server 2016 Datacenter edition. 
 
