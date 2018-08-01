@@ -37,11 +37,11 @@ Your users will see better performance connecting to Windows Server 2016 (or lat
 >If you used the web client during the preview period and installed a version prior to 1.0.0, you must first uninstall the old client before moving to the new version. If you receive an error that says "The web client was installed using an older version of RDWebClientManagement and must first be removed before deploying the new version," follow these steps:
 >
 >1. Open an elevated PowerShell prompt.
->2. Uninstall the new module using **Uninstall-Module RDWebClientManagement**.
+>2. Run **Uninstall-Module RDWebClientManagement** to uninstall the new module.
 >3. Close and reopen the elevated PowerShell prompt.
->4. Install the old module using **Install-Module RDWebClientManagement -RequiredVersion \<old version>.**
->5. Uninstall the old web client with **Uninstall-RDWebClient**.
->6. Uninstall the old module using **Uninstall-Module RDWebClientManagement**.
+>4. Run **Install-Module RDWebClientManagement -RequiredVersion \<old version> to install the old module.**
+>5. Run **Uninstall-RDWebClient** to uninstall the old web client.
+>6. Run **Uninstall-Module RDWebClientManagement** to uninstall the old module.
 >7. Close and reopen the elevated PowerShell prompt.
 >8. Proceed with the normal installation steps as follows.
 
@@ -50,8 +50,8 @@ Your users will see better performance connecting to Windows Server 2016 (or lat
 To install the web client for the first time, follow these steps:
 
 1. On the RD Connection Broker server, obtain the certificate used for Remote Desktop connections and export it as a .cer file. Copy the .cer file from the RD Connection Broker to the server running the RD Web role.
-1. On the RD Web Access server, open an elevated PowerShell prompt.
-1. On Windows Server 2016, update the PowerShellGet module since the inbox version doesn't support installing the web client management module. To update PowerShellGet, run the following command:
+2. On the RD Web Access server, open an elevated PowerShell prompt.
+3. On Windows Server 2016, update the PowerShellGet module since the inbox version doesn't support installing the web client management module. To update PowerShellGet, run the following cmdlet:
     ```PowerShell
     Install-Module -Name PowerShellGet -Force
     ```
@@ -59,22 +59,22 @@ To install the web client for the first time, follow these steps:
     >[!IMPORTANT]
     >You'll need to restart PowerShell before the update can take effect, otherwise the module may not work.
 
-1. Install the Remote Desktop web client management PowerShell module from the PowerShell gallery with this cmdlet:
+4. Install the Remote Desktop web client management PowerShell module from the PowerShell gallery with this cmdlet:
     ```PowerShell
     Install-Module -Name RDWebClientManagement
     ```
     
-1. After that, run the following cmdlet to download the latest version of the Remote Desktop web client:
+5. After that, run the following cmdlet to download the latest version of the Remote Desktop web client:
     ```PowerShell
     Install-RDWebClientPackage
     ```
     
-1. Next, run this cmdlet with the bracketed value replaced with the path of the .cer file that you copied from the RD Broker:
+6. Next, run this cmdlet with the bracketed value replaced with the path of the .cer file that you copied from the RD Broker:
     ```PowerShell
     Import-RDWebClientBrokerCert <.cer file path>
     ```
     
-1. Finally, run this cmdlet to publish the Remote Desktop web client:
+7. Finally, run this cmdlet to publish the Remote Desktop web client:
     ```PowerShell
     Publish-RDWebClientPackage -Type Production -Latest
     ```
@@ -82,7 +82,7 @@ To install the web client for the first time, follow these steps:
 
     >[!NOTE]
     >When running the **Publish-RDWebClientPackage** cmdlet, you may see a warning that says per-device CALs are not supported, even if your deployment is configured for per-user CALs. If your deployment uses per-user CALs, you can ignore this warning. We display it to make sure you’re aware of the configuration limitation.
-1. When you're ready for users to acces the web client, just send them the web client URL you created.
+8. When you're ready for users to acces the web client, just send them the web client URL you created.
 
 >[!NOTE]
 >To see a list of all supported cmdlets for the RDWebClientManagement module, run the following cmdlet in PowerShell:
