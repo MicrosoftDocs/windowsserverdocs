@@ -157,4 +157,4 @@ If you can't solve the issue based on the troubleshooting instrctions in this ar
 
 ## Get help with the web client
 
-If you've encountered an issue that can’t be solved by the information in this article, you can [email us](<rdwbclnt@microsoft.com>) to report it. You can also request or vote for new features at our [suggestion box](https://aka.ms/rdwebfbk).
+If you've encountered an issue that can’t be solved by the information in this article, you can [email us](mailto:rdwbclnt@microsoft.com) to report it. You can also request or vote for new features at our [suggestion box](https://aka.ms/rdwebfbk).
