@@ -115,6 +115,7 @@ When a new version of the Remote Desktop web client is available, follow these s
 ## How to uninstall the Remote Desktop web client
 
 To remove all traces of the web client, follow these steps:
+
 1. On the RD Web Access server, open an elevated PowerShell prompt.
 2. Unpublish the Test and Production clients, uninstall all local packages and remove the web client settings:
    
