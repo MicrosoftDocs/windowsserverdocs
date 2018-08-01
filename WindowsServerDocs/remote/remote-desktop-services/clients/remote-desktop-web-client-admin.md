@@ -151,10 +151,10 @@ If the user gets an "unexpected server authentication certificate was received" 
 Import-RDWebClientBrokerCert <certificate file path>
 ```
 
-### How to open the console log
+### Diagnose issues with the console log
 
-If the issue can't be solved by the previous sections, you can try to diagnose the source of the problem yourself by watching the console log. To open the log, go to **Developer tools** in your web browser. You can also open the log with the **F12** key.
+If you can't solve the issue based on the troubleshooting instrctions in this article, you can try to diagnose the source of the problem yourself by watching the console log in the browser. The console is generally located under the developer tools. For example, you can access the log in Edge by pressing the **F12** key, or by selecting the ellipsis, then navigating to **More tools** > **Developer Tools**.
 
 ## Get help with the web client
 
-If you've encountered an issue that can’t be solved by the information in this article, you can get help with the web client by emailing the address on the web client's About page.
+If you've encountered an issue that can’t be solved by the information in this article, you can [email us](rdwbclnt@microsoft.com) to report it. You can also request or vote for new features at our [suggestion box](https://aka.ms/rdwebfbk).
