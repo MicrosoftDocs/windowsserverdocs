@@ -13,9 +13,6 @@ ms.localizationpriority: medium
 
 The Remote Desktop web client lets users access your organization's Remote Desktop infrastructure through a compatible web browser. They'll be able to interact with remote apps or desktops like they would with a local PC no matter where they are. Once you set up your Remote Desktop web client, all your users need to get started is the URL where they can access the client, their credentials, and a supported web browser.
 
->[!NOTE]
->You can [email us](mailto:rdwbclnt@microsoft.com) to report issues with the web client. You may also request or vote for new features on our [suggestion box](https://aka.ms/rdwebfbk).
-
 >[!IMPORTANT]
 >The web client does not currently support using Azure Application Proxy and does not support Web Application Proxy at all. See [Using RDS with application proxy services](../rds-supported-config.md#using-remote-desktop-services-with-application-proxy-services) for details.
 
@@ -154,7 +151,7 @@ Import-RDWebClientBrokerCert <certificate file path>
 
 ### Diagnose issues with the console log
 
-If you can't solve the issue based on the troubleshooting instrctions in this article, you can try to diagnose the source of the problem yourself by watching the console log in the browser. The console is generally located under the developer tools. For example, you can access the log in Edge by pressing the **F12** key, or by selecting the ellipsis, then navigating to **More tools** > **Developer Tools**.
+If you can't solve the issue based on the troubleshooting instructions in this article, you can try to diagnose the source of the problem yourself by watching the console log in the browser. The console is generally located under the developer tools. For example, you can access the log in Edge by pressing the **F12** key, or by selecting the ellipsis, then navigating to **More tools** > **Developer Tools**.
 
 ## Get help with the web client
 
