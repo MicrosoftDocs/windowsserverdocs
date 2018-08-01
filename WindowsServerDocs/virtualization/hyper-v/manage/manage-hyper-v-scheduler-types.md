@@ -56,7 +56,13 @@ Before considering hypervisor scheduler types it’s also helpful to understand 
 
 ## Hypervisor scheduler types
 
-Starting with Windows Server 2016, the Hyper-V hypervisor supports several modes of scheduler logic, which determine how the hypervisor schedules virtual processors on the underlying logical processors.
+Starting with Windows Server 2016, the Hyper-V hypervisor supports several modes of scheduler logic, which determine how the hypervisor schedules virtual processors on the underlying logical processors. These scheduler types are:
+
+    * The classic, fair-share scheduler
+    * The core scheduler
+    * The root scheduler
+
+Each of these scheduler types is described in detail below.
 
 ### The classic scheduler
 
@@ -66,12 +72,14 @@ The classic scheduler type is the most appropriate for the vast majority of trad
 
 ### The core scheduler
 
-The hypervisor core scheduler is a new alternative to the classic scheduler logic, introduced in Windows Server 2016 and Windows 10 version 1607. The core scheduler offers reduced performance variability for workloads inside of VMs which are running on an SMT- enabled virtualization host. The core scheduler allows running both SMT and non-SMT virtual machines simultaneously on the same SMT enabled virtualization host.
+The hypervisor core scheduler is a new alternative to the classic scheduler logic, introduced in Windows Server 2016 and Windows 10 version 1607. The core scheduler offers a strong security boundary for guest workload isolation, and reduced performance variability for workloads inside of VMs which are running on an SMT- enabled virtualization host. The core scheduler allows running both SMT and non-SMT virtual machines simultaneously on the same SMT enabled virtualization host.
 
 The core scheduler utilizes the virtualization host’s SMT topology, and optionally exposes SMT pairs to guest virtual machines, and schedules groups of guest virtual processors from the same virtual machine onto groups of SMT logical processors.  This is done symmetrically so that if LPs are in groups of two, VPs are scheduled in groups of two, and a core is never shared between VMs.
 When the VP for a virtual machine without SMT enabled is scheduled, that VP will consume the entire core when it runs.
 
 The overall result of the core scheduler is that:
+
+* Guest VPs are constrained to run on underlying physical core pairs, isolating a VM to processor core boundaries, thus reducing vulnerability to sidechannel snooping attacks from malicious VMs
 
 * Variability in throughput is significantly reduced.
 
@@ -79,24 +87,13 @@ The overall result of the core scheduler is that:
 
 * The OS and applications running in the guest virtual machine can utilize SMT behavior and programming interfaces (APIs) to control and distribute work across SMT threads, just as they would when run non-virtualized.
 
-The core scheduler is optional and must be explicitly enabled by the Hyper-V host administrator.
+* A strong security boundary for guest workload isolation - Guest VPs are constrained to run on underlying physical core pairs, reducing vulnerability to sidechannel snooping attacks
+
+The core scheduler will be used by default starting in Windows Server 2019.  On Windows Server 2016, the core scheduler is optional and must be explicitly enabled by the Hyper-V host administrator, and the classic scheduler is the default.
+
+#### Core scheduler behavior with host SMT disabled
 
 If the hypervisor is configured to use the core scheduler type but the SMT capability is disabled or not present on the virtualization host, then the hypervisor will use the classic scheduler behavior, regardless of the hypervisor scheduler type setting.
-
-## Enabling SMT in guest virtual machines
-
-Once the virtualization host’s hypervisor is configured to use the core scheduler type, guest virtual machines may be configured to utilize SMT if desired. Exposing the fact that VPs are hyperthreaded to a guest virtual machine allows the scheduler in the guest operating system and workloads running in the VM to detect and utilize the SMT topology in their own work scheduling. The SMT processor topology is not shown to a guest virtual machine by default and must be explicitly enabled by the Hyper-V host administrator.
-
-PowerShell must be used enable SMT in a guest virtual machine; there is no user interface provided in the Hyper-V Manager UI.
-To enable SMT in a guest virtual machine, open a PowerShell window with sufficient permissions, and type:
-
-``` powershell
-Set-VMProcessor -VMName <VMName> -HwThreadCountPerCore 2
-```
-
-Below is an example of System Information taken from the guest operating system running in a virtual machine with 2 virtual processors and SMT enabled. The guest operating system is detecting 2 logical processors belonging to the same core.
-
-![Screen shot that shows msinfo32 in a guest VM with SMT enabled](media/Hyper-V-CoreScheduler-VM-Msinfo32.png)
 
 ### The root scheduler
 
@@ -116,14 +113,40 @@ The virtual machine processor resource controls provided by Hyper-V are not supp
 
 The root scheduler is not recommended for use with Hyper-V on servers at this time, as its performance characteristics have not yet been fully characterized and tuned to accommodate the wide range of workloads typical of many server virtualization deployments.
 
-## Configuring the hypervisor scheduler type on Windows Server Hyper-V
+## Enabling SMT in guest virtual machines
 
-Windows Server 2016 and Windows Server 2019 1804 Hyper-V use the classic hypervisor scheduler model by default.  The hypervisor can be optionally configured to use the core scheduler, to support the use of virtual machines with SMT scheduling for their guest VPs, and to constrain guest VPs to run only on corresponding physical SMT pairs.
+Once the virtualization host’s hypervisor is configured to use the core scheduler type, guest virtual machines may be configured to utilize SMT if desired. Exposing the fact that VPs are hyperthreaded to a guest virtual machine allows the scheduler in the guest operating system and workloads running in the VM to detect and utilize the SMT topology in their own work scheduling. On Windows Server 2016, guest SMT is not configured by default and must be explicitly enabled by the Hyper-V host administrator. Starting with Windows Server 2019, new VMs created on the host will inherit the host's SMT topology by default.  That is, a version 9.0 VM created on a host with 2 SMT threads per core would also see 2 SMT threads per core.
+
+PowerShell must be used to enable SMT in a guest virtual machine; there is no user interface provided in the Hyper-V Manager UI.
+To enable SMT in a guest virtual machine, open a PowerShell window with sufficient permissions, and type:
+
+``` powershell
+Set-VMProcessor -VMName <VMName> -HwThreadCountPerCore <n>
+
+    Where <n> is the number of SMT threads per core the guest VM will see.  
+
+    Note that <n> = 0 will set the HwThreadCountPerCore value to match the host's SMT thread count per core value.
+```
+
+Below is an example of System Information taken from the guest operating system running in a virtual machine with 2 virtual processors and SMT enabled. The guest operating system is detecting 2 logical processors belonging to the same core.
+
+![Screen shot that shows msinfo32 in a guest VM with SMT enabled](media/Hyper-V-CoreScheduler-VM-Msinfo32.png)
+
+## Configuring the hypervisor scheduler type on Windows Server 2016 Hyper-V
+
+Windows Server 2016 Hyper-V uses the classic hypervisor scheduler model by default. The hypervisor can be optionally configured to use the core scheduler, to increase security by restricting guest VPs to run on corresponding physical SMT pairs, and to support the use of virtual machines with SMT scheduling for their guest VPs.
+
+>[!NOTE]
+> Microsoft reccommends that all customers running Windows Server 2016 Hyper-V select the core scheduler to ensure their virtualization hosts are optimally protected against potentially malicious guest VMs
+
+## Windows Server 2019 Hyper-V defaults to using the core scheduler
+
+To help ensure Hyper-V hosts are deployed in the optimal security configuaration, Windows Server 2019 Hyper-V will now use the core hypervisor scheduler model by default. The host administrator may optionally configure the host to use the legacy classic scheduler. Administrators should carefully read, understand and consider the impacts each scheduler type has on the security and performance of virtualization hosts prior to overriding the scheduler type default settings.  See [Understanding Hyper-V scheduler type selection](https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/manage/understanding-hyper-v-scheduler-type-selection) for more information.
 
 ### Required updates
 
 >[!NOTE]
->The following updates are required to use the hypervisor scheduler features described in this document.
+>The following updates are required to use the hypervisor scheduler features described in this document.  These updates include changes to support the new 'hypervisorschedulertype' BCD option which is necessary for host configuration.
 
 | Version | Release  | Update Required | KB Article |
 |--------------------|------|---------|-------------:|
@@ -155,7 +178,7 @@ The system must be rebooted for any changes to the hypervisor scheduler type to 
 >[!NOTE]
 >The hypervisor root scheduler is not supported on Windows Server Hyper-V at this time.  Hyper-V administrators should not attempt to configure the root scheduler for use with server virtualization scenarios.
 
-## How to determine the current scheduler type
+## Determining the current scheduler type
 
 You can determine the current hypervisor scheduler type in use by examining the Windows Sysem Event Log for the most recent hypervisor launch event ID 2, which reports the hypervisor scheduler type configured at hypervisor launch. Hypervisor launch events can be obtained from the Windows Event Viewer, or via PowerShell.
 
