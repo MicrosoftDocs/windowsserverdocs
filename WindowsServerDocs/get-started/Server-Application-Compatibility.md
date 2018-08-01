@@ -5,7 +5,7 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.date: 04/28/2017
+ms.date: 08/01/2018
 ms.technology: server-general
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -21,7 +21,7 @@ ms.localizationpriority: medium
 
 This table lists Microsoft server applications that support installation and functionality on Window Server 2016. This information is for quick reference and is not intended to replace the individual product specifications, requirements, announcements, or general communications of each individual server application. Refer to official documentation for each product to fully understand compatibility and options.
 
-For customers and software vendor partners looking for more information on Windows Server compatibility with non-Microsoft applications, visit the main [Windows Server Logo Certification portal](https://msdn.microsoft.com/enterprisecloudcertified).
+For customers and software vendor partners looking for more information on Windows Server compatibility with non-Microsoft applications, visit the [Commercial App Certification portal](https://commercialappcertification.microsoft.com/).
 
 |Microsoft Server Application|	Released?|	Product Link|
 |-------------------------------------|--------------------------------------------|-------------------|
