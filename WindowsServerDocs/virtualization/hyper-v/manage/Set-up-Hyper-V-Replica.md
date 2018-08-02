@@ -59,7 +59,7 @@ You'll need at least two Hyper-V hosts with one or more virtual machines on each
 
 1.  In the Hyper-V settings for the server you'll replicate virtual machines to, in **Replication Configuration**, select **Enable this computer as a Replica server**.  
 
-2.  You can replicate over HTTP or encrypted HTTPS. Select **Use Kerberos (HTTP)** or **Use certificate-based Authentication (HTTPS**). By default HTTP 80 and HTTP 443 are enabled as firewall exceptions on the replica Hyper-V server. If you change the default port settings you'll need to also change the firewall exception. If you're replicating over HTTPS, you'll need to select a certificate and you should have certificate authentication set up.  
+2.  You can replicate over HTTP or encrypted HTTPS. Select **Use Kerberos (HTTP)** or **Use certificate-based Authentication (HTTPS**). By default HTTP 80 and HTTPS 443 are enabled as firewall exceptions on the replica Hyper-V server. If you change the default port settings you'll need to also change the firewall exception. If you're replicating over HTTPS, you'll need to select a certificate and you should have certificate authentication set up.  
 
 3.  For authorization, select **Allow replication from any authenticated server** to allow the replica server to accept virtual machine replication traffic from any primary server that authenticates successfully. Select **Allow replication from the specified servers** to accept traffic only from the primary servers you specifically select.  
 
