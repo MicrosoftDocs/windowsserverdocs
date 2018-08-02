@@ -104,7 +104,7 @@ Some additional information about this section:
 
 -   Multiple URLs are supported.
 
--   HTTP, FTP, and LDAP URLs are supported. HTTPS URLs are not supported.
+-   HTTP, File URLs and LDAP URLs are supported. HTTPS URLs are not supported.<p>CA can publish to FILE UNC, for example, to a share that represents the folder of a website where a client retrieves via HTTP.
 
 -   This section is only used if you are setting up a root CA or renewing the root CA certificate. Subordinate CA CDP extensions are determined by the CA which issues the subordinate CA’s certificate.
 
