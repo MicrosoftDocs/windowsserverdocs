@@ -31,7 +31,7 @@ A Hyper-V or Scale-Out File Server failover cluster can now easily be upgraded w
 
 The cluster operating systems for the upgrade in phases are as follows for each node in a cluster:  
 -   The node is paused and drained of all virtual machines that are running on it.  
--   The virtual machines (or other cluster workload) are migrated to another node in the cluster.The virtual machines are migrated to another node in the cluster.  
+-   The virtual machines (or other cluster workload) are migrated to another node in the cluster. The virtual machines are migrated to another node in the cluster.  
 -   The existing operating system is removed and a clean installation of the Windows Server 2016 operating system on the node is performed.  
 -   The node running the Windows Server 2016 operating system is added back to the cluster.  
 -   At this point, the cluster is said to be running in mixed mode, because the cluster nodes are running either  Windows Server 2012 R2 or Windows Server 2016.  
