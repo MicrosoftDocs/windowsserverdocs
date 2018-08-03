@@ -48,7 +48,7 @@ This series only has 64-bit kernels.
 
 |**Feature**|**Windows Server version**|**7.5**|**7.0-7.4**|**7.0-7.2**|**7.5**|**7.4**|**7.3**|**7.2**|**7.1**|**7.0**|
 |-|-|-|-|-|-|-|-|-|-|-|
-|**Availability**||[LIS 4.2](https://www.microsoft.com/download/details.aspx?id=55106)|LIS 4.2||Built in|Built in|Built in|Built in|Built in|Built in||
+|**Availability**||[LIS 4.2](https://www.microsoft.com/download/details.aspx?id=55106)|||Built in|Built in|Built in|Built in|Built in|Built in||
 |**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_core)**|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |Windows Server 2016 Accurate Time|2016|&#10004;|&#10004;|||||||
 |**[Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Networking)**|||||||
@@ -90,7 +90,7 @@ The 32-bit kernel for this series is PAE enabled. There is no built-in LIS suppo
 
 |**Feature**|**Windows Server version**|**6.0-6.10**|**6.0-6.10**|**6.10, 6.9, 6.8**|**6.6, 6.7**|**6.5**|**6.4**|
 |-|-|-|-|-|-|-|-|
-|**Availability**||[LIS 4.2](https://www.microsoft.com/download/details.aspx?id=55106)|[LIS 4.1](https://www.microsoft.com/download/details.aspx?id=51612)|Built in|Built in|Built in|Built in|
+|**Availability**||[LIS 4.2](https://www.microsoft.com/download/details.aspx?id=55106)||Built in|Built in|Built in|Built in|
 |**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_core)**|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |Windows Server 2016 Accurate Time|2016||||||
 |**[Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Networking)**|
