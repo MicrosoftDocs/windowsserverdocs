@@ -6,7 +6,7 @@ ms.manager: dongill
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 7/25/2018
+ms.date: 7/27/2018
 ms.assetid: 8bd0d09a-0421-40a4-b752-40ecb5350ffd
 description: An overview of Storage Spaces Direct, a feature of Windows Server that enables you to cluster servers with internal storage into a software-defined storage solution.
 ms.localizationpriority: medium
@@ -221,18 +221,16 @@ Click any logo to read the full customer story:
     <a target="_blank" href="https://www.dataonstorage.com/customer-stories/quest-chooses-dataon-microsoft-power-veeam-cloud-connect-backup-service/"><img onload="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px;'" onmouseover="this.style.cssText = 'box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.2); margin: 0px 2px 4px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" onmouseout="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" title="Quest Technology Management (DataON Case Study)" src="wall-of-logos/dataon-quest-technology-management.png"></a>
 </div>
 
-## Tools for managing Storage Spaces Direct
-After you've deployed your storage, some of the management tasks you'll perform include monitoring for failed physical disks or other issues, replacing disks that fail, and updating firmware and drivers.
-See the following table for common management options.
+## Management tools
 
-|Tool|Advantages|Disadvantages|
-|---|---|---|
-|[Windows Admin Center](../../manage/windows-admin-center/overview.md)|-Powerful and easy to use<br>-Graphical displays for monitoring individual clusters and servers|-Must be installed (it is [pretty easy to install](../../manage/windows-admin-center/deploy/install.md) though...)|
-|Windows PowerShell|- Complete control over all aspects of storage<br>- Can automate by writing scripts<br>- Powerful example scripts available|- Better for management than visually monitoring overall storage health<br>- Scripts require development and testing|
-|System Center Virtual Machine Manager (VMM) & Operations Manager|- Easy to use<br>- Graphical displays for monitoring multiple systems<br>- Alerting for common problems<br>- Common tool for managing VMs and storage<br>|- Some tasks require Windows PowerShell<br>- Requires System Center licenses<br>- Might require additional infrastructure if you don't already have System Center or are deploying at a scale that's greater than your existing deployment can handle|
-|Failover Cluster Manager & Server Manager|- Easy to use<br>- Graphical displays for monitoring<br>|- Some tasks require Windows PowerShell<br>- Slow automatic refreshes in Server Manager when working with storage<br>- Performance and usability decreases with large numbers of objects|
+The following tools can be used to manage and/or monitor Storage Spaces Direct:
 
-For more info about using VMM with Storage Spaces Direct, see [Manage Storage Spaces Direct in VMM](https://technet.microsoft.com/system-center-docs/vmm/manage/manage-storage-spaces-direct-vmm), and [Manage storage in Storage Spaces Direct in the VMM fabric](https://technet.microsoft.com/system-center-docs/vmm/scenario/storage-spaces-manage).
+| Name | Graphical or command-line? | Paid or included? |
+|-----------------|----------------------------|-------------------|
+| [Windows Admin Center](../../manage/windows-admin-center/overview.md)     | Graphical    | Included |
+| Server Manager & Failover Cluster Manager                                 | Graphical    | Included |
+| Windows PowerShell                                                        | Command-line | Included |
+| [System Center Virtual Machine Manager (SCVMM)](https://technet.microsoft.com/system-center-docs/vmm/manage/manage-storage-spaces-direct-vmm) & [Operations Manager (SCOM)](https://www.microsoft.com/download/details.aspx?id=54700) | Graphical    | Paid     |
 
 ## Get started
 
