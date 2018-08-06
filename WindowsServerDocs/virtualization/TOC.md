@@ -55,6 +55,7 @@
 #### [Guarded Fabric Diagnostic Tool](guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-diagnostics.md)
 #### [HGS](guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-hgs.md)
 #### [Guarded Hosts](guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-hosts.md)
+#### [Shielded VMs](guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-shielded-vms.md)
 
 ## [Hyper-V](hyper-v/Hyper-V-on-Windows-Server.md)
 ### [Technology Overview](hyper-v/Hyper-V-Technology-Overview.md)
