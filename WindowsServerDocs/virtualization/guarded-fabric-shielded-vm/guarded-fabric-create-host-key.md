@@ -22,14 +22,14 @@ This topic covers how to prepare Hyper-V hosts to become guarded hosts using hos
 
 ## Create a host key
 
-2.	Install Windows Server 2019 on your Hyper-V host machine.
-3.	Install the Hyper-V and Host Guardian Hyper-V Support features:
+1.	Install Windows Server 2019 on your Hyper-V host machine.
+2.	Install the Hyper-V and Host Guardian Hyper-V Support features:
 
     ```powershell
     Install-WindowsFeature Hyper-V, HostGuardian -IncludeManagementTools -Restart
     ``` 
 
-4.	Generate a host key automatically, or select an existing certificate. If you are using a custom certificate, it should have at least a 2048-bit RSA key, Client Authentication EKU, and Digital Signature key usage.
+3.	Generate a host key automatically, or select an existing certificate. If you are using a custom certificate, it should have at least a 2048-bit RSA key, Client Authentication EKU, and Digital Signature key usage.
 
     ```powershell
     Set-HgsClientHostKey
@@ -42,13 +42,13 @@ This topic covers how to prepare Hyper-V hosts to become guarded hosts using hos
     ```
 
 
-5.	Get the public half of the key to provide to the HGS server. You can use the following cmdlet or, if you have the certificate stored elsewhere, provide a .cer containing the public half of the key. Note that we are only storing and validating the public key on HGS; we do not keep any certificate information nor do we validate the certificate chain or expiration date.
+4.	Get the public half of the key to provide to the HGS server. You can use the following cmdlet or, if you have the certificate stored elsewhere, provide a .cer containing the public half of the key. Note that we are only storing and validating the public key on HGS; we do not keep any certificate information nor do we validate the certificate chain or expiration date.
 
     ```powershell
     Get-HgsClientHostKey -Path "C:\temp\$env:hostname-HostKey.cer"
     ```
 
-6.	Copy the .cer file to your HGS server.
+5.	Copy the .cer file to your HGS server.
 
 ## Add the host key to the attestation service
 

@@ -15,4 +15,4 @@ ms.date: 10/14/2016
 
 ## Next step
 
-- [Configure Https](guarded-fabric-configure-hgs-https.md)
+- [Configure HTTPS](guarded-fabric-configure-hgs-https.md)
