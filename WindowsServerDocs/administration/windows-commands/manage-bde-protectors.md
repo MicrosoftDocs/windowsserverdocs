@@ -16,7 +16,7 @@ ms.date: 08/06/2018
 ---
 # manage-bde: protectors
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 Manages the protection methods used for the BitLocker encryption key. For examples of how this command can be used, see [Examples](#BKMK_Examples).
 ## Syntax
@@ -97,7 +97,7 @@ manage-bde  protectors  disable <Drive> [-RebootCount <integer 0 - 15>] [-comput
 |Parameter|Description|
 |-------|--------|
 |<Drive>|Represents a drive letter followed by a colon.|
-|RebootCount|Specifies that protection of the operating system volume has been suspended and will resume after Windows has been restarted the number of times specified in the RebootCount parameter. Specify 0 to suspend protection indefinitely. If this parameter is not specified BitLocker protection will automatically resume when Windows is restarted. You can also use **-rc** as an abbreviated version of this command.|
+|RebootCount|Starting with Windows 8, specifies that protection of the operating system volume has been suspended and will resume after Windows has been restarted the number of times specified in the RebootCount parameter. Specify 0 to suspend protection indefinitely. If this parameter is not specified BitLocker protection will automatically resume when Windows is restarted. You can also use **-rc** as an abbreviated version of this command.|
 |-computername|Specifies that manage-bde.exe will be used to modify BitLocker protection on a different computer. You can also use **-cn** as an abbreviated version of this command.|
 |<Name>|Represents the name of the computer on which to modify BitLocker protection. Accepted values include the computer's NetBIOS name and the computer's IP address.|
 |-? or /?|Displays brief help at the command prompt.|
