@@ -13,6 +13,14 @@ author: shortpatti
 
 >Applies To: Windows Server (Semi-Annual Channel)
 
+
+| **Feature** | **Description** | **New/updated** | 
+| --- | --- | --- |
+| | | |
+| | | |
+---
+
+
 You can use the following links to content that is new in Software Defined Networking \(SDN\) for Windows Server 1709.
 
 - [Virtual Network Encryption](vnet-encryption/sdn-vnet-encryption.md)
