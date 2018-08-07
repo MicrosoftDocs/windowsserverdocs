@@ -23,35 +23,20 @@ Use **netsh http** to query and configure HTTP.sys settings and parameters.
 The available netsh http commands are:
 
 - [add iplisten](#add-iplisten)
-
 - [add sslcert](#add-sslcert)
-
 - [add timeout](#add-timeout)
-
 - [add urlacl](#add-urlacl)
-
 - [delete cache](#delete-cache)
-
 - [delete iplisten](#delete-iplisten)
-
 - [delete sslcert](#delete-sslcert)
-
 - [delete timeout](#delete-timeout)
-
 - [delete urlacl](#delete-urlacl)
-
 - [flush logbuffer](#flush-logbuffer)
-
 - [show cachestate](#show-cachestate)
-
 - [show iplisten](#show-iplisten)
-
 - [show servicestate](#show-servicestate)
-
 - [show sslcert](#show-sslcert)
-
 - [show timeout](#show-timeout)
-
 - [show urlacl](#show-urlacl)
 
 ## add iplisten
@@ -60,7 +45,9 @@ Adds a new IP address to the IP listen list, excluding the port number.
 
 **Syntax**
 
-`add iplisten [ ipaddress= ] IPAddress`
+```syntax
+add iplisten [ ipaddress= ] IPAddress
+```
 
 **Parameters**
 | | | |
