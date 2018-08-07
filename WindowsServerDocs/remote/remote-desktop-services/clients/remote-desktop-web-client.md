@@ -4,7 +4,7 @@ description: Describes how to sign in to the Remote Desktop web client.
 ms.prod: windows-server-threshold
 ms.technology: remote-desktop-services
 ms.author: helohr
-ms.date: 07/16/2018
+ms.date: 07/20/2018
 ms.topic: article
 author: Heidilohr
 ms.localizationpriority: medium
@@ -13,8 +13,8 @@ ms.localizationpriority: medium
 
 The Remote Desktop web client lets you use a compatible web browser to access your organization's remote resources (apps and desktops) published to you by your admin. You'll be able to interact with the remote apps and desktops like you would with a local PC no matter where you are, without having to switch to a different desktop PC. Once your admin sets up your remote resources, all you need are your domain, user name, password, the URL your admin sent you, and a supported web browser, and you're good to go.
 
->[!Note]
-> - Curious about the new releases for the web client? Check out [What's new for Remote Desktop web client?](web-client-whatsnew.md)
+>[!NOTE]
+>Curious about the new releases for the web client? Check out [What's new for Remote Desktop web client?](web-client-whatsnew.md)
 
 ## What you'll need to use the web client
 
@@ -52,3 +52,7 @@ Follow these steps to print from the web client:
 ## Copy and paste from the Remote Desktop web client
 
 The web client currently supports copying and pasting text only. Files can't be copied or pasted to and from the web client. Additionally, you can only use **Ctrl+C** and **Ctrl+V** to copy and paste text.
+
+## Get help with the web client
+
+If you've encountered an issue that can’t be solved by the information in this article, you can get help with the web client by emailing the address on the web client's About page.

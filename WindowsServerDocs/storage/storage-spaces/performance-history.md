@@ -5,7 +5,7 @@ ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 07/03/2018
+ms.date: 08/03/2018
 Keywords: Storage Spaces Direct
 ms.localizationpriority: medium
 ---
@@ -190,28 +190,30 @@ Start-ClusterPerformanceHistory
 
 ## Troubleshooting
 
+### No data available 
+
+Charts in Windows Admin Center for Hyper-Converged Infrastructure are powered by performance history.
+
+![No data available](media/performance-history/no-data-available.png)
+
+If a chart shows "*No data available*" as pictured, here's how to troubleshoot:
+
+1. If the object was newly added or created, wait for it to be discovered (up to 15 minutes).
+
+2. Refresh the page, or wait for the next background refresh (up to 30 seconds).
+
+3. Certain special objects are excluded from performance history – for example, virtual machines that aren't clustered, and volumes that don't use the Cluster Shared Volume (CSV) filesystem. Check the sub-topic for the object type, like [Performance history for volumes](performance-history-for-volumes.md), for the fine print.
+
+4. If the problem persists, open PowerShell as Administrator and run the `Get-ClusterPerf` cmdlet. The cmdlet includes troubleshooting logic to identify common problems, such as if the ClusterPerformanceHistory volume is missing, and provides remediation instructions.
+
+5. If the command in the previous step returns nothing, you can try restarting the Health Service (which collects performance history) by running `Stop-ClusterResource Health ; Start-ClusterResource Health` in PowerShell.
+
 ### The cmdlet doesn't work
 
 An error message like "*The term 'Get-ClusterPerf' is not recognized as the name of a cmdlet*" means the feature is not available or installed. Verify that you have Windows Server Insider Preview build 17692 or later, that you've installed Failover Clustering, and that you're running Storage Spaces Direct.
 
    > [!NOTE]
    > This feature is not available on Windows Server 2016 or earlier.
-
-### No data available 
-
-Many charts in Windows Admin Center are powered by performance history.
-
-![No data available](media/performance-history/no-data-available.png)
-
-If a chart shows "*No data available*" as pictured, here's how to troubleshoot:
-
-1. Refresh the page, or wait for the next background refresh (up to 30 seconds).
-
-2. Wait for the object to be discovered. If it was newly added or created, allow up to 15 minutes.
-
-3. Certain special objects are excluded from performance history – for example, volumes that don't use the Cluster Shared Volume (CSV) filesystem. Check the sub-topic for the object type, like [Performance history for volumes](performance-history-for-volumes.md), for the fine print.
-
-4. If the problem persists, open PowerShell as Administrator and run the `Get-ClusterPerf` cmdlet. The cmdlet includes troubleshooting logic to identify common problems, such as if the ClusterPerformanceHistory volume is missing, and provides remediation instructions.
 
 ## See also
 

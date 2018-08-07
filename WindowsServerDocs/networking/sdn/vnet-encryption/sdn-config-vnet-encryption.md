@@ -124,7 +124,7 @@ Step 3: Installing on a Hyper-V host
 
         # create a representation of the certificate file
         $certificate = new-object System.Security.Cryptography.X509Certificates.X509Certificate2
-        $certificate.import($certFullPath){$_}
+        $certificate.import($certFullPath)
 
         # import into the store
         $store = new-object System.Security.Cryptography.X509Certificates.X509Store("Root", "LocalMachine")

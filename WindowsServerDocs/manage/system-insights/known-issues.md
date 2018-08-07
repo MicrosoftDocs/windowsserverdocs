@@ -49,7 +49,10 @@ Start-Service -Name Insights
 ```
 
 ## See also
-- [System Insights overview](system-insights-overview.md)
-- [System Insights capabilities](system-insights-capabilities.md)
-- [Managing System Insights](managing-system-insights.md)
-- [System Insights FAQ](system-insights-faq.md)
+To learn more about System Insights, use the following resources:
+
+- [System Insights overview](overview.md)
+- [Understanding capabilities](understanding-capabilities.md)
+- [Managing capabilities](managing-capabilities.md)
+- [Adding and developing capabilities](adding-and-developing-capabilities.md)
+- [System Insights FAQ](faq.md)

@@ -200,7 +200,7 @@
 #### [Ksetup:setrealm](ksetup-setrealm.md)
 #### [Ksetup:mapuser](ksetup-mapuser.md)
 #### [Ksetup:addkdc](ksetup-addkdc.md)
-### [Ksetup:delkdc](ksetup-delkdc.md)
+#### [Ksetup:delkdc](ksetup-delkdc.md)
 #### [Ksetup:addkpasswd](ksetup-addkpasswd.md)
 #### [Ksetup:delkpasswd](ksetup-delkpasswd.md)
 #### [Ksetup:server](ksetup-server.md)

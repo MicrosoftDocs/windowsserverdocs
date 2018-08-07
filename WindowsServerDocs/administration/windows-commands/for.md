@@ -33,7 +33,7 @@ for {%%|%}<Variable> in (<Set>) do <Command> [<CommandLineOptions>]
 
 |Parameter|Description|
 |---------|-----------|
-|{%%|%}\<Variable>|Required. Represents a replaceable parameter. Use a single percent sign (**%**) to carry out the **for** command at the command prompt. Use double percent signs (**%%**) to carry out the **for** command within a batch file. Variables are case sensitive, and they must be represented with an alphabetical value such as **%A**, **%B**, or **%C**.|
+|{%%\|%}\<Variable>|Required. Represents a replaceable parameter. Use a single percent sign (**%**) to carry out the **for** command at the command prompt. Use double percent signs (**%%**) to carry out the **for** command within a batch file. Variables are case sensitive, and they must be represented with an alphabetical value such as **%A**, **%B**, or **%C**.|
 |(\<Set>)|Required. Specifies one or more files, directories, or text strings, or a range of values on which to run the command. The parentheses are required.|
 |\<Command>|Required. Specifies the command that you want to carry out on each file, directory, or text string, or on the range of values included in *Set*.|
 |\<CommandLineOptions>|Specifies any command-line options that you want to use with the specified command.|
