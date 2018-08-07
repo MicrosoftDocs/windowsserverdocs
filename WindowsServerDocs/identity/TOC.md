@@ -461,6 +461,7 @@
 ##### [Determine the type of Claim Rule Template to Use](ad-fs/technical-reference/Determine-the-type-of-Claim-Rule-Template-to-Use.md)
 ##### [How URIs Are Used in AD FS](ad-fs/technical-reference/How-URIs-Are-Used-in-AD-FS.md)
 #### [Device registration Technical Reference](ad-fs/technical-reference/device-registration-technical-reference.md)
+#### [AD FS Password Spray Attack Protection](ad-fs/technical-reference/ad-fs-password-spray-protection.md)
 ### [AD FS 2016 FAQ](ad-fs/overview/AD-FS-FAQ.md)
 
 ## [Securing Privileged Access](securing-privileged-access/securing-privileged-access.md)
