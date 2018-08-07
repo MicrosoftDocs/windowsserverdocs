@@ -6,6 +6,16 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "WindowsServerDocs/manage/system-insights/managing-system-insights.md",
+      "redirect_url": "/windows-server/manage/system-insights/managing-capabilities",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/manage/system-insights/system-insights-overview.md",
+      "redirect_url": "/windows-server/manage/system-insights/overview",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "WindowsServerDocs/networking/technologies/network-offload.md",
       "redirect_url": "/windows-server/networking/technologies/hpn/hpn-top",
       "redirect_document_id": true
