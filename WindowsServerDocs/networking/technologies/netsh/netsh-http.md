@@ -64,6 +64,8 @@ Following are four examples of the **add iplisten** command.
 -   `add iplisten ipaddress=0.0.0.0`
 -   `add iplisten ipaddress=::`
 
+---
+
 ## add sslcert
 
 Adds a new SSL server certificate binding and corresponding client certificate policies for an IP address and port.
@@ -100,6 +102,8 @@ Following is an example of the **add sslcert** command.
 `add sslcert ipport=1.1.1.1:443 certhash=0102030405060708090A0B0C0D0E0F1011121314
 appid={00112233-4455-6677-8899- AABBCCDDEEFF}`
 
+---
+
 ## add timeout
 
 Adds a global timeout to the service.
@@ -123,6 +127,8 @@ Following are two examples of the **add timeout** command.
 
 -   `add timeout timeouttype=idleconnectiontimeout value=120`
 -   `add timeout timeouttype=headerwaittimeout value=0x40`
+
+---
 
 ## add urlacl
 
@@ -156,6 +162,8 @@ Following are four examples of the **add urlacl** command.
 -   `add urlacl url=http://www.contoso.com:80/MyUri user=DOMAIN\\user delegate=no`
 -   `add urlacl url=http://+:80/MyUri sddl=...`
 
+---
+
 ## delete cache
 
 Deletes all the entries, or a specified entry, from the HTTP service kernel URI
@@ -180,6 +188,8 @@ Following are two examples of the **delete cache** command.
 
 -   `delete cache url=http://www.contoso.com:80/myresource/ recursive=yes`
 -   `delete cache`
+
+---
 
 ## delete iplisten
 
@@ -208,6 +218,8 @@ Following are four examples of the **delete iplisten** command.
 -   `delete iplisten ipaddress=0.0.0.0`
 -   `delete iplisten ipaddress=::`
 
+---
+
 ## delete sslcert
 
 
@@ -235,6 +247,8 @@ Following are three examples of the **delete sslcert** command.
 - `delete sslcert ipport=0.0.0.0:443` 
 - `delete sslcert ipport=[::]:443`
 
+---
+
 ## delete timeout
 
 Deletes a global timeout and makes the service revert to default values.
@@ -258,6 +272,8 @@ Following are two examples of the **delete timeout** command.
 
 -   `delete timeout timeouttype=idleconnectiontimeout`
 -   `delete timeout timeouttype=headerwaittimeout`
+
+---
 
 ## delete urlacl
 
@@ -283,6 +299,8 @@ Following are two examples of the **delete urlacl** command.
 -   `delete urlacl url=http://+:80/MyUri`
 -   `delete urlacl url=http://www.contoso.com:80/MyUri`
 
+---
+
 ## flush logbuffer
 
 Flushes the internal buffers for the logfiles.
@@ -292,6 +310,8 @@ Flushes the internal buffers for the logfiles.
 ```powershell
 flush logbuffer
 ```
+
+---
 
 ## show cachestate
 
@@ -319,6 +339,8 @@ Following are two examples of the **show cachestate** command:
 -   `show cachestate url=http://www.contoso.com:80/myresource`
 -   `show cachestate`
 
+---
+
 ## show iplisten
 
 Displays all IP addresses in the IP listen list. The IP listen list is used to
@@ -330,6 +352,8 @@ IPv4 address and "::" means any IPv6 address.
 ```powershell
 show iplisten
 ```
+
+---
 
 ## show servicestate
 
@@ -353,6 +377,8 @@ Following are two examples of the **show servicestate** command.
 
 -   `show servicestate view="session"`
 -   `show servicestate view="requestq"`
+
+---
 
 ## show sslcert
 
@@ -382,6 +408,8 @@ Following are five examples of the **show sslcert** command.
 -   `show sslcert ipport=[::]:443`
 -   `show sslcert`
 
+---
+
 ## show timeout
 
 Displays, in seconds, the timeout values of the HTTP service.
@@ -391,6 +419,8 @@ Displays, in seconds, the timeout values of the HTTP service.
 ```powershell
 show timeout
 ```
+
+---
 
 ## show urlacl
 
@@ -416,3 +446,5 @@ Following are three examples of the **show urlacl** command.
 -   `show urlacl url=http://+:80/MyUri`
 -   `show urlacl url=http://www.contoso.com:80/MyUri`
 -   `show urlacl`
+
+---
