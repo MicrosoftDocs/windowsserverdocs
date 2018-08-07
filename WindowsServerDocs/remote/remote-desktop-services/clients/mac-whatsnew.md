@@ -11,7 +11,7 @@ ms.topic: article
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.date: 07/25/2018
+ms.date: 08/06/2018
 ms.localizationpriority: medium
 ---
 # What's new for the Remote Desktop client on macOS?
@@ -19,6 +19,12 @@ ms.localizationpriority: medium
 We regularly update the [Remote Desktop client for macOS](remote-desktop-mac.md), adding new features and fixing issues. Check out the latest updates below.
 
 If you encounter any issues, you can always contact us via Help > Report an Issue.
+
+## Updates for version 10.2.1
+*Published date: 08/06/2018*
+
+- Enabled connectivity to Azure Active Directory (AAD) joined PCs. To connect to an AAD joined PC, your username must be in one of the following formats: “AzureAD\user” or “AzureAD\user@domain”.
+- Addressed some bugs affecting the usage of smart cards in a remote session.
 
 ## Updates for version 10.2.0
 *Published date: 07/24/2018*
