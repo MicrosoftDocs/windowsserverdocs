@@ -73,7 +73,9 @@ Adds a new SSL server certificate binding and corresponding client certificate p
 
 **Syntax**
 
-`add sslcert [ ipport= ] IPAddress:port [ certhash= ] CertHash [ appid= ] GUID [ [ certstorename= ] CertStoreName [ verifyclientcertrevocation= ] enable | disable [verifyrevocationwithcachedclientcertonly= ] enable | disable [ usagecheck= ] enable | disable [ revocationfreshnesstime= ] U-Int [ urlretrievaltimeout= ] U-Int [sslctlidentifier= ] SSLCTIdentifier [ sslctlstorename= ] SLCtStoreName [ dsmapperusage= ] enable | disable [ clientcertnegotiation= ] enable | disable ] ]`
+```syntax
+add sslcert [ ipport= ] IPAddress:port [ certhash= ] CertHash [ appid= ] GUID [ [ certstorename= ] CertStoreName [ verifyclientcertrevocation= ] enable | disable [verifyrevocationwithcachedclientcertonly= ] enable | disable [ usagecheck= ] enable | disable [ revocationfreshnesstime= ] U-Int [ urlretrievaltimeout= ] U-Int [sslctlidentifier= ] SSLCTIdentifier [ sslctlstorename= ] SLCtStoreName [ dsmapperusage= ] enable | disable [ clientcertnegotiation= ] enable | disable ] ]
+```
 
 **Parameters**
 
@@ -107,7 +109,9 @@ Adds a global timeout to the service.
 
 **Syntax** 
 
-`add timeout [ timeouttype= ] IdleConnectionTimeout | HeaderWaitTimeout [ value=] U-Short`
+```syntax
+add timeout [ timeouttype= ] IdleConnectionTimeout | HeaderWaitTimeout [ value=] U-Short
+```
 
 **Parameters**
 | | |
@@ -133,7 +137,9 @@ SDDL string.
 
 **Syntax**
 
-`add urlacl [ url= ] URL [ [user=] User [ [ listen= ] yes | no [ delegate= ] yes | no ] | [ sddl= ] SDDL ]`
+```syntax
+add urlacl [ url= ] URL [ [user=] User [ [ listen= ] yes | no [ delegate= ] yes | no ] | [ sddl= ] SDDL ]
+```
 
 **Parameters**
 | | | |
@@ -164,7 +170,9 @@ cache.
 
 **Syntax**
 
-`delete cache [ [ url= ] URL [ [recursive= ] yes | no ]`
+```syntax
+delete cache [ [ url= ] URL [ [recursive= ] yes | no ]
+```
 
 **Parameters**
 | | | |
@@ -188,7 +196,9 @@ scope the list of addresses to which the HTTP service binds.
 
 **Syntax**
 
-`delete iplisten [ ipaddress= ] IPAddress`
+```syntax
+delete iplisten [ ipaddress= ] IPAddress
+```
 
 **Parameters**
 | | | |
@@ -217,7 +227,9 @@ policies for an IP address and port.
 
 **Syntax**
 
-`delete sslcert [ ipport= ] IPAddress:port`
+```syntax
+delete sslcert [ ipport= ] IPAddress:port
+```
 
 **Parameters**
 | | | |
@@ -238,7 +250,9 @@ Deletes a global timeout and makes the service revert to default values.
 
 **Syntax**
 
-`delete timeout [ timeouttype= ] idleconnectiontimeout | headerwaittimeout`
+```syntax
+delete timeout [ timeouttype= ] idleconnectiontimeout | headerwaittimeout
+```
 
 **Parameters**
 | | | |
@@ -261,7 +275,9 @@ Deletes URL reservations.
 
 **Syntax**
 
-`delete urlacl [ url= ] URL`
+```syntax
+delete urlacl [ url= ] URL
+```
 
 **Parameters**
 | | | |
@@ -284,7 +300,9 @@ Flushes the internal buffers for the logfiles.
 
 **Syntax**
 
-`flush logbuffer`
+```syntax
+flush logbuffer
+```
 
 ## show cachestate
 
@@ -294,7 +312,9 @@ cache or displays a single resource and its associated properties.
 
 **Syntax**
 
-`show cachestate [ [url= ] URL]`
+```syntax
+show cachestate [ [url= ] URL]
+```
 
 **Parameters**
 | | | |
@@ -319,14 +339,16 @@ IPv4 address and "::" means any IPv6 address.
 
 **Syntax**
 
-`show iplisten`
+```syntax
+show iplisten
+```
 
 ## show servicestate
 
 Displays a snapshot of the HTTP service.
 
 **Syntax**
-`show servicestate [ [ view= ] session | requestq ] [ [ verbose= ] yes |no ]`
+`show servicestate [ [ view= ] session | requestq ] [ [ verbose= ] yes | no ]`
 
 **Parameters**
 | | | |
@@ -350,7 +372,9 @@ corresponding client certificate policies for an IP address and port.
 
 **Syntax**
 
-`show sslcert [ ipport= ] IPAddress:port`
+```syntax
+show sslcert [ ipport= ] IPAddress:port
+```
 
 **Parameters**
 | | | |
@@ -379,7 +403,9 @@ Displays, in seconds, the timeout values of the HTTP service.
 
 **Syntax**
 
-`show timeout`
+```syntax
+show timeout
+```
 
 ## show urlacl
 
@@ -387,7 +413,9 @@ Displays discretionary access control lists (DACLs) for the specified reserved U
 
 **Syntax**
 
-`show urlacl [ [url= ] URL]`
+```syntax
+show urlacl [ [url= ] URL]
+```
 
 **Parameters**
 | | | |
