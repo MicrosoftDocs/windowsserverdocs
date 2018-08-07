@@ -59,8 +59,8 @@ Adds a new IP address to the IP listen list, excluding the port number.
 `add iplisten [ ipaddress= ] IPAddress`
 
 **Parameters**
-| | |
-|---|---|
+| | | |
+|---|---|---|
 | **ipaddress** | The IPv4 or IPv6 address to be added to the IP listen list. The IP listen list is used to scope the list of addresses to which the HTTP service binds. "0.0.0.0" means any IPv4 address and "::" means any IPv6 address. | Required |
 ---
 
@@ -86,8 +86,8 @@ Adds a new SSL server certificate binding and corresponding client certificate p
 
 **Parameters**
 
-| | |
-|---|---|
+| | | |
+|---|---|---|
 | **ipport**                                   | Specifies the IP address and port for the binding. A colon character (:) is used as a delimiter between the IP address and the port number.                                              | Required |
 | **certhash**                                 | Specifies the SHA hash of the certificate. This hash is 20 bytes long and is specified as a hexadecimal string.                                                                          | Required |
 | **appid**                                    | Specifies the GUID to identify the owning application.                                                                                                                                   | Required |
@@ -145,8 +145,8 @@ SDDL string.
 `add urlacl [ url= ] URL [ [user=] User [ [ listen= ] yes | no [ delegate= ] yes | no ] | [ sddl= ] SDDL ]`
 
 **Parameters**
-| | |
-|---|---|
+| | | |
+|---|---|---|
 | **url**       | Specifies the fully qualified Uniform Resource Locator (URL).                                                                                    | Required |
 | **user**      | Specifies the user or user-group name                                                                                                            | Required |
 | **listen**    | Specifies one of the following values: yes: Allow the user to register URLs. This is the default value. no: Deny the user from registering URLs. | Optional |
@@ -176,8 +176,8 @@ cache.
 `delete cache [ [ url= ] URL [ [recursive= ] yes | no ]`
 
 **Parameters**
-| | |
-|---|---|
+| | | |
+|---|---|---|
 | **url**       | Specifies the fully qualified Uniform Resource Locator (URL) that you want to delete.                                        | Optional |
 | **recursive** | Specifies whether all entries under the url cache get removed. **yes**: remove all entries **no**: do not remove all entries | Optional |
 ---
@@ -200,8 +200,8 @@ scope the list of addresses to which the HTTP service binds.
 `delete iplisten [ ipaddress= ] IPAddress`
 
 **Parameters**
-| | |
-|---|---|
+| | | |
+|---|---|---|
 | **ipaddress** | The IPv4 or IPv6 address to be deleted from the IP listen list. The IP listen list is used to scope the list of addresses to which the HTTP service binds. "0.0.0.0" means any IPv4 address and "::" means any IPv6 address. This does not include the port number. | Required |
 ---
 
@@ -229,8 +229,8 @@ policies for an IP address and port.
 `delete sslcert [ ipport= ] IPAddress:port`
 
 **Parameters**
-| | |
-|---|---|
+| | | |
+|---|---|---|
 | **ipport** | Specifies the IPv4 or IPv6 address and port for which the SSL certificate bindings get deleted. A colon character (:) is used as a delimiter between the IP address and the port number. | Required |
 ---
 
@@ -250,8 +250,8 @@ Deletes a global timeout and makes the service revert to default values.
 `delete timeout [ timeouttype= ] idleconnectiontimeout | headerwaittimeout`
 
 **Parameters**
-| | |
-|---|---|
+| | | |
+|---|---|---|
 | **timeouttype** | Specifies the type of timeout setting. | Required |
 ---
 
@@ -273,8 +273,8 @@ Deletes URL reservations.
 `delete urlacl [ url= ] URL`
 
 **Parameters**
-| | |
-|---|---|
+| | | |
+|---|---|---|
 | **url** | Specifies the fully qualified Uniform Resource Locator (URL) that you want to delete. | Required |
 ---
 
@@ -306,8 +306,8 @@ cache or displays a single resource and its associated properties.
 `show cachestate [ [url= ] URL]`
 
 **Parameters**
-| | |
-|---|---|
+| | | |
+|---|---|---|
 | **url** | Specifies the fully qualified URL that you want to display. If not specified, display all URLs. The URL could also be a prefix to registered URLs. | Optional |
 ---
 
@@ -338,8 +338,8 @@ Displays a snapshot of the HTTP service.
 `show servicestate [ [ view= ] session | requestq ] [ [ verbose= ] yes |no ]`
 
 **Parameters**
-| | |
-|---|---|
+| | | |
+|---|---|---|
 | **View**    | Specifies whether to view a snapshot of the HTTP service state based on the server session or on the request queues. | Optional |
 | **Verbose** | Specifies whether to display verbose information that also shows property information.                               | Optional |
 ---
@@ -362,8 +362,8 @@ corresponding client certificate policies for an IP address and port.
 `show sslcert [ ipport= ] IPAddress:port`
 
 **Parameters**
-| | |
-|---|---|
+| | | |
+|---|---|---|
 | **ipport** | Specifies the IPv4 or IPv6 address and port for which the SSL certificate bindings display. A colon character (:) is used as a delimiter between the IP address and the port number. If you do not specify ipport, all bindings are displayed. | Required |
 ---
 
@@ -399,8 +399,8 @@ Displays discretionary access control lists (DACLs) for the specified reserved U
 `show urlacl [ [url= ] URL]`
 
 **Parameters**
-| | |
-|---|---|
+| | | |
+|---|---|---|
 | **url** | Specifies the fully qualified URL that you want to display. If not specfied, display all URLs. | Optional |
 ---
 
