@@ -45,7 +45,7 @@ Adds a new IP address to the IP listen list, excluding the port number.
 
 **Syntax**
 
-```syntax
+```powershell
 add iplisten [ ipaddress= ] IPAddress
 ```
 
@@ -73,7 +73,7 @@ Adds a new SSL server certificate binding and corresponding client certificate p
 
 **Syntax**
 
-```syntax
+```powershell
 add sslcert [ ipport= ] IPAddress:port [ certhash= ] CertHash [ appid= ] GUID [ [ certstorename= ] CertStoreName [ verifyclientcertrevocation= ] enable | disable [verifyrevocationwithcachedclientcertonly= ] enable | disable [ usagecheck= ] enable | disable [ revocationfreshnesstime= ] U-Int [ urlretrievaltimeout= ] U-Int [sslctlidentifier= ] SSLCTIdentifier [ sslctlstorename= ] SLCtStoreName [ dsmapperusage= ] enable | disable [ clientcertnegotiation= ] enable | disable ] ]
 ```
 
@@ -109,7 +109,7 @@ Adds a global timeout to the service.
 
 **Syntax** 
 
-```syntax
+```powershell
 add timeout [ timeouttype= ] IdleConnectionTimeout | HeaderWaitTimeout [ value=] U-Short
 ```
 
@@ -137,7 +137,7 @@ SDDL string.
 
 **Syntax**
 
-```syntax
+```powershell
 add urlacl [ url= ] URL [ [user=] User [ [ listen= ] yes | no [ delegate= ] yes | no ] | [ sddl= ] SDDL ]
 ```
 
@@ -170,7 +170,7 @@ cache.
 
 **Syntax**
 
-```syntax
+```powershell
 delete cache [ [ url= ] URL [ [recursive= ] yes | no ]
 ```
 
@@ -196,7 +196,7 @@ scope the list of addresses to which the HTTP service binds.
 
 **Syntax**
 
-```syntax
+```powershell
 delete iplisten [ ipaddress= ] IPAddress
 ```
 
@@ -227,7 +227,7 @@ policies for an IP address and port.
 
 **Syntax**
 
-```syntax
+```powershell
 delete sslcert [ ipport= ] IPAddress:port
 ```
 
@@ -250,7 +250,7 @@ Deletes a global timeout and makes the service revert to default values.
 
 **Syntax**
 
-```syntax
+```powershell
 delete timeout [ timeouttype= ] idleconnectiontimeout | headerwaittimeout
 ```
 
@@ -275,7 +275,7 @@ Deletes URL reservations.
 
 **Syntax**
 
-```syntax
+```powershell
 delete urlacl [ url= ] URL
 ```
 
@@ -300,7 +300,7 @@ Flushes the internal buffers for the logfiles.
 
 **Syntax**
 
-```syntax
+```powershell
 flush logbuffer
 ```
 
@@ -312,7 +312,7 @@ cache or displays a single resource and its associated properties.
 
 **Syntax**
 
-```syntax
+```powershell
 show cachestate [ [url= ] URL]
 ```
 
@@ -339,7 +339,7 @@ IPv4 address and "::" means any IPv6 address.
 
 **Syntax**
 
-```syntax
+```powershell
 show iplisten
 ```
 
@@ -372,7 +372,7 @@ corresponding client certificate policies for an IP address and port.
 
 **Syntax**
 
-```syntax
+```powershell
 show sslcert [ ipport= ] IPAddress:port
 ```
 
@@ -403,7 +403,7 @@ Displays, in seconds, the timeout values of the HTTP service.
 
 **Syntax**
 
-```syntax
+```powershell
 show timeout
 ```
 
@@ -413,7 +413,7 @@ Displays discretionary access control lists (DACLs) for the specified reserved U
 
 **Syntax**
 
-```syntax
+```powershell
 show urlacl [ [url= ] URL]
 ```
 
