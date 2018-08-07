@@ -82,9 +82,7 @@ Adds a new SSL server certificate binding and corresponding client certificate p
 
 **Syntax**
 
-```
-add sslcert [ ipport= ] IPAddress:port [ certhash= ] CertHash [ appid= ] GUID [ [ certstorename= ] CertStoreName [ verifyclientcertrevocation= ] enable | disable [verifyrevocationwithcachedclientcertonly= ] enable | disable [ usagecheck= ] enable | disable [ revocationfreshnesstime= ] U-Int [ urlretrievaltimeout= ] U-Int [sslctlidentifier= ] SSLCTIdentifier [ sslctlstorename= ] SLCtStoreName [ dsmapperusage= ] enable | disable [ clientcertnegotiation= ] enable | disable ] ]
-```
+`add sslcert [ ipport= ] IPAddress:port [ certhash= ] CertHash [ appid= ] GUID [ [ certstorename= ] CertStoreName [ verifyclientcertrevocation= ] enable | disable [verifyrevocationwithcachedclientcertonly= ] enable | disable [ usagecheck= ] enable | disable [ revocationfreshnesstime= ] U-Int [ urlretrievaltimeout= ] U-Int [sslctlidentifier= ] SSLCTIdentifier [ sslctlstorename= ] SLCtStoreName [ dsmapperusage= ] enable | disable [ clientcertnegotiation= ] enable | disable ] ]`
 
 **Parameters**
 
@@ -116,10 +114,9 @@ appid={00112233-4455-6677-8899- AABBCCDDEEFF}
 
 Adds a global timeout to the service.
 
-**Syntax**
-```
-add timeout [ timeouttype= ] IdleConnectionTimeout \| HeaderWaitTimeout [ value=] U-Short
-```
+**Syntax** 
+
+`add timeout [ timeouttype= ] IdleConnectionTimeout | HeaderWaitTimeout [ value=] U-Short`
 
 **Parameters**
 | | |
@@ -144,9 +141,8 @@ using an NT account name with the listen and delegate parameters or by using an
 SDDL string.
 
 **Syntax**
-```
-add urlacl [ url= ] URL [ [user=] User [ [ listen= ] yes | no [ delegate= ] yes | no ] | [ sddl= ] SDDL ]
-```
+
+`add urlacl [ url= ] URL [ [user=] User [ [ listen= ] yes | no [ delegate= ] yes | no ] | [ sddl= ] SDDL ]`
 
 **Parameters**
 | | |
@@ -176,9 +172,8 @@ Deletes all the entries, or a specified entry, from the HTTP service kernel URI
 cache.
 
 **Syntax**
-```
-delete cache [ [ url= ] URL [ [recursive= ] yes | no ]
-```
+
+`delete cache [ [ url= ] URL [ [recursive= ] yes | no ]`
 
 **Parameters**
 | | |
@@ -201,9 +196,8 @@ Deletes an IP address from the IP listen list. The IP listen list is used to
 scope the list of addresses to which the HTTP service binds.
 
 **Syntax**
-```
-delete iplisten [ ipaddress= ] IPAddress
-```
+
+`delete iplisten [ ipaddress= ] IPAddress`
 
 **Parameters**
 | | |
@@ -231,9 +225,8 @@ Deletes SSL server certificate bindings and corresponding client certificate
 policies for an IP address and port.
 
 **Syntax**
-```
-delete sslcert [ ipport= ] IPAddress:port
-```
+
+`delete sslcert [ ipport= ] IPAddress:port`
 
 **Parameters**
 | | |
@@ -253,9 +246,8 @@ delete sslcert ipport=1.1.1.1:443 delete sslcert ipport=0.0.0.0:443 delete sslce
 Deletes a global timeout and makes the service revert to default values.
 
 **Syntax**
-```
-delete timeout [ timeouttype= ] idleconnectiontimeout | headerwaittimeout
-```
+
+`delete timeout [ timeouttype= ] idleconnectiontimeout | headerwaittimeout`
 
 **Parameters**
 | | |
@@ -277,9 +269,8 @@ Following are two examples of the **delete timeout** command.
 Deletes URL reservations.
 
 **Syntax**
-```
-delete urlacl [ url= ] URL
-```
+
+`delete urlacl [ url= ] URL`
 
 **Parameters**
 | | |
@@ -301,9 +292,8 @@ Following are two examples of the **delete urlacl** command.
 Flushes the internal buffers for the logfiles.
 
 **Syntax**
-```
-flush logbuffer
-```
+
+`flush logbuffer`
 
 ## show cachestate
 
@@ -312,9 +302,8 @@ all resources and their associated properties that are cached in HTTP response
 cache or displays a single resource and its associated properties.
 
 **Syntax**
-```
-show cachestate [ [url= ] URL]
-```
+
+`show cachestate [ [url= ] URL]`
 
 **Parameters**
 | | |
@@ -338,18 +327,15 @@ scope the list of addresses to which the HTTP service binds. "0.0.0.0" means any
 IPv4 address and "::" means any IPv6 address.
 
 **Syntax**
-```
-show iplisten
-```
+
+`show iplisten`
 
 ## show servicestate
 
 Displays a snapshot of the HTTP service.
 
 **Syntax**
-```
-show servicestate [ [ view= ] session | requestq ] [ [ verbose= ] yes |no ]
-```
+`show servicestate [ [ view= ] session | requestq ] [ [ verbose= ] yes |no ]`
 
 **Parameters**
 | | |
@@ -372,9 +358,8 @@ Displays Secure Sockets Layer (SSL) server certificate bindings and
 corresponding client certificate policies for an IP address and port.
 
 **Syntax**
-```
-show sslcert [ ipport= ] IPAddress:port
-```
+
+`show sslcert [ ipport= ] IPAddress:port`
 
 **Parameters**
 | | |
@@ -402,18 +387,16 @@ Following are five examples of the **show sslcert** command.
 Displays, in seconds, the timeout values of the HTTP service.
 
 **Syntax**
-```
-show timeout
-```
+
+`show timeout`
 
 ## show urlacl
 
 Displays discretionary access control lists (DACLs) for the specified reserved URL or all reserved URLs.
 
 **Syntax**
-```
-show urlacl [ [url= ] URL]
-```
+
+`show urlacl [ [url= ] URL]`
 
 **Parameters**
 | | |
