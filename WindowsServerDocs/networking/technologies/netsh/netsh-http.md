@@ -59,10 +59,10 @@ add iplisten [ ipaddress= ] IPAddress
 
 Following are four examples of the **add iplisten** command.
 
--   `add iplisten ipaddress=fe80::1`
--   `add iplisten ipaddress=1.1.1.1`
--   `add iplisten ipaddress=0.0.0.0`
--   `add iplisten ipaddress=::`
+-   add iplisten ipaddress=fe80::1
+-   add iplisten ipaddress=1.1.1.1
+-   add iplisten ipaddress=0.0.0.0
+-   add iplisten ipaddress=::
 
 ---
 
@@ -99,8 +99,8 @@ add sslcert [ ipport= ] IPAddress:port [ certhash= ] CertHash [ appid= ] GUID [ 
 
 Following is an example of the **add sslcert** command.
 
-`add sslcert ipport=1.1.1.1:443 certhash=0102030405060708090A0B0C0D0E0F1011121314
-appid={00112233-4455-6677-8899- AABBCCDDEEFF}`
+add sslcert ipport=1.1.1.1:443 certhash=0102030405060708090A0B0C0D0E0F1011121314
+appid={00112233-4455-6677-8899- AABBCCDDEEFF}
 
 ---
 
@@ -125,8 +125,8 @@ add timeout [ timeouttype= ] IdleConnectionTimeout | HeaderWaitTimeout [ value=]
 
 Following are two examples of the **add timeout** command.
 
--   `add timeout timeouttype=idleconnectiontimeout value=120`
--   `add timeout timeouttype=headerwaittimeout value=0x40`
+-   add timeout timeouttype=idleconnectiontimeout value=120
+-   add timeout timeouttype=headerwaittimeout value=0x40
 
 ---
 
@@ -157,10 +157,10 @@ add urlacl [ url= ] URL [ [user=] User [ [ listen= ] yes | no [ delegate= ] yes 
 
 Following are four examples of the **add urlacl** command.
 
--   `add urlacl url=http://+:80/MyUri user=DOMAIN\\user`
--   `add urlacl url=http://www.contoso.com:80/MyUri user=DOMAIN\\user listen=yes`
--   `add urlacl url=http://www.contoso.com:80/MyUri user=DOMAIN\\user delegate=no`
--   `add urlacl url=http://+:80/MyUri sddl=...`
+-   add urlacl url=http://+:80/MyUri user=DOMAIN\\user
+-   add urlacl url=http://www.contoso.com:80/MyUri user=DOMAIN\\user listen=yes
+-   add urlacl url=http://www.contoso.com:80/MyUri user=DOMAIN\\user delegate=no
+-   add urlacl url=http://+:80/MyUri sddl=...
 
 ---
 
@@ -186,8 +186,8 @@ delete cache [ [ url= ] URL [ [recursive= ] yes | no ]
 
 Following are two examples of the **delete cache** command.
 
--   `delete cache url=http://www.contoso.com:80/myresource/ recursive=yes`
--   `delete cache`
+-   delete cache url=http://www.contoso.com:80/myresource/ recursive=yes
+-   delete cache
 
 ---
 
@@ -213,10 +213,10 @@ delete iplisten [ ipaddress= ] IPAddress
 
 Following are four examples of the **delete iplisten** command.
 
--   `delete iplisten ipaddress=fe80::1`
--   `delete iplisten ipaddress=1.1.1.1`
--   `delete iplisten ipaddress=0.0.0.0`
--   `delete iplisten ipaddress=::`
+-   delete iplisten ipaddress=fe80::1
+-   delete iplisten ipaddress=1.1.1.1
+-   delete iplisten ipaddress=0.0.0.0
+-   delete iplisten ipaddress=::
 
 ---
 
@@ -243,9 +243,9 @@ delete sslcert [ ipport= ] IPAddress:port
 
 Following are three examples of the **delete sslcert** command.
 
-- `delete sslcert ipport=1.1.1.1:443` 
-- `delete sslcert ipport=0.0.0.0:443` 
-- `delete sslcert ipport=[::]:443`
+- delete sslcert ipport=1.1.1.1:443
+- delete sslcert ipport=0.0.0.0:443
+- delete sslcert ipport=[::]:443
 
 ---
 
@@ -270,8 +270,8 @@ delete timeout [ timeouttype= ] idleconnectiontimeout | headerwaittimeout
 
 Following are two examples of the **delete timeout** command.
 
--   `delete timeout timeouttype=idleconnectiontimeout`
--   `delete timeout timeouttype=headerwaittimeout`
+-   delete timeout timeouttype=idleconnectiontimeout
+-   delete timeout timeouttype=headerwaittimeout
 
 ---
 
@@ -296,8 +296,8 @@ delete urlacl [ url= ] URL
 
 Following are two examples of the **delete urlacl** command.
 
--   `delete urlacl url=http://+:80/MyUri`
--   `delete urlacl url=http://www.contoso.com:80/MyUri`
+-   delete urlacl url=http://+:80/MyUri
+-   delete urlacl url=http://www.contoso.com:80/MyUri
 
 ---
 
@@ -336,8 +336,8 @@ show cachestate [ [url= ] URL]
 
 Following are two examples of the **show cachestate** command:
 
--   `show cachestate url=http://www.contoso.com:80/myresource`
--   `show cachestate`
+-   show cachestate url=http://www.contoso.com:80/myresource
+-   show cachestate
 
 ---
 
@@ -375,8 +375,8 @@ show servicestate [ [ view= ] session | requestq ] [ [ verbose= ] yes | no ]
 
 Following are two examples of the **show servicestate** command.
 
--   `show servicestate view="session"`
--   `show servicestate view="requestq"`
+-   show servicestate view="session"
+-   show servicestate view="requestq"
 
 ---
 
@@ -402,11 +402,11 @@ show sslcert [ ipport= ] IPAddress:port
 
 Following are five examples of the **show sslcert** command.
 
--   `show sslcert ipport=[fe80::1]:443`
--   `show sslcert ipport=1.1.1.1:443`
--   `show sslcert ipport=0.0.0.0:443`
--   `show sslcert ipport=[::]:443`
--   `show sslcert`
+-   show sslcert ipport=[fe80::1]:443
+-   show sslcert ipport=1.1.1.1:443
+-   show sslcert ipport=0.0.0.0:443
+-   show sslcert ipport=[::]:443
+-   show sslcert
 
 ---
 
@@ -443,8 +443,8 @@ show urlacl [ [url= ] URL]
 
 Following are three examples of the **show urlacl** command.
 
--   `show urlacl url=http://+:80/MyUri`
--   `show urlacl url=http://www.contoso.com:80/MyUri`
--   `show urlacl`
+-   show urlacl url=http://+:80/MyUri
+-   show urlacl url=http://www.contoso.com:80/MyUri
+-   show urlacl
 
 ---
