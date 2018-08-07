@@ -13,7 +13,7 @@ ms.technology: identity-adfs
 
 # AD FS Password Spray Attack protection
 
-## What is password spray?
+## What is a password spray attack?
 
 A requirement for federated single sign-on is the availability of enpoints to authenticate over the internet. The availability of authentication endpoints on the internet enables users to access the applications even when they are not on a corporate network. 
 
