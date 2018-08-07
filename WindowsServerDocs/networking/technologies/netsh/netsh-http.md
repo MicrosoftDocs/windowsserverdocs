@@ -16,9 +16,9 @@ author: shortpatti
 Use **netsh http** to query and configure HTTP.sys settings and parameters.  
 
 >[!TIP]
->If you are using Windows PowerShell on a computer running Windows Server 2016 or Windows 10, type **netsh** and press Enter. At the netsh prompt, type **http** and press Enter.
+>If you are using Windows PowerShell on a computer running Windows Server 2016 or Windows 10, type **netsh** and press Enter. At the netsh prompt, type **http** and press Enter to get the netsh http prompt.
 >
->netsh http>
+>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;netsh http\>
 
 The available netsh http commands are:
 
