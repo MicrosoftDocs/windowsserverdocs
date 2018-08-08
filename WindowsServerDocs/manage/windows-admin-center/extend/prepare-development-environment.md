@@ -5,16 +5,19 @@ ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
-ms.date: 06/18/2018
 ms.localizationpriority: medium
+ms.date: 08/07/2018
 ms.prod: windows-server-threshold
 ---
 
 # Prepare your development environment
 
->Applies To: Windows Admin Center, Windows Admin Center Preview
+>Applies To: Windows Admin Center Preview
 
-Let’s get started developing extensions with the Windows Admin Center SDK!  In this document, we’ll cover the process end-to-end to get your environment up and running to build and test an extension for Windows Admin Center.
+> [!NOTE]
+> While the Windows Admin Center SDK is in public preview, parts of this document only apply to [Windows Admin Center Preview](https://aka.ms/WACDownloadPage) and the corresponding [insider release](target-sdk-version.md) of Windows Admin Center SDK.
+
+Let’s get started developing extensions with the Windows Admin Center SDK!  In this document, we’ll cover the process to get your environment up and running to build and test an extension for Windows Admin Center.
 
 > [!NOTE]
 > New to the Windows Admin Center SDK?  Learn more about [Extensions for Windows Admin Center](extensibility-overview.md)
@@ -37,75 +40,27 @@ To begin developing with the SDK, download and install the following prerequisit
 >
 > ```msiexec /i WindowsAdminCenter<version>.msi DEV_MODE=1```
 
-## Install dependencies
+## Install global dependencies
 
-Next, install or update dependencies required for your project, with Node Package Manager. These dependencies will be installed globally, and will be available for all projects.
+Next, install or update dependencies required for your projects, with Node Package Manager. These dependencies will be installed globally, and will be available for all projects.
 
 ```
-npm install npm -g
+npm install -g npm
 
-npm install @angular/cli@1.6.5 -g
+npm install -g @angular/cli@1.6.5
 
 npm install -g gulp
-npm install typescript -g
-npm install tslint -g
+npm install -g typescript
+npm install -g tslint
 npm install -g windows-admin-center-cli
 ```
 
 >[!NOTE]
 >You can install a later version of @angular/cli, however be aware that if you install a version greater than 1.6.5, you will receive a warning during the gulp build step that the local cli version does not match the installed version.
 
-## Create new extension with the Windows Admin Center CLI ##
-
-Once you have all the dependencies installed, you are ready to create your new extension.  Create or browse to a folder that contains your project files, open a command prompt, and set that folder as the working directory.  Using the Windows Admin Center CLI, create a new extension with the following syntax:
-
-```
-wac create --company <Your Company> --tool <Your Tool>
-```
-
-This creates a new folder inside the current working directory using the name you specified for your tool, copies all the necessary template files into your project, and configures the files with your company and tool name.  
-
-Next, cd into the folder just created, then install the local dependencies required by the template by running the following command:
-
-```
-npm install
-```
-
-Once this completes, you've set up everything you need to load a new extension into Windows Admin Center.  All that is left is to build and side load the extension template. 
-
-## Build and side load template
-
-Build and side load the extension template to make sure your modifications were successful. To build the extension, open a command window, change directory to your source directory, then you're ready to build.
-
-* Build and serve with gulp:
-
-    ```
-    gulp build
-    gulp serve -p 4201
-    ```
-
-Note that you need to choose a port that is currently free. Make sure you do not attempt to use the port that Windows Admin Center is running on.
-
-Your project can be side loaded into a local instance of Windows Admin Center for testing by attaching the locally served project into Windows Admin Center.
-
-* Launch Windows Admin Center in a web browser
-* Open the debugger (F12)
-* Open the Console and type the following command:
-
-    ```
-    MsftSme.sideLoad("http://localhost:4201")
-    ```
-
-*	Refresh the web browser
-
-Your project will now be visible in the Tools list with (side loaded) next to the name.
-
->[!NOTE]
->An [alternate way](extension-template.md) to create an extension is to clone our Extension Template from GitHub, then prepare the extension for use manually.  (All of these steps are covered by the Windows Admin Center CLI).
-
 ## Next steps
 
-Now that your environment is prepared, you are ready to start customizing content in your project.
+Now that your environment is prepared, you are ready to start creating content.
 
 - Create a [tool](develop-tool.md) extension
 - Create a [solution](develop-solution.md) extension
