@@ -64,7 +64,7 @@ For more information, see [Hyper-V Network Virtualization](../sdn/technologies/h
   
 ### <a name="bkmk_switch"></a>Hyper-V Virtual Switch
 
-The Hyper-V Virtual Switch is a software-based layer-2 Ethernet network switch that is available in Hyper-V Manager after you have installed the Hyper-V server role. The switch includes programmatically managed and extensible capabilities to connect virtual machines to both virtual networks and the physical network. In addition, Hyper-V Virtual Switch provides policy enforcement for security, isolation, and service levels.  
+The Hyper-V Virtual Switch is a software-based layer-2 Ethernet network switch that is available in Hyper-V Manager after you have installed the Hyper-V server role. The switch includes programmatically managed and extensible capabilities to connect virtual machines to both virtual networks and the physical network. Also, Hyper-V Virtual Switch provides policy enforcement for security, isolation, and service levels.  
   
 In Hyper-V Virtual Switch in  Windows Server 2016, you can also deploy Switch Embedded Teaming (SET) and Remote Direct Memory Access (RDMA). For more information, see the section [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](#bkmk_rdma) in this topic.  
   
@@ -72,7 +72,7 @@ For more information about Hyper-V Virtual Switch, see [Hyper-V Virtual Switch](
 
 ### <a name="bkmk_idns"></a>Internal DNS Service &#40;iDNS&#41;
 
-Hosted virtual machines \(VMs\) and applications require DNS to communicate within their own networks and with external resources on the Internet. With iDNS, you can provide tenants with DNS name resolution services for their isolated, local name space and for Internet resources.
+Hosted virtual machines (VMs) and applications require DNS to communicate within their networks and with external resources on the Internet. With iDNS, you can provide tenants with DNS name resolution services for their isolated, local namespace and Internet resources.
 
 For more information, see [Internal DNS Service &#40;iDNS&#41; for SDN](technologies/Idns-for-Sdn.md).
   

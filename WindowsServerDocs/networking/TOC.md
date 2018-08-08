@@ -253,7 +253,7 @@
 ##### [Guest Clustering in a Virtual Network](sdn/manage/guest-clustering.md)
 #### [Update, Backup, and Restore Software Defined Networking Infrastructure](sdn/manage/Update-Backup-Restore.md)
 ### [Security for SDN](sdn/security/sdn-security-top.md)
-#### [Network Controller Security](sdn/security/nc-security.md)
+#### [Secure the Network Controller](sdn/security/nc-security.md)
 #### [Manage Certificates for Software Defined Networking](sdn/security/sdn-manage-certs.md)
 #### [Configure Encryption for a Virtual Subnet](sdn/vnet-encryption/sdn-config-vnet-encryption.md)
 ### [Troubleshoot SDN](sdn/troubleshoot/Troubleshoot-Software-Defined-Networking.md)
