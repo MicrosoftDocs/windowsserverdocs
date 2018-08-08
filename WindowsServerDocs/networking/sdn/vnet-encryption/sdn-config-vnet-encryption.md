@@ -105,7 +105,7 @@ You need two copies of the certificate, one with the private key and one without
     [System.io.file]::WriteAllBytes("c:\$subjectName.pfx", $cert.Export("PFX", "secret"))
     Export-Certificate -Type CERT -FilePath "c:\$subjectName.cer" -cert $cert
 
-After running the above you will now have two certificate files.  These need to be installed on each of your hyper-v hosts.
+### Step 3: Install the certificates on each of your hyper-v hosts 
 
     PS C:\> dir c:\$subjectname.*
 
@@ -118,7 +118,7 @@ After running the above you will now have two certificate files.  These need to 
     -a----        9/22/2017   4:54 PM            543 EncryptedVirtualNetworks.cer
     -a----        9/22/2017   4:54 PM           1706 EncryptedVirtualNetworks.pfx
 
-### Step 3: Installing on a Hyper-V host
+### Step 4: Installing on a Hyper-V host
 
     $server = "Server01"
 
@@ -156,10 +156,10 @@ After running the above you will now have two certificate files.  These need to 
         remove-item C:\$SubjectName.pfx
     }    
 
-### Step 4: Repeat for each server in your environment
+### Step 5: Repeat for each server in your environment
 After repeating for each server, you should have a certificate installed in the root and my store of each Hyper-V host. 
 
-### Step 5: Verify the installation of the certificate 
+### Step 6: Verify the installation of the certificate 
 
 Verify the certificates by checking the contents of the My and Root certificate stores:
 
@@ -180,7 +180,7 @@ Verify the certificates by checking the contents of the My and Root certificate 
     ----------                                -------
     5EFF2CE51EACA82408572A56AE1A9BCC7E0843C6  CN=EncryptedVirtualNetworks
 
-### Step 6: Make note of the Thumbprint 
+### Step 7: Make note of the Thumbprint 
 
 You must make a note of the thumbprint because you need it to create the certificate credential object in the network controller.
 
