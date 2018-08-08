@@ -137,7 +137,7 @@ Below is an example of System Information taken from the guest operating system 
 Windows Server 2016 Hyper-V uses the classic hypervisor scheduler model by default. The hypervisor can be optionally configured to use the core scheduler, to increase security by restricting guest VPs to run on corresponding physical SMT pairs, and to support the use of virtual machines with SMT scheduling for their guest VPs.
 
 >[!NOTE]
-> Microsoft reccommends that all customers running Windows Server 2016 Hyper-V select the core scheduler to ensure their virtualization hosts are optimally protected against potentially malicious guest VMs
+> Microsoft recommends that all customers running Windows Server 2016 Hyper-V select the core scheduler to ensure their virtualization hosts are optimally protected against potentially malicious guest VMs
 
 ## Windows Server 2019 Hyper-V defaults to using the core scheduler
 

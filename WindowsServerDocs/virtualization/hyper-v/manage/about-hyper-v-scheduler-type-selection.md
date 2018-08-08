@@ -63,7 +63,7 @@ The core scheduler is currently used on Azure virtualization hosts, specifically
 
 ### Core scheduler performance impacts on guest workloads
 
-While required to effectively mitigate certain classes of vulnerabilities, the core scheduler may also potentially reduce performance. Customers may see a difference in the performance characteristics with their VMs and impacts to the overall workload capacity of their virtualization hosts. In cases where the core scheduler must run only one of a group of VPs, only one of the instruction streams in the underlying logical core executes while the other must be left idle. This will limit the total host capacity for guest workloads. 
+While required to effectively mitigate certain classes of vulnerabilities, the core scheduler may also potentially reduce performance. Customers may see a difference in the performance characteristics with their VMs and impacts to the overall workload capacity of their virtualization hosts. In cases where the core scheduler must run a non-SMT VP, only one of the instruction streams in the underlying logical core executes while the other must be left idle. This will limit the total host capacity for guest workloads. 
 
 These performance impacts can be minimized by following the deployment guidance in this document. Host administrators must carefully consider their specific virtualization deployment scenarios and balance their tolerance for security risk against the need for maximum workload density, over-consolidation of  virtualization hosts, etc.
 
@@ -82,17 +82,20 @@ Deploying Hyper-V hosts with the maximum security posture requires use of the hy
 
 ### Virtual machine configuration changes
 
-* On Windows Server 2019, new virtual machines created using the default VM version 9.0 will automatically inherit the SMT properties (enabled or disabled) of the virtualization host. That is, if SMT is enabled on the physical host, newly created VMs will also have SMT enabled, and will default to inheriting the SMT topology of the host with the VM having the same number of hardware threads per core as the underlying system. This will be reflected in the  VM's configuration with HwThreadsPerCore = 0, where 0 indicates the VM should inherit the host's SMT settings.
+* On Windows Server 2019, new virtual machines created using the default VM version 9.0 will automatically inherit the SMT properties (enabled or disabled) of the virtualization host. That is, if SMT is enabled on the physical host, newly created VMs will also have SMT enabled, and will default to inheriting the SMT topology of the host with the VM having the same number of hardware threads per core as the underlying system. This will be reflected in the  VM's configuration with HwThreadCountPerCore = 0, where 0 indicates the VM should inherit the host's SMT settings.
 
-* Existing virtual machines with a VM versions of 8.2 or earlier will retain their original VM processor setting for HwThreadsPerCore. When these guests run on a Windows Server 2019 host, they will be treated as follows:
+* Existing virtual machines with a VM versions of 8.2 or earlier will retain their original VM processor setting for HwThreadCountPerCore, and the default for 8.2 VM version guests is HwThreadCountPerCore = 1. When these guests run on a Windows Server 2019 host, they will be treated as follows:
 
     1. If the VM has a VP count that is less than or equal to the count of LP cores, the VM will be treated as a non-SMT VM by the core scheduler.  When the guest VP runs on a single SMT thread, the core's sibling SMT thread will be idled. This is non-optimal, and will result in overall loss of performance.
 
-    2. If the VM has more VPs than LP cores, the VM will be treated as an SMT VM by the core scheduler.  However, the VM will not observe other indications that it is an SMT VM.  For example, use of the CPUID instruction or Windows APIs to query CPU toplogy by the OS or applications inside the guest CPUID leaves will not indicate that SMT is enabled.
+    2. If the VM has more VPs than LP cores, the VM will be treated as an SMT VM by the core scheduler.  However, the VM will not observe other indications that it is an SMT VM.  For example, use of the CPUID instruction or Windows APIs to query CPU toplogy by the OS or applications will not indicate that SMT is enabled.
 
-* When an existing VM is explicity updated from eariler VM versions to version 9.0 through the Update-VM operation, the VM will retain its current value for HwThreadsPerCore.  The VM will not have SMT force-enabled.
+* When an existing VM is explicitly updated from eariler VM versions to version 9.0 through the Update-VM operation, the VM will retain its current value for HwThreadCountPerCore.  The VM will not have SMT force-enabled.
 
-* On Windows Server 2016, Microsoft reccommends enabling SMT for guest VMs.  By default, VMs created on Windows Server 2016 would have SMT disabled, that is HwThreadCountPerCore is set to 1, unless explicity changed.  
+* On Windows Server 2016, Microsoft recommends enabling SMT for guest VMs.  By default, VMs created on Windows Server 2016 would have SMT disabled, that is HwThreadCountPerCore is set to 1, unless explicitly changed.
+
+>[!NOTE]
+> Windows Server 2016 does not support setting HwThreadCountPerCore to 0.
 
 #### Managing virtual machine SMT configuration
 
@@ -113,7 +116,7 @@ Set-VMProcessor -VMName <VMName> -HwThreadCountPerCore <0, 1, 2>
 
 Where:
 
-    0 = Inherit SMT topology from the host
+    0 = Inherit SMT topology from the host (setting HwThreadCountPerCore is not supported on Windows Server 2016)
     1 = Non-SMT
     Values > 1 = the desired number of SMT threads per core. May not exceed the number of physical SMT threads per core.
 
@@ -151,20 +154,20 @@ Get-WinEvent -FilterHashTable @{ProviderName="Microsoft-Windows-Hyper-V-Worker";
 
 ### Impacts of guest SMT configuaration on the use of hypervisor enlightenments for guest operating systems
 
-The Microsoft hypervisor offers multiple enlightenments, or hints, which the OS running in a guest VM may query and use to trigger  optimizations such at those that might benefit performance or otherwise improve handling of various conditions when running virtualized.  One such enlightenment recently introduced concerns the handling of virtual processor scheduling and use of OS mitigations for side channel attacks with exploit SMT.
+The Microsoft hypervisor offers multiple enlightenments, or hints, which the OS running in a guest VM may query and use to trigger  optimizations such at those that might benefit performance or otherwise improve handling of various conditions when running virtualized.  One such enlightenment recently introduced concerns the handling of virtual processor scheduling and use of OS mitigations for side channel attacks which exploit SMT.
 
 >[!NOTE]
 > Microsoft recommends that host administrators enable SMT for guest VMs to ensure  optimal workload performance
 
-The details of this guest enlightenment are provided below, however the key takeaway for virtualization host adminstrators is that the hypervisor cannot advertise support for this new englightenment on VMs with SMT disabled. Therefore, any guest OS supporting optimizations which require the enlightenment cannot benefit from this optimization. Therefore Microsoft recommends that Hyper-V administrators ensure all guest VMs are configured with SMT enabled.
+The details of this guest enlightenment are provided below, however the key takeaway for virtualization host adminstrators is that if the host has SMT disabled, the hypervisor can report that there is NoNonArchitecturalCoreSharing to VMs with HwThreadCountPerCore = 0 or HwThreadCountPerCore = 1.  Therefore, any guest OS supporting optimizations which require the enlightenment cannot benefit from this optimization. Therefore Microsoft recommends that Hyper-V administrators ensure guest VMs are configured to inherit their SMT configuration from the host. On Windows Server 2019, set HwThreadCountPerCore = 0.  On Windows Server 2016, manually set HwThreadCountPerCore to match the host configuration (typically 2).
 
 ### NoNonArchitecturalCoreSharing enlightenment details
 
  Starting in Windows Server 2016, the hypervisor defines a new enlightenment to describe its handling of VP scheduling and placement to the guest OS. This enlightenment is defined in the [Hypervisor Top Level Functional Specification v5.0c](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/reference/tlfs).
 
-Hypervisor synthetic CPUID leaf CPUID.0x40000004.EAX:18[NoNonArchitecturalCoreSharing = 1] indicates that a virtual processor will never share a physical core with another virtual processor, except for virtual processors that are reported as sibling SMT threads. For example, a guest VP will never run on an SMT thread alongside a root VP running simultaneously on a sibling SMT thread on the same processor core. This condition is only possible when running virtualized, and so represents a non-architectural SMT behavior which also has serious security implications. The guest OS can use NoNonArchitecturalCoreSharing = 1 as an indication is is safe to enable optimizations which canV avoid the performance overhead of STIBP.
+Hypervisor synthetic CPUID leaf CPUID.0x40000004.EAX:18[NoNonArchitecturalCoreSharing = 1] indicates that a virtual processor will never share a physical core with another virtual processor, except for virtual processors that are reported as sibling SMT threads. For example, a guest VP will never run on an SMT thread alongside a root VP running simultaneously on a sibling SMT thread on the same processor core. This condition is only possible when running virtualized, and so represents a non-architectural SMT behavior which also has serious security implications. The guest OS can use NoNonArchitecturalCoreSharing = 1 as an indication is is safe to enable optimizations which can avoid the performance overhead of STIBP.
 
-When a guest VM is running with SMT disabled (that is, with HwThreadsPerCore = 1), the hypervisor will not indicate that   NoNonArchitecturalCoreSharing is enforced (NoNonArchitecturalCoreSharing will be cleared), meaning that a capable guest OS cannot utilize this performance optimization. Therefore, Microsoft recommends that host administrators enable SMT for guest VMs to ensure  optimal workload performance.
+When a guest VM is running with SMT disabled (that is, with HwThreadCountPerCore = 1), the hypervisor will not indicate that   NoNonArchitecturalCoreSharing is enforced (NoNonArchitecturalCoreSharing will be cleared), meaning that a capable guest OS cannot utilize this performance optimization. Therefore, Microsoft recommends that host administrators enable SMT for guest VMs to ensure  optimal workload performance.
 
 ## Summary
 
