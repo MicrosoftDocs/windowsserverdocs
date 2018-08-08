@@ -12,7 +12,7 @@ ms.assetid: aab895f2-fe4d-4408-b66b-cdeadbd8969e
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.date: 02/01/2018
 ---
 # Add Servers to Server Manager

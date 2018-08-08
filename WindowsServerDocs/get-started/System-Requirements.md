@@ -13,7 +13,7 @@ ms.assetid: 4a8b42d7-9fe5-4efe-9ea1-ace2131fe068
 author: jaimeo
 ms.author: jaimeo
 manager: dongill
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ---
 # System Requirements
 

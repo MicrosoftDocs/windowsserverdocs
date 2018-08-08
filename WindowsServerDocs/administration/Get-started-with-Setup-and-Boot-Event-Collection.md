@@ -5,7 +5,7 @@ ms.prod: windows-server-threshold
 ms.service: na
 manager: DonGill
 ms.technology: server-sbec
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.date: 10/16/2017
 ms.tgt_pltfrm: na
 ms.topic: get-started-article

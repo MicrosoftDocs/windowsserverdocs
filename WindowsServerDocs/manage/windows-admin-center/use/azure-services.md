@@ -6,7 +6,7 @@ ms.topic: article
 author: haley-rowland
 ms.author: harowl
 ms.date: 06/18/2018
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---
 # Configure Azure Services from within Windows Admin Center
