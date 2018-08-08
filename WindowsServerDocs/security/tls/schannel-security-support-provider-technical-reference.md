@@ -26,7 +26,7 @@ These protocols provide a means to secure data that is being sent between applic
 - [Datagram Transport Layer Security protocol](datagram-transport-layer-security-protocol.md)
 
 ## See also
-[Windows Authentication](windows-authentication-overview.md)
-[Kerberos Authentication](kerberos-authentication-overview.md)
+[Windows Authentication](../windows-authentication/windows-authentication-overview.md)
+[Kerberos Authentication](../windows-authentication/kerberos-authentication-overview.md)
 
 
