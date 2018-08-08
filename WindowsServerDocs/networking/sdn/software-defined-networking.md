@@ -42,8 +42,8 @@ The network controller provides a centralized, programmable point of automation 
 
 The network controller is a highly available and scalable server and provides two application programming interfaces (APIs):
 
-- **Southbound API** – allows the network controller to communicate with the network.
-- **Northbound API** – allows you to communicate with the network controller.
+1. **Southbound API** – allows the network controller to communicate with the network.
+2. **Northbound API** – allows you to communicate with the network controller.
 
 You can use wither Windows PowerShell, the Representational State Transfer (REST) API or a management application to manage the following physical and virtual network infrastructure. 
 
@@ -58,7 +58,7 @@ For more information, see [Network Controller](../sdn/technologies/network-contr
   
 ### <a name="bkmk_hv"></a>Hyper-V Network Virtualization
 
-Hyper-V Network Virtualization helps you abstract your applications and workloads from the physical network by using virtual networks. Virtual networks provide the necessary multitenant isolation while running on a shared physical network fabric, thereby driving up resource utilization. To ensure that you can carry forward your existing investments, you can set up virtual networks on existing networking gear. In addition, virtual networks are compatible with virtual Local Area Networks (VLANs).  
+Hyper-V Network Virtualization (HNV) helps you abstract your applications and workloads from the physical network by using virtual networks. Virtual networks provide the necessary multitenant isolation while running on a shared physical network fabric, thereby driving up resource utilization. To ensure that you can carry forward your existing investments, you can set up virtual networks on existing networking gear. Also, virtual networks are compatible with virtual Local Area Networks (VLANs).   
   
 For more information, see [Hyper-V Network Virtualization](../sdn/technologies/hyper-v-network-virtualization/Hyper-V-Network-Virtualization.md).  
   
