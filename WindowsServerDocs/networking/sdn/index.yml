@@ -50,55 +50,46 @@ sections:
 
     items:
 
-    - href: \windows-server\remote\remote-access\vpn\always-on-vpn\deploy\always-on-vpn-deploy
+    - href: \windows-server\networking\sdn\sdn-whats-new
 
-      html: <p>Learn about the Always On VPN deployment and where to get started.</p>
-
-      image:
-
-        src: https://docs.microsoft.com/media/common/i_get-started.svg
-      
-      title: Begin your journey
-
-    - href: \windows-server\remote\remote-access\vpn\vpn-map-da
-
-      html: <p>Learn how Always On VPN has expanded the VPN functionality beyond the capabilities of DirectAccess.</p>
-
-      image:
-
-        src: https://docs.microsoft.com/media/common/i_quick-start.svg
-
-      title: DirectAccess and Always On VPN feature comparison
-
-    - href: \windows-server\remote\remote-access\vpn\always-on-vpn\always-on-vpn-enhancements
-
-      html: <p>Learn about the key improvements in integration, security, connectivity, networking control, and compatibility.</p>
+      html: <p>Learn about the new and updated features of SDN.</p>
 
       image:
 
         src: https://docs.microsoft.com/media/common/i_whats-new.svg
+      
+      title: What's new
 
-      title: Enhancements in Always On VPN
+    - href: \windows-server\networking\sdn\sdn-intro
 
-    - href: \windows-server\remote\remote-access\vpn\always-on-vpn\always-on-vpn-technology-overview
-
-      html: <p>Learch about the technologies used in the Always On VPN deployment.</p>
+      html: <p>Learn how you can centrally configure and manage physical and virtual network devices.</p>
 
       image:
 
         src: https://docs.microsoft.com/media/common/i_overview.svg
 
-      title: Technology overview
+      title: Software Defined Networking (SDN)
 
-    - href: \windows-server\remote\remote-access\vpn\always-on-vpn\deploy\always-on-vpn-adv-options
+    - href: \windows-server\networking\sdn\technologies\Software-Defined-Networking-Technologies
 
-      html: <p>Learn about the advanced VPN features you can add to improve the security and availability of your VPN connection.</p>
+      html: <p>Learn about the SDN technologies included in Windows Server 2016.</p>
 
       image:
 
-        src: https://docs.microsoft.com/media/common/i_advanced.svg
+        src: https://docs.microsoft.com/media/common/i_tools.svg
 
-      title: Extend Always On VPN with advanced features            
+      title: Key components of SDN architecture
+
+    - href: \windows-server\networking\sdn\Sc-Tech-for-Sdn
+
+      html: <p>Learch about System Center technologies used for SDN, such as System Center Operations Manager and System Center Virtual Machine Manager.</p>
+
+      image:
+
+        src: https://docs.microsoft.com/media/common/i_overview.svg
+
+      title: System Center technology for SDN
+      
 
 - title: Get started... 
 
@@ -178,7 +169,7 @@ sections:
 
     items:
 
-    - title: Troubleshoot Always On VPN
+    - title: SDN learning resources
 
       html: <p><a class="barLink" href="/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting#vpnprofileps1-script-issues">VPN_Profile.ps1 script issues</a></p>
 
@@ -190,16 +181,3 @@ sections:
 
             <p><a class="barLink" href="/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting#logs">Log files</a></p></div>
 
-    - title: Additional resources 
-
-      html: <p><a class="barLink" href="https://docs.microsoft.com/windows/access-protection/vpn/vpn-guide">Windows 10 VPN Technical Guide</a></p>
-        
-            <p><a class="barLink" href="https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/vpnv2-csp">VPNv2 CSP</a></p>
-
-            <p><a class="barLink" href="https://technet.microsoft.com/library/hh831740.aspx">Active Directory Certificate Services Overview</a></p>
-
-            <p><a class="barLink" href="https://technet.microsoft.com/library/cc730705.aspx">Certificate Templates</a></p>
-       
-            <p><a class="barLink" href="https://social.technet.microsoft.com/wiki/contents/articles/2901.public-key-infrastructure-design-guidance.aspx">Public Key Infrastructure Design Guidance</a></p><p></p>
-
-            <p><a class="barLink" href="https://social.technet.microsoft.com/wiki/contents/articles/15037.ad-cs-step-by-step-guide-two-tier-pki-hierarchy-deployment.aspx">AD CS Step by Step Guide - Two Tier PKI Hierarchy Deployment</a></p>

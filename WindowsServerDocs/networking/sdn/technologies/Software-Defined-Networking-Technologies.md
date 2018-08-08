@@ -9,6 +9,7 @@ ms.topic: article
 ms.assetid: b491089c-5bcb-49d4-95b1-915b7ce69f88
 ms.author: pashort
 author: shortpatti
+
 ---
 # SDN Technologies
 
