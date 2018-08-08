@@ -78,7 +78,8 @@ For more information, see [Internal DNS Service &#40;iDNS&#41; for SDN](technolo
   
 ### <a name="bkmk_nfv"></a>Network Function Virtualization
 
-In today's software defined datacenters, network functions that are being performed by hardware appliances (such as load balancers, firewalls, routers, switches, and so on) are increasingly being virtualized as virtual appliances. This "network function virtualization" is a natural progression of server virtualization and network virtualization. Virtual appliances are quickly emerging and creating a brand new market. They continue to generate interest and gain momentum in both virtualization platforms and cloud services.  
+Hardware appliances, such as load balancers, firewalls, routers, and switches are increasingly becoming virtual appliances. Microsoft has virtualized networks, switches, gateways, NATs, load balancers, and firewalls. This "network function virtualization" is a natural progression of server virtualization and network virtualization. Virtual appliances are quickly emerging and creating a brand new market. They continue to generate interest and gain momentum in both virtualization platforms and cloud services. 
+ 
   
 The following Network Function Virtualization technologies are available.  
   
