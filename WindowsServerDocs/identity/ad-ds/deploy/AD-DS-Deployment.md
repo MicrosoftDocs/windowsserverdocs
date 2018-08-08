@@ -30,6 +30,6 @@ This guide covers how to install and remove Active Directory Domain Services (AD
   
 - [Changes Made by Adprep](../../ad-ds/deploy/adprep/Changes-Made-by-Adprep.md)  
 
-- [Windows Server Functional Levels](ad-ds/active-directory-functional-levels.md)
+- [Windows Server Functional Levels](../../ad-ds/active-directory-functional-levels.md)
   
 - [Troubleshooting Domain Controller Deployment](../../ad-ds/deploy/Troubleshooting-Domain-Controller-Deployment.md)  
