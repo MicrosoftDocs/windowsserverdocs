@@ -1,13 +1,14 @@
 ---
 title: Software Defined Networking (SDN)
 description: You can use this topic to learn about the Software Defined Networking (SDN) technologies that are provided in Windows Server, System Center, and Microsoft Azure.
-manager: brianlic
+manager: elizapo
 ms.prod: windows-server-threshold
 ms.technology: networking-sdn
 ms.topic: article
 ms.assetid: 9a1ea73c-20cd-42c5-95ad-b003b9cc6d64
 ms.author: pashort
 author: shortpatti
+ms.date: 09/15/2015
 ---
 # Software Defined Networking (SDN)
 
@@ -32,22 +33,19 @@ You can use this topic to learn about the Software Defined Networking (SDN) tech
   
 ## <a name="bkmk_sdn"></a>Software Defined Networking Overview
 
-Software Defined Networking \(SDN\) provides a method to centrally configure and manage physical and virtual network devices such as routers, switches, and gateways in your datacenter. Virtual network elements such as Hyper-V Virtual Switch, Hyper-V Network Virtualization, and RAS Gateway are designed to be integral elements of your SDN infrastructure.
+Software Defined Networking (SDN) provides a method to centrally configure and manage physical and virtual network devices such as routers, switches, and gateways in your datacenter. Virtual network elements such as Hyper-V Virtual Switch, Hyper-V Network Virtualization, and RAS Gateway are designed to be integral elements of your SDN infrastructure. You can use your existing SDN-compatible devices to achieve deeper integration between the virtual network and the physical network. 
 
->[!NOTE]
->For Hyper-V hosts and virtual machines \(VMs\) that run SDN infrastructure servers, such as Network Controller and Software Load Balancing nodes, you must install Windows Server 2016 Datacenter edition. For Hyper-V hosts that contain only tenant workload VMs that are connected to SDN\-controlled networks, you can run Windows Server 2016 Standard edition.
+>[!Note]
+>For Hyper-V hosts and virtual machines (VMs) that run SDN infrastructure servers, such as Network Controller and Software Load Balancing nodes, you must install Windows Server 2016 Datacenter edition. For Hyper-V hosts that contain only tenant workload VMs that are connected to SDN-controlled networks, you can run Windows Server 2016 Standard edition. 
 
-While you can still use your existing physical switches, routers, and other hardware devices, you can achieve deeper integration between the virtual network and the physical network if these devices are designed for compatibility with software defined networking.  
-  
-SDN is possible because the network planes - the management, control, and data planes - are no longer bound to the network devices themselves, but are abstracted for use by other entities, such as datacenter management software like System Center 2016.  
-  
-SDN allows you to dynamically manage your datacenter network to provide an automated, centralized way to meet the requirements of your applications and workloads. Software defined networking provides the following capabilities.  
-  
--   The ability to abstract your applications and workloads from the underlying physical network, which is accomplished by virtualizing the network. Just as with server virtualization using Hyper-V, the abstractions are consistent and work with your applications and workloads in a non-disruptive manner. For example, software defined networking provides virtual abstractions for your physical network elements, such as IP addresses, switches, and load balancers.  
-  
--   The ability to centrally define and control policies that govern both physical and virtual networks, including traffic flow between these two network types.  
-  
--   The ability to implement network policies in a consistent manner at scale, even as you deploy new workloads or move workloads across virtual or physical networks.  
+SDN is possible because network planes are no longer bound to the network devices themselves. However, other entities, such as datacenter management software like System Center 2016 use network planes. SDN allows you to manage your datacenter network dynamically, providing an automated, centralized way to meet the requirements of your applications and workloads. 
+
+Software defined networking gives you the ability to. 
+- Abstract your applications and workloads from the underlying physical network, which is accomplished by virtualizing the network. Just as with server virtualization using Hyper-V, the abstractions are consistent and work with your applications and workloads in a non-disruptive manner. For example, software defined networking provides virtual abstractions for your physical network elements, such as IP addresses, switches, and load balancers. 
+- Define and control policies that govern both physical and virtual networks, including traffic flow between these two network types centrally. 
+- Implement network policies consistently at scale, even as you deploy new workloads or move workloads across virtual or physical networks. 
+
+
   
 ## <a name="bkmk_ws"></a>Windows Server Technologies for Software Defined Networking  
 Windows Server includes the following software defined networking technologies.  
