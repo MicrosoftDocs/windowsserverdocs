@@ -6,7 +6,6 @@ ms.mktglfcycl: manage
 ms.sitesec: library
 author: mikeblodge
 ms.author: mikeblodge
-ms.localizationpriority: high
 ms.date: 07/12/2018
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
