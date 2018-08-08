@@ -83,13 +83,11 @@ Hardware appliances, such as load balancers, firewalls, routers, and switches ar
   
 The following Network Function Virtualization technologies are available.  
   
--   **Software Load Balancer (SLB) and Network Address Translation (NAT)**. The north-south and east-west layer 4 load balancer and NAT enhances throughput by supporting Direct Server Return, with which the return network traffic can bypass the Load Balancing multiplexer. For more information, see [Software Load Balancing (SLB) for SDN](technologies/network-function-virtualization/software-load-balancing-for-sdn.md).  
+-   **Software Load Balancer (SLB) and Network Address Translation (NAT)**. Enhance throughput by supporting Direct Server Return in which the return network traffic can bypass the Load Balancing multiplexer. For more details, see [Software Load Balancing (SLB) for SDN](technologies/network-function-virtualization/software-load-balancing-for-sdn.md).  
   
--   **Datacenter Firewall**. This distributed firewall provides granular access control lists (ACLs),  enabling you to apply firewall policies at the VM interface level or at the subnet level.  
+-   **Datacenter Firewall**. Provide granular access control lists (ACLs), enabling you to apply firewall policies at the VM interface level or the subnet level. For more details, see [Datacenter Firewall Overview](../sdn/technologies/network-function-virtualization/Datacenter-Firewall-Overview.md).  
   
-    For more information, see [Datacenter Firewall Overview](../sdn/technologies/network-function-virtualization/Datacenter-Firewall-Overview.md).  
-  
--   **RAS Gateway**. You can use gateways for bridging traffic between virtual networks and non-virtualized networks; specifically, you can deploy site-to-site VPN gateways, forwarding gateways, and Generic Routing Encapsulation (GRE) gateways. In addition, M+N redundancy of gateways is supported. For more information, see [RAS Gateway for SDN](technologies/network-function-virtualization/RAS-Gateway-for-SDN.md).
+-   **RAS Gateway**. Bridge traffic between virtual networks and non-virtualized networks. In particular, you can deploy site-to-site VPN gateways, forwarding gateways, Generic Routing Encapsulation (GRE) gateways, and M+N redundancy of gateways. For more details, see [RAS Gateway for SDN](technologies/network-function-virtualization/RAS-Gateway-for-SDN.md).
   
 For more information, see [Network Function Virtualization](technologies/network-function-virtualization/Network-Function-Virtualization.md).  
   
