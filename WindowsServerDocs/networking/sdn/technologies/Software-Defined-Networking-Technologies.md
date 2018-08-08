@@ -17,16 +17,7 @@ author: shortpatti
 
 The topics in this section provide overview and technical information about the Software Defined Networking technologies that are included in Windows Server 2016.  
   
-> [!NOTE]  
-> For additional Software Defined Networking documentation, you can use the following library sections.  
->   
-> - [Plan SDN](../plan/Plan-Software-Defined-Networking.md)
-> - [Deploy SDN](../deploy/Deploy-Software-Defined-Networking.md)
-> - [Manage SDN](../manage/manage-sdn.md)
-> - [Security for SDN](../security/sdn-security-top.md)
-> - [Troubleshoot SDN](../troubleshoot/Troubleshoot-Software-Defined-Networking.md)
 
-There are many technologies that work together to create Microsoft's Software Defined Networking (SDN) solutions, including the following:  
   
 -   **[Border Gateway Protocol &#40;BGP&#41;](../../../remote/remote-access/bgp/Border-Gateway-Protocol-BGP.md)**  
   

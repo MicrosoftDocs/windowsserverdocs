@@ -38,23 +38,21 @@ Windows Server includes the following software defined networking technologies.
 
 ### <a name="bkmk_nc"></a>Network Controller
 
-New in  Windows Server 2016, Network Controller provides a centralized, programmable point of automation to manage, configure, monitor, and troubleshoot both virtual and physical network infrastructure in your datacenter. Using Network Controller, you can automate the configuration of network infrastructure instead of performing manual configuration of network devices and services.  
-  
-Network Controller is a highly available and scalable server role, and provides one application programming interface (API) - the Southbound API - that allows Network Controller to communicate with the network, and a second API - the Northbound API - that allows you to communicate with Network Controller.  
-  
-Using Windows PowerShell, the Representational State Transfer (REST) API, or a management application, you can use Network Controller to manage the following physical and virtual network infrastructure.  
-  
--   Hyper-V VMs and virtual switches  
-  
--   Physical network switches  
-  
--   Physical network routers  
-  
--   Firewall software  
-  
--   VPN Gateways, including Remote Access Service (RAS) Multitenant Gateways  
-  
--   Load Balancers  
+The network controller provides a centralized, programmable point of automation to manage, configure, monitor, and troubleshoot both virtual and physical network infrastructure in your datacenter. With the network controller, you can automate the configuration of network infrastructure instead of performing manual configuration of network devices and services. 
+
+The network controller is a highly available and scalable server and provides two application programming interfaces (APIs):
+
+- **Southbound API** – allows the network controller to communicate with the network.
+- **Northbound API** – allows you to communicate with the network controller.
+
+You can use wither Windows PowerShell, the Representational State Transfer (REST) API or a management application to manage the following physical and virtual network infrastructure. 
+
+- Hyper-V VMs and virtual switches 
+- Physical network switches 
+- Physical network routers 
+- Firewall software 
+- VPN Gateways, including Remote Access Service (RAS) Multitenant Gateways 
+- Load Balancers 
   
 For more information, see [Network Controller](../sdn/technologies/network-controller/Network-Controller.md).  
   
