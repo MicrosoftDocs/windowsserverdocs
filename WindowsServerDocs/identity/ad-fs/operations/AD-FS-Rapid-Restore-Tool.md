@@ -39,9 +39,6 @@ The tool backs up the following AD FS configuration
 ## How to use the tool
 First, [download](https://go.microsoft.com/fwlink/?LinkId=825646) and install the MSI to your AD FS server.  
 
->[!NOTE]
->The AD FS Rapid Restore Tool is not FIPS compliant.
-
 Run the following command from a PowerShell prompt:
 
 ```powershell
@@ -220,6 +217,17 @@ Every time a backup or restore is performed a log file is created. These can be 
 > When performing a restore a PostRestore_Instructions file might be created containing an overview of the additional authentication providers, attribute stores and local claims provider trusts to be installed manually before starting the AD FS service.
 
 ## Version Release History
+
+### Version: 1.0.73.0
+Release: August 2018
+
+**Fixed issues:**
+* Update the encryption algorithms so that the application is FIPS compliant
+	
+	>[!NOTE]
+	> Old backups will not work with the new version due to changes in encryption algorithms as per FIPS compliance
+	
+* Add support for SQL clusters that use merge replication
 
 ### Version: 1.0.72.0
 Release: July 2018
