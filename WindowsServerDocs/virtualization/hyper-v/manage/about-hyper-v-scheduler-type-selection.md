@@ -116,7 +116,8 @@ Set-VMProcessor -VMName <VMName> -HwThreadCountPerCore <0, 1, 2>
 
 Where:
 
-    0 = Inherit SMT topology from the host (setting HwThreadCountPerCore is not supported on Windows Server 2016)
+    0 = Inherit SMT topology from the host (this setting of HwThreadCountPerCore=0 is not supported on Windows Server 2016)
+
     1 = Non-SMT
     Values > 1 = the desired number of SMT threads per core. May not exceed the number of physical SMT threads per core.
 
@@ -159,15 +160,15 @@ The Microsoft hypervisor offers multiple enlightenments, or hints, which the OS 
 >[!NOTE]
 > Microsoft recommends that host administrators enable SMT for guest VMs to ensure  optimal workload performance
 
-The details of this guest enlightenment are provided below, however the key takeaway for virtualization host adminstrators is that if the host has SMT disabled, the hypervisor can report that there is NoNonArchitecturalCoreSharing to VMs with HwThreadCountPerCore = 0 or HwThreadCountPerCore = 1.  Therefore, any guest OS supporting optimizations which require the enlightenment cannot benefit from this optimization. Therefore Microsoft recommends that Hyper-V administrators ensure guest VMs are configured to inherit their SMT configuration from the host. On Windows Server 2019, set HwThreadCountPerCore = 0.  On Windows Server 2016, manually set HwThreadCountPerCore to match the host configuration (typically 2).
+The details of this guest enlightenment are provided below, however the key takeaway for virtualization host administrators is that virtual machines should have HwThreadCountPerCore configured to match the host’s physical SMT configuration.  This allows the hypervisor to report that there is no non-architectural core sharing.  Therefore, any guest OS supporting optimizations which require the enlightenment may be enabled.  On Windows Server 2019, create new VMs and leave the default value of HwThreadCountPerCore (0).  Older VMs migrated from Windows Server 2016 hosts can be updated to the Windows Server 2019 configuration version.  After doing so, Microsoft recommends setting HwThreadCountPerCore = 0.  On Windows Server 2016, Microsoft recommends setting HwThreadCountPerCore to match the host configuration (typically 2).
 
 ### NoNonArchitecturalCoreSharing enlightenment details
 
  Starting in Windows Server 2016, the hypervisor defines a new enlightenment to describe its handling of VP scheduling and placement to the guest OS. This enlightenment is defined in the [Hypervisor Top Level Functional Specification v5.0c](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/reference/tlfs).
 
-Hypervisor synthetic CPUID leaf CPUID.0x40000004.EAX:18[NoNonArchitecturalCoreSharing = 1] indicates that a virtual processor will never share a physical core with another virtual processor, except for virtual processors that are reported as sibling SMT threads. For example, a guest VP will never run on an SMT thread alongside a root VP running simultaneously on a sibling SMT thread on the same processor core. This condition is only possible when running virtualized, and so represents a non-architectural SMT behavior which also has serious security implications. The guest OS can use NoNonArchitecturalCoreSharing = 1 as an indication is is safe to enable optimizations which can avoid the performance overhead of STIBP.
+Hypervisor synthetic CPUID leaf CPUID.0x40000004.EAX:18[NoNonArchitecturalCoreSharing = 1] indicates that a virtual processor will never share a physical core with another virtual processor, except for virtual processors that are reported as sibling SMT threads. For example, a guest VP will never run on an SMT thread alongside a root VP running simultaneously on a sibling SMT thread on the same processor core. This condition is only possible when running virtualized, and so represents a non-architectural SMT behavior which also has serious security implications. The guest OS can use NoNonArchitecturalCoreSharing = 1 as an indication that it is safe to enable optimizations which may help it avoid the performance overhead of setting STIBP.
 
-When a guest VM is running with SMT disabled (that is, with HwThreadCountPerCore = 1), the hypervisor will not indicate that   NoNonArchitecturalCoreSharing is enforced (NoNonArchitecturalCoreSharing will be cleared), meaning that a capable guest OS cannot utilize this performance optimization. Therefore, Microsoft recommends that host administrators enable SMT for guest VMs to ensure  optimal workload performance.
+In certain configurations, the hypervisor will not indicate that NoNonArchitecturalCoreSharing = 1.  As an example, if a host has SMT enabled and is configured to use the hypervisor classic scheduler, NoNonArchitecturalCoreSharing will be 0.  This may prevent enlightened guests from enabling certain optimizations.  Therefore, Microsoft recommends that host administrators using SMT rely on the hypervisor core scheduler and ensure that virtual machines are configured to inherit their SMT configuration from the host to ensure optimal workload performance.
 
 ## Summary
 
