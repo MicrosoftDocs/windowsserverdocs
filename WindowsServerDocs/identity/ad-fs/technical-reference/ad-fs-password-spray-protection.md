@@ -1,17 +1,15 @@
-
 ---
 title: AD FS Password Spray Attack protection
-description:This document describes how to protect AD FS users from password spray attacks
+description:  This document describes how to protect AD FS users from password spray attacks
 author: billmath
-ms.author: billmath
-ms.reviewer: anandy
 manager: mtillman
-ms.date: 08/07/2018
+ms.reviewer: andandyMSFT
+ms.date: 08/09/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
+ms.author: billmath
 ---
-
 
 
 
