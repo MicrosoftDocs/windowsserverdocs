@@ -18,7 +18,7 @@ ms.datae: 08/09/2018
 The topics in this section provide overview and technical information about the Software Defined Networking technologies that are included in Windows Server 2016.  
 
 
-## [Network Controller](../sdn/technologies/network-controller/Network-Controller.md)
+## [Network Controller](network-controller/Network-Controller.md)
 
 The network controller provides a centralized, programmable point of automation to manage, configure, monitor, and troubleshoot both virtual and physical network infrastructure in your datacenter. With the network controller, you can automate the configuration of network infrastructure instead of performing manual configuration of network devices and services. 
 
@@ -38,7 +38,7 @@ You can use wither Windows PowerShell, the Representational State Transfer (REST
   
 
   
-## [Hyper-V Network Virtualization](../sdn/technologies/hyper-v-network-virtualization/Hyper-V-Network-Virtualization.md)
+## [Hyper-V Network Virtualization](hyper-v-network-virtualization/Hyper-V-Network-Virtualization.md)
 
 Hyper-V Network Virtualization (HNV) helps you abstract your applications and workloads from the physical network by using virtual networks. Virtual networks provide the necessary multitenant isolation while running on a shared physical network fabric, thereby driving up resource utilization. To ensure that you can carry forward your existing investments, you can set up virtual networks on existing networking gear. Also, virtual networks are compatible with virtual Local Area Networks (VLANs).   
   
@@ -49,21 +49,21 @@ The Hyper-V Virtual Switch is a software-based layer-2 Ethernet network switch t
   
 In Hyper-V Virtual Switch in  Windows Server 2016, you can also deploy Switch Embedded Teaming (SET) and Remote Direct Memory Access (RDMA). For more information, see the section [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](#bkmk_rdma) in this topic.  
 
-## [Internal DNS Service &#40;iDNS&#41; for SDN](technologies/Idns-for-Sdn.md)
+## [Internal DNS Service /(iDNS/) for SDN](Idns-for-Sdn.md)
 
 Hosted virtual machines (VMs) and applications require DNS to communicate within their networks and with external resources on the Internet. With iDNS, you can provide tenants with DNS name resolution services for isolated, local namespace and Internet resources. 
   
-## [Network Function Virtualization](technologies/network-function-virtualization/Network-Function-Virtualization.md)
+## [Network Function Virtualization](network-function-virtualization/Network-Function-Virtualization.md)
 
 Hardware appliances, such as load balancers, firewalls, routers, and switches are increasingly becoming virtual appliances. Microsoft has virtualized networks, switches, gateways, NATs, load balancers, and firewalls. This "network function virtualization" is a natural progression of server virtualization and network virtualization. Virtual appliances are quickly emerging and creating a brand new market. They continue to generate interest and gain momentum in both virtualization platforms and cloud services. 
   
 The following Network Function Virtualization technologies are available.  
   
--   **Software Load Balancer (SLB) and Network Address Translation (NAT)**. Enhance throughput by supporting Direct Server Return in which the return network traffic can bypass the Load Balancing multiplexer. For more details, see [Software Load Balancing (SLB) for SDN](technologies/network-function-virtualization/software-load-balancing-for-sdn.md).  
+-   **Software Load Balancer (SLB) and Network Address Translation (NAT)**. Enhance throughput by supporting Direct Server Return in which the return network traffic can bypass the Load Balancing multiplexer. For more details, see [Software Load Balancing /(SLB/) for SDN](network-function-virtualization/software-load-balancing-for-sdn.md).
   
--   **Datacenter Firewall**. Provide granular access control lists (ACLs), enabling you to apply firewall policies at the VM interface level or the subnet level. For more details, see [Datacenter Firewall Overview](../sdn/technologies/network-function-virtualization/Datacenter-Firewall-Overview.md).  
+-   **Datacenter Firewall**. Provide granular access control lists (ACLs), enabling you to apply firewall policies at the VM interface level or the subnet level. For more details, see [Datacenter Firewall Overview](network-function-virtualization/Datacenter-Firewall-Overview.md).
   
--   **RAS Gateway**. Route network traffic between the physical network and VM network resources, regardless of the location. You can route the network traffic at the same physical location or many different locations. For more details, see [RAS Gateway for SDN](technologies/network-function-virtualization/RAS-Gateway-for-SDN.md).
+-   **RAS Gateway**. Route network traffic between the physical network and VM network resources, regardless of the location. You can route the network traffic at the same physical location or many different locations. For more details, see [RAS Gateway for SDN](network-function-virtualization/RAS-Gateway-for-SDN.md).
 
   
 ## [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](https://docs.microsoft.com/windows-server/virtualization/hyper-v-virtual-switch/rdma-and-switch-embedded-teaming)  
@@ -78,14 +78,14 @@ In addition,  you can use Windows PowerShell commands to enable Data Center Brid
 
   
 
-## [Border Gateway Protocol &#40;BGP&#41;](../../../remote/remote-access/bgp/Border-Gateway-Protocol-BGP.md)  
+## [Border Gateway Protocol (BGP)](../../../remote/remote-access/bgp/Border-Gateway-Protocol-BGP.md)
   
 Border Gateway Protocol (BGP) is a dynamic routing protocol that automatically learns routes between sites that use site-to-site VPN connections. Therefore, BGP reduces manual configuration of routers.   When you configure RAS Gateway, BGP lets you manage the routing of network traffic between your tenants’ VM networks and remote sites.  
   
-## [Software Load Balancing &#40;SLB&#41; for SDN](../sdn/technologies/network-function-virtualization/software-load-balancing-for-sdn.md)  
+## [Software Load Balancing /(SLB/) for SDN](network-function-virtualization/software-load-balancing-for-sdn.md)
 Cloud Service Providers (CSPs) and Enterprises that deploy SDN can use Software Load Balancing (SLB) to evenly distribute tenant and tenant customer network traffic among virtual network resources. The Windows Server SLB enables multiple servers to host the same workload, providing high availability and scalability. 
 
-## [Windows Server Containers](technologies/containers/Container-networking-overview.md)
+## [Windows Server Containers](Containers/Container-networking-overview.md)
 
 Windows Server Containers are a lightweight operating system virtualization method separating applications or services from other services running on the same container host. Each container has its own operating system, processes, file system, registry, and IP addresses, which you can connect to virtual networks. 
 
