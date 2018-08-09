@@ -72,4 +72,3 @@ To perform this procedure, you must be a member of Domain Admins.
 14. When prompted to restart Active Directory Certificate Services, click **No**. You will restart the service later.  
   
 
-
