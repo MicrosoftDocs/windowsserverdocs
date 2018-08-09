@@ -25,6 +25,11 @@
       "redirect_url": "https://docs.microsoft.com/windows-insider/at-work/whats-new-wip-at-work",
       "redirect_document_id": true
     },
+    {  
+      "source_path": "WindowsServerDocs/identity/ad-ds/plan/security-best-practices/Understanding-Active-Directory-Domain-Services--AD-DS--Functional-Levels.md.md",
+      "redirect_url": "/windows-server/identity/ad-ds/active-directory-functional-levels",
+      "redirect_document_id": true
+    },
     {
       "source_path": "WindowsServerDocs/windows-insider/index.md",
       "redirect_url": "https://docs.microsoft.com/windows-insider/at-work/",
