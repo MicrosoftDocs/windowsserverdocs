@@ -39,7 +39,11 @@ These hosts run Hyper-V and are required to host SDN infrastructure and tenant v
   
 ## Physical Network Configuration
 
-Each physical compute host requires network connectivity through one or more network adapters attached to a physical switch port(s). The network is segregated into multiple logical network segments optionally backed by a Layer-2 [VLAN](https://en.wikipedia.org/wiki/Virtual_LAN). The IP subnet prefixes and VLAN IDs shown below are examples and must be customized for your environment based on guidance from your network administrator. If any of your logical networks are untagged or in access mode, use VLAN ID 0 for these networks when configuring the logical subnets in either System Center Virtual Machine Manager or PowerShell script configuration files.
+Each physical compute hosts require network connectivity through one or more network adapters attached to a physical switch port(s).  A Layer-2 [VLAN](https://en.wikipedia.org/wiki/Virtual_LAN) supports networks divided into multiple logical network segments. 
+
+>[!TIP]
+>Use VLAN 0 for logical networks in access mode or untagged. 
+
 
 >[!IMPORTANT]
 >Windows Server 2016 Software Defined Networking supports IPv4 addressing for the underlay and the overlay. IPv6 is not supported.
@@ -64,6 +68,10 @@ The fabric administrator statically assigns the HNV Provider IP addresses used b
 #### Sample network topology
 
 Customize the subnet prefixes, VLAN IDs, and gateway IP addresses based on your network administrator's guidance.  
+
+>[!IMPORTANT]
+>Remember to change the sample IP subnet prefixes and VLAN IDs for your environment. 
+
   
 Network Name|Subnet|Mask|VLAN ID on trunk|Gateway|Reservations<br />(examples)  
 ----------------|----------|--------|--------------------|-----------|-----------------------------  

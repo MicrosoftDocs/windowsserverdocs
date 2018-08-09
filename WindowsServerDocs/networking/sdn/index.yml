@@ -80,15 +80,15 @@ sections:
 
       title: Key components of SDN architecture
 
-    - href: \windows-server\networking\sdn\Sc-Tech-for-Sdn
+    - href: \windows-server\networking\sdn\security\sdn-security-top
 
-      html: <p>Learch about System Center technologies used for SDN, such as System Center Operations Manager and System Center Virtual Machine Manager.</p>
+      html: <p>Learn about the SDN technologies included in Windows Server 2016.</p>
 
       image:
 
-        src: https://docs.microsoft.com/media/common/i_overview.svg
+        src: https://docs.microsoft.com/media/common/i_security-management.svg
 
-      title: System Center technology for SDN
+      title: Security for SDN
       
 
 - title: Get started... 
@@ -109,55 +109,26 @@ sections:
 
     items:
 
-    - href: \windows-server\remote\remote-access\vpn\always-on-vpn\deploy\always-on-vpn-deploy-deployment
+    - href: \windows-server\networking\sdn\plan\Plan-a-Software-Defined-Network-Infrastructure
 
-      html: <p>Discover what's needed to deploy VPN connections.</p>
-
-      image:
-
-        src: https://docs.microsoft.com/media/common/i_architecture.svg
-      
-      title: Deployment workflow and scenarios
-
-    - href: \windows-server\remote\remote-access\da-always-on-vpn-migration\da-always-on-migration-overview
-    
-      html: <p>Start planning the migration from DirectAccess to Always On VPN.</p>
+      html: <p>Discover what's needed to deploy an SDN infrastructure.</p>
 
       image:
 
-        src: https://docs.microsoft.com/media/common/i_upgrade.svg
+        src: https://docs.microsoft.com/media/common/i_design.svg
       
-      title: Migrate from DirectAccess
+      title: Plan an SDN infrastructure
 
-    - href: \windows-server\remote\remote-access\vpn\always-on-vpn\deploy\always-on-vpn-deploy-planning
-    
-      html: <p>Start planning and preparing your Always On VPN deployment.</p>
+    - href: \windows-server\networking\sdn\plan\Plan-a-Software-Defined-Network-Infrastructure
+
+      html: <p> </p>
 
       image:
 
-        src: https://docs.microsoft.com/media/common/i_guidelines.svg
+        src: https://docs.microsoft.com/media/common/i_design.svg
       
-      title: Plan the Always On VPN deployment 
+      title: Deploy an SDN infrastructure 
 
-    - href: \windows-server\remote\remote-access\vpn\always-on-vpn\deploy\vpn-deploy-server-infrastructure
-    
-      html: <p>Start setting up and configuring the VPN infrastructure along with the Windows 10 client VPN connectivity.</p>
-
-      image:
-
-        src: https://docs.microsoft.com/media/common/i_setup.svg
-      
-      title: Deploy the VPN infrastructure
-
-    - href: \windows-server\remote\remote-access\vpn\ad-ca-vpn-connectivity-windows10
-    
-      html: <p>Fine-tune how VPN users access your resources using Azure AD conditional access.</p>
-
-      image:
-
-        src: https://docs.microsoft.com/media/common/i_setup.svg
-      
-      title: Configure conditional access
 
 - items:
 
