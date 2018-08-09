@@ -8,7 +8,7 @@ ms.topic: article
 ms.assetid: 9a1ea73c-20cd-42c5-95ad-b003b9cc6d64
 ms.author: pashort
 author: shortpatti
-ms.date: 09/15/2015
+ms.date: 08/09/2018
 ---
 # Software Defined Networking (SDN)
 
@@ -31,13 +31,9 @@ Software defined networking gives you the ability to.
 - Define and control policies that govern both physical and virtual networks, including traffic flow between these two network types centrally. 
 - Implement network policies consistently at scale, even as you deploy new workloads or move workloads across virtual or physical networks. 
 
-
-  
-## <a name="bkmk_ws"></a>Windows Server Technologies for Software Defined Networking  
-Windows Server includes the following software defined networking technologies.  
  
 
-### Contact the Datacenter and Cloud Networking product team
+## Contact the Datacenter and Cloud Networking product team
 
 If you're interested in discussing SDN technologies with Microsoft or other SDN customers, there are a variety of methods for making contact.
 
