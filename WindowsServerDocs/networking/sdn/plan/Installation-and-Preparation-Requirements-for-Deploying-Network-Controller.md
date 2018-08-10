@@ -15,13 +15,7 @@ author: shortpatti
 
 You can use this topic to prepare your datacenter for Network Controller deployment.  
   
-> [!NOTE]  
-> In addition to this topic, the following Network Controller documentation is available.  
-> 
-> - [Network Controller](../technologies/network-controller/Network-Controller.md)
-> - [Network Controller High Availability](../technologies/network-controller/network-controller-high-availability.md)
-> - [Deploy Network Controller using Windows PowerShell](../deploy/Deploy-Network-Controller-using-Windows-PowerShell.md)  
-> - [Install the Network Controller server role using Server Manager](../technologies/network-controller/Install-the-Network-Controller-server-role-using-Server-Manager.md)  
+
 
 Following are the installation, software, and other requirements and preparation steps you must take before deploying Network Controller.
 
@@ -105,3 +99,9 @@ For Network Controllers on different subnets, you must provide the Network Contr
 
 ## Next steps
 For more information, see [Plan a Software Defined Network Infrastructure](https://technet.microsoft.com/windows-server-docs/networking/sdn/plan/plan-a-software-defined-network-infrastructure).
+
+## Related topics
+- [Network Controller](../technologies/network-controller/Network-Controller.md) 
+- [Network Controller High Availability](../technologies/network-controller/network-controller-high-availability.md) 
+- [Deploy Network Controller using Windows PowerShell](../deploy/Deploy-Network-Controller-using-Windows-PowerShell.md)   
+- [Install the Network Controller server role using Server Manager](../technologies/network-controller/Install-the-Network-Controller-server-role-using-Server-Manager.md)   
