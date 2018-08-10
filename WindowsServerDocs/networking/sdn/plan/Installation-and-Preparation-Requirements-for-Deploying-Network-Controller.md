@@ -1,23 +1,21 @@
 ---
-title: Installation and Preparation Requirements for Deploying Network Controller
-description: You can use this topic to prepare your datacenter for Network Controller deployment.
-manager: brianlic
+title: Requirements for Deploying Network Controller
+description: Prepare your datacenter for Network Controller deployment, which requires one or more computers or VMs and one computer or VM. Before you can deploy Network Controller, you must configure the security groups, log file locations (if needed), and dynamic DNS registration.
+manager: elizapo
 ms.prod: windows-server-threshold
 ms.technology: networking-sdn
 ms.topic: get-started-article
 ms.assetid: 7f899e62-6e5b-4fca-9a59-130d4766ee2f
 ms.author: pashort
 author: shortpatti
+ms.date: 08/10/2018
 ---
-# Installation and Preparation Requirements for Deploying Network Controller
+# Requirements for Deploying Network Controller
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
-You can use this topic to prepare your datacenter for Network Controller deployment.  
+Prepare your datacenter for Network Controller deployment, which requires one or more computers or VMs and one computer or VM. Before you can deploy Network Controller, you must configure the security groups, log file locations (if needed), and dynamic DNS registration.
   
-
-
-Following are the installation, software, and other requirements and preparation steps you must take before deploying Network Controller.
 
 ## Network Controller requirements
 
@@ -98,7 +96,7 @@ For Network Controllers on different subnets, you must provide the Network Contr
 
 
 ## Next steps
-For more information, see [Plan a Software Defined Network Infrastructure](https://technet.microsoft.com/windows-server-docs/networking/sdn/plan/plan-a-software-defined-network-infrastructure).
+[Plan a Software Defined Network Infrastructure](https://technet.microsoft.com/windows-server-docs/networking/sdn/plan/plan-a-software-defined-network-infrastructure).
 
 ## Related topics
 - [Network Controller](../technologies/network-controller/Network-Controller.md) 
