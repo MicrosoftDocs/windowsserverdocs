@@ -30,8 +30,6 @@ Review the following information to help plan your Software Defined Network (SDN
 ## Prerequisites
 This topic describes a number of hardware and software prerequisites, including:
 
--   
-
 -   **Physical network**  You need access to your physical network devices to configure VLANs, Routing, BGP, Data Center Bridging (ETS) if using an RDMA technology, and Data Center Bridging (PFC) if using a RoCE based RDMA technology. This topic shows manual switch configuration as well as BGP Peering on Layer-3 switches / routers or a Routing and Remote Access Server (RRAS) virtual machine.   
 
 -   **Physical compute hosts**  These hosts run Hyper-V and are required to host SDN infrastructure and tenant virtual machines.  Specific network hardware is required in these hosts for best performance, which is described later in the **Network hardware** section.  
