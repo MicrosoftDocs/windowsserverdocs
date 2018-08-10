@@ -21,7 +21,7 @@ Prepare your datacenter for Network Controller deployment, which requires one or
 
 Network Controller deployment requires one or more computers or VMs that serve as the Network Controller, and one computer or VM to serve as a management client for Network Controller. 
 
-- All VMs and computers planned as Network Controller nodes must be running Windows Server 2016 Datacenter edition.
+- All VMs and computers planned as Network Controller nodes must be running Windows Server 2016 Datacenter edition. 
 - Any computer or virtual machine (VM) upon which you install Network Controller must be running the Datacenter edition of Windows Server 2016. 
 - The management client computer or VM for Network Controller must be running Windows 8, Windows 8.1, or Windows 10. 
 
@@ -53,12 +53,11 @@ Store Network Controller debug logs on the Network Controller computer or VM, or
   
 Deploy Network Controller cluster nodes on the same subnet or different subnets. 
 
-For Network Controllers on the same subnet, you must provide the Network Controller REST IP address. 
-
-For Network Controllers on different subnets, you must provide the Network Controller REST DNS.  You must also: 
-- Create a DNS name for Network Controller during the deployment process.
-- Configure DNS dynamic updates for the Network Controller DNS name on the DNS server.
-- Restrict the DNS dynamic updates to Network Controller nodes only.
+|If...  |Then...  |
+|---------|---------|
+|On the same subnet, |You must provide the Network Controller REST IP address. |
+|On different subnets, |You must provide the Network Controller REST DNS name, which you create during the deployment process. You must also do the following:<ul><li>Configure DNS dynamic updates for the Network Controller DNS name on the DNS server.</li><li>Restrict the DNS dynamic updates to Network Controller nodes only.</li></ul> |
+---
 
 > [!NOTE]
 > Membership in **Domain Admins**, or equivalent, is the minimum required to perform these procedures.
