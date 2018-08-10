@@ -25,21 +25,21 @@ Review the following information to help plan your Software Defined Network (SDN
 >
 > - [Installation and Preparation Requirements for Deploying Network Controller](Installation-and-Preparation-Requirements-for-Deploying-Network-Controller.md)  
 
-For information about Hyper-V Network Virtualization (HNV), which you can use to virtualize networks in a Microsoft SDN deployment, see [Hyper-V Network Virtualization](../technologies/hyper-v-network-virtualization/Hyper-V-Network-Virtualization.md).  
+
 
 ## Prerequisites
 This topic describes a number of hardware and software prerequisites, including:
 
--   **Physical network**  
-    You need access to your physical network devices to configure VLANs, Routing, BGP, Data Center Bridging (ETS) if using an RDMA technology, and Data Center Bridging (PFC) if using a RoCE based RDMA technology. This topic shows manual switch configuration as well as BGP Peering on Layer-3 switches / routers or a Routing and Remote Access Server (RRAS) virtual machine.   
+-   
 
--   **Physical compute hosts**  
-These hosts run Hyper-V and are required to host SDN infrastructure and tenant virtual machines.  Specific network hardware is required in these hosts for best performance, which is described later in the **Network hardware** section.  
+-   **Physical network**  You need access to your physical network devices to configure VLANs, Routing, BGP, Data Center Bridging (ETS) if using an RDMA technology, and Data Center Bridging (PFC) if using a RoCE based RDMA technology. This topic shows manual switch configuration as well as BGP Peering on Layer-3 switches / routers or a Routing and Remote Access Server (RRAS) virtual machine.   
+
+-   **Physical compute hosts**  These hosts run Hyper-V and are required to host SDN infrastructure and tenant virtual machines.  Specific network hardware is required in these hosts for best performance, which is described later in the **Network hardware** section.  
       
   
-## Physical Network Configuration
+## Configure the physical network and compute hosts
 
-Each physical compute hosts require network connectivity through one or more network adapters attached to a physical switch port(s).  A Layer-2 [VLAN](https://en.wikipedia.org/wiki/Virtual_LAN) supports networks divided into multiple logical network segments. 
+Each physical compute host requires network connectivity through one or more network adapters attached to a physical switch port(s).  A Layer-2 [VLAN](https://en.wikipedia.org/wiki/Virtual_LAN) supports networks divided into multiple logical network segments. 
 
 >[!TIP]
 >Use VLAN 0 for logical networks in access mode or untagged. 
@@ -49,6 +49,8 @@ Each physical compute hosts require network connectivity through one or more net
 >Windows Server 2016 Software Defined Networking supports IPv4 addressing for the underlay and the overlay. IPv6 is not supported.
   
 ### Management and HNV Provider logical networks
+
+For information about Hyper-V Network Virtualization (HNV), which you can use to virtualize networks in a Microsoft SDN deployment, see [Hyper-V Network Virtualization](../technologies/hyper-v-network-virtualization/Hyper-V-Network-Virtualization.md).  
 
 All physical compute hosts need to have access to the Management logical network and the HNV Provider logical network. If the logical networks use VLANs, the physical compute hosts must to be connected to a trunked switch port which has access to these VLANs. Similarly, the physical network adapters on the compute host must not have any VLAN filtering activated. If you are using Switch-Embedded Teaming (SET) and have multiple NIC team members (i.e. network adapters) in your compute hosts, you must connect all of the NIC team members for that particular host to the same Layer-2 broadcast domain.  
   
