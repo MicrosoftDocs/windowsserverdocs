@@ -128,6 +128,8 @@ Set-VMProcessor -VMName <VMName> -HwThreadCountPerCore <n>
     Note that <n> = 0 will set the HwThreadCountPerCore value to match the host's SMT thread count per core value.
 ```
 
+>[NOTE!] Setting HwThreadCountPerCore = 0 is only supported on Windows Server 2019.
+
 Below is an example of System Information taken from the guest operating system running in a virtual machine with 2 virtual processors and SMT enabled. The guest operating system is detecting 2 logical processors belonging to the same core.
 
 ![Screen shot that shows msinfo32 in a guest VM with SMT enabled](media/Hyper-V-CoreScheduler-VM-Msinfo32.png)

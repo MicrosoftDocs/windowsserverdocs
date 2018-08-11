@@ -47,7 +47,7 @@ The core scheduler leverages the properties of SMT to provide isolation of guest
 
 By scheduling guest VPs on underlying SMT pairs, the core scheduler offers a strong security boundary for workload isolation, and can also be used to reduce performance variability for latency sensitive workloads.
 
-Note that when the VP for a virtual machine without SMT enabled is scheduled, that VP will consume the entire core when it runs, and the core's sibling SMT thread will be left idle.  This is necessary to provide the correct workload isolation, but impacts overall system performance, especially as the system LPs become over-subscribed - that is, when total VP:LP ratio exceeds 1. Therefore, running guest VMs configured without multiple threads per core is a sub-optimal configuration.
+Note that when the VP for a virtual machine without SMT enabled is scheduled, that VP will consume the entire core when it runs, and the core's sibling SMT thread will be left idle.  This is necessary to provide the correct workload isolation, but impacts overall system performance, especially as the system LPs become over-subscribed - that is, when total VP:LP ratio exceeds 1:1. Therefore, running guest VMs configured without multiple threads per core is a sub-optimal configuration.
 
 ### Benefits of the using the core scheduler
 
@@ -63,7 +63,7 @@ The core scheduler is currently used on Azure virtualization hosts, specifically
 
 ### Core scheduler performance impacts on guest workloads
 
-While required to effectively mitigate certain classes of vulnerabilities, the core scheduler may also potentially reduce performance. Customers may see a difference in the performance characteristics with their VMs and impacts to the overall workload capacity of their virtualization hosts. In cases where the core scheduler must run a non-SMT VP, only one of the instruction streams in the underlying logical core executes while the other must be left idle. This will limit the total host capacity for guest workloads. 
+While required to effectively mitigate certain classes of vulnerabilities, the core scheduler may also potentially reduce performance. Customers may see a difference in the performance characteristics with their VMs and impacts to the overall workload capacity of their virtualization hosts. In cases where the core scheduler must run a non-SMT VP, only one of the instruction streams in the underlying logical core executes while the other must be left idle. This will limit the total host capacity for guest workloads.
 
 These performance impacts can be minimized by following the deployment guidance in this document. Host administrators must carefully consider their specific virtualization deployment scenarios and balance their tolerance for security risk against the need for maximum workload density, over-consolidation of  virtualization hosts, etc.
 
@@ -105,8 +105,9 @@ Guest virtual machine SMT configuration is set on a per-VM basis. The host admin
 
     2. Configure VMs to run as non-SMT
 
->[!NOTE]
->PowerShell must be used enable SMT in a guest virtual machine; there is no user interface provided in the Hyper-V Manager UI.
+The SMT configuaration for a VM is displayed in the Summary panes in the Hyper-V Manager console.  Configuring a VM's SMT settings may be done using the VM settings dialog box, or by using PowerShell.
+
+#### Configuring VM SMT settings using PowerShell
 
 To configure the SMT settings for a guest virtual machine, open a PowerShell window with sufficient permissions, and type:
 
@@ -119,6 +120,7 @@ Where:
     0 = Inherit SMT topology from the host (this setting of HwThreadCountPerCore=0 is not supported on Windows Server 2016)
 
     1 = Non-SMT
+
     Values > 1 = the desired number of SMT threads per core. May not exceed the number of physical SMT threads per core.
 
 To read the SMT settings for a guest virtual machine, open a PowerShell window with sufficient permissions, and type:
@@ -141,8 +143,6 @@ Virtual machines configured with more VPs than there are physical cores on the h
 
 You can identify non-SMT VMs by examining the Windows Sysem Event Log for Hyper-V Worker Process event ID 3498, which will be triggered for a VM whenever the number of VPs in the VM is greater than the physical core count. VM. Worker process events can be obtained from the Windows Event Viewer, or via PowerShell.
 
-![Screen shot showing worker process event ID 3498 details](media/Hyper-V-CoreScheduler-EventID2-Details.png)
-
 #### Querying the Hyper-V worker process VM event using PowerShell
 
 To query for Hyper-V worker process event ID 3498 using PowerShell, enter the following commands from a PowerShell prompt.
@@ -150,8 +150,6 @@ To query for Hyper-V worker process event ID 3498 using PowerShell, enter the fo
 ``` powershell
 Get-WinEvent -FilterHashTable @{ProviderName="Microsoft-Windows-Hyper-V-Worker"; ID=3498}
 ```
-
-![Screen shot showing PowerShell query and results for worker process ID xx](media/Hyper-V-CoreScheduler-PowerShell.png)
 
 ### Impacts of guest SMT configuaration on the use of hypervisor enlightenments for guest operating systems
 
