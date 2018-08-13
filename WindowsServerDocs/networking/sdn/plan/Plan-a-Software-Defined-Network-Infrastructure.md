@@ -87,7 +87,6 @@ Change the sample IP subnet prefixes and VLAN IDs for your environment.
 | | |
 |---|---|
 | **Subnet** | 10.184.108.0 |
-| --- | --- |
 | **Mask** | 24 |
 | **VLAN ID on**  **trunk** | 7 |
 | **Gateway** | 10.184.108.1 |
@@ -98,7 +97,6 @@ Change the sample IP subnet prefixes and VLAN IDs for your environment.
 | | |
 |---|---|
 | **Subnet** | 10.10.56.0 |
-| --- | --- |
 | **Mask** | 23 |
 | **VLAN ID on**  **trunk** | 11 |
 | **Gateway** | 10.10.56.1 |
@@ -109,7 +107,6 @@ Change the sample IP subnet prefixes and VLAN IDs for your environment.
 | | |
 |---|---|
 | **Subnet** | 10.10.10.0 |
-| --- | --- |
 | **Mask** | 24 |
 | **VLAN ID on**  **trunk** | 10 |
 | **Gateway** | 10.10.10.1 |
@@ -120,7 +117,6 @@ Change the sample IP subnet prefixes and VLAN IDs for your environment.
 | | |
 |---|---|
 | **Subnet** | 41.40.40.0 |
-| --- | --- |
 | **Mask** | 27 |
 | **VLAN ID on trunk** | NA |
 | **Gateway** | 41.40.40.1 |
@@ -131,7 +127,6 @@ Change the sample IP subnet prefixes and VLAN IDs for your environment.
 | | |
 |---|---|
 | **Subnet** | 20.20.20.0 |
-| --- | --- |
 | **Mask** | 27 |
 | **VLAN ID on trunk** | NA |
 | **Gateway** | 20.20.20.1 |
@@ -142,7 +137,6 @@ Change the sample IP subnet prefixes and VLAN IDs for your environment.
 | | |
 |---|---|
 | **Subnet** | 31.30.30.0 |
-| --- | --- |
 | **Mask** | 24 |
 | **VLAN ID on trunk** | NA |
 | **Gateway** | 31.30.30.1 |
