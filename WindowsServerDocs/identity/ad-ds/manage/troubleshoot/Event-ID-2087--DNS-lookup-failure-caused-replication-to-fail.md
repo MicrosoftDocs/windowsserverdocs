@@ -2,9 +2,9 @@
 ms.assetid: b3012a39-0ba9-49f2-a9a3-3af4f5574617
 title: Event ID 2087 - DNS lookup failure caused replication to fail
 description:
-author: billmath
-ms.author: billmath
-manager: femila
+author: MicrosoftGuyJFlo
+ms.author: joflore
+manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold

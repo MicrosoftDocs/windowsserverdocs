@@ -2,9 +2,9 @@
 ms.assetid: 5ab76733-804d-4f30-bee6-cb672ad5075a
 title: Troubleshooting Domain Controller Deployment
 description:
-author: billmath
-ms.author: billmath
-manager: femila
+author: MicrosoftGuyJFlo
+ms.author: joflore
+manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold

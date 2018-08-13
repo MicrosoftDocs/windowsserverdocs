@@ -2,9 +2,9 @@
 ms.assetid: f052dfcd-dace-4485-8d0a-cc7df5cf3751
 title: Active Directory Domain Services Overview
 description:
-author: billmath
-ms.author: billmath
-manager: femila
+author: MicrosoftGuyJFlo
+ms.author: joflore
+manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold

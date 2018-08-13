@@ -2,9 +2,9 @@
 ms.assetid: 70c99703-ff0d-4278-9629-b8493b43c833
 title: How to Configure Protected Accounts
 description:
-author: billmath
-ms.author: billmath
-manager: femila
+author: MicrosoftGuyJFlo
+ms.author: joflore
+manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold

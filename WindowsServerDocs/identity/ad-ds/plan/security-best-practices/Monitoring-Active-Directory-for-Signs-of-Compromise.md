@@ -2,9 +2,9 @@
 ms.assetid: a7ef2fba-b05c-4be2-93b2-b9456244c3ad
 title: Monitoring Active Directory for Signs of Compromise
 description:
-author: billmath
-ms.author: billmath
-manager: femila
+author: MicrosoftGuyJFlo
+ms.author: joflore
+manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold

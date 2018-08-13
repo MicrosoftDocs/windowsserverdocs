@@ -2,9 +2,9 @@
 ms.assetid: 4d47ebd2-e0ac-4f14-96fd-211a13a1ce11
 title: Event ID 2042 - It has been too long since this machine replicated
 description:
-author: billmath
-ms.author: billmath
-manager: femila
+author: MicrosoftGuyJFlo
+ms.author: joflore
+manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
