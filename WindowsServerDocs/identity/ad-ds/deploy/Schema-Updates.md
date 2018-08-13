@@ -4,7 +4,7 @@ title: Schema Updates
 description:
 author: MicrosoftGuyJFlo
 ms.author: joflore
-manager: femila
+manager: mtillman
 ms.date: 11/27/2017
 ms.topic: article
 ms.prod: windows-server-threshold

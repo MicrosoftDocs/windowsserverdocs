@@ -2,9 +2,9 @@
 ms.assetid: f56c5c62-4b0e-4cd7-80e9-1c9bf42e517f
 title: Fixing Replication Topology Problems (Event ID 1311)
 description:
-author: billmath
-ms.author: billmath
-manager: femila
+author: MicrosoftGuyJFlo
+ms.author: joflore
+manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold

@@ -4,7 +4,7 @@ title: Active Directory domain-wide schema updates
 description: Domain-wide schema updates performed by adprep /domainprep when promoting a Domain Controller
 author: MicrosoftGuyJFlo
 ms.author: joflore
-manager: femila
+manager: mtillman
 ms.date: 07/14/2017
 ms.topic: article
 ms.prod: windows-server-threshold

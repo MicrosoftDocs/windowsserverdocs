@@ -4,7 +4,7 @@ title: Active Directory Forest-Wide Updates
 description: 
 author: MicrosoftGuyJFlo
 ms.author: joflore
-manager: femila
+manager: mtillman
 ms.date: 04/29/2018
 ms.topic: article
 ms.prod: windows-server-threshold
