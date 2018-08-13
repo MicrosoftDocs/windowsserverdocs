@@ -21,7 +21,7 @@ Prepare your datacenter for Network Controller deployment, which requires one or
 
 Network Controller deployment requires one or more computers or VMs that serve as the Network Controller, and one computer or VM to serve as a management client for Network Controller. 
 
-- All VMs and computers planned as Network Controller nodes must be running Windows Server 2016 Datacenter edition.
+- All VMs and computers planned as Network Controller nodes must be running Windows Server 2016 Datacenter edition. 
 - Any computer or virtual machine (VM) upon which you install Network Controller must be running the Datacenter edition of Windows Server 2016. 
 - The management client computer or VM for Network Controller must be running Windows 8, Windows 8.1, or Windows 10. 
 
@@ -32,14 +32,11 @@ Before deploying Network Controller, you must configure the security groups, log
   
 ### Step 1. Configure your security groups
   
-If the computers or VMs for Network Controller and the management client are domain-joined, configure the following security groups for Kerberos authentication.  
+The first thing you want to do is create security groups for Kerberos authentication. All of the users you add must be members of the Domain Users group in Active Directory Users and Computers.  
 
-- Create a security group and add all of the users who have permission to configure Network Controller. For example, create a group named **Network Controller Admins**. All of the users that you add to this group must also be members of the **Domain Users** group in Active Directory Users and Computers.  
-  
-    > [!NOTE]  
-    > For more information on creating a group in Active Directory Users and Computers, see [Create a new group](https://technet.microsoft.com/en-us/library/cc783256(v=ws.10).aspx).  
+1. Users who have permission to configure Network Controller. For example, you can create a group named Network Controller Admins. 
+2. Users who have permission to configure and manage the network by using Network Controller. For example, you can create a new group named Network Controller Users. All Network Controller configuration and management is performed using Representational State Transfer (REST). 
 
-- Create a security group and add all of the users who have permission to configure and manage the network by using Network Controller.  For example, create a new group named **Network Controller Users**. All of the users that you add to the new group must also be members of the **Domain Users** group in Active Directory Users and Computers. All Network Controller configuration and management is performed using Representational State Transfer \(REST\).
 
 ### Step 2. Configure log file locations if needed
 
@@ -53,12 +50,11 @@ Store Network Controller debug logs on the Network Controller computer or VM, or
   
 Deploy Network Controller cluster nodes on the same subnet or different subnets. 
 
-For Network Controllers on the same subnet, you must provide the Network Controller REST IP address. 
-
-For Network Controllers on different subnets, you must provide the Network Controller REST DNS.  You must also: 
-- Create a DNS name for Network Controller during the deployment process.
-- Configure DNS dynamic updates for the Network Controller DNS name on the DNS server.
-- Restrict the DNS dynamic updates to Network Controller nodes only.
+|If...  |Then...  |
+|---------|---------|
+|On the same subnet, |You must provide the Network Controller REST IP address. |
+|On different subnets, |You must provide the Network Controller REST DNS name, which you create during the deployment process. You must also do the following:<ul><li>Configure DNS dynamic updates for the Network Controller DNS name on the DNS server.</li><li>Restrict the DNS dynamic updates to Network Controller nodes only.</li></ul> |
+---
 
 > [!NOTE]
 > Membership in **Domain Admins**, or equivalent, is the minimum required to perform these procedures.
@@ -90,7 +86,7 @@ For Network Controllers on different subnets, you must provide the Network Contr
       - **Type** = Allow
       - **Applies to** = This object and all descendant objects
   
-   h. In Permissions, select **Write all properties** and **Delete**, and then click **OK**.
+   h. In **Permissions**, select **Write all properties** and **Delete**, and then click **OK**.
 
 3. Repeat for all computers and VMs in the Network Controller cluster.
 

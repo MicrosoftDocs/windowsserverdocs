@@ -208,7 +208,7 @@
 ### [QoS Policy Frequently Asked Questions](technologies/qos/qos-policy-faq.md)
 
 ## [Software Defined Networking (SDN)](sdn/software-defined-networking.md)
-### [What's New in SDN for Windows Server](sdn/sdn-whats-new.md)
+
 ### [Introduction to SDN in Windows Server Datacenter](sdn/sdn-intro.md)
 ### [SDN Technologies](sdn/technologies/Software-Defined-Networking-Technologies.md)
 #### [Hyper-V Network Virtualization](sdn/technologies/hyper-v-network-virtualization/Hyper-V-Network-Virtualization.md)
