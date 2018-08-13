@@ -28,7 +28,7 @@ AD DS Simplified Administration is a reimagining of domain deployment.
 - Active Directory module for Windows PowerShell now includes cmdlets for replication topology management, Dynamic Access Control, and other operations  
 - The Windows Server 2012 forest functional level does not implement new features and domain functional level is required only for a subset of new Kerberos features, relieving administrators of the frequent need for a homogenous domain controller environment  
 - Full support added for Virtualized Domain Controllers, to include automated deployment and rollback protection  
-   - For more information about virtualized domain controllers, see [Introduction to Active Directory Domain Services &#40;AD DS&#41; Virtualization &#40;Level 100&#41;](../../ad-ds/Introduction-to-Active-Directory-Domain-Services-AD-DS-Virtualization-Level-100.md).  
+   - For more information about virtualized domain controllers, see [Introduction to Active Directory Domain Services &#40;AD DS&#41; Virtualization &#40;Level 100&#41;](../../ad-ds/Introduction-to-Active-Directory-Domain-Services-AD-DS-Virtualization-Level-100.md).
 
 In addition, there are many administrative and maintenance improvements:  
 
