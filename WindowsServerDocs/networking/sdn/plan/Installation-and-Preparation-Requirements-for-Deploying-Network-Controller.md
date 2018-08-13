@@ -15,7 +15,7 @@ ms.date: 08/10/2018
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 Prepare your datacenter for Network Controller deployment, which requires one or more computers or VMs and one computer or VM. Before you can deploy Network Controller, you must configure the security groups, log file locations (if needed), and dynamic DNS registration.
-  
+
 
 ## Network Controller requirements
 
@@ -32,11 +32,15 @@ Before deploying Network Controller, you must configure the security groups, log
   
 ### Step 1. Configure your security groups
   
-The first thing you want to do is create security groups for Kerberos authentication. All of the users you add must be members of the Domain Users group in Active Directory Users and Computers.  
+The first thing you want to do is create two security groups for Kerberos authentication. 
 
-1. Users who have permission to configure Network Controller. For example, you can create a group named Network Controller Admins. 
-2. Users who have permission to configure and manage the network by using Network Controller. For example, you can create a new group named Network Controller Users. All Network Controller configuration and management is performed using Representational State Transfer (REST). 
+You create groups for users who have permission to: 
 
+1. Configure Network Controller<p>You can name this group Network Controller Admins, for example. 
+2.	Configure and manage the network by using Network Controller<p>You can name this group Network Controller Users, for example. Use Representational State Transfer (REST) to configure and manage Network Controller.
+
+>[!NOTE]
+>All of the users you add must be members of the Domain Users group in Active Directory Users and Computers.
 
 ### Step 2. Configure log file locations if needed
 
@@ -89,6 +93,33 @@ Finally, the next thing you want to do is deploy Network Controller cluster node
    h. In **Permissions**, select **Write all properties** and **Delete**, and then click **OK**.
 
 3. Repeat for all computers and VMs in the Network Controller cluster.
+
+## Deployment options
+
+### Network Controller deployment
+
+The setup is highly available with three Network Controller nodes  configured on virtual machines. Also shown is two tenants with Tenant 2's virtual network broken into two virtual subnets to simulate a web tier and a database tier.  
+
+![SDN NC Planning](../../media/Plan-a-Software-Defined-Network-Infrastructure/SDN-NC-Planning.png)
+
+### Network controller and software load balancer deployment
+
+For high availablity, there are two or more SLB/MUX nodes.
+   
+![SDN NC Planning](../../media/Plan-a-Software-Defined-Network-Infrastructure/SDN-SLB-Deployment.png)
+  
+### Network Controller, Software Load Balancer, and RAS Gateway deployment
+
+There are three gateway virtual machines; two are active, and one is redundant.
+
+![SDN NC Planning](../../media/Plan-a-Software-Defined-Network-Infrastructure/SDN-GW-Deployment.png)  
+  
+  
+  
+For TP5-based deployment automation, Active Directory must be available and reachable from these subnets. For more information about Active Directory, see [Active Directory Domain Services Overview](https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/get-started/virtual-dc/active-directory-domain-services-overview).  
+  
+>[!IMPORTANT] 
+>If you deploy using VMM, ensure your infrastructure virtual machines (VMM Server, AD/DNS, SQL Server, etc.) are not hosted on any of the four hosts shown in the diagrams.  
 
 
 ## Next steps

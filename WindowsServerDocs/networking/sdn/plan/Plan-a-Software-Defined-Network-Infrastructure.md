@@ -32,7 +32,7 @@ This topic describes a number of hardware and software prerequisites, including:
 -   **Physical compute hosts**  These hosts run Hyper-V and are required to host SDN infrastructure and tenant virtual machines.  Specific network hardware is required in these hosts for best performance, which is described later in the **Network hardware** section.  
       
   
-## Configure the physical network and compute hosts
+## Physical network and compute host configuration
 
 Each physical compute host requires network connectivity through one or more network adapters attached to a physical switch port(s).  A Layer-2 [VLAN](https://en.wikipedia.org/wiki/Virtual_LAN) supports networks divided into multiple logical network segments. 
 
@@ -282,32 +282,7 @@ These diagrams do not show storage networks and vNICs. If you plan to use SMB-ba
   
 Both the infrastructure and tenant virtual machines can be redistributed across any physical compute host (assuming the correct network connectivity exists for the correct logical networks).  
   
-### Network Controller deployment
 
-Before you deploy Network Controller, you must review installation and software requirements, as well as configuring security groups and dynamic DNS registration. For more information, see [Installation and Preparation Requirements for Deploying Network Controller](Installation-and-Preparation-Requirements-for-Deploying-Network-Controller.md).
-
-The setup is highly available with three Network Controller nodes  configured on virtual machines. Also shown is two tenants with Tenant 2's virtual network broken into two virtual subnets to simulate a web tier and a database tier.  
-
-![SDN NC Planning](../../media/Plan-a-Software-Defined-Network-Infrastructure/SDN-NC-Planning.png)
-
-### Network controller and software load balancer deployment
-
-For high availablity, there are two or more SLB/MUX nodes.
-   
-![SDN NC Planning](../../media/Plan-a-Software-Defined-Network-Infrastructure/SDN-SLB-Deployment.png)
-  
-### Network Controller, Software Load Balancer, and RAS Gateway deployment
-
-There are three gateway virtual machines; two are active, and one is redundant.
-
-![SDN NC Planning](../../media/Plan-a-Software-Defined-Network-Infrastructure/SDN-GW-Deployment.png)  
-  
-  
-  
-For TP5-based deployment automation, Active Directory must be available and reachable from these subnets. For more information about Active Directory, see [Active Directory Domain Services Overview](https://technet.microsoft.com/en-us/library/mt703721.aspx).  
-  
->[!IMPORTANT] 
->If you deploy using VMM, ensure your infrastructure virtual machines (VMM Server, AD/DNS, SQL Server, etc.) are not hosted on any of the four hosts shown in the diagrams.  
   
 ## Switch configuration examples  
   
