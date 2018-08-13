@@ -23,7 +23,7 @@ Network Controller deployment requires one or more computers or VMs that serve a
 
 - All VMs and computers planned as Network Controller nodes must be running Windows Server 2016 Datacenter edition. 
 - Any computer or virtual machine (VM) upon which you install Network Controller must be running the Datacenter edition of Windows Server 2016. 
-- The management client computer or VM for Network Controller must be running Windows 8, Windows 8.1, or Windows 10. 
+- The management client computer or VM for Network Controller must be running Windows 10. 
 
   
 ## Configuration requirements
@@ -40,7 +40,7 @@ The first thing you want to do is create security groups for Kerberos authentica
 
 ### Step 2. Configure log file locations if needed
 
-Store Network Controller debug logs on the Network Controller computer or VM, or on a remote file share. 
+The next thing you want to do is configure the file locations to store Network Controller debug logs either on the Network Controller computer or VM or on a remote file share. 
 
 >[!NOTE]
 >If you store the logs in a remote file share, ensure that the share is accessible from the Network Controller.
@@ -48,7 +48,7 @@ Store Network Controller debug logs on the Network Controller computer or VM, or
 
 ### Step 3. Configure dynamic DNS registration for Network Controller
   
-Deploy Network Controller cluster nodes on the same subnet or different subnets. 
+Finally, the next thing you want to do is deploy Network Controller cluster nodes on the same subnet or different subnets. 
 
 |If...  |Then...  |
 |---------|---------|

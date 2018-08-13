@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "WindowsServerDocs/networking/sdn/plan/Plan-Software-Defined-Networking.md",
+      "redirect_url": "/windows-server/networking/sdn/plan/Plan-a-Software-Defined-Network-Infrastructure",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "WindowsServerDocs/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-overview.md",
       "redirect_url": "/windows-server/remote/remote-access/vpn/always-on-vpn/always-on-vpn-technology-overview",
       "redirect_document_id": true

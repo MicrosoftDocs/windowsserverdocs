@@ -13,22 +13,19 @@ ms.topic: get-started-article
 ms.assetid: ea7e53c8-11ec-410b-b287-897c7aaafb13
 ms.author: pashort
 author: shortpatti
+ms.date: 08/10/2018
 ---
 # Plan a Software Defined Network Infrastructure
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
-Review the following information to help plan your Software Defined Network (SDN) infrastructure deployment. After you review this information, see [Deploy a Software Defined Network infrastructure](../deploy/Deploy-a-Software-Defined-Network-Infrastructure.md) for deployment information.
-
->[!NOTE]
->In addition to this topic, the following SDN planning content is available.  
->
-> - [Installation and Preparation Requirements for Deploying Network Controller](Installation-and-Preparation-Requirements-for-Deploying-Network-Controller.md)  
-
+Learn about deployment planning for a Software Defined Network infrastructure, including the hardware and software prerequisites. 
 
 
 ## Prerequisites
 This topic describes a number of hardware and software prerequisites, including:
+
+-   **Configured security groups** You must prepare your datacenter for Network Controller deployment, which requires one or more computers or VMs and one computer or VM. Before you can deploy Network Controller, you must configure the security groups, log file locations (if needed), and dynamic DNS registration.  If you have not prepared your datacenter for Network Controller deployment, see [Installation and Preparation Requirements for Deploying Network Controller](Installation-and-Preparation-Requirements-for-Deploying-Network-Controller.md) for details.
 
 -   **Physical network**  You need access to your physical network devices to configure VLANs, Routing, BGP, Data Center Bridging (ETS) if using an RDMA technology, and Data Center Bridging (PFC) if using a RoCE based RDMA technology. This topic shows manual switch configuration as well as BGP Peering on Layer-3 switches / routers or a Routing and Remote Access Server (RRAS) virtual machine.   
 
@@ -41,7 +38,6 @@ Each physical compute host requires network connectivity through one or more net
 
 >[!TIP]
 >Use VLAN 0 for logical networks in access mode or untagged. 
-
 
 >[!IMPORTANT]
 >Windows Server 2016 Software Defined Networking supports IPv4 addressing for the underlay and the overlay. IPv6 is not supported.
@@ -62,43 +58,95 @@ A DHCP server can automatically assign IP addresses for the Management network, 
 |---------|---------|
 |The logical networks use VLANs,     |the physical compute host must connect to a trucked switch port that has access to these VLANs. It’s important to note that the physical network adapters on the computer host must not have any VLAN filtering activated.          |
 |Using Switched-Embedded Teaming (SET) and have multiple NIC team members, such as network adapters,     |you must connect all of the NIC team members for that particular host to the same Layer-2 broadcast domain.         |
-|The physical compute host is running additional infrastructure virtual machines, such as Network Controller, SLB/MUX, or Gateway,  |that host must have an additional IP address assigned from the Management logical network for each of the infrastructure virtual machines hosted.<p>Also, each SLB/MUX infrastructure virtual machine must have an IP address reserved for the HNV Provider logical network. Failure to have an IP address reserved may result in duplicate IP addresses on your network.  |
+|The physical compute host is running additional infrastructure virtual machines, such as Network Controller, SLB/MUX, or Gateway,  |that host must have an additional IP address assigned from the Management logical network for each of the virtual machines hosted.<p>Also, each SLB/MUX infrastructure virtual machine must have an IP address reserved for the HNV Provider logical network. Failure to have an IP address reserved may result in duplicate IP addresses on your network.  |
 ---
-
 
 For information about Hyper-V Network Virtualization (HNV), which you can use to virtualize networks in a Microsoft SDN deployment, see [Hyper-V Network Virtualization](../technologies/hyper-v-network-virtualization/Hyper-V-Network-Virtualization.md).  
   
-#### Sample network topology
-Change the sample IP subnet prefixes and VLAN IDs for your environment. 
 
-  Network Name|Subnet|Mask|VLAN ID on trunk|Gateway|Reservations<br />(examples)  
-----------------|----------|--------|--------------------|-----------|-----------------------------  
-|**Management**|10.184.108.0|24|7|10.184.108.1|10.184.108.1 - Router<br /><br />10.184.108.4 - Network Controller<br /><br />10.184.108.10 - Compute host 1<br /><br />10.184.108.11 - Compute host 2<br /><br />10.184.108.X - Compute host X  
-|**HNV Provider**|10.10.56.0|23|11|10.10.56.1|10.10.56.1 - Router<br /><br />10.10.56.2 - SLB/MUX1  
   
 #### Gateways and the Software Load Balancer
   
-Additional logical networks need to be created and provisioned for gateway and SLB usage.  obtain the correct IP prefixes, VLAN IDs, and gateway IP addresses for these networks.
+Additional logical networks need to be created and provisioned for gateway and SLB usage. Make sure to obtain the correct IP prefixes, VLAN IDs, and gateway IP addresses for these networks.
+
+>[!div class="mx-tableFixed"]
+>|  |  |
+>|---------|---------|
+>|**Transit logical network**     |The RAS Gateway and SLB/MUX use the Transit logical network to exchange BGP peering information and North/South (external-internal) tenant traffic. The size of this subnet will typically be smaller than the others. Only physical compute hosts that run RAS Gateway or SLB/MUX virtual machines need to have connectivity to this subnet with these VLANs trunked and accessible on the switch ports to which the compute hosts' network adapters are connected. Each SLB/MUX or RAS Gateway virtual machine is statically assigned one IP address from the Transit logical network.         |
+>|**Public VIP logical network**     |The Public VIP logical network is required to have IP subnet prefixes that are routable outside of the cloud environment (typically Internet routable).  These will be the front-end IP addresses used by external clients to access resources in the virtual networks including the front end VIP for the Site-to-site gateway.         |
+>|**Private VIP logical network**     |The Private VIP logical network is not required to be routable outside of the cloud as it is used for VIPs that are only accessed from internal cloud clients, such as the SLB Mananger or private services.         |
+>|**GRE VIP logical network**     |The GRE VIP network is a subnet that exists solely for defining VIPs that are assigned to gateway virtual machines running on your SDN fabric for a S2S GRE connection type. This network does not need to be pre-configured in your physical switches or router and need not have a VLAN assigned.            |
+---
 
 
-|  |  |
-|---------|---------|
-|**Transit logical network**     |The RAS Gateway and SLB/MUX use the Transit logical network to exchange BGP peering information and North/South (external-internal) tenant traffic. The size of this subnet will typically be smaller than the others. Only physical compute hosts that run RAS Gateway or SLB/MUX virtual machines need to have connectivity to this subnet with these VLANs trunked and accessible on the switch ports to which the compute hosts' network adapters are connected. Each SLB/MUX or RAS Gateway virtual machine is statically assigned one IP address from the Transit logical network.         |
-|**Public VIP logical network**     |The Public VIP logical network is required to have IP subnet prefixes that are routable outside of the cloud environment (typically Internet routable).  These will be the front-end IP addresses used by external clients to access resources in the virtual networks including the front end VIP for the Site-to-site gateway.         |
-|**Private VIP logical network**     |The Private VIP logical network is not required to be routable outside of the cloud as it is used for VIPs that are only accessed from internal cloud clients, such as the SLB Mananger or private services.         |
-|**GRE VIP logical network**     |The GRE VIP network is a subnet that exists solely for defining VIPs that are assigned to gateway virtual machines running on your SDN fabric for a S2S GRE connection type. This network does not need to be pre-configured in your physical switches or router and need not have a VLAN assigned.            |
+#### Sample network topology
+Change the sample IP subnet prefixes and VLAN IDs for your environment. 
 
+**Management**
 
-### Sample network topology
+| | |
+|---|---|
+| **Subnet** | 10.184.108.0 |
+| --- | --- |
+| **Mask** | 24 |
+| **VLAN ID on**  **trunk** | 7 |
+| **Gateway** | 10.184.108.1 |
+| **Reservations (examples)** | 10.184.108.1 - Router\&lt;br /\&gt;\&lt;br /\&gt;10.184.108.4 - Network Controller\&lt;br /\&gt;\&lt;br /\&gt;10.184.108.10 - Compute host 1\&lt;br /\&gt;\&lt;br /\&gt;10.184.108.11 - Compute host 2\&lt;br /\&gt;\&lt;br /\&gt;10.184.108.X - Compute host X   |
 
-Customize the subnet prefixes, VLAN IDs, and gateway IP addresses based on your network administrator's guidance.  
-  
-Network Name|Subnet|Mask|VLAN ID on trunk|Gateway|Reservations<br />(examples)  
-----------------|----------|--------|--------------------|-----------|-----------------------------  
-|**Transit**|10.10.10.0|24|10|10.10.10.1|10.10.10.1 - router  
-|**Public VIP**|41.40.40.0|27|NA|41.40.40.1|41.40.40.1 - router<br /> 41.40.40.2 - SLB/MUX VIP<br />41.40.40.3 - IPSec S2S VPN VIP  
-|**Private VIP**|20.20.20.0|27|NA|20.20.20.1|20.20.20.1 - default GW (router)  
-|**GRE VIP**|31.30.30.0|24|NA|31.30.30.1|31.30.30.1 - default GW|  
+**HNV Provider**
+
+| | |
+|---|---|
+| **Subnet** | 10.10.56.0 |
+| --- | --- |
+| **Mask** | 23 |
+| **VLAN ID on**  **trunk** | 11 |
+| **Gateway** | 10.10.56.1 |
+| **Reservations (examples)** | 10.10.56.1 - Router\&lt;br /\&gt;\&lt;br /\&gt;10.10.56.2 - SLB/MUX1   |
+
+**Transit**
+
+| | |
+|---|---|
+| **Subnet** | 10.10.10.0 |
+| --- | --- |
+| **Mask** | 24 |
+| **VLAN ID on**  **trunk** | 10 |
+| **Gateway** | 10.10.10.1 |
+| **Reservations (examples)** | 10.10.10.1 - Router |
+
+**Public VIP**
+
+| | |
+|---|---|
+| **Subnet** | 41.40.40.0 |
+| --- | --- |
+| **Mask** | 27 |
+| **VLAN ID on trunk** | NA |
+| **Gateway** | 41.40.40.1 |
+| **Reservations (examples)** | 41.40.40.1 - Router\&lt;br /\&gt; 41.40.40.2 - SLB/MUX VIP\&lt;br /\&gt;41.40.40.3 - IPSec S2S VPN VIP   |
+
+**Private VIP**
+
+| | |
+|---|---|
+| **Subnet** | 20.20.20.0 |
+| --- | --- |
+| **Mask** | 27 |
+| **VLAN ID on trunk** | NA |
+| **Gateway** | 20.20.20.1 |
+| **Reservations (examples)** | 20.20.20.1 - Default GW (router)   |
+
+**GRE VIP**
+
+| | |
+|---|---|
+| **Subnet** | 31.30.30.0 |
+| --- | --- |
+| **Mask** | 24 |
+| **VLAN ID on trunk** | NA |
+| **Gateway** | 31.30.30.1 |
+| **Reservations (examples)** | 31.30.30.1 - Default GW | 
   
 ### Logical networks required for RDMA-based storage  
   
