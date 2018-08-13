@@ -47,7 +47,7 @@ The core scheduler leverages the properties of SMT to provide isolation of guest
 
 By scheduling guest VPs on underlying SMT pairs, the core scheduler offers a strong security boundary for workload isolation, and can also be used to reduce performance variability for latency sensitive workloads.
 
-Note that when the VP for a virtual machine without SMT enabled is scheduled, that VP will consume the entire core when it runs, and the core's sibling SMT thread will be left idle.  This is necessary to provide the correct workload isolation, but impacts overall system performance, especially as the system LPs become over-subscribed - that is, when total VP:LP ratio exceeds 1:1. Therefore, running guest VMs configured without multiple threads per core is a sub-optimal configuration.
+Note that when the VP is scheduled for a virtual machine without SMT enabled, that VP will consume the entire core when it runs, and the core's sibling SMT thread will be left idle.  This is necessary to provide the correct workload isolation, but impacts overall system performance, especially as the system LPs become over-subscribed - that is, when total VP:LP ratio exceeds 1:1. Therefore, running guest VMs configured without multiple threads per core is a sub-optimal configuration.
 
 ### Benefits of the using the core scheduler
 
@@ -105,7 +105,7 @@ Guest virtual machine SMT configuration is set on a per-VM basis. The host admin
 
     2. Configure VMs to run as non-SMT
 
-The SMT configuaration for a VM is displayed in the Summary panes in the Hyper-V Manager console.  Configuring a VM's SMT settings may be done using the VM settings dialog box, or by using PowerShell.
+The SMT configuaration for a VM is displayed in the Summary panes in the Hyper-V Manager console.  Configuring a VM's SMT settings may be done by using the VM Settings or PowerShell.
 
 #### Configuring VM SMT settings using PowerShell
 
