@@ -25,7 +25,7 @@ Learn about deployment planning for a Software Defined Network infrastructure, i
 ## Prerequisites
 This topic describes a number of hardware and software prerequisites, including:
 
--   **Configured security groups** You must prepare your datacenter for Network Controller deployment, which requires one or more computers or VMs and one computer or VM. Before you can deploy Network Controller, you must configure the security groups, log file locations (if needed), and dynamic DNS registration.  If you have not prepared your datacenter for Network Controller deployment, see [Installation and Preparation Requirements for Deploying Network Controller](Installation-and-Preparation-Requirements-for-Deploying-Network-Controller.md) for details.
+-   **Configured security groups, log file locations, and dynamic DNS registration** You must prepare your datacenter for Network Controller deployment, which requires one or more computers or VMs and one computer or VM. Before you can deploy Network Controller, you must configure the security groups, log file locations (if needed), and dynamic DNS registration.  If you have not prepared your datacenter for Network Controller deployment, see [Installation and Preparation Requirements for Deploying Network Controller](Installation-and-Preparation-Requirements-for-Deploying-Network-Controller.md) for details.
 
 -   **Physical network**  You need access to your physical network devices to configure VLANs, Routing, BGP, Data Center Bridging (ETS) if using an RDMA technology, and Data Center Bridging (PFC) if using a RoCE based RDMA technology. This topic shows manual switch configuration as well as BGP Peering on Layer-3 switches / routers or a Routing and Remote Access Server (RRAS) virtual machine.   
 
@@ -82,6 +82,8 @@ Additional logical networks need to be created and provisioned for gateway and S
 #### Sample network topology
 Change the sample IP subnet prefixes and VLAN IDs for your environment. 
 
+
+
 **Management**
 
 | | |
@@ -90,7 +92,8 @@ Change the sample IP subnet prefixes and VLAN IDs for your environment.
 | **Mask** | 24 |
 | **VLAN ID on**  **trunk** | 7 |
 | **Gateway** | 10.184.108.1 |
-| **Reservations (examples)** | 10.184.108.1 - Router\&lt;br /\&gt;\&lt;br /\&gt;10.184.108.4 - Network Controller\&lt;br /\&gt;\&lt;br /\&gt;10.184.108.10 - Compute host 1\&lt;br /\&gt;\&lt;br /\&gt;10.184.108.11 - Compute host 2\&lt;br /\&gt;\&lt;br /\&gt;10.184.108.X - Compute host X   |
+| **Reservations (examples)** | 10.184.108.1 - Router<p>10.184.108.4 - Network Controller<p>10.184.108.10 - Compute host 1<p>10.184.108.11 - Compute host 2<p>10.184.108.X - Compute host X   |
+---
 
 **HNV Provider**
 
@@ -100,7 +103,8 @@ Change the sample IP subnet prefixes and VLAN IDs for your environment.
 | **Mask** | 23 |
 | **VLAN ID on**  **trunk** | 11 |
 | **Gateway** | 10.10.56.1 |
-| **Reservations (examples)** | 10.10.56.1 - Router\&lt;br /\&gt;\&lt;br /\&gt;10.10.56.2 - SLB/MUX1   |
+| **Reservations (examples)** | 10.10.56.1 - Router<p>10.10.56.2 - SLB/MUX1   |
+---
 
 **Transit**
 
@@ -111,6 +115,7 @@ Change the sample IP subnet prefixes and VLAN IDs for your environment.
 | **VLAN ID on**  **trunk** | 10 |
 | **Gateway** | 10.10.10.1 |
 | **Reservations (examples)** | 10.10.10.1 - Router |
+---
 
 **Public VIP**
 
@@ -120,7 +125,8 @@ Change the sample IP subnet prefixes and VLAN IDs for your environment.
 | **Mask** | 27 |
 | **VLAN ID on trunk** | NA |
 | **Gateway** | 41.40.40.1 |
-| **Reservations (examples)** | 41.40.40.1 - Router\&lt;br /\&gt; 41.40.40.2 - SLB/MUX VIP\&lt;br /\&gt;41.40.40.3 - IPSec S2S VPN VIP   |
+| **Reservations (examples)** | 41.40.40.1 - Router<p>41.40.40.2 - SLB/MUX VIP<p>41.40.40.3 - IPSec S2S VPN VIP   |
+---
 
 **Private VIP**
 
@@ -131,6 +137,7 @@ Change the sample IP subnet prefixes and VLAN IDs for your environment.
 | **VLAN ID on trunk** | NA |
 | **Gateway** | 20.20.20.1 |
 | **Reservations (examples)** | 20.20.20.1 - Default GW (router)   |
+---
 
 **GRE VIP**
 
@@ -141,21 +148,39 @@ Change the sample IP subnet prefixes and VLAN IDs for your environment.
 | **VLAN ID on trunk** | NA |
 | **Gateway** | 31.30.30.1 |
 | **Reservations (examples)** | 31.30.30.1 - Default GW | 
+---
   
 ### Logical networks required for RDMA-based storage  
   
-If you are using RDMA based storage, then you will need to define a VLAN and subnet for each physical adapter in your compute and storage hosts. Typically you will have two physical adapters per node for this configuration.  
-  
-> [!IMPORTANT]  
-> Most physical switches require RDMA traffic to be sent on a tagged VLAN in order for quality of service settings to be applied correctly.  Do not place RDMA traffic onto an untagged VLAN or on a physical access-mode port.  
-  
-Network Name  |Subnet  |Mask  |VLAN ID on trunk  |Gateway  |Reservations<br />(examples)    
----------|---------|---------|---------|---------|---------  
-**Storage1**     |    10.60.36.0     | 25        |   8      |  10.60.36.1       |  10.60.36.1 - router<br />10.60.36.x - Compute  host x<br />10.60.36.y - compute host y<br />10.60.36.v - compute cluster<br />10.60.36.w - storage cluster  
-|**Storage2**|10.60.36.128|25|9|10.60.36.129|10.60.36.129 - router<br />10.60.36.x - compute  host x<br />10.60.36.y - compute host y<br />10.60.36.v - compute cluster<br />10.60.36.w - storage cluster  
-  
-For more information about configuring switches, see the **Configuration Examples** section.  
-  
+If using RDMA-based storage, define a VLAN and subnet for each physical adapter (two adapters per node) in your compute and storage hosts.  
+
+>[!IMPORTANT]
+>For Quality of Service (QoS) to be appropriately applied, physical switches require a tagged VLAN for RDMA traffic.
+
+**Storage1**
+
+| | |
+|---|---|
+| **Subnet** | 10.60.36.0|
+| **Mask** | 25 |
+| **VLAN ID on trunk** | 8 |
+| **Gateway** | 10.60.36.1|
+| **Reservations (examples)** | 10.60.36.1 – Router<p>10.60.36.X - Compute  host X<p>10.60.36.Y - Compute host Y<p>10.60.36.V - Compute cluster<p>10.60.36.W - Storage cluster     |
+---
+
+
+**Storage2**
+
+| | |
+|---|---|
+| **Subnet** | 10.60.36.128 |
+| **Mask** | 25 |
+| **VLAN ID on trunk** | 9 |
+| **Gateway** | 10.60.36.129 |
+| **Reservations (examples)** | 10.60.36.129 – Router<p>10.60.36.X - Compute  host X<p>10.60.36.Y - Compute host Y<p>10.60.36.V - Compute cluster<p>10.60.36.W - Storage cluster  | 
+---
+
+ 
 ## Routing infrastructure  
   
 If you are deploying your SDN infrastructure using scripts, the Management, HNV Provider, Transit, and VIP subnets must be routable to each other on the physical network.     
@@ -175,20 +200,20 @@ BGP peering is typically configured in a managed switch or router as part of the
   
 You or your network administrator must configure the BGP router peer to accept connections from the ASN and IP address or subnet address of the Transit logical network that your RAS gateway and SLB/MUXes are using.
   
-For more information, see [Border Gateway Protocol &#40;BGP&#41;](../../../remote/remote-access/bgp/Border-Gateway-Protocol-BGP.md).
+For more information, see [Border Gateway Protocol (BGP)](../../../remote/remote-access/bgp/Border-Gateway-Protocol-BGP.md).
   
 ## Default gateways
+Machines that are configured to connect to multiple networks, such as the physical hosts and gateway virtual machines must only have one default gateway configured. Configure the default gateway on the adapter used to reach the Internet.
 
-Machines that are configured to connect to multiple networks, such as the physical hosts and gateway virtual machines must only have one default gateway configured. The default gateway will typically be configured on the adapter used to reach all the way to the Internet.
+For virtual machines, follow these rules to decide which network to use as the default gateway:
 
-For virtual machines, use the following rules to decide which network to use as the default gateway:
+1. Use the Transit logical network as the default gateway if a virtual machine connects to the Transit network, or if it is multi-homed to the Transit network or any other network.
+2. Use the Management network as the default gateway if a virtual machine only connects to the Management network. 
+3. Use the HNV Provider network for SLB/MUXes and RAS Gateways. Do not use the HNV Provider network as a default gateway. 
+4. Do not connect virtual machines directly to the Storage1, Storage2, Public VIP or Private VIP networks.
 
-1. Use the Transit network as the default gateway if a virtual machine is connected to the Transit network, or if it is multi-homed to the Transit and any other network.  
-2. Use the Management network as the default gateway if a virtual machine is only connected to the Management network.  
-3.  The HNV Provider network must never be used as a default gateway. The only virtual machines connected to this network will be the SLB/MUXes and RAS Gateways.  
-4.  Virtual Machines will never be connected directly to the Storage1, Storage2, Public VIP or Private VIP networks.  
-  
 For Hyper-V hosts and storage nodes, use the Management network as the default gateway.  The storage networks must never have a default gateway assigned.
+
   
 ## Network hardware
 
@@ -196,19 +221,22 @@ You can use the following sections to plan network hardware deployment.
 
 ### Network Interface Cards (NICs)
 
-To achieve best performance, specific capabilities are required in the network interface cards you use in your Hyper-V hosts and storage hosts.  
- 
-Remote Direct Memory Access (RDMA) is a kernel bypass technique that makes it possible to transfer large amounts of data without involving the host CPU. Because the DMA engine on the network adapter performs the transfer, the CPU is not used for the memory movement.  This frees the CPU to perform other work.  
+The network interface cards (NICs) used in your Hyper-V hosts and storage hosts require specific capabilities to achieve the best performance. 
 
-Switch Embedded Teaming (SET) is an alternative NIC Teaming solution that you can use in environments that include Hyper-V and the Software Defined Networking (SDN) stack in Windows Server 2016. SET integrates some NIC Teaming functionality into the Hyper-V Virtual Switch.
+Remote Direct Memory Access (RDMA) is a kernel bypass technique that makes it possible to transfer large amounts of data without using the host CPU, which frees the CPU to perform other work. 
 
-For more information, see [Remote Direct Memory Access &#40;RDMA&#41; and Switch Embedded Teaming &#40;SET&#41;](../../../virtualization//hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md).  
+Switch Embedded Teaming (SET) is an alternative NIC Teaming solution that you can use in environments that include Hyper-V and the Software Defined Networking (SDN) stack in Windows Server 2016. SET integrates some NIC Teaming functionality into the Hyper-V Virtual Switch. 
 
-To account for the overhead in tenant virtual network traffic caused by VXLAN or NVGRE encapsulation headers, the MTU of the Layer-2 fabric network (switches and hosts) must be set to greater than or equal to 1674 Bytes \(including Layer-2 Ethernet headers\). NICs  that support the new *EncapOverhead* advanced adapter keyword will set the MTU  automatically through the network controller Host Agent. NICs  that do not support the new *EncapOverhead* keyword need to set the MTU size manually on each physical host using the *JumboPacket* \(or equivalent\) keyword.
+For more information, see [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](../../../virtualization//hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md).   
+
+To account for the overhead in tenant virtual network traffic caused by VXLAN or NVGRE encapsulation headers, the MTU of the Layer-2 fabric network (switches and hosts) must be set to greater than or equal to 1674 Bytes \(including Layer-2 Ethernet headers\). 
+
+NICs that support the new *EncapOverhead* advanced adapter keyword sets the MTU  automatically through the network controller Host Agent. NICs that do not support the new *EncapOverhead* keyword need to set the MTU size manually on each physical host using the *JumboPacket* \(or equivalent\) keyword. 
+
 
 ### Switches
   
-When selecting a physical switch and router for your environment make sure it supports the following set of capabilities.  
+When selecting a physical switch and router for your environment, make sure it supports the following set of capabilities:  
 
 - Switchport MTU settings \(required\)  
 - MTU set to >= 1674 Bytes \(including L2-Ethernet Header\)  
@@ -248,9 +276,9 @@ The following items provide management capabilities.
 - SNMP MIBs \(required if you are using Network Controller for physical switch monitoring\)  
 - MIB-II (RFC 1213), LLDP, Interface MIB \(RFC 2863\), IF-MIB, IP-MIB, IP-FORWARD-MIB, Q-BRIDGE-MIB, BRIDGE-MIB, LLDB-MIB, Entity-MIB, IEEE8023-LAG-MIB  
   
-The following diagrams show a sample four node setup. For clarity purposes, the first diagram shows just the network controller, the second shows the network controller plus the software load balancer, and the third diagram shows the network controller, software load balancer, and the gateway.  
+The following diagrams show a sample four-node setup. For clarity purposes, the first diagram shows just the network controller, the second shows the network controller plus the software load balancer, and the third diagram shows the network controller, software load balancer, and the gateway.  
   
-Storage networks and vNICs are not shonwn in these diagrams. If you plan to use SMB-based storage, these are required.    
+These diagrams do not show storage networks and vNICs. If you plan to use SMB-based storage, these are required.
   
 Both the infrastructure and tenant virtual machines can be redistributed across any physical compute host (assuming the correct network connectivity exists for the correct logical networks).  
   
