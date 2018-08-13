@@ -8,7 +8,7 @@ ms.date: 08/09/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.assetid: 4e1a6070-df0a-4dfe-8773-899a010bfabd
-ms.technology: identity-adfs
+ms.technology: identity-adds
 ---
 # AD Forest Recovery - Resetting the computer account on the DC
 

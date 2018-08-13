@@ -2,9 +2,9 @@
 ms.assetid: d7a4d2e1-217d-4ffc-93f0-817149bd9e7f
 title: Avenues to Compromise
 description:
-author: billmath
-ms.author: billmath
-manager: femila
+author: MicrosoftGuyJFlo
+ms.author: joflore
+manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold

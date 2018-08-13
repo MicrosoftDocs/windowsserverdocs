@@ -2,9 +2,9 @@
 ms.assetid: 24136758-d192-44f3-9c6e-41af70aa1d1c
 title: Event ID 1388 or 1988 - A lingering object is detected
 description:
-author: billmath
-ms.author: billmath
-manager: femila
+author: MicrosoftGuyJFlo
+ms.author: joflore
+manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
