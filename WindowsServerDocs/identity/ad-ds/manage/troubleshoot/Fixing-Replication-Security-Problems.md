@@ -2,9 +2,9 @@
 ms.assetid: 104df2f0-6731-4a1d-b17c-815ac8a5aaa7
 title: Fixing Replication Security Problems
 description:
-author: billmath
-ms.author: billmath
-manager: femila
+author: MicrosoftGuyJFlo
+ms.author: joflore
+manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold

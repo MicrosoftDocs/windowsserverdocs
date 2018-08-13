@@ -2,9 +2,9 @@
 ms.assetid: c84c866c-0f72-4fd3-b609-0e00560703eb
 title: Replication error 5 Access is denied
 description:
-author: billmath
-ms.author: billmath
-manager: femila
+author: MicrosoftGuyJFlo
+ms.author: joflore
+manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold

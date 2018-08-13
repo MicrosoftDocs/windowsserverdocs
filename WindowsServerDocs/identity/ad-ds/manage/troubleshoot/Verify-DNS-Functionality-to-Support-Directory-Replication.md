@@ -7,7 +7,7 @@ ms.reviewer: na
 ms.service: 
 ms.suite: na
 ms.technology: identity-adds
-ms.author: billmath
+ms.author: joflore
 ms.date: 05/31/2017
 ms.tgt_pltfrm: na
 author: Femila
