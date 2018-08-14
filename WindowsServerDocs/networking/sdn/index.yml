@@ -46,7 +46,7 @@ sections:
 
     className: cardsE
 
-    columns: 3
+    columns: 2
 
     items:
 
@@ -105,7 +105,7 @@ sections:
 
     className: cardsE
 
-    columns: 3
+    columns: 2
 
     items:
 
@@ -125,10 +125,29 @@ sections:
 
       image:
 
-        src: https://docs.microsoft.com/media/common/i_design.svg
+        src: https://docs.microsoft.com/media/common/i_deploy.svg
       
       title: Deploy an SDN infrastructure 
 
+    - href: \windows-server\networking\sdn\plan\Plan-a-Software-Defined-Network-Infrastructure
+
+      html: <p> </p>
+
+      image:
+
+        src: https://docs.microsoft.com/media/common/i_management.svg
+      
+      title: Manage an SDN infrastructure 
+
+    - href: \windows-server\networking\sdn\troubleshoot\troubleshoot-windows-server-software-defined-networking-stack
+
+      html: <p> </p>
+
+      image:
+
+        src: https://docs.microsoft.com/media/common/i_debug.svg
+      
+      title: Troubleshoot and diagnose an SDN infrastructure 
 
 - items:
 
