@@ -3,6 +3,7 @@ title: About Hyper-V hypervisor scheduler type selection
 description: Provides information for Hyper-V host administrators on the use of Hyper-V's scheduler modes
 author: allenma
 ms.author: allenma
+ms.date: 08/14/2018
 ms.topic: article
 ms.prod: windows-server-hyper-v
 ms.technology: virtualization
