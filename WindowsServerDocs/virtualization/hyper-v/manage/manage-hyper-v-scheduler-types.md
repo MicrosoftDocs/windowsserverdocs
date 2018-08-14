@@ -10,7 +10,8 @@ ms.technology: virtualization
 ms.localizationpriority: low
 ms.assetid: 6cb13f84-cb50-4e60-a685-54f67c9146be
 ---
-# Understanding and using Hyper-V hypervisor scheduler types
+
+# Managing Hyper-V hypervisor scheduler types
 
 Applies To:
 
