@@ -49,7 +49,7 @@ The Hyper-V Virtual Switch is a software-based layer-2 Ethernet network switch t
   
 In Hyper-V Virtual Switch in  Windows Server 2016, you can also deploy Switch Embedded Teaming (SET) and Remote Direct Memory Access (RDMA). For more information, see the section [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](#bkmk_rdma) in this topic.  
 
-## [Internal DNS Service /(iDNS/) for SDN](Idns-for-Sdn.md)
+## [Internal DNS Service (iDNS) for SDN](Idns-for-Sdn.md)
 
 Hosted virtual machines (VMs) and applications require DNS to communicate within their networks and with external resources on the Internet. With iDNS, you can provide tenants with DNS name resolution services for isolated, local namespace and Internet resources. 
   
@@ -82,7 +82,7 @@ In addition,  you can use Windows PowerShell commands to enable Data Center Brid
   
 Border Gateway Protocol (BGP) is a dynamic routing protocol that automatically learns routes between sites that use site-to-site VPN connections. Therefore, BGP reduces manual configuration of routers.   When you configure RAS Gateway, BGP lets you manage the routing of network traffic between your tenants’ VM networks and remote sites.  
   
-## [Software Load Balancing /(SLB/) for SDN](network-function-virtualization/software-load-balancing-for-sdn.md)
+## [Software Load Balancing (SLB) for SDN](network-function-virtualization/software-load-balancing-for-sdn.md)
 Cloud Service Providers (CSPs) and Enterprises that deploy SDN can use Software Load Balancing (SLB) to evenly distribute tenant and tenant customer network traffic among virtual network resources. The Windows Server SLB enables multiple servers to host the same workload, providing high availability and scalability. 
 
 ## [Windows Server Containers](Containers/Container-networking-overview.md)
