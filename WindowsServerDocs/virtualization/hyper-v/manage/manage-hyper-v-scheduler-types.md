@@ -152,9 +152,9 @@ To help ensure Hyper-V hosts are deployed in the optimal security configuaration
 
 | Version | Release  | Update Required | KB Article |
 |--------------------|------|---------|-------------:|
-|Windows Server 2016 | 1607 | 2018.07 C | KB4338822 |
-|Windows Server 2016 | 1703 | 2018.07 C | KB4338827 |
-|Windows Server 2016 | 1709 | 2018.07 C | KB4338817 |
+|Windows Server 2016 | 1607 | 2018.07 C | [KB4338822](https://support.microsoft.com/help/4338822/windows-10-update-kb4338822) |
+|Windows Server 2016 | 1703 | 2018.07 C | [KB4338827](https://support.microsoft.com/help/4338827/windows-10-update-kb4338827) |
+|Windows Server 2016 | 1709 | 2018.07 C | [KB4338817](https://support.microsoft.com/help/4338817/windows-10-update-kb4338817) |
 |Windows Server 2019 | 1804 | None | None |
 
 ## Selecting the hypervisor scheduler type on Windows Server
