@@ -91,7 +91,7 @@
 #### [Manage hosts with Hyper-V Manager](hyper-v/manage/Remotely-manage-Hyper-V-hosts.md)
 #### [Manage host CPU resource controls](hyper-v/manage/manage-hyper-v-minroot-2016.md)
 #### [Using VM CPU Groups](hyper-v/manage/manage-hyper-v-cpugroups.md)
-#### [Using and managing hypervisor scheduler types](hyper-v/manage/manage-hyper-v-scheduler-types.md)
+#### [Manage hypervisor scheduler types](hyper-v/manage/manage-hyper-v-scheduler-types.md)
 #### [About Hyper-V scheduler type selection](hyper-v/manage/about-hyper-v-scheduler-type-selection.md)
 #### [Manage Integration Services](hyper-v/manage/Manage-Hyper-V-integration-services.md)
 #### [Manage Windows VMs with PowerShell Direct](hyper-v/manage/Manage-Windows-virtual-machines-with-powershell-direct.md)
