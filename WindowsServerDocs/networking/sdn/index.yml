@@ -92,7 +92,7 @@ sections:
 
     - href: https://youtu.be/f501zUUcXD0
 
-      html: <p>In this Microsoft Mechanics Video, Windows Server SDN engineer Greg Cusanza joins Matt McSpirit to demonstrate the new Software Defined Networking capabilities in Windows Server 2016.</p>
+      html: <p>Watch Windows Server SDN engineer Greg Cusanza and Matt McSpirit to demonstrate the Software Defined Networking capabilities in Windows Server 2016.</p>
 
       image:
 
@@ -106,7 +106,7 @@ sections:
 
   - type: paragraph
 
-    text: 'Plan, configure and manage physical and virtual network devices such as routers, switches, and gateways in your datacenter.'
+    text: 'Plan, configure, and manage physical and virtual network devices such as routers, switches, and gateways in your datacenter.'
 
   - type: list
 
@@ -172,4 +172,4 @@ sections:
 
       html: <p><a class="barLink" href="https://blogs.technet.microsoft.com/networking/2017/03/06/troubleshoot-configuring-sdn-ras-gateway-vpn-bandwidth-settings-in-virtual-machine-manager/">Troubleshoot Configuring SDN RAS Gateway VPN Bandwidth Settings in VMM</a></p></div>
 
-            <p><a class="barLink" href="https://download.microsoft.com/download/1/5/A/15AC87E7-E99C-4E98-B6AF-9346790AD2DF/Software_Defined_Networking_is_built_in_with_Windows_Server_2016_solution_brief_EN_US.pdf">Microsoft Software Defined Networking Datasheet</a></p></div>
+            <p><a class="barLink" href="https://download.microsoft.com/download/1/5/A/15AC87E7-E99C-4E98-B6AF-9346790AD2DF/Software_Defined_Networking_is_built_in_with_Windows_Server_2016_solution_brief_EN_US.pdf/">Microsoft Software Defined Networking Datasheet</a></p></div>
