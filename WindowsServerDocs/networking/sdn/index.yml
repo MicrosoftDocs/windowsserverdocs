@@ -68,7 +68,7 @@ sections:
 
         src: https://docs.microsoft.com/media/common/i_overview.svg
 
-      title: Software Defined Networking (SDN)
+      title: Software Defined Networking (SDN) overview
 
     - href: \windows-server\networking\sdn\technologies\Software-Defined-Networking-Technologies
 
