@@ -209,7 +209,7 @@
 
 ## [Software Defined Networking (SDN)](sdn/index.yml)
 
-### [Introduction to SDN in Windows Server Datacenter](sdn/sdn-intro.md)
+### [SDN deployment for in Windows Server](sdn/software-defined-networking.md)
 ### [SDN Technologies](sdn/technologies/Software-Defined-Networking-Technologies.md)
 #### [Hyper-V Network Virtualization](sdn/technologies/hyper-v-network-virtualization/Hyper-V-Network-Virtualization.md)
 ##### [Hyper-V Network Virtualization Overview in Windows Server Technical Preview](sdn/technologies/hyper-v-network-virtualization/hyperv-network-virtualization-overview-windows-server.md)
