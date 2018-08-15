@@ -22,7 +22,7 @@ ms.date: 08/09/2018
                           <div class="card">
                               <div class="cardImageOuter">
                                   <div class="cardImage">
-                                      <img src="/media/hubs/virtualization/i_insider.svg" alt="" />
+                                      <img src="/media/i_insider.svg" alt="" />
                                   </div>
                               </div>
                               <div class="cardText">
@@ -40,7 +40,7 @@ ms.date: 08/09/2018
                           <div class="card">
                               <div class="cardImageOuter">
                                   <div class="cardImage">
-                                      <img src="/media/common/i_feedback.svg" alt="" />
+                                      <img src="/media/i_feedback.svg" alt="" />
                                   </div>
                               </div>
                               <div class="cardText">
@@ -58,7 +58,7 @@ ms.date: 08/09/2018
                           <div class="card">
                               <div class="cardImageOuter">
                                   <div class="cardImage">
-                                      <img src="/media/common/i_blog.svg" alt="" />
+                                      <img src="/media/i_blog.svg" alt="" />
                                   </div>
                               </div>
                               <div class="cardText">
@@ -89,7 +89,7 @@ ms.date: 08/09/2018
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/media/hubs/virtualization/virtualization-hperv-server-windows-server.svg" alt="" />
+                                                    <img src="/media/virtualization-hperv-server-windows-server.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -112,7 +112,7 @@ ms.date: 08/09/2018
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/media/hubs/virtualization/virtualization-hperv-server-management-tools.svg" alt="" />
+                                                    <img src="/media/virtualization/virtualization-hperv-server-management-tools.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -133,7 +133,7 @@ ms.date: 08/09/2018
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/media/hubs/virtualization/virtualization-hperv-server-hperv.svg" alt="" />
+                                                    <img src="/media/virtualization/virtualization-hperv-server-hperv.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -153,7 +153,7 @@ ms.date: 08/09/2018
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/media/hubs/virtualization/virtualization-hperv-server-community.svg" alt="" />
+                                                    <img src="/media/virtualization/virtualization-hperv-server-community.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -173,7 +173,7 @@ ms.date: 08/09/2018
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/media/hubs/virtualization/virtualization-hperv-server-doc-archive.svg" alt="" />
+                                                    <img src="/media/virtualization/virtualization-hperv-server-doc-archive.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
