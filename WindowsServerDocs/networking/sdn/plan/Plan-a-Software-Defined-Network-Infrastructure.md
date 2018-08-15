@@ -102,7 +102,7 @@ If using RDMA-based storage, define a VLAN and subnet for each physical adapter 
 | **Network name** | **Subnet** | **Mask** | **VLAN ID on truck** | **Gateway** | **Reservations (examples)** |
 | --- | --- | --- | --- | --- | --- |
 | Storage1 | 10.60.36.0 | 25 | 8 | 10.60.36.1 | 10.60.36.1 – Router<p>10.60.36.X - Compute  host X<p>10.60.36.Y - Compute host Y<p>10.60.36.V - Compute cluster<p>10.60.36.W - Storage cluster |
-| Storage2 | 10.60.36.128 | 25 | 9 | 10.60.36.129 – Router<p>10.60.36.X - Compute  host X<p>10.60.36.Y - Compute host Y<p>10.60.36.V - Compute cluster<p>10.60.36.W - Storage cluster   |
+| Storage2 | 10.60.36.128 | 25 | 9 | 10.60.36.129 | 10.60.36.129 – Router<p>10.60.36.X - Compute  host X<p>10.60.36.Y - Compute host Y<p>10.60.36.V - Compute cluster<p>10.60.36.W - Storage cluster   |
 ---
 
  
