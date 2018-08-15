@@ -8,12 +8,12 @@ metadata:
 
   document_id: 
 
-  title: Remote Access Always On VPN 
+  title: Software Defined Networking (SDN) 
 
   description: Learn about the features, technology, and deployment of Software Defined Networking (SDN).
 
-  text: Software Defined Networking (SDN) provides a method to centrally configure and manage physical and virtual network devices such as routers, switches, and gateways in your datacenter.
-
+  text: Software Defined Networking (SDN) lets you dynamically manage your datacenter networking to meet workload and app requirements. Network policies can be implemented consistently, at scale, even as you deploy new workloads or move workloads across virtual or physical networks.
+  
   keywords: Windows Server, Windows Server 2016, software defined networking, sdn
 
   ms.localizationpriority: high
@@ -36,7 +36,7 @@ sections:
 
   - type: markdown
 
-    text: Get ready to deploy Remote Access as a single tenant VPN RAS Gateway for point-to-site VPN connections, using any of the four scenarios mentioned below, for remote client computers that are running Windows 10. 
+    text: Get ready to implement Software Defined Networking, which virtualizes your network to abstract physical hardware network elements such as switches and routers. 
 
 - items:
 
@@ -46,7 +46,7 @@ sections:
 
     className: cardsE
 
-    columns: 2
+    columns: 3
 
     items:
 
@@ -60,7 +60,7 @@ sections:
       
       title: What's new
 
-    - href: \windows-server\networking\sdn\sdn-intro
+    - href: \windows-server\networking\sdn\software-defined-networking
 
       html: <p>Learn how you can centrally configure and manage physical and virtual network devices.</p>
 
@@ -82,7 +82,7 @@ sections:
 
     - href: \windows-server\networking\sdn\security\sdn-security-top
 
-      html: <p>Learn about the SDN technologies included in Windows Server 2016.</p>
+      html: <p>Learn about implementing and managing security for SDN.</p>
 
       image:
 
@@ -97,7 +97,7 @@ sections:
 
   - type: paragraph
 
-    text: 'Deploy Always On VPN connections for domain-joined Windows 10 client computers. You can also migrate from DirectAccess to Always On VPN and configure conditional access using Azure AD.'
+    text: 'Plan, configure and manage physical and virtual network devices such as routers, switches, and gateways in your datacenter.'
 
   - type: list
 
@@ -105,7 +105,7 @@ sections:
 
     className: cardsE
 
-    columns: 2
+    columns: 3
 
     items:
 
@@ -159,7 +159,7 @@ sections:
 
     items:
 
-    - title: SDN learning resources
+    - title: SDN in Windows Server 2016 learning resources
 
       html: <p><a class="barLink" href="/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting#vpnprofileps1-script-issues">VPN_Profile.ps1 script issues</a></p>
 
