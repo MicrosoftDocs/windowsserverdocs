@@ -63,7 +63,7 @@ The following Network Function Virtualization technologies are available.
   
 -   **Datacenter Firewall**. Provide granular access control lists (ACLs), enabling you to apply firewall policies at the VM interface level or the subnet level. For more details, see [Datacenter Firewall Overview](network-function-virtualization/Datacenter-Firewall-Overview.md).
   
--   **RAS Gateway**. Route network traffic between the physical network and VM network resources, regardless of the location. You can route the network traffic at the same physical location or many different locations. For more details, see [RAS Gateway for SDN](network-function-virtualization/RAS-Gateway-for-SDN.md).
+-   **RAS Gateway for SDN**. Route network traffic between the physical network and VM network resources, regardless of the location. You can route the network traffic at the same physical location or many different locations. For more details, see [RAS Gateway for SDN](network-function-virtualization/RAS-Gateway-for-SDN.md).
 
   
 ## [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](https://docs.microsoft.com/windows-server/virtualization/hyper-v-virtual-switch/rdma-and-switch-embedded-teaming)  
