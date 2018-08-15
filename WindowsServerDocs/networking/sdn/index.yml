@@ -82,7 +82,7 @@ sections:
 
     - href: \windows-server\networking\sdn\security\sdn-security-top
 
-      html: <p>Learn about implementing and managing security for SDN.</p>
+      html: <p>Learn about implementing and managing security for SDN, including authentication and virtual encryption.</p>
 
       image:
 
