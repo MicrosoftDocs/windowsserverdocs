@@ -76,7 +76,7 @@ Because each series record only one data point for each collection interval, eac
 
 ### Data footprint
 
-System Insights collects all data locally on your C drive (C:), so it's important to understand the data footprint for the data collected by System Insights. The footprint depends on the type and number of data sources each capability specifies. The table below details the storage usage for each data type:
+System Insights collects all data locally on your C drive (C:), so it's important to understand the storage consumed by the data collected by System Insights. In general, the System Insights data footprint is modest. It, however, depends on the type and number of data sources each capability specifies, and the table below details the storage usage for each data type:
 
 | Data source | Maximum footprint |
 | --------------- | --------------- |
@@ -88,7 +88,7 @@ System Insights collects all data locally on your C drive (C:), so it's importan
 | Network well-known series | 300 KB per network adapter |
 
 >[!NOTE]
->As the table shows, the data footprint for System Insights is modest. **For the default forecasting capabilities, you can expect a maximum footprint of less than 10 MB for most stand alone machines.** 
+>**For the default forecasting capabilities, the maximum footprint should be less than 10 MB for most stand alone machines.** 
 
 ## See also
 To learn more about System Insights, use the following resources:
