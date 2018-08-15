@@ -69,85 +69,27 @@ For information about Hyper-V Network Virtualization (HNV), which you can use to
   
 Additional logical networks need to be created and provisioned for gateway and SLB usage. Make sure to obtain the correct IP prefixes, VLAN IDs, and gateway IP addresses for these networks.
 
->[!div class="mx-tableFixed"]
->|  |  |
->|---------|---------|
->|**Transit logical network**     |The RAS Gateway and SLB/MUX use the Transit logical network to exchange BGP peering information and North/South (external-internal) tenant traffic. The size of this subnet will typically be smaller than the others. Only physical compute hosts that run RAS Gateway or SLB/MUX virtual machines need to have connectivity to this subnet with these VLANs trunked and accessible on the switch ports to which the compute hosts' network adapters are connected. Each SLB/MUX or RAS Gateway virtual machine is statically assigned one IP address from the Transit logical network.         |
->|**Public VIP logical network**     |The Public VIP logical network is required to have IP subnet prefixes that are routable outside of the cloud environment (typically Internet routable).  These will be the front-end IP addresses used by external clients to access resources in the virtual networks including the front end VIP for the Site-to-site gateway.         |
->|**Private VIP logical network**     |The Private VIP logical network is not required to be routable outside of the cloud as it is used for VIPs that are only accessed from internal cloud clients, such as the SLB Mananger or private services.         |
->|**GRE VIP logical network**     |The GRE VIP network is a subnet that exists solely for defining VIPs that are assigned to gateway virtual machines running on your SDN fabric for a S2S GRE connection type. This network does not need to be pre-configured in your physical switches or router and need not have a VLAN assigned.            |
+
+|  |  |
+|---------|---------|
+|**Transit logical network**     |The RAS Gateway and SLB/MUX use the Transit logical network to exchange BGP peering information and North/South (external-internal) tenant traffic. The size of this subnet will typically be smaller than the others. Only physical compute hosts that run RAS Gateway or SLB/MUX virtual machines need to have connectivity to this subnet with these VLANs trunked and accessible on the switch ports to which the compute hosts' network adapters are connected. Each SLB/MUX or RAS Gateway virtual machine is statically assigned one IP address from the Transit logical network.         |
+|**Public VIP logical network**     |The Public VIP logical network is required to have IP subnet prefixes that are routable outside of the cloud environment (typically Internet routable).  These will be the front-end IP addresses used by external clients to access resources in the virtual networks including the front end VIP for the Site-to-site gateway.         |
+|**Private VIP logical network**     |The Private VIP logical network is not required to be routable outside of the cloud as it is used for VIPs that are only accessed from internal cloud clients, such as the SLB Mananger or private services.         |
+|**GRE VIP logical network**     |The GRE VIP network is a subnet that exists solely for defining VIPs that are assigned to gateway virtual machines running on your SDN fabric for a S2S GRE connection type. This network does not need to be pre-configured in your physical switches or router and need not have a VLAN assigned.            |
 ---
 
 
 #### Sample network topology
 Change the sample IP subnet prefixes and VLAN IDs for your environment. 
 
-
-
-**Management**
-
-| | |
-|---|---|
-| **Subnet** | 10.184.108.0 |
-| **Mask** | 24 |
-| **VLAN ID on**  **trunk** | 7 |
-| **Gateway** | 10.184.108.1 |
-| **Reservations (examples)** | 10.184.108.1 - Router<p>10.184.108.4 - Network Controller<p>10.184.108.10 - Compute host 1<p>10.184.108.11 - Compute host 2<p>10.184.108.X - Compute host X   |
----
-
-**HNV Provider**
-
-| | |
-|---|---|
-| **Subnet** | 10.10.56.0 |
-| **Mask** | 23 |
-| **VLAN ID on**  **trunk** | 11 |
-| **Gateway** | 10.10.56.1 |
-| **Reservations (examples)** | 10.10.56.1 - Router<p>10.10.56.2 - SLB/MUX1   |
----
-
-**Transit**
-
-| | |
-|---|---|
-| **Subnet** | 10.10.10.0 |
-| **Mask** | 24 |
-| **VLAN ID on**  **trunk** | 10 |
-| **Gateway** | 10.10.10.1 |
-| **Reservations (examples)** | 10.10.10.1 - Router |
----
-
-**Public VIP**
-
-| | |
-|---|---|
-| **Subnet** | 41.40.40.0 |
-| **Mask** | 27 |
-| **VLAN ID on trunk** | NA |
-| **Gateway** | 41.40.40.1 |
-| **Reservations (examples)** | 41.40.40.1 - Router<p>41.40.40.2 - SLB/MUX VIP<p>41.40.40.3 - IPSec S2S VPN VIP   |
----
-
-**Private VIP**
-
-| | |
-|---|---|
-| **Subnet** | 20.20.20.0 |
-| **Mask** | 27 |
-| **VLAN ID on trunk** | NA |
-| **Gateway** | 20.20.20.1 |
-| **Reservations (examples)** | 20.20.20.1 - Default GW (router)   |
----
-
-**GRE VIP**
-
-| | |
-|---|---|
-| **Subnet** | 31.30.30.0 |
-| **Mask** | 24 |
-| **VLAN ID on trunk** | NA |
-| **Gateway** | 31.30.30.1 |
-| **Reservations (examples)** | 31.30.30.1 - Default GW | 
+| **Network name** | **Subnet** | **Mask** | **VLAN ID on truck** | **Gateway** | **Reservations (examples)** |
+| --- | --- | --- | --- | --- | --- |
+| Management | 10.184.108.0 | 24 | 7 | 10.184.108.1 | 10.184.108.1 – Router10.184.108.4 - Network Controller10.184.108.10 - Compute host 110.184.108.11 - Compute host 210.184.108.X - Compute host X |
+| HNV Provider | 10.10.56.0 | 23 | 11 | 10.10.56.1 | 10.10.56.1 – Router10.10.56.2 - SLB/MUX1   |
+| Transit | 10.10.10.0 | 24 | 10 | 10.10.10.1 | 10.10.10.1 – Router |
+| Public VIP | 41.40.40.0 | 27 | NA | 41.40.40.1 | 41.40.40.1 – Router41.40.40.2 - SLB/MUX VIP41.40.40.3 - IPSec S2S VPN VIP   |
+| Private VIP | 20.20.20.0 | 27 | NA | 20.20.20.1 | 20.20.20.1 - Default GW (router)   |
+| GRE VIP | 31.30.30.0 | 24 | NA | 31.30.30.1 | 31.30.30.1 - Default GW |
 ---
   
 ### Logical networks required for RDMA-based storage  
@@ -157,27 +99,10 @@ If using RDMA-based storage, define a VLAN and subnet for each physical adapter 
 >[!IMPORTANT]
 >For Quality of Service (QoS) to be appropriately applied, physical switches require a tagged VLAN for RDMA traffic.
 
-**Storage1**
-
-| | |
-|---|---|
-| **Subnet** | 10.60.36.0|
-| **Mask** | 25 |
-| **VLAN ID on trunk** | 8 |
-| **Gateway** | 10.60.36.1|
-| **Reservations (examples)** | 10.60.36.1 – Router<p>10.60.36.X - Compute  host X<p>10.60.36.Y - Compute host Y<p>10.60.36.V - Compute cluster<p>10.60.36.W - Storage cluster     |
----
-
-
-**Storage2**
-
-| | |
-|---|---|
-| **Subnet** | 10.60.36.128 |
-| **Mask** | 25 |
-| **VLAN ID on trunk** | 9 |
-| **Gateway** | 10.60.36.129 |
-| **Reservations (examples)** | 10.60.36.129 – Router<p>10.60.36.X - Compute  host X<p>10.60.36.Y - Compute host Y<p>10.60.36.V - Compute cluster<p>10.60.36.W - Storage cluster  | 
+| **Network name** | **Subnet** | **Mask** | **VLAN ID on truck** | **Gateway** | **Reservations (examples)** |
+| --- | --- | --- | --- | --- | --- |
+| Storage1 | 10.60.36.0 | 25 | 8 | 10.60.36.1 | 10.60.36.1 – Router<p>10.60.36.X - Compute  host X<p>10.60.36.Y - Compute host Y<p>10.60.36.V - Compute cluster<p>10.60.36.W - Storage cluster |
+| Storage2 | 10.60.36.128 | 25 | 9 | 10.60.36.129 – Router<p>10.60.36.X - Compute  host X<p>10.60.36.Y - Compute host Y<p>10.60.36.V - Compute cluster<p>10.60.36.W - Storage cluster   |
 ---
 
  

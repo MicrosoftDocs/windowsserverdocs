@@ -207,7 +207,7 @@
 #### [QoS Policy Events and Errors](technologies/qos/qos-policy-errors.md)
 ### [QoS Policy Frequently Asked Questions](technologies/qos/qos-policy-faq.md)
 
-## [Software Defined Networking (SDN)](sdn/software-defined-networking.md)
+## [Software Defined Networking (SDN)](sdn/index.yml)
 
 ### [Introduction to SDN in Windows Server Datacenter](sdn/sdn-intro.md)
 ### [SDN Technologies](sdn/technologies/Software-Defined-Networking-Technologies.md)
