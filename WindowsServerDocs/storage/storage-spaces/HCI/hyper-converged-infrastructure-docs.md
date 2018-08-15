@@ -24,7 +24,7 @@ ms.date: 08/09/2018
                                   <div class="cardImage">
                                       <img src="/media/hubs/virtualization/i_insider.svg" alt="" />
                                   </div>
-</div>
+                              </div>
                               <div class="cardText">
                                   <h3>Join the Windows Insider Program</h3>
                               </div>
