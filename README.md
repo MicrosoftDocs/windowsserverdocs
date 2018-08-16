@@ -15,7 +15,6 @@ Writers and engineering partners share responsibility for technical accuracy, wi
 
 Windows Server Area|Owner|Github Alias
 ---|---|---
-
 Windows Server Software-Defined Datacenter (SDDC) |Corey Plett|coreyp-at-msft
 Get Started |Corey Plett|coreyp-at-msft
 Manage Windows Server |Corey Plett|coreyp-at-msft
