@@ -27,9 +27,8 @@ The following table contains the protected groups in Active Directory listed by 
 
 #### Protected Accounts and Groups in Active Directory by Operating System
 
-||||  
-|-|-|-|-|
-|**Windows Server 2003 RTM**|**Windows Server 2003 SP1+**| **Windows Server 2012**, <br> **Windows Server 2008 R2**, <br> **Windows Server 2008** | **Windows Server 2016** |
+| Windows Server 2003 RTM | Windows Server 2003 SP1+ | Windows Server 2012, <br> Windows Server 2008 R2, <br> Windows Server 2008 | Windows Server 2016 |
+| --- | --- | --- | --- |
 |Account Operators|Account Operators|Account Operators|Account Operators|
 |Administrator|Administrator|Administrator|Administrator|
 |Administrators|Administrators|Administrators|Administrators|
