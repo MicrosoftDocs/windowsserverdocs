@@ -7,7 +7,7 @@ ms.technology: storage-spaces
 ms.topic: get-started-article
 ms.assetid: 20fee213-8ba5-4cd3-87a6-e77359e82bc0
 author: stevenek
-ms.date: 5/24/2018
+ms.date: 8/16/2018
 description: Step-by-step instructions to deploy software-defined storage with Storage Spaces Direct in Windows Server as either hyper-converged infrastructure or converged (also known as disaggregated) infrastructure. 
 ms.localizationpriority: medium
 ---
@@ -104,7 +104,7 @@ Net localgroup Administrators <Domain\Account> /add
 
 ### Step 1.4: Install roles and features
 
-The next step is to [install some server roles and features](../../administration/server-manager/install-or-uninstall-roles-role-services-or-features.md) on every server:
+The next step is to install server roles on every server. You can do this by using [Windows Admin Center](../../manage/windows-admin-center/use/manage-servers.md), [Server Manager]((../../administration/server-manager/install-or-uninstall-roles-role-services-or-features.md)), or PowerShell. Here are the roles to install:
 
 - Failover Clustering
 - Hyper-V
@@ -113,15 +113,22 @@ The next step is to [install some server roles and features](../../administratio
 - RSAT-Clustering-PowerShell
 - Hyper-V-PowerShell
 
-Use the `Install-WindowsFeature` cmdlet as shown, substituting your server names:
+To install via PowerShell, use the [Install-WindowsFeature](https://docs.microsoft.com/powershell/module/microsoft.windows.servermanager.migration/install-windowsfeature) cmdlet. You can use it on a single server like this:
+
+```PowerShell
+Install-WindowsFeature -Name "Hyper-V", "Failover-Clustering", "Data-Center-Bridging", "RSAT-Clustering-PowerShell", "Hyper-V-PowerShell", "FS-FileServer"
+```
+
+To run the command on all servers in the cluster as the same time, use this little bit of script, modifying the list of variables at the beginning of the script to fit your environment.
 
 ```PowerShell
 # Fill in these variables with your values
 $ServerList = "Server01", "Server02", "Server03", "Server04"
 $FeatureList = "Hyper-V", "Failover-Clustering", "Data-Center-Bridging", "RSAT-Clustering-PowerShell", "Hyper-V-PowerShell", "FS-FileServer"
 
+# This part runs the Install-WindowsFeature cmdlet on all servers in $ServerList, passing the list of features into the scriptblock with the "Using" scope modifier so you don't have to hard-code them here.
 Invoke-Command ($ServerList) {
-    Install-WindowsFeature $FeatureList
+    Install-WindowsFeature -Name $Using:Featurelist
 }
 ```
 
