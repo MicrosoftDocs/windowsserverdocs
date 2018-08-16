@@ -104,7 +104,7 @@ Net localgroup Administrators <Domain\Account> /add
 
 ### Step 1.4: Install roles and features
 
-The next step is to install server roles on every server. You can do this by using [Windows Admin Center](../../manage/windows-admin-center/use/manage-servers.md), [Server Manager]((../../administration/server-manager/install-or-uninstall-roles-role-services-or-features.md)), or PowerShell. Here are the roles to install:
+The next step is to install server roles on every server. You can do this by using [Windows Admin Center](../../manage/windows-admin-center/use/manage-servers.md), [Server Manager](../../administration/server-manager/install-or-uninstall-roles-role-services-or-features.md)), or PowerShell. Here are the roles to install:
 
 - Failover Clustering
 - Hyper-V
