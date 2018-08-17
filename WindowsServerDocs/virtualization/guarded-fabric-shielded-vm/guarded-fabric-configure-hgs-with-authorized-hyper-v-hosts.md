@@ -14,10 +14,6 @@ ms.date: 08/28/2017
 
 >Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016
 
->[!div class="step-by-step"]
-[« Deploy HGS](guarded-fabric-setting-up-the-host-guardian-service-hgs.md)
-[Deploy shielded virtual machines »](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
-
 The topics in this section describe the steps that a fabric administrator takes to configure Hyper-V hosts to work with the Host Guardian Service (HGS). Before you can start these steps, at least one node in the [HGS cluster must be set up](guarded-fabric-setting-up-the-host-guardian-service-hgs.md).
 
 **For TPM-trusted attestation**:
@@ -35,6 +31,11 @@ The topics in this section describe the steps that a fabric administrator takes 
 1. [Configure the fabric DNS](guarded-fabric-configuring-fabric-dns.md): Tells how to set up a DNS forwarder from the fabric domain to the HGS domain.
 2. [Create a security group](guarded-fabric-admin-trusted-attestation-creating-a-security-group.md): Tells how to set up an Active Directory security group in the fabric domain, add guarded hosts as members of that group, and provide that group identifier to the HGS administrator. 
 3. [Confirm guarded hosts can attest](guarded-fabric-confirm-hosts-can-attest-successfully.md)
+
+## Next step
+
+>[!div class="nextstepaction"]
+[Deploy shielded virtual machines](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
 
 ## See also
 
