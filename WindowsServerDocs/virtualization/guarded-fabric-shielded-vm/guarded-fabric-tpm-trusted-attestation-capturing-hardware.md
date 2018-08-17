@@ -14,10 +14,6 @@ ms.date: 07/23/2018
 
 >Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
->[!div class="step-by-step"]
-[« Review prerequisites](guarded-fabric-guarded-host-prerequisites.md)
-[Confirm attestation »](guarded-fabric-confirm-hosts-can-attest-successfully.md)
-
 TPM mode uses a TPM identifier (also called a platform identifier or endorsement key \[EKpub\]) to begin determining whether a particular host is authorized as "guarded." This mode of attestation uses Secure Boot and code integrity measurements to ensure that a given Hyper-V host is in a healthy state and is running only trusted code. In order for attestation to understand what is and is not healthy, you must capture the following artifacts:
 
 1.  TPM identifier (EKpub)
@@ -167,3 +163,7 @@ A TPM baseline is required for each unique class of hardware in your datacenter 
     Add-HgsAttestationTpmPolicy -Path <Filename>.tcglog -Name '<PolicyName>'
     ```
 
+## Next step
+
+>[!div class="nextstepaction"]
+[Confirm attestation »](guarded-fabric-confirm-hosts-can-attest-successfully.md)
