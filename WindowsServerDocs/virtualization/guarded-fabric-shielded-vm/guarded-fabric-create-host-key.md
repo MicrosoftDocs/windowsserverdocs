@@ -14,9 +14,6 @@ ms.date: 07/20/2018
 
 >Applies to: Windows Server 2019
 
->[!div class="step-by-step"]
-[« Review prerequisites](guarded-fabric-guarded-host-prerequisites.md)
-[Confirm attestation »](guarded-fabric-confirm-hosts-can-attest-successfully.md)
 
 This topic covers how to prepare Hyper-V hosts to become guarded hosts using host key attestation (Key mode). You'll create a host key pair (or use an existing certificate) and add the public half of the key to HGS.
 
@@ -60,6 +57,7 @@ Add-HgsAttestationHostKey -Name MyHost01 -Path "C:\temp\MyHost01-HostKey.cer"
 
 ## Next step
 
+>[!div class="nextstepaction"]
 [Confirm hosts can attest successfully](guarded-fabric-confirm-hosts-can-attest-successfully.md)
 
 ## See also

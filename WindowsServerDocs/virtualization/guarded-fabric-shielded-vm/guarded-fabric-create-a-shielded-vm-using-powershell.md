@@ -13,10 +13,6 @@ ms.date: 03/19/2018
 
 >Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
->[!div class="step-by-step"]
-[« Create a shielding data file](guarded-fabric-tenant-creates-shielding-data.md)
-[Deploy a shielded using VMM »](guarded-fabric-tenant-deploys-shielded-vm-using-vmm.md)
-
 In production, you would typically use a fabric manager (e.g. VMM) to deploy shielded VMs. 
 However, the steps illustrated below allow you to deploy and validate the entire scenario without a fabric manager.
 
@@ -112,3 +108,8 @@ Add-ClusterVirtualMachineRole -VMName 'MyShieldedVM' -Cluster <Hyper-V cluster n
 ```
 
 The shielded VM can now be live migrated within the cluster.
+
+## Next step
+
+>[!div class="nextstepaction"]
+[Deploy a shielded using VMM](guarded-fabric-tenant-deploys-shielded-vm-using-vmm.md)

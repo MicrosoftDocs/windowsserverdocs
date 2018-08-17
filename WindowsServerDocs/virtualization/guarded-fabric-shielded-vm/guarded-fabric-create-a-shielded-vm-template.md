@@ -14,10 +14,6 @@ ms.date: 10/14/2016
 
 >Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
->[!div class="step-by-step"]
-[« Deploy shielded VMs](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
-[Create a shielding data file »](guarded-fabric-tenant-creates-shielding-data.md)
-
 As with regular VMs, you can create a VM template (for example, a [VM template in Virtual Machine Manager (VMM)](https://technet.microsoft.com/system-center-docs/vmm/manage/manage-library-add-vm-templates)) to make it easy for tenants and administrators to deploy new VMs on the fabric using a template disk. Because shielded VMs are security-sensitive assets, there are additional steps to create a VM template that supports shielding. This topic covers the steps to create a shielded template disk and a VM template in VMM.
 
 To understand how this topic fits in the overall process of deploying shielded VMs, see [Hosting service provider configuration steps for guarded hosts and shielded VMs](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md).
@@ -127,6 +123,11 @@ With a prepared template disk in your VMM library, you are ready to create a VM 
     > If you choose to specify a product key on this page, ensure it is valid for the operating system on the template disk. If an incorrect product key is used, the VM creation will fail.
 
 After the template is created, tenants can use it to create new virtual machines. You will need to verify that the VM template is one of the resources available to the Tenant Administrator user role (in VMM, user roles are in the **Settings** workspace).
+
+## Next step
+
+>[!div class="nextstepaction"]
+[Create a shielding data file](guarded-fabric-tenant-creates-shielding-data.md)
 
 ## See also
 

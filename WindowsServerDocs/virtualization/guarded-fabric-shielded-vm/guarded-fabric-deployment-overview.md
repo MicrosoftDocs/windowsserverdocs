@@ -15,10 +15,6 @@ ms.date: 08/28/2017
 
 >Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
->[!div class="step-by-step"]
-[« Deploy a guarded fabric](guarded-fabric-deploying-hgs-overview.md)
-[HGS Prerequisites »](guarded-fabric-prepare-for-hgs.md)
-
 This topic explains what a guarded fabric is, its requirements, and a summary of the deployment process. 
 For detailed deployment steps, see [Deploying the Host Guardian Service for guarded hosts and shielded VMs](https://technet.microsoft.com/windows-server-docs/security/guarded-fabric-shielded-vm/guarded-fabric-deploying-hgs-overview).
 
@@ -170,4 +166,7 @@ In Windows Azure Pack, the experience is even easier than creating a regular VM 
 
 ![New shielded VM in Windows Azure Pack](../media/Guarded-Fabric-Shielded-VM/guarded-fabric-new-vm-config.png)
 
+## Next step
 
+>[!div class="nextstepaction"]
+[HGS Prerequisites »](guarded-fabric-prepare-for-hgs.md)
