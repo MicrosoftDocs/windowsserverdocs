@@ -208,9 +208,7 @@
 ### [QoS Policy Frequently Asked Questions](technologies/qos/qos-policy-faq.md)
 
 ## [Software Defined Networking (SDN)](sdn/software-defined-networking.md)
-### [What's New in SDN for Windows Server](sdn/sdn-whats-new.md)
-#### [Virtual Network Encryption](sdn/vnet-encryption/sdn-vnet-encryption.md)
-#### [Configure Encryption for a Virtual Subnet](sdn/vnet-encryption/sdn-config-vnet-encryption.md)
+
 ### [Introduction to SDN in Windows Server Datacenter](sdn/sdn-intro.md)
 ### [SDN Technologies](sdn/technologies/Software-Defined-Networking-Technologies.md)
 #### [Hyper-V Network Virtualization](sdn/technologies/hyper-v-network-virtualization/Hyper-V-Network-Virtualization.md)
@@ -255,8 +253,9 @@
 ##### [Guest Clustering in a Virtual Network](sdn/manage/guest-clustering.md)
 #### [Update, Backup, and Restore Software Defined Networking Infrastructure](sdn/manage/Update-Backup-Restore.md)
 ### [Security for SDN](sdn/security/sdn-security-top.md)
-#### [Network Controller Security](sdn/security/nc-security.md)
+#### [Secure the Network Controller](sdn/security/nc-security.md)
 #### [Manage Certificates for Software Defined Networking](sdn/security/sdn-manage-certs.md)
+#### [Configure Encryption for a Virtual Subnet](sdn/vnet-encryption/sdn-config-vnet-encryption.md)
 ### [Troubleshoot SDN](sdn/troubleshoot/Troubleshoot-Software-Defined-Networking.md)
 #### [Troubleshoot the Windows Server Software Defined Networking Stack](sdn/troubleshoot/troubleshoot-windows-server-software-defined-networking-stack.md)
 ### [System Center Technologies for SDN](sdn/Sc-Tech-for-Sdn.md)

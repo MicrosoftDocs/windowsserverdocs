@@ -2,9 +2,9 @@
 ms.assetid: 9e7b0141-9b48-49a1-a9de-a3e8e90ce22b
 title: Replication error 8606 Insufficient attributes were given to create an object
 description:
-author: billmath
-ms.author: billmath
-manager: femila
+author: MicrosoftGuyJFlo
+ms.author: joflore
+manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold

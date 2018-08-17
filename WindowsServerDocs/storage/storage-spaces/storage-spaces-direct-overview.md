@@ -76,6 +76,7 @@ For other applications of Storage Spaces, such as Shared SAS clusters and stand-
          <td style="padding: 5px; border: 0;">
             <strong>Insider Preview content</a></strong>
             <ul>
+                <li><a href="cluster-sets.md">Cluster sets</a></li>
                 <li><a href="performance-history.md">Performance history</a></li>
                 <li><a href="delimit-volume-allocation.md">Delimit the allocation of volumes</a></li>
             </ul>

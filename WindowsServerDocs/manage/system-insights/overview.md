@@ -65,7 +65,7 @@ We'd love to hear your feedback to help us improve this feature. You can use the
 - **Feedback Hub**: Use the Feedback Hub tool in Windows 10 to file a bug or feedback. When doing so, please specify:
     - **Category**: Server 
     - **Subcategory**: System Insights
-- **UserVoice**: Submit feature requests through our [UserVoice page](https://windowsserver.uservoice.com/forums/295056-storage). Share with your colleagues to upvote items that are important to you.
+- **UserVoice**: Submit feature requests through our [UserVoice page](https://windowsserver.uservoice.com/forums/295071-management-tools). Share with your colleagues to upvote items that are important to you.
 - **Email**: If you'd like to submit your feedback privately to the feature team, send an email to system-insights-feed@microsoft.com. Please keep in mind that we still may request you to use Feedback Hub or UserVoice.
 
 ## See also

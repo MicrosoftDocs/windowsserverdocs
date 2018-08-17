@@ -2,9 +2,9 @@
 ms.assetid: b432980c-601f-492b-924e-7427419c8457
 title: Changes Made by Adprep.exe
 description:
-author: billmath
-ms.author: billmath
-manager: femila
+author: MicrosoftGuyJFlo
+ms.author: joflore
+manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold

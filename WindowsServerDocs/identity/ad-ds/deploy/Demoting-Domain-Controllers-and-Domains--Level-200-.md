@@ -2,9 +2,9 @@
 ms.assetid: 65ed5956-6140-4e06-8d99-8771553637d1
 title: Demoting Domain Controllers and Domains (Level 200)
 description:
-author: billmath
-ms.author: billmath
-manager: femila
+author: MicrosoftGuyJFlo
+ms.author: joflore
+manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold

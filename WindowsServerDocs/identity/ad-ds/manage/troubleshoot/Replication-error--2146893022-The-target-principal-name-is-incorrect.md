@@ -2,9 +2,9 @@
 ms.assetid: 3b13244f-88d3-48c0-99b7-45ccdc85e86c
 title: Replication error -2146893022 The target principal name is incorrect
 description:
-author: billmath
-ms.author: billmath
-manager: femila
+author: MicrosoftGuyJFlo
+ms.author: joflore
+manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold

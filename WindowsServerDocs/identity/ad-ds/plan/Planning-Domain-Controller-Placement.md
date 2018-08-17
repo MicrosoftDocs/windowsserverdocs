@@ -2,9 +2,9 @@
 ms.assetid: 692bd2af-deee-44cf-9af9-f364677e267f
 title: Planning Domain Controller Placement
 description:
-author: billmath
-ms.author: billmath
-manager: femila
+author: MicrosoftGuyJFlo
+ms.author: joflore
+manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold

@@ -43,18 +43,8 @@ import { AjaxResponse, Observable } from 'rxjs';
 export class PluginService {
     constructor(private appContextService: AppContextService, private http: Http) {
     }
-
-    private buildUrlParams(): string {
-        let gateway = this.appContextService.gateway.gatewayUrl
-        let node = this.appContextService.activeConnection.nodeName;
-        let url = `${gateway}/api/nodes/${node}/features/Sample Uno`;
-
-        console.log(url);
-        return url;
-    }
-
+    
     public getGatewayRestResponse(): Observable<any> {
-        let test = this.appContextService.gateway.gatewayUrl
         let callUrl = this.appContextService.activeConnection.nodeName;
 
         return this.appContextService.node.get(callUrl, 'features/Sample%20Uno').map(
