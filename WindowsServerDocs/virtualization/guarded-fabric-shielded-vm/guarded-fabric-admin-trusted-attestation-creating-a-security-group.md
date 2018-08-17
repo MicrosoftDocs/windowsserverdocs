@@ -14,10 +14,6 @@ ms.date: 08/28/2017
 
 >Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
->[!div class="step-by-step"]
-[« Review prerequisites](guarded-fabric-guarded-host-prerequisites.md)
-[Confirm attestation »](guarded-fabric-confirm-hosts-can-attest-successfully.md)
-
 >[!IMPORTANT]
 >AD mode is deprecated beginning with Windows Server 2019. For environments where TPM attestation is not possible, configure [host key attestation](guarded-fabric-initialize-hgs-key-mode.md). Host key attestation provides similar assurance to AD mode and is simpler to set up. 
 
@@ -52,7 +48,9 @@ This topic describes the intermediate steps to prepare Hyper-V hosts to become g
 
 ## Next step
 
-[Confirm hosts can attest successfully](guarded-fabric-confirm-hosts-can-attest-successfully.md)
+>[!div class="nextstepaction"]
+[Confirm attestation »](guarded-fabric-confirm-hosts-can-attest-successfully.md)
+
 
 ## See also
 
