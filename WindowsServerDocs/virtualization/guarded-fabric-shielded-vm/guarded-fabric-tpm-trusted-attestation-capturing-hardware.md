@@ -36,9 +36,9 @@ We recommend that you capture the baseline and CI policy from a "reference host"
 
 ## Versioned attestation policies
 
-Windows Server 2019 introduces a new method for attestation, called v2 attestation, where a TPM certificate must be present in order to add the EKPub to HGS. The v1 attestation method used in Windows Server 2016 allowed you to override this safety check by specifying the `-Force` flag when you run `Add-HgsAttestationTpmHost` or other TPM attestation cmdlets to capture the artifacts. Beginning with Windows Serer 2019, you can allow a TPM without a certificate by specifying the `-PolicyVersion v1` flag when you run `Add-HgsAttestationTpmHost`.
+Windows Server 2019 introduces a new method for attestation, called *v2 attestation*, where a TPM certificate must be present in order to add the EKPub to HGS. The v1 attestation method used in Windows Server 2016 allowed you to override this safety check by specifying the `-Force` flag when you run `Add-HgsAttestationTpmHost` or other TPM attestation cmdlets to capture the artifacts. Beginning with Windows Server 2019, v2 attestation is used by default and you need to specify the `-PolicyVersion v1` flag when you run `Add-HgsAttestationTpmHost` if you need to register a TPM without a certificate. The `-Force` flag does not work with v2 attestation. 
 
-A host can only attest if all artifacts (EKPub + TPM baseline + CI Policy) use the same version of attestation. V2 attestation is tried first, and if that fails, v1 attestation is used.
+A host can only attest if all artifacts (EKPub + TPM baseline + CI Policy) use the same version of attestation. V2 attestation is tried first, and if that fails, v1 attestation is used. This means if you need to register a TPM identifier by using v1 attestation, you need to also specify the `-PolicyVersion v1` flag to use v1 attestation when you capture the TPM baseline and create the CI policy. If the TPM baseline and CI policy were created by using v2 attestation and then later you need to add a guarded host without a TPM certificate, you need to re-create each artifact. 
 
 ## Capture the TPM identifier (platform identifier or EKpub) for each host
 
@@ -63,7 +63,7 @@ A host can only attest if all artifacts (EKPub + TPM baseline + CI Policy) use t
     > If you encounter an error when adding a TPM identifier regarding an untrusted Endorsement Key Certificate (EKCert), ensure that the [trusted TPM root certificates have been added](guarded-fabric-install-trusted-tpm-root-certificates.md) to the HGS node.
     > Additionally, some TPM vendors do not use EKCerts.
     > You can check if an EKCert is missing by opening the XML file in an editor such as Notepad and checking for an error message indicating no EKCert was found.
-    > If this is the case, and you trust that the TPM in your machine is authentic, you can use the `-PolicyVersion v1` parameter beginning with Windows Server 2019, or the `-Force` parameter in Windows Server 2016, to add the host identifier to HGS.
+    > If this is the case, and you trust that the TPM in your machine is authentic, you can use the `-PolicyVersion v1` parameter beginning with Windows Server 2019, or the `-Force` parameter in Windows Server 2016, to add the host identifier to HGS by using v1 attestation. The CI policy and the TPM baseline need to be created by using the same attestation version.
 
 ## Create and apply a code integrity policy
 
