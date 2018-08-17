@@ -14,7 +14,7 @@ ms.date: 08/08/2018
 
 >Applies To: Windows Server
 
-Virtual network encryption allows encryption of virtual network traffic between virtual machines that communicate with each other within subnets marked as ‘Encryption Enabled.’ It also utilizes Datagram Transport Layer Security (DTLS) on the virtual subnet to encrypt packets. DTLS protects against eavesdropping, tampering, and forgery by anyone with access to the physical network.
+Virtual network encryption allows for encryption of virtual network traffic between VMs that communicate with each other within subnets marked as ‘Encryption Enabled.’ It also utilizes Datagram Transport Layer Security (DTLS) on the virtual subnet to encrypt packets. DTLS protects against eavesdropping, tampering, and forgery by anyone with access to the physical network.
 
 Virtual network encryption requires:
 - Encryption certificates installed on each of the SDN-enabled Hyper-V hosts.
@@ -23,14 +23,18 @@ Virtual network encryption requires:
 
 Once you enable encryption on a subnet, all network traffic within that subnet is encrypted automatically, in addition to any application-level encryption that may also take place.  Traffic that crosses between subnets, even if marked as encrypted, is sent unencrypted automatically. Any traffic that crosses the virtual network boundary also gets sent unencrypted.
 
+>[!NOTE]
+>When communicating with another VM on the same subnet, whether its currently connected or connected at a later time, the traffic gets encrypted automatically.
+
 >[!TIP]
 >If you must restrict applications to only communicate on the encrypted subnet, you can use Access Control Lists (ACLs) only to allow communication within the current subnet. For more information, see [Use Access Control Lists (ACLs) to Manage Datacenter Network Traffic Flow](https://review.docs.microsoft.com/en-us/windows-server/networking/sdn/manage/use-acls-for-traffic-flow).
 
 
-## <a name="bkmk_Certificate"></a>Creating the Encryption Certificate
+## Step 1. Create the Encryption Certificate
 Each host must have an encryption certificate installed. You can use the same certificate for all tenants or generate a unique one for each tenant. 
 
-### Step 1: Generate the certificate
+1.  Generate the certificate  
+
 ```
     $subjectName = "EncryptedVirtualNetworks"
     $cryptographicProviderName = "Microsoft Base Cryptographic Provider v1.0";
@@ -97,15 +101,14 @@ After running the script, a new certificate appears in the My store:
     84857CBBE7A1C851A80AE22391EB2C39BF820CE7  CN=MyNetwork
     5EFF2CE51EACA82408572A56AE1A9BCC7E0843C6  CN=EncryptedVirtualNetworks
 
-### Step 2: Export the certificate to a file
-You need two copies of the certificate, one with the private key and one without.
+2.  Export the certificate to a file.<p>You need two copies of the certificate, one with the private key and one without.
 
     $subjectName = "EncryptedVirtualNetworks"
     $cert = Get-ChildItem cert:\localmachine\my | ? {$_.Subject -eq "CN=$subjectName"}
     [System.io.file]::WriteAllBytes("c:\$subjectName.pfx", $cert.Export("PFX", "secret"))
     Export-Certificate -Type CERT -FilePath "c:\$subjectName.cer" -cert $cert
 
-### Step 3: Install the certificates on each of your hyper-v hosts 
+3.  Install the certificates on each of your hyper-v hosts 
 
     PS C:\> dir c:\$subjectname.*
 
@@ -118,7 +121,7 @@ You need two copies of the certificate, one with the private key and one without
     -a----        9/22/2017   4:54 PM            543 EncryptedVirtualNetworks.cer
     -a----        9/22/2017   4:54 PM           1706 EncryptedVirtualNetworks.pfx
 
-### Step 4: Installing on a Hyper-V host
+4.  Installing on a Hyper-V host
 
     $server = "Server01"
 
@@ -156,12 +159,9 @@ You need two copies of the certificate, one with the private key and one without
         remove-item C:\$SubjectName.pfx
     }    
 
-### Step 5: Repeat for each server in your environment
-After repeating for each server, you should have a certificate installed in the root and my store of each Hyper-V host. 
+5.  Repeat for each server in your environment.<p>After repeating for each server, you should have a certificate installed in the root and my store of each Hyper-V host. 
 
-### Step 6: Verify the installation of the certificate 
-
-Verify the certificates by checking the contents of the My and Root certificate stores:
+6.  Verify the installation of the certificate.<p>Verify the certificates by checking the contents of the My and Root certificate stores:
 
     PS C:\> enter-pssession Server1
 
@@ -180,11 +180,9 @@ Verify the certificates by checking the contents of the My and Root certificate 
     ----------                                -------
     5EFF2CE51EACA82408572A56AE1A9BCC7E0843C6  CN=EncryptedVirtualNetworks
 
-### Step 7: Make note of the Thumbprint 
+7.  Make note of the Thumbprint.<p>You must make a note of the thumbprint because you need it to create the certificate credential object in the network controller.
 
-You must make a note of the thumbprint because you need it to create the certificate credential object in the network controller.
-
-## <a name="bkmk_Certificate"></a>Creating the Certificate Credential
+## Step 2. Create the Certificate Credential
 
 After you install the certificate on each of the Hyper-V hosts connected to the network controller, you must now configure the network controller to use it.  To do this, you must create a credential object containing the certificate thumbprint from the machine with the Network Controller PowerShell modules installed. 
 
@@ -206,16 +204,19 @@ After you install the certificate on each of the Hyper-V hosts connected to the 
 >You can reuse this credential for each encrypted virtual network, or you can deploy and use a unique certificate for each tenant.
 
 
-## <a name="bkmk_Certificate"></a>Configuring a Virtual Network for Encryption
+## Step 3. Configuring a Virtual Network for Encryption
 
 This step assumes you have already created a virtual network name "My Network" and it contains at least one virtual subnet.  For information on creating virtual networks, see [Create, Delete, or Update Tenant Virtual Networks](../Manage/Create,-Delete,-or-Update-Tenant-Virtual-Networks.md).
 
-### Step 1: Retrieve the Virtual Network and Credential objects from the network controller
+>[!NOTE]
+>When communicating with another VM on the same subnet, whether its currently connected or connected at a later time, the traffic gets encrypted automatically.
+
+1.  Retrieve the Virtual Network and Credential objects from the network controller
 
     $vnet = Get-NetworkControllerVirtualNetwork -ConnectionUri $uri -ResourceId "MyNetwork"
     $certcred = Get-NetworkControllerCredential -ConnectionUri $uri -ResourceId "EncryptedNetworkCertificate"
 
-### Step 2: Add a reference to the certificate credential and enable encryption on individual subnets
+2.  Add a reference to the certificate credential and enable encryption on individual subnets
 
     $vnet.properties.EncryptionCredential = $certcred
 
@@ -223,15 +224,15 @@ This step assumes you have already created a virtual network name "My Network" a
     # Repeat for each subnet where encryption is needed
     $vnet.properties.Subnets[0].properties.EncryptionEnabled = $true
 
-### Step 3: Put the updated Virtual Network object into the network controller
+3.  Put the updated Virtual Network object into the network controller
 
     New-NetworkControllerVirtualNetwork -ConnectionUri $uri -ResourceId $vnet.ResourceId -Properties $vnet.Properties -force
 
 
-You’re done once you complete these steps. 
+_**Congratulations!**_ You’re done once you complete these steps. 
 
->[!NOTE]
->When communicating with another VM on the same subnet, whether its currently connected or connected at a later time, the traffic gets encrypted automatically.
+
+## Next steps
 
 
 

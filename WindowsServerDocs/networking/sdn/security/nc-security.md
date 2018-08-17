@@ -97,7 +97,7 @@ You can configure this mode with the **ClusterAuthentication** parameter of the 
 
 For more information, see [Install-NetworkControllerCluster](https://technet.microsoft.com/itpro/powershell/windows/network-controller/install-networkcontrollercluster).
 
-## Authentication
+### Authentication
 
 When you configure authentication for Network Controller Cluster communication, you allow Network Controller cluster nodes to verify the identity of the other nodes with which they are communicating.
 
