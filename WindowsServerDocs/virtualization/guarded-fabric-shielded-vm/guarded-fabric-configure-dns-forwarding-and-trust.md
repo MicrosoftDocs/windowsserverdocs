@@ -13,10 +13,6 @@ ms.date: 07/23/2018
 
 >Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
->[!div class="step-by-step"]
-[« Configure fabric DNS](guarded-fabric-configuring-fabric-dns-ad.md)
-[Configure HTTPS »](guarded-fabric-configure-hgs-https.md)
-
 >[!IMPORTANT]
 >AD mode is deprecated beginning with Windows Server 2019. For environments where TPM attestation is not possible, configure [host key attestation](guarded-fabric-initialize-hgs-key-mode.md). Host key attestation provides similar assurance to AD mode and is simpler to set up. 
 
@@ -34,3 +30,7 @@ Use the following steps to set up DNS forwarding and establish a one-way trust w
 
         netdom trust relecloud.com /domain:fabrikam.com /userD:fabrikam.com\Administrator /passwordD:<password> /add
 
+## Next step 
+
+>[!div class="nextstepaction"]
+[Configure HTTPS](guarded-fabric-configure-hgs-https.md)

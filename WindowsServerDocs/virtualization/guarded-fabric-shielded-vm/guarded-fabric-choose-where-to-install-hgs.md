@@ -36,3 +36,7 @@ Choose the installation option that best suits your environment:
 
 - [Install HGS in its own dedicated forest](guarded-fabric-install-hgs-default.md)
 - [Install HGS in an existing bastion forest](guarded-fabric-install-hgs-in-a-bastion-forest.md)
+
+## Next step
+
+[Initialize HGS](guarded-fabric-initialize-hgs.md)

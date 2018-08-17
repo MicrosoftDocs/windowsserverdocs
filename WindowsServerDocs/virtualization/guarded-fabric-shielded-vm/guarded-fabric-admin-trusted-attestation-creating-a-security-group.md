@@ -49,7 +49,7 @@ This topic describes the intermediate steps to prepare Hyper-V hosts to become g
 ## Next step
 
 >[!div class="nextstepaction"]
-[Confirm attestation »](guarded-fabric-confirm-hosts-can-attest-successfully.md)
+[Confirm attestation](guarded-fabric-confirm-hosts-can-attest-successfully.md)
 
 
 ## See also
