@@ -13,10 +13,6 @@ ms.date: 07/23/2018
 
 >Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
->[!div class="step-by-step"]
-[« Install HGS in a new forest](guarded-fabric-install-hgs-default.md)
-[Configure fabric DNS »](guarded-fabric-configuring-fabric-dns-ad.md)
-
 >[!IMPORTANT]
 >Admin-trusted attestation (AD mode) is deprecated beginning with Windows Server 2019. For environments where TPM attestation is not possible, configure [host key attestation](guarded-fabric-initialize-hgs-key-mode-default.md). Host key attestation provides similar assurance to AD mode and is simpler to set up. 
 
@@ -43,3 +39,8 @@ ms.date: 07/23/2018
 4.  [!INCLUDE [Initialize HGS](../../../includes/guarded-fabric-initialize-hgs-default-step-four.md)]  
 
 5.  [!INCLUDE [Initialize HGS](../../../includes/guarded-fabric-initialize-hgs-default-step-five.md)]
+
+## Next step
+
+>[!div class="nextstepaction"]
+[Configure fabric DNS](guarded-fabric-configuring-fabric-dns-ad.md)

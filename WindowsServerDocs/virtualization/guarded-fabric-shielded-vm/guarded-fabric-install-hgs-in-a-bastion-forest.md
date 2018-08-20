@@ -13,9 +13,6 @@ ms.date: 07/05/2017
 
 >Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
->[!div class="step-by-step"]
-[« Prepare for HGS](guarded-fabric-prepare-for-hgs.md)
-[Initialize HGS »](guarded-fabric-initialize-hgs.md)
 
 ## Join the HGS server to the existing domain
 

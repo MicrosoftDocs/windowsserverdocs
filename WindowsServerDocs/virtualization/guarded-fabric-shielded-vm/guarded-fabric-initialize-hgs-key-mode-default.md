@@ -11,11 +11,8 @@ ms.date: 08/28/2017
 
 # Initialize the HGS cluster using key mode in a new dedicated forest (default)
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016
 
->[!div class="step-by-step"]
-[« Install HGS in a new forest](guarded-fabric-install-hgs-default.md)
-[Create host key »](guarded-fabric-create-host-key.md)
 
 1.  [!INCLUDE [Initialize HGS](../../../includes/guarded-fabric-initialize-hgs-default-step-one.md)] 
 2.  [!INCLUDE [Obtain certificates for HGS](../../../includes/guarded-fabric-initialize-hgs-default-step-two.md)]
@@ -40,3 +37,9 @@ ms.date: 08/28/2017
 4.  [!INCLUDE [Initialize HGS](../../../includes/guarded-fabric-initialize-hgs-default-step-four.md)]  
 
 5.  [!INCLUDE [Initialize HGS](../../../includes/guarded-fabric-initialize-hgs-default-step-five.md)]
+
+
+## Next step
+
+>[!div class="nextstepaction"]
+[Create host key](guarded-fabric-create-host-key.md)

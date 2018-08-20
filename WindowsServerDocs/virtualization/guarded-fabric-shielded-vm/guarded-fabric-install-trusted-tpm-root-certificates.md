@@ -11,11 +11,7 @@ ms.date: 08/28/2017
 
 # Install trusted TPM root certificates
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
-
->[!div class="step-by-step"]
-[« Initialize HGS](guarded-fabric-initialize-hgs-tpm-mode.md)
-[Configure fabric DNS »](guarded-fabric-configuring-fabric-dns-tpm.md)
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016
 
 If you chose TPM mode, or expect to migrate to TPM mode in the future, you need to install root certificates to issue the endorsement key in each host's TPM module.
 These root certificates are different from those installed by default in Windows and represent the specific root and intermediate certificates used by TPM vendors.
@@ -50,7 +46,10 @@ The TrustedTpm.cab file is updated regularly with new vendor certificates as the
 To add new certificates or ones intentionally skipped during an earlier installation, simply repeat the above steps on every node in your HGS cluster.
 Existing certificates will remain trusted but new certificates found in the expanded cab file will be added to the trusted TPM stores.
 
- 
+## Next step
+
+>[!div class="nextstepaction"]
+[Configure fabric DNS](guarded-fabric-configuring-fabric-dns-tpm.md)
 
 
 

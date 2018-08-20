@@ -10,11 +10,14 @@ ms.technology: security-guarded-fabric
 ms.date: 10/14/2016
 ---
 
->[!div class="step-by-step"]
-[« Install TPM root certs](guarded-fabric-install-trusted-tpm-root-certificates.md)
-[Configure Https »](guarded-fabric-configure-hgs-https.md)
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 [!INCLUDE [Configure fabric DNS](../../../includes/guarded-fabric-configure-fabric-dns.md)] 
+
+## Next step
+
+>[!div class="nextstepaction"]
+[Configure HTTPS](guarded-fabric-configure-hgs-https.md)
 
 ## See also
 

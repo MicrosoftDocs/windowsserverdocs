@@ -10,13 +10,9 @@ ms.technology: security-guarded-fabric
 ms.date: 10/14/2016
 ---
 
->[!div class="step-by-step"]
-[« Deploy a shielded using VMM](guarded-fabric-tenant-deploys-shielded-vm-using-vmm.md)
-[Shield an existing VM »](guarded-fabric-vm-shielding-helper-vhd.md)
-
 # Shielded VMs  for tenants - Deploying a shielded VM by using Windows Azure Pack
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016
 
 If your hosting service provider supports it, you can use Windows Azure Pack to deploy a shielded VM.
 
