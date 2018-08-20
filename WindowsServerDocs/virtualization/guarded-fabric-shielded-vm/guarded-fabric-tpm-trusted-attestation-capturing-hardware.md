@@ -70,17 +70,13 @@ Each guarded host must have a code integrity policy applied in order to run shie
 You specify the exact code integrity policies you trust by adding them to HGS. 
 Code integrity policies can be configured to enforce the policy, blocking any software that does not comply with the policy, or simply audit (log an event when software not defined in the policy is executed). 
 It is recommended that you first create the CI policy in audit (logging) mode to see if it's missing anything, then enforce the policy for host production workloads. 
-For more information about generating CI policies and the enforcement mode, see:
 
-- [Planning and getting started on the Device Guard deployment process](https://technet.microsoft.com/itpro/windows/keep-secure/planning-and-getting-started-on-the-device-guard-deployment-process#getting-started-on-the-deployment-process)
-- [Deploy Device Guard: deploy code integrity policies](https://technet.microsoft.com/itpro/windows/keep-secure/deploy-device-guard-deploy-code-integrity-policies)
-
-Before you can use the [New-CIPolicy](https://technet.microsoft.com/library/mt634473.aspx) cmdlet to generate a Code Integrity policy, you will need to decide the rule levels to use. 
+Before you can use the [New-CIPolicy](https://docs.microsoft.com/powershell/module/configci/new-cipolicy?view=win10-ps) cmdlet to generate a Code Integrity policy, you will need to decide the rule levels to use. 
 For Server Core, we recommend a primary level of **FilePublisher** with fallback to **Hash**. 
 This allows files with publishers to be updated without changing the CI policy. 
 Addition of new files or modifications to files without publishers (which are measured with a hash) will require you to create a new CI policy matching the new system requirements. 
 For Server with Desktop Experience, we recommend a primary level of **Publisher** with fallback to **Hash**. 
-For more information about the available CI policy rule levels, see [Deploy code integrity policies: policy rules and file rules](https://technet.microsoft.com/itpro/windows/keep-secure/deploy-code-integrity-policies-policy-rules-and-file-rules) and cmdlet help.
+For more information about the available CI policy rule levels, see [Deploy code integrity policies: policy rules and file rules](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/select-types-of-rules-to-create#windows-defender-application-control-policy-rules) and cmdlet help.
 
 1.  On the reference host, generate a new code integrity policy. The following commands create a policy at the **FilePublisher** level with fallback to **Hash**. It then converts the XML file to the binary file format Windows and HGS need to apply and measure the CI policy, respectively.
 
@@ -90,7 +86,8 @@ For more information about the available CI policy rule levels, see [Deploy code
     ConvertFrom-CIPolicy -XmlFilePath 'C:\temp\HW1CodeIntegrity.xml' -BinaryFilePath 'C:\temp\HW1CodeIntegrity.p7b'
     ```
 
-    >**Note**&nbsp;&nbsp;The above command creates a CI policy in audit mode only. It will not block unauthorized binaries from running on the host. You should only use enforced policies in production.
+    >[!NOTE]
+    >The above command creates a CI policy in audit mode only. It will not block unauthorized binaries from running on the host. You should only use enforced policies in production.
 
 2.  Keep your Code Integrity policy file (XML file) where you can easily find it. You will need to edit this file later to enforce the CI policy or merge in changes from future updates made to the system.
 
@@ -119,7 +116,8 @@ For more information about the available CI policy rule levels, see [Deploy code
     Restart-Computer
     ```
 
-    >**Note**&nbsp;&nbsp;Be careful when applying CI policies to hosts and when updating any software on these machines. Any kernel mode drivers that are non-compliant with the CI Policy may prevent the machine from starting up. For best practices regarding CI policies, see [Planning and getting started on the Device Guard deployment process](https://technet.microsoft.com/itpro/windows/keep-secure/planning-and-getting-started-on-the-device-guard-deployment-process#getting-started-on-the-deployment-process) and [Deploy Device Guard: deploy code integrity policies](https://technet.microsoft.com/itpro/windows/keep-secure/deploy-device-guard-deploy-code-integrity-policies).
+    >[!NOTE]
+    >Be careful when applying CI policies to hosts and when updating any software on these machines. Any kernel mode drivers that are non-compliant with the CI Policy may prevent the machine from starting up. 
 
 6.  Provide the binary file (in this example, HW1CodeIntegrity\_enforced.p7b) to the HGS administrator.
 
@@ -137,7 +135,8 @@ A TPM baseline is required for each unique class of hardware in your datacenter 
 
 1. On the reference host, make sure that the Hyper-V role and the Host Guardian Hyper-V Support feature are installed.
 
-    >**Warning**&nbsp;&nbsp;The Host Guardian Hyper-V Support feature enables Virtualization-based protection of code integrity that may be incompatible with some devices. We strongly recommend testing this configuration in your lab before enabling this feature. Failure to do so may result in unexpected failures up to and including data loss or a blue screen error (also called a stop error).
+    >[!WARNING]
+    >The Host Guardian Hyper-V Support feature enables Virtualization-based protection of code integrity that may be incompatible with some devices. We strongly recommend testing this configuration in your lab before enabling this feature. Failure to do so may result in unexpected failures up to and including data loss or a blue screen error (also called a stop error).
 
     ```powershell
     Install-WindowsFeature Hyper-V, HostGuardian -IncludeManagementTools -Restart
@@ -149,7 +148,8 @@ A TPM baseline is required for each unique class of hardware in your datacenter 
     Get-HgsAttestationBaselinePolicy -Path 'HWConfig1.tcglog'
     ```
 
-    >**Note**&nbsp;&nbsp;You will need to use the **-SkipValidation** flag if the reference host does not have Secure Boot enabled, an IOMMU present, Virtualization Based Security enabled and running, or a code integrity policy applied. These validations are designed to make you aware of the minimum requirements of running a shielded VM on the host. Using the -SkipValidation flag does not change the output of the cmdlet; it merely silences the errors.
+    >[!NOTE]
+    >You will need to use the **-SkipValidation** flag if the reference host does not have Secure Boot enabled, an IOMMU present, Virtualization Based Security enabled and running, or a code integrity policy applied. These validations are designed to make you aware of the minimum requirements of running a shielded VM on the host. Using the -SkipValidation flag does not change the output of the cmdlet; it merely silences the errors.
 
 3.  Provide the TPM baseline (TCGlog file) to the HGS administrator.
 
