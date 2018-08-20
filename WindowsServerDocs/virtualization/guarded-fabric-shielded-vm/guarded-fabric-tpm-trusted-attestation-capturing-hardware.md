@@ -7,7 +7,7 @@ ms.assetid: 915b1338-5085-481b-8904-75d29e609e93
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 08/28/2017
+ms.date: 08/20/2018
 ---
 
 # Authorize guarded hosts using TPM-based attestation
