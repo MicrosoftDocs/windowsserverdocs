@@ -107,6 +107,8 @@ WSUS requires one of the following databases:
 
 -   Windows Internal Database (WID)
 
+-   Microsoft SQL Server 2017
+
 -   Microsoft SQL Server 2016
 
 -   Microsoft SQL Server 2014
