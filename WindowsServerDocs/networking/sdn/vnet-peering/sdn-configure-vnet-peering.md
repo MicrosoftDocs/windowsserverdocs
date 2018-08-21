@@ -18,13 +18,13 @@ ms.date: 08/08/2018
 
 Configuring the virtual network peering involves creating two virtual networks that get peered.
 
--   Step 1. Create the first virtual network
+- [Step 1. Create the first virtual network](#step-1-create-the-first-virtual-network)
 
--   Step 2. Create the second virtual network
+- [Step 2. Create the second virtual network](#step-2-create-the-second-virtual-network)
 
--   Step 3. Configure peering from the first virtual network to the second virtual network
+- [Step 3. Configure peering from the first virtual network to the second virtual network](#step-3-configure-peering-from-the-first-virtual-network-to-the-second-virtual-network)
 
--   Step 4. Configure peering from the second virtual network to the first virtual network
+- [Step 4. Configure peering from the second virtual network to the first virtual network](#step-4-configure-peering-from-the-second-virtual-network-to-the-first-virtual-network)
 
 
 >[!NOTE]
@@ -98,34 +98,25 @@ New-NetworkControllerVirtualNetwork -ResourceId "Woodgrove_VNet1" -ConnectionUri
 
 In this step, you configure the peering between the first virtual network and the second virtual network you created in the previous two steps. The following example script establishes virtual network peering from **Contoso_vnet1** to **Woodgrove_vnet1**.
 
-1.  What's happening here?
-
 ```PowerShell
 $peeringProperties = New-Object Microsoft.Windows.NetworkController.VirtualNetworkPeeringProperties
-$vnet2=Get-NetworkControllerVirtualNetwork -ConnectionUri $uri -ResourceId “Woodgrove_VNet1"
+$vnet2 = Get-NetworkControllerVirtualNetwork -ConnectionUri $uri -ResourceId "Woodgrove_VNet1"
 $peeringProperties.remoteVirtualNetwork = $vnet2
 
 #Indicate whether communication between the two virtual networks
-
 $peeringProperties.allowVirtualnetworkAccess = $true
 
-
 #Indicates whether forwarded traffic is allowed across the vnets
-
 $peeringProperties.allowForwardedTraffic = $true
 
-
 #Indicates whether the peer virtual network can access this virtual networks gateway
-
 $peeringProperties.allowGatewayTransit = $false
 
-
 #Indicates whether this virtual network uses peer virtual networks gateway
-
 $peeringProperties.useRemoteGateways =$false
 
-
 New-NetworkControllerVirtualNetworkPeering -ConnectionUri $uri -VirtualNetworkId “Contoso_vnet1” -ResourceId “ContosotoWoodgrove” -Properties $peeringProperties
+
 ```
 
 >[!IMPORTANT]
@@ -135,24 +126,27 @@ New-NetworkControllerVirtualNetworkPeering -ConnectionUri $uri -VirtualNetworkId
 
 In this step, you configure the peering between the second virtual network and the first virtual network you created in steps 1 and 2 above. The following example script establishes virtual network peering from **Woodgrove_vnet1** to **Contoso_vnet1**.
 
-``` powershell
-$peeringProperties = New-Object Microsoft.Windows.NetworkController.VirtualNetworkPeeringProperties
+```PowerShell
+$peeringProperties = New-Object Microsoft.Windows.NetworkController.VirtualNetworkPeeringProperties 
+$vnet2=Get-NetworkControllerVirtualNetwork -ConnectionUri $uri -ResourceId "Contoso_VNet1"
+$peeringProperties.remoteVirtualNetwork = $vnet2 
 
-$vnet2=Get-NetworkControllerVirtualNetwork -ConnectionUri $uri -ResourceId “Contoso_VNet1"
+# Indicates whether communication between the two virtual networks is allowed 
+$peeringProperties.allowVirtualnetworkAccess = $true 
 
-$peeringProperties.remoteVirtualNetwork = $vnet2
+# Indicates whether forwarded traffic will be allowed across the vnets
+$peeringProperties.allowForwardedTraffic = $true 
 
-#Communication between the two virtual networks and forward traffic across vnets
+# Indicates whether the peer virtual network can access this virtual network’s gateway
+$peeringProperties.allowGatewayTransit = $false 
 
-$peeringProperties.allowVirtualnetworkAccess = $true
-$peeringProperties.allowForwardedTraffic = $true
+# Indicates whether this virtual network will use peer virtual network’s gateway
+$peeringProperties.useRemoteGateways =$false 
 
-#Access this virtual network's gateway and use peer virtual network's gateway
+New-NetworkControllerVirtualNetworkPeering -ConnectionUri $uri -VirtualNetworkId “Woodgrove_vnet1” -ResourceId “WoodgrovetoContoso” -Properties $peeringProperties 
 
-$peeringProperties.allowGatewayTransit = $false
-$peeringProperties.useRemoteGateways =$false
-
-New-NetworkControllerVirtualNetworkPeering -ConnectionUri $uri -VirtualNetworkId “Woodgrove_vnet1” -ResourceId “WoodgrovetoContoso” -Properties $peeringProperties
 ```
 
 After creating this peering, the vnet peering status shows **Connected** for both the peers. Now, virtual machines in one virtual network can communicate with virtual machines in the peered virtual network.
+
+---
