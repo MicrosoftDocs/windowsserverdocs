@@ -119,7 +119,7 @@ New-NetworkControllerVirtualNetworkPeering -ConnectionUri $uri -VirtualNetworkId
 ```
 
 >[!IMPORTANT]
->After creating this peering, the vnet peering status shows **Initiated**.
+>After creating this peering, the vnet status shows **Initiated**.
 
 ## Step 4. Configure peering from the second virtual network to the first virtual network
 
