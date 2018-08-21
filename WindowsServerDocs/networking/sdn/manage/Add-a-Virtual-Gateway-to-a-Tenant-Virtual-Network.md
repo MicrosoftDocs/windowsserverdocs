@@ -460,38 +460,45 @@ New-NetworkControllerVirtualGateway -ConnectionUri $uri  -ResourceId "Contoso_Vi
 ## Modify a gateway for a virtual network  
 
   
-1.  **Retrieve the configuration for the component and store it in a variable.**  
-    ```PowerShell  
-    $nwConnection = Get-NetworkControllerVirtualGatewayNetworkConnection -ConnectionUri $uri -VirtualGatewayId "Contoso_VirtualGW" -ResourceId "Contoso_IPSecGW"  
-    ```  
-2.  **Navigate the variable structure to reach the required property and set it to the updates value.**  
-    ```PowerShell  
-    $nwConnection.properties.IpSecConfiguration.SharedSecret = "C0mplexP@ssW0rd"  
-    ```  
-3.  **Add the modified configuration to replace the older configuration on Network Controller.**  
-    ```PowerShell  
-    New-NetworkControllerVirtualGatewayNetworkConnection -ConnectionUri $uri -VirtualGatewayId "Contoso_VirtualGW" -ResourceId $nwConnection.ResourceId -Properties $nwConnection.Properties -Force  
-    ```  
+### Retrieve the configuration for the component and store it in a variable
+
+```PowerShell  
+$nwConnection = Get-NetworkControllerVirtualGatewayNetworkConnection -ConnectionUri $uri -VirtualGatewayId "Contoso_VirtualGW" -ResourceId "Contoso_IPSecGW"  
+```  
+
+### Navigate the variable structure to reach the required property and set it to the updates value
+  
+```PowerShell  
+$nwConnection.properties.IpSecConfiguration.SharedSecret = "C0mplexP@ssW0rd"  
+```  
+
+### Add the modified configuration to replace the older configuration on Network Controller
+ 
+```PowerShell  
+New-NetworkControllerVirtualGatewayNetworkConnection -ConnectionUri $uri -VirtualGatewayId "Contoso_VirtualGW" -ResourceId $nwConnection.ResourceId -Properties $nwConnection.Properties -Force  
+```  
 
 ## Remove a gateway from a virtual network 
 You can use the following Windows PowerShell commands to remove either individual gateway features or the entire gateway.  
 
-1.  **Remove a network connection.**  
-    ```PowerShell  
-    Remove-NetworkControllerVirtualGatewayNetworkConnection -ConnectionUri $uri -VirtualGatewayId "Contoso_VirtualGW" -ResourceId "Contoso_IPSecGW" -Force  
-    ```  
-2.  **Remove a BGP peer.**  
-    ```PowerShell  
-    Remove-NetworkControllerVirtualGatewayBgpPeer -ConnectionUri $uri -VirtualGatewayId "Contoso_VirtualGW" -BgpRouterName "Contoso_BgpRouter1" -ResourceId "Contoso_IPSec_Peer" -Force  
-    ```  
-3.  **Remove a BGP router**.  
-    ```PowerShell  
-    Remove-NetworkControllerVirtualGatewayBgpRouter -ConnectionUri $uri -VirtualGatewayId "Contoso_VirtualGW" -ResourceId "Contoso_BgpRouter1" -Force  
-    ```
-4.  **Remove a gateway.**  
+### Remove a network connection  
+```PowerShell  
+Remove-NetworkControllerVirtualGatewayNetworkConnection -ConnectionUri $uri -VirtualGatewayId "Contoso_VirtualGW" -ResourceId "Contoso_IPSecGW" -Force  
+```  
 
-    ```PowerShell  
-    Remove-NetworkControllerVirtualGateway -ConnectionUri $uri -ResourceId "Contoso_VirtualGW" -Force   
-    ```  
+### Remove a BGP peer 
+```PowerShell  
+Remove-NetworkControllerVirtualGatewayBgpPeer -ConnectionUri $uri -VirtualGatewayId "Contoso_VirtualGW" -BgpRouterName "Contoso_BgpRouter1" -ResourceId "Contoso_IPSec_Peer" -Force  
+```  
+
+### Remove a BGP router
+```PowerShell  
+Remove-NetworkControllerVirtualGatewayBgpRouter -ConnectionUri $uri -VirtualGatewayId "Contoso_VirtualGW" -ResourceId "Contoso_BgpRouter1" -Force  
+```
+
+### Remove a gateway  
+```PowerShell  
+Remove-NetworkControllerVirtualGateway -ConnectionUri $uri -ResourceId "Contoso_VirtualGW" -Force   
+```  
 
 ---
