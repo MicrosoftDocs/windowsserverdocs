@@ -391,6 +391,7 @@
 #### [Secedit:validate](secedit-validate.md)
 ### [serverceipoptin](serverceipoptin.md)
 ### [Servermanagercmd](Servermanagercmd.md)
+### [set](set_1.md)
 ### [setlocal](setlocal.md)
 ### [setx](setx.md)
 ### [sfc](sfc.md)
