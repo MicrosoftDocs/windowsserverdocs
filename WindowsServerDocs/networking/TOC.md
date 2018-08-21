@@ -251,15 +251,25 @@
 ##### [Use Network Virtual Appliances on a Virtual Network](sdn/manage/Use-Network-Virtual-Appliances-on-a-VN.md)
 ##### [Guest Clustering in a Virtual Network](sdn/manage/guest-clustering.md)
 #### [Update, Backup, and Restore Software Defined Networking Infrastructure](sdn/manage/Update-Backup-Restore.md)
+
 ### [Security for SDN](sdn/security/sdn-security-top.md)
 #### [Secure the Network Controller](sdn/security/nc-security.md)
 #### [Manage Certificates for Software Defined Networking](sdn/security/sdn-manage-certs.md)
 #### [Configure Encryption for a Virtual Subnet](sdn/vnet-encryption/sdn-config-vnet-encryption.md)
+#### [Kerberos with Service Principal Name (SPN)](sdn/security/kerberos-with-spn.md)
+
+### [Virtual network peering](sdn/vnet-peering/sdn-vnet-peering.md)
+#### [Configure virtual network peering](sdn/vnet-peering/sdn-configure-vnet-peering.md)
+
+### [Egress metering in virtual network](sdn/sdn-egress.md)
+
 ### [Troubleshoot SDN](sdn/troubleshoot/Troubleshoot-Software-Defined-Networking.md)
 #### [Troubleshoot the Windows Server Software Defined Networking Stack](sdn/troubleshoot/troubleshoot-windows-server-software-defined-networking-stack.md)
+
 ### [System Center Technologies for SDN](sdn/Sc-Tech-for-Sdn.md)
 ### [Microsoft Azure and SDN](sdn/Azure_and_Sdn.md)
 ### [Contact the Datacenter and Cloud Networking Team](sdn/contact-sdn-team.md)
+
 ## [Virtual Private Networking (VPN)](technologies/vpn-stub.md)
 
 ## [Windows Internet Name Service (WINS)](technologies/wins/wins-top.md)
