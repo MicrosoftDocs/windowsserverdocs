@@ -8,7 +8,7 @@ author: toklima
 ms.technology: storage
 audience: "IT Pro"
 ms.topic: article
-ms.date: 10/16/2017
+ms.date: 08/21/2018
 ---
 # Fsutil
 
@@ -18,6 +18,13 @@ Performs tasks that are related to file allocation table (FAT) and NTFS file sys
 
 > [!Note] 
 > You must be logged on as an administrator or a member of the Administrators group to use Fsutil. The Fsutil command is quite powerful and should be used only by advanced users who have a thorough knowledge of Windows operating systems.
+>
+>You have to enable Windows Subsystem for Linux before you can run **Fsutil**. Run the following command as Administrator in PowerShell to enable this optional feature:
+>
+>```
+> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+>```
+> You'll be prompted to restart your computer once it's installed. After your computer restarts, you'll be able to run **Fsutil** as an administrator.
 
 ## Parameters
 
