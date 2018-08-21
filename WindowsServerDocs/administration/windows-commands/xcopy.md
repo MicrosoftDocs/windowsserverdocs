@@ -12,7 +12,7 @@ ms.assetid: 76a310d7-9925-4571-a252-0e28960d5f89
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 05/07/2018
+ms.date: 08/21/2018
 ---
 
 # xcopy
@@ -72,7 +72,7 @@ Xcopy <Source> [<Destination>] [/w] [/p] [/c] [/v] [/q] [/f] [/l] [/g] [/d [:MM-
     If you lose your connection during the copy phase (for example, if the server going offline severs the connection), it resumes after you reestablish the connection. **/z** also displays the percentage of the copy operation completed for each file.
 -   Using **/y** in the COPYCMD environment variable.
 
-    You can use **/y** in the COPYCMD environment variable. You can override this command by using **/-y** on the command line. By default, you are prompted to overwrite, unless you run **xcopy** from within a batch script.
+    You can use **/y** in the COPYCMD environment variable. You can override this command by using **/-y** on the command line. By default, you are prompted to overwrite.
 -   Copying encrypted files
 
     Copying encrypted files to a volume that does not support EFS results in an error. Decrypt the files first or copy the files to a volume that does support EFS.
