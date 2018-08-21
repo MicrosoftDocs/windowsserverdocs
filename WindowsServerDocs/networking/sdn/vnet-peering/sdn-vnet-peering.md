@@ -90,6 +90,5 @@ You can monitor the status of your peering connection, which can be in one of th
 [infographic of the states]
 
 ## Next steps
-
-Configure the virtual network peering.
+[Configure the virtual network peering](sdn-configure-vnet-peering.md): In this procedure, you use Windows PowerShell to find the HNV provider logical network to create two virtual networks, each with one subnet. You also configure the peering between the two virtual networks.
 
