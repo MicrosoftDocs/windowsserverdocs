@@ -10,7 +10,7 @@ ms.author: pashort
 author: shortpatti
 ---
 
-# Network Controller Security
+# Secure the Network Controller
 
 You can use this topic to learn how to configure security for all communication between Network Controller and other software and devices. 
 
@@ -29,7 +29,7 @@ The communication paths that you can secure include Northbound communication on 
 
 Network Controller supports authentication, authorization, and encryption for Northbound communication. The following sections provide information on how to configure these security settings.
 
-**Authentication**
+### Authentication
 
 When you configure authentication for Network Controller Northbound communication, you allow Network Controller cluster nodes and management clients to verify the identity of the device with which they are communicating.
 
@@ -51,7 +51,7 @@ For more information, see the following topics.
 - [Install-NetworkController](https://technet.microsoft.com/itpro/powershell/windows/network-controller/install-networkcontroller)
 - [Set-NetworkController](https://technet.microsoft.com/itpro/powershell/windows/network-controller/set-networkcontroller)
 
-**Authorization**
+### Authorization
 
 When you configure authorization for Network Controller Northbound communication, you allow Network Controller cluster nodes and management clients to verify that the device with which they are communicating is trusted and has permission to participate in the communication.
 
@@ -68,7 +68,7 @@ For more information, see the following topics.
 - [Install-NetworkController](https://technet.microsoft.com/itpro/powershell/windows/network-controller/install-networkcontroller)
 - [Set-NetworkController](https://technet.microsoft.com/itpro/powershell/windows/network-controller/set-networkcontroller)
 
-**Encryption**
+### Encryption
 
 Northbound communication uses Secure Sockets Layer \(SSL\) to create an encrypted channel between management clients and Network Controller nodes. SSL encryption for Northbound communication includes the following requirements.
 
@@ -97,7 +97,7 @@ You can configure this mode with the **ClusterAuthentication** parameter of the 
 
 For more information, see [Install-NetworkControllerCluster](https://technet.microsoft.com/itpro/powershell/windows/network-controller/install-networkcontrollercluster).
 
-**Authentication**
+## Authentication
 
 When you configure authentication for Network Controller Cluster communication, you allow Network Controller cluster nodes to verify the identity of the other nodes with which they are communicating.
 
@@ -112,7 +112,7 @@ Network Controller supports the following three modes of authentication between 
 
 3. **None**. When you choose this mode, there is no authentication performed between Network Controller nodes. This mode is provided only for testing purposes, and is not recommended for use in a production environment.
 
-**Authorization**
+### Authorization
 
 When you configure authorization for Network Controller Cluster communication, you allow Network Controller cluster nodes to verify that the nodes with which they are communicating are trusted and have permission to participate in the communication.
 
@@ -124,7 +124,7 @@ For each of the authentication modes supported by Network Controller, the follow
 
 3. **None**. When you choose this mode, there is no authorization performed between Network Controller nodes. This mode is provided only for testing purposes, and is not recommended for use in a production environment.
 
-**Encryption**
+### Encryption
 
 Communication between Network Controller nodes is encrypted using WCF Transport level encryption. This form of encryption is used when the authentication and authorization methods are either Kerberos or X509 certificates. For more information, see the following topics.
 
@@ -148,7 +148,7 @@ The following table provides information about Network Controller interaction wi
 
 For each of these protocols, the communication mechanism is described in the following section.
 
-**Authentication**
+### Authentication
 
 For Southbound communication, the following protocols and authentication methods are used.
 
@@ -159,7 +159,7 @@ For Southbound communication, the following protocols and authentication methods
 2. **WinRM**. For this protocol, authentication is performed by using Kerberos \(for domain joined machines\) and
 by using certificates \(for non-domain joined machines\).
 
-**Authorization**
+### Authorization
 
 For Southbound communication, the following protocols and authorization methods are used.
 
@@ -170,7 +170,7 @@ Controller DNS name stored on the peer device.
 
 3.  **OVSDB**. There is no authorization provided for this protocol.
 
-**Encryption**
+### Encryption
 
 For Southbound communication, the following encryption methods are used for protocols.
 

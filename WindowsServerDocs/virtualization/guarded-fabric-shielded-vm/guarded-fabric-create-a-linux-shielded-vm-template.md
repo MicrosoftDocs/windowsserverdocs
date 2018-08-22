@@ -7,7 +7,7 @@ ms.assetid: d0e1d4fb-97fc-4389-9421-c869ba532944
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 06/05/2018
+ms.date: 08/15/2018
 ---
 
 # Create a Linux shielded VM template disk
@@ -58,7 +58,7 @@ These steps will walk you through the bare minimum requirements to get a Linux V
 3.  On your management computer running Windows Server version 1709, install the Shielded VM Remote Server Administration Tools by running the following command:
 
     ```powershell
-    Install-WindowsFeature RSAT-Hyper-V-Tools
+    Install-WindowsFeature RSAT-Shielded-VM-Tools
     ```
 
 4.  Open **Hyper-V Manager** on your management computer and connect to your virtualization server.

@@ -40,7 +40,6 @@ Yes. System Insights can independently run on each individual failover cluster n
 
 Note that by default, System Insights storage and volume capacity forecasting predictions are limited to non-clustered storage. This avoids having each cluster node redundantly forecast on clustered storage that is accessible from all nodes of the cluster. We, however, expect to add new functionality to System Insights in a future preview build that could optionally provide storage & volume capacity forecasting on clustered storage (e.g. CSV volumes), from each cluster node where this option is enabled.   
 
-
 ## How expensive is it to run the default capabilities?
 
 Each default capability is inexpensive to run. Each capability will take longer to run as you collect more data, but they typically should complete in a just a few seconds. 

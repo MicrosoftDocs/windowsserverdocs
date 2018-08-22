@@ -5,7 +5,7 @@ description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 05/31/2017
+ms.date: 08/17/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 
@@ -40,6 +40,7 @@ Below is an alphabetical list of Microsoft and third-party providers with MFA of
 |SafeNet, Inc.|SafeNet Authentication Service (SAS) Agent for AD FS|[SafeNet Authentication Service: AD FS Agent Configuration Guide](http://www.safenet-inc.com/resources/integration-guide/data-protection/Safenet_Authentication_Service/SafeNet_Authentication_Service__AD_FS_Agent_Configuration_Guide/?langtype=1033)|
 |Swisscom|Mobile ID Authentication Service and Signature Services|[Mobile ID Authentication Service](http://swisscom.ch/mid)|
 |Symantec|Symantec Validation and ID Protection Service (VIP)|[Symantec Validation and ID Protection Service (VIP)](http://www.symantec.com/vip-authentication-service)|
+|Trusona|Essential (passwordless MFA) and Executive (Essential + Identity Proofing)| [Trusona Multi-factor Authentication](https://www.trusona.com/solution-overview/) 
 
 ## Custom Authentication Method for AD FS in Windows Server 2012 R2
 We now provide instructions for building your own custom authentication method for AD FS in Windows Server 2012 R2. For more information, see [Build a Custom Authentication Method for AD FS in Windows Server 2012 R2](https://go.microsoft.com/fwlink/?LinkID=511980).

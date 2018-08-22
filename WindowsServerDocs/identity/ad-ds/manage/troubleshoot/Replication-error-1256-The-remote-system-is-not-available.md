@@ -2,9 +2,9 @@
 ms.assetid: 198da604-9d18-4801-b805-39a9c624ee1a
 title: Replication error 1256 The remote system is not available
 description:
-author: billmath
-ms.author: billmath
-manager: femila
+author: MicrosoftGuyJFlo
+ms.author: joflore
+manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
