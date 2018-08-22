@@ -13,7 +13,7 @@ ms.date: 08/22/2018
 
 ## Guarded fabric and shielded VMs
 
-## SQL Server Always Encrypted
+## Always Encrypted
 
-## Windows Defender System Guard runtime attestion
+## Windows Defender System Guard runtime attestation
 
