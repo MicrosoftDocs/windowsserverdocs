@@ -6,7 +6,7 @@ ms.topic: article
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 07/31/2018
+ms.date: 08/22/2018
 ---
 
 # Troubleshoot Shielded VMs
@@ -24,7 +24,7 @@ For security-sensitive customers who worry if hosters have any access to the VM 
 - Disable the **Microsoft Hyper-V Remote Desktop Control Channel** device in Device Manager
 
 
-Depending on the the operating system version of the guarded host, VMConnect might not be allowed. Beginning with Windows Server 2019, if you want VMConnect to always be available on a VM guest, add this registry key:
+Depending on the the version of the guest operating system, VMConnect might not be allowed. Beginning with Windows Server 2019, if you want VMConnect to always be available on a VM guest, add this registry key:
 
-<!--- PS direct you can disable in Windows Server 2016. But the reg key disable VM connect is only available in 2019, that’s for the guest OS... >
+<!-- PS direct you can disable in Windows Server 2016. But the reg key disable VM connect is only available in 2019, that’s for the guest OS. -->
 
