@@ -262,6 +262,8 @@
 #### [Configure virtual network peering](sdn/vnet-peering/sdn-configure-vnet-peering.md)
 
 ### [Egress metering in virtual network](sdn/sdn-egress.md)
+### [Windows Server 2019 Gateway Performance](sdn/gateway-performance.md)
+### [Gateway bandwidth allocation](sdn/gateway-allocation.md)
 
 ### [Troubleshoot SDN](sdn/troubleshoot/Troubleshoot-Software-Defined-Networking.md)
 #### [Troubleshoot the Windows Server Software Defined Networking Stack](sdn/troubleshoot/troubleshoot-windows-server-software-defined-networking-stack.md)
