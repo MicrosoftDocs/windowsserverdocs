@@ -257,6 +257,7 @@
 #### [Manage Certificates for Software Defined Networking](sdn/security/sdn-manage-certs.md)
 #### [Configure Encryption for a Virtual Subnet](sdn/vnet-encryption/sdn-config-vnet-encryption.md)
 #### [Kerberos with Service Principal Name (SPN)](sdn/security/kerberos-with-spn.md)
+#### [SDN firewall auditing](sdn/security/sdn-firewall-auditing.md)
 
 ### [Virtual network peering](sdn/vnet-peering/sdn-vnet-peering.md)
 #### [Configure virtual network peering](sdn/vnet-peering/sdn-configure-vnet-peering.md)

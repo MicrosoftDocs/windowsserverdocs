@@ -34,7 +34,7 @@ number for the gateway capacity.
 
 ## Gateway capacity calculation
 
-Ideally, you set the gateway throughput capacity to the throughput available to the gateway VM. So, for example, if you have a single gateway VM and the underlying host NIC through is 25 Gbps, the gateway throughput can be set to 25 Gbps as well.
+Ideally, you set the gateway throughput capacity to the throughput available to the gateway VM. So, for example, if you have a single gateway VM and the underlying host NIC throughput is 25 Gbps, the gateway throughput can be set to 25 Gbps as well.
 
 If using a gateway only for IPsec connections, the maximum available fixed capacity is 5 Gbps. So, for example, if you provision IPsec connections on the gateway, you can only provision to an aggregate bandwidth (incoming + outgoing) as 5 Gbps.
 
@@ -56,17 +56,18 @@ GRE throughput ratio for this gateway = 25/15 = 5/3 Gbps
 
 For example, if you allocate 2 Gbps of IPsec throughput to a customer:
 
-Remaining available capacity on the gateway = Total capacity of the gateway – Used capacity, Where Used Capacity = IPsec throughput ratio\*IPsec throughput allocated
+Remaining available capacity on the gateway = Total capacity of the gateway – Used capacity, where used capacity = IPsec throughput ratio*IPsec throughput allocated
 
-                = 25 – 5\*2 = 15 Gbps
+25–5*2 = 15 Gbps
 
-Remaining IPsec throughput that you can allocate on the gateway = 5-2 = 3 Gbps
+Remaining IPsec throughput that you can allocate on the gateway 
+
+5-2 = 3 Gbps
 
 Remaining GRE throughput that you can allocate on the gateway = Remaining
-capacity of gateway/GRE throughput ratio = 15\*3/5= 9 Gbps
+capacity of gateway/GRE throughput ratio 
 
-
-
+15*3/5 = 9 Gbps
 
 The throughput ratio varies depending on the total capacity of the gateway. One thing to note is that you should set the total capacity to the TCP bandwidth available to the gateway VM. For example, if you have multiple VMs hosted on the
 gateway, you must adjust the total capacity of the gateway accordingly.
@@ -76,7 +77,7 @@ IPsec, L3, and GRE is set to 4 Gbps, leaving the throughput ratio for each tunne
 
 ## Windows Server 2016 behavior
 
-The gateway capacity calculation algorithm for Windows Server 2016 remains unchanged. In Windows Server 2016, Maximum IPsec tunnel bandwidth was limited to (3/20)\*Gateway Capacity on a gateway. The equivalent ratios for GRE and L3
+The gateway capacity calculation algorithm for Windows Server 2016 remains unchanged. In Windows Server 2016, Maximum IPsec tunnel bandwidth was limited to (3/20)\*gateway capacity on a gateway. The equivalent ratios for GRE and L3
 tunnels were 1/5 and 1/2, respectively.
 
 If you are upgrading from Windows Server 2016 to Windows Server 2019:

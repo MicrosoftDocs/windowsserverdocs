@@ -8,7 +8,7 @@ ms.assetid:
 manager: elizapo
 ms.author: pashort
 author: shortpatti
-ms.date: 05/29/2018
+ms.date: 08/22/2018
 ms.reviewer: deverette
 ---
 
@@ -205,8 +205,6 @@ Domain-joined VPN servers
     1.  Click **Application Policies**, and click **Edit**.
 
     2.  In the **Edit Application Policies Extension** dialog box, click **Add**.
-
-<!-- 7/19/2018: github issue #1000; need to ask Jason Jones about this in order to resolve; Is it required for the Always On VPN to have the Encrypting File System (1.3.6.1.4.1.311.10.3.4) and Secure Email (1.3.6.1.5.5.7.3.4) EKU in it? As documented to duplicate the User Template, this would be the case. -->
 
     3.  On the **Add Application Policy** dialog box, click **IP security IKE intermediate**, and click **OK**.<p>Adding IP security IKE intermediate to the EKU helps in scenarios where more than one server authentication certificate exists on the VPN server. When IP security IKE intermediate is present, IPSec only uses the certificate with both EKU options. Without this, IKEv2 authentication could fail with Error 13801: IKE authentication credentials are unacceptable.
 
