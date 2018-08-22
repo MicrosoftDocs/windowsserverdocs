@@ -478,6 +478,7 @@ $nwConnection.properties.IpSecConfiguration.SharedSecret = "C0mplexP@ssW0rd"
 New-NetworkControllerVirtualGatewayNetworkConnection -ConnectionUri $uri -VirtualGatewayId "Contoso_VirtualGW" -ResourceId $nwConnection.ResourceId -Properties $nwConnection.Properties -Force  
 ```  
 
+
 ## Remove a gateway from a virtual network 
 You can use the following Windows PowerShell commands to remove either individual gateway features or the entire gateway.  
 
