@@ -1,5 +1,6 @@
 # [Virtualization](virtualization.md)
 
+## [Host Guardian Service Scenarios](host-guardian-service-scenarios.md)
 ## [Guarded fabric and shielded VMs](guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node.md)
 ### [Overview](guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms.md)
 ### [Plan](guarded-fabric-shielded-vm/guarded-fabric-plan-overview.md)
