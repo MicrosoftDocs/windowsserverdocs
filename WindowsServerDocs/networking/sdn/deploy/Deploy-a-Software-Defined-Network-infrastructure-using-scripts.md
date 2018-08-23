@@ -1,7 +1,7 @@
 ---
 title: Deploy a Software Defined Network Infrastructure Using Scripts
 description: This topic covers how to deploy a Microsoft Software Defined Network (SDN) infrastructure using scripts in Windows Server 2016. 
-manager: brianlic
+manager: elizapo
 ms.prod: windows-server-threshold
 ms.service: virtual-network
 ms.technology: networking-sdn
@@ -9,8 +9,9 @@ ms.topic: get-started-article
 ms.assetid: 5ba5bb37-ece0-45cb-971b-f7149f658d19
 ms.author: pashort
 author: shortpatti
+ms.date: 08/23/2018
 ---
-# Deploy a Software Defined Network Infrastructure Using Scripts
+# Deploy a Software Defined Network infrastructure using scripts
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
@@ -27,8 +28,9 @@ You can also deploy an SDN infrastructure using Virtual Machine Manager (VMM). F
   
 All Hyper-V hosts must have Windows Server 2016 installed.  
   
-## Deployment Steps  
+## Deployment steps  
 Start by configuring the Hyper-V host's (physical servers) Hyper-V virtual switch and  IP address assignment. Any storage type that is compatible with Hyper-V, shared or local may be used.  
+
 ### Install host networking  
 1. Install the latest network drivers available for your NIC hardware.  
 2. Install the Hyper-V role on all hosts (For more information, see [Get started with Hyper-V on Windows Server 2016](https://technet.microsoft.com/en-us/library/mt126159.aspx).   
@@ -99,7 +101,7 @@ If you use Nano as your Hyper-V hosts (physical servers) for the deployment, the
 3.  Invoking the Network Controller NorthBound API using PowerShell or NC REST Wrappers (which rely on Invoke-WebRequest and Invoke-RestMethod) must be done from a non-Nano host.  
    
          
-### Run SDN Express Scripts  
+### Run SDN Express scripts  
   
 1.  The installation files are located on GitHub. Download the zip file from the [Microsoft SDN GitHub Repository](https://github.com/Microsoft/SDN.git). On the Microsoft SDN repository page, click **Clone or download** and then click **Download ZIP**.  
   

@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: b9552054-4eb9-48db-a6ce-f36ae55addcd
 ms.author: pashort
 author: shortpatti
-ms.date: 08/21/2018
+ms.date: 08/23/2018
 ---
 # Add a virtual gateway to a tenant virtual network 
 
@@ -22,7 +22,7 @@ Learn how to use Windows PowerShell cmdlets and scripts to provide site-to-site 
 
 Each virtual gateway corresponds to a particular tenant and consists of one or more network connections (site-to-site VPN tunnels) and, optionally, Border Gateway Protocol (BGP) connections. When you provide site-to-site connectivity, your customers can connect their tenant virtual network to an external network, such as a tenant enterprise network, a service provider network, or the Internet.
   
-When you deploy a Tenant Virtual Gateway, you have the following configuration options:  
+**When you deploy a Tenant Virtual Gateway, you have the following configuration options:**  
 
 | Network connection options | BGP configuration options  |
 |---------|---------|
@@ -50,7 +50,7 @@ $gwPool | ConvertTo-Json -Depth 2
  
 ```  
 
-## Step 2: Verify that the subnet 
+## Step 2: Verify that the subnet exists
 In this step, you verify that the subnet used for routing packets out of the tenant's virtual network exists in Network Controller. You also retrieve the virtual subnet used for routing between the tenant gateway and virtual network.  
   
 ```PowerShell 

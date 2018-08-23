@@ -233,6 +233,7 @@
 
 ### [Plan a Software Defined Network Infrastructure](sdn/plan/Plan-a-Software-Defined-Network-Infrastructure.md)
 #### [Installation and Preparation Requirements for Deploying Network Controller](sdn/plan/Installation-and-Preparation-Requirements-for-Deploying-Network-Controller.md)
+
 ### [Deploy SDN](sdn/deploy/Deploy-Software-Defined-Networking.md)
 #### [Deploy a Software Defined Network Infrastructure](sdn/deploy/Deploy-a-Software-Defined-Network-Infrastructure.md)
 ##### [Deploy a Software Defined Network infrastructure using scripts](sdn/deploy/Deploy-a-Software-Defined-Network-infrastructure-using-scripts.md)
