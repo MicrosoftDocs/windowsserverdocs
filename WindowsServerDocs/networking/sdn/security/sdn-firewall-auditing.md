@@ -51,7 +51,7 @@ foreach ($s in $servers) {
 
 Once enabled a new file appears in the specified directory on each host about once per hour.  You should periodically process these files and remove them from the hosts.  The current file has zero length and is locked until flushed at the next hour mark:
 
-```PowerShell
+```syntax
 PS C:\test\log1> dir
 
     Directory: C:\test\log1
@@ -65,7 +65,7 @@ Mode                LastWriteTime         Length Name
 -a----        7/19/2018   9:28 AM              0 SdnFirewallAuditing.d8b3b697-5355-40e2-84d2-1bf2f0e0dc4a.20180719TL162803464.json
 ```
 
-These files contain a sequence of flow events like:
+These files contain a sequence of flow events, for example:
 
 ```syntax
 { 

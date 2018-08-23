@@ -119,7 +119,7 @@ The table below shows the list of error codes, messages, and follow-up actions t
 
   
 | **Code**| **Message**| **Action**|  
-|:--------:|:-----------:|----------:|  
+|--------|-----------|----------|  
 | Unknown| Unknown error| |  
 | HostUnreachable                       | The host machine is not reachable | Check the Management network connectivity between Network Controller and Host |  
 | PAIpAddressExhausted                  | The PA Ip addresses exhausted | Increase the HNV Provider logical subnet's IP Pool Size |  
