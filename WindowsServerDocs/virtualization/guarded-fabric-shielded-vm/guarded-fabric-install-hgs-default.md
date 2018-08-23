@@ -13,10 +13,6 @@ ms.date: 07/05/2017
 
 >Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
->[!div class="step-by-step"]
-[« Prepare for HGS](guarded-fabric-prepare-for-hgs.md)
-[Initialize HGS »](guarded-fabric-initialize-hgs.md)
-
 ## Add the HGS server role
 
 [!INCLUDE [Install the HGS server role](../../../includes/guarded-fabric-install-hgs-server-role.md)] 
@@ -46,6 +42,9 @@ You may provide any domain name of your choosing to the `-HgsDomainName` paramet
 - For the next steps to set up host key attestation, see [Initialize the HGS cluster using key mode in a new dedicated forest (default)](guarded-fabric-initialize-hgs-key-mode-default.md).
 - For the next steps to set up Admin-based attestation (deprecated in Windows Server 2019), see [Initialize the HGS cluster using AD mode in a new dedicated forest (default)](guarded-fabric-initialize-hgs-ad-mode-default.md).
 
+## Next step
 
+>[!div class="nextstepaction"]
+[Initialize HGS](guarded-fabric-initialize-hgs.md)
 
 

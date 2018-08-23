@@ -32,10 +32,6 @@ The topics in this section describe the steps that a fabric administrator takes 
 2. [Create a security group](guarded-fabric-admin-trusted-attestation-creating-a-security-group.md): Tells how to set up an Active Directory security group in the fabric domain, add guarded hosts as members of that group, and provide that group identifier to the HGS administrator. 
 3. [Confirm guarded hosts can attest](guarded-fabric-confirm-hosts-can-attest-successfully.md)
 
-## Next step
-
->[!div class="nextstepaction"]
-[Deploy shielded virtual machines](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
 
 ## See also
 

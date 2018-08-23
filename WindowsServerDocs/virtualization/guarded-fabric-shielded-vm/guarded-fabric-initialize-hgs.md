@@ -13,10 +13,6 @@ ms.date: 07/05/2017
 
 >Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
->[!div class="step-by-step"]
-[« Install HGS](guarded-fabric-choose-where-to-install-hgs.md)
-[Configure HTTPS »](guarded-fabric-configure-hgs-https.md)
-
 When you initialize HGS, you specify the mode that HGS will use to measure the health of guarded hosts. There are two mutually exclusive options. For background information about which mode to choose, see [Guarded Fabric and Shielded VM Planning Guide for Hosters](guarded-fabric-planning-for-hosters.md).
 
 The following topics cover deployment steps for each mode:

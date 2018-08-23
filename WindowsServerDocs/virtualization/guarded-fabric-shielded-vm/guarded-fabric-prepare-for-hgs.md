@@ -14,9 +14,6 @@ ms.date: 04/24/2017
 
 >Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
->[!div class="step-by-step"]
-[« Deploy HGS](guarded-fabric-setting-up-the-host-guardian-service-hgs.md)
-[Obtain certificates for HGS »](guarded-fabric-obtain-certs.md)
 
 This topic covers HGS prerequisites and initial steps to prepare for the HGS deployment.
 
@@ -41,7 +38,7 @@ If you deployed a guarded fabric before the release of the [October 27, 2016 Cum
 
 Shielded VMs that ran on a guarded host with an earlier operating system version, such as TP5, can still run after the host is upgraded to Windows Server 2016. New shielded VMs cannot be created from template disks that were prepared using the template disk wizard from a Technical Preview build.
 
-## See also
+## Next step
 
-- [Deploying the Host Guardian Service for guarded hosts and shielded VMs](guarded-fabric-deploying-hgs-overview.md)
-- [Configuration steps for Hyper-V hosts that will become guarded hosts](guarded-fabric-configure-hgs-with-authorized-hyper-v-hosts.md)
+>[!div class="nextstepaction"]
+[Obtain certificates for HGS](guarded-fabric-obtain-certs.md)
