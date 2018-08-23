@@ -84,7 +84,7 @@ In the following illustration, a client computer performs a DNS query for the IP
   
 -   The host receives the encapsulated packet and inspects it.  It removes the encapsulation and rewrites the packet so the destination is now the DIP 10.10.10.5 instead of the VIP and sends the traffic to DIP VM.  
   
--   The request has now reached the Contoso Sharepoint site in Server Farm 2. The server generates a response and sends it to the client, using its own IP address as the source.  
+-   The request has now reached the Contoso SharePoint site in Server Farm 2. The server generates a response and sends it to the client, using its own IP address as the source.  
   
 -   The host intercepts the outgoing packet in the virtual switch which remembers that the client, now the destination, made the original request to the VIP.  The host rewrites the source of the packet to be the VIP so that to the client does not see the DIP address.  
   
