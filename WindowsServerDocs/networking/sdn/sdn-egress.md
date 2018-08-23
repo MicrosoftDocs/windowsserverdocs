@@ -8,7 +8,7 @@ ms.topic: get-started-article
 ms.assetid: 
 ms.author: pashort
 author: shortpatti
-ms.date: 08/08/2018
+ms.date: 08/23/2018
 ---
 
 # Egress metering in virtual network
@@ -23,18 +23,18 @@ packet bound for a destination that is not included in one of these ranges to be
 
 ## Virtual network unbilled address ranges (whitelist of IP ranges)
 
-You can find unbilled address ranges under the “*UnbilledAddressRanges*” property of an existing virtual Network. By default, there is no address ranges added.
+You can find unbilled address ranges under the **UnbilledAddressRanges** property of an existing virtual Network. By default, there is no address ranges added.
 
 ![Virtual network unbilled address ranges (whitelist of IP ranges)](../media/Sdn-intro/whitelist-of-ip-ranges.png)
 
 ## Manage the unbilled address ranges of a virtual network
 
-You can manage which data transfer/traffic to the destination IPs defined in the *UnbilledAddressRange* property of a virtual network.
+You can manage which data transfer/traffic to the destination IPs defined in the **UnbilledAddressRange** property of a virtual network.
 
 >[!NOTE]
 >These destination IPs do not get metered.
 
-1.  Create a *UnbilledAddressRanges* property.
+1.  Create a **UnbilledAddressRanges** property.
 
     ```PowerShell
     $unbilled = (Get-NetworkControllerVirtualNetwork -ConnectionUri $uri -ResourceID VirtualNetworkResourceID) 
@@ -44,7 +44,7 @@ You can manage which data transfer/traffic to the destination IPs defined in the
     >[!TIP]
     >If adding multiple IP ranges, use a comma between each of the IP ranges.
 
-2.  Update the Virtual Network *UnbilledAddressRanges* property.
+2.  Update the Virtual Network **UnbilledAddressRanges** property.
 
     ```PowerShell
     New-NetworkControllerVirtualNetwork -ConnectionUri $uri -ResourceId VirtualnetworkResourceID -Properties $unbilled.Properties
@@ -52,7 +52,7 @@ You can manage which data transfer/traffic to the destination IPs defined in the
 
     ![Update the virtual network UnbilledAddressRanges property](../media/Sdn-intro/unbilled-get-networkcontrollervirtualnetwor2k.png)
 
-3.  Check the Virtual Network to see the configured *UnbilledAddressRanges.*
+3.  Check the Virtual Network to see the configured **UnbilledAddressRanges**.
 
     ```PowerShell
     Get-NetworkControllerVirtualNetwork -ConnectionUri $uri -ResourceID VirtualNetworkResourceID
@@ -64,9 +64,9 @@ You can manage which data transfer/traffic to the destination IPs defined in the
 
 After you configure the UnbilledAddressRanges property, you can check the billed and unbilled egress usage of a virtual network. Egress traffic updates every four minutes with the total bytes of the billed and unbilled ranges.
 
--   *UnbilledEgressBytes* under the *Properties* of *Subnets* shows the number of unbilled bytes sent by virtual machines with network interfaces with IP configurations from this virtual subnet. Unbilled bytes are bytes sent to  address ranges that are part of the **UnbilledAddressRanges** property of the parent virtual network.
+-   **UnbilledEgressBytes** under the *Properties* of *Subnets* shows the number of unbilled bytes sent by virtual machines with network interfaces with IP configurations from this virtual subnet. Unbilled bytes are bytes sent to  address ranges that are part of the **UnbilledAddressRanges** property of the parent virtual network.
 
--   *BilledEgressBytes* under the *Properties* of *Subnets* shows Number of billed bytes sent by virtual machines with network interfaces with IP configurations from this virtual subnet. Billed bytes are bytes sent to address ranges that are not part of the UnbilledAddressRanges property of the parent virtual network.
+-   **BilledEgressBytes** under the *Properties* of *Subnets* shows Number of billed bytes sent by virtual machines with network interfaces with IP configurations from this virtual subnet. Billed bytes are bytes sent to address ranges that are not part of the UnbilledAddressRanges property of the parent virtual network.
 
 ![Check the billed and unbilled egress usage of a virtual network](../media/Sdn-intro/unbilled-egress-bytes.png)
 
