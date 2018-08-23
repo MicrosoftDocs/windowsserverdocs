@@ -51,31 +51,35 @@ The remainder of the is document provides the steps for adding a Windows Server 
 
     ![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_3.png)  
 
-4.  Once the join is complete, on the Windows Server 2016 server, open PowerShell and run the following cmdlt:  Set-AdfsSyncProperties -Role PrimaryComputer  
+4.  Once the join is complete, on the Windows Server 2016 server, open PowerShell and run the following cmdlt: `Set-AdfsSyncProperties -Role PrimaryComputer`
 
     ![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_4.png)  
 
-5.  On the original AD FS Windows Server 2012 R2 server, open PowerShell and run the following cmdlt:  Set-AdfsSyncProperties -Role SecondaryComputer -PrimaryComputerName {FQDN}  
+5.  On the original AD FS Windows Server 2012 R2 server, open PowerShell and run the following cmdlt: `Set-AdfsSyncProperties -Role SecondaryComputer -PrimaryComputerName {FQDN} `
 
     ![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_5.png)  
 
-6.  On your Web Application Proxy open PowerShell and run the followoing cmdlt:  Install-WebApplicationProxy -CertificateThumbprint {SSLCert} -fsname fsname -TrustCred $trustcred  
+6.  On your Web Application Proxy open PowerShell and run the following:  
+```powershell
+$trustcred = Get-Credential -Message "Enter Domain Administrator credentials"
+Install-WebApplicationProxy -CertificateThumbprint {SSLCert} -fsname fsname -FederationServiceTrustCredential $trustcred  
+```
 
 7.  Now on the Windows Server 2016 federation server open AD FS Management.  Note that now all of the nodes appear because the primary role has been transferred to this server.  
 
     ![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_6.png)  
 
-8.  With the Windows Server 2016 installation media, open a command prompt and navigate to support\adprep directory.  Run the following:  adprep /forestprep.  
+8.  With the Windows Server 2016 installation media, open a command prompt and navigate to support\adprep directory.  Run the following:  `adprep /forestprep`
 
     ![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_7.png)  
 
-9. Once that completes run adprep/domainprep  
+9. Once that completes run `adprep/domainprep`
     >[!NOTE]
     >Prior to running the next step, ensure Windows Server 2016 is current by running Windows Update from Settings.  Continue this process until no further updates are needed. 
     
     ![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_8.png)  
 
-10. Now on the Windows Server 2016 Server open PowerShell and run the following cmdlt: Invoke-AdfsFarmBehaviorLevelRaise  
+10. Now on the Windows Server 2016 Server open PowerShell and run the following cmdlt: `Invoke-AdfsFarmBehaviorLevelRaise`  
 
     ![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_9.png)  
 
@@ -90,6 +94,6 @@ The remainder of the is document provides the steps for adding a Windows Server 
 
     ![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_12.png)  
 
-13. Likewise, you can use the PowerShell cmdlt:  Get-AdfsFarmInformation to show you the current FBL.  
+13. Likewise, you can use the PowerShell cmdlt:  `Get-AdfsFarmInformation` to show you the current FBL.  
 
     ![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_13.png)  
