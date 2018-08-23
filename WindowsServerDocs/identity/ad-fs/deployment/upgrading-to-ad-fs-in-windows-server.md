@@ -99,3 +99,5 @@ Install-WebApplicationProxy -CertificateThumbprint {SSLCert} -fsname fsname -Fed
 13. Likewise, you can use the PowerShell cmdlt:  `Get-AdfsFarmInformation` to show you the current FBL.  
 
     ![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_13.png)  
+    
+Before upgrade the Farm Behavior Level, the "CurrentFarmBehavior" is equal to 1, then after the upgrade, the version is 3.
