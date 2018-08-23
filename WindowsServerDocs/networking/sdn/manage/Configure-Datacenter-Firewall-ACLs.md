@@ -36,22 +36,29 @@ In this example, we demonstrates how to add an ACL to a virtual network.
 >It is also possible to add an ACL at the same time that you create the network interface.
 
 1. Get or create the network interface to which you will add the ACL.
+ 
    ```PowerShell
    $nic = get-networkcontrollernetworkinterface -ConnectionUri $uri -ResourceId "MyVM_Ethernet1"
    ```
+ 
 2. Get or create the ACL you will add to the network interface.
+ 
    ```PowerShell
    $acl = get-networkcontrolleraccesscontrollist -ConnectionUri $uri -resourceid "AllowAllACL"
    ```
+ 
 3. Assign the ACL to the AccessControlList property of the network interface
+ 
    ```PowerShell
     $nic.properties.ipconfigurations[0].properties.AccessControlList = $acl
    ```
+ 
 4. Add the network interface in Network Controller
+ 
    ```
    new-networkcontrollernetworkinterface -ConnectionUri $uri -Properties $nic.properties -ResourceId $nic.resourceid
    ```
-
+ 
 ## Example: Remove an ACL from a network interface by using Windows Powershell and the Network Controller REST API
 In this example, we show you how to remove an ACL. Removing an ACL applies the default set of rules to the network interface. The default set of rules allows all outbound traffic but blocks all inbound traffic.
 
@@ -59,15 +66,17 @@ In this example, we show you how to remove an ACL. Removing an ACL applies the d
 >If you want to allow all inbound traffic, you must follow the previous [example](#example-add-an-acl-to-a-network-interface) to add an ACL that allows all inbound and all outbound traffic.
 
 
-1. Get the network interface from which you will remove the ACL.
+1. Get the network interface from which you will remove the ACL.<br>
    ```PowerShell
    $nic = get-networkcontrollernetworkinterface -ConnectionUri $uri -ResourceId "MyVM_Ethernet1"
    ```
-2. Assign $NULL to the AccessControlList property of the ipConfiguration.
+ 
+2. Assign $NULL to the AccessControlList property of the ipConfiguration.<br>
    ```PowerShell
    $nic.properties.ipconfigurations[0].properties.AccessControlList = $null
    ```
-3. Add the network interface object in Network Controller.
+ 
+3. Add the network interface object in Network Controller.<br>
    ```PowerShell
    new-networkcontrollernetworkinterface -ConnectionUri $uri -Properties $nic.properties -ResourceId $nic.resourceid
    ```
