@@ -70,7 +70,7 @@ When tenant VMs respond and send outbound network traffic back to the Internet o
   
 And after the initial network traffic flow is established, the inbound network traffic bypasses the SLB MUX completely.  
   
-In the following illustration, a client computer performs a DNS query for the IP address of a company Sharepoint site - in this case, a fictional company named Contoso. The following process occurs.  
+In the following illustration, a client computer performs a DNS query for the IP address of a company SharePoint site - in this case, a fictional company named Contoso. The following process occurs.  
   
 -   The DNS server returns the VIP 107.105.47.60 to the client.  
   
