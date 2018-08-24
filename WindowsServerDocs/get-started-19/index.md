@@ -5,7 +5,8 @@ ms.prod: windows-server-threshold
 ms.service: na
 manager: jasgroce
 ms.technology: get-started
-ms.topic: article
+layout: LandingPage
+ms.topic: landing-page
 author: coreyp-at-msft
 ms.author: coreyp
 ms.localizationpriority: medium
