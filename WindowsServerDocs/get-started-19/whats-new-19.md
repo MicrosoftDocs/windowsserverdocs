@@ -4,8 +4,8 @@ description: "What are the new features in Access, Cluster, Manage, Network, Rem
 ms.prod: windows-server-threshold
 ms.technology: server-general
 ms.topic: article
-author: greg-lindsay
-ms.author: greg-lindsay
+author: dawnwood
+ms.author: dawnwood
 ms.localizationpriority: high
 ---
 

@@ -64,7 +64,7 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
                             </a>
                         </li>
 <li>
-                            <a href="get-started/get-started-19/index.md">
+                            <a href="get-started-19/get-started-19">
                             <div class="cardSize">
                                 <div class="cardPadding">
                                     <div class="card">
