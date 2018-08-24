@@ -173,7 +173,6 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
             <a href="#main"></a>
             <ul id="main">
                 <li>
-                   
                     <ul id="mainPanel" class="cardsF">
                         <li>
                             <a href="identity/Identity-and-Access.md">
@@ -186,21 +185,17 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h2>Access</h2>  
+                                            <h2>Access</h2>
                                             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
 <table>
      <tr>
         <td style="vertical-align: top;">
             <h4><u>Highest Rated</u></h4>
             <ol>
-            <li><a href="https://docs.microsoft.com/en-us/windows-server/networking/what-s-new-in-networking">What's new in<br> Networking</a></li>
-              
+            <li><a href="https://docs.microsoft.com/en-us/windows-server/networking/what-s-new-in-networking">What's new in<br> Networking</a></li>              
        <hr width="80%">
-
             <li><a href="https://docs.microsoft.com/en-us/windows-server/networking/branchcache/branchcache-network-shell-and-windows-powershell-commands">BranchCache Network Shell and<br> Windows PowerShell Commands</a></li>
-                 
        <hr width="80%">
-
             <li><a href="https://docs.microsoft.com/en-us/windows-server/networking/technologies/nic-teaming/nict-vms">NIC Teaming in Virtual Machines (VMs)</a></li>
             </ol>
         </td>
@@ -208,13 +203,9 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
             <h4><u>Most Viewed</u></h4>
             <ol>
             <li><a href="https://docs.microsoft.com/en-us/windows-server/networking/windows-server-supported-networking-scenarios">Windows Server Supported Networking Scenarios</a></li>
-                   
        <hr width="80%">
-
             <li><a href="https://docs.microsoft.com/en-us/windows-server/networking/sdn/sdn-intro">Introduction to SDN in Windows Server Datacenter</a></li>
-                 
        <hr width="80%">
-
             <li><a href="https://docs.microsoft.com/en-us/windows-server/networking/technologies/netsh/netsh-contexts">Netsh Command Syntax, Contexts, and Formatting</a></li>
             </ol>
         </td>
