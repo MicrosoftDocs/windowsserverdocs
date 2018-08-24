@@ -3,7 +3,7 @@ title: Windows Server, version 1803 - Features that have been removed
 description: Learn about features that will be removed or deprecated in Windows Server, version 1803, or a future release
 ms.prod: windows-server-threshold
 ms.mktglfcycl: plan
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.sitesec: library
 author: lizap
 ms.author: elizapo

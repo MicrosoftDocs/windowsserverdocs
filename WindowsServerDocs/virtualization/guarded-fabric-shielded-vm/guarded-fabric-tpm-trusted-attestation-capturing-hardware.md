@@ -7,7 +7,7 @@ ms.assetid: 915b1338-5085-481b-8904-75d29e609e93
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 07/23/2018
+ms.date: 08/24/2018
 ---
 
 # Authorize guarded hosts using TPM-based attestation
@@ -75,12 +75,14 @@ Starting with Windows Server version 1709, sample code integrity policies are in
 - **AllowMicrosoft**: Allows all files signed by Microsoft. THis policy is recommended for server applications such as SQL or Exchange, or if the server is monitored by agents published by Microsoft.
 - **DefaultWindows_Enforced**: Allows only files that shipped in Windows and doesn't permit other applications released by Microsoft, such as Office. This policy is recommended for servers that run only built-in server roles and features such as Hyper-V. 
 
+It is recommended that you first create the CI policy in audit (logging) mode to see if it's missing anything, then enforce the policy for host production workloads. 
+
 If you use the [New-CIPolicy](https://docs.microsoft.com/powershell/module/configci/new-cipolicy?view=win10-ps) cmdlet to generate your own code integrity policy, you will need to decide the rule levels to use. 
 For Server Core, we recommend a primary level of **FilePublisher** with fallback to **Hash**. 
 This allows files with publishers to be updated without changing the CI policy. 
 Addition of new files or modifications to files without publishers (which are measured with a hash) will require you to create a new CI policy matching the new system requirements. 
 For Server with Desktop Experience, we recommend a primary level of **Publisher** with fallback to **Hash**. 
-For more information about the available CI policy rule levels, see [Deploy code integrity policies: policy rules and file rules](https://technet.microsoft.com/itpro/windows/keep-secure/deploy-code-integrity-policies-policy-rules-and-file-rules) and cmdlet help.
+For more information about the available CI policy rule levels, see [Deploy code integrity policies: policy rules and file rules](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/select-types-of-rules-to-create#windows-defender-application-control-policy-rules) and cmdlet help.
 
 1.  On the reference host, generate a new code integrity policy. The following commands create a policy at the **FilePublisher** level with fallback to **Hash**. It then converts the XML file to the binary file format Windows and HGS need to apply and measure the CI policy, respectively.
 
@@ -121,7 +123,7 @@ For more information about the available CI policy rule levels, see [Deploy code
     ```
 
     >[!NOTE]
-    >Be careful when applying CI policies to hosts and when updating any software on these machines. Any kernel mode drivers that are non-compliant with the CI Policy may prevent the machine from starting up. For best practices regarding CI policies, see [Planning and getting started on the Device Guard deployment process](https://technet.microsoft.com/itpro/windows/keep-secure/planning-and-getting-started-on-the-device-guard-deployment-process#getting-started-on-the-deployment-process) and [Deploy Device Guard: deploy code integrity policies](https://technet.microsoft.com/itpro/windows/keep-secure/deploy-device-guard-deploy-code-integrity-policies).
+    >Be careful when applying CI policies to hosts and when updating any software on these machines. Any kernel mode drivers that are non-compliant with the CI Policy may prevent the machine from starting up. 
 
 6.  Provide the binary file (in this example, HW1CodeIntegrity\_enforced.p7b) to the HGS administrator.
 

@@ -5,11 +5,10 @@ ms.prod: windows-server-threshold
 ms.mktglfcycl: manage
 ms.sitesec: library
 author: jaimeo
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.date: 06/25/2018
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
-
 ---
 
 # Appendix A: KMS Client Setup Keys

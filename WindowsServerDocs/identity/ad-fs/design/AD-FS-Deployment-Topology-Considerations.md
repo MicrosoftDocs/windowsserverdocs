@@ -27,7 +27,7 @@ AD FS features
   
 |Feature|Supported by WID?|Supported by SQL Server?|More information about this feature|  
 |-----------|---------------------|----------------------------|---------------------------------------|  
-|Federation server farm deployment|Yes, with a limit of five federation servers for each farm|Yes. There is no enforced limit for the number of federation servers that you can deploy in a single farm|[Determine Your AD FS Deployment Topology](Determine-Your-AD-FS-Deployment-Topology.md)|  
+|Federation server farm deployment|Yes, with a limit of 30 federation servers for each farm|Yes. There is no enforced limit for the number of federation servers that you can deploy in a single farm|[Determine Your AD FS Deployment Topology](Determine-Your-AD-FS-Deployment-Topology.md)|  
 |SAML artifact resolution **Note:** This feature is not required for Microsoft Online Services, Microsoft Office 365, Microsoft Exchange, or Microsoft Office SharePoint scenarios.|No|Yes|[The Role of the AD FS Configuration Database](../../ad-fs/technical-reference/The-Role-of-the-AD-FS-Configuration-Database.md)<br /><br />[Best Practices for Secure Planning and Deployment of AD FS](Best-Practices-for-Secure-Planning-and-Deployment-of-AD-FS.md)|  
 |SAML\/WS\-Federation token replay detection|No|Yes|[The Role of the AD FS Configuration Database](../../ad-fs/technical-reference/The-Role-of-the-AD-FS-Configuration-Database.md)<br /><br />[Best Practices for Secure Planning and Deployment of AD FS](Best-Practices-for-Secure-Planning-and-Deployment-of-AD-FS.md)|  
   

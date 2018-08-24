@@ -13,7 +13,7 @@ ms.assetid: 99f7daa4-30ce-4d13-be65-0a45d5cc7a54
 author: jaimeo
 ms.author: jaimeo
 manager: elizapo
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ---
 # Windows Server 2016 Activation
 
@@ -33,7 +33,7 @@ The following table summarizes KMS host and client requirements for networks tha
 |-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------|  
 |Volume License for Windows Server 2016|Windows Server 2012<br /><br />Windows Server 2012 R2<br /><br />Windows Server 2016<br /><br />|Windows Server Semi-Annual Channel <br><br>Windows Server 2016 (all editions)<br /><br />Windows 10 LTSB (2015 and 2016)<br /><br />Windows 10 Professional<br /><br />Windows 10 Enterprise<br /><br />Windows 10 Pro for Workstations<br><br>Windows 10 Education<br><br>Windows Server 2012 R2 (all editions)<br /><br />Windows 8.1 Professional<br /><br />Windows 8.1 Enterprise<br /><br />Windows Server 2012 (all editions)<br /><br />Windows 2008 R2 (all editions)<br /><br />Windows 7 Professional<br /><br />Windows 7 Enterprise<br /><br />| 
 |Volume license for Windows 10|Windows 7<br /><br />Windows 8<br /><br /> Windows 8.1<br /><br /> Windows 10|Windows 10 Professional<br /><br /> Windows 10 Professional N<br /><br /> Windows 10 Enterprise<br /><br /> Windows 10 Enterprise N<br /><br /> Windows 10 Education<br /><br /> Windows 10 Education N<br /><br /> Windows 10 Enterprise LTSB (2015)<br /><br /> Windows 10 Enterprise LTSB N (2015)<br /><br /> Windows 10 Pro for Workstations<br><br>Windows 8.1 Professional<br /><br /> Windows 8.1 Enterprise<br /><br /> Windows 7 Professional<br /><br /> Windows 7 Enterprise<br /><br />|  
-|Volume license for "Windows Server 2012 R2 for Windows 10"|Windows Server 2008 R2<br /><br /> Windows Server 2012 Standard<br /><br /> Windows Server 2012 Datacenter<br /><br /> Windows Server 2012 R2 Standard<br /><br />Windows Server 2012 R2 Datacenter<br /><br />Windows Server 2016|Windows 10 Professional<br /><br /> Windows 10 Enterprise<br /><br />Windows 10 Enterprise LTSB (2015)<br><br>Windows 10 Pro for Workstations<br><br>Windows 10 Education<br><br> Windows Server 2012 R2 (all editions)<br /><br /> Windows 8.1 Professional<br /><br /> Windows 8.1 Enterprise<br /><br /> Windows Server 2012 (all editions)<br /><br /> Windows 2008 R2 (all editions)<br /><br /> Windows 7 Professional<br /><br /> Windows 7 Enterprise|
+|Volume license for "Windows Server 2012 R2 for Windows 10"|Windows Server 2008 R2<br /><br /> Windows Server 2012 Standard<br /><br /> Windows Server 2012 Datacenter<br /><br /> Windows Server 2012 R2 Standard<br /><br />Windows Server 2012 R2 Datacenter|Windows 10 Professional<br /><br /> Windows 10 Enterprise<br /><br />Windows 10 Enterprise LTSB (2015)<br><br>Windows 10 Pro for Workstations<br><br>Windows 10 Education<br><br> Windows Server 2012 R2 (all editions)<br /><br /> Windows 8.1 Professional<br /><br /> Windows 8.1 Enterprise<br /><br /> Windows Server 2012 (all editions)<br /><br /> Windows 2008 R2 (all editions)<br /><br /> Windows 7 Professional<br /><br /> Windows 7 Enterprise|
 
 > [!NOTE]  
 >Depending on which operating system your KMS server is running and which operating systems you want to activate, you might need to install one or more of these updates:

@@ -93,7 +93,7 @@ Notice=”Legal policy statement text”
 
 ### CRLDistributionPoint
 
-You can specify CRL Distribution Points (CDPs) for a root CA certificate in the CAPolicy.inf. After the CA has been installed you can configure the CDP URLs that the CA includes in each certificate issued. The URLs specified in this section of the CAPolicy.inf file are included in the root CA certificate itself.
+You can specify CRL Distribution Points (CDPs) for a root CA certificate in the CAPolicy.inf.  After installing the CA, you can configure the CDP URLs that the CA includes in each certificate issued. The root CA certificate shows the URLs specified in this section of the CAPolicy.inf file. 
 
 ```
 [CRLDistributionPoint]
@@ -101,16 +101,23 @@ URL=http://pki.wingtiptoys.com/cdp/WingtipToysRootCA.crl
 ```
 
 Some additional information about this section:
+-   Supports:
+    - HTTP 
+    - File URLs
+    - LDAP URLs 
+    - Multiple URLs
+   
+    >[!IMPORTANT]
+    >Does not support HTTPS URLs.
 
--   Multiple URLs are supported.
+-   Quotes must surround URLs with spaces.
 
--   HTTP, FTP, and LDAP URLs are supported. HTTPS URLs are not supported.
+-   If no URLs are specified – that is, if the **[CRLDistributionPoint]** section exists in the file but is empty – the Authority Information Access extension is omitted from the root CA certificate. This is usually preferable when setting up a root CA. Windows does not perform revocation checking on a root CA certificate, so the CDP extension is superfluous in a root CA certificate.
 
--   This section is only used if you are setting up a root CA or renewing the root CA certificate. Subordinate CA CDP extensions are determined by the CA which issues the subordinate CA’s certificate.
+-    CA can publish to FILE UNC, for example, to a share that represents the folder of a website where a client retrieves via HTTP.
 
--   URLs with spaces must be surrounded by quotes.
-
--   If no URLs are specified – that is, if the **[CRLDistributionPoint]** section exists in the file but is empty – the CRL Distribution Point extension is omitted from the root CA certificate. This is usually preferable when setting up a root CA. Windows does not perform revocation checking on a root CA certificate, so the CDP extension is superfluous in a root CA certificate.
+-   Only use this section if you are setting up a root CA or renewing the root CA certificate. The CA determines the subordinate CA CDP extensions.
+   
 
 ### AuthorityInformationAccess
 

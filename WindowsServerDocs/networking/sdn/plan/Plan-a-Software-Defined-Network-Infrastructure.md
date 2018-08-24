@@ -1,7 +1,7 @@
 ---
 title: Plan a Software Defined Network Infrastructure
 description: This topic provides information on how to plan your Software Defined Network (SDN) infrastructure deployment.
-manager: brianlic
+manager: elizapo
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -25,70 +25,69 @@ Review the following information to help plan your Software Defined Network (SDN
 >
 > - [Installation and Preparation Requirements for Deploying Network Controller](Installation-and-Preparation-Requirements-for-Deploying-Network-Controller.md)  
 
-For information about Hyper-V Network Virtualization (HNV), which you can use to virtualize networks in a Microsoft SDN deployment, see [Hyper-V Network Virtualization](../technologies/hyper-v-network-virtualization/Hyper-V-Network-Virtualization.md).  
+
 
 ## Prerequisites
 This topic describes a number of hardware and software prerequisites, including:
 
--   **Physical network**  
-    You need access to your physical network devices to configure VLANs, Routing, BGP, Data Center Bridging (ETS) if using an RDMA technology, and Data Center Bridging (PFC) if using a RoCE based RDMA technology. This topic shows manual switch configuration as well as BGP Peering on Layer-3 switches / routers or a Routing and Remote Access Server (RRAS) virtual machine.   
+-   **Physical network**  You need access to your physical network devices to configure VLANs, Routing, BGP, Data Center Bridging (ETS) if using an RDMA technology, and Data Center Bridging (PFC) if using a RoCE based RDMA technology. This topic shows manual switch configuration as well as BGP Peering on Layer-3 switches / routers or a Routing and Remote Access Server (RRAS) virtual machine.   
 
--   **Physical compute hosts**  
-These hosts run Hyper-V and are required to host SDN infrastructure and tenant virtual machines.  Specific network hardware is required in these hosts for best performance, which is described later in the **Network hardware** section.  
+-   **Physical compute hosts**  These hosts run Hyper-V and are required to host SDN infrastructure and tenant virtual machines.  Specific network hardware is required in these hosts for best performance, which is described later in the **Network hardware** section.  
       
   
-## Physical Network Configuration
+## Configure the physical network and compute hosts
 
-Each physical compute host requires network connectivity through one or more network adapters attached to a physical switch port(s). The network is segregated into multiple logical network segments optionally backed by a Layer-2 [VLAN](https://en.wikipedia.org/wiki/Virtual_LAN). The IP subnet prefixes and VLAN IDs shown below are examples and must be customized for your environment based on guidance from your network administrator. If any of your logical networks are untagged or in access mode, use VLAN ID 0 for these networks when configuring the logical subnets in either System Center Virtual Machine Manager or PowerShell script configuration files.
+Each physical compute host requires network connectivity through one or more network adapters attached to a physical switch port(s).  A Layer-2 [VLAN](https://en.wikipedia.org/wiki/Virtual_LAN) supports networks divided into multiple logical network segments. 
+
+>[!TIP]
+>Use VLAN 0 for logical networks in access mode or untagged. 
+
 
 >[!IMPORTANT]
 >Windows Server 2016 Software Defined Networking supports IPv4 addressing for the underlay and the overlay. IPv6 is not supported.
   
-### Management and HNV Provider logical networks
+### Logical networks
 
-All physical compute hosts need to have access to the Management logical network and the HNV Provider logical network. If the logical networks use VLANs, the physical compute hosts must to be connected to a trunked switch port which has access to these VLANs. Similarly, the physical network adapters on the compute host must not have any VLAN filtering activated. If you are using Switch-Embedded Teaming (SET) and have multiple NIC team members (i.e. network adapters) in your compute hosts, you must connect all of the NIC team members for that particular host to the same Layer-2 broadcast domain.  
-  
-For IP Address planning purposes, each physical compute host must have at least one IP address assigned from the Management logical network. The network controller automatically assigns exactly two IP addresses from the HNV Provider logical network. If the physical compute host is running additional infrastructure virtual machines (for example, Network Controller, SLB/MUX, or Gateway) that host must have an additional IP address assigned from the Management logical network for each of the infrastructure virtual machines hosted.   
-  
-Additionally, each SLB/MUX infrastructure virtual machine must have an IP address reserved from the HNV Provider logical network. 
+#### Management and HNV Provider 
 
->[!IMPORTANT]
->These SLB/MUX IP addresses must be assigned from outside the IP address pool that is configured for the HNV Provider logical network. Failure to do this may result in duplicate IP addresses on your network. 
+All physical compute hosts must access the Management logical network and the HNV Provider logical network.  For IP address planning purposes, each physical compute host must have at least one IP address assigned from the Management logical network. The network controller requires a reserved IP address to serve as the REST IP address. 
 
-The Network Controller requires a reserved address from the Management network to serve as the REST IP address. You must manually create the HOST A record in DNS for the REST IP address.  
-  
-A DHCP server can automatically assign IP addresses for the Management network or you can manually assign static IP address. The SDN stack automatically assigns IP addresses for the HNV provider network for the individual Hyper-V hosts from an IP Pool specified through and managed by the Network Controller.   
-  
-The fabric administrator statically assigns the HNV Provider IP addresses used by the SLB/MUX via PowerShell scripts or VMM. The Network Controller assigns an HNV Provider IP address to a physical compute host only after the Network Controller Host Agent receives network policy for a specific tenant virtual machine.  
+A DHCP server can automatically assign IP addresses for the Management network, or you can manually assign static IP address. The SDN stack automatically assigns IP addresses for the HNV Provider logical network for the individual Hyper-V hosts from an IP Pool specified through and managed by the Network Controller. 
+
+>[!NOTE]
+>The Network Controller assigns an HNV Provider IP address to a physical compute host only after the Network Controller Host Agent receives network policy for a specific tenant virtual machine. 
+
+
+|If...  |Then...  |
+|---------|---------|
+|The logical networks use VLANs,     |the physical compute host must connect to a trucked switch port that has access to these VLANs. It’s important to note that the physical network adapters on the computer host must not have any VLAN filtering activated.          |
+|Using Switched-Embedded Teaming (SET) and have multiple NIC team members, such as network adapters,     |you must connect all of the NIC team members for that particular host to the same Layer-2 broadcast domain.         |
+|The physical compute host is running additional infrastructure virtual machines, such as Network Controller, SLB/MUX, or Gateway,  |that host must have an additional IP address assigned from the Management logical network for each of the infrastructure virtual machines hosted.<p>Also, each SLB/MUX infrastructure virtual machine must have an IP address reserved for the HNV Provider logical network. Failure to have an IP address reserved may result in duplicate IP addresses on your network.  |
+---
+
+
+For information about Hyper-V Network Virtualization (HNV), which you can use to virtualize networks in a Microsoft SDN deployment, see [Hyper-V Network Virtualization](../technologies/hyper-v-network-virtualization/Hyper-V-Network-Virtualization.md).  
   
 #### Sample network topology
+Change the sample IP subnet prefixes and VLAN IDs for your environment. 
 
-Customize the subnet prefixes, VLAN IDs, and gateway IP addresses based on your network administrator's guidance.  
-  
-Network Name|Subnet|Mask|VLAN ID on trunk|Gateway|Reservations<br />(examples)  
+  Network Name|Subnet|Mask|VLAN ID on trunk|Gateway|Reservations<br />(examples)  
 ----------------|----------|--------|--------------------|-----------|-----------------------------  
 |**Management**|10.184.108.0|24|7|10.184.108.1|10.184.108.1 - Router<br /><br />10.184.108.4 - Network Controller<br /><br />10.184.108.10 - Compute host 1<br /><br />10.184.108.11 - Compute host 2<br /><br />10.184.108.X - Compute host X  
 |**HNV Provider**|10.10.56.0|23|11|10.10.56.1|10.10.56.1 - Router<br /><br />10.10.56.2 - SLB/MUX1  
   
-### Logical Networks for Gateways and the Software Load Balancer
+#### Gateways and the Software Load Balancer
   
-Additional logical networks need to be created and provisioned for gateway and SLB usage. Once again, you need to work with your network administrator to obtain the correct IP prefixes, VLAN IDs, and gateway IP addresses for these networks.
+Additional logical networks need to be created and provisioned for gateway and SLB usage.  obtain the correct IP prefixes, VLAN IDs, and gateway IP addresses for these networks.
 
-#### Transit logical network
-  
-The RAS Gateway and SLB/MUX use the Transit logical network to exchange BGP peering information and North/South (external-internal) tenant traffic. The size of this subnet will typically be smaller than the others. Only physical compute hosts that run RAS Gateway or SLB/MUX virtual machines need to have connectivity to this subnet with these VLANs trunked and accessible on the switch ports to which the compute hosts' network adapters are connected. Each SLB/MUX or RAS Gateway virtual machine is statically assigned one IP address from the Transit logical network.
 
-#### Public VIP logical network  
-  
-The Public VIP logical network is required to have IP subnet prefixes that are routable outside of the cloud environment (typically Internet routable).  These will be the front-end IP addresses used by external clients to access resources in the virtual networks including the front end VIP for the Site-to-site gateway.
+|  |  |
+|---------|---------|
+|**Transit logical network**     |The RAS Gateway and SLB/MUX use the Transit logical network to exchange BGP peering information and North/South (external-internal) tenant traffic. The size of this subnet will typically be smaller than the others. Only physical compute hosts that run RAS Gateway or SLB/MUX virtual machines need to have connectivity to this subnet with these VLANs trunked and accessible on the switch ports to which the compute hosts' network adapters are connected. Each SLB/MUX or RAS Gateway virtual machine is statically assigned one IP address from the Transit logical network.         |
+|**Public VIP logical network**     |The Public VIP logical network is required to have IP subnet prefixes that are routable outside of the cloud environment (typically Internet routable).  These will be the front-end IP addresses used by external clients to access resources in the virtual networks including the front end VIP for the Site-to-site gateway.         |
+|**Private VIP logical network**     |The Private VIP logical network is not required to be routable outside of the cloud as it is used for VIPs that are only accessed from internal cloud clients, such as the SLB Mananger or private services.         |
+|**GRE VIP logical network**     |The GRE VIP network is a subnet that exists solely for defining VIPs that are assigned to gateway virtual machines running on your SDN fabric for a S2S GRE connection type. This network does not need to be pre-configured in your physical switches or router and need not have a VLAN assigned.            |
 
-#### Private VIP logical network
-  
-The Private VIP logical network is not required to be routable outside of the cloud as it is used for VIPs that are only accessed from internal cloud clients, such as the SLB Mananger or private services.
-  
-#### GRE VIP logical network
-
-The GRE VIP network is a subnet that exists solely for defining VIPs that are assigned to gateway virtual machines running on your SDN fabric for a S2S GRE connection type. This network does not need to be pre-configured in your physical switches or router and need not have a VLAN assigned.   
 
 ### Sample network topology
 

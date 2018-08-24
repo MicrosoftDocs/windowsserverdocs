@@ -1,5 +1,5 @@
 ---
-title: Plan for Hyper-V security in Windows Server 2016
+title: Plan for Hyper-V security in Windows Server
 description: "Provides a lists of security considerations for Hyper-v hosts and virtual machines"
 ms.prod: windows-server-threshold
 ms.service: na
@@ -11,10 +11,10 @@ ms.assetid: 115db481-b57e-41c3-8354-504f4bc6113a
 manager: dongill
 author: larsiwer
 ms.author: kathyDav
-ms.date: 02/06/2018
+ms.date: 08/03/2018
 ---
 
-# Plan for Hyper-V security in Windows Server 2016
+# Plan for Hyper-V security in Windows Server
 
 >Applies To: Windows Server 2016, Microsoft Hyper-V Server 2016
 
@@ -22,7 +22,7 @@ Secure the Hyper-V host operating system, the virtual machines, configuration fi
 
 ## Secure the Hyper-V host
 - **Keep the host OS secure.**
-    - Minimize the attack surface by using the minimum Windows Server installation option that you need for the management operating system. For more information, see [Installation Options for Windows Server 2016](../../../get-started/Installation-Options-for-Windows-Server-2016-Technical-Preview.md). We don't recommend that you run production workloads on Hyper-V on Windows 10.
+    - Minimize the attack surface by using the minimum Windows Server installation option that you need for the management operating system. For more information, see the [Installation Options section](/windows-server/windows-server#installation-options) of the Windows Server technical content library. We don't recommend that you run production workloads on Hyper-V on Windows 10.
     - Keep the Hyper-V host operating system, firmware, and device drivers up to date with the latest security updates. Check your vendor's recommendations to update firmware and drivers.
     - Don't use the Hyper-V host as a workstation or install any unnecessary software.
     - Remotely manage the Hyper-V host. If you must manage the Hyper-V host locally, use Credential Guard. For more information, see [Protect derived domain credentials with Credential Guard](https://docs.microsoft.com/windows/access-protection/credential-guard/credential-guard).

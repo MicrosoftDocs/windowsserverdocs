@@ -2,9 +2,9 @@
 ms.assetid: e4ff3f20-7284-40a8-8fe2-3a1b34fde1df
 title: Replication error 8453 Replication access was denied
 description:
-author: billmath
-ms.author: billmath
-manager: femila
+author: MicrosoftGuyJFlo
+ms.author: joflore
+manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold

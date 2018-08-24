@@ -1,4 +1,5 @@
 # [Identity and Access](Identity-and-Access.md)
+
 ## [Solutions and Scenario Guides](solution-guides/Solutions-and-Scenario-Guides.md)
 ### [Dynamic Access Control: Scenario Overview](solution-guides/Dynamic-Access-Control--Scenario-Overview.md)
 #### [Scenario: Central Access Policy](solution-guides/Scenario--Central-Access-Policy.md)
@@ -20,13 +21,18 @@
 #### [Appendix A: Dynamic Access Control Glossary](solution-guides/appendix-A--Dynamic-Access-Control-Glossary.md)
 #### [Appendix B: Setting Up the Test Environment](solution-guides/appendix-B--Setting-Up-the-Test-Environment.md)
 
+
 ## [Active Directory Domain Services](ad-ds/active-directory-Domain-Services.md)
+
 ### [What's new in Active Directory Domain Services](whats-new-active-directory-domain-services.md)
+
 ### [AD DS Getting started](ad-ds/AD-DS-Getting-started.md)
 #### [Active Directory Domain Services Overview](ad-ds/get-started/virtual-dc/active-directory-domain-services-overview.md)
+
 #### [Active Directory Administrative Center](ad-ds/get-started/adac/active-directory-Administrative-Center.md)
-##### [Introduction to Active Directory Administrative Center Enhancements (Level 100)](ad-ds/get-started/adac/Introduction-to-active-directory-Administrative-Center-Enhancements--Level-100-.md)
-##### [Advanced AD DS Management Using Active Directory Administrative Center (Level 200)](ad-ds/get-started/adac/Advanced-AD-DS-Management-Using-active-directory-Administrative-Center--Level-200-.md)
+##### [AD Recycle Bin, Fine-Grained Password Policy, and PowerShell History](ad-ds/get-started/adac/Introduction-to-active-directory-Administrative-Center-Enhancements--Level-100-.md)
+##### [Advanced AD DS Management Using Active Directory Administrative Center](ad-ds/get-started/adac/Advanced-AD-DS-Management-Using-active-directory-Administrative-Center--Level-200-.md)
+
 #### [Active Directory Domain Services Virtualization](ad-ds/get-started/virtual-dc/active-directory-Domain-Services-Virtualization.md)
 ##### [Introduction to Active Directory Domain Services (AD DS) Virtualization (Level 100)](ad-ds/Introduction-to-active-directory-Domain-Services-AD-DS-Virtualization-Level-100.md)
 ##### [Virtualized Domain Controller Technical Reference (Level 300)](ad-ds/deploy/virtual-dc/Virtualized-Domain-Controller-Technical-Reference--Level-300-.md)
@@ -38,16 +44,22 @@
 ###### [Virtualized Domain Controller additional Resources](ad-ds/reference/virtual-dc/Virtualized-Domain-Controller-additional-Resources.md)
 ##### [Virtualized Domain Controller Cloning Test Guidance for Application Vendors](ad-ds/reference/virtual-dc/Virtualized-Domain-Controller-Cloning-Test-Guidance-for-Application-Vendors.md)
 ##### [Support for using Hyper-V Replica for virtualized domain controllers](ad-ds/get-started/virtual-dc/Support-for-using-Hyper-V-Replica-for-virtualized-domain-controllers.md)
-#### [Windows Server Functional Levels](ad-ds/active-directory-functional-levels.md)
+
+####[Windows Time Service and AD DS](../networking/windows-time-service/windows-time-service.md)
+
 ### [AD DS Design and Planning](ad-ds/plan/AD-DS-Design-and-Planning.md)
+
 #### [Understanding AD DS Design](ad-ds/plan/Understanding-AD-DS-Design.md)
+
 #### [Identifying Your AD DS Design and Deployment Requirements](ad-ds/plan/Identifying-Your-AD-DS-Design-and-Deployment-Requirements.md)
 ##### [AD DS Design Requirements](ad-ds/plan/AD-DS-Design-Requirements.md)
 ##### [AD DS Deployment Requirements](ad-ds/plan/AD-DS-Deployment-Requirements.md)
+
 #### [Mapping Your Requirements to an AD DS Deployment Strategy](ad-ds/plan/Mapping-Your-Requirements-to-an-AD-DS-Deployment-Strategy.md)
 ##### [Deploying AD DS in a New Organization](ad-ds/plan/Deploying-AD-DS-in-a-New-Organization.md)
 ##### [Deploying AD DS in a Windows Server 2003 Organization](ad-ds/plan/Deploying-AD-DS-in-a-Windows-Server-2003-Organization.md)
 ##### [Deploying AD DS in a Windows 2000 Organization](ad-ds/plan/Deploying-AD-DS-in-a-Windows-2000-Organization.md)
+
 #### [Designing the Logical Structure](ad-ds/plan/Designing-the-Logical-Structure.md)
 ##### [Understanding the Active Directory Logical model](ad-ds/plan/Understanding-the-active-directory-Logical-model.md)
 ##### [Identifying the Deployment Project Participants](ad-ds/plan/Identifying-the-Deployment-Project-Participants.md)
@@ -74,13 +86,15 @@
 ####### [Disjoint Namespace](ad-ds/plan/Disjoint-Namespace.md)
 ###### [Assigning the DNS for AD DS Owner Role](ad-ds/deploy/assigning-the-DNS-for-AD-DS-Owner-Role.md)
 ###### [Integrating AD DS into an Existing DNS Infrastructure](ad-ds/plan/Integrating-AD-DS-into-an-Existing-DNS-Infrastructure.md)
+###### [Appendix A: DNS Inventory](ad-ds/plan/appendix-A--DNS-Inventory.md)
 ##### [Creating an Organizational Unit Design](ad-ds/plan/Creating-an-Organizational-Unit-Design.md)
 ###### [Reviewing OU Design Concepts](ad-ds/plan/Reviewing-OU-Design-Concepts.md)
 ###### [Delegating Administration by Using OU Objects](ad-ds/plan/delegating-Administration-by-Using-OU-Objects.md)
-####### [Aelegating Administration of Default Containers and OUs](ad-ds/plan/delegating-Administration-of-Default-Containers-and-OUs.md)
+####### [Delegating Administration of Default Containers and OUs](ad-ds/plan/delegating-Administration-of-Default-Containers-and-OUs.md)
 ####### [Delegating Administration of Account OUs and Resource OUs](ad-ds/plan/delegating-Administration-of-Account-OUs-and-Resource-OUs.md)
-#### [Finding additional Resources for Logical Structure Design](ad-ds/plan/finding-additional-Resources-for-Logical-Structure-Design.md)
-##### [Appendix A: DNS Inventory](ad-ds/plan/appendix-A--DNS-Inventory.md)
+##### [Finding additional Resources for Logical Structure Design](ad-ds/plan/finding-additional-Resources-for-Logical-Structure-Design.md)
+
+
 #### [Designing the Site Topology](ad-ds/plan/Designing-the-Site-Topology.md)
 ##### [Understanding Active Directory Site Topology](ad-ds/plan/Understanding-active-directory-Site-Topology.md)
 ###### [Site Functions](ad-ds/plan/Site-Functions.md)
@@ -103,11 +117,12 @@
 ##### [Finding additional Resources for Windows Server 2008 Active Directory Site Topology Design](ad-ds/plan/finding-additional-Resources-for-Windows-Server-2008-active-directory-Site-Topology-Design.md)
 ##### [Appendix A: Locations and Subnet Prefixes](ad-ds/plan/appendix-A--Locations-and-Subnet-Prefixes.md)
 #### [Enabling Advanced Features for AD DS](ad-ds/plan/Enabling-Advanced-Features-for-AD-DS.md)
-##### [Understanding Active Directory Domain Services (AD DS) Functional Levels](ad-ds/plan/security-best-practices/Understanding-active-directory-Domain-Services--AD-DS--Functional-Levels.md)
+##### [Windows Server Functional Levels](ad-ds/active-directory-functional-levels.md)
 ##### [Identifying Your Functional Level Upgrade](ad-ds/plan/Identifying-Your-Functional-Level-Upgrade.md)
 ##### [Finding additional Resources for Enabling Advanced Features](ad-ds/plan/finding-additional-Resources-for-Enabling-Advanced-Features.md)
 #### [Evaluating AD DS Deployment Strategy Examples](ad-ds/plan/Evaluating-AD-DS-Deployment-Strategy-Examples.md)
 #### [Appendix A: Reviewing Key AD DS Terms](ad-ds/plan/appendix-A--Reviewing-Key-AD-DS-Terms.md)
+
 ### [AD DS Deployment](ad-ds/deploy/AD-DS-Deployment.md)
 #### [What's New in Active Directory Domain Services Installation and Removal](ad-ds/deploy/What-s-New-in-active-directory-Domain-Services-Installation-and-removal.md)
 #### [Upgrade Domain Controllers to Windows Server 2016](ad-ds/deploy/upgrade-domain-controllers.md)
@@ -127,6 +142,7 @@
 ##### [Domain-Wide Updates](ad-ds/deploy/Domain-Wide-Updates.md)
 ##### [Forest-Wide Updates](ad-ds/deploy/RODC/forest-Wide-Updates.md)
 #### [Troubleshooting Domain Controller Deployment](ad-ds/deploy/Troubleshooting-Domain-Controller-Deployment.md)
+
 ### [AD DS Operations](ad-ds/manage/component-updates/AD-DS-Operations.md)
 #### [AD Forest Recovery Guide](ad-ds/manage/AD-Forest-Recovery-Guide.md)
 ##### [AD Forest Recovery - Prerequisites](ad-ds/manage/AD-Forest-Recovery-Prerequisties.md)
@@ -138,10 +154,6 @@
 ##### [AD Forest Recovery - Recovering a single domain with multidomain forest](ad-ds/manage/AD-Forest-Recovery-Single-Domain-in-Multidomain-Recovery.md)
 ##### [AD Forest Recovery - Virtualization](ad-ds/manage/AD-Forest-Recovery-Virtualization.md)
 ##### [AD Forest Recovery - Windows Server 2003](ad-ds/manage/AD-Forest-Recovery-Windows-Server-2003.md)
-
-
-
-
 #### [Best Practices for Securing Active Directory](ad-ds/plan/security-best-practices/Best-Practices-for-Securing-active-directory.md)
 ##### [Executive Summary](ad-ds/manage/component-updates/executive-Summary.md)
 ##### [Introduction](ad-ds/manage/component-updates/Introduction.md)
@@ -180,6 +192,7 @@
 ##### [Directory Services component updates](ad-ds/manage/component-updates/directory-Services-component-updates.md)
 #### [How to Configure Protected Accounts](ad-ds/manage/how-to-configure-protected-accounts.md)
 #### [How LDAP Server Cookies Are Handled](ad-ds/manage/How-LDAP-Server-Cookies-Are-Handled.md)
+
 ### [AD DS Troubleshooting](ad-ds/manage/AD-DS-Troubleshooting.md)
 #### [Configuring a computer for Troubleshooting](ad-ds/manage/troubleshoot/Configuring-a-computer-for-Troubleshooting.md)
 #### [Troubleshooting Active Directory Replication Problems](ad-ds/manage/troubleshoot/Troubleshooting-active-directory-Replication-Problems.md)
@@ -211,9 +224,11 @@
 ##### [Replication error 1127 While accessing the hard disk, a disk operation failed even after retries](https://technet.microsoft.com/library/replication-error-1127-while-accessing-the-hard-disk-a-disk-operation-failed-even-after-retries.aspx)
 ##### [Replication error 8606 Insufficient attributes were given to create an object](ad-ds/manage/troubleshoot/Replication-error-8606-Insufficient-attributes-were-given-to-create-an-object.md)
 ##### [Replication error 8451 The replication operation encountered a database error](ad-ds/manage/troubleshoot/Replication-error-8451-The-replication-operation-encountered-a-database-error.md)
-### [Additional Resources_12](additional-Resources_12.md)
+##### [Additional Resources](additional-Resources_12.md)
+
 
 ## [Active Directory Federation Services](active-directory-Federation-Services.md)
+
 ### [AD FS Overview](ad-fs/AD-FS-Overview.md)
 #### [What's new in Active Directory Federation Services for Windows Server 2016](ad-fs/overview/whats-new-active-directory-federation-services-windows-server.md)
 #### [AD FS Scenarios for Developers](ad-fs/overview/AD-FS-Scenarios-for-Developers.md)
@@ -431,6 +446,7 @@
 #### [Walkthrough: Workplace Join with an Android Device](ad-fs/operations/Walkthrough--Workplace-Join-to-an-Android-device.md)
 
 ### [AD FS Troubleshooting](ad-fs/troubleshooting/ad-fs-tshoot-overview.md)
+#### [AD FS Help Diagnostics Analyzer](ad-fs/troubleshooting/ad-fs-diagnostics-analyzer.md)
 #### [Azure](ad-fs/troubleshooting/ad-fs-tshoot-azure.md)
 #### [Certificates](ad-fs/troubleshooting/ad-fs-tshoot-certs.md)
 #### [Claims syntax](ad-fs/troubleshooting/ad-fs-tshoot-claims-rules.md)
@@ -460,6 +476,7 @@
 ##### [Determine the type of Claim Rule Template to Use](ad-fs/technical-reference/Determine-the-type-of-Claim-Rule-Template-to-Use.md)
 ##### [How URIs Are Used in AD FS](ad-fs/technical-reference/How-URIs-Are-Used-in-AD-FS.md)
 #### [Device registration Technical Reference](ad-fs/technical-reference/device-registration-technical-reference.md)
+#### [AD FS Password Spray Attack Protection](ad-fs/technical-reference/ad-fs-password-spray-protection.md)
 ### [AD FS 2016 FAQ](ad-fs/overview/AD-FS-FAQ.md)
 
 ## [Securing Privileged Access](securing-privileged-access/securing-privileged-access.md)

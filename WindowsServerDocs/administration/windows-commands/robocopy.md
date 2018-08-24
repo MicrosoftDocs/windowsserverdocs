@@ -12,7 +12,7 @@ ms.assetid: d4c6e8e9-fcb3-4a4a-9d04-2d8c367b6354
 author: coreyp-at-msft
 ms.author: coreyp
 manager: lizapo
-ms.date: 06/18/2018
+ms.date: 07/25/2018
 ---
 
 # robocopy
@@ -147,6 +147,21 @@ robocopy <Source> <Destination> [<File>[ ...]] [<Options>]
 |/nosd|Indicates that no source directory is specified.|
 |/nodd|Indicates that no destination directory is specified.|
 |/if|Includes the specified files.|
+
+### Exit (return) codes
+Value | Description
+-- | --
+0 | No files were copied. No failure was encountered.  No files were mismatched. The files already exist in the destination directory; therefore, the copy operation was skipped.
+1 | All files were copied successfully.
+2 | There are some additional files in the destination directory that are not present in the source directory. No files were copied.
+3 | Some files were copied. Additional files were present. No failure was encountered.
+5 | Some files were copied. Some files were mismatched. No failure was encountered.
+6 | Additional  files and mismatched files exist. No files were copied and no failures were encountered. This means that the files already exist in the destination directory.
+7 | Files were copied, a file mismatch was present, and additional files were present.
+8 | Several files did not copy.
+
+> [!NOTE]
+> Any value greater than 8 indicates that there was at least one failure during the copy operation.
 
 ### <a name="BKMK_remarks"></a>Remarks
 
