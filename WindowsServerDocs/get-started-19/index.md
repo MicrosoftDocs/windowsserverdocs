@@ -6,7 +6,7 @@ ms.service: na
 manager: jasgroce
 ms.technology: get-started
 ms.topic: article
-author: corep-at-msft
+author: coreyp-at-msft
 ms.author: coreyp
 ms.localizationpriority: medium
 ---
@@ -15,14 +15,14 @@ ms.localizationpriority: medium
 >Applies To: Windows Server 2019
 
 
-## [System requirements](system-requirements-19.md)
+## [System requirements](sys-reqs-19.md)
 The minimum hardware requirements to install and run Windows Server 2019.
 
-## [Release notes: Important issues in Windows Server](release-notse-19.md)
+## [Release notes: Important issues in Windows Server](rel-notes-19.md)
 Issues that could cause serious problems if you don't avoid or work around them.
 
 
-## [Features removed or deprecated in Windows Server 2019](deprecated-features-19.md)
+## [Features removed in Windows Server 2019](removed-features-19.md)
 Features that have already been removed from Windows Server 2019 from previous releases or designated for potential future removal.
 
 
