@@ -1,7 +1,7 @@
 ---
-title: Create, Delete, or Update Tenant Virtual Networks
-description: This topic is part of the Software Defined Networking guide on how to Manage Tenant Workloads and Virtual Networks in Windows Server 2016.
-manager: brianlic
+title: Create, delete, or update tenant virtual network
+description: In this topic, you learn how to create, delete, and update Hyper-V Network Virtualization Virtual Networks after you deploy Software Defined Networking (SDN). Hyper-V Network Virtualization helps you isolate tenant networks so that each tenant network is a separate entity. Each entity has no cross-connection possibility unless you configure public access workloads.
+manager: elizapo
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -12,18 +12,15 @@ ms.topic: article
 ms.assetid: 6a820826-e829-4ef2-9a20-f74235f8c25b
 ms.author: pashort
 author: shortpatti
+ms.date: 08/24/2018
 ---
-# Create, Delete, or Update Tenant Virtual Networks
+# Create, delete, or update tenant virtual networks
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
-You can use this topic to learn how to create, delete, and update Hyper-V Network Virtualization Virtual Networks after you deploy Software Defined Networking (SDN).  
+In this topic, you learn how to create, delete, and update Hyper-V Network Virtualization Virtual Networks after you deploy Software Defined Networking (SDN). Hyper-V Network Virtualization helps you isolate tenant networks so that each tenant network is a separate entity. Each entity has no cross-connection possibility unless you configure public access workloads.   
   
-Using Hyper-V Network Virtualization, you can isolate tenant networks so that each tenant network is a completely separate entity with no cross-connection possibility unless you configure public access workloads.  
-  
-You can create new Virtual Networks for tenants, you can modify existing Virtual Networks, and if a tenant no longer needs certain resources, or if the tenant is no longer your customer, you can delete tenant Virtual Networks.  
-  
-## Create a new Virtual Network  
+## Create a new virtual network  
   
 When you create a Virtual Network for a tenant, it is placed within a unique routing domain on the Hyper-V host.  
   
@@ -31,7 +28,7 @@ Following are the steps to create a new Virtual Network.
   
 1. Identify the IP address prefixes from which you want to create the virtual subnets.   
 2. Identify the logical provider network upon which the tenant traffic is tunneled.   
-3. Create at least one virtual subnet for each IP Prefix that you defined in step 1.   
+3. Create at least one virtual subnet for each IP prefix that you identified in step 1.   
   
 >[!NOTE]  
 >Beneath every virtual network there is at least one virtual subnet. Virtual Subnets are defined by an IP Prefix and reference a previously defined Access Control List.  

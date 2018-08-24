@@ -91,7 +91,7 @@ The Windows PowerShell example scripts and commands in this topic demonstrate ho
       
     ```  
   
-5. Create a site-to-site VPN connection with IPsec, GRE, or Layer 3 (L3) forwarding.  
+4. Create a site-to-site VPN connection with IPsec, GRE, or Layer 3 (L3) forwarding.  
 
    >[!TIP]
    >Optionally, you can combine all the previous steps and configure a tenant virtual gateway with all three connection options.  For more details, see [Configure a gateway with all three connection types (IPsec, GRE, L3) and BGP](#configure-a-gateway-with-all-three-connection-types-ipsec-gre-l3-and-bgp).
@@ -181,7 +181,7 @@ The Windows PowerShell example scripts and commands in this topic demonstrate ho
   
    ```  
 
-   **L3 forwarding network connection**
+   **L3 forwarding network connection**<p>
    For a L3 forwarding network connection to work properly, you must configure a corresponding logical network.   
   
    1. Configure a logical network for the L3 forwarding Network Connection.  <br>
