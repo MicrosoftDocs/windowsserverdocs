@@ -29,7 +29,7 @@ Features that have already been removed from Windows Server 2019 from previous r
 ## [Server application compatibility Table](app-compat-19.md)
 Does SQL work on Windows Server 2019? What steps are needed to get Exchange running? This topic explains what you'll need to do.
 
-## [Server activation](activation-2019.md)
+## [Server activation](activation-19.md)
 Basic information on activation of Windows Server 2019 itself and other operating systems by using Windows Server 2019.
 
 

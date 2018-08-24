@@ -110,7 +110,6 @@ The following items are not strictly required, but are necessary for certain fea
 >- TPMs that implement version 2.0 must ship with SHA-256 PCR banks and implement PCRs 0 through 23 for SHA-256. It is acceptable to ship TPMs with a single switchable PCR bank that can be used for both SHA-1 and SHA-256 measurements.  
 >- A UEFI option to turn off the TPM is not a requirement.  
 
-## Installation of Nano Server  
-For detailed steps to install Windows Server 2019 as a Nano Server, see [Install Nano Server](nano-server-19.md).
+
 
 
