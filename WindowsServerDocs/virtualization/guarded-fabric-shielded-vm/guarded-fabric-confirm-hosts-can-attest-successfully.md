@@ -7,7 +7,7 @@ ms.assetid: 7485796b-b840-4678-9b33-89e9710fbbc7
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 08/28/2017
+ms.date: 08/24/2018
 ---
 
 # Confirm guarded hosts can attest 

@@ -7,7 +7,7 @@ ms.assetid: f0aa575b-b34e-4f6c-8416-ed3e398e0ad2
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 03/02/2017
+ms.date: 08/24/2018
 ---
 
 >Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016

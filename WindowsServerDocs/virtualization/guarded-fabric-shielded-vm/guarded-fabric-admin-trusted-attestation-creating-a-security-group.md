@@ -7,7 +7,7 @@ ms.assetid: a12c8494-388c-4523-8d70-df9400bbc2c0
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 08/28/2017
+ms.date: 08/24/2018
 ---
 
 # Create a security group for guarded hosts and register the group with HGS

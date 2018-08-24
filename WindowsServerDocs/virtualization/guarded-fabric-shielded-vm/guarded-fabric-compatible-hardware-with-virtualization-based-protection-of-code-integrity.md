@@ -7,7 +7,7 @@ ms.assetid: 15ded82c-f70f-4efb-9e26-2731127931af
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 08/17/2018
+ms.date: 08/24/2018
 ---
 
 # Compatible hardware with Windows Server Virtualization-based protection of Code Integrity

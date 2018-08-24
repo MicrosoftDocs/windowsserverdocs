@@ -6,7 +6,7 @@ ms.topic: article
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 07/05/2017
+ms.date: 08/24/2018
 ---
 
 # Initialize the HGS cluster using TPM mode in a new dedicated forest (default)

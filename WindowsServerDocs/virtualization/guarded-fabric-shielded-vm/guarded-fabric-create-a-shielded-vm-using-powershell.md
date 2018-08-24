@@ -6,7 +6,7 @@ ms.topic: article
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 03/19/2018
+ms.date: 08/24/2018
 ---
 
 # Create a shielded VM using PowerShell

@@ -7,7 +7,7 @@ ms.assetid: 8f01df37-f18e-4386-ae73-ecf84feaa9df
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 08/28/2017
+ms.date: 08/24/2018
 ---
 
 # Verify the HGS configuration

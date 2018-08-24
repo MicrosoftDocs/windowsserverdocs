@@ -7,7 +7,7 @@ ms.assetid: 9c8b84e8-1f5a-47a1-83ca-b1dbd801cb0b
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 10/14/2016
+ms.date: 08/24/2018
 ---
 
 # Create a Windows shielded VM template disk

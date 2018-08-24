@@ -6,7 +6,7 @@ ms.topic: article
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 07/16/2018
+ms.date: 08/24/2018
 ---
 
 # Guarded fabric and shielded VMs overview

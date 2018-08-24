@@ -6,7 +6,7 @@ ms.topic: article
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 08/22/2018
+ms.date: 08/24/2018
 ---
 
 # Troubleshoot Shielded VMs
