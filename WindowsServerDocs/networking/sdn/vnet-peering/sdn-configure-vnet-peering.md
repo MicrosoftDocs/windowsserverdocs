@@ -13,7 +13,7 @@ ms.date: 08/08/2018
 
 # Configure virtual network peering
 
->Applies To: Windows Server
+>Applies to: Windows Server
 
 In this procedure, you use Windows PowerShell to find the HNV provider logical network to create two virtual networks, each with one subnet. You also configure the peering between the two virtual networks.
 

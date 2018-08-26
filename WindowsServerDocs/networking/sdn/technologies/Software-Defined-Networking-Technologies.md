@@ -13,7 +13,7 @@ ms.datae: 08/09/2018
 ---
 # SDN Technologies
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 The topics in this section provide overview and technical information about the Software Defined Networking technologies that are included in Windows Server 2016.  
 

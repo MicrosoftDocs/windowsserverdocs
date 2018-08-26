@@ -16,7 +16,7 @@ ms.date: 08/23/2018
 ---
 # Deploy a Software Defined Network infrastructure
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 Deploy Microsoft's Software Defined Networking (SDN) infrastructure.   
   

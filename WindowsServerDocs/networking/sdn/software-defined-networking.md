@@ -12,7 +12,7 @@ ms.date: 08/09/2018
 ---
 # Software Defined Networking (SDN)
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 
 You can use SDN to do the following.

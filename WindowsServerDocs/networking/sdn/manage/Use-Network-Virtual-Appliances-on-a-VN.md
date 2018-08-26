@@ -15,7 +15,7 @@ author: shortpatti
 ---
 # Use Network Virtual Appliances on a Virtual Network
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use this topic to learn how to deploy network virtual appliances on tenant Virtual Networks.
 

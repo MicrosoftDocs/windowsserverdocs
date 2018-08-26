@@ -16,7 +16,7 @@ ms.date: 08/23/2018
 ---
 # Deploy Network Controller using Windows PowerShell
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This topic provides instructions on using Windows PowerShell to deploy Network Controller on one or more virtual machines (VMs) that are running Windows Server 2016.
 

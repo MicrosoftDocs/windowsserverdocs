@@ -11,7 +11,7 @@ author: shortpatti
 ---
 # What's New in Networking
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2016
 
 Following are the new or enhanced networking technologies in Windows Server 2016.  
   

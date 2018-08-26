@@ -16,7 +16,7 @@ author: shortpatti
 ---
 # Troubleshooting NIC Teaming
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This topic provides information about troubleshooting NIC Teaming, and contains the following sections, which describe possible causes of issues with NIC Teaming.  
   

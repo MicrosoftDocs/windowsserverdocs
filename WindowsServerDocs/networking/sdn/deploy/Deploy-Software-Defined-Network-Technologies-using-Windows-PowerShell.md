@@ -16,7 +16,7 @@ ms.date: 08/23/2018
 ---
 # Deploy Software Defined Network technologies using Windows PowerShell
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use the topics in this section to deploy individual SDN technologies using Windows PowerShell.  
   

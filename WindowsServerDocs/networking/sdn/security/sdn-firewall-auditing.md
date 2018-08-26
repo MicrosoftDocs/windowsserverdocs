@@ -13,7 +13,7 @@ ms.date: 08/22/2018
 
 # SDN firewall auditing
 
->Applies To: Windows Server 2019
+>Applies to: Windows Server 2019
 
 Firewall auditing is a new capability for the SDN firewall in Windows Server 2019. When you enable SDN firewall, any flow processed by SDN firewall rules (ACLs) that have logging enabled gets recorded. The log files must be in a syntax that is consistent with the [Azure Network Watcher flow logs](https://docs.microsoft.com/en-us/azure/network-watcher/network-watcher-nsg-flow-logging-overview). These logs can be used for diagnostics or archived for later analysis. 
 

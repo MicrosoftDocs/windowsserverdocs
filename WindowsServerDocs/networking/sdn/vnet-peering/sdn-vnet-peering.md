@@ -14,7 +14,7 @@ ms.date: 08/08/2018
 
 # Virtual network peering
 
->Applies To: Windows Server
+>Applies to: Windows Server
 
 Virtual network peering lets you connect two virtual networks seamlessly. Once peered, for connectivity purposes, the virtual networks appear as one. 
 
