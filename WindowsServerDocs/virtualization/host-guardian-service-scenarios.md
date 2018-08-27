@@ -24,5 +24,5 @@ The Host Guardian Service (HGS) plays an important role in keeping your data saf
 The security of a VBS memory enclave depends on the security of Windows Hypervisor and, more broadly, the security of the hosting machine. 
 Therefore, before a database client application permits a VBS enclave used for Always Encrypted to perform computations on sensitive data, the application must attest with a trusted HGS to prove the machine hosting SQL Server (which contains the enclave) is in the correct state, and thus, it can be trusted. 
 
-## Windows Defender System Guard runtime attestation
+
 
