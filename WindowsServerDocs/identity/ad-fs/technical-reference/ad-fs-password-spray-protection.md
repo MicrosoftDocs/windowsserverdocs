@@ -53,7 +53,7 @@ But by taking a few steps to configure the AD FS and network correctly, AD FS en
 
 2. If ADFS 2016, implement [extranet *smart* lockout](https://docs.microsoft.com/en-us/windows-server/identity/ad-fs/operations/configure-ad-fs-extranet-smart-lockout-protection). Extranet *smart* lockout tracks familiar locations and will allow a valid user to come through if they have successfully logged in from that location. By using extranet smart lockout you can ensure that bad actors will not be able to brute force attack the users and at the same time will let legitimate user be productive.
 
-3. If you have Azure AD Premium, implement Connect Health for ADFS and use the [Risky IP report](https://docs.microsoft.com/en-us/azure/active-directory/connect-health/active-directory-Azure ADconnect-health-adfs#risky-ip-report-public-preview) notifications that it provides.
+3. If you have Azure AD Premium, implement Connect Health for ADFS and use the [Risky IP report](https://docs.microsoft.com/en-us/azure/active-directory/connect-health/active-directory-aadconnect-health-adfs#risky-ip-report-public-preview) notifications that it provides.
 
     a. Licensing is not for all users and requires 25 licenses/ADFS/WAP server which may be easy for a customer.
     
