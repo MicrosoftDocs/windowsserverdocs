@@ -11,7 +11,7 @@ ms.date: 08/24/2018
 
 # Initialize the HGS cluster using TPM mode in an existing bastion forest
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016
 
 Active Directory Domain Services will be installed on the machine, but should remain unconfigured.
 

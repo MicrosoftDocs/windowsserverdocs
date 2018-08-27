@@ -11,7 +11,7 @@ ms.date: 08/24/2018
 
 # Install trusted TPM root certificates
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016
 
 If you chose TPM mode, or expect to migrate to TPM mode in the future, you need to install root certificates to issue the endorsement key in each host's TPM module.
 These root certificates are different from those installed by default in Windows and represent the specific root and intermediate certificates used by TPM vendors.

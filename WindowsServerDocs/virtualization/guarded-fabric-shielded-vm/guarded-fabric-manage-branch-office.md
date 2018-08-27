@@ -10,7 +10,7 @@ ms.technology: security-guarded-fabric
 
 # Branch office considerations
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019
+> Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), 
 
 This article describes best practices for running shielded virtual machines in branch offices and other remote scenarios where Hyper-V hosts may have periods of time with limited connectivity to HGS.
 

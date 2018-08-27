@@ -12,7 +12,7 @@ ms.date: 08/24/2018
 
 # Verify the HGS configuration
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016
 
 
 Next, we need to validate that things are working as expected. To do so, run the following command in an elevated Windows PowerShell console:

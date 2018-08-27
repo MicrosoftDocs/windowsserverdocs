@@ -12,7 +12,7 @@ ms.date: 08/24/2018
 
 # Shielded VMs - Preparing a VM Shielding Helper VHD
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016
 
 <!-- This comment creates a break between the Applies To above and the Important note below. -->
 

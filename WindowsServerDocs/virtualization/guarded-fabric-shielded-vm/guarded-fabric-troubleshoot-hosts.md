@@ -12,7 +12,7 @@ ms.date: 08/24/2018
 
 # Troubleshooting Guarded Hosts
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+> Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This topic describes resolutions to common problems encountered when deploying or operating a guarded Hyper-V host in your guarded fabric.
 If you are unsure of the nature of your problem, first try running the [guarded fabric diagnostics](guarded-fabric-troubleshoot-diagnostics.md) on your Hyper-V hosts to narrow down the potential causes.

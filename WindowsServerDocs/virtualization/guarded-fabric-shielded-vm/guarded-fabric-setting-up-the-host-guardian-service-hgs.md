@@ -12,7 +12,7 @@ ms.date: 08/24/2018
 
 # Deploy the Host Guardian Service (HGS)
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016
 
 
 To deploy the HGS, complete the following tasks:

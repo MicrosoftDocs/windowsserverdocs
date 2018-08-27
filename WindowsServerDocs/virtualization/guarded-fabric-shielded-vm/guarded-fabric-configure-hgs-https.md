@@ -11,7 +11,7 @@ ms.date: 08/24/2018
 
 # Configure HGS for HTTPS communications
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016
 
 
 By default, when you initialize the HGS server it will configure the IIS web sites for HTTP-only communications.
@@ -56,7 +56,3 @@ Set-HgsServer -Http -Https -HttpsCertificateThumbprint 'A1B2C3D4E5F6...'
 > If you wish to only allow use of the HTTPS endpoint, configure Windows Firewall to block inbound connections to port 80.
 > **Do not modify the IIS bindings** for HGS websites to remove the HTTP endpoint; it is unsupported to do so.
 
-## Next step
-
->[!div class="nextstepaction"]
-[Add HGS nodes](guarded-fabric-configure-additional-hgs-nodes.md)
