@@ -1,7 +1,7 @@
 ---
 title: Manage SDN
 description: This topic is part of the Software Defined Networking guide on how to Manage Tenant Workloads and Virtual Networks in Windows Server 2016.
-manager: brianlic
+manager: elizapo
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -12,6 +12,7 @@ ms.topic: article
 ms.assetid: 7e2b4540-de56-4d5f-bb8e-9f81ca0ea4eb
 ms.author: pashort
 author: shortpatti
+ms.date: 08/26/2018
 ---
 # Manage SDN
 

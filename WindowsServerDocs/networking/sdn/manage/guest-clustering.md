@@ -12,6 +12,7 @@ ms.topic: article
 ms.assetid: 8e9e5c81-aa61-479e-abaf-64c5e95f90dc
 ms.author: grcusanz
 author: shortpatti
+ms.date: 08/26/2018
 ---
 
 # Guest clustering in a virtual network

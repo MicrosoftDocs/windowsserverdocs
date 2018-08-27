@@ -1,44 +1,68 @@
 ---
-title: Update, Backup, and Restore Software Defined Networking Infrastructure
+title: Update, backup, and restore SDN infrastructure
 description: This topic is part of the Software Defined Networking guide on how to Update, Backup and Restore SDN infrastructure in Windows Server 2016.
-manager: brianlic
+manager: elizapo
 ms.prod: windows-server-threshold
 ms.technology: networking-sdn
 ms.topic: article
 ms.assetid: e9a8f2fd-48fe-4a90-9250-f6b32488b7a4
 ms.author: grcusanz
-author: grcusanz
+author: shortpatti
+ms.date: 08/27/2018
 ---
 
-# Update, Backup, and Restore Software Defined Networking Infrastructure
+# Update, backup, and restore SDN infrastructure
 
 >Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
-This topic contains the following sections.
 
-- [Updating the SDN infrastructure](#bkmk_Updating)
-- [Backup the SDN infrastructure](#bkmk_backup)
-- [Restore the SDN infrastructure from a backup](#bkmk_restore)
+In this topic, you learn how to update, backup and restore an SDN infrastructure. 
 
-## <a name="bkmk_Updating"></a>Updating the SDN Infrastructure
+## Update the SDN infrastructure
+Install the same Windows updates on all of the operating system components of the Software Defined Networking (SDN) system, which includes:
 
-Updating is the process of installing Windows updates on all of the operating system components of the Software Defined Networking (SDN) system.  This includes the SDN enabled Hyper-V hosts, Network Controller VMs, Software Load Balancer Mux VMs and RAS Gateway VMs.  It is critical that all of these components have the exact same set of Updates installed.  If System Center Virtual Machine Manager is used it is also recommended that you also update it with the latest Update Rollups as well.
+- SDN enabled Hyper-V hosts
+- Network Controller VMs
+- Software Load Balancer Mux VMs
+- RAS Gateway VMs 
 
-Updating of each component is performed using any of the standard methods for installing windows updates, however the steps described below must be followed to ensure minimal down time for workloads, and to ensure the integrity of the Network Controller database.
+>[!IMPORTANT]
+>If you use System Center Virtual Manager, you must update it with the latest update rollups.
 
-### Step 1: Update the management consoles
-Install necessary updates on each of the computers where you use the Network Controller Powershell module.  This includes anywhere that you have the RSAT-NetworkController role installed by itself.  This does not including the Network Controller VMs themselves as they will be updated in Step 2.
+When you update each component, you can use any of the standard methods for installing Windows updates. However, to ensure minimal downtime for workloads and the integrity of the Network Controller database, follow these steps:
 
-### Step 2: Update the Network Controllers
-This is the most critical step in the update cycle since each Network Controller VM must be updated and be fully back online in the Network Controller cluster before proceeding to the next one.
+1. Update the management consoles.<p>Install the updates on each of the computers where you use the Network Controller Powershell module.  Including anywhere that you have the RSAT-NetworkController role installed by itself. Excluding the Network Controller VMs themselves; you update them in the next step.
+2. On the first Network Controller VM, install all updates and restart.
+3. Before proceeding to the next Network Controller VM, use the `get-networkcontrollernode` cmdlet to check the status of the node that you updated and restarted.
+4. During the reboot cycle, wait for the Network Controller node to go down and then come back up again.<p>After rebooting the VM, it can take several minutes before it goes back into the **_Up_** status. For an example of the output, see 
+5. Install updates on each SLB Mux VM one at a time to ensure continuous availability of the load balancer infrastructure.
+6. Update Hyper-V hosts and RAS gateways, starting with the hosts that contain the RAS gateways that are in **Standby** mode.<p>RAS gateway VMs can’t be migrated live without losing tenant connections. During the update cycle, you must be careful to minimize the number of times tenant connections failover to a new RAS gateway. By coordinating the update of hosts and RAS gateways, each tenant fails over once, at most.
+    a. Evacuate the host of VMs that are capable of live migration.<p>RAS gateway VMs should remain on the host.
+    b. Install updates on each Gateway VM on this host.
+    c. If the update requires the gateway VM to reboot then reboot the VM.  
+    d. Install updates on the host containing the gateway VM that was just Updated.
+    e. Reboot the host if required by the updates.
+    f. Repeat for each additional host containing a standby gateway.<p>If no standby gateways remain, then follow these same steps for all remaining hosts.
 
-Start with one Network Controller VM and install all necessary updates.  Restart the VM if necessary.
 
-Before proceeding to the next Network Controller VM use get-networkcontrollernode to check the status of the node that was Updated and rebooted.  Wait for the Network Controller node to go down during the reboot cycle and then come back up again.  After the VM has rebooted, it can still take several minutes for it to go back into the Up state.
+### Example: Use the get-networkcontrollernode cmdlet 
 
-#### Example: Using get-networkcontrollernode to check the status of Network Controller nodes
+In this example, you see the output for the `get-networkcontrollernode` cmdlet run from within one of the Network Controller VMs.  
 
-This example shows the output from running get-networkcontrollernode from within one of the Network Controller VMs.  It shows that NCNode1.contoso.com is Down while the other two nodes are healthy.  You must wait up to several minutes until the status for that node changes to Up before proceeding with Updating any additional nodes.
+The status of the nodes that you see in the example output is:
+
+- NCNode1.contoso.com = Down
+- NCNode2.contoso.com = Up
+- NCNode3.contoso.com = Up
+
+>[!IMPORTANT]
+>You must wait several minutes until the status for the node changes to _**Up**_ before you update any additional nodes, one at a time.
+
+Once you have updated all of the Network Controller nodes, the Network Controller updates the microservices running within the Network Controller cluster within an hour. 
+
+>[!TIP]
+>You can trigger an immediate update using the `update-networkcontroller` cmdlet.
+
 
 ```Powershell
 PS C:\> get-networkcontrollernode
@@ -64,13 +88,12 @@ NodeCertificate :
 Status          : Up
 ```
 
-Only after all Network Controller nodes are in the Up state can you repeat these steps for each additional Network Controller node.  Continue to update each node one at a time.
+### Example: Use the update-networkcontroller cmdlet
+In this example, you see the output for the `update-networkcontroller` cmdlet to force Network Controller to update. 
 
-Once all of the Network Controller nodes are updated, the Network Controller will update the microservices running within the Network Controller cluster within one hour.  You can trigger an immediate update using the update-networkcontroller cmdlet.
+>[!IMPORTANT]
+>Run this cmdlet when you have no more updates to install.
 
-#### Example: Using update-networkcontroller to force Network Controller to update
-
-This command shows the result of update-networkcontroller when there are not updates remaining to be installed.
 
 ```Powershell
 PS C:\> update-networkcontroller
@@ -79,24 +102,8 @@ NetworkControllerClusterVersion NetworkControllerVersion
 10.1.1                          10.1.15
 ```
 
-### Step 3: Update SLB Muxes
 
-Install updates on each SLB Mux VM one at a time to ensure continuous availability of the load balancer infrastructure.
-
-### Step 4: Update Hyper-V Hosts and RAS Gateways
-
-Because RAS Gateway VMs can't be live migrated without losing tenant connections, care must be taken in order to minimize the number of times that tenant connections will be failed over to a new RAS gateways during the Updating cycle.  By coordinating the Updating of the hosts and RAS gateways each tenant will only fail-over at most one time.  
-
-Follow these steps for each host, starting with the hosts that contain the RAS Gateways that are in Standby mode:
-
-1.	Evacuate the host of VMs that are capable of live migration.  RAS Gateway VMs should remain on the host.
-2.	Install updates on each Gateway VM on this host.
-3.	If update requires the gateway VM to reboot then reboot the VM.  
-4.	Install updates on the host containing the gateway VM that was just Updated.
-5.	Reboot the host if required by the updates.
-6.	Repeat for each additional host containing a standby gateway.  If no standby gateways remain, then follow these same steps for all remaining hosts.
-
-## <a name="bkmk_backup"></a>Backup the SDN infrastructure
+## Backup the SDN infrastructure
 
 Regular backups of the Network Controller database are critical to ensure business continuity in the event of a disaster or data loss.  Backing up the Network Controller VMs is insufficient because it does not ensure that quorum is maintained across the multiple Network Controller nodes.
 Requirements:
@@ -228,7 +235,7 @@ Follow these steps to perform a backup:
 
 5.	If using SCVMM you can now start SCVMM service.
 
-## <a name="bkmk_restore"></a>Restore the SDN infrastructure from a backup
+## Restore the SDN infrastructure from a backup
 
 Restore is the process of restoring all necessary components from backup to return an SDN environment to an operational state.  The steps will vary slightly depending on the amount of components that are being restored.
 
