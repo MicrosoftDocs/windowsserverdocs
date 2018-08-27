@@ -1,6 +1,6 @@
 ---
 title: Update, backup, and restore SDN infrastructure
-description: This topic is part of the Software Defined Networking guide on how to Update, Backup and Restore SDN infrastructure in Windows Server 2016.
+description: In this topic, you learn how to update, backup and restore an SDN infrastructure. 
 manager: elizapo
 ms.prod: windows-server-threshold
 ms.technology: networking-sdn
@@ -14,7 +14,6 @@ ms.date: 08/27/2018
 # Update, backup, and restore SDN infrastructure
 
 >Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
-
 
 In this topic, you learn how to update, backup and restore an SDN infrastructure. 
 
