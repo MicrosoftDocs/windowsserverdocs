@@ -66,7 +66,7 @@ But by taking a few steps to configure the AD FS and network correctly, AD FS en
     - If you are not on AD FS 2016, we strongly recommend you [upgrade](../../ad-fs/deployment/upgrading-to-ad-fs-in-windows-server.md) to AD FS 2016. It is a simple upgrade path from AD FS 2012 R2. If you are on AD FS 2012 R2, implement [extranet lockout](../../ad-fs/operations/Configure-AD-FS-Extranet-Soft-Lockout-Protection.md). One disadvantage of this approach is that valid users may be blocked from extranet access if you are in a brute force pattern. AD FS on Server 2016 does not have this disadvantage.
 
 2. Monitor & Block suspicious IP addresses 
-    - If you have Azure AD Premium, implement Connect Health for ADFS and use the [Risky IP report](https://docs.microsoft.com/azure/active-directory/connect-health/active-directory-Azure ADconnect-health-adfs#risky-ip-report-public-preview) notifications that it provides.
+    - If you have Azure AD Premium, implement Connect Health for ADFS and use the [Risky IP report](https://docs.microsoft.com/en-us/azure/active-directory/connect-health/active-directory-aadconnect-health-adfs#risky-ip-report-public-preview) notifications that it provides.
         
         a. Licensing is not for all users and requires 25 licenses/ADFS/WAP server which may be easy for a customer.
     
@@ -104,9 +104,9 @@ But by taking a few steps to configure the AD FS and network correctly, AD FS en
 
 7. Move to Window 10 and use [Hello For Business](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-identity-verification).
 
-8. For other devices, if on AD FS 2016, you can use [Azure MFA OTP](../../ad-fs/operations/configure-ad-fs-and-azure-mfa#registering-users-for-azure-mfa-with-ad-fs-2016.md) as the first factor and password as the 2nd factor. 
+8. For other devices, if on AD FS 2016, you can use [Azure MFA OTP](../../ad-fs/operations/configure-ad-fs-and-azure-mfa.d#registering-users-for-azure-mfa-with-ad-fs-2016) as the first factor and password as the 2nd factor. 
 
-9.	For mobile devices, if you only allow MDM managed devices, you can use [Certificates](h../../ad-fs/operations/configure-user-certificate-authentication.md) to log the user in. 
+9.	For mobile devices, if you only allow MDM managed devices, you can use [Certificates](../../ad-fs/operations/configure-user-certificate-authentication.md) to log the user in. 
  
 ## Urgent Handling
 
