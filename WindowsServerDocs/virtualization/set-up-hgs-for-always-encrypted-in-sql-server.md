@@ -22,3 +22,32 @@ This article will help you set up the Host Guardian Service in a recommended con
 
 ## Prerequisites 
 
+### HGS servers
+
+- 1-3 servers to run the Host Guardian Service. 
+  These servers should be carefully protected since they control which machines can run your SQL Server instances using Always Encrypted with secure enclaves. 
+  It is recommended that different admins manage the HGS cluster and that you run the HGS on physical hardware isolated from the rest of your infrastructure, or in separate virtualization fabrics or Azure subscriptions.
+
+  - Windows Server 2019 Standard or Datacenter edition
+  - 2 CPUs
+  - 8GB RAM
+  - 100GB storage
+
+  >[!NOTE]
+  >Only 1 HGS server is required for a test or pre-production environment.
+
+- Choose a name for the new Active Directory forest created by the Host Guardian Service. 
+  HGS should not be joined to your existing corporate domain and should have separate admins managing it.   
+
+- Firewall and routing rules to allow inbound HTTP (TCP 80) or HTTPS (TCP 443) traffic on the Host Guardian Service nodes from: 
+
+  - The machines running SQL Server
+  - The machines running database client applications (such as web servers) that issue database queries and use Always Encrypted with secure enclaves. 
+
+### SQL Server machines
+
+- Your SQL Server instance should run on a machine that meets the following requirements:
+
+  - Windows Server 2019 or Windows 10 Enterprise edition
+  - Physical machine (not a virtual machine)
+  
