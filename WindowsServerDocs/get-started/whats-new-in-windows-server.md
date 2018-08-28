@@ -13,7 +13,7 @@ ms.localizationpriority: medium
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
-<img src="media/whats-new.png" style='float:left; padding:.5em;' alt="Icon showing a newspaper">This topic contains links to articles that describe what's new and changed for specific releases of Windows Server 2016 and Windows Server (Semi-Annual Channel).   
+You can find the new features for each of these Windows Server 2016 and Windows Server (Semi-Annual Channel) releases.  
    
 <br>
 <br>
