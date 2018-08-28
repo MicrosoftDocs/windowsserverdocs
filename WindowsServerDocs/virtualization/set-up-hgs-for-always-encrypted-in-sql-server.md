@@ -50,4 +50,22 @@ This article will help you set up the Host Guardian Service in a recommended con
 
   - Windows Server 2019 or Windows 10 Enterprise edition
   - Physical machine (not a virtual machine)
-  
+  - General requirements listed in [Hardware and Software Requirements for Installing SQL Server](https://docs.microsoft.com/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server?view=sql-server-2017).   
+
+- Requirements specific to the chosen attestation mode:
+  - **TPM mode** is the strongest attestation mode and will use a Trusted Platform Module (TPM) to cryptographically validate that your SQL Server machines are known to your datacenter (using a unique ID from each TPM), running trusted hardware and firmware configurations (using a TPM baseline), and running trustworthy kernel and user mode code (using Windows Defender Application Control). The following hardware is required to use TPM mode: 
+    - TPM 2.0 module installed and enabled 
+    - Secure Boot enabled with the Microsoft Secure Boot policy (do not enable the 3rd party Secure Boot CA policy or any custom policies)
+    - IOMMU (Intel VT-d or AMD IOV) to prevent direct memory access attacks 
+
+  - **Host key mode** uses an asymmetric key pair (much like SSH keys) to identify and authorize hosts that wish to run SQL Server. This mode is easier to set up and does not have any specific hardware requirements but will not verify the software or firmware running on the SQL server machines.   
+
+Microsoft recommends you use TPM mode for production environments. 
+To check if your TPM is compatible, run the following commands on the machine where you intend to run SQL Server using Always Encrypted with secure enclaves. 
+“2.0” must appear in the list of supported SpecVersions for you to use TPM attestation:
+
+```powershell
+Get-CimInstance -ClassName Win32_Tpm -Namespace root/cimv2/Security/MicrosoftTpm 
+```
+
+## Set up the first HGS node 
