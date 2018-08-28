@@ -69,3 +69,10 @@ Get-CimInstance -ClassName Win32_Tpm -Namespace root/cimv2/Security/MicrosoftTpm
 ```
 
 ## Set up the first HGS node 
+
+The Host Guardian Service operates in a highly available configuration using a 3-node cluster. 
+It is recommended that you set up one node completely before adding other nodes. 
+
+1. [!INCLUDE [Install the HGS server role](../../includes/guarded-fabric-install-hgs-server-role.md)]
+2. [!INCLUDE [Install HGS by default](../../includes/install-hgs-default.md)] 
+3. 
