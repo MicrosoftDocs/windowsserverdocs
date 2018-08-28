@@ -104,7 +104,7 @@ But by taking a few steps to configure the AD FS and network correctly, AD FS en
 
 7. Move to Window 10 and use [Hello For Business](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-identity-verification).
 
-8. For other devices, if on AD FS 2016, you can use [Azure MFA OTP](../../ad-fs/operations/configure-ad-fs-and-azure-mfa) as the first factor and password as the 2nd factor. 
+8. For other devices, if on AD FS 2016, you can use [Azure MFA OTP](../../ad-fs/operations/configure-ad-fs-and-azure-mfa.md) as the first factor and password as the 2nd factor. 
 
 9.	For mobile devices, if you only allow MDM managed devices, you can use [Certificates](../../ad-fs/operations/configure-user-certificate-authentication.md) to log the user in. 
  
