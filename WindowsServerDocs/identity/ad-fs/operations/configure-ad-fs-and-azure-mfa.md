@@ -2,10 +2,10 @@
 ms.assetid: 24c4b9bb-928a-4118-acf1-5eb06c6b08e5
 title: Configure AD FS 2016 and Azure MFA
 description:
-ms.author: joflore
-author: MicrosoftGuyJFlo
+ms.author: billmath
+author: billmath
 manager: mtillman
-ms.date: 06/26/2018
+ms.date: 08/28/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 
@@ -18,6 +18,13 @@ ms.technology: identity-adfs
 If your organization is federated with Azure AD, you can use Azure Multi-Factor Authentication to secure AD FS resources, both on-premises and in the cloud. Azure MFA enables you to eliminate passwords and provide a more secure way to authenticate.  Starting with Windows Server 2016, you can now configure Azure MFA for primary authentication. 
   
 Unlike with AD FS in Windows Server 2012 R2, the AD FS 2016 Azure MFA adapter integrates directly with Azure AD and does not require an on premises Azure MFA server.   The Azure MFA adapter is built in to Windows Server 2016, and there is no need for additional installation.
+
+## Pre-requisites for web app server communication
+Before using Azure MFA to secure AD FS resources you need to ensure that the AD FS web proxy is able to communticate with the following over ports 80 and 443
+
+- https://adnotifications.windowsazure.com
+- https://login.microsoftonline.com
+
 
 ## Registering users for Azure MFA with AD FS 2016
 
