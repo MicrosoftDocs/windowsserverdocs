@@ -112,9 +112,9 @@ But by taking a few steps to configure the AD FS and network correctly, AD FS en
 
 If the AD FS environment is under active attack, the following steps should be implemented at the earliest:
 
- - Disable U/P endpoint in ADFS and require everyone to VPN to get access or be inside your network. This requires you to have step **#5a** completed. Otherwise, all internal Outlook requests will still be routed via the cloud via EXO proxy auth.
+ - Disable U/P endpoint in ADFS and require everyone to VPN to get access or be inside your network. This requires you to have step **Level 2 #1a** completed. Otherwise, all internal Outlook requests will still be routed via the cloud via EXO proxy auth.
  - Alternatively, if the attack is only coming via EXO, you can disable POP/IMAP protocols completely which is how we see a vast majority of these attacks coming from. Additionally, you can use CAR rules in EXO to have user specific policies on what is allowed. This handles it at the pre-auth stage. 
- - Selectively offer extranet access using #7-9.
+ - Selectively offer extranet access using Level 3 #1-3.
 
 ## Next steps
 
