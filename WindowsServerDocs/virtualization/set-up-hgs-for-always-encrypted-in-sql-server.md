@@ -11,7 +11,7 @@ ms.date: 08/22/2018
 
 # Setting up the Host Guardian Service for Always Encrypted in SQL Server 
  
-Always Encrypted with secure enclaves in SQL Server v.Next is a feature designed to enable confidential computations on sensitive data stored in a database. 
+Always Encrypted with secure enclaves in SQL Server vNext is a feature designed to enable confidential computations on sensitive data stored in a database. 
 The Host Guardian Service plays an important role in keeping your data safe when a secure enclave, configured for Always Encrypted, is a virtualization-based security (VBS) memory enclave. 
 The security of a VBS memory enclave depends on the security of Windows Hypervisor and, more broadly, the security of the hosting machine. 
 
@@ -88,7 +88,7 @@ It is recommended that you set up one node completely before adding other nodes.
 3. [!INCLUDE [Determine a DNN](../../includes/guarded-fabric-initialize-hgs-default-step-one.md)]
 4. After the machine reboots again, log in as a Domain Admin and configure the attestation service. 
    You will need to choose TPM or host key attestation and run the corresponding command. 
-   
+
    For TPM mode:
    ```powershell
    Initialize-HgsAttestation -HgsServiceName 'hgs' -TrustTpm
