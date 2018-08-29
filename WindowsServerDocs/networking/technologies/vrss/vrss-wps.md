@@ -5,9 +5,10 @@ ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
 ms.assetid: 49e93b9f-46d9-4cee-bcda-1c4634893ddd
-manager: brianlic
+manager: elizap
 ms.author: pashort
 author: shortpatti
+ms.date: 08/29/2018
 ---
 
 # Windows PowerShell Commands for RSS and vRSS
@@ -59,6 +60,24 @@ To determine the present settings for vRSS, and to enable or disable the feature
     Get-VMNetworkAdapter -ManagementOS | fl
     Set-VMNetworkAdapter -ManagementOS -VrssEnabled [$True|$False]
     
+
+## Configure the Scheduling Mode on the Hyper-V Virtual Switch port
+>Applies to: Windows Server 2019
+
+In Windows Server 2019, vRSS can update the logical processors used to process network traffic dynamically.  By default, this scheduling mode is enabled on devices with supported drivers. To determine the present scheduling mode on a system, or to modify the scheduling mode for a VM, use the following Windows PowerShell commands:
+
+    Get-VMNetworkAdapter <vm-name> | Select *VRSSQueue*
+    Set-VMNetworkAdapter <vm-name> -VrssQueueSchedulingMode [Dynamic|$StaticVrss|StaticVMQ]
+
+
+## Configure the Scheduling Mode on a host vNIC
+>Applies to: Windows Server 2019
+
+To determine the present scheduling mode or modify the scheduling mode for a host vNIC, use the following Windows PowerShell commands:
+
+    Get-VMNetworkAdapter -ManagementOS | Select *VRSSQueue*
+    Set-VMNetworkAdapter -ManagementOS -VrssQueueSchedulingMode -VrssQueueSchedulingMode [Dynamic|$StaticVrss|StaticVMQ]
+
 
 For more information, see the following reference topics.
 
