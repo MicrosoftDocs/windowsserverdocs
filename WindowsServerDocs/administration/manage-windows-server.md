@@ -16,7 +16,7 @@ ms.localizationpriority: high
 >[!TIP]
 > Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/) on docs.microsoft.com. You can also [search this site](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions) for specific information.
 
- <ul class="cardsb panelContent cols cols1">
+ <ul class="cardse panelContent cols cols3">
     <li>
         <a href="https://docs.microsoft.com/en-us/windows-insider/at-work-pro/wip-4-biz-feedback-hub">
         <div class="cardSize">
