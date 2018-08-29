@@ -49,6 +49,7 @@ For these scenarios, you must create a routing table and add user-defined routes
 
 Subnets rely on system routes until a routing table gets associated to the subnet. After an association exists, routing is done based on Longest Prefix Match (LPM) among both user-defined routes and system routes. If there is more than one route with the same LPM match, then the user defined route is selected first - before the system route.
  
+**Procedure:**
 
 1. Create the route table properties, which contains all of the user defined routes.<p>System routes still apply according to the rules defined above.
 
@@ -56,12 +57,9 @@ Subnets rely on system routes until a routing table gets associated to the subne
     $routetableproperties = new-object Microsoft.Windows.NetworkController.RouteTableProperties
    ```
 
-2. Add a route to the route table properties.
+2. Add a route to the routing table properties.<p>Any route destined for 12.0.0.0/8 subnet gets routed to the virtual appliance at 192.168.1.10. The appliance must have a virtual network adapter attached to the virtual network with that IP assigned to a network interface.
 
-This route says that any traffic that is destined for the 12.0.0.0/8 subnet should get sent the the virtual appliance at 192.168.1.10 to be routed.  It is important that the appliance has a virtual network adapter attached to the virtual network with that IP assigned to a network interface.
-
-You can use the following example commands to add a route to the route table properties.
-
+   ```PowerShell
     $route = new-object Microsoft.Windows.NetworkController.Route
     $route.ResourceID = "0_0_0_0_0"
     $route.properties = new-object Microsoft.Windows.NetworkController.RouteProperties
@@ -69,33 +67,34 @@ You can use the following example commands to add a route to the route table pro
     $route.properties.nextHopType = "VirtualAppliance"
     $route.properties.nextHopIpAddress = "192.168.1.10"
     $routetableproperties.routes += $route
+   ```
+   >[!TIP]
+   >If you want to add more routes, repeat this step for each route you want to define.
 
-You can add additional routes by repeating this step for each route you want to define.
-s
-3. Add the route table to Network Controller
-You can use the following example commands to add the route table to Network Controller.
+3. Add the routing table to Network Controller.
 
+   ```PowerShell
     $routetable = New-NetworkControllerRouteTable -ConnectionUri $uri -ResourceId "Route1" -Properties $routetableproperties
+   ```
 
-4. Apply the route table to the virtual subnet
- 
-When you apply the route table to the virtual subnet, the first virtual subnet in the Tenant1_Vnet1 network uses the route table. You can assign the route table to as many of the subnets in the virtual network as you want.
+4. Apply the routing table to the virtual subnet.<p>When you apply the route table to the virtual subnet, the first virtual subnet in the Tenant1_Vnet1 network uses the route table. You can assign the route table to as many of the subnets in the virtual network as you want.
 
-You can use the following example commands to apply the route table to the virtual subnet.
-
+   ```PowerShell
     $vnet = Get-NetworkControllerVirtualNetwork -ConnectionUri $uri -ResourceId "Tenant1_VNet1"
     $vnet.properties.subnets[0].properties.RouteTable = $routetable
     new-networkcontrollervirtualnetwork -connectionuri $uri -properties $vnet.properties -resourceId $vnet.resourceid
+   ```
 
-As soon as you apply the route table to the virtual network, traffic is forwarded to the virtual appliance. You must configure the routing table in the virtual appliance to forward the traffic, in a manner that is appropriate for your environment.
+As soon as you apply the routing table to the virtual network, traffic gets forwarded to the virtual appliance. You must configure the routing table in the virtual appliance to forward the traffic, in a manner that is appropriate for your environment.
 
 ## Example: Port mirroring
 
-This example allows you to configure MyVM_Ethernet1's traffic so that the traffic is mirrored to Appliance_Ethernet1.
+In this example, you configure the traffic for MyVM_Ethernet1 to mirror Appliance_Ethernet1.  We assume that you’ve deployed two VMs, one as the appliance and the other as the VM to monitor with mirroring. 
 
-This example assumes that you've already deployed two VMs, one as the appliance and one as the VM to monitor with mirroring.
+The appliance must have a second network interface for management. After you enable mirroring as a destination on Appliciance_Ethernet1, it no longer receives traffic destined for the IP interface configured there.
 
-It is important that the appliance has a second network interface for management because after mirroring is enabled as a destination on Appliance_Ethernet1, it will no longer receive traffic that is destined for the IP interface configured there.
+
+**Procedure:**
 
 1. Get the virtual network on which your VMs are located
 You can use the following example command to get the virtual network.
