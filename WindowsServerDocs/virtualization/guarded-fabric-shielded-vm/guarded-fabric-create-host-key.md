@@ -49,7 +49,7 @@ This topic covers how to prepare Hyper-V hosts to become guarded hosts using hos
 
 ## Add the host key to the attestation service
 
-This step allows the host to run shielded VMs. It is recommended that you set the name to the FQDN or resource identifier of the host machine, so you can easily refer to which host the key is installed on.
+This step is done on the HGS server and allows the host to run shielded VMs. It is recommended that you set the name to the FQDN or resource identifier of the host machine, so you can easily refer to which host the key is installed on.
 
 ```powershell
 Add-HgsAttestationHostKey -Name MyHost01 -Path "C:\temp\MyHost01-HostKey.cer"

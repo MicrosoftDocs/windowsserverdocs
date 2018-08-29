@@ -56,6 +56,8 @@ Guarded hosts using host key attestation must meet the following prerequisites:
 
 The host can be joined to either a domain or a workgroup. 
 
+For host key attestation, HGS must be running Windows Server 2019 and operating with v2 attestation. For more information see [HGS prerequisites](guarded-fabric-prepare-for-hgs.md#prerequisites). 
+
 **Next step:** 
 >[!div class="nextstepaction"]
 [Create a key pair](guarded-fabric-create-host-key.md)

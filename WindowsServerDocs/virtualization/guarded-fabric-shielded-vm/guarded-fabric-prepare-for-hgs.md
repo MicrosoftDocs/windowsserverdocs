@@ -23,7 +23,7 @@ This topic covers HGS prerequisites and initial steps to prepare for the HGS dep
 
     If you want to run HGS as a three-node physical cluster (for availability), you must have three physical servers. (As a best practice for clustering, the three servers should have very similar hardware.)
   
--   **Operating system**: Windows Server 2019 or Windows Server 2016, Standard or Datacenter edition.
+-   **Operating system**: Host key attestation requires Windows Server 2019 Standard or Datacenter edition operating with [v2 attestation](guarded-fabric-tpm-trusted-attestation-capturing-hardware.md#versioned-attestation-policies). For TPM-based attestation, HGS can run Windows Server 2019 or Windows Server 2016, Standard or Datacenter edition.
 
 -   **Server Roles**: Host Guardian Service and supporting server roles.
 
