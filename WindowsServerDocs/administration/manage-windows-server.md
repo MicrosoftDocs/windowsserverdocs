@@ -16,7 +16,7 @@ ms.localizationpriority: high
 >[!TIP]
 > Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/) on docs.microsoft.com. You can also [search this site](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions) for specific information.
 
- <ul class="cardsF panelContent cols cols4">
+ <ul class="cardsb panelContent cols cols1">
     <li>
         <a href="https://docs.microsoft.com/en-us/windows-insider/at-work-pro/wip-4-biz-feedback-hub">
         <div class="cardSize">
@@ -28,7 +28,7 @@ ms.localizationpriority: high
                         </div>
                     </div>
                     <div class="cardText">
-                        <h2>Manage/h2>
+                        <h2>Manage</h2>
                 <p>Once you have deployed Windows Server into your environment, including the specific roles for the features and functions you need, the next step is managing those servers. Windows Server includes a number of tools to help you understand your Windows Server environment, manage specific servers, fine-tune performance, and eventually automate many management tasks. </p>
                     </div>
                 </div>
