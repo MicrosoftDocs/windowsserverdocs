@@ -266,6 +266,7 @@
 ## [Windows Internet Name Service (WINS)](technologies/wins/wins-top.md)
 
 ## [Windows Time Service](windows-time-service/windows-time-service-top.md)
+### [Insider preview](windows-time-service/insider-preview.md)
 ### [Accurate Time for Windows Server 2016](windows-time-service/accurate-time.md)
 ### [Support boundary to configure the Windows Time service for high-accuracy environments](windows-time-service/support-boundary.md)
 ### [Configuring Systems for High Accuracy](windows-time-service/configuring-systems-for-high-accuracy.md)
