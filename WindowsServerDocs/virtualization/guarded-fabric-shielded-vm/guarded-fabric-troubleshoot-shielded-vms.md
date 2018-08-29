@@ -19,12 +19,21 @@ To enable VMConnect and PS Direct for your shielded VMs, simply move them to a H
 
 For security-sensitive customers who worry if hosters have any access to the VM and wish to return to the original behavior, the following features should be disabled in the guest OS:
 
-- Disable the PowerShell Direct service in the VM
+- Disable the PowerShell Direct service in the VM:
+
+  ```powershell
+  Stop-Service vmicvmsession
+  Set-Service vmicvmsession -StartupType Disabled
+  ```
 
 - Disable the **Microsoft Hyper-V Remote Desktop Control Channel** device in Device Manager
 
 
 Depending on the the version of the guest operating system, VMConnect might not be allowed. Beginning with Windows Server 2019, if you want VMConnect to always be available on a VM guest, add this registry key:
 
-<!-- PS direct you can disable in Windows Server 2016. But the reg key disable VM connect is only available in 2019, that’s for the guest OS. -->
+```
+reg add "HKLM\Software\Microsoft\Virtual Machine\Guest" /v DisableEnhancedSessionConsoleConnection /t REG_DWORD /d 1
+```
+
+
 
