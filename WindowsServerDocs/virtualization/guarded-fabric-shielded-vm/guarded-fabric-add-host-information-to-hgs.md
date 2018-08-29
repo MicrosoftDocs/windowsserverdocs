@@ -7,7 +7,7 @@ ms.assetid: 0d1d19b6-820a-4b3f-9b97-6386dd544a64
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 08/24/2018
+ms.date: 08/29/2018
 ---
 
 # Add host information to the HGS configuration
