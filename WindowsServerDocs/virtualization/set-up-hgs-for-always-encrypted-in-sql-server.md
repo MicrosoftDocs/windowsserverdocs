@@ -88,6 +88,7 @@ It is recommended that you set up one node completely before adding other nodes.
 3. [!INCLUDE [Determine a DNN](../../includes/guarded-fabric-initialize-hgs-default-step-one.md)]
 4. After the machine reboots again, log in as a Domain Admin and configure the attestation service. 
    You will need to choose TPM or host key attestation and run the corresponding command. 
+   
    For TPM mode:
    ```powershell
    Initialize-HgsAttestation -HgsServiceName 'hgs' -TrustTpm
