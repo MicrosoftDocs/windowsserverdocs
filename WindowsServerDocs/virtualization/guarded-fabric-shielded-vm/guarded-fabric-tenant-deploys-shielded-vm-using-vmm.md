@@ -7,7 +7,7 @@ ms.assetid: 39d5e29c-835d-490a-b74d-798a0dcb3f39
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 08/24/2018
+ms.date: 08/29/2018
 ---
 
 # Shielded VMs for tenants - Deploying a shielded VM by using Virtual Machine Manager

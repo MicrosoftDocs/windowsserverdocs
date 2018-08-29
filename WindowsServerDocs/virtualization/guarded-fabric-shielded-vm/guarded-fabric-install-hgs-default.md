@@ -6,7 +6,7 @@ ms.topic: article
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 08/24/2018
+ms.date: 08/29/2018
 ---
 
 # Install HGS in a new forest 

@@ -8,7 +8,7 @@ ms.assetid: 0ca1efa0-01f9-4b6f-87d4-c66db00d7d70
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 08/24/2018
+ms.date: 08/29/2018
 ---
 
 # Shielded VMs for tenants - Creating a new shielded VM on-premises and moving it to a guarded fabric

@@ -8,7 +8,7 @@ manager: dongill
 author: rpsqrd
 ms.author: justinha
 ms.technology: security-guarded-fabric
-ms.date: 08/24/2018
+ms.date: 08/29/2018
 ---
 
 # Guarded fabric and shielded VMs
