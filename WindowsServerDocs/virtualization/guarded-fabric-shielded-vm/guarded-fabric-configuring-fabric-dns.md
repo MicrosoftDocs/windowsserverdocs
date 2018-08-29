@@ -10,6 +10,13 @@ ms.technology: security-guarded-fabric
 ms.date: 08/24/2018
 ---
 
+# Configure the fabric DNS for guarded hosts
+
+>Applies To: Windows Server 2016
+
+A fabric administrator needs to configure the fabric DNS takes to allow guarded hosts to resolve the HGS cluster. 
+The HGS cluster must already be [set up by the HGS administrator](/WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-setting-up-the-host-guardian-service-hgs.md).
+
 [!INCLUDE [Configure fabric DNS](../../../includes/guarded-fabric-configure-fabric-dns.md)] 
 
 
