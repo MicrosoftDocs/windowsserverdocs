@@ -119,7 +119,7 @@ It is recommended that you set up one node completely before adding other nodes.
 
 ## Collect attestation info from the SQL Server machine
 
-Once HGS is set up, it needs to be configured with attestation information from your SQL Server machines so that it knows which machines should be authorized to perform confidential computations using Always Encrypted and VBS enclaves. The steps to do this vary based on your selected attestation mode. 
+Once HGS is set up, it needs to be configured with attestation information from your SQL Server machines so that it knows which machines should be authorized to perform confidential computations using Always Encrypted and VBS secure enclaves. These steps vary based on which attestation mode you use. 
 
 ### Collect TPM attestation artifacts 
 
@@ -141,8 +141,11 @@ If you are using TPM mode, run the following commands on each SQL Server machine
    Get-HgsAttestationBaselinePolicy -SkipValidation -Path "C:\artifacts\TpmBaseline-$env:computername.tcglog" 
    ```
 
-4. Compose a code integrity policy to restrict which software can run on the system. Any Windows Defender Application Control policy is sufficient. If you are only running Microsoft software on the server, the following commands will quickly create a policy for you. The policy will be in audit mode, meaning it will log an event about unauthorized code, but will not keep it from running. After testing the scenario for a few days to make sure all your software passes the policy, you can change the policy to an enforced mode. 
-Windows Defender Application Control has numerous features to cover a variety of security postures. If you need to allow non-Microsoft software or customize the default policy, please refer to the complete [Windows Defender Application Control deployment guide](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide).   
+4. Compose a code integrity policy to restrict which software can run on the system. 
+   Any Windows Defender Application Control policy is sufficient. 
+   If you are only running Microsoft software on the server, the following commands will quickly create a policy for you. 
+   The policy will be in audit mode, meaning it will log an event about unauthorized code, but will not keep it from running. 
+   After testing the scenario for a few days to make sure all your software passes the policy, you can change the policy to an enforced mode. 
 
    ```powershell
    Copy-Item C:\Windows\Schemas\CodeIntegrity\ExamplePolicies\AllowMicrosoft.xml C:\artifacts\AllowMicrosoft-Audit.xml 
@@ -151,6 +154,11 @@ Windows Defender Application Control has numerous features to cover a variety of
    Copy-Item C:\artifacts\AllowMicrosoft-Audit.bin C:\Windows\System32\CodeIntegrity\SIPolicy.p7b 
    Restart-Computer 
    ```
+
+   Windows Defender Application Control has numerous features to cover a variety of security postures. 
+   If you need to allow non-Microsoft software or customize the default policy, se the [Windows Defender Application Control deployment guide](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide).   
+
+
 5. Verify that Virtualization Based Security is running on your computer with the following command. 
    You will know that VBS is running if the DeviceGuardSecurityServicesRunning field has “HypervisorEnforcedCodeIntegrity” listed in it. 
    If it is not running, download the [Device Guard Readiness Tool](https://www.microsoft.com/download/details.aspx?id=53337) and run “DG_Readiness.ps1 -Enable -HVCI” to enable it.  
