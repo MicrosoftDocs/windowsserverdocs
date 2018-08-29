@@ -9,14 +9,34 @@ ms.author: elizapo
 ms.date: 03/16/2018
 ms.localizationpriority: high
 ---
-# Manage Windows Server 2016
+# Manage Windows Server
 
 >Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 >[!TIP]
 > Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/) on docs.microsoft.com. You can also [search this site](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions) for specific information.
 
- <img src="../media/landing-icons/manage.png" style='float:left; padding:.5em;' alt="Icon showing a gear"> Once you have deployed Windows Server into your environment, including the specific roles for the features and functions you need, the next step is managing those servers. Windows Server includes a number of tools to help you understand your Windows Server environment, manage specific servers, fine-tune performance, and eventually automate many management tasks. 
+ <ul class="cardsF panelContent cols cols2">
+    <li>
+        <a href="https://docs.microsoft.com/en-us/windows-insider/at-work-pro/wip-4-biz-feedback-hub">
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="media/i-manage.svg" alt="" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h2>Manage Windows Server</h2>
+                <p>Once you have deployed Windows Server into your environment, including the specific roles for the features and functions you need, the next step is managing those servers. Windows Server includes a number of tools to help you understand your Windows Server environment, manage specific servers, fine-tune performance, and eventually automate many management tasks. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </a>
+    </li> 
+</ul> 
 
 ## Manage Windows Server systems and environments
 The tools you use to manage Windows Server instances depend, in large amount, on the types of systems you have deployed (Windows Server with Desktop Experience vs Server Core), physical versus virtual machines, and where your servers are located. Use the following information to perform basic management tasks on Windows Server.
