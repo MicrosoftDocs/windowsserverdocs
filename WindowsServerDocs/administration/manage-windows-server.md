@@ -24,11 +24,11 @@ ms.localizationpriority: high
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="media/i-manage.svg" alt="" />
+                            <img src="../media/i-manage.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
-                        <h2>Manage Windows Server</h2>
+                        <h2>Manage/h2>
                 <p>Once you have deployed Windows Server into your environment, including the specific roles for the features and functions you need, the next step is managing those servers. Windows Server includes a number of tools to help you understand your Windows Server environment, manage specific servers, fine-tune performance, and eventually automate many management tasks. </p>
                     </div>
                 </div>
