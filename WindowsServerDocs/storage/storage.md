@@ -17,27 +17,55 @@ ms.localizationpriority: high
 >[!TIP]
 > Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/) on docs.microsoft.com. You can also [search this site](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions) for specific information.
 
-<ul class="cardse panelContent cols cols3">
-    <li>
-        <a href="https://docs.microsoft.com/en-us/windows-insider/at-work-pro/wip-4-biz-feedback-hub">
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="../media/i-store.svg" alt="" />
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h2>Store</h2>
-                <p>Storage in Windows Server provides new and improved features for software-defined datacenter (SDDC) customers focusing on virtualized workloads. Windows Server also provides extensive support for enterprise customers using file servers with existing workloads.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </a>
-    </li> 
-</ul> 
+
+<div id="main" class="v2">
+<div class="container">
+    <h1>Windows Server documentation</h1>
+     <h3>Windows Server is the platform for building an infrastructure of connected applications, networks, and web services, from the workgroup to the data center</h3>
+     <p> </p>
+    <ul class="pivots">
+        <li>
+            <a href="#main"></a>
+            <ul id="main">
+                <li>
+                    <a href="#mainPanel"></a>
+                    <ul id="mainPanel" class="cardsF">
+                        <li>
+                            <a href="get-started-19/whats-new-19.md">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                 <img src="../media/i-store.svg" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <h2>Store</h2>
+                                            <p>Storage in Windows Server provides new and improved features for software-defined datacenter (SDDC) customers focusing on virtualized workloads. Windows Server also provides extensive support for enterprise customers using file servers with existing workloads.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        </li>
+                        <li class="fullSpan">
+                            
+                        <HR WIDTH="60%">
+
+                        </li>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 To find out about what's new in storage, see [What's new in storage](whats-new-in-storage.md) and [What's new in Failover Clustering](../failover-clustering/whats-new-in-failover-clustering.md).
