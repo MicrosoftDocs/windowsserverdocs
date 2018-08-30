@@ -7,10 +7,10 @@ ms.assetid: f0aa575b-b34e-4f6c-8416-ed3e398e0ad2
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 03/02/2017
+ms.date: 08/29/2018
 ---
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016
 
 ### Add host information for TPM-trusted attestation
 
@@ -48,5 +48,9 @@ After the fabric administrator captures the information, add it to the HGS confi
     Add-HgsAttestationTpmPolicy -Path <Filename>.tcglog -Name '<PolicyName>'
     ```
 
-This completes the process of configuring an HGS cluster for TPM mode. The fabric administrator might need you to provide two URLs from HGS before the configuration can be completed for the hosts. To obtain these URLs, on an HGS server, run [Get-HgsServer](https://technet.microsoft.com/library/mt652162.aspx).
+This completes the process of configuring an HGS cluster for TPM mode. The fabric administrator might need you to provide two URLs from HGS before the configuration can be completed for the hosts. To obtain these URLs, on an HGS server, run [Get-HgsServer](https://docs.microsoft.com/powershell/module/hgsserver/get-hgsserver?view=win10-ps).
 
+## Next step
+
+>[!div class="nextstepaction"]
+[Confirm attestation](guarded-fabric-confirm-hosts-can-attest-successfully.md)
