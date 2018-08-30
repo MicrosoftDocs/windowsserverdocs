@@ -11,7 +11,7 @@ ms.topic: article
 author: justinha
 ms.author: justinha
 manager: brianlic-msft
-ms.date: 07/30/2018
+ms.date: 08/30/2018
 ---
 
 # Transport Layer Security (TLS) registry settings
