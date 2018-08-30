@@ -210,7 +210,7 @@ In this procedure, you configure a custom client-server authentication template.
 3.  In the Certificate Templates console, right-click **User**, and click **Duplicate Template**.
 
     >[!WARNING]
-    >Do not click **Apply** or **OK** at any time prior to step 10.  If you click these buttons before ALL entering ALL parametrs, many choices become fixed and no longer editable. For example, on the **Cryptography** tab, if _Legacy Cryptographic Storage Provider_ shows in the Provider Catagory field, it becomes disabled, preventing any further change. The only alternative is to delete the template and recreate it.  
+    >Do not click **Apply** or **OK** at any time prior to step 10.  If you click these buttons before entering ALL parameters, many choices become fixed and no longer editable. For example, on the **Cryptography** tab, if _Legacy Cryptographic Storage Provider_ shows in the Provider Category field, it becomes disabled, preventing any further change. The only alternative is to delete the template and recreate it.  
 
 4.  On the Properties of New Template dialog box, on the **General** tab, complete the following steps:
 
