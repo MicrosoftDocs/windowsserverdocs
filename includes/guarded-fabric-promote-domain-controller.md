@@ -5,7 +5,7 @@
 
     $cred = Get-Credential 'relecloud\Administrator'
 
-    Install-HgsServer -HgsDomainName 'relecloud.com' -HgsDomainCredential $cred -SafeModeAdministratorPassword $adSafeModePassword -Restart
+    Install-HgsServer -HgsDomainName 'bastion.local' -HgsDomainCredential $cred -SafeModeAdministratorPassword $adSafeModePassword -Restart
     ```
 
 2.  When the server reboots, log in with a domain administrator account.

@@ -8,7 +8,7 @@ You may provide any domain name of your choosing for -HgsDomainName.
 ```powershell
 $adminPassword = ConvertTo-SecureString -AsPlainText '<password>' -Force
 
-Install-HgsServer -HgsDomainName 'relecloud.com' -SafeModeAdministratorPassword $adminPassword -Restart
+Install-HgsServer -HgsDomainName 'bastion.local' -SafeModeAdministratorPassword $adminPassword -Restart
 ```
 
 <!-- Appears in guarded-fabric-install-hgs-default.md and set-up-hgs-for-always-encrypted-in-sql-server.md

@@ -106,6 +106,8 @@ It is recommended that you set up one node completely before adding other nodes.
 
 ## Set up additional HGS nodes for production deployments
 
+Complete the following steps to add nodes to teh HGS cluster:
+
 1. [!INCLUDE [Install the HGS server role](../../includes/guarded-fabric-install-hgs-server-role.md)]
 
 2. Set the DNS client resolver to point to your primary HGS server so that it can resolve your HGS domain name. If you’re using Server with Desktop Experience, you can do this in the Network and Sharing Center. On Server Core, you can use the **sconfig.exe** tool, option 8, or **Set-DnsClientServerAddress** to set the DNS address. 

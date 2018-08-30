@@ -110,7 +110,7 @@ It is recommended that you set up one node completely before adding other nodes.
 2. Set the DNS client resolver to point to your primary HGS server so that it can resolve your HGS domain name. If you’re using Server with Desktop Experience, you can do this in the Network and Sharing Center. On Server Core, you can use the **sconfig.exe** tool, option 8, or **Set-DnsClientServerAddress** to set the DNS address. 
 3. Next, we will promote this server to a domain controller. You will need Domain Admin credentials to complete this task and will be prompted to enter a Directory Services Repair Mode password after running the command. 
    ```powershell
-   $HgsDomainName = 'secure.local' 
+   $HgsDomainName = 'bastion.local' 
    $HgsDomainCredential = Get-Credential 
  
    Initialize-HgsServer -HgsDomainName $HgsDomainName -HgsDomainCredential $HgsDomainCredential -Restart 
@@ -187,7 +187,7 @@ If you are using TPM mode, run the following commands on each SQL Server machine
    If you receive a HostUnreachable error, ensure you can resolve and ping the DNS names of your HGS servers. 
 
    ```powershell
-   Set-HgsClientConfiguration -AttestationServerUrl http://hgs.secure.local/Attestation -KeyProtectionServerUrl http://localhost/ 
+   Set-HgsClientConfiguration -AttestationServerUrl http://hgs.bastion.local/Attestation -KeyProtectionServerUrl http://localhost/ 
    ```
 
 10. The result of the above command should show that AttestationStatus = Passed. If it does not, see [Attestation Failures](https://docs.microsoft.com/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-hosts#attestation-failures) for guidance on how to resolve the error.   
@@ -231,7 +231,7 @@ If you chose to set up HGS in host key attestation mode, you’ll need to genera
    If you receive a HostUnreachable error, ensure you can resolve and ping the DNS names of your HGS servers.    
 
    ```powershell
-   Set-HgsClientConfiguration -AttestationServerUrl http://hgs.secure.local/Attestation -KeyProtectionServerUrl http://localhost/ 
+   Set-HgsClientConfiguration -AttestationServerUrl http://hgs.bastion.local/Attestation -KeyProtectionServerUrl http://localhost/ 
    ```
 
 7. The result of the above command should show that AttestationStatus = Passed. 

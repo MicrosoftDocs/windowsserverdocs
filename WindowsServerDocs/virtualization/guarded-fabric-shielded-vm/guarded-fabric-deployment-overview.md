@@ -76,7 +76,7 @@ The Hyper-V hosts need to run Windows Server 2016 Datacenter edition. If you are
 
 ## Step 2: Deploy the Host Guardian Service (HGS)
 
-Then install the HGS server role and deploy it as a three-node cluster, like the Relecloud.com example in the following picture. 
+Then install the HGS server role and deploy it as a three-node cluster, like the bastion.local example in the following picture. 
 This requires three PowerShell cmdlets:
 
 - To add the HGS role, use `Install-WindowsFeature` 

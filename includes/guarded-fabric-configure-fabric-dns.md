@@ -5,7 +5,7 @@ Substitute the names and addresses in the Windows PowerShell syntax below as nee
 Add master servers for the additional HGS nodes.
 
 ```
-Add-DnsServerConditionalForwarderZone -Name 'relecloud.com' -ReplicationScope "Forest" -MasterServers <IP addresses of HGS server>
+Add-DnsServerConditionalForwarderZone -Name 'bastion.local' -ReplicationScope "Forest" -MasterServers <IP addresses of HGS server>
 ```
 
 <!-- Appears in guarded-fabric-configuring-fabric-dns-ad.md and guarded-fabric-configuring-fabric-dns.md and set-up-hgs-for-always-encrypted-in-sql-server.md
