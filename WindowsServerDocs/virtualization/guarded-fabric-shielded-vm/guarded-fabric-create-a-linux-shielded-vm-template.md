@@ -7,12 +7,12 @@ ms.assetid: d0e1d4fb-97fc-4389-9421-c869ba532944
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 06/05/2018
+ms.date: 08/29/2018
 ---
 
 # Create a Linux shielded VM template disk
 
-> Applies To: Windows Server (Semi-Annual Channel)
+> Applies To: Windows Server 2019, Windows Server (Semi-Annual Channel), 
 
 This topic explains how to prepare a template disk for Linux shielded VMs that can be used to instantiate one or more tenant VMs.
 
@@ -58,7 +58,7 @@ These steps will walk you through the bare minimum requirements to get a Linux V
 3.  On your management computer running Windows Server version 1709, install the Shielded VM Remote Server Administration Tools by running the following command:
 
     ```powershell
-    Install-WindowsFeature RSAT-Hyper-V-Tools
+    Install-WindowsFeature RSAT-Shielded-VM-Tools
     ```
 
 4.  Open **Hyper-V Manager** on your management computer and connect to your virtualization server.
@@ -187,7 +187,7 @@ The VHDX you provide to the `-Path` parameter will be overwritten with the updat
 
 > [!IMPORTANT]
 > The Remote Server Administration Tools available on Windows Server 2016 or Windows 10 cannot be used to prepare a Linux shielded VM template disk.
-> Only use the [Protect-TemplateDisk](https://docs.microsoft.com/en-us/powershell/module/shieldedvmtemplate/protect-templatedisk?view=win10-ps) cmdlet available on Windows Server, version 1709 to prepare a Linux shielded VM template disk.
+> Only use the [Protect-TemplateDisk](https://docs.microsoft.com/en-us/powershell/module/shieldedvmtemplate/protect-templatedisk?view=win10-ps) cmdlet available on Windows Server, version 1709 or the Remote Server Administration Tools available on Windows Server 2019 to prepare a Linux shielded VM template disk.
 
 ```powershell
 # Replace "THUMBPRINT" with the thumbprint of your template disk signing certificate in the line below

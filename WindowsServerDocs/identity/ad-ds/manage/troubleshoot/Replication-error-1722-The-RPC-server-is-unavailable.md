@@ -2,9 +2,9 @@
 ms.assetid: 6a06a2e6-f056-458a-9fff-e7b6c2feec37
 title: Replication error 1722 The RPC server is unavailable
 description:
-author: billmath
-ms.author: billmath
-manager: femila
+author: MicrosoftGuyJFlo
+ms.author: joflore
+manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold

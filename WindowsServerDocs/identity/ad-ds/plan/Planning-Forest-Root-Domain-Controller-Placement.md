@@ -2,9 +2,9 @@
 ms.assetid: 2a2f493a-9796-454a-9721-e223b799dfa7
 title: Planning Forest Root Domain Controller Placement
 description:
-author: billmath
-ms.author: billmath
-manager: femila
+author: MicrosoftGuyJFlo
+ms.author: joflore
+manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold

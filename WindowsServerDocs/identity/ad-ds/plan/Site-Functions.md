@@ -2,9 +2,9 @@
 ms.assetid: 22c514b2-401e-49e1-a87e-0cbaa2c1dac1
 title: Site Functions
 description:
-author: billmath
-ms.author: billmath
-manager: femila
+author: MicrosoftGuyJFlo
+ms.author: joflore
+manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold

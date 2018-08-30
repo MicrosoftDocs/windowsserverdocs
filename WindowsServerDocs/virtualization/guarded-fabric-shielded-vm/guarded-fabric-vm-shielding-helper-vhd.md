@@ -7,16 +7,12 @@ ms.assetid: 0e3414cf-98ca-4e91-9e8d-0d7bce56033b
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 10/16/2017
+ms.date: 08/29/2018
 ---
 
 # Shielded VMs - Preparing a VM Shielding Helper VHD
 
->[!div class="step-by-step"]
-[« Deploy a shielded using Windows Azure Pack](guarded-fabric-shielded-vm-windows-azure-pack.md)
-[Shield an existing VM »](guarded-fabric-vm-shielding-helper-vhd.md)
-
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016
 
 <!-- This comment creates a break between the Applies To above and the Important note below. -->
 

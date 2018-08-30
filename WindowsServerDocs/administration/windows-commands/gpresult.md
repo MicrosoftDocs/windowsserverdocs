@@ -22,7 +22,7 @@ Displays the Resultant Set of Policy (RSoP) information for a remote user and co
 To use RSoP reporting for remotely targeted computers through the firewall, you must have firewall rules that enable inbound network traffic on the ports.
 ## Syntax
 ```
-gpresult [/s <compUTER> [/u <USERNAME> [/p [<PASSWOrd>]]]] [/user [<TARGETDOMAIN>\]<TARGETUSER>] [/scope {user | computer}] {/r | /v | /z | [/x | /h] <FILENAME> [/f] | /?}
+gpresult [/s <system> [/u <USERNAME> [/p [<PASSWOrd>]]]] [/user [<TARGETDOMAIN>\]<TARGETUSER>] [/scope {user | computer}] {/r | /v | /z | [/x | /h] <FILENAME> [/f] | /?}
 ```
 ## Parameters
 > [!NOTE]
@@ -30,10 +30,10 @@ gpresult [/s <compUTER> [/u <USERNAME> [/p [<PASSWOrd>]]]] [/user [<TARGETDOMAIN
 
 |Parameter|Description|
 |-------|--------|
-|/s <compUTER>|Specifies the name or IP address of a remote computer. Do not use backslashes. The default is the local computer.|
-|/u <USERNAME>|Uses the credentials of the specified user to run the command. The default user is the user who is logged on to the computer that issues the command.|
-|/p [<PASSWOrd>]|Specifies the password of the user account that is provided in the **/u** parameter. If **/p** is omitted, **gpresult** prompts for the password. **/p** cannot be used with **/x** or **/h**.|
-|/user [<TARGETDOMAIN>\\]<TARGETUSER>|Specifies the remote user whose RSoP data is to be displayed.|
+|/s \<system\>|Specifies the name or IP address of a remote computer. Do not use backslashes. The default is the local computer.|
+|/u \<USERNAME\>|Uses the credentials of the specified user to run the command. The default user is the user who is logged on to the computer that issues the command.|
+|/p [\<PASSWOrd\>]|Specifies the password of the user account that is provided in the **/u** parameter. If **/p** is omitted, **gpresult** prompts for the password. **/p** cannot be used with **/x** or **/h**.|
+|/user [\<TARGETDOMAIN\>\\]\<TARGETUSER\>|Specifies the remote user whose RSoP data is to be displayed.|
 |/scope {user &#124; computer}|Displays RSoP data for either the user or the computer. If **/scope** is omitted, **gpresult** displays RSoP data for both the user and the computer.|
 |[/x &#124; /h] <FILENAME>|Saves the report in either XML (**/x**) or HTML (**/h**) format at the location and with the file name that is specified by the *FILENAME* parameter. Cannot be used with **/u**, **/p**, **/r**, **/v**, or **/z**.|
 |/f|forces **gpresult** to overwrite the file name that is specified in the **/x** or **/h** option.|

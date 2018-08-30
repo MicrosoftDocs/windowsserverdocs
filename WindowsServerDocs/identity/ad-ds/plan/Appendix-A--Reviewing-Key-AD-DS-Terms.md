@@ -2,9 +2,9 @@
 ms.assetid: 87196b65-a356-409f-9af0-b5950797d668
 title: Appendix A - Reviewing Key AD DS Terms
 description:
-author: billmath
-ms.author: billmath
-manager: femila
+author: MicrosoftGuyJFlo
+ms.author: joflore
+manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
