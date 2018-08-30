@@ -100,7 +100,7 @@ In this case, the server hello response during the TLS handshake won't include a
 This behavior improves performance: The Windows OCSP stapling implementation scales to hundreds of server certificates. 
 Because SNI and CCS enable IIS to scale to thousands of websites that potentially have thousands of server certificates, setting this behavior to be enabled by default may cause performance issues.
 
-Applicable versions: All versions beginning with Windows Server 2008 and Windows Vista. 
+Applicable versions: All versions beginning with Windows Server 2012 and Windows 8. 
 
 Registry path: [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL]
 
