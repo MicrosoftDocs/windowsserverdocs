@@ -76,7 +76,7 @@ Because each series record only one data point for each collection interval, eac
 
 ## Data footprint
 
-System Insights collects all data locally on your C drive (C:), so it's important to understand the storage consumed by the data collected by System Insights. In general, the System Insights data footprint is modest. It, however, depends on the type and number of data sources each capability specifies, and the table below details the storage usage for each data type:
+System Insights collects all data locally on your C drive (C:). In general, the System Insights data footprint is modest. It depends directly on the type and number of data sources each capability specifies, and the table below details the storage usage for each data type:
 
 | Data source | Maximum footprint |
 | --------------- | --------------- |
