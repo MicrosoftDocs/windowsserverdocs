@@ -1,4 +1,5 @@
-Open an elevated PowerShell prompt and run the following command to join the existing HGS cluster.
+Run the following command to join the existing HGS cluster.
+
 
 ```powershell
 Initialize-HgsServer -HgsServerIPAddress <IP address of first HGS Server>

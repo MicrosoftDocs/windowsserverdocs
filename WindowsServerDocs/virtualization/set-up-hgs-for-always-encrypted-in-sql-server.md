@@ -102,11 +102,15 @@ It is recommended that you set up one node completely before adding other nodes.
    Initialize-HgsAttestation -HgsServiceName 'hgs' -TrustHostKey 
    ```
 
-5. [!INCLUDE [Configure DNS conditional forwarding](../../includes/guarded-fabric-configure-fabric-dns.md)]
+5. Run the following command to join the existing HGS cluster:
+
+   ```powershell
+   Initialize-HgsServer -HgsServerIPAddress <IP address of first HGS Server>
+   ```
 
 ## Set up additional HGS nodes for production deployments
 
-Complete the following steps to add nodes to teh HGS cluster:
+Complete the following steps to add nodes to the HGS cluster:
 
 1. [!INCLUDE [Install the HGS server role](../../includes/guarded-fabric-install-hgs-server-role.md)]
 
