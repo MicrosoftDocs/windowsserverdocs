@@ -193,7 +193,7 @@ If you are using TPM mode, run the following commands on each SQL Server machine
    Add-HgsAttestationCiPolicy -Name AllowMicrosoft-Audit -Path C:\temp\AllowMicrosoft-Audit.bin 
    ```
 9. Your first server is now ready to attest! 
-   On the SQL Server machine, run the following command to tell it where to attest (change the DNS name to that of your HGS cluster, typically you will use the HGS Service Name from step 2.3 combined with the HGS domain name). 
+   On the SQL Server machine, run the following command to tell it where to attest (change the DNS name to that of your HGS cluster, typically you will use the HGS Service Name combined with the HGS domain name). 
    If you receive a HostUnreachable error, ensure you can resolve and ping the DNS names of your HGS servers. 
 
    ```powershell
@@ -237,7 +237,7 @@ If you chose to set up HGS in host key attestation mode, you’ll need to genera
    ``` 
 
 6. Your first server is now ready to attest! 
-   On the SQL Server machine, run the following command to tell it where to attest (change the DNS name to that of your HGS cluster, typically you will use the HGS Service Name from step 2.3 combined with the HGS domain name). 
+   On the SQL Server machine, run the following command to tell it where to attest (change the DNS name to that of your HGS cluster, typically you will use the HGS Service Name combined with the HGS domain name). 
    If you receive a HostUnreachable error, ensure you can resolve and ping the DNS names of your HGS servers.    
 
    ```powershell
