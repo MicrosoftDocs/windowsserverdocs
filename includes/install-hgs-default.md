@@ -12,7 +12,5 @@ $adminPassword = ConvertTo-SecureString -AsPlainText '<password>' -Force
 Install-HgsServer -HgsDomainName 'relecloud.com' -SafeModeAdministratorPassword $adminPassword -Restart
 ```
 
-After the computer restarts, log in as Domain Admin.
-
 <!-- Appears in guarded-fabric-install-hgs-default.md and set-up-hgs-for-always-encrypted-in-sql-server.md
 -->
