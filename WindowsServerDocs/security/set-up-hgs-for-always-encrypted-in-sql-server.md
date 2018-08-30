@@ -102,19 +102,29 @@ It is recommended that you set up one node completely before adding other nodes.
    Initialize-HgsAttestation -HgsServiceName 'hgs' -TrustHostKey 
    ```
 
-5. [!INCLUDE [Configure DNS conditional forwarding](../../includes/guarded-fabric-configure-fabric-dns.md)]
+5. Run the following command to join the existing HGS cluster:
+
+   ```powershell
+   Initialize-HgsServer -HgsServerIPAddress <IP address of first HGS Server>
+   ```
 
 ## Set up additional HGS nodes for production deployments
 
+Complete the following steps to add nodes to the cluster. 
+
 1. [!INCLUDE [Install the HGS server role](../../includes/guarded-fabric-install-hgs-server-role.md)]
+
 2. Set the DNS client resolver to point to your primary HGS server so that it can resolve your HGS domain name. If you’re using Server with Desktop Experience, you can do this in the Network and Sharing Center. On Server Core, you can use the **sconfig.exe** tool, option 8, or **Set-DnsClientServerAddress** to set the DNS address. 
+
 3. Next, we will promote this server to a domain controller. You will need Domain Admin credentials to complete this task and will be prompted to enter a Directory Services Repair Mode password after running the command. 
+
    ```powershell
    $HgsDomainName = 'bastion.local' 
    $HgsDomainCredential = Get-Credential 
  
    Initialize-HgsServer -HgsDomainName $HgsDomainName -HgsDomainCredential $HgsDomainCredential -Restart 
    ```
+
 4. [!INCLUDE [Install the HGS server role](../../includes/guarded-fabric-initialize-hgs-on-the-node.md)]   
 
 ## Configure HGS for HTTPS (optional)
