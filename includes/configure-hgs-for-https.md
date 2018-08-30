@@ -1,13 +1,11 @@
 By default, when you initialize the HGS server it will configure the IIS web sites for HTTP-only communications.
 All sensitive material being transmitted to and from HGS are always encrypted using message-level encryption, however if you desire a higher level of security you can also enable HTTPS by configuring HGS with an SSL certificate.
 
-First, obtain an SSL certificate for HGS from your certificate authority. Each host machine will need to trust the SSL certificate, so it is recommended that you issue the SSL certificate from your company's public key infrastructure or a third party CA. Any SSL certificate supported by IIS is supported by HGS, however **the subject name on the certificate must match the fully qualified HGS service name** (cluster distributed network name). For instance, if the HGS domain is "secure.contoso.com" and your HGS service name is "hgs", your SSL certificate should be issued for "hgs.secure.contoso.com". You can add additional DNS names to the certificate's subject alternative name field if necessary.
+First, obtain an SSL certificate for HGS from your certificate authority. Each host machine will need to trust the SSL certificate, so it is recommended that you issue the SSL certificate from your company's public key infrastructure or a third party CA. Any SSL certificate supported by IIS is supported by HGS, however **the subject name on the certificate must match the fully qualified HGS service name** (cluster distributed network name). For instance, if the HGS domain is "secure.bastion.local" and your HGS service name is "hgs", your SSL certificate should be issued for "hgs.secure.bastion.local". You can add additional DNS names to the certificate's subject alternative name field if necessary.
 
-Once you have the SSL certificate, you can either provide the certificate to the `Initialize-HgsServer` cmdlet if you haven't already run it, or use `Set-HgsServer` if you've already initialized HGS.
+Once you have the SSL certificate, you can either provide the certificate to the Initialize-HgsServer cmdlet if you haven't already run it, or use Set-HgsServer if you've already initialized HGS.
 
-**If you haven't already initialized HGS**
-
-Append the following SSL-related parameters to the `Initialize-HgsServer` command from the [Initialize the HGS cluster](#initialize-the-hgs-cluster) or [Initialize HGS in the bastion forest](#initialize-hgs-in-the-bastion-forest) sections.
+Append the following SSL-related parameters to the Initialize-HgsServer command.
 
 ```powershell
 $sslPassword = Read-Host -AsSecureString -Prompt "SSL Certificate Password"
@@ -18,21 +16,6 @@ If your certificate is installed in the local certificate store and cannot be ex
 
 ```powershell
 Initialize-HgsServer <OtherParametersHere> -Http -Https -HttpsCertificateThumbprint 'A1B2C3D4E5F6...'
-```
-
-**If you've already initialized HGS**
-
-Run [Set-HgsServer](https://docs.microsoft.com/powershell/module/hgsserver/set-hgsserver?view=win10-ps) to configure the new SSL certificate.
-This step must be repeated on every HGS node in your cluster.
-
-```powershell
-$sslPassword = Read-Host -AsSecureString -Prompt "SSL Certificate Password"
-Set-HgsServer -Http -Https -HttpsCertificatePath 'C:\temp\HgsSSLCertificate.pfx' -HttpsCertificatePassword $sslPassword
-```
-
-Or, if you have already installed the certificate into the local certificate store and want to reference it by thumbprint:
-```powershell
-Set-HgsServer -Http -Https -HttpsCertificateThumbprint 'A1B2C3D4E5F6...'
 ```
 
 > [!IMPORTANT]
