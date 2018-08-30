@@ -26,6 +26,9 @@ In this procedure, you configure Group Policy on the domain controller so that d
 
 You manually enroll certificates on VPN servers.
 
+>[!TIP]
+>For non-domained joined computers, see [CA configuration for non-domain joined computers](#ca-configuration-for-non-domain-joined-computers) below. Since the RRAS server is not domain joined, autoenrollment cannot be used to enroll the VPN gateway certificate.  Therefore, use an offline certificate request procedure. 
+
 
 1.  On a domain controller, open Group Policy Management.
 
@@ -62,6 +65,81 @@ You manually enroll certificates on VPN servers.
     6.  Close the Group Policy Management Editor.
 
 7.  Close Group Policy Management.
+
+### CA configuration for non-domain joined computers
+Since the RRAS server is not domain joined, autoenrollment cannot be used to enroll the VPN gateway certificate.  Therefore, use an offline certificate request procedure. 
+
+1. On the RRAS server, generate a file called **VPNGateway.inf** based upon the example certificate policy request provided in Appendix A (section 0) and customize the following entries: 
+
+   - In the [NewRequest] section, replace vpn.contoso.com used for the Subject Name with the chosen [_Customer_] VPN endpoint FQDN.
+
+   - In the [Extensions] section, replace vpn.contoso.com used for the Subject Alternate Name with the chosen [_Customer_] VPN endpoint FQDN.
+
+2. Save or copy the **VPNGateway.inf** file to a chosen location.
+
+3. From an elevated command prompt, navigate to the folder that contains the **VPNGateway.inf** file and type:
+
+   ```
+   certreq -new VPNGateway.inf VPNGateway.req
+   ```
+
+4. Copy the newly created **VPNGateway.req** output file to a Certification Authority server, or Privileged Access Workstation (PAW). 
+
+5. Save or copy the **VPNGateway.req** file to a chosen location on the Certification Authority server, or Privileged Access Workstation (PAW).
+
+6. From an elevated command prompt, navigate to the folder that contains the VPNGateway.req file created in the previous step and type: 
+
+   ```
+   certreq -attrib “CertificateTemplate:[Customer]VPNGateway” -submit VPNgateway.req VPNgateway.cer
+   ```
+
+7. If prompted by the Certification Authority List window, select the appropriate Enterprise CA to service the certificate request.
+
+8. Copy the newly created **VPNGateway.cer** output file to the RRAS server. 
+
+9. Save or copy the **VPNGateway.cer** file to a chosen location on the RRAS server.
+
+10.	From an elevated command prompt, navigate to the folder that contains the VPNGateway.cer file created in the previous step and type:
+   
+   ```
+   certreq -accept VPNGateway.cer
+   ```
+
+11.	Run the Certificates MMC snap-in as described [here](https://docs.microsoft.com/en-us/dotnet/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in) selecting the **Computer account** option.
+
+12.	Ensure that a valid certificate exists for the RRAS server with the following properties:
+
+   - **Intended Purposes:** Server Authentication, IP security IKE intermediate 
+
+   - **Certificate Template:** [_Customer_] VPN Server
+
+#### Example: VPNGateway.inf script
+
+Here you can see an example script of a certificate request policy used to request a VPN gateway certificate using an out-of-band process.
+
+>[!TIP]
+>You can find a copy of the VPNGateway.inf script in the VPN Offering IP Kit under the Certificate Request Policies folder. Only update the 'Subject' and '\_continue\_' with customer specific values.
+
+```
+[Version] 
+
+Signature="$Windows NT$"
+
+[NewRequest]
+Subject = "CN=vpn.contoso.com"
+Exportable = FALSE   
+KeyLength = 2048     
+KeySpec = 1          
+KeyUsage = 0xA0      
+MachineKeySet = True
+ProviderName = "Microsoft RSA SChannel Cryptographic Provider"
+RequestType = PKCS10 
+
+[Extensions]
+2.5.29.17 = "{text}"
+_continue_ = "dns=vpn.contoso.com&"
+
+```
 
 ## Create the VPN Users, VPN Servers, and NPS Servers Groups
 
