@@ -11,6 +11,8 @@ ms.technology: security-guarded-fabric
 
 # Planning a Guarded Fabric
 
+>Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016
+
 The following topics cover planning for the deployment of a guarded fabric and shielded virtual machines (VMs):
 
 - [Guarded Fabric and Shielded VM Planning Guide for Hosters](guarded-fabric-planning-for-hosters.md) 

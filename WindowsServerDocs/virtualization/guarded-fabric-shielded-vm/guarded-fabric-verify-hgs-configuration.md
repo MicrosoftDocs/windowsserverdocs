@@ -7,16 +7,13 @@ ms.assetid: 8f01df37-f18e-4386-ae73-ecf84feaa9df
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 08/28/2017
+ms.date: 08/29/2018
 ---
 
 # Verify the HGS configuration
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016
 
->[!div class="step-by-step"]
-[« Add HGS nodes](guarded-fabric-configure-additional-hgs-nodes.md)
-[Deploy guarded hosts »](guarded-fabric-configure-hgs-with-authorized-hyper-v-hosts.md)
 
 Next, we need to validate that things are working as expected. To do so, run the following command in an elevated Windows PowerShell console:
 
@@ -33,4 +30,9 @@ If failures did occur, please review the remediation steps provided or see the T
 -->
 
 Run the diagnostics on each node in your HGS cluster.
+
+## Next step
+
+>[!div class="nextstepaction"]
+[Deploy guarded hosts](guarded-fabric-configure-hgs-with-authorized-hyper-v-hosts.md)
 

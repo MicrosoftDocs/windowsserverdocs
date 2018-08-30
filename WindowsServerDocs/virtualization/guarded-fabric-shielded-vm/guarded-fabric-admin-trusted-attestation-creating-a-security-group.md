@@ -7,20 +7,19 @@ ms.assetid: a12c8494-388c-4523-8d70-df9400bbc2c0
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 08/28/2017
+ms.date: 08/29/2018
 ---
 
 # Create a security group for guarded hosts and register the group with HGS
 
 >Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
->[!div class="step-by-step"]
-[« Review prerequisites](guarded-fabric-guarded-host-prerequisites.md)
-[Confirm attestation »](guarded-fabric-confirm-hosts-can-attest-successfully.md)
+>[!IMPORTANT]
+>AD mode is deprecated beginning with Windows Server 2019. For environments where TPM attestation is not possible, configure [host key attestation](guarded-fabric-initialize-hgs-key-mode.md). Host key attestation provides similar assurance to AD mode and is simpler to set up. 
+
 
 This topic describes the intermediate steps to prepare Hyper-V hosts to become guarded hosts using Admin-trusted attestation (AD mode). Before taking these steps, complete the steps in [Configuring the fabric DNS for hosts that will become guarded hosts](guarded-fabric-configuring-fabric-dns-ad.md).
 
-For a video that illustrates the deployment process, see [Guarded fabric deployment using AD mode](https://channel9.msdn.com/Shows/Guarded-fabric-deployment-AD-mode/Guarded-fabric-deployment-AD-mode/).
 
 ## Create a security group and add hosts
 
@@ -49,7 +48,9 @@ For a video that illustrates the deployment process, see [Guarded fabric deploym
 
 ## Next step
 
-[Confirm hosts can attest successfully](guarded-fabric-confirm-hosts-can-attest-successfully.md)
+>[!div class="nextstepaction"]
+[Confirm attestation](guarded-fabric-confirm-hosts-can-attest-successfully.md)
+
 
 ## See also
 

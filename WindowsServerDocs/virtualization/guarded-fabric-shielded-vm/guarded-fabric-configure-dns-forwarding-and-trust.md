@@ -6,16 +6,15 @@ ms.topic: article
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 07/05/2017
+ms.date: 08/29/2018
 ---
 
 # Configure DNS forwarding in the HGS domain and a one-way trust with the fabric domain
 
 >Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
->[!div class="step-by-step"]
-[« Configure fabrc DNS](guarded-fabric-configuring-fabric-dns-ad.md)
-[Configure HTTPS »](guarded-fabric-configure-hgs-https.md)
+>[!IMPORTANT]
+>AD mode is deprecated beginning with Windows Server 2019. For environments where TPM attestation is not possible, configure [host key attestation](guarded-fabric-initialize-hgs-key-mode.md). Host key attestation provides similar assurance to AD mode and is simpler to set up. 
 
 Use the following steps to set up DNS forwarding and establish a one-way trust with the fabric domain. These steps allow the HGS to locate the fabric domain controllers and validate group membership of the Hyper-V hosts.
 
@@ -31,3 +30,7 @@ Use the following steps to set up DNS forwarding and establish a one-way trust w
 
         netdom trust relecloud.com /domain:fabrikam.com /userD:fabrikam.com\Administrator /passwordD:<password> /add
 
+## Next step 
+
+>[!div class="nextstepaction"]
+[Configure HTTPS](guarded-fabric-configure-hgs-https.md)

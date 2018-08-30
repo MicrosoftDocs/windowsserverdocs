@@ -11,7 +11,7 @@ ms.technology: security-guarded-fabric
 
 # Guarded Fabric and Shielded VM Planning Guide for Tenants
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This topic focuses on VM owners who would like to protect their virtual machines (VMs) for compliance and security purposes. Regardless of whether the VMs run on a hosting provider’s guarded fabric or a private guarded fabric, VM owners need to control the security level of their shielded VMs, which includes maintaining the ability to decrypt them if needed.
 
@@ -46,7 +46,7 @@ Shielded VMs are protected from virtualization fabric attack vectors using encry
 - An Owner key – this is a cryptographic key maintained by the VM-owner that is typically used for last-resort recovery or troubleshooting. VM owners are responsible for maintaining owner keys in a secure location.
 - One or more Guardians (Host Guardian keys) – each Guardian represents a virtualization fabric on which an owner authorizes shielded VMs to run. Enterprises often have both a primary and a disaster recovery (DR) virtualization fabric and would typically authorize their shielded VMs to run on both. In some cases, the secondary (DR) fabric might be hosted by a public cloud provider. The private keys for any guarded fabric are maintained only on the virtualization fabric, while its public keys can be downloaded and are contained within its Guardian. 
 
-**How do I create an owner key?** An owner key is represented by two certificates. A certificate for encryption and a certificate for signing. You can create these two certificates using your own PKI infrastructure or obtain SSL certificates from a public certificate authority (CA). For test purposes, you can also create a self-signed certificate on any device that runs Windows 10 or Windows Server 2016.
+**How do I create an owner key?** An owner key is represented by two certificates. A certificate for encryption and a certificate for signing. You can create these two certificates using your own PKI infrastructure or obtain SSL certificates from a public certificate authority (CA). For test purposes, you can also create a self-signed certificate on any computer beginning with Windows 10 or Windows Server 2016.
 
 **How many owner keys should you have?** You can use a single owner key or multiple owner keys. Best practices recommend a single owner key for a group of VMs that share the same security, trust or risk level, and for administrative control. You can share a single owner key for all your domain-joined shielded VMs and escrow that owner key to be managed by the domain administrators.
 

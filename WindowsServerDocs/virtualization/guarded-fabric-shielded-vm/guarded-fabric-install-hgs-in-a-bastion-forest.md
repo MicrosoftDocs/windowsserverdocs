@@ -6,16 +6,13 @@ ms.topic: article
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 07/05/2017
+ms.date: 08/29/2018
 ---
 
 # Install HGS in an existing bastion forest 
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016
 
->[!div class="step-by-step"]
-[« Prepare for HGS](guarded-fabric-prepare-for-hgs.md)
-[Initialize HGS »](guarded-fabric-initialize-hgs.md)
 
 ## Join the HGS server to the existing domain
 
@@ -119,8 +116,8 @@ Set-Acl -Path $vcoPath -AclObject $acl
 
 ## Security baseline exceptions
 
-If you are deploying HGS into a highly locked down environment, certain group policies may prevent HGS from operating normally.
-Check your group policy objects for the following settings and follow the guidance if you are affected:
+If you are deploying HGS into a highly locked down environment, certain Group Policy settings may prevent HGS from operating normally.
+Check your Group Policy objects for the following settings and follow the guidance if you are affected:
 
 ### Network Logon
 
@@ -145,5 +142,6 @@ Check your group policy objects for the following settings and follow the guidan
 ## Next steps
 
 - For the next steps to set up TPM-based attestation, see [Initialize the HGS cluster using TPM mode in an existing bastion forest](guarded-fabric-initialize-hgs-tpm-mode-bastion.md).
-- For the next steps to set up Admin-based attestation, see [Initialize the HGS cluster using AD mode in an existing bastion forest](guarded-fabric-initialize-hgs-ad-mode-bastion.md).
+- For the next steps to set up host key attestation, see [Initialize the HGS cluster using key mode in an existing bastion forest](guarded-fabric-initialize-hgs-key-mode-bastion.md).
+- For the next steps to set up Admin-based attestation (deprecated in Windows Server 2019), see [Initialize the HGS cluster using AD mode in an existing bastion forest](guarded-fabric-initialize-hgs-ad-mode-bastion.md).
 
