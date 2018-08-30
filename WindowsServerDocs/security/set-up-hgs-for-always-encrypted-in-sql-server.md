@@ -125,7 +125,11 @@ Complete the following steps to add nodes to the cluster.
    Initialize-HgsServer -HgsDomainName $HgsDomainName -HgsDomainCredential $HgsDomainCredential -Restart 
    ```
 
-4. [!INCLUDE [Install the HGS server role](../../includes/guarded-fabric-initialize-hgs-on-the-node.md)]   
+4. Run the following command to join the existing HGS cluster:
+
+   ```powershell
+   Initialize-HgsServer -HgsServerIPAddress <IP address of first HGS Server>
+   ``` 
 
 ## Configure HGS for HTTPS (optional)
 
