@@ -1,10 +1,10 @@
 ---
-ms.assetid: 72a90d00-56ee-48a9-9fae-64cbad29556c
+ms.assetid: 
 title: Insider preview
 description: 
 author: shortpatti
 ms.author: dacuo
-ms.date: 05/08/2018
+ms.date: 08/30/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: networking
