@@ -25,7 +25,13 @@ This topic describes the known issues in System Insights that impact the latest 
 
 ## Known issues
 
-#### If you upgrade from Windows Server Insider Preview build 17692 to a newer Insider Preview build, System Insights encounters errors when parsing or visualing the prediction results. 
+#### In Windows Server Insider Preview build 17744, System Insights sometimes doesn't correctly identify volumes or network adapters.
+This issue could cause the following behavior:
+- All volumes or network adapters report the same identification information.
+- Each volume or network adapter only reports a guid, rather than a friendly name or drive letter.
+This will be resolved in an upcoming release.
+
+#### If you upgrade from Windows Server Insider Preview build 17692 to a newer Insider Preview build, System Insights encounters errors when parsing or visualizing the prediction results. 
 If you'd like to use In-Place Upgrade and retain your historical usage data, you can run the script below to resolve this issue. You can also clean install the newer build to fix this issue.
 
 ```PowerShell
