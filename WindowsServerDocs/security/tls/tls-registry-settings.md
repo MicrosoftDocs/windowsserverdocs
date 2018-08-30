@@ -82,6 +82,14 @@ Registry path: HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL
 
 Default client cache time
 
+## EnableOcspStaplingForSni
+
+This entry enables Online Certificate Status Protocol (OCSP) stapling in the Server hello for both Server Name Indication (SNI) and Central Certificate Store (CCS) web site bindings in Internet information Services (IIS).
+
+Registry path: HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL
+
+"EnableOcspStaplingForSni"=dword:00000001
+
 ## FIPSAlgorithmPolicy
 
 This entry controls Federal Information Processing (FIPS) compliance. 
