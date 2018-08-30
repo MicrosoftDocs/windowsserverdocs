@@ -84,8 +84,11 @@ The Host Guardian Service operates in a highly available configuration using a 3
 It is recommended that you set up one node completely before adding other nodes. 
 
 1. [!INCLUDE [Install the HGS server role](../../includes/guarded-fabric-install-hgs-server-role.md)]
+
 2. [!INCLUDE [Install HGS by default](../../includes/install-hgs-default.md)] 
+
 3. [!INCLUDE [Determine a DNN](../../includes/guarded-fabric-initialize-hgs-default-step-one.md)]
+
 4. After the machine reboots again, log in as a Domain Admin and configure the attestation service. 
    You will need to choose TPM or host key attestation and run the corresponding command. 
 
@@ -188,7 +191,7 @@ If you are using TPM mode, run the following commands on each SQL Server machine
    ```
 
 10. The result of the above command should show that AttestationStatus = Passed. If it does not, see [Attestation Failures](https://docs.microsoft.com/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-hosts#attestation-failures) for guidance on how to resolve the error.   
-11. Repeat steps 1-7 for each server that will run SQL Server using Always Encrypted with secure enclaves (VBS enclaves). 
+11. Repeat steps 1-10 for each server that will run SQL Server using Always Encrypted with secure enclaves (VBS enclaves). 
     If you are using identical hardware, you will not need to capture a new baseline or CI policy for every machine. 
     The baseline from your first server will cover all identically configured machines, and the CI policy can be re-used across multiple machines so long as Microsoft software is the only software on the machine.
 
