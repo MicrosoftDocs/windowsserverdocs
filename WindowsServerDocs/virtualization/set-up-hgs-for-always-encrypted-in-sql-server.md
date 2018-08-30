@@ -176,7 +176,7 @@ If you are using TPM mode, run the following commands on each SQL Server machine
    ```
 6. Copy the xml, tcglog, and bin files from C:\artifacts to your HGS server.
 7. If this is the first TPM host you’re adding to the HGS server, you will need to install the Trusted TPM Root Certificates on each HGS server. 
-   For these steps, see [Install trusted TPM root certificates](https://docs.microsoft.com/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-install-trusted-tpm-root-certificates) to complete this step.
+   For these steps, see [Install trusted TPM root certificates](https://docs.microsoft.com/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-install-trusted-tpm-root-certificates).
 8. On the HGS server, authorize this host to pass attestation. 
    The scripts below assume the 3 files were copied to C:\temp on the HGS server and that your server’s computer name is “ServerA”. 
    Adjust the paths and names to match your own environment. 
