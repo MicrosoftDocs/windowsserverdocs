@@ -89,7 +89,7 @@ This feature reduces the load on OCSP servers because the web server can cache t
 Without this feature, each web client would try to retrieve the current OCSP status of the server certificate from the OCSP server. 
 This would generate a high load on that OCSP server. 
 
-In addition to IIS, web services over http.sys, such as Active Directory Federation Services (AD FS) and Web Application Proxy (WAP), can also benefit from this setting. 
+In addition to IIS, web services over http.sys can also benefit from this setting, including Active Directory Federation Services (AD FS) and Web Application Proxy (WAP). 
 
 By default, OCSP support is enabled for IIS websites that have a simple secure (SSL/TLS) binding. 
 However, this support is not enabled by default if the IIS website is using either or both of the following types of secure (SSL/TLS) bindings:
@@ -107,6 +107,10 @@ Registry path: [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProv
 Add the following key:
 
 "EnableOcspStaplingForSni"=dword:00000001
+
+To disable, set the DWORD value to 0:
+
+"EnableOcspStaplingForSni"=dword:00000000
 
 >[!NOTE] 
 >Enabling this registry key has a potential performance impact.
