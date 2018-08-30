@@ -113,12 +113,12 @@ It is recommended that you set up one node completely before adding other nodes.
 3. Next, we will promote this server to a domain controller. You will need Domain Admin credentials to complete this task and will be prompted to enter a Directory Services Repair Mode password after running the command. 
 
    ```powershell
-   $HgsDomainName = 'secure.local' 
+   $HgsDomainName = 'relecloud.com' 
    $HgsDomainCredential = Get-Credential 
  
    Initialize-HgsServer -HgsDomainName $HgsDomainName -HgsDomainCredential $HgsDomainCredential -Restart 
    ```
-   
+
 4. [!INCLUDE [Install the HGS server role](../../includes/guarded-fabric-initialize-hgs-on-the-node.md)]   
 
 ## Configure HGS for HTTPS (optional)
