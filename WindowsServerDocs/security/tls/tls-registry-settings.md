@@ -84,18 +84,39 @@ Default client cache time
 
 ## EnableOcspStaplingForSni
 
-This entry enables Online Certificate Status Protocol (OCSP) stapling in the Server hello for both Server Name Indication (SNI) and Central Certificate Store (CCS) web site bindings in Internet information Services (IIS).
+Online Certificate Status Protocol (OCSP) stapling enables a web server, such as Internet Information Services (IIS), to provide the current revocation status of a server certificate when it sends the server certificate to a client during the TLS handshake. 
+This feature reduces the load on OCSP servers because the web server can cache the current OCSP status of the server certificate and send it to multiple web clients. 
+Without this feature, each web client would try to retrieve the current OCSP status of the server certificate from the OCSP server. 
+This would generate a high load on that OCSP server. 
 
-Registry path: HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL
+In addition to IIS, web services over http.sys, such as Active Directory Federation Services (AD FS) and Web Application Proxy (WAP), can also benefit from this setting. 
+
+By default, OCSP support is enabled for IIS websites that have a simple secure (SSL/TLS) binding. 
+However, this support is not enabled by default if the IIS website is using either or both of the following types of secure (SSL/TLS) bindings:
+- Require Server Name Indication
+- Use Centralized Certificate Store
+
+In this case, the server hello response during the TLS handshake won't include an OCSP stapled status by default. 
+This behavior improves performance: The Windows OCSP stapling implementation scales to hundreds of server certificates. 
+Because SNI and CCS enable IIS to scale to thousands of websites that potentially have thousands of server certificates, setting this behavior to be enabled by default may cause performance issues.
+
+Applicable versions: All versions beginning with Windows Server 2008 and Windows Vista. 
+
+Registry path: [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL]
+
+Add the following key:
 
 "EnableOcspStaplingForSni"=dword:00000001
+
+>[!NOTE] 
+>Enabling this registry key has a potential performance impact.
 
 ## FIPSAlgorithmPolicy
 
 This entry controls Federal Information Processing (FIPS) compliance. 
 The default is 0.
 
-Applicable versions: All versions beginning with Windows Server 2008 and Windows Vista. 
+Applicable versions: All versions beginning with Windows Server 2012 and Windows 8. 
 
 Registry path: HKLM SYSTEM\CurrentControlSet\Control\LSA
 
