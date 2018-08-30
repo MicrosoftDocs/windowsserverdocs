@@ -67,6 +67,7 @@ You manually enroll certificates on VPN servers.
 7.  Close Group Policy Management.
 
 ### CA configuration for non-domain joined computers
+
 Since the RRAS server is not domain joined, autoenrollment cannot be used to enroll the VPN gateway certificate.  Therefore, use an offline certificate request procedure. 
 
 1. On the RRAS server, generate a file called **VPNGateway.inf** based upon the example certificate policy request provided in Appendix A (section 0) and customize the following entries: 
@@ -208,6 +209,9 @@ In this procedure, you configure a custom client-server authentication template.
 
 3.  In the Certificate Templates console, right-click **User**, and click **Duplicate Template**.
 
+    >[!WARNING]
+    >Do not click **Apply** or **OK** at any time prior to step 10.  If you click these buttons before ALL entering ALL parametrs, many choices become fixed and no longer editable. For example, on the **Cryptography** tab, if _Legacy Cryptographic Storage Provider_ shows in the Provider Catagory field, it becomes disabled, preventing any further change. The only alternative is to delete the template and recreate it.  
+
 4.  On the Properties of New Template dialog box, on the **General** tab, complete the following steps:
 
     1.  In **Template display name**, type **VPN User Authentication**.
@@ -223,6 +227,9 @@ In this procedure, you configure a custom client-server authentication template.
     3.  In **Group or user names**, click **VPN Users**.
 
     4.  In **Permissions for VPN Users**, select the **Enroll** and **Autoenroll** check boxes in the **Allow** column.
+
+       >[!TIP]
+       >Make sure to keep the Read check box selected. In other words, you need the Read permissions for enrollment. 
 
     5.  In **Group or user names**, click **Domain Users**, and click **Remove**.
 
@@ -316,7 +323,7 @@ Domain-joined VPN servers
 
 12. Restart the Certificate Authority services.
 
-13. Select the **RADIUS server**, and click **OK**.
+13. Select the name you chose in step 4 above, and click **OK**.
 
 14. Close the Certification Authority snap-in.
 
