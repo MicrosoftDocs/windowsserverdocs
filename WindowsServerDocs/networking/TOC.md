@@ -15,7 +15,7 @@
 ###### [Configure WEB1 to Distribute Certificate Revocation lists (CRLs)](core-network-guide/cncg/server-certs/Configure-WEB1-to-Distribute-Certificate-Revocation-lists.md)
 ###### [Prepare the CAPolicy.inf File](core-network-guide/cncg/server-certs/Prepare-the-CAPolicy-inf-File.md)
 ###### [Install the Certification Authority](core-network-guide/cncg/server-certs/Install-the-Certification-Authority.md)
-###### [Configure the cdP and AIA Extensions on CA1](core-network-guide/cncg/server-certs/Configure-the-cdP-and-AIA-Extensions-on-CA1.md)
+###### [Configure the CDP and AIA Extensions on CA1](core-network-guide/cncg/server-certs/Configure-the-cdP-and-AIA-Extensions-on-CA1.md)
 ###### [Copy the CA Certificate and CRL to the Virtual directory](core-network-guide/cncg/server-certs/copy-the-CA-Certificate-and-CRL-to-the-Virtual-directory.md)
 ###### [Configure the Server Certificate Template](core-network-guide/cncg/server-certs/Configure-the-Server-Certificate-Template.md)
 ###### [Configure Server Certificate Autoenrollment](core-network-guide/cncg/server-certs/Configure-Server-Certificate-Autoenrollment.md)
@@ -181,6 +181,7 @@
 ### [Netsh Command Syntax, Contexts, and Formatting](technologies/netsh/netsh-contexts.md)
 ### [Network Shell (Netsh) Example Batch File](technologies/netsh/netsh-wins.md)
 ### [Netsh http commands](technologies/netsh/netsh-http.md)
+### [Netsh interface portproxy commands](technologies/netsh/netsh-interface-portproxy.md)
 
 ## [Network Subsystem Performance Tuning](technologies/network-subsystem/net-sub-performance-top.md)
 ### [Choosing a Network Adapter](technologies/network-subsystem/net-sub-choose-nic.md)
@@ -266,6 +267,7 @@
 ## [Windows Internet Name Service (WINS)](technologies/wins/wins-top.md)
 
 ## [Windows Time Service](windows-time-service/windows-time-service-top.md)
+### [Insider preview](windows-time-service/insider-preview.md)
 ### [Accurate Time for Windows Server 2016](windows-time-service/accurate-time.md)
 ### [Support boundary to configure the Windows Time service for high-accuracy environments](windows-time-service/support-boundary.md)
 ### [Configuring Systems for High Accuracy](windows-time-service/configuring-systems-for-high-accuracy.md)
