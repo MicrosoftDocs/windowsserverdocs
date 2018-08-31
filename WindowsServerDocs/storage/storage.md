@@ -46,7 +46,7 @@ Storage in Windows Server provides new and improved features for software-define
                 </div>
             </div>
         </div>
-        </a>
+        
     </li>
 <li>    
         <div class="cardSize">
@@ -79,7 +79,7 @@ Storage in Windows Server provides new and improved features for software-define
                 </div>
             </div>
         </div>
-        </a>
+        
     </li>
 <li>
         <div class="cardSize">
@@ -108,7 +108,7 @@ Storage in Windows Server provides new and improved features for software-define
                 </div>
             </div>
         </div>
-        </a>
+        
     </li>
 </ul>
 
