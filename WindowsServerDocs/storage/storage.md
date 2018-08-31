@@ -120,41 +120,32 @@ Storage in Windows Server provides new and improved features for software-define
                     </div>
                     <div class="cardText">
                         <h2>File systems, protocols, etc.</h2>
- <li class="fullSpan">
-                            
+   
                         <HR COLOR="purple" SIZE="6" WIDTH="60%">
 
-                        </li>
                         <p><a href="refs/refs-overview.md">ReFS</a> - ReFS is a resilient file system that maximizes data availability, scales efficiently to very large data sets across diverse workloads, and provides data integrity by means of resiliency to corruption (regardless of software or hardware failures).<p>
- <li class="fullSpan">
                             
                         <HR COLOR="purple" SIZE="6" WIDTH="60%">
-
-                        </li>
+      
                         <p><a href="file-server/file-server-smb-overview.md">SMB</a> - The Server Message Block (SMB) protocol is a network file sharing protocol that allows applications on a computer to read and write to files and to request services from server programs in a computer network. The SMB protocol can be used on top of its TCP/IP protocol or other network protocols. Using the SMB protocol, an application (or the user of an application) can access files or other resources at a remote server. This allows applications to read, create, and update files on the remote server. It can also communicate with any server program that is set up to receive an SMB client request.<p>
- <li class="fullSpan">
+
                             
                         <HR COLOR="purple" SIZE="6" WIDTH="60%">
 
-                        </li>
                         <p><a href="storage-spaces/Storage-class-memory-health.md">Storage-class memory</a> - Storage-class memory such as NVDIMM-N devices provide performance similar to computer memory (really fast), but with the data persistence of normal storage drives. Windows treats storage-class memory similary to normal drives (just faster), but there are some differences in the way device health is managed.<p>
- <li class="fullSpan">
+
                             
                         <HR COLOR="purple" SIZE="6" WIDTH="60%">
 
-                        </li>
                         <p><a href="https://technet.microsoft.com/library/cc766295(v=ws.10).aspx">BitLocker</a> - BitLocker Drive Encryption stores data on volumes in an encrypted format, even if the computer is tampered with or when the operating system is not running. This helps protect against offline attacks, attacks made by disabling or circumventing the installed operating system, or made by physically removing the hard drive to attack the data separately.<p>
- <li class="fullSpan">
+
                             
                         <HR COLOR="purple" SIZE="6" WIDTH="60%">
 
-                        </li>
                         <p><a href="https://technet.microsoft.com/library/dn466522(v=ws.11).aspx">NTFS</a> - NTFS—the primary file system for recent versions of Windows and Windows Server—provides a full set of features including security descriptors, encryption, disk quotas, and rich metadata, and can be used with Cluster Shared Volumes (CSV) to provide continuously available volumes that can be accessed simultaneously from multiple nodes of a Failover Cluster.<p>
- <li class="fullSpan">
-                            
+                       
                         <HR COLOR="purple" SIZE="6" WIDTH="60%">
 
-                        </li>
                         <p><a href="https://technet.microsoft.com/library/jj592688(v=ws.11).aspx">NFS</a> - Network File System (NFS) provides a file sharing solution for enterprises that have heterogeneous environments that consist of both Windows and non-Windows computers.<p>
                     </div>
                 </div>
