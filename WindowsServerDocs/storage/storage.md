@@ -35,7 +35,7 @@ Storage in Windows Server provides new and improved features for software-define
                     </div>
                     <div class="cardText">
                         <h2>Software-defined storage for virtualized workloads</h2>
-<HR />
+
                         <p><h3><a href="storage-spaces/storage-spaces-direct-overview.md">Storage Spaces Direct</a></h3> Storage Spaces now includes support for Storage Spaces Direct - a new architecture for Storage Spaces clusters that uses directly attached local storage - including SATA and NVME devices. Other enhancements include the ability to optimize disk usage after adding new physical disks and faster virtual disk repair times. Also see [Storage Spaces]<a href="storage-spaces/overview.md">Storage Spaces</a> for info on shared SAS and stand-alone Storage Spaces.</p>
 <HR />
                         <p><h3><a href="storage-replica/storage-replica-overview.md">Storage Replica</a></h3> Storage Replica enables storage-agnostic, block-level, synchronous replication between clusters or servers for disaster preparedness and recovery, as well as stretching of a failover cluster across sites for high availability. Synchronous replication enables mirroring of data in physical sites with crash-consistent volumes, ensuring zero data loss at the file system level. Asynchronous replication allows site extension beyond metropolitan ranges.</p>
@@ -61,7 +61,7 @@ Storage in Windows Server provides new and improved features for software-define
                     </div>
                     <div class="cardText">
                         <h2>General-purpose file servers</h2>
-<HR />
+
                          <p><h3><a href="storage-spaces/storage-spaces-direct-overview.md">Storage Spaces Direct</a></h3> Storage Spaces now includes support for Storage Spaces Direct - a new architecture for Storage Spaces clusters that uses directly attached local storage - including SATA and NVME devices. Other enhancements include the ability to optimize disk usage after adding new physical disks and faster virtual disk repair times. Also see [Storage Spaces](storage-spaces/overview.md) for info on shared SAS and stand-alone Storage Spaces.
 <HR />
                          <p><h3><a href="storage-replica/storage-replica-overview.md">Storage Replica</a></h3> Storage Replica enables storage-agnostic, block-level, synchronous replication between clusters or servers for disaster preparedness and recovery, as well as stretching of a failover cluster across sites for high availability. Synchronous replication enables mirroring of data in physical sites with crash-consistent volumes, ensuring zero data loss at the file system level. Asynchronous replication allows site extension beyond metropolitan ranges.</p>
@@ -87,7 +87,7 @@ Storage in Windows Server provides new and improved features for software-define
                     </div>
                     <div class="cardText">
                         <h2>General-purpose file servers</h2>
-<HR />    
+   
                         <p><h3><a href="work-folders/work-folders-overview.md">Work Folders</a></h3> With Work Folders users can store and access work files on personal computers and devices, often referred to as bring-your-own device (BYOD), in addition to corporate PCs. Users gain a convenient location to store work files, and they can access them from anywhere. Organizations maintain control over corporate data by storing the files on centrally managed file servers, and optionally specifying user device policies such as encryption and lock-screen passwords.</p>
 <HR />
                         <p><h3><a href="folder-redirection/folder-redirection-rup-overview.md">Offline Files and Folder Redirection</a></h3> Folder Redirection and Offline Files are used together to redirect the path of local folders (such as the Documents folder) to a network location, while caching the contents locally for increased speed and availability.</p>
@@ -121,7 +121,7 @@ Storage in Windows Server provides new and improved features for software-define
                     </div>
                     <div class="cardText">
                         <h2>File systems, protocols, etc.</h2>   
- <HR />
+
                         <p><h3><a href="refs/refs-overview.md">ReFS</a></h3> ReFS is a resilient file system that maximizes data availability, scales efficiently to very large data sets across diverse workloads, and provides data integrity by means of resiliency to corruption (regardless of software or hardware failures).<p>                          
 <HR />
                         <p><h3><a href="file-server/file-server-smb-overview.md">SMB</a></h3> The Server Message Block (SMB) protocol is a network file sharing protocol that allows applications on a computer to read and write to files and to request services from server programs in a computer network. The SMB protocol can be used on top of its TCP/IP protocol or other network protocols. Using the SMB protocol, an application (or the user of an application) can access files or other resources at a remote server. This allows applications to read, create, and update files on the remote server. It can also communicate with any server program that is set up to receive an SMB client request.<p>                         
