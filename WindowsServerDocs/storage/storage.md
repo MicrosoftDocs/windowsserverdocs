@@ -119,7 +119,7 @@ Storage in Windows Server provides new and improved features for software-define
                         </div>
                     </div>
                     <div class="cardText">
-                        <h2File systems, protocols, etc.</h2>
+                        <h2>File systems, protocols, etc.</h2>
 
                         <p><a href="refs/refs-overview.md">ReFS</a> - ReFS is a resilient file system that maximizes data availability, scales efficiently to very large data sets across diverse workloads, and provides data integrity by means of resiliency to corruption (regardless of software or hardware failures).<p>
 
