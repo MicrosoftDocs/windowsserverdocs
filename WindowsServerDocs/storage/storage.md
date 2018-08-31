@@ -88,7 +88,7 @@ Storage in Windows Server provides new and improved features for software-define
                     <div class="cardText">
                         <h2>General-purpose file servers</h2>
 <HR />    
-                        <p><h3><a href="work-folders/work-folders-overview.md">Work Folders</a></h3> With Work Folders users can store and access work files on personal computers and devices, often referred to as bring-your-own device (BYOD), in addition to corporate PCs. Users gain a convenient location to store work files, and they can access them from anywhere. Organizations maintain control over corporate data by storing the files on centrally managed file servers, and optionally specifying user device policies such as encryption and lock-screen passwords.</p>
+                        <p><h3><a href="work-folders/work-folders-overview.md"><u>Work Folders</u></a></h3> With Work Folders users can store and access work files on personal computers and devices, often referred to as bring-your-own device (BYOD), in addition to corporate PCs. Users gain a convenient location to store work files, and they can access them from anywhere. Organizations maintain control over corporate data by storing the files on centrally managed file servers, and optionally specifying user device policies such as encryption and lock-screen passwords.</p>
 <HR />
                         <p><h3><a href="folder-redirection/folder-redirection-rup-overview.md">Offline Files and Folder Redirection</a></h3> Folder Redirection and Offline Files are used together to redirect the path of local folders (such as the Documents folder) to a network location, while caching the contents locally for increased speed and availability.</p>
 <HR />
