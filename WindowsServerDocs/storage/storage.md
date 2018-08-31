@@ -40,13 +40,12 @@ Storage in Windows Server provides new and improved features for software-define
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                          </a>
-                        </li>
-
                         <li class="fullSpan">
                         <HR />
  </li>
+                            </div>
+                          </a>
+                        </li>
 </ul>
 
 <ul class="cardsF panelContent">
