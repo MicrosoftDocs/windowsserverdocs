@@ -12,7 +12,7 @@ ms.technology: networking-sdn
 ms.assetid: 3c361575-1050-46f4-ac94-fa42102f83c1
 ms.author: pashort
 author: shortpatti
-ms.date: 08/27/2018
+ms.date: 08/30/2018
 ---
 # Use network virtual appliances on a virtual network
 
@@ -96,70 +96,72 @@ The appliance must have a second network interface for management. After you ena
 
 **Procedure:**
 
-1. Get the virtual network on which your VMs are located
-You can use the following example command to get the virtual network.
+1. Get the virtual network on which your VMs are located.
 
-    $vnet = Get-NetworkControllerVirtualNetwork -ConnectionUri $uri -ResourceId "Tenant1_VNet1"
+   ```PowerShell
+   $vnet = Get-NetworkControllerVirtualNetwork -ConnectionUri $uri -ResourceId "Tenant1_VNet1"
+   ```
 
-2. Get the Network Controller network interfaces for the mirroring source and destination
-You can use the following example commands to obtain the Network Controller network interfaces for the mirroring source and destination.
+2. Get the Network Controller network interfaces for the mirroring source and destination.
 
-    $dstNic = get-networkcontrollernetworkinterface -ConnectionUri $uri -ResourceId "Appliance_Ethernet1"
-    $srcNic = get-networkcontrollernetworkinterface -ConnectionUri $uri -ResourceId "MyVM_Ethernet1"
+   ```PowerShell
+   $dstNic = get-networkcontrollernetworkinterface -ConnectionUri $uri -ResourceId "Appliance_Ethernet1"
+   $srcNic = get-networkcontrollernetworkinterface -ConnectionUri $uri -ResourceId "MyVM_Ethernet1"
+   ```
 
-3. Create a serviceinsertionproperties object to contain the port mirroring rules and the element which represents the destination interface
-You can use the following example commands to create a destination serviceinsertionproperties object.
+3. Create a serviceinsertionproperties object to contain the port mirroring rules and the element which represents the destination interface.
 
-    $portmirror = [Microsoft.Windows.NetworkController.ServiceInsertionProperties]::new()
-    $portMirror.Priority = 1
+   ```PowerShell
+   $portmirror = [Microsoft.Windows.NetworkController.ServiceInsertionProperties]::new()
+   $portMirror.Priority = 1
+   ```
 
-4. Create a serviceinsertionrules object to contain the rules that must be matched in order for the traffic to be sent to the appliance
+4. Create a serviceinsertionrules object to contain the rules that must be matched in order for the traffic to be sent to the appliance.<p>The rules defined below match all traffic, both inbound and outbound, which represents a traditional mirror.  You can adjust these rules if you are interested in mirroring a specific port, or specific source/destinations.
 
-The rules defined below match all traffic, both inbound and outbound, which represents a traditional mirror.  You can adjust these rules if you are interested in mirroring a specific port, or specific source/destinations.
+   ```PowerShell
+   $portmirror.ServiceInsertionRules = [Microsoft.Windows.NetworkController.ServiceInsertionRule[]]::new(1)
 
-You can use the following example commands to create a serviceinsertionproperties object.
+   $portmirror.ServiceInsertionRules[0] = [Microsoft.Windows.NetworkController.ServiceInsertionRule]::new()
+   $portmirror.ServiceInsertionRules[0].ResourceId = "Rule1"
+   $portmirror.ServiceInsertionRules[0].Properties = [Microsoft.Windows.NetworkController.ServiceInsertionRuleProperties]::new()
 
-    $portmirror.ServiceInsertionRules = [Microsoft.Windows.NetworkController.ServiceInsertionRule[]]::new(1)
+   $portmirror.ServiceInsertionRules[0].Properties.Description = "Port Mirror Rule"
+   $portmirror.ServiceInsertionRules[0].Properties.Protocol = "All"
+   $portmirror.ServiceInsertionRules[0].Properties.SourcePortRangeStart = "0"
+   $portmirror.ServiceInsertionRules[0].Properties.SourcePortRangeEnd = "65535"
+   $portmirror.ServiceInsertionRules[0].Properties.DestinationPortRangeStart = "0"
+   $portmirror.ServiceInsertionRules[0].Properties.DestinationPortRangeEnd = "65535"
+   $portmirror.ServiceInsertionRules[0].Properties.SourceSubnets = "*"
+   $portmirror.ServiceInsertionRules[0].Properties.DestinationSubnets = "*"
+   ```
 
-    $portmirror.ServiceInsertionRules[0] = [Microsoft.Windows.NetworkController.ServiceInsertionRule]::new()
-    $portmirror.ServiceInsertionRules[0].ResourceId = "Rule1"
-    $portmirror.ServiceInsertionRules[0].Properties = [Microsoft.Windows.NetworkController.ServiceInsertionRuleProperties]::new()
+5. Create a serviceinsertionelements object to contain the network interface of the mirrored appliance.
 
-    $portmirror.ServiceInsertionRules[0].Properties.Description = "Port Mirror Rule"
-    $portmirror.ServiceInsertionRules[0].Properties.Protocol = "All"
-    $portmirror.ServiceInsertionRules[0].Properties.SourcePortRangeStart = "0"
-    $portmirror.ServiceInsertionRules[0].Properties.SourcePortRangeEnd = "65535"
-    $portmirror.ServiceInsertionRules[0].Properties.DestinationPortRangeStart = "0"
-    $portmirror.ServiceInsertionRules[0].Properties.DestinationPortRangeEnd = "65535"
-    $portmirror.ServiceInsertionRules[0].Properties.SourceSubnets = "*"
-    $portmirror.ServiceInsertionRules[0].Properties.DestinationSubnets = "*"
+   ```PowerShell
+   $portmirror.ServiceInsertionElements = [Microsoft.Windows.NetworkController.ServiceInsertionElement[]]::new(1)
 
-5. Create a serviceinsertionelements object to contain the network interface of the appliance you are mirroring to
-You can use the following example commands to create a network interface serviceinsertionelements object.
+   $portmirror.ServiceInsertionElements[0] = [Microsoft.Windows.NetworkController.ServiceInsertionElement]::new()
+   $portmirror.ServiceInsertionElements[0].ResourceId = "Element1"
+   $portmirror.ServiceInsertionElements[0].Properties = [Microsoft.Windows.NetworkController.ServiceInsertionElementProperties]::new()
 
-    $portmirror.ServiceInsertionElements = [Microsoft.Windows.NetworkController.ServiceInsertionElement[]]::new(1)
+   $portmirror.ServiceInsertionElements[0].Properties.Description = "Port Mirror Element"
+   $portmirror.ServiceInsertionElements[0].Properties.NetworkInterface = $dstNic
+   $portmirror.ServiceInsertionElements[0].Properties.Order = 1
+   ```
 
-    $portmirror.ServiceInsertionElements[0] = [Microsoft.Windows.NetworkController.ServiceInsertionElement]::new()
-    $portmirror.ServiceInsertionElements[0].ResourceId = "Element1"
-    $portmirror.ServiceInsertionElements[0].Properties = [Microsoft.Windows.NetworkController.ServiceInsertionElementProperties]::new()
+6. Add the service insertion object in Network Controller.<p>When you issue this command, all traffic to the appliance network interface specified in the previous step stops.
 
-    $portmirror.ServiceInsertionElements[0].Properties.Description = "Port Mirror Element"
-    $portmirror.ServiceInsertionElements[0].Properties.NetworkInterface = $dstNic
-    $portmirror.ServiceInsertionElements[0].Properties.Order = 1
+   ```PowerShell
+   $portMirror = New-NetworkControllerServiceInsertion -ConnectionUri $uri -Properties $portmirror -ResourceId "MirrorAll"
+   ```
 
-6. Add the service insertion object in Network Controller
-When you issue this command, all traffic to the appliance network interface specified in the previous step will stop.
+7. Update the network interface of the source to be mirrored.
 
-You can use the following example commands to add the service insertion object in Network Controller.
+   ```PowerShell
+   $srcNic.Properties.IpConfigurations[0].Properties.ServiceInsertion = $portMirror
+   $srcNic = New-NetworkControllerNetworkInterface -ConnectionUri $uri  -Properties $srcNic.Properties -ResourceId $srcNic.ResourceId
+   ```
 
-    $portMirror = New-NetworkControllerServiceInsertion -ConnectionUri $uri -Properties $portmirror -ResourceId "MirrorAll"
-
-7. Update the network interface of the source to be mirrored
-You can use the following example commands to update the network interface.
-
-    $srcNic.Properties.IpConfigurations[0].Properties.ServiceInsertion = $portMirror
-    $srcNic = New-NetworkControllerNetworkInterface -ConnectionUri $uri  -Properties $srcNic.Properties -ResourceId $srcNic.ResourceId
-
-When you have completed these steps, the traffic from the MyVM_Ethernet1 interface is  mirrored by the Appliance_Ethernet1 interface.
+After completing these steps, the Appliance_Ethernet1 interface mirrors the traffic from the MyVM_Ethernet1 interface.
  
 ---
