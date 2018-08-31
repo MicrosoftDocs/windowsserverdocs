@@ -221,7 +221,7 @@ If you chose to set up HGS in host key attestation mode, you’ll need to genera
    ```
 
 2. Restart your computer when prompted to complete installation of Hyper-V.
-3. Generate a unique host key for this guarded host and export the resulting public key to a file. 
+3. Generate a unique host key and export the resulting public key to a file. 
 
    ```powershell
    Set-HgsClientHostKey 
