@@ -35,13 +35,13 @@ Storage in Windows Server provides new and improved features for software-define
                     </div>
                     <div class="cardText">
                         <h2>Software-defined storage for virtualized workloads</h2>
-<HR WIDTH="60%">
+<HR />
                         <p><a href="storage-spaces/storage-spaces-direct-overview.md">Storage Spaces Direct</a> - Storage Spaces now includes support for Storage Spaces Direct - a new architecture for Storage Spaces clusters that uses directly attached local storage - including SATA and NVME devices. Other enhancements include the ability to optimize disk usage after adding new physical disks and faster virtual disk repair times. Also see [Storage Spaces]<a href="storage-spaces/overview.md">Storage Spaces</a> for info on shared SAS and stand-alone Storage Spaces.</p>
-<HR WIDTH="60%">
+<HR />
                         <p><a href="storage-replica/storage-replica-overview.md">Storage Replica</a> - Storage Replica enables storage-agnostic, block-level, synchronous replication between clusters or servers for disaster preparedness and recovery, as well as stretching of a failover cluster across sites for high availability. Synchronous replication enables mirroring of data in physical sites with crash-consistent volumes, ensuring zero data loss at the file system level. Asynchronous replication allows site extension beyond metropolitan ranges.</p>
-<HR WIDTH="60%">
+<HR />
                         <p><a href="storage-qos/storage-qos-overview.md">Storage Quality of Service (QoS)</a> - Storage Quality of Service (QoS) provides a way to centrally monitor and manage storage performance for virtual machines using Hyper-V and the Scale-Out File Server roles. The feature automatically improves storage resource fairness between multiple virtual machines using the same file server cluster and allows specific minimum and maximum performance goals to be configured in units of normalized IOPs.</p>
-<HR WIDTH="60%">
+<HR />
                         <p><a href="data-deduplication/overview.md">Data Deduplication</a> - Data Deduplication is a feature of Windows Server 2016 that can help reduce the impact of redundant data on storage costs. When enabled, Data Deduplication optimizes free space on a volume by examining the data on the volume for duplication. Once identified, duplicated portions of the volume's dataset are stored once and are (optionally) compressed for additional savings. Data Deduplication optimizes redundancies without compromise data fidelity or integrity.</p>
                     </div>
                 </div>
@@ -61,13 +61,13 @@ Storage in Windows Server provides new and improved features for software-define
                     </div>
                     <div class="cardText">
                         <h2>General-purpose file servers</h2>
-<HR WIDTH="60%">
+<HR />
                          <p><a href="storage-spaces/storage-spaces-direct-overview.md">Storage Spaces Direct</a> - Storage Spaces now includes support for Storage Spaces Direct - a new architecture for Storage Spaces clusters that uses directly attached local storage - including SATA and NVME devices. Other enhancements include the ability to optimize disk usage after adding new physical disks and faster virtual disk repair times. Also see [Storage Spaces](storage-spaces/overview.md) for info on shared SAS and stand-alone Storage Spaces.
-<HR WIDTH="60%">
+<HR />
                          <p><a href="storage-replica/storage-replica-overview.md">Storage Replica</a> - Storage Replica enables storage-agnostic, block-level, synchronous replication between clusters or servers for disaster preparedness and recovery, as well as stretching of a failover cluster across sites for high availability. Synchronous replication enables mirroring of data in physical sites with crash-consistent volumes, ensuring zero data loss at the file system level. Asynchronous replication allows site extension beyond metropolitan ranges.</p>
-<HR WIDTH="60%">
+<HR />
                          <p><a href="storage-qos/storage-qos-overview.md">Storage QoS</a> - Storage Quality of Service (QoS) provides a way to centrally monitor and manage storage performance for virtual machines using Hyper-V and the Scale-Out File Server roles. The feature automatically improves storage resource fairness between multiple virtual machines using the same file server cluster and allows specific minimum and maximum performance goals to be configured in units of normalized IOPs.</p>
-<HR WIDTH="60%">
+<HR />
                          <p><a href="data-deduplication/overview.md">Data Deduplication</a> - Data Deduplication is a feature of Windows Server 2016 that can help reduce the impact of redundant data on storage costs. When enabled, Data Deduplication optimizes free space on a volume by examining the data on the volume for duplication. Once identified, duplicated portions of the volume's dataset are stored once and are (optionally) compressed for additional savings. Data Deduplication optimizes redundancies without compromise data fidelity or integrity.</p>
                     </div>
                 </div>
@@ -87,22 +87,22 @@ Storage in Windows Server provides new and improved features for software-define
                     </div>
                     <div class="cardText">
                         <h2>General-purpose file servers</h2>
-<HR WIDTH="60%">       
-                        <p><h3><a href="work-folders/work-folders-overview.md">Work Folders</a></h3> - With Work Folders users can store and access work files on personal computers and devices, often referred to as bring-your-own device (BYOD), in addition to corporate PCs. Users gain a convenient location to store work files, and they can access them from anywhere. Organizations maintain control over corporate data by storing the files on centrally managed file servers, and optionally specifying user device policies such as encryption and lock-screen passwords.</p>
-<HR WIDTH="60%">
-                        <p><h3><a href="folder-redirection/folder-redirection-rup-overview.md">Offline Files and Folder Redirection</a></h3> - Folder Redirection and Offline Files are used together to redirect the path of local folders (such as the Documents folder) to a network location, while caching the contents locally for increased speed and availability.</p>
-<HR WIDTH="60%">
-                        <p><h3><a href="folder-redirection/deploy-roaming-user-profiles.md">Roaming User Profiles</a></h3> is used to redirect a user profile to a network location.</p>
-<HR WIDTH="60%">
-                        <p><h3><a href="dfs-namespaces/dfs-overview.md">DFS Namespaces</a></h3> - Enables you to group shared folders that are located on different servers into one or more logically structured namespaces. Each namespace appears to users as a single shared folder with a series of subfolders. However, the underlying structure of the namespace can consist of numerous file shares that are located on different servers and in multiple sites.</p>
-<HR WIDTH="60%">
-                        <p><h3><a href="https://technet.microsoft.com/library/jj127250(v=ws.11).aspx">DFS Replication</a></h3> - Enables you to efficiently replicate folders (including those referred to by a DFS namespace path) across multiple servers and sites. DFS Replication uses a compression algorithm known as remote differential compression (RDC). RDC detects changes to the data in a file, and it enables DFS Replication to replicate only the changed file blocks instead of the entire file.</p>
-<HR WIDTH="60%">
-                        <p><h3><a href="fsrm/fsrm-overview.md">File Server Resource Manager</a></h3> - File Server Resource Manager enables you to manage and classify data stored on file servers.<p>
-<HR WIDTH="60%">
-                        <p><h3><a href="https://technet.microsoft.com/library/hh848272(v=ws.11).aspx">iSCSI Target Server</a></h3> - iSCSI Target Server provides block storage to other servers and applications on the network by using the Internet SCSI (iSCSI) standard.</p>
-<HR WIDTH="60%">
-                       <p><h3><a href="iscsi/iscsi-boot-overview.md">iSCSI Target Server</a></h3> - iSCSI Target Server in Windows Server can boot hundreds of computers from a single operating system image that is stored in a centralized location. This improves efficiency, manageability, availability, and security.</p>
+<HR />    
+                        <p><h3><a href="work-folders/work-folders-overview.md">Work Folders</a></h3> With Work Folders users can store and access work files on personal computers and devices, often referred to as bring-your-own device (BYOD), in addition to corporate PCs. Users gain a convenient location to store work files, and they can access them from anywhere. Organizations maintain control over corporate data by storing the files on centrally managed file servers, and optionally specifying user device policies such as encryption and lock-screen passwords.</p>
+<HR />
+                        <p><h3><a href="folder-redirection/folder-redirection-rup-overview.md">Offline Files and Folder Redirection</a></h3> Folder Redirection and Offline Files are used together to redirect the path of local folders (such as the Documents folder) to a network location, while caching the contents locally for increased speed and availability.</p>
+<HR />
+                        <p><h3><a href="folder-redirection/deploy-roaming-user-profiles.md">Roaming User Profiles</a></h3> Used to redirect a user profile to a network location.</p>
+<HR />
+                        <p><h3><a href="dfs-namespaces/dfs-overview.md">DFS Namespaces</a></h3> Enables you to group shared folders that are located on different servers into one or more logically structured namespaces. Each namespace appears to users as a single shared folder with a series of subfolders. However, the underlying structure of the namespace can consist of numerous file shares that are located on different servers and in multiple sites.</p>
+<HR />
+                        <p><h3><a href="https://technet.microsoft.com/library/jj127250(v=ws.11).aspx">DFS Replication</a></h3> Enables you to efficiently replicate folders (including those referred to by a DFS namespace path) across multiple servers and sites. DFS Replication uses a compression algorithm known as remote differential compression (RDC). RDC detects changes to the data in a file, and it enables DFS Replication to replicate only the changed file blocks instead of the entire file.</p>
+<HR />
+                        <p><h3><a href="fsrm/fsrm-overview.md">File Server Resource Manager</a></h3> File Server Resource Manager enables you to manage and classify data stored on file servers.<p>
+<HR />
+                        <p><h3><a href="https://technet.microsoft.com/library/hh848272(v=ws.11).aspx">iSCSI Target Server</a></h3> iSCSI Target Server provides block storage to other servers and applications on the network by using the Internet SCSI (iSCSI) standard.</p>
+<HR />
+                       <p><h3><a href="iscsi/iscsi-boot-overview.md">iSCSI Target Server</a></h3> iSCSI Target Server in Windows Server can boot hundreds of computers from a single operating system image that is stored in a centralized location. This improves efficiency, manageability, availability, and security.</p>
                     </div>
                 </div>
             </div>
