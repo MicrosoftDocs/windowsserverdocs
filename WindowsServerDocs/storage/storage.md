@@ -31,7 +31,7 @@ Storage in Windows Server provides new and improved features for software-define
                                     <div class="card">
                                         <div class="cardImageOuter">
                                             <div class="cardImage">
-                                                <img src="media/i-whats-new.svg" alt="" />
+                                                <img src="../media/i-whats-new.svg" alt="" />
                                             </div>
                                         </div>
                                         <div class="cardText">
