@@ -22,7 +22,7 @@ ms.localizationpriority: medium
 
 Storage in Windows Server provides new and improved features for software-defined datacenter (SDDC) customers focusing on virtualized workloads. Windows Server also provides extensive support for enterprise customers using file servers with existing workloads.
 
-<ul class="cardsG panelContent">
+<ul class="cardsD panelContent">
 <li>
         <a href="">
         <div class="cardSize">
@@ -91,7 +91,7 @@ Storage in Windows Server provides new and improved features for software-define
 
                        <p><a href="folder-redirection/folder-redirection-rup-overview.md">Offline Files and Folder Redirection</a> - Folder Redirection and Offline Files are used together to redirect the path of local folders (such as the Documents folder) to a network location, while caching the contents locally for increased speed and availability.</p>
 
-                       <p>(a href="folder-redirection/deploy-roaming-user-profiles.md">Roaming User Profiles</a> is used to redirect a user profile to a network location.</p>
+                       <p><a href="folder-redirection/deploy-roaming-user-profiles.md">Roaming User Profiles</a> is used to redirect a user profile to a network location.</p>
 
                        <p><a href="dfs-namespaces/dfs-overview.md">DFS Namespaces</a> - Enables you to group shared folders that are located on different servers into one or more logically structured namespaces. Each namespace appears to users as a single shared folder with a series of subfolders. However, the underlying structure of the namespace can consist of numerous file shares that are located on different servers and in multiple sites.</p>
 
