@@ -22,7 +22,7 @@ ms.localizationpriority: medium
 
 Storage in Windows Server provides new and improved features for software-defined datacenter (SDDC) customers focusing on virtualized workloads. Windows Server also provides extensive support for enterprise customers using file servers with existing workloads.
 
-
+<hr />
 <ul class="cardsF panelContent">
 <li>
  <a href="get-started-19/whats-new-19.md">
@@ -40,14 +40,11 @@ Storage in Windows Server provides new and improved features for software-define
                                         </div>
                                     </div>
                                 </div>
-                        <li class="fullSpan">
-                        <HR />
- </li>
                             </div>
                           </a>
                         </li>
 </ul>
-
+<hr />
 <ul class="cardsF panelContent">
 <li>
         <div class="cardSize">
