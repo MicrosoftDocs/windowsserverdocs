@@ -44,9 +44,7 @@ Storage in Windows Server provides new and improved features for software-define
                           </a>
                         </li>
                         <li class="fullSpan">
-                            
                         <HR WIDTH="60%">
-
                         </li>
 </ul>
 
