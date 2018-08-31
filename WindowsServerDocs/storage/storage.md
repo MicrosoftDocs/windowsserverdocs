@@ -48,6 +48,7 @@ Storage in Windows Server provides new and improved features for software-define
                         <HR WIDTH="60%">
 
                         </li>
+</ul>
 
 <ul class="cardsF panelContent">
 <li>
