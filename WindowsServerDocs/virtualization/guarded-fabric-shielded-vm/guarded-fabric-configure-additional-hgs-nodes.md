@@ -7,16 +7,12 @@ ms.assetid: 227f723b-acb2-42a7-bbe3-44e82f930e35
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 08/28/2017
+ms.date: 08/29/2018
 ---
 
 # Configure additional HGS nodes
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
-
->[!div class="step-by-step"]
-[« Configure Https](guarded-fabric-configure-hgs-https.md)
-[Verify the configuration »](guarded-fabric-verify-hgs-configuration.md)
+>Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016
 
 In production environments, HGS should be set up in a high availability cluster to ensure that shielded VMs can be powered on even if an HGS node goes down. For test environments, secondary HGS nodes are not required.
 
@@ -130,6 +126,8 @@ Set-HgsServer -Http -Https -HttpsCertificateThumbprint 'A1B2C3D4E5F6...'
 HGS will always expose both the HTTP and HTTPS ports for communication.
 It is unsupported to remove the HTTP binding in IIS, however you can use the Windows Firewall or other network firewall technologies to block communications over port 80.
 
-## Next steps
+## Next step
 
-- [Validate the HGS configuration](guarded-fabric-verify-hgs-configuration.md)
+>[!div class="nextstepaction"]
+[Validate the HGS configuration](guarded-fabric-verify-hgs-configuration.md)
+

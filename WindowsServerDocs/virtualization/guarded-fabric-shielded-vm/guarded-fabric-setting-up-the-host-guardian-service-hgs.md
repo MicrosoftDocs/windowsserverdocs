@@ -7,16 +7,13 @@ ms.assetid: 0bd96e2a-1612-4bbf-8c23-7602020f4eec
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 10/14/2016
+ms.date: 08/29/2018
 ---
 
 # Deploy the Host Guardian Service (HGS)
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016
 
->[!div class="step-by-step"]
-[« Quick Start](guarded-fabric-deployment-overview.md)
-[Prepare for HGS »](guarded-fabric-prepare-for-hgs.md)
 
 To deploy the HGS, complete the following tasks:
 

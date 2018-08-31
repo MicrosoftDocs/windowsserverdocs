@@ -6,12 +6,12 @@ ms.topic: article
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 07/05/2017
+ms.date: 08/29/2018
 ---
 
 # Initialize HGS using TPM-trusted attestation
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Serer 2019, Windows Server (Semi-Annual Channel), Windows Server 2016
 
 These steps vary depending on whether you are initializing HGS in a new forest or an existing bastion forest:
 

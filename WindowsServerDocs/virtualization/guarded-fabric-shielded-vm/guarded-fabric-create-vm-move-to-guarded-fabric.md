@@ -8,12 +8,12 @@ ms.assetid: 0ca1efa0-01f9-4b6f-87d4-c66db00d7d70
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 10/14/2016
+ms.date: 08/29/2018
 ---
 
 # Shielded VMs for tenants - Creating a new shielded VM on-premises and moving it to a guarded fabric
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016
 
 
 <!-- NOTE THAT THIS FILE HAS A "redirect_url" LINE IN THE METADATA. EVENTUALLY WE WILL PROBABLY STRIP OUT THE DETAILED METADATA AND THE CONTENT BELOW, SO IT'S PURELY A REDIRECTED TOPIC. However, as of mid-November 2016, we're still deciding. -->
@@ -97,7 +97,7 @@ For an illustration showing the Key Protector, which is an element in a shieldin
 
         $KP = New-HgsKeyProtector -Owner $Owner -Guardian $Guardian -AllowUntrustedRoot
 
-    If you wish for more than one datacenter to be able to run your shielded VM (for example, a disaster recovery site and a public cloud provider), you can provide a list of guardians to the **-Guardian** parameter. For more information, see [New-HgsKeyProtector](https://technet.microsoft.com/library/dn914498.aspx).
+    If you wish for more than one datacenter to be able to run your shielded VM (for example, a disaster recovery site and a public cloud provider), you can provide a list of guardians to the **-Guardian** parameter. For more information, see [New-HgsKeyProtector](https://docs.microsoft.com/powershell/module/hgsclient/new-hgskeyprotector?view=win10-ps.
 
 5.  To enable the vTPM using the Key Protector, run the following command. For &lt;ShieldedVMname&gt;, use the same VM name used in previous steps.
 

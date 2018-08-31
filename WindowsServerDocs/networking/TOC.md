@@ -181,6 +181,7 @@
 ### [Netsh Command Syntax, Contexts, and Formatting](technologies/netsh/netsh-contexts.md)
 ### [Network Shell (Netsh) Example Batch File](technologies/netsh/netsh-wins.md)
 ### [Netsh http commands](technologies/netsh/netsh-http.md)
+### [Netsh interface portproxy commands](technologies/netsh/netsh-interface-portproxy.md)
 
 ## [Network Subsystem Performance Tuning](technologies/network-subsystem/net-sub-performance-top.md)
 ### [Choosing a Network Adapter](technologies/network-subsystem/net-sub-choose-nic.md)
