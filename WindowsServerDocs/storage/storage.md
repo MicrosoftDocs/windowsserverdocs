@@ -36,7 +36,7 @@ Storage in Windows Server provides new and improved features for software-define
                                         </div>
                                         <div class="cardText">
                                             <h2>What's new?</h2>
-                                            <p>Find out what's new in Windows Server</p>
+                                            <p>Find out what's new in Windows Server Storage</p>
                                         </div>
                                     </div>
                                 </div>
@@ -135,11 +135,7 @@ Storage in Windows Server provides new and improved features for software-define
 ---
 
 
-## See also
+## In Azure
 
-* [What's new in storage](whats-new-in-storage.md)
-* [What's new in Failover Clustering](../failover-clustering/whats-new-in-failover-clustering.md)
-* [Windows IT Pro Support](https://www.microsoft.com/itpro/windows/support)
-* [PowerShell cmdlets in Windows Server 2016 and Windows 10](https://technet.microsoft.com/library/mt156917.aspx)
 * [Azure Storage](https://azure.microsoft.com/documentation/services/storage/)
 * [Azure StorSimple](https://www.microsoft.com/en-us/cloud-platform/azure-storsimple)
