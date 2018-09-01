@@ -75,7 +75,6 @@ Access and Identity technologies enable secure Active Directory environments on-
                     </div>
                     <div class="cardText">
                         <h2>Windows 10 for the enterprise: Ways to use devices for work</h2>
-
                         <p>Windows 10 provides you the ability to leverage Azure Active Directory. Windows 10 devices can be connected to Azure AD, and users can sign in to Windows with Azure AD accounts or add their Azure ID to gain access to business apps and resources.</p>
                     </div>
                 </div>
@@ -83,6 +82,44 @@ Access and Identity technologies enable secure Active Directory environments on-
         </div>
        </a>
      </li>
+<li>
+      <a href="../identity/ad-ds/Active-Directory-Domain-Services.md">
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="../media/i-access.svg" alt="" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h2>Active Directory Domain Services</h2>
+                        <p>Detailed documentation on all of the features available for AD DS in Windows Server 2016.<p>
+                    </div>
+                </div>
+            </div>
+        </div>
+       </a>
+    </li>
+<li>
+      <a href="Active-Directory-Federation-Services.md">
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="../media/i-access.svg" alt="" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h2>Active Directory Federation Services</h2>
+                        <p>Detailed documentation on all of the features available for AD FS in Windows Server 2016.<p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </a>
+    </li>
 </ul>
 
 ---
