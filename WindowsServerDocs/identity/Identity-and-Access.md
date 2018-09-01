@@ -7,8 +7,6 @@ layout: LandingPage
 ms.prod: windows-server-threshold
 ms.technology: identity-adds
 ms.assetid: c248b41f-0de3-4247-9a25-b4b08e50ebf0
-ms.tgt_pltfrm: na
-ms.devlang: na
 ms.topic: landing-page
 ms.author: billmath
 ms.localizationpriority: high
