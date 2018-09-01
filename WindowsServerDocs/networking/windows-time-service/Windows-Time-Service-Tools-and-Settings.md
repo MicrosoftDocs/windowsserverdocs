@@ -12,7 +12,7 @@ ms.technology: networking
 ---
 
 # Windows Time Service Tools and Settings
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10 or later
+>Applies to: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10 or later
 
 **In this section**  
   
