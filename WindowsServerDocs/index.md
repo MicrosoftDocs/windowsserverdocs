@@ -185,7 +185,7 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h2>Access</h2>
+                                            <h2>Identity | Access</h2>
                                             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
 <table>
      <tr>
@@ -206,7 +206,7 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
        <hr width="80%">
             <li>2. <a href="https://docs.microsoft.com/en-us/windows-server/identity/securing-privileged-access/securing-privileged-access-reference-material">Securing Privileged Access Reference Material</a></li>
        <hr width="80%">
-            <li>3. <a href="https://docs.microsoft.com/en-us/windows-server/identity/whats-new-active-directory-domain-services">Whats new in Active Directory Domain Services for Windows Server 2016/a></li>
+            <li>3. <a href="https://docs.microsoft.com/en-us/windows-server/identity/whats-new-active-directory-domain-services">What's new in Active Directory Domain Services</a></li>
             </ol>
         </td>
     </tr>
@@ -228,7 +228,7 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h2>Cluster</h2> 
+                                            <h2>Failover clustering</h2> 
                                             <p>Combine individual servers into groups with Failover Clustering to increase fault-tolerance and availablity of systems that host business critical apps and services.</p>
 <table>
      <tr>
@@ -279,7 +279,7 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h2>Manage</h2>
+                                            <h2>Management</h2>
                                             <p>Manage Windows Server systems and environments, collect information about hardware and software inventories, tune servers for better peformance and automate administration for greater efficiency.</p>
 <table>
      <tr>
@@ -330,7 +330,7 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h2>Network</h2>
+                                            <h2>Networking</h2>
                                             <p>Connect computers and systems for security, performance, quality of service, and availability with funtamental technologies like <a href="https://docs.microsoft.com/en-us/windows-server/networking/dns/dns-top">DNS</a>, <a href="https://docs.microsoft.com/en-us/windows-server/networking/technologies/dhcp/dhcp-top">DHCP</a>, or virtualize connectivity with <a href="https://docs.microsoft.com/en-us/windows-server/networking/sdn/software-defined-networking">Software Defined Networking</a>.</p>
 <table>
      <tr>
@@ -382,7 +382,7 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h2>Remote</h2>
+                                            <h2>Remote access</h2>
                                             <p>Access and control computers and devices remotely to extend enterprise availabilty anywhere, anytime with technologies including Remote Desktop Services, Remote Access and Remote Server Administration Tools.</p>
 <table>
      <tr>
@@ -433,7 +433,7 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h2>Secure</h2> 
+                                            <h2>Security | Assurance</h2> 
                                             <p>Protect datacenters running Windows Server as a VM in any cloud, and limit the ability of attackers to compromise credentials, launch malware, and remain undetected in your network with technologies including Shielded Virtual Machines, Device Guard, Credential Guard and Windows Defender.</p>
 <table>
      <tr>
@@ -484,7 +484,7 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h2>Store</h2>
+                                            <h2>Storage</h2>
                                             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
 <table>
      <tr>
@@ -586,7 +586,7 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h2>Virtualize</h2>
+                                            <h2>Virtualization</h2>
                                              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
 <table>
      <tr>
