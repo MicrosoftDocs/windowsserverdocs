@@ -57,7 +57,6 @@ Access and Identity technologies enable secure Active Directory environments on-
                     <div class="cardText">
                         <h2>Access Management for Active Directory Domain Services & AD DS</h2>
                         <p>Privileged Access Management (PAM) for Active Directory Domain Services (AD DS) is a solution that is based on Microsoft Identity Manager (MIM) and Windows Server 2012 R2 and Windows Server 2016.</p>
-
                     </div>
                 </div>
             </div>
