@@ -202,11 +202,11 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
         <td style="vertical-align: top;">
             <h4><u>Most Viewed</u></h4>
             <ol>
-            <li><a href="https://docs.microsoft.com/en-us/windows-server/networking/windows-server-supported-networking-scenarios">Windows Server Supported Networking Scenarios</a></li>
+            <li>1. <a href="https://docs.microsoft.com/windows-server/identity/securing-privileged-access/privileged-access-workstations">Privileged Access Workstations</a></li>
        <hr width="80%">
-            <li><a href="https://docs.microsoft.com/en-us/windows-server/networking/sdn/sdn-intro">Introduction to SDN in Windows Server Datacenter</a></li>
+            <li>2. <a href="https://docs.microsoft.com/en-us/windows-server/identity/securing-privileged-access/securing-privileged-access-reference-material">Securing Privileged Access Reference Material</a></li>
        <hr width="80%">
-            <li><a href="https://docs.microsoft.com/en-us/windows-server/networking/technologies/netsh/netsh-contexts">Netsh Command Syntax, Contexts, and Formatting</a></li>
+            <li>3. <a href="https://docs.microsoft.com/en-us/windows-server/identity/whats-new-active-directory-domain-services">Whats new in Active Directory Domain Services for Windows Server 2016/a></li>
             </ol>
         </td>
     </tr>
@@ -249,15 +249,15 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
         <td style="vertical-align: top;">
             <h4><u>Most Viewed</u></h4>
             <ol>
-            <li><a href="https://docs.microsoft.com/en-us/windows-server/networking/windows-server-supported-networking-scenarios">Windows Server Supported Networking Scenarios</a></li>
+            <li>1. <a href="https://docs.microsoft.com/en-us/windows-server/failover-clustering/manage-cluster-quorum">Configure and manage quorum</a></li>
                    
        <hr width="80%">
 
-            <li><a href="https://docs.microsoft.com/en-us/windows-server/networking/sdn/sdn-intro">Introduction to SDN in Windows Server Datacenter</a></li>
+            <li>2. <a href="https://docs.microsoft.com/en-us/windows-server/failover-clustering/failover-cluster-csvs">Use Cluster Shared Volumes in a failover cluster</a></li>
                  
        <hr width="80%">
 
-            <li><a href="https://docs.microsoft.com/en-us/windows-server/networking/technologies/netsh/netsh-contexts">Netsh Command Syntax, Contexts, and Formatting</a></li>
+            <li>3. <a href="https://docs.microsoft.com/en-us/windows-server/failover-clustering/whats-new-in-failover-clustering">What's new in Failover Clustering</a></li>
             </ol>
         </td>
     </tr>
@@ -300,15 +300,15 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
         <td style="vertical-align: top;">
             <h4><u>Most Viewed</u></h4>
             <ol>
-            <li><a href="https://docs.microsoft.com/en-us/windows-server/networking/windows-server-supported-networking-scenarios">Windows Server Supported Networking Scenarios</a></li>
+            <li>1. <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/robocopy">robocopy</a></li>
                    
        <hr width="80%">
 
-            <li><a href="https://docs.microsoft.com/en-us/windows-server/networking/sdn/sdn-intro">Introduction to SDN in Windows Server Datacenter</a></li>
+            <li>2. <a href="https://docs.microsoft.com/en-us/windows-server/manage/windows-admin-center/understand/windows-admin-center">Hello, Windows Admin Center!</a></li>
                  
        <hr width="80%">
 
-            <li><a href="https://docs.microsoft.com/en-us/windows-server/networking/technologies/netsh/netsh-contexts">Netsh Command Syntax, Contexts, and Formatting</a></li>
+            <li>3. <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus">Windows Server Update Services (WSUS)</a></li>
             </ol>
         </td>
     </tr>
@@ -351,15 +351,15 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
         <td style="vertical-align: top;">
             <h4><u>Most Viewed</u></h4>
             <ol>
-            <li><a href="https://docs.microsoft.com/en-us/windows-server/networking/windows-server-supported-networking-scenarios">Windows Server Supported Networking Scenarios</a></li>
+            <li>1. <a href="https://docs.microsoft.com/en-us/windows-server/networking/windows-time-service/windows-time-service-tools-and-settings">Windows Time Service Tools and Settings</a></li>
                    
        <hr width="80%">
 
-            <li><a href="https://docs.microsoft.com/en-us/windows-server/networking/sdn/sdn-intro">Introduction to SDN in Windows Server Datacenter</a></li>
+            <li>2. <a href="https://docs.microsoft.com/en-us/windows-server/networking/technologies/netsh/netsh-contexts">Netsh Command Syntax, Contexts, and Formatting</a></li>
                  
        <hr width="80%">
 
-            <li><a href="https://docs.microsoft.com/en-us/windows-server/networking/technologies/netsh/netsh-contexts">Netsh Command Syntax, Contexts, and Formatting</a></li>
+            <li>3. <a href="https://docs.microsoft.com/en-us/windows-server/networking/technologies/nps/nps-top">Network Policy Server (NPS)</a></li>
             </ol>
         </td>
     </tr>
