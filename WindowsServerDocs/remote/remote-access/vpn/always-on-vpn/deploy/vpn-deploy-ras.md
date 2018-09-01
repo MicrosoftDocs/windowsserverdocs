@@ -12,12 +12,12 @@ ms.date: 08/30/2018
 ms.reviewer: deverette
 ---
 
-# Step 4. Configure the Remote Access Server for Always On VPN
+# Step 3. Configure the Remote Access Server for Always On VPN
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-&#171;  [**Previous:** Step 3. Install and configure the Network Policy Server (NPS)](vpn-deploy-nps.md)<br>
-&#187; [ **Next:** Step 5. Configure DNS and Firewall Settings](vpn-deploy-dns-firewall.md)
+&#171;  [**Previous:** Step 2. Configure the Server Infrastructure](vpn-deploy-server-infrastructure.md)<br>
+&#187;  [**Previous:** Step 4. Install and configure the Network Policy Server (NPS)](vpn-deploy-nps.md)
 
 
 RRAS is designed to perform well as both a router and a remote access server because it supports a wide array of features. For the purposes of this deployment, you require only a small subset of these features: support for IKEv2 VPN connections and LAN routing.
@@ -203,6 +203,10 @@ In this section, you can configure Remote Access VPN to allow IKEv2 VPN connecti
 7.  If prompted, click **Yes** to confirm restarting the server and click **Close** to restart the server.
 
 ## Next step
-[Step 5. Configure DNS and firewall settings for Always On VPN](vpn-deploy-dns-firewall.md): In this step, you install Network Policy Server (NPS) by using either Windows PowerShell or the Server Manager Add Roles and Features Wizard. You also configure NPS to handle all authentication, authorization, and accounting duties for connection requests that it receives from the VPN server.
+[Step 4. Install and configure the Network Policy Server (NPS)](vpn-deploy-nps.md): In this step, you install Network Policy Server (NPS) by using either Windows PowerShell or the Server Manager Add Roles and Features Wizard. You also configure NPS to handle all authentication, authorization, and accounting duties for connection requests that it receives from the VPN server.
+
+
+
+
 
 ---

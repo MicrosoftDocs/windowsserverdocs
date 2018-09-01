@@ -11,7 +11,7 @@ author: shortpatti
 ---
 # What's New in SDN for Windows Server 
 
->Applies To: Windows Server (Semi-Annual Channel)
+>Applies to: Windows Server (Semi-Annual Channel)
 
 
 | **Feature** | **Description** | **New/updated** | 
