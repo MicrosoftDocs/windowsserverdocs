@@ -403,11 +403,11 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
         <td style="vertical-align: top;">
             <h4><u>Most Viewed</u></h4>
             <ol>
-            <li><a href="https://docs.microsoft.com/en-us/windows-server/networking/windows-server-supported-networking-scenarios">Windows Server Supported Networking Scenarios</a></li>
+            <li><a href="https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients">Remote Desktop clients</a></li>
                    
        <hr width="80%">
 
-            <li><a href="https://docs.microsoft.com/en-us/windows-server/networking/sdn/sdn-intro">Introduction to SDN in Windows Server Datacenter</a></li>
+            <li><a href="https://docs.microsoft.com/en-us/windows-server/networking/sdn/sdn-intro">Remote Desktop - Allow access to your PC</a></li>
                  
        <hr width="80%">
 
