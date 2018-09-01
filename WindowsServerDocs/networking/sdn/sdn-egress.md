@@ -18,7 +18,7 @@ ms.date: 08/23/2018
 
 A fundamental aspect of cloud networking monetization is network bandwidth egress. For example - outbound Data transfers In Microsoft Azure business model. Outbound data is charged based on the total amount of data moving out of the Azure datacenters via the Internet in a given billing cycle.
 
-This new feature in Windows Server 2019 enables SDN to offer usage meters for outbound data transfers. With feature added, Network Controller keeps a whitelist per Virtual Network of all IP ranges used within SDN, and consider any
+This new feature in Windows Server 2019 enables SDN to offer usage meters for outbound data transfers. With this feature added, Network Controller keeps a whitelist per Virtual Network of all IP ranges used within SDN, and consider any
 packet bound for a destination that is not included in one of these ranges to be billed outbound data transfers.
 
 ## Virtual network unbilled address ranges (whitelist of IP ranges)
