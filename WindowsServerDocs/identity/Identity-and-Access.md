@@ -43,7 +43,7 @@ Access and Identity technologies enable secure Active Directory environments on-
                         </li>
 </ul>
 <hr />
-<ul class="cardsF panelContent">
+<ul class="cardsI panelContent">
 <li>
         <a href="https://technet.microsoft.com/library/dn903243.aspxPrivileged">
           <div class="cardSize">
