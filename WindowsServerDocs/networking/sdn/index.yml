@@ -58,7 +58,7 @@ sections:
 
         src: https://docs.microsoft.com/media/common/i_whats-new.svg
       
-      title: What's new
+      title: What's New in SDN for Windows Server 2019
 
     - href: \windows-server\networking\sdn\software-defined-networking
 
