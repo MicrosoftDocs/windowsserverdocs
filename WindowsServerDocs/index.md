@@ -594,29 +594,29 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
         <td style="vertical-align: top;">
             <h4><u>Highest Rated</u></h4>
             <ol>
-            <li>1. <a href="https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/get-started/create-a-virtual-machine-in-hyper-v">Create a virtual machine in Hyper-V/a></li>
+            <li><b>1. )</b><a href="https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/get-started/create-a-virtual-machine-in-hyper-v">Create a virtual machine in Hyper-V/a></li>
               
        <hr width="80%">
 
-            <li>2. <a href="https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/supported-debian-virtual-machines-on-hyper-v">Supported Debian virtual machines on Hyper-V</a></li>
+            <li><b>2. )</b><a href="https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/supported-debian-virtual-machines-on-hyper-v">Supported Debian virtual machines on Hyper-V</a></li>
                  
        <hr width="80%">
 
-            <li>3. <a href="https://docs.microsoft.com/en-us/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms">Guarded fabric and shielded VMs overview</a></li>
+            <li><b>3. )</b><a href="https://docs.microsoft.com/en-us/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms">Guarded fabric and shielded VMs overview</a></li>
             </ol>
         </td>
         <td style="vertical-align: top;">
             <h4><u>Most Viewed</u></h4>
             <ol>
-            <li>1. <a href="https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/manage/remotely-manage-hyper-v-hosts">Remotely manage Hyper-V hosts with Hyper-V Manager</a></li>
+            <li><b>1. )</b><a href="https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/manage/remotely-manage-hyper-v-hosts">Remotely manage Hyper-V hosts with Hyper-V Manager</a></li>
                    
        <hr width="80%">
 
-            <li>2. <a href="https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/get-started/create-a-virtual-switch-for-hyper-v-virtual-machines">Create a virtual switch for Hyper-V virtual machines</a></li>
+            <li><b>2. )</b><a href="https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/get-started/create-a-virtual-switch-for-hyper-v-virtual-machines">Create a virtual switch for Hyper-V virtual machines</a></li>
                  
        <hr width="80%">
 
-            <li>3. <a href="https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/learn-more/hyper-v-virtual-machine-connect">Hyper-V Virtual Machine Connection</a></li>
+            <li><b>3. )</b><a href="https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/learn-more/hyper-v-virtual-machine-connect">Hyper-V Virtual Machine Connection</a></li>
             </ol>
         </td>
     </tr>
