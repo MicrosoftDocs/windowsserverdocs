@@ -192,9 +192,9 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
         <td style="vertical-align: top;">
             <h4><u>Highest Rated</u></h4>
             <ol>
-            <li><a href="https://docs.microsoft.com/en-us/windows-server/networking/what-s-new-in-networking">What's new in<br> Networking</a></li>              
+            <li><a href="https://docs.microsoft.com/en-us/windows-server/identity/software-restriction-policies/software-restriction-policies">Software Restriction Policies</a></li>              
        <hr width="80%">
-            <li><a href="https://docs.microsoft.com/en-us/windows-server/networking/branchcache/branchcache-network-shell-and-windows-powershell-commands">BranchCache Network Shell and<br> Windows PowerShell Commands</a></li>
+            <li><a href="https://docs.microsoft.com/en-us/windows-server/identity/solution-guides/deploy-a-central-access-policy--demonstration-steps-">Deploy a Central Access Policy (Demonstration Steps)</a></li>
        <hr width="80%">
             <li><a href="https://docs.microsoft.com/en-us/windows-server/networking/technologies/nic-teaming/nict-vms">NIC Teaming in Virtual Machines (VMs)</a></li>
             </ol>
@@ -206,7 +206,7 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
        <hr width="80%">
             <li>2. <a href="https://docs.microsoft.com/en-us/windows-server/identity/securing-privileged-access/securing-privileged-access-reference-material">Securing Privileged Access Reference Material</a></li>
        <hr width="80%">
-            <li>3. <a href="https://docs.microsoft.com/en-us/windows-server/identity/whats-new-active-directory-domain-services">What's new in Active Directory Domain Services</a></li>
+            <li>3. <a href="https://docs.microsoft.com/windows-server/identity/solution-guides/scenario--file-access-auditing">Scenario: File Access Auditing</a></li>
             </ol>
         </td>
     </tr>
@@ -235,15 +235,15 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
         <td style="vertical-align: top;">
             <h4><u>Highest Rated</u></h4>
             <ol>
-            <li><a href="https://docs.microsoft.com/en-us/windows-server/networking/what-s-new-in-networking">What's new in<br> Networking</a></li>
+            <li>1. <a href="https://docs.microsoft.com/en-us/windows-server/networking/what-s-new-in-networking">Cluster-Aware Updating requirements and best practices</a></li>
               
        <hr width="80%">
 
-            <li><a href="https://docs.microsoft.com/en-us/windows-server/networking/branchcache/branchcache-network-shell-and-windows-powershell-commands">BranchCache Network Shell and<br> Windows PowerShell Commands</a></li>
+            <li>2. <a href="https://docs.microsoft.com/en-us/windows-server/failover-clustering/vm-load-balancing-overview">Virtual Machine Load Balancing overview</a></li>
                  
        <hr width="80%">
 
-            <li><a href="https://docs.microsoft.com/en-us/windows-server/networking/technologies/nic-teaming/nict-vms">NIC Teaming in Virtual Machines (VMs)</a></li>
+            <li>3. <a href="https://docs.microsoft.com/en-us/windows-server/failover-clustering/troubleshooting-using-wer-reports">Troubleshooting a Failover Cluster using Windows Error Reporting</a></li>
             </ol>
         </td>
         <td style="vertical-align: top;">
@@ -286,15 +286,15 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
         <td style="vertical-align: top;">
             <h4><u>Highest Rated</u></h4>
             <ol>
-            <li><a href="https://docs.microsoft.com/en-us/windows-server/networking/what-s-new-in-networking">What's new in<br> Networking</a></li>
+            <li>1. <a href="https://docs.microsoft.com/en-us/windows-server/networking/technologies/nps/nps-radius-clients-configure">Configure RADIUS Clients</a></li>
               
        <hr width="80%">
 
-            <li><a href="https://docs.microsoft.com/en-us/windows-server/networking/branchcache/branchcache-network-shell-and-windows-powershell-commands">BranchCache Network Shell and<br> Windows PowerShell Commands</a></li>
+            <li>2. <a href="https://docs.microsoft.com/en-us/windows-server/networking/technologies/nps/nps-np-configure">Configure Network Policies</a></li>
                  
        <hr width="80%">
 
-            <li><a href="https://docs.microsoft.com/en-us/windows-server/networking/technologies/nic-teaming/nict-vms">NIC Teaming in Virtual Machines (VMs)</a></li>
+            <li>3. <a href="https://docs.microsoft.com/en-us/windows-server/networking/sdn/software-defined-networking">Software Defined Networking (SDN)</a></li>
             </ol>
         </td>
         <td style="vertical-align: top;">
