@@ -492,25 +492,25 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
         <td style="vertical-align: top;">
             <h4><u>Highest Rated</u></h4>
             <ol>
-            <li><a href="https://docs.microsoft.com/en-us/windows-server/networking/what-s-new-in-networking">What's new in<br> Networking</a></li>
+            <li>1. <a href="https://docs.microsoft.com/en-us/windows-server/storage/storage-replica/storage-replica-overview">Storage Replica overview</a></li>
               
        <hr width="80%">
 
-            <li><a href="https://docs.microsoft.com/en-us/windows-server/networking/branchcache/branchcache-network-shell-and-windows-powershell-commands">BranchCache Network Shell and<br> Windows PowerShell Commands</a></li>
+            <li>2. <a href="https://docs.microsoft.com/en-us/windows-server/storage/storage-spaces/understand-quorum">Understanding cluster and pool quorum</a></li>
                  
        <hr width="80%">
 
-            <li>1. <a href="https://docs.microsoft.com/en-us/windows-server/networking/technologies/nic-teaming/nict-vms">NIC Teaming in Virtual Machines (VMs)</a></li>
+            <li>3. <a href="https://docs.microsoft.com/en-us/windows-server/storage/data-deduplication/understand">Understanding Data Deduplication</a></li>
             </ol>
         </td>
         <td style="vertical-align: top;">
             <h4><u>Most Viewed</u></h4>
             <ol>
-            <li>2. <a href="https://docs.microsoft.com/en-us/windows-server/storage/disk-management/initialize-new-disks">Initialize new disks</a></li>
+            <li>1. <a href="https://docs.microsoft.com/en-us/windows-server/storage/disk-management/initialize-new-disks">Initialize new disks</a></li>
                    
        <hr width="80%">
 
-            <li><a href="hhttps://docs.microsoft.com/en-us/windows-server/storage/disk-management/change-an-mbr-disk-into-a-gpt-disk">Convert an MBR disk into a GPT disk</a></li>
+            <li>2. <a href="https://docs.microsoft.com/en-us/windows-server/storage/disk-management/change-an-mbr-disk-into-a-gpt-disk">Convert an MBR disk into a GPT disk</a></li>
                  
        <hr width="80%">
 
@@ -543,15 +543,15 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
         <td style="vertical-align: top;">
             <h4><u>Highest Rated</u></h4>
             <ol>
-            <li><a href="https://docs.microsoft.com/en-us/windows-server/networking/what-s-new-in-networking">What's new in<br> Networking</a></li>
+            <li>1. <a href="https://docs.microsoft.com/en-us/windows-server/failover-clustering/troubleshooting-using-wer-reports">Troubleshooting a Failover Cluster using Windows Error Reporting</a></li>
               
        <hr width="80%">
 
-            <li><a href="https://docs.microsoft.com/en-us/windows-server/networking/branchcache/branchcache-network-shell-and-windows-powershell-commands">BranchCache Network Shell and<br> Windows PowerShell Commands</a></li>
+            <li>2. <a href="https://docs.microsoft.com/en-us/windows-server/networking/sdn/troubleshoot/troubleshoot-windows-server-software-defined-networking-stack">Troubleshoot the Windows Server Software Defined Networking Stack</a></li>
                  
        <hr width="80%">
 
-            <li><a href="https://docs.microsoft.com/en-us/windows-server/networking/technologies/nic-teaming/nict-vms">NIC Teaming in Virtual Machines (VMs)</a></li>
+            <li>3. <a href="https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-antivirus/troubleshoot-windows-defender-antivirus">Review event logs and error codes to troubleshoot issues with Windows Defender AV</a></li>
             </ol>
         </td>
         <td style="vertical-align: top;">
