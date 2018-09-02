@@ -337,21 +337,21 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
         <td style="vertical-align: top;">
             <h4><u>Highest Rated</u></h4>
             <ol>
-            <li><a href="https://docs.microsoft.com/en-us/windows-server/networking/what-s-new-in-networking">What's new in<br> Networking</a></li>
+            <li>1. <a href="https://docs.microsoft.com/en-us/windows-server/networking/technologies/nps/nps-radius-clients-configure">Configure RADIUS Clients<br> Networking</a></li>
               
        <hr width="80%">
 
-            <li><a href="https://docs.microsoft.com/en-us/windows-server/networking/branchcache/branchcache-network-shell-and-windows-powershell-commands">BranchCache Network Shell and<br> Windows PowerShell Commands</a></li>
+            <li>2. <a href="https://docs.microsoft.com/en-us/windows-server/networking/technologies/nps/nps-np-configure">Configure Network Policies</a></li>
                  
        <hr width="80%">
 
-            <li><a href="https://docs.microsoft.com/en-us/windows-server/networking/technologies/nic-teaming/nict-vms">NIC Teaming in Virtual Machines (VMs)</a></li>
+            <li><a href="https://docs.microsoft.com/windows-server/networking/sdn/software-defined-networking">Software Defined Networking (SDN)</a></li>
             </ol>
         </td>
         <td style="vertical-align: top;">
             <h4><u>Most Viewed</u></h4>
             <ol>
-            <li>1. <a href="https://docs.microsoft.com/en-us/windows-server/networking/windows-time-service/windows-time-service-tools-and-settings">Windows Time Service Tools and Settings</a></li>
+            <li>3. <a href="https://docs.microsoft.com/en-us/windows-server/networking/windows-time-service/windows-time-service-tools-and-settings">Windows Time Service Tools and Settings</a></li>
                    
        <hr width="80%">
 
@@ -389,15 +389,15 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
         <td style="vertical-align: top;">
             <h4><u>Highest Rated</u></h4>
             <ol>
-            <li><a href="https://docs.microsoft.com/en-us/windows-server/networking/what-s-new-in-networking">What's new in<br> Networking</a></li>
+            <li>1. <a href="https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-client-vpn-connections">Step 6. Configure Windows 10 client Always On VPN connections</a></li>
               
        <hr width="80%">
 
-            <li><a href="https://docs.microsoft.com/en-us/windows-server/networking/branchcache/branchcache-network-shell-and-windows-powershell-commands">BranchCache Network Shell and<br> Windows PowerShell Commands</a></li>
+            <li>2. <a href="https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds-in-azure">Seamlessly deploy RDS with ARM and Azure Marketplace</a></li>
                  
        <hr width="80%">
 
-            <li><a href="https://docs.microsoft.com/en-us/windows-server/networking/technologies/nic-teaming/nict-vms">NIC Teaming in Virtual Machines (VMs)</a></li>
+            <li>3. <a href="https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-server-infrastructure">Step 2. Configure the server infrastructure</a></li>
             </ol>
         </td>
         <td style="vertical-align: top;">
