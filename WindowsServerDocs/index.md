@@ -594,15 +594,15 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
         <td style="vertical-align: top;">
             <h4><u>Highest Rated</u></h4>
             <ol>
-            <li><a href="https://docs.microsoft.com/en-us/windows-server/networking/what-s-new-in-networking">What's new in<br> Networking</a></li>
+            <li>1. <a href="https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/get-started/create-a-virtual-machine-in-hyper-v">Create a virtual machine in Hyper-V/a></li>
               
        <hr width="80%">
 
-            <li><a href="https://docs.microsoft.com/en-us/windows-server/networking/branchcache/branchcache-network-shell-and-windows-powershell-commands">BranchCache Network Shell and<br> Windows PowerShell Commands</a></li>
+            <li>2. <a href="https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/supported-debian-virtual-machines-on-hyper-v">Supported Debian virtual machines on Hyper-V</a></li>
                  
        <hr width="80%">
 
-            <li><a href="https://docs.microsoft.com/en-us/windows-server/networking/technologies/nic-teaming/nict-vms">NIC Teaming in Virtual Machines (VMs)</a></li>
+            <li>3. <a href="https://docs.microsoft.com/en-us/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms">Guarded fabric and shielded VMs overview</a></li>
             </ol>
         </td>
         <td style="vertical-align: top;">
