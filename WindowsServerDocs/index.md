@@ -336,7 +336,7 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
         <td style="vertical-align: top;">
             <h4><u>Highest Rated</u></h4>
             <ol>
-            <li>1. <a href="https://docs.microsoft.com/en-us/windows-server/networking/technologies/nps/nps-radius-clients-configure">Configure RADIUS Clients<br> Networking</a></li>
+            <li>1. <a href="https://docs.microsoft.com/en-us/windows-server/networking/technologies/nps/nps-radius-clients-configure">Configure RADIUS Clients</a></li>
               
        <hr width="80%">
 
