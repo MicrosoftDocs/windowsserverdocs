@@ -146,7 +146,7 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
                                     <div class="card">
                                         <div class="cardImageOuter">
                                             <div class="cardImage">
-                                                <img src="media/i-insider.svg" alt="" />
+                                                <img src="media/windows-server-2008R2.svg" alt="" />
                                             </div>
                                         </div>
                                         <div class="cardText">
@@ -196,7 +196,7 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
        <hr width="80%">
             <li>2. <a href="https://docs.microsoft.com/en-us/windows-server/identity/solution-guides/deploy-a-central-access-policy--demonstration-steps-">Deploy a Central Access Policy (Demonstration Steps)</a></li>
        <hr width="80%">
-            <li>3. <a href="https://docs.microsoft.com/en-us/windows-server/networking/technologies/nic-teaming/nict-vms">NIC Teaming in Virtual Machines (VMs)</a></li>
+            <li>3. <a href="https://docs.microsoft.com/windows-server/identity/solution-guides/scenario--file-access-auditing">Scenario: File Access Auditing</a></li>
             </ol>
         </td>
         <td style="vertical-align: top;">
@@ -206,7 +206,7 @@ description: Windows Server documentation helps IT professionals evaluate, plan,
        <hr width="80%">
             <li>2. <a href="https://docs.microsoft.com/en-us/windows-server/identity/securing-privileged-access/securing-privileged-access-reference-material">Securing Privileged Access Reference Material</a></li>
        <hr width="80%">
-            <li>3. <a href="https://docs.microsoft.com/windows-server/identity/solution-guides/scenario--file-access-auditing">Scenario: File Access Auditing</a></li>
+            <li>3. <a href="https://docs.microsoft.com/en-us/windows-server/identity/solution-guides/dynamic-access-control--scenario-overview">Dynamic Access Control: Scenario Overview</a></li>
             </ol>
         </td>
     </tr>
