@@ -25,6 +25,6 @@ Windows containers function similarly to virtual machines in regards to networki
 
 Container endpoints can be attached to a local host network (e.g. NAT), the physical network, or an overlay virtual network created through the Microsoft Software Defined Networking (SDN) stack. 
 
-For more information about creating and managing container networks for non-overlay/SDN deployments, refer to the [Windows Container Networking](https://msdn.microsoft.com/en-us/virtualization/windowscontainers/management/container_networking) guide on MSDN.
+For more information about creating and managing container networks for non-overlay/SDN deployments, refer to the [Windows Container Networking](https://docs.microsoft.com/en-us/virtualization/windowscontainers/container-networking/architecture).
 
 For more information about creating and managing container networks for overlay virtual networks with SDN, refer to [Connect container endpoints to a tenant virtual network](../../manage/Connect-container-endpoints-to-a-Tenant-Virtual-Network.md). 
